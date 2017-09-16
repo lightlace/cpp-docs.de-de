@@ -1,45 +1,64 @@
 ---
-title: "Hinzuf&#252;gen von Spalten zum Steuerelement (Berichtsansicht) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CListCtrl-Klasse, Hinzufügen von Spalten"
-  - "CListCtrl-Klasse, Berichtsanzeige"
-  - "Spalten [C++], Hinzufügen zu CListCtrl"
-  - "Berichtansicht in CListCtrl-Klasse"
-  - "Ansichten, Bericht"
+title: Adding Columns to the Control (Report View) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CListCtrl class [MFC], adding columns
+- report view in CListCtrl class [MFC]
+- views [MFC], report
+- columns [MFC], adding to CListCtrl
+- CListCtrl class [MFC], report view
 ms.assetid: 7392c0d7-f8a5-4e7b-9ae7-b53dc9dd80ae
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Hinzuf&#252;gen von Spalten zum Steuerelement (Berichtsansicht)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ae67c7c011123533227f1a7d4891b553f2cd0dc7
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="adding-columns-to-the-control-report-view"></a>Adding Columns to the Control (Report View)
 > [!NOTE]
->  Die folgenden Schritte veranschaulichen entweder auf [CListView](../mfc/reference/clistview-class.md) oder [Verwendung](../mfc/reference/clistctrl-class.md)\-Objekt zu.  
+>  The following procedure applies to either a [CListView](../mfc/reference/clistview-class.md) or [CListCtrl](../mfc/reference/clistctrl-class.md) object.  
   
- Wenn ein Listensteuerelement in der Berichtsansicht ist, werden die Spalten angezeigt und bieten eine Möglichkeit zum Organisieren der verschiedenen Unterelemente jedes Listensteuerelementelements bereit.  Diese Organisation ist einer 1:1\-Entsprechung zwischen einer Spalte im Listensteuerelement und dem zugeordneten Unterelement des Listensteuerelementelements implementiert.  Weitere Informationen über Unterelemente, finden Sie unter [Hinzufügen von Elementen zum Steuerelement](../mfc/adding-items-to-the-control.md).  Ein Beispiel eines Listensteuerelements in der Berichtsansicht wird aus der Detailansicht in Windows 95 und Windows 98\-Explorer bereitgestellt.  Die erste Spalte wird Ordner, Dateisymbole und Bezeichnungen auf.  Andere Spaltenlistendateigröße, Dateityp, Datumslast Arbeiten, z. B.  
+ When a list control is in report view, columns are displayed, providing a method of organizing the various subitems of each list control item. This organization is implemented with a one-to-one correspondence between a column in the list control and the associated subitem of the list control item. For more information on subitems, see [Adding Items to the Control](../mfc/adding-items-to-the-control.md). An example of a list control in report view is provided by the Details view in Windows 95 and Windows 98 Explorer. The first column lists folder, file icons, and labels. Other columns list file size, file type, date last modified, and so on.  
   
- Obwohl Spalten zu einem Listensteuerelement jederzeit hinzugefügt werden können, sind die Spalten angezeigt, wenn das Steuerelement das `LVS_REPORT` Stilbit verfügt, das aktiviert ist.  
+ Even though columns can be added to a list control at any time, the columns are visible only when the control has the `LVS_REPORT` style bit turned on.  
   
- Jede Spalte verfügt über ein zugeordnetes Objekt des Kopfzeilenelements \(siehe [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)\), das die Spalte bezeichnet und Benutzern ermöglicht, um die Größe der Spalte zu ändern.  
+ Each column has an associated header item (see [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) object that labels the column and allows users to resize the column.  
   
- Wenn das Listensteuerelement eine Berichtsansicht unterstützt, müssen Sie eine Spalte für alle in einem Listensteuerelementelement Unterelement hinzufügen.  Fügen Sie eine Spalte hinzu, indem Sie eine [LV\_COLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743)\-Struktur vorbereiten und dann einen Aufruf [InsertColumn](../Topic/CListCtrl::InsertColumn.md) ausführen.  Nachdem Sie die erforderlichen Spalten \(die auch als Kopfzeilenelemente hinzugefügt haben, können Sie sie mithilfe der Memberfunktionen und Stile neu anordnen, die dem eingebetteten Header\-Steuerelement gehören.  Weitere Informationen finden Sie unter [Reihenfolgen\-Elemente im Header\-Steuerelement](../mfc/ordering-items-in-the-header-control.md).  
+ If your list control supports a report view, you need to add a column for each possible subitem in a list control item. Add a column by preparing an [LV_COLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743) structure and then making a call to [InsertColumn](../mfc/reference/clistctrl-class.md#insertcolumn). After adding the necessary columns (sometimes referred to as header items), you can reorder them using member functions and styles belonging to the embedded header control. For more information, see [Ordering Items in the Header Control](../mfc/ordering-items-in-the-header-control.md).  
   
 > [!NOTE]
->  Wenn das Listensteuerelement mit dem **LVS\_NOCOLUMNHEADER**  Stil erstellt wird, wird jeder Versuch, Spalten einzufügende ignoriert.  
+>  If the list control is created with the **LVS_NOCOLUMNHEADER** style, any attempt to insert columns will be ignored.  
   
-## Siehe auch  
- [Verwenden von CListCtrl](../mfc/using-clistctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

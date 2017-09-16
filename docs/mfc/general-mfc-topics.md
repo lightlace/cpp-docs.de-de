@@ -1,67 +1,86 @@
 ---
-title: "Allgemeine MFC-Themen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Klassenbibliotheken, MFC"
-  - "MFC"
-  - "MFC, Anwendungsentwicklung"
+title: General MFC Topics | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC
+- class libraries [MFC], MFC
+- MFC, application development
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
 caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Allgemeine MFC-Themen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4e6d3368bc32cfffd07dad512d95c58f2c81996e
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Diese Artikelreihe enthält technische Details zur Microsoft Foundation Class \(MFC\)\-Bibliothek und gibt einen Überblick über das MFC\-Framework und seine Hauptkomponenten und Subsysteme.  
+---
+# <a name="general-mfc-topics"></a>General MFC Topics
+This family of articles includes technical details about the Microsoft Foundation Class (MFC) Library and provides an overview of the MFC framework and its key components and subsystems.  
   
- Die Microsoft Foundation Class\-Bibliothek ist ein Anwendungsframework für die Programmierung in Microsoft Windows.  Die MFC wurde in C\+\+ geschrieben und stellt einen Großteil des Codes bereit, der zum Verwalten von Fenstern, Menüs und Dialogfeldern, zum Ausführen grundlegender Ein\-\/Ausgabe, zum Speichern von Datenobjektauflistungen usw. benötigt wird.  Sie müssen nur den anwendungsspezifischen Code in dieses Framework einfügen.  Aufgrund der Eigenschaft der C\+\+\-Klassenprogrammierung ist es außerdem einfach, die grundlegenden Funktionen des [MFC\-Frameworks](../mfc/framework-mfc.md) zu erweitern oder zu überschreiben.  
+ The Microsoft Foundation Class Library is an application framework for programming in Microsoft Windows. Written in C++, MFC provides much of the code necessary for managing windows, menus, and dialog boxes; performing basic input/output; storing collections of data objects; and so on. All you need to do is add your application-specific code into this framework. Given the nature of C++ class programming, it is easy to extend or override the basic functionality that [the MFC framework](../mfc/framework-mfc.md) supplies.  
   
- Das MFC\-Framework ist ein leistungsfähiger Ansatz, mit dem Sie auf der Arbeit von Windows\-Programmierexperten aufbauen können.  MFC verkürzt die Entwicklungszeit, erhöht die Portierbarkeit von Code, bietet ein erhebliches Maß an Unterstützung, ohne die Freiheit und Flexibilität der Programmierung einzuschränken, und ermöglicht einen einfachen Zugang zu schwierig zu programmierenden Benutzeroberflächenelementen und \-technologien, z. B. der Active\-Technologie, OLE und der Internetprogrammierung.  Darüber hinaus vereinfacht MFC die Datenbankprogrammierung über Data Access Objects \(DAO, Datenzugriffsobjekte\) und Open Database Connectivity \(ODBC\) sowie die Netzwerkprogrammierung über Windows Sockets.  Mit MFC ist das Programmieren von Funktionen wie Eigenschaftenblättern \(Registerkarten\-Dialogfeldern\), Seitenansichten und unverankerten, benutzerdefinierbaren Symbolleisten ganz einfach.  
+ The MFC framework is a powerful approach that lets you build upon the work of expert programmers for Windows. MFC shortens development time; makes code more portable; provides tremendous support without reducing programming freedom and flexibility; and gives easy access to "hard to program" user-interface elements and technologies, like Active technology, OLE, and Internet programming. Furthermore, MFC simplifies database programming through Data Access Objects (DAO) and Open Database Connectivity (ODBC), and network programming through Windows Sockets. MFC makes it easy to program features like property sheets ("tab dialogs"), print preview, and floating, customizable toolbars.  
   
-## In diesem Abschnitt  
- `MFC Samples`, die unter [Visual C\+\+\-Beispiele](../top/visual-cpp-samples.md) bereitgestellt werden.  
+## <a name="in-this-section"></a>In This Section  
+ `MFC Samples`, which are supplied in [Visual C++ Samples](../visual-cpp-samples.md)  
   
- [Verwenden der MFC\-Quelldateien](../mfc/using-the-mfc-source-files.md)  
+ [Using the MFC Source Files](../mfc/using-the-mfc-source-files.md)  
   
- [MFC\-Bibliotheksversionen](../mfc/mfc-library-versions.md)  
+ [MFC Library Versions](../mfc/mfc-library-versions.md)  
   
- [Verwenden der Klassen zum Schreiben von Anwendungen für Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)  
+ [Using the Classes to Write Applications for Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)  
   
- [Erstellen im Framework](../mfc/building-on-the-framework.md)  
+ [Building on the Framework](../mfc/building-on-the-framework.md)  
   
- [CWinApp: Die Anwendungsklasse](../mfc/cwinapp-the-application-class.md)  
+ [CWinApp: The Application Class](../mfc/cwinapp-the-application-class.md)  
   
- [Dokumentvorlagen und der Erstellungsvorgang für Dokumente und Ansichten](../mfc/document-templates-and-the-document-view-creation-process.md)  
+ [Document Templates and the Document/View Creation Process](../mfc/document-templates-and-the-document-view-creation-process.md)  
   
- [Verwalten der Statusdaten von MFC\-Modulen](../mfc/managing-the-state-data-of-mfc-modules.md)  
+ [Managing the State Data of MFC Modules](../mfc/managing-the-state-data-of-mfc-modules.md)  
   
- [Leerlaufschleifen\-Verarbeitung](../mfc/idle-loop-processing.md)  
+ [Idle Loop Processing](../mfc/idle-loop-processing.md)  
   
- [Unterstützung für Aktivierungskontexte im MFC\-Modulstatus](../mfc/support-for-activation-contexts-in-the-mfc-module-state.md)  
+ [Support for Activation Contexts in the MFC Module State](../mfc/support-for-activation-contexts-in-the-mfc-module-state.md)  
   
- [Isolierung der MFC\-Bibliothek für Standardsteuerelemente](../mfc/isolation-of-the-mfc-common-controls-library.md)  
+ [Isolation of the MFC Common Controls Library](../mfc/isolation-of-the-mfc-common-controls-library.md)  
   
- [Anforderungen für die Erstellung von Windows Vista\-Standardsteuerelementen](../mfc/build-requirements-for-windows-vista-common-controls.md)  
+ [Build Requirements for Windows Vista Common Controls](../mfc/build-requirements-for-windows-vista-common-controls.md)  
   
- [Gewusst wie: Hinzufügen von Unterstützung für den Neustart\-Manager](../mfc/how-to-add-restart-manager-support.md)  
+ [How to: Add Restart Manager Support](../mfc/how-to-add-restart-manager-support.md)  
   
- [Dynamisches Layout](../mfc/dynamic-layout.md)  
+ [Dynamic Layout](../mfc/dynamic-layout.md)  
   
- Eine Übersicht über die MFC\-Referenzdokumentation finden Sie unter [Microsoft Foundation Class\-Bibliothek](../mfc/mfc-desktop-applications.md).  
+ For an overview of the MFC reference documentation, see [Microsoft Foundation Class Library](../mfc/mfc-desktop-applications.md).  
   
- Informationen über ATL finden Sie unter [Active Template Library\-Referenz](../atl/atl-class-overview.md).  
+ For information about ATL, see [Active Template Library Reference](../atl/atl-class-overview.md).  
   
-## Siehe auch  
- [Arbeiten mit Fensterobjekten](../mfc/working-with-window-objects.md)
+## <a name="see-also"></a>See Also  
+ [Working with Window Objects](../mfc/working-with-window-objects.md)
+
+

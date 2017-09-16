@@ -1,45 +1,64 @@
 ---
-title: "Listenelemente und Bildlisten | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CImageList-Klasse, und Listenelemente"
-  - "CListCtrl-Klasse, Bilderlisten"
-  - "Bilderlisten [C++], Listenelemente"
-  - "Listenelemente, Bilderlisten"
+title: List Items and Image Lists | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CImageList class [MFC], and list items
+- image lists [MFC], list items
+- CListCtrl class [MFC], image lists
+- list items [MFC], image lists
 ms.assetid: 317d095f-f978-47da-acb6-7bfe7dd3bc69
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Listenelemente und Bildlisten
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: de7e5fa9537d4cec3fed7c891fba9a7c4c11c4d2
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Ein "Element" in einem Listensteuerelement \([Verwendung](../mfc/reference/clistctrl-class.md)\) besteht ein Symbol, eine Bezeichnung und möglicherweise aus anderen Informationen \(in "Unterelementen"\).  
+---
+# <a name="list-items-and-image-lists"></a>List Items and Image Lists
+An "item" in a list control ([CListCtrl](../mfc/reference/clistctrl-class.md)) consists of an icon, a label, and possibly other information (in "subitems").  
   
- Die Symbole für Listensteuerelementelemente werden in den Bildlisten enthalten.  Mit einer Bildliste enthält Symbole die an, die in der Symbolen verwendet werden.  Ein zweites, optional, Bildliste enthält kleinere Versionen der gleichen Symbole für andere Ansichten des Steuerelements.  Eine dritte optionale Liste enthält "Bundesstaat " \- Bilder, z Kontrollkästchen, für die Anzeige vor kleinen Symbolen in bestimmten Ansichten.  Eine vierte optionale Liste Bilder enthält, die in einzelnen Kopfzeilenelementen des Listensteuerelements angezeigt werden.  
+ The icons for list control items are contained in image lists. One image list contains full-sized icons used in icon view. A second, optional, image list contains smaller versions of the same icons for use in other views of the control. A third optional list contains "state" images, such as check boxes, for display in front of the small icons in certain views. A fourth optional list contains images that are displayed in individual header items of the list control.  
   
 > [!NOTE]
->  Wenn ein ListView\-Steuerelement mit dem Format `LVS_SHAREIMAGELISTS` erstellt wird, sind Sie das Zerstören der Bildlisten zuständig, wenn sie nicht mehr in Gebrauch sind.  Geben Sie dieses Format an, wenn Sie die gleichen Bildlisten zu mehreren Listenansicht\-Steuerelementen zuweisen; Andernfalls versucht möglicherweise mehr als ein Steuerelement, dieselbe Bildliste zu zerstören.  
+>  If a list view control is created with the `LVS_SHAREIMAGELISTS` style, you are responsible for destroying the image lists when they are no longer in use. Specify this style if you assign the same image lists to multiple list view controls; otherwise, more than one control might try to destroy the same image list.  
   
- Weitere Informationen über Listenelemente, finden Sie unter [Listenansichts\-Bildlisten](http://msdn.microsoft.com/library/windows/desktop/bb774736) und [Elemente und Unterelemente](http://msdn.microsoft.com/library/windows/desktop/bb774736) in [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  Siehe auch Klasse [CImageList](../mfc/reference/cimagelist-class.md) in der *MFC\-Referenz* und [Verwenden CImageList](../mfc/using-cimagelist.md) dieser Familie von Artikeln.  
+ For more information about list items, see [List View Image Lists](http://msdn.microsoft.com/library/windows/desktop/bb774736) and [Items and Subitems](http://msdn.microsoft.com/library/windows/desktop/bb774736) in the Windows SDK. Also see class [CImageList](../mfc/reference/cimagelist-class.md) in the *MFC Reference* and [Using CImageList](../mfc/using-cimagelist.md) in this family of articles.  
   
- Um ein Listensteuerelement zu erstellen, müssen Sie die zu verwendende Bildlisten stellen wenn Sie neue Elemente in die Liste eingefügt.  Im folgenden Beispiel wird diese Prozedur, in der `m_pImagelist` ein Zeiger vom Typ `CImageList` und `m_listctrl` ein `CListCtrl` \- Datenmember ist.  
+ To create a list control, you need to supply image lists to be used when you insert new items into the list. The following example demonstrates this procedure, where `m_pImagelist` is a pointer of type `CImageList` and `m_listctrl` is a `CListCtrl` data member.  
   
- [!CODE [NVC_MFCControlLadenDialog#19](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCControlLadenDialog#19)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#19](../mfc/codesnippet/cpp/list-items-and-image-lists_1.cpp)]  
   
- Wenn Sie nicht planen, Symbole in der Listenansicht oder in Listensteuerelement anzuzeigen, benötigen Sie keine Bildlisten.  
+ However, if you don't plan to display icons in your list view or list control, you don't need image lists.  
   
-## Siehe auch  
- [Verwenden von CListCtrl](../mfc/using-clistctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

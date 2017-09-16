@@ -1,40 +1,59 @@
 ---
-title: "&#220;bergeordnete und untergeordnete Elemente in einem Struktursteuerelement | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Untergeordnete Elemente in Struktursteuerelementen"
-  - "CTreeCtrl-Klasse, Übergeordnete und untergeordnete Elemente"
-  - "Übergeordnete Elemente in CTreeCtrl"
-  - "Struktursteuerelemente, Übergeordnete und untergeordnete Elemente"
+title: Tree Control Parent and Child Items | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- parent items in CTreeCtrl [MFC]
+- child items in tree control [MFC]
+- CTreeCtrl class [MFC], parent and child items
+- tree controls [MFC], parent and child items
 ms.assetid: abcea1e4-fe9b-40d9-86dc-1db235f8f103
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# &#220;bergeordnete und untergeordnete Elemente in einem Struktursteuerelement
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 823c7ce4bf946d8698b670f3c8b014d7dec1d7e9
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Jedes Element in einem der Strukturansicht \([CTreeCtrl](../mfc/reference/ctreectrl-class.md)\) kann eine Liste mit Unterelementen, die über untergeordnete Elemente bezeichnet werden, zugeordnet.  Ein Element, das ein oder mehrere untergeordnete Elemente hat, wird ein übergeordnetes Element aufgerufen.  Ein untergeordnetes Element wird unterhalb des übergeordneten Elements angezeigt und wird eingezogen, um zu kennzeichnen ist untergeordnet übergeordnete Element.  Ein Element, das kein übergeordnetes Element hat, ist in der Hierarchie und wird als Stammelement bezeichnet.  
+---
+# <a name="tree-control-parent-and-child-items"></a>Tree Control Parent and Child Items
+Any item in a tree control ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) can have a list of subitems, which are called child items, associated with it. An item that has one or more child items is called a parent item. A child item is displayed below its parent item and is indented to indicate it is subordinate to the parent. An item that has no parent is at the top of the hierarchy and is called a root item.  
   
- Zu jedem Zeitpunkt kann der Zustand der Liste eines übergeordneten Elements der untergeordneter Elemente entweder erweitert oder reduziert werden.  Wenn der Zustand erweitert wird, werden die untergeordneten Elemente unterhalb des übergeordneten Elements angezeigt.  Wenn sie reduziert sind, werden die untergeordneten Elemente nicht angezeigt.  In der Liste der automatisch zwischen den erweiterten und reduzierten Zustände, wenn Benutzer auf das übergeordnete Element öffnen oder, wenn das übergeordnete Element das **TVS\_HASBUTTONS** Format hat, wenn der Benutzer auf die Schaltfläche klickt, die dem übergeordneten Element zugeordnet ist.  Eine Anwendung kann die untergeordnete Elemente erweitern oder reduzieren, indem Sie die Memberfunktion [Erweitern](../Topic/CTreeCtrl::Expand.md) verwendet.  
+ At any given time, the state of a parent item's list of child items can be either expanded or collapsed. When the state is expanded, the child items are displayed below the parent item. When it is collapsed, the child items are not displayed. The list automatically toggles between the expanded and collapsed states when the user double-clicks the parent item or, if the parent has the **TVS_HASBUTTONS** style, when the user clicks the button associated with the parent item. An application can expand or collapse the child items by using the [Expand](../mfc/reference/ctreectrl-class.md#expand) member function.  
   
- Sie ein Element einem Strukturansicht hinzu, indem Sie die Memberfunktion [InsertItem](../Topic/CTreeCtrl::InsertItem.md) aufrufen.  Diese Funktion gibt ein Handle des Typs **HTREEITEM** zurück, der das Element eindeutig identifiziert.  Wenn Sie ein Element hinzufügen, müssen Sie das Handle des übergeordneten Elements des neuen Elements angeben.  Wenn Sie **NULL** oder das **TVI\_ROOT**\-Wert anstelle eines Handles des übergeordneten Elements in der Struktur unter [TVINSERTSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb773452) oder im `hParent`\-Parameter angeben, wird das Element als Stammelement hinzugefügt.  
+ You add an item to a tree control by calling the [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) member function. This function returns a handle of the **HTREEITEM** type, which uniquely identifies the item. When adding an item, you must specify the handle of the new item's parent item. If you specify **NULL** or the **TVI_ROOT** value instead of a parent item handle in the [TVINSERTSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb773452) structure or `hParent` parameter, the item is added as a root item.  
   
- Eine Strukturansicht sendet eine Benachrichtigung [TVN\_ITEMEXPANDING](http://msdn.microsoft.com/library/windows/desktop/bb773537), wenn die Liste eines übergeordneten Elements von untergeordneten Elementen im Begriff ist erweitert werden oder reduziert werden.  Die Benachrichtigung erhalten Sie die Möglichkeit, die Änderungen zu unterbinden oder alle Attribute des übergeordneten Elements festlegen, die vom Zustand der Liste untergeordneter Elemente abhängen.  Nachdem Sie den Zustand der Liste geändert hat, sendet das Tree\-Steuerelement eine Benachrichtigung. [TVN\_ITEMEXPANDED](http://msdn.microsoft.com/library/windows/desktop/bb773533)  
+ A tree control sends a [TVN_ITEMEXPANDING](http://msdn.microsoft.com/library/windows/desktop/bb773537) notification message when a parent item's list of child items is about to be expanded or collapsed. The notification gives you the opportunity to prevent the change or to set any attributes of the parent item that depend on the state of the list of child items. After changing the state of the list, the tree control sends a [TVN_ITEMEXPANDED](http://msdn.microsoft.com/library/windows/desktop/bb773533) notification message.  
   
- Wenn eine Liste untergeordneter Elemente erweitert wird, wird sie relativ zum übergeordneten Element eingezogen.  Sie können die Größe des Einzugs, indem Sie die [SetIndent](../Topic/CTreeCtrl::SetIndent.md) festlegen oder Memberfunktion, verwenden die aktuelle Menge abrufen, indem Sie die Memberfunktion [GetIndent](../Topic/CTreeCtrl::GetIndent.md) verwenden.  
+ When a list of child items is expanded, it is indented relative to the parent item. You can set the amount of indentation by using the [SetIndent](../mfc/reference/ctreectrl-class.md#setindent) member function or retrieve the current amount by using the [GetIndent](../mfc/reference/ctreectrl-class.md#getindent) member function.  
   
-## Siehe auch  
- [Verwenden von CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

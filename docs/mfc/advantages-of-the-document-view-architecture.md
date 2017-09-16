@@ -1,49 +1,68 @@
 ---
-title: "Vorteile der Dokument-/Ansichtarchitektur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Dokument-/Ansichtsarchitektur, Vorteile von"
-  - "Ansichten, Vorteile"
+title: Advantages of the Document-View Architecture | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- views [MFC], advantages
+- document/view architecture [MFC], advantages of
 ms.assetid: 0bc27071-e120-4889-939c-ce1e61fb9cb3
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Vorteile der Dokument-/Ansichtarchitektur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6aa61689c72a35cad051b525b7ff4a243a4b4d9d
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Der wichtigste Vorteil der MFC\-Dokument\-\/Ansichtsarchitektur ist, dass die Architekturstützmehreren Ansichten des gleichen Dokuments besonders zufrieden stellend ausgeführt wird. \(Wenn Sie nicht mehrere Ansichten benötigen und der kleine Mehraufwand der Dokument\/Ansicht in der Anwendung übertrieben ist, können Sie die Architektur vermeiden.  [Alternativen zur Dokument\-\/Ansichtarchitektur](../mfc/alternatives-to-the-document-view-architecture.md).\)  
+---
+# <a name="advantages-of-the-documentview-architecture"></a>Advantages of the Document/View Architecture
+The key advantage to using the MFC document/view architecture is that the architecture supports multiple views of the same document particularly well. (If you don't need multiple views and the small overhead of document/view is excessive in your application, you can avoid the architecture. [Alternatives to the Document/View Architecture](../mfc/alternatives-to-the-document-view-architecture.md).)  
   
- Angenommen, die Anwendung numerische Daten der Benutzer entweder in der Arbeitsblattform oder der in Diagrammform können.  Ein Benutzer die Rohdaten, in der Arbeitsblattform und ein Diagramm gleichzeitig finden, das aus Daten entsteht.  Sie zeigen diese getrennten Ansichten in separate Rahmenfenster oder in Splitterbereiche innerhalb eines einzelnen Fensters an.  Angenommen, die der Benutzer die Daten in einem Arbeitsblatt bearbeiten und die Änderungen finden kann, die sofort im Diagramm angezeigt werden.  
+ Suppose your application lets users view numerical data either in spreadsheet form or in chart form. A user might want to see simultaneously both the raw data, in spreadsheet form, and a chart that results from the data. You display these separate views in separate frame windows or in splitter panes within a single window. Now suppose the user can edit the data in the spreadsheet and see the changes instantly reflected in the chart.  
   
- In MFC werden die Arbeitsblattansicht und die Diagrammansicht auf der Grundlage verschiedener Klassen sein, die von Vorlagen CView abgeleitet wurden.  Beide Ansichten werden mit einem einzelnen Dokumentobjekt zugeordnet.  Die \- Archive die Daten \(bzw. wird möglicherweise aus einer Datenbank\).  Beide Ansichten greifen auf das Dokument zu und die Daten an, die sie daraus abrufen.  
+ In MFC, the spreadsheet view and the chart view would be based on different classes derived from CView. Both views would be associated with a single document object. The document stores the data (or perhaps obtains it from a database). Both views access the document and display the data they retrieve from it.  
   
- Wenn ein Benutzer eine der Ansichten aktualisiert, ruft dieses Ansichtsobjekt `CDocument::UpdateAllViews` auf.  Dieses Feature die Ansichten alles Dokuments und Aktualisierungen jeder Ansicht selbst mithilfe der neuesten Daten vom Dokument benachrichtigt.  Der einzelne Aufruf `UpdateAllViews` synchronisiert die verschiedenen Ansichten.  
+ When a user updates one of the views, that view object calls `CDocument::UpdateAllViews`. That function notifies all of the document's views, and each view updates itself using the latest data from the document. The single call to `UpdateAllViews` synchronizes the different views.  
   
- Dieses Szenario wäre schwer, ohne die Trennung von Daten aus der Ansicht zu codieren sein, insbesondere wenn die Ansichten die Daten selbst gespeichert haben.  Mit Dokument\/Ansicht ist es einfach.  Das Framework übernimmt die meisten der Koordinationsarbeit für Sie.  
+ This scenario would be difficult to code without the separation of data from view, particularly if the views stored the data themselves. With document/view, it's easy. The framework does most of the coordination work for you.  
   
-## Worüber möchten Sie mehr erfahren?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Alternativen zur Dokument\-\/Ansichtarchitektur Dokument](../mfc/alternatives-to-the-document-view-architecture.md)  
+-   [Alternatives to document/view](../mfc/alternatives-to-the-document-view-architecture.md)  
   
 -   [CDocument](../mfc/reference/cdocument-class.md)  
   
 -   [CView](../mfc/reference/cview-class.md)  
   
--   [CDocument::UpdateAllViews](../Topic/CDocument::UpdateAllViews.md)  
+-   [CDocument::UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews)  
   
--   [CView::GetDocument](../Topic/CView::GetDocument.md)  
+-   [CView::GetDocument](../mfc/reference/cview-class.md#getdocument)  
   
-## Siehe auch  
- [Dokument\-\/Ansichtsarchitektur](../mfc/document-view-architecture.md)
+## <a name="see-also"></a>See Also  
+ [Document/View Architecture](../mfc/document-view-architecture.md)
+
+

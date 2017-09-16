@@ -1,5 +1,5 @@
 ---
-title: CD2DMesh-Klasse | Microsoft-Dokumentation
+title: CD2DMesh Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -23,7 +23,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DMesh class
+- CD2DMesh [MFC], CD2DMesh
+- CD2DMesh [MFC], Attach
+- CD2DMesh [MFC], Create
+- CD2DMesh [MFC], Destroy
+- CD2DMesh [MFC], Detach
+- CD2DMesh [MFC], Get
+- CD2DMesh [MFC], IsValid
+- CD2DMesh [MFC], Open
+- CD2DMesh [MFC], m_pMesh
 ms.assetid: 11a2c78a-1367-40e8-a34f-44aa0509a4c9
 caps.latest.revision: 17
 author: mikeblome
@@ -43,15 +51,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 78461adeaa0671b146ccb48f4e9145cbdceeb8cf
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 40667a78e282a6eb789357c916a5231be71c086c
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cd2dmesh-class"></a>CD2DMesh-Klasse
-Ein Wrapper für ID2D1Mesh.  
+# <a name="cd2dmesh-class"></a>CD2DMesh Class
+A wrapper for ID2D1Mesh.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -59,69 +67,69 @@ Ein Wrapper für ID2D1Mesh.
 class CD2DMesh : public CD2DResource;  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DMesh::CD2DMesh](#cd2dmesh)|Erstellt ein CD2DMesh-Objekt.|  
-|[CD2DMesh:: ~ CD2DMesh](#_dtorcd2dmesh)|Der Destruktor. Wird aufgerufen, wenn ein D2D-Gitterobjekt zerstört wird.|  
+|[CD2DMesh::CD2DMesh](#cd2dmesh)|Constructs a CD2DMesh object.|  
+|[CD2DMesh::~CD2DMesh](#_dtorcd2dmesh)|The destructor. Called when a D2D mesh object is being destroyed.|  
   
-### <a name="public-methods"></a>Öffentliche Methoden  
+### <a name="public-methods"></a>Public Methods  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DMesh::Attach](#attach)|Hängt die vorhandene Ressourcenschnittstelle für das Objekt|  
-|[CD2DMesh::Create](#create)|Erstellt einen CD2DMesh. (Überschreibt [CD2DResource:: Create](../../mfc/reference/cd2dresource-class.md#create).)|  
-|[CD2DMesh::Destroy](#destroy)|Zerstört ein CD2DMesh-Objekt. (Überschreibt [CD2DResource:: Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|  
-|[CD2DMesh::Detach](#detach)|Ressourcenschnittstelle aus dem Objekt getrennt|  
-|[CD2DMesh::Get](#get)|Gibt die ID2D1Mesh-Schnittstelle|  
-|[CD2DMesh::IsValid](#isvalid)|Überprüft die Gültigkeit der Ressource (überschreibt [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|  
-|[CD2DMesh::Open](#open)|Öffnet das Gitter für die Auffüllung.|  
+|[CD2DMesh::Attach](#attach)|Attaches existing resource interface to the object|  
+|[CD2DMesh::Create](#create)|Creates a CD2DMesh. (Overrides [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
+|[CD2DMesh::Destroy](#destroy)|Destroys a CD2DMesh object. (Overrides [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|  
+|[CD2DMesh::Detach](#detach)|Detaches resource interface from the object|  
+|[CD2DMesh::Get](#get)|Returns ID2D1Mesh interface|  
+|[CD2DMesh::IsValid](#isvalid)|Checks resource validity (Overrides [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|  
+|[CD2DMesh::Open](#open)|Opens the mesh for population.|  
   
-### <a name="public-operators"></a>Öffentliche Operatoren  
+### <a name="public-operators"></a>Public Operators  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DMesh::Operator ID2D1Mesh *](#operator_id2d1mesh_star)|Gibt die ID2D1Mesh-Schnittstelle|  
+|[CD2DMesh::operator ID2D1Mesh*](#operator_id2d1mesh_star)|Returns ID2D1Mesh interface|  
   
-### <a name="protected-data-members"></a>Geschützte Datenmember  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DMesh::m_pMesh](#m_pmesh)|Ein Zeiger auf eine ID2D1Mesh.|  
+|[CD2DMesh::m_pMesh](#m_pmesh)|A pointer to an ID2D1Mesh.|  
   
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- [Von CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
  [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
   
  `CD2DMesh`  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dmesh"></a>CD2DMesh:: ~ CD2DMesh  
- Der Destruktor. Wird aufgerufen, wenn ein D2D-Gitterobjekt zerstört wird.  
+##  <a name="_dtorcd2dmesh"></a>  CD2DMesh::~CD2DMesh  
+ The destructor. Called when a D2D mesh object is being destroyed.  
   
 ```  
 virtual ~CD2DMesh();
 ```  
   
-##  <a name="attach"></a>CD2DMesh::Attach  
- Hängt die vorhandene Ressourcenschnittstelle für das Objekt  
+##  <a name="attach"></a>  CD2DMesh::Attach  
+ Attaches existing resource interface to the object  
   
 ```  
 void Attach(ID2D1Mesh* pResource);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `pResource`  
- Vorhandene Ressourcenschnittstelle. NULL darf nicht sein  
+ Existing resource interface. Cannot be NULL  
   
-##  <a name="cd2dmesh"></a>CD2DMesh::CD2DMesh  
- Erstellt ein CD2DMesh-Objekt.  
+##  <a name="cd2dmesh"></a>  CD2DMesh::CD2DMesh  
+ Constructs a CD2DMesh object.  
   
 ```  
 CD2DMesh(
@@ -129,91 +137,91 @@ CD2DMesh(
     BOOL bAutoDestroy = TRUE);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `pParentTarget`  
- Ein Zeiger auf das Renderingziel.  
+ A pointer to the render target.  
   
  `bAutoDestroy`  
- Gibt an, dass das Objekt vom Besitzer (pParentTarget) zerstört wird.  
+ Indicates that the object will be destroyed by owner (pParentTarget).  
   
-##  <a name="create"></a>CD2DMesh::Create  
- Erstellt einen CD2DMesh.  
+##  <a name="create"></a>  CD2DMesh::Create  
+ Creates a CD2DMesh.  
   
 ```  
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `pRenderTarget`  
- Ein Zeiger auf das Renderingziel.  
+ A pointer to the render target.  
   
-### <a name="return-value"></a>Rückgabewert  
- Wenn die Methode erfolgreich ist, wird S_OK zurückgegeben. Andernfalls wird einen HRESULT-Fehlercode zurückgegeben.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. Otherwise, it returns an HRESULT error code.  
   
-##  <a name="destroy"></a>CD2DMesh::Destroy  
- Zerstört ein CD2DMesh-Objekt.  
+##  <a name="destroy"></a>  CD2DMesh::Destroy  
+ Destroys a CD2DMesh object.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>CD2DMesh::Detach  
- Ressourcenschnittstelle aus dem Objekt getrennt  
+##  <a name="detach"></a>  CD2DMesh::Detach  
+ Detaches resource interface from the object  
   
 ```  
 ID2D1Mesh* Detach();
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Zeiger auf getrennte Ressourcenschnittstelle.  
+### <a name="return-value"></a>Return Value  
+ Pointer to detached resource interface.  
   
-##  <a name="get"></a>CD2DMesh::Get  
- Gibt die ID2D1Mesh-Schnittstelle  
+##  <a name="get"></a>  CD2DMesh::Get  
+ Returns ID2D1Mesh interface  
   
 ```  
 ID2D1Mesh* Get();
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Zeiger auf eine ID2D1Mesh-Schnittstelle oder NULL, wenn das Objekt noch nicht initialisiert ist.  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1Mesh interface or NULL if object is not initialized yet.  
   
-##  <a name="isvalid"></a>CD2DMesh::IsValid  
- Die Ressource Gültigkeit überprüft  
+##  <a name="isvalid"></a>  CD2DMesh::IsValid  
+ Checks resource validity  
   
 ```  
 virtual BOOL IsValid() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- True, wenn die Ressource gültig ist. andernfalls FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if resource is valid; otherwise FALSE.  
   
-##  <a name="m_pmesh"></a>CD2DMesh::m_pMesh  
- Ein Zeiger auf eine ID2D1Mesh.  
+##  <a name="m_pmesh"></a>  CD2DMesh::m_pMesh  
+ A pointer to an ID2D1Mesh.  
   
 ```  
 ID2D1Mesh* m_pMesh;  
 ```  
   
-##  <a name="open"></a>CD2DMesh::Open  
- Öffnet das Gitter für die Auffüllung.  
+##  <a name="open"></a>  CD2DMesh::Open  
+ Opens the mesh for population.  
   
 ```  
 ID2D1TessellationSink* Open();
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf einen ID2D1TessellationSink, der verwendet wird, um das Gitter aufzufüllen.  
+### <a name="return-value"></a>Return Value  
+ A pointer to an ID2D1TessellationSink that is used to populate the mesh.  
   
-##  <a name="operator_id2d1mesh_star"></a>CD2DMesh::Operator ID2D1Mesh *  
- Gibt die ID2D1Mesh-Schnittstelle  
+##  <a name="operator_id2d1mesh_star"></a>  CD2DMesh::operator ID2D1Mesh*  
+ Returns ID2D1Mesh interface  
   
 ```  
 operator ID2D1Mesh*();
 ```   
   
-### <a name="return-value"></a>Rückgabewert  
- Zeiger auf eine ID2D1Mesh-Schnittstelle oder NULL, wenn das Objekt noch nicht initialisiert ist.  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1Mesh interface or NULL if object is not initialized yet.  
   
-## <a name="see-also"></a>Siehe auch  
- [Klassen](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

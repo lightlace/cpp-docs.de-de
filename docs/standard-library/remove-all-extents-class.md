@@ -1,5 +1,5 @@
 ---
-title: remove_all_extents-Klasse | Microsoft-Dokumentation
+title: remove_all_extents Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- remove_all_extents
 - type_traits/std::remove_all_extents
 dev_langs:
 - C++
@@ -35,15 +34,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: aa6a975b598f7e51445a777cc980d5541d7e0e8b
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: d0add5114c674b784b7719d1b56d4284e46312d1
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="removeallextents-class"></a>remove_all_extents-Klasse
-Wandelt einen Arraytyp in einen Nichtarraytyp um.  
+# <a name="removeallextents-class"></a>remove_all_extents Class
+Makes non array type from array type.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,14 +54,14 @@ template <class T>
 using remove_all_extents_t = typename remove_all_extents<T>::type;
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a>Parameters  
  `T`  
- Der zu ändernde Typ.  
+ The type to modify.  
   
-## <a name="remarks"></a>Hinweise  
- Eine Instanz von `remove_all_extents<T>` enthält einen geänderten Typ, der der Elementtyp des Arraytyps `T` ist, wobei alle Arraydimensionen entfernt wurden, oder `T`, wenn `T` kein Arraytyp ist.  
+## <a name="remarks"></a>Remarks  
+ An instance of `remove_all_extents<T>` holds a modified-type that is the element type of the array type `T` with all array dimensions removed, or `T` if `T` is not an array type.  
   
-## <a name="example"></a>Beispiel  
+## <a name="example"></a>Example  
   
 ```cpp  
 #include <type_traits>   
@@ -84,12 +83,12 @@ int main()
     }  
 ```  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [remove_extent-Klasse](../standard-library/remove-extent-class.md)
+ [remove_extent Class](../standard-library/remove-extent-class.md)
 

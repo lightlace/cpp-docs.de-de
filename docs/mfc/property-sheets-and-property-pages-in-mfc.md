@@ -1,40 +1,59 @@
 ---
-title: "Eigenschaftenbl&#228;tter und Eigenschaftenseiten in MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Steuerelemente [MFC], Eigenschaftenblätter"
-  - "Eigenschaftenseiten, MFC"
-  - "Eigenschaftenblätter, MFC"
-  - "Registerkarten-Dialogfelder"
+title: Property Sheets and Property Pages in MFC | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- property pages [MFC], MFC
+- controls [MFC], property sheets
+- property sheets, MFC
+- tab dialog boxes
 ms.assetid: e1bede2b-0285-4b88-a052-0f8a372807a2
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Eigenschaftenbl&#228;tter und Eigenschaftenseiten in MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: bd2a171b535dcf83b88958e784129e2cbd0b16f4
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Eigenschaftenblatts, auch ein Dialogfeld im Registerformat, ist ein Dialogfeld, das Eigenschaftenseiten enthält.  Jede Eigenschaftenseite ist auf einer Dialogfeldvorlagen\-Ressource und enthält Steuerelemente.  Sie ist auf einer Seite mit einer Registerkarte im Vordergrund eingeschlossen.  Die Registerkarte wird die Seite und gibt sein Zweck an.  Benutzer klicken auf eine Registerkarte im Eigenschaftenblatt, um mehrere Steuerelemente auszuwählen.  
+---
+# <a name="property-sheets-and-property-pages-in-mfc"></a>Property Sheets and Property Pages in MFC
+A property sheet, also known as a tab dialog box, is a dialog box that contains property pages. Each property page is based on a dialog template resource and contains controls. It is enclosed on a page with a tab on top. The tab names the page and indicates its purpose. Users click a tab in the property sheet to select a set of controls.  
   
- Verwendungsseiten, um die Steuerelemente im Eigenschaftenblatt in übersichtlicher Sätze zu gruppieren.  Das enthaltende Eigenschaftenblatt hat in der Regel mehrere Steuerelemente von eigenen.  Diese betreffen alle Seiten.  
+ Use pages to group the controls in the property sheet into meaningful sets. The contained property sheet typically has several controls of its own. These apply to all pages.  
   
- Eigenschaftenblätter basieren auf Klasse [CPropertySheet](../mfc/reference/cpropertysheet-class.md).  Eigenschaftenseiten basieren auf Klasse [CPropertyPage](../mfc/reference/cpropertypage-class.md).  
+ Property sheets are based on class [CPropertySheet](../mfc/reference/cpropertysheet-class.md). Property pages are based on class [CPropertyPage](../mfc/reference/cpropertypage-class.md).  
   
- Eigenschaftenblatts ist eine besondere Art von Dialogfeld, das im Allgemeinen verwendet wird, um die Attribute einiger externen Objekts zu ändern, wie die aktuelle Auswahl in einer Ansicht.  Das Eigenschaftenblatt enthält drei Hauptkomponenten: das enthaltende Dialogfeld, mindestens Eigenschaftenseiten einzeln angezeigt und eine Registerkarte oben auf jeder Seite, die der Benutzer klickt, um die Seite auszuwählen.  Eigenschaftenblätter sind für Situationen, in denen Sie einige ähnliche Einstellungssätze oder Optionen haben zu ändern.  Eigenschaftenblatts gruppiert Informationen in einer leicht verständliche Weise.  
+ A property sheet is a special kind of dialog box that is generally used to modify the attributes of some external object, such as the current selection in a view. The property sheet has three main parts: the containing dialog box, one or more property pages shown one at a time, and a tab at the top of each page that the user clicks to select that page. Property sheets are useful for situations where you have several similar groups of settings or options to change. A property sheet groups information in an easily understood manner.  
   
 > [!NOTE]
->  Wenn Sie versuchen, ein Eigenschaftenblatt anzuzeigen, indem Sie `CPropertySheet::DoModal` verwenden, kann das System generierte eine Ausnahme der ersten Chance.  Diese Ausnahme tritt auf, da das System versucht, [Fensterstile](../mfc/reference/window-styles.md) des Objekts zu ändern, bevor das Objekt erstellt wurde.  Weitere Informationen über diese Ausnahme sowie, wie sie dies vermeiden können oder sie, finden Sie unter [CPropertySheet::DoModal](../Topic/CPropertySheet::DoModal.md).  
+>  When you are trying to show a property sheet by using `CPropertySheet::DoModal`, the system might generate a first-chance exception. This exception occurs because the system is trying to change the [Window Styles](../mfc/reference/styles-used-by-mfc.md#window-styles) of the object before the object has been created. For more information about this exception, and also how to avoid it or handle it, see [CPropertySheet::DoModal](../mfc/reference/cpropertysheet-class.md#domodal).  
   
-## Siehe auch  
- [Eigenschaftenblätter](../mfc/property-sheets-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Property Sheets](../mfc/property-sheets-mfc.md)
+
+

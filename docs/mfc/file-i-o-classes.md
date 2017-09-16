@@ -1,75 +1,94 @@
 ---
-title: "Datei-E/A-Klassen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.file"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Datenträger-Dateiklassen"
-  - "Datei-E/A-Klassen [C++]"
-  - "E/A [C++], MFC-Klassen"
-  - "E/A [MFC], Klassen"
-  - "Arbeitsspeicher-Dateiklassen"
-  - "OLE-Streams"
-  - "Socketklassen"
-  - "stdio-Klassen"
-  - "stream-Klassen"
-  - "übersetze stream-Klassen"
+title: File I-O Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.file
+dev_langs:
+- C++
+helpviewer_keywords:
+- disk file classes [MFC]
+- stdio classes [MFC]
+- OLE streams [MFC]
+- I/O [MFC], MFC classes
+- translated stream classes [MFC]
+- file I/O classes [MFC]
+- I/O [MFC], classes
+- sockets classes [MFC]
+- stream classes [MFC]
+- memory file classes [MFC]
 ms.assetid: 92821c3f-d9e1-47f6-98c9-3b632d86e811
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Datei-E/A-Klassen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e6bcb29b88d170ad2b50c8db0b21c500825adfdc
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Diese Klassen bieten eine Schnittstelle mit den herkömmlichen Datenträgerdateien, Dateien in den speicherresidenten, zu aktiven Streams und den Windows Sockets bereit.  Alle Klassen, die von `CFile` abgeleitet werden, können mit einem `CArchive`\-Objekt verwendet werden, um die Serialisierung auszuführen.  
+---
+# <a name="file-io-classes"></a>File I/O Classes
+These classes provide an interface to traditional disk files, in-memory files, Active streams, and Windows sockets. All of the classes derived from `CFile` can be used with a `CArchive` object to perform serialization.  
   
- Verwenden Sie die folgenden Klassen, insbesondere `CArchive` und `CFile`, wenn Sie Ihr eigenes Eingabe\/Ausgabe\-Verarbeiten schreiben.  Normalerweise müssen Sie keinen, um aus diesen Klassen abzuleiten.  Wenn Sie das Anwendungsframework verwenden, behandeln die Standardimplementierungen **Öffnen** und die Befehle im Menü **DateiSpeichern** Datei\-E\/A \(mithilfe der `CArchive`\- Klasse\), solange Sie `Serialize`\-Funktion des Dokuments überschreiben, um bereitzustellen Informationen darüber, wie ein Dokument den Inhalt serialisiert.  Weitere Informationen über die Dateiklassen und zum, finden Sie im Artikel [Dateien in MFC](../mfc/files-in-mfc.md) und den Artikel [Serialisierung](../mfc/serialization-in-mfc.md).  
+ Use the following classes, particularly `CArchive` and `CFile`, if you write your own input/output processing. Normally you do not need to derive from these classes. If you use the application framework, the default implementations of the **Open** and **Save** commands on the **File** menu will handle file I/O (using class `CArchive`), as long as you override your document's `Serialize` function to supply details about how a document serializes its contents. For more information about the file classes and serialization, see the article [Files in MFC](../mfc/files-in-mfc.md) and the article [Serialization](../mfc/serialization-in-mfc.md).  
   
- [Die C\-Datei](../mfc/reference/cfile-class.md)  
- Stellt eine Dateischnittstelle in binäre Datenträgerdateien bereit.  
+ [CFile](../mfc/reference/cfile-class.md)  
+ Provides a file interface to binary disk files.  
   
  [CStdioFile](../mfc/reference/cstdiofile-class.md)  
- Stellt eine `CFile`\-Schnittstelle zu Streamdatenträgerdateien gepufferten, normalerweise im Textmodus bereit.  
+ Provides a `CFile` interface to buffered stream disk files, usually in text mode.  
   
  [CMemFile](../mfc/reference/cmemfile-class.md)  
- Stellt eine `CFile`\-Schnittstelle an Dateien im Arbeitsspeicher bereit.  
+ Provides a `CFile` interface to in-memory files.  
   
  [CSharedFile](../mfc/reference/csharedfile-class.md)  
- Stellt eine `CFile`\-Schnittstelle auf freigegebene Dateien im Arbeitsspeicher bereit.  
+ Provides a `CFile` interface to shared in-memory files.  
   
  [COleStreamFile](../mfc/reference/colestreamfile-class.md)  
- Verwendet die Schnittstelle COM\- `IStream`, um `CFile` Zugriff an Verbunddateien zu ermöglichen.  
+ Uses the COM `IStream` interface to provide `CFile` access to compound files.  
   
  [CSocketFile](../mfc/reference/csocketfile-class.md)  
- Stellt eine `CFile`\-Schnittstelle für einen Socket Windows bereit.  
+ Provides a `CFile` interface to a Windows Socket.  
   
-## Verwandte Klassen  
+## <a name="related-classes"></a>Related Classes  
  [CArchive](../mfc/reference/carchive-class.md)  
- Arbeitet mit einem `CFile`\-Objekt zum Werkzeugpersistenten speicher für Objekte durch Serialisierung zusammen \(siehe [CObject::Serialize](../Topic/CObject::Serialize.md)\).  
+ Cooperates with a `CFile` object to implement persistent storage for objects through serialization (see [CObject::Serialize](../mfc/reference/cobject-class.md#serialize)).  
   
  [CArchiveException](../mfc/reference/carchiveexception-class.md)  
- Eine Archivausnahme.  
+ An archive exception.  
   
  [CFileException](../mfc/reference/cfileexception-class.md)  
- Eine dateiorientierten Ausnahme.  
+ A file-oriented exception.  
   
  [CFileDialog](../mfc/reference/cfiledialog-class.md)  
- Stellt ein Standarddialogfeld zum Öffnen oder Speichern einer Datei.  
+ Provides a standard dialog box for opening or saving a file.  
   
  [CRecentFileList](../mfc/reference/crecentfilelist-class.md)  
- Führt die zuletzt verwendete \(MRU\)\- Dateiliste.  
+ Maintains the most recently used (MRU) file list.  
   
-## Siehe auch  
- [Klassenübersicht](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

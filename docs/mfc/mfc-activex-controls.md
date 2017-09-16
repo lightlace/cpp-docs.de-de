@@ -1,123 +1,139 @@
 ---
-title: "MFC-ActiveX-Steuerelemente | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MFC ActiveX Controls (MFC)"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX-Steuerelemente [C++], MFC"
-  - "COleControl-Klasse, MFC-ActiveX-Steuerelemente"
-  - "Container [C++], MFC-ActiveX-Steuerelemente"
-  - "Dispatchzuordnungen, für MFC-ActiveX-Steuerelemente"
-  - "Ereignisse [C++], ActiveX-Steuerelemente"
-  - "MFC ActiveX-Steuerelemente [C++]"
-  - "MFC ActiveX-Steuerelemente [C++], aktiver/inaktiver Zustand"
-  - "MFC ActiveX-Steuerelemente [C++], Container"
-  - "MFC ActiveX-Steuerelemente [C++], Serialisieren"
-  - "Serialisierung [C++], MFC-ActiveX-Steuerelemente"
+title: MFC ActiveX Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MFC ActiveX Controls (MFC)
+dev_langs:
+- C++
+helpviewer_keywords:
+- COleControl class [MFC], MFC ActiveX controls
+- ActiveX controls [MFC], MFC
+- containers [MFC], MFC ActiveX controls
+- MFC ActiveX controls [MFC], serializing
+- MFC ActiveX controls [MFC], containers
+- serialization [MFC], MFC ActiveX controls
+- dispatch maps [MFC]], for MFC ActiveX controls
+- MFC ActiveX controls [MFC], active/inactive state
+- events [MFC], ActiveX controls
+- MFC ActiveX controls [MFC]
 ms.assetid: c911fb74-3afc-4bf3-a0f5-7922b14d9a1b
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# MFC-ActiveX-Steuerelemente
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a584f1787c8ee5a3bb28cb3b336a138cb9f56f54
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Ein ActiveX\-Steuerelement ist eine wiederverwendbare Softwarekomponente, die auf dem Component Object Model \(COM\) basiert. Dieses Modell unterstützt zahlreiche OLE\-Funktionen und kann an die unterschiedlichsten Softwareanforderungen angepasst werden.  ActiveX\-Steuerelemente sind sowohl für den herkömmlichen Einsatz in ActiveX\-Steuerelementcontainern als auch für die Verwendung in World Wide Web\-Seiten im Internet geeignet.  Sie können ActiveX\-Steuerelemente entweder mit der hier beschriebenen MFC\-Bibliothek erstellen oder mit [ATL \(Active Template Library\)](../atl/active-template-library-atl-concepts.md).  
+---
+# <a name="mfc-activex-controls"></a>MFC ActiveX Controls
+An ActiveX control is a reusable software component based on the Component Object Model (COM) that supports a wide variety of OLE functionality and can be customized to fit many software needs. ActiveX controls are designed for use both in ordinary ActiveX control containers and on the Internet, in World Wide Web pages. You can create ActiveX controls either with MFC, described here, or with the [Active Template Library (ATL)](../atl/active-template-library-atl-concepts.md).  
   
- Ein ActiveX\-Steuerelement kann sich in einem eigenen Fenster zeichnen, auf Ereignisse \(wie Mausklicks\) reagieren und über eine Schnittstelle verwaltet werden, die Eigenschaften und Methoden umfasst, die denen in den Automatisierungsobjekten ähneln.  
+ An ActiveX control can draw itself in its own window, respond to events (such as mouse clicks), and be managed through an interface that includes properties and methods similar to those in Automation objects.  
   
- Diese Steuerelemente können für viele Verwendungszwecke entwickelt werden, z. B. Datenbankzugriff, Datenüberwachung oder Diagrammerstellung.  Neben ihrer Portabilität unterstützen ActiveX\-Steuerelemente Funktionen, die zuvor nicht für ActiveX\-Steuerelemente verfügbar waren, wie z. B. Kompatibilität mit vorhandenen OLE\-Containern und die Möglichkeit, die Menüs in den OLE\-Containermenüs zu integrieren.  Außerdem unterstützt ein ActiveX\-Steuerelement vollständig Automatisierung. Damit können für das Steuerelement Lese\/Schreibeigenschaften und eine Reihe von Methoden sichtbar gemacht werden, die vom Benutzer des Steuerelements aufgerufen werden können.  
+ These controls can be developed for many uses, such as database access, data monitoring, or graphing. Besides their portability, ActiveX controls support features previously not available to ActiveX controls, such as compatibility with existing OLE containers and the ability to integrate their menus with the OLE container menus. In addition, an ActiveX control fully supports Automation, which allows the control to expose read\write properties and a set of methods that can be called by the control user.  
   
- Sie können fensterlose ActiveX\-Steuerelemente und Steuerelemente erstellen, die nur dann ein Fenster erstellen, wenn sie aktiv sind.  Fensterlose Steuerelemente beschleunigen die Anzeige der Anwendung. Außerdem können mit ihnen transparente und nicht rechteckige Steuerelemente erstellt werden.  Sie können ActiveX\-Steuerelement\-Eigenschaften auch asynchron laden.  
+ You can create windowless ActiveX controls and controls that only create a window when they become active. Windowless controls speed up the display of your application and make it possible to have transparent and nonrectangular controls. You can also load ActiveX control properties asynchronously.  
   
- Ein ActiveX\-Steuerelement wird als prozessinterner Server implementiert \(in der Regel ein kleines Objekt\), der in jedem OLE\-Container verwendet werden kann.  Beachten Sie, dass die volle Funktionalität eines ActiveX\-Steuerelements nur verfügbar ist, wenn es innerhalb eines OLE\-Containers verwendet wird, der in ActiveX\-Steuerelementen berücksichtigt wird.  Eine Liste der Container, die ActiveX\-Steuerelemente unterstützen, finden Sie unter [Portieren von ActiveX\-Steuerelementen in andere Anwendungen](../mfc/containers-for-activex-controls.md).  Dieser Containertyp \(im Folgenden "Steuerelementcontainer" genannt\) kann ein ActiveX\-Steuerelement ausführen. Dazu werden die Eigenschaften und Methoden des Steuerelements verwendet und Benachrichtigungen aus dem ActiveX\-Steuerelement in Form von Ereignissen empfangen.  Dies wird in der folgenden Abbildung veranschaulicht.  
+ An ActiveX control is implemented as an in-process server (typically a small object) that can be used in any OLE container. Note that the full functionality of an ActiveX control is available only when used within an OLE container designed to be aware of ActiveX controls. See [Port ActiveX Controls to Other Applications](../mfc/containers-for-activex-controls.md) for a list of containers that support ActiveX controls. This container type, hereafter called a "control container," can operate an ActiveX control by using the control's properties and methods, and receives notifications from the ActiveX control in the form of events. The following figure demonstrates this interaction.  
   
- ![Wechselspiel von ActiveX&#45;Steuerelementcontainer und &#45;Steuerelement](../mfc/media/vc37221.png "vc37221")  
-Interaktion zwischen einem ActiveX\-Steuerelement\-Container und einem ActiveX\-Steuerelement mit Fenster  
+ ![Interplay of ActiveX control container and control](../mfc/media/vc37221.gif "vc37221")  
+Interaction Between an ActiveX Control Container and a Windowed ActiveX Control  
   
- Unter [MFC\-ActiveX\-Steuerelemente: Optimierung](../mfc/mfc-activex-controls-optimization.md) finden Sie einige neue Informationen zum Optimieren der ActiveX\-Steuerelemente.  
+ For some recent information on optimizing your ActiveX controls, see [MFC ActiveX Controls: Optimization](../mfc/mfc-activex-controls-optimization.md).  
   
- Informationen zum Erstellen eines MFC\-ActiveX\-Steuerelements finden Sie unter [Erstellen eines ActiveX\-Steuerelementprojekts](../mfc/reference/mfc-activex-control-wizard.md).  
+ To create an MFC ActiveX control, see [Create an ActiveX control project](../mfc/reference/mfc-activex-control-wizard.md).  
   
- Weitere Informationen finden Sie unter:  
+ For more information, see:  
   
--   [ActiveX\-Steuerelementcontainer](../mfc/activex-control-containers.md)  
+-   [ActiveX Control Containers](../mfc/activex-control-containers.md)  
   
--   [Aktive Dokumente](../mfc/active-documents.md)  
+-   [Active Documents](../mfc/active-documents.md)  
   
--   [Verwenden von ActiveX\-Steuerelementen](../data/ado-rdo/using-activex-controls.md)  
+-   [Understanding ActiveX Controls](http://msdn.microsoft.com/library/windows/desktop/ms693753)  
   
--   [\<caps:sentence id\="tgt23" sentenceid\="e07c7a1ebdac21120a91f75018670c81" class\="tgtSentence"\>Grundlegendes zu ActiveX\-Steuerelementen\<\/caps:sentence\>](http://msdn.microsoft.com/library/windows/desktop/ms693753)  
+-   [Upgrading an Existing ActiveX Control to be Used on the Internet](../mfc/upgrading-an-existing-activex-control.md)  
   
--   [Aktualisieren eines vorhandenen ActiveX\-Steuerelements zur Verwendung im Internet](../mfc/upgrading-an-existing-activex-control.md)  
+##  <a name="_core_basic_components_of_an_activex_control"></a> Basic Components of an ActiveX Control  
+ An ActiveX control uses several programmatic elements to interact efficiently with a control container and with the user. These are class [COleControl](../mfc/reference/colecontrol-class.md), a set of event-firing functions, and a dispatch map.  
   
-##  <a name="_core_basic_components_of_an_activex_control"></a> Grundlegende Komponenten eines ActiveX\-Steuerelements  
- Ein ActiveX\-Steuerelement verwendet mehrere Programmierelemente, um effizient mit einem Steuerelementcontainer und mit dem Benutzer interagieren zu können.  Dazu gehören die Klasse [COleControl](../mfc/reference/colecontrol-class.md) – ein Satz von Funktionen, die Ereignisse auslösen – sowie eine Dispatchzuordnung.  
+ Every ActiveX control object you develop inherits a powerful set of features from its MFC base class, `COleControl`. These features include in-place activation, and Automation logic. `COleControl` can provide the control object with the same functionality as an MFC window object, plus the ability to fire events. `COleControl` can also provide [windowless controls](../mfc/providing-windowless-activation.md), which rely on their container for help with some of the functionality a window provides (mouse capture, keyboard focus, scrolling), but offer much faster display.  
   
- Jedes ActiveX\-Steuerelementobjekt, das Sie entwickeln, erbt einen leistungsfähigen Satz an Funktionen aus der zugehörigen MFC\-Basisklasse, `COleControl`.  Zu diesen Funktionen gehören die direkte Aktivierung und Automatisierungslogik.  `COleControl` kann das Steuerelementobjekt mit derselben Funktionalität bereitstellen wie ein MFC\-Fensterobjekt. Außerdem wird die Möglichkeit bereitgestellt, Ereignisse auszulösen.  Des Weiteren kann `COleControl`[fensterlose Steuerelemente](../mfc/providing-windowless-activation.md) bereitstellen, die sich auf die Unterstützung des entsprechenden Containers verlassen, wenn es um die Funktionalität geht, die ein Fenster bereitstellt \(Mausauswahl, Tastaturfokus, Bildlauf\). Die Anzeige erfolgt jedoch wesentlich schneller.  
+ Because the control class derives from `COleControl`, it inherits the capability to send, or "fire," messages, called events, to the control container when certain conditions are met. These events are used to notify the control container when something important happens in the control. You can send additional information about an event to the control container by attaching parameters to the event. For more information about ActiveX control events, see the article [MFC ActiveX Controls: Events](../mfc/mfc-activex-controls-events.md).  
   
- Da die Steuerelementklasse von `COleControl` abgeleitet wird, erbt sie die Fähigkeit, Nachrichten \(sogenannte Ereignisse\) zu senden oder auszulösen, wenn bestimmte Bedingungen erfüllt sind.  Mithilfe dieser Ereignisse werden die Steuerelementcontainer benachrichtigt, wenn ein wichtiges Ereignis im Steuerelement auftritt.  Sie können weitere Informationen zu einem Ereignis an den Steuerelementcontainer senden, indem Sie den Ereignissen Parameter anfügen.  Weitere Informationen zu Ereignissen in ActiveX\-Steuerlementen finden Sie unter [MFC\-ActiveX\-Steuerelemente: Ereignisse](../mfc/mfc-activex-controls-events.md).  
+ The final element is a dispatch map, which is used to expose a set of functions (called methods) and attributes (called properties) to the control user. Properties allow the control container or the control user to manipulate the control in various ways. The user can change the appearance of the control, change certain values of the control, or make requests of the control, such as accessing a specific piece of data that the control maintains. This interface is determined by the control developer and is defined using **Class View**. For more information on ActiveX control methods and properties, see the articles [MFC ActiveX Controls: Methods](../mfc/mfc-activex-controls-methods.md) and [Properties](../mfc/mfc-activex-controls-properties.md).  
   
- Das letzte Element ist eine Dispatchzuordnung, mit der eine Reihe von Funktionen \(sogenannte Methoden\) und Attributen \(sogenannte Eigenschaften\) für den Benutzer des Steuerelements sichtbar gemacht werden.  Anhand der Eigenschaften kann der Steuerelementcontainer oder der Benutzer des Steuerelements das Steuerelement auf vielfältige Weise manipulieren.  Der Benutzer kann die Darstellung des Steuerelements und bestimmte Werte des Steuerelements ändern und Anforderungen an das Steuerelement senden, z. B. den Zugriff auf einen bestimmten Datenteil, der im Steuerelement gewartet wird.  Diese Schnittstelle wird vom Entwickler des Steuerelements festgelegt und mit **Klassenansicht** definiert.  Weitere Informationen zu Methoden und Eigenschaften von ActiveX\-Steuerelementen finden Sie in den Artikeln [MFC\-ActiveX\-Steuerelemente: Methoden](../mfc/mfc-activex-controls-methods.md) und [Eigenschaften](../mfc/mfc-activex-controls-properties.md).  
+##  <a name="_core_interaction_between_controls_with_windows_and_activex_control_containers"></a> Interaction Between Controls with Windows and ActiveX Control Containers  
+ When a control is used within a control container, it uses two mechanisms to communicate: it exposes properties and methods, and it fires events. The following figure demonstrates how these two mechanisms are implemented.  
   
-##  <a name="_core_interaction_between_controls_with_windows_and_activex_control_containers"></a> Interaktion zwischen Steuerelementen und Windows\- und ActiveX\-Steuerelementcontainern  
- Wenn ein Steuerelement in einem Steuerelementcontainers verwendet wird, werden zwei Kommunikationsmechanismen verwendet: Es macht Eigenschaften und Methoden verfügbar, und es löst Ereignisse aus.  Die folgende Abbildung zeigt, wie diese beiden Mechanismen implementiert werden.  
+ ![ActiveX control communicates with its container](../mfc/media/vc37222.gif "vc37222")  
+Communication Between an ActiveX Control Container and an ActiveX Control  
   
- ![ActiveX&#45;Steuerelement kommuniziert mit seinem Container](../mfc/media/vc37222.png "vc37222")  
-Kommunikation zwischen einem ActiveX\-Steuerelement\-Container und einem ActiveX\-Steuerelement  
+ The previous figure also illustrates how other OLE interfaces (besides automation and events) are handled by controls.  
   
- Die vorherige Abbildung zeigt auch, wie andere OLE\-Schnittstellen \(mit Ausnahme von Automatisierung und Ereignisse\) von Steuerelementen behandelt werden.  
+ All of a control's communication with the container is performed by `COleControl`. To handle some of the container's requests, **COleControl** will call member functions that are implemented in the control class. All methods and some properties are handled in this way. Your control's class can also initiate communication with the container by calling member functions of `COleControl`. Events are fired in this manner.  
   
- Die gesamte Kommunikation eines Steuerelements mit dem Container wird durch `COleControl` ausgeführt.  Um einige Anforderungen des Containers zu bearbeiten, ruft **COleControl** Memberfunktionen auf, die in der Steuerelementklasse implementiert sind.  Alle Methoden und einige Eigenschaften werden auf diese Weise behandelt.  Die Klasse des Steuerelements kann die Kommunikation mit dem Container durch Aufrufen von Memberfunktionen von `COleControl` auch initiieren.  Ereignisse werden auf diese Weise ausgelöst.  
+##  <a name="_core_active_and_inactive_states_of_an_activex_control"></a> Active and Inactive States of an ActiveX Control  
+ A control has two basic states: active and inactive. Traditionally, these states were distinguished by whether the control had a window. An active control had a window; an inactive control did not. With the introduction of windowless activation, this distinction is no longer universal, but still applies to many controls.  
   
-##  <a name="_core_active_and_inactive_states_of_an_activex_control"></a> Aktive und inaktive Zustände eines ActiveX\-Steuerelements  
- Ein Steuerelement verfügt über zwei grundlegende Zustände: aktiv und inaktiv.  In der Vergangenheit unterschieden sich diese Zustände dadurch, ob das Steuerelement ein Fenster hatte oder nicht.  Ein aktives Steuerelement wies ein Fenster auf, ein inaktives Steuerelement wies kein Fenster auf.  Mit der Einführung der fensterlose Aktivierung, ist diese Unterscheidung nicht mehr universell, gilt aber weiterhin für viele Steuerelemente.  
+ When a [windowless control](../mfc/providing-windowless-activation.md) goes active, it invokes mouse capture, keyboard focus, scrolling, and other window services from its container. You can also [provide mouse interaction to inactive controls](../mfc/providing-mouse-interaction-while-inactive.md), as well as create controls that [wait until activated to create a window](../mfc/turning-off-the-activate-when-visible-option.md).  
   
- Wenn ein [fensterloses Steuerelement](../mfc/providing-windowless-activation.md) aktiv wird, ruft es die Mausauswahl, den Tastaturfokus, den Bildlauf und andere Fensterdienste aus dem zugehörigen Container auf.  Sie können auch [Mausinteraktion für die inaktiven Steuerelemente bereitstellen](../mfc/providing-mouse-interaction-while-inactive.md) und Steuerelemente erstellen, die [bis zur Aktivierung für die Erstellung eines Fensters warten](../mfc/turning-off-the-activate-when-visible-option.md).  
+ When a control with a window becomes active, it is able to interact fully with the control container, the user, and Windows. The figure below demonstrates the paths of communication between the ActiveX control, the control container, and the operating system.  
   
- Wenn ein Steuerelement mit einem Fenster aktiv wird, ist es möglich, vollständig mit dem Steuerelementcontainer, dem Benutzer und Windows zu interagieren.  Die folgende Abbildung zeigt die Pfade der Kommunikation zwischen dem ActiveX\-Steuerelement, dem Steuerelementcontainer und dem Betriebssystem.  
+ ![Msg processing in active windowed ActiveX control](../mfc/media/vc37223.gif "vc37223")  
+Windows Message Processing in a Windowed ActiveX Control (When Active)  
   
- ![Meldungsverarbeitung in ActiveX&#45;Steuerelement mit aktivem Fenster](../mfc/media/vc37223.png "vc37223")  
-Windows\-Nachrichtenverarbeitung in einem ActiveX\-Steuerelement mit Fenster \(sofern aktiv\)  
+##  <a name="_core_serializing_activex_elements"></a> Serialization  
+ The ability to serialize data, sometimes referred to as persistence, allows the control to write the value of its properties to persistent storage. Controls can then be recreated by reading the object's state from the storage.  
   
-##  <a name="_core_serializing_activex_elements"></a> Serialisierung  
- Die Möglichkeit, die Daten zu serialisieren, was manchmal auch als Persistenz bezeichnet wird, ermöglicht es dem Steuerelement, den Wert der Eigenschaften in einen permanenten Speicher zu schreiben.  Steuerelemente können neu erstellt werden, indem der Zustand des Objekts aus dem Speicher gelesen wird.  
+ Note that a control is not responsible for obtaining access to the storage medium. Instead, the control's container is responsible for providing the control with a storage medium to use at the appropriate times. For more information on serialization, see the article [MFC ActiveX Controls: Serializing](../mfc/mfc-activex-controls-serializing.md). For information on optimizing serialization, see [Optimizing Persistence and Initialization](../mfc/optimizing-persistence-and-initialization.md) in ActiveX Controls: Optimization.  
   
- Beachten Sie, dass ein Steuerelement nicht den Zugriff auf das Speichermedium garantiert.  Stattdessen ist der Container des Steuerelements für die Bereitstellung des Steuerelements mit einem Speichermedium zuständig, das zu den entsprechenden Zeitpunkten verwendet werden kann.  Weitere Informationen zur Serialisierung finden Sie im Artikel [MFC\-ActiveX\-Steuerelemente: Serialisieren](../mfc/mfc-activex-controls-serializing.md).  Informationen zum Optimieren der Serialisierung finden Sie unter [Optimieren der Persistenz und Initialisierung](../mfc/optimizing-persistence-and-initialization.md) unter "ActiveX\-Steuerelemente: Optimierung".  
+##  <a name="_core_installing_activex_control_classes_and_tools"></a> Installing ActiveX Control Classes and Tools  
+ When you install Visual C++, the MFC ActiveX control classes and retail and debug ActiveX control run-time DLLs are automatically installed if ActiveX controls are selected in Setup (they are selected by default).  
   
-##  <a name="_core_installing_activex_control_classes_and_tools"></a> Installieren von ActiveX\-Steuerelementklassen und \-werkzeugen  
- Wenn Sie Visual C\+\+ installieren, werden die MFC\-ActiveX\-Steuerelementklassen und Laufzeit\-DLLs der Verkaufs\- und Debugversionen von ActiveX\-Steuerelementen automatisch installiert, wenn ActiveX\-Steuerelemente bei der Installation ausgewählt werden \(sie werden standardmäßig aktiviert\).  
+ By default, the ActiveX control classes and tools are installed in the following subdirectories under \Program Files\Microsoft Visual Studio .NET:  
   
- Standardmäßig werden die ActiveX\-Steuerelementklassen und \-werkzeuge in den folgenden Unterverzeichnissen unter \\Programme\\Microsoft Visual Studio .NET installiert:  
+-   **\Common7\Tools**  
   
--   **\\Common7\\Tools**  
+     Contains the Test Container files (TstCon32.exe, as well as its Help files).  
   
-     Enthält die Testcontainerdateien \(TstCon32.exe und entsprechende Hilfedateien\).  
+-   **\Vc7\atlmfc\include**  
   
--   **\\Vc7\\atlmfc\\include**  
+     Contains the include files needed to develop ActiveX controls with MFC  
   
-     Enthält die Includedateien, die für die Entwicklung von ActiveX\-Steuerelementen mit MFC erforderlich sind.  
+-   **\Vc7\atlmfc\src\mfc**  
   
--   **\\Vc7\\atlmfc\\src\\mfc**  
+     Contains the source code for specific ActiveX control classes in MFC  
   
-     Enthält den Quellcode für bestimmte ActiveX\-Steuerelementklassen in MFC.  
+-   **\Vc7\atlmfc\lib**  
   
--   **\\Vc7\\atlmfc\\lib**  
+     Contains the libraries required to develop ActiveX controls with MFC  
   
-     Enthält die Bibliotheken, die für die Entwicklung von ActiveX\-Steuerelementen mit MFC erforderlich sind.  
+ There are also samples for MFC ActiveX controls. For more information about these samples, see [Controls Samples: MFC-Based ActiveX Controls](../visual-cpp-samples.md)  
   
- Dazu gehören auch Beispiele für MFC\-ActiveX\-Steuerelemente.  Weitere Informationen zu diesen Beispielen finden Sie unter [Beispiele für Steuerelemente: MFC\-basierte ActiveX\-Steuerelemente](../top/visual-cpp-samples.md)  
-  
-## Siehe auch  
- [Benutzeroberflächenelemente](../mfc/user-interface-elements-mfc.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)
+

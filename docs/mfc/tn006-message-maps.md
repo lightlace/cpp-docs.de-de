@@ -1,246 +1,261 @@
 ---
-title: "TN006: Meldungszuordnungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.messages.maps"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Meldungszuordnungen [C++], Windows-Messaging"
-  - "ON_COMMAND-Makro"
-  - "ON_COMMAND_EX-Makro"
-  - "ON_COMMAND_RANGE-Makro"
-  - "ON_COMMAND_RANGE_EX-Makro"
-  - "ON_CONTROL-Makro"
-  - "ON_CONTROL_RANGE-Makro"
-  - "ON_MESSAGE-Makro"
-  - "ON_NOTIFY-Meldung"
-  - "ON_NOTIFY_RANGE-Makro"
-  - "ON_REGISTERED_MESSAGE-Makro"
-  - "ON_UPDATE_COMMAND_UI-Makro"
-  - "TN006"
-  - "Windows-Nachrichten [C++], Meldungszuordnungen"
+title: 'TN006: Message Maps | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.messages.maps
+dev_langs:
+- C++
+helpviewer_keywords:
+- ON_UPDATE_COMMAND_UI macro [MFC]
+- ON_NOTIFY_RANGE macro [MFC]
+- ON_COMMAND macro [MFC]
+- ON_CONTROL_RANGE macro [MFC]
+- ON_REGISTERED_MESSAGE macro [MFC]
+- ON_NOTIFY message [MFC]
+- ON_COMMAND_RANGE_EX macro [MFC]
+- ON_MESSAGE macro [MFC]
+- Windows messages [MFC], message maps
+- ON_COMMAND_RANGE macro [MFC]
+- TN006
+- ON_CONTROL macro [MFC]
+- ON_COMMAND_EX macro [MFC]
+- message maps [MFC], Windows messaging
 ms.assetid: af4b6794-4b40-4f1e-ad41-603c3b7409bb
 caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# TN006: Meldungszuordnungen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 61f2fb43508c80e8ad1aa58c2f74b967837b6874
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Dieser Hinweis beschreibt die MFC\-Meldungszuordnungsfunktion.  
+---
+# <a name="tn006-message-maps"></a>TN006: Message Maps
+This note describes the MFC message map facility.  
   
-## Das Problem  
- Microsoft Windows implementiert virtuelle Funktionen in den Fensterklassen, die die Messagingfunktion verwenden.  Aufgrund der großen Anzahl der Nachrichten, die, eine separate virtuelle Funktion für jede Windows\-Meldung Bereitstellen haben, kann ein großes kostspielig vtable erstellen.  
+## <a name="the-problem"></a>The Problem  
+ Microsoft Windows implements virtual functions in window classes that use its messaging facility. Due to the large number of messages involved, providing a separate virtual function for each Windows message would create a prohibitively large vtable.  
   
- Da die Anzahl systemdefiniertem Windows\-Meldungen im Zeitverlauf ändert und da Anwendungen ihre eigenen Windows\-Meldungen definieren können, stellen Meldungszuordnungen eine Dereferenzierungsebene, die vom Schnittstellenänderungen Unterbrechen des vorhandenen Codes verhindert.  
+ Because the number of system-defined Windows messages changes over time, and because applications can define their own Windows messages, message maps provide a level of indirection that prevents interface changes from breaking existing code.  
   
-## Übersicht  
- MFC bietet eine Alternative zur switch\-Anweisung bereit, die in herkömmlichen Windows\-basierten Programmen verwendet wurde, um die Meldungen verarbeiten, die an ein Fenster gesendet wurden.  Eine Zuordnung der Meldungen zu Methoden kann definiert werden, dass, wenn eine Meldung von einem Fenster empfangen wird, der entsprechenden Methode automatisch aufgerufen wird.  Diese Meldungszuordnungsfunktion wurde entworfen, um virtuelle Funktionen zu ähneln aber zusätzliche Vorteile verfügt, die mit virtuellen Funktionen C\+\+ nicht möglich sind.  
+## <a name="overview"></a>Overview  
+ MFC provides an alternative to the switch statement that was used in traditional Windows-based programs to handle messages sent to a window. A mapping from messages to methods can be defined so that when a message is received by a window, the appropriate method is called automatically. This message-map facility is designed to resemble virtual functions but has additional benefits not possible with C++ virtual functions.  
   
-## Definieren eine Meldungszuordnung  
- Das Makro [DECLARE\_MESSAGE\_MAP](../Topic/DECLARE_MESSAGE_MAP.md) deklariert drei Member einer Klasse.  
+## <a name="defining-a-message-map"></a>Defining a Message Map  
+ The [DECLARE_MESSAGE_MAP](reference/message-map-macros-mfc.md#declare_message_map) macro declares three members for a class.  
   
--   Ein privates Array `AFX_MSGMAP_ENTRY` Einträge namens `_messageEntries`.  
+-   A private array of `AFX_MSGMAP_ENTRY` entries called `_messageEntries`.  
   
--   Eine geschützte `AFX_MSGMAP`\-Struktur namens `messageMap`, die auf `_messageEntries` das Array wird.  
+-   A protected `AFX_MSGMAP` structure called `messageMap` that points to the `_messageEntries` array.  
   
--   Eine geschützte virtuelle Funktion namens `GetMessageMap`, der die Adresse von `messageMap` zurückgibt.  
+-   A protected virtual function called `GetMessageMap` that returns the address of `messageMap`.  
   
- Dieses Makro sollte in die Deklaration einer Klasse mithilfe der Meldungszuordnungen platziert werden.  Üblicherweise ist es am Ende der Klassendeklaration.  Beispiel:  
+ This macro should be put in the declaration of any class using message maps. By convention, it is at the end of the class declaration. For example:  
   
 ```  
 class CMyWnd : public CMyParentWndClass  
-{  
-    // my stuff...  
-  
-protected:  
-    //{{AFX_MSG(CMyWnd)  
-    afx_msg void OnPaint();  
-    //}}AFX_MSG  
-  
-    DECLARE_MESSAGE_MAP()  
+{ *// my stuff...  
+ 
+protected: *//{{AFX_MSG(CMyWnd)  
+    afx_msg void OnPaint();
+*//}}AFX_MSG  
+ 
+    DECLARE_MESSAGE_MAP() 
 };  
 ```  
   
- Dies ist das Format, das vom Anwendungs\-Assistenten generiert und die, wenn sie neuer Klassen erstellen.  Die Klammern \/\/{\/\/{und}} werden für die erfordert.  
+ This is the format generated by AppWizard and ClassWizard when they create new classes. The //{{ and //}} brackets are needed for ClassWizard.  
   
- Die Tabelle der Meldungszuordnung wird definiert, indem einen Makros verwendet, die den Meldungszuordnungseinträgen erweitern.  Startet eine Tabelle mit einem [BEGIN\_MESSAGE\_MAP](../Topic/BEGIN_MESSAGE_MAP.md)\-Makro\-Aufruf, der die Klasse, die durch diese Meldungszuordnung und die übergeordnete Klasse behandelt wird, auf die nicht behandelte Meldungen übergeben werden.  Die Tabellenenden mit dem [END\_MESSAGE\_MAP](../Topic/END_MESSAGE_MAP.md)\-Makro\-Aufruf.  
+ The message map's table is defined by using a set of macros that expand to message map entries. A table starts with a [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) macro call, which defines the class that is handled by this message map and the parent class to which unhandled messages are passed. The table ends with the [END_MESSAGE_MAP](reference/message-map-macros-mfc.md#end_message_map) macro call.  
   
- Zwischen diesen beiden Makro\-Aufrufen ist ein Eintrag, damit jede Meldung von dieser Meldungszuordnung behandelt werden kann.  Jede Standardwindows\-meldung hat ein Makro des Formulars ON\_WM\_*MESSAGE\_NAME*, das einen Eintrag für diese Nachricht generiert.  
+ Between these two macro calls is an entry for each message to be handled by this message map. Every standard Windows message has a macro of the form ON_WM_*MESSAGE_NAME* that generates an entry for that message.  
   
- Eine Standardfunktionsunterzeichnung ist für das Entpacken der Parameter jeder Windows\-Meldung und das Bereitstellen der Typsicherheit definiert.  Diese Signaturen werden in der Datei Afxwin.h in der Deklaration von [CWnd](../mfc/reference/cwnd-class.md) gefunden werden.  Jedes wird mit dem Schlüsselwort `afx_msg` für einfache Identifikation markiert.  
+ A standard function signature has been defined for unpacking the parameters of each Windows message and providing type safety. These signatures may be found in the file Afxwin.h in the declaration of [CWnd](../mfc/reference/cwnd-class.md). Each one is marked with the keyword `afx_msg` for easy identification.  
   
 > [!NOTE]
->  Der Klassen\-Assistent erfordert, dass Sie das `afx_msg`\-Schlüsselwort in den Meldungszuordnungshandlerdeklarationen verwenden.  
+>  ClassWizard requires that you use the `afx_msg` keyword in your message map handler declarations.  
   
- Diese wurden Funktionssignaturen berechnet, indem eine einfache Konvention verwendet.  Der Name der Funktion beginnt immer mit `"On`".  Dies wird mit dem Namen der Windows\-Meldung mit dem "WM\_ gefolgt", das entfernt wird und den ersten Buchstaben jedes Worts Großbuchstaben.  Die Reihenfolge der Parameter ist `wParam`, das von `LOWORD`\(`lParam`\) gefolgt wird `HIWORD`\(`lParam`\).  Nicht verwendete Parameter sind nicht übergeben.  Alle Handles, die von MFC\-Klassen umschlossen sind, werden zu Zeigern zu den korrespondierenden MFC\-Objekten konvertiert.  Das folgende Beispiel zeigt, wie `WM_PAINT` die Meldung verarbeitet und die `CMyWnd::OnPaint`\-Funktion wird aufgerufen werden:  
+ These function signatures were derived by using a simple convention. The name of the function always starts with `"On`". This is followed by the name of the Windows message with the "WM_" removed and the first letter of each word capitalized. The ordering of the parameters is `wParam` followed by `LOWORD`(`lParam`) then `HIWORD`(`lParam`). Unused parameters are not passed. Any handles that are wrapped by MFC classes are converted to pointers to the appropriate MFC objects. The following example shows how to handle the `WM_PAINT` message and cause the `CMyWnd::OnPaint` function to be called:  
   
 ```  
-BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)  
-    //{{AFX_MSG_MAP(CMyWnd)  
-    ON_WM_PAINT()  
-    //}}AFX_MSG_MAP  
+BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass) *//{{AFX_MSG_MAP(CMyWnd)  
+    ON_WM_PAINT() *//}}AFX_MSG_MAP  
 END_MESSAGE_MAP()  
 ```  
   
- Die Meldungszuordnungstabelle muss außerhalb der Möglichkeiten jeder Funktions\- oder Klassendefinition definiert werden.  Sie sollte nicht in einen Block extern "C" abgelegt werden.  
+ The message map table must be defined outside the scope of any function or class definition. It should not be put in an extern "C" block.  
   
 > [!NOTE]
->  Der Klassen\-Assistent ändert die Meldungszuordnungseinträge, die zwischen der Kommentarauftreten Klammer \/\/{\/\/{und}}.  
+>  ClassWizard will modify the message map entries that occur between the //{{ and //}} comment bracket.  
   
-## Benutzerdefinierte Windows\-Meldungen  
- Benutzerdefinierte Meldungen werden in der Meldungszuordnung enthalten, indem das [ON\_MESSAGE](../Topic/ON_MESSAGE.md)\-Makro verwendet.  Dieses Makro akzeptiert eine Meldungsnummer und eine Methode des Formulars:  
+## <a name="user-defined-windows-messages"></a>User Defined Windows Messages  
+ User-defined messages may be included in a message map by using the [ON_MESSAGE](reference/message-map-macros-mfc.md#on_message) macro. This macro accepts a message number and a method of the form:  
   
-```  
-    // inside the class declaration  
-    afx_msg LRESULT OnMyMessage(WPARAM wParam, LPARAM lParam);  
-  
-    #define WM_MYMESSAGE (WM_USER + 100)  
-  
+``` *// inside the class declaration  
+    afx_msg LRESULT OnMyMessage(WPARAM wParam, LPARAM lParam);
+
+ 
+ #<a name="define-wmmymessage-wmuser--100"></a>define WM_MYMESSAGE (WM_USER + 100)  
+ 
 BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)  
     ON_MESSAGE(WM_MYMESSAGE, OnMyMessage)  
 END_MESSAGE_MAP()  
 ```  
   
- In diesem Beispiel richten Sie einen Handler für eine benutzerdefinierte Meldung ein, die eine Windows\-Meldung ID verfügt, die in der Standard\- `WM_USER` Basis für benutzerdefinierte Meldungen abgeleitet wird.  Das folgende Beispiel zeigt, wie dieser Handler aufruft:  
+ In this example, we establish a handler for a custom message that has a Windows message ID derived from the standard `WM_USER` base for user-defined messages. The following example shows how to call this handler:  
   
 ```  
 CWnd* pWnd = ...;  
-pWnd->SendMessage(WM_MYMESSAGE);  
+pWnd->SendMessage(WM_MYMESSAGE);
 ```  
   
- Der Gültigkeitsbereich von benutzerdefinierten Meldungen, die diesen Ansatz verwenden, muss im Bereich `WM_USER` zu 0x7fff sein.  
+ The range of user-defined messages that use this approach must be in the range `WM_USER` to 0x7fff.  
   
 > [!NOTE]
->  Der Klassen\-Assistent unterstützt nicht die Eingabe von `ON_MESSAGE`\-Handlerroutinen von der ClassWizard\-Benutzeroberfläche.  Sie müssen sie vom Visual C\+\+\-Editor manuell eingeben.  Der Klassen\-Assistent analysiert diese Einträge und lässt Sie sie genauso wie alle anderen Meldungszuordnungseinträge durchsuchen.  
+>  ClassWizard does not support entering `ON_MESSAGE` handler routines from the ClassWizard user interface. You must manually enter them from the Visual C++ editor. ClassWizard will parse these entries and let you browse them just like any other message-map entries.  
   
-## Registrierte Windows\-Meldungen  
- Die Funktion [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947) wird verwendet, um eine Nachricht des neuen Fensters zu definieren, die garantiert wird, um während des Systems eindeutig.  Makro\- `ON_REGISTERED_MESSAGE` wird verwendet, um diese Nachrichten behandeln.  Dieses Makro akzeptiert einen Namen einer Variable `UINT NEAR`, die die registrierte Fenstermeldung ID enthält  Beispiel:  
+## Registered Windows Messages  
+ The [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947) function is used to define a new window message that is guaranteed to be unique throughout the system. The macro `ON_REGISTERED_MESSAGE` is used to handle these messages. This macro accepts a name of a `UINT NEAR` variable that contains the registered windows message ID. For example  
   
 ```  
 class CMyWnd : public CMyParentWndClass  
 {  
 public:  
-    CMyWnd();  
-  
-    //{{AFX_MSG(CMyWnd)  
-    afx_msg LRESULT OnFind(WPARAM wParam, LPARAM lParam);  
-    //}}AFX_MSG  
-  
-    DECLARE_MESSAGE_MAP()  
+    CMyWnd();
+
+ *//{{AFX_MSG(CMyWnd)  
+    afx_msg LRESULT OnFind(WPARAM wParam, LPARAM lParam); *//}}AFX_MSG  
+ 
+    DECLARE_MESSAGE_MAP() 
 };  
-  
-static UINT NEAR WM_FIND = RegisterWindowMessage("COMMDLG_FIND");  
-  
-BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)  
-    //{{AFX_MSG_MAP(CMyWnd)  
-    ON_REGISTERED_MESSAGE(WM_FIND, OnFind)  
-    //}}AFX_MSG_MAP  
+ 
+static UINT NEAR WM_FIND = RegisterWindowMessage("COMMDLG_FIND");
+
+ 
+BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass) *//{{AFX_MSG_MAP(CMyWnd)  
+    ON_REGISTERED_MESSAGE(WM_FIND, OnFind) *//}}AFX_MSG_MAP  
 END_MESSAGE_MAP()  
 ```  
   
- Die Windows\-Meldung registrierte ID\-Variable \(WM\_FIND in diesem Beispiel `NEAR` \) muss eine Variable sein aufgrund der Methode, die `ON_REGISTERED_MESSAGE` implementiert wird.  
+ The registered Windows message ID variable (WM_FIND in this example) must be a `NEAR` variable because of the way `ON_REGISTERED_MESSAGE` is implemented.  
   
- Der Gültigkeitsbereich von benutzerdefinierten Meldungen, die diesen Ansatz verwenden, ist im Bereich 0xC000 zu 0xFFFF.  
+ The range of user-defined messages that use this approach will be in the range 0xC000 to 0xFFFF.  
   
 > [!NOTE]
->  Der Klassen\-Assistent unterstützt nicht die Eingabe von `ON_REGISTERED_MESSAGE`\-Handlerroutinen von der ClassWizard\-Benutzeroberfläche.  Sie müssen sie im Text\-Editor manuell eingeben.  Der Klassen\-Assistent analysiert diese Einträge und lässt Sie sie genauso wie alle anderen Meldungszuordnungseinträge durchsuchen.  
+>  ClassWizard does not support entering `ON_REGISTERED_MESSAGE` handler routines from the ClassWizard user interface. You must manually enter them from the text editor. ClassWizard will parse these entries and let you browse them just like any other message-map entries.  
   
-## Befehlsmeldungen  
- Befehlsmeldungen von Menüs und den Zugriffstasten werden im Meldungszuordnungen mit dem Makro `ON_COMMAND` bearbeitet.  Dieses Makro akzeptiert eine Befehls\-ID und eine Methode.  Nur die bestimmte `WM_COMMAND` Meldung, die die angegebene `wParam` gleich Befehls\-ID verfügt, wird von der Methode behandelt, die im Eintrag in der Meldungszuordnung angegeben wird.  Befehlshandlermemberfunktionen nehmen keine Parameter und geben `void` zurück.  Das Makro hat das folgende Format:  
+## Command Messages  
+ Command messages from menus and accelerators are handled in message maps with the `ON_COMMAND` macro. This macro accepts a command ID and a method. Only the specific `WM_COMMAND` message that has a `wParam` equal to the specified command ID is handled by the method specified in the message-map entry. Command handler member functions take no parameters and return `void`. The macro has the following form:  
   
 ```  
 ON_COMMAND(id, memberFxn)  
 ```  
   
- Befehlsupdatemeldungen werden durch denselben Mechanismus weitergeleitet, jedoch das `ON_UPDATE_COMMAND_UI` stattdessen Makro verwenden.  Befehlsaktualisierungshandlermemberfunktionen akzeptieren einen einzelnen Parameter, einen Zeiger auf ein [CCmdUI](../mfc/reference/ccmdui-class.md)\-Objekt und geben `void` zurück.  Das Makro hat das Formular  
+ Command update messages are routed through the same mechanism, but use the `ON_UPDATE_COMMAND_UI` macro instead. Command update handler member functions take a single parameter, a pointer to a [CCmdUI](../mfc/reference/ccmdui-class.md) object, and return `void`. The macro has the form  
   
 ```  
 ON_UPDATE_COMMAND_UI(id, memberFxn)  
 ```  
   
- Fortgeschrittene Benutzer können das Makro `ON_COMMAND_EX` verwenden, das ein erweitertes Formular von Befehlsmeldungshandlern ist.  Das Makro enthält eine Obermenge der `ON_COMMAND`\-Funktionen.  Erweiterte Befehlshandlermemberfunktionen akzeptieren einen einzelnen Parameter, `UINT`, der die Befehls\-ID enthält, und geben `BOOL` zurück.  Der Rückgabewert sollte `TRUE` sein anzugeben, dass der Befehl behandelt wurde.  Andernfalls wird das Routing zu anderen Befehlszielobjekten fort.  
+ Advanced users can use the `ON_COMMAND_EX` macro, which is an extended form of command message handlers. The macro provides a superset of the `ON_COMMAND` functionality. Extended command-handler member functions take a single parameter, a `UINT` that contains the command ID, and return a `BOOL`. The return value should be `TRUE` to indicate that the command has been handled. Otherwise routing will continue to other command target objects.  
   
- Beispiele für diese Formulare:  
+ Examples of these forms:  
   
--   Schließen Resource.h normalerweise \(generiert durch Visual C\+\+\)  
+-   Inside Resource.h (usually generated by Visual C++)  
   
-    ```  
-    #define    ID_MYCMD      100  
-    #define    ID_COMPLEX    101  
-    ```  
+ ```  
+ #<a name="define----idmycmd------100"></a>define    ID_MYCMD      100  
+ #<a name="define----idcomplex----101"></a>define    ID_COMPLEX    101  
+ ```  
   
--   Innerhalb der Klassendeklaration  
+-   Inside the class declaration  
   
-    ```  
-    afx_msg void OnMyCommand();  
-    afx_msg void OnUpdateMyCommand(CCmdUI* pCmdUI);  
-    afx_msg BOOL OnComplexCommand(UINT nID);  
-    ```  
+ ```  
+    afx_msg void OnMyCommand();
+afx_msg void OnUpdateMyCommand(CCmdUI* pCmdUI);
+
+    afx_msg BOOL OnComplexCommand(UINT nID);
+
+ ```  
   
--   Innerhalb der Meldungszuordnungsdefinition  
+-   Inside the message map definition  
   
-    ```  
-    ON_COMMAND(ID_MYCMD, OnMyCommand)  
-    ON_UPDATE_COMMAND_UI(ID_MYCMD, OnUpdateMyCommand)  
-    ON_COMMAND_EX(ID_MYCMD, OnComplexCommand)  
-    ```  
+ ```  
+    ON_COMMAND(ID_MYCMD,
+    OnMyCommand)  
+    ON_UPDATE_COMMAND_UI(ID_MYCMD,
+    OnUpdateMyCommand)  
+    ON_COMMAND_EX(ID_MYCMD,
+    OnComplexCommand)  
+ ```  
   
--   In der Implementierungsdatei  
+-   In the implementation file  
   
-    ```  
+ ```  
     void CMyClass::OnMyCommand()  
-    {  
-        // handle the command  
-    }  
-  
+ { *// handle the command  
+ }  
+ 
     void CMyClass::OnUpdateMyCommand(CCmdUI* pCmdUI)  
-    {  
-        // set the UI state with pCmdUI  
-    }  
-  
+ { *// set the UI state with pCmdUI  
+ }  
+ 
     BOOL CMyClass::OnComplexCommand(UINT nID)  
-    {  
-        // handle the command  
-        return TRUE;  
-    }  
-    ```  
+ { *// handle the command  
+    return TRUE;  
+ }  
+ ```  
   
- Fortgeschrittene Benutzer können einen Bereich von Befehlen behandeln, indem er einen einzigen Befehlshandler verwenden: [ON\_COMMAND\_RANGE](../Topic/ON_COMMAND_RANGE.md) oder `ON_COMMAND_RANGE_EX`.  Siehe die Produktdokumentation zu Informationen über diese Makros.  
+ Advanced users can handle a range of commands by using a single command handler: [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range) or `ON_COMMAND_RANGE_EX`. See the product documentation for more information about these macros.  
   
 > [!NOTE]
->  Der Klassen\-Assistent unterstützt das Erstellen von `ON_COMMAND` und `ON_UPDATE_COMMAND_UI`, Handler jedoch nicht unterstützt das Erstellen von `ON_COMMAND_EX` oder `ON_COMMAND_RANGE`\-Handlern.  Allerdings analysiert Klassen\-Assistent und lässt Sie alle vier Befehlshandlervarianten durchsuchen.  
+>  ClassWizard supports creating `ON_COMMAND` and `ON_UPDATE_COMMAND_UI` handlers, but it does not support creating `ON_COMMAND_EX` or `ON_COMMAND_RANGE` handlers. However, Class Wizard will parse and let you browse all four command handler variants.  
   
-## Steuerelementbenachrichtigungs\-Meldungen  
- Meldungen, die von untergeordneten Steuerelementen an ein Fenster gesendet werden, haben eine zusätzliche Informationen in einem Eintrag in der Meldungszuordnung: die ID des Steuerelements  Der Meldungshandler, der in einem Eintrag in der Meldungszuordnung angegeben wird, wird aufgerufen, wenn die folgenden Bedingungen erfüllt sind:  
+## Control Notification Messages  
+ Messages that are sent from child controls to a window have an extra bit of information in their message map entry: the control's ID. The message handler specified in a message map entry is called only if the following conditions are true:  
   
--   Der Steuerelementbenachrichtigungscode \(das Wort von `lParam`\), wie BN\_CLICKED, entspricht dem Benachrichtigungscode ab, der im Eintrag in der Meldungszuordnung angegeben wird.  
+-   The control notification code (high word of `lParam`), such as BN_CLICKED, matches the notification code specified in the message-map entry.  
   
--   Die Steuerelement\-ID \(`wParam`\) entspricht die Steuerelement\-ID ab, die im Eintrag in der Meldungszuordnung angegeben wird.  
+-   The control ID (`wParam`) matches the control ID specified in the message-map entry.  
   
- Benachrichtigungsmeldungen des benutzerdefinierten Steuerelements können das [ON\_CONTROL](../Topic/ON_CONTROL.md)\-Makro, um einen Eintrag in der Meldungszuordnung mit einem benutzerdefinierten Benachrichtigungscode zu definieren.  Dieses Makro hat das Formular  
+ Custom control notification messages may use the [ON_CONTROL](reference/message-map-macros-mfc.md#on_control) macro to define a message map entry with a custom notification code. This macro has the form  
   
 ```  
 ON_CONTROL(wNotificationCode, id, memberFxn)  
 ```  
   
- Für erweiterte Verwendung kann [ON\_CONTROL\_RANGE](../Topic/ON_CONTROL_RANGE.md) verwendet werden, um eine bestimmte Steuerelementbenachrichtigung aus einem Bereich von Steuerelementen mit den gleichen Handler zu bearbeiten.  
+ For advanced usage [ON_CONTROL_RANGE](reference/message-map-macros-mfc.md#on_control_range) can be used to handle a specific control notification from a range of controls with the same handler.  
   
 > [!NOTE]
->  Der Klassen\-Assistent unterstützt nicht die Erstellung eines `ON_CONTROL` oder `ON_CONTROL_RANGE`\-Handlers in der Benutzeroberfläche.  Sie müssen sie für den Text\-Editor manuell eingeben.  Der Klassen\-Assistent analysiert diese Einträge und lässt Sie sie genauso wie alle anderen Meldungszuordnungseinträge durchsuchen.  
+>  ClassWizard does not support creating an `ON_CONTROL` or `ON_CONTROL_RANGE` handler in the user interface. You must manually enter them with the text editor. ClassWizard will parse these entries and let you browse them just like any other message map entries.  
   
- Die allgemeinen Windows\-Steuerelemente verwenden effektivere [WM\_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) für komplexe Steuerelementbenachrichtigungen.  Diese Version von MFC verfügt direkte Unterstützung dieser neue Meldung, indem die Makros `ON_NOTIFY` und `ON_NOTIFY_RANGE` verwendet.  Siehe die Produktdokumentation zu Informationen über diese Makros.  
+ The Windows Common Controls use the more powerful [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) for complex control notifications. This version of MFC has direct support for this new message by using the `ON_NOTIFY` and `ON_NOTIFY_RANGE` macros. See the product documentation for more information about these macros.  
   
-## Siehe auch  
- [Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)   
- [Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)
+## See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

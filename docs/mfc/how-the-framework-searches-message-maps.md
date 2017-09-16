@@ -1,34 +1,53 @@
 ---
-title: "Wie das Framework Meldungszuordnungen durchsucht | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Meldungszuordnungen, Suchen"
+title: How the Framework Searches Message Maps | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- message maps [MFC]], searching
 ms.assetid: fd1df878-5601-45d7-bd1f-b8f8e65b9a17
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Wie das Framework Meldungszuordnungen durchsucht
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6fd066805d13009e0dd6df82c933c4855a2f8fde
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Das Framework durchsucht die Meldungszuordnungstabelle für Übereinstimmungen mit eingehenden Meldungen.  Sobald Sie einen Eintrag in der Meldungszuordnung für jede Meldung, die Sie schreiben eine Klasse die entsprechenden Handler verarbeiten und schreiben soll, ruft das Framework die Handler automatisch auf.  In den folgenden Themen wird das Meldungszuordnungssuchen:  
+---
+# <a name="how-the-framework-searches-message-maps"></a>How the Framework Searches Message Maps
+The framework searches the message-map table for matches with incoming messages. Once you write a message-map entry for each message you want a class to handle and write the corresponding handlers, the framework calls your handlers automatically. The following topics explain message-map searching:  
   
--   [Wo von Meldungszuordnungen sucht](../mfc/where-to-find-message-maps.md)  
+-   [Where to find message maps](../mfc/where-to-find-message-maps.md)  
   
--   [Abgeleitete Meldungszuordnungen](../mfc/derived-message-maps.md)  
+-   [Derived message maps](../mfc/derived-message-maps.md)  
   
--   [Bereiche von Meldungen, von Befehls\-IDs oder der Steuerelement\-IDs einem Handler](../mfc/handlers-for-message-map-ranges.md)  
+-   [Mapping ranges of messages, command IDs, or control IDs to one handler](../mfc/handlers-for-message-map-ranges.md)  
   
-## Siehe auch  
- [Meldungsbehandlung und \-zuordnung](../mfc/message-handling-and-mapping.md)
+## <a name="see-also"></a>See Also  
+ [Message Handling and Mapping](../mfc/message-handling-and-mapping.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: ICommandTarget Schnittstelle | Microsoft-Dokumentation
+title: ICommandTarget Interface | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,7 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- ICommandTarget interface
+- ICommandTarget interface [MFC]
 ms.assetid: dd9927f6-3479-4e7c-8ef9-13206cf901f3
 caps.latest.revision: 27
 author: mikeblome
@@ -35,15 +35,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 825fde18c56afb91bdb469212817109dc35abf68
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 42e762e8fb6fb658a0cb3b8834eee24f7ee87633
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="icommandtarget-interface"></a>ICommandTarget-Schnittstelle
-Stellt ein Benutzersteuerelement mit einer Schnittstelle zum Empfangen von Befehlen aus einem Befehlsquellobjekt bereit.  
+# <a name="icommandtarget-interface"></a>ICommandTarget Interface
+Provides a user control with an interface to receive commands from a command source object.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,43 +51,43 @@ Stellt ein Benutzersteuerelement mit einer Schnittstelle zum Empfangen von Befeh
 interface class ICommandTarget  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Öffentliche Methoden  
+### <a name="public-methods"></a>Public Methods  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[ICommandTarget:: Initialize](#initialize)|Initialisiert das Zielobjekt für den Befehl.|  
+|[ICommandTarget::Initialize](#initialize)|Initializes the command target object.|  
   
-## <a name="remarks"></a>Hinweise  
- Beim Hosten eines Benutzersteuerelements in MFC-Ansicht, [CWinFormsView](../../mfc/reference/cwinformsview-class.md) Routen Befehle und Update-Befehl UI-Nachrichten auf das Benutzersteuerelement, damit Sie die MFC-Befehle (z. B. Frame Menüelemente und Symbolleisten-Schaltflächen) verarbeiten kann. Durch die Implementierung `ICommandTarget`, geben Sie dem Benutzersteuerelement einen Verweis auf die [ICommandSource](../../mfc/reference/icommandsource-interface.md) Objekt.  
+## <a name="remarks"></a>Remarks  
+ When you host a user control in an MFC View, [CWinFormsView](../../mfc/reference/cwinformsview-class.md) routes commands and update command UI messages to the user control to allow it to handle MFC commands (for example, frame menu items and toolbar buttons). By implementing `ICommandTarget`, you give the user control a reference to the [ICommandSource](../../mfc/reference/icommandsource-interface.md) object.  
   
- Finden Sie unter [Gewusst wie: Hinzufügen Befehlsrouting zum Windows Forms-Steuerelements](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) ein Beispiel zum Verwenden von `ICommandTarget`.  
+ See [How to: Add Command Routing to the Windows Forms Control](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) for an example of how to use `ICommandTarget`.  
   
- Weitere Informationen zur Verwendung von Windows Forms finden Sie unter [mithilfe eines Windows Form-Benutzersteuerelements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
+ For more information on using Windows Forms, see [Using a Windows Form User Control in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** afxwinforms.h (definiert in der Assembly atlmfc\lib\mfcmifc80.dll)  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwinforms.h (defined in assembly atlmfc\lib\mfcmifc80.dll)  
   
-##  <a name="initialize"></a>ICommandTarget:: Initialize  
- Initialisiert das Zielobjekt für den Befehl.  
+##  <a name="initialize"></a> ICommandTarget::Initialize  
+ Initializes the command target object.  
   
 ```  
 void Initialize(ICommandSource^ cmdSource);  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `cmdSource`  
- Ein Handle für das Befehlsquellobjekt.  
+ A handle to the command source object.  
   
-### <a name="remarks"></a>Hinweise  
- Beim Hosten eines Benutzersteuerelements in MFC-Ansicht, leitet CWinFormsView Befehle und Update-Befehl UI Nachrichten auf das Benutzersteuerelement, damit Sie die MFC-Befehle zu verarbeiten kann.  
+### <a name="remarks"></a>Remarks  
+ When you host a user control in an MFC View, CWinFormsView routes commands and update command UI messages to the user control to allow it to handle MFC commands.  
   
- Diese Methode initialisiert die Ziel-Befehlsobjekt und ordnet diese der angegebenen Quelle Objekt CmdSource. Es sollte in die Implementierung des Benutzersteuerelements Klasse aufgerufen werden. Bei der Initialisierung sollten Sie das Befehlsquellobjekt durch Aufrufen von ICommandSource::AddCommandHandler in der Initialize-Implementierung Befehlshandler registrieren. Finden Sie unter Gewusst wie: Hinzufügen von Befehlsrouting an die Windows Forms-Steuerelement ein Beispiel zum Initialisieren, die zu diesem Zweck verwenden.  
+ This method initializes the command target object and associates it with the specified command source object cmdSource. It should be called in the user control class implementation. At initialization, you should register command handlers with the command source object by calling ICommandSource::AddCommandHandler in the Initialize implementation. See How to: Add Command Routing to the Windows Forms Control for an example of how to use Initialize to do this.  
   
-## <a name="see-also"></a>Siehe auch  
- [Gewusst wie: Hinzufügen von Befehl Befehlsrouting zum Windows Forms-Steuerelement](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)   
- [ICommandSource-Schnittstelle](../../mfc/reference/icommandsource-interface.md)
+## <a name="see-also"></a>See Also  
+ [How to: Add Command Routing to the Windows Forms Control](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)   
+ [ICommandSource Interface](../../mfc/reference/icommandsource-interface.md)
 
 
 

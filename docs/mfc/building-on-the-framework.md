@@ -1,43 +1,62 @@
 ---
-title: "Erstellen im Framework | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Anwendungsframework [C++], Erstellen von Anwendungen"
-  - "Anwendungen [MFC]"
-  - "Anwendungsspezifische Klassen [C++]"
-  - "MFC [C++], Anwendungsentwicklung"
+title: Building on the Framework | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- application-specific classes [MFC]
+- application framework [MFC], building applications
+- applications [MFC]
+- MFC, application development
 ms.assetid: 883f0f19-866f-4221-8a3d-5607941dc8d0
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Erstellen im Framework
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 14e4e98f27711fcc2b7f022d452b99f3a55969c6
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Ihrer Rolle, wenn eine Anwendung mit dem MFC\-Framework konfiguriert, ist, den anwendungsspezifischen Quellcode zu bieten und Komponenten herzustellen, indem sie definiert, welche Meldungen und Befehle, auf die sie reagieren.  Sie verwenden die C\+\+ und \-Standard C\+\+\-Techniken, eigene anwendungsspezifischen Klassen von denen abgeleitet werden, die von der Klassenbibliothek und das Verhalten der Basisklasse zu überschreiben und zu erweitern angegeben werden.  
+---
+# <a name="building-on-the-framework"></a>Building on the Framework
+Your role in configuring an application with the MFC framework is to supply the application-specific source code and to connect the components by defining what messages and commands to which they respond. You use the C++ language and standard C++ techniques to derive your own application-specific classes from those supplied by the class library and to override and augment the base class's behavior.  
   
- In den zugehörigen Themen werden folgende Tabellen die typische Sequenz von Vorgängen, die Sie in der Regel und die Verantwortung für die Verantwortung des Framework ausführen:  
+ In related topics, the following tables describe the general sequence of operations you will typically follow and your responsibilities versus the framework's responsibilities:  
   
--   [Ordnen Sie zum Erstellen einer Anwendung mit dem Framework sequenziell](../mfc/sequence-of-operations-for-building-mfc-applications.md)  
+-   [Sequence for Building an Application with the Framework](../mfc/sequence-of-operations-for-building-mfc-applications.md)  
   
--   [Reihenfolge der Operationen zur Erstellung von OLE\-Anwendungen](../mfc/sequence-of-operations-for-creating-ole-applications.md)  
+-   [Sequence of Operations for Creating OLE Applications](../mfc/sequence-of-operations-for-creating-ole-applications.md)  
   
--   [Operationssequenz zur Erstellung von ActiveX\-Steuerelementen](../mfc/sequence-of-operations-for-creating-activex-controls.md)  
+-   [Sequence of Operations for Creating ActiveX Controls](../mfc/sequence-of-operations-for-creating-activex-controls.md)  
   
--   [Reihenfolge der Operationen zur Erstellung Datenbankanwendungen](../mfc/sequence-of-operations-for-creating-database-applications.md)  
+-   [Sequence of Operations for Creating Database Applications](../mfc/sequence-of-operations-for-creating-database-applications.md)  
   
- In den meisten Fällen können Sie diesen Tabellen als Sequenz von Schritten zum Erstellen einer MFC\-Anwendung folgen, wobei einige der Schritte alternative Optionen sind.  Beispielsweise der häufigste Typ der Anwendung einer Ansichtsklasse von einigen Typen verfügbar.  
+ For the most part, you can follow these tables as a sequence of steps for creating an MFC application, although some of the steps are alternative options. For example, most applications use one type of view class from the several types available.  
   
-## Siehe auch  
- [Allgemeine MFC\-Themen](../mfc/general-mfc-topics.md)
+## <a name="see-also"></a>See Also  
+ [General MFC Topics](../mfc/general-mfc-topics.md)
+
+

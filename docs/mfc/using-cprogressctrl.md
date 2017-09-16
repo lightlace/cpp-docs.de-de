@@ -1,45 +1,64 @@
 ---
-title: "Verwenden von CProgressCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CProgressCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CProgressCtrl-Klasse, Verwenden"
-  - "Statussteuerelemente [C++]"
-  - "Statussteuerelemente [C++], CProgressCtrl"
-  - "Statussteuerelemente [C++], Verwenden"
+title: Using CProgressCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CProgressCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- progress controls [MFC]
+- CProgressCtrl class [MFC], using
+- progress controls [MFC], CProgressCtrl
+- progress controls [MFC], using
 ms.assetid: 61473270-196b-41ab-bf2b-467f46673539
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Verwenden von CProgressCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4ac13a3cf70b84ee271682b6023c188f0fd740c5
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Sie können das Statussteuerelement verwenden, um den Status eines längeren Vorgangs angegeben.  Es ist ein Rechteck, das allmählich mit der Hervorhebungsfarbe des Systems die Dabei gefüllt wird.  
+---
+# <a name="using-cprogressctrl"></a>Using CProgressCtrl
+You can use the progress control to indicate the progress of a lengthy operation. It is a rectangle that is gradually filled with the system highlight color as the operation progresses.  
   
- Das Statussteuerelement wird in MFC durch [CProgressCtrl](../mfc/reference/cprogressctrl-class.md)\- Klasse dargestellt.  
+ The progress control is represented in MFC by class [CProgressCtrl](../mfc/reference/cprogressctrl-class.md).  
   
- Wenn Sie das Statussteuerelement erstellen, geben Sie die Größe und Position, das übergeordnete Fenster \(normalerweise ein Dialogfeld und ID an\)  Mit dem Parameter `dwStyle` verwenden, können Sie auch angeben verschiedenen Fensterstilen für das Steuerelement und Stilen für, wie es ausfüllt.  
+ When you initially create the progress control, you specify its size and position, parent window (usually a dialog box), and ID. By using the `dwStyle` parameter, you can also specify various window styles for the control and styles for how it fills.  
   
-## Worüber möchten Sie mehr erfahren?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Formate für das Status\-Steuerelement](../mfc/styles-for-the-progress-control.md)  
+-   [Styles for the Progress Control](../mfc/styles-for-the-progress-control.md)  
   
--   [Einstellungen für das Status\-Steuerelement](../mfc/settings-for-the-progress-control.md)  
+-   [Settings for the Progress Control](../mfc/settings-for-the-progress-control.md)  
   
--   [Bearbeiten des Status\-Steuerelements](../mfc/manipulating-the-progress-control.md)  
+-   [Manipulating the Progress Control](../mfc/manipulating-the-progress-control.md)  
   
-## Siehe auch  
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

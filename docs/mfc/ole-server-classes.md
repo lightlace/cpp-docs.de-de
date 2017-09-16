@@ -1,58 +1,77 @@
 ---
-title: "OLE-Serverklasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.ole"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COM-Komponenten, Klassen"
-  - "Komponentenklassen"
-  - "OLE-Serveranwendungen, Serverklassen"
-  - "OLE-Serverdokumente"
+title: OLE Server Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.ole
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE server applications [MFC], server classes
+- OLE server documents
+- COM components, classes [MFC]
+- component classes [MFC]
 ms.assetid: 8e9b67a2-c0ff-479c-a8d6-19b36c5e6fc6
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# OLE-Serverklasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c5aa81cf501b54004e2f46760f0af3caff1c38e4
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Diese Klassen werden durch Serveranwendungen verwendet.  Serverdokumente werden von `COleServerDoc` anstelle von **CDocument** abgeleitet.  Beachten Sie, dass, da `COleServerDoc` von `COleLinkingDoc` abgeleitet wird, Serverdokumente Container auch sein können, die das Verknüpfen unterstützen.  
+---
+# <a name="ole-server-classes"></a>OLE Server Classes
+These classes are used by server applications. Server documents are derived from `COleServerDoc` rather than from **CDocument**. Note that because `COleServerDoc` is derived from `COleLinkingDoc`, server documents can also be containers that support linking.  
   
- Die `COleServerItem`\-Klasse stellt ein Dokument oder einen Teil eines Dokuments an, das in einem anderen Dokument eingebettet oder verknüpft werden kann.  
+ The `COleServerItem` class represents a document or portion of a document that can be embedded in another document or linked to.  
   
- `COleIPFrameWnd` und `COleResizeBar` unterstützen direkte Bearbeiten, während das Objekt in einem Container und `COleTemplateServer` is Entwicklung der Dokument\/Ansicht zuordnen, sodass OLE\-Objekte von anderen Anwendungen bearbeitet werden können.  
+ `COleIPFrameWnd` and `COleResizeBar` support in-place editing while the object is in a container, and `COleTemplateServer` supports creation of document/view pairs so OLE objects from other applications can be edited.  
   
  [COleServerDoc](../mfc/reference/coleserverdoc-class.md)  
- Wird als Basisklasse für Serveranwendungsdokumentklassen.  `COleServerDoc`\-Objekte bieten der Hauptteil der Serverunterstützung von Interaktionen mit `COleServerItem`\-Objekten.  Visuelle Bearbeitungsfunktion wird mithilfe der Dokument\-\/Ansichtarchitektur der Klassenbibliothek bereitgestellt.  
+ Used as the base class for server-application document classes. `COleServerDoc` objects provide the bulk of server support through interactions with `COleServerItem` objects. Visual editing capability is provided using the class library's document/view architecture.  
   
  [CDocItem](../mfc/reference/cdocitem-class.md)  
- Abstrakte Basisklasse von `COleClientItem` und `COleServerItem`.  Objekte von Klassen, die von `CDocItem` abgeleitet sind, stellen Dokumente Teile dar.  
+ Abstract base class of `COleClientItem` and `COleServerItem`. Objects of classes derived from `CDocItem` represent parts of documents.  
   
  [COleServerItem](../mfc/reference/coleserveritem-class.md)  
- Wird verwendet, um die OLE\-Schnittstelle zu `COleServerDoc`\-Elementen darzustellen.  Dies weist normalerweise ein `COleServerDoc`\-Objekt, das den eingebetteten Teil eines Dokuments darstellt.  In den Servern, die Links zu den Teilen Dokumenten, vorhanden sein können viele `COleServerItem`\-Objekte, von denen jedes einen Link zu einem Teil des Dokuments darstellt.  
+ Used to represent the OLE interface to `COleServerDoc` items. There is usually one `COleServerDoc` object, which represents the embedded part of a document. In servers that support links to parts of documents, there can be many `COleServerItem` objects, each of which represents a link to a portion of the document.  
   
  [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)  
- Stellt das Rahmenfenster für eine Ansicht bereit, wenn ein Serverdokument direkt bearbeitet wird.  
+ Provides the frame window for a view when a server document is being edited in place.  
   
  [COleResizeBar](../mfc/reference/coleresizebar-class.md)  
- Stellt die Standardbenutzeroberfläche für direkte Größenanpassung bereit.  Objekte dieser Klasse sind immer in Verbindung mit `COleIPFrameWnd`\-Objekte.  
+ Provides the standard user interface for in-place resizing. Objects of this class are always used in conjunction with `COleIPFrameWnd` objects.  
   
  [COleTemplateServer](../mfc/reference/coletemplateserver-class.md)  
- Wird verwendet, um Dokumente mit Dokument\-\/Ansichtarchitektur des Frameworks zu erstellen.  Delegaten `COleTemplateServer` eines Objekts höchst der Arbeit zu einem verknüpften `CDocTemplate`\-Objekt.  
+ Used to create documents using the framework's document/view architecture. A `COleTemplateServer` object delegates most of its work to an associated `CDocTemplate` object.  
   
  [COleException](../mfc/reference/coleexception-class.md)  
- Eine Ausnahme, erstellten aus einem Fehler beim OLE\-Verarbeiten.  Diese Klasse wird von Container und Server verwendet.  
+ An exception resulting from a failure in OLE processing. This class is used by both containers and servers.  
   
-## Siehe auch  
- [Klassenübersicht](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

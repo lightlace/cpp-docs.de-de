@@ -1,5 +1,5 @@
 ---
-title: CAnimationRect-Klasse | Microsoft-Dokumentation
+title: CAnimationRect Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,7 +30,22 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CAnimationRect class
+- CAnimationRect [MFC], CAnimationRect
+- CAnimationRect [MFC], AddTransition
+- CAnimationRect [MFC], GetBottom
+- CAnimationRect [MFC], GetDefaultValue
+- CAnimationRect [MFC], GetLeft
+- CAnimationRect [MFC], GetRight
+- CAnimationRect [MFC], GetTop
+- CAnimationRect [MFC], GetValue
+- CAnimationRect [MFC], SetDefaultValue
+- CAnimationRect [MFC], GetAnimationVariableList
+- CAnimationRect [MFC], m_bFixedSize
+- CAnimationRect [MFC], m_bottomValue
+- CAnimationRect [MFC], m_leftValue
+- CAnimationRect [MFC], m_rightValue
+- CAnimationRect [MFC], m_szInitial
+- CAnimationRect [MFC], m_topValue
 ms.assetid: 0294156d-241e-4a57-92b2-31234fe557d6
 caps.latest.revision: 17
 author: mikeblome
@@ -50,15 +65,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 73410ae17465880f455e5b15026f6cc010803c19
-ms.openlocfilehash: f935884301030166572e356fffe88439f843f2c7
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9a8705bdf9caca25284a9364de297a0fbab57c3c
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="canimationrect-class"></a>CAnimationRect-Klasse
-Implementiert die Funktion eines Rechtecks, dessen Seiten animiert werden können.  
+# <a name="canimationrect-class"></a>CAnimationRect Class
+Implements the functionality of a rectangle whose sides can be animated.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -66,71 +81,71 @@ Implementiert die Funktion eines Rechtecks, dessen Seiten animiert werden könne
 class CAnimationRect : public CAnimationBaseObject;  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationRect::CAnimationRect](#canimationrect)|Überladen. Erstellt eine Animation Rect-Objekt.|  
+|[CAnimationRect::CAnimationRect](#canimationrect)|Overloaded. Constructs an animation rect object.|  
   
-### <a name="public-methods"></a>Öffentliche Methoden  
+### <a name="public-methods"></a>Public Methods  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationRect::AddTransition](#addtransition)|Fügt Übergänge für die linken, oberen, rechten und unteren Koordinaten hinzu.|  
-|[CAnimationRect::GetBottom](#getbottom)|Bietet Zugriff auf CAnimationVariable, die untere Koordinate darstellt.|  
-|[CAnimationRect::GetDefaultValue](#getdefaultvalue)|Gibt die Standardwerte für die Grenzen von Rechteck zurück.|  
-|[CAnimationRect::GetLeft](#getleft)|Bietet Zugriff auf CAnimationVariable, die linke Koordinate darstellt.|  
-|[CAnimationRect::GetRight](#getright)|Bietet Zugriff auf CAnimationVariable, die rechte Koordinate darstellt.|  
-|[CAnimationRect::GetTop](#gettop)|Bietet Zugriff auf CAnimationVariable, die obere Koordinate darstellt.|  
-|[CAnimationRect::GetValue](#getvalue)|Gibt den aktuellen Wert zurück.|  
-|[CAnimationRect::SetDefaultValue](#setdefaultvalue)|Legt den Standardwert fest.|  
+|[CAnimationRect::AddTransition](#addtransition)|Adds transitions for left, top, right and bottom coordinates.|  
+|[CAnimationRect::GetBottom](#getbottom)|Provides access to CAnimationVariable representing bottom coordinate.|  
+|[CAnimationRect::GetDefaultValue](#getdefaultvalue)|Returns the default values for rectangle's bounds.|  
+|[CAnimationRect::GetLeft](#getleft)|Provides access to CAnimationVariable representing left coordinate.|  
+|[CAnimationRect::GetRight](#getright)|Provides access to CAnimationVariable representing right coordinate.|  
+|[CAnimationRect::GetTop](#gettop)|Provides access to CAnimationVariable representing top coordinate.|  
+|[CAnimationRect::GetValue](#getvalue)|Returns current value.|  
+|[CAnimationRect::SetDefaultValue](#setdefaultvalue)|Sets default value.|  
   
-### <a name="protected-methods"></a>Geschützte Methoden  
+### <a name="protected-methods"></a>Protected Methods  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationRect::GetAnimationVariableList](#getanimationvariablelist)|Fügt die gekapselten Animationsvariablen in eine Liste. (Überschreibt [CAnimationBaseObject:: GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|  
+|[CAnimationRect::GetAnimationVariableList](#getanimationvariablelist)|Puts the encapsulated animation variables into a list. (Overrides [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|  
   
-### <a name="public-operators"></a>Öffentliche Operatoren  
+### <a name="public-operators"></a>Public Operators  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationRect::operator RECT](#operator_rect)|Konvertiert einen CAnimationRect in Rect.|  
-|[CAnimationRect::operator =](#operator_eq)|Weist CAnimationRect Rect zu.|  
+|[CAnimationRect::operator RECT](#operator_rect)|Converts a CAnimationRect to RECT.|  
+|[CAnimationRect::operator=](#operator_eq)|Assigns rect to CAnimationRect.|  
   
-### <a name="public-data-members"></a>Öffentliche Datenmember  
+### <a name="public-data-members"></a>Public Data Members  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationRect::m_bFixedSize](#m_bfixedsize)|Gibt an, ob das Rechteck eine feste Größe hat.|  
+|[CAnimationRect::m_bFixedSize](#m_bfixedsize)|Specifies whether the rectangle has fixed size.|  
   
-### <a name="protected-data-members"></a>Geschützte Datenmember  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationRect::m_bottomValue](#m_bottomvalue)|Die gekapselte Animationsvariable, die untere repräsentiert gebunden Animation Rechtecks.|  
-|[CAnimationRect::m_leftValue](#m_leftvalue)|Die gekapselte Animationsvariable, die Links gebunden Animation Rechtecks.|  
-|[CAnimationRect::m_rightValue](#m_rightvalue)|Die gekapselte Animationsvariable, die rechts gebunden Animation Rechtecks.|  
-|[CAnimationRect::m_szInitial](#m_szinitial)|Gibt die Anfangsgröße der Animation Rechteck.|  
-|[CAnimationRect::m_topValue](#m_topvalue)|Die gekapselte Animationsvariable, die obere repräsentiert gebunden Animation Rechtecks.|  
+|[CAnimationRect::m_bottomValue](#m_bottomvalue)|The encapsulated animation variable that represents Bottom bound of animation rectangle.|  
+|[CAnimationRect::m_leftValue](#m_leftvalue)|The encapsulated animation variable that represents Left bound of animation rectangle.|  
+|[CAnimationRect::m_rightValue](#m_rightvalue)|The encapsulated animation variable that represents Right bound of animation rectangle.|  
+|[CAnimationRect::m_szInitial](#m_szinitial)|Specifies initial size of animation rectangle.|  
+|[CAnimationRect::m_topValue](#m_topvalue)|The encapsulated animation variable that represents Top bound of animation rectangle.|  
   
-## <a name="remarks"></a>Hinweise  
- CAnimationRect-Klasse kapselt vier CAnimationVariable-Objekte und kann in Clientanwendungen ein Rechteck darstellen. Zum Verwenden dieser Klasse in der Anwendung einfach instanziieren Sie ein Objekt dieser Klasse, Animationscontroller AddAnimationObject fügen Sie hinzu und rufen Sie AddTransition für jeden Übergang auf die linke, rechte obere oder untere Koordinate angewendet werden.  
+## <a name="remarks"></a>Remarks  
+ The CAnimationRect class encapsulates four CAnimationVariable objects and can represent in applications a rectangle. To use this class in application, just instantiate an object of this class, add it to animation controller using CAnimationController::AddAnimationObject and call AddTransition for each transition to be applied to left, right top and bottom coordinates.  
   
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- [Von CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
  [CAnimationBaseObject](../../mfc/reference/canimationbaseobject-class.md)  
   
  `CAnimationRect`  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** afxanimationcontroller.h  
   
-##  <a name="addtransition"></a>CAnimationRect::AddTransition  
- Fügt Übergänge für die linken, oberen, rechten und unteren Koordinaten hinzu.  
+##  <a name="addtransition"></a>  CAnimationRect::AddTransition  
+ Adds transitions for left, top, right and bottom coordinates.  
   
 ```  
 void AddTransition(
@@ -140,24 +155,24 @@ void AddTransition(
     CBaseTransition* pBottomTransition);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `pLeftTransition`  
- Gibt Übergang für die linke Seite.  
+ Specifies transition for the left side.  
   
  `pTopTransition`  
- Gibt Übergang für die obere Seite an.  
+ Specifies transition for the top side.  
   
  `pRightTransition`  
- Gibt Übergang für die rechte Seite.  
+ Specifies transition for the right side.  
   
  `pBottomTransition`  
- Gibt Übergang für die Unterseite.  
+ Specifies transition for the bottom side.  
   
-### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Funktion, um die angegebenen Übergänge hinzuzufügen, das der internen Liste von Übergängen, die auf Animationsvariablen für die einzelnen Seiten des Rechtecks angewendet werden. Wenn Sie Übergänge hinzufügen, werden sie nicht sofort angewendet und in einer internen Liste gespeichert. Übergänge werden angewendet (einem Storyboard für einen bestimmten Wert hinzugefügt) Wenn Sie CAnimationController:: AnimateGroup aufrufen. Wenn Sie keinen Übergang auf eine der Rechteckseiten anwenden müssen, können Sie NULL übergeben.  
+### <a name="remarks"></a>Remarks  
+ Call this function to add the specified transitions to the internal list of transitions to be applied to animation variables for each rectangle sides. When you add transitions, they are not applied immediately and stored in an internal list. Transitions are applied (added to a storyboard for a particular value) when you call CAnimationController::AnimateGroup. If you don't need to apply a transition to one of the rectangle sides, you can pass NULL.  
   
-##  <a name="canimationrect"></a>CAnimationRect::CAnimationRect  
- Erstellt ein CAnimationRect-Objekt.  
+##  <a name="canimationrect"></a>  CAnimationRect::CAnimationRect  
+ Constructs a CAnimationRect object.  
   
 ```  
 CAnimationRect();
@@ -188,42 +203,42 @@ CAnimationRect(
     DWORD dwUserData = 0);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `rect`  
- Standardrechteck angibt.  
+ Specifies default rectangle.  
   
  `nGroupID`  
- Gibt die Gruppen-ID.  
+ Specifies Group ID.  
   
  `nObjectID`  
- Gibt die Objekt-ID.  
+ Specifies Object ID.  
   
  `dwUserData`  
- Gibt die benutzerdefinierten Daten.  
+ Specifies user-defined data.  
   
  `pt`  
- Die Koordinate der oberen linken Ecke.  
+ Coordinate of top-left corner.  
   
  `sz`  
- Die Größe des Rechtecks.  
+ Size of rectangle.  
   
  `nLeft`  
- Gibt Koordinate der linken Grenze an.  
+ Specifies coordinate of left bound.  
   
  `nTop`  
- Gibt Koordinate der oberen Grenze an.  
+ Specifies coordinate of top bound.  
   
  `nRight`  
- Gibt Koordinate der rechten Grenze an.  
+ Specifies coordinate of right bound.  
   
  `nBottom`  
- Gibt Koordinate unterer Grenze an.  
+ Specifies coordinate of bottom bound.  
   
-### <a name="remarks"></a>Hinweise  
- Das Objekt wird erstellt, mit Standardwerten für Links, oben, rechts und unten, Objekt-ID und Gruppen-ID, die auf 0 festgelegt werden. Sie können zur Laufzeit mit SetDefaultValue und SetID später geändert werden.  
+### <a name="remarks"></a>Remarks  
+ The object is constructed with default values for left, top, right and bottom, Object ID and Group ID, which will be set to 0. They can be changed later at runtime using SetDefaultValue and SetID.  
   
-##  <a name="getanimationvariablelist"></a>CAnimationRect::GetAnimationVariableList  
- Fügt die gekapselten Animationsvariablen in eine Liste.  
+##  <a name="getanimationvariablelist"></a>  CAnimationRect::GetAnimationVariableList  
+ Puts the encapsulated animation variables into a list.  
   
 ```  
 virtual void GetAnimationVariableList(
@@ -231,178 +246,178 @@ virtual void GetAnimationVariableList(
     CAnimationVariable*>& lst);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `lst`  
- Wenn die Funktion zurückgibt, enthält Zeiger auf vier CAnimationVariable-Objekte, die Koordinaten des Rechtecks darstellen.  
+ When the function returns, it contains pointers to four CAnimationVariable objects representing coordinates of rectangle.  
   
-##  <a name="getbottom"></a>CAnimationRect::GetBottom  
- Bietet Zugriff auf CAnimationVariable, die untere Koordinate darstellt.  
+##  <a name="getbottom"></a>  CAnimationRect::GetBottom  
+ Provides access to CAnimationVariable representing bottom coordinate.  
   
 ```  
 CAnimationVariable& GetBottom();
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein Verweis auf gekapselte CAnimationVariable, untere Koordinate darstellt.  
+### <a name="return-value"></a>Return Value  
+ A reference to encapsulated CAnimationVariable representing bottom coordinate.  
   
-### <a name="remarks"></a>Hinweise  
- Sie können diese Methode, um direkten Zugriff auf die zugrunde liegende CAnimationVariable, die die untere Koordinate darstellt erhalten aufrufen.  
+### <a name="remarks"></a>Remarks  
+ You can call this method to get direct access to underlying CAnimationVariable representing the bottom coordinate.  
   
-##  <a name="getdefaultvalue"></a>CAnimationRect::GetDefaultValue  
- Gibt die Standardwerte für die Grenzen von Rechteck zurück.  
+##  <a name="getdefaultvalue"></a>  CAnimationRect::GetDefaultValue  
+ Returns the default values for rectangle's bounds.  
   
 ```  
 CRect GetDefaultValue();
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein CRect-Wert, die Standardwerte für Links, rechts, oben und unten enthält.  
+### <a name="return-value"></a>Return Value  
+ A CRect value containing defaults for left, right, top and bottom.  
   
-### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Funktion, um den Standardwert abzurufen, der zuvor vom Konstruktor oder mit SetDefaultValue festgelegt wurde.  
+### <a name="remarks"></a>Remarks  
+ Call this function to retrieve default value, which was previously set by constructor or SetDefaultValue.  
   
-##  <a name="getleft"></a>CAnimationRect::GetLeft  
- Bietet Zugriff auf CAnimationVariable, die linke Koordinate darstellt.  
+##  <a name="getleft"></a>  CAnimationRect::GetLeft  
+ Provides access to CAnimationVariable representing left coordinate.  
   
 ```  
 CAnimationVariable& GetLeft();
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein Verweis auf gekapselte CAnimationVariable, die linke Koordinate darstellt.  
+### <a name="return-value"></a>Return Value  
+ A reference to encapsulated CAnimationVariable representing left coordinate.  
   
-### <a name="remarks"></a>Hinweise  
- Sie können diese Methode, um direkten Zugriff auf die zugrunde liegende CAnimationVariable, die die linke Koordinate darstellt erhalten aufrufen.  
+### <a name="remarks"></a>Remarks  
+ You can call this method to get direct access to underlying CAnimationVariable representing the left coordinate.  
   
-##  <a name="getright"></a>CAnimationRect::GetRight  
- Bietet Zugriff auf CAnimationVariable, die rechte Koordinate darstellt.  
+##  <a name="getright"></a>  CAnimationRect::GetRight  
+ Provides access to CAnimationVariable representing right coordinate.  
   
 ```  
 CAnimationVariable& GetRight();
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein Verweis auf gekapselte CAnimationVariable, die rechte Koordinate darstellt.  
+### <a name="return-value"></a>Return Value  
+ A reference to encapsulated CAnimationVariable representing right coordinate.  
   
-### <a name="remarks"></a>Hinweise  
- Sie können diese Methode, um direkten Zugriff auf die zugrunde liegende CAnimationVariable, die die rechte Koordinate darstellt erhalten aufrufen.  
+### <a name="remarks"></a>Remarks  
+ You can call this method to get direct access to underlying CAnimationVariable representing the right coordinate.  
   
-##  <a name="gettop"></a>CAnimationRect::GetTop  
- Bietet Zugriff auf CAnimationVariable, die obere Koordinate darstellt.  
+##  <a name="gettop"></a>  CAnimationRect::GetTop  
+ Provides access to CAnimationVariable representing top coordinate.  
   
 ```  
 CAnimationVariable& GetTop();
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein Verweis auf gekapselte CAnimationVariable, die obere Koordinate darstellt.  
+### <a name="return-value"></a>Return Value  
+ A reference to encapsulated CAnimationVariable representing top coordinate.  
   
-### <a name="remarks"></a>Hinweise  
- Sie können diese Methode, um direkten Zugriff auf die zugrunde liegende CAnimationVariable, die die obere Koordinate darstellt erhalten aufrufen.  
+### <a name="remarks"></a>Remarks  
+ You can call this method to get direct access to underlying CAnimationVariable representing the top coordinate.  
   
-##  <a name="getvalue"></a>CAnimationRect::GetValue  
- Gibt den aktuellen Wert zurück.  
+##  <a name="getvalue"></a>  CAnimationRect::GetValue  
+ Returns current value.  
   
 ```  
 BOOL GetValue(CRect& rect);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `rect`  
- Die Ausgabe. Enthält den aktuellen Wert an, wenn diese Methode zurückgegeben wird.  
+ Output. Contains the current value when this method returns.  
   
-### <a name="return-value"></a>Rückgabewert  
- TRUE, wenn der aktuelle Wert erfolgreich abgerufen wurde. andernfalls FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE, if the current value was successfully retrieved; otherwise FALSE.  
   
-### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Funktion, um den aktuellen Wert der Animation Rechteck abzurufen. Wenn diese Methode fehlschlägt oder zugrunde liegende COM-Objekte für Left, Top, Right und Bottom nicht initialisiert wurden, enthält Rect einen Standardwert, der zuvor im Konstruktor oder mit SetDefaultValue festgelegt wurde.  
+### <a name="remarks"></a>Remarks  
+ Call this function to retrieve the current value of animation rectangle. If this method fails or underlying COM objects for left, top, right and bottom have not been initialized, rect contains default value, which was previously set in constructor or by SetDefaultValue.  
   
-##  <a name="m_bfixedsize"></a>CAnimationRect::m_bFixedSize  
- Gibt an, ob das Rechteck eine feste Größe hat.  
+##  <a name="m_bfixedsize"></a>  CAnimationRect::m_bFixedSize  
+ Specifies whether the rectangle has fixed size.  
   
 ```  
 BOOL m_bFixedSize;  
 ```  
   
-### <a name="remarks"></a>Hinweise  
- Wenn dieses Element auf true festgelegt ist, werden dann ist die Größe des Rechtecks, festen und rechten und unteren Werte berechnet jedes Mal, wenn die linke obere Ecke, entsprechend der feste Größe verschoben wird. Legen Sie diesen Wert auf TRUE, um das Rechteck auf dem Bildschirm leicht zu verschieben. In diesem Fall werden die an den rechten und unteren Koordinaten übernommene Übergänge ignoriert. Die Größe wird intern gespeichert, wenn Sie das Objekt erstellen, und/oder SetDefaultValue aufrufen. Standardmäßig ist dieser Member auf FALSE festgelegt.  
+### <a name="remarks"></a>Remarks  
+ If this member is true, then the size of rectangle is fixed and right and bottom values are recalculated each time the top-left corner is moved according to the fixed size. Set this value to TRUE to easily move the rectangle around the screen. In this case transitions applied to right and bottom coordinates are ignored. The size is stored internally when you construct the object and/or call SetDefaultValue. By default this member is set to FALSE.  
   
-##  <a name="m_bottomvalue"></a>CAnimationRect::m_bottomValue  
- Die gekapselte Animationsvariable, die untere repräsentiert gebunden Animation Rechtecks.  
+##  <a name="m_bottomvalue"></a>  CAnimationRect::m_bottomValue  
+ The encapsulated animation variable that represents Bottom bound of animation rectangle.  
   
 ```  
 CAnimationVariable m_bottomValue;  
 ```  
   
-##  <a name="m_leftvalue"></a>CAnimationRect::m_leftValue  
- Die gekapselte Animationsvariable, die Links gebunden Animation Rechtecks.  
+##  <a name="m_leftvalue"></a>  CAnimationRect::m_leftValue  
+ The encapsulated animation variable that represents Left bound of animation rectangle.  
   
 ```  
 CAnimationVariable m_leftValue;  
 ```  
   
-##  <a name="m_rightvalue"></a>CAnimationRect::m_rightValue  
- Die gekapselte Animationsvariable, die rechts gebunden Animation Rechtecks.  
+##  <a name="m_rightvalue"></a>  CAnimationRect::m_rightValue  
+ The encapsulated animation variable that represents Right bound of animation rectangle.  
   
 ```  
 CAnimationVariable m_rightValue;  
 ```  
   
-##  <a name="m_szinitial"></a>CAnimationRect::m_szInitial  
- Gibt die Anfangsgröße der Animation Rechteck.  
+##  <a name="m_szinitial"></a>  CAnimationRect::m_szInitial  
+ Specifies initial size of animation rectangle.  
   
 ```  
 CSize m_szInitial;  
 ```  
   
-##  <a name="m_topvalue"></a>CAnimationRect::m_topValue  
- Die gekapselte Animationsvariable, die obere repräsentiert gebunden Animation Rechtecks.  
+##  <a name="m_topvalue"></a>  CAnimationRect::m_topValue  
+ The encapsulated animation variable that represents Top bound of animation rectangle.  
   
 ```  
 CAnimationVariable m_topValue;  
 ```  
   
-##  <a name="operator_rect"></a>CAnimationRect::operator RECT  
- Konvertiert einen CAnimationRect in Rect.  
+##  <a name="operator_rect"></a>  CAnimationRect::operator RECT  
+ Converts a CAnimationRect to RECT.  
   
 ```  
 operator RECT();
 ```   
   
-### <a name="return-value"></a>Rückgabewert  
- Aktuellen Wert der Animation Rechteck als Rect.  
+### <a name="return-value"></a>Return Value  
+ Current value of animation rectangle as RECT.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Funktion ruft intern GetValue. Wenn GetValue aus irgendeinem Grund fehlschlägt, enthält das zurückgegebene RECT Standardwerte für alle Koordinaten für das Rechteck.  
+### <a name="remarks"></a>Remarks  
+ This function internally calls GetValue. If GetValue for some reason fails, the returned RECT will contain default values for all rectangle coordinates.  
   
-##  <a name="operator_eq"></a>CAnimationRect::operator =  
- Weist CAnimationRect Rect zu.  
+##  <a name="operator_eq"></a>  CAnimationRect::operator=  
+ Assigns rect to CAnimationRect.  
   
 ```  
 void operator=(const RECT& rect);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `rect`  
- Der neue Wert der Animation Rechteck.  
+ The new value of animation rectangle.  
   
-### <a name="remarks"></a>Hinweise  
- Wurde empfohlen, dies vor dem Animationsstart, durchzuführen, da dieser Operator SetDefaultValue aufruft, die die zugrunde liegenden COM-Objekte für Farbkomponenten neu erstellt, wenn sie bereits erstellt wurden. Wenn Sie dieses Animationsobjekt Ereignisse (ValueChanged oder IntegerValueChanged) abonniert haben, müssen Sie diese Ereignisse erneut aktivieren.  
+### <a name="remarks"></a>Remarks  
+ It's recommended to do that before animation start, because this operator calls SetDefaultValue, which recreates the underlying COM objects for color components if they have been created. If you subscribed this animation object to events (ValueChanged or IntegerValueChanged), you need to re-enable these events.  
   
-##  <a name="setdefaultvalue"></a>CAnimationRect::SetDefaultValue  
- Legt den Standardwert fest.  
+##  <a name="setdefaultvalue"></a>  CAnimationRect::SetDefaultValue  
+ Sets default value.  
   
 ```  
 void SetDefaultValue(const CRect& rect);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `rect`  
- Gibt neue Standardwerte für Links, oben, rechts und unten an.  
+ Specifies new default values for left, top, right and bottom.  
   
-### <a name="remarks"></a>Hinweise  
- Verwenden Sie diese Funktion, um einen Standardwert auf Animationsobjekt festzulegen. Diese Methoden den Grenzen des Rechteck Standardwerte zugewiesen. Auch neu zugrunde liegende COM-Objekte, wenn sie bereits erstellt wurden. Wenn Sie dieses Animationsobjekt Ereignisse (ValueChanged oder IntegerValueChanged) abonniert haben, müssen Sie diese Ereignisse erneut aktivieren.  
+### <a name="remarks"></a>Remarks  
+ Use this function to set a default value to animation object. This methods assigns default values to rectangle's bounds. It also recreates underlying COM objects if they have been created. If you subscribed this animation object to events (ValueChanged or IntegerValueChanged), you need to re-enable these events.  
   
-## <a name="see-also"></a>Siehe auch  
- [Klassen](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

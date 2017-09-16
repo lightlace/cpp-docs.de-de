@@ -1,48 +1,66 @@
 ---
-title: "Handler f&#252;r Befehle und Steuerelementbenachrichtigungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Befehle, Handler für"
-  - "Steuerelemente [MFC], Benachrichtigungen"
-  - "Funktionen [C++], Handler"
-  - "Handler"
-  - "Handler, Befehl"
-  - "Handler, Steuerelementebenachrichtigung"
-  - "Benachrichtigungen, Handler für Steuerelemente"
+title: Handlers for Commands and Control Notifications | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- commands [MFC], handlers for
+- functions [MFC], handler
+- handlers [MFC]
+- controls [MFC], notifications
+- handlers [MFC], control notification [MFC]
+- notifications [MFC], handlers for control
+- handlers [MFC]], command
 ms.assetid: 20f57f4a-f577-4c09-80a2-43faf32a1c2e
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Handler f&#252;r Befehle und Steuerelementbenachrichtigungen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 601f4cc9f7da5c7038443d3d5d73e6192e37187a
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Es gibt keine standardmäßige Handler für Befehle oder Steuerelement\-Benachrichtigungen.  Daher werden Sie nur als gebunden, wenn die Handler für diese Kategorien von Meldungen benennt.  Wenn Sie den Befehl oder der Steuerelementbenachrichtigung einem Handler zuordnen, schlägt die Eigenschaftenfenster einen Namen auf dem Befehls\-ID\- oder Steuerelementbenachrichtigungscode vor.  Sie können den vorgeschlagenen Namen akzeptiert, diesen ändern oder diesen ersetzen.  
+---
+# <a name="handlers-for-commands-and-control-notifications"></a>Handlers for Commands and Control Notifications
+There are no default handlers for commands or control-notification messages. Therefore, you are bound only by convention in naming your handlers for these categories of messages. When you map the command or control notification to a handler, the Properties windows proposes a name based on the command ID or control-notification code. You can accept the proposed name, change it, or replace it.  
   
- Konvention schlägt vor, dass Sie Handler in beiden Kategorien für die Benutzeroberflächeobjekt benennen, die diese darstellen.  Demnach würde ein Handler für den Befehl Ausschneiden im Menü Bearbeiten Namen möglicherweise  
+ Convention suggests that you name handlers in both categories for the user-interface object they represent. Thus a handler for the Cut command on the Edit menu might be named  
   
- [!CODE [NVC_MFCMessageHandling#4](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCMessageHandling#4)]  
+ [!code-cpp[NVC_MFCMessageHandling#4](../mfc/codesnippet/cpp/handlers-for-commands-and-control-notifications_1.h)]  
   
- Da der Befehl Ausschneiden so häufig in Anwendungen implementiert wird, definiert das Framework die Befehls\-ID für den Befehl Ausschneiden als **ID\_EDIT\_CUT** vor.  Eine Liste aller vordefinierten Befehls\-IDs, finden Sie die Datei AFXRES.H.  Weitere Informationen finden Sie unter [Standardbefehle](../mfc/standard-commands.md).  
+ Because the Cut command is so commonly implemented in applications, the framework predefines the command ID for the Cut command as **ID_EDIT_CUT**. For a list of all predefined command IDs, see the file AFXRES.H. For more information, see [Standard Commands](../mfc/standard-commands.md).  
   
- Außerdem schlägt Konvention vor, dass ein Handler kann **BN\_CLICKED** für die Benachrichtigung von einer Schaltfläche, die "My Schaltfläche" bezeichnete, würde mit  
+ In addition, convention suggests a handler for the **BN_CLICKED** notification message from a button labeled "My Button" might be named  
   
- [!CODE [NVC_MFCMessageHandling#5](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCMessageHandling#5)]  
+ [!code-cpp[NVC_MFCMessageHandling#5](../mfc/codesnippet/cpp/handlers-for-commands-and-control-notifications_2.h)]  
   
- Sie können möglicherweise diesem Befehl die ID `IDC_MY_BUTTON` zu, da sie auf ein anwendungsspezifisches Benutzeroberflächeobjekt entspricht.  
+ You might assign this command an ID of `IDC_MY_BUTTON` because it is equivalent to an application-specific user-interface object.  
   
- Beide Kategorien Meldungen nehmen keine Argumente und geben keinen Wert zurück.  
+ Both categories of messages take no arguments and return no value.  
   
-## Siehe auch  
- [Deklarieren von Meldungshandlerfunktionen](../mfc/declaring-message-handler-functions.md)
+## <a name="see-also"></a>See Also  
+ [Declaring Message Handler Functions](../mfc/declaring-message-handler-functions.md)
+

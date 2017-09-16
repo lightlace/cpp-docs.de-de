@@ -1,5 +1,5 @@
 ---
-title: CBitmapButton Klasse | Microsoft-Dokumentation
+title: CBitmapButton Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,9 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- buttons, bitmap
-- CBitmapButton class
-- bitmaps, button controls
+- CBitmapButton [MFC], CBitmapButton
+- CBitmapButton [MFC], AutoLoad
+- CBitmapButton [MFC], LoadBitmaps
+- CBitmapButton [MFC], SizeToContent
 ms.assetid: 9ad6cb45-c3c4-4fb1-96d3-1fe3df7bbcfc
 caps.latest.revision: 22
 author: mikeblome
@@ -40,15 +41,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0b07f6b12e178d8e324313ea3b0f6de9ae7420c9
-ms.openlocfilehash: 16d39cb380b75e6dcef71dda01626f120d5c12fb
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fee359237607174805f39c54c4d79299ebbafaed
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cbitmapbutton-class"></a>CBitmapButton-Klasse
-Erstellt Pushbutton-Steuerelemente, die mit Bitmapbildern statt mit Text bezeichnet sind.  
+# <a name="cbitmapbutton-class"></a>CBitmapButton Class
+Creates pushbutton controls labeled with bitmapped images instead of text.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,72 +57,72 @@ Erstellt Pushbutton-Steuerelemente, die mit Bitmapbildern statt mit Text bezeich
 class CBitmapButton : public CButton  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBitmapButton::CBitmapButton](#cbitmapbutton)|Erstellt ein `CBitmapButton`-Objekt.|  
+|[CBitmapButton::CBitmapButton](#cbitmapbutton)|Constructs a `CBitmapButton` object.|  
   
-### <a name="public-methods"></a>Öffentliche Methoden  
+### <a name="public-methods"></a>Public Methods  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBitmapButton:: AutoLoad](#autoload)|Ordnet eine Schaltfläche in einem Dialogfeld mit einem Objekt der `CBitmapButton` -Klasse lädt die Bitmap(s) nach Namen und passt die Größe der Schaltfläche, um die Bitmap anpassen.|  
-|[CBitmapButton::LoadBitmaps](#loadbitmaps)|Initialisiert das Objekt durch eine oder mehrere benannte Bitmapressourcen von Ressourcendatei der Anwendung geladen und die Bitmaps für das Objekt anfügen.|  
-|[CBitmapButton::SizeToContent](#sizetocontent)|Die Größe der Schaltfläche, um die Bitmap zu berücksichtigen.|  
+|[CBitmapButton::AutoLoad](#autoload)|Associates a button in a dialog box with an object of the `CBitmapButton` class, loads the bitmap(s) by name, and sizes the button to fit the bitmap.|  
+|[CBitmapButton::LoadBitmaps](#loadbitmaps)|Initializes the object by loading one or more named bitmap resources from the application's resource file and attaching the bitmaps to the object.|  
+|[CBitmapButton::SizeToContent](#sizetocontent)|Sizes the button to accommodate the bitmap.|  
   
-## <a name="remarks"></a>Hinweise  
- `CBitmapButton`Objekte enthalten, bis zu vier Bitmaps, die Bilder für die verschiedenen Zustände enthalten eine Schaltfläche kann davon ausgehen: oben (oder normal) nach unten (oder ausgewählten) mit Fokus, und deaktiviert. Nur die ersten Bitmap ist erforderlich. die anderen sind optional.  
+## <a name="remarks"></a>Remarks  
+ `CBitmapButton` objects contain up to four bitmaps, which contain images for the different states a button can assume: up (or normal), down (or selected), focused, and disabled. Only the first bitmap is required; the others are optional.  
   
- Bitmap-Bilder enthalten den Rahmen um das Bild als auch das Bild selbst. Der Rahmen spielt in der Regel eine mit dem Status der Schaltfläche. Beispielsweise ist die Bitmap für den Status der Fokus in der Regel wie für gedrückten Zustand jedoch mit einer gestrichelten Rechteck Inset aus den Rahmen oder eine dicke durchgehende Linie an der Grenze. Die Bitmap ähnelt für die deaktivierten, in der Regel Zustand der gedrückten Zustand jedoch niedriger Kontrast (z. B. eine Auswahl im Menü deaktiviert oder abgeblendet) ist.  
+ Bitmap-button images include the border around the image as well as the image itself. The border typically plays a part in showing the state of the button. For example, the bitmap for the focused state usually is like the one for the up state but with a dashed rectangle inset from the border or a thick solid line at the border. The bitmap for the disabled state usually resembles the one for the up state but has lower contrast (like a dimmed or grayed menu selection).  
   
- Diese Bitmaps können von beliebiger Größe sein, aber alle werden behandelt, als handele es sich um die gleiche Größe wie die Bitmap für gedrückten Zustand.  
+ These bitmaps can be of any size, but all are treated as if they were the same size as the bitmap for the up state.  
   
- Verschiedene Anwendungen erfordern verschiedene Kombinationen von Bitmap-Bildern:  
+ Various applications demand different combinations of bitmap images:  
   
-|Nach oben|Nach unten|Focused (Mit Fokus)|Deaktiviert|Anwendung|  
+|Up|Down|Focused|Disabled|Application|  
 |--------|----------|-------------|--------------|-----------------|  
 |×||||Bitmap|  
-|×|×|||Schaltfläche ohne **WS_TABSTOP** Stil|  
-|×|×|×|×|Schaltfläche mit allen Zuständen|  
-|×|×|×||Schaltfläche mit **WS_TABSTOP** Stil|  
+|×|×|||Button without **WS_TABSTOP** style|  
+|×|×|×|×|Dialog button with all states|  
+|×|×|×||Dialog button with **WS_TABSTOP** style|  
   
- Legen Sie beim Erstellen einer Bitmap-Schaltflächen-Steuerelement die **BS_OWNERDRAW** zu geben, dass die Schaltfläche Ownerdrawn-Stil. Dies bewirkt, dass Windows zum Senden der `WM_MEASUREITEM` und `WM_DRAWITEM` Nachrichten für die Schaltfläche; das Framework diese Nachrichten verarbeitet und die Darstellung der Schaltfläche für Sie verwaltet.  
+ When creating a bitmap-button control, set the **BS_OWNERDRAW** style to specify that the button is owner-drawn. This causes Windows to send the `WM_MEASUREITEM` and `WM_DRAWITEM` messages for the button; the framework handles these messages and manages the appearance of the button for you.  
   
-### <a name="to-create-a-bitmap-button-control-in-a-windows-client-area"></a>Erstellen Sie ein Bitmap-Schaltflächen-Steuerelement im Clientbereich eines Fensters  
+### <a name="to-create-a-bitmap-button-control-in-a-windows-client-area"></a>To create a bitmap-button control in a window's client area  
   
-1.  Erstellen Sie ein bis vier Bitmaps für die Schaltfläche.  
+1.  Create one to four bitmap images for the button.  
   
-2.  Erstellen der [CBitmapButton](#cbitmapbutton) Objekt.  
+2.  Construct the [CBitmapButton](#cbitmapbutton) object.  
   
-3.  Rufen Sie die [erstellen](../../mfc/reference/cbutton-class.md#create) Funktion das Schaltflächen-Steuerelement von Windows zu erstellen und diese an die `CBitmapButton` Objekt.  
+3.  Call the [Create](../../mfc/reference/cbutton-class.md#create) function to create the Windows button control and attach it to the `CBitmapButton` object.  
   
-4.  Rufen Sie die [LoadBitmaps](#loadbitmaps) Memberfunktion die Bitmapressourcen laden, nach dem Erstellen die Bitmapschaltfläche.  
+4.  Call the [LoadBitmaps](#loadbitmaps) member function to load the bitmap resources after the bitmap button is constructed.  
   
-### <a name="to-include-a-bitmap-button-control-in-a-dialog-box"></a>Ein Bitmap-Schaltflächen-Steuerelement in einem Dialogfeld einschließen  
+### <a name="to-include-a-bitmap-button-control-in-a-dialog-box"></a>To include a bitmap-button control in a dialog box  
   
-1.  Erstellen Sie ein bis vier Bitmaps für die Schaltfläche.  
+1.  Create one to four bitmap images for the button.  
   
-2.  Erstellen einer Dialogfeldvorlage Ownerdrawn-Schaltfläche positioniert, in dem die Bitmapschaltfläche angezeigt werden soll. Die Größe der Schaltfläche in der Vorlage spielt keine Rolle.  
+2.  Create a dialog template with an owner-draw button positioned where you want the bitmap button. The size of the button in the template does not matter.  
   
-3.  Legen Sie die Beschriftung der Schaltfläche auf einen Wert wie " **MYIMAGE**" und definieren Sie ein Symbol für die Schaltfläche wie z. B. **IDC_MYIMAGE**.  
+3.  Set the button's caption to a value such as " **MYIMAGE**" and define a symbol for the button such as **IDC_MYIMAGE**.  
   
-4.  In Ihrer Anwendung Ressourcenskript geben jedes der Bilder für die Schaltfläche erstellt eine ID erstellt, die durch Anhängen einer der Buchstaben "U", "D", "F", oder "X" (nach oben, unten, konzentriert und deaktiviert) auf die Zeichenfolge für die Beschriftung der Schaltfläche in Schritt 3. Für die Beschriftung der Schaltfläche " **MYIMAGE**," die IDs wäre z. B. " **MYIMAGEU**," " **MYIMAGED**," " **MYIMAGEF**," und " **MYIMAGEX**." Sie **müssen** Geben Sie die ID für die Bitmap in doppelte Anführungszeichen gesetzt. Andernfalls der Ressourcen-Editor weist eine ganze Zahl für die Ressource und MFC schlägt fehl, wenn das Bild geladen.  
+4.  In your application's resource script, give each of the images created for the button an ID constructed by appending one of the letters "U," "D," "F," or "X" (for up, down, focused, and disabled) to the string used for the button caption in step 3. For the button caption " **MYIMAGE**," for example, the IDs would be " **MYIMAGEU**," " **MYIMAGED**," " **MYIMAGEF**," and " **MYIMAGEX**." You **must** specify the ID of your bitmaps within double quotes. Otherwise the resource editor will assign an integer to the resource and MFC will fail when loading the image.  
   
-5.  In Ihrer Anwendung Dialogfeldklasse (abgeleitet `CDialog`), Hinzufügen einer `CBitmapButton` Member-Objekt.  
+5.  In your application's dialog class (derived from `CDialog`), add a `CBitmapButton` member object.  
   
-6.  In der `CDialog` des Objekts [OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog) routinemäßig ausgeführt werden, rufen die `CBitmapButton` des Objekts [AutoLoad](#autoload) funktioniert, verwenden als Parameter für die Schaltfläche Steuerelement-ID und die `CDialog` des Objekts **dies** Zeiger.  
+6.  In the `CDialog` object's [OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog) routine, call the `CBitmapButton` object's [AutoLoad](#autoload) function, using as parameters the button's control ID and the `CDialog` object's **this** pointer.  
   
- Wenn Sie Windows-Benachrichtigungen, wie z. B. behandeln möchten **BN_CLICKED**und wurde durch ein Bitmap-Schaltflächen-Steuerelement zu seinem übergeordneten Element (i. d. r. eine abgeleitete Klasse **CDialog)**, Hinzufügen der `CDialog`-abgeleitete Objekt einer meldungszuordnung Eintrag und Meldungshandler Memberfunktion für jede Nachricht. Die Benachrichtigungen gesendet werden, indem eine `CBitmapButton` Objekt sind identisch mit denen per ein [CButton](../../mfc/reference/cbutton-class.md) Objekt.  
+ If you want to handle Windows notification messages, such as **BN_CLICKED**, sent by a bitmap-button control to its parent (usually a class derived from **CDialog)**, add to the `CDialog`-derived object a message-map entry and message-handler member function for each message. The notifications sent by a `CBitmapButton` object are the same as those sent by a [CButton](../../mfc/reference/cbutton-class.md) object.  
   
- Die Klasse [CToolBar](../../mfc/reference/ctoolbar-class.md) bietet einen anderen Ansatz für Schaltflächen.  
+ The class [CToolBar](../../mfc/reference/ctoolbar-class.md) takes a different approach to bitmap buttons.  
   
- Weitere Informationen zu `CBitmapButton`, finden Sie unter [Steuerelemente](../../mfc/controls-mfc.md).  
+ For more information on `CBitmapButton`, see [Controls](../../mfc/controls-mfc.md).  
   
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- [Von CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -131,11 +132,11 @@ class CBitmapButton : public CButton
   
  `CBitmapButton`  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** afxext.h  
   
-##  <a name="autoload"></a>CBitmapButton:: AutoLoad  
- Ordnet eine Schaltfläche in einem Dialogfeld mit einem Objekt der `CBitmapButton` -Klasse lädt die Bitmap(s) nach Namen und passt die Größe der Schaltfläche, um die Bitmap anpassen.  
+##  <a name="autoload"></a>  CBitmapButton::AutoLoad  
+ Associates a button in a dialog box with an object of the `CBitmapButton` class, loads the bitmap(s) by name, and sizes the button to fit the bitmap.  
   
 ```  
 BOOL AutoLoad(
@@ -143,37 +144,37 @@ BOOL AutoLoad(
     CWnd* pParent);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `nID`  
- Die Schaltfläche Steuerelement-ID  
+ The button's control ID.  
   
  `pParent`  
- Ein Zeiger auf das Objekt, das die Schaltfläche besitzt.  
+ Pointer to the object that owns the button.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Verwenden der `AutoLoad` Funktion eine Ownerdrawn-Schaltfläche in einem Dialogfeld als eine Bitmapschaltfläche initialisiert werden. Informationen zur Verwendung dieser Funktion sind in den Hinweisen für die `CBitmapButton` Klasse.  
+### <a name="remarks"></a>Remarks  
+ Use the `AutoLoad` function to initialize an owner-draw button in a dialog box as a bitmap button. Instructions for using this function are in the remarks for the `CBitmapButton` class.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFCControlLadenDialog&#75;](../../mfc/codesnippet/cpp/cbitmapbutton-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCControlLadenDialog#75](../../mfc/codesnippet/cpp/cbitmapbutton-class_1.cpp)]  
   
-##  <a name="cbitmapbutton"></a>CBitmapButton::CBitmapButton  
- Erstellt ein `CBitmapButton`-Objekt.  
+##  <a name="cbitmapbutton"></a>  CBitmapButton::CBitmapButton  
+ Creates a `CBitmapButton` object.  
   
 ```  
 CBitmapButton();
 ```  
   
-### <a name="remarks"></a>Hinweise  
- Nach dem Erstellen der C++ `CBitmapButton` -Objekt, rufen Sie [CButton::Create](../../mfc/reference/cbutton-class.md#create) das Schaltflächen-Steuerelement von Windows zu erstellen und diese an die `CBitmapButton` Objekt.  
+### <a name="remarks"></a>Remarks  
+ After creating the C++ `CBitmapButton` object, call [CButton::Create](../../mfc/reference/cbutton-class.md#create) to create the Windows button control and attach it to the `CBitmapButton` object.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFCControlLadenDialog&#57;](../../mfc/codesnippet/cpp/cbitmapbutton-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCControlLadenDialog#57](../../mfc/codesnippet/cpp/cbitmapbutton-class_2.cpp)]  
   
-##  <a name="loadbitmaps"></a>CBitmapButton::LoadBitmaps  
- Wenn Sie laden Bitmapbilder identifiziert, deren Namen oder die ID-Nummern, oder wenn Sie nicht verwenden möchten, verwenden Sie diese Funktion der `AutoLoad` Funktion, da z. B. eine Bitmapschaltfläche erstellen, die nicht Teil eines Dialogfelds.  
+##  <a name="loadbitmaps"></a>  CBitmapButton::LoadBitmaps  
+ Use this function when you want to load bitmap images identified by their resource names or ID numbers, or when you cannot use the `AutoLoad` function because, for example, you are creating a bitmap button that is not part of a dialog box.  
   
 ```  
 BOOL LoadBitmaps(
@@ -190,50 +191,50 @@ BOOL LoadBitmaps(
     UINT nIDBitmapResourceDisabled = 0);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  *lpszBitmapResource*  
- Verweist auf die auf Null endende Zeichenfolge, die den Namen der Bitmap für eine Bitmapschaltfläche Normal oder "Status up" enthält. Erforderlich.  
+ Points to the null-terminated string that contains the name of the bitmap for a bitmap button's normal or "up" state. Required.  
   
  *lpszBitmapResourceSel*  
- Punkte, die Null-terminierte Zeichenfolge mit dem Namen der Bitmap eine Bitmapschaltfläche aktiviert die oder "inaktiv". Möglicherweise **NULL**.  
+ Points to the null-terminated string that contains the name of the bitmap for a bitmap button's selected or "down" state. May be **NULL**.  
   
  *lpszBitmapResourceFocus*  
- Verweist auf die auf Null endende Zeichenfolge, die den Namen der Bitmap für einer Bitmapschaltfläche enthält hauptsächlich Zustand. Möglicherweise **NULL**.  
+ Points to the null-terminated string that contains the name of the bitmap for a bitmap button's focused state. May be **NULL**.  
   
  *lpszBitmapResourceDisabled*  
- Verweist auf die auf Null endende Zeichenfolge, die den Namen der Bitmap für eine Bitmapschaltfläche deaktivierten Zustand enthält. Möglicherweise **NULL**.  
+ Points to the null-terminated string that contains the name of the bitmap for a bitmap button's disabled state. May be **NULL**.  
   
  *nIDBitmapResource*  
- Gibt die Ressourcen-ID der Bitmapressource für eine Bitmapschaltfläche Normal oder "Status up". Erforderlich.  
+ Specifies the resource ID number of the bitmap resource for a bitmap button's normal or "up" state. Required.  
   
  *nIDBitmapResourceSel*  
- Gibt die Ressourcen-ID-Nummer der Bitmapressource an, für eine Bitmapschaltfläche ausgewählte des oder "inaktiv". 0 kann sein.  
+ Specifies the resource ID number of the bitmap resource for a bitmap button's selected or "down" state. May be 0.  
   
  *nIDBitmapResourceFocus*  
- Gibt die Ressourcen-ID-Nummer der Bitmapressource für eine Bitmapschaltfläche focused-Zustand. 0 kann sein.  
+ Specifies the resource ID number of the bitmap resource for a bitmap button's focused state. May be 0.  
   
  *nIDBitmapResourceDisabled*  
- Gibt die Ressourcen-ID der Bitmapressource für eine Bitmapschaltfläche deaktivierten Zustand. 0 kann sein.  
+ Specifies the resource ID number of the bitmap resource for a bitmap button's disabled state. May be 0.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFCControlLadenDialog&#58;](../../mfc/codesnippet/cpp/cbitmapbutton-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCControlLadenDialog#58](../../mfc/codesnippet/cpp/cbitmapbutton-class_3.cpp)]  
   
-##  <a name="sizetocontent"></a>CBitmapButton::SizeToContent  
- Rufen Sie diese Funktion, um eine Bitmapschaltfläche, um die Größe der Bitmap für die Größe zu ändern.  
+##  <a name="sizetocontent"></a>  CBitmapButton::SizeToContent  
+ Call this function to resize a bitmap button to the size of the bitmap.  
   
 ```  
 void SizeToContent();
 ```  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFCControlLadenDialog&#59;](../../mfc/codesnippet/cpp/cbitmapbutton-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCControlLadenDialog#59](../../mfc/codesnippet/cpp/cbitmapbutton-class_4.cpp)]  
   
-## <a name="see-also"></a>Siehe auch  
- [MFC-Beispiel CTRLTEST](../../visual-cpp-samples.md)   
- [CButton-Klasse](../../mfc/reference/cbutton-class.md)   
- [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample CTRLTEST](../../visual-cpp-samples.md)   
+ [CButton Class](../../mfc/reference/cbutton-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 

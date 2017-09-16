@@ -1,38 +1,57 @@
 ---
-title: "Die CCmdUI-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CCmdUI"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CCmdUI-Klasse, Menüaktualisierung"
-  - "Symbolleisten [C++], Aktualisieren"
-  - "Updatehandler"
-  - "Aktualisieren von Benutzeroberflächenobjekten"
-  - "Benutzerschnittstellenobjekte, Aktualisieren"
+title: The CCmdUI Class | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CCmdUI
+dev_langs:
+- C++
+helpviewer_keywords:
+- updating user interface objects [MFC]
+- user interface objects [MFC], updating
+- CCmdUI class [MFC], menu updating
+- update handlers [MFC]
+- toolbars [MFC], updating
 ms.assetid: 2f2bae62-8c29-45a4-bbce-490eb01907d5
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Die CCmdUI-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 85c95a24e5c42e0d90d6f3b90ae22f10eec18f8d
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Wenn es einen Updates\-Befehl zu seinem Handler weiterleitet, besteht das Framework den Handler ein Zeiger auf ein `CCmdUI`\-Objekt bzw. ein Objekt von `CCmdUI` abgeleitete Klasse\).  Dieses Objekt stellt das Menüelement oder die Symbolleisten\-Schaltfläche oder anderes Benutzeroberflächeobjekt dar, die den Befehl generierten.  Die Aktualisierungshandleraufrufsmemberfunktionen der `CCmdUI`\-Struktur durch den Mauszeiger, um den Benutzeroberflächeobjekts zu aktualisieren.  Es folgt ein Aktualisierungshandler für den freien Raum alles Menüelement:  
+---
+# <a name="the-ccmdui-class"></a>The CCmdUI Class
+When it routes an update command to its handler, the framework passes the handler a pointer to a `CCmdUI` object (or to an object of a `CCmdUI`-derived class). This object represents the menu item or toolbar button or other user-interface object that generated the command. The update handler calls member functions of the `CCmdUI` structure through the pointer to update the user-interface object. For example, here is an update handler for the Clear All menu item:  
   
- [!CODE [NVC_MFCDocView#3](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCDocView#3)]  
+ [!code-cpp[NVC_MFCDocView#3](../mfc/codesnippet/cpp/the-ccmdui-class_1.cpp)]  
   
- Dieser Handler ruft die **Aktivieren**\-Memberfunktion eines Objekts mit Zugriff auf das Menüelement auf.  **Aktivieren** stellt das Element für die Verwendung zur Verfügung.  
+ This handler calls the **Enable** member function of an object with access to the menu item. **Enable** makes the item available for use.  
   
-## Siehe auch  
- [Gewusst wie: Aktualisieren von Benutzeroberflächenobjekten](../mfc/how-to-update-user-interface-objects.md)
+## <a name="see-also"></a>See Also  
+ [How to: Update User-Interface Objects](../mfc/how-to-update-user-interface-objects.md)
+
+

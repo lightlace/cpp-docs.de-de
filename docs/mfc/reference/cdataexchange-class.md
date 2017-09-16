@@ -1,5 +1,5 @@
 ---
-title: CDataExchange-Klasse | Microsoft-Dokumentation
+title: CDataExchange Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,19 +21,13 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- DDX/DDV, Technical Note 26
-- DDX/DDV, CDataExchange class
-- DDX (dialog data exchange), direction of exchange
-- DDX (dialog data exchange), between dialog and CDialog
-- DDX (dialog data exchange), custom DDX routines
-- DDV (dialog data validation)
-- m_bSaveAndValidate
-- CDataExchange class
-- exchanging data between dialogs and CDialogs
-- DDV (dialog data validation), custom DDV routines
-- DDX/DDV
-- DDX (dialog data exchange)
-- validating data, dialog box data entry
+- CDataExchange [MFC], CDataExchange
+- CDataExchange [MFC], Fail
+- CDataExchange [MFC], PrepareCtrl
+- CDataExchange [MFC], PrepareEditCtrl
+- CDataExchange [MFC], PrepareOleCtrl
+- CDataExchange [MFC], m_bSaveAndValidate
+- CDataExchange [MFC], m_pDlgWnd
 ms.assetid: 84ed6113-325d-493e-a75d-223f03a992b8
 caps.latest.revision: 20
 author: mikeblome
@@ -53,15 +47,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 8f35e87d562a894411401755ccd4fdd54e43b58a
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 47fc1c6e72fc34686aeb3de2c1670b0a5b8d0bdd
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdataexchange-class"></a>CDataExchange-Klasse
-Unterstützt die Routinen für den Dialogdatenaustausch (Dialog Data Exchange, DDX) und die Dialogfelddatenvalidierung (Dialog Data Validation, DDV), die von den Microsoft Foundation-Klassen verwendet werden.  
+# <a name="cdataexchange-class"></a>CDataExchange Class
+Supports the dialog data exchange (DDX) and dialog data validation (DDV) routines used by the Microsoft Foundation classes.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -69,45 +63,45 @@ Unterstützt die Routinen für den Dialogdatenaustausch (Dialog Data Exchange, D
 class CDataExchange  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDataExchange::CDataExchange](#cdataexchange)|Erstellt ein `CDataExchange`-Objekt.|  
+|[CDataExchange::CDataExchange](#cdataexchange)|Constructs a `CDataExchange` object.|  
   
-### <a name="public-methods"></a>Öffentliche Methoden  
+### <a name="public-methods"></a>Public Methods  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDataExchange::Fail](#fail)|Wird aufgerufen, wenn die Validierung fehlschlägt. Setzt den Fokus auf das vorherige Steuerelement zurück und löst eine Ausnahme aus.|  
-|[CDataExchange::PrepareCtrl](#preparectrl)|Das angegebene Steuerelement vorbereitet für den Datenaustausch oder Überprüfung. Verwenden Sie für Nonedit-Steuerelemente.|  
-|[CDataExchange::PrepareEditCtrl](#prepareeditctrl)|Das angegebene Edit-Steuerelement vorbereitet für den Datenaustausch oder Überprüfung.|  
-|[CDataExchange::PrepareOleCtrl](#prepareolectrl)|Das angegebene OLE-Steuerelement vorbereitet für den Datenaustausch oder Überprüfung. Verwenden Sie für Nonedit-Steuerelemente.|  
+|[CDataExchange::Fail](#fail)|Called when validation fails. Resets focus to the previous control and throws an exception.|  
+|[CDataExchange::PrepareCtrl](#preparectrl)|Prepares the specified control for data exchange or validation. Use for nonedit controls.|  
+|[CDataExchange::PrepareEditCtrl](#prepareeditctrl)|Prepares the specified edit control for data exchange or validation.|  
+|[CDataExchange::PrepareOleCtrl](#prepareolectrl)|Prepares the specified OLE control for data exchange or validation. Use for nonedit controls.|  
   
-### <a name="public-data-members"></a>Öffentliche Datenmember  
+### <a name="public-data-members"></a>Public Data Members  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDataExchange::m_bSaveAndValidate](#m_bsaveandvalidate)|Das Flag für die Richtung des DDX- und DDV.|  
-|[CDataExchange::m_pDlgWnd](#m_pdlgwnd)|Die im Dialogfeld bzw. Fenster, in denen der Datenaustausch, erfolgt.|  
+|[CDataExchange::m_bSaveAndValidate](#m_bsaveandvalidate)|Flag for the direction of DDX and DDV.|  
+|[CDataExchange::m_pDlgWnd](#m_pdlgwnd)|The dialog box or window where the data exchange takes place.|  
   
-## <a name="remarks"></a>Hinweise  
- `CDataExchange`eine Basisklasse keinen.  
+## <a name="remarks"></a>Remarks  
+ `CDataExchange` does not have a base class.  
   
- Verwenden Sie diese Klasse, wenn Sie Daten Exchange Routinen für benutzerdefinierte Datentypen oder Steuerelemente, Schreiben Sie eigene datenvalidierungsroutine schreiben. Weitere Informationen zum Schreiben eigene DDX- und DDV-Routinen, finden Sie unter [Technische Hinweis 26](../../mfc/tn026-ddx-and-ddv-routines.md). Eine Übersicht über DDX- und DDV, finden Sie unter [Dialogdatenaustausch und-Validierung](../../mfc/dialog-data-exchange-and-validation.md) und [Dialogfelder](../../mfc/dialog-boxes.md).  
+ Use this class if you are writing data exchange routines for custom data types or controls, or if you are writing your own data validation routines. For more information on writing your own DDX and DDV routines, see [Technical Note 26](../../mfc/tn026-ddx-and-ddv-routines.md). For an overview of DDX and DDV, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md) and [Dialog Boxes](../../mfc/dialog-boxes.md).  
   
- Ein `CDataExchange` Objekt enthält die Kontextinformationen für DDX- und DDV auszuführende platzieren erforderlich sind. Das Flag `m_bSaveAndValidate` ist **FALSE** Wenn DDX füllen die Anfangswerte des Dialogfeld-Steuerelemente von Datenmember verwendet wird. Das Flag `m_bSaveAndValidate` ist **TRUE** Wenn DDX verwendet wird, die aktuellen Werte der Dialogfeld-Steuerelemente in der Datenmember und wenn DDV verwendet wird, zum Überprüfen der Datenwerte festgelegt. Die DDV-Überprüfung fehlschlägt, wird der DDV-Prozedur ein Meldungsfeld zum Eingaben-Fehler angezeigt. Ruft die Prozedur DDV dann **fehl** um den Fokus auf das problematische Steuerelement zurückgesetzt und löst eine Ausnahme aus, um den Überprüfungsprozess zu beenden.  
+ A `CDataExchange` object provides the context information needed for DDX and DDV to take place. The flag `m_bSaveAndValidate` is **FALSE** when DDX is used to fill the initial values of dialog controls from data members. The flag `m_bSaveAndValidate` is **TRUE** when DDX is used to set the current values of dialog controls into data members and when DDV is used to validate the data values. If the DDV validation fails, the DDV procedure will display a message box explaining the input error. The DDV procedure will then call **Fail** to reset the focus to the offending control and throw an exception to stop the validation process.  
   
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `CDataExchange`  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** afxwin.h  
   
-##  <a name="cdataexchange"></a>CDataExchange::CDataExchange  
- Rufen Sie diese Memberfunktion zum Erstellen einer `CDataExchange` Objekt.  
+##  <a name="cdataexchange"></a>  CDataExchange::CDataExchange  
+ Call this member function to construct a `CDataExchange` object.  
   
 ```  
 CDataExchange(
@@ -115,130 +109,130 @@ CDataExchange(
     BOOL bSaveAndValidate);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  *pDlgWnd*  
- Ein Zeiger auf das übergeordnete Fenster, das das Steuerelement enthält. Dies ist normalerweise ein [CDialog](../../mfc/reference/cdialog-class.md)-abgeleitetes Objekt.  
+ A pointer to the parent window that contains the control. Usually this is a [CDialog](../../mfc/reference/cdialog-class.md)-derived object.  
   
  `bSaveAndValidate`  
- Wenn **TRUE**, dieses Objekt überprüft Daten, und schreibt Daten über die Steuerelemente für die Elemente. Wenn **FALSE**, dieses Objekt wird Daten von Mitgliedern zu Steuerelementen wechseln.  
+ If **TRUE**, this object validates data, then writes data from the controls to the members. If **FALSE**, this object will move data from members to controls.  
   
-### <a name="remarks"></a>Hinweise  
- Erstellen einer `CDataExchange` Objekt zum Speichern von zusätzlichen Informationen in der Exchange-Datenobjekt Übergabe an des Fensters selbst [Ddx_managedcontrol](../../mfc/reference/cwnd-class.md#dodataexchange) Member-Funktion.  
+### <a name="remarks"></a>Remarks  
+ Construct a `CDataExchange` object yourself to store extra information in the data exchange object to pass to your window's [CWnd::DoDataExchange](../../mfc/reference/cwnd-class.md#dodataexchange) member function.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFCControlLadenDialog&#70;](../../mfc/codesnippet/cpp/cdataexchange-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCControlLadenDialog#70](../../mfc/codesnippet/cpp/cdataexchange-class_1.cpp)]  
   
-##  <a name="fail"></a>CDataExchange::Fail  
- Das Framework ruft diese Member-Funktion, wenn ein Dialogfeld Daten-Überprüfung (DDV)-Vorgang fehlschlägt.  
+##  <a name="fail"></a>  CDataExchange::Fail  
+ The framework calls this member function when a dialog data validation (DDV) operation fails.  
   
 ```  
 void Fail();
 ```  
   
-### <a name="remarks"></a>Hinweise  
- **Fehler** stellt den Fokus und Auswahl an das Steuerelement, dessen Überprüfung fehlgeschlagen (wenn ein Steuerelement wiederherstellen) wieder her. **Ein Fehler auf** löst dann eine Ausnahme vom Typ [CUserException](../../mfc/reference/cuserexception-class.md) den Überprüfungsprozess zu beenden. Die Ausnahme bewirkt, dass ein Meldungsfeld, einer Beschreibung des Fehlers angezeigt werden. Wenn DDV-Validierung fehlgeschlagen ist, kann Benutzer Daten im betreffenden Steuerelement eingeben.  
+### <a name="remarks"></a>Remarks  
+ **Fail** restores the focus and selection to the control whose validation failed (if there is a control to restore). **Fail** then throws an exception of type [CUserException](../../mfc/reference/cuserexception-class.md) to stop the validation process. The exception causes a message box explaining the error to be displayed. After DDV validation fails, the user can reenter data in the offending control.  
   
- Beim Implementieren benutzerdefinierter DDV-Routinen können Aufrufen **fehl** aus ihren Routinen, die bei einem Überprüfungsfehler fehlschlägt.  
+ Implementors of custom DDV routines can call **Fail** from their routines when a validation fails.  
   
- Weitere Informationen zum Schreiben eigene DDX- und DDV-Routinen, finden Sie unter [Technische Hinweis 26](../../mfc/tn026-ddx-and-ddv-routines.md). Eine Übersicht über DDX- und DDV, finden Sie unter [Dialogdatenaustausch und-Validierung](../../mfc/dialog-data-exchange-and-validation.md) und [Dialogfeldthemen](../../mfc/dialog-boxes.md).  
+ For more information on writing your own DDX and DDV routines, see [Technical Note 26](../../mfc/tn026-ddx-and-ddv-routines.md). For an overview of DDX and DDV, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md) and [Dialog Box Topics](../../mfc/dialog-boxes.md).  
   
-##  <a name="m_bsaveandvalidate"></a>CDataExchange::m_bSaveAndValidate  
- Dieses Flag gibt die Richtung eines Dialogfeld Datenvorgangs Dialogdatenaustausch (DDX).  
+##  <a name="m_bsaveandvalidate"></a>  CDataExchange::m_bSaveAndValidate  
+ This flag indicates the direction of a dialog data exchange (DDX) operation.  
   
 ```  
 BOOL m_bSaveAndValidate;  
 ```  
   
-### <a name="remarks"></a>Hinweise  
- Das Flag ist ungleich NULL Wenn die `CDataExchange` Objekt verwendet wird, um Daten aus dem Dialogfeld-Steuerelemente in Dialogklasse Datenmember verschieben, nachdem der Benutzer die Steuerelemente bearbeitet. Das Flag ist&0; (null), wenn das Objekt initialisiert Dialogfeld-Steuerelemente von Dialogfeldklasse Datenmember verwendet wird.  
+### <a name="remarks"></a>Remarks  
+ The flag is nonzero if the `CDataExchange` object is being used to move data from the dialog controls to dialog-class data members after the user edits the controls. The flag is zero if the object is being used to initialize dialog controls from dialog-class data members.  
   
- Das Flag ist auch beim Validieren von Dialogfelddaten (DDV) ungleich NULL ist.  
+ The flag is also nonzero during dialog data validation (DDV).  
   
- Weitere Informationen zum Schreiben eigene DDX- und DDV-Routinen, finden Sie unter [Technische Hinweis 26](../../mfc/tn026-ddx-and-ddv-routines.md). Eine Übersicht über DDX- und DDV, finden Sie unter [Dialogdatenaustausch und-Validierung](../../mfc/dialog-data-exchange-and-validation.md) und [Dialogfeldthemen](../../mfc/dialog-boxes.md).  
+ For more information on writing your own DDX and DDV routines, see [Technical Note 26](../../mfc/tn026-ddx-and-ddv-routines.md). For an overview of DDX and DDV, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md) and [Dialog Box Topics](../../mfc/dialog-boxes.md).  
   
-##  <a name="m_pdlgwnd"></a>CDataExchange::m_pDlgWnd  
- Enthält einen Zeiger auf die [CWnd](../../mfc/reference/cwnd-class.md) Objekt, für welches Dialogfeld Daten Dialogdatenaustausch (DDX) oder Überprüfung (DDV) erfolgt.  
+##  <a name="m_pdlgwnd"></a>  CDataExchange::m_pDlgWnd  
+ Contains a pointer to the [CWnd](../../mfc/reference/cwnd-class.md) object for which dialog data exchange (DDX) or validation (DDV) is taking place.  
   
 ```  
 CWnd* m_pDlgWnd;  
 ```  
   
-### <a name="remarks"></a>Hinweise  
- Dieses Objekt stellt normalerweise eine [CDialog](../../mfc/reference/cdialog-class.md) Objekt. In einer Implementierung von benutzerdefinierten DDX oder DDV-Routinen können this-Zeiger, den Zugriff auf das Dialogfeld, das Steuerelemente enthält, auf der Sie ausgeführt werden.  
+### <a name="remarks"></a>Remarks  
+ This object is usually a [CDialog](../../mfc/reference/cdialog-class.md) object. Implementors of custom DDX or DDV routines can use this pointer to obtain access to the dialog window that contains the controls they are operating on.  
   
- Weitere Informationen zum Schreiben eigene DDX- und DDV-Routinen, finden Sie unter [Technische Hinweis 26](../../mfc/tn026-ddx-and-ddv-routines.md). Eine Übersicht über DDX- und DDV, finden Sie unter [Dialogdatenaustausch und-Validierung](../../mfc/dialog-data-exchange-and-validation.md) und [Dialogfeldthemen](../../mfc/dialog-boxes.md).  
+ For more information on writing your own DDX and DDV routines, see [Technical Note 26](../../mfc/tn026-ddx-and-ddv-routines.md). For an overview of DDX and DDV, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md) and [Dialog Box Topics](../../mfc/dialog-boxes.md).  
   
-##  <a name="preparectrl"></a>CDataExchange::PrepareCtrl  
- Das Framework ruft diese Memberfunktion, um das angegebene Steuerelement für den Dialogdatenaustausch (DDX) und Überprüfung (DDV) vorbereiten.  
+##  <a name="preparectrl"></a>  CDataExchange::PrepareCtrl  
+ The framework calls this member function to prepare the specified control for dialog data exchange (DDX) and validation (DDV).  
   
 ```  
 HWND PrepareCtrl(int nIDC);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `nIDC`  
- Die ID des Steuerelements für DDX oder DDV vorbereitet werden.  
+ The ID of the control to be prepared for DDX or DDV.  
   
-### <a name="return-value"></a>Rückgabewert  
- Die `HWND` des Steuerelements für den DDX oder DDV vorbereitet.  
+### <a name="return-value"></a>Return Value  
+ The `HWND` of the control being prepared for DDX or DDV.  
   
-### <a name="remarks"></a>Hinweise  
- Verwenden Sie [PrepareEditCtrl](#prepareeditctrl) Bearbeitungssteuerelementen; verwenden Sie stattdessen diese Memberfunktion für alle anderen Steuerelemente.  
+### <a name="remarks"></a>Remarks  
+ Use [PrepareEditCtrl](#prepareeditctrl) instead for edit controls; use this member function for all other controls.  
   
- Vorbereitung umfasst das Speichern des Steuerelements `HWND` in der `CDataExchange` Klasse. Das Framework verwendet dieses Handle, um den Fokus auf das zuvor fokussierte Steuerelement bei Auftreten eines Fehlers DDX oder DDV wiederherstellen.  
+ Preparation consists of storing the control's `HWND` in the `CDataExchange` class. The framework uses this handle to restore the focus to the previously focused control in the event of a DDX or DDV failure.  
   
- In einer Implementierung von benutzerdefinierten DDX oder DDV-Routinen sollten Aufrufen `PrepareCtrl` für alle nicht-Edit-Steuerelemente für den Datenaustausch über DDX oder werden Daten über DDV überprüfen.  
+ Implementors of custom DDX or DDV routines should call `PrepareCtrl` for all non-edit controls for which they are exchanging data via DDX or validating data via DDV.  
   
- Weitere Informationen zum Schreiben eigene DDX- und DDV-Routinen, finden Sie unter [Technische Hinweis 26](../../mfc/tn026-ddx-and-ddv-routines.md). Eine Übersicht über DDX- und DDV, finden Sie unter [Dialogdatenaustausch und-Validierung](../../mfc/dialog-data-exchange-and-validation.md) und [Dialogfeldthemen](../../mfc/dialog-boxes.md).  
+ For more information on writing your own DDX and DDV routines, see [Technical Note 26](../../mfc/tn026-ddx-and-ddv-routines.md). For an overview of DDX and DDV, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md) and [Dialog Box Topics](../../mfc/dialog-boxes.md).  
   
-##  <a name="prepareeditctrl"></a>CDataExchange::PrepareEditCtrl  
- Das Framework ruft diese Memberfunktion zum angegebenen Bearbeitungssteuerelement für Dialogdatenaustausch (DDX) und Überprüfung (DDV) vorbereiten.  
+##  <a name="prepareeditctrl"></a>  CDataExchange::PrepareEditCtrl  
+ The framework calls this member function to prepare the specified edit control for dialog data exchange (DDX) and validation (DDV).  
   
 ```  
 HWND PrepareEditCtrl(int nIDC);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `nIDC`  
- Die ID des Bearbeitungssteuerelements für DDX oder DDV vorbereitet werden.  
+ The ID of the edit control to be prepared for DDX or DDV.  
   
-### <a name="return-value"></a>Rückgabewert  
- Die `HWND` des Bearbeitungssteuerelements für DDX oder DDV vorbereitet.  
+### <a name="return-value"></a>Return Value  
+ The `HWND` of the edit control being prepared for DDX or DDV.  
   
-### <a name="remarks"></a>Hinweise  
- Verwendung [PrepareCtrl](#preparectrl) stattdessen für alle nicht-Edit-Steuerelemente.  
+### <a name="remarks"></a>Remarks  
+ Use [PrepareCtrl](#preparectrl) instead for all non-edit controls.  
   
- Vorbereitung umfasst zwei Schritte. Erstens `PrepareEditCtrl` speichert das Steuerelement `HWND` in der `CDataExchange` Klasse. Das Framework verwendet dieses Handle, um den Fokus auf das zuvor fokussierte Steuerelement bei Auftreten eines Fehlers DDX oder DDV wiederherstellen. Zweitens `PrepareEditCtrl` setzt ein Flag in der `CDataExchange` Klasse an, dass das Steuerelement, dessen Daten ausgetauscht werden oder ein Bearbeitungssteuerelement überprüft werden.  
+ Preparation consists of two things. First, `PrepareEditCtrl` stores the control's `HWND` in the `CDataExchange` class. The framework uses this handle to restore the focus to the previously focused control in the event of a DDX or DDV failure. Second, `PrepareEditCtrl` sets a flag in the `CDataExchange` class to indicate that the control whose data is being exchanged or validated is an edit control.  
   
- In einer Implementierung von benutzerdefinierten DDX oder DDV-Routinen sollten Aufrufen `PrepareEditCtrl` für alle Steuerelemente bearbeiten, für die sie den Austausch von Daten über DDX oder Überprüfen von Daten über DDV.  
+ Implementors of custom DDX or DDV routines should call `PrepareEditCtrl` for all edit controls for which they are exchanging data via DDX or validating data via DDV.  
   
- Weitere Informationen zum Schreiben eigene DDX- und DDV-Routinen, finden Sie unter [Technische Hinweis 26](../../mfc/tn026-ddx-and-ddv-routines.md). Eine Übersicht über DDX- und DDV, finden Sie unter [Dialogdatenaustausch und-Validierung](../../mfc/dialog-data-exchange-and-validation.md) und [Dialogfeldthemen](../../mfc/dialog-boxes.md).  
+ For more information on writing your own DDX and DDV routines, see [Technical Note 26](../../mfc/tn026-ddx-and-ddv-routines.md). For an overview of DDX and DDV, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md) and [Dialog Box Topics](../../mfc/dialog-boxes.md).  
   
-##  <a name="prepareolectrl"></a>CDataExchange::PrepareOleCtrl  
- Das Framework ruft diese Memberfunktion, um das angegebene OLE-Steuerelement für den Dialogdatenaustausch (DDX) und Überprüfung (DDV) vorbereiten.  
+##  <a name="prepareolectrl"></a>  CDataExchange::PrepareOleCtrl  
+ The framework calls this member function to prepare the specified OLE control for dialog data exchange (DDX) and validation (DDV).  
   
 ```  
 COleControlSite* PrepareOleCtrl(int nIDC);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `nIDC`  
- Die ID des OLE-Steuerelements für DDX oder DDV vorbereitet werden.  
+ The ID of the OLE control to be prepared for DDX or DDV.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf die Website des OLE-Steuerelements.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the OLE control site.  
   
-### <a name="remarks"></a>Hinweise  
- Verwendung [PrepareEditCtrl](#prepareeditctrl) stattdessen für Edit-Steuerelemente oder [PrepareCtrl](#preparectrl) für alle anderen nicht-OLE-Steuerelemente.  
+### <a name="remarks"></a>Remarks  
+ Use [PrepareEditCtrl](#prepareeditctrl) instead for edit controls or [PrepareCtrl](#preparectrl) for all other non-OLE controls.  
   
- In einer Implementierung von benutzerdefinierten DDX oder DDV-Routinen sollten Aufrufen `PrepareOleCtrl` für alle OLE-Steuerelemente für den Datenaustausch über DDX oder werden Daten über DDV überprüfen.  
+ Implementors of custom DDX or DDV routines should call `PrepareOleCtrl` for all OLE controls for which they are exchanging data via DDX or validating data via DDV.  
   
- Weitere Informationen zum Schreiben eigene DDX- und DDV-Routinen, finden Sie unter [Technische Hinweis 26](../../mfc/tn026-ddx-and-ddv-routines.md). Eine Übersicht über DDX- und DDV, finden Sie unter [Dialogdatenaustausch und-Validierung](../../mfc/dialog-data-exchange-and-validation.md) und [Dialogfeldthemen](../../mfc/dialog-boxes.md).  
+ For more information on writing your own DDX and DDV routines, see [Technical Note 26](../../mfc/tn026-ddx-and-ddv-routines.md). For an overview of DDX and DDV, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md) and [Dialog Box Topics](../../mfc/dialog-boxes.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [MFC-Beispiel Wahl](../../visual-cpp-samples.md)   
- [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
- [Ddx_managedcontrol](../../mfc/reference/cwnd-class.md#dodataexchange)   
+## <a name="see-also"></a>See Also  
+ [MFC Sample VIEWEX](../../visual-cpp-samples.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CWnd::DoDataExchange](../../mfc/reference/cwnd-class.md#dodataexchange)   
  [CWnd::UpdateData](../../mfc/reference/cwnd-class.md#updatedata)
 
 

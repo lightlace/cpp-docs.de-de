@@ -1,97 +1,115 @@
 ---
-title: "Variant-Parametertypkonstanten | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VTS_YPOS_HIMETRIC"
-  - "VTS_PICTURE"
-  - "VTS_FONT"
-  - "VTS_XPOS_HIMETRIC"
-  - "VTS_XPOS_PIXELS"
-  - "VTS_XSIZE_HIMETRIC"
-  - "VTS_YPOS_PIXELS"
-  - "VTS_TRISTATE"
-  - "VTS_HANDLE"
-  - "VTS_YSIZE_HIMETRIC"
-  - "VTS_COLOR"
-  - "VTS_OPTEXCLUSIVE"
-  - "VTS_YSIZE_PIXELS"
-  - "VTS_XSIZE_PIXELS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Variant-Datenkonstanten"
-  - "Varianten"
-  - "Varianten, Parametertypkonstanten"
-  - "VTS_COLOR-Konstante"
-  - "VTS_FONT-Konstante"
-  - "VTS_HANDLE-Konstante"
-  - "VTS_OPTEXCLUSIVE-Konstante"
-  - "VTS_PICTURE-Konstante"
-  - "VTS_TRISTATE-Konstante"
-  - "VTS_XPOS_HIMETRIC-Konstante"
-  - "VTS_XPOS_PIXELS-Konstante"
-  - "VTS_XSIZE_HIMETRIC-Konstante"
-  - "VTS_XSIZE_PIXELS-Konstante"
-  - "VTS_YPOS_HIMETRIC-Konstante"
-  - "VTS_YPOS_PIXELS-Konstante"
-  - "VTS_YSIZE_HIMETRIC-Konstante"
-  - "VTS_YSIZE_PIXELS-Konstante"
+title: Variant Parameter Type Constants | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VTS_YPOS_HIMETRIC
+- VTS_PICTURE
+- VTS_FONT
+- VTS_XPOS_HIMETRIC
+- VTS_XPOS_PIXELS
+- VTS_XSIZE_HIMETRIC
+- VTS_YPOS_PIXELS
+- VTS_TRISTATE
+- VTS_HANDLE
+- VTS_YSIZE_HIMETRIC
+- VTS_COLOR
+- VTS_OPTEXCLUSIVE
+- VTS_YSIZE_PIXELS
+- VTS_XSIZE_PIXELS
+dev_langs:
+- C++
+helpviewer_keywords:
+- VTS_XPOS_HIMETRIC constant [MFC]
+- VTS_FONT constant [MFC]
+- VTS_XPOS_PIXELS constant [MFC]
+- VTS_COLOR constant [MFC]
+- Variants [MFC]
+- VTS_YPOS_PIXELS constant [MFC]
+- VTS_YSIZE_HIMETRIC constant [MFC]
+- VTS_YPOS_HIMETRIC constant [MFC]
+- Variants, parameter type constants
+- Variant data constants [MFC]
+- VTS_PICTURE constant [MFC]
+- VTS_TRISTATE constant [MFC]
+- VTS_XSIZE_HIMETRIC constant [MFC]
+- VTS_HANDLE constant [MFC]
+- VTS_XSIZE_PIXELS constant [MFC]
+- VTS_OPTEXCLUSIVE constant [MFC]
+- VTS_YSIZE_PIXELS constant [MFC]
 ms.assetid: de99c7a9-7aae-4dc4-b723-40c6380543ab
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# Variant-Parametertypkonstanten
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 394a652f516012c5154bf978bb9a7ef4d7514b6b
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Dieses Thema führt neue Konstanten, die den varianten Parametertypen angeben, die in den OLE\-Steuerelement\-Klassen der Microsoft Foundation Class\-Bibliothek vorgesehen sind.  
+---
+# <a name="variant-parameter-type-constants"></a>Variant Parameter Type Constants
+This topic lists new constants that indicate variant parameter types designed for use with the OLE control classes of the Microsoft Foundation Class Library.  
   
- Die folgende Liste Klassenkonstanten:  
+ The following is a list of class constants:  
   
-##  <a name="_mfc_variant_data_constants"></a> Variante Datenkonstanten  
+##  <a name="_mfc_variant_data_constants"></a> Variant Data Constants  
   
--   **VTS\_COLOR** Eine 32\-Bit\-Ganzzahl verwendet, um einen RGB\-Farbwert darzustellen.  
+-   **VTS_COLOR** A 32-bit integer used to represent a RGB color value.  
   
--   Zeiger **VTS\_FONT** Eine zur **IFontDisp**\-Schnittstelle eines OLE\-Schriftartobjekts.  
+-   **VTS_FONT** A pointer to the                         **IFontDisp** interface of an OLE font object.  
   
--   **VTS\_HANDLE** ein Windows\-Handlewert.  
+-   **VTS_HANDLE** A Windows handle value.  
   
--   Zeiger **VTS\_PICTURE** Eine zur `IPictureDisp`\-Schnittstelle eines OLE\-Bildobjekts.  
+-   **VTS_PICTURE** A pointer to the                         `IPictureDisp` interface of an OLE picture object.  
   
--   16\-Bit\-Wert **VTS\_OPTEXCLUSIVE** A verwendet für ein Steuerelement, das bestimmt wird, in einer Gruppe von Steuerelementen verwendet werden, z Optionsfeldern.  Dieser Typ gibt dem Container mit, dass, wenn ein Steuerelement in einer Gruppe einen Wert **TRUE** hat, andere müssen alle **FALSE** sein.  
+-   **VTS_OPTEXCLUSIVE** A 16-bit value used for a control that is intended to be used in a group of controls, such as radio buttons. This type tells the container that if one control in a group has a                         **TRUE** value, all others must be                         **FALSE**.  
   
--   **VTS\_TRISTATE** Eine 16\-Bit\-Ganzzahl mit Vorzeichen verwendet für Eigenschaften, die einem von drei möglichen Werten \(ausgewählt, gelöscht, nicht verfügbar\) beispielsweise ein Kontrollkästchen verfügen können.  
+-   **VTS_TRISTATE** A 16-bit signed integer used for properties that can have one of three possible values (selected, cleared, unavailable), for example, a check box.  
   
--   **VTS\_XPOS\_HIMETRIC** Eine 32\-Bit\-Ganzzahl ohne Vorzeichen verwendet, um eine Position auf der x\-Achse in **HIMETRIC** Einheiten darzustellen.  
+-   **VTS_XPOS_HIMETRIC** A 32-bit unsigned integer used to represent a position along the x-axis in                         **HIMETRIC** units.  
   
--   **VTS\_YPOS\_HIMETRIC** Eine 32\-Bit\-Ganzzahl ohne Vorzeichen verwendet, um eine Position entlang der y\-Achse in **HIMETRIC** Einheiten darzustellen.  
+-   **VTS_YPOS_HIMETRIC** A 32-bit unsigned integer used to represent a position along the y-axis in                         **HIMETRIC** units.  
   
--   **VTS\_XPOS\_PIXELS** Eine 32\-Bit\-Ganzzahl ohne Vorzeichen verwendet, um eine Position auf der x\-Achse in Pixel.  
+-   **VTS_XPOS_PIXELS** A 32-bit unsigned integer used to represent a position along the x-axis in pixels.  
   
--   **VTS\_YPOS\_PIXELS** Eine 32\-Bit\-Ganzzahl ohne Vorzeichen verwendet, um eine Position entlang der y\-Achse in Pixel.  
+-   **VTS_YPOS_PIXELS** A 32-bit unsigned integer used to represent a position along the y-axis in pixels.  
   
--   **VTS\_XSIZE\_PIXELS** Eine 32\-Bit\-Ganzzahl ohne Vorzeichen verwendet, um die Breite eines Bildschirmobjekts in Pixel.  
+-   **VTS_XSIZE_PIXELS** A 32-bit unsigned integer used to represent the width of a screen object in pixels.  
   
--   **VTS\_YSIZE\_PIXELS** Eine 32\-Bit\-Ganzzahl ohne Vorzeichen verwendet, um die Höhe eines Bildschirmobjekts in Pixel.  
+-   **VTS_YSIZE_PIXELS** A 32-bit unsigned integer used to represent the height of a screen object in pixels.  
   
--   **VTS\_XSIZE\_HIMETRIC** Eine 32\-Bit\-Ganzzahl ohne Vorzeichen verwendet, um die Breite eines Bildschirmobjekts in **HIMETRIC** Einheiten darzustellen.  
+-   **VTS_XSIZE_HIMETRIC** A 32-bit unsigned integer used to represent the width of a screen object in                         **HIMETRIC** units.  
   
--   **VTS\_YSIZE\_HIMETRIC** Eine 32\-Bit\-Ganzzahl ohne Vorzeichen verwendet, um die Höhe eines Bildschirmobjekts in **HIMETRIC** Einheiten darzustellen.  
+-   **VTS_YSIZE_HIMETRIC** A 32-bit unsigned integer used to represent the height of a screen object in                         **HIMETRIC** units.  
   
     > [!NOTE]
-    >  Zusätzliche variante Konstanten sind für alle varianten Typen, mit Ausnahme von **VTS\_FONT** und **VTS\_PICTURE** definiert wurde, die einen Zeiger auf die Datenkonstante varianten bereitstellen.  Diese Konstanten werden mithilfe der Konvention **VTS\_P**`constantname`.  Beispielsweise ist **VTS\_PCOLOR** ein Zeiger auf eine **VTS\_COLOR** Konstante.  
+    >  Additional variant constants have been defined for all variant types, with the exception of                             **VTS_FONT** and                             **VTS_PICTURE**, that provide a pointer to the variant data constant. These constants are named using the                             **VTS_P**`constantname` convention. For example,                             **VTS_PCOLOR** is a pointer to a                             **VTS_COLOR** constant.  
   
-## Voraussetzungen  
+## <a name="requirements"></a>Requirements  
  **Header:** afxdisp.h  
   
-## Siehe auch  
- [MFC\-Makros, globale Funktionen und globale Variablen](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
+

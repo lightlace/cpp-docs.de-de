@@ -1,53 +1,72 @@
 ---
-title: "Ausnahmen: Ausnahmen in eigenen Funktionen ausl&#246;sen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Ausnahmen, Auslösen"
-  - "Funktionen [C++], Auslösen von Ausnahmen"
-  - "Auslösen von Ausnahmen, from-Funktionen"
+title: 'Exceptions: Throwing Exceptions from Your Own Functions | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- throwing exceptions [MFC], from functions
+- functions [MFC], throwing exceptions
+- exceptions [MFC], throwing
 ms.assetid: 492976e8-8804-4234-8e8f-30dffd0501be
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Ausnahmen: Ausnahmen in eigenen Funktionen ausl&#246;sen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9a67bebf4f9f71ae86a5c0bcbe3716c96ced6b56
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Es ist möglich, das MFC\-Ausnahmebehandlungsparadigma nur zu verwenden, um Ausnahmen abzufangen, die von Funktionen in MFC oder anderen Bibliotheken ausgelöst werden.  Neben den ob Ausnahmen, die durch Bibliothekscode ausgelöst werden, können Sie Ausnahmen aus dem eigenen Code auslösen, wenn Funktionen schreiben, die mit Bedingungen auftreten können.  
+---
+# <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>Exceptions: Throwing Exceptions from Your Own Functions
+It is possible to use the MFC exception-handling paradigm solely to catch exceptions thrown by functions in MFC or other libraries. In addition to catching exceptions thrown by library code, you can throw exceptions from your own code if you are writing functions that can encounter exceptional conditions.  
   
- Wenn eine Ausnahme ausgelöst wird, wird die Ausführung der aktuellen Funktion beendet und springt direkt zum **catch**\-Block der innersten Ausnahmeframe.  Der Ausnahmemechanismus umgeht den normalen Beendigungspfad einer Funktion.  Daher müssen Sie sicherstellen, diese Speicherblöcke zu löschen, die in einer normalen Beendigung gelöscht werden.  
+ When an exception is thrown, execution of the current function is stopped and jumps directly to the **catch** block of the innermost exception frame. The exception mechanism bypasses the normal exit path from a function. Therefore, you must be sure to delete those memory blocks that would be deleted in a normal exit.  
   
-#### Wenn Sie eine Ausnahme auslösen  
+#### <a name="to-throw-an-exception"></a>To throw an exception  
   
-1.  Verwenden Sie eine der MFC\-Hilfsfunktionen, wie `AfxThrowMemoryException`.  Diese Funktionen lösen ein zugeteiltes Ausnahmeobjekt des entsprechenden Typs aus.  
+1.  Use one of the MFC helper functions, such as `AfxThrowMemoryException`. These functions throw a preallocated exception object of the appropriate type.  
   
-     Im folgenden Beispiel versucht, eine Funktion zwei Speicherblöcken zuzuordnen und löst eine Ausnahme aus, wenn eine Zuordnung fehlschlägt:  
+     In the following example, a function tries to allocate two memory blocks and throws an exception if either allocation fails:  
   
-     [!CODE [NVC_MFCExceptions#17](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCExceptions#17)]  
+     [!code-cpp[NVC_MFCExceptions#17](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_1.cpp)]  
   
-     Wenn die erste Zuordnung fehlschlägt, können Sie die Arbeitsspeicherausnahme einfach auslösen.  Wenn die erste Zuordnung erfolgreich ist, aber zweite fehlschlägt, müssen Sie dem ersten Zuordnungsblock freigeben, bevor die Ausnahme auslösen.  Wenn beide Zuordnungen folgen, können Sie normalerweise fortfahren und Blöcken freigeben, wenn Sie die Funktion beenden.  
+     If the first allocation fails, you can simply throw the memory exception. If the first allocation is successful but the second one fails, you must free the first allocation block before throwing the exception. If both allocations succeed, you can proceed normally and free the blocks when exiting the function.  
   
-     – oder –  
+     - or -  
   
-2.  Verwenden Sie eine benutzerdefinierte Ausnahme, um einer Problemzustand anzugeben.  Sie können ein Element eines beliebigen Typs, selbst eine ganze Klasse, als die Ausnahme auslösen.  
+2.  Use a user-defined exception to indicate a problem condition. You can throw an item of any type, even an entire class, as your exception.  
   
-     Im folgenden Beispiel versucht, einen Sound von einem Wellengerät wiederzugeben und löst eine Ausnahme aus, wenn ein Fehler auftritt.  
+     The following example attempts to play a sound through a wave device and throws an exception if there is a failure.  
   
-     [!CODE [NVC_MFCExceptions#18](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCExceptions#18)]  
+     [!code-cpp[NVC_MFCExceptions#18](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_2.cpp)]  
   
 > [!NOTE]
->  Standardabwicklung MFC Ausnahmen gilt nur auf Zeiger zu `CException`\-Objekten zu \(und Objekten von `CException` abgeleitete Klassen\).  Die Ausnahmeder durch die Überbrückungen MFC des oben stehenden Beispiels.  
+>  MFC's default handling of exceptions applies only to pointers to `CException` objects (and objects of `CException`-derived classes). The example above bypasses MFC's exception mechanism.  
   
-## Siehe auch  
- [Ausnahmebehandlung](../mfc/exception-handling-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Exception Handling](../mfc/exception-handling-in-mfc.md)
+
+

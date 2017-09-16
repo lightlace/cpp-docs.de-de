@@ -1,5 +1,5 @@
 ---
-title: is_reference-Klasse | Microsoft-Dokumentation
+title: is_reference Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_reference
 - type_traits/std::is_reference
 dev_langs:
 - C++
@@ -35,15 +34,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: 8bb6c8b253ef83a0c980865cc9958c567d11511c
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 44ebd411ef64b8ff54ec6bec33cb45eaa76d265a
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isreference-class"></a>is_reference-Klasse
-Testet, ob der Typ ein Verweis ist.  
+# <a name="isreference-class"></a>is_reference Class
+Tests if type is a reference.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -52,14 +51,14 @@ template <class Ty>
 struct is_reference;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- Der abzufragende Typ.  
+ The type to query.  
   
-## <a name="remarks"></a>Hinweise  
- Eine Instanz des Typprädikats ist "true", wenn der `Ty`-Typ ein Verweis auf ein Objekt oder eine Funktion ist; andernfalls "false".  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` is a reference to an object or to a function, otherwise it holds false.  
   
-## <a name="example"></a>Beispiel  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__is_reference.cpp   
@@ -95,12 +94,12 @@ is_reference<int()> == false
 is_reference<int(&)()> == true  
 ```  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [is_pointer-Klasse](../standard-library/is-pointer-class.md)
+ [is_pointer Class](../standard-library/is-pointer-class.md)
 

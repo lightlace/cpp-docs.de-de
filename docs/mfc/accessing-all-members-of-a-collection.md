@@ -1,86 +1,107 @@
 ---
-title: "Zugreifen auf alle Elemente einer Auflistung | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC, Auflistungen"
-  - "Enumerationen [MFC]"
-  - "Enumeration von Auflistungen"
-  - "Auflistungen, Zugriff"
-  - "Auflistungsklassen, Zugriff auf Member"
-  - "Arrays [C++], durchlaufen"
-  - "Iteration, Auflistungen"
-  - "Memberzugriff, Auflistungen"
-  - "Listenauflistungsiterationen"
-  - "MFC-Auflistungsklassen, Zugriff auf Member"
-  - "Auflistungen, Schleifendurchlauf"
-  - "Schleifenstrukturen, Schleifendurchlauf durch Auflistungen"
+title: Accessing All Members of a Collection | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, collections
+- enumerations [MFC]
+- enumerating collections [MFC]
+- collections [MFC], accessing
+- collection classes [MFC]
+- accessing members"
+- arrays [MFC], iterating
+- iteration [MFC], collections
+- member access [MFC], collections
+- list collection iteration [MFC]s
+- MFC collection classes [MFC], accessing members
+- collections [MFC], looping through
+- loop structures [MFC], looping through collections
 ms.assetid: 7bbae518-062e-4393-81f9-b22abd2e5f59
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Zugreifen auf alle Elemente einer Auflistung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4fd4aa1189b62b6689795ef1ba4ac2585cfcb059
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Die MFC\-Arrayauflistungsklassen – sowohl die vorlagenbasierten als auch die nicht vorlagenbasierten – verwenden Indizes, um auf ihre Elemente zuzugreifen. Die MFC\-Listen\- und Zuordnungsauflistungsklassen – sowohl die vorlagenbasierten als auch die nicht vorlagenbasierten – verwenden einen Indikator vom Typ **POSITION** zum Beschreiben einer bestimmten Position in der Auflistung. Für den Zugriff auf einen oder mehrere Member dieser Auflistungen zunächst initialisieren Sie zunächst den Positionsindikator und übergeben dann diese Position wiederholt an die Auflistung und fordert Sie auf das nächste Element zurückzugeben. Die Auflistung ist nicht verantwortlich für die Verwaltung von Statusinformationen hinsichtlich des Fortschritts der Iteration. Diese Informationen werden im Positionsindikator gespeichert. Bei einer bestimmten Position ist die Auflistung jedoch dafür verantwortlich, das nächste Element zurückzugeben.  
+---
+# <a name="accessing-all-members-of-a-collection"></a>Accessing All Members of a Collection
+The MFC array collection classes — both template-based and not — use indexes to access their elements. The MFC list and map collection classes — both template-based and not — use an indicator of type **POSITION** to describe a given position within the collection. To access one or more members of these collections, you first initialize the position indicator and then repeatedly pass that position to the collection and ask it to return the next element. The collection is not responsible for maintaining state information about the progress of the iteration. That information is kept in the position indicator. But, given a particular position, the collection is responsible for returning the next element.  
   
- Die folgenden Verfahren zeigen, wie Sie die drei Haupttypen von Auflistungen, die mit MFC bereitgestellt werden, durchlaufen:  
+ The following procedures show how to iterate over the three main types of collections provided with MFC:  
   
--   [Durchlaufen eines Arrays](#_core_to_iterate_an_array)  
+-   [Iterating an array](#_core_to_iterate_an_array)  
   
--   [Durchlaufen einer Liste](#_core_to_iterate_a_list)  
+-   [Iterating a list](#_core_to_iterate_a_list)  
   
--   [Durchlaufen einer Zuordnung](#_core_to_iterate_a_map)  
+-   [Iterating a map](#_core_to_iterate_a_map)  
   
-### So durchlaufen Sie ein Array  
+### <a name="_core_to_iterate_an_array"></a> To iterate an array  
   
-1.  Verwenden Sie die sequenziellen Indexzahlen mit der `GetAt`\-Memberfunktion:  
+1.  Use sequential index numbers with the `GetAt` member function:  
   
-     [!CODE [NVC_MFCCollections#12](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCCollections#12)]  
+     [!code-cpp[NVC_MFCCollections#12](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_1.cpp)]  
   
-     Dieses Beispiel verwendet ein typisiertes Zeigerarray, das enthält Zeiger auf `CPerson`\-Objekte enthält. Das Array wird von der Klasse `CObArray` abgeleitet, eine der nicht auf Vorlagen basierenden, vordefinierten Klassen.`GetAt` gibt einen Zeiger auf ein `CPerson`\-Objekt zurück. Für typisierte Zeigerauflistungsklassen – Arrays oder Listen – gibt der erste Parameter die Basisklasse an; der zweite Parameter gibt den zu speichernden Typ an.  
+     This example uses a typed pointer array that contains pointers to `CPerson` objects. The array is derived from class `CObArray`, one of the nontemplate predefined classes. `GetAt` returns a pointer to a `CPerson` object. For typed pointer collection classes — arrays or lists — the first parameter specifies the base class; the second parameter specifies the type to store.  
   
-     Die `CTypedPtrArray`\-Klasse überlädt den **\[ \]**\-Operator, damit Sie die übliche tiefgestellte Array\-Syntax verwenden können, um auf Elemente eines Arrays zuzugreifen. Eine Alternative zur Anweisung im Hauptteil der obigen `for`\-Schleife sieht folgendermaßen aus:  
+     The `CTypedPtrArray` class also overloads the **[ ]** operator so that you can use the customary array-subscript syntax to access elements of an array. An alternative to the statement in the body of the `for` loop above is  
   
-     [!CODE [NVC_MFCCollections#13](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCCollections#13)]  
+     [!code-cpp[NVC_MFCCollections#13](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]  
   
-     Dieser Operator ist in den **const**\- und nicht\-**const**\-Versionen vorhanden. Die **const**\-Version, die für **const**\-Arrays aufgerufen wird, können nur auf der rechten Seite einer Zuweisungsanweisung angezeigt werden.  
+     This operator exists in both **const** and non-**const** versions. The **const** version, which is invoked for **const** arrays, can appear only on the right side of an assignment statement.  
   
-### So durchlaufen Sie eine Liste  
+### <a name="_core_to_iterate_a_list"></a> To iterate a list  
   
-1.  Verwenden Sie die Memberfunktionen `GetHeadPosition` und `GetNext` zum Navigieren durch die Liste:  
+1.  Use the member functions `GetHeadPosition` and `GetNext` to work your way through the list:  
   
-     [!CODE [NVC_MFCCollections#14](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCCollections#14)]  
+     [!code-cpp[NVC_MFCCollections#14](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_3.cpp)]  
   
-     Dieses Beispiel verwendet eine typisierte Zeigerliste, um Zeiger auf `CPerson`\-Objekte zu enthalten. Die List\-Deklaration ähnelt der für das Array in der Prozedur [So durchlaufen Sie ein Array](#_core_to_iterate_an_array), sie wird jedoch von der Klasse `CObList` abgeleitet.`GetNext` gibt einen Zeiger auf ein `CPerson`\-Objekt zurück.  
+     This example uses a typed pointer list to contain pointers to `CPerson` objects. The list declaration resembles the one for the array in the procedure [To iterate an array](#_core_to_iterate_an_array) but is derived from class `CObList`. `GetNext` returns a pointer to a `CPerson` object.  
   
-### So durchlaufen Sie eine Zuordnung  
+### <a name="_core_to_iterate_a_map"></a> To iterate a map  
   
-1.  Verwenden Sie `GetStartPosition`, um an den Anfang der Zuordnung zu wechseln, und `GetNextAssoc`, um den nächsten Schlüssel und Wert wiederholt aus der Zuordnung abzurufen, wie im folgenden Beispiel gezeigt:  
+1.  Use `GetStartPosition` to get to the beginning of the map and `GetNextAssoc` to repeatedly get the next key and value from the map, as shown by the following example:  
   
-     [!CODE [NVC_MFCCollections#15](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCCollections#15)]  
+     [!code-cpp[NVC_MFCCollections#15](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_4.cpp)]  
   
-     Dieses Beispiel verwendet eine einfache Zuordnungsvorlage \(statt einer typisierten Zeigerauflistung\), die `CString`\-Schlüssel nutzt und Zeiger auf `CPerson`\-Objekte speichert. Wenn Sie Zugriffsfunktionen wie z. B. `GetNextAssoc` verwenden, bietet die Klasse Zeiger auf `CPerson`\-Objekte. Wenn Sie stattdessen eine der nicht auf Vorlagen basierten Zuordnungsauflistungen verwenden, müssen Sie den zurückgegebenen `CObject`\-Zeiger in einen Zeiger auf eine `CPerson` umwandeln.  
+     This example uses a simple map template (rather than a typed pointer collection) that uses `CString` keys and stores pointers to `CPerson` objects. When you use access functions such as `GetNextAssoc`, the class provides pointers to `CPerson` objects. If you use one of the nontemplate map collections instead, you must cast the returned `CObject` pointer to a pointer to a `CPerson`.  
   
     > [!NOTE]
-    >  Für nicht auf Vorlagen basierende Zuordnungen erfordert der Compiler einen Verweis auf einen `CObject`\-Zeiger im letzten Parameter für `GetNextAssoc`. Bei der Eingabe müssen Sie die Zeiger in diesen Typ umwandeln, wie im nächsten Beispiel gezeigt.  
+    >  For nontemplate maps, the compiler requires a reference to a `CObject` pointer in the last parameter to `GetNextAssoc`. On input, you must cast your pointers to that type, as shown in the next example.  
   
-     Die Vorlagenlösung ist einfacher und bietet eine bessere Typsicherheit. Der nicht auf Vorlagen basierende Code ist komplizierter, wie Sie hier sehen können:  
+     The template solution is simpler and helps provide better type safety. The nontemplate code is more complicated, as you can see here:  
   
-     [!CODE [NVC_MFCCollections#16](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCCollections#16)]  
+     [!code-cpp[NVC_MFCCollections#16](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_5.cpp)]  
   
- Weitere Informationen finden Sie unter [Löschen aller Objekte in einer CObject\-Sammlung](../mfc/deleting-all-objects-in-a-cobject-collection.md).  
+ For more information, see [Deleting All Objects in a CObject Collection](../mfc/deleting-all-objects-in-a-cobject-collection.md).  
   
-## Siehe auch  
- [Auflistungen](../mfc/collections.md)
+## <a name="see-also"></a>See Also  
+ [Collections](../mfc/collections.md)
+
+

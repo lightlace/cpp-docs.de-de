@@ -1,50 +1,67 @@
 ---
-title: "Anforderungen f&#252;r die Erstellung von Windows Vista-Standardsteuerelementen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Allgemeine Steuerelemente (MFC)"
-  - "Allgemeine Steuerelemente (MFC), Build-Anforderungen"
+title: Build Requirements for Windows Vista Common Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- common controls (MFC), build requirements
+- common controls (MFC)
 ms.assetid: 025f7d55-55a2-4dcd-8f62-02424e3dcc04
 caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Anforderungen f&#252;r die Erstellung von Windows Vista-Standardsteuerelementen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 604e0ae364c8316fea386c1bb7160fc9030c0a67
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Die MFC\-Bibliothek \(Microsoft Foundation Class \(MFC\) unterstützt Version 6.1 der allgemeinen Windows\-Steuerelemente.  Die allgemeinen Steuerelemente sind in [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] enthalten und die Bibliothek ist in [!INCLUDE[vsipsdk](../mfc/includes/vsipsdk_md.md)] enthalten.  Die Bibliothek stellt neue Methoden, die vorhandenen Klassen erweitern, und neue Klassen und Methoden, die [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] allgemeine Steuerelemente unterstützen.  Wenn Sie die Anwendung erstellen, sollten Sie den Migrationsanforderungen Kompilierungs\- und befolgen, die in den folgenden Abschnitten beschrieben werden.  
+---
+# <a name="build-requirements-for-windows-vista-common-controls"></a>Build Requirements for Windows Vista Common Controls
+The Microsoft Foundation Class (MFC) library supports Windows Common Controls version 6.1. The common controls are included in [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] and the library is included in the [!INCLUDE[vsipsdk](../mfc/includes/vsipsdk_md.md)]. The library provides new methods that enhance existing classes, and new classes and methods that support [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] common controls. When you build your application, you should follow the compilation and migration requirements that are described in the following sections.  
   
-## Kompilierungs\-Anforderungen  
+## <a name="compilation-requirements"></a>Compilation Requirements  
   
-### Unterstützte Versionen  
- Einige neue Klassen und Methoden unterstützen nur [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] und höher, während andere Methoden auch ältere Betriebssysteme unterstützen.  Ein Hinweis im Abschnitt `Requirements` jedes Methodenthemas gibt an, wann die minimale erforderliche Betriebssystem [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] ist.  
+### <a name="supported-versions"></a>Supported Versions  
+ Some new classes and methods support only [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] and later, while other methods also support earlier operating systems. A note in the `Requirements` section of each method topic specifies when the minimum required operating system is [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)].  
   
- Auch wenn Ihr Computer [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] nicht ausgeführt wird, können Sie eine MFC\-Anwendung erstellen, die auf [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] ausgeführt wird, wenn Sie die Headerdateien der MFC Version 6.1 auf dem Computer.  Allerdings funktionieren allgemeine Steuerelemente, die speziell für [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] entwickelt wurden, auf diesem System und in älteren Betriebssystemen werden ignoriert.  
+ Even if your computer does not run [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)], you can build an MFC application that will run on [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] if you have the version 6.1 MFC header files on your computer. However, common controls that are designed specifically for [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] operate only on that system, and are ignored by earlier operating systems.  
   
-### Unterstützte Zeichensätze  
- Die neuen allgemeinen Windows\-Steuerelemente unterstützen nur der Unicode\-Zeichensatz und nicht den ANSI\-Zeichensatz.  Wenn Sie die Anwendung in der Befehlszeile erstellen, verwenden Sie folgende definieren \(\/D\) Compileroptionen, Unicode als zugrunde liegenden Zeichensatz anzugeben:  
+### <a name="supported-character-sets"></a>Supported Character Sets  
+ The new Windows common controls support only the Unicode character set, and not the ANSI character set. If you build your application on the command line, use both of the following define (/D) compiler options to specify Unicode as the underlying character set:  
   
 ```  
 /D_UNICODE /DUNICODE  
 ```  
   
- Wenn Sie die Anwendung in der integrierten Entwicklungsumgebung \(IDE\) von Visual Studio erstellen, geben Sie die Option **Unicode\-Zeichensatz** der Eigenschaft **Zeichensatz** im Knoten **Allgemein** Projekteigenschaften an.  
+ If you build your application in the Visual Studio integrated development environment (IDE), specify the **Unicode Character Set** option of the **Character Set** property in the **General** node of the project properties.  
   
- Die ANSI\-Version mehrerer MFC\-Methoden sind veraltet Starten mit Version 6.1 der allgemeinen Windows\-Steuerelemente erwiesen.  Weitere Informationen finden Sie unter [Veraltete ANSI\-APIs](../mfc/deprecated-ansi-apis.md).  
+ The ANSI version of several MFC methods have been deprecated starting with Windows Common Controls version 6.1. For more information, see [Deprecated ANSI APIs](../mfc/deprecated-ansi-apis.md).  
   
-## Migrations\-Anforderungen  
- Wenn Sie die Visual Studio\-IDE verwenden, um eine neue MFC\-Anwendung zu erstellen, die Version 6.1 der allgemeinen Windows\-Steuerelemente verwendet, deklariert die IDE automatisch ein entsprechendes Manifest.  Wenn Sie eine vorhandene MFC\-Anwendung von einer früheren Version von Visual Studio migrieren und die neuen allgemeinen Steuerelemente verwenden möchten, stellt die IDE nicht automatisch Manifest Informationen, um die Anwendung zu aktualisieren.  Stattdessen müssen Sie den folgenden Quellcode in die stdafx.h\-Datei manuell einfügen:  
+## <a name="migration-requirements"></a>Migration Requirements  
+ If you use the Visual Studio IDE to build a new MFC application that uses Windows Common Controls version 6.1, the IDE automatically declares an appropriate manifest. However, if you migrate an existing MFC application from an earlier version of Visual Studio and you want to use the new common controls, the IDE does not automatically provide manifest information to upgrade your application. Instead, you must manually insert the following source code in your stdafx.h file:  
   
 ```  
 #ifdef UNICODE  
@@ -60,7 +77,9 @@ Die MFC\-Bibliothek \(Microsoft Foundation Class \(MFC\) unterstützt Version 6.
 #endif  
 ```  
   
-## Siehe auch  
- [Allgemeine MFC\-Themen](../mfc/general-mfc-topics.md)   
- [Hierarchiediagramm](../mfc/hierarchy-chart.md)   
- [Veraltete ANSI\-APIs](../mfc/deprecated-ansi-apis.md)
+## <a name="see-also"></a>See Also  
+ [General MFC Topics](../mfc/general-mfc-topics.md)   
+ [Hierarchy Chart](../mfc/hierarchy-chart.md)   
+ [Deprecated ANSI APIs](../mfc/deprecated-ansi-apis.md)
+
+

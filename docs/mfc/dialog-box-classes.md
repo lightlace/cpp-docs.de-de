@@ -1,137 +1,156 @@
 ---
-title: "Dialogfeldklassen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.dialog"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Allgemeine Dialogfeldklassen"
-  - "Dialogfeldklassen"
-  - "OLE, allgemeine Dialogfeldklassen"
-  - "Eigenschaftenblätter-Klassen"
-  - "Registerkarten-Dialogfelder"
+title: Dialog Box Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.dialog
+dev_langs:
+- C++
+helpviewer_keywords:
+- property sheet classes
+- dialog box classes
+- OLE common dialog classes
+- common dialog classes [MFC]
+- tab dialog boxes
 ms.assetid: db75da23-4eff-4c6c-beae-79cf046fbce9
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Dialogfeldklassen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 534f360915b0909b6dac97e6cc7afaae7ae38835
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Klasse `CDialog` und abgeleitete Klassen kapseln Dialogfeldfunktionalität.  Da ein Dialogfeld eine spezielle Fenster ist, wird `CDialog` von `CWnd` abgeleitet.  Leiten Sie die Dialogfeldklassen von `CDialog` oder eine der allgemeinen Dialogfeldklassen für Standarddialogfelder, wie Öffnen oder Speichern einer Datei ein, Drucken, einer Schriftart oder eine Farbe auswählen, einen Suche\-undREPLACE\-Vorgang starten, oder OLE\-verknüpfte verschiedene Vorgänge ausführen.  
+---
+# <a name="dialog-box-classes"></a>Dialog Box Classes
+Class `CDialog` and its derived classes encapsulate dialog-box functionality. Since a dialog box is a special kind of window, `CDialog` is derived from `CWnd`. Derive your dialog classes from `CDialog` or use one of the common dialog classes for standard dialog boxes, such as opening or saving a file, printing, selecting a font or color, initiating a search-and-replace operation, or performing various OLE-related operations.  
   
- [CDialog\-Klasse](../mfc/reference/cdialog-class.md)  
- Die Basisklasse für alle Dialogfelder, modal und nicht modale.  
+ [CDialog](../mfc/reference/cdialog-class.md)  
+ The base class for all dialog boxes, both modal and modeless.  
   
  [CDataExchange](../mfc/reference/cdataexchange-class.md)  
- Zubehördatenaustausch und Validierungsinformationen für Dialogfelder.  
+ Supplies data exchange and validation information for dialog boxes.  
   
-## Allgemeine Dialogfelder  
- Diese Dialogfeldklassen kapseln die Windows\-häufig verwendetes Dialogfeld.  Sie stellen benutzerfreundliche Implementierungen von schwierigen Dialogfeldern.  
+## <a name="common-dialogs"></a>Common Dialogs  
+ These dialog box classes encapsulate the Windows common dialog boxes. They provide easy-to-use implementations of complicated dialog boxes.  
   
  [CCommonDialog](../mfc/reference/ccommondialog-class.md)  
- Basisklasse für alle Standarddialogfelder.  
+ Base class for all common dialog boxes.  
   
  [CFileDialog](../mfc/reference/cfiledialog-class.md)  
- Stellt ein Standarddialogfeld zum Öffnen oder Speichern einer Datei.  
+ Provides a standard dialog box for opening or saving a file.  
   
  [CColorDialog](../mfc/reference/ccolordialog-class.md)  
- Stellt ein Standarddialogfeld zum Auswählen einer Farbe zur Verfügung.  
+ Provides a standard dialog box for selecting a color.  
   
  [CFontDialog](../mfc/reference/cfontdialog-class.md)  
- Stellt ein Standarddialogfeld für das Auswählen einer Schriftart zur Verfügung.  
+ Provides a standard dialog box for selecting a font.  
   
  [CFindReplaceDialog](../mfc/reference/cfindreplacedialog-class.md)  
- Stellt ein Standarddialogfeld für einen Suche\-undREPLACE\-Vorgang bereit.  
+ Provides a standard dialog box for a search-and-replace operation.  
   
  [CPrintDialog](../mfc/reference/cprintdialog-class.md)  
- Stellt ein Standarddialogfeld zum Drucken einer Datei.  
+ Provides a standard dialog box for printing a file.  
   
  [CPrintDialogEx](../mfc/reference/cprintdialogex-class.md)  
- Stellt ein Windows 2000\-Druckeigenschaftenblatt bereit.  
+ Provides a Windows 2000 Print property sheet.  
   
  [CPageSetupDialog](../mfc/reference/cpagesetupdialog-class.md)  
- Kapselt die Dienste, die allgemeine Seiteneinrichtungsdialogfeld Windows mit zusätzlicher Unterstützung für das Festlegen und Ändern von Druckrändern bereitgestellt werden.  
+ Encapsulates the services provided by the Windows common Page Setup dialog box with additional support for setting and modifying print margins.  
   
-## OLE\-Common\-Dialogfelder  
- OLE werden mehrere Standarddialogfelder Windows hinzu.  Diese Klassen kapseln die OLE\-häufig verwendetes Dialogfeld.  
+## <a name="ole-common-dialogs"></a>OLE Common Dialogs  
+ OLE adds several common dialog boxes to Windows. These classes encapsulate the OLE common dialog boxes.  
   
  [COleDialog](../mfc/reference/coledialog-class.md)  
- Wird vom Framework, um allgemeine Implementierungen für alle OLE\-Dialogfelder zu enthalten.  Alle Dialogfeldklassen in der Benutzeroberflächekategorie werden von dieser Basisklasse abgeleitet.  `COleDialog` kann nicht direkt verwendet werden.  
+ Used by the framework to contain common implementations for all OLE dialog boxes. All dialog box classes in the user-interface category are derived from this base class. `COleDialog` cannot be used directly.  
   
  [COleInsertDialog](../mfc/reference/coleinsertdialog-class.md)  
- Zeigt das EINFG\-Objektdialogfeld, die Standardbenutzeroberfläche für Einfügen von neuen eingebetteten oder verknüpften Elemente OLE an.  
+ Displays the Insert Object dialog box, the standard user interface for inserting new OLE linked or embedded items.  
   
  [COlePasteSpecialDialog](../mfc/reference/colepastespecialdialog-class.md)  
- Zeigt das Inhalte einfügen\-Dialogfeld, die Standardbenutzeroberfläche für das Implementieren des Bearbeitungs\-Inhalte einfügen\-Befehls an.  
+ Displays the Paste Special dialog box, the standard user interface for implementing the Edit Paste Special command.  
   
  [COleLinksDialog](../mfc/reference/colelinksdialog-class.md)  
- Zeigt das Bearbeitungs\-Linkdialogfeld, die Standardbenutzeroberfläche für das Ändern von Informationen über verknüpfte Elemente.  
+ Displays the Edit Links dialog box, the standard user interface for modifying information about linked items.  
   
  [COleChangeIconDialog](../mfc/reference/colechangeicondialog-class.md)  
- Zeigt das Änderungs\-Symboldialogfeld, die Standardbenutzeroberfläche für das Ändern des Symbols an, das mit einem eingebetteten oder verknüpften OLE Element zugeordnet ist.  
+ Displays the Change Icon dialog box, the standard user interface for changing the icon associated with an OLE embedded or linked item.  
   
  [COleConvertDialog](../mfc/reference/coleconvertdialog-class.md)  
- Zeigt das Bekehrtdialogfeld, die Standardbenutzeroberfläche für das Konvertieren von OLE\-Elementen von einem Typ zu anderen an.  
+ Displays the Convert dialog box, the standard user interface for converting OLE items from one type to another.  
   
  [COlePropertiesDialog](../mfc/reference/colepropertiesdialog-class.md)  
- Kapselt das häufig verwendete OLE Eigenschaftendialogfeld Windows.  Allgemeine OLE\-Eigenschaftendialogfelder bieten eine einfache Möglichkeit, Eigenschaften eines OLE\-Dokumentelements anzuzeigen und zu ändern, das mit Windows\-Standards in ähnlicher Weise konsistent ist.  
+ Encapsulates the Windows common OLE Properties dialog box. Common OLE Properties dialog boxes provide an easy way to display and modify the properties of an OLE document item in a manner consistent with Windows standards.  
   
  [COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md)  
- Zeigt das Updatedialogfeld, die Standardbenutzeroberfläche für das Aktualisieren aller Links in einem Dokument an.  Das Dialogfeld enthält eine Statusanzeige, um anzugeben, wie nahe die Updateprozedur abgeschlossen ist.  
+ Displays the Update dialog box, the standard user interface for updating all links in a document. The dialog box contains a progress indicator to indicate how close the update procedure is to completion.  
   
  [COleChangeSourceDialog](../mfc/reference/colechangesourcedialog-class.md)  
- Zeigt das Änderungs\-Quelldialogfeld, die Standardbenutzeroberfläche für das Ändern des Ziels oder der Quelle eines Links an.  
+ Displays the Change Source dialog box, the standard user interface for changing the destination or source of a link.  
   
  [COleBusyDialog](../mfc/reference/colebusydialog-class.md)  
- Zeigt den Server ausgelastete und des Servers nicht Reaktionsdialogfelder, die Standardbenutzeroberfläche für die Behandlung der Aufrufe von ausgelasteten Anwendungen an.  Normalerweise automatisch angezeigt von der Implementierung. [COleMessageFilter](../mfc/reference/colemessagefilter-class.md)  
+ Displays the Server Busy and Server Not Responding dialog boxes, the standard user interface for handling calls to busy applications. Usually displayed automatically by the [COleMessageFilter](../mfc/reference/colemessagefilter-class.md) implementation.  
   
-## Eigenschaftenblatt\-Klassen  
- Die Eigenschaftenblattklassen ermöglichen der Anwendungen, Eigenschaftenblätter, auch als Dialogfelder verwenden im Registerkartenformat.  Eigenschaftenblätter sind eine effiziente Möglichkeit, viele Steuerelemente in einem einzigen Dialogfeld zu organisieren.  
+## <a name="property-sheet-classes"></a>Property Sheet Classes  
+ The property sheet classes allow your applications to use property sheets, also known as tabbed dialogs. Property sheets are an efficient way to organize a large number of controls in a single dialog box.  
   
  [CPropertyPage](../mfc/reference/cpropertypage-class.md)  
- Stellt die einzelnen Seiten innerhalb eines Eigenschaftenblatts bereit.  Leiten Sie eine Klasse von `CPropertyPage`, dass jede Seite dem Eigenschaftenblatt hinzugefügt werden kann.  
+ Provides the individual pages within a property sheet. Derive a class from `CPropertyPage` for each page to be added to your property sheet.  
   
  [CPropertySheet](../mfc/reference/cpropertysheet-class.md)  
- Stellt die Frames für mehrere Eigenschaftenseiten bereit.  Leiten Sie die Eigenschaftenblattklasse von `CPropertySheet`, um die Eigenschaftenblätter schnell zu implementieren.  
+ Provides the frame for multiple property pages. Derive your property sheet class from `CPropertySheet` to implement your property sheets quickly.  
   
  [COlePropertyPage](../mfc/reference/colepropertypage-class.md)  
- Zeigt die Eigenschaften eines OLE\-Steuerelements in einer grafischen Oberfläche an, ähnlich einem Dialogfeld.  
+ Displays the properties of an OLE control in a graphical interface, similar to a dialog box.  
   
-## Dialogfeldklassen HTML\-basierte  
+## <a name="html-based-dialog-classes"></a>HTML-based Dialog Classes  
  [CDHtmlDialog](../mfc/reference/cdhtmldialog-class.md)  
- Wird verwendet, um Dialogfelder zu erstellen, die die Benutzeroberfläche mit HTML anstatt Dialogfeldressourcen implementieren.  
+ Used to create dialog boxes that implement their user interface with HTML rather than dialog resources.  
   
  [CMultiPageDHtmlDialog](../mfc/reference/cmultipagedhtmldialog-class.md)  
- Zeigt mehrere HTML\-Seiten sequenziell an und behandelt die Ereignisse von jeder Seite.  
+ Displays multiple HTML pages sequentially and handles the events from each page.  
   
-## Verwandte Klassen  
- Diese Klassen sind nicht Dialogfelder an, nutzen jedoch Dialogfeldvorlagen und haben viele des Verhaltens der Dialogfelder.  
+## <a name="related-classes"></a>Related Classes  
+ These classes are not dialog boxes per se, but they use dialog box templates and have much of the behavior of dialog boxes.  
   
  [CDialogBar](../mfc/reference/cdialogbar-class.md)  
- Eine Steuerleiste, die auf einer Dialogvorlage ist.  
+ A control bar that is based on a dialog box template.  
   
  [CFormView](../mfc/reference/cformview-class.md)  
- Eine Bildlaufansicht, deren Layout in einer Dialogfeldvorlage definiert wird.  Leiten Sie eine Klasse von `CFormView`, um eine Benutzeroberfläche auf einer Dialogfeldvorlage zu implementieren.  
+ A scroll view whose layout is defined in a dialog box template. Derive a class from `CFormView` to implement a user interface based on a dialog box template.  
   
  [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)  
- Stellt eine Formularansicht bereit, die direkt an ein Datenzugriffsobjekt \(dao\)\- Recordset\-Objekt verbunden ist.  Wie alle Formularansichten ist `CDaoRecordView` auf einer Dialogfeldvorlage.  
+ Provides a form view directly connected to a Data Access Object (DAO) recordset object. Like all form views, a `CDaoRecordView` is based on a dialog box template.  
   
  [CRecordView](../mfc/reference/crecordview-class.md)  
- Stellt eine Formularansicht bereit, die direkt mit einem Recordset\-Objekt verbunden wird der Open Database Connectivity \(ODBC\).  Wie alle Formularansichten ist `CRecordView` auf einer Dialogfeldvorlage.  
+ Provides a form view directly connected to an Open Database Connectivity (ODBC) recordset object. Like all form views, a `CRecordView` is based on a dialog box template.  
   
  [CPrintInfo](../mfc/reference/cprintinfo-structure.md)  
- Eine Struktur, die Informationen über einen Drucks\- oder Seitenansichtsauftrag enthält.  Wird von der Druckarchitektur von [CView](../mfc/reference/cview-class.md).  
+ A structure containing information about a print or print preview job. Used by the printing architecture of [CView](../mfc/reference/cview-class.md).  
   
-## Siehe auch  
- [Klassenübersicht](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

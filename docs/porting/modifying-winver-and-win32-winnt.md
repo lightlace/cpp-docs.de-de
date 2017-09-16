@@ -1,7 +1,7 @@
 ---
-title: "Ändern von WINVER und _WIN32_WINNT | Microsoft-Dokumentation"
+title: Modifying WINVER and _WIN32_WINNT | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 09/04/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -33,27 +33,29 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 220ecd24c6056737d0338cc584663e4664ac81b1
-ms.openlocfilehash: 73c02454c535c030846c5a3dfca74818182baafb
+ms.translationtype: HT
+ms.sourcegitcommit: 22000a296568c01082c9aef5ceaac8f266bcad5c
+ms.openlocfilehash: 435b888fdc4a3b69321fd65097c0a232897f83ed
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/08/2017
 
 ---
-# <a name="modifying-winver-and-win32winnt"></a>Ändern von WINVER und _WIN32_WINNT
-Visual C++ unterstützt nicht mehr die Zielversionen Windows 95, Windows 98, Windows ME, Windows NT oder Windows 2000. Wenn das **WINVER** - oder **_WIN32_WINNT** -Makro einer dieser Versionen von Windows zugewiesen ist, müssen Sie die Makros ändern. Wenn Sie ein Projekt aktualisieren, das mit einer früheren Version von Visual C++ erstellt wurde, werden möglicherweise Kompilierungsfehler im Zusammenhang mit dem **WINVER** - oder **_WIN32_WINNT** -Makro angezeigt, wenn dieses einer Version von Windows zugewiesen ist, die nicht mehr unterstützt wird.  
+# <a name="modifying-winver-and-win32winnt"></a>Modifying WINVER and _WIN32_WINNT
+
+Visual C++ no longer supports targeting Windows 95, Windows 98, Windows ME, Windows NT or Windows 2000. If your **WINVER** or **_WIN32_WINNT** macros are assigned to one of these versions of Windows, you must modify the macros. When you upgrade a project that was created by using an earlier version of Visual C++, you may see compilation errors related to the **WINVER** or **_WIN32_WINNT** macros if they are assigned to a version of Windows that is no longer supported.  
   
-## <a name="remarks"></a>Hinweise  
- Um die Makros in einer Headerdatei (z. B. targetver.h, die enthalten ist, wenn Sie ein Projekt für Windowns erstellen) zu ändern, fügen Sie die folgenden Zeilen hinzu.  
+## <a name="remarks"></a>Remarks  
+
+To modify the macros, in a header file (for example, targetver.h which is included when you create a project that targets Windows), add the following lines.  
   
-```  
+```C  
 #define WINVER 0x0A00  
 #define _WIN32_WINNT 0x0A00  
 ```  
   
- Dies betrifft das Betriebssystem Windows 10. Diese Werte sind in der Windows-Headerdatei SDKDDKVer.h, aufgeführt, die auch Makros für jede Windows-Version definiert. Sie sollten die #define-Anweisung hinzufügen, bevor Sie SDKDDKVer.h einfügen. Dies sind die Zeilen aus der Windows-10-Version von SDKDDKVer.h, die die Werte für jede Version von Windows codieren:  
+This targets the Windows 10 operating system. These values are listed in the Windows header file SDKDDKVer.h, which also defines macros for each Windows version. You should add the #define statement before including SDKDDKVer.h. Here are the lines from the Windows 10 version of SDKDDKVer.h that encode the values for each version of Windows:  
   
-```  
+```C  
 //  
 // _WIN32_WINNT version constants  
 //  
@@ -72,15 +74,16 @@ Visual C++ unterstützt nicht mehr die Zielversionen Windows 95, Windows 98, Win
 #define _WIN32_WINNT_WIN10                  0x0A00 // Windows 10  
 ```  
   
- Wenn nicht alle diese Windows-Versionen in der Kopie von SDKDDKVer.h angezeigt werden, die Sie sich ansehen, verwenden Sie wahrscheinlich eine ältere Version des Windows SDK. In der Standardeinstellung verwenden Win32-Projekte in Visual Studio 2017 das Windows 10 SDK.   
+If you don't see all of these versions of Windows listed in a copy of SDKDDKVer.h that you're looking at, you probably are using an older version of the Windows SDK. By default, Win32 projects in Visual Studio 2017 use the Windows 10 SDK.   
   
 > [!NOTE]
->  Es ist nicht gewährleistet, dass die Werte auf jeden Fall funktionieren, wenn Sie interne MFC-Header in die Anwendung aufnehmen.  
+>  Values are not guaranteed to work if you include internal MFC headers in your application.  
   
- Dieses Makro kann auch mithilfe der **/D** -Compileroption definiert werden. Weitere Informationen finden Sie unter [/D (Präprozessordefinitionen)](../build/reference/d-preprocessor-definitions.md).  
+You can also define this macro by using the **/D** compiler option. For more information, see [/D (Preprocessor Definitions)](../build/reference/d-preprocessor-definitions.md).  
   
- Weitere Informationen zur Bedeutung dieser Makros finden Sie unter [Verwenden der Windows-Header](http://msdn.microsoft.com/library/windows/desktop/aa383745).  
+For more information about the meanings of these macros, see [Using the Windows Headers](https://msdn.microsoft.com/library/windows/desktop/aa383745).  
   
-## <a name="see-also"></a>Siehe auch  
- [Vorherige Produktänderungen](http://msdn.microsoft.com/en-us/91fa1713-0778-4b6b-82f7-0fe0a23ab1db)
+## <a name="see-also"></a>See Also  
+
+[Visual C++ change history](..\porting\visual-cpp-change-history-2003-2015.md)
 

@@ -1,31 +1,34 @@
 ---
-title: '&lt;ostream&gt;-Operatoren | Microsoft-Dokumentation'
+title: '&lt;ostream&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- ostream/std::operator&lt;&lt;
+dev_langs:
+- C++
 ms.assetid: 9282a62e-a3d1-4371-a284-fbc9515bb9a2
 caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 097b3ec2a7b097eb2137e1fd5fe59eabc0da537f
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 8f133af1d58a083492aa0631f51721a94a6d612f
 ms.contentlocale: de-de
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltostreamgt-operators"></a>&lt;ostream&gt;-Operatoren
+# <a name="ltostreamgt-operators"></a>&lt;ostream&gt; operators
 ||  
 |-|  
 |[operator&lt;&lt;](#op_lt_lt)|  
   
-##  <a name="op_lt_lt"></a> operator&lt;&lt;  
- Schreibt verschiedene Typen in den Stream.  
+##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
+ Writes various types to the stream.  
   
 ```
 template <class _Elem, class _Tr>
@@ -84,32 +87,32 @@ basic_ostream <_Elem, _Tr>& operator<<(
     Ty val);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `_Ch`  
- Ein Zeichen.  
+ A character.  
   
  `_Elem`  
- Der Elementtyp.  
+ The element type.  
   
  `_Ostr`  
- Ein `basic_ostream`-Objekt.  
+ A `basic_ostream` object.  
   
  `str`  
- Eine Zeichenfolge.  
+ A character string.  
   
  `_Tr`  
- Zeichenmerkmale.  
+ Character traits.  
   
  `val`  
- Der Typ  
+ The type  
   
-### <a name="return-value"></a>Rückgabewert  
- Der Stream (Datenstrom).  
+### <a name="return-value"></a>Return Value  
+ The stream.  
   
-### <a name="remarks"></a>Hinweise  
- Die `basic_ostream`-Klasse definiert außerdem mehrere Einfügeoperatoren. Weitere Informationen finden Sie unter [basic_ostream::operator&lt;&lt;](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt).  
+### <a name="remarks"></a>Remarks  
+ The `basic_ostream` class also defines several insertion operators. For more information, see [basic_ostream::operator&lt;&lt;](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt).  
   
- Die Vorlagenfunktion  
+ The template function  
   
 ```cpp  
 template <class _Elem, class _Tr>
@@ -118,9 +121,9 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```  
   
- bestimmt die Länge N = `traits_type::`[length](../standard-library/char-traits-struct.md#length)( `str`) am Anfang der Sequenz an `str`, und fügt die Sequenz ein. Wenn N < `_Ostr.`[width](../standard-library/ios-base-class.md#width), fügt die Funktion auch eine Wiederholung von `_Ostr.``width`-N-Füllzeichen ein. Die Wiederholung geht der Sequenz voraus, wenn ( `_Ostr`. [flags](../standard-library/ios-base-class.md#flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left). Andernfalls folgt die Wiederholung der Sequenz. Die Funktion gibt `_Ostr` zurück.  
+ determines the length N = `traits_type::`[length](../standard-library/char-traits-struct.md#length)( `str`) of the sequence beginning at `str`, and inserts the sequence. If N < `_Ostr.`[width](../standard-library/ios-base-class.md#width), then the function also inserts a repetition of `_Ostr.width` - N fill characters. The repetition precedes the sequence if ( `_Ostr`. [flags](../standard-library/ios-base-class.md#flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left). Otherwise, the repetition follows the sequence. The function returns `_Ostr`.  
   
- Die Vorlagenfunktion  
+ The template function  
   
 ```cpp  
 template <class _Elem, class _Tr>
@@ -129,9 +132,9 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```  
   
- fügt das Element `_Ch` ein. Wenn 1 < `_Ostr.width`, dann fügt die Funktion auch eine Wiederholung von `_Ostr.width`-1 Füllzeichen hinzu. Die Wiederholung geht der Sequenz voraus, wenn ( `_Ostr.flags & adjustfield != left`. Andernfalls folgt die Wiederholung der Sequenz. Er gibt `_Ostr` zurück.  
+ inserts the element `_Ch`. If 1 < `_Ostr.width`, then the function also inserts a repetition of `_Ostr.width` - 1 fill characters. The repetition precedes the sequence if `_Ostr.flags & adjustfield != left`. Otherwise, the repetition follows the sequence. It returns `_Ostr`.  
   
- Die Vorlagenfunktion  
+ The template function  
   
 ```cpp  
 template <class _Elem, class _Tr>
@@ -140,7 +143,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const char *str);
 ```  
   
- verhält sich so  
+ behaves the same as  
   
 ```cpp  
 template <class _Elem, class _Tr>
@@ -149,9 +152,9 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```  
   
- mit dem Unterschied, dass jedes Element `_Ch` der Sequenz beginnend bei `str` in ein Objekt vom Typ `Elem` konvertiert wird, indem `_Ostr.`[put](../standard-library/basic-ostream-class.md#put)( `_Ostr.`[widen](../standard-library/basic-ios-class.md#widen)( `_Ch`)) aufgerufen wird.  
+ except that each element `_Ch` of the sequence beginning at `str` is converted to an object of type `Elem` by calling `_Ostr.`[put](../standard-library/basic-ostream-class.md#put)( `_Ostr.`[widen](../standard-library/basic-ios-class.md#widen)( `_Ch`)).  
   
- Die Vorlagenfunktion  
+ The template function  
   
 ```cpp
 template <class _Elem, class _Tr>
@@ -160,7 +163,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     char _Ch);
 ```  
   
- verhält sich so wie  
+ behaves the same as  
   
 ```cpp  
 template <class _Elem, class _Tr>
@@ -169,9 +172,9 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```  
   
- mit der Ausnahme, dass `_Ch` in ein Objekt vom Typ `Elem` konvertiert wird, indem `_Ostr.put`( `_Ostr.widen`( `_Ch`)) aufgerufen wird.  
+ except that `_Ch` is converted to an object of type `Elem` by calling `_Ostr.put`( `_Ostr.widen`( `_Ch`)).  
   
- Die Vorlagenfunktion  
+ The template function  
   
 ```cpp  
 template <class _Tr>
@@ -180,7 +183,7 @@ basic_ostream<char, _Tr>& operator<<(
     const char *str);
 ```  
   
- verhält sich so wie  
+ behaves the same as  
   
 ```cpp  
 template <class _Elem, class _Tr>
@@ -189,9 +192,9 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```  
   
- (Sie muss die Elemente nicht erweitern, bevor sie eingefügt werden.)  
+ (It does not have to widen the elements before inserting them.)  
   
- Die Vorlagenfunktion  
+ The template function  
   
 ```cpp  
 template <class _Tr>
@@ -200,7 +203,7 @@ basic_ostream<char, Tr>& operator<<(
     char _Ch);
 ```  
   
- verhält sich so wie  
+ behaves the same as  
   
 ```cpp  
 template <class _Elem, class _Tr>
@@ -209,9 +212,9 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```  
   
- (Sie muss die `_Ch` nicht erweitern, bevor sie eingefügt werden.)  
+ (It does not have to widen `_Ch` before inserting it.)  
   
- Die Vorlagenfunktion  
+ The template function  
   
 ```cpp  
 template <class _Tr>
@@ -220,9 +223,9 @@ basic_ostream<char, _Tr>& operator<<(
     const signed char *str);
 ```  
   
- gibt `_Ostr` << ( `const char *`) `str` zurück.  
+ returns `_Ostr` << ( `const char *`) `str`.  
   
- Die Vorlagenfunktion  
+ The template function  
   
 ```cpp  
 template <class _Tr>
@@ -231,9 +234,9 @@ basic_ostream<char, _Tr>& operator<<(
     signed char _Ch);
 ```  
   
- gibt `_Ostr` << ( `char`) `_Ch` zurück.  
+ returns `_Ostr` << ( `char`) `_Ch`.  
   
- Die Vorlagenfunktion:  
+ The template function:  
   
 ```cpp  
 template <class _Tr>
@@ -242,9 +245,9 @@ basic_ostream<char, _Tr>& operator<<(
     const unsigned char *str);
 ```  
   
- gibt `_Ostr` << ( `const char *`) `str` zurück.  
+ returns `_Ostr` << ( `const char *`) `str`.  
   
- Die Vorlagenfunktion:  
+ The template function:  
   
 ```cpp  
 template <class _Tr>
@@ -253,9 +256,9 @@ basic_ostream<char, _Tr>& operator<<(
     unsigned char _Ch);
 ```  
   
- gibt `_Ostr` << ( `char`) `_Ch` zurück.  
+ returns `_Ostr` << ( `char`) `_Ch`.  
   
- Die Vorlagenfunktion:  
+ The template function:  
   
 ```cpp  
 template <class _Elem, class _Tr, class T>
@@ -264,12 +267,12 @@ basic_ostream<_Elem, _Tr>& operator<<(
     T val);
 ```  
   
- gibt `_Ostr` `<<` `val` zurück (und konvertiert einen [RValue-Verweis](../cpp/rvalue-reference-declarator-amp-amp.md) zu `_Ostr` zu einem lvalue im Prozess).  
+ returns `_Ostr` `<<` `val` (and converts a [RValue Reference](../cpp/rvalue-reference-declarator-amp-amp.md) to `_Ostr` to an lvalue in the process).  
   
-### <a name="example"></a>Beispiel  
-  Ein Beispiel für die Verwendung von `operator<<` finden Sie unter [flush](../standard-library/ostream-functions.md#flush).  
+### <a name="example"></a>Example  
+  See [flush](../standard-library/ostream-functions.md#flush) for an example using `operator<<`.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>See Also  
  [\<ostream>](../standard-library/ostream.md)
 
 

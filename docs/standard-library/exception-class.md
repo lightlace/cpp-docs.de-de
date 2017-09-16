@@ -1,5 +1,5 @@
 ---
-title: exception-Klasse | Microsoft-Dokumentation
+title: exception Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,15 +33,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 6983a0e24f7422b708d7fbbfca6689bec629cb06
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 9cabffec21d8dd66cbbf50e2a5acfeb96e5aaef4
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="exception-class"></a>exception-Klasse
-Die Klasse dient als Basisklasse für alle Ausnahmen, die durch spezifische Ausdrücke und die C++-Standardbibliothek ausgelöst werden.  
+# <a name="exception-class"></a>exception Class
+The class serves as the base class for all exceptions thrown by certain expressions and by the C++ Standard Library.  
   
 ## <a name="syntax"></a>Syntax  
 ```  
@@ -56,24 +56,24 @@ class exception {
    virtual const char *what() const;
    };  
 ``` 
-## <a name="remarks"></a>Hinweise  
- Diese Basisklasse bildet den Stamm der Standard Ausnahmeklassen, die in [\<stdexcept>](../standard-library/stdexcept.md) definiert sind. Der Wert der C-Zeichenfolge, der durch `what` zurückgegeben wird, wird vom Standardkonstruktor nicht angegeben, kann aber von den Konstruktoren für bestimmte abgeleitete Klassen als durch die Implementierung definierte C-Zeichenfolge angegeben werden. Keine der Memberfunktionen löst irgendeine Ausnahme aus.  
+## <a name="remarks"></a>Remarks  
+ Specifically, this base class is the root of the standard exception classes defined in [\<stdexcept>](../standard-library/stdexcept.md). The C string value returned by `what` is left unspecified by the default constructor, but may be defined by the constructors for certain derived classes as an implementation-defined C string. None of the member functions throw any exceptions.  
   
- Der Parameter `int` ermöglicht es anzugeben, dass kein Speicher zugewiesen werden soll. Der Wert von `int` wird ignoriert.  
+ The `int` parameter allows you to specify that no memory should be allocated. The value of the `int` is ignored.  
   
 > [!NOTE]
->  Die Konstruktoren `exception(const char* const &message)` und `exception(const char* const &message, int)` sind Microsoft-Erweiterungen der C++-Standardbibliothek.  
+>  The constructors `exception(const char* const &message)` and `exception(const char* const &message, int)` are Microsoft extensions to the C++ Standard Library.  
   
-## <a name="example"></a>Beispiel  
- Beispiele für die Verwendung von Standard Ausnahmeklassen, die von der `exception`-Klasse erben, finden Sie in allen unter [ \<stdexcept >](../standard-library/stdexcept.md) definierten Klassen.  
+## <a name="example"></a>Example  
+ For examples of the use of the standard exception classes that inherit from the `exception` class, see any of the classes defined in [\<stdexcept>](../standard-library/stdexcept.md).  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** \<exception>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Siehe auch  
- [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: messages_byname-Klasse | Microsoft-Dokumentation
+title: messages_byname Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- messages_byname
 - xlocmes/std::messages_byname
 dev_langs:
 - C++
@@ -34,15 +33,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 014346887441678f53872aa7b791931e89361a5c
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 5bc3f2ed4f97c1beaead7510a0c5c09f5bd91e9b
 ms.contentlocale: de-de
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="messagesbyname-class"></a>messages_byname-Klasse
-Die abgeleitete Vorlagenklasse beschreibt ein Objekt, das als Meldungsfacet eines angegebenen Gebietsschemas dienen kann und das Abrufen von lokalisierten Meldungen ermöglicht.  
+# <a name="messagesbyname-class"></a>messages_byname Class
+The derived template class describes an object that can serve as a message facet of a given locale, enabling the retrieval of localized messages.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -64,23 +63,23 @@ protected:
 };
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a>Parameters  
  `_Locname`  
- Ein benanntes Gebietsschema.  
+ A named locale.  
   
  `_Refs`  
- Eine initiale Verweisanzahl.  
+ An initial reference count.  
   
-## <a name="remarks"></a>Hinweise  
- Ihr Verhalten wird durch das benannte Gebietsschema `_Locname` bestimmt. Jeder Konstruktor initialisiert sein Basisobjekt mit [messages](../standard-library/messages-class.md#messages)\<CharType>(`_Refs`).  
+## <a name="remarks"></a>Remarks  
+ Its behavior is determined by the named locale `_Locname`. Each constructor initializes its base object with [messages](../standard-library/messages-class.md#messages)\<CharType>( `_Refs`).  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** \<locale>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Siehe auch  
- [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

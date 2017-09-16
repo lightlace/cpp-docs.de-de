@@ -1,67 +1,86 @@
 ---
-title: "Steuerleistenklassen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.control"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Steuerleisten, Klassen"
+title: Control Bar Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.control
+dev_langs:
+- C++
+helpviewer_keywords:
+- control bars [MFC], classes
 ms.assetid: 11009103-cad8-4309-85ce-3d2e858e1818
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Steuerleistenklassen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b798583c9848ca035fbbea45d9a58b638caf137d
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Steuerleisten werden einem Rahmenfenster angefügt.  Sie enthalten Schaltflächen, Statusbereiche oder eine Dialogfeldvorlage.  Die verschobenen frei Steuerleisten, ebenfalls aufgerufen Toolpaletten, werden implementiert, indem Sie sie mit einem [CMiniFrameWnd](../mfc/reference/cminiframewnd-class.md)\-Objekt angefügt werden.  
+---
+# <a name="control-bar-classes"></a>Control Bar Classes
+Control bars are attached to a frame window. They contain buttons, status panes, or a dialog template. Free-floating control bars, also called tool palettes, are implemented by attaching them to a [CMiniFrameWnd](../mfc/reference/cminiframewnd-class.md) object.  
   
-## Framework\-Steuerleisten  
- Diese Steuerleisten ist ein integraler Bestandteil des MFC\-Frameworks.  Sie sind einfacher verwenden und leistungsstärker als die Windows\-Steuerelement\-Leisten, da sie mit dem Framework integriert werden.  Die meisten MFC\-Anwendungen verwenden diese Steuerleisten anstatt die Windows\-Steuerelement\-Leisten.  
+## <a name="framework-control-bars"></a>Framework Control Bars  
+ These control bars are an integral part of the MFC framework. They are easier to use and more powerful than the Windows control bars because they are integrated with the framework. Most MFC applications use these control bars rather than the Windows control bars.  
   
  [CControlBar](../mfc/reference/ccontrolbar-class.md)  
- Die Basisklasse für MFC\-Steuerleisten aufgeführt in diesem Abschnitt.  Eine Steuerleiste ist ein Fenster, das am Rand eines Rahmenfensters ausgerichtet wird.  Die Symbolleisten enthält entweder \- basierte untergeordnete Steuerelemente oder Steuerelemente `HWND` nicht auf `HWND` basieren, wie z Symbolleisten\-Schaltflächen.  
+ The base class for MFC control bars listed in this section. A control bar is a window aligned to the edge of a frame window. The control bar contains either `HWND`-based child controls or controls not based on an `HWND`, such as toolbar buttons.  
   
  [CDialogBar](../mfc/reference/cdialogbar-class.md)  
- Eine Steuerleiste, die auf einer Dialogvorlage ist.  
+ A control bar that is based on a dialog box template.  
   
  [CReBar](../mfc/reference/crebar-class.md)  
- Unterstützt eine Symbolleiste, die weitere untergeordnete Fenster in Form von Steuerelementen enthalten kann.  
+ Supports a toolbar that can contain additional child windows in the form of controls.  
   
  [CToolBar](../mfc/reference/ctoolbar-class.md)  
- Symbolleisten\-Steuerelement\-Fenster, die Bit\-Übersichtsbefehlsschaltflächen nicht auf `HWND` enthalten.  Die meisten MFC\-Anwendungen verwenden diese Klasse statt `CToolBarCtrl`.  
+ Toolbar control windows that contain bitmap command buttons not based on an `HWND`. Most MFC applications use this class rather than `CToolBarCtrl`.  
   
  [CStatusBar](../mfc/reference/cstatusbar-class.md)  
- Die Basisklasse für StatusBar\-Steuerelement\-Fenster.  Die meisten MFC\-Anwendungen verwenden diese Klasse statt `CStatusBarCtrl`.  
+ The base class for status-bar control windows. Most MFC applications use this class rather than `CStatusBarCtrl`.  
   
-## Windows\-Steuerelement\-Leisten  
- Diese Steuerleisten ist wenig Wrapper für die entsprechenden Windows\-Steuerelemente.  Da sie nicht mit dem Framework integriert werden, sind jedoch schwieriger sein als die Steuerleisten zuvor aufgeführten zu verwenden.  Die meisten MFC\-Anwendungen verwenden die Steuerleisten zuvor aufgeführten.  
+## <a name="windows-control-bars"></a>Windows Control Bars  
+ These control bars are thin wrappers for the corresponding Windows controls. Because they are not integrated with the framework, they are harder to use than the control bars previously listed. Most MFC applications use the control bars previously listed.  
   
  [CRebarCtrl](../mfc/reference/crebarctrl-class.md)  
- Implementiert das interne Steuerelement des `CRebar`\-Objekts.  
+ Implements the internal control of the `CRebar` object.  
   
  [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)  
- Ein horizontales Fenster, normalerweise unterteilt in Bereiche, in denen eine Anwendung Statusinformationen anzeigen kann.  
+ A horizontal window, usually divided into panes, in which an application can display status information.  
   
  [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)  
- Stellt die Funktionalität des allgemeinen Windows\-Symbolleisten\-Steuerelements bereit.  
+ Provides the functionality of the Windows toolbar common control.  
   
-## Verwandte Klassen  
+## <a name="related-classes"></a>Related Classes  
  [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)  
- Ein kleines Popupfenster, das eine einzelne Textzeile den Zweck eines Tools in einer Anwendung beschreibt anzeigt.  
+ A small pop-up window that displays a single line of text describing the purpose of a tool in an application.  
   
  [CDockState](../mfc/reference/cdockstate-class.md)  
- Behandelt dauerhafte Speicherung von Daten des angedockten Zustands für Steuerleisten.  
+ Handles persistent storage of docking state data for control bars.  
   
-## Siehe auch  
- [Klassenübersicht](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

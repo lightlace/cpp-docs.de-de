@@ -1,111 +1,129 @@
 ---
-title: "MFC-ActiveX-Steuerelemente: Hinzuf&#252;gen von vordefinierten Eigenschaften | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BackColor-Eigenschaft"
-  - "ForeColor-Eigenschaft"
-  - "Vordergrundfarben"
-  - "Vordergrundfarben, ActiveX-Steuerelemente"
-  - "MFC-ActiveX-Steuerelemente, Eigenschaften"
-  - "Eigenschaften [MFC], Hinzufügen von Bestand"
+title: 'MFC ActiveX Controls: Adding Stock Properties | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- BackColor property [MFC]
+- properties [MFC], adding stock
+- ForeColor property [MFC]
+- MFC ActiveX controls [MFC], properties
+- foreground colors, ActiveX controls
+- foreground colors [MFC]
 ms.assetid: 8b98c8c5-5b69-4366-87bf-0e61e6668ecb
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# MFC-ActiveX-Steuerelemente: Hinzuf&#252;gen von vordefinierten Eigenschaften
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4ed7e3d92a0881420e49f95142dfe2fb08e59c07
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Vordefinierte Eigenschaften unterscheiden sich von benutzerdefinierten Eigenschaften, da sie bereits über die Klasse `COleControl` implementiert werden.  `COleControl` enthält vordefinierte Memberfunktionen, die allgemeine Eigenschaften für das Steuerelement unterstützen.  Einige allgemeine Eigenschaften enthalten die Beschriftung des Steuerelements und der Vordergrund\- und Hintergrundfarben.  Informationen über andere vordefinierte Eigenschaften, finden Sie unter [Vordefinierte Eigenschaften unterstützt im Assistenten zum Hinzufügen von Eigenschaften](#_core_stock_properties_supported_by_classwizard) weiter unten in diesem Artikel.  Die Dispatchzuordnungseinträge für vordefinierte Eigenschaften werden immer von **DISP\_STOCKPROP** vorangestellt.  
+---
+# MFC ActiveX Controls: Adding Stock Properties
+Stock properties differ from custom properties in that they are already implemented by the class `COleControl`. `COleControl` contains predefined member functions that support common properties for the control. Some common properties include the control's caption and the foreground and background colors. For information on other stock properties, see [Stock Properties Supported by the Add Property Wizard](#_core_stock_properties_supported_by_classwizard) later in this article. The dispatch map entries for stock properties are always prefixed by **DISP_STOCKPROP**.  
   
- Dieser Artikel wird beschrieben, wie Sie eine vordefinierte Eigenschaft \(in diesem Fall, Beschriftung\) einem ActiveX\-Steuerelement mithilfe des Assistenten zum Hinzufügen von Eigenschaften hinzufügt und beschreibt die resultierenden Codeänderungen.  Folgende Themen werden behandelt:  
+ This article describes how to add a stock property (in this case, Caption) to an ActiveX control using the Add Property Wizard and explains the resulting code modifications. Topics include:  
   
--   [Mit dem Assistenten zum Hinzufügen von Eigenschaften, um eine vordefinierte Eigenschaft hinzuzufügen](#_core_using_classwizard_to_add_a_stock_property)  
+-   [Using the Add Property Wizard to add a stock property](#_core_using_classwizard_to_add_a_stock_property)  
   
--   [Assistent zum Hinzufügen von Eigenschaftenen\-Änderungen für vordefinierte Eigenschaften](#_core_classwizard_changes_for_stock_properties)  
+-   [Add Property Wizard changes for stock properties](#_core_classwizard_changes_for_stock_properties)  
   
--   [Vordefinierte Eigenschaften unterstützt im Assistenten zum Hinzufügen von Eigenschaften](#_core_stock_properties_supported_by_classwizard)  
+-   [Stock properties supported by the Add Property Wizard](#_core_stock_properties_supported_by_classwizard)  
   
--   [Vordefinierte Eigenschaften und Benachrichtigung](#_core_stock_properties_and_notification)  
+-   [Stock properties and notification](#_core_stock_properties_and_notification)  
   
--   [Farbeigenschaften](#_core_color_properties)  
+-   [Color properties](#_core_color_properties)  
   
     > [!NOTE]
-    >  Visual Basic\-benutzerdefinierteSteuerelemente haben normalerweise Eigenschaften wie oberen, linken, Breite, Höhe, stimmen überein, kennzeichnen, benennen, \-, Tabulation und übergeordnete Element.  ActiveX\-Steuerelementcontainer sind jedoch für das Implementieren dieser Steuerelementeigenschaften zuständig und daher sollten ActiveX\-Steuerelemente diese Eigenschaften nicht unterstützen.  
+    >  Visual Basic custom controls typically have properties such as Top, Left, Width, Height, Align, Tag, Name, TabIndex, TabStop, and Parent. ActiveX control containers, however, are responsible for implementing these control properties and therefore ActiveX controls should not support these properties.  
   
-##  <a name="_core_using_classwizard_to_add_a_stock_property"></a> Mit dem Assistenten zum Hinzufügen von Eigenschaften, um eine vordefinierte Eigenschaft hinzuzufügen  
- Das Hinzufügen vordefinierter Eigenschaften erfordert weniger Code als, benutzerdefinierten Eigenschaften hinzufügen, da Unterstützung für die Eigenschaft automatisch von `COleControl` behandelt wird.  Die folgende Prozedur veranschaulicht das Hinzufügen vordefinierter Beschriftungseigenschaft zu einem ActiveX\-Steuerelement\-Framework und kann auch verwendet werden, um andere vordefinierte Eigenschaften hinzuzufügen.  Ersetzen Sie den ausgewählten vordefinierten Eigenschaftennamen für Beschriftung.  
+##  <a name="_core_using_classwizard_to_add_a_stock_property"></a> Using the Add Property Wizard to Add a Stock Property  
+ Adding stock properties requires less code than adding custom properties because support for the property is handled automatically by `COleControl`. The following procedure demonstrates adding the stock Caption property to an ActiveX control framework and can also be used to add other stock properties. Substitute the selected stock property name for Caption.  
   
-#### So der vordefinierten Beschriftungseigenschaft mit dem Assistenten zum Hinzufügen von Eigenschaften hinzufügen  
+#### To add the stock Caption property using the Add Property Wizard  
   
-1.  Laden Sie das Projekt des Steuerelements.  
+1.  Load your control's project.  
   
-2.  Erweitern Sie in der Klassenansicht den Bibliotheksknoten des Steuerelements.  
+2.  In Class View, expand the library node of your control.  
   
-3.  Klicken Sie auf den Schnittstellenknoten für das Steuerelement \(der zweite Knoten des Bibliotheksknotens\) mit der rechten Maustaste um das Kontextmenü zu öffnen.  
+3.  Right-click the interface node for your control (the second node of the library node) to open the shortcut menu.  
   
-4.  Klicken Sie im Kontextmenü auf **Hinzufügen** und dann auf **Eigenschaft hinzufügen**.  
+4.  From the shortcut menu, click **Add** and then click **Add Property**.  
   
-     Dadurch wird unter [Assistent zum Hinzufügen von Eigenschaften](../ide/names-add-property-wizard.md).  
+     This opens the [Add Property Wizard](../ide/names-add-property-wizard.md).  
   
-5.  Im Feld **Eigenschaftenname** klicken Sie auf **Beschriftung**.  
+5.  In the **Property Name** box, click **Caption**.  
   
-6.  Klicken Sie auf **Fertig stellen**.  
+6.  Click **Finish**.  
   
-##  <a name="_core_classwizard_changes_for_stock_properties"></a> Assistent zum Hinzufügen von Eigenschaftenen\-Änderungen für vordefinierte Eigenschaften  
- Da `COleControl` Stützvordefinierte Eigenschaften, dem Assistenten zum Hinzufügen von Eigenschaften nicht die Klassendeklaration in jeder Hinsicht geändert; fügt sie der Eigenschaft der Dispatchzuordnung hinzu.  Der Assistent zum Hinzufügen von Eigenschaften wird die folgende Zeile der Dispatchzuordnung des Steuerelements hinzu, das in der Implementierungsdatei \(.CPP\) ist:  
+##  <a name="_core_classwizard_changes_for_stock_properties"></a> Add Property Wizard Changes for Stock Properties  
+ Because `COleControl` supports stock properties, the Add Property Wizard does not change the class declaration in any way; it adds the property to the dispatch map. The Add Property Wizard adds the following line to the dispatch map of the control, which is located in the implementation (.CPP) file:  
   
- [!CODE [NVC_MFC_AxUI#22](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxUI#22)]  
+ [!code-cpp[NVC_MFC_AxUI#22](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-properties_1.cpp)]  
   
- In der folgenden Zeile wird Ihrer Schnittstellenbeschreibung der Datei des Steuerelements \(.IDL\) hinzugefügt:  
+ The following line is added to your control's interface description (.IDL) file:  
   
- [!CODE [NVC_MFC_AxUI#23](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxUI#23)]  
+ [!code-cpp[NVC_MFC_AxUI#23](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-properties_2.idl)]  
   
- Diese Zeile weist der Beschriftungseigenschaft eine bestimmte ID zu  Beachten Sie, dass die Eigenschaft bereit ist und Berechtigung von der Datenbank anfordern wird, bevor der Wert geändert wird.  
+ This line assigns the Caption property a specific ID. Notice that the property is bindable and will request permission from the database before modifying the value.  
   
- Dies macht die Beschriftungseigenschaft verfügbar für Benutzer des Steuerelements.  Um den Wert einer vordefinierten Eigenschaft zu verwenden, greifen Sie eine Membervariable oder eine Memberfunktion `COleControl` der Basisklasse zu.  Weitere Informationen zu dieser Membervariablen und Memberfunktionen, finden Sie im nächsten Abschnitt, vorrätigen Artikel die Eigenschaften, die vom Assistenten zum Hinzufügen von Eigenschaften unterstützt werden.  
+ This makes the Caption property available to users of your control. To use the value of a stock property, access a member variable or member function of the `COleControl` base class. For more information on these member variables and member functions, see the next section, Stock Properties Supported by the Add Property Wizard.  
   
-##  <a name="_core_stock_properties_supported_by_classwizard"></a> Auf Lager Sie die Eigenschaften, die vom Assistenten zum Hinzufügen von Eigenschaften unterstützt werden  
- Die `COleControl`\-Klasse stellt neun vordefinierte Eigenschaften.  Sie können die Eigenschaften hinzufügen, die Sie benötigen, indem Sie den Assistenten zum Hinzufügen von Eigenschaften verwenden.  
+##  <a name="_core_stock_properties_supported_by_classwizard"></a> Stock Properties Supported by the Add Property Wizard  
+ The `COleControl` class provides nine stock properties. You can add the properties you want by using the Add Property Wizard.  
   
-|Eigenschaft|Dispatchzuordnungseintrag|Wie auf Wert zugreift|  
-|-----------------|-------------------------------|---------------------------|  
-|**Darstellung**|**DISP\_STOCKPROP\_APPEARANCE\(\)**|Wert zugreifbar als **m\_sAppearance**.|  
-|`BackColor`|**DISP\_STOCKPROP\_BACKCOLOR\(\)**|Wert verfügbar über das Aufrufen von `GetBackColor`.|  
-|`BorderStyle`|**DISP\_STOCKPROP\_BORDERSTYLE\(\)**|Wert zugreifbar als **m\_sBorderStyle**.|  
-|**Beschriftung**|**DISP\_STOCKPROP\_CAPTION\(\)**|Wert verfügbar über das Aufrufen von `InternalGetText`.|  
-|**Aktiviert**|**DISP\_STOCKPROP\_ENABLED\(\)**|Wert zugreifbar als **m\_bEnabled**.|  
-|**Schriftart**|**DISP\_STOCKPROP\_FONT\(\)**|Siehe den Artikel [MFC\-ActiveX\-Steuerelemente: Verwenden der Schriftarten](../mfc/mfc-activex-controls-using-fonts.md) zur Verwendung.|  
-|`ForeColor`|**DISP\_STOCKPROP\_FORECOLOR\(\)**|Bewerten Sie verfügbar, indem Sie `GetForeColor` aufrufen.|  
-|**hWnd**|**DISP\_STOCKPROP\_HWND\(\)**|Bewerten Sie leicht als `m_hWnd`.|  
-|**Text**|**DISP\_STOCKPROP\_TEXT\(\)**|Wert verfügbar über das Aufrufen von `InternalGetText`.  Diese Eigenschaft ist die **Beschriftung** entspricht, außer dem Eigenschaftennamen.|  
-|**ReadyState**|**DISP\_STOCKPROP\_READYSTATE\(\)**|Wert zugreifbar als m\_lReadyState oder `GetReadyState`|  
+|Property|Dispatch map entry|How to access value|  
+|--------------|------------------------|-------------------------|  
+|**Appearance**|**DISP_STOCKPROP_APPEARANCE( )**|Value accessible as **m_sAppearance**.|  
+|`BackColor`|**DISP_STOCKPROP_BACKCOLOR( )**|Value accessible by calling `GetBackColor`.|  
+|`BorderStyle`|**DISP_STOCKPROP_BORDERSTYLE( )**|Value accessible as **m_sBorderStyle**.|  
+|**Caption**|**DISP_STOCKPROP_CAPTION( )**|Value accessible by calling `InternalGetText`.|  
+|**Enabled**|**DISP_STOCKPROP_ENABLED( )**|Value accessible as **m_bEnabled**.|  
+|**Font**|**DISP_STOCKPROP_FONT( )**|See the article [MFC ActiveX Controls: Using Fonts](../mfc/mfc-activex-controls-using-fonts.md) for usage.|  
+|`ForeColor`|**DISP_STOCKPROP_FORECOLOR( )**|Value accessible by calling `GetForeColor`.|  
+|**hWnd**|**DISP_STOCKPROP_HWND( )**|Value accessible as `m_hWnd`.|  
+|**Text**|**DISP_STOCKPROP_TEXT( )**|Value accessible by calling `InternalGetText`. This property is the same as **Caption**, except for the property name.|  
+|**ReadyState**|**DISP_STOCKPROP_READYSTATE()**|Value accessible as m_lReadyState or `GetReadyState`|  
   
-##  <a name="_core_stock_properties_and_notification"></a> Vordefinierte Eigenschaften und Benachrichtigung  
- Die meisten Eigenschaften verfügen vordefinierten Benachrichtigungsfunktionen, die überschrieben werden können.  Beispielsweise wenn die `BackColor`\-Eigenschaft geändert wird, wird die `OnBackColorChanged`\-Funktion \(eine Memberfunktion der Steuerelementklasse\) bezeichnet.  Die Standardimplementierung \(in `COleControl`\) ruft `InvalidateControl` auf.  Überschreiben Sie diese Funktion, wenn Sie zusätzliche Aktionen als Reaktion auf diese Situation reagieren möchten.  
+##  <a name="_core_stock_properties_and_notification"></a> Stock Properties and Notification  
+ Most stock properties have notification functions that can be overridden. For example, whenever the `BackColor` property is changed, the `OnBackColorChanged` function (a member function of the control class) is called. The default implementation (in `COleControl`) calls `InvalidateControl`. Override this function if you want to take additional actions in response to this situation.  
   
-##  <a name="_core_color_properties"></a> Farbeigenschaften  
- Sie können vordefinierte `ForeColor` und die Eigenschaften `BackColor` verwenden oder eigene benutzerdefinierte Farbeigenschaften, wenn Sie das Steuerelement zeichnen.  Um eine Farbeigenschaft zu verwenden, erhalten Sie die Memberfunktion [COleControl::TranslateColor](../Topic/COleControl::TranslateColor.md) auf.  Die Parameter dieser Funktion sind der Wert die Farbeigenschaft und ein optionales Palettenhandle.  Der Rückgabewert ist ein **COLORREF**\-Wert, der an GDI\-Funktionen, wie `SetTextColor` und `CreateSolidBrush` übergeben werden kann.  
+##  <a name="_core_color_properties"></a> Color Properties  
+ You can use the stock `ForeColor` and `BackColor` properties, or your own custom color properties, when painting the control. To use a color property, call the [COleControl::TranslateColor](../mfc/reference/colecontrol-class.md#translatecolor) member function. The parameters of this function are the value of the color property and an optional palette handle. The return value is a **COLORREF** value that can be passed to GDI functions, such as `SetTextColor` and `CreateSolidBrush`.  
   
- Auf die Farbwerte für vordefinierte `ForeColor` und die `BackColor`\-Eigenschaften zugegriffen werden, indem entweder `GetForeColor` oder die `GetBackColor`\-Funktion, die jeweils aufgerufen wird.  
+ The color values for the stock `ForeColor` and `BackColor` properties are accessed by calling either the `GetForeColor` or the `GetBackColor` function, respectively.  
   
- Im folgenden Beispiel wird mit diesen beiden Farbeigenschaften, wenn ein Steuerelement gezeichnet wird.  Es initialisiert eine temporäre Variable und **COLORREF** ein `CBrush`\-Objekt durch Aufrufe von `TranslateColor`: ein mit der `ForeColor`\-Eigenschaft und die andere mit der `BackColor`\-Eigenschaft.  Ein temporäres `CBrush`\-Objekt wird dann verwendet, um das Rechteck des Steuerelements zu zeichnen, und Textfarbe wird mithilfe der `ForeColor`\-Eigenschaft festgelegt.  
+ The following example demonstrates using these two color properties when painting a control. It initializes a temporary **COLORREF** variable and a `CBrush` object with calls to `TranslateColor`: one using the `ForeColor` property and the other using the `BackColor` property. A temporary `CBrush` object is then used to paint the control's rectangle, and the text color is set using the `ForeColor` property.  
   
- [!CODE [NVC_MFC_AxUI#24](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxUI#24)]  
+ [!code-cpp[NVC_MFC_AxUI#24](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-properties_3.cpp)]  
   
-## Siehe auch  
- [MFC\-ActiveX\-Steuerelemente](../mfc/mfc-activex-controls.md)   
- [MFC\-ActiveX\-Steuerelemente: Eigenschaften](../mfc/mfc-activex-controls-properties.md)   
- [MFC\-ActiveX\-Steuerelemente: Methoden](../mfc/mfc-activex-controls-methods.md)   
+## See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)   
+ [MFC ActiveX Controls: Properties](../mfc/mfc-activex-controls-properties.md)   
+ [MFC ActiveX Controls: Methods](../mfc/mfc-activex-controls-methods.md)   
  [COleControl Class](../mfc/reference/colecontrol-class.md)
+

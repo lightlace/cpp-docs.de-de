@@ -1,59 +1,78 @@
 ---
-title: "Erstellen von Stack- und Warteschlangenauflistungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Auflistungsklassen, Erstellen"
-  - "Auflistungen, queue"
-  - "Auflistungen, Stapel"
-  - "MFC-Auflistungsklassen, Queue-Auflistungen"
-  - "MFC-Auflistungsklassen, Stack-Auflistungen"
-  - "Queue-Auflistungen"
-  - "Stapel"
-  - "Stack-Auflistungen"
+title: Creating Stack and Queue Collections | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC collection classes [MFC], stack collections
+- collections, stack
+- stack
+- collection classes [MFC], creating
+- queue collections
+- MFC collection classes [MFC], queue collections
+- stack collections
+- collections, queue
 ms.assetid: 3c7bc198-35f0-4fc3-aaed-6005a0f22638
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Erstellen von Stack- und Warteschlangenauflistungen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 26e7012530dc05cc413fd04a8ababc756cf29c8a
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Dieser Artikel beschreibt, wie andere Datenstrukturen, wie [Stapel](#_core_stacks) und [Warteschlangen](#_core_queues), von den MFC\-Listenklassen erstellt.  Die Beispiele verwenden die Klassen, die von `CList` abgeleitet werden, jedoch können Sie `CList` direkt verwenden, es sei denn, Sie Funktionen hinzufügen müssen.  
+---
+# <a name="creating-stack-and-queue-collections"></a>Creating Stack and Queue Collections
+This article explains how to create other data structures, such as [stacks](#_core_stacks) and [queues](#_core_queues), from MFC list classes. The examples use classes derived from `CList`, but you can use `CList` directly unless you need to add functionality.  
   
-##  <a name="_core_stacks"></a> Stapel  
- Da die Standardlistenauflistung einen Anfang und ein Ende verfügt, ist es einfach, eine abgeleitete Listenauflistung zu erstellen, die das Verhalten eines Last\-in\-First\-out\-Stapels imitiert.  Ein Stapel entspricht einem Stapel Infobereiche in einer Cafeteria.  Während Infobereiche dem Stapel hinzugefügt werden, um sie auf dem Stapel.  Der letzte hinzugefügte Infobereich ist der zu entfernende erste.  Die Listenauflistungsmemberfunktionen `AddHead` und `RemoveHead` können verwendet werden, um Elementen vom Anfang der Liste speziell hinzuzufügen und zu entfernen; so ist das zuletzt hinzugefügte Element das erste, entfernt werden.  
+##  <a name="_core_stacks"></a> Stacks  
+ Because the standard list collection has both a head and a tail, it is easy to create a derived list collection that mimics the behavior of a last-in-first-out stack. A stack is like a stack of trays in a cafeteria. As trays are added to the stack, they go on top of the stack. The last tray added is the first to be removed. The list collection member functions `AddHead` and `RemoveHead` can be used to add and remove elements specifically from the head of the list; thus, the most recently added element is the first to be removed.  
   
-#### Um eine Stapelauflistung erstellen  
+#### <a name="to-create-a-stack-collection"></a>To create a stack collection  
   
-1.  Ableiten einer neuen Listenklasse einer der vorhandenen MFC\-Listenklassen und fügen Sie weiteren Memberfunktionen hinzu, um die Funktionalität von Stapelvorgängen zu unterstützen.  
+1.  Derive a new list class from one of the existing MFC list classes and add more member functions to support the functionality of stack operations.  
   
-     Das folgende Beispiel zeigt, wie die Memberfunktionen Push\-Elementen an dem Stapel hinzugefügt, oben Element des Stapels einsieht und das oberste Element vom Stapel aufnimmt:  
+     The following example shows how to add member functions to push elements on to the stack, peek at the top element of the stack, and pop the top element from the stack:  
   
-     [!CODE [NVC_MFCCollections#20](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCCollections#20)]  
+     [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_1.h)]  
   
- Beachten Sie, dass dieser Ansatz die zugrunde liegende `CObList`\-Klasse verfügbar macht.  Der Benutzer kann jede `CObList`\-Memberfunktion aufrufen, ob es Sinn für einen Stapel oder nicht.  
+ Note that this approach exposes the underlying `CObList` class. The user can call any `CObList` member function, whether it makes sense for a stack or not.  
   
-##  <a name="_core_queues"></a> Warteschlangen  
- Da die Standardlistenauflistung einen Anfang und ein Ende verfügt, ist sie auch einfach, eine abgeleitete Listenauflistung zu erstellen, die das Verhalten einer First\-in\-First\-out\-Warteschlange imitiert.  Eine Warteschlange steht wie eine Zeile von Personen in einer Cafeteria.  Die erste Person in der angeboten werden Zeile ist die erste.  Sobald weitere Personen stammen, indem diese an das Ende der Zeile, die Drehung zu warten.  Die Listenauflistungsmemberfunktionen `AddTail` und `RemoveHead` können verwendet werden, um Elementen vom Anfang oder am Ende der Liste speziell hinzuzufügen und zu entfernen; so ist das zuletzt hinzugefügte Element immer das zu entfernende letzte.  
+##  <a name="_core_queues"></a> Queues  
+ Because the standard list collection has both a head and a tail, it is also easy to create a derived list collection that mimics the behavior of a first-in-first-out queue. A queue is like a line of people in a cafeteria. The first person in line is the first to be served. As more people come, they go to the end of the line to wait their turn. The list collection member functions `AddTail` and `RemoveHead` can be used to add and remove elements specifically from the head or tail of the list; thus, the most recently added element is always the last to be removed.  
   
-#### Um eine Warteschlangenauflistung erstellen  
+#### <a name="to-create-a-queue-collection"></a>To create a queue collection  
   
-1.  Ableiten einer neuen Listenklasse einer der vordefinierten Listenklassen, die mit der Microsoft Foundation Class\-Bibliothek bereitgestellten und fügen Sie weiteren Memberfunktionen, die die Semantik von Warteschlangenvorgängen zu unterstützen hinzu.  
+1.  Derive a new list class from one of the predefined list classes provided with the Microsoft Foundation Class Library and add more member functions to support the semantics of queue operations.  
   
-     Das folgende Beispiel zeigt, wie Sie Memberfunktionen anfügen können, um ein Element am Ende der Warteschlange hinzuzufügen und das Element von der Vorderseite der Warteschlange abrufen.  
+     The following example shows how you can append member functions to add an element to the end of the queue and get the element from the front of the queue.  
   
-     [!CODE [NVC_MFCCollections#21](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCCollections#21)]  
+     [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_2.h)]  
   
-## Siehe auch  
- [Auflistungen](../mfc/collections.md)
+## <a name="see-also"></a>See Also  
+ [Collections](../mfc/collections.md)
+
+

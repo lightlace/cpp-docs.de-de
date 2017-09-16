@@ -1,44 +1,63 @@
 ---
-title: "Benachrichtigungen von einem RichEdit-Steuerelement | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CRichEditCtrl-Klasse, Benachrichtigungen"
-  - "Meldungen, Benachrichtigung"
-  - "Benachrichtigungen, von CRichEditCtrl"
-  - "Rich-Edit-Steuerelemente, Benachrichtigungen"
+title: Notifications from a Rich Edit Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- messages [MFC], notification [MFC]
+- CRichEditCtrl class [MFC], notifications
+- rich edit controls [MFC], notifications
+- notifications [MFC], from CRichEditCtrl
 ms.assetid: eb5304fe-f4f3-4557-9ebf-3095dea383c4
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Benachrichtigungen von einem RichEdit-Steuerelement
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: cd56c62172b1d98cc5f95aceaa3fa45a7e642d23
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Benachrichtigungsmeldungsberichtsereignisse, die ein Rich\-Edit\-Steuerelement \([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)\) beeinflussen.  Sie können vom übergeordneten Fenster oder, mithilfe der Meldungsreflektion verarbeitet werden, durch das Rich\-Edit\-Steuerelement selbst.  Verwendet unterstützen alle Benachrichtigungsmeldungen, die in Bearbeitungssteuerelementen sowie einige zusätzliche verwendet werden.  Sie können bestimmen, Benachrichtigungsmeldungen dem ein Rich\-Edit\-Steuerelement das übergeordnete Fenster gesendet werden, indem sie die Ereignismaske festlegen "."  
+---
+# <a name="notifications-from-a-rich-edit-control"></a>Notifications from a Rich Edit Control
+Notification messages report events affecting a rich edit control ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). They can be processed by the parent window or, using message reflection, by the rich edit control itself. Rich edit controls support all of the notification messages used with edit controls as well as several additional ones. You can determine which notification messages a rich edit control sends its parent window by setting its "event mask."  
   
- Um die Ereignismaske für ein Rich\-Edit\-Steuerelement festzulegen, verwenden Sie die [SetEventMask](../Topic/CRichEditCtrl::SetEventMask.md)\-Memberfunktion.  Sie können die Tagesereignissemaske für ein Rich\-Edit\-Steuerelement abrufen, indem Sie die Memberfunktion [GetEventMask](../Topic/CRichEditCtrl::GetEventMask.md) verwenden.  
+ To set the event mask for a rich edit control, use the [SetEventMask](../mfc/reference/cricheditctrl-class.md#seteventmask) member function. You can retrieve the current event mask for a rich edit control by using the [GetEventMask](../mfc/reference/cricheditctrl-class.md#geteventmask) member function.  
   
- In den folgenden Absätzen führen bestimmte Benachrichtigungen und deren Verwendungszweck aufgeführt:  
+ The following paragraphs list several specific notifications and their uses:  
   
--   Eine **EN\_MSGFILTER**, die die **EN\_MSGFILTER** Benachrichtigung behandelt, können entweder eine Klasse, das Rich\-Edit\-Steuerelement, oder das übergeordnete Fenster, filtern alle Tastatur\- und Mauseingabe für das Steuerelement.  Der Handler kann die Tastatur\- oder Mausmeldung an verarbeitet werden oder verhindern kann die Nachricht geändert, indem die angegebene [MSGFILTER](http://msdn.microsoft.com/library/windows/desktop/bb787936)\-Struktur ändern.  
+-   **EN_MSGFILTER** Handling the **EN_MSGFILTER** notification lets a class, either the rich edit control or its parent window, filter all keyboard and mouse input to the control. The handler can prevent the keyboard or mouse message from being processed or can change the message by modifying the specified [MSGFILTER](http://msdn.microsoft.com/library/windows/desktop/bb787936) structure.  
   
--   **EN\_PROTECTED EN\_PROTECTED** Handle die Benachrichtigung, zu erkennen, wenn der Benutzer versucht, geschützten Text zu ändern.  Um einen Textbereich zu markieren wie geschützt, können Sie den geschützten Zeicheneffekt festlegen.  Weitere Informationen finden Sie unter [Zeichenformatierung in den Rich\-Edit\-Steuerelementen](../mfc/character-formatting-in-rich-edit-controls.md).  
+-   **EN_PROTECTED** Handle the **EN_PROTECTED** notification message to detect when the user attempts to modify protected text. To mark a range of text as protected, you can set the protected character effect. For more information, see [Character Formatting in Rich Edit Controls](../mfc/character-formatting-in-rich-edit-controls.md).  
   
--   **EN\_DROPFILES** Sie können den Benutzern ermöglichen, Dateien in einem Rich\-Edit\-Steuerelement abzulegen, indem Sie die **EN\_DROPFILES** Benachrichtigung verarbeiten.  Die angegebene Struktur [ENDROPFILES](http://msdn.microsoft.com/library/windows/desktop/bb787895) enthält Informationen über die Dateien, die behoben werden.  
+-   **EN_DROPFILES** You can enable the user to drop files in a rich edit control by processing the **EN_DROPFILES** notification message. The specified [ENDROPFILES](http://msdn.microsoft.com/library/windows/desktop/bb787895) structure contains information about the files being dropped.  
   
--   **EN\_SELCHANGE** Eine Anwendung kann erkennen, wenn die aktuelle Auswahl ändert, indem sie die **EN\_SELCHANGE** Benachrichtigung verarbeitet.  Die Benachrichtigung gibt [SELCHANGE](http://msdn.microsoft.com/library/windows/desktop/bb787952) eine Struktur, die Informationen über die neue Auswahl enthält.  
+-   **EN_SELCHANGE** An application can detect when the current selection changes by processing the **EN_SELCHANGE** notification message. The notification message specifies a [SELCHANGE](http://msdn.microsoft.com/library/windows/desktop/bb787952) structure containing information about the new selection.  
   
-## Siehe auch  
- [Verwenden von CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CRichEditCtrl](../mfc/using-cricheditctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

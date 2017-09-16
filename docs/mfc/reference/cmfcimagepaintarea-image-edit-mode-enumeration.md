@@ -1,70 +1,86 @@
 ---
-title: "CMFCImagePaintArea::IMAGE_EDIT_MODE Enumeration | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IMAGE_EDIT_MODE Enumeration"
-  - "CMFCImagePaintArea::IMAGE_EDIT_MODE Enumeration"
-  - "CMFCImagePaintArea.IMAGE_EDIT_MODE Enumeration"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IMAGE_EDIT_MODE-Enumerationsmethode"
+title: CMFCImagePaintArea::IMAGE_EDIT_MODE Enumeration | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IMAGE_EDIT_MODE Enumeration
+dev_langs:
+- C++
+helpviewer_keywords:
+- IMAGE_EDIT_MODE Enumeration method [MFC]
 ms.assetid: e51db66a-fa1c-4766-9dac-a25b595f871a
 caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# CMFCImagePaintArea::IMAGE_EDIT_MODE Enumeration
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 644159d71a44297094f8304d40f990ee6957f450
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Gibt einen Zeichnungsmodus an, den Sie verwenden, um ein Bild in einem Bildbearbeitungsdialogfeld zu ändern.  
+---
+# <a name="cmfcimagepaintareaimageeditmode-enumeration"></a>CMFCImagePaintArea::IMAGE_EDIT_MODE Enumeration
+Specifies a drawing mode that you use to modify an image in an image editor dialog box.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 enum IMAGE_EDIT_MODE  
 {  
-   IMAGE_EDIT_MODE_PEN = 0,  
-   IMAGE_EDIT_MODE_FILL,  
-   IMAGE_EDIT_MODE_LINE,  
-   IMAGE_EDIT_MODE_RECT,  
-   IMAGE_EDIT_MODE_ELLIPSE,  
-   IMAGE_EDIT_MODE_COLOR  
+    IMAGE_EDIT_MODE_PEN = 0,  
+    IMAGE_EDIT_MODE_FILL, 
+    IMAGE_EDIT_MODE_LINE, 
+    IMAGE_EDIT_MODE_RECT, 
+    IMAGE_EDIT_MODE_ELLIPSE, 
+    IMAGE_EDIT_MODE_COLOR 
 };  
 ```  
   
-## Member  
+## <a name="members"></a>Members  
   
 |||  
 |-|-|  
-|Name|**Beschreibung**|  
-|`IMAGE_EDIT_MODE_PEN`|Wird verwendet, um einzelne Pixel zu zeichnen.|  
-|`IMAGE_EDIT_MODE_FILL`|Wird verwendet, um alle benachbarten Bereiche füllen, die die Farbe an der aktuellen Cursorposition enthalten.|  
-|`IMAGE_EDIT_MODE_LINE`|Wird verwendet, um eine Linie zu zeichnen.|  
-|`IMAGE_EDIT_MODE_RECT`|Wird verwendet, um ein Rechteck zu zeichnen.|  
-|`IMAGE_EDIT_MODE_ELLIPSE`|Wird verwendet, um eine Ellipse zu zeichnen.|  
-|`IMAGE_EDIT_MODE_COLOR`|Wird verwendet, um die aktuelle Farbe auf die Farbe an der aktuellen Cursorposition festzulegen.|  
+|Name|Description|  
+|`IMAGE_EDIT_MODE_PEN`|Used to draw individual pixels.|  
+|`IMAGE_EDIT_MODE_FILL`|Used to fill all adjacent areas that contain the color at the current cursor location.|  
+|`IMAGE_EDIT_MODE_LINE`|Used to draw a line.|  
+|`IMAGE_EDIT_MODE_RECT`|Used to draw a rectangle.|  
+|`IMAGE_EDIT_MODE_ELLIPSE`|Used to draw an ellipse.|  
+|`IMAGE_EDIT_MODE_COLOR`|Used to set the current color to the color at the current cursor location.|  
   
-### Hinweise  
- Die `CMFCImagePaintArea` und `CMFCImageEditorDialog`\-Klassen verwenden diese Enumeration, um den aktuellen Zeichnungsmodus festzulegen.  Der Zeichnungsmodus und die aktuelle Farbe werden verwendet, um den Platz hat in einem Bildbearbeitungsdialogfeld zu ändern.  Weitere Informationen zu den Aktionen `CMFCImagePaintArea` und `CMFCImageEditorDialog` finden Sie unter [CMFCImagePaintArea Class](../../mfc/reference/cmfcimagepaintarea-class.md) und [CMFCImageEditorDialog Class](../../mfc/reference/cmfcimageeditordialog-class.md).  
+### <a name="remarks"></a>Remarks  
+ The `CMFCImagePaintArea` and `CMFCImageEditorDialog` classes use this enumeration to set the current drawing mode. The drawing mode and current color are used to modify the picture area in an image editor dialog box. For more information about `CMFCImagePaintArea` and `CMFCImageEditorDialog`, see [CMFCImagePaintArea Class](../../mfc/reference/cmfcimagepaintarea-class.md) and [CMFCImageEditorDialog Class](../../mfc/reference/cmfcimageeditordialog-class.md).  
   
- Wenn Sie eine Farbe aus einem Bild auswählen, indem Sie `IMAGE_EDIT_MODE_COLOR`, gefolgt Modus wird, legt das Framework den aktuellen Zeichnungsmodus auf `IMAGE_EDIT_MODE_PEN` fest.  
+ When you select a color from an image by using the `IMAGE_EDIT_MODE_COLOR` drawing mode, the framework sets the current drawing mode to `IMAGE_EDIT_MODE_PEN`.  
   
-## Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** afximagepaintarea.h  
   
-## Siehe auch  
- [MFC\-Makros, globale Funktionen und globale Variablen](../../mfc/reference/mfc-macros-and-globals.md)   
- [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
- [Klassen](../../mfc/reference/mfc-classes.md)   
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
  [CMFCImagePaintArea Class](../../mfc/reference/cmfcimagepaintarea-class.md)   
  [CMFCImageEditorDialog Class](../../mfc/reference/cmfcimageeditordialog-class.md)
+

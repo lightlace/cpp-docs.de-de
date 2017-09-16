@@ -1,5 +1,5 @@
 ---
-title: CConstantTransition-Klasse | Microsoft-Dokumentation
+title: CConstantTransition Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,7 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CConstantTransition class
+- CConstantTransition [MFC], CConstantTransition
+- CConstantTransition [MFC], Create
+- CConstantTransition [MFC], m_duration
 ms.assetid: f6fa4780-a71b-4cd6-80aa-d4792ace36c2
 caps.latest.revision: 17
 author: mikeblome
@@ -37,15 +39,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: e6c8b8e27cd6618a7dfe690a58ba470a667adf1d
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 593aba4c3494e697ebef42cf86fd200ed46a8afd
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cconstanttransition-class"></a>CConstantTransition-Klasse
-Kapselt einen konstanten Übergang.  
+# <a name="cconstanttransition-class"></a>CConstantTransition Class
+Encapsulates a constant transition.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -53,52 +55,52 @@ Kapselt einen konstanten Übergang.
 class CConstantTransition : public CBaseTransition;  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CConstantTransition::CConstantTransition](#cconstanttransition)|Ein Übergangsobjekt erstellt und initialisiert seine Dauer.|  
+|[CConstantTransition::CConstantTransition](#cconstanttransition)|Constructs a transition object and initializes its duration.|  
   
-### <a name="public-methods"></a>Öffentliche Methoden  
+### <a name="public-methods"></a>Public Methods  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CConstantTransition::Create](#create)|Ruft die Übergangsbibliothek um gekapselte COM-Übergangsobjekt zu erstellen. (Überschreibt [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|  
+|[CConstantTransition::Create](#create)|Calls the transition library to create encapsulated transition COM object. (Overrides [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
-### <a name="public-data-members"></a>Öffentliche Datenmember  
+### <a name="public-data-members"></a>Public Data Members  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CConstantTransition::m_duration](#m_duration)|Die Dauer des Übergangs.|  
+|[CConstantTransition::m_duration](#m_duration)|The duration of the transition.|  
   
-## <a name="remarks"></a>Hinweise  
- Während eines Übergangs konstant bleibt der Wert einer Animationsvariablen den Anfangswert für die Dauer des Übergangs. Da alle Übergänge automatisch gelöscht werden, es wird empfohlen, sie mit dem Operator new. Das gekapselte IUIAnimationTransition-COM-Objekt wird von CAnimationController:: erst erstellt, ist NULL. Ändern Membervariablen, nach der Erstellung dieses COM-Objekt hat keine Auswirkung.  
+## <a name="remarks"></a>Remarks  
+ During a constant transition, the value of an animation variable remains at the initial value over the duration of the transition. Because all transitions are cleared automatically, it's recommended to allocated them using operator new. The encapsulated IUIAnimationTransition COM object is created by CAnimationController::AnimateGroup, until then it's NULL. Changing member variables after creation of this COM object has no effect.  
   
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- [Von CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
  [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
   
  `CConstantTransition`  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** afxanimationcontroller.h  
   
-##  <a name="cconstanttransition"></a>CConstantTransition::CConstantTransition  
- Ein Übergangsobjekt erstellt und initialisiert seine Dauer.  
+##  <a name="cconstanttransition"></a>  CConstantTransition::CConstantTransition  
+ Constructs a transition object and initializes its duration.  
   
 ```  
 CConstantTransition (UI_ANIMATION_SECONDS duration);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `duration`  
- Die Dauer des Übergangs.  
+ The duration of the transition.  
   
-##  <a name="create"></a>CConstantTransition::Create  
- Ruft die Übergangsbibliothek um gekapselte COM-Übergangsobjekt zu erstellen.  
+##  <a name="create"></a>  CConstantTransition::Create  
+ Calls the transition library to create encapsulated transition COM object.  
   
 ```  
 virtual BOOL Create(
@@ -106,20 +108,20 @@ virtual BOOL Create(
     IUIAnimationTransitionFactory* \*not used*\);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `pLibrary`  
- Ein Zeiger auf eine [IUIAnimationTransitionLibrary-Schnittstelle](https://msdn.microsoft.com/library/windows/desktop/dd371897), die eine Bibliothek mit standard-Übergänge definiert.  
+ A pointer to an [IUIAnimationTransitionLibrary interface](https://msdn.microsoft.com/library/windows/desktop/dd371897), which defines a library of standard transitions.  
 
-### <a name="return-value"></a>Rückgabewert  
- True, wenn der Übergang erfolgreich erstellt wird. andernfalls FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if transition is created successfully; otherwise FALSE.  
   
-##  <a name="m_duration"></a>CConstantTransition::m_duration  
- Die Dauer des Übergangs.  
+##  <a name="m_duration"></a>  CConstantTransition::m_duration  
+ The duration of the transition.  
   
 ```  
 UI_ANIMATION_SECONDS m_duration;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Klassen](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

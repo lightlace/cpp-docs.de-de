@@ -1,32 +1,51 @@
 ---
-title: "Einstellungen f&#252;r das Symbolleisten-Steuerelement | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CToolBarCtrl-Klasse, Einstellungen"
-  - "Symbolleisten-Steuerelemente [MFC], über Symbolleisten-Steuerelemente"
+title: Settings for the Toolbar Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- toolbar controls [MFC], about toolbar controls
+- CToolBarCtrl class [MFC], settings
 ms.assetid: 025ba920-b3ee-4d82-9367-e652cd7875b9
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Einstellungen f&#252;r das Symbolleisten-Steuerelement
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6f4f5851db38fdef582d5aaec6961bee53f8c0f0
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Die Schaltflächen auf einer Symbolleiste können eine Bitmap, eine Zeichenfolge oder beides anzeigen.  Standardmäßig wird die Bildgröße für die Abmessungen von 16 x 15 Pixel festgelegt.  Alle Schaltflächen sind die gleiche Breite, standardmäßig 24 mal 22 Pixel.  Die Höhe einer Symbolleiste wird anhand der Höhe der Schaltflächen bestimmt, und die Breite einer Symbolleiste entspricht der Breite des Clientbereichs des übergeordneten Fensters, auch standardmäßig.  
+---
+# <a name="settings-for-the-toolbar-control"></a>Settings for the Toolbar Control
+The buttons on a toolbar can display a bitmap, a string, or both. By default, the image size is set to the dimensions of 16 by 15 pixels. All buttons are the same width, by default 24 by 22 pixels. A toolbar's height is determined by the height of the buttons, and a toolbar's width is the same as the width of the parent window's client area, also by default.  
   
- Eine Symbolleiste kann integrierte Anpassungsfunktionen, einschließlich eines systemdefiniertes Anpassungsdialogfeld haben, die den Benutzer Einfüge\-, Lösch\- zulassen oder Symbolleisten\-Schaltflächen neu anordnen.  Eine Anwendung bestimmt, ob Anpassungsfunktionen, die dem Benutzer zur Verfügung stehen und steuert den Wertebereich angegeben, zu dem der Benutzer die Symbolleiste anpassen kann.  Weitere Informationen über das Anpassen der Symbolleiste, Klasse finden Sie unter [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) in der *MFC\-Referenz*.  
+ A toolbar can have built-in customization features, including a system-defined customization dialog box, that allow the user to insert, delete, or rearrange toolbar buttons. An application determines whether the customization features are available to the user and controls the extent to which the user can customize the toolbar. For more information about customizing the toolbar, see class [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) in the *MFC Reference*.  
   
-## Siehe auch  
- [Verwenden von CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

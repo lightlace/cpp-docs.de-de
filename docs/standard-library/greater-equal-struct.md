@@ -1,15 +1,14 @@
 ---
-title: greater_equal-Struktur | Microsoft-Dokumentation
+title: greater_equal Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- greater_equal
 - xfunctional/std::greater_equal
 dev_langs:
 - C++
@@ -36,14 +35,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 56fd730319f7523915fcdbb71d9cd97c98fda5b0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: fe09161461c53bd174bc9f21e82c14fc7ea3d910
+ms.contentlocale: de-de
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="greaterequal-struct"></a>greater_equal-Struktur
-Ein binäres Prädikat, das den größer-oder-gleich-Vorgang (`operator>=`) auf die Argumente ausführt.  
+# <a name="greaterequal-struct"></a>greater_equal Struct
+A binary predicate that performs the greater-than-or-equal-to operation ( `operator>=`) on its arguments.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -64,23 +64,23 @@ struct greater_equal<void>
  };
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a>Parameters  
  `Type`, `T`, `U`  
- Jeder Typ, der ein `operator>=`-Element unterstützt, das Operanden angegebener oder abgeleiteter Typen akzeptiert.  
+ Any type that supports an `operator>=` that takes operands of the specified or inferred types.  
   
  `Left`  
- Der linke Operand des größer-oder-gleich-Vorgangs. Die nicht spezialisierte Vorlage besitzt ein lvalue-Verweisargument vom Typ `Type`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von lvalue und rvalue-Verweisargumenten des abgeleiteten Typs `T`.  
+ The left operand of the greater-than-or-equal-to operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `T`.  
   
  `Right`  
- Der rechte Operand des größer-oder-gleich-Vorgangs. Die nicht spezialisierte Vorlage besitzt ein lvalue-Verweisargument vom Typ `Type`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von lvalue und rvalue-Verweisargumenten des abgeleiteten Typs `U`.  
+ The right operand of the greater-than-or-equal-to operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `U`.  
   
-## <a name="return-value"></a>Rückgabewert  
- Das Ergebnis von `Left``>=``Right`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung des Ergebnisses mit dem von `operator>=` zurückgegebenen Typs.  
+## <a name="return-value"></a>Return Value  
+ The result of `Left >= Right`. The specialized template does perfect forwarding of the result, which has the type that's returned by `operator>=`.  
   
-## <a name="remarks"></a>Hinweise  
- Das binäre Prädikat `greater_equal`< `Type`> stellt eine strenge, schwache Sortierung eines Satzes von Elementwerten vom Typ `Type` in Äquivalenzklassen bereit, wenn und nur wenn dieser Typ den mathematischen Standardanforderungen für eine solche Sortierung entspricht. Die Spezialisierungen für einen Zeigertyp ergeben eine gesamte Sortierung von Elementen, insofern, dass alle Elemente unterschiedlicher Werte zueinander in Beziehung stehend sortiert werden.  
+## <a name="remarks"></a>Remarks  
+ The binary predicate `greater_equal`< `Type`> provides a strict weak ordering of a set of element values of type `Type` into equivalence classes, if and only if this type satisfies the standard mathematical requirements for being so ordered. The specializations for any pointer type yield a total ordering of elements, in that all elements of distinct values are ordered with respect to each other.  
   
-## <a name="example"></a>Beispiel  
+## <a name="example"></a>Example  
   
 ```cpp  
 // functional_greater_equal.cpp  
@@ -128,7 +128,7 @@ int main( )
 }  
 ```  
   
-## <a name="output"></a>Ausgabe  
+## <a name="output"></a>Output  
   
 ```
 Original vector v1 = (6262 6262 41 18467 6334 26500 19169)
@@ -136,13 +136,13 @@ Sorted vector v1 = (41 6262 6262 6334 18467 19169 26500)
 Resorted vector v1 = (26500 19169 18467 6334 6262 6262 41)
 ```  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** \<functional>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Siehe auch  
- [C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

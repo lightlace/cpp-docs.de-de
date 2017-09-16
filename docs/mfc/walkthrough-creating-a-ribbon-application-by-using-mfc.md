@@ -1,101 +1,120 @@
 ---
-title: "Exemplarische Vorgehensweise: Erstellen einer Men&#252;bandanwendung mithilfe von MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Erstellen einer Menübandanwendung (MFC)"
-  - "Menübandanwendung, Erstellen (MFC)"
+title: 'Walkthrough: Creating a Ribbon Application By Using MFC | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ribbon application, creating (MFC)
+- creating a ribbon aplication (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# Exemplarische Vorgehensweise: Erstellen einer Men&#252;bandanwendung mithilfe von MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dd9aff0bf52100207e2df0504226c991d0f66614
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie mithilfe des **MFC\-Anwendungs\-Assistenten** eine Anwendung erstellen, die standardmäßig über ein Menüband verfügt.  Sie können das Menüband anschließend erweitern, indem Sie eine Menübandkategorie vom Typ **Benutzerdefiniert** mit einem Menübandbereich **Favoriten** hinzufügen und dem Band dann einige häufig verwendete Befehle hinzufügen.  
+---
+# <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Walkthrough: Creating a Ribbon Application By Using MFC
+This walkthrough shows how to use the **MFC Application Wizard** to create an application that has a ribbon by default. You can then expand the ribbon by adding a **Custom** ribbon category that has a **Favorites** ribbon panel, and then adding some frequently used commands to the panel.  
   
-## Vorbereitungsmaßnahmen  
- In dieser exemplarischen Vorgehensweise wird davon ausgegangen, dass Sie [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] für die Verwendung der **Allgemeinen Entwicklungseinstellungen** eingerichtet haben.  Wenn Sie andere Einstellungen verwenden, werden möglicherweise einige Elemente der Benutzeroberfläche, auf die in den folgenden Anweisungen verwiesen wird, nicht angezeigt.  Informationen zum Ändern der Einstellungen finden Sie unter [How to: Reset Your Settings](assetId:///c95c51be-e609-4769-abba-65e6beedec76).  
+## <a name="prerequisites"></a>Prerequisites  
+ This walkthrough assumes that you have set [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] to use **General Development Settings**. If you are using different settings, some of the user interface (UI) elements that are referenced in the following instructions might not be displayed. For information about how to change settings, see [How to: Reset Your Settings](http://msdn.microsoft.com/en-us/c95c51be-e609-4769-abba-65e6beedec76).  
   
-### So erstellen Sie eine MFC\-Anwendung mit einem Menüband  
+### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>To create an MFC application that has a ribbon  
   
-1.  Verwenden Sie den **MFC\-Anwendungs\-Assistenten**, um eine MFC\-Anwendung mit einem Menüband zu erstellen.  Um den Assistenten auszuführen, wählen Sie im Menü **Datei** die Option **Neu** aus, und klicken Sie und anschließend auf **Projekt**.  
+1.  Use the **MFC Application Wizard** to create an MFC application that has a ribbon. To run the wizard, on the **File** menu, point to **New**, and then click **Project**.  
   
-2.  Erweitern Sie im Dialogfeld **Neues Projekt** den Knoten **Visual C\+\+** unter **Installierte Vorlagen**, wählen Sie **MFC** und anschließend **MFC\-Anwendung** aus.  Geben Sie einen Namen für das Projekt ein, z. B. `MFCRibbonApp` ein, und klicken Sie dann auf **OK**.  
+2.  In the **New Project** dialog box, expand the **Visual C++** node under **Installed Templates**, select **MFC**, and then select **MFC Application**. Type a name for the project, for example, `MFCRibbonApp`, and then click **OK**.  
   
-3.  Klicken Sie auf der ersten Seite des **MFC\-Anwendungs\-Assistenten** auf **Weiter**.  
+3.  On the first page of the **MFC Application Wizard**, click **Next**.  
   
-4.  Wählen Sie auf der Seite **Anwendungstyp** unter **Visueller Stil und Farben** den Eintrag **Office 2007 \(Blaues Design\)** aus.  Übernehmen Sie die übrigen Einstellungen unverändert.  Klicken Sie auf **Weiter**.  
+4.  On the **Application Type** page, under **Visual style and colors**, select **Office 2007 (Blue theme)**. Leave the other settings as they are. Click **Next**.  
   
-5.  Überprüfen Sie auf der Seite **Verbunddokumente**, ob **Kein** ausgewählt ist, und klicken Sie dann auf **Weiter**.  
+5.  On the **Compound Document Support** page, make sure that **None** is selected and then click **Next**.  
   
-6.  Geben Sie auf der Seite **Eigenschaften für Dokumentvorlagen** im Feld **Dateierweiterung** eine Dateinamenerweiterung für Dokumente ein, die von dieser Anwendung erstellt werden, z. B. `mfcrbnapp`.  Klicken Sie auf **Weiter**.  
+6.  On the **Document Template Properties** page, in the **File extension** box, type a file name extension for documents that this application creates, for example, `mfcrbnapp`. Click **Next**.  
   
-7.  Überprüfen Sie auf der Seite **Datenbankunterstützung**, ob **Kein** ausgewählt ist, und klicken Sie dann auf **Weiter**.  
+7.  On the **Database Support** page, make sure that **None** is selected and then click **Next**.  
   
-8.  Überprüfen Sie auf der Seite **Benutzeroberflächenfunktionen**, ob **Menüband verwenden** ausgewählt ist.  Klicken Sie auf **Weiter**.  
+8.  On the **User Interface Features** page, make sure that **Use a ribbon** is selected. Click **Next**.  
   
-9. Standardmäßig fügt der **MFC\-Anwendungs\-Assistent** Unterstützung für einige andockbare Bereiche hinzu.  Da in dieser exemplarischen Vorgehensweise nur das Menüband erläutert wird, können Sie diese Optionen aus der Anwendung entfernen.  Deaktivieren Sie auf der Seite **Erweiterte Funktionen** alle Optionen.  Klicken Sie auf **Weiter**.  
+9. By default, the **MFC Application Wizard** adds support for several docking panes. Because this walkthrough just teaches about the ribbon, you can remove these options from the application. On the **Advanced Features** page, clear all options. Click **Next**.  
   
-10. Klicken Sie auf der Seite **Generierte Klassen** auf **Fertig stellen**, um die MFC\-Anwendung zu erstellen.  
+10. On the **Generated Classes** page, click **Finish** to create the MFC application.  
   
-11. Um zu überprüfen, ob die Anwendung erfolgreich erstellt wurde, erstellen Sie sie und führen sie aus.  Klicken Sie im Menü **Erstellen** auf **Projektmappe erstellen**, um die Anwendung zu erstellen.  Wenn die Anwendung erfolgreich erstellt wird, führen Sie die Anwendung aus, indem Sie im Menü **Debug** auf **Debugging starten** darauf klicken.  
+11. To verify that the application was created successfully, build it and run it. To build the application, on the **Build** menu, click **Build Solution**. If the application builds successfully, run it by clicking **Start Debugging** on the **Debug** menu.  
   
-     Der Assistent erstellt automatisch ein Menüband mit einer Menübandkategorie, die **Startseite** genannt wird.  Dieses Menüband enthält drei Menübandbereiche, die **Zwischenablage**, **Ansicht** und **Fenster** heißen.  
+     The wizard automatically creates a ribbon that has one ribbon category that is named **Home**. This ribbon contains three ribbon panels, which are named **Clipboard**, **View**, and **Window**.  
   
-### So fügen Sie dem Menüband eine Kategorie und einen Bereich hinzu  
+### <a name="to-add-a-category-and-panel-to-the-ribbon"></a>To add a category and panel to the ribbon  
   
-1.  Um die Menübandressource zu öffnen, die im Menü **Anzeigen** erstellt wurde, zeigen auf **Weitere Fenster**, und klicken Sie dann auf **Ressourcenansicht**.  Doppelklicken Sie in **Ressourcenansicht** auf **Menüband** und dann auf **IDR\_RIBBON**.  
+1.  To open the ribbon resource that the wizard created, on the **View** menu, point to **Other Windows** and then click **Resource View**. In **Resource View**, click **Ribbon** and then double-click **IDR_RIBBON**.  
   
-2.  Fügen Sie zunächst dem Menüband eine benutzerdefinierte Kategorie hinzu, indem Sie auf **Kategorie** in **Werkzeugkasten** doppelklicken.  
+2.  First, add a custom category to the ribbon by double-clicking **Category** in the **Toolbox**.  
   
-     Eine Kategorie mit der Beschriftung **Category1** wird erstellt.  Standardmäßig enthält die Kategorie einen Bereich.  
+     A category that has the caption **Category1** is created. By default, the category contains one panel.  
   
-     Klicken Sie mit der rechten Maustaste auf **Category1**, und klicken Sie dann auf **Eigenschaften**.  Ändern Sie im **Eigenschaftenfenster** die **Beschriftung** in`Benutzerdefiniert`.  
+     Right-click **Category1** and then click **Properties**. In the **Properties** window, change **Caption** to `Custom`.  
   
-     In den Eigenschaften **Große Bilder** und **Kleine Bilder** werden die Bitmaps angegeben, die als Symbole für die Menübandelemente in dieser Kategorie verwendet werden.  Da die Erläuterungen zum Erstellen von benutzerdefinierten Bitmaps über den Rahmen dieser exemplarischen Vorgehensweise hinausgehen, verwenden Sie einfach die vom Assistenten erstellten Bitmaps erneut.  Kleine Bitmaps sind 16 Pixel x 16 Pixel.  Für kleine Bilder verwenden Sie die Bitmaps, auf die über die Ressourcen\-ID IDB\_FILESMALL zugegriffen wird.  Große Bitmaps sind 32 Pixel x 32 Pixel.  Für große Bilder verwenden Sie die Bitmaps, auf die über die Ressourcen\-ID IDB\_FILELARGE zugegriffen wird.  
+     The **Large Images** and **Small Images** properties specify the bitmaps that are used as icons for the ribbon elements in this category. Because creating custom bitmaps is beyond the scope of this walkthrough, just reuse the bitmaps that were created by the wizard. Small bitmaps are 16 pixels by 16 pixels. For small images, use the bitmaps that are accessed by the IDB_FILESMALL resource ID. Large bitmaps are 32 pixels by 32 pixels. For large images, use the bitmaps that are accessed by the IDB_FILELARGE resource ID.  
   
     > [!NOTE]
-    >  In HDPI\-Anzeigen, die mehr Pixel pro Zoll enthalten, werden automatisch die HDPI\-Versionen der Bilder verwendet.  
+    >  On high dots per inch (HDPI) displays, the HDPI versions of the images are automatically used.  
   
-3.  Passen Sie danach den Bereich an.  Bereiche werden zum Gruppieren von Elementen verwendet, die sich logisch aufeinander beziehen.  Beispielsweise befinden sich auf der Registerkarte **Startseite** dieser Anwendung die Befehle **Ausschneiden**, **Kopieren** und **Einfügen** alle im Bereich **Zwischenablage**.  Klicken Sie mit der rechten Maustaste Sie auf **Panel1**, und klicken Sie dann auf **Eigenschaften**, um den Bereich anzupassen.  Ändern Sie im Fenster **Eigenschaften** die **Beschriftung** in `Favoriten`.  
+3.  Next, customize the panel. Panels are used to group items that are logically related to one another. For example, on the **Home** tab of this application, the **Cut**, **Copy**, and **Paste** commands are all located on the **Clipboard** panel. To customize the panel, right-click **Panel1** and then click **Properties**. In the **Properties** window, change **Caption** to `Favorites`.  
   
-     Sie können den **Bildindex** für den Bereich angeben.  Diese Zahl gibt das Symbol an, das angezeigt wird, wenn der Menübandbereich zu **Symbolleiste für den Schnellzugriff** hinzugefügt wird.  Das Symbol wird nicht im Menübandbereich selbst angezeigt.  
+     You can specify the **Image Index** for the panel. This number specifies the icon that is displayed if the ribbon panel is added to the **Quick Access Toolbar**. The icon is not displayed on the ribbon panel itself.  
   
-4.  Um sicherzustellen, dass die Menübandkategorie und der entsprechende Bereich erfolgreich erstellt wurden, rufen Sie eine Vorschau des Menüband\-Steuerelements auf.  Klicken Sie auf der **Ribbon\-Editor\-Symbolleiste** Sie auf die Schaltfläche **Ribbon testen**.  Auf dem Menüband sollten eine Registerkarte **Benutzerdefiniert** und ein Bereich **Favoriten** angezeigt werden.  
+4.  To verify that the ribbon category and panel were created successfully, preview the ribbon control. On the **Ribbon Editor Toolbar**, click the **Test Ribbon** button. A **Custom** tab and **Favorites** panel should be displayed on the ribbon.  
   
-### So fügen Sie den Menübandbereichen Elemente hinzu  
+### <a name="to-add-elements-to-the-ribbon-panels"></a>To add elements to the ribbon panels  
   
-1.  Um dem Bereich, den Sie im vorherigen Verfahren erstellt haben, Elemente hinzuzufügen, ziehen Sie Steuerelemente auf dem Bereich **Ribbon\-Editor** des **Werkzeugkastens** in den Bereich in der Entwurfsansicht.  
+1.  To add elements to the panel that you created in the previous procedure, drag controls from the **Ribbon Editor** section of the **Toolbox** to the panel in the design view.  
   
-2.  Fügen Sie zuerst eine Schaltfläche **Drucken** hinzu.  Die Schaltfläche **Drucken** verfügt über ein Untermenü, das einen Befehl **Schnelldruck** enthält, mit dem auf dem Standarddrucker gedruckt wird.  Beide Befehle sind bereits für diese Anwendung definiert.  Sie befinden sich auf dem Anwendungsmenü.  
+2.  First, add a **Print** button. The **Print** button will have a submenu that contains a **Quick Print** command that prints by using the default printer. Both of these commands are already defined for this application. They are located on the application menu.  
   
-     Um die Schaltfläche **Drucken** zu erstellen, ziehen Sie ein Schaltflächentool in den Bereich.  
+     To create the **Print** button, drag a Button tool to the panel.  
   
-     Ändern Sie im Fenster **Eigenschaften** die Eigenschaft **ID** auf **ID\_FILE\_PRINT**, die bereits definiert sein sollte.  Ändern Sie **Beschriftung** in `Drucken`.  Ändern Sie **Bildindex** auf `4`.  
+     In the **Properties** window, change the **ID** property to **ID_FILE_PRINT**, which should already be defined. Change **Caption** to `Print`. Change **Image Index** to `4`.  
   
-     Um die Schaltfläche **Schnelldruck** zu erstellen, klicken Sie auf die Spalte mit den Eigenschaftswerten neben **Menüoptionen**, und klicken Sie dann auf die Auslassungspunkte \(**...**\).  Klicken Sie im **Elemente\-Editor** auf die unbeschriftete Schaltfläche **Hinzufügen**, um ein Menüelement zu erstellen.  Ändern Sie im Fenster **Eigenschaften** die **Beschriftung** in `Schnelldruck`, die **ID** in `ID_FILE_PRINT_DIRECT` und die Eigenschaft **Bild** in `5`.  Die Bildeigenschaft gibt das Symbol für Schnelldruck in der IDB\_FILESMALL\-Bitmapressource an.  
+     To create the **Quick Print** button, click the property value column next to **Menu Items**, and then click the ellipsis (**...**). In the **Items Editor**, click the unlabeled **Add** button to create a menu item. In the **Properties** window, change **Caption** to `Quick Print`, **ID** to `ID_FILE_PRINT_DIRECT`, and **Image** to `5`. The image property specifies the Quick Print icon in the IDB_FILESMALL bitmap resource.  
   
-3.  Um zu überprüfen, ob die Schaltflächen zum Menübandbereich hinzugefügt wurden, erstellen Sie die Anwendung, und führen Sie sie aus.  Klicken Sie im Menü **Erstellen** auf **Projektmappe erstellen**, um die Anwendung zu erstellen.  Wenn die Anwendung erfolgreich erstellt wird, führen Sie die Anwendung aus, indem Sie im Menü **Debuggen** auf **Debugging starten** klicken.  Die Schaltfläche **Drucken** und das Kombinationsfeld im Bereich **Favoriten** auf der Registerkarte **Benutzerdefiniert** auf dem Menüband sollten angezeigt werden.  
+3.  To verify that the buttons were added to the ribbon panel, build the application and run it. To build the application, on the **Build** menu, click **Build Solution**. If the application builds successfully, run the application by clicking **Start Debugging** on the **Debug** menu. The **Print** button and the combo box on the **Favorites** panel on the **Custom** tab on the ribbon should be displayed.  
   
-## Nächste Schritte  
- [Gewusst wie: Anpassen der Symbolleiste für den Schnellzugriff](../mfc/how-to-customize-the-quick-access-toolbar.md)  
+## <a name="next-steps"></a>Next Steps  
+ [How to: Customize the Quick Access Toolbar](../mfc/how-to-customize-the-quick-access-toolbar.md)  
   
- [Gewusst wie: Anpassen der Anwendungsschaltfläche](../mfc/how-to-customize-the-application-button.md)  
+ [How to: Customize the Application Button](../mfc/how-to-customize-the-application-button.md)  
   
- End\-to\-End\-Beispiele finden Sie unter [Beispiele \(MFC\-Feature Pack\)](../top/visual-cpp-samples.md).  
+ For end-to-end samples, see [Samples (MFC Feature Pack)](../visual-cpp-samples.md).  
   
-## Siehe auch  
- [Exemplarische Vorgehensweisen](../mfc/walkthroughs-mfc.md)   
- [Beispiele \(MFC\-Feature Pack\)](../top/visual-cpp-samples.md)
+## <a name="see-also"></a>See Also  
+ [Walkthroughs](../mfc/walkthroughs-mfc.md)   
+ [Samples (MFC Feature Pack)](../visual-cpp-samples.md)
+
+

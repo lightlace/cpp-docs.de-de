@@ -1,41 +1,60 @@
 ---
-title: "Ableiten einer Dokumentklasse von CDocument | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDocument-Klasse, Ableiten von"
-  - "Klassen [C++], Ableiten von CDocument"
-  - "Abgeleitete Klassen, oft überschriebene Funktionen"
-  - "Dokumentklassen, oft überschriebene Funktionen"
-  - "Document-Objekte, Abgeleitet"
+title: Deriving a Document Class from CDocument | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDocument class [MFC], deriving from
+- classes [MFC], deriving from CDocument
+- document objects [MFC], derived
+- derived classes [MFC], functions often overridden
+- document classes [MFC], functions often overridden
 ms.assetid: e6a198e0-9799-43c0-83c5-04174d8b532c
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Ableiten einer Dokumentklasse von CDocument
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 60954a57bd498479022703a27d1de96647b785df
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Dokumente enthalten und verwalten die Daten der Anwendung.  Um die MFC\-Anwendung zu verwenden Assistent\-gab Dokumentklasse, muss Ihnen in folgenden Situationen an:  
+---
+# <a name="deriving-a-document-class-from-cdocument"></a>Deriving a Document Class from CDocument
+Documents contain and manage your application's data. To use the MFC Application Wizard-supplied document class, you must do the following:  
   
--   Leiten Sie eine Klasse von **CDocument** für jeden Typ Dokument.  
+-   Derive a class from **CDocument** for each type of document.  
   
--   Fügen Sie Membervariablen hinzu, um die Daten jedem Dokument zu speichern.  
+-   Add member variables to store each document's data.  
   
--   Memberfunktion Überschreibungs **CDocument**`Serialize` in der Dokumentklasse.  `Serialize` schreibt und liest die Daten des Dokuments nach und vom Datenträger.  
+-   Override **CDocument**'s `Serialize` member function in your document class. `Serialize` writes and reads the document's data to and from disk.  
   
-## Andere dokumentieren die häufig überschriebenen Funktionen  
- Sie sollten auch anderen Memberfunktionen **CDocument** überschreiben.  Insbesondere müssen Sie häufig [OnNewDocument](../Topic/CDocument::OnNewDocument.md) und [OnOpenDocument](../Topic/CDocument::OnOpenDocument.md) überschreiben, um die Datenmember des Dokuments und [DeleteContents](../Topic/CDocument::DeleteContents.md) zu initialisieren, um dynamisch zugeordnete Daten zu zerstören.  Informationen über überschreibbare Member, Klasse finden Sie unter [CDocument](../mfc/reference/cdocument-class.md) in der *MFC\-Referenz*.  
+## <a name="other-document-functions-often-overridden"></a>Other Document Functions Often Overridden  
+ You may also want to override other **CDocument** member functions. In particular, you will often need to override [OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument) and [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) to initialize the document's data members and [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) to destroy dynamically allocated data. For information about overridable members, see class [CDocument](../mfc/reference/cdocument-class.md) in the *MFC Reference*.  
   
-## Siehe auch  
- [Verwenden von Dokumenten](../mfc/using-documents.md)
+## <a name="see-also"></a>See Also  
+ [Using Documents](../mfc/using-documents.md)
+
+

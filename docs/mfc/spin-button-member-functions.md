@@ -1,40 +1,59 @@
 ---
-title: "Memberfunktionen f&#252;r das Drehfeldsteuerelement | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSpinButtonCtrl-Klasse, Methoden"
-  - "Drehfeld-Steuerelement, Methoden"
+title: Spin Button Member Functions | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- spin button control, methods
+- CSpinButtonCtrl class [MFC], methods
 ms.assetid: a08a26fd-b803-4cbe-a509-395fa357d057
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Memberfunktionen f&#252;r das Drehfeldsteuerelement
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5582767fb0a68f41664499bdb31b5ae06c3379cf
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Es gibt mehrere Memberfunktionen, die für das Drehfeld\-Steuerelement \([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)\) verfügbar sind.  Verwenden Sie diese Funktionen, um die folgenden Attribute des Drehfelds zu ändern.  
+---
+# <a name="spin-button-member-functions"></a>Spin Button Member Functions
+There are several member functions available for the spin control ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)). Use these functions to change the following attributes of the spin button.  
   
--   **Beschleunigung** können Sie die Rate anpassen, an der die Position ändert, wenn der Benutzer die Pfeilschaltfläche gedrückt hält.  Um mit Beschleunigung zu umgehen, verwenden Sie die [SetAccel](../Topic/CSpinButtonCtrl::SetAccel.md) und [GetAccel](../Topic/CSpinButtonCtrl::GetAccel.md)\-Memberfunktionen.  
+-   **Acceleration** You can adjust the rate at which the position changes when the user holds down the arrow button. To work with acceleration, use the [SetAccel](../mfc/reference/cspinbuttonctrl-class.md#setaccel) and [GetAccel](../mfc/reference/cspinbuttonctrl-class.md#getaccel) member functions.  
   
--   **Basis** Sie können ändern die Basis \(entweder 10 oder 16\) verwendet, um Position in der Beschriftung des Buddyfensters anzuzeigen.  Um mit der Basis zu umgehen, verwenden Sie die [GetBase](../Topic/CSpinButtonCtrl::GetBase.md) und [SetBase](../Topic/CSpinButtonCtrl::SetBase.md)\-Memberfunktionen.  
+-   **Base** You can change the base (either 10 or 16) used to display the position in the caption of the buddy window. To work with the base, use the [GetBase](../mfc/reference/cspinbuttonctrl-class.md#getbase) and [SetBase](../mfc/reference/cspinbuttonctrl-class.md#setbase) member functions.  
   
--   **Buddyfenster** Sie können das Buddyfenster dynamisch festlegen.  Um Abfragen und Ändern die das Steuerelement Buddyfenster ist, verwenden Sie die [GetBuddy](../Topic/CSpinButtonCtrl::GetBuddy.md) und [SetBuddy](../Topic/CSpinButtonCtrl::SetBuddy.md)\-Memberfunktionen.  
+-   **Buddy Window** You can dynamically set the buddy window. To query or change which control is the buddy window, use the [GetBuddy](../mfc/reference/cspinbuttonctrl-class.md#getbuddy) and [SetBuddy](../mfc/reference/cspinbuttonctrl-class.md#setbuddy) member functions.  
   
--   **Position** Sie können die Position abfragen und ändern.  Um direkt mit Position zu umgehen, verwenden Sie die [GetPos](../Topic/CSpinButtonCtrl::GetPos.md) und [SetPos](../Topic/CSpinButtonCtrl::SetPos.md)\-Memberfunktionen.  Wenn die Beschriftung des Buddysteuerelements möglicherweise geändert \(beispielsweise, im Fall, dass der Buddy ein Bearbeitungssteuerelement ist\), erhält `GetPos` die aktuelle Beschriftung und passt die Position entsprechend.  
+-   **Position** You can query and change the position. To work directly with position, use the [GetPos](../mfc/reference/cspinbuttonctrl-class.md#getpos) and [SetPos](../mfc/reference/cspinbuttonctrl-class.md#setpos) member functions. Since the caption of the buddy control may have changed (for example, in the case that the buddy is an edit control), `GetPos` retrieves the current caption and adjusts the position accordingly.  
   
--   **Bereich** Sie können den Maximal\- und Minimalwert Position für das Drehfeld ändern.  Standardmäßig wird das Maximum auf 0 festgelegt, und das minimale wird 100 festgelegt.  Da das Standardmaximum kleiner als das Standardminimum ist, ist die Aktionen der Pfeilschaltflächen kontraintuitiv.  In der Regel legen Sie den Bereich mit der Memberfunktion [SetRange](../Topic/CSpinButtonCtrl::SetRange.md) fest.  Um die [GetRange](../Topic/CSpinButtonCtrl::GetRange.md) Bereichsverwendung abfragen.  
+-   **Range** You can change the maximum and minimum positions for the spin button. By default, the maximum is set to 0, and the minimum is set to 100. Since the default maximum is less than the default minimum, the actions of the arrow buttons is counter-intuitive. Typically, you will set the range using the [SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) member function. To query the range use [GetRange](../mfc/reference/cspinbuttonctrl-class.md#getrange).  
   
-## Siehe auch  
- [Verwenden von CSpinButtonCtrl](../mfc/using-cspinbuttonctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CSpinButtonCtrl](../mfc/using-cspinbuttonctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

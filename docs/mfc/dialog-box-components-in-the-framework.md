@@ -1,41 +1,60 @@
 ---
-title: "Dialogfeld-Steuerelemente im Framework | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Dialogklassen, Dialogfeldkomponenten"
-  - "Dialogvorlagen, MFC-Framework"
-  - "MFC-Dialogfelder, Informationen über MFC-Dialogfelder"
-  - "MFC-Dialogfelder, Erstellen"
-  - "MFC-Dialogfelder, Dialogressource"
+title: Dialog-Box Components in the Framework | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC dialog boxes [MFC], creating
+- dialog classes [MFC], dialog box components
+- MFC dialog boxes [MFC], about MFC dialog boxes
+- dialog templates [MFC], MFC framework
+- MFC dialog boxes [MFC], dialog resource
 ms.assetid: 592db160-0a8a-49be-ac72-ead278aca53f
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Dialogfeld-Steuerelemente im Framework
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: febab670bf86f87701da0d6ea23784fa56979137
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Im MFC\-Framework ist ein Dialogfeld zwei Komponenten:  
+---
+# <a name="dialog-box-components-in-the-framework"></a>Dialog-Box Components in the Framework
+In the MFC framework, a dialog box has two components:  
   
--   Eine Dialogfeldvorlagen\-Ressource, die von Steuerelementen und ihrer Platzierung Dialogfelds angibt.  
+-   A dialog-template resource that specifies the dialog box's controls and their placement.  
   
-     Die Dialogressource speichert eine Dialogfeldvorlage Windows, von der das Dialogfeld erstellt und es anzeigt.  Die Vorlage gibt die Eigenschaften des Dialogfelds, einschließlich Größe, Position, Format und Typen und Position der Steuerelemente des Dialogfelds angezeigt.  Normalerweise verwenden Sie eine Dialogfeldvorlage, die als Ressource gespeichert wird, aber Sie können eine eigene Vorlage im Arbeitsspeicher auch erstellen.  
+     The dialog resource stores a dialog template from which Windows creates the dialog window and displays it. The template specifies the dialog box's characteristics, including its size, location, style, and the types and positions of the dialog box's controls. You will usually use a dialog template stored as a resource, but you can also create your own template in memory.  
   
--   Eine Dialogklasse, abgeleitet von [CDialog\-Klasse](../mfc/reference/cdialog-class.md), um eine programmgesteuerte Schnittstelle zum Verwalten des Dialogfelds bereitzustellen.  
+-   A dialog class, derived from [CDialog](../mfc/reference/cdialog-class.md), to provide a programmatic interface for managing the dialog box.  
   
-     Ein Dialogfeld ist ein Fenster und wird einem Windows\-Fenster angefügt werden, falls sichtbar.  Wenn das Dialogfeld erstellt wird, wird die Dialogfeldvorlagen\-Ressource als Vorlage zum Erstellen von Steuerelementen des untergeordneten Fensters für das Dialogfeld verwendet wird.  
+     A dialog box is a window and will be attached to a Windows window when visible. When the dialog window is created, the dialog-template resource is used as a template for creating child window controls for the dialog box.  
   
-## Siehe auch  
- [Dialogfelder](../mfc/dialog-boxes.md)   
- [Lebenszyklus eines Dialogfelds](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

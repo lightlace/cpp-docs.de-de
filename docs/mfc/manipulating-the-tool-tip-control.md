@@ -1,48 +1,67 @@
 ---
-title: "Bearbeiten des QuickInfo-Steuerelements | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CToolTipCtrl-Klasse, Bearbeiten von QuickInfo-Attributen"
-  - "QuickInfos [C++], Attribute"
+title: Manipulating the Tool Tip Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CToolTipCtrl class [MFC], manipulating tool tip attributes
+- tool tips [MFC], attributes
 ms.assetid: 3600afe5-712a-4b56-8456-96e85fe879af
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Bearbeiten des QuickInfo-Steuerelements
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a6f30981d9bacbd9191c1cc70012131c9064b91f
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-`CToolTipCtrl`\-Klasse stellt eine Gruppe Memberfunktionen, die unterschiedliche Attribute des `CToolTipCtrl`\-Objekts und des QuickInfo\-Fensters steuern.  
+---
+# <a name="manipulating-the-tool-tip-control"></a>Manipulating the Tool Tip Control
+Class `CToolTipCtrl` provides a group of member functions that control the various attributes of the `CToolTipCtrl` object and the tool tip window.  
   
- Die ursprüngliche, das Popup und die reshow Dauer für die QuickInfo\-Fenster können durch Aufrufe von [GetDelayTime](../Topic/CToolTipCtrl::GetDelayTime.md) und [SetDelayTime](../Topic/CToolTipCtrl::SetDelayTime.md) festgelegt und abgerufen werden.  
+ The initial, pop-up, and reshow durations for the tool tip windows can be set and retrieved with calls to [GetDelayTime](../mfc/reference/ctooltipctrl-class.md#getdelaytime) and [SetDelayTime](../mfc/reference/ctooltipctrl-class.md#setdelaytime).  
   
- Ändern der Darstellung der QuickInfo\-Fenster mit den folgenden Features:  
+ Change the appearance of the tool tip windows with the following functions:  
   
--   [GetMargin](../Topic/CToolTipCtrl::GetMargin.md) und [SetMargin](../Topic/CToolTipCtrl::SetMargin.md) ruft ab und legt die Breite zwischen dem QuickInforahmen und den QuickInfo\-Text fest.  
+-   [GetMargin](../mfc/reference/ctooltipctrl-class.md#getmargin) and [SetMargin](../mfc/reference/ctooltipctrl-class.md#setmargin) Retrieves and sets the width between the tool tip border and the tool tip text.  
   
--   [GetMaxTipWidth](../Topic/CToolTipCtrl::GetMaxTipWidth.md) und [SetMaxTipWidth](../Topic/CToolTipCtrl::SetMaxTipWidth.md) ruft ab und legt die maximale Breite des QuickInfo\-Fensters fest.  
+-   [GetMaxTipWidth](../mfc/reference/ctooltipctrl-class.md#getmaxtipwidth) and [SetMaxTipWidth](../mfc/reference/ctooltipctrl-class.md#setmaxtipwidth) Retrieves and sets the maximum width of the tool tip window.  
   
--   [GetTipBkColor](../Topic/CToolTipCtrl::GetTipBkColor.md) und [SetTipBkColor](../Topic/CToolTipCtrl::SetTipBkColor.md) ruft ab und legt die Hintergrundfarbe des QuickInfo\-Fensters fest.  
+-   [GetTipBkColor](../mfc/reference/ctooltipctrl-class.md#gettipbkcolor) and [SetTipBkColor](../mfc/reference/ctooltipctrl-class.md#settipbkcolor) Retrieves and sets the background color of the tool tip window.  
   
--   [GetTipTextColor](../Topic/CToolTipCtrl::GetTipTextColor.md) und [SetTipTextColor](../Topic/CToolTipCtrl::SetTipTextColor.md) ruft ab und legt die Textfarbe des QuickInfo\-Fensters fest.  
+-   [GetTipTextColor](../mfc/reference/ctooltipctrl-class.md#gettiptextcolor) and [SetTipTextColor](../mfc/reference/ctooltipctrl-class.md#settiptextcolor) Retrieves and sets the text color of the tool tip window.  
   
- Damit das ToolTip\-Steuerelement von wichtigen Meldungen, wie **WM\_LBUTTONXXX** Meldungen benachrichtigt werden, müssen Sie die Meldungen für das ToolTip\-Steuerelement weitergeben.  Die beste Methode für dieses Relay ist, machen einen Aufruf von [CToolTipCtrl::RelayEvent](../Topic/CToolTipCtrl::RelayEvent.md), in der `PreTranslateMessage`\-Funktion des Besitzerfensters.  Im folgenden Beispiel wird eine andere Methode \(das ToolTip\-Steuerelement vorausgesetzt wird `m_ToolTip`\) aufgerufen:  
+ In order for the tool tip control to be notified of important messages, such as **WM_LBUTTONXXX** messages, you must relay the messages to your tool tip control. The best method for this relay is to make a call to [CToolTipCtrl::RelayEvent](../mfc/reference/ctooltipctrl-class.md#relayevent), in the `PreTranslateMessage` function of the owner window. The following example illustrates one possible method (assuming the tool tip control is called `m_ToolTip`):  
   
- [!CODE [NVC_MFCControlLadenDialog#41](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCControlLadenDialog#41)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#41](../mfc/codesnippet/cpp/manipulating-the-tool-tip-control_1.cpp)]  
   
- Um ein QuickInfo\-Fenster sofort zu entfernen, rufen Sie die [pop](../Topic/CToolTipCtrl::Pop.md)\-Memberfunktion auf.  
+ To immediately remove a tool tip window, call the [Pop](../mfc/reference/ctooltipctrl-class.md#pop) member function.  
   
-## Siehe auch  
- [Verwenden von CToolTipCtrl](../mfc/using-ctooltipctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CToolTipCtrl](../mfc/using-ctooltipctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

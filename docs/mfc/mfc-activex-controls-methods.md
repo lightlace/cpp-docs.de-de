@@ -1,53 +1,72 @@
 ---
-title: "MFC-ActiveX-Steuerelemente: Methoden | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC-ActiveX-Steuerelemente, Methoden"
+title: 'MFC ActiveX Controls: Methods | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], methods
 ms.assetid: e20271de-6ffa-4ba0-848b-bafe6c9e510c
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# MFC-ActiveX-Steuerelemente: Methoden
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d4142b38abaed1bda6c1069da9e64e92328db222
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Ein ActiveX\-Steuerelement löst Ereignisse aus, um sich zwischen und seinem Steuerelementcontainer zu kommunizieren.  Ein Container kann ein Steuerelement mithilfe der Methoden und Eigenschaften auch kommunizieren.  Methoden sind auch aufgerufene Funktionen.  
+---
+# <a name="mfc-activex-controls-methods"></a>MFC ActiveX Controls: Methods
+An ActiveX control fires events to communicate between itself and its control container. A container can also communicate with a control by means of methods and properties. Methods are also called functions.  
   
- Methoden und Eigenschaften stellen eine exportierte Schnittstelle für andere Anwendungen, z Automatisierungsclients und ActiveX\-Steuerelementcontainer bereit.  Weitere Informationen über ActiveX\-Steuerelementeigenschaften, finden Sie im Artikel [MFC\-ActiveX\-Steuerelemente: Eigenschaften](../mfc/mfc-activex-controls-properties.md).  
+ Methods and properties provide an exported interface for use by other applications, such as Automation clients and ActiveX control containers. For more information on ActiveX control properties, see the article [MFC ActiveX Controls: Properties](../mfc/mfc-activex-controls-properties.md).  
   
- Methoden sind ähnlich gebräuchliches und beabsichtigen zu Memberfunktionen von eine C\+\+\-Klasse.  Es gibt zwei Typen von Methoden, die das Steuerelement implementieren kann: Bestand und Custom.  Ähnlich den vordefinierten Ereignisse sind vordefinierte, Methoden diese Methoden, für die [COleControl](../mfc/reference/colecontrol-class.md) eine Implementierung bereitstellt.  Weitere Informationen über vordefinierte Methoden, finden Sie im Artikel [MFC\-ActiveX\-Steuerelemente: Hinzufügen vordefinierter Methoden](../mfc/mfc-activex-controls-adding-stock-methods.md).  Die benutzerdefinierten Methoden definiert, dem Entwickler, können weitere Anpassungen des Steuerelements.  Weitere Informationen finden Sie im Artikel [MFC\-ActiveX\-Steuerelemente: Hinzufügen von benutzerdefinierten Methoden](../mfc/mfc-activex-controls-adding-custom-methods.md).  
+ Methods are similar in use and purpose to the member functions of a C++ class. There are two types of methods your control can implement: stock and custom. Similar to stock events, stock methods are those methods for which [COleControl](../mfc/reference/colecontrol-class.md) provides an implementation. For more information on stock methods, see the article [MFC ActiveX Controls: Adding Stock Methods](../mfc/mfc-activex-controls-adding-stock-methods.md). Custom methods, defined by the developer, allow additional customization of the control. For more information, see the article [MFC ActiveX Controls: Adding Custom Methods](../mfc/mfc-activex-controls-adding-custom-methods.md).  
   
- Die Microsoft Foundation Class\-Bibliothek " \(MFC\-Bibliothek\) implementiert einen Mechanismus, der das Steuerelement an Stützvordefinierten und benutzerdefinierten Methoden zulässig.  Der erste Teil ist die Klasse `COleControl`.  Ist von `CWnd`, `COleControl`\-Memberfunktionsstützvorratmethoden, die allen ActiveX\-Steuerelemente häufig sind.  Der zweite Teil dieses Mechanismus ist die Dispatchzuordnung.  Eine Dispatchzuordnung ist einer Meldungszuordnung ähnlich; jedoch, anstatt einer Funktion einer Windows\-Meldung ID zugeordnet zu, wird eine Dispatchzuordnung virtuellen Memberfunktionen zu IDispatch\-IDS.  
+ The Microsoft Foundation Class Library (MFC) implements a mechanism that allows your control to support stock and custom methods. The first part is class `COleControl`. Derived from `CWnd`, `COleControl` member functions support stock methods that are common to all ActiveX controls. The second part of this mechanism is the dispatch map. A dispatch map is similar to a message map; however, instead of mapping a function to a Windows message ID, a dispatch map maps virtual member functions to IDispatch IDS.  
   
- Damit Steuerelemente ordnungsgemäß verschiedene Möglichkeiten, die Klasse muss eine Dispatchzuordnung deklarieren unterstützt.  Dies wird durch die folgende Codezeile in der Steuerelementklassenkopfzeile erreicht \(.H\) Datei:  
+ For a control to support various methods properly, its class must declare a dispatch map. This is accomplished by the following line of code located in control class header (.H) file:  
   
- [!CODE [NVC_MFC_AxUI#13](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxUI#13)]  
+ [!code-cpp[NVC_MFC_AxUI#13](../mfc/codesnippet/cpp/mfc-activex-controls-methods_1.h)]  
   
- Der primäre Zweck der Dispatchzuordnung ist, die Beziehung zwischen den Methodennamen, die von einem externen Aufrufer \(verwendet werden wie dem Container\) und Memberfunktionen der Klasse des Steuerelements erstellen, die die Methoden implementieren.  Nachdem die Dispatchzuordnung deklariert wurde, muss sie in der Implementierung des Steuerelements definiert werden \(.CPP\).  Die folgenden Codezeilen werden die Dispatchzuordnung:  
+ The main purpose of the dispatch map is to establish the relationship between the method names used by an external caller (such as the container) and the member functions of the control's class that implement the methods. After the dispatch map has been declared, it needs to be defined in the control's implementation (.CPP) file. The following lines of code define the dispatch map:  
   
- [!CODE [NVC_MFC_AxUI#14](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxUI#14)]  
-[!CODE [NVC_MFC_AxUI#15](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxUI#15)]  
+ [!code-cpp[NVC_MFC_AxUI#14](../mfc/codesnippet/cpp/mfc-activex-controls-methods_2.cpp)]  
+[!code-cpp[NVC_MFC_AxUI#15](../mfc/codesnippet/cpp/mfc-activex-controls-methods_3.cpp)]  
   
- Wenn Sie [MFC\-ActiveX\-Steuerelement\-Assistent](../mfc/reference/mfc-activex-control-wizard.md) verwenden, um das Projekt zu erstellen, wurden diese Zeilen automatisch hinzugefügt.  Wenn der MFC\-ActiveX\-Steuerelement\-Assistent nicht verwendet wurde, müssen Sie diese manuell Zeilen hinzufügen.  
+ If you used the [MFC ActiveX Control Wizard](../mfc/reference/mfc-activex-control-wizard.md) to create the project, these lines were added automatically. If the MFC ActiveX Control Wizard was not used, you must add these lines manually.  
   
- Die folgenden Elemente werden Methoden ausführlich erörtert:  
+ The following articles discuss methods in detail:  
   
--   [MFC\-ActiveX\-Steuerelemente: Hinzufügen vordefinierter Methoden](../mfc/mfc-activex-controls-adding-stock-methods.md)  
+-   [MFC ActiveX Controls: Adding Stock Methods](../mfc/mfc-activex-controls-adding-stock-methods.md)  
   
--   [MFC\-ActiveX\-Steuerelemente: Hinzufügen von benutzerdefinierten Methoden](../mfc/mfc-activex-controls-adding-custom-methods.md)  
+-   [MFC ActiveX Controls: Adding Custom Methods](../mfc/mfc-activex-controls-adding-custom-methods.md)  
   
--   [MFC\-ActiveX\-Steuerelemente: Rückgabe von Fehlercodes aus einer Methode](../mfc/mfc-activex-controls-returning-error-codes-from-a-method.md)  
+-   [MFC ActiveX Controls: Returning Error Codes From a Method](../mfc/mfc-activex-controls-returning-error-codes-from-a-method.md)  
   
-## Siehe auch  
- [MFC\-ActiveX\-Steuerelemente](../mfc/mfc-activex-controls.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)
+
+

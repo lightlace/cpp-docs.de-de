@@ -1,5 +1,5 @@
 ---
-title: bernoulli_distribution-Klasse | Microsoft-Dokumentation
+title: bernoulli_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- bernoulli_distribution
 - random/std::bernoulli_distribution
 - random/std::bernoulli_distribution::reset
 - random/std::bernoulli_distribution::p
@@ -25,7 +24,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- bernoulli_distribution class
+- std::bernoulli_distribution [C++]
+- std::bernoulli_distribution [C++], reset
+- std::bernoulli_distribution [C++], p
+- std::bernoulli_distribution [C++], param
+- std::bernoulli_distribution [C++], min
+- std::bernoulli_distribution [C++], max
+- std::bernoulli_distribution [C++], param_type
+- std::bernoulli_distribution [C++], param_type
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
 caps.latest.revision: 22
 author: corob-msft
@@ -45,15 +51,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 6711efe0bf60bc9320e1d97c83de50dcc3020971
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: af7aee87a8e1dd47a6548ac0edb4057b54b0bb2d
 ms.contentlocale: de-de
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="bernoullidistribution-class"></a>bernoulli_distribution-Klasse
-Generiert eine Bernoulli-Verteilung.  
+# <a name="bernoullidistribution-class"></a>bernoulli_distribution Class
+Generates a Bernoulli distribution.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -85,33 +91,33 @@ public:
    };  
 ```
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
   
-*URNG* Das einheitliche Zufallszahlengenerator-Modul. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).  
+*URNG* The uniform random number generator engine. For possible types, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>Hinweise  
-Die Klasse beschreibt eine Verteilung, die Werte vom Typ `bool` produziert. Diese werden entsprechend der diskreten Wahrscheinlichkeitsfunktion zur Bernoulli-Verteilung verteilt. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.  
+## <a name="remarks"></a>Remarks  
+The class describes a distribution that produces values of type `bool`, distributed according to the Bernoulli distribution discrete probability function. The following table links to articles about individual members.  
   
 ||||  
 |-|-|-|  
 |[bernoulli_distribution](#bernoulli_distribution)|`bernoulli_distribution::p`|`bernoulli_distribution::param`|  
 |`bernoulli_distribution::operator()`||[param_type](#param_type)|  
   
-Das Eigenschaftsmember `p()` gibt den aktuell gespeicherten Verteilungsparameterwert `p` zurück.  
+The property member `p()` returns the currently stored distribution parameter value `p`.  
   
-Der Eigenschaftenmember `param()` legt das gespeicherte Verteilungsparameterpaket `param_type` fest oder gibt es zurück.  
+The property member `param()` sets or returns the `param_type` stored distribution parameter package.  
 
-Die `min()`- und `max()`-Memberfunktion gibt das jeweils kleinst- und größtmögliche Ergebnis zurück.  
+The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.  
   
-Die `reset()`-Memberfunktion verwirft alle zwischengespeicherten Werte, damit das Ergebnis des folgenden Aufrufs von `operator()` nicht von Werten abhängig ist, die vor dem Aufruf aus dem Modul bezogen wurden.  
+The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.  
   
-Die `operator()`-Memberfunktionen geben den nächsten generierten Wert von entweder dem aktuellen oder dem spezifizierten Parameterpaket zurück, das auf dem URNG-Modul basiert.
+The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
   
-Weitere Informationen zu Verteilungsklassen und ihren Membern finden Sie unter [\<random>](../standard-library/random.md).  
+For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
-Ausführliche Informationen über die diskrete Wahrscheinlichkeitsfunktion zur Bernoulli-Verteilung finden Sie im Wolfram MathWorld-Artikel [Bernoulli Distribution](http://go.microsoft.com/fwlink/LinkId=398467).  
+For detailed information about the Bernoulli distribution discrete probability function, see the Wolfram MathWorld article [Bernoulli Distribution](http://go.microsoft.com/fwlink/LinkId=398467).  
   
-## <a name="example"></a>Beispiel  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -171,35 +177,35 @@ false :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
  true :::::::::::::::::::::::::::::::::::::::::
 ```  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
 **Header:** \<random>  
   
 **Namespace:** std  
   
-##  <a name="bernoulli_distribution"></a> bernoulli_distribution::bernoulli_distribution  
-Erstellt die Verteilung.  
+##  <a name="bernoulli_distribution"></a>  bernoulli_distribution::bernoulli_distribution  
+Constructs the distribution.  
   
 ```  
 explicit bernoulli_distribution(double p = 0.5);
 explicit bernoulli_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
 *p*  
- Der gespeicherte `p`-Verteilungsparameter.  
+ The stored `p` distribution parameter.  
   
 *parm*  
- Die für die Erstellung der Verteilung verwendete `param_type`-Struktur.  
+ The `param_type` structure used to construct the distribution.  
   
-### <a name="remarks"></a>Hinweise  
- **Vorbedingung:** `0.0 ≤ p ≤ 1.0`  
+### <a name="remarks"></a>Remarks  
+ **Precondition:** `0.0 ≤ p ≤ 1.0`  
   
-Der erste Konstruktor konstruiert ein Objekt, dessen gespeicherter `p`-Wert den Wert *p* enthält.  
+The first constructor constructs an object whose stored `p` value holds the value *p*.  
   
-Mit dem zweiten Konstruktor wird ein Objekt erstellt, dessen gespeicherte Parameter von *parm* initialisiert werden. Sie können die aktuellen Parameter einer vorhandenen Verteilung abrufen und festlegen, indem Sie die Memberfunktion `param()` aufrufen.  
+The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.  
   
-##  <a name="param_type"></a> bernoulli_distribution::param_type  
-Enthält die Parameter der Verteilung.  
+##  <a name="param_type"></a>  bernoulli_distribution::param_type  
+Contains the parameters of the distribution.  
   
 struct param_type {  
    typedef bernoulli_distribution distribution_type;  
@@ -207,16 +213,16 @@ struct param_type {
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
 *p*  
-Der gespeicherte `p`-Verteilungsparameter.  
+The stored `p` distribution parameter.  
   
-### <a name="remarks"></a>Hinweise  
-**Vorbedingung:** `0.0 ≤ p ≤ 1.0`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `0.0 ≤ p ≤ 1.0`  
   
-Diese Struktur kann bei der Instanziierung an den Klassenkonstruktor des Verteilers, an die Memberfunktion `param()` (zur Festlegung der gespeicherten Parameter einer vorhandenen Verteilung) und an `operator()` (zur Verwendung anstelle der gespeicherten Parameter) übergeben werden.  
+This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

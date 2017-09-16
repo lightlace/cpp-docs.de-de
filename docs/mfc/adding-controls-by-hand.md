@@ -1,48 +1,67 @@
 ---
-title: "Manuelles Hinzuf&#252;gen von Steuerelementen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Allgemeine Steuerelemente [C++], Hinzufügen"
-  - "Kontrollieren des Eingabefokus"
-  - "Steuerelemente [MFC], Hinzufügen zu Dialogfeldern"
-  - "Dialogfeldsteuerelemente [C++], Hinzufügen zu Dialogfeldern"
-  - "Fokus, Kontrollieren von Eingabe"
-  - "Eingabefokus-Steuerelemente"
-  - "Allgemeine Windows-Steuerelemente [C++], Hinzufügen"
+title: Adding Controls By Hand | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Windows common controls [MFC], adding
+- dialog box controls [MFC], adding to dialog boxes
+- controlling input focus
+- input focus control
+- focus, controlling input [MFC]
+- controls [MFC], adding to dialog boxes
+- common controls [MFC], adding
 ms.assetid: bc843e59-0c51-4b5b-8bf2-343f716469d2
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Manuelles Hinzuf&#252;gen von Steuerelementen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f91b61355e5a1c46099cc78cdafc3b26fde08c0e
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Sie können entweder die [Fügen Sie Steuerelemente einem Dialogfeld mit dem Dialog\-Editor hinzu](../mfc/using-the-dialog-editor-to-add-controls.md) oder hinzuzufügen sie sich, mit Code.  
+---
+# <a name="adding-controls-by-hand"></a>Adding Controls By Hand
+You can either [add controls to a dialog box with the dialog editor](../mfc/using-the-dialog-editor-to-add-controls.md) or add them yourself, with code.  
   
- Um ein Steuerobjekt sich erstellen, müssen Sie normalerweise das C\+\+\-Steuerobjekt im Dialogfeld\- oder Rahmenfensterobjekt eine C\+\+\-Headerdatei ein.  Wie bei vielen anderen Objekte im Framework, benötigen Steuerelemente zweistufige Konstruktion.  Sie sollten die **Erstellen**\-Memberfunktion des Steuerelements als Teil des Erstellens des übergeordneten Dialogfeld oder des Rahmenfensters aufrufen.  Weitere Dialogfelder wird dies normalerweise in [OnInitDialog](../Topic/CDialog::OnInitDialog.md) und für Rahmenfenster, in [OnCreate](../Topic/CWnd::OnCreate.md) erreicht.  
+ To create a control object yourself, you will usually embed the C++ control object in a C++ dialog or frame-window object. Like many other objects in the framework, controls require two-stage construction. You should call the control's **Create** member function as part of creating the parent dialog box or frame window. For dialog boxes, this is usually done in [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), and for frame windows, in [OnCreate](../mfc/reference/cwnd-class.md#oncreate).  
   
- Das folgende Beispiel zeigt, wie Sie ein `CEdit`\-Objekt in der Klassendeklaration einer abgeleiteten Dialogfeldklasse deklarieren und anschließend die **Erstellen**\-Memberfunktion in `OnInitDialog` aufgerufen haben.  Da das `CEdit`\-Objekt als eingebettetes Objekt deklariert ist, wird es automatisch erstellt, wenn das gleichzeitig erstellt wird, jedoch muss mit einer eigenen **Erstellen**\-Memberfunktion noch initialisiert werden.  
+ The following example shows how you might declare a `CEdit` object in the class declaration of a derived dialog class and then call the **Create** member function in `OnInitDialog`. Because the `CEdit` object is declared as an embedded object, it is automatically constructed when the dialog object is constructed, but it must still be initialized with its own **Create** member function.  
   
- [!CODE [NVC_MFCControlLadenDialog#1](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCControlLadenDialog#1)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#1](../mfc/codesnippet/cpp/adding-controls-by-hand_1.h)]  
   
- Die folgende `OnInitDialog`\-Funktion installiert ein Rechteck, ruft **Erstellen** auf, um das Windows\-Bearbeitungssteuerelement zu erstellen und es an nicht initialisierten `CEdit`\-Objekt anfügen.  
+ The following `OnInitDialog` function sets up a rectangle, then calls **Create** to create the Windows edit control and attach it to the uninitialized `CEdit` object.  
   
- [!CODE [NVC_MFCControlLadenDialog#2](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCControlLadenDialog#2)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#2](../mfc/codesnippet/cpp/adding-controls-by-hand_2.cpp)]  
   
- Nachdem Sie das Bearbeitungsobjekt erstellt haben, können Sie den Eingabefokus auf das Steuerelement festlegen, indem Sie die `SetFocus`\-Memberfunktion aufrufen.  Abschließend geben Sie 0 von `OnInitDialog` zurück, um anzugeben dass legen Sie den Fokus.  Wenn Sie einen Wert ungleich 0 \(null\) zurückgeben, legt der Dialogfeldmanager den Fokus auf das erste Steuerelement in der Dialogfeldelementliste fest.  In den meisten Fällen werden Steuerelemente den Dialogfeldern mit dem Dialog\-Editor hinzufügen.  
+ After creating the edit object, you can also set the input focus to the control by calling the `SetFocus` member function. Finally, you return 0 from `OnInitDialog` to show that you set the focus. If you return a nonzero value, the dialog manager sets the focus to the first control item in the dialog item list. In most cases, you'll want to add controls to your dialog boxes with the dialog editor.  
   
-## Siehe auch  
- [Erstellen und Verwenden von Steuerelementen](../mfc/making-and-using-controls.md)   
- [Steuerelemente](../mfc/controls-mfc.md)   
- [CDialog::OnInitDialog](../Topic/CDialog::OnInitDialog.md)
+## <a name="see-also"></a>See Also  
+ [Making and Using Controls](../mfc/making-and-using-controls.md)   
+ [Controls](../mfc/controls-mfc.md)   
+ [CDialog::OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)
+
+

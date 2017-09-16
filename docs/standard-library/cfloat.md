@@ -1,5 +1,5 @@
 ---
-title: '&lt;cfloat&gt; | Microsoft-Dokumentation'
+title: '&lt;cfloat&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.<cfloat>
-- std::<cfloat>
-- <cfloat>
+- std::<cfloat>", "<cfloat>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,15 +33,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: f9ca62c9f8ae6afa9de444e316c3061c33dfaa0e
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 634b93e9c025f3db02f6e583a600c4960f744226
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltcfloatgt"></a>&lt;cfloat&gt;
-Schließt den Standard-C-Bibliotheksheader \<float.h> ein.  
+Includes the Standard C library header \<float.h>.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -52,10 +50,10 @@ Schließt den Standard-C-Bibliotheksheader \<float.h> ein.
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)   
- [Übersicht über die C++-Standardbibliothek](../standard-library/cpp-standard-library-overview.md)   
- [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

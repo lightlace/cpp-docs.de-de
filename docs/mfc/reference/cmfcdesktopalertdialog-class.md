@@ -1,5 +1,5 @@
 ---
-title: Klasse CMFCDesktopAlertDialog | Microsoft-Dokumentation
+title: CMFCDesktopAlertDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,7 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCDesktopAlertDialog class
+- CMFCDesktopAlertDialog [MFC], CreateFromParams
+- CMFCDesktopAlertDialog [MFC], GetDlgSize
+- CMFCDesktopAlertDialog [MFC], HasFocus
+- CMFCDesktopAlertDialog [MFC], PreTranslateMessage
 ms.assetid: a53c60aa-9607-485b-b826-ec64962075f6
 caps.latest.revision: 24
 author: mikeblome
@@ -38,15 +41,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: a782b48c842bf7cf79b0c01a527132b18700535b
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0de3f99e7ea48a7bb354776fc3b2c8b506f9c07f
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcdesktopalertdialog-class"></a>CMFCDesktopAlertDialog-Klasse
-Die `CMFCDesktopAlertDialog` Klasse dient zusammen mit den [CMFCDesktopAlertWnd Klasse](../../mfc/reference/cmfcdesktopalertwnd-class.md) um ein benutzerdefiniertes Dialogfeld in einem Popupfenster anzuzeigen.  
+# <a name="cmfcdesktopalertdialog-class"></a>CMFCDesktopAlertDialog Class
+The `CMFCDesktopAlertDialog` class is used together with the [CMFCDesktopAlertWnd Class](../../mfc/reference/cmfcdesktopalertwnd-class.md) to display a custom dialog in a popup window.  
 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
@@ -56,30 +59,30 @@ Die `CMFCDesktopAlertDialog` Klasse dient zusammen mit den [CMFCDesktopAlertWnd 
 class CMFCDesktopAlertDialog : public CDialogEx  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Öffentliche Methoden  
+### <a name="public-methods"></a>Public Methods  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
 |[CMFCDesktopAlertDialog::CreateFromParams](#createfromparams)||  
 |[CMFCDesktopAlertDialog::GetDlgSize](#getdlgsize)||  
 |[CMFCDesktopAlertDialog::HasFocus](#hasfocus)||  
-|[CMFCDesktopAlertDialog::PreTranslateMessage](#pretranslatemessage)|(Überschreibt `CDialogEx::PreTranslateMessage`.)|  
+|[CMFCDesktopAlertDialog::PreTranslateMessage](#pretranslatemessage)|(Overrides `CDialogEx::PreTranslateMessage`.)|  
   
-### <a name="remarks"></a>Hinweise  
- Führen Sie die folgenden Schritte aus, um ein benutzerdefiniertes Dialogfeld in einem Popupfenster anzuzeigen:  
+### <a name="remarks"></a>Remarks  
+ Perform the following steps to display a custom dialog in a popup window:  
   
-1.  Leiten Sie eine Klasse von `CMFCDesktopAlertDialog` ab.  
+1.  Derive a class from `CMFCDesktopAlertDialog`.  
   
-2.  Erstellen Sie eine untergeordnete Dialogfeldvorlage in den Ressourcen des Projekts.  
+2.  Create a child dialog template in the resources of the project.  
   
-3.  Rufen Sie [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) mit der ID Ressourcen der Dialogfeldvorlage und einen Zeiger auf die Laufzeit-Klasseninformationen der abgeleiteten Klasse als Parameter.  
+3.  Call [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) with the resource ID of the dialog template and a pointer to the runtime class information of the derived class as parameters.  
   
-4.  Programmieren Sie das benutzerdefinierte Dialogfeld so, dass es alle Benachrichtigungen von den gehosteten Steuerelementen verarbeitet, oder programmieren Sie die gehosteten Steuerelemente so, dass sie diese Benachrichtigungen direkt verarbeiten.  
+4.  Program the custom dialog to handle all notifications that are coming from the hosted controls, or program the hosted controls to handle these notifications directly.  
   
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- [Von CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -91,10 +94,10 @@ class CMFCDesktopAlertDialog : public CDialogEx
   
  [CMFCDesktopAlertDialog](../../mfc/reference/cmfcdesktopalertdialog-class.md)  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** afxDesktopAlertDialog.h  
   
-##  <a name="createfromparams"></a>CMFCDesktopAlertDialog::CreateFromParams  
+##  <a name="createfromparams"></a>  CMFCDesktopAlertDialog::CreateFromParams  
 
   
 ```  
@@ -103,54 +106,54 @@ BOOL CreateFromParams(
     CMFCDesktopAlertWnd* pParent);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `params`  
  [in] `pParent`  
   
-### <a name="return-value"></a>Rückgabewert  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getdlgsize"></a>CMFCDesktopAlertDialog::GetDlgSize  
+##  <a name="getdlgsize"></a>  CMFCDesktopAlertDialog::GetDlgSize  
 
   
 ```  
 CSize GetDlgSize();
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="hasfocus"></a>CMFCDesktopAlertDialog::HasFocus  
+##  <a name="hasfocus"></a>  CMFCDesktopAlertDialog::HasFocus  
 
   
 ```  
 BOOL HasFocus() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="pretranslatemessage"></a>CMFCDesktopAlertDialog::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>  CMFCDesktopAlertDialog::PreTranslateMessage  
 
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `pMsg`  
   
-### <a name="return-value"></a>Rückgabewert  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>Siehe auch  
- [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
- [Klassen](../../mfc/reference/mfc-classes.md)   
- [CMFCDesktopAlertWnd-Klasse](../../mfc/reference/cmfcdesktopalertwnd-class.md)   
- [CMFCDesktopAlertWndInfo-Klasse](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)   
- [CDialogEx-Klasse](../../mfc/reference/cdialogex-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCDesktopAlertWnd Class](../../mfc/reference/cmfcdesktopalertwnd-class.md)   
+ [CMFCDesktopAlertWndInfo Class](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)   
+ [CDialogEx Class](../../mfc/reference/cdialogex-class.md)
 

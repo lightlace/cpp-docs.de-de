@@ -1,112 +1,127 @@
 ---
-title: "Behandeln von Anpassungsbenachrichtigungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TBN_CUSTHELP"
-  - "TBN_QUERYINSERT"
-  - "TBNOTIFY"
-  - "NMHDR"
-  - "TBN_TOOLBARCHANGE"
-  - "TBN_ENDDRAG"
-  - "NM_SETFOCUS"
-  - "TBN_RESET"
-  - "NM_RETURN"
-  - "NM_ENDWAIT"
-  - "NM_STARTWAIT"
-  - "TBN_BEGINDRAG"
-  - "NM_OUTOFMEMORY"
-  - "TBN_QUERYDELETE"
-  - "NM_DBLCLK"
-  - "TBN_ENDADJUST"
-  - "NM_KILLFOCUS"
-  - "NM_RCLICK"
-  - "TBN_BEGINADJUST"
-  - "NM_CLICK"
-  - "NM_RDBLCLK::"
-  - "TBN_GETBUTTONINFO"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "TBN_ENDADJUST-Benachrichtigung"
-  - "TBNOTIFY-Benachrichtigung"
-  - "TBN_BEGINDRAG-Benachrichtigung"
-  - "TBN_TOOLBARCHANGE-Benachrichtigung"
-  - "NM_CLICK-Benachrichtigung"
-  - "NM_RETURN-Benachrichtigung"
-  - "NM_RCLICK-Benachrichtigung"
-  - "TBN_ENDDRAG-Benachrichtigung"
-  - "TBN_BEGINADJUST-Benachrichtigung"
-  - "NM_ENDWAIT-Benachrichtigung"
-  - "NM_KILLFOCUS-Benachrichtigung"
-  - "NM_SETFOCUS-Benachrichtigung"
-  - "NM_OUTOFMEMORY-Benachrichtigung"
-  - "TBN_QUERYINSERT-Benachrichtigung"
-  - "NMHDR"
-  - "NM_STARTWAIT-Benachrichtigung"
-  - "CToolBarCtrl-Klasse, Behandeln von Benachrichtigungen"
-  - "TBN_CUSTHELP-Benachrichtigung"
-  - "TBN_RESET-Benachrichtigung"
-  - "NM_DBLCLK-Benachrichtigung"
-  - "TBN_QUERYDELETE-Benachrichtigung"
-  - "NM_RDBLCLK-Benachrichtigung"
-  - "TBN_GETBUTTONINFO-Benachrichtigung"
+title: Handling Customization Notifications | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- TBN_CUSTHELP
+- TBN_QUERYINSERT
+- TBNOTIFY
+- NMHDR
+- TBN_TOOLBARCHANGE
+- TBN_ENDDRAG
+- NM_SETFOCUS
+- TBN_RESET
+- NM_RETURN
+- NM_ENDWAIT
+- NM_STARTWAIT
+- TBN_BEGINDRAG
+- NM_OUTOFMEMORY
+- TBN_QUERYDELETE
+- NM_DBLCLK
+- TBN_ENDADJUST
+- NM_KILLFOCUS
+- NM_RCLICK
+- TBN_BEGINADJUST
+- NM_CLICK
+dev_langs:
+- C++
+helpviewer_keywords:
+- TBN_ENDADJUST notification [MFC]
+- TBNOTIFY notification [MFC]
+- TBN_BEGINDRAG notification [MFC]
+- TBN_TOOLBARCHANGE notification [MFC]
+- NM_CLICK notification [MFC]
+- NM_RETURN notification [MFC]
+- NM_RCLICK notification [MFC]
+- TBN_ENDDRAG notification [MFC]
+- TBN_BEGINADJUST notification [MFC]
+- NM_ENDWAIT notification [MFC]
+- NM_KILLFOCUS notification [MFC]
+- NM_SETFOCUS notification [MFC]
+- NM_OUTOFMEMORY notification [MFC]
+- TBN_QUERYINSERT notification [MFC]
+- NMHDR [MFC]
+- NM_STARTWAIT notification [MFC]
+- CToolBarCtrl class [MFC], handling notifications
+- TBN_CUSTHELP notification [MFC]
+- TBN_RESET notification [MFC]
+- NM_DBLCLK notification [MFC]
+- TBN_QUERYDELETE notification [MFC]
+- NM_RDBLCLK notification [MFC]
+- TBN_GETBUTTONINFO notification [MFC]
 ms.assetid: 219ea08e-7515-4b98-85cb-47120f08c0a2
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Behandeln von Anpassungsbenachrichtigungen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5e91497af12fb29ed1aa017d5cef9d285018bcb1
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Ein allgemeine Windows\-Symbolleisten\-Steuerelement verfügt über integrierte Funktionen zur Anpassung, einschließlich eines vom System definierten Anpassungsdialogfelds, das dem Benutzer das Einfügen, Löschen oder erneute Anordnen von Schaltflächen auf der Symbolleiste ermöglicht. Die Anwendung bestimmt, ob die Anpassungsfunktionen verfügbar sind und steuert das Ausmaß, bis zu dem der Benutzer die Symbolleiste anpassen kann.  
+---
+# <a name="handling-customization-notifications"></a>Handling Customization Notifications
+A Windows toolbar common control has built-in customization features, including a system-defined customization dialog box, which allow the user to insert, delete, or rearrange toolbar buttons. The application determines whether the customization features are available and controls the extent to which the user can customize the toolbar.  
   
- Sie können dem Benutzer diese Anpassungsfunktionen zugänglich machen, indem Sie der Symbolleiste die Formatvorlage `CCS_ADJUSTABLE` zuweisen. Die Anpassungsfunktionen ermöglichen es dem Benutzer, eine Schaltfläche an eine neue Position zu ziehen oder eine Schaltfläche zu entfernen, indem er sie von der Symbolleiste zieht. Darüber hinaus kann der Benutzer auf die Symbolleiste doppelklicken, um das Dialogfeld **Symbolleiste anpassen** anzuzeigen, in dem der Benutzer Symbolleistenschaltflächen hinzufügen, löschen und neu anordnen kann. Die Anwendung kann das Dialogfeld mithilfe der Memberfunktion [Customize](../Topic/CToolBarCtrl::Customize.md) anzeigen.  
+ You can make these customization features available to the user by giving the toolbar the `CCS_ADJUSTABLE` style. The customization features allow the user to drag a button to a new position or to remove a button by dragging it off the toolbar. In addition, the user can double-click the toolbar to display the **Customize Toolbar** dialog box, which allows the user to add, delete, and rearrange toolbar buttons. The application can display the dialog box by using the [Customize](../mfc/reference/ctoolbarctrl-class.md#customize) member function.  
   
- Das Symbolleistensteuerelement sendet bei jedem Schritt im Anpassungsvorgang Benachrichtigungsmeldungen an das übergeordnete Fenster. Wenn der Benutzer die UMSCHALT\-Taste gedrückt hält und beginnt, eine Schaltfläche zu ziehen, übernimmt die Symbolleiste automatisch die Verarbeitung des Ziehvorgangs. Die Symbolleiste sendet die Benachrichtigungsmeldung **TBN\_QUERYDELETE** an das übergeordnete Fenster, um zu bestimmen, ob die Schaltfläche gelöscht werden darf. Der Ziehvorgang endet, wenn das übergeordnete Fenster **FALSE** zurückgibt. Andernfalls erfasst die Symbolleiste die Mauseingabe und wartet darauf, dass der Benutzer die Maustaste freigibt.  
+ The toolbar control sends notification messages to the parent window at each step in the customization process. If the user holds the SHIFT key down and begins dragging a button, the toolbar automatically handles the drag operation. The toolbar sends the **TBN_QUERYDELETE** notification message to the parent window to determine whether the button may be deleted. The drag operation ends if the parent window returns **FALSE**. Otherwise, the toolbar captures mouse input and waits for the user to release the mouse button.  
   
- Wenn der Benutzer die Maustaste freigibt, bestimmt die Symbolleiste die Position des Mauszeigers. Wenn der Zeiger sich außerhalb der Symbolleiste befindet, wird die Schaltfläche gelöscht. Wenn der Cursor sich auf einer anderen Symbolleistenschaltfläche befindet, sendet die Symbolleiste die Benachrichtigungsmeldung **TBN\_QUERYINSERT** an das übergeordnete Fenster, um zu bestimmen, ob links neben der angegebenen Schaltfläche eine Schaltfläche eingefügt werden darf. Die Schaltfläche wird eingefügt, wenn das übergeordnete Fenster **TRUE** zurückgibt, andernfalls nicht. Die Symbolleiste sendet die Benachrichtigungsmeldung **TBN\_TOOLBARCHANGE**, um das Ende des Ziehvorgangs anzuzeigen.  
+ When the user releases the mouse button, the toolbar control determines the location of the mouse cursor. If the cursor is outside the toolbar, the button is deleted. If the cursor is on another toolbar button, the toolbar sends the **TBN_QUERYINSERT** notification message to the parent window to determine if a button may be inserted to the left of the given button. The button is inserted if the parent window returns **TRUE**; otherwise, it is not. The toolbar sends the **TBN_TOOLBARCHANGE** notification message to signal the end of the drag operation.  
   
- Wenn der Benutzer einen Ziehvorgang beginnt, ohne die UMSCHALT\-Taste gedrückt zu halten, sendet das Symbolleistensteuerelement die Benachrichtigungsmeldung **TBN\_BEGINDRAG** an das besitzende Fenster. Eine Anwendung, die eigenen Code zum Ziehen von Schaltflächen implementiert, kann diese Nachricht als Signal zum Einleiten eines Ziehvorgangs verwenden. Die Symbolleiste sendet die Benachrichtigungsmeldung **TBN\_ENDDRAG**, um das Ende des Ziehvorgangs anzuzeigen.  
+ If the user begins a drag operation without holding down the SHIFT key, the toolbar control sends the **TBN_BEGINDRAG** notification message to the owner window. An application that implements its own button-dragging code can use this message as a signal to begin a drag operation. The toolbar sends the **TBN_ENDDRAG** notification message to signal the end of the drag operation.  
   
- Ein Symbolleistensteuerelement sendet Benachrichtigungsmeldungen, wenn der Benutzer eine Symbolleiste mithilfe des Dialogfelds **Symbolleiste anpassen** konfiguriert. Die Symbolleiste sendet die Benachrichtigungsmeldung **TBN\_BEGINADJUST**, nachdem der Benutzer auf die Symbolleiste doppelgeklickt hat, aber bevor das Dialogfeld erstellt wird. Als Nächstes beginnt die Symbolleiste, eine Reihe von **TBN\_QUERYINSERT**\-Benachrichtigungsmeldungen zu senden, um zu bestimmen, ob die Symbolleiste das Einfügen von Schaltflächen zulässt. Wenn das übergeordnete Fenster **TRUE** zurückgibt, hört die Symbolleiste mit dem Senden von **TBN\_QUERYINSERT**\-Benachrichtigungsmeldungen auf. Wenn das übergeordnete Fenster für keine der Schaltflächen **TRUE** zurückgibt, zerstört die Symbolleiste das Dialogfeld.  
+ A toolbar control sends notification messages when the user customizes a toolbar by using the **Customize Toolbar** dialog box. The toolbar sends the **TBN_BEGINADJUST** notification message after the user double-clicks the toolbar, but before the dialog box is created. Next, the toolbar begins sending a series of **TBN_QUERYINSERT** notification messages to determine whether the toolbar allows buttons to be inserted. When the parent window returns **TRUE**, the toolbar stops sending **TBN_QUERYINSERT** notification messages. If the parent window does not return **TRUE** for any button, the toolbar destroys the dialog box.  
   
- Als Nächstes bestimmt das Symbolleistensteuerelement, ob Schaltflächen von der Symbolleiste gelöscht werden können, indem es eine **TBN\_QUERYDELETE**\-Benachrichtigungsmeldung für jede Schaltfläche auf der Symbolleiste sendet. Das übergeordnete Fenster gibt **TRUE** zurück, um anzuzeigen, dass eine Schaltfläche gelöscht werden kann; andernfalls gibt es **FALSE** zurück. Die Symbolleiste fügt dem Dialogfeld alle Symbolleistenschaltflächen hinzu, stellt aber die nicht löschbaren grau dar.  
+ Next, the toolbar control determines if any buttons may be deleted from the toolbar by sending one **TBN_QUERYDELETE** notification message for each button in the toolbar. The parent window returns **TRUE** to indicate that a button may be deleted; otherwise, it returns **FALSE**. The toolbar adds all toolbar buttons to the dialog box, but grays those that may not be deleted.  
   
- Immer, wenn die Symbolleiste Informationen über eine Schaltfläche im Dialogfeld „Symbolleiste anpassen“ benötigt, sendet sie die **TBN\_GETBUTTONINFO**\-Benachrichtigungsmeldung und gibt dabei den Index der Schaltfläche, für die sie Informationen benötigt, sowie die Adresse einer **TBNOTIFY**\-Struktur an. Das übergeordnete Fenster muss die Struktur mit den relevanten Informationen füllen.  
+ Whenever the toolbar control needs information about a button in the Customize Toolbar dialog box, it sends the **TBN_GETBUTTONINFO** notification message, specifying the index of the button for which it needs information and the address of a **TBNOTIFY** structure. The parent window must fill the structure with the relevant information.  
   
- Das Dialogfeld **Symbolleiste anpassen** enthält eine Schaltfläche „Hilfe“ und eine Schaltfläche „Zurücksetzen“. Wenn der Benutzer die Schaltfläche „Hilfe“ auswählt, sendet das Symbolleistensteuerelement die Benachrichtigungsmeldung **TBN\_CUSTHELP**. Das übergeordnete Fenster sollte darauf mit dem Anzeigen von Hilfeinformationen reagieren. Das Dialogfeld sendet die Benachrichtigungsmeldung **TBN\_RESET**, wenn der Benutzer die Schaltfläche „Zurücksetzen“ auswählt. Diese Nachricht zeigt an, dass die Symbolleiste unmittelbar davor steht, das Dialogfeld erneut zu initialisieren.  
+ The **Customize Toolbar** dialog box includes a Help button and a Reset button. When the user chooses the Help button, the toolbar control sends the **TBN_CUSTHELP** notification message. The parent window should respond by displaying help information. The dialog box sends the **TBN_RESET** notification message when the user selects the Reset button. This message signals that the toolbar is about to reinitialize the dialog box.  
   
- Alle diese Nachrichten sind **WM\_NOTIFY**\-Nachrichten, und sie können in Ihrem Besitzerfenster durch das Hinzufügen von Meldungszuordnungseinträgen der folgenden Form zur Meldungszuordnung Ihres Besitzerfensters verarbeitet werden:  
+ These messages are all **WM_NOTIFY** messages, and they can be handled in your owner window by adding message-map entries of the following form to your owner window's message map:  
   
  `ON_NOTIFY( wNotifyCode, idControl, memberFxn )`  
   
  `wNotifyCode`  
- ID\-Code der Benachrichtigungsmeldung, wie etwa **TBN\_BEGINADJUST**.  
+ Notification message identifier code, such as **TBN_BEGINADJUST**.  
   
  `idControl`  
- Der Bezeichner des Steuerelements, das die Benachrichtigung gesendet.  
+ The identifier of the control sending the notification.  
   
  `memberFxn`  
- Die Memberfunktion die aufgerufen werden soll, wenn diese Benachrichtigung empfangen wird.  
+ The member function to be called when this notification is received.  
   
- Ihre Memberfunktion sollte mit dem folgenden Prototyp deklariert sein:  
+ Your member function would be declared with the following prototype:  
   
  `afx_msg void memberFxn( NMHDR * pNotifyStruct, LRESULT * result );`  
   
- Wenn der Benachrichtigungsmeldungshandler einen Wert zurückgibt, sollte er ihn in das **LRESULT** einfügen, auf das *result* verweist.  
+ If the notification message handler returns a value, it should put it in the **LRESULT** pointed to by *result*.  
   
- Für jede Meldung verweist `pNotifyStruct` entweder auf eine **NMHDR**\- oder auf eine **TBNOTIFY**\-Struktur. Diese Strukturen sind unten beschrieben:  
+ For each message, `pNotifyStruct` points to either an **NMHDR** structure or a **TBNOTIFY** structure. These structures are described below:  
   
- Die **NMHDR**\-Struktur enthält die folgenden Member:  
+ The **NMHDR** structure contains the following members:  
   
  `typedef struct tagNMHDR {`  
   
@@ -119,31 +134,31 @@ Ein allgemeine Windows\-Symbolleisten\-Steuerelement verfügt über integrierte 
  `} NMHDR;`  
   
  **hwndFrom**  
- Das Fensterhandle des Steuerelements, das die Benachrichtigung sendet. Um dieses Handle in einen `CWnd`\-Zeiger zu konvertieren, verwenden Sie [CWnd::FromHandle](../Topic/CWnd::FromHandle.md).  
+ Window handle of the control that is sending the notification. To convert this handle to a `CWnd` pointer, use [CWnd::FromHandle](../mfc/reference/cwnd-class.md#fromhandle).  
   
  **idFrom**  
- ID des Steuerelements, das die Benachrichtigung sendet.  
+ Identifier of the control sending the notification.  
   
- **Code**  
- Benachrichtigungscode. Dieser Member kann ein für einen Steuerelementtyp spezifischer Wert sein, wie etwa **TBN\_BEGINADJUST** oder **TTN\_NEEDTEXT**, oder es kann einer der allgemeinen Benachrichtigungswerte sein, die unten aufgelistet sind:  
+ **code**  
+ Notification code. This member can be a value specific to a control type, such as **TBN_BEGINADJUST** or **TTN_NEEDTEXT**, or it can be one of the common notification values listed below:  
   
--   **NM\_CLICK** Der Benutzer hat innerhalb des Steuerelements mit der linken Maustaste geklickt.  
+-   **NM_CLICK** The user has clicked the left mouse button within the control.  
   
--   **NM\_DBLCLK** Der Benutzer hat innerhalb des Steuerelements mit der linken Maustaste doppelgeklickt.  
+-   **NM_DBLCLK** The user has double-clicked the left mouse button within the control.  
   
--   **NM\_KILLFOCUS** Das Steuerelement hat den Eingabefokus verloren.  
+-   **NM_KILLFOCUS** The control has lost the input focus.  
   
--   **NM\_OUTOFMEMORY** Das Steuerelement konnte einen Vorgang nicht abschließen, weil nicht genügend Arbeitsspeicher verfügbar ist.  
+-   **NM_OUTOFMEMORY** The control could not complete an operation because there is not enough memory available.  
   
--   **NM\_RCLICK** Der Benutzer hat innerhalb des Steuerelements mit der rechten Maustaste geklickt.  
+-   **NM_RCLICK** The user has clicked the right mouse button within the control.  
   
--   **NM\_RDBLCLK** Der Benutzer hat innerhalb des Steuerelement mit der rechten Maustaste doppelgeklickt.  
+-   **NM_RDBLCLK** The user has double-clicked the right mouse button within the control.  
   
--   **NM\_RETURN** Das Steuerelement hat den Eingabefokus, und der Benutzer hat die EINGABETASTE gedrückt.  
+-   **NM_RETURN** The control has the input focus, and the user has pressed the ENTER key.  
   
--   **NM\_SETFOCUS** Das Steuerelement hat den Eingabefokus erhalten.  
+-   **NM_SETFOCUS** The control has received the input focus.  
   
- Die **TBNOTIFY**\-Struktur enthält die folgenden Member:  
+ The **TBNOTIFY** structure contains the following members:  
   
  `typedef struct {`  
   
@@ -159,44 +174,46 @@ Ein allgemeine Windows\-Symbolleisten\-Steuerelement verfügt über integrierte 
   
  `} TBNOTIFY, FAR* LPTBNOTIFY;`  
   
-## Hinweise  
+## <a name="remarks"></a>Remarks  
  **hdr**  
- Gemeinsame Informationen für alle **WM\_NOTIFY**\-Nachrichten.  
+ Information common to all **WM_NOTIFY** messages.  
   
  **iItem**  
- Index der Schaltfläche, die der Benachrichtigung zugeordnet ist.  
+ Index of button associated with notification.  
   
  **tbButton**  
- `TBBUTTON`\-Struktur, die Informationen über die Symbolleistenschaltfläche enthält, die der Benachrichtigung zugeordnet ist.  
+ `TBBUTTON` structure that contains information about the toolbar button associated with the notification.  
   
  **cchText**  
- Anzahl der Zeichen im Schaltflächentext.  
+ Count of characters in button text.  
   
  **lpszText**  
- Zeiger auf den Schaltflächentext.  
+ Pointer to button text.  
   
- Die Benachrichtigungen, die die Symbolleiste sendet, sind wie folgt:  
+ The notifications the toolbar sends are as follows:  
   
--   **TBN\_BEGINADJUST** Wird gesendet, wenn der Benutzer mit dem Anpassen eines Symbolleistensteuerelements beginnt. Der Zeiger verweist auf eine **NMHDR**\-Struktur, die Informationen zur Benachrichtigung enthält. Der Handler muss keinen bestimmten Wert zurückgeben.  
+-   **TBN_BEGINADJUST** Sent when the user begins customizing a toolbar control. The pointer points to an **NMHDR** structure that contains information about the notification. The handler doesn't need to return any specific value.  
   
--   **TBN\_BEGINDRAG** Wird gesendet, wenn der Benutzer beginnt, eine Schaltfläche in einem Symbolleistensteuerelement zu ziehen. Der Zeiger verweist auf eine **TBNOTIFY**\-Struktur. Das **iItem**\-Member enthält den nullbasierten Index der gezogenen Schaltfläche. Der Handler muss keinen bestimmten Wert zurückgeben.  
+-   **TBN_BEGINDRAG** Sent when the user begins dragging a button in a toolbar control. The pointer points to a **TBNOTIFY** structure. The **iItem** member contains the zero-based index of the button being dragged. The handler doesn't need to return any specific value.  
   
--   **TBN\_CUSTHELP** Wird gesendet, wenn der Benutzer die Schaltfläche „Hilfe“ im Dialogfeld „Symbolleiste anpassen“ auswählt. Kein Rückgabewert. Der Zeiger verweist auf eine **NMHDR**\-Struktur, die Informationen über die Benachrichtigungsmeldung enthält. Der Handler muss keinen bestimmten Wert zurückgeben.  
+-   **TBN_CUSTHELP** Sent when the user chooses the Help button in the Customize Toolbar dialog box. No return value. The pointer points to an **NMHDR** structure that contains information about the notification message. The handler doesn't need to return any specific value.  
   
--   **TBN\_BEGINADJUST** Wird gesendet, wenn der Benutzer mit dem Anpassen eines Symbolleistensteuerelements beginnt. Der Zeiger verweist auf eine **NMHDR**\-Struktur, die Informationen über die Benachrichtigungsmeldung enthält. Der Handler muss keinen bestimmten Wert zurückgeben.  
+-   **TBN_ENDADJUST** Sent when the user stops customizing a toolbar control. The pointer points to an **NMHDR** structure that contains information about the notification message. The handler doesn't need to return any specific value.  
   
--   **TBN\_ENDDRAG** Wird gesendet, wenn der Benutzer damit aufhört, eine Schaltfläche in einem Symbolleistensteuerelement zu ziehen. Der Zeiger verweist auf eine **TBNOTIFY**\-Struktur. Das **iItem**\-Member enthält den nullbasierten Index der gezogenen Schaltfläche. Der Handler muss keinen bestimmten Wert zurückgeben.  
+-   **TBN_ENDDRAG** Sent when the user stops dragging a button in a toolbar control. The pointer points to a **TBNOTIFY** structure. The **iItem** member contains the zero-based index of the button being dragged. The handler doesn't need to return any specific value.  
   
--   **TBN\_GETBUTTONINFO** Wird gesendet, wenn der Benutzer ein Symbolleistensteuerelement anpasst. Die Symbolleiste verwendet diese Benachrichtigungsmeldung zum Abrufen von Informationen, die vom Dialogfeld „Symbolleiste anpassen“ benötigt werden. Der Zeiger verweist auf eine **TBNOTIFY**\-Struktur. Das **iItem**\-Member gibt den nullbasierten Index einer Schaltfläche an. Die Member **pszText** und **cchText** geben die Adresse und die Länge des aktuellen Schaltflächentexts in Zeichen an. Eine Anwendung sollte die Struktur mit Informationen über die Schaltfläche auffüllen. Gibt **TRUE** zurück, wenn Schaltflächeninformationen in die Struktur kopiert wurden, andernfalls **FALSE** .  
+-   **TBN_GETBUTTONINFO** Sent when the user is customizing a toolbar control. The toolbar uses this notification message to retrieve information needed by the Customize Toolbar dialog box. The pointer points to a **TBNOTIFY** structure. The **iItem** member specifies the zero-based index of a button. The **pszText** and **cchText** members specify the address and length, in characters, of the current button text. An application should fill the structure with information about the button. Return **TRUE** if button information was copied to the structure, or **FALSE** otherwise.  
   
--   **TBN\_QUERYDELETE** Wird gesendet, während der Benutzer eine Symbolleiste anpasst, um zu bestimmen, ob eine Schaltfläche aus einem Symbolleistensteuerelement gelöscht werden kann. Der Zeiger verweist auf eine **TBNOTIFY**\-Struktur. Das **iItem**\-Member enthält den nullbasierten Index der zu löschenden Schaltfläche. Gibt **TRUE** zurück, um das Löschen der Schaltfläche zu erlauben oder **FALSE**, um das Löschen der Schaltfläche zu verhindern.  
+-   **TBN_QUERYDELETE** Sent while the user is customizing a toolbar to determine whether a button may be deleted from a toolbar control. The pointer points to a **TBNOTIFY** structure. The **iItem** member contains the zero-based index of the button to be deleted. Return **TRUE** to allow the button to be deleted or **FALSE** to prevent the button from being deleted.  
   
--   **TBN\_QUERYINSERT** Wird gesendet, während der Benutzer ein Symbolleistensteuerelement anpasst, um zu bestimmen, ob links von der vorhandenen Schaltfläche eine Schaltfläche eingefügt werden darf. Der Zeiger verweist auf eine **TBNOTIFY**\-Struktur. Das **iItem**\-Member enthält den nullbasierten Index der einzufügenden Schaltfläche. Gibt **TRUE** zurück, um das Einfügen einer Schaltfläche vor der vorhandenen Schaltfläche zu erlauben oder **FALSE**, um das Einfügen der Schaltfläche zu verhindern.  
+-   **TBN_QUERYINSERT** Sent while the user is customizing a toolbar control to determine whether a button may be inserted to the left of the given button. The pointer points to a **TBNOTIFY** structure. The **iItem** member contains the zero-based index of the button to be inserted. Return **TRUE** to allow a button to be inserted in front of the given button or **FALSE** to prevent the button from being inserted.  
   
--   **TBN\_RESET** Wird gesendet, wenn der Benutzer den Inhalt des Dialogfelds „Symbolleiste anpassen“ zurücksetzt. Der Zeiger verweist auf eine **NMHDR**\-Struktur, die Informationen über die Benachrichtigungsmeldung enthält. Der Handler muss keinen bestimmten Wert zurückgeben.  
+-   **TBN_RESET** Sent when the user resets the content of the Customize Toolbar dialog box. The pointer points to an **NMHDR** structure that contains information about the notification message. The handler doesn't need to return any specific value.  
   
--   **TBN\_TOOLBARCHANGE** Wird gesendet, nachdem der Benutzer ein Symbolleistensteuerelement angepasst hat. Der Zeiger verweist auf eine **NMHDR**\-Struktur, die Informationen über die Benachrichtigungsmeldung enthält. Der Handler muss keinen bestimmten Wert zurückgeben.  
+-   **TBN_TOOLBARCHANGE** Sent after the user has customized a toolbar control. The pointer points to an **NMHDR** structure that contains information about the notification message. The handler doesn't need to return any specific value.  
   
-## Siehe auch  
- [Verwenden von CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

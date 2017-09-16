@@ -1,85 +1,106 @@
 ---
-title: "Vorlagen und Namensaufl&#246;sung | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Templates and Name Resolution | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 519ba7b5-cd25-4549-865a-9a7b9dffdc28
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Vorlagen und Namensaufl&#246;sung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 83e4c6681f49b097c412040364d88bf8843ecbc5
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-In den Vorlagendefinitionen gibt es drei Typen von Namen.  
+---
+# <a name="templates-and-name-resolution"></a>Templates and Name Resolution
+
+In template definitions, there are three types of names.  
   
--   Lokal deklarierte Namen, einschließlich des Namens der Vorlage selbst sowie aller Namen, die innerhalb der Vorlagendefinition deklariert werden.  
+-   Locally declared names, including the name of the template itself and any names declared inside the template definition.  
   
--   Namen des einschließenden Bereichs außerhalb der Vorlagendefinition.  
+-   Names from the enclosing scope outside the template definition.  
   
--   Namen, die in irgendeiner Form von Vorlagenargumenten abhängig sind, die als abhängige Namen bezeichnet werden.  
+-   Names that depend in some way on the template arguments, referred to as dependent names.  
   
- Während die ersten beiden Namen sich auch auf Gültigkeitsbereiche für Klassen und Funktionen beziehen, sind spezielle Regeln für die Namensauflösung in Vorlagendefinitionen erforderlich, um komplexere abhängige Namen zu verarbeiten.  Dies liegt daran, dass dem Compiler nur wenig über diese Namen bekannt ist, bevor die Vorlage instanziiert wird, da sie je nach verwendeten Vorlagenargumenten völlig unterschiedliche Typen aufweisen können.  Nicht abhängige Namen werden nach den üblichen Regeln und zum Zeitpunkt der Definition der Vorlage gesucht.  Diese Namen sind unabhängig von den Vorlagenargumenten und werden einmal für alle Vorlagenspezialisierungen nachgeschlagen.  Abhängige Namen werden erst nach dem Instanziieren der Vorlage und für jede Spezialisierung separat gesucht.  
+ While the first two names also pertain to class and function scopes, special rules for name resolution are required in template definitions to deal with the added complexity of dependent names. This is because the compiler knows little about these names until the template is instantiated, because they could be totally different types depending on which template arguments are used. Nondependent names are looked up according to the usual rules and at the point of definition of the template. These names, being independent of the template arguments, are looked up once for all template specializations. Dependent names are not looked up until the template is instantiated and are looked up separately for each specialization.  
   
- Ein Typ ist abhängig, wenn er von Vorlagenargumenten abhängt.  Ein Typ ist insbesondere abhängig, wenn:  
+ A type is dependent if it depends on the template arguments. Specifically, a type is dependent if it is:  
   
--   Das Vorlagenargument selbst:  
+-   The template argument itself:  
   
-    ```  
+    ```cpp
     T  
     ```  
   
--   Ein qualifizierter Name einer Qualifikation einschließlich eines abhängigen Typs:  
+-   A qualified name with a qualification including a dependent type:  
   
-    ```  
+    ```cpp
     T::myType  
     ```  
   
--   Ein qualifizierter Name, wenn der nicht qualifizierte Teil einen abhängigen Typ bezeichnet:  
+-   A qualified name if the unqualified part identifies a dependent type:  
   
-    ```  
+    ```cpp
     N::T  
     ```  
   
--   Ein konstanter oder ein flüchtiger Typ, für den der Basistyp ein abhängiger Typ ist:  
+-   A const or volatile type for which the base type is a dependent type:  
   
-    ```  
+    ```cpp
     const T  
     ```  
   
--   Ein Zeiger, ein Verweis, ein Array oder ein Funktionszeigertyp, basierend auf einem abhängigen Typ:  
+-   A pointer, reference, array, or function pointer type based on a dependent type:  
   
-    ```  
+    ```cpp
     T *, T &, T [10], T (*)()  
     ```  
   
--   Ein Array, dessen Größe auf einem Vorlagenparameter basiert:  
+-   An array whose size is based on a template parameter:  
   
-    ```  
+    ```cpp
     template <int arg> class X {  
     int x[arg] ; // dependent type  
     }  
     ```  
   
--   Ein aus einem Vorlagenparameter erstellter Vorlagentyp:  
+-   a template type constructed from a template parameter:  
   
-    ```  
+    ```cpp
     T<int>, MyTemplate<T>  
     ```  
   
-## Typabhängigkeit und Werteabhängigkeit  
- Namen und Ausdrücke, die von einem Vorlagenparameter abhängig sind, werden als typabhängig oder wertabhängig kategorisiert, je nachdem, ob der Vorlagenparameter ein Typparameter oder ein Werteparameter ist.  Außerdem gelten alle Bezeichner, die in einer Vorlage mit einem abhängigen Typ vom Vorlagenargument deklariert werden, als wertabhängiges Element, z. B. eine ganze Zahl oder ein Enumerationstyp, die mit einem wertabhängigen Ausdruck initialisiert werden.  
+## <a name="type-dependence-and-value-dependence"></a>Type Dependence and Value Dependence
+
+ Names and expressions dependent on a template parameter are categorized as type dependent or value dependent, depending on whether the template parameter is a type parameter or a value parameter. Also, any identifiers declared in a template with a type dependent on the template argument are considered value dependent, as is a integral or enumeration type initialized with a value-dependent expression.  
   
- Typabhängige und wertabhängige Ausdrücke sind Ausdrücke, die Variablen einschließen, die typabhängig oder wertabhängig sind.  Diese Begriffe können je nach Parametern, die für die Vorlage verwendet werden, eine abweichende Semantik aufweisen.  
+ Type-dependent and value-dependent expressions are expressions that involve variables that are type dependent or value dependent. These expressions can have semantics that differ, depending on the parameters used for the template.  
   
-## Siehe auch  
- [Vorlagen](../cpp/templates-cpp.md)
+## <a name="see-also"></a>See Also
+
+ [Templates](../cpp/templates-cpp.md)
+

@@ -1,37 +1,56 @@
 ---
-title: "Deaktivieren der Option „Aktiviert, wenn sichtbar“ | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC-ActiveX-Steuerelemente [C++], Optionen zur Aktivierung"
-  - "Aktiv wenn sichtbar-Option"
+title: Turning off the Activate When Visible Option | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], activate options
+- Activate When Visible option [MFC]
 ms.assetid: 8f7ddc5a-a7a6-4da8-bcb9-1b569f0ecb48
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Deaktivieren der Option „Aktiviert, wenn sichtbar“
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 09ad4e1e219e52033006c83dfd249ac7b51c0510
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Ein Steuerelement verfügt über zwei grundlegende Zustände: aktiv und inaktiv.  In der Vergangenheit unterschieden sich diese Zustände dadurch, ob das Steuerelement ein Fenster hatte oder nicht.  Ein aktives Steuerelement wies ein Fenster auf, ein inaktives Steuerelement wies kein Fenster auf.  Mit der Einführung der fensterlose Aktivierung, ist diese Unterscheidung nicht mehr universell, gilt aber weiterhin für viele Steuerelemente.  
+---
+# <a name="turning-off-the-activate-when-visible-option"></a>Turning off the Activate When Visible Option
+A control has two basic states: active and inactive. Traditionally, these states were distinguished by whether the control had a window. An active control had a window; an inactive control did not. With the introduction of windowless activation, this distinction is no longer universal, but still applies to many controls.  
   
- Verglichen mit der Initialisierung, die üblicherweise von ein ActiveX\-Steuerelement ausgeführt wird, wird die Erstellung eines Fensters ein sehr viel Rechenleistung.  Idealerweise hätte ein Steuerelement das Erstellen des Fensters bis absolut notwendig ausgecheckt verzögern.  
+ Compared with the rest of the initialization typically performed by an ActiveX control, the creation of a window is an extremely expensive operation. Ideally, a control would defer creating its window until absolutely necessary.  
   
- Viele Steuerelemente, müssen nicht aktiv festlegen die Gesamtzeit, die in einem Container sichtbar sind.  Häufig kann ein Steuerelement in inaktiven Zustand verbleiben, bis der Benutzer einen Vorgang ausführt, die es benötigt, aktiv werden, \(beispielsweise Klicken mit der Maus oder Die TAB\-TASTE drücken\).  Um ein Steuerelement zu bewirken auf den Container zu inaktiv bleiben muss sie aktivieren, entfernen das Flag **OLEMISC\_ACTIVATEWHENVISIBLE** aus verschiedenen Flags des Steuerelements:  
+ Many controls do not need to be active the entire time they are visible in a container. Often, a control can remain in the inactive state until the user performs an operation that requires it to become active (for example, clicking with the mouse or pressing the TAB key). To cause a control to remain inactive until the container needs to activate it, remove the **OLEMISC_ACTIVATEWHENVISIBLE** flag from the control's miscellaneous flags:  
   
- [!CODE [NVC_MFC_AxOpt#9](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxOpt#9)]  
+ [!code-cpp[NVC_MFC_AxOpt#9](../mfc/codesnippet/cpp/turning-off-the-activate-when-visible-option_1.cpp)]  
   
- Das **OLEMISC\_ACTIVATEWHENVISIBLE**\-Flag wird automatisch weggelassen, wenn Sie die Option **Aktivieren, wenn sichtbar** in der [Steuerelementeinstellungen](../mfc/reference/control-settings-mfc-activex-control-wizard.md) Seite MFC\-ActiveX\-Steuerelement\-Assistenten deaktivieren, wenn Sie das Steuerelement erstellt.  
+ The **OLEMISC_ACTIVATEWHENVISIBLE** flag is automatically omitted if you turn off the **Activate When Visible** option in the [Control Settings](../mfc/reference/control-settings-mfc-activex-control-wizard.md) page of the MFC ActiveX Control Wizard when you create your control.  
   
-## Siehe auch  
- [MFC\-ActiveX\-Steuerelemente: Optimierung](../mfc/mfc-activex-controls-optimization.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls: Optimization](../mfc/mfc-activex-controls-optimization.md)
+
+

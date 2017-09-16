@@ -1,41 +1,58 @@
 ---
-title: "Einstiegspunkte f&#252;r COM-Schnittstellen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COM-Schnittstellen, Einstiegspunkte"
-  - "Einstiegspunkte, COM-Schnittstellen"
-  - "MFC COM, Einstiegspunkte für COM-Schnittstellen"
-  - "MFC, Verwalten der Zustandsdaten"
-  - "OLE, Einstiegspunkte für Schnittstellen"
-  - "Zustandsverwaltung, OLE/COM-Schnittstellen"
+title: COM Interface Entry Points | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- entry points, COM interfaces
+- state management, OLE/COM interfaces
+- MFC COM, COM interface entry points
+- OLE, interface entry points
+- MFC, managing state data
+- COM interfaces, entry points
 ms.assetid: 9e7421dc-0731-4748-9e1b-90acbaf26d77
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Einstiegspunkte f&#252;r COM-Schnittstellen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3b97fa6891e35a6aff492c70baad967466a46eb4
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Für Memberfunktionen einer COM\-Schnittstelle, verwenden Sie das [METHOD\_PROLOGUE](../Topic/METHOD_PROLOGUE.md)\-Makro, um den ordnungsgemäßen globalen Zustand beizubehalten wenn Methoden aufgerufen einer exportierten Schnittstelle.  
+---
+# <a name="com-interface-entry-points"></a>COM Interface Entry Points
+For member functions of a COM interface, use the [METHOD_PROLOGUE](com-interface-entry-points.md#method_prologue) macro to maintain the proper global state when calling methods of an exported interface.  
   
- Normalerweise Memberfunktionen von Schnittstellen implementiert durch `CCmdTarget` abgeleitete Objekte bereits verwenden dieses Makro, um automatische Initialisierung des Zeigers `pThis` bereitzustellen.  Beispiel:  
+ Typically, member functions of interfaces implemented by `CCmdTarget`-derived objects already use this macro to provide automatic initialization of the `pThis` pointer. For example:  
   
- [!CODE [NVC_MFCConnectionPoints#5](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCConnectionPoints#5)]  
+ [!code-cpp[NVC_MFCConnectionPoints#5](../mfc/codesnippet/cpp/com-interface-entry-points_1.cpp)]  
   
- Weitere Informationen finden Sie unter [Technischer Hinweis 38](../mfc/tn038-mfc-ole-iunknown-implementation.md) auf Implementierung MFC OLE\/ **IUnknown**.  
+ For additional information, see [Technical Note 38](../mfc/tn038-mfc-ole-iunknown-implementation.md) on MFC/OLE **IUnknown** implementation.  
   
- Das `METHOD_PROLOGUE`\-Makro wird folgendermaßen definiert:  
+ The `METHOD_PROLOGUE` macro is defined as:  
   
  `#define METHOD_PROLOGUE(theClass, localClass) \`  
   
@@ -45,11 +62,13 @@ Für Memberfunktionen einer COM\-Schnittstelle, verwenden Sie das [METHOD\_PROLO
   
  `AFX_MANAGE_STATE(pThis->m_pModuleState) \`  
   
- Der Teil des Makros, das bei der Verwaltung des globalen Zustand zu, ist:  
+ The portion of the macro concerned with managing the global state is:  
   
  `AFX_MANAGE_STATE( pThis->m_pModuleState )`  
   
- In diesem Ausdruck wird *m\_pModuleState*, wird angenommen Membervariable des enthaltenden Objekts sein.  Es wird durch die Basisklasse implementiert `CCmdTarget` und wird dem entsprechenden Wert von `COleObjectFactory` initialisiert, wenn das Objekt instanziiert wird.  
+ In this expression, *m_pModuleState* is assumed to be a member variable of the containing object. It is implemented by the `CCmdTarget` base class and is initialized to the appropriate value by `COleObjectFactory`, when the object is instantiated.  
   
-## Siehe auch  
- [Verwalten der Statusdaten von MFC\-Modulen](../mfc/managing-the-state-data-of-mfc-modules.md)
+## <a name="see-also"></a>See Also  
+ [Managing the State Data of MFC Modules](../mfc/managing-the-state-data-of-mfc-modules.md)
+
+

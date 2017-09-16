@@ -1,39 +1,56 @@
 ---
-title: "Ausrichtung (C++-Deklarationen)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Alignment (C++ Declarations) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: a986d510-ccb8-41f8-b905-433df9183485
 caps.latest.revision: 4
-caps.handback.revision: "4"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Ausrichtung (C++-Deklarationen)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: ed5f2b959eb6f437b7ed9a9432df22f87e455e42
+ms.contentlocale: de-de
+ms.lasthandoff: 09/11/2017
 
-Eines der Features von C\+\+ auf niedriger Ebene ist die Möglichkeit zum Angeben der präzisen Ausrichtung von Objekten im Speiche, um eine bestimmte Hardwarearchitektur optimal zu nutzen.  Standardmäßig richtet der Compiler Klassen\- und Strukturmember auf ihren Größenwert aus: bool und char werden an Ein\-Byte\-Grenzen ausgerichtet, short an Zwei\-Byte\-, int an Vier\-Byte\-, long long, double und long double an Acht\-Byte\-Grenzen.  In den meisten Szenarien müssen Sie sich nie mit der Ausrichtung befassen, da die Standardausrichtung bereits optimal ist.  In einigen Fällen jedoch erzielen Sie bedeutende Leistungsverbesserungen oder Speicherplatzeinsparungen, indem Sie eine benutzerdefinierte Ausrichtung für Ihre Datenstrukturen angeben.  Vor Visual Studio 2015 konnten Sie die Microsoft\-spezifischen Schlüsselwörter \_\_alignof und declspec\(alignas\) verwenden, um eine Ausrichtung anzugeben, die größer als der Standardwert ist.  Ab Visual Studio 2015 sollten Sie die C\+\+11\-Standardschlüsselwörter [alignof und alignas](../cpp/alignof-and-alignas-cpp.md) für maximale Codeportabilität verwenden.  Die neuen Schlüsselwörter verhalten sich wie die Microsoft\-spezifischen Erweiterungen, und die Dokumentation für diese Erweiterungen gilt auch für die neuen Schlüsselwörter.  Weitere Informationen finden Sie unter [\_\_alignof\-Operator](../cpp/alignof-operator.md) und [align](../cpp/align-cpp.md).  Der C\+\+\-Standard gibt kein Packverhalten für die Ausrichtung an Grenzen an, die kleiner als die Standardeinstellung des Compilers für die Zielplattform ist, sodass Sie in diesem Fall trotzdem das Microsoft \#pragma müssen\-[pack](../preprocessor/pack.md) verwenden müssen.  
+---
+# <a name="alignment-c-declarations"></a>Alignment (C++ Declarations)
+One of the low-level features of C++ is the ability to specify the precise alignment of objects in memory to take maximum advantage of a specific hardware architecture. By default, the compiler aligns class and struct members on their size value: bool and char are aligned one one byte boundaries, short on two byte, int on four bytes, long long, double and long double on eight bytes. In most scenarios you never have to be concerned with alignment because the default alignment is already optimal. In some cases however, you can achieve significant performance improvements, or memory savings, by specifying a custom alignment for your data structures. Prior to Visual Studio 2015 you could use the Microsoft-specific keywords __alignof and declspec(alignas) to specify an alignment greater than the default. Starting in Visual Studio 2015 you should use the C++11 standard keywords [alignof and alignas](../cpp/alignof-and-alignas-cpp.md) for maximum code portability. The new keywords behave in the same way under the hood as the Microsoft-specific extensions, and the documentation for those extensions also applies to the new keywords. See [__alignof Operator](../cpp/alignof-operator.md) and [align](../cpp/align-cpp.md) for more information. The C++ standard does not specify packing behavior for aligning on boundaries smaller than the compiler default for the target platform, so you still need to use the Microsoft #pragma [pack](../preprocessor/pack.md) in that case.  
   
- Die C\+\+\-Standardbibliothek bietet die [aligned\_storage\-Klasse](../standard-library/aligned-storage-class.md) zur Zuteilung von Arbeitsspeicher für Datenstrukturen mit benutzerdefinierten Ausrichtungen und die [aligned\_union\-Klasse](../standard-library/aligned-union-class.md) zum Angeben der Ausrichtung für Unions mit nicht trivialen Konstruktoren oder Destruktoren.  
+ The C++ standard library provides the [aligned_storage Class](../standard-library/aligned-storage-class.md) for allocating memory for data structures with custom alignments, and the [aligned_union Class](../standard-library/aligned-union-class.md) for specifying alignment for unions with non-trivial constructors or destructors.  
   
-## Infos zur Ausrichtung  
- Die Ausrichtung ist eine Eigenschaft einer Speicheradresse, ausgedrückt als numerisches Adressmodulo der Potenz 2.  Beispielsweise ist die Adresse 0x0001103F modulo 4 gleich 3. Diese Adresse wird als 4n\+3 ausgerichtet bezeichnet, wobei 4 die gewählte Potenz von 2 angibt.  Die Ausrichtung einer Adresse hängt von der ausgewählten Zweierpotenz ab.  Das gleiche Adressmodulo 8 ist 7.  Eine Adresse wird als an X ausgerichtet betrachtet, wenn die Ausrichtung Xn\+ 0 ist.  
+## <a name="about-alignment"></a>About Alignment  
+ Alignment is a property of a memory address, expressed as the numeric address modulo a power of 2. For example, the address 0x0001103F modulo 4 is 3; that address is said to be aligned to 4n+3, where 4 indicates the chosen power of 2. The alignment of an address depends on the chosen power of two. The same address modulo 8 is 7. An address is said to be aligned to X if its alignment is Xn+0.  
   
- CPUs führen Anweisungen für Daten im Arbeitsspeicher aus, und die Daten werden anhand ihrer Adresse im Speicher identifiziert.  Zusätzlich zur Adresse hat ein einzelnes Datum auch eine Größe.  Ein Datum wird als natürlich ausgerichteten bezeichnet, wenn seine Adresse auf die Größe ausgerichtet und andernfalls nicht ausgerichtet ist.  Ein 8\-Byte\-Gleitkommazahl\-Datum ist beispielsweise natürlich ausgerichtet, wenn die Adresse, die zur Identifizierung verwendet wird, auf 8 ausgerichtet ist.  
+ CPUs execute instructions that operate on data stored in memory, and the data are identified by their addresses in memory. In addition to its address, a single datum also has a size. A datum is called naturally aligned if its address is aligned to its size, and misaligned otherwise. For example, an 8-byte floating-point datum is naturally aligned if the address used to identify it is aligned to 8.  
   
- Gerätecompiler versuchen, Daten auf eine Weise zuzuordnen, die eine Fehlausrichtung der Daten verhindert.  
+ Compiler handling of data alignmentDevice compilers attempt to allocate data in a way that prevents data misalignment.  
   
- Der Compiler weist für einfache Datentypen Adressen zu, die ein Vielfaches der Größe in Bytes des Datentyps entsprechen.  Folglich weist der Compiler Adressen zu Variablen vom Typ long zu, die ein Vielfaches von vier sind, und legt die unteren beiden Bits der Adresse auf null fest.  
+ For simple data types, the compiler assigns addresses that are multiples of the size in bytes of the data type. Thus, the compiler assigns addresses to variables of type long that are multiples of four, setting the bottom two bits of the address to zero.  
   
- Darüber hinaus füllt der Compiler Strukturen auf eine Weise, die jedes Element der Struktur natürlich ausrichtet.  Sehen Sie sich die Struktur „struct x\_“ im folgenden Codebeispiel an:  
+ In addition, the compiler pads structures in a way that naturally aligns each element of the structure. Consider the structure struct x_ in the following code example:  
   
 ```  
 struct x_  
@@ -46,9 +63,9 @@ struct x_
   
 ```  
   
- Der Compiler füllt die Struktur, um die natürliche Ausrichtung zu erzwingen.  
+ The compiler pads this structure to enforce alignment naturally.  
   
- Im folgenden Codebeispiel wird veranschaulicht, wie der Compiler die aufgefüllte Struktur in „memory:Copy“ platziert.  
+ The following code example shows how the compiler places the padded structure in memory:Copy  
   
 ```  
 // Shows the actual memory layout  
@@ -64,17 +81,17 @@ struct x_
   
 ```  
   
-1.  Beiden Deklarationen geben „sizeof\(struct x\_\)“ als 12 Bytes zurück.  
+1.  Both declarations return sizeof(struct x_) as 12 bytes.  
   
-2.  Die zweite Deklaration enthält zwei Auffüllelemente:  
+2.  The second declaration includes two padding elements:  
   
-3.  char \_pad0\[3\] zum Ausrichten des int\-b\-Members an eine Vier\-Byte\-Grenze  
+3.  char _pad0[3] to align the int b member on a four-byte boundary  
   
-4.  char \_pad1\[1\] zum Ausrichten der Arrayelemente der Struktur „struct \_x bar\[3\]“  
+4.  char _pad1[1] to align the array elements of the structure struct _x bar[3];  
   
-5.  Die Auffüllung richtet die Elemente von „bar\[3\]“ in einer Weise aus, die natürlichen Zugriff ermöglicht.  
+5.  The padding aligns the elements of bar[3] in a way that allows natural access.  
   
- Im folgenden Codebeispiel wird die Verwendung des bar\[3\]\-Arraylayouts veranschaulicht.  
+ The following code example shows the bar[3] array layout:  
   
 ```  
 adr offset   element  
@@ -102,5 +119,5 @@ adr offset   element
   
 ```  
   
-## Siehe auch  
- [Datenstrukturausrichtung](http://en.wikipedia.org/wiki/Data_structure_alignment)
+## <a name="see-also"></a>See Also  
+ [Data Structure Alignment](http://en.wikipedia.org/wiki/Data_structure_alignment)

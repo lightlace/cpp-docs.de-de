@@ -1,80 +1,98 @@
 ---
-title: "Datenbankunterst&#252;tzung, MFC-Anwendungs-Assistent | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.mfc.exe.database"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC-Anwendungs-Assistent, Datenbankunterstützung"
+title: Database Support, MFC Application Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.appwiz.mfc.exe.database
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC Application Wizard, database support
 ms.assetid: 9ddf4558-fd41-4ac7-8d9b-c93d9c68ab59
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Datenbankunterst&#252;tzung, MFC-Anwendungs-Assistent
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1f2a15baeb9e475f93872ed9b53b2cdf035b1920
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Diese Seite enthält Optionen, mit deren Hilfe Sie den Umfang der Datenbankunterstützung \(sowie ggf. eine Datenquelle\) für das Projekt festlegen können.  
+---
+# <a name="database-support-mfc-application-wizard"></a>Database Support, MFC Application Wizard
+This page provides options that allow you to specify the level of database support (plus a data source, if necessary) for your project.  
   
- **Datenbankunterstützung**  
- Legt den Umfang der Datenbankunterstützung für das Projekt fest.  
+ **Database support**  
+ Sets the level of database support for your project.  
   
-|Option|**Beschreibung**|  
-|------------|----------------------|  
-|**Kein**|Bietet keine Datenbankunterstützung.  Dies ist die Standardoption.|  
-|**Nur Headerdateien**|Bietet grundlegende Datenbankunterstützung für die Anwendung.<br /><br /> <ul><li>Wenn Sie unter **Clienttyp** ODBC\-Unterstützung auswählen, fügt der MFC\-Anwendungs\-Assistent dem Projekt die Headerdatei AFXDB.H sowie Linkbibliotheken hinzu.  Es werden jedoch keine datenbankspezifischen Klassen erstellt.  Später können Sie Recordsets für die Überprüfung und Aktualisierung von Datensätzen erstellen.</li><li>Wenn Sie unter **Clienttyp** OLE DB\-Unterstützung auswählen, werden die folgenden Headerdateien hinzugefügt:<br /><br /> <ul><li>ATLBASE.H</li><li>AFXOLEDB.H</li><li>ATLPLUS.H</li></ul></li></ul>|  
-|**Datenbankansicht ohne Dateiunterstützung**|Umfasst Datenbank\-Headerdateien, Linkbibliotheken, eine Datensatzansicht und ein Recordset. \(Nur für Anwendungen verfügbar, für die auf der Seite [Anwendungstyp](../../mfc/reference/application-type-mfc-application-wizard.md) die Option **Unterstützung für die Dokument\-\/Ansichtarchitektur** aktiviert wurde.\) Diese Option beinhaltet Dokumentunterstützung, jedoch keine Serialisierungsunterstützung.  Wenn Sie eine Datenbankansicht einbinden, müssen Sie die Quelle der Daten angeben.|  
-|**Datenbankansicht mit Dateiunterstützung**|Umfasst Datenbank\-Headerdateien, Linkbibliotheken, eine Datensatzansicht und ein Recordset. \(Nur für Anwendungen verfügbar, für die auf der Seite **Anwendungstyp** die Option **Unterstützung für die Dokument\-\/Ansichtarchitektur** aktiviert wurde.\) Diese Option unterstützt die Dokumentserialisierung, die Sie beispielsweise zur Aktualisierung einer Benutzerprofildatei einsetzen können.  Datenbankanwendungen arbeiten in der Regel auf der Basis einzelner Datensätze und nicht auf der Basis einzelner Dateien. Aus diesem Grund müssen sie nicht serialisiert werden.  Unter Umständen benötigen Sie die Serialisierung jedoch für andere Aufgaben.  Wenn Sie eine Datenbankansicht einbinden, müssen Sie die Quelle der Daten angeben.|  
-  
-> [!NOTE]
->  Wenn Sie unter **Datenbankunterstützung** entweder **Datenbankansicht ohne Dateiunterstützung** oder **Datenbankansicht mit Dateiunterstützung** auswählen, werden die Ansichtsklassen je nach der Auswahl unter **Clienttyp** unterschiedlich abgeleitet. Siehe dazu folgende Erläuterungen:  
-  
--   Wenn Sie unter **Clienttyp** die Option **ODBC** auswählen, wird die Ansichtsklasse der Anwendung von [CRecordView](../../mfc/reference/crecordview-class.md) abgeleitet.  Diese Klasse ist mit einer von [CRecordset](../../mfc/reference/crecordset-class.md) abgeleiteten Klasse verbunden, die ebenfalls vom MFC\-Anwendungs\-Assistenten erstellt wird.  Mit dieser Option erhalten Sie eine formularbasierte Anwendung, in der die Datensatzansicht verwendet wird, um Datensätze anhand ihrer Recordsets anzuzeigen und zu aktualisieren.  
-  
--   Wenn Sie unter **Clienttyp** die Option **OLE DB** auswählen, wird die Ansichtsklasse von [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md) abgeleitet und ist zusätzlich mit einer von [CTable](../../data/oledb/ctable-class.md) oder [CCommand](../../data/oledb/ccommand-class.md) abgeleiteten Klasse verbunden.  
-  
- **Clienttyp**  
- Gibt an, ob das Projekt OLE DB\- oder ODBC\-Klassen verwendet.  
-  
-|Option|**Beschreibung**|  
-|------------|----------------------|  
-|**OLE DB**|Wenn diese Option ausgewählt ist, und Sie auf die Schaltfläche **Datenquelle** klicken, wird der Assistent für **Datenverknüpfungseigenschaften** aufgerufen. Dieser Assistent unterstützt Sie dabei, eine Verbindung mit einer OLE DB\-Datenquelle herzustellen.|  
-|**ODBC**|Wenn diese Option ausgewählt ist, und Sie auf die Schaltfläche **Datenquelle** klicken, wird der Assistent zum **Auswählen einer Datenquelle** aufgerufen. Dieser Assistent unterstützt Sie dabei, eine Verbindung mit einer ODBC\-Datenquelle herzustellen.|  
-  
- **Datenquelle**  
- Klicken Sie auf die Schaltfläche **Datenquelle**, um eine Datenquelle unter Verwendung des angegebenen Treibers oder Anbieters und der angegebenen Datenbank einzurichten.  Wenn Sie unter **Clienttyp** die Option OLE DB ausgewählt haben, wird durch Klicken auf diese Schaltfläche das Dialogfeld **Eigenschaften von Datenverknüpfung** geöffnet.  Wenn Sie unter **Clienttyp** die Option **ODBC** auswählen, wird durch Klicken auf diese Schaltfläche das Dialogfeld **Datenquelle auswählen** geöffnet.  Diese Option ist nur verfügbar, wenn Sie eine Datenbankansicht in die Anwendung aufnehmen.  
-  
-|Option|**Beschreibung**|  
-|------------|----------------------|  
-|**Eigenschaften von Datenverknüpfung** \(OLE DB\)|Richtet die angegebene Datenquelle unter Verwendung des festgelegten OLE DB\-Anbieters ein.  Dabei sind folgende Angaben erforderlich: OLE DB\-Anbieter, der Speicherort der Daten, die Datenquelle, ein Benutzername und \(optional\) ein Kennwort.  Ausführliche Informationen zu diesem Dialogfeld finden Sie unter **Datenquelle** im [ATL\-OLE DB\-Consumer\-Assistenten](../../atl/reference/atl-ole-db-consumer-wizard.md).|  
-|**Datenquelle auswählen** \(ODBC\)|Richtet die angegebene Datenquelle unter Verwendung des festgelegten ODBC\-Treibers ein.  Sie müssen eine Datenquelle benennen, um eine Tabelle für die Datenquelle auszuwählen.  Der Assistent bindet alle Spalten der Tabelle an die Membervariablen einer von `CRecordset` abgeleiteten Klasse.  Ausführliche Informationen zu diesem Dialogfeld finden Sie unter **Datenquelle** im [MFC\-ODBC\-Consumer\-Assistenten](../../mfc/reference/mfc-odbc-consumer-wizard.md).|  
+|Option|Description|  
+|------------|-----------------|  
+|**None**|Provides no database support. This is the default option.|  
+|**Header files only**|Provides the basic level of database support for your application. If you select ODBC support under **Client type**, the MFC Application Wizard includes in your project the header file AFXDB.H. It adds link libraries, but it does not create any database-specific classes. You can create recordsets later and use them to examine and update records. If you select OLE DB support under **Client type**, the following header files are included: ATLBASE.H AFXOLEDB.H ATLPLUS.H|  
+|**Database view without file support**|Includes database header files, link libraries, a record view and a recordset. (Available only for applications with the **Document/view architecture support** option selected in the [Application Type](../../mfc/reference/application-type-mfc-application-wizard.md) page.) This option includes document support but no serialization support. If you choose to include a database view, you must specify the source of the data.|  
+|**Database view with file support**|Includes database header files, link libraries, a record view and a recordset. (Available only for applications with the **Document/view architecture support** option selected in the **Application Type** page.) This option supports document serialization, which you can use, for example, to update a user profile file. Database applications typically operate on a per-record basis rather than on a per-file basis and so do not need serialization. However, you may have a special use for serialization. If you choose to include a database view, you must specify the source of the data.|  
   
 > [!NOTE]
->  In früheren Versionen wurde durch Drücken der UMSCHALTTASTE und gleichzeitiges Klicken auf die Schaltfläche **Datenquelle** ein Dialogfeld zum Öffnen von Dateien geöffnet, in dem eine Datenverknüpfungsdatei \(.udl\) ausgewählt werden konnte.  Diese Funktion wird nicht mehr unterstützt.  
+>  Under **Database Support**, if you select either **Database view without file support** or **Database view with file support**, the view class derivation differs, depending on your **Client type** selection, as follows:  
   
- **Attributierte Datenbankklasse erstellen**  
- Nur für OLE DB\-Clients verfügbar.  Legt fest, ob die Datenbankklassen im erstellten Projekt Attribute verwenden.  
+-   If you select **ODBC** under **Client type**, then the application's view class derives from [CRecordView](../../mfc/reference/crecordview-class.md). This class is associated with a [CRecordset](../../mfc/reference/crecordset-class.md)-derived class, which the MFC Application Wizard also creates for you. This option gives you a form-based application in which the record view is used to view and update records through its recordset.  
   
- **Alle Spalten binden**  
- Nur für ODBC\-Clients verfügbar.  Legt fest, ob alle Spalten in der ausgewählten Tabelle gebunden werden.  Wenn Sie dieses Kontrollkästchen aktivieren, werden alle Spalten gebunden. Andernfalls werden keine Spalten gebunden, und Sie müssen sie manuell in der Recordsetklasse binden.  
+-   If you select **OLE DB** under **Client type**, then the view class derives from [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md), and it is associated with a [CTable](../../data/oledb/ctable-class.md) or [CCommand](../../data/oledb/ccommand-class.md)-derived class.  
   
- **Typ**  
- Nur für ODBC\-Clients verfügbar.  Legt fest, ob es sich beim Recordset um ein Dynaset oder eine Momentaufnahme handelt. Siehe dazu folgende Tabelle.  
+ **Client type**  
+ Indicates whether your project uses OLE DB or ODBC classes.  
   
-|Option|**Beschreibung**|  
-|------------|----------------------|  
-|**Dynaset**|Gibt an, dass das Recordset ein Dynaset ist.  Ein Dynaset ist das Ergebnis einer Abfrage, bei der die abgefragten Datenbankinformationen mithilfe einer indizierten Sicht dargestellt werden.  Durch ein Dynaset wird lediglich ein integraler Index der ursprünglichen Daten zwischengespeichert, wodurch Leistungsvorteile gegenüber einer Momentaufnahme erzielt werden.  Der Index zeigt direkt auf jeden einzelnen, im Ergebnis zurückgegebenen Datensatz und gibt an, ob ein Datensatz entfernt wurde.  Sie haben außerdem Zugriff auf aktualisierte Informationen in den abgefragten Datensätzen.|  
-|Momentaufnahme|Gibt an, dass das Recordset eine Momentaufnahme ist.  Eine Momentaufnahme ist das Ergebnis einer Abfrage und stellt ein Abbild einer Datenbank zu einem bestimmten Zeitpunkt dar.  Alle durch die Abfrage gefundenen Datensätze werden zwischengespeichert, sodass Sie keine Änderungen gegenüber den ursprünglichen Datensätzen feststellen können.|  
+|Option|Description|  
+|------------|-----------------|  
+|**OLE DB**|When this option is selected, clicking the **Data Source** button invokes the **Data Link Properties** wizard to help you create a connection to an OLE DB data source.|  
+|**ODBC**|When this option is selected, clicking the **Data Source** button invokes the **Select Data Source** wizard to help you create a connection to an ODBC data source.|  
   
-## Siehe auch  
- [MFC\-Anwendungs\-Assistent](../../mfc/reference/mfc-application-wizard.md)
+ **Data Source**  
+ Click the **Data Source** button to set up a data source using the specified driver or provider and database. If you selected OLE DB in the **Client type** option, this button displays the **Data Link Properties** dialog box. If you selected ODBC in the **Client type** option, this button provides the **Select Data Source** dialog box. This option is available only if you choose to include a database view in your application.  
+  
+|Option|Description|  
+|------------|-----------------|  
+|**Data Link Properties** (OLE DB)|Establishes the specified data source using the specified OLE DB provider. You must specify the OLE DB provider, the location of the data, the data source, logon ID, and (optionally) a password. For details on this dialog box, see **Data source** in [ATL OLE DB Consumer Wizard](../../atl/reference/atl-ole-db-consumer-wizard.md).|  
+|**Select Data Source** (ODBC)|Establishes the specified data source using the specified ODBC driver. You must select a data source name to choose a table for the data source. The wizard binds all columns of the table to the member variables of a `CRecordset`-derived class. For details on this dialog box, see **Data source** in [MFC ODBC Consumer Wizard](../../mfc/reference/mfc-odbc-consumer-wizard.md).|  
+  
+> [!NOTE]
+>  In previous releases, Shift-clicking the **Data Source** button opened a File Open dialog to allow you to select a Data Link (.udl) file. This functionality is no longer supported.  
+  
+ **Generate attributed database class**  
+ Available for OLE DB client only. Specifies whether the database classes in the generated project use attributes.  
+  
+ **Bind all columns**  
+ Available for ODBC client only. Specifies whether all columns in the selected table are bound. If you select this box, all columns are bound; if you do not select this box, no columns are bound, and you must bind them manually in the recordset class.  
+  
+ **Type**  
+ Available for ODBC client only. Specifies whether the recordset is a dynaset or a snapshot, as described in the following table.  
+  
+|Option|Description|  
+|------------|-----------------|  
+|**Dynaset**|Specifies that the recordset is a dynaset. A dynaset is the result of a query that provides an indexed view into the queried database's data. A dynaset caches only an integral index to the original data and thus offers a performance gain over a snapshot. The index points directly to each record found as a result of a query and indicates if a record is removed. You also have access to updated information in the queried records.|  
+|Snapshot|Specifies that the recordset is a snapshot. A snapshot is the result of a query and is a view into a database at one point in time. All records found as a result of the query are cached, so you do not see any changes to the original records.|  
+  
+## <a name="see-also"></a>See Also  
+ [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md)
+

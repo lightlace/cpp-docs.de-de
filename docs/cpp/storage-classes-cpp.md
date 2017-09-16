@@ -1,63 +1,87 @@
 ---
-title: "Speicherklassen (C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - "thread_local_cpp"
-  - "external_cpp"
-  - "static_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Speicherklassen, Grundlegende Konzepte"
+title: Storage classes (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- thread_local_cpp
+- external_cpp
+- static_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- storage classes, basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
 caps.latest.revision: 13
-caps.handback.revision: "11"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Speicherklassen (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 0286098cb87ecfea244269a8e5756829759b82f7
+ms.openlocfilehash: db5a6c23d11f8cdf144e42aee4880ee1ac26066a
+ms.contentlocale: de-de
+ms.lasthandoff: 09/09/2017
 
-Eine *Speicherklasse* im Kontext von C\+\+\-Variablendeklarationen ist ein Typbezeichner, der Lebensdauer, Bindung und Speicherort von Objekten steuert.  Ein angegebenes Objekt kann nur eine Speicherklasse haben.  Variablen, die innerhalb eines Blocks definiert sind, haben automatischen Speicher, wenn nicht anders mithilfe der Bezeichner `extern`, `static` oder `thread_local` angegeben.  Automatische Objekte und Variablen haben keine Bindung; sie sind für Code außerhalb des Blocks nicht sichtbar.  
+---
+# <a name="storage-classes-c"></a>Storage classes (C++)  
   
- **Notizen**  
+A *storage class* in the context of C++ variable declarations is a type specifier that governs the lifetime, linkage, and memory location of objects. A given object can have only one storage class. Variables defined within a block have automatic storage unless otherwise specified using the `extern`, `static`, or `thread_local` specifiers. Automatic objects and variables have no linkage; they are not visible to code outside the block.  
   
-1.  Das Schlüsselwort [mutable](../cpp/mutable-data-members-cpp.md) kann als Speicherklassenspezifizierer angesehen werden.  Es ist jedoch nur in der Memberliste einer Klassendefinition verfügbar.  
+**Notes**  
   
-2.  Ab [!INCLUDE[cpp_dev10_long](../build/includes/cpp_dev10_long_md.md)] ist das `auto`\-Schlüsselwort kein C\+\+\-Speicherklassenspezifizierer mehr, und das `register`\-Schlüsselwort ist veraltet.  
+1.  The [mutable](../cpp/mutable-data-members-cpp.md) keyword may be considered a storage class specifier. However, it is only available in the member list of a class definition.  
   
--   [Static](#static)  
+2.  **Visual C++ 2010 and later:** The `auto` keyword is no longer a C++ storage-class specifier, and the `register` keyword is deprecated. **Visual Studio 2017 version 15.3 and later:** (available with [/std:c++17](../build/reference/std-specify-language-standard-version.md)): The `register` keyword is no longer a supported storage class. The keyword is still reserved in the standard for future use. 
+```cpp
+   register int val; // warning C5033: 'register' is no longer a supported storage class
+```
+
+## <a name="in-this-section"></a>In this section:
   
+-   [static](#static)  
 -   [extern](#extern)  
+-   [thread_local](#thread_local)
+
+<a name="static"></a>
   
--   [thread\_local](#thread_local)  
+## <a name="static"></a>static  
   
-## statisch  
- Das `static`\-Schlüsselwort kann zum Deklarieren von Variablen und Funktionen im globalen Gültigkeitsbereich, Namespace\-Gültigkeitsbereich und Klassengültigkeitsbereich verwendet werden.  Statische Variablen können auch im lokalen Gültigkeitsbereich deklariert werden.  
+The `static` keyword can be used to declare variables and functions at global scope, namespace scope, and class scope. Static variables can also be declared at local scope.  
   
- Statische Dauer bedeutet, dass das Objekt oder die Variable zugewiesen wird, wenn das Programm gestartet wird. Die Zuweisung wird wieder aufgehoben, wenn das Programm beendet wird.  Externe Verknüpfung bedeutet, dass der Name der Variablen von außerhalb der Datei sichtbar ist, in der die Variable deklariert wird.  Umgekehrt bedeutet interne Verknüpfung, dass der Name nicht außerhalb der Datei sichtbar ist, in der die Variable deklariert wird.  Standardmäßig verfügt ein Objekt oder eine Variable, das bzw. die im globalen Namespace definiert wird, über eine statische Dauer und externe Verknüpfung.  Das `static`\-Schlüsselwort kann in folgenden Situationen verwendet werden:  
+Static duration means that the object or variable is allocated when the program starts and is deallocated when the program ends. External linkage means that the name of the variable is visible from outside the file in which the variable is declared. Conversely, internal linkage means that the name is not visible outside the file in which the variable is declared. By default, an object or variable that is defined in the global namespace has static duration and external linkage. The `static` keyword can be used in the following situations.  
   
-1.  Wenn Sie eine Variable oder eine Funktion im Dateibereich \(globaler und\/oder Namespacebereich\) deklarieren, gibt das `static`\-Schlüsselwort die Variable oder Funktion mit interner Verknüpfung an.  Wenn Sie eine Variable deklarieren, hat die Variable eine statische Dauer und wird vom Compiler mit dem Wert 0 initialisiert, solange Sie keinen anderen Wert angeben.  
+1.  When you declare a variable or function at file scope (global and/or namespace scope), the `static` keyword specifies that the variable or function has internal linkage. When you declare a variable, the variable has static duration and the compiler initializes it to 0 unless you specify another value.  
   
-2.  Wenn Sie eine Variable in einer Funktion deklarieren, gibt das `static`\-Schlüsselwort an, dass die Variable ihren Status zwischen den Aufrufen der Funktion beibehält.  
+2.  When you declare a variable in a function, the `static` keyword specifies that the variable retains its state between calls to that function.  
   
-3.  Wenn Sie einen Datenmember in einer Klassendeklaration deklarieren, gibt das `static`\-Schlüsselwort an, dass eine Kopie des Members für alle Instanzen der Klasse freigegeben wird.  Ein statischer Datenmember muss im Dateibereich definiert sein.  Ein ganzzahliger Datenmember, den Sie als `const` `static` deklarieren, kann einen Initialisierer haben.  
+3.  When you declare a data member in a class declaration, the `static` keyword specifies that one copy of the member is shared by all instances of the class. A static data member must be defined at file scope. An integral data member that you declare as `const static` can have an initializer.  
   
-4.  Wenn Sie eine Memberfunktion in einer Klassendeklaration deklarieren, gibt das `static`\-Schlüsselwort an, dass die Funktion für alle Instanzen der Klasse freigegeben wird.  Eine statische Memberfunktion kann nicht auf einen Instanzmember zugreifen, weil die Funktion keinen impliziten `this` Zeiger aufweist.  Um auf einen Instanzmember zuzugreifen, deklarieren Sie die Funktion mit einem Parameter, der ein Instanzzeiger oder \-verweis ist.  
+4.  When you declare a member function in a class declaration, the `static` keyword specifies that the function is shared by all instances of the class. A static member function cannot access an instance member because the function does not have an implicit `this` pointer. To access an instance member, declare the function with a parameter that is an instance pointer or reference.  
   
-5.  Sie können die Member einer Union nicht als statisch deklarieren.  Allerdings muss eine global deklarierte anonyme Union explizit als `static` deklariert werden.  
+5.  You cannot declare the members of a union as static. However, a globally declared anonymous union must be explicitly declared `static`.  
   
- Das folgende Beispiel zeigt, wie eine als `static` deklarierte Variable in einer Funktion ihren Status zwischen den Aufrufen der Funktion beibehält.  
+This example shows how a variable declared `static` in a function retains its state between calls to that function.  
   
-```  
+```cpp  
 // static1.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -76,13 +100,17 @@ int main() {
 }  
 ```  
   
-  **nStatic is 0**  
-**nStatic is 1**  
-**nStatic is 3**  
-**nStatic is 6**  
-**nStatic is 10** Im folgenden Beispiel wird die Verwendung von `static` in einer Klasse gezeigt.  
-  
+```Output  
+nStatic is 0  
+nStatic is 1  
+nStatic is 3  
+nStatic is 6  
+nStatic is 10  
 ```  
+  
+This example shows the use of `static` in a class.  
+  
+```cpp  
 // static2.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -115,16 +143,20 @@ int main() {
 }  
 ```  
   
-  **0**  
-**0**  
-**1**  
-**1**  
-**2**  
-**2**  
-**3**  
-**3** Das folgende Beispiel zeigt eine lokale als `static` deklarierte Variable in einer Memberfunktion.  Die statische Variable ist im gesamten Programm verfügbar. Alle Instanzen des Typs verwenden dieselbe Kopie der statischen Variable.  
-  
+```Output  
+0  
+0  
+1  
+1  
+2  
+2  
+3  
+3  
 ```  
+  
+This example shows a local variable declared `static` in a member function. The static variable is available to the whole program; all instances of the type share the same copy of the static variable.  
+  
+```cpp  
 // static3.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -149,82 +181,89 @@ int main() {
 }  
 ```  
   
-  **var \!\= value**  
-**var \=\= value** Ab C\+\+11 ist eine statische lokale Variableninitialisierung auf jeden Fall threadsicher.  Dieses Feature wird auch als *magic Statics* bezeichnet.  Allerdings müssen alle nachfolgende Zuweisungen in einer Multithreadanwendung synchronisiert werden.  Die Funktion für threadsichere statische Variablen kann mithilfe des Flags "\/Zc:threadSafeInit\-" deaktiviert werden, um eine Abhängigkeit vom CRT zu vermeiden.  
-  
-## extern  
- Objekte und Variablen, die als `extern` deklariert werden, deklarieren ein Objekt, das in einer anderen Übersetzungseinheit oder in einem einschließenden Bereich mit externer Verknüpfung definiert ist.  
-  
- Die Deklaration von **const**\-Variablen mit der `extern`\-Speicherklasse erzwingt eine externe Bindung für die Variable.  Eine Initialisierung einer **extern const**\-Variable ist in der definierenden Übersetzungseinheit zulässig.  Initialisierungen in Übersetzungseinheiten, die keine definierenden Übersetzungseinheiten sind, erzeugen nicht definierte Ergebnisse.  Weitere Informationen finden Sie unter [Verwenden von "extern" zur Angabe der Verknüpfung](../cpp/using-extern-to-specify-linkage.md)  
-  
- Der folgende Code zeigt zwei `extern`\-Deklarationen, `DefinedElsewhere` \(die sich auf einen Namen bezieht, der in einer anderen Übersetzungseinheit definiert wurde\) und `DefinedHere` \(die sich auf einen Namen bezieht, der in einem einschließenden Bereich definiert wurde\):  
-  
+```Output  
+var != value  
+var == value  
 ```  
+  
+Starting in C++11, a static local variable initialization is guaranteed to be thread-safe. This feature is sometimes called *magic statics*. However, in a multithreaded application all subsequent assignments must be synchronized. The thread-safe static initialization feature can be disabled by using the [/Zc:threadSafeInit-](../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) flag to avoid taking a dependency on the CRT.  
+  
+<a name="extern"></a>  
+  
+## <a name="extern"></a>extern  
+  
+Objects and variables declared as `extern` declare an object that is defined in another translation unit or in an enclosing scope as having external linkage.  
+  
+Declaration of `const` variables with the `extern` storage class forces the variable to have external linkage. An initialization of an `extern const` variable is allowed in the defining translation unit. Initializations in translation units other than the defining translation unit produce undefined results. For more information, see [Using extern to Specify Linkage](../cpp/using-extern-to-specify-linkage.md)  
+  
+The following code shows two `extern` declarations, `DefinedElsewhere` (which refers to a name defined in a different translation unit) and `DefinedHere` (which refers to a name defined in an enclosing scope):  
+  
+```cpp  
 // external.cpp  
-// defined in another translation unit  
+// DefinedElsewhere is defined in another translation unit  
 extern int DefinedElsewhere;     
 int main() {  
    int DefinedHere;   
    {  
       // refers to DefinedHere in the enclosing scope  
       extern int DefinedHere;  
-    }  
+   }  
 }  
 ```  
   
-## thread\_local \(C\+\+11\)  
- Auf eine Variable, die mit dem `thread_local`\-Bezeichner deklariert wird, kann nur in dem Thread, in dem sie erstellt wird, zugegriffen werden.  Die Variable wird erstellt, wenn der Thread erstellt, und gelöscht, wenn der Thread gelöscht wird.  Jeder Thread verfügt über eine eigene Kopie der Variable.  Unter Windows ist `thread_local` funktionell gleichwertig mit dem Microsoft\-spezifischen [\_\_declspec\(thread\)](../cpp/thread.md)\-Attribut.  
+<a name="thread_local"></a>  
   
-```  
-thread_local float f = 42.0; //global namespace  
+## <a name="threadlocal-c11"></a>thread_local (C++11)  
   
-struct C // cannot be applied to type definition  
+A variable declared with the `thread_local` specifier is accessible only on the thread on which it is created. The variable is created when the thread is created, and destroyed when the thread is destroyed. Each thread has its own copy of the variable. On Windows, `thread_local` is functionally equivalent to the Microsoft-specific [__declspec( thread )](../cpp/thread.md) attribute.  
+  
+```cpp  
+thread_local float f = 42.0; // Global namespace. Not implicitly static.
+  
+struct S // cannot be applied to type definition  
 {  
-thread_local int i; //local  
-thread_local static char buf[10]; // local and static  
+    thread_local int i; // Illegal. The member must be static.  
+    thread_local static char buf[10]; // OK 
 };  
   
 void DoSomething()  
 {  
-thread_local C my_struct; // Apply  thread_local to a variable  
+    // Apply thread_local to a local variable.
+    // Implicitly "thread_local static S my_struct".
+    thread_local S my_struct;  
 }  
 ```  
   
-1.  Der thread\_local\-Bezeichner kann mit `static` oder `extern` kombiniert werden.  
+Things to note about the `thread_local` specifier:  
   
-2.  Sie können `thread_local` nur auf Datendeklarationen und \-Definitionen anwenden; **thread\_local** kann nicht für Funktionsdeklarationen oder \-Definitionen verwendet werden.  
+-  The `thread_local` specifier may be combined with `static` or `extern`.  
   
-3.  Die Verwendung von`thread_local` kann mit dem [verzögerten Laden](../build/reference/linker-support-for-delay-loaded-dlls.md) von DLL\-Importen in Konflikt treten**.**  
+-  You can apply `thread_local` only to data declarations and definitions; `thread_local` cannot be used on function declarations or definitions.  
   
-4.  Auf XP\-Systemen funktioniert `thread_local` möglicherweise nicht ordnungsgemäß, wenn eine DLL `thread_local`\-Daten verwendet und dynamisch über LoadLibrary geladen wird.  
+-  The use of `thread_local` may interfere with [delay loading](../build/reference/linker-support-for-delay-loaded-dlls.md) of DLL imports. 
   
-5.  Sie können `thread_local` nur für Datenelemente mit statischer Speicherdauer angeben.  Hierzu zählen globale Datenobjekte \(sowohl **static** als auch `extern`\), lokale statische Objekte sowie statische Datenmember von Klassen.  Sie können automatische Datenobjekte nicht mit **thread\_local** deklarieren.  
+-  On XP systems, `thread_local` may not function correctly if a DLL uses `thread_local` data and it is loaded dynamically via `LoadLibrary`.  
   
-6.  Sie müssen das `thread_local` für die Deklaration und Definition eines lokalen Threadobjekts angeben, egal ob die Deklaration und Definition in der gleichen Datei oder in separaten Dateien auftreten.  
+-  You can specify `thread_local` only on data items with static storage duration. This includes global data objects (both `static` and `extern`), local static objects, and static data members of classes. Any local variable declared `thread_local` is implicitly static if no other storage class is provided; in other words, at block scope `thread_local` is equivalent to `thread_local static`. 
   
- Unter Windows ist `thread_local` funktionell gleichwertig mit  [\_\_declspec\(thread\)](../cpp/thread.md), außer dass \_\_declspec\(thread\) auf eine Typdefinition angewendet werden kann und im C\-Code gültig ist.  Verwenden Sie nach Möglichkeit `thread_local`, da dies ein Teil des C\+\+\-Standards ist und daher besser zu potieren ist.  
+-  You must specify `thread_local` for both the declaration and the definition of a thread local object, whether the declaration and definition occur in the same file or separate files.  
   
- Weitere Informationen finden Sie unter [Lokaler Threadspeicher \(TLS\)](../parallel/thread-local-storage-tls.md).  
+On Windows, `thread_local` is functionally equivalent to  [__declspec(thread)](../cpp/thread.md) except that `__declspec(thread)` can be applied to a type definition and is valid in C code. Whenever possible, use `thread_local` because it is part of the C++ standard and is therefore more portable.  
   
-## register  
- In C\+\+11 ist das **register**\-Schlüsselwort veraltet.  Es gibt an, dass die Variable nach Möglichkeit auf einem Computerregister gespeichert werden soll.  Es können nur Funktionsargumente und lokale Variablen mit der Registerspeicherklasse deklariert werden.  
+##  <a name="register"></a>  register  
+**Visual Studio 2017 version 15.3 and later** (available with [/std:c++17](../build/reference/std-specify-language-standard-version.md)): The `register` keyword is no longer a supported storage class. The keyword is still reserved in the standard for future use. 
+
+```cpp
+   register int val; // warning C5033: 'register' is no longer a supported storage class
+```
+
+## <a name="example-automatic-vs-static-initialization"></a>Example: automatic vs. static initialization  
   
-```  
-register int num;  
-```  
+A local automatic object or variable is initialized every time the flow of control reaches its definition. A local static object or variable is initialized the first time the flow of control reaches its definition.  
   
- Wie automatische Variablen werden Registervariablen nur bis zum Ende des Blocks beibehalten, in dem sie deklariert werden.  
+Consider the following example, which defines a class that logs initialization and destruction of objects and then defines three objects, `I1`, `I2`, and `I3`:  
   
- Der Compiler berücksichtigt keine Benutzeranforderungen für Registervariablen. Stattdessen trifft er selbst die Registerauswahl, wenn globale Optimierungen aktiviert sind.  Jede andere Semantik, die dem [register](assetId:///5b66905a-2f7f-4918-bb55-5e66d4bc50f9)\-Schlüsselwort zugeordnet ist, wird jedoch vom Compiler berücksichtigt.  
-  
- Wenn der address\-of\-Operator \(**&**\) für ein Objekt verwendet wird, das mit "register" deklariert wird, muss der Compiler das Objekt im Arbeitsspeicher anstelle eines Registers ablegen.  
-  
-## Beispiel: automatische im Vergleich zurstatischen Initialisierung  
- Ein lokales automatisches Objekt oder eine lokale automatische Variable wird jedes Mal initialisiert, wenn die Ablaufsteuerung ihre Definition erreicht.  Ein lokales automatisches Objekt oder eine lokale automatische Variable wird erstmalig initialisiert, wenn die Ablaufsteuerung ihre Definition erreicht.  
-  
- Betrachten Sie das folgende Beispiel, in dem eine Klasse definiert wird, die die Initialisierung und Beschädigung von Objekten protokolliert und dann drei Objekte, `I1`, `I2` und `I3`, definiert:  
-  
-```  
+```cpp  
 // initialization_of_objects.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -234,65 +273,74 @@ using namespace std;
 // Define a class that logs initializations and destructions.  
 class InitDemo {  
 public:  
-   InitDemo( const char *szWhat );  
-   ~InitDemo();  
+    InitDemo( const char *szWhat );  
+    ~InitDemo();  
   
 private:  
-   char *szObjName;  
-   size_t sizeofObjName;  
+    char *szObjName;  
+    size_t sizeofObjName;  
 };  
   
 // Constructor for class InitDemo  
 InitDemo::InitDemo( const char *szWhat ) :  
-   szObjName(NULL), sizeofObjName(0) {  
-   if( szWhat != 0 && strlen( szWhat ) > 0 ) {  
-      // Allocate storage for szObjName, then copy  
-      // initializer szWhat into szObjName, using  
-      // secured CRT functions.  
-      sizeofObjName = strlen( szWhat ) + 1;  
+    szObjName(NULL), sizeofObjName(0) {  
+    if ( szWhat != 0 && strlen( szWhat ) > 0 ) {  
+        // Allocate storage for szObjName, then copy  
+        // initializer szWhat into szObjName, using  
+        // secured CRT functions.  
+        sizeofObjName = strlen( szWhat ) + 1;  
   
-      szObjName = new char[ sizeofObjName ];  
-      strcpy_s( szObjName, sizeofObjName, szWhat );  
+        szObjName = new char[ sizeofObjName ];  
+        strcpy_s( szObjName, sizeofObjName, szWhat );  
   
-      cout << "Initializing: " << szObjName << "\n";  
-   }  
-   else  
-      szObjName = 0;  
+        cout << "Initializing: " << szObjName << "\n";  
+    }  
+    else {  
+        szObjName = 0;  
+    }
 }  
   
 // Destructor for InitDemo  
 InitDemo::~InitDemo() {  
-   if( szObjName != 0 ) {  
-      cout << "Destroying: " << szObjName << "\n";  
-      delete szObjName;  
-   }  
+    if( szObjName != 0 ) {  
+        cout << "Destroying: " << szObjName << "\n";  
+        delete szObjName;  
+    }  
 }  
   
 // Enter main function  
 int main() {  
-   InitDemo I1( "Auto I1" ); {  
-      cout << "In block.\n";  
-      InitDemo I2( "Auto I2" );  
-      static InitDemo I3( "Static I3" );  
-   }  
-   cout << "Exited block.\n";  
+    InitDemo I1( "Auto I1" ); {  
+        cout << "In block.\n";  
+        InitDemo I2( "Auto I2" );  
+        static InitDemo I3( "Static I3" );  
+    }  
+    cout << "Exited block.\n";  
 }  
 ```  
   
-  **Initializing: Auto I1**  
-**In block.  Initializing: Auto I2**  
-**Initializing: Static I3**  
-**Destroying: Auto I2**  
-**Exited block.  Destroying: Auto I1**  
-**Destroying: Static I3**  Der vorhergehende Code zeigt, wie und wann die Objekte `I1`, `I2` und `I3` initialisiert und beschädigt werden.  
+```Output  
+Initializing: Auto I1  
+In block.  
+Initializing: Auto I2  
+Initializing: Static I3  
+Destroying: Auto I2  
+Exited block.  
+Destroying: Auto I1  
+Destroying: Static I3  
+```  
   
- In Bezug auf das Programm sind einige Punkte zu beachten.  
+This example demonstrates how and when the objects `I1`, `I2`, and `I3` are initialized and when they are destroyed.  
   
- Erstens werden `I1` und `I2` automatisch beschädigt, wenn die Ablaufsteuerung den Block beendet, in dem sie definiert sind.  
+There are several points to note about the program:  
   
- Zweitens ist es in C\+\+ nicht notwendig, Objekte oder Variablen am Anfang eines Blocks zu deklarieren.  Außerdem werden diese Objekte nur initialisiert, wenn die Ablaufsteuerung deren Definitionen erreicht.  \(`I2` und `I3` sind Beispiele solcher Definitionen.\) Die Ausgabe zeigt eindeutig, wann sie initialisiert werden.  
+- First, `I1` and `I2` are automatically destroyed when the flow of control exits the block in which they are defined.  
   
- Des Weiteren behalten statische lokale Variablen wie `I3` ihre Werte für die Dauer des Programms bei, werden jedoch beschädigt, sobald das Programm beendet wird.  
+- Second, in C++, it is not necessary to declare objects or variables at the beginning of a block. Furthermore, these objects are initialized only when the flow of control reaches their definitions. (`I2` and `I3` are examples of such definitions.) The output shows exactly when they are initialized.  
   
-## Siehe auch  
- [Deklarationen und Definitionen](../cpp/declarations-and-definitions-cpp.md)
+- Finally, static local variables such as `I3` retain their values for the duration of the program, but are destroyed as the program terminates.  
+  
+## <a name="see-also"></a>See Also  
+  
+ [Declarations and Definitions](../cpp/declarations-and-definitions-cpp.md)
+

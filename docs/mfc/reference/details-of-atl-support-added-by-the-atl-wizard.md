@@ -1,47 +1,65 @@
 ---
-title: "Details zur ATL-Unterst&#252;tzung, die vom ATL-Assistenten hinzugef&#252;gt wird | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.atl.support"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, MFC-Projekte"
-  - "MFC, ATL-Unterstützung"
+title: Details of ATL Support Added by the ATL Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.codewiz.atl.support
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, ATL support
+- ATL, MFC projects
 ms.assetid: aa66bad0-008f-4886-94c1-2a0a0d04bce4
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Details zur ATL-Unterst&#252;tzung, die vom ATL-Assistenten hinzugef&#252;gt wird
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 44532e102ab648ad553917b2b6a8a5307fc20f93
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Wenn Sie einer [vorhandenen MFC\-Anwendung oder DLL ATL\-Unterstützung hinzufügen](../../mfc/reference/adding-atl-support-to-your-mfc-project.md), nimmt Visual C\+\+ die folgenden Änderungen am vorhandenen MFC\-Projekt vor \(das Projekt in diesem Beispiel heißt `MFCEXE`\):  
+---
+# <a name="details-of-atl-support-added-by-the-atl-wizard"></a>Details of ATL Support Added by the ATL Wizard
+When you [add ATL support to an existing MFC executable or DLL](../../mfc/reference/adding-atl-support-to-your-mfc-project.md), Visual C++ makes the following modifications to the existing MFC project (in this example, the project is called `MFCEXE`):  
   
--   Es werden zwei neue Dateien hinzugefügt \(eine IDL\-Datei und eine RGS\-Datei, die zur Serverregistrierung verwendet werden\).  
+-   Two new files (an .idl file and an .rgs file, used to register the server) are added.  
   
--   Der Headerdatei und der Implementierungsdatei der Hauptanwendung \(**Mfcexe.h** und **Mfcexe.cpp**\) wird eine neue \(von **CAtlMFCModule** abgeleitete\) Klasse hinzugefügt.  Zusätzlich zur neuen Klasse wird `InitInstance` Registrierungscode hinzugefügt.  Außerdem wird der `ExitInstance`\-Funktion Code hinzugefügt, um die Erstellung des Klassenobjekts zu widerrufen.  Schließlich werden der Implementierungsdatei zwei neue Headerdateien \(**Initguid.h** und **Mfcexe\_i.c**\) hinzugefügt, durch die die neuen GUIDs für die von **CAtlMFCModule** abgeleitete Klasse deklariert und initialisiert werden.  
+-   In the main application header and implementation files (Mfcexe.h and Mfcexe.cpp), a new class (derived from **CAtlMFCModule**) is added. In addition to the new class, code is added to `InitInstance` for registration. Code is also added to the `ExitInstance` function for revoking the class object. In the header file, Finally, two new header files (Initguid.h and Mfcexe_i.c) are included in the implementation file, declaring and initializing the new GUIDs for the **CAtlMFCModule**-derived class.  
   
--   Um den Server ordnungsgemäß zu registrieren, wird der Ressourcendatei des Projekts ein Eintrag für die neue RGS\-Datei hinzugefügt.  
+-   To register the server properly, an entry for the new .rgs file is added to the project's resource file.  
   
-## Hinweise zu DLL\-Projekten  
- Wenn Sie einem MFC\-DLL\-Projekt ATL\-Unterstützung hinzufügen, werden Sie einige Unterschiede feststellen.  Den Funktionen **DLLRegisterServer** und **DLLUnregisterServer** wird Code hinzugefügt, durch den die DLL registriert bzw. deren Registrierung aufgehoben werden kann.  Außerdem wird den Funktionen [DllCanUnloadNow](../Topic/CAtlDllModuleT::DllCanUnloadNow.md) und [DllGetClassObject](../Topic/CAtlDllModuleT::DllGetClassObject.md) Code hinzugefügt.  
+## <a name="notes-for-dll-projects"></a>Notes for DLL Projects  
+ When you add ATL support to an MFC DLL project, you will see some differences. Code is added to the **DLLRegisterServer** and **DLLUnregisterServer** functions for registering and unregistering the DLL. Code is also added to [DllCanUnloadNow](../../atl/reference/catldllmodulet-class.md#dllcanunloadnow) and [DllGetClassObject](../../atl/reference/catldllmodulet-class.md#dllgetclassobject).  
   
-## Siehe auch  
- [ATL\-Unterstützung in einem MFC\-Projekt](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)   
- [Hinzufügen neuer Funktionen mit Code\-Assistenten](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Hinzufügen einer Klasse](../../ide/adding-a-class-visual-cpp.md)   
- [Hinzufügen einer Memberfunktion](../../ide/adding-a-member-function-visual-cpp.md)   
- [Hinzufügen einer Membervariablen](../../ide/adding-a-member-variable-visual-cpp.md)   
- [Überschreiben einer virtuellen Funktion](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [MFC\-Meldungshandler](../../mfc/reference/adding-an-mfc-message-handler.md)   
- [Navigieren in der Klassenstruktur](../../ide/navigating-the-class-structure-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+ [ATL Support in an MFC Project](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)   
+ [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)   
+ [Adding a Member Function](../../ide/adding-a-member-function-visual-cpp.md)   
+ [Adding a Member Variable](../../ide/adding-a-member-variable-visual-cpp.md)   
+ [Overriding a Virtual Function](../../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [MFC Message Handler](../../mfc/reference/adding-an-mfc-message-handler.md)   
+ [Navigating the Class Structure](../../ide/navigating-the-class-structure-visual-cpp.md)
+

@@ -1,48 +1,67 @@
 ---
-title: "Benachrichtigungsmeldungen des Schieberegler-Steuerelements | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSliderCtrl-Klasse, Benachrichtigungen"
-  - "Meldungen, Benachrichtigung"
-  - "Benachrichtigungen, CSliderCtrl"
-  - "Schieberegler-Steuerelemente, Benachrichtigungsmeldungen"
+title: Slider Notification Messages | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSliderCtrl class [MFC], notifications
+- slider controls [MFC], notification messages
+- messages, notification
+- notifications [MFC], CSliderCtrl
 ms.assetid: b9121104-3889-4a10-92bf-f3723f1af9d0
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Benachrichtigungsmeldungen des Schieberegler-Steuerelements
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2d6a14233d3db646a6536bd11f276dbcf1aea937
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Ein Slider\-Steuerelement benachrichtigt sein übergeordnetes Fenster Benutzeraktionen, indem übergeordnete `WM_HSCROLL` oder die `WM_VSCROLL` \- Meldungen, je nach Ausrichtung des Schieberegler\-Steuerelements sendet.  Um diese Nachrichten behandeln, fügen Sie Handler für die Meldungen `WM_HSCROLL` und `WM_VSCROLL` dem übergeordneten Fenster hinzu.  Der [OnHScroll](../Topic/CWnd::OnHScroll.md) und [OnVScroll](../Topic/CWnd::OnVScroll.md)\-Memberfunktionen werden einem Benachrichtigungscode, die Position des Schiebereglers und ein Zeiger auf das [CSliderCtrl](../mfc/reference/csliderctrl-class.md)\-Objekt übergeben.  Beachten Sie, dass der Mauszeiger vom Typ **CScrollBar \*** ist, obwohl sie auf `CSliderCtrl` ein Objekt zeigt.  Sie müssen möglicherweise der Typ diesen Zeiger, wenn Sie das Schieberegler\-Steuerelement bearbeiten müssen.  
+---
+# <a name="slider-notification-messages"></a>Slider Notification Messages
+A slider control notifies its parent window of user actions by sending the parent `WM_HSCROLL` or `WM_VSCROLL` messages, depending on the orientation of the slider control. To handle these messages, add handlers for the `WM_HSCROLL` and `WM_VSCROLL` messages to the parent window. The [OnHScroll](../mfc/reference/cwnd-class.md#onhscroll) and [OnVScroll](../mfc/reference/cwnd-class.md#onvscroll) member functions will be passed a notification code, the position of the slider, and a pointer to the [CSliderCtrl](../mfc/reference/csliderctrl-class.md) object. Note that the pointer is of type **CScrollBar \*** even though it points to a `CSliderCtrl` object. You may need to typecast this pointer if you need to manipulate the slider control.  
   
- Anstatt mithilfe der Bildlaufleistenbenachrichtigungscodes, senden Slider\-Steuerelementen einen anderen Satz Benachrichtigungscodes.  Ein Slider\-Steuerelement sendet die **TB\_BOTTOM**, **TB\_LINEDOWN**, **TB\_LINEUP** und **TB\_TOP** Benachrichtigungscodes nur, wenn der Benutzer auf ein Schieberegler\-Steuerelement interagiert, indem die Tastatur verwendet.  Die **TB\_THUMBPOSITION** und **TB\_THUMBTRACK** Benachrichtigungsmeldungen werden nur gesendet, wenn der Benutzer die Maus verwendet.  Die **TB\_ENDTRACK**, **TB\_PAGEDOWN** und **TB\_PAGEUP** Benachrichtigungscodes werden in beiden Fällen übermittelt.  
+ Rather than using the scroll bar notification codes, slider controls send a different set of notification codes. A slider control sends the **TB_BOTTOM**, **TB_LINEDOWN**, **TB_LINEUP**, and **TB_TOP** notification codes only when the user interacts with a slider control by using the keyboard. The **TB_THUMBPOSITION** and **TB_THUMBTRACK** notification messages are only sent when the user is using the mouse. The **TB_ENDTRACK**, **TB_PAGEDOWN**, and **TB_PAGEUP** notification codes are sent in both cases.  
   
- Die folgende Tabelle zeigt die Schieberegler\-Steuerelement\-Benachrichtigungsmeldungen und Ereignisse \(virtuelle Tastencodes oder Mausereignisse\) diese Ursache der zu sendenden Benachrichtigungen, auf. \(Eine Liste von Standardvirtuellen, finden Sie tastencodes Winuser.h.\)  
+ The following table lists the slider control notification messages and the events (virtual key codes or mouse events) that cause the notifications to be sent. (For a list of standard virtual key codes, see Winuser.h.)  
   
-|Benachrichtigung|Ereignis, das bewirkt Benachrichtigung gesendet zu werden|  
-|----------------------|---------------------------------------------------------------|  
-|**TB\_BOTTOM**|**VK\_END**|  
-|**TB\_ENDTRACK**|`WM_KEYUP` \(der Benutzer hat einen Schlüssel verwendet, die einen relevanten virtueller Tastencode übermittelten\)|  
-|**TB\_LINEDOWN**|**VK\_RIGHT** oder **VK\_DOWN**|  
-|**TB\_LINEUP**|**VK\_LEFT** oder **VK\_UP**|  
-|**TB\_PAGEDOWN**|**VK\_NEXT** \(der Benutzer klicken auf den Channel unter oder auf der rechten Seite den Schieberegler\)|  
-|**TB\_PAGEUP**|**VK\_PRIOR** \(der Benutzer klicken auf den Channel über bzw. auf der linken Seite den Schieberegler\)|  
-|**TB\_THUMBPOSITION**|`WM_LBUTTONUP` nach einer **TB\_THUMBTRACK** Benachrichtigung|  
-|**TB\_THUMBTRACK**|Schiebereglerbewegung \(der Benutzer zog den Schieberegler\)|  
-|**TB\_TOP**|**VK\_HOME**|  
+|Notification message|Event causing notification to be sent|  
+|--------------------------|-------------------------------------------|  
+|**TB_BOTTOM**|**VK_END**|  
+|**TB_ENDTRACK**|`WM_KEYUP` (the user released a key that sent a relevant virtual key code)|  
+|**TB_LINEDOWN**|**VK_RIGHT** or **VK_DOWN**|  
+|**TB_LINEUP**|**VK_LEFT** or **VK_UP**|  
+|**TB_PAGEDOWN**|**VK_NEXT** (the user clicked the channel below or to the right of the slider)|  
+|**TB_PAGEUP**|**VK_PRIOR** (the user clicked the channel above or to the left of the slider)|  
+|**TB_THUMBPOSITION**|`WM_LBUTTONUP` following a **TB_THUMBTRACK** notification message|  
+|**TB_THUMBTRACK**|Slider movement (the user dragged the slider)|  
+|**TB_TOP**|**VK_HOME**|  
   
-## Siehe auch  
- [Verwenden von CSliderCtrl](../mfc/using-csliderctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CSliderCtrl](../mfc/using-csliderctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,81 +1,98 @@
 ---
-title: "MFC-ActiveX-Steuerelemente: Darstellen eines ActiveX-Steuerelements | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC-ActiveX-Steuerelemente, Optimieren"
-  - "MFC-ActiveX-Steuerelemente, Zeichnen"
+title: 'MFC ActiveX Controls: Painting an ActiveX Control | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], painting
+- MFC ActiveX controls [MFC], optimizing
 ms.assetid: 25fff9c0-4dab-4704-aaae-8dfb1065dee3
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# MFC-ActiveX-Steuerelemente: Darstellen eines ActiveX-Steuerelements
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: bb07151fa696f34c74c6ed1021d116b2dd21f2ae
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Dieser Artikel beschreibt das ActiveX\-Steuerelement\-Zeichnen und wie Sie Farbcode ändern können, um den Prozess zu optimieren. \(Siehe [Optimieren der Steuerzeichnung](../mfc/optimizing-control-drawing.md) für Verfahren auf, wie Zeichnen indem Sie können Steuerelementen einzeln zuvor ausgewählte GDI\-Objekte nicht wiederherstellen optimiert.  Nachdem alle Steuerelemente gezeichnet wurden, kann der Container die ursprünglichen Objekte automatisch wiederhergestellt.\)  
+---
+# <a name="mfc-activex-controls-painting-an-activex-control"></a>MFC ActiveX Controls: Painting an ActiveX Control
+This article describes the ActiveX control painting process and how you can alter paint code to optimize the process. (See [Optimizing Control Drawing](../mfc/optimizing-control-drawing.md) for techniques on how to optimize drawing by not having controls individually restore previously selected GDI objects. After all of the controls have been drawn, the container can automatically restore the original objects.)  
   
- Beispiele in diesem Artikel sind von einem Steuerelement, das aus dem MFC\-ActiveX\-Steuerelement\-Assistenten mit Standardeinstellungen erstellt wird.  Weitere Informationen zum Erstellen einer Skelettsteuer\-Anwendung mit dem MFC\-ActiveX\-Steuerelement\-Assistenten, finden Sie im Artikel [MFC\-ActiveX\-Steuerelement\-Assistent](../mfc/reference/mfc-activex-control-wizard.md).  
+ Examples in this article are from a control created by the MFC ActiveX Control Wizard with default settings. For more information on creating a skeleton control application using the MFC ActiveX Control Wizard, see the article [MFC ActiveX Control Wizard](../mfc/reference/mfc-activex-control-wizard.md).  
   
- Die folgenden Themen werden behandelt:  
+ The following topics are covered:  
   
--   [Der Prozess für das Zeichnen eines Steuerelements und Code erstellt, um vom ActiveX\-Steuerelement\-Assistenten Zeichnen zu unterstützen](#_core_the_painting_process_of_an_activex_control)  
+-   [The overall process for painting a control and the code created by the ActiveX Control Wizard to support painting](#_core_the_painting_process_of_an_activex_control)  
   
--   [Wie Sie das Zeichnen optimiert](#_core_optimizing_your_paint_code)  
+-   [How to optimize the painting process](#_core_optimizing_your_paint_code)  
   
--   [Wie Sie das Steuerelement mithilfe von Metadateien zeichnet](#_core_painting_your_control_using_metafiles)  
+-   [How to paint your control using metafiles](#_core_painting_your_control_using_metafiles)  
   
-##  <a name="_core_the_painting_process_of_an_activex_control"></a> Das Zeichnen eines ActiveX\-Steuerelements  
- Wenn ActiveX\-Steuerelemente zuerst angezeigt oder neu gezeichnet werden, um sie einem Zeichnen, das anderen Anwendungen vergleichbar ist, die mit MFC, mit einem wichtigen Unterschied entwickelt wurden: ActiveX\-Steuerelemente können in einem aktiven oder inaktiv sein.  
+##  <a name="_core_the_painting_process_of_an_activex_control"></a> The Painting Process of an ActiveX Control  
+ When ActiveX controls are initially displayed or are redrawn, they follow a painting process similar to other applications developed using MFC, with one important distinction: ActiveX controls can be in an active or an inactive state.  
   
- Ein aktives Steuerelement wird in einen ActiveX\-Steuerelementcontainer durch ein untergeordnetes Fenster dargestellt.  Wie andere Fenster ist es für das Zeichnen zuständig, wenn `WM_PAINT` eine Meldung empfängt.  Die Basisklasse des Steuerelements, [COleControl](../mfc/reference/colecontrol-class.md), behandelt sie in ihrer `OnPaint`\-Funktion.  Die Standardimplementierung ruft die `OnDraw`\-Funktion des Steuerelements.  
+ An active control is represented in an ActiveX control container by a child window. Like other windows, it is responsible for painting itself when a `WM_PAINT` message is received. The control's base class, [COleControl](../mfc/reference/colecontrol-class.md), handles this message in its `OnPaint` function. This default implementation calls the `OnDraw` function of your control.  
   
- Ein Präprozessordirektiven Steuerelement ist anders gezeichnet.  Wenn das Steuerelement inaktiv ist, ist das Fenster entweder nicht sichtbar oder nicht vorhanden, sodass es eine paint\-Meldung nicht erhalten.  Stattdessen ruft der Steuerelementcontainer Funktion direkt die `OnDraw` des Steuerelements.  Dies weicht Zeichnen eines vom aktiven Steuerelements darin, dass die `OnPaint`\-Memberfunktion nicht aufgerufen wird.  
+ An inactive control is painted differently. When the control is inactive, its window is either invisible or nonexistent, so it can not receive a paint message. Instead, the control container directly calls the `OnDraw` function of the control. This differs from an active control's painting process in that the `OnPaint` member function is never called.  
   
- Wie in den vorherigen Abschnitten erläutert, wie ein ActiveX\-Steuerelement aktualisiert wird, hängt vom Status des Steuerelements ab.  Da das Framework die `OnDraw`\-Memberfunktion in beiden Fällen aufrufen, fügen Sie den Großteil des außerdem in dieser Memberfunktion hinzu.  
+ As discussed in the preceding paragraphs, how an ActiveX control is updated depends on the state of the control. However, because the framework calls the `OnDraw` member function in both cases, you add the majority of your painting code in this member function.  
   
- Die `OnDraw`\-Memberfunktionshandles steuern Zeichnen.  Wenn ein Steuerelement inaktiv ist, ruft der Steuerelementcontainer `OnDraw` auf und den Gerätekontext des Steuerelementcontainers und die Koordinaten des rechteckigen Bereichs, der vom Steuerelement gefüllt wird.  
+ The `OnDraw` member function handles control painting. When a control is inactive, the control container calls `OnDraw`, passing the device context of the control container and the coordinates of the rectangular area occupied by the control.  
   
- Das Rechteck, das durch das Framework die `OnDraw`\-Memberfunktion übergeben wird, enthält den Bereich, der vom Steuerelement gefüllt wird.  Wenn das Steuerelement aktiv ist, ist die obere linke Ecke \(0, 0\) und der übergebene Gerätekontext ist für das untergeordnete Fenster, das das Steuerelement enthält.  Wenn das Steuerelement inaktiv ist, ist die Koordinate nicht unbedingt \(0, 0\) und der Gerätekontext, der übergeben wird, ist für den Steuerelementcontainer, der das Steuerelement enthält.  
-  
-> [!NOTE]
->  Es ist wichtig, dass die Änderungen in `OnDraw`  nicht vom oberen linkspunkt des Rechtecks abhängen, der gleich ist \(0, 0\) und dass Sie nur innerhalb des Rechtecks zeichnen, das an `OnDraw` übergeben wird.  Unerwartete Ergebnisse können auftreten, wenn Sie über den Bereich des Rechtecks hinaus zeichnen.  
-  
- Die Standardimplementierung, die aus dem MFC\-ActiveX\-Steuerelement\-Assistenten in der Steuerimplementierungsdatei \(.CPP\) bereitgestellt, wird unten angezeigt, erfasst das Rechteck mit einem weißen Pinsel und die Ellipse mit der aktuellen Hintergrundfarbe.  
-  
- [!CODE [NVC_MFC_AxUI#1](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxUI#1)]  
+ The rectangle passed by the framework to the `OnDraw` member function contains the area occupied by the control. If the control is active, the upper-left corner is (0, 0) and the device context passed is for the child window that contains the control. If the control is inactive, the upper-left coordinate is not necessarily (0, 0) and the device context passed is for the control container containing the control.  
   
 > [!NOTE]
->  Wenn Sie ein Steuerelement gezeichnet, sollten Sie Annahmen über den Zustand des Gerätekontexts nicht umwandeln, der als der *pdc*\-Parameter der `OnDraw`\-Funktion übergeben wird.  Gelegentlich wird der Gerätekontext über die Containeranwendung angegeben und nicht unbedingt dem Standardzustand initialisiert werden.  Insbesondere, wählen Sie explizit die Pinsel, Stifte, die die Farben, Schriftarten und anderen Ressourcen, aus denen der Zeichencode nach abhängt.  
+>  It is important that your modifications to `OnDraw` do not depend on the rectangle's upper left point being equal to (0, 0) and that you draw only inside the rectangle passed to `OnDraw`. Unexpected results can occur if you draw beyond the rectangle's area.  
   
-##  <a name="_core_optimizing_your_paint_code"></a> Optimieren des Farben\-Codes  
- Nachdem das Steuerelement sich erfolgreich zeichnet, ist der nächste Schritt darin, die Funktion `OnDraw` zu optimieren.  
+ The default implementation provided by the MFC ActiveX Control Wizard in the control implementation file (.CPP), shown below, paints the rectangle with a white brush and fills the ellipse with the current background color.  
   
- Die Standardimplementierung des ActiveX\-Steuerelements Farben der gesamte Steuerelementbereich gezeichnet.  Dies ist für einfache Steuerelemente ausreichend, jedoch, in vielen Fällen das Steuerelement würde neu zeichnet wenn nur der Teil, den das erforderliche Aktualisieren neu gestrichelt wurde, statt des gesamten Steuerelements schneller sein.  
+ [!code-cpp[NVC_MFC_AxUI#1](../mfc/codesnippet/cpp/mfc-activex-controls-painting-an-activex-control_1.cpp)]  
   
- Die `OnDraw`\-Funktion stellt eine einfache Methode der Optimierung verhindern von `rcInvalid`, der rechteckige Bereich des Steuerelements bereit, das das Neuzeichnen erfordert.  Verwenden Sie in diesem Bereich, normalerweise kleiner als der gesamte Steuerelementbereich, das Zeichnen beschleunigen.  
+> [!NOTE]
+>  When painting a control, you should not make assumptions about the state of the device context that is passed as the *pdc* parameter to the `OnDraw` function. Occasionally the device context is supplied by the container application and will not necessarily be initialized to the default state. In particular, explicitly select the pens, brushes, colors, fonts, and other resources that your drawing code depends upon.  
   
-##  <a name="_core_painting_your_control_using_metafiles"></a> Zeichnen des Steuerelements mithilfe von Metadateien  
- In den meisten Fällen wird der `pdc` an die Funktion Parameter `OnDraw` auf einem Bildschirm\-Gerätekontext \(DC\).  Wenn es Bilder des Steuerelements oder während einer Seitenansichtssitzung gibt, ist das Domänencontroller, das für das Rendern empfangen wird, ein spezieller Typ, der einen "Metadatei\-DC".  Anders als ein Bildschirm Domänencontroller das sofort behandelt, dass Anforderungen zu ihm, Metadatei\-DC\-Speicher anfordert, die wiedergegeben werden zu einem späteren Zeitpunkt.  Einige Containeranwendungen wählen kann auch, um das Steuerbild mithilfe eines Metadatei\-DC zu rendern wenn im Entwurfsmodus.  
+##  <a name="_core_optimizing_your_paint_code"></a> Optimizing Your Paint Code  
+ After the control is successfully painting itself, the next step is to optimize the `OnDraw` function.  
   
- Metadateizeichnungsanforderungen können von dem Container über zwei Benutzeroberflächenfeatures gemacht werden: **IViewObject::Draw** \(Diese Funktion kann für NichtMetadateizeichnung ebenfalls aufgerufen werden\) und **IDataObject::GetData**.  Wenn ein Metadatei\-DC als einen der Parameter übergeben wird, macht das MFC\-Framework [COleControl::OnDrawMetafile](../Topic/COleControl::OnDrawMetafile.md) einen Aufruf.  Da dies eine virtuelle Memberfunktion ist, überschreiben Sie diese Funktion in der Steuerelementklasse, um das zur speziellen Verarbeitung durchzuführen.  Das Standardverhalten ruft `COleControl::OnDraw` auf.  
+ The default implementation of ActiveX control painting paints the entire control area. This is sufficient for simple controls, but in many cases repainting the control would be faster if only the portion that needed updating was repainted, instead of the entire control.  
   
- So verschieben des Steuerelements sicherzustellen kann im Bildschirm gezeichnet werden und Metadateigerätekontexte, müssen Sie Nur Memberfunktionen verwenden die in einen Bildschirm und in einen Metadatei\-DC unterstützt werden.  Beachten Sie, dass das Koordinatensystem möglicherweise nicht in Pixel gemessen wird.  
+ The `OnDraw` function provides an easy method of optimization by passing `rcInvalid`, the rectangular area of the control that needs redrawing. Use this area, usually smaller than the entire control area, to speed up the painting process.  
   
- Da die Standardimplementierung von `OnDrawMetafile` die `OnDraw`\-Funktion des Steuerelements aufruft, verwenden Sie nur Memberfunktionen, die für eine Metadatei und einen Bildschirm\-Gerätekontext geeignet sind, es sei denn, Sie `OnDrawMetafile` überschreiben.  Im Folgenden sind die Teilmenge von `CDC`\-Memberfunktionen auf, die in einer Metadatei und in einem Bildschirm\-Gerätekontext verwendet werden können.  Weitere Informationen zu diesen Funktionen, Klasse finden Sie unter [CDC](../mfc/reference/cdc-class.md) in der *MFC\-Referenz*.  
+##  <a name="_core_painting_your_control_using_metafiles"></a> Painting Your Control Using Metafiles  
+ In most cases the `pdc` parameter to the `OnDraw` function points to a screen device context (DC). However, when printing images of the control or during a print preview session, the DC received for rendering is a special type called a "metafile DC". Unlike a screen DC, which immediately handles requests sent to it, a metafile DC stores requests to be played back at a later time. Some container applications may also choose to render the control image using a metafile DC when in design mode.  
   
-|Bögen|BibBlt|Sehne|  
-|-----------|------------|-----------|  
+ Metafile drawing requests can be made by the container through two interface functions: **IViewObject::Draw** (this function can also be called for non-metafile drawing) and **IDataObject::GetData**. When a metafile DC is passed as one of the parameters, the MFC framework makes a call to [COleControl::OnDrawMetafile](../mfc/reference/colecontrol-class.md#ondrawmetafile). Because this is a virtual member function, override this function in the control class to do any special processing. The default behavior calls `COleControl::OnDraw`.  
+  
+ To make sure the control can be drawn in both screen and metafile device contexts, you must use only member functions that are supported in both a screen and a metafile DC. Be aware that the coordinate system may not be measured in pixels.  
+  
+ Because the default implementation of `OnDrawMetafile` calls the control's `OnDraw` function, use only member functions that are suitable for both a metafile and a screen device context, unless you override `OnDrawMetafile`. The following lists the subset of `CDC` member functions that can be used in both a metafile and a screen device context. For more information on these functions, see class [CDC](../mfc/reference/cdc-class.md) in the *MFC Reference*.  
+  
+|Arc|BibBlt|Chord|  
+|---------|------------|-----------|  
 |**Ellipse**|**Escape**|`ExcludeClipRect`|  
 |`ExtTextOut`|`FloodFill`|`IntersectClipRect`|  
 |`LineTo`|`MoveTo`|`OffsetClipRgn`|  
@@ -91,25 +108,27 @@ Dieser Artikel beschreibt das ActiveX\-Steuerelement\-Zeichnen und wie Sie Farbc
 |`SetViewportOrg`|`SetWindowExt`|`SetWindowORg`|  
 |`StretchBlt`|`TextOut`||  
   
- Neben `CDC`\-Memberfunktionen gibt es einige andere Funktionen, die in einem Metadatei\-DC kompatibel sind.  Dazu gehören [CPalette::AnimatePalette](../Topic/CPalette::AnimatePalette.md), [CFont::CreateFontIndirect](../Topic/CFont::CreateFontIndirect.md) und dreiköpfige Funktionen von `CBrush` ein: [CreateBrushIndirect](../Topic/CBrush::CreateBrushIndirect.md), [CreateDIBPatternBrush](../Topic/CBrush::CreateDIBPatternBrush.md) und [CreatePatternBrush](../Topic/CBrush::CreatePatternBrush.md).  
+ In addition to `CDC` member functions, there are several other functions that are compatible in a metafile DC. These include [CPalette::AnimatePalette](../mfc/reference/cpalette-class.md#animatepalette), [CFont::CreateFontIndirect](../mfc/reference/cfont-class.md#createfontindirect), and three member functions of `CBrush`: [CreateBrushIndirect](../mfc/reference/cbrush-class.md#createbrushindirect), [CreateDIBPatternBrush](../mfc/reference/cbrush-class.md#createdibpatternbrush), and [CreatePatternBrush](../mfc/reference/cbrush-class.md#createpatternbrush).  
   
- Funktionen, die nicht in einer Metadatei aufgezeichnet werden, sind: [DrawFocusRect](../Topic/CDC::DrawFocusRect.md), [DrawIcon](../Topic/CDC::DrawIcon.md), [DrawText](../Topic/CDC::DrawText.md), [ExcludeUpdateRgn](../Topic/CDC::ExcludeUpdateRgn.md), [FillRect](../Topic/CDC::FillRect.md), [FrameRect](../Topic/CDC::FrameRect.md), [GrayString](../Topic/CDC::GrayString.md), [InvertRect](../Topic/CDC::InvertRect.md), [ScrollDC](../Topic/CDC::ScrollDC.md) und [TabbedTextOut](../Topic/CDC::TabbedTextOut.md).  Da ein Metadatei\-DC nicht tatsächlich mit einem Gerät zugeordnet ist, können Sie SetDIBits, GetDIBits und CreateDIBitmap mit einem Metadatei\-DC nicht verwenden.  Sie können SetDIBitsToDevice und StretchDIBits mit einem Metadatei\-DC als Ziel verwenden.  [CreateCompatibleDC](../Topic/CDC::CreateCompatibleDC.md), [CreateCompatibleBitmap](../Topic/CBitmap::CreateCompatibleBitmap.md) und [CreateDiscardableBitmap](../Topic/CBitmap::CreateDiscardableBitmap.md) sind nicht mit einem Metadatei\-DC sinnvoll.  
+ Functions that are not recorded in a metafile are: [DrawFocusRect](../mfc/reference/cdc-class.md#drawfocusrect), [DrawIcon](../mfc/reference/cdc-class.md#drawicon), [DrawText](../mfc/reference/cdc-class.md#drawtext), [ExcludeUpdateRgn](../mfc/reference/cdc-class.md#excludeupdatergn), [FillRect](../mfc/reference/cdc-class.md#fillrect), [FrameRect](../mfc/reference/cdc-class.md#framerect), [GrayString](../mfc/reference/cdc-class.md#graystring), [InvertRect](../mfc/reference/cdc-class.md#invertrect), [ScrollDC](../mfc/reference/cdc-class.md#scrolldc), and [TabbedTextOut](../mfc/reference/cdc-class.md#tabbedtextout). Because a metafile DC is not actually associated with a device, you cannot use SetDIBits, GetDIBits, and CreateDIBitmap with a metafile DC. You can use SetDIBitsToDevice and StretchDIBits with a metafile DC as the destination. [CreateCompatibleDC](../mfc/reference/cdc-class.md#createcompatibledc), [CreateCompatibleBitmap](../mfc/reference/cbitmap-class.md#createcompatiblebitmap), and [CreateDiscardableBitmap](../mfc/reference/cbitmap-class.md#creatediscardablebitmap) are not meaningful with a metafile DC.  
   
- Ein weiterer Punkt, zu beachten, wann, einen Metadatei\-DC zu verwenden, dass das Koordinatensystem möglicherweise nicht in Pixel gemessen wird.  Aus diesem Grund sollte das gesamte Zeichnungscode auf Schaltfläche in das Rechteck angepasst werden, die `OnDraw`  im `rcBounds`\-Parameter übergeben wird.  Dadurch wird ein versehentliches Zeichnen außerhalb des Steuerelements, da `rcBounds` die Größe des Fensters des Steuerelements darstellt.  
+ Another point to consider when using a metafile DC is that the coordinate system may not be measured in pixels. For this reason, all your drawing code should be adjusted to fit in the rectangle passed to `OnDraw` in the `rcBounds` parameter. This prevents accidental painting outside the control because `rcBounds` represents the size of the control's window.  
   
- Nachdem Sie Metadateirendering für das Steuerelement implementiert haben, dem Testcontainer, um der Metadatei zu testen.  Informationen zum Zugreifen auf den Testcontainer finden Sie unter [Testen von Eigenschaften und Ereignissen mit dem Testcontainer](../mfc/testing-properties-and-events-with-test-container.md).  
+ After you have implemented metafile rendering for the control, use Test Container to test the metafile. See [Testing Properties and Events with Test Container](../mfc/testing-properties-and-events-with-test-container.md) for information on how to access the test container.  
   
-#### So wie die Metadatei des Steuerelements mithilfe des Testcontainers testen  
+#### <a name="to-test-the-controls-metafile-using-test-container"></a>To test the control's metafile using Test Container  
   
-1.  Klicken Sie im Menü  **Bearbeiten** des Testcontainers auf **Neues Steuerelement einfügen**.  
+1.  On the Test Container's **Edit** menu, click **Insert New Control**.  
   
-2.  Im Feld **Neues Steuerelement einfügen**  wählen Sie das Steuerelement aus und klicken auf **OK**.  
+2.  In the **Insert New Control** box, select the control and click **OK**.  
   
-     Das Steuerelement wird im Testcontainer.  
+     The control will appear in Test container.  
   
-3.  Klicken Sie im Menü **Steuerelement**  auf **Metadatei zeichnen**.  
+3.  On the **Control** menu, click **Draw Metafile**.  
   
-     Ein separates Fenster wird angezeigt, in welchem die Metadatei angezeigt wird.  Sie können die Größe des Fensters ändern, um die Größenanpassung zu sehen, wie die Metadatei des Steuerelements auswirkt.  Sie können dieses Fenster zu schließen.  
+     A separate window appears in which the metafile is displayed. You can change the size of this window to see how scaling affects the control's metafile. You can close this window at any time.  
   
-## Siehe auch  
- [MFC\-ActiveX\-Steuerelemente](../mfc/mfc-activex-controls.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)
+
+

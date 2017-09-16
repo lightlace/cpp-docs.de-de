@@ -1,120 +1,139 @@
 ---
-title: "TN042: Empfehlungen f&#252;r ODBC-Treiberentwickler | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.odbc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Datenbanken [C++], ODBC"
-  - "ODBC-Treiber [C++], Schreiben"
-  - "TN042"
+title: 'TN042: ODBC Driver Developer Recommendations | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.odbc
+dev_langs:
+- C++
+helpviewer_keywords:
+- ODBC drivers [MFC], writing
+- databases [MFC], ODBC
+- TN042
 ms.assetid: ecc6b5d9-f480-4582-9e22-8309fe561dad
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# TN042: Empfehlungen f&#252;r ODBC-Treiberentwickler
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ca7b19b5f6e9c82ebf680f3c1728c21925bf6f34
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn042-odbc-driver-developer-recommendations"></a>TN042: ODBC Driver Developer Recommendations
 > [!NOTE]
->  Der folgende technische Hinweis wurde seit dem ersten Erscheinen in der Onlinedokumentation nicht aktualisiert.  Daher können einige Verfahren und Themen veraltet oder falsch sein.  Um aktuelle Informationen zu erhalten, wird empfohlen, das gewünschte Thema im Index der Onlinedokumentation zu suchen.  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- Dieser Hinweis beschreibt Richtlinien für ODBC\-Treiber\-Writer.  Er beschreibt allgemeine Anforderungen und Annahmen aus ODBC\-Funktionalität, dass die MFC\-Datenbankklassen machen, und die verschiedenen erwarteten Semantik\- Details.  Die erforderliche Treiberfunktionalität, um die drei Modi geöffneten `CRecordset` \(**forwardOnly**, **Momentaufnahme** und **dynaset**\) zu unterstützen werden beschrieben.  
+ This note describes guidelines for ODBC driver writers. It outlines general requirements and assumptions of ODBC functionality that the MFC Database classes make, and various expected semantic details. Required driver functionality to support the three `CRecordset` Open modes (**forwardOnly**, **snapshot** and **dynaset**) are described.  
   
-## Cursorbibliothek ODBC  
- Die MFC\-Datenbankklassen bieten dem Benutzer Funktionen dar, die in vielen Fällen die Funktionalität übertrifft, die von den meisten Ebene 1 ODBC\-Treibern bereitgestellt wird.  Glücklicherweise überlagert sich Cursorbibliothek ODBC zwischen den Datenbankklassen und dem Treiber und stellt automatisch viele dieser zusätzlichen Funktionen.  
+## <a name="odbcs-cursor-library"></a>ODBC's Cursor Library  
+ The MFC Database classes present functionality to the user that in many cases surpasses the functionality provided by most level 1 ODBC drivers. Fortunately, ODBC's Cursor Library will layer itself between the database classes and the driver, and will automatically provide much of this additional functionality.  
   
- Beispielsweise unterstützen die meisten 1.0 Treiber nicht Rückwärtsscrollen.  Die Cursorbibliothek kann erkennen, und dieses wird Zeilen vom Treiber zwischenspeichern und diese darstellt, wie auf FETCH\_PREV\-Aufrufen in **SQLExtendedFetch** angefordert.  
+ For instance, most 1.0 drivers do not support backward scrolling. The Cursor Library can detect this, and will cache rows from the driver and present them as requested on FETCH_PREV calls in **SQLExtendedFetch**.  
   
- Ein anderes wichtiges Beispiel der Cursorbibliotheksabhängigkeit ist positionierbare Aktualisierungen.  Die meisten verfügen nicht 1.0 Treiber positionierbare Aktualisierungen, die Cursorbibliothek generiert Aktualisierungsanweisungen, die eine Zielzeile auf der Datenquelle angeben, die nach den aktuellen Werten der zwischengespeicherten Daten basiert wird, oder einen zwischengespeicherten Timestampwert.  
+ Another important example of cursor library dependence is positioned updates. Most 1.0 drivers also do not have positioned updates, but the cursor library will generate update statements which identify a target row on the data source based upon its current cached data values, or a cached timestamp value.  
   
- Die Klassenbibliothek nutzt nie mehrere Rowsets aus.  Deshalb werden die wenigsten **SQLSetPos**\-Anweisungen immer angewendet, dass 1 % des Rowsets zu Zeile.  
+ The class library never makes use of multiple rowsets. Therefore, the few **SQLSetPos** statements are always applied to row 1 of the rowset.  
   
-## CDatabases  
- Jedes `CDatabase` ordnet einzelnen **HDBC**. \(Wenn Funktion `CDatabase``ExecuteSQL` verwendet wird, ist vorübergehend **HSTMT** zugeordnet.\) Somit, wenn mehrere `CDatabase`s erforderlich sind, müssen mehrere **HDBC**s pro **HENV** unterstützt werden.  
+## <a name="cdatabases"></a>CDatabases  
+ Each `CDatabase` allocates a single **HDBC**. (If `CDatabase`'s `ExecuteSQL` function is used, an **HSTMT** is temporarily allocated.) So if multiple `CDatabase`'s are required, multiple **HDBC**s per **HENV** must be supported.  
   
- Die Datenbankklassen benötigen die Cursorbibliothek.  Dies wird in einem **SQLSetConnections** \- Aufruf **SQL\_ODBC\_CURSORS**, **SQL\_CUR\_USE\_ODBC** übernommen.  
+ The database classes require the cursor library. This is reflected in a **SQLSetConnections** call **SQL_ODBC_CURSORS**, **SQL_CUR_USE_ODBC**.  
   
- **SQLDriverConnect**, **SQL\_DRIVER\_COMPLETE** wird von `CDatabase::Open` verwendet, um die Verbindung zur Datenquelle einzurichten.  
+ **SQLDriverConnect**, **SQL_DRIVER_COMPLETE** is used by `CDatabase::Open` to establish the connection to the data source.  
   
- Der Treiber muss **SQLGetInfo SQL\_ODBC\_API\_CONFORMANCE** \>\= **SQL\_OAC\_LEVEL1**, **SQLGetInfo SQL\_ODBC\_SQL\_CONFORMANCE** \>\= **SQL\_OSC\_MINIMUM** unterstützt.  
+ The driver must support **SQLGetInfo SQL_ODBC_API_CONFORMANCE** >= **SQL_OAC_LEVEL1**, **SQLGetInfo SQL_ODBC_SQL_CONFORMANCE** >= **SQL_OSC_MINIMUM**.  
   
- Damit Transaktionen für `CDatabase` und die abhängigen Recordsets unterstützt werden können, müssen **SQLGetInfo** und **SQL\_CURSOR\_COMMIT\_BEHAVIORSQL\_CURSOR\_ROLLBACK\_BEHAVIORSQL\_CR\_PRESERVE** verfügen.  Andernfalls versucht werden, Transaktionssteuerelement auszuführen ignoriert.  
+ In order for transactions to be supported for the `CDatabase` and its dependent recordsets, **SQLGetInfo SQL_CURSOR_COMMIT_BEHAVIOR** and **SQL_CURSOR_ROLLBACK_BEHAVIOR** must have **SQL_CR_PRESERVE**. Otherwise, attempts to perform transaction control will be ignored.  
   
- **SQLGetInfo SQL\_DATA\_SOURCE\_READ\_ONLY** muss unterstützt werden.  Wenn es "Y" zurückgibt, werden keine Aktualisierungsvorgänge in der Datenquelle ausgeführt.  
+ **SQLGetInfo SQL_DATA_SOURCE_READ_ONLY** must be supported. If it returns "Y", no update operations will be performed on the data source.  
   
- Wenn `CDatabase` geöffnetes schreibgeschützt ist, wird versucht, die schreibgeschützte Datenquelle festzulegen mit **SQLSetConnectOption SQL\_ACCESS\_MODE**, **SQL\_MODE\_READ\_ONLY** ausgeführt.  
+ If the `CDatabase` is opened ReadOnly, an attempt to set the data source read only will be made with **SQLSetConnectOption SQL_ACCESS_MODE**, **SQL_MODE_READ_ONLY**.  
   
- Wenn Bezeichner der Veranschlagung benötigen, sollten diese Informationen vom Treiber mit einem Aufruf **SQLGetInfo SQL\_IDENTIFIER\_QUOTE\_CHAR** zurückgegeben werden.  
+ If identifiers require quoting, this information should be returned from the driver with an **SQLGetInfo SQL_IDENTIFIER_QUOTE_CHAR** call.  
   
- Für Debugzwecke werden **SQLGetInfo SQL\_DBMS\_VER** und **SQL\_DBMS\_NAME** vom Treiber abgerufen.  
+ For debugging purposes, **SQLGetInfo SQL_DBMS_VER** and **SQL_DBMS_NAME** are retrieved from the driver.  
   
- **SQLSetStmtOption SQL\_QUERY\_TIMEOUT** und **SQL\_ASYNC\_ENABLE** werden von `CDatabase`**HDBC** aufgerufen werden.  
+ **SQLSetStmtOption SQL_QUERY_TIMEOUT** and **SQL_ASYNC_ENABLE** may be called on a `CDatabase`'s **HDBC**.  
   
- **SQLError** wird mit allen aufgerufen werden, oder alle Argumente wird ungültig.  
+ **SQLError** may be called with any or all arguments NULL.  
   
- Natürlich müssen **SQLAllocEnv**, **SQLAllocConnect**, **SQLDisconnect** und **SQLFreeConnect** unterstützt werden.  
+ Of course, **SQLAllocEnv**, **SQLAllocConnect**, **SQLDisconnect** and **SQLFreeConnect** must be supported.  
   
-## ExecuteSQL  
- Zusätzlich zum Belegen und zum Freigeben von temporären **HSTMT** ruft `ExecuteSQL`, **SQLExecDirect**, **SQLFetch**, **SQLNumResultCol** und `SQLMoreResults` auf.  **SQLCancel** wird auf **HSTMT** aufgerufen werden.  
+## <a name="executesql"></a>ExecuteSQL  
+ In addition to allocating and freeing a temporary **HSTMT**, `ExecuteSQL` calls **SQLExecDirect**, **SQLFetch**, **SQLNumResultCol** and `SQLMoreResults`. **SQLCancel** may be called on the **HSTMT**.  
   
-## GetDatabaseName  
- **SQLGetInfo SQL\_DATABASE\_NAME** wird aufgerufen.  
+## <a name="getdatabasename"></a>GetDatabaseName  
+ **SQLGetInfo SQL_DATABASE_NAME** will be called.  
   
-## BeginTrans, CommitTrans, Rollback\-  
- **SQLSetConnectOption** und **SQL\_AUTOCOMMITSQLTransact SQL\_COMMIT**, **SQL\_ROLLBACK** und **SQL\_AUTOCOMMIT** werden aufgerufen, wenn Transaktionsanforderungen gemacht werden.  
+## <a name="begintrans-committrans-rollback"></a>BeginTrans, CommitTrans, Rollback  
+ **SQLSetConnectOption SQL_AUTOCOMMIT** and **SQLTransact SQL_COMMIT**, **SQL_ROLLBACK** and **SQL_AUTOCOMMIT** will be called if transaction requests are made.  
   
-## CRecordsets  
- **SQLAllocStmt**, **SQLPrepare**, **SQLExecute** \(für **Öffnen** und **Requery**\), **SQLExecDirect** \(für Aktualisierungsvorgänge\), **SQLFreeStmt** muss unterstützt werden.  Damit **SQLNumResultCols** und **SQLDescribeCol** werden das Resultset zu verschiedenen Zeitpunkten aufgerufen.  
+## <a name="crecordsets"></a>CRecordsets  
+ **SQLAllocStmt**, **SQLPrepare**, **SQLExecute** (For **Open** and **Requery**), **SQLExecDirect** (for update operations), **SQLFreeStmt** must be supported. **SQLNumResultCols** and **SQLDescribeCol** will be called on the results set at various times.  
   
- **SQLSetParam** wird für zahlreiche für Bindungsparameterdaten und **DATA\_AT\_EXEC**\-Funktionen verwendet.  
+ **SQLSetParam** is used extensively for binding parameter data and **DATA_AT_EXEC** functionality.  
   
- **SQLBindCol** wird für zahlreiche verwendet, um Ausgabespaltendatenspeicherungsspeicherorte mit ODBC zu registrieren.  
+ **SQLBindCol** is used extensively to register output Column data storage locations with ODBC.  
   
- Zwei **SQLGetData** Aufrufe werden verwendet, um **SQL\_LONG\_VARCHAR** und **SQL\_LONG\_VARBINARY** Daten abzurufen.  Die Versuche im ersten Aufruf, die Gesamtlänge des Spaltenwerts durch Aufrufen von **SQLGetData** mit cbMaxValue von 0, aber mit einem gültigen pcbValue zu suchen.  Wenn pcbValue **SQL\_NO\_TOTAL** enthält, wird eine Ausnahme ausgelöst.  Andernfalls wird `HGLOBAL` zugeordnet und ein anderer **SQLGetData** aufgerufen, um das ganze Ergebnis abzurufen.  
+ Two **SQLGetData** calls are used to retrieve **SQL_LONG_VARCHAR** and **SQL_LONG_VARBINARY** data. The first call attempts to find the total length of the column value by calling **SQLGetData** with cbMaxValue of 0, but with a valid pcbValue. If pcbValue holds **SQL_NO_TOTAL**, an exception is thrown. Otherwise, an `HGLOBAL` is allocated, and another **SQLGetData** call made to retrieve the entire result.  
   
-## Aktualisieren  
- Wenn vollständig Sperren angefordert wird, wird **SQLGetInfoSQL\_LOCK\_TYPES** abgefragt.  Wenn **SQL\_LCK\_EXCLUSIVE** nicht unterstützt wird, wird eine Ausnahme ausgelöst.  
+## <a name="updating"></a>Updating  
+ If pessimistic locking is requested, **SQLGetInfo SQL_LOCK_TYPES** will be queried. If **SQL_LCK_EXCLUSIVE** is not supported, an exception will be thrown.  
   
- Versucht, `CRecordset` zu aktualisieren \(**Momentaufnahme** oder **dynaset**\) führen eine Sekunde **HSTMT** zugeordnet.  Für Treiber, die nicht zweites **HSTMT** vorsehen, simuliert die Cursorbibliothek diese Funktionalität.  Leider bedeutet dies möglicherweise gelegentlich das Erzwingen der aktuellen Abfrage auf ersten **HSTMT** abgeschlossen, bevor die zweite **HSTMT** Anforderung verarbeitet.  
+ Attempts to update a `CRecordset` (**snapshot** or **dynaset**) will cause a second **HSTMT** to be allocated. For drivers that do not support second **HSTMT**, the cursor library will simulate this functionality. Unfortunately, this may sometimes mean forcing the current query on the first **HSTMT** to completion before processing the second **HSTMT**'s request.  
   
- **SQLFreeStmt SQL\_CLOSE** und **SQL\_RESET\_PARAMS** und **SQLGetCursorName** werden während der Aktualisierungsvorgänge aufgerufen.  
+ **SQLFreeStmt SQL_CLOSE** and **SQL_RESET_PARAMS** and **SQLGetCursorName** will be called during update operations.  
   
- Wenn es **CLongBinarys** in **outputColumns** gibt, muss **DATA\_AT\_EXEC**\-Funktionen unterstützt werden.  Ebenfalls Rückgabe von **SQL\_NEED\_DATA** von **SQLExecDirect**, **SQLParamData** und **SQLPutData** ein.  
+ If there are **CLongBinarys** in the **outputColumns**, ODBC's **DATA_AT_EXEC** functionality must be supported. This includes returning **SQL_NEED_DATA** from **SQLExecDirect**, **SQLParamData** and **SQLPutData**.  
   
- **SQLRowCount** aufgerufen wird, nachdem von sicherzustellen ausgeführt, dass nur 1 Datensatz durch **SQLExecDirect** aktualisiert wurde.  
+ **SQLRowCount** is called after executing to verify that only 1 record was updated by the **SQLExecDirect**.  
   
-## ForwardOnly\-Cursor  
- Nur **SQLFetch** ist für die **Verschieben** Operationen erforderlich.  Beachten Sie, dass **forwardOnly** Cursor keine Aktualisierungen unterstützen.  
+## <a name="forwardonly-cursors"></a>ForwardOnly Cursors  
+ Only **SQLFetch** is required for the **Move** operations. Note that **forwardOnly** cursors do not support updates.  
   
-## Momentaufnahme\-Cursor  
- Momentaufnahmefunktionalität erfordert **SQLExtendedFetch** Unterstützung.  Wie oben erwähnt, erkennt die ODBC\-Cursorbibliothek, wann ein Treiber **SQLExtendedFetch** nicht unterstützt, und es bleibt die erforderliche Unterstützung selbst.  
+## <a name="snapshot-cursors"></a>Snapshot Cursors  
+ Snapshot functionality requires **SQLExtendedFetch** support. As noted above, the ODBC cursor library will detect when a driver does not support **SQLExtendedFetch**, and provide the necessary support itself.  
   
- **SQLGetInfo**, **SQL\_SCROLL\_OPTIONS** muss **SQL\_SO\_STATIC** unterstützt.  
+ **SQLGetInfo**, **SQL_SCROLL_OPTIONS** must support **SQL_SO_STATIC**.  
   
-## Dynaset\-Cursor  
- Unten ist die minimale Unterstützung, die erforderlich ist, ein Dynaset zu öffnen:  
+## <a name="dynaset-cursors"></a>Dynaset Cursors  
+ Below is the minimum support required to open a dynaset:  
   
- **SQLGetInfo**, **SQL\_ODBC\_VER** muss "01 " zurückgegeben \>.  
+ **SQLGetInfo**, **SQL_ODBC_VER** must return > "01".  
   
- **SQLGetInfo**, **SQL\_SCROLL\_OPTIONS** muss **SQL\_SO\_KEYSET\_DRIVEN** unterstützt.  
+ **SQLGetInfo**, **SQL_SCROLL_OPTIONS** must support **SQL_SO_KEYSET_DRIVEN**.  
   
- **SQLGetInfo**, **SQL\_ROW\_UPDATES** muss "Y" zurückgegeben.  
+ **SQLGetInfo**, **SQL_ROW_UPDATES** must return "Y".  
   
- **SQLGetInfo**, **SQL\_POSITIONED\_UPDATES** muss **SQL\_PS\_POSITIONED\_DELETE** und **SQL\_PS\_POSITIONED\_UPDATE** vorsehen.  
+ **SQLGetInfo**, **SQL_POSITIONED_UPDATES** must support **SQL_PS_POSITIONED_DELETE** and **SQL_PS_POSITIONED_UPDATE**.  
   
- Wenn vollständig Sperren angefordert wird, wird ein Aufruf von **SQLSetPos** mit irow 1, fRefresh FALSE und Anzahl von **SQL\_LCK\_EXCLUSIVE** vorgenommen.  
+ In addition, if pessimistic locking is requested, a call to **SQLSetPos** with irow 1, fRefresh FALSE and fLock **SQL_LCK_EXCLUSIVE** will be made.  
   
-## Siehe auch  
- [Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)   
- [Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

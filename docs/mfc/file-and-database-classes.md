@@ -1,42 +1,61 @@
 ---
-title: "Datei- und Datenbankklassen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.file"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Datenbankklassen [C++]"
-  - "Datenbankklassen [C++], MFC"
-  - "Dateiklassen [C++]"
+title: File and Database Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.file
+dev_langs:
+- C++
+helpviewer_keywords:
+- database classes [MFC], MFC
+- database classes [MFC]
+- file classes [MFC]
 ms.assetid: 580b169c-e26e-4395-b128-5408d08c98fe
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Datei- und Datenbankklassen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2fbf6af1a3221ea544c27f3e7fd3b688991b1812
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Diese Klassen ermöglichen Ihnen das Speichern von Informationen zu einer Datenbank oder in einer Datenträgerdatei.  Es gibt drei Arten Datenbankklassen \- OLE DB\-, ODBC\- und DAO \- die ähnliche Funktionen bereitstellen.  Die OLE DB\-Gruppe wird über OLE DB implementiert und ist mit den OLE DB\-Consumervorlagen, wird die DAO\-Gruppe mithilfe des Datenzugriffsobjekts implementiert, und die ODBC\-Gruppe wird mithilfe der Open Database Connectivity implementiert.  Außerdem ist ein Satz von Klassen zum Bearbeiten von Standarddateien, aktive Streams und HTML\-Streams.  
+---
+# <a name="file-and-database-classes"></a>File and Database Classes
+These classes allow you to store information to a database or a disk file. There are three sets of database classes — OLE DB, ODBC, and DAO — that provide similar functionality. The OLE DB group is implemented using OLE DB and works with the OLE DB consumer templates, the DAO group is implemented using the Data Access Object, and the ODBC group is implemented using Open Database Connectivity. There are also a set of classes for manipulating standard files, Active streams, and HTML streams.  
   
- Die folgenden Kategorien von Klassen unterstützen Datenpersistenz.  
+ The following categories of classes support data persistence.  
   
--   [Klassen für Datei\-E\/A](../mfc/file-i-o-classes.md)  
+-   [File I/O Classes](../mfc/file-i-o-classes.md)  
   
--   [OLE DB\-Klassen](../mfc/ole-db-classes.md)  
+-   [OLE DB Classes](../mfc/ole-db-classes.md)  
   
--   [DAO\-Klassen](../mfc/dao-classes.md)  
+-   [DAO Classes](../mfc/dao-classes.md)  
   
--   [ODBC\-Klassen](../mfc/odbc-classes.md)  
+-   [ODBC Classes](../mfc/odbc-classes.md)  
   
-## Siehe auch  
- [Klassenübersicht](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

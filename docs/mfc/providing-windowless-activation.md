@@ -1,67 +1,86 @@
 ---
-title: "Bereitstellung von fensterloser Aktivierung | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Aktivierung [C++], MFC-ActiveX-Steuerelemente"
-  - "Aktivierung [C++], Windowless"
-  - "MFC ActiveX-Steuerelemente [C++], Aktivieren von Optionen"
-  - "Fensterlose Aktivierung von MFC-ActiveX-Steuerelementen"
+title: Providing Windowless Activation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- windowless activation of MFC ActiveX controls
+- activation [MFC], MFC ActiveX controls
+- MFC ActiveX controls [MFC], activate options
+- activation [MFC], windowless
 ms.assetid: 094903b5-c344-42fa-96ff-ce01e16891c5
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Bereitstellung von fensterloser Aktivierung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 882240d66205fba2ebcfa348f6cc3edc110d0b57
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Fenstererstellungscode \(das heißt, alle, die eintritt, wenn Sie **CreateWindow** aufrufen\), ist aufwändig auszuführen.  Ein Steuerelement, das ein Fenster auf dem Bildschirm wird, muss Meldungen zum Fenster verwalten.  Fensterlose Steuerelemente sind daher schneller als Steuerelemente Fenstern.  
+---
+# <a name="providing-windowless-activation"></a>Providing Windowless Activation
+Window creation code (that is, everything that happens when you call **CreateWindow**) is costly to execute. A control that maintains an on-screen window has to manage messages for the window. Windowless controls are therefore faster than controls with windows.  
   
- Ein weiterer Vorteil von fensterlose Steuerelemente ist, dass, im Gegensatz zu Steuerelementen mit Fenstern, fensterlose Steuerelemente transparentes Zeichnen und Nicht rechteckige Bildschirmbereiche unterstützen.  Ein allgemeines Beispiel eines transparenten Steuerelements ist ein Textsteuerelement mit einem transparenten Hintergrund.  Die Steuerelemente zeichnen den Text aber nicht den Hintergrund, sodass was unter den Textshows durch ist.  Neuere Formularen häufig nutzen Nicht rechteckige Steuerelemente, z Pfeile und eine runde Schaltflächen.  
+ A further advantage of windowless controls is that, unlike windowed controls, windowless controls support transparent painting and nonrectangular screen regions. A common example of a transparent control is a text control with a transparent background. The controls paints the text but not the background, so whatever is under the text shows through. Newer forms often make use of nonrectangular controls, such as arrows and round buttons.  
   
- Häufig erfordert ein Steuerelement ein Fenster von eigenen und kann die Fensterdienste seines Containers stattdessen verwenden, vorausgesetzt, dass der Container geschrieben wird, um fensterlose Objekte zu unterstützen.  Fensterlose Steuerelemente sind abwärtskompatibel mit älteren Containern.  In älteren Containern, die nicht geschrieben werden, um fensterlose Steuerelemente unterstützt, stellen die fensterlose Steuerelemente ein Fenster, wenn aktiv.  
+ Often, a control does not need a window of its own and, instead, can use the window services of its container, provided that the container has been written to support windowless objects. Windowless controls are backward compatible with older containers. In older containers not written to support windowless controls, the windowless controls create a window when active.  
   
- Da fensterlose Steuerelemente keine eigenen Fenster haben, ist der Container der \(ein Fenster hat\), für von Diensten zur Bereitstellung zuständig, die andernfalls vom eigenen Fenster des Steuerelements bereitgestellt worden wären.  Wenn das Steuerelement den Tastaturfokus, abfragen, die Maus zu erfassen oder einem Gerätekontext abzurufen, diese Vorgänge vom Container verwaltet werden.  Der Container leitet die Benutzereingabemeldungen weiter, die an ihren Fenster zum entsprechenden fensterlose Steuerelement, mit der Schnittstelle `IOleInPlaceObjectWindowless` gesendet werden. \(Siehe das *ActiveX\-SDK*  für eine Beschreibung dieser Schnittstelle.\), erhalten `COleControl`\-Memberfunktionen diese Dienste vom Container auf.  
+ Because windowless controls do not have their own windows, the container (which does have a window) is responsible for providing services that would otherwise have been provided by the control's own window. For example, if your control needs to query the keyboard focus, capture the mouse, or obtain a device context, these operations are managed by the container. The container routes user input messages sent to its window to the appropriate windowless control, using the `IOleInPlaceObjectWindowless` interface. (See the *ActiveX SDK* for a description of this interface.) `COleControl` member functions invoke these services from the container.  
   
- Um das Steuerelement erstellen fensterlose Aktivierung zu verwenden, schließen Sie das Flag **windowlessActivate**  im Satz von Flags ein, die von [COleControl::GetControlFlags](../Topic/COleControl::GetControlFlags.md) zurückgegeben werden.  Beispiel:  
+ To make your control use windowless activation, include the **windowlessActivate** flag in the set of flags returned by [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). For example:  
   
- [!CODE [NVC_MFC_AxOpt#5](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxOpt#5)]  
-[!CODE [NVC_MFC_AxOpt#6](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxOpt#6)]  
-[!CODE [NVC_MFC_AxOpt#7](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxOpt#7)]  
+ [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/providing-windowless-activation_1.cpp)]  
+[!code-cpp[NVC_MFC_AxOpt#6](../mfc/codesnippet/cpp/providing-windowless-activation_2.cpp)]  
+[!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/cpp/providing-windowless-activation_3.cpp)]  
   
- Der Code, mit dem dieses Flags einzuschließen wird automatisch generiert, wenn Sie die Option **Fensterlose Aktivierung** auf der Seite [Steuerelementeinstellungen](../mfc/reference/control-settings-mfc-activex-control-wizard.md) MFC\-ActiveX\-Steuerelement\-Assistenten auswählen.  
+ The code to include this flag is automatically generated if you select the **Windowless activation** option on the [Control Settings](../mfc/reference/control-settings-mfc-activex-control-wizard.md) page of the MFC ActiveX Control Wizard.  
   
- Wenn fensterlose Aktivierung aktiviert wird, delegiert der Container Eingabemeldungen zur `IOleInPlaceObjectWindowless`\-Schnittstelle des Steuerelements.  `COleControl` Implementierung dieser Schnittstelle leitet die Meldungen durch die Meldungszuordnung des Steuerelements weiter, nachdem die Mauskoordinaten entsprechend anpassen.  Sie können die Meldungen wie gewöhnliche Fenstermeldungen verarbeiten, indem Sie den entsprechenden Einträgen zur Meldungszuordnung hinzufügen.  In den Handler für diese Meldungen, vermeiden Sie es, die `m_hWnd`\-Membervariable \(oder eine Memberfunktion, die sie verwendet\), ohne zuerst die Prüfung zu verwenden, dass der Wert nicht **NULL** ist.  
+ When windowless activation is enabled, the container will delegate input messages to the control's `IOleInPlaceObjectWindowless` interface. `COleControl`'s implementation of this interface dispatches the messages through your control's message map, after adjusting the mouse coordinates appropriately. You can process the messages like ordinary window messages, by adding the corresponding entries to the message map. In your handlers for these messages, avoid using the `m_hWnd` member variable (or any member function that uses it) without first checking that its value is not **NULL**.  
   
- `COleControl` stellt Memberfunktionen, die die Mausauswahl, den Tastaturfokus, den Bildlauf und andere Fensterdienste vom Container nach Bedarf aufrufen und enthält:  
+ `COleControl` provides member functions that invoke mouse capture, keyboard focus, scrolling, and other window services from the container as appropriate, including:  
   
--   [GetFocus](../Topic/COleControl::GetFocus.md), [SetFocus](../Topic/COleControl::SetFocus.md)  
+-   [GetFocus](../mfc/reference/colecontrol-class.md#getfocus), [SetFocus](../mfc/reference/colecontrol-class.md#setfocus)  
   
--   [GetCapture](../Topic/COleControl::GetCapture.md), [SetCapture](../Topic/COleControl::SetCapture.md), [ReleaseCapture](../Topic/COleControl::ReleaseCapture.md)  
+-   [GetCapture](../mfc/reference/colecontrol-class.md#getcapture), [SetCapture](../mfc/reference/colecontrol-class.md#setcapture), [ReleaseCapture](../mfc/reference/colecontrol-class.md#releasecapture)  
   
--   [GetDC](../Topic/COleControl::GetDC.md), [ReleaseDC](../Topic/COleControl::ReleaseDC.md)  
+-   [GetDC](../mfc/reference/colecontrol-class.md#getdc), [ReleaseDC](../mfc/reference/colecontrol-class.md#releasedc)  
   
--   [InvalidateRgn](../Topic/COleControl::InvalidateRgn.md)  
+-   [InvalidateRgn](../mfc/reference/colecontrol-class.md#invalidatergn)  
   
--   [ScrollWindow](../Topic/COleControl::ScrollWindow.md)  
+-   [ScrollWindow](../mfc/reference/colecontrol-class.md#scrollwindow)  
   
--   [GetClientRect](../Topic/COleControl::GetClientRect.md)  
+-   [GetClientRect](../mfc/reference/colecontrol-class.md#getclientrect)  
   
- In den fensterlose Steuerelemente sollten Sie die Memberfunktionen `COleControl` anstelle entsprechender `CWnd`\-Memberfunktionen oder ihrer verwandten Win32\-API\-Funktionen immer verwenden.  
+ In windowless controls, you should always use the `COleControl` member functions instead of the corresponding `CWnd` member functions or their related Win32 API functions.  
   
- Sie sollten ein fensterloses Steuerelement das Ziel eines Drag & Drop\-Vorgangs sein.  Normalerweise würde diese erfordern, dass das Fenster des Steuerelements als Ablageziel registriert wird.  Da das Steuerelement kein Fenster von eigenen verfügt, verwendet der Container ein eigenes Fenster als Ablageziel.  Das Steuerelement stellt eine Implementierung der Schnittstelle `IDropTarget`, zu der der Container Aufrufe zur richtigen Zeit delegieren kann.  Um diese Schnittstelle dem Container verfügbar zu machen, überschreiben Sie unter [COleControl::GetWindowlessDropTarget](../Topic/COleControl::GetWindowlessDropTarget.md).  Beispiel:  
+ You may want a windowless control to be the target of an OLE drag-and-drop operation. Normally, this would require that the control's window be registered as a drop target. Since the control has no window of its own, the container uses its own window as a drop target. The control provides an implementation of the `IDropTarget` interface to which the container can delegate calls at the appropriate time. To expose this interface to the container, override [COleControl::GetWindowlessDropTarget](../mfc/reference/colecontrol-class.md#getwindowlessdroptarget). For example:  
   
- [!CODE [NVC_MFC_AxOpt#8](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxOpt#8)]  
+ [!code-cpp[NVC_MFC_AxOpt#8](../mfc/codesnippet/cpp/providing-windowless-activation_4.cpp)]  
   
-## Siehe auch  
- [MFC\-ActiveX\-Steuerelemente: Optimierung](../mfc/mfc-activex-controls-optimization.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls: Optimization](../mfc/mfc-activex-controls-optimization.md)
+
+

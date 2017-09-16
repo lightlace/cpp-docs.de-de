@@ -1,5 +1,5 @@
 ---
-title: out_of_range-Klasse | Microsoft-Dokumentation
+title: out_of_range Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- out_of_range
 - stdexcept/std::out_of_range
 dev_langs:
 - C++
@@ -34,15 +33,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 416f866ead1e3e4468136ebbdef1b5d7750691d4
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: cfdc765f6246574ee09118e70654aac2ec81e205
 ms.contentlocale: de-de
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="outofrange-class"></a>out_of_range-Klasse
-Die Klasse fungiert als Basisklasse für alle Ausnahmen, die ausgelöst werden, um ein Argument zu melden, dessen Wert außerhalb seines zulässigen Bereichs liegt.  
+# <a name="outofrange-class"></a>out_of_range Class
+The class serves as the base class for all exceptions thrown to report an argument that is out of its valid range.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,10 +55,10 @@ public:
 };  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Der von [Was](../standard-library/exception-class.md) zurückgegebene Wert ist eine Kopie von **Nachricht**`.`[Daten](../standard-library/basic-string-class.md#data).  
+## <a name="remarks"></a>Remarks  
+ The value returned by [what](../standard-library/exception-class.md) is a copy of **message**`.`[data](../standard-library/basic-string-class.md#data).  
   
-## <a name="example"></a>Beispiel  
+## <a name="example"></a>Example  
   
 ```cpp  
 // out_of_range.cpp  
@@ -83,19 +82,19 @@ int main() {
 }  
 ```  
   
-## <a name="output"></a>Ausgabe  
+## <a name="output"></a>Output  
   
 ```  
 Caught: invalid string position  
 ```  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** \<stdexcept>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Siehe auch  
- [logic_error-Klasse](../standard-library/logic-error-class.md)   
- [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [logic_error Class](../standard-library/logic-error-class.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

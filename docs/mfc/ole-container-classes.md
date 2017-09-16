@@ -1,61 +1,80 @@
 ---
-title: "OLE-Containerklassen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.ole"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX-Klassen [C++]"
-  - "Containerklassen [C++]"
-  - "Container [C++], OLE-Containeranwendungen"
-  - "OLE [C++], Klassen"
-  - "OLE-Klassen [C++]"
-  - "Visuelle Bearbeitung [C++], Klassen"
+title: OLE Container Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.ole
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX classes [MFC]
+- container classes [MFC]
+- OLE classes [MFC]
+- visual editing [MFC], classes
+- OLE [MFC], classes
+- containers [MFC], OLE container applications
 ms.assetid: 1e27e1ab-4c22-41eb-8547-6915c72668ae
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# OLE-Containerklassen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: eb954b9d9671bc9f09bae737469c90151c7011f3
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Diese Klassen werden durch Containeranwendungen verwendet.  `COleLinkingDoc` und `COleDocument` verwalten Auflistungen `COleClientItem`\-Objekte.  Anstatt, die Dokumentklasse von **CDocument** die Ableitung, leiten Sie ihn von `COleLinkingDoc` oder `COleDocument`, je nachdem, ob Sie Unterstützung für Links zu Objekten benötigen, die im Dokument eingebettet sind.  
+---
+# <a name="ole-container-classes"></a>OLE Container Classes
+These classes are used by container applications. Both `COleLinkingDoc` and `COleDocument` manage collections of `COleClientItem` objects. Rather than deriving your document class from **CDocument**, you'll derive it from `COleLinkingDoc` or `COleDocument`, depending on whether you want support for links to objects embedded in your document.  
   
- Verwenden Sie ein `COleClientItem`\-Objekt, um jedes OLE\-Element im Dokument dargestellt, das von einem anderen Dokument eingebettet ist oder ein Link zu einem anderen Dokument ist.  
+ Use a `COleClientItem` object to represent each OLE item in your document that is embedded from another document or is a link to another document.  
   
  [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md)  
- Unterstützt Active Document\-Einschluss.  
+ Supports active document containment.  
   
  [COleDocument](../mfc/reference/coledocument-class.md)  
- Wird für Verbunddokumentimplementierung sowie grundlegende Containerunterstützung.  Dient als Container für Klassen berechneten von `CDocItem`.  Diese Klasse kann als Basisklasse für Containerdokumente verwendet werden und ist die Basisklasse für `COleServerDoc`.  
+ Used for compound document implementation, as well as basic container support. Serves as a container for classes derived from `CDocItem`. This class can be used as the base class for container documents and is the base class for `COleServerDoc`.  
   
  [COleLinkingDoc](../mfc/reference/colelinkingdoc-class.md)  
- Eine von `COleDocument` abgeleiteten Klasse, die die Infrastruktur für das Verknüpfen bereitstellt.  Sie sollten die Dokumentklassen für die Containeranwendungen dieser Klasse von `COleDocument` ableiten, wenn Sie sie an Links zu eingebetteten Objekten soll.  
+ A class derived from `COleDocument` that provides the infrastructure for linking. You should derive the document classes for your container applications from this class instead of from `COleDocument` if you want them to support links to embedded objects.  
   
  [CRichEditDoc](../mfc/reference/cricheditdoc-class.md)  
- Führt die Liste der OLE\-Clientelementen, die im Rich\-Edit\-Steuerelement sind.  Wird mit [CRichEditView](../mfc/reference/cricheditview-class.md) und [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md).  
+ Maintains the list of OLE client items that are in the rich edit control. Used with [CRichEditView](../mfc/reference/cricheditview-class.md) and [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md).  
   
  [CDocItem](../mfc/reference/cdocitem-class.md)  
- Abstrakte Basisklasse von `COleClientItem` und `COleServerItem`.  Objekte von Klassen, die von `CDocItem` abgeleitet sind, stellen Dokumente Teile dar.  
+ Abstract base class of `COleClientItem` and `COleServerItem`. Objects of classes derived from `CDocItem` represent parts of documents.  
   
  [COleClientItem](../mfc/reference/coleclientitem-class.md)  
- Eine Clientelementklasse, die die Seite des Clients der Verbindung mit einem eingebetteten oder verknüpften OLE\-Element darstellt.  Ableiten der Clientelemente von dieser Klasse.  
+ A client item class that represents the client's side of the connection to an embedded or linked OLE item. Derive your client items from this class.  
   
  [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)  
- Bietet clientseitigen Zugriff auf ein OLE\-Element, das in einem Rich\-Edit\-Steuerelement gespeichert wird, wenn Sie mit `CRichEditView` und `CRichEditDoc` verwendet werden.  
+ Provides client-side access to an OLE item stored in a rich edit control when used with `CRichEditView` and `CRichEditDoc`.  
   
  [COleException](../mfc/reference/coleexception-class.md)  
- Eine Ausnahme, erstellten aus einem Fehler beim OLE\-Verarbeiten.  Diese Klasse wird von Container und Server verwendet.  
+ An exception resulting from a failure in OLE processing. This class is used by both containers and servers.  
   
-## Siehe auch  
- [Klassenübersicht](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

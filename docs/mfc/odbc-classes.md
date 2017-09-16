@@ -1,55 +1,74 @@
 ---
-title: "ODBC-Klassen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.data"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Datenbankklassen [C++], ODBC"
-  - "ODBC-Klassen [C++]"
+title: ODBC Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.data
+dev_langs:
+- C++
+helpviewer_keywords:
+- database classes [MFC], ODBC
+- ODBC classes [MFC]
 ms.assetid: 6c40fca8-3033-4873-9abe-7f51725de0e0
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# ODBC-Klassen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a47826abfb31bf4ac74b84900fdaa0cfa9d9514d
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Diese Klassen können mit den anderen Anwendungsframeworkklassen, um einfachen Zugriff auf eine Vielzahl von Datenbanken zu geben, für Treiber der Open Database Connectivity \(ODBC\) verfügbar sind.  
+---
+# <a name="odbc-classes"></a>ODBC Classes
+These classes work with the other application framework classes to give easy access to a wide variety of databases for which Open Database Connectivity (ODBC) drivers are available.  
   
- Programme, die ODBC\-Datenbanken verwenden, verfügen mindestens ein `CDatabase`\-Objekt und ein `CRecordset`\-Objekt.  
+ Programs that use ODBC databases will have at least a `CDatabase` object and a `CRecordset` object.  
   
  [CDatabase](../mfc/reference/cdatabase-class.md)  
- Kapselt eine Verbindung zu einer Datenquelle, von der Sie die Datenquelle ausgeführt werden können.  
+ Encapsulates a connection to a data source, through which you can operate on the data source.  
   
  [CRecordset](../mfc/reference/crecordset-class.md)  
- Kapselt eine Gruppe von Datensätzen, die aus einer Datenquelle ausgewählt wird.  Recordsets ermöglichen Bildlauf von Datensatz zu Datensatz und aktualisieren die Datensätze \(Datensätze Hinzufügen, Bearbeiten und Löschen\), qualifizieren die Auswahl mit einem Filter sortieren, die Auswahl, und parametrisieren die Auswahl mit den Informationen, die zur Laufzeit abgerufen oder berechnet werden.  
+ Encapsulates a set of records selected from a data source. Recordsets enable scrolling from record to record, updating records (adding, editing, and deleting records), qualifying the selection with a filter, sorting the selection, and parameterizing the selection with information obtained or calculated at run time.  
   
  [CRecordView](../mfc/reference/crecordview-class.md)  
- Stellt eine Formularansicht bereit, die direkt mit einem Recordset\-Objekt verbunden ist.  Durch den des Dialogdatenaustauschs \(DDX\) zwischen dem Recordset und den Steuerelementen der Datensatzansicht.  Wie alle Formularansichten ist eine Datensatzansicht auf einer Dialogfeldvorlagen\-Ressource.  Datensatzansichten unterstützen auch das Verschieben von Datensatz zu Datensatz im Recordset, Aktualisieren von Datensätzen und Schließen des zugeordneten Recordsets, wenn die Datensatzansicht enthält.  
+ Provides a form view directly connected to a recordset object. The dialog data exchange (DDX) mechanism exchanges data between the recordset and the controls of the record view. Like all form views, a record view is based on a dialog template resource. Record views also support moving from record to record in the recordset, updating records, and closing the associated recordset when the record view closes.  
   
  [CDBException](../mfc/reference/cdbexception-class.md)  
- Eine Ausnahme, erstellten von Fehlern beim Datenzugriffsverarbeiten.  Diese Klasse dient den gleichen Zweck wie andere Ausnahmeklassen im Mechanismus für die Ausnahmenbehandlung der Klassenbibliothek.  
+ An exception resulting from failures in data access processing. This class serves the same purpose as other exception classes in the exception-handling mechanism of the class library.  
   
  [CFieldExchange](../mfc/reference/cfieldexchange-class.md)  
- Liefert Kontextinformationen, um Datensatzfeldaustausch \(RFX\) zu unterstützen, der dem Austausch von Daten zwischen den Felddatenmembern und den Parameterdatenmember eines Recordset\-Objekts und den entsprechenden Tabellenspalten in der Datenquelle.  Analog [CDataExchange](../mfc/reference/cdataexchange-class.md)\- Klasse, die auf ähnliche Weise für den Dialogdatenaustausch \(DDX\) verwendet wird.  
+ Supplies context information to support record field exchange (RFX), which exchanges data between the field data members and parameter data members of a recordset object and the corresponding table columns on the data source. Analogous to class [CDataExchange](../mfc/reference/cdataexchange-class.md), which is used similarly for dialog data exchange (DDX).  
   
-## Verwandte Klassen  
+## <a name="related-classes"></a>Related Classes  
  [CLongBinary](../mfc/reference/clongbinary-class.md)  
- Kapselt ein Handle für Speicher für ein Binary Large Object \(BLOB\), z eine Bitmap.  `CLongBinary`\-Objekte werden verwendet, um die große Datenobjekte zu verwalten, die in den Datenbanktabellen gespeichert werden.  
+ Encapsulates a handle to storage for a binary large object (BLOB), such as a bitmap. `CLongBinary` objects are used to manage large data objects stored in database tables.  
   
  [CDBVariant](../mfc/reference/cdbvariant-class.md)  
- Ermöglicht es Ihnen, einen Wert ohne zu speichern, um den Datentyp des Werts verloren gehen.  `CDBVariant` verfolgt den Datentyp des aktuellen Werts, der in einer Union gespeichert wird.  
+ Allows you to store a value without worrying about the value's data type. `CDBVariant` tracks the data type of the current value, which is stored in a union.  
   
-## Siehe auch  
- [Klassenübersicht](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

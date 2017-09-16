@@ -1,65 +1,84 @@
 ---
-title: "BITMAPINFO-Struktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BITMAPINFO"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BITMAPINFO-Struktur"
+title: BITMAPINFO Structure | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- BITMAPINFO
+dev_langs:
+- C++
+helpviewer_keywords:
+- BITMAPINFO structure [MFC]
 ms.assetid: a00caa49-e4df-419f-89a7-ab03c13a1b5b
 caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# BITMAPINFO-Struktur
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a20d235ebe5c8758ecd3e5c99a6c9f94f872019b
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Die `BITMAPINFO`\-Struktur definiert die Abmessungen und die Farbinformationen für eine geräteunabhängige Bitmap \(DIB\) von Windows.  
+---
+# <a name="bitmapinfo-structure"></a>BITMAPINFO Structure
+The `BITMAPINFO` structure defines the dimensions and color information for a Windows device-independent bitmap (DIB).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tagBITMAPINFO {  
-   BITMAPINFOHEADER bmiHeader;  
-   RGBQUAD bmiColors[1];  
+    BITMAPINFOHEADER bmiHeader;  
+    RGBQUAD bmiColors[1];  
 } BITMAPINFO;  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameters  
  `bmiHeader`  
- Gibt eine [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376)\-Struktur an, die Informationen über die Abmessungen und das Farbenformat einer geräteunabhängigen Bitmap enthält.  
+ Specifies a [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) structure that contains information about the dimensions and color format of a device-independent bitmap.  
   
  `bmiColors`  
- Gibt ein Array von [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938)\- oder `DWORD`\-Datentypen an, die die Farben in der Bitmap definieren.  
+ Specifies an array of [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) or `DWORD` data types that define the colors in the bitmap.  
   
-## Hinweise  
- Eine geräteunabhängige Bitmap besteht aus zwei verschiedenen Teilen: einer `BITMAPINFO`\-Struktur, die die Abmessungen und Farben der Bitmap beschreibt, und einem Bytearray, das die Pixel in der Bitmap angibt.  Die Bits im Array werden zusammengefasst, jede Scanzeile muss jedoch mit Nullen aufgefüllt werden, um an einer `LONG`\-Grenze zu enden.  Wenn die Höhe positiv ist, ist der Ursprung der Bitmap die linke untere Ecke.  Ist die Höhe negativ, ist der Ursprung die linke obere Ecke.  
+## <a name="remarks"></a>Remarks  
+ A device-independent bitmap consists of two distinct parts: a `BITMAPINFO` structure that describes the dimensions and colors of the bitmap, and an array of bytes that specify the pixels in the bitmap. The bits in the array are packed together, but each scan line must be padded with zeros to end on a `LONG` boundary. If the height is positive, the origin of the bitmap is the lower-left corner. If the height is negative, the origin is the upper-left corner.  
   
- Eine *gepackte Bitmap* ist eine Bitmap, bei der das Bytearray unmittelbar auf die `BITMAPINFO`\-Struktur folgt.  Auf gepackte Bitmaps wird von einem einzelnen Zeiger verwiesen.  
+ A *packed bitmap* is a bitmap where the byte array immediately follows the `BITMAPINFO` structure. Packed bitmaps are referenced by a single pointer.  
   
- Weitere Informationen über die `BITMAPINFO`\-Struktur und die entsprechenden Werte für Member der `BITMAPINFOHEADER`\- und `RGBQUAD`\-Struktur finden Sie in den folgenden Themen in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]\-Dokumentation.  
+ For more information about the `BITMAPINFO` structure and appropriate values for members of the `BITMAPINFOHEADER` and `RGBQUAD` structures, see the following topics in the Windows SDK documentation.  
   
--   [\<caps:sentence id\="tgt11" sentenceid\="b5dd2e8c9cedbac12eb858bd01a029a2" class\="tgtSentence"\>BITMAPINFO\-Struktur\<\/caps:sentence\>](http://msdn.microsoft.com/library/windows/desktop/dd183375)  
+- [BITMAPINFO structure](http://msdn.microsoft.com/library/windows/desktop/dd183375)  
   
--   [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376)\-Struktur  
+- [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) structure  
   
--   [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938)\-Struktur  
+- [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) structure  
   
-## Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** wingdi.h  
   
-## Siehe auch  
- [Strukturen, Stile, Rückrufe und Meldungszuordnungen](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CBrush::CreateDIBPatternBrush](../Topic/CBrush::CreateDIBPatternBrush.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CBrush::CreateDIBPatternBrush](../../mfc/reference/cbrush-class.md#createdibpatternbrush)   
  [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376)   
  [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938)
+
+

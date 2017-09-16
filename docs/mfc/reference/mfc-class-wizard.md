@@ -1,104 +1,122 @@
 ---
-title: "MFC-Klassen-Assistent | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.wizards.classwizard"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC-Klassen-Assistent"
-  - "Assistenten (MFC)"
+title: MFC Class Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.wizards.classwizard
+dev_langs:
+- C++
+helpviewer_keywords:
+- wizards (MFC)
+- MFC Class Wizard
 ms.assetid: 8b0dd867-5d07-4214-99be-2a1c1995e6d9
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# MFC-Klassen-Assistent
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1d163ea30b71096e457595804bad01a6004e609f
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Ermöglicht das Hinzufügen von Meldungen und Meldungshandlern zu Klassen im Projekt.  Sie können auch andere Assistenten starten oder dem Projekt eine Klasse hinzufügen.  
+---
+# <a name="mfc-class-wizard"></a>MFC Class Wizard
+Lets you add messages and message handlers to classes in your project. You can also start other wizards or add a class to your project.  
   
- Klicken Sie zum Öffnen des **MFC\-Klassen\-Assistenten** im Menü **Projekt** auf **Klassen\-Assistent**.  Drücken Sie zum Öffnen des Assistenten mit einer Tastenkombination STRG\+UMSCHALT\+X.  
+ To open the **MFC Class Wizard**, on the **Project** menu, click **Class Wizard**. To open the wizard with a keyboard shortcut, type CTRL+SHIFT+X.  
   
-## UIElement-Liste  
- **Projekt**  
- Der Name eines Projekts in der Lösung.  
+## <a name="uielement-list"></a>UIElement List  
+ **Project**  
+ The name of a project in your solution.  
   
- Sie können andere Projekte in der Projektmappe im Dropdown\-Listenfeld auswählen.  
+ You can select other projects in your solution from the drop-down list box.  
   
- **Klassenname**  
- Der Name einer Klasse im Projekt.  
+ **Class name**  
+ The name of a class in your project.  
   
- Wenn Sie in der Liste **Klassenname** eine Klasse auswählen, füllen Daten aus der Klasse die Steuerelemente im **MFC\-Klassen\-Assistenten** auf.  Wenn Sie den Wert eines Steuerelements ändern, sind Daten in der ausgewählten Klasse betroffen.  
+ When you select a class in the **Class name** list, data from the class populates the controls in the **MFC Class Wizard**. When you change the value of a control, data in the selected class is affected.  
   
- **Klasse hinzufügen**  
- Ermöglicht das Hinzufügen einer Klasse aus einer von mehreren Quellen.  
+ **Add Class**  
+ Lets you add a class from one of several sources.  
   
- Abhängig von der Auswahl wird der **MFC\-Assistent zum Hinzufügen von Klassen**, der **Assistent zum Hinzufügen von Klassen aus der Typbibliothek**, der **Assistent zum Hinzufügen von Klassen aus ActiveX\-Steuerelementen** oder der **MFC\-ODBC\-Consumer\-Assistent** gestartet.  
+ Depending on your selection, the **MFC Add Class Wizard**, **Add Class From Typelib Wizard**, **Add Class From ActiveX Control Wizard**, or **MFC ODBC Consumer Wizard** is started.  
   
- **Basisklasse**  
- Die Basisklasse der Klasse, die in **Klassenname** angezeigt wird.  
+ **Base class**  
+ The base class of the class that is displayed in **Class name**.  
   
- **Klassendeklaration**  
- Die Klasse, in der die **Klassenname**\-Klasse deklariert ist.  
+ **Class declaration**  
+ The class in which the **Class name** class is declared.  
   
- Das Feld **Klassendeklaration** wird nur angezeigt, wenn sich der Name darin vom Namen in **Klassenimplementierung** unterscheidet.  
+ The **Class declaration** box is displayed only if the name in it differs from the name in **Class implementation**.  
   
- **Ressource**  
- Gegebenenfalls die ID der Ressource in **Klassenname**.  Andernfalls ist das Feld **Ressource** leer.  
+ **Resource**  
+ The ID of the resource in **Class name**, if any. Otherwise, the **Resource** box is empty.  
   
- **Klassenimplementierung**  
- Der Name der Datei, die die Implementierung der Klasse in **Klassenname** enthält.  
+ **Class implementation**  
+ The name of the file that contains the implementation of the class in **Class name**.  
   
- Sie können eine andere Implementierungsdatei auswählen, indem Sie auf den Pfeil klicken.  In der folgenden Tabelle sind die verfügbaren Optionen aufgelistet.  
+ You can select a different implementation file by clicking the arrow. The following table lists the available options.  
   
-|Option|**Beschreibung**|  
-|------------|----------------------|  
-|**Datei öffnen**|Beendet den Klassen\-Assistenten und öffnet die aktuelle Klassenimplementierungsdatei.|  
-|**Enthaltenden Ordner öffnen**|Öffnet den Ordner, der die aktuelle Klassenimplementierungsdatei enthält.|  
-|**Vollständigen Pfad in die Zwischenablage kopieren**|Kopiert den Pfad der aktuellen Implementierungsdatei in die Zwischenablage.|  
+|Option|Description|  
+|------------|-----------------|  
+|**Open File**|Exits the class wizard and opens the current class implementation file.|  
+|**Open Containing Folder**|Opens the folder that contains the current class implementation file.|  
+|**Copy Full Path to Clipboard**|Copies the path of the current implementation file to the Clipboard.|  
   
- **Befehle**  
- Ermöglicht das Hinzufügen, Löschen, Bearbeiten oder Suchen nach einem Befehl und seinem Meldungshandler.  
+ **Commands**  
+ Lets you add, delete, edit, or search for a command and its message handler.  
   
- Um einen Handler hinzuzufügen, klicken Sie auf **Handler hinzufügen**, oder doppelklicken Sie in der Liste **Objekt\-IDs** oder **Meldungen** auf ein Element.  Der resultierende Funktionsname, die ID und die Meldung werden in der Liste **Memberfunktionen** angezeigt.  
+ To add a handler, click **Add Handler**, or double-click an item in the **Object IDs** list or **Messages** list. The resulting function name, ID, and message are displayed in the **Member functions** list.  
   
- Um einen Handler zu löschen, wählen Sie in der Liste **Memberfunktionen** ein Element aus, und klicken Sie dann auf **Handler löschen**.  
+ To delete a handler, select an item in the **Member functions** list and then click **Delete Handler**.  
   
- Um einen Handler zu ändern, doppelklicken Sie in der Liste **Memberfunktionen** auf das entsprechende Element.  Oder wählen Sie ein Element im Listenfeld aus, und klicken Sie dann auf **Code bearbeiten**.  
+ To modify a handler, double-click the corresponding item in the **Member functions** list. Or, select an item in the list box and then click **Edit Code**.  
   
- **Meldungen**  
- Ermöglicht das Hinzufügen, Löschen, Bearbeiten oder Suchen nach einer Meldung und ihrem Meldungshandler.  
+ **Messages**  
+ Lets you add, delete, edit, or search for a message and its message handler.  
   
- Um einen Handler hinzuzufügen, klicken Sie auf **Handler hinzufügen**, oder doppelklicken Sie in der Liste **Meldungen** auf ein Element.  
+ To add a handler, click **Add Handler**, or double-click an item in the **Messages** list.  
   
- Um eine benutzerdefinierte Meldung hinzuzufügen, klicken Sie auf **Benutzerdefinierte Meldung hinzufügen** oder drücken die EINGABETASTE, und geben Sie dann Werte im Dialogfeld **Benutzerdefinierte Meldung hinzufügen** an.  In diesem Dialogfeld können Sie auch **Registrierte Meldung** auswählen, um eine Fenstermeldung zu behandeln, die im Betriebssystem garantiert eindeutig ist.  
+ To add a custom message, click **Add Custom Message** or press the Enter key, and then specify values in the **Add Custom Message** dialog box. In that dialog box, you can also select **Registered Message** to handle a window message that is guaranteed to be unique throughout the operating system.  
   
- **Virtuelle Funktionen**  
- Ermöglicht das Hinzufügen, Löschen, Bearbeiten oder Suchen nach einer virtuellen Funktion oder einer überschriebenen virtuellen Funktion.  
+ **Virtual Functions**  
+ Lets you add, delete, edit, or search for a virtual function, or an overridden virtual function.  
   
- **Membervariablen**  
- Ermöglicht das Hinzufügen, Löschen, Bearbeiten oder Suchen nach einer Membervariable.  
+ **Member Variables**  
+ Lets you add, delete, edit, or search for a member variable.  
   
- **Methoden**  
- Ermöglicht das Hinzufügen, Löschen oder Suchen nach einer Methode. Sie können auch zur Definition oder der Deklaration einer Methode wechseln.  
+ **Methods**  
+ Lets you add, delete, or search for a method, and also go to the definition or declaration of a method.  
   
- Um eine benutzerdefinierte Methode hinzuzufügen, klicken Sie auf **Methode hinzufügen**, und geben Sie dann Werte im Dialogfeld **Methode hinzufügen** an.  
+ To add a method, click **Add Method**, and then specify values in the **Add Method** dialog box.  
   
- Um eine Methode zu löschen, wählen Sie in der Liste **Methoden** ein Element aus, und klicken Sie dann auf **Methode löschen**.  
+ To delete a method, select an item in the **Methods** list and then click **Delete Method**.  
   
- Um eine Deklaration anzuzeigen, wählen Sie in der Liste **Methoden** ein Element aus, und klicken Sie dann auf **Gehe zu Deklaration**.  
+ To display a declaration, select an item in the **Methods** list and then click **Go to Declaration.**  
   
- Um eine Definition anzuzeigen, doppelklicken Sie in der Liste **Methoden** auf ein Element.  Oder wählen Sie ein Element in der Liste **Methoden** aus, und klicken Sie dann auf die Schaltfläche **Gehe zu Definition**.  
+ To display a definition, double-click an item in the **Methods** list. Or, select an item in the **Methods** list and then click the **Go to Definition** button.  
   
-## Siehe auch  
- [Hinzufügen einer Klasse](../../ide/adding-a-class-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)
+

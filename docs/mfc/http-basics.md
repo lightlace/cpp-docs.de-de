@@ -1,52 +1,71 @@
 ---
-title: "Grundlagen zu HTTP | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "HTTP-Anforderungen, Rückgabecodes"
-  - "HTTP, Rückgabecodes"
-  - "Rückgabecodes"
+title: HTTP Basics | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- HTTP [MFC], return codes
+- return codes [MFC]
+- HTTP requests [MFC], return codes
 ms.assetid: 5b7421bf-42c8-4f3a-8566-8ff5957f58cc
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Grundlagen zu HTTP
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: eb737fbca0bccb35ea6038d6279dadb064ca2328
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Wenn Sie eine Internetanwendung schreiben, müssen Sie häufig und fügen die Informationen in unterschiedlichen HTTP\-Headerwerten hinzu.  Rückgabecodes geben den Erfolg oder das Fehlschlagen des angeforderten Ereignisses angezeigt.  Einige Rückgabecodes sind in der folgenden Tabelle aufgeführt.  
+---
+# <a name="http-basics"></a>HTTP Basics
+When writing an internet application, you often examine and add to the information in HTTP header. Return codes indicate the success or failure of the requested event. Several common return codes are listed in the following table.  
   
-|Rückgabecode|Bedeutung|  
-|------------------|---------------|  
-|200|Die lokalisierte URL, Übertragung folgt|  
-|400|Unverständliche Anforderung|  
-|404|Angeforderte URL nicht gefunden|  
-|405|Server nicht unterstützt angeforderte Methode|  
-|500|Unbekannter Serverfehler|  
-|503|Dienst nicht verfügbar|  
+|Return Code|Meaning|  
+|-----------------|-------------|  
+|200|URL located, transmission follows|  
+|400|Unintelligible request|  
+|404|Requested URL not found|  
+|405|Server does not support requested method|  
+|500|Unknown server error|  
+|503|Service unavailable|  
   
- Die HTTP\-Antworten sind wie in der folgenden Tabelle gezeigt.  
+ The HTTP responses are grouped as shown in the following table.  
   
-|Gruppieren|Bedeutung|  
-|----------------|---------------|  
-|200–299|Erfolgreich|  
-|300–399|Information|  
-|400–499|Anforderungsfehler|  
-|500–599|Serverfehler|  
+|Group|Meaning|  
+|-----------|-------------|  
+|200-299|Success|  
+|300-399|Information|  
+|400-499|Request error|  
+|500-599|Server error|  
   
- Das Hypertext Transfer Protocol \(HTTP\) ist ein Protokoll auf Anwendungsebene für HypermediaInformationssysteme.  Weitere Informationen über HTTP und z Webbrowser und Server kommunizieren, finden Sie die Spezifikation des Hypertext Transfer Protocol \(HTTP\):  
+ The Hypertext Transfer Protocol (HTTP) is an application-level protocol for hypermedia information systems. For more information about HTTP, and how Web browsers and servers communicate, see the Hypertext Transfer Protocol (HTTP) specification:  
   
- [http:\/\/www.w3.org\/pub\/WWW\/Protocols\/](http://www.w3.org/pub/WWW/Protocols/)  
+ [http://www.w3.org/pub/WWW/Protocols/](http://www.w3.org/pub/www/protocols/)  
   
-## Siehe auch  
- [Grundlagen der MFC\-Internetprogrammierung](../mfc/mfc-internet-programming-basics.md)
+## <a name="see-also"></a>See Also  
+ [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)
+
+

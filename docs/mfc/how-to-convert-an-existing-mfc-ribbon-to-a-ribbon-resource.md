@@ -1,57 +1,78 @@
 ---
-title: "Gewusst wie: Umwandeln eines vorhandenen MFC-Men&#252;bands in eine Men&#252;bandressource | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC-Menüband, Umwandeln in eine Menübandressource"
-  - "Menübandressource, Umwandeln von einem MFC-Menüband"
+title: 'How to: Convert an Existing MFC Ribbon to a Ribbon Resource | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ribbon resource, converting from an MFC ribbon
+- MFC ribbon, converting to a ribbon resource
 ms.assetid: 324b7ff6-58f9-4691-96a9-9836a79d0fb6
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# Gewusst wie: Umwandeln eines vorhandenen MFC-Men&#252;bands in eine Men&#252;bandressource
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 30ed9bd9483e00dc4845b4e318a66bfb21f4531f
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Menübandressourcen sind einfacher als manuell codierte Menübänder visuell darzustellen, ändern und verwalten.  In diesem Thema wird beschrieben, wie diese manuell codiertes Menüband in einem MFC\-Projekt in eine Menübandressource konvertiert.  
+---
+# <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>How to: Convert an Existing MFC Ribbon to a Ribbon Resource
+Ribbon resources are easier to visualize, modify, and maintain than manually coded ribbons. This topic describes how to convert a manually coded ribbon in an MFC Project into a ribbon resource.  
   
- Sie müssen ein vorhandenes MFC\-Projekt haben, das Code verfügt, der die MFC\-Menübandklassen beispielsweise [CMFCRibbonBar\-Klasse](../mfc/reference/cmfcribbonbar-class.md) verwendet.  
+ You must have an existing MFC project that has code that uses the MFC ribbon classes, for example, [CMFCRibbonBar Class](../mfc/reference/cmfcribbonbar-class.md).  
   
-### So ein MFC\-Menüband zu einer Menübandressource konvertieren  
+### <a name="to-convert-an-mfc-ribbon-to-a-ribbon-resource"></a>To convert an MFC ribbon to a ribbon resource  
   
-1.  In Visual Studio in einem vorhandenen MFC\-Projekt, die Quelldatei, in der das CMFCRibbonBar\-Objekt initialisiert wird.  In der Regel ist die Datei mainfrm.cpp.  Fügen Sie den folgenden Code nach den Initialisierungscode für das Menüband hinzu.  
+1.  In Visual Studio, in an existing MFC project, open the source file where the CMFCRibbonBar object is initialized. Typically, the file is mainfrm.cpp. Add the following code after the initialization code for the ribbon.  
   
-    ```  
-    m_wndRibbonBar.SaveToXMLFile("RibbonOutput.xml");  
-    ```  
+ ```  
+    m_wndRibbonBar.SaveToXMLFile("RibbonOutput.xml");
+
+ ```  
   
-     Speichern und schließen Sie die Datei.  
+     Save and close the file.  
   
-2.  Erstellen und Ausführen die MFC\-Anwendung, und anschließend im Editor, die Datei RibbonOutput.txt aus und kopieren Sie den Inhalt.  
+2.  Build and run the MFC application, and then in Notepad, open RibbonOutput.txt and copy its contents.  
   
-3.  In Visual Studio im Menü **Projekt**, klicken Sie auf **Ressource hinzufügen**.  Wählen Sie im Dialogfeld **Ressource hinzufügen** die Option **Menüband** aus, und klicken Sie dann auf **Neu**.  
+3.  In Visual Studio, on the **Project** menu, click **Add Resource**. In the **Add Resource** dialog box, select **Ribbon** and then click **New**.  
   
-     Visual Studio erstellt eine Menübandressource und öffnet sie in der Entwurfsansicht.  Das Menübandressourcen\-ID lautet IDR\_RIBBON1 und wird in **Ressourcenansicht** angezeigt.  Das Menüband wird in der ribbon1.mfcribbon\-ms XML\-Datei definiert.  
+     Visual Studio creates a ribbon resource and opens it in design view. The ribbon resource ID is IDR_RIBBON1, which is displayed in **Resource View**. The ribbon is defined in the ribbon1.mfcribbon-ms XML file.  
   
-4.  In Visual Studio deaktivieren geöffnete ribbon1.mfcribbon\-ms, Inhalte und anschließend den Inhalt von RibbonOutput.txt ein, die Sie zuvor kopierten.  Speichern und schließen Sie ribbon1.mfcribbon\-ms.  
+4.  In Visual Studio, open ribbon1.mfcribbon-ms, delete its contents, and then paste the contents of RibbonOutput.txt, which you copied earlier. Save and close ribbon1.mfcribbon-ms.  
   
-5.  Wiederum Öffnen Sie die Quelldatei, in der das CMFCRibbonBar\-Objekt initialisiert wird \(in der Regel, mainfrm.cpp\) und kommentieren Sie sie der vorhandene Menübandcode.  Fügen Sie den folgenden Code nach dem Code hinzu, dass Sie den kommentierten.  
+5.  Again open the source file where the CMFCRibbonBar object is initialized (typically, mainfrm.cpp) and comment out the existing ribbon code. Add the following code after the code that you commented out.  
   
-    ```  
-    m_wndRibbonBar.LoadFromResource(IDR_RIBBON1);  
-    ```  
+ ```  
+    m_wndRibbonBar.LoadFromResource(IDR_RIBBON1);
+
+ ```  
   
-6.  Erstellen Sie das Projekt und führen Sie das Programm aus.  
+6.  Build the project and run the program.  
   
-## Siehe auch  
- [Menüband\-Designer \(MFC\)](../mfc/ribbon-designer-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)
+
+

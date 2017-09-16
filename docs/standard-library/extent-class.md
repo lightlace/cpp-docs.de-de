@@ -1,5 +1,5 @@
 ---
-title: extent-Klasse | Microsoft-Dokumentation
+title: extent Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- extent
 - type_traits/std::extent
 dev_langs:
 - C++
@@ -35,15 +34,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 23cf8230cd5b8adb7975ec21a249d9efc4d66c71
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2c7650f705b47075bd03fe5b3d04c749441c28a0
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="extent-class"></a>extent-Klasse
-Ruft eine Arraydimension ab.  
+# <a name="extent-class"></a>extent Class
+Gets an array dimension.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -52,17 +51,17 @@ template <class Ty, unsigned I = 0>
 struct extent;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- Der abzufragende Typ.  
+ The type to query.  
   
  `I`  
- Das an die Abfrage gebundene Array.  
+ The array bound to query.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn `Ty` ein Arraytyp mit mindestens `I` Dimensionen ist, enthält die Abfrage die Anzahl der Elemente in der durch `I` angegebener Dimension. Wenn `Ty` nicht ein Arraytyp oder sein Rang kleiner als `I` ist, oder wenn `I` 0 und `Ty` vom Datentyp „Array mit unbekannter Grenze `U`“ ist, enthält die Abfrage den Wert 0.  
+## <a name="remarks"></a>Remarks  
+ If `Ty` is an array type that has at least `I` dimensions, the type query holds the number of elements in the dimension specified by `I`. If `Ty` is not an array type or its rank is less than `I`, or if `I` is zero and `Ty` is of type "array of unknown bound of `U`", the type query holds the value 0.  
   
-## <a name="example"></a>Beispiel  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__extent.cpp   
@@ -87,13 +86,13 @@ extent 0 == 5
 extent 1 == 10  
 ```  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [remove_all_extents Class (remove_all_extents-Klasse)](../standard-library/remove-all-extents-class.md)   
- [remove_extent Class (remove_extent-Klasse)](../standard-library/remove-extent-class.md)
+ [remove_all_extents Class](../standard-library/remove-all-extents-class.md)   
+ [remove_extent Class](../standard-library/remove-extent-class.md)
 

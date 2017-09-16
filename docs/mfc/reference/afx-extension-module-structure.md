@@ -1,5 +1,5 @@
 ---
-title: AFX_EXTENSION_MODULE-Struktur | Microsoft Docs
+title: AFX_EXTENSION_MODULE Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- AFX_EXTENSION_MODULE structure
+- AFX_EXTENSION_MODULE structure [MFC]
 ms.assetid: b85a989c-d0c5-4b28-b53c-dad45b75704e
 caps.latest.revision: 11
 author: mikeblome
@@ -33,15 +33,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: 4bc0dafbc4d09f5c53ff502876da2e250d537882
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e4d57fbe93892a765fc0bbe00864c5519fb7e82c
 ms.contentlocale: de-de
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="afxextensionmodule-structure"></a>AFX_EXTENSION_MODULE-Struktur
-Die `AFX_EXTENSION_MODULE` wird während der Initialisierung des MFC-Erweiterungs-DLLs verwendet, um den Status des Erweiterungs-DLL-Modul zu speichern.  
+# <a name="afxextensionmodule-structure"></a>AFX_EXTENSION_MODULE Structure
+The `AFX_EXTENSION_MODULE` is used during initialization of MFC extension DLLs to hold the state of MFC extension DLL module.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,42 +56,42 @@ struct AFX_EXTENSION_MODULE
 };  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a>Parameters  
  *bInitialized*  
- **"True"** , wenn die DLL-Modul mit initialisiert wurde `AfxInitExtensionModule`.  
+ **TRUE** if the DLL module has been initialized with `AfxInitExtensionModule`.  
   
  `hModule`  
- Gibt das Handle für das DLL-Modul an.  
+ Specifies the handle of the DLL module.  
   
  *hResource*  
- Gibt das Handle für das benutzerdefinierte Ressourcenmodul DLL an.  
+ Specifies the handle of the DLL custom resource module.  
   
  *pFirstSharedClass*  
- Ein Zeiger auf Informationen (die `CRuntimeClass` Struktur) zum ersten Laufzeitklasse in das DLL-Modul. Wird verwendet, um den Anfang der Liste der Common Language Runtime-Klasse bereitzustellen.  
+ A pointer to information (the `CRuntimeClass` structure) about the DLL module's first runtime class. Used to provide the start of the runtime class list.  
   
  *pFirstSharedFactory*  
- Ein Zeiger auf die erste Objektfactory das DLL-Modul (ein `COleObjectFactory` Objekt). Wird verwendet, um den Anfang der Liste der Factory bereitzustellen.  
+ A pointer to the DLL module's first object factory (a `COleObjectFactory` object). Used to provide the start of the class factory list.  
   
-## <a name="remarks"></a>Hinweise  
- MFC-Erweiterungs-DLLs müssen zwei Dinge in ihre `DllMain` Funktion:  
+## <a name="remarks"></a>Remarks  
+ MFC extension DLLs need to do two things in their `DllMain` function:  
   
--   Rufen Sie [AfxInitExtensionModule](extension-dll-macros.md#afxinitextensionmodule) und überprüfen den Rückgabewert.  
+-   Call [AfxInitExtensionModule](extension-dll-macros.md#afxinitextensionmodule) and check the return value.  
   
--   Erstellen einer **CDynLinkLibrary** Objekt, wenn die DLL exportieren [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) Objekte oder verfügt über eine eigene benutzerdefinierte Ressourcen.  
+-   Create a **CDynLinkLibrary** object if the DLL will be exporting [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objects or has its own custom resources.  
   
- Die `AFX_EXTENSION_MODULE` Struktur wird verwendet, um eine Kopie der Erweiterung DLL-Modulstatus, einschließlich einer Kopie der Objekte der Common Language Runtime-Klasse, die von der Erweiterungs-DLL, im Rahmen des normalen statische Objektkonstruktion ausgeführt initialisiert wurden, bevor `DllMain` eingegeben wird. Zum Beispiel:  
+ The `AFX_EXTENSION_MODULE` structure is used to hold a copy of the MFC extension DLL module state, including a copy of the runtime class objects that have been initialized by the MFC extension DLL as part of normal static object construction executed before `DllMain` is entered. For example:  
   
- [!code-cpp[NVC_MFC_DLL NR. 2](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_1.cpp)]  
+ [!code-cpp[NVC_MFC_DLL#2](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_1.cpp)]  
   
- Die Modulinformationen gespeichert, der `AFX_EXTENSION_MODULE` Struktur kopiert werden kann, in der **CDynLinkLibrary** Objekt. Zum Beispiel:  
+ The module information stored in the `AFX_EXTENSION_MODULE` structure can be copied into the **CDynLinkLibrary** object. For example:  
   
- [!code-cpp[NVC_MFC_DLL NR. 5](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_2.cpp)]  
+ [!code-cpp[NVC_MFC_DLL#5](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_2.cpp)]  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** afx.h  
   
-## <a name="see-also"></a>Siehe auch  
- [Strukturen, Stile, Rückrufe und Meldungszuordnungen](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [AfxInitExtensionModule](extension-dll-macros.md#afxinitextensionmodule)   
  [AfxTermExtensionModule](extension-dll-macros.md#afxtermextensionmodule)
 

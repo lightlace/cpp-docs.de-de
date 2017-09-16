@@ -1,5 +1,5 @@
 ---
-title: cache_suballoc-Klasse | Microsoft-Dokumentation
+title: cache_suballoc Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - allocators/stdext::cache_suballoc
-- stdext::cache_suballoc
-- cache_suballoc
 - allocators/stdext::cache_suballoc::allocate
 - allocators/stdext::cache_suballoc::deallocate
 dev_langs:
 - C++
 helpviewer_keywords:
-- cache_suballoc class
+- stdext::cache_suballoc
+- stdext::cache_suballoc [C++], allocate
+- stdext::cache_suballoc [C++], deallocate
 ms.assetid: 9ea9c5e9-1dcc-45d0-b3a7-a56a93d88898
 caps.latest.revision: 17
 author: corob-msft
@@ -37,15 +37,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: fa98856bc7e55ca78effb64c806a95cab60a68a5
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: afd60b3e7855868a0be7f9b63d9ed8da469c4713
 ms.contentlocale: de-de
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="cachesuballoc-class"></a>cache_suballoc-Klasse
-Definiert eine [Blockzuweisung](../standard-library/allocators-header.md), die Speicherblöcke einheitlicher Größe zuweist und freigibt.  
+# <a name="cachesuballoc-class"></a>cache_suballoc Class
+Defines a [block allocator](../standard-library/allocators-header.md) that allocates and deallocates memory blocks of a single size.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,79 +54,79 @@ template <std::size_t Sz, size_t Nelts = 20>
 class cache_suballoc
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a>Parameters  
   
-|Parameter|Beschreibung|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Sz`|Die Anzahl der zuzuordnenden Elemente des Arrays.|  
+|`Sz`|The number of elements in the array to be allocated.|  
   
-## <a name="remarks"></a>Hinweise  
- Die Vorlagenklasse cache_suballoc speichert freigegebene Speicherblöcke in einer Freiliste mit unbegrenzter Länge unter Verwendung von `freelist<sizeof(Type), max_unbounded>` und führt eine Unterzuweisung von Speicherblöcken aus einem größeren Block durch, die mit `operator new` zugeordnet werden, wenn die Freiliste leer ist.  
+## <a name="remarks"></a>Remarks  
+ The cache_suballoc template class stores deallocated memory blocks in a free list with unbounded length, using `freelist<sizeof(Type), max_unbounded>`, and suballocates memory blocks from a larger chunk allocated with `operator new` when the free list is empty.  
   
- Jeder Block enthält `Sz * Nelts` Bytes Speicherkapazität und die Daten, die `operator new` und `operator delete` benötigen. Zugeordnete Blöcke werden niemals freigegeben.  
+ Each chunk holds `Sz * Nelts` bytes of usable memory and the data that `operator new` and `operator delete` require. Allocated chunks are never freed.  
   
-### <a name="constructors"></a>Konstruktoren  
-  
-|||  
-|-|-|  
-|[cache_suballoc](#cache_suballoc)|Konstruiert ein Objekt vom Typ `cache_suballoc`.|  
-  
-### <a name="member-functions"></a>Memberfunktionen  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[allocate](#allocate)|Belegt einen Speicherblock.|  
-|[deallocate](#deallocate)|Gibt eine angegebene Anzahl von Objekten im Speicher frei, beginnend an einer angegebenen Position.|  
+|[cache_suballoc](#cache_suballoc)|Constructs an object of type `cache_suballoc`.|  
   
-## <a name="requirements"></a>Anforderungen  
+### <a name="member-functions"></a>Member Functions  
+  
+|||  
+|-|-|  
+|[allocate](#allocate)|Allocates a block of memory.|  
+|[deallocate](#deallocate)|Frees a specified number of objects from storage beginning at a specified position.|  
+  
+## <a name="requirements"></a>Requirements  
  **Header:** \<allocators>  
   
  **Namespace:** stdext  
   
-##  <a name="allocate"></a> cache_suballoc::allocate  
- Belegt einen Speicherblock.  
+##  <a name="allocate"></a>  cache_suballoc::allocate  
+ Allocates a block of memory.  
   
 ```
 void *allocate(std::size_t count);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
   
-|Parameter|Beschreibung|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`count`|Die Anzahl der zuzuordnenden Elemente des Arrays.|  
+|`count`|The number of elements in the array to be allocated.|  
   
-### <a name="return-value"></a>Rückgabewert  
- Zeiger auf das zugewiesene Objekt.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the allocated object.  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="cache_suballoc"></a> cache_suballoc::cache_suballoc  
- Konstruiert ein Objekt vom Typ `cache_suballoc`.  
+##  <a name="cache_suballoc"></a>  cache_suballoc::cache_suballoc  
+ Constructs an object of type `cache_suballoc`.  
   
 ```
 cache_suballoc();
 ```  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="deallocate"></a> cache_suballoc::deallocate  
- Gibt eine angegebene Anzahl von Objekten im Speicher frei, beginnend an einer angegebenen Position.  
+##  <a name="deallocate"></a>  cache_suballoc::deallocate  
+ Frees a specified number of objects from storage beginning at a specified position.  
   
 ```
 void deallocate(void* ptr, std::size_t count);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
   
-|Parameter|Beschreibung|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`ptr`|Ein Zeiger auf das erste Objekt, dessen Zuweisung zum Speicher aufgehoben werden soll.|  
-|`count`|Die Anzahl von Objekten, deren Zuweisung zum Speicherplatz aufgehoben werden soll.|  
+|`ptr`|A pointer to the first object to be deallocated from storage.|  
+|`count`|The number of objects to be deallocated from storage.|  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>See Also  
  [\<allocators>](../standard-library/allocators-header.md)
 
 

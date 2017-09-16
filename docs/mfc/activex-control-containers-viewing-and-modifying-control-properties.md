@@ -1,52 +1,71 @@
 ---
-title: "ActiveX-Steuerelementcontainer: Anzeigen und &#196;ndern von Steuerelementeigenschaften | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX-Steuerelementcontainer [C++], Anzeigen und Ändern von Eigenschaften"
-  - "ActiveX-Steuerelemente [C++], Eigenschaften"
-  - "Steuerelemente [MFC], Eigenschaften"
-  - "Eigenschaften [MFC], Anzeigen und Ändern"
-  - "Ressourcen-Editoren, Anzeigen und Ändern von ActiveX-Steuerelementen"
+title: 'ActiveX Control Containers: Viewing and Modifying Control Properties | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- properties [MFC], viewing and modifying
+- ActiveX control containers [MFC], viewing and modifying properties
+- resource editors, viewing and modifying ActiveX controls
+- ActiveX controls [MFC], properties
+- controls [MFC], properties
 ms.assetid: 14ce5152-742b-4e0d-a9ab-c7b456e32918
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# ActiveX-Steuerelementcontainer: Anzeigen und &#196;ndern von Steuerelementeigenschaften
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f147544230d135b89f208eef2aba8db9a31468f8
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Wenn Sie ein ActiveX\-Steuerelement in ein Projekt einfügen, ist es hilfreich, die Eigenschaften anzuzeigen und zu ändern, die das ActiveX\-Steuerelement unterstützt werden.  Dieser Artikel wird erläutert, wie der Visual C\+\+\-Ressourcen\-Editor verwendet, um dazu.  
+---
+# <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>ActiveX Control Containers: Viewing and Modifying Control Properties
+When you insert an ActiveX control into a project, it is useful to view and change the properties supported by the ActiveX control. This article discusses how to use the Visual C++ resource editor to do this.  
   
- Wenn die ActiveX\-Steuerelement\-Containeranwendungsverwendung Steuerelemente zum Einbetten, können Sie die Eigenschaften des Steuerelements anzeigen und ändern während im Ressourcen\-Editor.  Sie können den Ressourcen\-Editor auch verwenden, um Eigenschaftswerte zur Entwurfszeit festzulegen.  Der Ressourcen\-Editor dann speichert automatisch diese Werte in der Ressourcendatei des Projekts.  Jede Instanz des Steuerelements verfügt dessen Eigenschaften, die mit diesen Werten initialisiert werden.  
+ If your ActiveX control container application uses embedded controls, you can view and modify the control's properties while in the resource editor. You can also use the resource editor to set property values during design time. The resource editor then automatically saves these values in the project's resource file. Any instance of the control will then have its properties initialized to these values.  
   
- Diese Prozedur wird davon ausgegangen, dass ein Steuerelement in das Projekt eingefügt haben.  Weitere Informationen finden Sie unter [ActiveX\-Steuerelementcontainer: Einfügen eines Steuerelements in eine Steuerelementcontainer\-Anwendung](../mfc/inserting-a-control-into-a-control-container-application.md).  
+ This procedure assumes that you have inserted a control into your project. For information, see [ActiveX Control Containers: Inserting a Control Into a Control Container Application](../mfc/inserting-a-control-into-a-control-container-application.md).  
   
- Der erste Schritt, wenn die Eigenschaften des Steuerelements angezeigt wird, ist, um eine Instanz des Steuerelements der Dialogfeldvorlage des Projekts hinzufügen.  
+ The first step in viewing the control's properties is to add an instance of the control to the project's dialog template.  
   
-### Um die Eigenschaften eines Steuerelements anzeigen  
+### <a name="to-view-the-properties-of-a-control"></a>To view the properties of a control  
   
-1.  in der Ressourcenansicht öffnen Sie den Ordner **Dialogfeld**.  
+1.  In Resource View, open the **Dialog** folder.  
   
-2.  Öffnen Sie die Hauptdialogfeldvorlage.  
+2.  Open your main dialog box template.  
   
-3.  Fügen Sie ein ActiveX\-Steuerelement mithilfe des Dialogfelds **ActiveX\-Steuerelement einfügen** ein.  Weitere Informationen finden Sie unter [ActiveX\-Steuerelemente zu einem Dialogfeld anzeigen und hinzufügen](../mfc/viewing-and-adding-activex-controls-to-a-dialog-box.md).  
+3.  Insert an ActiveX control using the **Insert ActiveX Control** dialog box. For more information, see [Viewing and Adding ActiveX Controls to a Dialog Box](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md).  
   
-4.  Wählen Sie das ActiveX\-Steuerelement im Dialogfeld aus.  
+4.  Select the ActiveX control in the dialog box.  
   
-5.  Im Eigenschaftenfenster klicken Sie auf die Schaltfläche **Eigenschaften**.  
+5.  From the Properties window, click the **Properties** button.  
   
- Verwenden Sie das Dialogfeld **Eigenschaften**, um neue Eigenschaften gleichzeitig zu ändern und zu testen.  
+ Use the **Properties** dialog box to modify and test new properties immediately.  
   
-## Siehe auch  
- [ActiveX\-Steuerelementcontainer](../mfc/activex-control-containers.md)
+## <a name="see-also"></a>See Also  
+ [ActiveX Control Containers](../mfc/activex-control-containers.md)
+
+

@@ -1,42 +1,60 @@
 ---
-title: "Bereichsbasiert f&#252;r Anweisung (C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Range-based for Statement (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 5750ba1d-ba48-4236-a923-e32de8345c2d
 caps.latest.revision: 10
-caps.handback.revision: "8"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Bereichsbasiert f&#252;r Anweisung (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: bc7fe69f815a1a1b10f36ef10b5f6f0c62811778
+ms.contentlocale: de-de
+ms.lasthandoff: 09/11/2017
 
-Führt `statement` für jedes Element in `expression` wiederholt und nacheinander aus.  
+---
+# <a name="range-based-for-statement-c"></a>Range-based for Statement (C++)
+Executes `statement` repeatedly and sequentially for each element in `expression`.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
       for ( for-range-declaration : expression )  
-   statement   
+   statement   
 ```  
   
-## Hinweise  
- Verwenden Sie die bereichsbasierte `for`\-Anweisung zum Erstellen von Schleifen, die einem "Bereich" ausführen müssen, der definiert ist als alles, was durchlaufen werden kann, zum Beispiel, `std::vector`, oder eine andere STL\-Sequenz, deren Gültigkeitsbereich von `begin()` und `end()` definiert wird.  Der im `for-range-declaration`\-Teil deklarierte Name ist zur `for`\-Anweisung lokal und kann in `expression` oder `statement` nicht neu deklariert werden.  Beachten Sie, dass das [auto](../cpp/auto-cpp.md)\-Schlüsselwort im `for-range-declaration`\-Teil der Anweisung bevorzugt wird.  
+## <a name="remarks"></a>Remarks  
+ Use the range-based `for` statement to construct loops that must execute through a "range", which is defined as anything that you can iterate through—for example, `std::vector`, or any other C++ Standard Library sequence whose range is defined by a `begin()` and `end()`. The name that is declared in the `for-range-declaration` portion is local to the `for` statement and cannot be re-declared in `expression` or `statement`. Note that the [auto](../cpp/auto-cpp.md) keyword is preferred in the `for-range-declaration` portion of the statement. 
+
+ **New in Visual Studio 2017:**  Range-based for loops no longer require that begin() and end() return objects of the same type. This enables end() to return a sentinel object such as used by ranges as defined in the Ranges-V3 proposal. For more information, see [Generalizing the Range-Based For Loop](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) and the [range-v3 library on GitHub](https://github.com/ericniebler/range-v3).
   
- In diesem Code wird die Verwendung von `for`\-Schleifen mit Bereichen zum Durchlaufen eines Arrays und eines Vektors veranschaulicht:  
+ This code shows how to use range-based `for` loops to iterate through an array and a vector:  
   
 ```cpp  
-  
 // range-based-for.cpp  
 // compile by using: cl /EHsc /nologo /W4  
 #include <iostream>  
@@ -68,7 +86,7 @@ int main()
     }  
     cout << endl;  
   
-    for( const auto &y : x ) { // Type inference by reference.  
+    for( const auto &y : x ) { // Type inference by const reference.  
         // Observes in-place. Preferred when no modify is needed.  
         cout << y << " ";  
     }  
@@ -92,7 +110,7 @@ int main()
   
 ```  
   
- Es folgt die Ausgabe:  
+ Here is the output:  
   
  `1 2 3 4 5 6 7 8 9 10`  
   
@@ -108,20 +126,20 @@ int main()
   
  `end of vector test`  
   
- Eine bereichsbasierte `for`\-Schleife wird beendet, wenn in `statement` einer der folgenden Befehle: [break](../cpp/break-statement-cpp.md), [return](../cpp/return-statement-cpp.md) oder [goto](../cpp/goto-statement-cpp.md), für einer Anweisung mit Bezeichnung außerhalb der bereichsbasierten **for**\-Schleife ausgeführt wird.  Mit einer [continue](../cpp/continue-statement-cpp.md)\-Anweisung in einer bereichsbasierten `for`\-Schleife wird nur die aktuelle Iteration beendet.  
+ A range-based `for` loop terminates when one of these in `statement` is executed: a [break](../cpp/break-statement-cpp.md), [return](../cpp/return-statement-cpp.md), or [goto](../cpp/goto-statement-cpp.md) to a labeled statement outside the range-based **for** loop. A [continue](../cpp/continue-statement-cpp.md) statement in a range-based `for` loop terminates only the current iteration.  
   
- Beachten Sie diese Punkte zu bereichsbasierten `for`\-Schleifen:  
+ Keep in mind these facts about range-based `for`:  
   
--   Erkennt Arrays automatisch.  
+-   Automatically recognizes arrays.  
   
--   Erkennt Container, die über `.begin()` und `.end()` verfügen.  
+-   Recognizes containers that have `.begin()` and `.end()`.  
   
--   Verwendet die argumentabhängigen Suche `begin()` und `end()` für alles andere.  
+-   Uses argument-dependent lookup `begin()` and `end()` for anything else.  
   
-## Siehe auch  
+## <a name="see-also"></a>See Also  
  [auto](../cpp/auto-cpp.md)   
- [Iterationsanweisungen](../cpp/iteration-statements-cpp.md)   
- [C\+\+\-Schlüsselwörter](../cpp/keywords-cpp.md)   
- [while\-Anweisung \(C\+\+\)](../cpp/while-statement-cpp.md)   
- [do\-while\-Anweisung \(C\+\+\)](../cpp/do-while-statement-cpp.md)   
- [for\-Anweisung \(C\+\+\)](../cpp/for-statement-cpp.md)
+ [Iteration Statements](../cpp/iteration-statements-cpp.md)   
+ [Keywords](../cpp/keywords-cpp.md)   
+ [while Statement (C++)](../cpp/while-statement-cpp.md)   
+ [do-while Statement (C++)](../cpp/do-while-statement-cpp.md)   
+ [for Statement (C++)](../cpp/for-statement-cpp.md)

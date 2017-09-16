@@ -1,72 +1,91 @@
 ---
-title: "Verwenden der CArchive-Operatoren &lt;&lt; und &gt;&gt;"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "CArchive"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CArchive-Klasse, Operatoren"
-  - "CArchive-Klasse, Speichern und Laden von Objekten"
-  - "Objekte [C++], Laden aus zuvor gespeicherten Werten"
+title: Using the CArchive &lt;&lt; and &gt;&gt; Operators | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CArchive
+dev_langs:
+- C++
+helpviewer_keywords:
+- objects [MFC], loading from previously stored values
+- CArchive class [MFC], storing and loading objects
+- CArchive class [MFC], operators
 ms.assetid: 56aef326-02dc-4992-8282-f0a4b78a064e
 caps.latest.revision: 10
-caps.handback.revision: "6"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Verwenden der CArchive-Operatoren &lt;&lt; und &gt;&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4a0a3577e4f36eda3148e91ed2223cde7524bf9e
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-`CArchive` stellt \<\< und \>\>\-Operatoren für das Schreiben und Lesen von einfachen Datentypen sowie `CObject`s in und aus einer Datei.  
+---
+# <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>Using the CArchive &lt;&lt; and &gt;&gt; Operators
+`CArchive` provides <\< and >> operators for writing and reading simple data types as well as `CObject`s to and from a file.  
   
-#### Um ein Objekt in einer Datei zu einem Archiv speichern  
+#### <a name="to-store-an-object-in-a-file-via-an-archive"></a>To store an object in a file via an archive  
   
-1.  Das folgende Beispiel zeigt, wie ein Objekt in einer Datei zu einem Archiv speichert:  
+1.  The following example shows how to store an object in a file via an archive:  
   
-     [!CODE [NVC_MFCSerialization#7](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCSerialization#7)]  
+     [!code-cpp[NVC_MFCSerialization#7](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_1.cpp)]  
   
-#### Um ein Objekt einem Wert laden zuvor gespeichert in einer Datei  
+#### <a name="to-load-an-object-from-a-value-previously-stored-in-a-file"></a>To load an object from a value previously stored in a file  
   
-1.  Im folgenden Beispiel wird gezeigt, wie ein Objekt von einem Wert geladen, der zuvor in einer Datei gespeichert wird:  
+1.  The following example shows how to load an object from a value previously stored in a file:  
   
-     [!CODE [NVC_MFCSerialization#8](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCSerialization#8)]  
+     [!code-cpp[NVC_MFCSerialization#8](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_2.cpp)]  
   
- Normalerweise speichern und laden Daten in und aus einer Datei zu einem Archiv in den Funktionen `Serialize` von `CObject` abgeleitete Klassen, die Sie mit dem **DECLARE\_SERIALIZE**\-Makro deklariert haben müssen.  Ein Verweis auf ein `CArchive`\-Objekt wird auf der `Serialize`\-Funktion übergeben.  Sie rufen die `IsLoading`\-Funktion des `CArchive`\-Objekts auf, um zu bestimmen, ob die Funktion `Serialize` aufgerufen wurde, um Daten von den Datei\- oder Daten in die Datei zu laden.  
+ Usually, you store and load data to and from a file via an archive in the `Serialize` functions of `CObject`-derived classes, which you must have declared with the **DECLARE_SERIALIZE** macro. A reference to a `CArchive` object is passed to your `Serialize` function. You call the `IsLoading` function of the `CArchive` object to determine whether the `Serialize` function has been called to load data from the file or store data to the file.  
   
- Die `Serialize`\-Funktion von serialisierbaren `CObject` abgeleitete Klasse verfügt normalerweise folgende Form:  
+ The `Serialize` function of a serializable `CObject`-derived class typically has the following form:  
   
- [!CODE [NVC_MFCSerialization#9](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCSerialization#9)]  
+ [!code-cpp[NVC_MFCSerialization#9](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_3.cpp)]  
   
- Die oben aufgeführten Codevorlage ist genau identisch, die der eines Anwendungs\-Assistent für die `Serialize`\-Funktion des Dokuments erstellt \(eine Klasse abgeleitet von **CDocument\)**.  Diese Codevorlage hilft Ihnen, Code zu schreiben, der leichter, da der speichernde Code und der Ladencode immer parallel sein sollten, wie im folgenden Beispiel zu überprüfen ist:  
+ The above code template is exactly the same as the one AppWizard creates for the `Serialize` function of the document (a class derived from **CDocument)**. This code template helps you write code that is easier to review, because the storing code and the loading code should always be parallel, as in the following example:  
   
- [!CODE [NVC_MFCSerialization#10](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCSerialization#10)]  
+ [!code-cpp[NVC_MFCSerialization#10](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_4.cpp)]  
   
- Die Bibliothek definiert **\<\<** und **\>\>** für Operatoren `CArchive` als erste Operand und die folgenden Datentypen und die Klassentypen als der zweite Operand:  
+ The library defines **<\<** and **>>** operators for `CArchive` as the first operand and the following data types and class types as the second operand:  
   
 ||||  
 |-|-|-|  
-|`CObject*`|**GRÖSSE und CSize**|**float**|  
-|**WORD**|`CString`|**PUNKT** und `CPoint`|  
-|`DWORD`|**BYTE**|`RECT` und `CRect`|  
-|**Double**|**LONG**|`CTime` und `CTimeSpan`|  
+|`CObject*`|**SIZE and CSize**|**float**|  
+|**WORD**|`CString`|**POINT** and `CPoint`|  
+|`DWORD`|**BYTE**|`RECT` and `CRect`|  
+|**Double**|**LONG**|`CTime` and `CTimeSpan`|  
 |`Int`|**COleCurrency**|`COleVariant`|  
 |`COleDateTime`|`COleDateTimeSpan`||  
   
 > [!NOTE]
->  Das Speichern und Laden von `CObject`s zu einem Archiv erfordert zusätzliche Überlegung.  Weitere Informationen finden Sie unter [CObjects zu einem Archiv Speichern und Laden](../mfc/storing-and-loading-cobjects-via-an-archive.md).  
+>  Storing and loading `CObject`s via an archive requires extra consideration. For more information, see [Storing and Loading CObjects via an Archive](../mfc/storing-and-loading-cobjects-via-an-archive.md).  
   
- Die **CArchive \<\<** und **\>\>**\-Operatoren geben immer einen Verweis auf das `CArchive`\-Objekt zurück, das der erste Operand ist.  Dies ermöglicht es Ihnen, die Operatoren zu verketten, wie unten dargestellt:  
+ The **CArchive <\<** and **>>** operators always return a reference to the `CArchive` object, which is the first operand. This enables you to chain the operators, as illustrated below:  
   
- [!CODE [NVC_MFCSerialization#11](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCSerialization#11)]  
+ [!code-cpp[NVC_MFCSerialization#11](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_5.cpp)]  
   
-## Siehe auch  
- [Serialisierung: Serialisieren eines Objekts](../mfc/serialization-serializing-an-object.md)
+## <a name="see-also"></a>See Also  
+ [Serialization: Serializing an Object](../mfc/serialization-serializing-an-object.md)
+
+

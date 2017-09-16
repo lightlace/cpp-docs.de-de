@@ -1,44 +1,63 @@
 ---
-title: "Methoden zum Erstellen einer Symbolleiste | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CToolBar-Klasse, Erstellen von Symbolleisten"
-  - "CToolBarCtrl-Klasse, und CToolBar-Klasse"
-  - "CToolBarCtrl-Klasse, Erstellen von Symbolleisten"
-  - "MFC-Symbolleisten"
-  - "Symbolleisten-Steuerelemente [MFC]"
-  - "Symbolleisten-Steuerelemente [MFC], Erstellen"
+title: Methods of Creating a Toolbar | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CToolBarCtrl class [MFC], and CToolBar class [MFC]
+- CToolBar class [MFC], creating toolbars
+- MFC toolbars
+- toolbar controls [MFC]
+- toolbar controls [MFC], creating
+- CToolBarCtrl class [MFC], creating toolbars
 ms.assetid: f19d8d65-d49f-445c-abe8-d47d3e4101c8
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Methoden zum Erstellen einer Symbolleiste
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fabdce772443dc433233b74683956f1091118290
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-MFC stellt zwei Klassen, um Symbolleisten zu erstellen: [CToolBar](../mfc/reference/ctoolbar-class.md) und [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) \(das die API des allgemeinen Windows\-Steuerelements umschließt\).  `CToolBar` werden alle Funktionen der Symbolleistengemeinsamen allgemeinen ToolTip\-Steuerelement, und sie behandelt viele der erforderlichen Einstellungen und Strukturen der allgemeinen Steuerelement für Sie; Allerdings ist die resultierende ausführbare Datei größer normalerweise als die, die mit `CToolBarCtrl` erstellt wird, verwendet.  
+---
+# <a name="methods-of-creating-a-toolbar"></a>Methods of Creating a Toolbar
+MFC provides two classes to create toolbars: [CToolBar](../mfc/reference/ctoolbar-class.md) and [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) (which wraps the Windows common control API). `CToolBar` provides all of the functionality of the toolbar common control, and it handles many of the required common control settings and structures for you; however, your resulting executable usually will be larger than that created by using `CToolBarCtrl`.  
   
- `CToolBarCtrl` führt i eine kleinere ausführbare Datei, und ziehen Sie es möglicherweise vor, eine `CToolBarCtrl` zu verwenden, wenn Sie nicht beabsichtigen, Symbolleiste in die MFC\-Architektur zu integrieren.  Wenn Sie planen, `CToolBarCtrl` verwenden und die Symbolleiste in die MFC\-Architektur zu integrieren, müssen Sie zusätzliche darauf achten, um Symbolleisten\-Steuerelement\-Manipulationen zu MFC mitzuteilen.  Diese Kommunikation ist nicht schwierig; ist es jedoch weitere Arbeitschritte, die nicht erforderlich ist, wenn Sie `CToolBar` verwenden.  
+ `CToolBarCtrl` usually results in a smaller executable, and you may prefer to use `CToolBarCtrl` if you do not intend to integrate the toolbar into the MFC architecture. If you plan to use `CToolBarCtrl` and integrate the toolbar into the MFC architecture, you must take additional care to communicate toolbar control manipulations to MFC. This communication is not difficult; however, it is additional work that is unneeded when you use `CToolBar`.  
   
- Visual C\+\+ bietet zwei Möglichkeiten, die Symbolleistengemeinsame allgemeinen ToolTip\-Steuerelement zu nutzen.  
+ Visual C++ provides two ways to take advantage of the toolbar common control.  
   
--   Stellen Sie die Symbolleiste mit `CToolBar`, und rufen Sie anschließend [CToolBar::GetToolBarCtrl](../Topic/CToolBar::GetToolBarCtrl.md) auf, um den Zugriff auf den `CToolBarCtrl`\-Memberfunktionen abzurufen.  
+-   Create the toolbar using `CToolBar`, and then call [CToolBar::GetToolBarCtrl](../mfc/reference/ctoolbar-class.md#gettoolbarctrl) to get access to the `CToolBarCtrl` member functions.  
   
--   Stellen Sie die Symbolleiste mit [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)\-Konstruktors erstellt.  
+-   Create the toolbar using [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)'s constructor.  
   
- Jede Methode gibt Ihnen Zugriff in Memberfunktionen des Symbolleisten\-Steuerelements.  Wenn Sie `CToolBar::GetToolBarCtrl` aufrufen, wird ein Verweis auf ein `CToolBarCtrl`\-Objekt zurück, sodass Sie alle verwenden festlegen von Memberfunktionen.  Siehe [CToolBar](../mfc/reference/ctoolbar-class.md) zu Informationen zum Erstellen und zum Erstellen eine Symbolleiste mit `CToolBar`.  
+ Either method will give you access to the member functions of the toolbar control. When you call `CToolBar::GetToolBarCtrl`, it returns a reference to a `CToolBarCtrl` object so you can use either set of member functions. See [CToolBar](../mfc/reference/ctoolbar-class.md) for information on constructing and creating a toolbar using `CToolBar`.  
   
-## Siehe auch  
- [Verwenden von CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

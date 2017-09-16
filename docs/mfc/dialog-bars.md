@@ -1,44 +1,63 @@
 ---
-title: "Dialogleisten | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDialogBar-Klasse, Dialogleisten"
-  - "Steuerleisten, Dialogleisten"
-  - "Dialogleisten"
-  - "Dialogleisten, Informationen über Dialogleisten"
-  - "MFC, Steuerleisten"
+title: Dialog Bars | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, control bars
+- CDialogBar class [MFC], dialog bars
+- control bars [MFC], dialog bars
+- dialog bars
+- dialog bars [MFC], about dialog bars
 ms.assetid: 485c8055-6bb0-4051-8417-dd2971499321
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Dialogleisten
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ae05404d6a2abae5f91f25b8a441565fab1af081
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Eine Dialogleiste ist eine Symbolleiste, eine von [Symbolleisten](../mfc/control-bars.md), die beliebige Steuerelement enthalten kann.  Da sich Eigenschaften eines nicht modalen Dialogfelds ist, stellt ein [CDialogBar](../mfc/reference/cdialogbar-class.md)\-Objekt eine leistungsfähigere Symbolleiste.  
+---
+# <a name="dialog-bars"></a>Dialog Bars
+A dialog bar is a toolbar, a kind of [control bar](../mfc/control-bars.md) that can contain any kind of control. Because it has the characteristics of a modeless dialog box, a [CDialogBar](../mfc/reference/cdialogbar-class.md) object provides a more powerful toolbar.  
   
- Es gibt mehrere wesentliche Unterschiede zwischen einer Symbolleiste und ein `CDialogBar`\-Objekt.  Ein `CDialogBar`\-Objekt wird von einer Dialogfeldvorlagenressource erstellt, die Sie mit dem Visual C\+\+\-Dialog\-Editor erstellen können und die beliebige Windows\-Steuerelement enthalten kann.  Der Benutzer kann von Steuerelement zu Steuerelement mit der TAB\-TASTE.  Außerdem können Sie einem Ausrichtungsformat angeben, dass die Dialogleiste mit Teilen des übergeordneten Rahmenfensters ausrichten oder sogar sie gesorgt wird, wenn das übergeordnete Element vergrößert wird.  Die folgende Abbildung zeigt eine Dialogleiste mit einer Vielzahl von Steuerelementen an.  
+ There are several key differences between a toolbar and a `CDialogBar` object. A `CDialogBar` object is created from a dialog-template resource, which you can create with the Visual C++ dialog editor and which can contain any kind of Windows control. The user can tab from control to control. And you can specify an alignment style to align the dialog bar with any part of the parent frame window or even to leave it in place if the parent is resized. The following figure shows a dialog bar with a variety of controls.  
   
- ![VC&#45;Dialogleiste](../mfc/media/vc378t1.png "vc378T1")  
-Eine Dialogleiste  
+ ![VC Dialog Bar](../mfc/media/vc378t1.gif "vc378t1")  
+A Dialog Bar  
   
- In anderen Hinsicht ist das Arbeiten mit einem `CDialogBar`\-Objekt wie die Arbeit mit einem nicht modalen Dialogfeld.  Verwenden Sie den Dialog\-Editor, um die Dialogfeldressource entwerfen und zu erstellen.  
+ In other respects, working with a `CDialogBar` object is like working with a modeless dialog box. Use the dialog editor to design and create the dialog resource.  
   
- Einer der Vorzüge der Dialogleisten ist, dass sie andere Steuerelemente als Schaltflächen angeben können.  
+ One of the virtues of dialog bars is that they can include controls other than buttons.  
   
- Während es üblich ist, eigene Dialogfeldklassen aus `CDialog` abzuleiten, leiten Sie normalerweise nicht die eigene Klasse für eine Dialogleiste.  Dialogleisten sind Erweiterungen zu einem Hauptfenster und alle Dialogleistensteuerelement\-benachrichtigungen, wie **BN\_CLICKED** oder **EN\_CHANGE**, werden übergeordnete Element der Dialogleiste, das Hauptfenster gesendet.  
+ While it is normal to derive your own dialog classes from `CDialog`, you do not typically derive your own class for a dialog bar. Dialog bars are extensions to a main window and any dialog-bar control-notification messages, such as **BN_CLICKED** or **EN_CHANGE**, will be sent to the parent of the dialog bar, the main window.  
   
-## Siehe auch  
- [Benutzeroberflächenelemente](../mfc/user-interface-elements-mfc.md)   
- [Beispiel](../top/visual-cpp-samples.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)   
+ [Sample](../visual-cpp-samples.md)
+
+

@@ -1,39 +1,58 @@
 ---
-title: "Stammklasse: CObject | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CObject"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Basisklassen, MFC-Objekte"
-  - "Klassen [C++], MFC-Basisklasse"
-  - "MFC, Basisklasse"
-  - "Stammklasse"
+title: 'Root Class: CObject | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CObject
+dev_langs:
+- C++
+helpviewer_keywords:
+- base classes [MFC], MFC objects
+- classes [MFC], MFC base class [MFC]
+- root class [MFC]
+- MFC, base class
 ms.assetid: 593706f3-e9e5-435f-815d-e7b5176b2a61
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Stammklasse: CObject
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7261a76a8c5803620fbee26a1b0247f4c5201929
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Die meisten Klassen der MFC\-Bibliothek \(Microsoft Foundation Class \(MFC\) sind einer einzelnen Basisklasse am Stamm der Klassenhierarchie abgeleitet.  `CObject` bietet mehrere nützliche Funktionen für alle Klassen, die von ihr, mit sehr geringem Mehraufwand abgeleitet werden.  Weitere Informationen über `CObject` und seine Funktionen, finden Sie unter [Verwenden CObject](../mfc/using-cobject.md).  
+---
+# <a name="root-class-cobject"></a>Root Class: CObject
+Most of the classes in the Microsoft Foundation Class (MFC) Library are derived from a single base class at the root of the class hierarchy. `CObject` provides a number of useful capabilities to all classes derived from it, with very low overhead. For more information about `CObject` and its capabilities, see [Using CObject](../mfc/using-cobject.md).  
   
  [CObject](../mfc/reference/cobject-class.md)  
- Die endgültige Basisklasse der meisten MFC\-Klassen.  Unterstützung, einschließlich Daten serialisiert und Laufzeitinformationen über eine Klasse erhält.  
+ The ultimate base class of most MFC classes. Supports serializing data and obtaining run-time information about a class.  
   
  [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)  
- Strukturieren Sie verwendet, um die genaue Klasse eines Objekts zur Laufzeit zu bestimmen.  
+ Structure used to determine the exact class of an object at run time.  
   
-## Siehe auch  
- [Klassenübersicht](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

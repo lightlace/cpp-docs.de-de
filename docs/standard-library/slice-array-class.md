@@ -1,5 +1,5 @@
 ---
-title: slice_array-Klasse | Microsoft-Dokumentation
+title: slice_array Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- slice_array
 - valarray/std::slice_array
 dev_langs:
 - C++
@@ -34,15 +33,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 97770a32fe661daf972753384d69b47badbcb7aa
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 5294aa8817abb89e07a710c97eb10a55029492cc
 ms.contentlocale: de-de
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="slicearray-class"></a>slice_array-Klasse
-Eine interne zusätzliche Vorlagenklasse, die slice-Objekte (Segmente) unterstützt, indem sie Vorgänge zwischen Teilmengenarrays bereitstellt, die durch das Segment eines valarray-Objekts definiert sind.  
+# <a name="slicearray-class"></a>slice_array Class
+An internal, auxiliary template class that supports slice objects by providing operations between subset arrays defined by the slice of a valarray.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -91,24 +90,24 @@ public:
 }  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Die Klasse beschreibt ein Objekt, das einen Verweis auf ein Objekt der Klasse [valarray](../standard-library/valarray-class.md)**\<Type>** zusammen mit einem Objekt der Klasse [slice](../standard-library/slice-class.md) speichert, das die Reihenfolge der Elemente beschreibt, die im **valarray\<Type>**-Objekt ausgewählt werden sollen.  
+## <a name="remarks"></a>Remarks  
+ The class describes an object that stores a reference to an object of class [valarray](../standard-library/valarray-class.md)**\<Type>**, along with an object of class [slice](../standard-library/slice-class.md), which describes the sequence of elements to select from the **valarray\<Type>** object.  
   
- Die Vorlagenklasse wird indirekt durch bestimmte valarray-Operationen erstellt und kann nicht direkt in der Anwendung verwendet werden. Eine interne auxiliary-Vorlagenklasse, die von dem Segment-Indexoperator verwendet wird:  
+ The template class is created indirectly by certain valarray operations and cannot be used directly in the program. An internal, auxiliary template class that is used by the slice subscript operator:  
   
- `slice_array`\<**Type**> `valarray`< **Type**:: `operator[]` ( `slice`).  
+ `slice_array`\< **Type**> `valarray`< **Type**:: `operator[]` ( `slice`).  
   
- Sie erstellen ein **slice_array\<Type>**-Objekt für ein **sl**-Segment des valarray **va** nur, indem Sie einen Ausdruck der Form [va&#91;sl&#93;](../standard-library/valarray-class.md#op_at) schreiben. Die Memberfunktionen der slice_array-Klasse verhalten sich dann wie die entsprechenden Funktionssignaturen, die für **valarray\<Type>** definiert sind, mit der Ausnahme, dass nur die Reihenfolge der ausgewählten Elemente betroffen ist. Die Sequenz, die vom slice_array gesteuert wird, wird durch die drei Parameter des Segmentkonstruktors, den Index des ersten Elements im Segment und die Anzahl von Elementen und den Abstand zwischen den Elementen definiert. Ein von valarray **va** ausgeschnittenes und von **va**[ `slice`(2, 5, 3)] deklariertes slice_arry wählt Elemente mit Indizes, 2, 5, 8, 11 und 14 von **va** aus. Die Indizes müssen für die Prozedur gültig sein, um gültig zu sein.  
+ You construct a **slice_array\<Type>** object only by writing an expression of the form [va&#91;sl&#93;](../standard-library/valarray-class.md#op_at), for a slice **sl** of valarray **va**. The member functions of class slice_array then behave like the corresponding function signatures defined for **valarray\<Type>**, except that only the sequence of selected elements is affected. The sequence controlled by the slice_array is defined by the three parameters of the slice constructor, the index of the first element in the slice, the number of elements, and the distance between the elements. A slice_array cut from valarray **va** declared by **va**[ `slice`(2, 5, 3)] selects elements with indices 2, 5, 8, 11, and 14 from **va**. The indices must be valid for the procedure to be valid.  
   
-## <a name="example"></a>Beispiel  
- Im Beispiel für [slice::slice](../standard-library/slice-class.md#slice) wird verdeutlicht, wie ein slice_array deklariert und verwendet wird.  
+## <a name="example"></a>Example  
+ See the example for [slice::slice](../standard-library/slice-class.md#slice) for an example of how to declare and use a slice_array.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** \<valarray>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Siehe auch  
- [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

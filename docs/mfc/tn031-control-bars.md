@@ -1,232 +1,254 @@
 ---
-title: "TN031: Schiebeleisten-Steuerelemente | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.controls.bars"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Steuerleisten, Formatvorlagen"
-  - "CStatusBar-Klasse, Technischer Hinweis 31, Verwendung"
-  - "CControlBar-Klasse, Technischer Hinweis 31, Verwendung"
-  - "CControlBar-Klasse, Ableiten von"
-  - "Steuerleisten, Klassen"
-  - "CDialogBar-Klasse, Technischer Hinweis 31, Verwendung"
-  - "CToolBar-Klasse, Technischer Hinweis 31, Verwendung"
-  - "TN031"
-  - "Formatvorlagen, Steuerleisten"
+title: 'TN031: Control Bars | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.controls.bars
+dev_langs:
+- C++
+helpviewer_keywords:
+- control bars [MFC], styles
+- CStatusBar class [MFC], Tech Note 31 usage
+- CControlBar class [MFC], Tech Note 31 usage
+- CControlBar class [MFC], deriving from
+- control bars [MFC], classes [MFC]
+- CDialogBar class [MFC], Tech Note 31 usage
+- CToolBar class [MFC], Tech Note 31 usage
+- TN031
+- styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# TN031: Schiebeleisten-Steuerelemente
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 96602bc469bb7aab112833a68c999d69e39df36c
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn031-control-bars"></a>TN031: Control Bars
 > [!NOTE]
->  Der folgende technische Hinweis wurde seit dem ersten Erscheinen in der Onlinedokumentation nicht aktualisiert. Daher können einige Verfahren und Themen veraltet oder falsch sein. Um aktuelle Informationen zu erhalten, wird empfohlen, das gewünschte Thema im Index der Onlinedokumentation zu suchen.  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- In diesem Hinweis werden die Steuerleistenklassen in MFC beschrieben: die allgemeine [CControlBar](#_mfcnotes_ccontrolbar), [CStatusBar](#_mfcnotes_cstatusbar), [CToolBar](#_mfcnotes_ctoolbar), [CDialogBar](#_mfcnotes_cdialogbar) und **CDockBar**.  
+ This note describes the control bar classes in MFC: the general [CControlBar](#_mfcnotes_ccontrolbar), [CStatusBar](#_mfcnotes_cstatusbar), [CToolBar](#_mfcnotes_ctoolbar), [CDialogBar](#_mfcnotes_cdialogbar), and **CDockBar**.  
   
- `CControlBar`  
+## <a name="_mfcnotes_ccontrolbar"></a> CControlBar 
   
- Eine **Steuerleiste** ist eine `CWnd`\-abgeleitete Klasse, die:  
+ A **ControlBar** is a `CWnd`-derived class that:  
   
--   am oberen oder unteren Rand eines Rahmenfensters ausgerichtet ist.  
+-   Is aligned to the top or bottom of a frame window.  
   
--   Sie kann untergeordnete Elemente enthalten, die entweder HWND\-basierte Steuerelemente sind \(z. B. `CDialogBar`\) oder nicht\-`HWND`\-basierte Elemente \(z. B. `CToolBar`, `CStatusBar`\).  
+-   May contain child items that are either HWND-based controls (for example, `CDialogBar`) or non-`HWND` based items (for example, `CToolBar`, `CStatusBar`).  
   
- Steuerleisten unterstützen die zusätzlichen Formatvorlagen:  
+ Control bars support the additional styles:  
   
--   `CBRS_TOP` \(Standard\) Steuerleiste am oberen Rand anheften.  
+- `CBRS_TOP` (The default) pin the control bar to the top.  
   
--   `CBRS_BOTTOM` Steuerleiste am unteren Rand anheften.  
+- `CBRS_BOTTOM` Pin the control bar to the bottom.  
   
--   `CBRS_NOALIGN` Steuerleiste nicht neu positionieren, wenn die Größe des übergeordneten Element sich ändert.  
+- `CBRS_NOALIGN` Do not reposition the control bar when the parent resizes.  
   
- Von `CControlBar` abgeleitete Klassen bieten interessantere Implementierungen:  
+ Classes derived from `CControlBar` provide more interesting implementations:  
   
--   `CStatusBar` Eine Statusleiste, die Elemente sind Statusleistenbereiche, die Text enthalten.  
+- `CStatusBar` A status bar, items are status bar panes containing text.  
   
--   `CToolBar` Eine Symbolleiste, die Elemente sind in einer Reihe ausgerichtete Bitmapschaltflächen.  
+- `CToolBar` A toolbar, items are bitmap buttons aligned in a row.  
   
--   `CDialogBar` Ein symbolleistenähnlicher Frame mit standardmäßigen Windows\-Steuerelementen \(erstellt aus einer Dialogfeldvorlagen\-Ressource\).  
+- `CDialogBar` A toolbar-like frame containing standard windows controls (created from a dialog template resource).  
   
--   **CDockBar** Ein verallgemeinerter Andockbereich für andere `CControlBar`\-abgeleitete Objekte. Die spezifischen in dieser Klasse verfügbaren Memberfunktionen und \-variablen werden wahrscheinlich in zukünftigen Versionen geändert.  
+- **CDockBar** A generalized docking area for other `CControlBar` derived objects. The specific member functions and variables available in this class are likely to change in future releases.  
   
- Alle Steuerleistenobjekte\/Fenster werden untergeordnete Fenster eines übergeordneten Rahmenfensters sein. Sie werden normalerweise als gleichgeordnete Elemente dem Clientbereich des Frames \(z.B. einem MDI\-Client oder einer Ansicht\) hinzugefügt. Die ID einer Steuerleiste als untergeordnetes Fenster ist wichtig. Das Standardlayout der Steuerleiste funktioniert nur bei Steuerleisten mit IDs im Bereich von **AFX\_IDW\_CONTROLBAR\_FIRST** bis **AFX\_IDW\_CONTROLBAR\_LAST**. Beachten Sie: Es sind zwar 256 Steuerleisten\-IDs verfügbar, doch die ersten 32 davon sind für spezielle Zwecke bestimmt, da sie direkt von der Seitenansichtarchitektur unterstützt werden.  
+ All control bar objects/windows will be child windows of some parent frame window. They are usually added as a sibling to the client area of the frame (for example, an MDI Client or view). The child window ID of a control bar is important. The default layout of control bar only works for control bars with IDs in the range of **AFX_IDW_CONTROLBAR_FIRST** to **AFX_IDW_CONTROLBAR_LAST**. Note that even though there is a range of 256 control bar IDs, the first 32 of these control bar IDs are special since they are directly supported by the print preview architecture.  
   
- Die `CControlBar`\-Klasse bietet die Standardimplementierung für:  
+ The `CControlBar` class gives standard implementation for:  
   
--   Ausrichten von Steuerleisten am oberen und unteren Rand bzw. den Seiten des Frames.  
+-   Aligning the control bar to the top, bottom, or either side of the frame.  
   
--   Zuweisen von Steuerelementarrays.  
+-   Allocating control item arrays.  
   
--   Unterstützung der Implementierung abgeleiteter Klassen.  
+-   Supporting the implementation of derived classes.  
   
- C\+\+\-Steuerleistenobjekte werden in der Regel als Mitglieder einer `CFrameWnd`\-abgeleiteten Klasse eingebettet und bereinigt, wenn übergeordneter `HWND` und übergeordnetes Objekt zerstört werden. Wenn Sie ein Steuerleistenobjekt auf dem Heap belegen müssen, legen Sie für den Member **m\_bAutoDestruct** einfach **TRUE** fest, damit die Steuerleiste „**dieses löscht**“, wenn der `HWND` zerstört wird.  
+ C++ control bar objects will usually be embedded as members of a `CFrameWnd` derived class, and will be cleaned up when the parent `HWND` and object are destroyed. If you need to allocate a control bar object on the heap, you can simply set the **m_bAutoDestruct** member to **TRUE** to make the control bar "**delete this**" when the `HWND` is destroyed.  
   
 > [!NOTE]
->  Wenn Sie Ihre eigene `CControlBar`\-abgeleitete Klasse erstellen, statt eine der abgeleiteten Klassen in MFC zu verwenden, z.B. `CStatusBar`, `CToolBar` oder `CDialogBar`, müssen Sie das `m_dwStyle`\-Datenelement festlegen. Hierzu können Sie **Erstellen** überschreiben:  
+>  If you create your own `CControlBar`-derived class, rather than using one of MFC's derived classes, such as `CStatusBar`, `CToolBar`, or `CDialogBar`, you will need to set the `m_dwStyle` data member. This can be done in the override of **Create**:  
   
 ```  
 // CMyControlBar is derived from CControlBar  
-BOOL CMyControlBar::Create( CWnd* pParentWnd, DWORD dwStyle, UINT nID )  
+BOOL CMyControlBar::Create(CWnd* pParentWnd,
+    DWORD dwStyle,
+    UINT nID)  
 {  
-   m_dwStyle = dwStyle;  
-  
-   .  
-   .  
-   .  
+    m_dwStyle = dwStyle;  
+ 
+ .  
+ .  
+ .  
 }  
 ```  
   
- **Steuerleistenlayout\-Algorithmus**  
+ **Control Bar Layout Algorithm**  
   
- Der Steuerleistenlayout\-Algorithmus ist sehr einfach. Das Rahmenfenster sendet eine Meldung **WM\_SIZEPARENT** an alle untergeordneten Elemente im Steuerleistenbereich. Zusammen mit dieser Meldung wird ein Zeiger auf das Clientrechteck des übergeordneten Elements übergeben. Diese Meldung wird in Z\-Reihenfolge an die untergeordneten Elemente gesendet. Die untergeordneten Elemente der Steuerleiste verwenden diese Informationen, um sich selbst zu positionieren und den Clientbereich des übergeordneten Elements zu reduzieren. Das finale Rechteck, das für den normalen Clientbereich übrig bleibt \(weniger Steuerleisten\), wird zum Positionieren des Hauptclientfensters verwendet \(normalerweise ein MDI\-Client\-, Ansichts\- oder Splitterfenster\).  
+ The control bar layout algorithm is very simple. The frame window sends a message **WM_SIZEPARENT** to all children in the control bar range. Along with this message, a pointer to the parent's client rectangle is passed. This message is sent to children in Z-order. The control-bar children use this information to position themselves and to decrease the size of the parent's client area. The final rectangle that is left for the normal client area (less control bars) is used to position the main client window (usually an MDI client, view or splitter window).  
   
- Ausführliche Informationen finden Sie unter `CWnd::RepositionBars` und `CFrameWnd::RecalcLayout`.  
+ See `CWnd::RepositionBars` and `CFrameWnd::RecalcLayout` for more details.  
   
- Private Windows\-MFC\-Meldungen, einschließlich **WM\_SIZEPARENT**, sind im [Technischen Hinweis 24](../mfc/tn024-mfc-defined-messages-and-resources.md) dokumentiert.  
+ MFC private Windows messages, including **WM_SIZEPARENT**, are documented in [Technical Note 24](../mfc/tn024-mfc-defined-messages-and-resources.md).  
   
- `CStatusBar`  
+## <a name="_mfcnotes_cstatusbar"></a>  CStatusBar  
   
- Eine Statusleiste ist eine Steuerleiste mit einer Reihe von Textausgabebereichen. Es gibt zwei allgemeine Verfahren zum Verwenden von Textausgabebereichen:  
+ A status bar is a control bar that has a row of text output panes. There are two common ways to use text output panes:  
   
--   Als Meldungszeile  
+-   As a message line  
   
-     \(z. B. die standardmäßige Menü\-Hilfemeldungszeile\). Auf diese wird in der Regel über einen 0\-basierten Index zugegriffen.  
+     (for example, the standard menu help message line). These are usually accessed by a 0-based indexed  
   
--   Als Statusindikatoren  
+-   As status indicators  
   
-     \(z. B. KAP\-, NUM\- und ROLL\-Indikator\). Auf diese wird in der Regel über die String\-\/Befehls\-ID zugegriffen.  
+     (for example, the CAP, NUM and SCRL indicators). These are usually accessed by string/command ID.  
   
- Die Schriftart für die Statusleiste ist 10 Punkt MS Sans Serif \(vorgegeben vom Windows Interface Application Design Guide oder der laut Schriftarten\-Mapper am besten übereinstimmenden 10 Punkt Swiss\-Proportionalschriftart\). Für bestimmte Windows\-Versionen, z. B. die japanische Edition, werden andere Schriftarten ausgewählt.  
+ The font for the status bar is 10-point MS Sans Serif (dictated by the Windows Interface Application Design Guide or the font mappers best match of a 10-point Swiss proportional font). On certain versions of Windows, such as the Japanese edition, the fonts selected are different.  
   
- Die in der Statusleiste verwendeten Farben entsprechen auch der Empfehlung des Windows Interface Application Design Guide. Diese Farben sind nicht hartcodiert und ändern sich dynamisch gemäß der Benutzeranpassung in der Systemsteuerung.  
+ The colors used in the status bar are also consistent with the recommendation of the Windows Interface Application Design Guide. These colors are not hard coded and are changed dynamically in response to user customization in Control Panel.  
   
-|Element|Windows\-COLOR\-Wert|RGB\-Standard|  
-|-------------|--------------------------|-------------------|  
-|Statusleisten\-Hintergrund|**COLOR\_BTNFACE**|RGB\(192, 192, 192\)|  
-|Statusleistentext|**COLOR\_BTNTEXT**|RGB\(000, 000, 000\)|  
-|Statusleistenränder oben\/links|**COLOR\_BTNHIGHLIGHT**|RGB\(255, 255, 255\)|  
-|Statusleistenränder unten\/links|**COLOR\_BTNSHADOW**|RGB\(128, 128, 128\)|  
+|Item|Windows COLOR value|Default RGB|  
+|----------|-------------------------|-----------------|  
+|Status bar background|**COLOR_BTNFACE**|RGB(192, 192, 192)|  
+|Status bar text|**COLOR_BTNTEXT**|RGB(000, 000, 000)|  
+|Status bar top/left edges|**COLOR_BTNHIGHLIGHT**|RGB(255, 255, 255)|  
+|Status bar bot/right edges|**COLOR_BTNSHADOW**|RGB(128, 128, 128)|  
   
- **CCmdUI\-Unterstützung für CStatusBar**  
+ **CCmdUI Support for CStatusBar**  
   
- Indikatoren werden normalerweise über den `ON_UPDATE_COMMAND_UI`\-Mechanismus aktualisiert. Während der Leerlaufzeit ruft die Statusleiste den `ON_UPDATE_COMMAND_UI`\-Handler mit der Zeichenfolgen\-ID des Indikatorbereichs auf.  
+ The way indicators are usually updated is through the `ON_UPDATE_COMMAND_UI` mechanism. On idle time, the status bar will call the `ON_UPDATE_COMMAND_UI` handler with the string ID of the indicator pane.  
   
- Der `ON_UPDATE_COMMAND_UI`\-Handler kann Folgendes aufrufen:  
+ The `ON_UPDATE_COMMAND_UI` handler can call:  
   
--   **Enable**: Zum Aktivieren oder Deaktivieren des Bereichs. Ein deaktivierter Bereich sieht genau so aus wie ein aktivierter Bereich, doch der Text ist nicht sichtbar \(d. h. der Textindikator ist deaktiviert\).  
+- **Enable**: To enable or disable the pane. A disabled pane looks exactly like an enabled pane but the text is invisible (that is, turns off the text indicator).  
   
--   **SetText**: Zum Ändern des Texts. Wenden Sie dies mit Vorsicht an, da der Bereich nicht automatisch angepasst wird.  
+- **SetText**: To change the text. Be careful if you use this because the pane will not automatically resize.  
   
- Unter Klasse [CStatusBar](../mfc/reference/cstatusbar-class.md) in der *Klassenbibliotheksreferenz* finden Sie weitere Informationen zur `CStatusBar`\-Erstellung und Anpassung von APIs. Die Anpassung der Statusleisten sollte im Wesentlichen erfolgen, bevor die Statusleiste zuerst angezeigt wird.  
+ Refer to class [CStatusBar](../mfc/reference/cstatusbar-class.md) in the *Class Library Reference* for details about `CStatusBar` creation and customization APIs. Most customization of status bars should be done before the status bar is initially made visible.  
   
- Die Statusleiste unterstützt nur einen einzigen, dehnbaren Bereich, in der Regel den ersten Bereich. Die Größe dieses Bereichs ist wirklich eine Mindestgröße. Überschreitet die Statusleiste die minimale Größe aller Bereiche, wird jede zusätzliche Breite dem dehnbaren Bereich zugewiesen. Die Standardanwendung mit einer Statusleiste verfügt über rechtsbündige Indikatoren für KAP, NUM und ROLL, da der erste Bereich dehnbar ist.  
+ The status bar supports only one stretchy pane, usually the first pane. The size of that pane is really a minimum size. If the status bar is bigger than the minimum size of all the panes, any extra width will be given to the stretchy pane. The default application with a status bar has right-aligned indicators for CAP, NUM and SCRL since the first pane is stretchy.  
   
- `CToolBar`  
+## <a name="_mfcnotes_ctoolbar"></a>  CToolBar  
   
- Eine Symbolleiste ist eine Steuerleiste mit einer Reihe von Bitmapschaltflächen, die Trennlinien enthalten können. Zwei Schaltflächenformatvorlagen werden unterstützt: PushButtons und Kontrollkästchen. Optionsfeldgruppen\-Funktionalität kann mit Kontrollkästchen und `ON_UPDATE_COMMAND_UI` hergestellt werden.  
+ A toolbar is a control bar with a row of bitmap buttons that may include separators. Two styles of buttons are supported: pushbuttons and check box buttons. Radio group functionality can be built with check box buttons and `ON_UPDATE_COMMAND_UI`.  
   
- Alle Bitmapschaltflächen der Symbolleiste stammen aus einer einzigen Bitmap. Die Bitmap muss für jede Schaltfläche ein Bild oder eine Glyphe enthalten. In der Regel entspricht die Reihenfolge der Bilder\/Glyphen in der Bitmap der Reihenfolge, in der sie auf dem Bildschirm dargestellt werden. \(Dies können Sie mit den Anpassungs\-APIs ändern.\)  
+ All the bitmap buttons in the toolbar are taken from one bitmap. This bitmap must contain one image or glyph for each button. Typically the order of the images/glyphs in the bitmap is the same order they will be drawn on the screen. (This can be changed using the customization APIs.)  
   
- Die Schaltflächen müssen gleich groß sein. Der Standardwert beträgt 24 x 22 Pixel. Die Bilder\/Glyphen müssen gleich groß sein und Seite an Seite in der Bitmap liegen. Die Standardgröße für Bilder\/Glyphen beträgt 16 x 15 Pixel. Aus diesem Grund benötigen Sie für eine Symbolleiste mit 10 Schaltflächen \(in Standardgröße\) eine Bitmap mit einer Breite von 160 Pixeln und einer Höhe von 15 Pixeln.  
+ Each button must be the same size. The default is the standard 24x22 pixels. Each image/glyph must be the same size and must be side-by-side in the bitmap. The default image/glyph size is 16x15 pixels. Therefore, for a toolbar with 10 buttons (using standard sizes), you need a bitmap that is 160 pixels wide and 15 pixels high.  
   
- Jede Schaltfläche verfügt nur über ein einziges Bild\/eine einzige Glyphe. Die verschiedenen Schaltflächenstatus und Formatvorlagen \(z. B. gedrückt, oben, unten, deaktiviert, deaktiviert unten, unbestimmt\) werden von dem einen Bild\/der einen Glyphe aus algorithmisch generiert. Theoretisch kann jede Farbbitmap oder DIB verwendet werden. Der Algorithmus zum Generieren der verschiedenen Schaltflächenstatus funktioniert am besten, wenn das ursprüngliche Bild in Graustufen vorliegt. Im allgemeinen MFC\-Beispiel [CLIPART](../top/visual-cpp-samples.md) finden Sie standardmäßige Symbolleistenschaltflächen und Symbolleistenschaltflächen\-ClipArt als Beispiel.  
+ Each button has one and only one image/glyph. The different button states and styles (for example, pressed, up, down, disabled, disabled down, indeterminate) are algorithmically generated from that one image/glyph. Any color bitmap or DIB can be used in theory. The algorithm for generating the different button states works best if the original image is shades of gray. Look at the standard toolbar buttons and the toolbar button clipart provided in MFC General sample [CLIPART](../visual-cpp-samples.md) for examples.  
   
- Die in der Symbolleiste verwendeten Farben entsprechen auch der Empfehlung des Windows Interface Application Design Guide. Diese Farben sind nicht hartcodiert und ändern sich dynamisch gemäß der Benutzeranpassung in der Systemsteuerung.  
+ The colors used in the toolbar are also consistent with the recommendation of the Windows Interface Application Design Guide. These colors are not hard coded and are changed dynamically in response to user customization in Control Panel.  
   
-|Element|Windows\-COLOR\-Wert|RGB\-Standard|  
-|-------------|--------------------------|-------------------|  
-|Symbolleistenhintergrund|**COLOR\_BTNFACE**|RGB\(192,192,192\)|  
-|Symbolleisten\-Schaltflächen oben\/links|**COLOR\_BTNHIGHLIGHT**|RGB\(255,255,255\)|  
-|Symbolleisten\-Schaltflächen unten\/rechts|**COLOR\_BTNSHADOW**|RGB\(128,128,128\)|  
+|Item|Windows COLOR value|Default RGB|  
+|----------|-------------------------|-----------------|  
+|ToolBar background|**COLOR_BTNFACE**|RGB(192,192,192)|  
+|ToolBar buttons top/left edges|**COLOR_BTNHIGHLIGHT**|RGB(255,255,255)|  
+|ToolBar buttons bot/right edges|**COLOR_BTNSHADOW**|RGB(128,128,128)|  
   
- Darüber hinaus werden die Symbolleistenbitmap\-Schaltflächen neu eingefäbt, als wären sie standardmäßige Windows\-Schaltflächen\-Steuerelemente. Diese Neueinfärbung tritt auf, wenn die Bitmap aus der Ressource geladen wird, und als Reaktion auf eine Änderung der Systemfarben infolge der Benutzeranpassung in der Systemsteuerung. Die folgenden Farben in einer Bitmap für die Symbolleiste werden automatisch geändert werden, sodass sie mit Vorsicht verwendet werden sollten. Wenn Sie nicht wünschen, dass ein Teil der Bitmap neu gefärbt wird, verwenden Sie eine Farbe, die am ehesten einem der zugeordneten RGB\-Werte entspricht. Die Zuordnung erfolgt basierend auf genauen RGB\-Werte.  
+ In addition, the toolbar bitmap buttons are recolored as though they were standard Windows button controls. This recoloring occurs when the bitmap is loaded from the resource and in response to a change in system colors in response to user customization in Control Panel. The following colors in a toolbar bitmap will be recolored automatically so they should be used with caution. If you do not wish to have a portion of your bitmap recolored, then use a color that closely approximates one of the mapped RGB values. The mapping is done based on exact RGB values.  
   
-|RGB\-Wert|Dynamisch zugeordneter COLOR\-Wert|  
-|---------------|----------------------------------------|  
-|RGB\(000, 000, 000\)|COLOR\_BTNTEXT|  
-|RGB\(128, 128, 128\)|COLOR\_BTNSHADOW|  
-|RGB\(192, 192, 192\)|COLOR\_BTNFACE|  
-|RGB\(255, 255, 255\)|COLOR\_BTNHIGHLIGHT|  
+|RGB value|Dynamically mapped COLOR value|  
+|---------------|------------------------------------|  
+|RGB(000, 000, 000)|COLOR_BTNTEXT|  
+|RGB(128, 128, 128)|COLOR_BTNSHADOW|  
+|RGB(192, 192, 192)|COLOR_BTNFACE|  
+|RGB(255, 255, 255)|COLOR_BTNHIGHLIGHT|  
   
- Unter Klasse [CToolBar](../mfc/reference/ctoolbar-class.md) in der *Klassenbibliotheksreferenz* finden Sie weitere Informationen zur `CToolBar`\-Erstellung und Anpassung von APIs. Die Anpassung der Symbolleisten sollte im Wesentlichen erfolgen, bevor die Symbolleiste zuerst angezeigt wird.  
+ Refer to class [CToolBar](../mfc/reference/ctoolbar-class.md) the *Class Library Reference* for details about the `CToolBar` creation and customization APIs. Most customization of toolbars should be done before the toolbar is initially made visible.  
   
- Mit den Anpassungs\-APIs können Sie Schaltflächen\-IDs, Formatvorlagen sowie Abstandhalterbreite anpassen, und mit ihnen können Sie auch festlegen, welches Bild\/welche Glyphe für welche Schaltfläche verwendet wird. Standardmäßig müssen Sie diese APIs nicht verwenden.  
+ The customization APIs can be used to adjust the button IDs, styles, spacer width and which image/glyph is used for what button. By default you do not need to use these APIs.  
   
-## CCmdUI\-Unterstützung für CToolBar  
- Symbolleistenschaltflächen werden immer über den `ON_UPDATE_COMMAND_UI`\-Mechanismus aktualisiert. Während der Leerlaufzeit ruft die Symbolleiste den `ON_UPDATE_COMMAND_UI` Handler mit der Befehls\-ID der Schaltfläche auf.`ON_UPDATE_COMMAND_UI` wird nicht für Trennlinien aufgerufen, jedoch für PushButtons und Kontrollkästchen.  
+## <a name="ccmdui-support-for-ctoolbar"></a>CCmdUI Support for CToolBar  
+ The way toolbar buttons are always updated is through the `ON_UPDATE_COMMAND_UI` mechanism. On idle time, the toolbar will call the `ON_UPDATE_COMMAND_UI` handler with the command ID of that button. `ON_UPDATE_COMMAND_UI` is not called for separators, but it is called for pushbuttons and check box buttons.  
   
- Der `ON_UPDATE_COMMAND_UI`\-Handler kann Folgendes aufrufen:  
+ The `ON_UPDATE_COMMAND_UI` handler can call:  
   
--   **Enable**: Zum Aktivieren oder Deaktivieren der Schaltfläche. Dies funktioniert gleichermaßen für PushButtons und Kontrollkästchen.  
+- **Enable**: To enable or disable the button. This works equally for pushbuttons and check box buttons.  
   
--   `SetCheck`: Um den Aktivierungszustand einer Schaltfläche festzulegen. Wenn dies für eine Symbolleisten\-Schaltfläche aufgerufen wird, wird sie in ein Kontrollkästchen umgewandelt.`SetCheck` nimmt einen Parameter entgegen, der den Wert 0 \(nicht aktiviert\), 1 \(aktiviert\) oder 2 \(unbestimmt\) haben kann.  
+- `SetCheck`: To set the check state of a button. Calling this for a toolbar button will turn it into a check box button. `SetCheck` takes a parameter which can be 0 (not checked), 1 (checked) or 2 (indeterminate)  
   
--   `SetRadio`: Kurzform für `SetCheck`.  
+- `SetRadio`: Shorthand for `SetCheck`.  
   
- Die Kontrollkästchen sind „AUTO“\-Kontrollkästchen; wenn der Benutzer sie drückt, wechseln sie sofort den Status. „Aktiviert“ ist der „Unten“\- bzw. heruntergedrückte Status. Es ist keine Möglichkeit in die Benutzeroberfläche integriert, eine Schaltfläche in den Status „Unbestimmt“ zu setzen; dies muss durch Code erfolgen.  
+ Check box buttons are "AUTO" check box buttons; that is, when the user presses them they will immediately change state. Checked is the down or depressed state. There is no built-in user interface way to change a button into the "indeterminate" state; that must be done through code.  
   
- Die Anpassung\-APIs ermöglichen Ihnen, den Status einer bestimmten Symbolleisten\-Schaltfläche zu ändern. Vorzugsweise sollten Sie diese Status im `ON_UPDATE_COMMAND_UI`\-Handler für den Befehl ändern, den die Symbolleisten\-Schaltfläche darstellt. Beachten Sie, dass die Leerlaufverarbeitung den Status der Symbolleistenschaltflächen mit dem `ON_UPDATE_COMMAND_UI`\-Handler ändert, damit jegliche Änderung dieser Status, die über SetButtonStyle vorgenommenen wird, nach dem nächsten Leerlauf verloren gehen kann.  
+ The customization APIs will permit you to change the state of a given toolbar button, preferably you should change these states in the `ON_UPDATE_COMMAND_UI` handler for the command the toolbar button represents. Remember, the idle processing will change the state of toolbar buttons with the `ON_UPDATE_COMMAND_UI` handler, so any changes to these states made through SetButtonStyle may get lost after the next idle.  
   
- Symbolleisten\-Schaltflächen senden **WM\_COMMAND**\-Meldungen wie normale Schaltflächen oder Menüelemente, und werden normalerweise von einem `ON_COMMAND`\-Handler in der gleichen Klasse, die den `ON_UPDATE_COMMAND_UI`\-Handler bereitstellt, behandelt.  
+ Toolbar buttons will send **WM_COMMAND** messages like normal buttons or menu items and are normally handled by an `ON_COMMAND` handler in the same class that provides the `ON_UPDATE_COMMAND_UI` handler.  
   
- Es gibt vier Formatvorlagen für Symbolleistenschaltflächen \(TBBS\_ Werte\), die für Anzeigestatus verwendet werden:  
+ There are four Toolbar button styles (TBBS_ values) used for display states:  
   
--   TBBS\_CHECKED: Das Kontrollkästchen ist derzeit aktiviert \(unten\).  
+-   TBBS_CHECKED:   Check box is currently checked (down).  
   
--   TBBS\_INDETERMINATE: Das Kontrollkästchen ist derzeit unbestimmt.  
+-   TBBS_INDETERMINATE:   Check box is currently indeterminate.  
   
--   TBBS\_DISABLED: Die Schaltfläche ist derzeit deaktiviert.  
+-   TBBS_DISABLED:   Button is currently disabled.  
   
--   TBBS\_PRESSED: Die Schaltfläche ist derzeit gedrückt.  
+-   TBBS_PRESSED:   Button is currently pressed.  
   
- Die sechs offiziellen Schaltflächen\-Formatvorlagen im Windows Interface Application Design Guide werden durch die folgenden TBBS\-Werte dargestellt:  
+ The six official Windows Interface Application Design Guide button styles are represented by the following TBBS values:  
   
--   Oben \= 0  
+-   Up = 0  
   
--   Maustaste unten \= TBBS\_PRESSED \(&#124; jede andere Formatvorlage\)  
+-   Mouse Down = TBBS_PRESSED (&#124; any other style)  
   
--   Deaktiviert \= TBBS\_DISABLED  
+-   Disabled = TBBS_DISABLED  
   
--   Unten \= TBBS\_CHECKED  
+-   Down = TBBS_CHECKED  
   
--   Unten deaktiviert \= TBBS\_CHECKED &#124; TBBS\_DISABLED  
+-   Down Disabled = TBBS_CHECKED &#124; TBBS_DISABLED  
   
--   Unbestimmt \= TBBS\_INDETERMINATE  
+-   Indeterminate = TBBS_INDETERMINATE  
   
 ##  <a name="_mfcnotes_cdialogbar"></a> CDialogBar  
- Eine Dialogleiste ist eine Steuerleiste, die Windows\-Standardsteuerelemente enthält. Sie verhält sich insofern wie ein Dialogfeld, als sie die Steuerelemente enthält und den Wechsel zwischen ihnen mit der Tabulatortaste unterstützt. Sie verhält sich auch in der Hinsicht wie ein Dialogfeld, dass die Leiste mithilfe einer Dialogfeldvorlage dargestellt wird.  
+ A dialog bar is a control bar that contains standard Windows controls. It acts like a dialog in that it contains the controls and supports tabbing between them. It also acts like a dialog in that it uses a dialog template to represent the bar.  
   
- Eine `CDialogBar` wird für die Seitenansicht\-Symbolleiste verwendet, die standardmäßige PushButton\-Steuerelemente enthält.  
+ A `CDialogBar` is used for the print-preview toolbar, which contains standard pushbutton controls.  
   
- Die Verwendung einer `CDialogBar` ist vergleichbar mit der Verwendung einer `CFormView`. Sie müssen eine Dialogfeldvorlage für die Dialogleiste definieren und alle Formatvorlagen außer **WS\_CHILD** entfernen. Beachten Sie, dass das Dialogfeld nicht sichtbar sein muss.  
+ Using a `CDialogBar` is like using a `CFormView`. You must define a dialog template for the dialog bar and remove all the styles except **WS_CHILD**. Note that the dialog must not be visible.  
   
- Die Steuerelementbenachrichtigungen für eine `CDialogBar` werden an das übergeordnete Element der Steuerleiste gesendet \(wie Symbolleisten\-Schaltflächen\).  
+ The control notifications for a `CDialogBar` will be sent to the parent of the control bar (just like toolbar buttons).  
   
-## CCmdUI\-Unterstützung für CDialogBar  
- Dialogleisten\-Schaltflächen sollten über den `ON_UPDATE_COMMAND_UI`\-Handlermechanismus aktualisiert werden. Während der Leerlaufzeit ruft die Dialogleiste den `ON_UPDATE_COMMAND_UI`\-Handler mit der Befehls\-ID aller Schaltflächen mit ID \> \= 0x8000 auf \(also im Bereich der Befehls\-IDs\).  
+## <a name="ccmdui-support-for-cdialogbar"></a>CCmdUI Support for CDialogBar  
+ Dialog bar buttons should be updated through the `ON_UPDATE_COMMAND_UI` handler mechanism. At idle time, the dialog bar will call the `ON_UPDATE_COMMAND_UI` handler with the command ID of all the buttons that have a ID >= 0x8000 (that is, in the range of command IDs).  
   
- Der `ON_UPDATE_COMMAND_UI`\-Handler kann Folgendes aufrufen:  
+ The `ON_UPDATE_COMMAND_UI` handler can call:  
   
--   Enable: Zum Aktivieren oder Deaktivieren der Schaltfläche.  
+-   Enable: to enable or disable the button.  
   
--   SetText: Zum Ändern des Texts der Schaltfläche.  
+-   SetText: to change the text of the button.  
   
- Anpassung kann über standardmäßige Fenstermanager\-APIs erfolgen.  
+ Customization can be done through standard window manager APIs.  
   
-## Siehe auch  
- [Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)   
- [Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

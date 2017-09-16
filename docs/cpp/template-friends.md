@@ -1,32 +1,63 @@
+
 ---
-title: "Friend-Vorlagen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Template Friends | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 077acea5-0d0f-4b33-916d-1211797e5e28
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
 robots: noindex,nofollow
-caps.handback.revision: 9
----
-# Friend-Vorlagen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2503967191bed658e8f3e9f56f8a32b3917590b2
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Klassenvorlagen können [Friends](assetId:///bf412640-d857-4acb-b2b5-513131cb9681) haben.  Eine Klasse oder Klassenvorlage, Funktion oder Funktionsvorlage kann ein Friend einer Vorlagenklasse sein.  Friends können auch Spezialisierungen einer Klassenvorlage oder Funktionsvorlage sein, jedoch keine teilweisen Spezialisierungen.  
+---
+# <a name="template-friends"></a>Template Friends
+
+Class templates can have [friends](http://msdn.microsoft.com/en-us/bf412640-d857-4acb-b2b5-513131cb9681). A class or class template, function, or function template can be a friend to a template class. Friends can also be specializations of a class template or function template, but not partial specializations.  
   
-## Beispiel  
- Im folgenden Beispiel wird eine Friend\-Funktion als Funktionsvorlage innerhalb der Klassenvorlage definiert.  Dieser Code erstellt eine Version der Friend\-Funktion für jede Instanziierung der Vorlage.  Dieses Konstrukt ist nützlich, wenn die Friend\-Funktion von denselben Vorlagenparametern wie die Klasse abhängt.  
+**C++ 11**:  A type parameter can be declared as a friend by using the form `friend T;`.  
   
+```cpp
+template <typename T>  
+class my_class  
+{  
+    friend T;  
+    //...  
+};  
 ```  
+  
+## <a name="example"></a>Example
+
+In the following example, a friend function is defined as a function template within the class template. This code produces a version of the friend function for every instantiation of the template. This construct is useful if your friend function depends on the same template parameters as the class does.  
+  
+```cpp
 // template_friend1.cpp  
 // compile with: /EHsc  
   
@@ -96,15 +127,19 @@ int main() {
 }  
 ```  
   
-  **A B C D E F G H I J K L M N O P Q R S T U V W X Y Z**   
-**a b c d e f g h i j k l m n o p q r s t u v w x y z**   
-**A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z**    
-## Beispiel  
- Das folgenden Beispiel befasst sich mit einem Friend mit Vorlagenspezialisierung.  Eine Funktionsvorlagenspezialisierung ist automatisch ein Friend, wenn die ursprüngliche Funktionsvorlage ein Friend ist.  
-  
- Es ist auch möglich, nur die spezielle Version der Vorlage als Friend zu deklarieren, wie der Kommentar vor der Friend\-Deklaration im folgenden Code veranschaulicht.  In diesem Fall müssen Sie die Definition der Friend\-Vorlagenspezialisierung außerhalb der Vorlagenklasse stellen.  
-  
+```Output
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z   
+a b c d e f g h i j k l m n o p q r s t u v w x y z   
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z   
 ```  
+  
+## <a name="example"></a>Example  
+
+The next example involves a friend that has a template specialization. A function template specialization is automatically a friend if the original function template is a friend.  
+  
+It is also possible to declare only the specialized version of the template as the friend, as the comment before the friend declaration in the following code indicates. If you do this, you must put the definition of the friend template specialization outside of the template class.  
+  
+```cpp
 // template_friend2.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -182,13 +217,17 @@ int main()
     f(a);  
 }  
 ```  
-  
-  **10 generisch**  
-**10 int**   
-## Beispiel  
- Das folgende Beispiel zeigt eine Friend\-Klassenvorlage, die innerhalb einer Klassenvorlage wurde.  Die Klassenvorlage wird dann als Vorlagenargument für die Friend\-Klasse verwendet.  Friend\-Klassenvorlagen müssen außerhalb der Klassenvorlage definiert werden, in der sie deklariert werden.  Alle Spezialisierungen oder Teilspezialisierungen der Friend\-Vorlage sind auch Friends der ursprünglichen Klassenvorlage.  
-  
+
+```Output
+10 generic  
+10 int  
 ```  
+  
+## <a name="example"></a>Example  
+ 
+The next example shows a friend class template declared within a class template. The class template is then used as the template argument for the friend class. Friend class templates must be defined outside of the class template in which they are declared. Any specializations or partial specializations of the friend template are also friends of the original class template.  
+  
+```cpp  
 // template_friend3.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -232,10 +271,15 @@ int main()
    x4->print();  
 }  
 ```  
+
+```Output 
+65  
+97  
+A  
+a  
+```  
   
-  **65**  
-**97**  
-**A**  
-**a**   
-## Siehe auch  
- [Standardargumente](../cpp/default-arguments.md)
+## <a name="see-also"></a>See Also  
+
+[Default Arguments](../cpp/default-arguments.md)
+

@@ -1,68 +1,87 @@
 ---
-title: "MFC-ActiveX-Steuerelemente: Zugreifen auf Umgebungseigenschaften | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC-ActiveX-Steuerelemente, Zugreifen auf Umgebungseigenschaften"
-  - "Eigenschaften [MFC], Zugreifen auf die Umgebung"
+title: 'MFC ActiveX Controls: Accessing Ambient Properties | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], accessing ambient properties
+- properties [MFC], accessing ambient
 ms.assetid: fdc9db29-e6b0-45d2-a879-8bd60e2058a7
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# MFC-ActiveX-Steuerelemente: Zugreifen auf Umgebungseigenschaften
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4f5e0f7e81d91bbbf41a680a328ced5a379ce6a7
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Dieser Artikel wird erläutert, wie ein ActiveX\-Steuerelement in die des Steuerelementcontainers Ambient\-Eigenschaften zugreifen kann.  
+---
+# <a name="mfc-activex-controls-accessing-ambient-properties"></a>MFC ActiveX Controls: Accessing Ambient Properties
+This article discusses how an ActiveX control can access the ambient properties of its control container.  
   
- Ein Steuerelement kann Informationen über seinen Container abrufen, indem auf die Ambient\-Eigenschaften des Containers zugreift.  Diese Eigenschaften vornehmen visuelle Eigenschaften, wie die Hintergrundfarbe des Containers, die aktuelle Schriftart, die vom Container verwendet werden, und Betriebseigenschaften, wie Container verfügbar ob der gerade im Benutzermodus oder im Designermodus ist.  Ein Steuerelement kann Ambient\-Eigenschaften verwenden, um dessen Darstellung und Verhalten dem bestimmten Containers des, in das es eingebettet ist.  Es sollte ein Steuerelement nie davon ausgehen, dass der Container eine bestimmte Ambient\-Eigenschaft unterstützt.  Tatsächlich unterstützen mehrere Container möglicherweise keine Ambient\-Eigenschaften vorhanden.  In Ermangelung einer Ambient\-Eigenschaft sollte ein Steuerelement einen geeigneten Standardwert aufweisen.  
+ A control can obtain information about its container by accessing the container's ambient properties. These properties expose visual characteristics, such as the container's background color, the current font used by the container, and operational characteristics, such as whether the container is currently in user mode or designer mode. A control can use ambient properties to tailor its appearance and behavior to the particular container in which it is embedded. However, a control should never assume that its container will support any particular ambient property. In fact, some containers may not support any ambient properties at all. In the absence of an ambient property, a control should assume a reasonable default value.  
   
- Um auf eine Ambient\-Eigenschaft zugreifen, lassen Sie [COleControl::GetAmbientProperty](../Topic/COleControl::GetAmbientProperty.md) einen Aufruf.  Diese Funktion erwartet die Dispatch\-ID für die Ambient\-Eigenschaft als ersten Parameter \(die Datei OLECTL.H definiert Dispatch\-IDs für den Standardsatz der Ambient\-Eigenschaften\).  
+ To access an ambient property, make a call to [COleControl::GetAmbientProperty](../mfc/reference/colecontrol-class.md#getambientproperty). This function expects the dispatch ID for the ambient property as the first parameter (the file OLECTL.H defines dispatch IDs for the standard set of ambient properties).  
   
- Die Parameter der `GetAmbientProperty`\-Funktion sind die Dispatch\-ID, ein variantes Tag, das dem erwarteten Eigenschaftentyp an, und ein Zeiger auf den Speicher, in dem der Wert zurückgegeben werden soll.  Der Datentyp, auf den dieser Zeiger verweist, ist abhängig vom varianten Tag.  Die Funktion gibt **TRUE** zurück, wenn der Container die Eigenschaft unterstützt; andernfalls gibt er **FALSE** zurück.  
+ The parameters of the `GetAmbientProperty` function are the dispatch ID, a variant tag indicating the expected property type, and a pointer to memory where the value should be returned. The type of data to which this pointer refers will vary depending on the variant tag. The function returns **TRUE** if the container supports the property, otherwise it returns **FALSE**.  
   
- Im folgenden Codebeispiel ruft den Wert der Ambient\-Eigenschaft, die aufgerufen wird UserMode "." Wenn die Eigenschaft nicht vom Container unterstützt wird, wird ein Standardwert von **TRUE** vorausgesetzt:  
+ The following code example obtains the value of the ambient property called "UserMode." If the property is not supported by the container, a default value of **TRUE** is assumed:  
   
- [!CODE [NVC_MFC_AxUI#30](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxUI#30)]  
+ [!code-cpp[NVC_MFC_AxUI#30](../mfc/codesnippet/cpp/mfc-activex-controls-accessing-ambient-properties_1.cpp)]  
   
- Für Ihre halber stellt `COleControl` Hilfsfunktionen, die auf viele der häufig verwendeten Ambient\-Eigenschaften zugreifen und geeigneten Standardwert zurück, wenn die Eigenschaften nicht verfügbar sind.  Diese sind Hilfsfunktionen, wie folgt:  
+ For your convenience, `COleControl` supplies helper functions that access many of the commonly used ambient properties and return appropriate defaults when the properties are not available. These helper functions are as follows:  
   
--   [COleControl::AmbientBackColor](../Topic/COleControl::AmbientBackColor.md)  
+-   [COleControl::AmbientBackColor](../mfc/reference/colecontrol-class.md#ambientbackcolor)  
   
--   [AmbientDisplayName](../Topic/COleControl::AmbientDisplayName.md)  
+-   [AmbientDisplayName](../mfc/reference/colecontrol-class.md#ambientdisplayname)  
   
--   [AmbientFont](../Topic/COleControl::AmbientFont.md)  
+-   [AmbientFont](../mfc/reference/colecontrol-class.md#ambientfont)  
   
     > [!NOTE]
-    >  Aufrufer muss **Release\( \)** für die zurückgegebene Schriftart aufrufen.  
+    >  Caller must call **Release( )** on the returned font.  
   
--   [AmbientForeColor](../Topic/COleControl::AmbientForeColor.md)  
+-   [AmbientForeColor](../mfc/reference/colecontrol-class.md#ambientforecolor)  
   
--   [AmbientLocaleID](../Topic/COleControl::AmbientLocaleID.md)  
+-   [AmbientLocaleID](../mfc/reference/colecontrol-class.md#ambientlocaleid)  
   
--   [AmbientScaleUnits](../Topic/COleControl::AmbientScaleUnits.md)  
+-   [AmbientScaleUnits](../mfc/reference/colecontrol-class.md#ambientscaleunits)  
   
--   [AmbientTextAlign](../Topic/COleControl::AmbientTextAlign.md)  
+-   [AmbientTextAlign](../mfc/reference/colecontrol-class.md#ambienttextalign)  
   
--   [AmbientUserMode](../Topic/COleControl::AmbientUserMode.md)  
+-   [AmbientUserMode](../mfc/reference/colecontrol-class.md#ambientusermode)  
   
--   [AmbientUIDead](../Topic/COleControl::AmbientUIDead.md)  
+-   [AmbientUIDead](../mfc/reference/colecontrol-class.md#ambientuidead)  
   
--   [AmbientShowHatching](../Topic/COleControl::AmbientShowHatching.md)  
+-   [AmbientShowHatching](../mfc/reference/colecontrol-class.md#ambientshowhatching)  
   
--   [AmbientShowGrabHandles](../Topic/COleControl::AmbientShowGrabHandles.md)  
+-   [AmbientShowGrabHandles](../mfc/reference/colecontrol-class.md#ambientshowgrabhandles)  
   
- Wenn der Wert einer Ambient\-Eigenschaft \(durch Aktionen des Containers\) ändert, wird die **OnAmbientPropertyChanged**\-Memberfunktion des Steuerelements aufgerufen.  Überschreiben Sie diese Memberfunktion, um eine solche Benachrichtigung zu bearbeiten.  Der Parameter für **OnAmbientPropertyChanged** lautet die Dispatch\-ID der betroffenen Ambient\-Eigenschaft.  Der Wert dieser Dispatch\-ID kann **DISPID\_UNKNOWN**, die angibt, dass eine oder mehrere Ambient\-Eigenschaften geändert hat, jedoch Informationen darüber, welche Eigenschaften beeinflusst wurden, sind nicht verfügbar.  
+ If the value of an ambient property changes (through some action of the container), the **OnAmbientPropertyChanged** member function of the control is called. Override this member function to handle such a notification. The parameter for **OnAmbientPropertyChanged** is the dispatch ID of the affected ambient property. The value of this dispatch ID may be **DISPID_UNKNOWN**, which indicates that one or more ambient properties has changed, but information about which properties were affected is unavailable.  
   
-## Siehe auch  
- [MFC\-ActiveX\-Steuerelemente](../mfc/mfc-activex-controls.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)
+
+

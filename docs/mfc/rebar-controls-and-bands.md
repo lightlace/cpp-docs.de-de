@@ -1,52 +1,71 @@
 ---
-title: "Grundleisten-Steuerelemente und B&#228;nder | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Bänder, in rebar-Steuerelemente"
-  - "rebar-Steuerelemente, Arbeiten mit Bereichen in"
+title: Rebar Controls and Bands | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- rebar controls [MFC], working with bands in
+- bands, in rebar controls
 ms.assetid: b647e7a5-9ea7-48b1-8e5f-096d104748f0
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Grundleisten-Steuerelemente und B&#228;nder
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 17449db3f089f882e8314befe51ac69991e5d46a
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Der Hauptzweck eines Infoleiste\-Steuerelements ist, als Container für untergeordnete Fenster, allgemeine Dialogfeldkontrollen, Menüs, Symbolleisten auftreten, u. a.  Diese Kapselung wird unterstützt durch das Konzept eines Bands "." Jedes Infoleistenband kann jede Kombination einer Ziehpunktleiste, der Bitmaps, der Beschriftung und des untergeordneten Fensters enthalten.  
+---
+# <a name="rebar-controls-and-bands"></a>Rebar Controls and Bands
+The main purpose of a rebar control is to act as a container for child windows, common dialog controls, menus, toolbars, and so on. This containment is supported by the concept of a "band." Each rebar band can contain any combination of a gripper bar, a bitmap, a text label, and a child window.  
   
- `CReBarCtrl`\-Klasse verfügt über zahlreiche Memberfunktionen, die Sie verwenden können, um das Abrufen und Bearbeiten, Informationen für ein bestimmtes Infoleistenband:  
+ Class `CReBarCtrl` has many member functions that you can use to retrieve, and manipulate, information for a specific rebar band:  
   
--   [GetBandCount](../Topic/CReBarCtrl::GetBandCount.md) ruft die Anzahl von im aktuellen Bändern Grundleistensteuerelement ab.  
+-   [GetBandCount](../mfc/reference/crebarctrl-class.md#getbandcount) Retrieves the number of current bands in the rebar control.  
   
--   [GetBandInfo](../Topic/CReBarCtrl::GetBandInfo.md) initialisiert eine **REBARBANDINFO**\-Struktur mit Informationen aus dem angegebenen Band.  Es gibt eine entsprechende Memberfunktion [SetBandInfo](../Topic/CReBarCtrl::SetBandInfo.md).  
+-   [GetBandInfo](../mfc/reference/crebarctrl-class.md#getbandinfo) Initializes a **REBARBANDINFO** structure with information from the specified band. There is a corresponding [SetBandInfo](../mfc/reference/crebarctrl-class.md#setbandinfo) member function.  
   
--   [GetRect](../Topic/CReBarCtrl::GetRect.md) ruft das umgebende Rechteck eines angegebenen Bands ab.  
+-   [GetRect](../mfc/reference/crebarctrl-class.md#getrect) Retrieves the bounding rectangle of a specified band.  
   
--   [GetRowCount](../Topic/CReBarCtrl::GetRowCount.md) ruft die Anzahl von Bandzeilen in ein Infoleistensteuerelement ab.  
+-   [GetRowCount](../mfc/reference/crebarctrl-class.md#getrowcount) Retrieves the number of band rows in a rebar control.  
   
--   [IDToIndex](../Topic/CReBarCtrl::IDToIndex.md) ruft den Index eines gegebenen Bands ab.  
+-   [IDToIndex](../mfc/reference/crebarctrl-class.md#idtoindex) Retrieves the index of a specified band.  
   
--   [GetBandBorders](../Topic/CReBarCtrl::GetBandBorders.md) ruft die Rahmen eines Bands ab.  
+-   [GetBandBorders](../mfc/reference/crebarctrl-class.md#getbandborders) Retrieves the borders of a band.  
   
- Zusätzlich zur Manipulation sind einige Memberfunktionen, vorausgesetzt, mit denen Sie, um bestimmte Infoleistenbänder angezeigt werden.  
+ In addition to manipulation, several member functions are provided that allow you to operate on specific rebar bands.  
   
- [InsertBand](../Topic/CReBarCtrl::InsertBand.md) und [DeleteBand](../Topic/CReBarCtrl::DeleteBand.md) hinzufügen und entfernen Infoleistenbänder.  [MinimizeBand](../Topic/CReBarCtrl::MinimizeBand.md) und [MaximizeBand](../Topic/CReBarCtrl::MaximizeBand.md) beeinflussen die aktuelle Größe eines bestimmten Infoleistenbandes.  [MoveBand](../Topic/CReBarCtrl::MoveBand.md) ändert den Index eines bestimmten Infoleistenbandes.  [ShowBand](../Topic/CReBarCtrl::ShowBand.md) zeigt oder blendet ein Infoleistenband vom Benutzer aus.  
+ [InsertBand](../mfc/reference/crebarctrl-class.md#insertband) and [DeleteBand](../mfc/reference/crebarctrl-class.md#deleteband) add and remove rebar bands. [MinimizeBand](../mfc/reference/crebarctrl-class.md#minimizeband) and [MaximizeBand](../mfc/reference/crebarctrl-class.md#maximizeband) affect the current size of a specific rebar band. [MoveBand](../mfc/reference/crebarctrl-class.md#moveband) changes the index of a specific rebar band. [ShowBand](../mfc/reference/crebarctrl-class.md#showband) shows or hides a rebar band from the user.  
   
- Im folgenden Beispiel wird das Hinzufügen eines Symbolleistenbandes \(`m_wndToolBar`\) zu einem vorhandenen Grundleistensteuerelement \(`m_wndReBar`\).  Das Band wird beschrieben, indem die `rbi`\-Struktur initialisiert und dann die `InsertBand`\-Memberfunktion aufruft:  
+ The following example demonstrates adding a toolbar band (`m_wndToolBar`) to an existing rebar control (`m_wndReBar`). The band is described by initializing the `rbi` structure and then calling the `InsertBand` member function:  
   
- [!CODE [NVC_MFCControlLadenDialog#27](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCControlLadenDialog#27)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#27](../mfc/codesnippet/cpp/rebar-controls-and-bands_1.cpp)]  
   
-## Siehe auch  
- [Verwenden von CReBarCtrl](../mfc/using-crebarctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CReBarCtrl](../mfc/using-crebarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

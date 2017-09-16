@@ -1,46 +1,65 @@
 ---
-title: "Dialogdatenaustausch und -validierung | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Allgemeine Steuerelemente [C++], Dialogfelder"
-  - "Daten [MFC], Dialogfelder"
-  - "Datenvalidierung [C++], Dialogfelder"
-  - "DDV (Dialogfelddatenvalidierung) [C++]"
-  - "DDX (Dialog Data Exchange – Dialogdatenaustausch) [C++], Datenvalidierung"
-  - "Dialogfelddaten [C++]"
-  - "Dialogfelddaten [C++], Abrufen"
-  - "Dialogfelder [C++], Abrufen von Daten"
-  - "Dialogfelder [C++], Validieren von Daten"
-  - "Abrufen von Dialogfelddaten"
-  - "Daten validieren [C++], Dialogfeld-Dateneingabe"
-  - "Allgemeine Windows-Steuerelemente [C++], Dialogfelder"
+title: Dialog Data Exchange and Validation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- data validation [MFC], dialog boxes
+- dialog box data [MFC]
+- dialog boxes [MFC], validating data
+- validating data [MFC], dialog box data entry
+- DDX (dialog data exchange) [MFC], data validation
+- dialog box data [MFC], retrieving
+- Windows common controls [MFC], dialog boxes
+- DDV (dialog data validation) [MFC]
+- data [MFC], dialog boxes
+- common controls [MFC], dialog boxes
+- dialog boxes [MFC], retrieving data
+- retrieving dialog box data
 ms.assetid: 7d373554-7330-43ae-abf1-4bb14e437b4a
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Dialogdatenaustausch und -validierung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ed01ece0c4318b0c3cd92100147aab030222e2f9
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Dialogdatenaustausch \(DDX\) ist eine einfache Möglichkeit, die Steuerelemente im Dialogfeld zu initialisieren und durch Dateneingabe des Benutzers erfassen.  Dialogfelddatenvalidierung \(DDV\) ist eine einfache Möglichkeit, um die Dateneingabe in einem Dialogfeld zu überprüfen.  Um DDX und DDV in den Dialogfeldern zu nutzen, verwenden Sie [Assistent zum Hinzufügen von Membervariablen](../ide/add-member-variable-wizard.md) die Datenmember zu erstellen und deren Datentypen festzulegen und Validierungsregeln anzugeben.  
+---
+# <a name="dialog-data-exchange-and-validation"></a>Dialog Data Exchange and Validation
+Dialog data exchange (DDX) is an easy way to initialize the controls in your dialog box and to gather data input by the user. Dialog data validation (DDV) is an easy way to validate data entry in a dialog box. To take advantage of DDX and DDV in your dialog boxes, use the [Add Member Variable Wizard](../ide/add-member-variable-wizard.md) to create the data members and set their data types and specify validation rules.  
   
-## Worüber möchten Sie mehr erfahren?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Dialogdatenaustausch](../mfc/dialog-data-exchange.md)  
+-   [Dialog data exchange](../mfc/dialog-data-exchange.md)  
   
--   [Dialogfelddatenvalidierung](../mfc/dialog-data-validation.md)  
+-   [Dialog data validation](../mfc/dialog-data-validation.md)  
   
-## Siehe auch  
- [Dialogfelder](../mfc/dialog-boxes.md)   
- [Lebenszyklus eines Dialogfelds](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

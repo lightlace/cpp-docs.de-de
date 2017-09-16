@@ -1,105 +1,124 @@
 ---
-title: "Hinzuf&#252;gen mehrerer Ansichten zu einem Dokument | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Dokumente, Mehrere Ansichten"
-  - "Mehrere Ansichten, SDI-Anwendungen"
-  - "Einzeldokumentoberfläche (SDI), Hinzufügen von Ansichten"
-  - "Ansichten, SDI-Anwendungen"
+title: Adding Multiple Views to a Single Document | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- multiple views [MFC], SDI applications
+- documents [MFC], multiple views
+- single document interface (SDI), adding views
+- views [MFC], SDI applications
 ms.assetid: 86d0c134-01d5-429c-b672-36cfb956dc01
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Hinzuf&#252;gen mehrerer Ansichten zu einem Dokument
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3fc5518d9212f5b22d13cb72da270c24cbc47e70
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-In einer Single Document Interface \(SDI\)\- Anwendung, die mit der MFC\-Bibliothek \(Microsoft Foundation Class \(MFC\) erstellt wird, wird jeder Dokumenttyp mit einem einzelnen Ansichtstypen verwenden zugeordnet.  In einigen Fällen ist es empfehlenswert, die Möglichkeit haben, die aktuelle Ansicht eines Dokuments mit einer neuen Ansicht zu wechseln.  
+---
+# <a name="adding-multiple-views-to-a-single-document"></a>Adding Multiple Views to a Single Document
+In a single-document interface (SDI) application created with the Microsoft Foundation Class (MFC) Library, each document type is associated with a single view type. In some cases, it is desirable to have the ability to switch the current view of a document with a new view.  
   
 > [!TIP]
->  Weitere Verfahren zum Implementieren mehrerer Ansichten für einen einzelnen Dokument, finden Sie unter [CDocument::AddView](../Topic/CDocument::AddView.md) und im Beispiel [COLLECT Sie](../top/visual-cpp-samples.md) MFC.  
+>  For additional procedures on implementing multiple views for a single document, see [CDocument::AddView](../mfc/reference/cdocument-class.md#addview) and the [COLLECT](../visual-cpp-samples.md) MFC sample.  
   
- Diese Funktionalität können Sie implementieren, indem Sie neue `CView` abgeleitete Klasse und Code für die Ansichten zu einer bereits vorhandenen MFC\-Anwendung dynamisch wechseln hinzufügen.  
+ You can implement this functionality by adding a new `CView`-derived class and additional code for switching the views dynamically to an existing MFC application.  
   
- Folgende Schritte werden ausgeführt:  
+ The steps are as follows:  
   
--   [Ändern Sie die vorhandene Anwendungsklasse](#vcconmodifyexistingapplicationa1)  
+-   [Modify the Existing Application Class](#vcconmodifyexistingapplicationa1)  
   
--   [Erstellen und Ändern Sie die Ansichtsklasse neue](#vcconnewviewclassa2)  
+-   [Create and Modify the New View Class](#vcconnewviewclassa2)  
   
--   [Erstellen und fügen Sie die neue Ansicht an](#vcconattachnewviewa3)  
+-   [Create and Attach the New View](#vcconattachnewviewa3)  
   
--   [Implementieren Sie die Vermittlungsaufgabe](#vcconswitchingfunctiona4)  
+-   [Implement the Switching Function](#vcconswitchingfunctiona4)  
   
--   [Fügen Sie Unterstützung zum Umschalten der Ansicht hinzu](#vcconswitchingtheviewa5)  
+-   [Add Support for Switching the View](#vcconswitchingtheviewa5)  
   
- Der Rest dieses Themas gelangen Folgendes an:  
+ The remainder of this topic assumes the following:  
   
--   Der Name `CWinApp` abgeleitetes Objekt ist `CMyWinApp`, und `CMyWinApp` ist in MYWINAPP.H und in MYWINAPP.CPP deklariert und definiert.  
+-   The name of the `CWinApp`-derived object is `CMyWinApp`, and `CMyWinApp` is declared and defined in MYWINAPP.H and MYWINAPP.CPP.  
   
--   `CNewView` ist der Name neuen `CView` abgeleitetes Objekt und `CNewView` ist in NEWVIEW.H und in NEWVIEW.CPP deklariert und definiert.  
+-   `CNewView` is the name of the new `CView`-derived object, and `CNewView` is declared and defined in NEWVIEW.H and NEWVIEW.CPP.  
   
-##  <a name="vcconmodifyexistingapplicationa1"></a> Ändern Sie die vorhandene Anwendungsklasse  
- Damit die Anwendung wechselt zwischen Ansichten, müssen Sie die Anwendungsklasse ändern, indem Sie Membervariablen hinzu, um die Ansichten und einer Methode zu speichern, um sie zu wechseln.  
+##  <a name="vcconmodifyexistingapplicationa1"></a> Modify the Existing Application Class  
+ For the application to switch between views, you need to modify the application class by adding member variables to store the views and a method to switch them.  
   
- Fügen Sie folgenden Code in die Deklaration von `CMyWinApp` in MYWINAPP.H hinzu:  
+ Add the following code to the declaration of `CMyWinApp` in MYWINAPP.H:  
   
- [!CODE [NVC_MFCDocViewSDI#1](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCDocViewSDI#1)]  
+ [!code-cpp[NVC_MFCDocViewSDI#1](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_1.h)]  
   
- Die neue Membervariablen, `m_pOldView` und `m_pNewView`, zeigen Sie die aktuelle Ansicht und das neu erstellte.  Die neue Methode \(`SwitchView`\) wird die Ansichten um, wenn es vom Benutzer angefordert wird.  Der Methodentext wird weiter unten in diesem Thema in [Implementieren Sie die Vermittlungsaufgabe](#vcconswitchingfunctiona4) erläutert.  
+ The new member variables, `m_pOldView` and `m_pNewView`, point to the current view and the newly created one. The new method (`SwitchView`) switches the views when requested by the user. The body of the method is discussed later in this topic in [Implement the Switching Function](#vcconswitchingfunctiona4).  
   
- Die letzte Änderung der Anwendungsklasse erfordert einschließlich einer neuen Headerdatei, die eine Windows\-Meldung \(**WM\_INITIALUPDATE**\) definiert die in der Vermittlungsaufgabe verwendet wird.  
+ The last modification to the application class requires including a new header file that defines a Windows message (**WM_INITIALUPDATE**) that is used in the switching function.  
   
- Fügen Sie die folgende Zeile im Einschließungsabschnitt von MYWINAPP.CPP ein:  
+ Insert the following line in the include section of MYWINAPP.CPP:  
   
- [!CODE [NVC_MFCDocViewSDI#2](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCDocViewSDI#2)]  
+ [!code-cpp[NVC_MFCDocViewSDI#2](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_2.cpp)]  
   
- Speichern Sie die Änderungen und fahren Sie mit dem nächsten Schritt fort.  
+ Save your changes and continue to the next step.  
   
-##  <a name="vcconnewviewclassa2"></a> Erstellen und Ändern Sie die Ansichtsklasse neue  
- Das Erstellen der neuen Ansichtsklasse wird einfach gemacht, indem **Neue Klasse** den Befehl verwendet, der von der Klassenansicht verfügbar ist.  Die einzige Anforderung für diese Klasse besteht darin, dass sie von `CView` abgeleitet.  Fügen Sie die neue Klasse der Anwendung hinzu.  Spezielle Informationen zum Hinzufügen einer neuen Klasse zum Projekt, finden Sie unter [Hinzufügen einer Klasse](../ide/adding-a-class-visual-cpp.md).  
+##  <a name="vcconnewviewclassa2"></a> Create and Modify the New View Class  
+ Creating the new view class is made easy by using the **New Class** command available from Class View. The only requirement for this class is that it derives from `CView`. Add this new class to the application. For specific information on adding a new class to the project, see [Adding a Class](../ide/adding-a-class-visual-cpp.md).  
   
- Sobald Sie die Klasse zum Projekt hinzugefügt haben, müssen Sie den Zugriff von mehreren Ansichtsklassenmember ändern.  
+ Once you have added the class to the project, you need to change the accessibility of some view class members.  
   
- Ändern Sie NEWVIEW.H, indem Sie den Zugriffsspezifizierer von `protected` in **public** für Konstruktor und Destruktor ändern.  Dies ermöglicht die dynamisch erstellt und zerstört wurden, Klasse, und der Ansichtsdarstellung zu ändern, bevor es sichtbar ist.  
+ Modify NEWVIEW.H by changing the access specifier from `protected` to **public** for the constructor and destructor. This allows the class to be created and destroyed dynamically and to modify the view appearance before it is visible.  
   
- Speichern Sie die Änderungen und fahren Sie mit dem nächsten Schritt fort.  
+ Save your changes and continue to the next step.  
   
-##  <a name="vcconattachnewviewa3"></a> Erstellen und fügen Sie die neue Ansicht an  
- Um die neue Ansicht erstellen und anzufügen, müssen Sie die `InitInstance`\-Funktion der Anwendungsklasse ändern.  Die Änderung wird neuen Code hinzu, der ein neues Ansichtsobjekt erstellt und dann `m_pOldView` und `m_pNewView` mit den zwei vorhandenen Ansichtsobjekte initialisiert.  
+##  <a name="vcconattachnewviewa3"></a> Create and Attach the New View  
+ To create and attach the new view, you need to modify the `InitInstance` function of your application class. The modification adds new code that creates a new view object and then initializes both `m_pOldView` and `m_pNewView` with the two existing view objects.  
   
- Da die neue Ansicht innerhalb der `InitInstance`\-Funktion, das neue erstellt und vorhandene Ansichten bestehen während der Lebensdauer der Anwendung weiter.  Es könnte die Anwendung so einfach die neue Ansicht gerade dynamisch erstellen.  
+ Because the new view is created within the `InitInstance` function, both the new and existing views persist for the lifetime of the application. However, the application could just as easily create the new view dynamically.  
   
- Fügen Sie diesen Code nach dem Aufruf von `ProcessShellCommand` ein:  
+ Insert this code after the call to `ProcessShellCommand`:  
   
- [!CODE [NVC_MFCDocViewSDI#3](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCDocViewSDI#3)]  
+ [!code-cpp[NVC_MFCDocViewSDI#3](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_3.cpp)]  
   
- Speichern Sie die Änderungen und fahren Sie mit dem nächsten Schritt fort.  
+ Save your changes and continue to the next step.  
   
-##  <a name="vcconswitchingfunctiona4"></a> Implementieren Sie die Vermittlungsaufgabe  
- Im vorherigen Schritt haben Sie Code hinzu, der ein neues Ansichtsobjekt erstellte und initialisierte.  Das letzte wichtige Schritt ist, die Umschaltungsmethode, `SwitchView` zu implementieren.  
+##  <a name="vcconswitchingfunctiona4"></a> Implement the Switching Function  
+ In the previous step, you added code that created and initialized a new view object. The last major piece is to implement the switching method, `SwitchView`.  
   
- Am Ende der Implementierungsdatei der Anwendungsklasse \(MYWINAPP.CPP\), fügen Sie die Definition die folgende Methode hinzu:  
+ At the end of the implementation file for your application class (MYWINAPP.CPP), add the following method definition:  
   
- [!CODE [NVC_MFCDocViewSDI#4](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCDocViewSDI#4)]  
+ [!code-cpp[NVC_MFCDocViewSDI#4](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_4.cpp)]  
   
- Speichern Sie die Änderungen und fahren Sie mit dem nächsten Schritt fort.  
+ Save your changes and continue to the next step.  
   
-##  <a name="vcconswitchingtheviewa5"></a> Fügen Sie Unterstützung zum Umschalten der Ansicht hinzu  
- Der letzte Schritt umfasst, Code hinzufügen, der die `SwitchView`\-Methode aufgerufen wird, wenn die Anwendung zwischen Ansichten wechseln muss.  Dies kann auf mehrere Arten ausgeführt werden: entweder von einem neuen Menüelement, intern hinzufügen sodass der Benutzer oder die Ansichten umschalten auswählt, sobald bestimmte Anforderungen erfüllt werden.  
+##  <a name="vcconswitchingtheviewa5"></a> Add Support for Switching the View  
+ The final step involves adding code that calls the `SwitchView` method when the application needs to switch between views. This can be done in several ways: by either adding a new menu item for the user to choose or switching the views internally when certain conditions are met.  
   
- Weitere Informationen zum Hinzufügen von neuen und Menüelementen von Befehlshandlerfunktionen, finden Sie unter [Handler für Befehle und Verarbeiten](../mfc/handlers-for-commands-and-control-notifications.md).  
+ For more information on adding new menu items and command handler functions, see [Handlers for Commands and Control Notifications](../mfc/handlers-for-commands-and-control-notifications.md).  
   
-## Siehe auch  
- [Dokument\-\/Ansichtsarchitektur](../mfc/document-view-architecture.md)
+## <a name="see-also"></a>See Also  
+ [Document/View Architecture](../mfc/document-view-architecture.md)
+
+

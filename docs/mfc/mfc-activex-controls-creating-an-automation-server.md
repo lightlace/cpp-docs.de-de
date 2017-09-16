@@ -1,60 +1,79 @@
 ---
-title: "MFC-ActiveX-Steuerelemente: Erstellen eines Automatisierungsservers | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX-Steuerelemente [C++], Automatisierungsserver"
-  - "Automatisierungsserver [C++], MFC-ActiveX-Steuerelemente"
-  - "MFC ActiveX-Steuerelemente [C++], Automatisierungsserver"
+title: 'MFC ActiveX Controls: Creating an Automation Server | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Automation servers [MFC], MFC ActiveX controls
+- ActiveX controls [MFC], Automation server
+- MFC ActiveX controls [MFC], Automation server
 ms.assetid: e0c24ed2-d61c-49ad-a4fa-4e1098d1d39b
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# MFC-ActiveX-Steuerelemente: Erstellen eines Automatisierungsservers
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 725d452e56a0729b76eed7889018cc21149596f8
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Sie können ein MFC\-ActiveX\-Steuerelement als Automatisierungsserver entwickeln, mit dem Ziel programmgesteuert einbetten dass Steuerelement in einer anderen Anwendung und Aufrufen von Methoden im Steuerelement der Anwendung.  Ein solches Steuerelement würde weiterhin verfügbar sein, in einen ActiveX\-Steuerelementcontainer gehostet werden.  
+---
+# <a name="mfc-activex-controls-creating-an-automation-server"></a>MFC ActiveX Controls: Creating an Automation Server
+You can develop an MFC ActiveX control as an Automation server for the purpose of programmatically embedding that control in another application and calling methods in the control from the application. Such a control would still be available to be hosted in an ActiveX control container.  
   
-### Um ein Steuerelement als Automatisierungsserver erstellen  
+### <a name="to-create-a-control-as-an-automation-server"></a>To create a control as an Automation server  
   
-1.  [Erstellen](../mfc/reference/mfc-activex-control-wizard.md) das Steuerelement.  
+1.  [Create](../mfc/reference/mfc-activex-control-wizard.md) the control.  
   
-2.  [Fügen Sie Methoden hinzu](../mfc/mfc-activex-controls-methods.md).  
+2.  [Add methods](../mfc/mfc-activex-controls-methods.md).  
   
-3.  Überschreibung [IsInvokeAllowed](../Topic/COleControl::IsInvokeAllowed.md).  Weitere Informationen finden Sie im Artikel Q146120 der Knowledge Base \(nur auf Englisch verfügbar\).  
+3.  Override [IsInvokeAllowed](../mfc/reference/colecontrol-class.md#isinvokeallowed). For more information, see Knowledge Base article Q146120.  
   
-4.  Erstellen Sie das Steuerelement.  
+4.  Build the control.  
   
-### Um auf die Methoden in einen Automatisierungsserver programmgesteuert zugreifen  
+### <a name="to-programmatically-access-the-methods-in-an-automation-server"></a>To programmatically access the methods in an Automation server  
   
-1.  Erstellen Sie eine Anwendung zum Beispiel [MFC\-exe](../mfc/reference/mfc-application-wizard.md).  
+1.  Create an application, for example, an [MFC exe](../mfc/reference/mfc-application-wizard.md).  
   
-2.  am Anfang der `InitInstance`\-Funktion fügen Sie die folgende Zeile hinzu:  
+2.  At the beginning of the `InitInstance` function, add the following line:  
   
-     [!CODE [NVC_MFC_AxCont#17](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxCont#17)]  
+     [!code-cpp[NVC_MFC_AxCont#17](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_1.cpp)]  
   
-3.  Klicken Sie in der Klassenansicht mit der rechten Maustaste auf den Projektknoten, und wählen Sie **Klasse aus typelib hinzufügen** aus der Typbibliothek importiert.  
+3.  In Class View, right-click the project node and select **Add class from typelib** to import the type library.  
   
-     Dies fügt Dateien mit den Dateinamenerweiterungen H\-Dateien und .cpp dem Projekt hinzu.  
+     This will add files with the file name extensions .h and .cpp to the project.  
   
-4.  In der Headerdatei der Klasse, in der Sie eine oder mehrere Methoden im ActiveX\-Steuerelement aufrufen, die folgende Zeile hinzu: `#include filename.h`, wo Dateiname den Namen der Headerdatei ist, die erstellt wurde, als Sie die Typbibliothek importiert haben.  
+4.  In the header file of the class where you will call one or more methods in the ActiveX control, add the following line: `#include filename.h`, where file name is the name of the header file that was created when you imported the type library.  
   
-5.  In der Funktion, in der ein Aufruf einer Methode im ActiveX\-Steuerelement ausgeführt wird, fügen Sie Code, der ein Objekt der Wrapperklasse des Steuerelements erstellt hinzu und erstellen Sie das ActiveX\-Objekt.  Beispielsweise instanziiert der folgende MFC\-Code ein `CCirc`\-Steuerelement, ruft die Beschriftungseigenschaft ab und zeigt das Ergebnis, wenn auf die Schaltfläche OK in einem Dialogfeld geklickt wird:  
+5.  In the function where a call will be made to a method in the ActiveX control, add code that creates an object of the control's wrapper class and create the ActiveX object. For example, the following MFC code instantiates a `CCirc` control, gets the Caption property, and displays the result when the OK button is clicked in a dialog box:  
   
-     [!CODE [NVC_MFC_AxCont#18](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxCont#18)]  
+     [!code-cpp[NVC_MFC_AxCont#18](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_2.cpp)]  
   
- Wenn Sie Methoden dem ActiveX\-Steuerelement hinzufügen, nachdem Sie es in einer Anwendung verwenden, können Sie mit der aktuellen Version des Steuerelements in der Anwendung starten, indem Sie die Dateien gelöscht haben, die erstellt wurden, als Sie die Typbibliothek importiert haben.  Importieren Sie dann erneut die Typbibliothek.  
+ If you add methods to the ActiveX control after you use it in an application, you can begin using the latest version of the control in the application by deleting the files that were created when you imported the type library. Then import the type library again.  
   
-## Siehe auch  
- [MFC\-ActiveX\-Steuerelemente](../mfc/mfc-activex-controls.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)
+
+

@@ -1,46 +1,65 @@
 ---
-title: "Verarbeiten von Benachrichtigungsmeldungen in erweiterten Kombinationsfeld-Steuerelementen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Erweiterte Kombinationsfelder, Benachrichtigungen"
-  - "Benachrichtigungen, erweiterte Kombinationsfeld-Steuerelemente"
+title: Processing Notification Messages in Extended Combo Box Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- extended combo boxes [MFC], notifications
+- notifications [MFC], extended combo box controls
 ms.assetid: 4e442758-d054-4746-bb1a-6ff84accb127
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Verarbeiten von Benachrichtigungsmeldungen in erweiterten Kombinationsfeld-Steuerelementen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5ab3d37f2c5341814f5830964a30564b444b6d65
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Wenn Benutzer mit dem erweiterten Kombinationsfeld interagieren, sendet das Steuerelement \(`CComboBoxEx`\) Benachrichtigungen an sein übergeordnetes Fenster, normalerweise ein Ansichts\- oder Dialogfeldobjekt. Behandeln Sie diese Nachrichten, wenn Sie darauf reagieren möchten. Wenn der Benutzer z. B. die Dropdownliste aktiviert oder in das Editierfeld des Steuerelements klickt, wird die Benachrichtigung **CBEN\_BEGINEDIT** gesendet.  
+---
+# <a name="processing-notification-messages-in-extended-combo-box-controls"></a>Processing Notification Messages in Extended Combo Box Controls
+As users interact with the extended combo box, the control (`CComboBoxEx`) sends notification messages to its parent window, usually a view or dialog object. Handle these messages if you want to do something in response. For example, when the user activates the drop-down list or clicks in the control's edit box, the **CBEN_BEGINEDIT** notification is sent.  
   
- Verwenden Sie das Eigenschaftenfenster, um der übergeordneten Klasse Benachrichtigungshandler für die Nachrichten hinzuzufügen, die Sie implementieren möchten.  
+ Use the Properties window to add notification handlers to the parent class for those messages you want to implement.  
   
- In der folgenden Liste sind die verschiedenen Benachrichtigungen beschrieben, die vom erweiterten Kombinationsfeld\-Steuerelement gesendet werden.  
+ The following list describes the various notifications sent by the extended combo box control.  
   
--   **CBEN\_BEGINEDIT** Wird gesendet, wenn der Benutzer die Dropdownliste aktiviert oder in das Editierfeld des Steuerelements klickt.  
+-   **CBEN_BEGINEDIT** Sent when the user activates the drop-down list or clicks in the control's edit box.  
   
--   **CBEN\_DELETEITEM** Wird gesendet, wenn ein Element gelöscht wurde.  
+-   **CBEN_DELETEITEM** Sent when an item has been deleted.  
   
--   **CBEN\_DRAGBEGIN** Wird gesendet, wenn der Benutzer beginnt, das Bild des angezeigten Elements auf den Editierteil des Steuerelements zu ziehen.  
+-   **CBEN_DRAGBEGIN** Sent when the user begins dragging the image of the item displayed in the edit portion of the control.  
   
--   **CBEN\_ENDEDIT** Wird gesendet, wenn der Benutzer einen Vorgang im Editierfeld abgeschlossen oder ein Element in der Dropdownliste des Steuerelements ausgewählt hat.  
+-   **CBEN_ENDEDIT** Sent when the user has concluded an operation within the edit box or has selected an item from the control's drop-down list.  
   
--   **CBEN\_GETDISPINFO** Wird gesendet, um Anzeigeinformationen zu einem Rückrufelement abzurufen.  
+-   **CBEN_GETDISPINFO** Sent to retrieve display information about a callback item.  
   
--   **CBEN\_INSERTITEM** Wird gesendet, wenn ein neues Element in das Steuerelement eingefügt wurde.  
+-   **CBEN_INSERTITEM** Sent when a new item has been inserted in the control.  
   
-## Siehe auch  
- [Verwenden von CComboBoxEx](../mfc/using-ccomboboxex.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CComboBoxEx](../mfc/using-ccomboboxex.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

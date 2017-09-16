@@ -1,62 +1,81 @@
 ---
-title: "Behandeln der TTN_NEEDTEXT-Benachrichtigung f&#252;r QuickInfos | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TTN_NEEDTEXT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Benachrichtigungen, QuickInfos"
-  - "QuickInfos [C++], Benachrichtigungen"
-  - "TTN_NEEDTEXT-Meldung"
+title: Handling TTN_NEEDTEXT Notification for Tool Tips | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- TTN_NEEDTEXT
+dev_langs:
+- C++
+helpviewer_keywords:
+- TTN_NEEDTEXT message [MFC]
+- notifications [MFC], tool tips
+- tool tips [MFC], notifications
 ms.assetid: d0370a65-21ba-4676-bcc5-8cf851bbb15c
 caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Behandeln der TTN_NEEDTEXT-Benachrichtigung f&#252;r QuickInfos
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dd7b4e4d9e022f7c33191ca181ae6be3a701800c
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Als Teil [Aktivieren von QuickInfos](../mfc/enabling-tool-tips.md) bearbeiten Sie die **TTN\_NEEDTEXT** Meldung, indem Sie den folgenden Eintrag zur Meldungszuordnung des Besitzerfensters hinzufügen:  
+---
+# <a name="handling-ttnneedtext-notification-for-tool-tips"></a>Handling TTN_NEEDTEXT Notification for Tool Tips
+As part of [enabling tool tips](../mfc/enabling-tool-tips.md), you handle the **TTN_NEEDTEXT** message by adding the following entry to your owner window's message map:  
   
- [!CODE [NVC_MFCControlLadenDialog#40](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCControlLadenDialog#40)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#40](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_1.cpp)]  
   
  `memberFxn`  
- Die Memberfunktion, aufgerufen werden, wenn Text für diese Schaltfläche benötigt wird.  
+ The member function to be called when text is needed for this button.  
   
- Beachten Sie, dass die ID einer QuickInfo immer 0.  
+ Note that the ID of a tool tip is always 0.  
   
- Deklarieren Sie die Handlerfunktion in der Klassendefinition, wie folgt:  
+ Declare your handler function in the class definition as follows:  
   
- [!CODE [NVC_MFCControlLadenDialog#53](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCControlLadenDialog#53)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#53](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_2.h)]  
   
- wobei die kursiv gedruckten Parameter sind:  
+ where the italicized parameters are:  
   
  `id`  
- Bezeichner des Steuerelements, das die Benachrichtigung gesendet.  Nicht verwendet.  Die Steuerelement\-ID wird von der **NMHDR**\-Struktur ausgeführt.  
+ Identifier of the control that sent the notification. Not used. The control id is taken from the **NMHDR** structure.  
   
  `pNMHDR`  
- Ein Zeiger auf [NMTTDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb760258)\-Struktur.  Diese Struktur wird auch in [Die TOOLTIPTEXT\-Struktur](../mfc/tooltiptext-structure.md) weiter erläutert.  
+ A pointer to the [NMTTDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb760258) structure. This structure is also discussed further in [The TOOLTIPTEXT Structure](../mfc/tooltiptext-structure.md).  
   
  `pResult`  
- Ein Zeiger, an führen Code, den Sie festlegen können, bevor Sie zurückkehren.  **TTN\_NEEDTEXT** Sie können den Parameter `pResult` ignorieren.  
+ A pointer to result code you can set before you return. **TTN_NEEDTEXT** handlers can ignore the `pResult` parameter.  
   
- Als Beispiel für einen Formularansichtsbenachrichtigungshandler:  
+ As an example of a form-view notification handler:  
   
- [!CODE [NVC_MFCControlLadenDialog#54](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCControlLadenDialog#54)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#54](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_3.cpp)]  
   
- Aufruf `EnableToolTips` \(dieses Fragment die der `OnInitDialog`\):  
+ Call `EnableToolTips` (this fragment taken from `OnInitDialog`):  
   
- [!CODE [NVC_MFCControlLadenDialog#55](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCControlLadenDialog#55)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#55](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_4.cpp)]  
   
-## Siehe auch  
- [QuickInfos in Fenstern, die nicht von CFrameWnd abgeleitet sind](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+## <a name="see-also"></a>See Also  
+ [Tool Tips in Windows Not Derived from CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+
+

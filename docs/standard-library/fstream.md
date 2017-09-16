@@ -1,65 +1,83 @@
 ---
-title: "&lt;fstream&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::<fstream>"
-  - "<fstream>"
-  - "std.<fstream>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fstream-Header"
+title: '&lt;fstream&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std::<fstream>", "<fstream>", "std.<fstream>
+dev_langs:
+- C++
+helpviewer_keywords:
+- fstream header
 ms.assetid: 660de351-0489-41df-b239-40e0cdcab46b
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# &lt;fstream&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 064f9edc439407c625fc5cf8788ad3a83200d7f7
+ms.contentlocale: de-de
+ms.lasthandoff: 09/09/2017
 
-Definiert mehrere Klassen, die iostreams\-Vorgänge für Sequenzen unterstützen, die in externen Dateien gespeichert sind.  
+---
+# <a name="ltfstreamgt"></a>&lt;fstream&gt;
+Defines several classes that support iostreams operations on sequences stored in external files.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
 #include <fstream>  
   
 ```  
   
-### TypeDefs  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[filebuf](../Topic/filebuf.md)|Ein `basic_filebuf`\-Typ, der auf `char`\-Vorlagenparameter spezialisiert ist.|  
-|[fstream](../Topic/fstream.md)|Ein `basic_fstream`\-Typ, der auf `char`\-Vorlagenparameter spezialisiert ist.|  
-|[ifstream](../Topic/ifstream.md)|Ein `basic_ifstream`\-Typ, der auf `char`\-Vorlagenparameter spezialisiert ist.|  
-|[ofstream](../Topic/ofstream.md)|Ein `basic_ofstream`\-Typ, der auf `char`\-Vorlagenparameter spezialisiert ist.|  
-|[wfstream](../Topic/wfstream.md)|Ein `basic_fstream`\-Typ, der auf `wchar_t`\-Vorlagenparameter spezialisiert ist.|  
-|[wifstream](../Topic/wifstream.md)|Ein `basic_ifstream`\-Typ, der auf `wchar_t`\-Vorlagenparameter spezialisiert ist.|  
-|[wofstream](../Topic/wofstream.md)|Ein `basic_ofstream`\-Typ, der auf `wchar_t`\-Vorlagenparameter spezialisiert ist.|  
-|[wfilebuf](../Topic/wfilebuf.md)|Ein `basic_filebuf`\-Typ, der auf `wchar_t`\-Vorlagenparameter spezialisiert ist.|  
+|[filebuf](../standard-library/fstream-typedefs.md#filebuf)|A type `basic_filebuf` specialized on `char` template parameters.|  
+|[fstream](../standard-library/fstream-typedefs.md#fstream)|A type `basic_fstream` specialized on `char` template parameters.|  
+|[ifstream](../standard-library/fstream-typedefs.md#ifstream)|A type `basic_ifstream` specialized on `char` template parameters.|  
+|[ofstream](../standard-library/fstream-typedefs.md#ofstream)|A type `basic_ofstream` specialized on `char` template parameters.|  
+|[wfstream](../standard-library/fstream-typedefs.md#wfstream)|A type `basic_fstream` specialized on `wchar_t` template parameters.|  
+|[wifstream](../standard-library/fstream-typedefs.md#wifstream)|A type `basic_ifstream` specialized on `wchar_t` template parameters.|  
+|[wofstream](../standard-library/fstream-typedefs.md#wofstream)|A type `basic_ofstream` specialized on `wchar_t` template parameters.|  
+|[wfilebuf](../standard-library/fstream-typedefs.md#wfilebuf)|A type `basic_filebuf` specialized on `wchar_t` template parameters.|  
   
-### Klassen  
+### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[basic\_filebuf](../standard-library/basic-filebuf-class.md)|Die Vorlagenklasse beschreibt einen Streampuffer, der steuert, wie Elemente des Typs **Elem**, dessen Zeichenmerkmale durch die Klasse **Tr** bestimmt sind, in eine oder aus einer Sequenz von Elementen übertragen werden, die in einer externen Datei gespeichert sind.|  
-|[basic\_fstream](../standard-library/basic-fstream-class.md)|Die Vorlagenklasse beschreibt ein Objekt, das das Einfügen und Extrahieren von Elementen und codierten Objekten mit einem Streampuffer der Klasse [basic\_stringbuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**\> mit Elementen des Typs **Elem** steuert, dessen Zeichenmerkmale durch die Klasse **Tr** bestimmt sind.|  
-|[basic\_ifstream](../standard-library/basic-ifstream-class.md)|Die Vorlagenklasse beschreibt ein Objekt, das das Extrahieren von Elementen und codierten Objekten aus einem Streampuffer der Klasse [basic\_stringbuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**\> mit Elementen des Typs **Elem** steuert, dessen Zeichenmerkmale durch die Klasse **Tr** bestimmt sind.|  
-|[basic\_ofstream](../standard-library/basic-ofstream-class.md)|Die Vorlagenklasse beschreibt ein Objekt, das das Einfügen von Elementen und codierten Objekten in einen Streampuffer der Klasse [basic\_stringbuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**\> mit Elementen des Typs **Elem** steuert, dessen Zeichenmerkmale durch die Klasse **Tr** bestimmt sind.|  
+|[basic_filebuf](../standard-library/basic-filebuf-class.md)|The template class describes a stream buffer that controls the transmission of elements of type **Elem**, whose character traits are determined by the class **Tr**, to and from a sequence of elements stored in an external file.|  
+|[basic_fstream](../standard-library/basic-fstream-class.md)|The template class describes an object that controls insertion and extraction of elements and encoded objects using a stream buffer of class [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**>, with elements of type **Elem**, whose character traits are determined by the class **Tr**.|  
+|[basic_ifstream](../standard-library/basic-ifstream-class.md)|The template class describes an object that controls extraction of elements and encoded objects from a stream buffer of class [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**>, with elements of type **Elem**, whose character traits are determined by the class **Tr**.|  
+|[basic_ofstream](../standard-library/basic-ofstream-class.md)|The template class describes an object that controls insertion of elements and encoded objects into a stream buffer of class [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**>, with elements of type **Elem**, whose character traits are determined by the class **Tr**.|  
   
-## Siehe auch  
- [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)   
- [Threadsicherheit in der C\+\+\-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [iostream\-Programmierung](../standard-library/iostream-programming.md)   
- [iostreams\-Konventionen](../standard-library/iostreams-conventions.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
+
+
+
+

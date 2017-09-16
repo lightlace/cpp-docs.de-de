@@ -1,5 +1,5 @@
 ---
-title: remove_pointer-Klasse | Microsoft-Dokumentation
+title: remove_pointer Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- remove_pointer
 - type_traits/std::remove_pointer
 dev_langs:
 - C++
@@ -35,15 +34,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: b9e00cba8b892c9834f56846f698ee59aca523cf
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 9efa6c69388dd00d9ac3eae5b7f180b6c2284bb6
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="removepointer-class"></a>remove_pointer-Klasse
-Wandelt einen Zeiger auf den Typ in einen Typ um.  
+# <a name="removepointer-class"></a>remove_pointer Class
+Makes type from pointer to type.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,14 +54,14 @@ template <class T>
 using remove_pointer_t = typename remove_pointer<T>::type;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a>Parameters  
  `T`  
- Der zu ändernde Typ.  
+ The type to modify.  
   
-## <a name="remarks"></a>Hinweise  
- Eine Instanz von `remove_pointer<T>` enthält einen geänderten Typ, der `T1` ist, wenn `T` das Format `T1*`, `T1* const`, `T1* volatile` oder `T1* const volatile` hat; andernfalls `T`.  
+## <a name="remarks"></a>Remarks  
+ An instance of `remove_pointer<T>` holds a modified-type that is `T1` when `T` is of the form `T1*`, `T1* const`, `T1* volatile`, or `T1* const volatile`, otherwise `T`.  
   
-## <a name="example"></a>Beispiel  
+## <a name="example"></a>Example  
   
 ```cpp  
 #include <type_traits>   
@@ -84,12 +83,12 @@ int main()
 remove_pointer_t<int *> == int  
 ```  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [add_pointer-Klasse](../standard-library/add-pointer-class.md)
+ [add_pointer Class](../standard-library/add-pointer-class.md)
 

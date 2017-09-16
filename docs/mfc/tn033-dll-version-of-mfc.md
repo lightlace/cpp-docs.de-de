@@ -1,285 +1,305 @@
 ---
-title: "TN033: DLL-Version der MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.dll"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AFXDLL-Bibliothek"
-  - "DLL-Version der MFC [C++]"
-  - "DLLs [C++], MFC"
-  - "MFC-DLLs [C++], Schreiben von Erweiterungs-DLLs"
-  - "TN033"
+title: 'TN033: DLL Version of MFC | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.dll
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC DLLs [MFC], writing MFC extension DLLS
+- AFXDLL library
+- DLLs [MFC], MFC
+- DLL version of MFC [MFC]
+- TN033
 ms.assetid: b6f1080b-b66b-4b1e-8fb1-926c5816392c
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# TN033: DLL-Version der MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8bb1a02db6c6893c402033913b25bc512af8fc1f
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Dieser Hinweis wird beschrieben, wie die gemeinsam genutzten Dynamic Link Librarys MFCxx.DLL oder MFCxxD.DLL \(wobei x für die MFC\-Versionsnummer steht\), mit MFC\-Anwendungen und Erweiterungs\-DLLs verwendet werden können.  Weitere Informationen über reguläre DLLs, finden Sie unter [Verwenden von MFC als Teil einer DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md).  
+---
+# <a name="tn033-dll-version-of-mfc"></a>TN033: DLL Version of MFC
+This note describes how you can use the MFCxx.DLL and MFCxxD.DLL (where x is the MFC version number) shared dynamic link libraries with MFC applications and MFC extension DLLs. For more information about regular MFC DLLs, see [Using MFC as Part of a DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md).  
   
- Dieser technische Hinweis enthält drei Aspekte von DLLs.  Die letzten beiden sind für die mehr fortgeschrittenen Benutzer:  
+ This technical note covers three aspects of DLLs. The last two are for the more advanced users:  
   
--   [Wie Sie eine MFC\-Erweiterungs\-DLL erstellen](#_mfcnotes_how_to_write_an_mfc_extension_dll)  
+- [How you build an MFC Extension DLL](#_mfcnotes_how_to_write_an_mfc_extension_dll)  
   
--   [Wie Sie eine MFC\-Anwendung erstellen, die die DLL\-Version von MFC verwendet](#_mfcnotes_writing_an_application_that_uses_the_dll_version)  
+- [How you build an MFC application that uses the DLL version of MFC](#_mfcnotes_writing_an_application_that_uses_the_dll_version)  
   
--   [Wie die MFC gemeinsam genutzten Dynamic Link Libraries\) implementiert werden](#_mfcnotes_how_the_mfc30.dll_is_implemented)  
+- [How the MFC shared dynamic-link libraries are implemented](#_mfcnotes_how_the_mfc30.dll_is_implemented)  
   
- Wenn Sie mit der Erstellung interessiert sind, die, DLL mit MFC, das mit Nicht\-MFC\-Anwendungen \(diese eine reguläre DLL aufgerufen wird\) verwendet werden kann, finden Sie unter [Technischer Hinweis 11](../mfc/tn011-using-mfc-as-part-of-a-dll.md).  
+ If you are interested in building a DLL using MFC that can be used with non-MFC applications (this is called a regular MFC DLL), refer to [Technical Note 11](../mfc/tn011-using-mfc-as-part-of-a-dll.md).  
   
-## Übersicht über MFCxx.DLL\-Unterstützung: Terminologie und Dateien  
- **Reguläre DLL**: Sie verwenden eine reguläre DLL, um eine eigenständige DLL mithilfe verschiedener der MFC\-Klassen zu erstellen.  Schnittstellen über der App\-\/DLLgrenze sind "C Schnittstellen, und die Clientanwendung muss keine MFC\-Anwendung sein.  
+## <a name="overview-of-mfcxxdll-support-terminology-and-files"></a>Overview of MFCxx.DLL Support: Terminology and Files  
+ **Regular MFC DLL**: You use a regular MFC DLL to build a stand-alone DLL using some of the MFC classes. Interfaces across the App/DLL boundary are "C" interfaces, and the client application does not have to be an MFC application.  
   
- Dies ist die Version der DLL\-Unterstützung unterstützt in MFC 1.0.  Es wird in [Technischer Hinweis 11](../mfc/tn011-using-mfc-as-part-of-a-dll.md) beschrieben und die MFC Advanced Konzepte überprüfen [DLLScreenCap](../top/visual-cpp-samples.md).  
-  
-> [!NOTE]
->  Ab Visual C\+\+\-Version 4.0, ist der Begriff **USRDLL** veraltet und ist von einer regulären DLL ersetzt, die statisch mit MFC verknüpft.  Sie erstellen auch eine reguläre, dynamisch mit MFC verknüpften DLL.  
-  
- MFC 3.0 \(und oben\) unterstützt regulären DLL mit allen neuen Funktionen einschließlich das OLE und Datenbankklassen.  
-  
- **AFXDLL**: Dies wird auch als die freigegebene Version der MFC\-Bibliotheken.  Dies ist die neue DLL\-Unterstützung, die in MFC 2.0 hinzugefügt wird.  Die MFC\-Bibliothek selbst ist in mehreren DLLs \(nachfolgend beschrieben\) und eine Clientanwendung oder DLL verknüpft dynamisch die DLLs, die erforderlich sind.  Schnittstellen über der application\-\/DLLgrenze sind C\+\+\-\/MFCklassenschnittstellen.  Die Clientanwendung MUSS eine MFC\-Anwendung sein.  Dies unterstützt alle 3.0\-Funktionalität MFC \(Ausnahme: UNICODE wird nicht für die Datenbankklassen unterstützt\).  
+ This is the version of DLL support supported in MFC 1.0. It is described in [Technical Note 11](../mfc/tn011-using-mfc-as-part-of-a-dll.md) and the MFC Advanced Concepts sample [DLLScreenCap](../visual-cpp-samples.md).  
   
 > [!NOTE]
->  Ab Visual C\+\+\-Version 4.0, wird dieser DLL\-Typ als "Erweiterungs\-DLL."  
+>  As of Visual C++ version 4.0, the term **USRDLL** is obsolete and has been replaced by a regular MFC DLL that statically links to MFC. You may also build a regular MFC DLL that dynamically links to MFC.  
   
- Dieser MFCxx.DLL Hinweis verwendet, um den gesamten MFC\-DLL\-Satz zuzugreifen, der:  
+ MFC 3.0 (and above) supports regular MFC DLLs with all the new functionality including the OLE and Database classes.  
   
--   Debuggen Sie: MFCxxD.DLL \(zusammen\) und MFCSxxD.LIB \(statisch\).  
-  
--   Version: MFCxx.DLL \(zusammen\) und MFCSxx.LIB \(statisch\).  
-  
--   Unicode debuggen: MFCxxUD.DLL \(zusammen\) und MFCSxxD.LIB \(statisch\).  
-  
--   Unicode\-Version: MFCxxU.DLL \(zusammen\) und MFCSxxU.LIB \(statisch\).  
+ **AFXDLL**: This is also referred to as the shared version of the MFC libraries. This is the new DLL support added in MFC 2.0. The MFC library itself is in a number of DLLs (described below) and a client application or DLL dynamically links the DLLs that it requires. Interfaces across the application/DLL boundary are C++/MFC class interfaces. The client application MUST be an MFC application. This supports all MFC 3.0 functionality (exception: UNICODE is not supported for the database classes).  
   
 > [!NOTE]
->  Die Bibliotheken MFCSxx \[U\] \[D\] .LIB werden in Verbindung mit den MFC\-gemeinsamen genutzten DLLs verwendet.  Diese Bibliotheken enthalten Code, der zur Anwendung oder der DLL statisch verknüpft werden muss.  
+>  As of Visual C++ version 4.0, this type of DLL is referred to as an "Extension DLL."  
   
- Links einer Anwendung zu den korrespondierenden Importbibliotheken:  
+ This note will use MFCxx.DLL to refer to the entire MFC DLL set, which includes:  
   
--   Debuggen Sie: MFCxxD.LIB  
+-   Debug: MFCxxD.DLL (combined) and MFCSxxD.LIB (static).  
   
--   Version: MFCxx.LIB  
+-   Release: MFCxx.DLL (combined) and MFCSxx.LIB (static).  
   
--   Unicode debuggen: MFCxxUD.LIB  
+-   Unicode Debug: MFCxxUD.DLL (combined) and MFCSxxD.LIB (static).  
   
--   Unicode\-Version: MFCxxU.LIB  
-  
- "" Eine MFC\-Erweiterungs\-DLL ist eine DLL, die nach MFCxx.DLL erstellt wird \(und\/oder den anderen MFC\-gemeinsamengenutzten DLLs\).  Hier wird die MFC\-Teilarchitektur in.  Wenn Sie eine nützliche Klasse von eine MFC\-Klasse berechnen oder ein anderes vergleichbares Toolkit MFC erstellen, können Sie es in einer DLL speichern.  Diese DLL MFCxx.DLL verwendet, z, tut die endgültige Clientanwendung.  Damit können wiederverwendbare Arbeitsblattklassen, wiederverwendbare Basisklassen und wiederverwendbare Ansicht\/Dokumentklassen.  
-  
-## Vor\- und Nachteile  
- Warum sollten Sie die gemeinsam genutzte MFC\-Version verwenden?  
-  
--   Verwenden der freigegebenen Bibliothek kann kleinere Anwendungen \(eine minimale Anwendung, die mit der MFC\-Bibliothek sehr kleiner als 10K ist\) führen.  
-  
--   Die gemeinsam genutzte Version von MFC unterstützt MFC\-Erweiterungs\-DLLs und \-reguläre DLL.  
-  
--   Eine Anwendung, die die freigegebenen MFC\-Bibliotheken verwendet, schneller ist als eine, statisch verknüpften MFC\-Anwendung erstellt, da es nicht notwendig ist, MFC selbst zu verknüpfen.  Dies ist in **DEBUGGEN** Builds insbesondere, bei denen der Linker die Debuginformationen komprimieren muss \- durch das Verknüpfen mit einer DLL, die bereits Debuginformationen enthält, gibt es weniger Debuginformationen, um innerhalb der Anwendung zu komprimieren.  
-  
- Warum Sie die gemeinsam genutzte Version von MFC nicht verwenden:  
-  
--   Das bei einer Anwendung, die die freigegebene Bibliothek verwendet, erfordert, dass die Bibliothek MFCxx.DLL \(und andere\) mit dem Programm geliefert werden.  MFCxx.DLL ist frei wie viele DLLs verteilt werden, sie müssen jedoch die DLL noch im Setupprogramm installiert werden.  Außerdem müssen Sie das MSVCRTxx.DLL ausliefern, die die C\-Laufzeitbibliothek enthält, die vom Programm und auch von den MFC\-DLLs selbst verwendet wird.  
-  
-##  <a name="_mfcnotes_how_to_write_an_mfc_extension_dll"></a> Erstellen einer MFC\-Erweiterungs\-DLL schreibt  
- Eine MFC\-Erweiterungs\-DLL ist die enthaltene Klasse und Funktionen einer DLL, die geschrieben werden, um die Funktionalität der MFC\-Klassen zu verschönern.  Eine MFC\-Erweiterungs\-DLL verwendet die gemeinsam genutzten MFC\-DLLs wie eine Anwendung verwendet es, mit einigen zusätzlichen Überlegungen:  
-  
--   Der Buildprozess entspricht dem Erstellen einer Anwendung ähnlich, die die freigegebenen MFC\-Bibliotheken mit einigen zusätzlichen Compiler\- und Linkeroptionen verwendet.  
-  
--   Eine MFC\-Erweiterungs\-DLL hat nicht `CWinApp` abgeleiteten Klasse.  
-  
--   Eine MFC\-Erweiterungs\-DLL muss spezielles `DllMain` bereitstellen.  Der Anwendungs\-Assistent stellt `DllMain` eine Funktion, die Sie ändern können.  
-  
--   Eine MFC\-Erweiterungs\-DLL stellt normalerweise eine Initialisierungsroutine, **CDynLinkLibrary** zu erstellen, wenn die Erweiterungs\-DLL `CRuntimeClass` es oder Ressourcen in die Anwendung exportiert werden sollen.  Eine abgeleitete Klasse **CDynLinkLibrary** wird möglicherweise verwendet, wenn Daten pro Anwendung die Erweiterungs\-DLL beibehalten werden muss.  
-  
- Diese Aspekte werden ausführlich beschrieben.  Sie können MFC erweiterte Konzeptbeispiel auch [DLLHUSK](../top/visual-cpp-samples.md) verweisen, da veranschaulicht:  
-  
--   Erstellen einer Anwendung mit der freigegebenen Bibliotheken. \(DLLHUSK.EXE ist eine MFC\-Anwendung, die dynamisch mit den MFC\-Bibliotheken sowie zu anderen DLLs. verknüpft\)  
-  
--   Erstellen einer MFC\-Erweiterungs\-DLL speichern. \(Beachten Sie die speziellen Flags wie `_AFXEXT`, die verwendet werden, wenn Sie eine Erweiterungs\-DLL erstellt\)  
-  
--   Zwei Beispiele von MFC\-Erweiterungs\-DLLs.  Man wird die grundlegende Struktur einer MFC\-Erweiterungs\-DLL mit beschränkten Exporten \(TESTDLL1\) und das andere die Aufschluss an, die eine ganze Klassen \(TESTDLL2\) exportieren.  
-  
- Sowohl die Clientanwendung und alle Erweiterungs\-DLLs die gleiche Version von MFCxx.DLL verwenden.  Sie sollten der Konvention folgen der MFC\-DLL und ein Debugbuild und Version des Einzelhandels \(\/release\) der Erweiterungs\-DLL bereitstellen.  Dieses ermöglicht Clientprogramme, beide erstellen und debuggen Releasebuild ihrer Anwendungen und verknüpfen sie mit dem entsprechenden debuggen oder Einzelhandelsversion aller DLLs.  
+-   Unicode Release: MFCxxU.DLL (combined) and MFCSxxU.LIB (static).  
   
 > [!NOTE]
->  Da C\+\+\-Namensergänzungs\- und dem Export, die Exportliste einer Erweiterungs\-DLL können zwischen im Debug\- und im Releasebuild derselben DLL bzw. in DLLs für unterschiedliche Plattformen Unterschiede sind.  Das Releasebuild MFCxx.DLL hat ca. 2000 exportierte Einstiegspunkte; die Debug\- MFCxxD.DLL hat ca. 3000 exportierte Einstiegspunkte.  
+>  The MFCSxx[U][D].LIB libraries are used in conjunction with the MFC shared DLLs. These libraries contain code that must be statically linked to the application or DLL.  
   
-### Schneller Hinweis Speicherverwaltung  
- Der Abschnitt, der "Speicherverwaltung," neben Ende dieses technischen Hinweises Securing wird, beschreibt die Implementierung des MFCxx.DLL mit der gemeinsam genutzten MFC\-Version.  Die Informationen, die Sie kennen müssen, um nur eine Erweiterungs\-DLL zu implementieren, werden hier beschrieben.  
+ An application links to the corresponding import libraries:  
   
- MFCxx.DLL und alle Erweiterungs\-DLLs, die in den Adressbereich einer Clientanwendung geladen werden, verwenden dieselbe Speicherbelegungsfunktion, dasselbe Ladeverfahren für Ressourcen und weitere "globale" MFC\-Zustände, als ob sie in derselben Anwendung enthalten wären.  Dies ist von Bedeutung, da MFC\-fremde DLL\-Bibliotheken und \-reguläre DLL, die statisch mit MFC verknüpfen, genau entgegengesetzt verfahren und jede DLL haben, die aus ihrem eigenen Bestand.  
+-   Debug: MFCxxD.LIB  
   
- Wenn eine Erweiterungs\-DLL Speicher belegt, kann dieser Speicherbereich beliebig mit jedem anderen Objekt frei vermischen.  Wenn eine Anwendung, die die freigegebenen MFC\-Bibliotheken verwendet, abstürzt, behält der Schutz des Betriebssystems die Integrität anderer MFC\-Anwendungen, die die DLL ebenfalls nutzen.  
+-   Release: MFCxx.LIB  
   
- Entsprechend werden andere "globale" MFC\-Zustände, wie die aktuelle ausführbare Datei, aus der Ressourcen geladen werden, auch von der Clientanwendung und allen MFC\-Erweiterungs\-DLLs sowie MFCxx.DLL selbst freigegeben.  
+-   Unicode Debug: MFCxxUD.LIB  
   
-### Erstellen einer Erweiterungs\-DLL  
- Mit Anwendungs\-Assistenten verwenden, um ein MFC\-Erweiterungs\-DLL\-Projekt zu erstellen, und es generiert automatisch die passenden Compiler\- und Linkereinstellungen.  Es war generiert auch `DllMain` eine Funktion, die Sie ändern können.  
+-   Unicode Release: MFCxxU.LIB  
   
- Wenn Sie ein vorhandenes Projekt in einer MFC\-Erweiterungs\-DLL konvertieren, ordnet Anfang mit dem Standard für eine Anwendung mithilfe der gemeinsam genutzten MFC\-Version an, führt Folgendes:  
+ An "MFC Extension DLL" is a DLL built upon MFCxx.DLL (and/or the other MFC shared DLLs). Here the MFC component architecture kicks in. If you derive a useful class from an MFC class, or build another MFC-like toolkit, you can place it in a DLL. That DLL uses MFCxx.DLL, as does the ultimate client application. This permits reusable leaf classes, reusable base classes, and reusable view/document classes.  
   
--   Fügen Sie **\/D\_AFXEXT** des Compilerflags hinzu.  Auf den Projekteigenschaften Akzeptieren Sie, wählen Sie den C\/C\+\+\-Knoten aus.  Wählen Sie dann die Präprozessorkategorie aus.  Fügen Sie `_AFXEXT` dem definierens\-Makrofeld hinzu und einzelnen Elemente mit Semikolons trennen.  
+## <a name="pros-and-cons"></a>Pros and Cons  
+ Why should you use the shared version of MFC  
   
--   Entfernen Sie den **\/Gy** \- Compilerschalter.  Auf den Projekteigenschaften Akzeptieren Sie, wählen Sie den C\/C\+\+\-Knoten aus.  Wählen Sie dann die Codegenerierungskategorie aus.  Stellen Sie sicher, dass "die Funktion\-Ebene, aktivieren Sie die Option" verknüpft, ist nicht aktiviert.  Dies erleichtert es, Klassen zu exportieren, da der Linker nicht auf Features entfernt.  Wenn das ursprüngliche Projekt, eine reguläre DLL erstellt wird, die statisch mit MFC verknüpft ist, ändern Sie die Compileroption **\/MT\[d\]** in **\/MD\[d\]**.  
+-   Using the shared library can result in smaller applications (a minimal application that uses most of the MFC library is less than 10K).  
   
--   Erstellen Sie eine Exportbibliothek mit der Option **\/DLL** an LINK.  Dadurch wird festgelegt, wenn Sie ein neues Ziel erstellen und gibt Win32\-DynamicLink Library als der Zieltyp angezeigt.  
+-   The shared version of MFC supports MFC Extension DLLs and regular MFC DLLs.  
   
-### Ändern der Headerdateien  
- Das Ziel einer Erweiterungs\-DLL ist normalerweise, einige allgemeine Funktionen in eine oder mehrere Anwendungen zu exportieren, die diese Funktionalität verwenden können.  Dies kocht unten zum Exportieren von Klassen und den globalen Funktionen, die die für Clientanwendungen verfügbar sind.  
+-   Building an application that uses the shared MFC libraries is faster than building a statically linked MFC application because it is not necessary to link MFC itself. This is especially true in **DEBUG** builds where the linker must compact the debug information — by linking with a DLL that already contains the debug information, there is less debug information to compact within your application.  
   
- Hierzu müssen Sie Befolgung jede der Memberfunktionen als Importieren oder Exportieren entsprechend markiert ist.  Dies erfordert spezielle Deklarationen: **\_\_declspec \(dllexport\)** und **\_\_declspec \(dllimport\)**.  Wenn die Klassen mit Clientanwendungen verwendet werden, können Sie sie als **\_\_declspec \(dllimport\)** deklariert werden.  Wenn die Erweiterungs\-DLL selbst erstellt wird, sollten sie als **\_\_declspec \(dllexport\)** deklariert werden.  Außerdem müssen die Funktionen tatsächlich exportiert werden, sodass die Clientprogramme ihnen zur Ladezeit binden.  
+ Why should you not use the shared version of MFC:  
   
- Um die ganze Klasse zu exportieren, verwenden Sie **AFX\_EXT\_CLASS** in die Klassendefinition.  Dieses Makro wird durch das Framework als **\_\_declspec \(dllexport\)** definiert, und `_AFXEXT`, wenn **\_AFXDLL** definiert ist, definiert jedoch als **\_\_declspec \(dllimport\)**, wenn `_AFXEXT` nicht definiert wird.  `_AFXEXT`, wie oben beschrieben, wird nur definiert, wenn die Erweiterungs\-DLL erstellt.  Beispiel:  
+-   Shipping an application that uses the shared library requires that you ship the MFCxx.DLL (and others) library with your program. MFCxx.DLL is freely redistributable like many DLLs, but you still must install the DLL in your SETUP program. In addition, you must ship the MSVCRTxx.DLL, which contains the C-runtime library which is used both by your program and the MFC DLLs themselves.  
+  
+##  <a name="_mfcnotes_how_to_write_an_mfc_extension_dll"></a> How to Write an MFC Extension DLL  
+ An MFC Extension DLL is a DLL containing classes and functions written to embellish the functionality of the MFC classes. An MFC Extension DLL uses the shared MFC DLLs in the same way an application uses it, with a few additional considerations:  
+  
+-   The build process is similar to building an application that uses the shared MFC libraries with a few additional compiler and linker options.  
+  
+-   An MFC Extension DLL does not have a `CWinApp`-derived class.  
+  
+-   An MFC Extension DLL must provide a special `DllMain`. AppWizard supplies a `DllMain` function that you can modify.  
+  
+-   An MFC Extension DLL will usually provide an initialization routine to create a **CDynLinkLibrary** if the MFC extension DLL wishes to export `CRuntimeClass`es or resources to the application. A derived class of **CDynLinkLibrary** may be used if per-application data must be maintained by the MFC extension DLL.  
+  
+ These considerations are described in more detail below. You should also refer to the MFC Advanced Concepts sample [DLLHUSK](../visual-cpp-samples.md) since it illustrates:  
+  
+-   Building an application using the shared libraries. (DLLHUSK.EXE is an MFC application that dynamically links to the MFC libraries as well as other DLLs.)  
+  
+-   Building an MFC Extension DLL. (Note the special flags such as `_AFXEXT` that are used in building an MFC extension DLL)  
+  
+-   Two examples of MFC Extension DLLs. One shows the basic structure of an MFC Extension DLL with limited exports (TESTDLL1) and the other shows exporting an entire class interface (TESTDLL2).  
+  
+ Both the client application and any MFC extension DLLs must use the same version of MFCxx.DLL. You should follow the convention of MFC DLL and provide both a debug and retail (/release) version of your MFC extension DLL. This permits client programs to build both debug and retail versions of their applications and link them with the appropriate debug or retail version of all DLLs.  
+  
+> [!NOTE]
+>  Because C++ name mangling and export issues, the export list from an MFC extension DLL may be different between the debug and retail versions of the same DLL and DLLs for different platforms. The retail MFCxx.DLL has about 2000 exported entry points; the debug MFCxxD.DLL has about 3000 exported entry points.  
+  
+### <a name="quick-note-on-memory-management"></a>Quick Note on Memory Management  
+ The section titled "Memory Management," near the end of this technical note, describes the implementation of the MFCxx.DLL with the shared version of MFC. The information you need to know to implement just an MFC extension DLL is described here.  
+  
+ MFCxx.DLL and all MFC extension DLLs loaded into a client application's address space will use the same memory allocator, resource loading and other MFC "global" states as if they were in the same application. This is significant because the non-MFC DLL libraries and regular MFC DLLs that statically link to MFC do the exact opposite and have each DLL allocating out of its own memory pool.  
+  
+ If an MFC extension DLL allocates memory, then that memory can freely intermix with any other application-allocated object. Also, if an application that uses the shared MFC libraries crashes, the protection of the operating system will maintain the integrity of any other MFC application sharing the DLL.  
+  
+ Similarly other "global" MFC states, like the current executable file to load resources from, are also shared between the client application and all MFC extension DLLs as well as MFCxx.DLL itself.  
+  
+### <a name="building-an-mfc-extension-dll"></a>Building an MFC extension DLL  
+ You can use AppWizard to create an MFC extension DLL project, and it will automatically generate the appropriate compiler and linker settings. It was also generate a `DllMain` function that you can modify.  
+  
+ If you are converting an existing project to an MFC extension DLL, start with the standard rules for building an application using the shared version of MFC, then do the following:  
+  
+-   Add **/D_AFXEXT** to the compiler flags. On the Project Properties dialog, select the C/C++ node. Then select the Preprocessor category. Add `_AFXEXT` to the Define Macros field, separating each of the items with semicolons.  
+  
+-   Remove the **/Gy** compiler switch. On the Project Properties dialog, select the C/C++ node. Then select the Code Generation category. Ensure that the "Enable Function-Level Linking" option is not enabled. This will make it easier to export classes because the linker will not remove unreferenced functions. If the original project is used to build a regular MFC DLL statically linked to MFC, change the **/MT[d]** compiler option to **/MD[d]**.  
+  
+-   Build an export library with the **/DLL** option to LINK. This will be set when you create a new target, specifying Win32 Dynamic-Link Library as the target type.  
+  
+### <a name="changing-your-header-files"></a>Changing your Header Files  
+ The goal of an MFC extension DLL is usually to export some common functionality to one or more applications that can use that functionality. This boils down to exporting classes and global functions that are available for your client applications.  
+  
+ In order to do this you must insure that each of the member functions is marked as import or export as appropriate. This requires special declarations: **__declspec(dllexport)** and **__declspec(dllimport)**. When your classes are used by the client applications, you want them to be declared as **__declspec(dllimport)**. When the MFC extension DLL itself is being built, they should be declared as **__declspec(dllexport)**. In addition, the functions must be actually exported, so that the client programs bind to them at load time.  
+  
+ To export your entire class, use **AFX_EXT_CLASS** in the class definition. This macro is defined by the framework as **__declspec(dllexport)** when **_AFXDLL** and `_AFXEXT` is defined, but defined as **__declspec(dllimport)** when `_AFXEXT` is not defined. `_AFXEXT` as described above, is only defined when building your MFC extension DLL. For example:  
   
 ```  
 class AFX_EXT_CLASS CExampleExport : public CObject  
 { ... class definition ... };  
 ```  
   
-### Kein Exportieren der gesamten Klasse  
- Manchmal möchten Sie nur die einzelnen erforderlichen Member der Klasse exportieren.  Möglicherweise benötigen Sie beim Exportieren einer von `CDialog` abgeleiteten Klasse z. B. nur den Konstruktor und den `DoModal`\-Aufruf.  Sie können diese Member exportiert, welche das die DEF\-Datei der DLL verwenden, aber Sie können **AFX\_EXT\_CLASS** für einzelne Member auch auf ähnliche Weise verwenden, die Sie exportieren müssen.  
+### <a name="not-exporting-the-entire-class"></a>Not Exporting the Entire Class  
+ Sometimes you may want to export just the individual necessary members of your class. For example, if you are exporting a `CDialog`-derived class, you might only need to export the constructor and the `DoModal` call. You can export these members using the DLL's .DEF file, but you can also use **AFX_EXT_CLASS** in much the same way on the individual members you need to export.  
   
- Beispiel:  
+ For example:  
   
 ```  
 class CExampleDialog : public CDialog  
 {  
 public:  
-   AFX_EXT_CLASS CExampleDialog();  
-   AFX_EXT_CLASS int DoModal();  
-   // rest of class definition  
-   .  
-   .  
-   .  
+    AFX_EXT_CLASS CExampleDialog();
+AFX_EXT_CLASS int DoModal();
+*// rest of class definition  
+ .  
+ .  
+ .  
 };  
 ```  
   
- Wenn Sie dies tun, werden möglicherweise auf ein zusätzliches Problem ausgeführt, da Sie nicht mehr alle Member der Klasse exportieren.  Das Problem ist auf die Art, von MFC\-Makros.  Es gibt derzeit verschiedene MFC\-Hilfsmakros, durch die Datenmember deklariert oder definiert werden.  Daher müssen diese Datenmember auch aus der DLL exportiert werden.  
+ When you do this, you may run into an additional problem because you are no longer exporting all members of the class. The problem is in the way that MFC macros work. Several of MFC's helper macros actually declare or define data members. Therefore, these data members will also need to be exported from your DLL.  
   
- Das `DECLARE_DYNAMIC`\-Makro wird beim Erstellen einer Erweiterungs\-DLL z. B. wie folgt definiert:  
+ For example, the `DECLARE_DYNAMIC` macro is defined as follows when building an MFC extension DLL:  
   
 ```  
 #define DECLARE_DYNAMIC(class_name) \  
 protected: \  
-   static CRuntimeClass* PASCAL _GetBaseClass(); \  
-   public: \  
-   static AFX_DATA CRuntimeClass class##class_name; \  
-   virtual CRuntimeClass* GetRuntimeClass() const; \  
+    static CRuntimeClass* PASCAL _GetBaseClass();
+
+\  
+    public: \  
+    static AFX_DATA CRuntimeClass class##class_name; \  
+    virtual CRuntimeClass* GetRuntimeClass() const;
+
+\  
 ```  
   
- Die Zeile, die statisches " `AFX_DATA`" beginnt, deklariert ein statisches Objekt innerhalb einer Klasse.  Um diese Klasse korrekt zu exportieren und auf die Laufzeitinformationen von einem Client .EXE\-Verarbeitungsoptionen zuzugreifen, müssen Sie dieses statische Objekt exportieren.  Da das statische Objekt mit dem `AFX_DATA`\-Modifizierer deklariert wird, müssen Sie `AFX_DATA` beim Erstellen der DLL einfach als **\_\_declspec\(dllexport\)** und beim Erstellen des ausführbaren Clients als **\_\_declspec\(dllimport\)** definieren.  
+ The line that begins "static `AFX_DATA`" is declaring a static object inside of your class. To export this class correctly and access the runtime information from a client .EXE, you need to export this static object. Because the static object is declared with the modifier `AFX_DATA`, you only need to define `AFX_DATA` to be **__declspec(dllexport)** when building your DLL and define it as **__declspec(dllimport)** when building your client executable.  
   
- Wie oben erläutert, wird **AFX\_EXT\_CLASS** bereits auf diese Art definiert.  Sie müssen nur `AFX_DATA` neu definieren, um der Kontext der Klassendefinition **AFX\_EXT\_CLASS** entspricht zu sein.  
+ As discussed above, **AFX_EXT_CLASS** is already defined in this way. You just need to re-define `AFX_DATA` to be the same as **AFX_EXT_CLASS** around your class definition.  
   
- Beispiel:  
+ For example:  
   
 ```  
 #undef  AFX_DATA  
 #define AFX_DATA AFX_EXT_CLASS  
 class CExampleView : public CView  
 {  
-  DECLARE_DYNAMIC()  
-  // ... class definition ...  
+    DECLARE_DYNAMIC() *// ... class definition ...  
 };  
 #undef  AFX_DATA  
 #define AFX_DATA  
 ```  
   
- MFC verwendet stets das `AFX_DATA` \- Symbol für Datenelemente, die innerhalb der Makros definiert, daher funktioniert diese Technik für all diese Szenarien.  Beispielsweise funktioniert es für `DECLARE_MESSAGE_MAP`.  
+ MFC always uses the `AFX_DATA` symbol on data items it defines within its macros, so this technique will work for all such scenarios. For example, it will work for `DECLARE_MESSAGE_MAP`.  
   
 > [!NOTE]
->  Wenn Sie anstelle ausgewählter Klassenmember die gesamte Klasse exportieren, werden statische Datenmember automatisch exportiert.  
+>  If you are exporting the entire class rather than selected members of the class, static data members are automatically exported.  
   
- Sie können das gleiche Verfahren verwenden, den `CArchive` Extraktionsoperator für Klassen automatisch zu exportieren, die Makros `DECLARE_SERIAL` und `IMPLEMENT_SERIAL` verwenden.  Exportieren des Archivoperator, indem Sie die Klassendeklarationen markieren \(in. .h\-Datei\) mit dem folgenden Code:  
+ You can use the same technique to automatically export the `CArchive` extraction operator for classes that use the `DECLARE_SERIAL` and `IMPLEMENT_SERIAL` macros. Export the archive operator by bracketing the class declarations (located in the .H file) with the following code:  
   
 ```  
 #undef AFX_API  
 #define AFX_API AFX_EXT_CLASS  
-  
+ 
 <your class declarations here>  
-  
+ 
 #undef AFX_API  
 #define AFX_API  
 ```  
   
-### Einschränkungen von \_AFXEXT  
- Sie können das **AFXEXT** \_Präprozessorsymbol für Erweiterungs\-DLLs verwenden, sofern Sie nicht mehrere Ebenen Erweiterungs\-DLLs verfügen.  Wenn Sie über Erweiterungs\-DLLs verfügen, die Klassen in Ihren eigenen Erweiterungs\-DLLs aufrufen oder von darin enthaltenen Klassen ableiten und diese DLLs wiederum von MFC\-Klassen abgeleitet werden, müssen Sie ein eigenes Präprozessorsymbol verwenden, um Mehrdeutigkeiten zu vermeiden.  
+### <a name="limitations-of-afxext"></a>Limitations of _AFXEXT  
+ You can use the _**AFXEXT** pre-processor symbol for your MFC extension DLLs as long as you do not have multiple layers of MFC extension DLLs. If you have MFC extension DLLs that call or derive from classes in your own MFC extension DLLs, which then derive from the MFC classes, you must use your own preprocessor symbol to avoid ambiguity.  
   
- Bei Win32 besteht das Problem darin, dass Sie alle Daten explizit als **\_\_declspec\(dllexport\)** deklarieren müssen, wenn sie aus einer DLL exportiert werden sollen, und als **\_\_declspec\(dllimport\)**, wenn sie aus einer DLL importiert werden sollen.  Wenn Sie `_AFXEXT` definieren, wird durch die MFC\-Header sichergestellt, dass **AFX\_EXT\_CLASS** korrekt definiert wird.  
+ The problem is that in Win32, you must explicitly declare any data as **__declspec(dllexport)** if it is to be exported from a DLL, and **__declspec(dllimport)** if it is to be imported from a DLL. When you define `_AFXEXT`, the MFC headers make sure that **AFX_EXT_CLASS** is defined correctly.  
   
- Wenn Sie mehrere Ebenen verfügen, ist ein Symbol wie **AFX\_EXT\_CLASS** nicht ausreichend, da eine Erweiterungs\-DLL sowohl neue Klassen exportieren als auch weitere Klassen aus einer anderen Erweiterungs\-DLL importieren.  Um dieses Problem zu lösen ein spezielles Präprozessorsymbol, das angibt dass Sie die DLL selbst mit der DLL erstellen.  Angenommen, Sie verfügen über die beiden Erweiterungs\-DLLs A.DLL und B.DLL vor.  Sie jeder Export einige Klassen in A.H und in B.H, bzw.  B.DLL verwendet die Klassen von A.DLL.  Die Headerdateien würden in etwa wie folgt aussehen:  
+ When you have multiple layers, one symbol such as **AFX_EXT_CLASS** is not sufficient, since an MFC extension DLL may be exporting new classes as well as importing other classes from another MFC extension DLL. In order to deal with this problem, use a special preprocessor symbol that indicates that you are building the DLL itself versus using the DLL. For example, imagine two MFC extension DLLs, A.DLL, and B.DLL. They each export some classes in A.H and B.H, respectively. B.DLL uses the classes from A.DLL. The header files would look something like this:  
   
 ```  
 /* A.H */  
 #ifdef A_IMPL  
-   #define CLASS_DECL_A   __declspec(dllexport)  
+ #define CLASS_DECL_A   __declspec(dllexport)  
 #else  
-   #define CLASS_DECL_A   __declspec(dllimport)  
+ #define CLASS_DECL_A   __declspec(dllimport)  
 #endif  
-  
+ 
 class CLASS_DECL_A CExampleA : public CObject  
 { ... class definition ... };  
-  
+ 
 /* B.H */  
 #ifdef B_IMPL  
-   #define CLASS_DECL_B   __declspec(dllexport)  
+ #define CLASS_DECL_B   __declspec(dllexport)  
 #else  
-   #define CLASS_DECL_B   __declspec(dllimport)  
+ #define CLASS_DECL_B   __declspec(dllimport)  
 #endif  
-  
+ 
 class CLASS_DECL_B CExampleB : public CExampleA  
 { ... class definition .. };  
 ```  
   
- Wenn A.DLL erstellt wird, wird es mit **\/D A\_IMPL** erstellt und wenn B.DLL erstellt wird, wird es mit **\/D B\_IMPL** erstellt.  Indem separate Symbole für jede DLL verwendet, wird CExampleB exportiert und CExampleA wird importiert, wenn Sie B.DLL erstellt.  CExampleA exportiert, wird, wenn von A.DLL erstellt und importiert, wenn es von B.DLL verwendet wird \(oder einen anderen Client\).  
+ When A.DLL is built, it is built with **/D A_IMPL** and when B.DLL is built, it is built with **/D B_IMPL**. By using separate symbols for each DLL, CExampleB is exported and CExampleA is imported when building B.DLL. CExampleA is exported when building A.DLL and imported when used by B.DLL (or some other client).  
   
- Diese Art der Schichtung wird nicht implementiert, wenn Sie **AFX\_EXT\_CLASS** und die integrierte `_AFXEXT` Präprozessorsymbole verwendet.  Die Technik, die oben beschrieben wird, wird das Problem auf eine Weise gelöst nicht anders die dem Mechanismus MFC selbst, wenn sie die Datenbank\-, OLE\- und Netzwerke verwendet wird.  
+ This type of layering cannot be done when using the built-in **AFX_EXT_CLASS** and `_AFXEXT` preprocessor symbols. The technique described above solves this problem in a manner not unlike the mechanism MFC itself uses when building its OLE, Database, and Network MFC extension DLLs.  
   
-### Kein Exportieren der gesamten Klasse  
- Möglicherweise sollten Sie insbesondere darauf achten, wenn Sie keine gesamte Klasse exportieren.  Sie müssen sicherstellen, dass die erforderlichen Datenelemente, die durch die MFC\-Makros erstellten, korrekt exportiert werden.  Dies kann erfolgen, indem **AFX\_DATA** \-Makro für Ihre spezifische Klasse neu definiert.  Die Neudefinition ist jedes Mal erforderlich, wenn Sie nicht die gesamte Klasse exportieren.  
+### <a name="not-exporting-the-entire-class"></a>Not Exporting the Entire Class  
+ Again, you will have to take special care when you are not exporting an entire class. You have to ensure that the necessary data items created by the MFC macros are exported correctly. This can be done by re-defining **AFX_DATA** to your specific class' macro. This should be done any time you are not exporting the entire class.  
   
- Beispiel:  
+ For example:  
   
 ```  
 // A.H  
 #ifdef A_IMPL  
-   #define CLASS_DECL_A  _declspec(dllexport)  
+ #define CLASS_DECL_A  _declspec(dllexport)  
 #else  
-   #define CLASS_DECL_A  _declspec(dllimport)  
-   #endif  
-  
+ #define CLASS_DECL_A  _declspec(dllimport)  
+ #endif  
+ 
 #undef  AFX_DATA  
 #define AFX_DATA CLASS_DECL_A  
-  
+ 
 class CExampleA : public CObject  
 {  
-   DECLARE_DYNAMIC()  
-   CLASS_DECL_A int SomeFunction();  
-   //class definition   
-   .  
-   .  
-   .  
+    DECLARE_DYNAMIC() 
+    CLASS_DECL_A int SomeFunction();
+*//class definition   
+ .  
+ .  
+ .  
 };  
-  
+ 
 #undef AFX_DATA  
 #define AFX_DATA  
 ```  
   
-### DllMain  
- Es folgt der genaue Code, den Sie in der Hauptquelldatei für die Erweiterungs\-DLL legen sollten.  Es sollte stammen nachdem die Standardeinschließung.  Beachten Sie, dass, wenn Sie Anwendungs\-Assistenten verwenden, um Startdateien für eine Erweiterungs\-DLL zu erstellen, diese `DllMain` für Sie angibt.  
+### <a name="dllmain"></a>DllMain  
+ The following is the exact code you should place in your main source file for your MFC extension DLL. It should come after the standard includes. Note that when you use AppWizard to create starter files for an MFC extension DLL, it supplies a `DllMain` for you.  
   
 ```  
 #include "afxdllx.h"  
@@ -291,7 +311,7 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID)
 {  
    if (dwReason == DLL_PROCESS_ATTACH)  
    {  
-      // Extension DLL one-time initialization   
+      // MFC extension DLL one-time initialization   
       if (!AfxInitExtensionModule(  
              extensionDLL, hInstance))  
          return 0;  
@@ -300,7 +320,7 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID)
    }  
    else if (dwReason == DLL_PROCESS_DETACH)  
    {  
-      // Extension DLL per-process termination  
+      // MFC extension DLL per-process termination  
       AfxTermExtensionModule(extensionDLL);  
   
           // TODO: perform other cleanup tasks here  
@@ -309,167 +329,170 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID)
 }  
 ```  
   
- Der Aufruf von `AfxInitExtensionModule` wird die Modullaufzeitklassen Strukturen \(`CRuntimeClass` \) sowie seine Object Factories \(`COleObjectFactory` \) für Objekte Verwendung später auf, wenn das **CDynLinkLibrary**\-Objekt erstellt wird.  Der \(optionale\) Aufruf von `AfxTermExtensionModule` kann MFC, um die Erweiterungs\-DLL bereinigen, sobald ein Prozess \(der wenn die bevor geschieht, oder wenn die DLL aufgrund eines **FreeLibrary** Aufrufs entladen wird\), von der Erweiterungs\-DLL getrennt wird.  Da die meisten Erweiterungs\-DLLs nicht dynamisch \(normalerweise, werden sie zu ihren Importbibliotheken verknüpft\), geladen werden, ist der Aufruf von `AfxTermExtensionModule` normalerweise nicht notwendig.  
+ The call to `AfxInitExtensionModule` captures the modules runtime-classes (`CRuntimeClass` structures) as well as its object factories (`COleObjectFactory` objects) for use later when the **CDynLinkLibrary** object is created. The (optional) call to `AfxTermExtensionModule` allows MFC to cleanup the MFC extension DLL when each process detaches (which happens when the process exits, or when the DLL is unloaded as a result of a **FreeLibrary** call) from the MFC extension DLL. Since most MFC extension DLLs are not dynamically loaded (usually, they are linked via their import libraries), the call to `AfxTermExtensionModule` is usually not necessary.  
   
- Wenn die Anwendung Erweiterungs\-DLLs dynamisch lädt und freigibt, stellen Sie sicher, ein `AfxTermExtensionModule` wie oben gezeigt aufzurufen.  Stellen Sie auch sicher, `AfxLoadLibrary` und `AfxFreeLibrary` zu verwenden \(anstelle der Win32\-Funktionen **LoadLibrary** und **FreeLibrary**\), wenn die Anwendung mehrere Threads verwendet, oder wenn sie eine Erweiterungs\-DLL dynamisch lädt.  Mit `AfxLoadLibrary` und `AfxFreeLibrary` stellt sicher, dass der Code für das Starten und Beenden, ausführt, wenn die Erweiterungs\-DLL geladen und entladen den globalen MFC\-Zustand nicht beschädigt.  
+ If your application loads and frees MFC extension DLLs dynamically, be sure to call `AfxTermExtensionModule` as shown above. Also be sure to use `AfxLoadLibrary` and `AfxFreeLibrary` (instead of Win32 functions **LoadLibrary** and **FreeLibrary**) if your application uses multiple threads or if it dynamically loads an MFC extension DLL. Using `AfxLoadLibrary` and `AfxFreeLibrary` insures that the startup and shutdown code that executes when the MFC extension DLL is loaded and unloaded does not corrupt the global MFC state.  
   
- Die Headerdatei AFXDLLX.H enthält spezielle Definitionen für Strukturen, die in Erweiterungs\-DLLs, wie die Definitionen für `AFX_EXTENSION_MODULE` und **CDynLinkLibrary** verwendet werden.  
+ The header file AFXDLLX.H contains special definitions for structures used in MFC extension DLLs, such as the definition for `AFX_EXTENSION_MODULE` and **CDynLinkLibrary**.  
   
- Das globale *extensionDLL* muss wie gezeigt deklariert werden.  Im Gegensatz zur 16\-Bit\-Version von MFC, können MFC\-Funktionen während dieser Zeit Speicher belegen und aufrufen, wie das MFCxx.DLL vollständig initialisiert ist, bis das `DllMain`.  
+ The global *extensionDLL* must be declared as shown. Unlike the 16-bit version of MFC, you can allocate memory and call MFC functions during this time, since the MFCxx.DLL is fully initialized by the time your `DllMain` is called.  
   
-### Gemeinsame Nutzung von Ressourcen und Klassen  
- Einfachen Export der MFC\-Erweiterungs\-DLL\-Anforderung nur einige LOWBandbreitenfunktionen zur Clientanwendung und zu nichts mehr.  Mehr Benutzeroberfläche anspruchsvollen DLLs sollten Ressourcen und C\+\+\-Klassen in die Clientanwendung exportieren.  
+### <a name="sharing-resources-and-classes"></a>Sharing Resources and Classes  
+ Simple MFC extension DLLs need only export a few low-bandwidth functions to the client application and nothing more. More user-interface intensive DLLs may want to export resources and C++ classes to the client application.  
   
- Der Export von Ressourcen erfolgt über eine Ressourcenliste.  In jeder Anwendung ist eine einfach verknüpfte Liste mit **CDynLinkLibrary**\-Objekten.  Wenn sie nach einer Ressource finden, betrachten die meisten MFC\-Standardimplementierungen, durch die Ressourcen geladen werden, zunächst im aktuellen Ressourcenmodul \(`AfxGetResourceHandle`\) und wenn er nicht ausgeführt wendet die Liste der **CDynLinkLibrary** gefunden wird, den ein Versuch, die angeforderte Ressource zu laden.  
+ Exporting resources is done through a resource list. In each application is a singly linked list of **CDynLinkLibrary** objects. When looking for a resource, most of the standard MFC implementations that load resources look first at the current resource module (`AfxGetResourceHandle`) and if not found walk the list of **CDynLinkLibrary** objects attempting to load the requested resource.  
   
- Die dynamische Erstellung von C\+\+\-Objekten, dass Klassennamen in C\+\+ erhalten, verläuft ähnlich.  Der Mechanismus zur Deserialisierung von MFC\-Objekten erfordert alle `CRuntimeClass`\-Objekte haben, die so registriert werden, damit er rekonstruieren kann, indem er dynamisch C\+\+\-Objekt des erforderlichen Typs anhand, der zuvor gespeichert wurde.  
+ Dynamic creation of C++ objects given a C++ class name is similar. The MFC object deserialization mechanism needs to have all of the `CRuntimeClass` objects registered so that it can reconstruct by dynamically creating C++ object of the required type based on what was stored earlier.  
   
- Wenn die Clientanwendung soll, Klassen in der Erweiterungs\-DLL verwenden, die `DECLARE_SERIAL` sind, müssen Sie die Klassen exportieren, um zur Clientanwendung sichtbar ist.  Dies wird auch ausgeführt, indem die **CDynLinkLibrary** Liste durchlaufen wird.  
+ If you want the client application to use classes in your MFC extension DLL that are `DECLARE_SERIAL`, then you will need to export your classes to be visible to the client application. This is also done by walking the **CDynLinkLibrary** list.  
   
- Im Fall der MFC Advanced Konzepte überprüfen Sie [DLLHUSK](../top/visual-cpp-samples.md), sieht die Liste etwa folgendermaßen aus:  
+ In the case of the MFC Advanced Concepts sample [DLLHUSK](../visual-cpp-samples.md), the list looks something like:  
   
 ```  
 head ->   DLLHUSK.EXE   - or -   DLLHUSK.EXE  
-               |                      |  
-          TESTDLL2.DLL           TESTDLL2.DLL  
-               |                      |  
-          TESTDLL1.DLL           TESTDLL1.DLL  
-               |                      |  
-               |                      |  
-            MFC90D.DLL            MFC90.DLL  
+ |      |  
+    TESTDLL2.DLL TESTDLL2.DLL  
+ |      |  
+    TESTDLL1.DLL TESTDLL1.DLL  
+ |      |  
+ |      |  
+    MFC90D.DLL MFC90.DLL  
 ```  
   
- Das MFCxx.DLL befindet sich in der Ressourcen\- und Klassenliste.  MFCxx.DLL schließt alle Ressourcen des Standardanbieters MFC, einschließlich der Eingabeaufforderungen aller Standardbefehls\-IDs.  Das Platzieren er am Ende der Liste können DLLs und die Clientanwendung selbst, eine eigene Kopie der MFC\-Standardressourcen verfügen, jedoch auf die gemeinsam genutzten Ressourcen im MFCxx.DLL stattdessen zu verlassen.  
+ The MFCxx.DLL is usually last on the resource and class list. MFCxx.DLL includes all of the standard MFC resources, including prompt strings for all the standard command IDs. Placing it at the tail of the list allows DLLs and the client application itself to not have a their own copy of the standard MFC resources, but to rely on the shared resources in the MFCxx.DLL instead.  
   
- Wenn Sie die Ressourcen und Klassennamen aller DLLs im Namespace der Clientanwendung hat den Nachteil, dass Sie darauf achten müssen, welche von IDs und Namen Sie auswählen.  Sie können diese Funktion jedoch deaktivieren, indem Sie nicht entweder die **CDynLinkLibrary** oder Ressourcen ein Objekt zur Clientanwendung exportieren.  Im [DLLHUSK](../top/visual-cpp-samples.md)\-Beispiel wird der Namespace für gemeinsam genutzte Ressourcen mithilfe mehrerer Headerdateien verwaltet.  [Technischer Hinweis 35](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md) finden Sie weitere Tipps zur Verwendung von Dateien der freigegebenen Ressource.  
+ Merging the resources and class names of all DLLs into the client application's name space has the disadvantage that you have to be careful what IDs or names you pick. You can of course disable this feature by not exporting either your resources or a **CDynLinkLibrary** object to the client application. The [DLLHUSK](../visual-cpp-samples.md) sample manages the shared resource name space by using multiple header files. See [Technical Note 35](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md) for more tips on using shared resource files.  
   
-### Initialisieren der DLL  
- Wie bereits erwähnt werden Sie gewöhnlich ein **CDynLinkLibrary**\-Objekt erstellen, um die Ressourcen und Klassen in die Clientanwendung zu exportieren.  Sie müssen einen exportierten Einstiegspunkt angeben, um die DLL zu initialisieren.  Minimal liegt eine ungültige Routine, die keine Argumente akzeptiert und zurückgibt nichts, kann alle sein, das Sie wie.  
+### <a name="initializing-the-dll"></a>Initializing the DLL  
+ As mentioned above, you will usually want to create a **CDynLinkLibrary** object in order to export your resources and classes to the client application. You will need to provide an exported entry point to initialize the DLL. Minimally, this is a void routine that takes no arguments and returns nothing, but it can be anything you like.  
   
- Jede Clientanwendung, die die DLL verwenden möchte, muss diese Initialisierungsroutine aufrufen, wenn Sie diesen Ansatz verwenden.  Sie ordnen auch diesem **CDynLinkLibrary**\-Objekt im `DllMain` unmittelbar nach dem Aufrufen von `AfxInitExtensionModule`.  
+ Each client application that wants to use your DLL must call this initialization routine, if you use this approach. You may also allocate this **CDynLinkLibrary** object in your `DllMain` just after calling `AfxInitExtensionModule`.  
   
- Die Initialisierungsroutine muss **CDynLinkLibrary** ein Objekt im aktuellen Heap der Anwendung erstellen, der bis zu den Erweiterungs\-DLL\-Informationen verkabelt ist.  Dies kann mit dem folgenden ausgeführt werden:  
+ The initialization routine must create a **CDynLinkLibrary** object in the current application's heap, wired up to your MFC extension DLL information. This can be done with the following:  
   
 ```  
 extern "C" extern void WINAPI InitXxxDLL()  
 {  
-   new CDynLinkLibrary(extensionDLL);  
+    new CDynLinkLibrary(extensionDLL);
+
 }  
 ```  
   
- Der Routinename, *InitXxxDLL*, in diesem Beispiel kann beliebiger Wert sein, den Sie möchten.  Er muss nicht, um ein `extern "C"` handeln, das Damit wird so die Exportliste einfacher zu warten.  
+ The routine name, *InitXxxDLL* in this example, can be anything you want. It does not need to be `extern "C"`, but doing so makes the export list easier to maintain.  
   
 > [!NOTE]
->  Wenn Sie die Erweiterungs\-DLL aus einer regulären DLL verwenden, müssen Sie diese Initialisierungsfunktion exportieren.  Vor Verwendung aller Erweiterungs\-DLL\-Klassen oder Ressourcen dieser Funktion muss den regulären DLL aufgerufen werden.  
+>  If you use your MFC extension DLL from a regular MFC DLL, you must export this initialization function. This function must be called from the regular MFC DLL before using any MFC extension DLL classes or resources.  
   
-### Exportieren von Einträgen  
- Die einfache Möglichkeit dar, die Klassen exportieren ist, **\_\_declspec \(dllimport\)** und **\_\_declspec \(dllexport\)** auf jeder Klasse und globalen Funktion verwenden, die Sie exportieren möchten.  Dies macht es einfacher, ist jedoch weniger effizient als, jeden Einstiegspunkt Benennungsprobleme \(nachfolgend beschrieben\) als Sie weniger Steuerelement verfügen darüber, welche Funktionen exportiert und Sie die Funktionen nicht anhand der Ordinalzahl exportiert werden können.  TESTDLL1 TESTDLL2 und verwenden diese Methode, um die Einträge zu exportieren.  
+### <a name="exporting-entries"></a>Exporting Entries  
+ The simple way to export your classes is to use **__declspec(dllimport)** and **__declspec(dllexport)** on each class and global function you wish to export. This makes it a lot easier, but is less efficient than naming each entry point (described below) since you have less control over what functions are exported and you cannot export the functions by ordinal. TESTDLL1 and TESTDLL2 use this method to export their entries.  
   
- Eine effizientere Methode \(und die Methode wird von MFCxx.DLL\) ist, alle Einträge von Hand zu exportieren, indem sie jeden Eintrag in der DEF\-Datei benennen.  Da wir selektive Exporte von der DLL, also nicht alle\) exportieren, müssen wir uns entscheiden, die bestimmte Schnittstellen Sie exportieren möchten.  Dies ist schwierig, da Sie den ergänzten Namen den Linker in Form von Einträgen in der DEF\-Datei angeben müssen.  Exportieren keine C\+\+\-Klassen, es sei denn, dass Sie tatsächlich einen symbolischen Link für ihn benötigen.  
+ A more efficient method (and the method used by MFCxx.DLL) is to export each entry by hand by naming each entry in the .DEF file. Since we are exporting selective exports from our DLL (that is, not everything), we must decide which particular interfaces we wish to export. This is difficult since you must specify the mangled names to the linker in the form of entries in the .DEF file. Don't export any C++ classes unless you really need to have a symbolic link for it.  
   
- Wenn Sie versucht haben, C\+\+ Exportieren, sollten Klassen mit einem .DEF Datei vor, Sie entwickeln ein Tool, um diese Liste automatisch zu generieren.  Dies kann mit einem zweistufigen Verbindungsprozesses durchgeführt werden.  Verknüpfen Sie die DLL einmal ohne Exporte, und ermöglichen Sie den Linker, um eine .MAP\-Datei zu generieren.  Die .MAP\-Datei kann verwendet werden, um eine Liste von Funktionen zu generieren, die exportiert werden sollen, damit einige Neuanordnen, kann sie verwendet werden, um die EXPORT\-Einträge der DEF\-Datei zu generieren.  Der für Exportliste MFCxx.DLL und OLE und die Datenbankerweiterungs\-dlls, mehrere tausend zahlreich, wurde mit einem solchen Prozess generiert \(obwohl diese nicht automatisch eine vollständig ist und offensichtlich erfordert, die von Zeit zu Zeit\) optimiert.  
+ If you have tried exporting C++ classes with a .DEF file before, you may want to develop a tool to generate this list automatically. This can be done using a two-stage link process. Link your DLL once with no exports, and allow the linker to generate a .MAP file. The .MAP file can be used to generate a list of functions that should be exported, so with some rearranging, it can be used to generate your EXPORT entries for your .DEF file. The export list for MFCxx.DLL and the OLE and Database MFC extension DLLs, several thousand in number, was generated with such a process (although it is not completely automatic and requires some hand tuning every once in a while).  
   
-### CWinApp für CDynLinkLibrary  
- Eine MFC\-Erweiterungs\-DLL hat kein von `CWinApp` abgeleitetes Objekt von eigenen; Stattdessen muss sie mit `CWinApp` abgeleiteten Objekt der Clientanwendung arbeiten.  Dies bedeutet, dass die Clientanwendung die Haupt\-Meldungsverteilschleife im Besitz, die Leerlaufschleife usw.  
+### <a name="cwinapp-vs-cdynlinklibrary"></a>CWinApp vs. CDynLinkLibrary  
+ An MFC Extension DLL does not have a `CWinApp`-derived object of its own; instead it must work with the `CWinApp`-derived object of the client application. This means that the client application owns the main message pump, the idle loop and so on.  
   
- Wenn die MFC\-Erweiterungs\-DLL spezielle Daten für jede Anwendung verwalten muss, können Sie eine neue Klasse von **CDynLinkLibrary** ableiten und in der InitXxxDLL\-Routine erstellen beschreiben Sie oben.  Die DLL kann dann bei ihrer Ausführung die Liste der **CDynLinkLibrary**\-Objekte der aktuellen Anwendung überprüfen, um das Objekt für die jeweilige Erweiterungs\-DLL zu suchen.  
+ If your MFC Extension DLL needs to maintain extra data for each application, you can derive a new class from **CDynLinkLibrary** and create it in the InitXxxDLL routine describe above. When running, the DLL can check the current application's list of **CDynLinkLibrary** objects to find the one for that particular MFC extension DLL.  
   
-### Verwenden von Ressourcen in der DLL Implementierung  
- Wie bereits erwähnt ist die Standardressourcelast die Liste der **CDynLinkLibrary** von Objekten, die dem ersten EXE oder nach der DLL, die, suchen die angeforderte Ressource verfügt.  Alle MFC\-APIs sowie alle mit `AfxFindResourceHandle` des internen Codes, die Ressourcenliste durchläuft, um eine Ressource zu suchen, unabhängig wo sie sich befindet.  
+### <a name="using-resources-in-your-dll-implementation"></a>Using Resources in Your DLL Implementation  
+ As mentioned above, the default resource load will walk the list of **CDynLinkLibrary** objects looking for the first EXE or DLL that has the requested resource. All MFC APIs as well as all the internal code uses `AfxFindResourceHandle` to walk the resource list to find any resource, no matter where it may reside.  
   
- Wenn Sie Ressourcen nur von einer bestimmten Stelle laden möchten, verwenden Sie die APIs `AfxGetResourceHandle` und `AfxSetResourceHandle`, um das alte Handle zu speichern und das neue Handle festzulegen.  Achten Sie darauf, dass Sie das alte Ressourcenhandle wiederherstellen, bevor Sie zur Clientanwendung zurückkehren.  Das Beispiel TESTDLL2 wird dieser Ansatz für ein Menü explizit laden.  
+ If you wish to only load resources from a specific place, use the APIs `AfxGetResourceHandle` and `AfxSetResourceHandle` to save the old handle and set the new handle. Be sure to restore the old resource handle before you return to the client application. The sample TESTDLL2 uses this approach for explicitly loading a menu.  
   
- Das Durchlaufen der Liste hat jedoch den Nachteil, dass die Suche etwas langsamer ist und dass die Ressourcen\-ID\-Bereiche verwaltet werden müssen.  Der Vorteil liegt darin, dass eine Clientanwendung, die mit mehreren Erweiterungs\-DLLs verknüpft ist, jede durch die DLL zur Verfügung gestellte Ressource nutzen kann, ohne dass das DLL\-Instanzenhandle angegeben werden muss.  `AfxFindResourceHandle` ist eine API, die bei der Suche nach einer bestimmten Übereinstimmung die Ressourcenliste durchläuft.  Sie verwendet den Ressourcennamen und \-typ als Parameter und gibt das zuerst ermittelte Ressourcenhandle \(oder NULL\) zurück.  
+ Walking the list has the disadvantages that it is slightly slower and requires managing resource ID ranges. It has the advantage that a client application that links to several MFC extension DLLs can use any DLL-provided resource without having to specify the DLL instance handle. `AfxFindResourceHandle` is an API used for walking the resource list to look for a given match. It takes the name and type of a resource and returns the resource handle where it was first found (or NULL).  
   
-##  <a name="_mfcnotes_writing_an_application_that_uses_the_dll_version"></a> Eine Anwendung schreiben, die die DLL Version verwendet  
+##  <a name="_mfcnotes_writing_an_application_that_uses_the_dll_version"></a> Writing an Application That Uses the DLL Version  
   
-### Anwendungs\-Anforderungen  
- Eine Anwendung, die die freigegebene Version von MFC verwendet, muss einigen einfachen Regeln beachten:  
+### <a name="application-requirements"></a>Application Requirements  
+ An application that uses the shared version of MFC must follow a few simple rules:  
   
--   Sie muss ein `CWinApp`\-Objekt verfügen und den Standardregeln für Nachrichtenzustellungssystem folgen.  
+-   It must have a `CWinApp` object and follow the standard rules for a message pump.  
   
--   Sie muss mit einem Satz von erforderlichen Compilerflags kompiliert werden \(siehe unten\).  
+-   It must be compiled with a set of required compiler flags (see below).  
   
--   Sie muss mit den MFCxx\-Importbibliotheken verknüpfen.  Indem festlegt, kennzeichnet der erforderliche Compiler, die MFC\-Header bestimmen Zeitpunkt der Verknüpfung, der Bibliothek die Anwendung beziehen sollte mit.  
+-   It must link with the MFCxx import libraries. By setting the required compiler flags, the MFC headers determine at link time which library the application should link with.  
   
--   So die ausführbare Datei ausführen sollen, muss MFCxx.DLL auf den Pfad oder in das Windows\-Systemverzeichnis.  
+-   To run the executable, MFCxx.DLL must be on the path or in the Windows system directory.  
   
-### Erstellen mit der Entwicklungsumgebung  
- Wenn Sie die interne Makefile mit die meisten Standardstandards verwenden, können Sie das Projekt mühelos ändern, die DLL\-Version zu erstellen.  
+### <a name="building-with-the-development-environment"></a>Building with the Development Environment  
+ If you are using the internal makefile with most of the standard defaults, you can easily change the project to build the DLL version.  
   
- Der folgende Schritt wird vorausgesetzt, dass eine ordnungsgemäß funktionierende MFC\-Anwendung verfügen, die mit NAFXCWD.LIB \(für Links wird, debuggen\) und \(für NAFXCW.LIB Releasebuild\) und Sie möchten diesen konvertieren, um die freigegebene Version der MFC\-Bibliothek zu verwenden.  Sie führen die Visual C\+\+\-Umgebung aus und eine interne Projektdatei.  
+ The following step assumes you have a correctly functioning MFC application linked with NAFXCWD.LIB (for debug) and NAFXCW.LIB (for retail) and you want to convert it to use the shared version of the MFC library. You are running the Visual C++ environment and have an internal project file.  
   
-1.  **Projekte** Klicken Sie im Menü auf **Eigenschaften**.  Auf der Seite **Allgemein** unter **Projektstandards**, legen Sie Microsoft Foundation Classes auf **MFC in einer gemeinsam genutzten DLL verwenden** fest \(MFCxx \(D\) DLL\).  
+1.  On the **Projects** menu, click **Properties**. In the **General** page under **Project Defaults**, set Microsoft Foundation Classes to **Use MFC in a Shared DLL** (MFCxx(d).dll).  
   
-### Erstellen mit NMAKE  
- Wenn Sie die externe Makefilefunktion Visual C\+\+ verwenden oder NMAKE direkt verwenden, müssen Sie die Makefile bearbeiten, um Compiler\- und Linkeroptionen unterstützen  
+### <a name="building-with-nmake"></a>Building with NMAKE  
+ If you are using the external makefile feature of the Visual C++, or are using NMAKE directly, you will have to edit your makefile to support compiler and linker options  
   
- Erforderliche Compilerflags:  
+ Required compiler flags:  
   
- **\/D\_AFXDLL \/MD**  
- **\/D\_AFXDLL**  
+ **/D_AFXDLL /MD**  
+ **/D_AFXDLL**  
   
- Die Header standardmäßigen MFC benötigen dieses Symbol, definiert werden:  
+ The standard MFC headers need this symbol to be defined:  
   
- **\/MD**  
- Die Anwendung muss anhand DLL\-Version der C\-Laufzeitbibliothek verwenden  
+ **/MD**  
+ The application must use the DLL version of the C run-time library  
   
- Alle anderen Compilerflags folgen den MFC\-Standards \(beispielsweise, debuggen \_DEBUG für\).  
+ All other compiler flags follow the MFC defaults (for example, _DEBUG for debug).  
   
- Bearbeiten Sie die Linkerliste Bibliotheken.  Ändern Sie NAFXCWD.LIB zu MFCxxD.LIB und ändern Sie NAFXCW.LIB zu MFCxx.LIB.  Ersetzen Sie LIBC.LIB durch MSVCRT.LIB.  Wie mit jeder anderen MFC\-Bibliothek ist es wichtig, dass MFCxxD.LIB eine **before** mit C\-Laufzeitbibliotheken ist.  
+ Edit the linker list of libraries. Change NAFXCWD.LIB to MFCxxD.LIB and change NAFXCW.LIB to MFCxx.LIB. Replace LIBC.LIB with MSVCRT.LIB. As with any other MFC library it is important that MFCxxD.LIB is placed **before** any C-runtime libraries.  
   
- Optional können Sie **\/D\_AFXDLL** dem Releasebuild hinzu und debuggen Sie Ressourcencompileroptionen \(die, die eigentlich die Ressourcen mit **\/R** kompiliert\).  Dies macht endgültigen ausführbares kleineres, indem Ressourcen freigibt, die in den MFC\-DLLs vorhanden sind.  
+ Optionally add **/D_AFXDLL** to both your retail and debug resource compiler options (the one that actually compiles the resources with **/R**). This makes your final executable smaller by sharing the resources that are present in the MFC DLLs.  
   
- Ein vollständige Neuerstellung erforderlich, nachdem diese Änderungen vorgenommen werden.  
+ A full rebuild is required after these changes are made.  
   
-### Erstellen der Beispiele  
- Die meisten MFC\-Beispielprogramme können von Visual C\+\+ oder einer freigegebenen NMAKE\-kompatiblen MAKEFILE von der Befehlszeile erstellt werden.  
+### <a name="building-the-samples"></a>Building the Samples  
+ Most of the MFC sample programs can be built from Visual C++ or from a shared NMAKE-compatible MAKEFILE from the command line.  
   
- Um alle Beispiele zu konvertieren um MFCxx.DLL verwendet, können Sie die .MAK\-Datei in Visual C\+\+ und laden die Projektoptionen festlegen wie oben beschrieben.  Wenn Sie den NMAKE\-Build verwenden, können Sie "AFXDLL\=1" auf der NMAKE\-Befehlszeile angeben und die erstellt das Beispiel mithilfe der freigegebenen MFC\-Bibliotheken.  
+ To convert any of these samples to use MFCxx.DLL, you can load the .MAK file into the Visual C++ and set the Project options as described above. If you are using the NMAKE build, you can specify "AFXDLL=1" on the NMAKE command line and that will build the sample using the shared MFC libraries.  
   
- Das erweiterte MFC Konzeptbeispiel [DLLHUSK](../top/visual-cpp-samples.md) wird mit der DLL\-Version von MFC erstellt.  In diesem Beispiel wird nicht nur, wie eine Anwendung erstellt, die mit MFCxx.DLL verknüpft werden, aber es wird auch weitere Funktionen der MFC\-DLL\-Verpackungsoption wie MFC\-Erweiterungs\-DLLs, die später in diesem technischen Hinweis beschrieben werden.  
+ The MFC Advanced Concepts sample [DLLHUSK](../visual-cpp-samples.md) is built with the DLL version of MFC. This sample not only illustrates how to build an application linked with MFCxx.DLL, but it also illustrates other features of the MFC DLL packaging option such as MFC Extension DLLs described later in this technical note.  
   
-### Verpackenhinweise  
- Die Einzelhandelsversion der DLLs \(MFCxx \[U\] .DLL\) können frei verteilt werden.  Die Debugversion der DLLs können nicht frei verteilt werden und sollten nur bei der Entwicklung der Anwendung verwendet werden.  
+### <a name="packaging-notes"></a>Packaging Notes  
+ The retail version of the DLLs (MFCxx[U].DLL) are freely redistributable. The debug version of the DLLs are not freely redistributable and should be used only during the development of your application.  
   
- Die Debugkonfiguration DLLs werden mit Debuginformationen bereitstellen.  Mit dem Visual C\+\+\-Debugger verwenden, können Sie die Ausführung der Anwendung sowie DLL aufzeichnen.  Die Versions\-DLLs \(MFCxx \[U\] .DLL\) enthalten keine Debuginformationen.  
+ The debug DLLs are provided with debugging information. By using the Visual C++ debugger, you can trace execution of your application as well as the DLL. The Release DLLs (MFCxx[U].DLL) do not contain debugging information.  
   
- Wenn Sie oder neu erstellen die DLLs anpassen, sollten Sie sie leicht unterschiedlich "MFCxx," aufrufen, das die Datei MFCDLL.MAK MFC SRC Buildoptionen beschreibt und die Logik für das Umbenennen der DLL enthält.  Die Dateien umzubenennen ist notwendig, da diese DLLs durch viele MFC\-Anwendungen freigegeben sind.  Die benutzerdefinierte Version der MFC\-DLLs aufweist, ersetzen Sie die, die auf dem System installiert werden, kann eine andere MFC\-Anwendung mithilfe der gemeinsam genutzten MFC\-DLLs unterbrechen.  
+ If you customize or rebuild the DLLs, then you should call them something other than "MFCxx" The MFC SRC file MFCDLL.MAK describes build options and contains the logic for renaming the DLL. Renaming the files is necessary, since these DLLs are potentially shared by many MFC applications. Having your custom version of the MFC DLLs replace those installed on the system may break another MFC application using the shared MFC DLLs.  
   
- Das Neu erstellen der MFC\-DLLs wird nicht empfohlen.  
+ Rebuilding the MFC DLLs is not recommended.  
   
-##  <a name="_mfcnotes_how_the_mfc30.dll_is_implemented"></a> Wie das MFCxx.DLL implementiert wird  
- Im folgenden Abschnitt wird beschrieben, wie die MFC\-DLL \(MFCxx.DLL und MFCxxD.DLL\) implementiert wird.  Verstehend sind die Details hier auch nicht wichtig, wenn ein beliebiges Element, das Sie ausführen, die MFC\-DLL, mit der Anwendung zu verwenden ist.  Die Details sind hier nicht zum Verständnis wichtig, wie eine MFC\-Erweiterungs\-DLL schreibt, aber das Verständnis dieser Implementierung können Ihnen, eigene DLL zu schreiben.  
+##  <a name="_mfcnotes_how_the_mfc30.dll_is_implemented"></a> How the MFCxx.DLL Is Implemented  
+ The following section describes how the MFC DLL (MFCxx.DLL and MFCxxD.DLL) is implemented. Understanding the details here are also not important if all you want to do is use the MFC DLL with your application. The details here are not essential for understanding how to write an MFC extension DLL, but understanding this implementation may help you write your own DLL.  
   
-### Implementierungs\-Übersicht  
- Die MFC\-DLL ist tatsächlich ein Sonderfall einer MFC\-Erweiterungs\-DLL, wie oben beschrieben.  Sie verfügt über eine sehr große Anzahl von Exporten für viele Klassen.  Es gibt verschiedene weitere Vorgänge, die, wird in der MFC\-DLL, die sie sogar speziell machen, als reguläre Erweiterungs\-DLL verwenden.  
+### <a name="implementation-overview"></a>Implementation Overview  
+ The MFC DLL is really a special case of an MFC Extension DLL as described above. It has a very large number of exports for a large number of classes. There are a few additional things we do in the MFC DLL that make it even more special than a regular MFC extension DLL.  
   
-### Win32 werden die meisten der Arbeit  
- Die 16\-Bit\-Version von MFC benötigt einige spezielle Verfahren einschließlich ProApp\-Daten auf dem Stapelsegment, besonderen Segmenten, die von Assemblycode entweder 80x86 erstellt wurden, den Ausnahmekontexten pro Prozess und anderen Techniken.  Win32 direkt unterstützt Daten auf Prozessbasis in einer DLL, ist die, was Sie der Regel werden.  In den meisten Fällen ist NAFXCW.LIB MFCxx.DLL nur, das in einer DLL gepackt.  Wenn Sie den MFC\-Quellcode berücksichtigen, suchen Sie sehr wenig \#ifdef \_AFXDLL, da es sehr wenige Sonderfälle gibt, die vorgenommen werden müssen.  Die Daten, die dort sind, sind speziell, Win32 unter Windows 3.1 zu verarbeiten \(andernfalls wird als Win32\).  Win32 unterstützt nicht DLL\-Daten pro Prozess direkt, daher muss die MFC\-DLL \(TLS\)\- die Win32 APIs des lokalen Threadspeicher verwenden, um Prozesslokale Daten abzurufen.  
+### <a name="win32-does-most-of-the-work"></a>Win32 Does Most of the Work  
+ The 16-bit version of MFC needed a number of special techniques including per-app data on the stack segment, special segments created by some 80x86 assembly code, per-process exception contexts, and other techniques. Win32 directly supports per-process data in a DLL, which is what you want most of the time. For the most part MFCxx.DLL is just NAFXCW.LIB packaged in a DLL. If you look at the MFC source code, you'll find very few #ifdef _AFXDLL, since there are very few special cases that need to be made. The special cases that are there are specifically to deal with Win32 on Windows 3.1 (otherwise known as Win32s). Win32s does not support per-process DLL data directly so the MFC DLL must use the thread-local storage (TLS) Win32 APIs to obtain process local data.  
   
-### Auswirkungen auf Bibliotheks\-Quellen, weitere Dateien  
- Auswirkung der **\_AFXDLL**\-Version auf den normalen MFC\-Klassen\-Bibliotheksquellen und Header sind relativ klein.  Eine spezielle Versionsdatei \(AFXV\_DLL.H\) als auch eine zusätzliche Headerdatei \(AFXDLL\_.H\) eingeschlossen durch die Haupt\-AFXWIN.H\-Kopfzeile.  Die AFXDLL\_.H\-Kopfzeile schließt die **CDynLinkLibrary**\-Klasse und andere Implementierungsdetails von **\_AFXDLL**\-Anwendungen und OF MFC\-Erweiterungs\-DLLs ein.  Die AFXDLLX.H\-Kopfzeile wird zum Erstellen von MFC\-Erweiterungs\-DLLs bereitgestellt \(siehe oben für Details\).  
+### <a name="impact-on-library-sources-additional-files"></a>Impact on Library Sources, Additional Files  
+ The impact of the **_AFXDLL** version on the normal MFC class library sources and headers is relatively minor. There is a special version file (AFXV_DLL.H) as well as an additional header file (AFXDLL_.H) included by the main AFXWIN.H header. The AFXDLL_.H header includes the **CDynLinkLibrary** class and other implementation details of both **_AFXDLL** applications and MFC Extension DLLs. The AFXDLLX.H header is provided for building MFC Extension DLLs (see above for details).  
   
- Die regulären Quellen der MFC\-Bibliothek in MFC SRC haben einen Zusatzbedingungscode unter dem **\_AFXDLL** \#ifdef.  Eine zusätzliche Quelldatei \(DLLINIT.CPP\) enthält zusätzlichen den Initialisierungscode einer und anderen Kleber für die gemeinsam genutzte Version von MFC.  
+ The regular sources to the MFC library in MFC SRC have some additional conditional code under the **_AFXDLL** #ifdef. An additional source file (DLLINIT.CPP) contains the extra DLL initialization code and other glue for the shared version of MFC.  
   
- Um die gemeinsam genutzte MFC\-Version zu erstellen, sind zusätzliche Dateien bereitgestellt. \(Siehe unten Details darüber, wie die DLL erstellt.\)  
+ In order to build the shared version of MFC, additional files are provided. (See below for details on how to build the DLL.)  
   
--   Zwei DEF\-Dateien werden zum Exportieren der MFC\-DLL\-Einstiegspunkte für Debuggen \(MFCxxD.DEF\) und freigeben Versionen \(MFCxx.DEF\) der DLL verwendet.  
+-   Two .DEF files are used for exporting the MFC DLL entry points for debug (MFCxxD.DEF) and release (MFCxx.DEF) versions of the DLL.  
   
--   Eine \(RC\-Datei MFCDLL.RC\) enthält alle Ressourcen des Standardanbieters MFC und eine VERSIONINFO\-Ressource für die DLL.  
+-   An .RC file (MFCDLL.RC) contains all the standard MFC resources and a VERSIONINFO resource for the DLL.  
   
--   Eine .CLW\-Datei \(MFCDLL.CLW\) wird bereitgestellt, um das Durchsuchen der MFC\-Klassen mithilfe des Klassen\-Assistenten zuzulassen.  Hinweis: diese Funktion ist nicht der DLL\-Version von MFC bestimmt.  
+-   A .CLW file (MFCDLL.CLW) is provided to allow browsing the MFC classes using ClassWizard. Note: this feature is not particular to the DLL version of MFC.  
   
-### Speicherverwaltung  
- Eine Anwendung mit MFCxx.DLL verwendet eine allgemeine Speicherbelegungsfunktion, die von MSVCRTxx.DLL, die freigegebene C\-Laufzeit DLL bereitgestellt wird.  Die Anwendung, alle Erweiterungs\-DLLs und gut als die MFC\-DLLs selbst verwenden diese freigegebene Speicherbelegungsfunktion.  Indem eine gemeinsam genutzte DLL für Speicherbelegung verwenden, können die MFC\-DLLs Speicherbelegung, die später von der Anwendung oder umgekehrt freigegeben wird.  Da die Anwendung und DLL dieselbe Zuweisung verwenden müssen, sollten Sie C\+\+ globales `operator new` oder `operator delete` nicht überschreiben.  Die gleichen Regeln gelten für den Rest der C\-Laufzeit\-Speicherbelegungsroutinen zu \(wie `malloc`, `realloc`, **free** usw.\).  
+### <a name="memory-management"></a>Memory Management  
+ An application using MFCxx.DLL uses a common memory allocator provided by MSVCRTxx.DLL, the shared C-runtime DLL. The application, any MFC extension DLLs, and well as the MFC DLLs themselves use this shared memory allocator. By using a shared DLL for memory allocation, the MFC DLLs can allocate memory that is later freed by the application or vice versa. Because both the application and the DLL must use the same allocator, you should not override the C++ global `operator new` or `operator delete`. The same rules apply to the rest of the C run-time memory allocation routines (such as `malloc`, `realloc`, **free**, and others).  
   
-### Ordnungszahlen und Klasse \_\_declspec \(dllexport\) und DLL\-Benennung  
- Wir verwenden nicht die Funktionen `class` **\_\_declspec \(dllexport\)** des C\+\+\-Compilers.  Stattdessen wird eine Liste von Exporten mit den Klassenbibliotheksquellen enthalten \(MFCxx.DEF und MFCxxD.DEF\).  Nur dieses werden ausgewählten Satz Einstiegspunkte \(Funktionen und Daten\) exportiert.  Anderen Symbolen, wie private Implementierungsfunktionen oder \- klassen MFC, werden nicht alle Exporte werden durchgeführt nach Ordnungszahl ohne einen Zeichenfolgennamens im Menschen ansässigen oder nicht in der Namentabelle exportiert.  
+### <a name="ordinals-and-class-declspecdllexport-and-dll-naming"></a>Ordinals and class __declspec(dllexport) and DLL naming  
+ We do not use the `class` **__declspec(dllexport)** functionality of the C++ compiler. Instead, a list of exports is included with the class library sources (MFCxx.DEF and MFCxxD.DEF). Only these select set of entry points (functions and data) are exported. Other symbols, such as MFC private implementation functions or classes, are not exported All exports are done by ordinal without a string name in the resident or non-resident name table.  
   
- Die Verwendung von `class` ist **\_\_declspec \(dllexport\)** eine gute Alternative zum Erstellen von kleinerem DLLs, aber bei einer großen DLL wie MFC, ist der Standardwert, der Mechanismus exportiert, Effizienz\- und Kapazitätsgrenzen.  
+ Using `class` **__declspec(dllexport)** may be a viable alternative for building smaller DLLs, but in the case of a large DLL like MFC, the default exporting mechanism has efficiency and capacity limits.  
   
- Dies alles bedeutet, dass wir eine große Menge an Funktionalität in Release\- MFCxx.DLL verpacken können, die nur zum 800 KB ist, ohne dabei Ausführung zu vermindern oder Geschwindigkeit zu laden.  MFCxx.DLL würde größer 100K war diese Technik nicht verwendet worden gewesen sein.  Dadurch ist es auch möglich, zusätzlichen Einstiegspunkten am Ende des .DEF hinzuzufügen aufzunehmen, um einfache Versionsverwaltung zu ermöglichen, ohne die Geschwindigkeits\- und Größeneffizienz des Exportierens zu kompromittieren nach Ordnungszahl.  Hauptversionsrevisionen in der MFC\-Klassen\-Bibliothek ändern den Bibliotheksnamen.  Das bedeutet, dass MFC30.DLL die verteilbare DLL, die Version 3.0 der MFC\-Klassen\-Bibliothek enthält.  Ein Upgrade dieser DLL sagen wir in hypothetischen MFC 3.1, die DLL MFC31.DLL würde stattdessen benannt.  Auch wenn Sie den MFC\-Quellcode ändern, um eine benutzerdefinierte Version der MFC\-DLL zu erstellen, verwenden Sie einen anderen Namen und einen \(vorzugsweise ohne "MFC" im Namen\).  
+ What this all means is that we can package a large amount of functionality in the release MFCxx.DLL that is only around 800 KB without compromising much execution or loading speed. MFCxx.DLL would have been 100K larger had this technique not been used. This also makes it possible to add additional entry points at the end of the .DEF file to allow simple versioning without compromising the speed and size efficiency of exporting by ordinal. Major version revisions in the MFC class library will change the library name. That is, MFC30.DLL is the redistributable DLL containing version 3.0 of the MFC class library. An upgrade of this DLL, say, in a hypothetical MFC 3.1, the DLL would be named MFC31.DLL instead. Again, if you modify the MFC source code to produce a custom version of the MFC DLL, use a different name (and preferably one without "MFC" in the name).  
   
-## Siehe auch  
- [Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)   
- [Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: back_insert_iterator-Klasse | Microsoft-Dokumentation
+title: back_insert_iterator Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,13 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - iterator/std::back_insert_iterator
-- back_insert_iterator
 - iterator/std::back_insert_iterator::container_type
 - iterator/std::back_insert_iterator::reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- back_insert_iterator class
+- std::back_insert_iterator [C++]
+- std::back_insert_iterator [C++], container_type
+- std::back_insert_iterator [C++], reference
 ms.assetid: a1ee07f2-cf9f-46a1-8608-cfaf207f9713
 caps.latest.revision: 21
 author: corob-msft
@@ -36,15 +37,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 3ef742cc4715c419b113e9235bbcc257ba8f1944
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ad4b548a5070c24adc11bff8fca928b816bfab8d
 ms.contentlocale: de-de
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="backinsertiterator-class"></a>back_insert_iterator-Klasse
-Beschreibt einen Iteratoradapter, der den Anforderungen eines Ausgabeiterators entspricht. Er fügt Elemente in das Ende einer Sequenz ein, anstatt sie zu überschreiben, und bietet somit Semantik, die sich von der Semantik zum Überschreiben unterscheidet, die von den Iteratoren der C++-Sequenzcontainer bereitgestellt wird. Die `back_insert_iterator`-Klasse ist für den Typ des Containers vorlagenbasiert.  
+# <a name="backinsertiterator-class"></a>back_insert_iterator Class
+Describes an iterator adaptor that satisfies the requirements of an output iterator. It inserts, rather than overwrites, elements into the back end of a sequence and thus provides semantics that are different from the overwrite semantics provided by the iterators of the C++ sequence containers. The `back_insert_iterator` class is templatized on the type of container.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -53,54 +54,54 @@ template <class Container>
 class back_insert_iterator;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a>Parameters  
  `Container`  
- Der Typ des Containers, an dessen Ende Elemente von einem `back_insert_iterator` eingefügt werden sollen.  
+ The type of container into the back of which elements are to be inserted by a `back_insert_iterator`.  
   
-## <a name="remarks"></a>Hinweise  
- Der Container muss den Anforderungen einer Sequenz zum Einfügen am Ende entsprechen, in der es möglich ist, die Elemente am Ende der Sequenz in amortisierter konstanter Zeit einzufügen. Die C++-Standardbibliothek-Sequenzcontainer, die von der [deque](../standard-library/deque-class.md)-Klasse, der [list](../standard-library/list-class.md)-Klasse und der [vector](../standard-library/vector-class.md)-Klasse definiert werden, stellen die erforderliche `push_back`-Memberfunktion bereit, und erfüllen diese Anforderungen. Diese drei Container sowie Zeichenfolgen werden jeweils für die Verwendung mit `back_insert_iterator` angepasst. Ein `back_insert_iterator` muss immer mit seinem Container initialisiert werden.  
+## <a name="remarks"></a>Remarks  
+ The container must satisfy the requirements for a back insertion sequence where is it possible to insert elements at the end of the sequence in amortized constant time. C++ Standard Library sequence containers defined by the [deque Class](../standard-library/deque-class.md), [list Class](../standard-library/list-class.md) and [vector Class](../standard-library/vector-class.md) provide the needed `push_back` member function and satisfy these requirements. These three containers as well as strings may each be adapted to use with `back_insert_iterator`s. A `back_insert_iterator` must always be initialized with its container.  
   
-### <a name="constructors"></a>Konstruktoren  
-  
-|||  
-|-|-|  
-|[back_insert_iterator](#back_insert_iterator)|Erstellt einen `back_insert_iterator`, der Elemente nach dem letzten Element in einen Container einfügt.|  
-  
-### <a name="typedefs"></a>TypeDefs  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[container_type](#container_type)|Ein Typ, der einen Container für den `back_insert_iterator` bereitstellt.|  
-|[reference](#reference)|Ein Typ, der einen Verweis für den `back_insert_iterator` bereitstellt.|  
+|[back_insert_iterator](#back_insert_iterator)|Constructs a `back_insert_iterator` that inserts elements after the last element in a container.|  
   
-### <a name="operators"></a>Operatoren  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[operator*](#op_star)|Der Dereferenzierungsoperator, der verwendet wird, um den Ausgabeiteratorausdruck *`i` = `x` für eine Einfügung am Ende zu implementieren.|  
-|[operator++](#op_add_add)|Inkrementiert `back_insert_iterator` zum folgenden Speicherort, an dem ein Wert gespeichert werden kann.|  
-|[operator=](#op_eq)|Der Zuweisungsoperator, der verwendet wird, um den Ausgabeiteratorausdruck *`i` = `x` für eine Einfügung am Ende zu implementieren.|  
+|[container_type](#container_type)|A type that provides a container for the `back_insert_iterator`.|  
+|[reference](#reference)|A type that provides a reference for the `back_insert_iterator`.|  
   
-## <a name="requirements"></a>Anforderungen  
+### <a name="operators"></a>Operators  
+  
+|||  
+|-|-|  
+|[operator*](#op_star)|Dereferencing operator used to implement the output iterator expression * `i` = `x` for a back insertion.|  
+|[operator++](#op_add_add)|Increments the `back_insert_iterator` to the next location into which a value may be stored.|  
+|[operator=](#op_eq)|Assignment operator used to implement the output iterator expression * `i` = `x` for a back insertion.|  
+  
+## <a name="requirements"></a>Requirements  
  **Header**: \<iterator>  
   
  **Namespace:** std  
   
-##  <a name="back_insert_iterator"></a> back_insert_iterator::back_insert_iterator  
- Erstellt einen `back_insert_iterator`, der Elemente nach dem letzten Element in einen Container einfügt.  
+##  <a name="back_insert_iterator"></a>  back_insert_iterator::back_insert_iterator  
+ Constructs a `back_insert_iterator` that inserts elements after the last element in a container.  
   
 ```   
 explicit back_insert_iterator(Container& _Cont);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `_Cont`  
- Der Container, in den `back_insert_iterator` ein Element einfügen soll.  
+ The container that the `back_insert_iterator` is to insert an element into.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein `back_insert_iterator` für den Parametercontainer.  
+### <a name="return-value"></a>Return Value  
+ A `back_insert_iterator` for the parameter container.  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // back_insert_iterator_back_insert_iterator.cpp  
@@ -148,18 +149,18 @@ The initial vector vec is: ( 1 2 3 ).
 After the insertions, the vector vec is: ( 1 2 3 40 50 600 700 ).  
 ```  
   
-##  <a name="container_type"></a> back_insert_iterator::container_type  
- Ein Typ, der einen Container für den `back_insert_iterator` bereitstellt.  
+##  <a name="container_type"></a>  back_insert_iterator::container_type  
+ A type that provides a container for the `back_insert_iterator`.  
   
 ```   
 typedef Container  
 container_type;  
 ```  
   
-### <a name="remarks"></a>Hinweise  
- Der Typ ist synonym mit dem Vorlagenparameter **Container**.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **Container**.  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // back_insert_iterator_container_type.cpp  
@@ -200,20 +201,20 @@ The original vector vec is: ( 1 2 3 ).
 After the insertion, the vector is: ( 1 2 3 40 ).  
 ```  
   
-##  <a name="op_star"></a> back_insert_iterator::operator*  
- Der Dereferenzierungsoperator, der zum Implementieren des Ausgabeiteratorausdrucks *\* *i* = *x* verwendet wird.  
+##  <a name="op_star"></a>  back_insert_iterator::operator*  
+ Dereferencing operator used to implement the output iterator expression \* *i* = *x*.  
   
 ```  
 back_insert_iterator<Container>& operator*();
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein Verweis auf das am Ende des Containers eingefügte Element.  
+### <a name="return-value"></a>Return Value  
+ A reference to the element inserted at the back of the container.  
   
-### <a name="remarks"></a>Hinweise  
- Wird zum Implementieren des Ausgabeiteratorausdrucks **\*Iter** = **value** verwendet. Wenn **Iter** ein Iterator ist, der ein Element in einer Sequenz adressiert, dann ersetzt **\*Iter** = **value** das Element mit Wert, ohne dass die Gesamtzahl von Elementen in der Zeichenfolge geändert wird.  
+### <a name="remarks"></a>Remarks  
+ Used to implement the output iterator expression **\*Iter** = **value**. If **Iter** is an iterator that addresses an element in a sequence, then **\*Iter** = **value** replaces that element with value and does not change the total number of elements in the sequence.  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // back_insert_iterator_back_insert.cpp  
@@ -257,21 +258,21 @@ The vector vec is: ( 1 2 3 ).
 After the insertions, the vector vec becomes: ( 1 2 3 10 20 ).  
 ```  
   
-##  <a name="op_add_add"></a> back_insert_iterator::operator++  
- Inkrementiert `back_insert_iterator` zum folgenden Speicherort, an dem ein Wert gespeichert werden kann.  
+##  <a name="op_add_add"></a>  back_insert_iterator::operator++  
+ Increments the `back_insert_iterator` to the next location into which a value may be stored.  
   
 ```  
 back_insert_iterator<Container>& operator++();
 back_insert_iterator<Container> operator++(int);
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein `back_insert_iterator`, der den nächsten Speicherort adressiert, an dem ein Wert gespeichert werden kann  
+### <a name="return-value"></a>Return Value  
+ A `back_insert_iterator` addressing the next location into which a value may be stored.  
   
-### <a name="remarks"></a>Hinweise  
- Sowohl der Prä- als auch der Postinkrement-Operator geben das gleichen Ergebnis zurück.  
+### <a name="remarks"></a>Remarks  
+ Both preincrementation and postincrementation operators return the same result.  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // back_insert_iterator_op_incre.cpp  
@@ -315,31 +316,31 @@ The vector vec is: ( 10 20 ).
 After the insertions, the vector vec becomes: ( 10 20 30 40 ).  
 ```  
   
-##  <a name="op_eq"></a> back_insert_iterator::operator=  
- Fügt einen Wert am Ende eines Containers ein, oder überträgt einen Wert dorthin.  
+##  <a name="op_eq"></a>  back_insert_iterator::operator=  
+ Appends or pushes a value onto the back end of a container.  
   
 ```  
 back_insert_iterator<Container>& operator=(typename Container::const_reference val);
 back_insert_iterator<Container>& operator=(typename Container::value_type&& val);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `val`  
- Der Wert, der in den Container eingefügt werden soll.  
+ The value to be inserted into the container.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein Verweis auf das letzte am Ende des Containers eingefügte Element.  
+### <a name="return-value"></a>Return Value  
+ A reference to the last element inserted at the back of the container.  
   
-### <a name="remarks"></a>Hinweise  
- Der erste Memberoperator wertet `Container.push_back( val)` aus  
+### <a name="remarks"></a>Remarks  
+ The first member operator evaluates `Container.push_back( val)`,  
   
- und gibt danach `*this` zurück. Der zweite Memberoperator wertet Folgendes aus:  
+ then returns `*this`. The second member operator evaluates  
   
  `container->push_back((typename Container::value_type&&)val)`,  
   
- Danach gibt er `*this` zurück.  
+ then returns `*this`.  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // back_insert_iterator_op_assign.cpp  
@@ -378,17 +379,17 @@ int main( )
 }  
 ```  
   
-##  <a name="reference"></a> back_insert_iterator::reference  
- Ein Typ, der einen Verweis für den `back_insert_iterator` bereitstellt.  
+##  <a name="reference"></a>  back_insert_iterator::reference  
+ A type that provides a reference for the `back_insert_iterator`.  
   
 ```  
 typedef typename Container::reference reference;  
 ```  
   
-### <a name="remarks"></a>Hinweise  
- Ein Typ beschreibt den Verweis auf ein Element in der Sequenz, die durch den zugehörigen Container gesteuert wird.  
+### <a name="remarks"></a>Remarks  
+ The type describes a reference to an element of the sequence controlled by the associated container.  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // back_insert_iterator_reference.cpp  
@@ -426,9 +427,9 @@ The vector vec is: ( 1 2 3 ).
 The last element in the vector vec is: 3.  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>See Also  
  [\<iterator>](../standard-library/iterator.md)   
- [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 

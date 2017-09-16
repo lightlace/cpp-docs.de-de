@@ -1,119 +1,139 @@
 ---
-title: "TN011: Verwenden von MFC als Teil einer DLL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.dll"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_USRDLL-Symbol"
-  - "DLLs [C++], Verknüpfen"
-  - "MFC-DLLs [C++], Verknüpfen regulärer DLLs mit MFC"
-  - "TN011"
-  - "USRDLLs, Compilerschalter"
+title: 'TN011: Using MFC as Part of a DLL | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.dll
+dev_langs:
+- C++
+helpviewer_keywords:
+- _USRDLL symbol
+- USRDLLs, compiler switches
+- TN011
+- DLLs [MFC], linking
+- MFC DLLs [MFC], linking regular MFC DLLs to MFC
 ms.assetid: 76753e9c-59dc-40f6-b6a7-f6bb9a7c4190
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# TN011: Verwenden von MFC als Teil einer DLL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6c705e64040214c028cdc2e5a59ba173a04ec9ea
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Dieser Hinweis beschreibt reguläre DLL, die es Ihnen ermöglichen, die MFC\-Bibliothek als Bestandteil einer Dynamic Link Library \(DLL\) verwenden.  Es wird vorausgesetzt, dass Sie mit DLL\-Dateien vertraut sind und wie sie erstellt.  Informationen zum MFC\-Erweiterungs\-DLLs, mit denen Sie Erweiterungen der MFC\-Bibliothek erstellen können, finden Sie unter [DLL Version of MFC](../mfc/tn033-dll-version-of-mfc.md).  
+---
+# <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011: Using MFC as Part of a DLL
+This note describes regular MFC DLLs, which allow you to use the MFC library as part of a Windows dynamic-link library (DLL). It assumes that you are familiar with Windows DLLs and how to build them. For information about MFC extension DLLs, with which you can create extensions to the MFC library, see [DLL Version of MFC](../mfc/tn033-dll-version-of-mfc.md).  
   
-## DLL\-Schnittstellen  
- Reguläre DLL wird angenommen, dass Schnittstellen zwischen der Anwendung und der DLL in C ähnlichen Funktionen oder explizit in exportierten Klassen angegeben werden.  MFC\-Klassen\-Schnittstellen können nicht exportiert werden.  
+## <a name="dll-interfaces"></a>DLL Interfaces  
+ regular MFC DLLs assume interfaces between the application and the DLL are specified in C-like functions or explicitly exported classes. MFC class interfaces cannot be exported.  
   
- Wenn eine DLL und eine Anwendung, MFC verwenden möchten, können Sie eine Auswahl entweder zur Verwendung die freigegebene Version der MFC\-Bibliotheken oder zu statisch mit einer Kopie der Bibliotheken verknüpfen.  Die Anwendung und DLL beide verwenden möglicherweise eine der Standardversionen der MFC\-Bibliothek.  
+ If both a DLL and an application want to use MFC, both have a choice to either use the shared version of the MFC libraries or to statically link to a copy of the libraries. The application and DLL may both use one of the standard versions of the MFC library.  
   
- Reguläre DLLs haben mehrere Vorteile:  
+ regular MFC DLLs have several advantages:  
   
--   Die Anwendung, die die DLL verwendet, muss MFC nicht verwenden und muss keine Visual C\+\+\-Anwendung sein.  
+-   The application that uses the DLL does not have to use MFC and does not have to be a Visual C++ application.  
   
--   Mit regulären DLL, die statisch mit MFC verknüpfen, wird die Größe der DLL nur von MFC und den C\-Ablaufroutinen ab, die verwendet und verknüpft werden.  
+-   With regular MFC DLLs that statically link to MFC, the size of the DLL depends only on the MFC and C runtime routines that are used and linked.  
   
--   Mit regulären DLL, die dynamisch mit MFC verknüpfen kann, die sich im Arbeitsspeicher von der Anwendung der gemeinsam genutzten MFC\-Version erheblich sein.  Sie müssen jedoch die gemeinsam genutzten DLLs, den Kraftstoffregler *\<version\>*.dll und das Msvvcrt *\<version\>*.dll verteilen, mit der DLL.  
+-   With regular MFC DLLs that dynamically link to MFC, the savings in memory from using the shared version of MFC can be significant. However, you must distribute the shared DLLs, Mfc*\<version>*.dll and Msvvcrt*\<version>*.dll, with your DLL.  
   
--   Der DLL\-Entwurf ist unabhängig von, wie Klassen implementiert werden.  das DLL\-Entwurf exportiert nur in die APIs, werden.  Daher wird die Implementierung ändern, sind reguläre DLL noch gültig.  
+-   The DLL design is independent of how classes are implemented. Your DLL design exports only to the APIs you want. As a result, if the implementation changes, regular MFC DLLs are still valid.  
   
--   Mit regulären DLL, die statisch mit MFC verknüpfen, wenn Anwendung und DLL MFC verwendet, gibt keine Probleme mit der Anwendung, die eine andere Version von MFC als DLL oder umgekehrt\).  Da die MFC\-Bibliothek statisch in jede DLL in EXE oder verknüpft ist, gibt es keine Fragen darüber, welche Version Sie haben.  
+-   With regular MFC DLLs that statically link to MFC, if both DLL and application use MFC, there are no problems with the application that wants a different version of MFC than the DLL or vice versa. Because the MFC library is statically linked into each DLL or EXE, there is no question about which version you have.  
   
-## API Einschränkungen  
- Einige MFC\-Funktionalität gilt nicht für die DLL\-Version, entweder aufgrund der technischen Einschränkungen zu oder, da diese Dienste normalerweise von der Anwendung bereitgestellt werden.  Mit der aktuellen Version von MFC, ist die einzige Funktion, die nicht angewendet ist, `CWinApp::SetDialogBkColor`.  
+## <a name="api-limitations"></a>API Limitations  
+ Some MFC functionality does not apply to the DLL version, either because of technical limitations or because those services are usually provided by the application. With the current version of MFC, the only function that is not applicable is `CWinApp::SetDialogBkColor`.  
   
-## Erstellen der DLL  
- Wenn muss das Kompilieren von regulären DLL, die statisch mit MFC, auf Symbole `_USRDLL` und `_WINDLL` verknüpfen, definiert werden.  Der DLL\-Code muss den folgenden Compilerschaltern auch kompiliert werden:  
+## <a name="building-your-dll"></a>Building Your DLL  
+ When compiling regular MFC DLLs that statically link to MFC, the symbols `_USRDLL` and `_WINDLL` must be defined. Your DLL code must also be compiled with the following compiler switches:  
   
--   **\/D\_WINDLL** gibt der Kompilierung ist für eine DLL an  
+- **/D_WINDLL** signifies the compilation is for a DLL  
   
--   **\/D\_USRDLL** ermöglicht Ihnen erstellen eine reguläre DLL an  
+- **/D_USRDLL** specifies you are building a regular MFC DLL  
   
- Diese Symbole müssen Sie auch definieren und diese Compilerschalter verwenden, wenn Sie reguläre DLL kompilieren, die dynamisch mit MFC verknüpfen.  Zudem muss das Symbol `_AFXDLL` definiert und der DLL\-Code muss mit kompiliert werden:  
+ You must also define these symbols and use these compiler switches when you compile regular MFC DLLs that dynamically link to MFC. Additionally, the symbol `_AFXDLL` must be defined and your DLL code must be compiled with:  
   
--   **\/D\_AFXDLL** gibt an, dass Sie eine reguläre DLL, die dynamisch mit MFC verknüpft  
+- **/D_AFXDLL** specifies that you are building a regular MFC DLL that dynamically links to MFC  
   
- Die Schnittstellen \(APIs\) zwischen der Anwendung und der DLL müssen explizit exportiert werden.  Es wird empfohlen, die Schnittstellen definieren, um geringe Bandbreite zu sein, verwenden und nur C\-Schnittstellen, wenn Sie können.  Direkte C\-Schnittstellen sind einfacher als komplexere C\+\+\-Klassen zu warten.  
+ The interfaces (APIs) between the application and the DLL must be explicitly exported. We recommend that you define your interfaces to be low bandwidth, and use only C interfaces if you can. Direct C interfaces are easier to maintain than more complex C++ classes.  
   
- Platzieren Sie die APIs in einer separaten Headerdatei, die von C\- als C\+\+\-Dateien enthalten sein kann.  Siehe die Header ScreenCap.h im MFC Advanced Konzeptbeispiel [DLLScreenCap](../top/visual-cpp-samples.md) als Beispiel.  Um die Funktionen zu exportieren, geben Sie diese im Abschnitt `EXPORTS` der Moduldefinitionsdatei \(.DEF\) oder schließen Sie `__declspec(dllexport)` auf den Funktionsdefinitionen ein.  Verwenden Sie `__declspec(dllimport)`, um diese Funktionen in die ausführbare Clientdatei zu importieren.  
+ Place your APIs in a separate header that can be included by both C and C++ files. See the header ScreenCap.h in the MFC Advanced Concepts sample [DLLScreenCap](../visual-cpp-samples.md) for an example. To export your functions, enter them in the `EXPORTS` section of your module definition file (.DEF) or include `__declspec(dllexport)` on your function definitions. Use `__declspec(dllimport)` to import these functions into the client executable.  
   
- Sie müssen das `AFX_MANAGE_STATE`\-Makro zu allen exportierten Funktionen in reguläre DLL hinzufügen, die dynamisch mit MFC verknüpfen.  Dieses Makro legt den Zustand der DLL als aktuellen Modulzustand fest.  Um dieses Makro zu verwenden, fügen Sie die folgende Codezeile am Anfang von Funktionen hinzu, die aus der DLL exportiert werden:  
+ You must add the `AFX_MANAGE_STATE` macro at the beginning of all the exported functions in regular MFC DLLs that dynamically link to MFC. This macro sets the current module state to the one for the DLL. To use this macro, add the following line of code to the beginning of functions exported from the DLL:  
   
  `AFX_MANAGE_STATE(AfxGetStaticModuleState( ))`  
   
-## DllMain WinMain \-\>  
- Die MFC\-Bibliothek definiert den Standard\-Einstiegspunkt Win32\- `DllMain`, der die [CWinApp](../mfc/reference/cwinapp-class.md) berechnetes Objekt wie in einer normalen MFC\-Anwendung initialisiert.  Fügen Sie alle DLL\-Besondereinitialisierung in der Methode wie [InitInstance](../Topic/CWinApp::InitInstance.md) in einer normalen MFC\-Anwendung.  
+## <a name="winmain---dllmain"></a>WinMain -> DllMain  
+ The MFC library defines the standard Win32 `DllMain` entry point that initializes your [CWinApp](../mfc/reference/cwinapp-class.md) derived object as in a typical MFC application. Place all DLL-specific initialization in the [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) method as in a typical MFC application.  
   
- Beachten Sie, dass der [CWinApp::Run](../Topic/CWinApp::Run.md)\-Mechanismus nicht auf eine DLL angewendet werden kann, da die Haupt\-Meldungsverteilschleife im Besitz der Anwendung ist.  Wenn die DLL nicht modale Dialogfelder anzeigt oder ein eigenes Hauptrahmenfenster hat, muss die Haupt\-Meldungsverteilschleife der Anwendung eine aus der DLL exportierte Routine aufrufen, die [CWinApp::PreTranslateMessage](../Topic/CWinApp::PreTranslateMessage.md).  
+ Note that the [CWinApp::Run](../mfc/reference/cwinapp-class.md#run) mechanism does not apply to a DLL, because the application owns the main message pump. If your DLL displays modeless dialogs or has a main frame window of its own, your application's main message pump must call a DLL-exported routine that calls [CWinApp::PreTranslateMessage](../mfc/reference/cwinapp-class.md#pretranslatemessage).  
   
- Siehe das DLLScreenCap\-Beispiel für Verwendung dieser Funktion.  
+ See the DLLScreenCap sample for use of this function.  
   
- Die `DllMain`\-Funktion, die MFC bereitstellt, ruft die Methode [CWinApp::ExitInstance](../Topic/CWinApp::ExitInstance.md) der Klasse, die von `CWinApp`  abgeleitet wird, bevor die DLL entladen wird.  
+ The `DllMain` function that MFC provides will call the [CWinApp::ExitInstance](../mfc/reference/cwinapp-class.md#exitinstance) method of your class that is derived from `CWinApp` before the DLL is unloaded.  
   
-## Verknüpfen der DLL  
- Mit regulären DLL, die statisch mit MFC verknüpfen, müssen Sie die DLL mit Nafxcwd.lib oder Nafxcw.lib und mit der Version der C\-Laufzeiten verknüpfen, die mit Libcmt.lib werden.  Diese Bibliotheken sind vordefiniert und installiert werden, indem sie angibt, wenn Sie Visual C\+\+ Setup erneut aus ausführen.  
+## <a name="linking-your-dll"></a>Linking Your DLL  
+ With regular MFC DLLs that statically link to MFC, you must link your DLL with Nafxcwd.lib or Nafxcw.lib and with the version of the C runtimes named Libcmt.lib. These libraries are pre-built and may be installed by specifying them when you run Visual C++ setup.  
   
-## Beispielcode  
- Siehe MFC erweiterte Konzeptbeispielprogramm DLLScreenCap für ein vollständiges Beispiel.  Einige interessante in diesem Beispiel zu beachten Elemente, sind, wie folgt:  
+## <a name="sample-code"></a>Sample Code  
+ See the MFC Advanced Concepts sample program DLLScreenCap for a complete sample. Several interesting things to note in this sample are as follows:  
   
--   Die Compilerflags der DLL und die der Anwendung sind unterschiedlich.  
+-   The compiler flags of the DLL and those of the application are different.  
   
--   Die Linkzeilen und DEF\-Dateien für die DLL und die für die Anwendung sind unterschiedlich.  
+-   The link lines and .DEF files for the DLL and those for the application are different.  
   
--   Die Anwendung, die die DLL verwendet, muss nicht in C\+\+ sein.  
+-   The application that uses the DLL does not have to be in C++.  
   
--   Die Schnittstelle zwischen der Anwendung und der DLL ist eine API, die mit C oder C\+\+ verwendbar ist und mit DLLScreenCap.def exportiert wird.  
+-   The interface between the application and the DLL is an API that is usable by C or C++ and is exported with DLLScreenCap.def.  
   
- Das folgende Beispiel veranschaulicht eine API, die in einem regulären DLL definiert wird, die statisch mit MFC verknüpft.  In diesem Beispiel wird die Deklaration in einem `extern "C" { }`\-Block für C\+\+\-Benutzer eingeschlossen.  Dies hat verschiedene Vorteile.  Zunächst ist die DLL damit auch für Nicht\-C\+\+\-Clientanwendungen verwendbar APIs.  wird der DLL\-Verarbeitungsaufwand reduziert, da die C\+\+\-Namensergänzung nicht auf den exportierten Namen angewendet wird.  Abschließend wird es einfacher, einer DEF\-Datei \(zum Exportieren nach Ordnungszahl\) ohne zu müssen explizit hinzuzufügen, um Namensergänzung verloren gehen.  
+ The following example illustrates an API that is defined in a regular MFC DLL that statically links to MFC. In this example, the declaration is enclosed in an `extern "C" { }` block for C++ users. This has several advantages. First, it makes your DLL APIs usable by non-C++ client applications. Second, it reduces DLL overhead because C++ name mangling will not be applied to the exported name. Lastly, it makes it easier to explicitly add to a .DEF file (for exporting by ordinal) without having to worry about name mangling.  
   
 ```  
 #ifdef __cplusplus  
 extern "C" {  
 #endif  /* __cplusplus */  
-  
+ 
 struct TracerData  
 {  
-    BOOL    bEnabled;  
-    UINT    flags;  
+    BOOL bEnabled;  
+    UINT flags;  
 };  
-  
-BOOL PromptTraceFlags(TracerData FAR* lpData);  
-  
+ 
+BOOL PromptTraceFlags(TracerData FAR* lpData);
+
+ 
 #ifdef __cplusplus  
 }  
 #endif  
 ```  
   
- Strukturen, die von der API verwendet werden, werden nicht von MFC\-Klassen abgeleitet und werden in der APIkopfzeile definiert.  Dies reduziert die Komplexität der Schnittstelle zwischen der DLL und der Anwendung und führt die DLL verwendet von C\-Programme.  
+ The structures used by the API are not derived from MFC classes and are defined in the API header. This reduces the complexity of the interface between the DLL and the application and makes the DLL usable by C programs.  
   
-## Siehe auch  
- [Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)   
- [Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

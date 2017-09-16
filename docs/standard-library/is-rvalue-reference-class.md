@@ -1,5 +1,5 @@
 ---
-title: is_rvalue_reference-Klasse | Microsoft-Dokumentation
+title: is_rvalue_reference Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_rvalue_reference
 - type_traits/std::is_rvalue_reference
 dev_langs:
 - C++
@@ -35,15 +34,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: 748a717c1f49206457bded1cd11be2dd30753f6f
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: def660ab87c5fc9ea47814fe5bcd7e4c2cfb4118
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isrvaluereference-class"></a>is_rvalue_reference-Klasse
-Testet, ob es sich beim Typ um einen „rvalue“-Verweis handelt.  
+# <a name="isrvaluereference-class"></a>is_rvalue_reference Class
+Tests if type is an rvalue reference.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -52,21 +51,21 @@ template <class Ty>
 struct is_rvalue_reference;
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- Der abzufragende Typ.  
+ The type to query.  
   
-## <a name="remarks"></a>Hinweise  
- Eine Instanz dieses Typprädikats ist TRUE, wenn der Typ `Ty` ein [rvalue-Verweis](../cpp/rvalue-reference-declarator-amp-amp.md) ist.  
+## <a name="remarks"></a>Remarks  
+ An instance of this type predicate holds true if the type `Ty` is an [rvalue reference](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [Lvalues und Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)
+ [Lvalues and Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)
 
 
 

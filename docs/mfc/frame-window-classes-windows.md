@@ -1,51 +1,70 @@
 ---
-title: "Rahmenfensterklassen (Windows) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.frame"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Rahmenfensterklassen, Referenz"
+title: Frame Window Classes (Windows) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.frame
+dev_langs:
+- C++
+helpviewer_keywords:
+- frame window classes [MFC], reference
 ms.assetid: 6342ec5f-f922-4da8-a78e-2f5f994c7142
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Rahmenfensterklassen (Windows)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8b476e2f1b4922dd35dd0eb27f04670550fc84e8
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Rahmenfenster sind Fenster, die eine Anwendung oder einen Teil einer Anwendung gestalten.  Rahmenfenster enthalten normalerweise weitere Fenster, wie Ansichten, Symbolleisten und Statusleisten.  Bei `CMDIFrameWnd` enthalten sie `CMDIChildWnd` kann Objekte indirekt.  
+---
+# <a name="frame-window-classes-windows"></a>Frame Window Classes (Windows)
+Frame windows are windows that frame an application or a part of an application. Frame windows usually contain other windows, such as views, tool bars, and status bars. In the case of `CMDIFrameWnd`, they may contain `CMDIChildWnd` objects indirectly.  
   
  [CFrameWnd](../mfc/reference/cframewnd-class.md)  
- Die Basisklasse für das Hauptrahmenfenster einer SDI\-Anwendung.  Auch die Basisklasse für weitere gesamten Rahmenfenster klassifiziert.  
+ The base class for an SDI application's main frame window. Also the base class for all other frame window classes.  
   
  [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)  
- Die Basisklasse für das Hauptrahmenfenster einer MDI\-Anwendung.  
+ The base class for an MDI application's main frame window.  
   
  [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)  
- Die Basisklasse für die Dokumentrahmenfenster einer MDI\-Anwendung.  
+ The base class for an MDI application's document frame windows.  
   
  [CMiniFrameWnd](../mfc/reference/cminiframewnd-class.md)  
- Ein Rahmenfenster mit halber Höhe in der Regel angezeigt um unverankerte Symbolleisten.  
+ A half-height frame window typically seen around floating toolbars.  
   
  [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)  
- Stellt das Rahmenfenster für eine Ansicht bereit, wenn ein Serverdokument direkt bearbeitet wird.  
+ Provides the frame window for a view when a server document is being edited in place.  
   
-## Verwandte Klasse  
- `CMenu`\-Klasse bietet eine Schnittstelle, über die auf die Menüs der Anwendung zugreifen.  Es ist für Menüs dynamisch zur Laufzeit bearbeiten nützlich; wenn beispielsweise Menüelemente entsprechend Kontext hinzugefügt oder gelöscht werden.  Obwohl Menüs mit Rahmenfenstern meist sind, können sie mit anderen Dialogfeldern und Fenstern nonchild auch verwendet werden.  
+## <a name="related-class"></a>Related Class  
+ Class `CMenu` provides an interface through which to access your application's menus. It is useful for manipulating menus dynamically at run time; for example, when adding or deleting menu items according to context. Although menus are most often used with frame windows, they can also be used with dialog boxes and other nonchild windows.  
   
  [CMenu](../mfc/reference/cmenu-class.md)  
- Kapselt `HMENU` ein Handle für die der Menüleiste und der Anwendung Popupmenüs.  
+ Encapsulates an `HMENU` handle to the application's menu bar and pop-up menus.  
   
-## Siehe auch  
- [Klassenübersicht](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

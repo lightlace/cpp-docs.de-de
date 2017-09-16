@@ -1,74 +1,92 @@
 ---
-title: "MDI-Gruppen im Registerkartenformat | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mdi, Gruppen im Registerkartenformat"
-  - "Gruppen im Registerkartenformat"
+title: MDI Tabbed Groups | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- mdi [MFC], tabbed groups
+- tabbed grous [MFC]
 ms.assetid: 0a464f36-39b7-4e68-8b67-ec175de28377
 caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# MDI-Gruppen im Registerkartenformat
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 955c785bab2f16d12c71b3ba253f753e8ab581fb
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Die mit den im Gruppenfunktion des Multiple Document Interface \(MDI\) aktiviert Multiple Document Interface \(MDI\)\- Anwendungen, eine oder mehrere Fenster in Registerform \(oder Gruppen der Fenster im Registerkartenformat, bekannt als *Gruppen im Registerkartenformat*\) im MDI\-Clientbereich anzuzeigen.  Die Fenster in Registerform können vertikal oder horizontal ausgerichtet werden.  Wenn eine Anwendung mehr als eine MDI mit den versehene Gruppe hostet, werden die Gruppen von Splittern getrennt.  
+---
+# <a name="mdi-tabbed-groups"></a>MDI Tabbed Groups
+The multiple document interface (MDI) tabbed groups feature enables multiple document interface (MDI) applications to display one or more tabbed windows (or groups of tabbed windows, known as *tabbed groups*) in the MDI client area. The tabbed windows can be aligned vertically or horizontally. If an application hosts more than one MDI tabbed group, the groups are separated by splitters.  
   
-## Features  
- Die die folgenden Funktionen von MDI mit als Registerkarten Gruppen:  
+## <a name="features"></a>Features  
+ The following are the features of MDI tabbed groups:  
   
--   Eine Anwendung kann dynamisch erstellen Fenster im Registerkartenformat.  
+-   An application can create tabbed windows dynamically.  
   
--   Eine Anwendung kann horizontal oder vertikal ausrichten Fenster im Registerkartenformat.  
+-   An application can align tabbed windows horizontally or vertically.  
   
--   Gruppen der Fenster im Registerkartenformat werden von den Splittern getrennt.  Der Benutzer kann die Größe Gruppen im Registerkartenformat, indem den Splitter verwendet.  
+-   Groups of tabbed windows are separated by splitters. The user can resize tabbed groups by using the splitter.  
   
--   Der Benutzer kann zwischen Gruppen einzelne Registerkarten ziehen.  
+-   The user can drag individual tabs between groups.  
   
--   Der Benutzer kann einzelne Registerkarten ziehen, um neue Gruppen zu erstellen.  
+-   The user can drag individual tabs to create new groups.  
   
--   Der Benutzer kann Registerkarten verschieben oder neue Gruppen erstellen, indem ein Kontextmenü verwendet.  
+-   The user can move tabs or create new groups by using a shortcut menu.  
   
--   Eine Anwendung kann das Layout von Fenstern speichern und laden im Registerkartenformat.  
+-   An application can save and load the layout of tabbed windows.  
   
--   Eine Anwendung kann die Liste von MDI\-Dokumenten speichern und laden.  
+-   An application can save and load the list of MDI documents.  
   
--   Eine Anwendung kann auf einzelne Gruppen Zugriff im Registerkartenformat und die Parameter ändern.  
+-   An application can access individual tabbed groups and modify their parameters.  
   
-### Mithilfe der MDI mit als Registerkarten Gruppen  
- Die die folgenden Aufgaben, die im Allgemeinen mit MDI mit als Registerkarten Gruppen ausgeführt werden:  
+### <a name="using-mdi-tabbed-groups"></a>Using MDI Tabbed Groups  
+ The following are tasks commonly performed with MDI tabbed groups:  
   
--   So MDI zu aktivieren angegebene Gruppen für ein Hauptrahmenfenster, aufrufen mit den [CMDIFrameWndEx::EnableMDITabbedGroups](../Topic/CMDIFrameWndEx::EnableMDITabbedGroups.md).  Der zweite Parameter dieser Methode ist eine Instanz der Klasse `CMDITabInfo`.  Sie können die Standardparameter verwenden oder ändern, bevor Sie `CMDIFrameWndEx::EnableMDITabbedGroups` aufrufen.  
+-   To enable MDI tabbed groups for a main frame window, call [CMDIFrameWndEx::EnableMDITabbedGroups](../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups). The second parameter of this method is an instance of the `CMDITabInfo` class. You can use the default parameters or modify them before you call `CMDIFrameWndEx::EnableMDITabbedGroups`.  
   
--   Um die Eigenschaften einer MDI mit als Registerkarten Gruppe zur Laufzeit ändern, ein `CMDITabInfo`\-Objekt erstellen oder ändern und `CMDIFrameWndEx::EnableMDITabbedGroups` erneut aufrufen  
+-   To modify the properties of an MDI tabbed group at run time, create or modify a `CMDITabInfo` object and call `CMDIFrameWndEx::EnableMDITabbedGroups` again  
   
--   Um eine Liste von MDI abzurufen angegebene Fenster, mit den `CMDIFrameWndEx::GetMDITabGroups` aufrufen.  
+-   To obtain a list of MDI tabbed windows, call `CMDIFrameWndEx::GetMDITabGroups`.  
   
--   Um ein neues MDI erstellen angegebene Gruppe neben einer aktiven Gruppe im Registerkartenformat, rufen `CMDIFrameWndEx::MDITabNewGroup` mit den.  
+-   To create a new MDI tabbed group next to an active tabbed group, call `CMDIFrameWndEx::MDITabNewGroup`.  
   
--   Um den Eingabefokus zum vorherigen oder nächsten Fenster einer Gruppe zu verschieben im Registerkartenformat, rufen Sie `CMDIFrameWndEx::MDITabMoveToNextGroup` auf.  
+-   To shift the input focus to the previous or next window of a tabbed group, call `CMDIFrameWndEx::MDITabMoveToNextGroup`.  
   
--   So bestimmen Sie, ob ein Fenster ein Member eines MDI mit als Registerkarten Gruppenaufrufs `CMDIFrameWndEx::IsMemberOfMDITabGroup` ist.  
+-   To determine whether a window is a member of an MDI tabbed group call `CMDIFrameWndEx::IsMemberOfMDITabGroup`.  
   
--   So bestimmen Sie, ob MDI\-Registerkarten oder MDI mit den versehene Gruppen für ein Hauptrahmenfenster aktiviert werden, rufen Sie `CMDIFrameWndEx::AreMDITabs`.  So bestimmen nur ob MDI mit den Gruppen versehene aktiviert werden, rufen Sie `CMDIFrameWndEx::IsMDITabbedGroup`.  
+-   To determine whether MDI tabs or MDI tabbed groups are enabled for a main frame window, call `CMDIFrameWndEx::AreMDITabs`. To determine only whether MDI tabbed groups are enabled, call `CMDIFrameWndEx::IsMDITabbedGroup`.  
   
--   Um ein Kontextmenü anzuzeigen wenn der Benutzer auf eine Registerkarte klicken oder in einer MDI mit anderen als Registerkarten Gruppe zieht, überschreiben Sie `CMDIFrameWndEx::OnShowMDITabContextMenu` in von `CMDIFrameWndEx` abgeleiteten Klasse.  Wenn Sie diese Methode nicht implementieren, wird die Anwendung nicht das Kontextmenü angezeigt.  
+-   To display a shortcut menu when the user clicks a tab or drags it to another MDI tabbed group, override `CMDIFrameWndEx::OnShowMDITabContextMenu` in the `CMDIFrameWndEx`-derived class. If you do not implement this method, the application will not display the shortcut menu.  
   
--   Um das Layout von MDI zu speichern angegebene Gruppen in einer Anwendung mit den `CMDIFrameWndEx::SaveMDIState`, aufrufen.  So vorher gespeichertes MDI zu laden angegebene Gruppenprofil, rufen `CMDIFrameWndEx::LoadMDIState` mit den.  Sie können diese Methoden aufrufen, um die Liste der geöffneten Dokumenten in einer MDI\-Anwendung zu laden oder zu speichern.  Weitere Informationen über Einsparungs\- und Ladenmdi Zustand, finden Sie unter [CMDIFrameWndEx::LoadMDIState](../Topic/CMDIFrameWndEx::LoadMDIState.md).  
+-   To save the layout of MDI tabbed groups in an application, call `CMDIFrameWndEx::SaveMDIState`. To load a previously saved MDI tabbed group profile, call `CMDIFrameWndEx::LoadMDIState`. You can also call these methods to load or save the list of opened documents in an MDI application. For more information about saving and loading MDI state, see [CMDIFrameWndEx::LoadMDIState](../mfc/reference/cmdiframewndex-class.md#loadmdistate).  
   
-## Siehe auch  
- [Benutzeroberflächenelemente](../mfc/user-interface-elements-mfc.md)   
- [CMDIFrameWndEx\-Klasse](../mfc/reference/cmdiframewndex-class.md)   
- [CMDIChildWndEx\-Klasse](../mfc/reference/cmdichildwndex-class.md)   
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)   
+ [CMDIFrameWndEx Class](../mfc/reference/cmdiframewndex-class.md)   
+ [CMDIChildWndEx Class](../mfc/reference/cmdichildwndex-class.md)   
  [CMDITabInfo Class](../mfc/reference/cmditabinfo-class.md)
+

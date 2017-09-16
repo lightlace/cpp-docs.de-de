@@ -1,172 +1,192 @@
 ---
-title: "TN071: MFC-IOleCommandTarget-Implementierung | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IOleCommandTarget"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IOleCommandTarget-Schnittstelle"
-  - "TN071"
+title: 'TN071: MFC IOleCommandTarget Implementation | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IOleCommandTarget
+dev_langs:
+- C++
+helpviewer_keywords:
+- TN071 [MFC]
+- IOleCommandTarget interface [MFC]
 ms.assetid: 3eef571e-6357-444d-adbb-6f734a0c3161
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# TN071: MFC-IOleCommandTarget-Implementierung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0927e3a41b1626a2c2c78b28a18e939240ffcd12
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn071-mfc-iolecommandtarget-implementation"></a>TN071: MFC IOleCommandTarget Implementation
 > [!NOTE]
->  Der folgende technische Hinweis wurde seit dem ersten Erscheinen in der Onlinedokumentation nicht aktualisiert.  Daher können einige Verfahren und Themen veraltet oder falsch sein.  Um aktuelle Informationen zu erhalten, wird empfohlen, das gewünschte Thema im Index der Onlinedokumentation zu suchen.  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- Die `IOleCommandTarget`\-Schnittstelle können Objekte und deren Container auf Dispatch Befehle miteinander.  Beispielsweise enthalten die Symbolleisten eines Objekts Schaltflächen für Befehle wie **Drucken**, **Seitenansicht**, **Speichern**, **Zoom** und `New`.  Wird ein solches Objekt in einem Container eingebettet wurden, der `IOleCommandTarget` unterstützt, kann das Objekt die Schaltflächen aktivieren und leiten die Befehle am Container zur Verarbeitung, wenn der Benutzer auf sie geklickt hat.  Wenn ein Container das eingebettete Objekt sich drucken bat, kann er diese Anforderung stellen, indem ein Befehl durch die `IOleCommandTarget`\-Schnittstelle des eingebetteten Objekts gesendet.  
+ The `IOleCommandTarget` interface enables objects and their containers to dispatch commands to each other. For example, an object's toolbars may contain buttons for commands such as **Print**, **Print Preview**, **Save**, `New`, and **Zoom**. If such an object were embedded in a container that supports `IOleCommandTarget`, the object could enable its buttons and forward the commands to the container for processing when the user clicked them. If a container wanted the embedded object to print itself, it could make this request by sending a command through the `IOleCommandTarget` interface of the embedded object.  
   
- `IOleCommandTarget` ist eine Automatisierung ähnliche Schnittstelle darin, dass sie von einem Client verwendet wird, um Methoden aufzurufen. auf einem Server  jedoch mit `IOleCommandTarget` speichert den Mehraufwand gehindert Aufrufe über Automatisierungsschnittstellen, da Programmierer die normalerweise kostenintensive `Invoke`\-Methode aus `IDispatch` nicht verwenden müssen.  
+ `IOleCommandTarget` is an Automation-like interface in that it is used by a client to invoke methods on a server. However, using `IOleCommandTarget` saves the overhead of making calls via Automation interfaces because programmers don't have to use the typically expensive `Invoke` method of `IDispatch`.  
   
- In MFC wird die `IOleCommandTarget`\-Schnittstelle durch Active Document\-Server verwendet, um Active Document\-Container zu den Dispatchbefehlen zum Server zu ermöglichen.  Die Active Document\-Server\-Klasse, `CDocObjectServerItem`, Schnittstellenzuordnungen der die MFC \(siehe [TN038: Implementierung MFC\/OLE IUnknown](../mfc/tn038-mfc-ole-iunknown-implementation.md)\), um die `IOleCommandTarget`\-Schnittstelle implementieren.  
+ In MFC, the `IOleCommandTarget` interface is used by Active document servers to allow Active document containers to dispatch commands to the server. The Active document server class, `CDocObjectServerItem`, uses MFC interface maps (see [TN038: MFC/OLE IUnknown Implementation](../mfc/tn038-mfc-ole-iunknown-implementation.md)) to implement the `IOleCommandTarget` interface.  
   
- `IOleCommandTarget` wird auch in der **COleFrameHook**\-Klasse implementiert.  **COleFrameHook** ist eine nicht dokumentierten MFC\-Klasse, die die Rahmenfensterfunktionalität von Containern der direkten Bearbeitung implementiert.  **COleFrameHook** verwendet auch MFC\-Schnittstellenzuordnungen, die die `IOleCommandTarget`\-Schnittstelle implementieren.  **COleFrameHook** Implementierung von `IOleCommandTarget` leitet OLE\-Befehle an `COleDocObjectItem` abgeleitete Active Document\-Container weiter.  Dies ermöglicht es jedem MFC\-ActiveDocument\-Container, um Meldungen von enthaltenden Active Document\-Servern zu empfangen.  
+ `IOleCommandTarget` is also implemented in the **COleFrameHook** class. **COleFrameHook** is an undocumented MFC class that implements the frame window functionality of in-place editing containers. **COleFrameHook** also uses MFC interface maps to implement the `IOleCommandTarget` interface. **COleFrameHook**'s implementation of `IOleCommandTarget` forwards OLE commands to `COleDocObjectItem`-derived Active document containers. This allows any MFC Active document container to receive messages from contained Active document servers.  
   
-## Befehls\-Zuordnungen MFC\-OLE  
- MFC\-Entwickler können `IOleCommandTarget` verwenden, indem Befehlszuordnungen MFC\-OLE verwenden.  OLE\-Befehlszuordnungen sind z Meldungszuordnungen, da sie verwendet werden können, um zu OLE\-Befehlen Memberfunktionen der Klasse zugeordnet, die die Befehlszuordnung enthält.  Um diese Arbeit, Platzmakros in der Befehlszuordnung der OLE\-Befehlsgruppe des Befehls angeben werden, den Sie verarbeiten möchten, den OLE\-Befehl und die Befehls\-ID von [Da WM\_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) der Meldung, die übermittelt wird, wenn der OLE\-Befehl empfangen wird.  MFC stellt auch einige vordefinierte Makros für Standard\-OLE\-Befehle bereit.  Eine Liste der Befehle standardmäßigen OLE, die ursprünglich für Microsoft Office\-Anwendungen entworfen wurden, finden Sie die OLECMDID\-Enumeration, die in docobj.h definiert wird.  
+## <a name="mfc-ole-command-maps"></a>MFC OLE Command Maps  
+ MFC developers can take advantage of `IOleCommandTarget` by using MFC OLE command maps. OLE command maps are like message maps because they can be used to map OLE commands to member functions of the class that contains the command map. To make this work, place macros in the command map to specify the OLE command group of the command you want to handle, the OLE command, and the command ID of the [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) message that will be sent when the OLE command is received. MFC also provides a number of predefined macros for standard OLE commands. For a list of the standard OLE commands that were originally designed for use with Microsoft Office applications, see the OLECMDID enumeration, which is defined in docobj.h.  
   
- Wenn ein OLE\-Befehl von einer MFC\-Anwendung empfangen wird, die eine OLE\-Befehlszuordnung enthält, versucht MFC, die Befehls\-ID und die angeforderten Befehlsgruppe für den Befehl in der OLE\-Befehlszuordnung der Anwendung zu suchen.  Wenn eine Übereinstimmung gefunden wird, wird eine **WM\_COMMAND** Meldung an die Anwendung gesendet, die die Befehlszuordnung mit der ID des angeforderten Befehls enthält. \(Siehe die Beschreibung von `ON_OLECMD` weiter unten.\) Auf diese Weise werden OLE\-Befehle, die einer Anwendung weitergeleitet werden, an **WM\_COMMAND** Meldungen von MFC ausgeführt.  Die **WM\_COMMAND** Meldungen werden dann durch die Meldungszuordnungen der Anwendung mithilfe der standardmäßigen [Befehlsrouting](../mfc/command-routing.md) Architektur MFC weitergeleitet.  
+ When an OLE command is received by an MFC application that contains an OLE command map, MFC tries to find the command ID and command group for the requested command in the OLE command map of the application. If a match is found, a **WM_COMMAND** message is dispatched to the application containing the command map with the ID of the requested command. (See the description of `ON_OLECMD` below.) In this way, OLE commands dispatched to an application are turned into **WM_COMMAND** messages by MFC. The **WM_COMMAND** messages are then routed through the application's message maps using the MFC standard [command routing](../mfc/command-routing.md) architecture.  
   
- Im Gegensatz Meldungszuordnungen werden Befehlszuordnungen MFC\-OLE nicht durch die unterstützt.  MFC\-Entwickler müssen OLE\-Befehlszuordnungsstütz\- und OLE\-Befehlszuordnungseinträge von Hand hinzufügen.  OLE\-Befehlszuordnungen können zu MFC\-ActiveDocument\-Servern einer beliebigen Klasse hinzugefügt werden, die in der **WM\_COMMAND** MeldungRoutingkette ist, zum Zeitpunkt, welches das aktive Dokument in einem Container direkt aktiv ist.  Diese Klassen umfassen die Klassen der Anwendung, die von [CWinApp](../mfc/reference/cwinapp-class.md), [CView](../mfc/reference/cview-class.md), [CDocument](../mfc/reference/cdocument-class.md) und [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md) abgeleitet sind.  In den Active Document\-Container können OLE\-Befehlszuordnungen zu [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md) nur hinzugefügt werden abgeleiteten Klasse.  Auch in den Active Document\-Container, werden die Funktionen **WM\_COMMAND** Meldungen nur zur Meldungszuordnung in `COleDocObjectItem` abgeleitete Klasse weitergeleitet.  
+ Unlike message maps, MFC OLE command maps are not supported by ClassWizard. MFC developers must add OLE command map support and OLE command map entries by hand. OLE command maps can be added to MFC Active document servers in any class that is in the **WM_COMMAND** message-routing chain at the time the Active document is in-place active in a container. These classes include the application's classes derived from [CWinApp](../mfc/reference/cwinapp-class.md), [CView](../mfc/reference/cview-class.md), [CDocument](../mfc/reference/cdocument-class.md), and [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md). In Active document containers, OLE command maps can only be added to the [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md)-derived class. Also, in Active document containers, the **WM_COMMAND** messages will only be dispatched to the message map in the `COleDocObjectItem`-derived class.  
   
-## OLE Zuordnungs\-Makros dominiert  
- Verwenden Sie die folgenden Makros, um Befehlszuordnungsfunktionalität der Klasse hinzufügen:  
+## <a name="ole-command-map-macros"></a>OLE Command Map Macros  
+ Use the following macros to add command map functionality to your class:  
   
 ```  
-  
+ 
 DECLARE_OLECMD_MAP ()  
-  
+ 
 ```  
   
- Dieses Makro wird in der Klassendeklaration \(in der Regel in der Headerdatei\) der Klasse, die die Befehlszuordnung enthält.  
+ This macro goes in the class declaration (typically in the header file) of the class that contains the command map.  
   
 ```  
-  
-BEGIN_OLECMD_MAP(  
-theClass  
-,   
-baseClass  
-)  
-  
+ 
+BEGIN_OLECMD_MAP(
+theClass  ,   baseClass)  
+ 
 ```  
   
  `theClass`  
- Name der Klasse, die die Befehlszuordnung enthält.  
+ Name of the class that contains the command map.  
   
  `baseClass`  
- Name der Basisklasse der Klasse, die die Befehlszuordnung enthält.  
+ Name of the base class of the class that contains the command map.  
   
- Dieses Makro markiert den Anfang der Befehlszuordnung.  Verwenden Sie dieses Makro in der Implementierungsdatei für die Klasse, die die Befehlszuordnung enthält.  
+ This macro marks the beginning of the command map. Use this macro in the implementation file for the class that contains the command map.  
   
 ```  
-  
+ 
 END_OLECMD_MAP()  
-  
+ 
 ```  
   
- Dieses Makro markiert das Ende der Befehlszuordnung.  Verwenden Sie dieses Makro in der Implementierungsdatei für die Klasse, die die Befehlszuordnung enthält.  Dieses Makro muss das **BEGIN\_OLECMD\_MAP**\-Makro immer erfolgreich sind.  
+ This macro marks the end of the command map. Use this macro in the implementation file for the class that contains the command map. This macro must always follow the **BEGIN_OLECMD_MAP** macro.  
   
 ```  
-  
-ON_OLECMD(  
-pguid  
-,   
-olecmdid  
-,   
-id  
-)  
-  
+ 
+ON_OLECMD(
+pguid  ,   
+olecmdid  ,
+    id)  
+ 
 ```  
   
  `pguid`  
- Zeiger der GUID der OLE\-Befehlsgruppe des Befehls.  Dieser Parameter ist **NULL** für die Befehlsgruppe standardmäßigen OLE.  
+ Pointer to the GUID of the OLE command's command group. This parameter is **NULL** for the standard OLE command group.  
   
  *olecmdid*  
- OLE\-Befehls\-ID des Befehls aufgerufen werden.  
+ OLE command ID of the command to be invoked.  
   
  `id`  
- ID der zur Anwendung gesendet werden **WM\_COMMAND**, Meldung, die die Befehlszuordnung enthält, wenn dieser OLE\-Befehl aufgerufen wird.  
+ ID of the **WM_COMMAND** message to be sent to the application containing the command map when this OLE command is invoked.  
   
- Verwenden Sie das `ON_OLECMD`\-Makro in der Befehlszuordnung, um Einträge für die OLE\-Befehle hinzuzufügen, die Sie behandeln möchten.  Wenn die OLE\-Befehle empfangen werden, werden diese der Meldung angegebenen **WM\_COMMAND** konvertiert und weitergeleitet durch die Meldungszuordnung der Anwendung mithilfe der BefehlRoutingarchitektur standardmäßigen MFC.  
+ Use the `ON_OLECMD` macro in the command map to add entries for the OLE commands you want to handle. When the OLE commands are received, they will be converted to the specified **WM_COMMAND** message and routed through the application's message map using the standard MFC command-routing architecture.  
   
-## Beispiel  
- Das folgende Beispiel zeigt, wie OLE\-BefehlBehandlungsfunktion einem MFC\-ActiveDocument\-Server hinzufügt, den Befehl [OLECMDID\_PRINT](http://msdn.microsoft.com/library/windows/desktop/ms691264) OLE zu behandeln.  Dieses Beispiel übernimmt dessen Sie verwendeter Anwendungs\-Assistent an, eine MFC\-Anwendung zu generieren, die ein Active Document\-Server ist.  
+## <a name="example"></a>Example  
+ The following example shows how to add OLE command-handling capability to an MFC Active document server to handle the [OLECMDID_PRINT](http://msdn.microsoft.com/library/windows/desktop/ms691264) OLE command. This example assumes that you used AppWizard to generate an MFC application that is an Active document server.  
   
-1.  In Ihrem `CView`\- die Headerdatei der abgeleiteten Klasse, fügen den `DECLARE_OLECMD_MAP`\-Makro der Klassendeklaration hinzu.  
+1.  In your `CView`-derived class's header file, add the `DECLARE_OLECMD_MAP` macro to the class declaration.  
   
     > [!NOTE]
-    >  Verwenden Sie `CView` abgeleitete Klasse, da eine der Klassen im Active Document\-Server ist, der in der **WM\_COMMAND** MeldungRoutingkette ist.  
+    >  Use the `CView`-derived class because it is one of the classes in the Active document server that is in the **WM_COMMAND** message-routing chain.  
   
-    ```  
+ ```  
     class CMyServerView : public CView  
-    {  
+ {  
     protected: // create from serialization only  
-       CMyServerView();  
-       DECLARE_DYNCREATE(CMyServerView)  
-       DECLARE_OLECMD_MAP()  
-    . . .  
-    };  
-    ```  
+    CMyServerView();
+DECLARE_DYNCREATE(CMyServerView)  
+    DECLARE_OLECMD_MAP() 
+ . . .  
+ };  
+ ```  
   
-2.  In der Implementierungsdatei für von `CView` abgeleitete Klasse, fügen die Makros `BEGIN_OLECMD_MAP` und `END_OLECMD_MAP` hinzu:  
+2.  In the implementation file for the `CView`-derived class, add the `BEGIN_OLECMD_MAP` and `END_OLECMD_MAP` macros:  
   
-    ```  
+ ```  
     BEGIN_OLECMD_MAP(CMyServerView, CView)  
+ 
+    END_OLECMD_MAP() 
+ ```  
   
-    END_OLECMD_MAP()  
-    ```  
+3.  To handle the standard OLE print command, add an [ON_OLECMD](reference/message-map-macros-mfc.md#on_olecmd) macro to the command map specifying the OLE command ID for the standard print command and **ID_FILE_PRINT** for the **WM_COMMAND** ID. **ID_FILE_PRINT** is the standard print command ID used by AppWizard-generated MFC applications:  
   
-3.  Um den Druckbefehl standardmäßigen OLE zu behandeln, fügen Sie einem Makro [ON\_OLECMD](../Topic/ON_OLECMD.md) der Befehlszuordnung hinzu, die der OLE\-Befehls\-ID für den Standarddruckbefehl und **ID\_FILE\_PRINT** für die **WM\_COMMAND** ID angibt  **ID\_FILE\_PRINT** ist die Standarddruckbefehls\-id, die von Anwendungs\-Assistent\-generierte MFC\-Anwendungen verwendet wird:  
+ ```  
+    BEGIN_OLECMD_MAP(CMyServerView,
+    CView)  
+    ON_OLECMD(NULL,
+    OLECMDID_PRINT,
+    ID_FILE_PRINT) 
+    END_OLECMD_MAP() 
+ ```  
   
-    ```  
-    BEGIN_OLECMD_MAP(CMyServerView, CView)  
-       ON_OLECMD(NULL,OLECMDID_PRINT,ID_FILE_PRINT)  
-    END_OLECMD_MAP()  
-    ```  
+ Note that one of the standard OLE command macros, defined in afxdocob.h, could be used in place of the `ON_OLECMD` macro because **OLECMDID_PRINT** is a standard OLE command ID. The `ON_OLECMD_PRINT` macro will accomplish the same task as the `ON_OLECMD` macro shown above.  
   
- Beachten Sie dies der Befehlsmakros standardmäßigen OLE, die in afxdocob.h, kann anstelle des Makros `ON_OLECMD` verwendet werden, da **OLECMDID\_PRINT** eine ID Befehl standardmäßigen OLE ist  Das `ON_OLECMD_PRINT`\-Makro wird die gleiche Aufgabe wie das `ON_OLECMD`\-Makro, das oben angezeigt wird.  
-  
- Wenn eine Containeranwendung diesen Server ein **OLECMDID\_PRINT** Befehl durch die `IOleCommandTarget`\-Schnittstelle des Servers sendet, wird der MFC\-Druckbefehlshandler im Server aufgerufen und der Server, die Anwendung zu drucken.  Der Code des Active Document\-Container, um den Druckbefehls aufzurufen, der in den oben genannten Schritte hinzugefügt wurde, würde etwa folgendermaßen aussehen:  
+ When a container application sends this server an **OLECMDID_PRINT** command through the server's `IOleCommandTarget` interface, the MFC printing command handler will be invoked in the server, causing the server to print the application. The Active document container's code to invoke the print command added in the steps above would look something like this:  
   
 ```  
 void CContainerCntrItem::DoOleCmd()  
 {  
-   IOleCommandTarget *pCmd = NULL;  
-   HRESULT hr = E_FAIL;  
-   OLECMD ocm={OLECMDID_PRINT, 0};  
-  
-   hr = m_lpObject->QueryInterface(IID_IOleCommandTarget,reinterpret_cast<void**>(&pCmd));  
-   if(FAILED(hr))  
-      return;  
-  
-   hr = pCmd->QueryStatus(NULL, 1, &ocm, NULL);  
-   if(SUCCEEDED(hr) && (ocm.cmdf & OLECMDF_ENABLED))  
-   {  
-      //Command is available and enabled so call it  
-      COleVariant vIn;  
-      COleVariant vOut;  
-      hr = pCmd->Exec(NULL, OLECMDID_PRINT,  
- OLECMDEXECOPT_DODEFAULT, &vIn, &vOut);  
-      ASSERT(SUCCEEDED(hr));  
-   }  
-   pCmd->Release();  
-}  
+    IOleCommandTarget *pCmd = NULL;  
+    HRESULT hr = E_FAIL;  
+    OLECMD ocm={OLECMDID_PRINT, 0};  
+ 
+    hr = m_lpObject->QueryInterface(IID_IOleCommandTarget,reinterpret_cast<void**>(&pCmd));
+
+    if(FAILED(hr)) 
+    return; 
+ 
+    hr = pCmd->QueryStatus(NULL, 1, &ocm, NULL);
+
+    if(SUCCEEDED(hr)&& (ocm.cmdf& OLECMDF_ENABLED))  
+ { *//Command is available and enabled so call it  
+    COleVariant vIn;  
+    COleVariant vOut;  
+    hr = pCmd->Exec(NULL, OLECMDID_PRINT,  
+    OLECMDEXECOPT_DODEFAULT, &vIn, &vOut);
+
+    ASSERT(SUCCEEDED(hr));
+
+ }  
+    pCmd->Release();
+
+} 
 ```  
   
-## Siehe auch  
- [Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)   
- [Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

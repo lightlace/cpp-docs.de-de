@@ -1,72 +1,91 @@
 ---
-title: "Windows Sockets: Socketbenachrichtigungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Benachrichtigungen, Socket"
-  - "Sockets [C++], Benachrichtigungen"
-  - "Windows-Sockets [C++], Benachrichtigungen"
+title: 'Windows Sockets: Socket Notifications | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Windows Sockets [MFC], notifications
+- notifications [MFC], socket
+- sockets [MFC], notifications
 ms.assetid: 87d5bf70-6e77-49a9-9a64-aaadee2ad018
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Windows Sockets: Socketbenachrichtigungen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dec4c5ef9bf53cfae7afe78cec9e33ceea0856da
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Dieser Artikel beschreibt die Benachrichtigungsfunktionen in den Socketklassen.  Diese Memberfunktionen sind Rückruffunktionen, die vom Framework aufgerufen wird, um den Socketobjekts wichtiger Ereignisse zu benachrichtigen.  Die Benachrichtigungsfunktionen sind:  
+---
+# <a name="windows-sockets-socket-notifications"></a>Windows Sockets: Socket Notifications
+This article describes the notification functions in the socket classes. These member functions are callback functions that the framework calls to notify your socket object of important events. The notification functions are:  
   
--   [OnReceive](../Topic/CAsyncSocket::OnReceive.md): Benachrichtigt diesen Socket, dass Daten im Puffer gibt, sodass er erhält, indem Sie [Empfangen Sie](../Topic/CAsyncSocket::Receive.md) aufrufen.  
+-   [OnReceive](../mfc/reference/casyncsocket-class.md#onreceive): Notifies this socket that there is data in the buffer for it to retrieve by calling [Receive](../mfc/reference/casyncsocket-class.md#receive).  
   
--   [OnSend](../Topic/CAsyncSocket::OnSend.md): Benachrichtigt diesen Socket, dass er Daten nun übermitteln kann, indem er die [Senden](../Topic/CAsyncSocket::Send.md) aufgerufen wird.  
+-   [OnSend](../mfc/reference/casyncsocket-class.md#onsend): Notifies this socket that it can now send data by calling [Send](../mfc/reference/casyncsocket-class.md#send).  
   
--   [OnAccept](../Topic/CAsyncSocket::OnAccept.md): Benachrichtigt diesen lauschenden Socket, dass er während Aufforderungen zum Aufbau einer Verbindung aufnehmen kann, indem er die [Annehmen](../Topic/CAsyncSocket::Accept.md) aufgerufen wird.  
+-   [OnAccept](../mfc/reference/casyncsocket-class.md#onaccept): Notifies this listening socket that it can accept pending connection requests by calling [Accept](../mfc/reference/casyncsocket-class.md#accept).  
   
--   [OnConnect](../Topic/CAsyncSocket::OnConnect.md): Benachrichtigt diese Steckverbindung, dass sein Verbindungsversuch abgeschlossen wurde: kann erfolgreich oder möglicherweise im Fehler.  
+-   [OnConnect](../mfc/reference/casyncsocket-class.md#onconnect): Notifies this connecting socket that its connection attempt completed: perhaps successfully or perhaps in error.  
   
--   [OnClose](../Topic/CAsyncSocket::OnClose.md): Benachrichtigt diesen Socket, dass der Socket, den er verbunden wird, geschlossen wurden.  
+-   [OnClose](../mfc/reference/casyncsocket-class.md#onclose): Notifies this socket that the socket it is connected to has closed.  
   
     > [!NOTE]
-    >  Eine zusätzliche Benachrichtigungsfunktion ist [OnOutOfBandData](../Topic/CAsyncSocket::OnOutOfBandData.md).  Diese Benachrichtigung teilt dem empfangenden Socket mit, dass der die sendende Socket "nicht auf Band aufgenommenen" Daten hat, senden.  Out\-of\-Band\-Daten sind mit jedem Paar verbundenen Streamsockets logisch ein unabhängiges kanalgebundenes.  Der nicht auf Band aufgenommene Kanal wird normalerweise verwendet, um "dringende" Daten zu senden.  MFC unterstützt Out\-of\-Band\-Daten.  Mit fortgeschrittenen Benutzer, die mit der Klasse [CAsyncSocket](../mfc/reference/casyncsocket-class.md) arbeiten, müssen die nicht auf Band aufgenommenen Kanal verwenden, aber Benutzer der Klasse [CSocket](../mfc/reference/csocket-class.md) werden von der Verwendung abgeraten.  Einfacher ist, einen zweiten Socket zum Übergeben solcher Daten zu erstellen.  Weitere Informationen über Out\-of\-Band\-Daten, finden Sie in der Windows Socket\-Spezifikation, die in [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] verfügbar ist.  
+    >  An additional notification function is [OnOutOfBandData](../mfc/reference/casyncsocket-class.md#onoutofbanddata). This notification tells the receiving socket that the sending socket has "out-of-band" data to send. Out-of-band data is a logically independent channel associated with each pair of connected stream sockets. The out-of-band channel is typically used to send "urgent" data. MFC supports out-of-band data. Advanced users working with class [CAsyncSocket](../mfc/reference/casyncsocket-class.md) might need to use the out-of-band channel, but users of class [CSocket](../mfc/reference/csocket-class.md) are discouraged from using it. The easier way is to create a second socket for passing such data. For more information about out-of-band data, see the Windows Sockets specification, available in the Windows SDK.  
   
- Wenn von der Klasse `CAsyncSocket`, müssen Sie die für diese Netzwerkereignisse Benachrichtigungsfunktionen für der Anwendung überschrieben.  Wenn Sie eine Klasse von der `CSocket`\- Klasse abgeleitet werden, ist es Ihre Auswahl, ob die Benachrichtigungsfunktionen relevante überschreibt.  Sie können `CSocket` auch selbst verwenden, in diesem Fall die Benachrichtigungsfunktionen zu dem diese nichts übergeben.  
+ If you derive from class `CAsyncSocket`, you must override the notification functions for those network events of interest to your application. If you derive a class from class `CSocket`, it is your choice whether to override the notification functions of interest. You can also use `CSocket` itself, in which case the notification functions default to doing nothing.  
   
- Diese Funktionen sind überschreibbare Rückruffunktionen.  `CAsyncSocket` und `CSocket` konvertieren Meldungen an Benachrichtigungen, Sie müssen jedoch implementieren, z die Benachrichtigungsfunktionen reagieren, wenn Sie sie verwenden möchten.  Die Benachrichtigungsfunktionen werden, wenn das Socket von einem Ereignis relevante benachrichtigt wird, wie das Verfolgen von Daten gelesen wird, aufgerufen.  
+ These functions are overridable callback functions. `CAsyncSocket` and `CSocket` convert messages to notifications, but you must implement how the notification functions respond if you wish to use them. The notification functions are called at the time your socket is notified of an event of interest, such as the presence of data to be read.  
   
- MFC ruft die Benachrichtigungsfunktionen auf, um Sie das Verhalten des Sockets anpassen zu lassen, wenn es benachrichtigt wird.  Beispielsweise könnten Sie **Empfangen** aus der `OnReceive` Benachrichtigungsfunktion auf, d h. auf benachrichtigt werden, dass er Daten gibt, zu lesen, rufen Sie **Empfangen** auf, um ihn zu lesen.  Dieser Ansatz ist nicht erforderlich, aber es ist ein gültiges Szenario.  Alternativ könnten Sie die Benachrichtigungsfunktion, um Status, drucken **ABLAUFVERFOLGUNG** Meldungen nachzuverfolgen, z. B.  
+ MFC calls the notification functions to let you customize your socket's behavior at the time it is notified. For example, you might call **Receive** from your `OnReceive` notification function, that is, on being notified that there is data to read, you call **Receive** to read it. This approach is not necessary, but it is a valid scenario. As an alternative, you might use your notification function to track progress, print **TRACE** messages, and so on.  
   
- Sie können diese Benachrichtigungen nutzen, indem Sie die in einer abgeleiteten Socketklasse Benachrichtigungsfunktionen überschreiben und eine Implementierung bereitstellen.  
+ You can take advantage of these notifications by overriding the notification functions in a derived socket class and providing an implementation.  
   
- Während eines Vorgangs zum Empfangen oder Senden von Daten, wird ein `CSocket`\-Objekt synchronisiert.  Während des synchronen Zustands werden alle Benachrichtigungen, die für andere Sockets bedeutet werden, in die Warteschlange gestellt, wenn der aktuelle Socket auf die Benachrichtigung wartet, die er wünscht. \(Beispielweise, während **Empfangen** eines Aufrufs, will der Socket eine Benachrichtigung.\) Sobald der Socket den Gleichlaufbetrieb abschließt und erneut asynchron wird, können andere Sockets starten, die in der Warteschlange. Benachrichtigungen Empfangen von  
+ During an operation such as receiving or sending data, a `CSocket` object becomes synchronous. During the synchronous state, any notifications meant for other sockets are queued while the current socket waits for the notification it wants. (For example, during a **Receive** call, the socket wants a notification to read.) Once the socket completes its synchronous operation and becomes asynchronous again, other sockets can begin receiving the queued notifications.  
   
 > [!NOTE]
->  In `CSocket` ist die `OnConnect` Benachrichtigungsfunktion nie aufgerufen.  Bei Verbindungen rufen Sie **Verbinden** auf, die zurückgegeben wird, wenn die Verbindung beendet ist \(entweder erfolgreich oder im Fehler\).  Wie Verbindungsbenachrichtigungen bearbeitet werden, ist ein MFC\-Implementierungsdetail.  
+>  In `CSocket`, the `OnConnect` notification function is never called. For connections, you call **Connect**, which will return when the connection is completed (either successfully or in error). How connection notifications are handled is an MFC implementation detail.  
   
- Details zu jeder Benachrichtigungsfunktion, finden Sie die Funktion mit `CAsyncSocket`\-Klasse in der *MFC\-Referenz*.  So Quellcode und Informationen über MFC\-Beispiele, finden Sie unter [MFC\-Beispiele](../top/visual-cpp-samples.md).  
+ For details about each notification function, see the function under class `CAsyncSocket` in the *MFC Reference*. For source code and information about MFC samples, see [MFC Samples](../visual-cpp-samples.md).  
   
- Weitere Informationen finden Sie unter:  
+ For more information, see:  
   
--   [Windows Sockets: Verwenden der Klasse CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
+-   [Windows Sockets: Using Class CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
   
--   [Windows Sockets: Leiten von den Socket\-Klassen](../mfc/windows-sockets-deriving-from-socket-classes.md)  
+-   [Windows Sockets: Deriving from Socket Classes](../mfc/windows-sockets-deriving-from-socket-classes.md)  
   
--   [Windows Sockets: Wie Sockets mit Archiven arbeiten](../mfc/windows-sockets-how-sockets-with-archives-work.md)  
+-   [Windows Sockets: How Sockets with Archives Work](../mfc/windows-sockets-how-sockets-with-archives-work.md)  
   
--   [Windows Sockets: Blockieren](../mfc/windows-sockets-blocking.md)  
+-   [Windows Sockets: Blocking](../mfc/windows-sockets-blocking.md)  
   
--   [Windows Sockets: Bytereihenfolge](../mfc/windows-sockets-byte-ordering.md)  
+-   [Windows Sockets: Byte Ordering](../mfc/windows-sockets-byte-ordering.md)  
   
--   [Windows Sockets: Konvertieren von Zeichenfolgen](../mfc/windows-sockets-converting-strings.md)  
+-   [Windows Sockets: Converting Strings](../mfc/windows-sockets-converting-strings.md)  
   
-## Siehe auch  
- [Windows\-Sockets in MFC](../mfc/windows-sockets-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)
+
+

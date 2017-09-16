@@ -1,5 +1,5 @@
 ---
-title: CDialog-Klasse | Microsoft Docs
+title: CDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,11 +31,23 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- modal dialog boxes, creating
-- MFC dialog boxes, base class
-- modeless dialog boxes, creating
-- modeless dialog boxes, displaying
-- CDialog class
+- CDialog [MFC], CDialog
+- CDialog [MFC], Create
+- CDialog [MFC], CreateIndirect
+- CDialog [MFC], DoModal
+- CDialog [MFC], EndDialog
+- CDialog [MFC], GetDefID
+- CDialog [MFC], GotoDlgCtrl
+- CDialog [MFC], InitModalIndirect
+- CDialog [MFC], MapDialogRect
+- CDialog [MFC], NextDlgCtrl
+- CDialog [MFC], OnInitDialog
+- CDialog [MFC], OnSetFont
+- CDialog [MFC], PrevDlgCtrl
+- CDialog [MFC], SetDefID
+- CDialog [MFC], SetHelpID
+- CDialog [MFC], OnCancel
+- CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
 caps.latest.revision: 23
 author: mikeblome
@@ -55,15 +67,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: 9ae60a13db0f975aca84c74caed43327e5bd1267
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 20d6d1caad93fd0d0fecbe9033f078f3b849ec50
 ms.contentlocale: de-de
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdialog-class"></a>CDialog-Klasse
-Die Basisklasse für die Anzeige von Dialogfeldern auf dem Bildschirm verwendet.  
+# <a name="cdialog-class"></a>CDialog Class
+The base class used for displaying dialog boxes on the screen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -71,78 +83,78 @@ Die Basisklasse für die Anzeige von Dialogfeldern auf dem Bildschirm verwendet.
 class CDialog : public CWnd  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDialog::CDialog](#cdialog)|Erstellt ein `CDialog`-Objekt.|  
+|[CDialog::CDialog](#cdialog)|Constructs a `CDialog` object.|  
   
-### <a name="public-methods"></a>Öffentliche Methoden  
+### <a name="public-methods"></a>Public Methods  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDialog::Create](#create)|Initialisiert die `CDialog` Objekt. Erstellt ein nicht modales Dialogfeld, und fügt es der `CDialog` Objekt.|  
-|[CDialog::CreateIndirect](#createindirect)|Erstellt ein nicht modales Dialogfeld aus einer Vorlage im Dialogfeld im Arbeitsspeicher (nicht ressourcenbasierte).|  
-|[Methode CDialog:: DoModal](#domodal)|Ruft ein modales Dialogfeld, und gibt Sie zurück, wenn fertig.|  
-|[CDialog::EndDialog](#enddialog)|Schließt ein modales Dialogfeld an.|  
-|[CDialog::GetDefID](#getdefid)|Ruft die ID der standardmäßige pushbutton-Steuerelement für ein Dialogfeld ab.|  
-|[CDialog::GotoDlgCtrl](#gotodlgctrl)|Verschiebt den Fokus zu einem angegebenen Dialogfeld-Steuerelement im Dialogfeld an.|  
-|[DLGTEMPL](#initmodalindirect)|Erstellt ein modales Dialogfeld aus einer Vorlage im Dialogfeld im Arbeitsspeicher (nicht ressourcenbasierte). Die Parameter werden gespeichert, bis die Funktion `DoModal` aufgerufen wird.|  
-|[CDialog::MapDialogRect](#mapdialogrect)|Konvertiert die Einheiten im Dialogfeld eines Rechtecks Bildschirm Einheiten.|  
-|[CDialog::NextDlgCtrl](#nextdlgctrl)|Verschiebt den Fokus auf das nächste Dialogfeld-Steuerelement im Dialogfeld an.|  
-|[CDialog::](#oninitdialog)|Überschreiben Sie, um das Dialogfeld Initialisierung zu erweitern.|  
-|[CDialog::OnSetFont](#onsetfont)|Überschreiben Sie, um die Schriftart angeben, die ein Dialogfeld-Steuerelement verwenden, wenn es sich um Text zeichnet.|  
-|[CDialog::PrevDlgCtrl](#prevdlgctrl)|Verschiebt den Fokus auf das vorherige Dialogfeld-Steuerelement im Dialogfeld an.|  
-|[CDialog::SetDefID](#setdefid)|Das standardmäßige pushbutton-Steuerelement für ein Dialogfeld in einem angegebenen Pushbutton geändert.|  
-|[CDialog::SetHelpID](#sethelpid)|Legt eine kontextbezogene Hilfe-ID für das Dialogfeld.|  
+|[CDialog::Create](#create)|Initializes the `CDialog` object. Creates a modeless dialog box and attaches it to the `CDialog` object.|  
+|[CDialog::CreateIndirect](#createindirect)|Creates a modeless dialog box from a dialog-box template in memory (not resource-based).|  
+|[CDialog::DoModal](#domodal)|Calls a modal dialog box and returns when done.|  
+|[CDialog::EndDialog](#enddialog)|Closes a modal dialog box.|  
+|[CDialog::GetDefID](#getdefid)|Gets the ID of the default pushbutton control for a dialog box.|  
+|[CDialog::GotoDlgCtrl](#gotodlgctrl)|Moves the focus to a specified dialog-box control in the dialog box.|  
+|[CDialog::InitModalIndirect](#initmodalindirect)|Creates a modal dialog box from a dialog-box template in memory (not resource-based). The parameters are stored until the function `DoModal` is called.|  
+|[CDialog::MapDialogRect](#mapdialogrect)|Converts the dialog-box units of a rectangle to screen units.|  
+|[CDialog::NextDlgCtrl](#nextdlgctrl)|Moves the focus to the next dialog-box control in the dialog box.|  
+|[CDialog::OnInitDialog](#oninitdialog)|Override to augment dialog-box initialization.|  
+|[CDialog::OnSetFont](#onsetfont)|Override to specify the font that a dialog-box control is to use when it draws text.|  
+|[CDialog::PrevDlgCtrl](#prevdlgctrl)|Moves the focus to the previous dialog-box control in the dialog box.|  
+|[CDialog::SetDefID](#setdefid)|Changes the default pushbutton control for a dialog box to a specified pushbutton.|  
+|[CDialog::SetHelpID](#sethelpid)|Sets a context-sensitive help ID for the dialog box.|  
   
-### <a name="protected-methods"></a>Geschützte Methoden  
+### <a name="protected-methods"></a>Protected Methods  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDialog::OnCancel](#oncancel)|Außer Kraft setzen Sie, um die Schaltfläche "Abbrechen" oder ESC Aktion auszuführen. Die Standardeinstellung schließt das Dialogfeld und **DoModal** gibt **IDCANCEL**.|  
-|[CDialog::OnOK](#onok)|Überschreiben Sie, um die Schaltfläche "OK"-Aktion in einem modalen Dialogfeld Ausführen. Die Standardeinstellung schließt das Dialogfeld und `DoModal` gibt **IDOK**.|  
+|[CDialog::OnCancel](#oncancel)|Override to perform the Cancel button or ESC key action. The default closes the dialog box and **DoModal** returns **IDCANCEL**.|  
+|[CDialog::OnOK](#onok)|Override to perform the OK button action in a modal dialog box. The default closes the dialog box and `DoModal` returns **IDOK**.|  
   
-## <a name="remarks"></a>Hinweise  
- Dialogfelder werden zwei Typen: modale und nicht modale. Ein modales Dialogfeld muss vom Benutzer geschlossen werden, bevor die Anwendung fortgesetzt wird. Ein nicht modales Dialogfeld ermöglicht den Benutzer das Dialogfeld anzuzeigen und heraus zu einem anderen Vorgang abbrechen oder entfernen das Dialogfeld.  
+## <a name="remarks"></a>Remarks  
+ Dialog boxes are of two types: modal and modeless. A modal dialog box must be closed by the user before the application continues. A modeless dialog box allows the user to display the dialog box and return to another task without canceling or removing the dialog box.  
   
- Ein `CDialog` Objekt ist eine Kombination einer Dialogfeldvorlage und einem `CDialog`-abgeleitete Klasse. Dialog-Editor Dialogfeldvorlage erstellen und speichern es in einer Ressource, und verwenden Sie dann das Hinzufügen von Klassen-Assistent zum Erstellen einer Klasse abgeleitet `CDialog`.  
+ A `CDialog` object is a combination of a dialog template and a `CDialog`-derived class. Use the dialog editor to create the dialog template and store it in a resource, then use the Add Class wizard to create a class derived from `CDialog`.  
   
- Ein Dialogfeld, z. B. ein anderes Fenster empfängt Nachrichten von Windows. In einem Dialogfeld interessieren Sie insbesondere bei der Verarbeitung von benachrichtigungsmeldungen aus den Dialogfeld-Steuerelemente, da dies ist die Interaktion des Benutzers mit dem Dialogfeld. Verwenden Sie auswählen, welche Nachrichten Sie trotzdem Handle und die entsprechenden Meldungszuordnungseinträge und Meldungshandler Memberfunktionen der Klasse hinzugefügt wird, werden das Eigenschaftenfenster. Sie müssen nur die Handler-Memberfunktionen anwendungsspezifischen Code schreiben.  
+ A dialog box, like any other window, receives messages from Windows. In a dialog box, you are particularly interested in handling notification messages from the dialog box's controls since that is how the user interacts with your dialog box. Use the Properties window to select which messages you wish to handle and it will add the appropriate message-map entries and message-handler member functions to the class for you. You only need to write application-specific code in the handler member functions.  
   
- Falls gewünscht, können Sie immer Meldungszuordnungseinträge und Memberfunktionen manuell schreiben.  
+ If you prefer, you can always write message-map entries and member functions manually.  
   
- In alle bis auf die unbedeutendsten (Dialogfeld) fügen Sie Membervariablen zur Dialogfeldklasse abgeleiteten zum Speichern von Daten in das Dialogfeld-Steuerelemente vom Benutzer eingegebenen oder zum Anzeigen von Daten für den Benutzer an. Die Variable hinzufügen-Assistenten können Sie Member Variablen erstellen und diese mit Steuerelementen zuordnen. Gleichzeitig wählen Sie eine Variable vom Typ und den zulässigen Wertebereich für jede Variable ein. Der Code-Assistenten hinzugefügt abgeleiteten Dialogfeldklasse die Membervariablen.  
+ In all but the most trivial dialog box, you add member variables to your derived dialog class to store data entered in the dialog box's controls by the user or to display data for the user. You can use the Add Variable wizard to create member variables and associate them with controls. At the same time, you choose a variable type and permissible range of values for each variable. The code wizard adds the member variables to your derived dialog class.  
   
- Eine Zuordnung wird generiert, um den Austausch von Daten zwischen der Membervariablen und das Dialogfeld-Steuerelementen automatisch behandelt. Die datenzuordnung bietet Funktionen, die die Steuerelemente im Dialogfeld mit den richtigen Werten zu initialisieren, rufen Sie die Daten, und überprüfen Sie die Daten.  
+ A data map is generated to automatically handle the exchange of data between the member variables and the dialog box's controls. The data map provides functions that initialize the controls in the dialog box with the proper values, retrieve the data, and validate the data.  
   
- Um ein modales Dialogfeld erstellen möchten, erstellen Sie ein Objekt auf dem Stapel mit dem Konstruktor für die abgeleiteten Dialogfeldklasse, und rufen Sie anschließend `DoModal` im Dialogfenster und seiner Steuerelemente zu erstellen. Wenn Sie ein nicht modales Dialogfeld erstellen möchten, rufen Sie **erstellen** im Konstruktor der Dialogfeldklasse.  
+ To create a modal dialog box, construct an object on the stack using the constructor for your derived dialog class and then call `DoModal` to create the dialog window and its controls. If you wish to create a modeless dialog, call **Create** in the constructor of your dialog class.  
   
- Sie können auch eine Vorlage im Arbeitsspeicher erstellen, mit einer [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Daten strukturieren, wie beschrieben in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Wenn Sie erstellt haben, eine `CDialog` -Objekt, rufen Sie [CreateIndirect](#createindirect) ein ohne Modus zu erstellen (Dialogfeld), oder rufen [InitModalIndirect](#initmodalindirect) und [DoModal](#domodal) So erstellen ein modales Dialogfeld.  
+ You can also create a template in memory by using a [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) data structure as described in the Windows SDK. After you construct a `CDialog` object, call [CreateIndirect](#createindirect) to create a modeless dialog box, or call [InitModalIndirect](#initmodalindirect) and [DoModal](#domodal) to create a modal dialog box.  
   
- Die datenzuordnung Dialogdatenaustausch und-Validierung wird geschrieben, in einer Überschreibung von `CWnd::DoDataExchange` , Ihre neue Dialogfeldklasse hinzugefügt wird. Finden Sie unter der [DoDataExchange](../../mfc/reference/cwnd-class.md#dodataexchange) Memberfunktion in `CWnd` für Weitere Informationen über die Dialogdatenaustausch und-Validierung Funktionalität.  
+ The exchange and validation data map is written in an override of `CWnd::DoDataExchange` that is added to your new dialog class. See the [DoDataExchange](../../mfc/reference/cwnd-class.md#dodataexchange) member function in `CWnd` for more on the exchange and validation functionality.  
   
- Der Programmierer und der Aufruf Framework `DoDataExchange` indirekt durch einen Aufruf von [CWnd::UpdateData](../../mfc/reference/cwnd-class.md#updatedata).  
+ Both the programmer and the framework call `DoDataExchange` indirectly through a call to [CWnd::UpdateData](../../mfc/reference/cwnd-class.md#updatedata).  
   
- Das Framework ruft `UpdateData` Wenn klickt der Benutzer die Schaltfläche "OK", um ein modales Dialogfeld zu schließen. (Die Daten werden nicht abgerufen, wenn die Schaltfläche "Abbrechen" geklickt wird.) Die standardmäßige Implementierung des [OnInitDialog](#oninitdialog) ruft auch `UpdateData` die Anfangswerte der Steuerelemente festgelegt. Überschreiben Sie i. d. r. `OnInitDialog` um Steuerelemente zu initialisieren. `OnInitDialog`wird aufgerufen, nachdem der Dialogfeld-Steuerelemente werden erstellt, und unmittelbar bevor das Dialogfeld angezeigt wird.  
+ The framework calls `UpdateData` when the user clicks the OK button to close a modal dialog box. (The data is not retrieved if the Cancel button is clicked.) The default implementation of [OnInitDialog](#oninitdialog) also calls `UpdateData` to set the initial values of the controls. You typically override `OnInitDialog` to further initialize controls. `OnInitDialog` is called after all the dialog controls are created and just before the dialog box is displayed.  
   
- Sie können Aufrufen `CWnd::UpdateData` zu einem beliebigen Zeitpunkt während der Ausführung einen gebunden oder ungebunden (Dialogfeld).  
+ You can call `CWnd::UpdateData` at any time during the execution of a modal or modeless dialog box.  
   
- Wenn Sie ein Dialogfeld von hand entwickeln, Sie die erforderlichen Membervariablen zur Klasse abgeleiteten Dialogfeld selbst, und hinzufügen Memberfunktionen zur festlegen oder Abrufen dieser Werte.  
+ If you develop a dialog box by hand, you add the necessary member variables to the derived dialog-box class yourself, and you add member functions to set or get these values.  
   
- Ein modales Dialogfeld wird automatisch geschlossen, wenn die Schaltfläche OK oder "Abbrechen" gedrückt wird oder wenn Ihr Code aufruft, die `EndDialog` Memberfunktion.  
+ A modal dialog box closes automatically when the user presses the OK or Cancel buttons or when your code calls the `EndDialog` member function.  
   
- Wenn Sie ein nicht modales Dialogfeld implementieren, immer außer Kraft setzen die `OnCancel` Memberfunktion und rufen `DestroyWindow` aus darin. Rufen Sie nicht die Basisklasse `CDialog::OnCancel`, da er ruft `EndDialog`, dem wird das Dialogfeld ausgeblendet, jedoch werden nicht gelöscht. Sie sollten auch überschreiben `PostNcDestroy` für nicht modale Dialogfelder zum Löschen von **dies**, da nicht modale Dialogfelder in der Regel zugeordnet sind, mit **neue**. Modale Dialogfelder werden in der Regel auf den Frame erstellt und müssen nicht `PostNcDestroy` Cleanup.  
+ When you implement a modeless dialog box, always override the `OnCancel` member function and call `DestroyWindow` from within it. Don't call the base class `CDialog::OnCancel`, because it calls `EndDialog`, which will make the dialog box invisible but will not destroy it. You should also override `PostNcDestroy` for modeless dialog boxes in order to delete **this**, since modeless dialog boxes are usually allocated with **new**. Modal dialog boxes are usually constructed on the frame and do not need `PostNcDestroy` cleanup.  
   
- Weitere Informationen zu `CDialog` finden Sie unter:  
+ For more information on `CDialog`, see:  
   
-- [Dialogfelder](../../mfc/dialog-boxes.md)  
+- [Dialog Boxes](../../mfc/dialog-boxes.md)  
   
--   Knowledge Base-Artikel Q262954: So wird's gemacht: Erstellen Sie ein Dialogfeld Protokollanzeige mit Bildlaufleisten  
+-   Knowledge Base article Q262954 : HOWTO: Create a Resizeable Dialog Box with Scroll Bars  
   
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -151,11 +163,11 @@ class CDialog : public CWnd
   
  `CDialog`  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** afxwin.h  
   
-##  <a name="cdialog"></a>CDialog::CDialog  
- Um ein modales Dialogfeld ressourcenbasierte zu konstruieren, rufen Sie entweder öffentlichen Form des Konstruktors.  
+##  <a name="cdialog"></a>  CDialog::CDialog  
+ To construct a resource-based modal dialog box, call either public form of the constructor.  
   
 ```  
 explicit CDialog(
@@ -170,27 +182,27 @@ explicit CDialog(
 CDialog();
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `lpszTemplateName`  
- Enthält eine Null-terminierte Zeichenfolge, die eine Dialogfeldvorlagen-Ressource im Dialogfeld heißt.  
+ Contains a null-terminated string that is the name of a dialog-box template resource.  
   
  `nIDTemplate`  
- Enthält die ID einer Dialogfeldvorlagen-Ressource im Dialogfeld an.  
+ Contains the ID number of a dialog-box template resource.  
   
  `pParentWnd`  
- Verweist auf das übergeordnete oder Besitzer Fenster-Objekt (des Typs [CWnd](../../mfc/reference/cwnd-class.md)), der das Dialogfeldobjekt angehört. Ist er **NULL**, dem Dialogfeldobjekt übergeordnete Fenster auf das Hauptanwendungsfenster festgelegt ist.  
+ Points to the parent or owner window object (of type [CWnd](../../mfc/reference/cwnd-class.md)) to which the dialog object belongs. If it is **NULL**, the dialog object's parent window is set to the main application window.  
   
-### <a name="remarks"></a>Hinweise  
- Eine Form des Konstruktors bietet Zugriff auf die Dialogressource anhand des Namens der Vorlage. Der anderen Konstruktor ermöglicht den Zugriff von Vorlagen-ID-Nummer in der Regel mit einer **IDD_** Präfix (z. B. "IDD_DIALOG1").  
+### <a name="remarks"></a>Remarks  
+ One form of the constructor provides access to the dialog resource by template name. The other constructor provides access by template ID number, usually with an **IDD_** prefix (for example, IDD_DIALOG1).  
   
- Um ein modales Dialogfeld aus einer Vorlage im Arbeitsspeicher zu konstruieren, zuerst den parameterlosen, geschützten Konstruktor aufrufen, und rufen dann `InitModalIndirect`.  
+ To construct a modal dialog box from a template in memory, first invoke the parameterless, protected constructor and then call `InitModalIndirect`.  
   
- Nachdem Sie ein modales Dialogfeld mit einer der oben aufgeführten Methoden erstellen, rufen Sie `DoModal`.  
+ After you construct a modal dialog box with one of the above methods, call `DoModal`.  
   
- Um ein nicht modales Dialogfeld erstellen, verwenden die geschützte Form der `CDialog` Konstruktor. Der Konstruktor ist geschützt, da Sie eine eigene Klasse im Dialogfeld, um ein nicht modales Dialogfeld implementieren abgeleitet werden müssen. Konstruktion eines nicht modalen Dialogfelds ist ein zweistufiger Prozess. Rufen Sie zunächst den Konstruktor; Rufen Sie anschließend die **erstellen** Memberfunktion versucht, ein ressourcenbasierte Dialogfeld erstellen, oder rufen Sie `CreateIndirect` um das Dialogfeld aus einer Vorlage im Arbeitsspeicher zu erstellen.  
+ To construct a modeless dialog box, use the protected form of the `CDialog` constructor. The constructor is protected because you must derive your own dialog-box class to implement a modeless dialog box. Construction of a modeless dialog box is a two-step process. First call the constructor; then call the **Create** member function to create a resource-based dialog box, or call `CreateIndirect` to create the dialog box from a template in memory.  
   
-##  <a name="create"></a>CDialog::Create  
- Rufen Sie **erstellen** ein nicht modales Dialogfeld mit einer Vorlage im Dialogfeld aus einer Ressource zu erstellen.  
+##  <a name="create"></a>  CDialog::Create  
+ Call **Create** to create a modeless dialog box using a dialog-box template from a resource.  
   
 ```  
 virtual BOOL Create(
@@ -203,37 +215,37 @@ virtual BOOL Create(
     CWnd* pParentWnd = NULL);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `lpszTemplateName`  
- Enthält eine Null-terminierte Zeichenfolge, die eine Dialogfeldvorlagen-Ressource im Dialogfeld heißt.  
+ Contains a null-terminated string that is the name of a dialog-box template resource.  
   
  `pParentWnd`  
- Verweist auf das übergeordnete Fenster-Objekt (des Typs [CWnd](../../mfc/reference/cwnd-class.md)), der das Dialogfeldobjekt angehört. Ist er **NULL**, dem Dialogfeldobjekt übergeordnete Fenster auf das Hauptanwendungsfenster festgelegt ist.  
+ Points to the parent window object (of type [CWnd](../../mfc/reference/cwnd-class.md)) to which the dialog object belongs. If it is **NULL**, the dialog object's parent window is set to the main application window.  
   
  `nIDTemplate`  
- Enthält die ID einer Dialogfeldvorlagen-Ressource im Dialogfeld an.  
+ Contains the ID number of a dialog-box template resource.  
   
-### <a name="return-value"></a>Rückgabewert  
- Bei beiden Formen zurückgegeben ungleich NULL, wenn das Dialogfeld Erstellung und Initialisierung erfolgreich waren. andernfalls 0.  
+### <a name="return-value"></a>Return Value  
+ Both forms return nonzero if dialog-box creation and initialization were successful; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Sie können den Aufruf von put **erstellen** in den Konstruktor oder rufen sie nach dem Konstruktor wird aufgerufen.  
+### <a name="remarks"></a>Remarks  
+ You can put the call to **Create** inside the constructor or call it after the constructor is invoked.  
   
- Zwei Formen von der **erstellen** Memberfunktion werden von Vorlagenamen oder der ID-Nummer für die Vorlage (z. B. "IDD_DIALOG1") für den Zugriff auf das Dialogfeld Dialogfeldvorlagen-Ressource bereitgestellt.  
+ Two forms of the **Create** member function are provided for access to the dialog-box template resource by either template name or template ID number (for example, IDD_DIALOG1).  
   
- Übergeben Sie für eine der Formen einen Zeiger auf das Fenster des übergeordneten Objekts. Wenn `pParentWnd` ist **NULL**, mit seinem übergeordneten oder Besitzer-Fenster auf das Hauptanwendungsfenster festgelegt im Dialogfeld erstellt werden.  
+ For either form, pass a pointer to the parent window object. If `pParentWnd` is **NULL**, the dialog box will be created with its parent or owner window set to the main application window.  
   
- Die **erstellen** Memberfunktion sofort zurück, nachdem sie das Dialogfeld erstellt.  
+ The **Create** member function returns immediately after it creates the dialog box.  
   
- Verwenden der **WS_VISIBLE** in der Vorlage im Dialogfeld Format zuzuweisen, wenn das Dialogfeld angezeigt werden soll, wenn das übergeordnete Fenster erstellt wird. Andernfalls müssen Sie aufrufen `ShowWindow`. Weitere Dialogfeld-Stile und ihre Anwendung finden Sie unter der [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Struktur der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] und [Fensterstile](../../mfc/reference/window-styles.md) in der *MFC-Referenz*.  
+ Use the **WS_VISIBLE** style in the dialog-box template if the dialog box should appear when the parent window is created. Otherwise, you must call `ShowWindow`. For further dialog-box styles and their application, see the [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) structure in the Windows SDK and [Window Styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) in the *MFC Reference*.  
   
- Verwenden der `CWnd::DestroyWindow` Funktion, um ein Dialogfeld erstellt, indem Zerstören der **erstellen** Funktion.  
+ Use the `CWnd::DestroyWindow` function to destroy a dialog box created by the **Create** function.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFCControlLadenDialog #62](../../mfc/codesnippet/cpp/cdialog-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCControlLadenDialog#62](../../mfc/codesnippet/cpp/cdialog-class_1.cpp)]  
   
-##  <a name="createindirect"></a>CDialog::CreateIndirect  
- Rufen Sie diese Memberfunktion, um ein nicht modales Dialogfeld aus einer Vorlage im Dialogfeld im Arbeitsspeicher zu erstellen.  
+##  <a name="createindirect"></a>  CDialog::CreateIndirect  
+ Call this member function to create a modeless dialog box from a dialog-box template in memory.  
   
 ```  
 virtual BOOL CreateIndirect(
@@ -247,107 +259,107 @@ virtual BOOL CreateIndirect(
     CWnd* pParentWnd = NULL);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `lpDialogTemplate`  
- Verweist auf Arbeitsspeicher, das Dialogfeld Vorlage verwendet enthält, um das Dialogfeld zu erstellen. Diese Vorlage wird in Form einer [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Struktur und Informationen, wie in beschrieben die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Points to memory that contains a dialog-box template used to create the dialog box. This template is in the form of a [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) structure and control information, as described in the Windows SDK.  
   
  `pParentWnd`  
- Verweist auf das Dialogfeldobjekt übergeordnete Fensterobjekt (des Typs [CWnd](../../mfc/reference/cwnd-class.md)). Ist er **NULL**, dem Dialogfeldobjekt übergeordnete Fenster auf das Hauptanwendungsfenster festgelegt ist.  
+ Points to the dialog object's parent window object (of type [CWnd](../../mfc/reference/cwnd-class.md)). If it is **NULL**, the dialog object's parent window is set to the main application window.  
   
  `lpDialogInit`  
- Verweist auf eine **DLGINIT** Ressource.  
+ Points to a **DLGINIT** resource.  
   
  `hDialogTemplate`  
- Enthält ein Handle für den globalen Arbeitsspeicher, die mit einer Vorlage im Dialogfeld an. Diese Vorlage wird in Form einer **DLGTEMPLATE** Struktur und die Daten für jedes Steuerelement im Dialogfeld.  
+ Contains a handle to global memory containing a dialog-box template. This template is in the form of a **DLGTEMPLATE** structure and data for each control in the dialog box.  
   
-### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn das Dialogfeld erstellt und wurde erfolgreich initialisiert wurde; andernfalls 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the dialog box was created and initialized successfully; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Die `CreateIndirect` Memberfunktion sofort zurück, nachdem sie das Dialogfeld erstellt.  
+### <a name="remarks"></a>Remarks  
+ The `CreateIndirect` member function returns immediately after it creates the dialog box.  
   
- Verwenden der **WS_VISIBLE** in der Vorlage im Dialogfeld Format zuzuweisen, wenn das Dialogfeld angezeigt werden soll, wenn das übergeordnete Fenster erstellt wird. Andernfalls müssen Sie aufrufen `ShowWindow` darin angezeigt werden. Weitere Informationen, wie Sie andere Dialogfeld-Stile in der Vorlage angeben können, finden Sie unter der [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Struktur der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Use the **WS_VISIBLE** style in the dialog-box template if the dialog box should appear when the parent window is created. Otherwise, you must call `ShowWindow` to cause it to appear. For more information on how you can specify other dialog-box styles in the template, see the [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) structure in the Windows SDK.  
   
- Verwenden der `CWnd::DestroyWindow` Funktion zerstört ein Dialogfeld erstellt, indem die `CreateIndirect` Funktion.  
+ Use the `CWnd::DestroyWindow` function to destroy a dialog box created by the `CreateIndirect` function.  
   
- Dialogfelder, die ActiveX-Steuerelemente enthalten, erfordern zusätzliche Informationen in einem **DLGINIT** Ressource. Weitere Informationen finden Sie im Knowledge Base-Artikel Q231591, "So wird's gemacht: verwenden eine Dialogvorlage um ein MFC-Dialogfeld mit einem ActiveX-Steuerelement zu erstellen." Knowledge Base-Artikeln finden Sie unter [http://support.microsoft.com](http://support.microsoft.com/).  
+ Dialog boxes that contain ActiveX controls require additional information provided in a **DLGINIT** resource. For more information, see Knowledge Base article Q231591, " HOWTO: Use a Dialog Template to Create a MFC Dialog with an ActiveX Control." Knowledge Base articles are available at [http://support.microsoft.com](http://support.microsoft.com/).  
   
-##  <a name="domodal"></a>Methode CDialog:: DoModal  
- Rufen Sie diese Memberfunktion zum Aufrufen des modalen Dialogfelds und die Dialogfeld-Ergebnis zurück.  
+##  <a name="domodal"></a>  CDialog::DoModal  
+ Call this member function to invoke the modal dialog box and return the dialog-box result when done.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein `int` Wert, der der Wert gibt an die `nResult` zu übergebene Parameter der [CDialog::EndDialog](#enddialog) Memberfunktion, die verwendet wird, um das Dialogfeld zu schließen. Der Rückgabewert ist -1, wenn die Funktion nicht das Dialogfeld erstellt werden konnte oder **IDABORT** Wenn ein anderer Fehler aufgetreten ist, in diesem Fall das Fenster "Ausgabe" enthält Fehlerinformationen von [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+### <a name="return-value"></a>Return Value  
+ An `int` value that specifies the value of the `nResult` parameter that was passed to the [CDialog::EndDialog](#enddialog) member function, which is used to close the dialog box. The return value is -1 if the function could not create the dialog box, or **IDABORT** if some other error occurred, in which case the output window will contain error information from [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion verarbeitet alle Interaktionen mit dem Benutzer, während das Dialogfeld aktiv ist. Dies ist, was die modales Dialogfeld. d. h. kann nicht der Benutzer mit anderen Fenstern interagieren, bis das Dialogfeld geschlossen wird.  
+### <a name="remarks"></a>Remarks  
+ This member function handles all interaction with the user while the dialog box is active. This is what makes the dialog box modal; that is, the user cannot interact with other windows until the dialog box is closed.  
   
- Wenn der Benutzer eine der Schaltflächen im Dialogfeld, z. B. OK oder "Abbrechen", einer Nachrichtenhandler Memberfunktion, z. B. klickt [OnOK](#onok) oder [OnCancel](#oncancel), wird aufgerufen, um das Dialogfeld zu schließen. Die Standardeinstellung `OnOK` Memberfunktion wird überprüfen und aktualisieren Sie die Daten im Dialogfeld und schließen Sie das Dialogfeld mit dem Ergebnis **IDOK**, und der standardmäßige `OnCancel` Memberfunktion schließt das Dialogfeld mit dem Ergebnis **IDCANCEL** ohne überprüfen oder Aktualisieren der Daten im Dialogfeld. Sie können diese Meldungshandler Funktionen zum Ändern des Verhaltens überschreiben.  
+ If the user clicks one of the pushbuttons in the dialog box, such as OK or Cancel, a message-handler member function, such as [OnOK](#onok) or [OnCancel](#oncancel), is called to attempt to close the dialog box. The default `OnOK` member function will validate and update the dialog-box data and close the dialog box with result **IDOK**, and the default `OnCancel` member function will close the dialog box with result **IDCANCEL** without validating or updating the dialog-box data. You can override these message-handler functions to alter their behavior.  
   
 > [!NOTE]
-> `PreTranslateMessage`wird jetzt für modalen Dialog Box-Nachrichtenverarbeitung aufgerufen.  
+> `PreTranslateMessage` is now called for modal dialog box message processing.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFCControlLadenDialog #63](../../mfc/codesnippet/cpp/cdialog-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCControlLadenDialog#63](../../mfc/codesnippet/cpp/cdialog-class_2.cpp)]  
   
-##  <a name="enddialog"></a>CDialog::EndDialog  
- Rufen Sie diese Memberfunktion, um ein modales Dialogfeld zu beenden.  
+##  <a name="enddialog"></a>  CDialog::EndDialog  
+ Call this member function to terminate a modal dialog box.  
   
 ```  
 void EndDialog(int nResult);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `nResult`  
- Enthält den Wert aus dem Dialogfeld an den Aufrufer des zurückzugebenden `DoModal`.  
+ Contains the value to be returned from the dialog box to the caller of `DoModal`.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion gibt `nResult` als Rückgabewert von `DoModal`. Verwenden Sie die `EndDialog` Funktion zum Abschließen der Verarbeitung, wenn ein modales Dialogfeld erstellt wird.  
+### <a name="remarks"></a>Remarks  
+ This member function returns `nResult` as the return value of `DoModal`. You must use the `EndDialog` function to complete processing whenever a modal dialog box is created.  
   
- Sie können Aufrufen `EndDialog` jederzeit selbst im [OnInitDialog](#oninitdialog), in diesem Fall sollten Sie schließen, bevor sie das Dialogfeld angezeigt wird oder bevor der Eingabefokus festgelegt wird.  
+ You can call `EndDialog` at any time, even in [OnInitDialog](#oninitdialog), in which case you should close the dialog box before it is shown or before the input focus is set.  
   
- `EndDialog`Das Dialogfeld wird nicht sofort geschlossen werden. Stattdessen wird ein Flag, das leitet das Dialogfeld zu schließen, sobald der aktuelle Message-Handler zurückgegeben.  
+ `EndDialog` does not close the dialog box immediately. Instead, it sets a flag that directs the dialog box to close as soon as the current message handler returns.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFCControlLadenDialog #64](../../mfc/codesnippet/cpp/cdialog-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCControlLadenDialog#64](../../mfc/codesnippet/cpp/cdialog-class_3.cpp)]  
   
- [!code-cpp[NVC_MFCControlLadenDialog #65](../../mfc/codesnippet/cpp/cdialog-class_4.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#65](../../mfc/codesnippet/cpp/cdialog-class_4.cpp)]  
   
-##  <a name="getdefid"></a>CDialog::GetDefID  
- Rufen Sie die `GetDefID` Memberfunktion versucht, die das standardmäßige pushbutton-Steuerelement-ID für ein Dialogfeld zu erhalten.  
+##  <a name="getdefid"></a>  CDialog::GetDefID  
+ Call the `GetDefID` member function to get the ID of the default pushbutton control for a dialog box.  
   
 ```  
 DWORD GetDefID() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Eine 32-Bit-Wert ( `DWORD`). Wenn die standardmäßige Pushbutton einen ID-Wert aufweist, enthält das höherwertige Wort **DC_HASDEFID** und das niederwertige Wort enthält den ID-Wert. Wenn die standardmäßige Pushbutton nicht über ein ID-Wert verfügt, ist der Rückgabewert 0.  
+### <a name="return-value"></a>Return Value  
+ A 32-bit value ( `DWORD`). If the default pushbutton has an ID value, the high-order word contains **DC_HASDEFID** and the low-order word contains the ID value. If the default pushbutton does not have an ID value, the return value is 0.  
   
-### <a name="remarks"></a>Hinweise  
- Dies ist normalerweise eine Schaltfläche "OK".  
+### <a name="remarks"></a>Remarks  
+ This is usually an OK button.  
   
-##  <a name="gotodlgctrl"></a>CDialog::GotoDlgCtrl  
- Verschiebt den Fokus auf das angegebene Steuerelement im Dialogfeld an.  
+##  <a name="gotodlgctrl"></a>  CDialog::GotoDlgCtrl  
+ Moves the focus to the specified control in the dialog box.  
   
 ```  
 void GotoDlgCtrl(CWnd* pWndCtrl);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `pWndCtrl`  
- Identifiziert das Fenster (Steuerelement), den Fokus erhält.  
+ Identifies the window (control) that is to receive the focus.  
   
-### <a name="remarks"></a>Hinweise  
- Um einen Zeiger auf das Steuerelement zu übergeben (untergeordneten Fensters) `pWndCtrl`, rufen die `CWnd::GetDlgItem` Memberfunktion, die zurückgibt, einen Zeiger auf eine [CWnd](../../mfc/reference/cwnd-class.md) Objekt.  
+### <a name="remarks"></a>Remarks  
+ To get a pointer to the control (child window) to pass as `pWndCtrl`, call the `CWnd::GetDlgItem` member function, which returns a pointer to a [CWnd](../../mfc/reference/cwnd-class.md) object.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [GetDlgItem](../../mfc/reference/cwnd-class.md#getdlgitem).  
+### <a name="example"></a>Example  
+  See the example for [CWnd::GetDlgItem](../../mfc/reference/cwnd-class.md#getdlgitem).  
   
-##  <a name="initmodalindirect"></a>DLGTEMPL  
- Rufen Sie diese Memberfunktion zum Initialisieren Sie ein modales Dialogfeld-Objekt, das mit einer Dialogfeld-Vorlage, die Sie im Arbeitsspeicher erstellen.  
+##  <a name="initmodalindirect"></a>  CDialog::InitModalIndirect  
+ Call this member function to initialize a modal dialog object using a dialog-box template that you construct in memory.  
   
 ```  
 BOOL InitModalIndirect(
@@ -361,169 +373,169 @@ BOOL InitModalIndirect(
     CWnd* pParentWnd = NULL);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `lpDialogTemplate`  
- Verweist auf Arbeitsspeicher, das Dialogfeld Vorlage verwendet enthält, um das Dialogfeld zu erstellen. Diese Vorlage wird in Form einer [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Struktur und Informationen, wie in beschrieben die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Points to memory that contains a dialog-box template used to create the dialog box. This template is in the form of a [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) structure and control information, as described in the Windows SDK.  
   
  `hDialogTemplate`  
- Enthält ein Handle für den globalen Arbeitsspeicher, die mit einer Vorlage im Dialogfeld an. Diese Vorlage wird in Form einer **DLGTEMPLATE** Struktur und die Daten für jedes Steuerelement im Dialogfeld.  
+ Contains a handle to global memory containing a dialog-box template. This template is in the form of a **DLGTEMPLATE** structure and data for each control in the dialog box.  
   
  `pParentWnd`  
- Verweist auf das übergeordnete oder Besitzer Fenster-Objekt (des Typs [CWnd](../../mfc/reference/cwnd-class.md)), der das Dialogfeldobjekt angehört. Ist er **NULL**, dem Dialogfeldobjekt übergeordnete Fenster auf das Hauptanwendungsfenster festgelegt ist.  
+ Points to the parent or owner window object (of type [CWnd](../../mfc/reference/cwnd-class.md)) to which the dialog object belongs. If it is **NULL**, the dialog object's parent window is set to the main application window.  
   
  `lpDialogInit`  
- Verweist auf eine **DLGINIT** Ressource.  
+ Points to a **DLGINIT** resource.  
   
-### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn das Dialogfeldobjekt erstellt und wurde erfolgreich initialisiert wurde; andernfalls 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the dialog object was created and initialized successfully; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Um ein modales Dialogfeld indirekt zu erstellen, zunächst belegen einen Speicherblock auf dem globalen und mit der Dialogfeldvorlage gefüllt. Rufen Sie dann auf die leere `CDialog` Konstruktor, um das Dialogfeld-Objekt zu erstellen. Rufen Sie als Nächstes `InitModalIndirect` zum Speichern des Handles für die Vorlage in-Memory-Dialogfeld. Das Dialogfeld "Windows" wird erstellt und angezeigt höher, bei der [DoModal](#domodal) Memberfunktion aufgerufen wird.  
+### <a name="remarks"></a>Remarks  
+ To create a modal dialog box indirectly, first allocate a global block of memory and fill it with the dialog box template. Then call the empty `CDialog` constructor to construct the dialog-box object. Next, call `InitModalIndirect` to store your handle to the in-memory dialog-box template. The Windows dialog box is created and displayed later, when the [DoModal](#domodal) member function is called.  
   
- Dialogfelder, die ActiveX-Steuerelemente enthalten, erfordern zusätzliche Informationen in einem **DLGINIT** Ressource. Weitere Informationen finden Sie im Knowledge Base-Artikel Q231591, "So wird's gemacht: verwenden eine Dialogvorlage um ein MFC-Dialogfeld mit einem ActiveX-Steuerelement zu erstellen." Knowledge Base-Artikeln finden Sie unter [http://support.microsoft.com](http://support.microsoft.com/).  
+ Dialog boxes that contain ActiveX controls require additional information provided in a **DLGINIT** resource. For more information, see Knowledge Base article Q231591, " HOWTO: Use a Dialog Template to Create a MFC Dialog with an ActiveX Control." Knowledge Base articles are available at [http://support.microsoft.com](http://support.microsoft.com/).  
   
-##  <a name="mapdialogrect"></a>CDialog::MapDialogRect  
- Rufen Sie die Einheiten im Dialogfeld eines Rechtecks Bildschirm Einheiten zu konvertieren.  
+##  <a name="mapdialogrect"></a>  CDialog::MapDialogRect  
+ Call to convert the dialog-box units of a rectangle to screen units.  
   
 ```  
 void MapDialogRect(LPRECT lpRect) const;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `lpRect`  
- Verweist auf eine [RECT](../../mfc/reference/rect-structure1.md) Struktur oder [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt, das das Dialogfeld enthält koordiniert, der konvertiert werden.  
+ Points to a [RECT](../../mfc/reference/rect-structure1.md) structure or [CRect](../../atl-mfc-shared/reference/crect-class.md) object that contains the dialog-box coordinates to be converted.  
   
-### <a name="remarks"></a>Hinweise  
- Das Dialogfeld Einheiten sind im Hinblick auf die aktuellen Dialogfeld-Basiseinheit abgeleitet wurde. die durchschnittliche Breite und Höhe der Zeichen in der Schriftart für Text im Dialogfeld angegeben. Eine horizontale Einheit ist ein Viertel der im Dialogfeld Basis-Breite Einheit, und eine vertikale Einheit ist ein Achtel des Geräts im Dialogfeld Basis Höhe.  
+### <a name="remarks"></a>Remarks  
+ Dialog-box units are stated in terms of the current dialog-box base unit derived from the average width and height of characters in the font used for dialog-box text. One horizontal unit is one-fourth of the dialog-box base-width unit, and one vertical unit is one-eighth of the dialog-box base height unit.  
   
- Die **GetDialogBaseUnits** Windows-Funktion gibt Informationen zur Datenbankgröße für die Systemschriftart, aber Sie können eine andere Schriftart jedem Dialogfeld angeben, bei der Verwendung der **DS_SETFONT** Format in der Ressourcendefinition Datei. Die `MapDialogRect` Windows-Funktion verwendet die passende Schriftart für das Dialogfeld zu öffnen.  
+ The **GetDialogBaseUnits** Windows function returns size information for the system font, but you can specify a different font for each dialog box if you use the **DS_SETFONT** style in the resource-definition file. The `MapDialogRect` Windows function uses the appropriate font for this dialog box.  
   
- Die `MapDialogRect` Memberfunktion ersetzt die Dialogfeld-Einheiten in `lpRect` mit Bildschirm Einheiten (in Pixel), damit das Rechteck zum Erstellen eines Dialogfelds oder positionieren ein Steuerelement innerhalb eines Felds verwendet werden kann.  
+ The `MapDialogRect` member function replaces the dialog-box units in `lpRect` with screen units (pixels) so that the rectangle can be used to create a dialog box or position a control within a box.  
   
-##  <a name="nextdlgctrl"></a>CDialog::NextDlgCtrl  
- Verschiebt den Fokus zum nächsten Steuerelement im Dialogfeld an.  
+##  <a name="nextdlgctrl"></a>  CDialog::NextDlgCtrl  
+ Moves the focus to the next control in the dialog box.  
   
 ```  
 void NextDlgCtrl() const;  
 ```  
   
-### <a name="remarks"></a>Hinweise  
- Wenn der Fokus auf das letzte Steuerelement im Dialogfeld befindet, wird in das erste Steuerelement verschoben.  
+### <a name="remarks"></a>Remarks  
+ If the focus is at the last control in the dialog box, it moves to the first control.  
   
-##  <a name="oncancel"></a>CDialog::OnCancel  
- Das Framework ruft diese Methode auf, wenn der Benutzer klickt **"Abbrechen"** oder in einem Dialogfeld gebunden oder ungebunden die ESC-Taste drückt.  
+##  <a name="oncancel"></a>  CDialog::OnCancel  
+ The framework calls this method when the user clicks **Cancel** or presses the ESC key in a modal or modeless dialog box.  
   
 ```  
 virtual void OnCancel();
 ```  
   
-### <a name="remarks"></a>Hinweise  
- Überschreiben Sie diese Methode zum Ausführen von Aktionen (z. B. das Wiederherstellen von alten Daten) Wenn ein Benutzer das Dialogfeld schließt, indem Sie auf **"Abbrechen"** oder drücken die ESC-Taste. Die Standardeinstellung schließt ein modales Dialogfeld durch Aufruf von ["EndDialog"](#enddialog) und dadurch [DoModal](#domodal) IDCANCEL zurückgegeben.  
+### <a name="remarks"></a>Remarks  
+ Override this method to perform actions (such as restoring old data) when a user closes the dialog box by clicking **Cancel** or hitting the ESC key. The default closes a modal dialog box by calling [EndDialog](#enddialog) and causing [DoModal](#domodal) to return IDCANCEL.  
   
- Wenn Sie implementieren die **"Abbrechen"** Schaltfläche in ein nicht modales Dialogfeld, überschreiben Sie die `OnCancel` Methode, und rufen [DestroyWindow](../../mfc/reference/cwnd-class.md#destroywindow) darin. Rufen Sie die Basisklasse-Methode nicht, da er aufruft `EndDialog`, dem wird das Dialogfeld ausgeblendet, jedoch nicht zu zerstören.  
+ If you implement the **Cancel** button in a modeless dialog box, you must override the `OnCancel` method and call [DestroyWindow](../../mfc/reference/cwnd-class.md#destroywindow) inside it. Do not call the base-class method, because it calls `EndDialog`, which will make the dialog box invisible but not destroy it.  
   
 > [!NOTE]
->  Diese Methode kann nicht überschrieben werden, bei der Verwendung einer `CFileDialog` Objekt in einem Programm, das unter Windows XP kompiliert wird. Weitere Informationen zu `CFileDialog`, finden Sie unter [CFileDialog-Klasse](../../mfc/reference/cfiledialog-class.md).  
+>  You cannot override this method when you use a `CFileDialog` object in a program that is compiled under Windows XP. For more information about `CFileDialog`, see [CFileDialog Class](../../mfc/reference/cfiledialog-class.md).  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFCControlLadenDialog #66](../../mfc/codesnippet/cpp/cdialog-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCControlLadenDialog#66](../../mfc/codesnippet/cpp/cdialog-class_5.cpp)]  
   
-##  <a name="oninitdialog"></a>CDialog::  
- Diese Methode wird aufgerufen, als Antwort auf die `WM_INITDIALOG` Nachricht.  
+##  <a name="oninitdialog"></a>  CDialog::OnInitDialog  
+ This method is called in response to the `WM_INITDIALOG` message.  
   
 ```  
 virtual BOOL OnInitDialog();
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Gibt an, ob die Anwendung den Eingabefokus auf eines der Steuerelemente im Dialogfeld festgelegt wurde. Wenn `OnInitDialog` ungleich NULL zurückgegeben wird, wird Windows den Eingabefokus auf den Standardspeicherort, der das erste Steuerelement im Dialogfeld. Die Anwendung kann 0 zurückgeben, nur dann, wenn er explizit den Eingabefokus auf eines der Steuerelemente im Dialogfeld festgelegt wurde.  
+### <a name="return-value"></a>Return Value  
+ Specifies whether the application has set the input focus to one of the controls in the dialog box. If `OnInitDialog` returns nonzero, Windows sets the input focus to the default location, the first control in the dialog box. The application can return 0 only if it has explicitly set the input focus to one of the controls in the dialog box.  
   
-### <a name="remarks"></a>Hinweise  
- Sendet Windows die `WM_INITDIALOG` Nachricht auf das Dialogfeld während der [erstellen](#create), [CreateIndirect](#createindirect), oder [DoModal](#domodal) Aufrufe, die auftreten, unmittelbar bevor das Dialogfeld angezeigt wird.  
+### <a name="remarks"></a>Remarks  
+ Windows sends the `WM_INITDIALOG` message to the dialog box during the [Create](#create), [CreateIndirect](#createindirect), or [DoModal](#domodal) calls, which occur immediately before the dialog box is displayed.  
   
- Überschreiben Sie diese Methode, wenn Sie besondere Bearbeitung beim Initialisieren des Dialogfelds ausführen möchten. In der überschriebenen Version, rufen Sie zuerst die Basisklasse `OnInitDialog` aber ignorieren Sie den Rückgabewert. In der Regel wird nun wieder `TRUE` aus Ihrer außer Kraft gesetzte Methode.  
+ Override this method if you want to perform special processing when the dialog box is initialized. In the overridden version, first call the base class `OnInitDialog` but ignore its return value. You will typically return `TRUE` from your overridden method.  
   
- Windows-Aufrufe der `OnInitDialog` Funktion mithilfe der globalen-Standarddialogfeld-Prozedur, die häufig für alle Dialogfelder für die Microsoft Foundation Class-Bibliothek. Diese Funktion über die meldungszuordnung wird nicht aufgerufen, und Sie benötigen daher keinen Meldungszuordnungseintrag für diese Methode.  
+ Windows calls the `OnInitDialog` function by using the standard global dialog-box procedure common to all Microsoft Foundation Class Library dialog boxes. It does not call this function through your message map, and therefore you do not need a message map entry for this method.  
   
 > [!NOTE]
->  Diese Methode kann nicht überschrieben werden, bei der Verwendung einer `CFileDialog` Objekt in einem Programm, das unter kompiliert wird [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]. Weitere Informationen zu Änderungen an `CFileDialog` unter [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] finden Sie unter [CFileDialog-Klasse](../../mfc/reference/cfiledialog-class.md).  
+>  You cannot override this method when you use a `CFileDialog` object in a program that is compiled under [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]. For more information about changes to `CFileDialog` under [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] see [CFileDialog Class](../../mfc/reference/cfiledialog-class.md).  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFCControlLadenDialog #67](../../mfc/codesnippet/cpp/cdialog-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCControlLadenDialog#67](../../mfc/codesnippet/cpp/cdialog-class_6.cpp)]  
   
-##  <a name="onok"></a>CDialog::OnOK  
- Wird aufgerufen, wenn der Benutzer klickt auf die **OK** Schaltfläche (die Schaltfläche mit einer ID IDOK).  
+##  <a name="onok"></a>  CDialog::OnOK  
+ Called when the user clicks the **OK** button (the button with an ID of IDOK).  
   
 ```  
 virtual void OnOK();
 ```  
   
-### <a name="remarks"></a>Hinweise  
- Überschreiben Sie diese Methode, um Aktionen durchzuführen, wenn die **OK** Schaltfläche aktiviert ist. Wenn das Dialogfeld Automatische datenvalidierung und Exchange enthält, wird die standardmäßige Implementierung dieser Methode überprüft der Dialogfelddaten, und der entsprechenden Variablen in der Anwendung aktualisiert.  
+### <a name="remarks"></a>Remarks  
+ Override this method to perform actions when the **OK** button is activated. If the dialog box includes automatic data validation and exchange, the default implementation of this method validates the dialog box data and updates the appropriate variables in your application.  
   
- Wenn Sie implementieren die **OK** Schaltfläche in ein nicht modales Dialogfeld, überschreiben Sie die `OnOK` Methode, und rufen [DestroyWindow](../../mfc/reference/cwnd-class.md#destroywindow) darin. Rufen Sie die Basisklasse-Methode nicht, da er aufruft ["EndDialog"](#enddialog) die unsichtbar des Dialogfelds "", jedoch nicht zerstört.  
+ If you implement the **OK** button in a modeless dialog box, you must override the `OnOK` method and call [DestroyWindow](../../mfc/reference/cwnd-class.md#destroywindow) inside it. Do not call the base-class method, because it calls [EndDialog](#enddialog) which makes the dialog box invisible but does not destroy it.  
   
 > [!NOTE]
->  Diese Methode kann nicht überschrieben werden, bei der Verwendung einer `CFileDialog` Objekt in einem Programm, das unter Windows XP kompiliert wird. Weitere Informationen zu `CFileDialog`, finden Sie unter [CFileDialog-Klasse](../../mfc/reference/cfiledialog-class.md).  
+>  You cannot override this method when you use a `CFileDialog` object in a program that is compiled under Windows XP. For more information about `CFileDialog`, see [CFileDialog Class](../../mfc/reference/cfiledialog-class.md).  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFCControlLadenDialog #68](../../mfc/codesnippet/cpp/cdialog-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCControlLadenDialog#68](../../mfc/codesnippet/cpp/cdialog-class_7.cpp)]  
   
-##  <a name="onsetfont"></a>CDialog::OnSetFont  
- Gibt die Schriftart, die ein Dialogfeld-Steuerelement beim Zeichnen von Text verwendet wird.  
+##  <a name="onsetfont"></a>  CDialog::OnSetFont  
+ Specifies the font a dialog-box control will use when drawing text.  
   
 ```  
 Virtual void OnSetFont(CFont* pFont);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `pFont`  
- Gibt einen Zeiger auf die Schriftart, die für alle Steuerelemente in diesem Dialogfeld als Standardschriftart verwendet werden.  
+ Specifies a pointer to the font that will be used as the default font for all controls in this dialog box.  
   
-### <a name="remarks"></a>Hinweise  
- Das Dialogfeld wird die angegebene Schriftart als Standard für alle Steuerelemente verwenden.  
+### <a name="remarks"></a>Remarks  
+ The dialog box will use the specified font as the default for all its controls.  
   
- Dialog-Editor wird die im Dialogfeld-Schriftart in der Regel als Teil der Dialogfeldvorlagen-Ressource im Dialogfeld.  
+ The dialog editor typically sets the dialog-box font as part of the dialog-box template resource.  
   
 > [!NOTE]
->  Diese Methode kann nicht überschrieben werden, bei der Verwendung einer `CFileDialog` Objekt in einem Programm, das unter kompiliert wird [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]. Weitere Informationen zu Änderungen an `CFileDialog` unter [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] finden Sie unter [CFileDialog-Klasse](../../mfc/reference/cfiledialog-class.md).  
+>  You cannot override this method when you use a `CFileDialog` object in a program that is compiled under [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]. For more information about changes to `CFileDialog` under [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] see [CFileDialog Class](../../mfc/reference/cfiledialog-class.md).  
   
-##  <a name="prevdlgctrl"></a>CDialog::PrevDlgCtrl  
- Legt den Fokus zum vorherigen Steuerelement im Dialogfeld fest.  
+##  <a name="prevdlgctrl"></a>  CDialog::PrevDlgCtrl  
+ Sets the focus to the previous control in the dialog box.  
   
 ```  
 void PrevDlgCtrl() const;  
 ```  
   
-### <a name="remarks"></a>Hinweise  
- Wenn der Fokus auf das erste Steuerelement im Dialogfeld befindet, wird bis zum letzten Steuerelement im Feld verschoben.  
+### <a name="remarks"></a>Remarks  
+ If the focus is at the first control in the dialog box, it moves to the last control in the box.  
   
-##  <a name="setdefid"></a>CDialog::SetDefID  
- Ändert das standardmäßige pushbutton-Steuerelement für ein Dialogfeld an.  
+##  <a name="setdefid"></a>  CDialog::SetDefID  
+ Changes the default pushbutton control for a dialog box.  
   
 ```  
 void SetDefID(UINT nID);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `nID`  
- Gibt die ID des pushbutton-Steuerelements, die standardmäßig verwendet wird.  
+ Specifies the ID of the pushbutton control that will become the default.  
   
-##  <a name="sethelpid"></a>CDialog::SetHelpID  
- Legt eine kontextbezogene Hilfe-ID für das Dialogfeld.  
+##  <a name="sethelpid"></a>  CDialog::SetHelpID  
+ Sets a context-sensitive help ID for the dialog box.  
   
 ```  
 void SetHelpID(UINT nIDR);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  *nIDR*  
- Gibt an, die kontextbezogene Hilfe-ID.  
+ Specifies the context-sensitive help ID.  
   
-## <a name="see-also"></a>Siehe auch  
- [MFC-Beispiel DLGCBR32](../../visual-cpp-samples.md)   
- [MFC-Beispiel DLGTEMPL](../../visual-cpp-samples.md)   
- [CWnd-Klasse](../../mfc/reference/cwnd-class.md)   
- [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample DLGCBR32](../../visual-cpp-samples.md)   
+ [MFC Sample DLGTEMPL](../../visual-cpp-samples.md)   
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 

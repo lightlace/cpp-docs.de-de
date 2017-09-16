@@ -1,5 +1,5 @@
 ---
-title: is_literal_type-Klasse | Microsoft-Dokumentation
+title: is_literal_type Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_literal_type
 - type_traits/std::is_literal_type
 dev_langs:
 - C++
@@ -35,14 +34,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 5a89b32e85cc7756f4d420f8eea55b2088a44320
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: b16c25274dc9713e49dd035d4dc61d481b988b4a
+ms.contentlocale: de-de
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isliteraltype-class"></a>is_literal_type-Klasse
-Testet, ob ein Typ als eine `constexpr`-Variable verwendet werden kann, oder von `constexpr`-Funktionen erstellt, verwendet oder zurückgegeben werden kann.  
+# <a name="isliteraltype-class"></a>is_literal_type Class
+Tests whether a type can be used as a `constexpr` variable or be constructed, used by, or returned from `constexpr` functions.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,19 +51,19 @@ template <class T>
 struct is_literal_type;
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a>Parameters  
  `T`  
- Der abzufragende Typ.  
+ The type to query.  
   
-## <a name="remarks"></a>Hinweise  
- Eine Instanz des Typprädikats ist TRUE, wenn der Typ `T` ein *Literaltyp* ist; andernfalls ist sie FALSE. Ein Literaltyp ist entweder `void`, ein skalarer Typ, ein Verweistyp, ein Array von Literaltypen oder ein Literalklassentyp. Ein Literalklassentyp ist ein Klassentyp, der einen trivialen Destruktor aufweist, entweder ein aggregierter Typ ist oder mindestens über einen non-move, non-copy `constexpr`-Konstruktor verfügt. Alle seine Basisklassen und nichtstatischen Datenmember sind nicht volatile Literaltypen. Während der Typ eines Literals immer ein literal-Typ ist, enthält das Konzept eines literal-Typ alles, was der Compiler zur Kompilierzeit als ein `constexpr` auswerten kann.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `T` is a *literal type*, otherwise it holds false. A literal type is either `void`, a scalar type, a reference type, an array of literal type, or a literal class type. A literal class type is a class type that has a trivial destructor, is either an aggregate type or has at least one non-move, non-copy `constexpr` constructor, and all of its base classes and non-static data members are non-volatile literal types. While the type of a literal is always a literal type, the concept of a literal type includes anything that the compiler can evaluate as a `constexpr` at compile time.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

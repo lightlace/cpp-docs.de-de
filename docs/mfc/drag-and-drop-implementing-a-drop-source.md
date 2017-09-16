@@ -1,52 +1,71 @@
 ---
-title: "Drag&#160;&amp;&#160;Drop: Implementieren einer Drag&#160;&amp;&#160;Drop-Quelle | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Drag & Drop, DoDragDrop aufrufen"
-  - "Drag & Drop, Ablagequelle"
-  - "Drag & Drop, Initiieren von Ziehvorgängen"
-  - "Drag & Drop (OLE), DoDragDrop aufrufen"
-  - "Drag & Drop (OLE), Ablagequelle"
-  - "Drag & Drop (OLE), Initiieren von Ziehvorgängen"
+title: 'Drag and Drop: Implementing a Drop Source | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE drag and drop [MFC], initiating drag operations
+- drag and drop [MFC], calling DoDragDrop
+- OLE drag and drop [MFC], drop source
+- OLE drag and drop [MFC], calling DoDragDrop
+- drag and drop [MFC], initiating drag operations
+- drag and drop [MFC], drop source
 ms.assetid: 0ed2fda0-63fa-4b1e-b398-f1f142f40035
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Drag&#160;&amp;&#160;Drop: Implementieren einer Drag&#160;&amp;&#160;Drop-Quelle
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f3bb2f7b11c3ce4d46f0dda53980c0c751ec41ef
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Dieser Artikel wird beschrieben, wie die Anwendung Daten abruft, zu einem Drag & Drop\-Vorgangs bereitzustellen.  
+---
+# <a name="drag-and-drop-implementing-a-drop-source"></a>Drag and Drop: Implementing a Drop Source
+This article explains how to get your application to provide data to a drag-and-drop operation.  
   
- Grundlegende Implementierung einer Ablagequelle ist relativ einfach.  Der erste Schritt besteht darin, zu bestimmen, welche Ereignisse einen Ziehvorgang beginnen.  Empfohlene Benutzeroberflächenrichtlinien definieren den Beginn eines Ziehvorgangs als die Auswahl der Daten und `WM_LBUTTONDOWN`\-Ereignis, das auf einem Punktinnere die ausgewählten Daten fungiert.  Die Beispiele [OCLIENT](../top/visual-cpp-samples.md) und [HIERSVR](../top/visual-cpp-samples.md) MFC\-OLE führen diesen Richtlinien.  
+ Basic implementation of a drop source is relatively simple. The first step is to determine what events begin a drag operation. Recommended user interface guidelines define the beginning of a drag operation as the selection of data and a `WM_LBUTTONDOWN` event occurring on a point inside the selected data. The MFC OLE samples [OCLIENT](../visual-cpp-samples.md) and [HIERSVR](../visual-cpp-samples.md) follow these guidelines.  
   
- Wenn die Anwendung ein Container ist und die ausgewählten Daten verknüpft oder ein eingebettetes Objekt vom Typ `COleClientItem` sind, rufen Sie seine `DoDragDrop`\-Memberfunktion auf.  Erstellen Sie andernfalls ein `COleDataSource`\-Objekt, initialisieren Sie es mit der Auswahl, und rufen Sie die `DoDragDrop`\-Memberfunktion des Datenquellenobjekts auf.  Wenn die Anwendung ein Server ist, verwenden Sie `COleServerItem::DoDragDrop`.  Informationen zum Anpassen des Standard\-Drag & Drop\-Verhaltens, finden Sie im Artikel [Drag & Drop: Anpassen](../mfc/drag-and-drop-customizing.md).  
+ If your application is a container and the selected data is a linked or an embedded object of type `COleClientItem`, call its `DoDragDrop` member function. Otherwise, construct a `COleDataSource` object, initialize it with the selection, and call the data source object's `DoDragDrop` member function. If your application is a server, use `COleServerItem::DoDragDrop`. For information about customizing standard drag-and-drop behavior, see the article [Drag and Drop: Customizing](../mfc/drag-and-drop-customizing.md).  
   
- Wenn `DoDragDrop``DROPEFFECT_MOVE` zurückgibt, Sie löschen die Quelldaten des Quelldokuments sofort.  Kein anderer Rückgabewert von `DoDragDrop` hat keinerlei Auswirkungen auf eine Ablagequelle.  
+ If `DoDragDrop` returns `DROPEFFECT_MOVE`, delete the source data from the source document immediately. No other return value from `DoDragDrop` has any effect on a drop source.  
   
- Weitere Informationen finden Sie unter:  
+ For more information, see:  
   
--   [Implementieren eines Ablageziels](../mfc/drag-and-drop-implementing-a-drop-target.md)  
+-   [Implementing a Drop Target](../mfc/drag-and-drop-implementing-a-drop-target.md)  
   
--   [Anpassen von Drag & Drop](../mfc/drag-and-drop-customizing.md)  
+-   [Customizing Drag and Drop](../mfc/drag-and-drop-customizing.md)  
   
--   [OLE\-Datenobjekte und \-Datenquellen Erstellen und Löschen eines Auflistungsobjekts](../mfc/data-objects-and-data-sources-creation-and-destruction.md)  
+-   [Creating and Destroying OLE Data Objects and Data Sources](../mfc/data-objects-and-data-sources-creation-and-destruction.md)  
   
--   [Bearbeiten von OLE\-Datenobjekten und \-Datenquellen](../mfc/data-objects-and-data-sources-manipulation.md)  
+-   [Manipulating OLE Data Objects and Data Sources](../mfc/data-objects-and-data-sources-manipulation.md)  
   
-## Siehe auch  
- [Drag & Drop \(OLE\)](../mfc/drag-and-drop-ole.md)   
- [COleDataSource::DoDragDrop](../Topic/COleDataSource::DoDragDrop.md)   
- [COleClientItem::DoDragDrop](../Topic/COleClientItem::DoDragDrop.md)   
- [CView::OnDragLeave](../Topic/CView::OnDragLeave.md)
+## <a name="see-also"></a>See Also  
+ [Drag and Drop (OLE)](../mfc/drag-and-drop-ole.md)   
+ [COleDataSource::DoDragDrop](../mfc/reference/coledatasource-class.md#dodragdrop)   
+ [COleClientItem::DoDragDrop](../mfc/reference/coleclientitem-class.md#dodragdrop)   
+ [CView::OnDragLeave](../mfc/reference/cview-class.md#ondragleave)
+
+

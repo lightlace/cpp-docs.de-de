@@ -1,83 +1,102 @@
 ---
-title: "Container: Erweiterte Funktionen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Container/Server-Anwendungen [C++]"
-  - "Container [C++], Erweiterte Features"
-  - "Container [C++], Containeranwendungen"
-  - "Container [C++], Links zu eingebetteten OLE-Objekten"
-  - "Eingebettete Objekte [C++]"
-  - "Links [C++], zu eingebetteten OLE-Objekten"
-  - "OLE-Container, Erweiterte Features"
-  - "OLE-Steuerelemente, Container"
-  - "Server/Container-Anwendungen"
+title: 'Containers: Advanced Features | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- links [MFC], to embedded OLE objects
+- containers [MFC], links to embedded OLE objects
+- containers [MFC], advanced features
+- container/server applications [MFC]
+- embedded objects [MFC]
+- OLE controls [MFC], containers
+- OLE containers [MFC], advanced features
+- server/container applications [MFC]
+- containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Container: Erweiterte Funktionen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c598d96f64dc309cbd80797879c3810bdd21d235
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Dieser Artikel beschreibt die Schritte, die erforderlich sind, optionale erweiterte Funktionen in vorhandene Containeranwendungen zu enthalten.  Diese Funktionen sind:  
+---
+# <a name="containers-advanced-features"></a>Containers: Advanced Features
+This article describes the steps necessary to incorporate optional advanced features into existing container applications. These features are:  
   
--   [Eine Anwendung, die ein Container und Server ist ein](#_core_creating_a_container.2f.server_application)  
+-   [An application that is both a container and a server](#_core_creating_a_container_server_application)  
   
--   [Ein OLE\-Link zu einem eingebetteten Objekt](#_core_links_to_embedded_objects)  
+-   [An OLE link to an embedded object](#_core_links_to_embedded_objects)  
   
-##  <a name="_core_creating_a_container.2f.server_application"></a> Erstellen einer bin\/Server\-Anwendung  
- Eine bin\/Server\-Anwendung ist eine Anwendung, die als Container und ein Server auftritt.  Microsoft Word für Windows ist ein entsprechendes Beispiel.  Sie können Word für Windows\-Dokumente in anderen Anwendungen einbetten, und Sie können Elemente in Word für Windows\-Dokumente auch einbetten.  Der Prozess zum Ändern der Containeranwendung, Container und Server ein vollständiger \(Sie können eine Kombination Bin\/miniserver\-Anwendung nicht erstellen\), sind ist mit dem Prozess zum Erstellen eines vollständigen Servers ähnlich.  
+##  <a name="_core_creating_a_container_server_application"></a> Creating a Container/Server Application  
+ A container/server application is an application that acts as both a container and a server. Microsoft Word for Windows is an example of this. You can embed Word for Windows documents in other applications, and you can also embed items in Word for Windows documents. The process for modifying your container application to be both a container and a full server (you cannot create a combination container/miniserver application) is similar to the process for creating a full server.  
   
- Der Artikel [Server: Implementieren eines Servers](../mfc/servers-implementing-a-server.md) werden Aufgaben auf, die erforderlich sind, eine Serveranwendung zu implementieren.  Wenn Sie eine Containeranwendung keiner bin\/Server\-Anwendung konvertieren, müssen Sie einige dieser gleichen Aufgaben ausführen und Code zum Container hinzu.  Im Folgenden sind die Datengenerierung unbedingt auf, um zu beachten:  
+ The article [Servers: Implementing a Server](../mfc/servers-implementing-a-server.md) lists a number of tasks required to implement a server application. If you convert a container application to a container/server application, then you need to perform some of those same tasks, adding code to the container. The following lists the important things to consider:  
   
--   Der Containercode, der initialisiert vom Anwendungs\-Assistenten erstellt wird, das bereits OLE\-Subsystem.  Sie müssen nichts, um für diese Unterstützung zu ändern oder hinzuzufügen.  
+-   The container code created by the application wizard already initializes the OLE subsystem. You will not need to change or add anything for that support.  
   
--   Unabhängig wo ist die Basisklasse einer Dokumentklasse `COleDocument`, ändern die Basisklasse für `COleServerDoc`.  
+-   Wherever the base class of a document class is `COleDocument`, change the base class to `COleServerDoc`.  
   
--   Überschreiben Sie `COleClientItem::CanActivate`, um Elemente, bearbeiten zu vermeiden, direkt während der Server selbst verwendet wird, um direkt zu bearbeiten.  
+-   Override `COleClientItem::CanActivate` to avoid editing items in place while the server itself is being used to edit in place.  
   
-     Beispielsweise ist das Beispiel [OCLIENT](../top/visual-cpp-samples.md) MFC\-OLE ein Element eingebettet, auf das die Container\/Server\-Anwendung erstellt wird.  Öffnen Sie die OCLIENT\-Anwendung und die direkte Bearbeitung, die das Element von der Container\/Server\-Anwendung erstellt hat.  Beim Bearbeiten des Elements der Anwendung, entscheiden Sie möchten ein Element einbetten, die durch das Beispiel [HIERSVR](../top/visual-cpp-samples.md) MFC\-OLE erstellt wird.  Um dies zu erreichen, können Sie direkte Aktivierung nicht verwenden.  müssen Sie HIERSVR vollständig öffnen, um das Element zu aktivieren.  Da die Microsoft Foundation Class\-Bibliothek nicht unterstützt, können diese OLE\-Funktion das Überschreiben von `COleClientItem::CanActivate` Sie zur Überprüfung diese Situation auf und verhindert ein potenzieller Laufzeitfehler in der Anwendung.  
+     For example, the MFC OLE sample [OCLIENT](../visual-cpp-samples.md) has embedded an item created by your container/server application. You open the OCLIENT application and in-place edit the item created by your container/server application. While editing your application's item, you decide you want to embed an item created by the MFC OLE sample [HIERSVR](../visual-cpp-samples.md). To do this, you cannot use in-place activation. You must fully open HIERSVR to activate this item. Because the Microsoft Foundation Class Library does not support this OLE feature, overriding `COleClientItem::CanActivate` allows you to check for this situation and prevent a possible run-time error in your application.  
   
- Wenn Sie eine neue Anwendung erstellen und als Container\/Server\-Anwendung funktionieren soll, wählen Sie aus, dass Option im OLE\-Optionsdialogfeld im Anwendungs\-Assistenten und in dieser Unterstützung automatisch erstellt wird.  Weitere Informationen finden Sie im Artikel [Übersicht: Erstellen eines ActiveX\-Steuerelementcontainers zum Anzeigen](../mfc/reference/creating-an-mfc-activex-control-container.md).  Informationen zum MFC\-Beispiele, finden Sie MFC\-Beispiele.  
+ If you are creating a new application and want it to function as a container/server application, choose that option in the OLE Options dialog box in the application wizard and this support will be created automatically. For more information, see the article [Overview: Creating an ActiveX Control Container](../mfc/reference/creating-an-mfc-activex-control-container.md). For information about MFC samples, see MFC Samples.  
   
- Beachten Sie, dass Sie sich in eine MDI\-Anwendung nicht einfügen können.  Eine Anwendung, die ein Container\/Server ist, kann nicht in sich eingefügt werden, es sei denn, es ist eine SDI\-Anwendung ist.  
+ Note that you cannot insert an MDI application into itself. An application that is a container/server cannot be inserted into itself unless it is an SDI application.  
   
-##  <a name="_core_links_to_embedded_objects"></a> Links in eingebettete Objekte  
- Die Links zur Funktion der eingebetteten Objekte aktiviert einen Benutzer, ein Dokument mit einem OLE\-Link einem eingebetteten Objekts innerhalb der Containeranwendung zu erstellen.  Beispielsweise erstellen Sie ein Dokument in einem Textverarbeitungsprogramm, das ein eingebettetes Arbeitsblatt enthält.  Wenn die AnwendungsHalterungsstangen zu eingebetteten Objekten, ein Link zum Arbeitsblatt einfügen können, das im Dokument Textverarbeitungsprogramms enthalten war.  Diese Funktion kann eine Anwendung, die Informationen verwendet, die im Arbeitsblatt enthalten sind, ohne zu wissen, wo das Textverarbeitungsprogramm es ursprünglich abgerufen wird.  
+##  <a name="_core_links_to_embedded_objects"></a> Links to Embedded Objects  
+ The Links to Embedded Objects feature enables a user to create a document with an OLE link to an embedded object inside your container application. For example, create a document in a word processor containing an embedded spreadsheet. If your application supports links to embedded objects, it could paste a link to the spreadsheet contained in the word processor's document. This feature allows your application to use the information contained in the spreadsheet without knowing where the word processor originally got it.  
   
-#### Weitere zu eingebetteten Objekten in der Anwendung verknüpft  
+#### <a name="to-link-to-embedded-objects-in-your-application"></a>To link to embedded objects in your application  
   
-1.  Leiten Sie die Dokumentklasse von `COleLinkingDoc` anstelle von `COleDocument`.  
+1.  Derive your document class from `COleLinkingDoc` instead of `COleDocument`.  
   
-2.  Erstellen Sie eine OLE\-Klassen\-ID \(**CLSID**\) für die Anwendung, indem Sie den Klassen\-ID\-Generator verwenden, der mit den OLE\-Entwicklungswerkzeugen enthalten ist.  
+2.  Create an OLE class ID (**CLSID**) for your application by using the Class ID Generator included with the OLE Development Tools.  
   
-3.  Registrieren Sie die Anwendung mit OLE.  
+3.  Register the application with OLE.  
   
-4.  Erstellen Sie ein `COleTemplateServer`\-Objekt als Member der Anwendungsklasse.  
+4.  Create a `COleTemplateServer` object as a member of your application class.  
   
-5.  In `InitInstance`\-Memberfunktion der Anwendungsklasse sind folgende:  
+5.  In your application class's `InitInstance` member function, do the following:  
   
-    -   Schließen Sie das `COleTemplateServer`\-Objekt zu Dokumentvorlagen den an, indem Sie die Memberfunktion `ConnectTemplate` des Objekts aufrufen.  
+    -   Connect your `COleTemplateServer` object to your document templates by calling the object's `ConnectTemplate` member function.  
   
-    -   Rufen Sie die **COleTemplateServer::RegisterAll**\-Memberfunktion auf, um alle Klassenobjekte mit dem OLE\-System zu registrieren.  
+    -   Call the **COleTemplateServer::RegisterAll** member function to register all class objects with the OLE system.  
   
-    -   Rufen Sie `COleTemplateServer::UpdateRegistry` auf.  Der einzige Parameter in `UpdateRegistry` sollte `OAT_CONTAINER` sein, wenn die Anwendung nicht mit dem "\- Schalter \/Embedded" gestartet wird.  Dies registriert die Anwendung als Container, der Links zu eingebetteten Objekten kann.  
+    -   Call `COleTemplateServer::UpdateRegistry`. The only parameter to `UpdateRegistry` should be `OAT_CONTAINER` if the application is not launched with the "/Embedded" switch. This registers the application as a container that can support links to embedded objects.  
   
-         Wenn die Anwendung mit dem "\- Schalter \/Embedded" gestartet wird, sollte sie das Hauptfenster nicht anzeigen, das einer Serveranwendung ähnelt.  
+         If the application is launched with the "/Embedded" switch, it should not show its main window, similar to a server application.  
   
- Das [OCLIENT](../top/visual-cpp-samples.md) MFC\-OLE implementiert diese Funktion.  Ein Beispiel, wie dies durchgeführt wird, finden Sie die Funktion `InitInstance` in der OCLIENT.CPP\-Datei dieser Beispielanwendung.  
+ The MFC OLE sample [OCLIENT](../visual-cpp-samples.md) implements this feature. For an example of how this is done, see the `InitInstance` function in the OCLIENT.CPP file of this sample application.  
   
-## Siehe auch  
- [Container](../mfc/containers.md)   
- [Server](../mfc/servers.md)
+## <a name="see-also"></a>See Also  
+ [Containers](../mfc/containers.md)   
+ [Servers](../mfc/servers.md)
+
+

@@ -1,43 +1,62 @@
 ---
-title: "Verwalten von Daten mit Dokumentdatenvariablen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Klassen [C++], Friend"
-  - "Auflistungsklassen [C++], verwendet von Dokumentobjekt"
-  - "Daten [MFC]"
-  - "Daten [MFC], Dokumente"
-  - "Dokumentdaten [C++]"
-  - "Dokumente [C++], Datenspeicher"
-  - "friend-Klassen"
-  - "Membervariablen [C++], Dokumentklasse"
+title: Managing Data with Document Data Variables | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- documents [MFC], data storage
+- friend classes [MFC]
+- classes [MFC], friend
+- data [MFC]
+- data [MFC], documents
+- collection classes [MFC], used by document object
+- document data [MFC]
+- member variables [MFC], document class [MFC]
 ms.assetid: e70b87f4-8c30-49e5-8986-521c2ff91704
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Verwalten von Daten mit Dokumentdatenvariablen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f891754a2161b87c87e56cd392faf1394e62ba5d
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Implementieren Sie die Daten des Dokuments als Membervariablen der Dokumentklasse.  deklariert beispielsweise das Scribbleprogramm einen Datenmember des `CObList`\-Typs eine verknüpfte Liste, die Zeiger auf `CObject`\-Objekten speichert.  Diese Liste wird verwendet, um Punktarrays zu speichern, die eine freihändige Strichzeichnung bilden.  
+---
+# <a name="managing-data-with-document-data-variables"></a>Managing Data with Document Data Variables
+Implement your document's data as member variables of your document class. For example, the Scribble program declares a data member of type `CObList` — a linked list that stores pointers to `CObject` objects. This list is used to store arrays of points that make up a freehand line drawing.  
   
- Die Implementierung, hängen Memberdaten des Dokuments von der Art Ihrer Anwendung ab.  Um Ihnen, MFC\-Zubehör ein Gruppe "Auflistungsklassen" \- Arrays, Listen und Hybridwörterbücher \(Zuordnungen\), z Auflistungen auf Grundlage C\+\+\-Vorlagen \- zusammen mit Klassen out helfen, die eine Reihe von gängigen Datentypen wie `CString`, `CRect`, `CPoint`, `CSize` und `CTime` kapseln.  Weitere Informationen über diese Klassen, finden Sie unter [Klassenbibliotheks\-Übersicht](../mfc/class-library-overview.md) in der *MFC\-Referenz*.  
+ How you implement your document's member data depends on the nature of your application. To help you out, MFC supplies a group of "collection classes" — arrays, lists, and maps (dictionaries), including collections based on C++ templates — along with classes that encapsulate a variety of common data types such as `CString`, `CRect`, `CPoint`, `CSize`, and `CTime`. For more information about these classes, see the [Class Library Overview](../mfc/class-library-overview.md) in the *MFC Reference*.  
   
- Wenn Sie Memberdaten des Dokuments definiert haben, fügen Sie normalerweise Memberfunktionen der Dokumentklasse hinzu, um Datenelemente festzulegen und abzurufen und andere nützliche Vorgänge mit ihnen auszuführen.  
+ When you define your document's member data, you will usually add member functions to the document class to set and get data items and perform other useful operations on them.  
   
- Die Ansichten greifen auf das Dokumentobjekt zu, indem der Zeiger der Ansicht zum Dokument verwenden, installiert in der Ansicht zur Erstellungszeit.  Sie können diesen Zeiger in Memberfunktionen einer Ansicht abrufen, indem Sie die `CView`\-Memberfunktion **GetDocument** aufrufen.  Stellen Sie sicher, diesen Zeiger zu Ihren eigenen Dokumenttyp umzuwandeln.  Anschließend können Sie Member des amtlichen Dokuments durch den Zeiger verweisen.  
+ Your views access the document object by using the view's pointer to the document, installed in the view at creation time. You can retrieve this pointer in a view's member functions by calling the `CView` member function **GetDocument**. Be sure to cast this pointer to your own document type. Then you can access public document members through the pointer.  
   
- Wenn häufige Datenübertragung Zugriff benötigt oder Sie die nicht öffentlichen Member der Dokumentklasse verwenden möchten, sollten Sie die Ansichtsklasse den Friend \(in C\+\+\-Begriffen\) von der Dokumentklasse machen.  
+ If frequent data transfer requires direct access, or you wish to use the nonpublic members of the document class, you may want to make your view class a friend (in C++ terms) of the document class.  
   
-## Siehe auch  
- [Verwenden von Dokumenten](../mfc/using-documents.md)
+## <a name="see-also"></a>See Also  
+ [Using Documents](../mfc/using-documents.md)
+
+

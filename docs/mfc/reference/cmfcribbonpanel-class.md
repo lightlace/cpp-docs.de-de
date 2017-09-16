@@ -1,5 +1,5 @@
 ---
-title: Klasse CMFCRibbonPanel | Microsoft-Dokumentation
+title: CMFCRibbonPanel Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -68,7 +68,60 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonPanel class
+- CMFCRibbonPanel [MFC], CMFCRibbonPanel
+- CMFCRibbonPanel [MFC], Add
+- CMFCRibbonPanel [MFC], AddSeparator
+- CMFCRibbonPanel [MFC], AddToolBar
+- CMFCRibbonPanel [MFC], FindByData
+- CMFCRibbonPanel [MFC], FindByID
+- CMFCRibbonPanel [MFC], GetCaptionHeight
+- CMFCRibbonPanel [MFC], GetCount
+- CMFCRibbonPanel [MFC], GetData
+- CMFCRibbonPanel [MFC], GetDefaultButton
+- CMFCRibbonPanel [MFC], GetDroppedDown
+- CMFCRibbonPanel [MFC], GetElement
+- CMFCRibbonPanel [MFC], GetElements
+- CMFCRibbonPanel [MFC], GetElementsByID
+- CMFCRibbonPanel [MFC], GetFocused
+- CMFCRibbonPanel [MFC], GetGalleryRect
+- CMFCRibbonPanel [MFC], GetHighlighted
+- CMFCRibbonPanel [MFC], GetIndex
+- CMFCRibbonPanel [MFC], GetItemIDsList
+- CMFCRibbonPanel [MFC], GetName
+- CMFCRibbonPanel [MFC], GetParentButton
+- CMFCRibbonPanel [MFC], GetParentCategory
+- CMFCRibbonPanel [MFC], GetParentMenuBar
+- CMFCRibbonPanel [MFC], GetPreferedMenuLocation
+- CMFCRibbonPanel [MFC], GetPressed
+- CMFCRibbonPanel [MFC], GetRect
+- CMFCRibbonPanel [MFC], GetVisibleElements
+- CMFCRibbonPanel [MFC], HasElement
+- CMFCRibbonPanel [MFC], HitTest
+- CMFCRibbonPanel [MFC], HitTestEx
+- CMFCRibbonPanel [MFC], Insert
+- CMFCRibbonPanel [MFC], InsertSeparator
+- CMFCRibbonPanel [MFC], IsCenterColumnVert
+- CMFCRibbonPanel [MFC], IsCollapsed
+- CMFCRibbonPanel [MFC], IsHighlighted
+- CMFCRibbonPanel [MFC], IsJustifyColumns
+- CMFCRibbonPanel [MFC], IsMainPanel
+- CMFCRibbonPanel [MFC], IsMenuMode
+- CMFCRibbonPanel [MFC], MakeGalleryItemVisible
+- CMFCRibbonPanel [MFC], OnKey
+- CMFCRibbonPanel [MFC], RecalcWidths
+- CMFCRibbonPanel [MFC], Remove
+- CMFCRibbonPanel [MFC], RemoveAll
+- CMFCRibbonPanel [MFC], Replace
+- CMFCRibbonPanel [MFC], ReplaceByID
+- CMFCRibbonPanel [MFC], SetCenterColumnVert
+- CMFCRibbonPanel [MFC], SetData
+- CMFCRibbonPanel [MFC], SetElementMenu
+- CMFCRibbonPanel [MFC], SetElementRTC
+- CMFCRibbonPanel [MFC], SetElementRTCByID
+- CMFCRibbonPanel [MFC], SetFocused
+- CMFCRibbonPanel [MFC], SetJustifyColumns
+- CMFCRibbonPanel [MFC], SetKeys
+- CMFCRibbonPanel [MFC], ShowPopup
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
 caps.latest.revision: 34
 author: mikeblome
@@ -88,15 +141,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 1f833e1fa59f733734da321718d5db73377fa4bd
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6c5cacd36aea782c2b92dcb93afa3f7cf04d11fb
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel-Klasse
-Implementiert einen Bereich, der eine Anzahl von Menübandelementen enthält. Wenn der Bereich gezeichnet wird, werden darin so viele Elemente wie möglich angezeigt.  
+# <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel Class
+Implements a panel that contains a set of ribbon elements. When the panel is drawn, it displays as many elements as possible, given the size of the panel.  
 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
  
@@ -107,115 +160,115 @@ Implementiert einen Bereich, der eine Anzahl von Menübandelementen enthält. We
 class CMFCRibbonPanel : public CObject  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Members  
   
-### <a name="protected-constructors"></a>Geschützte Konstruktoren  
+### <a name="protected-constructors"></a>Protected Constructors  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonPanel::CMFCRibbonPanel](#cmfcribbonpanel)|Erstellt und initialisiert ein `CMFCRibbonPanel`-Objekt.|  
+|[CMFCRibbonPanel::CMFCRibbonPanel](#cmfcribbonpanel)|Constructs and initializes a `CMFCRibbonPanel` object.|  
   
-### <a name="public-methods"></a>Öffentliche Methoden  
+### <a name="public-methods"></a>Public Methods  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonPanel::Add](#add)|Im Bereich hinzugefügt ein Menübandelement.|  
-|[CMFCRibbonPanel::AddSeparator](#addseparator)|Fügt ein Trennzeichen zum Menübandbereich.|  
-|[CMFCRibbonPanel::AddToolBar](#addtoolbar)|Die Menübandbereich hinzugefügt eine Symbolleiste.|  
+|[CMFCRibbonPanel::Add](#add)|Adds a ribbon element to the panel.|  
+|[CMFCRibbonPanel::AddSeparator](#addseparator)|Adds a separator to the ribbon panel.|  
+|[CMFCRibbonPanel::AddToolBar](#addtoolbar)|Adds a toolbar to the ribbon panel.|  
 |[CMFCRibbonPanel::FindByData](#findbydata)||  
-|[CMFCRibbonPanel::FindByID](#findbyid)|Gibt ein Element anhand einer angegebenen Befehls-ID.|  
+|[CMFCRibbonPanel::FindByID](#findbyid)|Returns an element identified by a specified command ID.|  
 |[CMFCRibbonPanel::GetCaptionHeight](#getcaptionheight)||  
-|[CMFCRibbonPanel::GetCount](#getcount)|Gibt die Anzahl der Elemente in der Menübandbereich zurück.|  
-|[CMFCRibbonPanel::GetData](#getdata)|Gibt die benutzerdefinierten Daten, die dem Bereich zugeordnet.|  
+|[CMFCRibbonPanel::GetCount](#getcount)|Returns the number of elements in the ribbon panel.|  
+|[CMFCRibbonPanel::GetData](#getdata)|Returns the user-defined data associated with the panel.|  
 |[CMFCRibbonPanel::GetDefaultButton](#getdefaultbutton)||  
 |[CMFCRibbonPanel::GetDroppedDown](#getdroppeddown)||  
-|[CMFCRibbonPanel::GetElement](#getelement)|Gibt die Multifunktionsleisten-Element am angegebenen Index zurück.|  
-|[CMFCRibbonPanel::GetElements](#getelements)|Ruft alle Elemente, die in der Menübandbereich enthalten sind.|  
+|[CMFCRibbonPanel::GetElement](#getelement)|Returns the ribbon element located at a specified index.|  
+|[CMFCRibbonPanel::GetElements](#getelements)|Retrieves all elements that are contained in the ribbon panel.|  
 |[CMFCRibbonPanel::GetElementsByID](#getelementsbyid)||  
-|[CMFCRibbonPanel::GetFocused](#getfocused)|Gibt ein Fokuselement zurück.|  
-|[CMFCRibbonPanel::GetGalleryRect](#getgalleryrect)|Gibt ein umschließendes Rechteck Gallery-Elements zurück.|  
+|[CMFCRibbonPanel::GetFocused](#getfocused)|Returns a focused element.|  
+|[CMFCRibbonPanel::GetGalleryRect](#getgalleryrect)|Returns a bounding rectangle of Gallery element.|  
 |[CMFCRibbonPanel::GetHighlighted](#gethighlighted)||  
 |[CMFCRibbonPanel::GetIndex](#getindex)||  
 |[CMFCRibbonPanel::GetItemIDsList](#getitemidslist)||  
 |[CMFCRibbonPanel::GetName](#getname)||  
 |[CMFCRibbonPanel::GetParentButton](#getparentbutton)||  
-|[CMFCRibbonPanel::GetParentCategory](#getparentcategory)|Gibt die übergeordnete Kategorie Menübandbereich zurück.|  
+|[CMFCRibbonPanel::GetParentCategory](#getparentcategory)|Returns the parent category of the ribbon panel.|  
 |[CMFCRibbonPanel::GetParentMenuBar](#getparentmenubar)||  
 |[CMFCRibbonPanel::GetPreferedMenuLocation](#getpreferedmenulocation)||  
 |[CMFCRibbonPanel::GetPressed](#getpressed)||  
 |[CMFCRibbonPanel::GetRect](#getrect)||  
-|[CMFCRibbonPanel::GetVisibleElements](#getvisibleelements)|Ruft ein Array von Elementen angezeigt.|  
+|[CMFCRibbonPanel::GetVisibleElements](#getvisibleelements)|Obtains an array of visible elements.|  
 |[CMFCRibbonPanel::HasElement](#haselement)||  
 |[CMFCRibbonPanel::HitTest](#hittest)||  
 |[CMFCRibbonPanel::HitTestEx](#hittestex)||  
-|[CMFCRibbonPanel::Insert](#insert)|Fügt eine Multifunktionsleisten-Element an der angegebenen Position.|  
-|[CMFCRibbonPanel::InsertSeparator](#insertseparator)|Fügt ein Trennzeichen an der angegebenen Position ein.|  
-|[CMFCRibbonPanel::IsCenterColumnVert](#iscentercolumnvert)|Gibt an, ob alle Panel-Elemente zentriert werden soll (Ausrichtung) und/oder vertikal nach Spalte.|  
+|[CMFCRibbonPanel::Insert](#insert)|Inserts a ribbon element at the given position.|  
+|[CMFCRibbonPanel::InsertSeparator](#insertseparator)|Inserts a separator at the given position.|  
+|[CMFCRibbonPanel::IsCenterColumnVert](#iscentercolumnvert)|Specifies whether all panel elements should be centered (aligned) vertically, by column.|  
 |[CMFCRibbonPanel::IsCollapsed](#iscollapsed)||  
 |[CMFCRibbonPanel::IsHighlighted](#ishighlighted)||  
-|[CMFCRibbonPanel::IsJustifyColumns](#isjustifycolumns)|Gibt an, ob alle Bereich Spalten die gleiche Breite aufweisen.|  
+|[CMFCRibbonPanel::IsJustifyColumns](#isjustifycolumns)|Specifies whether all panel columns have the same width.|  
 |[CMFCRibbonPanel::IsMainPanel](#ismainpanel)||  
 |[CMFCRibbonPanel::IsMenuMode](#ismenumode)||  
-|[CMFCRibbonPanel::MakeGalleryItemVisible](#makegalleryitemvisible)|Führt einen Bildlauf durch den Katalog für die angegebene Multifunktionsleisten-Element sichtbar zu machen.|  
+|[CMFCRibbonPanel::MakeGalleryItemVisible](#makegalleryitemvisible)|Scrolls the gallery to make the specified Ribbon element visible.|  
 |[CMFCRibbonPanel::OnKey](#onkey)||  
 |[CMFCRibbonPanel::RecalcWidths](#recalcwidths)||  
-|[CMFCRibbonPanel::Remove](#remove)|Entfernt und löscht optional ein Element am angegebenen Index.|  
-|[CMFCRibbonPanel::RemoveAll](#removeall)|Entfernt alle Elemente im Menüband.|  
-|[CMFCRibbonPanel::Replace](#replace)|Ersetzt ein Element mit einem anderen basierend auf den Indexwerten der entsprechenden.|  
-|[CMFCRibbonPanel::ReplaceByID](#replacebyid)|Ersetzt ein Element mit einer anderen basierend auf einer angegebenen Befehls-ID.|  
-|[CMFCRibbonPanel::SetCenterColumnVert](#setcentercolumnvert)|Ordnet das Panel, um Elemente nach Spalte vertikal auszurichten.|  
-|[CMFCRibbonPanel::SetData](#setdata)|Ordnet mit der benutzerdefinierten Datentyps an.|  
-|[CMFCRibbonPanel::SetElementMenu](#setelementmenu)|Weist ein Popup-Menü auf das Element mit der angegebenen Befehls-ID.|  
-|[CMFCRibbonPanel::SetElementRTC](#setelementrtc)|Fügt ein Menübandelement, das durch die angegebene Laufzeit-Klasseninformationen zum Menübandbereich angegeben.|  
-|[CMFCRibbonPanel::SetElementRTCByID](#setelementrtcbyid)|Fügt ein Menübandelement, das durch die angegebene Laufzeit-Klasseninformationen zum Menübandbereich angegeben.|  
-|[CMFCRibbonPanel::SetFocused](#setfocused)|Setzt den Fokus auf das angegebene Element der Multifunktionsleiste.|  
-|[CMFCRibbonPanel::SetJustifyColumns](#setjustifycolumns)|Aktiviert oder deaktiviert die Ausrichtung der Spalte.|  
-|[CMFCRibbonPanel::SetKeys](#setkeys)|Legt die Tastenkombination, die im Menüband-Fenster wird angezeigt.|  
+|[CMFCRibbonPanel::Remove](#remove)|Removes and optionally deletes an element located at the specified index.|  
+|[CMFCRibbonPanel::RemoveAll](#removeall)|Removes all elements from the ribbon panel.|  
+|[CMFCRibbonPanel::Replace](#replace)|Replaces one element with another based on their respective index values.|  
+|[CMFCRibbonPanel::ReplaceByID](#replacebyid)|Replaces one element with another based on a specified command ID.|  
+|[CMFCRibbonPanel::SetCenterColumnVert](#setcentercolumnvert)|Orders the panel to align elements vertically, by column.|  
+|[CMFCRibbonPanel::SetData](#setdata)|Associates user-defined data with the ribbon panel.|  
+|[CMFCRibbonPanel::SetElementMenu](#setelementmenu)|Assigns a popup menu to the element that has the given command ID.|  
+|[CMFCRibbonPanel::SetElementRTC](#setelementrtc)|Adds a ribbon element specified by the provided runtime class information to the ribbon panel.|  
+|[CMFCRibbonPanel::SetElementRTCByID](#setelementrtcbyid)|Adds a ribbon element specified by the provided runtime class information to the ribbon panel.|  
+|[CMFCRibbonPanel::SetFocused](#setfocused)|Sets focus to the specified Ribbon element.|  
+|[CMFCRibbonPanel::SetJustifyColumns](#setjustifycolumns)|Enables or disables column justification.|  
+|[CMFCRibbonPanel::SetKeys](#setkeys)|Sets the keyboard shortcut that displays the ribbon panel.|  
 |[CMFCRibbonPanel::ShowPopup](#showpopup)||  
   
-## <a name="remarks"></a>Hinweise  
- Menübandbereichen sind logische Gruppen von verwandten Aufgaben, die Sie im menübandkategorien erstellen. Die Größe des Menübands ändert wird das Panellayout automatisch so viele Elemente wie möglich angezeigt.  
+## <a name="remarks"></a>Remarks  
+ Ribbon panels are logical groupings of related tasks that you create within ribbon categories. As the size of the ribbon changes, the panel layout automatically adjusts to display as many elements as possible.  
   
- Sie erhalten ein Menüband Bereiche, die in einer Menübandkategorie enthalten ist, durch Aufrufen der [CMFCRibbonCategory::GetPanel](../../mfc/reference/cmfcribboncategory-class.md#getpanel) Methode.  
+ You can get a ribbon panels that is contained in a ribbon category by calling the [CMFCRibbonCategory::GetPanel](../../mfc/reference/cmfcribboncategory-class.md#getpanel) method.  
   
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie so konfigurieren Sie eine `CMFCRibbonPanel` Objekt mit verschiedenen Methoden in der `CMFCRibbonPanel` Klasse. Das Beispiel zeigt, wie legen Sie die Tastenkombination, die im Menüband-Fenster wird angezeigt, Elemente im Bereich vertikal ausrichten, indem Sie Spalte und Spalte Begründung zu aktivieren. Dieser Codeausschnitt ist Teil der [MS Office 2007-Demo-Beispiel](../../visual-cpp-samples.md).  
+## <a name="example"></a>Example  
+ The following example demonstrates how to configure a `CMFCRibbonPanel` object by using various methods in the `CMFCRibbonPanel` class. The example shows how to set the keyboard shortcut that displays the ribbon panel, align elements in the panel vertically by column, and enable column justification. This code snippet is part of the [MS Office 2007 Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_MSOffice2007Demo&#10;](../../mfc/reference/codesnippet/cpp/cmfcribbonpanel-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_MSOffice2007Demo#10](../../mfc/reference/codesnippet/cpp/cmfcribbonpanel-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- [Von CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md)  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** afxRibbonPanel.h  
   
-##  <a name="add"></a>CMFCRibbonPanel::Add  
- Fügt den angegebenen Multifunktionsleisten-Element in das Array von Menübandelemente, das in der Menübandbereich enthalten ist.  
+##  <a name="add"></a>  CMFCRibbonPanel::Add  
+ Appends the specified ribbon element to the array of ribbon elements that is contained in the ribbon panel.  
   
 ```  
 virtual void Add(CMFCRibbonBaseElement* pElem);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in, out] `pElem`  
- Ein Zeiger auf ein Menübandelement.  
+ Pointer to a ribbon element.  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="addseparator"></a>CMFCRibbonPanel::AddSeparator  
- Fügt ein Trennzeichen zum Menübandbereich.  
+##  <a name="addseparator"></a>  CMFCRibbonPanel::AddSeparator  
+ Adds a separator to the ribbon panel.  
   
 ```  
 virtual void AddSeparator();
 ```  
   
-### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Methode, um ein Trennzeichen zum Menübandbereich hinzufügen. Das Trennzeichen wird neben der Multifunktionsleisten-Element, das vom vorherigen Aufruf hinzugefügt wurde hinzugefügt [CMFCRibbonPanel::Add](#add). Rufen Sie an einer angegebenen Position eine Trennzeichen einfügen [CMFCRibbonPanel::InsertSeparator](#insertseparator).  
+### <a name="remarks"></a>Remarks  
+ Call this method to add a separator to the ribbon panel. The separator will be added next to the ribbon element that was added by the previous call to [CMFCRibbonPanel::Add](#add). To insert a separator at a given position, call [CMFCRibbonPanel::InsertSeparator](#insertseparator).  
   
-##  <a name="addtoolbar"></a>CMFCRibbonPanel::AddToolBar  
- Die Menübandbereich hinzugefügt eine Symbolleiste.  
+##  <a name="addtoolbar"></a>  CMFCRibbonPanel::AddToolBar  
+ Adds a toolbar to the ribbon panel.  
   
 ```  
 CMFCRibbonButtonsGroup* AddToolBar(
@@ -225,27 +278,27 @@ UINT uiHotResID = 0,
 UINT uiDisabledResID = 0);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `uiToolbarResID`  
- Gibt die Ressourcen-ID der Symbolleiste hinzufügen.  
+ Specifies the resource ID of the toolbar to add.  
   
  [in] `uiColdResID`  
- Gibt die Ressourcen-ID des kalten Bilder auf der Symbolleiste.  
+ Specifies the resource ID of the toolbar's cold images.  
   
  [in] `uiHotResID`  
- Gibt die Ressourcen-ID der Symbolleiste hot-Images.  
+ Specifies the resource ID of the toolbar's hot images.  
   
  [in] `uiDisabledResID`  
- Gibt die Ressourcen-ID auf der Symbolleiste deaktiviert Images.  
+ Specifies the resource ID of the toolbar's disabled images.  
   
-### <a name="return-value"></a>Rückgabewert  
- Rufen Sie diese Methode, um eine Symbolleiste zum Menübandbereich hinzufügen. Die Symbolleiste wird neben der Multifunktionsleisten-Element hinzugefügt, die vom vorherigen Aufruf von hinzugefügt [CMFCRibbonPanel::Add](#add).  
+### <a name="return-value"></a>Return Value  
+ Call this method to add a toolbar to the ribbon panel. The toolbar will be added next to the ribbon element added by the previous call to [CMFCRibbonPanel::Add](#add).  
   
-### <a name="remarks"></a>Hinweise  
- Weitere Informationen über Symbolleisten, hervorgehobenen Bilder, kalte Bilder und deaktivierte Bilder finden Sie unter [CMFCToolBar Klasse](../../mfc/reference/cmfctoolbar-class.md).  
+### <a name="remarks"></a>Remarks  
+ For more information about toolbars, hot images, cold images, and disabled images, see [CMFCToolBar Class](../../mfc/reference/cmfctoolbar-class.md).  
   
-##  <a name="cmfcribbonpanel"></a>CMFCRibbonPanel::CMFCRibbonPanel  
- Erstellt und initialisiert ein [CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md) Objekt.  
+##  <a name="cmfcribbonpanel"></a>  CMFCRibbonPanel::CMFCRibbonPanel  
+ Constructs and initializes a [CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md) object.  
   
 ```  
 CMFCRibbonPanel(
@@ -255,133 +308,133 @@ HICON hIcon = NULL);
 CMFCRibbonPanel(CMFCRibbonGallery* pPaletteButton);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `lpszName`  
- Der Name des Bereichs Menüband.  
+ The name of the ribbon panel.  
   
  [in] `hIcon`  
- Handle für das Symbol als Standardschaltfläche des Menüband-Panels.  
+ Handle to the icon of the default button for the ribbon panel.  
   
  [in] `pPaletteButton`  
- Ein Zeiger auf ein Menüband für das Menüband-Panel.  
+ Pointer to a ribbon gallery for the ribbon panel.  
   
-##  <a name="findbydata"></a>CMFCRibbonPanel::FindByData  
- Ruft das Menübandelement, das die angegebenen Daten zugeordnet ist.  
+##  <a name="findbydata"></a>  CMFCRibbonPanel::FindByData  
+ Retrieves the ribbon element that is associated with the specified data.  
   
 ```  
 CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData) const;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `dwData`  
- Die Daten, die ein Menübandelement zugeordnet.  
+ The data associated with a ribbon element.  
   
-### <a name="return-value"></a>Rückgabewert  
- Zeiger auf ein Menübandelement, wenn die Methode erfolgreich war; andernfalls `NULL`.  
+### <a name="return-value"></a>Return Value  
+ Pointer to a ribbon element if the method was successful; otherwise `NULL`.  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="findbyid"></a>CMFCRibbonPanel::FindByID  
- Ruft die Multifunktionsleisten-Element, das von der angegebenen Befehls-ID identifiziert wird  
+##  <a name="findbyid"></a>  CMFCRibbonPanel::FindByID  
+ Retrieves the ribbon element that is identified by the specified command ID.  
   
 ```  
 CMFCRibbonBaseElement* FindByID(UINT uiCmdID) const;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmdID`  
- Befehls-ID der Multifunktionsleisten-Element.  
+ The command ID of a ribbon element.  
   
-### <a name="return-value"></a>Rückgabewert  
- Das Menübandelement, das von der angegebenen Befehls-ID angegeben wird; andernfalls `NULL` Wenn keine Multifunktionsleisten-Element mit der angegebenen Befehls-ID identifiziert wird  
+### <a name="return-value"></a>Return Value  
+ The ribbon element that is identified by the specified command ID; otherwise `NULL` if no ribbon element is identified with the specified command ID.  
   
-##  <a name="getcaptionheight"></a>CMFCRibbonPanel::GetCaptionHeight  
- Ruft die Höhe einer Beschriftung für das Menüband Panel ab.  
+##  <a name="getcaptionheight"></a>  CMFCRibbonPanel::GetCaptionHeight  
+ Retrieves the height of a caption for the ribbon panel.  
   
 ```  
 int GetCaptionHeight() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Die Höhe der Beschriftung für den Menübandbereich in Pixel.  
+### <a name="return-value"></a>Return Value  
+ The height, in pixels, of a caption for the ribbon panel.  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getcount"></a>CMFCRibbonPanel::GetCount  
- Ruft die Anzahl der Menübandelemente, die klicken Sie im Menüband enthalten sind.  
+##  <a name="getcount"></a>  CMFCRibbonPanel::GetCount  
+ Retrieves the number of ribbon elements that are contained in the ribbon panel.  
   
 ```  
 int GetCount() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Die Anzahl der Menübandelemente, die klicken Sie im Menüband enthalten sind.  
+### <a name="return-value"></a>Return Value  
+ The number of ribbon elements that are contained in the ribbon panel.  
   
-##  <a name="getdata"></a>CMFCRibbonPanel::GetData  
- Gibt die benutzerdefinierten Daten, die dem Bereich zugeordnet.  
+##  <a name="getdata"></a>  CMFCRibbonPanel::GetData  
+ Returns the user-defined data associated with the panel.  
   
 ```  
 DWORD_PTR GetData() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Die benutzerdefinierten Daten im Bereich zugeordnet.  
+### <a name="return-value"></a>Return Value  
+ The user-defined data associated with the panel.  
   
-##  <a name="getdefaultbutton"></a>CMFCRibbonPanel::GetDefaultButton  
- Ruft die Standardschaltfläche für das Menüband Panel ab.  
+##  <a name="getdefaultbutton"></a>  CMFCRibbonPanel::GetDefaultButton  
+ Retrieves the default button for the ribbon panel.  
   
 ```  
 CMFCRibbonButton& GetDefaultButton();
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Die Standardschaltfläche für das Menüband-Panel.  
+### <a name="return-value"></a>Return Value  
+ The default button for the ribbon panel.  
   
-### <a name="remarks"></a>Hinweise  
- Die Standardschaltfläche wird angezeigt, wenn ein Menübandbereich nicht genügend Platz zum Anzeigen von dessen Menübandelemente hat.  
+### <a name="remarks"></a>Remarks  
+ The default button is displayed when a ribbon panel has insufficient space to display its ribbon elements.  
   
-##  <a name="getdroppeddown"></a>CMFCRibbonPanel::GetDroppedDown  
- Ruft einen Zeiger auf ein Menübandelement ab, wenn das Popup-Menü sichtbar ist.  
+##  <a name="getdroppeddown"></a>  CMFCRibbonPanel::GetDroppedDown  
+ Retrieves a pointer to a ribbon element if its pop-up menu is dropped down.  
   
 ```  
 CMFCRibbonBaseElement* GetDroppedDown() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Zeiger auf das Menübandelement, das das Popup-Menü unten gelöscht wurde; andernfalls `NULL` besitzt keine Multifunktionsleisten-Element seine Popupmenü eingetragen.  
+### <a name="return-value"></a>Return Value  
+ Pointer to the ribbon element that has its pop-up menu dropped down; otherwise `NULL` if no ribbon element has its pop-up menu dropped down.  
   
-### <a name="remarks"></a>Hinweise  
- Nur im Menübandbereich enthaltenen Menübandelemente werden getestet.  
+### <a name="remarks"></a>Remarks  
+ Only ribbon elements that are contained in the ribbon panel are tested.  
   
-##  <a name="getelement"></a>CMFCRibbonPanel::GetElement  
- Gibt die Multifunktionsleisten-Element am angegebenen Index zurück.  
+##  <a name="getelement"></a>  CMFCRibbonPanel::GetElement  
+ Returns the ribbon element located at a specified index.  
   
 ```  
 CMFCRibbonBaseElement* GetElement(int nIndex) const;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- Gibt den nullbasierten Index des abzurufenden Elements.  
+ Specifies the zero-based index of the element to retrieve.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein gültiger Zeiger auf der Basis der Multifunktionsleisten-Element befindet sich an Position `nIndex` klicken Sie im Menüband oder `NULL` Wenn am angegebenen Index kein Element vorhanden ist.  
+### <a name="return-value"></a>Return Value  
+ A valid pointer to the base ribbon element located at position `nIndex` in the ribbon panel, or `NULL` if there is no element at the specified index.  
   
-##  <a name="getelements"></a>CMFCRibbonPanel::GetElements  
- Ruft alle Menübandelemente, die in der Menübandbereich enthalten sind.  
+##  <a name="getelements"></a>  CMFCRibbonPanel::GetElements  
+ Retrieves all ribbon elements that are contained in the ribbon panel.  
   
 ```  
 void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [out] `arElements`  
- Ein Array mit alle Menübandelemente zu füllen, die in der Menübandbereich enthalten sind.  
+ An array to fill with all the ribbon elements that are contained in the ribbon panel.  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getelementsbyid"></a>CMFCRibbonPanel::GetElementsByID  
- Fügt die Multifunktionsleistenelemente mit der angegebenen Befehls-ID in das angegebene Array.  
+##  <a name="getelementsbyid"></a>  CMFCRibbonPanel::GetElementsByID  
+ Adds ribbon elements that have the specified command ID to the specified array.  
   
 ```  
 void GetElementsByID(
@@ -389,160 +442,160 @@ UINT uiCmdID,
 CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmdID`  
- Befehls-ID für ein Menübandelement.  
+ Command ID for a ribbon element.  
   
  [in] `arElements`  
- Array von Menübandelementen.  
+ Array of ribbon elements.  
   
-### <a name="remarks"></a>Hinweise  
- Nur im Menübandbereich enthaltenen Menübandelemente werden getestet.  
+### <a name="remarks"></a>Remarks  
+ Only ribbon elements that are contained in the ribbon panel are tested.  
   
-##  <a name="gethighlighted"></a>CMFCRibbonPanel::GetHighlighted  
- Ruft das Menübandelement, das im Menübandbereich markiert ist.  
+##  <a name="gethighlighted"></a>  CMFCRibbonPanel::GetHighlighted  
+ Retrieves the ribbon element that is highlighted on the ribbon panel.  
   
 ```  
 CMFCRibbonBaseElement* GetHighlighted() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf die Multifunktionsleisten-Element, das im Menübandbereich markiert ist.  
+### <a name="return-value"></a>Return Value  
+ Pointer to the ribbon element that is highlighted on the ribbon panel.  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getindex"></a>CMFCRibbonPanel::GetIndex  
- Ruft den nullbasierten Index des angegebenen Menübandelements aus dem Array von Menübandelemente, die klicken Sie im Menüband enthalten sind.  
+##  <a name="getindex"></a>  CMFCRibbonPanel::GetIndex  
+ Retrieves the zero-based index of the specified ribbon element from the array of ribbon elements that are contained in the ribbon panel.  
   
 ```  
 virtual int GetIndex(CMFCRibbonBaseElement* pElem) const;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `pElem`  
- Ein Zeiger auf ein Menübandelement.  
+ Pointer to a ribbon element.  
   
-### <a name="return-value"></a>Rückgabewert  
- Nullbasierte Index des angegebenen Menübandelement, wenn die Methode erfolgreich war. andernfalls -1.  
+### <a name="return-value"></a>Return Value  
+ Zero-based index of the specified ribbon element if the method was successful; otherwise -1.  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getitemidslist"></a>CMFCRibbonPanel::GetItemIDsList  
- Ruft die Befehls-IDs für alle Menübandelemente im Menübandbereich ab.  
+##  <a name="getitemidslist"></a>  CMFCRibbonPanel::GetItemIDsList  
+ Retrieves the command IDs for all ribbon elements in the ribbon panel.  
   
 ```  
 void GetItemIDsList(CList<UINT, UINT>& lstItems) const;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [out] `lstItems`  
- Die Liste der Befehls-IDs für Menübandelemente, die klicken Sie im Menüband enthalten sind.  
+ The list of command IDs for ribbon elements that are contained in the ribbon panel.  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getname"></a>CMFCRibbonPanel::GetName  
- Ruft den Namen des Panels Menüband.  
+##  <a name="getname"></a>  CMFCRibbonPanel::GetName  
+ Retrieves the name of the ribbon panel.  
   
 ```  
 LPCTSTR GetName() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Der Name des Bereichs Menüband.  
+### <a name="return-value"></a>Return Value  
+ The name of the ribbon panel.  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getparentbutton"></a>CMFCRibbonPanel::GetParentButton  
+##  <a name="getparentbutton"></a>  CMFCRibbonPanel::GetParentButton  
 
   
 ```  
 CMFCRibbonBaseElement* GetParentButton() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getparentcategory"></a>CMFCRibbonPanel::GetParentCategory  
- Gibt die übergeordnete Kategorie Menübandbereich zurück.  
+##  <a name="getparentcategory"></a>  CMFCRibbonPanel::GetParentCategory  
+ Returns the parent category of the ribbon panel.  
   
 ```  
 CMFCRibbonCategory* GetParentCategory() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf die Menübandkategorie, die dieses Menüband-Steuerelement enthält.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the ribbon category that contains this ribbon panel.  
   
-##  <a name="getparentmenubar"></a>CMFCRibbonPanel::GetParentMenuBar  
+##  <a name="getparentmenubar"></a>  CMFCRibbonPanel::GetParentMenuBar  
 
   
 ```  
 CMFCRibbonPanelMenuBar* GetParentMenuBar() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getpreferedmenulocation"></a>CMFCRibbonPanel::GetPreferedMenuLocation  
- Ruft die bevorzugte Anzeigerechteck für das Popupmenü im Menüband-Bereich ab.  
+##  <a name="getpreferedmenulocation"></a>  CMFCRibbonPanel::GetPreferedMenuLocation  
+ Retrieves the preferred display rectangle for the pop-up menu of the ribbon panel.  
   
 ```  
 virtual BOOL GetPreferedMenuLocation(CRect& rect);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [out] `rect`  
- Dieser Parameter wird nicht verwendet.  
+ This parameter is not used.  
   
-### <a name="return-value"></a>Rückgabewert  
- Gibt immer `FALSE` zurück.  
+### <a name="return-value"></a>Return Value  
+ Always returns `FALSE`.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Methode gibt immer `FALSE` zurück. Überschreiben Sie diese Methode, um das Rechteck Anzeigestil für die Popup-Menü im Menüband-Bereich abgerufen.  
+### <a name="remarks"></a>Remarks  
+ This method always returns `FALSE`. Override this method to retrieve the preferred display rectangle for the pop-up menu of the ribbon panel.  
   
-##  <a name="getpressed"></a>CMFCRibbonPanel::GetPressed  
- Ruft einen Zeiger auf ein Menübandelement im Menübandbereich ab, wenn der Benutzer derzeit drückt.  
+##  <a name="getpressed"></a>  CMFCRibbonPanel::GetPressed  
+ Retrieves a pointer to a ribbon element on the ribbon panel if the user currently presses it.  
   
 ```  
 CMFCRibbonBaseElement* GetPressed() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf ein Menübandelement, wenn der Benutzer derzeit drückt; andernfalls `NULL`.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a ribbon element if the user currently presses it; otherwise `NULL`.  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getrect"></a>CMFCRibbonPanel::GetRect  
- Ruft das Anzeigerechteck für das Menüband Panel ab.  
+##  <a name="getrect"></a>  CMFCRibbonPanel::GetRect  
+ Retrieves the display rectangle for the ribbon panel.  
   
 ```  
 const CRect& GetRect() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Das Anzeigerechteck für den Menübandbereich.  
+### <a name="return-value"></a>Return Value  
+ The display rectangle for the ribbon panel.  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="haselement"></a>CMFCRibbonPanel::HasElement  
- Gibt an, ob der Menübandbereich der angegebenen Multifunktionsleisten-Element enthält.  
+##  <a name="haselement"></a>  CMFCRibbonPanel::HasElement  
+ Indicates whether the ribbon panel contains the specified ribbon element.  
   
 ```  
 BOOL HasElement(const CMFCRibbonBaseElement* pElem) const;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `pElem`  
- Ein Zeiger auf ein Menübandelement.  
+ Pointer to a ribbon element.  
   
-### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn der Menübandbereich der angegebenen Multifunktionsleisten-Element enthält. andernfalls `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon panel contains the specified ribbon element; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="highlight"></a>CMFCRibbonPanel::Highlight  
- Legt die Hervorhebungsfarbe für den ausgewählten Menübandbereich und für das Menübandelement vom Punkt angegeben.  
+##  <a name="highlight"></a>  CMFCRibbonPanel::Highlight  
+ Sets the highlight color for the selected ribbon panel and for the ribbon element specified by the point.  
   
 ```  
 virtual void Highlight(
@@ -550,17 +603,17 @@ BOOL bHighlight,
 CPoint point);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `bHighlight`  
- `TRUE`auf der Menübandbereich zu markieren. `FALSE` auf Menübandbereich unhighlight.  
+ `TRUE` to highlight the ribbon panel; `FALSE` to unhighlight the ribbon panel.  
   
  [in] `point`  
- Die x- und y-Koordinaten des Mauszeigers, in Bezug auf die linke obere Ecke des Fensters.  
+ The x and y coordinates of the pointer, relative to the upper-left corner of the window.  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="hittest"></a>CMFCRibbonPanel::HitTest  
- Ruft ein Menübandelement ab, wenn der angegebene Punkt darin befindet.  
+##  <a name="hittest"></a>  CMFCRibbonPanel::HitTest  
+ Retrieves a ribbon element if the specified point is located in it.  
   
 ```  
 virtual CMFCRibbonBaseElement* HitTest(
@@ -568,38 +621,38 @@ CPoint point,
 BOOL bCheckPanelCaption = FALSE);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- Die x- und y-Koordinaten des Mauszeigers, in Bezug auf die linke obere Ecke des Fensters.  
+ The x and y coordinates of the pointer, relative to the upper-left corner of the window.  
   
  [in] `bCheckPanelCaption`  
- `TRUE`So testen Sie die Beschriftung der Menüband-Bereich; andernfalls `FALSE`.  
+ `TRUE` to test the ribbon panel caption; otherwise `FALSE`.  
   
-### <a name="return-value"></a>Rückgabewert  
- Zeiger auf ein Menübandelement, wenn der angegebene Punkt darin enthalten ist; andernfalls `NULL`.  
+### <a name="return-value"></a>Return Value  
+ Pointer to a ribbon element if the specified point is located in it; otherwise `NULL`.  
   
-### <a name="remarks"></a>Hinweise  
- Nur im Menübandbereich enthaltenen Menübandelemente werden getestet.  
+### <a name="remarks"></a>Remarks  
+ Only ribbon elements that are contained in the ribbon panel are tested.  
   
-##  <a name="hittestex"></a>CMFCRibbonPanel::HitTestEx  
- Ruft den nullbasierten Index des Multifunktionsleisten-Element, das den angegebenen Punkt darin verfügt.  
+##  <a name="hittestex"></a>  CMFCRibbonPanel::HitTestEx  
+ Retrieves the zero-based index of the ribbon element that has the specified point located in it.  
   
 ```  
 virtual int HitTestEx(CPoint point) const;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- Die x- und y-Koordinaten des Mauszeigers, in Bezug auf die linke obere Ecke des Fensters.  
+ The x and y coordinates of the pointer, relative to the upper-left corner of the window.  
   
-### <a name="return-value"></a>Rückgabewert  
- Der nullbasierte Index des Menübandelements, die den angegebenen Punkt darin verfügt; andernfalls -1.  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the ribbon element that has the specified point located in it; otherwise -1.  
   
-### <a name="remarks"></a>Hinweise  
- Nur im Menübandbereich enthaltenen Menübandelemente werden getestet.  
+### <a name="remarks"></a>Remarks  
+ Only ribbon elements that are contained in the ribbon panel are tested.  
   
-##  <a name="insert"></a>CMFCRibbonPanel::Insert  
- Fügt den angegebenen Multifunktionsleisten-Element an der angegebenen Position im Array von Menübandelementen, die in der Menübandbereich enthalten ist.  
+##  <a name="insert"></a>  CMFCRibbonPanel::Insert  
+ Inserts the specified ribbon element at the specified position in the array of ribbon elements that is contained in the ribbon panel.  
   
 ```  
 virtual BOOL Insert(
@@ -607,124 +660,124 @@ CMFCRibbonBaseElement* pElem,
 int nIndex);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in, out] `pElem`  
- Ein Zeiger auf ein Menübandelement.  
+ Pointer to a ribbon element.  
   
  [in] `nIndex`  
- Nullbasierter Wert von-1 bis zu der Anzahl der Menübandelemente, die im Array enthalten sind.  
+ Zero-based value, ranging from -1 to the number of ribbon elements that are contained in the array.  
   
-### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das Menübandelement erfolgreich eingefügt wurde; andernfalls `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element was inserted successfully; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Hinweise  
- Wenn der Wert der `nIndex` ist-1, oder wenn `nIndex` gleich der Anzahl der Menübandelemente im Array, das angegebene Menübandelement wird bis zum Ende des Arrays hinzugefügt. Wenn der Wert des `nIndex` ist außerhalb des Bereichs, der die Methode schlägt fehl.  
+### <a name="remarks"></a>Remarks  
+ If the value of `nIndex` is -1, or if `nIndex` equals the number of ribbon elements in the array, the specified ribbon element is added to the end of the array. If the value of `nIndex` is out of range, the method will fail.  
   
-##  <a name="insertseparator"></a>CMFCRibbonPanel::InsertSeparator  
- Fügt ein Trennzeichen an der angegebenen Position ein.  
+##  <a name="insertseparator"></a>  CMFCRibbonPanel::InsertSeparator  
+ Inserts a separator at the given position.  
   
 ```  
 virtual BOOL InsertSeparator(int nIndex);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- Gibt den nullbasierten Index, an dem das Trennzeichen eingefügt wird.  
+ Specifies the zero-based index where the separator is inserted.  
   
-### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das Trennzeichen erfolgreich eingefügt wurde; andernfalls `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the separator has been inserted successfully; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Methode, um ein Trennzeichen einzufügen, an der angegebenen Position `nIndex`. Rufen Sie zum Einfügen von Trennzeichen neben das zuletzt hinzugefügte Menübandelement [CMFCRibbonPanel::AddSeparator](#addseparator).  
+### <a name="remarks"></a>Remarks  
+ Call this method to insert a separator at the position specified by `nIndex`. To insert a separator next to the most recently added ribbon element, call [CMFCRibbonPanel::AddSeparator](#addseparator).  
   
-##  <a name="iscentercolumnvert"></a>CMFCRibbonPanel::IsCenterColumnVert  
- Gibt an, ob die vertikale Position von Menübandelemente innerhalb ihrer Anzeigerechteck zentriert werden.  
+##  <a name="iscentercolumnvert"></a>  CMFCRibbonPanel::IsCenterColumnVert  
+ Indicates whether the vertical positions of ribbon elements are centered within their display rectangle.  
   
 ```  
 BOOL IsCenterColumnVert() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die vertikale von positioniert Menübandelemente innerhalb ihrer Anzeigerechteck zentriert; andernfalls `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the vertical positions of ribbon elements are centered within their display rectangle; otherwise `FALSE`.  
   
-##  <a name="iscollapsed"></a>CMFCRibbonPanel::IsCollapsed  
- Gibt an, ob die Größe des Bereichs Menüband in horizontaler Richtung minimiert wird.  
+##  <a name="iscollapsed"></a>  CMFCRibbonPanel::IsCollapsed  
+ Indicates whether the display size of the ribbon panel is minimized in the horizontal direction.  
   
 ```  
 BOOL IsCollapsed() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Größe des Bereichs Menüband, in horizontaler Richtung minimiert wird; andernfalls `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the display size of the ribbon panel is minimized in the horizontal direction; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Hinweise  
- Wenn ein Menübandbereich reduziert ist, wird nur die Standardschaltfläche, den Namen und ein Dropdown Pfeil.  
+### <a name="remarks"></a>Remarks  
+ When a ribbon panel is collapsed, it only displays its default button, its name, and a drop-down arrow.  
   
-##  <a name="ishighlighted"></a>CMFCRibbonPanel::IsHighlighted  
- Gibt an, ob die Anzeige der Menübandbereich hervorgehoben wird.  
+##  <a name="ishighlighted"></a>  CMFCRibbonPanel::IsHighlighted  
+ Indicates whether the display of the ribbon panel is highlighted.  
   
 ```  
 BOOL IsHighlighted() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Anzeige des Bereichs Menüband hervorgehoben ist. andernfalls `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the display of the ribbon panel is highlighted; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Hinweise  
- Die Anzeige von einem Menübandbereich wird hervorgehoben, wenn der Mauszeiger darüber befindet.  
+### <a name="remarks"></a>Remarks  
+ The display of a ribbon panel is highlighted when the pointer is over it.  
   
-##  <a name="isjustifycolumns"></a>CMFCRibbonPanel::IsJustifyColumns  
- Gibt an, ob die Anzeige Dimensionen Menübandelemente, die in der gleichen Spalte klicken Sie im Menüband auf die gleiche Breite festgelegt werden.  
+##  <a name="isjustifycolumns"></a>  CMFCRibbonPanel::IsJustifyColumns  
+ Indicates whether the display dimensions of ribbon elements that are in the same column in the ribbon panel are set to the same width.  
   
 ```  
 BOOL IsJustifyColumns() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Anzeige Dimensionen Menübandelemente, die in der gleichen Spalte klicken Sie im Menüband auf die gleiche Breite festgelegt werden; andernfalls `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the display dimensions of ribbon elements that are in the same column in the ribbon panel are set to the same width; otherwise `FALSE`.  
   
-##  <a name="ismainpanel"></a>CMFCRibbonPanel::IsMainPanel  
- Gibt an, ob Menübandbereich der Multifunktionsleiste-Bereich ist.  
+##  <a name="ismainpanel"></a>  CMFCRibbonPanel::IsMainPanel  
+ Indicates whether the ribbon panel is the main ribbon panel.  
   
 ```  
 virtual BOOL IsMainPanel() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Gibt immer `FALSE` zurück.  
+### <a name="return-value"></a>Return Value  
+ Always returns `FALSE`.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Methode gibt immer `FALSE` zurück. Überschreiben Sie diese Methode, um anzugeben, ob der Menübandbereich im Bereich der Multifunktionsleiste ist.  
+### <a name="remarks"></a>Remarks  
+ This method always returns `FALSE`. Override this method to indicate whether the ribbon panel is the main ribbon panel.  
   
- Die Multifunktionsleiste wird eingeblendet, wenn der Benutzer die Schaltfläche auswählt.  
+ The main ribbon panel is displayed when the user selects the application button.  
   
-##  <a name="ismenumode"></a>CMFCRibbonPanel::IsMenuMode  
+##  <a name="ismenumode"></a>  CMFCRibbonPanel::IsMenuMode  
 
   
 ```  
 BOOL IsMenuMode() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onkey"></a>CMFCRibbonPanel::OnKey  
+##  <a name="onkey"></a>  CMFCRibbonPanel::OnKey  
 
   
 ```  
 virtual BOOL OnKey(UINT nChar);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `nChar`  
   
-### <a name="return-value"></a>Rückgabewert  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="recalcwidths"></a>CMFCRibbonPanel::RecalcWidths  
- Berechnet die Breite der Konfiguration jedes Layout für den Menübandbereich.  
+##  <a name="recalcwidths"></a>  CMFCRibbonPanel::RecalcWidths  
+ Recalculates the width of each display layout configuration for the ribbon panel.  
   
 ```  
 virtual void RecalcWidths(
@@ -732,18 +785,18 @@ CDC* pDC,
 int nHeight);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Ein Zeiger auf einen Gerätekontext für das Menüband-Panel.  
+ Pointer to a device context for the ribbon panel.  
   
  [in] `nHeight`  
- Die Höhe des Bereichs Menüband.  
+ The height of the ribbon panel.  
   
-### <a name="remarks"></a>Hinweise  
- Ein Menüband-Panel ändert seine Konfiguration Layout die verfügbare Breite geändert.  
+### <a name="remarks"></a>Remarks  
+ A ribbon panel changes its layout configuration as the available width changes.  
   
-##  <a name="remove"></a>CMFCRibbonPanel::Remove  
- Entfernt und löscht optional ein Element am angegebenen Index.  
+##  <a name="remove"></a>  CMFCRibbonPanel::Remove  
+ Removes and optionally deletes an element located at the specified index.  
   
 ```  
 BOOL Remove(
@@ -751,31 +804,31 @@ int nIndex,
 BOOL bDelete = TRUE);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- Gibt den nullbasierten Index des Elements, das aus dem Menübandbereich entfernt wird.  
+ Specifies the zero-based index of the element that is removed from the ribbon panel.  
   
  [in] `bDelete`  
- `TRUE`So löschen Sie das Element entfernt wird; andernfalls `FALSE`.  
+ `TRUE` to delete the element being removed; otherwise, `FALSE`.  
   
-### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das Element entfernt und gelöscht wurde (Wenn `bDelete` ist `TRUE`); `FALSE` Wenn das Element nicht entfernt wurde oder ist es befindet sich kein Multifunktionsleisten-Element am `nIndex`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the element has been removed and deleted (if `bDelete` is `TRUE`); `FALSE` if the element was not removed or if there is no ribbon element located at `nIndex`.  
   
-### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Methode, um ein Element aus der Menübandbereich zu entfernen.  
+### <a name="remarks"></a>Remarks  
+ Call this method to remove an element from the ribbon panel.  
   
-##  <a name="removeall"></a>CMFCRibbonPanel::RemoveAll  
- Löscht alle Menübandelemente aus dem Menübandbereich.  
+##  <a name="removeall"></a>  CMFCRibbonPanel::RemoveAll  
+ Deletes all ribbon elements from the ribbon panel.  
   
 ```  
 void RemoveAll();
 ```  
   
-### <a name="remarks"></a>Hinweise  
- Alle Menübandelemente aus Menübandbereich gelöscht und zerstört.  
+### <a name="remarks"></a>Remarks  
+ All ribbon elements are deleted from the ribbon panel and destroyed.  
   
-##  <a name="replace"></a>CMFCRibbonPanel::Replace  
- Ersetzt ein Element mit einem anderen basierend auf ihrer Indexwert.  
+##  <a name="replace"></a>  CMFCRibbonPanel::Replace  
+ Replaces one element with another based on their index value.  
   
 ```  
 BOOL Replace(
@@ -783,21 +836,21 @@ int nIndex,
 CMFCRibbonBaseElement* pElem);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- Gibt den nullbasierten Index des zu ersetzenden Elements.  
+ Specifies the zero-based index of the element to replace.  
   
- [in] [out]`pElem`  
- Ein gültiger Zeiger auf das Element, das das ursprüngliche Element ersetzt werden soll.  
+ [in] [out] `pElem`  
+ A valid pointer to the element that replaces the original element.  
   
-### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die ursprüngliche-Element Multifunktionsleisten wurde erfolgreich durch die neue Multifunktionsleisten-Element ersetzt. `FALSE` Wenn das Menübandelement nicht ersetzt wurde oder wenn kein Element am angegebenen Index vorhanden ist.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the original ribbon element has been replaced successfully by the new ribbon element; `FALSE` if the ribbon element was not replaced or if there is no element at the specified index.  
   
-### <a name="remarks"></a>Hinweise  
- Um ein Menübandelement von Befehls-ID zu ersetzen, rufen Sie [CMFCRibbonPanel::ReplaceByID](#replacebyid).  
+### <a name="remarks"></a>Remarks  
+ To replace a ribbon element by command ID, call [CMFCRibbonPanel::ReplaceByID](#replacebyid).  
   
-##  <a name="replacebyid"></a>CMFCRibbonPanel::ReplaceByID  
- Ersetzt ein Element mit einer anderen basierend auf einer angegebenen Befehls-ID.  
+##  <a name="replacebyid"></a>  CMFCRibbonPanel::ReplaceByID  
+ Replaces one element with another based on a specified command ID.  
   
 ```  
 BOOL ReplaceByID(
@@ -805,48 +858,48 @@ UINT uiCmdID,
 CMFCRibbonBaseElement* pElem);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmdID`  
- Gibt die Befehls-ID des Elements zu ersetzen.  
+ Specifies the command ID of the element to replace.  
   
- [in] [out]`pElem`  
- Ein gültiger Zeiger auf das Element, das das ursprüngliche Element ersetzt wird.  
+ [in] [out] `pElem`  
+ A valid pointer to the element that will replace the original element.  
   
-### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die ursprüngliche-Element Multifunktionsleisten wurde erfolgreich durch die neue Multifunktionsleisten-Element ersetzt. `FALSE` Wenn das Menübandelement nicht ersetzt wurde oder wenn kein Element mit der angegebenen Befehls-ID tatsächlich vorhanden ist.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the original ribbon element has been replaced successfully by the new ribbon element; `FALSE` if the ribbon element was not replaced or if no element with the specified command ID actually exists.  
   
-### <a name="remarks"></a>Hinweise  
- Um ein Menübandelement je nach Position zu ersetzen, rufen Sie [CMFCRibbonPanel::Replace](#replace).  
+### <a name="remarks"></a>Remarks  
+ To replace a ribbon element based on position, call [CMFCRibbonPanel::Replace](#replace).  
   
-##  <a name="setcentercolumnvert"></a>CMFCRibbonPanel::SetCenterColumnVert  
- Aktiviert oder deaktiviert die Zentrieren der vertikalen Positionen von Menübandelementen innerhalb ihrer Anzeigerechteck.  
+##  <a name="setcentercolumnvert"></a>  CMFCRibbonPanel::SetCenterColumnVert  
+ Enables or disables the centering of the vertical positions of ribbon elements within their display rectangle.  
   
 ```  
 void SetCenterColumnVert(BOOL bSet = TRUE);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `bSet`  
- `TRUE`So zentrieren Sie die vertikale Position von Menübandelemente innerhalb ihrer Anzeigerechteck; `FALSE` wird diese Funktion deaktiviert.  
+ `TRUE` to center the vertical positions of ribbon elements within their display rectangle; `FALSE` to disable this feature.  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setdata"></a>CMFCRibbonPanel::SetData  
- Ordnet mit der benutzerdefinierten Datentyps an.  
+##  <a name="setdata"></a>  CMFCRibbonPanel::SetData  
+ Associates user-defined data with the ribbon panel.  
   
 ```  
 void SetData(DWORD_PTR dwData);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `dwData`  
- Gibt die benutzerdefinierten Daten festlegen.  
+ Specifies the user-defined data to set.  
   
-### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Methode, um benutzerdefinierte Daten mit dem zuordnen.  
+### <a name="remarks"></a>Remarks  
+ Call this method to associate user-defined data with the ribbon panel.  
   
-##  <a name="setelementmenu"></a>CMFCRibbonPanel::SetElementMenu  
- Weist ein Popup-Menü auf das Element mit der angegebenen Befehls-ID.  
+##  <a name="setelementmenu"></a>  CMFCRibbonPanel::SetElementMenu  
+ Assigns a popup menu to the element that has the given command ID.  
   
 ```  
 BOOL SetElementMenu(
@@ -863,30 +916,30 @@ BOOL bIsDefautCommand = FALSE,
 BOOL bRightAlign = FALSE);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmdID`  
- Gibt die Befehls-ID des Menübandelements, klicken Sie im Menü hinzugefügt wird.  
+ Specifies the command ID of the ribbon element where the menu is added.  
   
  [in] `hMenu`  
- Gibt das Handle für das Windows-Menü im Menübandbereich hinzu.  
+ Specifies the handle to the Windows menu to add to the ribbon panel.  
   
  [in] `bIsDefautCommand`  
- `TRUE`um festzulegen, das Menübandelement zugeordnete Befehl ausgeführt werden soll, wenn das Menübandelement geklickt wird. In diesem Fall wird im Menü nur geöffnet, wenn der Benutzer auf den Pfeil neben der Multifunktionsleisten-Element klickt. `FALSE`um anzugeben, dass die Multifunktionsleisten-Element zugeordnete Befehl nicht ausgeführt werden soll, wenn das Menübandelement geklickt wird. In diesem Fall wird im Popupmenü angezeigt, unabhängig davon, wo der Benutzer auf das Element klickt.  
+ `TRUE` to specify that the command associated with the ribbon element should be executed if the ribbon element is clicked. In this case, the menu is only opened when the user clicks the arrow next to the ribbon element. `FALSE` to specify that the command associated with the ribbon element should not be executed if the ribbon element is clicked. In this case, the popup menu appears regardless of where the user clicks on the element.  
   
  [in] `bRightAlign`  
- `TRUE`um anzugeben, dass das Popupmenü rechts ausgerichtet; andernfalls `FALSE`.  
+ `TRUE` to specify that the popup menu is right-aligned; otherwise, `FALSE`.  
   
  [in] `uiMenuResID`  
- Gibt die Ressourcen-ID des Menüs zu dem Bereich der Multifunktionsleiste hinzuzufügen.  
+ Specifies the resource ID of the menu to add to the ribbon panel.  
   
-### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn Sie im Menü auf das Menübandelement zugewiesen wurde; andernfalls `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the menu has been assigned to the ribbon element; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Methode, um ein Popup-Menü auf das Menübandelement zuweisen, die die angegebene Befehls-ID.  
+### <a name="remarks"></a>Remarks  
+ Call this method to assign a popup menu to the ribbon element that has the given command ID.  
   
-##  <a name="setelementrtc"></a>CMFCRibbonPanel::SetElementRTC  
- Fügt das Menübandelement, das durch die angegebene Laufzeit-Klasseninformationen zum Menübandbereich angegeben wird.  
+##  <a name="setelementrtc"></a>  CMFCRibbonPanel::SetElementRTC  
+ Adds the ribbon element that is specified by the provided runtime class information to the ribbon panel.  
   
 ```  
 CMFCRibbonBaseElement* SetElementRTC(
@@ -894,21 +947,21 @@ int nIndex,
 CRuntimeClass* pRTC);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- Gibt den nullbasierten Index des Menübandelements hinzufügen.  
+ Specifies the zero-based index of the ribbon element to add.  
   
- [in] [out]`pRTC`  
- Ein Zeiger auf die Laufzeit-Klasseninformationen für das Menübandelement, das zum Menübandbereich hinzugefügt wird.  
+ [in] [out] `pRTC`  
+ A pointer to the runtime class information for the ribbon element that is added to the ribbon panel.  
   
-### <a name="return-value"></a>Rückgabewert  
- Die Multifunktionsleisten-Element, das mit dem angegebenen Common Language Runtime-Klasse erstellt wurde.  
+### <a name="return-value"></a>Return Value  
+ The ribbon element that was created by using the specified runtime class information.  
   
-### <a name="remarks"></a>Hinweise  
- Wenn Sie ein benutzerdefiniertes Element (z. B. eine farbenschaltfläche "), wenn der Menübandbereich hinzufügen möchten, müssen Sie das benutzerdefinierte Element Laufzeit-Klasseninformationen angeben. Die Multifunktionsleiste speichert diese Informationen, erstellt das benutzerdefinierte Element und ersetzt ein vorhandenes Element, das sich befindet (identifiziert durch) der angegebenen Befehls-ID. Die Multifunktionsleiste gibt einen Zeiger auf das neu erstellte Element zurück.  
+### <a name="remarks"></a>Remarks  
+ If you want to add a custom element (for example, a color button) to the ribbon panel, you must specify the custom element's runtime class information. The ribbon stores this information, creates the custom element, and replaces an existing element that is located (identified by) the specified command ID. The ribbon then returns a pointer to the newly created element.  
   
-##  <a name="setelementrtcbyid"></a>CMFCRibbonPanel::SetElementRTCByID  
- Fügt ein Menübandelement, das durch die angegebene Laufzeit-Klasseninformationen zum Menübandbereich angegeben wird.  
+##  <a name="setelementrtcbyid"></a>  CMFCRibbonPanel::SetElementRTCByID  
+ Adds a ribbon element that is specified by the provided runtime class information to the ribbon panel.  
   
 ```  
 CMFCRibbonBaseElement* SetElementRTCByID(
@@ -916,21 +969,21 @@ UINT uiCmdID,
 CRuntimeClass* pRTC);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmdID`  
- Gibt die Befehls-ID des Menübandelements hinzufügen.  
+ Specifies the command ID of the ribbon element to add.  
   
- [in] [out]`pRTC`  
- Ein Zeiger auf die Laufzeit-Klasseninformationen zugeordnete Multifunktionsleisten-Element, das den Menübandbereich hinzugefügt wird.  
+ [in] [out] `pRTC`  
+ A pointer to the runtime class information associated with the ribbon element that is added to the ribbon panel.  
   
-### <a name="return-value"></a>Rückgabewert  
- Die Multifunktionsleisten-Element, das mit dem angegebenen Common Language Runtime-Klasse erstellt wurde.  
+### <a name="return-value"></a>Return Value  
+ The ribbon element that was created by using the specified runtime class information.  
   
-### <a name="remarks"></a>Hinweise  
- Wenn Sie ein benutzerdefiniertes Element (z. B. eine farbenschaltfläche "), wenn der Menübandbereich hinzufügen möchten, müssen Sie das benutzerdefinierte Element Laufzeit-Klasseninformationen angeben. Die Multifunktionsleiste speichert diese Informationen, erstellt das benutzerdefinierte Element und ersetzt ein vorhandenes Element anhand der angegebenen Befehls-ID. Es gibt einen Zeiger auf das neu erstellte Element zurück.  
+### <a name="remarks"></a>Remarks  
+ If you want to add a custom element (for example, a color button) to the ribbon panel, you must specify the custom element's runtime class information. The ribbon stores this information, creates the custom element, and replaces an existing element located by the specified command ID. It then returns a pointer to the newly created element.  
   
-### <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie die `SetElementRTCByID` Methode:  
+### <a name="example"></a>Example  
+ The following example shows how to use the `SetElementRTCByID` method:  
   
 ```  
  
@@ -955,91 +1008,91 @@ pColorButton->EnableAutomaticButton(_T("Automatic"),
     0));  
 ```  
   
-##  <a name="setjustifycolumns"></a>CMFCRibbonPanel::SetJustifyColumns  
- Aktiviert oder deaktiviert die Anpassung der Breite des Menübandelemente in der gleichen Spalte.  
+##  <a name="setjustifycolumns"></a>  CMFCRibbonPanel::SetJustifyColumns  
+ Enables or disables the adjustment of the width of ribbon elements in the same column.  
   
 ```  
 void SetJustifyColumns(BOOL bSet = TRUE);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `bSet`  
- `TRUE`um die Breite des Menübandelemente in der gleichen Spalte an die Breite des größten Menübandelements in der Spalte anpassen. `FALSE` diese Anpassung der Breite zu deaktivieren.  
+ `TRUE` to adjust the width of ribbon elements in the same column to the width of the largest ribbon element in the column; `FALSE` to disable this width adjustment.  
   
-### <a name="remarks"></a>Hinweise  
- Wenn diese Funktion in einem Menübandbereich aktiviert ist, werden die Breiten der Menübandelemente in der gleichen Spalte an die Breite des größten Elements in der gleichen Spalte Multifunktionsleiste angepasst.  
+### <a name="remarks"></a>Remarks  
+ When this feature is enabled in a ribbon panel, the widths of ribbon elements in the same column are adjusted to the width of the largest ribbon element in the same column.  
   
-##  <a name="setkeys"></a>CMFCRibbonPanel::SetKeys  
- Legt die ZugriffstastenInfo für die Standardschaltfläche des Menüband-Bedienfelds fest.  
+##  <a name="setkeys"></a>  CMFCRibbonPanel::SetKeys  
+ Sets the keytip for the default button of the ribbon panel.  
   
 ```  
 void SetKeys(LPCTSTR lpszKeys);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `lpszKeys`  
- Der ZugriffstastenInfo für die Standardschaltfläche des Menüband-Bereichs.  
+ The keytip for the default button of the ribbon panel.  
   
-### <a name="remarks"></a>Hinweise  
- Die Standardschaltfläche wird angezeigt, wenn ein Menübandbereich nicht genügend Platz zum Anzeigen von dessen Menübandelemente hat.  
+### <a name="remarks"></a>Remarks  
+ The default button is displayed when a ribbon panel has insufficient space to display its ribbon elements.  
   
-##  <a name="showpopup"></a>CMFCRibbonPanel::ShowPopup  
- Erstellt und ein Popup-Menü für den Bereich der Multifunktionsleiste angezeigt.  
+##  <a name="showpopup"></a>  CMFCRibbonPanel::ShowPopup  
+ Creates and displays a pop-up menu for the ribbon panel.  
   
 ```  
 CMFCRibbonPanelMenu* ShowPopup(CMFCRibbonDefaultPanelButton* pButton = NULL);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `pButton`  
- Ein Zeiger auf die Standardschaltfläche für das Menüband-Panel.  
+ Pointer to the default button for the ribbon panel.  
   
-### <a name="return-value"></a>Rückgabewert  
- Zeiger auf das Popupmenü für das Menüband-Panel, wenn die Methode erfolgreich war; andernfalls `NULL`.  
+### <a name="return-value"></a>Return Value  
+ Pointer to the pop-up menu for the ribbon panel if the method was successful; otherwise `NULL`.  
   
-### <a name="remarks"></a>Hinweise  
- Im Popupmenü Menübandbereich ist nur verfügbar, wenn die Anzeige des Bereichs Menüband reduziert wird.  
+### <a name="remarks"></a>Remarks  
+ The pop-up menu for the ribbon panel is only available when the display of the ribbon panel is collapsed.  
   
-##  <a name="setfocused"></a>CMFCRibbonPanel::SetFocused  
- Setzt den Fokus auf das angegebene Element der Multifunktionsleiste.  
+##  <a name="setfocused"></a>  CMFCRibbonPanel::SetFocused  
+ Sets focus to the specified Ribbon element.  
   
 ```  
 void SetFocused(CMFCRibbonBaseElement* pNewFocus);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `pNewFocus`  
- Ein Zeiger auf ein Menübandelement, das Fokus erhält.  
+ A pointer to a Ribbon element that receives focus.  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="makegalleryitemvisible"></a>CMFCRibbonPanel::MakeGalleryItemVisible  
- Führt einen Bildlauf durch den Katalog für die angegebene Multifunktionsleisten-Element sichtbar zu machen.  
+##  <a name="makegalleryitemvisible"></a>  CMFCRibbonPanel::MakeGalleryItemVisible  
+ Scrolls the gallery to make the specified Ribbon element visible.  
   
 ```  
 void MakeGalleryItemVisible(CMFCRibbonBaseElement* pItem);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `pItem`  
- Ein Zeiger auf ein Menübandelement angezeigt.  
+ A pointer to a Ribbon element to show.  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="iswindows7look"></a>CMFCRibbonPanel::IsWindows7Look  
- Gibt an, ob der übergeordnete Menüband verfügt über ein Windows 7 (kleine rechteckige Anwendungsschaltfläche) zu suchen.  
+##  <a name="iswindows7look"></a>  CMFCRibbonPanel::IsWindows7Look  
+ Indicates whether the parent ribbon has Windows 7 look (small rectangular application button).  
   
 ```  
 BOOL IsWindows7Look() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die übergeordnete Multifunktionsleiste Aussehen von Windows 7 enthält. andernfalls `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the parent ribbon has Windows 7 look; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getvisibleelements"></a>CMFCRibbonPanel::GetVisibleElements  
- Ruft ein Array von Elementen angezeigt.  
+##  <a name="getvisibleelements"></a>  CMFCRibbonPanel::GetVisibleElements  
+ Retrieves an array of visible elements.  
   
 ```  
 void GetVisibleElements(
@@ -1047,40 +1100,40 @@ CArray<CMFCRibbonBaseElement*,
 CMFCRibbonBaseElement*>& arElements);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `arElements`  
- Wenn die Funktion zurückgibt, enthält dieser Parameter ein Array von Elementen angezeigt.  
+ When the function returns, this parameter contains an array of visible elements.  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getgalleryrect"></a>CMFCRibbonPanel::GetGalleryRect  
- Gibt ein umschließende Rechteck von einem Galerieelement.  
+##  <a name="getgalleryrect"></a>  CMFCRibbonPanel::GetGalleryRect  
+ Returns a bounding rectangle of a Gallery element.  
   
 ```  
 CRect GetGalleryRect();
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Größe und Position des Elements Katalog innerhalb dieses Bereichs.  
+### <a name="return-value"></a>Return Value  
+ Size and position of the Gallery element within this panel.  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getfocused"></a>CMFCRibbonPanel::GetFocused  
- Gibt ein Fokuselement zurück.  
+##  <a name="getfocused"></a>  CMFCRibbonPanel::GetFocused  
+ Returns a focused element.  
   
 ```  
 CMFCRibbonBaseElement* GetFocused() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf ein Fokuselement oder `NULL`.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a focused element or `NULL`.  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>Siehe auch  
- [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
- [Klassen](../../mfc/reference/mfc-classes.md)   
- [CObject-Klasse](../../mfc/reference/cobject-class.md)   
- [CMFCRibbonCategory-Klasse](../../mfc/reference/cmfcribboncategory-class.md)   
- [CMFCRibbonBaseElement-Klasse](../../mfc/reference/cmfcribbonbaseelement-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [CMFCRibbonCategory Class](../../mfc/reference/cmfcribboncategory-class.md)   
+ [CMFCRibbonBaseElement Class](../../mfc/reference/cmfcribbonbaseelement-class.md)
 

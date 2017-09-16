@@ -1,43 +1,62 @@
 ---
-title: "Zwischenablageoperationen in RichEdit-Steuerelementen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Zwischenablage, Vorgänge in CRichEditCtrl"
-  - "Kopiervorgänge in rich-Bearbeitungssteuerelementen"
-  - "CRichEditCtrl-Klasse, Zwischenablagevorgänge"
-  - "CRichEditCtrl-Klasse, Einfügevorgänge"
-  - "Ausschneidenvorgänge in der CRichEditCtrl-Klasse"
-  - "Einfügen von Zwischenablagedaten"
-  - "Rich-Edit-Steuerelemente, Zwischenablagevorgänge"
+title: Clipboard Operations in Rich Edit Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- pasting Clipboard data
+- CRichEditCtrl class [MFC], paste operation
+- cut operation in CRichEditCtrl class [MFC]
+- CRichEditCtrl class [MFC], Clipboard operations
+- copy operations in rich edit controls
+- Clipboard, operations in CRichEditCtrl
+- rich edit controls [MFC], Clipboard operations
 ms.assetid: 15ce66bc-2636-4a35-a2ae-d52285dc1af6
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Zwischenablageoperationen in RichEdit-Steuerelementen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 33364225e996cb8f36e9fa37567f6cb6c1b58444
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Die Anwendung kann den Inhalt der Zwischenablage in ein Rich\-Edit\-Steuerelement \([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)\) entweder mit optimalen verfügbaren Zwischenablageformats oder eines bestimmten Zwischenablageformats einfügen.  Außerdem können Sie bestimmen, ob ein Rich\-Edit\-Steuerelement zum Einfügen eines Zwischenablageformats kann.  
+---
+# <a name="clipboard-operations-in-rich-edit-controls"></a>Clipboard Operations in Rich Edit Controls
+Your application can paste the contents of the Clipboard into a rich edit control ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) using either the best available Clipboard format or a specific Clipboard format. You can also determine whether a rich edit control is capable of pasting a Clipboard format.  
   
- Sie können den Inhalt der aktuellen Auswahl kopieren oder ausschneiden, indem Sie die Memberfunktion [Kopieren](../Topic/CRichEditCtrl::Copy.md) oder [Ausschneiden](../Topic/CRichEditCtrl::Cut.md) verwenden.  Ebenso können Sie den Inhalt der Zwischenablage in ein Rich\-Edit\-Steuerelement einfügen, indem Sie die Memberfunktion [Einfügen](../Topic/CRichEditCtrl::Paste.md) verwenden.  Das Steuerelement fügt die erste verfügbare Format ein, das ihn erkennt, das sich wahrscheinlich das beschreibendste Formats.  
+ You can copy or cut the contents of the current selection by using the [Copy](../mfc/reference/cricheditctrl-class.md#copy) or [Cut](../mfc/reference/cricheditctrl-class.md#cut) member function. Similarly, you can paste the contents of the Clipboard into a rich edit control by using the [Paste](../mfc/reference/cricheditctrl-class.md#paste) member function. The control pastes the first available format that it recognizes, which presumably is the most descriptive format.  
   
- Um ein bestimmtes Zwischenablageformat einzufügen, können Sie die Memberfunktion [PasteSpecial](../Topic/CRichEditCtrl::PasteSpecial.md) verwenden.  Diese Funktion ist für Anwendungen mit einem Inhalte Einfügen nützlich, der den Benutzer aktiviert, um das Zwischenablageformat auszuwählen.  Sie können die [CanPaste](../Topic/CRichEditCtrl::CanPaste.md)\-Memberfunktion verwenden, um zu bestimmen, ob ein bestimmtes Format vom Steuerelement erkannt wird.  
+ To paste a specific Clipboard format, you can use the [PasteSpecial](../mfc/reference/cricheditctrl-class.md#pastespecial) member function. This function is useful for applications with a Paste Special command that enables the user to select the Clipboard format. You can use the [CanPaste](../mfc/reference/cricheditctrl-class.md#canpaste) member function to determine whether a given format is recognized by the control.  
   
- Sie können `CanPaste` auch verwenden, um zu bestimmen, ob ein verfügbares Zwischenablageformat durch ein Rich\-Edit\-Steuerelement erkannt wird.  Diese Funktion ist nützlich Handler im `OnInitMenuPopup`.  Eine Anwendung den Befehl Einfügen abhängig davon aktivieren oder abblendete möglicherweise, ob das Steuerelement ein Format verfügbar einfügen kann.  
+ You can also use `CanPaste` to determine whether any available Clipboard format is recognized by a rich edit control. This function is useful in the `OnInitMenuPopup` handler. An application might enable or gray its Paste command depending on whether the control can paste any available format.  
   
- Rich\-Edit\-Steuerelement\-Register zwei Zwischenablageformate: haben und ein Format namens Text und Objekte RichEdit auf.  Eine Anwendung kann diese Stile registrieren, indem sie die [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)\-Funktion verwendet und den **CF\_RTF** und **CF\_RETEXTOBJ**\-Werte festgelegt werden.  
+ Rich edit controls register two Clipboard formats: rich-text format and a format called RichEdit Text and Objects. An application can register these formats by using the [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) function, specifying the **CF_RTF** and **CF_RETEXTOBJ** values.  
   
-## Siehe auch  
- [Verwenden von CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CRichEditCtrl](../mfc/using-cricheditctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

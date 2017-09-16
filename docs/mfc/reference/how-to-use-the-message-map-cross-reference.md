@@ -1,40 +1,59 @@
 ---
-title: "Gewusst wie: Verwenden des Meldungszuordnungs-Querverweises | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.messages"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Fenster [C++], Meldungszuordnungen"
+title: 'How to: Use the Message-Map Cross-Reference | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.messages
+dev_langs:
+- C++
+helpviewer_keywords:
+- windows [MFC], message maps
 ms.assetid: 2e863d23-9e58-45ba-b5e4-a8ceefccd0c8
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Gewusst wie: Verwenden des Meldungszuordnungs-Querverweises
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b25095aab5f565df033945a9523d21fd14ae567c
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-In den Einträgen, die memberFxn \<\>beschriftet sind, schreiben Sie Ihre eigene Memberfunktion für eine abgeleitete Klasse [CWnd](../../mfc/reference/cwnd-class.md).  Geben Sie der Funktion einen beliebigen Namen, den Sie möchten.  Andere Funktionen, wie `OnActivate`, können Memberfunktionen der Klasse `CWnd`.  Wenn sie aufgerufen werden, wird die Meldung an die Windows\-Funktion `DefWindowProc` weiter.  Um Windows\-Benachrichtigungsmeldungen verarbeiten, überschreiben Sie die entsprechende Funktion `CWnd` in der abgeleiteten Klasse.  Ihre Funktion sollte die überschriebene Funktion in der Basisklasse aufrufen, um die Basisklasse und Windows auf die Meldung reagiert wird.  
+---
+# <a name="how-to-use-the-message-map-cross-reference"></a>How to: Use the Message-Map Cross-Reference
+In entries labeled \<memberFxn>, write your own member function for a derived [CWnd](../../mfc/reference/cwnd-class.md) class. Give your function any name you like. Other functions, such as `OnActivate`, are member functions of class `CWnd`. If called, they pass the message to the `DefWindowProc` Windows function. To process Windows notification messages, override the corresponding `CWnd` function in your derived class. Your function should call the overridden function in your base class to let the base class and Windows respond to the message.  
   
- In allen Fällen sollten Sie den `CWnd`\- Header Funktionsprototyp in der abgeleiteten Klasse ein, und codieren Sie den Eintrag in der Meldungszuordnung wie dargestellt.  
+ In all cases, put the function prototype in the `CWnd`-derived class header, and code the message map entry as shown.  
   
- Die folgenden Begriffe werden verwendet:  
+ The following terms are used:  
   
-|Begriff|Definition|  
-|-------------|----------------|  
-|id|Jede benutzerdefinierte Menüelement ID \(**WM\_COMMAND** Meldungen\) oder \(Benachrichtigungsmeldungen Steuerelement\-ID des untergeordneten Fensters\).|  
-|"Meldung" und "wNotifyCode"|Windows\-Meldungs\-IDs, wie in WINDOWS.H. definiert.|  
-|nMessageVariable|Name einer Variablen, die den Rückgabewert der Windows\-Funktion **RegisterWindowMessage** enthält.|  
+|Term|Definition|  
+|----------|----------------|  
+|id|Any user-defined menu item ID (**WM_COMMAND** messages) or control ID (child window notification messages).|  
+|"message" and "wNotifyCode"|Windows message IDs as defined in WINDOWS.H.|  
+|nMessageVariable|Name of a variable that contains the return value from the **RegisterWindowMessage** Windows function.|  
   
-## Siehe auch  
- [Meldungszuordnungen](../../mfc/reference/message-maps-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Message Maps](../../mfc/reference/message-maps-mfc.md)
+
+

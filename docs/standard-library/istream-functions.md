@@ -1,5 +1,5 @@
 ---
-title: '&lt;istream&gt;-Funktionen | Microsoft-Dokumentation'
+title: '&lt;istream&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -14,20 +14,20 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 3fe398e0424ff6fc24eff9b084759aa10c46e98a
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: da7daceab4f20246b321ea9c3443eae4eb085a23
 ms.contentlocale: de-de
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltistreamgt-functions"></a>&lt;istream&gt;-Funktionen
+# <a name="ltistreamgt-functions"></a>&lt;istream&gt; functions
 |||  
 |-|-|  
 |[swap](#istream_swap)|[ws](#ws)|  
   
-##  <a name="istream_swap"></a> swap  
- Tauscht die Elemente zweier Streamobjekte.  
+##  <a name="istream_swap"></a>  swap  
+ Exchanges the elements of two stream objects.  
   
 ```  
 template <class Elem, class Tr>  
@@ -41,36 +41,36 @@ void swap(
     basic_iostream<Elem, Tr>& right);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `left`  
- Ein Stream  
+ A stream.  
   
  `right`  
- Ein Stream  
+ A stream.  
   
-##  <a name="ws"></a> ws  
- Überspringt Leerraum im Datenstrom.  
+##  <a name="ws"></a>  ws  
+ Skips white space in the stream.  
   
 ```  
 template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _Istr);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `_Istr`  
- Ein Stream.  
+ A stream.  
   
-### <a name="return-value"></a>Rückgabewert  
- Der Stream (Datenstrom).  
+### <a name="return-value"></a>Return Value  
+ The stream.  
   
-### <a name="remarks"></a>Hinweise  
- Der Manipulator extrahiert und verwirft Elemente `ch` für die [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **Elem**> >( [getloc](../standard-library/ios-base-class.md#getloc)). **is**(**ctype**\< **Elem**>:: **space**, **ch**) ist TRUE.  
+### <a name="remarks"></a>Remarks  
+ The manipulator extracts and discards any elements `ch` for which [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **Elem**> >( [getloc](../standard-library/ios-base-class.md#getloc)). **is**( **ctype**\< **Elem**>:: **space**, **ch**) is true.  
   
- Die Funktion ruft [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**) auf, wenn sie beim Extrahieren der Elemente auf das Ende der Datei stößt. Er gibt `_Istr` zurück.  
+ The function calls [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**) if it encounters end of file while extracting elements. It returns `_Istr`.  
   
-### <a name="example"></a>Beispiel  
-  Unter [Operator>>](../standard-library/istream-operators.md#op_gt_gt) finden Sie ein Beispiel für die Verwendung von `ws`.  
+### <a name="example"></a>Example  
+  See [operator>>](../standard-library/istream-operators.md#op_gt_gt) for an example of using `ws`.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>See Also  
  [\<istream>](../standard-library/istream.md)
 
 

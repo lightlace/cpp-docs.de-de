@@ -1,62 +1,81 @@
 ---
-title: "Beziehungen zwischen MFC-Objekten | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC-Objektbeziehungen"
-  - "MFC, Beziehungen zwischen Schlüsselobjekten"
-  - "Objekte [C++], Beziehungen"
-  - "Beziehungen, MFC-Objekte"
+title: Relationships Among MFC Objects | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, relationships between key objects
+- objects [MFC], relationships
+- relationships, MFC objects
+- MFC object relationships
 ms.assetid: 6e8f3b51-e80f-4d88-94c8-4c1e4ee163ad
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Beziehungen zwischen MFC-Objekten
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 66df0ca425038c60927822b14aba1cb6379488c4
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Zur einfacheren Ausgabe den Dokument\/Ansichts\-Erstellungsprozess in Perspektive, berücksichtigen ein Programm ein: ein Dokument, das Rahmenfenster, das verwendet wurden, um die Ansicht zu enthalten, und die Ansicht sind im Dokument auf.  
+---
+# <a name="relationships-among-mfc-objects"></a>Relationships Among MFC Objects
+To help put the document/view creation process in perspective, consider a running program: a document, the frame window used to contain the view, and the view associated with the document.  
   
--   Ein Dokument wird eine Liste der Ansichten dieses Dokuments und des Zeigers die Normal\-Vorlage, die das Dokument erstellt.  
+-   A document keeps a list of the views of that document and a pointer to the document template that created the document.  
   
--   Eine Ansicht enthält einen Zeiger auf das Dokument und ein untergeordnetes Element des übergeordneten Rahmenfensters.  
+-   A view keeps a pointer to its document and is a child of its parent frame window.  
   
--   Ein Dokumentrahmenfenster enthält einen Zeiger auf die aktuelle aktive Ansicht.  
+-   A document frame window keeps a pointer to its current active view.  
   
--   Die Normal\-Vorlage wird eine Liste der geöffneten Dokumente.  
+-   A document template keeps a list of its open documents.  
   
--   Die Anwendung wird eine Liste der Dokumentvorlagen.  
+-   The application keeps a list of its document templates.  
   
--   Windows werden alle geöffneten Fenster stets, sodass es diese Nachrichten zu senden.  
+-   Windows keeps track of all open windows so it can send messages to them.  
   
- Diese Beziehungen werden während der Ansichts\-Erstellung Dokument\/festgelegt.  Die folgende Tabelle zeigt, wie Objekte in einem ausgeführten Programm auf andere Objekte zugreifen können.  Jedes beliebige Objekt kann einen Zeiger auf das Anwendungsobjekt erhalten, indem es die globale [AfxGetApp](../Topic/AfxGetApp.md)\- Funktion aufruft.  
+ These relationships are established during document/view creation. The following table shows how objects in a running program can access other objects. Any object can obtain a pointer to the application object by calling the global function [AfxGetApp](../mfc/reference/application-information-and-management.md#afxgetapp).  
   
-### erhalten zu anderen Objekten in der Anwendung  
+### <a name="gaining-access-to-other-objects-in-your-application"></a>Gaining Access to Other Objects in Your Application  
   
-|Vom Objekt|Wie Sie auf andere Objekte zugreift|  
-|----------------|-----------------------------------------|  
-|Document|Verwenden Sie [GetFirstViewPosition](../Topic/CDocument::GetFirstViewPosition.md) und [GetNextView](../Topic/CDocument::GetNextView.md), um auf die Ansichtsliste des Dokuments zugreifen.<br /><br /> Aufruf [GetDocTemplate](../Topic/CDocument::GetDocTemplate.md), um der Normal\-Vorlage abzurufen.|  
-|Ansicht|Aufruf [GetDocument](../Topic/CView::GetDocument.md), z des Dokuments abzurufen.<br /><br /> Aufruf [GetParentFrame](../Topic/CWnd::GetParentFrame.md), z des Rahmenfensters abzurufen.|  
-|Dokumentrahmenfenster|Aufruf [GetActiveView](../Topic/CFrameWnd::GetActiveView.md), um die aktuelle Ansicht abzurufen.<br /><br /> Rufen Sie [GetActiveDocument](../Topic/CFrameWnd::GetActiveDocument.md) auf, um das Dokument zu, das der aktuellen Ansicht angefügt wird.|  
-|MDI\-Rahmenfenster|Rufen Sie [MDIGetActive](../Topic/CMDIFrameWnd::MDIGetActive.md) auf, um aktive [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) nur abzurufen.|  
+|From object|How to access other objects|  
+|-----------------|---------------------------------|  
+|Document|Use [GetFirstViewPosition](../mfc/reference/cdocument-class.md#getfirstviewposition) and [GetNextView](../mfc/reference/cdocument-class.md#getnextview) to access the document's view list.<br /><br /> Call [GetDocTemplate](../mfc/reference/cdocument-class.md#getdoctemplate) to get the document template.|  
+|View|Call [GetDocument](../mfc/reference/cview-class.md#getdocument) to get the document.<br /><br /> Call [GetParentFrame](../mfc/reference/cwnd-class.md#getparentframe) to get the frame window.|  
+|Document frame window|Call [GetActiveView](../mfc/reference/cframewnd-class.md#getactiveview) to get the current view.<br /><br /> Call [GetActiveDocument](../mfc/reference/cframewnd-class.md#getactivedocument) to get the document attached to the current view.|  
+|MDI frame window|Call [MDIGetActive](../mfc/reference/cmdiframewnd-class.md#mdigetactive) to get the currently active [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md).|  
   
- Normalerweise verfügt eine Ansicht ein Rahmenfenster, aber manchmal, wie in den Splitterfenstern, enthält das gleiche Rahmenfenster mehrere Ansichten.  Das Rahmenfenster enthält einen Zeiger zur derzeit aktive Ansicht; der Zeiger wird aktualisiert, wenn eine andere Ansicht aktiviert ist.  
+ Typically, a frame window has one view, but sometimes, as in splitter windows, the same frame window contains multiple views. The frame window keeps a pointer to the currently active view; the pointer is updated any time another view is activated.  
   
 > [!NOTE]
->  Ein Zeiger auf das Hauptrahmenfenster wird [m\_pMainWnd](../Topic/CWinThread::m_pMainWnd.md) in der Membervariable des DLL\-Anwendungsobjekts gespeichert.  Ein Aufruf von `OnFileNew` in der Überschreibung der `InitInstance`\-Memberfunktion von `CWinApp` wird die `m_pMainWnd` für Sie fest.  Wenn Sie `OnFileNew` aufrufen, müssen Sie den Wert der Variablen in `InitInstance` selbst festlegen. Anwendungen kann \(SDI\-COM\-Komponente \(Server\) Legen die Variable nicht fest, wenn \/Embedding in der Befehlszeile.\) Beachten Sie, dass `m_pMainWnd` jetzt der Klasse `CWinThread` und nicht `CWinApp` ist.  
+>  A pointer to the main frame window is stored in the [m_pMainWnd](../mfc/reference/cwinthread-class.md#m_pmainwnd) member variable of the application object. A call to `OnFileNew` in your override of the `InitInstance` member function of `CWinApp` sets `m_pMainWnd` for you. If you do not call `OnFileNew`, you must set the variable's value in `InitInstance` yourself. (SDI COM component (server) applications may not set the variable if /Embedding is on the command line.) Note that `m_pMainWnd` is now a member of class `CWinThread` rather than `CWinApp`.  
   
-## Siehe auch  
- [Dokumentvorlagen und der Erstellungsvorgang für Dokumente und Ansichten](../mfc/document-templates-and-the-document-view-creation-process.md)   
- [Erstellen von Dokumentvorlagen](../mfc/document-template-creation.md)   
- [Erstellen von Dokument\/Ansicht](../mfc/document-view-creation.md)   
- [Erstellen neuer Dokumente, Fenster und Ansichten](../mfc/creating-new-documents-windows-and-views.md)
+## <a name="see-also"></a>See Also  
+ [Document Templates and the Document/View Creation Process](../mfc/document-templates-and-the-document-view-creation-process.md)   
+ [Document Template Creation](../mfc/document-template-creation.md)   
+ [Document/View Creation](../mfc/document-view-creation.md)   
+ [Creating New Documents, Windows, and Views](../mfc/creating-new-documents-windows-and-views.md)
+
+

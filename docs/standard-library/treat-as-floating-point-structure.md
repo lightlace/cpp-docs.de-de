@@ -1,5 +1,5 @@
 ---
-title: treat_as_floating_point-Struktur | Microsoft-Dokumentation
+title: treat_as_floating_point Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,15 +31,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 9d9e6b0b281fb97475b0c23acb4bf7d0fc391a52
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 6cbf8b77c47fb62e29da5ab3d298dbad8e178517
 ms.contentlocale: de-de
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="treatasfloatingpoint-structure"></a>treat_as_floating_point-Struktur
-Gibt an, ob `Rep` als Gleitkommatyp behandelt werden kann.  
+# <a name="treatasfloatingpoint-structure"></a>treat_as_floating_point Structure
+Specifies whether `Rep` can be treated as a floating-point type.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,16 +48,16 @@ template <class Rep>
 struct treat_as_floating_point : is_floating_point<Rep>;  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- `Rep` kann nur als Gleitkommatyp behandelt werden, wenn die Spezialisierung `treat_as_floating_point<Rep>` von [true_type](../standard-library/type-traits-typedefs.md#true_type) abgeleitet wird. Die Vorlagenklasse kann für einen benutzerdefinierten Typ abgeleitet werden.  
+## <a name="remarks"></a>Remarks  
+ `Rep` can be treated as a floating-point type only when the specialization `treat_as_floating_point<Rep>` is derived from [true_type](../standard-library/type-traits-typedefs.md#true_type). The template class can be specialized for a user-defined type.  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** \<Chrono >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<chrono>  
   
  **Namespace:** std::chrono  
   
-## <a name="see-also"></a>Siehe auch  
- [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<chrono>](../standard-library/chrono.md)
 
 

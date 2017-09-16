@@ -1,51 +1,70 @@
 ---
-title: "Gewusst wie: Aktualisieren von Benutzeroberfl&#228;chenobjekten | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Befehle, Aktualisieren der UI"
-  - "Deaktivieren von Menüs"
-  - "Deaktivieren von UI-Elementen"
-  - "Aktivieren von Menüs"
-  - "Aktivieren von UI-Elementen"
-  - "Menüs, Aktualisieren bei Kontextänderungen"
-  - "Updatehandler"
-  - "Aktualisieren von Benutzeroberflächenobjekten"
-  - "Benutzerschnittstellenobjekte"
-  - "Benutzerschnittstellenobjekte, Aktualisieren"
+title: 'How to: Update User-Interface Objects | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- menus [MFC], updating as context changes
+- user interface objects [MFC], updating
+- user interface objects [MFC]
+- update handlers [MFC]
+- enabling UI elements [MFC]
+- disabling menus [MFC]
+- updating user-interface objects [MFC]
+- disabling UI elements [MFC]
+- commands [MFC], updating UI
+- enabling menus [MFC]
 ms.assetid: 82f09773-c978-427b-b321-05a6143b7369
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Gewusst wie: Aktualisieren von Benutzeroberfl&#228;chenobjekten
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7b1e085cf7ee4d0e3ac040b3128ca2d778fdaea4
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-In der Regel haben Menüelemente und Symbolleisten\-Schaltflächen mehrere Zustände.  Beispielsweise wird ein Menüelement abgeblendet \(abgeblendet\) wenn es im vorhandenen Kontext nicht verfügbar ist.  Menüelemente können auch überprüft oder deaktiviert werden.  Eine Schaltfläche kann ebenfalls deaktiviert werden, wenn nicht verfügbar, oder sie kann überprüft werden.  
+---
+# <a name="how-to-update-user-interface-objects"></a>How to: Update User-Interface Objects
+Typically, menu items and toolbar buttons have more than one state. For example, a menu item is grayed (dimmed) if it is unavailable in the present context. Menu items can also be checked or unchecked. A toolbar button can also be disabled if unavailable, or it can be checked.  
   
- Wer aktualisiert den Zustand dieser Elemente, während Programmzustände ändern?  Logisch wenn ein Menüelement einen Befehl generiert, der durch sagen wir ein Dokument behandelt wird, ist es sinnvoll, das Dokument das Menüelement aktualisieren zu lassen.  Das Dokument enthält wahrscheinlich die Informationen, die die Aktualisierung basiert.  
+ Who updates the state of these items as program conditions change Logically, if a menu item generates a command that is handled by, say, a document, it makes sense to have the document update the menu item. The document probably contains the information on which the update is based.  
   
- Wenn ein Befehl mehrere Benutzeroberflächen\-Objekte \(kann ein Menüelement und eine Symbolleistenschaltfläche\) verfügt, werden beide gleichzeitig Handlerfunktion weitergeleitet.  Dies kapselt den Benutzeroberflächeupdatecode für alle Entsprechungsbenutzeroberflächeobjekte in einer einzigen Stelle.  
+ If a command has multiple user-interface objects (perhaps a menu item and a toolbar button), both are routed to the same handler function. This encapsulates your user-interface update code for all of the equivalent user-interface objects in a single place.  
   
- Das Framework stellt eine bequeme Oberfläche für Benutzeroberflächen\-Objekte automatisch aktualisieren bereit.  Sie können wählen, ob das Aktualisieren auf andere Weise zu tun, die Schnittstelle, die bereitgestellt wird, ist effizient und einfach.  
+ The framework provides a convenient interface for automatically updating user-interface objects. You can choose to do the updating in some other way, but the interface provided is efficient and easy to use.  
   
- Die folgenden Themen wird die Verwendung von Aktualisierungshandlern:  
+ The following topics explain the use of update handlers:  
   
--   [Wenn Aktualisierungshandler aufgerufen werden](../mfc/when-update-handlers-are-called.md)  
+-   [When update handlers are called](../mfc/when-update-handlers-are-called.md)  
   
--   [Das ON\_UPDATE\_COMMAND\_UI\-Makro](../mfc/on-update-command-ui-macro.md)  
+-   [The ON_UPDATE_COMMAND_UI macro](../mfc/on-update-command-ui-macro.md)  
   
--   [Die CCmdUI\-Klasse](../mfc/the-ccmdui-class.md)  
+-   [The CCmdUI class](../mfc/the-ccmdui-class.md)  
   
-## Siehe auch  
- [Menüs](../mfc/menus-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Menus](../mfc/menus-mfc.md)
+
+

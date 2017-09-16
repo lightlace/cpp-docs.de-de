@@ -1,54 +1,73 @@
 ---
-title: "Ausnahmen: OLE-Ausnahmen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Ausnahmebehandlung, OLE"
-  - "Ausnahmen, OLE"
-  - "OLE-Ausnahmen"
-  - "OLE-Ausnahmen, Klassen für Behandlung"
-  - "OLE, Ausnahmen"
+title: 'Exceptions: OLE Exceptions | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE, exceptions
+- OLE exceptions [MFC]
+- exceptions [MFC], OLE
+- exception handling [MFC], OLE
+- OLE exceptions [MFC], classes for handling
 ms.assetid: 2f8e0161-b94f-48bb-a5a2-6f644b192527
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Ausnahmen: OLE-Ausnahmen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 77b7c16ab3cb1ebad70e6a65980d3c5fd818a3c4
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Die Techniken und Funktionen zur Ausnahmebehandlung in OLE sind identisch mit denen für das Behandeln anderen Ausnahmen.  Weitere Informationen über Ausnahmebehandlung finden Sie im Artikel [C\+\+\-Ausnahmebehandlung](../cpp/cpp-exception-handling.md).  
+---
+# <a name="exceptions-ole-exceptions"></a>Exceptions: OLE Exceptions
+The techniques and facilities for handling exceptions in OLE are the same as those for handling other exceptions. For further information on exception handling, see the article [C++ Exception Handling](../cpp/cpp-exception-handling.md).  
   
- Alle Ausnahmeobjekte werden von der abstrakten Basisklasse `CException` abgeleitet.  MFC stellt zwei Klassen für die Behandlung von OLE\-Ausnahmen bereit:  
+ All exception objects are derived from the abstract base class `CException`. MFC provides two classes for handling OLE exceptions:  
   
--   [COleException](../mfc/reference/coleexception-class.md) zur Behandlung allgemeiner OLE\-Ausnahmen.  
+-   [COleException](../mfc/reference/coleexception-class.md) For handling general OLE exceptions.  
   
--   [COleDispatchException](../mfc/reference/coledispatchexception-class.md) zum Generieren und Behandeln von Ausnahmen OLE\-Dispatchs \(Automatisierung\).  
+-   [COleDispatchException](../mfc/reference/coledispatchexception-class.md) For generating and handling OLE dispatch (automation) exceptions.  
   
- Der Unterschied zwischen diesen beiden Klassen ist die Informationsmenge, die sie bereitstellen und wo sie verwendet werden.  `COleException` verfügt über einen öffentlichen Datenmember, der den OLE\-Statuscode für die Ausnahme enthält.  `COleDispatchException` bietet mehr Informationen, darunter die folgenden:  
+ The difference between these two classes is the amount of information they provide and where they are used. `COleException` has a public data member that contains the OLE status code for the exception. `COleDispatchException` supplies more information, including the following:  
   
--   Ein anwendungsspezifischer Fehlercode  
+-   An application-specific error code  
   
--   Eine Fehlerbeschreibung, wie "Datenträger voll"  
+-   An error description, such as "Disk full"  
   
--   Ein Hilfekontext, den die Anwendung verwenden kann, um zusätzliche Informationen für den Benutzer bereitzustellen  
+-   A Help context that your application can use to provide additional information for the user  
   
--   Der Name der Hilfedatei der Anwendung  
+-   The name of your application's Help file  
   
--   Der Name der Anwendung, die die Ausnahme generiert  
+-   The name of the application that generated the exception  
   
- `COleDispatchException` bietet mehr Informationen, sodass sie in Produkte wie Microsoft Visual Basic verwendet werden kann.  Die mündliche Fehlerbeschreibung kann in einem Meldungsfeld oder anderer Benachrichtigungen verwendet werden; Hilfeinformationen können verwendet werden, um den Benutzer zu unterstützen, auf die Bedingungen zu reagieren, die die Ausnahme verursacht haben.  
+ `COleDispatchException` provides more information so that it can be used with products like Microsoft Visual Basic. The verbal error description can be used in a message box or other notification; the Help information can be used to help the user respond to the conditions that caused the exception.  
   
- Zwei globale Funktionen entsprechen den zwei OLE\-Ausnahmeklassen: [AfxThrowOleException](../Topic/AfxThrowOleException.md) und [AfxThrowOleDispatchException](../Topic/AfxThrowOleDispatchException.md).  Verwenden Sie sie, um allgemeine OLE\-Ausnahme\- und OLE\-Dispatchausnahmen auszulösen, bzw.  
+ Two global functions correspond to the two OLE exception classes: [AfxThrowOleException](../mfc/reference/exception-processing.md#afxthrowoleexception) and [AfxThrowOleDispatchException](../mfc/reference/exception-processing.md#afxthrowoledispatchexception). Use them to throw general OLE exceptions and OLE dispatch exceptions, respectively.  
   
-## Siehe auch  
- [Ausnahmebehandlung](../mfc/exception-handling-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Exception Handling](../mfc/exception-handling-in-mfc.md)
+
+

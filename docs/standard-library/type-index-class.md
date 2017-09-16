@@ -1,5 +1,5 @@
 ---
-title: type_index-Klasse | Microsoft-Dokumentation
+title: type_index Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,38 +33,38 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: ca921a28653cf83cd76f4d8e826af277f1f574e1
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: e77d1dd69a2db5e211348e6373d35f337f0b0f17
 ms.contentlocale: de-de
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="typeindex-class"></a>type_index-Klasse
-Die `type_index`-Klasse umschließt einen Zeiger auf die [type_info-Klasse](../cpp/type-info-class.md), um die Indizierung an solche Objekte zu unterstützen.  
+# <a name="typeindex-class"></a>type_index Class
+The `type_index` class wraps a pointer to [type_info Class](../cpp/type-info-class.md) to assist in indexing by such objects.  
   
 class type_index { public: type_index(const type_info& tinfo); const char *name() const; size_t hash_code() const; bool operator==(const type_info& right) const; bool operator!=(const type_info& right) const; bool operator<(const type_info& right) const; bool operator\<=(const type_info& right) const; bool operator>(const type_info& right) const; bool operator>=(const type_info& right) const; };  
   
- Der Konstruktor initialisiert `ptr` zu `&tinfo`.  
+ The constructor initializes `ptr` to `&tinfo`.  
   
- `name` gibt `ptr->name()` zurück.  
+ `name` returns `ptr->name()`.  
   
- `hash_code` gibt `ptr->hash_code().` zurück  
+ `hash_code` returns `ptr->hash_code().`  
   
- `operator==` gibt `*ptr == right.ptr` zurück.  
+ `operator==` returns `*ptr == right.ptr`.  
   
- `operator!=` gibt `!(*this == right)` zurück.  
+ `operator!=` returns `!(*this == right)`.  
   
- `operator<` gibt `*ptr->before(*right.ptr)` zurück.  
+ `operator<` returns `*ptr->before(*right.ptr)`.  
   
- `operator<=` gibt `!(right < *this).` zurück  
+ `operator<=` returns `!(right < *this).`  
   
- `operator>` gibt `right < *this` zurück.  
+ `operator>` returns `right < *this`.  
   
- `operator>=` gibt `!(*this < right)` zurück.  
+ `operator>=` returns `!(*this < right)`.  
   
-## <a name="see-also"></a>Siehe auch  
- [Laufzeit-Typinformationen](../cpp/run-time-type-information.md)   
+## <a name="see-also"></a>See Also  
+ [Run-Time Type Information](../cpp/run-time-type-information.md)   
  [\<typeindex>](../standard-library/typeindex.md)
 
 

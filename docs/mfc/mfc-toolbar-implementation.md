@@ -1,113 +1,132 @@
 ---
-title: "Implementieren der MFC-Symbolleiste | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Bitmaps [C++], Symbolleiste"
-  - "Schaltflächen [C++], MFC-Symbolleisten"
-  - "CToolBar-Klasse, Erstellen von Symbolleisten"
-  - "CToolBarCtrl-Klasse, Implementieren von Symbolleisten"
-  - "Andocken von Symbolleisten"
-  - "Unverankerte Symbolleisten"
-  - "MFC-Symbolleisten"
-  - "QuickInfos [C++], Aktivieren"
-  - "Symbolleisten-Steuerelemente [MFC]"
-  - "Symbolleisten [C++]"
-  - "Symbolleisten [C++], Erstellen"
-  - "Symbolleisten [C++], Andocken"
-  - "Symbolleisten [C++], unverankert"
-  - "Symbolleisten [C++], Implementieren von MFC-Symbolleisten"
+title: MFC Toolbar Implementation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- toolbars [MFC], creating
+- buttons [MFC], MFC toolbars
+- toolbars [MFC], docking
+- CToolBar class [MFC], creating toolbars
+- MFC toolbars
+- floating toolbars [MFC]
+- toolbars [MFC], floating
+- docking toolbars [MFC]
+- bitmaps [MFC], toolbar
+- toolbar controls [MFC]
+- CToolBarCtrl class [MFC], implementing toolbars
+- tool tips [MFC], enabling
+- toolbars [MFC]
+- toolbars [MFC], implementing MFC toolbars
 ms.assetid: af3319ad-c430-4f90-8361-e6a2c06fd084
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Implementieren der MFC-Symbolleiste
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0c04958a1d726381432a5b4281dfa634518d8c10
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Eine Symbolleiste ist eine [Steuerleiste](../mfc/control-bars.md), die die Bitmapbilder von Steuerelementen enthält.  Diese Bilder können sich wie Druckknöpfe, Kontrollkästchen oder Optionsfelder verhalten.  MFC stellt die Klasse [CToolbar](../mfc/reference/ctoolbar-class.md) für die Verwaltung von Symbolleisten bereit.  
+---
+# <a name="mfc-toolbar-implementation"></a>MFC Toolbar Implementation
+A toolbar is a [control bar](../mfc/control-bars.md) that contains the bitmap images of controls. These images can behave like pushbuttons, check boxes, or radio buttons. MFC supplies class [CToolbar](../mfc/reference/ctoolbar-class.md) to manage toolbars.  
   
- Wenn Sie sie aktivieren, können Benutzer von MFC\-Symbolleisten diese an den Rand eines Fensters andocken, oder an einer beliebigen Stelle im Anwendungsfenster "abdocken".  MFC unterstützt keine anpassbaren Symbolleisten wie in der Entwicklungsumgebung.  
+ If you enable it, users of MFC toolbars can dock them to the edge of a window or "float" them anywhere within the application window. MFC doesn't support customizable toolbars like those in the development environment.  
   
- MFC unterstützt auch QuickInfos: kleine Popupfenster, in denen der Zweck einer Symbolleistenschaltfläche beschrieben wird, wenn Sie die Maus über die Schaltfläche positionieren.  Wenn der Benutzer eine Symbolleisten\-Schaltfläche drückt, wird standardmäßig eine Statuszeichenfolge in der Statusleiste \(falls vorhanden\) angezeigt.  Sie können die Aktualisierung der "aufleuchtenden" Statusleiste aktivieren, damit die Statuszeichenfolge angezeigt wird, wenn die Maus über die Schaltfläche positioniert wird, ohne dass sie gedrückt wird.  
+ MFC also supports tool tips: small pop-up windows that describe a toolbar button's purpose when you position the mouse over the button. By default, when the user presses a toolbar button, a status string appears in the status bar (if there is one). You can activate "fly by" status bar updating to display the status string when the mouse is positioned over the button without pressing it.  
   
 > [!NOTE]
->  Ab MFC 4.0 werden Symbolleisten und QuickInfo mit der Funktionalität von Windows 95 und höher anstelle der vorherigen, MFC\-spezifischen Implementierung implementiert.  
+>  As of MFC version 4.0, toolbars and tool tips are implemented using Windows 95 and later functionality instead of the previous implementation specific to MFC.  
   
- Für die Abwärtskompatibilität behält MFC die ältere Symbolleistenimplementierung in der Klasse **COldToolBar** bei.  In der Dokumentation für frühere Versionen wird MFC **COldToolBar** unter `CToolBar` beschrieben.  
+ For backward compatibility, MFC retains the older toolbar implementation in class **COldToolBar**. The documentation for earlier versions of MFC describe **COldToolBar** under `CToolBar`.  
   
- Erstellen Sie die erste Symbolleiste im Programm, indem Sie die Symbolleistenoption im Anwendungs\-Assistenten auswählen.  Sie können auch weitere Symbolleisten erstellen.  
+ Create the first toolbar in your program by selecting the Toolbar option in the Application Wizard. You can also create additional toolbars.  
   
- Die folgenden werden in diesem Artikel eingeführt:  
+ The following are introduced in this article:  
   
--   [Schaltflächen der Symbolleiste](#_core_toolbar_buttons)  
+-   [Toolbar buttons](#_core_toolbar_buttons)  
   
--   [Andockbare und unverankerte Symbolleisten](#_core_docking_and_floating_toolbars)  
+-   [Docking and floating toolbars](#_core_docking_and_floating_toolbars)  
   
--   [Symbolleisten und QuickInfo](#_core_toolbars_and_tool_tips)  
+-   [Toolbars and tool tips](#_core_toolbars_and_tool_tips)  
   
--   [Die Klassen CToolBar und CToolBarCtrl](#_core_the_ctoolbar_and_ctoolbarctrl_classes)  
+-   [The CToolBar and CToolBarCtrl classes](#_core_the_ctoolbar_and_ctoolbarctrl_classes)  
   
--   [Die Symbolleistenbitmap](#_core_the_toolbar_bitmap)  
+-   [The Toolbar bitmap](#_core_the_toolbar_bitmap)  
   
-##  <a name="_core_toolbar_buttons"></a> Schaltflächen der Symbolleiste  
- Die Schaltflächen in einer Symbolleiste sind den Elementen in einem Menü analog.  Beide Arten von Benutzeroberflächen\-Objekten generieren Befehle, die das Programm bearbeitet, indem es Handlerfunktionen bereitstellt.  Häufig duplizieren Symbolleisten\-Schaltflächen die Funktionalität von Menübefehlen und stellen eine alternative Benutzeroberfläche mit derselben Funktionalität bereit.  Solche Duplizierung wird einfach angeordnet, indem die Schaltfläche und das Menüelement die gleiche ID erhalten.  
+##  <a name="_core_toolbar_buttons"></a> Toolbar Buttons  
+ The buttons in a toolbar are analogous to the items in a menu. Both kinds of user-interface objects generate commands, which your program handles by providing handler functions. Often toolbar buttons duplicate the functionality of menu commands, providing an alternative user interface to the same functionality. Such duplication is arranged simply by giving the button and the menu item the same ID.  
   
- Sie können die Schaltflächen in einer Symbolleiste so erstellen, dass sie als Druckknöpfe, Kontrollkästchen oder Optionsfelder angezeigt werden und sich entsprechend verhalten.  Weitere Informationen finden Sie in der Dokumentation der [CToolBar](../mfc/reference/ctoolbar-class.md)\-Klasse.  
+ You can make the buttons in a toolbar appear and behave as pushbuttons, check boxes, or radio buttons. For more information, see class [CToolBar](../mfc/reference/ctoolbar-class.md).  
   
-##  <a name="_core_docking_and_floating_toolbars"></a> Andockbare und unverankerte Symbolleisten  
- Eine MFC\-Symbolleiste kann:  
+##  <a name="_core_docking_and_floating_toolbars"></a> Docking and Floating Toolbars  
+ An MFC toolbar can:  
   
--   fest entlang der Seite des übergeordneten Fensters geöffnet stehen.  
+-   Remain stationary along one side of its parent window.  
   
--   vom Benutzer gezogen und an einer oder mehreren Seiten des von Ihnen angegebenen übergeordneten Fensters "angedockt" oder angefügt werden.  
+-   Be dragged and "docked," or attached, by the user to any side or sides of the parent window you specify.  
   
--   vom Rahmenfenster "abgedockt" oder gelöst werden und im eigenen kleinen Rahmenfenster angezeigt werden, sodass der Benutzer es an eine beliebige Position verschieben kann.  
+-   Be "floated," or detached from the frame window, in its own mini-frame window so the user can move it around to any convenient position.  
   
--   im unverankerten Modus in der Größe verändert werden.  
+-   Be resized while floating.  
   
- Weitere Informationen finden Sie im Artikel [Andockbare und unverankerte Symbolleisten](../mfc/docking-and-floating-toolbars.md).  
+ For more information, see the article [Docking and Floating Toolbars](../mfc/docking-and-floating-toolbars.md).  
   
-##  <a name="_core_toolbars_and_tool_tips"></a> Symbolleisten und QuickInfo  
- MFC\-Symbolleisten können als "QuickInfo" angezeigt werden. Hierbei handelt es sich um kleine Fenster, die eine Kurztextbeschreibung mit dem Zweck einer Symbolleisten\-Schaltfläche enthalten.  Wenn der Benutzer die Maus über eine Symbolleisten\-Schaltfläche bewegt, bieten die Popupfenster mit den QuickInfos einen Hinweis an.  Weitere Informationen finden Sie im Artikel [Symbolleisten\-QuickInfo](../mfc/toolbar-tool-tips.md).  
+##  <a name="_core_toolbars_and_tool_tips"></a> Toolbars and Tool Tips  
+ MFC toolbars can also be made to display "tool tips" — tiny popup windows containing a short text description of a toolbar button's purpose. As the user moves the mouse over a toolbar button, the tool tip window pops up to offer a hint. For more information, see the article [Toolbar Tool Tips](../mfc/toolbar-tool-tips.md).  
   
-##  <a name="_core_the_ctoolbar_and_ctoolbarctrl_classes"></a> Die Klassen CToolBar und CToolBarCtrl  
- Sie verwalten die Symbolleisten der Anwendung über die Klasse [CToolBar](../mfc/reference/ctoolbar-class.md).  Ab MFC 4.0 ist `CToolBar` erneut implementiert, sodass das allgemeine Steuerelement für Symbolleisten verwendet werden kann, das unter Windows 95 oder höher und Windows NT 3.51 oder höher verfügbar ist.  
+##  <a name="_core_the_ctoolbar_and_ctoolbarctrl_classes"></a> The CToolBar and CToolBarCtrl Classes  
+ You manage your application's toolbars via class [CToolBar](../mfc/reference/ctoolbar-class.md). As of MFC version 4.0, `CToolBar` has been reimplemented to use the toolbar common control available under Windows 95 or later and Windows NT version 3.51 or later.  
   
- Diese Neuimplementierung führt zu weniger MFC\-Code in Symbolleisten, da MFC die Betriebssystemunterstützung ausnutzt.  Das Neuimplementierung verbessert auch die Funktionalität.  Sie können `CToolBar`\-Memberfunktionen verwenden, um Symbolleisten zu bearbeiten, oder Sie können einen Verweis auf das zugrunde liegende [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)\-Objekt erhalten und seine Memberfunktionen für Symbolleistenanpassung sowie zusätzliche Funktionen aufrufen.  
+ This reimplementation results in less MFC code for toolbars, because MFC makes use of the operating system support. The reimplementation also improves capability. You can use `CToolBar` member functions to manipulate toolbars, or you can obtain a reference to the underlying [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) object and call its member functions for toolbar customization and additional functionality.  
   
 > [!TIP]
->  Wenn Sie in die ältere MFC\-Implementierung von `CToolBar` investiert haben, ist diese Unterstützung weiterhin verfügbar.  Weitere Informationen finden Sie im Artikel [Verwenden der bisherigen Symbolleisten](../mfc/using-your-old-toolbars.md).  
+>  If you have invested heavily in the older MFC implementation of `CToolBar`, that support is still available. See the article [Using Your Old Toolbars](../mfc/using-your-old-toolbars.md).  
   
- Siehe auch das allgemeine Beispiel [DOCKTOOL](../top/visual-cpp-samples.md) zu MFC.  
+ Also see the MFC General sample [DOCKTOOL](../visual-cpp-samples.md).  
   
-##  <a name="_core_the_toolbar_bitmap"></a> Die Symbolleistenbitmap  
- Ein erstelltes `CToolBar`\-Objekt erstellt das Symbolleistenbild, indem es eine einzelne Bitmap lädt, das ein Bild für jede Schaltfläche enthält.  Der Anwendungs\-Assistent erstellt eine Standardbitmap für die Symbolleiste, das Sie mit dem [Symbolleisten\-Editor](../mfc/toolbar-editor.md) von Visual C\+\+ anpassen können.  
+##  <a name="_core_the_toolbar_bitmap"></a> The Toolbar Bitmap  
+ Once constructed, a `CToolBar` object creates the toolbar image by loading a single bitmap that contains one image for each button. The Application Wizard creates a standard toolbar bitmap that you can customize with the Visual C++ [toolbar editor](../windows/toolbar-editor.md).  
   
-### Worüber möchten Sie mehr erfahren?  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Grundlagen zu Symbolleisten](../mfc/toolbar-fundamentals.md)  
+-   [Toolbar fundamentals](../mfc/toolbar-fundamentals.md)  
   
--   [Andockbare und unverankerte Symbolleisten](../mfc/docking-and-floating-toolbars.md)  
+-   [Docking and floating toolbars](../mfc/docking-and-floating-toolbars.md)  
   
--   [QuickInfo in Symbolleisten](../mfc/toolbar-tool-tips.md)  
+-   [Toolbar tool tips](../mfc/toolbar-tool-tips.md)  
   
--   [Arbeiten mit dem ToolBar\-Steuerelement](../mfc/working-with-the-toolbar-control.md)  
+-   [Working with the Toolbar Control](../mfc/working-with-the-toolbar-control.md)  
   
--   [Verwenden der bisherigen Symbolleisten](../mfc/using-your-old-toolbars.md)  
+-   [Using Your Old Toolbars](../mfc/using-your-old-toolbars.md)  
   
--   Die Klassen [CToolBar](../mfc/reference/ctoolbar-class.md) und [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)  
+-   The [CToolBar](../mfc/reference/ctoolbar-class.md) and [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) classes  
   
-## Siehe auch  
- [Symbolleisten](../mfc/toolbars.md)   
- [Toolbar Editor](../mfc/toolbar-editor.md)
+## <a name="see-also"></a>See Also  
+ [Toolbars](../mfc/toolbars.md)   
+ [Toolbar Editor](../windows/toolbar-editor.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: Klasse CMFCDesktopAlertWndButton | Microsoft-Dokumentation
+title: CMFCDesktopAlertWndButton Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,7 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCDesktopAlertWndButton class
+- CMFCDesktopAlertWndButton [MFC], IsCaptionButton
+- CMFCDesktopAlertWndButton [MFC], IsCloseButton
 ms.assetid: df39a0c8-0c39-4ab0-8c64-78c5b2c4ecaf
 caps.latest.revision: 23
 author: mikeblome
@@ -36,15 +37,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 52294143c6caf5a8e0458c152540c41f7df78c57
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7f3f540f2809aa9232bc4b68340967e0c320e3aa
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcdesktopalertwndbutton-class"></a>CMFCDesktopAlertWndButton-Klasse
-Können Schaltflächen ein Desktopwarnungsdialogfeld hinzugefügt werden.  
+# <a name="cmfcdesktopalertwndbutton-class"></a>CMFCDesktopAlertWndButton Class
+Allows buttons to be added to a desktop alert dialog box.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -52,45 +53,45 @@ Können Schaltflächen ein Desktopwarnungsdialogfeld hinzugefügt werden.
 class CMFCDesktopAlertWndButton : public CMFCButton  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
-  
-|||  
-|-|-|  
-|Name|Beschreibung|  
-|`CMFCDesktopAlertWndButton::CMFCDesktopAlertWndButton`|Standardkonstruktor|  
-|`CMFCDesktopAlertWndButton::~CMFCDesktopAlertWndButton`|Destruktor.|  
-  
-### <a name="public-methods"></a>Öffentliche Methoden  
+### <a name="public-constructors"></a>Public Constructors  
   
 |||  
 |-|-|  
-|Name|Beschreibung|  
-|[CMFCDesktopAlertWndButton::IsCaptionButton](#iscaptionbutton)|Bestimmt, ob die Schaltfläche im Headerbereich des Warndialogfeld angezeigt wird.|  
-|[CMFCDesktopAlertWndButton::IsCloseButton](#isclosebutton)|Bestimmt, ob die Schaltfläche im Dialogfeld wird geschlossen.|  
+|Name|Description|  
+|`CMFCDesktopAlertWndButton::CMFCDesktopAlertWndButton`|Default constructor.|  
+|`CMFCDesktopAlertWndButton::~CMFCDesktopAlertWndButton`|Destructor.|  
   
-### <a name="data-members"></a>Datenmember  
+### <a name="public-methods"></a>Public Methods  
   
 |||  
 |-|-|  
-|Name|Beschreibung|  
-|`CMFCDesktopAlertWndButton::m_bIsCaptionButton`|Ein boolescher Wert, der angibt, ob die Schaltfläche im Headerbereich des Warndialogfeld angezeigt wird.|  
-|`CMFCDesktopAlertWndButton::m_bIsCloseButton`|Ein boolescher Wert, der angibt, ob die Schaltfläche im Dialogfeld geschlossen wird.|  
+|Name|Description|  
+|[CMFCDesktopAlertWndButton::IsCaptionButton](#iscaptionbutton)|Determines whether the button is displayed in the caption area of the alert dialog box.|  
+|[CMFCDesktopAlertWndButton::IsCloseButton](#isclosebutton)|Determines whether the button closes the alert dialog box.|  
   
-### <a name="remarks"></a>Hinweise  
- Standardmäßig legt der Konstruktor die `m_bIsCaptionButton` und `m_bIsCloseButton` Datenmember `FALSE`. Das übergeordnete Element `CMFCDesktopAlertDialog` -Objekt legt `m_bIsCaptionButton` , `TRUE` , wenn die Schaltfläche im Headerbereich des Warndialogfeld positioniert wird. Die `CMFCDesktopAlertDialog` -Klasse erstellt eine `CMFCDesktopAlertWndButton` -Objekt, das Feld und legt fungiert als Schaltfläche, die die Warnung geschlossen `m_bIsCloseButton` auf `TRUE`.  
+### <a name="data-members"></a>Data Members  
   
- Hinzufügen `CMFCDesktopAlertWndButton` Objekte ein `CMFCDesktopAlertDialog` Objekt, wie Sie eine Schaltfläche hinzufügen. Weitere Informationen zu `CMFCDesktopAlertDialog`, finden Sie unter [CMFCDesktopAlertDialog Klasse](../../mfc/reference/cmfcdesktopalertdialog-class.md).  
+|||  
+|-|-|  
+|Name|Description|  
+|`CMFCDesktopAlertWndButton::m_bIsCaptionButton`|A Boolean value that specifies whether the button is displayed in the caption area of the alert dialog box.|  
+|`CMFCDesktopAlertWndButton::m_bIsCloseButton`|A Boolean value that specifies whether the button closes the alert dialog box.|  
   
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie die `SetImage` -Methode in der `CMFCDesktopAlertWndButton` Klasse. Dieser Codeausschnitt ist Teil der [Desktop Warnung Demobeispiel](../../visual-cpp-samples.md).  
+### <a name="remarks"></a>Remarks  
+ By default, the constructor sets the `m_bIsCaptionButton` and `m_bIsCloseButton` data members to `FALSE`. The parent `CMFCDesktopAlertDialog` object sets `m_bIsCaptionButton` to `TRUE` if the button is positioned in the caption area of the alert dialog box. The `CMFCDesktopAlertDialog` class creates a `CMFCDesktopAlertWndButton` object that serves as the button that closes the alert dialog box and sets `m_bIsCloseButton` to `TRUE`.  
   
- [!code-cpp[NVC_MFC_DesktopAlertDemo&4;](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndbutton-class_1.h)]  
-[!code-cpp[NVC_MFC_DesktopAlertDemo&5;](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndbutton-class_2.cpp)]  
+ Add `CMFCDesktopAlertWndButton` objects to a `CMFCDesktopAlertDialog` object as you would add any button. For more information about `CMFCDesktopAlertDialog`, see [CMFCDesktopAlertDialog Class](../../mfc/reference/cmfcdesktopalertdialog-class.md).  
   
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- [Von CObject](../../mfc/reference/cobject-class.md)  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use the `SetImage` method in the `CMFCDesktopAlertWndButton` class. This code snippet is part of the [Desktop Alert Demo sample](../../visual-cpp-samples.md).  
+  
+ [!code-cpp[NVC_MFC_DesktopAlertDemo#4](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndbutton-class_1.h)]  
+[!code-cpp[NVC_MFC_DesktopAlertDemo#5](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndbutton-class_2.cpp)]  
+  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -102,31 +103,31 @@ class CMFCDesktopAlertWndButton : public CMFCButton
   
  [CMFCDesktopAlertWndButton](../../mfc/reference/cmfcdesktopalertwndbutton-class.md)  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** afxdesktopalertwnd.h  
   
-##  <a name="iscaptionbutton"></a>CMFCDesktopAlertWndButton::IsCaptionButton  
- Bestimmt, ob die Schaltfläche im Headerbereich des Warndialogfeld angezeigt wird.  
+##  <a name="iscaptionbutton"></a>  CMFCDesktopAlertWndButton::IsCaptionButton  
+ Determines whether the button is displayed in the caption area of the alert dialog box.  
   
 ```  
 BOOL IsCaptionButton() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn die Schaltfläche im Headerbereich des Warndialogfeld angezeigt wird; andernfalls 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the button is displayed in the caption area of the alert dialog box; otherwise, 0.  
   
-##  <a name="isclosebutton"></a>CMFCDesktopAlertWndButton::IsCloseButton  
- Bestimmt, ob die Schaltfläche im Dialogfeld wird geschlossen.  
+##  <a name="isclosebutton"></a>  CMFCDesktopAlertWndButton::IsCloseButton  
+ Determines whether the button closes the alert dialog box.  
   
 ```  
 BOOL IsCloseButton() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn die Schaltfläche wird das Dialogfeld Warnung geschlossen; andernfalls 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the button closes the alert dialog box; otherwise, 0.  
   
-## <a name="see-also"></a>Siehe auch  
- [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
- [Klassen](../../mfc/reference/mfc-classes.md)   
- [CMFCDesktopAlertDialog-Klasse](../../mfc/reference/cmfcdesktopalertdialog-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCDesktopAlertDialog Class](../../mfc/reference/cmfcdesktopalertdialog-class.md)
 

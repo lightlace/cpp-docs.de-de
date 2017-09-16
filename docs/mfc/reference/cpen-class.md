@@ -1,5 +1,5 @@
 ---
-title: CPen-Klasse | Microsoft-Dokumentation
+title: CPen Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -20,9 +20,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- HPEN
-- CPen class
-- pens, MFC
+- CPen [MFC], CPen
+- CPen [MFC], CreatePen
+- CPen [MFC], CreatePenIndirect
+- CPen [MFC], FromHandle
+- CPen [MFC], GetExtLogPen
+- CPen [MFC], GetLogPen
 ms.assetid: 93175a3a-d46c-4768-be8d-863254f97a5f
 caps.latest.revision: 20
 author: mikeblome
@@ -42,15 +45,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: edea12c84a8f39161acbf367360fd86a1ff19998
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: de0a94fd6b6a324c64a7efee4ce0b07a38edc954
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cpen-class"></a>CPen-Klasse
-Kapselt einen Stift der Windows GDI (Graphics Device Interface).  
+# <a name="cpen-class"></a>CPen Class
+Encapsulates a Windows graphics device interface (GDI) pen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -58,45 +61,45 @@ Kapselt einen Stift der Windows GDI (Graphics Device Interface).
 class CPen : public CGdiObject  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CPen::CPen](#cpen)|Erstellt ein `CPen`-Objekt.|  
+|[CPen::CPen](#cpen)|Constructs a `CPen` object.|  
   
-### <a name="public-methods"></a>Öffentliche Methoden  
+### <a name="public-methods"></a>Public Methods  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CPen::CreatePen](#createpen)|Erstellt einen logischen kosmetischen oder geometrischen Stift mit dem angegebenen Stil, Breite und Pinsel Attribute und fügt es der `CPen` Objekt.|  
-|[CPen::CreatePenIndirect](#createpenindirect)|Erstellt einen Stift mit dem Stil, Breite und Farbe einem [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041) Struktur, und fügt es der `CPen` Objekt.|  
-|[CPen::FromHandle](#fromhandle)|Gibt einen Zeiger auf eine `CPen` bei einer Windows-Objekt `HPEN`.|  
-|[CPen::GetExtLogPen](#getextlogpen)|Ruft eine [EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711) zugrunde liegende Struktur.|  
-|[CPen::GetLogPen](#getlogpen)|Ruft eine [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041) zugrunde liegende Struktur.|  
+|[CPen::CreatePen](#createpen)|Creates a logical cosmetic or geometric pen with the specified style, width, and brush attributes, and attaches it to the `CPen` object.|  
+|[CPen::CreatePenIndirect](#createpenindirect)|Creates a pen with the style, width, and color given in a [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041) structure, and attaches it to the `CPen` object.|  
+|[CPen::FromHandle](#fromhandle)|Returns a pointer to a `CPen` object when given a Windows `HPEN`.|  
+|[CPen::GetExtLogPen](#getextlogpen)|Gets an [EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711) underlying structure.|  
+|[CPen::GetLogPen](#getlogpen)|Gets a [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041) underlying structure.|  
   
-### <a name="public-operators"></a>Öffentliche Operatoren  
+### <a name="public-operators"></a>Public Operators  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CPen::operator HPEN](#operator_hpen)|Gibt das Windows-Handle an der der `CPen` Objekt.|  
+|[CPen::operator HPEN](#operator_hpen)|Returns the Windows handle attached to the `CPen` object.|  
   
-## <a name="remarks"></a>Hinweise  
- Weitere Informationen zur Verwendung von `CPen`, finden Sie unter [Grafikobjekte](../../mfc/graphic-objects.md).  
+## <a name="remarks"></a>Remarks  
+ For more information on using `CPen`, see [Graphic Objects](../../mfc/graphic-objects.md).  
   
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- [Von CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
  [CGdiObject](../../mfc/reference/cgdiobject-class.md)  
   
  `CPen`  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** afxwin.h  
   
-##  <a name="cpen"></a>CPen::CPen  
- Erstellt ein `CPen`-Objekt.  
+##  <a name="cpen"></a>  CPen::CPen  
+ Constructs a `CPen` object.  
   
 ```  
 CPen();
@@ -116,81 +119,81 @@ CPen(
     const DWORD* lpStyle = NULL);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `nPenStyle`  
- Gibt das Pen-Format. Dieser Parameter in der ersten Version des Konstruktors kann einen der folgenden Werte sein:  
+ Specifies the pen style. This parameter in the first version of the constructor can be one of the following values:  
   
-- **PS_SOLID** eine durchgehend erstellt.  
+- **PS_SOLID** Creates a solid pen.  
   
-- **PS_DASH** einen gestrichelten Stift erstellt. Nur gültig, wenn die Stiftbreite 1 oder weniger Gerät Einheiten beträgt.  
+- **PS_DASH** Creates a dashed pen. Valid only when the pen width is 1 or less, in device units.  
   
-- **PS_DOT** erstellt eine gepunktet. Nur gültig, wenn die Stiftbreite 1 oder weniger Gerät Einheiten beträgt.  
+- **PS_DOT** Creates a dotted pen. Valid only when the pen width is 1 or less, in device units.  
   
-- **PS_DASHDOT** erstellt einen Stift mit abwechselnden Striche und Punkte. Nur gültig, wenn die Stiftbreite 1 oder weniger Gerät Einheiten beträgt.  
+- **PS_DASHDOT** Creates a pen with alternating dashes and dots. Valid only when the pen width is 1 or less, in device units.  
   
-- **PS_DASHDOTDOT** erstellt einen Stift mit abwechselnden Striche und doppelte Punkte. Nur gültig, wenn die Stiftbreite 1 oder weniger Gerät Einheiten beträgt.  
+- **PS_DASHDOTDOT** Creates a pen with alternating dashes and double dots. Valid only when the pen width is 1 or less, in device units.  
   
-- **PS_NULL** erstellt einen Stift null.  
+- **PS_NULL** Creates a null pen.  
   
-- **PS_INSIDEFRAME** erstellt einen Stift, der zeichnet eine Linie innerhalb des Rahmens der geschlossene Formen erstellt, die von den Funktionen der Windows GDI-Ausgabe, die ein umschließendes Rechteck angeben (z. B. die **Ellipse**, **Rechteck**, `RoundRect`, `Pie`, und `Chord` Memberfunktionen). Wenn dieses Format verwendet wird, mit der Windows GDI-Ausgabe-Funktionen, die ein umschließendes Rechteck nicht angeben (z. B. die `LineTo` Member-Funktion), die Zeichenfläche des Stifts wird nicht von einem Frame beschränkt.  
+- **PS_INSIDEFRAME** Creates a pen that draws a line inside the frame of closed shapes produced by the Windows GDI output functions that specify a bounding rectangle (for example, the **Ellipse**, **Rectangle**, `RoundRect`, `Pie`, and `Chord` member functions). When this style is used with Windows GDI output functions that do not specify a bounding rectangle (for example, the `LineTo` member function), the drawing area of the pen is not limited by a frame.  
   
- Die zweite Version der `CPen` Konstruktor gibt eine Kombination von Typ, Format, Abschlusses und Join-Attribute. Die Werte aus jeder Kategorie sollte mit dem bitweisen OR-Operator (|) kombiniert werden. Der Stifttyp kann eine der folgenden Werte sein:  
+ The second version of the `CPen` constructor specifies a combination of type, style, end cap, and join attributes. The values from each category should be combined by using the bitwise OR operator (&#124;). The pen type can be one of the following values:  
   
-- **PS_GEOMETRIC** erstellt einen geometrischen Stift.  
+- **PS_GEOMETRIC** Creates a geometric pen.  
   
-- **PS_COSMETIC** erstellt einen kosmetischen Stift.  
+- **PS_COSMETIC** Creates a cosmetic pen.  
   
-     Die zweite Version der `CPen` Konstruktor fügt die folgenden Stift-Formate für `nPenStyle`:  
+     The second version of the `CPen` constructor adds the following pen styles for `nPenStyle`:  
   
-- **PS_ALTERNATE** erstellt einen Stift, der alle anderen Pixel festlegt. (Dieses Format ist nur für kosmetische Stifte.)  
+- **PS_ALTERNATE** Creates a pen that sets every other pixel. (This style is applicable only for cosmetic pens.)  
   
-- **PS_USERSTYLE** erstellt einen Stift, der ein Stil-Array, das vom Benutzer verwendet.  
+- **PS_USERSTYLE** Creates a pen that uses a styling array supplied by the user.  
   
-     Die Abschlusses kann eine der folgenden Werte sein:  
+     The end cap can be one of the following values:  
   
-- **PS_ENDCAP_ROUND** Linienenden round sind.  
+- **PS_ENDCAP_ROUND** End caps are round.  
   
-- **PS_ENDCAP_SQUARE** Linienenden quadratisch sind.  
+- **PS_ENDCAP_SQUARE** End caps are square.  
   
-- **PS_ENDCAP_FLAT** Linienenden sind flach.  
+- **PS_ENDCAP_FLAT** End caps are flat.  
   
-     Der Join ist einer der folgenden Werte möglich:  
+     The join can be one of the following values:  
   
-- **PS_JOIN_BEVEL** Joins abgeschrägt werden.  
+- **PS_JOIN_BEVEL** Joins are beveled.  
   
-- **PS_JOIN_MITER** Joins Gehrung sind, werden innerhalb der aktuellen festlegen, indem Sie die [SetMiterLimit](http://msdn.microsoft.com/library/windows/desktop/dd145076) Funktion. Wenn der Join über diesen Grenzwert überschreitet, wird es abgeschrägt.  
+- **PS_JOIN_MITER** Joins are mitered when they are within the current limit set by the [SetMiterLimit](http://msdn.microsoft.com/library/windows/desktop/dd145076) function. If the join exceeds this limit, it is beveled.  
   
-- **PS_JOIN_ROUND** Joins sind runden.  
+- **PS_JOIN_ROUND** Joins are round.  
   
  `nWidth`  
- Gibt die Breite des Stifts.  
+ Specifies the width of the pen.  
   
--   Für die erste Version des Konstruktors Wenn dieser Wert 0 ist, ist die Breite in Geräteeinheiten immer 1 Pixel, unabhängig von den Zuordnungsmodus.  
+-   For the first version of the constructor, if this value is 0, the width in device units is always 1 pixel, regardless of the mapping mode.  
   
--   Für die zweite Version des Konstruktors Wenn `nPenStyle` ist **PS_GEOMETRIC**, erhält die Breite in logischen Einheiten. Wenn `nPenStyle` ist **PS_COSMETIC**, die Breite muss auf 1 festgelegt werden.  
+-   For the second version of the constructor, if `nPenStyle` is **PS_GEOMETRIC**, the width is given in logical units. If `nPenStyle` is **PS_COSMETIC**, the width must be set to 1.  
   
  `crColor`  
- Enthält eine RGB-Farbe für den Stift.  
+ Contains an RGB color for the pen.  
   
  `pLogBrush`  
- Verweist auf eine `LOGBRUSH` Struktur. Wenn `nPenStyle` ist **PS_COSMETIC**, `lbColor` Mitglied der `LOGBRUSH` Struktur gibt die Farbe des Stifts und die `lbStyle` Mitglied der `LOGBRUSH` Struktur muss festgelegt werden, um **BS_SOLID**. Wenn `nPenStyle` ist **PS_GEOMETRIC**, müssen alle Elemente verwendet werden, um die Pinsel-Attribute des Stifts angeben.  
+ Points to a `LOGBRUSH` structure. If `nPenStyle` is **PS_COSMETIC**, the `lbColor` member of the `LOGBRUSH` structure specifies the color of the pen and the `lbStyle` member of the `LOGBRUSH` structure must be set to **BS_SOLID**. If `nPenStyle` is **PS_GEOMETRIC**, all members must be used to specify the brush attributes of the pen.  
   
  `nStyleCount`  
- Gibt die Länge in Einheiten Doppelwort, der die `lpStyle` Array. Dieser Wert muss NULL, wenn sein `nPenStyle` nicht **PS_USERSTYLE**.  
+ Specifies the length, in doubleword units, of the `lpStyle` array. This value must be zero if `nPenStyle` is not **PS_USERSTYLE**.  
   
  `lpStyle`  
- Zeigt auf ein Array von Doppelwort-Werten. Der erste Wert gibt die Länge des ersten Strichs in einem benutzerdefinierten Format, der zweite Wert gibt die Länge der ersten Leerzeichen und So weiter. This-Zeiger muss **NULL** Wenn `nPenStyle` nicht **PS_USERSTYLE**.  
+ Points to an array of doubleword values. The first value specifies the length of the first dash in a user-defined style, the second value specifies the length of the first space, and so on. This pointer must be **NULL** if `nPenStyle` is not **PS_USERSTYLE**.  
   
-### <a name="remarks"></a>Hinweise  
- Wenn Sie den Konstruktor ohne Argumente verwenden, müssen Sie das resultierende initialisieren `CPen` -Objekt mit den `CreatePen`, `CreatePenIndirect`, oder `CreateStockObject` Memberfunktionen.  
+### <a name="remarks"></a>Remarks  
+ If you use the constructor with no arguments, you must initialize the resulting `CPen` object with the `CreatePen`, `CreatePenIndirect`, or `CreateStockObject` member functions.  
   
- Wenn Sie den Konstruktor, der Argumente akzeptiert verwenden, ist keine weitere Initialisierung erforderlich. Der Konstruktor mit Argumenten kann eine Ausnahme auslösen, wenn Fehler aufgetreten sind, während der Konstruktor ohne Argumente immer erfolgreich verläuft.  
+ If you use the constructor that takes arguments, then no further initialization is necessary. The constructor with arguments can throw an exception if errors are encountered, while the constructor with no arguments will always succeed.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFCDocView&#99;](../../mfc/codesnippet/cpp/cpen-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#99](../../mfc/codesnippet/cpp/cpen-class_1.cpp)]  
   
-##  <a name="createpen"></a>CPen::CreatePen  
- Erstellt einen logischen kosmetischen oder geometrischen Stift mit dem angegebenen Stil, Breite und Pinsel Attribute und fügt es der `CPen` Objekt.  
+##  <a name="createpen"></a>  CPen::CreatePen  
+ Creates a logical cosmetic or geometric pen with the specified style, width, and brush attributes, and attaches it to the `CPen` object.  
   
 ```  
 BOOL CreatePen(
@@ -207,112 +210,112 @@ BOOL CreatePen(
     const DWORD* lpStyle = NULL);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `nPenStyle`  
- Gibt den Stil für den Stift. Eine Liste der möglichen Werte finden Sie unter der `nPenStyle` -Parameter in der [CPen](#cpen) Konstruktor.  
+ Specifies the style for the pen. For a list of possible values, see the `nPenStyle` parameter in the [CPen](#cpen) constructor.  
   
  `nWidth`  
- Gibt die Breite des Stifts.  
+ Specifies the width of the pen.  
   
--   Für die erste Version des `CreatePen`, wenn dieser Wert 0 ist, die Breite in Geräteeinheiten ist immer 1 Pixel, unabhängig von den Zuordnungsmodus.  
+-   For the first version of `CreatePen`, if this value is 0, the width in device units is always 1 pixel, regardless of the mapping mode.  
   
--   Für die zweite Version der `CreatePen`Wenn `nPenStyle` ist **PS_GEOMETRIC**, erhält die Breite in logischen Einheiten. Wenn `nPenStyle` ist **PS_COSMETIC**, die Breite muss auf 1 festgelegt werden.  
+-   For the second version of `CreatePen`, if `nPenStyle` is **PS_GEOMETRIC**, the width is given in logical units. If `nPenStyle` is **PS_COSMETIC**, the width must be set to 1.  
   
  `crColor`  
- Enthält eine RGB-Farbe für den Stift.  
+ Contains an RGB color for the pen.  
   
  `pLogBrush`  
- Verweist auf eine [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) Struktur. Wenn `nPenStyle` ist **PS_COSMETIC**, **LbColor** Mitglied der `LOGBRUSH` Struktur gibt die Farbe des Stifts und die `lbStyle` Mitglied der `LOGBRUSH` Struktur muss festgelegt werden, um **BS_SOLID**. Wenn **nPenStyle** ist **PS_GEOMETRIC**, müssen alle Elemente verwendet werden, um die Pinsel-Attribute des Stifts angeben.  
+ Points to a [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) structure. If `nPenStyle` is **PS_COSMETIC**, the **lbColor** member of the `LOGBRUSH` structure specifies the color of the pen and the `lbStyle` member of the `LOGBRUSH` structure must be set to **BS_SOLID**. If **nPenStyle** is **PS_GEOMETRIC**, all members must be used to specify the brush attributes of the pen.  
   
  `nStyleCount`  
- Gibt die Länge in Einheiten Doppelwort, der die `lpStyle` Array. Dieser Wert muss NULL, wenn sein `nPenStyle` nicht **PS_USERSTYLE**.  
+ Specifies the length, in doubleword units, of the `lpStyle` array. This value must be zero if `nPenStyle` is not **PS_USERSTYLE**.  
   
  `lpStyle`  
- Zeigt auf ein Array von Doppelwort-Werten. Der erste Wert gibt die Länge des ersten Strichs in einem benutzerdefinierten Format, der zweite Wert gibt die Länge der ersten Leerzeichen und So weiter. This-Zeiger muss **NULL** Wenn `nPenStyle` nicht **PS_USERSTYLE**.  
+ Points to an array of doubleword values. The first value specifies the length of the first dash in a user-defined style, the second value specifies the length of the first space, and so on. This pointer must be **NULL** if `nPenStyle` is not **PS_USERSTYLE**.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich NULL, wenn erfolgreich, oder&0;, wenn die Methode fehlschlägt.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful, or zero if the method fails.  
   
-### <a name="remarks"></a>Hinweise  
- Die erste Version der `CreatePen` initialisiert einen Stift mit dem angegebenen Stil, Breite und Farbe. Der Stift kann anschließend als der aktuelle Stift für alle Gerätekontext ausgewählt werden.  
+### <a name="remarks"></a>Remarks  
+ The first version of `CreatePen` initializes a pen with the specified style, width, and color. The pen can be subsequently selected as the current pen for any device context.  
   
- Stifte, die eine Breite größer als 1 Pixel immer entweder haben sollen, die **PS_NULL**, **PS_SOLID**, oder **PS_INSIDEFRAME** Stil.  
+ Pens that have a width greater than 1 pixel should always have either the **PS_NULL**, **PS_SOLID**, or **PS_INSIDEFRAME** style.  
   
- Besitzt ein Stift der **PS_INSIDEFRAME** Stil und eine Farbe, die nicht mit eine Farbe in der logischen Farbtabelle übereinstimmt der Stift, der mit einem geditherte Farbe gezeichnet wird. Die **PS_SOLID** Pen-Stil kann nicht verwendet werden, um einen Stift mit einer geditherte Farbe zu erstellen. Das Format **PS_INSIDEFRAME** ist identisch mit **PS_SOLID** Wenn die Stiftbreite kleiner oder gleich 1 ist.  
+ If a pen has the **PS_INSIDEFRAME** style and a color that does not match a color in the logical color table, the pen is drawn with a dithered color. The **PS_SOLID** pen style cannot be used to create a pen with a dithered color. The style **PS_INSIDEFRAME** is identical to **PS_SOLID** if the pen width is less than or equal to 1.  
   
- Die zweite Version der `CreatePen` einen logischen kosmetischen oder geometrischen Stift mit dem angegebenen Stil, Breite und Pinsel Attribute initialisiert. Eine kosmetische Stiftbreite ist immer 1. eine geometrische Stiftbreite wird immer in globalen Einheiten angegeben. Nachdem eine Anwendung einen logischen Stift erstellt hat, können sie den Stift einen Gerätekontext auswählen, durch Aufrufen der [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) Funktion. Nach ein Stift einen Gerätekontext ausgewählt ist, können sie zum Zeichnen von Linien und Kurven verwendet werden.  
+ The second version of `CreatePen` initializes a logical cosmetic or geometric pen that has the specified style, width, and brush attributes. The width of a cosmetic pen is always 1; the width of a geometric pen is always specified in world units. After an application creates a logical pen, it can select that pen into a device context by calling the [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) function. After a pen is selected into a device context, it can be used to draw lines and curves.  
   
--   Wenn `nPenStyle` ist **PS_COSMETIC** und **PS_USERSTYLE**, die Einträge in der `lpStyle` Array Längen der Striche und Zwischenräume in Style-Einheiten anzugeben. Stil Einheit ist durch das Gerät definiert, in dem der Stift, der verwendet wird, um eine Linie zu zeichnen.  
+-   If `nPenStyle` is **PS_COSMETIC** and **PS_USERSTYLE**, the entries in the `lpStyle` array specify lengths of dashes and spaces in style units. A style unit is defined by the device in which the pen is used to draw a line.  
   
--   Wenn `nPenStyle` ist **PS_GEOMETRIC** und **PS_USERSTYLE**, die Einträge in der `lpStyle` Array Längen der Striche und Zwischenräume in logischen Einheiten angeben.  
+-   If `nPenStyle` is **PS_GEOMETRIC** and **PS_USERSTYLE**, the entries in the `lpStyle` array specify lengths of dashes and spaces in logical units.  
   
--   Wenn `nPenStyle` ist **PS_ALTERNATE**, die Style-Einheit ignoriert, und alle anderen Pixel festgelegt ist.  
+-   If `nPenStyle` is **PS_ALTERNATE**, the style unit is ignored and every other pixel is set.  
   
- Wenn eine Anwendung einen bestimmten Stift nicht mehr erforderlich sind, rufen sie die [CGdiObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) Member-Funktion oder zerstören der `CPen` Objekt, damit die Ressource nicht mehr verwendet wird. Eine Anwendung sollten einen Stift nicht löschen, wenn der Stift in einem Gerätekontext ausgewählt ist.  
+ When an application no longer requires a given pen, it should call the [CGdiObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) member function or destroy the `CPen` object so the resource is no longer in use. An application should not delete a pen when the pen is selected in a device context.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFCDocView&#100;](../../mfc/codesnippet/cpp/cpen-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#100](../../mfc/codesnippet/cpp/cpen-class_2.cpp)]  
   
-##  <a name="createpenindirect"></a>CPen::CreatePenIndirect  
- Initialisiert einen Stift, der die Art, Breite und Farbe in der Struktur auf den `lpLogPen`.  
+##  <a name="createpenindirect"></a>  CPen::CreatePenIndirect  
+ Initializes a pen that has the style, width, and color given in the structure pointed to by `lpLogPen`.  
   
 ```  
 BOOL CreatePenIndirect(LPLOGPEN lpLogPen);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `lpLogPen`  
- Verweist auf die Windows [LOGPEN](../../mfc/reference/logpen-structure.md) -Struktur, die Informationen zu den Stift enthält.  
+ Points to the Windows [LOGPEN](../../mfc/reference/logpen-structure.md) structure that contains information about the pen.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfalls null (0).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Stifte, die eine Breite größer als 1 Pixel immer entweder haben sollen, die **PS_NULL**, **PS_SOLID**, oder **PS_INSIDEFRAME** Stil.  
+### <a name="remarks"></a>Remarks  
+ Pens that have a width greater than 1 pixel should always have either the **PS_NULL**, **PS_SOLID**, or **PS_INSIDEFRAME** style.  
   
- Besitzt ein Stift der **PS_INSIDEFRAME** Stil und eine Farbe, die nicht mit eine Farbe in der logischen Farbtabelle übereinstimmt der Stift, der mit einem geditherte Farbe gezeichnet wird. Die **PS_INSIDEFRAME** Format ist identisch mit **PS_SOLID** Wenn die Stiftbreite kleiner oder gleich 1 ist.  
+ If a pen has the **PS_INSIDEFRAME** style and a color that does not match a color in the logical color table, the pen is drawn with a dithered color. The **PS_INSIDEFRAME** style is identical to **PS_SOLID** if the pen width is less than or equal to 1.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFCDocView&#101;](../../mfc/codesnippet/cpp/cpen-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#101](../../mfc/codesnippet/cpp/cpen-class_3.cpp)]  
   
-##  <a name="fromhandle"></a>CPen::FromHandle  
- Gibt einen Zeiger auf ein `CPen` Objekt ein Handle zu einem Windows-GDI-Pen-Objekt.  
+##  <a name="fromhandle"></a>  CPen::FromHandle  
+ Returns a pointer to a `CPen` object given a handle to a Windows GDI pen object.  
   
 ```  
 static CPen* PASCAL FromHandle(HPEN hPen);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  *hPen*  
- `HPEN`Handle für die Windows-GDI-Stift.  
+ `HPEN` handle to Windows GDI pen.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf eine `CPen` -Objekt, wenn erfolgreich, andernfalls **NULL**.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `CPen` object if successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>Hinweise  
- Wenn ein `CPen`-Objekt nicht an das Handle angefügt ist, wird ein temporäres `CPen`-Objekt erstellt und angefügt. Dieser temporäre `CPen` Objekt ist nur dann gültig, bis das nächste Mal die Anwendung Leerlaufzeit in seiner Ereignisschleife verfügt, zu der Zeit, dass alle temporären Grafik Objekte gelöscht werden. Das heißt, ist das temporäre Objekt nur während der Verarbeitung der Nachricht ein Fenster gültig.  
+### <a name="remarks"></a>Remarks  
+ If a `CPen` object is not attached to the handle, a temporary `CPen` object is created and attached. This temporary `CPen` object is valid only until the next time the application has idle time in its event loop, at which time all temporary graphic objects are deleted. In other words, the temporary object is only valid during the processing of one window message.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFCDocView&#105;](../../mfc/codesnippet/cpp/cpen-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#105](../../mfc/codesnippet/cpp/cpen-class_4.cpp)]  
   
-##  <a name="getextlogpen"></a>CPen::GetExtLogPen  
- Ruft eine **EXTLOGPEN** zugrunde liegende Struktur.  
+##  <a name="getextlogpen"></a>  CPen::GetExtLogPen  
+ Gets an **EXTLOGPEN** underlying structure.  
   
 ```  
 int GetExtLogPen(EXTLOGPEN* pLogPen);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `pLogPen`  
- Verweist auf ein [EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711) -Struktur, die Informationen zu den Stift enthält.  
+ Points to an [EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711) structure that contains information about the pen.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Die **EXTLOGPEN** Struktur definiert die Art, Breite und Pinsel Attribute eines Stiftes. Rufen Sie z. B. `GetExtLogPen` Format eines Stiftes übereinstimmen.  
+### <a name="remarks"></a>Remarks  
+ The **EXTLOGPEN** structure defines the style, width, and brush attributes of a pen. For example, call `GetExtLogPen` to match the particular style of a pen.  
   
- Finden Sie unter den folgenden Themen in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] Informationen über Attribute:  
+ See the following topics in the Windows SDK for information about pen attributes:  
   
 - [GetObject](http://msdn.microsoft.com/library/windows/desktop/dd144904)  
   
@@ -322,61 +325,61 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
   
 - [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705)  
   
-### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel veranschaulicht den Aufruf `GetExtLogPen` , einem Stift Attribute abzurufen, und erstellen Sie einen neue kosmetischen Stift mit der gleichen Farbe.  
+### <a name="example"></a>Example  
+ The following code example demonstrates calling `GetExtLogPen` to retrieve a pen's attributes, and then create a new, cosmetic pen with the same color.  
   
- [!code-cpp[NVC_MFCDocView&#102;](../../mfc/codesnippet/cpp/cpen-class_5.cpp)]  
+ [!code-cpp[NVC_MFCDocView#102](../../mfc/codesnippet/cpp/cpen-class_5.cpp)]  
   
-##  <a name="getlogpen"></a>CPen::GetLogPen  
- Ruft eine `LOGPEN` zugrunde liegende Struktur.  
+##  <a name="getlogpen"></a>  CPen::GetLogPen  
+ Gets a `LOGPEN` underlying structure.  
   
 ```  
 int GetLogPen(LOGPEN* pLogPen);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `pLogPen`  
- Verweist auf eine [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041) Struktur, um Informationen zu den Stift enthalten.  
+ Points to a [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041) structure to contain information about the pen.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Die `LOGPEN` Struktur definiert die Formatvorlage, Farbe und Muster von einem Stift.  
+### <a name="remarks"></a>Remarks  
+ The `LOGPEN` structure defines the style, color, and pattern of a pen.  
   
- Rufen Sie z. B. `GetLogPen` Format für den Stift übereinstimmen.  
+ For example, call `GetLogPen` to match the particular style of pen.  
   
- Finden Sie unter den folgenden Themen in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] Informationen über Attribute:  
+ See the following topics in the Windows SDK for information about pen attributes:  
   
 - [GetObject](http://msdn.microsoft.com/library/windows/desktop/dd144904)  
   
 - [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041)  
   
-### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel veranschaulicht den Aufruf `GetLogPen` , einem Stift Zeichen abrufen, und erstellen Sie einen neue soliden Stift mit der gleichen Farbe.  
+### <a name="example"></a>Example  
+ The following code example demonstrates calling `GetLogPen` to retrieve a pen character, and then create a new, solid pen with the same color.  
   
- [!code-cpp[NVC_MFCDocView&#103;](../../mfc/codesnippet/cpp/cpen-class_6.cpp)]  
+ [!code-cpp[NVC_MFCDocView#103](../../mfc/codesnippet/cpp/cpen-class_6.cpp)]  
   
-##  <a name="operator_hpen"></a>CPen::operator HPEN  
- Ruft das angefügte Windows GDI-Handle für die `CPen` Objekt.  
+##  <a name="operator_hpen"></a>  CPen::operator HPEN  
+ Gets the attached Windows GDI handle of the `CPen` object.  
   
 ```  
 operator HPEN() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Wenn erfolgreich, ein Handle für das Windows-GDI-Objekt durch dargestellt die `CPen` Objekt; andernfalls **NULL**.  
+### <a name="return-value"></a>Return Value  
+ If successful, a handle to the Windows GDI object represented by the `CPen` object; otherwise **NULL**.  
   
-### <a name="remarks"></a>Hinweise  
- Dieser Operator ist ein Typumwandlungsoperator verwendet, die direkte Verwendung von unterstützt ein `HPEN` Objekt.  
+### <a name="remarks"></a>Remarks  
+ This operator is a casting operator, which supports direct use of an `HPEN` object.  
   
- Weitere Informationen zur Verwendung von Grafikobjekten, finden Sie im Artikel [Grafik Objekte](http://msdn.microsoft.com/library/windows/desktop/dd144962) in [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information about using graphic objects, see the article [Graphic Objects](http://msdn.microsoft.com/library/windows/desktop/dd144962) in Windows SDK.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFCDocView&#104;](../../mfc/codesnippet/cpp/cpen-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#104](../../mfc/codesnippet/cpp/cpen-class_7.cpp)]  
   
-## <a name="see-also"></a>Siehe auch  
- [CGdiObject-Klasse](../../mfc/reference/cgdiobject-class.md)   
- [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
- [CBrush-Klasse](../../mfc/reference/cbrush-class.md)
+## <a name="see-also"></a>See Also  
+ [CGdiObject Class](../../mfc/reference/cgdiobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CBrush Class](../../mfc/reference/cbrush-class.md)
 

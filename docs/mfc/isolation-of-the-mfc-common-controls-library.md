@@ -1,33 +1,52 @@
 ---
-title: "Isolierung der MFC-Bibliothek f&#252;r Standardsteuerelemente | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC, Common Controls-Bibliothek"
+title: Isolation of the MFC Common Controls Library | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, Common Controls library
 ms.assetid: 7471e6f0-49b0-47f7-86e7-8d6bc3541694
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Isolierung der MFC-Bibliothek f&#252;r Standardsteuerelemente
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: beb727301a2dcc72127f4ecd61449ada2dfaf360
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Die Bibliothek für allgemeine Steuerelemente wird jetzt in MFC isoliert und verschiedene Module \(z Benutzer DLLs\) um unterschiedliche Versionen der Bibliothek für allgemeine Steuerelemente zu verwenden, indem die Version in ihren Manifesten angibt.  
+---
+# <a name="isolation-of-the-mfc-common-controls-library"></a>Isolation of the MFC Common Controls Library
+The Common Controls library is now isolated within MFC, allowing different modules (such as user DLLs) to use different versions of the Common Controls library by specifying the version in their manifests.  
   
- Eine MFC\-Anwendung \(oder der Benutzercode aufgerufen von MFC\) macht Aufrufe der Bibliothek für allgemeine Steuerelementes\-APIs Wrapper von Funktionen mit dem Namen `Afx`*FunctionName*, wobei *FunctionName* der Name einer API der gängigen Steuerelementen ist.  Diese werden in afxcomctl32.h Wrapperfunktionen und in afxcomctl32.inl definiert.  
+ An MFC application (or user code called by MFC) makes calls to Common Controls library APIs through wrapper functions named `Afx`*FunctionName*, where *FunctionName* is the name of a Common Controls API. Those wrapper functions are defined in afxcomctl32.h and afxcomctl32.inl.  
   
- Sie können die [AFX\_COMCTL32\_IF\_EXISTS](../Topic/AFX_COMCTL32_IF_EXISTS.md) und [AFX\_COMCTL32\_IF\_EXISTS2](../Topic/AFX_COMCTL32_IF_EXISTS2.md)\-Makros verwenden \(in afxcomctl32.h\), um zu bestimmen, ob die Bibliothek für allgemeine Steuerelemente eine bestimmte API implementiert, anstatt, [GetProcAddress](../build/getprocaddress.md) aufzurufen.  
+ You can use the [AFX_COMCTL32_IF_EXISTS](reference/run-time-object-model-services.md#afx_comctl32_if_exists) and [AFX_COMCTL32_IF_EXISTS2](reference/run-time-object-model-services.md#afx_comctl32_if_exists2) macros (defined in afxcomctl32.h) to determine whether the Common Controls library implements a certain API instead of calling [GetProcAddress](../build/getprocaddress.md).  
   
- Technisch machen Sie Aufrufe der Bibliothek für allgemeine Steuerelementes\-APIs durch eine Wrapperklasse, `CComCtlWrapper` \(definiert in afxcomctl32.h\).  `CComCtlWrapper` ist ebenfalls für das Laden und Entladen von comctl32.dll zuständig.  Der MFC\-Modulzustand enthält einen Zeiger auf eine Instanz von `CComCtlWrapper`.  Sie können auf die Wrapperklasse mithilfe des Makros `afxComCtlWrapper` zugreifen.  
+ Technically, you make calls to Common Controls Library APIs through a wrapper class, `CComCtlWrapper` (defined in afxcomctl32.h). `CComCtlWrapper` is also responsible for the loading and unloading of comctl32.dll. The MFC Module State contains a pointer to an instance of `CComCtlWrapper`. You can access the wrapper class using the `afxComCtlWrapper` macro.  
   
- Beachten Sie, dass der aufrufende API allgemeinen Steuerelemente direkt \(ohne Verwendung des MFC\-Wrappers funktioniert\), von einer MFC\-Anwendung oder Benutzer aus einer DLL in den meisten Fällen funktioniert, da die MFC\-Anwendung oder die Benutzer der Bibliothek DLL für allgemeine Steuerelemente gebunden wird, Anwendungstest sie in ihrem Manifest\) an.  Allerdings muss der MFC\-Code selbst die Wrapper verwenden, da MFC\-Code kann von Benutzer DLLs mit verschiedenen Bibliothek für allgemeine Steuerelementes\-Versionen aufgerufen wird.
+ Note that calling Common Controls API directly (not using the MFC wrapper functions) from an MFC application or user DLL will work in most cases, because the MFC application or user DLL is bound to the Common Controls library it requested in its manifest). However, the MFC code itself has to use the wrappers, because MFC code might be called from user DLLs with different Common Controls library versions.
+
+

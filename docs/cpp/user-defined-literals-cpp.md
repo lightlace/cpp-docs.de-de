@@ -1,26 +1,43 @@
 ---
-title: "Benutzerdefinierte Literale (C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: User-Defined Literals  (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: ff4a5bec-f795-4705-a2c0-53788fd57609
 caps.latest.revision: 6
-caps.handback.revision: "6"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Benutzerdefinierte Literale (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 9ac0aa355e9186fa857c903c1592bdd2fe4568a9
+ms.contentlocale: de-de
+ms.lasthandoff: 09/11/2017
 
-Es gibt fünf Hauptkategorien von Literalen: Integer, Zeichendaten, Gleitkommazahlen, Zeichenfolge, boolescher Wert und Zeiger.  Ab C\+\+ 11 können Sie eigene Literale basierend auf diesen Kategorien definieren, um syntaktische Verknüpfungen für allgemeine Idiome und eine höhere Typsicherheit bereitzustellen.  Beispielsweise angenommen, Sie verfügen über eine Distanz\-Klasse.  Sie könnten ein Literal für Kilometer und ein anderes für Meilen definieren und den Benutzern empfehlen, die Maßeinheiten explizit anzugeben: Auto d \= 42.0\_km oder Auto d \= 42.0\_mi.  Es gibt keine Leistungsvorteile oder Nachteile durch benutzerdefinierte Literale. Sie werden in erster Linie zur Vereinfachung oder für die Typableitung bei der Kompilierung genutzt.  Die Standardbibliothek hat benutzerdefinierte Literale für std:string, std::complex und Einheiten für die Zeit und Dauer von Vorgängen im \<chrono\>\-Header:  
+---
+# <a name="user-defined-literals--c"></a>User-Defined Literals  (C++)
+There are five major categories of literals:  integer,  character,  floating-point,  string, boolean and pointer.  Starting in C++ 11 you can define your own literals based on these categories to provide syntactic shortcuts for common idioms and increase type safety. For example, let's say you have a Distance class. You could define a literal for kilometers and another one for miles, and encourage the user to be explicit about the units of measure by simply writing: auto d = 42.0_km or auto d = 42.0_mi. There is no performance advantage or disadvantage to user-defined literals; they are primarily for convenience or for compile-time type deduction. The Standard Library has user-defined literals for std:string, for std::complex, and for units in time and duration operations in the \<chrono> header:  
   
 ```  
 Distance d = 36.0_mi + 42.0_km;         // Custom UDL (see below)  
@@ -30,30 +47,30 @@ Distance d = 36.0_mi + 42.0_km;         // Custom UDL (see below)
     auto duration = 15ms + 42h;             // Standard Library <chrono> UDLs  
 ```  
   
-## Benutzerdefinierte Literaloperatorsignaturen  
- Sie implementieren ein benutzerdefiniertes Literal durch Definieren von `operator""` im Namespacebereich mit einem der folgenden Formate:  
+## <a name="user-defined-literal-operator-signatures"></a>User-defined literal operator signatures  
+ You implement a user-defined literal by defining an `operator""` at namespace scope with one of the following forms:  
   
 ```  
-ReturnType operator "" _a(unsigned long long int);   // Literal operator for user-defined INTEGRAL literal  
-ReturnType operator "" _b(long double);              // Literal operator for user-defined FLOATING literal  
-ReturnType operator "" _c(char);                     // Literal operator for user-defined CHARACTER literal  
-ReturnType operator "" _d(wchar_t);                  // Literal operator for user-defined CHARACTER literal  
-ReturnType operator "" _e(char16_t);                 // Literal operator for user-defined CHARACTER literal  
-ReturnType operator "" _f(char32_t);                 // Literal operator for user-defined CHARACTER literal  
-ReturnType operator "" _g(const     char*, size_t);  // Literal operator for user-defined STRING literal  
-ReturnType operator "" _h(const  wchar_t*, size_t);  // Literal operator for user-defined STRING literal  
-ReturnType operator "" _i(const char16_t*, size_t);  // Literal operator for user-defined STRING literal  
-ReturnType operator "" _g(const char32_t*, size_t);  // Literal operator for user-defined STRING literal  
-ReturnType operator "" _r(const char*);              // Raw literal operator  
-template<char...> ReturnType operator "" _t();       // Literal operator template  
+ReturnType operator "" _a(unsigned long long int);   // Literal operator for user-defined INTEGRAL literal  
+ReturnType operator "" _b(long double);              // Literal operator for user-defined FLOATING literal  
+ReturnType operator "" _c(char);                     // Literal operator for user-defined CHARACTER literal  
+ReturnType operator "" _d(wchar_t);                  // Literal operator for user-defined CHARACTER literal  
+ReturnType operator "" _e(char16_t);                 // Literal operator for user-defined CHARACTER literal  
+ReturnType operator "" _f(char32_t);                 // Literal operator for user-defined CHARACTER literal  
+ReturnType operator "" _g(const     char*, size_t);  // Literal operator for user-defined STRING literal  
+ReturnType operator "" _h(const  wchar_t*, size_t);  // Literal operator for user-defined STRING literal  
+ReturnType operator "" _i(const char16_t*, size_t);  // Literal operator for user-defined STRING literal  
+ReturnType operator "" _g(const char32_t*, size_t);  // Literal operator for user-defined STRING literal  
+ReturnType operator "" _r(const char*);              // Raw literal operator  
+template<char...> ReturnType operator "" _t();       // Literal operator template  
 ```  
   
- Die Operatornamen im vorherigen Beispiel sind Platzhalter für die von Ihnen bereitgestellten Namen. Der führende Unterstrich ist jedoch erforderlich.  \(Nur die Standardbibliothek darf Literale ohne Unterstrich definieren.\) Im Rückgabetyp passen Sie die Konvertierung oder einen anderen Vorgang an, der vom Literal ausgeführt wird.  Alle diese Operatoren können auch `constexpr` definiert werden.  
+ The operator names in the previous example are placeholders for whatever name you provide; however, the leading underscore is required. (Only the Standard Library is allowed to define literals without the underscore.) The return type is where you customize the conversion or other operation that the literal performs. Also, any of these operators can be defined as `constexpr`.  
   
-## Verarbeitete Literale  
- Im Quellcode ist jedes Literal, ob benutzerdefiniert oder nicht, im Grunde eine Sequenz von alphanumerischen Zeichen, z. B. `101` oder `54.7` oder `"hello"` oder `true`.  Der Compiler interpretiert die Sequenz als eine integer\-, float\-, const char\*\-Zeichenfolge usw.  Ein benutzerdefiniertes Literal, das als Eingabe jeden Typ annimmt, den der Compiler dem Literalwert zuweist, wird informell als *Cooked Literal* \(verarbeitetes Literal\) bezeichnet .  Alle ober aufgeführten Operatoren außer `_r` und `_t` sind verarbeitete Literale.  Beispielsweise würde ein Literal `42.0_km` an einen Operator mit dem Namen \_km gebunden, der eine Signatur ähnlich \_b hat, und das Literal `42_km` an einen Operator mit einer Signatur ähnlich \_a gebunden.  
+## <a name="cooked-literals"></a>Cooked literals  
+ In source code any literal whether user-defined or not is essentially a sequence of alphanumeric characters, such as `101`, or `54.7`, or `"hello"` or `true`. The compiler interprets the sequence as an integer, float, const char\* string, and so on. A user-defined literal that accepts as input whatever type the compiler assigned to the literal value is informally known as a *cooked literal*. All the operators above except `_r` and `_t` are cooked literals. For example, a literal `42.0_km` would bind to an operator named _km that had a signature similar to _b and the literal `42_km` would bind to an operator with a signature similar to _a.  
   
- Das folgende Beispiel zeigt, wie benutzerdefinierte Literale Aufrufer zu einer expliziten Eingabe auffordern können.  Zum Erstellen der `Distance` muss der Benutzer explizit Kilometer oder Meilen mit den entsprechenden benutzerdefinierten Literalzeichen angeben.  Natürlich können Sie das gleiche Ergebnis auch auf andere Weise erreichen, aber benutzerdefinierte Literale sind weniger aufwändig als die Alternativen.  
+ The following example shows how user-defined literals can encourage callers to be explicit about their input. To construct a `Distance`, the user must explicitly specify kilometers or miles by using the appropriate user-defined literal. Of course you can also achieve the same result in other ways, but user-defined literals are less verbose than the alternatives.  
   
 ```  
 struct Distance  
@@ -103,86 +120,86 @@ int main(int argc, char* argv[])
 }  
 ```  
   
- Beachten Sie, dass die Literalzahl eine Dezimalstelle enthalten muss, da andernfalls die Zahl als Ganzzahl interpretiert werden würde, was mit dem Operator nicht kompatibel wäre.  Beachten Sie außerdem, dass bei der Eingabe von Gleitkommazahlen der Typ `long double` und bei Ganzzahlen `long long` sein muss.  
+ Note that the literal number must use a decimal, otherwise the number would be interpreted as an integer and the type would not be compatible with the operator. Also note that for floating point input, the type must be `long double`, and for integral types it must be `long long`.  
   
-## Unformatierte Literale  
- Bei unformatierten benutzerdefinierte Literalen akzeptiert der von Ihnen definierte Operator das Literal als Sequenz von Char\-Werten. Es liegt bei Ihnen diese Sequenz als eine Zahl, Zeichenfolge oder einen anderen Typ zu interpretieren.  Aus der zuvor auf dieser Seite aufgeführten Liste von Operatoren können `_r` und `_t` zum Definieren von unformatierten Literalen verwendet werden:  
+## <a name="raw-literals"></a>Raw literals  
+ In a raw user-defined literal, the operator that you define accepts the literal as a sequence of char values and it is up to you to interpret that sequence as a number or string or other type. In the list of operators shown earlier in this page, `_r` and `_t` can be used to define raw literals:  
   
 ```  
 ReturnType operator "" _r(const char*);              // Raw literal operator  
 template<char...> ReturnType operator "" _t();       // Literal operator template  
 ```  
   
- Sie können mit unformatierten Literalen eine benutzerdefinierte Interpretation einer Eingabesequenz bereitzustellen, die sich von der Ausführung durch den Compiler unterscheidet.  Sie könnten beispielsweise ein Literal definieren, das die Sequenz `4.75987` in einen benutzerdefinierten Dezimaltyp anstatt in einen IEEE 754\-Gleitkommatyp konvertiert.  Unformatierte Literale können wie verarbeitete Literale auch zur Validierung von Eingabesequenzen zur Kompilierzeit verwendet werden.  
+ You can use raw literals to provide a custom interpretation of an input sequence that is different than what the compiler would perform. For example, you could define a literal that converts the sequence `4.75987` into a custom Decimal type instead of an IEEE 754 floating point type. Raw literals, like cooked literals, can also be used to perform compile-time validation of input sequences.  
   
-### Beispiel  
+### <a name="example"></a>Example  
   
-### Einschränkungen von unformatierten Literalen  
- Der unformatierte Literaloperator und die Vorlage für den Literaloperator funktionieren nur für Ganzzahl\- und Gleitkommatypen benutzerdefinierter Literale, wie im folgenden Beispiel gezeigt:  
+### <a name="limitations-of-raw-literals"></a>Limitations of raw literals  
+ The raw literal operator and literal operator template only work for integral and floating-point user-defined literals, as shown by the following example:  
   
 ```  
 #include <cstddef>  
 #include <cstdio>  
   
-void operator "" _dump(unsigned long long int lit)  { printf("operator \"\" _dump(unsigned long long int) : ===>%llu<===\n", lit); };  // Literal operator for user-defined INTEGRAL literal  
-void operator "" _dump(long double lit)             { printf("operator \"\" _dump(long double)            : ===>%Lf<===\n",  lit); };  // Literal operator for user-defined FLOATING literal  
-void operator "" _dump(char lit)                    { printf("operator \"\" _dump(char)                   : ===>%c<===\n",   lit); };  // Literal operator for user-defined CHARACTER literal  
-void operator "" _dump(wchar_t lit)                 { printf("operator \"\" _dump(wchar_t)                : ===>%d<===\n",   lit); };  // Literal operator for user-defined CHARACTER literal  
-void operator "" _dump(char16_t lit)                { printf("operator \"\" _dump(char16_t)               : ===>%d<===\n",   lit); };  // Literal operator for user-defined CHARACTER literal  
-void operator "" _dump(char32_t lit)                { printf("operator \"\" _dump(char32_t)               : ===>%d<===\n",   lit); };  // Literal operator for user-defined CHARACTER literal  
-void operator "" _dump(const     char* lit, size_t) { printf("operator \"\" _dump(const     char*, size_t): ===>%s<===\n",   lit); };  // Literal operator for user-defined STRING literal  
-void operator "" _dump(const  wchar_t* lit, size_t) { printf("operator \"\" _dump(const  wchar_t*, size_t): ===>%ls<===\n",  lit); };  // Literal operator for user-defined STRING literal  
-void operator "" _dump(const char16_t* lit, size_t) { printf("operator \"\" _dump(const char16_t*, size_t):\n"                  ); };  // Literal operator for user-defined STRING literal  
-void operator "" _dump(const char32_t* lit, size_t) { printf("operator \"\" _dump(const char32_t*, size_t):\n"                  ); };  // Literal operator for user-defined STRING literal  
-void operator "" _dump_raw(const char* lit)         { printf("operator \"\" _dump_raw(const char*)        : ===>%s<===\n",   lit); };  // Raw literal operator  
+void operator "" _dump(unsigned long long int lit)  { printf("operator \"\" _dump(unsigned long long int) : ===>%llu<===\n", lit); };  // Literal operator for user-defined INTEGRAL literal  
+void operator "" _dump(long double lit)             { printf("operator \"\" _dump(long double)            : ===>%Lf<===\n",  lit); };  // Literal operator for user-defined FLOATING literal  
+void operator "" _dump(char lit)                    { printf("operator \"\" _dump(char)                   : ===>%c<===\n",   lit); };  // Literal operator for user-defined CHARACTER literal  
+void operator "" _dump(wchar_t lit)                 { printf("operator \"\" _dump(wchar_t)                : ===>%d<===\n",   lit); };  // Literal operator for user-defined CHARACTER literal  
+void operator "" _dump(char16_t lit)                { printf("operator \"\" _dump(char16_t)               : ===>%d<===\n",   lit); };  // Literal operator for user-defined CHARACTER literal  
+void operator "" _dump(char32_t lit)                { printf("operator \"\" _dump(char32_t)               : ===>%d<===\n",   lit); };  // Literal operator for user-defined CHARACTER literal  
+void operator "" _dump(const     char* lit, size_t) { printf("operator \"\" _dump(const     char*, size_t): ===>%s<===\n",   lit); };  // Literal operator for user-defined STRING literal  
+void operator "" _dump(const  wchar_t* lit, size_t) { printf("operator \"\" _dump(const  wchar_t*, size_t): ===>%ls<===\n",  lit); };  // Literal operator for user-defined STRING literal  
+void operator "" _dump(const char16_t* lit, size_t) { printf("operator \"\" _dump(const char16_t*, size_t):\n"                  ); };  // Literal operator for user-defined STRING literal  
+void operator "" _dump(const char32_t* lit, size_t) { printf("operator \"\" _dump(const char32_t*, size_t):\n"                  ); };  // Literal operator for user-defined STRING literal  
+void operator "" _dump_raw(const char* lit)         { printf("operator \"\" _dump_raw(const char*)        : ===>%s<===\n",   lit); };  // Raw literal operator  
   
-template<char...> void operator "" _dump_template();       // Literal operator template  
+template<char...> void operator "" _dump_template();       // Literal operator template  
   
 int main(int argc, const char* argv[])  
 {  
-    42_dump;  
-    3.1415926_dump;  
-    3.14e+25_dump;  
-     'A'_dump;  
-    L'B'_dump;  
-    u'C'_dump;  
-    U'D'_dump;  
-      "Hello World"_dump;  
-     L"Wide String"_dump;  
-    u8"UTF-8 String"_dump;  
-     u"UTF-16 String"_dump;  
-     U"UTF-32 String"_dump;  
+    42_dump;  
+    3.1415926_dump;  
+    3.14e+25_dump;  
+     'A'_dump;  
+    L'B'_dump;  
+    u'C'_dump;  
+    U'D'_dump;  
+      "Hello World"_dump;  
+     L"Wide String"_dump;  
+    u8"UTF-8 String"_dump;  
+     u"UTF-16 String"_dump;  
+     U"UTF-32 String"_dump;  
   
-    42_dump_raw;  
-    3.1415926_dump_raw;  
-    3.14e+25_dump_raw;  
-    // 'A'_dump_raw;               // There is no raw literal operator or literal operator template support on this type  
-    //L'B'_dump_raw;              // There is no raw literal operator or literal operator template support on this type  
-    //u'C'_dump_raw;              // There is no raw literal operator or literal operator template support on this type  
-    //U'D'_dump_raw;              // There is no raw literal operator or literal operator template support on this type  
-    //  "Hello World"_dump_raw;   // There is no raw literal operator or literal operator template support on this type  
-    // L"Wide String"_dump_raw;   // There is no raw literal operator or literal operator template support on this type  
-    //u8"UTF-8 String"_dump_raw;   // There is no raw literal operator or literal operator template support on this type  
-    // u"UTF-16 String"_dump_raw;  // There is no raw literal operator or literal operator template support on this type  
-    // U"UTF-32 String"_dump_raw;  // There is no raw literal operator or literal operator template support on this type  
+    42_dump_raw;  
+    3.1415926_dump_raw;  
+    3.14e+25_dump_raw;  
+    // 'A'_dump_raw;               // There is no raw literal operator or literal operator template support on this type  
+    //L'B'_dump_raw;              // There is no raw literal operator or literal operator template support on this type  
+    //u'C'_dump_raw;              // There is no raw literal operator or literal operator template support on this type  
+    //U'D'_dump_raw;              // There is no raw literal operator or literal operator template support on this type  
+    //  "Hello World"_dump_raw;   // There is no raw literal operator or literal operator template support on this type  
+    // L"Wide String"_dump_raw;   // There is no raw literal operator or literal operator template support on this type  
+    //u8"UTF-8 String"_dump_raw;   // There is no raw literal operator or literal operator template support on this type  
+    // u"UTF-16 String"_dump_raw;  // There is no raw literal operator or literal operator template support on this type  
+    // U"UTF-32 String"_dump_raw;  // There is no raw literal operator or literal operator template support on this type  
 }  
 /*****  
 Output:  
 operator "" _dump(unsigned long long int) : ===>42<===  
-operator "" _dump(long double)            : ===>3.141593<===  
-operator "" _dump(long double)            : ===>31399999999999998506827776.000000<===  
-operator "" _dump(char)                   : ===>A<===  
-operator "" _dump(wchar_t)                : ===>66<===  
-operator "" _dump(char16_t)               : ===>67<===  
-operator "" _dump(char32_t)               : ===>68<===  
-operator "" _dump(const     char*, size_t): ===>Hello World<===  
-operator "" _dump(const  wchar_t*, size_t): ===>Wide String<===  
-operator "" _dump(const     char*, size_t): ===>UTF-8 String<===  
+operator "" _dump(long double)            : ===>3.141593<===  
+operator "" _dump(long double)            : ===>31399999999999998506827776.000000<===  
+operator "" _dump(char)                   : ===>A<===  
+operator "" _dump(wchar_t)                : ===>66<===  
+operator "" _dump(char16_t)               : ===>67<===  
+operator "" _dump(char32_t)               : ===>68<===  
+operator "" _dump(const     char*, size_t): ===>Hello World<===  
+operator "" _dump(const  wchar_t*, size_t): ===>Wide String<===  
+operator "" _dump(const     char*, size_t): ===>UTF-8 String<===  
 operator "" _dump(const char16_t*, size_t):  
 operator "" _dump(const char32_t*, size_t):  
-operator "" _dump_raw(const char*)        : ===>42<===  
-operator "" _dump_raw(const char*)        : ===>3.1415926<===  
-operator "" _dump_raw(const char*)        : ===>3.14e+25<===   
+operator "" _dump_raw(const char*)        : ===>42<===  
+operator "" _dump_raw(const char*)        : ===>3.1415926<===  
+operator "" _dump_raw(const char*)        : ===>3.14e+25<===   
 *****/  
   
 ```

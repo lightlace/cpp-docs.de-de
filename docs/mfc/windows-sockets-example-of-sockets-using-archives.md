@@ -1,71 +1,90 @@
 ---
-title: "Windows Sockets: Beispiel f&#252;r das Verwenden von Sockets mit Archiven | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Beispiele [MFC], Windows-Sockets"
-  - "Sockets [C++], mit Archiven"
-  - "Windows-Sockets [C++], mit Archiven"
+title: 'Windows Sockets: Example of Sockets Using Archives | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- sockets [MFC], with archives
+- examples [MFC], Windows Sockets
+- Windows Sockets [MFC], with archives
 ms.assetid: 2e3c9bb2-7e7b-4f28-8dc5-6cb7a484edac
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Windows Sockets: Beispiel f&#252;r das Verwenden von Sockets mit Archiven
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fc51b4ea00b6511786a6a95c9a17f82ffe1f7a7c
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Dieser Artikel legt ein Beispiel der Anwendungsklasse [CSocket](../mfc/reference/csocket-class.md).  Das Beispiel setzt `CArchive`\-Objekte, um Daten über einen Socket zu serialisieren.  Beachten Sie, dass diese keine Dokumentserialisierung nach oder einer Datei.  
+---
+# <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets: Example of Sockets Using Archives
+This article presents an example of using class [CSocket](../mfc/reference/csocket-class.md). The example employs `CArchive` objects to serialize data through a socket. Note that this is not document serialization to or from a file.  
   
- Das folgende Beispiel veranschaulicht, wie Sie das Archiv verwenden, um Daten von `CSocket`\-Objekte zu senden und zu empfangen.  Das Beispiel ist damit zwei Instanzen der Daten der Anwendung \(auf demselben Computer oder auf unterschiedlichen Computern im Netzwerk\) vorgesehen.  Eine Instanz sendet Daten, die die weitere Instanz empfängt und bestätigt.  Jede Anwendung kann einem Austausch initiieren, und jede kann als Server oder Client als die andere Anwendung auftreten.  Die folgende Funktion wird in der Ansichtsklasse der Anwendung definiert:  
+ The following example illustrates how you use the archive to send and receive data through `CSocket` objects. The example is designed so that two instances of the application (on the same machine or on different machines on the network) exchange data. One instance sends data, which the other instance receives and acknowledges. Either application can initiate an exchange, and either can act as server or as client to the other application. The following function is defined in the application's view class:  
   
- [!CODE [NVC_MFCSimpleSocket#1](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCSimpleSocket#1)]  
+ [!code-cpp[NVC_MFCSimpleSocket#1](../mfc/codesnippet/cpp/windows-sockets-example-of-sockets-using-archives_1.cpp)]  
   
- Die wichtigste Aufgabe über dieses Beispiel ist die Strukturähnlichkeiten, die von einem `Serialize` MFC Sie arbeiten.  Die **PacketSerialize**\-Memberfunktion besteht aus einer **if**\-Anweisung mit einer **else**\-Klausel.  Die Funktion erhält [CArchive](../mfc/reference/carchive-class.md) zwei Verweise als Parameter: `arData` und `arAck`.  Wenn das `arData` Archivobjekt zum Speichern \(Senden\) festgelegt ist, wird die **if** Verzweigung aus; andernfalls wenn `arData` für Laden \(Empfangen\) festgelegt wird verwendet die Funktion **else** Verzweigung.  Weitere Informationen zur Serialisierung in MFC, finden Sie unter [Serialisierung](../mfc/how-to-make-a-type-safe-collection.md).  
+ The most important thing about this example is that its structure parallels that of an MFC `Serialize` function. The **PacketSerialize** member function consists of an **if** statement with an **else** clause. The function receives two [CArchive](../mfc/reference/carchive-class.md) references as parameters: `arData` and `arAck`. If the `arData` archive object is set for storing (sending), the **if** branch executes; otherwise, if `arData` is set for loading (receiving) the function takes the **else** branch. For more information about serialization in MFC, see [Serialization](../mfc/how-to-make-a-type-safe-collection.md).  
   
 > [!NOTE]
->  Das `arAck` Archivobjekt wird angenommen, dass das Gegenteil von `arData`.  Wenn `arData` zum Senden ist, erhält `arAck`, und das Gegenteil gilt.  
+>  The `arAck` archive object is assumed to be the opposite of `arData`. If `arData` is for sending, `arAck` receives, and the converse is true.  
   
- Für das Senden durchläuft die Beispielfunktion für eine angegebene Anzahl von Wiederholungen und jedes Mal generiert eine zufällige Daten für Demonstration, vorgesehen.  die Anwendung würde echte Daten aus einer beliebigen Quelle, wie einer Datei abrufen.  Der `arData` des Einfügungsoperator Archivs \(**\<\<**\) wird verwendet, um einen Stream aus drei aufeinander Blöcke von Daten zu senden:  
+ For sending, the example function loops for a specified number of times, each time generating some random data for demonstration purposes. Your application would obtain real data from some source, such as a file. The `arData` archive's insertion operator (**<<**) is used to send a stream of three consecutive chunks of data:  
   
--   Eine "Kopfzeile" die die Art der Daten angibt \(in diesem Fall, der Wert der Variable `bValue` und viele Kopien bereitgestellt werden\).  
+-   A "header" that specifies the nature of the data (in this case, the value of the `bValue` variable and how many copies will be sent).  
   
-     Beide Elemente werden nach dem Zufallsprinzip für dieses Beispiel generiert.  
+     Both items are generated randomly for this example.  
   
--   Die angegebene Anzahl von Kopien der Daten.  
+-   The specified number of copies of the data.  
   
-     Die innere Schleife **für** sendet die `bValue` angegebene Anzahl Zeitangaben.  
+     The inner **for** loop sends `bValue` the specified number of times.  
   
--   Eine Zeichenfolge namens `strText`, die der Empfänger zu dessen Benutzer anzeigt.  
+-   A string called `strText` that the receiver displays to its user.  
   
- Für das Empfangen funktioniert die Funktion ähnlich, allerdings wird der Extraktionsoperator des Archivs \(**\>\>**\) können Daten aus dem Archiv abzurufen.  Die empfangende Anwendung überprüft die Daten, die sie erhält, wird die "empfangene Meldung des endgültigen" an, und sendet dann eine Meldung zurück, die "übermittelt" besagt, sodass die sendende Anwendung angezeigt wird.  
+ For receiving, the function operates similarly, except that it uses the archive's extraction operator (**>>**) to get data from the archive. The receiving application verifies the data it receives, displays the final "Received" message, and then sends back a message that says "Sent" for the sending application to display.  
   
- In diesem modelliert Kommunikation, das Wort, die Meldung ", die empfangen wird", die in der Variablen `strText` gesendet wird, ist für die Anzeige am anderen Ende der Kommunikation, sodass sie z empfangenden Benutzer an, dass verschiedene Pakete Daten empfangen wurden.  Der Empfänger antwortet mit einer ähnlichen Zeichenfolge, die "übermittelt" besagt, für die Anzeige auf dem ersten Bildschirm des Absenders.  Eingang beider Zeichenfolgen gibt an, dass eine erfolgreiche Kommunikation aufgetreten ist.  
+ In this communications model, the word "Received", the message sent in the `strText` variable, is for display at the other end of the communication, so it specifies to the receiving user that a certain number of packets of data have been received. The receiver replies with a similar string that says "Sent", for display on the original sender's screen. Receipt of both strings indicates that successful communication has occurred.  
   
 > [!CAUTION]
->  Wenn Sie ein MFC\-Clientprogramm schreiben, um mit den festgelegten \(Nicht\-MFC\-\) Servern zu kommunizieren, senden Sie C\+\+\-Objekte nicht durch das Archiv.  Sofern, dass der Server eine MFC\-Anwendung, die den Arten von Objekten, versteht Sie senden möchten, ist unklar, die Objekte zum Empfangen und zu deserialisieren.  Ein Beispiel im Artikel [Windows Sockets: Bytereihenfolge](../mfc/windows-sockets-byte-ordering.md) zeigt eine Kommunikation dieses Typs dargestellt.  
+>  If you are writing an MFC client program to communicate with established (non-MFC) servers, do not send C++ objects through the archive. Unless the server is an MFC application that understands the kinds of objects you want to send, it won't be able to receive and deserialize your objects. An example in the article [Windows Sockets: Byte Ordering](../mfc/windows-sockets-byte-ordering.md) shows a communication of this type.  
   
- Weitere Informationen finden Sie Socket\-Spezifikation Windows: **htonl**, **htons**, **ntohl**, **ntohs**.  Außerdem weitere Informationen, finden Sie unter:  
+ For more information, see Windows Sockets Specification: **htonl**, **htons**, **ntohl**, **ntohs**. Also, for more information, see:  
   
--   [Windows Sockets: Leiten von den Socket\-Klassen](../mfc/windows-sockets-deriving-from-socket-classes.md)  
+-   [Windows Sockets: Deriving from Socket Classes](../mfc/windows-sockets-deriving-from-socket-classes.md)  
   
--   [Windows Sockets: Wie Sockets mit Archiven arbeiten](../mfc/windows-sockets-how-sockets-with-archives-work.md)  
+-   [Windows Sockets: How Sockets with Archives Work](../mfc/windows-sockets-how-sockets-with-archives-work.md)  
   
--   [Windows Sockets: Hintergrund](../mfc/windows-sockets-background.md)  
+-   [Windows Sockets: Background](../mfc/windows-sockets-background.md)  
   
-## Siehe auch  
- [Windows\-Sockets in MFC](../mfc/windows-sockets-in-mfc.md)   
- [CArchive::IsStoring](../Topic/CArchive::IsStoring.md)   
- [CArchive::operator \<\<](../Topic/CArchive::operator%20%3C%3C.md)   
- [CArchive::operator \>\>](../Topic/CArchive::operator%20%3E%3E.md)   
- [CArchive::Flush](../Topic/CArchive::Flush.md)   
- [CObject::Serialize](../Topic/CObject::Serialize.md)
+## <a name="see-also"></a>See Also  
+ [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)   
+ [CArchive::IsStoring](../mfc/reference/carchive-class.md#isstoring)   
+ [CArchive::operator <<](../mfc/reference/carchive-class.md#operator_lt_lt)   
+ [CArchive::operator >>](../mfc/reference/carchive-class.md#operator_lt_lt)   
+ [CArchive::Flush](../mfc/reference/carchive-class.md#flush)   
+ [CObject::Serialize](../mfc/reference/cobject-class.md#serialize)
+
+

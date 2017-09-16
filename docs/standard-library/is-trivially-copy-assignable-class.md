@@ -1,5 +1,5 @@
 ---
-title: is_trivially_copy_assignable-Klasse | Microsoft-Dokumentation
+title: is_trivially_copy_assignable Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_trivially_copy_assignable
 - type_traits/std::is_trivially_copy_assignable
 dev_langs:
 - C++
@@ -34,15 +33,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 97935fed1736f111557a0cb86811a86d60505107
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 9d6104990ae49c088f10463e7e5266e76df1e890
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="istriviallycopyassignable-class"></a>is_trivially_copy_assignable-Klasse
-Testet, ob der Typ einen trivialen Kopierzuweisungsoperator aufweist.  
+# <a name="istriviallycopyassignable-class"></a>is_trivially_copy_assignable Class
+Tests whether the type has a trivial copy assignment operator.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,21 +50,21 @@ template <class Ty>
 struct is_trivially_copy_assignable;
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a>Parameters  
  `T`  
- Der abzufragende Typ.  
+ The type to query.  
   
-## <a name="remarks"></a>Hinweise  
- Eine Instanz des Typprädikats ist TRUE, wenn der `T`-Typ eine Klasse ist, die einen Kopierzuweisungsoperator aufweist; andernfalls FALSE.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `T` is a class that has a trivial copy assignment operator, otherwise it holds false.  
   
- Ein Zuweisungskonstruktor für eine Klasse `T` ist trivial, wenn er implizit angegeben ist. Die Klasse `T` verfügt über keine virtuellen Funktionen und die Klasse `T` hat keine virtuellen Basen. Die Klassen aller nicht statischen Datenmember des Klassentyps haben triviale Zuweisungsoperatoren und die Klassen aller nicht statischen Datenmember vom Typ „array“ der Klasse haben triviale Zuweisungsoperatoren.  
+ An assignment constructor for a class `T` is trivial if it is implicitly provided, the class `T` has no virtual functions, the class `T` has no virtual bases, the classes of all the non-static data members of class type have trivial assignment operators, and the classes of all the non-static data members of type array of class have trivial assignment operators.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

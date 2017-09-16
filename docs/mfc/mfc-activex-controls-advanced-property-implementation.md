@@ -1,82 +1,100 @@
 ---
-title: "MFC-ActiveX-Steuerelemente: Weiterf&#252;hrende Eigenschaftenimplementierung | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC-ActiveX-Steuerelemente, Fehlercodes"
-  - "MFC-ActiveX-Steuerelemente, Eigenschaften"
-  - "Eigenschaften [MFC], ActiveX-Steuerelemente"
+title: 'MFC ActiveX Controls: Advanced Property Implementation | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], error codes
+- properties [MFC], ActiveX controls
+- MFC ActiveX controls [MFC], properties
 ms.assetid: ec2e6759-5a8e-41d8-a275-99af8ff6f32e
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# MFC-ActiveX-Steuerelemente: Weiterf&#252;hrende Eigenschaftenimplementierung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7b23dd1b02a9a8e7e7584574429439c8334151fa
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-In diesem Artikel werden die Themen, die zum Implementieren von erweiterten Eigenschaften in einem ActiveX\-Steuerelement verknüpft werden:  
+---
+# <a name="mfc-activex-controls-advanced-property-implementation"></a>MFC ActiveX Controls: Advanced Property Implementation
+This article describes topics related to implementing advanced properties in an ActiveX control:  
   
--   [Schreibgeschützt und lesegeschützte Eigenschaften](#_core_read2donly_and_write2donly_properties)  
+-   [Read-only and write-only properties](#_core_read2donly_and_write2donly_properties)  
   
--   [Rückgabe von Fehlercodes aus einer Eigenschaft](#_core_returning_error_codes_from_a_property)  
+-   [Returning error codes from a property](#_core_returning_error_codes_from_a_property)  
   
-##  <a name="_core_read2donly_and_write2donly_properties"></a> Schreibgeschützt und lesegeschützte Eigenschaften  
- Der Assistent zum Hinzufügen von Eigenschaften bietet eine Zeit sparende und einfache Methode, schreib\- oder lesegeschützte Eigenschaften für das Steuerelement implementieren bereit.  
+##  <a name="_core_read2donly_and_write2donly_properties"></a> Read-Only and Write-Only Properties  
+ The Add Property Wizard provides a quick and easy method to implement read-only or write-only properties for the control.  
   
-#### So ein schreibgeschütztes oder eine lesegeschützte Eigenschaft implementieren  
+#### <a name="to-implement-a-read-only-or-write-only-property"></a>To implement a read-only or write-only property  
   
-1.  Laden Sie das Projekt des Steuerelements.  
+1.  Load your control's project.  
   
-2.  Erweitern Sie in der Klassenansicht den Bibliotheksknoten des Steuerelements.  
+2.  In Class View, expand the library node of your control.  
   
-3.  Klicken Sie auf den Schnittstellenknoten für das Steuerelement \(der zweite Knoten des Bibliotheksknotens\) mit der rechten Maustaste um das Kontextmenü zu öffnen.  
+3.  Right-click the interface node for your control (the second node of the library node) to open the shortcut menu.  
   
-4.  Klicken Sie im Kontextmenü auf **Hinzufügen** und dann auf **Eigenschaft hinzufügen**.  
+4.  From the shortcut menu, click **Add** and then click **Add Property**.  
   
-     Dadurch wird unter [Assistent zum Hinzufügen von Eigenschaften](../ide/names-add-property-wizard.md).  
+     This opens the [Add Property Wizard](../ide/names-add-property-wizard.md).  
   
-5.  Im Feld **Eigenschaftenname** geben Sie den Namen der Eigenschaft ein.  
+5.  In the **Property Name** box, type the name of your property.  
   
-6.  Für **Implementierungstyp** auf **Get\/Set\-Methoden**.  
+6.  For **Implementation Type**, click **Get/Set Methods**.  
   
-7.  Im Feld **Eigenschaftentyp** wählen Sie den richtigen Typ für die Eigenschaft aus.  
+7.  In the **Property Type** box, select the proper type for the property.  
   
-8.  Wenn Sie eine schreibgeschützte Eigenschaft soll, löschen Sie den festgelegten Funktionsnamen.  Wenn Sie eine lesegeschützte Eigenschaft soll, löschen Sie den Abrufensfunktionsnamen.  
+8.  If you want a read-only property, clear the Set function name. If you want a write-only property, clear the Get function name.  
   
-9. Klicken Sie auf **Fertig stellen**.  
+9. Click **Finish**.  
   
- Wenn Sie dies tun, fügt der Assistent zum Hinzufügen von Eigenschaften die Funktion `SetNotSupported` oder `GetNotSupported` im Dispatchzuordnungseintrag anstelle eines normalen Menge ein oder ruft Funktion ab.  
+ When you do this, the Add Property Wizard inserts the function `SetNotSupported` or `GetNotSupported` in the dispatch map entry in place of a normal Set or Get function.  
   
- Wenn Sie einer vorhandenen Eigenschaft ändern möchten, um schreibgeschützt oder lesegeschützt sein, können Sie die Dispatchzuordnung manuell bearbeiten und den unnötigen Satz entfernen oder Funktion von der Control\-Klasse abrufen.  
+ If you want to change an existing property to be read-only or write-only, you can edit the dispatch map manually and remove the unnecessary Set or Get function from the control class.  
   
- Wenn Sie eine Eigenschaft bedingt schreibgeschützt oder lesegeschützt sein sollen \(beispielsweise, nur, wenn das Steuerelement in einem bestimmten Modus\) funktioniert, können Sie den Satz bereitstellen oder Funktion, z Normal abrufen und rufen die `SetNotSupported` oder Funktion bei `GetNotSupported` auf.  Beispiel:  
+ If you want a property to be conditionally read-only or write-only (for example, only when your control is operating in a particular mode), you can provide the Set or Get function, as normal, and call the `SetNotSupported` or `GetNotSupported` function where appropriate. For example:  
   
- [!CODE [NVC_MFC_AxUI#29](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxUI#29)]  
+ [!code-cpp[NVC_MFC_AxUI#29](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-property-implementation_1.cpp)]  
   
- Dieses Codebeispiel ruft `SetNotSupported` auf, wenn der `m_bReadOnlyMode` \- Datenmember **TRUE** ist.  Wenn **FALSE**, anschließend die Eigenschaft auf den neuen Wert festgelegt wird.  
+ This code sample calls `SetNotSupported` if the `m_bReadOnlyMode` data member is **TRUE**. If **FALSE**, then the property is set to the new value.  
   
-##  <a name="_core_returning_error_codes_from_a_property"></a> Rückgabe von Fehlercodes aus einer Eigenschaft  
- Um anzugeben, dass ein Fehler beim Versuch abzurufen, aufgetreten ist, oder, eine Eigenschaft festzulegen, die `COleControl::ThrowError` verwenden Sie die Funktion, `SCODE` \(Statuscode\) als Parameter akzeptiert.  Sie können vordefinierte `SCODE` verwenden oder eine eigene definiert.  Eine Liste vordefinierter `SCODE`s und Anweisungen zum Definieren von benutzerdefiniertem `SCODE`s, finden Sie im Artikel [Fehlerbehandlung im ActiveX\-Steuerelement](../mfc/mfc-activex-controls-advanced-topics.md) in ActiveX\-Steuerelemente: Weiterführende Themen.  
+##  <a name="_core_returning_error_codes_from_a_property"></a> Returning Error Codes From a Property  
+ To indicate that an error has occurred while attempting to get or set a property, use the `COleControl::ThrowError` function, which takes an `SCODE` (status code) as a parameter. You can use a predefined `SCODE` or define one of your own. For a list of predefined `SCODE`s and instructions for defining custom `SCODE`s, see [Handling Errors in Your ActiveX Control](../mfc/mfc-activex-controls-advanced-topics.md) in the article ActiveX controls: Advanced Topics.  
   
- Hilfsfunktionen sind für die gängigsten vordefinierte `SCODE`s, wie [COleControl::SetNotSupported](../Topic/COleControl::SetNotSupported.md), [COleControl::GetNotSupported](../Topic/COleControl::GetNotSupported.md) und [COleControl::SetNotPermitted](../Topic/COleControl::SetNotPermitted.md).  
+ Helper functions exist for the most common predefined `SCODE`s, such as [COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), and [COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).  
   
 > [!NOTE]
->  `ThrowError` gilt, nur als Mittel zur Rückgabe eines Fehlers aus einer Eigenschaft verwendet werden abrufen oder festlegen Funktion oder eine Automatisierungsmethode.  Dies sind die einzigen vorkommen, dass der entsprechende Ausnahmehandler auf dem Stapel vorhanden ist.  
+>  `ThrowError` is meant to be used only as a means of returning an error from within a property's Get or Set function or an automation method. These are the only times that the appropriate exception handler will be present on the stack.  
   
- Weitere Informationen über Berichterstellungsausnahmen in anderen Bereichen des Codes, finden Sie unter [COleControl::FireError](../Topic/COleControl::FireError.md) und im Abschnitt [Fehlerbehandlung im ActiveX\-Steuerelement](../mfc/mfc-activex-controls-advanced-topics.md) im Artikel ActiveX\-Steuerelemente: Weiterführende Themen.  
+ For more information on reporting exceptions in other areas of the code, see [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) and the section [Handling Errors in Your ActiveX Control](../mfc/mfc-activex-controls-advanced-topics.md) in the article ActiveX Controls: Advanced Topics.  
   
-## Siehe auch  
- [MFC\-ActiveX\-Steuerelemente](../mfc/mfc-activex-controls.md)   
- [MFC\-ActiveX\-Steuerelemente: Eigenschaften](../mfc/mfc-activex-controls-properties.md)   
- [MFC\-ActiveX\-Steuerelemente: Methoden](../mfc/mfc-activex-controls-methods.md)   
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)   
+ [MFC ActiveX Controls: Properties](../mfc/mfc-activex-controls-properties.md)   
+ [MFC ActiveX Controls: Methods](../mfc/mfc-activex-controls-methods.md)   
  [COleControl Class](../mfc/reference/colecontrol-class.md)
+

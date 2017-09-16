@@ -1,69 +1,88 @@
 ---
-title: "MFC-ActiveX-Steuerelemente: Hinzuf&#252;gen von vordefinierten Methoden | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DoClick-Methode"
-  - "MFC-ActiveX-Steuerelemente, Methoden"
-  - "MFC-ActiveX-Steuerelemente, stock-Methoden"
+title: 'MFC ActiveX Controls: Adding Stock Methods | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], stock methods
+- MFC ActiveX controls [MFC], methods
+- DoClick method [MFC]
 ms.assetid: bc4fad78-cabd-4cc0-a798-464b1a682f0b
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# MFC-ActiveX-Steuerelemente: Hinzuf&#252;gen von vordefinierten Methoden
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8a62e9c34de043f55b89b59554bf7aaac3b48421
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Eine vordefinierte Methode unterscheidet sich von einer benutzerdefinierten Methode, da sie bereits in die [COleControl](../mfc/reference/colecontrol-class.md)\- Klasse implementiert wird.  Beispielsweise enthält vordefinierte `COleControl` eine Memberfunktion, die die Aktualisierungsmethode für das Steuerelement unterstützt.  Der vordefinierte Dispatchzuordnungseintrag für diese Methode lautet **DISP\_STOCKFUNC\_REFRESH**.  
+---
+# MFC ActiveX Controls: Adding Stock Methods
+A stock method differs from a custom method in that it is already implemented by class [COleControl](../mfc/reference/colecontrol-class.md). For example, `COleControl` contains a predefined member function that supports the Refresh method for your control. The dispatch map entry for this stock method is **DISP_STOCKFUNC_REFRESH**.  
   
- `COleControl` unterstützt zwei vordefinierten Methoden: DoClick und Aktualisierung.  Aktualisierung wird vom Benutzer des Steuerelements aufgerufen, um die Darstellung des Steuerelements auf einmal aktualisieren; DoClick wird aufgerufen, um das Click\-Ereignis des Steuerelements ausgelöst.  
+ `COleControl` supports two stock methods: DoClick and Refresh. Refresh is invoked by the control's user to immediately update the control's appearance; DoClick is invoked to fire the control's Click event.  
   
-|Methode|Dispatchzuordnungseintrag|Kommentar|  
-|-------------|-------------------------------|---------------|  
-|`DoClick`|**DISP\_STOCKPROP\_DOCLICK\(\)**|Löst ein Click\-Ereignis aus.|  
-|**Aktualisieren**|**DISP\_STOCKPROP\_REFRESH\(\)**|Aktualisiert sofort die Darstellung des Steuerelements.|  
+|Method|Dispatch map entry|Comment|  
+|------------|------------------------|-------------|  
+|`DoClick`|**DISP_STOCKPROP_DOCLICK( )**|Fires a Click event.|  
+|**Refresh**|**DISP_STOCKPROP_REFRESH( )**|Immediately updates the control's appearance.|  
   
-##  <a name="_core_adding_a_stock_method_using_classwizard"></a> Hinzufügen einer vordefinierten Methode mithilfe des Assistenten zum Hinzufügen von Methoden  
- Eine vordefinierte Methode hinzuzufügen ist mit [Assistent zum Hinzufügen von Methoden](../ide/add-method-wizard.md) einfach.  Die folgende Prozedur veranschaulicht das Hinzufügen der Aktualisierungsmethode auf ein Steuerelement, das mit dem MFC\-ActiveX\-Steuerelement\-Assistenten erstellt wird.  
+##  <a name="_core_adding_a_stock_method_using_classwizard"></a> Adding a Stock Method Using the Add Method Wizard  
+ Adding a stock method is simple using the [Add Method Wizard](../ide/add-method-wizard.md). The following procedure demonstrates adding the Refresh method to a control created using the MFC ActiveX Control Wizard.  
   
-#### So der vordefinierten Aktualisierungsmethode mit dem Assistenten zum Hinzufügen von Methoden hinzufügen  
+#### To add the stock Refresh method using the Add Method Wizard  
   
-1.  Laden Sie das Projekt des Steuerelements.  
+1.  Load your control's project.  
   
-2.  Erweitern Sie in der Klassenansicht den Bibliotheksknoten des Steuerelements.  
+2.  In Class View, expand the library node of your control.  
   
-3.  Klicken Sie auf den Schnittstellenknoten für das Steuerelement \(der zweite Knoten des Bibliotheksknotens\) mit der rechten Maustaste um das Kontextmenü zu öffnen.  
+3.  Right-click the interface node for your control (the second node of the library node) to open the shortcut menu.  
   
-4.  Klicken Sie im Kontextmenü auf **Hinzufügen** und dann auf **Methode hinzufügen**.  
+4.  From the shortcut menu, click **Add** and then click **Add Method**.  
   
-     Dadurch wird der Assistent zum Hinzufügen von Methoden.  
+     This opens the Add Method Wizard.  
   
-5.  Im Feld **Methodenname** klicken Sie auf **Aktualisieren**.  
+5.  In the **Method Name** box, click **Refresh**.  
   
-6.  Klicken Sie auf **Fertig stellen**.  
+6.  Click **Finish**.  
   
-##  <a name="_core_classwizard_changes_for_stock_methods"></a> Assistent zum Hinzufügen von Methodenen\-Änderungen für vordefinierte Methoden  
- Da die vordefinierte Aktualisierungsmethode durch die Basisklasse des Steuerelements unterstützt wird, wird **Assistent zum Hinzufügen von Methoden** nicht die Klassendeklaration des Steuerelements in jeder Hinsicht.  Sie fügt einen Eintrag für die Methode der Dispatchzuordnung des Steuerelements und seiner IDL\-Datei hinzu.  In der folgenden Zeile wird der Dispatchzuordnung des Steuerelements hinzugefügt, in der Implementierungsdatei \(.CPP\):  
+##  <a name="_core_classwizard_changes_for_stock_methods"></a> Add Method Wizard Changes for Stock Methods  
+ Because the stock Refresh method is supported by the control's base class, the **Add Method Wizard** does not change the control's class declaration in any way. It adds an entry for the method to the control's dispatch map and to its .IDL file. The following line is added to the control's dispatch map, located in its implementation (.CPP) file:  
   
- [!CODE [NVC_MFC_AxUI#16](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxUI#16)]  
+ [!code-cpp[NVC_MFC_AxUI#16](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-methods_1.cpp)]  
   
- Dies macht die Aktualisierungsmethode verfügbar für die Benutzer des Steuerelements.  
+ This makes the Refresh method available to the control's users.  
   
- In der folgenden Zeile wird der IDL\-Datei des Steuerelements hinzugefügt:  
+ The following line is added to the control's .IDL file:  
   
- [!CODE [NVC_MFC_AxUI#17](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxUI#17)]  
+ [!code-cpp[NVC_MFC_AxUI#17](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-methods_2.idl)]  
   
- Diese Zeile weist der Aktualisierungsmethode ein bestimmte ID\-Nummer zu.  
+ This line assigns the Refresh method a specific ID number.  
   
-## Siehe auch  
- [MFC\-ActiveX\-Steuerelemente](../mfc/mfc-activex-controls.md)
+## See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)
+
+

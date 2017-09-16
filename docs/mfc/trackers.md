@@ -1,40 +1,58 @@
 ---
-title: "Tracker | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Anwendungen [OLE], Tracker"
-  - "CDC-Klasse, Tracker"
-  - "CRectTracker-Klasse, Implementieren von Trackern"
-  - "OLE-Anwendungen [C++], Tracker"
-  - "OLE-Container, Tracker"
-  - "OLE-Serveranwendungen, Tracker"
-  - "Tracker"
-  - "Nachverfolgen von OLE-Elementen"
+title: Trackers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- trackers [MFC]
+- OLE applications [MFC], trackers
+- applications [OLE], trackers
+- tracking OLE items [MFC]
+- OLE containers [MFC], trackers
+- CDC class [MFC], trackers
+- CRectTracker class [MFC], implementing trackers
+- OLE server applications [MFC], trackers
 ms.assetid: dcd09399-6637-4621-80e5-d12670429787
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Tracker
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f4ea3db56feb48124a56ab71602261ab52fa7559
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Die [CRectTracker](../mfc/reference/crecttracker-class.md)\-Klasse stellt eine Benutzeroberfläche zwischen rechteckigen Elemente in der Anwendung und der Benutzer, indem er eine Vielzahl der Anzeige bereitstellt, formatiert.  Diese Formate umfassen den reinen, oder die schraffiert gestrichelten Rahmen; eine Schraffur, die das Element enthält; und Ziehpunkte, die im äußeren oder das innerhalb von einem Rahmen ermittelt werden können.  Protokollierer sind in Verbindung mit OLE\-Elementen die d. h Objekten oft verwendet, die von `COleClientItem` abgeleitet werden.  Die Protokolliererrechtecke geben visuelle Hinweise auf den aktuellen Status des Elements.  
+---
+# <a name="trackers"></a>Trackers
+The [CRectTracker](../mfc/reference/crecttracker-class.md) class provides a user interface between rectangular items in your application and your user by providing a variety of display styles. These styles include solid, hatched, or dashed borders; a hatched pattern that covers the item; and resize handles that can be located on the outside or inside of a border. Trackers are often used in conjunction with OLE items, that is, objects derived from `COleClientItem`. The tracker rectangles give visual cues on the current status of the item.  
   
- Das [OCLIENT](../top/visual-cpp-samples.md) MFC\-OLE wird eine allgemeine Schnittstelle mithilfe der Protokollierer\- und OLE\-Clientelemente vom Bereich einer Containeranwendung.  Eine Beispiel der verschiedenen Formatvorlagen und der Fähigkeiten eines Protokollierers \- Objekts, finden Sie das Beispiel [Die TRACKER\-Beispielanwendung](../top/visual-cpp-samples.md) allgemeine MFC.  
+ The MFC OLE sample [OCLIENT](../visual-cpp-samples.md) demonstrates a common interface using trackers and OLE client items from the viewpoint of a container application. For a demonstration of the different styles and abilities of a tracker object, see the MFC general sample [TRACKER](../visual-cpp-samples.md).  
   
- Weitere Informationen zum Implementieren von Protokollierern in der OLE\-Anwendung, finden Sie unter [Protokollierer: Implementieren von Protokollierern in der OLE\-Anwendung](../mfc/trackers-implementing-trackers-in-your-ole-application.md)  
+ For more information on implementing trackers in your OLE application, see [Trackers: Implementing Trackers in Your OLE Application](../mfc/trackers-implementing-trackers-in-your-ole-application.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>See Also  
  [OLE](../mfc/ole-in-mfc.md)   
  [COleClientItem Class](../mfc/reference/coleclientitem-class.md)
+

@@ -1,56 +1,75 @@
 ---
-title: "Behandeln von QuickInfo-Benachrichtigungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CToolBarCtrl-Klasse, Handlingbenachrichtigungen"
-  - "Benachrichtigungen, QuickInfos"
-  - "QuickInfos [C++], Benachrichtigungen"
-  - "TOOLTIPTEXT-Struktur"
+title: Handling Tool Tip Notifications | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- TOOLTIPTEXT structure [MFC]
+- CToolBarCtrl class [MFC], handling notifications
+- notifications [MFC], tool tips
+- tool tips [MFC], notifications
 ms.assetid: ddb93b5f-2e4f-4537-8053-3453c86e2bbb
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Behandeln von QuickInfo-Benachrichtigungen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4b6ad56302dc7bcbafad48452408bd931696257b
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Wenn Sie dem `TBSTYLE_TOOLTIPS` Format angeben, erstellt die Symbolleiste und verwaltet ein QuickInfo\-Steuerelement.  Eine QuickInfo ist ein kleines Popupfenster, das eine Textzeile enthält, die eine Symbolleisten\-Schaltfläche beschreibt.  Die QuickInfo ist ausgeblendet und wird nur angezeigt, wenn der Benutzer den Cursor auf eine Symbolleisten\-Schaltfläche platziert und ihn dort für ungefähr der Hälfte zweites können.  Die QuickInfo wird neben dem Cursor angezeigt.  
+---
+# <a name="handling-tool-tip-notifications"></a>Handling Tool Tip Notifications
+When you specify the `TBSTYLE_TOOLTIPS` style, the toolbar creates and manages a tool tip control. A tool tip is a small pop-up window that contains a line of text describing a toolbar button. The tool tip is hidden, appearing only when the user puts the cursor on a toolbar button and leaves it there for approximately one-half second. The tool tip is displayed near the cursor.  
   
- Bevor die QuickInfo angezeigt wird, wird die **TTN\_NEEDTEXT** Benachrichtigung auf Besitzerfenster der Symbolleiste gesendet, um den beschreibenden Text für die Schaltfläche ab.  Wenn das Besitzerfenster der Symbolleiste ein Fenster `CFrameWnd` ist, werden QuickInfos ohne zusätzlichen Aufwand angezeigt, da `CFrameWnd` einen Standardhandler für die Benachrichtigung **TTN\_NEEDTEXT** hat.  Wenn das Besitzerfenster der Symbolleiste nicht von `CFrameWnd`, wie einem Dialogfeld oder einer Formularansicht abgeleitet wird, müssen Sie einen Eintrag der Meldungszuordnung des Besitzerfensters hinzufügen und einen Benachrichtigungshandler in der Meldungszuordnung bereitstellen.  Der Eintrag zur Meldungszuordnung des Besitzerfensters ist, wie folgt:  
+ Before the tool tip is displayed, the **TTN_NEEDTEXT** notification message is sent to the toolbar's owner window to retrieve the descriptive text for the button. If the toolbar's owner window is a `CFrameWnd` window, tool tips are displayed without any extra effort, because `CFrameWnd` has a default handler for the **TTN_NEEDTEXT** notification. If the toolbar's owner window is not derived from `CFrameWnd`, such as a dialog box or form view, you must add an entry to your owner window's message map and provide a notification handler in the message map. The entry to your owner window's message map is as follows:  
   
- [!CODE [NVC_MFCControlLadenDialog#40](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCControlLadenDialog#40)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#40](../mfc/codesnippet/cpp/handling-tool-tip-notifications_1.cpp)]  
   
-## Hinweise  
+## <a name="remarks"></a>Remarks  
  `memberFxn`  
- Die Memberfunktion, aufgerufen werden, wenn Text für diese Schaltfläche benötigt wird.  
+ The member function to be called when text is needed for this button.  
   
- Beachten Sie, dass die ID einer QuickInfo immer 0.  
+ Note that the id of a tool tip is always 0.  
   
- Neben **TTN\_NEEDTEXT** Benachrichtigung kann ein QuickInfo\-Steuerelement die folgenden Benachrichtigungen an einem ToolBar\-Steuerelement senden:  
+ In addition to the **TTN_NEEDTEXT** notification, a tool tip control can send the following notifications to a toolbar control:  
   
-|Benachrichtigung|Bedeutung|  
-|----------------------|---------------|  
-|**TTN\_NEEDTEXTA**|ToolTip\-Steuerelement erfordert ASCII\-Text \(nur Windows 95\)|  
-|**TTN\_NEEDTEXTW**|ToolTip\-Steuerelement erfordert UNICODE\-Text \(nur Windows NT\)|  
-|**TBN\_HOTITEMCHANGE**|Gibt an, dass das heiße \(markiert\) Element geändert wurde.|  
-|**NM\_RCLICK**|Gibt dem Benutzer hat mit der rechten Maustaste geklickt auf eine Schaltfläche.|  
-|**TBN\_DRAGOUT**|Gibt dem Benutzer hat auf die Schaltfläche geklickt und abgerufen den Zeiger von der Schaltfläche an.  Sie können eine Anwendung, Drag & Drop\-Datenbindung einer Symbolleisten\-Schaltfläche zu implementieren.  Wenn sie diese Benachrichtigung empfängt, wird die Anwendung den Drag & Drop\-Vorgang.|  
-|**TBN\_DROPDOWN**|Gibt dem Benutzer geklickt hat auf eine Schaltfläche an, die das **TBSTYLE\_DROPDOWN** Format verwendet.|  
-|**TBN\_GETOBJECT**|Gibt den verschob Benutzer den Zeiger über eine Schaltfläche an, die das **TBSTYLE\_DROPPABLE** Format verwendet.|  
+|Notification|Meaning|  
+|------------------|-------------|  
+|**TTN_NEEDTEXTA**|Tool tip control requires ASCII text (Windows 95 only)|  
+|**TTN_NEEDTEXTW**|Tool tip control requires UNICODE text (Windows NT only)|  
+|**TBN_HOTITEMCHANGE**|Indicates that the hot (highlighted) item has changed.|  
+|**NM_RCLICK**|Indicates the user has right-clicked a button.|  
+|**TBN_DRAGOUT**|Indicates the user has clicked the button and dragged the pointer off the button. It allows an application to implement drag and drop from a toolbar button. When receiving this notification, the application will begin the drag and drop operation.|  
+|**TBN_DROPDOWN**|Indicates the user has clicked a button that uses the **TBSTYLE_DROPDOWN** style.|  
+|**TBN_GETOBJECT**|Indicates the user moved the pointer over a button that uses the **TBSTYLE_DROPPABLE** style.|  
   
- Ein Beispiel finden Handlerfunktion und weitere Informationen über das Einrichten von QuickInfos, [QuickInfo](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md).  
+ For an example handler function and more information about enabling tool tips, see [Tool Tips](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md).  
   
-## Siehe auch  
- [Verwenden von CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

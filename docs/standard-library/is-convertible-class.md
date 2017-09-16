@@ -1,5 +1,5 @@
 ---
-title: is_convertible-Klasse | Microsoft-Dokumentation
+title: is_convertible Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_convertible
 - type_traits/std::is_convertible
 dev_langs:
 - C++
@@ -35,15 +34,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 381fa9297dd9fad3efd84078a000fea65af0abfd
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ca63e76acd1f1d7c892489dd86376d040b8f614a
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isconvertible-class"></a>is_convertible-Klasse
-Testet, ob ein Typ in einen anderen konvertiert werden kann.  
+# <a name="isconvertible-class"></a>is_convertible Class
+Tests if one type is convertible to another.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -52,17 +51,17 @@ template <class From, class To>
 struct is_convertible;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a>Parameters  
  `From`  
- Der Typ, aus dem konvertiert wird.  
+ The type to convert from.  
   
  `Ty`  
- Der Typ, in den konvertiert werden soll.  
+ The type to convert to.  
   
-## <a name="remarks"></a>Hinweise  
- Eine Instanz des Typprädikats ist TRUE, wenn der Ausdruck `To to = from;`, wobei `from` ein Objekt vom Typ `From` ist, wohlgeformt ist.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the expression `To to = from;`, where `from` is an object of type `From`, is well-formed.  
   
-## <a name="example"></a>Beispiel  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__is_convertible.cpp   
@@ -95,12 +94,12 @@ is_convertible<trivial, trivial> == true
 is_convertible<char, int> == true  
 ```  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [is_base_of-Klasse](../standard-library/is-base-of-class.md)
+ [is_base_of Class](../standard-library/is-base-of-class.md)
 

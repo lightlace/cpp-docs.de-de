@@ -1,48 +1,67 @@
 ---
-title: "Wann m&#252;ssen Updatehandler aufgerufen werden? | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Befehlsrouting, Updatebefehle"
-  - "Befehlsrouting, Updatehandler"
-  - "Deaktivieren von Menüelementen"
-  - "Deaktivieren von Symbolleisten-Schaltflächen"
-  - "Menüelemente, Aktivieren"
-  - "Menüs [C++], Initialisieren"
-  - "Menüs [C++], Aktualisieren bei Kontextänderungen"
-  - "Schaltflächen der Symbolleiste [C++], Aktivieren"
-  - "Symbolleisten-Steuerelemente [MFC], Aktualisiert während OnIdle-Methode"
-  - "Symbolleisten [C++], Aktualisieren"
-  - "Updatehandler"
-  - "Updatehandler, Aufrufen"
-  - "Aktualisieren von Benutzeroberflächenobjekten"
+title: When Update Handlers Are Called | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- updating user interface objects [MFC]
+- command routing [MFC], update commands
+- toolbar buttons [MFC], enabling
+- disabling toolbar buttons
+- menus [MFC], initializing
+- update handlers [MFC]
+- disabling menu items
+- toolbars [MFC], updating
+- menus [MFC], updating as context changes
+- toolbar controls [MFC], updated during OnIdle method [MFC]
+- menu items, enabling
+- command routing [MFC], update handlers
+- update handlers, calling
 ms.assetid: 7359f6b1-4669-477d-bd99-690affed08d9
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Wann m&#252;ssen Updatehandler aufgerufen werden?
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f49d34db80d94236e2c435f786a338b73d4dca99
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Nehmen wir der Benutzer die Maus im Menü Datei an, die eine Meldung `WM_INITMENUPOPUP` generiert.  Der Aktualisierungsmechanismus des Framework aktualisiert zusammen alle Elemente im Menü Datei, bevor das Menü unten zurückgestellt, damit der Benutzer sie finden kann.  
+---
+# <a name="when-update-handlers-are-called"></a>When Update Handlers Are Called
+Suppose the user clicks the mouse in the File menu, which generates a `WM_INITMENUPOPUP` message. The framework's update mechanism collectively updates all items on the File menu before the menu drops down so the user can see it.  
   
- Aufgabe, die Frameworkrouten\-Updatebefehle für alle Menüelemente im Popupmenü entlang dem Standardbefehlsrouting.  Befehlsziele im Routing haben die Möglichkeit, alle Menüelemente zu aktualisieren, indem der Updates\-Befehl mit einem entsprechenden Eintrag in der Meldungszuordnung des Formulars \( `ON_UPDATE_COMMAND_UI`\) entsprechen und eine "Aktualisierungshandler" Funktion aufrufen.  Somit für ein Menü mit sechs Menüelementen, werden sechs Aktualisierungsbefehle gesendet.  Wenn ein Aktualisierungshandler für die Befehls\-ID des Menüelements vorhanden, wird jedoch aufgerufen, um die Aktualisierung durchzuführen.  Wenn nicht, überprüft das Framework das Vorhandensein eines Handlers für diese Befehls\-ID und aktiviert oder deaktiviert das Menüelement nach Bedarf.  
+ To do this, the framework routes update commands for all menu items in the pop-up menu along the standard command routing. Command targets on the routing have an opportunity to update any menu items by matching the update command with an appropriate message-map entry (of the form `ON_UPDATE_COMMAND_UI`) and calling an "update handler" function. Thus, for a menu with six menu items, six update commands are sent out. If an update handler exists for the command ID of the menu item, it is called to do the updating. If not, the framework checks for the existence of a handler for that command ID and enables or disables the menu item as appropriate.  
   
- Wenn das Framework `ON_UPDATE_COMMAND_UI` einen Eintrag nicht während des Befehlsroutings findet, können es automatisch das Benutzeroberflächeobjekt, wenn ein Eintrag mit `ON_COMMAND` an derselben Befehl ID gibt  Andernfalls deaktiviert das Benutzeroberflächeobjekt.  Um sicherzustellen, dass ein Benutzeroberflächeobjekt aktiviert ist, stellen Sie einen Handler für den Befehl, den das Objekt generiert bereit oder erstellen Sie einen Aktualisierungshandler dafür bereit.  Siehe die Abbildung im Thema [Benutzeroberfläche\-Objekte und Befehls\-IDs](../mfc/user-interface-objects-and-command-ids.md).  
+ If the framework does not find an `ON_UPDATE_COMMAND_UI` entry during command routing, it automatically enables the user-interface object if there is an `ON_COMMAND` entry somewhere with the same command ID. Otherwise, it disables the user-interface object. Therefore, to ensure that a user-interface object is enabled, supply a handler for the command the object generates or supply an update handler for it. See the figure in the topic [User-Interface Objects and Command IDs](../mfc/user-interface-objects-and-command-ids.md).  
   
- Es ist möglich, das Standarddeaktivieren von Benutzeroberflächenobjekten zu deaktivieren.  Weitere Informationen finden Sie im [m\_bAutoMenuEnable](../Topic/CFrameWnd::m_bAutoMenuEnable.md)\-Member der `CFrameWnd`\-Klasse in der *MFC\-Referenz*.  
+ It is possible to disable the default disabling of user-interface objects. For more information, see the [m_bAutoMenuEnable](../mfc/reference/cframewnd-class.md#m_bautomenuenable) member of class `CFrameWnd` in the *MFC Reference*.  
   
- Menüinitialisierung ist im Framework automatisch und wird ausgelöst, wenn die Anwendung eine Meldung empfängt. `WM_INITMENUPOPUP` Während der Leerlaufschleife sucht das Framework Befehlsrouting für Schaltflächenaktualisierungshandler, ebenso wie es für Menüs bewirkt.  
+ Menu initialization is automatic in the framework, occurring when the application receives a `WM_INITMENUPOPUP` message. During the idle loop, the framework searches the command routing for button update handlers in much the same way as it does for menus.  
   
-## Siehe auch  
- [Gewusst wie: Aktualisieren von Benutzeroberflächenobjekten](../mfc/how-to-update-user-interface-objects.md)
+## <a name="see-also"></a>See Also  
+ [How to: Update User-Interface Objects](../mfc/how-to-update-user-interface-objects.md)
+
+

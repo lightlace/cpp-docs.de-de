@@ -1,40 +1,59 @@
 ---
-title: "Verwenden von QuickInfos in einem CStatusBarCtrl-Objekt | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CStatusBarCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CStatusBarCtrl-Klasse, QuickInfos"
-  - "Statusleisten, QuickInfos"
-  - "QuickInfos [C++], Verwenden in Statusleiste"
+title: Using Tooltips in a CStatusBarCtrl Object | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CStatusBarCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- tool tips [MFC], using in status bars
+- status bars [MFC], tool tips
+- CStatusBarCtrl class [MFC], tool tips
 ms.assetid: a77597a7-43ef-4b8f-87bc-a8ea1dc63dc3
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Verwenden von QuickInfos in einem CStatusBarCtrl-Objekt
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e26867f71fc81bf332a86fe24ed1ef9c53924b2e
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Um QuickInfo für ein StatusBar\-Steuerelement zu aktivieren, erstellen Sie das `CStatusBarCtrl`\-Objekt mit dem **SBT\_TOOLTIPS** Format.  
+---
+# <a name="using-tooltips-in-a-cstatusbarctrl-object"></a>Using Tooltips in a CStatusBarCtrl Object
+To enable tooltips for a status bar control, create the `CStatusBarCtrl` object with the **SBT_TOOLTIPS** style.  
   
 > [!NOTE]
->  Wenn Sie ein `CStatusBar`\-Objekt verwenden, um die Statusleiste zu implementieren, verwenden Sie die `CStatusBar::CreateEx`\-Funktion.  Sie ermöglicht es Ihnen, zusätzliche Formaten für das eingebettete Objekt **CStatusBarCtrl**  angeben.  
+>  If you are using a `CStatusBar` object to implement your status bar, use the `CStatusBar::CreateEx` function. It allows you to specify additional styles for the embedded **CStatusBarCtrl** object.  
   
- Sobald das `CStatusBarCtrl`\-Objekt erfolgreich erstellt wurde, dem [CStatusBarCtrl::SetTipText](../Topic/CStatusBarCtrl::SetTipText.md) und [CStatusBarCtrl::GetTipText](../Topic/CStatusBarCtrl::GetTipText.md), den QuickInfo\-Text für einen bestimmten Gültigkeitsbereich festzulegen und abzurufen.  
+ Once the `CStatusBarCtrl` object has been successfully created, use [CStatusBarCtrl::SetTipText](../mfc/reference/cstatusbarctrl-class.md#settiptext) and [CStatusBarCtrl::GetTipText](../mfc/reference/cstatusbarctrl-class.md#gettiptext) to set and retrieve the tip text for a specific pane.  
   
- Sobald die QuickInfo festgelegt wurde, ist sie nur angezeigt, wenn ein Teil ein Symbol und keinen Text oder wenn Text aller nicht innerhalb des Teils angezeigt werden kann.  QuickInfos werden nicht in einfachen Modus unterstützt.  
+ Once the tool tip has been set, it is displayed only if the part has an icon and no text, or if all of the text cannot be displayed inside the part. Tool tips are not supported in simple mode.  
   
-## Siehe auch  
- [Verwenden von CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

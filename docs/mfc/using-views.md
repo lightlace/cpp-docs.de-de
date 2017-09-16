@@ -1,62 +1,81 @@
 ---
-title: "Verwenden von Ansichten | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CView-Klasse, view-Architektur"
-  - "Zeichnung, Daten"
-  - "Interagieren mit Benutzer und Rollen von view-Klassen"
-  - "MFC, Ansichten"
-  - "Pixelbilddaten"
-  - "Rendering von Daten"
-  - "Benutzereingabe, Interpretieren durch view-Klasse"
-  - "Ansichtsklassen, Rolle beim Anzeigen von Anwendungsdaten"
-  - "Ansichtsklassen, Rolle beim Verwalten von Benutzerinteraktion"
-  - "Ansichten, Verwenden"
+title: Using Views | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- interacting with users and role of view class [MFC]
+- drawing [MFC], data
+- rendering data
+- view classes [MFC], role in managing user interaction
+- CView class [MFC], view architecture
+- MFC, views
+- views [MFC], using
+- painting data
+- user input [MFC], interpreting through view class [MFC]
+- view classes [MFC], role in displaying application data
 ms.assetid: dc3de6ad-5c64-4317-8f10-8bdcc38cdbd5
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Verwenden von Ansichten
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c26798bd71270b37a25d2665c030b615c6bb032e
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Die Aufgaben der Ansicht ist, die Daten des Dokuments für den Benutzer anzuzeigen grafisch und Benutzereingaben als Operationen im Dokument zu akzeptieren und interpretieren.  Aufgaben, die, falls diese die Ansichtsklasse schreiben, sind:  
+---
+# <a name="using-views"></a>Using Views
+The view's responsibilities are to display the document's data graphically to the user and to accept and interpret user input as operations on the document. Your tasks in writing your view class are to:  
   
--   Schreiben Sie [OnDraw](../Topic/CView::OnDraw.md)\-Memberfunktion der Ansichtsklasse, die die Daten des Dokuments rendert.  
+-   Write your view class's [OnDraw](../mfc/reference/cview-class.md#ondraw) member function, which renders the document's data.  
   
--   Schließen Sie entsprechende Windows\-Meldungen und Benutzeroberflächen\-Objekte wie Menüelemente an Meldungshandlermemberfunktionen in der Ansichtsklasse an.  
+-   Connect appropriate Windows messages and user-interface objects such as menu items to message-handler member functions in the view class.  
   
--   Implementieren Sie die Handler, um Benutzereingaben zu interpretieren.  
+-   Implement those handlers to interpret user input.  
   
- Außerdem müssen Sie möglicherweise andere `CView`\-Memberfunktionen in der abgeleiteten Ansichtsklasse überschreiben.  Insbesondere sollten Sie [OnInitialUpdate](../Topic/CView::OnInitialUpdate.md) überschreiben, um spezielle Initialisierung auszuführen, sodass die Ansicht und [OnUpdate](../Topic/CView::OnUpdate.md) Specialverarbeiten erfordert alle das ausführt, bevor die Ansicht selbst neu zeichnet.  Eine mehrseitige Dokumente müssen Sie auch [OnPreparePrinting](../Topic/CView::OnPreparePrinting.md) überschreiben, um das Drucken mit der Anzahl vonseiten, um zu drucken und andere Informationen zu initialisieren.  Weitere Informationen zum Überschreiben von `CView`\-Memberfunktionen, Klasse finden Sie unter [CView](../mfc/reference/cview-class.md) in der *MFC\-Referenz*.  
+ In addition, you may need to override other `CView` member functions in your derived view class. In particular, you may want to override [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) to perform special initialization for the view and [OnUpdate](../mfc/reference/cview-class.md#onupdate) to do any special processing needed just before the view redraws itself. For multipage documents, you also must override [OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting) to initialize the Print dialog box with the number of pages to print and other information. For more information on overriding `CView` member functions, see class [CView](../mfc/reference/cview-class.md) in the *MFC Reference*.  
   
-## Worüber möchten Sie mehr erfahren?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Abgeleitete Ansichtsklassen verfügbar in MFC](../mfc/derived-view-classes-available-in-mfc.md)  
+-   [Derived view classes available in MFC](../mfc/derived-view-classes-available-in-mfc.md)  
   
--   [Zeichnen in einer Ansicht](../mfc/drawing-in-a-view.md)  
+-   [Drawing in a view](../mfc/drawing-in-a-view.md)  
   
--   [Interpretieren der Benutzereingaben über eine Ansicht](../mfc/interpreting-user-input-through-a-view.md)  
+-   [Interpreting user input through a view](../mfc/interpreting-user-input-through-a-view.md)  
   
--   [Die Rolle der Ansicht im Drucken](../mfc/role-of-the-view-in-printing.md)  
+-   [The role of the view in printing](../mfc/role-of-the-view-in-printing.md)  
   
--   [Bildlauf\- und Skalierungsansichten](../mfc/scrolling-and-scaling-views.md)  
+-   [Scrolling and scaling views](../mfc/scrolling-and-scaling-views.md)  
   
--   [Dokumente und Ansichten initialisieren und Objects](../mfc/initializing-and-cleaning-up-documents-and-views.md)  
+-   [Initializing and cleaning up documents and views](../mfc/initializing-and-cleaning-up-documents-and-views.md)  
   
-## Siehe auch  
- [Dokument\-\/Ansichtsarchitektur](../mfc/document-view-architecture.md)   
+## <a name="see-also"></a>See Also  
+ [Document/View Architecture](../mfc/document-view-architecture.md)   
  [CFormView Class](../mfc/reference/cformview-class.md)   
- [Datensatzansichten \(MFC\-Datenzugriff\)](../data/record-views-mfc-data-access.md)   
- [Umgehen des Serialisierungsmechanismus](../mfc/bypassing-the-serialization-mechanism.md)
+ [Record Views  (MFC Data Access)](../data/record-views-mfc-data-access.md)   
+ [Bypassing the Serialization Mechanism](../mfc/bypassing-the-serialization-mechanism.md)
+
+

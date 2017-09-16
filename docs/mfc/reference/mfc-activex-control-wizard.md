@@ -1,73 +1,92 @@
 ---
-title: "MFC-ActiveX-Steuerelement-Assistent | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.mfc.ctl.overview"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX-Steuerelemente [C++], MFC"
-  - "MFC-ActiveX-Steuerelement-Assistent"
-  - "MFC ActiveX-Steuerelemente [C++], Assistenten"
-  - "OLE-Steuerelemente [C++]"
-  - "OLE-Steuerelemente [C++], Erstellen"
+title: MFC ActiveX Control Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.appwiz.mfc.ctl.overview
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX controls [MFC], MFC
+- MFC ActiveX controls [MFC], wizards
+- OLE controls [MFC], creating
+- MFC ActiveX Control Wizard
+- OLE controls [MFC]
 ms.assetid: f19d698c-bdc3-4c74-af97-3d6ccb441b75
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# MFC-ActiveX-Steuerelement-Assistent
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d911f96791e4bb7880c86a0571bfbbabf8a7eafb
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Ein ActiveX\-Steuerelement ist ein bestimmter Typ eines [Automatisierungsservers](../../mfc/automation-servers.md) und stellt eine wiederverwendbare Komponente dar.  Die Anwendung, in der das ActiveX\-Steuerelement sich befindet, ist der [Automatisierungsclient](../../mfc/automation-clients.md) dieses Steuerelements.  Wenn Sie eine solche wiederverwendbare Komponente erstellen möchten, sollten Sie das Steuerelement mit diesem Assistenten erstellen.  Weitere Informationen finden Sie unter [MFC\-ActiveX\-Steuerelemente](../../mfc/mfc-activex-controls.md).  
+---
+# <a name="mfc-activex-control-wizard"></a>MFC ActiveX Control Wizard
+An ActiveX control is a specific type of [automation server](../../mfc/automation-servers.md); it is a reusable component. The application hosting the ActiveX control is the [automation client](../../mfc/automation-clients.md) of that control. If your goal is to create such a reusable component, then use this wizard to create your control. See [MFC ActiveX Controls](../../mfc/mfc-activex-controls.md) for more information.  
   
- Alternativ können Sie mit dem [MFC\-Anwendungs\-Assistenten](../../mfc/reference/mfc-application-wizard.md) eine Automatisierungsserver\-MFC\-Anwendung erstellen.  
+ Alternately, you can create an automation server MFC application using the [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md).  
   
- Ein mit diesem Assistenten erstelltes ActiveX\-Steuerelement kann über eine Benutzeroberfläche verfügen oder unsichtbar sein.  Sie können diese Option auf der Seite [Steuerelementeinstellungen](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) des Assistenten festlegen.  Ein Zeitgeber\-Steuerelement ist ein Beispiel für ein ActiveX\-Steuerelement, das normalerweise unsichtbar sein sollte.  
+ An ActiveX control created with this wizard can have a user interface, or it can be invisible. You can indicate this option in the [Control Settings](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) page in the wizard. A timer control is an example of an ActiveX control that you would want to be invisible.  
   
- ActiveX\-Steuerelemente können über eine komplexe Benutzeroberfläche verfügen.  Einige Steuerelemente können wie gekapselte Formulare aufgebaut sein, z. B. als einzelnes Steuerelement mit vielen Feldern, von denen jedes ein eigenes Windows\-Steuerelement darstellt.  Ein KFZ\-Teile\-Objekt, das als MFC\-ActiveX\-Steuerelement implementiert ist, kann beispielsweise eine formularähnliche Benutzeroberfläche darstellen, in der die Benutzer die Teilenummer, die Teilebezeichnung sowie andere Informationen lesen und bearbeiten können.  Weitere Informationen finden Sie unter [MFC\-ActiveX\-Steuerelemente](../../mfc/mfc-activex-controls.md).  
+ ActiveX controls can have a complex user interface. Some controls might be like encapsulated forms: a single control containing many fields, each a Windows control in its own right. For example, an auto parts object implemented as an MFC ActiveX control might present a form-like user interface through which users could read and edit the part number, part name, and other information. See [MFC ActiveX Controls](../../mfc/mfc-activex-controls.md) for more information.  
   
- Wie Sie einen Container für ActiveX\-Objekte erstellen, erfahren Sie unter [Erstellen eines MFC\-ActiveX\-Steuerelementcontainers](../../mfc/reference/creating-an-mfc-activex-control-container.md).  
+ If you need to create a container for your ActiveX objects, see [Create an ActiveX Control Container](../../mfc/reference/creating-an-mfc-activex-control-container.md).  
   
- Das MFC\-Startprogramm enthält C\+\+\-Quelldateien \(CPP\-Format\), Ressourcendateien \(RC\-Format\) und eine Projektdatei \(VCPROJ\-Format\).  Der in diesen Startdateien generierte Code basiert auf MFC.  
+ The MFC starter program includes C++ source (.cpp) files, resource (.rc) files, and a project (.vcxproj) file. The code generated in these starter files is based on MFC.  
   
- Die folgende Beispielliste enthält Tasks und Erweiterungstypen für ActiveX\-Steuerelemente:  
+ The following sample list shows tasks and types of enhancements for your ActiveX control:  
   
--   [MFC\-ActiveX\-Steuerelemente: Optimierung](../../mfc/mfc-activex-controls-optimization.md)  
+-   [Optimizing an ActiveX Control](../../mfc/mfc-activex-controls-optimization.md)  
   
--   [Hinzufügen vordefinierter Ereignisse zu einem ActiveX\-Steuerelement](../../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)  
+-   [Adding Stock Events to an ActiveX Control](../../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)  
   
--   [Hinzufügen benutzerdefinierter Ereignisse](../../mfc/mfc-activex-controls-adding-custom-events.md)  
+-   [Adding Custom Events](../../mfc/mfc-activex-controls-adding-custom-events.md)  
   
--   [Hinzufügen vordefinierter Methoden](../../mfc/mfc-activex-controls-adding-stock-methods.md)  
+-   [Adding Stock Methods](../../mfc/mfc-activex-controls-adding-stock-methods.md)  
   
--   [Hinzufügen benutzerdefinierter Methoden](../../mfc/mfc-activex-controls-adding-custom-methods.md)  
+-   [Adding Custom Methods](../../mfc/mfc-activex-controls-adding-custom-methods.md)  
   
--   [Hinzufügen vordefinierter Eigenschaften](../../mfc/mfc-activex-controls-adding-stock-properties.md)  
+-   [Adding Stock Properties](../../mfc/mfc-activex-controls-adding-stock-properties.md)  
   
--   [Hinzufügen benutzerdefinierter Eigenschaften](../../mfc/mfc-activex-controls-adding-custom-properties.md)  
+-   [Adding Custom Properties](../../mfc/mfc-activex-controls-adding-custom-properties.md)  
   
--   [Programmieren von ActiveX\-Steuerelementen in einem ActiveX\-Steuerelementcontainer](../../mfc/programming-activex-controls-in-a-activex-control-container.md)  
+-   [Programming ActiveX Controls in an ActiveX Control Container](../../mfc/programming-activex-controls-in-a-activex-control-container.md)  
   
-## Übersicht  
- Auf dieser Assistentenseite werden die aktuellen Anwendungseinstellungen des MFC\-ActiveX\-Steuerelementprojekts beschrieben, das Sie gerade erstellen.  Der Assistent erstellt ein Projekt standardmäßig wie folgt:  
+## <a name="overview"></a>Overview  
+ This wizard page describes the current application settings for the MFC ActiveX control project you are creating. By default, the wizard creates a project as follows:  
   
--   Mit dem Standardprojekt werden weder eine Laufzeitlizenz noch Hilfedateien erstellt.  Sie können diese Standardeinstellungen auf der Seite [Anwendungseinstellungen](../../mfc/reference/application-settings-mfc-activex-control-wizard.md) ändern.  Die Seite **Übersicht** enthält nur die Optionen, die auf dieser Seite des ActiveX\-Steuerelement\-Assistenten ausgewählt werden.  
+-   The default project generates no run-time license or help files. You can change these default settings on the [Application Settings](../../mfc/reference/application-settings-mfc-activex-control-wizard.md) page. Only the selections you make on this page of the ActiveX Control Wizard are reflected on the **Overview** page.  
   
--   Das Projekt umfasst eine Steuerelementklasse und eine Eigenschaftenseitenklasse, deren Namen vom Projektnamen abgeleitet sind.  Sie können den Projektnamen sowie die Dateinamen auf der Seite [Steuerelementnamen](../../mfc/reference/control-names-mfc-activex-control-wizard.md) bearbeiten.  
+-   The project includes a control class and a property page class, based on the name of the project. You can edit the names of your project and file names on the [Control Names](../../mfc/reference/control-names-mfc-activex-control-wizard.md) page.  
   
--   Das Steuerelement basiert nicht auf vorhandenen Windows\-Steuerelementen; es wird aktiviert, sobald es sichtbar wird und verfügt über eine Benutzeroberfläche und ein Dialogfeld **Info**.  Sie können diese Standardeinstellungen auf der Seite [Steuerelementeinstellungen](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) ändern.  
+-   The control is based on no existing Windows control, activates when it becomes visible, has a user interface, and includes an **About** dialog box. You can change these default settings on the [Control Settings](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) page.  
   
-## Siehe auch  
- [Erstellen und Verwalten von Visual C\+\+\-Projekten](../../ide/creating-and-managing-visual-cpp-projects.md)   
- [Visual C\+\+\-Projekttypen](../../ide/visual-cpp-project-types.md)   
- [Konzepte](../../atl/active-template-library-atl-concepts.md)
+## <a name="see-also"></a>See Also  
+ [Creating and Managing Visual C++ Projects](../../ide/creating-and-managing-visual-cpp-projects.md)   
+ [Visual C++ Project Types](../../ide/visual-cpp-project-types.md)   
+ [Concepts](../../atl/active-template-library-atl-concepts.md)
+
+
