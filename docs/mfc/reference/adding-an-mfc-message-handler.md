@@ -1,5 +1,5 @@
 ---
-title: Adding an MFC Message Handler | Microsoft Docs
+title: "Hinzufügen eines MFC-Meldungshandlers | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- message handling [MFC], adding handlers
+- message handling, adding handlers
 ms.assetid: 4251cfce-76ca-443d-bd2f-6303afa6d942
 caps.latest.revision: 9
 author: mikeblome
@@ -33,28 +33,28 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: c5568c7d75b0d98349c7086d9efd367c15deda51
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
+ms.openlocfilehash: b80ebf607b7a11bf80f14c5375a5ace27ce1047c
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="adding-an-mfc-message-handler"></a>Adding an MFC Message Handler
-You can [use the Properties window to add a message handler](../../mfc/reference/mapping-messages-to-functions.md) (a member function that handles Windows messages) to a class and map Windows messages to the message handler. You can also add [an event handler for any dialog box control](../../windows/adding-event-handlers-for-dialog-box-controls.md).  
+# <a name="adding-an-mfc-message-handler"></a>Hinzufügen eines MFC-Meldungshandlers
+Sie können [mithilfe des Eigenschaftenfensters zum Hinzufügen einer Nachricht](../../mfc/reference/mapping-messages-to-functions.md) (eine Memberfunktion, die Windows-Meldungen verarbeitet) einer Klasse und Zuordnung Windows-Meldungen an die Meldungshandler. Sie können auch hinzufügen [einen Ereignishandler für ein beliebiges Dialogfeldsteuerelement](../../windows/adding-event-handlers-for-dialog-box-controls.md).  
   
- By using the Properties window to define message- and event-handling functions, you can automatically update the message-dispatch table (or message map) and your class header file.  
+ Verwenden Sie im Eigenschaftenfenster Nachricht und Ereignisbehandlung Funktionen definieren, können Sie automatisch das Senden von Nachrichten-Tabelle (oder meldungszuordnung) aktualisieren und der Headerdatei.  
   
 > [!NOTE]
->  You can add a message handler to an ATL class using the Properties window; however, some results may vary. For more information, see the ATL topic [Adding an ATL Message Handler](../../atl/adding-an-atl-message-handler.md).  
+>  Sie können eine ATL-Klasse, die im Eigenschaftenfenster einen Meldungshandler hinzufügen. Allerdings können einige Ergebnisse abweichen. Weitere Informationen finden Sie im Thema ATL [Hinzufügen von ATL-Message-Handler](../../atl/adding-an-atl-message-handler.md).  
   
-## <a name="see-also"></a>See Also  
- [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Adding a Class](../../ide/adding-a-class-visual-cpp.md)   
- [Adding a Member Function](../../ide/adding-a-member-function-visual-cpp.md)   
- [Adding a Member Variable](../../ide/adding-a-member-variable-visual-cpp.md)   
- [Overriding a Virtual Function](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [Navigating the Class Structure](../../ide/navigating-the-class-structure-visual-cpp.md)   
- [Dialog Editor](../../windows/dialog-editor.md)
+## <a name="see-also"></a>Siehe auch  
+ [Hinzufügen neuer Funktionen mit Code-Assistenten](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Hinzufügen einer Klasse](../../ide/adding-a-class-visual-cpp.md)   
+ [Hinzufügen einer Memberfunktion](../../ide/adding-a-member-function-visual-cpp.md)   
+ [Hinzufügen einer Membervariablen](../../ide/adding-a-member-variable-visual-cpp.md)   
+ [Überschreiben einer virtuellen Funktion](../../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [Navigieren in der Klassenstruktur](../../ide/navigating-the-class-structure-visual-cpp.md)   
+ [Dialog-Editor](../../windows/dialog-editor.md)
 
 

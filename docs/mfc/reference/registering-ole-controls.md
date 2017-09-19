@@ -1,5 +1,5 @@
 ---
-title: Registering OLE Controls | Microsoft Docs
+title: Registrieren von OLE-Steuerelementen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -14,7 +14,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - registering OLE controls
-- OLE controls [MFC], registering
+- OLE controls, registering
 ms.assetid: 73c45b7f-7dbc-43f5-bd17-dd77c6acec72
 caps.latest.revision: 15
 author: mikeblome
@@ -34,32 +34,32 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 545b3c44b0ce4866c13f1fd3d62d24aa621a8974
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
+ms.openlocfilehash: 9c54fb7dc3802e78c8dc68df02ff55ef4732a36b
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="registering-ole-controls"></a>Registering OLE Controls
-OLE controls, like other OLE server objects, can be accessed by other OLE-aware applications. This is achieved by registering the control's type library and class.  
+# <a name="registering-ole-controls"></a>Registrieren des OLE-Steuerelements
+OLE-Steuerelemente, wie andere OLE-Server-Objekte können von anderen OLE-kompatible Anwendung zugegriffen werden. Dies erfolgt durch die Registrierung der Typbibliothek und der Klasse des Steuerelements.  
   
- The following functions allow you to add and remove the control's class, property pages, and type library in the Windows registration database:  
+ Die folgenden Funktionen können Sie zum Hinzufügen und Entfernen des Steuerelements Klasse, Eigenschaftenseiten und Typbibliothek in der Datenbank der Windows-Registrierung:  
   
-### <a name="registering-ole-controls"></a>Registering OLE Controls  
+### <a name="registering-ole-controls"></a>Registrieren des OLE-Steuerelements  
   
 |||  
 |-|-|  
-|[AfxOleRegisterControlClass](#afxoleregistercontrolclass)|Adds the control's class to the registration database.|  
-|[AfxOleRegisterPropertyPageClass](#afxoleregisterpropertypageclass)|Adds a control property page to the registration database.|  
-|[AfxOleRegisterTypeLib](#afxoleregistertypelib)|Adds the control's type library to the registration database.|  
-|[AfxOleUnregisterClass](#afxoleunregisterclass)|Removes a control class or a property page class from the registration database.|  
-|[AfxOleUnregisterTypeLib](#afxoleunregistertypelib)|Removes the control's type library from the registration database.|  
+|[AfxOleRegisterControlClass](#afxoleregistercontrolclass)|Fügt der Klasse des Steuerelements in der Registrierungsdatenbank.|  
+|[AfxOleRegisterPropertyPageClass](#afxoleregisterpropertypageclass)|Die Registrierungsdatenbank hinzugefügt eine-Steuerelement Eigenschaftenseite.|  
+|[AfxOleRegisterTypeLib](#afxoleregistertypelib)|Die Registrierungsdatenbank hinzugefügt Typbibliothek des Steuerelements.|  
+|[AfxOleUnregisterClass](#afxoleunregisterclass)|Entfernt eine Steuerelement-Klasse oder eine Eigenschaft Page-Klasse in der Registrierungsdatenbank.|  
+|[AfxOleUnregisterTypeLib](#afxoleunregistertypelib)|Entfernt das Steuerelement-Typbibliothek in der Registrierungsdatenbank.|  
   
- `AfxOleRegisterTypeLib` is typically called in a control DLL's implementation of `DllRegisterServer`. Similarly, `AfxOleUnregisterTypeLib` is called by `DllUnregisterServer`. `AfxOleRegisterControlClass`, `AfxOleRegisterPropertyPageClass`, and `AfxOleUnregisterClass` are typically called by the `UpdateRegistry` member function of a control's class factory or property page.  
+ `AfxOleRegisterTypeLib`wird normalerweise aufgerufen, in einem Steuerelement-DLL-Implementierung von `DllRegisterServer`. Auf ähnliche Weise `AfxOleUnregisterTypeLib` wird aufgerufen, indem Sie `DllUnregisterServer`. `AfxOleRegisterControlClass`, `AfxOleRegisterPropertyPageClass`, und `AfxOleUnregisterClass` sind in der Regel aufgerufen, durch die `UpdateRegistry` -Memberfunktion des eines Steuerelements Klasse Factory oder der Eigenschaft.  
   
-##  <a name="afxoleregistercontrolclass"></a>  AfxOleRegisterControlClass  
- Registers the control class with the Windows registration database.  
+##  <a name="afxoleregistercontrolclass"></a>AfxOleRegisterControlClass  
+ Registriert die Control-Klasse mit der Datenbank der Windows-Registrierung.  
   
 ```   
 BOOL AFXAPI AfxOleRegisterControlClass(
@@ -75,38 +75,38 @@ BOOL AFXAPI AfxOleRegisterControlClass(
     WORD wVerMinor); 
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `hInstance`  
- The instance handle of the module associated with the control class.  
+ Der Instanzhandle des Moduls im Zusammenhang mit der Control-Klasse.  
   
  `clsid`  
- The unique class ID of the control.  
+ Die eindeutige Klassen-ID des Steuerelements.  
   
  `pszProgID`  
- The unique program ID of the control.  
+ Die eindeutige Programm-ID des Steuerelements.  
   
  `idTypeName`  
- The resource ID of the string that contains a user-readable type name for the control.  
+ Die Ressourcen-ID der Zeichenfolge, die einen Benutzer lesbaren Namen für das Steuerelement enthält.  
   
  *idBitmap*  
- The resource ID of the bitmap used to represent the OLE control in a toolbar or palette.  
+ Die Ressourcen-ID der Bitmap für die Darstellung des OLE-Steuerelements in einer Symbolleiste oder Palette verwendet werden soll.  
   
  `nRegFlags`  
- Contains one or more of the following flags:  
+ Enthält eine oder mehrere der folgenden Flags:  
   
-- `afxRegInsertable` Allows the control to appear in the Insert Object dialog box for OLE objects.  
+- `afxRegInsertable`Ermöglicht das Steuerelement im Dialogfeld "Objekt einfügen" für OLE-Objekte angezeigt werden.  
   
-- `afxRegApartmentThreading` Sets the threading model in the registry to ThreadingModel=Apartment.  
+- `afxRegApartmentThreading`Legt das Threadingmodell in der Registrierung ThreadingModel = Apartment.  
   
-- `afxRegFreeThreading` Sets the threading model in the registry to ThreadingModel=Free.  
+- `afxRegFreeThreading`Legt das Threadingmodell in der Registrierung ThreadingModel = frei.  
   
-     You can combine the two flags `afxRegApartmentThreading` and `afxRegFreeThreading` to set ThreadingModel=Both. See [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) in the Windows SDK for more information on threading model registration.  
+     Die zwei Flags können kombiniert werden `afxRegApartmentThreading` und `afxRegFreeThreading` festzulegende ThreadingModel = beides. Finden Sie unter [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] für Weitere Informationen über threading-Modell-Registrierung.  
   
 > [!NOTE]
->  In MFC versions before MFC 4.2, the `int` `nRegFlags` parameter was a **BOOL** parameter, *bInsertable*, that allowed or disallowed the control to be inserted from the Insert Object dialog box.  
+>  In MFC-Versionen vor MFC 4.2 die `int` `nRegFlags` Parameter war ein **BOOL** Parameter *bInsertable*, die zulässige oder unzulässige des Steuerelements im Dialogfeld "Objekt einfügen" eingefügt werden.  
   
  *dwMiscStatus*  
- Contains one or more of the following status flags (for a description of the flags, see **OLEMISC** enumeration in the Windows SDK):  
+ Enthält eine oder mehrere der folgenden Statusflags (eine Beschreibung der Flags finden Sie unter **OLEMISC** -Enumeration in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]):  
   
 -   OLEMISC_RECOMPOSEONRESIZE  
   
@@ -147,34 +147,34 @@ BOOL AFXAPI AfxOleRegisterControlClass(
 -   OLEMISC_SETCLIENTSITEFIRST  
   
  *tlid*  
- The unique ID of the control class.  
+ Die eindeutige ID der Control-Klasse.  
   
  `wVerMajor`  
- The major version number of the control class.  
+ Die Hauptversionsnummer der Control-Klasse.  
   
  `wVerMinor`  
- The minor version number of the control class.  
+ Die Nebenversionsnummer der Control-Klasse.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if the control class was registered; otherwise 0.  
+### <a name="return-value"></a>Rückgabewert  
+ Wert ungleich NULL, wenn die Control-Klasse registriert wurde; andernfalls 0.  
   
-### <a name="remarks"></a>Remarks  
- This allows the control to be used by containers that are OLE-control aware. `AfxOleRegisterControlClass` updates the registry with the control's name and location on the system and also sets the threading model that the control supports in the registry. For more information, see [Technical Note 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Apartment-Model Threading in OLE Controls," and [About Processes and Threads](http://msdn.microsoft.com/library/windows/desktop/ms681917) in the Windows SDK.  
+### <a name="remarks"></a>Hinweise  
+ Dadurch wird das Steuerelement von Containern verwendet werden, die OLE-Steuerelements bekannt sind. `AfxOleRegisterControlClass`aktualisiert die Registrierung mit dem Namen und den Speicherort auf dem System des Steuerelements und das threading-Modell, das das Steuerelement in der Registrierung unterstützt wird. Weitere Informationen finden Sie unter [Technische Hinweis 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Apartmentmodell Threading in OLE-Steuerelemente," und [zu Prozessen und Threads](http://msdn.microsoft.com/library/windows/desktop/ms681917) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFCAxCtl#11](../../mfc/reference/codesnippet/cpp/registering-ole-controls_1.cpp)]  
+### <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_MFCAxCtl&#11;](../../mfc/reference/codesnippet/cpp/registering-ole-controls_1.cpp)]  
   
- The above example demonstrates how `AfxOleRegisterControlClass` is called with the flag for insertable and the flag for apartment model ORed together to create the sixth parameter:  
+ Im obigen Beispiel wird veranschaulicht, wie `AfxOleRegisterControlClass` mit dem Flag für einfügbar aufgerufen wird und die Kennzeichen für Apartment-Modell or zusammengeführt, um der sechste Parameter zu erstellen:  
   
- [!code-cpp[NVC_MFCAxCtl#12](../../mfc/reference/codesnippet/cpp/registering-ole-controls_2.cpp)]  
+ [!code-cpp[NVC_MFCAxCtl&#12;](../../mfc/reference/codesnippet/cpp/registering-ole-controls_2.cpp)]  
   
- The control will show up in the Insert Object dialog box for enabled containers, and it will be apartment model-aware. Apartment model-aware controls must ensure that static class data is protected by locks, so that while a control in one apartment is accessing the static data, it isn't disabled by the scheduler before it is finished, and another instance of the same class starts using the same static data. Any accesses to the static data will be surrounded by critical section code.  
+ Das Steuerelement wird im Dialogfeld Objekt einfügen für aktivierte Container angezeigt, und die Apartment-Modell unterstützt werden. Apartment-Modell-fähigen Steuerelemente müssen statische Klasse, die Daten durch Sperren geschützt werden, damit während ein Steuerelements in einem Apartment die statischen Daten zugreift, es nicht vom Planer deaktiviert vor abgeschlossen ist, und eine andere Instanz der Klasse verwenden die gleichen statischen Daten. Kritischen Abschnittscode werden alle Zugriffe auf die statischen Daten eingeschlossen werden.  
   
-### <a name="requirements"></a>Requirements  
+### <a name="requirements"></a>Anforderungen  
   **Header** afxctl.h  
   
-##  <a name="afxoleregisterpropertypageclass"></a>  AfxOleRegisterPropertyPageClass  
- Registers the property page class with the Windows registration database.  
+##  <a name="afxoleregisterpropertypageclass"></a>AfxOleRegisterPropertyPageClass  
+ Registriert die Eigenschaftenseitenklasse mit der Datenbank der Windows-Registrierung.  
   
 ```  
 BOOL AFXAPI AfxOleRegisterPropertyPageClass(
@@ -184,35 +184,35 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
    int nRegFlags); 
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `hInstance`  
- The instance handle of the module associated with the property page class.  
+ Der Instanzhandle des Moduls der Eigenschaft Page-Klasse zugeordnet.  
   
  `clsid`  
- The unique class ID of the property page.  
+ Die eindeutige Klassen-ID der Eigenschaftenseite.  
   
  `idTypeName`  
- The resource ID of the string that contains a user-readable name for the property page.  
+ Die Ressourcen-ID der Zeichenfolge, die ein Benutzer lesbare Name für die Eigenschaftenseite enthält.  
   
  `nRegFlags`  
- May contain the flag:  
+ Das Flag kann Elemente enthalten:  
   
-- `afxRegApartmentThreading` Sets the threading model in the registry to ThreadingModel = Apartment.  
+- `afxRegApartmentThreading`Legt das Threadingmodell in der Registrierung ThreadingModel = Apartment.  
   
 > [!NOTE]
->  In MFC versions prior to MFC 4.2, the `int` `nRegFlags` parameter was not available. Note also that the `afxRegInsertable` flag is not a valid option for property pages and will cause an ASSERT in MFC if it is set  
+>  In MFC, Version 4.2 MFC die `int` `nRegFlags` Parameter war nicht verfügbar. Beachten Sie auch, dass die `afxRegInsertable` -Flag ist keine gültige Option für Eigenschaftenseiten und eine Bestätigung wird in MFC verursacht werden, wenn sie festgelegt ist  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if the control class was registered; otherwise 0.  
+### <a name="return-value"></a>Rückgabewert  
+ Wert ungleich NULL, wenn die Control-Klasse registriert wurde; andernfalls 0.  
   
-### <a name="remarks"></a>Remarks  
- This allows the property page to be used by containers that are OLE-control aware. `AfxOleRegisterPropertyPageClass` updates the registry with the property page name and its location on the system and also sets the threading model that the control supports in the registry. For more information, see [Technical Note 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Apartment-Model Threading in OLE Controls," and [About Processes and Threads](http://msdn.microsoft.com/library/windows/desktop/ms681917) in the Windows SDK.  
+### <a name="remarks"></a>Hinweise  
+ Dadurch wird die Eigenschaftenseite von Containern verwendet werden, die OLE-Steuerelements bekannt sind. `AfxOleRegisterPropertyPageClass`aktualisiert die Registrierung, die den Namen und den Speicherort auf dem System, und das threading-Modell, das das Steuerelement in der Registrierung unterstützt wird. Weitere Informationen finden Sie unter [Technische Hinweis 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Apartmentmodell Threading in OLE-Steuerelemente," und [zu Prozessen und Threads](http://msdn.microsoft.com/library/windows/desktop/ms681917) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-### <a name="requirements"></a>Requirements  
+### <a name="requirements"></a>Anforderungen  
   **Header** afxctl.h  
   
-##  <a name="afxoleregistertypelib"></a>  AfxOleRegisterTypeLib  
- Registers the type library with the Windows registration database and allows the type library to be used by other containers that are OLE-control aware.  
+##  <a name="afxoleregistertypelib"></a>AfxOleRegisterTypeLib  
+ Die Typbibliothek mit der Datenbank der Windows-Registrierung registriert und können die Typbibliothek von anderen Containern verwendet werden, die OLE-Steuerelements bekannt sind.  
   
 ```   
 BOOL AfxOleRegisterTypeLib(
@@ -222,73 +222,73 @@ BOOL AfxOleRegisterTypeLib(
     LPCTSTR pszHelpDir  = NULL); 
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `hInstance`  
- The instance handle of the application associated with the type library.  
+ Der Instanzhandle der Anwendung, die der Typbibliothek zugeordnet.  
   
  *tlid*  
- The unique ID of the type library.  
+ Die eindeutige ID der Typbibliothek.  
   
  *pszFileName*  
- Points to the optional filename of a localized type library (.TLB) file for the control.  
+ Der optionale Dateiname einer lokalisierten Typbibliothek verweist (. TLB)-Datei für das Steuerelement.  
   
  *pszHelpDir*  
- The name of the directory where the help file for the type library can be found. If **NULL**, the help file is assumed to be in the same directory as the type library itself.  
+ Der Name des Verzeichnisses, in dem die Hilfedatei für die Typbibliothek gefunden werden kann. Wenn **NULL**, wird angenommen, dass die Hilfedatei im gleichen Verzeichnis wie die Typbibliothek selbst sein.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if the type library was registered; otherwise 0.  
+### <a name="return-value"></a>Rückgabewert  
+ Wert ungleich NULL, wenn die Typbibliothek registriert wurde; andernfalls 0.  
   
-### <a name="remarks"></a>Remarks  
- This function updates the registry with the type library name and its location on the system.  
+### <a name="remarks"></a>Hinweise  
+ Diese Funktion aktualisiert die Registrierung mit dem Namen der Typbibliothek und den Speicherort auf dem System.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFCAutomation#7](../../mfc/codesnippet/cpp/registering-ole-controls_3.cpp)]  
+### <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_MFCAutomation&#7;](../../mfc/codesnippet/cpp/registering-ole-controls_3.cpp)]  
   
- [!code-cpp[NVC_MFCAutomation#8](../../mfc/codesnippet/cpp/registering-ole-controls_4.cpp)]  
+ [!code-cpp[NVC_MFCAutomation&#8;](../../mfc/codesnippet/cpp/registering-ole-controls_4.cpp)]  
   
-### <a name="requirements"></a>Requirements  
+### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="afxoleunregisterclass"></a>  AfxOleUnregisterClass  
- Removes the control or property page class entry from the Windows registration database.  
+##  <a name="afxoleunregisterclass"></a>AfxOleUnregisterClass  
+ Entfernt den Eintrag Steuerelements oder einer Eigenschaft Seite Klasse aus der Datenbank der Windows-Registrierung.  
   
 ```   
 BOOL AFXAPI AfxOleUnregisterClass(REFCLSID clsID, LPCSTR pszProgID); 
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  *clsID*  
- The unique class ID of the control or property page.  
+ Die eindeutige Klassen-ID des Steuerelements oder der Eigenschaft.  
   
  `pszProgID`  
- The unique program ID of the control or property page.  
+ Die eindeutige Programm-ID des Steuerelements oder der Eigenschaft.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if the control or property page class was successfully unregistered; otherwise 0.  
+### <a name="return-value"></a>Rückgabewert  
+ Wert ungleich NULL, wenn die Seitenklasse Steuerelements oder einer Eigenschaft erfolgreich aufgehoben wurde; andernfalls 0.  
   
-### <a name="requirements"></a>Requirements  
+### <a name="requirements"></a>Anforderungen  
   **Header** afxctl.h  
   
-##  <a name="afxoleunregistertypelib"></a>  AfxOleUnregisterTypeLib  
- Call this function to remove the type library entry from the Windows registration database.  
+##  <a name="afxoleunregistertypelib"></a>AfxOleUnregisterTypeLib  
+ Rufen Sie diese Funktion, um die Art "Bibliothek" aus der Datenbank der Windows-Registrierung zu entfernen.  
   
 ```   
 BOOL AFXAPI AfxOleUnregisterTypeLib(REFGUID tlID); 
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `tlID`  
- The unique ID of the type library.  
+ Die eindeutige ID der Typbibliothek.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if the type library was successfully unregistered; otherwise 0.  
+### <a name="return-value"></a>Rückgabewert  
+ Wert ungleich NULL, wenn die Typbibliothek erfolgreich aufgehoben wurde; andernfalls 0.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFCAxCtl#13](../../mfc/reference/codesnippet/cpp/registering-ole-controls_5.cpp)]  
+### <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_MFCAxCtl&#13;](../../mfc/reference/codesnippet/cpp/registering-ole-controls_5.cpp)]  
 
-### <a name="requirements"></a>Requirements  
+### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
 
-## <a name="see-also"></a>See Also  
- [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>Siehe auch  
+ [Makros und globale Variablen](../../mfc/reference/mfc-macros-and-globals.md)
 

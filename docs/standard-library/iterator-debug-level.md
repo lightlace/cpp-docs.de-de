@@ -1,5 +1,5 @@
 ---
-title: _ITERATOR_DEBUG_LEVEL | Microsoft Docs
+title: _ITERATOR_DEBUG_LEVEL | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,51 +33,51 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 1be5b41fb94638852df5b8756bbb4e103eaf20b9
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 441f493d8ada3ef232f60d917dc3f95812ba9114
+ms.openlocfilehash: d5f89f871f60827d894aa414e12b52f0c5f7ef38
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="iteratordebuglevel"></a>_ITERATOR_DEBUG_LEVEL
-The `_ITERATOR_DEBUG_LEVEL` macro controls whether [checked iterators](../standard-library/checked-iterators.md) and [debug iterator support](../standard-library/debug-iterator-support.md) are enabled. This macro supersedes and combines the functionality of the older `_SECURE_SCL` and `_HAS_ITERATOR_DEBUGGING` macros.  
+Das `_ITERATOR_DEBUG_LEVEL`-Makro steuert, ob [überprüfte Iteratoren](../standard-library/checked-iterators.md) und [Unterstützung für Iteratordebugging](../standard-library/debug-iterator-support.md) aktiviert sind. Dieses Makro hat Vorrang und kombiniert die Funktionalität der älteren `_SECURE_SCL`- und `_HAS_ITERATOR_DEBUGGING`-Makros.  
   
-## <a name="macro-values"></a>Macro Values  
-The following table summarizes the possible values for the `_ITERATOR_DEBUG_LEVEL` macro.  
+## <a name="macro-values"></a>Makrowerte  
+In der folgenden Tabelle werden die möglichen Werte für das `_ITERATOR_DEBUG_LEVEL`-Makro angezeigt.  
   
-|Compilation mode|Macro value|Description|  
+|Kompilierungsmodus|Makrowert|Beschreibung|  
 |----------------------|----------------|-----------------|  
-|**Debug**|||  
-||0|Disables checked iterators and disables iterator debugging.|  
-||1|Enables checked iterators and disables iterator debugging.|  
-||2 (Default)|Enables iterator debugging; checked iterators are not relevant.|  
-|**Release**|||  
-||0 (Default)|Disables checked iterators.|  
-||1|Enables checked iterators; iterator debugging is not relevant.|  
+|**Debuggen**|||  
+||0|Deaktiviert überprüfte Iteratoren und das Iteratordebugging.|  
+||1|Aktiviert überprüfte Iteratoren und deaktiviert das Iteratordebugging.|  
+||2 (Standard)|Aktiviert das Iteratordebugging; überprüfte Iteratoren sind nicht relevant.|  
+|**Version**|||  
+||0 (Standard)|Deaktivierte überprüfte Iteratoren.|  
+||1|Aktiviert überprüfte Iteratoren; das Iteratordebugging ist nicht relevant.|  
   
-In release mode, the compiler generates an error if you specify `_ITERATOR_DEBUG_LEVEL` as 2.  
+Im Releasemodus generiert der Compiler einen Fehler, wenn Sie `_ITERATOR_DEBUG_LEVEL` als 2 angeben.  
   
-## <a name="remarks"></a>Remarks  
-The `_ITERATOR_DEBUG_LEVEL` macro controls whether [checked iterators](../standard-library/checked-iterators.md) are enabled, and in Debug mode, whether [debug iterator support](../standard-library/debug-iterator-support.md) is enabled. If `_ITERATOR_DEBUG_LEVEL` is defined as 1 or 2, checked iterators ensure that the bounds of your containers are not overwritten. If `_ITERATOR_DEBUG_LEVEL` is 0, iterators are not checked. When `_ITERATOR_DEBUG_LEVEL` is defined as 1, any unsafe iterator use causes a runtime error and the program is terminated. When `_ITERATOR_DEBUG_LEVEL` is defined as 2, unsafe iterator use causes an assert and a runtime error dialog that lets you break into the debugger. 
+## <a name="remarks"></a>Hinweise  
+Das `_ITERATOR_DEBUG_LEVEL`-Makro steuert, ob [überprüfte Iteratoren](../standard-library/checked-iterators.md) aktiviert ist, und im Debugmodus, ob die [Unterstützung für Iteratordebugging](../standard-library/debug-iterator-support.md) aktiviert ist. Wenn `_ITERATOR_DEBUG_LEVEL` als 1 oder 2 definiert ist, stellen aktivierte Iteratoren sicher, dass die Grenzen des Containers nicht überschrieben werden. Wenn `_ITERATOR_DEBUG_LEVEL` gleich 0 ist, werden Iteratoren nicht überprüft. Wenn `_ITERATOR_DEBUG_LEVEL` als 1 definiert ist, verursacht die unsichere Verwendung von Iteratoren einen Laufzeitfehler und das Programm wird beendet. Wenn `_ITERATOR_DEBUG_LEVEL` als 2 definiert ist, verursacht die unsichere Verwendung von Iteratoren eine Assert-Anweisung und ein Laufzeitfehler-Dialogfeld, dass Sie den Debugger unterbrechen lässt. 
 
-Because the `_ITERATOR_DEBUG_LEVEL` macro supports similar functionality to the `_SECURE_SCL` and `_HAS_ITERATOR_DEBUGGING` macros, you may be uncertain which macro and macro value to use in a particular situation. To prevent confusion, we recommend that you use only the `_ITERATOR_DEBUG_LEVEL` macro. This table describes the equivalent `_ITERATOR_DEBUG_LEVEL` macro value to use for various values of `_SECURE_SCL` and `_HAS_ITERATOR_DEBUGGING` in existing code.  
+Da das `_ITERATOR_DEBUG_LEVEL`-Makro ähnliche Funktionalitäten wie die `_SECURE_SCL` und `_HAS_ITERATOR_DEBUGGING`-Makros unterstützt, sind Sie möglicherweise unsicher, welche Makros und Makrowerte Sie in einer bestimmten Situation verwenden sollten. Um Verwirrung zu vermeiden, wird empfohlen, nur das `_ITERATOR_DEBUG_LEVEL`-Makro zu verwenden. Diese Tabelle beschreibt den entsprechenden `_ITERATOR_DEBUG_LEVEL`-Makrowert für die Verwendung verschiedener Werte von `_SECURE_SCL` und `_HAS_ITERATOR_DEBUGGING` in vorhandenem Code.  
   
 |**_ITERATOR_DEBUG_LEVEL** |**_SECURE_SCL** |**_HAS_ITERATOR_DEBUGGING**|
 |---|---|---|
-|0 (Release default)|0 (disabled)|0 (disabled)|
-|1|1 (enabled)|0 (disabled)|
-|2 (Debug default)|(not relevant)|1 (enabled in Debug mode)|
+|0 (Releasestandard)|0 (deaktiviert)|0 (deaktiviert)|
+|1|1 (aktiviert)|0 (deaktiviert)|
+|2 (Debug-Standard)|(nicht relevant)|1 (aktiviert im Debugmodus)|
   
-For information on how to disable warnings about checked iterators, see [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md).  
+Informationen über das Deaktivieren der Warnungen für überprüfte Iteratoren finden Sie unter [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md).  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
-To specify a value for the `_ITERATOR_DEBUG_LEVEL` macro, use a [/D](../build/reference/d-preprocessor-definitions.md) compiler option to define it on the command line, or use `#define` before the C++ Standard Library headers are included in your source files. For example, on the command line, to compile *sample.cpp* in debug mode and to use debug iterator support, you can specify the `_ITERATOR_DEBUG_LEVEL` macro definition:  
+Verwenden Sie für die Angabe eines Werts für das `_ITERATOR_DEBUG_LEVEL`-Makro eine [/D](../build/reference/d-preprocessor-definitions.md)-Compileroption, um es in der Befehlszeile zu definieren, oder verwenden Sie `#define`, bevor die Kopfzeilen der C++-Standardbibliothek in Ihren Quelldateien enthalten sind. Um beispielsweise in der Befehlszeile *sample.cpp* im Debugmodus zu kompilieren und die Unterstützung für Iteratordebugging zu verwenden, können Sie die `_ITERATOR_DEBUG_LEVEL`-Makrodefinition angeben:  
   
 `cl /EHsc /Zi /MDd /D_ITERATOR_DEBUG_LEVEL=1 sample.cpp`  
   
-In a source file, specify the macro before any standard library headers that define iterators.  
+Geben Sie das Makro in einer Quelldatei ein, bevor die Kopfzeilen der Standardbibliothek Iteratoren definieren.  
   
 ```cpp  
 // sample.cpp  
@@ -89,8 +89,8 @@ In a source file, specify the macro before any standard library headers that def
 // ...
 ```  
   
-## <a name="see-also"></a>See Also  
-[Checked Iterators](../standard-library/checked-iterators.md)   
-[Debug Iterator Support](../standard-library/debug-iterator-support.md)   
-[Safe Libraries: C++ Standard Library](../standard-library/safe-libraries-cpp-standard-library.md)
+## <a name="see-also"></a>Siehe auch  
+[Überprüfte Iteratoren](../standard-library/checked-iterators.md)   
+[Unterstützung für Iteratordebugging](../standard-library/debug-iterator-support.md)   
+[Sichere Bibliotheken: C++-Standardbibliothek](../standard-library/safe-libraries-cpp-standard-library.md)
 

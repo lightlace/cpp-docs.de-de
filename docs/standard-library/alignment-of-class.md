@@ -1,5 +1,5 @@
 ---
-title: alignment_of Class | Microsoft Docs
+title: alignment_of-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- alignment_of
 - type_traits/std::alignment_of
 dev_langs:
 - C++
@@ -34,15 +35,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 63754bd686c7d1823e01ea5a2790cbeb8771e04e
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: dee638b0260deff1d8701353c7119fc1b0082685
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="alignmentof-class"></a>alignment_of Class
-Gets alignment of the specified type. This struct is implemented in terms of [alignof](../cpp/alignof-and-alignas-cpp.md). Use `alignof` directly when you simply need to query an alignment value. Use alignment_of when you need an integral constant, for example when doing tag dispatch.  
+# <a name="alignmentof-class"></a>alignment_of-Klasse
+Ruft die Ausrichtung des angegebenen Typs ab. Diese Struktur wird in Bezug auf [alignof](../cpp/alignof-and-alignas-cpp.md) implementiert. Verwenden Sie `alignof` direkt, wenn Sie einen Ausrichtungswert einfach abfragen müssen. Verwenden Sie „alignment_of“, wenn Sie eine integrale Konstante benötigen, beispielsweise beim Versenden eines Tags.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,19 +52,19 @@ template <class Ty>
 struct alignment_of;
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
  `Ty`  
- The type to query.  
+ Der abzufragende Typ.  
   
-## <a name="remarks"></a>Remarks  
- The type query holds the value of the the alignment of the type `Ty`.  
+## <a name="remarks"></a>Hinweise  
+ Die Typabfrage hält den Wert der Ausrichtung des Typs `Ty`.  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [<type_traits>](../standard-library/type-traits.md)   
- [aligned_storage Class](../standard-library/aligned-storage-class.md)
+ [aligned_storage-Klasse](../standard-library/aligned-storage-class.md)
 

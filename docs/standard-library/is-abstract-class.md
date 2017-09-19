@@ -1,5 +1,5 @@
 ---
-title: is_abstract Class | Microsoft Docs
+title: is_abstract-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- is_abstract
 - type_traits/std::is_abstract
 dev_langs:
 - C++
@@ -34,15 +35,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 2639b07774fe8f7784c19776e5e4071b62f92708
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 04d82fcbd251ae743db18301e9e65ea6898c967c
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="isabstract-class"></a>is_abstract Class
-Tests if type is abstract class.  
+# <a name="isabstract-class"></a>is_abstract-Klasse
+Testet, ob „type“ eine abstrakte Klasse ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,14 +52,14 @@ template <class Ty>
 struct is_abstract;  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
  `Ty`  
- The type to query.  
+ Der abzufragende Typ.  
   
-## <a name="remarks"></a>Remarks  
- An instance of the type predicate holds true if the type `Ty` is a class that has at least one pure virtual function, otherwise it holds false.  
+## <a name="remarks"></a>Hinweise  
+ Eine Instanz des Typprädikats ist TRUE, wenn der `Ty`-Typ eine Klasse ist, die mindestens eine reine virtuelle Funktion aufweist; andernfalls FALSE.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Beispiel  
   
 ```cpp  
 // std__type_traits__is_abstract.cpp   
@@ -92,12 +93,12 @@ is_abstract<trivial> == false
 is_abstract<abstract> == true  
 ```  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [<type_traits>](../standard-library/type-traits.md)   
- [is_polymorphic Class](../standard-library/is-polymorphic-class.md)
+ [is_polymorphic-Klasse](../standard-library/is-polymorphic-class.md)
 

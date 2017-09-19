@@ -1,5 +1,5 @@
 ---
-title: shuffle_order_engine Class | Microsoft Docs
+title: shuffle_order_engine-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- shuffle_order_engine
 - random/std::shuffle_order_engine
 - random/std::shuffle_order_engine::base
 - random/std::shuffle_order_engine::discard
@@ -18,11 +19,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- std::shuffle_order_engine [C++]
-- std::shuffle_order_engine [C++], base
-- std::shuffle_order_engine [C++], discard
-- std::shuffle_order_engine [C++], base_type
-- std::shuffle_order_engine [C++], seed
+- shuffle_order_engine class
 ms.assetid: 0bcd1fb0-44d7-4e59-bb1b-4a9b673a960d
 caps.latest.revision: 17
 author: corob-msft
@@ -42,15 +39,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 0916a9009194481eab29d39a020cbeecc584a9e1
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 93c5721a4b651315bc4d67cc9d5a0cb7d2f852a3
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/19/2017
 
 ---
-# <a name="shuffleorderengine-class"></a>shuffle_order_engine Class
-Generates a random sequence by reordering the values returned from its base engine.  
+# <a name="shuffleorderengine-class"></a>shuffle_order_engine-Klasse
+Generiert eine zufällige Sequenz durch Neupositionieren der Werte, die von ihrem Basismodul zurückgegeben werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -59,31 +56,31 @@ template <class Engine, size_t K>
 class shuffle_order_engine;  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
  `Engine`  
- The base engine type.  
+ Der Typ des Basismoduls.  
   
  `K`  
- **Table size**. Number of elements in the buffer (table). **Precondition**: `0 < K`  
+ **Tabellengröße**. Anzahl der Elemente im Puffer (Tabelle). **Vorbedingung**:`0 < K`  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Mitglieder  
   
 ||||  
 |-|-|-|  
 |`shuffle_order_engine::shuffle_order_engine`|`shuffle_order_engine::base`|`shuffle_order_engine::discard`|  
 |`shuffle_order_engine::operator()`|`shuffle_order_engine::base_type`|`shuffle_order_engine::seed`|  
   
- For more information about engine members, see [\<random>](../standard-library/random.md).  
+ Weitere Informationen über Modulmember finden Sie unter [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>Remarks  
- This template class describes an *engine adaptor* that produces values by reordering the values returned by its base engine. Each constructor fills the internal table with `K` values returned by the base engine, and a random element is selected from the table when a value is requested.  
+## <a name="remarks"></a>Hinweise  
+ Diese Vorlagenklasse beschreibt einen *Moduladapter*, der Werte produziert, indem er die von seinem Basismodul zurückgegebenen Werte neu sortiert. Jeder Konstruktor füllt die interne Tabelle mit vom Basismodul zurückgegebenen `K`-Werten. Wenn ein Wert angefordert wird, wird ein Zufallselement aus der Tabelle ausgewählt.  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<random>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [\<random>](../standard-library/random.md)
 
 

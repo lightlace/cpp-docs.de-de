@@ -1,5 +1,5 @@
 ---
-title: make_signed Class | Microsoft Docs
+title: make_signed-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- make_signed
 - type_traits/std::make_signed
 dev_langs:
 - C++
@@ -34,15 +35,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 1c4a018f0868163c496eecccf4a1cd2f7be5da28
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: 43b41b7016faeb593af12d01f940c27d00882b9e
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="makesigned-class"></a>make_signed Class
-Makes type or the smallest signed type greater than or equal in size to type.  
+# <a name="makesigned-class"></a>make_signed-Klasse
+Macht den Typ oder den kleinsten Typ mit Vorzeichen größer oder gleich dem Typ.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,19 +55,19 @@ template <class T>
 using make_signed_t = typename make_signed<T>::type;
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
  `T`  
- The type to modify.  
+ Der zu ändernde Typ.  
   
-## <a name="remarks"></a>Remarks  
- An instance of the type modifier holds a modified-type that is `T` if `is_signed<T>` holds true. Otherwise it is the smallest unsigned type `UT` for which `sizeof (T) <= sizeof (UT)`.  
+## <a name="remarks"></a>Hinweise  
+ Eine Instanz des Typmodifizierers enthält einen GeänderteTyp an, wenn der `T` als `is_signed<T>` true ist. Andernfalls ist der kleinste Datentyp mit Vorzeichen `UT`, für den `sizeof (T) <= sizeof (UT)`.  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [<type_traits>](../standard-library/type-traits.md)
 
 

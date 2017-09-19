@@ -1,5 +1,5 @@
 ---
-title: recursive_mutex Class | Microsoft Docs
+title: recursive_mutex-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,21 +35,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-helpviewer_keywords:
-- std::recursive_mutex [C++]
-- std::recursive_mutex [C++], recursive_mutex
-- std::recursive_mutex [C++], lock
-- std::recursive_mutex [C++], try_lock
-- std::recursive_mutex [C++], unlock
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: b95335a0b67f7345dd61a1de5d6da4589055dc72
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 0e5fccf4d1c1019d8922ae0676d7f5fe8e8dfd2a
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="recursivemutex-class"></a>recursive_mutex Class
-Represents a *mutex type*. In contrast to [mutex](../standard-library/mutex-class-stl.md), the behavior of calls to locking methods for objects that are already locked is well-defined.  
+# <a name="recursivemutex-class"></a>recursive_mutex-Klasse
+Stellt einen *mutex-Typ* dar. Das Verhalten von aufrufenden Sperrmethoden für Objekte, die bereits gesperrt sind, ist im Gegensatz zu [mutex](../standard-library/mutex-class-stl.md) klar definiert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -57,82 +51,82 @@ Represents a *mutex type*. In contrast to [mutex](../standard-library/mutex-clas
 class recursive_mutex;
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Mitglieder  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[recursive_mutex](#recursive_mutex)|Constructs a `recursive_mutex` object.|  
-|[~recursive_mutex Destructor](#dtorrecursive_mutex_destructor)|Releases any resources that are used by the `recursive_mutex` object.|  
+|[recursive_mutex](#recursive_mutex)|Erstellt ein `recursive_mutex`-Objekt.|  
+|[~recursive_mutex-Destruktor](#dtorrecursive_mutex_destructor)|Gibt alle Ressourcen frei, die vom `recursive_mutex`-Objekt verwendet werden.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[lock](#lock)|Blocks the calling thread until the thread obtains ownership of the mutex.|  
-|[try_lock](#try_lock)|Attempts to obtain ownership of the mutex without blocking.|  
-|[unlock](#unlock)|Releases ownership of the mutex.|  
+|[lock](#lock)|Blockiert den aufrufenden Thread, bis der Thread in den Besitz von mutex gelangt.|  
+|[try_lock](#try_lock)|Versucht, ohne Blockierung in den Besitz von mutex zu gelangen.|  
+|[unlock](#unlock)|Gibt den Besitz von mutex frei.|  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<mutex>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Mutex >  
   
  **Namespace:** std  
   
-##  <a name="lock"></a>  lock  
- Blocks the calling thread until the thread obtains ownership of the `mutex`.  
+##  <a name="lock"></a> lock  
+ Blockiert den aufrufenden Thread, bis der Thread in den Besitz von `mutex` gelangt.  
   
 ```cpp  
 void lock();
 ```  
   
-### <a name="remarks"></a>Remarks  
- If the calling thread already owns the `mutex`, the method returns immediately, and the previous lock remains in effect.  
+### <a name="remarks"></a>Hinweise  
+ Wenn der aufrufende Thread bereits im Besitz von `mutex` ist, wird die Methode sofort zurückgegeben, und die vorherige Sperre bleibt in Kraft.  
   
-##  <a name="recursive_mutex"></a>  recursive_mutex  
- Constructs a `recursive_mutex` object that is not locked.  
+##  <a name="recursive_mutex"></a> recursive_mutex  
+ Erstellt ein `recursive_mutex`-Objekt, das nicht gesperrt ist.  
   
 ```cpp  
 recursive_mutex();
 ```  
   
-##  <a name="dtorrecursive_mutex_destructor"></a>  ~recursive_mutex  
- Releases any resources that are used by the object.  
+##  <a name="dtorrecursive_mutex_destructor"></a> ~recursive_mutex  
+ Gibt alle Ressourcen frei, die vom Objekt verwendet werden.  
   
 ```cpp  
 ~recursive_mutex();
 ```  
   
-### <a name="remarks"></a>Remarks  
- If the object is locked when the destructor runs, the behavior is undefined.  
+### <a name="remarks"></a>Hinweise  
+ Wenn das Objekt gesperrt ist, wenn der Destruktor ausgeführt wird, ist das Verhalten nicht definiert.  
   
-##  <a name="try_lock"></a>  try_lock  
- Attempts to obtain ownership of the `mutex` without blocking.  
+##  <a name="try_lock"></a> try_lock  
+ Versucht, ohne Blockierung in den Besitz von `mutex` zu gelangen.  
   
 ```cpp  
 bool try_lock() noexcept;
 ```  
   
-### <a name="return-value"></a>Return Value  
- `true` if the method successfully obtains ownership of the `mutex` or if the calling thread already owns the `mutex`; otherwise, `false`.  
+### <a name="return-value"></a>Rückgabewert  
+ `true`, wenn die Methode erfolgreich Besitzrechte von `mutex` erhält, oder wenn der aufrufende Thread bereits im Besitz der `mutex` ist; andernfalls `false`.  
   
-### <a name="remarks"></a>Remarks  
- If the calling thread already owns the `mutex`, the function immediately returns `true`, and the previous lock remains in effect.  
+### <a name="remarks"></a>Hinweise  
+ Wenn der aufrufende Thread bereits im Besitz von `mutex` ist, gibt die Funktion sofort `true` zurück, und die vorherige Sperre bleibt in Kraft.  
   
-##  <a name="unlock"></a>  unlock  
- Releases ownership of the mutex.  
+##  <a name="unlock"></a> unlock  
+ Gibt den Besitz von mutex frei.  
   
 ```cpp  
 void unlock();
 ```  
   
-### <a name="remarks"></a>Remarks  
- This method releases ownership of the `mutex` only after it is called as many times as [lock](#lock) and [try_lock](#try_lock) have been called successfully on the `recursive_mutex` object.  
+### <a name="remarks"></a>Hinweise  
+ Diese Methode gibt den Besitz der `mutex` erst zurück, wenn sie so oft aufgerufen wurde, wie [lock](#lock) und [try_lock](#try_lock) erfolgreich im `recursive_mutex`-Objekt aufgerufen wurden.  
   
- If the calling thread does not own the `mutex`, the behavior is undefined.  
+ Wenn der aufrufende Thread nicht im Besitz von `mutex` ist, so ist das Verhalten nicht definiert.  
   
-## <a name="see-also"></a>See Also  
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)   
  [\<mutex>](../standard-library/mutex.md)
 
 

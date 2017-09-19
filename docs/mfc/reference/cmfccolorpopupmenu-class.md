@@ -1,5 +1,5 @@
 ---
-title: CMFCColorPopupMenu Class | Microsoft Docs
+title: Klasse CMFCColorPopupMenu | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,10 +18,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCColorPopupMenu [MFC], CMFCColorPopupMenu
-- CMFCColorPopupMenu [MFC], CreateTearOffBar
-- CMFCColorPopupMenu [MFC], GetMenuBar
-- CMFCColorPopupMenu [MFC], SetPropList
+- CMFCColorPopupMenu class
 ms.assetid: 0bf9efe8-aed5-4ab7-b23b-eb284b4668be
 caps.latest.revision: 19
 author: mikeblome
@@ -41,15 +38,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: dad4b16f70a9fd604f7af1d53d60994729223fde
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 14076d78eaf86ef01e68656685dd2fd102d96311
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="cmfccolorpopupmenu-class"></a>CMFCColorPopupMenu Class
-Represents a pop-up menu that users use to select colors in a document or application.  
+# <a name="cmfccolorpopupmenu-class"></a>CMFCColorPopupMenu-Klasse
+Stellt ein Popup-Menü, mit denen Benutzer wählen Sie Farben in einem Dokument oder einer Anwendung dar.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -57,41 +54,41 @@ Represents a pop-up menu that users use to select colors in a document or applic
 class CMFCColorPopupMenu : public CMFCPopupMenu  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Mitglieder  
   
-### <a name="public-constructors"></a>Public Constructors  
-  
-|||  
-|-|-|  
-|Name|Description|  
-|[CMFCColorPopupMenu::CMFCColorPopupMenu](#cmfccolorpopupmenu)|Constructs a `CMFCColorPopupMenu` object.|  
-|`CMFCColorPopupMenu::~CMFCColorPopupMenu`|Destructor.|  
-  
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
 |||  
 |-|-|  
-|Name|Description|  
-|[CMFCColorPopupMenu::CreateTearOffBar](#createtearoffbar)|Creates a dockable tear-off color bar. (Overrides [CMFCPopupMenu::CreateTearOffBar](../../mfc/reference/cmfcpopupmenu-class.md#createtearoffbar).)|  
-|[CMFCColorPopupMenu::GetMenuBar](#getmenubar)|Returns the [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) that is embedded inside the pop-up menu. (Overrides [CMFCPopupMenu::GetMenuBar](../../mfc/reference/cmfcpopupmenu-class.md#getmenubar).)|  
-|`CMFCColorPopupMenu::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
-|[CMFCColorPopupMenu::SetPropList](#setproplist)|Sets the property grid control object of the embedded `CMFCColorBar` object.|  
+|Name|Beschreibung|  
+|[CMFCColorPopupMenu::CMFCColorPopupMenu](#cmfccolorpopupmenu)|Erstellt ein `CMFCColorPopupMenu`-Objekt.|  
+|`CMFCColorPopupMenu::~CMFCColorPopupMenu`|Destruktor.|  
   
-### <a name="data-members"></a>Data Members  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
 |||  
 |-|-|  
-|Name|Description|  
-|`m_bEnabledInCustomizeMode`|A Boolean value that determines whether to show the color bar.|  
-|`m_wndColorBar`|The `CMFCColorBar` object that provides color selection.|  
+|Name|Beschreibung|  
+|[CMFCColorPopupMenu::CreateTearOffBar](#createtearoffbar)|Erstellt eine andockbare Farbleiste abtrennbare. (Überschreibt [CMFCPopupMenu::CreateTearOffBar](../../mfc/reference/cmfcpopupmenu-class.md#createtearoffbar).)|  
+|[CMFCColorPopupMenu::GetMenuBar](#getmenubar)|Gibt die [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) , in dem Popupmenü eingebettet ist. (Überschreibt [CMFCPopupMenu::GetMenuBar](../../mfc/reference/cmfcpopupmenu-class.md#getmenubar).)|  
+|`CMFCColorPopupMenu::GetThisClass`|Vom Framework verwendet werden, um einen Zeiger auf die [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) -Objekt, das Klassentyp zugeordnet ist.|  
+|[CMFCColorPopupMenu::SetPropList](#setproplist)|Legt die Eigenschaft Raster-Steuerelementobjekt der eingebetteten `CMFCColorBar` Objekt.|  
   
-### <a name="remarks"></a>Remarks  
- This class inherits the pop-up menu functionality of the `CMFCPopupMenu` class and manages a `CMFCColorBar` object that provides color selection. When the toolbar framework is in customization mode and the `m_bEnabledInCustomizeMode` member is set to `FALSE`, the color bar object is not shown. For more information about customization mode, see [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)  
+### <a name="data-members"></a>Datenmember  
   
- For more information about `CMFCColorBar`, see [CMFCColorBar Class](../../mfc/reference/cmfccolorbar-class.md).  
+|||  
+|-|-|  
+|Name|Beschreibung|  
+|`m_bEnabledInCustomizeMode`|Ein boolescher Wert, der bestimmt, ob der Farbleiste angezeigt.|  
+|`m_wndColorBar`|Das `CMFCColorBar` Objekt, das die Farbauswahl bereitstellt.|  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
- [CObject](../../mfc/reference/cobject-class.md)  
+### <a name="remarks"></a>Hinweise  
+ Diese Klasse erbt die Funktionalität im Popupmenü die `CMFCPopupMenu` Klasse und verwaltet ein `CMFCColorBar` Objekt, das die Farbauswahl bereitstellt. Wenn die Symbolleiste Framework ist im Anpassungsmodus und `m_bEnabledInCustomizeMode` Elementgruppe zu `FALSE`, die Farbleiste-Objekt wird nicht angezeigt. Weitere Informationen zu den Anpassungsmodus, finden Sie unter [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)  
+  
+ Weitere Informationen zu `CMFCColorBar`, finden Sie unter [CMFCColorBar Klasse](../../mfc/reference/cmfccolorbar-class.md).  
+  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
+ [Von CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -105,11 +102,11 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
   
  [CMFCColorPopupMenu](../../mfc/reference/cmfccolorpopupmenu-class.md)  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxcolorpopupmenu.h  
   
-##  <a name="cmfccolorpopupmenu"></a>  CMFCColorPopupMenu::CMFCColorPopupMenu  
- Constructs a `CMFCColorPopupMenu` object.  
+##  <a name="cmfccolorpopupmenu"></a>CMFCColorPopupMenu::CMFCColorPopupMenu  
+ Erstellt ein `CMFCColorPopupMenu`-Objekt.  
   
 ```  
 CMFCColorPopupMenu(
@@ -149,63 +146,63 @@ CMFCColorPopupMenu(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `colors`  
- An array of colors that the framework displays on the pop-up menu.  
+ Ein Array von Farben, die vom Framework im Popupmenü angezeigt wird.  
   
  [in] `color`  
- The default selected color.  
+ Die standardmäßig ausgewählten Farbe.  
   
  [in] `lpszAutoColor`  
- The text label of the *automatic* (default) color button, or `NULL`.  
+ Die Beschriftung für die *automatische* Farbschaltfläche (Standard), oder `NULL`.  
   
- The standard label for the automatic button is **Automatic**.  
+ Ist die Bezeichnung für "automatisch" **automatische**.  
   
  [in] `lpszOtherColor`  
- The text label of the *other* button, which displays more color choices, or `NULL`.  
+ Die Beschriftung für die *andere* Schaltfläche Weitere Farben angezeigt werden, oder `NULL`.  
   
- The standard label for the other button is **More Colors...**.  
+ Die Bezeichnung für die andere Schaltfläche wird **Weitere Farben... **.  
   
  [in] `lpszDocColors`  
- The text label of the document colors button. The document colors palette lists all the colors that the document currently uses.  
+ Die Beschriftung der Schaltfläche Farben Dokument. Die Dokument-Farben-Palette Listet alle Farben, die das Dokument zurzeit verwendet.  
   
  [in] `lstDocColors`  
- A list of colors that the document currently uses.  
+ Eine Liste der Farben, die das Dokument zurzeit verwendet.  
   
  [in] `nColumns`  
- The number of columns that the array of colors has.  
+ Die Anzahl der Spalten, die das Array von Farben aufweist.  
   
  [in] `nHorzDockRows`  
- The number of rows that the color bar has when it is docked horizontally.  
+ Die Anzahl der Zeilen, die die Farbleiste hat, wenn es horizontal angedockt ist.  
   
  [in] `nVertDockColumns`  
- The number of columns that the color bar has when it is docked vertically.  
+ Die Anzahl der Spalten, die auf die Farbleiste hat, wenn es vertikal angedockt ist.  
   
  [in] `colorAutomatic`  
- The default color that the framework applies when you click the automatic button.  
+ Die Standardfarbe, die das Framework gilt, wenn Sie auf "Automatische" klicken.  
   
  [in] `uiCommandID`  
- The color bar control command ID.  
+ Der Befehl der Farbleiste Control-ID.  
   
  [in] `bStdColorDlg`  
- A Boolean that indicates whether to show the standard system color dialog box or the [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) dialog box.  
+ Ein boolescher Wert, der angibt, ob das Dialogfeld Farbe Standardbetriebssystem anzeigen oder die [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) das Dialogfeld.  
   
  [in] `pParentBtn`  
- A pointer to a parent button.  
+ Ein Zeiger auf eine übergeordnete-Schaltfläche.  
   
  [in] `nID`  
- The command ID.  
+ Die Befehls-ID.  
   
-### <a name="remarks"></a>Remarks  
- Each overloaded constructor sets the `m_bEnabledInCustomizeMode` member to `FALSE`.  
+### <a name="remarks"></a>Hinweise  
+ Jede überladene Konstruktor legt die `m_bEnabledInCustomizeMode` Element `FALSE`.  
   
-### <a name="example"></a>Example  
- The following example demonstrates how to construct a `CMFCColorPopupMenu` object.  
+### <a name="example"></a>Beispiel  
+ Das folgende Beispiel veranschaulicht das Erstellen einer `CMFCColorPopupMenu` Objekt.  
   
- [!code-cpp[NVC_MFC_RibbonApp#34](../../mfc/reference/codesnippet/cpp/cmfccolorpopupmenu-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp&#34;](../../mfc/reference/codesnippet/cpp/cmfccolorpopupmenu-class_1.cpp)]  
   
-##  <a name="createtearoffbar"></a>  CMFCColorPopupMenu::CreateTearOffBar  
- Creates a dockable tear-off color bar.  
+##  <a name="createtearoffbar"></a>CMFCColorPopupMenu::CreateTearOffBar  
+ Erstellt eine andockbare Farbleiste abtrennbare.  
   
 ```  
 virtual CPane* CreateTearOffBar(
@@ -214,46 +211,46 @@ virtual CPane* CreateTearOffBar(
     LPCTSTR lpszName);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
   
 |||  
 |-|-|  
-|Parameter|Description|  
-|[in] `pWndMain`|Pointer to the parent window of the tear-off bar.|  
-|[in] `uiID`|The command ID of the tear-off bar.|  
-|[in] `lpszName`|The window text of the tear-off bar.|  
+|Parameter|Beschreibung|  
+|[in] `pWndMain`|Ein Zeiger auf das übergeordnete Fenster des Balkens abtrennbare.|  
+|[in] `uiID`|Die Befehls-ID des Balkens abtrennbare.|  
+|[in] `lpszName`|Der Text des Balkens abtrennbare aus.|  
   
-### <a name="return-value"></a>Return Value  
- A pointer to the new tear-off control bar object.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Zeiger auf das neue abtrennbare Steuerelement Bar-Objekt.  
   
-### <a name="remarks"></a>Remarks  
- This method creates a [CMFCColorBar Class](../../mfc/reference/cmfccolorbar-class.md) object and casts it to a [CPane Class](../../mfc/reference/cpane-class.md) pointer. You can cast this value back to a [CMFCColorBar Class](../../mfc/reference/cmfccolorbar-class.md) pointer by using one of the casting macros described in [Type Casting of MFC Class Objects](../../mfc/reference/type-casting-of-mfc-class-objects.md).  
+### <a name="remarks"></a>Hinweise  
+ Diese Methode erstellt eine [CMFCColorBar Klasse](../../mfc/reference/cmfccolorbar-class.md) -Objekt und wandelt es zu einer [CPane-Klasse](../../mfc/reference/cpane-class.md) Zeiger. Wandeln Sie diesen Wert an eine [CMFCColorBar Klasse](../../mfc/reference/cmfccolorbar-class.md) Zeiger mithilfe einer Umwandlung Makros in beschriebenen [Typ umwandeln von MFC-Klasse von Objekten](../../mfc/reference/type-casting-of-mfc-class-objects.md).  
   
-##  <a name="getmenubar"></a>  CMFCColorPopupMenu::GetMenuBar  
- Returns the [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) that is embedded inside the pop-up menu.  
+##  <a name="getmenubar"></a>CMFCColorPopupMenu::GetMenuBar  
+ Gibt die [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) , in dem Popupmenü eingebettet ist.  
   
 ```  
 virtual CMFCPopupMenuBar* GetMenuBar();
 ```  
   
-### <a name="return-value"></a>Return Value  
- A pointer to the embedded `CMFCPopupMenuBar`.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Zeiger auf das eingebettete `CMFCPopupMenuBar`.  
   
-### <a name="remarks"></a>Remarks  
- The color pop-up menu has an embedded [CMFCPopupMenuBar Class](../../mfc/reference/cmfcpopupmenubar-class.md) object. Override this method in a derived class if your application uses a different embedded type.  
+### <a name="remarks"></a>Hinweise  
+ Das Popupmenü Farbe ist ein eingebetteter [CMFCPopupMenuBar Klasse](../../mfc/reference/cmfcpopupmenubar-class.md) Objekt. Überschreiben Sie diese Methode in einer abgeleiteten Klasse, wenn Ihre Anwendung einen anderen eingebetteten Typ verwendet.  
   
-##  <a name="setproplist"></a>  CMFCColorPopupMenu::SetPropList  
- Sets the property grid control object of the embedded `CMFCColorBar` object.  
+##  <a name="setproplist"></a>CMFCColorPopupMenu::SetPropList  
+ Legt die Eigenschaft Raster-Steuerelementobjekt der eingebetteten `CMFCColorBar` Objekt.  
   
 ```  
 void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pWndList`  
- Pointer to a property grid control object.  
+ Ein Zeiger auf ein Objekt Grid-Steuerelement.  
   
-## <a name="see-also"></a>See Also  
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [Classes](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>Siehe auch  
+ [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
+ [Klassen](../../mfc/reference/mfc-classes.md)
 

@@ -1,5 +1,5 @@
 ---
-title: messages Class | Microsoft Docs
+title: messages-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- messages
 - xlocmes/std::messages
 - locale/std::messages::char_type
 - locale/std::messages::string_type
@@ -21,15 +22,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- std::messages [C++]
-- std::messages [C++], char_type
-- std::messages [C++], string_type
-- std::messages [C++], close
-- std::messages [C++], do_close
-- std::messages [C++], do_get
-- std::messages [C++], do_open
-- std::messages [C++], get
-- std::messages [C++], open
+- messages class
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
 caps.latest.revision: 18
 author: corob-msft
@@ -49,17 +42,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: d81b70d987cbf9c6a08ea5db6338606531d5f0a5
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 8a3c647c9c64f2783bf2bc6d2eee86d7107af8d2
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="messages-class"></a>messages Class
-The template class describes an object that can serve as a locale facet to retrieve localized messages from a catalog of internationalized messages for a given locale.  
+# <a name="messages-class"></a>messages-Klasse
+Die Vorlagenklasse beschreibt ein Objekt, das als Gebietsschemafacet dienen kann, um lokalisierte Meldungen aus einem Katalog von internationalisierten Meldungen für ein bestimmtes Gebietsschema abzurufen.  
   
- Currently, while the messages class is implemented, there are no messages.  
+ Während die Nachrichtenklasse implementiert wird, sind derzeit keine Meldungen vorhanden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -68,89 +61,89 @@ template <class CharType>
 class messages : public messages_base;
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
  `CharType`  
- The type used within a program to encode characters in a locale.  
+ Der Typ, der innerhalb eines Programms zum Codieren von Zeichen in einem Gebietsschema verwendet wird.  
   
-## <a name="remarks"></a>Remarks  
- As with any locale facet, the static object ID has an initial stored value of zero. The first attempt to access its stored value stores a unique positive value in **id.**  
+## <a name="remarks"></a>Hinweise  
+ Wie bei jedem Gebietsschemafacet hat die statische Objekt-ID einen anfänglichen gespeicherten Wert von NULL. Beim ersten Versuch, auf den gespeicherten Wert zuzugreifen, wird ein eindeutiger positiver Wert in **id** gespeichert.  
   
- This facet basically opens a catalog of messages defined in the base class messages_base, retrieves the information required, and closes the catalog.  
+ Dieses Facet öffnet im Grunde einen Katalog von Meldungen, die in der messages_base-Basisklasse definiert sind, ruft die erforderlichen Informationen ab und schließt den Katalog.  
   
-### <a name="constructors"></a>Constructors  
-  
-|||  
-|-|-|  
-|[messages](#messages)|The message facet constructor function.|  
-  
-### <a name="typedefs"></a>Typedefs  
+### <a name="constructors"></a>Konstruktoren  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|A character type that is used display messages.|  
-|[string_type](#string_type)|A type that describes a string of type `basic_string` containing characters of type `CharType`.|  
+|[messages](#messages)|Die Meldungsfacet-Konstruktorfunktion.|  
   
-### <a name="member-functions"></a>Member Functions  
+### <a name="typedefs"></a>TypeDefs  
   
 |||  
 |-|-|  
-|[close](#close)|Closes the message catalog.|  
-|[do_close](#do_close)|A virtual function called to lose the message catalog.|  
-|[do_get](#do_get)|A virtual function called to retrieve the message catalog.|  
-|[do_open](#do_open)|A virtual function called to open the message catalog.|  
-|[get](#get)|Retrieves the message catalog.|  
-|[open](#open)|Opens the message catalog.|  
+|[char_type](#char_type)|Ein Zeichentyp, mit dem Meldungen angezeigt werden.|  
+|[string_type](#string_type)|Ein Typ, der eine Zeichenfolge vom Typ `basic_string` beschreibt, die Zeichen vom Typ `CharType` enthält.|  
   
-## <a name="requirements"></a>Requirements  
+### <a name="member-functions"></a>Memberfunktionen  
+  
+|||  
+|-|-|  
+|[close](#close)|Schließt den Meldungskatalog.|  
+|[do_close](#do_close)|Eine virtuelle Funktion, die aufgerufen wird, um den Meldungskatalog zu schließen.|  
+|[do_get](#do_get)|Eine virtuelle Funktion, die aufgerufen wird, um den Meldungskatalog abzurufen.|  
+|[do_open](#do_open)|Eine virtuelle Funktion, die aufgerufen wird, um den Meldungskatalog zu öffnen.|  
+|[get](#get)|Ruft den Meldungskatalog ab.|  
+|[open](#open)|Öffnet den Meldungskatalog.|  
+  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<locale>  
   
  **Namespace:** std  
   
-##  <a name="char_type"></a>  messages::char_type  
- A character type that is used display messages.  
+##  <a name="char_type"></a> messages::char_type  
+ Ein Zeichentyp, mit dem Meldungen angezeigt werden.  
   
 ```
 typedef CharType char_type;
 ```  
   
-### <a name="remarks"></a>Remarks  
- The type is a synonym for the template parameter **CharType**.  
+### <a name="remarks"></a>Hinweise  
+ Der Typ ist ein Synonym für den Vorlagenparameter **CharType**.  
   
-##  <a name="close"></a>  messages::close  
- Closes the message catalog.  
+##  <a name="close"></a> messages::close  
+ Schließt den Meldungskatalog.  
   
 ```
 void close(catalog _Catval) const;
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `_Catval`  
- The catalog to be closed.  
+ Der zu schließende Katalog.  
   
-### <a name="remarks"></a>Remarks  
- The member function calls [do_close](#do_close)(_ *Catval*).  
+### <a name="remarks"></a>Hinweise  
+ Die Memberfunktion ruft [do_close](#do_close)(_ *Catval*) auf.  
   
-##  <a name="do_close"></a>  messages::do_close  
- A virtual function called to lose the message catalog.  
+##  <a name="do_close"></a> messages::do_close  
+ Eine virtuelle Funktion, die aufgerufen wird, um den Meldungskatalog zu schließen.  
   
 ```
 virtual void do_close(catalog _Catval) const;
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `_Catval`  
- The catalog to be closed.  
+ Der zu schließende Katalog.  
   
-### <a name="remarks"></a>Remarks  
- The protected member function closes the message catalog `_Catval`, which must have been opened by an earlier call to [do_open](#do_open).  
+### <a name="remarks"></a>Hinweise  
+ Die geschützte Memberfunktion schließt den Meldungskatalog `_Catval`, der durch einen früheren Aufruf an [do_open](#do_open) geöffnet worden sein muss.  
   
- *_Catval* must be obtained from a previously opened catalog that is not closed.  
+ *_Catval* muss aus einem vorher geöffneten Katalog abgerufen werden, der nicht geschlossen wurde.  
   
-### <a name="example"></a>Example  
-  See the example for [close](#close), which calls `do_close`.  
+### <a name="example"></a>Beispiel  
+  Siehe das Beispiel für [close](#close), mit dem `do_close` aufgerufen wird.  
   
-##  <a name="do_get"></a>  messages::do_get  
- A virtual function called to retrieve the message catalog.  
+##  <a name="do_get"></a> messages::do_get  
+ Eine virtuelle Funktion, die aufgerufen wird, um den Meldungskatalog abzurufen.  
   
 ```
 virtual string_type do_get(
@@ -160,30 +153,30 @@ virtual string_type do_get(
     const string_type& _Dfault) const;
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `_Catval`  
- The identification value specifying the message catalog to be searched.  
+ Der Identifikationswert, der den zu suchenden Katalog angibt.  
   
  `_Set`  
- The first identified used to locate a message in a message catalog.  
+ Der erste identifizierte, der zum Finden einer Meldung in einem Meldungskatalog verwendet wird.  
   
  `_Message`  
- The second identified used to locate a message in a message catalog.  
+ Der zweite identifizierte, der zum Finden einer Meldung in einem Meldungskatalog verwendet wird.  
   
  `_Dfault`  
- The string to be returned on failure.  
+ Die Zeichenfolge, die zurückgegeben werden soll, wenn ein Fehler auftritt.  
   
-### <a name="return-value"></a>Return Value  
- It returns a copy of `_Dfault` on failure. Otherwise, it returns a copy of the specified message sequence.  
+### <a name="return-value"></a>Rückgabewert  
+ Er gibt bei einem Fehler eine Kopie von `_Dfault` zurück. Andernfalls gibt er eine Kopie einer angegebenen Meldungssequenz zurück.  
   
-### <a name="remarks"></a>Remarks  
- The protected member function tries to obtain a message sequence from the message catalog `_Catval`. It may make use of `_Set`, `_Message`, and `_Dfault` in doing so.  
+### <a name="remarks"></a>Hinweise  
+ Die geschützte Memberfunktion versucht eine Meldungssequenz auf dem Meldungskatalog `_Catval` abzurufen. Dabei verwendet sie möglicherweise `_Set`, `_Message` und `_Dfault`.  
   
-### <a name="example"></a>Example  
-  See the example for [get](#get), which calls `do_get`.  
+### <a name="example"></a>Beispiel  
+  Siehe das Beispiel für [get](#get), mit dem `do_get` aufgerufen wird.  
   
-##  <a name="do_open"></a>  messages::do_open  
- A virtual function called to open the message catalog.  
+##  <a name="do_open"></a> messages::do_open  
+ Eine virtuelle Funktion, die aufgerufen wird, um den Meldungskatalog zu öffnen.  
   
 ```
 virtual catalog do_open(
@@ -191,26 +184,26 @@ virtual catalog do_open(
     const locale& _Loc) const;
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `_Catname`  
- The name of the catalog to be searched.  
+ Der Name des zu suchenden Katalogs.  
   
  `_Loc`  
- The locale being searched for in the catalog.  
+ Das Gebietsschema, nach dem im Katalog gesucht werden soll.  
   
-### <a name="return-value"></a>Return Value  
- It returns a value that compares less than zero on failure. Otherwise, the returned value can be used as the first argument on a later call to [get](#get).  
+### <a name="return-value"></a>Rückgabewert  
+ Er gibt einen Wert zurück, der bei einem Fehler kleiner als null ist. Andernfalls kann der Rückgabewert als erstes Argument bei einem späteren Aufruf an [get](#get) verwendet werden.  
   
-### <a name="remarks"></a>Remarks  
- The protected member function tries to open a message catalog whose name is `_Catname`. It may make use of the locale `_Loc` in doing so  
+### <a name="remarks"></a>Hinweise  
+ Die geschützte Memberfunktion versucht einen Meldungskatalog mit dem Namen `_Catname` aufzurufen. Dabei verwendet sie möglicherweise das Gebietsschema `_Loc`  
   
- The return value should be used as the argument on a later call to [close](#close).  
+ Der Rückgabewert sollte als Argument für einen späteren Aufruf an [close](#close) verwendet werden.  
   
-### <a name="example"></a>Example  
-  See the example for [open](#open), which calls `do_open`.  
+### <a name="example"></a>Beispiel  
+  Siehe das Beispiel für [open](#open), mit dem `do_open` aufgerufen wird.  
   
-##  <a name="get"></a>  messages::get  
- Retrieves the message catalog.  
+##  <a name="get"></a> messages::get  
+ Ruft den Meldungskatalog ab.  
   
 ```
 string_type get(
@@ -220,27 +213,27 @@ string_type get(
     const string_type& _Dfault) const;
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `_Catval`  
- The identification value specifying the message catalog to be searched.  
+ Der Identifikationswert, der den zu suchenden Katalog angibt.  
   
  `_Set`  
- The first identified used to locate a message in a message catalog.  
+ Der erste identifizierte, der zum Finden einer Meldung in einem Meldungskatalog verwendet wird.  
   
  `_Message`  
- The second identified used to locate a message in a message catalog.  
+ Der zweite identifizierte, der zum Finden einer Meldung in einem Meldungskatalog verwendet wird.  
   
  `_Dfault`  
- The string to be returned on failure.  
+ Die Zeichenfolge, die zurückgegeben werden soll, wenn ein Fehler auftritt.  
   
-### <a name="return-value"></a>Return Value  
- It returns a copy of `_Dfault` on failure. Otherwise, it returns a copy of the specified message sequence.  
+### <a name="return-value"></a>Rückgabewert  
+ Er gibt bei einem Fehler eine Kopie von `_Dfault` zurück. Andernfalls gibt er eine Kopie einer angegebenen Meldungssequenz zurück.  
   
-### <a name="remarks"></a>Remarks  
- The member function returns [do_get](#do_get)( `_Catval`, `_Set`, `_Message`, `_Dfault`).  
+### <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt [do_get](#do_get)(`_Catval`,`_Set` `_Message`,`_Dfault`) zurück.  
   
-##  <a name="messages"></a>  messages::messages  
- The message facet constructor function.  
+##  <a name="messages"></a> messages::messages  
+ Die Meldungsfacet-Konstruktorfunktion.  
   
 ```
 explicit messages(
@@ -251,28 +244,28 @@ protected: messages(
     size_t _Refs = 0);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `_Refs`  
- Integer value used to specify the type of memory management for the object.  
+ Integerwert, der zum Angeben des Speicherverwaltungstyps für das Objekt verwendet wird.  
   
  `_Locname`  
- The name of the locale.  
+ Der Name des Gebietsschemas.  
   
-### <a name="remarks"></a>Remarks  
- The possible values for the `_Refs` parameter and their significance are:  
+### <a name="remarks"></a>Hinweise  
+ Mögliche Werte für den `_Refs`-Parameter und ihre Bedeutung:  
   
--   0: The lifetime of the object is managed by the locales that contain it.  
+-   0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, in denen es enthalten ist.  
   
--   1: The lifetime of the object must be manually managed.  
+-   1: Die Lebensdauer des Objekts muss manuell verwaltet werden.  
   
--   \> 1: These values are not defined.  
+-   \>1: Diese Werte sind nicht definiert.  
   
- No direct examples are possible, because the destructor is protected.  
+ Direkte Beispiele sind nicht möglich, da der Destruktor geschützt ist.  
   
- The constructor initializes its base object with **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).  
+ Der Konstruktor initialisiert sein Basisobjekt mit **locale::**[facet](../standard-library/locale-class.md#facet_class)(`_Refs`).  
   
-##  <a name="open"></a>  messages::open  
- Opens the message catalog.  
+##  <a name="open"></a> messages::open  
+ Öffnet den Meldungskatalog.  
   
 ```
 catalog open(
@@ -280,33 +273,33 @@ catalog open(
     const locale& _Loc) const;
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `_Catname`  
- The name of the catalog to be searched.  
+ Der Name des zu suchenden Katalogs.  
   
  `_Loc`  
- The locale being searched for in the catalog.  
+ Das Gebietsschema, nach dem im Katalog gesucht werden soll.  
   
-### <a name="return-value"></a>Return Value  
- It returns a value that compares less than zero on failure. Otherwise, the returned value can be used as the first argument on a later call to [get](#get).  
+### <a name="return-value"></a>Rückgabewert  
+ Er gibt einen Wert zurück, der bei einem Fehler kleiner als null ist. Andernfalls kann der Rückgabewert als erstes Argument bei einem späteren Aufruf an [get](#get) verwendet werden.  
   
-### <a name="remarks"></a>Remarks  
- The member function returns [do_open](#do_open)( `_Catname`, `_Loc`).  
+### <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt [do_open](#do_open)(`_Catname`,`_Loc`) zurück.  
   
-##  <a name="string_type"></a>  messages::string_type  
- A type that describes a string of type `basic_string` containing characters of type **CharType**.  
+##  <a name="string_type"></a> messages::string_type  
+ Ein Typ, der eine Zeichenfolge vom Typ `basic_string` beschreibt, die Zeichen vom Typ **CharType** enthält.  
   
 ```
 typedef basic_string<CharType, Traits, Allocator> string_type;
 ```  
   
-### <a name="remarks"></a>Remarks  
- The type describes a specialization of template class [basic_string](../standard-library/basic-string-class.md) whose objects can store copies of the message sequences.  
+### <a name="remarks"></a>Hinweise  
+ Der Typ beschreibt eine Spezialisierung der Vorlagenklasse [basic_string](../standard-library/basic-string-class.md), deren Objekte Kopien der Meldungssequenzen speichern können.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [\<locale>](../standard-library/locale.md)   
- [messages_base Class](../standard-library/messages-base-class.md)   
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [messages_base-Klasse](../standard-library/messages-base-class.md)   
+ [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

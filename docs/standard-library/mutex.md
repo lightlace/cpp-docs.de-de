@@ -1,5 +1,5 @@
 ---
-title: '&lt;mutex&gt; | Microsoft Docs'
+title: '&lt;mutex&gt; | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,18 +31,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 067f2a4ef0546cd83b8cd209eca970bed3deec0d
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: 241d1ad9b3313337b874d5e9a6d39f86f2c71838
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
-Include the standard header \<mutex> to define the classes `mutex`, `recursive_mutex`, `timed_mutex`, and `recursive_timed_mutex`; the templates `lock_guard` and `unique_lock`; and supporting types and functions that define mutual-exclusion code regions.  
+Verwenden Sie den Standardheader \<mutex> für das Definieren der Klassen `mutex`, `recursive_mutex`, `timed_mutex` und `recursive_timed_mutex`, der Vorlagen `lock_guard` und `unique_lock` sowie der unterstützenden Typen und Funktionen, die Codebereiche für den gegenseitigen Ausschluss definieren.  
   
 > [!WARNING]
->  Beginning in Visual Studio 2015, the C++ Standard Library synchronization types are based on Windows synchronization primitives and no longer use ConcRT (except when the target platform is Windows XP). The types defined in \<mutex> should not be used with any ConcRT types or functions.  
+>  Ab Visual Studio 2015, die C++-Standardbibliothek Synchronisierungstypen basieren auf Windows-Synchronisierungsprimitiven und verwenden ConcRT nicht mehr (außer wenn die Zielplattform Windows XP ist). Die in \<mutex> definierten Typen dürfen nicht mit ConcRT-Typen oder Funktionen verwendet werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,66 +50,66 @@ Include the standard header \<mutex> to define the classes `mutex`, `recursive_m
 #include <mutex>  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
->  In code that is compiled by using **/clr**, this header is blocked.  
+>  In Code, der kompiliert wurde **"/ CLR"**, dieser Header blockiert.  
   
- The classes `mutex` and `recursive_mutex` are *mutex types*. A mutex type has a default constructor and a destructor that does not throw exceptions. These objects have methods that provide mutual exclusion when multiple threads try to lock the same object. Specifically, a mutex type contains the methods `lock`, `try_lock`, and `unlock`:  
+ Die Klassen `mutex` und `recursive_mutex` sind *mutex-Typen*. Ein mutex-Typ verfügt über einen Standardkonstruktor und einen Destruktor, der keine Ausnahmen auslöst. Diese Objekte weisen Methoden auf, die gegenseitigen Ausschluss bereitstellen, wenn mehrere Threads versuchen, das gleiche Objekt zu sperren. Ein mutex-Typ enthält genauer gesagt die `lock`- `try_lock`- und `unlock`-Methoden:  
   
--   The `lock` method blocks the calling thread until the thread obtains ownership of the mutex. Its return value is ignored.  
+-   Die `lock`-Methode blockiert den aufrufenden Thread, bis der Thread in den Besitz von mutex gelangt. Der Rückgabewert wird ignoriert.  
   
--   The `try_lock` method tries to obtain ownership of the mutex without blocking. Its return type is convertible to `bool` and is `true` if the method obtains ownership, but is otherwise `false`.  
+-   Die `try_lock`-Methode versucht, ohne Blockierung in den Besitz von mutex zu gelangen. Der Rückgabetyp ist in `bool` konvertierbar und weist den Wert `true` auf, wenn die Methode den Besitz erlangt, andernfalls `false`.  
   
--   The `unlock` method releases the ownership of the mutex from the calling thread.  
+-   Die `unlock`-Methode gibt den Besitz von mutex von dem aufrufenden Thread frei.  
   
- You can use mutex types as type arguments to instantiate the templates `lock_guard` and `unique_lock`. You can use objects of these types as the `Lock` argument to the wait member functions in the template [condition_variable_any](../standard-library/condition-variable-any-class.md).  
+ Sie können mutex-Typen als Typargumente verwenden, um die Vorlagen `lock_guard` und `unique_lock` zu instanziieren. Sie können Objekte dieser Typen als das `Lock`-Argument für die wait-Memberfunktionen in der Vorlage [condition_variable_any](../standard-library/condition-variable-any-class.md) verwenden.  
   
- A *timed mutex type* satisfies the requirements for a mutex type. In addition, it has the `try_lock_for` and `try_lock_until` methods that must be callable by using one argument and must return a type that is convertible to `bool`. A timed mutex type can define these functions by using additional arguments, provided that those additional arguments all have default values.  
+ Ein *timed_mutex-Typ* erfüllt die Anforderungen eines mutex-Typs. Darüber hinaus weist er die `try_lock_for`- und `try_lock_until`-Methoden auf, die mit einem Argument aufgerufen werden und einen Typ zurückgeben müssen, der in `bool` konvertiert werden kann. Ein zeitgesteuerter mutex-Typ kann diese Funktionen mit zusätzlichen Argumenten definieren, vorausgesetzt, dass diese zusätzlichen Argumente über Standardwerte verfügen.  
   
--   The `try_lock_for` method must be callable by using one argument, `Rel_time`, whose type is an instantiation of [chrono::duration](../standard-library/duration-class.md). The method tries to obtain ownership of the mutex, but returns within the time that is designated by `Rel_time`, regardless of success. The return value converts to `true` if the method obtains ownership; otherwise, the return value converts to `false`.  
+-   Die `try_lock_for`-Methode muss mit einem Argument (`Rel_time`) aufgerufen werden können, dessen Typ eine Instanziierung von [chrono::duration](../standard-library/duration-class.md) ist. Die Methode versucht, in den Besitz von mutex zu gelangen, gibt jedoch unabhängig vom Erfolg innerhalb der in `Rel_time` festgelegten Zeit einen Wert zurück. Der Rückgabewert wird in `true` konvertiert, wenn die Methode in den Besitz von mutex gelangt; andernfalls wird der Rückgabewert in `false` konvertiert.  
   
--   The `try_lock_until` method must be callable by using one argument, `Abs_time`, whose type is an instantiation of [chrono::time_point](../standard-library/time-point-class.md). The method tries to obtain ownership of the mutex, but returns no later than the time that is designated by `Abs_time`, regardless of success. The return value converts to `true` if the method obtains ownership; otherwise, the return value converts to `false`.  
+-   Die `try_lock_until`-Methode muss mit einem Argument (`Abs_time`) aufgerufen werden können, dessen Typ eine Instanziierung von [chrono:: time_point](../standard-library/time-point-class.md) ist. Die Methode versucht, in den Besitz von mutex zu gelangen, gibt jedoch unabhängig vom Erfolg nicht später als innerhalb der in `Abs_time` festgelegten Zeit einen Wert zurück. Der Rückgabewert wird in `true` konvertiert, wenn die Methode in den Besitz von mutex gelangt; andernfalls wird der Rückgabewert in `false` konvertiert.  
   
- A mutex type is also known as a *lockable type*. If it does not provide the member function `try_lock`, it is a *basic lockable type*. A timed mutex type is also known as a *timed lockable type*.  
+ Ein mutex-Typ wird auch als *sperrbarer Typ* bezeichnet. Wenn er die Memberfunktion `try_lock` nicht bereitstellt, handelt es sich um einen *sperrbaren Basistyp*. Ein timed_mutex-Typ wird auch als *zeitgesteuerter sperrbarer Typ* bezeichnet.  
   
-### <a name="classes"></a>Classes  
+### <a name="classes"></a>Klassen  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[lock_guard Class](../standard-library/lock-guard-class.md)|Represents a template that can be instantiated to create an object whose destructor unlocks a `mutex`.|  
-|[mutex Class (C++ Standard Library)](../standard-library/mutex-class-stl.md)|Represents a mutex type. Use objects of this type to enforce mutual exclusion within a program.|  
-|[recursive_mutex Class](../standard-library/recursive-mutex-class.md)|Represents a mutex type. In constrast to the `mutex` class, the behavior of calling locking methods for objects that are already locked is well-defined.|  
-|[recursive_timed_mutex Class](../standard-library/recursive-timed-mutex-class.md)|Represents a timed mutex type. Use objects of this type to enforce mutual exclusion that has time-limited blocking within a program. Unlike objects of type `timed_mutex`, the effect of calling locking methods for `recursive_timed_mutex` objects is well-defined.|  
-|[timed_mutex Class](../standard-library/timed-mutex-class.md)|Represents a timed mutex type. Use objects of this type to enforce mutual exclusion that has time-limited blocking within a program.|  
-|[unique_lock Class](../standard-library/unique-lock-class.md)|Represents a template that can be instantiated to create objects that manage the locking and unlocking of a `mutex`.|  
+|[lock_guard-Klasse](../standard-library/lock-guard-class.md)|Stellt eine Vorlage dar, die zum Erstellen eines Objekts instanziiert werden kann, dessen Destruktor ein `mutex`-Objekt entsperrt.|  
+|[mutex-Klasse (C++-Standardbibliothek)](../standard-library/mutex-class-stl.md)|Stellt einen mutex-Typ dar. Verwenden Sie Objekte dieses Typs dazu, den gegenseitigen Ausschluss innerhalb eines Programms zu erzwingen.|  
+|[recursive_mutex-Klasse](../standard-library/recursive-mutex-class.md)|Stellt einen mutex-Typ dar. Das Verhalten von aufrufenden Sperrmethoden für Objekte, die bereits gesperrt sind, ist im Gegensatz zur `mutex`-Klasse klar definiert.|  
+|[recursive_timed_mutex-Klasse](../standard-library/recursive-timed-mutex-class.md)|Stellt einen zeitgesteuerten mutex-Typ dar. Verwenden Sie Objekte dieses Typs dazu, den gegenseitigen Ausschluss mit zeitbegrenzter Blockierung innerhalb eines Programms zu erzwingen. Im Gegensatz zu Objekten des `timed_mutex`-Typs sind die Auswirkungen von aufrufenden Sperrmethoden für `recursive_timed_mutex`-Objekte klar definiert.|  
+|[timed_mutex-Klasse](../standard-library/timed-mutex-class.md)|Stellt einen zeitgesteuerten mutex-Typ dar. Verwenden Sie Objekte dieses Typs dazu, den gegenseitigen Ausschluss mit zeitbegrenzter Blockierung innerhalb eines Programms zu erzwingen.|  
+|[unique_lock-Klasse](../standard-library/unique-lock-class.md)|Stellt eine Vorlage dar, die zum Erstellen von Objekten instanziiert werden kann, die das Sperren und Entsperren von `mutex` verwalten.|  
   
-### <a name="functions"></a>Functions  
+### <a name="functions"></a>Funktionen  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[call_once](../standard-library/mutex-functions.md#call_once)|Provides a mechanism for calling a specified callable object exactly once during execution.|  
-|[lock](../standard-library/mutex-functions.md#lock)|Attempts to lock all arguments without deadlock.|  
+|[call_once](../standard-library/mutex-functions.md#call_once)|Stellt einen Mechanismus zum Aufrufen eines angegebenen aufrufbaren Objekts genau einmal während der Ausführung bereit.|  
+|[lock](../standard-library/mutex-functions.md#lock)|Versucht, alle Argumente ohne Deadlock zu sperren.|  
   
-### <a name="structs"></a>Structs  
+### <a name="structs"></a>Strukturen  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[adopt_lock_t Structure](../standard-library/adopt-lock-t-structure.md)|Represents a type that is used to define an `adopt_lock`.|  
-|[defer_lock_t Structure](../standard-library/defer-lock-t-structure.md)|Represents a type that defines a `defer_lock` object that is used to select one of the overloaded constructors of `unique_lock`.|  
-|[once_flag Structure](../standard-library/once-flag-structure.md)|Represents a `struct` that is used with the template function `call_once` to ensure that initialization code is called only once, even in the presence of multiple threads of execution.|  
-|[try_to_lock_t Structure](../standard-library/try-to-lock-t-structure.md)|Represents a `struct` that defines a `try_to_lock` object and is used to select one of the overloaded constructors of `unique_lock`.|  
+|[adopt_lock_t-Struktur](../standard-library/adopt-lock-t-structure.md)|Stellt einen Typ dar, der zum Definieren eines `adopt_lock`-Elements verwendet wird.|  
+|[defer_lock_t-Struktur](../standard-library/defer-lock-t-structure.md)|Stellt einen Typ dar, der ein `defer_lock`-Objekt definiert, das zum Auswählen eines überladenen Konstruktors von `unique_lock` verwendet wird.|  
+|[once_flag-Struktur](../standard-library/once-flag-structure.md)|Stellt eine `struct` dar, die mit der `call_once`-Vorlagenfunktion verwendet wird, damit der Initialisierungscode auch bei mehreren Ausführungsthreads nur einmal aufgerufen wird.|  
+|[try_to_lock_t-Struktur](../standard-library/try-to-lock-t-structure.md)|Stellt eine `struct` dar, die ein `try_to_lock`-Objekt definiert und zum Auswählen eines überladenen Konstruktors von `unique_lock` verwendet wird.|  
   
-### <a name="variables"></a>Variables  
+### <a name="variables"></a>Variablen  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[adopt_lock](../standard-library/mutex-functions.md#adopt_lock)|Represents an object that can be passed to constructors for `lock_guard` and `unique_lock` to indicate that the mutex object that is also being passed to the constructor is locked.|  
-|[defer_lock](../standard-library/mutex-functions.md#defer_lock)|Represents an object that can be passed to the constructor for `unique_lock`, to indicate that the constructor should not lock the mutex object that is also being passed to it.|  
-|[try_to_lock](../standard-library/mutex-functions.md#try_to_lock)|Represents an object that can be passed to the constructor for `unique_lock` to indicate that the constructor should try to unlock the `mutex` that is also being passed to it without blocking.|  
+|[adopt_lock](../standard-library/mutex-functions.md#adopt_lock)|Stellt ein Objekt dar, das an die Konstruktoren von `lock_guard` und `unique_lock` übergeben werden kann, um anzugeben, dass das auch an den Konstruktor übergebene mutex-Objekt gesperrt ist.|  
+|[defer_lock](../standard-library/mutex-functions.md#defer_lock)|Stellt ein Objekt dar, das an den Konstruktor für `unique_lock` übergeben werden kann, um anzugeben, dass der Konstruktor das an diesen übergebene mutex-Objekt nicht sperren soll.|  
+|[try_to_lock](../standard-library/mutex-functions.md#try_to_lock)|Stellt ein Objekt dar, das an den Konstruktor für `unique_lock` übergeben werden kann, um anzugeben, dass der Konstruktor das an diesen übergebene `mutex`-Objekt ohne Blockierung entsperren soll.|  
   
-## <a name="see-also"></a>See Also  
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)
+## <a name="see-also"></a>Siehe auch  
+ [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)
 
 
 

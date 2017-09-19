@@ -1,5 +1,5 @@
 ---
-title: '&lt;array&gt; | Microsoft Docs'
+title: '&lt;array&gt; | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,15 +33,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 780406772c509cb1320e1b8a1124cdc535b9c852
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 3458390f8e6dcaee229346c66d569a5486ae74c4
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltarraygt"></a>&lt;array&gt;
-Defines the container template class `array` and several supporting templates.  
+Definiert die Containervorlagenklasse `array` und einige unterstützende Vorlagen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,35 +49,35 @@ Defines the container template class `array` and several supporting templates.
 #include <array>  
 ```  
   
-### <a name="classes"></a>Classes  
+### <a name="classes"></a>Klassen  
   
 |||  
 |-|-|  
-|[array](../standard-library/array-class-stl.md)|Stores a fixed-length sequence of elements.|  
-|[tuple_element](../standard-library/tuple-element-class-tuple.md)|Wraps the type of an array element.|  
-|[tuple_size](../standard-library/tuple-size-class-tuple.md)|Wraps the size of an array element.|  
+|[array](../standard-library/array-class-stl.md)|Speichert eine Sequenz von Elementen mit fester Länge.|  
+|[tuple_element](../standard-library/tuple-element-class-tuple.md)|Umschließt den Typ eines Arrayelements.|  
+|[tuple_size](../standard-library/tuple-size-class-tuple.md)|Umschließt die Größe eines Arrayelements.|  
   
-### <a name="operators"></a>Operators  
-  
-|||  
-|-|-|  
-|[operator==](../standard-library/array-operators.md#op_eq_eq)|array comparison, equal|  
-|[operator!=](../standard-library/array-operators.md#op_neq)|array comparison, not equal|  
-|[operator\<](../standard-library/array-operators.md#op_lt)|array comparison, less than|  
-|[operator>=](../standard-library/array-operators.md#op_gt_eq)|array comparison, greater than or equal|  
-|[operator>](../standard-library/array-operators.md#op_gt)|array comparison, greater than|  
-|[operator<=](../standard-library/array-operators.md#op_lt_eq)|array comparison, less than or equal|  
-  
-### <a name="functions"></a>Functions  
+### <a name="operators"></a>Operatoren  
   
 |||  
 |-|-|  
-|[get](../standard-library/array-functions.md#get)|Get specified array element.|  
-|[swap](../standard-library/array-functions.md#swap)|Exchanges the contents of one array with the contents of another array.|  
+|[operator==](../standard-library/array-operators.md#op_eq_eq)|Array-Vergleich, gleich|  
+|[operator!=](../standard-library/array-operators.md#op_neq)|Array-Vergleich, ungleich|  
+|[operator\<](../standard-library/array-operators.md#op_lt)|Array-Vergleich, kleiner als|  
+|[operator>=](../standard-library/array-operators.md#op_gt_eq)|Array-Vergleich, größer als oder gleich|  
+|[operator>](../standard-library/array-operators.md#op_gt)|Array-Vergleich, größer als|  
+|[operator<=](../standard-library/array-operators.md#op_lt_eq)|Array-Vergleich, kleiner als oder gleich|  
   
-## <a name="see-also"></a>See Also  
+### <a name="functions"></a>Funktionen  
+  
+|||  
+|-|-|  
+|[get](../standard-library/array-functions.md#get)|Ruft ein angegebenes Arrayelement ab.|  
+|[swap](../standard-library/array-functions.md#swap)|Tauscht die Inhalte zweier Arrays miteinander aus.|  
+  
+## <a name="see-also"></a>Siehe auch  
  [\<tuple>](../standard-library/tuple.md)   
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)
+ [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)
 
 
 

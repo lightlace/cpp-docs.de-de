@@ -1,15 +1,16 @@
 ---
-title: money_get Class | Microsoft Docs
+title: money_get-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- cpp-standard-libraries
+- devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - xlocmon/std::money_get
+- money_get
 - locale/std::money_get::char_type
 - locale/std::money_get::iter_type
 - locale/std::money_get::string_type
@@ -18,12 +19,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- std::money_get [C++]
-- std::money_get [C++], char_type
-- std::money_get [C++], iter_type
-- std::money_get [C++], string_type
-- std::money_get [C++], do_get
-- std::money_get [C++], get
+- money_get class
 ms.assetid: 692d3374-3fe7-4b46-8aeb-f8d91ed66b2e
 caps.latest.revision: 18
 author: corob-msft
@@ -43,15 +39,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 9284988bca7904293a4141630b6465acb719c03b
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 824f12ed51bfd5f29e759a50fb3ead0a669da0ab
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="moneyget-class"></a>money_get Class
-The template class describes an object that can serve as a locale facet to control conversions of sequences of type `CharType` to monetary values.  
+# <a name="moneyget-class"></a>money_get-Klasse
+Die Vorlagenklasse, die ein Objekt beschreibt, das als Gebietsschemafacet dienen kann, um Konvertierungen von Sequenzen des Typs `CharType` in monetäre Werte zu steuern.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -60,54 +56,54 @@ template <class CharType, class InputIterator = istreambuf_iterator<CharType>>
 class money_get : public locale::facet;
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
  `CharType`  
- The type used within a program to encode characters in a locale.  
+ Der Typ, der innerhalb eines Programms zum Codieren von Zeichen in einem Gebietsschema verwendet wird.  
   
  `InputIterator`  
- The type of iterator from which the get functions read their input.  
+ Der Typ des Iterators, von dem die get-Funktionen ihre Eingabe lesen.  
   
-## <a name="remarks"></a>Remarks  
- As with any locale facet, the static object ID has an initial stored value of zero. The first attempt to access its stored value stores a unique positive value in **id.**  
+## <a name="remarks"></a>Hinweise  
+ Wie bei jedem Gebietsschemafacet hat die statische Objekt-ID einen anfänglichen gespeicherten Wert von NULL. Beim ersten Versuch, auf den gespeicherten Wert zuzugreifen, wird in **id** ein eindeutiger positiver Wert gespeichert.  
   
-### <a name="constructors"></a>Constructors  
-  
-|||  
-|-|-|  
-|[money_get](#money_get)|The constructor for objects of type `money_get` that are used to extract numerical values from sequences representing monetary values.|  
-  
-### <a name="typedefs"></a>Typedefs  
+### <a name="constructors"></a>Konstruktoren  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|A type that is used to describe a character used by a locale.|  
-|[iter_type](#iter_type)|A type that describes an input iterator.|  
-|[string_type](#string_type)|A type that describes a string containing characters of type `CharType`.|  
+|[money_get](#money_get)|Der Konstruktor für Objekte vom Typ `money_get`, die verwendet werden, um numerische Werte aus Sequenzen zu extrahieren, die monetäre Werte darstellen.|  
   
-### <a name="member-functions"></a>Member Functions  
+### <a name="typedefs"></a>TypeDefs  
   
 |||  
 |-|-|  
-|[do_get](#do_get)|A virtual function called to extracts a numerical value from a character sequence that represents a monetary value.|  
-|[get](#get)|Extracts a numerical value from a character sequence that represents a monetary value.|  
+|[char_type](#char_type)|Ein Typ, mit dem ein Zeichen beschrieben wird, das von einem Gebietsschema verwendet wird.|  
+|[iter_type](#iter_type)|Ein Typ, der einen Eingabeiterator beschreibt.|  
+|[string_type](#string_type)|Ein Typ, der eine Zeichenfolge beschreibt, die Zeichen vom Typ `CharType` enthält.|  
   
-## <a name="requirements"></a>Requirements  
+### <a name="member-functions"></a>Memberfunktionen  
+  
+|||  
+|-|-|  
+|[do_get](#do_get)|Eine virtuelle Funktion, die aufgerufen wird, um einen Zahlenwert aus einer Zeichenfolge zu extrahieren, die einen monetären Wert darstellt.|  
+|[get](#get)|Extrahiert einen numerischen Wert aus einer Zeichenfolge, die einen monetären Wert darstellt.|  
+  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<locale>  
   
  **Namespace:** std  
   
-##  <a name="char_type"></a>  money_get::char_type  
- A type that is used to describe a character used by a locale.  
+##  <a name="char_type"></a> money_get::char_type  
+ Ein Typ, mit dem ein Zeichen beschrieben wird, das von einem Gebietsschema verwendet wird.  
   
 ```
 typedef CharType char_type;
 ```  
   
-### <a name="remarks"></a>Remarks  
- The type is a synonym for the template parameter **CharType**.  
+### <a name="remarks"></a>Hinweise  
+ Der Typ ist ein Synonym für den Vorlagenparameter **CharType**.  
   
-##  <a name="do_get"></a>  money_get::do_get  
- Virtual function called to extracts a numerical value from a character sequence that represents a monetary value.  
+##  <a name="do_get"></a> money_get::do_get  
+ Eine virtuelle Funktion, die aufgerufen wird, um einen Zahlenwert aus einer Zeichenfolge zu extrahieren, die einen monetären Wert darstellt.  
   
 ```
 virtual iter_type do_get(iter_type first,
@@ -123,66 +119,66 @@ virtual iter_type do_get(iter_type first,
     string_type& val) const
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `first`  
- Input iterator addressing the beginning of the sequence to be converted.  
+ Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.  
   
  `last`  
- Input iterator addressing the end of the sequence to be converted.  
+ Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.  
   
  `Intl`  
- A Boolean value indicating the type of currency symbol expected in the sequence: **true** if international, **false** if domestic.  
+ Ein boolescher Wert, der den Typ des in der Sequenz vorgesehenen Währungssymbols angibt (**TRUE**, wenn international; **FALSE**, wenn national).  
   
  `Iosbase`  
- A format flag which when set indicates that the currency symbol is optional; otherwise, it is required.  
+ Ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist. Ansonsten ist das Währungssymbol erforderlich.  
   
  `State`  
- Sets the appropriate bitmask elements for the stream state according to whether the operations succeeded or not.  
+ Je nachdem, ob die Vorgänge erfolgreich waren, legt dieses Element die entsprechenden Bitmaskenelemente für den Streamstatus fest.  
   
  `val`  
- A string storing the converted sequence.  
+ Eine Zeichenfolge zum Speichern der konvertierten Sequenz.  
   
-### <a name="return-value"></a>Return Value  
- An input iterator addressing the first element beyond the monetary input field.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Eingabeiterator,der das erste Element nach dem Eingabefeld für den monetären Wert adressiert.  
   
-### <a name="remarks"></a>Remarks  
- The first virtual protected member function tries to match sequential elements beginning at first in the sequence [ `first`, `last`) until it has recognized a complete, nonempty monetary input field. If successful, it converts this field to a sequence of one or more decimal digits, optionally preceded by a minus sign ( `-`), to represent the amount and stores the result in the [string_type](#string_type) object `val`. It returns an iterator designating the first element beyond the monetary input field. Otherwise, the function stores an empty sequence in `val` and sets `ios_base::failbit` in `State`. It returns an iterator designating the first element beyond any prefix of a valid monetary input field. In either case, if the return value equals `last`, the function sets `ios_base::eofbit` in `State`.  
+### <a name="remarks"></a>Hinweise  
+ Die erste virtuelle geschützte Memberfunktion versucht, sequenzielle Elemente zuzuordnen. Sie beginnt zuerst in der Sequenz [ `first`, `last`), bis sie ein vollständiges, nicht leeres Eingabefeld für monetäre Werte erkannt hat. Ist dies erfolgreich, konvertiert sie dieses Feld zur Darstellung der Menge in eine Sequenz aus einer oder mehreren Dezimalstellen (optional mit vorangestelltem `-`) und speichert das Ergebnis im [string_type](#string_type)-Objekt `val`. Sie gibt einen Iterator zurück, der das erste Element nach dem Eingabefeld für monetäre Werte festlegt. Andernfalls speichert die Funktion eine leere Sequenz in `val` und legt `State` für `ios_base::failbit` fest. Sie gibt einen Iterator zurück, der das erste Element nach jedem Präfix eines gültigen Eingabefelds für monetäre Werte festlegt. In beiden Fällen legt die Funktion `State` für `ios_base::eofbit` fest, wenn der Rückgabewert `last` entspricht.  
   
- The second virtual protected member function behaves the same as the first, except that if successful it converts the optionally signed digit sequence to a value of type `long double` and stores that value in `val`.  
+ Die zweite geschützte virtuelle Memberfunktion verhält sich wie die erste. Gelingt dies, konvertiert sie die Zahlenfolge mit optionalem Vorzeichen allerdings in einen Wert des Typs `long double` und speichert diesen Wert in `val`.  
   
- The format of a monetary input field is determined by the [locale facet](../standard-library/locale-class.md#facet_class)**fac** returned by the effective call [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**>>( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)).  
+ Das Format eines Eingabefelds für monetäre Werte richtet sich nach dem [Gebietsschemafacet](../standard-library/locale-class.md#facet_class) **fac**, das durch den effektiven Aufruf [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**>>( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)) zurückgegeben wird.  
   
- Specifically:  
+ Dies gilt insbesondere in folgenden Fällen:  
   
-- **fac**. [neg_format](../standard-library/moneypunct-class.md#neg_format) determines the order in which components of the field occur.  
+- **fac**. [neg_format](../standard-library/moneypunct-class.md#neg_format) bestimmt die Reihenfolge, in der Komponenten des Felds auftreten.  
   
-- **fac**. [curr_symbol](../standard-library/moneypunct-class.md#curr_symbol) determines the sequence of elements that constitutes a currency symbol.  
+- **fac**. [curr_symbol](../standard-library/moneypunct-class.md#curr_symbol) bestimmt die Sequenz der Elemente, aus der ein Währungssymbol besteht.  
   
-- **fac**. [positive_sign](../standard-library/moneypunct-class.md#positive_sign) determines the sequence of elements that constitutes a positive sign.  
+- **fac**. [positive_sign](../standard-library/moneypunct-class.md#positive_sign) bestimmt die Sequenz der Elemente, aus der ein positiven Vorzeichen besteht.  
   
-- **fac**. [negative_sign](../standard-library/moneypunct-class.md#negative_sign) determines the sequence of elements that constitutes a negative sign.  
+- **fac**. [negative_sign](../standard-library/moneypunct-class.md#negative_sign) bestimmt die Sequenz der Elemente, aus der ein negativen Vorzeichen besteht.  
   
-- **fac**. [grouping](../standard-library/moneypunct-class.md#grouping) determines how digits are grouped to the left of any decimal point.  
+- **fac**. [grouping](../standard-library/moneypunct-class.md#grouping) bestimmt, wie Ziffern auf der linken Seite des Dezimaltrennzeichens gruppiert werden.  
   
-- **fac**. [thousands_sep](../standard-library/moneypunct-class.md#thousands_sep) determines the element that separates groups of digits to the left of any decimal point.  
+- **fac**. [thousands_sep](../standard-library/moneypunct-class.md#thousands_sep) bestimmt das Element, das Gruppen von Ziffern auf der linken Seite eines Dezimaltrennzeichens trennt.  
   
-- **fac**. [decimal_point](../standard-library/moneypunct-class.md#decimal_point) determines the element that separates the integer digits from the fraction digits.  
+- **fac**. [decimal_point](../standard-library/moneypunct-class.md#decimal_point) bestimmt das Element, das ganzzahlige Ziffern von Bruchziffern trennt.  
   
-- **fac**. [frac_digits](../standard-library/moneypunct-class.md#frac_digits) determines the number of significant fraction digits to the right of any decimal point. When parsing a monetary amount with more fraction digits than are called for by `frac_digits`, `do_get` stops parsing after consuming at most `frac_digits` characters.  
+- **fac**. [frac_digits](../standard-library/moneypunct-class.md#frac_digits) bestimmt die Anzahl signifikanter Ziffern auf der rechten Seite eines Dezimaltrennzeichens. Wird ein Geldbetrag mit mehr Bruchziffern analysiert, als durch `frac_digits` aufgerufen werden, beendet `do_get` die Analyse, wenn höchstens `frac_digits`-Zeichen verbraucht wurden.  
   
- If the sign string ( **fac**. `negative_sign` or **fac**. `positive_sign`) has more than one element, only the first element is matched where the element equal to **money_base::sign** appears in the format pattern ( **fac**. `neg_format`). Any remaining elements are matched at the end of the monetary input field. If neither string has a first element that matches the next element in the monetary input field, the sign string is taken as empty and the sign is positive.  
+ Wenn die Zeichenfolge ( **fac**. `negative_sign` oder **fac**. `positive_sign`) über mehr als ein Element verfügt, wird nur das erste Element zugeordnet, bei dem das dem **money_base::sign** entsprechende Element im Formatmuster ( **fac**. `neg_format`) angezeigt wird. Alle übrigen Elemente werden am Ende des Eingabefelds für monetäre Werte zugeordnet. Wenn keine Zeichenfolge über ein erstes Element verfügt, das dem nächsten Element im Eingabefeld für monetäre Werte entspricht, wird die Zeichenfolge als leer angenommen. Das Vorzeichen ist in diesem Fall positiv.  
   
- If **iosbase**. [flags](../standard-library/ios-base-class.md#flags) & [showbase](../standard-library/ios-functions.md#showbase) is nonzero, the string **fac**. `curr_symbol` must match where the element equal to **money_base::symbol** appears in the format pattern. Otherwise, if **money_base::symbol** occurs at the end of the format pattern, and if no elements of the sign string remain to be matched, the currency symbol is not matched. Otherwise, the currency symbol is optionally matched.  
+ Wenn **iosbase**. [flags](../standard-library/ios-base-class.md#flags) & [showbase](../standard-library/ios-functions.md#showbase) ungleich null ist, muss die Zeichenfolge **fac**. `curr_symbol` dort zugeordnet werden, wo das dem **money_base::symbol** entsprechende Element im Formatmuster angezeigt wird. Andernfalls gilt: Wenn **money_base::symbol** am Ende des Formatmusters auftritt und keine weiteren Elemente der Zeichenfolge verbleiben, wird das Währungssymbol nicht zugeordnet. Ansonsten wird das Währungssymbol optional zugeordnet.  
   
- If no instances of **fac**. `thousands_sep` occur in the value portion of the monetary input field (where the element equal to **money_base::value** appears in the format pattern), no grouping constraint is imposed. Otherwise, any grouping constraints imposed by **fac**. **grouping** is enforced. Note that the resulting digit sequence represents an integer whose low-order **fac**. `frac_digits` decimal digits are considered to the right of the decimal point.  
+ Wenn keine Instanzen von **fac**. `thousands_sep` im Wertteil des Eingabefelds für monetäre Werte (in dem das dem **money_base::symbol** entsprechende Element im Formatmuster angezeigt wird) auftritt, erfolgt keine Gruppierungseinschränkung. Andernfalls werden alle durch **fac**. **grouping** auferlegte Gruppierungseinschränkungen erzwungen. Bitte beachten Sie, dass die resultierende Ziffernsequenz einer ganzen Zahl entspricht, deren niederwertige **fac**. `frac_digits`-Dezimalstellen auf der rechten Seite des Dezimaltrennzeichens berücksichtigt werden.  
   
- Arbitrary white space is matched where the element equal to **money_base::space** appears in the format pattern, if it appears other than at the end of the format pattern. Otherwise, no internal white space is matched. An element *ch* is considered white space if [use_facet](../standard-library/locale-functions.md#use_facet) < [ctype](../standard-library/ctype-class.md)\< **CharType**> >( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)). [is](../standard-library/ctype-class.md#is)( **ctype_base::space**, *ch*) is **true**.  
+ Dort, wo das dem **money_base::space** entsprechende Element im Formatmuster angezeigt wird, werden beliebig viele Leerstellen zugeordnet, wenn das Element nicht am Ende des Formatmusters angezeigt wird. Andernfalls werden keine internen Leerzeichen zugeordnet. Ein Element *ch* gilt als Leerzeichen, wenn [use_facet](../standard-library/locale-functions.md#use_facet) < [Ctype](../standard-library/ctype-class.md) \< **CharType**> >( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)). [is](../standard-library/ctype-class.md#is)( **ctype_base::space**, *ch*) **TRUE** ist.  
   
-### <a name="example"></a>Example  
-  See the example for [get](#get), which calls `do_get`.  
+### <a name="example"></a>Beispiel  
+  Informationen hierzu finden Sie im Beispiel für [get](#get), das `do_get` aufruft.  
   
-##  <a name="get"></a>  money_get::get  
- Extracts a numerical value from a character sequence that represents a monetary value.  
+##  <a name="get"></a> money_get::get  
+ Extrahiert einen numerischen Wert aus einer Zeichenfolge, die einen monetären Wert darstellt.  
   
 ```
 iter_type get(iter_type first,
@@ -200,32 +196,32 @@ iter_type get(iter_type first,
     string_type& val) const;
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `first`  
- Input iterator addressing the beginning of the sequence to be converted.  
+ Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.  
   
  `last`  
- Input iterator addressing the end of the sequence to be converted.  
+ Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.  
   
  `Intl`  
- A Boolean value indicating the type of currency symbol expected in the sequence: **true** if international, **false** if domestic.  
+ Ein boolescher Wert, der den Typ des in der Sequenz vorgesehenen Währungssymbols angibt (**TRUE**, wenn international; **FALSE**, wenn national).  
   
  `Iosbase`  
- A format flag which when set indicates that the currency symbol is optional; otherwise, it is required  
+ Ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist. Ansonsten ist das Währungssymbol erforderlich.  
   
  `State`  
- Sets the appropriate bitmask elements for the stream state according to whether the operations succeeded.  
+ Je nachdem, ob die Vorgänge erfolgreich waren, legt dieses Element die entsprechenden Bitmaskenelemente für den Streamstatus fest.  
   
  `val`  
- A string storing the converted sequence.  
+ Eine Zeichenfolge zum Speichern der konvertierten Sequenz.  
   
-### <a name="return-value"></a>Return Value  
- An input iterator addressing the first element beyond the monetary input field.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Eingabeiterator,der das erste Element nach dem Eingabefeld für den monetären Wert adressiert.  
   
-### <a name="remarks"></a>Remarks  
- Both member functions return [do_get](#do_get)`(first, last, Intl, Iosbase, State, val)`.  
+### <a name="remarks"></a>Hinweise  
+ Beide Memberfunktionen geben [do_get](#do_get)( `first``,` `last``,` `Intl`, `Iosbase`, `State`, `val`) zurück.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // money_get_get.cpp  
@@ -274,54 +270,54 @@ int main( )
 };  
 ```  
   
-##  <a name="iter_type"></a>  money_get::iter_type  
- A type that describes an input iterator.  
+##  <a name="iter_type"></a> money_get::iter_type  
+ Ein Typ, der einen Eingabeiterator beschreibt.  
   
 ```
 typedef InputIterator iter_type;
 ```  
   
-### <a name="remarks"></a>Remarks  
- The type is a synonym for the template parameter **InputIterator**.  
+### <a name="remarks"></a>Hinweise  
+ Der Typ ist ein Synonym für den Vorlagenparameter **InputIterator**.  
   
-##  <a name="money_get"></a>  money_get::money_get  
- The constructor for objects of type `money_get` that are used to extract numerical values from sequences representing monetary values.  
+##  <a name="money_get"></a> money_get::money_get  
+ Der Konstruktor für Objekte vom Typ `money_get`, die verwendet werden, um numerische Werte aus Sequenzen zu extrahieren, die monetäre Werte darstellen.  
   
 ```
 explicit money_get(size_t _Refs = 0);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `_Refs`  
- Integer value used to specify the type of memory management for the object.  
+ Integerwert, der zum Angeben des Speicherverwaltungstyps für das Objekt verwendet wird.  
   
-### <a name="remarks"></a>Remarks  
- The possible values for the `_Refs` parameter and their significance are:  
+### <a name="remarks"></a>Hinweise  
+ Mögliche Werte für den `_Refs`-Parameter und ihre Bedeutung:  
   
--   0: The lifetime of the object is managed by the locales that contain it.  
+-   0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, in denen es enthalten ist.  
   
--   1: The lifetime of the object must be manually managed.  
+-   1: Die Lebensdauer des Objekts muss manuell verwaltet werden.  
   
--   \> 1: These values are not defined.  
+-   \>1: Diese Werte sind nicht definiert.  
   
- No direct examples are possible, because the destructor is protected.  
+ Direkte Beispiele sind nicht möglich, da der Destruktor geschützt ist.  
   
- The constructor initializes its base object with **locale::**[facet](../standard-library/locale-class.md#facet_class)( **_***Refs*).  
+ Der Konstruktor initialisiert sein Basisobjekt mit **locale::**[facet](../standard-library/locale-class.md#facet_class)( **_***Refs*).  
   
-##  <a name="string_type"></a>  money_get::string_type  
- A type that describes a string containing characters of type **CharType**.  
+##  <a name="string_type"></a> money_get::string_type  
+ Ein Typ, der eine Zeichenfolge beschreibt, die Zeichen des Typs **CharType** enthält.  
   
 ```
 typedef basic_string<CharType, Traits, Allocator> string_type;
 ```  
   
-### <a name="remarks"></a>Remarks  
- The type describes a specialization of template class [basic_string](../standard-library/basic-string-class.md).  
+### <a name="remarks"></a>Hinweise  
+ Der Typ beschreibt eine Spezialisierung der Vorlagenklasse [basic_string](../standard-library/basic-string-class.md).  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [\<locale>](../standard-library/locale.md)   
- [facet Class](../standard-library/locale-class.md#facet_class)   
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [facet-Klasse](../standard-library/locale-class.md#facet_class)   
+ [Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

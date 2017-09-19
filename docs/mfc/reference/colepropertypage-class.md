@@ -1,5 +1,5 @@
 ---
-title: COlePropertyPage Class | Microsoft Docs
+title: COlePropertyPage Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,22 +30,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- COlePropertyPage [MFC], COlePropertyPage
-- COlePropertyPage [MFC], GetControlStatus
-- COlePropertyPage [MFC], GetObjectArray
-- COlePropertyPage [MFC], GetPageSite
-- COlePropertyPage [MFC], IgnoreApply
-- COlePropertyPage [MFC], IsModified
-- COlePropertyPage [MFC], OnEditProperty
-- COlePropertyPage [MFC], OnHelp
-- COlePropertyPage [MFC], OnInitDialog
-- COlePropertyPage [MFC], OnObjectsChanged
-- COlePropertyPage [MFC], OnSetPageSite
-- COlePropertyPage [MFC], SetControlStatus
-- COlePropertyPage [MFC], SetDialogResource
-- COlePropertyPage [MFC], SetHelpInfo
-- COlePropertyPage [MFC], SetModifiedFlag
-- COlePropertyPage [MFC], SetPageName
+- OLE property pages
+- custom controls [MFC], properties
+- COlePropertyPage class
+- properties [C++], displaying
+- displaying properties
+- property pages, OLE
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
 caps.latest.revision: 23
 author: mikeblome
@@ -65,15 +55,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 9d2241122ccc31bfeee1a9c132a261561feb60d2
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 20d70cc25305fc5d17860314d9cfbe927df65c70
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="colepropertypage-class"></a>COlePropertyPage Class
-Used to display the properties of a custom control in a graphical interface, similar to a dialog box.  
+# <a name="colepropertypage-class"></a>COlePropertyPage-Klasse
+Wird verwendet, um die Eigenschaften eines benutzerdefinierten Steuerelements in einer grafischen Oberfläche anzuzeigen, ähnlich wie in einem Dialogfeld.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -81,43 +71,43 @@ Used to display the properties of a custom control in a graphical interface, sim
 class AFX_NOVTABLE COlePropertyPage : public CDialog  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Mitglieder  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[COlePropertyPage::COlePropertyPage](#colepropertypage)|Constructs a `COlePropertyPage` object.|  
+|[COlePropertyPage::COlePropertyPage](#colepropertypage)|Erstellt ein `COlePropertyPage`-Objekt.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[COlePropertyPage::GetControlStatus](#getcontrolstatus)|Indicates whether the user has modified the value in the control.|  
-|[COlePropertyPage::GetObjectArray](#getobjectarray)|Returns the array of objects being edited by the property page.|  
-|[COlePropertyPage::GetPageSite](#getpagesite)|Returns a pointer to the property page's `IPropertyPageSite` interface.|  
-|[COlePropertyPage::IgnoreApply](#ignoreapply)|Determines which controls do not enable the Apply button.|  
-|[COlePropertyPage::IsModified](#ismodified)|Indicates whether the user has modified the property page.|  
-|[COlePropertyPage::OnEditProperty](#oneditproperty)|Called by the framework when the user edits a property.|  
-|[COlePropertyPage::OnHelp](#onhelp)|Called by the framework when the user invokes help.|  
-|[COlePropertyPage::OnInitDialog](#oninitdialog)|Called by the framework when the property page is initialized.|  
-|[COlePropertyPage::OnObjectsChanged](#onobjectschanged)|Called by the framework when another OLE control, with new properties, is chosen.|  
-|[COlePropertyPage::OnSetPageSite](#onsetpagesite)|Called by the framework when the property frame provides the page's site.|  
-|[COlePropertyPage::SetControlStatus](#setcontrolstatus)|Sets a flag indicating whether the user has modified the value in the control.|  
-|[COlePropertyPage::SetDialogResource](#setdialogresource)|Sets the property page's dialog resource.|  
-|[COlePropertyPage::SetHelpInfo](#sethelpinfo)|Sets the property page's brief help text, the name of its help file, and its help context.|  
-|[COlePropertyPage::SetModifiedFlag](#setmodifiedflag)|Sets a flag indicating whether the user has modified the property page.|  
-|[COlePropertyPage::SetPageName](#setpagename)|Sets the property page's name (caption).|  
+|[COlePropertyPage::GetControlStatus](#getcontrolstatus)|Gibt an, ob der Benutzer den Wert im Steuerelement geändert hat.|  
+|[COlePropertyPage::GetObjectArray](#getobjectarray)|Gibt das Array von Objekten, die von der Eigenschaftenseite bearbeitet wird.|  
+|[COlePropertyPage::GetPageSite](#getpagesite)|Gibt einen Zeiger auf der Eigenschaftenseite `IPropertyPageSite` Schnittstelle.|  
+|[COlePropertyPage::IgnoreApply](#ignoreapply)|Bestimmt, welche Steuerelemente die Schaltfläche übernehmen nicht aktivieren.|  
+|[COlePropertyPage::IsModified](#ismodified)|Gibt an, ob der Benutzer die Eigenschaftenseite geändert wurde.|  
+|[COlePropertyPage::OnEditProperty](#oneditproperty)|Wird vom Framework aufgerufen, wenn der Benutzer eine Eigenschaft bearbeitet.|  
+|[COlePropertyPage::OnHelp](#onhelp)|Wird vom Framework aufgerufen, wenn der Benutzer die Hilfe aufruft.|  
+|[COlePropertyPage::OnInitDialog](#oninitdialog)|Wird vom Framework aufgerufen, wenn die Eigenschaftenseite initialisiert wird.|  
+|[COlePropertyPage::OnObjectsChanged](#onobjectschanged)|Wird vom Framework aufgerufen, wenn ein anderes OLE-Steuerelement, mit neuen Eigenschaften ausgewählt wird.|  
+|[COlePropertyPage:: OnSetPageSite](#onsetpagesite)|Vom Framework aufgerufen, wenn die Eigenschaft Frame die Site der Seite bereitstellt.|  
+|[COlePropertyPage::SetControlStatus](#setcontrolstatus)|Legt ein Flag gibt an, ob der Benutzer den Wert im Steuerelement geändert hat.|  
+|[COlePropertyPage::SetDialogResource](#setdialogresource)|Legt die Eigenschaftenseite des Dialog-Ressource.|  
+|[COlePropertyPage::SetHelpInfo](#sethelpinfo)|Wird die Eigenschaftenseite kurzen Hilfetext, den Namen der Hilfe und den Hilfekontext festgelegt.|  
+|[COlePropertyPage::SetModifiedFlag](#setmodifiedflag)|Legt ein Flag gibt an, ob der Benutzer die Eigenschaftenseite geändert wurde.|  
+|[COlePropertyPage::SetPageName](#setpagename)|Legt die Eigenschaftenseite Namen (Beschriftung).|  
   
-## <a name="remarks"></a>Remarks  
- For instance, a property page may include an edit control that allows the user to view and modify the control's caption property.  
+## <a name="remarks"></a>Hinweise  
+ Beispielsweise kann eine Eigenschaftenseite ein Bearbeitungssteuerelement umfassen, können den Benutzer zum Anzeigen und ändern die Caption-Eigenschaft des Steuerelements.  
   
- Each custom or stock control property can have a dialog control that allows the control's user to view the current property value and modify that value if needed.  
+ Aller benutzerdefinierten oder vordefinierten Eigenschaften kann es sich um ein Dialogfeldsteuerelement haben, in dem das Steuerelement Benutzer zeigt den aktuellen Eigenschaftenwert, und ändern diesen Wert bei Bedarf.  
   
- For more information on using `COlePropertyPage`, see the article [ActiveX Controls: Property Pages](../../mfc/mfc-activex-controls-property-pages.md).  
+ Weitere Informationen zur Verwendung von `COlePropertyPage`, finden Sie im Artikel [ActiveX-Steuerelemente: Eigenschaftenseiten](../../mfc/mfc-activex-controls-property-pages.md).  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
- [CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
+ [Von CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -127,11 +117,11 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
   
  `COlePropertyPage`  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxctl.h  
   
-##  <a name="colepropertypage"></a>  COlePropertyPage::COlePropertyPage  
- Constructs a `COlePropertyPage` object.  
+##  <a name="colepropertypage"></a>COlePropertyPage::COlePropertyPage  
+ Erstellt ein `COlePropertyPage`-Objekt.  
   
 ```  
 COlePropertyPage(
@@ -139,155 +129,155 @@ COlePropertyPage(
     UINT idCaption);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  *idDlg*  
- Resource ID of the dialog template.  
+ Ressourcen-ID, der die Dialogfeldvorlage.  
   
  *idCaption*  
- Resource ID of the property page's caption.  
+ Ressourcen-ID der Titel der Eigenschaftenseite.  
   
-### <a name="remarks"></a>Remarks  
- When you implement a subclass of `COlePropertyPage`, your subclass's constructor should use the `COlePropertyPage` constructor to identify the dialog-template resource on which the property page is based and the string resource containing its caption.  
+### <a name="remarks"></a>Hinweise  
+ Bei der Implementierung einer Unterklasse von `COlePropertyPage`, Ihrer Unterklasse-Konstruktor verwenden, sollten die `COlePropertyPage` Konstruktor zum Identifizieren der Dialogfeldvorlagen-Ressource in die Eigenschaftenseite basiert und die Zeichenfolgenressource, die die Beschriftung enthält.  
   
-##  <a name="getcontrolstatus"></a>  COlePropertyPage::GetControlStatus  
- Determines whether the user has modified the value of the property page control with the specified resource ID.  
+##  <a name="getcontrolstatus"></a>COlePropertyPage::GetControlStatus  
+ Bestimmt, ob der Benutzer den Wert des Eigenschaft-Steuerelement mit der angegebenen Ressource-ID geändert hat  
   
 ```  
 BOOL GetControlStatus(UINT nID);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `nID`  
- Resource ID of a property page control.  
+ Ressourcen-ID eines Steuerelements Eigenschaft.  
   
-### <a name="return-value"></a>Return Value  
- **TRUE** if the control value has been modified; otherwise **FALSE**.  
+### <a name="return-value"></a>Rückgabewert  
+ **True,** , wenn der Steuerelementwert, andernfalls geänderte wurde **FALSE**.  
   
-##  <a name="getobjectarray"></a>  COlePropertyPage::GetObjectArray  
- Returns the array of objects being edited by the property page.  
+##  <a name="getobjectarray"></a>COlePropertyPage::GetObjectArray  
+ Gibt das Array von Objekten, die von der Eigenschaftenseite bearbeitet wird.  
   
 ```  
 LPDISPATCH* GetObjectArray(ULONG* pnObjects);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `pnObjects`  
- Pointer to an unsigned long integer that will receive the number of objects being edited by the page.  
+ Zeiger auf eine lange Ganzzahl ohne Vorzeichen, die die Anzahl der Objekte, die gerade von der Seite erhalten.  
   
-### <a name="return-value"></a>Return Value  
- Pointer to an array of `IDispatch` pointers, which are used to access the properties of each control on the property page. The caller must not release these interface pointers.  
+### <a name="return-value"></a>Rückgabewert  
+ Zeiger auf ein Array von `IDispatch` Zeigern, die Zugriff auf die Eigenschaften der einzelnen Steuerelemente auf der Eigenschaftenseite verwendet werden. Der Aufrufer muss diese Schnittstellenzeiger nicht freigegeben.  
   
-### <a name="remarks"></a>Remarks  
- Each property page object maintains an array of pointers to the `IDispatch` interfaces of the objects being edited by the page. This function sets its `pnObjects` argument to the number of elements in that array and returns a pointer to the first element of the array.  
+### <a name="remarks"></a>Hinweise  
+ Jede Eigenschaft Page-Objekt verwaltet einen Array von Zeigern auf die `IDispatch` Schnittstellen die Objekte, die von der Seite bearbeitet wird. Diese Funktion legt die `pnObjects` Argument für die Anzahl der Elemente im Array und gibt einen Zeiger auf das erste Element des Arrays zurück.  
   
-##  <a name="getpagesite"></a>  COlePropertyPage::GetPageSite  
- Gets a pointer to the property page's `IPropertyPageSite` interface.  
+##  <a name="getpagesite"></a>COlePropertyPage::GetPageSite  
+ Ruft einen Zeiger auf der Eigenschaftenseite `IPropertyPageSite` Schnittstelle.  
   
 ```  
 LPPROPERTYPAGESITE GetPageSite();
 ```  
   
-### <a name="return-value"></a>Return Value  
- A pointer to the property page's `IPropertyPageSite` interface.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Zeiger auf der Eigenschaftenseite `IPropertyPageSite` Schnittstelle.  
   
-### <a name="remarks"></a>Remarks  
- Controls and containers cooperate so that users can browse and edit control properties. The control provides property pages, each of which is an OLE object that allows the user to edit a related set of properties. The container provides a property frame that displays the property pages. For each page, the property frame provides a page site, which supports the `IPropertyPageSite` interface.  
+### <a name="remarks"></a>Hinweise  
+ Steuerelemente und Containern zusammen, damit Benutzer durchsuchen und Bearbeiten von Steuerelementeigenschaften können. Das Steuerelement bietet Eigenschaftenseiten, von die jede ein OLE-Objekt, die dem Benutzer ermöglicht ist, eine zusammengehörige Gruppe von Eigenschaften zu bearbeiten. Der Container enthält einen Eigenschaft Frame, in dem die Eigenschaftenseiten angezeigt. Für jede Seite bietet der Eigenschaftenrahmen eine Seite-Website, die unterstützt die `IPropertyPageSite` Schnittstelle.  
   
-##  <a name="ignoreapply"></a>  COlePropertyPage::IgnoreApply  
- Determines which controls do not enable the Apply button.  
+##  <a name="ignoreapply"></a>COlePropertyPage::IgnoreApply  
+ Bestimmt, welche Steuerelemente die Schaltfläche übernehmen nicht aktivieren.  
   
 ```  
 void IgnoreApply(UINT nID);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `nID`  
- ID of the control to be ignored.  
+ Die ID des Steuerelements, ignoriert werden sollen.  
   
-### <a name="remarks"></a>Remarks  
- The property page's Apply button is enabled only when values of property page controls have been changed. Use this function to specify controls that do not cause the Apply button to be enabled when their values change.  
+### <a name="remarks"></a>Hinweise  
+ Die Eigenschaftenseite übernehmen-Schaltfläche ist nur aktiviert, wenn Werte der Eigenschaft Seitensteuerelemente geändert wurden. Verwenden Sie diese Funktion an Steuerelemente, die nicht, dass die Schaltfläche "anwenden bewirken" aktiviert werden soll, wenn die Werte zu ändern.  
   
-##  <a name="ismodified"></a>  COlePropertyPage::IsModified  
- Determines whether the user has changed any values on the property page.  
+##  <a name="ismodified"></a>COlePropertyPage::IsModified  
+ Bestimmt, ob der Benutzer alle Werte auf der Eigenschaftenseite geändert hat.  
   
 ```  
 BOOL IsModified();
 ```  
   
-### <a name="return-value"></a>Return Value  
- **TRUE** if the property page has been modified.  
+### <a name="return-value"></a>Rückgabewert  
+ **True,** , wenn die Eigenschaftenseite geändert wurde.  
   
-##  <a name="oneditproperty"></a>  COlePropertyPage::OnEditProperty  
- The framework calls this function when a specific property is to be edited.  
+##  <a name="oneditproperty"></a>COlePropertyPage::OnEditProperty  
+ Das Framework ruft diese Funktion wird eine bestimmte Eigenschaft bearbeitet werden kann.  
   
 ```  
 virtual BOOL OnEditProperty(DISPID dispid);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dispid`  
- Dispatch ID of the property being edited.  
+ Dispatch-ID, der der bearbeiteten Eigenschaft.  
   
-### <a name="return-value"></a>Return Value  
- The default implementation returns **FALSE**. Overrides of this function should return **TRUE**.  
+### <a name="return-value"></a>Rückgabewert  
+ Die standardmäßige Implementierung gibt **FALSE**. Außerkraftsetzungen für diese Funktion sollte zurückgeben **TRUE**.  
   
-### <a name="remarks"></a>Remarks  
- You can override it to set the focus to the appropriate control on the page. The default implementation does nothing and returns **FALSE**.  
+### <a name="remarks"></a>Hinweise  
+ Außer Kraft setzen, um den Fokus auf das entsprechende Steuerelement auf der Seite festgelegt. Die standardmäßige Implementierung keine Aktion aus und gibt **FALSE**.  
   
-##  <a name="onhelp"></a>  COlePropertyPage::OnHelp  
- The framework calls this function when the user requests online help.  
+##  <a name="onhelp"></a>COlePropertyPage::OnHelp  
+ Das Framework ruft diese Funktion auf, wenn der Benutzer online-Hilfe anfordert.  
   
 ```  
 virtual BOOL OnHelp(LPCTSTR lpszHelpDir);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  *lpszHelpDir*  
- Directory containing the property page's help file.  
+ Verzeichnis, das die Eigenschaftenseite Hilfedatei enthält.  
   
-### <a name="return-value"></a>Return Value  
- The default implementation returns **FALSE**.  
+### <a name="return-value"></a>Rückgabewert  
+ Die standardmäßige Implementierung gibt **FALSE**.  
   
-### <a name="remarks"></a>Remarks  
- Override it if your property page must perform any special action when the user accesses help. The default implementation does nothing and returns **FALSE**, which instructs the framework to call WinHelp.  
+### <a name="remarks"></a>Hinweise  
+ Wenn die Eigenschaftenseite spezielle Aktion ausführen muss, wenn der Benutzer Hilfe zugreift überschreiben. Die standardmäßige Implementierung keine Aktion aus und gibt **FALSE**, wodurch das Aufrufen von WinHelp-Framework angewiesen.  
   
-##  <a name="oninitdialog"></a>  COlePropertyPage::OnInitDialog  
- The framework calls this function when the property page's dialog is initialized.  
+##  <a name="oninitdialog"></a>COlePropertyPage::OnInitDialog  
+ Das Framework ruft diese Funktion auf, wenn die Eigenschaftenseite Dialogfeld initialisiert wird.  
   
 ```  
 virtual BOOL OnInitDialog();
 ```  
   
-### <a name="return-value"></a>Return Value  
- The default implementation returns **FALSE**.  
+### <a name="return-value"></a>Rückgabewert  
+ Die standardmäßige Implementierung gibt **FALSE**.  
   
-### <a name="remarks"></a>Remarks  
- Override it if any special action is required when the dialog is initialized. The default implementation calls `CDialog::OnInitDialog` and returns **FALSE**.  
+### <a name="remarks"></a>Hinweise  
+ Überschreiben sie, wenn besondere Aktion erforderlich ist, wenn das Dialogfeld initialisiert wird. Die standardmäßige Implementierung ruft `CDialog::OnInitDialog` und gibt **FALSE**.  
   
-##  <a name="onobjectschanged"></a>  COlePropertyPage::OnObjectsChanged  
- Called by the framework when another OLE control, with new properties, is chosen.  
+##  <a name="onobjectschanged"></a>COlePropertyPage::OnObjectsChanged  
+ Wird vom Framework aufgerufen, wenn ein anderes OLE-Steuerelement, mit neuen Eigenschaften ausgewählt wird.  
   
 ```  
 virtual void OnObjectsChanged();
 ```  
   
-### <a name="remarks"></a>Remarks  
- When viewing the properties of an OLE control in the developer environment, a modeless dialog box is used to display its property pages. If another control is selected, a different set of property pages must be displayed for the new set of properties. The framework calls this function to notify the property page of the change.  
+### <a name="remarks"></a>Hinweise  
+ Beim Anzeigen der Eigenschaften eines OLE-Steuerelements in der Developer-Umgebung ist ein nicht modales Dialogfeld verwendet, um seine Eigenschaftenseiten anzuzeigen. Wenn ein anderes Steuerelement ausgewählt ist, muss ein anderen Satz von Eigenschaftenseiten für den neuen Satz von Eigenschaften angezeigt werden. Das Framework ruft diese Funktion, um die Eigenschaftenseite der Änderung zu benachrichtigen.  
   
- Override this function to receive notification of this action and perform any special actions.  
+ Überschreiben Sie diese Funktion, um die Benachrichtigung zu empfangen und speziellen Aktionen ausführen.  
   
-##  <a name="onsetpagesite"></a>  COlePropertyPage::OnSetPageSite  
- The framework calls this function when the property frame provides the property page's page site.  
+##  <a name="onsetpagesite"></a>COlePropertyPage:: OnSetPageSite  
+ Das Framework ruft diese Funktion auf, wenn Eigenschaftenfenster der Eigenschaftenseite Seite Standort bereitstellt.  
   
 ```  
 virtual void OnSetPageSite();
 ```  
   
-### <a name="remarks"></a>Remarks  
- The default implementation loads the page's caption and attempts to determine the page's size from the dialog resource. Override this function if your property page requires any further action; your override should call the base-class implementation.  
+### <a name="remarks"></a>Hinweise  
+ Die standardmäßige Implementierung der Beschriftung für die Seite lädt und versucht, die Seitengröße aus der Ressource zu ermitteln. Überschreiben Sie diese Funktion, wenn die Eigenschaftenseite weitere Aktion erforderlich ist; überschreiben, sollten die Implementierung der Basisklasse aufrufen.  
   
-##  <a name="setcontrolstatus"></a>  COlePropertyPage::SetControlStatus  
- Changes the status of a property page control.  
+##  <a name="setcontrolstatus"></a>COlePropertyPage::SetControlStatus  
+ Ändert den Status eines Steuerelements Eigenschaft.  
   
 ```  
 BOOL SetControlStatus(
@@ -295,32 +285,32 @@ BOOL SetControlStatus(
     BOOL bDirty);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `nID`  
- Contains the ID of a property page control.  
+ Enthält die ID eines Steuerelements Eigenschaft.  
   
  `bDirty`  
- Specifies if a field of the property page has been modified. Set to **TRUE** if the field has been modified, **FALSE** if it has not been modified.  
+ Gibt an, ob ein Feld der Eigenschaftenseite geändert wurde. Legen Sie auf **TRUE** , wenn das Feld geändert wurde, **FALSE** , wenn es nicht geändert wurde.  
   
-### <a name="return-value"></a>Return Value  
- **TRUE**, if the specified control was set; otherwise **FALSE**.  
+### <a name="return-value"></a>Rückgabewert  
+ **True,**, wenn das angegebene Steuerelement; andernfalls wurde **FALSE**.  
   
-### <a name="remarks"></a>Remarks  
- If the status of a property page control is dirty when the property page is closed or the Apply button is chosen, the control's property will be updated with the appropriate value.  
+### <a name="remarks"></a>Hinweise  
+ Wenn der Status eines Steuerelements Eigenschaft fehlerhaft, ist wenn die Eigenschaftenseite geschlossen ist oder die Schaltfläche "anwenden" ausgewählt ist, wird die Eigenschaft des Steuerelements mit dem entsprechenden Wert aktualisiert werden.  
   
-##  <a name="setdialogresource"></a>  COlePropertyPage::SetDialogResource  
- Sets the property page's dialog resource.  
+##  <a name="setdialogresource"></a>COlePropertyPage::SetDialogResource  
+ Legt die Eigenschaftenseite des Dialog-Ressource.  
   
 ```  
 void SetDialogResource(HGLOBAL hDialog);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  *hDialog*  
- Handle to the property page's dialog resource.  
+ Handle für die Eigenschaftenseite des Dialog-Ressource.  
   
-##  <a name="sethelpinfo"></a>  COlePropertyPage::SetHelpInfo  
- Specifies tooltip information, the help filename, and the help context for your property page.  
+##  <a name="sethelpinfo"></a>COlePropertyPage::SetHelpInfo  
+ Gibt an, QuickInfo-Informationen und den Dateinamen für die Hilfe in den Hilfekontext für die Eigenschaftenseite.  
   
 ```  
 void SetHelpInfo(
@@ -329,42 +319,42 @@ void SetHelpInfo(
     DWORD dwHelpContext = 0);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  *lpszDocString*  
- A string containing brief help information for display in a status bar or other location.  
+ Eine Zeichenfolge mit kurzen Hilfeinformationen für die Anzeige in einer Statusleiste oder einem anderen Speicherort.  
   
  `lpszHelpFile`  
- Name of the property page's help file.  
+ Der Name der Hilfedatei für die Eigenschaftenseite.  
   
  *dwHelpContext*  
- Help context for the property page.  
+ Der Hilfekontext für die Eigenschaftenseite.  
   
-##  <a name="setmodifiedflag"></a>  COlePropertyPage::SetModifiedFlag  
- Indicates whether the user has modified the property page.  
+##  <a name="setmodifiedflag"></a>COlePropertyPage::SetModifiedFlag  
+ Gibt an, ob der Benutzer die Eigenschaftenseite geändert wurde.  
   
 ```  
 void SetModifiedFlag(BOOL bModified = TRUE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `bModified`  
- Specifies the new value for the property page's modified flag.  
+ Gibt den neuen Wert für die Eigenschaftenseite Änderungsflag an.  
   
-##  <a name="setpagename"></a>  COlePropertyPage::SetPageName  
- Sets the property page's name, which the property frame will typically display on the page's tab.  
+##  <a name="setpagename"></a>COlePropertyPage::SetPageName  
+ Legt die Eigenschaftenseite Name der Eigenschaft Frame in der Regel auf der Seite Registerkarte angezeigt wird.  
   
 ```  
 void SetPageName(LPCTSTR lpszPageName);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  *lpszPageName*  
- Pointer to a string containing the property page's name.  
+ Ein Zeiger auf eine Zeichenfolge mit der Eigenschaftenseite Namen.  
   
-## <a name="see-also"></a>See Also  
- [MFC Sample CIRC3](../../visual-cpp-samples.md)   
- [MFC Sample TESTHELP](../../visual-cpp-samples.md)   
- [CDialog Class](../../mfc/reference/cdialog-class.md)   
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [CDialog Class](../../mfc/reference/cdialog-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [MFC-Beispiel CIRC3](../../visual-cpp-samples.md)   
+ [MFC-Beispiel TESTHELP](../../visual-cpp-samples.md)   
+ [CDialog-Klasse](../../mfc/reference/cdialog-class.md)   
+ [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
+ [CDialog-Klasse](../../mfc/reference/cdialog-class.md)
 

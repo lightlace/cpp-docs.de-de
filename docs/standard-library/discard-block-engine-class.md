@@ -1,5 +1,5 @@
 ---
-title: discard_block_engine Class | Microsoft Docs
+title: discard_block_engine-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- discard_block_engine
 - random/std::discard_block_engine
 dev_langs:
 - C++
@@ -33,15 +34,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: f98da1248f00e34f3660f613e5a95b8ffc101c56
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: b770c9b353f126939a1d70c195b9cc421cb2e06e
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/19/2017
 
 ---
-# <a name="discardblockengine-class"></a>discard_block_engine Class
-Generates a random sequence by discarding values returned by its base engine.  
+# <a name="discardblockengine-class"></a>discard_block_engine-Klasse
+Generiert eine zufällige Sequenz, indem die vom Basismodul zurückgegebenen Werte verworfen werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,34 +51,34 @@ template <class Engine, size_t P, size_t R>
 class discard_block_engine;  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
  `Engine`  
- The base engine type.  
+ Der Typ des Basismoduls.  
   
  `P`  
- **Block size**. The number of values in each block.  
+ **Blockgröße**. Die Anzahl von Werten in jedem Block.  
   
  `R`  
- **Used block**. The number of values in each block that are used. The rest are discarded ( `P` - `R`). **Precondition**: `0 < R ≤ P`  
+ **Verwendeter Block**. Die Anzahl von Werten in jedem Block, die verwendet werden. Der Rest wird verworfen ( `P` - `R`). **Vorbedingung**: `0 < R ≤ P`  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Mitglieder  
   
 ||||  
 |-|-|-|  
 |`discard_block_engine::discard_block_engine`|`discard_block_engine::base`|`discard_block_engine::discard`|  
 |`discard_block_engine::operator()`|`discard_block_engine::base_type`|`discard_block_engine::seed`|  
   
- For more information about engine members, see [\<random>](../standard-library/random.md).  
+ Weitere Informationen über Modulmember finden Sie unter [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>Remarks  
- This template class describes an engine adaptor that produces values by discarding some of the values returned by its base engine.  
+## <a name="remarks"></a>Hinweise  
+ Diese Vorlagenklasse beschreibt einen Moduladapter, der Werte produziert, indem er einige der von seinem Moduladapter zurückgegebenen Werte verwirft.  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<random>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [\<random>](../standard-library/random.md)
 
 

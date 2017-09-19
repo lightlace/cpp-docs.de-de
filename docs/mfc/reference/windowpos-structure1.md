@@ -1,5 +1,5 @@
 ---
-title: WINDOWPOS Structure1 | Microsoft Docs
+title: WINDOWPOS Structure1 | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- WINDOWPOS structure [MFC]
+- WINDOWPOS structure
 ms.assetid: a4ea7cd9-c4c2-4480-9c55-cbbff72195e1
 caps.latest.revision: 11
 author: mikeblome
@@ -33,15 +33,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: b67d22414408e68ebcd60a79a19e8b372d761cd9
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 522b15d630c3a5a3593010250db0491601493c69
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="windowpos-structure1"></a>WINDOWPOS Structure1
-The `WINDOWPOS` structure contains information about the size and position of a window.  
+Die `WINDOWPOS` Struktur enthält Informationen über die Größe und Position eines Fensters.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -57,59 +57,59 @@ typedef struct tagWINDOWPOS { /* wp */
 } WINDOWPOS;  
 ```  
   
-#### <a name="parameters"></a>Parameters  
- *hwnd*  
- Identifies the window.  
+#### <a name="parameters"></a>Parameter  
+ *HWND*  
+ Identifiziert das Fenster.  
   
  *hwndInsertAfter*  
- Identifies the window behind which this window is placed.  
+ Identifiziert das Fenster hinter, dem in diesem Fenster befindet.  
   
  *x*  
- Specifies the position of the left edge of the window.  
+ Gibt die Position des linken Rands des Fensters.  
   
  *y*  
- Specifies the position of the right edge of the window.  
+ Gibt die Position des rechten Rands des Fensters.  
   
  `cx`  
- Specifies the window width, in pixels.  
+ Gibt die Breite des Fensters in Pixel.  
   
  `cy`  
- Specifies the window height, in pixels.  
+ Gibt die Höhe des Fensters in Pixel.  
   
  `flags`  
- Specifies window-positioning options. This member can be one of the following values:  
+ Gibt die Optionen im Fenster positioniert. Dieser Member kann einen der folgenden Werte sein:  
   
-- **SWP_DRAWFRAME** Draws a frame (defined in the class description for the window) around the window. The window receives a `WM_NCCALCSIZE` message.  
+- **SWP_DRAWFRAME** zeichnet einen Rahmen (definiert in der Beschreibung der Klasse für das Fenster), um das Fenster. Das Fenster empfängt eine `WM_NCCALCSIZE` Nachricht.  
   
-- **SWP_FRAMECHANGED** Sends a `WM_NCCALCSIZE` message to the window, even if the window's size is not being changed. If this flag is not specified, `WM_NCCALCSIZE` is sent only when the window's size is being changed.  
+- **SWP_FRAMECHANGED** sendet eine `WM_NCCALCSIZE` Meldung in das Fenster, auch wenn die Größe des Fensters nicht geändert wird. Wenn dieses Flag nicht angegeben ist, `WM_NCCALCSIZE` wird nur gesendet, wenn die Größe des Fensters geändert wird.  
   
-- **SWP_HIDEWINDOW** Hides the window.  
+- **SWP_HIDEWINDOW** Blendet das Fenster aus.  
   
-- `SWP_NOACTIVATE` Does not activate the window.  
+- `SWP_NOACTIVATE`Das Fenster wird nicht aktiviert werden.  
   
-- **SWP_NOCOPYBITS** Discards the entire contents of the client area. If this flag is not specified, the valid contents of the client area are saved and copied back into the client area after the window is sized or repositioned.  
+- **SWP_NOCOPYBITS** verwirft den gesamten Inhalt des Clientbereichs. Wenn dieses Flag nicht angegeben ist, werden der gültige Inhalt des Clientbereichs gespeichert und wieder in den Clientbereich kopiert werden, nachdem das Fenster angepasst oder neu angeordnet wird.  
   
-- `SWP_NOMOVE` Retains current position (ignores the **x** and **y** members).  
+- `SWP_NOMOVE`Behält die aktuelle Position (ignoriert die **x** und **y** Elemente).  
   
-- **SWP_NOOWNERZORDER** Does not change the owner window's position in the Z-order.  
+- **SWP_NOOWNERZORDER** ändert nicht das Besitzerfenster Position in der Z-Reihenfolge.  
   
-- `SWP_NOSIZE` Retains current size (ignores the **cx** and **cy** members).  
+- `SWP_NOSIZE`Aktuelle Größe beibehält (ignoriert die **Cx** und **cy** Elemente).  
   
-- **SWP_NOREDRAW** Does not redraw changes.  
+- **SWP_NOREDRAW** Änderungen wird nicht neu gezeichnet.  
   
-- **SWP_NOREPOSITION** Same as **SWP_NOOWNERZORDER**.  
+- **SWP_NOREPOSITION** wie **SWP_NOOWNERZORDER**.  
   
-- **SWP_NOSENDCHANGING** Prevents the window from receiving the `WM_WINDOWPOSCHANGING` message.  
+- **SWP_NOSENDCHANGING** verhindert, empfangen die `WM_WINDOWPOSCHANGING` Nachricht.  
   
-- `SWP_NOZORDER` Retains current ordering (ignores the **hwndInsertAfter** member).  
+- `SWP_NOZORDER`Beibehalten der aktuellen Sortierung (ignoriert die **HwndInsertAfter** Element).  
   
-- **SWP_SHOWWINDOW** Displays the window.  
+- **SWP_SHOWWINDOW** zeigt das Fenster an.  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** winuser.h  
   
-## <a name="see-also"></a>See Also  
- [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Strukturen, Stile, Rückrufe und Meldungszuordnungen](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging)
 
 

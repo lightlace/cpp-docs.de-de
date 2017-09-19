@@ -1,5 +1,5 @@
 ---
-title: duration_values Structure | Microsoft Docs
+title: duration_values-Struktur | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,15 +34,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 71c90fc57ee4e7b6bb7628426401dd72ec3de20f
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: b170debfdb4759b41963bc0faca13b3db11ad39a
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="durationvalues-structure"></a>duration_values Structure
-Provides specific values for the [duration](../standard-library/duration-class.md) template parameter `Rep`.  
+# <a name="durationvalues-structure"></a>duration_values-Struktur
+Stellt bestimmte Werte für den [duration](../standard-library/duration-class.md)-Vorlagenparameter `Rep` bereit.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,59 +51,59 @@ template <class Rep>
 struct duration_values;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Mitglieder  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[max](#max)|Static. Specifies the upper limit for a value of type `Rep`.|  
-|[min](#min)|Static. Specifies the lower limit for a value of type `Rep`.|  
-|[zero](#zero)|Static. Returns `Rep(0)`.|  
+|[max](#max)|Statisch Gibt die Obergrenze für einen Wert des Typs `Rep` an.|  
+|[min](#min)|Statisch Gibt die Untergrenze für einen Wert des Typs `Rep` an.|  
+|[0 (null)](#zero)|Statisch Gibt `Rep(0)`zurück.|  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<chrono>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Chrono >  
   
  **Namespace:** std::chrono  
   
-##  <a name="max"></a>  duration_values::max  
- Static method that returns the upper bound for values of type `Ref`.  
+##  <a name="max"></a> duration_values::max  
+ Statische Methode, von der die Obergrenze für Werte vom Typ `Ref` zurückgegeben wird.  
   
 ```  
 static constexpr Rep max();
 ```  
   
-### <a name="return-value"></a>Return Value  
- In effect, returns `numeric_limits<Rep>::max()`.  
+### <a name="return-value"></a>Rückgabewert  
+ Tatsächlich wird `numeric_limits<Rep>::max()` zurückgegeben.  
   
-### <a name="remarks"></a>Remarks  
- When `Rep` is a user-defined type, the return value must be greater than [duration_values::zero](#zero).  
+### <a name="remarks"></a>Hinweise  
+ Wenn `Rep` ein benutzerdefinierter Typ ist, muss der Rückgabewert größer als [duration_values::zero](#zero) sein.  
   
-##  <a name="min"></a>  duration_values::min  
- Static method that returns the lower bound for values of type `Ref`.  
+##  <a name="min"></a> duration_values::min  
+ Statische Methode, von der die Untergrenze für Werte vom Typ `Ref` zurückgegeben wird.  
   
 ```  
 static constexpr Rep min();
 ```  
   
-### <a name="return-value"></a>Return Value  
- In effect, returns `numeric_limits<Rep>::lowest()`.  
+### <a name="return-value"></a>Rückgabewert  
+ Tatsächlich wird `numeric_limits<Rep>::lowest()` zurückgegeben.  
   
-### <a name="remarks"></a>Remarks  
- When `Rep` is a user-defined type, the return value must be less than or equal to [duration_values::zero](#zero).  
+### <a name="remarks"></a>Hinweise  
+ Wenn `Rep` ein benutzerdefinierter Typ ist, muss der Rückgabewert kleiner oder gleich [duration_values::zero](#zero) sein.  
   
-##  <a name="zero"></a>  duration_values::zero  
- Returns `Rep(0)`.  
+##  <a name="zero"></a> duration_values::zero  
+ Gibt `Rep(0)`zurück.  
   
 ```  
 static constexpr Rep zero();
 ```  
   
-### <a name="remarks"></a>Remarks  
- When `Rep` is a user-defined type, the return value must represent the additive infinity.  
+### <a name="remarks"></a>Hinweise  
+ Wenn `Rep` ein benutzerdefinierter Typ ist, muss der Rückgabewert die additive Infinity darstellen.  
   
-## <a name="see-also"></a>See Also  
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)   
  [\<chrono>](../standard-library/chrono.md)
 
 

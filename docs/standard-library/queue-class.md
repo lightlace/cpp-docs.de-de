@@ -1,5 +1,5 @@
 ---
-title: queue Class | Microsoft Docs
+title: queue-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- queue
 - queue/std::queue::container_type
 - queue/std::queue::size_type
 - queue/std::queue::value_type
@@ -21,15 +22,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- std::queue [C++], container_type
-- std::queue [C++], size_type
-- std::queue [C++], value_type
-- std::queue [C++], back
-- std::queue [C++], empty
-- std::queue [C++], front
-- std::queue [C++], pop
-- std::queue [C++], push
-- std::queue [C++], size
+- queue class
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
 caps.latest.revision: 21
 author: corob-msft
@@ -49,15 +42,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: fece900810da825fddb0aa6a54d45413fb369fd2
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 3daf7a48855ef4db50f7ed105cf5785619149a7f
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="queue-class"></a>queue Class
-A template container adaptor class that provides a restriction of functionality for some underlying container type, limiting access to the front and back elements. Elements can be added at the back or removed from the front, and elements can be inspected at either end of the queue.  
+# <a name="queue-class"></a>queue-Klasse
+Eine Vorlagencontainer-Adapterklasse, die die Funktionalität für einige zugrunde liegende Containertypen einschränkt, indem sie den Zugriff auf die vorderen und hinteren Elemente beschränkt. Elemente können an der Rückseite hinzugefügt oder an der Vorderseite entfernt und an beiden Enden der Warteschlange überprüft werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -66,60 +59,60 @@ template <class Type, class Container = deque <Type>>
 class queue  
 ```  
   
-#### <a name="parameters"></a>Parameters  
- *Type*  
- The element data type to be stored in the queue  
+#### <a name="parameters"></a>Parameter  
+ *Typ*  
+ Der in der Warteschlange zu speichernde Elementdatentyp.  
   
  `Container`  
- The type of the underlying container used to implement the queue.  
+ Der Typ des zugrunde liegenden Containers, der verwendet wird, um die Warteschlange zu implementieren.  
   
-## <a name="remarks"></a>Remarks  
- The elements of class **Type** stipulated in the first template parameter of a queue object are synonymous with [value_type](#value_type) and must match the type of element in the underlying container class **Container** stipulated by the second template parameter. The **Type** must be assignable, so that it is possible to copy objects of that type and to assign values to variables of that type.  
+## <a name="remarks"></a>Hinweise  
+ Die Elemente der Klasse **Typ**, die im ersten Vorlagenparameter eines Warteschlangenobjekts festgelegt sind, sind gleichbedeutend mit [value_type](#value_type) und müssen mit dem Elementtyp in der zugrunde liegenden Containerklasse **Container** übereinstimmen, der im zweiten Vorlagenparameter festgelegt ist. Der **Typ** muss zuweisbar sein, damit es möglich ist, Objekte dieses Typs zu kopieren und Variablen dieses Typs Werte zuzuweisen.  
   
- Suitable underlying container classes for queue include [deque](../standard-library/deque-class.md) and [list](../standard-library/list-class.md), or any other sequence container that supports the operations of `front`, **back**, `push_back`, and `pop_front`. The underlying container class is encapsulated within the container adaptor, which exposes only the limited set of the sequence container member functions as a public interface.  
+ Geeignete zugrunde liegende Containerklassen für die Warteschlange sind [Doppelschlange](../standard-library/deque-class.md) und [Liste](../standard-library/list-class.md) oder ein beliebiger Sequenzcontainer, der die Vorgänge von `front`, **Rückseite**, `push_back` und `pop_front` unterstützt. Die zugrunde liegende Containerklasse wird im Containeradapter gekapselt, der nur den begrenzten Satz der Memberfunktionen des Sequenzcontainers als öffentliche Schnittstelle verfügbar macht.  
   
- The queue objects are equality comparable if and only if the elements of class **Type** are equality comparable, and are less-than comparable if and only if the elements of class **Type** are less-than comparable.  
+ Die Warteschlangenobjekte sind ausschließlich dann auf Gleichheit vergleichbar, wenn die Elemente der Klasse **Typ** auf Gleichheit vergleichbar sind, und sie sind ausschließlich dann auf kleiner-als vergleichbar, wenn die Elemente der Klasse **Typ** auf kleiner-als vergleichbar sind.  
   
- There are three types of container adaptors defined by the C++ Standard Library: stack, queue, and priority_queue. Each restricts the functionality of some underlying container class to provide a precisely controlled interface to a standard data structure.  
+ Es gibt drei Arten von Containeradaptern, die von der C++-Standardbibliothek definiert werden: Stapel, Warteschlangen und Warteschlangen mit hoher Priorität. Jede schränkt die Funktionalität von einigen zugrunde liegenden Containerklassen ein, um eine präzise gesteuerte Oberfläche für eine Standarddatenstruktur anzubieten.  
   
--   The [stack class](../standard-library/stack-class.md) supports a last-in, first-out (LIFO) data structure. A good analogue to keep in mind would be a stack of plates. Elements (plates) may be inserted, inspected, or removed only from the top of the stack, which is the last element at the end of the base container. The restriction to accessing only the top element is the reason for using the stack class.  
+-   Die [Stapelklasse](../standard-library/stack-class.md) unterstützt eine LIFO-Datenstruktur (Last In – First Out). Eine gute Analogie, um sich dies zu merken, ist ein Stapel von Tellern. Elemente (Teller) können eingefügt, überprüft oder nur vom Anfang des Stapels entnommen werden, was dem letzten Element am Ende des Basiscontainers entspricht. Die Beschränkung, nur auf das oberste Element zuzugreifen, ist der Grund für die Verwendung der stack-Klasse.  
   
--   The queue class supports a first-in, first-out (FIFO) data structure. A good analogue to keep in mind would be people lining up for a bank teller. Elements (people) may be added to the back of the line and are removed from the front of the line. Both the front and the back of a line may be inspected. The restriction to accessing only the front and back elements in this way is the reason for using the queue class.  
+-   Die Warteschlangenklasse unterstützt eine FIFO-Datenstruktur (First In – First Out). Eine gute Analogie, um sich dies zu merken, sind Personen, die an einem Bankschalter anstehen. Elemente (Personen) können am Ende der Schlange hinzugefügt werden und vom Anfang der Schlange entfernt werden. Sowohl der Anfang als auch das Ende einer Schlange können überprüft werden. Die in dieser Weise umgesetzte Beschränkung, nur auf das vorderste und das hinterste Element zugreifen zu können, ist der Grund für das Verwenden der Warteschlangenklasse.  
   
--   The [priority_queue class](../standard-library/priority-queue-class.md) orders its elements so that the largest element is always at the top position. It supports insertion of an element and the inspection and removal of the top element. A good analogue to keep in mind would be people lining up where they are arranged by age, height, or some other criterion.  
+-   In der [Warteschlangenklasse mit hoher Priorität](../standard-library/priority-queue-class.md) sind deren Elemente so sortiert, dass sich das größte Element immer an der obersten Position befindet. Die Klasse unterstützt Einfügen eines Elements sowie die Prüfung und Entfernung des obersten Elements. Eine gute Analogie, um sich dies zu merken, sind Personen, die in einer Schlange stehen, in der sie nach Alter, Größe oder einem anderen Kriterium angeordnet sind.  
   
-### <a name="constructors"></a>Constructors  
-  
-|||  
-|-|-|  
-|[queue](#queue)|Constructs a `queue` that is empty or that is a copy of a base container object.|  
-  
-### <a name="typedefs"></a>Typedefs  
+### <a name="constructors"></a>Konstruktoren  
   
 |||  
 |-|-|  
-|[container_type](#container_type)|A type that provides the base container to be adapted by the `queue`.|  
-|[size_type](#size_type)|An unsigned integer type that can represent the number of elements in a `queue`.|  
-|[value_type](#value_type)|A type that represents the type of object stored as an element in a `queue`.|  
+|[Warteschlange](#queue)|Erstellt ein `queue`-Objekt, das leer oder eine Kopie eines Basiscontainerobjekts ist.|  
   
-### <a name="member-functions"></a>Member Functions  
+### <a name="typedefs"></a>TypeDefs  
   
 |||  
 |-|-|  
-|[back](#back)|Returns a reference to the last and most recently added element at the back of the `queue`.|  
-|[empty](#empty)|Tests if the `queue` is empty.|  
-|[front](#front)|Returns a reference to the first element at the front of the `queue`.|  
-|[pop](#pop)|Removes an element from the front of the `queue`.|  
-|[push](#push)|Adds an element to the back of the `queue`.|  
-|[size](#size)|Returns the number of elements in the `queue`.|  
+|[container_type](#container_type)|Ein Typ, der den Basiscontainer bereitstellt, der durch `queue` angepasst werden soll.|  
+|[size_type](#size_type)|Eine Ganzzahltyp ohne Vorzeichen, der die Anzahl von Elementen in `queue` darstellen kann.|  
+|[value_type](#value_type)|Ein Typ, der den Typ des Objekts angibt, das in einem `queue`-Objekt als Element gespeichert wird.|  
   
-## <a name="requirements"></a>Requirements  
+### <a name="member-functions"></a>Memberfunktionen  
+  
+|||  
+|-|-|  
+|[Rückseite](#back)|Gibt ein Verweis auf das letzte und das zuletzt hinzugefügte Element auf der Rückseite des `queue` zurück.|  
+|[leer](#empty)|Testet, ob das `queue`-Objekt ist leer.|  
+|[Vorderseite](#front)|Gibt einen Verweis auf das erste Element auf der Vorderseite von `queue` zurück.|  
+|[pop](#pop)|Entfernt ein Element vom Anfang der `queue`.|  
+|[push](#push)|Fügt am Ende der `queue` ein Element hinzu.|  
+|[size](#size)|Gibt die Anzahl von Elementen in der `queue` zurück.|  
+  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<queue>  
   
  **Namespace:** std  
   
-##  <a name="back"></a>  queue::back  
- Returns a reference to the last and most recently added element at the back of the queue.  
+##  <a name="back"></a> queue::back  
+ Gibt einen Verweis auf das letzte und das zuletzt hinzugefügte Element auf der Rückseite der Warteschlange zurück.  
   
 ```  
 reference back();
@@ -127,15 +120,15 @@ reference back();
 const_reference back() const;
 ```  
   
-### <a name="return-value"></a>Return Value  
- The last element of the queue. If the queue is empty, the return value is undefined.  
+### <a name="return-value"></a>Rückgabewert  
+ Das letzte Element der Warteschlange. Wenn die Warteschlange leer ist, ist der Rückgabewert nicht definiert.  
   
-### <a name="remarks"></a>Remarks  
- If the return value of **back** is assigned to a `const_reference`, the queue object cannot be modified. If the return value of **back** is assigned to a **reference**, the queue object can be modified.  
+### <a name="remarks"></a>Hinweise  
+ Wenn der Rückgabewert von **back** einem `const_reference` zugewiesen wird, kann das Warteschlangenobjekt nicht geändert werden. Wenn der Rückgabewert von **back** einer **Referenz** zugewiesen wird, kann das Warteschlangenobjekt geändert werden.  
   
- When compiled by using [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) defined as 1 or 2, a runtime error will occur if you attempt to access an element in an empty queue.  See [Checked Iterators](../standard-library/checked-iterators.md) for more information.  
+ Wenn [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) beim Kompilieren als 1 oder 2 definiert ist, tritt beim Zugriff auf ein Element in einer leeren Warteschlange ein Laufzeitfehler auf.  Weitere Informationen finden Sie unter [Überprüfte Iteratoren](../standard-library/checked-iterators.md) .  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // queue_back.cpp  
@@ -161,32 +154,32 @@ int main( )
 }  
 ```  
   
-##  <a name="container_type"></a>  queue::container_type  
- A type that provides the base container to be adapted.  
+##  <a name="container_type"></a> queue::container_type  
+ Ein Typ, der den anzupassenden Basiscontainer bereitstellt.  
   
 ```  
 typedef Container container_type;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- The type is a synonym for the template parameter `Container`. Two C++ Standard Library sequence container classes — the list class and the default deque class — meet the requirements to be used as the base container for a queue object. User-defined types satisfying the requirements may also be used.  
+### <a name="remarks"></a>Hinweise  
+ Der Type stellt ein Synonym für den Vorlagenparameter `Container` dar. Zwei Sequenzcontainerklassen der C++-Standardbibliothek — die Listklasse und die Standarddoppelschlangenklasse — erfüllen die Anforderungen, um als Basiscontainer für ein Warteschlangenobjekt verwendet zu werden. Benutzerdefinierte Typen, die diese Anforderung erfüllen, können auch verwendet werden.  
   
- For more information on `Container`, see the Remarks section of the [queue Class](../standard-library/queue-class.md) topic.  
+ Weitere Informationen zu `Container` finden Sie im Abschnitt „Hinweise“ des Themas [Warteschlangenklasse](../standard-library/queue-class.md).  
   
-### <a name="example"></a>Example  
-  See the example for [queue](#queue) for an example of how to declare and use `container_type`.  
+### <a name="example"></a>Beispiel  
+  Im Beispiel für [Warteschlange](#queue) wird verdeutlicht, wie ein `container_type` deklariert und verwendet wird.  
   
-##  <a name="empty"></a>  queue::empty  
- Tests if a queue is empty.  
+##  <a name="empty"></a> queue::empty  
+ Testet, ob eine Warteschlange leer ist.  
   
 ```  
 bool empty() const;
 ```  
   
-### <a name="return-value"></a>Return Value  
- **true** if the queue is empty; **false** if the queue is nonempty.  
+### <a name="return-value"></a>Rückgabewert  
+ **TRUE**, wenn die Warteschlange leer ist; **FALSE**, wenn die Warteschlange nicht leer ist.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // queue_empty.cpp  
@@ -220,8 +213,8 @@ The queue q1 is not empty.
 The queue q2 is empty.  
 ```  
   
-##  <a name="front"></a>  queue::front  
- Returns a reference to the first element at the front of the queue.  
+##  <a name="front"></a> queue::front  
+ Gibt einen Verweis auf das erste Element auf der Vorderseite einer Warteschlange zurück.  
   
 ```  
 reference front();
@@ -229,17 +222,17 @@ reference front();
 const_reference front() const;
 ```  
   
-### <a name="return-value"></a>Return Value  
- The first element of the queue. If the queue is empty, the return value is undefined.  
+### <a name="return-value"></a>Rückgabewert  
+ Das erste Element der Warteschlange. Wenn die Warteschlange leer ist, ist der Rückgabewert nicht definiert.  
   
-### <a name="remarks"></a>Remarks  
- If the return value of `front` is assigned to a `const_reference`, the queue object cannot be modified. If the return value of `front` is assigned to a **reference**, the queue object can be modified.  
+### <a name="remarks"></a>Hinweise  
+ Wenn der Rückgabewert von `front` einem `const_reference` zugewiesen wird, kann das Warteschlangenobjekt nicht geändert werden. Wenn der Rückgabewert von `front` einer**Referenz** zugewiesen wird, kann das Warteschlangenobjekt geändert werden.  
   
- The member function returns a **reference** to the first element of the controlled sequence, which must be nonempty.  
+ Die Memberfunktion gibt einen **Verweis** auf das erste Element der kontrollierten Sequenz zurück, das nicht leer sein darf.  
   
- When compiled by using [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) defined as 1 or 2, a runtime error will occur if you attempt to access an element in an empty queue.  See [Checked Iterators](../standard-library/checked-iterators.md) for more information.  
+ Wenn [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) beim Kompilieren als 1 oder 2 definiert ist, tritt beim Zugriff auf ein Element in einer leeren Warteschlange ein Laufzeitfehler auf.  Weitere Informationen finden Sie unter [Überprüfte Iteratoren](../standard-library/checked-iterators.md) .  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // queue_front.cpp  
@@ -269,17 +262,17 @@ int main() {
 }  
 ```  
   
-##  <a name="pop"></a>  queue::pop  
- Removes an element from the front of the queue.  
+##  <a name="pop"></a> queue::pop  
+ Entfernt ein Element von der Vorderseite der Warteschlange.  
   
 ```  
 void pop();
 ```  
   
-### <a name="remarks"></a>Remarks  
- The queue must be nonempty to apply the member function. The top of the queue is the position occupied by the most recently added element and is the last element at the end of the container.  
+### <a name="remarks"></a>Hinweise  
+ Die Warteschlange darf nicht leer sein, damit die Memberfunktion angewendet wird. Am Anfang der Warteschlange befindet sich das zuletzt hinzugefügte Element und es ist das letzte Element am Ende des Containers.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // queue_pop.cpp  
@@ -323,21 +316,21 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.  
 ```  
   
-##  <a name="push"></a>  queue::push  
- Adds an element to the back of the queue.  
+##  <a name="push"></a> queue::push  
+ Fügt am Ende der Warteschlange ein Element hinzu.  
   
 ```  
 void push(const Type& val);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `val`  
- The element added to the back of the queue.  
+ Das Element, das am Ende der Warteschlange hinzugefügt wird.  
   
-### <a name="remarks"></a>Remarks  
- The back of the queue is the position occupied by the most recently added element and is the last element at the end of the container.  
+### <a name="remarks"></a>Hinweise  
+ An der Rückseite der Warteschlange befinden sich die zuletzt hinzugefügten Elemente und das letzte Element am Ende des Containers.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // queue_push.cpp  
@@ -369,8 +362,8 @@ The queue length is 3.
 The element at the front of the queue is 10.  
 ```  
   
-##  <a name="queue"></a>  queue::queue  
- Constructs a queue that is empty or that is a copy of a base container object.  
+##  <a name="queue"></a> queue::queue  
+ Erstellt eine Warteschlange, die leer oder eine Kopie eines Basiscontainerobjekts ist.  
   
 ```  
 queue();
@@ -378,14 +371,14 @@ queue();
 explicit queue(const container_type& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `right`  
- The **const** container of which the constructed queue is to be a copy.  
+ Der **const**-Container, dessen Kopie die erstellte Warteschlange sein soll.  
   
-### <a name="remarks"></a>Remarks  
- The default base container for queue is deque. You can also specify list as a base container, but you cannot specify vector, because it lacks the required `pop_front` member function.  
+### <a name="remarks"></a>Hinweise  
+ Die Basisstandardcontainer für die Warteschlange ist die Doppelschlange. Sie können auch die Liste als Basiscontainer angeben, Sie können jedoch keinen Vektor angeben, da die erforderliche `pop_front`-Memberfunktion fehlt.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // queue_queue.cpp  
@@ -433,17 +426,17 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.  
 ```  
   
-##  <a name="size"></a>  queue::size  
- Returns the number of elements in the queue.  
+##  <a name="size"></a> queue::size  
+ Gibt die Anzahl der Elemente in der Warteschlange zurück.  
   
 ```  
 size_type size() const;
 ```  
   
-### <a name="return-value"></a>Return Value  
- The current length of the queue.  
+### <a name="return-value"></a>Rückgabewert  
+ Die aktuelle Länge der Warteschlange.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // queue_size.cpp  
@@ -472,30 +465,30 @@ The queue length is 1.
 The queue length is now 2.  
 ```  
   
-##  <a name="size_type"></a>  queue::size_type  
- An unsigned integer type that can represent the number of elements in a queue.  
+##  <a name="size_type"></a> queue::size_type  
+ Ein Ganzzahltyp ohne Vorzeichen, der die Anzahl von Elementen in einer Warteschlange darstellen kann.  
   
 ```  
 typedef typename Container::size_type size_type;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- The type is a synonym for the `size_type` of the base container adapted by the queue.  
+### <a name="remarks"></a>Hinweise  
+ Der Typ ist ein Synonym für das `size_type` des Basiscontainers, der von der Warteschlange angepasst wurde.  
   
-### <a name="example"></a>Example  
-  See the example for [queue::front](#front) for an example of how to declare and use `size_type`.  
+### <a name="example"></a>Beispiel  
+  Im Beispiel für [queue::front](#front) wird verdeutlicht, wie ein `size_type` deklariert und verwendet wird.  
   
-##  <a name="value_type"></a>  queue::value_type  
- A type that represents the type of object stored as an element in a queue.  
+##  <a name="value_type"></a> queue::value_type  
+ Ein Typ, der den Objekttyp angibt, der als Element in einer Warteschlange gespeichert wird.  
   
 ```  
 typedef typename Container::value_type value_type;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- The type is a synonym for the `value_type` of the base container adapted by the queue.  
+### <a name="remarks"></a>Hinweise  
+ Der Typ ist ein Synonym für das `value_type` des Basiscontainers, der von der Warteschlange angepasst wurde.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // queue_value_type.cpp  
@@ -525,8 +518,8 @@ The value_type is AnInt = 69
 The element at the front of the queue is 69.  
 ```  
   
-## <a name="see-also"></a>See Also  
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)
 
 

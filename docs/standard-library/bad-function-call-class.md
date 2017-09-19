@@ -1,5 +1,5 @@
 ---
-title: bad_function_call Class | Microsoft Docs
+title: bad_function_call-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- bad_function_call
 - functional/std::bad_function_call
 dev_langs:
 - C++
@@ -33,15 +34,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 190102376f909550e887482434268afed6fe547b
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
+ms.openlocfilehash: 89ec0f614151128decfbc2c0a451ca9f55f4e85e
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="badfunctioncall-class"></a>bad_function_call Class
-Reports a bad function call.  
+# <a name="badfunctioncall-class"></a>bad_function_call-Klasse
+Meldet einen ungültigen Funktionsaufruf.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,6 +52,6 @@ class bad_function_call
  };  
 ```  
   
-## <a name="remarks"></a>Remarks  
- The class describes an exception thrown to indicate that a call to `operator()` on a [function Class](../standard-library/function-class.md)
+## <a name="remarks"></a>Hinweise  
+ Die Klasse beschreibt eine Ausnahme, die ausgelöst wurde, um anzugeben, dass ein Aufruf von `operator()` in einer [function-Klasse](../standard-library/function-class.md) durchgeführt wurde.
 

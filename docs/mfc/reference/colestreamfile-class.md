@@ -1,5 +1,5 @@
 ---
-title: COleStreamFile Class | Microsoft Docs
+title: COleStreamFile Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,13 +21,13 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- COleStreamFile [MFC], COleStreamFile
-- COleStreamFile [MFC], Attach
-- COleStreamFile [MFC], CreateMemoryStream
-- COleStreamFile [MFC], CreateStream
-- COleStreamFile [MFC], Detach
-- COleStreamFile [MFC], GetStream
-- COleStreamFile [MFC], OpenStream
+- data streams [C++]
+- streams [C++], OLE
+- data streams [C++], OLE
+- structured storage in OLE
+- OLE structured storage [C++]
+- OLE [C++], streams of data
+- COleStreamFile class
 ms.assetid: e4f93698-e17c-4a18-a7c0-4b4df8eb4d93
 caps.latest.revision: 22
 author: mikeblome
@@ -47,15 +47,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: c9ddf0128a69869ea90d151c54fc4fa2d8a613d8
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 0840d365f4179da0ad680256688eaf9484cb3cd8
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="colestreamfile-class"></a>COleStreamFile Class
-Represents a stream of data ( `IStream`) in a compound file as part of OLE Structured Storage.  
+# <a name="colestreamfile-class"></a>COleStreamFile-Klasse
+Stellt einen Datenstrom ( `IStream`) in einer Verbunddatei als Teil des OLE Structured Storage.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -63,97 +63,97 @@ Represents a stream of data ( `IStream`) in a compound file as part of OLE Struc
 class COleStreamFile : public CFile  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Mitglieder  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[COleStreamFile::COleStreamFile](#colestreamfile)|Constructs a `COleStreamFile` object.|  
+|[COleStreamFile::COleStreamFile](#colestreamfile)|Erstellt ein `COleStreamFile`-Objekt.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[COleStreamFile::Attach](#attach)|Associates a stream with the object.|  
-|[COleStreamFile::CreateMemoryStream](#creatememorystream)|Creates a stream from global memory and associates it with the object.|  
-|[COleStreamFile::CreateStream](#createstream)|Creates a stream and associates it with the object.|  
-|[COleStreamFile::Detach](#detach)|Disassociates the stream from the object.|  
-|[COleStreamFile::GetStream](#getstream)|Returns the current stream.|  
-|[COleStreamFile::OpenStream](#openstream)|Safely opens a stream and associates it with the object.|  
+|[COleStreamFile::Attach](#attach)|Ordnet einen Stream mit dem Objekt.|  
+|[COleStreamFile::CreateMemoryStream](#creatememorystream)|Erstellt einen Datenstrom aus dem globalen Arbeitsspeicher und ordnet dem Objekt.|  
+|[COleStreamFile::CreateStream](#createstream)|Erstellt einen Datenstrom und ordnet dem Objekt.|  
+|[COleStreamFile::Detach](#detach)|Hebt die Zuordnung des Streams, aus dem Objekt.|  
+|[COleStreamFile::GetStream](#getstream)|Gibt den aktuellen Stream zurück.|  
+|[COleStreamFile::OpenStream](#openstream)|Sicher öffnet einen Stream, und ordnet es dem Objekt.|  
   
-## <a name="remarks"></a>Remarks  
- An `IStorage` object must exist before the stream can be opened or created unless it is a memory stream.  
+## <a name="remarks"></a>Hinweise  
+ Ein `IStorage` Objekt muss vorhanden sein, bevor der Stream geöffnet oder erstellt, wenn es sich um einen Speicherstream ist werden kann.  
   
- `COleStreamFile` objects are manipulated exactly like [CFile](../../mfc/reference/cfile-class.md) objects.  
+ `COleStreamFile`Objekte werden genau wie bearbeitet [CFile](../../mfc/reference/cfile-class.md) Objekte.  
   
- For more information about manipulating streams and storages, see the article [Containers: Compound Files](../../mfc/containers-compound-files.md)..  
+ Weitere Informationen zum Bearbeiten von Datenströmen und speichern können, finden Sie im Artikel [Container: Verbunddateien](../../mfc/containers-compound-files.md)...  
   
- For more information, see [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) and [IStorage](http://msdn.microsoft.com/library/windows/desktop/aa380015) in the Windows SDK.  
+ Weitere Informationen finden Sie unter [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) und [IStorage](http://msdn.microsoft.com/library/windows/desktop/aa380015) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
- [CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
+ [Von CObject](../../mfc/reference/cobject-class.md)  
   
  [CFile](../../mfc/reference/cfile-class.md)  
   
  `COleStreamFile`  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxole.h  
   
-##  <a name="attach"></a>  COleStreamFile::Attach  
- Associates the supplied OLE stream with the `COleStreamFile` object.  
+##  <a name="attach"></a>COleStreamFile::Attach  
+ Ordnet den angegebenen OLE-Stream mit der `COleStreamFile` Objekt.  
   
 ```  
 void Attach(LPSTREAM lpStream);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `lpStream`  
- Points to the OLE stream ( `IStream`) to be associated with the object. Cannot be **NULL**.  
+ Verweist auf die OLE-Datenstrom ( `IStream`) mit dem Objekt zugeordnet werden soll. Nicht **NULL**.  
   
-### <a name="remarks"></a>Remarks  
- The object must not already be associated with an OLE stream.  
+### <a name="remarks"></a>Hinweise  
+ Das Objekt darf nicht bereits ein OLE-Datenstrom zugeordnet werden.  
   
- For more information, see [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) in the Windows SDK.  
+ Weitere Informationen finden Sie unter [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="colestreamfile"></a>  COleStreamFile::COleStreamFile  
- Creates a `COleStreamFile` object.  
+##  <a name="colestreamfile"></a>COleStreamFile::COleStreamFile  
+ Erstellt ein `COleStreamFile`-Objekt.  
   
 ```  
 COleStreamFile(LPSTREAM lpStream = NULL);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `lpStream`  
- Pointer to the OLE stream to be associated with the object.  
+ Zeiger auf die OLE-Stream mit dem Objekt zugeordnet werden soll.  
   
-### <a name="remarks"></a>Remarks  
- If `lpStream` is **NULL**, the object is not associated with an OLE stream, otherwise, the object is associated with the supplied OLE stream.  
+### <a name="remarks"></a>Hinweise  
+ Wenn `lpStream` ist **NULL**, das Objekt ist nicht mit ein OLE-Datenstrom verknüpft, das Objekt ist, andernfalls der angegebenen OLE-Datenstrom zugeordnet.  
   
- For more information, see [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) in the Windows SDK.  
+ Weitere Informationen finden Sie unter [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="creatememorystream"></a>  COleStreamFile::CreateMemoryStream  
- Safely creates a new stream out of global, shared memory where a failure is a normal, expected condition.  
+##  <a name="creatememorystream"></a>COleStreamFile::CreateMemoryStream  
+ Sichere erstellt einen neuen Stream nicht genügend globale, gemeinsam genutzte Arbeitsspeicher, in dem ein Fehler für eine normale, erwartete Bedingung ist.  
   
 ```  
 BOOL CreateMemoryStream(CFileException* pError = NULL);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `pError`  
- Points to a [CFileException](../../mfc/reference/cfileexception-class.md) object or **NULL** that indicates the completion status of the create operation. Supply this parameter if you want to monitor possible exceptions generated by attempting to create the stream.  
+ Verweist auf eine [CFileException](../../mfc/reference/cfileexception-class.md) Objekt oder **NULL** , die den Status von den Vorgang angibt. Geben Sie diesen Parameter, wenn Sie Überwachen mögliche Ausnahmen generiert, wird versucht, den Stream erstellen möchten.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if the stream is created successfully; otherwise 0.  
+### <a name="return-value"></a>Rückgabewert  
+ Wert ungleich NULL, wenn der Stream erfolgreich erstellt wurde; andernfalls 0.  
   
-### <a name="remarks"></a>Remarks  
- The memory is allocated by the OLE subsystem.  
+### <a name="remarks"></a>Hinweise  
+ Der Arbeitsspeicher wird durch das OLE-Subsystem zugeordnet.  
   
- For more information, see [CreateStreamOnHGlobal](http://msdn.microsoft.com/library/windows/desktop/aa378980) in the Windows SDK.  
+ Weitere Informationen finden Sie unter [CreateStreamOnHGlobal](http://msdn.microsoft.com/library/windows/desktop/aa378980) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="createstream"></a>  COleStreamFile::CreateStream  
- Safely creates a new stream in the supplied storage object where a failure is a normal, expected condition.  
+##  <a name="createstream"></a>COleStreamFile::CreateStream  
+ Sichere erstellt einen neuen Stream im angegebenen Speicherobjekt, in dem ein Fehler für eine normale, erwartete Bedingung ist.  
   
 ```  
 BOOL CreateStream(
@@ -163,54 +163,54 @@ BOOL CreateStream(
     CFileException* pError = NULL);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `lpStorage`  
- Points to the OLE storage object that contains the stream to be created. Cannot be **NULL**.  
+ Verweist auf das OLE-Speicher-Objekt, das den zu erstellenden Datenstroms enthält. Nicht **NULL**.  
   
  `lpszStreamName`  
- Name of the stream to be created. Cannot be **NULL**.  
+ Der Name des Datenstroms erstellt werden. Nicht **NULL**.  
   
  `nOpenFlags`  
- Access mode to use when opening the stream. Exclusive, read/write, and create modes are used by default. For a complete list of the available modes, see [CFile::CFile](../../mfc/reference/cfile-class.md#cfile).  
+ Der Zugriffsmodus zu verwenden, wenn der Stream geöffnet. Exklusive, Lese-/Schreibzugriff und Erstellen von Modi werden standardmäßig verwendet. Eine vollständige Liste der verfügbaren, finden Sie unter [CFile::CFile](../../mfc/reference/cfile-class.md#cfile).  
   
  `pError`  
- Points to a [CFileException](../../mfc/reference/cfileexception-class.md) object or **NULL**. Supply this parameter if you want to monitor possible exceptions generated by attempting to create the stream.  
+ Verweist auf eine [CFileException](../../mfc/reference/cfileexception-class.md) Objekt oder **NULL**. Geben Sie diesen Parameter, wenn Sie Überwachen mögliche Ausnahmen generiert, wird versucht, den Stream erstellen möchten.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if the stream is created successfully; otherwise 0.  
+### <a name="return-value"></a>Rückgabewert  
+ Wert ungleich NULL, wenn der Stream erfolgreich erstellt wurde; andernfalls 0.  
   
-### <a name="remarks"></a>Remarks  
- A file exception will be thrown if the open fails and `pError` is not **NULL**.  
+### <a name="remarks"></a>Hinweise  
+ Eine Datei-Ausnahme wird ausgelöst, wenn die Open schlägt fehl, und `pError` nicht **NULL**.  
   
- For more information, see [IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) in the Windows SDK.  
+ Weitere Informationen finden Sie unter [IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="detach"></a>  COleStreamFile::Detach  
- Disassociates the stream from the object without closing the stream.  
+##  <a name="detach"></a>COleStreamFile::Detach  
+ Hebt die Zuordnung des Streams, aus das Objekt ohne diesen zu schließen.  
   
 ```  
 LPSTREAM Detach();
 ```  
   
-### <a name="return-value"></a>Return Value  
- A pointer to the stream ( `IStream`) that was associated with the object.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Zeiger auf den Datenstrom ( `IStream`), die dem Objekt zugeordnet wurde.  
   
-### <a name="remarks"></a>Remarks  
- The stream must be closed in some other fashion before the program terminates.  
+### <a name="remarks"></a>Hinweise  
+ Der Stream muss auf eine andere Art geschlossen werden, bevor das Programm beendet wird.  
   
- For more information, see [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) in the Windows SDK.  
+ Weitere Informationen finden Sie unter [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="getstream"></a>  COleStreamFile::GetStream  
- Call this function to return a pointer to current stream.  
+##  <a name="getstream"></a>COleStreamFile::GetStream  
+ Rufen Sie diese Funktion, um einen Zeiger auf den aktuellen Stream zurückzugeben.  
   
 ```  
 IStream* GetStream() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A pointer to the current stream interface ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)).  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Zeiger auf den aktuellen Stream-Schnittstelle ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)).  
   
-##  <a name="openstream"></a>  COleStreamFile::OpenStream  
- Opens an existing stream.  
+##  <a name="openstream"></a>COleStreamFile::OpenStream  
+ Öffnet einen vorhandenen Stream.  
   
 ```  
 BOOL OpenStream(
@@ -220,30 +220,30 @@ BOOL OpenStream(
     CFileException* pError = NULL);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `lpStorage`  
- Points to the OLE storage object that contains the stream to be opened. Cannot be **NULL**.  
+ Verweist auf das OLE-Speicher-Objekt, das den Stream geöffnet werden, enthält. Nicht **NULL**.  
   
  `lpszStreamName`  
- Name of the stream to be opened. Cannot be **NULL**.  
+ Der Name des Datenstroms geöffnet werden. Nicht **NULL**.  
   
  `nOpenFlags`  
- Access mode to use when opening the stream. Exclusive and read/write modes are used by default. For the complete list of the available modes, see [CFile::CFile](../../mfc/reference/cfile-class.md#cfile).  
+ Der Zugriffsmodus zu verwenden, wenn der Stream geöffnet. Exklusive und Lese-/Schreibzugriff Modi werden standardmäßig verwendet. Eine vollständige Liste der verfügbaren Modi finden Sie unter [CFile::CFile](../../mfc/reference/cfile-class.md#cfile).  
   
  `pError`  
- Points to a [CFileException](../../mfc/reference/cfileexception-class.md) object or **NULL**. Supply this parameter if you want to monitor possible exceptions generated by attempting to open the stream.  
+ Verweist auf eine [CFileException](../../mfc/reference/cfileexception-class.md) Objekt oder **NULL**. Geben Sie diesen Parameter, wenn Sie mögliche Ausnahmen generiert, indem Sie versuchen, den Stream geöffnet zu überwachen möchten.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if the stream is opened successfully; otherwise 0.  
+### <a name="return-value"></a>Rückgabewert  
+ Wert ungleich NULL, wenn der Stream erfolgreich geöffnet wird; andernfalls 0.  
   
-### <a name="remarks"></a>Remarks  
- A file exception will be thrown if the open fails and `pError` is not **NULL**.  
+### <a name="remarks"></a>Hinweise  
+ Eine Datei-Ausnahme wird ausgelöst, wenn die Open schlägt fehl, und `pError` nicht **NULL**.  
   
- For more information, see [IStorage::OpenStream](http://msdn.microsoft.com/library/windows/desktop/aa380025) in the Windows SDK.  
+ Weitere Informationen finden Sie unter [IStorage::OpenStream](http://msdn.microsoft.com/library/windows/desktop/aa380025) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-## <a name="see-also"></a>See Also  
- [CFile Class](../../mfc/reference/cfile-class.md)   
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>Siehe auch  
+ [CFile-Klasse](../../mfc/reference/cfile-class.md)   
+ [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: Input Stream Member Functions | Microsoft Docs
+title: Eingabestream-Memberfunktionen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,6 +13,7 @@ dev_langs:
 helpviewer_keywords:
 - input stream objects
 - input streams, member functions
+f1_keywords: []
 ms.assetid: b4b9465d-0da9-4ccf-859d-72a68418982e
 caps.latest.revision: 7
 author: corob-msft
@@ -32,34 +33,34 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: d3f69e0bfc0aadc8f0985e0ffb8130f2c18446fe
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 04820d66b272d284940971d1661b4c41f116aa2f
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="input-stream-member-functions"></a>Input Stream Member Functions
-Input stream member functions are used for disk input. The member functions include:  
+# <a name="input-stream-member-functions"></a>Eingabestream-Memberfunktionen
+Eingabestream-Memberfunktionen werden für Datenträgereingaben verwendet. Diese Memberfunktionen umfassen:  
   
-- [The open Function for Input Streams](#vclrftheopenfunctionforinputstreamsanchor11)  
+- [Die open-Funktion für die Eingabestreams](#vclrftheopenfunctionforinputstreamsanchor11)  
   
-- [The get](#vclrfthegetfunctionanchor12)  
+- [Die get](#vclrfthegetfunctionanchor12)  
   
-- [The getline](#vclrfthegetlinefunctionanchor13)  
+- [Die getline](#vclrfthegetlinefunctionanchor13)  
   
-- [The read](#vclrfthereadfunctionanchor14)  
+- [Die schreibgeschützte](#vclrfthereadfunctionanchor14)  
   
-- [The seekg and tellg Functions](#vclrftheseekgandtellgfunctionsanchor7)  
+- [Die seekg- und tellg-Funktionen](#vclrftheseekgandtellgfunctionsanchor7)  
   
-- [The close Function for Input Streams](#vclrftheclosefunctionforinputstreamsanchor15)  
+- [Die clos-Funktion für Eingabestreams](#vclrftheclosefunctionforinputstreamsanchor15)  
   
-##  <a name="vclrftheopenfunctionforinputstreamsanchor11"></a> The open Function for Input Streams  
- If you are using an input file stream (ifstream), you must associate that stream with a specific disk file. You can do this in the constructor, or you can use the **open** function. In either case, the arguments are the same.  
+##  <a name="vclrftheopenfunctionforinputstreamsanchor11"></a> Die open-Funktion für Eingabestreams  
+ Wenn Sie einen Eingabedateistream (ifstream) verwenden, müssen Sie den Stream einer bestimmten Datenträgerdatei zuordnen. Sie können das im Konstruktor machen, oder die **open**-Funktion verwenden. In beiden Fällen sind die Argumente gleich.  
   
- You generally specify an [ios_base::openmode](../standard-library/ios-base-class.md#openmode) flag when you open the file associated with an input stream (the default mode is **ios::in**). For a list of the **open_mode** flags, see [The open](#vclrftheopenfunctionforinputstreamsanchor11). The flags can be combined with the bitwise OR ( &#124; ) operator.  
+ In der Regel geben Sie ein [ios_base:: openmode](../standard-library/ios-base-class.md#openmode)-Flag an, wenn Sie die Datei öffnen, die einem Eingabestream (der Standardmodus ist **ios::in**) zugeordnet ist. Eine Liste der **Open_mode** Flags finden Sie unter [öffnen](#vclrftheopenfunctionforinputstreamsanchor11). Die Flags können mit dem bitweisen OR-Operator ( &#124; ) kombiniert werden.  
   
- To read a file, first use the **fail** member function to determine whether it exists:  
+ Um eine Datei zu lesen, verwenden Sie zuerst die **fail**-Memberfunktion, um zu bestimmen, ob sie vorhanden ist:  
   
 ```  
 istream ifile("FILENAME");
@@ -68,10 +69,10 @@ if (ifile.fail())
 // The file does not exist ...  
 ```  
   
-##  <a name="vclrfthegetfunctionanchor12"></a> The get
- The unformatted **get** member function works like the **>>** operator with two exceptions. First, the **get** function includes white-space characters, whereas the extractor excludes white space when the **skipws** flag is set (the default). Second, the **get** function is less likely to cause a tied output stream (`cout`, for example) to be flushed.  
+##  <a name="vclrfthegetfunctionanchor12"></a>Die get
+ Die unformatierte **get**-Memberfunktion funktioniert wie der **>>**-Operator, mit zwei Ausnahmen. Erstens enthält die **get**-Funktion Leerzeichen, wohingegen der Extraktor Leerzeichen ausschließt, wenn das **skipws**-Flag festgelegt ist (Standardwert). Zweitens wird die **get**-Funktion weniger wahrscheinlich dazu führen, dass ein gebundener Ausgabestream (z.B. `cout`) gelöscht wird.  
   
- A variation of the **get** function specifies a buffer address and the maximum number of characters to read. This is useful for limiting the number of characters sent to a specific variable, as this example shows:  
+ Eine Variante der **get**-Funktion gibt eine Pufferadresse und die maximale Anzahl zu lesender Zeichen an. Dies hilft dabei, die Anzahl der Zeichen einzuschränken, die zu einer bestimmten Variable gesendet werden, wie dieses Beispiel zeigt:  
   
 ```  
 // ioo_get_function.cpp  
@@ -90,22 +91,22 @@ int main()
 }  
 ```  
   
-### <a name="input"></a>Input  
+### <a name="input"></a>Eingabe  
   
 ```  
 1234  
 ```  
   
-### <a name="sample-output"></a>Sample Output  
+### <a name="sample-output"></a>Beispielausgabe  
   
 ```  
 1234  
 ```  
   
-##  <a name="vclrfthegetlinefunctionanchor13"></a> The getline
- The **getline** member function is similar to the **get** function. Both functions allow a third argument that specifies the terminating character for input. The default value is the newline character. Both functions reserve one character for the required terminating character. However, **get** leaves the terminating character in the stream and **getline** removes the terminating character.  
+##  <a name="vclrfthegetlinefunctionanchor13"></a>Die getline
+ Die **getline**-Memberfunktion ähnelt der **get**-Funktion. Beide Funktionen ermöglichen ein drittes Argument, das abschließende Zeichen für die Eingabe angibt. Der Standardwert ist das Zeilenumbruchzeichen. Beide Funktionen reservieren ein Zeichen für das benötigte abschließende Zeichen. Allerdings lässt **get** das abschließende Zeichen im Stream und **getline** entfernt das abschließende Zeichen.  
   
- The following example specifies a terminating character for the input stream:  
+ Im folgenden Beispiel wird ein abschließendes Zeichen für den Eingabestream angegeben:  
   
 ```  
 // getline_func.cpp  
@@ -122,16 +123,16 @@ int main( )
 }  
 ```  
   
-### <a name="input"></a>Input  
+### <a name="input"></a>Eingabe  
   
 ```  
 test  
 ```  
   
-##  <a name="vclrfthereadfunctionanchor14"></a> The read
- The **read** member function reads bytes from a file to a specified area of memory. The length argument determines the number of bytes read. If you do not include that argument, reading stops when the physical end of file is reached or, in the case of a text-mode file, when an embedded `EOF` character is read.  
+##  <a name="vclrfthereadfunctionanchor14"></a>Die schreibgeschützte
+ Die **read**-Memberfunktion liest Bytes aus einer Datei in einem angegebenen Speicherbereich. Das Längenargument bestimmt die Anzahl gelesener Bytes. Wenn Sie dieses Argument nicht einfügen, wird das Lesen beendet, sobald das physische Ende der Datei erreicht ist, oder, bei einer Textmodusdatei, wenn ein eingebettetes `EOF`-Zeichen gelesen wird.  
   
- This example reads a binary record from a payroll file into a structure:  
+ Dieses Beispiel liest einen binären Datensatz aus einer Lohnabrechnungsdatei in eine Struktur:  
   
 ```  
 #include <fstream>  
@@ -157,10 +158,10 @@ int main()
 }  
 ```  
   
- The program assumes that the data records are formatted exactly as specified by the structure with no terminating carriage-return or linefeed characters.  
+ Das Programm setzt voraus, dass die Datensätze formatiert sind, genau wie durch die Struktur ohne abschließendes Wagenrücklauf- oder Zeilenvorschubzeichen angegeben.  
   
-##  <a name="vclrftheseekgandtellgfunctionsanchor7"></a> The seekg and tellg Functions  
- Input file streams keep an internal pointer to the position in the file where data is to be read next. You set this pointer with the `seekg` function, as shown here:  
+##  <a name="vclrftheseekgandtellgfunctionsanchor7"></a> Die seekg- und tellg-Funktionen  
+ Eingabedatei-Streams behalten einen internen Zeiger auf der Position in der Datei, in der Daten als Nächstes gelesen werden. Legen Sie diesen Zeiger mit der `seekg`-Funktion fest, wie hier gezeigt:  
   
 ```  
 #include <iostream>  
@@ -186,9 +187,9 @@ int main( )
 }  
 ```  
   
- To use `seekg` to implement record-oriented data management systems, multiply the fixed-length record size by the record number to obtain the byte position relative to the end of the file, and then use the **get** object to read the record.  
+ Um `seekg` zu verwenden, damit datensatzorientierte Datenverwaltungssysteme implementiert werden, multiplizieren Sie die Datensatzgröße mit fester Länge durch die Datensatznummer zum Abrufen der Byte-Position relativ zum Ende der Datei, und verwenden Sie anschließend das **get**-Objekt zum Lesen des Datensatzes.  
   
- The `tellg` member function returns the current file position for reading. This value is of type `streampos`, a `typedef` defined in \<iostream>. The following example reads a file and displays messages showing the positions of spaces.  
+ Die `tellg`-Memberfunktion gibt die aktuelle Dateiposition zum Lesen zurück. Dieser Wert ist vom Typ `streampos`, ein `typedef` in \<iostream > definierter Wert. Das folgende Beispiel liest eine Datei und zeigt Meldungen an, die die Positionen der Leerzeichen zeigen.  
   
 ```  
 #include <fstream>  
@@ -213,10 +214,10 @@ int main( )
 }  
 ```  
   
-##  <a name="vclrftheclosefunctionforinputstreamsanchor15"></a> The close Function for Input Streams  
- The **close** member function closes the disk file associated with an input file stream and frees the operating system file handle. The [ifstream](../standard-library/basic-ifstream-class.md) destructor closes the file for you, but you can use the **close** function if you need to open another file for the same stream object.  
+##  <a name="vclrftheclosefunctionforinputstreamsanchor15"></a> Die close-Funktion für Eingabestreams  
+ Die **close**-Memberfunktion schließt die Datenträgerdatei, die einem Eingabedateistream zugeordnet ist, und gibt ein Betriebssystem-Dateihandle frei. Der [ifstream](../standard-library/basic-ifstream-class.md)-Destruktor schließt die Datei für Sie, aber Sie können die **close**-Funktion verwenden, wenn Sie eine andere Datei für das gleiche Streamobjekt öffnen müssen.  
   
-## <a name="see-also"></a>See Also  
- [Input Streams](../standard-library/input-streams.md)
+## <a name="see-also"></a>Siehe auch  
+ [Eingabestreams](../standard-library/input-streams.md)
 
 

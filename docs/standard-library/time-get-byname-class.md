@@ -1,5 +1,5 @@
 ---
-title: time_get_byname Class | Microsoft Docs
+title: time_get_byname-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- time_get_byname
 - xloctime/std::time_get_byname
 dev_langs:
 - C++
@@ -33,15 +34,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 4179ade157e45c6ba746a6c7cccaaa8ae44310fc
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 609bf85c8d56172f9498997e83740cf9620798dc
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="timegetbyname-class"></a>time_get_byname Class
-The derived template class describes an object that can serve as a locale facet of type `time_get`\<CharType, InputIterator>.  
+# <a name="timegetbyname-class"></a>time_get_byname-Klasse
+Die abgeleitete Vorlagenklasse beschreibt ein Objekt, das als Gebietsschemafacet vom Typ `time_get`\<CharType, InputIterator> dienen kann.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -64,23 +65,23 @@ protected:
 };
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
  `_Locname`  
- A named locale.  
+ Ein benanntes Gebietsschema.  
   
  `_Refs`  
- An initial reference count.  
+ Eine initiale Verweisanzahl.  
   
-## <a name="requirements"></a>Requirements  
- Its behavior is determined by the named locale `_Locname`. Each constructor initializes its base object with [time_get](../standard-library/time-get-class.md#time_get)\<CharType, InputIterator>( `_Refs`).  
+## <a name="requirements"></a>Anforderungen  
+ Das Verhalten wird durch das benannte Gebietsschema `_Locname` bestimmt. Alle Konstruktoren initialisieren ihr jeweiliges Basisobjekt mit [time_get](../standard-library/time-get-class.md#time_get)\<CharType, InputIterator>( `_Refs`).  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<locale>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>Siehe auch  
+ [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

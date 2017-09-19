@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonColorButton Class | Microsoft Docs
+title: Klasse CMFCRibbonColorButton | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,23 +31,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonColorButton [MFC], CMFCRibbonColorButton
-- CMFCRibbonColorButton [MFC], AddColorsGroup
-- CMFCRibbonColorButton [MFC], EnableAutomaticButton
-- CMFCRibbonColorButton [MFC], EnableOtherButton
-- CMFCRibbonColorButton [MFC], GetAutomaticColor
-- CMFCRibbonColorButton [MFC], GetColor
-- CMFCRibbonColorButton [MFC], GetColorBoxSize
-- CMFCRibbonColorButton [MFC], GetColumns
-- CMFCRibbonColorButton [MFC], GetHighlightedColor
-- CMFCRibbonColorButton [MFC], RemoveAllColorGroups
-- CMFCRibbonColorButton [MFC], SetColor
-- CMFCRibbonColorButton [MFC], SetColorBoxSize
-- CMFCRibbonColorButton [MFC], SetColorName
-- CMFCRibbonColorButton [MFC], SetColumns
-- CMFCRibbonColorButton [MFC], SetDocumentColors
-- CMFCRibbonColorButton [MFC], SetPalette
-- CMFCRibbonColorButton [MFC], UpdateColor
+- CMFCRibbonColorButton class
 ms.assetid: 6b4b4ee3-8cc0-41b4-a4eb-93e8847008e1
 caps.latest.revision: 36
 author: mikeblome
@@ -67,15 +51,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 5b5a35d73ae0680dbbd5ada9006c9c50202aff06
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 8cef76fd3518e1123cb9afd0c8cc2a39b2bff65c
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="cmfcribboncolorbutton-class"></a>CMFCRibbonColorButton Class
-The `CMFCRibbonColorButton` class implements a color button that you can add to a ribbon bar. The ribbon color button displays a drop-down menu that contains one or more color palettes.  
+# <a name="cmfcribboncolorbutton-class"></a>CMFCRibbonColorButton-Klasse
+Die `CMFCRibbonColorButton` -Klasse implementiert eine Farbenschaltfläche, die einer Menübandleiste hinzugefügt werden kann. Die Menüband-Farbenschaltfläche zeigt ein Dropdownmenü an, das eine oder mehrere Farbpaletten enthält.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -83,45 +67,45 @@ The `CMFCRibbonColorButton` class implements a color button that you can add to 
 class CMFCRibbonColorButton : public CMFCRibbonGallery  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Mitglieder  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[CMFCRibbonColorButton::CMFCRibbonColorButton](#cmfcribboncolorbutton)||  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCRibbonColorButton::AddColorsGroup](#addcolorsgroup)|Adds a group of colors to the regular color area.|  
-|[CMFCRibbonColorButton::EnableAutomaticButton](#enableautomaticbutton)|Specifies whether the **Automatic** button is enabled.|  
-|[CMFCRibbonColorButton::EnableOtherButton](#enableotherbutton)|Enables the **Other** button.|  
+|[CMFCRibbonColorButton::AddColorsGroup](#addcolorsgroup)|Fügt dem normalen Farbbereich eine Gruppe Farben hinzu.|  
+|[CMFCRibbonColorButton::EnableAutomaticButton](#enableautomaticbutton)|Gibt an, ob die Schaltfläche **Automatisch** aktiviert ist.|  
+|[CMFCRibbonColorButton::EnableOtherButton](#enableotherbutton)|Aktiviert die Schaltfläche **Weitere** .|  
 |[CMFCRibbonColorButton::GetAutomaticColor](#getautomaticcolor)||  
-|[CMFCRibbonColorButton::GetColor](#getcolor)|Returns the currently selected color.|  
-|[CMFCRibbonColorButton::GetColorBoxSize](#getcolorboxsize)|Returns the size of the color elements that appear on the color bar.|  
+|[CMFCRibbonColorButton::GetColor](#getcolor)|Gibt die aktuell ausgewählte Farbe zurück.|  
+|[CMFCRibbonColorButton::GetColorBoxSize](#getcolorboxsize)|Gibt die Größe der Farbelemente zurück, die in der Farbleiste angezeigt werden.|  
 |[CMFCRibbonColorButton::GetColumns](#getcolumns)||  
-|[CMFCRibbonColorButton::GetHighlightedColor](#gethighlightedcolor)|Returns the color of the currently selected element on the popup color palette.|  
-|[CMFCRibbonColorButton::RemoveAllColorGroups](#removeallcolorgroups)|Removes all color groups from the regular color area.|  
-|[CMFCRibbonColorButton::SetColor](#setcolor)|Selects a color from the regular color area.|  
-|[CMFCRibbonColorButton::SetColorBoxSize](#setcolorboxsize)|Sets the size of all the color elements that appear on the color bar.|  
+|[CMFCRibbonColorButton::GetHighlightedColor](#gethighlightedcolor)|Gibt die Farbe des aktuell in der Popup-Farbpalette ausgewählten Elements zurück.|  
+|[CMFCRibbonColorButton::RemoveAllColorGroups](#removeallcolorgroups)|Entfernt alle Farbgruppen aus dem normalen Farbbereich.|  
+|[CMFCRibbonColorButton::SetColor](#setcolor)|Wählt eine Farbe aus dem normalen Farbbereich aus.|  
+|[CMFCRibbonColorButton::SetColorBoxSize](#setcolorboxsize)|Legt die Größe aller Farbelemente fest, die in der Farbleiste angezeigt werden.|  
 |[CMFCRibbonColorButton::SetColorName](#setcolorname)||  
 |[CMFCRibbonColorButton::SetColumns](#setcolumns)||  
-|[CMFCRibbonColorButton::SetDocumentColors](#setdocumentcolors)|Specifies a list of RGB values to display in the document color area.|  
+|[CMFCRibbonColorButton::SetDocumentColors](#setdocumentcolors)|Gibt eine Liste mit RGB-Werten für die Anzeige im Farbbereich des Dokuments an.|  
 |[CMFCRibbonColorButton::SetPalette](#setpalette)||  
 |[CMFCRibbonColorButton::UpdateColor](#updatecolor)||  
   
-## <a name="remarks"></a>Remarks  
- The ribbon color button displays a color bar when a user presses it. By default, this color bar contains a color selection palette called the regular color area. Optionally, the color bar can display an **Automatic** button, which allows the user to select a default color, and an **Other** button, which displays a popup color palette that contains additional colors.  
+## <a name="remarks"></a>Hinweise  
+ Die Farbenschaltfläche im Menüband zeigt eine Farbleiste an, wenn ein Benutzer drauf drückt. Standardmäßig enthält diese Farbleiste eine Farbauswahlpalette, die als normaler Farbbereich bezeichnet wird. Optional kann die Farbleiste eine Schaltfläche **Automatisch** , die dem Benutzer die Auswahl einer Standardfarbe ermöglicht, und eine Schaltfläche **Weitere** anzeigen, die eine Popupfarbpalette anzeigt, die weitere Farben enthält.  
   
-## <a name="example"></a>Example  
- The following example demonstrates how to use various methods in the `CMFCRibbonColorButton` class. The example shows how to construct a `CMFCRibbonColorButton` object, set the large image, enable the **Automatic** button, enable the **Other** button, set the number of columns, set the size of all the color elements that appear on the color bar, add a group of colors to the regular color area, and specify a list of RGB values to display in the document color area. This code snippet is part of the [Draw Client sample](../../visual-cpp-samples.md).  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel veranschaulicht die Verwendung verschiedener Methoden in der `CMFCRibbonColorButton` -Klasse. Im Beispiel wird gezeigt, wie ein `CMFCRibbonColorButton` -Objekt konstruiert wird, das große Bild festgelegt wird, die Schaltfläche **Automatisch** aktiviert wird, die Schaltfläche **Weitere** aktiviert wird, die Spaltenanzahl festgelegt wird, die Größe aller Farbelemente festgelegt wird, die auf der Farbleiste angezeigt werden, dem normalen Farbbereich eine Gruppe Farben hinzugefügt wird, und eine Liste mit RGB-Werten für die Anzeige im Farbbereich des Dokuments angegeben wird. Dieser Codeausschnitt ist Teil der [zeichnen Clientbeispiel](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_DrawClient#3](../../mfc/reference/codesnippet/cpp/cmfcribboncolorbutton-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_DrawClient&3;](../../mfc/reference/codesnippet/cpp/cmfcribboncolorbutton-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
- [CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
+ [Von CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
   
@@ -131,11 +115,11 @@ class CMFCRibbonColorButton : public CMFCRibbonGallery
   
  [CMFCRibbonColorButton](../../mfc/reference/cmfcribboncolorbutton-class.md)  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxribboncolorbutton.h  
   
-##  <a name="addcolorsgroup"></a>  CMFCRibbonColorButton::AddColorsGroup  
- Adds a group of colors to the regular color area.  
+##  <a name="addcolorsgroup"></a>CMFCRibbonColorButton::AddColorsGroup  
+ Fügt dem normalen Farbbereich eine Gruppe Farben hinzu.  
   
 ```  
 void AddColorsGroup(
@@ -144,21 +128,21 @@ void AddColorsGroup(
     BOOL bContiguousColumns=FALSE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `lpszName`  
- The group name.  
+ Name der Gruppe.  
   
  [in] `lstColors`  
- The list of colors.  
+ Die Liste der Farben.  
   
  [in] `bContiguousColumns`  
- Controls how the color items are displayed in the group. If `TRUE`, the color items are drawn without a vertical spacing. If `FALSE`, the color items are drawn with a vertical spacing.  
+ Steuert, wie die Farbe Elemente in der Gruppe angezeigt werden. Wenn `TRUE`, die Farbe Elemente ohne einen vertikalen Abstand gezeichnet werden. Wenn `FALSE`, die Farbe Elemente mit einer vertikalen Abstand gezeichnet werden.  
   
-### <a name="remarks"></a>Remarks  
- Use this function to make the color pop-up display several groups of colors. You can control how the colors are displayed in group.  
+### <a name="remarks"></a>Hinweise  
+ Verwenden Sie diese Funktion, um die Farbe Popup wird werden mehrere Gruppen von Farben angezeigt. Sie können steuern, wie die Farben in Gruppe angezeigt werden.  
   
-##  <a name="cmfcribboncolorbutton"></a>  CMFCRibbonColorButton::CMFCRibbonColorButton  
- Constructs a `CMFCRibbonColorButton` object.  
+##  <a name="cmfcribboncolorbutton"></a>CMFCRibbonColorButton::CMFCRibbonColorButton  
+ Erstellt ein `CMFCRibbonColorButton`-Objekt.  
   
 ```  
 CMFCRibbonColorButton();
@@ -180,31 +164,31 @@ CMFCRibbonColorButton(
     COLORREF color = RGB(0, 0, 0));
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `nID`  
- Specifies the command ID of the command to execute when a user clicks the button.  
+ Gibt die Befehls-ID des Befehls ausführen, wenn ein Benutzer auf die Schaltfläche klickt.  
   
  [in] `lpszText`  
- Specifies the text to appear on the button.  
+ Gibt den Text auf der Schaltfläche angezeigt werden sollen.  
   
  [in] `nSmallImageIndex`  
- The zero-based index of the small image to appear on the button.  
+ Der nullbasierte Index des kleinen Bilds auf der Schaltfläche angezeigt werden.  
   
  [in] `color`  
- The color of the button (defaults to black).  
+ Die Farbe der Schaltfläche (standardmäßig Schwarz).  
   
  [in] `bSimpleButtonLook`  
- If `TRUE`, the button is drawn as a simple rectangle.  
+ Wenn `TRUE`, wird die Schaltfläche als einfaches Rechteck gezeichnet.  
   
  [in] `nLargeImageIndex`  
- The zero-based index of the large image to appear on the button.  
+ Der nullbasierte Index des großen Bilds auf der Schaltfläche angezeigt werden.  
   
-### <a name="return-value"></a>Return Value  
+### <a name="return-value"></a>Rückgabewert  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="enableautomaticbutton"></a>  CMFCRibbonColorButton::EnableAutomaticButton  
- Specifies whether the **Automatic** button is enabled.  
+##  <a name="enableautomaticbutton"></a>CMFCRibbonColorButton::EnableAutomaticButton  
+ Gibt an, ob die Schaltfläche **Automatisch** aktiviert ist.  
   
 ```  
 void EnableAutomaticButton(
@@ -216,27 +200,27 @@ void EnableAutomaticButton(
     BOOL bDrawBorder=FALSE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `lpszLabel`  
- The label for the **Automatic** button.  
+ Die Bezeichnung für die **automatische** Schaltfläche.  
   
  [in] `colorAutomatic`  
- An RGB value that specifies the **Automatic** button's default color.  
+ RGB-Wert, der angibt, die **automatische** Schaltfläche Standardfarbe.  
   
  [in] `bEnable`  
- `TRUE` if the **Automatic** button is enabled; `FALSE` if it is disabled.  
+ `TRUE`Wenn die **automatische** Schaltfläche ist aktiviert. `FALSE` , wenn er deaktiviert ist.  
   
  [in] `lpszToolTip`  
- The tooltip of the **Automatic** button.  
+ Die QuickInfo der **automatische** Schaltfläche.  
   
  [in] `bOnTop`  
- Specifies whether the **Automatic** button is at the top, before color palette.  
+ Gibt an, ob die **automatische** Schaltfläche befindet sich oben auf, bevor Sie Farbpalette.  
   
  [in] `bDrawBorder`  
- `TRUE` if the application draws a border around the color bar on the ribbon color button. Color bar displays the currently selected color. `FALSE` if the application does not draw a border  
+ `TRUE`Wenn die Anwendung einen Rahmen um die Farbleiste auf die Schaltfläche für die Multifunktionsleiste Farbe zeichnet. Farbleiste zeigt die aktuell ausgewählte Farbe. `FALSE`Wenn die Anwendung keinen Rahmen zeichnet  
   
-##  <a name="enableotherbutton"></a>  CMFCRibbonColorButton::EnableOtherButton  
- Enables the **Other** button.  
+##  <a name="enableotherbutton"></a>CMFCRibbonColorButton::EnableOtherButton  
+ Aktiviert die Schaltfläche **Weitere** .  
   
 ```  
 void EnableOtherButton(
@@ -244,102 +228,102 @@ void EnableOtherButton(
     LPCTSTR lpszToolTip=NULL);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `lpszLabel`  
- The button's label.  
+ Die Beschriftung der Schaltfläche.  
   
  `lpszToolTip`  
- The tooltip text for the **Other** button.  
+ Der QuickInfo-Text für die **andere** Schaltfläche.  
   
-### <a name="remarks"></a>Remarks  
- The **Other** button is the button that is displayed below the group of colors. When the user clicks the **Other** button, it displays a color dialog.  
+### <a name="remarks"></a>Hinweise  
+ Die **andere** Schaltfläche ist die Schaltfläche, die unterhalb der Gruppe von Farben angezeigt wird. Klickt der Benutzer die **andere** Schaltfläche ein Dialogfeld Farbe angezeigt.  
   
-##  <a name="getautomaticcolor"></a>  CMFCRibbonColorButton::GetAutomaticColor  
- Retrieves the current automatic-button color.  
+##  <a name="getautomaticcolor"></a>CMFCRibbonColorButton::GetAutomaticColor  
+ Ruft die aktuelle automatische Schaltfläche Farbe ab.  
   
 ```  
 COLORREF GetAutomaticColor() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- An RGB color value that represents the current automatic-button color.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein RGB-Farbwert, der die aktuelle automatische Schaltfläche Farbe darstellt.  
   
-### <a name="remarks"></a>Remarks  
- The automatic-button color is set by the `colorAutomatic` parameter passed to the `CMFCRibbonColorButton::EnableAutomaticButton` method.  
+### <a name="remarks"></a>Hinweise  
+ Die automatische Schaltflächenfarbe festgelegt ist, durch die `colorAutomatic` übergebene Parameter die `CMFCRibbonColorButton::EnableAutomaticButton` Methode.  
   
-##  <a name="getcolor"></a>  CMFCRibbonColorButton::GetColor  
- Returns the currently selected color.  
+##  <a name="getcolor"></a>CMFCRibbonColorButton::GetColor  
+ Gibt die aktuell ausgewählte Farbe zurück.  
   
 ```  
 COLORREF GetColor() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The color selected by clicking the button.  
+### <a name="return-value"></a>Rückgabewert  
+ Durch Klicken auf die Schaltfläche ausgewählte Farbe.  
   
-##  <a name="getcolorboxsize"></a>  CMFCRibbonColorButton::GetColorBoxSize  
- Returns the size of the color elements that appear on the color bar.  
+##  <a name="getcolorboxsize"></a>CMFCRibbonColorButton::GetColorBoxSize  
+ Gibt die Größe der Farbelemente zurück, die in der Farbleiste angezeigt werden.  
   
 ```  
 CSize GetColorBoxSize() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The size of the color buttons in the drop-down color palette.  
+### <a name="return-value"></a>Rückgabewert  
+ Die Größe der Schaltflächen Farbe in der Dropdown-Farben-Palette.  
   
-##  <a name="getcolumns"></a>  CMFCRibbonColorButton::GetColumns  
- Gets the number of items in a row of the ribbon color button’s gallery display.  
+##  <a name="getcolumns"></a>CMFCRibbonColorButton::GetColumns  
+ Ruft die Anzahl der Elemente in einer Zeile der Menüband-farbenschaltfläche-Katalog angezeigt.  
   
 ```  
 int GetColumns() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Returns the number of icons in each row.  
+### <a name="return-value"></a>Rückgabewert  
+ Gibt die Anzahl der Symbole in jeder Zeile zurück.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="gethighlightedcolor"></a>  CMFCRibbonColorButton::GetHighlightedColor  
- Returns the color of the currently selected element on the pop-up color palette.  
+##  <a name="gethighlightedcolor"></a>CMFCRibbonColorButton::GetHighlightedColor  
+ Gibt die Farbe des derzeit ausgewählten Elements auf der Farbpalette die Farbe zurück.  
   
 ```  
 COLORREF GetHighlightedColor() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The color of currently selected element on the pop-up color palette.  
+### <a name="return-value"></a>Rückgabewert  
+ Die Farbe des derzeit ausgewählten Elements auf der Farbpalette die Farbe.  
   
-##  <a name="removeallcolorgroups"></a>  CMFCRibbonColorButton::RemoveAllColorGroups  
- Removes all color groups from the regular color area.  
+##  <a name="removeallcolorgroups"></a>CMFCRibbonColorButton::RemoveAllColorGroups  
+ Entfernt alle Farbgruppen aus dem normalen Farbbereich.  
   
 ```  
 void RemoveAllColorGroups();
 ```  
   
-##  <a name="setcolor"></a>  CMFCRibbonColorButton::SetColor  
- Selects a color from the regular color area.  
+##  <a name="setcolor"></a>CMFCRibbonColorButton::SetColor  
+ Wählt eine Farbe aus dem normalen Farbbereich aus.  
   
 ```  
 void SetColor(COLORREF color);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `color`  
- A color to set.  
+ Eine Farbe festlegen.  
   
-##  <a name="setcolorboxsize"></a>  CMFCRibbonColorButton::SetColorBoxSize  
- Sets the size of all the color elements that appear on the color bar.  
+##  <a name="setcolorboxsize"></a>CMFCRibbonColorButton::SetColorBoxSize  
+ Legt die Größe aller Farbelemente fest, die in der Farbleiste angezeigt werden.  
   
 ```  
 void SetColorBoxSize(CSize sizeBox);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `sizeBox`  
- The new size of the color buttons in the color palette.  
+ Die neue Größe der Schaltflächen Farbe in der Farbpalette.  
   
-##  <a name="setcolorname"></a>  CMFCRibbonColorButton::SetColorName  
- Sets a new name for a specified color.  
+##  <a name="setcolorname"></a>CMFCRibbonColorButton::SetColorName  
+ Legt einen neuen Namen für eine angegebene Farbe fest.  
   
 ```  
 static void __stdcall SetColorName(
@@ -347,31 +331,31 @@ static void __stdcall SetColorName(
     const CString& strName);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `color`  
- The RGB value of a color.  
+ Der RGB-Wert einer Farbe.  
   
  [in] `strName`  
- The new name for the specified color.  
+ Der neue Name für die angegebene Farbe.  
   
-### <a name="remarks"></a>Remarks  
- Because it calls `CMFCColorBar::SetColorName`, this method changes the name of the specified color in all `CMFCColorBar` objects in your application.  
+### <a name="remarks"></a>Hinweise  
+ Da sie aufruft, `CMFCColorBar::SetColorName`, diese Methode ändert den Namen der angegebenen Farbe in allen `CMFCColorBar` Objekte in der Anwendung.  
   
-##  <a name="setcolumns"></a>  CMFCRibbonColorButton::SetColumns  
- Sets the number of columns displayed in the table of colors that is presented to the user during the user's color selection process.  
+##  <a name="setcolumns"></a>CMFCRibbonColorButton::SetColumns  
+ Legt die Anzahl der Spalten in der Tabelle der Farben, die dem Benutzer bei Auswahl Farbe des Benutzers angezeigt wird.  
   
 ```  
 void SetColumns(int nColumns);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `nColumns`  
- The number of color icons to display in each row.  
+ Die Anzahl der Farbe Symbole in jeder Zeile angezeigt.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="setdocumentcolors"></a>  CMFCRibbonColorButton::SetDocumentColors  
- Specifies a list of RGB values to display in the document color area.  
+##  <a name="setdocumentcolors"></a>CMFCRibbonColorButton::SetDocumentColors  
+ Gibt eine Liste mit RGB-Werten für die Anzeige im Farbbereich des Dokuments an.  
   
 ```  
 void SetDocumentColors(
@@ -379,42 +363,42 @@ void SetDocumentColors(
     CList<COLORREF,COLORREF>& lstColors);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `lpszLabel`  
- The text to be displayed with the document colors.  
+ Der Text, mit die Farben angezeigt werden.  
   
  [in] `lstColors`  
- A reference to a list of RGB values.  
+ Ein Verweis auf eine Liste der RGB-Werte.  
   
-##  <a name="setpalette"></a>  CMFCRibbonColorButton::SetPalette  
- Specifies the standard colors to display in the color table that the color button displays.  
+##  <a name="setpalette"></a>CMFCRibbonColorButton::SetPalette  
+ Gibt die standardmäßigen Farben in der Tabelle angezeigt, in dem die farbenschaltfläche angezeigt.  
   
 ```  
 void SetPalette(CPalette* pPalette);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pPalette`  
- A pointer to a color palette.  
+ Ein Zeiger auf eine Farbpalette.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="updatecolor"></a>  CMFCRibbonColorButton::UpdateColor  
- Called by the framework when the user selects a color from the color table displayed when the user clicks the color button.  
+##  <a name="updatecolor"></a>CMFCRibbonColorButton::UpdateColor  
+ Wird vom Framework aufgerufen, wenn der Benutzer eine Farbe aus der Tabelle angezeigt wählt, wenn der Benutzer eine Farbe klickt.  
   
 ```  
 void UpdateColor(COLORREF color);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `color`  
- A color selected by the user.  
+ Ein vom Benutzer ausgewählten Farbe.  
   
-### <a name="remarks"></a>Remarks  
- The `CMFCRibbonColorButton::UpdateColor` method changes the currently selected button's color and notifies its parent by sending a `WM_COMMAND` message with a `BN_CLICKED` standard notification. Use the [CMFCRibbonColorButton::GetColor](#getcolor) method to retrieve the selected color.  
+### <a name="remarks"></a>Hinweise  
+ Die `CMFCRibbonColorButton::UpdateColor` Methode ändert den aktuell ausgewählten die Farbe der Schaltfläche und benachrichtigt das übergeordnete Element durch Senden einer `WM_COMMAND` message mit einer `BN_CLICKED` standardbenachrichtigung. Verwenden der [CMFCRibbonColorButton::GetColor](#getcolor) Methode, um die ausgewählte Farbe abzurufen.  
   
-## <a name="see-also"></a>See Also  
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [Classes](../../mfc/reference/mfc-classes.md)   
- [CMFCRibbonGallery Class](../../mfc/reference/cmfcribbongallery-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
+ [Klassen](../../mfc/reference/mfc-classes.md)   
+ [CMFCRibbonGallery-Klasse](../../mfc/reference/cmfcribbongallery-class.md)
 

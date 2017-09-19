@@ -1,5 +1,5 @@
 ---
-title: '&lt;exception&gt; functions | Microsoft Docs'
+title: '&lt;exception&gt;-Funktionen | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -20,25 +20,13 @@ f1_keywords:
 ms.assetid: c09ac569-5e35-4fe8-872d-ca5810274dd7
 caps.latest.revision: 12
 manager: ghogen
-helpviewer_keywords:
-- std::current_exception [C++]
-- std::get_terminate [C++]
-- std::get_unexpected [C++]
-- std::make_exception_ptr [C++]
-- std::rethrow_exception [C++]
-- std::set_terminate [C++]
-- std::set_unexpected [C++]
-- std::terminate [C++]
-- std::uncaught_exception [C++]
-- std::unexpected [C++]
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: ac885e7157fb144f45403d493473b3ae1a8921a4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 08d2a2161a2596cebb27175c55023d5313c7b908
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="ltexceptiongt-functions"></a>&lt;exception&gt; functions
+# <a name="ltexceptiongt-functions"></a>&lt;exception&gt;-Funktionen
 ||||  
 |-|-|-|  
 |[current_exception](#current_exception)|[get_terminate](#get_terminate)|[get_unexpected](#get_unexpected)|  
@@ -46,84 +34,84 @@ ms.lasthandoff: 09/09/2017
 |[set_unexpected](#set_unexpected)|[terminate](#terminate)|[uncaught_exception](#uncaught_exception)|  
 |[unexpected](#unexpected)|  
   
-##  <a name="current_exception"></a>  current_exception  
- Obtains a smart pointer to the current exception.  
+##  <a name="current_exception"></a> current_exception  
+ Erhält einen intelligenten Zeiger auf die aktuelle Ausnahme.  
   
 ```cpp  
 exception_ptr current_exception();
 ```  
   
-### <a name="return-value"></a>Return Value  
- An [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) object pointing to the current exception.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)-Objekt, das auf die aktuelle Ausnahme zeigt.  
   
-### <a name="remarks"></a>Remarks  
- Call the `current_exception` function in a catch block. If an exception is in flight and the catch block can catch the exception, the `current_exception` function returns an `exception_ptr` object that references the exception. Otherwise, the function returns a null `exception_ptr` object.  
+### <a name="remarks"></a>Hinweise  
+ Rufen Sie die `current_exception`-Funktion in einem catch-Block auf. Wenn eine Ausnahme aktiv ist und die Ausnahme vom catch-Block nicht abgefangen werden kann, gibt die `current_exception`-Funktion ein `exception_ptr`-Objekt zurück, das auf die Ausnahme verweist. Andernfalls gibt die Funktion ein NULL-`exception_ptr`-Objekt zurück.  
   
- The `current_exception` function captures the exception that is in flight regardless of whether the `catch` statement specifies an [exception-declaration](../cpp/try-throw-and-catch-statements-cpp.md) statement.  
+ Die `current_exception`-Funktion erfasst die Ausnahme, die aktiv ist, unabhängig davon, ob die `catch`-Anweisung eine [exception-declaration](../cpp/try-throw-and-catch-statements-cpp.md)-Anweisung angibt.  
   
- The destructor for the current exception is called at the end of the `catch` block if you do not rethrow the exception. However, even if you call the `current_exception` function in the destructor, the function returns an `exception_ptr` object that references the current exception.  
+ Der Destruktor für die aktuelle Ausnahme wird am Ende des `catch`-Blocks aufgerufen, wenn die Ausnahme nicht erneut ausgelöst wird. Auch wenn Sie die `current_exception`-Funktion im Destruktor aufrufen, gibt die Funktion ein `exception_ptr`-Objekt zurück, das auf die aktuelle Ausnahme verweist.  
   
- Successive calls to the `current_exception` function return `exception_ptr` objects that refer to different copies of the current exception. Consequently, the objects compare as unequal because they refer to different copies, even though the copies have the same binary value.  
+ Aufeinander folgende Aufrufe der `current_exception`-Funktion geben `exception_ptr`-Objekte zurück, die sich auf unterschiedliche Kopien der aktuellen Ausnahme beziehen. Folglich sind die Objekte bei einem Vergleich ungleich, da sie auf unterschiedliche Kopien verweisen, auch wenn die Kopien den gleichen Binärwert aufweisen.  
   
-##  <a name="make_exception_ptr"></a>  make_exception_ptr  
- Creates an [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) object that holds a copy of an exception.  
+##  <a name="make_exception_ptr"></a> make_exception_ptr  
+ Erstellt ein [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)-Objekt, das eine Kopie einer Ausnahme enthält.  
   
 ```cpp  
 template <class E>  
 exception_ptr make_exception_ptr(E Except);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `Except`  
- The class with the exception to copy. Usually, you specify an [exception class](../standard-library/exception-class.md) object as the argument to the `make_exception_ptr` function, although any class object can be the argument.  
+ Die Klasse mit der zu kopierenden Ausnahme. Normalerweise geben Sie ein [exception class](../standard-library/exception-class.md)-Objekt als Argument für die `make_exception_ptr`-Funktion an, obwohl jedes Klassenobjekt als Argument zulässig ist.  
   
-### <a name="return-value"></a>Return Value  
- An [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) object pointing to a copy of the current exception for `Except`.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)-Objekt, das auf eine Kopie der aktuellen Ausnahme für `Except` zeigt.  
   
-### <a name="remarks"></a>Remarks  
- Calling the `make_exception_ptr` function is equivalent to throwing a C++ exception, catching it in a catch block, and then calling the [current_exception](../standard-library/exception-functions.md#current_exception) function to return an `exception_ptr` object that references the exception. The Microsoft implementation of the `make_exception_ptr` function is more efficient than throwing and then catching an exception.  
+### <a name="remarks"></a>Hinweise  
+ Das Aufrufen der `make_exception_ptr`-Funktion ist gleichbedeutend mit dem Auslösen einer C++-Ausnahme, die in einem catch-Block abgefangen wird, und dem anschließenden Aufrufen der [current_exception](../standard-library/exception-functions.md#current_exception)-Funktion, um ein `exception_ptr`-Objekt zurückzugeben, das auf die Ausnahme verwiest. Die Microsoft-Implementierung der `make_exception_ptr`-Funktion ist effizienter als das Auslösen und anschließende Abfangen einer Ausnahme.  
   
- An application typically does not require the `make_exception_ptr` function, and we discourage its use.  
+ Eine Anwendung erfordert in der Regel nicht die `make_exception_ptr` -Funktion, und es wird von ihrer Verwendung abgeraten.  
   
-##  <a name="rethrow_exception"></a>  rethrow_exception  
- Throws an exception passed as a parameter.  
+##  <a name="rethrow_exception"></a> rethrow_exception  
+ Löst eine Ausnahme aus, die als Parameter übergeben wird.  
   
 ```cpp  
 void rethrow_exception(exception_ptr P);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `P`  
- The caught exception to re-throw. If `P` is a null [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr), the function throws [std::bad_exception](../standard-library/bad-exception-class.md).  
+ Die erneut auszulösende abgefangene Ausnahme. Wenn `P` ein [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)-Element mit dem Wert NULL ist, wird von der Funktion [std::bad_exception](../standard-library/bad-exception-class.md) ausgelöst.  
   
-### <a name="remarks"></a>Remarks  
- After you store a caught exception in an `exception_ptr` object, the primary thread can process the object. In your primary thread, call the `rethrow_exception` function together with the `exception_ptr` object as its argument. The `rethrow_exception` function extracts the exception from the `exception_ptr` object and then throws the exception in the context of the primary thread.  
+### <a name="remarks"></a>Hinweise  
+ Nachdem Sie eine abgefangene Ausnahme in einem `exception_ptr`-Objekt gespeichert haben, kann der primäre Thread das Objekt verarbeiten. Rufen Sie in Ihrem primären Thread die `rethrow_exception`-Funktion zusammen mit dem `exception_ptr`-Objekt als Argument auf. Die `rethrow_exception`-Funktion extrahiert die Ausnahme vom `exception_ptr`-Objekt und löst die Ausnahme anschließend im Kontext des primären Threads aus.  
   
-##  <a name="get_terminate"></a>  get_terminate  
- Obtains the current `terminate_handler` function.  
+##  <a name="get_terminate"></a> get_terminate  
+ Ruft die aktuelle `terminate_handler`-Funktion ab.  
   
 ```cpp  
 terminate_handler get_terminate();
 ```  
   
-##  <a name="set_terminate"></a>  set_terminate  
- Establishes a new `terminate_handler` to be called at the termination of the program.  
+##  <a name="set_terminate"></a> set_terminate  
+ Richtet ein neues `terminate_handler`-Element ein, das bei Beendigung des Programms aufgerufen wird.  
   
 ```  
 terminate_handler set_terminate(terminate_handler fnew) throw();
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `fnew`  
- The function to be called at termination.  
+ Die bei Beendigung aufzurufende Funktion.  
   
-### <a name="return-value"></a>Return Value  
- The address of the previous function that used to be called at termination.  
+### <a name="return-value"></a>Rückgabewert  
+ Die Adresse der vorherigen Funktion, die von bei Beendigung aufgerufen wurde.  
   
-### <a name="remarks"></a>Remarks  
- The function establishes a new [terminate_handler](../standard-library/exception-typedefs.md#terminate_handler) as the function * `fnew`. Thus, `fnew` must not be a null pointer. The function returns the address of the previous terminate handler.  
+### <a name="remarks"></a>Hinweise  
+ Von der Funktion wird ein neues [terminate_handler](../standard-library/exception-typedefs.md#terminate_handler)-Element als die Funktion * `fnew` eingeführt. Daher darf `fnew` kein NULL-Zeiger sein. Die Funktion gibt die Adresse des vorherigen terminate-Handlers zurück.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // exception_set_terminate.cpp  
@@ -152,33 +140,33 @@ int main()
   
 ```  
   
-##  <a name="get_unexpected"></a>  get_unexpected  
- Obtains the current `unexpected_handler` function.  
+##  <a name="get_unexpected"></a> get_unexpected  
+ Ruft die aktuelle `unexpected_handler`-Funktion ab.  
   
 ```cpp  
 unexpected_handler get_unexpected();
 ```  
   
-##  <a name="set_unexpected"></a>  set_unexpected  
- Establishes a new `unexpected_handler` to be when an unexpected exception is encountered.  
+##  <a name="set_unexpected"></a> set_unexpected  
+ Richtet ein neues `unexpected_handler` ein, das bei einer unerwarteten Ausnahme auftritt.  
   
 ```  
 unexpected_handler set_unexpected(unexpected_handler fnew) throw();
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `fnew`  
- The function to be called when an unexpected exception is encountered.  
+ Die Funktion, die bei einer unerwarteten Ausnahme aufgerufen wird.  
   
-### <a name="return-value"></a>Return Value  
- The address of the previous `unexpected_handler`.  
+### <a name="return-value"></a>Rückgabewert  
+ Die Adresse des vorherigen `unexpected_handler`-Elements.  
   
-### <a name="remarks"></a>Remarks  
- `fnew` must not be a null pointer.  
+### <a name="remarks"></a>Hinweise  
+ `fnew` darf kein NULL-Zeiger sein.  
   
- The C++ Standard requires that `unexpected` is called when a function throws an exception that is not on its throw list. The current implementation does not support this. The following example calls `unexpected` directly, which then calls the `unexpected_handler`.  
+ Für den C++-Standard ist es erforderlich, dass `unexpected` aufgerufen wird, wenn eine Funktion eine Ausnahme auslöst, die nicht auf der Auslöseliste aufgeführt wird. Die augenblickliche Implementierung unterstützt das nicht. Im folgenden Beispiel ruft `unexpected` direkt auf, woraufhin `unexpected_handler` aufgerufen wird.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // exception_set_unexpected.cpp  
@@ -204,32 +192,32 @@ int main()
   
 ```  
   
-##  <a name="terminate"></a>  terminate  
- Calls a terminate handler.  
+##  <a name="terminate"></a> terminate  
+ Ruft einen terminate-Handler auf.  
   
 ```  
 void terminate();
 ```  
   
-### <a name="remarks"></a>Remarks  
- The function calls a terminate handler, a function of type `void`. If **terminate** is called directly by the program, the terminate handler is the one most recently set by a call to [set_terminate](../standard-library/exception-functions.md#set_terminate). If **terminate** is called for any of several other reasons during evaluation of a throw expression, the terminate handler is the one in effect immediately after evaluating the throw expression.  
+### <a name="remarks"></a>Hinweise  
+ Die Funktion ruft einen terminate-Handler auf, eine Funktion vom Typ `void`. Wenn **terminate** direkt vom Programm aufgerufen wird, ist der terminate-Handler durch einen Aufruf von [set_terminate](../standard-library/exception-functions.md#set_terminate) der zuletzt festgelegte Handler. Wenn **terminate** aus einem von vielen weiteren Gründen während der Auswertung eines Throw-Ausdrucks aufgerufen wird, ist der terminate-Handler, der der direkt nach der Auswertung des Throw-Ausdrucks in Kraft ist.  
   
- A terminate handler may not return to its caller. At program startup, the terminate handler is a function that calls **abort**.  
+ Ein terminate-Handler kehrt möglicherweise nicht zum Aufrufer zurück. Bei Programmstart ist der terminate-Handler eine Funktion, die **abort** aufruft.  
   
-### <a name="example"></a>Example  
-  See [set_unexpected](../standard-library/exception-functions.md#set_unexpected) for an example of the use of **terminate**.  
+### <a name="example"></a>Beispiel  
+  Ein Beispiel zur Verwendung von **terminate** finden Sie unter [set_unexpected](../standard-library/exception-functions.md#set_unexpected).  
   
-##  <a name="uncaught_exception"></a>  uncaught_exception  
- Returns `true` only if a thrown exception is being currently processed.  
+##  <a name="uncaught_exception"></a> uncaught_exception  
+ Gibt nur dann `true` zurück, wenn augenblicklich eine Ausnahme verarbeitet wird.  
   
 ```  
 bool uncaught_exception();
 ```  
   
-### <a name="return-value"></a>Return Value  
- Returns `true` after completing evaluation of a throw expression and before completing initialization of the exception declaration in the matching handler or calling [unexpected](../standard-library/exception-functions.md#unexpected) as a result of the throw expression. In particular, `uncaught_exception` will return `true` when called from a destructor that is being invoked during an exception unwind. On devices, `uncaught_exception` is only supported on Windows CE 5.00 and higher versions, including Windows Mobile 2005 platforms.  
+### <a name="return-value"></a>Rückgabewert  
+ Gibt `true` nach Abschluss der Auswertung eines Throw-Ausdrucks und vor Abschluss der Initialisierung der Ausnahmedeklaration an den entsprechenden Handler oder durch Aufruf von [unexpected](../standard-library/exception-functions.md#unexpected) als Ergebnis des Throw-Ausdrucks zurück. Insbesondere gibt `uncaught_exception` `true` zurück, wenn die Funktion von einem Destruktor aufgerufen wird, der während des Entladevorgangs für die Ausnahme aufgerufen wird. Auf Geräten wird `uncaught_exception` nur auf Windows CE 5.00 und höheren Versionen, darunter Windows Mobile 2005-Plattformen unterstützt.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // exception_uncaught_exception.cpp  
@@ -282,32 +270,32 @@ In Test::~Test("outside try block")
         std::uncaught_exception( ) = 0  
 ```  
   
-##  <a name="unexpected"></a>  unexpected  
- Calls the unexpected handler.  
+##  <a name="unexpected"></a> unexpected  
+ Ruft den unerwarteten Handler auf.  
   
 ```  
 void unexpected();
 ```  
   
-### <a name="remarks"></a>Remarks  
- The C++ Standard requires that `unexpected` is called when a function throws an exception that is not on its throw list. The current implementation does not support this. The example calls `unexpected` directly, which calls the unexpected handler.  
+### <a name="remarks"></a>Hinweise  
+ Für den C++-Standard ist es erforderlich, dass `unexpected` aufgerufen wird, wenn eine Funktion eine Ausnahme auslöst, die nicht auf der Auslöseliste aufgeführt wird. Die augenblickliche Implementierung unterstützt das nicht. Das Beispiel ruft `unexpected` direkt auf, wodurch der unerwartete Handler aufgerufen wird.  
   
- The function calls an unexpected handler, a function of type `void`. If `unexpected` is called directly by the program, the unexpected handler is the one most recently set by a call to [set_unexpected](../standard-library/exception-functions.md#set_unexpected).  
+ Die Funktion ruft einen unerwarteten Handler auf, eine Funktion vom Typ `void`. Wenn `unexpected` direkt vom Programm aufgerufen wird, ist der unerwartete Handler durch einen Aufruf von [set_unexpected](../standard-library/exception-functions.md#set_unexpected) der zuletzt festgelegte Handler.  
   
- An unexpected handler may not return to its caller. It may terminate execution by:  
+ Ein unerwarteter Handler kehrt möglicherweise nicht zum Aufrufer zurück. Die Ausführung kann hierdurch beendet werden:  
   
--   Throwing an object of a type listed in the exception specification or an object of any type if the unexpected handler is called directly by the program.  
+-   Auslösen eines Objekts eines Typs, das in der Ausnahmespezifikation gelistet ist oder eines Objekts jeglichen Typs, wenn der unerwartete Handler direkt durch das Programm aufgerufen wird.  
   
--   Throwing an object of type [bad_exception](../standard-library/bad-exception-class.md).  
+-   Auslösen eines Objekt des Typs [bad_exception](../standard-library/bad-exception-class.md).  
   
--   Calling [terminate](../standard-library/exception-functions.md#terminate), **abort** or **exit**( `int`).  
+-   Aufrufen von [terminate](../standard-library/exception-functions.md#terminate), **abort** oder **exit** (`int`).  
   
- At program startup, the unexpected handler is a function that calls [terminate](../standard-library/exception-functions.md#terminate).  
+ Bei Programmstart ist der unerwartete Handler eine Funktion, die [erminate](../standard-library/exception-functions.md#terminate) aufruft.  
   
-### <a name="example"></a>Example  
-  See [set_unexpected](../standard-library/exception-functions.md#set_unexpected) for an example of the use of **unexpected.**  
+### <a name="example"></a>Beispiel  
+  Ein Beispiel zur Verwendung von **unexpected** finden Sie unter [set_unexpected](../standard-library/exception-functions.md#set_unexpected).  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [\<exception>](../standard-library/exception.md)
 
 

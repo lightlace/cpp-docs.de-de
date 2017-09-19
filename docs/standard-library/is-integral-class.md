@@ -1,5 +1,5 @@
 ---
-title: is_integral Class | Microsoft Docs
+title: is_integral-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- is_integral
 - type_traits/std::is_integral
 dev_langs:
 - C++
@@ -34,15 +35,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 9892390db54cabe7c6bbb1b6df7f55b997eae98a
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 71e6db05a48cfc5433afc3dda38c3005ad24a7e8
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="isintegral-class"></a>is_integral Class
-Tests if type is integral.  
+# <a name="isintegral-class"></a>is_integral-Klasse
+Testet, ob der Typ eine Ganzzahl ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,16 +52,16 @@ template <class Ty>
 struct is_integral;  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
  `Ty`  
- The type to query.  
+ Der abzufragende Typ.  
   
-## <a name="remarks"></a>Remarks  
- An instance of the type predicate holds true if the type `Ty` is one of the integral types, or a `cv-qualified` form of one of the integral types, otherwise it holds false.  
+## <a name="remarks"></a>Hinweise  
+ Eine Instanz des Typprädikats ist „true“, wenn der Typ `Ty` ein ganzzahliger Typ oder ein `cv-qualified`-Formular eines der ganzzahligen Typen ist, andernfalls ist sie „false“.  
   
- An integral type is one of `bool`, `char`, `unsigned char`, `signed char`, `wchar_t`, `short`, `unsigned short`, `int`, `unsigned int`, `long`, and `unsigned long`. In addition, with compilers that provide them, an integral type can be one of `long long`, `unsigned long long`, `__int64`, and `unsigned __int64`.  
+ Ein ganzzahliger Typ ist entweder `bool`, `char`, `unsigned char`, `signed char`, `wchar_t`, `short`, `unsigned short`, `int`, `unsigned int`, `long` oder `unsigned long`. Mit Compilern kann der ganzzahlige Typ darüber hinaus `long long`, `unsigned long long`, `__int64` und `unsigned __int64` sein.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Beispiel  
   
 ```cpp  
 // std__type_traits__is_integral.cpp   
@@ -93,13 +94,13 @@ is_integral<int> == true
 is_integral<float> == false  
 ```  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [<type_traits>](../standard-library/type-traits.md)   
- [is_enum Class](../standard-library/is-enum-class.md)   
- [is_floating_point Class](../standard-library/is-floating-point-class.md)
+ [is_enum-Klasse](../standard-library/is-enum-class.md)   
+ [is_floating_point-Klasse](../standard-library/is-floating-point-class.md)
 

@@ -1,29 +1,25 @@
 ---
-title: '&lt;atomic&gt; enums | Microsoft Docs'
+title: '&lt;atomic&gt;-Enumerationen | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- atomic/std::memory_order
+f1_keywords: []
 ms.assetid: cd3a81c5-a19e-448f-952a-c34c717f21a9
 caps.latest.revision: 11
-helpviewer_keywords:
-- std::memory_order
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 4d0c60a908d795d8bf9fa7643471c6c9f29cc1cf
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 94167b5068e3fb1370528d42c80d338a486cd68e
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="ltatomicgt-enums"></a>&lt;atomic&gt; enums
+# <a name="ltatomicgt-enums"></a>&lt;atomic&gt;-Enumerationen
   
-##  <a name="memory_order_enum"></a>  memory_order Enum  
- Supplies symbolic names for synchronization operations on memory locations. These operations affect how assignments in one thread become visible in another.  
+##  <a name="memory_order_enum"></a> memory_order-Enumeration  
+ Stellt symbolische Namen für Synchronisierungsvorgänge auf Speicheradressen bereit. Diese Vorgänge wirken sich auf das Sichtbarwerden der Zuweisung eines Thread in einem anderen aus.  
   
 ```
 typedef enum memory_order {
@@ -36,18 +32,18 @@ typedef enum memory_order {
 } memory_order;
 ```  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
 |||  
 |-|-|  
-|`memory_order_relaxed`|No ordering required.|  
-|`memory_order_consume`|A load operation acts as a consume operation on the memory location.|  
-|`memory_order_acquire`|A load operation acts as an acquire operation on the memory location.|  
-|`memory_order_release`|A store operation acts as a release operation on the memory location.|  
-|`memory_order_acq_rel`|Combines `memory_order_acquire` and `memory_order_release`.|  
-|`memory_order_seq_cst`|Combines `memory_order_acquire` and `memory_order_release`. Memory accesses that are marked as `memory_order_seq_cst` must be sequentially consistent.|  
+|`memory_order_relaxed`|Keine Reihenfolge erforderlich.|  
+|`memory_order_consume`|Ein Ladevorgang fungiert als Nutzungsvorgang auf der Speicheradresse.|  
+|`memory_order_acquire`|Ein Ladevorgang fungiert als Abrufvorgang auf der Speicheradresse.|  
+|`memory_order_release`|Ein Speichervorgang fungiert als eine Befreiungsaktion auf der Speicheradresse.|  
+|`memory_order_acq_rel`|Kombiniert `memory_order_acquire` und `memory_order_release`.|  
+|`memory_order_seq_cst`|Kombiniert `memory_order_acquire` und `memory_order_release`. Als `memory_order_seq_cst` gekennzeichnete Speicherzugriffe müssen nacheinander konsistent sein.|  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [\<atomic>](../standard-library/atomic.md)
 
 

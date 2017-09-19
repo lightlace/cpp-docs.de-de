@@ -1,5 +1,5 @@
 ---
-title: CMFCDisableMenuAnimation Class | Microsoft Docs
+title: Klasse CMFCDisableMenuAnimation | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,7 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCDisableMenuAnimation [MFC], Restore
+- CMFCDisableMenuAnimation class
 ms.assetid: c6eb07da-c382-43d6-8028-007f2320e50e
 caps.latest.revision: 22
 author: mikeblome
@@ -35,15 +35,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: e3c4dae9f7d1082cb90fd022b15b4adc43f3d764
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: ea0be944ca70d6f8317fd4bc60fdd50ecc714438
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="cmfcdisablemenuanimation-class"></a>CMFCDisableMenuAnimation Class
-Disables pop-up menu animation.  
+# <a name="cmfcdisablemenuanimation-class"></a>CMFCDisableMenuAnimation-Klasse
+Deaktiviert die Popup-Menüanimation.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,60 +51,60 @@ Disables pop-up menu animation.
 class CMFCDisableMenuAnimation  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Mitglieder  
   
-### <a name="public-constructors"></a>Public Constructors  
-  
-|||  
-|-|-|  
-|Name|Description|  
-|`CMFCDisableMenuAnimation::CMFCDisableMenuAnimation`|Constructs a `CMFCDisableMenuAnimation` object.|  
-|`CMFCDisableMenuAnimation::~CMFCDisableMenuAnimation`|Destructor.|  
-  
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
 |||  
 |-|-|  
-|Name|Description|  
-|[CMFCDisableMenuAnimation::Restore](#restore)|Restores the previous animation that the framework used to display a pop-up menu.|  
+|Name|Beschreibung|  
+|`CMFCDisableMenuAnimation::CMFCDisableMenuAnimation`|Erstellt ein `CMFCDisableMenuAnimation`-Objekt.|  
+|`CMFCDisableMenuAnimation::~CMFCDisableMenuAnimation`|Destruktor.|  
   
-### <a name="data-members"></a>Data Members  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
 |||  
 |-|-|  
-|Name|Description|  
-|`CMFCDisableMenuAnimation::m_animType`|Stores the previous pop-up menu animation type.|  
+|Name|Beschreibung|  
+|[CMFCDisableMenuAnimation::Restore](#restore)|Stellt die vorherige Animation, die das Framework verwendet, um ein Popupmenü anzuzeigen.|  
   
-### <a name="remarks"></a>Remarks  
- Use this helper class to temporarily disable pop-up menu animation (for example, when you process mouse or keyboard commands).  
+### <a name="data-members"></a>Datenmember  
   
- A `CMFCDisableMenuAnimation` object disables pop-up menu animation during its lifetime. The constructor stores the current pop-up menu animation type in the `m_animType` field and sets the current animation type to `CMFCPopupMenu::NO_ANIMATION`. The destructor restores the previous animation type.  
+|||  
+|-|-|  
+|Name|Beschreibung|  
+|`CMFCDisableMenuAnimation::m_animType`|Speichert den vorherigen Popupmenü Animation-Typ.|  
   
- You can create a `CMFCDisableMenuAnimation` object on the stack to disable pop-up menu animation throughout a single function. If you want to disable popup menu animation between functions, create a `CMFCDisableMenuAnimation` object on the heap and then delete it when you want to restore pop-up menu animation.  
+### <a name="remarks"></a>Hinweise  
+ Verwenden Sie diese Hilfsklasse vorübergehend deaktivieren, klicken Sie im Popupmenü Animation (z. B., wenn Sie die Maus oder Tastatur Befehle verarbeiten).  
   
-## <a name="example"></a>Example  
- The following example shows how to use the stack to temporarily disable menu animation.  
+ Ein `CMFCDisableMenuAnimation` Objekt deaktiviert die Popup-Menüanimation während seiner Lebensdauer. Der Konstruktor speichert den aktuellen Popupmenü Animation-Typ in der `m_animType` -Feld und setzt die aktuelle Animation Geben Sie auf `CMFCPopupMenu::NO_ANIMATION`. Der Destruktor wird der vorherige Animationstyp wiederhergestellt.  
   
- [!code-cpp[NVC_MFC_Misc#1](../../mfc/reference/codesnippet/cpp/cmfcdisablemenuanimation-class_1.h)]  
+ Sie erstellen ein `CMFCDisableMenuAnimation` Objekt im Stapel Popupmenü in eine einzelne Funktion deaktivieren. Wenn Sie Popup-Menüanimation zwischen Funktionen deaktivieren möchten, erstellen Sie ein `CMFCDisableMenuAnimation` -Objekt, auf dem Heap, und löschen Sie ihn, wenn Sie im Popupmenü Animation wiederherstellen möchten.  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird veranschaulicht, wie mit dem Stapel um Menüanimation vorübergehend zu deaktivieren.  
+  
+ [!code-cpp[NVC_MFC_Misc&#1;](../../mfc/reference/codesnippet/cpp/cmfcdisablemenuanimation-class_1.h)]  
+  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CMFCDisableMenuAnimation](../../mfc/reference/cmfcdisablemenuanimation-class.md)  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxpopupmenu.h  
   
-##  <a name="restore"></a>  CMFCDisableMenuAnimation::Restore  
- Restores the previous animation that the framework used to display a pop-up menu.  
+##  <a name="restore"></a>CMFCDisableMenuAnimation::Restore  
+ Stellt die vorherige Animation, die das Framework verwendet, um ein Popupmenü anzuzeigen.  
   
 ```  
 void Restore ();
 ```  
   
-### <a name="remarks"></a>Remarks  
- This method is called by the `CMFCDisableMenuAnimation` destructor to restore the previous animation that the framework used to display a pop-up menu.  
+### <a name="remarks"></a>Hinweise  
+ Diese Methode wird aufgerufen, indem die `CMFCDisableMenuAnimation` Destruktor die vorherige Animation wiederherstellen, die das Framework verwendet wird, um ein Popupmenü anzuzeigen.  
   
-## <a name="see-also"></a>See Also  
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [Classes](../../mfc/reference/mfc-classes.md)   
- [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
+ [Klassen](../../mfc/reference/mfc-classes.md)   
+ [CMFCPopupMenu-Klasse](../../mfc/reference/cmfcpopupmenu-class.md)
 

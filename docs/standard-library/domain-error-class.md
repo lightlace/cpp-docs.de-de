@@ -1,5 +1,5 @@
 ---
-title: domain_error Class | Microsoft Docs
+title: domain_error-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- domain_error
 - stdexcept/std::domain_error
 dev_langs:
 - C++
@@ -33,15 +34,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: a1ea64cade89774698ee8f63957e5184478e6798
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 28280540b36c8bdb322a02de91f645672ffe1103
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="domainerror-class"></a>domain_error Class
-The class serves as the base class for all exceptions thrown to report a domain error.  
+# <a name="domainerror-class"></a>domain_error-Klasse
+Die Klasse fungiert als Basisklasse für alle Ausnahmen, die ausgelöst werden, um einen Domänenfehler zu melden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,10 +56,10 @@ public:
 };  
 ```  
   
-## <a name="remarks"></a>Remarks  
- The value returned by [what](../standard-library/exception-class.md) is a copy of **message**`.`[data](../standard-library/basic-string-class.md#data).  
+## <a name="remarks"></a>Hinweise  
+ Der von [Was](../standard-library/exception-class.md) zurückgegebene Wert ist eine Kopie von **Nachricht**`.`[Daten](../standard-library/basic-string-class.md#data).  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Beispiel  
   
 ```cpp  
 // domain_error.cpp  
@@ -85,13 +86,13 @@ Type: class std::domain_error
 *\  
 ```  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<stdexcept>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
- [logic_error Class](../standard-library/logic-error-class.md)   
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>Siehe auch  
+ [logic_error-Klasse](../standard-library/logic-error-class.md)   
+ [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

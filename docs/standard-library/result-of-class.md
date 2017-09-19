@@ -1,5 +1,5 @@
 ---
-title: result_of Class | Microsoft Docs
+title: result_of-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,13 +10,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
+- result_of
 - type_traits/std::result_of
 - type_traits/std::result_of_t
 - type_traits/std::result_of::type
 dev_langs:
 - C++
 helpviewer_keywords:
-- ', '
+- result_of
 ms.assetid: 5374a096-4b4a-4712-aa97-6852c5cdd6be
 caps.latest.revision: 13
 author: corob-msft
@@ -36,15 +37,14 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: dea10607b0d51a89cbbabbeccc8da9dfb42fbaff
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
+ms.openlocfilehash: 8ffd540b812aedcc3cff9703a1b45ef2ce57983c
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="resultof-class"></a>result_of Class
-Determines the return type of the callable type that takes the specified argument types.  
+# <a name="resultof-class"></a>result_of-Klasse
+Bestimmt den Rückgabetyp des aufrufbaren Typs, der die angegebenen Argumenttypen akzeptiert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -60,22 +60,22 @@ template<class T>
    using result_of_t = typename result_of<T>::type;
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
  `Fn`  
- The callable type to query.  
+ Der abzufragende, aufgerufene Typ.  
   
  `ArgTypes`  
- The types of the argument list to the callable type to query.  
+ Die Typen der Argumentliste für den aufrufbaren, abzufragenden Typ.  
   
-## <a name="remarks"></a>Remarks  
- Use this template to determine at compile time the result type of `Fn`(`ArgTypes`), where `Fn` is a callable type, reference to function, or reference to callable type, invoked using an argument list of the types in `ArgTypes`. The `type` member of the template class names the result type of `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))` if the unevaluated expression `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` is well-formed. Otherwise, the template class has no member `type`. The type `Fn` and all types in the parameter pack `ArgTypes` must be complete types, `void`, or arrays of unknown bound.  
+## <a name="remarks"></a>Hinweise  
+ Verwenden Sie diese Vorlage zum Zeitpunkt der Kompilierung zur Bestimmung des Ergebnistyps des `Fn`(`ArgTypes`), wobei `Fn` ein aufrufbarer Typ ist, ein Verweis auf eine Funktion oder der Verweis auf einen aufrufbaren Typ, der mit einer Argumentliste der Typen in `ArgTypes` bereitgestellt werden kann. Der `type`-Member der Vorlagenklasse benennt den Ergebnistyp von `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))`, wenn der ausgewertete Ausdruck `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` wohlgeformt ist. Andernfalls hat die Vorlagenklasse keinen `type`-Member. Der `Fn`-Typ und alle Typen im Parameterpaket `ArgTypes` müssen vollständige Typen, `void` oder Arrays mit unbekannter Grenze sein.  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [<type_traits>](../standard-library/type-traits.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: add_pointer Class | Microsoft Docs
+title: add_pointer-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- add_pointer
 - type_traits/std::add_pointer
 dev_langs:
 - C++
@@ -34,15 +35,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 5b7f0fa84b8a99b5e2225dfdf4028807f2d89eaa
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 008f19421575b8a930498a615642fdfdad99b7b6
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="addpointer-class"></a>add_pointer Class
-Makes a pointer-to-type from a specified type.  
+# <a name="addpointer-class"></a>add_pointer-Klasse
+Wandelt einen angegebenen Typ in einen Zeiger auf den Typ um.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,17 +55,17 @@ template <class T>
 using add_pointer_t = typename add_pointer<T>::type;  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
 *T*  
-The type to modify.  
+Der zu ändernde Typ.  
   
-## <a name="remarks"></a>Remarks  
-The member typedef `type` names the same type as `remove_reference<T>::type*`. The alias `add_pointer_t` is a shortcut to access the member typedef `type`.  
+## <a name="remarks"></a>Hinweise  
+Der typedef-Member `type` benennt den gleichen Typ mit `remove_reference<T>::type*`. Das Alias `add_pointer_t` ist eine Verknüpfung für den Zugriff auf den typedef-Member `type`.  
   
-Because it is invalid to make a pointer from a reference, `add_pointer` removes the reference, if any, from the specified type before it makes a pointer-to-type. Consequently, you can use a type with `add_pointer` without being concerned about whether the type is a reference.  
+Da es unzulässig ist, einen Zeiger aus einem Verweis zu erstellen, wird der Verweis durch `add_pointer` ggf. vom angegebenen Typ entfernt, bevor der Zeiger auf den Typ erstellt wird. Daher können Sie einen Typ mit `add_pointer` verwenden, ohne sich überlegen zu müssen, ob der Typ ein Verweis ist.  
   
-## <a name="example"></a>Example  
-The following example demonstrates that `add_pointer` of a type is the same as a pointer to that type.  
+## <a name="example"></a>Beispiel  
+Das folgende Beispiel zeigt, dass `add_pointer` eines Typs mit einem Zeiger auf diesen Typ identisch ist.  
   
 ```cpp  
 #include <type_traits>   
@@ -86,12 +87,12 @@ int main()
 add_pointer_t<int> == int *  
 ```  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [<type_traits>](../standard-library/type-traits.md)   
- [remove_pointer Class](../standard-library/remove-pointer-class.md)
+ [remove_pointer-Klasse](../standard-library/remove-pointer-class.md)
 

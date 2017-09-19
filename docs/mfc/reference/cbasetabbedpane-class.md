@@ -1,5 +1,5 @@
 ---
-title: CBaseTabbedPane Class | Microsoft Docs
+title: Klasse CBaseTabbedPane | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -42,34 +42,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CBaseTabbedPane [MFC], AddTab
-- CBaseTabbedPane [MFC], AllowDestroyEmptyTabbedPane
-- CBaseTabbedPane [MFC], ApplyRestoredTabInfo
-- CBaseTabbedPane [MFC], CanFloat
-- CBaseTabbedPane [MFC], CanSetCaptionTextToTabName
-- CBaseTabbedPane [MFC], ConvertToTabbedDocument
-- CBaseTabbedPane [MFC], DetachPane
-- CBaseTabbedPane [MFC], EnableSetCaptionTextToTabName
-- CBaseTabbedPane [MFC], FillDefaultTabsOrderArray
-- CBaseTabbedPane [MFC], FindBarByTabNumber
-- CBaseTabbedPane [MFC], FindPaneByID
-- CBaseTabbedPane [MFC], FloatTab
-- CBaseTabbedPane [MFC], GetDefaultTabsOrder
-- CBaseTabbedPane [MFC], GetFirstVisibleTab
-- CBaseTabbedPane [MFC], GetMinSize
-- CBaseTabbedPane [MFC], GetPaneIcon
-- CBaseTabbedPane [MFC], GetPaneList
-- CBaseTabbedPane [MFC], GetTabArea
-- CBaseTabbedPane [MFC], GetTabsNum
-- CBaseTabbedPane [MFC], GetUnderlyingWindow
-- CBaseTabbedPane [MFC], GetVisibleTabsNum
-- CBaseTabbedPane [MFC], HasAutoHideMode
-- CBaseTabbedPane [MFC], IsHideSingleTab
-- CBaseTabbedPane [MFC], RecalcLayout
-- CBaseTabbedPane [MFC], RemovePane
-- CBaseTabbedPane [MFC], SetAutoDestroy
-- CBaseTabbedPane [MFC], SetAutoHideMode
-- CBaseTabbedPane [MFC], ShowTab
+- CBaseTabbedPane class
 ms.assetid: f22c0080-5b29-4a0a-8f74-8f0a4cd2dbcf
 caps.latest.revision: 26
 author: mikeblome
@@ -90,15 +63,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 675d504f3c27c8ef681d42b1569b0b1127f0ad07
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: b72804dd8b2ca2253caff4cebf5b0631ae6040c6
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="cbasetabbedpane-class"></a>CBaseTabbedPane Class
-Extends the functionality of the [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) to support the creation of tabbed windows.  
+# <a name="cbasetabbedpane-class"></a>CBaseTabbedPane-Klasse
+Erweitert die Funktionalität von der [CDockablePane-Klasse](../../mfc/reference/cdockablepane-class.md) unterstützt die Erstellung von Fenstern im Registerkartenformat.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -106,63 +79,63 @@ Extends the functionality of the [CDockablePane Class](../../mfc/reference/cdock
 class CBaseTabbedPane : public CDockablePane  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Mitglieder  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|`CBaseTabbedPane::CBaseTabbedPane`|Default constructor.|  
+|`CBaseTabbedPane::CBaseTabbedPane`|Standardkonstruktor|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CBaseTabbedPane::AddTab](#addtab)|Adds a new tab to a tabbed pane.|  
-|[CBaseTabbedPane::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|Specifies whether an empty tabbed pane can be destroyed.|  
-|[CBaseTabbedPane::ApplyRestoredTabInfo](#applyrestoredtabinfo)|Applies tab settings, which are loaded from the registry, to a tabbed pane.|  
-|[CBaseTabbedPane::CanFloat](#canfloat)|Determines whether the pane can float. (Overrides [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat).)|  
-|[CBaseTabbedPane::CanSetCaptionTextToTabName](#cansetcaptiontexttotabname)|Determines whether the caption for the tabbed pane should display the same text as the active tab.|  
-|[CBaseTabbedPane::ConvertToTabbedDocument](#converttotabbeddocument)|(Overrides [CDockablePane::ConvertToTabbedDocument](../../mfc/reference/cdockablepane-class.md#converttotabbeddocument).)|  
-|[CBaseTabbedPane::DetachPane](#detachpane)|Converts one or more dockable panes to MDI tabbed documents.|  
-|[CBaseTabbedPane::EnableSetCaptionTextToTabName](#enablesetcaptiontexttotabname)|Enables or disables the ability of the tabbed pane to synchronize caption text with the label text on the active tab.|  
-|[CBaseTabbedPane::FillDefaultTabsOrderArray](#filldefaulttabsorderarray)|Restores the internal tab order to a default state.|  
-|[CBaseTabbedPane::FindBarByTabNumber](#findbarbytabnumber)|Returns a pane that resides in a tab when the tab is identified by a zero-based tab index.|  
+|[CBaseTabbedPane::AddTab](#addtab)|Ein Fenster mit Registerkarten wird eine neue Registerkarte hinzugefügt.|  
+|[CBaseTabbedPane::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|Gibt an, ob eine leere Seite im Registerformat gelöscht werden kann.|  
+|[CBaseTabbedPane::ApplyRestoredTabInfo](#applyrestoredtabinfo)|Registerkarte Einstellungen, die aus der Registrierung, um ein Fenster mit Registerkarten geladen werden angewendet.|  
+|[CBaseTabbedPane::CanFloat](#canfloat)|Bestimmt, ob der Bereich wechseln kann. (Überschreibt [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat).)|  
+|[CBaseTabbedPane::CanSetCaptionTextToTabName](#cansetcaptiontexttotabname)|Bestimmt, ob die Beschriftung für die Seite im Registerformat den gleichen Text wie der aktiven Registerkarte angezeigt werden soll.|  
+|[CBaseTabbedPane::ConvertToTabbedDocument](#converttotabbeddocument)|(Überschreibt [CDockablePane::ConvertToTabbedDocument](../../mfc/reference/cdockablepane-class.md#converttotabbeddocument).)|  
+|[CBaseTabbedPane::DetachPane](#detachpane)|Konvertiert eine oder mehrere andockbare Bereiche im Registerkartenformat MDI-Dokumente.|  
+|[CBaseTabbedPane::EnableSetCaptionTextToTabName](#enablesetcaptiontexttotabname)|Aktiviert oder deaktiviert die Fähigkeit von dem Fenster im Registerkartenformat Beschriftungstext mit den Bezeichnungstext auf der aktiven Registerkarte synchronisieren.|  
+|[CBaseTabbedPane::FillDefaultTabsOrderArray](#filldefaulttabsorderarray)|Stellt den Standardzustand der internen Reihenfolge wieder her.|  
+|[CBaseTabbedPane::FindBarByTabNumber](#findbarbytabnumber)|Gibt einen Bereich, der auf einer Registerkarte befindet, wenn die Registerkarte durch eine nullbasierten Registerkartenindex identifiziert wird.|  
 |||  
-|[CBaseTabbedPane::FindPaneByID](#findpanebyid)|Returns a pane that is identified by the pane ID.|  
-|[CBaseTabbedPane::FloatTab](#floattab)|Floats a pane, but only if the pane currently resides in a detachable tab.|  
-|[CBaseTabbedPane::GetDefaultTabsOrder](#getdefaulttabsorder)|Returns the default order of tabs in the pane.|  
-|[CBaseTabbedPane::GetFirstVisibleTab](#getfirstvisibletab)|Retrieves a pointer to the first displayed tab.|  
-|[CBaseTabbedPane::GetMinSize](#getminsize)|Retrieves the minimum allowed size for the pane. (Overrides [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|  
-|[CBaseTabbedPane::GetPaneIcon](#getpaneicon)|Returns a handle to the pane icon. (Overrides [CBasePane::GetPaneIcon](../../mfc/reference/cbasepane-class.md#getpaneicon).)|  
-|[CBaseTabbedPane::GetPaneList](#getpanelist)|Returns a list of panes that are contained in the tabbed pane.|  
-|[CBaseTabbedPane::GetTabArea](#gettabarea)|Returns the bounding rectangles for the top and bottom tab areas.|  
-|[CBaseTabbedPane::GetTabsNum](#gettabsnum)|Returns the count of tabs in a tab window.|  
-|[CBaseTabbedPane::GetUnderlyingWindow](#getunderlyingwindow)|Gets the underlying (wrapped) tab window.|  
-|[CBaseTabbedPane::GetVisibleTabsNum](#getvisibletabsnum)|Returns the count of displayed tabs.|  
-|[CBaseTabbedPane::HasAutoHideMode](#hasautohidemode)|Determines whether the tabbed pane can be switched to auto-hide mode.|  
-|[CBaseTabbedPane::IsHideSingleTab](#ishidesingletab)|Determines whether the tabbed pane is hidden if only one tab is displayed.|  
-|`CBaseTabbedPane::LoadSiblingPaneIDs`|Used internally during serialization.|  
-|[CBaseTabbedPane::RecalcLayout](#recalclayout)|Recalculates layout information for the pane. (Overrides [CPane::RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|  
-|[CBaseTabbedPane::RemovePane](#removepane)|Removes a pane from the tabbed pane.|  
-|`CBaseTabbedPane::SaveSiblingBarIDs`|Used internally during serialization.|  
-|`CBaseTabbedPane::Serialize`|(Overrides [CDockablePane::Serialize](http://msdn.microsoft.com/en-us/09787e59-e446-4e76-894b-206d303dcfd6).)|  
-|`CBaseTabbedPane::SerializeTabWindow`|Used internally during serialization.|  
-|[CBaseTabbedPane::SetAutoDestroy](#setautodestroy)|Determines whether the tabbed control bar will be destroyed automatically.|  
-|[CBaseTabbedPane::SetAutoHideMode](#setautohidemode)|Toggles the docking pane between displayed and auto-hide mode. (Overrides [CDockablePane::SetAutoHideMode](../../mfc/reference/cdockablepane-class.md#setautohidemode).)|  
-|[CBaseTabbedPane::ShowTab](#showtab)|Shows or hides a tab.|  
+|[CBaseTabbedPane::FindPaneByID](#findpanebyid)|Gibt einen Bereich, der durch die Bereich-ID identifiziert wird|  
+|[CBaseTabbedPane::FloatTab](#floattab)|Hebt die Verankerung eines Bereichs auf, aber nur, wenn der Bereich sich auf einer lösbaren Registerkarte befindet.|  
+|[CBaseTabbedPane::GetDefaultTabsOrder](#getdefaulttabsorder)|Die Standardreihenfolge der Registerkarten zurückgibt im Bereich.|  
+|[CBaseTabbedPane::GetFirstVisibleTab](#getfirstvisibletab)|Ruft einen Zeiger auf den ersten angezeigten Registerkarte ab.|  
+|[CBaseTabbedPane::GetMinSize](#getminsize)|Ruft den minimal zulässigen Größe für den Bereich ab. (Überschreibt [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|  
+|[CBaseTabbedPane::GetPaneIcon](#getpaneicon)|Gibt ein Handle auf das Symbol "Bereich". (Überschreibt [CBasePane::GetPaneIcon](../../mfc/reference/cbasepane-class.md#getpaneicon).)|  
+|[CBaseTabbedPane::GetPaneList](#getpanelist)|Gibt eine Liste von Bereichen, die enthalten sind in dem Fenster im Registerkartenformat zurück.|  
+|[CBaseTabbedPane::GetTabArea](#gettabarea)|Gibt die umgebenden Rechtecken für die oberen und unteren Registerkarte Bereiche zurück.|  
+|[CBaseTabbedPane::GetTabsNum](#gettabsnum)|Gibt die Anzahl der Registerkarten in einem Registerkartenfenster zurück.|  
+|[CBaseTabbedPane::GetUnderlyingWindow](#getunderlyingwindow)|Ruft das zugrunde liegende (eingebundene) Registerkartenfenster.|  
+|[CBaseTabbedPane::GetVisibleTabsNum](#getvisibletabsnum)|Gibt die Anzahl der angezeigten Registerkarten zurück.|  
+|[CBaseTabbedPane::HasAutoHideMode](#hasautohidemode)|Bestimmt, ob die Seite im Registerformat zum automatischen Ausblenden-Modus gewechselt werden kann.|  
+|[CBaseTabbedPane::IsHideSingleTab](#ishidesingletab)|Bestimmt, ob die Seite im Registerformat ausgeblendet ist, wenn nur eine Registerkarte angezeigt wird.|  
+|`CBaseTabbedPane::LoadSiblingPaneIDs`|Wird intern verwendet, um während der Serialisierung.|  
+|[CBaseTabbedPane::RecalcLayout](#recalclayout)|Berechnet die Layoutinformationen für den Bereich. (Überschreibt [cpane:: RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|  
+|[CBaseTabbedPane::RemovePane](#removepane)|Entfernt einen Bereich aus dem Fenster im Registerkartenformat.|  
+|`CBaseTabbedPane::SaveSiblingBarIDs`|Wird intern verwendet, um während der Serialisierung.|  
+|`CBaseTabbedPane::Serialize`|(Überschreibt [CDockablePane:: SaveState](http://msdn.microsoft.com/en-us/09787e59-e446-4e76-894b-206d303dcfd6).)|  
+|`CBaseTabbedPane::SerializeTabWindow`|Wird intern verwendet, um während der Serialisierung.|  
+|[CBaseTabbedPane::SetAutoDestroy](#setautodestroy)|Bestimmt, ob die Steuerleiste im Registerkartenformat automatisch zerstört wird.|  
+|[CBaseTabbedPane::SetAutoHideMode](#setautohidemode)|Schaltet zwischen der andockbaren angezeigt und automatisch ausgeblendet. (Überschreibt [CDockablePane::SetAutoHideMode](../../mfc/reference/cdockablepane-class.md#setautohidemode).)|  
+|[CBaseTabbedPane::ShowTab](#showtab)|Anzeigen oder ausblenden eine Registerkarte.|  
   
-## <a name="remarks"></a>Remarks  
- This class is an abstract class and cannot be instantiated. It implements the services that are common to all kinds of tabbed panes.  
+## <a name="remarks"></a>Hinweise  
+ Diese Klasse ist eine abstrakte Klasse und kann nicht instanziiert werden. Es implementiert die Dienste, die für alle Arten von Seiten im Registerformat gelten.  
   
- Currently, the library includes two derived tabbed pane classes: [CTabbedPane Class](../../mfc/reference/ctabbedpane-class.md) and [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md).  
+ Die Bibliothek enthält derzeit zwei im Registerformat abgeleiteten Klassen: [CTabbedPane Klasse](../../mfc/reference/ctabbedpane-class.md) und [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md).  
   
- A `CBaseTabbedPane` object wraps a pointer to a [CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md) object. [CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md) then becomes a child window of the tabbed pane.  
+ Ein `CBaseTabbedPane` Objekt umschließt einen Zeiger auf eine [CMFCBaseTabCtrl-Klasse](../../mfc/reference/cmfcbasetabctrl-class.md) Objekt. [CMFCBaseTabCtrl-Klasse](../../mfc/reference/cmfcbasetabctrl-class.md) wird als untergeordnetes Fenster von dem Fenster im Registerkartenformat.  
   
- For more information about how to create tabbed panes, see [CDockablePane Class](../../mfc/reference/cdockablepane-class.md), [CTabbedPane Class](../../mfc/reference/ctabbedpane-class.md), and [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md).  
+ Weitere Informationen zum Erstellen von Seiten im Registerformat finden Sie unter [CDockablePane-Klasse](../../mfc/reference/cdockablepane-class.md), [CTabbedPane Klasse](../../mfc/reference/ctabbedpane-class.md), und [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md).  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
- [CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
+ [Von CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -176,11 +149,11 @@ class CBaseTabbedPane : public CDockablePane
   
  `CBaseTabbedPane`  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxBaseTabbedPane.h  
   
-##  <a name="addtab"></a>  CBaseTabbedPane::AddTab  
- Adds a new tab to a tabbed pane.  
+##  <a name="addtab"></a>CBaseTabbedPane::AddTab  
+ Ein Fenster mit Registerkarten wird eine neue Registerkarte hinzugefügt.  
   
 ```  
 virtual BOOL AddTab(
@@ -190,88 +163,88 @@ virtual BOOL AddTab(
     BOOL bDetachable = TRUE);
 ```  
   
-### <a name="parameters"></a>Parameters  
- [in] [out] `pNewBar`  
- A pointer to the pane to add. This pointer may become invalid after you call this method. For more information, see the Remarks section.  
+### <a name="parameters"></a>Parameter  
+ [in] [out]`pNewBar`  
+ Ein Zeiger auf den Bereich hinzuzufügen. This-Zeiger kann ungültig werden, nachdem Sie diese Methode aufrufen. Weitere Informationen finden Sie im Abschnitt "Hinweise".  
   
  [in] `bVisible`  
- `TRUE` to make the tab visible; otherwise, `FALSE`.  
+ `TRUE`auf die Registerkarte sichtbar zu machen; andernfalls `FALSE`.  
   
  [in] `bSetActive`  
- `TRUE` to make the tab the active tab; otherwise, `FALSE`.  
+ `TRUE`auf der Registerkarte auf die aktive Registerkarte stellen. andernfalls `FALSE`.  
   
  [in] `bDetachable`  
- `TRUE` to make the tab detachable; otherwise, `FALSE`.  
+ `TRUE`auf die Registerkarte lösbar stellen. andernfalls `FALSE`.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the pane was successfully added as a tab and was not destroyed in the process. `FALSE` if the pane being added is an object of type `CBaseTabbedPane`. For more information, see the Remarks section.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn der Bereich erfolgreich als Registerkarte hinzugefügt wurde und nicht im Prozess zerstört wurde. `FALSE`ist der Bereich hinzugefügt wird ein Objekt vom Typ `CBaseTabbedPane`. Weitere Informationen finden Sie im Abschnitt "Hinweise".  
   
-### <a name="remarks"></a>Remarks  
- Call this method to add a pane as a new tab on a tabbed pane. If `pNewBar` points to an object of type `CBaseTabbedPane`, all its tabs are copied onto the tabbed pane and then `pNewBar` is destroyed. Thus, `pNewBar` becomes an invalid pointer and should not be used.  
+### <a name="remarks"></a>Hinweise  
+ Rufen Sie diese Methode, um einen Bereich als neue Registerkarte für ein Fenster mit Registerkarten hinzufügen. Wenn `pNewBar` verweist auf ein Objekt vom Typ `CBaseTabbedPane`, werden alle Registerkarten auf der Seite im Registerformat kopiert und dann `pNewBar` zerstört wird. Folglich `pNewBar` wird ein ungültiger Zeiger und sollte nicht verwendet werden.  
   
-##  <a name="allowdestroyemptytabbedpane"></a>  CBaseTabbedPane::AllowDestroyEmptyTabbedPane  
- Specifies whether an empty tabbed pane can be destroyed.  
+##  <a name="allowdestroyemptytabbedpane"></a>CBaseTabbedPane::AllowDestroyEmptyTabbedPane  
+ Gibt an, ob eine leere Seite im Registerformat gelöscht werden kann.  
   
 ```  
 virtual BOOL AllowDestroyEmptyTabbedPane() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if an empty tabbed pane can be destroyed; otherwise, `FALSE`. The default implementation always returns `TRUE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn eine leere Seite im Registerformat zerstört werden kann. andernfalls `FALSE`. Die standardmäßige Implementierung gibt immer `TRUE`.  
   
-### <a name="remarks"></a>Remarks  
- If an empty tabbed pane is not allowed to be destroyed, the framework hides the pane instead.  
+### <a name="remarks"></a>Hinweise  
+ Wenn eine leere Seite im Registerformat gelöscht werden, nicht zulässig ist, wird der Bereich von Framework stattdessen ausgeblendet.  
   
-##  <a name="applyrestoredtabinfo"></a>  CBaseTabbedPane::ApplyRestoredTabInfo  
- Loads tab settings from the registry and applies them to a tabbed pane.  
+##  <a name="applyrestoredtabinfo"></a>CBaseTabbedPane::ApplyRestoredTabInfo  
+ Registerkarte Einstellungen aus der Registrierung geladen, und wendet diese auf einer Seite im Registerformat.  
   
 ```  
 virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `bUseTabIndexes`  
- This parameter is used internally by the framework.  
+ Dieser Parameter wird intern vom Framework verwendet.  
   
-### <a name="remarks"></a>Remarks  
- This method is called by the framework when it reloads docking state information from the registry. The method obtains information about tab order and tab names for a tabbed pane.  
+### <a name="remarks"></a>Hinweise  
+ Diese Methode wird vom Framework aufgerufen, wenn es Andocken Zustandsinformationen aus der Registrierung erneut geladen. Die-Methode ruft Informationen zur Reihenfolge und Registerkartennamen für ein Fenster mit Registerkarten.  
   
-##  <a name="canfloat"></a>  CBaseTabbedPane::CanFloat  
- Specifies whether the tabbed pane can float.  
+##  <a name="canfloat"></a>CBaseTabbedPane::CanFloat  
+ Gibt an, ob die Seite im Registerformat wechseln kann.  
   
 ```  
 virtual BOOL CanFloat() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the pane can float; otherwise, `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn der Bereich wechseln kann; andernfalls `FALSE`.  
   
-##  <a name="cansetcaptiontexttotabname"></a>  CBaseTabbedPane::CanSetCaptionTextToTabName  
- Determines whether the caption for the tabbed pane should display the same text as the active tab.  
+##  <a name="cansetcaptiontexttotabname"></a>CBaseTabbedPane::CanSetCaptionTextToTabName  
+ Bestimmt, ob die Beschriftung für die Seite im Registerformat den gleichen Text wie der aktiven Registerkarte angezeigt werden soll.  
   
 ```  
 virtual BOOL CanSetCaptionTextToTabName() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the caption text of the tabbed pane is set to the text of the active tab; otherwise, `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn der Beschriftungstext für die Seite im Registerformat auf den Text der aktiven Registerkarte festgelegt ist. andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- The method is used to determine whether the text displayed on the tabbed pane caption duplicates the label of the active tab. You can enable or disable this functionality by calling [CBaseTabbedPane::EnableSetCaptionTextToTabName](#enablesetcaptiontexttotabname).  
+### <a name="remarks"></a>Hinweise  
+ Die Methode wird verwendet, um zu bestimmen, ob der Text auf der Seite im Registerformat Beschriftung Duplikate die Bezeichnung der aktiven Registerkarte angezeigt. Sie können aktivieren oder deaktivieren Sie diese Funktionalität durch Aufrufen von [CBaseTabbedPane::EnableSetCaptionTextToTabName](#enablesetcaptiontexttotabname).  
   
-##  <a name="converttotabbeddocument"></a>  CBaseTabbedPane::ConvertToTabbedDocument  
- Converts one or more dockable panes to MDI tabbed documents.  
+##  <a name="converttotabbeddocument"></a>CBaseTabbedPane::ConvertToTabbedDocument  
+ Konvertiert eine oder mehrere andockbare Bereiche im Registerkartenformat MDI-Dokumente.  
   
 ```  
 virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `bActiveTabOnly`  
- When you convert a tabbed pane, specify `TRUE` to convert only the active tab. Specify `FALSE` to convert all tabs in the pane.  
+ Geben Sie bei der Konvertierung ein Fenster mit Registerkarten `TRUE` nur die aktive Registerkarte zu konvertieren. Geben Sie `FALSE` alle Registerkarten im Bereich zu konvertieren.  
   
-##  <a name="detachpane"></a>  CBaseTabbedPane::DetachPane  
- Detaches a pane from the tabbed pane.  
+##  <a name="detachpane"></a>CBaseTabbedPane::DetachPane  
+ Trennt einen Bereich aus dem Fenster im Registerkartenformat.  
   
 ```  
 virtual BOOL DetachPane(
@@ -279,59 +252,59 @@ virtual BOOL DetachPane(
     BOOL bHide = FALSE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pBar`  
- Pointer to the pane to detach.  
+ Ein Zeiger auf den Bereich zu trennen.  
   
  [in] `bHide`  
- Boolean parameter that specifies whether the framework hides the pane after it is detached.  
+ Boolescher Parameter, der angibt, ob das Framework Bereich ausgeblendet, nachdem sie getrennt wird.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the framework successfully detaches the pane; `FALSE` if `pBar` is `NULL` or refers to a pane that is not in the tabbed pane.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn das Framework erfolgreich Bereich getrennt; `FALSE` Wenn `pBar` ist `NULL` oder verweist auf einen Bereich, der nicht in die Seite im Registerformat.  
   
-### <a name="remarks"></a>Remarks  
- The framework floats the detached pane if possible. For more information, see [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat).  
+### <a name="remarks"></a>Hinweise  
+ Das Framework befindet sich im getrennten Bereich Wenn möglich. Weitere Informationen finden Sie unter [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat).  
   
-##  <a name="enablesetcaptiontexttotabname"></a>  CBaseTabbedPane::EnableSetCaptionTextToTabName  
- Enables or disables the ability of the tabbed pane to synchronize caption text with the label text on the active tab.  
+##  <a name="enablesetcaptiontexttotabname"></a>CBaseTabbedPane::EnableSetCaptionTextToTabName  
+ Aktiviert oder deaktiviert die Fähigkeit von dem Fenster im Registerkartenformat Beschriftungstext mit den Bezeichnungstext auf der aktiven Registerkarte synchronisieren.  
   
 ```  
 virtual void EnableSetCaptionTextToTabName(BOOL bEnable);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `bEnable`  
- `TRUE` to synchronize the tabbed pane caption with the active tab caption; otherwise, `FALSE`.  
+ `TRUE`Synchronisieren Sie die Beschriftung im Registerformat mit der aktiven Registerkarte Beschriftung; andernfalls `FALSE`.  
   
-##  <a name="filldefaulttabsorderarray"></a>  CBaseTabbedPane::FillDefaultTabsOrderArray  
- Restores the internal tab order to a default state.  
+##  <a name="filldefaulttabsorderarray"></a>CBaseTabbedPane::FillDefaultTabsOrderArray  
+ Stellt den Standardzustand der internen Reihenfolge wieder her.  
   
 ```  
 void FillDefaultTabsOrderArray();
 ```  
   
-### <a name="remarks"></a>Remarks  
- This method is called when the framework restores an Outlook bar to an initial state.  
+### <a name="remarks"></a>Hinweise  
+ Diese Methode wird aufgerufen, wenn das Framework eine Outlook-Leiste auf einen Ausgangszustand wiederherstellt.  
   
-##  <a name="findpanebyid"></a>  CBaseTabbedPane::FindPaneByID  
- Returns a pane identified by the pane ID.  
+##  <a name="findpanebyid"></a>CBaseTabbedPane::FindPaneByID  
+ Gibt einen Bereich, der durch die Bereich-ID identifiziert werden  
   
 ```  
 virtual CWnd* FindPaneByID(UINT uBarID);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `uBarID`  
- Specifies the ID of the pane to find.  
+ Gibt die ID des Bereichs zu suchen.  
   
-### <a name="return-value"></a>Return Value  
- A pointer to the pane if it was found; otherwise, `NULL`.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Zeiger auf den Bereich, wenn es gefunden wurde; andernfalls `NULL`.  
   
-### <a name="remarks"></a>Remarks  
- This method compares all tabs in the pane and returns the one with the ID specified by the `uBarID` parameter.  
+### <a name="remarks"></a>Hinweise  
+ Diese Methode vergleicht alle Registerkarten im Bereich, und gibt das mit der angegebenen ID der `uBarID` Parameter.  
   
-##  <a name="findbarbytabnumber"></a>  CBaseTabbedPane::FindBarByTabNumber  
- Returns a pane that resides in a tab.  
+##  <a name="findbarbytabnumber"></a>CBaseTabbedPane::FindBarByTabNumber  
+ Gibt einen Bereich, der auf einer Registerkarte befindet.  
   
 ```  
 virtual CWnd* FindBarByTabNumber(
@@ -339,21 +312,21 @@ virtual CWnd* FindBarByTabNumber(
     BOOL bGetWrappedBar = FALSE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `nTabNum`  
- Specifies the zero-based index of the tab to retrieve.  
+ Gibt den nullbasierten Index der abzurufenden Registerkarte.  
   
  [in] `bGetWrappedBar`  
- `TRUE` to return the underlying (wrapped) window of the pane instead of the pane itself; otherwise `FALSE`. This only applies to panes derived from [CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md).  
+ `TRUE`um das zugrunde liegende (eingebundene) Fenster im Bereich anstelle der Bereich selbst zurückgegeben wird. andernfalls `FALSE`. Dies gilt nur für Bereiche, die von abgeleiteten [CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md).  
   
-### <a name="return-value"></a>Return Value  
- If the pane is found, then a valid pointer to the pane being searched for is returned; otherwise, `NULL`.  
+### <a name="return-value"></a>Rückgabewert  
+ Wenn der Bereich, gefunden wird wird ein gültiger Zeiger auf den Bereich gesucht wird zurückgegeben wird andernfalls `NULL`.  
   
-### <a name="remarks"></a>Remarks  
- Call this method to retrieve the pane residing in the tab specified by the `nTabNum` parameter.  
+### <a name="remarks"></a>Hinweise  
+ Rufen Sie diese Methode zum Abrufen von Bereich, die in der angegebenen Registerkarte wohnen die `nTabNum` Parameter.  
   
-##  <a name="floattab"></a>  CBaseTabbedPane::FloatTab  
- Floats a pane, but only if the pane currently resides in a detachable tab.  
+##  <a name="floattab"></a>CBaseTabbedPane::FloatTab  
+ Hebt die Verankerung eines Bereichs auf, aber nur, wenn der Bereich sich auf einer lösbaren Registerkarte befindet.  
   
 ```  
 virtual BOOL FloatTab(
@@ -363,84 +336,84 @@ virtual BOOL FloatTab(
     BOOL bHide = FALSE);
 ```  
   
-### <a name="parameters"></a>Parameters  
- [in] [out] `pBar`  
- A pointer to the pane to float.  
+### <a name="parameters"></a>Parameter  
+ [in] [out]`pBar`  
+ Ein Zeiger auf den Bereich in einen Gleitkommawert.  
   
  [in] `nTabID`  
- Specifies the zero-based index of the tab to float.  
+ Gibt den nullbasierten Index der Registerkarte in einen Gleitkommawert an.  
   
  [in] `dockMethod`  
- Specifies the method to use to make the pane float. For more information, see the Remarks section.  
+ Gibt die Methode zu verwenden, um den Bereich loszulösen. Weitere Informationen finden Sie im Abschnitt "Hinweise".  
   
  [in] `bHide`  
- `TRUE` to hide the pane before floating; otherwise, `FALSE`.  
+ `TRUE`um das Fenster auszublenden vor Gleitkommawert; andernfalls `FALSE`.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the pane floated; otherwise, `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn der Bereich umfließt; andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- Call this method to float a pane that currently resides in a detachable tab.  
+### <a name="remarks"></a>Hinweise  
+ Rufen Sie diese Methode, um einen Bereich float, der derzeit in einer abnehmbaren Registerkarte befindet.  
   
- If you want to detach a pane programmatically, specify `DM_SHOW` for the `dockMethod` parameter. If you want to float the pane in the same position where it floated previously, specify `DM_DBL_CLICK` as the `dockMethod` parameter.  
+ Wenn Sie einen Bereich programmgesteuert trennen möchten, geben Sie `DM_SHOW` für die `dockMethod` Parameter. Float-Bereich in der gleichen Position es, in dem zuvor umfließt, geben Sie ggf. `DM_DBL_CLICK` als die `dockMethod` Parameter.  
   
-##  <a name="getdefaulttabsorder"></a>  CBaseTabbedPane::GetDefaultTabsOrder  
- Returns the default order of tabs in the pane.  
+##  <a name="getdefaulttabsorder"></a>CBaseTabbedPane::GetDefaultTabsOrder  
+ Die Standardreihenfolge der Registerkarten zurückgibt im Bereich.  
   
 ```  
 const CArray<int,int>& GetDefaultTabsOrder();
 ```  
   
-### <a name="return-value"></a>Return Value  
- A `CArray` object that specifies the default order of tabs in the pane.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein `CArray` Objekt, das die Standardreihenfolge der Registerkarten im Bereich angibt.  
   
-### <a name="remarks"></a>Remarks  
- The framework calls this method when an Outlook bar is reset to an initial state.  
+### <a name="remarks"></a>Hinweise  
+ Das Framework ruft diese Methode auf, wenn eine Outlook-Leiste auf einen Ausgangszustand zurückgesetzt wird.  
   
-##  <a name="getfirstvisibletab"></a>  CBaseTabbedPane::GetFirstVisibleTab  
- Retrieves a pointer to the first displayed tab.  
+##  <a name="getfirstvisibletab"></a>CBaseTabbedPane::GetFirstVisibleTab  
+ Ruft einen Zeiger auf den ersten angezeigten Registerkarte ab.  
   
 ```  
 virtual CWnd* GetFirstVisibleTab(int& iTabNum);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `iTabNum`  
- A reference to an integer. This method writes the zero-based index of the first displayed tab to this parameter, or -1 if no displayed tab is found.  
+ Ein Verweis auf eine ganze Zahl. Diese Methode schreibt dem nullbasierten Index des ersten angezeigten Registerkarte an diesen Parameter oder -1, wenn keine angezeigt Tabstopp gefunden wird.  
   
-### <a name="return-value"></a>Return Value  
- If successful, a pointer to the first displayed tab; otherwise, `NULL`.  
+### <a name="return-value"></a>Rückgabewert  
+ Wenn erfolgreich, ein Zeiger auf den ersten angezeigten Registerkarte; andernfalls `NULL`.  
   
-##  <a name="getminsize"></a>  CBaseTabbedPane::GetMinSize  
- Retrieves the minimum allowed size for the pane.  
-  
-```  
-virtual void GetMinSize(CSize& size) const;  
-```  
-  
-### <a name="parameters"></a>Parameters  
- [out] `size`  
- A `CSize` object that is filled with the minimum allowed size.  
-  
-### <a name="remarks"></a>Remarks  
- If consistent handling of minimum pane sizes is active ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), `size` is filled with the minimum allowed size for the active tab. Otherwise, `size` is filled with the return value of [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
-  
-##  <a name="getpaneicon"></a>  CBaseTabbedPane::GetPaneIcon  
- Retrieves the minimum allowed size for the pane.  
+##  <a name="getminsize"></a>CBaseTabbedPane::GetMinSize  
+ Ruft den minimal zulässigen Größe für den Bereich ab.  
   
 ```  
 virtual void GetMinSize(CSize& size) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [out] `size`  
- A `CSize` object that is filled with the minimum allowed size.  
+ Ein `CSize` -Objekt, das mit den minimal zulässigen Größe gefüllt ist.  
   
-### <a name="remarks"></a>Remarks  
- If consistent handling of minimum pane sizes is active ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), `size` is filled with the minimum allowed size for the active tab. Otherwise, `size` is filled with the return value of [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
+### <a name="remarks"></a>Hinweise  
+ Wenn die konsistente Behandlung von Größen minimalen Bereich aktiv ist ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), `size` wird mit den minimal zulässigen Größe für die aktive Registerkarte gefüllt. Andernfalls `size` wird gefüllt, mit dem Rückgabewert der [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
   
-##  <a name="getpanelist"></a>  CBaseTabbedPane::GetPaneList  
- Returns a list of panes that are contained in the tabbed pane.  
+##  <a name="getpaneicon"></a>CBaseTabbedPane::GetPaneIcon  
+ Ruft den minimal zulässigen Größe für den Bereich ab.  
+  
+```  
+virtual void GetMinSize(CSize& size) const;  
+```  
+  
+### <a name="parameters"></a>Parameter  
+ [out] `size`  
+ Ein `CSize` -Objekt, das mit den minimal zulässigen Größe gefüllt ist.  
+  
+### <a name="remarks"></a>Hinweise  
+ Wenn die konsistente Behandlung von Größen minimalen Bereich aktiv ist ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), `size` wird mit den minimal zulässigen Größe für die aktive Registerkarte gefüllt. Andernfalls `size` wird gefüllt, mit dem Rückgabewert der [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
+  
+##  <a name="getpanelist"></a>CBaseTabbedPane::GetPaneList  
+ Gibt eine Liste von Bereichen, die enthalten sind in dem Fenster im Registerkartenformat zurück.  
   
 ```  
 virtual void GetPaneList(
@@ -448,15 +421,15 @@ virtual void GetPaneList(
     CRuntimeClass* pRTCFilter = NULL);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [out] `lst`  
- A `CObList` that is filled with the panes that are contained in the tabbed pane.  
+ Ein `CObList` gefüllt, die mit den Bereichen, die in die Seite im Registerformat enthalten sind.  
   
  [in] `pRTCFilter`  
- If it is not `NULL`, the returned list contains only panes that are of the specified runtime class.  
+ Ist dies nicht `NULL`, die zurückgegebene Liste enthält nur die Bereiche, die die angegebene Runtime-Klasse.  
   
-##  <a name="gettabarea"></a>  CBaseTabbedPane::GetTabArea  
- Returns the bounding rectangles for the top and bottom tab areas.  
+##  <a name="gettabarea"></a>CBaseTabbedPane::GetTabArea  
+ Gibt die umgebenden Rechtecken für die oberen und unteren Registerkarte Bereiche zurück.  
   
 ```  
 virtual void GetTabArea(
@@ -464,108 +437,108 @@ virtual void GetTabArea(
     CRect& rectTabAreaBottom) const = 0;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [out] `rectTabAreaTop`  
- Receives the screen coordinates of the upper tab area.  
+ Empfängt die Bildschirmkoordinaten der oberen Registerkartenbereichs.  
   
  [out] `rectTabAreaBottom`  
- Receives the screen coordinates of the lower tab area.  
+ Empfängt die Bildschirmkoordinaten des im unteren Registerkartenbereich.  
   
-### <a name="remarks"></a>Remarks  
- Call this method to determine the bounding rectangles, in screen coordinates, for the upper and lower tab areas.  
+### <a name="remarks"></a>Hinweise  
+ Rufen Sie diese Methode, um die umschließende Rechtecke, in Bildschirmkoordinaten, für die oberen und unteren Registerkarte Bereiche zu bestimmen.  
   
-##  <a name="gettabsnum"></a>  CBaseTabbedPane::GetTabsNum  
- Returns the count of tabs in a tab window.  
+##  <a name="gettabsnum"></a>CBaseTabbedPane::GetTabsNum  
+ Gibt die Anzahl der Registerkarten in einem Registerkartenfenster zurück.  
   
 ```  
 virtual int GetTabsNum() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The number of tabs in the tabbed pane.  
+### <a name="return-value"></a>Rückgabewert  
+ Die Anzahl der Registerkarten in der Seite im Registerformat.  
   
-##  <a name="getunderlyingwindow"></a>  CBaseTabbedPane::GetUnderlyingWindow  
- Gets the underlying (wrapped) tab window.  
+##  <a name="getunderlyingwindow"></a>CBaseTabbedPane::GetUnderlyingWindow  
+ Ruft das zugrunde liegende (eingebundene) Registerkartenfenster.  
   
 ```  
 virtual CMFCBaseTabCtrl* GetUnderlyingWindow();
 ```  
   
-### <a name="return-value"></a>Return Value  
- A pointer to the underlying tab window.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Zeiger auf das zugrunde liegende Registerkartenfenster.  
   
-##  <a name="getvisibletabsnum"></a>  CBaseTabbedPane::GetVisibleTabsNum  
- Returns the count of visible tabs.  
+##  <a name="getvisibletabsnum"></a>CBaseTabbedPane::GetVisibleTabsNum  
+ Gibt die Anzahl eingeblendeter Registerkarten zurück.  
   
 ```  
 virtual int GetVisibleTabsNum() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The number of visible tabs, which will be greater than or equal to zero.  
+### <a name="return-value"></a>Rückgabewert  
+ Die Anzahl der sichtbaren Registerkarten, die größer als oder gleich&0; (null).  
   
-### <a name="remarks"></a>Remarks  
- Call this method to determine the number of visible tabs in the tabbed pane.  
+### <a name="remarks"></a>Hinweise  
+ Rufen Sie diese Methode, um die Anzahl der sichtbaren Registerkarten in dem Fenster im Registerkartenformat zu bestimmen.  
   
-##  <a name="hasautohidemode"></a>  CBaseTabbedPane::HasAutoHideMode  
- Determines whether the tabbed pane can be switched to autohide mode.  
+##  <a name="hasautohidemode"></a>CBaseTabbedPane::HasAutoHideMode  
+ Bestimmt, ob der Bereich im Registerkartenformat automatisch in den Hintergrundmodus gewechselt werden kann.  
   
 ```  
 virtual BOOL HasAutoHideMode() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the pane can be switched to autohide mode; otherwise, `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn der Bereich automatisch im Hintergrund-Modus gewechselt werden kann; andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- If autohide mode is disabled, no pin button is displayed on the tabbed pane caption.  
+### <a name="remarks"></a>Hinweise  
+ Wenn der Ausblendmodus zum automatischen deaktiviert ist, wird keine Pin-Schaltfläche auf der Seite im Registerformat Beschriftung angezeigt.  
   
-##  <a name="ishidesingletab"></a>  CBaseTabbedPane::IsHideSingleTab  
- Determines whether the tabbed pane is hidden if only one tab is displayed.  
+##  <a name="ishidesingletab"></a>CBaseTabbedPane::IsHideSingleTab  
+ Bestimmt, ob die Seite im Registerformat ausgeblendet ist, wenn nur eine Registerkarte angezeigt wird.  
   
 ```  
 virtual BOOL IsHideSingleTab() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the tab window is not shown when there is only one visible tab; otherwise, `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn das Registerkartenfenster nicht angezeigt wird, wenn nur eine eingeblendete Registerkarte ist; andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- If the pane is not displayed because only one tab is open, you can call this method to determine whether the tabbed pane is working correctly.  
+### <a name="remarks"></a>Hinweise  
+ Wenn der Bereich nicht angezeigt wird, da nur eine Registerkarte geöffnet ist, können Sie diese Methode, um zu bestimmen, ob die Seite im Registerformat ordnungsgemäß arbeitet aufrufen.  
   
-##  <a name="removepane"></a>  CBaseTabbedPane::RemovePane  
- Removes a pane from the tabbed pane.  
+##  <a name="removepane"></a>CBaseTabbedPane::RemovePane  
+ Entfernt einen Bereich aus dem Fenster im Registerkartenformat.  
   
 ```  
 virtual BOOL RemovePane(CWnd* pBar);
 ```  
   
-### <a name="parameters"></a>Parameters  
- [in] [out] `pBar`  
- A pointer to the pane to remove from the tabbed pane.  
+### <a name="parameters"></a>Parameter  
+ [in] [out]`pBar`  
+ Ein Zeiger auf den Bereich, um aus dem Fenster im Registerkartenformat zu entfernen.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the pane was successfully removed from the tabbed pane and if the tabbed pane is still valid. `FALSE` if the last pane has been removed from the tabbed pane and the tabbed pane is about to be destroyed. If the return value is `FALSE`, do not use the tabbed pane any more.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`im Bereich aus dem Fenster im Registerkartenformat erfolgreich entfernt wurde und die Seite im Registerformat noch gültig ist. `FALSE`Wenn der letzte Bereich aus dem Fenster im Registerkartenformat entfernt wurde und die Seite im Registerformat zerstört werden soll. Wenn der Rückgabewert ist `FALSE`, verwenden Sie die Seite im Registerformat nicht mehr.  
   
-### <a name="remarks"></a>Remarks  
- Call this method to remove the pane specified by the `pBar` parameter from the tabbed pane.  
+### <a name="remarks"></a>Hinweise  
+ Rufen Sie diese Methode, um den angegebenen Bereich Entfernen der `pBar` Parameter aus dem Fenster im Registerkartenformat.  
   
-##  <a name="setautodestroy"></a>  CBaseTabbedPane::SetAutoDestroy  
- Determines whether the tabbed control bar will be destroyed automatically.  
+##  <a name="setautodestroy"></a>CBaseTabbedPane::SetAutoDestroy  
+ Bestimmt, ob die Steuerleiste im Registerkartenformat automatisch zerstört wird.  
   
 ```  
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `bAutoDestroy`  
- `TRUE` if the tabbed pane was created dynamically and you are not controlling its lifetime; otherwise, `FALSE`.  
+ `TRUE`Wenn die Seite im Registerformat dynamisch erstellt wurde, und Sie sind nicht dessen Lebensdauer steuern; andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- Set the auto-destroy mode to `TRUE` if you create a tabbed pane dynamically and if you are not controlling its lifetime. If auto-destroy mode is `TRUE`, the tabbed pane will be destroyed automatically by the framework.  
+### <a name="remarks"></a>Hinweise  
+ Legen Sie den Modus zur automatischen-Zerstörung `TRUE` , wenn Sie ein Fenster mit Registerkarten dynamisch erstellen und seine Lebensdauer nicht aktiv ist. Wenn automatische zerstören Modus ist `TRUE`, die im Registerformat werden automatisch vom Framework gelöscht.  
   
-##  <a name="showtab"></a>  CBaseTabbedPane::ShowTab  
- Shows or hides a tab.  
+##  <a name="showtab"></a>CBaseTabbedPane::ShowTab  
+ Anzeigen oder ausblenden eine Registerkarte.  
   
 ```  
 virtual BOOL ShowTab(
@@ -575,39 +548,39 @@ virtual BOOL ShowTab(
     BOOL bActivate);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pBar`  
- A pointer to the pane to show or hide.  
+ Ein Zeiger auf den Bereich, um ein- oder ausblenden.  
   
  [in] `bShow`  
- `TRUE` to show the pane; `FALSE` to hide the pane.  
+ `TRUE`um den Bereich anzuzeigen; `FALSE` zum Ausblenden des Fensters.  
   
  [in] `bDelay`  
- `TRUE` to delay the adjustment of the tab layout; otherwise, `FALSE`.  
+ `TRUE`die Anpassung von der Registerkartenlayout verzögert; andernfalls `FALSE`.  
   
  [in] `bActivate`  
- `TRUE` to make the tab the active tab; otherwise, `FALSE`.  
+ `TRUE`auf der Registerkarte auf die aktive Registerkarte stellen. andernfalls `FALSE`.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the tab was either shown or hidden successfully; otherwise, `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn die Registerkarte wurde entweder angezeigt oder ausgeblendet; andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- When you call this method, a pane is either shown or hidden, depending on the value of the `bShow` parameter. If you hide a tab and it is the last visible tab in the underlying tab window, the tabbed pane is hidden. If you show a tab when there were previously no tabs visible, the tabbed pane is shown.  
+### <a name="remarks"></a>Hinweise  
+ Wenn Sie diese Methode aufrufen, ein Bereich entweder ein- oder ausgeblendet wird, abhängig vom Wert der `bShow` Parameter. Wenn Sie einer Registerkarte ausblenden, und es die letzte sichtbare Registerkarte im Registerkartenfenster zugrunde liegenden ist, wird die Seite im Registerformat ausgeblendet. Wenn Sie eine Registerkarte anzuzeigen, wenn zuvor keine Registerkarten sichtbar sind, wird die Seite im Registerformat angezeigt.  
   
-##  <a name="recalclayout"></a>  CBaseTabbedPane::RecalcLayout  
- Recalculates layout information for the pane.  
+##  <a name="recalclayout"></a>CBaseTabbedPane::RecalcLayout  
+ Berechnet die Layoutinformationen für den Bereich.  
   
 ```  
 virtual void RecalcLayout();
 ```  
   
-### <a name="remarks"></a>Remarks  
- If the pane is floating, this method notifies the framework to resize the pane to the current size of the mini-frame.  
+### <a name="remarks"></a>Hinweise  
+ Wenn der Bereich verankert ist, benachrichtigt diese Methode das Framework den Bereich, um die aktuelle Größe des Mini-Frames in der Größe anpassen.  
   
- If the pane is docked, this method does nothing.  
+ Wenn der Bereich angedockt ist, bewirkt diese Methode nichts.  
   
-##  <a name="setautohidemode"></a>  CBaseTabbedPane::SetAutoHideMode  
- Sets the auto-hide mode for detachable panes in the tabbed pane.  
+##  <a name="setautohidemode"></a>CBaseTabbedPane::SetAutoHideMode  
+ Legt automatisch ausblenden-Modus für die abnehmbare Bereiche in die Seite im Registerformat.  
   
 ```  
 virtual CMFCAutoHideToolBar* SetAutoHideMode(
@@ -617,31 +590,31 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
     BOOL bUseTimer = TRUE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `bMode`  
- `TRUE` to enable auto-hide mode; `FALSE` to enable regular docking mode.  
+ `TRUE`So aktivieren Sie automatisch ausgeblendet; `FALSE` reguläre Andockmodus aktivieren.  
   
  [in] `dwAlignment`  
- Specifies the alignment of the auto-hide pane that is to be created. For a list of possible values, see [CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment).  
+ Gibt die Ausrichtung des Bereichs automatisch im Hintergrund erstellt werden soll. Eine Liste der möglichen Werte finden Sie unter [CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment).  
   
- [in] [out] `pCurrAutoHideBar`  
- A pointer to the current auto-hide toolbar. Can be `NULL`.  
+ [in] [out]`pCurrAutoHideBar`  
+ Ein Zeiger auf die aktuelle automatisch im Hintergrund-Symbolleiste. Kann `NULL`.  
   
  [in] `bUseTimer`  
- Specifies whether to use the auto-hide effect when the user switches the pane to auto-hide mode, or to hide the pane immediately.  
+ Gibt an, ob den Effekt automatisch im Hintergrund zu verwenden, wenn der Benutzer den Bereich zum automatischen Ausblenden Modus wechselt, oder sofort Ausblenden des Fensters.  
   
-### <a name="return-value"></a>Return Value  
- A pointer to the auto-hide toolbar that is created when switching to auto-hide mode, or `NULL` if no toolbar is created.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Zeiger auf die automatisch im Hintergrund-Symbolleiste, die erstellt wird, beim Wechseln zum Modus "automatisch ausblenden" oder `NULL` Wenn keine Symbolleiste erstellt wird.  
   
-### <a name="remarks"></a>Remarks  
- The framework calls this method when a user chooses the pin button to switch the tabbed pane to auto-hide mode or to regular docking mode.  
+### <a name="remarks"></a>Hinweise  
+ Das Framework ruft diese Methode auf, wenn ein Benutzer die Pin-Schaltfläche, um die Seite im Registerformat automatisch ausgeblendet oder regulären Andockmodus wechseln.  
   
- Auto-hide mode is set for each detachable pane in the tabbed pane. Panes that are non-detachable are ignored. For more information, see [CMFCBaseTabCtrl::EnableTabDetach](../../mfc/reference/cmfcbasetabctrl-class.md#enabletabdetach).  
+ Automatisch ausgeblendet wird für jede abnehmbare Bereich in dem Fenster im Registerkartenformat festgelegt. Bereiche, die nicht lösbare werden ignoriert. Weitere Informationen finden Sie unter [Mfcbasetabctrl](../../mfc/reference/cmfcbasetabctrl-class.md#enabletabdetach).  
   
- Call this method to switch a tabbed pane to auto-hide mode programmatically. The pane must be docked to the main frame window ( [CDockablePane::GetDefaultPaneDivider](../../mfc/reference/cdockablepane-class.md#getdefaultpanedivider) must return a valid pointer to the [CPaneDivider](../../mfc/reference/cpanedivider-class.md)).  
+ Rufen Sie diese Methode, um ein Fenster mit Registerkarten programmgesteuert in automatisch im Hintergrund-Modus zu wechseln. Der Bereich muss an das Hauptrahmenfenster angedockt werden ( [CDockablePane::GetDefaultPaneDivider](../../mfc/reference/cdockablepane-class.md#getdefaultpanedivider) muss einen gültigen Zeiger auf Zurückgeben der [CPaneDivider](../../mfc/reference/cpanedivider-class.md)).  
   
-## <a name="see-also"></a>See Also  
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [Classes](../../mfc/reference/mfc-classes.md)   
- [CDockablePane Class](../../mfc/reference/cdockablepane-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
+ [Klassen](../../mfc/reference/mfc-classes.md)   
+ [CDockablePane-Klasse](../../mfc/reference/cdockablepane-class.md)
 

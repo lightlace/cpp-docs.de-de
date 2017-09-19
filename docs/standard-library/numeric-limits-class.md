@@ -1,14 +1,15 @@
 ---
-title: numeric_limits Class | Microsoft Docs
+title: numeric_limits-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- cpp-standard-libraries
+- devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- numeric_limits
 - limits/std::numeric_limits
 - limits/std::numeric_limits::denorm_min
 - limits/std::numeric_limits::digits
@@ -45,39 +46,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- std::numeric_limits [C++]
-- std::numeric_limits [C++], denorm_min
-- std::numeric_limits [C++], digits
-- std::numeric_limits [C++], digits10
-- std::numeric_limits [C++], epsilon
-- std::numeric_limits [C++], has_denorm
-- std::numeric_limits [C++], has_denorm_loss
-- std::numeric_limits [C++], has_infinity
-- std::numeric_limits [C++], has_quiet_NaN
-- std::numeric_limits [C++], has_signaling_NaN
-- std::numeric_limits [C++], infinity
-- std::numeric_limits [C++], is_bounded
-- std::numeric_limits [C++], is_exact
-- std::numeric_limits [C++], is_iec559
-- std::numeric_limits [C++], is_integer
-- std::numeric_limits [C++], is_modulo
-- std::numeric_limits [C++], is_signed
-- std::numeric_limits [C++], is_specialized
-- std::numeric_limits [C++], lowest
-- std::numeric_limits [C++], max
-- std::numeric_limits [C++], max_digits10
-- std::numeric_limits [C++], max_exponent
-- std::numeric_limits [C++], max_exponent10
-- std::numeric_limits [C++], min
-- std::numeric_limits [C++], min_exponent
-- std::numeric_limits [C++], min_exponent10
-- std::numeric_limits [C++], quiet_NaN
-- std::numeric_limits [C++], radix
-- std::numeric_limits [C++], round_error
-- std::numeric_limits [C++], round_style
-- std::numeric_limits [C++], signaling_NaN
-- std::numeric_limits [C++], tinyness_before
-- std::numeric_limits [C++], traps
+- numeric_limits class
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
 caps.latest.revision: 26
 author: corob-msft
@@ -97,15 +66,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 7f4e22293ac1ece487d99ea7c2d4e8f62310e2fa
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 87b1be7f31a8f28425dc80f16ed60528f811ad32
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="numericlimits-class"></a>numeric_limits Class
-The template class describes arithmetic properties of built-in numerical types.  
+# <a name="numericlimits-class"></a>numeric_limits-Klasse
+Die Vorlagenklasse beschreibt arithmetische Eigenschaften der integrierten numerischen Typen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -114,73 +83,73 @@ template <class Type>
 class numeric_limits  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
  `Type`  
- The fundamental element data type whose properties are being tested or queried or set.  
+ Der grundlegende Elementdatentyp, dessen Eigenschaften getestet, abgefragt oder festgelegt werden.  
   
-## <a name="remarks"></a>Remarks  
- The header defines explicit specializations for the types `wchar_t`, `bool`, `char`, `signed char`, `unsigned char`, `short`, `unsigned short`, `int`, `unsigned int`, `long`, `unsigned long`, `float`, `double`, `long double`**,** `long long`, `unsigned long long`, `char16_t`, and `char32_t`. For these explicit specializations, the member [numeric_limits::is_specialized](#is_specialized) is `true`, and all relevant members have meaningful values. The program can supply additional explicit specializations. Most member functions of the class describe or test possible implementations of `float`.  
+## <a name="remarks"></a>Hinweise  
+ Der Header definiert explizite Spezialisierungen für die Typen `wchar_t`, `bool`, `char`, `signed char`, `unsigned char`, `short`, `unsigned short`, `int`, `unsigned int`, `long`, `unsigned long`, `float`, `double`, `long double`**,** `long long`, `unsigned long long`, `char16_t`und `char32_t`. Für diese expliziten Spezialisierungen ist der Member [numeric_limits::is_specialized](#is_specialized) gleich `true`, und alle relevanten Elemente haben sinnvolle Werte. Das Programm kann zusätzliche explizite Spezialisierungen bereitstellen. Die meisten Memberfunktionen der Klasse beschreiben oder testen mögliche Implementierungen von `float`.  
   
- For an arbitrary specialization, no members have meaningful values. A member object that does not have a meaningful value stores zero (or `false`) and a member function that does not return a meaningful value returns `Type(0)`.  
+ Für eine beliebige Spezialisierung gibt es keine Member, die sinnvolle Werte haben. Ein Memberobjekt, das keinen sinnvollen Wert hat, speichert 0 (oder `false`), und eine Memberfunktion, die keinen sinnvollen Wert zurückgibt, gibt `Type(0)`zurück.  
   
-### <a name="static-functions-and-constants"></a>Static Functions and Constants  
+### <a name="static-functions-and-constants"></a>Statische Funktionen und Konstanten  
   
 |||  
 |-|-|  
-|[denorm_min](#denorm_min)|Returns the smallest nonzero denormalized value.|  
-|[digits](#digits)|Returns the number of radix digits that the type can represent without loss of precision.|  
-|[digits10](#digits10)|Returns the number of decimal digits that the type can represent without loss of precision.|  
-|[epsilon](#epsilon)|Returns the difference between 1 and the smallest value greater than 1 that the data type can represent.|  
-|[has_denorm](#has_denorm)|Tests whether a type allows denormalized values.|  
-|[has_denorm_loss](#has_denorm_loss)|Tests whether loss of accuracy is detected as a denormalization loss rather than as an inexact result.|  
-|[has_infinity](#has_infinity)|Tests whether a type has a representation for positive infinity.|  
-|[has_quiet_NaN](#has_quiet_nan)|Tests whether a type has a representation for a quiet not a number (NAN), which is nonsignaling.|  
-|[has_signaling_NaN](#has_signaling_nan)|Tests whether a type has a representation for signaling not a number (NAN).|  
-|[infinity](#infinity)|The representation for positive infinity for a type, if available.|  
-|[is_bounded](#is_bounded)|Tests if the set of values that a type may represent is finite.|  
-|[is_exact](#is_exact)|Tests if the calculations done on a type are free of rounding errors.|  
-|[is_iec559](#is_iec559)|Tests if a type conforms to IEC 559 standards.|  
-|[is_integer](#is_integer)|Tests if a type has an integer representation.|  
-|[is_modulo](#is_modulo)|Tests if a type has a modulo representation.|  
-|[is_signed](#is_signed)|Tests if a type has a signed representation.|  
-|[is_specialized](#is_specialized)|Tests if a type has an explicit specialization defined in the template class `numeric_limits`.|  
-|[lowest](#lowest)|Returns the most negative finite value.|  
-|[max](#max)|Returns the maximum finite value for a type.|  
-|[max_digits10](#max_digits10)|Returns the number of decimal digits required to ensure that two distinct values of the type have distinct decimal representations.|  
-|[max_exponent](#max_exponent)|Returns the maximum positive integral exponent that the floating-point type can represent as a finite value when a base of radix is raised to that power.|  
-|[max_exponent10](#max_exponent10)|Returns the maximum positive integral exponent that the floating-point type can represent as a finite value when a base of ten is raised to that power.|  
-|[min](#min)|Returns the minimum normalized value for a type.|  
-|[min_exponent](#min_exponent)|Returns the maximum negative integral exponent that the floating-point type can represent as a finite value when a base of radix is raised to that power.|  
-|[min_exponent10](#min_exponent10)|Returns the maximum negative integral exponent that the floating-point type can represent as a finite value when a base of ten is raised to that power.|  
-|[quiet_NaN](#quiet_nan)|Returns the representation of a quiet not a number (NAN) for the type.|  
-|[radix](#radix)|Returns the integral base, referred to as radix, used for the representation of a type.|  
-|[round_error](#round_error)|Returns the maximum rounding error for the type.|  
-|[round_style](#round_style)|Returns a value that describes the various methods that an implementation can choose for rounding a floating-point value to an integer value.|  
-|[signaling_NaN](#signaling_nan)|Returns the representation of a signaling not a number (NAN) for the type.|  
-|[tinyness_before](#tinyness_before)|Tests whether a type can determine that a value is too small to represent as a normalized value before rounding it.|  
-|[traps](#traps)|Tests whether trapping that reports on arithmetic exceptions is implemented for a type.|  
+|[denorm_min](#denorm_min)|Gibt den kleinsten denormalisierten Wert ungleich 0 zurück.|  
+|[Ziffern](#digits)|Gibt die Anzahl von Basisziffern zurück, die der Typ ohne Genauigkeitsverlust darstellen kann.|  
+|[digits10](#digits10)|Gibt die Anzahl von Dezimalziffern zurück, die der Typ ohne Genauigkeitsverlust darstellen kann.|  
+|[epsilon](#epsilon)|Gibt die Differenz zwischen 1 und dem kleinsten Wert größer als 1 zurück, die der Datentyp darstellen kann.|  
+|[has_denorm](#has_denorm)|Testet, ob ein Typ denormalisierte Werte unterstützt.|  
+|[has_denorm_loss](#has_denorm_loss)|Testet, ob ein Genauigkeitsverlust nicht als ungenaues Ergebnis, sondern als Denormalisierungsverlust erkannt wird.|  
+|[has_infinity](#has_infinity)|Testet, ob ein Typ eine Darstellung für positive Unendlichkeit hat.|  
+|[has_quiet_NaN](#has_quiet_nan)|Testet, ob ein Typ eine Darstellung für eine stille NaN (Not a Number) hat, also eine nicht anzeigende NaN.|  
+|[has_signaling_NaN](#has_signaling_nan)|Testet, ob ein Typ eine Darstellung für eine anzeigenden NaN (Not a Number) hat.|  
+|[infinity](#infinity)|Die Darstellung für positive Unendlichkeit für einen Typ, sofern verfügbar.|  
+|[is_bounded](#is_bounded)|Testet, ob die Menge von Werten, die ein Typ darstellen kann, endlich ist.|  
+|[is_exact](#is_exact)|Testet, ob die für einen Typ ausgeführten Berechnungen keine Rundungsfehler haben.|  
+|[is_iec559](#is_iec559)|Testet, ob ein Typ den IEC 559-Standards entspricht.|  
+|[is_integer](#is_integer)|Testet, ob ein Typ eine Ganzzahldarstellung hat.|  
+|[is_modulo](#is_modulo)|Testet, ob ein Typ eine Modulodarstellung hat.|  
+|[is_signed](#is_signed)|Testet, ob ein Typ eine vorzeichenbehaftete Darstellung hat.|  
+|[is_specialized](#is_specialized)|Testet, ob ein Typ eine explizite Spezialisierung hat, die in der Vorlagenklasse `numeric_limits`definiert ist.|  
+|[lowest](#lowest)|Gibt den kleinsten negativen begrenzten Wert zurück.|  
+|[max](#max)|Gibt den größten endlichen Wert für einen Typ zurück.|  
+|[max_digits10](#max_digits10)|Gibt die Anzahl von Dezimalstellen zurück, die dazu erforderlich ist sicherzustellen, dass zwei unterschiedliche Werte des Typs unterschiedliche Dezimaldarstellungen haben.|  
+|[max_exponent](#max_exponent)|Gibt den größten positiven ganzzahligen Exponenten zurück, den der Gleitkommatyp als einen endlichen Wert darstellen kann, wenn eine Basis mit diesem Exponenten potenziert wird.|  
+|[max_exponent10](#max_exponent10)|Gibt den größten positiven ganzzahligen Exponenten zurück, den der Gleitkommatyp als einen endlichen Wert darstellen kann, wenn eine Basis von zehn mit diesem Exponenten potenziert wird.|  
+|[min](#min)|Gibt den kleinsten normalisierten Wert für einen Typ zurück.|  
+|[min_exponent](#min_exponent)|Gibt den größten negativen ganzzahligen Exponenten zurück, den der Gleitkommatyp als einen endlichen Wert darstellen kann, wenn eine Basis mit diesem Exponenten potenziert wird.|  
+|[min_exponent10](#min_exponent10)|Gibt den größten negativen ganzzahligen Exponenten zurück, den der Gleitkommatyp als einen endlichen Wert darstellen kann, wenn eine Basis von zehn mit diesem Exponenten potenziert wird.|  
+|[quiet_NaN](#quiet_nan)|Gibt die Darstellung einer stillen NaN (Not a Number) für den Typ zurück.|  
+|[radix](#radix)|Gibt die ganzzahlige Basis (als Radix bezeichnet) zurück, die für die Darstellung eines Typs verwendet wird.|  
+|[round_error](#round_error)|Gibt den größten Rundungsfehler für den Typ zurück.|  
+|[round_style](#round_style)|Gibt einen Wert zurück, der die verschiedenen Methoden beschreibt, die eine Implementierung für die Rundung eines Gleitkommawerts auf einen ganzzahligen Wert auswählen kann.|  
+|[signaling_NaN](#signaling_nan)|Gibt die Darstellung einer anzeigenden NaN (Not a Number) für den Typ zurück.|  
+|[tinyness_before](#tinyness_before)|Testet, ob ein Typ für einen Wert vor dessen Rundung ermitteln kann, ob der Wert zu klein ist, um als normalisierter Wert dargestellt zu werden.|  
+|[traps](#traps)|Testet, ob für einen Typ Auffangen, bei dem arithmetischen Ausnahmen gemeldet werden, implementiert ist.|  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<limits>  
   
  **Namespace:** std  
   
-##  <a name="denorm_min"></a>  numeric_limits::denorm_min  
- Returns the smallest nonzero denormalized value.  
+##  <a name="denorm_min"></a> numeric_limits::denorm_min  
+ Gibt den kleinsten denormalisierten Wert ungleich 0 zurück.  
   
 ```  
 static Type denorm_min() throw();
 ```  
   
-### <a name="return-value"></a>Return Value  
- The smallest nonzero denormalized value.  
+### <a name="return-value"></a>Rückgabewert  
+ Der kleinste denormalisierte Wert ungleich 0.  
   
-### <a name="remarks"></a>Remarks  
- `long double` is the same as **double** for the C++ compiler.  
+### <a name="remarks"></a>Hinweise  
+ `long double` entspricht dem **doppelten** für den C++-Compiler.  
   
- The function returns the minimum value for the type, which is the same as [min](#min) if [has_denorm](#has_denorm) is not equal to **denorm_present**.  
+ Die Funktion gibt den kleinsten Wert für den Typ zurück, der der gleiche ist wie [min](#min), wenn [has_denorm](#has_denorm) nicht gleich **denorm_present** ist.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // numeric_limits_denorm_min.cpp  
@@ -221,20 +190,20 @@ The smallest nonzero denormalized value
 0  
 ```  
   
-##  <a name="digits"></a>  numeric_limits::digits  
- Returns the number of radix digits that the type can represent without loss of precision.  
+##  <a name="digits"></a> numeric_limits::digits  
+ Gibt die Anzahl von Basisziffern zurück, die der Typ ohne Genauigkeitsverlust darstellen kann.  
   
 ```  
 static const int digits = 0;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The number of radix digits that the type can represent without loss of precision.  
+### <a name="return-value"></a>Rückgabewert  
+ Die Anzahl von Basisziffern, die der Typ ohne Genauigkeitsverlust darstellen kann.  
   
-### <a name="remarks"></a>Remarks  
- The member stores the number of radix digits that the type can represent without change, which is the number of bits other than any sign bit for a predefined integer type, or the number of mantissa digits for a predefined floating-point type.  
+### <a name="remarks"></a>Hinweise  
+ Der Member speichert die Anzahl der Basisziffern, die der Typ ohne Änderung darstellen kann. Dies ist die Anzahl der Bits außer den Vorzeichenbits für einen vordefinierten Ganzzahltyp, oder die Anzahl der Mantissaziffern für einen vordefinierten Gleitkommatyp.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // numeric_limits_digits_min.cpp  
@@ -262,17 +231,17 @@ int main( )
 63  
 ```  
   
-##  <a name="digits10"></a>  numeric_limits::digits10  
- Returns the number of decimal digits that the type can represent without loss of precision.  
+##  <a name="digits10"></a> numeric_limits::digits10  
+ Gibt die Anzahl von Dezimalziffern zurück, die der Typ ohne Genauigkeitsverlust darstellen kann.  
   
 ```  
 static const int digits10 = 0;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The number of decimal digits that the type can represent without loss of precision.  
+### <a name="return-value"></a>Rückgabewert  
+ Die Anzahl von Dezimalziffern, die der Typ ohne Genauigkeitsverlust darstellen kann.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // numeric_limits_digits10.cpp  
@@ -304,20 +273,20 @@ int main( )
 The float is; 100000000  
 ```  
   
-##  <a name="epsilon"></a>  numeric_limits::epsilon  
- The function returns the difference between 1 and the smallest value greater than 1 that is representable for the data type.  
+##  <a name="epsilon"></a> numeric_limits::epsilon  
+ Die Funktion gibt die Differenz zwischen 1 und dem kleinsten Wert größer als 1 zurück, die der Datentyp darstellen kann.  
   
 ```  
 static Type epsilon() throw();
 ```  
   
-### <a name="return-value"></a>Return Value  
- The difference between 1 and the smallest value greater than 1 that is representable for the data type.  
+### <a name="return-value"></a>Rückgabewert  
+ Die Differenz zwischen 1 und dem kleinsten Wert größer als 1, die der Datentyp darstellen kann.  
   
-### <a name="remarks"></a>Remarks  
- The value is FLT_EPSILON for type **float**. `epsilon` for a type is the smallest positive floating-point number *N* such that *N* + `epsilon` + *N* is representable.  
+### <a name="remarks"></a>Hinweise  
+ Der Wert ist FLT_EPSILON für Typ **float**. `epsilon` ist für ein Typ die kleinste positive Gleitkommazahl *N*, sodass *N* + `epsilon` + *N* darstellbar ist.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // numeric_limits_epsilon.cpp  
@@ -353,20 +322,20 @@ The difference between 1 and the smallest value greater than 1
  for long double objects is: 2.22045e-016  
 ```  
   
-##  <a name="has_denorm"></a>  numeric_limits::has_denorm  
- Tests whether a type allows denormalized values.  
+##  <a name="has_denorm"></a> numeric_limits::has_denorm  
+ Testet, ob ein Typ denormalisierte Werte unterstützt.  
   
 ```  
 static const float_denorm_style has_denorm = denorm_absent;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- An enumeration value of type **const**`float_denorm_style`, indicating whether the type allows denormalized values.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Enumerationswert des Typs **const**`float_denorm_style`, wodurch angegeben wird, ob der Typ denormalisierte Werte zulässt.  
   
-### <a name="remarks"></a>Remarks  
- The member stores **denorm_present** for a floating-point type that has denormalized values, effectively a variable number of exponent bits.  
+### <a name="remarks"></a>Hinweise  
+ Der Member speichert **denorm_present** für einen Gleitkommatyp, der denormalisierte Werte hat, effektiv eine variable Anzahl von Exponentenbits.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // numeric_limits_has_denorm.cpp  
@@ -396,20 +365,20 @@ Whether double objects allow denormalized values: 1
 Whether long int objects allow denormalized values: 0  
 ```  
   
-##  <a name="has_denorm_loss"></a>  numeric_limits::has_denorm_loss  
- Tests whether loss of accuracy is detected as a denormalization loss rather than as an inexact result.  
+##  <a name="has_denorm_loss"></a> numeric_limits::has_denorm_loss  
+ Testet, ob ein Genauigkeitsverlust nicht als ungenaues Ergebnis, sondern als Denormalisierungsverlust erkannt wird.  
   
 ```  
 static const bool has_denorm_loss = false;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- **true** if the loss of accuracy is detected as a denormalization loss; **false** if not.  
+### <a name="return-value"></a>Rückgabewert  
+ **TRUE**, wenn der Verlust der Genauigkeit als Denormalisierungsverlust erkannt wird; **FALSE** wenn nicht.  
   
-### <a name="remarks"></a>Remarks  
- The member stores true for a type that determines whether a value has lost accuracy because it is delivered as a denormalized result (too small to represent as a normalized value) or because it is inexact (not the same as a result not subject to limitations of exponent range and precision), an option with IEC 559 floating-point representations that can affect some results.  
+### <a name="remarks"></a>Hinweise  
+ Der Member speichert TRUE für einen Typ, der bestimmt, ob ein Wert Genauigkeit verloren hat, da er als denormalisiertes Ergebnis (klein, um als normalisierte Werte darstellen) bereitgestellt wird oder ungenau ist (nicht das gleiche Ergebnis, daher nicht Teil des Einschränkungen des Exponentenbereichs und der Genauigkeit), eine Option mit IEC 559 Gleitkommadarstellungen, die einige Ergebnisse beeinflussen können.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // numeric_limits_has_denorm_loss.cpp  
@@ -439,20 +408,20 @@ Whether double objects can detect denormalized loss: 1
 Whether long int objects can detect denormalized loss: 0  
 ```  
   
-##  <a name="has_infinity"></a>  numeric_limits::has_infinity  
- Tests whether a type has a representation for positive infinity.  
+##  <a name="has_infinity"></a> numeric_limits::has_infinity  
+ Testet, ob ein Typ eine Darstellung für positive Unendlichkeit hat.  
   
 ```  
 static const bool has_infinity = false;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- **true** if the type has a representation for positive infinity; **false** if not.  
+### <a name="return-value"></a>Rückgabewert  
+ **TRUE**, wenn der Typ eine Darstellung für positive Unendlichkeit hat; **FALSE**, wenn nicht.  
   
-### <a name="remarks"></a>Remarks  
- The member returns **true** if [is_iec559](#is_iec559) is **true**.  
+### <a name="remarks"></a>Hinweise  
+ Gibt das Element **TRUE** zurück, wenn [is_iec559](#is_iec559) **TRUE** ist.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // numeric_limits_has_infinity.cpp  
@@ -482,20 +451,20 @@ Whether double objects have infinity: 1
 Whether long int objects have infinity: 0  
 ```  
   
-##  <a name="has_quiet_nan"></a>  numeric_limits::has_quiet_NaN  
- Tests whether a type has a representation for a quiet not a number (NAN), which is nonsignaling.  
+##  <a name="has_quiet_nan"></a> numeric_limits::has_quiet_NaN  
+ Testet, ob ein Typ eine Darstellung für eine stille NaN (Not a Number) hat, also eine nicht anzeigende NaN.  
   
 ```  
 static const bool has_quiet_NaN = false;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- **true** if the **type** has a representation for a quiet NAN; **false** if not.  
+### <a name="return-value"></a>Rückgabewert  
+ **TRUE**, wenn der **Typ** eine Darstellung für einen stillen NaN hat; **FALSE**, wenn nicht.  
   
-### <a name="remarks"></a>Remarks  
- A quiet NAN is an encoding for not a number, which does not signal its presence in an expression. The return value is **true** if [is_iec559](#is_iec559) is true.  
+### <a name="remarks"></a>Hinweise  
+ Ein stilles NAN ist eine Codierung für keine Zahl, die das Vorhandensein in einem Ausdruck nicht signalisiert. Der Rückgabewert ist **TRUE**, wenn [is_iec559](#is_iec559) wahr ist.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // numeric_limits_has_quiet_nan.cpp  
@@ -525,20 +494,20 @@ Whether double objects have quiet_NaN: 1
 Whether long int objects have quiet_NaN: 0  
 ```  
   
-##  <a name="has_signaling_nan"></a>  numeric_limits::has_signaling_NaN  
- Tests whether a type has a representation for signaling not a number (NAN).  
+##  <a name="has_signaling_nan"></a> numeric_limits::has_signaling_NaN  
+ Testet, ob ein Typ eine Darstellung für eine anzeigenden NaN (Not a Number) hat.  
   
 ```  
 static const bool has_signaling_NaN = false;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- **true** if the type has a representation for a signaling NAN; **false** if not.  
+### <a name="return-value"></a>Rückgabewert  
+ **TRUE**, wenn der Typ eine Darstellung für einen signalisierenden NAN hat; **FALSE**, wenn nicht.  
   
-### <a name="remarks"></a>Remarks  
- A signaling NAN is an encoding for not a number, which signals its presence in an expression. The return value is **true**[is_iec559](#is_iec559) is true.  
+### <a name="remarks"></a>Hinweise  
+ Ein stilles NAN ist eine Codierung für keine Zahl, die das Vorhandensein in einem Ausdruck nicht signalisiert. Der Rückgabewert **TRUE**[is_iec559](#is_iec559) ist wahr.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // numeric_limits_has_signaling_nan.cpp  
@@ -568,20 +537,20 @@ Whether double objects have a signaling_NaN: 1
 Whether long int objects have a signaling_NaN: 0  
 ```  
   
-##  <a name="infinity"></a>  numeric_limits::infinity  
- The representation of positive infinity for a type, if available.  
+##  <a name="infinity"></a> numeric_limits::infinity  
+ Die Darstellung für positive Unendlichkeit für einen Typ, sofern verfügbar.  
   
 ```  
 static Type infinity() throw();
 ```  
   
-### <a name="return-value"></a>Return Value  
- The representation of positive infinity for a type, if available.  
+### <a name="return-value"></a>Rückgabewert  
+ Die Darstellung für positive Unendlichkeit für einen Typ, sofern verfügbar.  
   
-### <a name="remarks"></a>Remarks  
- The return value is meaningful only if [has_infinity](#has_infinity) is **true**.  
+### <a name="remarks"></a>Hinweise  
+ Der Rückgabewert ist nur aussagekräftig, wenn [has_infinity](#has_infinity) **TRUE** ist.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // numeric_limits_infinity.cpp  
@@ -619,20 +588,20 @@ The representation of infinity for type double is: 1.#INF
 The representation of infinity for type long double is: 1.#INF  
 ```  
   
-##  <a name="is_bounded"></a>  numeric_limits::is_bounded  
- Tests if the set of values that a type may represent is finite.  
+##  <a name="is_bounded"></a> numeric_limits::is_bounded  
+ Testet, ob die Menge von Werten, die ein Typ darstellen kann, endlich ist.  
   
 ```  
 static const bool is_bounded = false;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- **true** if the type has a bounded set of representable values; **false** if not.  
+### <a name="return-value"></a>Rückgabewert  
+ **TRUE**, wenn der Typ einen begrenzten Satz der darstellbaren Werte hat; **FALSE**, wenn dies nicht der Fall ist.  
   
-### <a name="remarks"></a>Remarks  
- All predefined types have a bounded set of representable values and return **true**.  
+### <a name="remarks"></a>Hinweise  
+ Alle vordefinierte Typen verfügen über einen begrenzten Satz der darstellbaren Werte und geben **TRUE** zurück.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // numeric_limits_is_bounded.cpp  
@@ -670,20 +639,20 @@ Whether long int objects have bounded set of representable values: 1
 Whether unsigned char objects have bounded set of representable values: 1  
 ```  
   
-##  <a name="is_exact"></a>  numeric_limits::is_exact  
- Tests if the calculations done on a type are free of rounding errors.  
+##  <a name="is_exact"></a> numeric_limits::is_exact  
+ Testet, ob die für einen Typ ausgeführten Berechnungen keine Rundungsfehler haben.  
   
 ```  
 static const bool is_exact = false;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- **true** if the calculations are free of rounding errors; **false** if not.  
+### <a name="return-value"></a>Rückgabewert  
+ **TRUE**, wenn die Berechnungen keine Rundungsfehler haben; **FALSE**, wenn nicht.  
   
-### <a name="remarks"></a>Remarks  
- All predefined integer types have exact representations for their values and return **false**. A fixed-point or rational representation is also considered exact, but a floating-point representation is not.  
+### <a name="remarks"></a>Hinweise  
+ Alle vordefinierten Ganzzahltypen stellen ihre Werte genau dar und geben **FALSE** zurück. Eine rationale oder Festkommadarstellung wird auch als genau betrachtet, nicht aber eine Gleitkommadarstellung.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // numeric_limits_is_exact.cpp  
@@ -721,20 +690,20 @@ Whether long int objects have calculations free of rounding errors: 1
 Whether unsigned char objects have calculations free of rounding errors: 1  
 ```  
   
-##  <a name="is_iec559"></a>  numeric_limits::is_iec559  
- Tests if a type conforms to IEC 559 standards.  
+##  <a name="is_iec559"></a> numeric_limits::is_iec559  
+ Testet, ob ein Typ den IEC 559-Standards entspricht.  
   
 ```  
 static const bool is_iec559 = false;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- **true** if the type conforms to the IEC 559 standards; **false** if not.  
+### <a name="return-value"></a>Rückgabewert  
+ **TRUE**, wenn der Typ den IEC 559-Standards entspricht; **FALSE**, wenn nicht.  
   
-### <a name="remarks"></a>Remarks  
- The IEC 559 is an international standard for representing floating-point values and is also known as IEEE 754 in the USA.  
+### <a name="remarks"></a>Hinweise  
+ Der IEC 559 ist eine internationale Norm zur Darstellung von Gleitkommawerten und wird in den USA auch als IEEE 754 bezeichnet.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // numeric_limits_is_iec559.cpp  
@@ -768,20 +737,20 @@ Whether int objects conform to iec559 standards: 0
 Whether unsigned char objects conform to iec559 standards: 0  
 ```  
   
-##  <a name="is_integer"></a>  numeric_limits::is_integer  
- Tests if a type has an integer representation.  
+##  <a name="is_integer"></a> numeric_limits::is_integer  
+ Testet, ob ein Typ eine Ganzzahldarstellung hat.  
   
 ```  
 static const bool is_integer = false;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- **true** if the type has an integer representation; **false** if not.  
+### <a name="return-value"></a>Rückgabewert  
+ **TRUE**, wenn der Typ die Darstellung einer Ganzzahl hat; **FALSE**, wenn nicht.  
   
-### <a name="remarks"></a>Remarks  
- All predefined integer types have an integer representation.  
+### <a name="remarks"></a>Hinweise  
+ Alle vordefinierten Integertypen haben eine ganzzahlige Darstellung.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // numeric_limits_is_integer.cpp  
@@ -815,20 +784,20 @@ Whether int objects have an integral representation: 1
 Whether unsigned char objects have an integral representation: 1  
 ```  
   
-##  <a name="is_modulo"></a>  numeric_limits::is_modulo  
- Tests if a **type** has a modulo representation.  
+##  <a name="is_modulo"></a> numeric_limits::is_modulo  
+ Testet, ob ein **Typ** eine Modulodarstellung hat.  
   
 ```  
 static const bool is_modulo = false;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- **true** if the type has a modulo representation; **false** if not.  
+### <a name="return-value"></a>Rückgabewert  
+ **TRUE**, wenn der Typ eine Modulodarstellung hat; **FALSE**, wenn nicht.  
   
-### <a name="remarks"></a>Remarks  
- A modulo representation is a representation where all results are reduced modulo some value. All predefined unsigned integer types have a modulo representation.  
+### <a name="remarks"></a>Hinweise  
+ Eine Modulo-Repräsentation ist eine Repräsentation, bei der alle Ergebnisse durch eine Modulodivision reduziert zurückgegeben werden. Alle vordefinierten Integertypen haben eine ganzzahlige Darstellung.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // numeric_limits_is_modulo.cpp  
@@ -862,20 +831,20 @@ Whether signed char objects have a modulo representation: 1
 Whether unsigned char objects have a modulo representation: 1  
 ```  
   
-##  <a name="is_signed"></a>  numeric_limits::is_signed  
- Tests if a type has a signed representation.  
+##  <a name="is_signed"></a> numeric_limits::is_signed  
+ Testet, ob ein Typ eine vorzeichenbehaftete Darstellung hat.  
   
 ```  
 static const bool is_signed = false;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- **true** if the type has a signed representation; **false** if not.  
+### <a name="return-value"></a>Rückgabewert  
+ **TRUE**, wenn der Typ eine Modulodarstellung hat; **FALSE**, wenn nicht.  
   
-### <a name="remarks"></a>Remarks  
- The member stores true for a type that has a signed representation, which is the case for all predefined floating-point and signed integer types.  
+### <a name="remarks"></a>Hinweise  
+ Der Member speichert TRUE für einen Typ, der eine signierte Darstellung hat. Dies ist der Fall für alle vordefinierten Gleitkomma- und signierten Integer-Typen.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // numeric_limits_is_signaled.cpp  
@@ -909,20 +878,20 @@ Whether signed char objects have a signed representation: 1
 Whether unsigned char objects have a signed representation: 0  
 ```  
   
-##  <a name="is_specialized"></a>  numeric_limits::is_specialized  
- Tests if a type has an explicit specialization defined in the template class `numeric_limits`.  
+##  <a name="is_specialized"></a> numeric_limits::is_specialized  
+ Testet, ob ein Typ eine explizite Spezialisierung hat, die in der Vorlagenklasse `numeric_limits`definiert ist.  
   
 ```  
 static const bool is_specialized = false;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- **true** if the type has an explicit specialization defined in the template class; **false** if not.  
+### <a name="return-value"></a>Rückgabewert  
+ **TRUE**, wenn der Typ eine explizite Spezialisierung hat, die in der Vorlagenklasse definiert ist; **FALSE**, wenn nicht.  
   
-### <a name="remarks"></a>Remarks  
- All scalar types other than pointers have an explicit specialization defined for template class `numeric_limits`.  
+### <a name="remarks"></a>Hinweise  
+ Alle skalaren Typen außer Zeiger haben eine explizite Spezialisierung für Vorlagenklasse `numeric_limits`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // numeric_limits_is_specialized.cpp  
@@ -960,33 +929,33 @@ Whether int objects have an explicit specialization in the class: 1
 Whether int* objects have an explicit specialization in the class: 0  
 ```  
   
-##  <a name="lowest"></a>  numeric_limits::lowest  
- Returns the most negative finite value.  
+##  <a name="lowest"></a> numeric_limits::lowest  
+ Gibt den kleinsten negativen begrenzten Wert zurück.  
   
 ```  
 static Type lowest() throw();
 ```  
   
-### <a name="return-value"></a>Return Value  
- Returns the most negative finite value.  
+### <a name="return-value"></a>Rückgabewert  
+ Gibt den kleinsten negativen begrenzten Wert zurück.  
   
-### <a name="remarks"></a>Remarks  
- Returns the most negative finite value for the type (which is typically `min()` for integer types and `-max()` for floating-point types). The return value is meaningful if `is_bounded` is `true`.  
+### <a name="remarks"></a>Hinweise  
+ Gibt den kleinsten negativen, endlichen Wert für den Typ zurück (der normalerweise `min` `()` für ganzzahlige Typen und `-``max` `()` für Gleitkommatypen ist). Der Rückgabewert ist aussagekräftig, wenn `is_bounded` `true` ist.  
   
-##  <a name="max"></a>  numeric_limits::max  
- Returns the maximum finite value for a type.  
+##  <a name="max"></a> numeric_limits::max  
+ Gibt den größten endlichen Wert für einen Typ zurück.  
   
 ```  
 static Type max() throw();
 ```  
   
-### <a name="return-value"></a>Return Value  
- The maximum finite value for a type.  
+### <a name="return-value"></a>Rückgabewert  
+ Der größte endliche Wert für einen Typ.  
   
-### <a name="remarks"></a>Remarks  
- The maximum finite value is INT_MAX for type `int` and FLT_MAX for type **float**. The return value is meaningful if [is_bounded](#is_bounded) is **true**.  
+### <a name="remarks"></a>Hinweise  
+ Der endliche Höchstwert ist INT_MAX für Typ `int` und FLT_MAX für Typ **Gleitkomma**. Der Rückgabewert ist aussagekräftig, wenn [is_bounded](#is_bounded) **wahr** ist.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // numeric_limits_max.cpp  
@@ -1012,33 +981,33 @@ int main() {
 }  
 ```  
   
-##  <a name="max_digits10"></a>  numeric_limits::max_digits10  
- Returns the number of decimal digits required to make sure that two distinct values of the type have distinct decimal representations.  
+##  <a name="max_digits10"></a> numeric_limits::max_digits10  
+ Gibt die Anzahl von Dezimalstellen zurück, die dazu erforderlich ist sicherzustellen, dass zwei unterschiedliche Werte des Typs unterschiedliche Dezimaldarstellungen haben.  
   
 ```  
 static int max_digits10 = 0;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Returns the number of decimal digits that are required to make sure that two distinct values of the type have distinct decimal representations.  
+### <a name="return-value"></a>Rückgabewert  
+ Gibt die Anzahl von Dezimalstellen zurück, die dazu erforderlich ist sicherzustellen, dass zwei unterschiedliche Werte des Typs unterschiedliche Dezimaldarstellungen haben.  
   
-### <a name="remarks"></a>Remarks  
- The member stores the number of decimal digits required to make sure that two distinct values of the type have distinct decimal representations.  
+### <a name="remarks"></a>Hinweise  
+ Der Member speichert die Anzahl von Dezimalstellen, die dazu erforderlich ist sicherzustellen, dass zwei unterschiedliche Werte des Typs unterschiedliche Dezimaldarstellungen haben.  
   
-##  <a name="max_exponent"></a>  numeric_limits::max_exponent  
- Returns the maximum positive integral exponent that the floating-point type can represent as a finite value when a base of radix is raised to that power.  
+##  <a name="max_exponent"></a> numeric_limits::max_exponent  
+ Gibt den größten positiven ganzzahligen Exponenten zurück, den der Gleitkommatyp als einen endlichen Wert darstellen kann, wenn eine Basis mit diesem Exponenten potenziert wird.  
   
 ```  
 static const int max_exponent = 0;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The maximum integral radix-based exponent representable by the type.  
+### <a name="return-value"></a>Rückgabewert  
+ Der maximale ganzzahlige Basis-basierte Exponent, der vom Typ dargestellt werden kann.  
   
-### <a name="remarks"></a>Remarks  
- The member function return is meaningful only for floating-point types. The `max_exponent` is the value FLT_MAX_EXP for type **float**.  
+### <a name="remarks"></a>Hinweise  
+ Die Rückgabe der Memberfunktion ist nur für Gleitkommatypen relevant. `max_exponent` ist der Wert FLT_MAX_EXP für Typ **Gleitkomma**.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // numeric_limits_max_exponent.cpp  
@@ -1068,20 +1037,20 @@ The maximum radix-based exponent for type double is:  1024
 The maximum radix-based exponent for type long double is:  1024  
 ```  
   
-##  <a name="max_exponent10"></a>  numeric_limits::max_exponent10  
- Returns the maximum positive integral exponent that the floating-point type can represent as a finite value when a base of ten is raised to that power.  
+##  <a name="max_exponent10"></a> numeric_limits::max_exponent10  
+ Gibt den größten positiven ganzzahligen Exponenten zurück, den der Gleitkommatyp als einen endlichen Wert darstellen kann, wenn eine Basis von zehn mit diesem Exponenten potenziert wird.  
   
 ```  
 static const int max_exponent10 = 0;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The maximum integral base 10 exponent representable by the type.  
+### <a name="return-value"></a>Rückgabewert  
+ Die maximale ganzzahlige Basis 10 Exponent darstellbar vom Typ.  
   
-### <a name="remarks"></a>Remarks  
- The member function return is meaningful only for floating-point types. The `max_exponent` is the value FLT_MAX_10 for type **float**.  
+### <a name="remarks"></a>Hinweise  
+ Die Rückgabe der Memberfunktion ist nur für Gleitkommatypen relevant. `max_exponent` ist der Wert FLT_MAX_10 für Typ **Gleitkomma**.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // numeric_limits_max_exponent10.cpp  
@@ -1111,20 +1080,20 @@ The maximum base 10 exponent for type double is:  308
 The maximum base 10 exponent for type long double is:  308  
 ```  
   
-##  <a name="min"></a>  numeric_limits::min  
- Returns the minimum normalized value for a type.  
+##  <a name="min"></a> numeric_limits::min  
+ Gibt den kleinsten normalisierten Wert für einen Typ zurück.  
   
 ```  
 static Type min() throw();
 ```  
   
-### <a name="return-value"></a>Return Value  
- The minimum normalized value for the type.  
+### <a name="return-value"></a>Rückgabewert  
+ Der kleinste normalisierte Wert für einen Typ.  
   
-### <a name="remarks"></a>Remarks  
- The minimum normalized value is INT_MIN for type `int` and FLT_MIN for type `float`. The return value is meaningful if [is_bounded](#is_bounded) is `true` or if [is_signed](#is_signed) is `false`.  
+### <a name="remarks"></a>Hinweise  
+ Der normalisierte Mindestwert ist INT_MIN für Typ `int` und FLT_MIN für Typ `float`. Der Rückgabewert ist aussagekräftig, wenn [is_bounded](#is_bounded) `true` oder [is_signed](#is_signed) `false` ist.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // numeric_limits_min.cpp  
@@ -1158,20 +1127,20 @@ The minimum value for type int is:  -2147483648
 The minimum value for type short int is:  -32768  
 ```  
   
-##  <a name="min_exponent"></a>  numeric_limits::min_exponent  
- Returns the maximum negative integral exponent that the floating-point type can represent as a finite value when a base of radix is raised to that power.  
+##  <a name="min_exponent"></a> numeric_limits::min_exponent  
+ Gibt den größten negativen ganzzahligen Exponenten zurück, den der Gleitkommatyp als einen endlichen Wert darstellen kann, wenn eine Basis mit diesem Exponenten potenziert wird.  
   
 ```  
 static const int min_exponent = 0;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The minimum integral radix-based exponent representable by the type.  
+### <a name="return-value"></a>Rückgabewert  
+ Der minimale ganzzahlige Basis-basierte Exponent, der vom Typ dargestellt werden kann.  
   
-### <a name="remarks"></a>Remarks  
- The member function is meaningful only for floating-point types. The `min_exponent` is the value FLT_MIN_EXP for type **float**.  
+### <a name="remarks"></a>Hinweise  
+ Die Memberfunktion ist nur für Gleitkommatypen relevant. `min_exponent` ist der Wert FLT_MIN_EXP für Typ **Gleitkomma**.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // numeric_limits_min_exponent.cpp  
@@ -1201,20 +1170,20 @@ The minimum radix-based exponent for type double is:  -1021
 The minimum radix-based exponent for type long double is:  -1021  
 ```  
   
-##  <a name="min_exponent10"></a>  numeric_limits::min_exponent10  
- Returns the maximum negative integral exponent that the floating-point type can represent as a finite value when a base of ten is raised to that power.  
+##  <a name="min_exponent10"></a> numeric_limits::min_exponent10  
+ Gibt den größten negativen ganzzahligen Exponenten zurück, den der Gleitkommatyp als einen endlichen Wert darstellen kann, wenn eine Basis von zehn mit diesem Exponenten potenziert wird.  
   
 ```  
 static const int min_exponent10 = 0;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The minimum integral base 10 exponent representable by the type.  
+### <a name="return-value"></a>Rückgabewert  
+ Der maximale ganzzahlige Basis 10 Exponent darstellbar vom Typ.  
   
-### <a name="remarks"></a>Remarks  
- The member function is meaningful only for floating-point types. The `min_exponent10` is the value FLT_MIN_10_EXP for type **float**.  
+### <a name="remarks"></a>Hinweise  
+ Die Memberfunktion ist nur für Gleitkommatypen relevant. `min_exponent10` ist der Wert FLT_MIN_10_EXP für Typ **Gleitkomma**.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // numeric_limits_min_exponent10.cpp  
@@ -1244,20 +1213,20 @@ The minimum base 10 exponent for type double is:  -307
 The minimum base 10 exponent for type long double is:  -307  
 ```  
   
-##  <a name="quiet_nan"></a>  numeric_limits::quiet_NaN  
- Returns the representation of a quiet not a number (NAN) for the type.  
+##  <a name="quiet_nan"></a> numeric_limits::quiet_NaN  
+ Gibt die Darstellung einer stillen NaN (Not a Number) für den Typ zurück.  
   
 ```  
 static Type quiet_NaN() throw();
 ```  
   
-### <a name="return-value"></a>Return Value  
- The representation of a quiet NAN for the type.  
+### <a name="return-value"></a>Rückgabewert  
+ Die Darstellung einer stillen NaN für den Typ.  
   
-### <a name="remarks"></a>Remarks  
- The return value is meaningful only if [has_quiet_NaN](#has_quiet_nan) is **true**.  
+### <a name="remarks"></a>Hinweise  
+ Der Rückgabewert ist nur aussagekräftig, wenn [has_quiet_NaN](#has_quiet_nan) **wahr** ist.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // numeric_limits_quiet_nan.cpp  
@@ -1287,20 +1256,20 @@ The quiet NaN for type int is:  0
 The quiet NaN for type long double is:  1.#QNAN  
 ```  
   
-##  <a name="radix"></a>  numeric_limits::radix  
- Returns the integral base, referred to as radix, used for the representation of a type.  
+##  <a name="radix"></a> numeric_limits::radix  
+ Gibt die ganzzahlige Basis (als Radix bezeichnet) zurück, die für die Darstellung eines Typs verwendet wird.  
   
 ```  
 static const int radix = 0;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The integral base for the representation of the type.  
+### <a name="return-value"></a>Rückgabewert  
+ Die ganzzahlige Basis für die Darstellung des Typs.  
   
-### <a name="remarks"></a>Remarks  
- The base is 2 for the predefined integer types, and the base to which the exponent is raised, or FLT_RADIX, for the predefined floating-point types.  
+### <a name="remarks"></a>Hinweise  
+ Die Basis für die vordefinierten Integertypen ist 2 und die Basis, auf die der Exponent potenziert wird, oder FLT_RADIX, für die vordefinierten Gleitkommadatentypen.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // numeric_limits_radix.cpp  
@@ -1330,17 +1299,17 @@ The base for type int is:  2
 The base for type long double is:  2  
 ```  
   
-##  <a name="round_error"></a>  numeric_limits::round_error  
- Returns the maximum rounding error for the type.  
+##  <a name="round_error"></a> numeric_limits::round_error  
+ Gibt den größten Rundungsfehler für den Typ zurück.  
   
 ```  
 static Type round_error() throw();
 ```  
   
-### <a name="return-value"></a>Return Value  
- The maximum rounding error for the type.  
+### <a name="return-value"></a>Rückgabewert  
+ Der größte Rundungsfehler für den Typ.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // numeric_limits_round_error.cpp  
@@ -1370,22 +1339,22 @@ The maximum rounding error for type int is:  0
 The maximum rounding error for type long double is:  0.5  
 ```  
   
-##  <a name="round_style"></a>  numeric_limits::round_style  
- Returns a value that describes the various methods that an implementation can choose for rounding a floating-point value to an integer value.  
+##  <a name="round_style"></a> numeric_limits::round_style  
+ Gibt einen Wert zurück, der die verschiedenen Methoden beschreibt, die eine Implementierung für die Rundung eines Gleitkommawerts auf einen ganzzahligen Wert auswählen kann.  
   
 ```  
 static const float_round_style round_style = round_toward_zero;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A value from the `float_round_style` enumeration that describes the rounding style.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Wert aus der `float_round_style`-Enumeration, der den Rundungsmodus beschreibt.  
   
-### <a name="remarks"></a>Remarks  
- The member stores a value that describes the various methods that an implementation can choose for rounding a floating-point value to an integer value.  
+### <a name="remarks"></a>Hinweise  
+ Gibt einen Wert zurück, der die verschiedenen Methoden beschreibt, die eine Implementierung für die Rundung eines Gleitkommawerts auf einen ganzzahligen Wert auswählen kann.  
   
- The round style is hard coded in this implementation, so even if the program starts up with a different rounding mode, that value will not change.  
+ Der Rundungsmodus ist fest in dieser Implementierung programmiert.Selbst wenn das Programm mit einem anderen Rundungsmodus gestartet wird, wird dieser Wert nicht geändert.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // numeric_limits_round_style.cpp  
@@ -1414,20 +1383,20 @@ The rounding style for a double type is now: 1
 The rounding style for an int type is: 0  
 ```  
   
-##  <a name="signaling_nan"></a>  numeric_limits::signaling_NaN  
- Returns the representation of a signaling not a number (NAN) for the type.  
+##  <a name="signaling_nan"></a> numeric_limits::signaling_NaN  
+ Gibt die Darstellung einer anzeigenden NaN (Not a Number) für den Typ zurück.  
   
 ```  
 static Type signaling_NaN() throw();
 ```  
   
-### <a name="return-value"></a>Return Value  
- The representation of a signaling NAN for the type.  
+### <a name="return-value"></a>Rückgabewert  
+ Die Darstellung einer signalisierenden NaN für den Typ.  
   
-### <a name="remarks"></a>Remarks  
- The return value is meaningful only if [has_signaling_NaN](#has_signaling_nan) is **true**.  
+### <a name="remarks"></a>Hinweise  
+ Der Rückgabewert ist nur aussagekräftig, wenn [has_signaling_NaN](#has_signaling_nan) **wahr** ist.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // numeric_limits_signaling_nan.cpp  
@@ -1451,20 +1420,20 @@ int main( )
 }  
 ```  
   
-##  <a name="tinyness_before"></a>  numeric_limits::tinyness_before  
- Tests whether a type can determine that a value is too small to represent as a normalized value before rounding it.  
+##  <a name="tinyness_before"></a> numeric_limits::tinyness_before  
+ Testet, ob ein Typ für einen Wert vor dessen Rundung ermitteln kann, ob der Wert zu klein ist, um als normalisierter Wert dargestellt zu werden.  
   
 ```  
 static const bool tinyness_before = false;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `true` if the type can detect tiny values before rounding; `false` if it cannot.  
+### <a name="return-value"></a>Rückgabewert  
+ `true`, wenn der Typ kleine Werte vor der Rundung erkennen kann; `false`, wenn dies nicht möglich ist.  
   
-### <a name="remarks"></a>Remarks  
- Types that can detect tinyness were included as an option with IEC 559 floating-point representations and its implementation can affect some results.  
+### <a name="remarks"></a>Hinweise  
+ Typen, die Winzigkeiten erkennen können, wurden als Option mit IEC 559-Gleitkommadarstellungen eingeschlossen, und seine Implementierung kann einige Ergebnisse beeinflussen.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // numeric_limits_tinyness_before.cpp  
@@ -1498,17 +1467,17 @@ Whether long int types can detect tinyness before rounding: 0
 Whether unsigned char types can detect tinyness before rounding: 0  
 ```  
   
-##  <a name="traps"></a>  numeric_limits::traps  
- Tests whether trapping that reports on arithmetic exceptions is implemented for a type.  
+##  <a name="traps"></a> numeric_limits::traps  
+ Testet, ob für einen Typ Auffangen, bei dem arithmetischen Ausnahmen gemeldet werden, implementiert ist.  
   
 ```  
 static const bool traps = false;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- **true** if trapping is implemented for the type; **false** if it is not.  
+### <a name="return-value"></a>Rückgabewert  
+ **TRUE**, wenn Fehlerbehebung für den Typ implementiert wird; **FALSE**, wenn nicht.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // numeric_limits_traps.cpp  
@@ -1542,7 +1511,7 @@ Whether long int types have implemented trapping: 0
 Whether unsigned char types have implemented trapping: 0  
 ```  
   
-## <a name="see-also"></a>See Also  
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>Siehe auch  
+ [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

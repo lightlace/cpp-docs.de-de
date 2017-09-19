@@ -1,5 +1,5 @@
 ---
-title: make_unsigned Class | Microsoft Docs
+title: make_unsigned-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- make_unsigned
 - type_traits/std::make_unsigned
 dev_langs:
 - C++
@@ -34,15 +35,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: c4ddd03c3f0d36cce3700884e34847933fa99f87
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: 1bdebf2a3d3f03defa041d049ac98287df7aad6c
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="makeunsigned-class"></a>make_unsigned Class
-Makes type or the smallest unsigned type greater than or equal in size to type.  
+# <a name="makeunsigned-class"></a>make_unsigned-Klasse
+Macht den Typ oder den kleinsten Typ ohne Vorzeichen größer oder gleich dem Typ.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,21 +55,21 @@ template <class T>
 using make_unsigned_t = typename make_unsigned<T>::type;
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
   
-|Parameter|Description|  
+|Parameter|Beschreibung|  
 |---------------|-----------------|  
-|`T`|The type to modify.|  
+|`T`|Der zu ändernde Typ.|  
   
-## <a name="remarks"></a>Remarks  
- An instance of the type modifier holds a modified-type that is `T` if `is_unsigned<T>` holds true. Otherwise it is the smallest signed type `ST` for which `sizeof (T) <= sizeof (ST)`.  
+## <a name="remarks"></a>Hinweise  
+ Eine Instanz des Typmodifizierers enthält einen GeänderteTyp an, wenn der `T` als `is_unsigned<T>` true ist. Andernfalls ist dies der kleinste Datentyp mit Vorzeichen `ST`, für den `sizeof (T) <= sizeof (ST)`.  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [<type_traits>](../standard-library/type-traits.md)
 
 

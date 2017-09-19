@@ -1,5 +1,5 @@
 ---
-title: COleDBRecordView Class | Microsoft Docs
+title: COleDBRecordView-Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,9 +17,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- COleDBRecordView [MFC], COleDBRecordView
-- COleDBRecordView [MFC], OnGetRowset
-- COleDBRecordView [MFC], OnMove
+- MFC, OLE DB
+- COleDBRecordView class
 ms.assetid: 98612427-c4c9-4760-b7e1-85b17448add9
 caps.latest.revision: 20
 author: mikeblome
@@ -39,15 +38,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: f4c4bfa973b7ff7fb2b93e5fcc60cf18325986a8
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6129ad49f58cecb099927fe3d422fe215d143b67
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 04/01/2017
 
 ---
-# <a name="coledbrecordview-class"></a>COleDBRecordView Class
-A view that displays database records in controls.  
+# <a name="coledbrecordview-class"></a>COleDBRecordView-Klasse
+Eine Sicht, die Datenbankdatensätze in Steuerelementen anzeigt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,34 +54,34 @@ A view that displays database records in controls.
 class COleDBRecordView : public CFormView  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Mitglieder  
   
-### <a name="protected-constructors"></a>Protected Constructors  
+### <a name="protected-constructors"></a>Geschützte Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[COleDBRecordView::COleDBRecordView](#coledbrecordview)|Constructs a `COleDBRecordView` object.|  
+|[COleDBRecordView::COleDBRecordView](#coledbrecordview)|Erstellt ein `COleDBRecordView`-Objekt.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[COleDBRecordView::OnGetRowset](#ongetrowset)|Returns a standard `HRESULT` value.|  
-|[COleDBRecordView::OnMove](#onmove)|Updates the current record (if dirty) on the data source and then moves to the specified record (next, previous, first, or last).|  
+|[COleDBRecordView::OnGetRowset](#ongetrowset)|Gibt eine `HRESULT` Wert.|  
+|[COleDBRecordView::OnMove](#onmove)|Aktualisiert den aktuellen Datensatz (falls geändert) für die Datenquelle, und klicken Sie dann auf den angegebenen Datensatz verschoben (nächsten, vorherigen, ersten oder letzten).|  
   
-## <a name="remarks"></a>Remarks  
- The view is a form view directly connected to a `CRowset` object. The view is created from a dialog template resource and displays the fields of the `CRowset` object in the dialog template's controls. The `COleDBRecordView` object uses dialog data exchange (DDX), and the navigational functionality built into `CRowset`, to automate the movement of data between the controls on the form and the fields of the rowset. `COleDBRecordView` also supplies a default implementation for moving to the first, next, previous, or last record and an interface for updating the record currently on view.  
+## <a name="remarks"></a>Hinweise  
+ Die Ansicht ist eine Formularansicht können Sie eine direkte Verbindung zum ein `CRowset` Objekt. Die Sicht aus einer Dialogfeldvorlagen-Ressource erstellt wird, und zeigt die Felder der `CRowset` Objekt in der Dialogfeldvorlage-Steuerelementen. Die `COleDBRecordView` Objekt verwendet Dialogdatenaustausch (DDX) und die Navigationsfunktionen `CRowset`, um die Verschiebung von Daten zwischen den Steuerelementen im Formular und die Felder des Rowsets zu automatisieren. `COleDBRecordView`Außerdem stellt eine Standardimplementierung für das Verschieben von mit dem ersten nächsten, vorherigen oder letzten Datensatz und eine Schnittstelle zum Aktualisieren des Datensatzes derzeit für die Sicht.  
   
- You can use DDX functions with **COleDbRecordView** to get data directly from the database recordset and display it in a dialog control. You should use the **DDX_\*** methods (such as `DDX_Text`), not the **DDX_Field\*** functions (such as `DDX_FieldText`) with **COleDbRecordView**. `DDX_FieldText` will not work with **COleDbRecordView** because `DDX_FieldText` takes an additional argument of type **CRecordset\*** (for `CRecordView`) or **CDaoRecordset\*** (for `CDaoRecordView`).  
+ Sie können DDX-Funktionen mit **COleDbRecordView** Daten direkt aus der Datenbankrecordset abrufen und in einem Dialogfeldsteuerelement anzeigt. Verwenden Sie die **DDX_\*** Methoden (z. B. `DDX_Text`), und nicht die **DDX_Field\* ** Funktionen (z. B. `DDX_FieldText`) mit **COleDbRecordView**. `DDX_FieldText`funktioniert nicht mit **COleDbRecordView** da `DDX_FieldText` akzeptiert ein zusätzliches Argument vom Typ **CRecordset\*** (für `CRecordView`) oder **CDaoRecordset\* ** (für `CDaoRecordView`).  
   
 > [!NOTE]
->  If you are working with the Data Access Objects (DAO) classes rather than the OLE DB Consumer Template classes, use class [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) instead. For more information, see the article [Overview: Database Programming](../../data/data-access-programming-mfc-atl.md).  
+>  Wenn Sie die Klassen Datenzugriffsobjekte (DAO) anstelle der OLE DB-Consumervorlagen Klassen arbeiten, verwenden Sie die Klasse [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) stattdessen. Weitere Informationen finden Sie im Artikel [Overview: Datenbank-Programmierung](../../data/data-access-programming-mfc-atl.md).  
   
- `COleDBRecordView` keeps track of the user's position in the rowset so that the record view can update the user interface. When the user moves to either end of the rowset, the record view disables user interface objects — such as menu items or toolbar buttons — for moving further in the same direction.  
+ `COleDBRecordView`Hält den Überblick über die Position des Benutzers im Rowset, damit die Datensatzansicht die Benutzeroberfläche aktualisieren kann. Wenn der Benutzer an einem Ende des Rowsets verschoben wird, deaktiviert die Datensatzansicht Benutzeroberflächenobjekte – z. B. Menüelemente und Symbolleisten-Schaltflächen – zum Verschieben in die gleiche Richtung weiter.  
   
- For more information about rowset classes, see the [Using OLE DB Consumer Templates](../../data/oledb/ole-db-consumer-templates-cpp.md) article.  
+ Weitere Informationen zum Schemarowset-Klassen finden Sie unter der [mithilfe von OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md) Artikel.  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -97,85 +96,85 @@ class COleDBRecordView : public CFormView
   
  `COleDBRecordView`  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxoledb.h  
   
-##  <a name="coledbrecordview"></a>  COleDBRecordView::COleDBRecordView  
- Constructs a `COleDBRecordView` object.  
+##  <a name="coledbrecordview"></a>COleDBRecordView::COleDBRecordView  
+ Erstellt ein `COleDBRecordView`-Objekt.  
   
 ```  
 COleDBRecordView(LPCTSTR lpszTemplateName);  
 COleDBRecordView(UINT nIDTemplate);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `lpszTemplateName`  
- Contains a null-terminated string that is the name of a dialog-template resource.  
+ Enthält eine Null-terminierte Zeichenfolge, die den Namen einer Dialogfeldvorlagen-Ressource ist.  
   
  `nIDTemplate`  
- Contains the ID number of a dialog-template resource.  
+ Enthält die ID-Nummer einer Dialogfeldvorlagen-Ressource.  
   
-### <a name="remarks"></a>Remarks  
- When you create an object of a type derived from `COleDBRecordView`, invoke one of the constructors to create the view object and identify the dialog resource on which the view is based. You can identify the resource either by name (pass a string as the argument to the constructor) or by its ID (pass an unsigned integer as the argument).  
+### <a name="remarks"></a>Hinweise  
+ Wenn Sie ein Objekt eines Typs erstellen von abgeleiteten `COleDBRecordView`, Aufrufen eines Konstruktors erstellen das Ansichtsobjekt und identifizieren die Dialogressource, auf denen die Sicht basiert. Sie können die Ressource anhand des Namens (übergeben Sie eine Zeichenfolge als Argument an den Konstruktor) oder nach seiner ID (übergeben Sie eine Ganzzahl ohne Vorzeichen als Argument) identifizieren.  
   
 > [!NOTE]
->  Your derived class *must* supply its own constructor. In the constructor, invoke the constructor, `COleDBRecordView::COleDBRecordView`, with the resource name or ID as an argument.  
+>  Die abgeleitete Klasse *müssen* Geben Sie einen eigenen Konstruktor. In den Konstruktor aufrufen des Konstruktors und `COleDBRecordView::COleDBRecordView`, mit dem Ressourcennamen oder die ID als Argument.  
   
-##  <a name="ongetrowset"></a>  COleDBRecordView::OnGetRowset  
- Returns a handle for the **CRowset<>** object associated with the record view.  
+##  <a name="ongetrowset"></a>COleDBRecordView::OnGetRowset  
+ Gibt ein Handle für die **CRowset<> </>** Objekt, das mit der Datensatzansicht zugeordnet.  
   
 ```  
 virtual CRowset<>* OnGetRowset() = 0;  
  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A standard `HRESULT` value.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Standard `HRESULT` -Wert.  
   
-### <a name="remarks"></a>Remarks  
- You must override this member function to construct or obtain a rowset object and return a handle to it. If you declare your record view class with ClassWizard, the wizard writes a default override for you. ClassWizard's default implementation returns the rowset handle stored in the record view if one exists. If not, it constructs a rowset object of the type you specified with ClassWizard and calls its **Open** member function to open the table or run the query, and then returns a handle to the object.  
+### <a name="remarks"></a>Hinweise  
+ Sie müssen diese Memberfunktion zum Erstellen oder ein Rowsetobjekt abzurufen und ein Handle zu einer zurückkehren, überschreiben. Wenn Sie die datensatzansichtsklasse mit ClassWizard deklarieren, schreibt der Assistent eine Standard-Außerkraftsetzung für Sie. ClassWizard die standardmäßige Implementierung gibt das Rowset-Handle, das in der Datensatzansicht gespeichert werden, sofern vorhanden. Wenn nicht, es eine Rowset-Objekte des Typs erstellt angegebenen mit ClassWizard und ruft seine **öffnen** Member Funktion, um öffnen Sie die Tabelle, oder führen Sie die Abfrage, und klicken Sie dann ein Handle für das Objekt zurückgegeben.  
   
 > [!NOTE]
->  Previous to MFC 7.0, `OnGetRowset` returned a pointer to `CRowset`. If you have code that calls `OnGetRowset`, you need to change the return type to the templatized class **CRowset<>**.  
+>  "Zurück", MFC 7.0 `OnGetRowset` zurückgegeben wird einen Zeiger auf `CRowset`. Wenn Sie über Code verfügen, die aufruft `OnGetRowset`, müssen Sie den Rückgabetyp der vorlagenbasierten Klasse ändern **CRowset<>**.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFCDatabase#38](../../mfc/codesnippet/cpp/coledbrecordview-class_1.cpp)]  
+### <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_MFCDatabase #38](../../mfc/codesnippet/cpp/coledbrecordview-class_1.cpp)]  
   
- For more information and examples, see the article [Record Views: Using a Record View](../../data/using-a-record-view-mfc-data-access.md).  
+ Weitere Informationen und Beispiele finden Sie im Artikel [Datensatzansichten: Verwenden einer Datensatzansicht](../../data/using-a-record-view-mfc-data-access.md).  
   
-##  <a name="onmove"></a>  COleDBRecordView::OnMove  
- Moves to a different record in the rowset and display its fields in the controls of the record view.  
+##  <a name="onmove"></a>COleDBRecordView::OnMove  
+ Wechselt zu einem anderen Datensatz im Rowset und Anzeige zeigen Sie ihre Felder in den Steuerelementen des Datensatzes an.  
   
 ```  
 virtual BOOL OnMove(UINT nIDMoveCommand);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `nIDMoveCommand`  
- One of the following standard command ID values:  
+ Einer der folgenden Werte Standardbefehls-ID:  
   
-- `ID_RECORD_FIRST` — Move to the first record in the recordset.  
+- `ID_RECORD_FIRST`– Wechseln Sie zu den ersten Datensatz des Recordsets.  
   
-- `ID_RECORD_LAST` — Move to the last record in the recordset.  
+- `ID_RECORD_LAST`– Wechselt zur letzten Datensatz des Recordsets.  
   
-- `ID_RECORD_NEXT` — Move to the next record in the recordset.  
+- `ID_RECORD_NEXT`– Verschieben Sie auf den nächsten Datensatz im Recordset.  
   
-- `ID_RECORD_PREV` — Move to the previous record in the recordset.  
+- `ID_RECORD_PREV`– Wechseln Sie zum vorherigen Datensatz im Recordset.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if the move was successful; otherwise 0 if the move request was denied.  
+### <a name="return-value"></a>Rückgabewert  
+ Wert ungleich NULL, wenn die Verschiebung erfolgreich war; andernfalls 0, wenn die Anforderung zum Verschieben von verweigert wurde.  
   
-### <a name="remarks"></a>Remarks  
- The default implementation calls the appropriate **Move** member function of the `CRowset` object associated with the record view.  
+### <a name="remarks"></a>Hinweise  
+ Die Standardimplementierung Ruft die entsprechende **verschieben** Memberfunktion der `CRowset` Objekt, das mit der Datensatzansicht zugeordnet.  
   
- By default, `OnMove` updates the current record on the data source if the user has changed it in the record view.  
+ Standardmäßig `OnMove` den aktuellen Datensatz in der Datenquelle aktualisiert, wenn der Benutzer in der Datensatzansicht geändert hat.  
   
- The Application Wizard creates a menu resource with First Record, Last Record, Next Record, and Previous Record menu items. If you select the Dockable Toolbar option, The Application Wizard also creates a toolbar with buttons corresponding to these commands.  
+ Der Anwendungs-Assistent erstellt eine Menüressource mit ersten, letzten Datensatzes, nächsten Datensatz, und vorherigen Datensatz Menüelemente an. Wenn Sie die Option andockbare Symbolleiste auswählen, erstellt der Anwendungs-Assistent auch eine Symbolleiste mit Schaltflächen, die auf diese Befehle entspricht.  
   
- If you move past the last record in the recordset, the record view continues to display the last record. If you move backward past the first record, the record view continues to display the first record.  
+ Wenn Sie hinter dem letzten Datensatz im Recordset verschieben, weiterhin die Datensatzansicht den letzten Datensatz anzuzeigen. Wenn Sie nach dem ersten Datensatz rückwärts verschieben, können Sie weiterhin die Datensatzansicht des ersten Datensatzes angezeigt.  
   
-## <a name="see-also"></a>See Also  
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>Siehe auch  
+ [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
 
 
 

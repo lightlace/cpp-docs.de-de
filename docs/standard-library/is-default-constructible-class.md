@@ -1,5 +1,5 @@
 ---
-title: is_default_constructible Class | Microsoft Docs
+title: is_default_constructible-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- is_default_constructible
 - type_traits/std::is_default_constructible
 dev_langs:
 - C++
@@ -34,15 +35,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: e00d4e4441feed6622bc7374fb7f374f7fb01fad
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: e3542b828eb6c9f67ee21660875ee401f043888e
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="isdefaultconstructible-class"></a>is_default_constructible Class
-Tests if a type has a default constructor.  
+# <a name="isdefaultconstructible-class"></a>is_default_constructible-Klasse
+Testet, ob ein Typ einen Standardkonstruktor besitzt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,14 +52,14 @@ template <class Ty>
 struct is_default_constructible;  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
  `T`  
- The type to query.  
+ Der abzufragende Typ.  
   
-## <a name="remarks"></a>Remarks  
- An instance of the type predicate holds true if the type `T` is a class type that has a default constructor, otherwise it holds false. This is equivalent to the predicate `is_constructible<T>`. Type `T` must be a complete type, `void`, or an array of unknown bound.  
+## <a name="remarks"></a>Hinweise  
+ Eine Instanz des Typprädikats ist „true“, wenn der Typ `T` ein Klassentyp ist, der einen trivialen Konstruktor aufweist; andernfalls „false“. Dies entspricht dem Prädikat `is_constructible<T>`. Typ `T` muss ein vollständiger Typ, `void`oder ein Array mit unbekannter Grenze sein.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Beispiel  
   
 ```cpp  
 #include <type_traits>   
@@ -93,12 +94,12 @@ is_default_constructible<Simple> == true
 is_default_constructible<Simple2> == false  
 ```  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [<type_traits>](../standard-library/type-traits.md)
 
 

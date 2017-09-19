@@ -1,5 +1,5 @@
 ---
-title: CAnimationManagerEventHandler Class | Microsoft Docs
+title: CAnimationManagerEventHandler-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,10 +18,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CAnimationManagerEventHandler [MFC], CAnimationManagerEventHandler
-- CAnimationManagerEventHandler [MFC], CreateInstance
-- CAnimationManagerEventHandler [MFC], OnManagerStatusChanged
-- CAnimationManagerEventHandler [MFC], SetAnimationController
+- CAnimationManagerEventHandler class
 ms.assetid: 6089ec07-e661-4805-b227-823b4652aade
 caps.latest.revision: 18
 author: mikeblome
@@ -41,15 +38,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 0d30450abc72a4557a84ac9394fdea413c7175af
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: e62d676c073998718b4df47223d1679b1187d66e
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="canimationmanagereventhandler-class"></a>CAnimationManagerEventHandler Class
-Implements a callback, which is called by the Animation API when a status of an animation manager is changed.  
+# <a name="canimationmanagereventhandler-class"></a>CAnimationManagerEventHandler-Klasse
+Implementiert einen Rückruf, der von der Animations-API aufgerufen wird, wenn der Status eines Animations-Managers geändert wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -57,48 +54,48 @@ Implements a callback, which is called by the Animation API when a status of an 
 class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase<CAnimationManagerEventHandler>;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Mitglieder  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CAnimationManagerEventHandler::CAnimationManagerEventHandler](#canimationmanagereventhandler)|Constructs a `CAnimationManagerEventHandler` object.|  
+|[CAnimationManagerEventHandler::CAnimationManagerEventHandler](#canimationmanagereventhandler)|Erstellt ein `CAnimationManagerEventHandler`-Objekt.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CAnimationManagerEventHandler::CreateInstance](#createinstance)|Creates an instance of `CAnimationManagerEventHandler` object.|  
-|[CAnimationManagerEventHandler::OnManagerStatusChanged](#onmanagerstatuschanged)|Called when a status of animation manager has changed. (Overrides `CUIAnimationManagerEventHandlerBase::OnManagerStatusChanged`.)|  
-|[CAnimationManagerEventHandler::SetAnimationController](#setanimationcontroller)|Stores a pointer to animation controller to route events.|  
+|[CAnimationManagerEventHandler::CreateInstance](#createinstance)|Erstellt eine Instanz des `CAnimationManagerEventHandler` Objekt.|  
+|[CAnimationManagerEventHandler::OnManagerStatusChanged](#onmanagerstatuschanged)|Wird aufgerufen, wenn der Status des Animations-Managers geändert hat. (Überschreibt `CUIAnimationManagerEventHandlerBase::OnManagerStatusChanged`.)|  
+|[CAnimationManagerEventHandler::SetAnimationController](#setanimationcontroller)|Speichert einen Zeiger auf den Animationscontroller, um Ereignisse weiterzuleiten.|  
   
-## <a name="remarks"></a>Remarks  
- This event handler is created and passed to IUIAnimationManager::SetManagerEventHandler method, when you call CAnimationController::EnableAnimationManagerEvent.  
+## <a name="remarks"></a>Hinweise  
+ Dieser Ereignishandler wird erstellt und an IUIAnimationManager::SetManagerEventHandler Methode übergeben, wenn Sie CAnimationController::EnableAnimationManagerEvent aufrufen.  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `CUIAnimationCallbackBase`  
   
  `CUIAnimationManagerEventHandlerBase`  
   
  `CAnimationManagerEventHandler`  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxanimationcontroller.h  
   
-##  <a name="canimationmanagereventhandler"></a>  CAnimationManagerEventHandler::CAnimationManagerEventHandler  
+##  <a name="canimationmanagereventhandler"></a>CAnimationManagerEventHandler::CAnimationManagerEventHandler  
  [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
   
- Constructs a CAnimationManagerEventHandler object.  
+ Erstellt ein CAnimationManagerEventHandler-Objekt.  
   
 ```  
 CAnimationManagerEventHandler();
 ```  
   
-##  <a name="createinstance"></a>  CAnimationManagerEventHandler::CreateInstance  
+##  <a name="createinstance"></a>CAnimationManagerEventHandler::CreateInstance  
  [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
   
- Creates an instance of CAnimationManagerEventHandler object.  
+ Erstellt eine Instanz eines CAnimationManagerEventHandler-Objekts.  
   
 ```  
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
@@ -106,20 +103,20 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
     IUIAnimationManagerEventHandler** ppManagerEventHandler);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `pAnimationController`  
- A pointer to animation controller, which will receive events.  
+ Ein Zeiger auf den Animationscontroller, der Ereignisse empfangen wird.  
   
  `ppManagerEventHandler`  
- Output. If the method succeeds it contains a pointer to COM object that will handle status updates to an animation manager.  
+ Die Ausgabe. Wenn die Methode erfolgreich ist, enthält einen Zeiger auf COM-Objekt, das Statusupdates eines Animations-Managers behandelt.  
   
-### <a name="return-value"></a>Return Value  
- If the method succeeds, it returns S_OK. Otherwise, it returns an HRESULT error code.  
+### <a name="return-value"></a>Rückgabewert  
+ Wenn die Methode erfolgreich ist, wird S_OK zurückgegeben. Andernfalls wird einen HRESULT-Fehlercode zurückgegeben.  
   
-##  <a name="onmanagerstatuschanged"></a>  CAnimationManagerEventHandler::OnManagerStatusChanged  
+##  <a name="onmanagerstatuschanged"></a>CAnimationManagerEventHandler::OnManagerStatusChanged  
  [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
   
- Called when a status of animation manager has changed.  
+ Wird aufgerufen, wenn der Status des Animations-Managers geändert hat.  
   
 ```  
 IFACEMETHOD(OnManagerStatusChanged)(
@@ -127,29 +124,29 @@ IFACEMETHOD(OnManagerStatusChanged)(
   UI_ANIMATION_MANAGER_STATUS previousStatus);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `newStatus`  
- New status.  
+ Neuen Status.  
   
  `previousStatus`  
- Previous status.  
+ Vorherigen Status.  
   
-### <a name="return-value"></a>Return Value  
- Current implementation always returns S_OK;  
+### <a name="return-value"></a>Rückgabewert  
+ Immer die aktuelle Implementierung gibt S_OK zurück.  
   
-##  <a name="setanimationcontroller"></a>  CAnimationManagerEventHandler::SetAnimationController  
+##  <a name="setanimationcontroller"></a>CAnimationManagerEventHandler::SetAnimationController  
  [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
   
- Stores a pointer to animation controller to route events.  
+ Speichert einen Zeiger auf den Animationscontroller, um Ereignisse weiterzuleiten.  
   
 ```  
 void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `pAnimationController`  
- A pointer to animation controller, which will receive events.  
+ Ein Zeiger auf den Animationscontroller, der Ereignisse empfangen wird.  
   
-## <a name="see-also"></a>See Also  
- [Classes](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>Siehe auch  
+ [Klassen](../../mfc/reference/mfc-classes.md)
 

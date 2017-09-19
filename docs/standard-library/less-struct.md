@@ -1,14 +1,15 @@
 ---
-title: less Struct | Microsoft Docs
+title: less-Struktur | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- cpp-standard-libraries
+- devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- less
 - xfunctional/std::less
 dev_langs:
 - C++
@@ -35,15 +36,14 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: df98d62f094ef8ead680a2d184355ea312cdf436
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: ff9530d08066cf0cf9b9421ac8b1b72d1a229bbe
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="less-struct"></a>less Struct
-A binary predicate that performs the less-than operation ( `operator<`) on its arguments.  
+# <a name="less-struct"></a>less-Struktur
+Ein binäres Prädikat, mit dem der kleiner-als-Vorgang (`operator<`) mit den Argumenten ausgeführt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -64,23 +64,23 @@ struct less<void>
  };
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
  `Type`, `T`, `U`  
- Any type that supports an `operator<` that takes operands of the specified or inferred types.  
+ Jeder Typ, der ein `operator<`-Element unterstützt, das Operanden angegebener oder abgeleiteter Typen akzeptiert.  
   
  `Left`  
- The left operand of the less-than operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `T`.  
+ Der linke Operand des kleiner-als-Vorgangs. Die nicht spezialisierte Vorlage besitzt ein lvalue-Verweisargument vom Typ `Type`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von lvalue und rvalue-Verweisargumenten des abgeleiteten Typs `T`.  
   
  `Right`  
- The right operand of the less-than operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `U`.  
+ Der rechte Operand des kleiner-als-Vorgangs. Die nicht spezialisierte Vorlage besitzt ein lvalue-Verweisargument vom Typ `Type`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von lvalue und rvalue-Verweisargumenten des abgeleiteten Typs `U`.  
   
-## <a name="return-value"></a>Return Value  
- The result of `Left < Right`. The specialized template does perfect forwarding of the result, which has the type that's returned by `operator<`.  
+## <a name="return-value"></a>Rückgabewert  
+ Das Ergebnis von `Left``<``Right`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung des Ergebnisses mit dem von `operator<` zurückgegebenen Typs.  
   
-## <a name="remarks"></a>Remarks  
- The binary predicate `less`< `Type`> provides a strict weak ordering of a set of element values of type `Type` into equivalence classes, if and only if this type satisfies the standard mathematical requirements for being so ordered. The specializations for any pointer type yield a total ordering of elements, in that all elements of distinct values are ordered with respect to each other.  
+## <a name="remarks"></a>Hinweise  
+ Das binäre Prädikat `less`< `Type`> stellt eine strenge, schwache Sortierung eines Satzes von Elementwerten vom Typ `Type` in Äquivalenzklassen bereit, wenn und nur wenn dieser Typ den mathematischen Standardanforderungen für eine solche Sortierung entspricht. Die Spezialisierungen für einen Zeigertyp ergeben eine gesamte Sortierung von Elementen, insofern, dass alle Elemente unterschiedlicher Werte zueinander in Beziehung stehend sortiert werden.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Beispiel  
   
 ```cpp  
 // functional_less.cpp  
@@ -125,20 +125,20 @@ cout << Iter1->m_i << " ";
  }  
 ```  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>Ausgabe  
   
 ```
 Original vector v1 = (41 18467 6334 26500 19169 15724 11478)
 Sorted vector v1 = (41 6334 11478 15724 18467 19169 26500)
 ```  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<functional>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
- [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)
 
 
 

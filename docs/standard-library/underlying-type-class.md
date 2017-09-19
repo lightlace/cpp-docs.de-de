@@ -1,5 +1,5 @@
 ---
-title: underlying_type Class | Microsoft Docs
+title: underlying_type-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,6 +10,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
+- underlying_type
 - type_traits/std::underlying_type
 dev_langs:
 - C++
@@ -34,15 +35,14 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 9c70d546726ace71a2696f729da0506be028650d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 95012fdeb3ac78d5e1cc76e03ed851a0b9701f5e
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="underlyingtype-class"></a>underlying_type Class
-Produces the underlying integral type for an enumeration type.  
+# <a name="underlyingtype-class"></a>underlying_type-Klasse
+Erzeugt für einen Enumerationstyp den zugrunde liegenden ganzzahligen Typ.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,19 +51,19 @@ template <class T>
 struct underlying_type;
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
  `T`  
- The type to modify.  
+ Der zu ändernde Typ.  
   
-## <a name="remarks"></a>Remarks  
- The `type` member typedef of the template class names the underlying integral type of `T`, when `T` is an enumeration type, otherwise there is no member typedef `type`.  
+## <a name="remarks"></a>Hinweise  
+ Der typedef-Member `type` der Vorlagenklasse benennt den zugrunde liegenden ganzzahligen Typ von `T`, wenn `T` ein Enumerationstyp ist, andernfalls gibt es keinen typedef-Member `type`.  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [<type_traits>](../standard-library/type-traits.md)
 
 

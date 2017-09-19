@@ -1,14 +1,15 @@
 ---
-title: chi_squared_distribution Class | Microsoft Docs
+title: chi_squared_distribution-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- cpp-standard-libraries
+- devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- chi_squared_distribution
 - random/std::chi_squared_distribution
 - random/std::chi_squared_distribution::reset
 - random/std::chi_squared_distribution::n
@@ -24,14 +25,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- std::chi_squared_distribution [C++]
-- std::chi_squared_distribution [C++], reset
-- std::chi_squared_distribution [C++], n
-- std::chi_squared_distribution [C++], param
-- std::chi_squared_distribution [C++], min
-- std::chi_squared_distribution [C++], max
-- std::chi_squared_distribution [C++], param_type
-- std::chi_squared_distribution [C++], param_type
+- chi_squared_distribution class
 ms.assetid: 9b603fbe-cafd-4a92-b8c5-a434d60b8122
 caps.latest.revision: 17
 author: corob-msft
@@ -51,15 +45,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 2c90370462a9388011a92d9474e97bc152075ceb
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: e02680da3c44f31d9a81e1dc83b18822b9583e1b
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="chisquareddistribution-class"></a>chi_squared_distribution Class
-Generates a chi-squared distribution.  
+# <a name="chisquareddistribution-class"></a>chi_squared_distribution-Klasse
+Generiert eine Chi-Quadrat-Verteilung.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -90,35 +84,35 @@ public:
     result_type max() const;
 };
 ```  
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
 *RealType*  
-The floating-point result type, defaults to `double`. For possible types, see [\<random>](../standard-library/random.md).  
+Der Gleitkommaergebnistyp. Der Standardwert ist `double`. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).  
   
-*URNG* The uniform random number generator engine. For possible types, see [\<random>](../standard-library/random.md).  
+*URNG* Das einheitliche Zufallszahlengenerator-Modul. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>Remarks  
-The template class describes a distribution that produces values of a user-specified floating-point type, or type `double` if none is provided, distributed according to the Chi-Squared Distribution. The following table links to articles about individual members.  
+## <a name="remarks"></a>Hinweise  
+Die Vorlagenklasse beschreibt eine Verteilung, die Werte eines benutzerdefinierten Gleitkommatyps produziert. Wenn kein entsprechend der Chi-Quadrat-Verteilung verteilter Wert ausgegeben wird, geben Sie `double` ein. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.  
   
 ||||  
 |-|-|-|  
 |[chi_squared_distribution](../standard-library/chi-squared-distribution-class.md)|`chi_squared_distribution::n`|`chi_squared_distribution::param`|  
 |`chi_squared_distribution::operator()`||[param_type](#param_type)|  
   
-The property function `n()` returns the value for the stored distribution parameter `n`.  
+Die Eigenschaftsfunktion `n()` gibt den Wert für den gespeicherten Verteilungsparameter `n` zurück.  
   
-The property member `param()` sets or returns the `param_type` stored distribution parameter package.  
+Das Eigenschaftsmember `param()` gibt das aktuell gespeicherte Verteilungspaket `param_type` zurück oder legt es fest.  
 
-The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.  
+Die `min()`- und `max()`-Memberfunktion gibt das jeweils kleinst- und größtmögliche Ergebnis zurück.  
   
-The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.  
+Die `reset()`-Memberfunktion verwirft alle zwischengespeicherten Werte, damit das Ergebnis des folgenden Aufrufs von `operator()` nicht von Werten abhängig ist, die vor dem Aufruf aus dem Modul bezogen wurden.  
   
-The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
+Die `operator()`-Memberfunktionen geben den nächsten generierten Wert von entweder dem aktuellen oder dem spezifizierten Parameterpaket zurück, das auf dem URNG-Modul basiert.
   
-For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
+Weitere Informationen zu Verteilungsklassen und ihren Membern finden Sie unter [\<random>](../standard-library/random.md).  
   
-For detailed information about the chi-squared distribution, see the Wolfram MathWorld article [Chi-Squared Distribution](http://go.microsoft.com/fwlink/LinkId=400528).  
+Ausführliche Informationen über die Chi-Quadrat-Verteilung finden Sie im Wolfram MathWorld-Artikel [Chi-Squared Distribution (Chi-Quadrat-Verteilung)](http://go.microsoft.com/fwlink/LinkId=400528).  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Beispiel  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -172,7 +166,7 @@ int main()
 }  
 ```  
   
-First run:  
+Erste Ausführung:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
@@ -195,7 +189,7 @@ Distribution for 10 samples:
     10: 1.5429743723  
 ```  
   
-Second run:  
+Zweite Ausführung:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
@@ -218,7 +212,7 @@ Distribution for 10 samples:
     10: 1.3552086624  
 ```  
   
-Third run:  
+Dritte Ausführung:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
@@ -241,35 +235,35 @@ Distribution for 10 samples:
     10: 1054.7051509381  
 ```  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
 **Header:** \<random>  
   
 **Namespace:** std  
   
-##  <a name="chi_squared_distribution"></a>  chi_squared_distribution::chi_squared_distribution  
-Constructs the distribution.  
+##  <a name="chi_squared_distribution"></a> chi_squared_distribution::chi_squared_distribution  
+Erstellt die Verteilung.  
   
 ```  
 explicit chi_squared_distribution(result_type n = 1.0);  
 explicit chi_squared_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
 *n*  
-The `n` distribution parameter.  
+Der `n`-Verteilungsparameter.  
   
 *parm*  
- The parameter structure used to construct the distribution.  
+ Die für die Erstellung der Verteilung verwendete Parameterstruktur.  
   
-### <a name="remarks"></a>Remarks  
-**Precondition:** `0.0 < n`  
+### <a name="remarks"></a>Hinweise  
+**Vorbedingung:** `0.0 < n`  
   
-The first constructor constructs an object whose stored `n` value holds the value *n*.  
+Der erste Konstruktor konstruiert ein Objekt, dessen gespeicherter `n`-Wert den Wert *n* enthält.  
   
-The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.  
+Mit dem zweiten Konstruktor wird ein Objekt erstellt, dessen gespeicherte Parameter von *parm* initialisiert werden. Sie können die aktuellen Parameter einer vorhandenen Verteilung abrufen und festlegen, indem Sie die Memberfunktion `param()` aufrufen.  
   
-##  <a name="param_type"></a>  chi_squared_distribution::param_type  
-Stores the parameters of the distribution.  
+##  <a name="param_type"></a> chi_squared_distribution::param_type  
+Speichert die Parameter der Verteilung.  
   
 ```cpp    
 struct param_type {  
@@ -282,19 +276,19 @@ struct param_type {
    };  
 ```  
 
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
 *n*  
-The `n` distribution parameter.  
+Der `n`-Verteilungsparameter.  
   
 *right*  
-The `param_type` object to compare to this.  
+Das mit diesem `param_type`-Objekt zu vergleichende Objekt.  
   
-### <a name="remarks"></a>Remarks  
-**Precondition:** `0.0 < n`  
+### <a name="remarks"></a>Hinweise  
+**Vorbedingung:** `0.0 < n`  
   
-This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
+Diese Struktur kann bei der Instanziierung an den Klassenkonstruktor des Verteilers, an die Memberfunktion `param()` (zur Festlegung der gespeicherten Parameter einer vorhandenen Verteilung) und an `operator()` (zur Verwendung anstelle der gespeicherten Parameter) übergeben werden.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [\<random>](../standard-library/random.md)
 
 

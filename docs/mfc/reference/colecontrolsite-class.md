@@ -1,5 +1,5 @@
 ---
-title: COleControlSite Class | Microsoft Docs
+title: COleControlSite Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -64,56 +64,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- COleControlSite [MFC], COleControlSite
-- COleControlSite [MFC], BindDefaultProperty
-- COleControlSite [MFC], BindProperty
-- COleControlSite [MFC], CreateControl
-- COleControlSite [MFC], DestroyControl
-- COleControlSite [MFC], DoVerb
-- COleControlSite [MFC], EnableDSC
-- COleControlSite [MFC], EnableWindow
-- COleControlSite [MFC], FreezeEvents
-- COleControlSite [MFC], GetDefBtnCode
-- COleControlSite [MFC], GetDlgCtrlID
-- COleControlSite [MFC], GetEventIID
-- COleControlSite [MFC], GetExStyle
-- COleControlSite [MFC], GetProperty
-- COleControlSite [MFC], GetStyle
-- COleControlSite [MFC], GetWindowText
-- COleControlSite [MFC], InvokeHelper
-- COleControlSite [MFC], InvokeHelperV
-- COleControlSite [MFC], IsDefaultButton
-- COleControlSite [MFC], IsWindowEnabled
-- COleControlSite [MFC], ModifyStyle
-- COleControlSite [MFC], ModifyStyleEx
-- COleControlSite [MFC], MoveWindow
-- COleControlSite [MFC], QuickActivate
-- COleControlSite [MFC], SafeSetProperty
-- COleControlSite [MFC], SetDefaultButton
-- COleControlSite [MFC], SetDlgCtrlID
-- COleControlSite [MFC], SetFocus
-- COleControlSite [MFC], SetProperty
-- COleControlSite [MFC], SetPropertyV
-- COleControlSite [MFC], SetWindowPos
-- COleControlSite [MFC], SetWindowText
-- COleControlSite [MFC], ShowWindow
-- COleControlSite [MFC], GetControlInfo
-- COleControlSite [MFC], m_bIsWindowless
-- COleControlSite [MFC], m_ctlInfo
-- COleControlSite [MFC], m_dwEventSink
-- COleControlSite [MFC], m_dwMiscStatus
-- COleControlSite [MFC], m_dwPropNotifySink
-- COleControlSite [MFC], m_dwStyle
-- COleControlSite [MFC], m_hWnd
-- COleControlSite [MFC], m_iidEvents
-- COleControlSite [MFC], m_nID
-- COleControlSite [MFC], m_pActiveObject
-- COleControlSite [MFC], m_pCtrlCont
-- COleControlSite [MFC], m_pInPlaceObject
-- COleControlSite [MFC], m_pObject
-- COleControlSite [MFC], m_pWindowlessObject
-- COleControlSite [MFC], m_pWndCtrl
-- COleControlSite [MFC], m_rect
+- COleControlSite class
 ms.assetid: 43970644-5eab-434a-8ba6-56d144ff1e3f
 caps.latest.revision: 24
 author: mikeblome
@@ -133,15 +84,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 321aa1e5835d3d8ef14bc9983a9b5c199d90265c
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 9bae18342fe5f6aeac939c854f578cf47636fa63
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="colecontrolsite-class"></a>COleControlSite Class
-Provides support for custom client-side control interfaces.  
+# <a name="colecontrolsite-class"></a>COleControlSite-Klasse
+Stellt Unterstützung für benutzerdefinierte clientseitige Steuerelement-Schnittstellen bereit.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -149,95 +100,95 @@ Provides support for custom client-side control interfaces.
 class COleControlSite : public CCmdTarget  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Mitglieder  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[COleControlSite::COleControlSite](#colecontrolsite)|Constructs a `COleControlSite` object.|  
+|[COleControlSite::COleControlSite](#colecontrolsite)|Erstellt ein `COleControlSite`-Objekt.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[COleControlSite::BindDefaultProperty](#binddefaultproperty)|Binds the default property of the hosted control to a data source.|  
-|[COleControlSite::BindProperty](#bindproperty)|Binds a property of the hosted control to a data source.|  
-|[COleControlSite::CreateControl](#createcontrol)|Creates a hosted ActiveX control.|  
-|[COleControlSite::DestroyControl](#destroycontrol)|Destroys the hosted control.|  
-|[COleControlSite::DoVerb](#doverb)|Executes a specific verb of the hosted control.|  
-|[COleControlSite::EnableDSC](#enabledsc)|Enables data sourcing for a control site.|  
-|[COleControlSite::EnableWindow](#enablewindow)|Enables the control site.|  
-|[COleControlSite::FreezeEvents](#freezeevents)|Specifies if the control site is accepting events.|  
-|[COleControlSite::GetDefBtnCode](#getdefbtncode)|Retrieves the default button code for the hosted control.|  
-|[COleControlSite::GetDlgCtrlID](#getdlgctrlid)|Retrieves the identifier of the control.|  
-|[COleControlSite::GetEventIID](#geteventiid)|Retrieves the ID of an event interface for a hosted control.|  
-|[COleControlSite::GetExStyle](#getexstyle)|Retrieves the extended styles of the control site.|  
-|[COleControlSite::GetProperty](#getproperty)|Retrieves a specific property of the hosted control.|  
-|[COleControlSite::GetStyle](#getstyle)|Retrieves the styles of the control site.|  
-|[COleControlSite::GetWindowText](#getwindowtext)|Retrieves the text of the hosted control.|  
-|[COleControlSite::InvokeHelper](#invokehelper)|Invoke a specific method of the hosted control.|  
-|[COleControlSite::InvokeHelperV](#invokehelperv)|Invoke a specific method of the hosted control with a variable list of arguments.|  
-|[COleControlSite::IsDefaultButton](#isdefaultbutton)|Determines if the control is the default button in the window.|  
-|[COleControlSite::IsWindowEnabled](#iswindowenabled)|Checks the visible state of the control site.|  
-|[COleControlSite::ModifyStyle](#modifystyle)|Modifies the current extended styles of the control site.|  
-|[COleControlSite::ModifyStyleEx](#modifystyleex)|Modifies the current styles of the control site.|  
-|[COleControlSite::MoveWindow](#movewindow)|Changes the position of the control site.|  
-|[COleControlSite::QuickActivate](#quickactivate)|Quick activates the hosted control.|  
-|[COleControlSite::SafeSetProperty](#safesetproperty)|Sets a property or method of the control without chance of throwing an exception.|  
-|[COleControlSite::SetDefaultButton](#setdefaultbutton)|Sets the default button in the window.|  
-|[COleControlSite::SetDlgCtrlID](#setdlgctrlid)|Retrieves the identifier of the control.|  
-|[COleControlSite::SetFocus](#setfocus)|Sets the focus to the control site.|  
-|[COleControlSite::SetProperty](#setproperty)|Sets a specific property of the hosted control.|  
-|[COleControlSite::SetPropertyV](#setpropertyv)|Sets a specific property of the hosted control with a variable list of arguments.|  
-|[COleControlSite::SetWindowPos](#setwindowpos)|Sets the position of the control site.|  
-|[COleControlSite::SetWindowText](#setwindowtext)|Sets the text of the hosted control.|  
-|[COleControlSite::ShowWindow](#showwindow)|Shows or hides the control site.|  
+|[COleControlSite::BindDefaultProperty](#binddefaultproperty)|Die Standardeigenschaft des gehosteten Steuerelements bindet an eine Datenquelle.|  
+|[COleControlSite::BindProperty](#bindproperty)|Eine Eigenschaft des gehosteten Steuerelements bindet an eine Datenquelle.|  
+|[COleControlSite::CreateControl](#createcontrol)|Erstellt ein gehosteten ActiveX-Steuerelement.|  
+|[COleControlSite::DestroyControl](#destroycontrol)|Zerstört das gehostete Steuerelement.|  
+|[COleControlSite::DoVerb](#doverb)|Führt ein bestimmtes Verb des gehosteten Steuerelements.|  
+|[COleControlSite::EnableDSC](#enabledsc)|Ermöglicht die Quelle für eine Website des Steuerelements darstellt.|  
+|[COleControlSite::EnableWindow](#enablewindow)|Können die Website des Steuerelements.|  
+|[COleControlSite::FreezeEvents](#freezeevents)|Gibt an, ob die Steuerelementsite Ereignisse akzeptiert.|  
+|[COleControlSite::GetDefBtnCode](#getdefbtncode)|Ruft den Standardcode für die Schaltfläche für das gehostete Steuerelement ab.|  
+|[COleControlSite::GetDlgCtrlID](#getdlgctrlid)|Ruft den Bezeichner des Steuerelements ab.|  
+|[COleControlSite::GetEventIID](#geteventiid)|Ruft die ID einer Ereignis-Schnittstelle für ein gehostetes Steuerelement ab.|  
+|[COleControlSite::GetExStyle](#getexstyle)|Ruft die erweiterten Stile, der die Website des Steuerelements ab.|  
+|[COleControlSite::GetProperty](#getproperty)|Ruft eine bestimmte Eigenschaft des gehosteten Steuerelements ab.|  
+|[COleControlSite::GetStyle](#getstyle)|Ruft die Formatvorlagen der Site für das Steuerelement ab.|  
+|[COleControlSite::GetWindowText](#getwindowtext)|Ruft den Text des gehosteten Steuerelements ab.|  
+|[COleControlSite::InvokeHelper](#invokehelper)|Rufen Sie eine bestimmte Methode des gehosteten Steuerelements.|  
+|[COleControlSite::InvokeHelperV](#invokehelperv)|Rufen Sie eine bestimmte Methode des gehosteten Steuerelements mit einer Variable Argumentliste.|  
+|[COleControlSite::IsDefaultButton](#isdefaultbutton)|Bestimmt, ob das Steuerelement die Standardschaltfläche im Fenster ist.|  
+|[COleControlSite::IsWindowEnabled](#iswindowenabled)|Überprüft den Sichtbarkeitsstatus der Site für das Steuerelement.|  
+|[COleControlSite::ModifyStyle](#modifystyle)|Ändert die aktuelle erweiterte Stile der Site für das Steuerelement.|  
+|[COleControlSite::ModifyStyleEx](#modifystyleex)|Ändert die aktuelle Stile der Site für das Steuerelement.|  
+|[COleControlSite::MoveWindow](#movewindow)|Ändert die Position der Site für das Steuerelement.|  
+|[COleControlSite::QuickActivate](#quickactivate)|Quick aktiviert das gehostete Steuerelement.|  
+|[COleControlSite::SafeSetProperty](#safesetproperty)|Legt eine Eigenschaft oder Methode des Steuerelements ohne Wahrscheinlichkeit eine Ausnahme ausgelöst.|  
+|[COleControlSite::SetDefaultButton](#setdefaultbutton)|Legt die Standardschaltfläche im Fenster fest.|  
+|[COleControlSite::SetDlgCtrlID](#setdlgctrlid)|Ruft den Bezeichner des Steuerelements ab.|  
+|[COleControlSite::SetFocus](#setfocus)|Legt den Fokus auf die Website des Steuerelements fest.|  
+|[COleControlSite::SetProperty](#setproperty)|Legt eine bestimmte Eigenschaft des gehosteten Steuerelements.|  
+|[COleControlSite::SetPropertyV](#setpropertyv)|Legt eine bestimmte Eigenschaft des gehosteten Steuerelements mit einer Variable Argumentliste.|  
+|[COleControlSite::SetWindowPos](#setwindowpos)|Legt die Position der Site für das Steuerelement fest.|  
+|[COleControlSite::SetWindowText](#setwindowtext)|Legt den Text des gehosteten Steuerelements.|  
+|[COleControlSite::ShowWindow](#showwindow)|Anzeigen oder Ausblenden der Website des Steuerelements.|  
   
-### <a name="protected-methods"></a>Protected Methods  
+### <a name="protected-methods"></a>Geschützte Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[COleControlSite::GetControlInfo](#getcontrolinfo)|Retrieves keyboard information and mnemonics for the hosted control.|  
+|[COleControlSite::GetControlInfo](#getcontrolinfo)|Ruft Tastaturinformationen und Zugriffstasten für das gehostete Steuerelement ab.|  
   
-### <a name="public-data-members"></a>Public Data Members  
+### <a name="public-data-members"></a>Öffentliche Datenmember  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[COleControlSite::m_bIsWindowless](#m_biswindowless)|Determines if the hosted control is a windowless control.|  
-|[COleControlSite::m_ctlInfo](#m_ctlinfo)|Contains information on keyboard handling for the control.|  
-|[COleControlSite::m_dwEventSink](#m_dweventsink)|The cookie of the control's connection point.|  
-|[COleControlSite::m_dwMiscStatus](#m_dwmiscstatus)|The miscellaneous states for the hosted control.|  
-|[COleControlSite::m_dwPropNotifySink](#m_dwpropnotifysink)|The `IPropertyNotifySink` cookie of the control.|  
-|[COleControlSite::m_dwStyle](#m_dwstyle)|The styles of the hosted control.|  
-|[COleControlSite::m_hWnd](#m_hwnd)|The handle of the control site.|  
-|[COleControlSite::m_iidEvents](#m_iidevents)|The ID of the event interface for the hosted control.|  
-|[COleControlSite::m_nID](#m_nid)|The ID of the hosted control.|  
-|[COleControlSite::m_pActiveObject](#m_pactiveobject)|A pointer to the `IOleInPlaceActiveObject` object of the hosted control.|  
-|[COleControlSite::m_pCtrlCont](#m_pctrlcont)|The container of the hosted control.|  
-|[COleControlSite::m_pInPlaceObject](#m_pinplaceobject)|A pointer to the `IOleInPlaceObject` object of the hosted control.|  
-|[COleControlSite::m_pObject](#m_pobject)|A pointer to the `IOleObjectInterface` interface of the control.|  
-|[COleControlSite::m_pWindowlessObject](#m_pwindowlessobject)|A pointer to the `IOleInPlaceObjectWindowless` interface of the control.|  
-|[COleControlSite::m_pWndCtrl](#m_pwndctrl)|A pointer to the window object for the hosted control.|  
-|[COleControlSite::m_rect](#m_rect)|The dimensions of the control site.|  
+|[COleControlSite::m_bIsWindowless](#m_biswindowless)|Bestimmt, ob das gehostete Steuerelement ein fensterloses Steuerelement ist.|  
+|[COleControlSite::m_ctlInfo](#m_ctlinfo)|Enthält Informationen über die Tastatur, die für das Steuerelement behandeln.|  
+|[COleControlSite::m_dwEventSink](#m_dweventsink)|Das Cookie des Verbindungspunkts des Steuerelements.|  
+|[COleControlSite::m_dwMiscStatus](#m_dwmiscstatus)|Die verschiedenen Status für das gehostete Steuerelement.|  
+|[COleControlSite::m_dwPropNotifySink](#m_dwpropnotifysink)|Die `IPropertyNotifySink` Cookie des Steuerelements.|  
+|[COleControlSite::m_dwStyle](#m_dwstyle)|Die Stile des gehosteten Steuerelements.|  
+|[COleControlSite::m_hWnd](#m_hwnd)|Das Handle der Site für das Steuerelement.|  
+|[COleControlSite::m_iidEvents](#m_iidevents)|Die ID der Ereignisschnittstelle für das gehostete Steuerelement.|  
+|[COleControlSite::m_nID](#m_nid)|Die ID des gehosteten Steuerelements.|  
+|[COleControlSite::m_pActiveObject](#m_pactiveobject)|Ein Zeiger auf die `IOleInPlaceActiveObject` Objekt des gehosteten Steuerelements.|  
+|[COleControlSite::m_pCtrlCont](#m_pctrlcont)|Der Container des gehosteten Steuerelements.|  
+|[COleControlSite::m_pInPlaceObject](#m_pinplaceobject)|Ein Zeiger auf die `IOleInPlaceObject` Objekt des gehosteten Steuerelements.|  
+|[COleControlSite::m_pObject](#m_pobject)|Ein Zeiger auf die `IOleObjectInterface` Schnittstelle des Steuerelements.|  
+|[COleControlSite::m_pWindowlessObject](#m_pwindowlessobject)|Ein Zeiger auf die `IOleInPlaceObjectWindowless` Schnittstelle des Steuerelements.|  
+|[COleControlSite::m_pWndCtrl](#m_pwndctrl)|Ein Zeiger auf das Window-Objekt für das gehostete Steuerelement.|  
+|[COleControlSite::m_rect](#m_rect)|Die Dimensionen von der Website des Steuerelements.|  
   
-## <a name="remarks"></a>Remarks  
- This support is the primary means by which an embedded ActiveX control obtains information about the location and extent of its display site, its moniker, its user interface, its ambient properties, and other resources provided by its container. `COleControlSite` fully implements the [IOleControlSite](http://msdn.microsoft.com/library/windows/desktop/ms688502), [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706), [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638), **IBoundObjectSite**, **INotifyDBEvents**, [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md)       interfaces. In addition, the IDispatch interface (providing support for ambient properties and event sinks) is also implemented.  
+## <a name="remarks"></a>Hinweise  
+ Diese Unterstützung ist das primäre Mittel, durch die ein eingebettetes ActiveX-Steuerelement Informationen über den Speicherort und Größe seiner Anzeigeseite, seinen Moniker, seine Benutzeroberfläche, die ambient-Eigenschaften und andere Ressourcen, die von seinem Container bereitgestellt erhält. `COleControlSite`vollständig implementiert die [IOleControlSite](http://msdn.microsoft.com/library/windows/desktop/ms688502), [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706), [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638), **IBoundObjectSite**, **INotifyDBEvents**, [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md) Schnittstellen. Darüber hinaus wird auch die IDispatch-Schnittstelle (Unterstützung für Umgebungseigenschaften und Ereignissenken) implementiert.  
   
- To create an ActiveX control site using `COleControlSite`, derive a class from `COleControlSite`. In your `CWnd`-derived class for the container (for instance, your dialog box) override the **CWnd::CreateControlSite** function.  
+ Um eine Website mit ActiveX-Steuerelement erstellen `COleControlSite`, leiten Sie eine Klasse von `COleControlSite`. In der `CWnd`-abgeleiteten Klasse für den Container (z. B. ein Dialogfeld) überschreiben die **CWnd::CreateControlSite** Funktion.  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
- [CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
+ [Von CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  `COleControlSite`  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxocc.h  
   
-##  <a name="binddefaultproperty"></a>  COleControlSite::BindDefaultProperty  
- Binds the calling object's default simple bound property, as marked in the type library, to the underlying cursor that is defined by the DataSource, UserName, Password, and SQL properties of the data-source control.  
+##  <a name="binddefaultproperty"></a>COleControlSite::BindDefaultProperty  
+ Bindet das aufrufende Objekt einfach gebundenen Standardeigenschaft, als markierte in der Typbibliothek auf den zugrunde liegenden Cursor, der von der Datenquelle, Benutzername, Kennwort und SQL-Eigenschaften des Datenquellen-Steuerelements definiert wird.  
   
 ```  
 virtual void BindDefaultProperty(
@@ -247,24 +198,24 @@ virtual void BindDefaultProperty(
     CWnd* pDSCWnd);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwDispID`  
- Specifies the **DISPID** of a property on a data-bound control that is to be bound to a data-source control.  
+ Gibt die **DISPID** einer Eigenschaft für ein datengebundenes Steuerelement, das an ein Datenquellen-Steuerelement gebunden werden soll.  
   
  `vtProp`  
- Specifies the type of the property to be bound — for example, `VT_BSTR`, **VT_VARIANT**, and so on.  
+ Gibt den Typ der Eigenschaft, die gebunden werden, z. B. `VT_BSTR`, **VT_VARIANT**und so weiter.  
   
  `szFieldName`  
- Specifies the name of the column, in the cursor provided by the data-source control, to which the property will be bound.  
+ Gibt den Namen der Spalte im Cursor zur Verfügung gestellt, von dem Datenquellen-Steuerelement, zu dem die Eigenschaft gebunden wird.  
   
  `pDSCWnd`  
- A pointer to the `CWnd`-derived object that hosts the data-source control to which the property will be bound.  
+ Ein Zeiger auf die `CWnd`-abgeleiteten Objekt, das Datenquellen Steuerelement hostet, zu dem die Eigenschaft gebunden werden.  
   
-### <a name="remarks"></a>Remarks  
- The `CWnd` object on which you call this function must be a data-bound control.  
+### <a name="remarks"></a>Hinweise  
+ Das `CWnd` Objekt, auf dem Sie diese Funktion aufrufen, muss ein datengebundenes Steuerelement.  
   
-##  <a name="bindproperty"></a>  COleControlSite::BindProperty  
- Binds the calling object's simple bound property, as marked in the type library, to the underlying cursor that is defined by the DataSource, UserName, Password, and SQL properties of the data-source control.  
+##  <a name="bindproperty"></a>COleControlSite::BindProperty  
+ Bindet das aufrufende Objekt einfach gebundenen Eigenschaft als markierte in der Typbibliothek, auf den zugrunde liegenden Cursor, der von der Datenquelle, Benutzername, Kennwort und SQL-Eigenschaften des Datenquellen-Steuerelements definiert wird.  
   
 ```  
 virtual void BindProperty(
@@ -272,32 +223,32 @@ virtual void BindProperty(
     CWnd* pWndDSC);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  *dwDispId*  
- Specifies the **DISPID** of a property on a data-bound control that is to be bound to a data-source control.  
+ Gibt die **DISPID** einer Eigenschaft für ein datengebundenes Steuerelement, das an ein Datenquellen-Steuerelement gebunden werden soll.  
   
  `pWndDSC`  
- A pointer to the `CWnd`-derived object that hosts the data-source control to which the property will be bound.  
+ Ein Zeiger auf die `CWnd`-abgeleiteten Objekt, das Datenquellen Steuerelement hostet, zu dem die Eigenschaft gebunden werden.  
   
-### <a name="remarks"></a>Remarks  
- The `CWnd` object on which you call this function must be a data-bound control.  
+### <a name="remarks"></a>Hinweise  
+ Das `CWnd` Objekt, auf dem Sie diese Funktion aufrufen, muss ein datengebundenes Steuerelement.  
   
-##  <a name="colecontrolsite"></a>  COleControlSite::COleControlSite  
- Constructs a new `COleControlSite` object.  
+##  <a name="colecontrolsite"></a>COleControlSite::COleControlSite  
+ Erstellt ein neues `COleControlSite`-Objekt.  
   
 ```  
 explicit COleControlSite(COleControlContainer* pCtrlCont);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `pCtrlCont`  
- A pointer to the control's container (which represents the window that hosts the AtiveX control).  
+ Ein Zeiger auf das Steuerelement-Container (das Fenster mit dem AtiveX Steuerelement darstellt).  
   
-### <a name="remarks"></a>Remarks  
- This function is called by the [COccManager::CreateContainer](../../mfc/reference/coccmanager-class.md#createcontainer) function. For more information on customizing the creation of containers, see [COccManager::CreateSite](../../mfc/reference/coccmanager-class.md#createsite).  
+### <a name="remarks"></a>Hinweise  
+ Diese Funktion wird aufgerufen, indem die [COccManager::CreateContainer](../../mfc/reference/coccmanager-class.md#createcontainer) Funktion. Weitere Informationen zum Anpassen der Erstellung von Containern finden Sie unter [COccManager::CreateSite](../../mfc/reference/coccmanager-class.md#createsite).  
   
-##  <a name="createcontrol"></a>  COleControlSite::CreateControl  
- Creates an ActiveX control, hosted by the `COleControlSite` object.  
+##  <a name="createcontrol"></a>COleControlSite::CreateControl  
+ Erstellt ein ActiveX-Steuerelement gehostet wird, durch die `COleControlSite` Objekt.  
   
 ```  
 virtual HRESULT CreateControl(
@@ -325,73 +276,73 @@ virtual HRESULT CreateControl(
     BSTR bstrLicKey = NULL);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `pWndCtrl`  
- A pointer to the window object representing the control.  
+ Ein Zeiger auf das Steuerelement darstellt.  
   
  `clsid`  
- The unique class ID of the control.  
+ Die eindeutige Klassen-ID des Steuerelements.  
   
  `lpszWindowName`  
- A pointer to the text to be displayed in the control. Sets the value of the winodw's Caption or Text property (if any).  
+ Ein Zeiger auf den Text im Steuerelement angezeigt werden. Legt den Wert der Winodw Beschriftung oder Text-Eigenschaft fest, (sofern vorhanden).  
   
  `dwStyle`  
- Windows styles. The available styles are listed under the **Remarks** section.  
+ Fensterstile. Die verfügbaren Formate finden Sie unter der **Hinweise** Abschnitt.  
   
  `rect`  
- Specifies the control's size and position. It can be either a `CRect` object or a `RECT` structure.  
+ Gibt die Größe und Position des Steuerelements. Es kann entweder eine `CRect` Objekt oder eine `RECT` Struktur.  
   
  `nID`  
- Specifies the control's child window ID.  
+ Gibt an, der ID des Steuerelements untergeordnete Fenster  
   
  `pPersist`  
- A pointer to a `CFile` containing the persistent state for the control. The default value is **NULL**, indicating that the control initializes itself without restoring its state from any persistent storage. If not **NULL**, it should be a pointer to a `CFile`-derived object that contains the control's persistent data, in the form of either a stream or a storage. This data could have been saved in a previous activation of the client. The `CFile` can contain other data, but must have its read-write pointer set to the first byte of persistent data at the time of the call to `CreateControl`.  
+ Ein Zeiger auf eine `CFile` , die den Zustand für das Steuerelement enthält. Der Standardwert ist **NULL**, gibt an, dass das Steuerelement selbst ohne seinen Zustand wiederherzustellen, aus dem alle permanenten Speicher initialisiert. Wenn dies nicht **NULL**, wird ein Zeiger auf eine `CFile`-abgeleitetes Objekt mit persistenten Daten des Steuerelements in Form von einem Stream oder ein Speicherkonto. Diese Daten können in einer vorherigen Aktivierung des Clients gespeichert worden sein. Die `CFile` können andere Daten, muss jedoch seinen Schreib-Lese-Zeiger auf das erste Byte der Daten dauerhaft festgelegt werden, zum Zeitpunkt des Aufrufs von `CreateControl`.  
   
  `bStorage`  
- Indicates whether the data in `pPersist` should be interpreted as `IStorage` or `IStream` data. If the data in `pPersist` is a storage, `bStorage` should be **TRUE**. If the data in `pPersist` is a stream, `bStorage` should be **FALSE**. The default value is **FALSE**.  
+ Gibt an, ob die Daten in `pPersist` interpretiert werden soll, als `IStorage` oder `IStream` Daten. Wenn die Daten in `pPersist` ist ein Speicher `bStorage` sollte **TRUE**. Wenn die Daten in `pPersist` ist ein Stream `bStorage` sollte **FALSE**. Der Standardwert ist **FALSE**.  
   
  `bstrLicKey`  
- Optional license key data. This data is needed only for creating controls that require a run-time license key. If the control supports licensing, you must provide a license key for the creation of the control to succeed. The default value is **NULL**.  
+ Optionale Lizenz Schlüsseldaten. Diese Daten ist erforderlich, nur zum Erstellen von Steuerelementen, die zur Laufzeit Lizenzschlüssel erforderlich. Wenn das Steuerelement unterstützt die Lizenzierung, benötigt einen Lizenzschlüssel für die Erstellung des Steuerelements erfolgreich ausgeführt werden kann. Der Standardwert ist **NULL**.  
   
  `ppt`  
- A pointer to a **POINT** structure that contains the upper-left corner of the control. The size of the control is determined by the value of *psize*. The `ppt` and *psize* values are an optional method of specifying the size and position opf the control.  
+ Ein Zeiger auf eine **Punkt** Struktur, die die linke obere Ecke des Steuerelements enthält. Die Größe des Steuerelements wird bestimmt durch den Wert der *Psize*. Die `ppt` und *Psize* Werte sind eine optionale Methode dar, um die Größe und position Opf des Steuerelements.  
   
  *psize*  
- A pointer to a **SIZE** structure that contains the size of the control. The upper-left corner is determined by the value of `ppt`. The `ppt` and *psize* values are an optional method of specifying the size and position opf the control.  
+ Ein Zeiger auf eine **Größe** Struktur, die die Größe des Steuerelements enthält. Die linke obere Ecke wird bestimmt durch den Wert des `ppt`. Die `ppt` und *Psize* Werte sind eine optionale Methode dar, um die Größe und position Opf des Steuerelements.  
   
-### <a name="return-value"></a>Return Value  
- A standard `HRESULT` value.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Standard `HRESULT` -Wert.  
   
-### <a name="remarks"></a>Remarks  
- Only a subset of the Windows `dwStyle` flags are supported by `CreateControl`:  
+### <a name="remarks"></a>Hinweise  
+ Nur eine Teilmenge der Windows `dwStyle` Flags werden von unterstützt `CreateControl`:  
   
-- **WS_VISIBLE** Creates a window that is initially visible. Required if you want the control to be visible immediately, like ordinary windows.  
+- **WS_VISIBLE** erstellt ein Fenster, das anfänglich sichtbar ist. Erforderlich, wenn das Steuerelement sofort, wie gewöhnliche Fenster angezeigt werden soll.  
   
-- **WS_DISABLED** Creates a window that is initially disabled. A disabled window cannot receive input from the user. Can be set if the control has an Enabled property.  
+- **WS_DISABLED** erstellt ein Fenster, das anfänglich deaktiviert ist. Ein deaktiviertes Fenster kann keine Eingabe vom Benutzer empfangen. Kann festgelegt werden, wenn das Steuerelement eine Enabled-Eigenschaft verfügt.  
   
-- `WS_BORDER` Creates a window with a thin-line border. Can be set if control has a BorderStyle property.  
+- `WS_BORDER`Erstellt ein Fenster mit einem Rahmen thin-Zeile. Kann festgelegt werden, wenn Steuerelement eine BorderStyle-Eigenschaft besitzt.  
   
-- **WS_GROUP** Specifies the first control of a group of controls. The user can change the keyboard focus from one control in the group to the next by using the direction keys. All controls defined with the **WS_GROUP** style after the first control belong to the same group. The next control with the **WS_GROUP** style ends the group and starts the next group.  
+- **WS_GROUP** gibt das erste Steuerelement einer Gruppe von Steuerelementen. Der Benutzer kann den Tastaturfokus von einem Steuerelement in der Gruppe zur nächsten ändern mithilfe der Richtung. Alle Steuerelemente, die mit definiert die **WS_GROUP** formatieren, nachdem das erste Steuerelement zur selben Gruppe gehören. Das nächste Steuerelement mit der **WS_GROUP** Stil beendet die Gruppe und startet die nächste Gruppe.  
   
-- **WS_TABSTOP** Specifies a control that can receive the keyboard focus when the user presses the TAB key. Pressing the TAB key changes the keyboard focus to the next control of the **WS_TABSTOP** style.  
+- **WS_TABSTOP** gibt ein Steuerelement, das den Tastaturfokus erhalten kann, wenn der Benutzer die TAB-Taste drückt. Drücken die TAB-Taste den Tastaturfokus auf das nächste Steuerelement der ändert die **WS_TABSTOP** Stil.  
   
- Use the second overload to create default-sized controls.  
+ Verwenden Sie die zweite Überladung zum Erstellen von Steuerelementen mit Standardgröße.  
   
-##  <a name="destroycontrol"></a>  COleControlSite::DestroyControl  
- Destroys the `COleControlSite` object.  
+##  <a name="destroycontrol"></a>COleControlSite::DestroyControl  
+ Zerstört das `COleControlSite`-Objekt.  
   
 ```  
 virtual BOOL DestroyControl();
 ```  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if successful, otherwise 0.  
+### <a name="return-value"></a>Rückgabewert  
+ Ungleich NULL, wenn erfolgreich, andernfalls 0.  
   
-### <a name="remarks"></a>Remarks  
- Once completed, the object is freed from memory and any pointers to the object are no longer valid.  
+### <a name="remarks"></a>Hinweise  
+ Nach der abgeschlossen ist, wird das Objekt aus dem Speicher freigegeben, und alle Verweise auf das Objekt nicht mehr gültig sind.  
   
-##  <a name="doverb"></a>  COleControlSite::DoVerb  
- Executes the specified verb.  
+##  <a name="doverb"></a>COleControlSite::DoVerb  
+ Führt das angegebene Verb.  
   
 ```  
 virtual HRESULT DoVerb(
@@ -399,138 +350,138 @@ virtual HRESULT DoVerb(
     LPMSG lpMsg = NULL);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `nVerb`  
- Specifies the verb to execute. It can include one of the following:  
+ Gibt das Verb ausführen. Sie können eine der folgenden enthalten:  
   
-|Value|Meaning|Symbol|  
+|Wert|Bedeutung|Symbol|  
 |-----------|-------------|------------|  
-|0|Primary verb|`OLEIVERB_PRIMARY`|  
-|-1|Secondary verb|(None)|  
-|1|Displays the object for editing.|`OLEIVERB_SHOW`|  
-|-2|Edits the item in a separate window.|`OLEIVERB_OPEN`|  
-|-3|Hides the object.|`OLEIVERB_HIDE`|  
-|-4|Activates a control in-place.|`OLEIVERB_UIACTIVATE`|  
-|-5|Activates a control in-place, without additional user interface elements.|**OLEIVERB_INPLACEACTIVATE**|  
-|-7|Display the control's properties.|**OLEIVERB_PROPERTIES**|  
+|0|Primäres Verb|`OLEIVERB_PRIMARY`|  
+|-1|Sekundäre verb|(Keine)|  
+|1|Zeigt das Objekt zur Bearbeitung.|`OLEIVERB_SHOW`|  
+|-2|Bearbeitet das Element in einem separaten Fenster.|`OLEIVERB_OPEN`|  
+|-3|Blendet das Objekt aus.|`OLEIVERB_HIDE`|  
+|-4|Aktiviert eine-Steuerelement direkt.|`OLEIVERB_UIACTIVATE`|  
+|-5|Aktiviert eine-Steuerelement direkt, ohne zusätzliche Elemente der Benutzeroberfläche.|**OLEIVERB_INPLACEACTIVATE**|  
+|-7|Zeigen Sie die Eigenschaften des Steuerelements.|**OLEIVERB_PROPERTIES**|  
   
  `lpMsg`  
- Pointer to the message that caused the item to be activated.  
+ Ein Zeiger auf die Meldung, die das Element, das aktiviert werden, verursacht.  
   
-### <a name="return-value"></a>Return Value  
- A standard `HRESULT` value.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Standard `HRESULT` -Wert.  
   
-### <a name="remarks"></a>Remarks  
- This function directly calls through the control's `IOleObject` interface to execute the specified verb. If an exception is thrown as a result of this function call, an `HRESULT` error code is returned.  
+### <a name="remarks"></a>Hinweise  
+ Diese Funktion ruft direkt über des Steuerelements `IOleObject` Schnittstelle für das angegebene Verb aufzurufen. Wenn eine Ausnahme, als Ergebnis dieses Funktionsaufrufs ausgelöst wird ein `HRESULT` Fehlercode zurückgegeben.  
   
- For more information, see [IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) in the Windows SDK.  
+ Weitere Informationen finden Sie unter [IOleObject](http://msdn.microsoft.com/library/windows/desktop/ms694508) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="enabledsc"></a>  COleControlSite::EnableDSC  
- Enables data sourcing for the control site.  
+##  <a name="enabledsc"></a>COleControlSite::EnableDSC  
+ Ermöglicht die Quelle für die Website des Steuerelements darstellt.  
   
 ```  
 virtual void EnableDSC();
 ```  
   
-### <a name="remarks"></a>Remarks  
- Called by the framework to enable and initialize data sourcing for the control site. Override this function to provide customized behavior.  
+### <a name="remarks"></a>Hinweise  
+ Vom Framework aufgerufen wird, aktivieren und initialisieren Sie Daten, die als Quelle für die Website des Steuerelements. Überschreiben Sie diese Funktion, um benutzerdefiniertes Verhalten bereitzustellen.  
   
-##  <a name="enablewindow"></a>  COleControlSite::EnableWindow  
- Enables or disables mouse and keyboard input to the control site.  
+##  <a name="enablewindow"></a>COleControlSite::EnableWindow  
+ Aktiviert oder deaktiviert die Maus- und Tastatureingaben an die Website des Steuerelements.  
   
 ```  
 virtual BOOL EnableWindow(BOOL bEnable);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `bEnable`  
- Specifies whether to enable or disable the window: **TRUE** if window input is to be enabled, otherwise **FALSE**.  
+ Gibt an, ob zum Aktivieren oder deaktivieren das Fenster: **TRUE** ist Fenster Eingabe aktiviert ist, andernfalls werden **FALSE**.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if the window was previously disabled, otherwise 0.  
+### <a name="return-value"></a>Rückgabewert  
+ Ungleich NULL, wenn das Fenster zuvor deaktiviert war, andernfalls 0.  
   
-##  <a name="freezeevents"></a>  COleControlSite::FreezeEvents  
- Specifies whether the control site will handle or ignore events fired from a control.  
+##  <a name="freezeevents"></a>COleControlSite::FreezeEvents  
+ Gibt an, ob die Steuerelementsite behandeln oder ignorieren von Ereignissen, die von einem Steuerelement ausgelöst wird.  
   
 ```  
 void FreezeEvents(BOOL bFreeze);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `bFreeze`  
- Specifies whether the control site wishes to stop accepting events. Nonzero if the control is not accepting events; otherwise zero.  
+ Gibt an, ob die Steuerelementsite das Akzeptieren von Ereignissen beenden möchte. Wert ungleich NULL, wenn das Steuerelement keine Ereignisse akzeptiert; andernfalls&0; (null).  
   
-### <a name="remarks"></a>Remarks  
- If `bFreeze` is **TRUE**, the control site requests the control to stop fring events. If `bFreeze` is **FALSE**, the control site requests the control to continue firing events.  
+### <a name="remarks"></a>Hinweise  
+ Wenn `bFreeze` ist **TRUE**, die Website des Steuerelements fordert das Steuerelement Fring Ereignisse zu beenden. Wenn `bFreeze` ist **FALSE**, die Website des Steuerelements fordert das Steuerelement zum Auslösen von Ereignissen fortgesetzt.  
   
 > [!NOTE]
->  The control is not required to stop firing events if requested by the control site. It can continue firing but all subsequent events will be ignored by the control site.  
+>  Das Steuerelement ist nicht erforderlich, beendet das Auslösen von Ereignissen wird von der Website des Steuerelements angefordert. Auslösen von Ereignissen fortgesetzt werden kann, jedoch alle nachfolgenden Ereignisse durch die Website des Steuerelements ignoriert werden.  
   
-##  <a name="getcontrolinfo"></a>  COleControlSite::GetControlInfo  
- Retrieves information about a control's keyboard mnemonics and keyboard behavior.  
+##  <a name="getcontrolinfo"></a>COleControlSite::GetControlInfo  
+ Ruft Informationen über mnemonisches und Tastaturverhalten eines Steuerelements.  
   
 ```  
 void GetControlInfo();
 ```  
   
-### <a name="remarks"></a>Remarks  
- The information is stored in [COleControlSite::m_ctlInfo](#m_ctlinfo).  
+### <a name="remarks"></a>Hinweise  
+ Die Informationen werden gespeichert [COleControlSite::m_ctlInfo](#m_ctlinfo).  
   
-##  <a name="getdefbtncode"></a>  COleControlSite::GetDefBtnCode  
- Determines if the control is a default push button.  
+##  <a name="getdefbtncode"></a>COleControlSite::GetDefBtnCode  
+ Bestimmt, ob das Steuerelement eine Standardschaltfläche ist.  
   
 ```  
 DWORD GetDefBtnCode();
 ```  
   
-### <a name="return-value"></a>Return Value  
- Can be one of the following values:  
+### <a name="return-value"></a>Rückgabewert  
+ Kann einer der folgenden Werte sein:  
   
-- **DLGC_DEFPUSHBUTTON** Control is the default button in the dialog.  
+- **DLGC_DEFPUSHBUTTON** -Steuerelement ist die Standardschaltfläche im Dialogfeld.  
   
-- **DLGC_UNDEFPUSHBUTTON** Control is not the default button in the dialog.  
+- **DLGC_UNDEFPUSHBUTTON** Steuerelement ist nicht die Standardschaltfläche im Dialogfeld.  
   
-- **0** Control is not a button.  
+- **0** Steuerelement ist keine Schaltfläche.  
   
-##  <a name="getdlgctrlid"></a>  COleControlSite::GetDlgCtrlID  
- Retrieves the identifier of the control.  
+##  <a name="getdlgctrlid"></a>COleControlSite::GetDlgCtrlID  
+ Ruft den Bezeichner des Steuerelements ab.  
   
 ```  
 virtual int GetDlgCtrlID() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The dialog item identifier of the control.  
+### <a name="return-value"></a>Rückgabewert  
+ Das Dialogfeld Element-ID des Steuerelements.  
   
-##  <a name="geteventiid"></a>  COleControlSite::GetEventIID  
- Retrieves a pointer to the control's default event interface.  
+##  <a name="geteventiid"></a>COleControlSite::GetEventIID  
+ Ruft einen Zeiger auf das Steuerelement Standardschnittstelle Ereignis ab.  
   
 ```  
 BOOL GetEventIID(IID* piid);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `piid`  
- A pointer to an interface ID.  
+ Ein Zeiger auf ein Schnittstellen-ID.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if successful, otherwise 0. If successful, `piid` contains the interface ID for the control's default event interface.  
+### <a name="return-value"></a>Rückgabewert  
+ Ungleich NULL, wenn erfolgreich, andernfalls 0. Im Erfolgsfall `piid` die Schnittstellen-ID für die Standard-Ereignisschnittstelle des Steuerelements enthält.  
   
-##  <a name="getexstyle"></a>  COleControlSite::GetExStyle  
- Retrieves the window's extended styles.  
+##  <a name="getexstyle"></a>COleControlSite::GetExStyle  
+ Ruft die erweiterten Fensterstile.  
   
 ```  
 virtual DWORD GetExStyle() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The control window's extended styles.  
+### <a name="return-value"></a>Rückgabewert  
+ Das Steuerelementfenster des Stile erweitert.  
   
-### <a name="remarks"></a>Remarks  
- To retrieve the regular styles, call [COleControlSite::GetStyle](#getstyle).  
+### <a name="remarks"></a>Hinweise  
+ Rufen Sie zum Abrufen der regulären Stile [COleControlSite::GetStyle](#getstyle).  
   
-##  <a name="getproperty"></a>  COleControlSite::GetProperty  
- Gets the control property specified by `dwDispID`.  
+##  <a name="getproperty"></a>COleControlSite::GetProperty  
+ Ruft die durch angegebene Steuerelementeigenschaft `dwDispID`.  
   
 ```  
 virtual void GetProperty(
@@ -539,48 +490,48 @@ virtual void GetProperty(
     void* pvProp) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwDispID`  
- Identifies the dispatch ID of the property, found on the control's default `IDispatch` interface, to be retrieved.  
+ Identifiziert die Dispatch-ID der Eigenschaft, auf das Steuerelement standardmäßig gefunden `IDispatch` Schnittstelle abgerufen werden sollen.  
   
  `vtProp`  
- Specifies the type of the property to be retrieved. For possible values, see the Remarks section for [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
+ Gibt den Typ der Eigenschaft abgerufen werden soll. Mögliche Werte finden Sie im Abschnitt "Hinweise" [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
  `pvProp`  
- Address of the variable that will receive the property value. It must match the type specified by `vtProp`.  
+ Die Adresse der Variablen, die den Wert der Eigenschaft angezeigt wird. Mit den vom angegebenen Typ übereinstimmen muss `vtProp`.  
   
-### <a name="remarks"></a>Remarks  
- The value is returned through `pvProp`.  
+### <a name="remarks"></a>Hinweise  
+ Der Wert wird zurückgegeben, über `pvProp`.  
   
-##  <a name="getstyle"></a>  COleControlSite::GetStyle  
- Retrieves the styles of the control site.  
+##  <a name="getstyle"></a>COleControlSite::GetStyle  
+ Ruft die Formatvorlagen der Site für das Steuerelement ab.  
   
 ```  
 virtual DWORD GetStyle() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The window's styles.  
+### <a name="return-value"></a>Rückgabewert  
+ Das Fenster Stile.  
   
-### <a name="remarks"></a>Remarks  
- For a list of possible values, see [Windows Styles](../../mfc/reference/styles-used-by-mfc.md#window-styles). To retrieve the extended styles of the control site, call [COleControlSite::GetExStyle](#getexstyle).  
+### <a name="remarks"></a>Hinweise  
+ Eine Liste der möglichen Werte finden Sie unter [Fensterstile](../../mfc/reference/window-styles.md). Um die erweiterten Stile, der die Website des Steuerelements abzurufen, rufen [COleControlSite::GetExStyle](#getexstyle).  
   
-##  <a name="getwindowtext"></a>  COleControlSite::GetWindowText  
- Retrieves the current text of the control.  
+##  <a name="getwindowtext"></a>COleControlSite::GetWindowText  
+ Ruft den aktuellen Text des Steuerelements ab.  
   
 ```  
 virtual void GetWindowText(CString& str) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `str`  
- A reference to a `CString` object that contains the current text of the control.  
+ Ein Verweis auf ein `CString` -Objekt, das den aktuellen Text des Steuerelements enthält.  
   
-### <a name="remarks"></a>Remarks  
- If the control supports the Caption stock property, this value is returned. If the Caption stock property is not supported, the value for the Text property is returned.  
+### <a name="remarks"></a>Hinweise  
+ Wenn das Steuerelement die vordefinierte Caption-Eigenschaft unterstützt, wird dieser Wert zurückgegeben. Wenn die vordefinierte Caption-Eigenschaft nicht unterstützt wird, wird der Wert für die Text-Eigenschaft zurückgegeben.  
   
-##  <a name="invokehelper"></a>  COleControlSite::InvokeHelper  
- Invokes the method or property specified by `dwDispID`, in the context specified by `wFlags`.  
+##  <a name="invokehelper"></a>COleControlSite::InvokeHelper  
+ Ruft die Methode oder Eigenschaft, die durch angegebene `dwDispID`, in dem vom angegebenen Kontext `wFlags`.  
   
 ```  
 virtual void AFX_CDECL InvokeHelper(
@@ -591,32 +542,32 @@ virtual void AFX_CDECL InvokeHelper(
     const BYTE* pbParamInfo, ...);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwDispID`  
- Identifies the dispatch ID of the property or method, found on the control's `IDispatch` interface, to be invoked.  
+ Identifiziert die Dispatch-ID der Eigenschaft oder Methode, die auf des Steuerelements gefunden `IDispatch` Schnittstelle aufgerufen werden.  
   
  `wFlags`  
- Flags describing the context of the call to IDispatch::Invoke. For possible `wFlags` values, see `IDispatch::Invoke` in the Windows SDK.  
+ Flags, die den Kontext des Aufrufs von IDispatch:: Invoke beschreiben. Nach möglichen `wFlags` Werte finden Sie unter `IDispatch::Invoke` in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
  `vtRet`  
- Specifies the type of the return value. For possible values, see the Remarks section for [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
+ Gibt den Typ des Rückgabewerts an. Mögliche Werte finden Sie im Abschnitt "Hinweise" [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
  `pvRet`  
- Address of the variable that will receive the property value or return value. It must match the type specified by `vtRet`.  
+ Die Adresse der Variablen, die den Eigenschaftswert oder Rückgabewert aufnimmt. Sie muss mit dem durch `vtRet`angegebenen Typ übereinstimmen.  
   
  `pbParamInfo`  
- Pointer to a null-terminated string of bytes specifying the types of the parameters following `pbParamInfo`. For possible values, see the Remarks section for [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
+ Zeiger auf eine NULL-terminierte Zeichenfolge aus Bytes, die die Typen der Parameter angeben, die auf `pbParamInfo`folgen. Mögliche Werte finden Sie im Abschnitt "Hinweise" [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
  *...*  
- Variable list of parameters, of types specified in `pbParamInfo`.  
+ Variable Parameterliste aus den in `pbParamInfo`angegebenen Typen.  
   
-### <a name="remarks"></a>Remarks  
- The `pbParamInfo` parameter specifies the types of the parameters passed to the method or property. The variable list of arguments is represented by ... in the syntax declaration.  
+### <a name="remarks"></a>Hinweise  
+ Der `pbParamInfo` -Parameter gibt die Typen der an die Methode oder Eigenschaft übergebenen Parameter an. Die Variable Liste mit Argumenten wird durch... in der Syntax-Deklaration dargestellt.  
   
- This function converts the parameters to **VARIANTARG** values, then invokes the **IDispatch::Invoke** method on the control. If the call to **IDispatch::Invoke** fails, this function will throw an exception. If the status code returned by **IDispatch::Invoke** is `DISP_E_EXCEPTION`, this function throws a **COleDispatchException** object, otherwise it throws a `COleException`.  
+ Diese Funktion konvertiert die Parameter **VARIANTARG** Werte, und ruft anschließend die **IDispatch:: Invoke** -Methode des Steuerelements. Wenn der Aufruf von **IDispatch:: Invoke** fehlschlägt, wird diese Funktion eine Ausnahme ausgelöst. Wenn durch der Statuscode zurückgegeben **IDispatch:: Invoke** ist `DISP_E_EXCEPTION`, löst diese Funktion eine **COleDispatchException** Objekt ist, andernfalls löst eine `COleException`.  
   
-##  <a name="invokehelperv"></a>  COleControlSite::InvokeHelperV  
- Invokes the method or property specified by `dwDispID`, in the context specified by `wFlags`.  
+##  <a name="invokehelperv"></a>COleControlSite::InvokeHelperV  
+ Ruft die Methode oder Eigenschaft, die durch angegebene `dwDispID`, in dem vom angegebenen Kontext `wFlags`.  
   
 ```  
 virtual void InvokeHelperV(
@@ -628,176 +579,176 @@ virtual void InvokeHelperV(
     va_list argList);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwDispID`  
- Identifies the dispatch ID of the property or method, found on the control's `IDispatch` interface, to be invoked.  
+ Identifiziert die Dispatch-ID der Eigenschaft oder Methode, die auf des Steuerelements gefunden `IDispatch` Schnittstelle aufgerufen werden.  
   
  `wFlags`  
- Flags describing the context of the call to IDispatch::Invoke.  
+ Flags, die den Kontext des Aufrufs von IDispatch:: Invoke beschreiben.  
   
  `vtRet`  
- Specifies the type of the return value. For possible values, see the Remarks section for [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
+ Gibt den Typ des Rückgabewerts an. Mögliche Werte finden Sie im Abschnitt "Hinweise" [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
  `pvRet`  
- Address of the variable that will receive the property value or return value. It must match the type specified by `vtRet`.  
+ Die Adresse der Variablen, die den Eigenschaftswert oder Rückgabewert aufnimmt. Sie muss mit dem durch `vtRet`angegebenen Typ übereinstimmen.  
   
  `pbParamInfo`  
- Pointer to a null-terminated string of bytes specifying the types of the parameters following `pbParamInfo`. For possible values, see the Remarks section for [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
+ Zeiger auf eine NULL-terminierte Zeichenfolge aus Bytes, die die Typen der Parameter angeben, die auf `pbParamInfo`folgen. Mögliche Werte finden Sie im Abschnitt "Hinweise" [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
  `argList`  
- Pointer to a variable argument list.  
+ Ein Zeiger auf eine Variable Argumentliste.  
   
-### <a name="remarks"></a>Remarks  
- The `pbParamInfo` parameter specifies the types of the parameters passed to the method or property. Extra parameters for the method or property being invoked can be passed using the *va_list* parameter.  
+### <a name="remarks"></a>Hinweise  
+ Der `pbParamInfo` -Parameter gibt die Typen der an die Methode oder Eigenschaft übergebenen Parameter an. Zusätzliche Parameter für die Methode oder Eigenschaft aufgerufene mit übergeben werden können der *Va_list* Parameter.  
   
- Typically, this function is called by `COleControlSite::InvokeHelper`.  
+ Diese Funktion wird in der Regel aufgerufen, durch `COleControlSite::InvokeHelper`.  
   
-##  <a name="isdefaultbutton"></a>  COleControlSite::IsDefaultButton  
- Determines if the control is the default button.  
+##  <a name="isdefaultbutton"></a>COleControlSite::IsDefaultButton  
+ Bestimmt, ob das Steuerelement die Standardschaltfläche ist.  
   
 ```  
 BOOL IsDefaultButton();
 ```  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if the control is the default button on the window, otherwise zero.  
+### <a name="return-value"></a>Rückgabewert  
+ Ungleich NULL, wenn das Steuerelement die Standardschaltfläche für das Fenster, andernfalls&0; (null).  
   
-##  <a name="iswindowenabled"></a>  COleControlSite::IsWindowEnabled  
- Determines if the control site is enabled.  
+##  <a name="iswindowenabled"></a>COleControlSite::IsWindowEnabled  
+ Bestimmt, ob die Website des Steuerelements aktiviert ist.  
   
 ```  
 virtual BOOL IsWindowEnabled() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if the control is enabled, otherwise zero.  
+### <a name="return-value"></a>Rückgabewert  
+ Ungleich NULL, wenn das Steuerelement aktiviert ist, andernfalls&0; (null).  
   
-### <a name="remarks"></a>Remarks  
- The value is retrieved from the control's Enabled stock property.  
+### <a name="remarks"></a>Hinweise  
+ Der Wert wird aus vordefinierten des Steuerelements Enabled-Eigenschaft abgerufen.  
   
-##  <a name="m_biswindowless"></a>  COleControlSite::m_bIsWindowless  
- Determines if the object is a windowless control.  
+##  <a name="m_biswindowless"></a>COleControlSite::m_bIsWindowless  
+ Bestimmt, ob das Objekt ein fensterloses Steuerelement ist.  
   
 ```  
 BOOL m_bIsWindowless;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- Nonzero if the control has no window, otherwise zero.  
+### <a name="remarks"></a>Hinweise  
+ Ungleich NULL, wenn das Steuerelement kein Fenster besitzt, andernfalls&0; (null).  
   
-##  <a name="m_ctlinfo"></a>  COleControlSite::m_ctlInfo  
- Information on how keyboard input is handled by the control.  
+##  <a name="m_ctlinfo"></a>COleControlSite::m_ctlInfo  
+ Informationen wie Tastatureingaben vom Steuerelement behandelt wird.  
   
 ```  
 CONTROLINFO m_ctlInfo;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- This information is stored in a [CONTROLINFO](http://msdn.microsoft.com/library/windows/desktop/ms680734) structure.  
+### <a name="remarks"></a>Hinweise  
+ Diese Informationen werden gespeichert, einem [CONTROLINFO](http://msdn.microsoft.com/library/windows/desktop/ms680734) Struktur.  
   
-##  <a name="m_dweventsink"></a>  COleControlSite::m_dwEventSink  
- Contains the connection point's cookie from the control's event sink.  
+##  <a name="m_dweventsink"></a>COleControlSite::m_dwEventSink  
+ Der Verbindungspunkt Cookie aus der Ereignissenke für das Steuerelement enthält.  
   
 ```  
 DWORD m_dwEventSink;  
 ```  
   
-##  <a name="m_dwmiscstatus"></a>  COleControlSite::m_dwMiscStatus  
- Contains miscellaneous information about the control.  
+##  <a name="m_dwmiscstatus"></a>COleControlSite::m_dwMiscStatus  
+ Enthält verschiedene Informationen über das Steuerelement.  
   
 ```  
 DWORD m_dwMiscStatus;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- For more information, see [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497)in the Windows SDK.  
+### <a name="remarks"></a>Hinweise  
+ Weitere Informationen finden Sie unter [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497)in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="m_dwpropnotifysink"></a>  COleControlSite::m_dwPropNotifySink  
- Contains the [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) cookie.  
+##  <a name="m_dwpropnotifysink"></a>COleControlSite::m_dwPropNotifySink  
+ Enthält die [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) Cookie.  
   
 ```  
 DWORD m_dwPropNotifySink;  
 ```  
   
-##  <a name="m_dwstyle"></a>  COleControlSite::m_dwStyle  
- Contains the Window styles of the control.  
+##  <a name="m_dwstyle"></a>COleControlSite::m_dwStyle  
+ Enthält die Fensterstile des Steuerelements.  
   
 ```  
 DWORD m_dwStyle;  
 ```  
   
-##  <a name="m_hwnd"></a>  COleControlSite::m_hWnd  
- Contains the `HWND` of the control, or **NULL** if the control is windowless.  
+##  <a name="m_hwnd"></a>COleControlSite::m_hWnd  
+ Enthält die `HWND` des Steuerelements oder **NULL** Wenn das Steuerelement fensterlose ist.  
   
 ```  
 HWND m_hWnd;  
 ```  
   
-##  <a name="m_iidevents"></a>  COleControlSite::m_iidEvents  
- Contains the interface ID of the control's default event sink interface.  
+##  <a name="m_iidevents"></a>COleControlSite::m_iidEvents  
+ Enthält die Schnittstellen-ID des Steuerelements Standard Ereignissenken-Schnittstelle.  
   
 ```  
 IID m_iidEvents;  
 ```  
   
-##  <a name="m_nid"></a>  COleControlSite::m_nID  
- Contains the control's dialog item ID.  
+##  <a name="m_nid"></a>COleControlSite::m_nID  
+ Enthält das Steuerelement Dialogfeld Element-ID.  
   
 ```  
 UINT m_nID;  
 ```  
   
-##  <a name="m_pactiveobject"></a>  COleControlSite::m_pActiveObject  
- Contains the [IOleInPlaceActiveObject](http://msdn.microsoft.com/library/windows/desktop/ms691299) interface of the control.  
+##  <a name="m_pactiveobject"></a>COleControlSite::m_pActiveObject  
+ Enthält die [IOleInPlaceActiveObject](http://msdn.microsoft.com/library/windows/desktop/ms691299) Schnittstelle des Steuerelements.  
   
 ```  
 LPOLEINPLACEACTIVEOBJECT m_pActiveObject;  
 ```  
   
-##  <a name="m_pctrlcont"></a>  COleControlSite::m_pCtrlCont  
- Contains the control's container (representing the form).  
+##  <a name="m_pctrlcont"></a>COleControlSite::m_pCtrlCont  
+ Enthält der Container des Steuerelements (des Formulars darstellt).  
   
 ```  
 COleControlContainer* m_pCtrlCont;  
 ```  
   
-##  <a name="m_pinplaceobject"></a>  COleControlSite::m_pInPlaceObject  
- Contains the `IOleInPlaceObject` [IOleInPlaceObject](http://msdn.microsoft.com/library/windows/desktop/ms692646) interface of the control.  
+##  <a name="m_pinplaceobject"></a>COleControlSite::m_pInPlaceObject  
+ Enthält die `IOleInPlaceObject` [IOleInPlaceObject](http://msdn.microsoft.com/library/windows/desktop/ms692646) Schnittstelle des Steuerelements.  
   
 ```  
 LPOLEINPLACEOBJECT m_pInPlaceObject;  
 ```  
   
-##  <a name="m_pobject"></a>  COleControlSite::m_pObject  
- Contains the **IOleObjectInterface** interface of the control.  
+##  <a name="m_pobject"></a>COleControlSite::m_pObject  
+ Enthält die **IOleObjectInterface** Schnittstelle des Steuerelements.  
   
 ```  
 LPOLEOBJECT m_pObject;  
 ```  
   
-##  <a name="m_pwindowlessobject"></a>  COleControlSite::m_pWindowlessObject  
- Contains the `IOleInPlaceObjectWindowless`[IOleInPlaceObjectWindowless](http://msdn.microsoft.com/library/windows/desktop/ms687304) interface of the control.  
+##  <a name="m_pwindowlessobject"></a>COleControlSite::m_pWindowlessObject  
+ Enthält die `IOleInPlaceObjectWindowless` [IOleInPlaceObjectWindowless](http://msdn.microsoft.com/library/windows/desktop/ms687304) Schnittstelle des Steuerelements.  
   
 ```  
 IOleInPlaceObjectWindowless* m_pWindowlessObject;  
 ```  
   
-##  <a name="m_pwndctrl"></a>  COleControlSite::m_pWndCtrl  
- Contains a pointer to the `CWnd` object that represents the control itself.  
+##  <a name="m_pwndctrl"></a>COleControlSite::m_pWndCtrl  
+ Enthält einen Zeiger auf das `CWnd` -Objekt, das Steuerelement selbst darstellt.  
   
 ```  
 CWnd* m_pWndCtrl;  
 ```  
   
-##  <a name="m_rect"></a>  COleControlSite::m_rect  
- Contains the bounds of the control, relative to the container's window.  
+##  <a name="m_rect"></a>COleControlSite::m_rect  
+ Enthält die Grenzen des Steuerelements relativ zum Fenster des Containers.  
   
 ```  
 CRect m_rect;  
 ```  
   
-##  <a name="modifystyle"></a>  COleControlSite::ModifyStyle  
- Modifies the styles of the control.  
+##  <a name="modifystyle"></a>COleControlSite::ModifyStyle  
+ Ändert die Formatvorlagen des Steuerelements.  
   
 ```  
 virtual BOOL ModifyStyle(
@@ -806,38 +757,38 @@ virtual BOOL ModifyStyle(
     UINT nFlags);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwRemove`  
- The styles to be removed from the current window styles.  
+ Die Formate aus der aktuellen Fensterstile entfernt werden soll.  
   
  `dwAdd`  
- The styles to be added from the current window styles.  
+ Die Formate aus der aktuellen Fensterstile hinzugefügt werden.  
   
  `nFlags`  
- Window positioning flags. For a list of possible values, see the [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) function in the Windows SDK.  
+ Fenster, die Positionierung von Flags. Eine Liste der möglichen Werte finden Sie unter der [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) -Funktion in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if the styles are changed, otherwise zero.  
+### <a name="return-value"></a>Rückgabewert  
+ Wert ungleich NULL, wenn die Stile geändert werden, andernfalls&0; (null).  
   
-### <a name="remarks"></a>Remarks  
- The control's stock Enabled property will be modified to match the setting for **WS_DISABLED**. The control's stock Border Style property will be modified to match the requested setting for `WS_BORDER`. All other styles are applied directly to the control's window handle, if one is present.  
+### <a name="remarks"></a>Hinweise  
+ Das Steuerelement Stock Enabled-Eigenschaft wird entsprechend die Einstellung für geändert **WS_DISABLED**. Vordefinierte Rahmenart-Eigenschaft des Steuerelements wird entsprechend die angeforderten Einstellung für modifiziert `WS_BORDER`. Alle anderen Formate werden direkt an das Fensterhandle des Steuerelements angewendet, sofern vorhanden.  
   
- Modifies the window styles of the control. Styles to be added or removed can be combined by using the bitwise OR ( &#124; ) operator. See the [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) function in the Windows SDK for information about the available window styles.  
+ Ändert die Fensterstile des Steuerelements. Stile hinzugefügt oder entfernt werden können kombiniert werden, mit dem bitweisen OR-Operator (|). Finden Sie unter der [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) -Funktion in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] für Informationen zu den verfügbaren Fenster.  
   
- If `nFlags` is nonzero, `ModifyStyle` calls the Win32 function `SetWindowPos`, and redraws the window by combining `nFlags` with the following four flags:  
+ Wenn `nFlags` ungleich NULL ist, `ModifyStyle` wird die Win32-Funktion `SetWindowPos`, und zeichnet das Fenster durch Kombinieren von `nFlags` mit den folgenden vier Flags:  
   
-- `SWP_NOSIZE` Retains the current size.  
+- `SWP_NOSIZE`Behält die aktuelle Größe.  
   
-- `SWP_NOMOVE` Retains the current position.  
+- `SWP_NOMOVE`Behält die aktuelle Position.  
   
-- `SWP_NOZORDER` Retains the current Z order.  
+- `SWP_NOZORDER`Behält den aktuelle Z-Reihenfolge.  
   
-- `SWP_NOACTIVATE` Does not activate the window.  
+- `SWP_NOACTIVATE`Das Fenster wird nicht aktiviert werden.  
   
- To modify a window's extended styles, call [ModifyStyleEx](#modifystyleex).  
+ So ändern Sie ein Fenster des erweiterten Stile, rufen Sie [ModifyStyleEx](#modifystyleex).  
   
-##  <a name="modifystyleex"></a>  COleControlSite::ModifyStyleEx  
- Modifies the extended styles of the control.  
+##  <a name="modifystyleex"></a>COleControlSite::ModifyStyleEx  
+ Ändert die erweiterten Stile des Steuerelements.  
   
 ```  
 virtual BOOL ModifyStyleEx(
@@ -846,38 +797,38 @@ virtual BOOL ModifyStyleEx(
     UINT nFlags);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwRemove`  
- The extended styles to be removed from the current window styles.  
+ Die erweiterten Stile aus der aktuellen Fensterstile entfernt werden soll.  
   
  `dwAdd`  
- The extended styles to be added from the current window styles.  
+ Die erweiterten Stile aus dem aktuellen Fensterstile hinzugefügt werden.  
   
  `nFlags`  
- Window positioning flags. For a list of possible values, see the [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) function in the Windows SDK.  
+ Fenster, die Positionierung von Flags. Eine Liste der möglichen Werte finden Sie unter der [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) -Funktion in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if the styles are changed, otherwise zero.  
+### <a name="return-value"></a>Rückgabewert  
+ Wert ungleich NULL, wenn die Stile geändert werden, andernfalls&0; (null).  
   
-### <a name="remarks"></a>Remarks  
- The control's stock Appearance property will be modified to match the setting for **WS_EX_CLIENTEDGE**. All other extended window styles are applied directly to the control's window handle, if one is present.  
+### <a name="remarks"></a>Hinweise  
+ Vordefinierte Appearance-Eigenschaft des Steuerelements wird entsprechend die Einstellung für modifiziert **WS_EX_CLIENTEDGE**. Alle anderen erweiterten Fensterstile werden direkt auf Fensterhandle des Steuerelements angewendet, sofern vorhanden.  
   
- Modifies the window extended styles of the control site object. Styles to be added or removed can be combined by using the bitwise OR ( &#124; ) operator. See the [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) function in the Windows SDK for information about the available window styles.  
+ Ändert das Fenster Erweiterte Stile des Website-Steuerelements. Stile hinzugefügt oder entfernt werden können kombiniert werden, mit dem bitweisen OR-Operator (|). Finden Sie unter der [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) -Funktion in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] für Informationen zu den verfügbaren Fenster.  
   
- If `nFlags` is nonzero, `ModifyStyleEx` calls the Win32 function `SetWindowPos`, and redraws the window by combining `nFlags` with the following four flags:  
+ Wenn `nFlags` ungleich NULL ist, `ModifyStyleEx` wird die Win32-Funktion `SetWindowPos`, und zeichnet das Fenster durch Kombinieren von `nFlags` mit den folgenden vier Flags:  
   
-- `SWP_NOSIZE` Retains the current size.  
+- `SWP_NOSIZE`Behält die aktuelle Größe.  
   
-- `SWP_NOMOVE` Retains the current position.  
+- `SWP_NOMOVE`Behält die aktuelle Position.  
   
-- `SWP_NOZORDER` Retains the current Z order.  
+- `SWP_NOZORDER`Behält den aktuelle Z-Reihenfolge.  
   
-- `SWP_NOACTIVATE` Does not activate the window.  
+- `SWP_NOACTIVATE`Das Fenster wird nicht aktiviert werden.  
   
- To modify a window's extended styles, call [ModifyStyle](#modifystyle).  
+ So ändern Sie ein Fenster des erweiterten Stile, rufen Sie [ModifyStyle](#modifystyle).  
   
-##  <a name="movewindow"></a>  COleControlSite::MoveWindow  
- Changes the position of the control.  
+##  <a name="movewindow"></a>COleControlSite::MoveWindow  
+ Ändert die Position des Steuerelements.  
   
 ```  
 virtual void MoveWindow(
@@ -887,36 +838,36 @@ virtual void MoveWindow(
     int nHeight);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  *x*  
- The new position of the left side of the window.  
+ Die neue Position der linken Seite des Fensters.  
   
  *y*  
- The new position of the top of the window.  
+ Die neue Position des oberen Rand des Fensters.  
   
  `nWidth`  
- The new width of the window  
+ Die neue Breite des Fensters  
   
  `nHeight`  
- The new height of the window.  
+ Die neue Höhe des Fensters.  
   
-##  <a name="quickactivate"></a>  COleControlSite::QuickActivate  
- Quick activates the contained control.  
+##  <a name="quickactivate"></a>COleControlSite::QuickActivate  
+ Schnelle aktiviert das enthaltene Steuerelement.  
   
 ```  
 virtual BOOL QuickActivate();
 ```  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if the control site was activated, otherwise zero.  
+### <a name="return-value"></a>Rückgabewert  
+ Ungleich NULL, wenn die Website des Steuerelements aktiviert wurde, andernfalls&0; (null).  
   
-### <a name="remarks"></a>Remarks  
- This function should be called only if the user is overriding the creation process of the control.  
+### <a name="remarks"></a>Hinweise  
+ Diese Funktion sollte aufgerufen werden, nur, wenn der Benutzer den Erstellungsprozess des Steuerelements außer Kraft gesetzt wird.  
   
- The `IPersist*::Load` and `IPersist*::InitNew` methods should be called after quick activation occurs. The control should establish its connections to the container's sinks during quick activation. However, these connections are not live until `IPersist*::Load` or `IPersist*::InitNew` has been called.  
+ Die `IPersist*::Load` und `IPersist*::InitNew` Methoden aufgerufen werden, nachdem schnelle Aktivierung erfolgt. Das Steuerelement sollte alle Verbindungen zu senken des Containers während schnelle Aktivierung herstellen. Diese Verbindungen sind jedoch nicht live bis `IPersist*::Load` oder `IPersist*::InitNew` aufgerufen wurde.  
   
-##  <a name="safesetproperty"></a>  COleControlSite::SafeSetProperty  
- Sets the control property specified by `dwDispID`.  
+##  <a name="safesetproperty"></a>COleControlSite::SafeSetProperty  
+ Legt die Steuerelementeigenschaft, die durch angegebene `dwDispID`.  
   
 ```  
 virtual BOOL AFX_CDECL SafeSetProperty(
@@ -924,73 +875,73 @@ virtual BOOL AFX_CDECL SafeSetProperty(
     VARTYPE vtProp, ...);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwDispID`  
- Identifies the dispatch ID of the property or method, found on the control's `IDispatch` interface, to be set.  
+ Identifiziert die Dispatch-ID der Eigenschaft oder Methode, die auf des Steuerelements gefunden `IDispatch` Schnittstelle festgelegt werden.  
   
  `vtProp`  
- Specifies the type of property to be set. For possible values, see the Remarks section for [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
+ Gibt den Typ der Eigenschaft festgelegt werden. Mögliche Werte finden Sie im Abschnitt "Hinweise" [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
  *...*  
- A single parameter of the type specified by `vtProp`.  
+ Ein einzelner Parameter des durch `vtProp`angegebenen Typs.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if successful; otherwise zero.  
+### <a name="return-value"></a>Rückgabewert  
+ Ungleich&0;, wenn erfolgreich, andernfalls&0;.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
->  Unlike `SetProperty` and `SetPropertyV`, if an error is encountered (such as trying to set a nonexistent property), no exception is thrown.  
+>  Im Gegensatz zu `SetProperty` und `SetPropertyV`, wenn ein Fehler auftritt (z. B. versucht, eine nicht vorhandene Eigenschaft festzulegen), wird keine Ausnahme ausgelöst.  
   
-##  <a name="setdefaultbutton"></a>  COleControlSite::SetDefaultButton  
- Sets the control as the default button.  
+##  <a name="setdefaultbutton"></a>COleControlSite::SetDefaultButton  
+ Legt das Steuerelement als Standardschaltfläche an.  
   
 ```  
 void SetDefaultButton(BOOL bDefault);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `bDefault`  
- Nonzero if the control should become the default button; otherwise zero.  
+ Wert ungleich NULL, wenn das Steuerelement die Standardschaltfläche werden sollen; andernfalls&0; (null).  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
->  The control must have the **OLEMISC_ACTSLIKEBUTTON** status bit set.  
+>  Das Steuerelement muss verfügen die **OLEMISC_ACTSLIKEBUTTON** Status-Bit festgelegt.  
   
-##  <a name="setdlgctrlid"></a>  COleControlSite::SetDlgCtrlID  
- Changes the value of the control's dialog item identifier.  
+##  <a name="setdlgctrlid"></a>COleControlSite::SetDlgCtrlID  
+ Ändert den Wert der Dialogfeld-Element-ID des Steuerelements.  
   
 ```  
 virtual int SetDlgCtrlID(int nID);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `nID`  
- The new identifier value.  
+ Der neue Bezeichnerwert.  
   
-### <a name="return-value"></a>Return Value  
- If successful, the previous dialog item identifier of the window; otherwise 0.  
+### <a name="return-value"></a>Rückgabewert  
+ Im Erfolgsfall item im vorherige Dialogfeld Bezeichner des Fensters; andernfalls 0.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="setfocus"></a>  COleControlSite::SetFocus  
- Sets focus to the control.  
+##  <a name="setfocus"></a>COleControlSite::SetFocus  
+ Setzt den Fokus auf das Steuerelement.  
   
 ```  
 virtual CWnd* SetFocus();  
 virtual CWnd* SetFocus(LPMSG lpmsg);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  *lpmsg*  
- A pointer to a [MSG structure](../../mfc/reference/msg-structure1.md). This structure contains the Windows message triggering the `SetFocus` request for the control contained in the current control site.  
+ Ein Zeiger auf eine [MSG-Struktur](../../mfc/reference/msg-structure1.md). Diese Struktur enthält das Windows-Meldung Auslösen der `SetFocus` Anforderung für das Steuerelement in die Site für das aktuelle Steuerelement enthalten sind.  
   
-### <a name="return-value"></a>Return Value  
- A pointer to the window that previously had focus.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Zeiger auf das Fenster, das zuvor den Fokus hatte.  
   
-##  <a name="setproperty"></a>  COleControlSite::SetProperty  
- Sets the control property specified by `dwDispID`.  
+##  <a name="setproperty"></a>COleControlSite::SetProperty  
+ Legt die Steuerelementeigenschaft, die durch angegebene `dwDispID`.  
   
 ```  
 virtual void AFX_CDECL SetProperty(
@@ -998,23 +949,23 @@ virtual void AFX_CDECL SetProperty(
     VARTYPE vtProp, ...);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwDispID`  
- Identifies the dispatch ID of the property or method, found on the control's `IDispatch` interface, to be set.  
+ Identifiziert die Dispatch-ID der Eigenschaft oder Methode, die auf des Steuerelements gefunden `IDispatch` Schnittstelle festgelegt werden.  
   
  `vtProp`  
- Specifies the type of property to be set. For possible values, see the Remarks section for [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
+ Gibt den Typ der Eigenschaft festgelegt werden. Mögliche Werte finden Sie im Abschnitt "Hinweise" [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
  *...*  
- A single parameter of the type specified by `vtProp`.  
+ Ein einzelner Parameter des durch `vtProp`angegebenen Typs.  
   
-### <a name="remarks"></a>Remarks  
- If `SetProperty` encounters an error, an exception is thrown.  
+### <a name="remarks"></a>Hinweise  
+ Wenn `SetProperty` einen Fehler erkennt, wird eine Ausnahme ausgelöst.  
   
- The type of exception is determined by the return value of the attempt to set the property or method. If the return value is `DISP_E_EXCEPTION`, a **COleDispatchExcpetion** is thrown; otherwise a `COleException`.  
+ Der Typ der Ausnahme wird durch den Rückgabewert des Versuchs, legen Sie die Eigenschaft oder Methode bestimmt. Wenn der Rückgabewert `DISP_E_EXCEPTION`, **COleDispatchExcpetion** ausgelöst wird; andernfalls eine `COleException`.  
   
-##  <a name="setpropertyv"></a>  COleControlSite::SetPropertyV  
- Sets the control property specified by `dwDispID`.  
+##  <a name="setpropertyv"></a>COleControlSite::SetPropertyV  
+ Legt die Steuerelementeigenschaft, die durch angegebene `dwDispID`.  
   
 ```  
 virtual void SetPropertyV(
@@ -1023,23 +974,23 @@ virtual void SetPropertyV(
     va_list argList);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwDispID`  
- Identifies the dispatch ID of the property or method, found on the control's `IDispatch` interface, to be set.  
+ Identifiziert die Dispatch-ID der Eigenschaft oder Methode, die auf des Steuerelements gefunden `IDispatch` Schnittstelle festgelegt werden.  
   
  `vtProp`  
- Specifies the type of property to be set. For possible values, see the Remarks section for [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
+ Gibt den Typ der Eigenschaft festgelegt werden. Mögliche Werte finden Sie im Abschnitt "Hinweise" [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
  `argList`  
- Pointer to the list of arguments.  
+ Zeiger auf die Liste der Argumente.  
   
-### <a name="remarks"></a>Remarks  
- Extra parameters for the method or property being invoked can be passeed using the *arg_list* parameter. If `SetProperty` encounters an error, an exception is thrown.  
+### <a name="remarks"></a>Hinweise  
+ Zusätzliche Parameter für die Methode oder Eigenschaft, die aufgerufen wird, können Passeed werden mithilfe der *Arg_list* Parameter. Wenn `SetProperty` einen Fehler erkennt, wird eine Ausnahme ausgelöst.  
   
- The type of exception is determined by the return value of the attempt to set the property or method. If the return value is `DISP_E_EXCEPTION`, a **COleDispatchExcpetion** is thrown; otherwise a `COleException`.  
+ Der Typ der Ausnahme wird durch den Rückgabewert des Versuchs, legen Sie die Eigenschaft oder Methode bestimmt. Wenn der Rückgabewert `DISP_E_EXCEPTION`, **COleDispatchExcpetion** ausgelöst wird; andernfalls eine `COleException`.  
   
-##  <a name="setwindowpos"></a>  COleControlSite::SetWindowPos  
- Sets the size, position, and Z order of the control site.  
+##  <a name="setwindowpos"></a>COleControlSite::SetWindowPos  
+ Legt die Größe, Position und Z-Reihenfolge der Site für das Steuerelement.  
   
 ```  
 virtual BOOL SetWindowPos(
@@ -1051,78 +1002,78 @@ virtual BOOL SetWindowPos(
     UINT nFlags);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `pWndInsertAfter`  
- A pointer to the window.  
+ Ein Zeiger auf das Fenster.  
   
  *x*  
- The new position of the left side of the window.  
+ Die neue Position der linken Seite des Fensters.  
   
  *y*  
- The new position of the top of the window.  
+ Die neue Position des oberen Rand des Fensters.  
   
  `cx`  
- The new width of the window  
+ Die neue Breite des Fensters  
   
  `cy`  
- The new height of the window.  
+ Die neue Höhe des Fensters.  
   
  `nFlags`  
- Specifies the window sizing and positioning flags. For possible values, see the Remarks section for [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) in the Windows SDK.  
+ Gibt das Fenster Größe und Position von Flags. Mögliche Werte finden Sie im Abschnitt "Hinweise" [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if successful, otherwise zero.  
+### <a name="return-value"></a>Rückgabewert  
+ Ungleich NULL Wenn erfolgreich, andernfalls&0; (null).  
   
-##  <a name="setwindowtext"></a>  COleControlSite::SetWindowText  
- Sets the text for the control site.  
+##  <a name="setwindowtext"></a>COleControlSite::SetWindowText  
+ Legt den Text für die Website des Steuerelements fest.  
   
 ```  
 virtual void SetWindowText(LPCTSTR lpszString);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `lpszString`  
- Pointer to a null-terminated string to be used as the new title or control text.  
+ Ein Zeiger auf eine auf Null endende Zeichenfolge, die als den neuen Text für Titel oder Steuerelement verwendet werden.  
   
-### <a name="remarks"></a>Remarks  
- This function first attempts to set the Caption stock property. If the Caption stock property is not supported, the Text property is set instead.  
+### <a name="remarks"></a>Hinweise  
+ Diese Funktion versucht zunächst, die vordefinierte Caption-Eigenschaft festgelegt. Wenn die vordefinierte Caption-Eigenschaft nicht unterstützt wird, wird stattdessen die Text-Eigenschaft festgelegt.  
   
-##  <a name="showwindow"></a>  COleControlSite::ShowWindow  
- Sets the window's show state.  
+##  <a name="showwindow"></a>COleControlSite::ShowWindow  
+ Legt Anzeigezustand des Fensters fest.  
   
 ```  
 virtual BOOL ShowWindow(int nCmdShow);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `nCmdShow`  
- Specifies how the control site is to be shown. It must be one of the following values:  
+ Gibt an, wie die Website des Steuerelements angezeigt werden. Es muss einer der folgenden Werte sein:  
   
-- **SW_HIDE** Hides this window and passes activation to another window.  
+- **SW_HIDE** Blendet das Fenster aus und übergibt die Aktivierung zu einem anderen Fenster.  
   
-- **SW_MINIMIZE** Minimizes the window and activates the top-level window in the system's list.  
+- **SW_MINIMIZE** minimiert das Fenster, und das Fenster das obersten Ebene in der Liste des Systems aktiviert.  
   
-- **SW_RESTORE** Activates and displays the window. If the window is minimized or maximized, Windows restores it to its original size and position.  
+- **SW_RESTORE** aktiviert und zeigt das Fenster an. Wenn das Fenster minimiert oder maximiert wird, wird es von Windows in ihrer ursprünglichen Größe und Position wiederhergestellt.  
   
-- **SW_SHOW** Activates the window and displays it in its current size and position.  
+- **SW_SHOW** wird das Fenster aktiviert und in seiner aktuellen Größe und Position angezeigt.  
   
-- **SW_SHOWMAXIMIZED** Activates the window and displays it as a maximized window.  
+- **SW_SHOWMAXIMIZED** wird das Fenster aktiviert und wird in Form eines maximierten Fensters angezeigt.  
   
-- **SW_SHOWMINIMIZED** Activates the window and displays it as an icon.  
+- **SW_SHOWMINIMIZED** wird das Fenster aktiviert und wird als Symbol angezeigt.  
   
-- **SW_SHOWMINNOACTIVE** Displays the window as an icon. The window that is currently active remains active.  
+- **SW_SHOWMINNOACTIVE** zeigt das Fenster als Symbol an. Das derzeit aktive Fenster bleibt aktiv.  
   
-- **SW_SHOWNA** Displays the window in its current state. The window that is currently active remains active.  
+- **SW_SHOWNA** zeigt das Fenster im aktuellen Zustand an. Das derzeit aktive Fenster bleibt aktiv.  
   
-- **SW_SHOWNOACTIVATE** Displays the window in its most recent size and position. The window that is currently active remains active.  
+- **SW_SHOWNOACTIVATE** zeigt das Fenster in der letzten Größe und Position. Das derzeit aktive Fenster bleibt aktiv.  
   
-- **SW_SHOWNORMAL** Activates and displays the window. If the window is minimized or maximized, Windows restores it to its original size and position.  
+- **SW_SHOWNORMAL** aktiviert und zeigt das Fenster an. Wenn das Fenster minimiert oder maximiert wird, wird es von Windows in ihrer ursprünglichen Größe und Position wiederhergestellt.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if the window was previously visible; 0 if the window was previously hidden.  
+### <a name="return-value"></a>Rückgabewert  
+ Wert ungleich NULL, wenn das Fenster bereits sichtbar war; 0, wenn zuvor Fenster ausgeblendetes.  
   
-## <a name="see-also"></a>See Also  
- [CCmdTarget Class](../../mfc/reference/ccmdtarget-class.md)   
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [COleControlContainer Class](../../mfc/reference/colecontrolcontainer-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [CCmdTarget-Klasse](../../mfc/reference/ccmdtarget-class.md)   
+ [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
+ [COleControlContainer-Klasse](../../mfc/reference/colecontrolcontainer-class.md)
 

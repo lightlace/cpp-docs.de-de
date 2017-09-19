@@ -1,5 +1,5 @@
 ---
-title: CMFCHeaderCtrl Class | Microsoft Docs
+title: Klasse CMFCHeaderCtrl | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,18 +26,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCHeaderCtrl [MFC], CMFCHeaderCtrl
-- CMFCHeaderCtrl [MFC], EnableMultipleSort
-- CMFCHeaderCtrl [MFC], GetColumnState
-- CMFCHeaderCtrl [MFC], GetSortColumn
-- CMFCHeaderCtrl [MFC], IsAscending
-- CMFCHeaderCtrl [MFC], IsDialogControl
-- CMFCHeaderCtrl [MFC], IsMultipleSort
-- CMFCHeaderCtrl [MFC], RemoveSortColumn
-- CMFCHeaderCtrl [MFC], SetSortColumn
-- CMFCHeaderCtrl [MFC], OnDrawItem
-- CMFCHeaderCtrl [MFC], OnDrawSortArrow
-- CMFCHeaderCtrl [MFC], OnFillBackground
+- CMFCHeaderCtrl class
 ms.assetid: 2f5fbf7b-5c75-42db-9216-640b1628f777
 caps.latest.revision: 29
 author: mikeblome
@@ -57,15 +46,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 294d624d9b95bc927a419268e71953a04a27182d
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: c49ee61b6441e79a0c3c4c1aa133b4bce1578103
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="cmfcheaderctrl-class"></a>CMFCHeaderCtrl Class
-The `CMFCHeaderCtrl` class supports sorting multiple columns in a header control.  
+Die `CMFCHeaderCtrl` Klasse unterstützt Sortieren mehrerer Spalten in einem Header-Steuerelement.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -73,47 +62,47 @@ The `CMFCHeaderCtrl` class supports sorting multiple columns in a header control
 class CMFCHeaderCtrl : public CHeaderCtrl  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Mitglieder  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCHeaderCtrl::CMFCHeaderCtrl](#cmfcheaderctrl)|Constructs a `CMFCHeaderCtrl` object.|  
-|`CMFCHeaderCtrl::~CMFCHeaderCtrl`|Destructor.|  
+|[CMFCHeaderCtrl::CMFCHeaderCtrl](#cmfcheaderctrl)|Erstellt ein `CMFCHeaderCtrl`-Objekt.|  
+|`CMFCHeaderCtrl::~CMFCHeaderCtrl`|Destruktor.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort)|Enables or disables *multiple column sort* mode for the current header control.|  
-|[CMFCHeaderCtrl::GetColumnState](#getcolumnstate)|Indicates whether a column is not sorted, or is sorted in ascending or descending order.|  
-|[CMFCHeaderCtrl::GetSortColumn](#getsortcolumn)|Retrieves the zero-based index of the first sorted column in the header control.|  
-|`CMFCHeaderCtrl::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
-|[CMFCHeaderCtrl::IsAscending](#isascending)|Indicates whether any column in the header control is sorted in ascending order.|  
-|[CMFCHeaderCtrl::IsDialogControl](#isdialogcontrol)|Indicates whether the parent window of the current header control is a dialog box.|  
-|[CMFCHeaderCtrl::IsMultipleSort](#ismultiplesort)|Indicates whether the current header control is in *multiple column sort* mode.|  
-|[CMFCHeaderCtrl::RemoveSortColumn](#removesortcolumn)|Removes the specified column from the list of sort columns.|  
-|[CMFCHeaderCtrl::SetSortColumn](#setsortcolumn)|Sets the sort order of a specified column in a header control.|  
+|[CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort)|Aktiviert oder deaktiviert die *Sortieren mehrerer Spalten* Modus für das aktuelle Kopfzeilen-Steuerelement.|  
+|[CMFCHeaderCtrl::GetColumnState](#getcolumnstate)|Gibt an, ob eine Spalte ist nicht sortiert in aufsteigender oder absteigender Reihenfolge sortiert wird.|  
+|[CMFCHeaderCtrl::GetSortColumn](#getsortcolumn)|Ruft den nullbasierten Index der ersten sortierte Spalte im Kopfzeilen-Steuerelement ab.|  
+|`CMFCHeaderCtrl::GetThisClass`|Vom Framework verwendet werden, um einen Zeiger auf die [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) -Objekt, das Klassentyp zugeordnet ist.|  
+|[CMFCHeaderCtrl::IsAscending](#isascending)|Gibt an, ob eine Spalte in dem Kopfzeilen-Steuerelement in aufsteigender Reihenfolge sortiert wird.|  
+|[CMFCHeaderCtrl::IsDialogControl](#isdialogcontrol)|Gibt an, ob das übergeordnete Fenster des aktuellen Headersteuerelements ein Dialogfeld.|  
+|[CMFCHeaderCtrl::IsMultipleSort](#ismultiplesort)|Gibt an, ob das aktuelle Kopfzeilen-Steuerelement in *Sortieren mehrerer Spalten* Modus.|  
+|[CMFCHeaderCtrl::RemoveSortColumn](#removesortcolumn)|Entfernt die angegebene Spalte aus der Liste der Sortierspalten.|  
+|[CMFCHeaderCtrl::SetSortColumn](#setsortcolumn)|Legt die Sortierreihenfolge einer angegebenen Spalte in einem Header-Steuerelement fest.|  
   
-### <a name="protected-methods"></a>Protected Methods  
+### <a name="protected-methods"></a>Geschützte Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCHeaderCtrl::OnDrawItem](#ondrawitem)|Called by the framework to draw a header control column.|  
-|[CMFCHeaderCtrl::OnDrawSortArrow](#ondrawsortarrow)|Called by the framework to draw the sort arrow.|  
-|[CMFCHeaderCtrl::OnFillBackground](#onfillbackground)|Called by the framework to fill the background of a header control column.|  
+|[CMFCHeaderCtrl::OnDrawItem](#ondrawitem)|Aufgerufen, um Kopfzeilen-Steuerelement für Spalten zu zeichnen.|  
+|[CMFCHeaderCtrl::OnDrawSortArrow](#ondrawsortarrow)|Vom Framework aufgerufen wird zum Zeichnen des Pfeils sortieren.|  
+|[CMFCHeaderCtrl::OnFillBackground](#onfillbackground)|Vom Framework zum Ausfüllen der Spalte eine Header-Steuerelement aufgerufen.|  
   
-## <a name="example"></a>Example  
- The following example demonstrates how to construct an object of the `CMFCHeaderCtrl` class, and how to enable *multiple column sort* mode for the current header control.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird veranschaulicht, wie ein Objekt vom Erstellen der `CMFCHeaderCtrl` -Klasse, und aktivieren *Sortieren mehrerer Spalten* Modus für das aktuelle Kopfzeilen-Steuerelement.  
   
- [!code-cpp[NVC_MFC_RibbonApp#24](../../mfc/reference/codesnippet/cpp/cmfcheaderctrl-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp&#24;](../../mfc/reference/codesnippet/cpp/cmfcheaderctrl-class_1.cpp)]  
   
-## <a name="remarks"></a>Remarks  
- The `CMFCHeaderCtrl` class draws a sort arrow on a header control column to indicate that the column is sorted. Use *multiple column sort* mode if a set of columns in the parent list control ( [CMFCListCtrl Class](../../mfc/reference/cmfclistctrl-class.md)) can be sorted at the same time.  
+## <a name="remarks"></a>Hinweise  
+ Die `CMFCHeaderCtrl` Klasse zeichnet einen Pfeil Sortierreihenfolge für eine Spalte des Header-Steuerelement an, dass die Spalte sortiert wird. Verwendung *Sortieren mehrerer Spalten* Modus, wenn eine Gruppe von Spalten im übergeordneten Steuerelement ( [CMFCListCtrl Klasse](../../mfc/reference/cmfclistctrl-class.md)) zur gleichen Zeit sortiert werden können.  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
- [CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
+ [Von CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -123,20 +112,20 @@ class CMFCHeaderCtrl : public CHeaderCtrl
   
  [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md)  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxheaderctrl.h  
   
-##  <a name="cmfcheaderctrl"></a>  CMFCHeaderCtrl::CMFCHeaderCtrl  
- Constructs a `CMFCHeaderCtrl` object.  
+##  <a name="cmfcheaderctrl"></a>CMFCHeaderCtrl::CMFCHeaderCtrl  
+ Erstellt ein `CMFCHeaderCtrl`-Objekt.  
   
 ```  
 CMFCHeaderCtrl::CMFCHeaderCtrl()  
 ```  
   
-### <a name="remarks"></a>Remarks  
- This constructor initializes the following member variables to the specified values:  
+### <a name="remarks"></a>Hinweise  
+ Dieser Konstruktor initialisiert die folgenden Membervariablen auf die angegebenen Werte:  
   
-|Member variable|Value|  
+|Membervariable|Wert|  
 |---------------------|-----------|  
 |`m_bIsMousePressed`|`FALSE`|  
 |`m_bMultipleSort`|`FALSE`|  
@@ -146,93 +135,93 @@ CMFCHeaderCtrl::CMFCHeaderCtrl()
 |`m_bIsDlgControl`|`FALSE`|  
 |`m_hFont`|`NULL`|  
   
-##  <a name="enablemultiplesort"></a>  CMFCHeaderCtrl::EnableMultipleSort  
- Enables or disables *multiple column sort* mode for the current header control.  
+##  <a name="enablemultiplesort"></a>CMFCHeaderCtrl::EnableMultipleSort  
+ Aktiviert oder deaktiviert die *Sortieren mehrerer Spalten* Modus für das aktuelle Kopfzeilen-Steuerelement.  
   
 ```  
 void EnableMultipleSort(BOOL bEnable=TRUE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `bEnable`  
- `TRUE` to enable multiple column sort mode; `FALSE` to disable multiple column sort mode and to remove any columns from the list of sorted columns. The default value is `TRUE`.  
+ `TRUE`Um mehrere Spalte sortieren-Modus zu aktivieren; `FALSE` um mehrere Spalte Sortiermodus deaktivieren und entfernen Sie alle Spalten aus der Liste der sortierten Spalten. Der Standardwert ist `TRUE`.  
   
-### <a name="remarks"></a>Remarks  
- Use this method to enable or disable multiple column sort mode. Two or more columns can participate in a sort if the header control is in multiple column sort mode.  
+### <a name="remarks"></a>Hinweise  
+ Verwenden Sie diese Methode zum Aktivieren oder deaktivieren mehrere Sortiermodus der Spalte. Zwei oder mehr Spalten können eine Sortierung teilnehmen, ist das Kopfzeilen-Steuerelement im Modus für mehrere Spalten sortieren.  
   
-##  <a name="getcolumnstate"></a>  CMFCHeaderCtrl::GetColumnState  
- Indicates whether a column is unsorted, or is sorted in ascending or descending order.  
+##  <a name="getcolumnstate"></a>CMFCHeaderCtrl::GetColumnState  
+ Gibt an, ob eine Spalte ist nicht sortiert in aufsteigender oder absteigender Reihenfolge sortiert wird.  
   
 ```  
 int GetColumnState(int iColumn) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `iColumn`  
- The zero-based index of a column.  
+ Der nullbasierte Index der Spalte.  
   
-### <a name="return-value"></a>Return Value  
- A value that indicate the sort status of the specified column. The following table lists the possible values:  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Wert, der der Sort-Status der angegebenen Spalte an. In der folgenden Tabelle sind die möglichen Werte aufgeführt:  
   
-|Value|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|-1|Sorted in descending order.|  
-|0|Not sorted.|  
-|1|Sorted in ascending order.|  
+|-1|In absteigender Reihenfolge sortiert.|  
+|0|Nicht sortiert.|  
+|1|In aufsteigender Reihenfolge sortiert.|  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="getsortcolumn"></a>  CMFCHeaderCtrl::GetSortColumn  
- Retrieves the zero-based index of the first sorted column in the header control.  
+##  <a name="getsortcolumn"></a>CMFCHeaderCtrl::GetSortColumn  
+ Ruft den nullbasierten Index der ersten sortierte Spalte im Kopfzeilen-Steuerelement ab.  
   
 ```  
 int GetSortColumn() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The index of a sorted column, or -1 if no sorted column is found.  
+### <a name="return-value"></a>Rückgabewert  
+ Der Index der Sortierung einer Spalte oder -1, wenn keine sortierte Spalte gefunden wird.  
   
-### <a name="remarks"></a>Remarks  
- If the header control is in *multiple column sort* mode and you compiled the application in debug mode, this method asserts and advises you to use the [CMFCHeaderCtrl::GetColumnState](#getcolumnstate) method instead. If the header control is in multiple column sort mode and you compiled the application in retail mode, this method returns -1.  
+### <a name="remarks"></a>Hinweise  
+ Das Header-Steuerelement ist im *Sortieren mehrerer Spalten* Modus, und Sie die Anwendung im Debugmodus kompiliert, diese Methode bestätigt und empfiehlt Ihnen die Verwendung der [CMFCHeaderCtrl::GetColumnState](#getcolumnstate) Methode stattdessen. Wenn das Kopfzeilen-Steuerelement im Modus für mehrere Spalten sortieren ist, und Sie die Anwendung im Retail-Modus kompiliert, gibt diese Methode-1 zurück.  
   
-##  <a name="isascending"></a>  CMFCHeaderCtrl::IsAscending  
- Indicates whether any column in the header control is sorted in ascending order.  
+##  <a name="isascending"></a>CMFCHeaderCtrl::IsAscending  
+ Gibt an, ob eine Spalte in dem Kopfzeilen-Steuerelement in aufsteigender Reihenfolge sortiert wird.  
   
 ```  
 BOOL IsAscending() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if any column in the header control is sorted in ascending order; otherwise, `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn eine Spalte in dem Kopfzeilen-Steuerelement in aufsteigender Reihenfolge sortiert sind; andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- The value that this method returns is used to display the appropriate sort arrow on the header control item. Use the [CMFCHeaderCtrl::SetSortColumn](#setsortcolumn) method to set the sort order.  
+### <a name="remarks"></a>Hinweise  
+ Der Wert, den diese Methode gibt wird verwendet, um die entsprechende Sortierung Pfeil auf die Header-Steuerelement ein Element anzuzeigen. Verwenden der [CMFCHeaderCtrl::SetSortColumn](#setsortcolumn) Methode, um die Sortierreihenfolge festzulegen.  
   
-##  <a name="isdialogcontrol"></a>  CMFCHeaderCtrl::IsDialogControl  
- Indicates whether the parent window of the current header control is a dialog box.  
+##  <a name="isdialogcontrol"></a>CMFCHeaderCtrl::IsDialogControl  
+ Gibt an, ob das übergeordnete Fenster des aktuellen Headersteuerelements ein Dialogfeld.  
   
 ```  
 BOOL IsDialogControl() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the parent window of the current header control is a dialog box; otherwise, `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn das übergeordnete Fenster des aktuellen Headersteuerelement ein Dialogfeld ist. andernfalls `FALSE`.  
   
-##  <a name="ismultiplesort"></a>  CMFCHeaderCtrl::IsMultipleSort  
- Indicates whether the current header control is in *multiple column sort* mode.  
+##  <a name="ismultiplesort"></a>CMFCHeaderCtrl::IsMultipleSort  
+ Gibt an, ob das aktuelle Kopfzeilen-Steuerelement in *Sortieren mehrerer Spalten* Modus.  
   
 ```  
 BOOL IsMultipleSort() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if multiple column sort mode is enabled; otherwise, `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn mehrere Spalten sortiert ist Modus aktiviert. andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- Use the [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) method to enable or disable multiple column sort mode. Two or more columns can participate in a sort if the header control is in multiple column sort mode.  
+### <a name="remarks"></a>Hinweise  
+ Verwenden der [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) Methode aktivieren oder Deaktivieren des Modus für mehrere Spalten sortieren. Zwei oder mehr Spalten können eine Sortierung teilnehmen, ist das Kopfzeilen-Steuerelement im Modus für mehrere Spalten sortieren.  
   
-##  <a name="ondrawitem"></a>  CMFCHeaderCtrl::OnDrawItem  
- Called by the framework to draw a header control column.  
+##  <a name="ondrawitem"></a>CMFCHeaderCtrl::OnDrawItem  
+ Aufgerufen, um Kopfzeilen-Steuerelement für Spalten zu zeichnen.  
   
 ```  
 virtual void OnDrawItem(
@@ -243,24 +232,24 @@ virtual void OnDrawItem(
     BOOL bIsHighlighted);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pDC`  
- A pointer to a device context.  
+ Ein Zeiger zu einem Gerätekontext.  
   
  [in] `iItem`  
- The zero-based index of the item to draw.  
+ Der nullbasierte Index des Elements, das gezeichnet werden soll.  
   
  [in] `rect`  
- The bounding rectangle of the item to draw.  
+ Das umschließende Rechteck des Elements, das gezeichnet werden soll.  
   
  [in] `bIsPressed`  
- `TRUE` to draw the item in pressed state; otherwise, `FALSE`.  
+ `TRUE`zum Zeichnen des Elements im gedrückten Zustand befindet; andernfalls `FALSE`.  
   
  [in] `bIsHighlighted`  
- `TRUE` to draw the item in highlighted state; otherwise, `FALSE`.  
+ `TRUE`zum Zeichnen des Elements im markierten Status; andernfalls `FALSE`.  
   
-##  <a name="ondrawsortarrow"></a>  CMFCHeaderCtrl::OnDrawSortArrow  
- Called by the framework to draw the sort arrow.  
+##  <a name="ondrawsortarrow"></a>CMFCHeaderCtrl::OnDrawSortArrow  
+ Vom Framework aufgerufen wird zum Zeichnen des Pfeils sortieren.  
   
 ```  
 virtual void OnDrawSortArrow(
@@ -268,39 +257,39 @@ virtual void OnDrawSortArrow(
     CRect rectArrow);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pDC`  
- A pointer to a device context.  
+ Ein Zeiger zu einem Gerätekontext.  
   
  [in] `rectArrow`  
- The bounding rectangle of the sort arrow.  
+ Das umschließende Rechteck des Pfeils sortieren.  
   
-##  <a name="onfillbackground"></a>  CMFCHeaderCtrl::OnFillBackground  
- Called by the framework to fill the background of a header control column.  
+##  <a name="onfillbackground"></a>CMFCHeaderCtrl::OnFillBackground  
+ Vom Framework zum Ausfüllen der Spalte eine Header-Steuerelement aufgerufen.  
   
 ```  
 virtual void OnFillBackground(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pDC`  
- A pointer to a device context.  
+ Ein Zeiger zu einem Gerätekontext.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="removesortcolumn"></a>  CMFCHeaderCtrl::RemoveSortColumn  
- Removes the specified column from the list of sort columns.  
+##  <a name="removesortcolumn"></a>CMFCHeaderCtrl::RemoveSortColumn  
+ Entfernt die angegebene Spalte aus der Liste der Sortierspalten.  
   
 ```  
 void RemoveSortColumn(int iColumn);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `iColumn`  
- The zero-based index of the column to remove.  
+ Der nullbasierte Index des zu entfernenden Spalte.  
   
-##  <a name="setsortcolumn"></a>  CMFCHeaderCtrl::SetSortColumn  
- Sets the sort order of a specified column in a header control.  
+##  <a name="setsortcolumn"></a>CMFCHeaderCtrl::SetSortColumn  
+ Legt die Sortierreihenfolge einer angegebenen Spalte in einem Header-Steuerelement fest.  
   
 ```  
 void SetSortColumn(
@@ -309,27 +298,27 @@ void SetSortColumn(
     BOOL bAdd=FALSE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `iColumn`  
- The zero-based index of a header control column. If this parameter is less than zero, this method removes all columns from the list of sort columns.  
+ Der nullbasierte Index der Spalte eine Header-Steuerelement. Wenn dieser Parameter ist kleiner als&0; (null), entfernt diese Methode alle Spalten aus der Liste der Sortierspalten.  
   
  [in] `bAscending`  
- Specifies the sort order of the column that the `iColumn` parameter specifies. `TRUE` to set ascending order; `FALSE` to set descending order. The default value is `TRUE`.  
+ Gibt die Sortierreihenfolge der Spalte, die die `iColumn` angibt. `TRUE`Festlegen der aufsteigend; `FALSE` absteigend festlegen. Der Standardwert ist `TRUE`.  
   
  [in] `bAdd`  
- `TRUE` to set the sort order of the column that the `iColumn` parameter specifies.  
+ `TRUE`zum Festlegen der Sortierreihenfolge der Spalte, die die `iColumn` Parameter gibt.  
   
- If the current header control is in *multiple column sort* mode, this method adds the specified column to the list of sort columns. Use [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) to set multiple column sort mode.  
+ Das aktuelle Kopfzeilen-Steuerelement ist im *Sortieren mehrerer Spalten* Modus, diese Methode fügt die angegebene Spalte der Liste der Sortierspalten. Verwendung [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) mehrere Spalte Sortiermodus festgelegt.  
   
- If multiple column sort mode is not set and this method is compiled in debug mode, this method asserts. If multiple column sort mode is not set and this method is compiled in retail mode, this method first removes all columns from the list of sort columns, and then adds the specified column to the list.  
+ Wenn mehrere Spalte sortieren-Modus nicht festgelegt ist und diese Methode im Debugmodus kompiliert wurde, überprüft diese Methode auf. Wenn mehrere Spalte sortieren-Modus nicht festgelegt ist und diese Methode in Retail-Modus kompiliert wird, gibt diese Methode entfernt zuerst alle Spalten aus der Liste der Sortierspalten und dann die Liste die angegebene Spalte hinzugefügt.  
   
- `FALSE` to first remove all columns from the list of sort columns, and then add the specified column to the list. The default value is `FALSE`.  
+ `FALSE`zuerst entfernen Sie alle Spalten aus der Liste der Sortierspalten, und klicken Sie dann fügen Sie die angegebene Spalte zur Liste hinzu. Der Standardwert ist `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- Use this method to set the sort order of a column. If necessary, this method adds the column to the list of sort columns. The header control uses the sort order to draw a sort arrow that points up or down.  
+### <a name="remarks"></a>Hinweise  
+ Verwenden Sie diese Methode, um die Sortierreihenfolge einer Spalte festzulegen. Falls erforderlich, fügt diese Methode die Spalte zur Liste der Sortierspalten. Das Kopfzeilen-Steuerelement verwendet die Sortierreihenfolge, um einen Sortierpfeil zu zeichnen, der nach oben oder unten zeigt.  
   
-## <a name="see-also"></a>See Also  
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [Classes](../../mfc/reference/mfc-classes.md)   
- [CMFCListCtrl Class](../../mfc/reference/cmfclistctrl-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
+ [Klassen](../../mfc/reference/mfc-classes.md)   
+ [CMFCListCtrl-Klasse](../../mfc/reference/cmfclistctrl-class.md)
 

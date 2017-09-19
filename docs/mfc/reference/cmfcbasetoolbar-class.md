@@ -1,5 +1,5 @@
 ---
-title: CMFCBaseToolBar Class | Microsoft Docs
+title: Klasse CMFCBaseToolBar | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,9 +17,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCBaseToolBar [MFC], GetDockingMode
-- CMFCBaseToolBar [MFC], GetMinSize
-- CMFCBaseToolBar [MFC], OnAfterChangeParent
+- CMFCBaseToolBar class, constructor
+- CMFCBaseToolBar class, destructor
+- ~CMFCBaseToolBar destructor
+- CreateObject method
+- CMFCBaseToolBar class
 ms.assetid: 5d79206d-55e4-46f8-b1b8-042e34d7f9da
 caps.latest.revision: 19
 author: mikeblome
@@ -39,15 +41,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: eb896d2c03f8b25ec615444111fa6307e4dfd63e
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: f608b23c0dbee3ec0e2d2b234612365e3c2461b0
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="cmfcbasetoolbar-class"></a>CMFCBaseToolBar Class
-Base class for toolbars.  
+# <a name="cmfcbasetoolbar-class"></a>CMFCBaseToolBar-Klasse
+Basisklasse für Symbolleisten.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,26 +57,26 @@ Base class for toolbars.
 class CMFCBaseToolBar : public CPane  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Mitglieder  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|`CMFCBaseToolBar::CMFCBaseToolBar`|Default constructor.|  
-|`CMFCBaseToolBar::~CMFCBaseToolBar`|Destructor.|  
+|`CMFCBaseToolBar::CMFCBaseToolBar`|Standardkonstruktor|  
+|`CMFCBaseToolBar::~CMFCBaseToolBar`|Destruktor.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|`CMFCBaseToolBar::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
-|[CMFCBaseToolBar::GetDockingMode](#getdockingmode)|Returns the docking mode. (Overrides [CBasePane::GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).)|  
-|[CMFCBaseToolBar::GetMinSize](#getminsize)|Returns the minimum size of a toolbar. (Overrides [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|  
-|[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|Called by the framework after the pane's parent changes. (Overrides [CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent).)|  
+|`CMFCBaseToolBar::CreateObject`|Wird vom Framework verwendet, um eine dynamische Instanz dieses Klassentyps zu erstellen.|  
+|[CMFCBaseToolBar::GetDockingMode](#getdockingmode)|Gibt den Andockmodus zurück. (Überschreibt [cbasepane:: Getdockingmode](../../mfc/reference/cbasepane-class.md#getdockingmode).)|  
+|[CMFCBaseToolBar::GetMinSize](#getminsize)|Gibt die minimale Größe einer Symbolleiste zurück. (Überschreibt [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|  
+|[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|Vom Framework aufgerufen, nachdem der Bereich übergeordnete geändert. (Überschreibt [CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent).)|  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
- [CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
+ [Von CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -86,42 +88,42 @@ class CMFCBaseToolBar : public CPane
   
  [CMFCBaseToolBar](../../mfc/reference/cmfcbasetoolbar-class.md)  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxbasetoolbar.h  
   
-##  <a name="getdockingmode"></a>  CMFCBaseToolBar::GetDockingMode  
- Returns the docking mode.  
+##  <a name="getdockingmode"></a>CMFCBaseToolBar::GetDockingMode  
+ Gibt den Andockmodus zurück.  
   
 ```  
 virtual AFX_DOCK_TYPE GetDockingMode() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The docking mode.  
+### <a name="return-value"></a>Rückgabewert  
+ Der Andockmodus.  
   
-##  <a name="getminsize"></a>  CMFCBaseToolBar::GetMinSize  
- Returns the minimum size of a toolbar.  
+##  <a name="getminsize"></a>CMFCBaseToolBar::GetMinSize  
+ Gibt die minimale Größe einer Symbolleiste zurück.  
   
 ```  
 virtual void GetMinSize(CSize& size) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [out] `size`  
- The minimum size of a toolbar.  
+ Die minimale Größe einer Symbolleiste.  
   
-##  <a name="onafterchangeparent"></a>  CMFCBaseToolBar::OnAfterChangeParent  
- Called by the framework after the pane's parent changes.  
+##  <a name="onafterchangeparent"></a>CMFCBaseToolBar::OnAfterChangeParent  
+ Vom Framework aufgerufen, nachdem der Bereich übergeordnete geändert.  
   
 ```  
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pWndOldParent`  
- A pointer to the previous parent window.  
+ Ein Zeiger auf das vorherige übergeordnete Fenster.  
   
-## <a name="see-also"></a>See Also  
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [Classes](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>Siehe auch  
+ [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
+ [Klassen](../../mfc/reference/mfc-classes.md)
 

@@ -1,5 +1,5 @@
 ---
-title: '&lt;complex&gt; functions | Microsoft Docs'
+title: '&lt;complex&gt;-Funktionen | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,33 +28,14 @@ f1_keywords:
 ms.assetid: 58b14e94-0e0c-493e-8237-8b4d685904a2
 caps.latest.revision: 14
 manager: ghogen
-helpviewer_keywords:
-- std::abs [C++]
-- std::arg [C++]
-- std::conj [C++]
-- std::cos [C++]
-- std::cosh [C++]
-- std::exp [C++]
-- std::imag [C++]
-- std::log [C++]
-- std::log10
-- std::norm [C++]
-- std::polar [C++]
-- std::pow [C++]
-- std::real [C++]
-- std::sin [C++]
-- std::sinh [C++]
-- std::sqrt [C++]
-- std::tan [C++]
-- std::tanh [C++]
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 14714c92087492199c47580144dfbd64afece59a
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 928ed213f4605ea1b39d2d5cf92673bc055aaf4a
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/19/2017
 
 ---
-# <a name="ltcomplexgt-functions"></a>&lt;complex&gt; functions
+# <a name="ltcomplexgt-functions"></a>&lt;complex&gt;-Funktionen
 ||||  
 |-|-|-|  
 |[abs](#abs)|[arg](#arg)|[conj](#conj)|
@@ -64,25 +45,25 @@ ms.lasthandoff: 09/09/2017
 |[real](#real)|[sin](#sin)|[sinh](#sinh)|
 |[sqrt](#sqrt)|[tan](#tan)|[tanh](#tanh)|  
   
-##  <a name="abs"></a>  abs  
- Calculates the modulus of a complex number.  
+##  <a name="abs"></a> abs  
+ Berechnet den Betrag einer komplexen Zahl.  
   
 ```  
 template <class Type>  
 Type abs(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `complexNum`  
- The complex number whose modulus is to be determined.  
+ Die komplexe Zahl, deren Betrag bestimmt werden soll  
   
-### <a name="return-value"></a>Return Value  
- The modulus of a complex number.  
+### <a name="return-value"></a>Rückgabewert  
+ Der Betrag einer komplexen Zahl  
   
-### <a name="remarks"></a>Remarks  
- The *modulus* of a complex number is a measure of the length of the vector representing the complex number. The modulus of a complex number                         a + bi is                         sqrt (a<sup>2</sup> + b<sup>2</sup>),  written                         &#124;a + bi&#124;. The *norm* of a complex number                         a + bi is (a<sup>2</sup> + b<sup>2</sup>), so the modulus of a complex number is the square root of its norm.  
+### <a name="remarks"></a>Hinweise  
+ Der *Betrag* einer komplexen Zahl ist ein Maß für die Länge des Vektors, der die komplexe Zahl darstellt. Der Betrag einer komplexen Zahl                         a + bi ist                         sqrt (a<sup>2</sup> + b<sup>2</sup>), geschrieben als                         &#124;a + bi&#124;. Die *Norm* einer komplexen Zahl                         a + bi ist (a<sup>2</sup> + b<sup>2</sup>). Damit entspricht der Betrag der Quadratwurzel seiner Norm.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // complex_abs.cpp  
@@ -147,25 +128,25 @@ Argument of c2 is recovered from c2 using:
 The complex numbers c2 & c3 have the same principal arguments.  
 ```  
   
-##  <a name="arg"></a>  arg  
- Extracts the argument from a complex number.  
+##  <a name="arg"></a> arg  
+ Extrahiert das Argument aus einer komplexen Zahl.  
   
 ```  
 template <class Type>  
 Type arg(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `complexNum`  
- The complex number whose argument is to be determined.  
+ Die komplexe Zahl, deren Argument bestimmt werden soll  
   
-### <a name="return-value"></a>Return Value  
- The argument of the complex number.  
+### <a name="return-value"></a>Rückgabewert  
+ Das Argument der komplexen Zahl  
   
-### <a name="remarks"></a>Remarks  
- The *argument* is the angle that the complex vector makes with the positive real axis in the complex plane. For a complex number *a + bi*, the argument is equal to arctan(*b/a*). The angle has a positive sense when measured in a counterclockwise direction from the positive real axis and a negative sense when measured in a clockwise direction. The principal values are greater than -pi and less than or equal to +pi.  
+### <a name="remarks"></a>Hinweise  
+ Die *Argument* ist der Winkel, die der komplexen Vektor mit positiven real-Achse in der komplexen Ebene ermöglicht. Für eine komplexe Zahl *a + Bi*, entspricht das Argument Arctan (*b / a*). Der Winkel ist positiv, wenn er von der positiven realen Achse im Uhrzeigersinn gemessen wird. Er ist negativ, wenn er entgegen dem Uhrzeigersinn gemessen wird. Der Prinzipal Werte sind größer als --Pi und kleiner als oder gleich + pi ist.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // complex_arg.cpp  
@@ -230,25 +211,25 @@ Argument of c2 is recovered from c2 using:
 The complex numbers c2 & c3 have the same principal arguments.  
 ```  
   
-##  <a name="conj"></a>  conj  
- Returns the complex conjugate of a complex number.  
+##  <a name="conj"></a> conj  
+ Gibt die konjugierte Zahl einer komplexen Zahl zurück.  
   
 ```  
 template <class Type>  
 complex<Type> conj(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `complexNum`  
- The complex number whose complex conjugate is being returned.  
+ Die komplexe Zahl, deren konjugierte Zahl zurückgegeben wird  
   
-### <a name="return-value"></a>Return Value  
- The complex conjugate of the input complex number.  
+### <a name="return-value"></a>Rückgabewert  
+ Die konjugierte Zahl einer komplexen Eingabezahl  
   
-### <a name="remarks"></a>Remarks  
- The complex conjugate of a complex number *a + bi* is *a - bi*. The product of a complex number and its conjugate is the norm of the number *a*2 + *b*2.  
+### <a name="remarks"></a>Hinweise  
+ Die konjugierte Zahl einer komplexen Zahl *a + Bi* ist *a - Bi*. Das Produkt einer komplexen Zahl und ihrer konjugierten Zahl entspricht der Norm der Zahl *a*2 + *b*2.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // complex_conj.cpp  
@@ -301,29 +282,29 @@ The imaginary part of c2 is imag ( c2 ) = -3.
 The norm of (c1 * conj (c1) ) is c1 * c2 = 25  
 ```  
   
-##  <a name="cos"></a>  cos  
- Returns the cosine of a complex number.  
+##  <a name="cos"></a> cos  
+ Gibt den Kosinus einer komplexen Zahl zurück.  
   
 ```  
 template <class Type>  
 complex<Type> cos(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `complexNum`  
- The complex number whose cosine is being determined.  
+ Die komplexe Zahl, deren Kosinus bestimmt wird  
   
-### <a name="return-value"></a>Return Value  
- The complex number that is the cosine of the input complex number.  
+### <a name="return-value"></a>Rückgabewert  
+ Die komplexe Zahl, die dem Kosinus der eingegebenen komplexen Zahl entspricht  
   
-### <a name="remarks"></a>Remarks  
- Identities defining the complex cosines:  
+### <a name="remarks"></a>Hinweise  
+ Identitäten, die komplexe Kosinus definieren:  
   
  cos ( *z*) = (1/2)\*( exp ( *iz*) + exp (- *iz*) )  
   
  cos ( *z*) = cos ( *a* + *bi*) = cos ( *a*) cosh ( *b*) - isin ( *a*) sinh ( *b*)  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // complex_cos.cpp  
@@ -388,29 +369,29 @@ The complex components cos (vci), where abs (vci) = 1
 (0.540302,-1.74036e-013)  
 ```  
   
-##  <a name="cosh"></a>  cosh  
- Returns the hyperbolic cosine of a complex number.  
+##  <a name="cosh"></a> cosh  
+ Gibt den Kosinus Hyperbolicus einer komplexen Zahl zurück.  
   
 ```  
 template <class Type>  
 complex<Type> cosh(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `complexNum`  
- The complex number whose hyperbolic cosine is being determined.  
+ Die komplexe Zahl, deren Kosinus Hyperbolicus bestimmt wird  
   
-### <a name="return-value"></a>Return Value  
- The complex number that is the hyperbolic cosine of the input complex number.  
+### <a name="return-value"></a>Rückgabewert  
+ Die komplexe Zahl, die dem Kosinus Hyperbolicus der eingegebenen komplexen Zahl entspricht  
   
-### <a name="remarks"></a>Remarks  
- Identities defining the complex hyperbolic cosines:  
+### <a name="remarks"></a>Hinweise  
+ Identitäten, die komplexe Kosinus Hyperbolicus definieren:  
   
  cos ( *z*) = (1/2)\*( exp ( *z*) + exp (- *z*) )  
   
  cos ( *z*) = cosh ( *a + bi*) = cosh ( *a*) cos ( *b*) + isinh ( *a*) sin ( *b*)  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // complex_cosh.cpp  
@@ -475,22 +456,22 @@ The complex components cosh (vci), where abs (vci) = 1
 (1.54308,2.43059e-013)  
 ```  
   
-##  <a name="exp"></a>  exp  
- Returns the exponential function of a complex number.  
+##  <a name="exp"></a> exp  
+ Gibt die Exponentialfunktion einer komplexen Zahl zurück.  
   
 ```  
 template <class Type>  
 complex<Type> exp(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `complexNum`  
- The complex number whose exponential is being determined.  
+ Die komplexe Zahl, deren Exponentialfunktion bestimmt wird  
   
-### <a name="return-value"></a>Return Value  
- The complex number that is the exponential of the input complex number.  
+### <a name="return-value"></a>Rückgabewert  
+ Die komplexe Zahl, die der Exponentialfunktion der eingegebenen komplexen Zahl entspricht  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // complex_exp.cpp  
@@ -543,25 +524,25 @@ int main() {
 }  
 ```  
   
-##  <a name="imag"></a>  imag  
- Extracts the imaginary component of a complex number.  
+##  <a name="imag"></a> imag  
+ Extrahiert die imaginäre Komponente einer komplexen Zahl.  
   
 ```  
 template <class Type>  
 Type imag(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `complexNum`  
- The complex number whose real part is to be extracted.  
+ Die komplexe Zahl, deren reeller Teil extrahiert werden soll.  
   
-### <a name="return-value"></a>Return Value  
- The imaginary part of the complex number as a global function.  
+### <a name="return-value"></a>Rückgabewert  
+ Der imaginäre Teil der komplexen Zahl als globale Funktion.  
   
-### <a name="remarks"></a>Remarks  
- This template function cannot be used to modify the real part of the complex number. To change the real part, a new complex number must be assigned the component value.  
+### <a name="remarks"></a>Hinweise  
+ Diese Vorlagenfunktion kann nicht zum Ändern des reellen Teils der komplexen Zahl verwendet werden. Dem Komponentenwert muss eine neue komplexe Zahl zugewiesen werden, um den reellen Teil zu ändern.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // complexc_imag.cpp  
@@ -591,25 +572,25 @@ The real part of c1 is real ( c1 ) = 4.
 The imaginary part of c1 is imag ( c1 ) = 3.  
 ```  
   
-##  <a name="log"></a>  log  
- Returns the natural logarithm of a complex number.  
+##  <a name="log"></a> log  
+ Gibt den natürlichen Logarithmus einer komplexen Zahl zurück.  
   
 ```  
 template <class Type>  
 complex<Type> log(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `complexNum`  
- The complex number whose natural logarithm is being determined.  
+ Die komplexe Zahl, deren natürlicher Logarithmus bestimmt wird  
   
-### <a name="return-value"></a>Return Value  
- The complex number that is the natural logarithm of the input complex number.  
+### <a name="return-value"></a>Rückgabewert  
+ Die komplexe Zahl, die dem natürlichen Logarithmus der eingegebenen komplexen Zahl entspricht  
   
-### <a name="remarks"></a>Remarks  
- The branch cuts are along the negative real axis.  
+### <a name="remarks"></a>Hinweise  
+ Die Achsenabschnitte liegen auf der negativen reellen Achse.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // complex_log.cpp  
@@ -657,25 +638,25 @@ int main() {
 }  
 ```  
   
-##  <a name="log10"></a>  log10  
- Returns the base 10 logarithm of a complex number.  
+##  <a name="log10"></a> log10  
+ Gibt den Zehnerlogarithmus einer komplexen Zahl zurück.  
   
 ```  
 template <class Type>  
 complex<Type> log10(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `complexNum`  
- The complex number whose base 10 logarithm is being determined.  
+ Die komplexe Zahl, deren Zehnerlogarithmus bestimmt wird  
   
-### <a name="return-value"></a>Return Value  
- The complex number that is the base 10 logarithm of the input complex number.  
+### <a name="return-value"></a>Rückgabewert  
+ Die komplexe Zahl, die dem Zehnerlogarithmus der eingegebenen komplexen Zahl entspricht  
   
-### <a name="remarks"></a>Remarks  
- The branch cuts are along the negative real axis.  
+### <a name="remarks"></a>Hinweise  
+ Die Achsenabschnitte liegen auf der negativen reellen Achse.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // complex_log10.cpp  
@@ -723,25 +704,25 @@ int main() {
 }  
 ```  
   
-##  <a name="norm"></a>  norm  
- Extracts the norm of a complex number.  
+##  <a name="norm"></a> norm  
+ Extrahiert die Norm einer komplexen Zahl.  
   
 ```  
 template <class Type>  
 Type norm(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `complexNum`  
- The complex number whose norm is to be determined.  
+ Die komplexe Zahl, deren Norm bestimmt werden soll  
   
-### <a name="return-value"></a>Return Value  
- The norm of a complex number.  
+### <a name="return-value"></a>Rückgabewert  
+ Die Norm einer komplexen Zahl  
   
-### <a name="remarks"></a>Remarks  
- The norm of a complex number *a + bi* is *(a*<sup>2</sup> *+ b*<sup>2</sup>*).* The norm of a complex number is the square of its modulus. The modulus of a complex number is a measure of the length of the vector representing the complex number. The modulus of a complex number *a + bi* is `sqrt`*(a*<sup>2</sup> *+ b*<sup>2</sup>*),* written *&#124;a + bi&#124;.*  
+### <a name="remarks"></a>Hinweise  
+ Die Norm einer komplexen Zahl *a + bi* ist *(a*<sup>2</sup> *+ b*<sup>2</sup>*).* Die Norm einer komplexen Zahl entspricht der Quadratwurzel ihres Betrags. Der Betrag einer komplexen Zahl ist ein Maß für die Länge des Vektors, der die komplexe Zahl darstellt. Der Betrag einer komplexen Zahl *a + bi* ist `sqrt`*(a*<sup>2</sup> *+ b*<sup>2</sup>*)* geschrieben als *&#124;a + bi&#124;.*  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // complex_norm.cpp  
@@ -802,28 +783,28 @@ The norm of c2 given by: norm ( c2 ) = 25
 The modulus of c2 is the square root of the norm: sqrt ( normc2 ) = 5.  
 ```  
   
-##  <a name="polar"></a>  polar  
- Returns the complex number, which corresponds to a specified modulus and argument, in Cartesian form.  
+##  <a name="polar"></a> polar  
+ Gibt die komplexe Zahl, die einem angegebenen Betrag und Argument entspricht, in kartesischer Form zurück.  
   
 ```  
 template <class Type>  
 complex<Type> polar(const Type& _Modulus, const Type& _Argument = 0);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  *_Modulus*  
- The modulus of the complex number being input.  
+ Der Betrag der komplexen Zahl, die eingegeben wird  
   
  *_Argument*  
- The argument of the complex number being input.  
+ Das Argument der komplexen Zahl, die eingegeben wird  
   
-### <a name="return-value"></a>Return Value  
- Cartesian form of the complex number specified in polar form.  
+### <a name="return-value"></a>Rückgabewert  
+ Kartesische Form der komplexen Zahl, die in Polarform dargestellt wird  
   
-### <a name="remarks"></a>Remarks  
- The polar form of a complex number provides the modulus *r* and the argument *p*, where these parameters are related to the real and imaginary Cartesian components *a* and *b* by the equations *a* = r \* cos *p* and *b* = *r* \* sin *p*.  
+### <a name="remarks"></a>Hinweise  
+ Polare Form einer komplexen Zahl stellt den Modulo *r* und dem Argument *p*, wenn diese Parameter für die reellen und imaginären kartesischen Komponenten verknüpft werden *eine* und *b* von Formeln *eine* = R \* cos *p* und *b* = *r* \* sin *p*.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // complex_polar.cpp  
@@ -875,8 +856,8 @@ Argument of c2 is recovered from c2 using:
  arg ( c2 ) = 0.523599 radians, which is 30 degrees.  
 ```  
   
-##  <a name="pow"></a>  pow  
- Evaluates the complex number obtained by raising a base that is a complex number to the power of another complex number.  
+##  <a name="pow"></a> pow  
+ Wertet die komplexe Zahl aus, die sich dadurch ergibt, dass eine Basis, die eine komplexe Zahl ist, mit einer anderen komplexen Zahl potenziert wird.  
   
 ```  
 template <class Type>  
@@ -892,22 +873,22 @@ template <class Type>
 complex<Type> pow(const Type& _Base, const complex<Type>& _Power);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `_Base`  
- The complex number or number that is of the parameter type for the complex number that is the base to be raised to a power by the member function.  
+ Die komplexe Zahl oder Zahl vom Parametertyp einer komplexen Zahl, die als Basis für die Potenzierung durch eine Memberfunktion dient  
   
  *_Power*  
- The integer or complex number or number that is of the parameter type for the complex number that is the power that the base is to be raised to by the member function.  
+ Ganze Zahl oder komplexe Zahl oder Zahl vom Parametertyp einer komplexen Zahl, die als Basis für die Potenzierung durch eine Memberfunktion dient  
   
-### <a name="return-value"></a>Return Value  
- The complex number obtained by raising the specified base to the specified power.  
+### <a name="return-value"></a>Rückgabewert  
+ Die komplexe Zahl, die sich durch die angegebene Potenzierung der angegebenen Basis ergibt  
   
-### <a name="remarks"></a>Remarks  
- The functions each effectively convert both operands to the return type, and then return the converted **left** to the power **right**.  
+### <a name="remarks"></a>Hinweise  
+ Die Funktionen konvertieren beide Operanden in den Rückgabetyp und übergeben die konvertierten **linksseitigen Werte** an die **rechtsseitige Potenzfunktion**.  
   
- The branch cut is along the negative real axis.  
+ Der Achsenabschnitt liegt auf der negativen reellen Achse.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // complex_pow.cpp  
@@ -1016,25 +997,25 @@ The modulus of ce4 is: 9.8696
 The argument of ce4 is: -1.14473 radians, which is -65.5882 degrees.  
 ```  
   
-##  <a name="real"></a>  real  
- Extracts the real component of a complex number.  
+##  <a name="real"></a> real  
+ Extrahiert die reelle Komponente einer komplexen Zahl.  
   
 ```  
 template <class Type>  
 Type real(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `complexNum`  
- The complex number whose real part is to be extracted.  
+ Die komplexe Zahl, deren reeller Teil extrahiert werden soll.  
   
-### <a name="return-value"></a>Return Value  
- The real part of the complex number as a global function.  
+### <a name="return-value"></a>Rückgabewert  
+ Der reelle Teil der komplexen Zahl als globale Funktion.  
   
-### <a name="remarks"></a>Remarks  
- This template function cannot be used to modify the real part of the complex number. To change the real part, a new complex number must be assigned the component value.  
+### <a name="remarks"></a>Hinweise  
+ Diese Vorlagenfunktion kann nicht zum Ändern des reellen Teils der komplexen Zahl verwendet werden. Dem Komponentenwert muss eine neue komplexe Zahl zugewiesen werden, um den reellen Teil zu ändern.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // complex_real.cpp  
@@ -1064,29 +1045,29 @@ The real part of c1 is real ( c1 ) = 4.
 The imaginary part of c1 is imag ( c1 ) = 3.  
 ```  
   
-##  <a name="sin"></a>  sin  
- Returns the sine of a complex number.  
+##  <a name="sin"></a> sin  
+ Gibt den Sinus einer komplexen Zahl zurück.  
   
 ```  
 template <class Type>  
 complex<Type> sin(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `complexNum`  
- The complex number whose sine is being determined.  
+ Die komplexe Zahl, deren Sinus bestimmt wird  
   
-### <a name="return-value"></a>Return Value  
- The complex number that is the sine of the input complex number.  
+### <a name="return-value"></a>Rückgabewert  
+ Die komplexe Zahl, die dem Sinus der eingegebenen komplexen Zahl entspricht  
   
-### <a name="remarks"></a>Remarks  
- Identities defining the complex sines:  
+### <a name="remarks"></a>Hinweise  
+ Identitäten, die komplexe Sinus definieren:  
   
  sin ( *z*) = (1/2 *i*)\*( exp ( *iz*) - exp (- *iz*) )  
   
  sin ( *z*) = sin ( *a + bi*) = sin ( *a*) cosh ( *b*) + icos ( *a*) sinh ( *b*)  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // complex_sin.cpp  
@@ -1151,29 +1132,29 @@ The complex components sin (vci), where abs (vci) = 1
 (-0.841471,-1.11747e-013)  
 ```  
   
-##  <a name="sinh"></a>  sinh  
- Returns the hyperbolic sine of a complex number.  
+##  <a name="sinh"></a> sinh  
+ Gibt den Sinus Hyperbolicus einer komplexen Zahl zurück.  
   
 ```  
 template <class Type>  
 complex<Type> sinh(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `complexNum`  
- The complex number whose hyperbolic sine is being determined.  
+ Die komplexe Zahl, deren Sinus Hyperbolicus bestimmt wird  
   
-### <a name="return-value"></a>Return Value  
- The complex number that is the hyperbolic sine of the input complex number.  
+### <a name="return-value"></a>Rückgabewert  
+ Die komplexe Zahl, die dem Sinus Hyperbolicus der eingegebenen komplexen Zahl entspricht  
   
-### <a name="remarks"></a>Remarks  
- Identities defining the complex hyperbolic sines:  
+### <a name="remarks"></a>Hinweise  
+ Identitäten, die die komplexen Sinus Hyperbolicus definieren:  
   
  sinh ( *z*) = (1/2)\*( exp ( *z*) - exp (- *z*) )  
   
  sinh ( *z*) = sinh ( *a + bi*) = sinh ( *a*) cos ( *b*) + *i*cosh ( *a*) sin ( *b*)  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // complex_sinh.cpp  
@@ -1238,29 +1219,29 @@ The complex components sinh (vci), where abs (vci) = 1
 (-1.1752,-3.19145e-013)  
 ```  
   
-##  <a name="sqrt"></a>  sqrt  
- Calculates the square root of a complex number.  
+##  <a name="sqrt"></a> sqrt  
+ Berechnet die Quadratwurzel einer komplexen Zahl  
   
 ```  
 template <class Type>  
 complex<Type> sqrt(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `complexNum`  
- The complex number whose square root is to be found.  
+ Die komplexe Zahl, deren Quadratwurzel bestimmt werden soll  
   
-### <a name="return-value"></a>Return Value  
- The square root of a complex number.  
+### <a name="return-value"></a>Rückgabewert  
+ Die Quadratwurzel einer komplexen Zahl  
   
-### <a name="remarks"></a>Remarks  
- The square root will have a phase angle in the half-open interval (-pi/2, pi/2].  
+### <a name="remarks"></a>Hinweise  
+ Die Quadratwurzel hat einen Phasenwinkel im halb geöffneten Intervall (-Pi/2 und Pi/2].  
   
- The branch cuts in the complex plane are along the negative real axis.  
+ Die Achsenabschnitte in der komplexen Ebene liegen auf der negativen reellen Achse.  
   
- The square root of a complex number will have a modulus that is the square root of the input number and an argument that is one-half that of the input number.  
+ Die Quadratwurzel einer komplexen Zahl hat einen Betrag, der der Quadratwurzel des Betrages der Eingabezahl entspricht, und ein Argument, das der Hälfte der Eingabezahl entspricht.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // complex_sqrt.cpp  
@@ -1312,26 +1293,26 @@ The argument of c2 = ( 1 / 2 ) * arg ( c1 ) =0.785398 radians,
 ```  
   
 ##  <a name="tan"></a> tan  
- Returns the tangent of a complex number.  
+ Gibt den Tangens einer komplexen Zahl zurück.  
   
 ```  
 template <class Type>  
 complex<Type> tan(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `complexNum`  
- The complex number whose tangent is being determined.  
+ Die komplexe Zahl, deren Tangens bestimmt wird  
   
-### <a name="return-value"></a>Return Value  
- The complex number that is the tangent of the input complex number.  
+### <a name="return-value"></a>Rückgabewert  
+ Die komplexe Zahl, die dem Tangens der eingegebenen komplexen Zahl entspricht  
   
-### <a name="remarks"></a>Remarks  
- Identities defining the complex cotangent:  
+### <a name="remarks"></a>Hinweise  
+ Identitäten, die den komplexen Tangens definieren:  
   
  tan ( *z*) = sin ( *z*) / cos ( *z*) = ( exp ( *iz*) - exp (- *iz*) ) / *i*( exp ( *iz*) + exp (- *iz*) )  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // complex_tan.cpp  
@@ -1396,27 +1377,27 @@ The complex components tan (vci), where abs (vci) = 1
 (-1.55741,-7.08476e-013)  
 ```  
   
-##  <a name="tanh"></a>  tanh  
- Returns the hyperbolic tangent of a complex number.  
+##  <a name="tanh"></a> tanh  
+ Gibt den Tangens Hyperbolicus einer komplexen Zahl zurück.  
   
 ```  
 template <class Type>  
 complex<Type> tanh(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `complexNum`  
- The complex number whose hyperbolic tangent is being determined.  
+ Die komplexe Zahl, deren Tangens Hyperbolicus bestimmt wird  
   
-### <a name="return-value"></a>Return Value  
- The complex number that is the hyperbolic tangent of the input complex number.  
+### <a name="return-value"></a>Rückgabewert  
+ Die komplexe Zahl, die dem Tangens Hyperbolicus der eingegebenen komplexen Zahl entspricht  
   
-### <a name="remarks"></a>Remarks  
- Identities defining the complex hyperbolic cotangent:  
+### <a name="remarks"></a>Hinweise  
+ Identitäten, die komplexe Kotangens Hyperbolicus definieren:  
   
  tanh ( *z*) = sinh ( *z*) / cosh ( *z*) = ( exp ( *z*) - exp (- *z*) ) / ( exp ( *z*) + exp (- *z*) )  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // complex_tanh.cpp  
@@ -1481,7 +1462,7 @@ The complex components tanh (vci), where abs (vci) = 1
 (-0.761594,-8.68604e-014)  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [\<complex>](../standard-library/complex.md)
 
 

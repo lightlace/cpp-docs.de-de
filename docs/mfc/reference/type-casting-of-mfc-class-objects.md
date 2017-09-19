@@ -1,5 +1,5 @@
 ---
-title: Type Casting of MFC Class Objects | Microsoft Docs
+title: Typumwandlung von MFC-Klassenobjekten | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,11 +13,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- macros [MFC], type casting
-- pointers [MFC], type casting
-- type casts [MFC]
-- casting types [MFC]
-- macros [MFC], casting pointers
+- macros, type casting
+- pointers, type casting
+- type casts
+- casting types
+- macros, casting pointers
 ms.assetid: e138465e-c35f-4e84-b788-bd200ccf2f0e
 caps.latest.revision: 15
 author: mikeblome
@@ -37,69 +37,69 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: ffd816499e0075a70c87552165867a97218122fa
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: f1ae094e7085017f03daab3f73323da13ab1be39
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="type-casting-of-mfc-class-objects"></a>Type Casting of MFC Class Objects
-Type casting macros provide a way to cast a given pointer to a pointer that points to an object of specific class, with or without checking that the cast is legal.  
+# <a name="type-casting-of-mfc-class-objects"></a>Typumwandlung von MFC-Klassenobjekten
+Typ umwandeln Makros bieten eine Möglichkeit, einen angegebenen Zeiger auf einen Zeiger umgewandelt, die auf ein Objekt einer bestimmten Klasse, mit oder ohne zu überprüfen, dass die Umwandlung zulässig ist.  
   
- The following table lists the MFC type casting macros.  
+ Die folgende Tabelle enthält die Makros, die MFC-Typ umwandeln.  
   
-### <a name="macros-that-cast-pointers-to-mfc-class-objects"></a>Macros That Cast Pointers to MFC Class Objects  
+### <a name="macros-that-cast-pointers-to-mfc-class-objects"></a>Makros, die Zeiger auf MFC-Klassenobjekten umgewandelt.  
   
 |||  
 |-|-|  
-|[DYNAMIC_DOWNCAST](#dynamic_downcast)|Casts a pointer to a pointer to a class object while checking to see if the cast is legal.|  
-|[STATIC_DOWNCAST](#static_downcast)|Casts a pointer to an object from one class to a pointer of a related type. In a debug build, causes an **ASSERT** if the object is not a "kind of" the target type.|  
+|[DYNAMIC_DOWNCAST](#dynamic_downcast)|Wandelt einen Zeiger auf einen Zeiger auf ein Objekt der Klasse beim Überprüfen, um festzustellen, ob die Umwandlung zulässig ist.|  
+|[STATIC_DOWNCAST](#static_downcast)|Wandelt einen Zeiger auf ein Objekt aus einer Klasse in einen Zeiger eines zugehörigen Typs. In einem Debugbuild bewirkt, dass ein **ASSERT** ist das Objekt keine "Art von" den Zieltyp.|  
   
-##  <a name="dynamic_downcast"></a>  DYNAMIC_DOWNCAST  
- Provides a handy way to cast a pointer to a pointer to a class object while checking to see if the cast is legal.  
+##  <a name="dynamic_downcast"></a>DYNAMIC_DOWNCAST  
+ Bietet eine praktische Möglichkeit, einen Zeiger auf einen Zeiger auf ein Objekt der Klasse umgewandelt, beim Überprüfen, um festzustellen, ob die Umwandlung zulässig ist.  
   
 ```   
 DYNAMIC_DOWNCAST(class, pointer)  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `class`  
- The name of a class.  
+ Der Name einer Klasse.  
   
  `pointer`  
- A pointer to be cast to a pointer to an object of type `class`.  
+ Ein Zeiger auf einen Zeiger auf ein Objekt vom Typ umgewandelt werden `class`.  
   
-### <a name="remarks"></a>Remarks  
- The macro will cast the `pointer` parameter to a pointer to an object of the `class` parameter's type.  
+### <a name="remarks"></a>Hinweise  
+ Das Makro umgewandelt werden die `pointer` Parameter, um einen Zeiger auf ein Objekt der `class` Typ des Parameters.  
   
- If the object referenced by the pointer is a "kind of" the identified class, the macro returns the appropriate pointer. If it is not a legal cast, the macro returns **NULL**.  
+ Wenn das Objekt auf der Zeiger verweist, ist eine "Art von" bezeichnete Klasse das Makro gibt den entsprechenden Zeiger zurück. Wenn es sich nicht um eine Umwandlung zulässig ist, wird das Makro gibt **NULL**.  
   
-##  <a name="static_downcast"></a>  STATIC_DOWNCAST  
- Casts *pobject* to a pointer to a *class_name* object.  
+##  <a name="static_downcast"></a>STATIC_DOWNCAST  
+ Umwandlungen *Pobject* in einen Zeiger auf eine *Class_name* Objekt.  
   
 ```   
 STATIC_DOWNCAST(class_name, pobject)   
 ```  
   
-### <a name="parameters"></a>Parameters  
- *class_name*  
- The name of the class being cast to.  
+### <a name="parameters"></a>Parameter  
+ *CLASS_NAME*  
+ Der Name der Klasse umgewandelt wird.  
   
- *pobject*  
- The pointer to be cast to a pointer to a *class_name* object.  
+ *pObject*  
+ Der Zeiger auf einen Zeiger auf umgewandelt werden ein *Class_name* Objekt.  
   
-### <a name="remarks"></a>Remarks  
- *pobject* must either be **NULL**, or point to an object of a class which is derived directly, or indirectly, from *class_name*. In builds of your application with the **_DEBUG** preprocessor symbol defined, the macro will **ASSERT** if *pobject* is not **NULL**, or if it points to an object that is not a "kind of" the class specified in the *class_name* parameter (see [CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof)). In non- **_DEBUG** builds, the macro performs the cast without any type checking.  
+### <a name="remarks"></a>Hinweise  
+ *pObject* muss entweder **NULL**, oder zeigen Sie auf ein Objekt einer Klasse, die direkt abgeleitet ist oder indirekt von *Class_name*. In Builds der Anwendung mit der **_DEBUG** Präprozessorsymbol definiert, das Makro wird **ASSERT** Wenn *Pobject* nicht **NULL**, oder wenn er auf ein Objekt verweist, die keine "Art von" im angegebenen Klasse der *Class_name* Parameter (finden Sie unter [CObject:: IsKindOf](../../mfc/reference/cobject-class.md#iskindof)). In nicht - **_DEBUG** Builds, das Makro führt die Umwandlung ohne Typ überprüft.  
   
- The class specified in the *class_name* parameter must be derived from `CObject` and must use the `DECLARE_DYNAMIC` and `IMPLEMENT_DYNAMIC`, the `DECLARE_DYNCREATE` and `IMPLEMENT_DYNCREATE`, or the `DECLARE_SERIAL` and `IMPLEMENT_SERIAL` macros as explained in the article [CObject Class: Deriving a Class from CObject](../../mfc/deriving-a-class-from-cobject.md).  
+ Im angegebenen Klasse der *Class_name* Parameter abgeleitet werden muss `CObject` und müssen die `DECLARE_DYNAMIC` und `IMPLEMENT_DYNAMIC`, `DECLARE_DYNCREATE` und `IMPLEMENT_DYNCREATE`, oder die `DECLARE_SERIAL` und `IMPLEMENT_SERIAL` Makros, wie im Artikel erläutert [CObject-Klasse: Ableiten einer Klasse von CObject](../../mfc/deriving-a-class-from-cobject.md).  
   
- For example, you might cast a pointer to `CMyDoc`, called `pMyDoc`, to a pointer to **CDocument** using this expression:  
+ Sie können z. B. einen Zeiger auf umwandeln `CMyDoc`namens `pMyDoc`, in einen Zeiger auf **CDocument** mit folgendem Ausdruck:  
   
- [!code-cpp[NVC_MFCDocView#197](../../mfc/codesnippet/cpp/type-casting-of-mfc-class-objects_1.cpp)]  
+ [!code-cpp[NVC_MFCDocView&#197;](../../mfc/codesnippet/cpp/type-casting-of-mfc-class-objects_1.cpp)]  
   
- If `pMyDoc` does not point to an object derived directly or indirectly from **CDocument**, the macro will **ASSERT**.  
+ Wenn `pMyDoc` verweist nicht auf ein Objekt direkt oder indirekt von abgeleiteten **CDocument**, wird das Makro **ASSERT**.  
   
-## <a name="see-also"></a>See Also  
- [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>Siehe auch  
+ [Makros und globale Variablen](../../mfc/reference/mfc-macros-and-globals.md)
 

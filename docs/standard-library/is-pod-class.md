@@ -1,5 +1,5 @@
 ---
-title: is_pod Class | Microsoft Docs
+title: is_pod-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- is_pod
 - type_traits/std::is_pod
 dev_langs:
 - C++
@@ -34,15 +35,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: ecbad6c19819f6d99ec7cfd3d34d61e1e0201569
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: 2236d6a9796b1353b919a63620606242cde169bd
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="ispod-class"></a>is_pod Class
-Tests if type is POD.  
+# <a name="ispod-class"></a>is_pod-Klasse
+Testet, ob der Typ POD ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,38 +52,38 @@ template <class T>
 struct is_pod;
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
 *T*  
-The type to query.  
+Der abzufragende Typ.  
   
-## <a name="remarks"></a>Remarks  
-`is_pod<T>::value` is `true` if the type *T* is Plain Old Data (POD). Otherwise it is `false`.  
+## <a name="remarks"></a>Hinweise  
+`is_pod<T>::value` ist `true`, wenn der Typ *T* Plain Old Data (POD) ist. Andernfalls ist der Wert `false`.  
   
-Arithmetic types, enumeration types, pointer types, and pointer to member types are POD.  
+Arithmetische Typen, Enumerationstypen, Zeigertypen und Zeiger auf Membertypen sind POD.  
   
-A cv-qualified version of a POD type is itself a POD type.  
+Eine cv-qualifizierte Version eines POD-Typs ist selbst ein POD-Typ.  
   
-An array of POD is itself POD.  
+Ein Array von POD ist selbst POD.  
   
-A struct or union, all of whose non-static data members are POD, is itself POD if it has:  
+Eine Struktur oder Union, all deren nicht statische Datenmember POD sind, ist selbst POD, wenn sie Folgendes aufweist:  
   
--   No user-declared constructors.  
+-   Keine benutzerdeklarierten Konstruktoren  
   
--   No private or protected non-static data members.  
+-   Keine privaten oder geschützten nicht statischen Datenmember  
   
--   No base classes.  
+-   Keine Basisklassen  
   
--   No virtual functions.  
+-   Keine virtuellen Funktionen  
   
--   No non-static data members of reference type.  
+-   Keine nicht statischen Datenmember des Verweistyps  
   
--   No user-defined copy assignment operator.  
+-   Keinen benutzerdefinierten Kopierzuweisungsoperator  
   
--   No user-defined destructor.  
+-   Keinen benutzerdefinierten Destruktor  
   
-Therefore, you can recursively build POD structs and arrays that contain POD structs and arrays.  
+Aus diesem Grund können Sie rekursiv POD-Strukturen und -Arrays erstellen, die POD-Strukturen und -Arrays enthalten.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Beispiel  
   
 ```cpp  
 // std__type_traits__is_pod.cpp   
@@ -118,12 +119,12 @@ is_pod<int> == true
 is_pod<throws> == false  
 ```  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
 **Header:** \<type_traits>  
   
 **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
 [<type_traits>](../standard-library/type-traits.md)
 
 

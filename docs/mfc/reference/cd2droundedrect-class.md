@@ -1,5 +1,5 @@
 ---
-title: CD2DRoundedRect Class | Microsoft Docs
+title: CD2DRoundedRect-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,7 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DRoundedRect [MFC], CD2DRoundedRect
+- CD2DRoundedRect class
 ms.assetid: 06207fb5-e92b-41c0-bceb-b45d8f466531
 caps.latest.revision: 18
 author: mikeblome
@@ -35,15 +35,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: f4f7873f66c17f3e9b70bde7df91c3c34eae9a05
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: f9522f8555c37cd4a15b425c36cfa2d1b1b9851c
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="cd2droundedrect-class"></a>CD2DRoundedRect Class
-A wrapper for `D2D1_ROUNDED_RECT`.  
+# <a name="cd2droundedrect-class"></a>CD2DRoundedRect-Klasse
+Ein Wrapper für `D2D1_ROUNDED_RECT`.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,24 +51,24 @@ A wrapper for `D2D1_ROUNDED_RECT`.
 class CD2DRoundedRect : public D2D1_ROUNDED_RECT;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Mitglieder  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CD2DRoundedRect::CD2DRoundedRect](#cd2droundedrect)|Overloaded. Constructs a `CD2DRoundedRect` object from `D2D1_ROUNDED_RECT` object.|  
+|[CD2DRoundedRect::CD2DRoundedRect](#cd2droundedrect)|Überladen. Erstellt eine `CD2DRoundedRect` -Objekt aus `D2D1_ROUNDED_RECT` Objekt.|  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `D2D1_ROUNDED_RECT`  
   
  [CD2DRoundedRect](../../mfc/reference/cd2droundedrect-class.md)  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxrendertarget.h  
   
-##  <a name="cd2droundedrect"></a>  CD2DRoundedRect::CD2DRoundedRect  
- Constructs a CD2DRoundedRect object from CD2DRectF object.  
+##  <a name="cd2droundedrect"></a>CD2DRoundedRect::CD2DRoundedRect  
+ Erstellt ein CD2DRoundedRect-Objekt aus CD2DRectF-Objekt.  
   
 ```  
 CD2DRoundedRect(
@@ -79,13 +79,13 @@ CD2DRoundedRect(const D2D1_ROUNDED_RECT& rectIn);
 CD2DRoundedRect(const D2D1_ROUNDED_RECT* rectIn);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `rectIn`  
- source rectangle  
+ Rechteck  
   
  `sizeRadius`  
- radius size  
+ RADIUS-Größe  
   
-## <a name="see-also"></a>See Also  
- [Classes](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>Siehe auch  
+ [Klassen](../../mfc/reference/mfc-classes.md)
 

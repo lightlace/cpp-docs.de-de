@@ -1,5 +1,5 @@
 ---
-title: CFolderPickerDialog Class | Microsoft Docs
+title: Klasse CFolderPickerDialog | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,7 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CFolderPickerDialog [MFC], CFolderPickerDialog
+- CFolderPickerDialog class
 ms.assetid: 8db01684-dd1d-4e9c-989e-07a2318a8156
 caps.latest.revision: 22
 author: mikeblome
@@ -35,15 +35,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 9ffe67842dd3114a6877e3ade056b25ec7633da9
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 0d020544a16056d3f4db538750ed5a16b54f9a51
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="cfolderpickerdialog-class"></a>CFolderPickerDialog Class
-CFolderPickerDialog class implements CFileDialog in the folder picker mode.  
+# <a name="cfolderpickerdialog-class"></a>CFolderPickerDialog-Klasse
+CFolderPickerDialog-Klasse implementiert CFileDialog im ordnerauswahlmodus.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,19 +51,19 @@ CFolderPickerDialog class implements CFileDialog in the folder picker mode.
 class CFolderPickerDialog : public CFileDialog;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Mitglieder  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CFolderPickerDialog::~CFolderPickerDialog](#cfolderpickerdialog__~cfolderpickerdialog)|Destructor.|  
-|[CFolderPickerDialog::CFolderPickerDialog](#cfolderpickerdialog)|Constructor.|  
+|[CFolderPickerDialog:: ~ CFolderPickerDialog](#cfolderpickerdialog__~cfolderpickerdialog)|Destruktor.|  
+|[CFolderPickerDialog::CFolderPickerDialog](#cfolderpickerdialog)|Konstruktor.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
- [CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
+ [Von CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -77,11 +77,11 @@ class CFolderPickerDialog : public CFileDialog;
   
  `CFolderPickerDialog`  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxdlgs.h  
   
-##  <a name="cfolderpickerdialog"></a>  CFolderPickerDialog::CFolderPickerDialog  
- Constructor.  
+##  <a name="cfolderpickerdialog"></a>CFolderPickerDialog::CFolderPickerDialog  
+ Konstruktor.  
   
 ```  
 explicit CFolderPickerDialog(
@@ -91,30 +91,30 @@ explicit CFolderPickerDialog(
     DWORD dwSize = 0);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `lpszFolder`  
- Initial folder.  
+ Ausgangsordner.  
   
  `dwFlags`  
- A combination of one or more flags that allow you to customize the dialog box.  
+ Eine Kombination von ein oder mehrere Flags, die Sie im Dialogfeld anpassen können.  
   
  `pParentWnd`  
- A pointer to the dialog box object's parent or owner window.  
+ Ein Zeiger auf die Dialogfeldobjekt übergeordnete Fenster oder das Besitzer.  
   
  `dwSize`  
- The size of the OPENFILENAME structure.  
+ Die Größe der OPENFILENAME-Struktur.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="_dtorcfolderpickerdialog"></a>  CFolderPickerDialog::~CFolderPickerDialog  
- Destructor.  
+##  <a name="_dtorcfolderpickerdialog"></a>CFolderPickerDialog:: ~ CFolderPickerDialog  
+ Destruktor.  
   
 ```  
 virtual ~CFolderPickerDialog();
 ```  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-## <a name="see-also"></a>See Also  
- [Classes](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>Siehe auch  
+ [Klassen](../../mfc/reference/mfc-classes.md)
 

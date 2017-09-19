@@ -1,33 +1,29 @@
 ---
-title: '&lt;allocators&gt; operators | Microsoft Docs'
+title: '&lt;Allocators&gt;-Operatoren | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- allocators/std::operator!=
-- allocators/std::operator==
-dev_langs:
-- C++
+f1_keywords: []
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
 caps.latest.revision: 11
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: ef4366ab1d13e96a432de4929f86ef27f86e60e7
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 0a2da6c72e8900c0cea86c30c6b8511e6b256ff9
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="ltallocatorsgt-operators"></a>&lt;allocators&gt; operators
+# <a name="ltallocatorsgt-operators"></a>&lt;Allocators&gt;-Operatoren
 |||  
 |-|-|  
 |[operator!=](#op_neq)|[operator==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>  operator!=  
- Tests for inequality between allocator objects of a specified class.  
+##  <a name="op_neq"></a> operator!=  
+ Es wird auf Ungleichheit zwischen Zuweisungsobjekten einer bestimmten Klasse getestet.  
   
 ```
 template <class Type, class Sync>  
@@ -36,21 +32,21 @@ bool operator!=(
     const allocator_base<Type, Sync>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
   
-|Parameter|Description|  
+|Parameter|Beschreibung|  
 |---------------|-----------------|  
-|`left`|One of the allocator objects to be tested for inequality.|  
-|`right`|One of the allocator objects to be tested for inequality.|  
+|`left`|Eines der Zuweisungsobjekte, die auf Ungleichheit geprüft werden sollen.|  
+|`right`|Eines der Zuweisungsobjekte, die auf Ungleichheit geprüft werden sollen.|  
   
-### <a name="return-value"></a>Return Value  
- **true** if the allocator objects are not equal; **false** if allocator objects are equal.  
+### <a name="return-value"></a>Rückgabewert  
+ **TRUE**, wenn die Zuweisungsobjekte nicht gleich sind; **FALSE**, wenn die Zuweisungsobjekte gleich sind.  
   
-### <a name="remarks"></a>Remarks  
- The template operator returns `!(left == right)`.  
+### <a name="remarks"></a>Hinweise  
+ Der Vorlagenoperator gibt `!(left == right)` zurück.  
   
-##  <a name="op_eq_eq"></a>  operator==  
- Tests for equality between allocator objects of a specified class.  
+##  <a name="op_eq_eq"></a> operator==  
+ Es wird auf Gleichheit zwischen Zuweisungsobjekten einer bestimmten Klasse getestet.  
   
 ```
 template <class Type, class Sync>  
@@ -59,20 +55,20 @@ bool operator==(
     const allocator_base<Type, Sync>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
   
-|Parameter|Description|  
+|Parameter|Beschreibung|  
 |---------------|-----------------|  
-|`left`|One of the allocator objects to be tested for equality.|  
-|`right`|One of the allocator objects to be tested for equality.|  
+|`left`|Eines der Zuweisungsobjekte, die auf Gleichheit geprüft werden sollen.|  
+|`right`|Eines der Zuweisungsobjekte, die auf Gleichheit geprüft werden sollen.|  
   
-### <a name="return-value"></a>Return Value  
- **true** if the allocator objects are equal; **false** if allocator objects are not equal.  
+### <a name="return-value"></a>Rückgabewert  
+ **TRUE**, wenn die Zuweisungsobjekte gleich sind; **FALSE**, wenn die Zuweisungsobjekte nicht gleich sind.  
   
-### <a name="remarks"></a>Remarks  
- This template operator returns `left.equals(right)`.  
+### <a name="remarks"></a>Hinweise  
+ Dieser Vorlagenoperator gibt `left.equals(right)` zurück.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [\<allocators>](../standard-library/allocators-header.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: cache_chunklist Class | Microsoft Docs
+title: cache_chunklist-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - allocators/stdext::cache_chunklist
+- stdext::cache_chunklist
+- cache_chunklist
 - allocators/stdext::cache_chunklist::allocate
 - allocators/stdext::cache_chunklist::deallocate
 dev_langs:
 - C++
 helpviewer_keywords:
-- stdext::cache_chunklist
-- stdext::cache_chunklist [C++], allocate
-- stdext::cache_chunklist [C++], deallocate
+- cache_chunklist class
 ms.assetid: af19eccc-4ae7-4a34-bbb2-81e397424cb9
 caps.latest.revision: 17
 author: corob-msft
@@ -37,15 +37,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 6ffeb2a0ac7f1d5b6f45ea351e8448475b232b88
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 283186349d84225fdf9d1d52ec04817a12f3d27f
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="cachechunklist-class"></a>cache_chunklist Class
-Defines a [block allocator](../standard-library/allocators-header.md) that allocates and deallocates memory blocks of a single size.  
+# <a name="cachechunklist-class"></a>cache_chunklist-Klasse
+Definiert eine [Blockzuweisung](../standard-library/allocators-header.md), die Speicherblöcke einheitlicher Größe zuweist und freigibt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,79 +54,79 @@ template <std::size_t Sz, std::size_t Nelts = 20>
 class cache_chunklist
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
   
-|Parameter|Description|  
+|Parameter|Beschreibung|  
 |---------------|-----------------|  
-|`Sz`|The number of elements in the array to be allocated.|  
+|`Sz`|Die Anzahl der zuzuordnenden Elemente des Arrays.|  
   
-## <a name="remarks"></a>Remarks  
- This template class uses `operator new` to allocate chunks of raw memory, suballocating blocks to allocate storage for a memory block when needed; it stores deallocated memory blocks in a separate free list for each chunk, and uses `operator delete` to deallocate a chunk when none of its memory blocks is in use.  
+## <a name="remarks"></a>Hinweise  
+ Diese Vorlagenklasse verwendet `operator new`, um Blöcke von unformatiertem Speicher zuzuordnen, indem sie eine Unterzuweisung von Blöcken durchführt, um bei Bedarf Speicher für einen Speicherblock zuzuordnen. Sie speichert freigegebene Speicherblöcke in einer separate Freiliste für jeden Block und verwendet `operator delete`, um einen Block freizugeben, wenn keiner seiner Speicherblöcke verwendet wird.  
   
- Each memory block holds `Sz` bytes of usable memory and a pointer to the chunk that it belongs to. Each chunk holds `Nelts` memory blocks, three pointers, an int and the data that `operator new` and `operator delete` require.  
+ Jeder Speicherblock enthält `Sz` Bytes Speicherkapazität und einen Zeiger auf den Block, dem er angehört. Jeder Block enthält `Nelts` Speicherblöcke, drei Zeiger, eine ganze Zahl und die Daten, die `operator new` und `operator delete` benötigen.  
   
-### <a name="constructors"></a>Constructors  
-  
-|||  
-|-|-|  
-|[cache_chunklist](#cache_chunklist)|Constructs an object of type `cache_chunklist`.|  
-  
-### <a name="member-functions"></a>Member Functions  
+### <a name="constructors"></a>Konstruktoren  
   
 |||  
 |-|-|  
-|[allocate](#allocate)|Allocates a block of memory.|  
-|[deallocate](#deallocate)|Frees a specified number of objects from storage beginning at a specified position.|  
+|[cache_chunklist](#cache_chunklist)|Konstruiert ein Objekt vom Typ `cache_chunklist`.|  
   
-## <a name="requirements"></a>Requirements  
+### <a name="member-functions"></a>Memberfunktionen  
+  
+|||  
+|-|-|  
+|[allocate](#allocate)|Belegt einen Speicherblock.|  
+|[deallocate](#deallocate)|Gibt eine angegebene Anzahl von Objekten im Speicher frei, beginnend an einer angegebenen Position.|  
+  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<allocators>  
   
  **Namespace:** stdext  
   
-##  <a name="allocate"></a>  cache_chunklist::allocate  
- Allocates a block of memory.  
+##  <a name="allocate"></a> cache_chunklist::allocate  
+ Belegt einen Speicherblock.  
   
 ```
 void *allocate(std::size_t count);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
   
-|Parameter|Description|  
+|Parameter|Beschreibung|  
 |---------------|-----------------|  
-|`count`|The number of elements in the array to be allocated.|  
+|`count`|Die Anzahl der zuzuordnenden Elemente des Arrays.|  
   
-### <a name="return-value"></a>Return Value  
- A pointer to the allocated object.  
+### <a name="return-value"></a>Rückgabewert  
+ Zeiger auf das zugewiesene Objekt.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="cache_chunklist"></a>  cache_chunklist::cache_chunklist  
- Constructs an object of type `cache_chunklist`.  
+##  <a name="cache_chunklist"></a> cache_chunklist::cache_chunklist  
+ Konstruiert ein Objekt vom Typ `cache_chunklist`.  
   
 ```
 cache_chunklist();
 ```  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="deallocate"></a>  cache_chunklist::deallocate  
- Frees a specified number of objects from storage beginning at a specified position.  
+##  <a name="deallocate"></a> cache_chunklist::deallocate  
+ Gibt eine angegebene Anzahl von Objekten im Speicher frei, beginnend an einer angegebenen Position.  
   
 ```
 void deallocate(void* ptr, std::size_t count);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
   
-|Parameter|Description|  
+|Parameter|Beschreibung|  
 |---------------|-----------------|  
-|`ptr`|A pointer to the first object to be deallocated from storage.|  
-|`count`|The number of objects to be deallocated from storage.|  
+|`ptr`|Ein Zeiger auf das erste Objekt, dessen Zuweisung zum Speicher aufgehoben werden soll.|  
+|`count`|Die Anzahl von Objekten, deren Zuweisung zum Speicherplatz aufgehoben werden soll.|  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [\<allocators>](../standard-library/allocators-header.md)
 
 

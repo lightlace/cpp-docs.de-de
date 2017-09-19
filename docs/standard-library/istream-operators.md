@@ -1,31 +1,28 @@
 ---
-title: '&lt;istream&gt; operators | Microsoft Docs'
+title: '&lt;istream&gt;-Operatoren | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- istream/std::operator&gt;&gt;
-dev_langs:
-- C++
+f1_keywords: []
 ms.assetid: 7174da41-f301-4a34-b631-0ab918b188d2
 caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 99f20cdf8aa0a8fd19bac697fdac1bb2f642bf8e
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: f73a5e24fd3864a46ac0c50bbdb18a1089a4a05e
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="ltistreamgt-operators"></a>&lt;istream&gt; operators
+# <a name="ltistreamgt-operators"></a>&lt;iStream&gt;-Operatoren
  
-##  <a name="op_gt_gt"></a>  operator&gt;&gt;  
- Extracts characters and strings from the stream.  
+##  <a name="op_gt_gt"></a> Operator&gt;&gt;  
+ Extrahiert von Zeichenfolgen und Zeichen aus dem Stream.  
   
 ```  
 template <class Elem, class Tr>  
@@ -64,26 +61,26 @@ basic_istream<Elem, Tr>& operator>>(
     Type& val);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `Ch`  
- A character.  
+ Ein Zeichen.  
   
  `Istr`  
- A stream.  
+ Ein Stream.  
   
  `str`  
- A string.  
+ Eine Zeichenfolge.  
   
  `val`  
- A type.  
+ Ein Typ.  
   
-### <a name="return-value"></a>Return Value  
- The stream  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Stream  
   
-### <a name="remarks"></a>Remarks  
- The `basic_istream` class also defines several extraction operators. For more information, see [basic_istream::operator>>](../standard-library/basic-istream-class.md#op_gt_gt).  
+### <a name="remarks"></a>Hinweise  
+ Die `basic_istream`-Klasse definiert außerdem mehrere Extraktionsoperatoren. Weitere Informationen finden Sie unter [basic_istream::operator>>](../standard-library/basic-istream-class.md#op_gt_gt).  
   
- The template function:  
+ Die Vorlagenfunktion:  
   
 ```cpp  
 template <class Elem, class Tr>  
@@ -91,11 +88,11 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem* str);
 ```  
   
- extracts up to *N* - 1 elements and stores them in the array starting at _ *Str*. If `Istr`. [width](../standard-library/ios-base-class.md#width) is greater than zero, *N* is `Istr`. **width**; otherwise, it is the size of the largest array of **Elem** that can be declared. The function always stores the value **Elem()** after any extracted elements it stores. Extraction stops early on end of file, on a character with value **Elem**(0) (which is not extracted), or on any element (which is not extracted) that would be discarded by [ws](../standard-library/istream-functions.md#ws). If the function extracts no elements, it calls `Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). In any case, it calls `Istr`. **width**(0) and returns `Istr`.  
+ extrahiert bis zu *N*-1-Elemente und speichert sie in das Array, beginnend mit _*Str*. Wenn `Istr`. [Breite](../standard-library/ios-base-class.md#width) ist größer als 0 (null), *N* ist `Istr`. **Breite**ist, andernfalls ist die Größe des größten Arrays mit **Elem** , deklariert werden. Die Funktion speichert immer den Wert **Elem()** nach beliebigen extrahierten Elementen, die gespeichert werden. Die Extraktion hält früh am Ende der Datei, an einem Zeichen mit dem Wert **Elem**(0) (das nicht extrahiert wurde), oder an einem beliebigen Element (das nicht extrahiert wurde), welches von [ws](../standard-library/istream-functions.md#ws) verworfen werden würde. Wenn die Funktion keine Elemente extrahiert, ruft es `Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**) auf. In jedem Fall ruft `Istr`. **Breite**(0) und gibt `Istr`.  
   
- **Security Note** The null-terminated string being extracted from the input stream must not exceed the size of the destination buffer `str`. For more information, see [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
+ **Sicherheitshinweis** Die null-terminierte Zeichenfolge, die aus dem Eingabestream extrahiert wird, darf nicht die Größe des Zielpuffers `str` überschreiten. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
- The template function:  
+ Die Vorlagenfunktion:  
   
 ```cpp  
 template <class Elem, class Tr>  
@@ -103,9 +100,9 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem& Ch);
 ```  
   
- extracts an element, if it is possible, and stores it in `Ch`. Otherwise, it calls **is**. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). In any case, it returns `Istr`.  
+ extrahiert ein Element, wenn möglich, und speichert es in `Ch`. Andernfalls ruft **ist**. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**) auf. In jedem Fall gibt sie `Istr` zurück.  
   
- The template function:  
+ Die Vorlagenfunktion:  
   
 ```cpp  
 template <class Tr>  
@@ -113,9 +110,9 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, signed char* str);
 ```  
   
- returns `Istr` >> ( `char`**\***) `str`.  
+ gibt `Istr` >> ( `char`**\***) `str` zurück.  
   
- The template function:  
+ Die Vorlagenfunktion:  
   
 ```cpp  
 template <class Tr>  
@@ -123,9 +120,9 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, signed char& Ch);
 ```  
   
- returns `Istr` >> ( **char&**) `Ch`.  
+ gibt `Istr` >> ( **char&**) `Ch` zurück.  
   
- The template function:  
+ Die Vorlagenfunktion:  
   
 ```cpp  
 template <class Tr>  
@@ -133,9 +130,9 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, unsigned char* str);
 ```  
   
- returns `Istr` >> ( **char \***) `str`.  
+ gibt `Istr` >> ( **char \***) `str` zurück.  
   
- The template function:  
+ Die Vorlagenfunktion:  
   
 ```cpp  
 template <class Tr>  
@@ -143,9 +140,9 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, unsigned char& Ch);
 ```  
   
- returns `Istr` >> ( **char&**) `Ch`.  
+ gibt `Istr` >> ( **char&**) `Ch` zurück.  
   
- The template function:  
+ Die Vorlagenfunktion:  
   
 ```cpp  
 template <class Elem, class Tr, class Type>  
@@ -154,9 +151,9 @@ basic_istream<Elem, Tr>& operator>>(
     Type& val);
 ```  
   
- returns `Istr` `>>` `val` (and converts an `rvalue reference` to `Istr` to an `lvalue` in the process).  
+ gibt `Istr` `>>` `val` (und konvertiert ein `rvalue reference` auf `Istr` zu einer `lvalue` im Prozess).  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // istream_op_extract.cpp  
@@ -175,7 +172,7 @@ int main( )
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [\<istream>](../standard-library/istream.md)
 
 

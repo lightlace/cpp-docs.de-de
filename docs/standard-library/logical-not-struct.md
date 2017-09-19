@@ -1,14 +1,15 @@
 ---
-title: logical_not Struct | Microsoft Docs
+title: logical_not-Struktur | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- cpp-standard-libraries
+- devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- logical_not
 - xfunctional/std::logical_not
 dev_langs:
 - C++
@@ -35,15 +36,14 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 82640c0e316d9ea5619c19d49a7aa772178fc656
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: 2f84361ba71a50601349542797840e2d45ffad21
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="logicalnot-struct"></a>logical_not Struct
-A predefined function object that performs the logical not operation ( `operator!`) on its argument.  
+# <a name="logicalnot-struct"></a>logical_not-Struktur
+Ein vordefiniertes Funktionsobjekt, mit dem der logische NOT-Vorgang (`operator!`) auf das Argument ausgeführt werden kann.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -64,17 +64,17 @@ struct logical_not<void>
  };
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
  `Type`  
- Any type that supports an `operator!` that takes an operand of the specified or inferred type.  
+ Jeder Typ, der ein `operator!`-Element unterstützt, das einen Operanden des angegebenen oder abgeleiteten Typs akzeptiert.  
   
  `Left`  
- The operand of the logical not operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `Type`.  
+ Der Operand des logischen NOT-Vorgangs. Die nicht spezialisierte Vorlage besitzt ein lvalue-Verweisargument vom Typ `Type`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von lvalue und rvalue-Verweisargumenten des abgeleiteten Typs `Type`.  
   
-## <a name="return-value"></a>Return Value  
- The result of `!Left`. The specialized template does perfect forwarding of the result, which has the type that's returned by `operator!`.  
+## <a name="return-value"></a>Rückgabewert  
+ Das Ergebnis von `!``Left`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung des Ergebnisses mit dem von `operator!` zurückgegebenen Typs.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Beispiel  
   
 ```cpp  
 // functional_logical_not.cpp  
@@ -119,14 +119,14 @@ The deque with its values negated is:
  */  
 ```  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<functional>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)
 
 
 

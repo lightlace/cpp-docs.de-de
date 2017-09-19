@@ -1,5 +1,5 @@
 ---
-title: is_standard_layout Class | Microsoft Docs
+title: is_standard_layout-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- is_standard_layout
 - type_traits/std::is_standard_layout
 dev_langs:
 - C++
@@ -34,15 +35,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 6f8125469456645f08bd79488dc116cab9b040bd
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: 39b7198e020a2c520fb054687a7dadfdd8172826
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="isstandardlayout-class"></a>is_standard_layout Class
-Tests if type is a standard layout.  
+# <a name="isstandardlayout-class"></a>is_standard_layout-Klasse
+Testet, ob der Typ ein Standardlayout ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,21 +52,21 @@ template <class Ty>
 struct is_standard_layout;
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
   
-|Parameter|Description|  
+|Parameter|Beschreibung|  
 |---------------|-----------------|  
-|`Ty`|The type to query|  
+|`Ty`|Der abzufragende Typ.|  
   
-## <a name="remarks"></a>Remarks  
- An instance of this type predicate holds true if the type `Ty` is a class that has a standard layout of member objects in memory, otherwise it holds false.  
+## <a name="remarks"></a>Hinweise  
+ Eine Instanz dieses Typenprädikats gibt „true“ aus, wenn der Typ `Ty` eine Klasse ist, die über ein Standardlayout der Memberobjekte im Arbeitsspeicher verfügt; ansonsten wird „false“ ausgegeben.  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [<type_traits>](../standard-library/type-traits.md)
 
 

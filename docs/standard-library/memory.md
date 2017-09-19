@@ -1,5 +1,5 @@
 ---
-title: '&lt;memory&gt; | Microsoft Docs'
+title: '&lt;memory&gt; | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- memory/std::<memory>", "<memory>", "std::<memory>
+- memory/std::<memory>
+- std.<memory>
+- <memory>
+- std::<memory>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -33,15 +36,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 670209c4ee41a2f7c3829c55db18a8f29348b4b1
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 4704adafeefcb9acff9bdb41428075f34439cc39
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
-Defines a class, an operator, and several templates that help allocate and free objects.  
+Definiert eine Klasse, einen Operator und mehrere Vorlagen, die beim Zuordnen und Freigeben von Objekten helfen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,73 +53,73 @@ Defines a class, an operator, and several templates that help allocate and free 
   
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Mitglieder  
   
-### <a name="functions"></a>Functions  
-  
-|||  
-|-|-|  
-|[addressof](../standard-library/memory-functions.md#addressof)|Gets the true address of an object.|  
-|[align](../standard-library/memory-functions.md#align)|Returns a pointer to a range of a given size, based on the provided alignment and starting address.|  
-|[allocate_shared](../standard-library/memory-functions.md#allocate_shared)|Creates a `shared_ptr` to objects that are allocated and constructed for a given type with a specified allocator.|  
-|[const_pointer_cast](../standard-library/memory-functions.md#const_pointer_cast)|Const cast to `shared_ptr`.|  
-|[declare_no_pointers](../standard-library/memory-functions.md#declare_no_pointers)|Informs a garbage collector that the characters starting at a specified address and falling within the indicated block size contain no traceable pointers.|  
-|[declare_reachable](../standard-library/memory-functions.md#declare_reachable)|Informs garbage collection that the indicated address is to allocated storage and is reachable.|  
-|[default_delete](../standard-library/memory-functions.md#default_delete)|Deletes objects allocated with `operator new`. Suitable for use with `unique_ptr`.|  
-|[dynamic_pointer_cast](../standard-library/memory-functions.md#dynamic_pointer_cast)|Dynamic cast to `shared_ptr`.|  
-|[get_deleter](../standard-library/memory-functions.md#get_deleter)|Get deleter from `shared_ptr`.|  
-|[get_pointer_safety](../standard-library/memory-functions.md#get_pointer_safety)|Returns the type of pointer safety assumed by any garbage collector.|  
-|[get_temporary_buffer](../standard-library/memory-functions.md#get_temporary_buffer)|Allocates temporary storage for a sequence of elements that does not exceed a specified number of elements.|  
-|[make_shared](../standard-library/memory-functions.md#make_shared)|Creates and returns a `shared_ptr` that points to the allocated object constructed from zero or more arguments using the default allocator.|  
-|[make_unique](../standard-library/memory-functions.md#make_unique)|Creates and returns a [unique_ptr](../standard-library/unique-ptr-class.md) that points to the allocated object constructed from zero or more arguments.|  
-|[owner_less](../standard-library/memory-functions.md#owner_less)|Allows ownership-based mixed comparisons of shared and weak pointers.|  
-|[pointer_safety](../standard-library/memory-enums.md#pointer_safety)|An enumeration of all the possible return values for `get_pointer_safety`.|  
-|[return_temporary_buffer](../standard-library/memory-functions.md#return_temporary_buffer)|Deallocates the temporary memory that was allocated using the `get_temporary_buffer` template function.|  
-|[static_pointer_cast](../standard-library/memory-functions.md#static_pointer_cast)|Static cast to `shared_ptr`.|  
-|[swap](../standard-library/memory-functions.md#swap)|Swap two `shared_ptr` or `weak_ptr` objects.|  
-|[undeclare_no_pointers](../standard-library/memory-functions.md#undeclare_no_pointers)|Informs a garbage collector that the characters in the memory block defined by a base address pointer and block size may now contain traceable pointers.|  
-|[undeclare_reachable](../standard-library/memory-functions.md#undeclare_reachable)|Informs a `garbage_collector` that a specified memory location is not reachable.|  
-|[uninitialized_copy](../standard-library/memory-functions.md#uninitialized_copy)|Copies objects from a specified input range into an uninitialized destination range.|  
-|[uninitialized_copy_n](../standard-library/memory-functions.md#uninitialized_copy_n)|Creates a copy of a specified number of elements from an input iterator. The copies are put in a forward iterator.|  
-|[uninitialized_fill](../standard-library/memory-functions.md#uninitialized_fill)|Copies objects of a specified value into an uninitialized destination range.|  
-|[uninitialized_fill_n](../standard-library/memory-functions.md#uninitialized_fill_n)|Copies objects of a specified value into specified number of elements an uninitialized destination range.|  
-  
-### <a name="operators"></a>Operators  
+### <a name="functions"></a>Funktionen  
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/memory-operators.md#op_neq)|Tests for inequality between allocator objects of a specified class.|  
-|[operator==](../standard-library/memory-operators.md#op_eq_eq)|Tests for equality between allocator objects of a specified class.|  
-|[operator>=](../standard-library/memory-operators.md#op_gt_eq)|Tests for one allocator object being greater than or equal to a second allocator object, of a specified class.|  
-|[operator<](../standard-library/memory-operators.md#op_lt)|Tests for one object being less than a second object of a specified class.|  
-|[operator\<=](../standard-library/memory-operators.md#op_gt_eq)|Tests for one object being less than or equal to a second object of a specified class.|  
-|[operator>](../standard-library/memory-operators.md#op_gt)|Tests for one object being greater than a second object of a specified class.|  
-|[operator<<](../standard-library/memory-operators.md#op_lt_lt)|`shared_ptr` inserter.|  
+|[addressof](../standard-library/memory-functions.md#addressof)|Ruft die echte Adresse eines Objekts ab.|  
+|[align](../standard-library/memory-functions.md#align)|Gibt einen Zeiger auf einen Bereich einer angegebenen Größe zurück, basierend auf der angegebenen Ausrichtung und der Startadresse.|  
+|[allocate_shared](../standard-library/memory-functions.md#allocate_shared)|Erstellt `shared_ptr` auf Objekte, die einem angegebenen Typ mit einer angegebenen Zuordnung, zugeordnet und dafür erstellt werden.|  
+|[const_pointer_cast](../standard-library/memory-functions.md#const_pointer_cast)|Konstantenumwandlung in `shared_ptr`.|  
+|[declare_no_pointers](../standard-library/memory-functions.md#declare_no_pointers)|Einem Garbage Collector wird mitgeteilt, dass die bei einer bestimmten Adresse startenden und in der angegebenen Blockgröße fallenden Zeichen keine nachweisbaren Zeiger enthalten.|  
+|[declare_reachable](../standard-library/memory-functions.md#declare_reachable)|Der Garbage Collection wird mitgeteilt, dass die angegebene Adresse von zugewiesenem Speicher erreichbar ist.|  
+|[default_delete](../standard-library/memory-functions.md#default_delete)|Es werden Objekte gelöscht, die `operator new` zugeordnet sind. Kann mit `unique_ptr` verwendet werden.|  
+|[dynamic_pointer_cast](../standard-library/memory-functions.md#dynamic_pointer_cast)|Dynamische Umwandlung in `shared_ptr`.|  
+|[get_deleter](../standard-library/memory-functions.md#get_deleter)|Rufen Sie den Deleter von `shared_ptr` ab.|  
+|[get_pointer_safety](../standard-library/memory-functions.md#get_pointer_safety)|Gibt den Typ der Zeigersicherheit zurück, der von einem Garbage Collector angenommen wird.|  
+|[get_temporary_buffer](../standard-library/memory-functions.md#get_temporary_buffer)|Weist temporären Speicher für eine Elementsequenz zu, die eine bestimmte Anzahl von Elementen nicht überschreitet.|  
+|[make_shared](../standard-library/memory-functions.md#make_shared)|Erstellt `shared_ptr`, das auf die zugeordneten Objekte zeigt, die mithilfe der Standardbelegung von keinen oder mehreren Argumenten erstellt werden, oder gibt es zurück.|  
+|[make_unique](../standard-library/memory-functions.md#make_unique)|Erstellt [unique_ptr](../standard-library/unique-ptr-class.md), das auf die zugeordneten Objekt zeigt, die von keinem oder mehreren Argumenten erstellt werden, oder gibt es zurück.|  
+|[owner_less](../standard-library/memory-functions.md#owner_less)|Ermöglicht Mischvergleiche, die auf Besitz basieren, freigegebener und schwacher Zeiger.|  
+|[pointer_safety](../standard-library/memory-enums.md#pointer_safety)|Eine Enumeration aller möglichen Rückgabewerte für `get_pointer_safety`.|  
+|[return_temporary_buffer](../standard-library/memory-functions.md#return_temporary_buffer)|Gibt den temporären Speicher frei, der mithilfe der `get_temporary_buffer`-Vorlagenfunktion zugeordnet wurde.|  
+|[static_pointer_cast](../standard-library/memory-functions.md#static_pointer_cast)|Statische Umwandlung in `shared_ptr`.|  
+|[swap](../standard-library/memory-functions.md#swap)|Tauschen Sie zwei `shared_ptr` oder `weak_ptr`-Objekte.|  
+|[undeclare_no_pointers](../standard-library/memory-functions.md#undeclare_no_pointers)|Einem Garbage Collector wird mitgeteilt, dass die Zeichen im Speicherblock, der von einem Basisadressenzeiger und -blockgröße definiert wurde, jetzt möglicherweise nachweisbare Zeiger enthalten.|  
+|[undeclare_reachable](../standard-library/memory-functions.md#undeclare_reachable)|`garbage_collector` wird mitgeteilt, dass eine angegebene Speicheradresse nicht erreichbar ist.|  
+|[uninitialized_copy](../standard-library/memory-functions.md#uninitialized_copy)|Es werden Objekte aus einem angegebenen Eingabebereich in einen nicht initialisierten Zielbereich kopiert.|  
+|[uninitialized_copy_n](../standard-library/memory-functions.md#uninitialized_copy_n)|Eine Kopie einer angegebenen Anzahl von Elementen aus einem Eingabeiterator wird erstellt. Die Kopien werden in einen Forward-Iterator abgelegt.|  
+|[uninitialized_fill](../standard-library/memory-functions.md#uninitialized_fill)|Objekte eines angegebenen Werts werden in einen nicht initialisierten Zielbereich kopiert.|  
+|[uninitialized_fill_n](../standard-library/memory-functions.md#uninitialized_fill_n)|Objekte einer angegebenen Anzahl von Elementen werden in einen nicht initialisierten Zielbereich kopiert.|  
   
-### <a name="classes"></a>Classes  
+### <a name="operators"></a>Operatoren  
   
 |||  
 |-|-|  
-|[allocator](../standard-library/allocator-class.md)|The template class describes an object that manages storage allocation and freeing for arrays of objects of type **Type**.|  
-|[allocator_traits](../standard-library/allocator-traits-class.md)|Describes an object that determines all the information that is needed by an allocator-enabled container.|  
-|[auto_ptr](../standard-library/auto-ptr-class.md)|The template class describes an object that stores a pointer to an allocated object of type **Type \*** that ensures the object to which it points gets deleted when its enclosing auto_ptr gets destroyed.|  
-|[bad_weak_ptr](../standard-library/bad-weak-ptr-class.md)|Reports bad weak_ptr exception.|  
-|[enabled_shared_from_this](../standard-library/enable-shared-from-this-class.md)|Helps generate a `shared_ptr`.|  
-|[pointer_traits](../standard-library/pointer-traits-struct.md)|Supplies information that is needed by an object of template class `allocator_traits` to describe an allocator with pointer type `Ptr`.|  
-|[raw_storage_iterator](../standard-library/raw-storage-iterator-class.md)|An adaptor class that is provided to enable algorithms to store their results into uninitialized memory.|  
-|[shared_ptr](../standard-library/shared-ptr-class.md)|Wraps a reference-counted smart pointer around a dynamically allocated object.|  
-|[unique_ptr](../standard-library/unique-ptr-class.md)|Stores a pointer to an owned object. The pointer is owned by no other `unique_ptr`. The `unique_ptr` is destroyed when the owner is destroyed.|  
-|[weak_ptr](../standard-library/weak-ptr-class.md)|Wraps a weakly linked pointer.|  
+|[operator!=](../standard-library/memory-operators.md#op_neq)|Es wird auf Ungleichheit zwischen Zuweisungsobjekten einer bestimmten Klasse getestet.|  
+|[operator==](../standard-library/memory-operators.md#op_eq_eq)|Es wird auf Gleichheit zwischen Zuweisungsobjekten einer bestimmten Klasse getestet.|  
+|[operator>=](../standard-library/memory-operators.md#op_gt_eq)|Es wird darauf getestet, dass Zuweisungsobjekt größer als oder gleich einem zweiten Zuweisungsobjekt einer bestimmten Klasse ist.|  
+|[operator<](../standard-library/memory-operators.md#op_lt)|Es wird getestet, ob ein Objekt kleiner als ein zweites Objekt einer bestimmten Klasse ist.|  
+|[operator\<=](../standard-library/memory-operators.md#op_gt_eq)|Es wird darauf getestet, dass ein Objekt kleiner als oder gleich einem zweiten Objekt einer bestimmten Klasse ist.|  
+|[operator>](../standard-library/memory-operators.md#op_gt)|Es wird getestet, ob ein Objekt größer als ein zweites Objekt einer bestimmten Klasse ist.|  
+|[operator<<](../standard-library/memory-operators.md#op_lt_lt)|`shared_ptr`-Einfüger|  
   
-### <a name="specializations"></a>Specializations  
+### <a name="classes"></a>Klassen  
   
 |||  
 |-|-|  
-|[allocator\<void>](../standard-library/allocator-void-class.md)|A specialization of the template class allocator to type void, defining the only the member types that make sense in this specialized context.|  
+|[allocator](../standard-library/allocator-class.md)|Die Vorlagenklasse beschreibt ein Objekt, das die Speicherbelegung und -freigabe für Objektarrays des Typs **Type** verwaltet.|  
+|[allocator_traits](../standard-library/allocator-traits-class.md)|Beschreibt ein Objekt, das alle Informationen bestimmt, die für einen zuweisungsfähigen Container erforderlich ist.|  
+|[auto_ptr](../standard-library/auto-ptr-class.md)|Die Vorlagenklasse beschreibt ein Objekt, in dem ein Zeiger auf ein zugeordnetes Objekt des Typs **Type\*** gespeichert wird, das das Löschen des Objekts, auf das verwiesen wird, sicherstellt, wenn das einschließende „auto_ptr“ zerstört wird.|  
+|[bad_weak_ptr](../standard-library/bad-weak-ptr-class.md)|Meldet eine ungültige weak_ptr-Ausnahme.|  
+|[enabled_shared_from_this](../standard-library/enable-shared-from-this-class.md)|Hilft bei der Erstellung von `shared_ptr`.|  
+|[pointer_traits](../standard-library/pointer-traits-struct.md)|Stellt Informationen bereit, die für ein Objekt der Vorlagenklasse `allocator_traits` erforderlich sind, um eine Zuweisung mit Zeigertyp `Ptr` zu beschreiben.|  
+|[raw_storage_iterator](../standard-library/raw-storage-iterator-class.md)|Eine Adapterklasse, die bereitgestellt wird, um Algorithmen das Speichern ihrer Ergebnisse in nicht initialisiertem Speicher zu ermöglichen.|  
+|[shared_ptr](../standard-library/shared-ptr-class.md)|Umschließt einen intelligenten Zeiger mit Verweiszählung um ein dynamisch zugeordnetes Objekt.|  
+|[unique_ptr](../standard-library/unique-ptr-class.md)|Es wird ein Zeiger auf ein Objekt in Besitz gespeichert. Der Zeiger ist nicht im Besitz eines anderen `unique_ptr`-Elements. `unique_ptr` wird zerstört, wenn der Besitzer zerstört wird.|  
+|[weak_ptr](../standard-library/weak-ptr-class.md)|Umschließt einen schwach verknüpften Zeiger.|  
   
-## <a name="see-also"></a>See Also  
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+### <a name="specializations"></a>Spezialisierungen  
+  
+|||  
+|-|-|  
+|[allocator\<void>](../standard-library/allocator-void-class.md)|Eine Spezialisierung der Vorlagenklassenzuweisung zum Typ "void", die die einzigen Membertypen definiert, die in diesem speziellen Kontext sinnvoll sind.|  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

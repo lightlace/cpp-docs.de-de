@@ -1,5 +1,5 @@
 ---
-title: tuple_element Class | Microsoft Docs
+title: tuple_element-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,11 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- tuple_element", "std::tuple_element", "utility/std::tuple_element
+- tuple_element
+- std::tuple_element
+- utility/std::tuple_element
 dev_langs:
 - C++
 helpviewer_keywords:
-- ', '
+- tuple_element Class
 ms.assetid: 4c51a6c1-ce81-462f-8c6c-291d69f2b77c
 caps.latest.revision: 23
 author: corob-msft
@@ -33,15 +35,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 86d3e1e93b6a0bedbae20c2dacec7c393c0dd3a0
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
+ms.openlocfilehash: b5568eb951738b1c0c53321d7430c84db6bac9ec
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 03/07/2017
 
 ---
-# <a name="tupleelement-class"></a>tuple_element Class
-Wraps a `tuple` element. Specializations wrap `array` elements and `pair` elements.  
+# <a name="tupleelement-class"></a>tuple_element-Klasse
+Umschließt ein `tuple` -Element. Spezialisierungen umschließen `array`-Elemente und `pair`-Elemente.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -80,36 +82,36 @@ template <class T1, class T2>
    struct tuple_element<1, pair<T1, T2>>;
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
 *Index*  
-The index of the designated element.  
+Der Index des angegebenen Elements.  
   
 *Tuple*  
-The type of the tuple.  
+Der Typ des Tupels.  
   
 *Elem*  
-The type of an array element.  
+Der Typ eines Arrayelements.  
   
 *Size*  
-The size of the array.  
+Die Größe des Arrays.  
 
-*T1* The type of the first element in a pair.
+*T1* Der Typ des ersten Elements in einem Paar.
   
 *T2*  
-The type of the second element in a pair.
+Der Typ des zweiten Elements in einem Paar.
 
-## <a name="remarks"></a>Remarks  
-The template class `tuple_element` has a nested typedef `type` that is a synonym for the type at index `Index` of the tuple type `Tuple`.  
+## <a name="remarks"></a>Hinweise  
+Die Vorlagenklasse `tuple_element` verfügt über ein geschachteltes Typedef `type`, das ein Synonym für den Typ am Index `Index` des Tupeltyps `Tuple` ist.  
 
-The typedef `tuple_element_t` is a convenient alias for `tuple_element<Index, Tuple>::type`.  
+Das Typedef `tuple_element_t` ist ein zweckmäßiger Alias für `tuple_element<Index, Tuple>::type`.  
   
-The template class specialization for arrays provides an interface to an `array` as a tuple of `Size` elements, each of which has the same type. Each specialization has a nested typedef `type` that is a synonym for the type of the `Index` element of the `array`, with any const-volatile qualifications preserved.  
+Die Vorlagenklassenspezialisierung für Arrays bietet eine Schnittstelle zu einem `array` als Tupel von `Size`-Elementen mit demselben Typ. Jede Spezialisierung verfügt über ein geschachteltes Typedef `type` , das ein Synonym für den Typ des `Index` -Elements des `array`ist, wobei alle Qualifikationen von „const-volatile“ beibehalten werden.  
   
-The template specializations for `pair` types each provide a single member typedef, `type`, which is a synonym for the type of the element at the specified position in the pair, with any const and/or volatile qualifications preserved. The typedef `tuple_element_t` is a convenient alias for `tuple_element<N, pair<T1, T2>>::type`.  
+Die Vorlagenspezialisierungen für `pair`-Typen bieten eine einzelne Member-Typedef `type` an, die ein Synonym für den Typ des Elements an der angegebenen Position im Paar ist, wobei alle const- und/oder volatile-Qualifikationen beibehalten werden. Das Typedef `tuple_element_t` ist ein zweckmäßiger Alias für `tuple_element<N, pair<T1, T2>>::type`.  
   
-Use the [get Function &lt;utility&gt;](../standard-library/utility-functions.md#get) to return the element at a specified position, or of a specified type. 
+Verwenden der [get-Funktion &lt;Hilfsprogramm&gt; ](../standard-library/utility-functions.md#get) das Element an einer angegebenen Position oder eines angegebenen Typs zurückgeben. 
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Beispiel  
   
 ```cpp  
 #include <tuple>  
@@ -134,7 +136,7 @@ int main() {
 0 1.5 Tail  
 ```  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Beispiel  
   
 ```cpp  
 #include <array>   
@@ -164,7 +166,7 @@ int main()
  0  
 ```  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Beispiel  
   
 ```cpp  
 #include <utility>   
@@ -195,10 +197,10 @@ int main() {
  0 1.333  
 ```  
 
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<tuple>  
- **Header:** \<array> (for array specialization) **Header:** \<utility> (for pair specializations) **Namespace:** std  
+ **Header:** \<array> (für Arrayspezialisierung)  **Header:** \<utility> (für Paarspezialisierungen)  **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
 [tuple ](../standard-library/tuple-class.md)
 

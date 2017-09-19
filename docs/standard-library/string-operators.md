@@ -1,50 +1,31 @@
 ---
-title: '&lt;string&gt; operators | Microsoft Docs'
+title: '&lt;string&gt;-Operatoren | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- string/std::operator!=
-- string/std::operator&gt;
-- string/std::operator&gt;&gt;
-- string/std::operator&gt;=
-- string/std::operator&lt;
-- string/std::operator&lt;&lt;
-- string/std::operator&lt;=
-- string/std::operator+
-- string/std::operator==
-dev_langs:
-- C++
+f1_keywords: []
 ms.assetid: 33ce8f05-06c7-45d3-a0cb-bcd27cf93910
 caps.latest.revision: 11
 manager: ghogen
-helpviewer_keywords:
-- std::operator!= (string)
-- std::operator&gt; (string)
-- std::operator&gt;&gt; (string)
-- std::operator&gt;= (string)
-- std::operator&lt; (string)
-- std::operator&lt;&lt; (string)
-- std::operator&lt;= (string), std::operator== (string)
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 7df007a987c224f4a0e0fff25ebdf6b8cc8ec1c7
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 7ed2e8ebcfec6c7d592969208c155daa0e27724e
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="ltstringgt-operators"></a>&lt;string&gt; operators
+# <a name="ltstringgt-operators"></a>&lt;string&gt;-Operatoren
 ||||  
 |-|-|-|  
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;&gt;](#op_gt_gt)|  
 |[operator&gt;=](#op_gt_eq)|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|  
 |[operator&lt;=](#op_lt_eq)|[operator+](#op_add)|[operator==](#op_eq_eq)|  
   
-##  <a name="op_add"></a>  operator+  
- Concatenates two string objects.  
+##  <a name="op_add"></a> operator+  
+ Verkettet zwei Zeichenfolgenobjekte.  
   
 ```  
 template <class CharType, class Traits, class Allocator>  
@@ -108,20 +89,20 @@ basic_string<CharType, Traits, Allocator>&& operator+(
     const basic_string<CharType, Traits, Allocator>&& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `left`  
- A C-style string or an object of type `basic_string` to be concatenated.  
+ Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.  
   
  `right`  
- A C-style string or an object of type `basic_string` to be concatenated.  
+ Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.  
   
-### <a name="return-value"></a>Return Value  
- The string that is the concatenation of the input strings.  
+### <a name="return-value"></a>Rückgabewert  
+ Die Zeichenfolge, die die Verkettung der Eingabezeichenfolgen ist.  
   
-### <a name="remarks"></a>Remarks  
- The functions each overload `operator+` to concatenate two objects of template class [basic_string Class](../standard-library/basic-string-class.md). All effectively return `basic_string`\< **CharType**, **Traits**, **Allocator**>(_ *Left*). [append](../standard-library/basic-string-class.md#append)(\_ *Right*).  
+### <a name="remarks"></a>Hinweise  
+ Jede der Funktionen überlädt `operator+`, um zwei Objekte der Vorlagenklasse [basic_string-Klasse](../standard-library/basic-string-class.md) zu verketten. Alle effektiv return `basic_string` \< **CharType**, **Traits**, **Allocator**> (_ *Links*). [append](../standard-library/basic-string-class.md#append)(\_ *Right*).  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // string_op_con.cpp  
@@ -173,8 +154,8 @@ The string concatenating s1 & s3 is: antiheroine
 The string concatenating s1 & s3 is: antiheroine!  
 ```  
   
-##  <a name="op_neq"></a>  operator!=  
- Tests if the string object on the left side of the operator is not equal to the string object on the right side.  
+##  <a name="op_neq"></a> operator!=  
+ Testet, ob das Zeichenfolgenobjekt links vom Operator ungleich dem Zeichenfolgenobjekt rechts vom Operator ist.  
   
 ```  
 template <class CharType, class Traits, class Allocator>  
@@ -193,20 +174,20 @@ bool operator!=(
     const basic_string<CharType, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `left`  
- A C-style string or an object of type `basic_string` to be compared.  
+ Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.  
   
  `right`  
- A C-style string or an object of type `basic_string` to be compared.  
+ Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.  
   
-### <a name="return-value"></a>Return Value  
- **true** if the string object on the left side of the operator is not lexicographically equal to the string object on the right side; otherwise **false**.  
+### <a name="return-value"></a>Rückgabewert  
+ **TRUE**, wenn das Zeichenfolgenobjekt links vom Operator lexikografisch ungleich dem Zeichenfolgenobjekt rechts vom Operator ist, andernfalls **FALSE**.  
   
-### <a name="remarks"></a>Remarks  
- The comparison between string objects is based on a pairwise lexicographical comparison of their characters. Two strings are equal if they have the same number of characters and their respective character values are the same. Otherwise, they are unequal.  
+### <a name="remarks"></a>Hinweise  
+ Der Vergleich zwischen den Zeichenfolgenobjekten basiert auf einem paarweisen lexikografischen Vergleich ihrer Zeichen. Zwei Zeichenfolgen sind gleich, wenn die gleiche Anzahl von Zeichen und ihre jeweiligen Zeichenwerte identisch sind. Andernfalls sind sie ungleich.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // string_op_ne.cpp  
@@ -260,8 +241,8 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.  
 ```  
   
-##  <a name="op_eq_eq"></a>  operator==  
- Tests if the string object on the left side of the operator is equal to the string object on the right side.  
+##  <a name="op_eq_eq"></a> operator==  
+ Testet, ob das Zeichenfolgenobjekt links vom Operator gleich dem Zeichenfolgenobjekt rechts vom Operator ist.  
   
 ```  
 template <class CharType, class Traits, class Allocator>  
@@ -280,20 +261,20 @@ bool operator==(
     const basic_string<CharType, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `left`  
- A C-style string or an object of type `basic_string` to be compared.  
+ Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.  
   
  `right`  
- A C-style string or an object of type `basic_string` to be compared.  
+ Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.  
   
-### <a name="return-value"></a>Return Value  
- **true** if the string object on the left side of the operator is lexicographically equal to the string object on the right side; otherwise **false**.  
+### <a name="return-value"></a>Rückgabewert  
+ **TRUE**, wenn das Zeichenfolgenobjekt links vom Operator lexikografisch gleich dem Zeichenfolgenobjekt rechts vom Operator ist, andernfalls **FALSE**.  
   
-### <a name="remarks"></a>Remarks  
- The comparison between string objects is based on a pairwise lexicographical comparison of their characters. Two strings are equal if they have the same number of characters and their respective character values are the same. Otherwise, they are unequal.  
+### <a name="remarks"></a>Hinweise  
+ Der Vergleich zwischen den Zeichenfolgenobjekten basiert auf einem paarweisen lexikografischen Vergleich ihrer Zeichen. Zwei Zeichenfolgen sind gleich, wenn die gleiche Anzahl von Zeichen und ihre jeweiligen Zeichenwerte identisch sind. Andernfalls sind sie ungleich.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // string_op_eq.cpp  
@@ -347,8 +328,8 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.  
 ```  
   
-##  <a name="op_lt"></a>  operator&lt;  
- Tests if the string object on the left side of the operator is less than to the string object on the right side.  
+##  <a name="op_lt"></a> operator&lt;  
+ Testet, ob das Zeichenfolgenobjekt links vom Operator kleiner als das Zeichenfolgenobjekt rechts vom Operator ist.  
   
 ```  
 template <class CharType, class Traits, class Allocator>  
@@ -367,26 +348,26 @@ bool operator<(
     const basic_string<CharType, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `left`  
- A C-style string or an object of type `basic_string` to be compared.  
+ Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.  
   
  `right`  
- A C-style string or an object of type `basic_string` to be compared.  
+ Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.  
   
-### <a name="return-value"></a>Return Value  
- **true** if the string object on the left side of the operator is lexicographically less than the string object on the right side; otherwise **false**.  
+### <a name="return-value"></a>Rückgabewert  
+ **TRUE**, wenn das Zeichenfolgenobjekt links vom Operator lexikografisch kleiner als das Zeichenfolgenobjekt rechts vom Operator ist, andernfalls **FALSE**.  
   
-### <a name="remarks"></a>Remarks  
- A lexicographical comparison between strings compares them character by character until:  
+### <a name="remarks"></a>Hinweise  
+ Ein lexikografischer Vergleich zwischen Zeichenfolgen vergleicht diese zeichenweise, bis:  
   
--   It finds two corresponding characters unequal, and the result of their comparison is taken as the result of the comparison between the strings.  
+-   Er zwei korrespondierende ungleiche Zeichen findet, und deren Vergleich als Ergebnis des Vergleichs zweier Zeichenfolgen genommen wird.  
   
--   It finds no inequalities, but one string has more characters than the other, and the shorter string is considered less than the longer string.  
+-   Er keine Ungleichheiten findet, aber eine Zeichenfolge mehr Zeichen hat als die andere und die kürzere Zeichenfolge als kleiner als die längere Zeichenfolge betrachtet wird.  
   
--   It finds no inequalities and finds that the strings have the same number of characters, and so the strings are equal.  
+-   Er keine Ungleichheiten findet und feststellt, dass die Zeichenfolgen die gleiche Anzahl von Zeichen haben und daher gleich sind.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // string_op_lt.cpp  
@@ -439,8 +420,8 @@ The string s1 is not less than the string s3.
 The string s3 is less than the string s2.  
 ```  
   
-##  <a name="op_lt_eq"></a>  operator&lt;=  
- Tests if the string object on the left side of the operator is less than or equal to the string object on the right side.  
+##  <a name="op_lt_eq"></a> operator&lt;=  
+ Testet, ob das Zeichenfolgenobjekt links vom Operator kleiner als oder gleich dem Zeichenfolgenobjekt rechts vom Operator ist.  
   
 ```  
 template <class CharType, class Traits, class Allocator>  
@@ -459,26 +440,26 @@ bool operator<=(
     const basic_string<CharType, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `left`  
- A C-style string or an object of type `basic_string` to be compared.  
+ Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.  
   
  `right`  
- A C-style string or an object of type `basic_string` to be compared.  
+ Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.  
   
-### <a name="return-value"></a>Return Value  
- **true** if the string object on the left side of the operator is lexicographically less than or equal to the string object on the right side; otherwise **false**.  
+### <a name="return-value"></a>Rückgabewert  
+ **TRUE**, wenn das Zeichenfolgenobjekt links vom Operator lexikografisch kleiner als oder gleich dem Zeichenfolgenobjekt rechts vom Operator ist, andernfalls **FALSE**.  
   
-### <a name="remarks"></a>Remarks  
- A lexicographical comparison between strings compares them character by character until:  
+### <a name="remarks"></a>Hinweise  
+ Ein lexikografischer Vergleich zwischen Zeichenfolgen vergleicht diese zeichenweise, bis:  
   
--   It finds two corresponding characters unequal, and the result of their comparison is taken as the result of the comparison between the strings.  
+-   Er zwei korrespondierende ungleiche Zeichen findet, und deren Vergleich als Ergebnis des Vergleichs zweier Zeichenfolgen genommen wird.  
   
--   It finds no inequalities, but one string has more characters than the other, and the shorter string is considered less than the longer string.  
+-   Er keine Ungleichheiten findet, aber eine Zeichenfolge mehr Zeichen hat als die andere und die kürzere Zeichenfolge als kleiner als die längere Zeichenfolge betrachtet wird.  
   
--   It finds no inequalities and finds that the strings have the same number of characters, so the strings are equal.  
+-   Er keine Ungleichheiten findet und feststellt, dass die Zeichenfolgen die gleiche Anzahl von Zeichen haben und daher gleich sind.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // string_op_le.cpp  
@@ -538,8 +519,8 @@ The string s1 is less than or equal to the string s3.
 The string s2 is greater than the string s3.  
 ```  
   
-##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
- A template function that writes a string into the output stream.  
+##  <a name="op_lt_lt"></a> operator&lt;&lt;  
+ Eine Vorlagenfunktion, die eine Zeichenfolge in den Ausgabestream schreibt.  
   
 ```  
 template <class CharType, class Traits, class Allocator>  
@@ -548,21 +529,21 @@ basic_ostream<CharType, Traits>& operator<<(
     const basic_string<CharType, Traits, Allocator>& str);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  _Ostr  
- The output stream being written to.  
+ Der Ausgabestream, in den geschrieben wird.  
   
  `str`  
- The string to be entered into the output stream.  
+ Die in den Ausgabestream einzugebende Zeichenfolge.  
   
-### <a name="return-value"></a>Return Value  
- Writes the value of the specified string to the output stream `_Ostr`.  
+### <a name="return-value"></a>Rückgabewert  
+ Schreibt den Wert der angegebenen Zeichenfolge in den Ausgabestream `_Ostr`.  
   
-### <a name="remarks"></a>Remarks  
- The template function overloads **operator<<** to insert an object _ *Str* of template class [basic_string](../standard-library/basic-string-class.md) into the stream \_ *Ostr.* The function effectively returns \_ *Ostr*. **write**( \_ *Str*. [c_str](../standard-library/basic-string-class.md#c_str), \_ *Str*. [size](../standard-library/basic-string-class.md#size)).  
+### <a name="remarks"></a>Hinweise  
+ Die Vorlagenfunktion überlädt **operator<<**, um ein Objekt _ *Str* von Vorlagenklasse [basic_string](../standard-library/basic-string-class.md) in den Stream \_ *Ostr* einzufügen. Die Funktion gibt \_ *Ostr* zurück. **write**( \_ *Str*. [c_str](../standard-library/basic-string-class.md#c_str), \_ *Str*. [size](../standard-library/basic-string-class.md#size)).  
   
-##  <a name="op_gt"></a>  operator&gt;  
- Tests if the string object on the left side of the operator is greater than to the string object on the right side.  
+##  <a name="op_gt"></a> operator&gt;  
+ Testet, ob das Zeichenfolgenobjekt links vom Operator größer als das Zeichenfolgenobjekt rechts vom Operator ist.  
   
 ```  
 template <class CharType, class Traits, class Allocator>  
@@ -581,26 +562,26 @@ bool operator>(
     const basic_string<CharType, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `left`  
- A C-style string or an object of type `basic_string` to be compared.  
+ Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.  
   
  `right`  
- A C-style string or an object of type `basic_string` to be compared.  
+ Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.  
   
-### <a name="return-value"></a>Return Value  
- **true** if the string object on the left side of the operator is lexicographically greater than the string object on the right side; otherwise **false**.  
+### <a name="return-value"></a>Rückgabewert  
+ **TRUE**, wenn das Zeichenfolgenobjekt links vom Operator lexikografisch größer als das Zeichenfolgenobjekt rechts vom Operator ist, andernfalls **FALSE**.  
   
-### <a name="remarks"></a>Remarks  
- A lexicographical comparison between strings compares them character by character until:  
+### <a name="remarks"></a>Hinweise  
+ Ein lexikografischer Vergleich zwischen Zeichenfolgen vergleicht diese zeichenweise, bis:  
   
--   It finds two corresponding characters unequal, and the result of their comparison is taken as the result of the comparison between the strings.  
+-   Er zwei korrespondierende ungleiche Zeichen findet, und deren Vergleich als Ergebnis des Vergleichs zweier Zeichenfolgen genommen wird.  
   
--   It finds no inequalities, but one string has more characters than the other, and the shorter string is considered less than the longer string.  
+-   Er keine Ungleichheiten findet, aber eine Zeichenfolge mehr Zeichen hat als die andere und die kürzere Zeichenfolge als kleiner als die längere Zeichenfolge betrachtet wird.  
   
--   It finds no inequalities and finds that the strings have the same number of characters, and so the strings are equal.  
+-   Er keine Ungleichheiten findet und feststellt, dass die Zeichenfolgen die gleiche Anzahl von Zeichen haben und daher gleich sind.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // string_op_gt.cpp  
@@ -660,8 +641,8 @@ The string s3 is greater than the string s1.
 The string s2 is greater than the string s3.  
 ```  
   
-##  <a name="op_gt_eq"></a>  operator&gt;=  
- Tests if the string object on the left side of the operator is greater than or equal to the string object on the right side.  
+##  <a name="op_gt_eq"></a> operator&gt;=  
+ Testet, ob das Zeichenfolgenobjekt links vom Operator größer als oder gleich dem Zeichenfolgenobjekt rechts vom Operator ist.  
   
 ```  
 template <class CharType, class Traits, class Allocator>  
@@ -680,26 +661,26 @@ bool operator>=(
     const basic_string<CharType, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `left`  
- A C-style string or an object of type `basic_string` to be compared.  
+ Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.  
   
  `right`  
- A C-style string or an object of type `basic_string` to be compared.  
+ Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.  
   
-### <a name="return-value"></a>Return Value  
- **true** if the string object on the left side of the operator is lexicographically greater than or equal to the string object on the right side; otherwise **false**.  
+### <a name="return-value"></a>Rückgabewert  
+ **TRUE**, wenn das Zeichenfolgenobjekt links vom Operator lexikografisch größer als oder gleich dem Zeichenfolgenobjekt rechts vom Operator ist, andernfalls **FALSE**.  
   
-### <a name="remarks"></a>Remarks  
- A lexicographical comparison between strings compares them character by character until:  
+### <a name="remarks"></a>Hinweise  
+ Ein lexikografischer Vergleich zwischen Zeichenfolgen vergleicht diese zeichenweise, bis:  
   
--   It finds two corresponding characters unequal, and the result of their comparison is taken as the result of the comparison between the strings.  
+-   Er zwei korrespondierende ungleiche Zeichen findet, und deren Vergleich als Ergebnis des Vergleichs zweier Zeichenfolgen genommen wird.  
   
--   It finds no inequalities, but one string has more characters than the other, and the shorter string is considered less than the longer string.  
+-   Er keine Ungleichheiten findet, aber eine Zeichenfolge mehr Zeichen hat als die andere und die kürzere Zeichenfolge als kleiner als die längere Zeichenfolge betrachtet wird.  
   
--   It finds no inequalities and finds the strings have the same number of characters, and so the strings are equal.  
+-   Er keine Ungleichheiten findet und feststellt, dass die Zeichenfolgen die gleiche Anzahl von Zeichen haben und daher gleich sind.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // string_op_ge.cpp  
@@ -759,8 +740,8 @@ The string s3 is greater than or equal to the string s1.
 The string s2 is greater than or equal to the string s3.  
 ```  
   
-##  <a name="op_gt_gt"></a>  operator&gt;&gt;  
- A template function that reads a string from an input stream.  
+##  <a name="op_gt_gt"></a> operator&gt;&gt;  
+ Eine Vorlagenfunktion, die eine Zeichenfolge aus dem Eingabestream liest.  
   
 ```  
 template <class CharType, class Traits, class Allocator>  
@@ -769,32 +750,32 @@ basic_istream<CharType, Traits>& operator>>(
     basic_string<CharType, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `_Istr`  
- The input stream used to extract the sequence  
+ Der Eingabestream, mit dem die Sequenz extrahiert wird  
   
  `right`  
- The string that is being extracted from the input stream.  
+ Die Zeichenfolge, die aus dem Eingabestream extrahiert wird.  
   
-### <a name="return-value"></a>Return Value  
- Reads the value of the specified string from `_Istr` and returns it into `right`.  
+### <a name="return-value"></a>Rückgabewert  
+ Liest den Wert der angegebenen Zeichenfolge aus `_Istr` und gibt ihn in `right`.  
   
-### <a name="remarks"></a>Remarks  
- The operator skips the leading white spaces unless the `skipws` flag is set. It reads all the following characters until the next character is a white space or the end of the file is reached.  
+### <a name="remarks"></a>Hinweise  
+ Der Operator überspringt die führenden Leerzeichen, sofern das `skipws`-Flag nicht festgelegt ist. Es liest alle folgenden Zeichen, bis das nächste Zeichen ein Leerzeichen ist oder das Ende der Datei erreicht wird.  
   
- The template function overloads **operator>>** to replace the sequence controlled by `right` with a sequence of elements extracted from the stream `_Istr`. Extraction stops:  
+ Die Vorlagenfunktion überlädt **operator>>**, um die von `right` gesteuerte Sequenz durch eine Sequenz von Elementen zu ersetzen, die aus dem Stream `_Istr` extrahiert wurden. Die Extraktion stoppt:  
   
--   At end of file.  
+-   Am Ende der Datei.  
   
--   After the function extracts `_Istr`. **width** elements, if that value is nonzero.  
+-   Nachdem die Funktion `_Istr` extrahiert hat. **width** Elemente, wenn dieser Wert ungleich null ist.  
   
- After the function extracts `_Istr`. [max_size](../standard-library/basic-string-class.md#max_size) elements.  
+ Nachdem die Funktion `_Istr` extrahiert hat. [max_size](../standard-library/basic-string-class.md#max_size) Elemente.  
   
--   After the function extracts an element *ch* for which [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **CharType**> >( `getloc`). **is**( **ctype**\< **CharType**>:: **space**, *ch*) is true, in which case the character is put back.  
+-   Nachdem die Funktion ein Element extrahiert *ch* für die [Use_facet](../standard-library/basic-filebuf-class.md#open)< **Ctype** \< **CharType**>> ( `getloc`). **ist**( **Ctype** \< **CharType**>:: **Speicherplatz**, *ch*) ist "true" in diesem Fall das Zeichen wird zurückgesetzt.  
   
- If the function extracts no elements, it calls [setstate](../standard-library/basic-ios-class.md#setstate)( `ios_base::failbit`). In any case, it calls **istr**. **width**(0) and returns \* **this**.  
+ Wenn die Funktion keine Elemente extrahiert, ruft sie [setstate](../standard-library/basic-ios-class.md#setstate)( `ios_base::failbit`) auf. In jedem Fall ruft **Istr**. **Breite**(0) und gibt \* **dies**.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // string_op_read_.cpp  
@@ -813,6 +794,6 @@ int main( )
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [\<string>](../standard-library/string.md)
 

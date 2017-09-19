@@ -1,11 +1,11 @@
 ---
-title: CDatabase Class | Microsoft Docs
+title: CDatabase-Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- cpp-windows
+- devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -36,28 +36,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CDatabase [MFC], CDatabase
-- CDatabase [MFC], BeginTrans
-- CDatabase [MFC], BindParameters
-- CDatabase [MFC], Cancel
-- CDatabase [MFC], CanTransact
-- CDatabase [MFC], CanUpdate
-- CDatabase [MFC], Close
-- CDatabase [MFC], CommitTrans
-- CDatabase [MFC], ExecuteSQL
-- CDatabase [MFC], GetBookmarkPersistence
-- CDatabase [MFC], GetConnect
-- CDatabase [MFC], GetCursorCommitBehavior
-- CDatabase [MFC], GetCursorRollbackBehavior
-- CDatabase [MFC], GetDatabaseName
-- CDatabase [MFC], IsOpen
-- CDatabase [MFC], OnSetOptions
-- CDatabase [MFC], Open
-- CDatabase [MFC], OpenEx
-- CDatabase [MFC], Rollback
-- CDatabase [MFC], SetLoginTimeout
-- CDatabase [MFC], SetQueryTimeout
-- CDatabase [MFC], m_hdbc
+- database classes [C++], ODBC
+- MFC [C++], ODBC
+- ODBC [C++], CDatabase class
+- ODBC database class
+- database connections [C++], CDatabase class
+- CDatabase class
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
 caps.latest.revision: 24
 author: mikeblome
@@ -77,15 +61,14 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 767f5401bde4e6ef2e76e528b548b2435ff60ff6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: e7b151d83f4229586ad8787a326e332abb9fc79d
+ms.lasthandoff: 04/01/2017
 
 ---
-# <a name="cdatabase-class"></a>CDatabase Class
-Represents a connection to a data source, through which you can operate on the data source.  
+# <a name="cdatabase-class"></a>CDatabase-Klasse
+Stellt eine Verbindung mit einer Datenquelle dar, über welche die Datenquelle bearbeitet werden kann.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -93,363 +76,363 @@ Represents a connection to a data source, through which you can operate on the d
 class CDatabase : public CObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Mitglieder  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CDatabase::CDatabase](#cdatabase)|Constructs a `CDatabase` object. You must initialize the object by calling `OpenEx` or **Open**.|  
+|[CDatabase::CDatabase](#cdatabase)|Erstellt ein `CDatabase`-Objekt. Initialisieren Sie das Objekt, durch den Aufruf `OpenEx` oder **öffnen**.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CDatabase::BeginTrans](#begintrans)|Starts a "transaction" — a series of reversible calls to the `AddNew`, **Edit**, **Delete**, and **Update** member functions of class `CRecordset` — on the connected data source. The data source must support transactions for **BeginTrans** to have any effect.|  
-|[CDatabase::BindParameters](#bindparameters)|Allows you to bind parameters before calling `CDatabase::ExecuteSQL`.|  
-|[CDatabase::Cancel](#cancel)|Cancels an asynchronous operation or a process from a second thread.|  
-|[CDatabase::CanTransact](#cantransact)|Returns nonzero if the data source supports transactions.|  
-|[CDatabase::CanUpdate](#canupdate)|Returns nonzero if the `CDatabase` object is updatable (not read-only).|  
-|[CDatabase::Close](#close)|Closes the data source connection.|  
-|[CDatabase::CommitTrans](#committrans)|Completes a transaction begun by **BeginTrans**. Commands in the transaction that alter the data source are carried out.|  
-|[CDatabase::ExecuteSQL](#executesql)|Executes a SQL statement. No data records are returned.|  
-|[CDatabase::GetBookmarkPersistence](#getbookmarkpersistence)|Identifies the operations through which bookmarks persist on recordset objects.|  
-|[CDatabase::GetConnect](#getconnect)|Returns the ODBC connection string used to connect the `CDatabase` object to a data source.|  
-|[CDatabase::GetCursorCommitBehavior](#getcursorcommitbehavior)|Identifies the effect of committing a transaction on an open recordset object.|  
-|[CDatabase::GetCursorRollbackBehavior](#getcursorrollbackbehavior)|Identifies the effect of rolling back a transaction on an open recordset object.|  
-|[CDatabase::GetDatabaseName](#getdatabasename)|Returns the name of the database currently in use.|  
-|[CDatabase::IsOpen](#isopen)|Returns nonzero if the `CDatabase` object is currently connected to a data source.|  
-|[CDatabase::OnSetOptions](#onsetoptions)|Called by the framework to set standard connection options. The default implementation sets the query timeout value. You can establish these options ahead of time by calling `SetQueryTimeout`.|  
-|[CDatabase::Open](#open)|Establishes a connection to a data source (through an ODBC driver).|  
-|[CDatabase::OpenEx](#openex)|Establishes a connection to a data source (through an ODBC driver).|  
-|[CDatabase::Rollback](#rollback)|Reverses changes made during the current transaction. The data source returns to its previous state, as defined at the **BeginTrans** call, unaltered.|  
-|[CDatabase::SetLoginTimeout](#setlogintimeout)|Sets the number of seconds after which a data source connection attempt will time out.|  
-|[CDatabase::SetQueryTimeout](#setquerytimeout)|Sets the number of seconds after which database query operations will time out. Affects all subsequent recordset **Open**, `AddNew`, **Edit**, and **Delete** calls.|  
+|[CDatabase::BeginTrans](#begintrans)|Startet eine "Transaktion" – eine Reihe von umkehrbare Aufrufe an die `AddNew`, **bearbeiten**, **löschen**, und **Update** Memberfunktionen der Klasse `CRecordset` – auf der verbundenen Datenquelle. Die Datenquelle muss die Unterstützung von Transaktionen für **BeginTrans** wirkt sich nur.|  
+|[CDatabase::BindParameters](#bindparameters)|Ermöglicht Ihnen, Binden von Parametern vor dem Aufruf `CDatabase::ExecuteSQL`.|  
+|[CDatabase::Cancel](#cancel)|Bricht einen asynchronen Vorgang oder einen Prozess aus ein zweiter Thread ab.|  
+|[CDatabase::CanTransact](#cantransact)|Gibt einen Wert ungleich NULL, wenn die Datenquelle Transaktionen unterstützt.|  
+|[CDatabase::CanUpdate](#canupdate)|Gibt NULL zurück, wenn die `CDatabase` Objekt ist aktualisierbar (schreibgeschützt).|  
+|[CDatabase::Close](#close)|Schließt die Verbindung mit der Datenquelle.|  
+|[CDatabase:: CommitTrans](#committrans)|Schließt eine Transaktion begonnen, indem **BeginTrans**. Befehle in der Transaktion, die die Datenquelle ändern, werden durchgeführt.|  
+|[CDatabase:: ExecuteSQL](#executesql)|Führt eine SQL­Anweisung. Es werden keine Datensätze zurückgegeben.|  
+|[CDatabase:: GetBookmarkPersistence](#getbookmarkpersistence)|Identifiziert die Vorgänge, die über denen Lesezeichen Recordset-Objekte beibehalten werden.|  
+|[CDatabase::GetConnect](#getconnect)|Gibt die ODBC-Verbindungszeichenfolge zur Verbindung der `CDatabase` Objekt mit einer Datenquelle.|  
+|[GetCursorCommitBehavior](#getcursorcommitbehavior)|Identifiziert die Auswirkung der Commit einer Transaktion in einem geöffneten Recordset-Objekt.|  
+|[Rollback](#getcursorrollbackbehavior)|Identifiziert die Auswirkung von Rollback einer Transaktion in einem geöffneten Recordset-Objekt.|  
+|[CDatabase::GetDatabaseName](#getdatabasename)|Gibt den Namen der Datenbank, die derzeit in Verwendung zurück.|  
+|[CDatabase::IsOpen](#isopen)|Gibt NULL zurück, wenn die `CDatabase` -Objekt aktuell mit einer Datenquelle verbunden ist.|  
+|[CDatabase::OnSetOptions](#onsetoptions)|Wird aufgerufen, durch das Framework standard Verbindungsoptionen festlegen. Die standardmäßige Implementierung legt den Timeoutwert für Abfragen. Sie können diese Optionen voraus einrichten, durch den Aufruf `SetQueryTimeout`.|  
+|[CDatabase:: Open](#open)|Herstellen einer Verbindung mit einer Datenquelle (über einen ODBC-Treiber).|  
+|[CDatabase:: OpenEx](#openex)|Herstellen einer Verbindung mit einer Datenquelle (über einen ODBC-Treiber).|  
+|[CDatabase](#rollback)|Kehrt die während der aktuellen Transaktion vorgenommenen Änderungen. Gibt die Datenquelle den ursprünglichen Zustand zur definiert die **BeginTrans** Aufruf unverändert.|  
+|[CDatabase::SetLoginTimeout](#setlogintimeout)|Legt die Anzahl der Sekunden, nach dem ein Data Source-Verbindungsversuch einen Timeout beendet wird.|  
+|[CDatabase::SetQueryTimeout](#setquerytimeout)|Legt die Anzahl der Sekunden an, nach welcher Datenbank Vorgänge Abfragen durch einen Timeout beendet. Wirkt sich auf alle nachfolgenden Recordset **öffnen**, `AddNew`, **bearbeiten**, und **löschen** aufrufen.|  
   
-### <a name="public-data-members"></a>Public Data Members  
+### <a name="public-data-members"></a>Öffentliche Datenmember  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CDatabase::m_hdbc](#m_hdbc)|Open Database Connectivity (ODBC) connection handle to a data source. Type **HDBC**.|  
+|[CDatabase:: M_hdbc](#m_hdbc)|Open Database Connectivity (ODBC)-Verbindungshandle mit einer Datenquelle. Typ **HDBC**.|  
   
-## <a name="remarks"></a>Remarks  
- A data source is a specific instance of data hosted by some database management system (DBMS). Examples include Microsoft SQL Server, Microsoft Access, Borland dBASE, and xBASE. You can have one or more `CDatabase` objects active at a time in your application.  
+## <a name="remarks"></a>Hinweise  
+ Eine Datenquelle ist eine bestimmte Instanz von Daten, die von einigen Datenbank-Managementsystem (DBMS) gehostet wird. Beispiele für sind Microsoft SQL Server, Microsoft Access Borland dBASE und xBASE. Sie haben eine oder mehrere `CDatabase` Objekte, die aktiv zu einem Zeitpunkt in der Anwendung.  
   
 > [!NOTE]
->  If you are working with the Data Access Objects (DAO) classes rather than the Open Database Connectivity (ODBC) classes, use class [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) instead. For more information, see the article [Overview: Database Programming](../../data/data-access-programming-mfc-atl.md).  
+>  Wenn Sie mit den Klassen Datenzugriffsobjekte (DAO) statt der Open Database Connectivity (ODBC)-Klassen arbeiten, verwenden Sie die Klasse [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) stattdessen. Weitere Informationen finden Sie im Artikel [Overview: Datenbank-Programmierung](../../data/data-access-programming-mfc-atl.md).  
   
- To use `CDatabase`, construct a `CDatabase` object and call its `OpenEx` member function. This opens a connection. When you then construct `CRecordset` objects for operating on the connected data source, pass the recordset constructor a pointer to your `CDatabase` object. When you finish using the connection, call the **Close** member function and destroy the `CDatabase` object. **Close** closes any recordsets you have not closed previously.  
+ Mit `CDatabase`, erstellen eine `CDatabase` Objekt, und rufen die `OpenEx` Memberfunktion. Dadurch wird eine Verbindung geöffnet. Wenn Sie erstellen dann `CRecordset` Objekte für Vorgänge für die verbundene Datenquelle dem recordsetkonstruktor übergeben, einen Zeiger auf die `CDatabase` Objekt. Aufrufen, wenn Sie fertig sind, verwenden die Verbindung, die **schließen** Member-Funktion und zerstört der `CDatabase` Objekt. **Schließen** schließt alle Recordsets, die Sie zuvor nicht geschlossen.  
   
- For more information about `CDatabase`, see the articles [Data Source (ODBC)](../../data/odbc/data-source-odbc.md) and [Overview: Database Programming](../../data/data-access-programming-mfc-atl.md).  
+ Weitere Informationen zu `CDatabase`, finden Sie in den Artikeln [Datenquelle (ODBC)](../../data/odbc/data-source-odbc.md) und [Overview: Datenbank-Programmierung](../../data/data-access-programming-mfc-atl.md).  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CDatabase`  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxdb.h  
   
-##  <a name="begintrans"></a>  CDatabase::BeginTrans  
- Call this member function to begin a transaction with the connected data source.  
+##  <a name="begintrans"></a>CDatabase::BeginTrans  
+ Rufen Sie diese Memberfunktion zum Starten einer Transaktions mit der verbundenen Datenquelle.  
   
 ```  
 BOOL BeginTrans();
 ```  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if the call was successful and changes are committed only manually; otherwise 0.  
+### <a name="return-value"></a>Rückgabewert  
+ Wert ungleich NULL, wenn der Aufruf erfolgreich war, und Änderungen manuell nur ein Commit ausgeführt wurde sind; andernfalls 0.  
   
-### <a name="remarks"></a>Remarks  
- A transaction consists of one or more calls to the `AddNew`, **Edit**, **Delete**, and **Update** member functions of a `CRecordset` object. Before beginning a transaction, the `CDatabase` object must already have been connected to the data source by calling its `OpenEx` or **Open** member function. To end the transaction, call [CommitTrans](#committrans) to accept all changes to the data source (and carry them out) or call [Rollback](#rollback) to abort the entire transaction. Call **BeginTrans** after you open any recordsets involved in the transaction and as close to the actual update operations as possible.  
-  
-> [!CAUTION]
->  Depending on your ODBC driver, opening a recordset before calling **BeginTrans** may cause problems when calling **Rollback**. You should check the specific driver you are using. For example, when using the Microsoft Access driver included in the Microsoft ODBC Desktop Driver Pack 3.0, you must account for the Jet database engine's requirement that you should not begin a transaction on any database that has an open cursor. In the MFC database classes, an open cursor means an open `CRecordset` object. For more information, see [Technical Note 68](../../mfc/tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver.md).  
-  
- **BeginTrans** may also lock data records on the server, depending on the requested concurrency and the capabilities of the data source. For information about locking data, see the article [Recordset: Locking Records (ODBC)](../../data/odbc/recordset-locking-records-odbc.md).  
-  
- User-defined transactions are explained in the article [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).  
-  
- **BeginTrans** establishes the state to which the sequence of transactions can be rolled back (reversed). To establish a new state for rollbacks, commit any current transaction, then call **BeginTrans** again.  
+### <a name="remarks"></a>Hinweise  
+ Eine Transaktion besteht aus einem oder mehreren Aufrufen an die `AddNew`, **bearbeiten**, **löschen**, und **Update** Memberfunktionen von einem `CRecordset` Objekt. Vor Beginn einer Transaktions die `CDatabase` Objekt muss bereits angeschlossen wurden mit der Datenquelle durch Aufrufen seiner `OpenEx` oder **öffnen** Memberfunktion. Um die Transaktion zu beenden, rufen [CommitTrans](#committrans) akzeptieren alle Änderungen an der Datenquelle (und sie ausführt), oder rufen Sie [Rollback](#rollback) die gesamte Transaktion abgebrochen. Rufen Sie **BeginTrans** nach jeder der Transaktion beteiligten Recordsets öffnen und als in der Nähe des tatsächlichen update-Vorgänge wie möglich.  
   
 > [!CAUTION]
->  Calling **BeginTrans** again without calling **CommitTrans** or **Rollback** is an error.  
+>  Je nach ODBC-Treibers zum Öffnen eines Recordsets vor dem Aufruf **BeginTrans** kann Probleme verursachen, beim Aufrufen von **Rollback**. Überprüfen Sie die bestimmten Treiber, den Sie verwenden. Beispielsweise müssen bei Verwendung der Microsoft Access-Treiber, die in der Microsoft ODBC Desktop Driver Pack 3.0 enthalten Sie Jet-Datenbankmodul-Anforderung zu berücksichtigen, dass Sie keine Transaktion für eine beliebige Datenbank beginnen soll, die einen geöffneten Cursor hat. In den MFC-Datenbankklassen bedeutet ein geöffneten Cursor ein offenes `CRecordset` Objekt. Weitere Informationen finden Sie unter [technischen Hinweis 68](../../mfc/tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver.md).  
   
- Call the [CanTransact](#cantransact) member function to determine whether your driver supports transactions for a given database. You should also call [GetCursorCommitBehavior](#getcursorcommitbehavior) and [GetCursorRollbackBehavior](#getcursorrollbackbehavior) to determine the support for cursor preservation.  
+ **BeginTrans** auch Sperren unter Umständen von Datensätzen auf dem Server, abhängig von der angeforderten Parallelität und die Funktionen der Datenquelle. Informationen zum Sperren von Daten, finden Sie im Artikel [Recordset: Sperren von Datensätzen (ODBC)](../../data/odbc/recordset-locking-records-odbc.md).  
   
- For more information about transactions, see the article [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).  
+ Benutzerdefinierte Transaktionen werden in diesem Artikel erläutert [Transaktion (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-### <a name="example"></a>Example  
-  See the article [Transaction: Performing a Transaction in a Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
+ **BeginTrans** richtet den Zustand, der die Reihenfolge der Transaktionen kann Rollback (rückgängig gemacht). Um einen neuen Zustand für Rollbacks einzurichten, übernehmen alle aktuellen Transaktionen, rufen Sie anschließend **BeginTrans** erneut aus.  
   
-##  <a name="bindparameters"></a>  CDatabase::BindParameters  
- Override `BindParameters` when you need to bind parameters before calling [CDatabase::ExecuteSQL](#executesql).  
+> [!CAUTION]
+>  Aufrufen von **BeginTrans** erneut ohne Aufruf **CommitTrans** oder **Rollback** ist ein Fehler.  
+  
+ Rufen Sie die [CanTransact](#cantransact) Member-Funktion, um zu bestimmen, ob der Treiber für eine bestimmte Datenbank Transaktionen unterstützt. Sie sollten auch aufrufen, [GetCursorCommitBehavior](#getcursorcommitbehavior) und [GetCursorRollbackBehavior](#getcursorrollbackbehavior) um die Unterstützung für die Beibehaltung der Cursor zu bestimmen.  
+  
+ Weitere Informationen über Transaktionen finden Sie im Artikel [Transaktion (ODBC)](../../data/odbc/transaction-odbc.md).  
+  
+### <a name="example"></a>Beispiel  
+  Finden Sie im Artikel [Transaktion: Ausführen einer Transaktion in einem Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
+  
+##  <a name="bindparameters"></a>CDatabase::BindParameters  
+ Überschreiben Sie `BindParameters` müssen Sie Parameter vor dem Aufruf binden [CDatabase:: ExecuteSQL](#executesql).  
   
 ```  
 virtual void BindParameters(HSTMT hstmt);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `hstmt`  
- The ODBC statement handle for which you want to bind parameters.  
+ Das Handle der ODBC-Anweisung für das Parameter gebunden werden soll.  
   
-### <a name="remarks"></a>Remarks  
- This approach is useful when you do not need the result set from a stored procedure.  
+### <a name="remarks"></a>Hinweise  
+ Dieser Ansatz ist nützlich, wenn Sie nicht, dass das Ergebnis benötigen von einer gespeicherten Prozedur festgelegt.  
   
- In your override, call **SQLBindParameters** and related ODBC functions to bind the parameters. MFC calls your override before your call to `ExecuteSQL`. You do not need to call **SQLPrepare**; `ExecuteSQL` calls **SQLExecDirect** and destroys the **hstmt**, which is used only once.  
+ Rufen Sie in der Außerkraftsetzung **SQLBindParameters** und zugehörigen ODBC-Funktionen, um die Parameter zu binden. MFC Ruf die Außerkraftsetzung vor dem Aufruf von `ExecuteSQL`. Sie müssen nicht aufrufen **SQLPrepare**; `ExecuteSQL` Aufrufe **SQLExecDirect** und zerstört der **Befehls beschäftigt**, der nur einmal verwendet wird.  
   
-##  <a name="cancel"></a>  CDatabase::Cancel  
- Call this member function to request that the data source cancel either an asynchronous operation in progress or a process from a second thread.  
+##  <a name="cancel"></a>CDatabase::Cancel  
+ Rufen Sie diese Memberfunktion zum anfordern, dass die Datenquelle eines asynchronen Vorgangs oder eines Prozesses aus ein zweiter Thread "Abbrechen".  
   
 ```  
 void Cancel();
 ```  
   
-### <a name="remarks"></a>Remarks  
- Note that the MFC ODBC classes no longer use asynchronous processing; to perform an asychronous operation, you must directly call the ODBC API function [SQLSetConnectOption](https://msdn.microsoft.com/library/ms713564.aspx). For more information, see [Asynchronous Execution](https://msdn.microsoft.com/library/ms713563.aspx) in the Windows SDK.  
+### <a name="remarks"></a>Hinweise  
+ Beachten Sie, dass die MFC-ODBC-Klassen die asynchronen Verarbeitung nicht mehr verwenden. Um eine asynchrone Operation auszuführen, müssen Sie direkt aufrufen die ODBC-API-Funktion [SQLSetConnectOption](https://msdn.microsoft.com/library/ms713564.aspx). Weitere Informationen finden Sie unter [asynchrone Ausführung](https://msdn.microsoft.com/library/ms713563.aspx) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="cantransact"></a>  CDatabase::CanTransact  
- Call this member function to determine whether the database allows transactions.  
+##  <a name="cantransact"></a>CDatabase::CanTransact  
+ Rufen Sie diese Memberfunktion, um zu bestimmen, ob die Datenbank Transaktionen zulässt.  
   
 ```  
 BOOL CanTransact() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if recordsets using this `CDatabase` object allow transactions; otherwise 0.  
+### <a name="return-value"></a>Rückgabewert  
+ Einen Wert ungleich NULL Recordsets, die mit diesem `CDatabase` Transaktionen werden kann, andernfalls 0.  
   
-### <a name="remarks"></a>Remarks  
- For information about transactions, see the article [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).  
+### <a name="remarks"></a>Hinweise  
+ Informationen über Transaktionen finden Sie im Artikel [Transaktion (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-##  <a name="canupdate"></a>  CDatabase::CanUpdate  
- Call this member function to determine whether the `CDatabase` object allows updates.  
+##  <a name="canupdate"></a>CDatabase::CanUpdate  
+ Rufen Sie diese Memberfunktion, um zu bestimmen, ob die `CDatabase` Objekt lässt Updates.  
   
 ```  
 BOOL CanUpdate() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if the `CDatabase` object allows updates; otherwise 0, indicating either that you passed **TRUE** in `bReadOnly` when you opened the `CDatabase` object or that the data source itself is read-only. The data source is read-only if a call to the ODBC API function **SQLGetInfo** for **SQL_DATASOURCE_READ_ONLY** returns "y".  
+### <a name="return-value"></a>Rückgabewert  
+ Einen Wert ungleich null der `CDatabase` Objekt lässt Updates; andernfalls 0, der angibt, entweder, den Sie übergeben **"true"** in `bReadOnly` beim Öffnen Sie die `CDatabase` Objekt oder die Datenquelle selbst ist schreibgeschützt. Die Datenquelle ist schreibgeschützt, wenn ein Aufruf an die ODBC-API-Funktion **SQLGetInfo** für **SQL_DATASOURCE_READ_ONLY** gibt "y" zurück.  
   
-### <a name="remarks"></a>Remarks  
- Not all drivers support updates.  
+### <a name="remarks"></a>Hinweise  
+ Nicht alle Treiber unterstützen Updates.  
   
-##  <a name="cdatabase"></a>  CDatabase::CDatabase  
- Constructs a `CDatabase` object.  
+##  <a name="cdatabase"></a>CDatabase::CDatabase  
+ Erstellt ein `CDatabase`-Objekt.  
   
 ```  
 CDatabase();
 ```  
   
-### <a name="remarks"></a>Remarks  
- After constructing the object, you must call its `OpenEx` or **Open** member function to establish a connection to a specified data source.  
+### <a name="remarks"></a>Hinweise  
+ Nach dem Erstellen des Objekts, rufen Sie die `OpenEx` oder **öffnen** Memberfunktion versucht, eine Verbindung mit einer bestimmten Datenquelle herzustellen.  
   
- You may find it convenient to embed the `CDatabase` object in your document class.  
+ Sie könnten praktischerweise So betten Sie ein die `CDatabase` Objekt in Ihrem Dokumentklasse.  
   
-### <a name="example"></a>Example  
- This example illustrates using `CDatabase` in a `CDocument`-derived class.  
+### <a name="example"></a>Beispiel  
+ In diesem Beispiel wird die Verwendung `CDatabase` in einem `CDocument`-Klasse.  
   
- [!code-cpp[NVC_MFCDatabase#9](../../mfc/codesnippet/cpp/cdatabase-class_1.h)]  
+ [!code-cpp[NVC_MFCDatabase 9](../../mfc/codesnippet/cpp/cdatabase-class_1.h)]  
   
- [!code-cpp[NVC_MFCDatabase#10](../../mfc/codesnippet/cpp/cdatabase-class_2.cpp)]  
+ [!code-cpp[NVC_MFCDatabase #10](../../mfc/codesnippet/cpp/cdatabase-class_2.cpp)]  
   
-##  <a name="close"></a>  CDatabase::Close  
- Call this member function if you want to disconnect from a data source.  
+##  <a name="close"></a>CDatabase::Close  
+ Rufen Sie diese Memberfunktion auf, wenn aus einer Datenquelle getrennt werden soll.  
   
 ```  
 virtual void Close();
 ```  
   
-### <a name="remarks"></a>Remarks  
- You must close any recordsets associated with the `CDatabase` object before you call this member function. Because **Close** does not destroy the `CDatabase` object, you can reuse the object by opening a new connection to the same data source or a different data source.  
+### <a name="remarks"></a>Hinweise  
+ Sie müssen alle zugeordneten Recordsets schließen die `CDatabase` -Objekt, bevor Sie diese Memberfunktion aufrufen. Da **schließen** nicht zerstört die `CDatabase` -Objekt, Sie können jedoch stattdessen das wiederverwenden, indem Sie eine neue Verbindung mit derselben Datenquelle oder eine andere Datenquelle zu öffnen.  
   
- All pending `AddNew` or **Edit** statements of recordsets using the database are canceled, and all pending transactions are rolled back. Any recordsets dependent on the `CDatabase` object are left in an undefined state.  
+ Alle ausstehenden `AddNew` oder **bearbeiten** -Anweisungen des Recordsets mit der Datenbank abgebrochen, und alle anstehenden Transaktionen zurückgesetzt. Alle Recordsets abhängig von der `CDatabase` Objekt befinden sich in einem nicht definierten Zustand versetzt.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFCDatabase#12](../../mfc/codesnippet/cpp/cdatabase-class_3.cpp)]  
+### <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_MFCDatabase #12](../../mfc/codesnippet/cpp/cdatabase-class_3.cpp)]  
   
-##  <a name="committrans"></a>  CDatabase::CommitTrans  
- Call this member function upon completing transactions.  
+##  <a name="committrans"></a>CDatabase:: CommitTrans  
+ Rufen Sie diese Memberfunktion nach Abschluss von Transaktionen.  
   
 ```  
 BOOL CommitTrans();
 ```  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if the updates were successfully committed; otherwise 0. If **CommitTrans** fails, the state of the data source is undefined. You must check the data to determine its state.  
+### <a name="return-value"></a>Rückgabewert  
+ Wert ungleich NULL, wenn die Updates erfolgreich ein Commit ausgeführt wurde; andernfalls 0. Wenn **CommitTrans** ein Fehler auftritt, der der Zustand der Datenquelle ist nicht definiert. Überprüfen Sie die Daten, um dessen Status zu bestimmen.  
   
-### <a name="remarks"></a>Remarks  
- A transaction consists of a series of calls to the `AddNew`, **Edit**, **Delete**, and **Update** member functions of a `CRecordset` object that began with a call to the [BeginTrans](#begintrans) member function. **CommitTrans** commits the transaction. By default, updates are committed immediately; calling **BeginTrans** causes commitment of updates to be delayed until **CommitTrans** is called.  
+### <a name="remarks"></a>Hinweise  
+ Eine Transaktion besteht aus einer Reihe von Aufrufen an die `AddNew`, **bearbeiten**, **löschen**, und **Update** Memberfunktionen von einer `CRecordset` -Objekt, das mit einem Aufruf von begann die [BeginTrans](#begintrans) Memberfunktion. **CommitTrans** führt einen Commit der Transaktion. Standardmäßig werden Updates sofort ein Commit ausgeführt wurde; Aufrufen von **BeginTrans** Verpflichtung Updates bis verzögert wird bewirkt, dass **CommitTrans** aufgerufen wird.  
   
- Until you call **CommitTrans** to end a transaction, you can call the [Rollback](#rollback) member function to abort the transaction and leave the data source in its original state. To begin a new transaction, call **BeginTrans** again.  
+ Bis zum Aufruf von **CommitTrans** um eine Transaktion zu beenden, rufen Sie die [Rollback](#rollback) Memberfunktion versucht, die Transaktion abzubrechen und die Datenquelle in den ursprünglichen Zustand belassen. Um eine neue Transaktion zu starten, rufen **BeginTrans** erneut aus.  
   
- For more information about transactions, see the article [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).  
+ Weitere Informationen über Transaktionen finden Sie im Artikel [Transaktion (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-### <a name="example"></a>Example  
-  See the article [Transaction: Performing a Transaction in a Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
+### <a name="example"></a>Beispiel  
+  Finden Sie im Artikel [Transaktion: Ausführen einer Transaktion in einem Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
   
-##  <a name="executesql"></a>  CDatabase::ExecuteSQL  
- Call this member function when you need to execute a SQL command directly.  
+##  <a name="executesql"></a>CDatabase:: ExecuteSQL  
+ Rufen Sie diese Memberfunktion auf, wenn einen SQL-Befehl direkt ausgeführt werden müssen.  
   
 ```  
 void ExecuteSQL(LPCTSTR lpszSQL);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `lpszSQL`  
- Pointer to a null-terminated string containing a valid SQL command to execute. You can pass a [CString](../../atl-mfc-shared/reference/cstringt-class.md).  
+ Ein Zeiger auf eine Null-terminierte Zeichenfolge mit einem gültigen SQL‑Befehl ausführen. Sie können übergeben, eine [CString](../../atl-mfc-shared/reference/cstringt-class.md).  
   
-### <a name="remarks"></a>Remarks  
- Create the command as a null-terminated string. `ExecuteSQL` does not return data records. If you want to operate on records, use a recordset object instead.  
+### <a name="remarks"></a>Hinweise  
+ Erstellen Sie den Befehl als eine Null-terminierte Zeichenfolge an. `ExecuteSQL`gibt keine Datensätze zurück. Wenn Sie Datensätze arbeiten möchten, verwenden Sie stattdessen ein Recordset-Objekt.  
   
- Most of your commands for a data source are issued through recordset objects, which support commands for selecting data, inserting new records, deleting records, and editing records. However, not all ODBC functionality is directly supported by the database classes, so you may at times need to make a direct SQL call with `ExecuteSQL`.  
+ Über Recordset-Objekte, die Befehle für die Daten auswählen, Einfügen neuer Datensätze, Löschen von Datensätzen und Bearbeiten von Datensätzen zu unterstützen, werden die meisten Befehle für eine Datenquelle ausgegeben. Nicht alle ODBC-Funktionalität wird jedoch direkt unterstützt von den Datenbankklassen, daher müssen Sie möglicherweise gelegentlich stellen einen direkte SQL-Aufruf mit `ExecuteSQL`.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFCDatabase#13](../../mfc/codesnippet/cpp/cdatabase-class_4.cpp)]  
+### <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_MFCDatabase #13](../../mfc/codesnippet/cpp/cdatabase-class_4.cpp)]  
   
-##  <a name="getbookmarkpersistence"></a>  CDatabase::GetBookmarkPersistence  
- Call this member function to determine the persistence of bookmarks on a recordset object after certain operations.  
+##  <a name="getbookmarkpersistence"></a>CDatabase:: GetBookmarkPersistence  
+ Rufen Sie diese Member-Funktion auf, um die Beibehaltung von Lesezeichen auf einem recordset-Objekt nach bestimmten Vorgängen festzulegen.  
   
 ```  
 DWORD GetBookmarkPersistence() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A bitmask that identifies the operations through which bookmarks persist on a recordset object. For details, see Remarks.  
+### <a name="return-value"></a>Rückgabewert  
+ Eine Bitmaske, die die Vorgänge identifiziert, mit denen Lesezeichen auf einem recordset-Objekt beibehalten werden. Einzelheiten finden Sie unter "Hinweise".  
   
-### <a name="remarks"></a>Remarks  
- For example, if you call `CRecordset::GetBookmark` and then call `CRecordset::Requery`, the bookmark obtained from `GetBookmark` may no longer be valid. You should call `GetBookmarkPersistence` before calling `CRecordset::SetBookmark`.  
+### <a name="remarks"></a>Hinweise  
+ Wenn Sie beispielsweise `CRecordset::GetBookmark` und dann `CRecordset::Requery` aufrufen, ist das Lesezeichen von `GetBookmark` womöglich nicht mehr gültig. Sie sollten `GetBookmarkPersistence` vor `CRecordset::SetBookmark` aufrufen.  
   
- The following table lists the bitmask values that can be combined for the return value of `GetBookmarkPersistence`.  
+ Die folgende Tabelle enthält die Bitmaskenwerten, die für den Rückgabewert von `GetBookmarkPersistence` kombiniert werden können.  
   
-|Bitmask value|Bookmark persistence|  
+|Bitmaskenwert|Lesezeichenbeibehaltung|  
 |-------------------|--------------------------|  
-|`SQL_BP_CLOSE`|Bookmarks are valid after a **Requery** operation.|  
-|`SQL_BP_DELETE`|The bookmark for a row is valid after a **Delete** operation on that row.|  
-|`SQL_BP_DROP`|Bookmarks are valid after a **Close** operation.|  
-|`SQL_BP_SCROLL`|Bookmarks are valid after any **Move** operation. This simply identifies if bookmarks are supported on the recordset, as returned by `CRecordset::CanBookmark`.|  
-|`SQL_BP_TRANSACTION`|Bookmarks are valid after a transaction is committed or rolled back.|  
-|`SQL_BP_UPDATE`|The bookmark for a row is valid after an **Update** operation on that row.|  
-|`SQL_BP_OTHER_HSTMT`|Bookmarks associated with one recordset object are valid on a second recordset.|  
+|`SQL_BP_CLOSE`|Lesezeichen sind gültig, nachdem ein **Requery** Vorgang.|  
+|`SQL_BP_DELETE`|Das Lesezeichen für eine Zeile ist gültig, nachdem ein **löschen** -Vorgang in dieser Zeile.|  
+|`SQL_BP_DROP`|Lesezeichen sind gültig, nachdem ein **schließen** Vorgang.|  
+|`SQL_BP_SCROLL`|Lesezeichen sind nach einem beliebigen gültigen **verschieben** Vorgang. Damit wird mühelos identifiziert, ob Lesezeichen im Datensatz unterstützt werden, wie von `CRecordset::CanBookmark` zurückgegeben.|  
+|`SQL_BP_TRANSACTION`|Lesezeichen sind gültig, nachdem eine Transaktion übernommen oder zurückgesetzt wurde.|  
+|`SQL_BP_UPDATE`|Das Lesezeichen für eine Zeile ist gültig, nachdem ein **Update** -Vorgang in dieser Zeile.|  
+|`SQL_BP_OTHER_HSTMT`|Lesezeichen, die mit einem recordset-Objekt verbunden sind, sind in einem zweiten Datensatz gültig.|  
   
- For more information about this return value, see the ODBC API function **SQLGetInfo** in the Windows SDK. For more information about bookmarks, see the article [Recordset: Bookmarks and Absolute Positions (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).  
+ Weitere Informationen zu diesem Rückgabewert finden Sie unter der ODBC-API-Funktion **SQLGetInfo** in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Weitere Informationen zu Lesezeichen, finden Sie im Artikel [Recordset: Lesezeichen und Absolute Positionen (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).  
   
-##  <a name="getconnect"></a>  CDatabase::GetConnect  
- Call this member function to retrieve the connection string used during the call to `OpenEx` or `Open` that connected the `CDatabase` object to a data source.  
+##  <a name="getconnect"></a>CDatabase::GetConnect  
+ Rufen Sie diese Memberfunktion auf, um die während des Aufrufs von `OpenEx` oder `Open` verwendete Verbindungszeichenfolge abzurufen, die das `CDatabase`-Objekt mit einer Datenquelle verbunden hat.  
   
 ```  
 const CString GetConnect() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A `const`[CString](../../atl-mfc-shared/reference/cstringt-class.md) containing the connection string if `OpenEx` or `Open` has been called; otherwise, an empty string.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein `const` [CString](../../atl-mfc-shared/reference/cstringt-class.md) , enthält die Verbindungszeichenfolge, wenn `OpenEx` oder `Open` wurde aufgerufen wurde, andernfalls eine leere Zeichenfolge.  
   
-### <a name="remarks"></a>Remarks  
- See [CDatabase::Open](#open) for a description of how the connection string is created.  
+### <a name="remarks"></a>Hinweise  
+ Finden Sie unter [CDatabase:: Open](#open) eine Beschreibung, wie die Verbindungszeichenfolge erstellt wird.  
   
-##  <a name="getcursorcommitbehavior"></a>  CDatabase::GetCursorCommitBehavior  
- Call this member function to determine how a [CommitTrans](#committrans) operation affects cursors on open recordset objects.  
+##  <a name="getcursorcommitbehavior"></a>GetCursorCommitBehavior  
+ Rufen Sie diese Memberfunktion, um zu bestimmen, wie eine [CommitTrans](#committrans) Vorgang wirkt sich auf die Cursor bei geöffneten Recordset-Objekte.  
   
 ```  
 int GetCursorCommitBehavior() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A value indicating the effect of transactions on open recordset objects. For details, see Remarks.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Wert, der angibt, der Auswirkungen von Transaktionen auf geöffneten Recordset-Objekte. Einzelheiten finden Sie unter "Hinweise".  
   
-### <a name="remarks"></a>Remarks  
- The following table lists the possible return values for `GetCursorCommitBehavior` and the corresponding effect on the open recordset.  
+### <a name="remarks"></a>Hinweise  
+ Die folgende Tabelle listet die möglichen Rückgabewerte für `GetCursorCommitBehavior` und die entsprechenden Auswirkungen auf das Recordset geöffnet.  
   
-|Return value|Effect on CRecordset objects|  
+|Rückgabewert|Auswirkung auf die CRecordset-Objekte|  
 |------------------|----------------------------------|  
-|`SQL_CB_CLOSE`|Call `CRecordset::Requery` immediately following the transaction commit.|  
-|`SQL_CB_DELETE`|Call `CRecordset::Close` immediately following the transaction commit.|  
-|`SQL_CB_PRESERVE`|Proceed normally with `CRecordset` operations.|  
+|`SQL_CB_CLOSE`|Rufen Sie `CRecordset::Requery` unmittelbar nach dem Transaktionscommit.|  
+|`SQL_CB_DELETE`|Rufen Sie `CRecordset::Close` unmittelbar nach dem Transaktionscommit.|  
+|`SQL_CB_PRESERVE`|Normal fort `CRecordset` Vorgänge.|  
   
- For more information about this return value, see the ODBC API function **SQLGetInfo** in the Windows SDK. For more information about transactions, see the article [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).  
+ Weitere Informationen zu diesem Rückgabewert finden Sie unter der ODBC-API-Funktion **SQLGetInfo** in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Weitere Informationen über Transaktionen finden Sie im Artikel [Transaktion (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-##  <a name="getcursorrollbackbehavior"></a>  CDatabase::GetCursorRollbackBehavior  
- Call this member function to determine how a [Rollback](#rollback) operation affects cursors on open recordset objects.  
+##  <a name="getcursorrollbackbehavior"></a>Rollback  
+ Rufen Sie diese Memberfunktion, um zu bestimmen, wie eine [Rollback](#rollback) Vorgang wirkt sich auf die Cursor bei geöffneten Recordset-Objekte.  
   
 ```  
 int GetCursorRollbackBehavior() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A value indicating the effect of transactions on open recordset objects. For details, see Remarks.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Wert, der angibt, der Auswirkungen von Transaktionen auf geöffneten Recordset-Objekte. Einzelheiten finden Sie unter "Hinweise".  
   
-### <a name="remarks"></a>Remarks  
- The following table lists the possible return values for `GetCursorRollbackBehavior` and the corresponding effect on the open recordset.  
+### <a name="remarks"></a>Hinweise  
+ Die folgende Tabelle listet die möglichen Rückgabewerte für `GetCursorRollbackBehavior` und die entsprechenden Auswirkungen auf das Recordset geöffnet.  
   
-|Return value|Effect on CRecordset objects|  
+|Rückgabewert|Auswirkung auf die CRecordset-Objekte|  
 |------------------|----------------------------------|  
-|`SQL_CB_CLOSE`|Call `CRecordset::Requery` immediately following the transaction rollback.|  
-|`SQL_CB_DELETE`|Call `CRecordset::Close` immediately following the transaction rollback.|  
-|`SQL_CB_PRESERVE`|Proceed normally with `CRecordset` operations.|  
+|`SQL_CB_CLOSE`|Rufen Sie `CRecordset::Requery` unmittelbar nach dem Transaktionsrollback.|  
+|`SQL_CB_DELETE`|Rufen Sie `CRecordset::Close` unmittelbar nach dem Transaktionsrollback.|  
+|`SQL_CB_PRESERVE`|Normal fort `CRecordset` Vorgänge.|  
   
- For more information about this return value, see the ODBC API function **SQLGetInfo** in the Windows SDK. For more information about transactions, see the article [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).  
+ Weitere Informationen zu diesem Rückgabewert finden Sie unter der ODBC-API-Funktion **SQLGetInfo** in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Weitere Informationen über Transaktionen finden Sie im Artikel [Transaktion (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-##  <a name="getdatabasename"></a>  CDatabase::GetDatabaseName  
- Call this member function to retrieve the name of the currently connected database (provided that the data source defines a named object called "database").  
+##  <a name="getdatabasename"></a>CDatabase::GetDatabaseName  
+ Rufen Sie diese Memberfunktion um den Namen der derzeit verbundenen Datenbank abgerufen werden (vorausgesetzt, dass die Datenquelle ein benanntes Objekt mit dem Namen "Datenbank" definiert).  
   
 ```  
 CString GetDatabaseName() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A [CString](../../atl-mfc-shared/reference/cstringt-class.md) containing the database name if successful; otherwise, an empty `CString`.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) , den Datenbanknamen enthält, wenn erfolgreich; andernfalls, eine leere `CString`.  
   
-### <a name="remarks"></a>Remarks  
- This is not the same as the data source name (DSN) specified in the `OpenEx` or **Open** call. What `GetDatabaseName` returns depends on ODBC. In general, a database is a collection of tables. If this entity has a name, `GetDatabaseName` returns it.  
+### <a name="remarks"></a>Hinweise  
+ Dies ist nicht identisch mit der Datenquellenname (DSN), angegeben der `OpenEx` oder **öffnen** aufrufen. Was `GetDatabaseName` gibt hängt von ODBC. Im Allgemeinen ist eine Datenbank, eine Auflistung von Tabellen. Wenn diese Entität einen Namen besitzt, `GetDatabaseName` wird zurückgegeben.  
   
- You might, for example, want to display this name in a heading. If an error occurs while retrieving the name from ODBC, `GetDatabaseName` returns an empty **Cstring**.  
+ Sie sollten z. B. diesen Namen in einer Überschrift angezeigt. Bei einem beim Abrufen des Namens von ODBC Fehler, `GetDatabaseName` gibt ein leeres **Cstring**.  
   
-##  <a name="isopen"></a>  CDatabase::IsOpen  
- Call this member function to determine whether the `CDatabase` object is currently connected to a data source.  
+##  <a name="isopen"></a>CDatabase::IsOpen  
+ Rufen Sie diese Memberfunktion, um zu bestimmen, ob die `CDatabase` -Objekt aktuell mit einer Datenquelle verbunden ist.  
   
 ```  
 BOOL IsOpen() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if the `CDatabase` object is currently connected; otherwise 0.  
+### <a name="return-value"></a>Rückgabewert  
+ Einen Wert ungleich null der `CDatabase` Objekt ist momentan verbunden; andernfalls 0.  
   
-##  <a name="m_hdbc"></a>  CDatabase::m_hdbc  
- Contains a public handle to an ODBC data source connection — a "connection handle."  
+##  <a name="m_hdbc"></a>CDatabase:: M_hdbc  
+ Ein öffentlicher Handle für eine ODBC-datenquellenverbindung enthält – ein "Verbindungshandle".  
   
-### <a name="remarks"></a>Remarks  
- Normally, you will have no need to access this member variable directly. Instead, the framework allocates the handle when you call `OpenEx` or **Open**. The framework deallocates the handle when you call the **delete** operator on the `CDatabase` object. Note that the **Close** member function does not deallocate the handle.  
+### <a name="remarks"></a>Hinweise  
+ Normalerweise müssen Sie keine auf diese Membervariable direkt zugegriffen werden muss. Stattdessen das Framework das Anweisungshandle zugeordnet, beim Aufrufen von `OpenEx` oder **öffnen**. Das Framework das Handle freigegeben, beim Aufrufen der **löschen** Operator auf die `CDatabase` Objekt. Beachten Sie, dass die **schließen** Memberfunktion das Handle nicht freigeben.  
   
- Under some circumstances, however, you may need to use the handle directly. For example, if you need to call ODBC API functions directly rather than through class `CDatabase`, you may need a connection handle to pass as a parameter. See the code example below.  
+ In einigen Fällen jedoch, Sie müssen möglicherweise das Handle direkt verwenden. Angenommen, Sie ODBC-API-Funktionen direkt anstatt über Klasse aufrufen müssen `CDatabase`, möglicherweise ein Verbindungshandle als Parameter übergeben. Finden Sie im folgenden Codebeispiel wird ein.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFCDatabase#15](../../mfc/codesnippet/cpp/cdatabase-class_5.cpp)]  
+### <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_MFCDatabase #15](../../mfc/codesnippet/cpp/cdatabase-class_5.cpp)]  
   
-##  <a name="onsetoptions"></a>  CDatabase::OnSetOptions  
- The framework calls this member function when directly executing a SQL statement with the `ExecuteSQL` member function.  
+##  <a name="onsetoptions"></a>CDatabase::OnSetOptions  
+ Das Framework ruft diese Memberfunktion auf, wenn eine SQL-Anweisung mit direkt Ausführen der `ExecuteSQL` Memberfunktion.  
   
 ```  
 virtual void OnSetOptions(HSTMT hstmt);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `hstmt`  
- The ODBC statement handle for which options are being set.  
+ Das Handle der ODBC-Anweisung für das Optionen festgelegt werden.  
   
-### <a name="remarks"></a>Remarks  
- `CRecordset::OnSetOptions` also calls this member function.  
+### <a name="remarks"></a>Hinweise  
+ `CRecordset::OnSetOptions`Außerdem wird diese Memberfunktion aufgerufen.  
   
- `OnSetOptions` sets the login timeout value. If there have been previous calls to the `SetQueryTimeout` and member function, `OnSetOptions` reflects the current values; otherwise, it sets default values.  
+ `OnSetOptions`Legt den Wert für das Anmeldungstimeout an. Wenn vorherigen Aufrufe von wurden die `SetQueryTimeout` und Memberfunktion, `OnSetOptions` gibt die aktuellen Werten; andernfalls, legt Standardwerte fest.  
   
 > [!NOTE]
->  Prior to MFC 4.2, `OnSetOptions` also set the processing mode to either snychronous or asynchronous. Beginning with MFC 4.2, all operations are synchronous. To perform an asynchronous operation, you must make a direct call to the ODBC API function **SQLSetPos**.  
+>  Vor MFC-4.2 `OnSetOptions` den Verarbeitungsmodus auch festlegen, um entweder Snychronous oder asynchron. Ab MFC 4.2, sind alle Vorgänge synchron. Um einen asynchronen Vorgang ausführen zu können, müssen Sie einen direkten Aufruf der ODBC-API-Funktion, **SQLSetPos**.  
   
- You do not need to override `OnSetOptions` to change the timeout value. Instead, to customize the query timeout value, call `SetQueryTimeout` before creating a recordset; `OnSetOptions` will use the new value. The values set apply to subsequent operations on all recordsets or direct SQL calls.  
+ Sie müssen nicht außer Kraft setzen `OnSetOptions` so ändern Sie den Timeoutwert. Rufen Sie stattdessen zum Anpassen der Timeoutwert für Abfragen `SetQueryTimeout` vor dem Erstellen eines Recordsets; `OnSetOptions` verwendet den neuen Wert. Die festgelegten Werte gelten für nachfolgende Operationen auf allen Recordsets oder direkte SQL-Aufrufe.  
   
- Override `OnSetOptions` if you want to set additional options. Your override should call the base class `OnSetOptions` either before or after you call the ODBC API function **SQLSetStmtOption**. Follow the method illustrated in the framework's default implementation of `OnSetOptions`.  
+ Überschreiben Sie `OnSetOptions` , wenn Sie zusätzliche Optionen festlegen möchten. Ihre Überschreibung der Basisklasse aufrufen sollte `OnSetOptions` vor oder nach dem Aufruf der ODBC-API-Funktion **SQLSetStmtOption**. Führen Sie die Methode in der Framework-Standardimplementierung von `OnSetOptions`.  
   
-##  <a name="open"></a>  CDatabase::Open  
- Call this member function to initialize a newly constructed `CDatabase` object.  
+##  <a name="open"></a>CDatabase:: Open  
+ Rufen Sie diese Memberfunktion zum Initialisieren einer neu erstellten `CDatabase` Objekt.  
   
 ```  
 virtual BOOL Open(
@@ -460,44 +443,44 @@ virtual BOOL Open(
     BOOL bUseCursorLib = TRUE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `lpszDSN`  
- Specifies a data source name — a name registered with ODBC through the ODBC Administrator program. If a DSN value is specified in `lpszConnect` (in the form "DSN=\<data-source>"), it must not be specified again in `lpszDSN`. In this case, `lpszDSN` should be **NULL**. Otherwise, you can pass **NULL** if you want to present the user with a Data Source dialog box in which the user can select a data source. For further information, see Remarks.  
+ Gibt einen Datenquellennamen – ein Namen, die mit ODBC mithilfe der ODBC-Administratorprogramm registriert. Wenn in ein DSN-Wert angegeben ist `lpszConnect` (im Format "DSN =\<Data Source->"), müssen nicht erneut angegeben werden `lpszDSN`. In diesem Fall `lpszDSN` muss **NULL**. Andernfalls können Sie übergeben **NULL** gegebenenfalls die Benutzer mit einer Datenquelle (Dialogfeld) dar, in dem der Benutzer eine Datenquelle auswählen kann. Weitere Informationen finden Sie unter "Hinweise".  
   
  `bExclusive`  
- Not supported in this version of the class library. Currently, an assertion fails if this parameter is **TRUE**. The data source is always opened as shared (not exclusive).  
+ In dieser Version der Klassenbibliothek unterstützt nicht. Derzeit ist eine Assertion fehlschlägt, wenn dieser Parameter ist **"true"**. Die Datenquelle ist immer geöffnet, wie freigegebene (nicht exklusiv).  
   
  `bReadOnly`  
- **TRUE** if you intend the connection to be read-only and to prohibit updates to the data source. All dependent recordsets inherit this attribute. The default value is **FALSE**.  
+ **"True"** Wenn Sie beabsichtigen, dass die Verbindung schreibgeschützt sein und mit der Datenquelle Updates verhindert werden soll. Alle abhängigen Recordsets erben dieses Attribut. Der Standardwert ist **"false"**.  
   
  `lpszConnect`  
- Specifies a connection string. The connection string concatenates information, possibly including a data source name, a user ID valid on the data source, a user authentication string (password, if the data source requires one), and other information. The whole connection string must be prefixed by the string "ODBC;" (uppercase or lowercase). The "ODBC;" string is used to indicate that the connection is to an ODBC data source; this is for upward compatibility when future versions of the class library might support non-ODBC data sources.  
+ Gibt eine Verbindungszeichenfolge an. Die Verbindungszeichenfolge verkettet Informationen, einschließlich möglicherweise einen Datenquellennamen, eine Benutzer-ID gültig für die Datenquelle, eine Benutzer-Authentifizierung-Zeichenfolge (Kennwort, falls die Datenquelle eines benötigt) und andere Informationen. Die gesamte Verbindungszeichenfolge muss durch die Zeichenfolge "ODBC" vorangestellt werden. (Groß- oder Kleinbuchstabe). Die "ODBC"; Diese Zeichenfolge wird verwendet, um anzugeben, dass die Verbindung mit einer ODBC-Datenquelle; Dies ist für die Aufwärtskompatibilität, wenn zukünftige Versionen von der Klassenbibliothek-ODBC-Datenquellen unterstützen können.  
   
  `bUseCursorLib`  
- **TRUE** if you want the ODBC Cursor Library DLL to be loaded. The cursor library masks some functionality of the underlying ODBC driver, effectively preventing the use of dynasets (if the driver supports them). The only cursors supported if the cursor library is loaded are static snapshots and forward-only cursors. The default value is **TRUE**. If you plan to create a recordset object directly from `CRecordset` without deriving from it, you should not load the cursor library.  
+ **"True"** , wenn Sie die ODBC Cursor Library-DLL geladen werden soll. Die Cursorbibliothek maskiert einige Funktionen der zugrunde liegende ODBC-Treiber, effektiv verhindert, dass Dynasets (wenn der Treiber unterstützt). Die einzige Cursor unterstützt, wenn die Cursorbibliothek geladen ist sind Momentaufnahmen statische und Vorwärtscursor. Der Standardwert ist **"true"**. Wenn Sie planen, erstellen Sie ein Recordset-Objekt direkt aus `CRecordset` ohne daraus ableiten, sollten Sie nicht die Cursorbibliothek geladen.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if the connection is successfully made; otherwise 0 if the user chooses Cancel when presented a dialog box asking for more connection information. In all other cases, the framework throws an exception.  
+### <a name="return-value"></a>Rückgabewert  
+ Wert ungleich NULL, wenn die Verbindung erfolgreich hergestellt wird; Abbrechen andernfalls 0, wenn der Benutzer auf, wenn ein Dialogfeld Weitere Verbindungsinformationen angefordert werden angezeigt. In allen anderen Fällen löst das Framework eine Ausnahme aus.  
   
-### <a name="remarks"></a>Remarks  
- Your database object must be initialized before you can use it to construct a recordset object.  
+### <a name="remarks"></a>Hinweise  
+ Database-Objekt muss initialisiert werden, bevor Sie ihn verwenden, um einem Recordset-Objekt zu erstellen.  
   
 > [!NOTE]
->  Calling the [OpenEx](#openex) member function is the preferred way to connect to a data source and initialize your database object.  
+>  Aufrufen der [OpenEx](#openex) Memberfunktion ist die bevorzugte Methode zum Herstellen einer Verbindung mit einer Datenquelle und Database-Objekt zu initialisieren.  
   
- If the parameters in your **Open** call do not contain enough information to make the connection, the ODBC driver opens a dialog box to obtain the necessary information from the user. When you call **Open**, your connection string, `lpszConnect`, is stored privately in the `CDatabase` object and is available by calling the [GetConnect](#getconnect) member function.  
+ Wenn die Parameter in Ihre **öffnen** Aufruf enthalten keine ausreichende Informationen zum Herstellen die Verbindung, die ODBC-Treiber öffnet ein Dialogfeld, um die erforderlichen Informationen vom Benutzer zu erhalten. Beim Aufruf **öffnen**, Ihre Verbindungszeichenfolge `lpszConnect`, privat in gespeichert wurde die `CDatabase` Objekt, und ist verfügbar durch Aufrufen der [GetConnect](#getconnect) Memberfunktion.  
   
- If you wish, you can open your own dialog box before you call **Open** to get information from the user, such as a password, then add that information to the connection string you pass to **Open**. Or you might want to save the connection string you pass so you can reuse it the next time your application calls **Open** on a `CDatabase` object.  
+ Wenn Sie möchten, können Sie ein eigenes Dialogfeld öffnen, vor dem Aufruf **öffnen** beim Abrufen von Informationen aus der Benutzer, z. B. eines Kennworts der Verbindungszeichenfolge übergeben Sie an diese Informationen dann hinzufügen **öffnen**. Vielleicht möchten Sie Zeit sparen der Verbindungszeichenfolge übergeben werden, damit Sie es das nächste wiederverwenden können Ihre Anwendung Aufrufe **öffnen** auf eine `CDatabase` Objekt.  
   
- You can also use the connection string for multiple levels of login authorization (each for a different `CDatabase` object) or to convey other data source-specific information. For more information about connection strings, see Chapter 5 in the Windows SDK.  
+ Sie können auch die Verbindungszeichenfolge für mehrere Ebenen von anmeldeautorisierung (jeweils für ein anderes `CDatabase` Objekt) oder andere Daten datenquellenspezifische Informationen vermitteln. Weitere Informationen zu Verbindungszeichenfolgen finden Sie in Kapitel 5 in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
- It is possible for a connection attempt to time out if, for example, the DBMS host is unavailable. If the connection attempt fails, **Open** throws a `CDBException`.  
+ Es ist möglich, für einen Verbindungsversuch zu einem Timeout, wenn Sie z. B. die DBMS-Host nicht verfügbar ist. Wenn der Verbindungsversuch nicht gelingt, **öffnen** löst eine `CDBException`.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFCDatabase#14](../../mfc/codesnippet/cpp/cdatabase-class_6.cpp)]  
+### <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_MFCDatabase Nr. 14](../../mfc/codesnippet/cpp/cdatabase-class_6.cpp)]  
   
-##  <a name="openex"></a>  CDatabase::OpenEx  
- Call this member function to initialize a newly constructed `CDatabase` object.  
+##  <a name="openex"></a>CDatabase:: OpenEx  
+ Rufen Sie diese Memberfunktion zum Initialisieren einer neu erstellten `CDatabase` Objekt.  
   
 ```  
 virtual BOOL OpenEx(
@@ -505,94 +488,94 @@ virtual BOOL OpenEx(
     DWORD dwOptions = 0);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `lpszConnectString`  
- Specifies an ODBC connection string. This includes the data source name as well as other optional information, such as a user ID and password. For example, "DSN=SQLServer_Source;UID=SA;PWD=abc123" is a possible connection string. Note that if you pass **NULL** for `lpszConnectString`, a Data Source dialog box will prompt the user to select a data source.  
+ Gibt eine ODBC-Verbindungszeichenfolge an. Dies schließt die Namen der Datenquelle sowie andere optionale Informationen, wie Benutzer-ID und Kennwort. Z. B. "DSN = SQLServer_Source; UID = SA; PWD = abc123 "ist eine mögliche Verbindungszeichenfolge. Beachten Sie, dass, wenn Sie übergeben **NULL** für `lpszConnectString`, ein Dialogfeld für die Datenquelle wird der Benutzer aufgefordert, eine Datenquelle auswählen.  
   
  `dwOptions`  
- A bitmask which specifies a combination of the following values. The default value is 0, meaning that the database will be opened as shared with write access, the ODBC Cursor Library DLL will not be loaded, and the ODBC connection dialog box will display only if there is not enough information to make the connection.  
+ Eine Bitmaske, die eine Kombination der folgenden Werte gibt. Der Standardwert ist 0 (null) bedeutet, dass die Datenbank als geöffnet wird, mit Schreibzugriff freigegeben, die ODBC Cursor Library-DLL wird nicht geladen werden, und das Dialogfeld ODBC-Verbindung wird nur angezeigt, wenn es nicht genügend Informationen zum Herstellen die Verbindung ist.  
   
-- **CDatabase::openExclusive** Not supported in this version of the class library. A data source is always opened as shared (not exclusive). Currently, an assertion fails if you specify this option.  
+- **CDatabase::openExclusive** in dieser Version der Klassenbibliothek nicht unterstützt. Eine Datenquelle ist immer geöffnet, wie freigegebene (nicht exklusiv). Momentan kann eine Assertion, wenn Sie diese Option angeben.  
   
-- **CDatabase::openReadOnly** Open the data source as read-only.  
+- **CDatabase::openReadOnly** öffnen Sie die Datenquelle als schreibgeschützt.  
   
-- **CDatabase::useCursorLib** Load the ODBC Cursor Library DLL. The cursor library masks some functionality of the underlying ODBC driver, effectively preventing the use of dynasets (if the driver supports them). The only cursors supported if the cursor library is loaded are static snapshots and forward-only cursors. If you plan to create a recordset object directly from `CRecordset` without deriving from it, you should not load the cursor library.  
+- **DwOptions** die ODBC-Cursorbibliothek DLL zu laden. Die Cursorbibliothek maskiert einige Funktionen der zugrunde liegende ODBC-Treiber, effektiv verhindert, dass Dynasets (wenn der Treiber unterstützt). Die einzige Cursor unterstützt, wenn die Cursorbibliothek geladen ist sind Momentaufnahmen statische und Vorwärtscursor. Wenn Sie planen, erstellen Sie ein Recordset-Objekt direkt aus `CRecordset` ohne daraus ableiten, sollten Sie nicht die Cursorbibliothek geladen.  
   
-- **CDatabase::noOdbcDialog** Do not display the ODBC connection dialog box, regardless of whether enough connection information is supplied.  
+- **CDatabase::noOdbcDialog** nicht anzeigen klicken Sie im Dialogfeld ODBC-Verbindung unabhängig davon, ob genügend Verbindungsinformationen bereitgestellt wird.  
   
-- **CDatabase::forceOdbcDialog** Always display the ODBC connection dialog box.  
+- **CDatabase::forceOdbcDialog** immer zeigt das Dialogfeld ODBC-Verbindung.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if the connection is successfully made; otherwise 0 if the user chooses Cancel when presented a dialog box asking for more connection information. In all other cases, the framework throws an exception.  
+### <a name="return-value"></a>Rückgabewert  
+ Wert ungleich NULL, wenn die Verbindung erfolgreich hergestellt wird; Abbrechen andernfalls 0, wenn der Benutzer auf, wenn ein Dialogfeld Weitere Verbindungsinformationen angefordert werden angezeigt. In allen anderen Fällen löst das Framework eine Ausnahme aus.  
   
-### <a name="remarks"></a>Remarks  
- Your database object must be initialized before you can use it to construct a recordset object.  
+### <a name="remarks"></a>Hinweise  
+ Database-Objekt muss initialisiert werden, bevor Sie ihn verwenden, um einem Recordset-Objekt zu erstellen.  
   
- If the `lpszConnectString` parameter in your `OpenEx` call does not contain enough information to make the connection, the ODBC driver opens a dialog box to obtain the necessary information from the user, provided you have not set **CDatabase::noOdbcDialog** or **CDatabase::forceOdbcDialog** in the `dwOptions` parameter. When you call `OpenEx`, your connection string, `lpszConnectString`, is stored privately in the `CDatabase` object and is available by calling the [GetConnect](#getconnect) member function.  
+ Wenn die `lpszConnectString` Parameter in Ihre `OpenEx` Aufruf nicht genügend Informationen zum Herstellen der Verbindung enthält, wird der ODBC-Treiber öffnet ein Dialogfeld können Sie dem Benutzer die erforderlichen Informationen abrufen, sofern Sie nicht festgelegt haben **CDatabase::noOdbcDialog** oder **CDatabase::forceOdbcDialog** in der `dwOptions` Parameter. Beim Aufruf `OpenEx`, Ihre Verbindungszeichenfolge `lpszConnectString`, privat in gespeichert wurde die `CDatabase` Objekt, und ist verfügbar durch Aufrufen der [GetConnect](#getconnect) Memberfunktion.  
   
- If you wish, you can open your own dialog box before you call `OpenEx` to get information from the user, such as a password, and then add that information to the connection string you pass to `OpenEx`. Or you might want to save the connection string you pass so you can reuse it the next time your application calls `OpenEx` on a `CDatabase` object.  
+ Wenn Sie möchten, können Sie ein eigenes Dialogfeld öffnen, vor dem Aufruf `OpenEx` zum Abrufen von Informationen vom Benutzer, z. B. ein Kennwort, und klicken Sie dann hinzufügen, die Informationen der Verbindungszeichenfolge übergeben werden, um `OpenEx`. Vielleicht möchten Sie Zeit sparen der Verbindungszeichenfolge übergeben werden, damit Sie es das nächste wiederverwenden können Ihre Anwendung Aufrufe `OpenEx` auf eine `CDatabase` Objekt.  
   
- You can also use the connection string for multiple levels of login authorization (each for a different `CDatabase` object) or to convey other data source-specific information. For more information about connection strings, see Chapter 6 in the *ODBC Programmer's Reference*.  
+ Sie können auch die Verbindungszeichenfolge für mehrere Ebenen von anmeldeautorisierung (jeweils für ein anderes `CDatabase` Objekt) oder andere Daten datenquellenspezifische Informationen vermitteln. Weitere Informationen zu Verbindungszeichenfolgen finden Sie in Kapitel 6 in der *ODBC Programmer's Reference*.  
   
- It is possible for a connection attempt to time out if, for example, the DBMS host is unavailable. If the connection attempt fails, `OpenEx` throws a `CDBException`.  
+ Es ist möglich, für einen Verbindungsversuch zu einem Timeout, wenn Sie z. B. die DBMS-Host nicht verfügbar ist. Wenn der Verbindungsversuch nicht gelingt, `OpenEx` löst eine `CDBException`.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFCDatabase#11](../../mfc/codesnippet/cpp/cdatabase-class_7.cpp)]  
+### <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_MFCDatabase Nr. 11](../../mfc/codesnippet/cpp/cdatabase-class_7.cpp)]  
   
-##  <a name="rollback"></a>  CDatabase::Rollback  
- Call this member function to reverse the changes made during a transaction.  
+##  <a name="rollback"></a>CDatabase  
+ Rufen Sie diese Memberfunktion, um die während einer Transaktion vorgenommenen Änderungen umzukehren.  
   
 ```  
 BOOL Rollback();
 ```  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if the transaction was successfully reversed; otherwise 0. If a **Rollback** call fails, the data source and transaction states are undefined. If **Rollback** returns 0, you must check the data source to determine its state.  
+### <a name="return-value"></a>Rückgabewert  
+ Wert ungleich NULL, wenn die Transaktion erfolgreich umgekehrt wurde; andernfalls 0. Wenn eine **Rollback** Aufruf fehlschlägt, die Datenquelle und die Transaktion Status ist nicht definiert. Wenn **Rollback** 0 zurück, müssen Sie überprüfen, die Datenquelle, um dessen Status zu bestimmen.  
   
-### <a name="remarks"></a>Remarks  
- All `CRecordset` `AddNew`, **Edit**, **Delete**, and **Update** calls executed since the last [BeginTrans](#begintrans) are rolled back to the state that existed at the time of that call.  
+### <a name="remarks"></a>Hinweise  
+ Alle `CRecordset``AddNew`, **bearbeiten**, **löschen**, und **Update** Aufrufe, die seit der letzten ausgeführten [BeginTrans](#begintrans) in den Ursprungszustand versetzt, zum Zeitpunkt des Aufrufs, dass ein Rollback.  
   
- After a call to **Rollback**, the transaction is over, and you must call **BeginTrans** again for another transaction. The record that was current before you called **BeginTrans** becomes the current record again after **Rollback**.  
+ Nach einem Aufruf von **Rollback**, übersteigt die Transaktion, und rufen Sie **BeginTrans** für eine andere Transaktion erneut aus. Der Datensatz, der vor dem Aufrufen aktuell waren, **BeginTrans** wird zum aktuellen Datensatz erneut nach **Rollback**.  
   
- After a rollback, the record that was current before the rollback remains current. For details about the state of the recordset and the data source after a rollback, see the article [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).  
+ Nach einem Rollback bleibt der Datensatz, der vor dem Rollback aktuell war aktuelle. Weitere Informationen zu den Status des Recordsets und der Datenquelle nach einem Rollback, finden Sie im Artikel [Transaktion (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-### <a name="example"></a>Example  
-  See the article [Transaction: Performing a Transaction in a Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
+### <a name="example"></a>Beispiel  
+  Finden Sie im Artikel [Transaktion: Ausführen einer Transaktion in einem Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
   
-##  <a name="setlogintimeout"></a>  CDatabase::SetLoginTimeout  
- Call this member function — before you call `OpenEx` or **Open** — to override the default number of seconds allowed before an attempted data source connection times out.  
+##  <a name="setlogintimeout"></a>CDatabase::SetLoginTimeout  
+ Rufen Sie diese Memberfunktion – vor dem Aufruf `OpenEx` oder **öffnen** – die Standardanzahl von Sekunden, die zulässig sind, bevor ein versuchten Daten überschreiben-Verbindung ein Timeout eintritt.  
   
 ```  
 void SetLoginTimeout(DWORD dwSeconds);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwSeconds`  
- The number of seconds to allow before a connection attempt times out.  
+ Die Anzahl der Sekunden, bevor ein Verbindungsversuch ein Timeout eintritt.  
   
-### <a name="remarks"></a>Remarks  
- A connection attempt might time out if, for example, the DBMS is not available. Call **SetLoginTimeout** after you construct the uninitialized `CDatabase` object but before you call `OpenEx` or **Open**.  
+### <a name="remarks"></a>Hinweise  
+ Ein Verbindungsversuch möglicherweise einen Timeout beendet, wenn z. B. das DBMS nicht verfügbar ist. Rufen Sie **SetLoginTimeout** Nachdem Sie den nicht initialisierten konstruiert `CDatabase` -Objekt jedoch vor dem Aufrufen `OpenEx` oder **öffnen**.  
   
- The default value for login timeouts is 15 seconds. Not all data sources support the ability to specify a login timeout value. If the data source does not support timeout, you get trace output but not an exception. A value of 0 means "infinite."  
+ Der Standardwert für die Anmeldung Timeouts beträgt 15 Sekunden. Nicht alle Datenquellen unterstützen die Möglichkeit, einen Timeoutwert für die Anmeldung anzugeben. Wenn die Datenquelle Timeout nicht unterstützt wird, erhalten Sie Ablaufverfolgungsausgabe jedoch nicht auf eine Ausnahme. Ein Wert von 0 bedeutet "unendlich".  
   
-##  <a name="setquerytimeout"></a>  CDatabase::SetQueryTimeout  
- Call this member function to override the default number of seconds to allow before subsequent operations on the connected data source time out.  
+##  <a name="setquerytimeout"></a>CDatabase::SetQueryTimeout  
+ Rufen Sie diese Memberfunktion, um die Standardanzahl von Sekunden, bevor nachfolgende Vorgänge in die verbundene Datenquelle-Timeout zu überschreiben.  
   
 ```  
 void SetQueryTimeout(DWORD dwSeconds);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwSeconds`  
- The number of seconds to allow before a query attempt times out.  
+ Die Anzahl der Sekunden, bevor ein abfrageversuch ein Timeout eintritt.  
   
-### <a name="remarks"></a>Remarks  
- An operation might time out due to network access problems, excessive query processing time, and so on. Call `SetQueryTimeout` prior to opening your recordset or prior to calling the recordset's `AddNew`, **Update** or **Delete** member functions if you want to change the query timeout value. The setting affects all subsequent **Open**, `AddNew`, **Update**, and **Delete** calls to any recordsets associated with this `CDatabase` object. Changing the query timeout value for a recordset after opening does not change the value for the recordset. For example, subsequent **Move** operations do not use the new value.  
+### <a name="remarks"></a>Hinweise  
+ Ein Vorgang möglicherweise aufgrund von Netzwerkproblemen-Zugriff, übermäßige Abfrage Verarbeitungszeit und usw. Timeout. Rufen Sie `SetQueryTimeout` vor dem Öffnen des Recordsets oder vor dem Aufruf des Recordsets `AddNew`, **Update** oder **löschen** Memberfunktionen, wenn Sie den Timeoutwert für Abfragen ändern möchten. Die Einstellung wirkt sich auf alle nachfolgenden **öffnen**, `AddNew`, **Update**, und **löschen** Aufrufe an alle zugeordneten Recordsets `CDatabase` Objekt. Ändern den Timeoutwert für Abfragen für ein Recordset nach Öffnen ändert sich nicht auf den Wert für das Recordset. Beispielsweise wird bei nachfolgenden **verschieben** Vorgänge verwenden Sie den neuen Wert nicht.  
   
- The default value for query timeouts is 15 seconds. Not all data sources support the ability to set a query timeout value. If you set a query timeout value of 0, no timeout occurs; the communication with the data source may stop responding. This behavior may be useful during development. If the data source does not support timeout, you get trace output but not an exception.  
+ Der Standardwert für Abfragetimeouts beträgt 15 Sekunden. Nicht alle Datenquellen unterstützen die Möglichkeit, einen Timeoutwert für Abfragen festzulegen. Wenn Sie einen Abfrage-Timeoutwert von 0 festlegen, tritt kein Timeout. die Kommunikation mit der Datenquelle reagiert. Dieses Verhalten kann während der Entwicklung nützlich sein. Wenn die Datenquelle Timeout nicht unterstützt wird, erhalten Sie Ablaufverfolgungsausgabe jedoch nicht auf eine Ausnahme.  
   
-## <a name="see-also"></a>See Also  
- [CObject Class](../../mfc/reference/cobject-class.md)   
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [CRecordset Class](../../mfc/reference/crecordset-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [CObject-Klasse](../../mfc/reference/cobject-class.md)   
+ [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
+ [CRecordset-Klasse](../../mfc/reference/crecordset-class.md)
 

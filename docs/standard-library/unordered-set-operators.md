@@ -1,52 +1,48 @@
 ---
-title: '&lt;unordered_set&gt; operators | Microsoft Docs'
+title: '&lt;unordered_set&gt;-Operatoren | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- unordered_set/std::operator!=
-- unordered_set/std::operator==
-dev_langs:
-- C++
+f1_keywords: []
 ms.assetid: 8653eea6-12f2-4dd7-aa2f-db38a71599a0
 caps.latest.revision: 7
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: a967b858b6f1b31c623a15aa32655b6a83b865bf
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 5fbd22c2f21eaa36e75afd051ab3fbaa5858e5a2
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="ltunorderedsetgt-operators"></a>&lt;unordered_set&gt; operators
+# <a name="ltunorderedsetgt-operators"></a>&lt;unordered_set&gt;-Operatoren
 |||||  
 |-|-|-|-|  
 |[operator!=](#op_neq)|[operator==](#op_eq_eq)|[operator!=](#op_neq_unordered_multiset)|[operator==](#op_eq_eq_unordered_multiset)|  
   
-##  <a name="op_neq"></a>  operator!=  
- Tests whether the [unordered_set](../standard-library/unordered-set-class.md) object on the left side of the operator is not equal to the unordered_set object on the right side.  
+##  <a name="op_neq"></a> operator!=  
+ Testet, ob das [unordered_set](../standard-library/unordered-set-class.md)-Objekt links vom Operator ungleich dem unordered_set-Objekt rechts vom Operator ist.  
   
 ```
 bool operator!=(const unordered_set <Key, Hash, Pred, Allocator>& left, const unordered_set <Key, Hash, Pred, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `left`  
- An object of type `unordered_set`.  
+ Ein Objekt vom Typ `unordered_set`.  
   
  `right`  
- An object of type `unordered_set`.  
+ Ein Objekt vom Typ `unordered_set`.  
   
-### <a name="return-value"></a>Return Value  
- `true` if the unordered_sets are not equal; `false` if they are equal.  
+### <a name="return-value"></a>Rückgabewert  
+ `true`, wenn die unordered_set-Objekte ungleich sind; `false`, wenn sie gleich sind.  
   
-### <a name="remarks"></a>Remarks  
- The comparison between unordered_set objects is not affected by the arbitrary order in which they store their elements. Two unordered_sets are equal if they have the same number of elements and the elements in one container are a permutation of the elements in the other container. Otherwise, they are unequal.  
+### <a name="remarks"></a>Hinweise  
+ Die beliebige Reihenfolge, in der unordered_set-Objekte ihre Elemente speichern, hat keine Auswirkungen auf den Vergleich der Objekte. Zwei unordered_set-Objekte sind gleich, wenn sie dieselbe Anzahl von Elementen aufweisen und die Elemente in einem Container eine Permutation der Elemente im anderen Container sind. Andernfalls sind sie ungleich.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // unordered_set_ne.cpp   
@@ -83,7 +79,7 @@ int main()
   
 ```  
   
- **Output:**  
+ **Ausgabe:**  
   
  `c1 != c2: true`  
   
@@ -91,27 +87,27 @@ int main()
   
  `c2 != c3: true`  
   
-##  <a name="op_eq_eq"></a>  operator==  
- Tests whether the [unordered_set](../standard-library/unordered-set-class.md) object on the left side of the operator is equal to the unordered_set object on the right side.  
+##  <a name="op_eq_eq"></a> operator==  
+ Testet, ob das [unordered_set](../standard-library/unordered-set-class.md)-Objekt links vom Operator gleich dem unordered_set-Objekt rechts vom Operator ist.  
   
 ```
 bool operator==(const unordered_set <Key, Hash, Pred, Allocator>& left, const unordered_set <Key, Hash, Pred, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `left`  
- An object of type `unordered_set`.  
+ Ein Objekt vom Typ `unordered_set`.  
   
  `right`  
- An object of type `unordered_set`.  
+ Ein Objekt vom Typ `unordered_set`.  
   
-### <a name="return-value"></a>Return Value  
- `true` if the unordered_sets are equal; `false` if they are not equal.  
+### <a name="return-value"></a>Rückgabewert  
+ `true`, wenn die unordered_set-Objekte gleich sind; `false`, wenn sie ungleich sind.  
   
-### <a name="remarks"></a>Remarks  
- The comparison between unordered_set objects is not affected by the arbitrary order in which they store their elements. Two unordered_sets are equal if they have the same number of elements and the elements in one container are a permutation of the elements in the other container. Otherwise, they are unequal.  
+### <a name="remarks"></a>Hinweise  
+ Die beliebige Reihenfolge, in der unordered_set-Objekte ihre Elemente speichern, hat keine Auswirkungen auf den Vergleich der Objekte. Zwei unordered_set-Objekte sind gleich, wenn sie dieselbe Anzahl von Elementen aufweisen und die Elemente in einem Container eine Permutation der Elemente im anderen Container sind. Andernfalls sind sie ungleich.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // unordered_set_eq.cpp   
@@ -148,7 +144,7 @@ int main()
   
 ```  
   
- **Output:**  
+ **Ausgabe:**  
   
  `c1 == c2: false`  
   
@@ -156,27 +152,27 @@ int main()
   
  `c2 == c3: false`  
   
-##  <a name="op_neq_unordered_multiset"></a>  operator!=  
- Tests whether the [unordered_multiset](../standard-library/unordered-multiset-class.md) object on the left side of the operator is not equal to the unordered_multiset object on the right side.  
+##  <a name="op_neq_unordered_multiset"></a> operator!=  
+ Überprüft, ob das [unordered_multiset](../standard-library/unordered-multiset-class.md)-Objekt links vom Operator ungleich dem unordered_multiset-Objekt rechts vom Operator ist.  
   
 ```
 bool operator!=(const unordered_multiset <Key, Hash, Pred, Allocator>& left, const unordered_multiset <Key, Hash, Pred, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `left`  
- An object of type `unordered_multiset`.  
+ Ein Objekt vom Typ `unordered_multiset`.  
   
  `right`  
- An object of type `unordered_multiset`.  
+ Ein Objekt vom Typ `unordered_multiset`.  
   
-### <a name="return-value"></a>Return Value  
- `true` if the unordered_multisets are not equal; `false` if they are equal.  
+### <a name="return-value"></a>Rückgabewert  
+ `true`, wenn die unordered_multiset-Objekte ungleich sind; `false`, wenn sie gleich sind.  
   
-### <a name="remarks"></a>Remarks  
- The comparison between unordered_multiset objects is not affected by the arbitrary order in which they store their elements. Two unordered_multisets are equal if they have the same number of elements and the elements in one container are a permutation of the elements in the other container. Otherwise, they are unequal.  
+### <a name="remarks"></a>Hinweise  
+ Die beliebige Reihenfolge, in der unordered_multiset-Objekte ihre Elemente speichern, hat keine Auswirkungen auf den Vergleich der Objekte. Zwei unordered_multiset-Objekte sind gleich, wenn sie dieselbe Anzahl von Elementen aufweisen und die Elemente in einem Container eine Permutation der Elemente im anderen Container sind. Andernfalls sind sie ungleich.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // unordered_multiset_ne.cpp   
@@ -216,7 +212,7 @@ int main()
   
 ```  
   
- **Output:**  
+ **Ausgabe:**  
   
  `c1 != c2: true`  
   
@@ -224,27 +220,27 @@ int main()
   
  `c2 != c3: true`  
   
-##  <a name="op_eq_eq_unordered_multiset"></a>  operator==  
- Tests whether the [unordered_multiset](../standard-library/unordered-multiset-class.md) object on the left side of the operator is equal to the unordered_multiset object on the right side.  
+##  <a name="op_eq_eq_unordered_multiset"></a> operator==  
+ Überprüft, ob das [unordered_multiset](../standard-library/unordered-multiset-class.md)-Objekt links vom Operator gleich dem unordered_multiset-Objekt rechts vom Operator ist.  
   
 ```
 bool operator==(const unordered_multiset <Key, Hash, Pred, Allocator>& left, const unordered_multiset <Key, Hash, Pred, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `left`  
- An object of type `unordered_multiset`.  
+ Ein Objekt vom Typ `unordered_multiset`.  
   
  `right`  
- An object of type `unordered_multiset`.  
+ Ein Objekt vom Typ `unordered_multiset`.  
   
-### <a name="return-value"></a>Return Value  
- `true` if the unordered_multisets are equal; `false` if they are not equal.  
+### <a name="return-value"></a>Rückgabewert  
+ `true`, wenn die unordered_multiset-Objekte gleich sind; `false`, wenn sie ungleich sind.  
   
-### <a name="remarks"></a>Remarks  
- The comparison between unordered_multiset objects is not affected by the arbitrary order in which they store their elements. Two unordered_multisets are equal if they have the same number of elements and the elements in one container are a permutation of the elements in the other container. Otherwise, they are unequal.  
+### <a name="remarks"></a>Hinweise  
+ Die beliebige Reihenfolge, in der unordered_multiset-Objekte ihre Elemente speichern, hat keine Auswirkungen auf den Vergleich der Objekte. Zwei unordered_multiset-Objekte sind gleich, wenn sie dieselbe Anzahl von Elementen aufweisen und die Elemente in einem Container eine Permutation der Elemente im anderen Container sind. Andernfalls sind sie ungleich.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // unordered_multiset_eq.cpp   
@@ -284,7 +280,7 @@ int main()
   
 ```  
   
- **Output:**  
+ **Ausgabe:**  
   
  `c1 == c2: false`  
   
@@ -292,7 +288,7 @@ int main()
   
  `c2 == c3: false`  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [<unordered_set>](../standard-library/unordered-set.md)
 
 

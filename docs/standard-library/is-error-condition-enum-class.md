@@ -1,5 +1,5 @@
 ---
-title: is_error_condition_enum Class | Microsoft Docs
+title: is_error_condition_enum-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- is_error_condition_enum
 - system_error/std::is_error_condition_enum
 dev_langs:
 - C++
@@ -33,15 +34,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 203a85a9fbd4759cff2b81a01eb4a1d071f22579
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 316e375554d80bfa58dfba537e5c36a881028a20
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="iserrorconditionenum-class"></a>is_error_condition_enum Class
-Represents a type predicate that tests for the [error_condition](../standard-library/error-condition-class.md) enumeration.  
+# <a name="iserrorconditionenum-class"></a>is_error_condition_enum-Klasse
+Stellt ein Typprädikat dar, das auf die [error_code](../standard-library/error-condition-class.md)-Enumeration testet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,17 +51,17 @@ template <_Enum>
 class is_error_condition_enum;
 ```  
   
-## <a name="remarks"></a>Remarks  
- An instance of this [type predicate](../standard-library/type-traits.md) holds true if the type `_Enum` is an enumeration value suitable for storing in an object of type `error_condition`.  
+## <a name="remarks"></a>Hinweise  
+ Eine Instanz dieses [Typprädikats](../standard-library/type-traits.md) ist TRUE, wenn der Typ `_Enum` ein geeigneter Enumerationswert für das Speichern in einem Objekt vom Typ `error_condition` ist.  
   
- It is permissible to add specializations to this type for user-defined types.  
+ Es ist zulässig, Spezialisierungen zu dieser Art für benutzerdefinierte Typen hinzuzufügen.  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<system_error>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [<type_traits>](../standard-library/type-traits.md)   
  [<system_error>](../standard-library/system-error.md)
 

@@ -1,5 +1,5 @@
 ---
-title: bad_weak_ptr Class | Microsoft Docs
+title: bad_weak_ptr-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- bad_weak_ptr
 - memory/std::bad_weak_ptr
 dev_langs:
 - C++
@@ -34,15 +35,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: ea321c5fe61ef2e2bbec82e3bcbe366bbe619da2
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
+ms.openlocfilehash: b6d5102096f4d7ff27ceaf08abb7aa318273c6af
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="badweakptr-class"></a>bad_weak_ptr Class
-Reports bad weak_ptr exception.  
+# <a name="badweakptr-class"></a>bad_weak_ptr-Klasse
+Meldet eine ungültige weak_ptr-Ausnahme.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,10 +56,10 @@ public:
  };  
 ```  
   
-## <a name="remarks"></a>Remarks  
- The class describes an exception that can be thrown from the [shared_ptr Class](../standard-library/shared-ptr-class.md) constructor that takes an argument of type [weak_ptr Class](../standard-library/weak-ptr-class.md). The member function `what` returns `"bad_weak_ptr"`.  
+## <a name="remarks"></a>Hinweise  
+ Die Klasse beschreibt eine Ausnahme, die von dem [shared_ptr-Klasse](../standard-library/shared-ptr-class.md)-Konstruktor ausgelöst werden kann, der ein Argument des Typs [weak_ptr-Klasse](../standard-library/weak-ptr-class.md) verwendet. Die Memberfunktion `what` gibt `"bad_weak_ptr"` zurück.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Beispiel  
   
 ```cpp  
 // std__memory__bad_weak_ptr.cpp   
@@ -96,11 +97,11 @@ int main()
 bad weak pointer  
 ```  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<memory>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
- [weak_ptr Class](../standard-library/weak-ptr-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [weak_ptr-Klasse](../standard-library/weak-ptr-class.md)
 

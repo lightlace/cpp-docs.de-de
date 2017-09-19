@@ -1,5 +1,5 @@
 ---
-title: POINT Structure1 | Microsoft Docs
+title: Punkt Structure1 | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -14,8 +14,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- LPPOINT structure [MFC]
-- POINT structure [MFC]
+- LPPOINT structure
+- POINT structure
 ms.assetid: 965736d8-4e53-41b6-9b8b-6961992dd21f
 caps.latest.revision: 13
 author: mikeblome
@@ -35,15 +35,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 067a69b5a68fd00bd1ba6da2d9df4a45ba541829
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
+ms.openlocfilehash: d1e2bb05f9bad785b13e79413866d8e0ce1e1faa
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="point-structure1"></a>POINT Structure1
-The **POINT** structure defines the x*-* and y-coordinates of a point.  
+# <a name="point-structure1"></a>Punkt-Structure1
+Die **zeigen** -Struktur definiert die x* - * und y-Koordinaten eines Punkts.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,20 +54,20 @@ typedef struct tagPOINT {
 } POINT;  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
  *x*  
- Specifies the x-coordinate of a point.  
+ Gibt die x-Koordinate eines Punkts an.  
   
  *y*  
- Specifies the y-coordinate of a point.  
+ Gibt die y-Koordinate eines Punkts an.  
   
-## <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_Utilities#37](../../mfc/codesnippet/cpp/point-structure1_1.cpp)]  
+## <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_MFC_Utilities&#37;](../../mfc/codesnippet/cpp/point-structure1_1.cpp)]  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** windef.h  
   
-## <a name="see-also"></a>See Also  
- [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CPoint Class](../../atl-mfc-shared/reference/cpoint-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [Strukturen, Stile, Rückrufe und Meldungszuordnungen](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CPoint-Klasse](../../atl-mfc-shared/reference/cpoint-class.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Creating an MFC DLL Project | Microsoft Docs
+title: Erstellen ein MFC-DLL-Projekt | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,10 +13,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- MFC DLLs [MFC], creating projects
-- DLLs [MFC], MFC
-- projects [MFC], creating
-- DLLs [MFC], creating
+- MFC DLLs [C++], creating projects
+- DLLs [C++], MFC
+- projects [C++], creating
+- DLLs [C++], creating
 ms.assetid: 05540b93-4781-4a90-aadf-55158313f5b2
 caps.latest.revision: 13
 author: mikeblome
@@ -36,38 +36,38 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: b133538b16801d844109bd57225c0bc09a237a34
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
+ms.openlocfilehash: c403d1351c43e043fd3048d342dafcf069951446
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="creating-an-mfc-dll-project"></a>Creating an MFC DLL Project
-An MFC DLL is a binary file that acts as a shared library of functions that can be used simultaneously by multiple applications. The easiest way to create an MFC DLL project is to use the MFC DLL Wizard.  
+# <a name="creating-an-mfc-dll-project"></a>Erstellen eines MFC-DLL-Projekts
+Eine MFC-DLL ist eine Binärdatei und fungiert als gemeinsam genutzte Funktionsbibliothek, die von mehreren Anwendungen gleichzeitig verwendet werden kann. Am einfachsten erstellen Sie ein MFC-DLL-Projekt mit dem MFC-DLL-Assistenten.  
   
 > [!NOTE]
->  The appearance of features in the IDE can depend on your active settings or edition, and might differ from those described in Help. To change your settings, choose **Import and Export Settings** on the **Tools** menu. For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Die in der IDE dargestellten Funktionen können sich je nach den aktiven Einstellungen oder der verwendeten Version von den in der Hilfe beschriebenen Funktionen unterscheiden. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>To create an MFC DLL Project using the MFC DLL Wizard  
+### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>So erstellen Sie ein MFC-DLL-Projekt mit dem MFC-DLL-Assistenten  
   
-1.  Follow the instructions in the help topic [Creating a Project with a Visual C++ Application Wizard](../../ide/creating-desktop-projects-by-using-application-wizards.md).  
+1.  Führen Sie die Schritte im Hilfethema [Erstellen eines Projekts mit einem Visual C++-Anwendung-Assistenten](../../ide/creating-desktop-projects-by-using-application-wizards.md).  
   
- **Note** In the **New Project** dialog box, select the `MFC DLL` icon in the Templates pane to open the MFC DLL Wizard.  
+ **Hinweis** In der **neues Projekt** wählen Sie im Dialogfeld die `MFC DLL` Symbol im Bereich "Vorlagen" auf der MFC-DLL-Assistenten zu öffnen.  
   
-1.  Define your application settings using the [application settings](../../mfc/reference/application-settings-mfc-dll-wizard.md) page of the [MFC DLL Wizard](../../mfc/reference/mfc-dll-wizard.md).  
+1.  Definieren Sie die Einstellungen Ihrer Anwendung mithilfe der [Anwendungseinstellungen](../../mfc/reference/application-settings-mfc-dll-wizard.md) auf der Seite der [MFC-DLL-Assistenten](../../mfc/reference/mfc-dll-wizard.md).  
   
     > [!NOTE]
-    >  Skip this step to keep the wizard default settings.  
+    >  Überspringen Sie diesen Schritt, um die Standardeinstellungen des Assistenten beizubehalten.  
   
-2.  Click **Finish** to close the wizard and open your new project in **Solution Explorer**.  
+2.  Klicken Sie auf **Fertig stellen** den Assistenten zu schließen und öffnen das neue Projekt in **Projektmappen-Explorer**.  
   
- Once your project is created, you can view the files created in the Solution Explorer. For more information about the files the wizard creates for your project, see the project-generated file ReadMe.txt. For more information about the file types, see [File Types Created for Visual C++ Projects](../../ide/file-types-created-for-visual-cpp-projects.md).  
+ Nachdem Sie das Projekt erstellt haben, können Sie die erstellten Dateien in Projektmappen-Explorer anzeigen. Weitere Informationen zu den vom Assistenten erstellten Dateien im Projekt finden Sie in der projekteigenen Datei "Readme.txt". Weitere Informationen zu den Dateitypen finden Sie unter [für Visual C++-Projekte erstellte Dateitypen](../../ide/file-types-created-for-visual-cpp-projects.md).  
   
-## <a name="see-also"></a>See Also  
- [Visual C++ Project Types](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)   
- [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Property Pages](../../ide/property-pages-visual-cpp.md)   
- [Deploying Applications](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+## <a name="see-also"></a>Siehe auch  
+ [Visual C++-Projekttypen](http://msdn.microsoft.com/library/912b4ba2-7719-43d5-b087-db33e3f9329a)   
+ [Hinzufügen neuer Funktionen mit Code-Assistenten](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Eigenschaftenseiten](../../ide/property-pages-visual-cpp.md)   
+ [Bereitstellen von Anwendungen](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
 
 

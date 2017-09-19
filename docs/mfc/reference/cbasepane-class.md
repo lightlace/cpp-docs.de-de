@@ -1,5 +1,5 @@
 ---
-title: CBasePane Class | Microsoft Docs
+title: CBasePane-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -94,86 +94,24 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CBasePane [MFC], AccNotifyObjectFocusEvent
-- CBasePane [MFC], AddPane
-- CBasePane [MFC], AdjustDockingLayout
-- CBasePane [MFC], AdjustLayout
-- CBasePane [MFC], CalcFixedLayout
-- CBasePane [MFC], CanAcceptPane
-- CBasePane [MFC], CanAutoHide
-- CBasePane [MFC], CanBeAttached
-- CBasePane [MFC], CanBeClosed
-- CBasePane [MFC], CanBeDocked
-- CBasePane [MFC], CanBeResized
-- CBasePane [MFC], CanBeTabbedDocument
-- CBasePane [MFC], CanFloat
-- CBasePane [MFC], CanFocus
-- CBasePane [MFC], CopyState
-- CBasePane [MFC], CreateDefaultMiniframe
-- CBasePane [MFC], CreateEx
-- CBasePane [MFC], DockPane
-- CBasePane [MFC], DockPaneUsingRTTI
-- CBasePane [MFC], DockToFrameWindow
-- CBasePane [MFC], DoesAllowDynInsertBefore
-- CBasePane [MFC], EnableDocking
-- CBasePane [MFC], EnableGripper
-- CBasePane [MFC], FloatPane
-- CBasePane [MFC], get_accHelpTopic
-- CBasePane [MFC], get_accSelection
-- CBasePane [MFC], GetCaptionHeight
-- CBasePane [MFC], GetControlBarStyle
-- CBasePane [MFC], GetCurrentAlignment
-- CBasePane [MFC], GetDockingMode
-- CBasePane [MFC], GetDockSiteFrameWnd
-- CBasePane [MFC], GetEnabledAlignment
-- CBasePane [MFC], GetMFCStyle
-- CBasePane [MFC], GetPaneIcon
-- CBasePane [MFC], GetPaneRow
-- CBasePane [MFC], GetPaneStyle
-- CBasePane [MFC], GetParentDockSite
-- CBasePane [MFC], GetParentMiniFrame
-- CBasePane [MFC], GetParentTabbedPane
-- CBasePane [MFC], GetParentTabWnd
-- CBasePane [MFC], GetRecentVisibleState
-- CBasePane [MFC], HideInPrintPreviewMode
-- CBasePane [MFC], InsertPane
-- CBasePane [MFC], IsAccessibilityCompatible
-- CBasePane [MFC], IsAutoHideMode
-- CBasePane [MFC], IsDialogControl
-- CBasePane [MFC], IsDocked
-- CBasePane [MFC], IsFloating
-- CBasePane [MFC], IsHorizontal
-- CBasePane [MFC], IsInFloatingMultiPaneFrameWnd
-- CBasePane [MFC], IsMDITabbed
-- CBasePane [MFC], IsPaneVisible
-- CBasePane [MFC], IsPointNearDockSite
-- CBasePane [MFC], IsResizable
-- CBasePane [MFC], IsRestoredFromRegistry
-- CBasePane [MFC], IsTabbed
-- CBasePane [MFC], IsVisible
-- CBasePane [MFC], LoadState
-- CBasePane [MFC], MoveWindow
-- CBasePane [MFC], OnAfterChangeParent
-- CBasePane [MFC], OnBeforeChangeParent
-- CBasePane [MFC], OnDrawCaption
-- CBasePane [MFC], OnMovePaneDivider
-- CBasePane [MFC], OnPaneContextMenu
-- CBasePane [MFC], OnRemoveFromMiniFrame
-- CBasePane [MFC], OnSetAccData
-- CBasePane [MFC], PaneFromPoint
-- CBasePane [MFC], RecalcLayout
-- CBasePane [MFC], RemovePaneFromDockManager
-- CBasePane [MFC], SaveState
-- CBasePane [MFC], SelectDefaultFont
-- CBasePane [MFC], SetControlBarStyle
-- CBasePane [MFC], SetDockingMode
-- CBasePane [MFC], SetPaneAlignment
-- CBasePane [MFC], SetPaneStyle
-- CBasePane [MFC], SetWindowPos
-- CBasePane [MFC], ShowPane
-- CBasePane [MFC], StretchPane
-- CBasePane [MFC], UndockPane
-- CBasePane [MFC], DoPaint
+- get_accState method
+- get_accHelp method
+- CBasePane class
+- accLocation method
+- accHitTest method
+- get_accDescription method
+- get_accDefaultAction method
+- get_accName method
+- get_accFocus method
+- get_accRole method
+- get_accValue method
+- get_accChild method
+- accSelect method
+- get_accKeyboardShortcut method
+- get_accChildCount method
+- Serialize method
+- PreTranslateMessage method
+- get_accParent method
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
 caps.latest.revision: 43
 author: mikeblome
@@ -193,15 +131,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 34c41581873ca8374b9ee3b66eb28a0d18d2de6a
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 0444c0647d83a1e9b431dd0c5bdb369da213b91b
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="cbasepane-class"></a>CBasePane Class
-Base class for all panes in MFC.  
+# <a name="cbasepane-class"></a>CBasePane-Klasse
+Die Basisklasse für alle Bereiche in MFC.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -209,168 +147,168 @@ Base class for all panes in MFC.
 class CBasePane : public CWnd  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Mitglieder  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|`CBasePane::CBasePane`|Default constructor.|  
-|`CBasePane::~CBasePane`|Destructor.|  
+|`CBasePane::CBasePane`|Standardkonstruktor|  
+|`CBasePane::~CBasePane`|Destruktor.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|`CBasePane::accHitTest`|Called by the framework to retrieve the child element or child object at a given point on the screen. (Overrides [CWnd::accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|  
-|`CBasePane::accLocation`|Called by the framework to retrieve the current screen location for the specified object. (Overrides [CWnd::accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|  
-|[CBasePane::AccNotifyObjectFocusEvent](#accnotifyobjectfocusevent)|`CBasePane` does not use this method.|  
-|`CBasePane::accSelect`|Called by the framework to modify the selection or move the keyboard focus of the specified object. (Overrides [CWnd::accSelect](../../mfc/reference/cwnd-class.md#accselect).)|  
-|[CBasePane::AddPane](#addpane)|Adds a pane to the docking manager.|  
-|[CBasePane::AdjustDockingLayout](#adjustdockinglayout)|Redirects a call to the docking manager to adjust the docking layout.|  
-|[CBasePane::AdjustLayout](#adjustlayout)|Called by the framework when the pane should adjust its internal layout.|  
-|[CBasePane::CalcFixedLayout](#calcfixedlayout)|Calculates the horizontal size of a control bar.|  
-|[CBasePane::CanAcceptPane](#canacceptpane)|Determines whether another pane can be docked to the pane.|  
-|[CBasePane::CanAutoHide](#canautohide)|Determines whether the pane supports auto-hide mode.|  
-|[CBasePane::CanBeAttached](#canbeattached)|Determines whether the pane can be docked to another pane.|  
-|[CBasePane::CanBeClosed](#canbeclosed)|Determines whether the pane can be closed.|  
-|[CBasePane::CanBeDocked](#canbedocked)|Determines whether the pane can be docked to another pane.|  
-|[CBasePane::CanBeResized](#canberesized)|Determines whether the pane can be resized.|  
-|[CBasePane::CanBeTabbedDocument](#canbetabbeddocument)|Specifies whether the pane can be converted to an MDI tabbed document.|  
-|[CBasePane::CanFloat](#canfloat)|Determines whether the pane can float.|  
-|[CBasePane::CanFocus](#canfocus)|Specifies whether the pane can receive focus.|  
-|[CBasePane::CopyState](#copystate)|Copies the state of a given pane.|  
-|[CBasePane::CreateDefaultMiniframe](#createdefaultminiframe)|If the pane can float, creates a mini-frame window.|  
-|[CBasePane::CreateEx](#createex)|Creates the pane control.|  
-|[CBasePane::DockPane](#dockpane)|Docks a pane to another pane or to a frame window.|  
-|[CBasePane::DockPaneUsingRTTI](#dockpaneusingrtti)|Docks the pane by using run-time type information.|  
-|[CBasePane::DockToFrameWindow](#docktoframewindow)|Docks a dockable pane to a frame.|  
-|[CBasePane::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Determines whether another pane can be dynamically inserted between this pane and the parent frame.|  
-|[CBasePane::EnableDocking](#enabledocking)|Enables docking of the pane to the main frame.|  
-|[CBasePane::EnableGripper](#enablegripper)|Enables or disables the gripper. If the gripper is enabled, the user can drag it to reposition the pane.|  
-|`CBasePane::FillWindowRect`|Used internally.|  
-|[CBasePane::FloatPane](#floatpane)|Floats the pane.|  
-|`CBasePane::get_accChild`|Called by the framework to retrieve the address of an `IDispatch` interface for the specified child. (Overrides [CWnd::get_accChild](../../mfc/reference/cwnd-class.md#get_accchild).)|  
-|`CBasePane::get_accChildCount`|Called by the framework to retrieve the number of children that belong to this object. (Overrides [CWnd::get_accChildCount](../../mfc/reference/cwnd-class.md#get_accchildcount).)|  
-|`CBasePane::get_accDefaultAction`|Called by the framework to retrieve a string that describes the default action for the object. (Overrides [CWnd::get_accDefaultAction](../../mfc/reference/cwnd-class.md#get_accdefaultaction).)|  
-|`CBasePane::get_accDescription`|Called by framework to retrieve a string that describes the visual appearance of the specified object. (Overrides [CWnd::get_accDescription](../../mfc/reference/cwnd-class.md#get_accdescription).)|  
-|`CBasePane::get_accFocus`|Called by the framework to retrieve the object that has the keyboard focus. (Overrides [CWnd::get_accFocus](../../mfc/reference/cwnd-class.md#get_accfocus).)|  
-|`CBasePane::get_accHelp`|Called by the framework to retrieve a  Help property string for the object. (Overrides [CWnd::get_accHelp](../../mfc/reference/cwnd-class.md#get_acchelp).)|  
-|[CBasePane::get_accHelpTopic](#get_acchelptopic)|Called by the framework to retrieve the full path of the WinHelp file that is associated with the specified object and the identifier of the appropriate topic in that file. (Overrides [CWnd::get_accHelpTopic](../../mfc/reference/cwnd-class.md#get_acchelptopic).)|  
-|`CBasePane::get_accKeyboardShortcut`|Called by the framework to retrieve the specified shortcut key for the object. (Overrides [CWnd::get_accKeyboardShortcut](../../mfc/reference/cwnd-class.md#get_acckeyboardshortcut).)|  
-|`CBasePane::get_accName`|Called by the framework to retrieve the name of the specified object. (Overrides [CWnd::get_accName](../../mfc/reference/cwnd-class.md#get_accname).)|  
-|`CBasePane::get_accParent`|Called by the framework to retrieve the `IDispatch` interface for the parent of the object. (Overrides [CWnd::get_accParent](../../mfc/reference/cwnd-class.md#get_accparent).)|  
-|`CBasePane::get_accRole`|Called by the framework to retrieve information that describes the role of the specified object. (Overrides [CWnd::get_accRole](../../mfc/reference/cwnd-class.md#get_accrole).)|  
-|[CBasePane::get_accSelection](#get_accselection)|Called by the framework to retrieve the selected children of this object. (Overrides [CWnd::get_accSelection](../../mfc/reference/cwnd-class.md#get_accselection).)|  
-|`CBasePane::get_accState`|Called by the framework to retrieve the current state of the specified object. (Overrides [CWnd::get_accState](../../mfc/reference/cwnd-class.md#get_accstate).)|  
-|`CBasePane::get_accValue`|Called by the framework to retrieve the value of the specified object. (Overrides [CWnd::get_accValue](../../mfc/reference/cwnd-class.md#get_accvalue).)|  
-|[CBasePane::GetCaptionHeight](#getcaptionheight)|Returns the caption height.|  
-|[CBasePane::GetControlBarStyle](#getcontrolbarstyle)|Returns the control bar style.|  
-|[CBasePane::GetCurrentAlignment](#getcurrentalignment)|Returns the current pane alignment.|  
-|[CBasePane::GetDockingMode](#getdockingmode)|Returns the current docking mode for the pane.|  
-|[CBasePane::GetDockSiteFrameWnd](#getdocksiteframewnd)|Returns a pointer to the window that is the dock site for the pane.|  
-|[CBasePane::GetEnabledAlignment](#getenabledalignment)|Returns the CBRS_ALIGN_ styles that are applied to the pane.|  
-|[CBasePane::GetMFCStyle](#getmfcstyle)|Returns the pane styles specific to MFC.|  
-|[CBasePane::GetPaneIcon](#getpaneicon)|Returns a handle to the pane icon.|  
-|`CBasePane::GetPaneRect`|Used internally.|  
-|[CBasePane::GetPaneRow](#getpanerow)|Returns a pointer to the [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)object where the pane is docked.|  
-|[CBasePane::GetPaneStyle](#getpanestyle)|Returns the pane style.|  
-|[CBasePane::GetParentDockSite](#getparentdocksite)|Returns a pointer to the parent dock site.|  
-|[CBasePane::GetParentMiniFrame](#getparentminiframe)|Returns a pointer to the parent mini-frame window.|  
-|[CBasePane::GetParentTabbedPane](#getparenttabbedpane)|Returns a pointer to the parent tabbed pane.|  
-|[CBasePane::GetParentTabWnd](#getparenttabwnd)|Returns a pointer to the parent window that is inside a tab.|  
-|[CBasePane::GetRecentVisibleState](#getrecentvisiblestate)|The framework calls this method when a pane is restored from an archive.|  
-|[CBasePane::HideInPrintPreviewMode](#hideinprintpreviewmode)|Specifies whether the pane is hidden in print preview.|  
-|[CBasePane::InsertPane](#insertpane)|Registers the specified pane with the docking manager.|  
-|[CBasePane::IsAccessibilityCompatible](#isaccessibilitycompatible)|Specifies whether the pane supports Active Accessibility.|  
-|[CBasePane::IsAutoHideMode](#isautohidemode)|Determines whether a pane is in auto-hide mode.|  
-|[CBasePane::IsDialogControl](#isdialogcontrol)|Specifies whether the pane is a dialog control.|  
-|[CBasePane::IsDocked](#isdocked)|Determines whether the pane is docked.|  
-|[CBasePane::IsFloating](#isfloating)|Determines whether the pane is floating.|  
-|[CBasePane::IsHorizontal](#ishorizontal)|Determines whether the pane is docked horizontally.|  
-|[CBasePane::IsInFloatingMultiPaneFrameWnd](#isinfloatingmultipaneframewnd)|Specifies whether the pane is in a multi-pane frame window.|  
-|[CBasePane::IsMDITabbed](#ismditabbed)|Determines whether the pane has been added to an MDI child window as a tabbed document.|  
-|[CBasePane::IsPaneVisible](#ispanevisible)|Specifies whether the `WS_VISIBLE` flag is set for the pane.|  
-|[CBasePane::IsPointNearDockSite](#ispointneardocksite)|Determines whether a specified point is near the dock site.|  
-|[CBasePane::IsResizable](#isresizable)|Determines whether the pane can be resized.|  
-|[CBasePane::IsRestoredFromRegistry](#isrestoredfromregistry)|Determines whether the pane is restored from the registry.|  
-|[CBasePane::IsTabbed](#istabbed)|Determines whether the pane has been inserted in the tab control of a tabbed window.|  
-|`CBasePane::IsTooltipTopmost`|Used internally.|  
-|[CBasePane::IsVisible](#isvisible)|Determines whether the pane is visible.|  
-|[CBasePane::LoadState](#loadstate)|Loads the pane state from the registry.|  
-|[CBasePane::MoveWindow](#movewindow)|Moves the pane.|  
-|[CBasePane::OnAfterChangeParent](#onafterchangeparent)|Called by the framework when the pane's parent has been changed.|  
-|[CBasePane::OnBeforeChangeParent](#onbeforechangeparent)|Called by the framework just before the pane changes its parent window.|  
-|[CBasePane::OnDrawCaption](#ondrawcaption)|The framework calls this method when the caption is drawn.|  
-|[CBasePane::OnMovePaneDivider](#onmovepanedivider)|This method is currently not used.|  
-|[CBasePane::OnPaneContextMenu](#onpanecontextmenu)|Called by the framework when it builds a menu that has a list of panes.|  
-|[CBasePane::OnRemoveFromMiniFrame](#onremovefromminiframe)|Called by the framework when a pane is removed from its parent mini frame window.|  
-|[CBasePane::OnSetAccData](#onsetaccdata)|`CBasePane` does not use this method.|  
-|`CBasePane::OnUpdateCmdUI`|Used internally.|  
-|[CBasePane::PaneFromPoint](#panefrompoint)|Returns the pane that contains the given point.|  
-|`CBasePane::PreTranslateMessage`|Used by class [CWinApp](../../mfc/reference/cwinapp-class.md) to translate window messages before they are dispatched to the [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) and [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows functions. (Overrides [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
-|[CBasePane::RecalcLayout](#recalclayout)|`CBasePane` does not use this method.|  
-|[CBasePane::RemovePaneFromDockManager](#removepanefromdockmanager)|Unregisters a pane and removes it from the list in the docking manager.|  
-|[CBasePane::SaveState](#savestate)|Saves the pane's state to the registry.|  
-|[CBasePane::SelectDefaultFont](#selectdefaultfont)|Selects the default font for a given device context.|  
-|`CBasePane::Serialize`|Reads or writes this object from or to an archive. (Overrides [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).)|  
-|[CBasePane::SetControlBarStyle](#setcontrolbarstyle)|Sets the control bar style.|  
-|[CBasePane::SetDockingMode](#setdockingmode)|Sets the docking mode for the pane.|  
-|`CBasePane::SetMDITabbed`|Used internally.|  
-|[CBasePane::SetPaneAlignment](#setpanealignment)|Sets the alignment for the pane.|  
-|`CBasePane::SetPaneRect`|Used internally.|  
-|[CBasePane::SetPaneStyle](#setpanestyle)|Sets the style of the pane.|  
-|`CBasePane::SetRestoredFromRegistry`|Used internally.|  
-|[CBasePane::SetWindowPos](#setwindowpos)|Changes the size, position, and Z-order of a pane.|  
-|[CBasePane::ShowPane](#showpane)|Shows or hides the pane.|  
-|[CBasePane::StretchPane](#stretchpane)|Stretches a pane vertically or horizontally.|  
-|[CBasePane::UndockPane](#undockpane)|Removes the pane from the dock site, default slider, or mini-frame window where it is currently docked.|  
+|`CBasePane::accHitTest`|Wird durch das Framework aufgerufen, um das untergeordnete Element oder untergeordnete Objekt an einem bestimmten Punkt auf dem Bildschirm abzurufen. (Überschreibt [CWnd::accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|  
+|`CBasePane::accLocation`|Aufgerufen, um die aktuelle Position für das angegebene Objekt abzurufen. (Überschreibt [CWnd::accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|  
+|[CBasePane::AccNotifyObjectFocusEvent](#accnotifyobjectfocusevent)|`CBasePane`Diese Methode wird nicht verwendet werden.|  
+|`CBasePane::accSelect`|Wird durch das Framework aufgerufen, um die Auswahl zu ändern oder den Tastaturfokus des angegebenen Objekts zu verschieben. (Überschreibt [CWnd::accSelect](../../mfc/reference/cwnd-class.md#accselect).)|  
+|[CBasePane::AddPane](#addpane)|Fügt einen Bereich zum Andocken Manager hinzu.|  
+|[CBasePane::AdjustDockingLayout](#adjustdockinglayout)|Leitet einen Aufruf an die Dockingstation-Manager das Andocken Layout anpassen.|  
+|[CBasePane::AdjustLayout](#adjustlayout)|Vom Framework aufgerufen, wenn der Bereich das interne Layout angepasst.|  
+|[CBasePane::CalcFixedLayout](#calcfixedlayout)|Berechnet die horizontale Größe einer Steuerleiste.|  
+|[CBasePane::CanAcceptPane](#canacceptpane)|Bestimmt, ob ein weiterer Bereich, in den Bereich angedockt werden kann.|  
+|[CBasePane::CanAutoHide](#canautohide)|Bestimmt, ob der Bereich automatisch ausgeblendet unterstützt.|  
+|[CBasePane::CanBeAttached](#canbeattached)|Bestimmt, ob der Bereich in einen anderen Bereich angedockt werden kann.|  
+|[Cbasepane:: Canbeclosed](#canbeclosed)|Bestimmt, ob der Bereich geschlossen werden kann.|  
+|[CBasePane::CanBeDocked](#canbedocked)|Bestimmt, ob der Bereich in einen anderen Bereich angedockt werden kann.|  
+|[CBasePane::CanBeResized](#canberesized)|Bestimmt, ob der Bereich angepasst werden kann.|  
+|[CBasePane::CanBeTabbedDocument](#canbetabbeddocument)|Gibt an, ob der Bereich in einer MDI-Dokument im Registerkartenformat konvertiert werden kann.|  
+|[CBasePane::CanFloat](#canfloat)|Bestimmt, ob der Bereich wechseln kann.|  
+|[CBasePane::CanFocus](#canfocus)|Gibt an, ob der Bereich den Fokus erhalten kann.|  
+|[CBasePane::CopyState](#copystate)|Kopiert den Status eines bestimmten Bereichs.|  
+|[CBasePane::CreateDefaultMiniframe](#createdefaultminiframe)|Wenn der Bereich wechseln kann, erstellt ein Minirahmenfenster.|  
+|[CBasePane::CreateEx](#createex)|Das Steuerelement wird erstellt.|  
+|[CBasePane::DockPane](#dockpane)|Dockt an einen Bereich in einen anderen Bereich oder einem Rahmenfenster.|  
+|[CBasePane::DockPaneUsingRTTI](#dockpaneusingrtti)|Dockt den Bereich mit der Laufzeit Typinformationen an.|  
+|[CBasePane::DockToFrameWindow](#docktoframewindow)|Ein Frame ein andockbares Fenster angedockt.|  
+|[CBasePane::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Bestimmt, ob ein weiterer Bereich dynamisch zwischen diesem und den übergeordneten Frame eingefügt werden kann.|  
+|[CBasePane::EnableDocking](#enabledocking)|Ermöglicht das Andocken des Bereichs des Hauptframe.|  
+|[CBasePane::EnableGripper](#enablegripper)|Aktiviert oder deaktiviert die Ziehpunkte. Wenn die Ziehpunkte aktiviert ist, kann der Benutzer, um die Position im Bereichs ziehen.|  
+|`CBasePane::FillWindowRect`|Wird intern verwendet.|  
+|[CBasePane::FloatPane](#floatpane)|Befindet sich im Bereich.|  
+|`CBasePane::get_accChild`|Wird durch das Framework aufgerufen, um die Adresse einer `IDispatch`-Schnittstelle für das angegebene, untergeordnete Element abzurufen. (Überschreibt [CWnd::get_accChild](../../mfc/reference/cwnd-class.md#get_accchild).)|  
+|`CBasePane::get_accChildCount`|Aufgerufen, um die Anzahl der untergeordneten Elemente abzurufen, die zu diesem Objekt gehören. (Überschreibt [CWnd::get_accChildCount](../../mfc/reference/cwnd-class.md#get_accchildcount).)|  
+|`CBasePane::get_accDefaultAction`|Aufgerufen, um eine Zeichenfolge abzurufen, die die Standardaktion des Objekts beschreibt. (Überschreibt [CWnd::get_accDefaultAction](../../mfc/reference/cwnd-class.md#get_accdefaultaction).)|  
+|`CBasePane::get_accDescription`|Wird durch das Framework aufgerufen, um eine Zeichenfolge abzurufen, die die visuelle Darstellung des angegebenen Objekts beschreibt. (Überschreibt [CWnd::get_accDescription](../../mfc/reference/cwnd-class.md#get_accdescription).)|  
+|`CBasePane::get_accFocus`|Wird durch das Framework aufgerufen, um das Objekt abzurufen, das den Tastaturfokus hat. (Überschreibt [CWnd::get_accFocus](../../mfc/reference/cwnd-class.md#get_accfocus).)|  
+|`CBasePane::get_accHelp`|Aufgerufen, um eine Hilfezeichenfolge der Eigenschaft für das Objekt abzurufen. (Überschreibt [CWnd::get_accHelp](../../mfc/reference/cwnd-class.md#get_acchelp).)|  
+|[CBasePane::get_accHelpTopic](#get_acchelptopic)|Aufgerufen, um den vollständigen Pfad der WinHelp-Datei, die mit dem angegebenen Objekt zugeordnet ist und der Bezeichner der im entsprechenden Thema in der Datei abzurufen. (Überschreibt [CWnd::get_accHelpTopic](../../mfc/reference/cwnd-class.md#get_acchelptopic).)|  
+|`CBasePane::get_accKeyboardShortcut`|Aufgerufen, um die angegebene Tastenkombination für das Objekt abzurufen. (Überschreibt [CWnd::get_accKeyboardShortcut](../../mfc/reference/cwnd-class.md#get_acckeyboardshortcut).)|  
+|`CBasePane::get_accName`|Wird durch das Framework aufgerufen, um den Namen des angegebenen Objekts abzurufen. (Überschreibt [CWnd::get_accName](../../mfc/reference/cwnd-class.md#get_accname).)|  
+|`CBasePane::get_accParent`|Aufgerufen, zum Abrufen der `IDispatch` -Schnittstelle für das übergeordnete Element des Objekts. (Überschreibt [CWnd::get_accParent](../../mfc/reference/cwnd-class.md#get_accparent).)|  
+|`CBasePane::get_accRole`|Wird durch das Framework aufgerufen, um Informationen abzurufen, die die Rolle des angegebenen Objekts beschreiben. (Überschreibt [CWnd::get_accRole](../../mfc/reference/cwnd-class.md#get_accrole).)|  
+|[CBasePane::get_accSelection](#get_accselection)|Wird durch das Framework aufgerufen, um die ausgewählten, untergeordneten Elemente dieses Objekts abzurufen. (Überschreibt [CWnd::get_accSelection](../../mfc/reference/cwnd-class.md#get_accselection).)|  
+|`CBasePane::get_accState`|Wird durch das Framework aufgerufen, um den aktuellen Status des angegebenen Objekts abzurufen. (Überschreibt [CWnd::get_accState](../../mfc/reference/cwnd-class.md#get_accstate).)|  
+|`CBasePane::get_accValue`|Wird durch das Framework aufgerufen, um den Wert des angegebenen Objekts abzurufen. (Überschreibt [CWnd::get_accValue](../../mfc/reference/cwnd-class.md#get_accvalue).)|  
+|[Cbasepane:: Getcaptionheight](#getcaptionheight)|Gibt die Beschriftungshöhe zurück.|  
+|[CBasePane::GetControlBarStyle](#getcontrolbarstyle)|Gibt das Format des Steuerelements angezeigt.|  
+|[CBasePane::GetCurrentAlignment](#getcurrentalignment)|Gibt den aktuellen Bereich Ausrichtung zurück.|  
+|[Cbasepane:: Getdockingmode](#getdockingmode)|Gibt den aktuellen Andockmodus für den Bereich zurück.|  
+|[CBasePane::GetDockSiteFrameWnd](#getdocksiteframewnd)|Gibt einen Zeiger auf das Fenster, das die Dock-Website für den Bereich ist.|  
+|[CBasePane::GetEnabledAlignment](#getenabledalignment)|Gibt die CBRS_ALIGN_-Formate, die in den Bereich angewendet werden.|  
+|[CBasePane::GetMFCStyle](#getmfcstyle)|Gibt die Stile im Bereich bestimmte mit MFC zurück.|  
+|[CBasePane::GetPaneIcon](#getpaneicon)|Gibt ein Handle auf das Symbol "Bereich".|  
+|`CBasePane::GetPaneRect`|Wird intern verwendet.|  
+|[CBasePane::GetPaneRow](#getpanerow)|Gibt einen Zeiger auf die [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)Objekt, in dem Bereich angedockt ist.|  
+|[CBasePane::GetPaneStyle](#getpanestyle)|Gibt den Bereichsformat zurück.|  
+|[CBasePane::GetParentDockSite](#getparentdocksite)|Gibt einen Zeiger auf den übergeordneten Dock-Standort.|  
+|[CBasePane::GetParentMiniFrame](#getparentminiframe)|Gibt einen Zeiger auf das übergeordnete Minirahmenfenster.|  
+|[CBasePane::GetParentTabbedPane](#getparenttabbedpane)|Gibt einen Zeiger auf die übergeordnete Seite im Registerformat.|  
+|[CBasePane::GetParentTabWnd](#getparenttabwnd)|Gibt einen Zeiger auf das übergeordnete Fenster, das auf einer Registerkarte angezeigt wird.|  
+|[CBasePane::GetRecentVisibleState](#getrecentvisiblestate)|Das Framework ruft diese Methode auf, wenn ein Bereich aus einem Archiv wiederhergestellt wird.|  
+|[CBasePane::HideInPrintPreviewMode](#hideinprintpreviewmode)|Gibt an, ob der Bereich in der Seitenansicht ausgeblendet ist.|  
+|[CBasePane::InsertPane](#insertpane)|Registriert den angegebenen Bereich der docking-Manager.|  
+|[CBasePane::IsAccessibilityCompatible](#isaccessibilitycompatible)|Gibt an, ob im Bereich Active Accessibility unterstützt.|  
+|[CBasePane::IsAutoHideMode](#isautohidemode)|Bestimmt, ob ein Fenster automatisch ausgeblendet wird.|  
+|[CBasePane::IsDialogControl](#isdialogcontrol)|Gibt an, ob der Bereich ein Steuerelement ist.|  
+|[CBasePane::IsDocked](#isdocked)|Bestimmt, ob der Bereich angedockt ist.|  
+|[CBasePane::IsFloating](#isfloating)|Bestimmt, ob der Bereich verankert ist.|  
+|[CBasePane::IsHorizontal](#ishorizontal)|Bestimmt, ob der Bereich horizontal angedockt ist.|  
+|[CBasePane::IsInFloatingMultiPaneFrameWnd](#isinfloatingmultipaneframewnd)|Gibt an, ob der Bereich in einem Rahmenfenster mit mehreren Bereichen.|  
+|[CBasePane::IsMDITabbed](#ismditabbed)|Bestimmt, ob der Bereich ein untergeordnetes MDI-Fenster als ein Dokument im Registerkartenformat hinzugefügt wurde.|  
+|[CBasePane::IsPaneVisible](#ispanevisible)|Gibt an, ob die `WS_VISIBLE` Flag für den Bereich festgelegt ist.|  
+|[CBasePane::IsPointNearDockSite](#ispointneardocksite)|Bestimmt, ob es sich bei ein angegebenen Punkt in der Nähe der Dock-Website befindet.|  
+|[CBasePane::IsResizable](#isresizable)|Bestimmt, ob der Bereich angepasst werden kann.|  
+|[CBasePane::IsRestoredFromRegistry](#isrestoredfromregistry)|Bestimmt, ob der Bereich in der Registrierung wiederhergestellt wird.|  
+|[CBasePane::IsTabbed](#istabbed)|Bestimmt, ob der Bereich in das Registerkarten-Steuerelement ein Fenster im Registerkartenformat eingefügt wurde.|  
+|`CBasePane::IsTooltipTopmost`|Wird intern verwendet.|  
+|[CBasePane::IsVisible](#isvisible)|Bestimmt, ob der Bereich angezeigt wird.|  
+|[CBasePane::LoadState](#loadstate)|Lädt den Zustand des Bereichs aus der Registrierung.|  
+|[CBasePane::MoveWindow](#movewindow)|Verschiebt den Bereich.|  
+|[CBasePane::OnAfterChangeParent](#onafterchangeparent)|Vom Framework aufgerufen, wenn der Bereich übergeordneten geändert wurde.|  
+|[CBasePane::OnBeforeChangeParent](#onbeforechangeparent)|Vom Framework aufgerufen, unmittelbar bevor der Bereich des übergeordneten Fensters geändert wird.|  
+|[CBasePane::OnDrawCaption](#ondrawcaption)|Das Framework ruft diese Methode auf, wenn der Titel gezeichnet wird.|  
+|[CBasePane::OnMovePaneDivider](#onmovepanedivider)|Diese Methode wird derzeit nicht verwendet.|  
+|[CBasePane::OnPaneContextMenu](#onpanecontextmenu)|Vom Framework aufgerufen, wenn ein Menü erstellt, die eine Liste von Bereichen.|  
+|[CBasePane::OnRemoveFromMiniFrame](#onremovefromminiframe)|Wird vom Framework aufgerufen, wenn ein Bereich aus das übergeordnete Mini-Rahmenfenster entfernt wird.|  
+|[Cbasepane:: Onsetaccdata](#onsetaccdata)|`CBasePane`Diese Methode wird nicht verwendet werden.|  
+|`CBasePane::OnUpdateCmdUI`|Wird intern verwendet.|  
+|[CBasePane::PaneFromPoint](#panefrompoint)|Gibt den Bereich, der den angegebenen Punkt enthält.|  
+|`CBasePane::PreTranslateMessage`|Von der Klasse verwendet [CWinApp](../../mfc/reference/cwinapp-class.md) auf fenstermeldungen zu übersetzen, bevor sie an verteilt sind die [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) und [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows-Funktionen. (Überschreibt [CWnd:: PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|[CBasePane::RecalcLayout](#recalclayout)|`CBasePane`Diese Methode wird nicht verwendet werden.|  
+|[CBasePane::RemovePaneFromDockManager](#removepanefromdockmanager)|Hebt die Registrierung eines Bereichs, und entfernt sie aus der Liste in der Dockingstation-Manager.|  
+|[CBasePane::SaveState](#savestate)|Speichert den Zustand des Bereichs in der Registrierung.|  
+|[CBasePane::SelectDefaultFont](#selectdefaultfont)|Wählt die Schriftart für einen bestimmten Gerätekontext.|  
+|`CBasePane::Serialize`|Liest oder schreibt dieses Objekt aus einem oder in ein Archiv. (Überschreibt [Einfügeoperatoren](../../mfc/reference/cobject-class.md#serialize).)|  
+|[CBasePane::SetControlBarStyle](#setcontrolbarstyle)|Legt das Format des Steuerelements angezeigt.|  
+|[CBasePane::SetDockingMode](#setdockingmode)|Legt den Andockmodus für den Bereich fest.|  
+|`CBasePane::SetMDITabbed`|Wird intern verwendet.|  
+|[CBasePane::SetPaneAlignment](#setpanealignment)|Legt die Ausrichtung für den Bereich fest.|  
+|`CBasePane::SetPaneRect`|Wird intern verwendet.|  
+|[CBasePane::SetPaneStyle](#setpanestyle)|Legt den Stil des Bereichs.|  
+|`CBasePane::SetRestoredFromRegistry`|Wird intern verwendet.|  
+|[CBasePane::SetWindowPos](#setwindowpos)|Ändert die Größe, Position und Z-Reihenfolge eines Bereichs.|  
+|[CBasePane::ShowPane](#showpane)|Blendet den Bereich oder.|  
+|[CBasePane::StretchPane](#stretchpane)|Streckt einen Bereich vertikal oder horizontal.|  
+|[CBasePane::UndockPane](#undockpane)|Entfernt im Bereich von docksite, Standard-Schieberegler oder Minirahmenfenster, in denen es derzeit angedockt ist.|  
   
-### <a name="protected-methods"></a>Protected Methods  
+### <a name="protected-methods"></a>Geschützte Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CBasePane::DoPaint](#dopaint)|Fills the background of the pane.|  
+|[CBasePane::DoPaint](#dopaint)|Füllt den Hintergrund des Bereichs.|  
   
-## <a name="remarks"></a>Remarks  
- If you want to create a pane class that supports the extended docking features available in MFC, you must derive it from `CBasePane` or from [CPane Class](../../mfc/reference/cpane-class.md).  
+## <a name="remarks"></a>Hinweise  
+ Wenn Sie eine Klasse im Bereich zu erstellen, die die erweiterten andockbaren Merkmale, die in MFC unterstützt möchten, leiten Sie ihn von `CBasePane` oder [CPane-Klasse](../../mfc/reference/cpane-class.md).  
   
-## <a name="customization-tips"></a>Customization Tips  
- The following customization tips pertain to the `CBasePane Class` and any classes that inherit from it:  
+## <a name="customization-tips"></a>Anpassungstipps  
+ Die folgenden Anpassungstipps beziehen sich auf die `CBasePane Class` und alle Klassen, die von ihm erben:  
   
--   When you create a pane, you can apply several new styles:  
+-   Wenn Sie einen Bereich erstellen, können Sie mehrere neue Stile anwenden:  
   
-    - `AFX_CBRS_FLOAT` makes the pane float.  
+    - `AFX_CBRS_FLOAT`Stellt den Bereich Float.  
   
-    - `AFX_CBRS_AUTOHIDE` enables auto-hide mode.  
+    - `AFX_CBRS_AUTOHIDE`ermöglicht das automatische Ausblenden Modus.  
   
-    - `AFX_CBRS_CLOSE` enables the pane to be closed (hidden).  
+    - `AFX_CBRS_CLOSE`ermöglicht der Bereich (ausgeblendet) geschlossen werden.  
   
-     These are flags that you can combine with a bitwise-OR operation.  
+     Hierbei handelt es sich um Flags, die mit einer bitweisen OR-Operation kombiniert werden können.  
   
- `CBasePane` implements the following virtual Boolean methods to reflect these flags: [CBasePane::CanBeClosed](#canbeclosed), [CBasePane::CanAutoHide](#canautohide), [CBasePane::CanFloat](#canfloat). You can override them in derived classes to customize their behavior.  
+ `CBasePane`implementiert die folgenden Methoden der virtuellen booleschen entsprechend dieser Flags: [cbasepane:: Canbeclosed](#canbeclosed), [CBasePane::CanAutoHide](#canautohide), [CBasePane::CanFloat](#canfloat). Sie können sie in abgeleiteten Klassen zum Anpassen ihres Verhaltens überschreiben.  
   
--   You can customize docking behavior by overriding [CBasePane::CanAcceptPane](#canacceptpane). Have your pane return `FALSE` from this method to prevent another pane from docking to it.  
+-   Sie können Andockverhalten anpassen, indem Sie überschreiben [CBasePane::CanAcceptPane](#canacceptpane). Haben Sie Ihr Bereich zurückgeben `FALSE` von dieser Methode, um zu verhindern, dass ein weiterer Bereich, es andocken.  
   
--   If you want to create a static pane that cannot float and that prevents any other pane from docking before it (similar to the Outlook bar in the OutlookDemo example), create it as non-floating and override [CBasePane::DoesAllowDynInsertBefore](#doesallowdyninsertbefore) to return `FALSE`. The default implementation returns `FALSE` if the pane is created without the `AFX_CBRS_FLOAT` style.  
+-   Wenn Sie einen statischen Bereich nicht möglich, die float- und einen beliebigen anderen Bereich, die verhindert, dass vor dem Andocken (ähnlich wie der Outlook-Leiste in das OutlookDemo-Beispiel) erstellen möchten, erstellen Sie ihn als verankerte und überschreiben [CBasePane::DoesAllowDynInsertBefore](#doesallowdyninsertbefore) zurückzugebenden `FALSE`. Die standardmäßige Implementierung gibt `FALSE` , wenn der Bereich, ohne erstellt wird die `AFX_CBRS_FLOAT` Stil.  
   
--   Create all panes with IDs other than -1.  
+-   Erstellen Sie alle Bereiche mit IDs als-1 fest.  
   
--   To determine pane visibility, use [CBasePane::IsVisible](#isvisible). It correctly handles the visibility state in tabbed and auto-hide modes.  
+-   Verwenden Sie zum Bestimmen der Sichtbarkeit Bereich [CBasePane::IsVisible](#isvisible). Diese korrekt behandelt des Sichtbarkeitsstatus im Registerkartenformat und automatisch im Hintergrund Modi.  
   
--   If you want to create a non-floating resizable pane, create it without the `AFX_CBRS_FLOAT` style and call [CFrameWnd::DockControlBar](../../mfc/reference/cframewnd-class.md#dockcontrolbar).  
+-   Wenn Sie einen verankerte mit veränderbarer Größe Bereich erstellen möchten, erstellen Sie ihn ohne die `AFX_CBRS_FLOAT` Stil und einem Aufruf [CFrameWnd:: DockControlBar](../../mfc/reference/cframewnd-class.md#dockcontrolbar).  
   
--   To exclude a pane from a docking layout or to remove a toolbar from its dock bar, call [CBasePane::UndockPane](#undockpane). Do not call this method for panes in auto-hide mode or for panes that reside in tabs of tabbed windows.  
+-   Rufen Sie einen Bereich von einer Dockingstation Layout ausschließen oder eine Symbolleiste in der Leiste Dock entfernen, [CBasePane::UndockPane](#undockpane). Rufen Sie diese Methode für den Bereich automatisch ausgeblendet oder Bereiche, die in den Registerkarten im Registerformat befinden.  
   
--   If you want to float or undock a pane that is in auto-hide mode, you must call [CDockablePane::SetAutoHideMode](../../mfc/reference/cdockablepane-class.md#setautohidemode) with `FALSE` as the first argument before you call [CBasePane::FloatPane](#floatpane) or [CBasePane::UndockPane](#undockpane).  
+-   Wenn Sie, Float möchten oder lösen einen Bereich, der automatisch ausgeblendet wird, müssen Sie aufrufen [CDockablePane::SetAutoHideMode](../../mfc/reference/cdockablepane-class.md#setautohidemode) mit `FALSE` als erstes Argument vor dem Aufruf von [CBasePane::FloatPane](#floatpane) oder [CBasePane::UndockPane](#undockpane).  
   
-## <a name="example"></a>Example  
- The following example demonstrates how to use various methods in the `CBasePane` class. The example demonstrates how to retrieve a pane from the `CFrameWndEx` class and how to set the docking mode, the pane alignment, and the pane style. The code is from the [Word Pad sample](../../visual-cpp-samples.md).  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird veranschaulicht, wie verschiedene Methoden in der `CBasePane` Klasse. Das Beispiel veranschaulicht das Abrufen ein Bereichs von der `CFrameWndEx` -Klasse und den Andockmodus, die im Bereich Ausrichtung und die Formatvorlage Bereich festlegen. Der Code stammt aus der [WordPad-Beispiel](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_WordPad#2](../../mfc/reference/codesnippet/cpp/cbasepane-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_WordPad&#2;](../../mfc/reference/codesnippet/cpp/cbasepane-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
- [CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
+ [Von CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -378,64 +316,64 @@ class CBasePane : public CWnd
   
  [CBasePane](../../mfc/reference/cbasepane-class.md)  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxbasepane.h  
   
-##  <a name="accnotifyobjectfocusevent"></a>  CBasePane::AccNotifyObjectFocusEvent  
- `CBasePane` does not use this method.  
+##  <a name="accnotifyobjectfocusevent"></a>CBasePane::AccNotifyObjectFocusEvent  
+ `CBasePane`Diese Methode wird nicht verwendet werden.  
   
 ```  
 virtual void AccNotifyObjectFocusEvent(int);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `int`  
- Not used.  
+ Nicht verwendet.  
   
-##  <a name="addpane"></a>  CBasePane::AddPane  
- Adds a pane to the docking manager.  
+##  <a name="addpane"></a>CBasePane::AddPane  
+ Fügt einen Bereich zum Andocken Manager hinzu.  
   
 ```  
 void AddPane(CBasePane* pBar);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pBar`  
- A pointer to a pane to add.  
+ Ein Zeiger auf einen Bereich hinzuzufügen.  
   
-### <a name="remarks"></a>Remarks  
- This is a convenience method that adds a pane to a docking manager. By using this method, you do not have to write code that analyzes the type of the parent frame.  
+### <a name="remarks"></a>Hinweise  
+ Dies ist eine Hilfsmethode, die einen Bereich an eine Dockingstation-Manager hinzufügt. Mithilfe dieser Methode müssen Sie keinen Code schreiben, der den Typ des übergeordneten Frames analysiert.  
   
- For more information, see [CDockingManager Class](../../mfc/reference/cdockingmanager-class.md) and [CMDIFrameWndEx::AddPane](../../mfc/reference/cmdiframewndex-class.md#addpane).  
+ Weitere Informationen finden Sie unter [CDockingManager Klasse](../../mfc/reference/cdockingmanager-class.md) und [CMDIFrameWndEx::AddPane](../../mfc/reference/cmdiframewndex-class.md#addpane).  
   
-##  <a name="adjustdockinglayout"></a>  CBasePane::AdjustDockingLayout  
- Redirects a call to the docking manager to adjust the docking layout.  
+##  <a name="adjustdockinglayout"></a>CBasePane::AdjustDockingLayout  
+ Leitet einen Aufruf an die Dockingstation-Manager das Andocken Layout anpassen.  
   
 ```  
 virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [out] `hdwp`  
- A handle to a structure containing multiple window positions.  
+ Ein Handle für eine Struktur mit mehreren Fensterpositionen.  
   
-### <a name="remarks"></a>Remarks  
- This is a convenience method that adjusts the docking layout. By using this method, you do not have to write code that analyzes the type of the parent frame.  
+### <a name="remarks"></a>Hinweise  
+ Dies ist eine Hilfsmethode, die das andocklayout angepasst. Mithilfe dieser Methode müssen Sie keinen Code schreiben, der den Typ des übergeordneten Frames analysiert.  
   
- For more information, see [CDockingManager::AdjustDockingLayout](../../mfc/reference/cdockingmanager-class.md#adjustdockinglayout)  
+ Weitere Informationen finden Sie unter [CDockingManager::AdjustDockingLayout](../../mfc/reference/cdockingmanager-class.md#adjustdockinglayout)  
   
-##  <a name="adjustlayout"></a>  CBasePane::AdjustLayout  
- Called by the framework to adjust the internal layout of a pane.  
+##  <a name="adjustlayout"></a>CBasePane::AdjustLayout  
+ Vom Framework aufgerufen wird, das interne Layout eines Bereichs anzupassen.  
   
 ```  
 virtual void AdjustLayout();
 ```  
   
-### <a name="remarks"></a>Remarks  
- The framework calls this method when a pane has to adjust its internal layout. The base implementation does nothing.  
+### <a name="remarks"></a>Hinweise  
+ Das Framework ruft diese Methode auf, wenn ein Bereich das interne Layout anpassen muss. Die basisimplementierung wird keine Aktion ausgeführt.  
   
-##  <a name="calcfixedlayout"></a>  CBasePane::CalcFixedLayout  
- Calculates the horizontal size of a control bar.  
+##  <a name="calcfixedlayout"></a>CBasePane::CalcFixedLayout  
+ Berechnet die horizontale Größe einer Steuerleiste.  
   
 ```  
 virtual CSize CalcFixedLayout(
@@ -443,204 +381,204 @@ virtual CSize CalcFixedLayout(
     BOOL bHorz);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `bStretch`  
- Indicates whether the bar should be stretched to the size of the frame. The `bStretch` parameter is nonzero when the bar is not a docking bar (not available for docking) and is 0 when it is docked or floating (available for docking).  
+ Gibt an, ob die Leiste auf die Größe des Rahmens gestreckt werden soll. Die `bStretch` Parameter ist ungleich NULL, wenn die Leiste keine andockleiste (nicht verfügbar für andockbare) und 0, ist wenn es angedockt oder unverankert ist (verfügbar für andockbare).  
   
  [in] `bHorz`  
- Indicates that the bar is horizontally or vertically oriented. The `bHorz` parameter is nonzero if the bar is horizontally oriented and is 0 if it is vertically oriented.  
+ Gibt an, dass die Leiste horizontal oder vertikal ausgerichtet ist. Die `bHorz` Parameter ist ungleich NULL, wenn die Leiste horizontal ausgerichtet ist, und 0 ist, wenn sie vertikal ausgerichtet ist.  
   
-### <a name="return-value"></a>Return Value  
- The control bar size, in pixels, of a `CSize` object.  
+### <a name="return-value"></a>Rückgabewert  
+ Die Steuerleiste Größe, in Pixel, der eine `CSize` Objekt.  
   
-### <a name="remarks"></a>Remarks  
- See the remarks section in [CControlBar::CalcFixedLayout](../../mfc/reference/ccontrolbar-class.md#calcfixedlayout)  
+### <a name="remarks"></a>Hinweise  
+ Finden Sie unter die Hinweisen im Abschnitt [CControlBar::CalcFixedLayout](../../mfc/reference/ccontrolbar-class.md#calcfixedlayout)  
   
-##  <a name="canacceptpane"></a>  CBasePane::CanAcceptPane  
- Determines whether another pane can be docked to the pane.  
+##  <a name="canacceptpane"></a>CBasePane::CanAcceptPane  
+ Bestimmt, ob ein weiterer Bereich, in den Bereich angedockt werden kann.  
   
 ```  
 virtual BOOL CanAcceptPane(const CBasePane* pBar) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pBar`  
- A pointer to the pane to dock.  
+ Ein Zeiger auf den Bereich angedockt.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if another pane can be accepted; otherwise `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn Sie einen anderen Bereich akzeptiert werden kann; andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- The framework calls this method before it docks the pane specified by `pBar` to the current pane.  
+### <a name="remarks"></a>Hinweise  
+ Das Framework ruft diese Methode auf, bevor im angegebenen Bereich angedockt wird `pBar` in den aktuellen Bereich.  
   
- Use this method and the [CBasePane::CanBeDocked](#canbedocked) method to control how panes dock to other panes in your application.  
+ Verwenden Sie diese Methode und die [CBasePane::CanBeDocked](#canbedocked) Methode steuern, wie Bereiche auf andere Bereiche in Ihrer Anwendung andocken.  
   
- The default implementation returns `FALSE`.  
+ Die Standardimplementierung gibt `FALSE` zurück.  
   
-##  <a name="canautohide"></a>  CBasePane::CanAutoHide  
- Determines whether the pane supports auto-hide mode.  
+##  <a name="canautohide"></a>CBasePane::CanAutoHide  
+ Bestimmt, ob der Bereich automatisch ausgeblendet unterstützt.  
   
 ```  
 virtual BOOL CanAutoHide() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if this pane supports auto-hide mode; otherwise `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn dieser Bereich automatisch ausgeblendet unterstützt. andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- The framework calls this function to determine whether the pane supports auto-hide mode.  
+### <a name="remarks"></a>Hinweise  
+ Das Framework ruft diese Funktion, um zu bestimmen, ob der Bereich automatisch ausgeblendet unterstützt.  
   
- During construction, you can set this ability by passing the `AFX_CBRS_AUTOHIDE` flag to [CBasePane::CreateEx](#createex).  
+ Während der Konstruktion lassen sich diese Fähigkeit durch Übergeben der `AFX_CBRS_AUTOHIDE` flag auf [CBasePane::CreateEx](#createex).  
   
- The default implementation checks for the `AFX_CBRS_AUTOHIDE` flag. Override this method in a derived class to customize this behavior.  
+ Die standardmäßige Implementierung überprüft die `AFX_CBRS_AUTOHIDE` Flag. Überschreiben Sie diese Methode in einer abgeleiteten Klasse, um dieses Verhalten anzupassen.  
   
-##  <a name="canbeattached"></a>  CBasePane::CanBeAttached  
- Determines whether the pane can be docked to another pane or frame window.  
+##  <a name="canbeattached"></a>CBasePane::CanBeAttached  
+ Bestimmt, ob der Bereich zu einem anderen Bereich oder Fenster angedockt werden kann.  
   
 ```  
 virtual BOOL CanBeAttached() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the pane can be docked to another pane or frame window; otherwise `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn der Bereich zu einem anderen Bereich oder Fenster angedockt werden kann andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- The default implementation returns `FALSE`. Override this method in a derived class to enable or disable the ability to dock without calling [CBasePane::EnableDocking](#enabledocking).  
+### <a name="remarks"></a>Hinweise  
+ Die Standardimplementierung gibt `FALSE` zurück. Überschreiben Sie diese Methode in einer abgeleiteten Klasse zum Aktivieren oder deaktivieren die Möglichkeit, ohne Aufruf Andocken [CBasePane::EnableDocking](#enabledocking).  
   
-##  <a name="canbeclosed"></a>  CBasePane::CanBeClosed  
- Determines whether the pane can be closed.  
+##  <a name="canbeclosed"></a>Cbasepane:: Canbeclosed  
+ Bestimmt, ob der Bereich geschlossen werden kann.  
   
 ```  
 virtual BOOL CanBeClosed() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the pane can be closed; otherwise `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn der Bereich geschlossen werden kann; andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- The framework calls this method to determine whether the pane can be closed. If the method returns `TRUE`, a **Close** button is added to the pane's title bar or, if the pane is floating, to the title bar of the pane's miniframe window.  
+### <a name="remarks"></a>Hinweise  
+ Das Framework ruft diese Methode, um zu bestimmen, ob der Bereich geschlossen werden kann. Wenn die Methode zurückgibt `TRUE`, **schließen** Schaltfläche auf der Titelleiste hinzugefügt wird oder wenn der Bereich auf der Titelleiste des Bereichs Minirahmenfenster verankert ist.  
   
- During construction, you can set this ability by passing the `AFX_CBRS_CLOSE` flag to [CBasePane::CreateEx](#createex).  
+ Während der Konstruktion lassen sich diese Fähigkeit durch Übergeben der `AFX_CBRS_CLOSE` flag auf [CBasePane::CreateEx](#createex).  
   
- The default implementation checks for the `AFX_CBRS_CLOSE` flag.  
+ Die standardmäßige Implementierung überprüft die `AFX_CBRS_CLOSE` Flag.  
   
-##  <a name="canbedocked"></a>  CBasePane::CanBeDocked  
- Determines whether the pane can be docked to another pane.  
+##  <a name="canbedocked"></a>CBasePane::CanBeDocked  
+ Bestimmt, ob der Bereich in einen anderen Bereich angedockt werden kann.  
   
 ```  
 virtual BOOL CanBeDocked(CBasePane* pDockBar) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pDockBar`  
- A pointer to another pane.  
+ Ein Zeiger auf einen anderen Bereich.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if this pane can be docked to another pane; otherwise `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn in diesem Bereich in einen anderen Bereich; angedockt werden kann andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- The framework calls this method before it docks the pane specified by `pDockBar` to the current pane.  
+### <a name="remarks"></a>Hinweise  
+ Das Framework ruft diese Methode auf, bevor im angegebenen Bereich angedockt wird `pDockBar` in den aktuellen Bereich.  
   
- Use this method and the [CBasePane::CanAcceptPane](#canacceptpane) method to control how panes dock to other panes in your application.  
+ Verwenden Sie diese Methode und die [CBasePane::CanAcceptPane](#canacceptpane) Methode steuern, wie Bereiche auf andere Bereiche in Ihrer Anwendung andocken.  
   
- The default implementation returns `FALSE`.  
+ Die Standardimplementierung gibt `FALSE` zurück.  
   
-##  <a name="canberesized"></a>  CBasePane::CanBeResized  
- Determines whether the pane can be resized.  
+##  <a name="canberesized"></a>CBasePane::CanBeResized  
+ Bestimmt, ob der Bereich angepasst werden kann.  
   
 ```  
 virtual BOOL CanBeResized() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the pane can be resized; otherwise, `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn der Bereich angepasst werden kann. andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- This method checks for the `AFX_CBRS_RESIZE` flag, which is specified by default in `CBasePane::OnCreate`. If this flag is not specified, the docking manager flags the pane internally as immovable instead of docking it.  
+### <a name="remarks"></a>Hinweise  
+ Diese Methode überprüft die `AFX_CBRS_RESIZE` -Flag, das als Standardwert im angegebenen `CBasePane::OnCreate`. Wenn dieses Flag nicht angegeben ist, kennzeichnet der Dockingstation Manager Bereich intern als unbeweglichen statt angedockt.  
   
-##  <a name="canbetabbeddocument"></a>  CBasePane::CanBeTabbedDocument  
- Specifies whether the pane can be converted to an MDI tabbed document.  
+##  <a name="canbetabbeddocument"></a>CBasePane::CanBeTabbedDocument  
+ Gibt an, ob der Bereich in einer MDI-Dokument im Registerkartenformat konvertiert werden kann.  
   
 ```  
 virtual BOOL CanBeTabbedDocument() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the pane can be converted to a tabbed document; otherwise, `FALSE`. `CBasePane::CanBeTabbedDocument` always returns `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn der Bereich in ein Dokument im Registerkartenformat konvertiert werden kann. andernfalls `FALSE`. `CBasePane::CanBeTabbedDocument` gibt immer `FALSE` zurück.  
   
-### <a name="remarks"></a>Remarks  
- Only objects of certain `CBasePane`-derived types, such as the [CDockablePane Class](../../mfc/reference/cdockablepane-class.md), can be converted to tabbed documents.  
+### <a name="remarks"></a>Hinweise  
+ Nur Objekte, die bestimmte `CBasePane`-abgeleiteten Typen, z. B. die [CDockablePane-Klasse](../../mfc/reference/cdockablepane-class.md), Dokumente im Registerformat konvertiert werden können.  
   
-##  <a name="canfloat"></a>  CBasePane::CanFloat  
- Determines whether the pane can float.  
+##  <a name="canfloat"></a>CBasePane::CanFloat  
+ Bestimmt, ob der Bereich wechseln kann.  
   
 ```  
 virtual BOOL CanFloat() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the pane can float; otherwise `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn der Bereich wechseln kann; andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- The framework calls this method to determine whether the pane can float.  
+### <a name="remarks"></a>Hinweise  
+ Das Framework ruft diese Methode, um zu bestimmen, ob der Bereich wechseln kann.  
   
- During construction, you can set this ability by passing the `AFX_CBRS_FLOAT` flag to [CBasePane::CreateEx](#createex).  
+ Während der Konstruktion lassen sich diese Fähigkeit durch Übergeben der `AFX_CBRS_FLOAT` flag auf [CBasePane::CreateEx](#createex).  
   
 > [!NOTE]
->  The framework assumes that non-floating panes are static and that their docking state cannot change. Therefore, the framework does not save the docking state of non-floating panes.  
+>  Das Framework davon ausgegangen, dass Bereiche verankerte statisch sind ihre docking Status nicht ändern kann. Aus diesem Grund wird das Framework der Andockstatus verankerte Bereichen nicht gespeichert.  
   
- The default implementation checks for the `AFX_CBRS_FLOAT` style.  
+ Die standardmäßige Implementierung überprüft die `AFX_CBRS_FLOAT` Stil.  
   
-##  <a name="canfocus"></a>  CBasePane::CanFocus  
- Specifies whether the pane can receive focus.  
+##  <a name="canfocus"></a>CBasePane::CanFocus  
+ Gibt an, ob der Bereich den Fokus erhalten kann.  
   
 ```  
 virtual BOOL CanFocus() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the pane can receive focus; otherwise `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn der Bereich den Fokus erhalten kann. andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- Override this method in a derived class to control focus. For example, because toolbars cannot receive focus, this method returns `FALSE` when it is called on toolbar objects.  
+### <a name="remarks"></a>Hinweise  
+ Überschreiben Sie diese Methode in einer abgeleiteten Klasse den Fokus zu steuern. Z. B. weil Symbolleisten den Fokus erhalten können, diese Methode gibt `FALSE` Wenn sie auf der Symbolleistenobjekte aufgerufen.  
   
- The framework tries to set the input focus when a pane is docked or floated.  
+ Das Framework versucht, den Eingabefokus festzulegen, wenn ein Bereich angedockt oder abgedockt wird.  
   
-##  <a name="copystate"></a>  CBasePane::CopyState  
- Copies the state of a given pane.  
+##  <a name="copystate"></a>CBasePane::CopyState  
+ Kopiert den Status eines bestimmten Bereichs.  
   
 ```  
 virtual void CopyState(CBasePane* pOrgBar);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pOrgBar`  
- A pointer to another pane.  
+ Ein Zeiger auf einen anderen Bereich.  
   
-### <a name="remarks"></a>Remarks  
- This method copies the state from `pOrgBar` to this pane.  
+### <a name="remarks"></a>Hinweise  
+ Diese Methode kopiert den Zustand von `pOrgBar` in diesen Bereich.  
   
-##  <a name="createdefaultminiframe"></a>  CBasePane::CreateDefaultMiniframe  
- If the pane can float, this method creates a mini-frame window for it.  
+##  <a name="createdefaultminiframe"></a>CBasePane::CreateDefaultMiniframe  
+ Wenn der Bereich wechseln kann, erstellt diese Methode ein Minirahmenfenster.  
   
 ```  
 virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `rectInitial`  
- Specifies the initial coordinates of the mini-frame window.  
+ Gibt die Anfangskoordinaten des Minirahmenfenster an.  
   
-### <a name="return-value"></a>Return Value  
- A pointer to the new mini-frame window or `NULL` if the creation failed.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Zeiger auf das neue Minirahmenfenster oder `NULL` Wenn Fehler bei der Erstellung.  
   
-### <a name="remarks"></a>Remarks  
- The framework calls this method when a pane switches to a floating state. The method creates a mini-frame window and attaches the pane to this window.  
+### <a name="remarks"></a>Hinweise  
+ Das Framework ruft diese Methode auf, wenn ein Bereich in einen unverankerten Zustand wechselt. Die Methode erstellt ein Minirahmenfenster und fügt den Bereich dieses Fenster.  
   
- The default implementation returns `NULL`.  
+ Die Standardimplementierung gibt `NULL` zurück.  
   
-##  <a name="createex"></a>  CBasePane::CreateEx  
- Creates the pane control.  
+##  <a name="createex"></a>CBasePane::CreateEx  
+ Das Steuerelement wird erstellt.  
   
 ```  
 virtual BOOL CreateEx(
@@ -655,58 +593,58 @@ virtual BOOL CreateEx(
     CCreateContext* pContext=NULL);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `dwStyleEx`  
- The extended styles (see [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex) for more information).  
+ Die erweiterten Stile (finden Sie unter [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex) für Weitere Informationen).  
   
  [in] `lpszClassName`  
- The window class name.  
+ Name der Fensterklasse.  
   
  [in] `lpszWindowName`  
- The window name.  
+ Der Fenstername.  
   
  [in] `dwStyle`  
- The window style (see [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)).  
+ Der Fensterstil (finden Sie unter [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)).  
   
  [in] `rect`  
- The initial rectangle.  
+ Das ursprüngliche Rechteck.  
   
  [in] `pParentWnd`  
- A pointer to the parent window.  
+ Ein Zeiger auf das übergeordnete Fenster.  
   
  [in] `nID`  
- Specifies the pane ID. Must be unique.  
+ Gibt den Bereich-ID an. Muss eindeutig sein.  
   
  [in] `dwControlBarStyle`  
- Style flags for panes.  
+ Formatflags für Bereiche.  
   
  [in] `pContext`  
- A pointer to `CcreateContext`  
+ Ein Zeiger auf`CcreateContext`  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the pane is created successfully; otherwise `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn der Bereich erfolgreich erstellt wurde; andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- Creates a window of class `lpszClassName`. If you specify `WS_CAPTION`, this method clears the `WS_CAPTION` style bit and sets `CBasePane::m_bHasCaption` to `TRUE`, because the library does not support panes with captions.  
+### <a name="remarks"></a>Hinweise  
+ Erstellt ein Fenster der Klasse `lpszClassName`. Bei Angabe von `WS_CAPTION`, diese Methode löscht die `WS_CAPTION` Formatbit und legt `CBasePane::m_bHasCaption` , `TRUE`, da die Bibliothek mit Untertiteln Bereiche nicht unterstützt.  
   
- You can use any combination of child window styles and MFC control bar (CBRS_) styles.  
+ Sie können eine beliebige Kombination von untergeordneten Fensterstile und MFC Steuerleiste Stile (CBRS_) verwenden.  
   
- The library adds several new styles for panes. The following table describes the new styles:  
+ Die Bibliothek fügt mehrere neue Stile für Bereiche. Die folgende Tabelle beschreibt die neuen Formate:  
   
-|Style|Description|  
+|Stil|Beschreibung|  
 |-----------|-----------------|  
-|`AFX_CBRS_FLOAT`|The pane can float.|  
-|`AFX_CBRS_AUTOHIDE`|The pane supports auto-hide mode|  
-|`AFX_CBRS_RESIZE`|The pane can be resized. **Important:**  This style is not implemented.|  
-|`AFX_CBRS_CLOSE`|The pane can be closed.|  
-|`AFX_CBRS_AUTO_ROLLUP`|The pane can be rolled up when it floats.|  
-|`AFX_CBRS_REGULAR_TABS`|When one pane docks to another pane that has this style, a regular tabbed window is created. (For more information, see [CTabbedPane Class](../../mfc/reference/ctabbedpane-class.md).)|  
-|`AFX_CBRS_OUTLOOK_TABS`|When one pane docks to another pane that has this style, an Outlook-style tabbed window is created. (For more information, see [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md).)|  
+|`AFX_CBRS_FLOAT`|Der Bereich kann float.|  
+|`AFX_CBRS_AUTOHIDE`|Der Bereich unterstützt automatisch im Hintergrund-Modus.|  
+|`AFX_CBRS_RESIZE`|Der Bereich kann geändert werden. **Wichtig:** dieses Format ist nicht implementiert.|  
+|`AFX_CBRS_CLOSE`|Der Bereich kann geschlossen werden.|  
+|`AFX_CBRS_AUTO_ROLLUP`|Der Bereich kann gemacht werden, wenn er gleitet.|  
+|`AFX_CBRS_REGULAR_TABS`|Wenn einem Bereich in einen anderen Bereich, das dieses Format verfügt angedockt, wird ein reguläre Fenster im Registerkartenformat erstellt. (Weitere Informationen finden Sie unter [CTabbedPane Klasse](../../mfc/reference/ctabbedpane-class.md).)|  
+|`AFX_CBRS_OUTLOOK_TABS`|Wenn einem Bereich in einen anderen Bereich, das dieses Format verfügt angedockt, wird eine Outlook-Stil Fenster im Registerkartenformat erstellt. (Weitere Informationen finden Sie unter [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md).)|  
   
- To use the new styles, specify them in `dwControlBarStyle`.  
+ Um die neuen Formate zu verwenden, geben sie im `dwControlBarStyle`.  
   
-##  <a name="dockpane"></a>  CBasePane::DockPane  
- Docks a pane to another pane or to a frame window.  
+##  <a name="dockpane"></a>CBasePane::DockPane  
+ Dockt an einen Bereich in einen anderen Bereich oder einem Rahmenfenster.  
   
 ```  
 virtual BOOL DockPane(
@@ -715,37 +653,37 @@ virtual BOOL DockPane(
     AFX_DOCK_METHOD dockMethod);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pDockBar`  
- A pointer to another pane.  
+ Ein Zeiger auf einen anderen Bereich.  
   
  [in] `lpRect`  
- Specifies the destination rectangle.  
+ Gibt das Zielrechteck.  
   
  [in] `dockMethod`  
- Specifies the docking method.  
+ Gibt die Methode andocken.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the control bar was docked successfully; otherwise, `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn erfolgreich; Steuerleiste angedockt wurde andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- Call this function to dock a pane to another pane or a dock bar ( [CDockSite Class](../../mfc/reference/cdocksite-class.md)) that is specified by `pDockBar`, or to a main frame if `pDockBar` is `NULL`.  
+### <a name="remarks"></a>Hinweise  
+ Mit dieser Funktion können Sie einen Bereich an einem anderen Bereich oder eine Leiste Andocken andocken ( [CDockSite-Klasse](../../mfc/reference/cdocksite-class.md)) angegebenen `pDockBar`, oder um einen Hauptframe Wenn `pDockBar` ist `NULL`.  
   
- `dockMethod` specifies how the pane is docked. See [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane) for a list of possible values.  
+ `dockMethod`Gibt an, wie der Bereich angedockt ist. Finden Sie unter [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane) eine Liste der möglichen Werte.  
   
-##  <a name="dockpaneusingrtti"></a>  CBasePane::DockPaneUsingRTTI  
- Docks the pane by using run-time type information.  
+##  <a name="dockpaneusingrtti"></a>CBasePane::DockPaneUsingRTTI  
+ Dockt den Bereich mit der Laufzeit Typinformationen an.  
   
 ```  
 void DockPaneUsingRTTI(BOOL bUseDockSite);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `bUseDockSite`  
- If `TRUE`, dock to the docking site. If `FALSE`, dock to the parent frame.  
+ Wenn `TRUE`, docken Sie an die Dockingstation Website. Wenn `FALSE`, docken Sie an den übergeordneten Frame.  
   
-##  <a name="docktoframewindow"></a>  CBasePane::DockToFrameWindow  
- Docks a dockable pane to a frame.  
+##  <a name="docktoframewindow"></a>CBasePane::DockToFrameWindow  
+ Ein Frame ein andockbares Fenster angedockt.  
   
 ```  
 virtual BOOL DockToFrameWindow(
@@ -757,98 +695,98 @@ virtual BOOL DockToFrameWindow(
     BOOL bOuterEdge = FALSE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `dwAlignment`  
- The side of the parent frame that you want to dock the pane to.  
+ Die Seite des übergeordneten Frames, die Sie im Bereich zum andocken möchten.  
   
  [in] `lpRect`  
- The desired size.  
+ Die gewünschte Größe.  
   
  [in] `dwDockFlags`  
- Ignored.  
+ Ignoriert.  
   
  [in] `pRelativeBar`  
- Ignored.  
+ Ignoriert.  
   
  [in] `nRelativeIndex`  
- Ignored.  
+ Ignoriert.  
   
  [in] `bOuterEdge`  
- If `TRUE` and there are other dockable panes at the side specified by `dwAlignment`, the pane is docked outside the other panes, closer to the edge of the parent frame. If `FALSE`, the pane is docked closer to the center of the client area.  
+ Wenn `TRUE` , und es gibt andere andockbare Bereiche auf der Seite, die durch angegebene `dwAlignment`, Bereich angedockt ist, außerhalb von den anderen Bereichen näher an den Rand des übergeordneten Rahmens. Wenn `FALSE`, im Bereich in der Mitte des Clientbereichs näher angedockt ist.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the method was successful; otherwise `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn die Methode erfolgreich war; andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- This method fails if a pane divider ( [CPaneDivider Class](../../mfc/reference/cpanedivider-class.md)) cannot be created. Otherwise, it always returns `TRUE`.  
+### <a name="remarks"></a>Hinweise  
+ Diese Methode schlägt fehl, wenn eine Trennlinie ( [CPaneDivider Klasse](../../mfc/reference/cpanedivider-class.md)) kann nicht erstellt werden. Gibt andernfalls immer `TRUE`.  
   
-##  <a name="doesallowdyninsertbefore"></a>  CBasePane::DoesAllowDynInsertBefore  
- Determines whether another pane can be dynamically inserted between this pane and the parent frame.  
+##  <a name="doesallowdyninsertbefore"></a>CBasePane::DoesAllowDynInsertBefore  
+ Bestimmt, ob ein weiterer Bereich dynamisch zwischen diesem und den übergeordneten Frame eingefügt werden kann.  
   
 ```  
 virtual BOOL DoesAllowDynInsertBefore() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if a user can insert another pane; otherwise `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn ein Benutzer einen anderen Bereich einfügen kann; andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- The framework calls this method to determine whether a user can dynamically insert a pane before this pane.  
+### <a name="remarks"></a>Hinweise  
+ Das Framework ruft diese Methode, um zu bestimmen, ob ein Benutzer dynamisch einen Bereich, bevor Sie diesen Bereich einfügen kann.  
   
- For example, suppose your application creates a pane docked at the left side of the frame (such as the Outlook bar). To prevent the user from docking another pane to the left of the first pane, override this method and return `FALSE`.  
+ Nehmen wir beispielsweise an, dass die Anwendung einen Bereich angedockt auf der linken Seite des Rahmens (z. B. der Outlook-Leiste) erstellt. Um zu verhindern, dass den Benutzer einen anderen Bereich links neben der erste Bereich andocken, diese Methode überschreiben und zurückgeben `FALSE`.  
   
- We recommend that you override this method and return `FALSE` for non-floating panes derived from [CDockablePane Class](../../mfc/reference/cdockablepane-class.md).  
+ Es wird empfohlen, diese Methode überschreiben und `FALSE` für abgeleitete Bereiche verankerte aus [CDockablePane-Klasse](../../mfc/reference/cdockablepane-class.md).  
   
- The default implementation returns `TRUE`.  
+ Die Standardimplementierung gibt `TRUE` zurück.  
   
-##  <a name="dopaint"></a>  CBasePane::DoPaint  
- Fills the background of the pane.  
+##  <a name="dopaint"></a>CBasePane::DoPaint  
+ Füllt den Hintergrund des Bereichs.  
   
 ```  
 virtual void DoPaint(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pDC`  
- A pointer to a device context.  
+ Ein Zeiger zu einem Gerätekontext.  
   
-### <a name="remarks"></a>Remarks  
- The default implementation calls the current visual manager to fill the background ( [CMFCVisualManager::OnFillBarBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfillbarbackground)).  
+### <a name="remarks"></a>Hinweise  
+ Die standardmäßige Implementierung ruft die aktuellen visuellen Manager zum Ausfüllen ( [CMFCVisualManager::OnFillBarBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfillbarbackground)).  
   
-##  <a name="enabledocking"></a>  CBasePane::EnableDocking  
- Enables docking of the pane to the main frame.  
+##  <a name="enabledocking"></a>CBasePane::EnableDocking  
+ Ermöglicht das Andocken des Bereichs des Hauptframe.  
   
 ```  
 virtual void EnableDocking(DWORD dwAlignment);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `dwAlignment`  
- Specifies the docking alignment to enable.  
+ Gibt die Dockingstation Ausrichtung zu aktivieren.  
   
-### <a name="remarks"></a>Remarks  
- Call this method to enable docking alignment to the main frame. You can pass a combination of `CBRS_ALIGN_` flags (for more information, see [CControlBar::EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)).  
+### <a name="remarks"></a>Hinweise  
+ Rufen Sie diese Methode zum Andocken Ausrichtung an den Hauptframe aktivieren. Sie können eine Kombination von übergeben `CBRS_ALIGN_` Flags (Weitere Informationen finden Sie unter [CControlBar:: EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)).  
   
- `EnableDocking` sets the internal flag `CBasePane::m_dwEnabledAlignment` and the framework checks this flag when a pane is docked.  
+ `EnableDocking`das interne Flag `CBasePane::m_dwEnabledAlignment` und das Framework überprüft dieses Kennzeichen, wenn ein Bereich angedockt ist.  
   
- Call [CBasePane::GetEnabledAlignment](#getenabledalignment) to determine the docking alignment for a pane.  
+ Rufen Sie [CBasePane::GetEnabledAlignment](#getenabledalignment) die Dockingstation Ausrichtung für einen Bereich zu bestimmen.  
   
-##  <a name="enablegripper"></a>  CBasePane::EnableGripper  
- Enables or disables the gripper. If the gripper is enabled, the user can drag it to reposition the pane.  
+##  <a name="enablegripper"></a>CBasePane::EnableGripper  
+ Aktiviert oder deaktiviert die Ziehpunkte. Wenn die Ziehpunkte aktiviert ist, kann der Benutzer, um die Position im Bereichs ziehen.  
   
 ```  
 virtual void EnableGripper(BOOL bEnable);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `bEnable`  
- `TRUE` to enable the gripper; `FALSE` to disable it.  
+ `TRUE`So aktivieren Sie die Ziehpunkte; `FALSE` deaktiviert.  
   
-### <a name="remarks"></a>Remarks  
- The framework uses this method to enable a gripper instead of using the `WS_CAPTION` style.  
+### <a name="remarks"></a>Hinweise  
+ Das Framework verwendet diese Methode zum Aktivieren eines ziehelements anstelle der `WS_CAPTION` Stil.  
   
-##  <a name="floatpane"></a>  CBasePane::FloatPane  
- Floats the pane.  
+##  <a name="floatpane"></a>CBasePane::FloatPane  
+ Befindet sich im Bereich.  
   
 ```  
 virtual BOOL FloatPane(
@@ -857,24 +795,24 @@ virtual BOOL FloatPane(
     bool bShow=true);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `rectFloat`  
- Specifies the screen coordinates where the floating pane appears.  
+ Gibt die Bildschirmkoordinaten, wo das nicht verankerte Fenster angezeigt wird.  
   
  [in] `dockMethod`  
- Specifies the dock method to use to float the pane.  
+ Gibt die Dock-Methode mit dem float-Bereich.  
   
  [in] `bShow`  
- Specifies whether the floating pane is visible ( `TRUE`) or hidden ( `FALSE`).  
+ Gibt an, ob das nicht verankerte Fenster angezeigt wird ( `TRUE`) oder ausgeblendet ( `FALSE`).  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the pane was floated successfully; otherwise `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn der Bereich erfolgreich abgedockt wurde; andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- Call this method to float a pane at the screen position specified by `rectFloat`.  
+### <a name="remarks"></a>Hinweise  
+ Rufen Sie diese Methode, um einen Bereich an der angegebenen Bildschirmposition float `rectFloat`.  
   
-##  <a name="get_acchelptopic"></a>  CBasePane::get_accHelpTopic  
- The framework calls this method to retrieve the full path of the `WinHelp` file that is associated with the specified object and the identifier of the appropriate topic in that file.  
+##  <a name="get_acchelptopic"></a>CBasePane::get_accHelpTopic  
+ Das Framework ruft diese Methode, um den vollständigen Pfad der Abrufen der `WinHelp` -Datei, die das angegebene Objekt und den Bezeichner der im entsprechenden Thema in der Datei zugeordnet ist.  
   
 ```  
 virtual HRESULT get_accHelpTopic(
@@ -883,270 +821,270 @@ virtual HRESULT get_accHelpTopic(
     long* pidTopic);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pszHelpFile`  
- Address of a `BSTR` that receives the full path of the `WinHelp` file that is associated with the specified object, if any.  
+ Adresse der ein `BSTR` , der den vollständigen Pfad der empfängt die `WinHelp` -Datei, die das angegebene Objekt zugeordnet ist, sofern vorhanden.  
   
  [in] `varChild`  
- Specifies whether the Help topic to be retrieved is that of the object or one of the child elements of the object. This parameter can be either `CHILDID_SELF` (to obtain a Help topic for the object) or a child ID (to obtain a Help topic for one of the child elements of the object).  
+ Gibt an, ob das Hilfethema abgerufen werden sollen, die der Objekts oder eines der untergeordneten Elemente des Objekts. Dieser Parameter kann entweder `CHILDID_SELF` (um ein Hilfethema für das Objekt zu erhalten) oder untergeordnete ID (um ein Hilfethema für eines der untergeordneten Elemente des Objekts erhalten).  
   
  [in] `pidTopic`  
- Identifies the `Help` file topic that is associated with the specified object.  
+ Identifiziert die `Help` Thema, das dem angegebenen Objekt zugeordnet ist.  
   
-### <a name="return-value"></a>Return Value  
- `CBasePane` does not implement this method. Therefore, `CBasePane::get_accHelpTopic` always returns `S_FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `CBasePane`Diese Methode implementiert nicht. Aus diesem Grund `CBasePane::get_accHelpTopic` gibt immer `S_FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- This function is part of the Active Accessibility support in MFC. Override this function in a derived class to provide help information about your object.  
+### <a name="remarks"></a>Hinweise  
+ Diese Funktion ist Teil der Active Accessibility-Unterstützung in MFC. Überschreiben Sie diese Funktion in einer abgeleiteten Klasse zum Bereitstellen von Hilfeinformationen zu dem Objekt.  
   
-##  <a name="get_accselection"></a>  CBasePane::get_accSelection  
- The framework calls this method to retrieve the selected children of this object.  
+##  <a name="get_accselection"></a>CBasePane::get_accSelection  
+ Das Framework ruft diese Methode, um die ausgewählten untergeordneten Elemente dieses Objekts abzurufen.  
   
 ```  
 virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pvarChildren`  
- Receives information that identifies the selected children.  
+ Empfängt Informationen, die der ausgewählten untergeordneten Elemente identifiziert.  
   
-### <a name="return-value"></a>Return Value  
- `CBasePane` does not implement this method. If `pvarChildren` is `NULL`, this method returns `E_INVALIDARG`. Otherwise, this method returns `DISP_E_MEMBERNOTFOUND`.  
+### <a name="return-value"></a>Rückgabewert  
+ `CBasePane`Diese Methode implementiert nicht. Wenn `pvarChildren` gleich `NULL` ist, gibt die Methode `E_INVALIDARG` zurück. Diese Methode andernfalls `DISP_E_MEMBERNOTFOUND`.  
   
-### <a name="remarks"></a>Remarks  
- This function is part of the Active Accessibility support in MFC. Override this function in a derived class if you have non-windowed user interface elements other than windowless ActiveX controls.  
+### <a name="remarks"></a>Hinweise  
+ Diese Funktion ist Teil der Active Accessibility-Unterstützung in MFC. Überschreiben Sie diese Funktion in einer abgeleiteten Klasse, wenn Sie nicht im Fenstermodus Elemente der Benutzeroberfläche als fensterlose ActiveX-Steuerelemente haben.  
   
-##  <a name="getcaptionheight"></a>  CBasePane::GetCaptionHeight  
- Returns the caption height.  
+##  <a name="getcaptionheight"></a>Cbasepane:: Getcaptionheight  
+ Gibt die Beschriftungshöhe zurück.  
   
 ```  
 virtual int GetCaptionHeight() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The caption height.  
+### <a name="return-value"></a>Rückgabewert  
+ Die Überschriftenhöhe.  
   
-##  <a name="getcontrolbarstyle"></a>  CBasePane::GetControlBarStyle  
- Returns the control bar style.  
+##  <a name="getcontrolbarstyle"></a>CBasePane::GetControlBarStyle  
+ Gibt das Format des Steuerelements angezeigt.  
   
 ```  
 virtual DWORD GetControlBarStyle() const 
 ```  
   
-### <a name="return-value"></a>Return Value  
- A bitwise-OR combination of AFX_CBRS_ flags.  
+### <a name="return-value"></a>Rückgabewert  
+ Eine bitweise OR-Kombination von AFX_CBRS_-Flags.  
   
-### <a name="remarks"></a>Remarks  
- The return value is a combination of the following possible values.  
+### <a name="remarks"></a>Hinweise  
+ Der Rückgabewert ist eine Kombination aus den folgenden möglichen Werten.  
   
-|Style|Description|  
+|Stil|Beschreibung|  
 |-----------|-----------------|  
-|`AFX_CBRS_FLOAT`|Makes the control bar float.|  
-|`AFX_CBRS_AUTOHIDE`|Enables auto-hide mode.|  
-|`AFX_CBRS_RESIZE`|Enables resizing of the control bar. When this flag is set, the control bar can be placed in a dockable pane.|  
-|`AFX_CBRS_CLOSE`|Enables hiding of the control bar.|  
+|`AFX_CBRS_FLOAT`|Macht die Steuerelement-Leiste Float.|  
+|`AFX_CBRS_AUTOHIDE`|Ermöglicht das automatische Ausblenden Modus.|  
+|`AFX_CBRS_RESIZE`|Ermöglicht das Ändern der Größe der Steuerleiste. Wenn dieses Flag festgelegt ist, kann die Steuerleiste in einen andockbaren Bereich eingefügt werden.|  
+|`AFX_CBRS_CLOSE`|Ermöglicht das Ausblenden der Steuerleiste.|  
   
-##  <a name="getcurrentalignment"></a>  CBasePane::GetCurrentAlignment  
- Returns the current pane alignment.  
+##  <a name="getcurrentalignment"></a>CBasePane::GetCurrentAlignment  
+ Gibt den aktuellen Bereich Ausrichtung zurück.  
   
 ```  
 virtual DWORD GetCurrentAlignment() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The current alignment of the control bar. The following table shows the possible values:  
+### <a name="return-value"></a>Rückgabewert  
+ Die aktuelle Ausrichtung der Steuerleiste. In der folgenden Tabelle sind die möglichen Werte:  
   
-|Value|Alignment|  
+|Wert|Ausrichtung|  
 |-----------|---------------|  
-|`CBRS_ALIGN_LEFT`|Left alignment.|  
-|`CBRS_ALIGN_RIGHT`|Right alignment.|  
-|`CBRS_ALIGN_TOP`|Top alignment.|  
-|`CBRS_ALIGN_BOTTOM`|Bottom alignment.|  
+|`CBRS_ALIGN_LEFT`|Linksbündige Ausrichtung.|  
+|`CBRS_ALIGN_RIGHT`|Rechtsbündige Ausrichtung.|  
+|`CBRS_ALIGN_TOP`|Obere Ausrichtung.|  
+|`CBRS_ALIGN_BOTTOM`|Unten ausrichten.|  
   
-##  <a name="getdockingmode"></a>  CBasePane::GetDockingMode  
- Returns the current docking mode for the pane.  
+##  <a name="getdockingmode"></a>Cbasepane:: Getdockingmode  
+ Gibt den aktuellen Andockmodus für den Bereich zurück.  
   
 ```  
 virtual AFX_DOCK_TYPE GetDockingMode() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- DT_STANDARD if dragging the pane is indicated on the screen by a drag rectangle. DT_IMMEDIATE if the contents of the pane are dragged.  
+### <a name="return-value"></a>Rückgabewert  
+ DT_STANDARD, wenn den Bereich ziehen wird durch ein Rechteck auf dem Bildschirm angezeigt. DT_IMMEDIATE, wenn der Inhalt des Bereichs gezogen werden.  
   
-### <a name="remarks"></a>Remarks  
- The framework calls this method to determine the current docking mode of the pane.  
+### <a name="remarks"></a>Hinweise  
+ Das Framework ruft diese Methode, um den aktuellen Andockmodus des Bereichs zu ermitteln.  
   
- If `CBasePane::m_dockMode` is undefined (DT_UNDEFINED), then the docking mode is taken from the global docking mode ( `AFX_GLOBAL_DATA::m_dockModeGlobal`).  
+ Wenn `CBasePane::m_dockMode` ist nicht definiert (DT_UNDEFINED), und klicken Sie dann der Andockmodus, die globale Andockmodus entnommen wird ( `AFX_GLOBAL_DATA::m_dockModeGlobal`).  
   
- By setting `m_dockMode` or overriding `GetDockingMode` you can control the docking mode for each pane.  
+ Durch Festlegen von `m_dockMode` oder überschreiben `GetDockingMode` können Sie den Andockmodus für jeden Bereich steuern.  
   
-##  <a name="getdocksiteframewnd"></a>  CBasePane::GetDockSiteFrameWnd  
- Returns a pointer to the [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)object where the pane is docked.  
+##  <a name="getdocksiteframewnd"></a>CBasePane::GetDockSiteFrameWnd  
+ Gibt einen Zeiger auf die [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)Objekt, in dem Bereich angedockt ist.  
   
 ```  
 virtual CWnd* GetDockSiteFrameWnd() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A pointer to the dock site of the pane.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Zeiger auf die Website Andocken des Bereichs.  
   
-### <a name="remarks"></a>Remarks  
- Call this method to retrieve a pointer to the dock site of the pane. The dock site can be either a main frame window if the pane is docked to the main frame, or a mini-frame window if the pane is floating.  
+### <a name="remarks"></a>Hinweise  
+ Rufen Sie diese Methode, um einen Zeiger auf die Dock-Website im Bereich abzurufen. Die docksite kann entweder ein Hauptrahmenfenster, wenn der Bereich der Hauptframe angedockt wird, oder ein Minirahmenfenster sein, wenn im Bereich verankert ist.  
   
-##  <a name="getenabledalignment"></a>  CBasePane::GetEnabledAlignment  
- Returns the CBRS_ALIGN_ styles that are applied to the pane.  
+##  <a name="getenabledalignment"></a>CBasePane::GetEnabledAlignment  
+ Gibt die CBRS_ALIGN_-Formate, die in den Bereich angewendet werden.  
   
 ```  
 virtual DWORD GetEnabledAlignment() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A combination of CBRS_ALIGN_ styles. The following table shows the possible styles:  
+### <a name="return-value"></a>Rückgabewert  
+ Eine Kombination von CBRS_ALIGN_ Formate. Die folgende Tabelle zeigt die möglichen Formate:  
   
-|Flag|Enabled alignment|  
+|Flag|Aktiviert-Ausrichtung|  
 |----------|-----------------------|  
-|`CBRS_ALIGN_LEFT`|Left.|  
-|`CBRS_ALIGN_RIGHT`|Right.|  
-|`CBRS_ALIGN_TOP`|Top.|  
-|`CBRS_ALIGN_BOTTOM`|Bottom.|  
-|`CBRS_ALIGN_ANY`|Combination of all flags.|  
+|`CBRS_ALIGN_LEFT`|Nach links.|  
+|`CBRS_ALIGN_RIGHT`|Richting.|  
+|`CBRS_ALIGN_TOP`|Nach oben.|  
+|`CBRS_ALIGN_BOTTOM`|Unten.|  
+|`CBRS_ALIGN_ANY`|Kombination aller Flags.|  
   
-### <a name="remarks"></a>Remarks  
- Call this method to determine the enabled alignment for the pane. Enabled alignment means the sides of the main frame window that a pane can be docked to.  
+### <a name="remarks"></a>Hinweise  
+ Rufen Sie diese Methode, um die Ausrichtung des aktiviert für den Bereich zu bestimmen. Aktiviert Ausrichtung bedeutet, dass die Seiten des Hauptrahmenfenster, dem ein Bereich angedockt werden kann.  
   
- Enable docking alignment by using [CBasePane::EnableDocking](#enabledocking).  
+ Aktivieren andockbaren Ausrichtung mit [CBasePane::EnableDocking](#enabledocking).  
   
-##  <a name="getmfcstyle"></a>  CBasePane::GetMFCStyle  
- Returns the pane styles that are specific to MFC.  
+##  <a name="getmfcstyle"></a>CBasePane::GetMFCStyle  
+ Gibt die Bereich-Stile, die mit MFC spezifisch sind.  
   
 ```  
 virtual DWORD GetMFCStyle() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A combination of library-specific (AFX_CBRS_) pane styles.  
+### <a name="return-value"></a>Rückgabewert  
+ Eine Kombination von Bibliothek spezifischen (AFX_CBRS_) im Bereich Formate.  
   
-##  <a name="getpaneicon"></a>  CBasePane::GetPaneIcon  
- Returns a handle to the pane icon.  
+##  <a name="getpaneicon"></a>CBasePane::GetPaneIcon  
+ Gibt ein Handle auf das Symbol "Bereich".  
   
 ```  
 virtual HICON GetPaneIcon(BOOL bBigIcon);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `bBigIcon`  
- Specifies a 32 pixel by 32 pixel icon if `TRUE`; specifies a 16 pixel by 16 pixel icon if `FALSE`.  
+ Ein 32 Pixel von 32 Pixel großes Symbol gibt an, ob `TRUE`; ein 16 Pixel von 16 Pixel großes Symbol gibt an, ob `FALSE`.  
   
-### <a name="return-value"></a>Return Value  
- A handle to the pane icon. If unsuccessful, returns `NULL`.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Handle für das Symbol "Bereich". Gibt zurück, wenn dies nicht gelingt, `NULL`.  
   
-### <a name="remarks"></a>Remarks  
- The default implementation calls [CWnd::GetIcon](../../mfc/reference/cwnd-class.md#geticon).  
+### <a name="remarks"></a>Hinweise  
+ Die standardmäßige Implementierung ruft [CWnd::GetIcon](../../mfc/reference/cwnd-class.md#geticon).  
   
-##  <a name="getpanerow"></a>  CBasePane::GetPaneRow  
- Returns a pointer to the [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)object where the pane is docked.  
+##  <a name="getpanerow"></a>CBasePane::GetPaneRow  
+ Gibt einen Zeiger auf die [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)Objekt, in dem Bereich angedockt ist.  
   
 ```  
 CDockingPanesRow* GetPaneRow();
 ```  
   
-### <a name="return-value"></a>Return Value  
- A pointer to `CDockingPanesRow` if the pane is docked, or `NULL` if it is floating.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Zeiger auf `CDockingPanesRow` ist der Bereich angedockt, oder `NULL` Wenn schwimmen.  
   
-### <a name="remarks"></a>Remarks  
- Call this method to access the row where a pane is docked. For example, to arrange the panes in a particular row, call `GetPaneRow` and then call [CDockingPanesRow::ArrangePanes](../../mfc/reference/cdockingpanesrow-class.md#arrangepanes).  
+### <a name="remarks"></a>Hinweise  
+ Rufen Sie diese Methode, um die Zeile zugreifen, wo ein Bereich angedockt wird. Aufrufen, um die Bereiche in einer bestimmten Zeile anzuordnen, z. B. `GetPaneRow` und rufen dann [CDockingPanesRow::ArrangePanes](../../mfc/reference/cdockingpanesrow-class.md#arrangepanes).  
   
-##  <a name="getpanestyle"></a>  CBasePane::GetPaneStyle  
- Returns the pane style.  
+##  <a name="getpanestyle"></a>CBasePane::GetPaneStyle  
+ Gibt den Bereichsformat zurück.  
   
 ```  
 virtual DWORD GetPaneStyle() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A combination of control bar styles (including CBRS_ styles) that was set by the [CBasePane::SetPaneStyle](#setpanestyle) method at creation time.  
+### <a name="return-value"></a>Rückgabewert  
+ Eine Kombination von Balken Steuerelementtypen (einschließlich CBRS_), die festgelegt wurde, indem die [CBasePane::SetPaneStyle](#setpanestyle) Methode zum Zeitpunkt der Erstellung.  
   
-##  <a name="getparentdocksite"></a>  CBasePane::GetParentDockSite  
- Returns a pointer to the parent dock site.  
+##  <a name="getparentdocksite"></a>CBasePane::GetParentDockSite  
+ Gibt einen Zeiger auf den übergeordneten Dock-Standort.  
   
 ```  
 virtual CDockSite* GetParentDockSite() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The parent dock site.  
+### <a name="return-value"></a>Rückgabewert  
+ Der übergeordnete Standort andocken.  
   
-##  <a name="getparentminiframe"></a>  CBasePane::GetParentMiniFrame  
- Returns a pointer to the parent mini-frame window.  
+##  <a name="getparentminiframe"></a>CBasePane::GetParentMiniFrame  
+ Gibt einen Zeiger auf das übergeordnete Minirahmenfenster.  
   
 ```  
 virtual CPaneFrameWnd* GetParentMiniFrame(BOOL bNoAssert=FALSE) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `bNoAssert`  
- If `TRUE`, this method does not check for non-valid pointers. If you call this method when your application exits, set this parameter to `TRUE`.  
+ Wenn `TRUE`, diese Methode nicht nach ungültigen Zeiger. Wenn Sie diese Methode aufrufen, wenn die Anwendung beendet wird, legen Sie diesen Parameter auf `TRUE`.  
   
-### <a name="return-value"></a>Return Value  
- A valid pointer to the parent mini-frame window if the pane is floating; otherwise `NULL`.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein gültiger Zeiger auf das übergeordnete Minirahmenfenster Wenn Bereich verankert ist; andernfalls `NULL`.  
   
-### <a name="remarks"></a>Remarks  
- Call this function to retrieve a pointer to the parent mini-frame window. This method iterates through all parents and checks for an object derived from [CPaneFrameWnd Class](../../mfc/reference/cpaneframewnd-class.md).  
+### <a name="remarks"></a>Hinweise  
+ Rufen Sie diese Funktion, um einen Zeiger auf das übergeordnete Minirahmenfenster abzurufen. Diese Methode durchläuft alle übergeordneten Elemente und überprüft, ob ein Objekt abgeleitet [CPaneFrameWnd Klasse](../../mfc/reference/cpaneframewnd-class.md).  
   
- Use `GetParentMiniFrame` to determine whether the pane is floating.  
+ Verwendung `GetParentMiniFrame` zu bestimmen, ob der Bereich verankert ist.  
   
-##  <a name="getparenttabbedpane"></a>  CBasePane::GetParentTabbedPane  
- Returns a pointer to the parent tabbed pane.  
+##  <a name="getparenttabbedpane"></a>CBasePane::GetParentTabbedPane  
+ Gibt einen Zeiger auf die übergeordnete Seite im Registerformat.  
   
 ```  
 CBaseTabbedPane* GetParentTabbedPane() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A pointer to the parent tabbed pane if it exists; otherwise `NULL`.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Zeiger auf die übergeordnete Seite im Registerformat falls vorhanden; andernfalls `NULL`.  
   
-##  <a name="getparenttabwnd"></a>  CBasePane::GetParentTabWnd  
- Returns a pointer to the parent window that is inside a tab.  
+##  <a name="getparenttabwnd"></a>CBasePane::GetParentTabWnd  
+ Gibt einen Zeiger auf das übergeordnete Fenster, das auf einer Registerkarte angezeigt wird.  
   
 ```  
 CMFCBaseTabCtrl* GetParentTabWnd(HWND& hWndTab) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [out] `hWndTab`  
- If the return value is not `NULL`, this parameter contains the handle to the parent tabbed window.  
+ Wenn der Rückgabewert nicht `NULL`, dieser Parameter enthält das Handle für das übergeordnete Fenster im Registerkartenformat.  
   
-### <a name="return-value"></a>Return Value  
- A valid pointer to the parent tabbed window or `NULL`.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein gültiger Zeiger auf das übergeordnete Fenster im Registerkartenformat zu oder `NULL`.  
   
-### <a name="remarks"></a>Remarks  
- Use this function to retrieve a pointer to the parent tabbed window. Sometimes it is not enough to call `GetParent`, because a pane may be inside a docking wrapper ( [CDockablePaneAdapter Class](../../mfc/reference/cdockablepaneadapter-class.md)) or inside a pane adapter ( [CDockablePaneAdapter Class](../../mfc/reference/cdockablepaneadapter-class.md)). By using `GetParentTabWnd` you will be able to retrieve a valid pointer in those cases (assuming that the parent is a tabbed window).  
+### <a name="remarks"></a>Hinweise  
+ Verwenden Sie diese Funktion, um einen Zeiger auf das übergeordnete Fenster im Registerkartenformat abzurufen. Manchmal ist es nicht ausreichend, rufen Sie `GetParent`, da ein Bereich in einen andockbaren Wrapper möglicherweise ( [CDockablePaneAdapter-Klasse](../../mfc/reference/cdockablepaneadapter-class.md)) oder in einem Bereich-Adapter ( [CDockablePaneAdapter-Klasse](../../mfc/reference/cdockablepaneadapter-class.md)). Mithilfe von `GetParentTabWnd` werden einen gültigen Zeiger in diesen Fällen (vorausgesetzt, dass das übergeordnete Objekt ein Fenster im Registerkartenformat ist) abrufen können.  
   
-##  <a name="getrecentvisiblestate"></a>  CBasePane::GetRecentVisibleState  
- The framework calls this method when a pane is restored from an archive.  
+##  <a name="getrecentvisiblestate"></a>CBasePane::GetRecentVisibleState  
+ Das Framework ruft diese Methode auf, wenn ein Bereich aus einem Archiv wiederhergestellt wird.  
   
 ```  
 virtual BOOL GetRecentVisibleState() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A `BOOL` that specifies the recent visible state. If `TRUE`, the pane was visible when serialized and should be visible when restored. If `FALSE`, the pane was hidden when serialized and should be hidden when restored.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein `BOOL` , der den aktuellen Sichtbarkeitsstatus angibt. Wenn `TRUE`, war der Bereich sichtbar, wenn serialisiert und angezeigt, wenn wiederhergestellt werden. Wenn `FALSE`, Bereich wurde ausgeblendet, wenn serialisiert und ausgeblendet werden soll, wenn wiederhergestellt.  
   
-##  <a name="hideinprintpreviewmode"></a>  CBasePane::HideInPrintPreviewMode  
- Specifies whether the pane is hidden in print preview.  
+##  <a name="hideinprintpreviewmode"></a>CBasePane::HideInPrintPreviewMode  
+ Gibt an, ob der Bereich in der Seitenansicht ausgeblendet ist.  
   
 ```  
 virtual BOOL HideInPrintPreviewMode() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the pane is not shown in print preview; otherwise, `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn der Bereich nicht in der Seitenansicht angezeigt wird. andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- Base panes are not shown in print preview. Therefore, this method always returns `TRUE`.  
+### <a name="remarks"></a>Hinweise  
+ Grundlegende Bereiche werden nicht in der Seitenansicht angezeigt. Daher diese Methode gibt immer `TRUE`.  
   
-##  <a name="insertpane"></a>  CBasePane::InsertPane  
- Registers the specified pane with the docking manager.  
+##  <a name="insertpane"></a>CBasePane::InsertPane  
+ Registriert den angegebenen Bereich der docking-Manager.  
   
 ```  
 BOOL InsertPane(
@@ -1155,129 +1093,129 @@ BOOL InsertPane(
     BOOL bAfter = TRUE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pControlBar`  
- A pointer to the pane to insert.  
+ Ein Zeiger auf den Bereich eingefügt.  
   
  [in] `pTarget`  
- A pointer to the adjacent pane.  
+ Ein Zeiger auf angrenzenden Bereich.  
   
  [in] `bAfter`  
- If `TRUE`, `pControlBar` is inserted after `pTarget`. If `FALSE`, `pControlBar` is inserted before `pTarget`.  
+ Wenn `TRUE`, `pControlBar` eingefügt wird, nachdem `pTarget`. Wenn `FALSE`, `pControlBar` wird eingefügt, bevor Sie `pTarget`.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the method succeeds, `FALSE` otherwise.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn die Methode erfolgreich ist, `FALSE` andernfalls.  
   
-##  <a name="isaccessibilitycompatible"></a>  CBasePane::IsAccessibilityCompatible  
- Specifies whether the pane supports Active Accessibility.  
+##  <a name="isaccessibilitycompatible"></a>CBasePane::IsAccessibilityCompatible  
+ Gibt an, ob im Bereich Active Accessibility unterstützt.  
   
 ```  
 virtual BOOL IsAccessibilityCompatible();
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the pane supports Active Accessibility; otherwise, `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn im Bereich Active Accessibility unterstützt. andernfalls `FALSE`.  
   
-##  <a name="isautohidemode"></a>  CBasePane::IsAutoHideMode  
- Determines whether a pane is in auto-hide mode.  
+##  <a name="isautohidemode"></a>CBasePane::IsAutoHideMode  
+ Bestimmt, ob ein Fenster automatisch ausgeblendet wird.  
   
 ```  
 virtual BOOL IsAutoHideMode() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the pane is in auto-hide mode; otherwise, `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn der Bereich automatisch ausgeblendet wird; andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- Base panes cannot auto-hide. This method always returns `FALSE`.  
+### <a name="remarks"></a>Hinweise  
+ Grundlegende Bereiche können nicht automatisch im Hintergrund. Diese Methode gibt immer `FALSE` zurück.  
   
-##  <a name="isdialogcontrol"></a>  CBasePane::IsDialogControl  
- Specifies whether the pane is a dialog box control.  
+##  <a name="isdialogcontrol"></a>CBasePane::IsDialogControl  
+ Gibt an, ob der Bereich ein Dialogfeld-Steuerelement ist.  
   
 ```  
 BOOL IsDialogControl() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the pane is a dialog box control; otherwise, `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn der Bereich ein Dialogfeld-Steuerelement wird; andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- The framework uses this method to ensure layout consistency for all panes.  
+### <a name="remarks"></a>Hinweise  
+ Das Framework verwendet diese Methode, um das Layout Konsistenz für alle Bereiche.  
   
-##  <a name="isdocked"></a>  CBasePane::IsDocked  
- Determines whether the pane is docked.  
+##  <a name="isdocked"></a>CBasePane::IsDocked  
+ Bestimmt, ob der Bereich angedockt ist.  
   
 ```  
 virtual BOOL IsDocked() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the parent of the pane is not a mini-frame or if the pane is floating in a mini-frame with another pane; otherwise, `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`ist das übergeordnete Element des Bereichs keiner Minirahmenfensters oder wenn der Bereich in einem Mini-Frame mit einem anderen Bereich; verankert ist andernfalls `FALSE`.  
   
-##  <a name="isfloating"></a>  CBasePane::IsFloating  
- Determines whether the pane is floating.  
+##  <a name="isfloating"></a>CBasePane::IsFloating  
+ Bestimmt, ob der Bereich verankert ist.  
   
 ```  
 virtual BOOL IsFloating() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the pane is floating; otherwise, `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn der Bereich verankert ist; andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- This method returns the opposite value of [CBasePane::IsDocked](#isdocked).  
+### <a name="remarks"></a>Hinweise  
+ Diese Methode gibt den entgegengesetzten Wert von [CBasePane::IsDocked](#isdocked).  
   
-##  <a name="ishorizontal"></a>  CBasePane::IsHorizontal  
- Determines whether the pane is docked horizontally.  
+##  <a name="ishorizontal"></a>CBasePane::IsHorizontal  
+ Bestimmt, ob der Bereich horizontal angedockt ist.  
   
 ```  
 virtual BOOL IsHorizontal() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the pane is docked horizontally; otherwise `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn der Bereich horizontal; angedockt ist andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- The default implementation checks the current docking alignment for `CBRS_ORIENT_HORZ`.  
+### <a name="remarks"></a>Hinweise  
+ Die standardmäßige Implementierung überprüft die aktuelle andockbare Ausrichtung für `CBRS_ORIENT_HORZ`.  
   
-##  <a name="isinfloatingmultipaneframewnd"></a>  CBasePane::IsInFloatingMultiPaneFrameWnd  
- Specifies whether the pane is in a multi-pane frame window ( [CMultiPaneFrameWnd Class](../../mfc/reference/cmultipaneframewnd-class.md)).  
+##  <a name="isinfloatingmultipaneframewnd"></a>CBasePane::IsInFloatingMultiPaneFrameWnd  
+ Gibt an, ob der Bereich in einem Rahmenfenster mit mehreren Bereichen ist ( [CMultiPaneFrameWnd Klasse](../../mfc/reference/cmultipaneframewnd-class.md)).  
   
 ```  
 virtual BOOL IsInFloatingMultiPaneFrameWnd() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the pane is in a multi-pane frame window; otherwise, `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn der Bereich in einem Rahmenfenster mit mehreren Bereichen wird; andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- Only dockable panes can float in a multi-pane frame window. Therefore, `CBasePane::IsInFloatingMultiPaneFrameWnd` always returns `FALSE`.  
+### <a name="remarks"></a>Hinweise  
+ Nur andockbare Bereiche können in einem Rahmenfenster mit mehreren Bereichen float. Aus diesem Grund `CBasePane::IsInFloatingMultiPaneFrameWnd` gibt immer `FALSE`.  
   
-##  <a name="ismditabbed"></a>  CBasePane::IsMDITabbed  
- Determines whether the pane has been added to an MDI child window as a tabbed document.  
+##  <a name="ismditabbed"></a>CBasePane::IsMDITabbed  
+ Bestimmt, ob der Bereich ein untergeordnetes MDI-Fenster als ein Dokument im Registerkartenformat hinzugefügt wurde.  
   
 ```  
 virtual BOOL IsMDITabbed() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the pane was added to an MDI child window as a tabbed document; otherwise, `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn im Bereich ein untergeordnetes MDI-Fenster als ein Dokument im Registerkartenformat hinzugefügt wurde. andernfalls `FALSE`.  
   
-##  <a name="ispanevisible"></a>  CBasePane::IsPaneVisible  
- Specifies whether the `WS_VISIBLE` flag is set for the pane.  
+##  <a name="ispanevisible"></a>CBasePane::IsPaneVisible  
+ Gibt an, ob die `WS_VISIBLE` Flag für den Bereich festgelegt ist.  
   
 ```  
 BOOL IsPaneVisible() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if `WS_VISIBLE` is set; otherwise, `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn `WS_VISIBLE` festgelegt ist; andernfalls, `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- Use [CBasePane::IsVisible](#isvisible) to determine pane visibility.  
+### <a name="remarks"></a>Hinweise  
+ Verwendung [CBasePane::IsVisible](#isvisible) zum Bereich ermitteln.  
   
-##  <a name="ispointneardocksite"></a>  CBasePane::IsPointNearDockSite  
- Determines whether a specified point is near the dock site.  
+##  <a name="ispointneardocksite"></a>CBasePane::IsPointNearDockSite  
+ Bestimmt, ob es sich bei ein angegebenen Punkt in der Nähe der Dock-Website befindet.  
   
 ```  
 BOOL IsPointNearDockSite(
@@ -1286,77 +1224,77 @@ BOOL IsPointNearDockSite(
     BOOL& bOuterEdge) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `point`  
- The specified point.  
+ Der angegebene Punkt.  
   
  [out] `dwBarAlignment`  
- Specifies which edge the point is near. Possible values are `CBRS_ALIGN_LEFT`, `CBRS_ALIGN_RIGHT`, `CBRS_ALIGN_TOP`, and `CBRS_ALIGN_BOTTOM`  
+ Gibt an, welchen Rand in der Nähe der Punkt ist. Mögliche Werte sind `CBRS_ALIGN_LEFT`, `CBRS_ALIGN_RIGHT`, `CBRS_ALIGN_TOP`, und`CBRS_ALIGN_BOTTOM`  
   
  [out] `bOuterEdge`  
- `TRUE` if the point is near the outer border of the dock site; `FALSE` otherwise.  
+ `TRUE`Wenn der Punkt in der Nähe von den äußeren Rahmen des Standorts Dock ist; `FALSE` andernfalls.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the point is near the dock site; otherwise `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn der Punkt in der Nähe der Dock-Website ist. andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- The point is near the dock site when it is within the sensitivity set in the docking manager. The default sensitivity is 15 pixels.  
+### <a name="remarks"></a>Hinweise  
+ Der Punkt ist in der Nähe der docksite, wenn es innerhalb der Vertraulichkeit in der Dockingstation Manager festgelegt ist. Die Vertraulichkeit der Standardwert beträgt 15 Pixel.  
   
-##  <a name="isresizable"></a>  CBasePane::IsResizable  
- Determines whether the pane can be resized.  
+##  <a name="isresizable"></a>CBasePane::IsResizable  
+ Bestimmt, ob der Bereich angepasst werden kann.  
   
 ```  
 virtual BOOL IsResizable() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the pane can be resized by the user; otherwise, `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn der Bereich vom Benutzer angepasst werden kann. andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- Panes of [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) can be resized.  
+### <a name="remarks"></a>Hinweise  
+ Bereiche der [CDockablePane-Klasse](../../mfc/reference/cdockablepane-class.md) geändert werden kann.  
   
- The status bar ( [CMFCStatusBar Class](../../mfc/reference/cmfcstatusbar-class.md)) and the dock bar ( [CDockSite Class](../../mfc/reference/cdocksite-class.md)) cannot be resized.  
+ Die Statusleiste ( [CMFCStatusBar-Klasse](../../mfc/reference/cmfcstatusbar-class.md)) und die Dock-Leiste ( [CDockSite-Klasse](../../mfc/reference/cdocksite-class.md)) kann nicht geändert werden.  
   
-##  <a name="isrestoredfromregistry"></a>  CBasePane::IsRestoredFromRegistry  
- Determines whether the pane is restored from the registry.  
+##  <a name="isrestoredfromregistry"></a>CBasePane::IsRestoredFromRegistry  
+ Bestimmt, ob der Bereich in der Registrierung wiederhergestellt wird.  
   
 ```  
 virtual BOOL IsRestoredFromRegistry() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the pane is restored from the registry; otherwise, `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn der Bereich in der Registrierung wiederhergestellt wird. andernfalls `FALSE`.  
   
-##  <a name="istabbed"></a>  CBasePane::IsTabbed  
- Determines whether the pane has been inserted in the tab control of a tabbed window.  
+##  <a name="istabbed"></a>CBasePane::IsTabbed  
+ Bestimmt, ob der Bereich in das Registerkarten-Steuerelement ein Fenster im Registerkartenformat eingefügt wurde.  
   
 ```  
 virtual BOOL IsTabbed() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the control bar is inserted in a tab of a tabbed window; otherwise `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn die Steuerleiste auf einer Registerkarte der ein Fenster im Registerkartenformat eingefügt wird. andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- This method retrieves a pointer to the immediate parent and determines if the parent's runtime class is [CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md).  
+### <a name="remarks"></a>Hinweise  
+ Diese Methode ruft einen Zeiger auf das unmittelbar übergeordnete Element und legt fest, ob die Common Language Runtime-Klasse des übergeordneten Elements ist [CMFCBaseTabCtrl-Klasse](../../mfc/reference/cmfcbasetabctrl-class.md).  
   
-##  <a name="isvisible"></a>  CBasePane::IsVisible  
- Determines whether the pane is visible.  
+##  <a name="isvisible"></a>CBasePane::IsVisible  
+ Bestimmt, ob der Bereich angezeigt wird.  
   
 ```  
 virtual BOOL IsVisible() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the pane is visible; otherwise `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn das Fenster sichtbar ist; andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- Use this method to determine the visibility of a pane. Do not use `::IsWindowVisible`.  
+### <a name="remarks"></a>Hinweise  
+ Verwenden Sie diese Methode zum Bestimmen der Sichtbarkeit eines Bereichs ein. Verwenden Sie nicht `::IsWindowVisible`.  
   
- If the pane is not tabbed (see [CBasePane::IsTabbed](#istabbed)), this method checks for the `WS_VISIBLE` style. If the pane is tabbed, this method checks the visibility of the parent tabbed window. If the parent window is visible, the function checks the visibility of the pane tab using [CMFCBaseTabCtrl::IsTabVisible](../../mfc/reference/cmfcbasetabctrl-class.md#istabvisible).  
+ Wenn der Bereich nicht im Registerkartenformat ist (finden Sie unter [CBasePane::IsTabbed](#istabbed)), überprüft diese Methode die `WS_VISIBLE` Stil. Wenn der Bereich mit Registerkarten ist, überprüft diese Methode die Sichtbarkeit des übergeordneten Fensters im Registerkartenformat. Wenn das übergeordnete Fenster angezeigt wird, überprüft die Funktion die Sichtbarkeit der Bereich Registerkarte mit [CMFCBaseTabCtrl::IsTabVisible](../../mfc/reference/cmfcbasetabctrl-class.md#istabvisible).  
   
-##  <a name="loadstate"></a>  CBasePane::LoadState  
- Loads the pane's state from the registry.  
+##  <a name="loadstate"></a>CBasePane::LoadState  
+ Lädt den Zustand des Bereichs aus der Registrierung.  
   
 ```  
 virtual BOOL LoadState(
@@ -1365,24 +1303,24 @@ virtual BOOL LoadState(
     UINT uiID=(UINT)-1);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `lpszProfileName`  
- Profile name.  
+ Profilname.  
   
  [in] `nIndex`  
- Profile index.  
+ Profil-Index.  
   
  [in] `uiID`  
- Pane ID.  
+ Bereich-ID.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the pane state was loaded successfully; otherwise `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn der Zustand des Bereichs erfolgreich geladen wurde. andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- The framework calls this method to load the pane state from the registry. Override it in a derived class to load additional information saved by [CBasePane::SaveState](#savestate).  
+### <a name="remarks"></a>Hinweise  
+ Das Framework ruft diese Methode, um den Bereich Status aus der Registrierung laden. Überschreiben Sie diese in einer abgeleiteten Klasse zusätzliche Informationen gespeichert, indem laden [CBasePane::SaveState](#savestate).  
   
-##  <a name="movewindow"></a>  CBasePane::MoveWindow  
- Moves the pane.  
+##  <a name="movewindow"></a>CBasePane::MoveWindow  
+ Verschiebt den Bereich.  
   
 ```  
 virtual HDWP MoveWindow(
@@ -1391,40 +1329,40 @@ virtual HDWP MoveWindow(
     HDWP hdwp = NULL);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `rect`  
- A rectangle specifying the new location and size of the pane.  
+ Ein Rechteck, das die neue Position und Größe des Bereichs angeben.  
   
  [in] `bRepaint`  
- If `TRUE`, the pane is repainted. If `FALSE`, the pane is not repainted.  
+ Wenn `TRUE`, Bereich neu gezeichnet wird. Wenn `FALSE`, der Bereich wird nicht aktualisiert.  
   
  [in] `hdwp`  
- Handle to a deferred window position structure.  
+ Handle für eine verzögerte Fenster Position-Struktur.  
   
-### <a name="return-value"></a>Return Value  
- A handle to a deferred window position structure, or `NULL`.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Handle für eine verzögerte Position Fensterstruktur oder `NULL`.  
   
-### <a name="remarks"></a>Remarks  
- If you pass `NULL` as the `hdwp` parameter, this method moves the window normally. If you pass a handle, this method performs a deferred window move. You can obtain a handle by calling [BeginDeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632672) or by storing the return value of a previous call to this method.  
+### <a name="remarks"></a>Hinweise  
+ Wenn Sie übergeben `NULL` als die `hdwp` Parameter, die diese Methode verschiebt das Fenster Normal. Wenn Sie ein Handle übergeben, führt diese Methode eine verzögerte verschieben. Sie erhalten ein Handle durch Aufrufen von [BeginDeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632672) oder durch einen vorherigen Aufruf dieser Methode den Rückgabewert zu speichern.  
   
-##  <a name="onafterchangeparent"></a>  CBasePane::OnAfterChangeParent  
- Called by the framework after the pane's parent changes.  
+##  <a name="onafterchangeparent"></a>CBasePane::OnAfterChangeParent  
+ Vom Framework aufgerufen, nachdem der Bereich übergeordnete geändert.  
   
 ```  
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pWndOldParent`  
- A pointer to the previous parent.  
+ Ein Zeiger auf das vorherige übergeordnete Element.  
   
-### <a name="remarks"></a>Remarks  
- The framework calls this method after the pane's parent changes, usually because of a docking or floating operation.  
+### <a name="remarks"></a>Hinweise  
+ Das Framework ruft diese Methode nach übergeordneten im Bereich, in der Regel aufgrund eines Vorgangs andocken oder frei verschiebbaren Änderungen.  
   
- The default implementation does nothing.  
+ Bei der Standardimplementierung wird keine Aktion ausgeführt.  
   
-##  <a name="onbeforechangeparent"></a>  CBasePane::OnBeforeChangeParent  
- Called by the framework just before the pane changes its parent window.  
+##  <a name="onbeforechangeparent"></a>CBasePane::OnBeforeChangeParent  
+ Vom Framework aufgerufen, unmittelbar bevor der Bereich des übergeordneten Fensters geändert wird.  
   
 ```  
 virtual void OnBeforeChangeParent(
@@ -1432,41 +1370,41 @@ virtual void OnBeforeChangeParent(
     BOOL bDelay=FALSE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pWndNewParent`  
- A pointer to a new parent window.  
+ Ein Zeiger auf ein neues übergeordnetes Fenster.  
   
  [in] `bDelay`  
- Specifies whether layout adjustments must be delayed.  
+ Gibt an, ob Layout Anpassungen verzögert werden müssen.  
   
-### <a name="remarks"></a>Remarks  
- The framework calls this method just before the pane's parent changes, usually because of a docking, floating, or auto-hide operation.  
+### <a name="remarks"></a>Hinweise  
+ Das Framework ruft diese Methode nur vor den Bereich übergeordneten ändert, in der Regel aufgrund einer andocken, Gleitkomma- oder automatisch im Hintergrund-Vorgang.  
   
- The default implementation does nothing.  
+ Bei der Standardimplementierung wird keine Aktion ausgeführt.  
   
-##  <a name="ondrawcaption"></a>  CBasePane::OnDrawCaption  
- The framework calls this method when the caption is drawn.  
+##  <a name="ondrawcaption"></a>CBasePane::OnDrawCaption  
+ Das Framework ruft diese Methode auf, wenn der Titel gezeichnet wird.  
   
 ```  
 virtual void OnDrawCaption();
 ```  
   
-### <a name="remarks"></a>Remarks  
- This method has no functionality for the `CBasePane` class.  
+### <a name="remarks"></a>Hinweise  
+ Diese Methode hat keine Funktion für die `CBasePane` Klasse.  
   
-##  <a name="onmovepanedivider"></a>  CBasePane::OnMovePaneDivider  
- This method is currently not used.  
+##  <a name="onmovepanedivider"></a>CBasePane::OnMovePaneDivider  
+ Diese Methode wird derzeit nicht verwendet.  
   
 ```  
 virtual void OnMovePaneDivider(CPaneDivider*);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `CPaneDivider*`  
- Not used.  
+ Nicht verwendet.  
   
-##  <a name="onpanecontextmenu"></a>  CBasePane::OnPaneContextMenu  
- Called by the framework when it builds a menu that has a list of panes.  
+##  <a name="onpanecontextmenu"></a>CBasePane::OnPaneContextMenu  
+ Vom Framework aufgerufen, wenn ein Menü erstellt, die eine Liste von Bereichen.  
   
 ```  
 virtual void OnPaneContextMenu(
@@ -1474,52 +1412,52 @@ virtual void OnPaneContextMenu(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pParentFrame`  
- A pointer to the parent frame.  
+ Ein Zeiger auf den übergeordneten Frame.  
   
  [in] `point`  
- Specifies the location of the shortcut menu.  
+ Gibt die Position des Kontextmenüs.  
   
-### <a name="remarks"></a>Remarks  
- `OnPaneContextMenu` calls the docking manager, which maintains the list of panes that belong to the current frame window. This method adds the names of the panes to a shortcut menu and displays it. The commands on the menu show or hide individual panes.  
+### <a name="remarks"></a>Hinweise  
+ `OnPaneContextMenu`Ruft die docking-Manager, die die Liste von Bereichen verwaltet, die an das aktuelle Rahmenfenster gehören. Diese Methode die Namen der Bereiche in einem Kontextmenü hinzugefügt und angezeigt. Die Befehle im Menü anzeigen oder Ausblenden von einzelne Bereiche.  
   
- Override this method to customize this behavior.  
+ Überschreiben Sie diese Methode, um dieses Verhalten anzupassen.  
   
-##  <a name="onremovefromminiframe"></a>  CBasePane::OnRemoveFromMiniFrame  
- Called by the framework when a pane is removed from its parent mini frame window.  
+##  <a name="onremovefromminiframe"></a>CBasePane::OnRemoveFromMiniFrame  
+ Wird vom Framework aufgerufen, wenn ein Bereich aus das übergeordnete Mini-Rahmenfenster entfernt wird.  
   
 ```  
 virtual void OnRemoveFromMiniFrame(CPaneFrameWnd* pMiniFrame);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pMiniFrame`  
- A pointer to a mini-frame window from which the pane is removed.  
+ Ein Zeiger auf ein Minirahmenfenster, das aus dem Bereich entfernt wird.  
   
-### <a name="remarks"></a>Remarks  
- The framework calls this method when a pane is removed from its parent mini-frame window (as a result of docking, for example).  
+### <a name="remarks"></a>Hinweise  
+ Das Framework ruft diese Methode auf, wenn ein Bereich aus seiner übergeordneten Minirahmenfenster (aufgrund von andocken, z. B.) entfernt wird.  
   
- The default implementation does nothing.  
+ Bei der Standardimplementierung wird keine Aktion ausgeführt.  
   
-##  <a name="onsetaccdata"></a>  CBasePane::OnSetAccData  
- `CBasePane` does not use this method.  
+##  <a name="onsetaccdata"></a>Cbasepane:: Onsetaccdata  
+ `CBasePane`Diese Methode wird nicht verwendet werden.  
   
 ```  
 virtual BOOL OnSetAccData(long lVal);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `lVal`  
- Not used.  
+ Nicht verwendet.  
   
-### <a name="return-value"></a>Return Value  
- This method always returns `TRUE`.  
+### <a name="return-value"></a>Rückgabewert  
+ Diese Methode gibt immer `TRUE` zurück.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="panefrompoint"></a>  CBasePane::PaneFromPoint  
- Returns the pane that contains the given point.  
+##  <a name="panefrompoint"></a>CBasePane::PaneFromPoint  
+ Gibt den Bereich, der den angegebenen Punkt enthält.  
   
 ```  
 CBasePane* PaneFromPoint(
@@ -1529,31 +1467,31 @@ CBasePane* PaneFromPoint(
     CRuntimeClass* pRTCBarType = NULL) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `point`  
- Specifies the point, in screen coordinates, to check.  
+ Gibt den Punkt in Bildschirmkoordinaten, um zu überprüfen.  
   
  [in] `nSensitivity`  
- Increase the search area by this amount. A pane will satisfy the search criteria if the given point falls in the increased area.  
+ Erhöhen Sie den Suchbereich, um diesen Betrag. Ein Bereich, die Suchkriterien erfüllen, fällt der angegebene Punkt im Bereich erhöhte.  
   
  [in] `bExactBar`  
- `TRUE` to ignore the `nSensitivity` parameter; otherwise, `FALSE`.  
+ `TRUE`ignoriert die `nSensitivity` Parameter ist, andernfalls `FALSE`.  
   
  [in] `pRTCBarType`  
- If not `NULL`, the method searches only panes of the specified type.  
+ Wenn dies nicht `NULL`, die-Methode sucht nur die Bereiche des angegebenen Typs.  
   
-### <a name="return-value"></a>Return Value  
- The `CBasePane`-derived object that contains the given point, or `NULL` if no pane was found.  
+### <a name="return-value"></a>Rückgabewert  
+ Die `CBasePane`-abgeleitetes Objekt mit dem angegebenen Punkt oder `NULL` Wenn kein Bereich gefunden wurde.  
   
-##  <a name="recalclayout"></a>  CBasePane::RecalcLayout  
- `CBasePane` does not use this method.  
+##  <a name="recalclayout"></a>CBasePane::RecalcLayout  
+ `CBasePane`Diese Methode wird nicht verwendet werden.  
   
 ```  
 virtual void RecalcLayout();
 ```  
   
-##  <a name="removepanefromdockmanager"></a>  CBasePane::RemovePaneFromDockManager  
- Unregisters a pane and removes it from the list in the docking manager.  
+##  <a name="removepanefromdockmanager"></a>CBasePane::RemovePaneFromDockManager  
+ Hebt die Registrierung eines Bereichs, und entfernt sie aus der Liste in der Dockingstation-Manager.  
   
 ```  
 void RemovePaneFromDockManager(
@@ -1564,24 +1502,24 @@ void RemovePaneFromDockManager(
     CBasePane* pBarReplacement = NULL);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pBar`  
- A pointer to a pane to be removed.  
+ Ein Zeiger auf einen Bereich entfernt werden soll.  
   
  [in] `bDestroy`  
- If `TRUE`, the removed pane is destroyed.  
+ Wenn `TRUE`, entfernte Bereich zerstört wird.  
   
  [in] `bAdjustLayout`  
- If `TRUE`, adjust the docking layout immediately.  
+ Wenn `TRUE`, passen Sie das Andocken Layout sofort.  
   
  [in] `bAutoHide`  
- If `TRUE`, the docking layout is related to the list of autohide bars. If `FALSE`, the docking layout is related to the list of regular panes.  
+ Wenn `TRUE`, die andocklayout bezieht sich auf die Liste der Balken automatisch im Hintergrund. Wenn `FALSE`, die andocklayout bezieht sich auf die Liste der regulären Bereiche.  
   
  [in] `pBarReplacement`  
- A pointer to a pane that replaces the removed pane.  
+ Ein Zeiger auf einen Bereich, der Bereich entfernten ersetzt.  
   
-##  <a name="savestate"></a>  CBasePane::SaveState  
- Saves the pane's state to the registry.  
+##  <a name="savestate"></a>CBasePane::SaveState  
+ Speichert den Zustand des Bereichs in der Registrierung.  
   
 ```  
 virtual BOOL SaveState(
@@ -1590,113 +1528,113 @@ virtual BOOL SaveState(
     UINT uiID=(UINT)-1);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `lpszProfileName`  
- Profile name.  
+ Profilname.  
   
  [in] `nIndex`  
- Profile index.  
+ Profil-Index.  
   
  [in] `uiID`  
- Pane ID.  
+ Bereich-ID.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the state was saved successfully; otherwise `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn der Zustand erfolgreich gespeichert wurde. andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- The framework calls this method when it saves the pane's state to the registry. Override `SaveState` in a derived class to store additional information.  
+### <a name="remarks"></a>Hinweise  
+ Das Framework ruft diese Methode auf, wenn er den Zustand des Bereichs in der Registrierung speichert. Überschreiben Sie `SaveState` in einer abgeleiteten Klasse zum Speichern zusätzlicher Informationen.  
   
-##  <a name="selectdefaultfont"></a>  CBasePane::SelectDefaultFont  
- Selects the default font for a given device context.  
+##  <a name="selectdefaultfont"></a>CBasePane::SelectDefaultFont  
+ Wählt die Schriftart für einen bestimmten Gerätekontext.  
   
 ```  
 CFont* SelectDefaultFont(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pDC`  
- A device context.  
+ Einen Gerätekontext.  
   
-### <a name="return-value"></a>Return Value  
- A pointer to the default [CFont Class](../../mfc/reference/cfont-class.md) object.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Zeiger auf den Standardwert [CFont-Klasse](../../mfc/reference/cfont-class.md) Objekt.  
   
-##  <a name="setcontrolbarstyle"></a>  CBasePane::SetControlBarStyle  
- Sets the control bar style.  
+##  <a name="setcontrolbarstyle"></a>CBasePane::SetControlBarStyle  
+ Legt das Format des Steuerelements angezeigt.  
   
 ```  
 virtual void SetControlBarStyle(DWORD dwNewStyle);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `dwNewStyle`  
- A bitwise-OR combination of the following possible values.  
+ Eine bitweise OR-Kombination der folgenden möglichen Werte.  
   
-|Style|Description|  
+|Stil|Beschreibung|  
 |-----------|-----------------|  
-|`AFX_CBRS_FLOAT`|Makes the control bar float.|  
-|`AFX_CBRS_AUTOHIDE`|Enables auto-hide mode.|  
-|`AFX_CBRS_RESIZE`|Enables resizing of the control bar. When this flag is set, the control bar can be placed in a dockable pane.|  
-|`AFX_CBRS_CLOSE`|Enables hiding of the control bar.|  
+|`AFX_CBRS_FLOAT`|Macht die Steuerelement-Leiste Float.|  
+|`AFX_CBRS_AUTOHIDE`|Ermöglicht das automatische Ausblenden Modus.|  
+|`AFX_CBRS_RESIZE`|Ermöglicht das Ändern der Größe der Steuerleiste. Wenn dieses Flag festgelegt ist, kann die Steuerleiste in einen andockbaren Bereich eingefügt werden.|  
+|`AFX_CBRS_CLOSE`|Ermöglicht das Ausblenden der Steuerleiste.|  
   
-##  <a name="setdockingmode"></a>  CBasePane::SetDockingMode  
- Sets the docking mode for the pane.  
+##  <a name="setdockingmode"></a>CBasePane::SetDockingMode  
+ Legt den Andockmodus für den Bereich fest.  
   
 ```  
 void SetDockingMode(AFX_DOCK_TYPE dockModeNew);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `dockModeNew`  
- Specifies the new docking mode for the pane.  
+ Gibt den neuen Andockmodus für den Bereich an.  
   
-### <a name="remarks"></a>Remarks  
- The framework supports two docking modes: standard and immediate.  
+### <a name="remarks"></a>Hinweise  
+ Das Framework unterstützt die andockbaren Modi: standard und unmittelbare.  
   
- In the standard docking mode, panes and mini-frame windows are moved around using a drag rectangle. In the immediate docking mode, control bars and mini-frame windows are moved immediately with their context.  
+ Im Standardmodus andockbaren werden Bereiche und Minirahmenfenster verschoben, um mit einem Rechteck. In der unmittelbaren Andockmodus werden Steuerleisten und Minirahmenfenster sofort mit ihrem Kontext verschoben.  
   
- Initially, the docking mode is defined globally by [CDockingManager::m_dockModeGlobal](../../mfc/reference/cdockingmanager-class.md#m_dockmodeglobal). You can set the docking mode for each pane individually using the `SetDockingMode` method.  
+ Der Andockmodus wird anfänglich durch definiert [CDockingManager::m_dockModeGlobal](../../mfc/reference/cdockingmanager-class.md#m_dockmodeglobal). Sie können festlegen, dass den Andockmodus für jeden Bereich einzeln mit der `SetDockingMode` Methode.  
   
-##  <a name="setpanealignment"></a>  CBasePane::SetPaneAlignment  
- Sets the alignment for the pane.  
+##  <a name="setpanealignment"></a>CBasePane::SetPaneAlignment  
+ Legt die Ausrichtung für den Bereich fest.  
   
 ```  
 virtual void SetPaneAlignment(DWORD dwAlignment);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `dwAlignment`  
- Specifies the new alignment.  
+ Gibt die neue Ausrichtung.  
   
-### <a name="remarks"></a>Remarks  
- Usually, the framework calls this method when a pane is docked from one side of the main frame to another.  
+### <a name="remarks"></a>Hinweise  
+ In der Regel ruft das Framework diese Methode, wenn ein Bereich von einer Seite des Hauptframe auf einen anderen angedockt wird.  
   
- The following table shows the possible values for `dwAlignment`:  
+ In der folgenden Tabelle sind die möglichen Werte für `dwAlignment`:  
   
-|Value|Alignment|  
+|Wert|Ausrichtung|  
 |-----------|---------------|  
-|`CBRS_ALIGN_LEFT`|Left alignment.|  
-|`CBRS_ALIGN_RIGHT`|Right alignment.|  
-|`CBRS_ALIGN_TOP`|Top alignment.|  
-|`CBRS_ALIGN_BOTTOM`|Bottom alignment.|  
+|`CBRS_ALIGN_LEFT`|Linksbündige Ausrichtung.|  
+|`CBRS_ALIGN_RIGHT`|Rechtsbündige Ausrichtung.|  
+|`CBRS_ALIGN_TOP`|Obere Ausrichtung.|  
+|`CBRS_ALIGN_BOTTOM`|Unten ausrichten.|  
   
-##  <a name="setpanestyle"></a>  CBasePane::SetPaneStyle  
- Sets the style of the pane.  
+##  <a name="setpanestyle"></a>CBasePane::SetPaneStyle  
+ Legt den Stil des Bereichs.  
   
 ```  
 virtual void SetPaneStyle(DWORD dwNewStyle);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `dwNewStyle`  
- Specifies the new style to set.  
+ Gibt den neuen Stil fest.  
   
-### <a name="remarks"></a>Remarks  
- This method can be used to set any of the CBRS_ styles that are defined in afxres.h. Because pane style and pane alignment are stored together, set the new style by combining it with the current alignment as follows.  
+### <a name="remarks"></a>Hinweise  
+ Diese Methode kann verwendet werden, die Formatvorlagen CBRS_ festlegen, die in afxres.h definiert sind. Da Bereich Stil und im Bereich Ausrichtung zusammen gespeichert werden, legen Sie die neue Formatvorlage, durch die Kombination mit der aktuellen Ausrichtung wie folgt.  
   
  `pPane->SetPaneStyle (pPane->GetCurrentAlignment() | CBRS_TOOLTIPS);`  
   
-##  <a name="setwindowpos"></a>  CBasePane::SetWindowPos  
- Changes the size, position, and Z-order of a pane.  
+##  <a name="setwindowpos"></a>CBasePane::SetWindowPos  
+ Ändert die Größe, Position und Z-Reihenfolge eines Bereichs.  
   
 ```  
 virtual HDWP SetWindowPos(
@@ -1709,36 +1647,36 @@ virtual HDWP SetWindowPos(
     HDWP hdwp = NULL);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pWndInsertAfter`  
- Identifies the `CWnd` object that comes before this `CWnd` object in the Z-order. For more information, see [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).  
+ Identifiziert die `CWnd` -Objekt, das vor dieser `CWnd` Objekt in der Z-Reihenfolge. Weitere Informationen finden Sie unter [CWnd:: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).  
   
  [in] `x`  
- Specifies the position of the left side of the window.  
+ Gibt die Position der linken Seite des Fensters.  
   
  [in] `y`  
- Specifies the position of the top of the window.  
+ Gibt die Position des oberen Rand des Fensters.  
   
  [in] `cx`  
- Specifies the width of the window.  
+ Gibt die Breite des Fensters.  
   
  [in] `cy`  
- Specifies the height of the window.  
+ Gibt die Höhe des Fensters.  
   
  [in] `nFlags`  
- Specifies size and position options. For more information, see [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).  
+ Gibt Optionen für Größe und Position. Weitere Informationen finden Sie unter [CWnd:: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).  
   
  [in] `hdwp`  
- Handle to a structure that contains size and position information for one or more windows.  
+ Handle für eine Struktur, die Größe und Position für ein oder mehrere Fenster enthält.  
   
-### <a name="return-value"></a>Return Value  
- A handle to an updated deferred window position structure, or `NULL`.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Handle für eine aktualisierte verzögerte Fenster Position Struktur oder `NULL`.  
   
-### <a name="remarks"></a>Remarks  
- If `pWndInsertAfter` is `NULL`, this method calls [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos). If `pWndInsertAfter` is non- `NULL`, this method calls `DeferWindowPos`.  
+### <a name="remarks"></a>Hinweise  
+ Wenn `pWndInsertAfter` ist `NULL`, ruft diese Methode [CWnd:: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos). Wenn `pWndInsertAfter` nicht `NULL`, ruft diese Methode `DeferWindowPos`.  
   
-##  <a name="showpane"></a>  CBasePane::ShowPane  
- Shows or hides the pane.  
+##  <a name="showpane"></a>CBasePane::ShowPane  
+ Blendet den Bereich oder.  
   
 ```  
 virtual void ShowPane(
@@ -1747,23 +1685,23 @@ virtual void ShowPane(
     BOOL bActivate);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `bShow`  
- Specifies whether to show ( `TRUE`) or hide ( `FALSE`) a pane.  
+ Gibt an, ob ( `TRUE`) oder ausblenden ( `FALSE`) einen Bereich.  
   
  [in] `bDelay`  
- If `TRUE`, recalculating the docking layout is delayed.  
+ Wenn `TRUE`, Neuberechnen der andocklayout verzögert wird.  
   
  [in] `bActivate`  
- If `TRUE`, the pane is active when shown.  
+ Wenn `TRUE`, der Bereich ist aktiv, wenn dargestellt.  
   
-### <a name="remarks"></a>Remarks  
- This method shows or hides a pane. Use this method instead of `ShowWindow` because this method notifies the relevant docking managers about changes in the pane's visibility.  
+### <a name="remarks"></a>Hinweise  
+ Diese Methode Blendet einen Bereich. Verwenden Sie diese Methode anstelle von `ShowWindow` , da diese Methode die relevanten docking-Manager zu Änderungen in den Bereich Sichtbarkeit benachrichtigt.  
   
- Use [CBasePane::IsVisible](#isvisible) to determine the current visibility of a pane.  
+ Verwendung [CBasePane::IsVisible](#isvisible) zum Bestimmen der aktuellen Sichtbarkeit eines Bereichs.  
   
-##  <a name="stretchpane"></a>  CBasePane::StretchPane  
- Stretches a pane vertically or horizontally.  
+##  <a name="stretchpane"></a>CBasePane::StretchPane  
+ Streckt einen Bereich vertikal oder horizontal.  
   
 ```  
 virtual CSize StretchPane(
@@ -1771,35 +1709,35 @@ virtual CSize StretchPane(
     BOOL bVert);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `nLength`  
- The length by which to stretch the pane.  
+ Die Länge, um den Bereich zu vergrößern.  
   
  [in] `bVert`  
- If `TRUE`, stretch the pane vertically. If `FALSE`, stretch the pane horizontally.  
+ Wenn `TRUE`, vertikal gestreckt werden im Bereich. Wenn `FALSE`, vergrößern Sie den Bereich horizontal.  
   
-### <a name="return-value"></a>Return Value  
- The size of the stretched pane.  
+### <a name="return-value"></a>Rückgabewert  
+ Die Größe des Bereichs gestreckt.  
   
-##  <a name="undockpane"></a>  CBasePane::UndockPane  
- Removes the pane from the dock site, default slider, or mini-frame window where it is currently docked.  
+##  <a name="undockpane"></a>CBasePane::UndockPane  
+ Entfernt im Bereich von docksite, Standard-Schieberegler oder Minirahmenfenster, in denen es derzeit angedockt ist.  
   
 ```  
 virtual void UndockPane(BOOL bDelay=FALSE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `bDelay`  
- If TRUE, the docking layout is not recalculated immediately.  
+ Wenn TRUE, wird das andocklayout nicht sofort neu berechnet.  
   
-### <a name="remarks"></a>Remarks  
- Call this method to manipulate the pane state or exclude the pane from the docking layout.  
+### <a name="remarks"></a>Hinweise  
+ Rufen Sie diese Methode, um den Bereich Zustand zu ändern oder den andocklayout Bereich ausgeschlossen.  
   
- If you want to continue to use this pane, call either [CBasePane::DockPane](#dockpane) or [CBasePane::FloatPane](#floatpane) before calling this method.  
+ Wenn Sie diesen Bereich verwenden möchten, rufen Sie entweder [CBasePane::DockPane](#dockpane) oder [CBasePane::FloatPane](#floatpane) vor dem Aufrufen dieser Methode.  
   
-## <a name="see-also"></a>See Also  
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [Classes](../../mfc/reference/mfc-classes.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
+ [Klassen](../../mfc/reference/mfc-classes.md)   
  [CPane](../../mfc/reference/cbasepane-class.md)   
- [CWnd Class](../../mfc/reference/cwnd-class.md)
+ [CWnd-Klasse](../../mfc/reference/cwnd-class.md)
 

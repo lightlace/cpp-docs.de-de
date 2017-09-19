@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonLabel Class | Microsoft Docs
+title: Klasse CMFCRibbonLabel | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,8 +16,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonLabel [MFC], CMFCRibbonLabel
-- CMFCRibbonLabel [MFC], SetACCData
+- CMFCRibbonLabel class
 ms.assetid: 0346c891-83bf-4f20-b8a1-c84cf2aadced
 caps.latest.revision: 21
 author: mikeblome
@@ -37,15 +36,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: c778ed32d761f895c4a5f95c319198748983f1be
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: b93e0f6c46818515c8d6bcd8d71b78dcaa435ea6
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="cmfcribbonlabel-class"></a>CMFCRibbonLabel Class
-Implements a non-clickable text label for a ribbon.  
+# <a name="cmfcribbonlabel-class"></a>CMFCRibbonLabel-Klasse
+Implementiert eine nicht anklickbare Bezeichnung für ein Menüband.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -53,30 +52,30 @@ Implements a non-clickable text label for a ribbon.
 class CMFCRibbonLabel : public CMFCRibbonButton  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Mitglieder  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCRibbonLabel::CMFCRibbonLabel](#cmfcribbonlabel)|Constructs and initializes a `CMFCRibbonLabel` object with the specified text string.|  
-|`CMFCRibbonLabel::~CMFCRibbonLabel`|Destructor.|  
+|[CMFCRibbonLabel::CMFCRibbonLabel](#cmfcribbonlabel)|Erstellt und initialisiert ein `CMFCRibbonLabel` -Objekt mit der angegebenen Textzeichenfolge.|  
+|`CMFCRibbonLabel::~CMFCRibbonLabel`|Destruktor.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|`CMFCRibbonLabel::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
-|`CMFCRibbonLabel::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
-|[CMFCRibbonLabel::SetACCData](#setaccdata)|Determines the accessibility data for the current ribbon label element. (Overrides [CMFCRibbonButton::SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|  
+|`CMFCRibbonLabel::CreateObject`|Wird vom Framework verwendet, um eine dynamische Instanz dieses Klassentyps zu erstellen.|  
+|`CMFCRibbonLabel::GetThisClass`|Vom Framework verwendet werden, um einen Zeiger auf die [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) -Objekt, das Klassentyp zugeordnet ist.|  
+|[CMFCRibbonLabel::SetACCData](#setaccdata)|Bestimmt die Eingabehilfen-Daten für das aktuelle Element der Menüband-Bezeichnung. (Überschreibt [CMFCRibbonButton::SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|  
   
-### <a name="remarks"></a>Remarks  
- After you create a ribbon label, add it to a panel by calling [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
+### <a name="remarks"></a>Hinweise  
+ Nach der Erstellung einer Bezeichnung Menüband hinzufügen zu einem Element durch Aufrufen von [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
   
- You cannot add a ribbon label to the Quick Access Toolbar.  
+ Sie können keine Menüband-Bezeichnung Symbolleiste für den Schnellzugriff hinzufügen.  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
- [CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
+ [Von CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
   
@@ -84,11 +83,11 @@ class CMFCRibbonLabel : public CMFCRibbonButton
   
  [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md)  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxRibbonLabel.h  
   
-##  <a name="cmfcribbonlabel"></a>  CMFCRibbonLabel::CMFCRibbonLabel  
- Constructs and initializes a [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) object that displays the specified text string.  
+##  <a name="cmfcribbonlabel"></a>CMFCRibbonLabel::CMFCRibbonLabel  
+ Erstellt und initialisiert ein [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) -Objekt, das die angegebene Zeichenfolge angezeigt.  
   
 ```  
 CMFCRibbonLabel(
@@ -96,15 +95,15 @@ CMFCRibbonLabel(
     BOOL bIsMultiLine = FALSE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `lpszText`  
- The text to appear in the label.  
+ Der Text in der Bezeichnung angezeigt werden.  
   
  [in] `bIsMultiLine`  
- `TRUE` to specify that the label is a multi-line label; otherwise, `FALSE`.  
+ `TRUE`um anzugeben, dass die Bezeichnung eine mehrzeilige Bezeichnung ist; andernfalls `FALSE`.  
   
-##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
- Determines the accessibility data for the current ribbon label element.  
+##  <a name="setaccdata"></a>CMFCRibbonLabel::SetACCData  
+ Bestimmt die Eingabehilfen-Daten für das aktuelle Element der Menüband-Bezeichnung.  
   
 ```  
 virtual BOOL SetACCData(
@@ -112,18 +111,18 @@ virtual BOOL SetACCData(
     CAccessibilityData& data);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pParent`  
- Represents the parent window of the current ribbon label.  
+ Stellt das übergeordnete Fenster der aktuellen Bezeichnung Menüband dar.  
   
  [out] `data`  
- An object of type `CAccessibilityData` that is populated with the accessibility data of the current ribbon label.  
+ Ein Objekt vom Typ `CAccessibilityData` , die mit den Zugriff auf Daten der aktuellen Menüband Bezeichnung aufgefüllt wird.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the `data` parameter was successfully populated with the accessibility data of the current ribbon label; otherwise, `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn die `data` Parameter wurde erfolgreich mit den Zugriff auf Daten der aktuellen Menüband Bezeichnung aufgefüllt, andernfalls `FALSE`.  
   
-## <a name="see-also"></a>See Also  
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [Classes](../../mfc/reference/mfc-classes.md)   
- [CMFCRibbonButton Class](../../mfc/reference/cmfcribbonbutton-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
+ [Klassen](../../mfc/reference/mfc-classes.md)   
+ [CMFCRibbonButton-Klasse](../../mfc/reference/cmfcribbonbutton-class.md)
 

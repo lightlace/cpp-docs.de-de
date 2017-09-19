@@ -1,5 +1,5 @@
 ---
-title: CD2DPointF Class | Microsoft Docs
+title: CD2DPointF-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,7 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DPointF [MFC], CD2DPointF
+- CD2DPointF class
 ms.assetid: 30f72083-1c8a-4f50-adb2-72dbbe3522d4
 caps.latest.revision: 18
 author: mikeblome
@@ -35,15 +35,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 63adc1f9ff0786ca074a3275eff0ff8b9f68c77b
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 8449fcadfb72305e9e5b6ed2c6829ba9963ba7ca
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="cd2dpointf-class"></a>CD2DPointF Class
-A wrapper for `D2D1_POINT_2F`.  
+# <a name="cd2dpointf-class"></a>CD2DPointF-Klasse
+Ein Wrapper für `D2D1_POINT_2F`.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,30 +51,30 @@ A wrapper for `D2D1_POINT_2F`.
 class CD2DPointF : public D2D1_POINT_2F;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Mitglieder  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CD2DPointF::CD2DPointF](#cd2dpointf)|Overloaded. Constructs a `CD2DPointF` object from `D2D1_POINT_2F` object.|  
+|[CD2DPointF::CD2DPointF](#cd2dpointf)|Überladen. Erstellt eine `CD2DPointF` -Objekt aus `D2D1_POINT_2F` Objekt.|  
   
-### <a name="public-operators"></a>Public Operators  
+### <a name="public-operators"></a>Öffentliche Operatoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CD2DPointF::operator CPoint](#operator_cpoint)|Converts `CD2DPointF` to `CPoint` object.|  
+|[CD2DPointF::Operator CPoint](#operator_cpoint)|Konvertiert `CD2DPointF` zu `CPoint` Objekt.|  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `D2D1_POINT_2F`  
   
  `CD2DPointF`  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxrendertarget.h  
   
-##  <a name="cd2dpointf"></a>  CD2DPointF::CD2DPointF  
- Constructs a CD2DPointF object from CPoint object.  
+##  <a name="cd2dpointf"></a>CD2DPointF::CD2DPointF  
+ Erstellt ein CD2DPointF-Objekt aus CPoint-Objekt.  
   
 ```  
 CD2DPointF(const CPoint& pt);    
@@ -83,26 +83,26 @@ CD2DPointF(const D2D1_POINT_2F* pt);
 CD2DPointF(FLOAT fX = 0., FLOAT fY = 0.);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `pt`  
- source point  
+ Ursprungspunkt  
   
  `fX`  
- source X  
+ Quelle X  
   
  `fY`  
- source Y  
+ Quelle Y  
   
-##  <a name="operator_cpoint"></a>  CD2DPointF::operator CPoint  
- Converts CD2DPointF to CPoint object.  
+##  <a name="operator_cpoint"></a>CD2DPointF::Operator CPoint  
+ Konvertiert CD2DPointF in CPoint-Objekt.  
   
 ```  
 operator CPoint();
 ```   
   
-### <a name="return-value"></a>Return Value  
- Current value of D2D point.  
+### <a name="return-value"></a>Rückgabewert  
+ Aktueller Wert der D2D-Punkt.  
   
-## <a name="see-also"></a>See Also  
- [Classes](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>Siehe auch  
+ [Klassen](../../mfc/reference/mfc-classes.md)
 

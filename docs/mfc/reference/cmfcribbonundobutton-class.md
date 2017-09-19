@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonUndoButton Class | Microsoft Docs
+title: Klasse CMFCRibbonUndoButton | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,11 +19,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonUndoButton [MFC], CMFCRibbonUndoButton
-- CMFCRibbonUndoButton [MFC], AddUndoAction
-- CMFCRibbonUndoButton [MFC], CleanUpUndoList
-- CMFCRibbonUndoButton [MFC], GetActionNumber
-- CMFCRibbonUndoButton [MFC], HasMenu
+- CMFCRibbonUndoButton class
 ms.assetid: 5c42adf7-871d-4239-901e-47ae7fb816fc
 caps.latest.revision: 35
 author: mikeblome
@@ -43,15 +39,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: e99fca219af62c4dc51db71c24caae6af50c11db
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: d4406e21a7e2a945965020d85a748b93d66b5682
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="cmfcribbonundobutton-class"></a>CMFCRibbonUndoButton Class
-The `CMFCRibbonUndoButton` class implements a drop-down list button that contains the most recent user commands. Users can select one or more of the most recent commands from the drop-down list to either redo or undo them.  
+# <a name="cmfcribbonundobutton-class"></a>CMFCRibbonUndoButton-Klasse
+Die `CMFCRibbonUndoButton` -Klasse implementiert eine Dropdown-Liste-Schaltfläche, die der aktuelle Benutzerbefehle enthält. Benutzer können eine oder mehrere der neuesten Befehle auswählen, aus der Dropdown-Liste entweder wiederherstellen oder rückgängig machen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -59,33 +55,33 @@ The `CMFCRibbonUndoButton` class implements a drop-down list button that contain
 class CMFCRibbonUndoButton : public CMFCRibbonGallery  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Mitglieder  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCRibbonUndoButton::CMFCRibbonUndoButton](#cmfcribbonundobutton)|Constructs a new `CMFCRibbonUndoButton` object by using the command ID that you specify, text label and images from the image list of the parent object.|  
+|[CMFCRibbonUndoButton::CMFCRibbonUndoButton](#cmfcribbonundobutton)|Erstellt ein neues `CMFCRibbonUndoButton` Objekt mithilfe des Befehls-ID, die Sie angeben, Beschriftung und Bilder aus der Bildliste des übergeordneten Objekts.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCRibbonUndoButton::AddUndoAction](#addundoaction)|Adds a new action to the list of actions.|  
-|[CMFCRibbonUndoButton::CleanUpUndoList](#cleanupundolist)|Clears the action list, which is the drop-down list.|  
-|[CMFCRibbonUndoButton::GetActionNumber](#getactionnumber)|Determines the number of items that a user selected from the drop-down list.|  
-|[CMFCRibbonUndoButton::HasMenu](#hasmenu)|Indicates whether the object contains a menu.|  
+|[CMFCRibbonUndoButton::AddUndoAction](#addundoaction)|Die Liste der Aktionen wird eine neue Aktion hinzugefügt.|  
+|[CMFCRibbonUndoButton::CleanUpUndoList](#cleanupundolist)|Löscht die Aktionsliste also die Dropdown-Liste.|  
+|[CMFCRibbonUndoButton::GetActionNumber](#getactionnumber)|Bestimmt die Anzahl der Elemente, die ein Benutzer aus der Dropdown Liste ausgewählt.|  
+|[CMFCRibbonUndoButton::HasMenu](#hasmenu)|Gibt an, ob das Objekt ein Menü enthält.|  
   
-## <a name="remarks"></a>Remarks  
- The `CMFCRibbonUndoButton` class uses a stack to represent the drop-down list.  
+## <a name="remarks"></a>Hinweise  
+ Die `CMFCRibbonUndoButton` Klasse, die einen Stapel verwendet, um die Dropdown-Liste darstellen.  
   
-## <a name="example"></a>Example  
- The following example demonstrates how to construct an object of the `CMFCRibbonUndoButton` class, and add a new action to the list of actions. This code snippet is part of the [Ribbon Gadgets sample](../../visual-cpp-samples.md).  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird veranschaulicht, wie zum Erstellen eines Objekts von der `CMFCRibbonUndoButton` -Klasse und die Liste der Aktionen eine neue Aktion hinzu. Dieser Codeausschnitt ist Teil der [Menüband Gadgets Beispiel](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_RibbonGadgets#2](../../mfc/reference/codesnippet/cpp/cmfcribbonundobutton-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonGadgets&#2;](../../mfc/reference/codesnippet/cpp/cmfcribbonundobutton-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
- [CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
+ [Von CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
   
@@ -95,29 +91,29 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
   
  [CMFCRibbonUndoButton](../../mfc/reference/cmfcribbonundobutton-class.md)  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxribbonundobutton.h  
   
-##  <a name="addundoaction"></a>  CMFCRibbonUndoButton::AddUndoAction  
- Adds a new action to the list of actions.  
+##  <a name="addundoaction"></a>CMFCRibbonUndoButton::AddUndoAction  
+ Die Liste der Aktionen wird eine neue Aktion hinzugefügt.  
   
 ```  
 void AddUndoAction(LPCTSTR lpszLabel);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `lpszLabel`  
- The action label that will be displayed in the drop-down list.  
+ Die Bezeichnung der Aktion, die in der Dropdown-Liste angezeigt werden.  
   
-##  <a name="cleanupundolist"></a>  CMFCRibbonUndoButton::CleanUpUndoList  
- Clears the action list, which is the drop-down list.  
+##  <a name="cleanupundolist"></a>CMFCRibbonUndoButton::CleanUpUndoList  
+ Löscht die Aktionsliste also die Dropdown-Liste.  
   
 ```  
 void CleanUpUndoList();
 ```  
   
-##  <a name="cmfcribbonundobutton"></a>  CMFCRibbonUndoButton::CMFCRibbonUndoButton  
- Constructs a new `CMFCRibbonUndoButton` object by using the command ID that you specify, text label and images from the image list of the parent object.  
+##  <a name="cmfcribbonundobutton"></a>CMFCRibbonUndoButton::CMFCRibbonUndoButton  
+ Erstellt ein neues `CMFCRibbonUndoButton` Objekt mithilfe des Befehls-ID, die Sie angeben, Beschriftung und Bilder aus der Bildliste des übergeordneten Objekts.  
   
 ```  
 CMFCRibbonUndoButton(
@@ -133,47 +129,47 @@ CMFCRibbonUndoButton(
     HICON hIcon);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `nID`  
- Specifies the command identifier.  
+ Gibt die Befehls-ID an.  
   
  [in] `lpszText`  
- Specifies the text label of the button.  
+ Gibt die Beschriftung der Schaltfläche.  
   
  [in] `nSmallImageIndex`  
- Zero-based index in the image list of the parent object for the button's small image.  
+ Nullbasierte Index in der Bildliste, der das übergeordnete Objekt für das Bild der Schaltfläche klein.  
   
  [in] `nLargeImageIndex`  
- Zero-based index in the image list of the parent object for the of button's large image.  
+ Nullbasierte Index in der Bildliste, der das übergeordnete Objekt für das große Bild der Schaltfläche.  
   
  [in] `hIcon`  
- A handle to an icon that you can use as a button's image.  
+ Ein Handle für ein Symbol, das Sie als Bild einer Schaltfläche verwenden können.  
   
-##  <a name="getactionnumber"></a>  CMFCRibbonUndoButton::GetActionNumber  
- Determines the number of items that a user selected from the drop-down list.  
+##  <a name="getactionnumber"></a>CMFCRibbonUndoButton::GetActionNumber  
+ Bestimmt die Anzahl der Elemente, die ein Benutzer aus der Dropdown Liste ausgewählt.  
   
 ```  
 int GetActionNumber() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The number of items that a user selected.  
+### <a name="return-value"></a>Rückgabewert  
+ Die Anzahl der Elemente, die ein Benutzer ausgewählt.  
   
-##  <a name="hasmenu"></a>  CMFCRibbonUndoButton::HasMenu  
- Indicates whether the object contains a menu.  
+##  <a name="hasmenu"></a>CMFCRibbonUndoButton::HasMenu  
+ Gibt an, ob das Objekt ein Menü enthält.  
   
 ```  
 virtual BOOL HasMenu() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Always returns `TRUE`.  
+### <a name="return-value"></a>Rückgabewert  
+ Gibt immer `TRUE` zurück.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-## <a name="see-also"></a>See Also  
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [Classes](../../mfc/reference/mfc-classes.md)   
- [CMFCRibbonGallery Class](../../mfc/reference/cmfcribbongallery-class.md)   
- [CMFCRibbonButton Class](../../mfc/reference/cmfcribbonbutton-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
+ [Klassen](../../mfc/reference/mfc-classes.md)   
+ [CMFCRibbonGallery-Klasse](../../mfc/reference/cmfcribbongallery-class.md)   
+ [CMFCRibbonButton-Klasse](../../mfc/reference/cmfcribbonbutton-class.md)
 

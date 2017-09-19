@@ -1,5 +1,5 @@
 ---
-title: is_error_code_enum Structure | Microsoft Docs
+title: is_error_code_enum-Struktur | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,15 +32,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 2f0af7cac938ab3e45fb889886439caf99cbe154
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: f9b576e6d69cc499aa05cbd857b3cd35f99a8adc
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/19/2017
 
 ---
-# <a name="iserrorcodeenum-structure"></a>is_error_code_enum Structure
-Specialization that indicates that [future_errc](../standard-library/future-enums.md#future_errc) is suitable for storing an [error_code](../standard-library/error-code-class.md).  
+# <a name="iserrorcodeenum-structure"></a>is_error_code_enum-Struktur
+Spezialisierung, die angibt, dass [future_errc](../standard-library/future-enums.md#future_errc) für das Speichern eines [error_code](../standard-library/error-code-class.md) geeignet ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,13 +49,13 @@ template <>
 struct is_error_code_enum<Future_errc> : public true_type;
 ```  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<future>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<zukünftige >  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)   
  [\<future>](../standard-library/future.md)
 
 

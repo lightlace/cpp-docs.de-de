@@ -1,11 +1,11 @@
 ---
-title: once_flag Structure | Microsoft Docs
+title: once_flag-Struktur | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- cpp-standard-libraries
+- devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -32,32 +32,32 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 8e7d664bf6ccde646ada9419f4577ac37dcd1ed6
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: a39919d3c1608d53edc6a75ecc3dd2e0ff504b1c
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/19/2017
 
 ---
-# <a name="onceflag-structure"></a>once_flag Structure
-Represents a `struct` that is used with the template function [call_once](../standard-library/mutex-functions.md#call_once) to ensure that initialization code is called only once, even in the presence of multiple threads of execution.  
+# <a name="onceflag-structure"></a>once_flag-Struktur
+Stellt eine `struct` dar, die mit der Vorlagenfunktion [call_once](../standard-library/mutex-functions.md#call_once) verwendet wird, damit der Initialisierungscode auch bei mehreren Ausführungsthreads nur einmal aufgerufen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-struct once_flag { constexpr once_flag() noexcept; once_flag(const once_flag&); once_flag& operator=(const once_flag&); };  
+Struktur once_flag { constexpr once_flag() noexcept; once_flag(const once_flag&); once_flag& operator=(const once_flag&); };  
   
-## <a name="remarks"></a>Remarks  
- The `once_flag` `struct` has only a default constructor.  
+## <a name="remarks"></a>Hinweise  
+ `once_flag``struct` verfügt über nur einen Standardkonstruktor.  
   
- Objects of type `once_flag` can be created, but they cannot be copied.  
+ Objekte vom Typ `once_flag` können erstellt, aber nicht kopiert werden.  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<mutex>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Mutex >  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)   
  [\<mutex>](../standard-library/mutex.md)
 
 

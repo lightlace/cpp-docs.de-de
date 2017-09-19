@@ -1,5 +1,5 @@
 ---
-title: add_lvalue_reference Class | Microsoft Docs
+title: add_lvalue_reference Class | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- add_lvalue_reference
 - type_traits/std::add_lvalue_reference
 dev_langs:
 - C++
@@ -33,15 +34,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: ce215e667d5a36671a3513a3bbba3b7b1ed70665
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: a201572ed85d5bcf15435743ac0f8db8f08ede4b
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="addlvaluereference-class"></a>add_lvalue_reference Class
-Makes reference to type from type.  
+# <a name="addlvaluereference-class"></a>add_lvalue_reference-Klasse
+Wandelt den Typ in einen Verweis auf den Typ um.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -53,14 +54,14 @@ template <class T>
 using add_lvalue_reference_t = typename add_lvalue_reference<T>::type;  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
  `T`  
- The type to modify.  
+ Der zu ändernde Typ.  
   
-## <a name="remarks"></a>Remarks  
- An instance of the type modifier holds a modified-type that is `T` if `T` is an lvalue reference, otherwise `T&`.  
+## <a name="remarks"></a>Hinweise  
+ Eine Instanz des Typmodifizierers enthält einen geänderten Typ, der `T` ist, wenn es sich bei `T` um einen lvalue-Verweis handelt; andernfalls ist er `T&`.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Beispiel  
   
 ```cpp  
 #include <type_traits>   
@@ -83,12 +84,12 @@ int main()
 add_lvalue_reference_t<int> == int  
 ```  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [<type_traits>](../standard-library/type-traits.md)   
- [remove_reference Class](../standard-library/remove-reference-class.md)
+ [remove_reference-Klasse](../standard-library/remove-reference-class.md)
 

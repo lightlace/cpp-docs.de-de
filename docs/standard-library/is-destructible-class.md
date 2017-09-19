@@ -1,5 +1,5 @@
 ---
-title: is_destructible Class | Microsoft Docs
+title: is_destructible-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,6 +10,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
+- is_destructible
 - type_traits/std::is_destructible
 dev_langs:
 - C++
@@ -35,15 +36,14 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 243d93b7ed17d977baaa04222dd871cd0c892a12
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: fecbfd44ca5b3e9d5d8b5d35637b7d1feb74ca48
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="isdestructible-class"></a>is_destructible Class
-Tests whether the type is destructible.  
+# <a name="isdestructible-class"></a>is_destructible-Klasse
+Testet, ob der Typ „destructible“ ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -52,19 +52,19 @@ template <class T>
 struct is_destructible;
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
  `T`  
- The type to query.  
+ Der abzufragende Typ.  
   
-## <a name="remarks"></a>Remarks  
- An instance of the type predicate holds true if the type `T` is a destructible type, otherwise it holds false. Destructible types are reference types, object types, and types where for some type `U` equal to `remove_all_extents_t<T>` the unevaluated operand `std::declval<U&>.~U()` is well-formed. Other types, including incomplete types, `void`, and function types, are not destructible types.  
+## <a name="remarks"></a>Hinweise  
+ Eine Instanz des Typprädikats ist „true“, wenn der Typ `T` vom Typ „destructible“ ist; andernfalls „false“. „destructible“-Typen sind Referenztypen, Objekttypen und Typen, bei denen für einige Typen `U` gleich `remove_all_extents_t<T>` der nicht ausgewertete Operand `std::declval<U&>.~U()` wohlgeformt ist. Andere Typen, z. B. unvollständige Typen, `void`und Funktionstypen, sind keine „destructible“-Typen.  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [<type_traits>](../standard-library/type-traits.md)
 
 

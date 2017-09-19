@@ -1,5 +1,5 @@
 ---
-title: '&lt;ratio&gt; | Microsoft Docs'
+title: '&lt;ratio&gt; | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,34 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ratio/std::mega", "ratio/std::peta", "ratio/std::ratio_greater", "ratio/std::micro", "ratio/std::ratio_add", "ratio/std::ratio_not_equal", "ratio/std::hecto", "ratio/std::nano", "ratio/std::ratio_less_equal", "ratio/std::ratio_less", "ratio/std::centi", "ratio/std::ratio_greater_equal", "ratio/std::ratio_subtract", "<ratio>", "ratio/std::atto", "ratio/std::tera", "ratio/std::milli", "ratio/std::ratio_multiply", "ratio/std::kilo", "ratio/std::ratio_divide", "ratio/std::giga", "ratio/std::pico", "ratio/std::femto", "ratio/std::ratio_equal", "ratio/std::ratio", "ratio/std::exa", "ratio/std::deci", "ratio/std::deca
+- ratio/std::mega
+- ratio/std::peta
+- ratio/std::ratio_greater
+- ratio/std::micro
+- ratio/std::ratio_add
+- ratio/std::ratio_not_equal
+- ratio/std::hecto
+- ratio/std::nano
+- ratio/std::ratio_less_equal
+- ratio/std::ratio_less
+- ratio/std::centi
+- ratio/std::ratio_greater_equal
+- ratio/std::ratio_subtract
+- <ratio>
+- ratio/std::atto
+- ratio/std::tera
+- ratio/std::milli
+- ratio/std::ratio_multiply
+- ratio/std::kilo
+- ratio/std::ratio_divide
+- ratio/std::giga
+- ratio/std::pico
+- ratio/std::femto
+- ratio/std::ratio_equal
+- ratio/std::ratio
+- ratio/std::exa
+- ratio/std::deci
+- ratio/std::deca
 dev_langs:
 - C++
 ms.assetid: 8543e912-2d84-45ea-b3c0-bd7bfacee405
@@ -31,16 +58,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: fa061920a11bc312a5cf67428a30377e3026535c
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 39fdef1976a506c36a553d575c83462e7c6e9ee0
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="ltratiogt"></a>&lt;ratio&gt;
-
-Include the standard header \<ratio> to define constants and templates that are used to store and manipulate rational numbers at compile time.  
+Schließen Sie den Standardheader \<ratio> zum Definieren von Konstanten und Vorlagen mit ein, die zum Speichern und Bearbeiten von rationalen Zahlen zum Zeitpunkt der Kompilierung verwendet werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,29 +74,26 @@ Include the standard header \<ratio> to define constants and templates that are 
 #include <ratio>  
 ```  
   
-### <a name="ratio-template"></a>ratio Template  
+### <a name="ratio-structure"></a>ratio-Struktur  
 
-```cpp
-template<std::intmax_t Numerator, std::intmax_t Denominator = 1>
-   struct ratio // holds the ratio of Numerator to Denominator
+```
+struct ratio
 {
-   static constexpr std::intmax_t num;
-   static constexpr std::intmax_t den;
-   typedef ratio<num, den> type;
-}
+    static constexpr intmax_t num;
+    static constexpr intmax_t den;
+    typedef ratio<num, den>  type;
+};
 ```  
-
-The template `ratio` defines the static constants `num` and `den` such that `num` / `den` == Numerator / Denominator and `num` and `den` have no common factors. `num` / `den` is the value that is represented by the template class. Therefore, `type` designates the instantiation `ratio<num, den>`.  
+ Die [ratio-Struktur](http://msdn.microsoft.com/en-us/3f7961f4-802b-4251-b3c3-090ef91c0dba) definiert die statische Konstanten `num` und `den`, sodass `num` / `den` == N / D und `num` und `den` keine gemeinsamen Faktoren haben. `num` / `den` ist `value`, das von der Vorlagenklasse dargestellt wird. Aus diesem Grund kennzeichnet `type` die Instanziierung `ratio<N0, D0>` für die `num` == N0 und `den` == D0.  
   
-### <a name="specializations"></a>Specializations
-
-\<ratio> also defines specializations of `ratio` that have the following form.  
+### <a name="specializations"></a>Spezialisierungen  
+ \<ratio > definiert auch `ratio`-Spezialisierungen, die die folgende Form aufweisen.  
   
-`template <class R1, class R2> struct ratio_specialization`  
+ `template <class R1, class R2> struct ratio_specialization`  
   
-Each specialization takes two template parameters that must also be specializations of `ratio`. The value of `type` is determined by an associated logical operation.  
+ Jede Spezialisierung nimmt zwei Vorlagenparameter, die auch `ratio`-Spezialisierungen sein müssen. Der `type`-Wert wird durch einen zugeordneten logischen Vorgang bestimmt.  
   
-|Name|`type` Value|  
+|Name|`type`-Wert|  
 |----------|------------------|  
 |`ratio_add`|`R1 + R2`|  
 |`ratio_divide`|`R1 / R2`|  
@@ -83,19 +106,17 @@ Each specialization takes two template parameters that must also be specializati
 |`ratio_not_equal`|`!(R1 == R2)`|  
 |`ratio_subtract`|`R1 - R2`|  
   
-### <a name="typedefs"></a>typedefs  
-
-For convenience, the header defines ratios for the standard SI prefixes:
+### <a name="typedefs"></a>Typedefs  
   
-```cpp
-typedef ratio<1, 1000000000000000000> atto;
-typedef ratio<1, 1000000000000000> femto;
-typedef ratio<1, 1000000000000> pico;
+```
+typedef ratio<1,  1000000000000000000> atto;
+typedef ratio<1,     1000000000000000> femto;
+typedef ratio<1,        1000000000000> pico;
 typedef ratio<1, 1000000000> nano;
 typedef ratio<1, 1000000> micro;
 typedef ratio<1, 1000> milli;
-typedef ratio<1, 100> centi;
-typedef ratio<1, 10> deci;
+typedef ratio<1,  100> centi;
+typedef ratio<1,   10> deci;
 typedef ratio<10, 1> deca;
 typedef ratio<100, 1> hecto;
 typedef ratio<1000, 1> kilo;
@@ -106,8 +127,8 @@ typedef ratio<1000000000000000, 1> peta;
 typedef ratio<1000000000000000000, 1> exa;
 ```  
   
-## <a name="see-also"></a>See Also  
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)
+## <a name="see-also"></a>Siehe auch  
+ [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)
 
 
 

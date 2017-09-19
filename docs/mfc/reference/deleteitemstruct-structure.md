@@ -1,5 +1,5 @@
 ---
-title: DELETEITEMSTRUCT Structure | Microsoft Docs
+title: DELETEITEMSTRUCT-Struktur | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- DELETEITEMSTRUCT structure [MFC]
+- DELETEITEMSTRUCT structure
 ms.assetid: 48d3998c-f4a8-402a-bf90-df3770a78685
 caps.latest.revision: 13
 author: mikeblome
@@ -33,15 +33,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 609cce99d61b1b3262fc0f72ac9c20cc38369973
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: f5936cbb863cf8ace851609cb1dc8352e21f9456
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="deleteitemstruct-structure"></a>DELETEITEMSTRUCT Structure
-The `DELETEITEMSTRUCT` structure describes a deleted owner-drawn list-box or combo-box item.  
+# <a name="deleteitemstruct-structure"></a>DELETEITEMSTRUCT-Struktur
+Die `DELETEITEMSTRUCT` Struktur beschreibt ein gelöschtes Ownerdrawn-Listenfeld oder Kombinationsfeld Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,30 +55,30 @@ typedef struct tagDELETEITEMSTRUCT { /* ditms */
 } DELETEITEMSTRUCT;  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
  `CtlType`  
- Specifies **ODT_LISTBOX** (an owner-drawn list box) or **ODT_COMBOBOX** (an owner-drawn combo box).  
+ Gibt an, **ODT_LISTBOX** (ein Ownerdrawn Listenfeld) oder **ODT_COMBOBOX** (ein Ownerdrawn-Kombinationsfeld).  
   
  `CtlID`  
- Specifies the identifier of the list box or combo box.  
+ Gibt den Bezeichner der im Listenfeld oder Kombinationsfeld.  
   
  `itemID`  
- Specifies index of the item in the list box or combo box being removed.  
+ Gibt den Index des Elements im Listenfeld oder Kombinationsfeld entfernt an.  
   
  `hwndItem`  
- Identifies the control.  
+ Bezeichnet das Steuerelement.  
   
  `itemData`  
- Specifies application-defined data for the item. This value is passed to the control in the **lParam** parameter of the message that adds the item to the list box or combo box.  
+ Gibt anwendungsspezifische Daten für das Element an. Dieser Wert wird übergeben, um das Steuerelement in der **lParam** -Parameter der Nachricht, die Sie im Listenfeld oder Kombinationsfeld das Element hinzufügt.  
   
-## <a name="remarks"></a>Remarks  
- When an item is removed from the list box or combo box or when the list box or combo box is destroyed, Windows sends the `WM_DELETEITEM` message to the owner for each deleted item. The **lParam** parameter of the message contains a pointer to this structure.  
+## <a name="remarks"></a>Hinweise  
+ Wenn ein Element entfernt wird, aus dem Listenfeld oder Kombinationsfeld oder das Listenfeld oder Kombinationsfeld zerstört wird, sendet Windows die `WM_DELETEITEM` Nachricht an den Besitzer für die einzelnen Elemente. Die **lParam** -Parameter der Nachricht enthält einen Zeiger auf diese Struktur.  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  
   
-## <a name="see-also"></a>See Also  
- [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Strukturen, Stile, Rückrufe und Meldungszuordnungen](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem)
 
 

@@ -1,5 +1,5 @@
 ---
-title: BITMAP Structure | Microsoft Docs
+title: Bitmapstruktur | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- BITMAP structure [MFC]
+- BITMAP structure
 ms.assetid: 05d33b4d-7232-4643-a108-87dda8ff5f22
 caps.latest.revision: 12
 author: mikeblome
@@ -33,15 +33,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 22bd4bfe4d2c396e0a7a706218c3d2fec08ab738
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: cd7e63cfe9e7a0f2305ca5c3cd7c2571a080a718
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="bitmap-structure"></a>BITMAP Structure
-The **BITMAP** structure defines the height, width, color format, and bit values of a logical bitmap**.**  
+# <a name="bitmap-structure"></a>BITMAP-Struktur
+Die **BITMAP** Struktur definiert die Höhe, Breite, Farbformat und die Bitwerte einer logischen Bitmap**.**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -57,32 +57,32 @@ typedef struct tagBITMAP {  /* bm */
 } BITMAP;  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
  *bmType*  
- Specifies the bitmap type. For logical bitmaps, this member must be 0.  
+ Gibt den Bitmaptyp an. Für logische Bitmaps muss dieser Member 0 sein.  
   
  *bmWidth*  
- Specifies the width of the bitmap in pixels. The width must be greater than 0.  
+ Gibt die Breite der Bitmap in Pixeln an. Die Breite muss größer als 0 sein.  
   
  *bmHeight*  
- Specifies the height of the bitmap in raster lines. The height must be greater than 0.  
+ Gibt die Höhe der Bitmap in Rasterzeilen an. Die Höhe muss größer als 0 sein.  
   
  *bmWidthBytes*  
- Specifies the number of bytes in each raster line. This value must be an even number since the graphics device interface (GDI) assumes that the bit values of a bitmap form an array of integer (2-byte) values. In other words, **bmWidthBytes** \* 8 must be the next multiple of 16 greater than or equal to the value obtained when the **bmWidth** member is multiplied by the **bmBitsPixel** member.  
+ Gibt die Anzahl von Bytes in jeder Rasterzeile an. Dieser Wert muss eine gerade Zahl sein, da die Graphics Device Interface (GDI) davon ausgeht, dass die Bitwerte einer Bitmap ein Array von ganzzahligen (2-Byte-)Werten bilden. Das heißt, **BmWidthBytes** \* 8 muss das nächste Vielfache von 16 größer oder gleich dem Wert abgerufen, wenn die **BmWidth** Member multipliziert wird die **BmBitsPixel** Element.  
   
  *bmPlanes*  
- Specifies the number of color planes in the bitmap.  
+ Gibt die Anzahl von Farbebenen in der Bitmap an.  
   
  *bmBitsPixel*  
- Specifies the number of adjacent color bits on each plane needed to define a pixel.  
+ Gibt die Anzahl der benachbarten Farbbits auf jeder Ebene an, die zur Definition eines Pixels erforderlich sind.  
   
  *bmBits*  
- Points to the location of the bit values for the bitmap. The **bmBits** member must be a long pointer to an array of 1-byte values.  
+ Zeigt auf den Speicherort der Bitwerte für die Bitmap. Die **BmBits** Element muss ein long-Zeiger auf ein Array von 1-Byte-Werte sein.  
   
-## <a name="remarks"></a>Remarks  
- The currently used bitmap formats are monochrome and color. The monochrome bitmap uses a 1-bit, 1-plane format. Each scan is a multiple of 16 bits.  
+## <a name="remarks"></a>Hinweise  
+ Die aktuell verwendeten Bitmapformate sind monochrom und Farbe. Die monochrome Bitmap verwendet ein 1-Bit-/1-Plane-Format. Jeder Scan ist ein Vielfaches von 16 Bits.  
   
- Scans are organized as follows for a monochrome bitmap of height *n*:  
+ Scans werden für eine monochrome Bitmap der Höhe wie folgt organisiert *n*:  
   
  `Scan 0`  
   
@@ -98,16 +98,16 @@ typedef struct tagBITMAP {  /* bm */
   
  `Scan n-1`  
   
- The pixels on a monochrome device are either black or white. If the corresponding bit in the bitmap is 1, the pixel is turned on (white). If the corresponding bit in the bitmap is 0, the pixel is turned off (black).  
+ Die Pixel auf einem monochromen Gerät sind entweder schwarz oder weiß. Wenn das entsprechende Bit in der Bitmap 1 ist, wird das Pixel aktiviert (weiß). Wenn das entsprechende Bit in der Bitmap 0 ist, wird das Pixel deaktiviert (schwarz).  
   
- All devices support bitmaps that have the **RC_BITBLT** bit set in the **RASTERCAPS** index of the [CDC::GetDeviceCaps](../../mfc/reference/cdc-class.md#getdevicecaps) member function.  
+ Alle Geräte unterstützen Bitmaps, die **RC_BITBLT** Bit festgelegt, der **RASTERCAPS** Index des der [GetDeviceCaps](../../mfc/reference/cdc-class.md#getdevicecaps) Member-Funktion.  
   
- Each device has its own unique color format. In order to transfer a bitmap from one device to another, use the [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) and [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) Windows functions.  
+ Jedes Gerät hat ein eigenes eindeutiges Farbformat. Um eine Bitmap von einem Gerät in einen anderen zu übertragen, verwenden die [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) und [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) Windows-Funktionen.  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** wingdi.h  
   
-## <a name="see-also"></a>See Also  
- [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Strukturen, Stile, Rückrufe und Meldungszuordnungen](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect)
 

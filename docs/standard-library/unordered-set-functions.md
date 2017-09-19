@@ -1,5 +1,5 @@
 ---
-title: '&lt;unordered_set&gt; functions | Microsoft Docs'
+title: '&lt;unordered_set&gt;-Funktionen | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -12,20 +12,20 @@ f1_keywords:
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
 caps.latest.revision: 10
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 4b354d4e38e05d4ec1d3ebd410719e7fc19dda52
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 916534c3ab864a217e1e5b340bc368190774d49e
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="ltunorderedsetgt-functions"></a>&lt;unordered_set&gt; functions
+# <a name="ltunorderedsetgt-functions"></a>&lt;unordered_set&gt;-Funktionen
 |||  
 |-|-|  
 |[swap (set)](#swap)|[swap (unordered_multiset)](#swap_unordered_multiset)|  
   
-##  <a name="swap"></a>  swap (unordered_set)  
- Swaps the contents of two containers.  
+##  <a name="swap"></a> swap (unordered_set)  
+ Vertauscht den Inhalt von zwei Containern.  
   
 ```  
  
@@ -35,29 +35,29 @@ void swap(
    unordered_set <Key, Hash, Pred, Alloc>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `Key`  
- The key type.  
+ Der Schlüsseltyp.  
   
  `Hash`  
- The hash function object type.  
+ Der Hashfunktionsobjekttyp.  
   
  `Pred`  
- The equality comparison function object type.  
+ Der Gleichheitsvergleich-Funktionsobjekttyp.  
   
  `Alloc`  
- The allocator class.  
+ Die Zuweisungsklasse.  
   
  `left`  
- The first container to swap.  
+ Der erste zu tauschende Container.  
   
  `right`  
- The second container to swap.  
+ Der zweite zu tauschende Container.  
   
-### <a name="remarks"></a>Remarks  
- The template function executes `left.`[unordered_set::swap](../standard-library/unordered-set-class.md#swap)`(right)`.  
+### <a name="remarks"></a>Hinweise  
+ Die Vorlagenfunktion führt `left.`[unordered_set::swap](../standard-library/unordered-set-class.md#swap)`(right)` aus.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 #include <unordered_set>  
@@ -113,8 +113,8 @@ return (0);
   
 ```  
   
-##  <a name="swap_unordered_multiset"></a>  swap (unordered_multiset) 
- Swaps the contents of two containers.  
+##  <a name="swap_unordered_multiset"></a> swap (unordered_multiset) 
+ Vertauscht den Inhalt von zwei Containern.  
   
 ```  
  
@@ -124,29 +124,29 @@ void swap(
    unordered_multiset <Key, Hash, Pred, Alloc>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `Key`  
- The key type.  
+ Der Schlüsseltyp.  
   
  `Hash`  
- The hash function object type.  
+ Der Hashfunktionsobjekttyp.  
   
  `Pred`  
- The equality comparison function object type.  
+ Der Gleichheitsvergleich-Funktionsobjekttyp.  
   
  `Alloc`  
- The allocator class.  
+ Die Zuweisungsklasse.  
   
  `left`  
- The first container to swap.  
+ Der erste zu tauschende Container.  
   
  `right`  
- The second container to swap.  
+ Der zweite zu tauschende Container.  
   
-### <a name="remarks"></a>Remarks  
- The template function executes `left.`[unordered_multiset::swap](../standard-library/unordered-multiset-class.md#swap)`(right)`.  
+### <a name="remarks"></a>Hinweise  
+ Die Vorlagenfunktion führt `left.`[unordered_multiset::swap](../standard-library/unordered-multiset-class.md#swap)`(right)` aus.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // std__unordered_set__u_ms_swap.cpp  
@@ -204,7 +204,7 @@ int main()
   
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [<unordered_set>](../standard-library/unordered-set.md)
 
 

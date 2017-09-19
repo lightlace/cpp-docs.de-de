@@ -1,5 +1,5 @@
 ---
-title: CMFCDesktopAlertWnd Class | Microsoft Docs
+title: Klasse CMFCDesktopAlertWnd | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,25 +33,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCDesktopAlertWnd [MFC], Create
-- CMFCDesktopAlertWnd [MFC], GetAnimationSpeed
-- CMFCDesktopAlertWnd [MFC], GetAnimationType
-- CMFCDesktopAlertWnd [MFC], GetAutoCloseTime
-- CMFCDesktopAlertWnd [MFC], GetCaptionHeight
-- CMFCDesktopAlertWnd [MFC], GetDialogSize
-- CMFCDesktopAlertWnd [MFC], GetLastPos
-- CMFCDesktopAlertWnd [MFC], GetTransparency
-- CMFCDesktopAlertWnd [MFC], HasSmallCaption
-- CMFCDesktopAlertWnd [MFC], OnBeforeShow
-- CMFCDesktopAlertWnd [MFC], OnClickLinkButton
-- CMFCDesktopAlertWnd [MFC], OnCommand
-- CMFCDesktopAlertWnd [MFC], OnDraw
-- CMFCDesktopAlertWnd [MFC], ProcessCommand
-- CMFCDesktopAlertWnd [MFC], SetAnimationSpeed
-- CMFCDesktopAlertWnd [MFC], SetAnimationType
-- CMFCDesktopAlertWnd [MFC], SetAutoCloseTime
-- CMFCDesktopAlertWnd [MFC], SetSmallCaption
-- CMFCDesktopAlertWnd [MFC], SetTransparency
+- CMFCDesktopAlertWnd class
 ms.assetid: 73a2dd7b-ea84-4ae2-9830-7cf6e8dd2425
 caps.latest.revision: 33
 author: mikeblome
@@ -71,15 +53,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: dd8a09db3e17d8b0232b6fcff5c02e6e8767eb42
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: be9d81ffff003119aa7ff9e0cd100c575bd82d36
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
-The `CMFCDesktopAlertWnd` class implements the functionality of a modeless dialog box which appears on the screen to inform the user about an event.  
+Die `CMFCDesktopAlertWnd` Klasse implementiert die Funktion ein nicht modales Dialogfeld angezeigt wird, auf dem Bildschirm, um den Benutzer über ein Ereignis informieren.  
 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
 ## <a name="syntax"></a>Syntax  
@@ -88,68 +70,68 @@ The `CMFCDesktopAlertWnd` class implements the functionality of a modeless dialo
 class CMFCDesktopAlertWnd : public CWnd  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Mitglieder  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCDesktopAlertWnd::Create](#create)|Creates and initializes the desktop alert window.|  
-|[CMFCDesktopAlertWnd::GetAnimationSpeed](#getanimationspeed)|Returns the animation speed.|  
-|[CMFCDesktopAlertWnd::GetAnimationType](#getanimationtype)|Returns the animation type.|  
-|[CMFCDesktopAlertWnd::GetAutoCloseTime](#getautoclosetime)|Returns the auto-close time out.|  
-|[CMFCDesktopAlertWnd::GetCaptionHeight](#getcaptionheight)|Returns the height of the caption.|  
+|[CMFCDesktopAlertWnd::Create](#create)|Erstellt und initialisiert die desktop-Benachrichtigungsfenster.|  
+|[CMFCDesktopAlertWnd::GetAnimationSpeed](#getanimationspeed)|Gibt die Geschwindigkeit der Animation.|  
+|[CMFCDesktopAlertWnd::GetAnimationType](#getanimationtype)|Gibt den Animationstyp.|  
+|[CMFCDesktopAlertWnd::GetAutoCloseTime](#getautoclosetime)|Gibt das Timeout automatisch geschlossen.|  
+|[CMFCDesktopAlertWnd::GetCaptionHeight](#getcaptionheight)|Gibt die Höhe der Beschriftung.|  
 |[CMFCDesktopAlertWnd::GetDialogSize](#getdialogsize)||  
-|[CMFCDesktopAlertWnd::GetLastPos](#getlastpos)|Returns the last valid position of the desktop alert window on the screen.|  
-|[CMFCDesktopAlertWnd::GetTransparency](#gettransparency)|Returns the transparency level.|  
-|[CMFCDesktopAlertWnd::HasSmallCaption](#hassmallcaption)|Determines whether the desktop alert window is displayed with the small caption.|  
+|[CMFCDesktopAlertWnd::GetLastPos](#getlastpos)|Gibt die letzte gültige Position von desktop-Benachrichtigungsfenster auf dem Bildschirm zurück.|  
+|[CMFCDesktopAlertWnd::GetTransparency](#gettransparency)|Gibt die der Transparenzebene zurück.|  
+|[CMFCDesktopAlertWnd::HasSmallCaption](#hassmallcaption)|Bestimmt, ob mit der kleinen Überschrift für den desktop-Benachrichtigungsfenster angezeigt wird.|  
 |[CMFCDesktopAlertWnd::OnBeforeShow](#onbeforeshow)||  
-|[CMFCDesktopAlertWnd::OnClickLinkButton](#onclicklinkbutton)|Called by the framework when the user clicks a link button located on the desktop alert menu.|  
-|[CMFCDesktopAlertWnd::OnCommand](#oncommand)|The framework calls this member function when the user selects an item from a menu, when a child control sends a notification message, or when an accelerator keystroke is translated. (Overrides [CWnd::OnCommand](../../mfc/reference/cwnd-class.md#oncommand).)|  
+|[CMFCDesktopAlertWnd::OnClickLinkButton](#onclicklinkbutton)|Vom Framework aufgerufen, wenn der Benutzer eine Linkschaltfläche desktop Warnung im Menü klickt.|  
+|[CMFCDesktopAlertWnd::OnCommand](#oncommand)|Das Framework ruft diese Memberfunktion auf, wenn der Benutzer ein Element aus einem Menü auswählt, wenn ein untergeordnetes Steuerelement eine Benachrichtigung sendet oder ein Tastenanschlag Zugriffstaste übersetzt wird. (Überschreibt [Memberfunktion CWnd:: OnCommand](../../mfc/reference/cwnd-class.md#oncommand).)|  
 |[CMFCDesktopAlertWnd::OnDraw](#ondraw)||  
 |[CMFCDesktopAlertWnd::ProcessCommand](#processcommand)||  
-|[CMFCDesktopAlertWnd::SetAnimationSpeed](#setanimationspeed)|Sets the new animation speed.|  
-|[CMFCDesktopAlertWnd::SetAnimationType](#setanimationtype)|Sets the animation type.|  
-|[CMFCDesktopAlertWnd::SetAutoCloseTime](#setautoclosetime)|Sets the auto-close time out.|  
-|[CMFCDesktopAlertWnd::SetSmallCaption](#setsmallcaption)|Switches between small and normal captions.|  
-|[CMFCDesktopAlertWnd::SetTransparency](#settransparency)|Sets the transparency level.|  
+|[CMFCDesktopAlertWnd::SetAnimationSpeed](#setanimationspeed)|Geschwindigkeit der neuen Animation.|  
+|[CMFCDesktopAlertWnd::SetAnimationType](#setanimationtype)|Legt den Animationstyp fest.|  
+|[CMFCDesktopAlertWnd::SetAutoCloseTime](#setautoclosetime)|Legt das Zeitlimit automatisch geschlossen.|  
+|[CMFCDesktopAlertWnd::SetSmallCaption](#setsmallcaption)|Wechselt zwischen normalem und kleine Beschriftungen.|  
+|[CMFCDesktopAlertWnd::SetTransparency](#settransparency)|Legt die Transparenz fest.|  
   
-## <a name="remarks"></a>Remarks  
- A desktop alert window can be transparent, it can appear with animation effects, and it can disappear (after a specified delay or when the user dismisses it by clicking the close button).  
+## <a name="remarks"></a>Hinweise  
+ Ein desktop-Benachrichtigungsfenster transparent sein kann, kann es mit Animationseffekten angezeigt werden und es kann ausgeblendet (nach der angegebenen Verzögerung oder wenn der Benutzer durch Klicken auf die Schaltfläche Schließen schließt).  
   
- A desktop alert window can also contain a default dialog that in turn contains an icon, message text (a label), and a link. Alternatively, a desktop alert window can contain a custom dialog from the application's resources.  
+ Ein desktop-Benachrichtigungsfenster kann auch ein Standarddialogfeld enthalten, die wiederum ein Symbol, der Text (einer Bezeichnung) und einen Link enthält. Alternativ kann ein desktop-Benachrichtigungsfenster ein benutzerdefiniertes Dialogfeld über die Ressourcen der Anwendung enthalten.  
   
- You create a desktop alert window in two steps. First, call the constructor to construct the `CMFCDesktopAlertWnd` object. Second, call the [CMFCDesktopAlertWnd::Create](#create) member function to create the window and attach it to the `CMFCDesktopAlertWnd` object.  
+ Sie erstellen eine desktop-Benachrichtigungsfenster in zwei Schritten. Zunächst rufen Sie den Konstruktor zum Erstellen der `CMFCDesktopAlertWnd` Objekt. Rufen Sie anschließend die [CMFCDesktopAlertWnd::Create](#create) Memberfunktion, erstellen Sie das Fenster, und fügen Sie es auf die `CMFCDesktopAlertWnd` Objekt.  
   
- The `CMFCDesktopAlertWnd` object creates a special child dialog box that fills the client area of the desktop alert window. The dialog owns all the controls that are positioned on it.  
+ Das `CMFCDesktopAlertWnd` Objekt erstellt eine spezielle untergeordnete-Dialogfeld, das den Clientbereich des Fensters Warnung desktop ausfüllt. Das Dialogfeld beinhaltet alle Steuerelemente, die darauf positioniert sind.  
   
- To display a custom dialog box on the popup window, follow these steps:  
+ Um ein benutzerdefiniertes Dialogfeld auf die Popup-Fenster anzuzeigen, gehen Sie folgendermaßen vor:  
   
-1.  Derive a class from `CMFCDesktopAlertDialog`.  
+1.  Leiten Sie eine Klasse von `CMFCDesktopAlertDialog` ab.  
   
-2.  Create a child dialog box template in the resources.  
+2.  Erstellen einer untergeordneten Dialogfeldvorlage in den Ressourcen.  
   
-3.  Call [CMFCDesktopAlertWnd::Create](#create) using the resource ID of the dialog box template and a pointer to the runtime class information of the derived class.  
+3.  Rufen Sie [CMFCDesktopAlertWnd::Create](#create) mithilfe der Ressourcen-ID, der die Dialogfeldvorlage und einen Zeiger auf die Laufzeit-Klasseninformationen der abgeleiteten Klasse.  
   
-4.  Program the custom dialog box to handle all notifications coming from the hosted controls, or program the hosted controls to handle these notifications directly.  
+4.  Programmieren Sie das benutzerdefinierte Dialogfeld behandeln alle Benachrichtigungen, die die gehosteten Steuerelemente stammen oder Programm die gehosteten Steuerelemente diese Benachrichtigungen direkt behandeln.  
   
- Use the following functions to control the behavior of the desktop alert window:  
+ Verwenden Sie die folgenden Funktionen zum Steuern des Verhaltens von desktop-Benachrichtigungsfenster:  
   
--   Set the animation type by calling [CMFCDesktopAlertWnd::SetAnimationType](#setanimationtype). Valid options include unfold, slide, and fade.  
+-   Legen Sie durch Aufrufen der Animationstyp [CMFCDesktopAlertWnd::SetAnimationType](#setanimationtype). Die gültigen Optionen umfassen erweitern und Folie ausblenden.  
   
--   Set the animation frame speed by calling [CMFCDesktopAlertWnd::SetAnimationSpeed](#setanimationspeed).  
+-   Legen Sie die Geschwindigkeit der Animation Frame durch Aufrufen von [CMFCDesktopAlertWnd::SetAnimationSpeed](#setanimationspeed).  
   
--   Set the transparency level by calling [CMFCDesktopAlertWnd::SetTransparency](#settransparency).  
+-   Legen Sie die Transparenz durch Aufrufen von [CMFCDesktopAlertWnd::SetTransparency](#settransparency).  
   
--   Change the size of the caption to small by calling [CMFCDesktopAlertWnd::SetSmallCaption](#setsmallcaption). The small caption is 7 pixels high.  
+-   Ändern Sie die Größe der Beschriftung kleine durch Aufrufen von [CMFCDesktopAlertWnd::SetSmallCaption](#setsmallcaption). Die kleinen Beschriftung ist 7 Pixel hoch.  
   
-## <a name="example"></a>Example  
- The following example illustrates how to use various methods in the `CMFCDesktopAlertWnd` class to configure a `CMFCDesktopAlertWnd` object. The example shows how to set an animation type, set the transparency of the pop-up window, specify that the alert window displays a small caption, and set the time that elapses before the alert window automatically closes. The example also demonstrates how to create and initialize the desktop alert window. This code snippet is part of the [Desktop Alert Demo sample](../../visual-cpp-samples.md).  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird veranschaulicht, wie verschiedene Methoden in der `CMFCDesktopAlertWnd` Klasse zum Konfigurieren einer `CMFCDesktopAlertWnd` Objekt. Das Beispiel zeigt, wie Sie einen Animationstyp festlegen, legen Sie die Transparenz des Popupfensters, anzugeben, dass das Benachrichtigungsfenster eine kleine Beschriftung anzeigen und die Zeit, die verstreicht, bevor die Warnung im Fenster automatisch geschlossen wird. Darüber hinaus wird das Erstellen und initialisieren die desktop-Benachrichtigungsfenster veranschaulicht. Dieser Codeausschnitt ist Teil der [Desktop Warnung Demobeispiel](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_DesktopAlertDemo#1](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwnd-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_DesktopAlertDemo&#1;](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwnd-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
- [CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
+ [Von CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -157,11 +139,11 @@ class CMFCDesktopAlertWnd : public CWnd
   
  [CMFCDesktopAlertWnd](../../mfc/reference/cmfcdesktopalertwnd-class.md)  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxDesktopAlertWnd.h  
   
-##  <a name="create"></a>  CMFCDesktopAlertWnd::Create  
- Creates and initializes the desktop alert window.  
+##  <a name="create"></a>CMFCDesktopAlertWnd::Create  
+ Erstellt und initialisiert die desktop-Benachrichtigungsfenster.  
   
 ```  
 virtual BOOL Create(
@@ -179,57 +161,57 @@ virtual BOOL Create(
     CPoint ptPos = CPoint(-1,-1));
 ```  
   
-### <a name="parameters"></a>Parameters  
- [in] [out] `pWndOwner`  
- Specifies the owner of the alert window. That owner will then receive all notifications for the desktop alert window. This value cannot be `NULL`.  
+### <a name="parameters"></a>Parameter  
+ [in] [out]`pWndOwner`  
+ Gibt den Besitzer des Fensters Warnung. Dieser Besitzer erhält alle Benachrichtigungen für die desktop-Benachrichtigungsfenster. Dieser Wert darf nicht `NULL` sein.  
   
  [in] `uiDlgResID`  
- Specifies the resource ID of the alert window.  
+ Gibt die Ressourcen-ID des Fensters Warnung an.  
   
  [in] `hMenu`  
- Specifies the menu that displays when the user clicks the menu button. If `NULL`, the menu button is not displayed.  
+ Gibt das Menü, das angezeigt wird, wenn der Benutzer auf die Schaltfläche klickt. Wenn `NULL`, die Schaltfläche wird nicht angezeigt.  
   
  [in] `ptPos`  
- Specifies the initial position where the alert window is displayed, using screen coordinates. If this parameter is (-1, -1), the alert window is displayed in the lower-right corner of the screen.  
+ Gibt die Ausgangsposition, in dem die Warnung wird angezeigt, die anhand der Bildschirmkoordinaten. Wenn dieser Parameter ist (-1, -1), wird die Warnung im Fenster in der unteren rechten Ecke des Bildschirms angezeigt.  
   
  [in] `pRTIDlgBar`  
- Runtime class information for a custom dialog box class that covers the alert window's client area.  
+ Laufzeit-Klasseninformationen für eine benutzerdefinierte Dialogfeldklasse, die die Warnung Clientbereich abdeckt.  
   
  [in] `params`  
- Specifies parameters that are used to create an alert window.  
+ Gibt Parameter an, die verwendet werden, um eine Warnung im Fenster zu erstellen.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the alert window was created successfully; otherwise, `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn die Benachrichtigungsfenster erfolgreich erstellt wurde. andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- Call this method to create an alert window. The client area of the alert window contains a child dialog box that hosts all controls that are displayed to the user.  
+### <a name="remarks"></a>Hinweise  
+ Rufen Sie diese Methode, um eine Warnung im Fenster zu erstellen. Der Clientbereich des Fensters Warnung enthält ein untergeordnetes Dialogfeld, die alle Steuerelemente hostet, die dem Benutzer angezeigt werden.  
   
- The first method overload creates an alert window that contains a child dialog box that is loaded from the application's resources. The first method overload can also specify runtime class information for a custom dialog box class.  
+ Die erste methodenüberladung erstellt eine Warnung Fenster, das ein untergeordnetes Element enthält, die über die Ressourcen der Anwendung geladen wird. Die erste methodenüberladung kann auch Laufzeit-Klasseninformationen für eine benutzerdefinierte Dialogfeldklasse angeben.  
   
- The second method overload creates an alert window that contains default controls. You can specify which controls to display by modifying the [CMFCDesktopAlertWndInfo Class](../../mfc/reference/cmfcdesktopalertwndinfo-class.md).  
+ Die zweite methodenüberladung erstellt ein Benachrichtigungsfenster, die standardmäßig alle Steuerelemente enthält. Sie können angeben, welche Steuerelemente anzeigen, indem Sie ändern die [CMFCDesktopAlertWndInfo Klasse](../../mfc/reference/cmfcdesktopalertwndinfo-class.md).  
   
-##  <a name="getanimationspeed"></a>  CMFCDesktopAlertWnd::GetAnimationSpeed  
- Returns the animation speed.  
+##  <a name="getanimationspeed"></a>CMFCDesktopAlertWnd::GetAnimationSpeed  
+ Gibt die Geschwindigkeit der Animation.  
   
 ```  
 UINT GetAnimationSpeed() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The animation speed of the alert window, in milliseconds.  
+### <a name="return-value"></a>Rückgabewert  
+ Die Geschwindigkeit der Animation des Fensters Warnung in Millisekunden.  
   
-### <a name="remarks"></a>Remarks  
- The animation speed describes how fast the alert window opens and closes.  
+### <a name="remarks"></a>Hinweise  
+ Geschwindigkeit der Animation wird beschrieben, wie schnell die Warnung im Fenster öffnet und schließt.  
   
-##  <a name="getanimationtype"></a>  CMFCDesktopAlertWnd::GetAnimationType  
- Returns the animation type.  
+##  <a name="getanimationtype"></a>CMFCDesktopAlertWnd::GetAnimationType  
+ Gibt den Animationstyp.  
   
 ```  
 CMFCPopupMenu::ANIMATION_TYPE GetAnimationType();
 ```  
   
-### <a name="return-value"></a>Return Value  
- One of the following animation types:  
+### <a name="return-value"></a>Rückgabewert  
+ Einer der folgenden Animationstypen:  
   
 - `NO_ANIMATION`  
   
@@ -241,103 +223,103 @@ CMFCPopupMenu::ANIMATION_TYPE GetAnimationType();
   
 - `SYSTEM_DEFAULT_ANIMATION`  
   
-##  <a name="getautoclosetime"></a>  CMFCDesktopAlertWnd::GetAutoCloseTime  
- Returns the auto-close time out.  
+##  <a name="getautoclosetime"></a>CMFCDesktopAlertWnd::GetAutoCloseTime  
+ Gibt das Timeout automatisch geschlossen.  
   
 ```  
 int GetAutoCloseTime() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The time, in milliseconds, after which the alert window will automatically close.  
+### <a name="return-value"></a>Rückgabewert  
+ Die Zeit in Millisekunden, nach denen die Warnung Fenster automatisch geschlossen wird.  
   
-### <a name="remarks"></a>Remarks  
- Use this method to determine how much time should elapse before the alert window will automatically close.  
+### <a name="remarks"></a>Hinweise  
+ Verwenden Sie diese Methode, um zu bestimmen, wie viel Zeit vergehen soll, bevor die Warnung Fenster automatisch geschlossen wird.  
   
-##  <a name="getcaptionheight"></a>  CMFCDesktopAlertWnd::GetCaptionHeight  
- Returns the height of the caption.  
+##  <a name="getcaptionheight"></a>CMFCDesktopAlertWnd::GetCaptionHeight  
+ Gibt die Höhe der Beschriftung.  
   
 ```  
 virtual int GetCaptionHeight();
 ```  
   
-### <a name="return-value"></a>Return Value  
- The height, in pixels, of the caption.  
+### <a name="return-value"></a>Rückgabewert  
+ Die Höhe der Beschriftung in Pixel.  
   
-### <a name="remarks"></a>Remarks  
- This method can be overridden in a derived class. The default implementation either: returns the small caption height value (7 pixels) if the popup window should display the small caption, or the value obtained from the Windows API function `GetSystemMetrics(SM_CYSMCAPTION)`.  
+### <a name="remarks"></a>Hinweise  
+ Diese Methode kann in einer abgeleiteten Klasse überschrieben werden. Die Implementierung der beiden: Wert für die Höhe der kleinen Überschrift (7 Pixel) zurückgibt, wenn das Popupfenster angezeigt werden soll der kleinen Überschrift für oder den Wert der Windows-API-Funktion `GetSystemMetrics(SM_CYSMCAPTION)`.  
   
-##  <a name="getlastpos"></a>  CMFCDesktopAlertWnd::GetLastPos  
- Returns the last position of the desktop alert window on the screen.  
+##  <a name="getlastpos"></a>CMFCDesktopAlertWnd::GetLastPos  
+ Gibt die letzte Position der desktop-Benachrichtigungsfenster auf dem Bildschirm zurück.  
   
 ```  
 CPoint GetLastPos() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A point, in screen coordinates.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Punkt in Bildschirmkoordinaten.  
   
-### <a name="remarks"></a>Remarks  
- This method returns the last valid position of the alert window on the screen.  
+### <a name="remarks"></a>Hinweise  
+ Diese Methode gibt die letzte gültige Position des Fensters Warnung auf dem Bildschirm.  
   
-##  <a name="gettransparency"></a>  CMFCDesktopAlertWnd::GetTransparency  
- Returns the transparency level.  
+##  <a name="gettransparency"></a>CMFCDesktopAlertWnd::GetTransparency  
+ Gibt die der Transparenzebene zurück.  
   
 ```  
 BYTE GetTransparency() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A transparency level between 0 and 255, inclusive. The greater the value, the more opaque the window.  
+### <a name="return-value"></a>Rückgabewert  
+ Eine Transparenzstufe zwischen 0 und 255. Je höher der Wert, den undurchsichtigeren Fenster.  
   
-### <a name="remarks"></a>Remarks  
- Use this method to retrieve the current transparency level of the alert window.  
+### <a name="remarks"></a>Hinweise  
+ Verwenden Sie diese Methode, um die aktuelle Transparenzebene des Fensters Warnung abzurufen.  
   
-##  <a name="hassmallcaption"></a>  CMFCDesktopAlertWnd::HasSmallCaption  
- Determines whether the desktop alert window has a small caption or a regular-size caption.  
+##  <a name="hassmallcaption"></a>CMFCDesktopAlertWnd::HasSmallCaption  
+ Bestimmt, ob die desktop-Benachrichtigungsfenster einer kleinen Beschriftung oder eine Beschriftung, die reguläre Größe hat.  
   
 ```  
 BOOL HasSmallCaption() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the popup window is displayed with a small caption; `FALSE` if the popup window is displayed with a regular-sized caption.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn der Popup-Fenster mit einer kleinen Beschriftung angezeigt wird; `FALSE` Wenn Popup-Fenster mit einer normalen Größe Beschriftung angezeigt wird.  
   
-### <a name="remarks"></a>Remarks  
- Use this method to determine whether the popup window has a small caption or a regular-size caption. By default, the small caption is 7 pixels high. You can obtain the height of the regular-size caption by calling the Windows API function `GetSystemMetrics(SM_CYCAPTION)`.  
+### <a name="remarks"></a>Hinweise  
+ Verwenden Sie diese Methode, um festzustellen, ob das Popupfenster einer kleinen Beschriftung oder eine Beschriftung, die reguläre Größe hat. Standardmäßig ist der kleinen Überschrift 7 Pixel hoch. Sie erhalten die Höhe der Beschriftung reguläre Größe durch Aufrufen der Windows-API-Funktion `GetSystemMetrics(SM_CYCAPTION)`.  
   
-##  <a name="onbeforeshow"></a>  CMFCDesktopAlertWnd::OnBeforeShow  
+##  <a name="onbeforeshow"></a>CMFCDesktopAlertWnd::OnBeforeShow  
 
   
 ```  
 virtual BOOL OnBeforeShow(CPoint&);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `CPoint&`  
   
-### <a name="return-value"></a>Return Value  
+### <a name="return-value"></a>Rückgabewert  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="onclicklinkbutton"></a>  CMFCDesktopAlertWnd::OnClickLinkButton  
- Called by the framework when the user clicks a link button located on the desktop alert menu.  
+##  <a name="onclicklinkbutton"></a>CMFCDesktopAlertWnd::OnClickLinkButton  
+ Vom Framework aufgerufen, wenn der Benutzer eine Linkschaltfläche desktop Warnung im Menü klickt.  
   
 ```  
 virtual BOOL OnClickLinkButton(UINT uiCmdID);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `uiCmdID`  
- This parameter is not used.  
+ Dieser Parameter wird nicht verwendet.  
   
-### <a name="return-value"></a>Return Value  
- Always `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ Immer `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- Override this method in a derived class if you want to be notified when a user clicks the link on the alert window.  
+### <a name="remarks"></a>Hinweise  
+ Überschreiben Sie diese Methode in einer abgeleiteten Klasse, wenn Sie möchten benachrichtigt werden, wenn ein Benutzer auf die Warnung im Fenster den Link klickt.  
   
-##  <a name="oncommand"></a>  CMFCDesktopAlertWnd::OnCommand  
+##  <a name="oncommand"></a>CMFCDesktopAlertWnd::OnCommand  
 
   
 ```  
@@ -346,67 +328,67 @@ virtual BOOL OnCommand(
     LPARAM lParam);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `wParam`  
  [in] `lParam`  
   
-### <a name="return-value"></a>Return Value  
+### <a name="return-value"></a>Rückgabewert  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="ondraw"></a>  CMFCDesktopAlertWnd::OnDraw  
+##  <a name="ondraw"></a>CMFCDesktopAlertWnd::OnDraw  
 
   
 ```  
 virtual void OnDraw(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pDC`  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="processcommand"></a>  CMFCDesktopAlertWnd::ProcessCommand  
+##  <a name="processcommand"></a>CMFCDesktopAlertWnd::ProcessCommand  
 
   
 ```  
 BOOL ProcessCommand(HWND hwnd);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `hwnd`  
   
-### <a name="return-value"></a>Return Value  
+### <a name="return-value"></a>Rückgabewert  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="setanimationspeed"></a>  CMFCDesktopAlertWnd::SetAnimationSpeed  
- Sets the new animation speed.  
+##  <a name="setanimationspeed"></a>CMFCDesktopAlertWnd::SetAnimationSpeed  
+ Geschwindigkeit der neuen Animation.  
   
 ```  
 void SetAnimationSpeed(UINT nSpeed);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `nSpeed`  
- Specifies the new animation speed, in milliseconds.  
+ Gibt die neue animationsgeschwindigkeit in Millisekunden.  
   
-### <a name="remarks"></a>Remarks  
- Call this method to set the animation speed for the alert window. The default animation speed is 30 milliseconds.  
+### <a name="remarks"></a>Hinweise  
+ Rufen Sie diese Methode, um die Geschwindigkeit der Animation für die Warnung Fenster festgelegt. Die Geschwindigkeit der Standardwert ist 30 Millisekunden.  
   
-##  <a name="setanimationtype"></a>  CMFCDesktopAlertWnd::SetAnimationType  
- Sets the animation type.  
+##  <a name="setanimationtype"></a>CMFCDesktopAlertWnd::SetAnimationType  
+ Legt den Animationstyp fest.  
   
 ```  
 void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `type`  
- Specifies the animation type.  
+ Gibt den Animationstyp.  
   
-### <a name="remarks"></a>Remarks  
- Call this method to set animation type. You can specify one of the following values:  
+### <a name="remarks"></a>Hinweise  
+ Rufen Sie diese Methode, um die Animation festgelegt. Sie können einen der folgenden Werte angeben:  
   
 - `NO_ANIMATION`  
   
@@ -418,63 +400,63 @@ void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
   
 - `SYSTEM_DEFAULT_ANIMATION`  
   
-##  <a name="setautoclosetime"></a>  CMFCDesktopAlertWnd::SetAutoCloseTime  
- Sets the auto-close time out.  
+##  <a name="setautoclosetime"></a>CMFCDesktopAlertWnd::SetAutoCloseTime  
+ Legt das Zeitlimit automatisch geschlossen.  
   
 ```  
 void SetAutoCloseTime(int nTime);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `nTime`  
- The time, in milliseconds, that elapses before the alert window automatically closes.  
+ Die Zeit in Millisekunden die, verstreicht, die vor der Warnung im Fenster automatisch geschlossen wird.  
   
-### <a name="remarks"></a>Remarks  
- The alert window is automatically closed after the specified time if the user does not interact with the window.  
+### <a name="remarks"></a>Hinweise  
+ Die Warnung im Fenster wird nach der angegebenen Zeit automatisch geschlossen, wenn der Benutzer keine Interaktion mit dem Fenster bietet.  
   
-##  <a name="setsmallcaption"></a>  CMFCDesktopAlertWnd::SetSmallCaption  
- Switches between small and regular-size captions.  
+##  <a name="setsmallcaption"></a>CMFCDesktopAlertWnd::SetSmallCaption  
+ Wechselt zwischen kleinen und reguläre Größe Beschriftungen.  
   
 ```  
 void SetSmallCaption(BOOL bSmallCaption = TRUE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `bSmallCaption`  
- `TRUE` to specify that the alert window displays a small caption; otherwise, `FALSE` to specify that the alert window displays a regular-size caption.  
+ `TRUE`um anzugeben, dass das Benachrichtigungsfenster eine kleine Beschriftung angezeigt; andernfalls `FALSE` angeben, dass die Warnung im Fenster eine reguläre Größe Beschriftung angezeigt.  
   
-### <a name="remarks"></a>Remarks  
- Call this method to display the small or regular-size caption. By default, the small caption is 7 pixels high. You can obtain the size of the regular caption by calling the Windows API function `GetSystemMetrics(SM_CYCAPTION)`.  
+### <a name="remarks"></a>Hinweise  
+ Rufen Sie diese Methode, um die Beschriftung für kleine oder reguläre Größe angezeigt. Standardmäßig ist der kleinen Überschrift 7 Pixel hoch. Sie können die Größe der regulären Beschriftung abrufen, durch Aufrufen der Windows-API-Funktion `GetSystemMetrics(SM_CYCAPTION)`.  
   
-##  <a name="settransparency"></a>  CMFCDesktopAlertWnd::SetTransparency  
- Sets the transparency level of the popup window.  
+##  <a name="settransparency"></a>CMFCDesktopAlertWnd::SetTransparency  
+ Legt fest, der die Transparenz der Popup-Fenster.  
   
 ```  
 void SetTransparency(BYTE nTransparency);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `nTransparency`  
- Specifies the transparency level. This value must be between 0 and 255, inclusive. The greater the value, the more opaque the window.  
+ Gibt die der Transparenzebene. Dieser Wert muss zwischen 0 und 255 sein. Je höher der Wert, den undurchsichtigeren Fenster.  
   
-### <a name="remarks"></a>Remarks  
- Call this function to set the transparency level of the popup window.  
+### <a name="remarks"></a>Hinweise  
+ Rufen Sie diese Funktion, um die Transparenzebene eines Popup-Fenster festzulegen.  
   
-##  <a name="getdialogsize"></a>  CMFCDesktopAlertWnd::GetDialogSize  
+##  <a name="getdialogsize"></a>CMFCDesktopAlertWnd::GetDialogSize  
 
   
 ```  
 virtual CSize GetDialogSize();
 ```  
   
-### <a name="return-value"></a>Return Value  
+### <a name="return-value"></a>Rückgabewert  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-## <a name="see-also"></a>See Also  
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [Classes](../../mfc/reference/mfc-classes.md)   
- [CMFCDesktopAlertWndInfo Class](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)   
- [CMFCDesktopAlertDialog Class](../../mfc/reference/cmfcdesktopalertdialog-class.md)   
- [CWnd Class](../../mfc/reference/cwnd-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
+ [Klassen](../../mfc/reference/mfc-classes.md)   
+ [CMFCDesktopAlertWndInfo-Klasse](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)   
+ [CMFCDesktopAlertDialog-Klasse](../../mfc/reference/cmfcdesktopalertdialog-class.md)   
+ [CWnd-Klasse](../../mfc/reference/cwnd-class.md)
 

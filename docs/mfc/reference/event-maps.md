@@ -1,5 +1,5 @@
 ---
-title: Event Maps | Microsoft Docs
+title: Ereigniszuordnungen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- event maps [MFC]
+- event maps
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
 caps.latest.revision: 15
 author: mikeblome
@@ -33,137 +33,137 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: ee32b4e0f891c71bbc899dbf93949d8abededcb2
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
+ms.openlocfilehash: 4c4777496ce609d7c2fa20da726f211264095b6e
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="event-maps"></a>Event Maps
-Whenever a control wishes to notify its container that some action (determined by the control developer) has happened (such as a keystroke, mouse click, or a change to the control's state) it calls an event-firing function. This function notifies the control container that some important action has occurred by firing the related event.  
+# <a name="event-maps"></a>Ereigniszuordnungen
+Wenn möchte, dass ein Steuerelement des Containers zu informieren, die eine Aktion (vom Entwickler Steuerelements bestimmt) (z. B. eine Tastenkombination, klicken mit der Maus oder eine Änderung an den Zustand des Steuerelements) geschehen wird ein Ereignis auslösen-Funktion aufgerufen. Diese Funktion teilt das Steuerelement-Container, das eine wichtige Aktion aufgetreten ist, durch das zugehörige Ereignis auslöst.  
   
- The Microsoft Foundation Class Library offers a programming model optimized for firing events. In this model, "event maps" are used to designate which functions fire which events for a particular control. Event maps contain one macro for each event. For example, an event map that fires a stock Click event might look like this:  
+ Die Microsoft Foundation Class-Bibliothek bietet ein Programmiermodell, das zum Auslösen von Ereignissen optimiert. In diesem Modell "ereigniszuordnungen" werden verwendet, um festzulegen, welche Funktionen die Ereignisse für ein bestimmtes Steuerelement ausgelöst werden. Ereigniszuordnungen enthalten ein Makro für jedes Ereignis. Eine ereigniszuordnung auslöst, z. B. eine Aktie auf Ereignis wie folgt aussehen kann:  
   
- [!code-cpp[NVC_MFCAxCtl#16](../../mfc/reference/codesnippet/cpp/event-maps_1.cpp)]  
+ [!code-cpp[NVC_MFCAxCtl Nr.&16;](../../mfc/reference/codesnippet/cpp/event-maps_1.cpp)]  
   
- The **EVENT_STOCK_CLICK** macro indicates that the control will fire a stock Click event every time it detects a mouse click. For a more detailed listing of other stock events, see the article [ActiveX Controls: Events](../../mfc/mfc-activex-controls-events.md). Macros are also available to indicate custom events.  
+ Die **EVENT_STOCK_CLICK** -Makro gibt an, dass das Steuerelement eine Aktie klicken Sie auf Ereignis jedes Mal, wenn es erkennt, dass eine Maus ausgelöst wird. Eine ausführlichere Liste anderer vordefinierter Ereignisse, finden Sie im Artikel [ActiveX-Steuerelemente: Ereignisse](../../mfc/mfc-activex-controls-events.md). Makros sind auch verfügbar, um benutzerdefinierte Ereignisse anzugeben.  
   
- Although event-map macros are important, you generally do not insert them directly. This is because the Properties window automatically creates event-map entries in your source files when you use it to associate event-firing functions with events. Any time you want to edit or add an event-map entry, you can use the Properties window.  
+ Obwohl die Ereignis-Makros wichtig sind, Sie im Allgemeinen nicht diese direkt eingeben. Dies ist da Eigenschaftenfenster Ereignis Meldungszuordnungseinträge automatisch in den Quelldateien, erstellt Wenn Sie es verwenden, um Ereignisse auslösen – Funktionen mit Ereignissen verknüpfen. Jedes Mal, wenn Sie bearbeiten oder Hinzufügen eines Eintrags Ereignis zuordnen möchten können Sie das Fenster Eigenschaften.  
   
- To support event maps, MFC provides the following macros:  
+ Um ereigniszuordnungen zu unterstützen, stellt MFC die folgenden Makros:  
   
-### <a name="event-map-declaration-and-demarcation"></a>Event Map Declaration and Demarcation  
-  
-|||  
-|-|-|  
-|[DECLARE_EVENT_MAP](#declare_event_map)|Declares that an event map will be used in a class to map events to event-firing functions (must be used in the class declaration).|  
-|[BEGIN_EVENT_MAP](#begin_event_map)|Begins the definition of an event map (must be used in the class implementation).|  
-|[END_EVENT_MAP](#end_event_map)|Ends the definition of an event map (must be used in the class implementation).|  
-  
-### <a name="event-mapping-macros"></a>Event Mapping Macros  
+### <a name="event-map-declaration-and-demarcation"></a>Ereignisdeklaration und Demarkation  
   
 |||  
 |-|-|  
-|[EVENT_CUSTOM](#event_custom)|Indicates which event-firing function will fire the specified event.|  
-|[EVENT_CUSTOM_ID](#event_custom_id)|Indicates which event-firing function will fire the specified event, with a designated dispatch ID.|  
+|[DECLARE_EVENT_MAP](#declare_event_map)|Deklariert, dass eine Event-Zuordnung in einer Klasse verwendet werden soll, Ereignisse auslösen von Ereignissen Funktionen zuordnen (muss in der Klassendeklaration verwendet werden).|  
+|[BEGIN_EVENT_MAP](#begin_event_map)|Beginn der Definition eine Event-Zuordnung (muss in der klassenimplementierung verwendet werden).|  
+|[END_EVENT_MAP](#end_event_map)|Beendet die Definition einer Event-Zuordnung (muss in der klassenimplementierung verwendet werden).|  
   
-### <a name="message-mapping-macros"></a>Message Mapping Macros  
+### <a name="event-mapping-macros"></a>Ereignis-Mapping-Makros  
   
 |||  
 |-|-|  
-|[ON_OLEVERB](#on_oleverb)|Indicates a custom verb handled by the OLE control.|  
-|[ON_STDOLEVERB](#on_stdoleverb)|Overrides a standard verb mapping of the OLE control.|  
+|[EVENT_CUSTOM](#event_custom)|Gibt an, welche Ereignisse auslösen – Funktion das angegebene Ereignis ausgelöst wird.|  
+|[EVENT_CUSTOM_ID](#event_custom_id)|Gibt an, welche Ereignisse auslösen –-Funktion mit einer festgelegten Dispatch-ID das angegebene Ereignis auslöst|  
   
-##  <a name="declare_event_map"></a>  DECLARE_EVENT_MAP  
- Each `COleControl`-derived class in your program can provide an event map to specify the events your control will fire.  
+### <a name="message-mapping-macros"></a>Meldungszuordnungsmakros  
+  
+|||  
+|-|-|  
+|[ON_OLEVERB](#on_oleverb)|Gibt ein benutzerdefiniertes Verb vom OLE-Steuerelements behandelt.|  
+|[ON_STDOLEVERB](#on_stdoleverb)|Überschreibt eine standard-Verb Zuordnung des OLE-Steuerelements.|  
+  
+##  <a name="declare_event_map"></a>DECLARE_EVENT_MAP  
+ Jede `COleControl`-abgeleiteten Klasse in Ihrem Programm bieten eine Event-Zuordnung, um die Ereignisse angeben, wird das Steuerelement ausgelöst.  
   
 ```   
 DECLARE_EVENT_MAP()   
 ```  
   
-### <a name="remarks"></a>Remarks  
- Use the `DECLARE_EVENT_MAP` macro at the end of your class declaration. Then, in the .cpp file that defines the member functions for the class, use the `BEGIN_EVENT_MAP` macro, macro entries for each of the control's events, and the `END_EVENT_MAP` macro to declare the end of the event list.  
+### <a name="remarks"></a>Hinweise  
+ Verwenden der `DECLARE_EVENT_MAP` Makro am Ende der Klassendeklaration. Verwenden Sie dann in der CPP-Datei, die die Member-Funktionen für die Klasse definiert die `BEGIN_EVENT_MAP` -Makro, Makroeinträge für die einzelnen Ereignisse für das Steuerelement, und die `END_EVENT_MAP` Makro, das Ende der Ereignisliste zu deklarieren.  
   
- For more information on event maps, see the article [ActiveX Controls: Events](../../mfc/mfc-activex-controls-events.md).  
+ Weitere Informationen zu ereigniszuordnungen, finden Sie im Artikel [ActiveX-Steuerelemente: Ereignisse](../../mfc/mfc-activex-controls-events.md).  
   
-### <a name="requirements"></a>Requirements  
+### <a name="requirements"></a>Anforderungen  
   **Header** afxctl.h  
   
-##  <a name="begin_event_map"></a>  BEGIN_EVENT_MAP  
- Begins the definition of your event map.  
+##  <a name="begin_event_map"></a>BEGIN_EVENT_MAP  
+ Der Beginn der Definition der ereigniszuordnung.  
   
 ```   
 BEGIN_EVENT_MAP(theClass,  baseClass)  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `theClass`  
- Specifies the name of the control class whose event map this is.  
+ Gibt der Namen der Steuerelementklasse, dessen Ereignis zuzuordnen, dies, ist.  
   
  `baseClass`  
- Specifies the name of the base class of `theClass`.  
+ Gibt den Namen der Basisklasse des `theClass`.  
   
-### <a name="remarks"></a>Remarks  
- In the implementation (.cpp) file that defines the member functions for your class, start the event map with the `BEGIN_EVENT_MAP` macro, then add macro entries for each of your events, and complete the event map with the `END_EVENT_MAP` macro.  
+### <a name="remarks"></a>Hinweise  
+ Starten Sie in der Implementierungsdatei (.cpp)-Datei, die Memberfunktionen für die Klasse definiert, die ereigniszuordnung mit der `BEGIN_EVENT_MAP` -Makro, dann fügen Sie die Makroeinträge für jedes der Ereignisse, und schließen Sie die ereigniszuordnung mit den `END_EVENT_MAP` Makro.  
   
- For more information on event maps and the `BEGIN_EVENT_MAP` macro, see the article [ActiveX Controls: Events](../../mfc/mfc-activex-controls-events.md).  
+ Weitere Informationen zum Ereignis zugeordnet wird und die `BEGIN_EVENT_MAP` -Makro, finden Sie im Artikel [ActiveX-Steuerelemente: Ereignisse](../../mfc/mfc-activex-controls-events.md).  
   
-### <a name="requirements"></a>Requirements  
+### <a name="requirements"></a>Anforderungen  
   **Header** afxctl.h  
   
-##  <a name="end_event_map"></a>  END_EVENT_MAP  
- Use the `END_EVENT_MAP` macro to end the definition of your event map.  
+##  <a name="end_event_map"></a>END_EVENT_MAP  
+ Verwenden der `END_EVENT_MAP` Makro zum Beenden der Definition der ereigniszuordnung.  
   
 ```   
 END_EVENT_MAP()   
 ```  
   
-### <a name="requirements"></a>Requirements  
+### <a name="requirements"></a>Anforderungen  
   **Header** afxctl.h  
   
-##  <a name="event_custom"></a>  EVENT_CUSTOM  
- Defines an event-map entry for a custom event.  
+##  <a name="event_custom"></a>EVENT_CUSTOM  
+ Definiert einen Ereignis-Eintrag für ein benutzerdefiniertes Ereignis.  
   
 ```   
 EVENT_CUSTOM(pszName, pfnFire,  vtsParams) 
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `pszName`  
- The name of the event.  
+ Der Name des Ereignisses.  
   
  `pfnFire`  
- The name of the event firing function.  
+ Der Name des Ereignisses auslösende Funktion.  
   
  `vtsParams`  
- A space-separated list of one or more constants specifying the function's parameter list.  
+ Eine durch Leerzeichen getrennte Liste von ein oder mehrere Konstanten, die Parameterliste für die Funktion angeben.  
   
-### <a name="remarks"></a>Remarks  
- The `vtsParams` parameter is a space-separated list of values from the **VTS_** constants. One or more of these values separated by spaces (not commas) specifies the function's parameter list. For example:  
+### <a name="remarks"></a>Hinweise  
+ Die `vtsParams` Parameter ist eine durch Leerzeichen getrennte Liste von Werten aus der **VTS_** Konstanten. Eine oder mehrere dieser Werte getrennt durch Leerzeichen (keine Kommas) gibt die Parameterliste der Funktion an. Zum Beispiel:  
   
- [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]  
+ [!code-cpp[NVC_MFCActiveXControl&#13;](../../mfc/codesnippet/cpp/event-maps_2.cpp)]  
   
- specifies a list containing a 32-bit integer representing an RGB color value, followed by a pointer to the **IFontDisp** interface of an OLE font object.  
+ Gibt eine Liste mit eine 32-Bit-Ganzzahl, die einen RGB darstellt Farbwert, gefolgt von einem Zeiger auf die **IFontDisp** Schnittstelle eines Schriftart OLE-Objekts.  
   
- The **VTS_** constants and their meanings are as follows:  
+ Die **VTS_** Konstanten und ihre Bedeutungen lauten wie folgt:  
   
-|Symbol|Parameter type|  
+|Symbol|Parametertyp|  
 |------------|--------------------|  
 |**VTS_I2**|**short**|  
 |**VTS_I4**|**long**|  
 |**VTS_R4**|**float**|  
 |**VTS_R8**|**double**|  
 |**VTS_COLOR**|**OLE_COLOR**|  
-|**VTS_CY**|**CURRENCY**|  
-|**VTS_DATE**|**DATE**|  
+|**VTS_CY**|**WÄHRUNG**|  
+|**VTS_DATE**|**DATUM**|  
 |**VTS_BSTR**|**const char\***|  
 |**VTS_DISPATCH**|`LPDISPATCH`|  
 |**VTS_FONT**|**IFontDispatch\***|  
 |**VTS_HANDLE**|`HANDLE`|  
 |**VTS_SCODE**|`SCODE`|  
 |**VTS_BOOL**|**BOOL**|  
-|**VTS_VARIANT**|**const VARIANT\***|  
+|**VTS_VARIANT**|**const-Variante\***|  
 |**VTS_PVARIANT**|**VARIANT\***|  
 |**VTS_UNKNOWN**|`LPUNKNOWN`|  
 |**VTS_OPTEXCLUSIVE**|**OLE_OPTEXCLUSIVE**|  
@@ -179,13 +179,13 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 |**VTS_YSIZE_HIMETRIC**|**OLE_YSIZE_HIMETRIC**|  
   
 > [!NOTE]
->  Additional variant constants have been defined for all variant types, with the exception of **VTS_FONT** and **VTS_PICTURE**, that provide a pointer to the variant data constant. These constants are named using the **VTS_P**`constantname` convention. For example, **VTS_PCOLOR** is a pointer to a **VTS_COLOR** constant.  
+>  Zusätzliche Variante Konstanten für alle variant-Typen, mit Ausnahme von definiert wurden **VTS_FONT** und **VTS_PICTURE**, die einen Zeiger auf die variant-Daten bereitstellen. Diese Konstanten werden mit dem Namen mit dem **VTS_P** `constantname` Konvention. Beispielsweise **VTS_PCOLOR** ist ein Zeiger auf eine **VTS_COLOR** konstant.  
   
-### <a name="requirements"></a>Requirements  
+### <a name="requirements"></a>Anforderungen  
   **Header** afxctl.h  
   
-##  <a name="event_custom_id"></a>  EVENT_CUSTOM_ID  
- Defines an event firing function for a custom event belonging to the dispatch ID specified by `dispid`.  
+##  <a name="event_custom_id"></a>EVENT_CUSTOM_ID  
+ Definiert ein Ereignis auslösen-Funktion für ein benutzerdefiniertes Ereignis für die Dispatch-ID, die durch angegebene `dispid`.  
   
 ```   
 EVENT_CUSTOM_ID(
@@ -196,83 +196,83 @@ EVENT_CUSTOM_ID(
  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `pszName`  
- The name of the event.  
+ Der Name des Ereignisses.  
   
  `dispid`  
- The dispatch ID used by the control when firing the event.  
+ Die Dispatch-ID, die vom Steuerelement verwendet werden, wenn das Ereignis ausgelöst.  
   
  `pfnFire`  
- The name of the event firing function.  
+ Der Name des Ereignisses auslösende Funktion.  
   
  `vtsParams`  
- A variable list of parameters passed to the control container when the event is fired.  
+ Eine Variable Liste von Parametern an den Steuerelementcontainer übergeben, wenn das Ereignis ausgelöst wird.  
   
-### <a name="remarks"></a>Remarks  
- The `vtsParams` argument is a space-separated list of values from the **VTS_** constants. One or more of these values separated by spaces, not commas, specifies the function's parameter list. For example:  
+### <a name="remarks"></a>Hinweise  
+ Die `vtsParams` Argument ist eine durch Leerzeichen getrennte Liste von Werten aus der **VTS_** Konstanten. Eine oder mehrere dieser Werte getrennt durch Leerzeichen, nicht durch Kommas, gibt die Parameterliste der Funktion an. Zum Beispiel:  
   
- [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]  
+ [!code-cpp[NVC_MFCActiveXControl&#13;](../../mfc/codesnippet/cpp/event-maps_2.cpp)]  
   
- specifies a list containing a 32-bit integer representing an RGB color value, followed by a pointer to the **IFontDisp** interface of an OLE font object.  
+ Gibt eine Liste mit eine 32-Bit-Ganzzahl, die einen RGB darstellt Farbwert, gefolgt von einem Zeiger auf die **IFontDisp** Schnittstelle eines Schriftart OLE-Objekts.  
   
- For a list of the **VTS_** constants, see [EVENT_CUSTOM](#event_custom).  
+ Eine Liste der **VTS_** Konstanten finden Sie unter [EVENT_CUSTOM](#event_custom).  
   
-### <a name="requirements"></a>Requirements  
+### <a name="requirements"></a>Anforderungen  
   **Header** afxctl.h  
   
-##  <a name="on_oleverb"></a>  ON_OLEVERB  
- This macro defines a message map entry that maps a custom verb to a specific member function of your control.  
+##  <a name="on_oleverb"></a>ON_OLEVERB  
+ Dieses Makro definiert einen Zuordnungseintrag für Nachricht, der einen bestimmten Member-Funktion des Steuerelements ein benutzerdefiniertes Verb zuordnet.  
   
 ```   
 ON_OLEVERB(idsVerbName,  memberFxn)   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  *idsVerbName*  
- The string resource ID of the verb's name.  
+ Die Zeichenfolgenressource-ID des Namens des Verbs.  
   
  `memberFxn`  
- The function called by the framework when the verb is invoked.  
+ Die Funktion, die vom Framework aufgerufen, wenn das Verb aufgerufen wird.  
   
-### <a name="remarks"></a>Remarks  
- The resource editor can be used to create custom verb names that are added to your string table.  
+### <a name="remarks"></a>Hinweise  
+ Der Ressourcen-Editor kann verwendet werden, um benutzerdefinierte Verbnamen zu erstellen, die der Tabelle hinzugefügt werden.  
   
- The function prototype for `memberFxn` is:  
+ Der Funktionsprototyp für `memberFxn` ist:  
   
  `BOOL memberFxn(`    
  `LPMSG` `lpMsg` `,`   
  `HWND` `hWndParent` `,`   
  `LPCRECT` `lpRect`   `);`  
   
- The values of the `lpMsg`, `hWndParent`, and `lpRect` parameters are taken from the corresponding parameters of the **IOleObject::DoVerb** member function.  
+ Die Werte der `lpMsg`, `hWndParent`, und `lpRect` Parameter entnommen, die die entsprechenden Parameter von der **IOleObject** Member-Funktion.  
   
-### <a name="requirements"></a>Requirements  
+### <a name="requirements"></a>Anforderungen  
   **Header** afxole.h  
   
-##  <a name="on_stdoleverb"></a>  ON_STDOLEVERB  
- Use this macro to override the default behavior of a standard verb.  
+##  <a name="on_stdoleverb"></a>ON_STDOLEVERB  
+ Verwenden Sie dieses Makro, um das Standardverhalten des standard-Verb außer Kraft setzen.  
   
 ```   
 ON_STDOLEVERB(iVerb,   memberFxn)   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `iVerb`  
- The standard verb index for the verb being overridden.  
+ Der standard Verbindex für das Verb überschrieben wird.  
   
  `memberFxn`  
- The function called by the framework when the verb is invoked.  
+ Die Funktion, die vom Framework aufgerufen, wenn das Verb aufgerufen wird.  
   
-### <a name="remarks"></a>Remarks  
- The standard verb index is of the form **OLEIVERB_**, followed by an action. `OLEIVERB_SHOW`, `OLEIVERB_HIDE`, and `OLEIVERB_UIACTIVATE` are some examples of standard verbs.  
+### <a name="remarks"></a>Hinweise  
+ Der standard-Verbindex hat die Form **OLEIVERB_**, gefolgt von einer Aktion. `OLEIVERB_SHOW`, `OLEIVERB_HIDE`, und `OLEIVERB_UIACTIVATE` sind einige Beispiele für standard-Verben.  
   
- See [ON_OLEVERB](#on_oleverb) for a description of the function prototype to be used as the `memberFxn` parameter.  
+ Finden Sie unter [ON_OLEVERB](#on_oleverb) eine Beschreibung der Funktionsprototyp als zu verwendenden der `memberFxn` Parameter.  
 
   
-### <a name="requirements"></a>Requirements  
+### <a name="requirements"></a>Anforderungen  
   **Header** afxole.h  
     
-## <a name="see-also"></a>See Also  
- [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>Siehe auch  
+ [Makros und globale Variablen](../../mfc/reference/mfc-macros-and-globals.md)
 

@@ -1,5 +1,5 @@
 ---
-title: time_put_byname Class | Microsoft Docs
+title: time_put_byname-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- time_put_byname
 - xloctime/std::time_put_byname
 dev_langs:
 - C++
@@ -33,15 +34,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 64073ef0aec24e0e6ceae0c798e9519ebae1ee35
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: a21c91fba99623ae7c97ef1455278617746fc310
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="timeputbyname-class"></a>time_put_byname Class
-The derived template class describes an object that can serve as a locale facet of type `time_put`\< CharType, OutputIterator >.  
+# <a name="timeputbyname-class"></a>time_put_byname-Klasse
+Diese abgeleitete Vorlagenklasse beschreibt ein Objekt, das als Gebietsschemafacet vom Typ `time_put`\< CharType, OutputIterator > dienen kann.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -64,23 +65,23 @@ protected:
 };
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
  `_Locname`  
- A locale name.  
+ Name eines Gebietsschemas.  
   
  `_Refs`  
- An initial reference count.  
+ Eine initiale Verweisanzahl.  
   
-## <a name="remarks"></a>Remarks  
- Its behavior is determined by the [named](../standard-library/locale-class.md#name) locale `_Locname`. Each constructor initializes its base object with [time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator>( `_Refs`).  
+## <a name="remarks"></a>Hinweise  
+ Das Verhalten wird durch das [named](../standard-library/locale-class.md#name)-Gebietsschema `_Locname` bestimmt. Alle Konstruktoren initialisieren ihr jeweiliges Basisobjekt mit [time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator>( `_Refs`).  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<locale>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>Siehe auch  
+ [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

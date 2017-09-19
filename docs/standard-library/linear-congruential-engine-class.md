@@ -1,5 +1,5 @@
 ---
-title: linear_congruential_engine Class | Microsoft Docs
+title: linear_congruential_engine-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- linear_congruential_engine
 - random/std::linear_congruential_engine
 dev_langs:
 - C++
@@ -33,15 +34,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 633e8219aa39a503af2e716deb41d25cdcd8f751
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: bbb733e102af57627c00006816bb8d955877d0f8
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/19/2017
 
 ---
-# <a name="linearcongruentialengine-class"></a>linear_congruential_engine Class
-Generates a random sequence by the linear congruential algorithm.  
+# <a name="linearcongruentialengine-class"></a>linear_congruential_engine-Klasse
+Generiert eine zufällige Sequenz mithilfe des linearen Kongruenzalgorithmus.  
   
 ## <a name="syntax"></a>Syntax  
 ```  
@@ -67,61 +68,61 @@ class linear_congruential_engine{
    void discard(unsigned long long z);
    };  
 ```  
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
  `UIntType`  
- The unsigned integer result type. For possible types, see [\<random>](../standard-library/random.md).  
+ Der unsigned integer-Ergebnistyp. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).  
   
  `A`  
- **Multiplier**. **Precondition**: See Remarks section.  
+ **Multiplikator**. **Vorbedingung**: Siehe Abschnitt „Hinweise“.  
   
  `C`  
- **Increment**. **Precondition**: See Remarks section.  
+ **Inkrement**. **Vorbedingung**: Siehe Abschnitt „Hinweise“.  
   
  `M`  
- **Modulus**. **Precondition**: See remarks.  
+ **Modulo**. **Vorbedingung**: Siehe Abschnitt „Hinweise“.  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Mitglieder  
   
 ||||  
 |-|-|-|  
 |`linear_congruential_engine::linear_congruential_engine`|`linear_congruential_engine::min`|`linear_congruential_engine::discard`|  
 |`linear_congruential_engine::operator()`|`linear_congruential_engine::max`|`linear_congruential_engine::seed`|  
   
- `default_seed` is a member constant, defined as `1u`, used as the default parameter value for `linear_congruential_engine::seed` and the single value constructor.  
+ `default_seed` ist eine als `1u` definierte Memberkonstante, die als Standardparameterwert für `linear_congruential_engine::seed` und den Einzelwertkonstruktor verwendet wird.  
   
- For more information about engine members, see [\<random>](../standard-library/random.md).  
+ Weitere Informationen über Modulmember finden Sie unter [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>Remarks  
- The `linear_congruential_engine` template class is the simplest generator engine, but not the fastest or highest quality. An improvement over this engine is the [substract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md). Neither of these engines is as fast or with as high quality results as the [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).  
+## <a name="remarks"></a>Hinweise  
+ Die Vorlagenklasse `linear_congruential_engine` ist das einfachste Generatormodul, aber nicht das schnellste oder qualitativ höchstwertige. [substract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md) ist gegenüber diesem Modul eine Verbesserung. Keines dieser Module ist so schnell oder gibt so hochqualitative Ergebnisse zurück wie [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).  
   
- This engine produces values of a user-specified unsigned integral type using the recurrence relation ( *period*) `x(i) = (A * x(i-1) + C) mod M`.  
+ Dieses Modul produziert Werte eines benutzerdefinierten Ganzzahltyps ohne Vorzeichen mithilfe der Wiederholungsrelation (*period*) `x(i) = (A * x(i-1) + C) mod M`.  
   
- If `M` is zero, the value used for this modulus operation is `numeric_limits<result_type>::max() + 1`. The engine's state is the last value returned, or the seed value if no call has been made to `operator()`.  
+ Wenn `M` gleich Null ist, ist der für diese Modulooperation verwendete Wert `numeric_limits<result_type>::max() + 1`. Der Zustand des Moduls ist der letzte zurückgegebene Wert oder der Startwert, wenn `operator()` nicht aufgerufen wurde.  
   
- If `M` is not zero, the values of the template arguments `A` and `C` must be less than `M`.  
+ Wenn `M` nicht gleich Null ist, müssen die Werte der Vorlagenargumente `A` und `C` niedriger sein als `M`.  
   
- Although you can construct a generator from this engine directly, you can also use one of these predefined typedefs.  
+ Obwohl Sie direkt aus diesem Modul einen Generator konstruieren können, können Sie auch eine dieser voreingestellten Typdefinitionen verwenden.  
   
- `minstd_rand0`: 1988 minimal standard engine (Lewis, Goodman, and Miller, 1969).  
+ `minstd_rand0`: 1988 minimal standard engine (Lewis, Goodman und Miller, 1969).  
   
 ```  
 typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_rand0;  
 ```  
   
- `minstd_rand`: Updated minimal standard engine `minstd_rand0` (Park, Miller, and Stockmeyer, 1993).  
+ `minstd_rand`: Updated minimal standard engine `minstd_rand0` (Park, Miller und Stockmeyer, 1993).  
   
 ```  
 typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_rand;  
 ```  
   
- For detailed information about the linear congruential engine algorithm, see the Wikipedia article [Linear congruential generator](http://go.microsoft.com/fwlink/LinkId=402446).  
+ Ausführliche Informationen über den Algorithmus für das lineare Kongruenzmodul, erhalten Sie im Wikipedia-Artikel [Linearer Kongruenzgenerator](http://go.microsoft.com/fwlink/LinkId=402446).  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<random>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [\<random>](../standard-library/random.md)
 
 

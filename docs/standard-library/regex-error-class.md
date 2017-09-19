@@ -1,5 +1,5 @@
 ---
-title: regex_error Class | Microsoft Docs
+title: regex_error-Klasse | Microsoft-Dokumente
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- regex_error
 - regex/std::regex_error
 - regex/std::regex_error::code
 dev_langs:
@@ -34,15 +35,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: b62638529f90240201ae229b6ae647e8a87fdf95
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: af23c0562720abd15bdaf77edac2b2728c50f617
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="regexerror-class"></a>regex_error Class
-Reports a bad basic_regex object.  
+# <a name="regexerror-class"></a>regex_error-Klasse
+Meldet ein ungültiges basic_regex-Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -58,25 +59,25 @@ public:
  };  
 ```  
   
-## <a name="remarks"></a>Remarks  
- The class describes an exception object thrown to report an error in the construction or use of a `basic_regex` object.  
+## <a name="remarks"></a>Hinweise  
+ Die Klasse beschreibt ein Ausnahmeobjekt, das ausgelöst wurde, um einen Fehler bei der Erstellung oder Verwendung eines `basic_regex` -Objekts zu melden.  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<regex>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<regex >  
   
  **Namespace:** std  
   
-##  <a name="code"></a>  regex_error::code  
- Returns the error code.  
+##  <a name="code"></a> regex_error::code  
+ Gibt den Fehlercode zurück.  
   
 ```  
 regex_constants::error_code code() const;
 ```  
   
-### <a name="remarks"></a>Remarks  
- The member function returns the value that was passed to the object's constructor.  
+### <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt den Wert zurück, der an den Konstruktor des Objekts übergeben wurde.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // std__regex__regex_error_code.cpp   
@@ -113,21 +114,21 @@ int main()
 regex error: unbalanced parentheses  
 ```  
   
-##  <a name="regex_error"></a>  regex_error::regex_error  
- Constructs the object.  
+##  <a name="regex_error"></a> regex_error::regex_error  
+ Erstellt das Objekt.  
   
 ```  
 regex_error(regex_constants::error_code error);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `error`  
- The error code.  
+ Der Fehlercode.  
   
-### <a name="remarks"></a>Remarks  
- The constructor constructs an object that holds the value `error`.  
+### <a name="remarks"></a>Hinweise  
+ Der Konstruktor erstellt ein Objekt, das den Wert `error`enthält.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // std__regex__regex_error_construct.cpp   
@@ -164,13 +165,13 @@ int main()
 regex error: unbalanced parentheses  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
 [\<regex>](../standard-library/regex.md)  
-[regex_constants Class](../standard-library/regex-constants-class.md)  
-[\<regex> functions](../standard-library/regex-functions.md)  
-[regex_iterator Class](../standard-library/regex-iterator-class.md)  
-[\<regex> operators](../standard-library/regex-operators.md)  
-[regex_token_iterator Class](../standard-library/regex-token-iterator-class.md)  
-[regex_traits Class](../standard-library/regex-traits-class.md)  
-[\<regex> typedefs](../standard-library/regex-typedefs.md)  
+[regex_constants-Klasse](../standard-library/regex-constants-class.md)  
+[\<regex>-Funktionen](../standard-library/regex-functions.md)  
+[regex_iterator-Klasse](../standard-library/regex-iterator-class.md)  
+[\<regex>-Operatoren](../standard-library/regex-operators.md)  
+[regex_token_iterator-Klasse](../standard-library/regex-token-iterator-class.md)  
+[regex_traits-Klasse](../standard-library/regex-traits-class.md)  
+[\<regex>-Typdefinitionen](../standard-library/regex-typedefs.md)  
 

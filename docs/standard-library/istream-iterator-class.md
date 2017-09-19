@@ -1,5 +1,5 @@
 ---
-title: istream_iterator Class | Microsoft Docs
+title: istream_iterator Class | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,16 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - iterator/std::istream_iterator
+- istream_iterator
 - iterator/std::istream_iterator::char_type
 - iterator/std::istream_iterator::istream_type
 - iterator/std::istream_iterator::traits_type
 dev_langs:
 - C++
 helpviewer_keywords:
-- std::istream_iterator [C++]
-- std::istream_iterator [C++], char_type
-- std::istream_iterator [C++], istream_type
-- std::istream_iterator [C++], traits_type
+- istream_iterator class
 ms.assetid: fb52a8cd-7f71-48d1-b73e-4b064e2a8d16
 caps.latest.revision: 18
 author: corob-msft
@@ -39,15 +37,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 296d0b25dac878a88446d0ab19526960a3db0a2e
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 37c517bf764e9a9840d549aa9f223ad0942d8c48
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="istreamiterator-class"></a>istream_iterator Class
-Describes an input iterator object. It extracts objects of class `Type` from an input stream, which it accesses through an object it stores, of type `pointer` to `basic_istream`< `CharType`, `Traits`>.  
+# <a name="istreamiterator-class"></a>istream_iterator-Klasse
+Beschreibt ein Eingabeiteratorobjekt. Es werden Objekte der Klasse `Type` aus einem Eingabestream extrahiert. Der Zugriff darauf erfolgt durch ein gespeichertes Objekt vom Typ `pointer` auf `basic_istream`< `CharType`, `Traits`>.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -60,59 +58,59 @@ class istream_iterator
     const Type&>;
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
  `Type`  
- The type of object to be extracted from the input stream.  
+ Der Typ des Objekts, das aus dem Eingabestream extrahiert werden soll.  
   
  `CharType`  
- The type that represents the character type for the `istream_iterator`. This argument is optional and the default value is `char`.  
+ Der Typ, der den Zeichentyp für `istream_iterator` darstellt. Dieses Argument ist optional, und der Standardwert ist `char`.  
   
  `Traits`  
- The type that represents the character type for the `istream_iterator`. This argument is optional and the default value is `char_traits`< `CharType`>.  
+ Der Typ, der den Zeichentyp für `istream_iterator` darstellt. Dieses Argument ist optional, und der Standardwert ist `char_traits`< `CharType`.  
   
  `Distance`  
- A signed integral type that represents the difference type for the `istream_iterator`. This argument is optional and the default value is `ptrdiff_t`.  
+ Ein ganzzahliger Typ mit Vorzeichen, der den Differenztyp für den `istream_iterator` darstellt. Dieses Argument ist optional, und der Standardwert ist `ptrdiff_t`.  
   
- After constructing or incrementing an object of class istream_iterator with a nonnull stored pointer, the object attempts to extract and store an object of type `Type` from the associated input stream. If the extraction fails, the object effectively replaces the stored pointer with a null pointer, thus making an end-of-sequence indicator.  
+ Nachdem ein Objekt der Klasse istream_iterator mit einem ungleich NULL gespeicherten Zeiger erstellt oder erhöht wurde, versucht das Objekt, ein Objekt vom Typ `Type` aus dem zugewiesenen Eingabestream zu extrahieren und zu speichern. Wenn die Extraktion fehlschlägt, ersetzt das Objekt den gespeicherten Zeiger durch einen NULL-Zeiger und erstellt so einen Indikator für das Ende der Sequenz.  
   
-### <a name="constructors"></a>Constructors  
-  
-|||  
-|-|-|  
-|[istream_iterator](#istream_iterator)|Constructs either an end-of-stream iterator as the default `istream_iterator` or a `istream_iterator` initialized to the iterator's stream type from which it reads.|  
-  
-### <a name="typedefs"></a>Typedefs  
+### <a name="constructors"></a>Konstruktoren  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|A type that provides for the character type of the `istream_iterator`.|  
-|[istream_type](#istream_type)|A type that provides for the stream type of the `istream_iterator`.|  
-|[traits_type](#traits_type)|A type that provides for the character traits type of the `istream_iterator`.|  
+|[istream_iterator](#istream_iterator)|Erstellt entweder einen End-of-Stream-Iterator als Standard-`istream_iterator` oder ein `istream_iterator`, der für den Streamtyp des Iterators initialisiert wird, von dem gelesen wird.|  
   
-### <a name="operators"></a>Operators  
+### <a name="typedefs"></a>TypeDefs  
   
 |||  
 |-|-|  
-|[operator*](#op_star)|The dereferencing operator returns the stored object of type `Type` addressed by the `istream_iterator`.|  
-|[operator->](#operator-_gt)|Returns the value of a member, if any.|  
-|[operator++](#op_add_add)|Either extracts an incremented object from the input stream or copies the object before incrementing it and returns the copy.|  
+|[char_type](#char_type)|Ein Typ, der für den Zeichentyp von `istream_iterator` bereitgestellt wird.|  
+|[istream_type](#istream_type)|Ein Typ, der für den Streamtyp von `istream_iterator` bereitgestellt wird.|  
+|[traits_type](#traits_type)|Ein Typ, der für den Merkmaltyp von `istream_iterator` bereitgestellt wird.|  
   
-## <a name="requirements"></a>Requirements  
+### <a name="operators"></a>Operatoren  
+  
+|||  
+|-|-|  
+|[operator*](#op_star)|Der Dereferenzierungsoperator gibt das gespeicherte Objekt vom Typ `Type` zurück, das vom `istream_iterator` adressiert wird.|  
+|[operator->](#operator-_gt)|Gibt den Wert eines Members zurück, falls vorhanden.|  
+|[operator++](#op_add_add)|Extrahiert entweder ein inkrementiertes Objekt im Eingabestream oder kopiert das Objekt vor dem Inkrementieren und gibt die Kopie zurück.|  
+  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<iterator>  
   
  **Namespace:** std  
   
-##  <a name="char_type"></a>  istream_iterator::char_type  
- A type that provides for the character type of the `istream_iterator`.  
+##  <a name="char_type"></a> istream_iterator::char_type  
+ Ein Typ, der für den Zeichentyp von `istream_iterator` bereitgestellt wird.  
   
 ```
 typedef CharType char_type;
 ```  
   
-### <a name="remarks"></a>Remarks  
- The type is a synonym for the template parameter **Chartype**.  
+### <a name="remarks"></a>Hinweise  
+ Der Typ stellt ein Synonym für den Vorlagenparameter **Chartype** dar.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // istream_iterator_char_type.cpp  
@@ -148,8 +146,8 @@ int main( )
 }  
 ```  
   
-##  <a name="istream_iterator"></a>  istream_iterator::istream_iterator  
- Constructs either an end-of-stream iterator as the default `istream_iterator` or a `istream_iterator` initialized to the iterator's stream type from which it reads.  
+##  <a name="istream_iterator"></a> istream_iterator::istream_iterator  
+ Erstellt entweder einen End-of-Stream-Iterator als Standard-`istream_iterator` oder ein `istream_iterator`, der für den Streamtyp des Iterators initialisiert wird, von dem gelesen wird.  
   
 ```
 istream_iterator();
@@ -157,16 +155,16 @@ istream_iterator();
 istream_iterator(istream_type& _Istr);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `_Istr`  
- The input stream to be read use to initialize the `istream_iterator`.  
+ Der zu lesende Eingabestream verwendet `istream_iterator` zum Initialisieren.  
   
-### <a name="remarks"></a>Remarks  
- The First constructor initializes the input stream pointer with a null pointer and creates an end-of-stream iterator. The second constructor initializes the input stream pointer with *&_Istr*, then attempts to extract and store an object of type **Type**.  
+### <a name="remarks"></a>Hinweise  
+ Der erste Konstruktor initialisiert den Eingabestreamzeiger mit einem NULL-Zeiger und erstellt einen End-of-Stream-Iterator. Der zweite Konstruktor initialisiert den Eingabestreamzeiger mit *& _Istr*, anschließend versucht er ein Objekt vom Typ **Type** zu extrahieren und zu speichern.  
   
- The end-of-stream iterator can be use to test whether an `istream_iterator` has reached the end of a stream.  
+ Der End-of-Stream-Iterator kann verwendet werden, um zu testen, ob ein `istream_iterator` das Ende eines Streams erreicht hat.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // istream_iterator_istream_iterator.cpp  
@@ -200,30 +198,30 @@ int main( )
 }  
 ```  
   
-##  <a name="istream_type"></a>  istream_iterator::istream_type  
- A type that provides for the stream type of the `istream_iterator`.  
+##  <a name="istream_type"></a> istream_iterator::istream_type  
+ Ein Typ, der für den Streamtyp von `istream_iterator` bereitgestellt wird.  
   
 ```
 typedef basic_istream<CharType, Traits> istream_type;
 ```  
   
-### <a name="remarks"></a>Remarks  
- The type is a synonym for `basic_istream`\< **CharType**, **Traits**>.  
+### <a name="remarks"></a>Hinweise  
+ Der Typ ist ein Synonym für `basic_istream`\< **CharType**, **Traits**>.  
   
-### <a name="example"></a>Example  
-  See [istream_iterator](#istream_iterator) for an example of how to declare and use `istream_type`.  
+### <a name="example"></a>Beispiel  
+  Unter [istream_iterator](#istream_iterator) finden Sie ein Beispiel für das Deklarieren und Verwenden eines `istream_type`.  
   
-##  <a name="op_star"></a>  istream_iterator::operator*  
- The dereferencing operator returns the stored object of type **Type** addressed by the `istream_iterator`.  
+##  <a name="op_star"></a> istream_iterator::Operator*  
+ Der Dereferenzierungsoperator gibt das gespeicherte Objekt vom Typ **Type** zurück, das vom `istream_iterator` adressiert wird.  
   
 ```
 const Type& operator*() const;
 ```  
   
-### <a name="return-value"></a>Return Value  
- The stored object of type **Type**.  
+### <a name="return-value"></a>Rückgabewert  
+ Das gespeicherte Objekt vom Typ **Type**.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // istream_iterator_operator.cpp  
@@ -255,22 +253,22 @@ int main( )
 }  
 ```  
   
-##  <a name="istream_iterator__operator-_gt"></a>  istream_iterator::operator-&gt;  
- Returns the value of a member, if any.  
+##  <a name="istream_iterator__operator-_gt"></a> istream_iterator::Operator-&gt;  
+ Gibt den Wert eines Members zurück, falls vorhanden.  
   
 ```
 const Type* operator->() const;
 ```  
   
-### <a name="return-value"></a>Return Value  
- The value of a member, if any.  
+### <a name="return-value"></a>Rückgabewert  
+ Der Wert eines Members, falls vorhanden.  
   
-### <a name="remarks"></a>Remarks  
- *i* -> is equivalent to (\* *i*). *m*  
+### <a name="remarks"></a>Hinweise  
+ *i* -> entspricht (\* *i*). *m*  
   
- The operator returns **&\*\*this**.  
+ Der Operator gibt **&\*\*this** zurück.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // istream_iterator_operator_vm.cpp  
@@ -302,8 +300,8 @@ int main( )
 }  
 ```  
   
-##  <a name="op_add_add"></a>  istream_iterator::operator++  
- Either extracts an incremented object from the input stream or copies the object before incrementing it and returns the copy.  
+##  <a name="op_add_add"></a> istream_iterator::Operator++  
+ Extrahiert entweder ein inkrementiertes Objekt im Eingabestream oder kopiert das Objekt vor dem Inkrementieren und gibt die Kopie zurück.  
   
 ```
 istream_iterator<Type, CharType, Traits, Distance>& operator++();
@@ -311,10 +309,10 @@ istream_iterator<Type, CharType, Traits, Distance>& operator++();
 istream_iterator<Type, CharType, Traits, Distance> operator++(int);
 ```  
   
-### <a name="return-value"></a>Return Value  
- The first member operator returns a reference to the incremented object of type **Type** extracted from the input stream and the second member function returns a copy of the object.  
+### <a name="return-value"></a>Rückgabewert  
+ Der erste Memberoperator gibt einen Verweis auf das inkrementierte Objekt des Typs **Type** zurück, das aus dem Eingabestream extrahiert wurde, und die zweite Memberfunktion gibt eine Kopie des Objekts zurück.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // istream_iterator_operator_incr.cpp  
@@ -346,17 +344,17 @@ int main( )
 }  
 ```  
   
-##  <a name="traits_type"></a>  istream_iterator::traits_type  
- A type that provides for the character traits type of the `istream_iterator`.  
+##  <a name="traits_type"></a> istream_iterator::traits_type  
+ Ein Typ, der für den Merkmaltyp von `istream_iterator` bereitgestellt wird.  
   
 ```
 typedef Traits traits_type;
 ```  
   
-### <a name="remarks"></a>Remarks  
- The type is a synonym for the template parameter **Traits**.  
+### <a name="remarks"></a>Hinweise  
+ Der Typ stellt ein Synonym für den Vorlagenparameter **Merkmale** dar.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // istream_iterator_traits_type.cpp  
@@ -391,12 +389,12 @@ int main( )
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
- [input_iterator_tag Struct](../standard-library/input-iterator-tag-struct.md)   
- [iterator Struct](../standard-library/iterator-struct.md)   
+## <a name="see-also"></a>Siehe auch  
+ [input_iterator_tag-Struktur](../standard-library/input-iterator-tag-struct.md)   
+ [iterator-Struktur](../standard-library/iterator-struct.md)   
  [\<iterator>](../standard-library/iterator.md)   
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
+ [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)
 
 
 

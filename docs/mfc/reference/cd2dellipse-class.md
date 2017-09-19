@@ -1,5 +1,5 @@
 ---
-title: CD2DEllipse Class | Microsoft Docs
+title: CD2DEllipse-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,7 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DEllipse [MFC], CD2DEllipse
+- CD2DEllipse class
 ms.assetid: e9f02f54-acf2-427e-b349-db50cd9a77df
 caps.latest.revision: 18
 author: mikeblome
@@ -35,15 +35,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 70e89d013bd72644680931083985af978c56c856
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: c083a46e0576df7bb42fa8c4402aba320dba851c
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="cd2dellipse-class"></a>CD2DEllipse Class
-A wrapper for `D2D1_ELLIPSE`.  
+# <a name="cd2dellipse-class"></a>CD2DEllipse-Klasse
+Ein Wrapper für `D2D1_ELLIPSE`.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,24 +51,24 @@ A wrapper for `D2D1_ELLIPSE`.
 class CD2DEllipse : public D2D1_ELLIPSE;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Mitglieder  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CD2DEllipse::CD2DEllipse](#cd2dellipse)|Overloaded. Constructs a `CD2DEllipse` object from `D2D1_ELLIPSE` object.|  
+|[CD2DEllipse::CD2DEllipse](#cd2dellipse)|Überladen. Erstellt eine `CD2DEllipse` -Objekt aus `D2D1_ELLIPSE` Objekt.|  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `D2D1_ELLIPSE`  
   
  `CD2DEllipse`  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxrendertarget.h  
   
-##  <a name="cd2dellipse"></a>  CD2DEllipse::CD2DEllipse  
- Constructs a CD2DEllipse object from CD2DRectF object.  
+##  <a name="cd2dellipse"></a>CD2DEllipse::CD2DEllipse  
+ Erstellt ein CD2DEllipse-Objekt aus CD2DRectF-Objekt.  
   
 ```  
 CD2DEllipse(const CD2DRectF& rect);  
@@ -81,19 +81,19 @@ CD2DEllipse(
     const CD2DSizeF& sizeRadius);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `rect`  
- source rectangle  
+ Rechteck  
   
  `ellipse`  
- source ellipse  
+ Quelle ellipse  
   
  `ptCenter`  
- The center point of the ellipse.  
+ Der Mittelpunkt der Ellipse.  
   
  `sizeRadius`  
- The X-radius and Y-radius of the ellipse.  
+ Die X- und Y-Radius der Ellipse.  
   
-## <a name="see-also"></a>See Also  
- [Classes](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>Siehe auch  
+ [Klassen](../../mfc/reference/mfc-classes.md)
 

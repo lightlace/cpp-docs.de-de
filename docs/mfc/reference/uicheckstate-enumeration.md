@@ -1,5 +1,5 @@
 ---
-title: UICheckState Enumeration | Microsoft Docs
+title: UICheckState-Enumeration | Microsoft Docs
 ms.custom: 
 ms.date: 04/03/2017
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- uicheckstate enumeration [MFC]
+- uicheckstate enumeration
 ms.assetid: 2ac0098c-20e7-410c-9685-5ead5cb02b63
 caps.latest.revision: 17
 author: mikeblome
@@ -33,16 +33,16 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 7bdaa268373a8926d14efbeb9911189ad19c72bd
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
+ms.openlocfilehash: d30ddee047597750d4627efee8ec8d9e01a520d6
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 04/04/2017
 
 ---
 
-# <a name="uicheckstate-enumeration"></a>UICheckState Enumeration
-Describes the check state of a user interface item for the command.  
+# <a name="uicheckstate-enumeration"></a>UICheckState-Enumeration
+Beschreibt den Aktivierungszustand des Elements eine Benutzer-Schnittstelle für den Befehl.  
    
 ### <a name="syntax"></a>Syntax   
 ```  
@@ -55,10 +55,10 @@ public enum class
 };  
 ```  
    
-### <a name="remarks"></a>Remarks  
- [ICommandUI::Check](icommandui-interface.md#check) uses these values to describe the state of a user interface item.    
- For more information on using Windows Forms, see [Using a Windows Form User Control in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
+### <a name="remarks"></a>Hinweise  
+ [ICommandUI::Check](icommandui-interface.md#check) verwendet diese Werte, um den Status eines Elements Schnittstelle Benutzer beschreiben.    
+ Weitere Informationen zur Verwendung von Windows Forms finden Sie unter [Verwenden eines Windows Form-Benutzersteuerelements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
    
-### <a name="requirements"></a>Requirements  
- **Header:** afxwinforms.h (defined in assembly atlmfc\lib\mfcmifc80.dll)  
+### <a name="requirements"></a>Anforderungen  
+ **Header:** afxwinforms.h (definiert in der Assembly atlmfc\lib\mfcmifc80.dll)  
 

@@ -1,5 +1,5 @@
 ---
-title: CD2DGradientBrush Class | Microsoft Docs
+title: CD2DGradientBrush-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -20,12 +20,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DGradientBrush [MFC], CD2DGradientBrush
-- CD2DGradientBrush [MFC], Destroy
-- CD2DGradientBrush [MFC], m_arGradientStops
-- CD2DGradientBrush [MFC], m_colorInterpolationGamma
-- CD2DGradientBrush [MFC], m_extendMode
-- CD2DGradientBrush [MFC], m_pGradientStops
+- CD2DGradientBrush class
 ms.assetid: 5bf133e6-16b7-4e3a-845d-0ce63fafe5ec
 caps.latest.revision: 17
 author: mikeblome
@@ -45,15 +40,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 139907169b2de67972fba728a02cce175339e1f9
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 73410ae17465880f455e5b15026f6cc010803c19
+ms.openlocfilehash: 0b0a692ef2b5194daf7b38eed9ebe3b2f4eda448
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="cd2dgradientbrush-class"></a>CD2DGradientBrush Class
-The base class of the CD2DLinearGradientBrush and the CD2DRadialGradientBrush classes.  
+# <a name="cd2dgradientbrush-class"></a>CD2DGradientBrush-Klasse
+Die Basisklasse der CD2DLinearGradientBrush und der CD2DRadialGradientBrush-Klassen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -61,32 +56,32 @@ The base class of the CD2DLinearGradientBrush and the CD2DRadialGradientBrush cl
 class CD2DGradientBrush : public CD2DBrush;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Mitglieder  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CD2DGradientBrush::CD2DGradientBrush](#cd2dgradientbrush)|Constructs a CD2DGradientBrush object.|  
-|[CD2DGradientBrush::~CD2DGradientBrush](#cd2dgradientbrush__~cd2dgradientbrush)|The destructor. Called when a D2D gradient brush object is being destroyed.|  
+|[CD2DGradientBrush::CD2DGradientBrush](#cd2dgradientbrush)|Erstellt ein CD2DGradientBrush-Objekt.|  
+|[CD2DGradientBrush:: ~ CD2DGradientBrush](#cd2dgradientbrush__~cd2dgradientbrush)|Der Destruktor. Wird aufgerufen, wenn ein D2D-Pinsel mit Farbverlauf-Objekt zerstört wird.|  
   
-### <a name="protected-methods"></a>Protected Methods  
+### <a name="protected-methods"></a>Geschützte Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CD2DGradientBrush::Destroy](#destroy)|Destroys a CD2DGradientBrush object. (Overrides [CD2DBrush::Destroy](../../mfc/reference/cd2dbrush-class.md#destroy).)|  
+|[CD2DGradientBrush:: Destroy](#destroy)|Zerstört ein CD2DGradientBrush-Objekt. (Überschreibt [CD2DBrush:: Destroy](../../mfc/reference/cd2dbrush-class.md#destroy).)|  
   
-### <a name="protected-data-members"></a>Protected Data Members  
+### <a name="protected-data-members"></a>Geschützte Datenmember  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CD2DGradientBrush::m_arGradientStops](#m_argradientstops)|Array of the D2D1_GRADIENT_STOP structures.|  
-|[CD2DGradientBrush::m_colorInterpolationGamma](#m_colorinterpolationgamma)|The space in which color interpolation between the gradient stops is performed.|  
-|[CD2DGradientBrush::m_extendMode](#m_extendmode)|The behavior of the gradient outside the [0,1] normalized range.|  
-|[CD2DGradientBrush::m_pGradientStops](#m_pgradientstops)|A pointer to an array of D2D1_GRADIENT_STOP structures.|  
+|[CD2DGradientBrush::m_arGradientStops](#m_argradientstops)|Array von D2D1_GRADIENT_STOP-Strukturen.|  
+|[CD2DGradientBrush::m_colorInterpolationGamma](#m_colorinterpolationgamma)|Der Speicherplatz in der die Interpolation zwischen den Farbverlaufsunterbrechungspunkten ausgeführt wird.|  
+|[CD2DGradientBrush::m_extendMode](#m_extendmode)|Das Verhalten des Farbverlaufs außerhalb der normalisierten Bereich [0,1].|  
+|[CD2DGradientBrush::m_pGradientStops](#m_pgradientstops)|Ein Zeiger auf ein Array von D2D1_GRADIENT_STOP-Strukturen.|  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
- [CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
+ [Von CObject](../../mfc/reference/cobject-class.md)  
   
  [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
   
@@ -94,18 +89,18 @@ class CD2DGradientBrush : public CD2DBrush;
   
  `CD2DGradientBrush`  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dgradientbrush"></a>  CD2DGradientBrush::~CD2DGradientBrush  
- The destructor. Called when a D2D gradient brush object is being destroyed.  
+##  <a name="_dtorcd2dgradientbrush"></a>CD2DGradientBrush:: ~ CD2DGradientBrush  
+ Der Destruktor. Wird aufgerufen, wenn ein D2D-Pinsel mit Farbverlauf-Objekt zerstört wird.  
   
 ```  
 virtual ~CD2DGradientBrush();
 ```  
   
-##  <a name="cd2dgradientbrush"></a>  CD2DGradientBrush::CD2DGradientBrush  
- Constructs a CD2DGradientBrush object.  
+##  <a name="cd2dgradientbrush"></a>CD2DGradientBrush::CD2DGradientBrush  
+ Erstellt ein CD2DGradientBrush-Objekt.  
   
 ```  
 CD2DGradientBrush(
@@ -118,63 +113,63 @@ CD2DGradientBrush(
     BOOL bAutoDestroy = TRUE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `pParentTarget`  
- A pointer to the render target.  
+ Ein Zeiger auf das Renderingziel.  
   
  `gradientStops`  
- A pointer to an array of D2D1_GRADIENT_STOP structures.  
+ Ein Zeiger auf ein Array von D2D1_GRADIENT_STOP-Strukturen.  
   
  `gradientStopsCount`  
- A value greater than or equal to 1 that specifies the number of gradient stops in the gradientStops array.  
+ Ein Wert größer als oder gleich 1, der die Anzahl der Farbverlaufsstopps im GradientStops-Array angibt.  
   
  `colorInterpolationGamma`  
- The space in which color interpolation between the gradient stops is performed.  
+ Der Speicherplatz in der die Interpolation zwischen den Farbverlaufsunterbrechungspunkten ausgeführt wird.  
   
  `extendMode`  
- The behavior of the gradient outside the [0,1] normalized range.  
+ Das Verhalten des Farbverlaufs außerhalb der normalisierten Bereich [0,1].  
   
  `pBrushProperties`  
- A pointer to the opacity and transformation of a brush.  
+ Ein Zeiger auf die Deckkraft und die Transformation eines Pinsels.  
   
  `bAutoDestroy`  
- Indicates that the object will be destroyed by owner (pParentTarget).  
+ Gibt an, dass das Objekt vom Besitzer (pParentTarget) zerstört wird.  
   
-##  <a name="destroy"></a>  CD2DGradientBrush::Destroy  
- Destroys a CD2DGradientBrush object.  
+##  <a name="destroy"></a>CD2DGradientBrush:: Destroy  
+ Zerstört ein CD2DGradientBrush-Objekt.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="m_argradientstops"></a>  CD2DGradientBrush::m_arGradientStops  
- Array of the D2D1_GRADIENT_STOP structures.  
+##  <a name="m_argradientstops"></a>CD2DGradientBrush::m_arGradientStops  
+ Array von D2D1_GRADIENT_STOP-Strukturen.  
   
 ```  
 CArray<D2D1_GRADIENT_STOP, D2D1_GRADIENT_STOP> m_arGradientStops;  
 ```  
   
-##  <a name="m_colorinterpolationgamma"></a>  CD2DGradientBrush::m_colorInterpolationGamma  
- The space in which color interpolation between the gradient stops is performed.  
+##  <a name="m_colorinterpolationgamma"></a>CD2DGradientBrush::m_colorInterpolationGamma  
+ Der Speicherplatz in der die Interpolation zwischen den Farbverlaufsunterbrechungspunkten ausgeführt wird.  
   
 ```  
 D2D1_GAMMA m_colorInterpolationGamma;  
 ```  
   
-##  <a name="m_extendmode"></a>  CD2DGradientBrush::m_extendMode  
- The behavior of the gradient outside the [0,1] normalized range.  
+##  <a name="m_extendmode"></a>CD2DGradientBrush::m_extendMode  
+ Das Verhalten des Farbverlaufs außerhalb der normalisierten Bereich [0,1].  
   
 ```  
 D2D1_EXTEND_MODE m_extendMode;  
 ```  
   
-##  <a name="m_pgradientstops"></a>  CD2DGradientBrush::m_pGradientStops  
- A pointer to an array of D2D1_GRADIENT_STOP structures.  
+##  <a name="m_pgradientstops"></a>CD2DGradientBrush::m_pGradientStops  
+ Ein Zeiger auf ein Array von D2D1_GRADIENT_STOP-Strukturen.  
   
 ```  
 ID2D1GradientStopCollection* m_pGradientStops;  
 ```  
   
-## <a name="see-also"></a>See Also  
- [Classes](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>Siehe auch  
+ [Klassen](../../mfc/reference/mfc-classes.md)
 

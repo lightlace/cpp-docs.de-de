@@ -1,5 +1,5 @@
 ---
-title: remove_reference Class | Microsoft Docs
+title: remove_reference-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- remove_reference
 - type_traits/std::remove_reference
 dev_langs:
 - C++
@@ -34,15 +35,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: ae1dbd6447b6f9f2544f58c74c132ace200b19d5
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
+ms.openlocfilehash: 873efb477296b9f6765eb9a85d9ac62f63405382
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="removereference-class"></a>remove_reference Class
-Makes non reference type from type.  
+# <a name="removereference-class"></a>remove_reference-Klasse
+Erstellt einen non-reference-Typ aus dem Typ.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,14 +55,14 @@ template <class T>
 using remove_reference_t = typename remove_reference<T>::type;  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
  `T`  
- The type to modify.  
+ Der zu ändernde Typ.  
   
-## <a name="remarks"></a>Remarks  
- An instance of `remove_reference<T>` holds a modified-type that is `T1` when `T` is of the form `T1&`, otherwise `T`.  
+## <a name="remarks"></a>Hinweise  
+ Eine Instanz von `remove_reference<T>` enthält einen geänderten Typ, der `T1` ist, wenn `T` das Format `T1&` hat; andernfalls `T`.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Beispiel  
   
 ```cpp  
 #include <type_traits>   
@@ -83,12 +84,12 @@ int main()
 remove_reference_t<int&> == int  
 ```  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [<type_traits>](../standard-library/type-traits.md)   
- [add_lvalue_reference Class](../standard-library/add-lvalue-reference-class.md)
+ [add_lvalue_reference-Klasse](../standard-library/add-lvalue-reference-class.md)
 

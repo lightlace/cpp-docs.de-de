@@ -1,5 +1,5 @@
 ---
-title: CSimpleException Class | Microsoft Docs
+title: Klasse CSimpleException | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,8 +16,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CSimpleException [MFC], CSimpleException
-- CSimpleException [MFC], GetErrorMessage
+- CSimpleException class
 ms.assetid: be0eb8ef-e5b9-47d6-b0fb-efaff2d1e666
 caps.latest.revision: 19
 author: mikeblome
@@ -37,15 +36,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 3ab6a2347567dfe404d3dc5c154e24c789dff45c
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 5612d76a2351b9898b8ffe082844686d21fcd7a0
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="csimpleexception-class"></a>CSimpleException Class
-This class is a base class for resource-critical MFC exceptions.  
+# <a name="csimpleexception-class"></a>CSimpleException-Klasse
+Diese Klasse ist eine Basisklasse für ressourcenkritische MFC-Ausnahmen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -53,62 +52,62 @@ This class is a base class for resource-critical MFC exceptions.
 class AFX_NOVTABLE CSimpleException : public CException  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Mitglieder  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CSimpleException::CSimpleException](#csimpleexception)|The constructor.|  
+|[CSimpleException::CSimpleException](#csimpleexception)|Der Konstruktor.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CSimpleException::GetErrorMessage](#geterrormessage)|Provides text about an error that has occurred.|  
+|[CSimpleException::GetErrorMessage](#geterrormessage)|Stellt Text zu einem Fehler, der aufgetreten ist.|  
   
-## <a name="remarks"></a>Remarks  
- `CSimpleException` is the base class for resource-critical MFC exceptions and handles the ownership and initialization of an error message. The following classes use `CSimpleException` as their base class:  
+## <a name="remarks"></a>Hinweise  
+ `CSimpleException`ist die Basisklasse für ressourcenkritische MFC-Ausnahmen und übernimmt den Besitz und die Initialisierung einer Fehlermeldung. Die folgenden Klassen verwenden `CSimpleException` als Basisklasse:  
   
 |||  
 |-|-|  
-|[CMemoryException Class](../../mfc/reference/cmemoryexception-class.md)|Out-of-memory exception|  
-|[CNotSupportedException Class](../../mfc/reference/cnotsupportedexception-class.md)|Requests for an unsupported operation|  
-|[CResourceException Class](../../mfc/reference/cresourceexception-class.md)|Windows resource not found or not creatable|  
-|[CUserException Class](../../mfc/reference/cuserexception-class.md)|Exception that indicates a resource could not be found|  
-|[CInvalidArgException Class](../../mfc/reference/cinvalidargexception-class.md)|Exception that indicates an invalid argument|  
+|[CMemoryException-Klasse](../../mfc/reference/cmemoryexception-class.md)|Out-of-Memory-Ausnahme|  
+|[CNotSupportedException-Klasse](../../mfc/reference/cnotsupportedexception-class.md)|Anforderungen für ein nicht unterstützter Vorgang|  
+|[CResourceException-Klasse](../../mfc/reference/cresourceexception-class.md)|Windows-Ressource wurde nicht gefunden oder nicht erstellt|  
+|[CUserException-Klasse](../../mfc/reference/cuserexception-class.md)|Ausnahme, die eine Ressource angibt konnte nicht gefunden werden|  
+|[CInvalidArgException-Klasse](../../mfc/reference/cinvalidargexception-class.md)|Ausnahme, die ein ungültiges Argument angibt.|  
   
- Because `CSimpleException` is an abstract base class, you cannot declare a `CSimpleException` object directly. Instead, you must declare derived objects such as those in the previous table. If you are declaring your own derived class, use the previous classes as a model.  
+ Da `CSimpleException` ist eine abstrakte Basisklasse, die nicht deklariert einen `CSimpleException` direkt. Stattdessen müssen Sie abgeleitete Objekte, z. B. die in der vorherigen Tabelle deklarieren. Wenn Sie eine eigene abgeleitete Klasse deklarieren, verwenden Sie die vorherigen Klassen als Modell.  
   
- For more information, see the [CException Class](../../mfc/reference/cexception-class.md) topic and [Exception Handling (MFC)](../../mfc/exception-handling-in-mfc.md).  
+ Weitere Informationen finden Sie unter der [CException-Klasse](../../mfc/reference/cexception-class.md) Thema und [Ausnahmebehandlung (MFC)](../../mfc/exception-handling-in-mfc.md).  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
- [CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
+ [Von CObject](../../mfc/reference/cobject-class.md)  
   
  [CException](../../mfc/reference/cexception-class.md)  
   
  `CSimpleException`  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afx.h  
   
-##  <a name="csimpleexception"></a>  CSimpleException::CSimpleException  
- The constructor.  
+##  <a name="csimpleexception"></a>CSimpleException::CSimpleException  
+ Der Konstruktor.  
   
 ```  
 CSimpleException();  
 explicit CSimpleException(BOOL bAutoDelete);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `bAutoDelete`  
- Specify **TRUE** if the memory for the `CSimpleException` object has been allocated on the heap. This will cause the `CSimpleException` object to be deleted when the **Delete** member function is called to delete the exception. Specify **FALSE** if the `CSimpleException` object is on the stack or is a global object. In this case, the `CSimpleException` object will not be deleted when the **Delete** member function is called.  
+ Geben Sie **TRUE** Wenn der Speicher für die `CSimpleException` Objekt auf dem Heap zugeordnet wurde. Dies bewirkt, dass die `CSimpleException` -Objekt, bei dem gelöscht werden die **löschen** Member-Funktion wird aufgerufen, um die Ausnahme zu löschen. Geben Sie **FALSE** Wenn das `CSimpleException` Objekt ist auf dem Stapel oder ein globales Objekt. In diesem Fall die `CSimpleException` Objekt werden nicht gelöscht, wenn die **löschen** -Memberfunktion aufgerufen wird.  
   
-### <a name="remarks"></a>Remarks  
- You would normally never need to call this constructor directly. A function that throws an exception should create an instance of a `CException`-derived class and call its constructor, or it should use one of the MFC throw functions, such as [AfxThrowFileException](exception-processing.md#afxthrowfileexception), to throw a predefined type.  
+### <a name="remarks"></a>Hinweise  
+ Sie müssen normalerweise nicht direkt aufrufen dieses Konstruktors. Eine Funktion, die eine Ausnahme auslöst, sollte eine Instanz von Erstellen einer `CException`-abgeleitete Klasse, und rufen Sie dessen Konstruktor verwenden, oder es auslösen soll, verwenden Sie eine der MFC-Funktionen, wie z. B. [AfxThrowFileException](exception-processing.md#afxthrowfileexception), um einen vordefinierten Typ auslösen.  
   
-##  <a name="geterrormessage"></a>  CSimpleException::GetErrorMessage  
- Call this member function to provide text about an error that has occurred.  
+##  <a name="geterrormessage"></a>CSimpleException::GetErrorMessage  
+ Rufen Sie diese Memberfunktion, um Text zu einem Fehler bereitstellen, der aufgetreten ist.  
   
 ```  
 virtual BOOL GetErrorMessage(
@@ -117,26 +116,26 @@ virtual BOOL GetErrorMessage(
     PUNIT  pnHelpContext = NULL);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `lpszError`  
- A pointer to a buffer that will receive an error message.  
+ Ein Zeiger auf einen Puffer, der eine Fehlermeldung angezeigt wird.  
   
  `nMaxError`  
- The maximum number of characters the buffer can hold, including the **NULL** terminator.  
+ Die maximale Anzahl von Zeichen, die der Puffer aufnehmen kann, einschließlich der **NULL** Abschlusszeichen.  
   
  `pnHelpContext`  
- The address of a **UINT** that will receive the help context ID. If **NULL**, no ID will be returned.  
+ Die Adresse einer **UINT** erhalten, die Hilfe-Kontext-ID Wenn **NULL**, keine ID zurückgegeben werden.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if the function is successful; otherwise 0 if no error message text is available.  
+### <a name="return-value"></a>Rückgabewert  
+ Wert ungleich NULL, wenn die Funktion erfolgreich ist; Andernfalls wird 0 Wenn keine Fehlermeldungstext verfügbar.  
   
-### <a name="remarks"></a>Remarks  
- For more information, see [CException::GetErrorMessage](../../mfc/reference/cfileexception-class.md#geterrormessage).  
+### <a name="remarks"></a>Hinweise  
+ Weitere Informationen finden Sie unter [CException::GetErrorMessage](../../mfc/reference/cfileexception-class.md#geterrormessage).  
   
-## <a name="see-also"></a>See Also  
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [CException Class](../../mfc/reference/cexception-class.md)   
- [Exception Handling](../../mfc/exception-handling-in-mfc.md)
+## <a name="see-also"></a>Siehe auch  
+ [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
+ [CException-Klasse](../../mfc/reference/cexception-class.md)   
+ [Ausnahmebehandlung](../../mfc/exception-handling-in-mfc.md)
 
 
 

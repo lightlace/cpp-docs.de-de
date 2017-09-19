@@ -1,5 +1,5 @@
 ---
-title: unary_negate Class | Microsoft Docs
+title: unary_negate-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- unary_negate
 - xfunctional/std::unary_negate
 dev_langs:
 - C++
@@ -33,15 +34,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: aec04f9e8cd63ed5e5a201bd48d02f5f1500ad6d
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 314d93badc71760c3b71492991dbe16f11df7686
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/19/2017
 
 ---
-# <a name="unarynegate-class"></a>unary_negate Class
-A template class providing a member function that negates the return value of a specified unary function.  
+# <a name="unarynegate-class"></a>unary_negate-Klasse
+Eine Klasse, mit der eine Memberfunktion bereitgestellt wird, die den Rückgabewert einer angegebenen unären Funktion negiert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,22 +57,22 @@ public:
 };
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
  `Func`  
- The unary function to be negated.  
+ Die unäre Funktion, die negiert werden soll.  
   
  `left`  
- The operand of the unary function to be negated.  
+ Der Operand der unären Funktion, die negiert werden soll.  
   
-## <a name="return-value"></a>Return Value  
- The negation of the unary function.  
+## <a name="return-value"></a>Rückgabewert  
+ Die Negation der unären Funktion.  
   
-## <a name="remarks"></a>Remarks  
- The template class stores a copy of a unary function object _ *Func.* It defines its member function `operator()` as returning **!**\_ *Func(left).*  
+## <a name="remarks"></a>Hinweise  
+ Die Vorlagenklasse speichert eine Kopie eines unären Funktionsobjekts _ *Func*. Für die Memberfunktion `operator()` definiert die Klasse **!**\_ als Rückgabewert. *Func(left).*  
   
- The constructor of `unary_negate` is rarely used directly. The helper function [not1](../standard-library/functional-functions.md#not1) provides an easier way to declare and use the **unary_negator** adaptor predicate.  
+ Der Konstruktor von `unary_negate` wird nur selten direkt verwendet. Die Hilfsfunktion [not1](../standard-library/functional-functions.md#not1) bietet einen einfacheren Weg, um das Adapterprädikat **unary_negator** zu deklarieren und zu verwenden.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Beispiel  
   
 ```cpp  
 // functional_unary_negate.cpp  
@@ -123,14 +124,14 @@ The number of elements in v1 not greater than 10 is: 3.
 */  
 ```  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<functional>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)
 
 
 

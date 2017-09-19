@@ -1,5 +1,5 @@
 ---
-title: CButton Class | Microsoft Docs
+title: CButton Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -48,40 +48,13 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CButton [MFC], CButton
-- CButton [MFC], Create
-- CButton [MFC], DrawItem
-- CButton [MFC], GetBitmap
-- CButton [MFC], GetButtonStyle
-- CButton [MFC], GetCheck
-- CButton [MFC], GetCursor
-- CButton [MFC], GetIcon
-- CButton [MFC], GetIdealSize
-- CButton [MFC], GetImageList
-- CButton [MFC], GetNote
-- CButton [MFC], GetNoteLength
-- CButton [MFC], GetSplitGlyph
-- CButton [MFC], GetSplitImageList
-- CButton [MFC], GetSplitInfo
-- CButton [MFC], GetSplitSize
-- CButton [MFC], GetSplitStyle
-- CButton [MFC], GetState
-- CButton [MFC], GetTextMargin
-- CButton [MFC], SetBitmap
-- CButton [MFC], SetButtonStyle
-- CButton [MFC], SetCheck
-- CButton [MFC], SetCursor
-- CButton [MFC], SetDropDownState
-- CButton [MFC], SetIcon
-- CButton [MFC], SetImageList
-- CButton [MFC], SetNote
-- CButton [MFC], SetSplitGlyph
-- CButton [MFC], SetSplitImageList
-- CButton [MFC], SetSplitInfo
-- CButton [MFC], SetSplitSize
-- CButton [MFC], SetSplitStyle
-- CButton [MFC], SetState
-- CButton [MFC], SetTextMargin
+- CButton class
+- checkbox buttons
+- pushbuttons
+- button control [MFC]
+- check boxes, button controls
+- button objects (CButton)
+- radio buttons, CButton class
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
 caps.latest.revision: 19
 author: mikeblome
@@ -101,15 +74,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: acddd4102969470c56790308969025390b3bcdc6
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 03771a3d0dd2297487953089081893a7c892b321
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 04/04/2017
 
 ---
-# <a name="cbutton-class"></a>CButton Class
-Provides the functionality of Windows button controls.  
+# <a name="cbutton-class"></a>CButton-Klasse
+Stellt die Funktionalität von Windows-Schaltflächensteuerelementen bereit.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -117,87 +90,87 @@ Provides the functionality of Windows button controls.
 class CButton : public CWnd  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Mitglieder  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CButton::CButton](#cbutton)|Constructs a `CButton` object.|  
+|[CButton::CButton](#cbutton)|Erstellt ein `CButton`-Objekt.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CButton::Create](#create)|Creates the Windows button control and attaches it to the `CButton` object.|  
-|[CButton::DrawItem](#drawitem)|Override to draw an owner-drawn `CButton` object.|  
-|[CButton::GetBitmap](#getbitmap)|Retrieves the handle of the bitmap previously set with [SetBitmap](#setbitmap).|  
-|[CButton::GetButtonStyle](#getbuttonstyle)|Retrieves information about the button control style.|  
-|[CButton::GetCheck](#getcheck)|Retrieves the check state of a button control.|  
-|[CButton::GetCursor](#getcursor)|Retrieves the handle of the cursor image previously set with [SetCursor](#setcursor).|  
-|[CButton::GetIcon](#geticon)|Retrieves the handle of the icon previously set with [SetIcon](#seticon).|  
-|[CButton::GetIdealSize](#getidealsize)|Retrieves the ideal size of the button control.|  
-|[CButton::GetImageList](#getimagelist)|Retrieves the image list of the button control.|  
-|[CButton::GetNote](#getnote)|Retrieves the note component of the current command link control.|  
-|[CButton::GetNoteLength](#getnotelength)|Retrieves the length of the note text for the current command link control.|  
-|[CButton::GetSplitGlyph](#getsplitglyph)|Retrieves the glyph associated with the current split button control.|  
-|[CButton::GetSplitImageList](#getsplitimagelist)|Retrieves the image list for the current split button control.|  
-|[CButton::GetSplitInfo](#getsplitinfo)|Retrieves information that defines the current split button control.|  
-|[CButton::GetSplitSize](#getsplitsize)|Retrieves the bounding rectangle of the drop-down component of the current split button control.|  
-|[CButton::GetSplitStyle](#getsplitstyle)|Retrieves the split button styles that define the current split button control.|  
-|[CButton::GetState](#getstate)|Retrieves the check state, highlight state, and focus state of a button control.|  
-|[CButton::GetTextMargin](#gettextmargin)|Retrieves the text margin of the button control.|  
-|[CButton::SetBitmap](#setbitmap)|Specifies a bitmap to be displayed on the button.|  
-|[CButton::SetButtonStyle](#setbuttonstyle)|Changes the style of a button.|  
-|[CButton::SetCheck](#setcheck)|Sets the check state of a button control.|  
-|[CButton::SetCursor](#setcursor)|Specifies a cursor image to be displayed on the button.|  
-|[CButton::SetDropDownState](#setdropdownstate)|Sets the drop-down state of the current split button control.|  
-|[CButton::SetIcon](#seticon)|Specifies an icon to be displayed on the button.|  
-|[CButton::SetImageList](#setimagelist)|Sets the image list of the button control.|  
-|[CButton::SetNote](#setnote)|Sets the note on the current command link control.|  
-|[CButton::SetSplitGlyph](#setsplitglyph)|Associates a specified glyph with the current split button control.|  
-|[CButton::SetSplitImageList](#setsplitimagelist)|Associates an image list with the current split button control.|  
-|[CButton::SetSplitInfo](#setsplitinfo)|Specifies information that defines the current split button control.|  
-|[CButton::SetSplitSize](#setsplitsize)|Sets the bounding rectangle of the drop-down component of the current split button control.|  
-|[CButton::SetSplitStyle](#setsplitstyle)|Sets the style of the current split button control.|  
-|[CButton::SetState](#setstate)|Sets the highlighting state of a button control.|  
-|[CButton::SetTextMargin](#settextmargin)|Sets the text margin of the button control.|  
+|[CButton::Create](#create)|Erstellt das Schaltflächen-Steuerelement von Windows und fügt es der `CButton` Objekt.|  
+|[CButton::DrawItem](#drawitem)|Überschreiben, um ein vom Besitzer gezeichnetes zeichnen `CButton` Objekt.|  
+|[CButton::GetBitmap](#getbitmap)|Ruft das Handle der Bitmap für die zuvor festgelegten mit [SetBitmap](#setbitmap).|  
+|[CButton::GetButtonStyle](#getbuttonstyle)|Ruft Informationen über das Steuerelement Schaltflächenformat ab.|  
+|[CButton::GetCheck](#getcheck)|Ruft den Aktivierungszustand des einem Schaltflächen-Steuerelement ab.|  
+|[CButton::GetCursor](#getcursor)|Ruft das Handle des Cursorbilds zuvor festgelegt wird, mit [SetCursor](#setcursor).|  
+|[CButton::GetIcon](#geticon)|Ruft das Handle des zuvor mit dem Symbol [SetIcon](#seticon).|  
+|[CButton::GetIdealSize](#getidealsize)|Ruft die ideale Größe das Schaltflächen-Steuerelement ab.|  
+|[CButton::GetImageList](#getimagelist)|Ruft die Bildliste des Schaltflächen-Steuerelements ab.|  
+|[CButton::GetNote](#getnote)|Ruft die Anmerkung-Komponente des aktuellen Befehls Link-Steuerelements ab.|  
+|[CButton::GetNoteLength](#getnotelength)|Ruft die Länge des Texts Hinweis für den aktuellen Befehl Link-Steuerelement ab.|  
+|[CButton::GetSplitGlyph](#getsplitglyph)|Ruft das Symbol, das das aktuelle SplitButton-Steuerelement zugeordnet.|  
+|[CButton::GetSplitImageList](#getsplitimagelist)|Ruft die Bildliste für das aktuelle SplitButton-Steuerelement ab.|  
+|[CButton::GetSplitInfo](#getsplitinfo)|Ruft die Informationen, die das aktuelle SplitButton-Steuerelement zu definieren.|  
+|[CButton::GetSplitSize](#getsplitsize)|Ruft das umschließende Rechteck der Dropdown-Komponente des die aktuelle SplitButton-Steuerelement ab.|  
+|[CButton::GetSplitStyle](#getsplitstyle)|Ruft ab, der Split-Schaltflächenstile, die das aktuelle SplitButton-Steuerelement zu definieren.|  
+|[CButton::GetState](#getstate)|Ruft ab, der Aktivierungszustand, Hervorhebung Zustand und Status ein Schaltflächen-Steuerelement den Fokus.|  
+|[CButton::GetTextMargin](#gettextmargin)|Ruft den Textrand des Steuerelements ab.|  
+|[CButton:: SetBitmap](#setbitmap)|Gibt eine Bitmap, die auf die Schaltfläche angezeigt werden.|  
+|[CButton::SetButtonStyle](#setbuttonstyle)|Der Stil einer Schaltfläche wird geändert.|  
+|[CButton::SetCheck](#setcheck)|Legt den Aktivierungszustand des einem Schaltflächen-Steuerelement fest.|  
+|[CButton::SetCursor](#setcursor)|Gibt ein Cursorbild auf die Schaltfläche angezeigt werden.|  
+|[CButton::SetDropDownState](#setdropdownstate)|Legt den Dropdown-Zustand des aktuellen unterteilte Schaltflächen-Steuerelements.|  
+|[CButton::SetIcon](#seticon)|Gibt ein Symbol auf der Schaltfläche angezeigt werden.|  
+|[CButton::SetImageList](#setimagelist)|Legt die Bildliste des Schaltflächen-Steuerelements fest.|  
+|[CButton::SetNote](#setnote)|Legt den Text auf dem aktuellen Befehl Link-Steuerelement fest.|  
+|[CButton::SetSplitGlyph](#setsplitglyph)|Ordnet ein angegebene Symbol der aktuellen SplitButton-Steuerelement.|  
+|[CButton::SetSplitImageList](#setsplitimagelist)|Ordnet eine Bildliste mit dem aktuellen SplitButton-Steuerelement.|  
+|[CButton::SetSplitInfo](#setsplitinfo)|Gibt die Informationen, die das aktuelle SplitButton-Steuerelement zu definieren.|  
+|[CButton::SetSplitSize](#setsplitsize)|Legt das umschließende Rechteck der Dropdown-Komponente des die aktuelle SplitButton-Steuerelement fest.|  
+|[CButton::SetSplitStyle](#setsplitstyle)|Legt den Stil des aktuellen unterteilte Schaltflächen-Steuerelements fest.|  
+|[CButton::SetState](#setstate)|Legt die Hervorhebungen Zustand des einem Schaltflächen-Steuerelement.|  
+|[CButton::SetTextMargin](#settextmargin)|Legt den Textrand das Schaltflächen-Steuerelement fest.|  
   
-## <a name="remarks"></a>Remarks  
- A button control is a small, rectangular child window that can be clicked on and off. Buttons can be used alone or in groups and can either be labeled or appear without text. A button typically changes appearance when the user clicks it.  
+## <a name="remarks"></a>Hinweise  
+ Ein Schaltflächen-Steuerelement ist eine kleine rechteckige untergeordnete Fenster, das ein- und ausschalten geklickt werden kann. Schaltflächen können allein oder in Gruppen verwendet werden und können entweder mit der Bezeichnung sein oder ohne Text angezeigt. Eine Schaltfläche ändert sich normalerweise Darstellung, wenn der Benutzer darauf klickt.  
   
- Typical buttons are the check box, radio button, and pushbutton. A `CButton` object can become any of these, according to the [button style](../../mfc/reference/styles-used-by-mfc.md#button-styles) specified at its initialization by the [Create](#create) member function.  
+ Typische Schaltflächen sind die Kontrollkästchen, Optionsfeld und Pushbutton. Ein `CButton` Objekt kann eine der folgenden, werden gemäß der [Schaltfläche Stil](../../mfc/reference/button-styles.md) angegeben bei seiner Initialisierung durch die [erstellen](#create) Memberfunktion.  
   
- In addition, the [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md) class derived from `CButton` supports creation of button controls labeled with bitmap images instead of text. A `CBitmapButton` can have separate bitmaps for a button's up, down, focused, and disabled states.  
+ Darüber hinaus die [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md) abgeleitete Klasse `CButton` unterstützt die Erstellung von Schaltflächen-Steuerelemente, die mit Bitmapbildern statt mit Text beschriftet. Ein `CBitmapButton` können separate Bitmaps für eine Schaltfläche des oben, unten, mit Fokus und Zustand deaktivierten.  
   
- You can create a button control either from a dialog template or directly in your code. In both cases, first call the constructor `CButton` to construct the `CButton` object; then call the **Create** member function to create the Windows button control and attach it to the `CButton` object.  
+ Sie können ein Schaltflächen-Steuerelement aus einer Dialogfeldvorlage oder direkt im Code erstellen. In beiden Fällen rufen Sie zunächst den Konstruktor `CButton` zum Erstellen der `CButton` Objekt; rufen Sie anschließend die **erstellen** Memberfunktion zum Erstellen der Windows Schaltflächensteuerelement und fügen Sie es auf die `CButton` Objekt.  
   
- Construction can be a one-step process in a class derived from `CButton`. Write a constructor for the derived class and call **Create** from within the constructor.  
+ Konstruktion kann ein langwieriger Vorgang in einer abgeleiteten Klasse `CButton`. Schreiben Sie einen Konstruktor für die abgeleitete Klasse, und rufen **erstellen** von innerhalb des Konstruktors.  
   
- If you want to handle Windows notification messages sent by a button control to its parent (usually a class derived from [CDialog](../../mfc/reference/cdialog-class.md)), add a message-map entry and message-handler member function to the parent class for each message.  
+ Wenn Sie ein Button-Steuerelement an der übergeordnete per Windows-benachrichtigungsmeldungen behandeln möchten (normalerweise eine abgeleitete Klasse [CDialog](../../mfc/reference/cdialog-class.md)), die übergeordnete Klasse für jede Nachricht eine meldungszuordnung Eintrag und Nachrichtenhandler Memberfunktion hinzufügen.  
   
- Each message-map entry takes the following form:  
+ Jede Meldungszuordnungseintrags weist folgende Form auf:  
   
  **ON_**Notification **(**`id`, `memberFxn`**)**  
   
- where `id` specifies the child window ID of the control sending the notification and `memberFxn` is the name of the parent member function you have written to handle the notification.  
+ wobei `id` gibt die untergeordneten Fenster-ID des Steuerelements, das Senden der Benachrichtigung und `memberFxn` ist der Name der übergeordneten-Memberfunktion, die Sie geschrieben haben, um die Benachrichtigung zu verarbeiten.  
   
- The parent's function prototype is as follows:  
+ Das übergeordnete Funktionsprototyp lautet wie folgt:  
   
  **afx_msg** `void` `memberFxn` **( );**  
   
- Potential message-map entries are as follows:  
+ Potenzielle Meldungszuordnungseinträge lauten wie folgt:  
   
-|Map entry|Sent to parent when...|  
+|Eintrag für die Zuordnung|Mit dem beim übergeordneten gesendet...|  
 |---------------|----------------------------|  
-|**ON_BN_CLICKED**|The user clicks a button.|  
-|**ON_BN_DOUBLECLICKED**|The user double-clicks a button.|  
+|**ON_BN_CLICKED**|Der Benutzer auf eine Schaltfläche klickt.|  
+|**ON_BN_DOUBLECLICKED**|Der Benutzer auf eine Schaltfläche doppelklickt.|  
   
- If you create a `CButton` object from a dialog resource, the `CButton` object is automatically destroyed when the user closes the dialog box.  
+ Bei Erstellung einer `CButton` Objekt aus einer Ressource, die `CButton` Objekt wird automatisch zerstört, wenn der Benutzer das Dialogfeld geschlossen wird.  
   
- If you create a `CButton` object within a window, you may need to destroy it. If you create the `CButton` object on the heap by using the **new** function, you must call **delete** on the object to destroy it when the user closes the Windows button control. If you create the `CButton` object on the stack, or it is embedded in the parent dialog object, it is destroyed automatically.  
+ Wenn Sie erstellen ein `CButton` Objekt innerhalb eines Fensters müssen sie zerstört werden. Bei Erstellung der `CButton` Objekt auf dem Heap mit dem **neue** -Funktion, die Sie aufrufen müssen **löschen** auf das Objekt, das sie zerstört werden, wenn der Benutzer den Windows schließt Schaltflächensteuerelement. Bei Erstellung der `CButton` -Objekt auf dem Stapel oder im übergeordneten Dialogfeldobjekt eingebettet ist, automatisch zerstört wird.  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -206,21 +179,21 @@ class CButton : public CWnd
   
  `CButton`  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxwin.h  
   
-##  <a name="cbutton"></a>  CButton::CButton  
- Constructs a `CButton` object.  
+##  <a name="cbutton"></a>CButton::CButton  
+ Erstellt ein `CButton`-Objekt.  
   
 ```  
 CButton();
 ```  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_CButton#1](../../mfc/reference/codesnippet/cpp/cbutton-class_1.cpp)]  
+### <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_MFC_CButton Nr. 1](../../mfc/reference/codesnippet/cpp/cbutton-class_1.cpp)]  
   
-##  <a name="create"></a>  CButton::Create  
- Creates the Windows button control and attaches it to the `CButton` object.  
+##  <a name="create"></a>CButton::Create  
+ Erstellt das Schaltflächen-Steuerelement von Windows und fügt es der `CButton` Objekt.  
   
 ```  
 virtual BOOL Create(
@@ -231,173 +204,173 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `lpszCaption`  
- Specifies the button control's text.  
+ Gibt den Text für das Schaltflächen-Steuerelement.  
   
  `dwStyle`  
- Specifies the button control's style. Apply any combination of [button styles](../../mfc/reference/styles-used-by-mfc.md#button-styles) to the button.  
+ Gibt das Schaltflächen-Steuerelement-Stil. Wenden Sie eine beliebige Kombination von [Schaltfläche Stile](../../mfc/reference/button-styles.md) auf die Schaltfläche.  
   
  `rect`  
- Specifies the button control's size and position. It can be either a `CRect` object or a `RECT` structure.  
+ Gibt des Schaltflächen-Steuerelements Größe und Position. Es kann es sich um eine `CRect` Objekt oder eine `RECT` Struktur.  
   
  `pParentWnd`  
- Specifies the button control's parent window, usually a `CDialog`. It must not be **NULL**.  
+ Gibt an, das Schaltflächen-Steuerelement übergeordnetes Fenster, in der Regel eine `CDialog`. Es muss nicht **NULL**.  
   
  `nID`  
- Specifies the button control's ID.  
+ Gibt das Schaltflächen-Steuerelement-ID an.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if successful; otherwise 0.  
+### <a name="return-value"></a>Rückgabewert  
+ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
-### <a name="remarks"></a>Remarks  
- You construct a `CButton` object in two steps. First, call the constructor and then call **Create**, which creates the Windows button control and attaches it to the `CButton` object.  
+### <a name="remarks"></a>Hinweise  
+ Sie erstellen eine `CButton` Objekt in zwei Schritten. Zuerst wird den Konstruktor aufrufen und dann **erstellen**, das erstellt des Schaltflächen-Steuerelements von Windows und fügt es der `CButton` Objekt.  
   
- If the **WS_VISIBLE** style is given, Windows sends the button control all the messages required to activate and show the button.  
+ Wenn die **WS_VISIBLE** Stil angegeben ist, sendet Windows dem Schaltflächen-Steuerelement alle Nachrichten, die für die Aktivierung und die Schaltfläche "anzeigen".  
   
- Apply the following [window styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) to a button control:  
+ Übernehmen Sie die folgenden [Fensterstile](../../mfc/reference/window-styles.md) auf einem Schaltflächen-Steuerelement:  
   
-- **WS_CHILD** Always  
+- **WS_CHILD** immer  
   
-- **WS_VISIBLE** Usually  
+- **WS_VISIBLE** in der Regel  
   
-- **WS_DISABLED** Rarely  
+- **WS_DISABLED** selten  
   
-- **WS_GROUP** To group controls  
+- **WS_GROUP** zum Gruppieren von Steuerelementen  
   
-- **WS_TABSTOP** To include the button in the tabbing order  
+- **WS_TABSTOP** auf die Schaltfläche mit den in der Tabulatorreihenfolge einschließen  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_CButton#2](../../mfc/reference/codesnippet/cpp/cbutton-class_2.cpp)]  
+### <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_MFC_CButton #2](../../mfc/reference/codesnippet/cpp/cbutton-class_2.cpp)]  
   
-##  <a name="drawitem"></a>  CButton::DrawItem  
- Called by the framework when a visual aspect of an owner-drawn button has changed.  
+##  <a name="drawitem"></a>CButton::DrawItem  
+ Wird vom Framework aufgerufen, wenn sich ein Darstellungsaspekt eines eine Ownerdrawn-Schaltfläche geändert hat.  
   
 ```  
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `lpDrawItemStruct`  
- A long pointer to a [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) structure. The structure contains information about the item to be drawn and the type of drawing required.  
+ Eine long-Zeiger auf eine [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) Struktur. Die Struktur enthält Informationen über das Element gezeichnet werden und den Typ der Zeichnung erforderlich.  
   
-### <a name="remarks"></a>Remarks  
- An owner-drawn button has the **BS_OWNERDRAW** style set. Override this member function to implement drawing for an owner-drawn `CButton` object. The application should restore all graphics device interface (GDI) objects selected for the display context supplied in `lpDrawItemStruct` before the member function terminates.  
+### <a name="remarks"></a>Hinweise  
+ Eine Ownerdrawn-Schaltfläche verfügt über die **BS_OWNERDRAW** Satz formatieren. Überschreiben Sie diese Memberfunktion zum Implementieren der Zeichnung für ein vom Besitzer gezeichnetes `CButton` Objekt. Die Anwendung muss alle Device Interface (GDI) Grafikobjekten ausgewählt, für der Anzeigekontext in bereitgestellten wiederherstellen `lpDrawItemStruct` vor dem Element Funktion beendet wird.  
   
- Also see the [BS_](../../mfc/reference/styles-used-by-mfc.md#button-styles) style values.  
+ Siehe auch die [BS_](../../mfc/reference/button-styles.md) style-Werte.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_CButton#3](../../mfc/reference/codesnippet/cpp/cbutton-class_3.cpp)]  
+### <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_MFC_CButton Nr. 3](../../mfc/reference/codesnippet/cpp/cbutton-class_3.cpp)]  
   
-##  <a name="getbitmap"></a>  CButton::GetBitmap  
- Call this member function to get the handle of a bitmap, previously set with [SetBitmap](#setbitmap), that is associated with a button.  
+##  <a name="getbitmap"></a>CButton::GetBitmap  
+ Rufen Sie diese Memberfunktion, um das Handle für eine Bitmap, die zuvor festgelegten mit erhalten [SetBitmap](#setbitmap), d. h. mit einer Schaltfläche verknüpft sind.  
   
 ```  
 HBITMAP GetBitmap() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A handle to a bitmap. **NULL** if no bitmap is previously specified.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Handle für eine Bitmap. **NULL** falls zuvor keine Bitmap angegeben ist.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_CButton#4](../../mfc/reference/codesnippet/cpp/cbutton-class_4.cpp)]  
+### <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_MFC_CButton #4](../../mfc/reference/codesnippet/cpp/cbutton-class_4.cpp)]  
   
-##  <a name="getbuttonstyle"></a>  CButton::GetButtonStyle  
- Retrieves information about the button control style.  
+##  <a name="getbuttonstyle"></a>CButton::GetButtonStyle  
+ Ruft Informationen über das Steuerelement Schaltflächenformat ab.  
   
 ```  
 UINT GetButtonStyle() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Returns the button styles for this `CButton` object. This function returns only the [BS_](../../mfc/reference/styles-used-by-mfc.md#button-styles) style values, not any of the other window styles.  
+### <a name="return-value"></a>Rückgabewert  
+ Gibt die Schaltflächenstile dafür `CButton` Objekt. Diese Funktion gibt nur die [BS_](../../mfc/reference/button-styles.md) Style-Werte, keine der anderen Fenster.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_CButton#5](../../mfc/reference/codesnippet/cpp/cbutton-class_5.cpp)]  
+### <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_MFC_CButton Nr. 5](../../mfc/reference/codesnippet/cpp/cbutton-class_5.cpp)]  
   
-##  <a name="getcheck"></a>  CButton::GetCheck  
- Retrieves the check state of a radio button or check box.  
+##  <a name="getcheck"></a>CButton::GetCheck  
+ Ruft den Aktivierungszustand des eine Optionsfelds oder Kontrollkästchens ab.  
   
 ```  
 int GetCheck() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The return value from a button control created with the **BS_AUTOCHECKBOX**, **BS_AUTORADIOBUTTON**, **BS_AUTO3STATE**, **BS_CHECKBOX**, **BS_RADIOBUTTON**, or **BS_3STATE** style is one of the following values:  
+### <a name="return-value"></a>Rückgabewert  
+ Der Rückgabewert ein Schaltflächen-Steuerelement erstellt, mit der **BS_AUTOCHECKBOX**, **BS_AUTORADIOBUTTON**, **BS_AUTO3STATE**, **BS_CHECKBOX**, **BS_RADIOBUTTON**, oder **BS_3STATE** Stil ist einer der folgenden Werte:  
   
-|Value|Meaning|  
+|Wert|Bedeutung|  
 |-----------|-------------|  
-|**BST_UNCHECKED**|Button state is unchecked.|  
-|**BST_CHECKED**|Button state is checked.|  
-|**BST_INDETERMINATE**|Button state is indeterminate (applies only if the button has the **BS_3STATE** or **BS_AUTO3STATE** style).|  
+|**BST_UNCHECKED**|Status der Schaltfläche ist deaktiviert.|  
+|**BST_CHECKED**|Status der Schaltfläche aktiviert ist.|  
+|**BST_INDETERMINATE**|Zustand der Schaltfläche unbestimmt ist (gilt nur, wenn die Schaltfläche "" hat die **BS_3STATE** oder **BS_AUTO3STATE** Stil).|  
   
- If the button has any other style, the return value is **BST_UNCHECKED**.  
+ Wenn die Schaltfläche mit der jede andere Formatvorlage verfügt, ist der Rückgabewert **BST_UNCHECKED**.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_CButton#6](../../mfc/reference/codesnippet/cpp/cbutton-class_6.cpp)]  
+### <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_MFC_CButton 6](../../mfc/reference/codesnippet/cpp/cbutton-class_6.cpp)]  
   
-##  <a name="getcursor"></a>  CButton::GetCursor  
- Call this member function to get the handle of a cursor, previously set with [SetCursor](#setcursor), that is associated with a button.  
+##  <a name="getcursor"></a>CButton::GetCursor  
+ Rufen Sie diese Memberfunktion, um das Handle für einen Cursor, der zuvor festgelegten mit erhalten [SetCursor](#setcursor), d. h. mit einer Schaltfläche verknüpft sind.  
   
 ```  
 HCURSOR GetCursor();  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A handle to a cursor image. **NULL** if no cursor is previously specified.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Handle für ein Cursor-Image. **NULL** Wenn kein Cursor zuvor angegeben wird.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_CButton#7](../../mfc/reference/codesnippet/cpp/cbutton-class_7.cpp)]  
+### <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_MFC_CButton #7](../../mfc/reference/codesnippet/cpp/cbutton-class_7.cpp)]  
   
-##  <a name="geticon"></a>  CButton::GetIcon  
- Call this member function to get the handle of an icon, previously set with [SetIcon](#seticon), that is associated with a button.  
+##  <a name="geticon"></a>CButton::GetIcon  
+ Rufen Sie diese Memberfunktion, um das Handle für ein Symbol, und legen Sie zuvor mit get [SetIcon](#seticon), d. h. mit einer Schaltfläche verknüpft sind.  
   
 ```  
 HICON GetIcon() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A handle to an icon. **NULL** if no icon is previously specified.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Handle für ein Symbol. **NULL** Wenn zuvor kein Symbol angegeben wird.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_CButton#8](../../mfc/reference/codesnippet/cpp/cbutton-class_8.cpp)]  
+### <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_MFC_CButton #8](../../mfc/reference/codesnippet/cpp/cbutton-class_8.cpp)]  
   
-##  <a name="getidealsize"></a>  CButton::GetIdealSize  
- Retrieves the ideal size for the button control.  
+##  <a name="getidealsize"></a>CButton::GetIdealSize  
+ Ruft die ideale Größe für das Schaltflächen-Steuerelement ab.  
   
 ```  
 BOOL GetIdealSize(SIZE* psize);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  *psize*  
- A pointer to the current size of the button.  
+ Ein Zeiger auf die aktuelle Größe der Schaltfläche.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if successful; otherwise 0.  
+### <a name="return-value"></a>Rückgabewert  
+ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
-### <a name="remarks"></a>Remarks  
- This member function emulates the functionality of the **BCM_GETIDEALSIZE** message, as described in the [Buttons](http://msdn.microsoft.com/library/windows/desktop/bb775943) section of the Windows SDK.  
+### <a name="remarks"></a>Hinweise  
+ Diese Memberfunktion emuliert die Funktionen der der **BCM_GETIDEALSIZE** Nachricht, wie in beschrieben die [Schaltflächen](http://msdn.microsoft.com/library/windows/desktop/bb775943) Teil der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="getimagelist"></a>  CButton::GetImageList  
- Call this method to get the image list from the button control.  
+##  <a name="getimagelist"></a>CButton::GetImageList  
+ Rufen Sie diese Methode, um das Schaltflächen-Steuerelement die Bildliste entnommen werden.  
   
 ```  
 BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `pbuttonImagelist`  
- A pointer to the image list of the `CButton` object.  
+ Ein Zeiger auf die Bildliste des der `CButton` Objekt.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if successful; otherwise 0.  
+### <a name="return-value"></a>Rückgabewert  
+ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
-### <a name="remarks"></a>Remarks  
- This member function emulates the functionality of the **BCM_GETIMAGELIST** message, as described in the [Buttons](http://msdn.microsoft.com/library/windows/desktop/bb775943) section of the Windows SDK.  
+### <a name="remarks"></a>Hinweise  
+ Diese Memberfunktion emuliert die Funktionen der der **BCM_GETIMAGELIST** Nachricht, wie in beschrieben die [Schaltflächen](http://msdn.microsoft.com/library/windows/desktop/bb775943) Teil der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="getnote"></a>  CButton::GetNote  
- Retrieves the note text associated with the current command link control.  
+##  <a name="getnote"></a>CButton::GetNote  
+ Ruft die dem aktuellen Befehl Link-Steuerelement zugeordnete Hinweis Text ab.  
   
 ```  
 CString GetNote() const;  
@@ -407,193 +380,193 @@ BOOL GetNote(
     UINT* cchNote) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
   
-|Parameter|Description|  
+|Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[out] `lpszNote`|Pointer to a buffer, which the caller is responsible for allocating and deallocating. If the return value is `true`, the buffer contains the note text that is associated with the current command link control; otherwise, the buffer is unchanged.|  
-|[in, out] `cchNote`|A pointer to an unsigned integer variable.<br /><br /> When this method is called, the variable contains the size of the buffer specified by the `lpszNote` parameter.<br /><br /> When this method returns, if the return value is `true` the variable contains the size of the note associated with the current command link control. If the return value is `false`, the variable contains the buffer size required to contain the note.|  
+|[out] `lpszNote`|Ein Zeiger auf einen Puffer, die der Aufrufer für das zuordnen und Freigeben von verwendet wird. Wenn der Rückgabewert ist `true`, enthält den Hinweis Text, der dem aktuellen Befehl Link-Steuerelement zugeordnet ist; andernfalls ist der Puffer, der Puffer ist unverändert.|  
+|[in, out] `cchNote`|Ein Zeiger auf eine Variable Ganzzahl ohne Vorzeichen.<br /><br /> Wenn diese Methode aufgerufen wird, wird die Variable enthält die Größe des Puffers, die gemäß der `lpszNote` Parameter.<br /><br /> Wenn diese Methode zurückgegeben, wenn der Rückgabewert ist `true` die Variable enthält die Größe des den Hinweis, der dem aktuellen Befehl Link-Steuerelement zugeordnet. Wenn der Rückgabewert ist `false`, die Variable enthält, die Puffergröße benötigt, um den Text aufzunehmen.|  
   
-### <a name="return-value"></a>Return Value  
- In the first overload, a [CString](../../atl-mfc-shared/using-cstring.md) object that contains the note text associated with the current command link control.  
+### <a name="return-value"></a>Rückgabewert  
+ In der ersten Überladung eine [CString](../../atl-mfc-shared/using-cstring.md) Objekt, das dem aktuellen Befehl Link-Steuerelement zugeordneten Hinweis Text enthält.  
   
- -or-  
+ - oder -   
   
- In the second overload, `true` if this method is successful; otherwise, `false`.  
+ In der zweiten Überladung `true` Wenn diese Methode erfolgreich, andernfalls ist `false`.  
   
-### <a name="remarks"></a>Remarks  
- Use this method only with controls whose button style is `BS_COMMANDLINK` or `BS_DEFCOMMANDLINK`.  
+### <a name="remarks"></a>Hinweise  
+ Verwenden Sie diese Methode nur für Steuerelemente, deren Schaltflächenformat ist `BS_COMMANDLINK` oder `BS_DEFCOMMANDLINK`.  
   
- This method sends the [BCM_GETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775965) message, which is described in the Windows SDK.  
+ Diese Methode sendet die [BCM_GETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775965) Nachricht, die in beschrieben ist die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="getnotelength"></a>  CButton::GetNoteLength  
- Retrieves the length of the note text for the current command link control.  
+##  <a name="getnotelength"></a>CButton::GetNoteLength  
+ Ruft die Länge des Texts Hinweis für den aktuellen Befehl Link-Steuerelement ab.  
   
 ```  
 UINT GetNoteLength() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The length of the note text, in 16-bit Unicode characters, for the current command link control.  
+### <a name="return-value"></a>Rückgabewert  
+ Die Länge des Texts Hinweis in 16-Bit-Unicode-Zeichen für den aktuellen Befehl Link-Steuerelement.  
   
-### <a name="remarks"></a>Remarks  
- Use this method only with controls whose button style is `BS_COMMANDLINK` or `BS_DEFCOMMANDLINK`.  
+### <a name="remarks"></a>Hinweise  
+ Verwenden Sie diese Methode nur für Steuerelemente, deren Schaltflächenformat ist `BS_COMMANDLINK` oder `BS_DEFCOMMANDLINK`.  
   
- This method sends the [BCM_GETNOTELENGTH](http://msdn.microsoft.com/library/windows/desktop/bb775967) message, which is described in the Windows SDK.  
+ Diese Methode sendet die [BCM_GETNOTELENGTH](http://msdn.microsoft.com/library/windows/desktop/bb775967) Nachricht, die in beschrieben ist die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="getsplitglyph"></a>  CButton::GetSplitGlyph  
- Retrieves the glyph associated with the current split button control.  
+##  <a name="getsplitglyph"></a>CButton::GetSplitGlyph  
+ Ruft das Symbol, das das aktuelle SplitButton-Steuerelement zugeordnet.  
   
 ```  
 TCHAR GetSplitGlyph() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The glyph character associated with the current split button control.  
+### <a name="return-value"></a>Rückgabewert  
+ Das Glyphe-Zeichen, das das aktuelle SplitButton-Steuerelement zugeordnet ist.  
   
-### <a name="remarks"></a>Remarks  
- A glyph is the physical representation of a character in a particular font. For example, a split button control might be decorated with the glyph of the Unicode check mark character (U+2713).  
+### <a name="remarks"></a>Hinweise  
+ Ein Symbol ist die physikalische Darstellung eines Zeichens in einer bestimmten Schriftart. Z. B. ein SplitButton-Steuerelement mit Glyphe, die Häkchen Unicodezeichens ergänzt werden kann (U + 2713).  
   
- Use this method only with controls whose button style is `BS_SPLITBUTTON` or `BS_DEFSPLITBUTTON`.  
+ Verwenden Sie diese Methode nur für Steuerelemente, deren Schaltflächenformat ist `BS_SPLITBUTTON` oder `BS_DEFSPLITBUTTON`.  
   
- This method initializes the `mask` member of a [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure with the `BCSIF_GLYPH` flag, and then sends that structure in the [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) message that is described in the Windows SDK. When the message function returns, this method retrieves the glyph from the `himlGlyph` member of the structure.  
+ Diese Methode initialisiert die `mask` Mitglied einer [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur mit der `BCSIF_GLYPH` Flag, und klicken Sie dann gesendet, die Struktur in der [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Wenn die Nachricht Funktion zurückgibt, wird diese Methode ruft das Symbol aus der `himlGlyph` Member der Struktur.  
   
-##  <a name="getsplitimagelist"></a>  CButton::GetSplitImageList  
- Retrieves the [image list](../../mfc/reference/cimagelist-class.md) for the current split button control.  
+##  <a name="getsplitimagelist"></a>CButton::GetSplitImageList  
+ Ruft die [Bildliste](../../mfc/reference/cimagelist-class.md) für das aktuelle SplitButton-Steuerelement.  
   
 ```  
 CImageList* GetSplitImageList() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A pointer to a [CImageList](../../mfc/reference/cimagelist-class.md) object.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Zeiger auf eine [CImageList](../../mfc/reference/cimagelist-class.md) Objekt.  
   
-### <a name="remarks"></a>Remarks  
- Use this method only with controls whose button style is `BS_SPLITBUTTON` or `BS_DEFSPLITBUTTON`.  
+### <a name="remarks"></a>Hinweise  
+ Verwenden Sie diese Methode nur für Steuerelemente, deren Schaltflächenformat ist `BS_SPLITBUTTON` oder `BS_DEFSPLITBUTTON`.  
   
- This method initializes the `mask` member of a [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure with the `BCSIF_IMAGE` flag, and then sends that structure in the [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) message that is described in the Windows SDK. When the message function returns, this method retrieves the image list from the `himlGlyph` member of the structure.  
+ Diese Methode initialisiert die `mask` Mitglied einer [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur mit der `BCSIF_IMAGE` Flag, und klicken Sie dann gesendet, die Struktur in der [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Diese Methode ruft ab die Bildliste aus, wenn die Nachricht Funktion zurückgibt, die `himlGlyph` Member der Struktur.  
   
-##  <a name="getsplitinfo"></a>  CButton::GetSplitInfo  
- Retrieves parameters that determine how Windows draws the current split button control.  
+##  <a name="getsplitinfo"></a>CButton::GetSplitInfo  
+ Ruft ab die Parameter, die bestimmen, wie das aktuelle SplitButton-Steuerelement von Windows gezeichnet.  
   
 ```  
 BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
   
-|Parameter|Description|  
+|Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[out] `pInfo`|Pointer to a [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure that receives information about the current split button control. The caller is responsible for allocating the structure.|  
+|[out] `pInfo`|Zeiger auf eine [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) -Struktur, die Informationen zu den aktuellen SplitButton-Steuerelement empfängt. Der Aufrufer ist verantwortlich für die Zuordnung von der Struktur.|  
   
-### <a name="return-value"></a>Return Value  
- `true` if this method is successful; otherwise, `false`.  
+### <a name="return-value"></a>Rückgabewert  
+ `true`Wenn diese Methode erfolgreich ist; andernfalls `false`.  
   
-### <a name="remarks"></a>Remarks  
- Use this method only with controls whose button style is `BS_SPLITBUTTON` or `BS_DEFSPLITBUTTON`.  
+### <a name="remarks"></a>Hinweise  
+ Verwenden Sie diese Methode nur für Steuerelemente, deren Schaltflächenformat ist `BS_SPLITBUTTON` oder `BS_DEFSPLITBUTTON`.  
   
- This method sends the [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) message, which is described in the Windows SDK.  
+ Diese Methode sendet die [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Nachricht, die in beschrieben ist die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="getsplitsize"></a>  CButton::GetSplitSize  
- Retrieves the bounding rectangle of the drop-down component of the current split button control.  
+##  <a name="getsplitsize"></a>CButton::GetSplitSize  
+ Ruft das umschließende Rechteck der Dropdown-Komponente des die aktuelle SplitButton-Steuerelement ab.  
   
 ```  
 BOOL GetSplitSize(LPSIZE pSize) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
   
-|Parameter|Description|  
+|Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[out] `pSize`|Pointer to a [SIZE](http://msdn.microsoft.com/library/windows/desktop/dd145106) structure that receives the description of a rectangle.|  
+|[out] `pSize`|Zeiger auf eine [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) -Struktur, die die Beschreibung eines Rechtecks empfängt.|  
   
-### <a name="return-value"></a>Return Value  
- `true` if this method is successful; otherwise, `false`.  
+### <a name="return-value"></a>Rückgabewert  
+ `true`Wenn diese Methode erfolgreich ist; andernfalls `false`.  
   
-### <a name="remarks"></a>Remarks  
- Use this method only with controls whose button style is `BS_SPLITBUTTON` or `BS_DEFSPLITBUTTON`.  
+### <a name="remarks"></a>Hinweise  
+ Verwenden Sie diese Methode nur für Steuerelemente, deren Schaltflächenformat ist `BS_SPLITBUTTON` oder `BS_DEFSPLITBUTTON`.  
   
- When the split button control is expanded, it can display a drop-down component such as a list control or pager control. This method retrieves the bounding rectangle that contains the drop-down component.  
+ Wenn das SplitButton-Steuerelement erweitert ist, können sie eine Dropdown-Komponente wie z. B. ein Listensteuerelement oder Pager-Steuerelement anzeigen. Diese Methode ruft das umschließende Rechteck, das Dropdown-Komponente enthält.  
   
- This method initializes the `mask` member of a [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure with the `BCSIF_SIZE` flag, and then sends that structure in the [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) message that is described in the Windows SDK. When the message function returns, this method retrieves the bounding rectangle from the `size` member of the structure.  
+ Diese Methode initialisiert die `mask` Mitglied einer [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur mit der `BCSIF_SIZE` Flag, und klicken Sie dann gesendet, die Struktur in der [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Bei Rückgabe der Funktion für die Nachricht wird diese Methode ruft das umschließende Rechteck von der `size` Member der Struktur.  
   
-##  <a name="getsplitstyle"></a>  CButton::GetSplitStyle  
- Retrieves the split button styles that define the current split button control.  
+##  <a name="getsplitstyle"></a>CButton::GetSplitStyle  
+ Ruft ab, der Split-Schaltflächenstile, die das aktuelle SplitButton-Steuerelement zu definieren.  
   
 ```  
 UINT GetSplitStyle() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A bitwise combination of split button styles. For more information, see the `uSplitStyle` member of the [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure.  
+### <a name="return-value"></a>Rückgabewert  
+ Eine bitweise Kombination der Split-Schaltflächenstile. Weitere Informationen finden Sie unter der `uSplitStyle` Mitglied der [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur.  
   
-### <a name="remarks"></a>Remarks  
- Use this method only with controls whose button style is `BS_SPLITBUTTON` or `BS_DEFSPLITBUTTON`.  
+### <a name="remarks"></a>Hinweise  
+ Verwenden Sie diese Methode nur für Steuerelemente, deren Schaltflächenformat ist `BS_SPLITBUTTON` oder `BS_DEFSPLITBUTTON`.  
   
- The split button styles specify the alignment, aspect ratio, and graphical format with which Windows draws a split button icon.  
+ Der Split-Schaltflächenstile Geben Sie die Ausrichtung, Seitenverhältnis und grafischen Format mit dem Windows eine Teilung Schaltflächensymbol zeichnet.  
   
- This method initializes the `mask` member of a [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure with the `BCSIF_STYLE` flag, and then sends that structure in the [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) message that is described in the Windows SDK. When the message function returns, this method retrieves the split button styles from the `uSplitStyle` member of the structure.  
+ Diese Methode initialisiert die `mask` Mitglied einer [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur mit der `BCSIF_STYLE` Flag, und klicken Sie dann gesendet, die Struktur in der [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Diese Methode ruft ab die Teilung Schaltflächenstile aus, wenn die Nachricht Funktion zurückgibt, die `uSplitStyle` Member der Struktur.  
   
-##  <a name="getstate"></a>  CButton::GetState  
- Retrieves the state of a button control.  
+##  <a name="getstate"></a>CButton::GetState  
+ Ruft den Status des einem Schaltflächen-Steuerelement ab.  
   
 ```  
 UINT GetState() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A bit field that contains the combination of values that indicate the current state of a button control. The following table lists possible values.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Bitfeld, die die Kombination der Werte enthält, die den aktuellen Status des einem Schaltflächen-Steuerelement angeben. In der folgenden Tabelle sind die möglichen Werte aufgeführt.  
   
-|Button State|Value|Description|  
+|Status der Schaltfläche|Wert|Beschreibung|  
 |------------------|-----------|-----------------|  
-|`BST_UNCHECKED`|0x0000|The initial state.|  
-|`BST_CHECKED`|0x0001|The button control is checked.|  
-|`BST_INDETERMINATE`|0x0002|The state is indeterminate (only possible when the button control has three states).|  
-|`BST_PUSHED`|0x0004|The button control is pressed.|  
-|`BST_FOCUS`|0x0008|The button control has the focus.|  
+|`BST_UNCHECKED`|0x0000|Der ursprüngliche Status.|  
+|`BST_CHECKED`|0 x 0001|Das Schaltflächen-Steuerelement aktiviert ist.|  
+|`BST_INDETERMINATE`|0 x 0002|Der Status ist unbestimmt (nur möglich, wenn das Schaltflächen-Steuerelement mit drei Status hat).|  
+|`BST_PUSHED`|0 x 0004|Das Schaltflächen-Steuerelement geklickt wird.|  
+|`BST_FOCUS`|0 x 0008|Das Schaltflächen-Steuerelement besitzt den Fokus.|  
   
-### <a name="remarks"></a>Remarks  
- A button control with the `BS_3STATE` or `BS_AUTO3STATE` button style creates a check box that has a third state that is named the indeterminate state. The indeterminate state indicates that the check box is neither checked nor unchecked.  
+### <a name="remarks"></a>Hinweise  
+ Ein Schaltflächen-Steuerelement mit dem `BS_3STATE` oder `BS_AUTO3STATE` Schaltflächenformat erstellt ein Kontrollkästchen mit dem dritten Zustand mit der Bezeichnung unbestimmten Zustand. Unbestimmte Zustand gibt an, dass das Kontrollkästchen weder aktiviert noch deaktiviert ist.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_CButton#9](../../mfc/reference/codesnippet/cpp/cbutton-class_9.cpp)]  
+### <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_MFC_CButton 9](../../mfc/reference/codesnippet/cpp/cbutton-class_9.cpp)]  
   
-##  <a name="gettextmargin"></a>  CButton::GetTextMargin  
- Call this method to get the text margin of the `CButton` object.  
+##  <a name="gettextmargin"></a>CButton::GetTextMargin  
+ Rufen Sie diese Methode, um den Textrand erhalten die `CButton` Objekt.  
   
 ```  
 BOOL GetTextMargin(RECT* pmargin);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `pmargin`  
- A pointer to the text margin of the `CButton` object.  
+ Ein Zeiger auf den Textrand der `CButton` Objekt.  
   
-### <a name="return-value"></a>Return Value  
- Returns the text margin.  
+### <a name="return-value"></a>Rückgabewert  
+ Gibt den Textrand zurück.  
   
-### <a name="remarks"></a>Remarks  
- Nonzero if successful; otherwise 0.  
+### <a name="remarks"></a>Hinweise  
+ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
-### <a name="remarks"></a>Remarks  
- This member function emulates the functionality of the **BCM_GETTEXTMARGIN** message, as described in the [Buttons](http://msdn.microsoft.com/library/windows/desktop/bb775943) section of the Windows SDK.  
+### <a name="remarks"></a>Hinweise  
+ Diese Memberfunktion emuliert die Funktionen der der **BCM_GETTEXTMARGIN** Nachricht, wie in beschrieben die [Schaltflächen](http://msdn.microsoft.com/library/windows/desktop/bb775943) Teil der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="setbitmap"></a>  CButton::SetBitmap  
- Call this member function to associate a new bitmap with the button.  
+##  <a name="setbitmap"></a>CButton:: SetBitmap  
+ Rufen Sie diese Memberfunktion, um die Schaltfläche eine neue Bitmapdatei zuzuordnen.  
   
 ```  
 HBITMAP SetBitmap(HBITMAP hBitmap);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `hBitmap`  
- The handle of a bitmap.  
+ Das Handle einer Bitmap.  
   
-### <a name="return-value"></a>Return Value  
- The handle of a bitmap previously associated with the button.  
+### <a name="return-value"></a>Rückgabewert  
+ Das Handle einer Bitmap, die zuvor auf die Schaltfläche "" zugeordnet.  
   
-### <a name="remarks"></a>Remarks  
- The bitmap will be automatically placed on the face of the button, centered by default. If the bitmap is too large for the button, it will be clipped on either side. You can choose other alignment options, including the following:  
+### <a name="remarks"></a>Hinweise  
+ Die Bitmap wird automatisch auf die Schaltfläche standardmäßig zentriert platziert werden. Wenn die Bitmap für die Schaltfläche zu groß ist, wird es beidseitig abgeschnitten. Sie können andere Ausrichtungsoptionen, u. a. folgende:  
   
 - **BS_TOP**  
   
@@ -607,15 +580,15 @@ HBITMAP SetBitmap(HBITMAP hBitmap);
   
 - **BS_VCENTER**  
   
- Unlike [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md), which uses four bitmaps per button, `SetBitmap` uses only one bitmap per the button. When the button is pressed, the bitmap appears to shift down and to the right.  
+ Im Gegensatz zu [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md), die vier Bitmaps pro Schaltfläche verwendet `SetBitmap` wird nur eine Bitmap pro der Schaltfläche verwendet. Wenn die Schaltfläche aufgerufen werden, scheinbar Bitmap ab, nach unten und rechts zu verschieben.  
   
- You are responsible for releasing the bitmap when you are done with it.  
+ Sie sind verantwortlich für die Bitmap freigeben, wenn Sie damit fertig sind.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_CButton#4](../../mfc/reference/codesnippet/cpp/cbutton-class_4.cpp)]  
+### <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_MFC_CButton #4](../../mfc/reference/codesnippet/cpp/cbutton-class_4.cpp)]  
   
-##  <a name="setbuttonstyle"></a>  CButton::SetButtonStyle  
- Changes the style of a button.  
+##  <a name="setbuttonstyle"></a>CButton::SetButtonStyle  
+ Der Stil einer Schaltfläche wird geändert.  
   
 ```  
 void SetButtonStyle(
@@ -623,58 +596,58 @@ void SetButtonStyle(
     BOOL bRedraw = TRUE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `nStyle`  
- Specifies the [button style](../../mfc/reference/styles-used-by-mfc.md#button-styles).  
+ Gibt an, die [Schaltfläche Stil](../../mfc/reference/button-styles.md).  
   
  `bRedraw`  
- Specifies whether the button is to be redrawn. A nonzero value redraws the button. A 0 value does not redraw the button. The button is redrawn by default.  
+ Gibt an, ob die Schaltfläche neu gezeichnet wird. Ein Wert ungleich NULL zeichnet die Schaltfläche. Wert 0 ist nicht die Schaltfläche neu zeichnet. Die Schaltfläche mit der in der Standardeinstellung neu gezeichnet wird.  
   
-### <a name="remarks"></a>Remarks  
- Use the `GetButtonStyle` member function to retrieve the button style. The low-order word of the complete button style is the button-specific style.  
+### <a name="remarks"></a>Hinweise  
+ Verwenden der `GetButtonStyle` Memberfunktion versucht, das Schaltflächenformat abzurufen. Das niederwertige Wort des Formats Schaltfläche ist die Schaltfläche-spezifische-Format.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_CButton#5](../../mfc/reference/codesnippet/cpp/cbutton-class_5.cpp)]  
+### <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_MFC_CButton Nr. 5](../../mfc/reference/codesnippet/cpp/cbutton-class_5.cpp)]  
   
-##  <a name="setcheck"></a>  CButton::SetCheck  
- Sets or resets the check state of a radio button or check box.  
+##  <a name="setcheck"></a>CButton::SetCheck  
+ Legt fest oder setzt den Aktivierungszustand einer Optionsfeld oder Kontrollkästchen.  
   
 ```  
 void SetCheck(int nCheck);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `nCheck`  
- Specifies the check state. This parameter can be one of the following:  
+ Gibt den Aktivierungszustand an. Dieser Parameter kann eine der folgenden sein:  
   
-|Value|Meaning|  
+|Wert|Bedeutung|  
 |-----------|-------------|  
-|**BST_UNCHECKED**|Set the button state to unchecked.|  
-|**BST_CHECKED**|Set the button state to checked.|  
-|**BST_INDETERMINATE**|Set the button state to indeterminate. This value can be used only if the button has the **BS_3STATE** or **BS_AUTO3STATE** style.|  
+|**BST_UNCHECKED**|Zustand der Schaltfläche auf deaktiviert festgelegt.|  
+|**BST_CHECKED**|Legen Sie den Zustand der Schaltfläche überprüft.|  
+|**BST_INDETERMINATE**|Legen Sie den Zustand der Schaltfläche auf unbestimmt. Dieser Wert kann verwendet werden, nur dann, wenn die Schaltfläche "" hat die **BS_3STATE** oder **BS_AUTO3STATE** Stil.|  
   
-### <a name="remarks"></a>Remarks  
- This member function has no effect on a pushbutton.  
+### <a name="remarks"></a>Hinweise  
+ Diese Memberfunktion wirkt sich nicht auf eine Schaltfläche aus.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_CButton#6](../../mfc/reference/codesnippet/cpp/cbutton-class_6.cpp)]  
+### <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_MFC_CButton 6](../../mfc/reference/codesnippet/cpp/cbutton-class_6.cpp)]  
   
-##  <a name="setcursor"></a>  CButton::SetCursor  
- Call this member function to associate a new cursor with the button.  
+##  <a name="setcursor"></a>CButton::SetCursor  
+ Rufen Sie diese Memberfunktion, um die Schaltfläche "" einen neuen Cursor zuzuordnen.  
   
 ```  
 HCURSOR SetCursor(HCURSOR hCursor);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `hCursor`  
- The handle of a cursor.  
+ Das Handle eines Cursors.  
   
-### <a name="return-value"></a>Return Value  
- The handle of a cursor previously associated with the button.  
+### <a name="return-value"></a>Rückgabewert  
+ Das Handle eines Cursors, der zuvor auf die Schaltfläche "" zugeordnet.  
   
-### <a name="remarks"></a>Remarks  
- The cursor will be automatically placed on the face of the button, centered by default. If the cursor is too large for the button, it will be clipped on either side. You can choose other alignment options, including the following:  
+### <a name="remarks"></a>Hinweise  
+ Der Cursor wird automatisch auf die Schaltfläche standardmäßig zentriert platziert werden. Wenn der Cursor für die Schaltfläche zu groß ist, wird es beidseitig abgeschnitten. Sie können andere Ausrichtungsoptionen, u. a. folgende:  
   
 - **BS_TOP**  
   
@@ -688,79 +661,79 @@ HCURSOR SetCursor(HCURSOR hCursor);
   
 - **BS_VCENTER**  
   
- Unlike [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md), which uses four bitmaps per button, `SetCursor` uses only one cursor per the button. When the button is pressed, the cursor appears to shift down and to the right.  
+ Im Gegensatz zu [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md), die vier Bitmaps pro Schaltfläche verwendet `SetCursor` verwendet nur einen Cursor pro die Schaltfläche "". Wenn die Schaltfläche aufgerufen werden, wird der Cursor nach unten und rechts verschoben angezeigt.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_CButton#7](../../mfc/reference/codesnippet/cpp/cbutton-class_7.cpp)]  
+### <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_MFC_CButton #7](../../mfc/reference/codesnippet/cpp/cbutton-class_7.cpp)]  
   
-##  <a name="setdropdownstate"></a>  CButton::SetDropDownState  
- Sets the drop-down state of the current split button control.  
+##  <a name="setdropdownstate"></a>CButton::SetDropDownState  
+ Legt den Dropdown-Zustand des aktuellen unterteilte Schaltflächen-Steuerelements.  
   
 ```  
 BOOL SetDropDownState(BOOL fDropDown);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
   
-|Parameter|Description|  
+|Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `fDropDown`|`true` to set `BST_DROPDOWNPUSHED` state; otherwise, `false`.|  
+|[in] `fDropDown`|`true`festzulegende `BST_DROPDOWNPUSHED` Zustand befindet, andernfalls `false`.|  
   
-### <a name="return-value"></a>Return Value  
- `true` if this method is successful; otherwise, `false`.  
+### <a name="return-value"></a>Rückgabewert  
+ `true`Wenn diese Methode erfolgreich ist; andernfalls `false`.  
   
-### <a name="remarks"></a>Remarks  
- A split button control has a style of `BS_SPLITBUTTON` or `BS_DEFSPLITBUTTON` and consists of a button and a drop-down arrow to its right. For more information, see [Button Styles](http://msdn.microsoft.com/library/windows/desktop/bb775951). Usually, the drop-down state is set when the user clicks the drop-down arrow. Use this method to programmatically set the drop-down state of the control. The drop-down arrow is drawn shaded to indicate the state.  
+### <a name="remarks"></a>Hinweise  
+ Ein SplitButton-Steuerelement verfügt über einen Stil des `BS_SPLITBUTTON` oder `BS_DEFSPLITBUTTON` und besteht aus einer Schaltfläche und ein Dropdown-Pfeil rechts davon. Weitere Informationen finden Sie unter [Schaltflächenstile](http://msdn.microsoft.com/library/windows/desktop/bb775951). In der Regel wird die Dropdownliste Status festgelegt, klickt der Benutzer den Dropdown Pfeil. Verwenden Sie diese Methode, um die Dropdown-Zustand des Steuerelements programmgesteuert festzulegen. Der Dropdownpfeil gezeichnet wird schattiert, um den Status anzugeben.  
   
- This method sends the [BCM_SETDROPDOWNSTATE](http://msdn.microsoft.com/library/windows/desktop/bb775973) message, which is described in the Windows SDK.  
+ Diese Methode sendet die [BCM_SETDROPDOWNSTATE](http://msdn.microsoft.com/library/windows/desktop/bb775973) Nachricht, die in beschrieben ist die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-### <a name="example"></a>Example  
- The following code example defines the variable, `m_splitButton`, that is used to programmatically access the split button control. This variable is used in the following example.  
+### <a name="example"></a>Beispiel  
+ Das folgende Codebeispiel definiert die Variable `m_splitButton`, d. h. verwendet, um das SplitButton-Steuerelement programmgesteuert zugreifen. Diese Variable wird im folgenden Beispiel verwendet.  
   
- [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
+ [!code-cpp[NVC_MFC_CButton_s1 Nr. 1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
   
-### <a name="example"></a>Example  
- The following code example sets the state of the split button control to indicate that the drop-down arrow is pushed.  
+### <a name="example"></a>Beispiel  
+ Das folgende Codebeispiel legt fest, den Status des das SplitButton-Steuerelement, um anzugeben, dass das Dropdown-Pfeil wird per Push übertragen.  
   
- [!code-cpp[NVC_MFC_CButton_s1#6](../../mfc/reference/codesnippet/cpp/cbutton-class_11.cpp)]  
+ [!code-cpp[NVC_MFC_CButton_s1 6](../../mfc/reference/codesnippet/cpp/cbutton-class_11.cpp)]  
   
-##  <a name="setelevationrequired"></a>  CButton::SetElevationRequired  
- Sets the state of the current button control to `elevation required`, which is necessary for the control to display an elevated security icon.  
+##  <a name="setelevationrequired"></a>CButton::SetElevationRequired  
+ Legt den Zustand des aktuellen Button-Steuerelements, `elevation required`, der für das Steuerelement zum Anzeigen eines Symbols mit höherer Sicherheit erforderlich ist.  
   
 ```  
 BOOL SetElevationRequired(BOOL fElevationRequired);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
   
-|Parameter|Description|  
+|Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `fElevationRequired`|`true` to set `elevation required` state; otherwise, `false`.|  
+|[in] `fElevationRequired`|`true`festzulegende `elevation required` Zustand befindet, andernfalls `false`.|  
   
-### <a name="return-value"></a>Return Value  
- `true` if this method is successful; otherwise, `false`.  
+### <a name="return-value"></a>Rückgabewert  
+ `true`Wenn diese Methode erfolgreich ist; andernfalls `false`.  
   
-### <a name="remarks"></a>Remarks  
- If a button or command link control requires elevated security permission to perform an action, set the control to `elevation required` state. Subsequently, Windows displays the User Account Control (UAC) shield icon on the control. For more information, see "User Account Control" at [MSDN](http://go.microsoft.com/fwlink/linkid=18507).  
+### <a name="remarks"></a>Hinweise  
+ Wenn ein Linksteuerelement Schaltfläche oder einen Befehl mit erhöhten Rechten Sicherheitsberechtigungen zum Ausführen einer Aktion erforderlich ist, legen Sie das Steuerelement zum `elevation required` Zustand. Anschließend zeigt Windows das Symbol "sicherheitsschild: Benutzerkontensteuerung (UAC)" auf dem Steuerelement. Weitere Informationen finden Sie unter "User Account Control" [MSDN](http://go.microsoft.com/fwlink/linkid=18507).  
   
- This method sends the [BCM_SETSHIELD](http://msdn.microsoft.com/library/windows/desktop/bb775979) message, which is described in the Windows SDK.  
+ Diese Methode sendet die [BCM_SETSHIELD](http://msdn.microsoft.com/library/windows/desktop/bb775979) Nachricht, die in beschrieben ist die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="seticon"></a>  CButton::SetIcon  
- Call this member function to associate a new icon with the button.  
+##  <a name="seticon"></a>CButton::SetIcon  
+ Rufen Sie diese Memberfunktion, um die Schaltfläche ein Symbol "Neues" zuzuordnen.  
   
 ```  
 HICON SetIcon(HICON hIcon);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `hIcon`  
- The handle of an icon.  
+ Das Handle eines Symbols.  
   
-### <a name="return-value"></a>Return Value  
- The handle of an icon previously associated with the button.  
+### <a name="return-value"></a>Rückgabewert  
+ Das Handle eines Symbols, auf die Schaltfläche mit den zuvor zugeordnet waren.  
   
-### <a name="remarks"></a>Remarks  
- The icon will be automatically placed on the face of the button, centered by default. If the icon is too large for the button, it will be clipped on either side. You can choose other alignment options, including the following:  
+### <a name="remarks"></a>Hinweise  
+ Das Symbol wird automatisch auf die Schaltfläche standardmäßig zentriert platziert werden. Wenn das Symbol für die Schaltfläche zu groß ist, wird es beidseitig abgeschnitten. Sie können andere Ausrichtungsoptionen, u. a. folgende:  
   
 - **BS_TOP**  
   
@@ -774,245 +747,245 @@ HICON SetIcon(HICON hIcon);
   
 - **BS_VCENTER**  
   
- Unlike [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md), which uses four bitmaps per button, `SetIcon` uses only one icon per the button. When the button is pressed, the icon appears to shift down and to the right.  
+ Im Gegensatz zu [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md), die vier Bitmaps pro Schaltfläche verwendet `SetIcon` wird nur ein Symbol pro der Schaltfläche verwendet. Wenn die Schaltfläche aufgerufen werden, wird das Symbol nach unten und nach rechts verschoben.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_CButton#8](../../mfc/reference/codesnippet/cpp/cbutton-class_8.cpp)]  
+### <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_MFC_CButton #8](../../mfc/reference/codesnippet/cpp/cbutton-class_8.cpp)]  
   
-##  <a name="setimagelist"></a>  CButton::SetImageList  
- Call this method to set the image list of the `CButton` object.  
+##  <a name="setimagelist"></a>CButton::SetImageList  
+ Rufen Sie diese Methode, um die Bildliste des legen die `CButton` Objekt.  
   
 ```  
 BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `pbuttonImagelist`  
- A pointer to the new image list.  
+ Ein Zeiger auf die neue Bildliste.  
   
-### <a name="return-value"></a>Return Value  
- Returns **TRUE** on success, **FALSE** on failure.  
+### <a name="return-value"></a>Rückgabewert  
+ Gibt **"true"** bei Erfolg **"false"** bei einem Fehler.  
   
-### <a name="remarks"></a>Remarks  
- This member function emulates the functionality of the **BCM_SETIMAGELIST** message, as described in the [Buttons](http://msdn.microsoft.com/library/windows/desktop/bb775943) section of the Windows SDK.  
+### <a name="remarks"></a>Hinweise  
+ Diese Memberfunktion emuliert die Funktionen der der **BCM_SETIMAGELIST** Nachricht, wie in beschrieben die [Schaltflächen](http://msdn.microsoft.com/library/windows/desktop/bb775943) Teil der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="setnote"></a>  CButton::SetNote  
- Sets the note text for the current command link control.  
+##  <a name="setnote"></a>CButton::SetNote  
+ Legt den Text der Anmerkung für den aktuellen Befehl Link-Steuerelement.  
   
 ```  
 BOOL SetNote(LPCTSTR lpszNote);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
   
-|Parameter|Description|  
+|Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `lpszNote`|Pointer to a Unicode string that is set as the note text for the command link control.|  
+|[in] `lpszNote`|Ein Zeiger auf eine Unicode-Zeichenfolge, die als Hinweis Text für das Link-Steuerelement festgelegt wird.|  
   
-### <a name="return-value"></a>Return Value  
- `true` if this method is successful; otherwise, `false`.  
+### <a name="return-value"></a>Rückgabewert  
+ `true`Wenn diese Methode erfolgreich ist; andernfalls `false`.  
   
-### <a name="remarks"></a>Remarks  
- Use this method only with controls whose button style is `BS_COMMANDLINK` or `BS_DEFCOMMANDLINK`.  
+### <a name="remarks"></a>Hinweise  
+ Verwenden Sie diese Methode nur für Steuerelemente, deren Schaltflächenformat ist `BS_COMMANDLINK` oder `BS_DEFCOMMANDLINK`.  
   
- This method sends the [BCM_SETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775977) message, which is described in the Windows SDK.  
+ Diese Methode sendet die [BCM_SETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775977) Nachricht, die in beschrieben ist die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-### <a name="example"></a>Example  
- The following code example defines the variable, `m_cmdLink`, that is used to programmatically access the command link control. This variable is used in the following example.  
+### <a name="example"></a>Beispiel  
+ Das folgende Codebeispiel definiert die Variable `m_cmdLink`, d. h. verwendet, um das Link-Steuerelement programmgesteuert zugreifen. Diese Variable wird im folgenden Beispiel verwendet.  
   
- [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
+ [!code-cpp[NVC_MFC_CButton_s1 Nr. 1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
   
-### <a name="example"></a>Example  
- The following code example sets the note text for the command link control.  
+### <a name="example"></a>Beispiel  
+ Das folgende Codebeispiel legt den Hinweis Text für die Link-Steuerelement fest.  
   
- [!code-cpp[NVC_MFC_CButton_s1#7](../../mfc/reference/codesnippet/cpp/cbutton-class_12.cpp)]  
+ [!code-cpp[NVC_MFC_CButton_s&#1;7](../../mfc/reference/codesnippet/cpp/cbutton-class_12.cpp)]  
   
-##  <a name="setsplitglyph"></a>  CButton::SetSplitGlyph  
- Associates a specified glyph with the current split button control.  
+##  <a name="setsplitglyph"></a>CButton::SetSplitGlyph  
+ Ordnet ein angegebene Symbol der aktuellen SplitButton-Steuerelement.  
   
 ```  
 BOOL SetSplitGlyph(TCHAR chGlyph);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
   
-|Parameter|Description|  
+|Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `chGlyph`|A character that specifies the glyph to use as the split button drop-down arrow.|  
+|[in] `chGlyph`|Ein Zeichen, der angibt, das Symbol, das als die unterteilte Schaltfläche Dropdown-Pfeil verwendet.|  
   
-### <a name="return-value"></a>Return Value  
- `true` if this method is successful; otherwise, `false`.  
+### <a name="return-value"></a>Rückgabewert  
+ `true`Wenn diese Methode erfolgreich ist; andernfalls `false`.  
   
-### <a name="remarks"></a>Remarks  
- Use this method only with controls that have the button style `BS_SPLITBUTTON` or `BS_DEFSPLITBUTTON`.  
+### <a name="remarks"></a>Hinweise  
+ Verwenden Sie diese Methode nur für Steuerelemente, die das Schaltflächenformat `BS_SPLITBUTTON` oder `BS_DEFSPLITBUTTON`.  
   
- A glyph is the physical representation of a character in a particular font. The `chGlyph` parameter is not used as the glyph, but is instead used to select a glyph from a set of system-defined glyphs. The default drop-down arrow glyph is specified by a character '6', and resembles the Unicode character BLACK DOWN-POINTING TRIANGLE (U+25BC).  
+ Ein Symbol ist die physikalische Darstellung eines Zeichens in einer bestimmten Schriftart. Die `chGlyph` Parameter wird nicht verwendet werden, als das Symbol, jedoch wird stattdessen verwendet werden, um aus einem Satz von vordefinierten Symbolen ein Symbol auswählen. Dropdown-Pfeil Standardglyphe wird angegeben, indem ein Zeichen "6" und das Unicode-Zeichen Schwarz nach unten ZEIGENDEN DREIECK (U + 25BC) ähnelt.  
   
- This method initializes the `mask` member of a [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure with the `BCSIF_GLYPH` flag and the `himlGlyph` member with the `chGlyph` parameter, and then sends that structure in the [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) message that is described in the Windows SDK.  
+ Diese Methode initialisiert die `mask` Mitglied eine [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur mit der `BCSIF_GLYPH` Flag und die `himlGlyph` Element mit der `chGlyph` übergeben wird, und sendet, die Struktur in der [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="setsplitimagelist"></a>  CButton::SetSplitImageList  
- Associates an [image list](../../mfc/reference/cimagelist-class.md) with the current split button control.  
+##  <a name="setsplitimagelist"></a>CButton::SetSplitImageList  
+ Ordnet eine [Bildliste](../../mfc/reference/cimagelist-class.md) mit der aktuellen SplitButton-Steuerelement.  
   
 ```  
 BOOL SetSplitImageList(CImageList* pSplitImageList);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
   
-|Parameter|Description|  
+|Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `pSplitImageList`|Pointer to a [CImageList](../../mfc/reference/cimagelist-class.md) object to assign to the current split button control.|  
+|[in] `pSplitImageList`|Zeiger auf eine [CImageList](../../mfc/reference/cimagelist-class.md) Objekt, das das aktuelle SplitButton-Steuerelement zugewiesen.|  
   
-### <a name="return-value"></a>Return Value  
- `true` if this method is successful; otherwise, `false`.  
+### <a name="return-value"></a>Rückgabewert  
+ `true`Wenn diese Methode erfolgreich ist; andernfalls `false`.  
   
-### <a name="remarks"></a>Remarks  
- Use this method only with controls whose button style is `BS_SPLITBUTTON` or `BS_DEFSPLITBUTTON`.  
+### <a name="remarks"></a>Hinweise  
+ Verwenden Sie diese Methode nur für Steuerelemente, deren Schaltflächenformat ist `BS_SPLITBUTTON` oder `BS_DEFSPLITBUTTON`.  
   
- This method initializes the `mask` member of a [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure with the `BCSIF_IMAGE` flag and the `himlGlyph` member with the `pSplitImageList` parameter, and then sends that structure in the [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) message that is described in the Windows SDK.  
+ Diese Methode initialisiert die `mask` Mitglied eine [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur mit der `BCSIF_IMAGE` Flag und die `himlGlyph` Element mit der `pSplitImageList` übergeben wird, und sendet, die Struktur in der [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="setsplitinfo"></a>  CButton::SetSplitInfo  
- Specifies parameters that determine how Windows draws the current split button control.  
+##  <a name="setsplitinfo"></a>CButton::SetSplitInfo  
+ Gibt Parameter an, die bestimmen, wie das aktuelle SplitButton-Steuerelement von Windows gezeichnet.  
   
 ```  
 BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
   
-|Parameter|Description|  
+|Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `pInfo`|Pointer to a [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure that defines the current split button control.|  
+|[in] `pInfo`|Zeiger auf eine [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur, die das aktuelle SplitButton-Steuerelement definiert.|  
   
-### <a name="return-value"></a>Return Value  
- `true` if this method is successful; otherwise, `false`.  
+### <a name="return-value"></a>Rückgabewert  
+ `true`Wenn diese Methode erfolgreich ist; andernfalls `false`.  
   
-### <a name="remarks"></a>Remarks  
- Use this method only with controls whose button style is `BS_SPLITBUTTON` or `BS_DEFSPLITBUTTON`.  
+### <a name="remarks"></a>Hinweise  
+ Verwenden Sie diese Methode nur für Steuerelemente, deren Schaltflächenformat ist `BS_SPLITBUTTON` oder `BS_DEFSPLITBUTTON`.  
   
- This method sends the [BCM_SETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775981) message, which is described in the Windows SDK.  
+ Diese Methode sendet die [BCM_SETSPLITINFO verwenden](http://msdn.microsoft.com/library/windows/desktop/bb775981) Nachricht, die in beschrieben ist die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-### <a name="example"></a>Example  
- The following code example defines the variable, `m_splitButton`, that is used to programmatically access the split button control.  
+### <a name="example"></a>Beispiel  
+ Das folgende Codebeispiel definiert die Variable `m_splitButton`, d. h. verwendet, um das SplitButton-Steuerelement programmgesteuert zugreifen.  
   
- [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
+ [!code-cpp[NVC_MFC_CButton_s1 Nr. 1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
   
-### <a name="example"></a>Example  
- The following code example changes the glyph that is used for the split button drop-down arrow. The example substitutes an up-pointing triangle glyph for the default down-pointing triangle glyph. The glyph that is displayed depends on the character that you specify in the `himlGlyph` member of the `BUTTON_SPLITINFO` structure. The down-pointing triangle glyph is specified by a character '6' and the up-pointing triangle glyph is specified by a character '5'. For comparison, see the convenience method, [CButton::SetSplitGlyph](#setsplitglyph).  
+### <a name="example"></a>Beispiel  
+ Im folgenden Codebeispiel wird ändert das Symbol, das für die unterteilte Schaltfläche Dropdown-Pfeil verwendet wird. Im Beispiel ersetzt eine oben zeigenden Dreieck-Symbol für das standardmäßige nach unten zeigenden Dreieck-Symbol. Das Symbol, das angezeigt wird, hängt das Zeichen an die von Ihnen in der `himlGlyph` Mitglied der `BUTTON_SPLITINFO` Struktur. Das nach unten zeigenden Dreieck-Symbol wird angegeben, indem ein Zeichen "6"und das oben zeigenden Dreieck-Symbol wird angegeben, indem ein Zeichen "5". Vergleich finden Sie in der Hilfsmethode [CButton::SetSplitGlyph](#setsplitglyph).  
   
- [!code-cpp[NVC_MFC_CButton_s1#4](../../mfc/reference/codesnippet/cpp/cbutton-class_13.cpp)]  
+ [!code-cpp[NVC_MFC_CButton_s&#1;4](../../mfc/reference/codesnippet/cpp/cbutton-class_13.cpp)]  
   
-##  <a name="setsplitsize"></a>  CButton::SetSplitSize  
- Sets the bounding rectangle of the drop-down component of the current split button control.  
+##  <a name="setsplitsize"></a>CButton::SetSplitSize  
+ Legt das umschließende Rechteck der Dropdown-Komponente des die aktuelle SplitButton-Steuerelement fest.  
   
 ```  
 BOOL SetSplitSize(LPSIZE pSize);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
   
-|Parameter|Description|  
+|Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `pSize`|Pointer to a [SIZE](http://msdn.microsoft.com/library/windows/desktop/dd145106) structure that describes a bounding rectangle.|  
+|[in] `pSize`|Zeiger auf eine [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur, die ein umschließendes Rechteck beschreibt.|  
   
-### <a name="return-value"></a>Return Value  
- `true` if this method is successful; otherwise, `false`.  
+### <a name="return-value"></a>Rückgabewert  
+ `true`Wenn diese Methode erfolgreich ist; andernfalls `false`.  
   
-### <a name="remarks"></a>Remarks  
- Use this method only with controls whose button style is `BS_SPLITBUTTON` or `BS_DEFSPLITBUTTON`.  
+### <a name="remarks"></a>Hinweise  
+ Verwenden Sie diese Methode nur für Steuerelemente, deren Schaltflächenformat ist `BS_SPLITBUTTON` oder `BS_DEFSPLITBUTTON`.  
   
- When the split button control is expanded, it can display a drop-down component such as a list control or pager control. This method specifies the size of the bounding rectangle that contains the drop-down component.  
+ Wenn das SplitButton-Steuerelement erweitert ist, können sie eine Dropdown-Komponente wie z. B. ein Listensteuerelement oder Pager-Steuerelement anzeigen. Diese Methode gibt die Größe des umschließenden Rechtecks, das Dropdown-Komponente enthält.  
   
- This method initializes the `mask` member of a [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure with the `BCSIF_SIZE` flag and the `size` member with the `pSize` parameter, and then sends that structure in the [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) message that is described in the Windows SDK.  
+ Diese Methode initialisiert die `mask` Mitglied eine [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur mit der `BCSIF_SIZE` Flag und die `size` Element mit der `pSize` übergeben wird, und sendet, die Struktur in der [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-### <a name="example"></a>Example  
- The following code example defines the variable, `m_splitButton`, that is used to programmatically access the split button control. This variable is used in the following example.  
+### <a name="example"></a>Beispiel  
+ Das folgende Codebeispiel definiert die Variable `m_splitButton`, d. h. verwendet, um das SplitButton-Steuerelement programmgesteuert zugreifen. Diese Variable wird im folgenden Beispiel verwendet.  
   
- [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
+ [!code-cpp[NVC_MFC_CButton_s1 Nr. 1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
   
-### <a name="example"></a>Example  
- The following code example doubles the size of the split button drop-down arrow.  
+### <a name="example"></a>Beispiel  
+ Im folgenden Codebeispiel wird die Größe des Dropdown-Pfeil der Teilung verdoppelt.  
   
- [!code-cpp[NVC_MFC_CButton_s1#5](../../mfc/reference/codesnippet/cpp/cbutton-class_14.cpp)]  
+ [!code-cpp[NVC_MFC_CButton_s1 Nr. 5](../../mfc/reference/codesnippet/cpp/cbutton-class_14.cpp)]  
   
-##  <a name="setsplitstyle"></a>  CButton::SetSplitStyle  
- Sets the style of the current split button control.  
+##  <a name="setsplitstyle"></a>CButton::SetSplitStyle  
+ Legt den Stil des aktuellen unterteilte Schaltflächen-Steuerelements fest.  
   
 ```  
 BOOL SetSplitStyle(UINT uSplitStyle);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
   
-|Parameter|Description|  
+|Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `uSplitStyle`|A bitwise combination of split button styles. For more information, see the `uSplitStyle` member of the [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure.|  
+|[in] `uSplitStyle`|Eine bitweise Kombination der Split-Schaltflächenstile. Weitere Informationen finden Sie unter der `uSplitStyle` Mitglied der [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur.|  
   
-### <a name="return-value"></a>Return Value  
- `true` if this method is successful; otherwise, `false`.  
+### <a name="return-value"></a>Rückgabewert  
+ `true`Wenn diese Methode erfolgreich ist; andernfalls `false`.  
   
-### <a name="remarks"></a>Remarks  
- Use this method only with controls whose button style is `BS_SPLITBUTTON` or `BS_DEFSPLITBUTTON`.  
+### <a name="remarks"></a>Hinweise  
+ Verwenden Sie diese Methode nur für Steuerelemente, deren Schaltflächenformat ist `BS_SPLITBUTTON` oder `BS_DEFSPLITBUTTON`.  
   
- The split button styles specify the alignment, aspect ratio, and graphical format with which Windows draws a split button icon. For more information, see the `uSplitStyle` member of the [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure.  
+ Der Split-Schaltflächenstile Geben Sie die Ausrichtung, Seitenverhältnis und grafischen Format mit dem Windows eine Teilung Schaltflächensymbol zeichnet. Weitere Informationen finden Sie unter der `uSplitStyle` Mitglied der [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur.  
   
- This method initializes the `mask` member of a [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure with the `BCSIF_STYLE` flag and the `uSplitStyle` member with the `uSplitStyle` parameter, and then sends that structure in the [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) message that is described in the Windows SDK.  
+ Diese Methode initialisiert die `mask` Mitglied eine [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) Struktur mit der `BCSIF_STYLE` Flag und die `uSplitStyle` Element mit der `uSplitStyle` übergeben wird, und sendet, die Struktur in der [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-### <a name="example"></a>Example  
- The following code example defines the variable, `m_splitButton`, that is used to programmatically access the split button control.  
+### <a name="example"></a>Beispiel  
+ Das folgende Codebeispiel definiert die Variable `m_splitButton`, d. h. verwendet, um das SplitButton-Steuerelement programmgesteuert zugreifen.  
   
- [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
+ [!code-cpp[NVC_MFC_CButton_s1 Nr. 1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
   
-### <a name="example"></a>Example  
- The following code example sets the style of the split button drop-down arrow. The `BCSS_ALIGNLEFT` style displays the arrow on the left side of the button, and the `BCSS_STRETCH` style retains the drop-down arrow's proportions when you resize the button.  
+### <a name="example"></a>Beispiel  
+ Das folgende Codebeispiel legt den Stil des Dropdown-Pfeil der Teilung fest. Die `BCSS_ALIGNLEFT` Stil zeigt den Pfeil links neben der Schaltfläche und die `BCSS_STRETCH` Stil behält den Dropdown-Pfeil Proportionen aus, wenn Sie die Größe der Schaltfläche.  
   
- [!code-cpp[NVC_MFC_CButton_s1#3](../../mfc/reference/codesnippet/cpp/cbutton-class_15.cpp)]  
+ [!code-cpp[NVC_MFC_CButton_s1 Nr. 3](../../mfc/reference/codesnippet/cpp/cbutton-class_15.cpp)]  
   
-##  <a name="setstate"></a>  CButton::SetState  
- Sets whether a button control is highlighted or not.  
+##  <a name="setstate"></a>CButton::SetState  
+ Legt fest, ob ein Schaltflächen-Steuerelement hervorgehoben ist.  
   
 ```  
 void SetState(BOOL bHighlight);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  *bHighlight*  
- Specifies whether the button is to be highlighted. A nonzero value highlights the button; a 0 value removes any highlighting.  
+ Gibt an, ob die Schaltfläche hervorgehoben werden. Ein Wert ungleich Null werden hervorgehoben, die Schaltfläche ""; ein Wert von 0 entfernt alle Hervorhebung.  
   
-### <a name="remarks"></a>Remarks  
- Highlighting affects the exterior of a button control. It has no effect on the check state of a radio button or check box.  
+### <a name="remarks"></a>Hinweise  
+ Hervorhebung wirkt sich auf der Außenseite des einem Schaltflächen-Steuerelement aus. Er wirkt sich nicht auf den Aktivierungszustand des ein Kontrollkästchen oder ein Optionsfeld aus.  
   
- A button control is automatically highlighted when the user clicks and holds the left mouse button. The highlighting is removed when the user releases the mouse button.  
+ Automatisch wird ein Schaltflächen-Steuerelement hervorgehoben, wenn der Benutzer klickt auf und die linke Maustaste gedrückt enthält. Die Hervorhebung wird entfernt, wenn der Benutzer die Maustaste loslässt.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_CButton#9](../../mfc/reference/codesnippet/cpp/cbutton-class_9.cpp)]  
+### <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_MFC_CButton 9](../../mfc/reference/codesnippet/cpp/cbutton-class_9.cpp)]  
   
-##  <a name="settextmargin"></a>  CButton::SetTextMargin  
- Call this method to set the text margin of the `CButton` object.  
+##  <a name="settextmargin"></a>CButton::SetTextMargin  
+ Rufen Sie diese Methode zum Festlegen der Textrand der `CButton` Objekt.  
   
 ```  
 BOOL SetTextMargin(RECT* pmargin);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `pmargin`  
- A pointer to the new text margin.  
+ Ein Zeiger auf den neuen Textrand.  
   
-### <a name="return-value"></a>Return Value  
- Returns TRUE on success, FALSE on failure.  
+### <a name="return-value"></a>Rückgabewert  
+ Gibt "true" bei Erfolg, bei einem Fehler FALSE.  
   
-### <a name="remarks"></a>Remarks  
- This member function emulates the functionality of the **BCM_SETTEXTMARGIN** message, as described in the [Buttons](http://msdn.microsoft.com/library/windows/desktop/bb775943) section of the Windows SDK.  
+### <a name="remarks"></a>Hinweise  
+ Diese Memberfunktion emuliert die Funktionen der der **BCM_SETTEXTMARGIN** Nachricht, wie in beschrieben die [Schaltflächen](http://msdn.microsoft.com/library/windows/desktop/bb775943) Teil der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-## <a name="see-also"></a>See Also  
- [CWnd Class](../../mfc/reference/cwnd-class.md)   
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [CWnd Class](../../mfc/reference/cwnd-class.md)   
- [CComboBox Class](../../mfc/reference/ccombobox-class.md)   
- [CEdit Class](../../mfc/reference/cedit-class.md)   
- [CListBox Class](../../mfc/reference/clistbox-class.md)   
- [CScrollBar Class](../../mfc/reference/cscrollbar-class.md)   
- [CStatic Class](../../mfc/reference/cstatic-class.md)   
- [CBitmapButton Class](../../mfc/reference/cbitmapbutton-class.md)   
- [CDialog Class](../../mfc/reference/cdialog-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [CWnd-Klasse](../../mfc/reference/cwnd-class.md)   
+ [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
+ [CWnd-Klasse](../../mfc/reference/cwnd-class.md)   
+ [CComboBox-Klasse](../../mfc/reference/ccombobox-class.md)   
+ [CEdit-Klasse](../../mfc/reference/cedit-class.md)   
+ [CListBox-Klasse](../../mfc/reference/clistbox-class.md)   
+ [CScrollBar-Klasse](../../mfc/reference/cscrollbar-class.md)   
+ [CStatic-Klasse](../../mfc/reference/cstatic-class.md)   
+ [CBitmapButton-Klasse](../../mfc/reference/cbitmapbutton-class.md)   
+ [CDialog-Klasse](../../mfc/reference/cdialog-class.md)
 

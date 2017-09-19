@@ -1,14 +1,15 @@
 ---
-title: minus Struct | Microsoft Docs
+title: minus-Struktur | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- cpp-standard-libraries
+- devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- minus
 - xfunctional/std::minus
 dev_langs:
 - C++
@@ -35,15 +36,14 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: c877325af09f3ad486a6965e2652b829213ffbbf
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: e2ed81d3d990e9c9f2a9a21d04fabcbbfbb94f9a
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="minus-struct"></a>minus Struct
-A predefined function object that performs the subtraction operation (binary `operator-`)  on its arguments.  
+# <a name="minus-struct"></a>minus-Struktur
+Ein vordefiniertes Funktionsobjekt, mit dem der Subtraktionsvorgang (binäres `operator-`) auf den Argumenten ausführt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -64,20 +64,20 @@ struct minus<void>
  };
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
  `Type`, `T`, `U`  
- A type that supports a binary `operator-` that takes operands of the specified or inferred types.  
+ Ein Typ, der ein binäres `operator-`-Element unterstützt, das Operanden angegebener oder abgeleiteter Typen akzeptiert.  
   
  `Left`  
- The left operand of the operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `T`.  
+ Der linke Operand des Vorgangs. Die nicht spezialisierte Vorlage besitzt ein lvalue-Verweisargument vom Typ `Type`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von lvalue und rvalue-Verweisargumenten des abgeleiteten Typs `T`.  
   
  `Right`  
- The right operand of the operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `U`.  
+ Der rechte Operand des Vorgangs. Die nicht spezialisierte Vorlage besitzt ein lvalue-Verweisargument vom Typ `Type`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von lvalue und rvalue-Verweisargumenten des abgeleiteten Typs `U`.  
   
-## <a name="return-value"></a>Return Value  
- The result of `Left - Right`. The specialized template does perfect forwarding of the result, which has the type returned by `operator-`.  
+## <a name="return-value"></a>Rückgabewert  
+ Das Ergebnis von `Left``-``Right`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung des Ergebnisses mit dem von `operator-` zurückgegebenen Typs.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Beispiel  
   
 ```cpp  
 // functional_minus.cpp  
@@ -132,14 +132,14 @@ The element-wise differences between v1 and v2 are: ( 2 3 4 5 6 7 )
 *\  
 ```  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<functional>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)
 
 
 

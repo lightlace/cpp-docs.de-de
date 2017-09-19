@@ -1,5 +1,5 @@
 ---
-title: CDBException Class | Microsoft Docs
+title: CDBException Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,9 +17,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CDBException [MFC], m_nRetCode
-- CDBException [MFC], m_strError
-- CDBException [MFC], m_strStateNativeOrigin
+- CDBException class
+- exceptions [C++], database
+- database exceptions [C++]
+- ODBC classes [C++], exceptions
+- errors [C++], database
 ms.assetid: eb9e1119-89f5-49a7-b9d4-b91cee1ccc82
 caps.latest.revision: 23
 author: mikeblome
@@ -39,15 +41,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 0f3da8691ce7a16ffc8c20b32c1066697ad61d06
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 4a82f66f0b6f6535de8e9707c2d68b94b7eb69c5
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 03/31/2017
 
 ---
-# <a name="cdbexception-class"></a>CDBException Class
-Represents an exception condition arising from the database classes.  
+# <a name="cdbexception-class"></a>CDBException-Klasse
+Stellt eine Ausnahmebedingung dar, die von Datenbankklassen ausgelöst wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,124 +57,124 @@ Represents an exception condition arising from the database classes.
 class CDBException : public CException  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Mitglieder  
   
-### <a name="public-data-members"></a>Public Data Members  
+### <a name="public-data-members"></a>Öffentliche Datenmember  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CDBException::m_nRetCode](#m_nretcode)|Contains an Open Database Connectivity (ODBC) return code, of type **RETCODE**.|  
-|[CDBException::m_strError](#m_strerror)|Contains a string that describes the error in alphanumeric terms.|  
-|[CDBException::m_strStateNativeOrigin](#m_strstatenativeorigin)|Contains a string describing the error in terms of the error codes returned by ODBC.|  
+|[CDBException::m_nRetCode](#m_nretcode)|Enthält einen Rückgabecode des Typs Open Database Connectivity (ODBC) **RETCODE**.|  
+|[CDBException::m_strError](#m_strerror)|Enthält eine Zeichenfolge, die Beschreibung des Fehlers alphanumerische ausgedrückt.|  
+|[CDBException::m_strStateNativeOrigin](#m_strstatenativeorigin)|Enthält eine Zeichenfolge, die Beschreibung des Fehlers im Hinblick auf die Fehlercodes, die von ODBC zurückgegeben.|  
   
-## <a name="remarks"></a>Remarks  
- The class includes two public data members you can use to determine the cause of the exception or to display a text message describing the exception. `CDBException` objects are constructed and thrown by member functions of the database classes.  
+## <a name="remarks"></a>Hinweise  
+ Die Klasse enthält zwei öffentliche Datenmember, die Ursache der Ausnahme zu ermitteln oder eine Textnachricht Beschreibung der Ausnahme anzeigen verwendet werden können. `CDBException`Objekte werden erstellt und von Memberfunktionen von Datenbankklassen ausgelöst.  
   
 > [!NOTE]
->  This class is one of MFC's Open Database Connectivity (ODBC) classes. If you are instead using the newer Data Access Objects (DAO) classes, use [CDaoException](../../mfc/reference/cdaoexception-class.md) instead. All DAO class names have "CDao" as a prefix. For more information, see the article [Overview: Database Programming](../../data/data-access-programming-mfc-atl.md).  
+>  Diese Klasse ist eine der Klassen von MFC Open Database Connectivity (ODBC). Wenn Sie stattdessen die neueren Datenzugriffsobjekte (DAO) Klassen verwenden, verwenden Sie [CDaoException](../../mfc/reference/cdaoexception-class.md) stattdessen. Alle DAO-Klassennamen haben "CDao" als Präfix an. Weitere Informationen finden Sie im Artikel [Overview: Datenbank-Programmierung](../../data/data-access-programming-mfc-atl.md).  
   
- Exceptions are cases of abnormal execution involving conditions outside the program's control, such as data source or network I/O errors. Errors that you might expect to see in the normal course of executing your program are usually not considered exceptions.  
+ Ausnahmen sind Fälle nicht ordnungsgemäße Ausführung, die im Zusammenhang mit Bedingungen außerhalb der Steuerung des Programms, z. B. Datenquelle oder Netzwerk-e/a-Fehler. Fehler, die zu erwarten, des normalen Betriebs der Ausführung des Programms angezeigt werden Ausnahmen in der Regel nicht berücksichtigt.  
   
- You can access these objects within the scope of a **CATCH** expression. You can also throw `CDBException` objects from your own code with the `AfxThrowDBException` global function.  
+ Sie können diese Objekte innerhalb des Bereichs der zugreifen eine **CATCH** Ausdruck. Sie können auch Auslösen `CDBException` Objekte aus Ihrem eigenen Code mit der `AfxThrowDBException` globale Funktion.  
   
- For more information about exception handling in general, or about `CDBException` objects, see the articles [Exception Handling (MFC)](../../mfc/exception-handling-in-mfc.md) and [Exceptions: Database Exceptions](../../mfc/exceptions-database-exceptions.md).  
+ Weitere Informationen zur Ausnahmebehandlung im allgemeinen oder über `CDBException` Objekte finden Sie in den Artikeln [Ausnahmebehandlung (MFC)](../../mfc/exception-handling-in-mfc.md) und [Ausnahmen: Datenbankausnahmen](../../mfc/exceptions-database-exceptions.md).  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CException](../../mfc/reference/cexception-class.md)  
   
  `CDBException`  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxdb.h  
   
-##  <a name="m_nretcode"></a>  CDBException::m_nRetCode  
- Contains an ODBC error code of type **RETCODE** returned by an ODBC application programming interface (API) function.  
+##  <a name="m_nretcode"></a>CDBException::m_nRetCode  
+ Enthält einen ODBC-Fehlercode des Typs **RETCODE** von einer ODBC-Anwendung Programmierung (Interface, API)-Funktion zurückgegeben.  
   
-### <a name="remarks"></a>Remarks  
- This type includes SQL-prefixed codes defined by ODBC and AFX_SQL-prefixed codes defined by the database classes. For a `CDBException`, this member will contain one of the following values:  
+### <a name="remarks"></a>Hinweise  
+ Diese Typen fallen breitzeichenliteral mit dem SQL-Codes, die von ODBC definiert und mit dem Präfix AFX_SQL Codes, die von den Datenbankklassen definiert. Für eine `CDBException`, dieses Element enthält die folgenden Werte:  
   
-- **AFX_SQL_ERROR_API_CONFORMANCE** The driver for a `CDatabase::OpenEx` or `CDatabase::Open` call does not conform to required ODBC API Conformance level 1 ( **SQL_OAC_LEVEL1**).  
+- **AFX_SQL_ERROR_API_CONFORMANCE** der Treiber für eine `CDatabase::OpenEx` oder `CDatabase::Open` Aufruf entspricht nicht dem erforderlichen ODBC-API Konformitätsgrad 1 ( **SQL_OAC_LEVEL1**).  
   
-- **AFX_SQL_ERROR_CONNECT_FAIL** Connection to the data source failed. You passed a **NULL**`CDatabase` pointer to your recordset constructor and the subsequent attempt to create a connection based on `GetDefaultConnect` failed.  
+- **AFX_SQL_ERROR_CONNECT_FAIL** Fehler bei Verbindung mit der Datenquelle. Sie übergeben ein **NULL** `CDatabase` Zeiger auf das Recordset-Konstruktor und dem anschließenden Versuch, eine Verbindung zu erstellen, die auf Basis `GetDefaultConnect` ist fehlgeschlagen.  
   
-- **AFX_SQL_ERROR_DATA_TRUNCATED** You requested more data than you have provided storage for. For information on increasing the provided data storage for `CString` or `CByteArray` data types, see the `nMaxLength` argument for [RFX_Text](record-field-exchange-functions.md#rfx_text) and [RFX_Binary](record-field-exchange-functions.md#rfx_binary) under "Macros and Globals."  
+- **AFX_SQL_ERROR_DATA_TRUNCATED** angeforderte mehr Daten, als Sie Speicher für eingegeben haben. Informationen zum Erhöhen des bereitgestellten Datenspeicher für `CString` oder `CByteArray` Datentypen finden Sie in der `nMaxLength` Argument für [RFX_Text](record-field-exchange-functions.md#rfx_text) und [RFX_Binary](record-field-exchange-functions.md#rfx_binary) unter "Makros und Globals."  
   
-- **AFX_SQL_ERROR_DYNASET_NOT_SUPPORTED** A call to `CRecordset::Open` requesting a dynaset failed. Dynasets are not supported by the driver.  
+- **AFX_SQL_ERROR_DYNASET_NOT_SUPPORTED ausgelöst** einen Aufruf von `CRecordset::Open` Fehler bei einem Dynaset anfordern. Dynasets werden vom Treiber nicht unterstützt.  
   
-- **AFX_SQL_ERROR_EMPTY_COLUMN_LIST** You attempted to open a table (or what you gave could not be identified as a procedure call or **SELECT** statement) but there are no columns identified in record field exchange (RFX) function calls in your `DoFieldExchange` override.  
+- **AFX_SQL_ERROR_EMPTY_COLUMN_LIST** Sie haben versucht, eine Tabelle zu öffnen (oder Sie gegeben haben nicht gefunden, als Aufruf einer Prozedur oder **wählen** Anweisung), aber es keine Spalten identifiziert Datensatzfeldaustausch Datensatzfeldaustausch (RFX) Funktionsaufrufen in sind Ihre `DoFieldExchange` außer Kraft setzen.  
   
-- **AFX_SQL_ERROR_FIELD_SCHEMA_MISMATCH** The type of an RFX function in your `DoFieldExchange` override is not compatible with the column data type in the recordset.  
+- **AFX_SQL_ERROR_FIELD_SCHEMA_MISMATCH** den Typ einer RFX-Funktion in Ihrer `DoFieldExchange` Außerkraftsetzung ist nicht kompatibel mit dem Datentyp der Spalte im Recordset.  
   
-- **AFX_SQL_ERROR_ILLEGAL_MODE** You called `CRecordset::Update` without previously calling `CRecordset::AddNew` or `CRecordset::Edit`.  
+- **AFX_SQL_ERROR_ILLEGAL_MODE** aufgerufen `CRecordset::Update` ohne Aufruf von zuvor `CRecordset::AddNew` oder `CRecordset::Edit`.  
   
-- **AFX_SQL_ERROR_LOCK_MODE_NOT_SUPPORTED** Your request to lock records for update could not be fulfilled because your ODBC driver does not support locking.  
+- **AFX_SQL_ERROR_LOCK_MODE_NOT_SUPPORTED** Ihre Anforderung zum Sperren von Datensätzen für das Update konnte nicht erfüllt werden, da Sperren der ODBC-Treiber nicht unterstützt wird.  
   
-- **AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED** You called `CRecordset::Update` or **Delete** for a table with no unique key and changed multiple records.  
+- **AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED** aufgerufen `CRecordset::Update` oder **löschen** für eine Tabelle ohne eindeutigen Schlüssel und mehreren Datensätzen geändert.  
   
-- **AFX_SQL_ERROR_NO_CURRENT_RECORD** You attempted to edit or delete a previously deleted record. You must scroll to a new current record after a deletion.  
+- **AFX_SQL_ERROR_NO_CURRENT_RECORD** Sie haben versucht, bearbeiten oder Löschen einen zuvor gelöschten Datensatz. Sie müssen nach einem Löschvorgang zu einem neuen aktuellen Datensatz blättern.  
   
-- **AFX_SQL_ERROR_NO_POSITIONED_UPDATES** Your request for a dynaset could not be fulfilled because your ODBC driver does not support positioned updates.  
+- **AFX_SQL_ERROR_NO_POSITIONED_UPDATES** Ihre Anforderung für ein Dynaset nicht erfüllt werden konnte, da der ODBC-Treiber nicht unterstützt positionierte Updates.  
   
-- **AFX_SQL_ERROR_NO_ROWS_AFFECTED** You called `CRecordset::Update` or **Delete**, but when the operation began the record could no longer be found.  
+- **AFX_SQL_ERROR_NO_ROWS_AFFECTED** aufgerufen `CRecordset::Update` oder **löschen**, wenn der Vorgang begonnen hat der Datensatz konnte jedoch nicht mehr gefunden werden.  
   
-- **AFX_SQL_ERROR_ODBC_LOAD_FAILED** An attempt to load the ODBC.DLL failed; Windows could not find or could not load this DLL. This error is fatal.  
+- **AFX_SQL_ERROR_ODBC_LOAD_FAILED** Versuch zum Laden der ODBC. Fehler bei der DLL; Windows konnte nicht gefunden werden, oder diese DLL konnte nicht geladen werden. Dieser Fehler ist schwerwiegend.  
   
-- **AFX_SQL_ERROR_ODBC_V2_REQUIRED** Your request for a dynaset could not be fulfilled because a Level 2-compliant ODBC driver is required.  
+- **AFX_SQL_ERROR_ODBC_V2_REQUIRED** Ihre Anforderung für ein Dynaset konnte nicht erfüllt werden, da ein Level 2-kompatibler ODBC-Treiber erforderlich ist.  
   
-- **AFX_SQL_ERROR_RECORDSET_FORWARD_ONLY** An attempt to scroll did not succeed because the data source does not support backward scrolling.  
+- **AFX_SQL_ERROR_RECORDSET_FORWARD_ONLY** Versuch, einen Bildlauf war nicht erfolgreich, da die Datenquelle Bildlauf rückwärts nicht unterstützt.  
   
-- **AFX_SQL_ERROR_SNAPSHOT_NOT_SUPPORTED** A call to `CRecordset::Open` requesting a snapshot failed. Snapshots are not supported by the driver. (This should only occur when the ODBC cursor library ODBCCURS.DLL is not present.)  
+- **AFX_SQL_ERROR_SNAPSHOT_NOT_SUPPORTED** einen Aufruf von `CRecordset::Open` Anfordern einer Momentaufnahme ist fehlgeschlagen. Momentaufnahmen werden vom Treiber nicht unterstützt. (Dies sollte nur auftreten, wenn die ODBC-Cursorbibliothek ODBCCURS. DLL ist nicht vorhanden.)  
   
-- **AFX_SQL_ERROR_SQL_CONFORMANCE** The driver for a `CDatabase::OpenEx` or `CDatabase::Open` call does not conform to the required ODBC SQL Conformance level of "Minimum" ( **SQL_OSC_MINIMUM**).  
+- **AFX_SQL_ERROR_SQL_CONFORMANCE** der Treiber für eine `CDatabase::OpenEx` oder `CDatabase::Open` Aufruf entspricht nicht dem erforderlichen ODBC SQL-Konformitätsgrad des "Minimum" ( **SQL_OSC_MINIMUM**).  
   
-- **AFX_SQL_ERROR_SQL_NO_TOTAL** The ODBC driver was unable to specify the total size of a `CLongBinary` data value. The operation probably failed because a global memory block could not be preallocated.  
+- **AFX_SQL_ERROR_SQL_NO_TOTAL** der ODBC-Treiber konnte nicht an die Gesamtgröße des einem `CLongBinary` Datenwert. Vorgangsfehler wahrscheinlich ein globalen Speicherblock nicht vorab werden konnte.  
   
-- **AFX_SQL_ERROR_RECORDSET_READONLY** You attempted to update a read-only recordset, or the data source is read-only. No update operations can be performed with the recordset or the `CDatabase` object it is associated with.  
+- **AFX_SQL_ERROR_RECORDSET_READONLY** Sie versucht, ein schreibgeschütztes Recordset zu aktualisieren, oder die Datenquelle ist schreibgeschützt. Das Recordset können keine Updatevorgänge ausgeführt werden oder die `CDatabase` Objekt es zugeordnet ist.  
   
-- **SQL_ERROR** Function failed. The error message returned by the ODBC function **SQLError** is stored in the **m_strError** data member.  
+- **SQL_ERROR** Funktion fehlgeschlagen. Die Fehlermeldung, die von der ODBC-Funktion zurückgegebenen **SQLError** befindet sich in der **M_strError** -Datenmember.  
   
-- **SQL_INVALID_HANDLE** Function failed due to an invalid environment handle, connection handle, or statement handle. This indicates a programming error. No additional information is available from the ODBC function **SQLError**.  
+- **SQL_INVALID_HANDLE** Fehler bei der Funktion aufgrund einer ungültigen Umgebungshandle, Verbindungshandle oder Anweisungshandle. Hiermit wird einen Programmierfehler. Keine zusätzlichen Informationen aus der ODBC-Funktion steht **SQLError**.  
   
- The SQL-prefixed codes are defined by ODBC. The AFX-prefixed codes are defined in AFXDB.H, found in MFC\INCLUDE.  
+ Die breitzeichenliteral mit dem SQL-Codes werden vom ODBC definiert. Die Codes AFX mit dem Präfix sind in AFXDB definiert. H in MFC\INCLUDE gefunden.  
   
-##  <a name="m_strerror"></a>  CDBException::m_strError  
- Contains a string describing the error that caused the exception.  
+##  <a name="m_strerror"></a>CDBException::m_strError  
+ Enthält eine Zeichenfolge, die Beschreibung des Fehlers, der die Ausnahme verursacht hat.  
   
-### <a name="remarks"></a>Remarks  
- The string describes the error in alphanumeric terms. For more detailed information and an example, see **m_strStateNativeOrigin**.  
+### <a name="remarks"></a>Hinweise  
+ Die Zeichenfolge den Fehler beschreibt, alphanumerische ausgedrückt wird. Weitere Informationen und ein Beispiel finden Sie unter **M_strStateNativeOrigin**.  
   
-##  <a name="m_strstatenativeorigin"></a>  CDBException::m_strStateNativeOrigin  
- Contains a string describing the error that caused the exception.  
+##  <a name="m_strstatenativeorigin"></a>CDBException::m_strStateNativeOrigin  
+ Enthält eine Zeichenfolge, die Beschreibung des Fehlers, der die Ausnahme verursacht hat.  
   
-### <a name="remarks"></a>Remarks  
- The string is of the form "State:%s,Native:%ld,Origin:%s", where the format codes, in order, are replaced by values that describe:  
+### <a name="remarks"></a>Hinweise  
+ Die Zeichenfolge weist das Format "Status: % s, systemeigene: %ld Ursprung: % s", auf, wobei die Formatcodes in der Reihenfolge, durch die Werte ersetzt werden, in denen beschrieben:  
   
--   The **SQLSTATE**, a null-terminated string containing a five-character error code returned in the *szSqlState* parameter of the ODBC function **SQLError**. **SQLSTATE** values are listed in Appendix A, [ODBC Error Codes](https://msdn.microsoft.com/library/ms714687.aspx), in the *ODBC Programmer's Reference*. Example: "S0022".  
+-   Die **SQLSTATE**, eine Null-terminierte Zeichenfolge aus einen fünf Zeichen zurückgegebenen Fehlercode in der *SzSqlState* -Parameter der ODBC-Funktion **SQLError**. **SQLSTATE** Werte werden in Anhang A, aufgeführt [ODBC-Fehlercodes](https://msdn.microsoft.com/library/ms714687.aspx)in der *ODBC Programmer's Reference*. Beispiel: "S0022".  
   
--   The native error code, specific to the data source, returned in the *pfNativeError* parameter of the **SQLError** function. Example: 207.  
+-   Der systemeigene Fehlercode für die Datenquelle spezifischen zurückgegeben, der *PfNativeError* Parameter von der **SQLError** Funktion. Beispiel: 207.  
   
--   The error message text returned in the *szErrorMsg* parameter of the **SQLError** function. This message consists of several bracketed names. As an error is passed from its source to the user, each ODBC component (data source, driver, Driver Manager) appends its own name. This information helps to pinpoint the origin of the error. Example: [Microsoft][ODBC SQL Server Driver][SQL Server]  
+-   Der Text der Fehlermeldung zurückgegeben, die der *von SQLDiagRec()* Parameter von der **SQLError** Funktion. Diese Nachricht besteht aus mehreren in Klammern gesetzten Namen. Wie ein Fehler von der Quelle an den Benutzer übergeben wird, fügt jede ODBC-Komponente (Datenquelle, Treiber, Treiber-Manager) einen eigenen Namen an. Diese Informationen helfen, um den Ursprung des Fehlers zu ermitteln. Beispiel: [Microsoft] [ODBC SQL Server Driver] [SQLServer]  
   
- The framework interprets the error string and puts its components into **m_strStateNativeOrigin**; if **m_strStateNativeOrigin** contains information for more than one error, the errors are separated by newlines. The framework puts the alphanumeric error text into **m_strError**.  
+ Das Framework interpretiert die Fehlerzeichenfolge und setzt seine Komponenten in **M_strStateNativeOrigin**; Wenn **M_strStateNativeOrigin** enthält Informationen für mehrere Fehler sind die Fehler durch Zeilenumbrüche getrennte. Das Framework setzt den alphanumerischen Fehlertext in **M_strError**.  
   
- For additional information about the codes used to make up this string, see the [SQLError](https://msdn.microsoft.com/library/ms716312.aspx) function in the *ODBC Programmer's Reference*.  
+ Weitere Informationen zu dieser Zeichenfolge bilden verwendeten Codes finden Sie unter der [SQLError](https://msdn.microsoft.com/library/ms716312.aspx) -Funktion in der *ODBC Programmer's Reference*.  
   
-### <a name="example"></a>Example  
-  From ODBC: "State:S0022,Native:207,Origin:[Microsoft][ODBC SQL Server Driver][SQL Server] Invalid column name 'ColName'"  
+### <a name="example"></a>Beispiel  
+  Von ODBC: "State: S0022, systemeigene: 207, Ursprung: [Microsoft] [ODBC SQL Server Driver] [SQLServer] Ungültiger Spaltenname"ColName""  
   
- In **m_strStateNativeOrigin**: "State:S0022,Native:207,Origin:[Microsoft][ODBC SQL Server Driver][SQL Server]"  
+ In **M_strStateNativeOrigin**: "State: S0022, systemeigene: 207, Ursprung: [Microsoft] [ODBC SQL Server Driver] [SQLServer]"  
   
- In **m_strError**: "Invalid column name 'ColName'"  
+ In **M_strError**: "Ungültiger Spaltenname"ColName""  
   
-## <a name="see-also"></a>See Also  
- [CException Class](../../mfc/reference/cexception-class.md)   
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [CDatabase Class](../../mfc/reference/cdatabase-class.md)   
- [CRecordset Class](../../mfc/reference/crecordset-class.md)   
- [CFieldExchange Class](../../mfc/reference/cfieldexchange-class.md)   
- [CRecordset::Update](../../mfc/reference/crecordset-class.md#update)   
+## <a name="see-also"></a>Siehe auch  
+ [CException-Klasse](../../mfc/reference/cexception-class.md)   
+ [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
+ [CDatabase-Klasse](../../mfc/reference/cdatabase-class.md)   
+ [CRecordset-Klasse](../../mfc/reference/crecordset-class.md)   
+ [CDBException-Klasse](../../mfc/reference/cfieldexchange-class.md)   
+ [CRecordset:: Update](../../mfc/reference/crecordset-class.md#update)   
  [CRecordset::Delete](../../mfc/reference/crecordset-class.md#delete)   
- [CException Class](../../mfc/reference/cexception-class.md)
+ [CException-Klasse](../../mfc/reference/cexception-class.md)
 

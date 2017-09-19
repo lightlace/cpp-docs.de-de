@@ -1,5 +1,5 @@
 ---
-title: CMFCToolBarFontComboBox Class | Microsoft Docs
+title: Klasse CMFCToolBarFontComboBox | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,9 +17,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCToolBarFontComboBox [MFC], CMFCToolBarFontComboBox
-- CMFCToolBarFontComboBox [MFC], GetFontDesc
-- CMFCToolBarFontComboBox [MFC], SetFont
+- CMFCToolBarFontComboBox class
 ms.assetid: 25f8e08c-aadd-4cb5-9581-a99d49d444b1
 caps.latest.revision: 29
 author: mikeblome
@@ -39,15 +37,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: e1c4df3e6eaf237c048502657bd2a9b6492b8767
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 50b22e19cab4f434ec53383c8a170344e89cbab0
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="cmfctoolbarfontcombobox-class"></a>CMFCToolBarFontComboBox Class
-A toolbar button that contains a combo box control that enables the user to select a font from a list of system fonts.  
+# <a name="cmfctoolbarfontcombobox-class"></a>CMFCToolBarFontComboBox-Klasse
+Eine Symbolleisten-Schaltfläche, die ein Kombinationsfeld-Steuerelement, die dem Benutzer ermöglicht enthält, eine Schriftart aus einer Liste von Systemschriftarten auswählen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,42 +53,42 @@ A toolbar button that contains a combo box control that enables the user to sele
 class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Mitglieder  
   
-### <a name="protected-constructors"></a>Protected Constructors  
+### <a name="protected-constructors"></a>Geschützte Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCToolBarFontComboBox::CMFCToolBarFontComboBox](#cmfctoolbarfontcombobox)|Constructs a `CMFCToolBarFontComboBox` object.|  
+|[CMFCToolBarFontComboBox::CMFCToolBarFontComboBox](#cmfctoolbarfontcombobox)|Erstellt ein `CMFCToolBarFontComboBox`-Objekt.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCToolBarFontComboBox::GetFontDesc](#getfontdesc)|Returns a pointer to the `CMFCFontInfo` object for a specified index in the combo box.|  
-|[CMFCToolBarFontComboBox::SetFont](#setfont)|Selects a font in the font combo box according to either the name of the font, or the prefix and character set of the font.|  
+|[CMFCToolBarFontComboBox::GetFontDesc](#getfontdesc)|Gibt einen Zeiger auf die `CMFCFontInfo` Objekt für einen angegebenen Index im Kombinationsfeld.|  
+|[CMFCToolBarFontComboBox::SetFont](#setfont)|Wählt einer Schriftart im Kombinationsfeld Schriftart entsprechend entweder den Namen der Schriftart festgelegten Präfix und Zeichen der Schriftart.|  
   
-### <a name="data-members"></a>Data Members  
+### <a name="data-members"></a>Datenmember  
  [CMFCToolBarFontComboBox::m_nFontHeight](#m_nfontheight)  
- The height of the characters in the font combo box.  
+ Die Höhe der Zeichen in der Schriftart-Kombinationsfeld.  
   
-## <a name="remarks"></a>Remarks  
- To add a font combo box button to a toolbar, follow these steps:  
+## <a name="remarks"></a>Hinweise  
+ Um eine Schriftart Kombinationsfelds-Schaltfläche zu einer Symbolleiste hinzuzufügen, gehen Sie folgendermaßen vor:  
   
-1.  Reserve a dummy resource ID for the button in the parent toolbar resource.  
+1.  Reservieren Sie eine Platzhalterressourcen-ID für die Schaltfläche in der übergeordneten Symbolleistenressource.  
   
-2.  Construct a `CMFCToolBarFontComboBox` object.  
+2.  Konstruieren Sie ein `CMFCToolBarFontComboBox`-Objekt.  
   
-3.  In the message handler that processes the `AFX_WM_RESETTOOLBAR` message, replace the original button with the new combo box button by using [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
+3.  In den Message-Handler, verarbeitet die `AFX_WM_RESETTOOLBAR` angezeigt wird, ersetzen Sie die ursprüngliche Schaltfläche mit der neuen kombinationsfeldschaltfläche durch [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
   
-4.  Synchronize the font that is selected in the combo box with the font in the document by using the [CMFCToolBarFontComboBox::SetFont](#setfont) method.  
+4.  Synchronisieren Sie die Schriftart, die im Kombinationsfeld mit der Schriftart im Dokument mit ausgewählt ist die [CMFCToolBarFontComboBox::SetFont](#setfont) Methode.  
   
- To synchronize the document's font with the font selected in the combo box, use the [CMFCToolBarFontComboBox::GetFontDesc](#getfontdesc) method to retrieve the attributes of the selected font, and use those attributes to create a [CFont Class](../../mfc/reference/cfont-class.md) object.  
+ Verwenden Sie zum Synchronisieren des Dokuments Schriftart mit den im Kombinationsfeld markierten Text der [CMFCToolBarFontComboBox::GetFontDesc](#getfontdesc) Methode, um die Attribute der ausgewählten Schriftart abzurufen und diese Attribute verwenden, um das Erstellen einer [CFont-Klasse](../../mfc/reference/cfont-class.md) Objekt.  
   
- The font combo box button calls the Win32 function [EnumFontFamiliesEx](http://msdn.microsoft.com/library/windows/desktop/dd162620) to determine the screen and printer fonts available to the system.  
+ Die Schriftart Kombinationsfelds-Schaltfläche wird die Win32-Funktion [EnumFontFamiliesEx](http://msdn.microsoft.com/library/windows/desktop/dd162620) bestimmen die Bildschirm- und Schriftarten, die für das System verfügbar.  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
- [CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
+ [Von CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)  
   
@@ -98,11 +96,11 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
   
  [CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md)  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxtoolbarfontcombobox.h  
   
-##  <a name="cmfctoolbarfontcombobox"></a>  CMFCToolBarFontComboBox::CMFCToolBarFontComboBox  
- Constructs a [CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md) object.  
+##  <a name="cmfctoolbarfontcombobox"></a>CMFCToolBarFontComboBox::CMFCToolBarFontComboBox  
+ Erstellt eine [CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md) Objekt.  
   
 ```  
 public:  
@@ -126,15 +124,15 @@ CMFCToolBarFontComboBox(
 CMFCToolBarFontComboBox();
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `uiID`  
- The command ID of the combo box.  
+ Die Befehls-ID des Kombinationsfelds.  
   
  [in] `iImage`  
- The zero-based index of a toolbar image. The image is located in the [CMFCToolBarImages Class](../../mfc/reference/cmfctoolbarimages-class.md) object that [CMFCToolBar Class](../../mfc/reference/cmfctoolbar-class.md) class maintains.  
+ Der nullbasierte Index des Bildes einer Symbolleisten. Das Bild befindet sich in der [CMFCToolBarImages Klasse](../../mfc/reference/cmfctoolbarimages-class.md) Objekt, [CMFCToolBar Klasse](../../mfc/reference/cmfctoolbar-class.md) -Klasse verwaltet.  
   
  [in] `nFontType`  
- The types of fonts that the combo box contains. This parameter can be a combination (boolean OR) of the following values:  
+ Die Typen von Schriftarten, die im Kombinationsfeld enthält. Dieser Parameter kann eine Kombination (booleschen OR) der folgenden Werte sein:  
   
  DEVICE_FONTTYPE  
   
@@ -143,54 +141,54 @@ CMFCToolBarFontComboBox();
  TRUETYPE_FONTTYPE  
   
  [in] `nCharSet`  
- If set to DEFAULT_CHARSET, the combo box contains all uniquely-named fonts in all character sets. (If there are two fonts with the same name, the combo box contains one of them.) If set to a valid character set value, the combo box contains only fonts in the specified character set. See [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) for a listing of possible character sets.  
+ Wenn auf DEFAULT_CHARSET im Kombinationsfeld alle eindeutigen Namen von Schriftarten in allen Zeichensätzen enthält. (Wenn zwei Schriftarten mit demselben Namen vorhanden sind, enthält das Kombinationsfeld einen davon.) Wenn auf einen gültigen Zeichen festgelegten Wert, der im Kombinationsfeld nur Schriftarten in den angegebenen Zeichensatz enthält. Finden Sie unter ["LogFont"](http://msdn.microsoft.com/library/windows/desktop/dd145037) für eine Liste der möglichen Zeichen fest.  
   
  [in] `dwStyle`  
- The style of the combo box. (see [Combo-Box Styles](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))  
+ Das Format des Kombinationsfelds. (siehe [Kombinationsfeldstile](../../mfc/reference/combo-box-styles.md))  
   
  [in] `iWidth`  
- The width in pixels of the edit control.  
+ Die Breite des Edit-Steuerelements in Pixel.  
   
  [in] `nPitchAndFamily`  
- If set to DEFAULT_PITCH, the combo box contains fonts regardless of pitch. If set to FIXED_PITCH or VARIABLE_PITCH, the combo box contains only fonts with that pitch type. Filtering based on font family is not currently supported.  
+ Wenn auf DEFAULT_PITCH im Kombinationsfeld festgelegt Schriftarten unabhängig von der Tonhöhe enthält. Wenn FIXED_PITCH oder VARIABLE_PITCH festgelegt, das Kombinationsfeld nur Schriftarten mit Pitch enthält. Filtern nach Schriftfamilie wird derzeit nicht unterstützt.  
   
  [out] `pLstFontsExternal`  
- Pointer to a [CObList Class](../../mfc/reference/coblist-class.md) object that stores the available fonts.  
+ Zeiger auf eine [CObList-Klasse](../../mfc/reference/coblist-class.md) -Objekt, das die verfügbaren Schriftarten gespeichert.  
   
-### <a name="remarks"></a>Remarks  
- Usually, `CMFCToolBarFontComboBox` objects store the list of available fonts in a single shared `CObList` object. If you use the second overload of the constructor and provide a valid pointer to `pLstFontsExternal`, that `CMFCToolBarFontComboBox` object will instead fill the `CObList` that `pLstFontsExternal` points to with available fonts.  
+### <a name="remarks"></a>Hinweise  
+ In der Regel `CMFCToolBarFontComboBox` Objekte speichern die Liste der verfügbaren Schriftarten in einer einzigen, gemeinsam genutzten `CObList` Objekt. Wenn Sie die zweite Überladung des Konstruktors verwenden, und geben Sie einen gültigen Zeiger auf `pLstFontsExternal`, `CMFCToolBarFontComboBox` Objekt füllt stattdessen die `CObList` , `pLstFontsExternal` verweist, mit verfügbaren Schriftarten.  
   
-### <a name="example"></a>Example  
- The following example demonstrates how to construct a `CMFCToolBarFontComboBox` object. This code snippet is part of the [Word Pad sample](../../visual-cpp-samples.md).  
+### <a name="example"></a>Beispiel  
+ Das folgende Beispiel veranschaulicht das Erstellen einer `CMFCToolBarFontComboBox` Objekt. Dieser Codeausschnitt ist Teil der [WordPad-Beispiel](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_WordPad#7](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontcombobox-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_WordPad&#7;](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontcombobox-class_1.cpp)]  
   
-##  <a name="getfontdesc"></a>  CMFCToolBarFontComboBox::GetFontDesc  
- Returns a pointer to the `CMFCFontInfo` object for a specified index in the combo box.  
+##  <a name="getfontdesc"></a>CMFCToolBarFontComboBox::GetFontDesc  
+ Gibt einen Zeiger auf die `CMFCFontInfo` Objekt für einen angegebenen Index im Kombinationsfeld.  
   
 ```  
 const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `iIndex`  
- Specifies the zero-based index of a combo box item.  
+ Gibt den nullbasierten Index des eine Kombinationsfeldelement.  
   
-### <a name="return-value"></a>Return Value  
- A pointer to a `CMFCFontInfo` object. If `iIndex` does not specify a valid item index, the return value is `NULL`.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Zeiger auf ein `CMFCFontInfo` Objekt. Wenn `iIndex` gibt keinen gültiges Elementindex, der Rückgabewert ist `NULL`.  
   
-##  <a name="m_nfontheight"></a>  CMFCToolBarFontComboBox::m_nFontHeight  
- Specifies the height, in pixels, of characters in the font combo box if the combo box has owner draw style.  
+##  <a name="m_nfontheight"></a>CMFCToolBarFontComboBox::m_nFontHeight  
+ Gibt die Höhe in Pixel der Zeichen im Kombinationsfeld Schriftart verfügt das Kombinationsfeld Besitzer Stil zu zeichnen.  
   
 ```  
 static int m_nFontHeight  
 ```  
   
-### <a name="remarks"></a>Remarks  
- If the `m_nFontHeight` variable is 0, the height is calculated automatically according to the default font of the combo box. The height includes both the ascent of characters above the baseline and the descent of characters underneath the baseline.  
+### <a name="remarks"></a>Hinweise  
+ Wenn die `m_nFontHeight` Variable gleich 0 ist, die Höhe wird entsprechend der Standardschriftart des Kombinationsfelds automatisch berechnet. Die Höhe schließt die Versalhöhe der Zeichen über der Basislinie und die Unterlänge der Zeichen unterhalb der Basislinie.  
   
-##  <a name="setfont"></a>  CMFCToolBarFontComboBox::SetFont  
- Selects the font in the font combo box according to the font name and character set that are specified in the parameters.  
+##  <a name="setfont"></a>CMFCToolBarFontComboBox::SetFont  
+ Wählt die Schriftart im Kombinationsfeld Schriftart entsprechend der Schriftartname und die Zeichen, die festlegen, werden in den Parametern angegeben.  
   
 ```  
 BOOL SetFont(
@@ -199,31 +197,31 @@ BOOL SetFont(
     BOOL bExact=FALSE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `lpszName`  
- Specifies the font name or prefix.  
+ Gibt die Schriftart oder das Präfix.  
   
  [in] `nCharSet`  
- Specifies the character set.  
+ Gibt den Zeichensatz an.  
   
  [in] `bExact`  
- Specifies whether `lpszName` contains the font name or the font prefix.  
+ Gibt an, ob `lpszName` enthält den Namen der Schriftart oder die Schriftart-Präfix.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if the font was selected successfully; otherwise 0.  
+### <a name="return-value"></a>Rückgabewert  
+ Wert ungleich NULL, wenn die Schriftart erfolgreich aktiviert wurde; andernfalls 0.  
   
-### <a name="remarks"></a>Remarks  
- If `bExact` is `TRUE`, this method selects a font that exactly matches the name that you specified as `lpszName`. If `bExact` is `FALSE`, this method selects a font that starts with the text specified as `lpszName` and that uses the character set that you specified as `nCharSet`. If `nCharSet` is set to DEFAULT_CHARSET, the character set will be ignored and only `lpszName` will be used to select a font.  
+### <a name="remarks"></a>Hinweise  
+ Wenn `bExact` ist `TRUE`, diese Methode wählt eine Schriftart, die genau, den Sie angegeben haben übereinstimmt, als `lpszName`. Wenn `bExact` ist `FALSE`, diese Methode wählt eine Schriftart, die mit dem Text, der als beginnt `lpszName` und den Zeichensatz, den Sie als angegeben verwendet `nCharSet`. Wenn `nCharSet` festgelegt ist, DEFAULT_CHARSET, der Zeichensatz werden ignoriert und nur `lpszName` wird verwendet, um eine Schriftart auswählen.  
   
-## <a name="see-also"></a>See Also  
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [Classes](../../mfc/reference/mfc-classes.md)   
- [CMFCToolBar Class](../../mfc/reference/cmfctoolbar-class.md)   
- [CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md)   
- [CMFCToolBarComboBoxButton Class](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)   
- [CMFCFontInfo Class](../../mfc/reference/cmfcfontinfo-class.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
+ [Klassen](../../mfc/reference/mfc-classes.md)   
+ [CMFCToolBar-Klasse](../../mfc/reference/cmfctoolbar-class.md)   
+ [CMFCToolBarButton-Klasse](../../mfc/reference/cmfctoolbarbutton-class.md)   
+ [CMFCToolBarComboBoxButton-Klasse](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)   
+ [CMFCFontInfo-Klasse](../../mfc/reference/cmfcfontinfo-class.md)   
  [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)   
- [Walkthrough: Putting Controls On Toolbars](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+ [Exemplarische Vorgehensweise: Einfügen von Steuerelementen in Symbolleisten](../../mfc/walkthrough-putting-controls-on-toolbars.md)
 
 
 

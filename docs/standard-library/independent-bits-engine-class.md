@@ -1,5 +1,5 @@
 ---
-title: independent_bits_engine Class | Microsoft Docs
+title: independent_bits_engine-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- independent_bits_engine
 - random/std::independent_bits_engine
 dev_langs:
 - C++
@@ -33,15 +34,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: e223c95051ed4452c81c3ef0cc83be33f1b446f5
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 9a4052e44457b08f7d74f3591bd8665f0679c9a5
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/19/2017
 
 ---
-# <a name="independentbitsengine-class"></a>independent_bits_engine Class
-Generates a random sequence of numbers with a specified number of bits by repacking bits from the values returned by its base engine.  
+# <a name="independentbitsengine-class"></a>independent_bits_engine-Klasse
+Generiert eine zufällige Zahlensequenz mit einer angegebenen Anzahl von Bits, indem Bits aus vom Basismodul zurückgegebenen Werten erneut verpackt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,34 +51,34 @@ template <class Engine, size_t W, class UIntType>
 class independent_bits_engine;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `Engine`  
- The base engine type.  
+ Der Typ des Basismoduls.  
   
  `W`  
- **Word size**. Size, in bits, of each number generated. **Precondition**: `0 < W ≤ numeric_limits<UIntType>::digits`  
+ **Wortgröße**. Größe jeder generierten Zahl in Bits. **Vorbedingung**: `0 < W ≤ numeric_limits<UIntType>::digits`  
   
  `UIntType`  
- The unsigned integer result type. For possible types, see [\<random>](../standard-library/random.md).  
+ Der unsigned integer-Ergebnistyp. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Mitglieder  
   
 ||||  
 |-|-|-|  
 |`independent_bits_engine::independent_bits_engine`|`independent_bits_engine::base`|`independent_bits_engine::discard`|  
 |`independent_bits_engine::operator()`|`independent_bits_engine::base_type`|`independent_bits_engine::seed`|  
   
- For more information about engine members, see [\<random>](../standard-library/random.md).  
+ Weitere Informationen über Modulmember finden Sie unter [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>Remarks  
- This template class describes an *engine adaptor* that produces values by repacking bits from the values returned by its base engine, resulting in `W`-bit values.  
+## <a name="remarks"></a>Hinweise  
+ Diese Vorlagenklasse beschreibt einen *Moduladapter*, der Werte produziert, indem er die von seinem Basismodul zurückgegebenen Bits neu verpackt. Dies führt zu `W`-Bit-Werten.  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<random>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [\<random>](../standard-library/random.md)
 
 

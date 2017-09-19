@@ -1,5 +1,5 @@
 ---
-title: CReversalTransition Class | Microsoft Docs
+title: CReversalTransition-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,9 +17,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CReversalTransition [MFC], CReversalTransition
-- CReversalTransition [MFC], Create
-- CReversalTransition [MFC], m_duration
+- CReversalTransition class
 ms.assetid: e89516be-2d07-4885-95a8-fc278f46e3ad
 caps.latest.revision: 18
 author: mikeblome
@@ -39,15 +37,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 923c1c38a77e9f51194a0b4a319bf06a1b3bf0da
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: 028ea275cc345513248e76dcf5b0eba931823b7a
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="creversaltransition-class"></a>CReversalTransition Class
-Encapsulates a reversal transition.  
+# <a name="creversaltransition-class"></a>CReversalTransition-Klasse
+Kapselt einen Umkehrübergang.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,41 +53,41 @@ Encapsulates a reversal transition.
 class CReversalTransition : public CBaseTransition;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Mitglieder  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CReversalTransition::CReversalTransition](#creversaltransition)|Constructs a reversal transition object and initializes its duration.|  
+|[CReversalTransition::CReversalTransition](#creversaltransition)|Erstellt ein Objekt der Umkehrung Übergang und initialisiert seine Dauer.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CReversalTransition::Create](#create)|Calls the transition library to create encapsulated transition COM object. (Overrides [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
+|[CReversalTransition::Create](#create)|Ruft die Übergangsbibliothek um gekapselte COM-Übergangsobjekt zu erstellen. (Überschreibt [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
-### <a name="public-data-members"></a>Public Data Members  
+### <a name="public-data-members"></a>Öffentliche Datenmember  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CReversalTransition::m_duration](#m_duration)|The duration of the transition.|  
+|[CReversalTransition::m_duration](#m_duration)|Die Dauer des Übergangs.|  
   
-## <a name="remarks"></a>Remarks  
- A reversal transition smoothly changes direction over a given duration. The final value will be the same as the initial value and the final velocity will be the negative of the initial velocity. Because all transitions are cleared automatically, it's recommended to allocated them using operator new. The encapsulated IUIAnimationTransition COM object is created by CAnimationController::AnimateGroup, until then it's NULL. Changing member variables after creation of this COM object has no effect.  
+## <a name="remarks"></a>Hinweise  
+ Ein Umkehrübergang ändert reibungslos Richtung über einen bestimmten Zeitraum. Der endgültige Wert wird der Anfangswert identisch sein, und die abschließende Geschwindigkeit ist die Negation der ursprünglichen Geschwindigkeit. Da alle Übergänge automatisch gelöscht werden, es wird empfohlen, sie mit dem Operator new. Das gekapselte IUIAnimationTransition-COM-Objekt wird von CAnimationController:: erst erstellt, ist NULL. Ändern Membervariablen, nach der Erstellung dieses COM-Objekt hat keine Auswirkung.  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
- [CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
+ [Von CObject](../../mfc/reference/cobject-class.md)  
   
  [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
   
  [CReversalTransition](../../mfc/reference/creversaltransition-class.md)  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxanimationcontroller.h  
   
-##  <a name="create"></a>  CReversalTransition::Create  
- Calls the transition library to create encapsulated transition COM object.  
+##  <a name="create"></a>CReversalTransition::Create  
+ Ruft die Übergangsbibliothek um gekapselte COM-Übergangsobjekt zu erstellen.  
   
 ```  
 virtual BOOL Create(
@@ -97,31 +95,31 @@ virtual BOOL Create(
     IUIAnimationTransitionFactory* \*not used*\);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `pLibrary`  
- A pointer to transition library, which is responsible for creation of standard transitions.  
+ Ein Zeiger auf Übergangsbibliothek, die für die Erstellung der standard-Übergänge zuständig ist.  
   
-### <a name="return-value"></a>Return Value  
- TRUE if transition is created successfully; otherwise FALSE.  
+### <a name="return-value"></a>Rückgabewert  
+ True, wenn der Übergang erfolgreich erstellt wird. andernfalls FALSE.  
   
-##  <a name="creversaltransition"></a>  CReversalTransition::CReversalTransition  
- Constructs a reversal transition object and initializes its duration.  
+##  <a name="creversaltransition"></a>CReversalTransition::CReversalTransition  
+ Erstellt ein Objekt der Umkehrung Übergang und initialisiert seine Dauer.  
   
 ```  
 CReversalTransition(UI_ANIMATION_SECONDS duration);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `duration`  
- The duration of the transition.  
+ Die Dauer des Übergangs.  
   
-##  <a name="m_duration"></a>  CReversalTransition::m_duration  
- The duration of the transition.  
+##  <a name="m_duration"></a>CReversalTransition::m_duration  
+ Die Dauer des Übergangs.  
   
 ```  
 UI_ANIMATION_SECONDS m_duration;  
 ```  
   
-## <a name="see-also"></a>See Also  
- [Classes](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>Siehe auch  
+ [Klassen](../../mfc/reference/mfc-classes.md)
 

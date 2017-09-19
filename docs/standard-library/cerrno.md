@@ -1,5 +1,5 @@
 ---
-title: '&lt;cerrno&gt; | Microsoft Docs'
+title: '&lt;cerrno&gt; | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::<cerrno>", "<cerrno>
+- std.<cerrno>
+- std::<cerrno>
+- <cerrno>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -33,15 +35,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: ec529b603d11c7268663a8d6f0af7b0aaa30b171
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: d0e25a4c091778b82cbe9fbe0243d87dbf46adff
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="ltcerrnogt"></a>&lt;cerrno&gt;
-Includes the Standard C library header \<errno.h> and adds the associated names to the `std` namespace.  
+Schließt den Standard-C-Bibliotheksheader \<errno.h> ein und fügt die verknüpften Namen zum `std`-Namespace hinzu.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,13 +52,13 @@ Includes the Standard C library header \<errno.h> and adds the associated names 
   
 ```  
   
-## <a name="remarks"></a>Remarks  
- Including this header ensures that the names declared using external linkage in the Standard C library header are declared in the `std` namespace.  
+## <a name="remarks"></a>Hinweise  
+ Durch Einschließen dieses Headers wird sichergestellt, dass die mit externer Bindung im Standard-C-Bibliotheksheader deklarierten Namen im `std`-Namespace deklariert werden.  
   
-## <a name="see-also"></a>See Also  
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
- [C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)   
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>Siehe auch  
+ [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)   
+ [Übersicht über die C++-Standardbibliothek](../standard-library/cpp-standard-library-overview.md)   
+ [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

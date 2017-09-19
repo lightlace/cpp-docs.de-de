@@ -1,5 +1,5 @@
 ---
-title: is_empty Class | Microsoft Docs
+title: is_empty-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- is_empty
 - type_traits/std::is_empty
 dev_langs:
 - C++
@@ -34,15 +35,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 45b12f1f9d2fa2ba6c4211344afc4358910c6570
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: ce7c22363ef2b4a9c61abb1a5bc8ad46fd53f697
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="isempty-class"></a>is_empty Class
-Tests if type is an empty class.  
+# <a name="isempty-class"></a>is_empty-Klasse
+Testet, ob „type“ eine leere Klasse ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,14 +52,14 @@ template <class Ty>
 struct is_empty;  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
  `Ty`  
- The type to query.  
+ Der abzufragende Typ.  
   
-## <a name="remarks"></a>Remarks  
- An instance of the type predicate holds true if the type `Ty` is an empty class, otherwise it holds false.  
+## <a name="remarks"></a>Hinweise  
+ Eine Instanz des Typprädikats ist „true“, wenn der `Ty`-Typ eine leere Klasse ist; andernfalls „false“.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Beispiel  
   
 ```cpp  
 // std__type_traits__is_empty.cpp   
@@ -95,12 +96,12 @@ is_empty<empty> == true
 is_empty<int> == false  
 ```  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [<type_traits>](../standard-library/type-traits.md)
 
 

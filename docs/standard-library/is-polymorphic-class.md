@@ -1,5 +1,5 @@
 ---
-title: is_polymorphic Class | Microsoft Docs
+title: is_polymorphic-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- is_polymorphic
 - type_traits/std::is_polymorphic
 dev_langs:
 - C++
@@ -34,15 +35,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: d159193b9c1700309c45e8d00879f9a6dd98538a
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: bf02c7042b7b2a2535ab9d81116d4d97b557c21b
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="ispolymorphic-class"></a>is_polymorphic Class
-Tests if type has a virtual function.  
+# <a name="ispolymorphic-class"></a>is_polymorphic-Klasse
+Testet, ob der Typ über eine virtuelle Funktion verfügt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,14 +52,14 @@ template <class Ty>
 struct is_polymorphic;  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
  `Ty`  
- The type to query.  
+ Der abzufragende Typ.  
   
-## <a name="remarks"></a>Remarks  
- An instance of the type predicate holds true if the type `Ty` is a class that declares or inherits a virtual function, otherwise it holds false.  
+## <a name="remarks"></a>Hinweise  
+ Eine Instanz des Typprädikats ist „true“, wenn es sich beim Typ `Ty` um eine Klasse handelt, die eine virtuelle Funktion deklariert oder erbt; andernfalls „false“.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Beispiel  
   
 ```cpp  
 // std__type_traits__is_polymorphic.cpp   
@@ -109,12 +110,12 @@ is_polymorphic<trivial> == false
 is_polymorphic<throws> == true  
 ```  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [<type_traits>](../standard-library/type-traits.md)   
- [is_abstract Class](../standard-library/is-abstract-class.md)
+ [is_abstract-Klasse](../standard-library/is-abstract-class.md)
 

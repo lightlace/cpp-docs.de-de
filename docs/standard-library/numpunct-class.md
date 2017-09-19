@@ -1,5 +1,5 @@
 ---
-title: numpunct Class | Microsoft Docs
+title: numpunct-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,6 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - xlocnum/std::numpunct
+- numpunct
 - locale/std::numpunct::char_type
 - locale/std::numpunct::string_type
 - locale/std::numpunct::decimal_point
@@ -25,19 +26,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- std::numpunct [C++]
-- std::numpunct [C++], char_type
-- std::numpunct [C++], string_type
-- std::numpunct [C++], decimal_point
-- std::numpunct [C++], do_decimal_point
-- std::numpunct [C++], do_falsename
-- std::numpunct [C++], do_grouping
-- std::numpunct [C++], do_thousands_sep
-- std::numpunct [C++], do_truename
-- std::numpunct [C++], falsename
-- std::numpunct [C++], grouping
-- std::numpunct [C++], thousands_sep
-- std::numpunct [C++], truename
+- numpunct class
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
 caps.latest.revision: 22
 author: corob-msft
@@ -57,15 +46,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: aaaeb63198a6ff5191f5bb758c90c0d41d3dc4c4
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 56dbd3ed6e655ec5f431d383864f949925baaf5c
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="numpunct-class"></a>numpunct Class
-A template class that describes an object that can serve as a local facet to describe the sequences of type `CharType` used to represent information about the formatting and punctuation of numeric and Boolean expressions.  
+# <a name="numpunct-class"></a>numpunct-Klasse
+Eine Vorlagenklasse, die ein Objekt beschreibt, das als lokales Facet dienen kann, um die Sequenzen vom Typ `CharType` zu beschreiben, mit denen Informationen zur Formatierung und Interpunktion von numerischen und booleschen Ausdrücken dargestellt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -74,70 +63,70 @@ template <class CharType>
 class numpunct : public locale::facet;  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
  `CharType`  
- The type used within a program to encode characters in a locale.  
+ Der Typ, der innerhalb eines Programms zum Codieren von Zeichen in einem Gebietsschema verwendet wird.  
   
-## <a name="remarks"></a>Remarks  
- As with any locale facet, the static object ID has an initial stored value of zero. The first attempt to access its stored value stores a unique positive value in **id.**  
+## <a name="remarks"></a>Hinweise  
+ Wie bei jedem Gebietsschemafacet hat die statische Objekt-ID einen anfänglichen gespeicherten Wert von NULL. Beim ersten Versuch, auf den gespeicherten Wert zuzugreifen, wird in **id** ein eindeutiger positiver Wert gespeichert.  
   
-### <a name="constructors"></a>Constructors  
-  
-|||  
-|-|-|  
-|[numpunct](#numpunct)|The constructor for objects of type `numpunct`.|  
-  
-### <a name="typedefs"></a>Typedefs  
+### <a name="constructors"></a>Konstruktoren  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|A type that is used to describe a character used by a locale.|  
-|[string_type](#string_type)|A type that describes a string containing characters of type `CharType`.|  
+|[numpunct](#numpunct)|Der Konstruktor für Objekte des Typs `numpunct`.|  
   
-### <a name="member-functions"></a>Member Functions  
+### <a name="typedefs"></a>TypeDefs  
   
 |||  
 |-|-|  
-|[decimal_point](#decimal_point)|Returns a locale-specific element to use as a decimal point.|  
-|[do_decimal_point](#do_decimal_point)|A protected virtual member function that is called to return a locale-specific element to use as a decimal point.|  
-|[do_falsename](#do_falsename)|A protected virtual member function that is called to return a string to use as a text representation of the value `false`.|  
-|[do_grouping](#do_grouping)|A protected virtual member function that is called to return a locale-specific rule for determining how digits are grouped to the left of any decimal point.|  
-|[do_thousands_sep](#do_thousands_sep)|A protected virtual member function that is called to return a locale-specific element to use as a thousands separator.|  
-|[do_truename](#do_truename)|A protected virtual member function that is called to return a string to use as a text representation of the value `true`.|  
-|[falsename](#falsename)|Returns a string to use as a text representation of the value `false`.|  
-|[grouping](#grouping)|Returns a locale-specific rule for determining how digits are grouped to the left of any decimal point.|  
-|[thousands_sep](#thousands_sep)|Returns a locale-specific element to use as a thousands separator.|  
-|[truename](#truename)|Returns a string to use as a text representation of the value `true`.|  
+|[char_type](#char_type)|Ein Typ, mit dem ein Zeichen beschrieben wird, das von einem Gebietsschema verwendet wird.|  
+|[string_type](#string_type)|Ein Typ, der eine Zeichenfolge beschreibt, die Zeichen vom Typ `CharType` enthält.|  
   
-## <a name="requirements"></a>Requirements  
+### <a name="member-functions"></a>Memberfunktionen  
+  
+|||  
+|-|-|  
+|[decimal_point](#decimal_point)|Gibt ein gebietsschemaspezifisches Element zurück, das als Dezimaltrennzeichen verwendet werden soll.|  
+|[do_decimal_point](#do_decimal_point)|Eine geschützte virtuelle Memberfunktion, die aufgerufen wird, um ein gebietsschemaspezifisches Element zurückzugeben, das als Dezimaltrennzeichen verwendet werden soll.|  
+|[do_falsename](#do_falsename)|Eine geschützte virtuelle Memberfunktion, die aufgerufen wird, um eine Zeichenfolge zurückzugeben, die als Textdarstellung des Werts `false` verwendet werden soll.|  
+|[do_grouping](#do_grouping)|Eine geschützte virtuelle Memberfunktion, die aufgerufen wird, um eine gebietsschemaspezifische Regel zur Bestimmung zurückzugeben, wie Ziffern auf der linken Seite eines Dezimaltrennzeichens gruppiert werden.|  
+|[do_thousands_sep](#do_thousands_sep)|Eine geschützte virtuelle Memberfunktion, die aufgerufen wird, um ein gebietsschemaspezifisches Element zurückzugeben, das als Tausendertrennzeichen verwendet werden soll.|  
+|[do_truename](#do_truename)|Eine geschützte virtuelle Memberfunktion, die aufgerufen wird, um eine Zeichenfolge zurückzugeben, die als Textdarstellung des Werts `true` verwendet werden soll.|  
+|[falsename](#falsename)|Gibt eine Zeichenfolge zurück, die als Textdarstellung des Werts `false` verwendet werden soll.|  
+|[grouping](#grouping)|Gibt eine gebietsschemaspezifische Regel zur Bestimmung zurück, wie Ziffern auf der linken Seite eines Dezimaltrennzeichens gruppiert werden sollen.|  
+|[thousands_sep](#thousands_sep)|Gibt ein gebietsschemaspezifisches Element zurück, das als Tausendertrennzeichen verwendet werden soll.|  
+|[truename](#truename)|Gibt eine Zeichenfolge zurück, die als Textdarstellung des Werts `true` verwendet werden soll.|  
+  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<locale>  
   
  **Namespace:** std  
   
-##  <a name="char_type"></a>  numpunct::char_type  
- A type that is used to describe a character used by a locale.  
+##  <a name="char_type"></a> numpunct::char_type  
+ Ein Typ, mit dem ein Zeichen beschrieben wird, das von einem Gebietsschema verwendet wird.  
   
 ```  
 typedef CharType char_type;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- The type is a synonym for the template parameter **CharType.**  
+### <a name="remarks"></a>Hinweise  
+ Der Typ ist ein Synonym für den Vorlagenparameter **CharType**.  
   
-##  <a name="decimal_point"></a>  numpunct::decimal_point  
- Returns a locale-specific element to use as a decimal point.  
+##  <a name="decimal_point"></a> numpunct::decimal_point  
+ Gibt ein gebietsschemaspezifisches Element zurück, das als Dezimaltrennzeichen verwendet werden soll.  
   
 ```  
 CharType decimal_point() const;
 ```  
   
-### <a name="return-value"></a>Return Value  
- A locale-specific element to use as a decimal point.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein gebietsschemaspezifisches Element, das als Dezimaltrennzeichen verwendet werden soll.  
   
-### <a name="remarks"></a>Remarks  
- The member function returns [do_decimal_point](#do_decimal_point).  
+### <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt [do_decimal_point](#do_decimal_point) zurück.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // numpunct_decimal_point.cpp  
@@ -164,98 +153,98 @@ German_Germany.1252 decimal point ,
 German_Germany.1252 thousands separator .  
 ```  
   
-##  <a name="do_decimal_point"></a>  numpunct::do_decimal_point  
- A protected virtual member function that is called to return a locale-specific element to use as a decimal point.  
+##  <a name="do_decimal_point"></a> numpunct::do_decimal_point  
+ Eine geschützte virtuelle Memberfunktion, die aufgerufen wird, um ein gebietsschemaspezifisches Element zurückzugeben, das als Dezimaltrennzeichen verwendet werden soll.  
   
 ```  
 virtual CharType do_decimal_point() const;
 ```  
   
-### <a name="return-value"></a>Return Value  
- A locale-specific element to use as a decimal point.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein gebietsschemaspezifisches Element, das als Dezimaltrennzeichen verwendet werden soll.  
   
-### <a name="example"></a>Example  
-  See the example for [decimal_point](#decimal_point), where the virtual member function is called by `decimal_point`.  
+### <a name="example"></a>Beispiel  
+  Informationen hierzu finden Sie im Beispiel für [decimal_point](#decimal_point), bei dem die virtuelle Memberfunktion durch `decimal_point` aufgerufen wird.  
   
-##  <a name="do_falsename"></a>  numpunct::do_falsename  
- The protected virtual member function returns a sequence to use as a text representation of the value **false**.  
+##  <a name="do_falsename"></a> numpunct::do_falsename  
+ Die geschützte virtuelle Memberfunktion gibt eine Sequenz zurück, die als Textdarstellung des Werts **FALSE** verwendet werden soll.  
   
 ```  
 virtual string_type do_falsename() const;
 ```  
   
-### <a name="return-value"></a>Return Value  
- A string containing a sequence to use as a text representation of the value **false**.  
+### <a name="return-value"></a>Rückgabewert  
+ Eine Zeichenfolge, die eine Sequenz enthält, die als Textdarstellung des Werts **FALSE** verwendet werden soll.  
   
-### <a name="remarks"></a>Remarks  
- The member function returns the string "false" to represent the value **false** in all locales.  
+### <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt die Zeichenfolge FALSE zurück, um den Wert **FALSE** in allen Gebietsschemas darzustellen.  
   
-### <a name="example"></a>Example  
-  See the example for [falsename](#falsename), where the virtual member function is called by `falsename`.  
+### <a name="example"></a>Beispiel  
+  Informationen hierzu finden Sie im Beispiel für [falsename](#falsename), bei dem die virtuelle Memberfunktion durch `falsename` aufgerufen wird.  
   
-##  <a name="do_grouping"></a>  numpunct::do_grouping  
- A protected virtual member function that is called to return a locale-specific rule for determining how digits are grouped to the left of any decimal point.  
+##  <a name="do_grouping"></a> numpunct::do_grouping  
+ Eine geschützte virtuelle Memberfunktion, die aufgerufen wird, um eine gebietsschemaspezifische Regel zur Bestimmung zurückzugeben, wie Ziffern auf der linken Seite eines Dezimaltrennzeichens gruppiert werden.  
   
 ```  
 virtual string do_grouping() const;
 ```  
   
-### <a name="return-value"></a>Return Value  
- A locale-specific rule for determining how digits are grouped to the left of any decimal point.  
+### <a name="return-value"></a>Rückgabewert  
+ Eine gebietsschemaspezifische Regel, die festlegt, wie Ziffern auf der linken Seite eines Dezimaltrennzeichens gruppiert werden.  
   
-### <a name="remarks"></a>Remarks  
- The protected virtual member function returns a locale-specific rule for determining how digits are grouped to the left of any decimal point. The encoding is the same as for **lconv::grouping**.  
+### <a name="remarks"></a>Hinweise  
+ Die geschützte virtuelle Memberfunktion gibt eine gebietsschemaspezifische Regel zur Bestimmung zurück, wie Ziffern auf der linken Seite eines Dezimaltrennzeichens gruppiert werden. Die Codierung ist dieselbe wie für **lconv::grouping**.  
   
-### <a name="example"></a>Example  
-  See the example for [grouping](#grouping), where the virtual member function is called by **grouping**.  
+### <a name="example"></a>Beispiel  
+  Informationen hierzu finden Sie im Beispiel für [grouping](#grouping), bei dem die virtuelle Memberfunktion durch **grouping** aufgerufen wird.  
   
-##  <a name="do_thousands_sep"></a>  numpunct::do_thousands_sep  
- A protected virtual member function that is called to return a locale-specific element to use as a thousands separator.  
+##  <a name="do_thousands_sep"></a> numpunct::do_thousands_sep  
+ Eine geschützte virtuelle Memberfunktion, die aufgerufen wird, um ein gebietsschemaspezifisches Element zurückzugeben, das als Tausendertrennzeichen verwendet werden soll.  
   
 ```  
 virtual CharType do_thousands_sep() const;
 ```  
   
-### <a name="return-value"></a>Return Value  
- Returns a locale-specific element to use as a thousands separator.  
+### <a name="return-value"></a>Rückgabewert  
+ Gibt ein gebietsschemaspezifisches Element zurück, das als Tausendertrennzeichen verwendet werden soll.  
   
-### <a name="remarks"></a>Remarks  
- The protected virtual member function returns a locale-specific element of type **CharType** to use as a group separator to the left of any decimal point.  
+### <a name="remarks"></a>Hinweise  
+ Eine geschützte virtuelle Memberfunktion gibt ein gebietsschemaspezifisches Element des Typs **CharType** zurück, das auf der linken Seite eines Dezimalzeichens als Gruppentrennzeichen verwendet werden soll.  
   
-### <a name="example"></a>Example  
-  See the example for [thousands_sep](#thousands_sep), where the virtual member function is called by `thousands_sep`.  
+### <a name="example"></a>Beispiel  
+  Informationen hierzu finden Sie im Beispiel für [thousands_sep](#thousands_sep), bei dem die virtuelle Memberfunktion durch `thousands_sep` aufgerufen wird.  
   
-##  <a name="do_truename"></a>  numpunct::do_truename  
- A protected virtual member function that is called to return a string to use as a text representation of the value **true**.  
+##  <a name="do_truename"></a> numpunct::do_truename  
+ Eine geschützte virtuelle Memberfunktion, die aufgerufen wird, um eine Zeichenfolge zurückzugeben, die als Textdarstellung des Werts **TRUE** verwendet werden soll.  
   
 ```  
 virtual string_type do_truename() const;
 ```  
   
-### <a name="remarks"></a>Remarks  
- A string to use as a text representation of the value **true**.  
+### <a name="remarks"></a>Hinweise  
+ Eine Zeichenfolge, die als Textdarstellung des Werts **TRUE** verwendet werden soll.  
   
- All locales return a string "true" to represent the value **true**.  
+ Alle Gebietsschemas geben eine Zeichenfolge TRUE, zurück, um den Wert **TRUE** darzustellen.  
   
-### <a name="example"></a>Example  
-  See the example for [truename](#truename), where the virtual member function is called by `truename`.  
+### <a name="example"></a>Beispiel  
+  Informationen hierzu finden Sie im Beispiel für [truename](#truename), bei dem die virtuelle Memberfunktion durch `truename` aufgerufen wird.  
   
-##  <a name="falsename"></a>  numpunct::falsename  
- Returns a string to use as a text representation of the value **false**.  
+##  <a name="falsename"></a> numpunct::falsename  
+ Gibt eine Zeichenfolge zurück, die als Textdarstellung des Werts **FALSE** verwendet werden soll.  
   
 ```  
 string_type falsename() const;
 ```  
   
-### <a name="return-value"></a>Return Value  
- A string containing a sequence of **CharType**s to use as a text representation of the value **false**.  
+### <a name="return-value"></a>Rückgabewert  
+ Eine Zeichenfolge, die eine **CharType**-Sequenz enthält, die als Textdarstellung des Werts **FALSE** verwendet werden soll.  
   
-### <a name="remarks"></a>Remarks  
- The member function returns the string "false" to represent the value **false** in all locales.  
+### <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt die Zeichenfolge FALSE zurück, um den Wert **FALSE** in allen Gebietsschemas darzustellen.  
   
- The member function returns [do_falsename](#do_falsename).  
+ Die Memberfunktion gibt [do_falsename](#do_falsename) zurück.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // numpunct_falsename.cpp  
@@ -286,20 +275,20 @@ French_France.1252 truename true
 French_France.1252 falsename false  
 ```  
   
-##  <a name="grouping"></a>  numpunct::grouping  
- Returns a locale-specific rule for determining how digits are grouped to the left of any decimal point.  
+##  <a name="grouping"></a> numpunct::grouping  
+ Gibt eine gebietsschemaspezifische Regel zur Bestimmung zurück, wie Ziffern auf der linken Seite eines Dezimaltrennzeichens gruppiert werden sollen.  
   
 ```  
 string grouping() const;
 ```  
   
-### <a name="return-value"></a>Return Value  
- A locale-specific rule for determining how digits are grouped to the left of any decimal point.  
+### <a name="return-value"></a>Rückgabewert  
+ Eine gebietsschemaspezifische Regel, die festlegt, wie Ziffern auf der linken Seite eines Dezimaltrennzeichens gruppiert werden.  
   
-### <a name="remarks"></a>Remarks  
- The member function returns [do_grouping](#do_grouping).  
+### <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt [do_grouping](#do_grouping) zurück.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // numpunct_grouping.cpp  
@@ -329,54 +318,54 @@ German_Germany.1252 international grouping:
  the 0th group to the left of the radix character is of size 3  
 ```  
   
-##  <a name="numpunct"></a>  numpunct::numpunct  
- The constructor for objects of type `numpunct`.  
+##  <a name="numpunct"></a> numpunct::numpunct  
+ Der Konstruktor für Objekte des Typs `numpunct`.  
   
 ```  
 explicit numpunct(size_t _Refs = 0);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `_Refs`  
- Integer value used to specify the type of memory management for the object.  
+ Integerwert, der zum Angeben des Speicherverwaltungstyps für das Objekt verwendet wird.  
   
-### <a name="remarks"></a>Remarks  
- The possible values for the `_Refs` parameter and their significance are:  
+### <a name="remarks"></a>Hinweise  
+ Mögliche Werte für den `_Refs`-Parameter und ihre Bedeutung:  
   
--   0: The lifetime of the object is managed by the locales that contain it.  
+-   0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, in denen es enthalten ist.  
   
--   1: The lifetime of the object must be manually managed.  
+-   1: Die Lebensdauer des Objekts muss manuell verwaltet werden.  
   
--   \> 1: These values are not defined.  
+-   \>1: Diese Werte sind nicht definiert.  
   
- No direct examples are possible, because the destructor is protected.  
+ Direkte Beispiele sind nicht möglich, da der Destruktor geschützt ist.  
   
- The constructor initializes its base object with **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).  
+ Der Konstruktor initialisiert sein Basisobjekt mit **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).  
   
-##  <a name="string_type"></a>  numpunct::string_type  
- A type that describes a string containing characters of type **CharType**.  
+##  <a name="string_type"></a> numpunct::string_type  
+ Ein Typ, der eine Zeichenfolge beschreibt, die Zeichen des Typs **CharType** enthält.  
   
 ```  
 typedef basic_string<CharType, Traits, Allocator> string_type;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- The type describes a specialization of template class [basic_string](../standard-library/basic-string-class.md) whose objects can store copies of the punctuation sequences.  
+### <a name="remarks"></a>Hinweise  
+ Der Typ beschreibt eine Spezialisierung der Vorlagenklasse [basic_string](../standard-library/basic-string-class.md), deren Objekte Kopien der Interpunktionssequenzen speichern können.  
   
-##  <a name="thousands_sep"></a>  numpunct::thousands_sep  
- Returns a locale-specific element to use as a thousands separator.  
+##  <a name="thousands_sep"></a> numpunct::thousands_sep  
+ Gibt ein gebietsschemaspezifisches Element zurück, das als Tausendertrennzeichen verwendet werden soll.  
   
 ```  
 CharType thousands_sep() const;
 ```  
   
-### <a name="return-value"></a>Return Value  
- A locale-specific element to use as a thousands separator.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein gebietsschemaspezifisches Element, das als Tausendertrennzeichen verwendet werden soll.  
   
-### <a name="remarks"></a>Remarks  
- The member function returns [do_thousands_sep](#do_thousands_sep).  
+### <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt [do_thousands_sep](#do_thousands_sep) zurück.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // numpunct_thou_sep.cpp  
@@ -403,22 +392,22 @@ German_Germany.1252 decimal point ,
 German_Germany.1252 thousands separator .  
 ```  
   
-##  <a name="truename"></a>  numpunct::truename  
- Returns a string to use as a text representation of the value **true**.  
+##  <a name="truename"></a> numpunct::truename  
+ Gibt eine Zeichenfolge zurück, die als Textdarstellung des Werts **TRUE** verwendet werden soll.  
   
 ```  
 string_type falsename() const;
 ```  
   
-### <a name="return-value"></a>Return Value  
- A string to use as a text representation of the value **true**.  
+### <a name="return-value"></a>Rückgabewert  
+ Eine Zeichenfolge, die als Textdarstellung des Werts **TRUE** verwendet werden soll.  
   
-### <a name="remarks"></a>Remarks  
- The member function returns [do_truename](#do_truename).  
+### <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt [do_truename](#do_truename) zurück.  
   
- All locales return a string "true" to represent the value **true**.  
+ Alle Gebietsschemas geben eine Zeichenfolge TRUE, zurück, um den Wert **TRUE** darzustellen.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // numpunct_truename.cpp  
@@ -449,9 +438,9 @@ French_France.1252 truename true
 French_France.1252 falsename false  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [\<locale>](../standard-library/locale.md)   
- [facet Class](../standard-library/locale-class.md#facet_class)   
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [facet-Klasse](../standard-library/locale-class.md#facet_class)   
+ [Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

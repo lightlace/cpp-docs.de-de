@@ -1,5 +1,5 @@
 ---
-title: '&lt;complex&gt; | Microsoft Docs'
+title: '&lt;complex&gt; | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- <complex>", "std::<complex>
+- <complex>
+- std.<complex>
+- std::<complex>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -33,15 +35,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 03b72414921c6de42a7e5c4dd5bd91d1630c4ee4
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 02d651b3e3ca4dc643b01463a85762a6427b8e83
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
-Defines the container template class **complex** and its supporting templates.  
+Definiert die containervorlagenklasse **komplexe** und deren unterstützende Vorlagen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,24 +51,24 @@ Defines the container template class **complex** and its supporting templates.
 #include <complex>  
 ```  
   
-## <a name="remarks"></a>Remarks  
- A complex number is an ordered pair of real numbers. In purely geometrical terms, the complex plane is the real, two-dimensional plane. The special qualities of the complex plane that distinguish it from the real plane are due to its having an additional algebraic structure. This algebraic structure has two fundamental operations:  
+## <a name="remarks"></a>Hinweise  
+ Eine komplexe Zahl ist ein geordnetes Paar aus reellen Zahlen. Rein geometrisch ausgedrückt ist die komplexe Ebene die reelle zweidimensionale Ebene. Die speziellen Merkmale der komplexen Ebene, durch die sie sich von der reellen Ebene unterscheidet, sind darin begründet, dass sie eine zusätzliche algebraische Struktur hat. Diese algebraische Struktur hat zwei grundlegende Vorgänge:  
   
 -   Addition defined as (*a*, *b*) + (*c*, *d*) = (*a* + *c*, *b* + *d*)  
   
 -   Multiplication defined as (*a*, *b*) \* (*c*, *d*) = (*ac* - *bd*, *ad* + *bc*)  
   
- The set of complex numbers with the operations of complex addition and complex multiplication are a field in the standard algebraic sense:  
+ Die Menge der komplexen Zahlen mit den Operationen für komplexe Addition und komplexe Multiplikation ist im standardmäßigen algebraischen Sinn ein Körper:  
   
--   The operations of addition and multiplication are commutative and associative and multiplication distributes over addition exactly as it does with real addition and multiplication on the field of real numbers.  
+-   Die Operationen Addition und Multiplikation sind kommutativ und assoziativ, und Multiplikation erfolgt vor Addition, genau so, wie dies für reelle Addition und Multiplikation für den Körper der reellen Zahlen der Fall ist.  
   
--   The complex number (0, 0) is the additive identity and (1, 0) is the multiplicative identity.  
+-   Die komplexe Zahl (0, 0) ist die Additive Identität und (1, 0) ist die multiplikative Identität.  
   
--   The additive inverse for a complex number (*a*, *b*) is (-*a*, -*b*), and the multiplicative inverse for all such complex numbers except (0, 0) is  
+-   Die gegenzahl für eine komplexe Zahl (*eine*, *b*) ist (-*eine*, -*b*), und de Kehrwert für alle komplexe Zahlen außer (0, 0) ist  
   
      (*a*/(*a*<sup>2</sup> + *b*<sup>2</sup>), -*b*/(*a*<sup>2</sup> + *b*<sup>2</sup>))  
   
- By representing a complex number *z* = (*a*, *b*) in the form *z* = *a* + *bi*, where *i*<sup>2</sup> = -1, the rules for the algebra of the set of real numbers can be applied to the set of complex numbers and to their components. For example:  
+ Durch die Darstellung einer komplexen Zahl *z* = (*eine*, *b*) in der Form *z* = *eine* + *Bi*, wobei *ich*<sup>2</sup> =-1, die Regeln für die Algebra der Menge der reellen Zahlen, die an die Menge der komplexen Zahlen und deren Komponenten angewendet werden kann. Zum Beispiel:  
   
   (1 + 2*i*) \* (2 + 3*i*)  
   = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*)  
@@ -74,9 +76,9 @@ Defines the container template class **complex** and its supporting templates.
   = (2 - 6) + (3 + 4)*i*  
   = -4 + 7*i*  
   
- The system of complex numbers is a field, but it is not an ordered field. There is no ordering of the complex numbers as there is for the field of real numbers and its subsets, so inequalities cannot be applied to complex numbers as they are to real numbers.  
+ Das System der komplexen Zahlen ist ein Körper, jedoch kein geordneter Körper. Es gibt keine Reihenfolge der komplexen Zahlen ist für das Feld der reellen Zahlen und deren Teilmengen vorhanden. daher können ungleichheiten nicht auf komplexe Zahlen angewendet werden können, wie sie in reelle Zahlen sind.  
   
- There are three common forms of representing a complex number *z*:  
+ Es gibt drei allgemeine Formen der Darstellung einer komplexen Zahl *z*:  
   
 -   Cartesian: *z* = *a* + *bi*  
   
@@ -84,75 +86,75 @@ Defines the container template class **complex** and its supporting templates.
   
 -   Exponential: *z* = *r* \* *e*<sup>*ip*</sup>  
   
- The terms used in these standard representations of a complex number are referred to as follows:  
+ Die Ausdrücke, die in diesen Standarddarstellungen einer komplexen Zahl verwendet werden, werden wie folgt bezeichnet:  
   
--   The real Cartesian component or real part *a*.  
+-   Die reelle kartesische Komponente oder der Realteil *a*  
   
--   The imaginary Cartesian component or imaginary part *b*.  
+-   Die imaginäre kartesische Komponente oder der Imaginärteil *b*  
   
--   The modulus or absolute value of a complex number *r*.  
+-   Der Betrag oder Absolute Wert einer komplexen Zahl *r*.  
   
--   The argument or phase angle *p* in radians.  
+-   Der Argument- oder Phasenwinkel *p* im Bogenmaß.  
   
- Unless otherwise specified, functions that can return multiple values are required to return a principal value for their arguments greater than -π and less than or equal to +π to keep them single valued. All angles must be expressed in radians, where there are 2π radians (360 degrees) in a circle.  
+ Sofern nicht anders angegeben, sind Funktionen, die mehrere Werte zurückgeben können, einen Hauptwert für ihre Argumente zurückgeben,-π größer oder kleiner als oder gleich + π, um sie einwertig bleiben. Alle Winkel im Bogenmaß ausgedrückt werden müssen, wobei 2π Radiant (360 Grad) in einem Kreis.  
   
-### <a name="functions"></a>Functions  
-  
-|||  
-|-|-|  
-|[abs](../standard-library/complex-functions.md#abs)|Calculates the modulus of a complex number.|  
-|[arg](../standard-library/complex-functions.md#arg)|Extracts the argument from a complex number.|  
-|[conj](../standard-library/complex-functions.md#conj)|Returns the complex conjugate of a complex number.|  
-|[cos](../standard-library/complex-functions.md#cos)|Returns the cosine of a complex number.|  
-|[cosh](../standard-library/complex-functions.md#cosh)|Returns the hyperbolic cosine of a complex number.|  
-|[exp](../standard-library/complex-functions.md#exp)|Returns the exponential function of a complex number.|  
-|[imag](../standard-library/complex-functions.md#imag)|Extracts the imaginary component of a complex number.|  
-|[log](../standard-library/complex-functions.md#log)|Returns the natural logarithm of a complex number.|  
-|[log10](../standard-library/complex-functions.md#log10)|Returns the base 10 logarithm of a complex number.|  
-|[norm](../standard-library/complex-functions.md#norm)|Extracts the norm of a complex number.|  
-|[polar](../standard-library/complex-functions.md#polar)|Returns the complex number, which corresponds to a specified modulus and argument, in Cartesian form.|  
-|[pow](../standard-library/complex-functions.md#pow)|Evaluates the complex number obtained by raising a base that is a complex number to the power of another complex number.|  
-|[real](../standard-library/complex-functions.md#real)|Extracts the real component of a complex number.|  
-|[sin](../standard-library/complex-functions.md#sin)|Returns the sine of a complex number.|  
-|[sinh](../standard-library/complex-functions.md#sinh)|Returns the hyperbolic sine of a complex number.|  
-|[sqrt](../standard-library/complex-functions.md#sqrt)|Returns the square root of a complex number.|  
-|[tan](../standard-library/complex-functions.md#tan)|Returns the tangent of a complex number.|  
-|[tanh](../standard-library/complex-functions.md#tanh)|Returns the hyperbolic tangent of a complex number.|  
-  
-### <a name="operators"></a>Operators  
+### <a name="functions"></a>Funktionen  
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/complex-operators.md#op_neq)|Tests for inequality between two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.|  
-|[operator*](../standard-library/complex-operators.md#op_star)|Multiplies two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.|  
-|[operator+](../standard-library/complex-operators.md#op_add)|Adds two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.|  
-|[operator-](../standard-library/complex-operators.md#operator-)|Subtracts two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.|  
-|[operator/](../standard-library/complex-operators.md#op_div)|Divides two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.|  
-|[operator<\<](../standard-library/complex-operators.md#op_lt_lt)|A template function that inserts a complex number into the output stream.|  
-|[operator==](../standard-library/complex-operators.md#op_eq_eq)|Tests for equality between two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.|  
-|[operator>>](../standard-library/complex-operators.md#op_gt_gt)|A template function that extracts a complex value from the input stream.|  
+|[abs](../standard-library/complex-functions.md#abs)|Berechnet den Betrag einer komplexen Zahl.|  
+|[arg](../standard-library/complex-functions.md#arg)|Extrahiert das Argument aus einer komplexen Zahl.|  
+|[conj](../standard-library/complex-functions.md#conj)|Gibt die konjugierte Zahl einer komplexen Zahl zurück.|  
+|[cos](../standard-library/complex-functions.md#cos)|Gibt den Kosinus einer komplexen Zahl zurück.|  
+|[cosh](../standard-library/complex-functions.md#cosh)|Gibt den Kosinus Hyperbolicus einer komplexen Zahl zurück.|  
+|[exp](../standard-library/complex-functions.md#exp)|Gibt die Exponentialfunktion einer komplexen Zahl zurück.|  
+|[imag](../standard-library/complex-functions.md#imag)|Extrahiert die imaginäre Komponente einer komplexen Zahl.|  
+|[log](../standard-library/complex-functions.md#log)|Gibt den natürlichen Logarithmus einer komplexen Zahl zurück.|  
+|[log10](../standard-library/complex-functions.md#log10)|Gibt den Zehnerlogarithmus einer komplexen Zahl zurück.|  
+|[norm](../standard-library/complex-functions.md#norm)|Extrahiert die Norm einer komplexen Zahl.|  
+|[polar](../standard-library/complex-functions.md#polar)|Gibt die komplexe Zahl, die einem angegebenen Betrag und Argument entspricht, in kartesischer Form zurück.|  
+|[pow](../standard-library/complex-functions.md#pow)|Wertet die komplexe Zahl aus, die sich dadurch ergibt, dass eine Basis, die eine komplexe Zahl ist, mit einer anderen komplexen Zahl potenziert wird.|  
+|[Real](../standard-library/complex-functions.md#real)|Extrahiert die reelle Komponente einer komplexen Zahl.|  
+|[sin](../standard-library/complex-functions.md#sin)|Gibt den Sinus einer komplexen Zahl zurück.|  
+|[sinh](../standard-library/complex-functions.md#sinh)|Gibt den Sinus Hyperbolicus einer komplexen Zahl zurück.|  
+|[sqrt](../standard-library/complex-functions.md#sqrt)|Gibt die Quadratwurzel einer komplexen Zahl zurück.|  
+|[tan](../standard-library/complex-functions.md#tan)|Gibt den Tangens einer komplexen Zahl zurück.|  
+|[tanh](../standard-library/complex-functions.md#tanh)|Gibt den Tangens Hyperbolicus einer komplexen Zahl zurück.|  
   
-### <a name="classes"></a>Classes  
+### <a name="operators"></a>Operatoren  
   
 |||  
 |-|-|  
-|[complex\<double>](../standard-library/complex-double.md)|The explicitly specialized template class describes an object that stores an ordered pair of objects, both of type **double**, where the first represents the real part of a complex number and the second represents the imaginary part.|  
-|[complex\<float>](../standard-library/complex-float.md)|The explicitly specialized template class describes an object that stores an ordered pair of objects, both of type **float**, where the first represents the real part of a complex number and the second represents the imaginary part.|  
-|[complex\<long double>](../standard-library/complex-long-double.md)|The explicitly specialized template class describes an object that stores an ordered pair of objects, both of type **long double**, where the first represents the real part of a complex number and the second represents the imaginary part.|  
-|[complex](../standard-library/complex-class.md)|The template class describes an object used to represent the complex number system and perform complex arithmetic operations.|  
+|[operator!=](../standard-library/complex-operators.md#op_neq)|Testet zwei komplexe Zahlen auf Ungleichheit, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.|  
+|[operator*](../standard-library/complex-operators.md#op_star)|Multipliziert zwei komplexe Zahlen, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.|  
+|[operator+](../standard-library/complex-operators.md#op_add)|Addiert zwei komplexe Zahlen, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.|  
+|[operator-](../standard-library/complex-operators.md#operator-)|Subtrahiert zwei komplexe Zahlen, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.|  
+|[operator/](../standard-library/complex-operators.md#op_div)|Dividiert zwei komplexe Zahlen, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.|  
+|[operator<\<](../standard-library/complex-operators.md#op_lt_lt)|Eine Vorlagenfunktion, die eine komplexe Zahl in den Ausgabestream einfügt.|  
+|[operator==](../standard-library/complex-operators.md#op_eq_eq)|Testet zwei komplexe Zahlen auf Gleichheit, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.|  
+|[operator >>](../standard-library/complex-operators.md#op_gt_gt)|Eine Vorlagenfunktion, die einen komplexen Wert aus dem Eingabestream extrahiert.|  
   
-### <a name="literals"></a>Literals  
- The \<complex> header defines the following [user-defined literals](../cpp/user-defined-literals-cpp.md) which create a complex number with the real part being zero and the imaginary part being the value of the input parameter.  
+### <a name="classes"></a>Klassen  
   
 |||  
 |-|-|  
-|`constexpr complex<long double> operator""il(long double d)`<br /><br /> `constexpr complex<long double> operator""il(unsigned long long d)`|Returns: `complex<long double>{0.0L, static_cast<long double>(d)}`|  
-|`constexpr complex<double> operator""i(long double d)`<br /><br /> `constexpr complex<double> operator""i(unsigned long long d)`|Returns: `complex<double>{0.0, static_cast<double>(d)}`.|  
-|`constexpr complex<float> operator""if(long double d)`<br /><br /> `constexpr complex<float> operator""if(unsigned long long d)`|Returns: `complex<float>{0.0f, static_cast<float>(d)}`.|  
+|[complex\<double>](../standard-library/complex-double.md)|Die explizit spezialisierte Vorlagenklasse beschreibt ein Objekt, das ein geordnetes Paar von Objekten, beide vom Typ speichert **doppelte**, wobei das erste den reellen Teil einer komplexen Zahl und die Sekunde, den imaginären Teil entspricht darstellt.|  
+|[complex\<float>](../standard-library/complex-float.md)|Die explizit spezialisierte Vorlagenklasse beschreibt ein Objekt, das ein geordnetes Paar von Objekten, beide vom Typ speichert **"float"**, wobei das erste den reellen Teil einer komplexen Zahl und die Sekunde, den imaginären Teil entspricht darstellt.|  
+|[complex\<long double>](../standard-library/complex-long-double.md)|Die explizit spezialisierte Vorlagenklasse beschreibt ein Objekt, das ein geordnetes Paar von Objekten, beide vom Typ speichert **long double**, wobei das erste den reellen Teil einer komplexen Zahl und die Sekunde, den imaginären Teil entspricht darstellt.|  
+|[complex](../standard-library/complex-class.md)|Die Vorlagenklasse beschreibt ein Objekt, mit dem das System komplexer Zahlen dargestellt wird und komplexe arithmetische Operationen ausgeführt werden.|  
   
-## <a name="see-also"></a>See Also  
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+### <a name="literals"></a>Literale  
+ Der Header \<complex> definiert die folgenden [benutzerdefinierten Literale](../cpp/user-defined-literals-cpp.md), mit denen eine komplexe Zahl erstellt wird, deren Realteil 0 (null) und deren Imaginärteil der Wert des Eingabeparameters ist.  
+  
+|||  
+|-|-|  
+|`constexpr complex<long double> operator""il(long double d)`<br /><br /> `constexpr complex<long double> operator""il(unsigned long long d)`|Gibt:`complex<long double>{0.0L, static_cast<long double>(d)}`|  
+|`constexpr complex<double> operator""i(long double d)`<br /><br /> `constexpr complex<double> operator""i(unsigned long long d)`|Gibt `complex<double>{0.0, static_cast<double>(d)}` zurück.|  
+|`constexpr complex<float> operator""if(long double d)`<br /><br /> `constexpr complex<float> operator""if(unsigned long long d)`|Gibt `complex<float>{0.0f, static_cast<float>(d)}` zurück.|  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

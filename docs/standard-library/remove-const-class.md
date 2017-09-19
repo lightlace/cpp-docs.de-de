@@ -1,5 +1,5 @@
 ---
-title: remove_const Class | Microsoft Docs
+title: remove_const-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- remove_const
 - type_traits/std::remove_const
 dev_langs:
 - C++
@@ -34,15 +35,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 5cb08215b0b99f7fa9f462749d79a8d1831cebad
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
+ms.openlocfilehash: 39a88c886636c7c79c50771b5d4a91b26be954b4
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="removeconst-class"></a>remove_const Class
-Makes a non const type from type.  
+# <a name="removeconst-class"></a>remove_const-Klasse
+Wandelt einen Typ in einen nicht konstanten Typ um.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,14 +57,14 @@ template <class T>
 using remove_const_t = typename remove_const<T>::type;  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
  `T`  
- The type to modify.  
+ Der zu ändernde Typ.  
   
-## <a name="remarks"></a>Remarks  
- An instance of `remove_const<T>` holds a modified-type that is `T1` when `T` is of the form `const T1`, otherwise `T`.  
+## <a name="remarks"></a>Hinweise  
+ Eine Instanz von `remove_const<T>` enthält einen geänderten Typ, der `T1` ist, wenn `T` das Format `const T1` hat; andernfalls `T`.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Beispiel  
   
 ```cpp  
 #include <type_traits>   
@@ -85,13 +86,13 @@ int main()
 remove_const_t<const int> == int  
 ```  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [<type_traits>](../standard-library/type-traits.md)   
- [add_const Class](../standard-library/add-const-class.md)   
- [remove_cv Class](../standard-library/remove-cv-class.md)
+ [add_const-Klasse](../standard-library/add-const-class.md)   
+ [remove_cv-Klasse](../standard-library/remove-cv-class.md)
 

@@ -1,5 +1,5 @@
 ---
-title: '&lt;unordered_map&gt; functions | Microsoft Docs'
+title: '&lt;unordered_map&gt;-Funktionen | Microsoft-Dokumente'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,22 +17,20 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-helpviewer_keywords:
-- ', '
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 684a64b21b8ffac0d80fdfdc5e09e6d366116511
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: b60954085c747fb06bc6ba4f6058909a54765e49
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="ltunorderedmapgt-functions"></a>&lt;unordered_map&gt; functions
+# <a name="ltunorderedmapgt-functions"></a>&lt;unordered_map&gt;-Funktionen
 |||  
 |-|-|  
 |[swap (unordered_map)](#swap)|[swap (unordered_multimap)](#swap_function_multimap)|  
   
-##  <a name="swap"></a>  swap (unordered_map)  
- Swaps the contents of two containers.  
+##  <a name="swap"></a> swap (unordered_map)  
+ Vertauscht den Inhalt von zwei Containern.  
   
 ```  
 template <class Key, class Ty, class Hash, class Pred, class Alloc>  
@@ -41,32 +39,32 @@ void swap(
     unordered_map <Key, Ty, Hash, Pred, Alloc>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `Key`  
- The key type.  
+ Der Schlüsseltyp.  
   
  `Ty`  
- The mapped type.  
+ Der zugeordnete Typ.  
   
  `Hash`  
- The hash function object type.  
+ Der Hashfunktionsobjekttyp.  
   
  `Pred`  
- The equality comparison function object type.  
+ Der Gleichheitsvergleich-Funktionsobjekttyp.  
   
  `Alloc`  
- The allocator class.  
+ Die Zuweisungsklasse.  
   
  `left`  
- The first container to swap.  
+ Der erste zu tauschende Container.  
   
  `right`  
- The second container to swap.  
+ Der zweite zu tauschende Container.  
   
-### <a name="remarks"></a>Remarks  
- The template function executes `left.`[unordered_map::swap](../standard-library/unordered-map-class.md#swap)`(right)`.  
+### <a name="remarks"></a>Hinweise  
+ Die Vorlagenfunktion führt `left.`[unordered_map::swap](../standard-library/unordered-map-class.md#swap)`(right)` aus.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // std__unordered_map__u_m_swap.cpp   
@@ -122,8 +120,8 @@ int main()
 [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="swap_function_multimap"></a>  swap (unordered_multimap)  
- Swaps the contents of two containers.  
+##  <a name="swap_function_multimap"></a> swap (unordered_multimap)  
+ Vertauscht den Inhalt von zwei Containern.  
   
 ```  
 template <class Key, class Ty, class Hash, class Pred, class Alloc>  
@@ -132,32 +130,32 @@ void swap(
     unordered_multimap <Key, Ty, Hash, Pred, Alloc>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `Key`  
- The key type.  
+ Der Schlüsseltyp.  
   
  `Ty`  
- The mapped type.  
+ Der zugeordnete Typ.  
   
  `Hash`  
- The hash function object type.  
+ Der Hashfunktionsobjekttyp.  
   
  `Pred`  
- The equality comparison function object type.  
+ Der Gleichheitsvergleich-Funktionsobjekttyp.  
   
  `Alloc`  
- The allocator class.  
+ Die Zuweisungsklasse.  
   
  `left`  
- The first container to swap.  
+ Der erste zu tauschende Container.  
   
  `right`  
- The second container to swap.  
+ Der zweite zu tauschende Container.  
   
-### <a name="remarks"></a>Remarks  
- The template function executes `left.`[unordered_multimap::swap](../standard-library/unordered-multimap-class.md#swap)`(right)`.  
+### <a name="remarks"></a>Hinweise  
+ Die Vorlagenfunktion führt `left.`[unordered_multimap::swap](../standard-library/unordered-multimap-class.md#swap)`(right)` aus.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Beispiel  
   
 ```cpp  
 // std__unordered_map__u_mm_swap.cpp   
@@ -213,7 +211,7 @@ int main()
 [c, 3] [b, 2] [a, 1]  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [<unordered_map>](../standard-library/unordered-map.md)
 
 

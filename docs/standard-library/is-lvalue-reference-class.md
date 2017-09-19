@@ -1,5 +1,5 @@
 ---
-title: is_lvalue_reference Class | Microsoft Docs
+title: add_lvalue_reference-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- is_lvalue_reference
 - type_traits/std::is_lvalue_reference
 dev_langs:
 - C++
@@ -34,15 +35,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: d95d1194812ca4b5184d96026d384068502e9b75
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 71a98284e641ad5d24dc3f1413bdf8d210b2091a
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="islvaluereference-class"></a>is_lvalue_reference Class
-Tests if type is an lvalue reference.  
+# <a name="islvaluereference-class"></a>is_lvalue_reference-Klasse
+Testet, ob es sich beim Typ um einen lvalue-Verweis handelt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,21 +52,21 @@ template <class Ty>
 struct is_lvalue_reference;
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
  `Ty`  
- The type to query.  
+ Der abzufragende Typ.  
   
-## <a name="remarks"></a>Remarks  
- An instance of this type predicate holds true if the type `Ty` is a reference to an object or to a function, otherwise it holds false. Note that `Ty` may not be an rvalue reference. For more information about rvalues, see [Rvalue Reference Declarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
+## <a name="remarks"></a>Hinweise  
+ Eine Instanz dieses Typprädikats ist TRUE, wenn der `Ty`-Typ ein Verweis auf ein Objekt oder eine Funktion ist; andernfalls FALSE. Beachten Sie, dass es sich beim `Ty`-Typ möglicherweise nicht um einen rvalue-Verweis handelt. Weitere Informationen zu Rvalues finden Sie unter [Rvalue-Verweisdeklarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [<type_traits>](../standard-library/type-traits.md)   
- [Lvalues and Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)
+ [Lvalues und Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)
 
 
 

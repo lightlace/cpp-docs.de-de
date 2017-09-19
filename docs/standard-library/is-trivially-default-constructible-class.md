@@ -1,5 +1,5 @@
 ---
-title: is_trivially_default_constructible Class | Microsoft Docs
+title: is_trivially_default_constructible-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- is_trivially_default_constructible
 - type_traits/std::is_trivially_default_constructible
 dev_langs:
 - C++
@@ -33,15 +34,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 7378e982af31c1030012934924a053666fb4fff2
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: dd41fbdcc33250bc60a0b919b17dd52862549a77
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="istriviallydefaultconstructible-class"></a>is_trivially_default_constructible Class
-Tests if type has trivial default constructor.  
+# <a name="istriviallydefaultconstructible-class"></a>is_trivially_default_constructible-Klasse
+Testet, ob der Typ einen trivialen Standardkonstruktor aufweist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,33 +51,33 @@ template <class Ty>
 struct is_trivially_default_constructible;
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
  `Ty`  
- The type to query.  
+ Der abzufragende Typ.  
   
-## <a name="remarks"></a>Remarks  
- An instance of the type predicate holds true if the type `Ty` is a class that has a trivial constructor, otherwise it holds false.  
+## <a name="remarks"></a>Hinweise  
+ Eine Instanz des Typprädikats ist „true“, wenn der `Ty` Typ eine Klasse ist, die einen trivialen Konstruktor aufweist; andernfalls „false“.  
   
- A default constructor for a class `Ty` is trivial if:  
+ Einen Standardkonstruktor für eine Klasse `Ty` ist trivial, wenn:  
   
--   it is an implicitly declared default constructor  
+-   es ist eine implizit deklarierte Standardkonstruktor  
   
--   the class `Ty` has no virtual functions  
+-   die Klasse `Ty` hat keine virtuellen Funktionen  
   
--   the class `Ty` has no virtual bases  
+-   die Klasse `Ty` hat keine virtuellen Basen  
   
--   all the direct bases of the class `Ty` have trivial constructors  
+-   alle direkten Basisklassen der Klasse `Ty` weisen triviale Konstruktoren auf  
   
--   the classes of all the non-static data members of class type have trivial constructors  
+-   die Klassen aller nicht statischen Datenmember des Klassentyps haben triviale Konstruktoren  
   
--   the classes of all the non-static data members of type array of class have trivial constructors  
+-   die Klassen aller nicht statischen Datenmember vom Typarray der Klasse haben triviale Konstruktoren  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [<type_traits>](../standard-library/type-traits.md)
 
 

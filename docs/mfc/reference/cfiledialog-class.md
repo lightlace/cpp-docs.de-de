@@ -1,11 +1,11 @@
 ---
-title: CFileDialog Class | Microsoft Docs
+title: CFileDialog-Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- cpp-windows
+- devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -77,69 +77,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CFileDialog [MFC], CFileDialog
-- CFileDialog [MFC], AddCheckButton
-- CFileDialog [MFC], AddComboBox
-- CFileDialog [MFC], AddControlItem
-- CFileDialog [MFC], AddEditBox
-- CFileDialog [MFC], AddMenu
-- CFileDialog [MFC], AddPlace
-- CFileDialog [MFC], AddPushButton
-- CFileDialog [MFC], AddRadioButtonList
-- CFileDialog [MFC], AddSeparator
-- CFileDialog [MFC], AddText
-- CFileDialog [MFC], ApplyOFNToShellDialog
-- CFileDialog [MFC], DoModal
-- CFileDialog [MFC], EnableOpenDropDown
-- CFileDialog [MFC], EndVisualGroup
-- CFileDialog [MFC], GetCheckButtonState
-- CFileDialog [MFC], GetControlItemState
-- CFileDialog [MFC], GetControlState
-- CFileDialog [MFC], GetEditBoxText
-- CFileDialog [MFC], GetFileExt
-- CFileDialog [MFC], GetFileName
-- CFileDialog [MFC], GetFileTitle
-- CFileDialog [MFC], GetFolderPath
-- CFileDialog [MFC], GetIFileDialogCustomize
-- CFileDialog [MFC], GetIFileOpenDialog
-- CFileDialog [MFC], GetIFileSaveDialog
-- CFileDialog [MFC], GetNextPathName
-- CFileDialog [MFC], GetOFN
-- CFileDialog [MFC], GetPathName
-- CFileDialog [MFC], GetReadOnlyPref
-- CFileDialog [MFC], GetResult
-- CFileDialog [MFC], GetResults
-- CFileDialog [MFC], GetSelectedControlItem
-- CFileDialog [MFC], GetStartPosition
-- CFileDialog [MFC], HideControl
-- CFileDialog [MFC], IsPickFoldersMode
-- CFileDialog [MFC], MakeProminent
-- CFileDialog [MFC], RemoveControlItem
-- CFileDialog [MFC], SetCheckButtonState
-- CFileDialog [MFC], SetControlItemState
-- CFileDialog [MFC], SetControlItemText
-- CFileDialog [MFC], SetControlLabel
-- CFileDialog [MFC], SetControlState
-- CFileDialog [MFC], SetControlText
-- CFileDialog [MFC], SetDefExt
-- CFileDialog [MFC], SetEditBoxText
-- CFileDialog [MFC], SetProperties
-- CFileDialog [MFC], SetSelectedControlItem
-- CFileDialog [MFC], SetTemplate
-- CFileDialog [MFC], StartVisualGroup
-- CFileDialog [MFC], UpdateOFNFromShellDialog
-- CFileDialog [MFC], OnButtonClicked
-- CFileDialog [MFC], OnCheckButtonToggled
-- CFileDialog [MFC], OnControlActivating
-- CFileDialog [MFC], OnFileNameChange
-- CFileDialog [MFC], OnFileNameOK
-- CFileDialog [MFC], OnFolderChange
-- CFileDialog [MFC], OnInitDone
-- CFileDialog [MFC], OnItemSelected
-- CFileDialog [MFC], OnLBSelChangedNotify
-- CFileDialog [MFC], OnShareViolation
-- CFileDialog [MFC], OnTypeChange
-- CFileDialog [MFC], m_ofn
+- CFileDialog class
+- common file dialog boxes
+- dialog boxes, common
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
 caps.latest.revision: 47
 author: mikeblome
@@ -159,15 +99,14 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 488683dcc8a10e9eac8e1da5b2b419394efdee4d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 18d03659e877bfb8f8000622b7438dea9a890575
+ms.lasthandoff: 03/31/2017
 
 ---
-# <a name="cfiledialog-class"></a>CFileDialog Class
-Encapsulates the common dialog box that is used for file open or file save operations.  
+# <a name="cfiledialog-class"></a>CFileDialog-Klasse
+Kapselt das allgemeine Dialogfeld, das für öffnen oder Datei speichern Vorgänge verwendet wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -175,141 +114,141 @@ Encapsulates the common dialog box that is used for file open or file save opera
 class CFileDialog : public CCommonDialog  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Mitglieder  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CFileDialog::CFileDialog](#cfiledialog)|Constructs a `CFileDialog` object.|  
+|[CFileDialog::CFileDialog](#cfiledialog)|Erstellt ein `CFileDialog`-Objekt.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CFileDialog::AddCheckButton](#addcheckbutton)|Adds a check button to the dialog.|  
-|[CFileDialog::AddComboBox](#addcombobox)|Adds a combo box to the dialog.|  
-|[CFileDialog::AddControlItem](#addcontrolitem)|Adds an item to a container control in the dialog.|  
-|[CFileDialog::AddEditBox](#addeditbox)|Adds an edit box to the dialog.|  
-|[CFileDialog::AddMenu](#addmenu)|Adds a menu to the dialog.|  
-|[CFileDialog::AddPlace](#addplace)|Overloaded. Adds a folder to the list of places available for the user to open or save items.|  
-|[CFileDialog::AddPushButton](#addpushbutton)|Adds a button to the dialog.|  
-|[CFileDialog::AddRadioButtonList](#addradiobuttonlist)|Adds an option button (also known as radio button) group to the dialog.|  
-|[CFileDialog::AddSeparator](#addseparator)|Adds a separator to the dialog.|  
-|[CFileDialog::AddText](#addtext)|Adds text content to the dialog.|  
-|[CFileDialog::ApplyOFNToShellDialog](#applyofntoshelldialog)|Updates the state of the `CFileDialog` to match the parameters and flags stored in the `m_ofn` member variable.|  
-|[CFileDialog::DoModal](#domodal)|Displays the dialog box and enables the user to make a selection.|  
-|[CFileDialog::EnableOpenDropDown](#enableopendropdown)|Enables a drop-down list on the **Open** or **Save** button in the dialog.|  
-|[CFileDialog::EndVisualGroup](#endvisualgroup)|Stops the addition of elements to a visual group in the dialog.|  
-|[CFileDialog::GetCheckButtonState](#getcheckbuttonstate)|Gets the current state of a check button (check box) in the dialog.|  
-|[CFileDialog::GetControlItemState](#getcontrolitemstate)|Gets the current state of an item in a container control found in the dialog.|  
-|[CFileDialog::GetControlState](#getcontrolstate)|Gets the current visibility and enabled states of a given control.|  
-|[CFileDialog::GetEditBoxText](#geteditboxtext)|Gets the current text in an edit box control.|  
-|[CFileDialog::GetFileExt](#getfileext)|Returns the extension of the selected file.|  
-|[CFileDialog::GetFileName](#getfilename)|Returns the file name of the selected file.|  
-|[CFileDialog::GetFileTitle](#getfiletitle)|Returns the title of the selected file.|  
-|[CFileDialog::GetFolderPath](#getfolderpath)|Retrieves the path of the currently open folder or directory for an Explorer-style **Open** or **Save As** common dialog box.|  
-|[CFileDialog::GetIFileDialogCustomize](#getifiledialogcustomize)|Retrieves the internal COM object for a customized `CFileDialog` object.|  
-|[CFileDialog::GetIFileOpenDialog](#getifileopendialog)|Retrieves the internal COM object for a `CFileDialog` that is used as an **Open** file dialog box.|  
-|[CFileDialog::GetIFileSaveDialog](#getifilesavedialog)|Retrieves the internal COM object for a `CFileDialog` that is used as a **Save** file dialog box.|  
-|[CFileDialog::GetNextPathName](#getnextpathname)|Returns the full path of the next selected file.|  
-|[CFileDialog::GetOFN](#getofn)|Retrieves the `OPENFILENAME` structure of the `CFileDialog` object.|  
-|[CFileDialog::GetPathName](#getpathname)|Returns the full path of the selected file.|  
-|[CFileDialog::GetReadOnlyPref](#getreadonlypref)|Returns the read-only status of the selected file.|  
-|[CFileDialog::GetResult](#getresult)|Gets the choice that the user made in the dialog.|  
-|[CFileDialog::GetResults](#getresults)|Gets the user's choices in a dialog that allows multiple selection.|  
-|[CFileDialog::GetSelectedControlItem](#getselectedcontrolitem)|Gets a particular item from specified container controls in the dialog.|  
-|[CFileDialog::GetStartPosition](#getstartposition)|Returns the position of the first element of the file name list.|  
-|[CFileDialog::HideControl](#hidecontrol)|Hides the specified control in an Explorer-style **Open** or **Save As** common dialog box.|  
-|[CFileDialog::IsPickFoldersMode](#ispickfoldersmode)|Determines if the current dialog in folder picker mode.|  
-|[CFileDialog::MakeProminent](#makeprominent)|Places a control in the dialog so that it stands out compared to other added controls.|  
-|[CFileDialog::RemoveControlItem](#removecontrolitem)|Removes an item from a container control in the dialog.|  
-|[CFileDialog::SetCheckButtonState](#setcheckbuttonstate)|Sets the current state of a check button (check box) in the dialog.|  
-|[CFileDialog::SetControlItemState](#setcontrolitemstate)|Sets the current state of an item in a container control found in the dialog.|  
-|[CFileDialog::SetControlItemText](#setcontrolitemtext)|Sets the text of a control item. For example, the text that accompanies a radio button or an item in a menu.|  
-|[CFileDialog::SetControlLabel](#setcontrollabel)|Sets the text associated with a control, such as button text or an edit box label.|  
-|[CFileDialog::SetControlState](#setcontrolstate)|Sets the current visibility and enabled states of a given control.|  
-|[CFileDialog::SetControlText](#setcontroltext)|Sets the text for the specified control in an Explorer-style **Open** or **Save As** common dialog box.|  
-|[CFileDialog::SetDefExt](#setdefext)|Sets the default file name extension for an Explorer-style **Open** or **Save As** common dialog box.|  
-|[CFileDialog::SetEditBoxText](#seteditboxtext)|Sets the current text in an edit box control.|  
-|[CFileDialog::SetProperties](#setproperties)|Provides a property store that defines the default values to be used for the item being saved.|  
-|[CFileDialog::SetSelectedControlItem](#setselectedcontrolitem)|Sets the selected state of a particular item in an option button group or a combo box found in the dialog.|  
-|[CFileDialog::SetTemplate](#settemplate)|Sets the dialog box template for the `CFileDialog` object.|  
-|[CFileDialog::StartVisualGroup](#startvisualgroup)|Declares a visual group in the dialog. Subsequent calls to any "add" method add those elements to this group.|  
-|[CFileDialog::UpdateOFNFromShellDialog](#updateofnfromshelldialog)|Updates the data stored in the `m_ofn` member variable to match the current state of the file dialog box.|  
+|[CFileDialog::AddCheckButton](#addcheckbutton)|Fügt eine Schaltfläche "Überprüfen" im Dialog "".|  
+|[CFileDialog::AddComboBox](#addcombobox)|Das Dialogfeld "hinzugefügt ein Kombinationsfeld.|  
+|[CFileDialog::AddControlItem](#addcontrolitem)|Fügt ein Element an ein Containersteuerelement im Dialogfeld "".|  
+|[CFileDialog::AddEditBox](#addeditbox)|Das Dialogfeld wird ein Bearbeitungsfeld hinzugefügt.|  
+|[CFileDialog::AddMenu](#addmenu)|Das Dialogfeld wird ein Menü hinzugefügt.|  
+|[CFileDialog::AddPlace](#addplace)|Überladen. Fügt ein Ordner, in der Liste der für den Benutzer zum Öffnen oder speichern die Elemente verfügbaren platziert.|  
+|[CFileDialog::AddPushButton](#addpushbutton)|Fügt eine Schaltfläche zum Dialogfeld "".|  
+|[CFileDialog::AddRadioButtonList](#addradiobuttonlist)|Fügt eine Optionsgruppe für Optionsfeld (auch bekannt als) zum Dialog "".|  
+|[CFileDialog::AddSeparator](#addseparator)|Fügt ein Trennzeichen im Dialog "".|  
+|[CFileDialog::AddText](#addtext)|Im Dialogfeld hinzugefügt Text-Inhalt.|  
+|[CFileDialog::ApplyOFNToShellDialog](#applyofntoshelldialog)|Der Status aktualisiert die `CFileDialog` entsprechend die Parameter und den Flags, die in gespeicherten der `m_ofn` Membervariablen gespeichert.|  
+|[CFileDialog::DoModal](#domodal)|Zeigt das Dialogfeld an und ermöglicht dem Benutzer eine Auswahl treffen.|  
+|[CFileDialog::EnableOpenDropDown](#enableopendropdown)|Aktiviert eine Dropdown-Liste auf die **öffnen** oder **speichern** Schaltfläche im Dialogfeld.|  
+|[CFileDialog::EndVisualGroup](#endvisualgroup)|Beendet das Hinzufügen von Elementen zu einer Gruppe im Dialogfeld "".|  
+|[CFileDialog::GetCheckButtonState](#getcheckbuttonstate)|Ruft den aktuellen Status der eine Schaltfläche "Überprüfen" (Kontrollkästchen) im Dialogfeld ab.|  
+|[CFileDialog::GetControlItemState](#getcontrolitemstate)|Ruft den aktuellen Status eines Elements in einem Containersteuerelement im Dialogfeld "" gefunden.|  
+|[CFileDialog::GetControlState](#getcontrolstate)|Ruft die aktuelle Sichtbarkeit und aktivierte Status eines angegebenen Steuerelements.|  
+|[CFileDialog::GetEditBoxText](#geteditboxtext)|Ruft den aktuellen Text in einem Bearbeitungssteuerelement.|  
+|[CFileDialog::GetFileExt](#getfileext)|Gibt die Erweiterung der ausgewählten Datei an.|  
+|[CFileDialog::GetFileName](#getfilename)|Gibt den Dateinamen der ausgewählten Datei zurück.|  
+|[CFileDialog::GetFileTitle](#getfiletitle)|Gibt den Titel der ausgewählten Datei an.|  
+|[CFileDialog::GetFolderPath](#getfolderpath)|Ruft den Pfad der aktuell geöffneten Ordner oder Verzeichnis ab, für eine Explorer-ähnliche **öffnen** oder **speichern unter** Standarddialogfeld.|  
+|[CFileDialog::GetIFileDialogCustomize](#getifiledialogcustomize)|Ruft das interne COM-Objekt für eine benutzerdefinierte `CFileDialog` Objekt.|  
+|[CFileDialog::GetIFileOpenDialog](#getifileopendialog)|Ruft das interne COM-Objekt für eine `CFileDialog` wird, als ein **öffnen** Dateidialogfeld.|  
+|[CFileDialog::GetIFileSaveDialog](#getifilesavedialog)|Ruft das interne COM-Objekt für eine `CFileDialog` wird, als ein **speichern** Dateidialogfeld.|  
+|[CFileDialog::GetNextPathName](#getnextpathname)|Gibt den vollständigen Pfad der ausgewählten Datei weiter.|  
+|[CFileDialog::GetOFN](#getofn)|Ruft die `OPENFILENAME` Struktur der `CFileDialog` Objekt.|  
+|[CFileDialog::GetPathName](#getpathname)|Gibt den vollständigen Pfad der ausgewählten Datei an.|  
+|[CFileDialog::GetReadOnlyPref](#getreadonlypref)|Gibt den schreibgeschützten Status der ausgewählten Datei an.|  
+|[CFileDialog::GetResult](#getresult)|Ruft die Auswahl, die der Benutzer im Dialogfeld vorgenommen.|  
+|[CFileDialog::GetResults](#getresults)|Ruft die Auswahl des Benutzers in ein Dialogfeld, Mehrfachauswahl ab.|  
+|[CFileDialog::GetSelectedControlItem](#getselectedcontrolitem)|Ruft ein bestimmtes Element aus dem angegebenen Containersteuerelemente im Dialogfeld ab.|  
+|[CFileDialog::GetStartPosition](#getstartposition)|Gibt die Position des ersten Elements in der Liste der Dateinamen zurück.|  
+|[CFileDialog::HideControl](#hidecontrol)|Blendet das angegebene Steuerelement in einem Explorer-ähnliche **öffnen** oder **speichern unter** Standarddialogfeld.|  
+|[CFileDialog::IsPickFoldersMode](#ispickfoldersmode)|Bestimmt, ob das aktuelle Dialogfeld im ordnerauswahlmodus.|  
+|[CFileDialog::MakeProminent](#makeprominent)|Stellen, damit er abhebt ein Steuerelements im Dialogfeld auf andere hinzugefügten Steuerelemente verglichen.|  
+|[CFileDialog::RemoveControlItem](#removecontrolitem)|Entfernt ein Element aus einem Containersteuerelement im Dialogfeld "".|  
+|[CFileDialog::SetCheckButtonState](#setcheckbuttonstate)|Legt den aktuellen Status der eine Schaltfläche "Überprüfen" (Kontrollkästchen) in das Dialogfeld "fest.|  
+|[CFileDialog::SetControlItemState](#setcontrolitemstate)|Legt den aktuellen Status eines Elements in einem Containersteuerelement im Dialogfeld "" gefunden.|  
+|[CFileDialog::SetControlItemText](#setcontrolitemtext)|Legt den Text eines Steuerelements Elements fest. Beispielsweise der Text, der ein Optionsfeld oder ein Element in einem Menü begleitet.|  
+|[CFileDialog::SetControlLabel](#setcontrollabel)|Legt den Text eines Steuerelements, wie z. B. Text oder eine Bezeichnung bearbeiten zugeordnet.|  
+|[CFileDialog::SetControlState](#setcontrolstate)|Legt die aktuelle Sichtbarkeit und aktivierte Status eines angegebenen Steuerelements.|  
+|[CFileDialog::SetControlText](#setcontroltext)|Legt den Text für das angegebene Steuerelement in einem Explorer-ähnliche **öffnen** oder **speichern unter** Standarddialogfeld.|  
+|[CFileDialog::SetDefExt](#setdefext)|Legt die standardmäßige Dateinamenerweiterung für eine Explorer-ähnliche **öffnen** oder **speichern unter** Standarddialogfeld.|  
+|[CFileDialog::SetEditBoxText](#seteditboxtext)|Legt den aktuellen Text in einem Bearbeitungssteuerelement.|  
+|[CFileDialog::SetProperties](#setproperties)|Bietet einen Eigenschaftenspeicher, der die Standardwerte definiert, die für das zu speichernde Element verwendet werden sollen.|  
+|[CFileDialog::SetSelectedControlItem](#setselectedcontrolitem)|Legt den ausgewählten Zustand eines bestimmten Elements in eine Optionsgruppe-Schaltfläche oder ein Kombinationsfeld, die im Dialogfeld "" gefunden.|  
+|[CFileDialog::SetTemplate](#settemplate)|Legt die Dialogfeldvorlage für die `CFileDialog` Objekt.|  
+|[CFileDialog::StartVisualGroup](#startvisualgroup)|Deklariert eine visual Gruppe im Dialogfeld "". Nachfolgende Aufrufe an jede Methode "hinzufügen" Fügen Sie dieser Elemente zu dieser Gruppe hinzu.|  
+|[CFileDialog::UpdateOFNFromShellDialog](#updateofnfromshelldialog)|Aktualisiert die Daten aus der `m_ofn` Membervariable mit dem aktuellen Pufferzustand Dateidialogfeld übereinstimmen.|  
   
-### <a name="protected-methods"></a>Protected Methods  
+### <a name="protected-methods"></a>Geschützte Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CFileDialog::OnButtonClicked](#onbuttonclicked)|Called when the button is clicked.|  
-|[CFileDialog::OnCheckButtonToggled](#oncheckbuttontoggled)|Called when the check box is checked/unchecked.|  
-|[CFileDialog::OnControlActivating](#oncontrolactivating)|Called when the control is being active.|  
-|[CFileDialog::OnFileNameChange](#onfilenamechange)|Handles the `WM_NOTIFY CDN_SELCHANGE` message.|  
-|[CFileDialog::OnFileNameOK](#onfilenameok)|Validates the file name entered in the dialog box.|  
-|[CFileDialog::OnFolderChange](#onfolderchange)|Handles the `WM_NOTIFY CDN_FOLDERCHANGE` message.|  
-|[CFileDialog::OnInitDone](#oninitdone)|Handles the `WM_NOTIFY CDN_INITDONE` message.|  
-|[CFileDialog::OnItemSelected](#onitemselected)|Called when the container item is being selected.|  
-|[CFileDialog::OnLBSelChangedNotify](#onlbselchangednotify)|Allows you to perform custom actions when the file selection changes.|  
-|[CFileDialog::OnShareViolation](#onshareviolation)|Handles share violations.|  
-|[CFileDialog::OnTypeChange](#ontypechange)|Handles the `WM_NOTIFY CDN_TYPECHANGE` message.|  
+|[CFileDialog::OnButtonClicked](#onbuttonclicked)|Wird aufgerufen, wenn die Schaltfläche geklickt wird.|  
+|[CFileDialog::OnCheckButtonToggled](#oncheckbuttontoggled)|Wird aufgerufen, wenn Sie dieses Kontrollkästchen aktiviert/deaktiviert ist.|  
+|[CFileDialog::OnControlActivating](#oncontrolactivating)|Wird aufgerufen, wenn das Steuerelement aktiv wird.|  
+|[CFileDialog::OnFileNameChange](#onfilenamechange)|Behandelt die `WM_NOTIFY CDN_SELCHANGE` Nachricht.|  
+|[CFileDialog::OnFileNameOK](#onfilenameok)|Der im Dialogfeld eingegebene Dateiname wird überprüft.|  
+|[CFileDialog::OnFolderChange](#onfolderchange)|Behandelt die `WM_NOTIFY CDN_FOLDERCHANGE` Nachricht.|  
+|[CFileDialog::OnInitDone](#oninitdone)|Behandelt die `WM_NOTIFY CDN_INITDONE` Nachricht.|  
+|[CFileDialog::OnItemSelected](#onitemselected)|Wird aufgerufen, wenn das Containerelement ausgewählt ist.|  
+|[CFileDialog::OnLBSelChangedNotify](#onlbselchangednotify)|Bietet die Möglichkeit, benutzerdefinierte Aktionen durchzuführen, wenn die Dateiauswahl geändert.|  
+|[CFileDialog::OnShareViolation](#onshareviolation)|Handles freigeben Verstöße.|  
+|[CFileDialog::OnTypeChange](#ontypechange)|Behandelt die `WM_NOTIFY CDN_TYPECHANGE` Nachricht.|  
   
-### <a name="public-data-members"></a>Public Data Members  
+### <a name="public-data-members"></a>Öffentliche Datenmember  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CFileDialog::m_ofn](#m_ofn)|The Windows `OPENFILENAME` structure. Provides access to basic file dialog box parameters.|  
+|[CFileDialog::m_ofn](#m_ofn)|Die Windows `OPENFILENAME` Struktur. Bietet Zugriff auf grundlegende Dialogfeld Feld Dateiparameter.|  
   
-## <a name="remarks"></a>Remarks  
- Common file dialog boxes let you implement file-selection dialog boxes, for example, **Open File** and **Save As**, in a manner that is consistent with Windows standards.  
+## <a name="remarks"></a>Hinweise  
+ Häufig verwendete Dialogfelder für die Datei können Sie die Dateiauswahl Dialogfeldern, z. B. implementieren **Dateiöffnungsmodus** und **speichern unter**, in einer Weise, die mit Windows-Standards konsistent ist.  
   
- You can use `CFileDialog` as is with the constructor provided, or you can derive your own dialog box class from `CFileDialog` and write a constructor to suit your needs. In either case, these dialog boxes will behave like standard MFC dialog boxes because they are derived from the [CCommonDialog Class](../../mfc/reference/ccommondialog-class.md). `CFileDialog` relies on the COMMDLG.DLL file that is included in Windows.  
+ Sie können `CFileDialog` wie mit dem Konstruktor bereitgestellt wird oder Sie können eigene Dialogfeldklasse von ableiten `CFileDialog` und einen Konstruktor für Ihre speziellen Anforderungen zu schreiben. In beiden Fällen wird diese Dialogfelder verhält sich wie standard-MFC-Dialogfelder, weil sie abgeleitet sind die [CCommonDialog Klasse](../../mfc/reference/ccommondialog-class.md). `CFileDialog`basiert auf der COMMDLG. DLL-Datei, die in Windows enthalten ist.  
   
- Both the appearance and the functionality of the `CFileDialog` with [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] differ from the earlier versions of Windows. The default `CFileDialog` automatically uses the new [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] style without code changes if a program is compiled and run under [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]. Use the `bVistaStyle` parameter in the constructor to manually override this automatic update. The exception to the automatic update is customized dialog boxes. They will not be converted to the new style. For more information about the constructor, see [CFileDialog::CFileDialog](#cfiledialog).  
+ Die Darstellung und die Funktionalität von der `CFileDialog` mit [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] unterscheiden sich von früheren Versionen von Windows. Die Standardeinstellung `CFileDialog` verwendet automatisch die neue [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] Stil ohne codeänderungen, wenn ein Programm kompiliert wird und die Ausführung [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]. Verwenden der `bVistaStyle` Parameter im Konstruktor auf dieses automatische Update manuell überschreiben. Die Ausnahme, die automatische Aktualisierung ist angepasste Dialogfelder. Sie werden nicht in das neue Format konvertiert werden. Weitere Informationen zu den Konstruktor, finden Sie unter [CFileDialog::CFileDialog](#cfiledialog).  
   
 > [!NOTE]
->  The control ID system differs in [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] from earlier versions of Windows when you use a `CFileDialog`. You must update all references to `CFileDialog` controls in code before you can port your project from an earlier version of Windows.  
+>  Das System der Steuerelement-ID unterscheidet sich in der [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] aus früheren Versionen von Windows bei Verwendung einer `CFileDialog`. Sie müssen alle Verweise auf Aktualisieren `CFileDialog` Steuerelemente im Code, bevor Sie das Projekt von einer früheren Version von Windows Portieren können.  
   
- Some `CFileDialog` methods are not supported under [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]. Check the individual method topic for information about whether the method is supported. In addition, the following inherited functions are not supported under [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]:  
+ Einige `CFileDialog` Methoden werden nicht unterstützt, unter [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]. Überprüfen Sie die einzelne Methode Thema Informationen, ob die Methode unterstützt wird. Darüber hinaus werden die folgenden geerbten Funktionen nicht unterstützt unter [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]:  
   
-- [CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)  
+- [CDialog::](../../mfc/reference/cdialog-class.md#oninitdialog)  
   
 - [CDialog::OnSetFont](../../mfc/reference/cdialog-class.md#onsetfont)  
   
- The windows messages for the `CFileDialog` class vary based on what operating system you are using. For example, Windows XP does not support [CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel) and [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) for the `CFileDialog` class. However, [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] does support them. For more information about the different messages that are generated and the order in which they are received, see [CFileDialog Sample: Logging Event Order](../../visual-cpp-samples.md).  
+ Die Windows-Nachrichten für die `CFileDialog` Klasse variieren, je nachdem, auf welches Betriebssystem Sie verwenden. Windows XP unterstützt beispielsweise keine [CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel) und [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) für die `CFileDialog` Klasse. Allerdings [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] unterstützt werden. Weitere Informationen zu den anderen Nachrichten, die generiert werden und die Reihenfolge, in der sie empfangen werden, finden Sie unter [CFileDialog-Beispiel: Protokollierung Ereignisreihenfolge](../../visual-cpp-samples.md).  
   
- To use a `CFileDialog` object, first create the object by using the `CFileDialog` constructor. After the dialog box has been constructed, you can set or modify any values in the [CFileDialog::m_ofn](#m_ofn) structure to initialize the values or states of the dialog box controls. The `m_ofn` structure is of type `OPENFILENAME`. For more information, see the [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) structure in the Windows SDK.  
+ Verwenden einer `CFileDialog` Objekt, das Objekt erstellen, indem die `CFileDialog` Konstruktor. Nachdem Sie das Dialogfeld erstellt wurde, können Sie festlegen oder ändern Sie alle Werte in der [CFileDialog::m_ofn](#m_ofn) Struktur initialisiert werden, die Werte oder Zustände der Dialogfeld-Steuerelemente. Die `m_ofn` Struktur ist vom Typ `OPENFILENAME`. Weitere Informationen finden Sie unter der [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) Struktur der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
- After you initialize the dialog box controls, call the [CFileDialog::DoModal](#domodal) method to display the dialog box so that the user can type the path and file name. `DoModal` returns whether the user clicked the OK (IDOK) or the Cancel (IDCANCEL) button. If `DoModal` returns IDOK, you can use one of the `CFileDialog` public member functions to retrieve the information put in by the user.  
+ Nachdem Sie das Dialogfeld-Steuerelemente initialisieren, rufen Sie die [CFileDialog::DoModal](#domodal) Methode, um das Dialogfeld anzuzeigen Feld, damit der Pfad und Dateiname eingegeben werden können. `DoModal`Gibt zurück, ob der Benutzer die OK (IDOK) oder auf die Schaltfläche "Abbrechen" (IDCANCEL) geklickt hat. Wenn `DoModal` gibt IDOK, können Sie eines der `CFileDialog` öffentliche Memberfunktionen zum Abrufen von Informationen vom Benutzer gelagerte.  
   
 > [!NOTE]
->  Under [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)], multiple calls to [IFileDialog::SetFileTypes](http://msdn.microsoft.com/library/windows/desktop/bb775980) causes an error. The second call to `SetFileTypes` for any instance of a `CFileDialog` will return `E_UNEXPECTED` in [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]. Some `CFileDialog` method functions call `SetFileTypes`. For example, two calls to `CFileDialog::DoModal` for the same instance of a `CFileDialog` generates [ASSERT](diagnostic-services.md#assert).  
+>  Klicken Sie unter [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)], mehrere Aufrufe [IFileDialog::SetFileTypes](http://msdn.microsoft.com/library/windows/desktop/bb775980) verursacht einen Fehler. Der zweite Aufruf von `SetFileTypes` für jede Instanz von einem `CFileDialog` zurück `E_UNEXPECTED` in [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]. Einige `CFileDialog` Methode-Funktionen rufen `SetFileTypes`. Beispielsweise die beiden Aufrufe von `CFileDialog::DoModal` für dieselbe Instanz von einem `CFileDialog` generiert [ASSERT](diagnostic-services.md#assert).  
   
- `CFileDialog` includes several protected members that let you do custom handling of share violations, file name validation, and list-box change notification. These protected members are callback functions that most applications do not have to use because default handling is performed automatically. Message-map entries for these functions are not required because they are standard virtual functions.  
+ `CFileDialog`enthält mehrere geschützte Member, mit denen Sie die benutzerdefinierte Behandlung von Verletzungen der Freigabe, Datei namensüberprüfung und änderungsbenachrichtigung im Listenfeld werden können. Diese geschützte Member sind Fehlerrückruf-Funktionen, die meisten Anwendungen nicht verwendet werden, da die Standardbehandlung automatisch ausgeführt wird. Meldungszuordnungseinträge für diese Funktionen sind nicht erforderlich, da sie die standardmäßige virtuelle Funktionen sind.  
   
- You can use the Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) function to determine whether an error occurred during initialization of the dialog box and to learn more about the error.  
+ Sie können die Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) -Funktion zu bestimmen, ob der Fehler während der Initialisierung des Dialogfelds und erfahren Sie mehr über den Fehler.  
   
- The destruction of `CFileDialog` objects is handled automatically. You do not have to call [CDialog::EndDialog](../../mfc/reference/cdialog-class.md#enddialog).  
+ Die Zerstörung des `CFileDialog` Objekte automatisch erfolgt. Sie müssen keine Aufrufen [CDialog::EndDialog](../../mfc/reference/cdialog-class.md#enddialog).  
   
- To let the user select multiple files, set the `OFN_ALLOWMULTISELECT` flag before you call `DoModal`. You must supply your own file name buffer to accommodate the returned list of multiple file names. Do this by replacing `m_ofn.lpstrFile` with a pointer to a buffer you have allocated, after you construct the `CFileDialog`, but before you call `DoModal`.  
+ Damit den Benutzer, die mehrere Dateien auswählen können, legen Sie die `OFN_ALLOWMULTISELECT` flag vor dem Aufruf `DoModal`. Sie müssen eine eigene Datei Formatnamenpuffer zum Aufnehmen der zurückgegebenen Liste der mehrere Dateinamen angeben. Ersetzen Sie hierzu `m_ofn.lpstrFile` mit einem Zeiger auf einen Puffer Sie zugeordnet haben, wenn Sie erstellt haben, die `CFileDialog`, aber vor dem Aufruf `DoModal`.  
   
- Additionally, you must set `m_ofn.nMaxFile` by using the number of characters in the buffer pointed to by `m_ofn.lpstrFile`. If you set the maximum number of files to be selected to `n`, the required buffer size is `n * (_MAX_PATH + 1) + 1`. The first item returned in the buffer is the path to the folder where the files were selected. For [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]-style dialog boxes, the directory and file name strings are null-terminated, with an extra null character after the last file name. This format enables the Explorer-style dialog boxes to return long file names that include spaces. For old-style dialog boxes, the directory and file name strings are separated by spaces and the function uses short file names for file names with spaces.  
+ Darüber hinaus müssen Sie festlegen `m_ofn.nMaxFile` mit die Anzahl der Zeichen im Puffer verweist `m_ofn.lpstrFile`. Wenn Sie festlegen, dass die maximale Anzahl von Dateien zum auszuwählenden `n`, ist die erforderliche Puffergröße `n * (_MAX_PATH + 1) + 1`. Das erste Element im Puffer zurückgegeben wird, den Pfad zu dem Ordner, in dem die Dateien ausgewählt wurden. Für [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]-Stil Dialogfeldern die Namenszeichenfolgen Verzeichnis- und Dateinamen sind Null-terminiert ist, mit einem zusätzlichen Null-Zeichen nach der letzten Dateiname. Dieses Format ermöglicht die Explorer-ähnliche Dialogfelder zurückzugebenden langen Dateinamen, die Leerzeichen enthalten. Für Dialogfelder "im alten Stil" die Namenszeichenfolgen Verzeichnis- und Dateidienste werden durch Leerzeichen getrennt, und verwendet die Funktion für Dateinamen bei kurzen Dateinamen mit Leerzeichen.  
   
- The following example demonstrates how to use a buffer to retrieve and list multiple file names.  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Puffer zum Abrufen und die Liste mehrere Dateinamen verwenden.  
   
- [!code-cpp[NVC_MFCFiles#23](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_1.cpp)]  
+ [!code-cpp[NVC_MFCFiles #23](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_1.cpp)]  
   
- To change the buffer size in response to the user selecting multiple file names, you must derive a new class from `CFileDialog` and override the [CFileDialog::OnFileNameChange](#onfilenamechange) method.  
+ Um die Größe des Puffers als Antwort auf die Benutzer auswählen mehrere Dateinamen zu ändern, leiten Sie eine neue Klasse von `CFileDialog` und überschreiben die [CFileDialog::OnFileNameChange](#onfilenamechange) Methode.  
   
- If you derive a new class from `CFileDialog`, you can use a message map to handle any messages. To extend the default message handling, derive a class from `CFileDialog`, add a message map to the new class, and provide member functions for the new messages. You do not have to provide a hook function to customize the dialog box.  
+ Wenn Sie eine neue Klasse von ableiten `CFileDialog`, Sie können eine meldungszuordnung verwenden, um alle Meldungen zu verarbeiten. Um die Standard-Meldungsbehandlung zu erweitern, leiten Sie eine Klasse von `CFileDialog`eine meldungszuordnung an die neue Klasse hinzufügen und geben Sie die Memberfunktionen für die neuen Nachrichten. Sie müssen keinen bieten eine Hookfunktion zum Anpassen des Dialogfelds "".  
   
- To customize the dialog box, derive a class from `CFileDialog`, provide a custom dialog box template, and add a message map to process the notification messages from the extended controls. Pass any unprocessed messages to the base class. You do not have to customize the hook function.  
+ Um das Dialogfeld anzupassen, leiten Sie eine Klasse von `CFileDialog`, geben Sie eine benutzerdefinierte Dialogfeldvorlage und hinzufügen eine meldungszuordnung, um die benachrichtigungsmeldungen aus den erweiterten Steuerelemente zu verarbeiten. Übergeben Sie alle nicht verarbeiteten Nachrichten an die Basisklasse der Klasse. Sie müssen nicht die Hookfunktion anpassen.  
   
- When you are using the [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] style of the `CFileDialog`, you cannot use message maps and dialog box templates. Instead, you must use the COM interfaces for similar functionality.  
+ Beim Verwenden der [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] Stil der `CFileDialog`, können keine nachrichtenzuordnungen und Dialogfeldvorlagen. Stattdessen müssen Sie die COM-Schnittstellen für ähnliche Funktionalität verwenden.  
   
- For more information about how to use `CFileDialog`, see [Common Dialog Classes](../../mfc/common-dialog-classes.md).  
+ Weitere Informationen zur Verwendung von `CFileDialog`, finden Sie unter [allgemeine Dialogfeldklassen](../../mfc/common-dialog-classes.md).  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -322,11 +261,11 @@ class CFileDialog : public CCommonDialog
   
  `CFileDialog`  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxdlgs.h  
   
-##  <a name="addcheckbutton"></a>  CFileDialog::AddCheckButton  
- Adds a check button to the dialog.  
+##  <a name="addcheckbutton"></a>CFileDialog::AddCheckButton  
+ Fügt eine Schaltfläche "Überprüfen" im Dialog "".  
   
 ```  
 HRESULT AddCheckButton(
@@ -335,33 +274,33 @@ HRESULT AddCheckButton(
     BOOL bChecked);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwIDCtl`  
- The ID of the check button to add.  
+ Die ID der Schaltfläche "Überprüfen", hinzugefügt werden soll.  
   
  `strLabel`  
- The check button name.  
+ Der Name des Kontrollkästchen-Schaltfläche.  
   
  `bChecked`  
- A Boolean indicating the current state of the check button. `TRUE` if checked; `FALSE` otherwise  
+ Ein boolescher Wert, der angibt, des aktuellen Zustands der Schaltfläche "Überprüfen". `TRUE`Wenn diese Option aktiviert ist; `FALSE` andernfalls  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="addcombobox"></a>  CFileDialog::AddComboBox  
- Adds a combo box to the dialog.  
+##  <a name="addcombobox"></a>CFileDialog::AddComboBox  
+ Das Dialogfeld "hinzugefügt ein Kombinationsfeld.  
   
 ```  
 HRESULT AddComboBox(DWORD dwIDCtl);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwIDCtl`  
- The ID of the combo box to add.  
+ Die ID des Kombinationsfelds, hinzugefügt werden soll.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="addcontrolitem"></a>  CFileDialog::AddControlItem  
- Adds an item to a container control in the dialog.  
+##  <a name="addcontrolitem"></a>CFileDialog::AddControlItem  
+ Fügt ein Element an ein Containersteuerelement im Dialogfeld "".  
   
 ```  
 HRESULT AddControlItem(
@@ -370,20 +309,20 @@ HRESULT AddControlItem(
     const CString& strLabel);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwIDCtl`  
- The ID of the container control to add the item to.  
+ Die ID des Containersteuerelements auf das Element hinzuzufügen.  
   
  `dwIDItem`  
- The ID of the item.  
+ Die ID des Elements.  
   
  `strLabel`  
- Item's text.  
+ Text des Elements.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="addeditbox"></a>  CFileDialog::AddEditBox  
- Adds an edit box to the dialog.  
+##  <a name="addeditbox"></a>CFileDialog::AddEditBox  
+ Das Dialogfeld wird ein Bearbeitungsfeld hinzugefügt.  
   
 ```  
 HRESULT AddEditBox(
@@ -391,17 +330,17 @@ HRESULT AddEditBox(
     const CString& strText);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwIDCtl`  
- The ID of the edit box to add.  
+ Die ID des im Bearbeitungsfeld, hinzugefügt werden soll.  
   
  `strText`  
- The edit box name.  
+ Der Name des bearbeiten.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="addmenu"></a>  CFileDialog::AddMenu  
- Adds a menu to the dialog.  
+##  <a name="addmenu"></a>CFileDialog::AddMenu  
+ Das Dialogfeld wird ein Menü hinzugefügt.  
   
 ```  
 HRESULT AddMenu(
@@ -409,17 +348,17 @@ HRESULT AddMenu(
     const CString& strLabel);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwIDCtl`  
- The ID of the menu to add.  
+ Die ID des Menüs hinzufügen.  
   
  `strLabel`  
- The menu name.  
+ Der Name des Menüs.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="addplace"></a>  CFileDialog::AddPlace  
- Adds a folder to the list of places available for the user to open or save items.  
+##  <a name="addplace"></a>CFileDialog::AddPlace  
+ Fügt ein Ordner, in der Liste der für den Benutzer zum Öffnen oder speichern die Elemente verfügbaren platziert.  
   
 ```  
 void AddPlace(
@@ -432,20 +371,20 @@ void AddPlace(
     FDAP fdap = FDAP_TOP) throw();
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `lpszFolder`  
- A path to the folder to be made available to the user. This can only be a folder.  
+ Ein Pfad zu dem Ordner, dem Benutzer zur Verfügung gestellt werden. Dies kann nur ein Ordner sein.  
   
  `fdap`  
- Specifies where the folder is placed within the list.  
+ Gibt an, in dem der Ordner in der Liste platziert wird.  
   
  `psi`  
- A pointer to an IShellItem that represents the folder to be made available to the user. This can only be a folder.  
+ Ein Zeiger auf ein IShellItem, die für den Ordner für dem Benutzer verfügbar gemacht werden. Dies kann nur ein Ordner sein.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="addpushbutton"></a>  CFileDialog::AddPushButton  
- Adds a button to the dialog.  
+##  <a name="addpushbutton"></a>CFileDialog::AddPushButton  
+ Fügt eine Schaltfläche zum Dialogfeld "".  
   
 ```  
 HRESULT AddPushButton(
@@ -453,43 +392,43 @@ HRESULT AddPushButton(
     const CString& strLabel);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwIDCtl`  
- The ID of the button to add.  
+ Die ID der Schaltfläche hinzufügen.  
   
  `strLabel`  
- The button name.  
+ Der Name der Schaltfläche.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="addradiobuttonlist"></a>  CFileDialog::AddRadioButtonList  
- Adds an option button (also known as radio button) group to the dialog.  
+##  <a name="addradiobuttonlist"></a>CFileDialog::AddRadioButtonList  
+ Fügt eine Optionsgruppe für Optionsfeld (auch bekannt als) zum Dialog "".  
   
 ```  
 HRESULT AddRadioButtonList(DWORD dwIDCtl);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwIDCtl`  
- The ID of the option button group to add.  
+ Die ID der Gruppe "die Option Schaltfläche" hinzufügen.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="addseparator"></a>  CFileDialog::AddSeparator  
- Adds a separator to the dialog.  
+##  <a name="addseparator"></a>CFileDialog::AddSeparator  
+ Fügt ein Trennzeichen im Dialog "".  
   
 ```  
 HRESULT AddSeparator(DWORD dwIDCtl);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwIDCtl`  
- The ID of the separator add.  
+ Die ID für das Trennzeichen hinzufügen.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="addtext"></a>  CFileDialog::AddText  
- Adds text to the dialog.  
+##  <a name="addtext"></a>CFileDialog::AddText  
+ Im Dialogfeld hinzugefügt Text.  
   
 ```  
 HRESULT AddText(
@@ -497,34 +436,34 @@ HRESULT AddText(
     const CString& strText);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwIDCtl`  
- The ID of the text to add.  
+ Die ID des Texts, hinzugefügt werden soll.  
   
  `strText`  
- The text name.  
+ Der Name des Texts.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="applyofntoshelldialog"></a>  CFileDialog::ApplyOFNToShellDialog  
- Updates the current state of the [CFileDialog](../../mfc/reference/cfiledialog-class.md) based on the values stored in the `m_ofn` data structure.  
+##  <a name="applyofntoshelldialog"></a>CFileDialog::ApplyOFNToShellDialog  
+ Aktualisiert den aktuellen Zustand der der [CFileDialog](../../mfc/reference/cfiledialog-class.md) basierend auf den Werten, die in gespeicherten der `m_ofn` Datenstruktur.  
   
 ```  
 void ApplyOFNToShellDialog();
 ```  
   
-### <a name="remarks"></a>Remarks  
- In versions of Windows before [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)], the member [OPENFILENAME](https://msdn.microsoft.com/library/ms911906.aspx) data structure was continuously synchronized with the state of the `CFileDialog`. Any changes to the [m_ofn](#m_ofn) member variable were immediately reflected in the state of the dialog box. Also, any changes to the state of the dialog box immediately update the `m_ofn` member variable.  
+### <a name="remarks"></a>Hinweise  
+ In Versionen von Windows vor [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)], das Mitglied [OPENFILENAME](https://msdn.microsoft.com/library/ms911906.aspx) Datenstruktur mit dem Status der fortlaufend synchronisiert wurde die `CFileDialog`. Alle Änderungen an der [M_ofn](#m_ofn) Membervariable sofort in den Zustand des Dialogfelds dargestellt wurden. Alle Änderungen in den Zustand des Dialogfelds sofort aktualisieren Sie außerdem die `m_ofn` Membervariablen gespeichert.  
   
- In [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)], the values in the `m_ofn` member variable and state of the `CFileDialog` are not guaranteed to be synchronized. This function forces the state of the `CFileDialog` to be updated to match the `m_ofn` structure. Windows calls this function automatically during [CFileDialog::DoModal](#domodal).  
+ In [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)], die Werte in der `m_ofn` Membervariablen gespeichert und Status der `CFileDialog` sind nicht unbedingt synchronisiert werden. Diese Funktion erzwingt den Status des der `CFileDialog` aktualisiert werden, entsprechend der `m_ofn` Struktur. Windows ruft diese Funktion automatisch während des [CFileDialog::DoModal](#domodal).  
   
- For more information about how to use the `CFileDialog` class under [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)], see [CFileDialog Class](../../mfc/reference/cfiledialog-class.md).  
+ Weitere Informationen zur Verwendung der `CFileDialog` unter-Klasse [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)], finden Sie unter [CFileDialog-Klasse](../../mfc/reference/cfiledialog-class.md).  
   
-### <a name="example"></a>Example  
-  See the example for [CFileDialog::UpdateOFNFromShellDialog](#updateofnfromshelldialog).  
+### <a name="example"></a>Beispiel  
+  Siehe das Beispiel für [CFileDialog::UpdateOFNFromShellDialog](#updateofnfromshelldialog).  
   
-##  <a name="cfiledialog"></a>  CFileDialog::CFileDialog  
- Call this function to construct a standard Windows file dialog box.  
+##  <a name="cfiledialog"></a>CFileDialog::CFileDialog  
+ Mit dieser Funktion wird zum Erstellen einer standardmäßigen Windows-Dateidialogfeld.  
   
 ```  
 explicit CFileDialog(
@@ -538,110 +477,110 @@ explicit CFileDialog(
     BOOL bVistaStyle = TRUE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `bOpenFileDialog`  
- The parameter that specifies what type of dialog box to create. Set it to `TRUE` to construct a **File Open** dialog box. Set it to `FALSE` to construct a **File Save As** dialog box.  
+ Der Parameter, der angibt, welche Art von Dialogfeld erstellen. Legen Sie es auf `TRUE` zum Erstellen einer **Datei öffnen** (Dialogfeld). Legen Sie es auf `FALSE` zum Erstellen einer **Datei speichern unter** (Dialogfeld).  
   
  [in] `lpszDefExt`  
- The default file name extension. If the user does not include a known extension (one that has an association on the user’s computer) in the Filename box, the extension specified by `lpszDefExt` is automatically appended to the file name. If this parameter is `NULL`, no extension is appended.  
+ Die Standarddateinamenerweiterung. Wenn der Benutzer keine bekannte Erweiterung (eine, die eine Zuordnung auf dem Computer des Benutzers hat) in das Feld Dateiname enthalten, die Erweiterung gemäß `lpszDefExt` automatisch an den Dateinamen angefügt wird. Wenn dieser Parameter ist `NULL`, keine Erweiterung angefügt wird.  
   
  [in] `lpszFileName`  
- The initial file name that appears in the Filename box. If `NULL`, no initial file name appears.  
+ Der ursprüngliche Dateiname, der in der Filename-Feld angezeigt wird. Wenn `NULL`, keine anfangsdateiname angezeigt wird.  
   
  [in] `dwFlags`  
- A combination of one or more flags that you can use to customize the dialog box. For a description of these flags, see the [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) structure in the Windows SDK. If you modify the `m_ofn.Flags` structure member, use a bitwise-OR operator in your changes to keep the default behavior intact.  
+ Eine Kombination von ein oder mehrere Flags, die Sie verwenden können, um das Dialogfeld anzupassen. Eine Beschreibung dieser Flags finden Sie in der [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) Struktur der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Wenn Sie ändern die `m_ofn.Flags` Member-Struktur, einen bitweisen OR-Operator bei Ihren Änderungen verwenden, um das Standardverhalten unverändert zu lassen.  
   
  [in] `lpszFilter`  
- A series of string pairs that specify filters you can apply to the file. If you specify file filters, only files that match filter criteria will appear in the Files list. See the Remarks section for more information about how to work with file filters.  
+ Eine Reihe von Zeichenfolge-Paaren, die Filter angeben, können Sie auf die Datei anwenden. Wenn Sie Filter angeben, werden nur die Dateien, die Filterkriterien entsprechen in der Liste angezeigt. Finden Sie im Abschnitt "Hinweise" Weitere Informationen zum Arbeiten mit Filter.  
   
  [in] `pParentWnd`  
- A pointer to the parent or owner window of the file dialog box.  
+ Ein Zeiger auf Fenster übergeordnete oder Besitzer von Dateidialogfeld.  
   
  [in] `dwSize`  
- The size of the `OPENFILENAME` structure. This value depends on the operating system version. MFC used this parameter to determine the appropriate kind of dialog box to create (for example, new [!INCLUDE[Win2kFamily](../../c-runtime-library/includes/win2kfamily_md.md)] dialog boxes instead of NT4 dialog boxes). The default size of 0 means that the MFC code will determine the correct dialog box size to use based on the operating system version on which the program is run.  
+ Die Größe der `OPENFILENAME` Struktur. Dieser Wert hängt von der Version des Betriebssystems ab. MFC verwendet diesen Parameter bestimmen die geeignete Arten des Dialogfelds erstellen (beispielsweise, wenn neue [!INCLUDE[Win2kFamily](../../c-runtime-library/includes/win2kfamily_md.md)] Dialogfelder anstatt NT4-Dialogfeldern). Die Standardgröße von 0 bedeutet, die der MFC-Code die richtigen Dialogfeld Feldgröße verwenden bestimmt, auf der Grundlage der Version des Betriebssystems auf der das Programm ausgeführt wird.  
   
  [in] `bVistaStyle`  
- **Note** This parameter is available in Visual Studio 2008 and later and is will cause the new-style dialog to be used only if you are running in [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] or later.  
+ **Hinweis** dieser Parameter wird in Visual Studio 2008 und höher verfügbar und wird dazu führen, dass das Dialogfeld "neue Formatvorlage" verwendet werden, nur, wenn Sie mit [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] oder höher.  
   
- The parameter that specifies the style of the file dialog. Set it to `TRUE` to use the new Vista style file dialogs. Otherwise, the old style of dialog boxes will be used. See the Remarks section for more information about running under Vista.  
+ Der Parameter, der den Stil der mit dem Dialogfeld "Datei" angibt. Legen Sie es auf `TRUE` verwenden die neue Vista Stil Dateidialogfelder. Andernfalls wird das alte Format von Dialogfeldern verwendet werden. Finden Sie im Abschnitt "Hinweise" Weitere Informationen zu unter Vista ausgeführt wird.  
   
-### <a name="remarks"></a>Remarks  
- Either a **File Open** or **File Save As** dialog box is constructed, depending on the value of `bOpenFileDialog`.  
+### <a name="remarks"></a>Hinweise  
+ Entweder eine **Datei öffnen** oder **Datei speichern unter** Dialogfeld erstellt werden, abhängig vom Wert des `bOpenFileDialog`.  
   
- Specifying a default extension using `lpszDefExt` may not produce the behavior that you expect, because it is seldom predictable what extensions have file associations on the user’s computer. If you need more control over the appending of a default extension, you can derive your own class from `CFileDialog`, and override the `CFileDialog::OnFileNameOK` method to perform your own extension handling.  
+ Angeben eines Standard-Erweiterung mit `lpszDefExt` das Verhalten, das Sie davon ausgehen dass, möglicherweise nicht erstellt werden, da es nur selten vorhersagbar ist, welche Erweiterungen dateizuordnungen auf dem Computer des Benutzers haben. Wenn Sie mehr Kontrolle über das Anfügen einer Standard-Erweiterung benötigen, leiten Sie eine eigene Klasse von `CFileDialog`, und überschreiben die `CFileDialog::OnFileNameOK` Methode, um eine eigene Behandlung für die Erweiterung ausführen.  
   
- To enable the user to select multiple files, set the `OFN_ALLOWMULTISELECT` flag before you call [DoModal](#domodal). You must supply your own file name buffer to store the returned list of multiple file names. Do this by replacing `m_ofn.lpstrFile` with a pointer to a buffer you have allocated, after you construct the [CFileDialog](../../mfc/reference/cfiledialog-class.md), but before you call `DoModal`. Additionally, you must set `m_ofn.nMaxFile` with the number of characters in the buffer pointed to by `m_ofn.lpstrFile`. If you set the maximum number of files to be selected to `n`, the necessary buffer size is `n`*(_MAX_PATH + 1) + 1. For example:  
+ Um den Benutzer zum Auswählen mehrerer Dateien zu aktivieren, legen die `OFN_ALLOWMULTISELECT` flag vor dem Aufruf [DoModal](#domodal). Sie müssen einen eigene Dateinamenpuffer zum Speichern der zurückgegebenen Liste der mehrere Dateinamen angeben. Ersetzen Sie hierzu `m_ofn.lpstrFile` mit einem Zeiger auf einen Puffer Sie zugeordnet haben, wenn Sie erstellt haben, die [CFileDialog](../../mfc/reference/cfiledialog-class.md), aber vor dem Aufruf `DoModal`. Darüber hinaus müssen Sie festlegen `m_ofn.nMaxFile` mit der Anzahl von Zeichen im Puffer verweist `m_ofn.lpstrFile`. Wenn Sie festlegen, dass die maximale Anzahl von Dateien zum auszuwählenden `n`, ist die erforderliche Puffergröße `n`*(_MAX_PATH + 1) + 1. Zum Beispiel:  
   
- [!code-cpp[NVC_MFCFiles#23](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_1.cpp)]  
+ [!code-cpp[NVC_MFCFiles #23](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_1.cpp)]  
   
- To enable the user to resize an Explorer-style dialog box by using either the mouse or keyboard, set the `OFN_ENABLESIZING` flag. Setting this flag is necessary only if you provide a hook procedure or custom template. The flag works only with an Explorer-style dialog box; old-style dialog boxes cannot be resized.  
+ Um dem Benutzer ein Dialogfeld Explorer-ähnliche Größe ändern, indem Sie mit der Maus oder Tastatur zu aktivieren, legen die `OFN_ENABLESIZING` Flag. Dieses Flag ist nur erforderlich, wenn Sie einen Hookprozedur oder eine benutzerdefinierte Vorlage bereitzustellen. Das Flag kann nur mit einer Explorer-ähnliche Dialogfeld; Dialogfelder im alten Stil können nicht geändert werden.  
   
- The `lpszFilter` parameter is used to determine the type of file name a file must have to be displayed in the file list. The first string in the string pair describes the filter; the second string indicates the file name extension to use. Multiple extensions may be specified by using a semicolon (the ';' character) as the delimiter. The string ends with two '&#124;' characters, followed by a `NULL` character. You can also use a [CString](../../atl-mfc-shared/using-cstring.md) object for this parameter.  
+ Die `lpszFilter` Parameter wird verwendet, um zu bestimmen, den Typ des Dateinamens eine Datei benötigen, die in der Liste angezeigt werden. Die erste Zeichenfolge im String-Paar beschreibt den Filter. die zweite Zeichenfolge gibt an, die Name-Dateierweiterung verwendet wird. Mehrere Erweiterungen können durch ein Semikolon (';'-Zeichen) als Trennzeichen angegeben werden. Endet die Zeichenfolge mit zwei ' |' Zeichen, gefolgt von einem `NULL` Zeichen. Sie können auch eine [CString](../../atl-mfc-shared/using-cstring.md) Objekt für diesen Parameter.  
   
- For example, [!INCLUDE[ofprexcel](../../mfc/reference/includes/ofprexcel_md.md)] allows users to open files that have extensions .xlc (chart) or .xls (worksheet), among others. The filter for Excel could be written as:  
+ Beispielsweise [!INCLUDE[ofprexcel](../../mfc/reference/includes/ofprexcel_md.md)] ermöglicht Benutzern das Öffnen von Dateien, die Erweiterungen .xlc (Diagramm) oder einer XLS (Tabelle), haben o. ä. Der Filter für Excel kann als formuliert werden:  
   
- [!code-cpp[NVC_MFCFiles#24](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_2.cpp)]  
+ [!code-cpp[NVC_MFCFiles #24](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_2.cpp)]  
   
- However, if you plan to use this string to directly update the `OPENFILENAME` structure, you should delimit your strings with the null character, '\0', instead of the vertical bars ('&#124;').  
+ Jedoch, wenn Sie planen, verwenden Sie diese Zeichenfolge für den direkten Aktualisieren der `OPENFILENAME` -Struktur, sollten Sie die Zeichenfolgen mit Null-Zeichen, '\0', statt die senkrechten Striche begrenzen ("|").  
   
- The `bVistaStyle` parameter is applicable only when running under [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]. Under earlier versions of Windows, this parameter is ignored. If `bVistaStyle` is set to `TRUE`, when you compile a program with Visual Studio 2008 or later, the new Vista style **File Dialog** will be used. Otherwise, the previous MFC style **File Dialog** will be used.  
+ Die `bVistaStyle` Parameter gilt nur beim Ausführen unter [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]. Unter früheren Versionen von Windows wird dieser Parameter ignoriert. Wenn `bVistaStyle` festgelegt ist, um `TRUE`können beim Kompilieren eines Programms mit [!INCLUDE[vs_orcas_long](../../atl/reference/includes/vs_orcas_long_md.md)] oder höher, die neue Vista-Formatvorlage **Dialogfeld "Datei"** verwendet werden. Andernfalls den vorherigen MFC-Stil **Dialogfeld "Datei"** verwendet werden.  
   
- Dialog templates are not supported on dialogs based on `bVistaStyle`  
+ Dialogfeldvorlagen werden auf Dialogfeldern basierend auf nicht unterstützt.`bVistaStyle`  
   
-### <a name="example"></a>Example  
-  See the example for [CFileDialog::DoModal](#domodal).  
+### <a name="example"></a>Beispiel  
+  Siehe das Beispiel für [CFileDialog::DoModal](#domodal).  
   
-##  <a name="domodal"></a>  CFileDialog::DoModal  
- Call this function to display the Windows common file dialog box and allow the user to browse files and directories and enter a filename.  
+##  <a name="domodal"></a>CFileDialog::DoModal  
+ Mit dieser Funktion wird zum Anzeigen der Windows-Datei Standarddialogfeld und ermöglicht dem Benutzer das Durchsuchen von Dateien und Verzeichnisse, und geben einen Dateinamen an.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
-### <a name="return-value"></a>Return Value  
- **IDOK** or **IDCANCEL**. If **IDCANCEL** is returned, call the Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) function to determine whether an error occurred.  
+### <a name="return-value"></a>Rückgabewert  
+ **IDOK** oder **IDCANCEL**. Wenn **IDCANCEL** wird zurückgegeben, rufen Sie die Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) Funktion, um festzustellen, ob ein Fehler aufgetreten.  
   
- **IDOK** and **IDCANCEL** are constants that indicate whether the user selected the OK or Cancel button.  
+ **IDOK** und **IDCANCEL** sind Konstanten, die angeben, ob der Benutzer die Schaltfläche OK oder "Abbrechen" ausgewählt.  
   
-### <a name="remarks"></a>Remarks  
- If you want to initialize the various file dialog-box options by setting members of the **m_ofn** structure, you should do this before calling `DoModal`, but after the dialog object is constructed.  
+### <a name="remarks"></a>Hinweise  
+ Wenn Sie verschiedene Optionen für die im Dialogfeld zu initialisieren, indem Sie Mitglieder festlegen möchten die **M_ofn** -Struktur, ergreifen Sie dies vor dem Aufruf `DoModal`, aber erst, nachdem das Dialogfeldobjekt erstellt wird.  
   
- For example, if you want to allow the user to select multiple files, set the `OFN_ALLOWMULTISELECT` flag before calling `DoModal`, as shown in the code example in this topic.  
+ Angenommen, wenn Sie den Benutzer zum Auswählen mehrerer Dateien zulassen möchten, legen die `OFN_ALLOWMULTISELECT` vor dem Aufruf flag `DoModal`, wie im Codebeispiel in diesem Thema gezeigt.  
   
- When the user clicks the dialog box's OK or Cancel buttons, or selects the Close option from the dialog box's control menu, control is returned to your application. You can then call other member functions to retrieve the settings or information the user inputs into the dialog box.  
+ Wenn der Benutzer klickt auf das Dialogfeld Schaltflächen OK oder "Abbrechen", oder SELECT-Anweisungen schließen über des Dialogfelds option Menü steuern möchten, wird die Steuerung an Ihre Anwendung zurückgegeben. Sie können dann anderen Memberfunktionen rufen Sie die Einstellungen oder der Informationen der Benutzereingaben in das Dialogfeld aufrufen.  
   
- `DoModal` is a virtual function overridden from class `CDialog`.  
+ `DoModal`eine virtuelle Funktion, die von Klasse überschrieben wird `CDialog`.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFCFiles#25](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_3.cpp)]  
+### <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_MFCFiles #25](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_3.cpp)]  
   
-##  <a name="enableopendropdown"></a>  CFileDialog::EnableOpenDropDown  
- Enables a drop-down list on the Open or Save button in the dialog.  
+##  <a name="enableopendropdown"></a>CFileDialog::EnableOpenDropDown  
+ Ermöglicht eine Dropdownliste öffnen oder speichern Sie die Schaltfläche im Dialogfeld "".  
   
 ```  
 HRESULT EnableOpenDropDown(DWORD dwIDCtl);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwIDCtl`  
- The ID of the drop-down list.  
+ Die ID der Dropdown-Liste.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="endvisualgroup"></a>  CFileDialog::EndVisualGroup  
- Stops the addition of elements to a visual group in the dialog.  
+##  <a name="endvisualgroup"></a>CFileDialog::EndVisualGroup  
+ Beendet das Hinzufügen von Elementen zu einer Gruppe im Dialogfeld "".  
   
 ```  
 HRESULT EndVisualGroup();
 ```  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK if successful; an error value otherwise.  
+### <a name="return-value"></a>Rückgabewert  
+ Gibt S_OK, wenn erfolgreich; ein Fehlerwert andernfalls.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="getcheckbuttonstate"></a>  CFileDialog::GetCheckButtonState  
- Retrieves the current state of a check button (check box) in the dialog.  
+##  <a name="getcheckbuttonstate"></a>CFileDialog::GetCheckButtonState  
+ Ruft den aktuellen Status der eine Schaltfläche "Überprüfen" (Kontrollkästchen) im Dialogfeld ab.  
   
 ```  
 HRESULT GetCheckButtonState(
@@ -649,17 +588,17 @@ HRESULT GetCheckButtonState(
     BOOL& bChecked);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwIDCtl`  
- The ID of the check box.  
+ Die ID des Kontrollkästchens.  
   
  `bChecked`  
- The state of the check box. `TRUE` indicates checked; `FALSE` indicates unchecked.  
+ Der Status des Kontrollkästchens. `TRUE`weist darauf hin überprüft. `FALSE` deaktiviert angibt.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="getcontrolitemstate"></a>  CFileDialog::GetControlItemState  
- Retrieves the current state of an item in a container control found in the dialog.  
+##  <a name="getcontrolitemstate"></a>CFileDialog::GetControlItemState  
+ Ruft ab den aktuellen Status eines Elements in einem Containersteuerelement im Dialogfeld "" gefunden.  
   
 ```  
 HRESULT GetControlItemState(
@@ -668,20 +607,20 @@ HRESULT GetControlItemState(
     CDCONTROLSTATEF& dwState);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwIDCtl`  
- The ID of the container control.  
+ Die ID des Containersteuerelements.  
   
  `dwIDItem`  
- The ID of the item.  
+ Die ID des Elements.  
   
  `dwState`  
- A reference to a variable that receives one of more values from the CDCONTROLSTATE enumeration that indicates the current state of the control.  
+ Ein Verweis auf eine Variable, die mehrere Werte aus der Enumeration CDCONTROLSTATE empfängt, der den aktuellen Status des Steuerelements angibt.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="getcontrolstate"></a>  CFileDialog::GetControlState  
- Retrieves the current visibility and enabled states of a given control.  
+##  <a name="getcontrolstate"></a>CFileDialog::GetControlState  
+ Ruft die aktuelle Sichtbarkeit und aktivierte Status eines angegebenen Steuerelements.  
   
 ```  
 HRESULT GetControlState(
@@ -689,17 +628,17 @@ HRESULT GetControlState(
     CDCONTROLSTATEF& dwState);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwIDCtl`  
- The ID of the control.  
+ Die ID des Steuerelements.  
   
  `dwState`  
- A reference to a variable that receives one or more values from the CDCONTROLSTATE enumeration that indicates the current state of the control.  
+ Ein Verweis auf eine Variable, die einen oder mehrere Werte aus der Enumeration CDCONTROLSTATE empfängt, der den aktuellen Status des Steuerelements angibt.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="geteditboxtext"></a>  CFileDialog::GetEditBoxText  
- Retrieves the current text in an edit box control.  
+##  <a name="geteditboxtext"></a>CFileDialog::GetEditBoxText  
+ Ruft den aktuellen Text in einem Bearbeitungssteuerelement.  
   
 ```  
 HRESULT GetEditBoxText(
@@ -707,159 +646,159 @@ HRESULT GetEditBoxText(
     CString& strText);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwIDCtl`  
- The ID of the edit box.  
+ Die ID des im Bearbeitungsfeld.  
   
  `strText`  
- The text value.  
+ Der Textwert.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="getfileext"></a>  CFileDialog::GetFileExt  
- Call this function to retrieve the extension of the filename entered into the dialog box.  
+##  <a name="getfileext"></a>CFileDialog::GetFileExt  
+ Mit dieser Funktion wird zum Abrufen der Erweiterungs des Dateinamens in das Dialogfeld eingegeben haben.  
   
 ```  
 CString GetFileExt() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The extension of the filename.  
+### <a name="return-value"></a>Rückgabewert  
+ Die Erweiterung des Dateinamens.  
   
-### <a name="remarks"></a>Remarks  
- For example, if the name of the file entered is DATA.TXT, `GetFileExt` returns "TXT".  
+### <a name="remarks"></a>Hinweise  
+ Wenn der Name der Datei eingetragen sind z. B. Daten auf. TXT, `GetFileExt` "TXT" zurückgegeben.  
   
- If `m_ofn.Flags` has the `OFN_ALLOWMULTISELECT` flag set, this string contains a sequence of null-terminated strings, with the first string being the directory path of the file group selected, followed by the names of all files selected by the user. To retrieve file pathnames, use the [GetStartPosition](#getstartposition) and [GetNextPathName](#getnextpathname) member functions.  
+ Wenn `m_ofn.Flags` hat die `OFN_ALLOWMULTISELECT` -Flag festgelegt, diese Zeichenfolge enthält eine Sequenz von Null endende Zeichenfolgen, mit der ersten Zeichenfolge, die den Verzeichnispfad der Dateigruppe ausgewählt, wird gefolgt von den Namen aller Dateien, die vom Benutzer ausgewählt wurden. Verwenden Sie zum Abrufen der Dateipfadnamen der [GetStartPosition](#getstartposition) und [GetNextPathName](#getnextpathname) Memberfunktionen.  
   
-##  <a name="getfilename"></a>  CFileDialog::GetFileName  
- Call this function to retrieve the name of the filename entered in the dialog box.  
+##  <a name="getfilename"></a>CFileDialog::GetFileName  
+ Mit dieser Funktion wird zum Abrufen des Namens eines der im Dialogfeld eingegebene Dateiname.  
   
 ```  
 CString GetFileName() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The name of the file.  
+### <a name="return-value"></a>Rückgabewert  
+ Der Name der Datei.  
   
-### <a name="remarks"></a>Remarks  
- The name of the file includes both the prefix and the extension. For example, `GetFileName` will return "TEXT.DAT" for the file C:\FILES\TEXT.DAT.  
+### <a name="remarks"></a>Hinweise  
+ Der Name der Datei enthält das Präfix und der Erweiterung. Z. B. `GetFileName` zurück "TEXT. DAT"für die Datei C:\FILES\TEXT.DAT.  
   
- If `m_ofn.Flags` has the `OFN_ALLOWMULTISELECT` flag set, you should call [GetStartPosition](#getstartposition) and [GetNextPathName](#getnextpathname) to retrieve a file pathname.  
+ Wenn `m_ofn.Flags` hat die `OFN_ALLOWMULTISELECT` flag festgelegt ist, rufen Sie [GetStartPosition](#getstartposition) und [GetNextPathName](#getnextpathname) um einen Dateipfadnamen abzurufen.  
   
-##  <a name="getfiletitle"></a>  CFileDialog::GetFileTitle  
- Call this function to retrieve the title of the file entered in the dialog box.  
+##  <a name="getfiletitle"></a>CFileDialog::GetFileTitle  
+ Mit dieser Funktion wird zum Abrufen des Titels der Datei in das Dialogfeld eingegeben haben.  
   
 ```  
 CString GetFileTitle() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The title of the file.  
+### <a name="return-value"></a>Rückgabewert  
+ Der Titel der Datei.  
   
-### <a name="remarks"></a>Remarks  
- The title of the file includes only its prefix, without the path or the extension. For example, `GetFileTitle` will return "TEXT" for the file C:\FILES\TEXT.DAT.  
+### <a name="remarks"></a>Hinweise  
+ Der Titel der Datei enthält nur ein Präfix, ohne den Pfad oder die Erweiterung. Beispielsweise `GetFileTitle` "TEXT" für die Datei C:\FILES\TEXT.DAT zurück.  
   
- If `m_ofn.Flags` has the `OFN_ALLOWMULTISELECT` flag set, this string contains a sequence of null-terminated strings, with the first string being the directory path of the file group selected, followed by the names of all files selected by the user. For this reason, use the [GetStartPosition](#getstartposition) and [GetNextPathName](#getnextpathname) member functions to retrieve the next file name in the list.  
+ Wenn `m_ofn.Flags` hat die `OFN_ALLOWMULTISELECT` -Flag festgelegt, diese Zeichenfolge enthält eine Sequenz von Null endende Zeichenfolgen, mit der ersten Zeichenfolge, die den Verzeichnispfad der Dateigruppe ausgewählt, wird gefolgt von den Namen aller Dateien, die vom Benutzer ausgewählt wurden. Aus diesem Grund verwenden Sie die [GetStartPosition](#getstartposition) und [GetNextPathName](#getnextpathname) Memberfunktionen zum nächsten Dateinamen in der Liste abzurufen.  
   
-### <a name="example"></a>Example  
-  See the example for [CFileDialog::DoModal](#domodal).  
+### <a name="example"></a>Beispiel  
+  Siehe das Beispiel für [CFileDialog::DoModal](#domodal).  
   
-##  <a name="getfolderpath"></a>  CFileDialog::GetFolderPath  
- Call this member function to retrieve the path of the currently open folder or directory for an Explorer-style Open or Save As common dialog box.  
+##  <a name="getfolderpath"></a>CFileDialog::GetFolderPath  
+ Rufen Sie diese Memberfunktion um den Pfad der aktuell geöffneten Ordner oder des Verzeichnisses für eine Explorer-ähnliche öffnen oder Speichern unter Standarddialogfeld abzurufen.  
   
 ```  
 CString GetFolderPath() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A [CString](../../atl-mfc-shared/reference/cstringt-class.md) object containing the currently open folder or directory.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) Objekt, das den aktuell geöffneten Ordner oder Verzeichnis enthält.  
   
-### <a name="remarks"></a>Remarks  
- The dialog box must have been created with the **OFN_EXPLORER** style; otherwise, the method will fail with an assertion.  
+### <a name="remarks"></a>Hinweise  
+ Das Dialogfeld muss mit erstellt wurden die **OFN_EXPLORER** formatieren; andernfalls schlägt die Methode mit einer Assertion fehl.  
   
- You can call this method only while the dialog box is being displayed. After the dialog box has been closed, this function will no longer work, and the method will fail with an assertion.  
+ Sie können diese Methode aufrufen, allerdings nur, wenn das Dialogfeld angezeigt wird. Nach dem Schließen des Dialogfelds diese Funktion wird nicht mehr funktionieren, und die Methode mit einer Assertion fehl.  
   
-##  <a name="getifiledialogcustomize"></a>  CFileDialog::GetIFileDialogCustomize  
- Retrieves a pointer to the internal COM object for a given [CFileDialog](../../mfc/reference/cfiledialog-class.md).  
+##  <a name="getifiledialogcustomize"></a>CFileDialog::GetIFileDialogCustomize  
+ Ruft einen Zeiger auf das interne COM-Objekt für einen bestimmten [CFileDialog](../../mfc/reference/cfiledialog-class.md).  
   
 ```  
 IFileDialogCustomize* GetIFileDialogCustomize();
 ```  
   
-### <a name="return-value"></a>Return Value  
- The pointer to the internal COM object for the `CFileDialog`. It is your responsibility to release this pointer appropriately.  
+### <a name="return-value"></a>Rückgabewert  
+ Der Zeiger auf das interne COM-Objekt für die `CFileDialog`. Es liegt in Ihrer Verantwortung this-Zeiger ordnungsgemäß freigegeben.  
   
-### <a name="remarks"></a>Remarks  
- Use this function only under [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] with an object that has `bVistaStyle` set to `true`. If you use this function when `bVistaStyle` is `false`, it will return `NULL` in release mode and throw an assertion in debug mode.  
+### <a name="remarks"></a>Hinweise  
+ Verwenden Sie diese Funktion nur unter [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] mit der ein Objekt mit `bVistaStyle` festgelegt `true`. Wenn Sie diese Funktion verwenden, wenn `bVistaStyle` ist `false`, zurückgegeben `NULL` im Releasemodus und löst eine Assertion im Debugmodus.  
   
- For more information about the `IFileDialogCustomize` interface,  see [IFileDialogCustomize](http://msdn.microsoft.com/library/windows/desktop/bb775912).  
+ Weitere Informationen zu den `IFileDialogCustomize` Benutzeroberfläche, siehe [IFileDialogCustomize](http://msdn.microsoft.com/library/windows/desktop/bb775912).  
   
-### <a name="example"></a>Example  
- This example retrieves the internal COM object. To run this code example, you must compile it under [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)].  
+### <a name="example"></a>Beispiel  
+ In diesem Beispiel ruft das interne COM-Objekt ab. Um dieses Codebeispiel ausführen zu können, müssen sie unter Kompilieren [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)].  
   
- [!code-cpp[NVC_MFC_CFileDialog#4](../../mfc/reference/codesnippet/cpp/cfiledialog-class_4.cpp)]  
+ [!code-cpp[NVC_MFC_CFileDialog #4](../../mfc/reference/codesnippet/cpp/cfiledialog-class_4.cpp)]  
   
-##  <a name="getifileopendialog"></a>  CFileDialog::GetIFileOpenDialog  
- Retrieves a pointer to the internal COM object for a given `CFileDialog`.  
+##  <a name="getifileopendialog"></a>CFileDialog::GetIFileOpenDialog  
+ Ruft einen Zeiger auf das interne COM-Objekt für einen bestimmten `CFileDialog`.  
   
 ```  
 IFileOpenDialog* GetIFileOpenDialog();
 ```  
   
-### <a name="return-value"></a>Return Value  
- The pointer to the internal COM object for the `CFileDialog`. It is your responsibility to release this pointer appropriately.  
+### <a name="return-value"></a>Rückgabewert  
+ Der Zeiger auf das interne COM-Objekt für die `CFileDialog`. Es liegt in Ihrer Verantwortung this-Zeiger ordnungsgemäß freigegeben.  
   
-### <a name="remarks"></a>Remarks  
- Use this function only under [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] with an object that has `bVistaStyle` set to `true`. This function returns `NULL` if the `CFileDialog` is not an **Open** dialog box or if `bVistaStyle` is set to `false`. In this final case, the function only returns `NULL` in release mode - in debug mode it will throw an assertion.  
+### <a name="remarks"></a>Hinweise  
+ Verwenden Sie diese Funktion nur unter [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] mit der ein Objekt mit `bVistaStyle` festgelegt `true`. Diese Funktion gibt `NULL` Wenn die `CFileDialog` kein **öffnen** (Dialogfeld) oder wenn `bVistaStyle` auf festgelegt ist `false`. In diesem letzten Fall gibt die Funktion nur `NULL` im Releasemodus - im Debugmodus befinden, löst sie eine Assertion.  
   
- For more information about the `IFileOpenDialog` interface, see [IFileOpenDialog](http://msdn.microsoft.com/library/windows/desktop/bb775834).  
+ Weitere Informationen zu den `IFileOpenDialog` Benutzeroberfläche, siehe [IFileOpenDialog](http://msdn.microsoft.com/library/windows/desktop/bb775834).  
   
-### <a name="example"></a>Example  
- This example retrieves the internal COM object. To run this code, you must compile it under [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)].  
+### <a name="example"></a>Beispiel  
+ In diesem Beispiel ruft das interne COM-Objekt ab. Um diesen Code auszuführen, müssen Sie es unter Kompilieren [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)].  
   
- [!code-cpp[NVC_MFC_CFileDialog#2](../../mfc/reference/codesnippet/cpp/cfiledialog-class_5.cpp)]  
+ [!code-cpp[NVC_MFC_CFileDialog #2](../../mfc/reference/codesnippet/cpp/cfiledialog-class_5.cpp)]  
   
-##  <a name="getifilesavedialog"></a>  CFileDialog::GetIFileSaveDialog  
- Retrieves a pointer to the internal COM object for a given `CFileDialog`.  
+##  <a name="getifilesavedialog"></a>CFileDialog::GetIFileSaveDialog  
+ Ruft einen Zeiger auf das interne COM-Objekt für einen bestimmten `CFileDialog`.  
   
 ```  
 IFileSaveDialog* GetIFileSaveDialog();
 ```  
   
-### <a name="return-value"></a>Return Value  
- The pointer to the internal COM object for the `CFileDialog`. It is your responsibility to release this pointer appropriately.  
+### <a name="return-value"></a>Rückgabewert  
+ Der Zeiger auf das interne COM-Objekt für die `CFileDialog`. Es liegt in Ihrer Verantwortung this-Zeiger ordnungsgemäß freigegeben.  
   
-### <a name="remarks"></a>Remarks  
- Use this function only under [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] with an object that has `bVistaStyle` set to `true`. This function will return `NULL` if the `CFileDialog` is not a **Save** dialog box or if `bVistaStyle` is set to `false`. In this final case, the function only returns `NULL` in release mode - in debug mode it will throw an assertion.  
+### <a name="remarks"></a>Hinweise  
+ Verwenden Sie diese Funktion nur unter [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] mit der ein Objekt mit `bVistaStyle` festgelegt `true`. Diese Funktion zurück `NULL` Wenn die `CFileDialog` ist keine **speichern** Dialogfeld oder, wenn `bVistaStyle` auf festgelegt ist `false`. In diesem letzten Fall gibt die Funktion nur `NULL` im Releasemodus - im Debugmodus befinden, löst sie eine Assertion.  
   
- For more information about the `IFileSaveDialog` interface, see [IFileSaveDialog](http://msdn.microsoft.com/library/windows/desktop/bb775688).  
+ Weitere Informationen zu den `IFileSaveDialog` Benutzeroberfläche, siehe [IFileSaveDialog](http://msdn.microsoft.com/library/windows/desktop/bb775688).  
   
-### <a name="example"></a>Example  
- This example retrieves the internal COM object. To run this code example, you must compile it under [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)].  
+### <a name="example"></a>Beispiel  
+ In diesem Beispiel ruft das interne COM-Objekt ab. Um dieses Codebeispiel ausführen zu können, müssen sie unter Kompilieren [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)].  
   
- [!code-cpp[NVC_MFC_CFileDialog#3](../../mfc/reference/codesnippet/cpp/cfiledialog-class_6.cpp)]  
+ [!code-cpp[NVC_MFC_CFileDialog Nr. 3](../../mfc/reference/codesnippet/cpp/cfiledialog-class_6.cpp)]  
   
-##  <a name="getnextpathname"></a>  CFileDialog::GetNextPathName  
- Call this function to retrieve the next filename from the group selected in the dialog box.  
+##  <a name="getnextpathname"></a>CFileDialog::GetNextPathName  
+ Mit dieser Funktion wird zum Abrufen der nächsten Dateinamen aus der Gruppe, die Sie im Dialogfeld ausgewählt.  
   
 ```  
 CString GetNextPathName(POSITION& pos) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `pos`  
- A reference to a **POSITION** value returned by a previous `GetNextPathName` or `GetStartPosition` function call. **NULL** if the end of the list has been reached.  
+ Ein Verweis auf eine **POSITION** von einem vorherigen zurückgegebene Wert `GetNextPathName` oder `GetStartPosition` Funktionsaufruf. **NULL** , wenn das Ende der Liste erreicht wurde.  
   
-### <a name="return-value"></a>Return Value  
- The full path of the file.  
+### <a name="return-value"></a>Rückgabewert  
+ Der vollständige Pfad der Datei.  
   
-### <a name="remarks"></a>Remarks  
- The path of the filename includes the file's title plus the entire directory path. For example, `GetNextPathName` will return "C:\FILES\TEXT.DAT" for the file C:\FILES\TEXT.DAT. You can use `GetNextPathName` in a forward iteration loop if you establish the initial position with a call to `GetStartPosition`.  
+### <a name="remarks"></a>Hinweise  
+ Der Pfad den Dateinamen enthält den Titel der Datei sowie die gesamte Verzeichnispfad. Z. B. `GetNextPathName` zurück "C:\FILES\TEXT. DAT"für die Datei C:\FILES\TEXT.DAT. Sie können `GetNextPathName` in einer Schleife vorwärts, wenn Sie die erste Position mit einem Aufruf von einrichten `GetStartPosition`.  
   
- If the selection consists of only one file, that file name will be returned.  
+ Wenn die Auswahl nur eine Datei besteht, wird dieser Dateiname zurückgegeben werden.  
   
-##  <a name="getofn"></a>  CFileDialog::GetOFN  
- Retrieves the associated **OPENFILENAME** structure.  
+##  <a name="getofn"></a>CFileDialog::GetOFN  
+ Ruft das zugeordnete **OPENFILENAME** Struktur.  
   
 ```  
 const OPENFILENAME& GetOFN() const;  
@@ -867,72 +806,72 @@ const OPENFILENAME& GetOFN() const;
 OPENFILENAME& GetOFN();
 ```  
   
-### <a name="return-value"></a>Return Value  
- An [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) structure.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) Struktur.  
   
-### <a name="remarks"></a>Remarks  
- Use the second version of this function to initialize the appearance of a **File Open** or **File Save As** dialog box after it is constructed but before it is displayed with the `DoModal` member function. For example, you can set the **lpstrTitle** member of **m_ofn** to the caption you want the dialog box to have.  
+### <a name="remarks"></a>Hinweise  
+ Verwenden Sie die zweite Version dieser Funktion initialisiert werden, die Darstellung von einer **Datei öffnen** oder **Datei speichern unter** Dialogfeld, nachdem es erstellt wurde, aber bevor er mit angezeigt wird die `DoModal` Memberfunktion. Sie können z. B. Festlegen der **LpstrTitle** Mitglied **M_ofn** auf die Beschriftung im Dialogfeld verfügen sollen.  
   
-##  <a name="getpathname"></a>  CFileDialog::GetPathName  
- Call this function to retrieve the full path of the file entered in the dialog box.  
+##  <a name="getpathname"></a>CFileDialog::GetPathName  
+ Mit dieser Funktion wird zum Abrufen des vollständigen Pfads der Datei in das Dialogfeld eingegeben haben.  
   
 ```  
 CString GetPathName() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The full path of the file.  
+### <a name="return-value"></a>Rückgabewert  
+ Der vollständige Pfad der Datei.  
   
-### <a name="remarks"></a>Remarks  
- The path of the filename includes the file's title plus the entire directory path. For example, `GetPathName` will return "C:\FILES\TEXT.DAT" for the file C:\FILES\TEXT.DAT.  
+### <a name="remarks"></a>Hinweise  
+ Der Pfad den Dateinamen enthält den Titel der Datei sowie die gesamte Verzeichnispfad. Z. B. `GetPathName` zurück "C:\FILES\TEXT. DAT"für die Datei C:\FILES\TEXT.DAT.  
   
- If `m_ofn.Flags` has the `OFN_ALLOWMULTISELECT` flag set, this string contains a sequence of null-teminated strings, with the first string being the directory path of the file group selected, followed by the names of all files selected by the user. For this reason, use the [GetStartPosition](#getstartposition) and [GetNextPathName](#getnextpathname) member functions to retrieve the next file name in the list.  
+ Wenn `m_ofn.Flags` hat die `OFN_ALLOWMULTISELECT` -Flag festgelegt, diese Zeichenfolge enthält eine Sequenz von Null-Teminated gefolgt Zeichenfolgen, wobei die erste Zeichenfolge, die den Verzeichnispfad der Dateigruppe ausgewählt haben, werden die Namen aller Dateien, die vom Benutzer ausgewählt. Aus diesem Grund verwenden Sie die [GetStartPosition](#getstartposition) und [GetNextPathName](#getnextpathname) Memberfunktionen zum nächsten Dateinamen in der Liste abzurufen.  
   
-### <a name="example"></a>Example  
-  See the example for [CFileDialog::DoModal](#domodal).  
+### <a name="example"></a>Beispiel  
+  Siehe das Beispiel für [CFileDialog::DoModal](#domodal).  
   
-##  <a name="getreadonlypref"></a>  CFileDialog::GetReadOnlyPref  
- Call this function to determine whether the Read Only check box has been selected in the Windows standard File Open and File Save As dialog boxes.  
+##  <a name="getreadonlypref"></a>CFileDialog::GetReadOnlyPref  
+ Rufen Sie diese Funktion, um zu bestimmen, ob das Kontrollkästchen Read Only in den Windows-standard-Datei öffnen und Datei speichern unter Dialogfeldern ausgewählt wurde.  
   
 ```  
 BOOL GetReadOnlyPref() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Non-zero if the Read Only check box in the dialog box is selected; otherwise 0.  
+### <a name="return-value"></a>Rückgabewert  
+ Ungleich 0, wenn Sie im Dialogfeld das Kontrollkästchen Schreibgeschützt aktiviert ist; andernfalls 0.  
   
-### <a name="remarks"></a>Remarks  
- You can hide the Read Only check box by setting the `OFN_HIDEREADONLY` style in the `CFileDialog` constructor.  
+### <a name="remarks"></a>Hinweise  
+ Sie können das Kontrollkästchen Read Only ausblenden, indem Sie festlegen der `OFN_HIDEREADONLY` formatieren die `CFileDialog` Konstruktor.  
   
 > [!NOTE]
-> [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] style `CFileDialog` objects do not support this function. Attempting to use this function on a [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] style `CFileDialog` will throw [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).   
+> [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]Stil `CFileDialog` Objekte unterstützen diese Funktion nicht. Bei dem Versuch, diese Funktion verwenden, auf eine [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] Stil `CFileDialog` löst [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).   
   
-##  <a name="getresult"></a>  CFileDialog::GetResult  
- Retrieves the choice that the user made in the dialog.  
+##  <a name="getresult"></a>CFileDialog::GetResult  
+ Ruft ab, die Auswahl, die der Benutzer im Dialogfeld vorgenommen.  
   
 ```  
 IShellItem* GetResult() throw();
 ```  
   
-### <a name="return-value"></a>Return Value  
- A pointer to an IShellItem that represents the user's choice.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Zeiger auf ein IShellItem, die die Auswahl des Benutzers darstellt.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="getresults"></a>  CFileDialog::GetResults  
- Retrieves the user's choices in a dialog that allows multiple selection.  
+##  <a name="getresults"></a>CFileDialog::GetResults  
+ Ruft die Benutzerauswahl in ein Dialogfeld, Mehrfachauswahl ab.  
   
 ```  
 IShellItemArray* GetResults() throw();
 ```  
   
-### <a name="return-value"></a>Return Value  
- A pointer to an IShellItemArray through which the items selected in the dialog can be accessed.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Zeiger auf eine IShellItemArray über die ausgewählten Elemente in das Dialogfeld zugegriffen werden können.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="getselectedcontrolitem"></a>  CFileDialog::GetSelectedControlItem  
- Retrieves a particular item from the specified container control in the dialog.  
+##  <a name="getselectedcontrolitem"></a>CFileDialog::GetSelectedControlItem  
+ Ruft ein bestimmtes Element aus dem angegebenen Container-Steuerelement im Dialogfeld ab.  
   
 ```  
 HRESULT GetSelectedControlItem(
@@ -940,62 +879,62 @@ HRESULT GetSelectedControlItem(
     DWORD& dwIDItem);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwIDCtl`  
- The ID of the container control.  
+ Die ID des Containersteuerelements.  
   
  `dwIDItem`  
- The ID of the item that the user selected in the control.  
+ Die ID des Elements, das der Benutzer im Steuerelement ausgewählt.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="getstartposition"></a>  CFileDialog::GetStartPosition  
- Call this member function to retrieve the position of the first file pathname in the list, if `m_ofn.Flags` has the `OFN_ALLOWMULTISELECT` flag set.  
+##  <a name="getstartposition"></a>CFileDialog::GetStartPosition  
+ Rufen Sie diese Memberfunktion rufen Sie die Position des ersten Dateipfadnamen in der Liste aus, wenn `m_ofn.Flags` hat die `OFN_ALLOWMULTISELECT` flag festgelegt.  
   
 ```  
 POSITION GetStartPosition() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A **POSITION** value that can be used for iteration; **NULL** if the list is empty.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein **POSITION** Wert, der für die Iteration; verwendet werden kann **NULL** , wenn die Liste leer ist.  
   
-##  <a name="hidecontrol"></a>  CFileDialog::HideControl  
- Call this member function to hide the specified control in an Explorer-style Open or Save As common dialog box.  
+##  <a name="hidecontrol"></a>CFileDialog::HideControl  
+ Rufen Sie diese Memberfunktion, um das angegebene Steuerelement in einem Explorer-ähnliche öffnen oder speichern Sie als allgemeine Dialogfeld auszublenden.  
   
 ```  
 void HideControl(int nID);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `nID`  
- The ID of the control to hide.  
+ Die ID des Steuerelements ausgeblendet werden soll.  
   
-### <a name="remarks"></a>Remarks  
- The dialog box must have been created with the **OFN_EXPLORER** style; otherwise, the function will fail with an assertion.  
+### <a name="remarks"></a>Hinweise  
+ Das Dialogfeld muss mit erstellt wurden die **OFN_EXPLORER** formatieren; andernfalls schlägt die Funktion mit einer Assertion fehl.  
   
-##  <a name="ispickfoldersmode"></a>  CFileDialog::IsPickFoldersMode  
- Determines if the current dialog is in folder picker mode.  
+##  <a name="ispickfoldersmode"></a>CFileDialog::IsPickFoldersMode  
+ Bestimmt, ob das aktuelle Dialogfeld im ordnerauswahlmodus.  
   
 ```  
 BOOL IsPickFoldersMode() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the dialog is in folder picker mode; otherwise `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn das Dialogfeld im ordnerauswahlmodus ist. andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="m_ofn"></a>  CFileDialog::m_ofn  
- `m_ofn` is a structure of type `OPENFILENAME`. The data in this structure represents the current state of the `CFileDialog`.  
+##  <a name="m_ofn"></a>CFileDialog::m_ofn  
+ `m_ofn`ist eine Struktur vom Typ `OPENFILENAME`. Die Daten in dieser Struktur entspricht dem aktuellen Zustand von der `CFileDialog`.  
   
-### <a name="remarks"></a>Remarks  
- Use this structure to initialize the appearance of a **File Open** or **File Save As** dialog box after you construct it but before you display it with the [DoModal](#domodal) method. For example, you can set the `lpstrTitle` member of `m_ofn` to the caption you want the dialog box to have.  
+### <a name="remarks"></a>Hinweise  
+ Verwenden Sie diese Struktur initialisiert werden, die Darstellung von einer **Datei öffnen** oder **Datei speichern unter** Dialogfeld, wenn Sie es erstellt haben, aber bevor Sie ihn mit Anzeigen der [DoModal](#domodal) Methode. Sie können z. B. Festlegen der `lpstrTitle` Mitglied `m_ofn` auf die Beschriftung im Dialogfeld verfügen sollen.  
   
- With the [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] style of [CFileDialog](../../mfc/reference/cfiledialog-class.md), `m_ofn` is not guaranteed to always match the state of the dialog box. It is synchronized with the dialog box in earlier versions of Windows. See [CFileDialog::ApplyOFNToShellDialog](#applyofntoshelldialog) and [CFileDialog::UpdateOFNFromShellDialog](#updateofnfromshelldialog) for more information about synchronizing the `m_ofn` structure and the `CFileDialog` state under [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)].  
+ Mit der [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] Stil der [CFileDialog](../../mfc/reference/cfiledialog-class.md), `m_ofn` entspricht nicht unbedingt immer den Status des Dialogfelds. Es wird mit dem Dialogfeld in früheren Versionen von Windows synchronisiert werden. Finden Sie unter [CFileDialog::ApplyOFNToShellDialog](#applyofntoshelldialog) und [CFileDialog::UpdateOFNFromShellDialog](#updateofnfromshelldialog) für Weitere Informationen zum Synchronisieren der `m_ofn` Struktur und die `CFileDialog` Status unter [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)].  
   
- [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] style file dialogs do not support certain members and flags of the `CFileDialog`. As a result, these will have no effect.  
+ [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]Stil Dateidialogfeldern unterstützen keine bestimmte Elemente und die Flags der `CFileDialog`. Daher werden dies keine Auswirkungen haben.  
   
- The following is a list of the members that are not supported by [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]:  
+ Im folgenden werden eine Liste der Elemente, die von nicht unterstützt werden [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]:  
   
 - `lpstrCustomFilter`  
   
@@ -1007,7 +946,7 @@ BOOL IsPickFoldersMode() const;
   
 - `lpTemplateName`  
   
- The following flags are not supported and therefore have no effect when you use the [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] style of `CFileDialog`:  
+ Die folgenden Flags werden nicht unterstützt und daher wirken sich nicht bei der Verwendung der [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] Stil der `CFileDialog`:  
   
 -   OFN_ENABLEHOOK  
   
@@ -1023,46 +962,46 @@ BOOL IsPickFoldersMode() const;
   
 -   OFN_HIDEREADONLY  
   
--   OFN_LONGNAMES - effectively always on in [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]  
+-   OFN_LONGNAMES - effektiv immer auf in[!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]  
   
--   OFN_NOLONGNAMES - effectively always off in [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]  
+-   OFN_NOLONGNAMES - off effektiv immer im[!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]  
   
--   OFN_NONETWORKBUTTON - effectively always on in [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]  
+-   OFN_NONETWORKBUTTON - effektiv immer auf in[!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]  
   
 -   OFN_READONLY  
   
 -   OFN_SHOWHELP  
   
- For more information about this structure, see the [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) structure in the Windows SDK.  
+ Weitere Informationen zu dieser Struktur finden Sie unter der [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) Struktur der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="makeprominent"></a>  CFileDialog::MakeProminent  
- Places a control in the dialog so that it stands out compared to other controls.  
+##  <a name="makeprominent"></a>CFileDialog::MakeProminent  
+ Stellen, damit er abhebt ein Steuerelements im Dialogfeld für andere Steuerelemente verglichen.  
   
 ```  
 HRESULT MakeProminent(DWORD dwIDCtl);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwIDCtl`  
- The ID of the control.  
+ Die ID des Steuerelements.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="onbuttonclicked"></a>  CFileDialog::OnButtonClicked  
- Called when the button is clicked.  
+##  <a name="onbuttonclicked"></a>CFileDialog::OnButtonClicked  
+ Wird aufgerufen, wenn die Schaltfläche geklickt wird.  
   
 ```  
 virtual void OnButtonClicked(DWORD dwIDCtl);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwIDCtl`  
- The ID of the button.  
+ Die ID der Schaltfläche.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="oncheckbuttontoggled"></a>  CFileDialog::OnCheckButtonToggled  
- Called when the check box is checked or unchecked.  
+##  <a name="oncheckbuttontoggled"></a>CFileDialog::OnCheckButtonToggled  
+ Wird aufgerufen, wenn Sie dieses Kontrollkästchen aktiviert oder deaktiviert wird.  
   
 ```  
 virtual void OnCheckButtonToggled(
@@ -1070,84 +1009,84 @@ virtual void OnCheckButtonToggled(
     BOOL bChecked);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwIDCtl`  
- The ID of the check box.  
+ Die ID des Kontrollkästchens.  
   
  `bChecked`  
- Checked or unchecked.  
+ Aktiviert oder deaktiviert.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="oncontrolactivating"></a>  CFileDialog::OnControlActivating  
- Called when the control is activated.  
+##  <a name="oncontrolactivating"></a>CFileDialog::OnControlActivating  
+ Wird aufgerufen, wenn das Steuerelement aktiviert ist.  
   
 ```  
 virtual void OnControlActivating(DWORD dwIDCtl);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwIDCtl`  
- The ID of the control.  
+ Die ID des Steuerelements.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="onfilenamechange"></a>  CFileDialog::OnFileNY` `Change  
- Override this method if you want to handle the `WM_NOTIFY` `CDN_SELCHANGE` message.  
+##  <a name="onfilenamechange"></a>CFileDialog::OnFileNameChange  
+ Überschreiben Sie diese Methode, wenn Sie behandeln möchten die `WM_NOTIFY``CDN_SELCHANGE` Nachricht.  
   
 ```  
 virtual void OnFileNameChange();
 ```  
   
-### <a name="remarks"></a>Remarks  
- The system sends the `CDN_SELCHANGE` message when the user selects a new file or folder in the file list of the **Open** or **Save As** dialog box. Override this method if you want to perform any actions in response to this message.  
+### <a name="remarks"></a>Hinweise  
+ Sendet das System die `CDN_SELCHANGE` Meldung, wenn der Benutzer eine neue Datei oder einen Ordner in der Dateiliste der wählt die **öffnen** oder **speichern unter** (Dialogfeld). Überschreiben Sie diese Methode, wenn Sie alle Aktionen als Reaktion auf diese Meldung ausführen möchten.  
   
- The system sends this message only if the dialog box was created with the OFN_EXPLORER flag turned on. For more information about the notification, see [CDN_SELCHANGE](http://msdn.microsoft.com/library/windows/desktop/ms646865). For information about the OFN_EXPLORER flag, see the [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) structure and [Open and Save As Dialog Boxes](http://msdn.microsoft.com/library/windows/desktop/ms646960).  
+ Das System sendet diese Nachricht nur, wenn das Dialogfeld mit dem Flag "OFN_EXPLORER" eingeschaltet erstellt wurde. Weitere Informationen zur Benachrichtigung finden Sie unter [CDN_SELCHANGE](http://msdn.microsoft.com/library/windows/desktop/ms646865). Informationen über das Flag OFN_EXPLORER finden Sie unter der [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) Struktur und [öffnen und speichern Sie als Dialogfelder](http://msdn.microsoft.com/library/windows/desktop/ms646960).  
   
-##  <a name="onfilenameok"></a>  CFileDialog::OnFileNameOK  
- Override this function only if you want to provide custom validation of filenames that are entered into a common file dialog box.  
+##  <a name="onfilenameok"></a>CFileDialog::OnFileNameOK  
+ Überschreiben Sie diese Funktion nur, wenn Sie benutzerdefinierte Validierung des Dateinamen angeben, die in ein häufig verwendetes Dialogfeld für die Datei eingegeben werden soll.  
   
 ```  
 virtual BOOL OnFileNameOK();
 ```  
   
-### <a name="return-value"></a>Return Value  
- 1 if the filename is not a valid filename; otherwise 0.  
+### <a name="return-value"></a>Rückgabewert  
+ 1, wenn der Dateiname nicht um einen gültigen Dateinamen ist; andernfalls 0.  
   
-### <a name="remarks"></a>Remarks  
- This function allows you to reject a filename for any application-specific reason. Normally, you do not need to use this function because the framework provides default validation of filenames and displays a message box if an invalid filename is entered.  
+### <a name="remarks"></a>Hinweise  
+ Mit dieser Funktion können Sie einen Dateinamen Einstellungsbereich anwendungsspezifische ablehnen. Normalerweise müssen Sie nicht diese Funktion verwenden, da das Framework standardüberprüfung von Dateinamen bietet und zeigt ein Meldungsfenster an, wenn ein ungültiger Dateiname eingegeben wird.  
   
- If 1 is returned, the dialog box will remain displayed for the user to enter another filename. The dialog procedure dismisses the dialog if the return is 0. Other nonzero return values are currently reserved and should not be used.  
+ 1 zurückgegeben wird, bleibt das Dialogfeld für den Benutzer zur Eingabe von einem anderen Dateinamen angezeigt. Die Dialogfeldprozedur schließt das Dialogfeld "ist der Rückgabewert 0. Andere ungleich NULL zurückgeben, Werte sind derzeit reserviert und sollte nicht verwendet werden.  
   
-##  <a name="onfolderchange"></a>  CFileDialog::OnFolderChange  
- Override this function to handle the **WM_NOTIFYCDN_FOLDERCHANGE** message.  
+##  <a name="onfolderchange"></a>CFileDialog::OnFolderChange  
+ Überschreiben Sie diese Funktion behandelt die **WM_NOTIFYCDN_FOLDERCHANGE** Nachricht.  
   
 ```  
 virtual void OnFolderChange();
 ```  
   
-### <a name="remarks"></a>Remarks  
- The notification message is sent when a new folder is opened in the Open or Save As dialog box.  
+### <a name="remarks"></a>Hinweise  
+ Die Benachrichtigung wird gesendet, beim Öffnen eines neuen Ordners im Dialogfeld Öffnen oder speichern.  
   
- Notification is sent only if the dialog box was created with the OFN_EXPLORER style. For more information about the notification, see [CDN_FOLDERCHANGE](http://msdn.microsoft.com/library/windows/desktop/ms646859). For information about the OFN_EXPLORER style, see the [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) structure and [Open and Save As Dialog Boxes](http://msdn.microsoft.com/library/windows/desktop/ms646960).  
+ Nur, wenn das Dialogfeld mit den OFN_EXPLORER-Stil erstellt wurde, wird die Benachrichtigung gesendet. Weitere Informationen zur Benachrichtigung finden Sie unter [CDN_FOLDERCHANGE](http://msdn.microsoft.com/library/windows/desktop/ms646859). Informationen über das OFN_EXPLORER-Format finden Sie unter der [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) Struktur und [öffnen und speichern Sie als Dialogfelder](http://msdn.microsoft.com/library/windows/desktop/ms646960).  
   
-##  <a name="oninitdone"></a>  CFileDialog::OnInitDone  
- Override this function to handle the `WM_NOTIFY` `CDN_INITDONE` message.  
+##  <a name="oninitdone"></a>CFileDialog::OnInitDone  
+ Überschreiben Sie diese Funktion behandelt die `WM_NOTIFY``CDN_INITDONE` Nachricht.  
   
 ```  
 virtual void OnInitDone();
 ```  
   
-### <a name="remarks"></a>Remarks  
- The system sends this notification message when the system has finished arranging controls in the **Open** or **Save As** dialog box to make room for the controls of the child dialog box.  
+### <a name="remarks"></a>Hinweise  
+ Wenn das System Anordnen von Steuerelementen in abgeschlossen ist, sendet das System diese Benachrichtigung der **öffnen** oder **speichern unter** (Dialogfeld), um Platz für die Steuerelemente im Dialogfeld untergeordneten bereitzustellen.  
   
- The system sends this only if the dialog box was created with the OFN_EXPLORER style. For more information about the notification, see [CDN_INITDONE](http://msdn.microsoft.com/library/windows/desktop/ms646863). For information about the OFN_EXPLORER style, see the [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) structure and [Open and Save As Dialog Boxes](http://msdn.microsoft.com/library/windows/desktop/ms646960).  
+ Das System sendet dies nur, wenn das Dialogfeld mit den OFN_EXPLORER-Stil erstellt wurde. Weitere Informationen zur Benachrichtigung finden Sie unter [CDN_INITDONE](http://msdn.microsoft.com/library/windows/desktop/ms646863). Informationen über das OFN_EXPLORER-Format finden Sie unter der [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) Struktur und [öffnen und speichern Sie als Dialogfelder](http://msdn.microsoft.com/library/windows/desktop/ms646960).  
   
 > [!NOTE]
-> [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] style file dialogs do not support this function. Attempting to use this function on a [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] style file dialog will throw [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md). 
+> [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]Diese Funktion unterstützt Dateidialogfeldern Format nicht. Bei dem Versuch, diese Funktion verwenden, auf eine [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] Style-Dialogfeld "Datei" löst [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md). 
   
-##  <a name="onitemselected"></a>  CFileDialog::OnItemSelected  
- Called when the container item is selected.  
+##  <a name="onitemselected"></a>CFileDialog::OnItemSelected  
+ Wird aufgerufen, wenn das Containerelement ausgewählt ist.  
   
 ```  
 virtual void OnItemSelected(
@@ -1155,17 +1094,17 @@ virtual void OnItemSelected(
     DWORD dwIDItem);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwIDCtl`  
- The ID of the container control.  
+ Die ID des Containersteuerelements.  
   
  `dwIDItem`  
- The ID of the item.  
+ Die ID des Elements.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="onlbselchangednotify"></a>  CFileDialog::OnLBSelChangedNotify  
- This function is called whenever the current selection in a list box is about to change.  
+##  <a name="onlbselchangednotify"></a>CFileDialog::OnLBSelChangedNotify  
+ Diese Funktion wird aufgerufen, wenn die aktuelle Auswahl in einem Listenfeld, das geändert wird.  
   
 ```  
 virtual void OnLBSelChangedNotify(
@@ -1174,66 +1113,66 @@ virtual void OnLBSelChangedNotify(
     UINT nCode);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  *nIDBox*  
- The ID of the list box or combo box in which the selection occurred.  
+ Die ID der im Listenfeld oder Kombinationsfeld, in dem die Markierung auftrat.  
   
  `iCurSel`  
- The index of the current selection.  
+ Der Index der aktuellen Auswahl.  
   
  `nCode`  
- The control notification code. This parameter must have one of the following values:  
+ Der Steuerungscode Benachrichtigung. Dieser Parameter muss einen der folgenden Werte aufweisen:  
   
-- **CD_LBSELCHANGE** Specifies `iCurSel` is the selected item in a single-selection list box.  
+- **CD_LBSELCHANGE** gibt `iCurSel` wird das ausgewählte Element in einem Listenfeld mit einfacher Auswahl.  
   
-- **CD_LBSELSUB** Specifies that `iCurSel` is no longer selected in a multiselection list box.  
+- **CD_LBSELSUB** gibt an, dass `iCurSel` nicht mehr in einem Listensteuerelement Listenfeld ausgewählt ist.  
   
-- **CD_LBSELADD** Specifies that `iCurSel` is selected in a multiselection list box.  
+- **CD_LBSELADD** gibt an, dass `iCurSel` in einem Listensteuerelement Listenfeld ausgewählt ist.  
   
-- **CD_LBSELNOITEMS** Specifies that no selection exists in a multiselection list box.  
+- **CD_LBSELNOITEMS** gibt an, die in einem Listensteuerelement Listenfeld keine Auswahl vorhanden ist.  
   
-### <a name="remarks"></a>Remarks  
- Override this function to provide custom handling of selection changes in the list box. For example, you can use this function to display the access rights or date-last-modified of each file the user selects.  
+### <a name="remarks"></a>Hinweise  
+ Überschreiben Sie diese Funktion, um benutzerdefinierte Verarbeitung von Änderungen der Auswahl im Listenfeld bereitstellen. Beispielsweise verwenden Sie diese Funktion, um die Zugriffsrechte anzuzeigen, oder Datum-Last-modified der einzelnen Dateien der Benutzer auswählt.  
   
-##  <a name="onshareviolation"></a>  CFileDialog::OnShareViolation  
- Override this function to provide custom handling of share violations.  
+##  <a name="onshareviolation"></a>CFileDialog::OnShareViolation  
+ Überschreiben von dieser Funktion können Sie benutzerdefinierte Verarbeitung von Verletzungen der Freigabe bereitstellen.  
   
 ```  
 virtual UINT OnShareViolation(LPCTSTR lpszPathName);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `lpszPathName`  
- The path of the file on which the share violation occurred.  
+ Der Pfad der Datei auf der sich die Freigabe Verletzung auftrat.  
   
-### <a name="return-value"></a>Return Value  
- One of the following values:  
+### <a name="return-value"></a>Rückgabewert  
+ Einer der folgenden Werte:  
   
-- **OFN_SHAREFALLTHROUGH** The filename is returned from the dialog box.  
+- **OFN_SHAREFALLTHROUGH** der Dateinamen aus dem Dialogfeld zurückgegeben wird.  
   
-- **OFN_SHARENOWARN** No further action needs to be taken.  
+- **OFN_SHARENOWARN** keine weitere Aktion erforderlich.  
   
-- **OFN_SHAREWARN** The user receives the standard warning message for this error.  
+- **OFN_SHAREWARN** der Benutzer erhält die standard-Warnung für diesen Fehler.  
   
-### <a name="remarks"></a>Remarks  
- Normally, you do not need to use this function because the framework provides default checking of share violations and displays a message box if a share violation occurs.  
+### <a name="remarks"></a>Hinweise  
+ Normalerweise müssen Sie nicht diese Funktion verwenden, da das Framework bietet Standardeinstellungen, die Überprüfung von Verletzungen der Freigabe, und zeigt ein Meldungsfenster an, wenn eine Freigabe Verletzung auftritt.  
   
- If you want to disable share violation checking, use the bitwise OR operator to combine the flag **OFN_SHAREAWARE** with `m_ofn.Flags`.  
+ Wenn Sie die Freigabe Verletzung Überprüfung deaktivieren möchten, verwenden Sie den bitweisen OR-Operator, um das Flag kombinieren **OFN_SHAREAWARE** mit `m_ofn.Flags`.  
   
-##  <a name="ontypechange"></a>  CFileDialog::OnTypeChange  
- Override this function to handle the **WM_NOTIFYCDN_TYPECHANGE** message.  
+##  <a name="ontypechange"></a>CFileDialog::OnTypeChange  
+ Überschreiben Sie diese Funktion behandelt die **WM_NOTIFYCDN_TYPECHANGE** Nachricht.  
   
 ```  
 virtual void OnTypeChange();
 ```  
   
-### <a name="remarks"></a>Remarks  
- The notification message is sent when the user selects a new file type from the list of file types in the Open or Save As dialog box.  
+### <a name="remarks"></a>Hinweise  
+ Die Benachrichtigung wird gesendet, wenn der Benutzer einen neuen Dateityp aus der Liste der Dateitypen öffnen oder Speichern unter (Dialogfeld) auswählt.  
   
- Notification is sent only if the dialog box was created with the OFN_EXPLORER style. For more information about the notification, see [CDN_TYPECHANGE](http://msdn.microsoft.com/library/windows/desktop/ms646868). For information about the OFN_EXPLORER style, see the [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) structure and [Open and Save As Dialog Boxes](http://msdn.microsoft.com/library/windows/desktop/ms646960).  
+ Nur, wenn das Dialogfeld mit den OFN_EXPLORER-Stil erstellt wurde, wird die Benachrichtigung gesendet. Weitere Informationen zur Benachrichtigung finden Sie unter [CDN_TYPECHANGE](http://msdn.microsoft.com/library/windows/desktop/ms646868). Informationen über das OFN_EXPLORER-Format finden Sie unter der [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) Struktur und [öffnen und speichern Sie als Dialogfelder](http://msdn.microsoft.com/library/windows/desktop/ms646960).  
   
-##  <a name="removecontrolitem"></a>  CFileDialog::RemoveControlItem  
- Removes an item from a container control in the dialog.  
+##  <a name="removecontrolitem"></a>CFileDialog::RemoveControlItem  
+ Entfernt ein Element aus einem Containersteuerelement im Dialogfeld "".  
   
 ```  
 HRESULT RemoveControlItem(
@@ -1241,17 +1180,17 @@ HRESULT RemoveControlItem(
     DWORD dwIDItem);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwIDCtl`  
- The ID of the container control to remove the item from.  
+ Die ID des Containersteuerelements auf das Element entfernt werden soll.  
   
  `dwIDItem`  
- The ID of the item.  
+ Die ID des Elements.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="setcheckbuttonstate"></a>  CFileDialog::SetCheckButtonState  
- Sets the current state of a check button (check box) in the dialog.  
+##  <a name="setcheckbuttonstate"></a>CFileDialog::SetCheckButtonState  
+ Legt den aktuellen Status der eine Schaltfläche "Überprüfen" (Kontrollkästchen) in das Dialogfeld "fest.  
   
 ```  
 HRESULT SetCheckButtonState(
@@ -1259,17 +1198,17 @@ HRESULT SetCheckButtonState(
     BOOL bChecked);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwIDCtl`  
- The ID of the check box.  
+ Die ID des Kontrollkästchens.  
   
  `bChecked`  
- The state of the check box. `TRUE` indicates checked; `FALSE` indicates Unchecked.  
+ Der Status des Kontrollkästchens. `TRUE`weist darauf hin überprüft. `FALSE` Unchecked angibt.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="setcontrolitemstate"></a>  CFileDialog::SetControlItemState  
- Sets the current state of an item in a container control found in the dialog.  
+##  <a name="setcontrolitemstate"></a>CFileDialog::SetControlItemState  
+ Legt den aktuellen Status eines Elements in einem Containersteuerelement im Dialogfeld "" gefunden.  
   
 ```  
 HRESULT SetControlItemState(
@@ -1278,20 +1217,20 @@ HRESULT SetControlItemState(
     CDCONTROLSTATEF dwState);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwIDCtl`  
- The ID of the container control.  
+ Die ID des Containersteuerelements.  
   
  `dwIDItem`  
- The ID of the item.  
+ Die ID des Elements.  
   
  `dwState`  
- One or more values from the CDCONTROLSTATE enumeration that indicate the new state of the control.  
+ Eine oder mehrere Werte aus der CDCONTROLSTATE-Enumeration, die den neuen Zustand des Steuerelements angeben.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="setcontrolitemtext"></a>  CFileDialog::SetControlItemText  
- Sets the text of a control item. For example, the text that accompanies a radio button or an item in a menu.  
+##  <a name="setcontrolitemtext"></a>CFileDialog::SetControlItemText  
+ Legt den Text eines Steuerelements Elements fest. Beispielsweise der Text, der ein Optionsfeld oder ein Element in einem Menü begleitet.  
   
 ```  
 HRESULT SetControlItemText(
@@ -1300,20 +1239,20 @@ HRESULT SetControlItemText(
     const CString& strLabel);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwIDCtl`  
- The ID of the container control.  
+ Die ID des Containersteuerelements.  
   
  `dwIDItem`  
- The ID of the item.  
+ Die ID des Elements.  
   
  `strLabel`  
- Item's text.  
+ Text des Elements.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="setcontrollabel"></a>  CFileDialog::SetControlLabel  
- Sets the text associated with a control, such as button text or an edit box label.  
+##  <a name="setcontrollabel"></a>CFileDialog::SetControlLabel  
+ Legt den Text eines Steuerelements, wie z. B. Text oder eine Bezeichnung bearbeiten zugeordnet.  
   
 ```  
 HRESULT SetControlLabel(
@@ -1321,17 +1260,17 @@ HRESULT SetControlLabel(
     const CString& strLabel);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwIDCtl`  
- The ID of the control.  
+ Die ID des Steuerelements.  
   
  `strLabel`  
- The control name.  
+ Der Name des Steuerelements.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="setcontrolstate"></a>  CFileDialog::SetControlState  
- Sets the current visibility and enabled states of a given control.  
+##  <a name="setcontrolstate"></a>CFileDialog::SetControlState  
+ Legt die aktuelle Sichtbarkeit und aktivierte Status eines angegebenen Steuerelements.  
   
 ```  
 HRESULT SetControlState(
@@ -1339,17 +1278,17 @@ HRESULT SetControlState(
     CDCONTROLSTATEF dwState);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwIDCtl`  
- The ID of the control.  
+ Die ID des Steuerelements.  
   
  `dwState`  
- One or more values from the CDCONTROLSTATE enumeration that indicate the current state of the control.  
+ Eine oder mehrere Werte aus der CDCONTROLSTATE-Enumeration, die den aktuellen Status des Steuerelements angeben.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="setcontroltext"></a>  CFileDialog::SetControlText  
- Call this method to set the text for the specified control in an Explorer-style **Open** or **Save As** dialog box.  
+##  <a name="setcontroltext"></a>CFileDialog::SetControlText  
+ Rufen Sie diese Methode, um den Text für das angegebene Steuerelement in einem Explorer-ähnliche festlegen **öffnen** oder **speichern unter** (Dialogfeld).  
   
 ```  
 void SetControlText(
@@ -1362,34 +1301,34 @@ void SetControlText(
     const wchar_t *lpsz);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `nID`  
- The ID of the control for which to set the text.  
+ Die ID des Steuerelements für die den Text festgelegt.  
   
  [in] `lpsz`  
- A pointer to the string that contains the text to set for the control.  
+ Ein Zeiger auf die Zeichenfolge, die Text enthält, der für das Steuerelement festlegen.  
   
-### <a name="remarks"></a>Remarks  
- Both versions of this function are valid for applications that use Unicode. However, only the version with the LPCSTR type is valid for applications that use [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)].  
+### <a name="remarks"></a>Hinweise  
+ Beide Versionen dieser Funktion gelten für Anwendungen, die Unicode verwenden. Nur die Version mit dem Typ LPCSTR ist jedoch gültig für Anwendungen mit [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)].  
   
- To use this method, you must create the dialog box with the OFN_EXPLORER style. Otherwise, the function will fail with an assertion.  
+ Zur Verwendung dieser Methode müssen Sie das Dialogfeld mit den OFN_EXPLORER-Stil erstellen. Andernfalls schlägt die Funktion mit einer Assertion fehl.  
   
-##  <a name="setdefext"></a>  CFileDialog::SetDefExt  
- Call this function to set the default file name extension for an Explorer-style Open or Save As common dialog box.  
+##  <a name="setdefext"></a>CFileDialog::SetDefExt  
+ Rufen Sie diese Funktion, um die standardmäßige Dateinamenerweiterung für eine Explorer-ähnliche öffnen oder Speichern unter Standarddialogfeld festgelegt.  
   
 ```  
 void SetDefExt(LPCSTR lpsz);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `lpsz`  
- A pointer to a string containing the default extension to use for the dialog box object. This string must not contain a period (.).  
+ Ein Zeiger auf eine Zeichenfolge, enthält die standarderweiterung für die Dialogfeldobjekt verwendet. Diese Zeichenfolge muss nicht auf einen Punkt (.) enthalten.  
   
-### <a name="remarks"></a>Remarks  
- The dialog box must have been created with the **OFN_EXPLORER** style; otherwise, the function will fail with an assertion.  
+### <a name="remarks"></a>Hinweise  
+ Das Dialogfeld muss mit erstellt wurden die **OFN_EXPLORER** formatieren; andernfalls schlägt die Funktion mit einer Assertion fehl.  
   
-##  <a name="seteditboxtext"></a>  CFileDialog::SetEditBoxText  
- Sets the current text in an edit box control.  
+##  <a name="seteditboxtext"></a>CFileDialog::SetEditBoxText  
+ Legt den aktuellen Text in einem Bearbeitungssteuerelement.  
   
 ```  
 HRESULT SetEditBoxText(
@@ -1397,30 +1336,30 @@ HRESULT SetEditBoxText(
     const CString& strText);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwIDCtl`  
- The ID of the edit box.  
+ Die ID des im Bearbeitungsfeld.  
   
  `strText`  
- The text value.  
+ Der Textwert.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="setproperties"></a>  CFileDialog::SetProperties  
- Provides a property store that defines the default values to be used for the item being saved.  
+##  <a name="setproperties"></a>CFileDialog::SetProperties  
+ Bietet einen Eigenschaftenspeicher, der die Standardwerte definiert, die für das zu speichernde Element verwendet werden sollen.  
   
 ```  
 BOOL SetProperties(LPCWSTR lpszPropList);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `lpszPropList`  
- A list of predefined properties separated by ";". For a list of the flags, see the `Flags` section of [OPENFILENAME](http://msdn.microsoft.com/en-us/8cecfd45-f7c1-4f8d-81a0-4e7fecc3b104).  
+ Eine Liste der vordefinierten Eigenschaften, die durch ein ";" voneinander getrennt sind. Eine Liste der Flags finden Sie die `Flags` Abschnitt [OPENFILENAME](http://msdn.microsoft.com/en-us/8cecfd45-f7c1-4f8d-81a0-4e7fecc3b104).  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="setselectedcontrolitem"></a>  CFileDialog::SetSelectedControlItem  
- Sets the selected state of a particular item in an option button group or a combo box found in the dialog.  
+##  <a name="setselectedcontrolitem"></a>CFileDialog::SetSelectedControlItem  
+ Legt den ausgewählten Zustand eines bestimmten Elements in eine Optionsgruppe-Schaltfläche oder ein Kombinationsfeld, die im Dialogfeld "" gefunden.  
   
 ```  
 HRESULT SetSelectedControlItem(
@@ -1428,17 +1367,17 @@ HRESULT SetSelectedControlItem(
     DWORD dwIDItem);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwIDCtl`  
- The ID of the container control.  
+ Die ID des Containersteuerelements.  
   
  `dwIDItem`  
- The ID of the item that the user selected in the control.  
+ Die ID des Elements, das der Benutzer im Steuerelement ausgewählt.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="settemplate"></a>  CFileDialog::SetTemplate  
- Sets the dialog box template for the [CFileDialog](../../mfc/reference/cfiledialog-class.md) object.  
+##  <a name="settemplate"></a>CFileDialog::SetTemplate  
+ Legt die Dialogfeldvorlage für die [CFileDialog](../../mfc/reference/cfiledialog-class.md) Objekt.  
   
 ```  
 void SetTemplate(
@@ -1451,27 +1390,27 @@ void SetTemplate(
     LPCTSTR lpWin4ID);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `nWin3ID`  
- Contains the ID number of the template resource for the non-Explorer `CFileDialog` object. This template is only used on Windows NT 3.51 or when the OFN_EXPLORER style is not present.  
+ Enthält die ID der Dialogfeldvorlagen-Ressource für den Explorer `CFileDialog` Objekt. Diese Vorlage dient nur unter Windows NT 3.51 oder wenn das Format OFN_EXPLORER nicht vorhanden ist.  
   
  [in] `nWin4ID`  
- Contains the ID number of the template resource for the Explorer `CFileDialog` object. This template is used only on [!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)] and later versions, Windows 95 and later versions, or when the OFN_EXPLORER style is present.  
+ Enthält die ID der Dialogfeldvorlagen-Ressource für den Explorer `CFileDialog` Objekt. Diese Vorlage dient nur dazu [!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)] und höher, Windows 95 und höher, oder wenn das Format OFN_EXPLORER vorhanden ist.  
   
  [in] `lpWin3ID`  
- Contains the name of the template resource for the non-Explorer `CFileDialog` object. This template is only used on Windows NT 3.51 or when the OFN_EXPLORER style is not present.  
+ Enthält den Namen der Dialogfeldvorlagen-Ressource für den Explorer `CFileDialog` Objekt. Diese Vorlage dient nur unter Windows NT 3.51 oder wenn das Format OFN_EXPLORER nicht vorhanden ist.  
   
  [in] `lpWin4ID`  
- Contains the name of the template resource of the Explorer `CFileDialog` object. This template is used only on [!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)] and later versions, Windows 95 and later versions, or when the OFN_EXPLORER style is present.  
+ Enthält den Namen der Dialogfeldvorlagen-Ressource des Explorers `CFileDialog` Objekt. Diese Vorlage dient nur dazu [!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)] und höher, Windows 95 und höher, oder wenn das Format OFN_EXPLORER vorhanden ist.  
   
-### <a name="remarks"></a>Remarks  
- The system will use only one of the specified templates. The system determines which template to use based on the presence of the OFN_EXPLORER style and the operating system that the application is running on. By specifying both a non-Explorer and Explorer-style template, it is easy to support Windows NT 3.51, [!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)] and later versions, and Windows 95 and later versions.  
+### <a name="remarks"></a>Hinweise  
+ Vom System wird nur eine der angegebenen Vorlagen verwendet. Das System bestimmt, welche Vorlage verwendet basierend auf dem Vorhandensein der OFN_EXPLORER-Stil und das Betriebssystem, das die Anwendung ausgeführt wird. Durch Angeben einer nicht-Explorer und die Explorer-Formatvorlage, es ist einfach zur Unterstützung von Windows NT 3.51, [!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)] und höheren Versionen und Windows 95 und höher.  
   
 > [!NOTE]
-> [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] style file dialog boxes do not support this function. Attempting to use this function on a [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] style file dialog box will throw [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md). An alternative is to use a customized dialog. For more information about using a custom `CFileDialog`, see [IFileDialogCustomize](http://msdn.microsoft.com/library/windows/desktop/bb775912).  
+> [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]Diese Funktion unterstützt Dateidialogfelder Format nicht. Bei dem Versuch, diese Funktion verwenden, auf eine [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] Stil Dateidialogfeld löst [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md). Eine Alternative ist die Verwendung ein benutzerdefiniertes Dialogfelds. Weitere Informationen zum Verwenden eines benutzerdefiniertes `CFileDialog`, finden Sie unter [IFileDialogCustomize](http://msdn.microsoft.com/library/windows/desktop/bb775912).  
   
-##  <a name="startvisualgroup"></a>  CFileDialog::StartVisualGroup  
- Declares a visual group in the dialog. Subsequent calls to any "add" method add those elements to this group.  
+##  <a name="startvisualgroup"></a>CFileDialog::StartVisualGroup  
+ Deklariert eine visual Gruppe im Dialogfeld "". Nachfolgende Aufrufe an jede Methode "hinzufügen" Fügen Sie dieser Elemente zu dieser Gruppe hinzu.  
   
 ```  
 HRESULT StartVisualGroup(
@@ -1479,36 +1418,36 @@ HRESULT StartVisualGroup(
     const CString& strLabel);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `dwIDCtl`  
- The ID of the visual group.  
+ Die ID der Gruppe "visual".  
   
  `strLabel`  
- The group name.  
+ Der Gruppenname.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="updateofnfromshelldialog"></a>  CFileDialog::UpdateOFNFromShellDialog  
- Updates the `m_ofn` data structure of the [CFileDialog](../../mfc/reference/cfiledialog-class.md) based on the current state of the internal object.  
+##  <a name="updateofnfromshelldialog"></a>CFileDialog::UpdateOFNFromShellDialog  
+ Updates der `m_ofn` Datenstruktur der [CFileDialog](../../mfc/reference/cfiledialog-class.md) basierend auf den aktuellen Zustand des internen Objekts.  
   
 ```  
 void UpdateOFNFromShellDialog();
 ```  
   
-### <a name="remarks"></a>Remarks  
- In versions of Windows before [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)], the member [OPENFILENAME](https://msdn.microsoft.com/library/ms911906.aspx) data structure was continuously synchronized with the state of the `CFileDialog`. Any changes to the [m_ofn](#m_ofn) member variable directly affected the state of the dialog box. Also, any changes to the state of the dialog immediately updated the m_ofn member variable.  
+### <a name="remarks"></a>Hinweise  
+ In Versionen von Windows vor [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)], das Mitglied [OPENFILENAME](https://msdn.microsoft.com/library/ms911906.aspx) Datenstruktur mit dem Status der fortlaufend synchronisiert wurde die `CFileDialog`. Alle Änderungen an der [M_ofn](#m_ofn) Membervariable direkt betroffen, den Status des Dialogfelds. Außerdem aktualisiert alle Änderungen in den Zustand des Dialogs sofort die Membervariable M_ofn.  
   
- In [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)], the `m_ofn` data structure is not automatically updated. To guarantee the accuracy of the data in the `m_ofn` member variable, you should call the `UpdateOFNFromShellDialog` function before accessing the data. Windows calls this function automatically during the processing of [IFileDialog::OnFileOK](http://msdn.microsoft.com/library/windows/desktop/bb775879).  
+ In [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]die `m_ofn` Datenstruktur wird nicht automatisch aktualisiert. Gewährleisten Sie die Genauigkeit der Daten in der `m_ofn` Membervariable, rufen Sie die `UpdateOFNFromShellDialog` Funktion vor dem Zugriff auf die Daten. Windows ruft diese Funktion bei der Verarbeitung von [IFileDialog::OnFileOK](http://msdn.microsoft.com/library/windows/desktop/bb775879).  
   
- For more information about how to use the `CFileDialog` class under [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)], see [CFileDialog Class](../../mfc/reference/cfiledialog-class.md).  
+ Weitere Informationen zur Verwendung der `CFileDialog` unter-Klasse [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)], finden Sie unter [CFileDialog-Klasse](../../mfc/reference/cfiledialog-class.md).  
   
-### <a name="example"></a>Example  
- This example updates the `CFileDialog` before displaying it. Before updating the `m_ofn` member variable, we need to synchronize it to the current state of the dialog box.  
+### <a name="example"></a>Beispiel  
+ In diesem Beispiel aktualisiert die `CFileDialog` vor der Anzeige. Vor dem Aktualisieren der `m_ofn` Membervariable, müssen wir sie mit dem aktuellen Status des Dialogfelds zu synchronisieren.  
   
- [!code-cpp[NVC_MFC_CFileDialog#1](../../mfc/reference/codesnippet/cpp/cfiledialog-class_7.cpp)]  
+ [!code-cpp[NVC_MFC_CFileDialog Nr. 1](../../mfc/reference/codesnippet/cpp/cfiledialog-class_7.cpp)]  
   
-## <a name="see-also"></a>See Also  
- [CCommonDialog Class](../../mfc/reference/ccommondialog-class.md)   
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>Siehe auch  
+ [CCommonDialog-Klasse](../../mfc/reference/ccommondialog-class.md)   
+ [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
 
 

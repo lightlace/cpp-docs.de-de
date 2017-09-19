@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonCategory Class | Microsoft Docs
+title: CMFCRibbonCategory-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -76,68 +76,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonCategory [MFC], CMFCRibbonCategory
-- CMFCRibbonCategory [MFC], AddHidden
-- CMFCRibbonCategory [MFC], AddPanel
-- CMFCRibbonCategory [MFC], CopyFrom
-- CMFCRibbonCategory [MFC], FindByData
-- CMFCRibbonCategory [MFC], FindByID
-- CMFCRibbonCategory [MFC], FindPanelWithElem
-- CMFCRibbonCategory [MFC], GetContextID
-- CMFCRibbonCategory [MFC], GetData
-- CMFCRibbonCategory [MFC], GetDroppedDown
-- CMFCRibbonCategory [MFC], GetElements
-- CMFCRibbonCategory [MFC], GetElementsByID
-- CMFCRibbonCategory [MFC], GetFirstVisibleElement
-- CMFCRibbonCategory [MFC], GetFocused
-- CMFCRibbonCategory [MFC], GetHighlighted
-- CMFCRibbonCategory [MFC], GetImageCount
-- CMFCRibbonCategory [MFC], GetImageSize
-- CMFCRibbonCategory [MFC], GetItemIDsList
-- CMFCRibbonCategory [MFC], GetLastVisibleElement
-- CMFCRibbonCategory [MFC], GetLargeImages
-- CMFCRibbonCategory [MFC], GetMaxHeight
-- CMFCRibbonCategory [MFC], GetName
-- CMFCRibbonCategory [MFC], GetPanel
-- CMFCRibbonCategory [MFC], GetPanelCount
-- CMFCRibbonCategory [MFC], GetPanelFromPoint
-- CMFCRibbonCategory [MFC], GetPanelIndex
-- CMFCRibbonCategory [MFC], GetParentButton
-- CMFCRibbonCategory [MFC], GetParentMenuBar
-- CMFCRibbonCategory [MFC], GetParentRibbonBar
-- CMFCRibbonCategory [MFC], GetRect
-- CMFCRibbonCategory [MFC], GetSmallImages
-- CMFCRibbonCategory [MFC], GetTabColor
-- CMFCRibbonCategory [MFC], GetTabRect
-- CMFCRibbonCategory [MFC], GetTextTopLine
-- CMFCRibbonCategory [MFC], GetVisibleElements
-- CMFCRibbonCategory [MFC], HighlightPanel
-- CMFCRibbonCategory [MFC], HitTest
-- CMFCRibbonCategory [MFC], HitTestEx
-- CMFCRibbonCategory [MFC], HitTestScrollButtons
-- CMFCRibbonCategory [MFC], IsActive
-- CMFCRibbonCategory [MFC], IsVisible
-- CMFCRibbonCategory [MFC], IsWindows7Look
-- CMFCRibbonCategory [MFC], NotifyControlCommand
-- CMFCRibbonCategory [MFC], OnCancelMode
-- CMFCRibbonCategory [MFC], OnDraw
-- CMFCRibbonCategory [MFC], OnDrawImage
-- CMFCRibbonCategory [MFC], OnDrawMenuBorder
-- CMFCRibbonCategory [MFC], OnKey
-- CMFCRibbonCategory [MFC], OnLButtonDown
-- CMFCRibbonCategory [MFC], OnLButtonUp
-- CMFCRibbonCategory [MFC], OnMouseMove
-- CMFCRibbonCategory [MFC], OnRTLChanged
-- CMFCRibbonCategory [MFC], OnScrollHorz
-- CMFCRibbonCategory [MFC], OnUpdateCmdUI
-- CMFCRibbonCategory [MFC], RecalcLayout
-- CMFCRibbonCategory [MFC], RemovePanel
-- CMFCRibbonCategory [MFC], ReposPanels
-- CMFCRibbonCategory [MFC], SetCollapseOrder
-- CMFCRibbonCategory [MFC], SetData
-- CMFCRibbonCategory [MFC], SetKeys
-- CMFCRibbonCategory [MFC], SetName
-- CMFCRibbonCategory [MFC], SetTabColor
+- CMFCRibbonCategory class
 ms.assetid: 99ba25b6-d060-4fdd-bfab-3c46c22981bb
 caps.latest.revision: 38
 author: mikeblome
@@ -157,15 +96,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 9993ca0cfc02f09231ce6a6e93950fa129bb357e
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: dccbaac6450985f0d5255a790d83f374b52f06f9
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="cmfcribboncategory-class"></a>CMFCRibbonCategory Class
-The `CMFCRibbonCategory` class implements a ribbon tab that contains a group of [ribbon panels](../../mfc/reference/cmfcribbonpanel-class.md).  
+# <a name="cmfcribboncategory-class"></a>CMFCRibbonCategory-Klasse
+Die `CMFCRibbonCategory` -Klasse implementiert eine Menübandregisterkarte, eine Gruppe von enthält [Multifunktionsleisten-Panels](../../mfc/reference/cmfcribbonpanel-class.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -173,65 +112,65 @@ The `CMFCRibbonCategory` class implements a ribbon tab that contains a group of 
 class CMFCRibbonCategory : public CObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Mitglieder  
   
-### <a name="protected-constructors"></a>Protected Constructors  
+### <a name="protected-constructors"></a>Geschützte Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCRibbonCategory::CMFCRibbonCategory](#cmfcribboncategory)|The constructor.|  
+|[CMFCRibbonCategory::CMFCRibbonCategory](#cmfcribboncategory)|Der Konstruktor.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCRibbonCategory::AddHidden](#addhidden)|Adds a hidden element to the ribbon category.|  
-|[CMFCRibbonCategory::AddPanel](#addpanel)|Adds a new panel to the ribbon category.|  
+|[CMFCRibbonCategory::AddHidden](#addhidden)|Die Menübandkategorie hinzugefügt ein ausgeblendetes Element.|  
+|[CMFCRibbonCategory::AddPanel](#addpanel)|Fügt einen neuen Bereich die Menübandkategorie hinzu.|  
 |[CMFCRibbonCategory::CopyFrom](#copyfrom)||  
 |[CMFCRibbonCategory::FindByData](#findbydata)||  
 |[CMFCRibbonCategory::FindByID](#findbyid)||  
 |[CMFCRibbonCategory::FindPanelWithElem](#findpanelwithelem)||  
-|[CMFCRibbonCategory::GetContextID](#getcontextid)|Returns the context ID of the ribbon category.|  
-|[CMFCRibbonCategory::GetData](#getdata)|Returns the user-defined data that is associated with the ribbon category.|  
+|[CMFCRibbonCategory::GetContextID](#getcontextid)|Gibt die Kontext-ID der Menübandkategorie zurück.|  
+|[CMFCRibbonCategory::GetData](#getdata)|Gibt die benutzerdefinierten Daten, die die Menübandkategorie zugeordnet ist.|  
 |[CMFCRibbonCategory::GetDroppedDown](#getdroppeddown)||  
 |[CMFCRibbonCategory::GetElements](#getelements)||  
 |[CMFCRibbonCategory::GetElementsByID](#getelementsbyid)||  
-|[CMFCRibbonCategory::GetFirstVisibleElement](#getfirstvisibleelement)|Obtain a first visible element that belong to the ribbon category.|  
-|[CMFCRibbonCategory::GetFocused](#getfocused)|Returns a focused element.|  
-|[CMFCRibbonCategory::GetHighlighted](#gethighlighted)|Returns a highlighted element.|  
+|[CMFCRibbonCategory::GetFirstVisibleElement](#getfirstvisibleelement)|Erhalten Sie ein ersten visible-Element, die die Menübandkategorie angehören.|  
+|[CMFCRibbonCategory::GetFocused](#getfocused)|Gibt ein Fokuselement zurück.|  
+|[CMFCRibbonCategory::GetHighlighted](#gethighlighted)|Gibt eine markierte Element.|  
 |[CMFCRibbonCategory::GetImageCount](#getimagecount)||  
 |[CMFCRibbonCategory::GetImageSize](#getimagesize)||  
 |[CMFCRibbonCategory::GetItemIDsList](#getitemidslist)||  
-|[CMFCRibbonCategory::GetLastVisibleElement](#getlastvisibleelement)|Obtain a last visible element that belong to the ribbon category|  
-|[CMFCRibbonCategory::GetLargeImages](#getlargeimages)|Returns a reference to the list of large images that the ribbon category uses.|  
+|[CMFCRibbonCategory::GetLastVisibleElement](#getlastvisibleelement)|Abrufen der letzten sichtbares Element, die die Menübandkategorie angehören|  
+|[CMFCRibbonCategory::GetLargeImages](#getlargeimages)|Gibt einen Verweis auf die Liste der große Bilder, die die Menübandkategorie verwendet.|  
 |[CMFCRibbonCategory::GetMaxHeight](#getmaxheight)||  
 |[CMFCRibbonCategory::GetName](#getname)||  
-|[CMFCRibbonCategory::GetPanel](#getpanel)|Returns a pointer to the ribbon panel that is located at the specified index.|  
-|[CMFCRibbonCategory::GetPanelCount](#getpanelcount)|Returns the number of ribbon panels in the ribbon category.|  
+|[CMFCRibbonCategory::GetPanel](#getpanel)|Gibt einen Zeiger zum Menübandbereich, das sich am angegebenen Index befindet.|  
+|[CMFCRibbonCategory::GetPanelCount](#getpanelcount)|Gibt die Anzahl der menübandbereiche in die Menübandkategorie zurück.|  
 |[CMFCRibbonCategory::GetPanelFromPoint](#getpanelfrompoint)||  
-|[CMFCRibbonCategory::GetPanelIndex](#getpanelindex)|Returns the index of the specified ribbon panel.|  
+|[CMFCRibbonCategory::GetPanelIndex](#getpanelindex)|Gibt den Index des angegebenen Menübandbereich zurück.|  
 |[CMFCRibbonCategory::GetParentButton](#getparentbutton)||  
 |[CMFCRibbonCategory::GetParentMenuBar](#getparentmenubar)||  
 |[CMFCRibbonCategory::GetParentRibbonBar](#getparentribbonbar)||  
 |[CMFCRibbonCategory::GetRect](#getrect)||  
-|[CMFCRibbonCategory::GetSmallImages](#getsmallimages)|Returns a reference to the list of small images that the category uses.|  
-|[CMFCRibbonCategory::GetTabColor](#gettabcolor)|Returns the current color of the ribbon category tab.|  
+|[CMFCRibbonCategory::GetSmallImages](#getsmallimages)|Gibt einen Verweis auf die Liste der kleine Bilder, die die Kategorie verwendet.|  
+|[CMFCRibbonCategory::GetTabColor](#gettabcolor)|Gibt die aktuelle Farbe des Menübands Kategorie zurück.|  
 |[CMFCRibbonCategory::GetTabRect](#gettabrect)||  
 |[CMFCRibbonCategory::GetTextTopLine](#gettexttopline)||  
-|[CMFCRibbonCategory::GetVisibleElements](#getvisibleelements)|Obtain all visible elements that belong to the ribbon category.|  
+|[CMFCRibbonCategory::GetVisibleElements](#getvisibleelements)|Rufen Sie alle sichtbaren Elemente, die die Menübandkategorie angehören.|  
 |[CMFCRibbonCategory::HighlightPanel](#highlightpanel)||  
 |[CMFCRibbonCategory::HitTest](#hittest)||  
 |[CMFCRibbonCategory::HitTestEx](#hittestex)||  
 |[CMFCRibbonCategory::HitTestScrollButtons](#hittestscrollbuttons)||  
 |[CMFCRibbonCategory::IsActive](#isactive)||  
-|[CMFCRibbonCategory::IsVisible](#isvisible)|Determines whether the ribbon category is visible.|  
-|[CMFCRibbonCategory::IsWindows7Look](#iswindows7look)|Indicates whether the parent ribbon has Windows 7-style look (small rectangular application button)|  
+|[CMFCRibbonCategory::IsVisible](#isvisible)|Bestimmt, ob die Menübandkategorie sichtbar ist.|  
+|[CMFCRibbonCategory::IsWindows7Look](#iswindows7look)|Gibt an, ob der übergeordnete Menüband verfügt über ein Windows 7-Format (kleine rechteckige Anwendungsschaltfläche)|  
 |[CMFCRibbonCategory::NotifyControlCommand](#notifycontrolcommand)||  
 |[CMFCRibbonCategory::OnCancelMode](#oncancelmode)||  
 |[CMFCRibbonCategory::OnDraw](#ondraw)||  
 |[CMFCRibbonCategory::OnDrawImage](#ondrawimage)||  
 |[CMFCRibbonCategory::OnDrawMenuBorder](#ondrawmenuborder)||  
-|[CMFCRibbonCategory::OnKey](#onkey)|Called by the framework when a user presses a keyboard button.|  
+|[CMFCRibbonCategory::OnKey](#onkey)|Vom Framework aufgerufen, wenn ein Benutzer eine Taste drückt.|  
 |[CMFCRibbonCategory::OnLButtonDown](#onlbuttondown)||  
 |[CMFCRibbonCategory::OnLButtonUp](#onlbuttonup)||  
 |[CMFCRibbonCategory::OnMouseMove](#onmousemove)||  
@@ -241,18 +180,18 @@ class CMFCRibbonCategory : public CObject
 |[CMFCRibbonCategory::RecalcLayout](#recalclayout)||  
 |[CMFCRibbonCategory::RemovePanel](#removepanel)||  
 |[CMFCRibbonCategory::ReposPanels](#repospanels)||  
-|[CMFCRibbonCategory::SetCollapseOrder](#setcollapseorder)|Defines the collapse order of the ribbon panels that are present in the ribbon category.|  
-|[CMFCRibbonCategory::SetData](#setdata)|Stores the user defined data in the ribbon category.|  
-|[CMFCRibbonCategory::SetKeys](#setkeys)|Assigns a keytip to the ribbon category.|  
+|[CMFCRibbonCategory::SetCollapseOrder](#setcollapseorder)|Definiert die Reihenfolge Reduzieren der menübandbereiche, die in der Menübandkategorie vorhanden sind.|  
+|[CMFCRibbonCategory::SetData](#setdata)|Speichert die benutzerdefinierten Daten in der Menübandkategorie.|  
+|[CMFCRibbonCategory::SetKeys](#setkeys)|Die Menübandkategorie eine Zugriffstasteninfo zugewiesen.|  
 |[CMFCRibbonCategory::SetName](#setname)||  
-|[CMFCRibbonCategory::SetTabColor](#settabcolor)|Sets the color of the ribbon category.|  
+|[CMFCRibbonCategory::SetTabColor](#settabcolor)|Legt die Farbe der Menübandkategorie fest.|  
   
-## <a name="remarks"></a>Remarks  
- Typically, you create a ribbon category indirectly by calling [CMFCRibbonBar::AddCategory](../../mfc/reference/cmfcribbonbar-class.md#addcategory), which returns a pointer to the newly created ribbon category. You add panels to the category by calling [CMFCRibbonCategory::AddPanel](#addpanel).  
+## <a name="remarks"></a>Hinweise  
+ Normalerweise erstellen Sie eine Menübandkategorie indirekt durch Aufrufen von [CMFCRibbonBar::AddCategory](../../mfc/reference/cmfcribbonbar-class.md#addcategory), die einen Zeiger auf die neu erstellte Menübandkategorie zurückgibt. Hinzufügen von Bereichen in der Kategorie durch Aufrufen von [CMFCRibbonCategory::AddPanel](#addpanel).  
   
- The `CMFCRibbonTab` class draws ribbon categories. It is derived from [CMFCRibbonBaseElement Class](../../mfc/reference/cmfcribbonbaseelement-class.md).  
+ Die `CMFCRibbonTab` menübandkategorien zeichnen. Es stammt von [CMFCRibbonBaseElement Klasse](../../mfc/reference/cmfcribbonbaseelement-class.md).  
   
- This following example demonstrates how to create a ribbon category and add a panel to it.  
+ Im folgenden Beispiel wird veranschaulicht, wie eine Menübandkategorie erstellen, und fügen ein Panel hinzu.  
   
  `// Create a new ribbon category and get a pointer to it`  
   
@@ -272,34 +211,34 @@ class CMFCRibbonCategory : public CObject
   
  `m_PanelIcons.ExtractIcon (0));  // Panel icon`  
   
- The following diagram shows a figure of the Home category from the RibbonApp sample application.  
+ Das folgende Diagramm zeigt eine Abbildung der Startseite Kategorie aus der RibbonApp-beispielanwendung.  
   
- ![CMFCRibbonCategory image](../../mfc/reference/media/cmfcribboncategory.png "cmfcribboncategory")  
+ ![CMFCRibbonCategory-Bild](../../mfc/reference/media/cmfcribboncategory.png "Cmfcribboncategory")  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
- [CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
+ [Von CObject](../../mfc/reference/cobject-class.md)  
   
  `CMFCRibbonCategory`  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxribboncategory.h  
   
-##  <a name="addhidden"></a>  CMFCRibbonCategory::AddHidden  
- Adds the specified ribbon element to the array of ribbon elements that are displayed on the customization dialog box.  
+##  <a name="addhidden"></a>CMFCRibbonCategory::AddHidden  
+ Das Array der Menübandelemente, die im Dialogfeld "anpassen" angezeigt werden hinzugefügt die angegebenen Multifunktionsleisten-Element.  
   
 ```  
 void AddHidden(CMFCRibbonBaseElement* pElem);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pElem`  
- Pointer to a ribbon element.  
+ Ein Zeiger auf ein Menübandelement.  
   
-### <a name="remarks"></a>Remarks  
- Ribbon elements on the customization dialog box are the commands that you can add to the quick access toolbar.  
+### <a name="remarks"></a>Hinweise  
+ Menübandelemente im Dialogfeld "anpassen" werden die Befehle, die Sie auf der Symbolleiste für den Schnellzugriff hinzufügen können.  
   
-##  <a name="addpanel"></a>  CMFCRibbonCategory::AddPanel  
- Creates a ribbon panel for the ribbon category.  
+##  <a name="addpanel"></a>CMFCRibbonCategory::AddPanel  
+ Erstellt einen Menübandbereich für die Menübandkategorie.  
   
 ```  
 CMFCRibbonPanel* AddPanel(
@@ -308,31 +247,31 @@ CMFCRibbonPanel* AddPanel(
     CRuntimeClass* pRTI = NULL);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `lpszPanelName`  
- Pointer to the name of the new ribbon panel.  
+ Zeiger auf den Namen des neuen Menübands Panels.  
   
  [in] `hIcon`  
- Handle to the default icon for the new ribbon panel.  
+ Handle für das Standardsymbol für den neuen Menübandbereich ein.  
   
  [in] `pRTI`  
- Pointer to runtime class information for a custom ribbon panel.  
+ Ein Zeiger auf die Laufzeit-Klasseninformationen für eine benutzerdefinierte Multifunktionsleiste Fläche.  
   
-### <a name="return-value"></a>Return Value  
- Pointer to the new ribbon panel if the method was successful; otherwise `NULL` if the panel was not created.  
+### <a name="return-value"></a>Rückgabewert  
+ Zeiger auf die neue Menübandbereich, wenn die Methode erfolgreich war; andernfalls `NULL` Wenn der Bereich nicht erstellt wurde.  
   
-### <a name="remarks"></a>Remarks  
- If you want to create a custom ribbon panel, you must specify its runtime class information in `pRTI`. The custom ribbon panel class must be derived from the `CMFCRibbonPanel` class.  
+### <a name="remarks"></a>Hinweise  
+ Wenn Sie einen Bereich für die benutzerdefinierte Multifunktionsleiste erstellen möchten, müssen Sie angeben, dass die Laufzeit-Klasseninformationen in `pRTI`. Die benutzerdefinierte Multifunktionsleiste Panel-Klasse abgeleitet werden muss die `CMFCRibbonPanel` Klasse.  
   
- The default icon for the ribbon panel is displayed when there is insufficient space to display the ribbon elements.  
+ Das Standardsymbol für das Menüband-Fenster wird angezeigt, wenn nicht genügend zum Menübandelemente anzeigen Speicherplatz.  
   
-### <a name="example"></a>Example  
- The following example demonstrates how to use the `AddPanel` method in the `CMFCRibbonCategory` class.  
+### <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird veranschaulicht, wie die `AddPanel` -Methode in der `CMFCRibbonCategory` Klasse.  
   
- [!code-cpp[NVC_MFC_RibbonApp#10](../../mfc/reference/codesnippet/cpp/cmfcribboncategory-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp&#10;](../../mfc/reference/codesnippet/cpp/cmfcribboncategory-class_1.cpp)]  
   
-##  <a name="cmfcribboncategory"></a>  CMFCRibbonCategory::CMFCRibbonCategory  
- Constructs and initializes a [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) object.  
+##  <a name="cmfcribboncategory"></a>CMFCRibbonCategory::CMFCRibbonCategory  
+ Erstellt und initialisiert ein [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) Objekt.  
   
 ```  
 CMFCRibbonCategory(
@@ -346,40 +285,40 @@ CMFCRibbonCategory(
     32));
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pParenrRibbonBar`  
- Pointer to the parent ribbon bar of the ribbon category.  
+ Ein Zeiger auf die übergeordnete-Menübands der Menübandkategorie.  
   
  [in] `lpszName`  
- Name of the ribbon category.  
+ Der Name der Menübandkategorie.  
   
  [in] `uiSmallImagesResID`  
- Resource ID of the image list for small images that are used by ribbon elements in the ribbon category.  
+ Ressourcen-ID, der die Bildliste für kleine Bilder, die von Menübandelementen in der Menübandkategorie verwendet werden.  
   
  [in] `uiLargeImagesResID`  
- Resource ID of the image list for large images that are used by ribbon elements in the ribbon category.  
+ Ressourcen-ID, der die Bildliste für große Bilder, die von Menübandelementen in der Menübandkategorie verwendet werden.  
   
  [in] `sizeSmallImage`  
- Default size of small images for ribbon elements in the ribbon category.  
+ Die Standardgröße für kleine Bilder für die Menübandelemente in der Menübandkategorie.  
   
  [in] `sizeLargeImage`  
- Default size of large images for ribbon elements in the ribbon category.  
+ Die Standardgröße für große Bilder für die Menübandelemente in der Menübandkategorie.  
   
-##  <a name="copyfrom"></a>  CMFCRibbonCategory::CopyFrom  
- Copies the state of the specified [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) to the current [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) object.  
+##  <a name="copyfrom"></a>CMFCRibbonCategory::CopyFrom  
+ Kopiert den Zustand des angegebenen [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) mit dem aktuellen [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) Objekt.  
   
 ```  
 virtual void CopyFrom(CMFCRibbonCategory& src);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `src`  
- The source `CMFCRibbonCategory` object.  
+ Das `CMFCRibbonCategory`-Quellobjekt.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="findbydata"></a>  CMFCRibbonCategory::FindByData  
- Retrieves the ribbon element associated with the specified data.  
+##  <a name="findbydata"></a>CMFCRibbonCategory::FindByData  
+ Ruft das Menübandelement, das den angegebenen Daten zugeordnet.  
   
 ```  
 CMFCRibbonBaseElement* FindByData(
@@ -387,20 +326,20 @@ CMFCRibbonBaseElement* FindByData(
     BOOL bVisibleOnly = TRUE) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `dwData`  
- The data associated with a ribbon element.  
+ Die Daten, die ein Menübandelement zugeordnet.  
   
  [in] `bVisibleOnly`  
- `TRUE` to include quick access ribbon elements in the search; `FALSE` to exclude quick access ribbon elements in the search.  
+ `TRUE`Schnellzugriff Menübandelemente in die Suche eingeschlossen; `FALSE` Schnellzugriff Menübandelemente in der Suche ausgeschlossen.  
   
-### <a name="return-value"></a>Return Value  
- Pointer to a ribbon element if the method was successful; otherwise `NULL`.  
+### <a name="return-value"></a>Rückgabewert  
+ Zeiger auf ein Menübandelement, wenn die Methode erfolgreich war; andernfalls `NULL`.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="findbyid"></a>  CMFCRibbonCategory::FindByID  
- Retrieves the ribbon element associated with the specified command ID.  
+##  <a name="findbyid"></a>CMFCRibbonCategory::FindByID  
+ Ruft die Multifunktionsleisten-Element, das der angegebenen Befehls-ID zugeordnet ist  
   
 ```  
 CMFCRibbonBaseElement* FindByID(
@@ -408,86 +347,86 @@ CMFCRibbonBaseElement* FindByID(
     BOOL bVisibleOnly = TRUE) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `uiCmdID`  
- Command ID associated with a ribbon element.  
+ Befehls-ID, die ein Menübandelement zugeordnet.  
   
  [in] `bVisibleOnly`  
- `TRUE` to include quick access ribbon elements in the search; `FALSE` to exclude quick access ribbon elements in the search.  
+ `TRUE`Schnellzugriff Menübandelemente in die Suche eingeschlossen; `FALSE` Schnellzugriff Menübandelemente in der Suche ausgeschlossen.  
   
-### <a name="return-value"></a>Return Value  
- Pointer to a ribbon element if the method was successful; otherwise `NULL`.  
+### <a name="return-value"></a>Rückgabewert  
+ Zeiger auf ein Menübandelement, wenn die Methode erfolgreich war; andernfalls `NULL`.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="findpanelwithelem"></a>  CMFCRibbonCategory::FindPanelWithElem  
- Retrieves the ribbon panel that contains the specified ribbon element.  
+##  <a name="findpanelwithelem"></a>CMFCRibbonCategory::FindPanelWithElem  
+ Ruft die Menübandbereich, der der angegebenen Multifunktionsleisten-Element enthält.  
   
 ```  
 CMFCRibbonPanel* FindPanelWithElem(const CMFCRibbonBaseElement* pElement);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pElement`  
- Pointer to a ribbon element.  
+ Ein Zeiger auf ein Menübandelement.  
   
-### <a name="return-value"></a>Return Value  
- Pointer to a ribbon panel if the method was successful; otherwise `NULL`.  
+### <a name="return-value"></a>Rückgabewert  
+ Zeiger auf einen Menübandbereich, wenn die Methode erfolgreich war; andernfalls `NULL`.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="getcontextid"></a>  CMFCRibbonCategory::GetContextID  
- Retrieves the context ID of the ribbon category.  
+##  <a name="getcontextid"></a>CMFCRibbonCategory::GetContextID  
+ Ruft die Kontext-ID der Menübandkategorie ab.  
   
 ```  
 UINT GetContextID() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Context ID of the ribbon category.  
+### <a name="return-value"></a>Rückgabewert  
+ Kontext-ID der Menübandkategorie.  
   
-### <a name="remarks"></a>Remarks  
- The context ID is 0 if the ribbon category is not a context ribbon category.  
+### <a name="remarks"></a>Hinweise  
+ Die Kontext-ID ist 0, wenn die Menübandkategorie keine Menübandkategorie Kontext ist.  
   
-##  <a name="getdata"></a>  CMFCRibbonCategory::GetData  
- Retrieves the user-defined data that is associated with the ribbon category.  
+##  <a name="getdata"></a>CMFCRibbonCategory::GetData  
+ Ruft die benutzerdefinierten Daten, die die Menübandkategorie zugeordnet ist.  
   
 ```  
 DWORD_PTR GetData() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The user-defined data that is associated with the ribbon category.  
+### <a name="return-value"></a>Rückgabewert  
+ Die benutzerdefinierten Daten, die die Menübandkategorie zugeordnet ist.  
   
-##  <a name="getdroppeddown"></a>  CMFCRibbonCategory::GetDroppedDown  
- Retrieves a pointer to the ribbon element that currently has its pop-up menu displayed.  
+##  <a name="getdroppeddown"></a>CMFCRibbonCategory::GetDroppedDown  
+ Ruft einen Zeiger auf das Menübandelement, das momentan den Popupmenü angezeigt hat.  
   
 ```  
 CMFCRibbonBaseElement* GetDroppedDown();
 ```  
   
-### <a name="return-value"></a>Return Value  
- Pointer to a ribbon element if the method was successful; otherwise `NULL`.  
+### <a name="return-value"></a>Rückgabewert  
+ Zeiger auf ein Menübandelement, wenn die Methode erfolgreich war; andernfalls `NULL`.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="getelements"></a>  CMFCRibbonCategory::GetElements  
- Retrieves all ribbon elements in the ribbon category.  
+##  <a name="getelements"></a>CMFCRibbonCategory::GetElements  
+ Ruft alle Menübandelemente in der Menübandkategorie ab.  
   
 ```  
 void GetElements(
     CArray <CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in, out] `arElements`  
- Reference to a [CArray](../../mfc/reference/carray-class.md) of ribbon elements.  
+ Ein Verweis auf eine [CArray](../../mfc/reference/carray-class.md) von Menübandelementen.  
   
-### <a name="remarks"></a>Remarks  
- Ribbon elements that are designed for use on the quick access toolbar are included in the array.  
+### <a name="remarks"></a>Hinweise  
+ Menübandelemente, die für die Verwendung auf der Symbolleiste für den Schnellzugriff entwickelt wurden, sind im Array enthalten.  
   
-##  <a name="getelementsbyid"></a>  CMFCRibbonCategory::GetElementsByID  
- Retrieves all ribbon elements that are associated with the specified command ID.  
+##  <a name="getelementsbyid"></a>CMFCRibbonCategory::GetElementsByID  
+ Ruft alle Menübandelemente, die der angegebenen Befehls-ID zugeordnet sind.  
   
 ```  
 void GetElementsByID(
@@ -495,87 +434,87 @@ void GetElementsByID(
     CArray <CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `uiCmdID`  
- Command ID associated with a ribbon element.  
+ Befehls-ID, die ein Menübandelement zugeordnet.  
   
  [in, out] `arElements`  
- Reference to a [CArray](../../mfc/reference/carray-class.md) of ribbon elements.  
+ Ein Verweis auf eine [CArray](../../mfc/reference/carray-class.md) von Menübandelementen.  
   
-### <a name="remarks"></a>Remarks  
- Ribbon elements that are designed for use on the quick access toolbar are included in the array.  
+### <a name="remarks"></a>Hinweise  
+ Menübandelemente, die für die Verwendung auf der Symbolleiste für den Schnellzugriff entwickelt wurden, sind im Array enthalten.  
   
-##  <a name="getfirstvisibleelement"></a>  CMFCRibbonCategory::GetFirstVisibleElement  
- Retrieves the first visible element that belongs to the ribbon category.  
+##  <a name="getfirstvisibleelement"></a>CMFCRibbonCategory::GetFirstVisibleElement  
+ Ruft das erste sichtbare Element, zu dem die Menübandkategorie gehört.  
   
 ```  
 CMFCRibbonBaseElement* GetFirstVisibleElement() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Pointer to the first visible element; may be `NULL` if category does not have any visible elements.  
+### <a name="return-value"></a>Rückgabewert  
+ Zeiger auf das erste sichtbare Element. möglicherweise `NULL` Kategorie keinen keine sichtbaren Elemente.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="getfocused"></a>  CMFCRibbonCategory::GetFocused  
- Returns a focused element.  
+##  <a name="getfocused"></a>CMFCRibbonCategory::GetFocused  
+ Gibt ein Fokuselement zurück.  
   
 ```  
 CMFCRibbonBaseElement* GetFocused();
 ```  
   
-### <a name="return-value"></a>Return Value  
- A pointer to a focused element or `NULL`.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Zeiger auf ein Fokuselement oder `NULL`.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="gethighlighted"></a>  CMFCRibbonCategory::GetHighlighted  
- Returns a highlighted element.  
+##  <a name="gethighlighted"></a>CMFCRibbonCategory::GetHighlighted  
+ Gibt eine markierte Element.  
   
 ```  
 CMFCRibbonBaseElement* GetHighlighted();
 ```  
   
-### <a name="return-value"></a>Return Value  
- A pointer to a highlighted element or `NULL` if no elements are highlighted.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Zeiger auf eine hervorgehobene Element oder `NULL` Wenn keine Elemente markiert sind.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="getimagecount"></a>  CMFCRibbonCategory::GetImageCount  
- Retrieves the number of images in the specified image list that is contained in the ribbon category.  
+##  <a name="getimagecount"></a>CMFCRibbonCategory::GetImageCount  
+ Ruft die Anzahl der Bilder in der angegebenen Bildliste, die in der Menübandkategorie enthalten sind.  
   
 ```  
 int GetImageCount(BOOL bIsLargeImage) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `bIsLargeImage`  
- `TRUE` for the number of images in the large image list; `FALSE` for the number of images in the small image list.  
+ `TRUE`die Anzahl der Bilder in der Liste großes Bild; `FALSE` für die Anzahl der Bilder in der Miniaturansicht-Liste.  
   
-### <a name="return-value"></a>Return Value  
- The number of images in the specified image list.  
+### <a name="return-value"></a>Rückgabewert  
+ Die Anzahl der Bilder in der Liste angegebenen Bild.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="getimagesize"></a>  CMFCRibbonCategory::GetImageSize  
- Retrieves the size of an image in the specified image list that is contained in the ribbon category.  
+##  <a name="getimagesize"></a>CMFCRibbonCategory::GetImageSize  
+ Ruft die Größe eines Bilds in der angegebenen Bildliste, die in der Menübandkategorie enthalten sind.  
   
 ```  
 CSize GetImageSize(BOOL bIsLargeImage) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `bIsLargeImage`  
- `TRUE` for the size of large images; `FALSE` for the size of small images.  
+ `TRUE`für die Größe von Bildern. `FALSE` für kleine Bilder.  
   
-### <a name="return-value"></a>Return Value  
- The size of an image in the specified image list.  
+### <a name="return-value"></a>Rückgabewert  
+ Die Größe eines Bilds in der Liste angegebenen Bild.  
   
-### <a name="remarks"></a>Remarks  
- The size retrieved includes the global image scale factor.  
+### <a name="remarks"></a>Hinweise  
+ Die Größe abgerufen enthält den Skalierungsfaktor globales Image.  
   
-##  <a name="getitemidslist"></a>  CMFCRibbonCategory::GetItemIDsList  
- Retrieves the command IDs for the ribbon elements that are contained in the ribbon category.  
+##  <a name="getitemidslist"></a>CMFCRibbonCategory::GetItemIDsList  
+ Ruft die Befehls-IDs für die Menübandelemente, die in der Menübandkategorie enthalten sind.  
   
 ```  
 void GetItemIDsList(
@@ -583,198 +522,198 @@ void GetItemIDsList(
     BOOL bHiddenOnly = FALSE) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [out] `lstItems`  
- The list of command IDs for the ribbon elements in the ribbon category.  
+ Die Liste der Befehls-IDs für die Menübandelemente in der Menübandkategorie.  
   
  [in] `bHiddenOnly`  
- `TRUE` to exclude ribbon elements displayed on the ribbon panels in the ribbon category; `FALSE` to include all ribbon elements in the ribbon category.  
+ `TRUE`auszuschließende Menübandelemente, die auf der Multifunktionsleiste in der Menübandkategorie angezeigt; `FALSE` die Menübandkategorie alle Menübandelemente einschließt.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="getlargeimages"></a>  CMFCRibbonCategory::GetLargeImages  
- Retrieves the list of large images that are contained in the ribbon category.  
+##  <a name="getlargeimages"></a>CMFCRibbonCategory::GetLargeImages  
+ Ruft die Liste der große Bilder, die in der Menübandkategorie enthalten sind.  
   
 ```  
 CMFCToolBarImages& GetLargeImages();
 ```  
   
-### <a name="return-value"></a>Return Value  
- The list of large images that are contained in the ribbon category.  
+### <a name="return-value"></a>Rückgabewert  
+ Die Liste der große Bilder, die in der Menübandkategorie enthalten sind.  
   
-##  <a name="getlastvisibleelement"></a>  CMFCRibbonCategory::GetLastVisibleElement  
- Retrieves the last visible element that belongs to the ribbon category.  
+##  <a name="getlastvisibleelement"></a>CMFCRibbonCategory::GetLastVisibleElement  
+ Ruft das letzte sichtbare Element, zu der die Menübandkategorie gehört.  
   
 ```  
 CMFCRibbonBaseElement* GetLastVisibleElement() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Pointer to the last visible element; may be `NULL` if the category does not have any visible elements.  
+### <a name="return-value"></a>Rückgabewert  
+ Zeiger auf das letzte sichtbare Element. möglicherweise `NULL` Kategorie keinen keine sichtbaren Elemente.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="getmaxheight"></a>  CMFCRibbonCategory::GetMaxHeight  
- Retrieves the maximum height of the ribbon panels that are contained in the ribbon category.  
+##  <a name="getmaxheight"></a>CMFCRibbonCategory::GetMaxHeight  
+ Ruft die maximale Höhe der menübandbereiche, die in der Menübandkategorie enthalten sind.  
   
 ```  
 int GetMaxHeight(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pDC`  
- Pointer to a device context for the ribbon panels.  
+ Ein Zeiger auf einen Gerätekontext für die Multifunktionsleiste geändert wurde.  
   
-### <a name="return-value"></a>Return Value  
- The maximum height of the ribbon panels that are contained in the ribbon category.  
+### <a name="return-value"></a>Rückgabewert  
+ Die maximale Höhe der menübandbereiche, die in der Menübandkategorie enthalten sind.  
   
-### <a name="remarks"></a>Remarks  
- The value retrieved includes the height of the top and bottom margins for the ribbon panels.  
+### <a name="remarks"></a>Hinweise  
+ Der abgerufene Wert enthält die Höhe der oberen und unteren Ränder für die Multifunktionsleiste geändert wurde.  
   
-##  <a name="getname"></a>  CMFCRibbonCategory::GetName  
- Retrieves the name of the ribbon category.  
+##  <a name="getname"></a>CMFCRibbonCategory::GetName  
+ Ruft den Namen der Menübandkategorie ein.  
   
 ```  
 LPCTSTR GetName() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The name of the ribbon category.  
+### <a name="return-value"></a>Rückgabewert  
+ Der Name der Menübandkategorie.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="getpanel"></a>  CMFCRibbonCategory::GetPanel  
- Returns a pointer to the ribbon panel that is located at the specified index.  
+##  <a name="getpanel"></a>CMFCRibbonCategory::GetPanel  
+ Gibt einen Zeiger zum Menübandbereich, das sich am angegebenen Index befindet.  
   
 ```  
 CMFCRibbonPanel* GetPanel(int nIndex);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `nIndex`  
- The zero-based index of a ribbon panel.  
+ Der nullbasierte Index von einem Menübandbereich.  
   
-### <a name="return-value"></a>Return Value  
- Pointer to the ribbon panel that is located at the specified index.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Zeiger auf die Menübandbereich, die sich am angegebenen Index befindet.  
   
-### <a name="remarks"></a>Remarks  
- An exception is thrown if `nIndex` is out of range.  
+### <a name="remarks"></a>Hinweise  
+ Eine Ausnahme wird ausgelöst, wenn `nIndex` liegt außerhalb des Bereichs.  
   
-##  <a name="getpanelcount"></a>  CMFCRibbonCategory::GetPanelCount  
- Returns the number of ribbon panels in the ribbon category.  
+##  <a name="getpanelcount"></a>CMFCRibbonCategory::GetPanelCount  
+ Gibt die Anzahl der menübandbereiche in die Menübandkategorie zurück.  
   
 ```  
 int GetPanelCount() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The number of ribbon panels in the ribbon category.  
+### <a name="return-value"></a>Rückgabewert  
+ Die Anzahl der menübandbereichen in der Menübandkategorie.  
   
-##  <a name="getpanelfrompoint"></a>  CMFCRibbonCategory::GetPanelFromPoint  
- Retrieves a pointer to a ribbon panel if the specified point is located in it.  
+##  <a name="getpanelfrompoint"></a>CMFCRibbonCategory::GetPanelFromPoint  
+ Ruft einen Zeiger auf ein Menübandbereich ab, wenn der angegebene Punkt darin befindet.  
   
 ```  
 CMFCRibbonPanel* GetPanelFromPoint(CPoint point) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `point`  
- The x and y coordinates of the pointer, relative to the upper-left corner of the window.  
+ Die x- und y-Koordinaten des Mauszeigers, in Bezug auf die linke obere Ecke des Fensters.  
   
-### <a name="return-value"></a>Return Value  
- Pointer to a ribbon panel if the method was successful; otherwise `NULL`.  
+### <a name="return-value"></a>Rückgabewert  
+ Zeiger auf einen Menübandbereich, wenn die Methode erfolgreich war; andernfalls `NULL`.  
   
-### <a name="remarks"></a>Remarks  
- Only ribbon panels that are contained in the ribbon category are tested.  
+### <a name="remarks"></a>Hinweise  
+ Nur menübandbereiche, die in der Menübandkategorie enthalten sind, werden getestet.  
   
-##  <a name="getpanelindex"></a>  CMFCRibbonCategory::GetPanelIndex  
- Retrieves the zero-based index of the specified ribbon panel.  
+##  <a name="getpanelindex"></a>CMFCRibbonCategory::GetPanelIndex  
+ Ruft den nullbasierten Index des angegebenen Menübandbereich ab.  
   
 ```  
 int GetPanelIndex(const CMFCRibbonPanel* pPanel) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pPanel`  
- Pointer to a ribbon panel.  
+ Ein Zeiger auf ein Menüband-Panel.  
   
-### <a name="return-value"></a>Return Value  
- Zero-based index of the specified ribbon panel if the method was successful; otherwise -1.  
+### <a name="return-value"></a>Rückgabewert  
+ Nullbasierte Index des angegebenen Menübandbereich, wenn die Methode erfolgreich war. andernfalls -1.  
   
-### <a name="remarks"></a>Remarks  
- Only ribbon panels that are contained in the ribbon category are searched.  
+### <a name="remarks"></a>Hinweise  
+ Durchsucht nur menübandbereiche, die in der Menübandkategorie enthalten sind.  
   
-##  <a name="getparentbutton"></a>  CMFCRibbonCategory::GetParentButton  
- Retrieves the parent ribbon element of the ribbon category.  
+##  <a name="getparentbutton"></a>CMFCRibbonCategory::GetParentButton  
+ Ruft das übergeordnete Element der Menübandkategorie Menüband ab.  
   
 ```  
 CMFCRibbonBaseElement* GetParentButton() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Returns a pointer to the parent ribbon element, or `NULL` if there is no parent element.  
+### <a name="return-value"></a>Rückgabewert  
+ Gibt einen Zeiger auf das Menübandelement übergeordneten oder `NULL` , wenn kein übergeordnetes Element vorhanden ist.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="getparentmenubar"></a>  CMFCRibbonCategory::GetParentMenuBar  
- Returns a pointer to the parent menu bar of the `CMFCRibbonCategory` object.  
+##  <a name="getparentmenubar"></a>CMFCRibbonCategory::GetParentMenuBar  
+ Gibt einen Zeiger auf die übergeordnete Menüleiste des der `CMFCRibbonCategory` Objekt.  
   
 ```  
 CMFCRibbonPanelMenuBar* GetParentMenuBar() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Returns the contents of the `m_pParentMenuBar` protected member.  
+### <a name="return-value"></a>Rückgabewert  
+ Gibt den Inhalt der `m_pParentMenuBar` geschützte Member.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="getparentribbonbar"></a>  CMFCRibbonCategory::GetParentRibbonBar  
- Retrieves the parent ribbon bar for the ribbon category.  
+##  <a name="getparentribbonbar"></a>CMFCRibbonCategory::GetParentRibbonBar  
+ Ruft die übergeordnete-Menübands für die Menübandkategorie ab.  
   
 ```  
 CMFCRibbonBar* GetParentRibbonBar() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Pointer to the parent ribbon bar for the ribbon category.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Zeiger auf die übergeordnete-Menübands für die Menübandkategorie.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="getrect"></a>  CMFCRibbonCategory::GetRect  
- Retrieves the display rectangle for the ribbon category.  
+##  <a name="getrect"></a>CMFCRibbonCategory::GetRect  
+ Ruft das Anzeigerechteck der Menüband-Kategorie ab.  
   
 ```  
 CRect GetRect() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The display rectangle for the ribbon category.  
+### <a name="return-value"></a>Rückgabewert  
+ Das Anzeigerechteck der Menüband-Kategorie.  
   
-### <a name="remarks"></a>Remarks  
- The display rectangle for the ribbon category does not include the category tab.  
+### <a name="remarks"></a>Hinweise  
+ Das Anzeigerechteck der Menüband-Kategorie umfasst nicht die kategorienregisterkarte.  
   
-##  <a name="getsmallimages"></a>  CMFCRibbonCategory::GetSmallImages  
- Retrieves the list of small images that are contained in the ribbon category.  
+##  <a name="getsmallimages"></a>CMFCRibbonCategory::GetSmallImages  
+ Ruft die Liste der kleine Bilder, die in der Menübandkategorie enthalten sind.  
   
 ```  
 CMFCToolBarImages& GetSmallImages();
 ```  
   
-### <a name="return-value"></a>Return Value  
- The list of small images that are contained in the ribbon category.  
+### <a name="return-value"></a>Rückgabewert  
+ Die Liste der kleine Bilder, die in der Menübandkategorie enthalten sind.  
   
-##  <a name="gettabcolor"></a>  CMFCRibbonCategory::GetTabColor  
- Returns the current color of the ribbon category tab.  
+##  <a name="gettabcolor"></a>CMFCRibbonCategory::GetTabColor  
+ Gibt die aktuelle Farbe des Menübands Kategorie zurück.  
   
 ```  
 AFX_RibbonCategoryColor GetTabColor() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The current color of the ribbon category tab.  
+### <a name="return-value"></a>Rückgabewert  
+ Die aktuelle Farbe des Menübands Kategorie.  
   
-### <a name="remarks"></a>Remarks  
- The returned value can be one of the following enumerated values:  
+### <a name="remarks"></a>Hinweise  
+ Der zurückgegebene Wert kann eine der folgenden Enumerationswerte:  
   
 -   AFX_CategoryColor_Red  
   
@@ -790,32 +729,32 @@ AFX_RibbonCategoryColor GetTabColor() const;
   
 -   AFX_CategoryColor_Violet  
   
-##  <a name="gettabrect"></a>  CMFCRibbonCategory::GetTabRect  
- Retrieves the display rectangle for the ribbon category tab.  
+##  <a name="gettabrect"></a>CMFCRibbonCategory::GetTabRect  
+ Ruft das Anzeigerechteck für die Multifunktionsleisten-kategorienregisterkarte ab.  
   
 ```  
 CRect GetTabRect() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The display rectangle for the ribbon category tab.  
+### <a name="return-value"></a>Rückgabewert  
+ Das Anzeigerechteck für die Multifunktionsleisten-kategorienregisterkarte.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="gettexttopline"></a>  CMFCRibbonCategory::GetTextTopLine  
- Retrieves the vertical location of text on ribbon buttons in the ribbon category that display large images.  
+##  <a name="gettexttopline"></a>CMFCRibbonCategory::GetTextTopLine  
+ Ruft die vertikale Position von Text in der Multifunktionsleisten-Schaltflächen in der Menübandkategorie, die große Bilder anzeigen.  
   
 ```  
 int GetTextTopLine() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The vertical location of text, in pixels, on ribbon buttons that display large images.  
+### <a name="return-value"></a>Rückgabewert  
+ Die vertikale Position des Texts in Pixel auf Menübandschaltflächen, die große Bilder anzuzeigen.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="getvisibleelements"></a>  CMFCRibbonCategory::GetVisibleElements  
- Retrieves all visible elements that belong to the ribbon category.  
+##  <a name="getvisibleelements"></a>CMFCRibbonCategory::GetVisibleElements  
+ Ruft alle sichtbaren Elemente, die die Menübandkategorie angehören.  
   
 ```  
 void GetVisibleElements(
@@ -823,14 +762,14 @@ void GetVisibleElements(
     CMFCRibbonBaseElement*>& arElements);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `arElements`  
- Array of all visible elements.  
+ Ein Array aller sichtbaren Elemente.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="highlightpanel"></a>  CMFCRibbonCategory::HighlightPanel  
- Highlights the specified ribbon panel.  
+##  <a name="highlightpanel"></a>CMFCRibbonCategory::HighlightPanel  
+ Markiert die angegebene Menübandbereich.  
   
 ```  
 CMFCRibbonPanel* HighlightPanel(
@@ -838,21 +777,21 @@ CMFCRibbonPanel* HighlightPanel(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pHLPanel`  
- Pointer to the ribbon panel to highlight.  
+ Zeiger zum Menübandbereich zu markieren.  
   
  [in] `point`  
- The x and y coordinates of the pointer, relative to the upper-left corner of the window.  
+ Die x- und y-Koordinaten des Mauszeigers, in Bezug auf die linke obere Ecke des Fensters.  
   
-### <a name="return-value"></a>Return Value  
- Pointer to the previously highlighted ribbon panel; otherwise `NULL` if no ribbon panel is highlighted when this method is invoked.  
+### <a name="return-value"></a>Rückgabewert  
+ Zeiger auf die zuvor markierten Menübandbereich; andernfalls `NULL` Wenn keine Menübandbereich markiert ist, wenn diese Methode aufgerufen wird.  
   
-### <a name="remarks"></a>Remarks  
- For more information about highlighting a ribbon panel, see [CMFCRibbonPanel::Highlight](../../mfc/reference/cmfcribbonpanel-class.md#highlight).  
+### <a name="remarks"></a>Hinweise  
+ Weitere Informationen zu einem Menübandbereich hervorheben, finden Sie unter [CMFCRibbonPanel::Highlight](../../mfc/reference/cmfcribbonpanel-class.md#highlight).  
   
-##  <a name="hittest"></a>  CMFCRibbonCategory::HitTest  
- Retrieves a pointer to a ribbon element if the specified point is located in it.  
+##  <a name="hittest"></a>CMFCRibbonCategory::HitTest  
+ Ruft einen Zeiger auf ein Menübandelement ab, wenn der angegebene Punkt darin befindet.  
   
 ```  
 CMFCRibbonBaseElement* HitTest(
@@ -860,92 +799,92 @@ CMFCRibbonBaseElement* HitTest(
     BOOL bCheckPanelCaption = FALSE) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `point`  
- The x and y coordinates of the mouse pointer, relative to the upper-left corner of the window.  
+ Die x- und y-Koordinaten des Mauszeigers relativ zu der oberen linken Ecke des Fensters.  
   
  [in] `bCheckPanelCaption`  
- `TRUE` to test the ribbon panel caption; `FALSE` to exclude the ribbon panel caption.  
+ `TRUE`So testen Sie die Beschriftung der Menüband-Bereich; `FALSE` die Beschriftung der Menüband-Bereich ausgeschlossen.  
   
-### <a name="return-value"></a>Return Value  
- Pointer to a ribbon element if the method was successful; otherwise `NULL`.  
+### <a name="return-value"></a>Rückgabewert  
+ Zeiger auf ein Menübandelement, wenn die Methode erfolgreich war; andernfalls `NULL`.  
   
-### <a name="remarks"></a>Remarks  
- Only ribbon elements that are contained in the ribbon category are tested.  
+### <a name="remarks"></a>Hinweise  
+ Es werden nur Menübandelemente, die in der Menübandkategorie enthalten sind getestet.  
   
-##  <a name="hittestex"></a>  CMFCRibbonCategory::HitTestEx  
- Retrieves the zero-based index of a ribbon element if the specified point is located in it.  
+##  <a name="hittestex"></a>CMFCRibbonCategory::HitTestEx  
+ Ruft den nullbasierten Index des Multifunktionsleisten-Element ab, wenn der angegebene Punkt darin befindet.  
   
 ```  
 int HitTestEx(CPoint point) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `point`  
- The x and y coordinates of the mouse pointer, relative to the upper-left corner of the window.  
+ Die x- und y-Koordinaten des Mauszeigers relativ zu der oberen linken Ecke des Fensters.  
   
-### <a name="return-value"></a>Return Value  
- Zero-based index of a ribbon element if the method was successful; otherwise -1.  
+### <a name="return-value"></a>Rückgabewert  
+ Nullbasierte Index des ein Menübandelement, wenn die Methode erfolgreich war. andernfalls -1.  
   
-### <a name="remarks"></a>Remarks  
- Only ribbon elements that are contained in the ribbon category are tested.  
+### <a name="remarks"></a>Hinweise  
+ Es werden nur Menübandelemente, die in der Menübandkategorie enthalten sind getestet.  
   
-##  <a name="hittestscrollbuttons"></a>  CMFCRibbonCategory::HitTestScrollButtons  
- If a point falls within a ribbon category’s left or right scroll button, returns a pointer to that button.  
+##  <a name="hittestscrollbuttons"></a>CMFCRibbonCategory::HitTestScrollButtons  
+ Wenn ein Punkt innerhalb einer Menübandkategorie nach links oder rechts Bildlaufschaltfläche liegt, gibt einen Zeiger auf diese Schaltfläche.  
   
 ```  
 CMFCRibbonBaseElement* HitTestScrollButtons(CPoint point) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `point`  
- The point to test.  
+ Der zu überprüfende Punkt.  
   
-### <a name="return-value"></a>Return Value  
- If `point` falls within the bounding rectangle of either the left or the right scroll button of the ribbon category, returns a pointer to that button, or otherwise, returns `NULL`.  
+### <a name="return-value"></a>Rückgabewert  
+ Wenn `point` das umschließende Rechteck von der linken oder rechten Bildlaufschaltfläche der Menübandkategorie fällt, gibt einen Zeiger auf die Schaltfläche oder andernfalls `NULL`.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="isactive"></a>  CMFCRibbonCategory::IsActive  
- Indicates whether the ribbon category is the active category on the ribbon bar.  
+##  <a name="isactive"></a>CMFCRibbonCategory::IsActive  
+ Gibt an, ob die Menübandkategorie aktiven Kategorie in der menübandleiste ist.  
   
 ```  
 BOOL IsActive() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the ribbon category is the active category; otherwise `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn die Menübandkategorie aktiven Kategorie ist. andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- The active ribbon category displays its ribbon panels.  
+### <a name="remarks"></a>Hinweise  
+ Die aktive Menübandkategorie zeigt den menübandbereichen an.  
   
-##  <a name="isvisible"></a>  CMFCRibbonCategory::IsVisible  
- Indicates whether the ribbon category is visible.  
+##  <a name="isvisible"></a>CMFCRibbonCategory::IsVisible  
+ Gibt an, ob die Menübandkategorie sichtbar ist.  
   
 ```  
 BOOL IsVisible() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the ribbon category is visible; otherwise `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn die Menübandkategorie sichtbar ist; andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- Ribbon categories that are visible display a category tab.  
+### <a name="remarks"></a>Hinweise  
+ Menübandkategorien, die sichtbar sind anzeigen eine kategorienregisterkarte  
   
-##  <a name="iswindows7look"></a>  CMFCRibbonCategory::IsWindows7Look  
- Indicates whether the parent ribbon has Windows 7 look (small rectangular application button).  
+##  <a name="iswindows7look"></a>CMFCRibbonCategory::IsWindows7Look  
+ Gibt an, ob der übergeordnete Menüband verfügt über ein Windows 7 (kleine rechteckige Anwendungsschaltfläche) zu suchen.  
   
 ```  
 BOOL IsWindows7Look() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the parent ribbon has Windows 7 look; otherwise `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn die übergeordnete Multifunktionsleiste Aussehen von Windows 7 enthält. andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="notifycontrolcommand"></a>  CMFCRibbonCategory::NotifyControlCommand  
- Delivers a WM_NOTIFY command message to all `CMFCRibbonPanel` elements in the `CMFCRibbonCategory` until the message is handled.  
+##  <a name="notifycontrolcommand"></a>CMFCRibbonCategory::NotifyControlCommand  
+ Übermittelt die Nachricht eine WM_NOTIFY-Befehl an alle `CMFCRibbonPanel` Elemente in der `CMFCRibbonCategory` bis die Nachricht behandelt wird.  
   
 ```  
 virtual BOOL NotifyControlCommand(
@@ -955,48 +894,48 @@ virtual BOOL NotifyControlCommand(
     LPARAM lParam);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `bAccelerator`  
- `TRUE` if this command originated from an accelerator, or `FALSE` otherwise.  
+ `TRUE`Wenn dieser Befehl von einer Zugriffstaste stammt oder `FALSE` andernfalls.  
   
  [in] `nNotifyCode`  
- The notification code.  
+ Der Benachrichtigungscode.  
   
  [in] `wParam`  
- The WPARAM field of the message.  
+ Der WPARAM-Feld der Nachricht.  
   
  [in] `lParam`  
- The LPARAM field of the message.  
+ Das LPARAM-Feld der Nachricht.  
   
-### <a name="return-value"></a>Return Value  
- Returns `TRUE` if the message was handled, or `FALSE` if not.  
+### <a name="return-value"></a>Rückgabewert  
+ Gibt `TRUE` , wenn die Meldung verarbeitet wurde, oder `FALSE` ist dies nicht.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="oncancelmode"></a>  CMFCRibbonCategory::OnCancelMode  
- Invokes cancel mode in all the `CMFCRibbonPanel` elements of the `CMFCRibbonCategory`.  
+##  <a name="oncancelmode"></a>CMFCRibbonCategory::OnCancelMode  
+ Ruft die Cancel-Modus in allen der `CMFCRibbonPanel` Elemente der `CMFCRibbonCategory`.  
   
 ```  
 virtual void OnCancelMode();
 ```  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="ondraw"></a>  CMFCRibbonCategory::OnDraw  
- Called by the framework to draw the ribbon category.  
+##  <a name="ondraw"></a>CMFCRibbonCategory::OnDraw  
+ Aufgerufen, um die Menübandkategorie zu zeichnen.  
   
 ```  
 virtual void OnDraw(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pDC`  
- Pointer to a device context for the ribbon category.  
+ Ein Zeiger auf einen Gerätekontext für die Menübandkategorie.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="ondrawimage"></a>  CMFCRibbonCategory::OnDrawImage  
- Called by the framework to draw the specified image on the ribbon category.  
+##  <a name="ondrawimage"></a>CMFCRibbonCategory::OnDrawImage  
+ Aufgerufen, um das Abbild auf die Menübandkategorie zu zeichnen.  
   
 ```  
 virtual BOOL OnDrawImage(
@@ -1008,32 +947,32 @@ virtual BOOL OnDrawImage(
     BOOL bCenter);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pDC`  
- Pointer to a device context for the image.  
+ Ein Zeiger auf einen Gerätekontext für das Bild.  
   
  [in] `rect`  
- Display rectangle for the image.  
+ Rechteck für das Bild wird angezeigt.  
   
  [in] `pElement`  
- Pointer to the ribbon element that contains the image.  
+ Ein Zeiger auf die Multifunktionsleisten-Element, das das Bild enthält.  
   
  [in] `bIsLargeImage`  
- `TRUE` if the image is the large size; `FALSE` if the image is the small size.  
+ `TRUE`Wenn das Bild sehr groß ist. `FALSE` Wenn das Bild der Größe klein ist.  
   
  [in] `nImageIndex`  
- Zero-based index of the image in the image array that is contained in the ribbon category.  
+ Nullbasierte Index des Bilds in das Image-Array, das in der Menübandkategorie enthalten ist.  
   
  [in] `bCenter`  
- `TRUE` to center the image in the display rectangle; `FALSE` to draw the image in the upper-left corner of the display rectangle.  
+ `TRUE`So zentrieren Sie das Bild in das Anzeigerechteck; `FALSE` zum Zeichnen des Bilds in der oberen linken Ecke des Rechtecks angezeigt.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the method was successful; otherwise `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn die Methode erfolgreich war; andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="ondrawmenuborder"></a>  CMFCRibbonCategory::OnDrawMenuBorder  
- Called by the framework to draw the border of a popup menu.  
+##  <a name="ondrawmenuborder"></a>CMFCRibbonCategory::OnDrawMenuBorder  
+ Vom Framework aufgerufen wird zum Zeichnen des Rahmens für ein Popup-Menü.  
   
 ```  
 virtual void OnDrawMenuBorder(
@@ -1041,87 +980,87 @@ virtual void OnDrawMenuBorder(
     CMFCRibbonPanelMenuBar* pMenuBar);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pDC`  
- This parameter is not used.  
+ Dieser Parameter wird nicht verwendet.  
   
  [in] `pMenuBar`  
- This parameter is not used.  
+ Dieser Parameter wird nicht verwendet.  
   
-### <a name="remarks"></a>Remarks  
- By default this method does nothing. Override this method to draw the border of a popup menu.  
+### <a name="remarks"></a>Hinweise  
+ Standardmäßig bewirkt diese Methode nichts. Überschreiben Sie diese Methode zum Zeichnen des Rahmens für ein Popup-Menü.  
   
-##  <a name="onkey"></a>  CMFCRibbonCategory::OnKey  
- Called by the framework when a user presses a keyboard button.  
+##  <a name="onkey"></a>CMFCRibbonCategory::OnKey  
+ Vom Framework aufgerufen, wenn ein Benutzer eine Taste drückt.  
   
 ```  
 virtual BOOL OnKey(UINT nChar);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  `nChar`  
- The virtual key code for the key that a user pressed.  
+ Virtueller Tastencode für den Schlüssel, den ein Benutzer geklickt hat.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="onlbuttondown"></a>  CMFCRibbonCategory::OnLButtonDown  
- Called by the framework to retrieve the ribbon element under the specified point when the user presses the left mouse button.  
+##  <a name="onlbuttondown"></a>CMFCRibbonCategory::OnLButtonDown  
+ Aufgerufen, um die Multifunktionsleisten-Element unter dem angegebenen Punkt abzurufen, wenn der Benutzer die linke Maustaste drückt.  
   
 ```  
 virtual CMFCRibbonBaseElement* OnLButtonDown(CPoint point);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `point`  
- The x and y coordinates of the mouse pointer, relative to the upper-left corner of the window.  
+ Die x- und y-Koordinaten des Mauszeigers relativ zu der oberen linken Ecke des Fensters.  
   
-### <a name="return-value"></a>Return Value  
- Pointer to a ribbon element if the method was successful; otherwise `NULL`.  
+### <a name="return-value"></a>Rückgabewert  
+ Zeiger auf ein Menübandelement, wenn die Methode erfolgreich war; andernfalls `NULL`.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="onlbuttonup"></a>  CMFCRibbonCategory::OnLButtonUp  
- Called by the framework when the user releases the left mouse button and the pointer is over the ribbon category.  
+##  <a name="onlbuttonup"></a>CMFCRibbonCategory::OnLButtonUp  
+ Wird vom Framework aufgerufen, wenn der Benutzer die linke Maustaste loslässt und der Mauszeiger über die Menübandkategorie.  
   
 ```  
 virtual void OnLButtonUp(CPoint point);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `point`  
- The x and y coordinates of the pointer, relative to the upper-left corner of the window.  
+ Die x- und y-Koordinaten des Mauszeigers, in Bezug auf die linke obere Ecke des Fensters.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="onmousemove"></a>  CMFCRibbonCategory::OnMouseMove  
- Called by the framework when the pointer moves on the ribbon bar in order to update the ribbon category display.  
+##  <a name="onmousemove"></a>CMFCRibbonCategory::OnMouseMove  
+ Wird vom Framework aufgerufen, wenn der Zeiger in der menübandleiste bewegt, um die Multifunktionsleiste Kategorie Anzeige zu aktualisieren.  
   
 ```  
 virtual void OnMouseMove(CPoint point);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `point`  
- The x and y coordinates of the pointer, relative to the upper-left corner of the window.  
+ Die x- und y-Koordinaten des Mauszeigers, in Bezug auf die linke obere Ecke des Fensters.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="onrtlchanged"></a>  CMFCRibbonCategory::OnRTLChanged  
- Called by the framework when the layout changes direction.  
+##  <a name="onrtlchanged"></a>CMFCRibbonCategory::OnRTLChanged  
+ Wird vom Framework aufgerufen, wenn das Layout Richtung ändert.  
   
 ```  
 virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `bIsRTL`  
- `TRUE` if the layout is right-to-left; `FALSE` if the layout is left-to-right.  
+ `TRUE`Wenn der rechts-nach-links wird; `FALSE` ist das Layout links nach rechts.  
   
-### <a name="remarks"></a>Remarks  
- This method adjusts the layout of all ribbon panels and ribbon elements that are contained in the ribbon category.  
+### <a name="remarks"></a>Hinweise  
+ Diese Methode passt das Layout aller menübandbereichen und Menübandelemente, die in der Menübandkategorie enthalten sind.  
   
-##  <a name="onscrollhorz"></a>  CMFCRibbonCategory::OnScrollHorz  
- Scrolls the ribbon category in the horizontal direction.  
+##  <a name="onscrollhorz"></a>CMFCRibbonCategory::OnScrollHorz  
+ Führt einen Bildlauf durch die Menübandkategorie in horizontaler Richtung.  
   
 ```  
 virtual BOOL OnScrollHorz(
@@ -1129,20 +1068,20 @@ virtual BOOL OnScrollHorz(
     int nScrollOffset = 0);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `bScrollLeft`  
- `TRUE` to scroll to the left; `FALSE` to scroll to the right.  
+ `TRUE`zum Ausführen eines Bildlaufs nach links `FALSE` einen Bildlauf nach rechts durchführen.  
   
  [in] `nScrollOffset`  
- The scroll distance in pixels.  
+ Die Bildlaufleiste Abstand in Pixel.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the ribbon category moved in a horizontal direction; otherwise `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn die Menübandkategorie in horizontaler Richtung verschoben. andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="onupdatecmdui"></a>  CMFCRibbonCategory::OnUpdateCmdUI  
- Calls the `OnUpdateCmdUI` member function in each of the `CMFCRibbonPanel` elements of the `CMFCRibbonCategory` to enable or disable the user-interface elements in them.  
+##  <a name="onupdatecmdui"></a>CMFCRibbonCategory::OnUpdateCmdUI  
+ Aufrufe der `OnUpdateCmdUI` Member-Funktion in jedem der `CMFCRibbonPanel` Elemente der `CMFCRibbonCategory` aktivieren oder deaktivieren die Elemente der Benutzeroberfläche werden.  
   
 ```  
 virtual void OnUpdateCmdUI(
@@ -1151,33 +1090,33 @@ virtual void OnUpdateCmdUI(
     BOOL bDisableIfNoHndler);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pCmdUI`  
- Pointer to the `CMFCRibbonCmdUI` object that specifies which user-interface elements are to be enabled and which are to be disabled.  
+ Zeiger auf die `CMFCRibbonCmdUI` Objekt, das angibt, welche Elemente der Benutzeroberfläche aktiviert werden sollen und welche deaktiviert werden soll.  
   
  [in] `pTarget`  
- Pointer to the window that controls the enabling or disabling of the user-interface elements.  
+ Ein Zeiger auf die Aktivierung oder Deaktivierung der Elemente der Benutzeroberfläche steuert.  
   
  [in] `bDisableIfNoHndler`  
- `TRUE` to disable the user-interface item if no handler is defined in a message map; otherwise, `FALSE`.  
+ `TRUE`zum Deaktivieren der Benutzeroberflächen-Element, wenn kein Handler ist eine Nachricht Zuordnung definiert. andernfalls `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="recalclayout"></a>  CMFCRibbonCategory::RecalcLayout  
- Adjusts the layout of all controls on the ribbon category.  
+##  <a name="recalclayout"></a>CMFCRibbonCategory::RecalcLayout  
+ Passt das Layout aller Steuerelemente auf der Multifunktionsleiste-Kategorie.  
   
 ```  
 virtual void RecalcLayout(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pDC`  
- Pointer to a device context for the ribbon category.  
+ Ein Zeiger auf einen Gerätekontext für die Menübandkategorie.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="removepanel"></a>  CMFCRibbonCategory::RemovePanel  
- Removes a ribbon panel from the ribbon category.  
+##  <a name="removepanel"></a>CMFCRibbonCategory::RemovePanel  
+ Entfernt ein Menübandbereich aus der Menübandkategorie.  
   
 ```cpp  
 BOOL RemovePanel(
@@ -1185,104 +1124,104 @@ BOOL RemovePanel(
     BOOL bDelete = TRUE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `nIndex`  
- The index number of the panel to remove. Obtained by calling the [CMFCRibbonCategory::GetPanelIndex](#getpanelindex) method.  
+ Die Indexnummer des zu entfernenden. Durch den Aufruf der [CMFCRibbonCategory::GetPanelIndex](#getpanelindex) Methode.  
   
  [in] `bDelete`  
- `TRUE` to delete the panel object from memory; `FALSE` to remove the panel object without deleting it.  
+ `TRUE`Das Panelobjekt aus dem Speicher zu löschen; `FALSE` das Panelobjekt zu entfernen, ohne sie zu löschen.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the method was successful; otherwise, `FALSE`.  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`, wenn die Methode erfolgreich ausgeführt wurde, andernfalls `FALSE`.  
   
-##  <a name="repospanels"></a>  CMFCRibbonCategory::ReposPanels  
- Adjusts the layout of all controls on the ribbon panels that are contained in the ribbon category.  
+##  <a name="repospanels"></a>CMFCRibbonCategory::ReposPanels  
+ Passt das Layout aller Steuerelemente auf der Multifunktionsleiste, die in der Menübandkategorie enthalten sind.  
   
 ```  
 virtual void ReposPanels(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `pDC`  
- Pointer to a device context for the ribbon panels that are contained in the ribbon category.  
+ Ein Zeiger auf einen Gerätekontext für die menübandbereiche, die in der Menübandkategorie enthalten sind.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
   
-##  <a name="setcollapseorder"></a>  CMFCRibbonCategory::SetCollapseOrder  
- Defines the order in which the ribbon panels of the ribbon category collapse.  
+##  <a name="setcollapseorder"></a>CMFCRibbonCategory::SetCollapseOrder  
+ Definiert die Reihenfolge, in der die Multifunktionsleiste Bereiche der Menübandkategorie reduzieren.  
   
 ```  
 void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `arCollapseOrder`  
- Specifies the collapse order. The array contains zero-based indexes of ribbon panels.  
+ Gibt die Reihenfolge reduzieren. Das Array enthält nullbasierten Indizes ein Menübandbereich enthalten.  
   
-### <a name="remarks"></a>Remarks  
- The library defines the collapse order. However, you can customize this behavior by providing the category with the list of indexes that specifies the collapse order.  
+### <a name="remarks"></a>Hinweise  
+ Die Bibliothek definiert die Reihenfolge, reduzieren. Allerdings können Sie dieses Verhalten anpassen, durch die Bereitstellung der Kategorie mit der Liste der Indizes, die die Reihenfolge reduzieren angibt.  
   
- When the category detects that it has to collapse a ribbon panel, it looks for the next element in the specified list. If the list is empty, or you have not specified enough elements, then the category uses the internal algorithm.  
+ Wenn die Kategorie erkennt, dass er mit einem Menübandbereich zu reduzieren muss, sucht er das nächste Element in der angegebenen Liste. Wenn die Liste leer ist oder nicht genügend Elemente angegeben haben, wird die Kategorie der internen Algorithmus verwendet.  
   
- For example, the category has three ribbon panels and can be collapsed several times until all panels are in the fully collapsed state. You can set the following collapse order: 0, 0, 2, 2. In this case, the category will collapse the panel 0 two times, the panel 2 two times. The panel that has the index of 1 remains uncollapsed.  
+ Z. B. die Kategorie verfügt über drei menübandbereiche und kann reduziert werden mehrere Male, bis alle Bereiche in vollständig reduzierten Zustand befinden. Sie können die folgenden reduzieren Reihenfolge festlegen: 0, 0, 2, 2. In diesem Fall die Kategorie wird im Bereich 0 zweimal reduzieren, Bereich 2 zwei Mal. Der Bereich mit dem Index 1 bleibt angezeigt.  
   
-### <a name="example"></a>Example  
- The following example demonstrates how to use the `SetCollapseOrder` method in the `CMFCRibbonCategory` class. The example shows how to construct an array for the collapse order, and how to set the collapse order to the ribbon category.  
+### <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird veranschaulicht, wie die `SetCollapseOrder` -Methode in der `CMFCRibbonCategory` Klasse. Das Beispiel zeigt, wie ein Array für die Bestellung reduzieren und wie die reduzieren Reihenfolge auf die Menübandkategorie festgelegt.  
   
- [!code-cpp[NVC_MFC_RibbonApp#13](../../mfc/reference/codesnippet/cpp/cmfcribboncategory-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp&#13;](../../mfc/reference/codesnippet/cpp/cmfcribboncategory-class_2.cpp)]  
   
-##  <a name="setdata"></a>  CMFCRibbonCategory::SetData  
- Sets the user-defined data to be associated with the ribbon category.  
+##  <a name="setdata"></a>CMFCRibbonCategory::SetData  
+ Legt die benutzerdefinierten Daten die Menübandkategorie zugeordnet werden soll.  
   
 ```  
 void SetData(DWORD_PTR dwData);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `dwData`  
- The user-defined data.  
+ Die benutzerdefinierten Daten.  
   
-##  <a name="setkeys"></a>  CMFCRibbonCategory::SetKeys  
- Assigns a keytip to the ribbon category.  
+##  <a name="setkeys"></a>CMFCRibbonCategory::SetKeys  
+ Die Menübandkategorie eine Zugriffstasteninfo zugewiesen.  
   
 ```  
 void SetKeys(LPCTSTR lpszKeys);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `lpszKeys`  
- The keytip text.  
+ Der Text Zugriffstasteninfo.  
   
-### <a name="remarks"></a>Remarks  
- Keytips are displayed when the user presses the Alt key or the F10 key.  
+### <a name="remarks"></a>Hinweise  
+ KeyTips werden angezeigt, wenn der Benutzer die Alt-Taste oder die F10-TASTE drückt.  
   
-##  <a name="setname"></a>  CMFCRibbonCategory::SetName  
- Assigns a name and keytip to the ribbon category.  
+##  <a name="setname"></a>CMFCRibbonCategory::SetName  
+ Weist einen Namen und eine Zugriffstasteninfo der Menüband-Kategorie.  
   
 ```  
 void SetName(LPCTSTR lpszName);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `lpszName`  
- The name and keytip of the ribbon category.  
+ Der Name und der Menübandkategorie Zugriffstasteninfo.  
   
-### <a name="remarks"></a>Remarks  
- To set the keytip for the ribbon category, append a newline escape sequence followed by the keytip characters to `lpszName`.  
+### <a name="remarks"></a>Hinweise  
+ Fügen Sie zum Festlegen der ZugriffstastenInfo für die Menübandkategorie eine neue-Zeile-Escape-Sequenz gefolgt von den Zeichen Zugriffstasteninfo zu `lpszName`.  
   
-##  <a name="settabcolor"></a>  CMFCRibbonCategory::SetTabColor  
- Sets the color of the ribbon category.  
+##  <a name="settabcolor"></a>CMFCRibbonCategory::SetTabColor  
+ Legt die Farbe der Menübandkategorie fest.  
   
 ```  
 void SetTabColor(AFX_RibbonCategoryColor color);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parameter  
  [in] `color`  
- Specifies the new color of the ribbon category.  
+ Gibt die neue Farbe der Menübandkategorie.  
   
-### <a name="remarks"></a>Remarks  
- Color can be one of the following values:  
+### <a name="remarks"></a>Hinweise  
+ Farbe kann einen der folgenden Werte sein:  
   
 -   AFX_CategoryColor_None  
   
@@ -1300,8 +1239,8 @@ void SetTabColor(AFX_RibbonCategoryColor color);
   
 -   AFX_CategoryColor_Violet  
   
-## <a name="see-also"></a>See Also  
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [Classes](../../mfc/reference/mfc-classes.md)   
- [CObject Class](../../mfc/reference/cobject-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
+ [Klassen](../../mfc/reference/mfc-classes.md)   
+ [CObject-Klasse](../../mfc/reference/cobject-class.md)
 

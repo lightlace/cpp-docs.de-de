@@ -1,5 +1,5 @@
 ---
-title: rank Class | Microsoft Docs
+title: rank-Klasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- rank
 - type_traits/std::rank
 dev_langs:
 - C++
@@ -34,15 +35,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 2ba5a7f98699d5cfd6b8221926704d705fce15cb
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f0e7b22e4fbd6f54d390adfe70f7bfb99e4bc5df
+ms.openlocfilehash: d5b88cb6002d0a96ea84c92877df1083d7e2c4f5
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="rank-class"></a>rank Class
-Gets number of array dimensions.  
+# <a name="rank-class"></a>rank-Klasse
+Ruft die Anzahl der Arraydimensionen ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,14 +52,14 @@ template <class Ty>
 struct rank;  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parameter  
  `Ty`  
- The type to query.  
+ Der abzufragende Typ.  
   
-## <a name="remarks"></a>Remarks  
- The type query holds the value of the number of dimensions of the array type `Ty`, or 0 if `Ty` is not an array type.  
+## <a name="remarks"></a>Hinweise  
+ Die Typabfrage enthält den Wert der Anzahl der Dimensionen des Arraytyps `Ty` oder 0, wenn `Ty` kein Arraytyp ist.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Beispiel  
   
 ```cpp  
 // std__type_traits__rank.cpp   
@@ -86,12 +87,12 @@ rank<int[5]> == 1
 rank<int[5][10]> == 2  
 ```  
   
-## <a name="requirements"></a>Requirements  
+## <a name="requirements"></a>Anforderungen  
  **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Siehe auch  
  [<type_traits>](../standard-library/type-traits.md)   
- [extent Class](../standard-library/extent-class.md)
+ [extent-Klasse](../standard-library/extent-class.md)
 
