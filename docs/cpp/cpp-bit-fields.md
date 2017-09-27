@@ -1,43 +1,60 @@
 ---
-title: "C++-Bitfelder"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Bitfelder"
-  - "Bitfelder"
-  - "Felder [C++], Bit"
+title: C++-Bitfelder | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- bitfields
+- fields [C++], bit
+- bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
 caps.latest.revision: 8
-caps.handback.revision: "8"
-ms.author: "mblome"
-manager: "ghogen"
----
-# C++-Bitfelder
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 71f70995cf1a59153a380f0e22f0321fd59abee0
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Klassen und Strukturen können Member enthalten, die weniger Speicher als ein ganzzahliger Typ belegen.  Diese Member werden als Bitfelder angegeben.  Im Folgenden finden Sie die Syntax für die *member\-declarator*\-Bitfeldangabe:  
+---
+# <a name="c-bit-fields"></a>C++-Bitfelder
+Klassen und Strukturen können Member enthalten, die weniger Speicher als ein ganzzahliger Typ belegen. Diese Member werden als Bitfelder angegeben. Die Syntax für das Bitfeld *Member-Declarator* Spezifikation folgt:  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
 declarator  : constant-expression  
 ```  
   
-## Hinweise  
- Der \(optionale\) `declarator` ist der Name, über den der Zugriff auf den Member im Programm erfolgt.  Es muss ein ganzzahliger Typ sein \(einschließlich Enumerationstypen\).  *constant\-expression* gibt die Anzahl von Bits an, die der Member in der Struktur einnimmt.  Anonyme Bitfelder, also Bitfeldmember ohne Bezeichner, können zur Auffüllung verwendet werden.  
+## <a name="remarks"></a>Hinweise  
+ Der (optionale) `declarator` ist der Name, über den der Zugriff auf den Member im Programm erfolgt. Es muss ein ganzzahliger Typ sein (einschließlich Enumerationstypen). Die *Konstantenausdruck* gibt die Anzahl der Bits, die das Element befindet sich in der Struktur an. Anonyme Bitfelder, also Bitfeldmember ohne Bezeichner, können zur Auffüllung verwendet werden.  
   
 > [!NOTE]
->  Ein unbenanntes Bitfeld der Breite 0 \(null\) erzwingt die Ausrichtung des nächsten Bitfelds an der nächsten `type`\-Grenze, wobei `type` den Typ des Members angibt.  
+>  Ein unbenanntes Bitfeld der Breite 0 (null) erzwingt die Ausrichtung des nächsten Bitfelds an der nächsten `type`-Grenze, wobei `type` den Typ des Members angibt.  
   
  Das folgende Beispiel deklariert eine Struktur, die zwei Bitfelder enthält:  
   
@@ -57,15 +74,15 @@ struct Date {
  ![Speicherlayout eines Datumsobjekts](../cpp/media/vc38uq1.png "vc38UQ1")  
 Speicherlayout von Datumsobjekten  
   
- Beachten Sie, dass `nYear` 8 Bit lang ist und einen Überlauf der Wortgrenze des deklarierten Typs, **kurz ohne Vorzeichen**, verursachen würde.  Daher wird am Anfang eines neuen Typs **kurz ohne Vorzeichen** begonnen.  Es ist nicht notwendig, dass alle Bitfelder in ein Objekt des zugrunde liegenden Typs passen. Neue Speichereinheiten werden entsprechend der Anzahl von Bits, die in der Deklaration angefordert werden, zugeordnet.  
+ Beachten Sie, dass `nYear` 8 Bit lang und würde einen Überlauf der Wortgrenze des deklarierten Typs **kurz ohne Vorzeichen**. Aus diesem Grund ist es am Anfang einer neuen begonnen **kurz ohne Vorzeichen**. Es ist nicht notwendig, dass alle Bitfelder in ein Objekt des zugrunde liegenden Typs passen. Neue Speichereinheiten werden entsprechend der Anzahl von Bits, die in der Deklaration angefordert werden, zugeordnet.  
   
- **Microsoft\-spezifisch**  
+ **Microsoft-spezifisch**  
   
  Die Daten, die als Bitfelder deklariert werden, werden beginnend mit dem niedrigsten Bitwert bis hin zum höchsten Bitwert aufgeführt, wie in der Abbildung oben dargestellt.  
   
- **Ende Microsoft\-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
- Wenn die Deklaration einer Struktur ein unbenanntes Feld mit der Länge 0 \(null\) enthält, wie im folgenden Beispiel gezeigt,  
+ Wenn die Deklaration einer Struktur ein unbenanntes Feld mit der Länge 0 (null) enthält, wie im folgenden Beispiel gezeigt,  
   
 ```  
 // bit_fields2.cpp  
@@ -81,17 +98,17 @@ struct Date {
   
  folgt das Speicherlayout der in der folgenden Abbildung dargestellten Struktur.  
   
- ![Layout des Datumsobjekts mit Bitfeld der Länge 0 &#40;null&#41;](../cpp/media/vc38uq2.png "vc38UQ2")  
-Layout des Datumsobjekts mit Bitfeld der Länge 0 \(null\)  
+ ![Layout des Datumsobjekts mit 0 (null) &#45; Bitfeld der Länge](../cpp/media/vc38uq2.png "vc38UQ2")  
+Layout des Datumsobjekts mit Bitfeld der Länge 0 (null)  
   
- Der zugrunde liegende Typ eines Bitfelds muss ein ganzzahliger Typ sein, wie unter [Grundlegende Typen](../cpp/fundamental-types-cpp.md) beschrieben.  
+ Der zugrunde liegende Typ eines Bitfelds muss ein ganzzahliger Typ sein, wie in beschrieben [grundlegende Typen](../cpp/fundamental-types-cpp.md).  
   
-## Einschränkungen bei Bitfeldern  
+## <a name="restrictions-on-bit-fields"></a>Einschränkungen bei Bitfeldern  
  Die folgende Liste zeigt Einzelheiten zu fehlerhaften Operationen in Bitfeldern:  
   
 1.  Verwenden der Adresse eines Bitfelds.  
   
 2.  Initialisieren eines Verweises mit einem Bitfeld.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Klassen und Strukturen](../cpp/classes-and-structs-cpp.md)

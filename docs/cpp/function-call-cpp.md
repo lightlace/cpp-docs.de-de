@@ -1,54 +1,71 @@
 ---
-title: "Funktionsaufruf (C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Funktionsaufrufoperator ( )"
-  - "Funktionsaufrufe, C++-Funktionen"
-  - "Funktionsaufrufe, Operator"
-  - "Funktionsüberladung, function-call-Operator"
-  - "Funktionen [C++], Aufrufen"
-  - "Operatoren überladen, Beispiele"
-  - "Operatoren überladen, Funktionsaufrufe"
-  - "Operatoren [C++], Überladen"
+title: Funktionsaufruf (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- function calls, C++ functions
+- functions [C++], calling
+- operator overloading, function calls
+- function overloading, function-call operator
+- function calls, operator
+- operators [C++], overloading
+- operator overloading, examples
+- function call operator ( )
 ms.assetid: 5094254a-045b-46f7-8653-69bc91e80dce
 caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Funktionsaufruf (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: e066ab4c154c04c0c1a39b7f8d0164881a0a96cc
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="function-call-c"></a>Funktionsaufruf (C++)
 Der Funktionsaufrufoperator, aufgerufen unter Verwendung von Klammern, ist ein binärer Operator.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
 primary-expression ( expression-list )  
 ```  
   
-## Hinweise  
- In diesem Kontext ist `primary-expression` der erste Operand, und `expression-list`, eine möglicherweise leere Liste von Argumenten, ist der zweite Operand.  Der Funktionsaufrufoperator wird für Vorgänge verwendet, die eine Anzahl von Parametern benötigen.  Dies funktioniert, da eine `expression-list` eine Liste und kein einzelner Operand ist.  Der Funktionsaufrufoperator muss eine nicht statische Memberfunktion sein.  
+## <a name="remarks"></a>Hinweise  
+ In diesem Kontext ist `primary-expression` der erste Operand, und `expression-list`, eine möglicherweise leere Liste von Argumenten, ist der zweite Operand. Der Funktionsaufrufoperator wird für Vorgänge verwendet, die eine Anzahl von Parametern benötigen. Dies funktioniert, da eine `expression-list` eine Liste und kein einzelner Operand ist. Der Funktionsaufrufoperator muss eine nicht statische Memberfunktion sein.  
   
- Wenn der Funktionsaufrufoperator überladen ist, ändert er nicht die Art und Weise, wie Funktionen aufgerufen werden. Er ändert vielmehr die Art und Weise, wie der Operator interpretiert werden muss, wenn er auf Objekte eines angegebenen Klassentyps angewendet wird.  Der folgende Code etwa wäre normalerweise ohne Bedeutung:  
+ Wenn der Funktionsaufrufoperator überladen ist, ändert er nicht die Art und Weise, wie Funktionen aufgerufen werden. Er ändert vielmehr die Art und Weise, wie der Operator interpretiert werden muss, wenn er auf Objekte eines angegebenen Klassentyps angewendet wird. Der folgende Code etwa wäre normalerweise ohne Bedeutung:  
   
 ```  
 Point pt;  
 pt( 3, 2 );  
 ```  
   
- Bei einem entsprechenden überladenen Funktionsaufrufoperator kann jedoch diese Syntax verwendet werden, um die `x`\-Koordinate um 3 Einheiten und die `y`\-Koordinate um 2 Einheiten zu versetzen.  Der folgende Code veranschaulicht eine solche Definition:  
+ Bei einem entsprechenden überladenen Funktionsaufrufoperator kann jedoch diese Syntax verwendet werden, um die `x`-Koordinate um 3 Einheiten und die `y`-Koordinate um 2 Einheiten zu versetzen. Der folgende Code veranschaulicht eine solche Definition:  
   
 ```  
 // function_call.cpp  
@@ -71,7 +88,7 @@ int main()
   
  Beachten Sie, dass der Funktionsaufrufoperator auf den Namen eines Objekts, nicht den Namen einer Funktion angewendet wird.  
   
- Sie können außerdem den Funktionsaufruf\-Operator überladen und einen Zeiger auf eine Funktion verwenden \(anstelle der eigentlichen Funktion\).  
+ Sie können außerdem den Funktionsaufruf-Operator überladen und einen Zeiger auf eine Funktion verwenden (anstelle der eigentlichen Funktion).  
   
 ```cpp  
 typedef void(*ptf)();  
@@ -91,8 +108,7 @@ int main()
    S s;  
    s();//operates as s.operator ptf()()  
 }  
-  
 ```  
   
-## Siehe auch  
- [Überladen von Operatoren](../cpp/operator-overloading.md)
+## <a name="see-also"></a>Siehe auch  
+ [Operatorüberladung](../cpp/operator-overloading.md)

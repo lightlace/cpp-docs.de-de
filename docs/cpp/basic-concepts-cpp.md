@@ -1,46 +1,64 @@
 ---
-title: "Grundlegende Konzepte"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "index-page "
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C++, Basic-Sprachkonzepte"
+title: Grundlegende Konzepte (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: 'index-page '
+dev_langs:
+- C++
+helpviewer_keywords:
+- C++, basic language concepts
 ms.assetid: 961801e6-2ffd-4bf1-bb71-7f55e48d9c79
 caps.latest.revision: 8
-caps.handback.revision: "5"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Grundlegende Konzepte
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: de04abfce744cfaf98d70fb75538222b5cfa55f8
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-In diesem Abschnitt werden Konzepte erläutert, die für das Verständnis von C\+\+ unerlässlich sind.  C\-Programmierer sind normalerweise mit vielen dieser Konzepte vertraut, es gibt jedoch einige feine Unterschiede, die zu unerwarteten Programmergebnissen führen können.  Es sind folgende Themen enthalten:  
-  
--   [Begriffe](assetId:///a02e7611-f499-47e5-b32e-f2eef3f4bdda)  
+---
+# <a name="basic-concepts--c"></a>Grundlegende Konzepte (C++)
+In diesem Abschnitt werden Konzepte erläutert, die für das Verständnis von C++ unerlässlich sind. C-Programmierer sind normalerweise mit vielen dieser Konzepte vertraut, es gibt jedoch einige feine Unterschiede, die zu unerwarteten Programmergebnissen führen können. Es sind folgende Themen enthalten:  
   
 -   [Deklarationen und Definitionen](../cpp/declarations-and-definitions-cpp.md)  
   
--   [Gültigkeitsbereich eines C\+\+\-Objekts oder einer C\+\+\-Funktion](../cpp/scope-visual-cpp.md)  
+-   [Gültigkeitsbereich eines C++-Objekt oder einer Funktion](../cpp/scope-visual-cpp.md)  
   
--   [Programmdefinition und Verknüpfungsregeln](../cpp/program-and-linkage-cpp.md)  
+-   [Programmieren Sie und Verknüpfungsregeln](../cpp/program-and-linkage-cpp.md)  
   
--   [Starten und Beenden](../cpp/startup-and-termination-cpp.md)  
+-   [Starten und beenden](../cpp/startup-and-termination-cpp.md)  
   
--   [Speicherklassen](../cpp/storage-classes-cpp.md)  
+-   [Lvalues und Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)  
   
--   [Typen](assetId:///6882ee83-ea32-4373-8d57-c3efbbc15af0)  
+-   [Temporäre Objekte](../cpp/temporary-objects.md)  
   
--   [lvalues und rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)  
+-   [Ausrichtung](../cpp/alignment-cpp-declarations.md)  
   
--   [Numerische Grenzen](../cpp/numerical-limits-cpp.md)  
+-   [Alignof und alignas](../cpp/alignof-and-alignas-cpp.md)  
   
-## Siehe auch  
- [C\+\+\-Sprachreferenz](../cpp/cpp-language-reference.md)
+-   [Trivial, Standardlayout- und POD-Typen](../cpp/trivial-standard-layout-and-pod-types.md)  
+  
+## <a name="see-also"></a>Siehe auch  
+ [C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)

@@ -1,90 +1,107 @@
 ---
-title: "Ausdr&#252;cke mit un&#228;ren Operatoren | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Ausdrücke [C++], Operatoren"
-  - "Ausdrücke [C++], Unäre Operatoren"
-  - "Unäre Operatoren, Ausdrücke mit"
+title: "Ausdrücke mit Unäroperatoren | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- expressions [C++], unary operators
+- unary operators, expressions with
+- expressions [C++], operators
 ms.assetid: 1217685b-b85d-4b48-9ff4-d90f56a26c1b
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Ausdr&#252;cke mit un&#228;ren Operatoren
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: adde5e6fdb20924b633de60eba07390edad57907
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Unäre Operatoren werden nur auf einen Operanden in einem Ausdruck angewendet.  Die unären Operatoren lauten wie folgt:  
+---
+# <a name="expressions-with-unary-operators"></a>Ausdrücke mit unären Operatoren
+Unäre Operatoren werden nur auf einen Operanden in einem Ausdruck angewendet. Die unären Operatoren lauten wie folgt:  
   
--   [Dereferenzierungsoperator \(\*\)](../cpp/indirection-operator-star.md)  
+-   [Der Dereferenzierungsoperator (*)](../cpp/indirection-operator-star.md)  
   
--   [address\-of\-Operator \(&\)](../cpp/address-of-operator-amp.md)  
+-   [Address-of-Operator (&)](../cpp/address-of-operator-amp.md)  
   
--   [Unärer Plus\-Operator \(\+\)](../cpp/unary-plus-and-negation-operators-plus-and.md)  
+-   [Unärer plus -Operator (+)](../cpp/unary-plus-and-negation-operators-plus-and.md)  
   
--   [Unärer Negationsoperator \(–\)](../misc/unary-negation-operator.md)  
+-   [Unärer Negationsoperator (-)](../cpp/unary-plus-and-negation-operators-plus-and.md)  
   
--   [Logischer Negationsoperator \(\!\)](../cpp/logical-negation-operator-exclpt.md)  
+-   [Logischer Negationsoperator (!)](../cpp/logical-negation-operator-exclpt.md)  
   
--   [Einerkomplementierungsoperator \(~\)](../cpp/one-s-complement-operator-tilde.md)  
+-   [Einerkomplementoperator (~)](../cpp/one-s-complement-operator-tilde.md)  
   
--   [Präfixinkrement\-Operator \(\+\+\)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)  
+-   [Präfixinkrement-Operator (++)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)  
   
--   [Präfixdekrement\-Operator \(––\)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)  
+-   [Präfixdekrement-Operator (-)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)  
   
--   [Umwandlungsoperator \(\)](../cpp/cast-operator-parens.md)  
+-   [Umwandlungsoperator)](../cpp/cast-operator-parens.md)  
   
--   [sizeof\-Operator](../cpp/sizeof-operator.md)  
+-   [Sizeof-operator](../cpp/sizeof-operator.md)  
   
--   [\_\_uuidof\-Operator](../cpp/uuidof-operator.md)  
+-   [__uuidof-operator](../cpp/uuidof-operator.md)  
   
--   [\_\_alignof\-Operator](../cpp/alignof-operator.md)  
+-   [__alignof-operator](../cpp/alignof-operator.md)  
   
--   [new\-Operator](../cpp/new-operator-cpp.md)  
+-   [New-operator](../cpp/new-operator-cpp.md)  
   
--   [delete\-Operator](../cpp/delete-operator-cpp.md)  
+-   [Delete-operator](../cpp/delete-operator-cpp.md)  
   
- Diese Operatoren weisen eine Assoziativität von rechts nach links auf.  Unäre Ausdrücke umfassen im Allgemeinen Syntax, die einem Postfix oder primären Ausdruck vorausgeht.  
+ Diese Operatoren weisen eine Assoziativität von rechts nach links auf. Unäre Ausdrücke umfassen im Allgemeinen Syntax, die einem Postfix oder primären Ausdruck vorausgeht.  
   
  Folgende Formen von unären Ausdrücken sind möglich:  
   
--   *postfix\-expression*  
+-   *postfix-expression*  
   
--   `++` *unary\-expression*  
+-   `++`*Unary-Expression*  
   
--   `––` *unary\-expression*  
+-   `--`*Unary-Expression*  
   
--   *unary\-operator* *cast\-expression*  
+-   *unärer Operator* *Umwandlungsausdruck*  
   
--   `sizeof` *unary\-expression*  
+-   `sizeof`*Unary-Expression*  
   
--   `sizeof(` *type\-name* `)`  
+-   `sizeof(`*Typname*`)`  
   
--   `decltype(` *expression* `)`  
+-   `decltype(`*Ausdruck*`)`  
   
--   *allocation\-expression*  
+-   *Zuweisungsausdruck*  
   
--   *deallocation\-expression*  
+-   *Aufhebung der Zuordnung-Ausdruck*  
   
- Jede *postfix\-expression* gilt als *unary\-expression*, und da jeder primäre Ausdruck als *postfix\-expression* gilt, werden alle primären Ausdrücke ebenfalls als *unary\-expression* angesehen.  Weitere Informationen finden Sie unter [Postfixausdrücke](../cpp/postfix-expressions.md) und [Primäre Ausdrücke](../cpp/primary-expressions.md).  
+ Alle *Postfix-Expression* gilt eine *Unary-Expression*, und da jeder primärer Ausdruck ist ein *Postfix-Expression*, ist primäre Ausdrücke berücksichtigt eine *Unary-Expression* auch. Weitere Informationen finden Sie unter [Postfixausdrücke](../cpp/postfix-expressions.md) und [Primärausdrücke](../cpp/primary-expressions.md).  
   
- Ein *unary\-operator* besteht aus mindestens einem der folgenden Symbole: `* &` `+` `–` `!` `~`  
+ Ein *unäroperator* besteht aus mindestens einer der folgenden Symbole:`* & + - ! ~`  
   
- Der *cast\-expression* ist ein unärer Ausdruck mit einer optionalen Umwandlung, um den Typ zu ändern.  Weitere Informationen finden Sie unter [Umwandlungsoperator: \(\)](../cpp/cast-operator-parens.md).  
+ Die *Umwandlungsausdruck* ist ein unärer Ausdruck mit einer optionalen Umwandlung so ändern Sie den Typ. Weitere Informationen finden Sie unter [Umwandlungsoperator: ()](../cpp/cast-operator-parens.md).  
   
- Ein *expression* kann ein beliebiger Ausdruck sein.  Weitere Informationen finden Sie unter [Ausdrücke](../cpp/expressions-cpp.md).  
+ Ein *Ausdruck* kann ein beliebiger Ausdruck sein. Weitere Informationen finden Sie unter [Ausdrücke](../cpp/expressions-cpp.md).  
   
- *allocation\-expression* bezieht sich auf den `new`\-Operator.  *deallocation\-expression* bezieht sich auf den `delete`\-Operator.  Weitere Informationen finden Sie unter den Links weiter oben in diesem Thema.  
+ Die *Zuweisungsausdruck* bezieht sich auf die `new` Operator. Die *Aufhebung Ausdruck* bezieht sich auf die `delete` Operator. Weitere Informationen finden Sie unter den Links weiter oben in diesem Thema.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Ausdruckstypen](../cpp/types-of-expressions.md)

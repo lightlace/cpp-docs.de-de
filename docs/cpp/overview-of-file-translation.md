@@ -1,39 +1,56 @@
 ---
-title: "&#220;bersicht &#252;ber die Datei&#252;bersetzung | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Dateiübersetzung [C++], Informationen über die Dateiübersetzung"
-  - "Dateien [C++], Verschiebung"
-  - "Phase der Vorverarbeitung der Übersetzung"
-  - "Programme [C++], Lexikalische Konventionen von"
-  - "Übersetzung [C++]"
-  - "Übersetzungsphasen"
+title: "Übersicht über die Dateiübersetzung | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- file translation [C++], about file translation
+- translation [C++]
+- translation phases
+- files [C++], translation
+- programs [C++], lexical conventions of
+- preprocessing translation phase
 ms.assetid: 5036c7b7-ccff-4e2c-b052-a9ea6c71af87
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# &#220;bersicht &#252;ber die Datei&#252;bersetzung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 188574c43ca3650599fae58c0da1306ab49b5007
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-C\+\+\-Programme wie C\-Programme bestehen aus mindestens einer Datei.  Jede dieser Dateien wird in der folgenden konzeptionellen Reihenfolge übersetzt \(die tatsächliche Reihenfolge folgt der "als ob"\-Regel: Übersetzung muss so erfolgen, als wären diese Schritte befolgt worden\):  
+---
+# <a name="overview-of-file-translation"></a>Übersicht über die Dateiübersetzung
+C++-Programme wie C-Programme bestehen aus mindestens einer Datei. Jede dieser Dateien wird in der folgenden konzeptionellen Reihenfolge übersetzt (die tatsächliche Reihenfolge folgt der "als ob"-Regel: Übersetzung muss so erfolgen, als wären diese Schritte befolgt worden):  
   
-1.  Lexikalische Tokenisierung.  Zeichenzuordnung und Trigraphverarbeitung, Splicing von Zeilen und Tokenisierung werden in dieser Übersetzungsphase ausgeführt.  
+1.  Lexikalische Tokenisierung. Zeichenzuordnung und Trigraphverarbeitung, Splicing von Zeilen und Tokenisierung werden in dieser Übersetzungsphase ausgeführt.  
   
-2.  Vorverarbeitung.  In dieser Übersetzungsphase werden zusätzliche Quelldateien eingebracht, auf die von `#include`\-Direktiven verwiesen wird, es werden "Zeichenfolgen"\- und "Zeichen"\-Direktiven behandelt, und es werden Token eingefügt und Makros erweitert \(weitere Informationen finden Sie in den [Präprozessordirektiven](../preprocessor/preprocessor-directives.md) unter *Präprozessorreferenz*\).  Das Ergebnis der Vorverarbeitungsphase ist eine Sequenz von Token, die zusammen eine "Übersetzungseinheit" definieren.  
+2.  Vorverarbeitung. Diese übersetzungsphase bringt Hilfsdateien Quelldateien verweist `#include` Direktiven "Zeichenfolgen" und "eingebracht"-Direktiven behandelt und werden token eingefügt und Makros erweitert (finden Sie unter [Präprozessordirektiven](../preprocessor/preprocessor-directives.md) in der *Präprozessorreferenz* für Weitere Informationen). Das Ergebnis der Vorverarbeitungsphase ist eine Sequenz von Token, die zusammen eine "Übersetzungseinheit" definieren.  
   
-     Präprozessordirektiven beginnen immer mit dem Nummernzeichen \(**\#**\) \(also muss das erste Nicht\-Leerzeichen in der Zeile ein Nummernzeichen sein\).  In einer angegebenen Zeile kann nur eine Präprozessordirektive stehen.  Beispiel:  
+     Präprozessordirektiven beginnen immer mit dem Nummernzeichen (**#**) Zeichen (d. h. das erste Zeichen von Leerraum in der Zeile muss ein Nummernzeichen sein). In einer angegebenen Zeile kann nur eine Präprozessoranweisung stehen. Zum Beispiel:  
   
     ```  
     #include <iostream>  // Include text of iostream in   
@@ -42,19 +59,19 @@ C\+\+\-Programme wie C\-Programme bestehen aus mindestens einer Datei.  Jede die
                          //  text string).  
     ```  
   
-3.  Codegenerierung.  Diese Übersetzungsphase verwendet die Token, die in der Vorverarbeitungsphase zum Generieren von Objektcode generiert wurden.  
+3.  Codegenerierung. Diese Übersetzungsphase verwendet die Token, die in der Vorverarbeitungsphase zum Generieren von Objektcode generiert wurden.  
   
      Während dieser Phase wird die syntaktische und semantische Prüfung des Quellcodes ausgeführt.  
   
- Weitere Informationen erhalten Sie unter [Phasen der Übersetzung](../preprocessor/phases-of-translation.md) in der *Präprozessorreferenz*.  
+ Finden Sie unter [Phasen der Übersetzung](../preprocessor/phases-of-translation.md) in der *Präprozessorreferenz* für Weitere Informationen.  
   
- Der C\+\+\-Präprozessor ist eine strikte Obermenge des ANSI C\-Präprozessors, aber der C\+\+\-Präprozessor unterscheidet sich in mehreren Instanzen.  Die folgende Liste beschreibt mehrere Unterschiede zwischen den ANSI C\- und den C\+\+\-Präprozessoren:  
+ Der C++-Präprozessor ist eine strikte Obermenge des ANSI C-Präprozessors, aber der C++-Präprozessor unterscheidet sich in mehreren Instanzen. Die folgende Liste beschreibt mehrere Unterschiede zwischen den ANSI C- und den C++-Präprozessoren:  
   
--   Einzeilige Kommentare werden unterstützt.  Weitere Informationen finden Sie unter [Kommentare](../cpp/comments-cpp.md).  
+-   Einzeilige Kommentare werden unterstützt. Finden Sie unter [Kommentare](../cpp/comments-cpp.md) für Weitere Informationen.  
   
--   Ein vordefiniertes Makro, **\_\_cplusplus**, wird nur für C\+\+ definiert.  Weitere Informationen finden Sie unter [Vordefinierte Makros](../preprocessor/predefined-macros.md) in der *Präprozessorreferenz*.  
+-   Ein vordefiniertes Makro **__cplusplus**, nur für C++ definiert ist. Finden Sie unter [vordefinierte Makros](../preprocessor/predefined-macros.md) in der *Präprozessorreferenz* für Weitere Informationen.  
   
--   Der C\-Präprozessor erkennt die C\+\+\-Operatoren **.\***, **–\>\*** und `::` nicht.  Weitere Informationen zu Operatoren finden Sie unter [Operatoren](../cpp/cpp-built-in-operators-precedence-and-associativity.md) und [Ausdrücke](../cpp/expressions-cpp.md).  
+-   Der C-Präprozessor erkennt die C++-Operatoren nicht: **.\* **, ** -> \* **, und `::`. Finden Sie unter [Operatoren](../cpp/cpp-built-in-operators-precedence-and-associativity.md) und [Ausdrücke](../cpp/expressions-cpp.md), Weitere Informationen zu Operatoren.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Lexikalische Konventionen](../cpp/lexical-conventions.md)

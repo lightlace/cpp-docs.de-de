@@ -1,65 +1,82 @@
 ---
-title: "__if_exists-Anweisung | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__if_exists_cpp"
-  - "__if_exists"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__if_exists-Schlüsselwort [C++]"
-  - "Bezeichner, Testen auf Vorhandensein"
-  - "Symbole, Testen auf Vorhandensein"
+title: __if_exists-Anweisung | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __if_exists_cpp
+- __if_exists
+dev_langs:
+- C++
+helpviewer_keywords:
+- identifiers, testing for existence
+- symbols, testing for existence
+- __if_exists keyword [C++]
 ms.assetid: d3eb34b6-f3a9-4063-a286-b62a28c0c7fa
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# __if_exists-Anweisung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 3d0eaa00abb1f833ef491fc27bfee01790776edb
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Die `__if_exists`\-Anweisung testet, ob der angegebene Bezeichner vorhanden ist.  Wenn der Bezeichner vorhanden ist, wird der angegebene Anweisungsblock ausgeführt.  
+---
+# <a name="ifexists-statement"></a>__if_exists-Anweisung
+Die `__if_exists`-Anweisung testet, ob der angegebene Bezeichner vorhanden ist. Wenn der Bezeichner vorhanden ist, wird der angegebene Anweisungsblock ausgeführt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-__if_exists ( identifier ) {   
+__if_exists ( identifier ) {   
 statements  
 };  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
   
 |Parameter|Beschreibung|  
-|---------------|------------------|  
+|---------------|-----------------|  
 |`identifier`|Der Bezeichner, dessen Vorhandensein Sie überprüfen möchten.|  
-|`statements`|Eine oder mehrere Anweisungen, die auszuführen sind, wenn `identifier` vorhanden ist.|  
+|`statements`|Eine oder mehrere Anweisungen zum Ausführen von Wenn `identifier` vorhanden ist.|  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
   
 > [!CAUTION]
->  Um die zuverlässigsten Ergebnisse zu erzielen, verwenden Sie die `__if_exists`\-Anweisung mit den folgenden Einschränkungen.  
+>  Um die zuverlässigsten Ergebnisse zu erzielen, verwenden Sie die `__if_exists`-Anweisung mit den folgenden Einschränkungen.  
   
--   Wenden Sie die `__if_exists`\-Anweisung nur auf einfache Typen, nicht auf Vorlagen an.  
+-   Wenden Sie die `__if_exists`-Anweisung nur auf einfache Typen, nicht auf Vorlagen an.  
   
--   Wenden Sie die `__if_exists`\-Anweisung auf Bezeichner innerhalb oder außerhalb einer Klasse an.  Übernehmen Sie die `__if_exists`\-Anweisung nicht für lokale Variablen.  
+-   Wenden Sie die `__if_exists`-Anweisung auf Bezeichner innerhalb oder außerhalb einer Klasse an. Übernehmen Sie die `__if_exists`-Anweisung nicht für lokale Variablen.  
   
--   Verwenden Sie die `__if_exists`\-Anweisung nur im Text einer Funktion.  Außerhalb des Texts einer Funktion kann die `__if_exists`\-Anweisung nur vollständig definierte Typen testen.  
+-   Verwenden Sie die `__if_exists`-Anweisung nur im Text einer Funktion. Außerhalb des Texts einer Funktion kann die `__if_exists`-Anweisung nur vollständig definierte Typen testen.  
   
 -   Wenn Sie auf überladene Funktionen testen, können Sie nicht auf eine bestimmte Form der Überladung testen.  
   
- Die Ergänzung zur `__if_exists`\-Anweisung ist die Anweisung [\_\_if\_not\_exists](../cpp/if-not-exists-statement.md).  
+ Die Ergänzung zu den `__if_exists` -Anweisung ist die [__if_not_exists](../cpp/if-not-exists-statement.md) Anweisung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Beachten Sie, dass in diesem Beispiel Vorlagen verwendet werden, was nicht empfohlen wird.  
   
 ```  
@@ -119,7 +136,7 @@ int main() {
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Ausgabe  
   
 ```  
 In X<T>::Dump()  
@@ -130,7 +147,7 @@ g_bFlag = 1
 C::f exists  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Auswahlanweisungen](../cpp/selection-statements-cpp.md)   
- [C\+\+\-Schlüsselwörter](../cpp/keywords-cpp.md)   
- [\_\_if\_not\_exists\-Anweisung](../cpp/if-not-exists-statement.md)
+ [Stichwörter](../cpp/keywords-cpp.md)   
+ [__if_not_exists-Anweisung](../cpp/if-not-exists-statement.md)

@@ -1,31 +1,48 @@
 ---
-title: "Mehrere Basisklassen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Basisklassen, Mehrere"
-  - "Abgeleitete Klassen, Mehrere Basen"
-  - "Mehrere Basisklassen"
-  - "Mehrfachvererbung, Klassendeklaration"
+title: Mehrere Basisklassen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- base classes, multiple
+- derived classes, multiple bases
+- multiple inheritance, class declaration
+- multiple base classes
 ms.assetid: a30c69fe-401c-4a87-96a0-e0da70c7c740
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Mehrere Basisklassen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 947084ca5bf59494a3574950f5148f5b4d3f0770
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Wie in [Mehrfachvererbung](assetId:///3b74185e-2beb-4e29-8684-441e51d2a2ca) beschrieben, können Klassen aus mehr als einer Basisklasse abgeleitet werden.  In einem Mehrfachvererbungsmodell \(in dem Klassen aus mehr als einer Basisklasse abgeleitet werden\) werden die Basisklassen mithilfe des *base\-list*\-Grammatikelements angegeben \(siehe Grammatikabschnitt unter [Übersicht](../misc/overview-of-derived-classes.md)\).  Beispielsweise kann die Klassendeklaration für `CollectionOfBook`, abgeleitet von `Collection` und `Book`, angegeben werden:  
+---
+# <a name="multiple-base-classes"></a>Mehrere Basisklassen
+Wie in beschrieben [Mehrfachvererbung](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca), eine Klasse kann von mehr als einer Basisklasse abgeleitet werden. In einem mehrfachvererbungsmodell (Klassen sind, in denen von mehr als einer Basisklasse abgeleitet), mit der Basisklassen angegeben die *Base-List* Grammatik-Element. Beispielsweise kann die Klassendeklaration für `CollectionOfBook`, abgeleitet von `Collection` und `Book`, angegeben werden:  
   
 ```  
 // deriv_MultipleBaseClasses.cpp  
@@ -38,37 +55,37 @@ class CollectionOfBook : public Book, public Collection {
 };  
 ```  
   
- Die Reihenfolge, in der Basisklassen angegeben werden, ist nicht signifikant, außer in Fällen, in denen die Konstruktoren und Destruktoren aufgerufen werden.  In diesen Fällen wirkt sich die Reihenfolge, in der Basisklassen angegeben werden, auf Folgendes aus:  
+ Die Reihenfolge, in der Basisklassen angegeben werden, ist nicht signifikant, außer in Fällen, in denen die Konstruktoren und Destruktoren aufgerufen werden. In diesen Fällen wirkt sich die Reihenfolge, in der Basisklassen angegeben werden, auf Folgendes aus:  
   
--   Die Reihenfolge, in der die Initialisierung durch Konstruktoren stattfindet.  Wenn Ihr Code darauf basiert, dass der `Book`\-Teil von `CollectionOfBook` vor dem `Collection`\-Teil initialisiert wird, ist die Reihenfolge der Spezifikation signifikant.  Die Initialisierung erfolgt in der Reihenfolge, in der die Klassen in der *base\-list* angegeben sind.  
+-   Die Reihenfolge, in der die Initialisierung durch Konstruktoren stattfindet. Wenn Ihr Code darauf basiert, dass der `Book`-Teil von `CollectionOfBook` vor dem `Collection`-Teil initialisiert wird, ist die Reihenfolge der Spezifikation signifikant. Initialisierung findet in der die Klassen werden im angegebenen Reihenfolge der *Base-List*.  
   
--   Die Reihenfolge, in der Destruktoren zur Bereinigung aufgerufen werden.  Auch wenn ein bestimmter "Teil" der Klasse vorhanden sein muss, wenn der andere Teil beschädigt wird, ist die Reihenfolge relevant.  Destruktoren werden in umgekehrter Reihenfolge der Klassen aufgerufen, die in der *base\-list* angegeben sind.  
+-   Die Reihenfolge, in der Destruktoren zur Bereinigung aufgerufen werden. Auch wenn ein bestimmter „Teil“ der Klasse vorhanden sein muss, wenn der andere Teil zerstört wird, ist die Reihenfolge relevant. Destruktoren werden aufgerufen, in der umgekehrten Reihenfolge der Klassen angegeben, der *Base-List*.  
   
     > [!NOTE]
-    >  Die Reihenfolge der Spezifikation der Basisklassen kann das Speicherlayout der Klasse beeinflussen.  Treffen Sie keine Programmierentscheidungen, die auf der Reihenfolge der Basismember im Arbeitsspeicher basieren.  
+    >  Die Reihenfolge der Spezifikation der Basisklassen kann das Speicherlayout der Klasse beeinflussen. Treffen Sie keine Programmierentscheidungen, die auf der Reihenfolge der Basismember im Arbeitsspeicher basieren.  
   
- Wenn Sie die *base\-list* angeben, können Sie denselben Klassennamen nur einmal angeben.  Allerdings kann eine Klasse mehrmals eine indirekte Basis für eine abgeleitete Klasse sein .  
+ Beim Angeben der *Base-List*, Sie können denselben Klassennamen mehr als einmal angeben. Allerdings kann eine Klasse mehrmals eine indirekte Basis für eine abgeleitete Klasse sein .  
   
-## Virtuelle Basisklassen  
- Da eine Klasse mehrfach als indirekte Basisklasse für eine abgeleiteten Klasse auftreten kann, stellt C\+\+ eine Methode bereit, um die Arbeitsweise solcher Basisklassen zu optimieren.  Virtuelle Basisklassen bieten eine Möglichkeit, Speicherplatz zu sparen und Mehrdeutigkeiten in Klassenhierarchien zu vermeiden, die Mehrfachvererbung verwenden.  
+## <a name="virtual-base-classes"></a>Virtuelle Basisklassen  
+ Da eine Klasse mehrfach als indirekte Basisklasse für eine abgeleiteten Klasse auftreten kann, stellt C++ eine Methode bereit, um die Arbeitsweise solcher Basisklassen zu optimieren. Virtuelle Basisklassen bieten eine Möglichkeit, Speicherplatz zu sparen und Mehrdeutigkeiten in Klassenhierarchien zu vermeiden, die Mehrfachvererbung verwenden.  
   
- Jedes nicht virtuelle Objekt enthält eine Kopie der Datenmember, die in der Basisklasse definiert sind.  Durch diese Duplizierung wird Speicherplatz verschwendet, und Sie müssen bei jedem Zugriff angeben, welche Kopie der Basisklassenmember Sie wünschen.  
+ Jedes nicht virtuelle Objekt enthält eine Kopie der Datenmember, die in der Basisklasse definiert sind. Durch diese Duplizierung wird Speicherplatz verschwendet, und Sie müssen bei jedem Zugriff angeben, welche Kopie der Basisklassenmember Sie wünschen.  
   
- Wenn eine Basisklasse als virtuelle Basisklasse angegeben ist, kann sie, ohne Verdoppelung der Datenmember, mehrmals als indirekte Basisklasse fungieren.  Eine einzelne Kopie der Datenmember wird von allen Basisklassen, die diese als virtuelle Basis verwenden, gemeinsam genutzt.  
+ Wenn eine Basisklasse als virtuelle Basisklasse angegeben ist, kann sie, ohne Verdoppelung der Datenmember, mehrmals als indirekte Basisklasse fungieren. Eine einzelne Kopie der Datenmember wird von allen Basisklassen, die diese als virtuelle Basis verwenden, gemeinsam genutzt.  
   
- Wenn eine virtuelle Basisklasse deklariert wird, wird in den Basislisten der abgeleiteten Klassen das **virtual**\-Schlüsselwort angezeigt.  
+ Wenn Sie eine virtuelle Basisklasse deklarieren die **virtuellen** -Schlüsselworts in den Basislisten der abgeleiteten Klassen.  
   
  Betrachten Sie die Klassenhierarchie in der folgenden Abbildung, die eine simulierte Warteschlange veranschaulicht.  
   
- ![Diagramm der Warteschlangensimulation](../cpp/media/vc38xp1.png "vc38XP1")  
+ ![Diagramm der warteschlangensimulation](../cpp/media/vc38xp1.gif "vc38XP1")  
 Diagramm mit Warteschlangensimulation  
   
- In der Abbildung ist `Queue` die Basisklasse für `CashierQueue` und `LunchQueue`.  Wenn jedoch beide Klassen kombiniert werden, um `LunchCashierQueue` zu bilden, tritt folgendes Problem auf: Die neue Klasse enthält zwei Unterobjekte des Typs `Queue`, eines von `CashierQueue` und das andere von `LunchQueue`.  Die folgende Abbildung zeigt das konzeptuelle Speicherlayout \(das tatsächliche Speicherlayout kann unter Umständen optimiert werden\).  
+ In der Abbildung ist `Queue` die Basisklasse für `CashierQueue` und `LunchQueue`. Wenn jedoch beide Klassen kombiniert werden, um `LunchCashierQueue` zu bilden, tritt folgendes Problem auf: Die neue Klasse enthält zwei Unterobjekte des Typs `Queue`, eines von `CashierQueue` und das andere von `LunchQueue`. Die folgende Abbildung zeigt das konzeptuelle Speicherlayout (das tatsächliche Speicherlayout kann unter Umständen optimiert werden).  
   
- ![Simuliertes Warteschlangenobjekt](../cpp/media/vc38xp2.png "vc38XP2")  
+ ![Simulierte Warteschlange &#45; Line-Objekt](../cpp/media/vc38xp2.gif "vc38XP2")  
 Simuliertes Warteschlangenobjekt  
   
- Beachten Sie, dass es zwei `Queue`\-Unterobjekte im `LunchCashierQueue`\-Objekt gibt.  Der folgende Code deklariert `Queue` als virtuelle Basisklasse:  
+ Beachten Sie, dass es zwei `Queue`-Unterobjekte im `LunchCashierQueue`-Objekt gibt. Der folgende Code deklariert `Queue` als virtuelle Basisklasse:  
   
 ```  
 // deriv_VirtualBaseClasses.cpp  
@@ -79,27 +96,27 @@ class LunchQueue : virtual public Queue {};
 class LunchCashierQueue : public LunchQueue, public CashierQueue {};  
 ```  
   
- Das `virtual`\-Schlüsselwort stellt sicher, dass nur eine Kopie des Unterobjekts `Queue` enthalten ist \(siehe folgende Abbildung\).  
+ Das `virtual`-Schlüsselwort stellt sicher, dass nur eine Kopie des Unterobjekts `Queue` enthalten ist (siehe folgende Abbildung).  
   
- ![Simuliertes Warteschlangenobjekt, virtuelle Basisklassen](../cpp/media/vc38xp3.png "vc38XP3")  
+ ![Simulierte Warteschlange &#45; Line-Objekt, virtuelle Basisklassen](../cpp/media/vc38xp3.gif "vc38XP3")  
 Simuliertes Warteschlangenobjekt mit virtuellen Basisklassen  
   
- Eine Klasse kann eine virtuelle Komponente und eine nicht virtuelle Komponente eines bestimmten Typs haben.  Dies geschieht unter den Bedingungen, die in der folgenden Abbildung veranschaulicht werden.  
+ Eine Klasse kann eine virtuelle Komponente und eine nicht virtuelle Komponente eines bestimmten Typs haben. Dies geschieht unter den Bedingungen, die in der folgenden Abbildung veranschaulicht werden.  
   
- ![Virtuelle und nicht virtuelle Komponenten einer Klasse](../cpp/media/vc38xp4.png "vc38XP4")  
+ ![Virtuelle und nicht virtuelle Komponenten einer Klasse](../cpp/media/vc38xp4.gif "vc38XP4")  
 Virtuelle und nicht virtuelle Komponenten der gleichen Klasse  
   
- In der Abbildung verwenden `CashierQueue` und `LunchQueue` `Queue` als virtuelle Basisklasse.  Allerdings spezifiziert `TakeoutQueue` `Queue` als Basisklasse und nicht als virtuelle Basisklasse.  Daher verfügt `LunchTakeoutCashierQueue` über zwei Unterobjekte des Typs `Queue`: eines aus dem Vererbungspfad, der `LunchCashierQueue` einschließt, und eines aus dem Pfad, der `TakeoutQueue` einschließt.  Dies wird in der folgenden Abbildung verdeutlicht.  
+ In der Abbildung verwenden `CashierQueue` und `LunchQueue` `Queue` als virtuelle Basisklasse. Allerdings spezifiziert `TakeoutQueue` `Queue` als Basisklasse und nicht als virtuelle Basisklasse. Daher verfügt `LunchTakeoutCashierQueue` über zwei Unterobjekte des Typs `Queue`: eines aus dem Vererbungspfad, der `LunchCashierQueue` einschließt, und eines aus dem Pfad, der `TakeoutQueue` einschließt. Dies wird in der folgenden Abbildung verdeutlicht.  
   
- ![Virtuelle und nicht virtuelle Vererbung in Objektlayout](../cpp/media/vc38xp5.png "vc38XP5")  
+ ![Virtuelle und nicht virtuelle Vererbung in Objektlayout](../cpp/media/vc38xp5.gif "vc38XP5")  
 Objektlayout mit virtueller und nicht virtueller Vererbung  
   
 > [!NOTE]
->  Virtuelle Vererbung bietet wesentliche Vorteile im Vergleich zur nicht virtuellen Vererbung.  Allerdings kann es zu Mehraufwand bei der Verarbeitung kommen.  
+>  Virtuelle Vererbung bietet wesentliche Vorteile im Vergleich zur nicht virtuellen Vererbung. Allerdings kann es zu Mehraufwand bei der Verarbeitung kommen.  
   
- Wenn eine abgeleitete Klasse eine virtuelle Funktion überschreibt, die sie von einer virtuellen Basisklasse erbt, und wenn ein Konstruktor oder Destruktor der abgeleiteten Basisklasse die Funktion mithilfe eines Zeigers auf die virtuelle Basisklasse aufruft, führt der Compiler möglicherweise zusätzliche ausgeblendete "vtordisp"\-Felder in die Klassen mit virtuellen Basen ein.  Die \/vd0\-Compileroption unterdrückt das Hinzufügen des ausgeblendeten vtordisp\-Destruktor\-\/Destruktorverschiebungsmember.  Die \/vd1\-Compileroption, der Standard, ermöglicht diese, wo notwendig.  Deaktivieren Sie vtordisps nur dann, wenn Sie sicher sind, dass alle Klassenkonstruktoren und \-destruktoren virtuelle Funktionen virtuell aufrufen.  
+ Wenn eine abgeleitete Klasse eine virtuelle Funktion überschreibt, die sie von einer virtuellen Basisklasse erbt, und wenn ein Konstruktor oder Destruktor der abgeleiteten Basisklasse die Funktion mithilfe eines Zeigers auf die virtuelle Basisklasse aufruft, führt der Compiler möglicherweise zusätzliche ausgeblendete "vtordisp"-Felder in die Klassen mit virtuellen Basen ein. Die /vd0-Compileroption unterdrückt das Hinzufügen des ausgeblendeten vtordisp-Destruktor-/Destruktorverschiebungsmember. Die /vd1-Compileroption, der Standard, ermöglicht diese, wo notwendig. Deaktivieren Sie vtordisps nur dann, wenn Sie sicher sind, dass alle Klassenkonstruktoren und -destruktoren virtuelle Funktionen virtuell aufrufen.  
   
- Die \/vd\- Compileroption wirkt sich auf das gesamte Kompilierungsmodul aus.  Verwenden Sie das **vtordisp**\-Pragma, um vtordisp\-Felder zu unterdrücken und dann klassenweise wieder zu aktivieren:  
+ Die /vd- Compileroption wirkt sich auf das gesamte Kompilierungsmodul aus. Verwenden der **Vtordisp** Pragma verwenden, um zu unterdrücken, und klicken Sie dann erneut aktivieren Vtordisp-Felder auf Basis einer Klasse von Klasse:  
   
 ```  
 #pragma vtordisp( off )  
@@ -107,10 +124,10 @@ class GetReal : virtual public { ... };
 #pragma vtordisp( on )  
 ```  
   
-## Mehrdeutigkeiten bei Namen  
- Mehrfachvererbung bietet die Möglichkeit, dass Namen in mehr als einem Pfad geerbt werden können.  Die Namen von Klassenmembern auf diesen Pfaden sind nicht unbedingt eindeutig.  Diese Namenskonflikte werden als Mehrdeutigkeiten bezeichnet.  
+## <a name="name-ambiguities"></a>Mehrdeutigkeiten bei Namen  
+ Mehrfachvererbung bietet die Möglichkeit, dass Namen in mehr als einem Pfad geerbt werden können. Die Namen von Klassenmembern auf diesen Pfaden sind nicht unbedingt eindeutig. Diese Namenskonflikte werden als Mehrdeutigkeiten bezeichnet.  
   
- Jeder Ausdruck, der auf einen Klassenmember verweist, muss einen eindeutigen Verweis darstellen.  Das folgende Beispiel zeigt, wie Mehrdeutigkeiten entstehen:  
+ Jeder Ausdruck, der auf einen Klassenmember verweist, muss einen eindeutigen Verweis darstellen. Das folgende Beispiel zeigt, wie Mehrdeutigkeiten entstehen:  
   
 ```  
 // deriv_NameAmbiguities.cpp  
@@ -141,17 +158,17 @@ C *pc = new C;
 pc->b();  
 ```  
   
- Betrachten Sie das vorhergehende Beispiel.  Da der Name `a` ein Member sowohl der Klasse `A` als auch der Klasse `B` ist, kann der Compiler nicht ermitteln, welches `a` die aufzurufende Funktion festlegt.  Zugriff auf einen Member ist mehrdeutig, wenn er auf mehr als eine Funktion, ein Objekt, einen Typ oder einen Enumerator verweisen kann.  
+ Betrachten Sie das vorhergehende Beispiel. Da der Name `a` ein Member sowohl der Klasse `A` als auch der Klasse `B` ist, kann der Compiler nicht ermitteln, welches `a` die aufzurufende Funktion festlegt. Zugriff auf einen Member ist mehrdeutig, wenn er auf mehr als eine Funktion, ein Objekt, einen Typ oder einen Enumerator verweisen kann.  
   
  Der Compiler erkennt Mehrdeutigkeiten, indem er Tests in dieser Reihenfolge durchführt:  
   
-1.  Wenn der Zugriff auf den Namen mehrdeutig ist \(wie gerade beschrieben\) , wird eine Fehlermeldung generiert.  
+1.  Wenn der Zugriff auf den Namen mehrdeutig ist (wie gerade beschrieben) , wird eine Fehlermeldung generiert.  
   
-2.  Wenn überladene Funktionen eindeutig sind, werden sie aufgelöst.  \(Weitere Informationen zur Funktionsüberladungsmehrdeutigkeit finden Sie unter [Argumentübereinstimmung](../misc/argument-matching.md).\)  
+2.  Wenn überladene Funktionen eindeutig sind, werden sie aufgelöst.
   
-3.  Wenn der Zugriff auf den Namen gegen Memberzugangsberechtigungen verstößt, wird eine Fehlermeldung generiert.  Weitere Informationen finden Sie unter [Memberzugriffssteuerung](../cpp/member-access-control-cpp.md).  
+3.  Wenn der Zugriff auf den Namen gegen Memberzugangsberechtigungen verstößt, wird eine Fehlermeldung generiert. (Weitere Informationen finden Sie unter [Memberzugriffssteuerung](../cpp/member-access-control-cpp.md).)  
   
- Wenn ein Ausdruck durch Vererbung eine Mehrdeutigkeit erzeugt, können Sie dies manuell korrigieren, indem Sie den betreffenden Namen mit dem Klassennamen qualifizieren.  Um das vorherige Beispiel ordnungsgemäß ohne Mehrdeutigkeiten kompilieren zu können, verwenden Sie beispielsweise folgenden Code:  
+ Wenn ein Ausdruck durch Vererbung eine Mehrdeutigkeit erzeugt, können Sie dies manuell korrigieren, indem Sie den betreffenden Namen mit dem Klassennamen qualifizieren. Um das vorherige Beispiel ordnungsgemäß ohne Mehrdeutigkeiten kompilieren zu können, verwenden Sie beispielsweise folgenden Code:  
   
 ```  
 C *pc = new C;  
@@ -160,12 +177,12 @@ pc->B::a();
 ```  
   
 > [!NOTE]
->  Wenn `C` deklariert ist, können Fehler verursacht werden, wenn auf `B` im Bereich von `C` verwiesen wird.  Es wird jedoch kein Fehler ausgegeben, bis ein nicht qualifizierter Verweis auf `B` tatsächlich im Bereich von `C` erfolgt.  
+>  Wenn `C` deklariert ist, können Fehler verursacht werden, wenn auf `B` im Bereich von `C` verwiesen wird. Es wird jedoch kein Fehler ausgegeben, bis ein nicht qualifizierter Verweis auf `B` tatsächlich im Bereich von `C` erfolgt.  
   
-### Dominanz  
- Es ist möglich, mehr als einen Namen \(Funktion, Objekt oder Enumerator\) durch ein Vererbungsdiagramm zu erzeugen.  Solche Fälle unterscheiden sich nicht eindeutig von nicht virtuellen Basisklassen.  Sie unterscheiden sich auch nicht eindeutig von virtuellen Basisklassen, es sei denn, einer der Namen "dominiert" die anderen.  
+### <a name="dominance"></a>Dominanz  
+ Es ist möglich, mehr als einen Namen (Funktion, Objekt oder Enumerator) durch ein Vererbungsdiagramm zu erzeugen. Solche Fälle unterscheiden sich nicht eindeutig von nicht virtuellen Basisklassen. Sie unterscheiden sich auch nicht eindeutig von virtuellen Basisklassen, es sei denn, einer der Namen "dominiert" die anderen.  
   
- Ein Name dominiert einen anderen Namen, wenn er in beiden Klassen definiert ist und eine Klasse von der anderen abgeleitet ist.  Der dominante Name ist der Name der abgeleiteten Klasse; dieser Name wird verwendet, wenn sich anderenfalls eine Doppeldeutigkeit ergeben hätte, wie im folgenden Beispielen veranschaulicht wird:  
+ Ein Name dominiert einen anderen Namen, wenn er in beiden Klassen definiert ist und eine Klasse von der anderen abgeleitet ist. Der dominante Name ist der Name der abgeleiteten Klasse; dieser Name wird verwendet, wenn sich anderenfalls eine Doppeldeutigkeit ergeben hätte, wie im folgenden Beispielen veranschaulicht wird:  
   
 ```  
 // deriv_Dominance.cpp  
@@ -188,34 +205,34 @@ public:
 };  
 ```  
   
-### Mehrdeutige Konvertierungen  
- Explizite und implizite Konvertierungen von Zeigern oder Verweisen auf Klassentypen kann zu Mehrdeutigkeiten führen.  Die nächste Abbildung \(Mehrdeutige Konvertierung der Zeiger auf Basisklassen\) zeigt Folgendes:  
+### <a name="ambiguous-conversions"></a>Mehrdeutige Konvertierungen  
+ Explizite und implizite Konvertierungen von Zeigern oder Verweisen auf Klassentypen kann zu Mehrdeutigkeiten führen. Die nächste Abbildung (Mehrdeutige Konvertierung der Zeiger auf Basisklassen) zeigt Folgendes:  
   
 -   Die Deklaration eines Objekts vom Typ `D`.  
   
--   Der Effekt der Anwendung des address\-of\-Operators \(**&**\) auf dieses Objekt.  Beachten Sie, dass der address\-of\-Operator immer die Basisadresse des Objekts bereitstellt.  
+-   Die Auswirkungen der Anwendung des Address-of-Operators (**&**) auf dieses Objekt. Beachten Sie, dass der address-of-Operator immer die Basisadresse des Objekts bereitstellt.  
   
--   Der Effekt der expliziten Konvertierung des Zeigers, der unter Verwendung des address\-of\-Operators für den Basisklassentyp `A` abgerufen wurde.  Beachten Sie, dass dem Compiler mit der Koersion der Adresse des Objekts in Typ `A*` nicht immer genügend Informationen darüber bereitgestellt werden, welches Unterobjekt vom Typ `A` auszuwählen ist. In diesem Fall gibt es zwei Unterobjekte.  
+-   Der Effekt der expliziten Konvertierung des Zeigers, der unter Verwendung des address-of-Operators für den Basisklassentyp `A` abgerufen wurde. Beachten Sie, dass dem Compiler mit der Koersion der Adresse des Objekts in Typ `A*` nicht immer genügend Informationen darüber bereitgestellt werden, welches Unterobjekt vom Typ `A` auszuwählen ist. In diesem Fall gibt es zwei Unterobjekte.  
   
- ![Mehrdeutige Konvertierung der Zeiger auf Basisklassen](../cpp/media/vc38xt1.png "vc38XT1")  
+ ![Mehrdeutige Konvertierung der Zeiger auf Basisklassen](../cpp/media/vc38xt1.gif "vc38XT1")  
 Mehrdeutige Konvertierung der Zeiger auf Basisklassen  
   
- Die Konvertierung in Typ `A*` \(Zeiger auf `A`\) ist mehrdeutig, da nicht erkannt werden kann, welches Unterobjekt des Typs `A` das richtige ist.  Sie können Mehrdeutigkeiten vermeiden, indem Sie wie folgt explizit angeben, welches Unterobjekt verwendet werden soll:  
+ Die Konvertierung in Typ `A*` (Zeiger auf `A`) ist mehrdeutig, da nicht erkannt werden kann, welches Unterobjekt des Typs `A` das richtige ist. Sie können Mehrdeutigkeiten vermeiden, indem Sie wie folgt explizit angeben, welches Unterobjekt verwendet werden soll:  
   
 ```  
 (A *)(B *)&d       // Use B subobject.  
 (A *)(C *)&d       // Use C subobject.  
 ```  
   
-### Mehrdeutigkeiten und virtuelle Basisklassen  
- Wenn virtuelle Basisklassen verwendet werden, können Funktionen, Objekte, Typen und Enumeratoren über Mehrfachvererbungspfade erreicht werden.  Da nur eine Instanz der Basisklasse vorhanden ist, gibt es keine Mehrdeutigkeit, wenn auf diese Namen zugegriffen wird.  
+### <a name="ambiguities-and-virtual-base-classes"></a>Mehrdeutigkeiten und virtuelle Basisklassen  
+ Wenn virtuelle Basisklassen verwendet werden, können Funktionen, Objekte, Typen und Enumeratoren über Mehrfachvererbungspfade erreicht werden. Da nur eine Instanz der Basisklasse vorhanden ist, gibt es keine Mehrdeutigkeit, wenn auf diese Namen zugegriffen wird.  
   
  Die folgende Abbildung zeigt, wie Objekte mithilfe von virtueller und nicht virtueller Vererbung zusammengestellt werden.  
   
- ![Virtuelle und nicht virtuelle Ableitung](../cpp/media/vc38xr1.png "vc38XR1")  
-Virtuell odernicht virtuelle Ableitung  
+ ![Virtuelle und nicht virtuelle Ableitung](../cpp/media/vc38xr1.gif "vc38XR1")  
+Virtuell oder nicht virtuelle Ableitung  
   
- In der Abbildung führt der Zugriff auf beliebige Member der `A`\-Klasse durch nicht virtuelle Basisklassen zu einer Mehrdeutigkeit. Der Compiler hat keine Informationen darüber, ob das `B` zugeordnete Unterobjekt oder das `C` zugeordnete Unterobjekt zu verwenden ist.  Wenn jedoch `A` als virtuelle Basisklasse angegeben ist, ist klar, auf welches Unterobjekt zugegriffen wird.  
+ In der Abbildung führt der Zugriff auf beliebige Member der `A`-Klasse durch nicht virtuelle Basisklassen zu einer Mehrdeutigkeit. Der Compiler hat keine Informationen darüber, ob das `B` zugeordnete Unterobjekt oder das `C` zugeordnete Unterobjekt zu verwenden ist. Wenn jedoch `A` als virtuelle Basisklasse angegeben ist, ist klar, auf welches Unterobjekt zugegriffen wird.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Vererbung](../cpp/inheritance-cpp.md)

@@ -1,41 +1,58 @@
 ---
-title: "bad_cast-Ausnahme | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "bad_cast"
-  - "bad_cast_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bad_cast-Schlüsselwort [C++]"
-  - "Ausnahmen, bad_cast"
+title: Bad_cast-Ausnahme | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- bad_cast
+- bad_cast_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- exceptions, bad_cast
+- bad_cast keyword [C++]
 ms.assetid: 31eae1e7-d8d5-40a0-9fef-64a6a4fc9021
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# bad_cast-Ausnahme
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 70758ca099853f94ad06b8a9f5029203a480a772
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Die `bad_cast`\-Ausnahme wird vom `dynamic_cast`\-Operator als Folge eines Fehlers bei der Umwandlung in einen Verweistyp ausgelöst.  
+---
+# <a name="badcast-exception"></a>bad_cast-Ausnahme
+Die `bad_cast`-Ausnahme wird vom `dynamic_cast`-Operator als Folge eines Fehlers bei der Umwandlung in einen Verweistyp ausgelöst.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 catch (bad_cast)  
    statement  
 ```  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Die Schnittstelle für `bad_cast` ist:  
   
 ```  
@@ -78,20 +95,20 @@ int main() {
 }  
 ```  
   
- Die Ausnahme wird ausgelöst, weil das umgewandelte Objekt \(eine Form\) nicht vom angegebenen Umwandlungstyp \(Kreis\) abgeleitet wird.  Um die Ausnahme zu vermeiden, fügen Sie `main` diese Deklarationen hinzu:  
+ Die Ausnahme wird ausgelöst, weil das umgewandelte Objekt (eine Form) nicht vom angegebenen Umwandlungstyp (Kreis) abgeleitet wird. Um die Ausnahme zu vermeiden, fügen Sie `main` diese Deklarationen hinzu:  
   
 ```  
 Circle circle_instance;  
 Circle& ref_circle = circle_instance;  
 ```  
   
- Kehren Sie dann den Sinn der Umwandlung im `try`\-Block wie folgt um:  
+ Kehren Sie dann den Sinn der Umwandlung im `try`-Block wie folgt um:  
   
 ```  
 Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);  
 ```  
   
-## Siehe auch  
- [dynamic\_cast\-Operator](../cpp/dynamic-cast-operator.md)   
- [C\+\+\-Schlüsselwörter](../cpp/keywords-cpp.md)   
- [C\+\+\-Ausnahmebehandlung](../cpp/cpp-exception-handling.md)
+## <a name="see-also"></a>Siehe auch  
+ [Dynamic_cast-Operator](../cpp/dynamic-cast-operator.md)   
+ [Stichwörter](../cpp/keywords-cpp.md)   
+ [C++-Ausnahmebehandlung](../cpp/cpp-exception-handling.md)

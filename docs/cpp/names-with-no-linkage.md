@@ -1,40 +1,57 @@
 ---
-title: "Namen ohne Verkn&#252;pfung | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Enumeratoren [C++], Verknüpfung"
-  - "Funktionsparameter [C++]"
-  - "Funktionen [C++], Parameter"
-  - "Namen [C++], Ohne Verknüpfung"
-  - "typedef-Namen, Verknüpfung"
+title: "Namen ohne Verknüpfung | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- functions [C++], parameters
+- typedef names, linkage
+- enumerators [C++], linkage
+- names [C++], with no linkage
+- function parameters [C++]
 ms.assetid: 7174c500-12d2-4572-8c16-63c27c758fb1
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Namen ohne Verkn&#252;pfung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 161698d01e9cc9aeaac8f2b9bdc491343555880d
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="names-with-no-linkage"></a>Namen ohne Verknüpfung
 Die einzigen Namen ohne Bindung sind:  
   
 -   Funktionsparameter  
   
--   Namen mit Blockgültigkeit, die nicht als `extern` oder **static** deklariert sind  
+-   Block-bewertete Namen nicht deklariert werden, als `extern` oder **statische**.  
   
 -   Enumeratoren  
   
--   Namen, die in einer `typedef`\-Anweisung deklariert werden.  Eine Ausnahme ist, wenn die `typedef`\-Anweisung verwendet wird, um einen Namen für einen nicht benannten Klassentyp anzugeben.  Wenn die Klasse über eine externe Bindung verfügt, kann der Name ebenfalls eine externe Bindung aufweisen.  Das folgende Beispiel zeigt eine Situation, in der ein `typedef`\-Name eine externe Bindung hat:  
+-   Namen, die in einer `typedef`-Anweisung deklariert werden. Eine Ausnahme ist, wenn die `typedef`-Anweisung verwendet wird, um einen Namen für einen nicht benannten Klassentyp anzugeben. Wenn die Klasse über eine externe Bindung verfügt, kann der Name ebenfalls eine externe Bindung aufweisen. Das folgende Beispiel zeigt eine Situation, in der ein `typedef`-Name eine externe Bindung hat:  
   
     ```  
     // names_with_no_linkage.cpp  
@@ -51,9 +68,9 @@ Die einzigen Namen ohne Bindung sind:
     }  
     ```  
   
-     Der `typedef`\-Name, `POINT`, wird der Klassenname für die unbenannte Struktur.  Er wird anschließend verwendet, um eine Funktion mit externer Bindung zu deklarieren.  
+     Der `typedef`-Name, `POINT`, wird der Klassenname für die unbenannte Struktur. Er wird anschließend verwendet, um eine Funktion mit externer Bindung zu deklarieren.  
   
- Da `typedef`\-Namen keine Bindung haben, können sich ihre Definitionen zwischen Übersetzungseinheiten unterscheiden.  Da die Kompilierungen getrennt stattfinden, gibt es keine Möglichkeit für den Compiler, diese Unterschiede festzustellen.  Daher werden Fehler dieser Art erst zur Verknüpfungszeit erkannt.  Betrachten Sie folgenden Fall:  
+ Da `typedef`-Namen keine Bindung haben, können sich ihre Definitionen zwischen Übersetzungseinheiten unterscheiden. Da die Kompilierungen getrennt stattfinden, gibt es keine Möglichkeit für den Compiler, diese Unterschiede festzustellen. Daher werden Fehler dieser Art erst zur Verknüpfungszeit erkannt. Betrachten Sie folgenden Fall:  
   
 ```  
 // Translation unit 1  
@@ -71,8 +88,8 @@ extern INT myInt;
   
  Der vorhergehende Code generiert einen "nicht aufgelösten externen" Fehler zur Verknüpfungszeit.  
   
-## Beispiel  
- C\+\+\-Funktionen können nur im Gültigkeitsbereich der Datei oder der Klasse definiert werden.  Das folgende Beispiel veranschaulicht, wie Sie Funktionen definieren, und es zeigt eine fehlerhafte Funktionsdefinition:  
+## <a name="example"></a>Beispiel  
+ C++-Funktionen können nur im Gültigkeitsbereich der Datei oder der Klasse definiert werden. Das folgende Beispiel veranschaulicht, wie Sie Funktionen definieren, und es zeigt eine fehlerhafte Funktionsdefinition:  
   
 ```  
 // function_definitions.cpp  
@@ -111,5 +128,5 @@ void GoodFuncDef( char ch )  // Define GoodFuncDef
 }  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Programm und Verknüpfung](../cpp/program-and-linkage-cpp.md)

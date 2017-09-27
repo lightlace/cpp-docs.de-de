@@ -1,34 +1,51 @@
 ---
-title: "Zeiger"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Deklarationen, Zeiger"
-  - "Deklaratoren, Zeiger"
-  - "Zeiger"
-  - "Zeiger, Deklarationen"
+title: Zeiger (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- declarators, pointers
+- declarations, pointers
+- pointers
+- pointers, declarations
 ms.assetid: 595387c5-8e58-4670-848f-344c7caf985e
 caps.latest.revision: 14
-caps.handback.revision: "12"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Zeiger
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c164a934f14f7b65c159cf21feb576d0a8bdf36d
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="pointers-c"></a>Zeiger (C++)
 Zeiger werden mithilfe der folgenden Sequenz deklariert.  
   
 ```  
-[storage-class-specifiers] [cv-qualifiers] type-specifiers   
+[storage-class-specifiers] [cv-qualifiers] type-specifiers   
 [ms-modifier] declarator ;  
 ```  
   
@@ -38,21 +55,21 @@ Zeiger werden mithilfe der folgenden Sequenz deklariert.
 * [cv-qualifiers] identifier [= expression]  
 ```  
   
- 1.  Die Deklarationsspezifizierer:  
+ 1. Die Deklarationsspezifizierer:  
   
--   Ein optionaler Speicherklassenbezeichner.  Weitere Informationen finden Sie unter [Spezifizierer](../cpp/specifiers.md).  
+-   Ein optionaler Speicherklassenbezeichner. Weitere Informationen finden Sie unter [Spezifizierer](../cpp/specifiers.md).  
   
--   Ein optionales `const`\- oder `volatile`\-Schlüsselwort, das auf den Typ des Objekts angewendet wird, auf das gezeigt werden soll.  
+-   Ein optionales `const`- oder `volatile`-Schlüsselwort, das auf den Typ des Objekts angewendet wird, auf das gezeigt werden soll.  
   
 -   Der Typspezifizierer: der Name eines Typs, der den Typ des Objekts dargestellt, auf das gezeigt wird.  
   
- 2.  Der Deklarator:  
+ 2. Der Deklarator:  
   
--   Ein optionaler Microsoft\-spezifischer Modifizierer.  Weitere Informationen finden Sie unter [Microsoft\-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md).  
+-   Ein optionaler Microsoft-spezifischer Modifizierer. Weitere Informationen finden Sie unter [Microsoft-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md).  
   
 -   Der Operator `*`.  
   
--   Ein optionales `const`\- oder `volatile`\-Schlüsselwort, das auf den Zeiger selbst angewendet wird.  
+-   Ein optionales `const`- oder `volatile`-Schlüsselwort, das auf den Zeiger selbst angewendet wird.  
   
 -   Der Bezeichner.  
   
@@ -71,8 +88,6 @@ Zeiger werden mithilfe der folgenden Sequenz deklariert.
 * identifier [ [ constant-expression ] ]  
 ```  
   
--   Allerdings können Zeigerdeklaratoren noch komplexer sein.  Weitere Informationen finden Sie unter [Deklaratoren](assetId:///8a7b9b51-92bd-4ac0-b3fe-0c4abe771838).  
-  
 -   Mehrere Deklaratoren und ihre Initialisierer erscheinen möglicherweise zusammen in einer einzigen Deklaration in einer durch Trennzeichen getrennten Liste, die dem Deklarationsspezifizierer folgt.  
   
  Ein einfaches Beispiel für eine Zeigerdeklaration ist:  
@@ -89,7 +104,7 @@ char *pch;
 static unsigned int * const ptr;  
 ```  
   
- Die vorhergehende Deklaration gibt an, dass `ptr` ein konstanter Zeiger auf ein Objekt vom Typ `unsigned` `int` mit statischer Speicherdauer ist.  
+ Die vorhergehende Deklaration gibt an, dass `ptr` ist ein konstanter Zeiger auf ein Objekt des Typs `unsigned` `int` mit statischer Speicherdauer.  
   
  Das folgende Beispiel zeigt, wie mehrere Zeiger deklariert und initialisiert werden:  
   
@@ -99,7 +114,7 @@ static int *p = &i, *q = &j;
   
  Im vorhergehenden Beispiel, zeigen die Zeiger p und q auf Objekte vom Typ `int` und werden entsprechend mit den Adressen von i und j initialisiert.  Der Speicherklassenspezifizierer `static` gilt für beide Zeiger.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // pointer.cpp  
@@ -175,18 +190,21 @@ int main() {
 }  
 ```  
   
-  **0x0012FEC8**  
-**0x0012FEC8 2**  
-**0x0012FEC8 7**  
-**j ist 10**  
-**0x00320850 5**  
-**0x00320850 0**  
-**0x00320854 10**  
-**0x00320858 20**  
-**0x0032085C 30**  
-**0x00320860 40**  
-**dog dog**   
-## Beispiel  
+```Output  
+0x0012FEC8  
+0x0012FEC8 2  
+0x0012FEC8 7  
+j is 10  
+0x00320850 5  
+0x00320850 0  
+0x00320854 10  
+0x00320858 20  
+0x0032085C 30  
+0x00320860 40  
+dog dog  
+```  
+  
+## <a name="example"></a>Beispiel  
  Ein weiteres Beispiel illustriert die Verwendung von Zeigern in Datenstrukturen; in diesem Fall eine verknüpfte Liste.  
   
 ```  
@@ -247,18 +265,26 @@ int main() {
 }  
 ```  
   
-  **`a 45 d a 789 d q`a \(Knoten hinzufügen\)  d \(Liste anzeigen\)  q \(beenden\)**  
-**geben Sie eine Zahl ein:**   
-**a \(Knoten hinzufügen\)  d \(Liste anzeigen\)  q \(beenden\)**  
-**Knoten 1 \= 45**  
-**a \(Knoten hinzufügen\)  d \(Liste anzeigen\)  q \(beenden\)**  
-**geben Sie eine Zahl ein:**   
-**a \(Knoten hinzufügen\)  d \(Liste anzeigen\)  q \(beenden\)**  
-**Knoten 1 \= 45**  
-**Knoten 2 \= 789**  
-**a \(Knoten hinzufügen\)  d \(Liste anzeigen\)  q \(beenden\)**   
-## Siehe auch  
- [C\+\+ Abstract Declarators](assetId:///e7e18c18-0cad-4450-942b-d27e1d4dd088)   
- [Addition von Zeigertypen](../misc/addition-of-pointer-types.md)   
- [Dereferenzierungsoperator: \*](../cpp/indirection-operator-star.md)   
- [Address\-of\-Operator: &](../cpp/address-of-operator-amp.md)
+```Output  
+  
+      a  
+45  
+d  
+a  
+789  
+d  
+qa (add node)  d (display list)  q (quit)  
+enter a number:   
+a (add node)  d (display list)  q (quit)  
+node 1 = 45  
+a (add node)  d (display list)  q (quit)  
+enter a number:   
+a (add node)  d (display list)  q (quit)  
+node 1 = 45  
+node 2 = 789  
+a (add node)  d (display list)  q (quit)  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Dereferenzierungsoperator: *](../cpp/indirection-operator-star.md)   
+ [address-of-Operator](../cpp/address-of-operator-amp.md)

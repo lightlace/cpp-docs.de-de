@@ -1,76 +1,93 @@
 ---
-title: "&#220;berladen von Operatoren | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "operator_cpp"
-  - "operator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Nicht neu definierbare Operatoren"
-  - "operator-Schlüsselwort [C++]"
-  - "Operatoren überladen"
-  - "Operatoren [C++], Überladen"
-  - "Neu definierbare Operatoren"
+title: "Operatoren überladen | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- operator_cpp
+- operator
+dev_langs:
+- C++
+helpviewer_keywords:
+- redefinable operators
+- non-redefinable operators
+- operator keyword [C++]
+- operators [C++], overloading
+- operator overloading
 ms.assetid: 56ad4c4f-dd0c-45e0-adaa-08fe98cb1f8e
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# &#220;berladen von Operatoren
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 5ac9415ec186760a70394772ffaff011d7c68c95
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Das `operator`\-Schlüsselwort deklariert eine Funktion, die angibt, welche Bedeutung `operator-symbol` bei der Anwendung auf Instanzen einer Klasse hat.  Dadurch erhält der Operator mehrere Bedeutungen, oder er wird "überladen".  Der Compiler unterscheidet zwischen verschiedenen Bedeutungen eines Operators, indem er die Typen seiner Operanden überprüft.  
+---
+# <a name="operator-overloading"></a>Operatorüberladung
+Das `operator`-Schlüsselwort deklariert eine Funktion, die angibt, welche Bedeutung `operator-symbol` bei der Anwendung auf Instanzen einer Klasse hat. Dadurch erhält der Operator mehrere Bedeutungen, oder er wird "überladen". Der Compiler unterscheidet zwischen verschiedenen Bedeutungen eines Operators, indem er die Typen seiner Operanden überprüft.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
 type operator operator-symbol ( parameter-list )  
 ```  
   
-## Hinweise  
- Sie können die Funktion der meisten integrierten Operatoren global oder klassenweise neu definieren.  Überladene Operatoren werden als Funktionen implementiert.  
+## <a name="remarks"></a>Hinweise  
+ Sie können die Funktion der meisten integrierten Operatoren global oder klassenweise neu definieren. Überladene Operatoren werden als Funktionen implementiert.  
   
- Der Name eines überladenen Operators ist `operator``x`, wobei `x` der Operator ist, wie in der folgenden Tabelle dargestellt.  Um beispielsweise den Additionsoperator zu überladen, definieren Sie eine Funktion mit dem Namen `operator+`.  Ebenso definieren Sie zum Überladen des Additionszuweisungsoperators `+=` eine Funktion mit dem Namen `operator+=`.  
+ Der Name eines überladenen Operators ist `operator x`, wobei `x` ist der Operator, wie er in der folgenden Tabelle angezeigt wird. Um beispielsweise den Additionsoperator zu überladen, definieren Sie eine Funktion mit dem Namen `operator+`. Ebenso definieren Sie zum Überladen des Additionszuweisungsoperators `+=` eine Funktion mit dem Namen `operator+=`.  
   
-### Neu definierbare Operatoren  
+### <a name="redefinable-operators"></a>Neu definierbare Operatoren  
   
 |Operator|Name|Typ|  
-|--------------|----------|---------|  
+|--------------|----------|----------|  
 |`,`|Komma|Binär|  
 |`!`|Logisches NOT|Unär|  
 |`!=`|Ungleichheit|Binär|  
 |`%`|Modulooperator|Binär|  
 |`%=`|Modulozuweisung|Binär|  
 |`&`|Bitweises AND|Binär|  
-|`&`|Address\-of|Unär|  
+|`&`|Address-of|Unär|  
 |`&&`|Logisches AND|Binär|  
-|`&=`|Bitweise AND\-Zuweisung|Binär|  
-|`( )`|Funktionsaufruf|—|  
+|`&=`|Bitweise AND-Zuweisung|Binär|  
+|`( )`|Funktionsaufruf |—|  
 |`( )`|Umwandlungsoperator|Unär|  
 |`*`|Multiplikation|Binär|  
-|`*`|Zeiger\-Dereferenzierung|Unär|  
+|`*`|Zeiger-Dereferenzierung|Unär|  
 |`*=`|Multiplikationszuweisung|Binär|  
 |`+`|Addition|Binär|  
 |`+`|Unäres Plus|Unär|  
-|`++`|Increment <sup>1</sup>|Unär|  
+|`++`|Inkrement <sup>1</sup>|Unär|  
 |`+=`|Additionszuweisung|Binär|  
-|`–`|Subtraktion|Binär|  
-|`–`|Unäre Negation|Unär|  
-|`––`|Decrement <sup>1</sup>|Unär|  
-|`–=`|Subtraktionszuweisung|Binär|  
-|`–>`|Memberauswahl|Binär|  
-|`–>*`|Pointer\-to\-member\-Auswahl|Binär|  
+|`-`|Subtraktion|Binär|  
+|`-`|Unäre Negation|Unär|  
+|`--`|Dekrementoperatoren <sup>1</sup>|Unär|  
+|`-=`|Subtraktionszuweisung|Binär|  
+|`->`|Memberauswahl|Binär|  
+|`->*`|Pointer-to-member-Auswahl|Binär|  
 |`/`|Division|Binär|  
 |`/=`|Divisionszuweisung|Binär|  
 |`<`|Kleiner als|Binär|  
@@ -85,18 +102,18 @@ type operator operator-symbol ( parameter-list )
 |`>>=`|Rechtsschiebezuweisung|Binär|  
 |`[ ]`|Arrayfeldindex|—|  
 |`^`|Exklusives OR|Binär|  
-|`^=`|Exklusive OR\-Zuweisung|Binär|  
+|`^=`|Exklusive OR-Zuweisung|Binär|  
 |`&#124;`|Bitweises inklusives OR|Binär|  
-|`&#124;=`|Bitweise inklusive OR\-Zuweisung|Binär|  
+|`&#124;=`|Bitweise inklusive OR-Zuweisung|Binär|  
 |`&#124;&#124;`|Logisches OR|Binär|  
 |`~`|Einerkomplement|Unär|  
 |`delete`|`Delete`|—|  
 |`new`|`New`|—|  
 |`conversion operators`|Konvertierungsoperatoren|Unär|  
   
- 1   Es gibt zwei Versionen der unären Inkrement\- und Dekrementoperatoren: preincrement und postincrement.  
+ 1 Es gibt zwei Versionen der unären erhöht und Dekrementoperatoren: Preincrement und Postincrement.  
   
- Weitere Informationen finden Sie unter [Allgemeine Regeln für die Überladung von Operatoren](../cpp/general-rules-for-operator-overloading.md).  Die Einschränkungen für die verschiedenen Kategorien von überladenen Operatoren werden in den folgenden Themen beschrieben:  
+ Finden Sie unter [Allgemeine Regeln für Operatorüberladung](../cpp/general-rules-for-operator-overloading.md) für Weitere Informationen. Die Einschränkungen für die verschiedenen Kategorien von überladenen Operatoren werden in den folgenden Themen beschrieben:  
   
 -   [Unäre Operatoren](../cpp/overloading-unary-operators.md)  
   
@@ -112,31 +129,31 @@ type operator operator-symbol ( parameter-list )
   
 -   [Inkrementieren und Dekrementieren](../cpp/increment-and-decrement-operator-overloading-cpp.md).  
   
--   [Konvertierungen](../cpp/user-defined-type-conversions-cpp.md)  
+-   [Benutzerdefinierte Typkonvertierungen](../cpp/user-defined-type-conversions-cpp.md)  
   
- Die Operatoren, die in der folgenden Tabelle aufgeführt sind, können nicht überladen werden.  Die Tabelle enthält die Präprozessorsymbole `#` und `##`.  
+ Die Operatoren, die in der folgenden Tabelle aufgeführt sind, können nicht überladen werden. Die Tabelle enthält die Präprozessorsymbole `#` und `##`.  
   
-### Nicht neu definierbare Operatoren  
+### <a name="nonredefinable-operators"></a>Nicht neu definierbare Operatoren  
   
 |||  
 |-|-|  
 |`Operator`|`Name`|  
 |`.`|Memberauswahl|  
-|`.*`|Pointer\-to\-member\-Auswahl|  
+|`.*`|Pointer-to-member-Auswahl|  
 |`::`|Bereichsauflösung|  
-|`?  :`|Bedingt|  
+|`? :`|Bedingt|  
 |`#`|Präprozessorkonvertierung in Zeichenfolge|  
 |`##`|Präprozessorverkettung|  
   
- Obwohl überladene Operatoren in der Regel vom Compiler implizit aufgerufen werden, wenn sie im Code auftreten, können sie explizit auf dieselbe Art und Weise aufgerufen werden, wie andere Member\- oder Nichtmemberfunktionen aufgerufen werden:  
+ Obwohl überladene Operatoren in der Regel vom Compiler implizit aufgerufen werden, wenn sie im Code auftreten, können sie explizit auf dieselbe Art und Weise aufgerufen werden, wie andere Member- oder Nichtmemberfunktionen aufgerufen werden:  
   
 ```  
 Point pt;  
 pt.operator+( 3 );  // Call addition operator to add 3 to pt.  
 ```  
   
-## Beispiel  
- Im folgenden Beispiel wird der `+`\-Operator überladen, um zwei komplexe Zahlen hinzuzufügen, und das Ergebnis wird zurückgegeben.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird der `+`-Operator überladen, um zwei komplexe Zahlen hinzuzufügen, und das Ergebnis wird zurückgegeben.  
   
 ```  
 // operator_overloading.cpp  
@@ -167,13 +184,13 @@ int main() {
 }  
 ```  
   
-## Ausgabe  
+## <a name="output"></a>Ausgabe  
   
 ```  
 6.8, 11.2  
 ```  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
   
 1.  [Allgemeine Regeln für die Überladung von Operatoren](../cpp/general-rules-for-operator-overloading.md)  
   
@@ -189,6 +206,6 @@ int main() {
   
 7.  [Memberzugriff](../cpp/member-access.md)  
   
-## Siehe auch  
- [C\+\+\-Operatoren](../misc/cpp-operators.md)   
- [C\+\+\-Schlüsselwörter](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [Integrierte C++-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Schlüsselwörter](../cpp/keywords-cpp.md)

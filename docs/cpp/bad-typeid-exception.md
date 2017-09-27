@@ -1,41 +1,58 @@
 ---
-title: "bad_typeid-Ausnahme | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "bad_typeid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bad_typeid-Ausnahme"
-  - "Ausnahmen, bad_typeid"
+title: Bad_typeid-Ausnahme | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- bad_typeid
+dev_langs:
+- C++
+helpviewer_keywords:
+- bad_typeid exception
+- exceptions, bad_typeid
 ms.assetid: 5963ed58-4ede-4597-957d-f7bbd06299c2
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# bad_typeid-Ausnahme
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: ea7dc85862622180038cf520ef92b752b65eba84
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Die Ausnahme `bad_typeid` wird von [typeid operator](../cpp/typeid-operator.md) ausgelöst, wenn der Operand für `typeid` ein NULL\-Zeiger ist.  
+---
+# <a name="badtypeid-exception"></a>bad_typeid-Ausnahme
+Die `bad_typeid` -Ausnahme wird ausgelöst durch den [Typeid-Operator](../cpp/typeid-operator.md) Wenn der Operand für `typeid` ist ein Nullzeiger.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
       catch (bad_typeid)  
-   statement  
+   statement  
 ```  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Die Schnittstelle für `bad_typeid` ist:  
   
 ```  
@@ -48,7 +65,7 @@ public:
 };  
 ```  
   
- Im folgenden Beispiel wird der `typeid`\-Operators gezeigt, der eine `bad_typeid`\-Ausnahme auslöst.  
+ Im folgenden Beispiel wird der `typeid`-Operators gezeigt, der eine `bad_typeid`-Ausnahme auslöst.  
   
 ```  
 // expre_bad_typeid.cpp  
@@ -76,12 +93,12 @@ catch (bad_typeid){
 }  
 ```  
   
-## Ausgabe  
+## <a name="output"></a>Ausgabe  
   
 ```  
 Object is NULL  
 ```  
   
-## Siehe auch  
- [Laufzeit\-Typinformationen](../cpp/run-time-type-information.md)   
- [C\+\+\-Schlüsselwörter](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [Laufzeit-Typinformationen](../cpp/run-time-type-information.md)   
+ [Schlüsselwörter](../cpp/keywords-cpp.md)

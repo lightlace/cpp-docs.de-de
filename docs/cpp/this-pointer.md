@@ -1,44 +1,61 @@
 ---
-title: "this-Zeiger | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "this"
-  - "this_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Nicht statische Memberfunktionen"
-  - "Zeiger, Auf Klasseninstanzen"
-  - "This-Zeiger"
+title: this-Zeiger | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- this
+- this_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- nonstatic member functions
+- pointers, to class instance
+- this pointer
 ms.assetid: 92e3256a-4ad9-4d46-8be1-d77fad90791f
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# this-Zeiger
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 86ccf50a089b1497bdc166ee9367215dc59b3ca1
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Der **this**\-Zeiger ist ein Zeiger, auf den nur in nicht statischen Memberfunktionen des Typs **class**, `struct` oder **union** zugegriffen werden kann.  Er zeigt auf das Objekt, für das die Memberfunktion aufgerufen wird.  Statische Memberfunktionen haben keinen **this**\-Zeiger.  
+---
+# <a name="this-pointer"></a>this-Zeiger
+Die **dies** ist ein Zeiger zugegriffen werden kann, nur in nicht statischen Memberfunktionen von einer **Klasse**, `struct`, oder **Union** Typ. Er zeigt auf das Objekt, für das die Memberfunktion aufgerufen wird. Statische Member-Funktionen verfügen nicht über eine **dies** Zeiger.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
-        this   
+      this   
 this->member-identifier  
 ```  
   
-## Hinweise  
- Der **this**\-Zeiger eines Objekts ist nicht Teil des Objekts selbst. Er wird nicht im Ergebnis einer `sizeof`\-Anweisung für das Objekt wiedergegeben.  Wenn stattdessen eine nicht statische Memberfunktion für ein Objekt aufgerufen wird, wird die Adresse des Objekts vom Compiler als ausgeblendetes Argument an die Funktion übergeben.  Folgender Funktionsaufruf kann beispielsweise:  
+## <a name="remarks"></a>Hinweise  
+ Ein Objekt **dies** Zeiger ist nicht Teil des Objekts selbst nicht im Ergebnis vorgenommen eine `sizeof` -Anweisung für das Objekt. Wenn stattdessen eine nicht statische Memberfunktion für ein Objekt aufgerufen wird, wird die Adresse des Objekts vom Compiler als ausgeblendetes Argument an die Funktion übergeben. Folgender Funktionsaufruf kann beispielsweise:  
   
 ```  
 myDate.setMonth( 3 );  
@@ -50,7 +67,7 @@ myDate.setMonth( 3 );
 setMonth( &myDate, 3 );  
 ```  
   
- Die Adresse des Objekts ist von innerhalb der Memberfunktion als **this**\-Zeiger verfügbar.  Die meisten Verwendungen von **this** sind implizit.  Es ist zulässig, wenn auch unnötig, **this** explizit für den Verweis auf Member der Klasse zu verwenden.  Zum Beispiel:  
+ Die Adresse des Objekts steht aus innerhalb der Memberfunktion als die **dies** Zeiger. Die meisten Verwendungen von **dies** sind implizit. Es ist zulässig, obwohl nicht erforderlich, unbedingt verwenden **dies** beim Verweisen auf Member der Klasse. Zum Beispiel:  
   
 ```  
 void Date::setMonth( int mn )  
@@ -67,7 +84,7 @@ void Date::setMonth( int mn )
 return *this;  
 ```  
   
- Der **this**\-Zeiger wird auch verwendet, um vor Selbstverweisen zu schützen:  
+ Die **dies** -Zeiger wird auch verwendet, um zu erraten, Verweis auf sich selbst:  
   
 ```  
 if (&Object != this) {  
@@ -75,11 +92,11 @@ if (&Object != this) {
 ```  
   
 > [!NOTE]
->  Da der **this**\-Zeiger nicht veränderbar ist, sind Zuweisungen zu **this** nicht zulässig.  Frühere Implementierungen von C\+\+ lassen Zuweisungen zu **this** zu.  
+>  Da die **dies** -Zeiger nicht veränderbar ist, ist Zuweisungen zu **dies** sind nicht zulässig. Frühere Implementierungen von C++ lassen Zuweisungen zu **dies**.  
   
- Gelegentlich wird der **this**\-Zeiger direkt verwendet, beispielsweise um auf sich selbst verweisende Datenstrukturen zu bearbeiten, für welche die Adresse des aktuellen Objekts erforderlich ist.  
+ In einigen Fällen die **dies** -Zeiger direkt verwendet, z. B. zum Bearbeiten von auf sich selbst verweisende Datenstrukturen, wenn die Adresse des aktuellen Objekts erforderlich ist.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // this_pointer.cpp  
@@ -144,10 +161,13 @@ int main()
 }  
 ```  
   
-  **my buffer**  
-**your buffer**   
-## Typ des this\-Zeigers.  
- Der Typ des **this**\-Zeigers kann in der Funktionsdeklaration durch die **const**\- und `volatile`\-Schlüsselwörter geändert werden.  Um eine Funktion so zu deklarieren, dass sie die Attribute von mindestens einem dieser Schlüsselwörter hat, fügen Sie die Schlüsselwörter nach der Funktionsargumentliste hinzu.  
+```Output  
+my buffer  
+your buffer  
+```  
+  
+## <a name="type-of-the-this-pointer"></a>Typ des this-Zeigers.  
+ Die **dies** Typ des Zeigers kann geändert werden, in der Funktionsdeklaration durch die **const** und `volatile` Schlüsselwörter. Um eine Funktion so zu deklarieren, dass sie die Attribute von mindestens einem dieser Schlüsselwörter hat, fügen Sie die Schlüsselwörter nach der Funktionsargumentliste hinzu.  
   
  Betrachten Sie das folgende Beispiel:  
   
@@ -162,7 +182,7 @@ int main()
 }  
 ```  
   
- Der vorangehende Code deklariert eine Memberfunktion, `X`, in der der **this**\-Zeiger als **const**\-Zeiger auf ein **const**\-Objekt behandelt wird.  Kombinationen von *cv\-mod\-list*\-Optionen können verwendet werden, sie ändern jedoch immer das Objekt, auf das von **this** gezeigt wird, nicht den **this**\-Zeiger selbst.  Daher deklariert die folgende Deklaration die Funktion `X`; der **this**\-Zeiger ist ein **const**\-Zeiger auf ein **const**\-Objekt:  
+ Der vorangehende Code deklariert eine Memberfunktion `X`, in dem die **dies** -Zeiger wird als behandelt eine **const** Zeiger auf eine **const** Objekt. Kombinationen von *cv-mod-List* -Optionen können verwendet werden, sie ändern jedoch immer das Objekt verweist, zu **dies**und nicht die **dies** Zeiger selbst. Aus diesem Grund wird die folgende Deklaration einer Funktion deklariert `X`; das **dies** Zeiger ist ein **const** Zeiger auf eine **const** Objekt:  
   
 ```  
 // type_of_this_pointer2.cpp  
@@ -175,29 +195,28 @@ int main()
 }  
 ```  
   
- Der Typ von **this** in einer Memberfunktion wird durch die folgende Syntax beschrieben, wobei *cv\-qualifier\-list* vom Memberfunktionsdeklarator bestimmt wird und **const** oder **volatile**\(oder beide\) sein kann, und *class\-type* ist der Name der Klasse:  
+ Der Typ des **dies** eines Mitglieds-Funktion wird durch die folgende Syntax beschrieben, in denen *cv-Qualifier-List* wird vom Deklarator Funktionen Element bestimmt und kann **Const**oder **volatile** (oder beides), und *Klassentyp* ist der Name der Klasse:  
   
- *\[cv\-qualifier\-list\] class\-type* **\* const this**  
+ *[cv-Qualifier-List] Klassentyp* ** \* const dies  **  
   
- Das heißt, **this** ist immer ein konstanter Zeiger, er kann nicht erneut zugeordnet werden.  Die **const**\- oder `volatile`\-Qualifizierer, die in der Memberfunktionsdeklaration verwendet werden, gelten für die Klasseninstanz, auf die von **this** im Rahmen dieser Funktion verwiesen wird.  
+ Das heißt, **dies** ist immer ein konstanter Zeiger, kann nicht zugewiesen werden.  Die **const** oder `volatile` Qualifizierer, die in der memberfunktionsdeklaration verwendet anwenden, um die Klasseninstanz verweist **dies** im Rahmen dieser Funktion.  
   
  In der folgenden Tabelle wird näher erläutert, wie diese Modifizierer funktionieren.  
   
-### Semantik dieser Modifizierer  
+### <a name="semantics-of-this-modifiers"></a>Semantik dieser Modifizierer  
   
 |Modifizierer|Bedeutung|  
-|------------------|---------------|  
-|**const**|Kann Memberdaten nicht ändern; kann Memberfunktionen, nicht **const** sind, nicht aufrufen.|  
+|--------------|-------------|  
+|**const**|Kann Memberdaten nicht ändern. kann nicht aufgerufen werden, die nicht-Memberfunktionen **const**.|  
 |`volatile`|Memberdaten werden vom Arbeitsspeicher geladen, wenn darauf zugegriffen wird; deaktiviert bestimmte Optimierungen.|  
   
- Es ist nicht zulässig, ein **const**\-Objekt an eine Memberfunktion zu übergeben, die nicht **const** ist.  Außerdem ist es nicht zulässig, ein `volatile`\-Objekt an eine Memberfunktion zu übergeben, die nicht `volatile` ist.  
+ Es ist ein Fehler auf, übergeben Sie eine **const** Objekt auf eine Memberfunktion, die nicht **const**. Außerdem ist es nicht zulässig, ein `volatile`-Objekt an eine Memberfunktion zu übergeben, die nicht `volatile` ist.  
   
- Memberfunktionen, die als **const** deklariert sind, können Memberdaten nicht ändern – in solchen Funktionen ist der **this** Zeiger ein Zeiger auf ein **const**\-Objekt.  
+ Als Memberfunktionen deklariert **const** Memberdaten nicht ändern – in solchen Funktionen ist die **dies** ist ein Zeiger auf eine **const** Objekt.  
   
 > [!NOTE]
->  Konstruktoren und Destruktoren können nicht als **const** oder `volatile` deklariert werden.  Sie können jedoch auf **const**\- oder `volatile`\-Objekten aufgerufen werden.  
+>  Konstruktoren und Destruktoren können nicht als deklariert **const** oder `volatile`. Sie können jedoch werden aufgerufenen **const** oder `volatile` Objekte.  
   
-## Siehe auch  
- [C\+\+\-Schlüsselwörter](../cpp/keywords-cpp.md)   
- [Typ des this\-Zeigers](../misc/type-of-this-pointer.md)   
- [Argumentübereinstimmung und der this\-Zeiger](../misc/argument-matching-and-the-this-pointer.md)
+## <a name="see-also"></a>Siehe auch  
+ [Schlüsselwörter](../cpp/keywords-cpp.md)   
+ 

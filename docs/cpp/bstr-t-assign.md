@@ -1,34 +1,51 @@
 ---
-title: "_bstr_t::Assign | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_bstr_t::Assign"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Assign-Methode"
+title: '_bstr_t:: Assign | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _bstr_t::Assign
+dev_langs:
+- C++
+helpviewer_keywords:
+- Assign method
 ms.assetid: 2e209bbe-77ca-4598-86d5-6c2ea213f43c
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# _bstr_t::Assign
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 11bbf30deb45e33bbc52354b3b1b03ac26e8a4ae
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-**Microsoft\-spezifisch**  
+---
+# <a name="bstrtassign"></a>_bstr_t::Assign
+**Microsoft-spezifisch**  
   
- Kopiert ein `BSTR` in das `BSTR`, das von einem **\_**`bstr_t` umschlossen wird.  
+ Kopiert ein `BSTR` in der `BSTR` umschlossen eine **_**`bstr_t`.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void Assign(  
@@ -36,14 +53,14 @@ void Assign(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `s`  
- Eine `BSTR`, das von einem `_bstr_t` umschlossen in `BSTR` kopiert werden soll.  
+ Eine `BSTR`, das von einem `BSTR` umschlossen in `_bstr_t` kopiert werden soll.  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  `Assign` erstellt eine binäre Kopie, d. h., dass die gesamte Länge von `BSTR` unabhängig vom Inhalt kopiert wird.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // _bstr_t_Assign.cpp  
@@ -104,16 +121,19 @@ int main()
 }  
 ```  
   
-  **bstrWrapper \= einiger Text**  
-**bstrWrapper \= \(NULL\)**  
-**bstr \= einiger Text**  
-**bstrWrapper \= SysAllocedString**  
-**bstrWrapper \= einiger Text**  
-**bstrWrapper \= noch eine Zeichenfolge**  
-**bstrWrapper2 \= einiger Text**  
-**bstrWrapper \= ändernder BSTR**  
-**bstrWrapper2 \= einiger Text**   
-## END Microsoft\-spezifisch  
+```Output  
+bstrWrapper = some text  
+bstrWrapper = (null)  
+bstr = some text  
+bstrWrapper = SysAllocedString  
+bstrWrapper = some text  
+bstrWrapper = Yet another string  
+bstrWrapper2 = some text  
+bstrWrapper = changing BSTR  
+bstrWrapper2 = some text  
+```  
   
-## Siehe auch  
- [\_bstr\_t\-Klasse](../cpp/bstr-t-class.md)
+**Ende Microsoft-spezifisch**  
+  
+## <a name="see-also"></a>Siehe auch  
+ [_bstr_t-Klasse](../cpp/bstr-t-class.md)

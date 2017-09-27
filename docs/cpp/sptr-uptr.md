@@ -1,39 +1,56 @@
 ---
-title: "__sptr, __uptr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__uptr_cpp"
-  - "__sptr"
-  - "__uptr"
-  - "__sptr_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__sptr-Modifizierer"
-  - "__uptr-Modifizierer"
+title: __sptr __uptr | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __uptr_cpp
+- __sptr
+- __uptr
+- __sptr_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- __sptr modifier
+- __uptr modifier
 ms.assetid: c7f5f3b2-9106-4a0b-a6de-d1588ab153ed
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# __sptr, __uptr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 684b9533c57d7c0ca90f18bc82f2cf6ddb65bc8e
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-## Microsoft\-spezifisch  
- Verwenden Sie den `__sptr`\- oder `__uptr`\-Modifizierer in einer 32\-Bit\-Zeigerdeklaration, um anzugeben, wie der Compiler einen 32\-Bit\-Zeiger in einen 64\-Bit\-Zeiger konvertiert.  Ein 32\-Bit\-Zeiger wird beispielsweise konvertiert, wenn er einer 64\-Bit\-Zeigervariablen zugewiesen oder auf einer 64\-Bit\-Plattform dereferenziert wird.  
+---
+# <a name="sptr-uptr"></a>__sptr, __uptr
+## <a name="microsoft-specific"></a>Microsoft-spezifisch  
+ Verwenden Sie den `__sptr`- oder `__uptr`-Modifizierer in einer 32-Bit-Zeigerdeklaration, um anzugeben, wie der Compiler einen 32-Bit-Zeiger in einen 64-Bit-Zeiger konvertiert. Ein 32-Bit-Zeiger wird beispielsweise konvertiert, wenn er einer 64-Bit-Zeigervariablen zugewiesen oder auf einer 64-Bit-Plattform dereferenziert wird.  
   
- In der Microsoft\-Dokumentation zur Unterstützung von 64\-Bit\-Plattformen wird das wichtigste Bit eines 32\-Bit\-Zeigers gelegentlich als signiertes Bit bezeichnet.  Standardmäßig verwendet der Compiler eine Vorzeichenerweiterung, um einen 32\-Bit\-Zeiger in einen 64\-Bit\-Zeiger zu konvertieren.  Das heißt, die unwichtigsten 32 Bits des 64\-Bit\-Zeigers werden auf den Wert des 32\-Bit\-Zeigers festgelegt, und die wichtigsten 32 Bits werden auf den Wert des signierten Bits des 32\-Bit\-Zeigers festgelegt.  Diese Konvertierung ergibt korrekte Ergebnisse, wenn das signierte Bit 0 ist. Wenn das signierte Bit 1 ist, sind die Ergebnisse nicht korrekt.  Beispielsweise ergibt die 32\-Bit\-Adresse "0x7FFFFFFF" die entsprechende 64\-Bit\-Adresse "0x000000007FFFFFFF", die 32\-Bit\-Adresse "0x80000000" wurde jedoch inkorrekt auf "0xFFFFFFFF80000000" geändert.  
+ In der Microsoft-Dokumentation zur Unterstützung von 64-Bit-Plattformen wird das wichtigste Bit eines 32-Bit-Zeigers gelegentlich als signiertes Bit bezeichnet. Standardmäßig verwendet der Compiler eine Vorzeichenerweiterung, um einen 32-Bit-Zeiger in einen 64-Bit-Zeiger zu konvertieren. Das heißt, die unwichtigsten 32 Bits des 64-Bit-Zeigers werden auf den Wert des 32-Bit-Zeigers festgelegt, und die wichtigsten 32 Bits werden auf den Wert des signierten Bits des 32-Bit-Zeigers festgelegt. Diese Konvertierung ergibt korrekte Ergebnisse, wenn das signierte Bit 0 ist. Wenn das signierte Bit 1 ist, sind die Ergebnisse nicht korrekt. Beispielsweise ergibt die 32-Bit-Adresse "0x7FFFFFFF" die entsprechende 64-Bit-Adresse "0x000000007FFFFFFF", die 32-Bit-Adresse "0x80000000" wurde jedoch inkorrekt auf "0xFFFFFFFF80000000" geändert.  
   
- Der `__sptr`\-Modifizierer bzw. der signierte Zeiger gibt an, dass durch eine Zeigerkonvertierung die wichtigsten Bits eines 64\-Bit\-Zeigers auf das signierte Bit des 32\-Bit\-Zeigers festgelegt werden.  Der `__uptr`\-Modifizierer bzw. der nicht signierte Zeiger gibt an, dass durch eine Konvertierung die wichtigsten Bits auf Null festgelegt werden.  In den folgenden Deklarationen sind die `__sptr`\- und `__uptr`\-Modifizierer angegeben, die mit zwei nicht qualifizierten Zeigern, mit zwei mit dem [\_\_ptr32](../cpp/ptr32-ptr64.md)\-Typ qualifizierten Zeigern sowie einem Funktionsparameter verwendet werden.  
+ Der `__sptr`-Modifizierer bzw. der signierte Zeiger gibt an, dass durch eine Zeigerkonvertierung die wichtigsten Bits eines 64-Bit-Zeigers auf das signierte Bit des 32-Bit-Zeigers festgelegt werden. Der `__uptr`-Modifizierer bzw. der nicht signierte Zeiger gibt an, dass durch eine Konvertierung die wichtigsten Bits auf Null festgelegt werden. Die folgenden Deklarationen sind die `__sptr` und `__uptr` Modifizierern mit zwei nicht qualifizierten Zeigern verwendet zwei Zeiger qualifiziert, mit der [__ptr32](../cpp/ptr32-ptr64.md) Typ und einen Funktionsparameter.  
   
 ```  
 int * __sptr psp;  
@@ -43,19 +60,15 @@ int * __ptr32 __uptr pup32;
 void MyFunction(char * __uptr __ptr32 myValue);  
 ```  
   
- Verwenden Sie die `__sptr`\- und `__uptr`\-Modifizierer mit Zeigerdeklarationen.  Verwenden Sie die Modifizierer in der Position eines [Zeigertypqualifizierers](../c-language/pointer-declarations.md), der besagt, dass der Modifizierer dem Sternchen nachgestellt werden muss.  Sie können die Modifizierer mit den [Zeigern auf Member](../cpp/pointers-to-members.md) nicht verwenden.  Die Modifizierer beeinflussen nicht die Nichtzeigerdeklarationen.  
+ Verwenden Sie die `__sptr`- und `__uptr`-Modifizierer mit Zeigerdeklarationen. Verwenden Sie die Modifizierer an der Position einer [zeigertypqualifizierers](../c-language/pointer-declarations.md), dass der Modifizierer das Sternchen folgen muss. Sie können keine die Modifizierer mit [Zeiger auf Member](../cpp/pointers-to-members.md). Die Modifizierer beeinflussen nicht die Nichtzeigerdeklarationen.  
   
- Wenn Sie den `__sptr`\- oder `__uptr`\-Modifizierer nicht verwenden und [Compilerwarnung \(Stufe 2\) C4826](../error-messages/compiler-warnings/compiler-warning-level-2-c4826.md) aktivieren, gibt der Compiler bei der Konvertierung eines 32\-Bit\-Zeigers in einen 64\-Bit\-Wert eine Warnmeldung aus.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel werden 32-Bit-Zeiger deklariert, die die `__sptr`- und `__uptr`-Modifizierer verwenden, alle 32-Bit-Zeiger einer 64-Bit-Zeigervariablen zugewiesen und dann der Hexadezimalwert des jeweiligen 64-Bit-Zeigers angezeigt. Das Beispiel wird mit dem systemeigenen 64-Bit-Compiler kompiliert und auf einer 64-Bit-Plattform ausgeführt.  
   
-## Beispiel  
- Im folgenden Beispiel werden 32\-Bit\-Zeiger deklariert, die die `__sptr`\- und `__uptr`\-Modifizierer verwenden, alle 32\-Bit\-Zeiger einer 64\-Bit\-Zeigervariablen zugewiesen und dann der Hexadezimalwert des jeweiligen 64\-Bit\-Zeigers angezeigt.  Das Beispiel wird mit dem systemeigenen 64\-Bit\-Compiler kompiliert und auf einer 64\-Bit\-Plattform ausgeführt.  
-  
-```  
+```cpp  
 // sptr_uptr.cpp  
 // processor: x64  
 #include "stdio.h"  
-  
-// Warning C4826 is off by default.  
   
 int main()  
 {  
@@ -87,15 +100,19 @@ int main()
 }  
 ```  
   
-  **Zeigen Sie jeden 32\-Bit\-Zeiger an \(als unsignierten 64\-Bit\-Zeiger\):**  
-**p32d:       0000000087654321**  
-**p32s:       0000000087654321**  
-**p32u:       0000000087654321**  
-**Zeigen Sie den 64\-Bit\-Zeiger an, der aus dem jeweiligen 32\-Bit\-Zeiger erstellt wird:**  
-**p32d: p64 \= FFFFFFFF87654321**  
-**p32s: p64 \= FFFFFFFF87654321**  
-**p32u: p64 \= 0000000087654321**   
-## END Microsoft\-spezifisch  
+```Output  
+Display each 32-bit pointer (as an unsigned 64-bit pointer):  
+p32d:       0000000087654321  
+p32s:       0000000087654321  
+p32u:       0000000087654321  
   
-## Siehe auch  
- [Microsoft\-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md)
+Display the 64-bit pointer created from each 32-bit pointer:  
+p32d: p64 = FFFFFFFF87654321  
+p32s: p64 = FFFFFFFF87654321  
+p32u: p64 = 0000000087654321  
+```  
+  
+**Ende Microsoft-spezifisch**  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Microsoft-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md)

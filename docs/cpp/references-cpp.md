@@ -1,73 +1,90 @@
 ---
-title: "Verweise (C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Deklarationen, Referenzen"
-  - "Objekte [C++], Verweisen"
-  - "Referenzen"
-  - "Referenzen, Deklarieren"
-  - "Referenzen, Auf Zeiger"
-  - "Verweisen auf Objekte, Deklaratorsyntax"
+title: Verweise (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- objects [C++], referencing
+- references
+- references, to pointers
+- declarations, references
+- references, declaring
+- referencing objects, declarator syntax
 ms.assetid: 68156f7f-97a0-4b66-b26d-b25ade5e3bd8
 caps.latest.revision: 12
-caps.handback.revision: "10"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Verweise (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: fb208f61d2da9e7daa7a53ac68fdcdfcdf1acab4
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Ein Verweis, z. B. ein Zeiger ist, speichert die Adresse eines Objekts, das sich an anderer Stelle im Speicher befindet.  Im Gegensatz zu einem Zeiger kann sich ein Verweis nach der Initialisierung nicht auf ein anderes Objekt beziehen oder auf null gesetzt werden.  Es gibt zwei Arten von Verweisen: Lvalue\-Verweise, die sich auf benannte Variable beziehen und Rvalue\-Verweise, die sich auf ein [temporäres Objekt](../cpp/temporary-objects.md) beziehen.  Der &\-Operator gibt einen Lvalue\-Verweis und der & &\-Operator gibt einen Rvalue\-Verweis oder einen universellen Verweis \(Rvalue oder Lvalue\) je nach Kontext.  
+---
+# <a name="references-c"></a>Verweise (C++)
+Ein Verweis, z. B. ein Zeiger ist, speichert die Adresse eines Objekts, das sich an anderer Stelle im Speicher befindet. Im Gegensatz zu einem Zeiger kann sich ein Verweis nach der Initialisierung nicht auf ein anderes Objekt beziehen oder auf null gesetzt werden. Es gibt zwei Arten von verweisen: Lvalue-Verweise, die auf einer benannten Variablen und Rvalue-Verweise, die zum beziehen verweisen einer [temporäres Objekt](../cpp/temporary-objects.md). Der &-Operator gibt einen Lvalue-Verweis und der & &-Operator gibt einen Rvalue-Verweis oder einen universellen Verweis (Rvalue oder Lvalue) je nach Kontext.  
   
  Verweise können mit der folgenden Syntax deklariert werden:  
   
 ```  
-[storage-class-specifiers] [cv-qualifiers] type-specifiers   
+[storage-class-specifiers] [cv-qualifiers] type-specifiers   
 [ms-modifier] declarator [= expression];  
 ```  
   
- Jeder gültige Deklarator, der einen Verweis angibt, kann verwendet werden.  Sofern der Verweis kein Verweis auf den Funktions\- oder Arraytyp ist, gilt die folgende vereinfachte Syntax:  
+ Jeder gültige Deklarator, der einen Verweis angibt, kann verwendet werden. Sofern der Verweis kein Verweis auf den Funktions- oder Arraytyp ist, gilt die folgende vereinfachte Syntax:  
   
 ```  
-[storage-class-specifiers] [cv-qualifiers] type-specifiers [& or &&]   
+[storage-class-specifiers] [cv-qualifiers] type-specifiers [& or &&]   
 [cv-qualifiers] identifier [= expression];  
 ```  
   
  Verweise werden unter Verwendung dieser Reihenfolge deklariert:  
   
- 1.  Die Deklarationsspezifizierer:  
+ 1. Die Deklarationsspezifizierer:  
   
 -   Ein optionaler Speicherklassenbezeichner.  
   
--   Optionale **const**\- und\/oder `volatile`\-Qualifizierer  
+-   Optionale **const** und/oder `volatile` Qualifizierer.  
   
 -   Der Typspezifizierer: der Name eines Typs  
   
--   2.  Der Deklarator:  
+-   2. Der Deklarator:  
   
--   Ein optionaler Microsoft\-spezifischer Modifizierer.  Weitere Informationen finden Sie unter [Microsoft\-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md).  
+-   Ein optionaler Microsoft-spezifischer Modifizierer. Weitere Informationen finden Sie unter [Microsoft-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md).  
   
--   Der &\-Operator oder & &\-Operator.  
+-   Der &-Operator oder & &-Operator.  
   
--   Optionale **const**\- und\/oder `volatile`\-Qualifizierer  
+-   Optionale **const** und/oder `volatile` Qualifizierer.  
   
 -   Der Bezeichner.  
   
- 3.  Ein optionaler Initialisierer.  
+ 3. Ein optionaler Initialisierer.  
   
- Die komplexeren Deklaratorformen für Zeiger auf Arrays und Funktionen gelten auch für Verweise auf Arrays und Funktionen. Weitere Informationen finden Sie unter [Zeiger](../cpp/pointers-cpp.md) und [Deklaratoren](assetId:///8a7b9b51-92bd-4ac0-b3fe-0c4abe771838).  
+ Die komplexeren deklaratorformen für Zeiger auf Arrays und Funktionen auch für Verweise auf Arrays und Funktionen gelten finden Sie unter [Zeiger](../cpp/pointers-cpp.md) und [Deklaratoren](http://msdn.microsoft.com/en-us/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838).  
   
- Mehrere Deklaratoren und Initialisierer erscheinen möglicherweise in einer durch Trennzeichen getrennten Liste, die einem einzelnen Deklarationsspezifizierer folgt.  Zum Beispiel:  
+ Mehrere Deklaratoren und Initialisierer erscheinen möglicherweise in einer durch Trennzeichen getrennten Liste, die einem einzelnen Deklarationsspezifizierer folgt. Zum Beispiel:  
   
 ```  
 int &i;   
@@ -84,7 +101,7 @@ int &ref, *ptr, k;
   
  Beachten Sie im folgenden Programm, dass der Name des Objekts `Today` und der Verweis auf das Objekt `TodayRef` in Programmen identisch verwendet werden kann:  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // references.cpp  
@@ -107,18 +124,20 @@ int main() {
 }  
 ```  
   
-  **3**  
-**3**  
-**4**  
-**4**   
-## Kommentar  
+```Output  
+3  
+3  
+4  
+4  
+```  
+  
+## <a name="comment"></a>Kommentar  
  Themen in diesem Abschnitt:  
   
--   [Verweistyp\-Funktionsargumente](../cpp/reference-type-function-arguments.md)  
+-   [Verweistyp-Funktionsargumente](../cpp/reference-type-function-arguments.md)  
   
--   [Verweistyp\-Funktionsrückgaben](../cpp/reference-type-function-returns.md)  
+-   [Verweistyp-Funktionsrückgaben](../cpp/reference-type-function-returns.md)  
   
 -   [Verweise auf Zeiger](../cpp/references-to-pointers.md)  
   
-## Siehe auch  
- [Initialisieren von Verweisen](../misc/initializing-references.md)
+

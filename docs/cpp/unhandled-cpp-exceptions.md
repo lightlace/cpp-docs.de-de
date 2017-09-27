@@ -1,35 +1,52 @@
 ---
-title: "Nicht behandelte C++-Ausnahmen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C++-Ausnahmebehandlung, Nicht behandelte Ausnahmen"
-  - "catch-Schlüsselwort [C++], Handler nicht gefunden"
-  - "Ereignishandler, Nicht behandelte Ausnahmen"
-  - "Ausnahmen, Unbehandelt"
-  - "Nicht behandelte Ausnahmen"
+title: Nicht behandelte C++-Ausnahmen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- event handlers, unhandled exceptions
+- catch keyword [C++], handler not found
+- exceptions, unhandled
+- C++ exception handling, unhandled exceptions
+- unhandled exceptions
 ms.assetid: 13f09c53-9254-4407-9db9-14e730e047cc
 caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Nicht behandelte C++-Ausnahmen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 590dc46e5cf761f02ba85dba950c04a2da4df022
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Wenn kein entsprechender Handler \(oder Auslassungszeichen\-**catch**\-Handler\) für die aktuelle Ausnahme gefunden werden kann, wird die vordefinierte `terminate`\-Laufzeitfunktion aufgerufen. \(Sie können auch `terminate` in jedem Ihrer Handler explizit aufrufen.\) Der Standardvorgang von `terminate` besteht darin, `abort` aufzurufen.  Wenn `terminate` eine andere Funktion in Ihrem Programm aufrufen soll, bevor Sie die Anwendung beenden, rufen Sie die `set_terminate`\-Funktion mit dem Funktionsnamen auf, der als sein einzelnes Argument aufgerufen werden soll.  Sie können `set_terminate` an jedem Punkt im Programm aufrufen.  Die `terminate` \-Routine ruft immer die letzte Funktion auf, die für `set_terminate` als Argument angegeben wurde.  
+---
+# <a name="unhandled-c-exceptions"></a>Nicht behandelte C++-Ausnahmen
+Wenn kein entsprechender Handler (oder Auslassungszeichen- **catch** Handler) kann nicht gefunden werden, für die aktuelle Ausnahme, die die vordefinierten `terminate` -Laufzeit-Funktion wird aufgerufen. (Sie können auch `terminate` in jedem Ihrer Handler explizit aufrufen.) Der Standardvorgang von `terminate` besteht darin, `abort` aufzurufen. Wenn `terminate` eine andere Funktion in Ihrem Programm aufrufen soll, bevor Sie die Anwendung beenden, rufen Sie die `set_terminate`-Funktion mit dem Funktionsnamen auf, der als sein einzelnes Argument aufgerufen werden soll. Sie können `set_terminate` an jedem Punkt im Programm aufrufen. Die `terminate` -Routine ruft immer die letzte Funktion als Argument an `set_terminate`.  
   
-## Beispiel  
- Das folgende Beispiel löst eine `char *`\-Ausnahme aus, aber es enthält keinen Handler, der dazu vorgesehen ist, Ausnahmen des Typs `char *` zu erfassen.  Der Aufruf von `set_terminate` weist `terminate` an, `term_func` aufzurufen.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel löst eine `char *`-Ausnahme aus, aber es enthält keinen Handler, der dazu vorgesehen ist, Ausnahmen des Typs `char *` zu erfassen. Der Aufruf von `set_terminate` weist `terminate` an, `term_func` aufzurufen.  
   
 ```  
 // exceptions_Unhandled_Exceptions.cpp  
@@ -54,13 +71,13 @@ int main() {
 }  
 ```  
   
-## Ausgabe  
+## <a name="output"></a>Ausgabe  
   
 ```  
 term_func was called by terminate.  
 ```  
   
- Die `term_func`\-Funktion muss das Programm oder den aktuellen Thread beenden, idealerweise mit dem Aufruf von `exit`.  Wenn stattdessen eine Rückkehr zum Aufruf erfolgt, wird `abort` aufgerufen.  
+ Die `term_func`-Funktion muss das Programm oder den aktuellen Thread beenden, idealerweise mit dem Aufruf von `exit`. Wenn stattdessen eine Rückkehr zum Aufruf erfolgt, wird `abort` aufgerufen.  
   
-## Siehe auch  
- [C\+\+\-Ausnahmebehandlung](../cpp/cpp-exception-handling.md)
+## <a name="see-also"></a>Siehe auch  
+ [C++-Ausnahmebehandlung](../cpp/cpp-exception-handling.md)

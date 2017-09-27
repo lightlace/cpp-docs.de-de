@@ -1,32 +1,49 @@
 ---
-title: "Logischer AND-Operator: &amp;&amp;"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - "&&"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "&&-Operator"
-  - "AND-Operator"
-  - "Logischer AND-Operator"
+title: 'Logischer AND-Operator: &amp; &amp; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- '&&'
+dev_langs:
+- C++
+helpviewer_keywords:
+- logical AND operator
+- AND operator
+- '&& operator'
 ms.assetid: 50cfa664-a8c4-4b31-9bab-2f80d7cd2d1f
 caps.latest.revision: 8
-caps.handback.revision: "8"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Logischer AND-Operator: &amp;&amp;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 5a594efcc987fba69ceb17e7e09d10470adab75f
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-## Syntax  
+---
+# <a name="logical-and-operator-ampamp"></a>Logischer AND-Operator:&amp;&amp;
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -36,14 +53,14 @@ expression
   
 ```  
   
-## Hinweise  
- Der logische AND\-Operator \(**&&**\) gibt den Booleschen Wert mit **True** an, wenn beide Operanden **True** sind. Ansonsten ist der Wert **False**.  Die Operanden werden vor der Auswertung implizit in den Typ `bool` konvertiert. Das Ergebnis ist ein `bool`\-Typ.  Das logische AND weist eine Assoziativität von links nach rechts auf.  
+## <a name="remarks"></a>Hinweise  
+ Der logische AND-Operator (**&&**) gibt den booleschen Wert **"true"** Wenn beide Operanden **"true"** und gibt **"false"** andernfalls. Die Operanden werden vor der Auswertung implizit in den Typ `bool` konvertiert. Das Ergebnis ist ein `bool`-Typ. Das logische AND weist eine Assoziativität von links nach rechts auf.  
   
- Die Operanden für den logischen AND\-Operator müssen nicht vom gleichen Typ sein, aber sie müssen Ganzzahltypen oder Zeigertypen sein.  Die Operanden sind im Allgemeinen relationale oder Gleichheitsausdrücke.  
+ Die Operanden für den logischen AND-Operator müssen nicht vom gleichen Typ sein, aber sie müssen Ganzzahltypen oder Zeigertypen sein. Die Operanden sind im Allgemeinen relationale oder Gleichheitsausdrücke.  
   
- Der erste Operand wird vollständig ausgewertet und alle Nebeneffekte werden abgeschlossen, bevor die Auswertung des logischen AND\-Ausdrucks fortgesetzt wird.  
+ Der erste Operand wird vollständig ausgewertet und alle Nebeneffekte werden abgeschlossen, bevor die Auswertung des logischen AND-Ausdrucks fortgesetzt wird.  
   
- Der zweite Operand wird nur dann ausgewertet, wenn der erste Operand als true \(ungleich Null\) ausgewertet wird.  Diese Auswertung eliminiert die unnötige Auswertung des zweiten Operanden, wenn der Ausdruck der logischen AND\-Operation gleich false ist.  Mithilfe dieser Kurzschlussauswertung können Sie Dereferenzierungen durch NULL\-Zeiger verhindern, wie im folgenden Beispiel gezeigt:  
+ Der zweite Operand wird nur dann ausgewertet, wenn der erste Operand als true (ungleich Null) ausgewertet wird. Diese Auswertung eliminiert die unnötige Auswertung des zweiten Operanden, wenn der Ausdruck der logischen AND-Operation gleich false ist. Mithilfe dieser Kurzschlussauswertung können Sie Dereferenzierungen durch NULL-Zeiger verhindern, wie im folgenden Beispiel gezeigt:  
   
 ```  
 char *pch = 0;  
@@ -51,12 +68,12 @@ char *pch = 0;
 (pch) && (*pch = 'a');  
 ```  
   
- Wenn `pch` null \(0\) ist, wird die rechte Seite des Ausdrucks niemals ausgewertet.  Daher ist die Zuweisung durch einen NULL\-Zeiger unmöglich.  
+ Wenn `pch` null (0) ist, wird die rechte Seite des Ausdrucks niemals ausgewertet. Daher ist die Zuweisung durch einen NULL-Zeiger unmöglich.  
   
-## Operator\-Schlüsselwort für &&  
- Der **and**\-Operator ist die ausgeschriebene Variante von **&&**.  Es gibt zwei Möglichkeiten, wie Sie in Programmen auf den Operator **and** zugreifen können: Fügen Sie die Headerdatei `iso646.h` ein, oder kompilieren Sie mit der Compileroption [\/Za](../build/reference/za-ze-disable-language-extensions.md) \(Spracherweiterungen deaktivieren\).  
+## <a name="operator-keyword-for-"></a>Operator-Schlüsselwort für &&  
+ Die **und** Operator ist die textentsprechung von ** && **. Es gibt zwei Möglichkeiten, den Zugriff auf die **und** -Operator in Programmen: Fügen Sie die Headerdatei `iso646.h`, oder Kompilieren Sie mit der ["/ Za"](../build/reference/za-ze-disable-language-extensions.md) -Compileroption (spracherweiterungen deaktivieren).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // expre_Logical_AND_Operator.cpp  
@@ -78,8 +95,6 @@ int main() {
 }  
 ```  
   
-## Siehe auch  
- [Logische Operatoren](../misc/logical-operators.md)   
- [C\+\+\-Operatoren](../misc/cpp-operators.md)   
- [C\+\+\-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [C\-Operatoren \(logisch\)](../c-language/c-logical-operators.md)
+## <a name="see-also"></a>Siehe auch  
+ [Integrierte C++-Operatoren, Rangfolge und Assoziativität](cpp-built-in-operators-precedence-and-associativity.md) [integrierte C++-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C-Operatoren (logisch)](../c-language/c-logical-operators.md)

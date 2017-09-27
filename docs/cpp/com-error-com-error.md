@@ -1,35 +1,52 @@
 ---
-title: "_com_error::_com_error | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_com_error._com_error"
-  - "_com_error::_com_error"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_com_error-Methode"
+title: _com_error::_com_error | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _com_error._com_error
+- _com_error::_com_error
+dev_langs:
+- C++
+helpviewer_keywords:
+- _com_error method
 ms.assetid: 0a69e46c-caab-49ef-b091-eee401253ce6
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _com_error::_com_error
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 81efabf796d8d596326629af999f1932501befb5
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-**Microsoft\-spezifisch**  
+---
+# <a name="comerrorcomerror"></a>_com_error::_com_error
+**Microsoft-spezifisch**  
   
- Erstellt ein `_com_error`\-Objekt.  
+ Erstellt ein `_com_error`-Objekt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -43,33 +60,33 @@ _com_error(
 ) throw( );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `hr`  
- `HRESULT`\-Informationen.  
+ `HRESULT`-Informationen.  
   
  `perrinfo`  
- **IErrorInfo**\-Objekt.  
+ **IErrorInfo** Objekt.  
   
- **bool fAddRef\=false**  
- Veranlasst den Konstruktor, AddRef auf einer Nicht\-NULL\-**IErrorInfo**\-Schnittstelle aufzurufen.  Dies ermöglicht eine richtige Verweiszählung im typischen Fall, in dem Besitz der Schnittstelle in das `_com_error`\-Objekt übergeben wird, wie z. B.:  
+ **Bool fAddRef = "false"**  
+ Veranlasst den Konstruktor, AddRef auf einer nicht-Null Aufrufen **IErrorInfo** Schnittstelle. Dies ermöglicht eine richtige Verweiszählung im typischen Fall, in dem Besitz der Schnittstelle in das `_com_error`-Objekt übergeben wird, wie z. B.:  
   
 ```  
 throw _com_error(hr, perrinfo);  
 ```  
   
- Wenn Sie nicht möchten, dass der Code den Besitz an das `_com_error`\-Objekt überträgt, und wenn `AddRef` erforderlich ist, um **Release** im Destruktor `_com_error` zu versetzen, erstellen Sie das Objekt wie folgt:  
+ Wenn Sie nicht möchten, dass Ihr Code zum Übertragen des Besitzes auf die `_com_error` -Objekt, und die `AddRef` ist erforderlich, um den offset der **Version** in der `_com_error` Destruktor, erstellen Sie das Objekt wie folgt:  
   
 ```  
 _com_error err(hr, perrinfo, true);  
 ```  
   
  `that`  
- Ein vorhandenes `_com_error`\-Objekt.  
+ Ein vorhandenes `_com_error`-Objekt.  
   
-## Hinweise  
- Der erste Konstruktor erstellt ein neues Objekt, das ein `HRESULT`\- und ein optionales **IErrorInfo**\-Objekt erhält.  Der zweite Konstruktor erstellt eine Kopie eines vorhandenen `_com_error`\-Objekts.  
+## <a name="remarks"></a>Hinweise  
+ Der erste Konstruktor erstellt ein neues Objekt erhält eine `HRESULT` und optionale **IErrorInfo** Objekt. Der zweite Konstruktor erstellt eine Kopie eines vorhandenen `_com_error`-Objekts.  
   
- **END Microsoft\-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
- [\_com\_error\-Klasse](../cpp/com-error-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [_com_error-Klasse](../cpp/com-error-class.md)

@@ -1,32 +1,49 @@
 ---
-title: "Verweistyp-Funktionsargumente | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Argumente [C++], Funktion"
-  - "Funktionsargumente, Verweistyp"
-  - "Funktionsparameter, Verweistyp"
-  - "Funktionen [C++], Parameter"
-  - "Übergeben von Parametern, Verweistypargumente"
+title: Verweistyp Funktionsargumente | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- arguments [C++], function
+- functions [C++], paramters
+- function parameters, reference-type
+- function arguments, reference-type
+- passing parameters, reference-type arguments
 ms.assetid: 0a70e831-9e76-46c0-821d-aeba13d73cc0
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Verweistyp-Funktionsargumente
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: e74cbde44cad618720983fbda4a6cf9ce8b75dc1
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Häufig ist es effizienter, Verweise anstelle großer Objekte an Funktionen zu übergeben.  Dies ermöglicht es dem Compiler, die Adresse des Objekts zu übergeben, während die Syntax beibehalten wird, die verwendet worden wäre, um auf das Objekt zuzugreifen.  Betrachten Sie das folgende Beispiel, in dem die `Date`\-Struktur verwendet wird:  
+---
+# <a name="reference-type-function-arguments"></a>Verweistyp-Funktionsargumente
+Häufig ist es effizienter, Verweise anstelle großer Objekte an Funktionen zu übergeben. Dies ermöglicht es dem Compiler, die Adresse des Objekts zu übergeben, während die Syntax beibehalten wird, die verwendet worden wäre, um auf das Objekt zuzugreifen. Betrachten Sie das folgende Beispiel, in dem die `Date`-Struktur verwendet wird:  
   
 ```  
 // reference_type_function_arguments.cpp  
@@ -67,9 +84,9 @@ int main()
 }  
 ```  
   
- Der obige Code zeigt, dass auf Member einer durch Verweis übergebenen Struktur mit dem Memberauswahloperator \(**.**\) zugegriffen wird und nicht mit dem Operator für Zeiger auf Memberauswahl \(**–\>**\).  
+ Der vorhergehende Code zeigt, dass Member einer Struktur, die als Verweis übergebene zugegriffen werden, mit dem Memberauswahloperator (**.**) anstelle der Zeiger Objektmember-auswahloperators (**->**).  
   
- Obwohl die Verweistypen, die als Argumente übergeben wurden, die Syntax von Nichtzeigertypen überwachen, behalten sie ein wichtiges Merkmal der Zeigertypen bei: Sie sind änderbar, es sei denn, sie sind als **const** deklariert.  Da die Absicht des vorangehenden Codes nicht in der Änderung des `GDate` \-Objekts liegt, ist ein geeigneterer Funktionsprototyp:  
+ Obwohl als Verweistypen Argumente übergeben wurden die Syntax von nichtzeigertypen überwachen, behalten sie ein wichtiges Merkmal der Zeigertypen: sie sind änderbar, es sei denn, die als deklariert sind **const**. Da die Absicht des vorangehenden Codes nicht in der Änderung des `GDate` -Objekts liegt, ist ein geeigneterer Funktionsprototyp:  
   
 ```  
 long JulianFromGregorian( const Date& GDate );  
@@ -77,7 +94,7 @@ long JulianFromGregorian( const Date& GDate );
   
  Der Prototyp garantiert, dass die Funktion `JulianFromGregorian` das Argument nicht ändert.  
   
- Alle Funktionen, deren Prototyp einen Verweistyp übernehmen können, können stattdessen ein Objekt des gleichen Typs annehmen, da es sich um eine Standardkonvertierung von *typename* in *typename***&** handelt.  
+ Jeder Prototyp einen Verweistyp Funktion kann ein Objekt vom selben Typ in seiner Stelle akzeptieren, da es eine standardkonvertierung von ist *Typename* auf *Typename* ** & **.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verweise](../cpp/references-cpp.md)

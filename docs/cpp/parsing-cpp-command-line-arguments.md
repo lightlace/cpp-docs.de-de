@@ -1,31 +1,49 @@
 ---
-title: "Analysieren von C++-Befehlszeilenargumenten"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Anführungszeichen, Befehlszeilenargumente"
-  - "Doppelte Anführungszeichen"
-  - "Analysieren der Befehlszeile"
-  - "Analysieren, Befehlszeilen-Argumente"
-  - "Startcode, Analysieren von Befehlszeilenargumenten"
+title: Analysieren von C++-Befehlszeilenargumenten | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- quotation marks, command-line arguments
+- double quotation marks
+- command line, parsing
+- parsing, command-line arguments
+- startup code, parsing command-line arguments
 ms.assetid: e634e733-ac2f-4298-abe2-7e9288c94951
 caps.latest.revision: 8
-caps.handback.revision: "8"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Analysieren von C++-Befehlszeilenargumenten
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 5d3fbcd6b4e92d6e445d78a1b36efae319e472d7
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="parsing-c-command-line-arguments"></a>Analysieren von C++-Befehlszeilenargumenten
 **Microsoft-spezifisch**  
   
  Beim Interpretieren von Argumenten, die in der Befehlszeile des Betriebssystems angegeben werden, verwendet der Microsoft C/C++-Startcode die folgenden Regeln:  
@@ -36,7 +54,7 @@ manager: "ghogen"
   
 -   Eine in doppelte Anführungszeichen eingeschlossene Zeichenfolge ("*Zeichenfolge*") wird als einzelnes Argument enthaltenen Leerräume interpretiert. Eine Zeichenfolge in Anführungszeichen kann in ein Argument eingebettet sein.  
   
--   Ein doppeltes Anführungszeichen ein umgekehrter Schrägstrich vorangestellt (\\") wird als ein Zeichen literales Anführungszeichen (") interpretiert.  
+-   Wenn dem Anführungszeichen ein umgekehrter Schrägstrich (\\") vorangestellt wird, wird diese Zeichenfolge als literales Anführungszeichen (") interpretiert.  
   
 -   Ein umgekehrter Schrägstrich wird als solcher interpretiert, sofern er nicht unmittelbar vor einem Anführungszeichen steht.  
   
@@ -71,14 +89,14 @@ int main( int argc,      // Number of strings in array argv
   
 ### <a name="results-of-parsing-command-lines"></a>Ergebnisse der Analyse von Befehlszeilen  
   
-|Befehlszeileneingabe|argv[1]|Argv [2]|Argv [3]|  
+|Befehlszeileneingabe|argv[1]|argv[2]|argv[3]|  
 |-------------------------|---------------|---------------|---------------|  
 |`"abc" d e`|`abc`|`d`|`e`|  
 |`a\\b d"e f"g h`|`a\\b`|`de fg`|`h`|  
 |`a\\\"b c d`|`a\"b`|`c`|`d`|  
 |`a\\\\"b c" d e`|`a\\b c`|`d`|`e`|  
   
-## <a name="end-microsoft-specific"></a>Ende Microsoft-spezifisch  
+**Ende Microsoft-spezifisch**  
   
 ## <a name="see-also"></a>Siehe auch  
  [main: Programmstart](../cpp/main-program-startup.md)

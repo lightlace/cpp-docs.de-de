@@ -1,73 +1,90 @@
 ---
-title: "__alignof-Operator | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__alignof"
-  - "alignof"
-  - "alignas"
-  - "__alignof_cpp"
-  - "alignof_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__alignof-Schlüsselwort [C++]"
-  - "alignas"
-  - "Ausrichtung von Strukturen"
-  - "alignof"
-  - "Typen [C++], Ausrichtungsanforderungen"
+title: __alignof-Operator | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __alignof
+- alignof
+- alignas
+- __alignof_cpp
+- alignof_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- alignas
+- alignment of structures
+- __alignof keyword [C++]
+- alignof
+- types [C++], alignment requirements
 ms.assetid: acb1eed7-6398-40bd-b0c5-684ceb64afbc
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# __alignof-Operator
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 66ec7ff196a4f22aec043d8b76faf0189e05cd0f
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-C \+\+ 11 stellt die `alignof` Operator, der die Ausrichtung des angegebenen Typs in Bytes zurückgibt.  Zur maximalen Portabilität sollten Sie den „alignof“ des Operators statt des Microsoft\-spezifischen „\_\_alignof“\-Operators verwenden.  
+---
+# <a name="alignof-operator"></a>__alignof-Operator
+C ++ 11 stellt die `alignof` Operator, der die Ausrichtung des angegebenen Typs in Bytes zurückgibt. Zur maximalen Portabilität sollten Sie den „alignof“ des Operators statt des Microsoft-spezifischen „__alignof“-Operators verwenden.  
   
- **Microsoft\-spezifisch**  
+ **Microsoft-spezifisch**  
   
- Gibt einen Wert vom Typ **size\_t** zurück, der der Ausrichtungsanforderung des Typs entspricht.  
+ Gibt einen Wert vom Typ **Size_t** , die die ausrichtungsanforderung des Typs.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
-        __alignof(   
-   type    
+      __alignof(   
+   type    
 )  
 ```  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Zum Beispiel:  
   
 |Ausdruck|Wert|  
-|--------------|----------|  
-|**\_\_alignof \(char\)**|1|  
-|**\_\_alignof \(short\)**|2|  
-|**\_\_alignof \(int\)**|4|  
-|**\_\_alignof \(\_\_int64\)**|8|  
-|**\_\_alignof \(float\)**|4|  
-|**\_\_alignof \(double\)**|8|  
-|**\_\_alignof \(char\*\)**|4|  
+|----------------|-----------|  
+|**__alignof (Char)**|1|  
+|**__alignof (Short)**|2|  
+|**__alignof (Int)**|4|  
+|**__alignof ( \__int64)**|8|  
+|**__alignof (Float)**|4|  
+|**__alignof (Double)**|8|  
+|**__alignof (Char\* )**|4|  
   
- Der `__alignof`\-Wert entspricht dem `sizeof`\-Wert für Basistypen.  Betrachten Sie jedoch das Beispiel:  
+ Der `__alignof`-Wert entspricht dem `sizeof`-Wert für Basistypen. Betrachten Sie jedoch das Beispiel:  
   
 ```  
 typedef struct { int a; double b; } S;  
 // __alignof(S) == 8  
 ```  
   
- In diesem Fall ist der `__alignof`\-Wert die Ausrichtungsanforderung des größten Elements in der Struktur.  
+ In diesem Fall ist der `__alignof`-Wert die Ausrichtungsanforderung des größten Elements in der Struktur.  
   
  Entsprechend gilt:  
   
@@ -77,7 +94,7 @@ typedef __declspec(align(32)) struct { int a; } S;
   
  `__alignof(S)` ist gleich `32`.  
   
- Eine Verwendung für `__alignof` wäre als Parameter für eine Ihrer Speicherbelegungsroutinen.  Beispielsweise könnten Sie angesichts der folgenden definierten Struktur `S` eine Speicherbelegungsroutine mit dem Namen `aligned_malloc` aufrufen, um einen bestimmten Grenzwert mit Speicher zu belegen.  
+ Eine Verwendung für `__alignof` wäre als Parameter für eine Ihrer Speicherbelegungsroutinen. Beispielsweise könnten Sie angesichts der folgenden definierten Struktur `S` eine Speicherbelegungsroutine mit dem Namen `aligned_malloc` aufrufen, um einen bestimmten Grenzwert mit Speicher zu belegen.  
   
 ```  
 typedef __declspec(align(32)) struct { int a; double b; } S;  
@@ -91,18 +108,18 @@ S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
   
 -   [align](../cpp/align-cpp.md)  
   
--   [\_\_unaligned](../cpp/unaligned.md)  
+-   [__unaligned](../cpp/unaligned.md)  
   
--   [\/Zp \(Ausrichten des Strukturmembers\)](../build/reference/zp-struct-member-alignment.md)  
+-   [/ Zp (Strukturmembers)](../build/reference/zp-struct-member-alignment.md)  
   
--   [Beispiele für die Strukturausrichtung](../build/examples-of-structure-alignment.md) \(x64\-spezifisch\)  
+-   [Beispiele für die Strukturausrichtung](../build/examples-of-structure-alignment.md) (X64 bestimmte)  
   
  Weitere Informationen zu den Unterschieden bei der Ausrichtung im Code für x86 und x64 finden Sie unter:  
   
--   [Konflikt mit dem x86\-Compiler](../build/conflicts-with-the-x86-compiler.md)  
+-   [Konflikt mit dem x86-Compiler](../build/conflicts-with-the-x86-compiler.md)  
   
-## Ende Microsoft\-spezifisch  
+**Ende Microsoft-spezifisch**  
   
-## Siehe auch  
- [Ausdrücke mit unären Operatoren](../cpp/expressions-with-unary-operators.md)   
- [C\+\+\-Schlüsselwörter](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [Ausdrücke mit Unäroperatoren](../cpp/expressions-with-unary-operators.md)   
+ [Schlüsselwörter](../cpp/keywords-cpp.md)

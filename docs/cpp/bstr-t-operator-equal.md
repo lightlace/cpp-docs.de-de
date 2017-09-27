@@ -1,36 +1,53 @@
 ---
-title: "_bstr_t::operator ="
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_bstr_t::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "=-Operator, Mit spezifischen Visual C++-Objekten"
-  - "Operator =, bstr"
-  - "Operator=, bstr"
+title: _bstr_t::Operator = | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _bstr_t::operator=
+dev_langs:
+- C++
+helpviewer_keywords:
+- operator =, bstr
+- operator=, bstr
+- = operator, with specific Visual C++ objects
 ms.assetid: fb31bb1b-ce29-4388-b5fd-8dac830cf18a
 caps.latest.revision: 6
-caps.handback.revision: "6"
-ms.author: "mblome"
-manager: "ghogen"
----
-# _bstr_t::operator =
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 445c18ece9b998d5cfa75a1c9fe5bde3b60b2e52
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-**Microsoft\-spezifisch**  
+---
+# <a name="bstrtoperator-"></a>_bstr_t::operator =
+**Microsoft-spezifisch**  
   
- Weist einem vorhandenen `_bstr_t`\-Objekt einen neuen Wert zu.  
+ Weist einem vorhandenen `_bstr_t`-Objekt einen neuen Wert zu.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -48,23 +65,23 @@ _bstr_t& operator=(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  *s1*  
- Ein `_bstr_t`\-Objekt, das einem vorhandenen `_bstr_t`\-Objekt zugewiesen werden soll.  
+ Ein `_bstr_t`-Objekt, das einem vorhandenen `_bstr_t`-Objekt zugewiesen werden soll.  
   
  *s2*  
- Eine Multibyte\-Zeichenfolge, die einem vorhandenen `_bstr_t` Objekt zugewiesen werden soll.  
+ Eine Multibyte-Zeichenfolge, die einem vorhandenen `_bstr_t` Objekt zugewiesen werden soll.  
   
  `s3`  
- Eine Unicode\-Zeichenfolge, die einem vorhandenen `_bstr_t` Objekt zugewiesen werden soll.  
+ Eine Unicode-Zeichenfolge, die einem vorhandenen `_bstr_t` Objekt zugewiesen werden soll.  
   
  `var`  
- Ein `_variant_t`\-Objekt, das einem vorhandenen `_bstr_t`\-Objekt zugewiesen werden soll.  
+ Ein `_variant_t`-Objekt, das einem vorhandenen `_bstr_t`-Objekt zugewiesen werden soll.  
   
- **END Microsoft\-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
-## Beispiel  
- Unter [\_bstr\_t::Assign](../cpp/bstr-t-assign.md) finden Sie ein Beispiel für die Verwendung von `operator=`.  
+## <a name="example"></a>Beispiel  
+ Finden Sie unter [_bstr_t:: Assign](../cpp/bstr-t-assign.md) ein Beispiel der Verwendung von `operator=`.  
   
-## Siehe auch  
- [\_bstr\_t\-Klasse](../cpp/bstr-t-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [_bstr_t-Klasse](../cpp/bstr-t-class.md)

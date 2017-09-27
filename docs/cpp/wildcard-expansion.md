@@ -1,40 +1,57 @@
 ---
-title: "Platzhaltererweiterung | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_setargv"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_setargv-Funktion"
-  - "Sternchen-Platzhalter"
-  - "Befehlszeile, Verarbeiten von Argumenten"
-  - "Befehlszeile, Platzhalter"
-  - "Befehlszeilenplatzhalter"
-  - "Fragezeichen, Platzhalter"
+title: Platzhaltererweiterung | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _setargv
+dev_langs:
+- C++
+helpviewer_keywords:
+- asterisk wildcard
+- _setargv function
+- command line, processing arguments
+- command line, wildcards
+- command-line wildcards
+- question mark, wildcard
 ms.assetid: 1a543398-607b-4404-93d1-45d290bde638
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Platzhaltererweiterung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 779a788cae6523a48a82694e55edf3c1da5519d7
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-## Microsoft\-spezifisch  
- Sie können Platzhalter – das Fragezeichen \(?\) und das Sternchen \(\*\) – verwenden, um Dateinamen\- und Pfadargumente in der Befehlszeile anzugeben.  
+---
+# <a name="wildcard-expansion"></a>Platzhaltererweiterung
+## <a name="microsoft-specific"></a>Microsoft-spezifisch  
+ Sie können Platzhalter – das Fragezeichen (?) und das Sternchen (*) – verwenden, um Dateinamen- und Pfadargumente in der Befehlszeile anzugeben.  
   
- Befehlszeilenargumente werden durch eine Routine behandelt, die als **\_setargv** bezeichnet wird \(oder **\_wsetargv** in der Breitzeichen\-Umgebung\). Die Routine erweitert nicht standardmäßig Platzhalter in separate Zeichenfolgen im `argv`\-Zeichenfolgenarray.  Weitere Informationen über das Aktivieren von Platzhaltererweiterung finden Sie unter [Erweitern von Platzhalterargumenten](../c-language/expanding-wildcard-arguments.md).  
+ Befehlszeilenargumente werden durch eine Routine aufgerufen behandelt **_setargv** (oder **_wsetargv** in der Breitzeichen-Umgebung), wird standardmäßig erweitert nicht Platzhalter in separate Zeichenfolgen im die `argv`Array von Zeichenfolgen. Weitere Informationen zum Aktivieren der platzhaltererweiterung finden Sie unter [Erweitern von Platzhalter-Argumenten](../c-language/expanding-wildcard-arguments.md).  
   
-## END Microsoft\-spezifisch  
+**Ende Microsoft-spezifisch**  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [main: Programmstart](../cpp/main-program-startup.md)

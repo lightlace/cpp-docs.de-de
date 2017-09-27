@@ -1,43 +1,60 @@
 ---
-title: "delete-Operator (C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - "delete_cpp"
-  - "delete"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "delete-Schlüsselwort [C++]"
-  - "delete-Schlüsselwort [C++], Freigeben von Objekten"
-  - "delete-Schlüsselwort [C++], Syntax"
+title: "Löschen von Operator (C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- delete_cpp
+- delete
+dev_langs:
+- C++
+helpviewer_keywords:
+- delete keyword [C++], syntax
+- delete keyword [C++], deallocating objects
+- delete keyword [C++]
 ms.assetid: de39c900-3f57-489c-9598-dcb73c4b3930
 caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "mblome"
-manager: "ghogen"
----
-# delete-Operator (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: bfc2587b4d55ae0147adf797990139356d44cd30
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="delete-operator-c"></a>delete-Operator (C++)
 Gibt einen Speicherblock frei.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 [::] delete cast-expression  
 [::] delete [ ] cast-expression  
 ```  
   
-## Hinweise  
- Das *cast\-expression*\-Argument muss ein Zeiger auf einen Speicherblock sein, der vorher einem Objekt zugeordnet wurde, das mit dem [new\-Operator](../cpp/new-operator-cpp.md) erstellt wurde.  Der **delete**\-Operator weist ein Ergebnis vom Typ `void` auf und gibt daher keinen Wert zurück.  Zum Beispiel:  
+## <a name="remarks"></a>Hinweise  
+ Die *Umwandlungsausdruck* Argument muss ein Zeiger auf einen Block des Arbeitsspeichers, die zuvor für ein Objekt erstellt, mit der [new-Operator](../cpp/new-operator-cpp.md). Die **löschen** -Operator weist ein Ergebnis vom Typ `void` und daher keinen Wert zurückgibt. Zum Beispiel:  
   
 ```  
 CDialog* MyDialog = new CDialog;  
@@ -45,9 +62,9 @@ CDialog* MyDialog = new CDialog;
 delete MyDialog;  
 ```  
   
- Das Verwenden von **delete** für einen Zeiger auf ein Objekt, das nicht mit **new** zugeordnet ist, führt zu unvorhersehbaren Ergebnissen.  Sie können **delete** jedoch für einen Zeiger mit dem Wert 0 \(null\) verwenden.  Diese Bereitstellung bedeutet Folgendes: Wenn **new** bei einem Fehler 0 \(null\) zurückgibt, ist das Löschen des Ergebnisses eines **new**\-Vorgangs, bei dem ein Fehler aufgetreten ist, ungefährlich.  Weitere Informationen finden Sie unter [Die Operatoren new und delete](../cpp/new-and-delete-operators.md).  
+ Mit **löschen** für einen Zeiger auf ein Objekt, das nicht mit "" zugeordneten **neue** führt zu unvorhersehbaren Ergebnissen. Sie können allerdings verwenden **löschen** auf einen Zeiger mit dem Wert 0. Diese Bereitstellung bedeutet, dass, wenn **neue** gibt 0 zurück, bei einem Fehler, und löschen das Ergebnis eines Fehlers bei **neue** Vorgang harmlos ist. Finden Sie unter [die neue "und" delete](../cpp/new-and-delete-operators.md) für Weitere Informationen.  
   
- Die Operatoren **new** und **delete** können außerdem für integrierte Typen, einschließlich Arrays, verwendet werden.  Wenn `pointer` auf ein Array verweist, platzieren Sie leere Klammern vor `pointer`:  
+ Die **neue** und **löschen** Operatoren können auch für integrierte Typen, einschließlich Arrays verwendet werden. Wenn `pointer` auf ein Array verweist, platzieren Sie leere Klammern vor `pointer`:  
   
 ```  
 int* set = new int[100];  
@@ -55,14 +72,14 @@ int* set = new int[100];
 delete [] set;  
 ```  
   
- Durch das Verwenden des **delete**\-Operators auf einem Objekt wird dessen Speicher freigegeben.  Ein Programm, das einen Zeiger dereferenziert, nachdem das Objekt gelöscht wurde, kann zu unvorhersehbaren Ergebnissen führen oder abstürzen.  
+ Mithilfe der **löschen** Operator auf ein Objekt wird dessen Speicher freigegeben. Ein Programm, das einen Zeiger dereferenziert, nachdem das Objekt gelöscht wurde, kann zu unvorhersehbaren Ergebnissen führen oder abstürzen.  
   
- Wenn **delete** verwendet wird, um Arbeitsspeicher für ein C\+\+\-Klassenobjekt freizugeben, wird der Destruktor des Objekts aufgerufen, bevor der Speicher des Objekts freigegeben wird \(wenn das Objekt einen Destruktor aufweist\).  
+ Wenn **löschen** wird verwendet, um Arbeitsspeicher für ein C++-Klassenobjekt freizugeben, der Destruktor des Objekts wird aufgerufen, bevor der Speicher des Objekts freigegeben wird (wenn das Objekt einen Destruktor aufweist).  
   
- Wenn der Operand für den **delete**\-Operator ein änderbarer lvalue ist, ist dessen Wert nicht definiert, nachdem das Objekt gelöscht wird.  
+ Wenn der Operand für den **löschen** Operator ist ein änderbarer l-Wert, dessen Wert ist nicht definiert, nachdem das Objekt gelöscht wird.  
   
-## Verwenden von "delete"  
- Es gibt zwei syntaktische Varianten für den [delete\-Operator](../cpp/delete-operator-cpp.md): eine für einzelne Objekte und eine für Objektarrays.  Das folgende Codefragment zeigt, wie sich diese unterscheiden:  
+## <a name="using-delete"></a>Verwenden von "delete"  
+ Es gibt zwei syntaktische Varianten für den [delete-Operator](../cpp/delete-operator-cpp.md): eine für einzelne Objekte und die andere für Arrays von Objekten. Das folgende Codefragment zeigt, wie sich diese unterscheiden:  
   
 ```  
 // expre_Using_delete.cpp  
@@ -88,18 +105,19 @@ int main()
 }  
 ```  
   
- Die folgenden zwei Fälle führen zu undefinierten Ergebnissen: Verwenden der Arrayform von "delete \(delete \[ \]\)" für ein Objekt und Verwenden der Nichtarrayform von "delete" für ein Array.  
+ Die folgenden zwei Fälle führen zu undefinierten Ergebnissen: Verwenden der Arrayform von "delete (delete [ ])" für ein Objekt und Verwenden der Nichtarrayform von "delete" für ein Array.  
   
-## Beispiel  
- Beispiele zur Verwendung von **delete** finden Sie unter [new\-Operator](../cpp/new-operator-cpp.md).  
+## <a name="example"></a>Beispiel  
+ Beispiele für die Verwendung von **löschen**, finden Sie unter [new-Operator](../cpp/new-operator-cpp.md).  
   
-## Funktionsweise von „delete“  
- Der [delete](../cpp/delete-operator-cpp.md)\-Operator ruft die Funktion [operator delete](../misc/operator-delete-function.md) auf.  
+## <a name="how-delete-works"></a>Funktionsweise von „delete“  
+ Der Delete-Operator Ruft die Funktion **Delete-Operator**.  
   
- Für Objekte, die nicht den Klassentyp \([class](../cpp/class-cpp.md), [struct](../cpp/struct-cpp.md) oder [union](../cpp/unions.md)\) aufweisen, wird der globale delete\-Operator aufgerufen.  Für Objekte des Klassentyps wird der Name der Funktion zum Aufheben der Zuordnung im globalen Bereich aufgelöst, wenn der Löschausdruck mit dem unären Bereichsauflösungsoperator \(::\) beginnt.  Andernfalls ruft der delete\-Operator den Destruktor für ein Objekt vor dem Freigeben des Speichers auf \(wenn der Zeiger nicht NULL ist\).  Der delete\-Operator kann auf Basis einer einzelnen Klasse definiert werden; wenn keine solche Definition für eine bestimmte Klasse vorliegt, wird der globale delete\-Operator aufgerufen.  Wenn der Löschausdruck verwendet wird, um ein Klassenobjekt freizugeben, dessen statischer Typ einen virtuellen Destruktor aufweist, wird die Funktion zum Aufheben der Zuordnung vom virtuellen Destruktor des dynamischen Typs des Objekts aufgelöst.  
+ Für Objekte nicht vom Klassentyp ([Klasse](../cpp/class-cpp.md), [Struktur](../cpp/struct-cpp.md), oder [Union](../cpp/unions.md)), wird der globale Delete-Operator aufgerufen. Für Objekte des Klassentyps wird der Name der Funktion zum Aufheben der Zuordnung im globalen Bereich aufgelöst, wenn der Löschausdruck mit dem unären Bereichsauflösungsoperator (::) beginnt. Andernfalls ruft der delete-Operator den Destruktor für ein Objekt vor dem Freigeben des Speichers auf (wenn der Zeiger nicht NULL ist). Der delete-Operator kann auf Basis einer einzelnen Klasse definiert werden; wenn keine solche Definition für eine bestimmte Klasse vorliegt, wird der globale delete-Operator aufgerufen. Wenn der Löschausdruck verwendet wird, um ein Klassenobjekt freizugeben, dessen statischer Typ einen virtuellen Destruktor aufweist, wird die Funktion zum Aufheben der Zuordnung vom virtuellen Destruktor des dynamischen Typs des Objekts aufgelöst.  
   
-## Siehe auch  
- [Ausdrücke mit unären Operatoren](../cpp/expressions-with-unary-operators.md)   
- [C\+\+\-Schlüsselwörter](../cpp/keywords-cpp.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Ausdrücke mit Unäroperatoren](../cpp/expressions-with-unary-operators.md)   
+ [Stichwörter](../cpp/keywords-cpp.md)   
  [Operatoren "new" und "delete"](../cpp/new-and-delete-operators.md)   
- [operator delete\-Funktion](../misc/operator-delete-function.md)
+ 
+

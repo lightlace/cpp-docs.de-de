@@ -1,43 +1,60 @@
 ---
-title: "Verwenden von &quot;extern&quot; zur Angabe der Verkn&#252;pfung | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "extern"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Deklarationen, Extern"
-  - "extern-Schlüsselwort [C++], Verknüpfung zu Nicht-C++-Funktionen"
-  - "Externe Verknüpfung, Externer Modifizierer"
+title: "Mithilfe von \"extern\" zur Angabe der Verknüpfung | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- extern
+dev_langs:
+- C++
+helpviewer_keywords:
+- extern keyword [C++], linkage to non-C++ functions
+- declarations, external
+- external linkage, extern modifier
 ms.assetid: 1e2f0ae3-ae98-4410-85b5-222d6abc865a
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Verwenden von &quot;extern&quot; zur Angabe der Verkn&#252;pfung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: b17479bfda8dbe009d3b2381afc2d87819811bc5
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-## Syntax  
+---
+# <a name="using-extern-to-specify-linkage"></a>Verwenden von "extern" zur Angabe der Verknüpfung
+## <a name="syntax"></a>Syntax  
   
 ```  
   
-        extern string-literal { declaration-list }  
+      extern string-literal { declaration-list }  
 extern string-literal declaration  
 ```  
   
-## Hinweise  
- Das Schlüsselwort `extern` deklariert eine Variable oder Funktion und gibt an, dass sie eine externe Verknüpfung hat \(Ihr Name ist von Dateien aus sichtbar, mit Ausnahme der Datei, in der sie definiert wurde\).  Wenn eine Variable geändert wird, gibt `extern` an, dass die Variable eine statische Dauer hat \(sie wird zugeordnet, wenn das Programm beginnt, und die Zuordnung wird aufgehoben, wenn das Programm beendet wird\).  Die Variable oder Funktion können in einer anderen Quelldatei oder später in derselben Datei definiert werden.  Deklarationen von Variablen und Funktionen im Dateigültigkeitsbereich sind standardmäßig extern.  
+## <a name="remarks"></a>Hinweise  
+ Das Schlüsselwort `extern` deklariert eine Variable oder Funktion und gibt an, dass sie eine externe Verknüpfung hat (Ihr Name ist von Dateien aus sichtbar, mit Ausnahme der Datei, in der sie definiert wurde). Wenn eine Variable geändert wird, gibt `extern` an, dass die Variable eine statische Dauer hat (sie wird zugeordnet, wenn das Programm beginnt, und die Zuordnung wird aufgehoben, wenn das Programm beendet wird). Die Variable oder Funktion können in einer anderen Quelldatei oder später in derselben Datei definiert werden. Deklarationen von Variablen und Funktionen im Dateigültigkeitsbereich sind standardmäßig extern.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // specifying_linkage1.cpp  
@@ -58,12 +75,12 @@ void other() {
 }  
 ```  
   
- Wenn sie mit einer Zeichenfolge verwendet wird, gibt `extern` in C\+\+ an, dass die Bindungskonventionen einer anderen Sprache für die Deklaratoren verwendet werden.  Auf C\-Funktionen und \- Daten kann nur dann zugegriffen werden, wenn sie zuvor wie eine C\-Bindung deklariert wurden.  Allerdings müssen sie in einer separat kompilierten Übersetzungseinheit definiert sein.  
+ Wenn sie mit einer Zeichenfolge verwendet wird, gibt `extern` in C++ an, dass die Bindungskonventionen einer anderen Sprache für die Deklaratoren verwendet werden. Auf C-Funktionen und - Daten kann nur dann zugegriffen werden, wenn sie zuvor wie eine C-Bindung deklariert wurden. Allerdings müssen sie in einer separat kompilierten Übersetzungseinheit definiert sein.  
   
- Microsoft C\+\+ unterstützt die Zeichenfolgen **"C"** und **"C\+\+"** im *string\-literal*\-Feld.  Alle Standardincludedateien verwenden die Syntax `extern` "C", um die in C\+\+\-Programmen verwendeten Laufzeitbibliotheksfunktionen verwenden zu können.  
+ Microsoft C++ unterstützt die Zeichenfolgen **"C"** und **"C++"** in der *Zeichenfolgenliteral* Feld. Alle Standardincludedateien verwenden die Syntax `extern` "C", um die in C++-Programmen verwendeten Laufzeitbibliotheksfunktionen verwenden zu können.  
   
-## Beispiel  
- Das folgende Beispiel zeigt unterschiedliche Methoden, um Namen zu deklarieren, die eine C\-Verknüpfung haben:  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt unterschiedliche Methoden, um Namen zu deklarieren, die eine C-Verknüpfung haben:  
   
 ```  
 // specifying_linkage2.cpp  
@@ -103,7 +120,7 @@ extern "C" char GetChar( void ) {
 extern "C" int errno;  
 ```  
   
- Wenn eine Funktion über mehr als eine Verknüpfungsspezifikation verfügt, müssen sie übereinstimmen. Es ist ein Fehler, Funktionen sowohl mit C\- als auch mit C\+\+\-Bindung zu deklarieren.  Wenn darüber hinaus zwei Deklarationen für eine Funktion in einem Programm auftreten – eine mit einer Verknüpfungsspezifikation und eine ohne – muss die Deklaration mit der Verknüpfungsspezifikation die erste sein.  Alle redundanten Deklarationen von Funktionen, die bereits eine Verknüpfungsspezifikation haben, erhalten die in der ersten Deklaration angegebene Bindung.  Zum Beispiel:  
+ Wenn eine Funktion über mehr als eine Verknüpfungsspezifikation verfügt, müssen sie übereinstimmen. Es ist ein Fehler, Funktionen sowohl mit C- als auch mit C++-Bindung zu deklarieren. Wenn darüber hinaus zwei Deklarationen für eine Funktion in einem Programm auftreten – eine mit einer Verknüpfungsspezifikation und eine ohne – muss die Deklaration mit der Verknüpfungsspezifikation die erste sein. Alle redundanten Deklarationen von Funktionen, die bereits eine Verknüpfungsspezifikation haben, erhalten die in der ersten Deklaration angegebene Bindung. Zum Beispiel:  
   
 ```  
 extern "C" int CFunc1();  
@@ -118,11 +135,10 @@ extern "C" int CFunc2(); // Error: not the first declaration of
                          //  specifier.  
 ```  
   
- Funktionen und Objekte, die explizit als **static** innerhalb des Rumpfes eines zusammengesetzten Bindungsspezifizierers \(**{}**\) deklariert sind, werden als statische Funktionen oder Objekte behandelt. Der Bindungsspezifizierer wird ignoriert.  Andere Funktionen und Objekte verhalten sich so, als wären sie unter Verwendung des `extern`\-Schlüsselworts deklariert worden.  \(Weitere Informationen zu diesem Schlüsselwort erhalten Sie unter [Using extern to Specify Linkage](../cpp/using-extern-to-specify-linkage.md).\)  
+ Funktionen und Objekte explizit deklariert als **statische** im Hauptteil eines zusammengesetzten bindungsspezifizierers (**{}**) werden als statische Funktionen oder Objekte behandelt der Bindungsspezifizierer wird ignoriert. Andere Funktionen und Objekte verhalten sich so, als wären sie unter Verwendung des `extern`-Schlüsselworts deklariert worden. (Finden Sie unter [mithilfe von "extern" zur Angabe der Verknüpfung](../cpp/using-extern-to-specify-linkage.md) ausführliche Informationen zu den `extern` Schlüsselwort.)  
   
-## Siehe auch  
- [C\+\+\-Schlüsselwörter](../cpp/keywords-cpp.md)   
- [\(NOTINBUILD\)Linkage Specifications](assetId:///d2b0cff1-7798-4c38-9ac8-61c3bfe2bfb9)   
- [Speicherklassenspezifizierer "extern"](../c-language/extern-storage-class-specifier.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Stichwörter](../cpp/keywords-cpp.md)   
+ [Speicherklassenspezifizierer "extern" "](../c-language/extern-storage-class-specifier.md)   
  [Verhalten von Bezeichnern](../c-language/behavior-of-identifiers.md)   
  [Verknüpfung](../c-language/linkage.md)

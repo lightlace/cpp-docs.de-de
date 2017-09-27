@@ -1,33 +1,51 @@
 ---
-title: "&#220;berladungsaufl&#246;sung von Funktionsvorlagenaufrufen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Auflösung von Funktionsvorlagenüberladungen"
+title: "Überladungsauflösung von Funktionsvorlagenaufrufen | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- function templates overload resolution
 ms.assetid: a2918748-2cbb-4fc6-a176-e256f120bee4
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# &#220;berladungsaufl&#246;sung von Funktionsvorlagenaufrufen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
+ms.openlocfilehash: f5c4a8e6392bc5b4338738b56099adac268e7af1
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Eine Funktionsvorlage kann nicht auf Vorlagen basierende Funktionen des gleichen Namens überladen.  In diesem Szenario werden Funktionsaufrufe zuerst mithilfe der Vorlagenargumentableitung aufgelöst, um die Funktionsvorlage mit einer eindeutigen Spezialisierung zu instanziieren.  Wenn die Vorlagenargumentableitung fehlschlägt, werden die anderen Funktionsüberladungen zur Auflösung des Aufrufs in Erwägung gezogen.  Zu diesen anderen Überladungen, auch Kandidatensatz genannt, gehören nicht auf Vorlagen basierende Funktionen sowie andere instanziierte Funktionsvorlagen.  Wenn die Vorlagenargumentableitung erfolgreich ist, wird die generierte Funktion mit anderen Funktionen verglichen, um die beste Übereinstimmung nach den Regeln für die Überladungsauflösung zu bestimmen.  Weitere Informationen finden Sie unter [Überladung](../misc/overloading-cpp.md) und [Argumentübereinstimmung](../misc/argument-matching.md).  
+---
+# <a name="overload-resolution-of-function-template-calls"></a>Überladungsauflösung von Funktionsvorlagenaufrufen
+Eine Funktionsvorlage kann nicht auf Vorlagen basierende Funktionen des gleichen Namens überladen. In diesem Szenario werden Funktionsaufrufe zuerst mithilfe der Vorlagenargumentableitung aufgelöst, um die Funktionsvorlage mit einer eindeutigen Spezialisierung zu instanziieren. Wenn die Vorlagenargumentableitung fehlschlägt, werden die anderen Funktionsüberladungen zur Auflösung des Aufrufs in Erwägung gezogen. Zu diesen anderen Überladungen, auch Kandidatensatz genannt, gehören nicht auf Vorlagen basierende Funktionen sowie andere instanziierte Funktionsvorlagen. Wenn die Vorlagenargumentableitung erfolgreich ist, wird die generierte Funktion mit anderen Funktionen verglichen, um die beste Übereinstimmung nach den Regeln für die Überladungsauflösung zu bestimmen. Weitere Informationen finden Sie unter [Funktionsüberladung](function-overloading.md).  
   
-## Beispiel  
- Wenn eine nicht auf Vorlagen basierende Funktion ein gleich gute Übereinstimmung wie eine Vorlagenfunktion darstellt, wird die nicht auf Vorlagen basierende Funktion ausgewählt \(es sei denn, die Vorlagenargumente wurden explizit angegeben\), wie im Aufruf `f(1, 1)` im folgenden Beispiel gezeigt.  
+## <a name="example"></a>Beispiel
+
+ Wenn eine nicht auf Vorlagen basierende Funktion ein gleich gute Übereinstimmung wie eine Vorlagenfunktion darstellt, wird die nicht auf Vorlagen basierende Funktion ausgewählt (es sei denn, die Vorlagenargumente wurden explizit angegeben), wie im Aufruf `f(1, 1)` im folgenden Beispiel gezeigt.  
   
-```  
+```cpp
 // template_name_resolution9.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -50,13 +68,17 @@ int main()
 }  
 ```  
   
-  **f\(int, int\)**  
-**void f\(T1, T2\)**  
-**void f\(T1, T2\)**   
-## Beispiel  
+```Output  
+f(int, int)  
+void f(T1, T2)  
+void f(T1, T2)  
+```  
+  
+## <a name="example"></a>Beispiel
+
  Das folgende Beispiel veranschaulicht, dass die genau übereinstimmende Vorlagenfunktion bevorzugt wird, wenn die nicht auf Vorlagen basierende Funktionen eine Konvertierung erfordert.  
   
-```  
+```cpp
 // template_name_resolution10.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -80,8 +102,13 @@ int main()
 }  
 ```  
   
-  **void f\(T1, T2\)**   
-## Siehe auch  
+```Output  
+void f(T1, T2)  
+```  
+  
+## <a name="see-also"></a>Siehe auch
+
  [Namensauflösung](../cpp/templates-and-name-resolution.md)   
  [typename](../cpp/typename.md)   
- [Vorlagenargumentableitung](../Topic/Template%20Argument%20Deduction.md)
+ 
+

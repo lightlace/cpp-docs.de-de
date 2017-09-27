@@ -1,30 +1,47 @@
 ---
-title: "Gleitkomma-Koprozessor und Aufrufkonventionen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Gleitkomma-Coprozessor"
-  - "Gleitkommazahlen"
-  - "Gleitkommazahlen, Coprozessor"
+title: Gleitkomma-Coprozessor und Aufrufkonventionen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- floating-point numbers, coprocessor
+- floating-point coprocessor
+- floating-point numbers
 ms.assetid: 3cc6615a-b308-4cf7-9570-83e192a832b3
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Gleitkomma-Koprozessor und Aufrufkonventionen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 6d14f7f445064316c83b31e9b4cdc421d68d7255
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Wenn Sie Assemblyroutinen für den Fließkomma\-Koprozessor schreiben, müssen Sie das Fließkommasteuerwort beibehalten und den Koprozessorstapel bereinigen, es sei denn, Sie geben einen **float**\- oder **double**\-Wert zurück \(den die Funktion in ST\(0\) zurückgeben sollte\).  
+---
+# <a name="floating-point-coprocessor-and-calling-conventions"></a>Gleitkomma-Coprozessor und Aufrufkonventionen
+Wenn Sie Assemblyroutinen für den Fließkomma-Koprozessor Assembly schreiben sind, Sie müssen beibehalten fließkommasteuerwort und den koprozessorstapel bereinigen, es sei denn, die Sie zurückgeben einer **"float"** oder **doppelte** Wert (die die Funktion in St(0) zurückgeben sollte.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Aufrufkonventionen](../cpp/calling-conventions.md)

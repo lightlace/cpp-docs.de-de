@@ -1,48 +1,64 @@
 ---
-title: "tile_static-Schl&#252;sselwort | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "tile_static_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tile_static-Schlüsselwort"
+title: "Tile_static-Schlüsselwort | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- tile_static_CPP
+dev_langs:
+- C++
+helpviewer_keywords:
+- tile_static keyword
 ms.assetid: d78384d4-65d9-45cf-b3df-7e904f489d06
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# tile_static-Schl&#252;sselwort
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 499aa37bb082636dd2947fa6f64a5ecc3cdd5e10
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Das Schlüsselwort `tile_static` wird verwendet, um eine Variable zu deklarieren, auf die von allen Threads in einer Kachel mit Threads zugegriffen werden kann.  Die Lebensdauer der Variable beginnt, wenn die Ausführung den Punkt der Deklaration erreicht, und sie endet dann, wenn die Kernelfunktion zurückgegeben wird.  Weitere Informationen über die Verwendung von Kacheln finden Sie unter [Verwenden von Kacheln](../parallel/amp/using-tiles.md).  
+---
+# <a name="tilestatic-keyword"></a>tile_static-Schlüsselwort
+Das Schlüsselwort `tile_static` wird verwendet, um eine Variable zu deklarieren, auf die von allen Threads in einer Kachel mit Threads zugegriffen werden kann. Die Lebensdauer der Variable beginnt, wenn die Ausführung den Punkt der Deklaration erreicht, und sie endet dann, wenn die Kernelfunktion zurückgegeben wird. Weitere Informationen zur Verwendung von Kacheln finden Sie unter [mithilfe von Kacheln](../parallel/amp/using-tiles.md).  
   
  Das Schlüsselwort `tile_static` weist die folgenden Einschränkungen auf.  
   
 -   Es kann nur für Variablen verwendet werden, die sich in einer Funktion befinden, die den Modifizierer `restrict(amp)` aufweist.  
   
--   Es kann nicht für Variablen verwendet werden, die Zeiger\- oder Verweistypen sind.  
+-   Es kann nicht für Variablen verwendet werden, die Zeiger- oder Verweistypen sind.  
   
--   Eine `tile_static`\-Variable kann keinen Initialisierer aufweisen.  Standardkonstruktoren und \-destruktoren werden nicht automatisch aufgerufen.  
+-   Eine `tile_static`-Variable kann keinen Initialisierer aufweisen. Standardkonstruktoren und -destruktoren werden nicht automatisch aufgerufen.  
   
--   Der Wert einer nicht initialisierten `tile_static`\-Variablen ist nicht definiert.  
+-   Der Wert einer nicht initialisierten `tile_static`-Variablen ist nicht definiert.  
   
--   Wenn eine `tile_static`\-Variable in einem Aufrufdiagramm deklariert wird, die durch einen nicht angeordneten Aufruf von `parallel_for_each` beginnt, wird eine Warnung ausgegeben, und das Verhalten der Variablen ist nicht definiert.  
+-   Wenn eine `tile_static`-Variable in einem Aufrufdiagramm deklariert wird, die durch einen nicht angeordneten Aufruf von `parallel_for_each` beginnt, wird eine Warnung ausgegeben, und das Verhalten der Variablen ist nicht definiert.  
   
-## Beispiel  
- Das folgende Beispiel zeigt, wie eine `tile_static`\-Variable verwendet werden kann, um Daten über mehrere Threads in einer Kachel zu sammeln.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt, wie eine `tile_static`-Variable verwendet werden kann, um Daten über mehrere Threads in einer Kachel zu sammeln.  
   
 ```cpp  
-  
 // Sample data:  
 int sampledata[] = {  
     2, 2, 9, 7, 1, 4,  
@@ -154,8 +170,8 @@ for (int i = 0; i < 4; i++) {
   
 ```  
   
-## Siehe auch  
- [Microsoft\-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md)   
- [Übersicht über C\+\+ AMP](../parallel/amp/cpp-amp-overview.md)   
- [parallel\_for\_each\-Funktion \(C\+\+ AMP\)](../Topic/parallel_for_each%20Function%20\(C++%20AMP\).md)   
+## <a name="see-also"></a>Siehe auch  
+ [Microsoft-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md)   
+ [Übersicht über C++ AMP](../parallel/amp/cpp-amp-overview.md)   
+ [Parallel_for_each-Funktion (C++-AMP)](../parallel/amp/reference/concurrency-namespace-functions-amp.md#parallel_for_each)   
  [Exemplarische Vorgehensweise: Matrixmultiplikation](../parallel/amp/walkthrough-matrix-multiplication.md)

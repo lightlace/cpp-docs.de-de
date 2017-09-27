@@ -1,34 +1,51 @@
 ---
-title: "Standardargumente | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Argumente [C++], Standard"
-  - "Argumente [C++], Funktion"
-  - "Deklarieren von Funktionen, Deklaratoren"
-  - "Standardargumente"
-  - "Standardwerte [C++], Argumente"
-  - "Funktionsdeklaratoren"
-  - "Funktionen [C++], Standardargumente"
+title: Standardargumente | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- arguments [C++], function
+- function declarators
+- functions [C++], default arguments
+- declaring functions, declarators
+- default arguments
+- arguments [C++], default
+- defaults [C++], arguments
 ms.assetid: d32cf516-05cb-4d4d-b169-92f5649fdfa2
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Standardargumente
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: b14cd3b6ff1386ab2484b8a424c6ef2ceee1cd85
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-In vielen Fällen haben Funktionen Argumente, die so selten verwendet werden, dass ein Standardwert genügt.  Für dieses Szenario ermöglicht die Standardargumentfunktion, nur die Argumente für eine Funktion anzugeben, die für einen bestimmten Aufruf von Bedeutung sind.  Um dieses Konzept zu veranschaulichen, betrachten Sie das Beispiel unter [Function Overloading](../cpp/function-overloading.md).  
+---
+# <a name="default-arguments"></a>Standardargumente
+In vielen Fällen haben Funktionen Argumente, die so selten verwendet werden, dass ein Standardwert genügt. Für dieses Szenario ermöglicht die Standardargumentfunktion, nur die Argumente für eine Funktion anzugeben, die für einen bestimmten Aufruf von Bedeutung sind. Um dieses Konzept zu veranschaulichen, betrachten Sie das Beispiel [Funktionsüberladung](../cpp/function-overloading.md).  
   
 ```  
 // Prototype three print functions.  
@@ -47,7 +64,7 @@ int print( double dvalue, int prec=2 );  // Print a double with a
 //  given precision.  
 ```  
   
- Die Implementierung der Funktion `print` ist leicht verändert, um die Tatsache widerzuspiegeln, dass es nur eine solche Funktion für den Typ **double** gibt:  
+ Die Implementierung der `print` Funktion ist leicht verändert, um die Tatsache widerzuspiegeln, dass nur eine solche Funktion für den Typ vorhanden ist **doppelte**:  
   
 ```  
 // default_arguments.cpp  
@@ -80,7 +97,7 @@ int print( double dvalue, int prec ) {
 }  
 ```  
   
- Um die neue `print`\-Funktion aufrufen, verwenden Sie Code wie den folgenden:  
+ Um die neue `print`-Funktion aufrufen, verwenden Sie Code wie den folgenden:  
   
 ```  
 print( d );    // Precision of 2 supplied by default argument.  
@@ -90,13 +107,13 @@ print( d, 0 ); // Override default argument to achieve other
   
  Beachten Sie diese Punkte, wenn Standardargumente verwendet werden:  
   
--   Standardargumente werden nur in Funktionsaufrufen verwendet, in denen nachfolgende Argumente ausgelassen werden – sie müssen die letzten Argumente sein.  Daher ist der folgende Code ungültig:  
+-   Standardargumente werden nur in Funktionsaufrufen verwendet, in denen nachfolgende Argumente ausgelassen werden – sie müssen die letzten Argumente sein. Daher ist der folgende Code ungültig:  
   
     ```  
     int print( double dvalue = 0.0, int prec );  
     ```  
   
--   Ein Standardargument kann nicht in späteren Deklarationen neu definiert werden, auch wenn die Neudefinition mit dem Original identisch ist.  Daher generiert der folgende Code einen Fehler:  
+-   Ein Standardargument kann nicht in späteren Deklarationen neu definiert werden, auch wenn die Neudefinition mit dem Original identisch ist. Daher generiert der folgende Code einen Fehler:  
   
     ```  
     // Prototype for print function.  
@@ -115,11 +132,11 @@ print( d, 0 ); // Override default argument to achieve other
   
 -   Zusätzliche Standardargumente können durch neuere Deklarationen hinzugefügt werden.  
   
--   Standardargumente können für Zeiger auf Funktionen bereitgestellt werden.  Zum Beispiel:  
+-   Standardargumente können für Zeiger auf Funktionen bereitgestellt werden. Zum Beispiel:  
   
     ```  
     int (*pShowIntVal)( int i = 0 );  
     ```  
   
-## Siehe auch  
- [C\+\+\-Deklaratoren \(abstrakt\)](assetId:///e7e18c18-0cad-4450-942b-d27e1d4dd088)
+## <a name="see-also"></a>Siehe auch  
+ 

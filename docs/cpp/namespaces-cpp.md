@@ -41,13 +41,13 @@ ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: deb5926f15e4efad4378a9930f1e353e9af58516
 ms.contentlocale: de-de
-ms.lasthandoff: 09/23/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="namespaces-c"></a>Namespaces (C++)
-A namespace is a declarative region that provides a scope to the identifiers (the names of types, functions, variables, etc) inside it. Namespaces are used to organize code into logical groups and to prevent name collisions that can occur especially when your code base includes multiple libraries. All identifiers at namespace scope are visible to one another without qualification. Identifiers outside the namespace can access the members by using the fully qualified name for each identifier, for example `std::vector<std::string> vec;`, or else by a [using Declaration](../cpp/using-declaration.md) for a single identifier (`using std::string`), or a [using Directive](../cpp/namespaces-cpp.md#using_directives) for all the identifiers in the namespace (`using namespace std;`). Code in header files should always use the fully qualified namespace name.  
+Ein Namespace ist ein deklarativer Bereich, der einen Gültigkeitsbereich für die darin enthaltenen Bezeichner darstellt (die Namen von Typen, Funktionen, Variablen usw.). Namespaces werden verwendet, um Code in logischen Gruppen zu organisieren und Namenskonflikte zu vermeiden, die insbesondere dann auftreten können, wenn die Codebasis mehrere Bibliotheken enthält. Alle Bezeichner im Gültigkeitsbereich des Namespaces sind ohne Qualifizierung füreinander sichtbar. Bezeichner außerhalb des Namespaces können auf die Member zugreifen, z. B. den vollqualifizierten Namen für jeden Bezeichner mit `std::vector<std::string> vec;`, oder ansonsten durch eine [using-Deklaration](../cpp/using-declaration.md) für einen einzelnen Bezeichner (`using std::string`), oder eine [using-Direktive](../cpp/namespaces-cpp.md#using_directives) für alle Bezeichner im Namespace (`using namespace std;`). Der Code in Headerdateien muss immer den vollqualifizierten Namespacenamen verwenden.  
   
- The following example shows a namespace declaration and three ways that code outside the namespace can accesses their members.  
+ Das folgende Beispiel zeigt eine Namespacedeklaration und drei Verfahren, mit denen Code außerhalb des Namespaces auf die Member zugreifen kann.  
   
 ```cpp  
 namespace ContosoData  
@@ -61,7 +61,7 @@ namespace ContosoData
 }  
 ```  
   
- Use the fully qualified name:  
+ Verwendung des vollqualifizierten Namens:  
   
 ```cpp  
 ContosoData::ObjectManager mgr;  
@@ -69,7 +69,7 @@ mgr.DoSomething();
 ContosoData::Func(mgr);  
 ```  
   
- Use a using declaration to bring one identifier into scope:  
+ Verwendung einer using-Deklaration, um einen Bezeichner in den Gültigkeitsbereich einzubinden:  
   
 ```cpp  
 using ContosoData::ObjectManager;  
@@ -78,7 +78,7 @@ mgr.DoSomething();
   
 ```  
   
- Use a using directive to bring everything in the namespace into scope:  
+ Verwendung einer using-Anweisung, um den gesamten Namespaceinhalt in den Gültigkeitsbereich einzubinden:  
   
 ```cpp  
 using namespace ContosoData;
@@ -89,16 +89,16 @@ Func(mgr);
   
 ```  
   
-## <a id="using_directives"></a> using directives  
- The `using` directive allows all the names in a **namespace** to be used without the *namespace-name* as an explicit qualifier. Use a using directive in an implementation file (i.e. *.cpp) if you are using several different identifiers in a namespace; if you are just using one or two identifiers, then consider a using declaration to only bring those identifiers into scope and not all the identifiers in the namespace. If a local variable has the same name as a namespace variable, the namespace variable is hidden. It is an error to have a namespace variable with the same name as a global variable.  
+## <a id="using_directives"></a>using-Direktiven  
+ Die `using` Richtlinie ermöglicht die Verwendung aller Namen in einem **Namespace** , ohne dass die *Namespacename* als expliziter Qualifizierer. Verwenden Sie eine Richtlinie in einer Implementierungsdatei (d. h. *.cpp), wenn Sie mehrere verschiedene Bezeichner in einem Namespace; verwenden Wenn Sie nur ein oder zwei Bezeichner verwenden, sollten Sie eine using Deklaration, um nur diese Bezeichner in den Bereich und nicht alle Bezeichner im Namespace einzubinden. Wenn eine lokale Variable denselben Namen wie eine Namespacevariable besitzt , wird die Namespacevariable ausgeblendet. Es ist ein Fehler, wenn eine Namespacevariable mit dem gleichen Namen wie eine globale Variable vorliegt.  
   
 > [!NOTE]
->  A using directive can be placed at the top of a .cpp file (at file scope), or inside a class or function definition.  
+>  Eine using-Direktive kann am Anfang einer CPP-Datei (im Dateigültigkeitsbereich) platziert werden oder innerhalb einer Klassen- oder Funktionsdefinition.  
 >   
->  In general, avoid putting using directives in header files (*.h) because any file that includes that header will bring everything in the namespace into scope, which can cause name hiding and name collision problems that are very difficult to debug. Always use fully qualified names in a header file. If those names get too long, you can use a namespace alias to shorten them. (See below.)  
+>  Vermeiden Sie generell das Einfügen von using-Direktiven in Headerdateien (*.h), da jede Datei, die diesen Header enthält, den gesamten Namespaceinhalt in den Gültigkeitsbereich einbinden kann; dies kann dazu führen, dass Probleme mit ausgeblendeten Namen und Namenskonflikte auftreten, die sehr schwer zu beheben sind. Verwenden Sie immer vollqualifizierte Namen in einer Headerdatei. Wenn diese Namen zu lang werden, können Sie einen Namespacealias verwenden, um sie zu kürzen. (Siehe unten.)  
   
-## <a name="declaring-namespaces-and-namespace-members"></a>Declaring namespaces and namespace members  
- Typically, you declare a namespace in a header file. If your function implementations are in a separate file, then qualify the function names, as in this example.  
+## <a name="declaring-namespaces-and-namespace-members"></a>Deklarieren von Namespaces und Namespacemembern  
+ In der Regel deklarieren Sie einen Namespace in einer Headerdatei. Wenn sich die Funktionsimplementierungen in einer separaten Datei befinden, qualifizieren Sie die Funktionsnamen, wie in diesem Beispiel gezeigt.  
   
 ```cpp  
 //contosoData.h   
@@ -111,7 +111,7 @@ namespace ContosoDataServer
 }  
 ```  
   
- Function implementations in contosodata.cpp should use the fully qualified name, even if you place a `using` directive at the top of the file:  
+ Funktionsimplementierungen in contosodata.cpp sollten den vollqualifizierten Namen verwenden, selbst wenn Sie eine `using` -Direktive am Anfang der Datei:  
   
 ```cpp  
 #include "contosodata.h"  
@@ -126,9 +126,9 @@ void ContosoDataServer::Foo() // use fully-qualified name here
 int ContosoDataServer::Bar(){return 0;}  
 ```  
   
- A namespace can be declared in multiple blocks in a single file, and in multiple files. The compiler joins the parts together during preprocessing and the resulting namespace contains all the members declared in all the parts. An example of this is the std namespace which is declared in each of the header files in the standard library.  
+ Ein Namespace kann in mehreren Blöcken in einer einzelnen Datei oder in mehreren Dateien deklariert werden. Der Compiler verbindet die Teile während der Vorverarbeitung, und der resultierende Namespace enthält alle Member, die in allen Teilen deklariert sind. Ein Beispiel hierfür ist der std-Namespace, der in jeder der Headerdateien in der Standardbibliothek deklariert wird.  
   
- Members of a named namespace can be defined outside the namespace in which they are declared by explicit qualification of the name being defined. However, the definition must appear after the point of declaration in a namespace that encloses the declaration's namespace. For example:  
+ Member eines benannten Namespaces können außerhalb des Namespaces definiert werden, in denen sie durch explizite Qualifizierung des definierten Namens deklariert werden. Allerdings muss sich die Definition nach der Deklaration in einem Namespace befinden, der den Namespace der Deklaration einschließt. Zum Beispiel:  
   
 ```cpp  
 // defining_namespace_members.cpp  
@@ -146,16 +146,16 @@ namespace V {
 }  
 ```  
   
- This error can occur when namespace members are declared across multiple header files, and you have not included those headers in the correct order.  
+ Dieser Fehler kann auftreten, wenn Namespacemember über mehrere Headerdateien deklariert werden und Sie diese Header nicht in der richtigen Reihenfolge eingeschlossen haben.  
   
-## <a name="the-global-namespace"></a>The global namespace  
- If an identifier is not declared in an explicit namespace, it is part of the implicit global namespace. In general, try to avoid making declarations at global scope when possible, except for the entry point [main Function](../c-language/main-function-and-program-execution.md), which is required to be in the global namespace. To explicitly qualify a global identifier, use the scope resolution operator with no name, as in `::SomeFunction(x);`. This will differentiate the identifier from anything with the same name in any other namespace, and it will also help to make your code easier for others to understand.  
+## <a name="the-global-namespace"></a>Der globale Namespace  
+ Wenn ein Bezeichner nicht in einem expliziten Namespace deklariert ist, ist er Teil des impliziten globalen Namespaces. Generell keine Deklarationen im globalen Gültigkeitsbereich, wenn möglich, mit Ausnahme des Einstiegspunkts [Hauptfunktion](../c-language/main-function-and-program-execution.md), das erforderlich ist, im globalen Namespace befinden. Um einen globalen Bezeichner explizit zu qualifizieren, verwenden Sie den Bereichsauflösungsoperator ohne Namen, wie in `::SomeFunction(x);`. Dadurch wird der Bezeichner von allen anderen Elementen gleichen Namens in allen anderen Namespaces unterschieden, und es vereinfacht außerdem das Verständnis Ihres Codes für andere.  
   
-## <a name="the-std-namespace"></a>The std namespace  
- All C++ standard library types and functions are declared in the `std` namespace or namespaces nested inside `std`.  
+## <a name="the-std-namespace"></a>Der Namespace "std"  
+ Alle C++-Standardbibliothekstypen und Funktionen werden deklariert, der `std` Namespace oder Namespaces geschachtelt `std`.  
   
-## <a name="nested-namespaces"></a>Nested namespaces  
- Namespaces may be nested. An ordinary nested namespace has unqualified access to its parent’s members, but the parent members do not have unqualified access to the nested namespace (unless it is declared as inline), as shown in the following example:  
+## <a name="nested-namespaces"></a>Geschachtelte Namespaces  
+ Namespaces können geschachtelt werden. Ein gewöhnlicher geschachtelter Namespace hat nicht qualifizierten Zugriff auf seine übergeordnete Member, aber die übergeordneten Member haben keinen nicht qualifizierten Zugriff auf den geschachtelten Namespace (es sei denn, er ist als Inline deklariert), wie im folgenden Beispiel gezeigt:  
   
 ```cpp  
 namespace ContosoDataServer  
@@ -174,10 +174,10 @@ namespace ContosoDataServer
 }  
 ```  
   
- Ordinary nested namespaces can be used to encapsulate internal implementation details that are not part of the public interface of the parent namespace.  
+ Gewöhnliche geschachtelte Namespaces können verwendet werden, um interne Implementierungsdetails zu kapseln, die nicht Teil der öffentlichen Schnittstelle des übergeordnete Namespaces sind.  
   
-## <a name="inline-namespaces-c-11"></a>Inline namespaces (C++ 11)  
- In contrast to an ordinary nested namespace, members of an inline namespace are treated as members of the parent namespace. This characteristic enables argument dependent lookup on overloaded functions to work on functions that have overloads in a parent and a nested inline namespace. It also enables you to declare a specialization in a parent namespace for a template that is declared in the inline namespace. The following example shows how external code binds to the inline namespace by default:  
+## <a name="inline-namespaces-c-11"></a>Inlinenamespaces (C++ 11)  
+ Im Gegensatz zu einem gewöhnlichen geschachtelten Namespace werden Member eines Inlinenamespaces als Member des übergeordneten Namespaces behandelt. Dieses Merkmal ermöglicht es, die argumentabhängige Suche für überladene Funktionen auch für Funktionen zu verwenden, die Überladungen in einem übergeordneten und einem geschachtelten Inlinenamespace aufweisen. Außerdem können Sie dadurch eine Spezialisierung in einem übergeordneten Namespace für eine Vorlage deklarieren, die im Inlinenamespace deklariert ist. Das folgende Beispiel zeigt, wie externer Code standardmäßig an den Inlinenamespace gebunden wird:  
   
 ```cpp  
 //Header.h  
@@ -211,7 +211,7 @@ int main()
 }  
 ```  
   
- The following example shows how you can declare a specialization in a parent of a template that is declared in an inline namespace:  
+ Das folgende Beispiel zeigt, wie Sie eine Spezialisierung in einem übergeordneten Namespace einer Vorlage deklarieren, die in einem Inlinenamespace deklariert ist:  
   
 ```cpp  
 namespace Parent  
@@ -230,11 +230,11 @@ namespace Parent
   
 ```  
   
- You can use inline namespaces as a versioning mechanism to manage changes to the public interface of a library. For example, you can create a single parent namespace, and encapsulate each version of the interface in its own namespace nested inside the parent. The namespace that holds the most recent or preferred version is qualified as inline, and is therefore exposed as if it were a direct member of the parent namespace. Client code that invokes the Parent::Class will automatically bind to the new code. Clients that prefer to use the older version can still access it by using the fully qualified path to the nested namespace that has that code.  
+ Inlinenamespaces können als Mechanismus für die Versionskontrolle verwendet werden, um Änderungen an der öffentlichen Schnittstelle einer Bibliothek zu verwalten. Sie können beispielsweise einen einzelnen übergeordneten Namespace erstellen und jede Version der Schnittstelle in einem eigenen Namespace kapseln, der innerhalb des übergeordneten Namespaces geschachtelt ist. Der Namespace, der die aktuelle oder bevorzugte Version enthält, wird als Inlinenamespace qualifiziert und daher so verfügbar gemacht, als handele es sich um einen direkten Member des übergeordnete Namespaces. Clientcode, der Parent::Class aufruft, wird automatisch an den neuen Code gebunden. Clients, die die ältere Version verwenden möchten, können weiterhin darauf zugreifen, indem sie den vollqualifizierten Pfad zu dem geschachtelten Namespace verwenden, der diesen Code enthält.  
   
- The inline keyword must be applied to the first declaration of the namespace in a compilation unit.  
+ Das inline-Schlüsselwort muss auf die erste Deklaration des Namespaces in einer Kompilierungseinheit angewendet werden.  
   
- The following example shows two versions of an interface, each in a nested namespace. The `v_20` namespace has some modification from the `v_10` interface and is marked as inline. Client code that uses the new library and calls `Contoso::Funcs::Add` will invoke the v_20 version. Code that attempts to call `Contoso::Funcs::Divide` will now get a compile time error. If they really need that function, they can still access the `v_10` version by explicitly calling `Contoso::v_10::Funcs::Divide`.  
+ Das folgende Beispiel zeigt zwei Versionen einer Schnittstelle, beide in einem geschachtelten Namespace. Der `v_20`-Namespace weist einige Änderungen gegenüber der `v_10`-Schnittstelle auf und ist als Inline gekennzeichnet. Clientcode, der die neue Bibliothek verwendet `Contoso::Funcs::Add` aufruft, ruft die v_20-Version auf. Bei Code, der versucht, `Contoso::Funcs::Divide` aufzurufen, wird jetzt ein Fehler zur Kompilierzeit ausgegeben. Wenn diese Funktion wirklich benötigt wird, kann durch explizites Aufrufen von `Contoso::v_10::Funcs::Divide` immer noch auf die `v_10`-Version zugegriffen werden.  
   
 ```cpp  
 namespace Contoso  
@@ -271,8 +271,8 @@ namespace Contoso
   
 ```  
   
-## <a id="namespace_aliases"></a> Namespace aliases  
- Namespace names need to be unique, which means that often they should not be too short. If the length of a name makes code difficult to read, or is tedious to type in a header file where using directives can’t be used, then you can make a namespace alias which serves as an abbreviation for the actual name. For example:  
+## <a id="namespace_aliases"></a>Namespace-Aliasen  
+ Namespacenamen müssen eindeutig sein, was bedeutet, dass sie häufig nicht zu kurz sein dürfen. Wenn Code aufgrund eines langen Namens schwer zu lesen ist oder die Eingabe einer Headerdatei Umstände bereitet, wenn keine using-Direktiven verwendet werden können, können Sie einen Namespacealias als Abkürzung für den tatsächlichen Namen erstellen. Zum Beispiel:  
   
 ```cpp  
 namespace a_very_long_namespace_name { class Foo {}; }  
@@ -281,8 +281,8 @@ void Bar(AVLNN::Foo foo){ }
   
 ```  
   
-## <a name="anonymous-or-unnamed-namespaces"></a>anonymous or unnamed namespaces  
- You can create an explicit namespace but not give it a name:  
+## <a name="anonymous-or-unnamed-namespaces"></a>anonyme oder unbenannte Namespaces  
+ Sie können einen expliziten Namespace erstellen, ihm aber keinen Namen zuweisen:  
   
 ```cpp  
 namespace  
@@ -291,8 +291,8 @@ namespace
 }  
 ```  
   
- This is called an unnamed or anonymous namespace and it is useful when you want to make variable declarations invisible to code in other files (i.e. give them internal linkage) without having to create a named namespace. All code in the same file can see the identifiers in an unnamed namespace but the identifiers, along with the namespace itself, are not visible outside that file—or more precisely outside the translation unit.  
+ Dies wird als unbenannten oder anonymen Namespace bezeichnet und ist nützlich, wenn Sie Variablendeklarationen für Code in anderen Dateien unsichtbar möchten (d. h. bieten ihnen internen Verknüpfung) ohne einen benannten Namespace zu erstellen. Der gesamte Code in einer bestimmten Datei kann die Bezeichner in einem unbenannten Namespace sehen, aber die Bezeichner, zusammen mit dem Namespace selbst, sind außerhalb dieser Datei nicht sichtbar – oder genauer gesagt außerhalb der Übersetzungseinheit.  
   
-## <a name="see-also"></a>See Also  
- [Declarations and Definitions](declarations-and-definitions-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [Deklarationen und Definitionen](declarations-and-definitions-cpp.md)
 

@@ -1,33 +1,50 @@
 ---
-title: "__raise | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__raise"
-  - "__raise_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__raise-Schlüsselwort [C++]"
+title: __raise | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __raise
+- __raise_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- __raise keyword [C++]
 ms.assetid: 6f1ae418-5f0f-48b6-9f6e-8ea7e66b239a
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# __raise
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 0303198f352b97cf84a97d63dce18055e63622b1
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="raise"></a>__raise
 Hebt die Aufrufsite eines Ereignisses hervor.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -37,15 +54,15 @@ method-declarator
   
 ```  
   
-## Hinweise  
- Aus verwaltetem Code kann ein Ereignis nur innerhalb der Klasse ausgelöst werden, in der es definiert ist.  Weitere Informationen finden Sie unter [event](../windows/event-cpp-component-extensions.md).  
+## <a name="remarks"></a>Hinweise  
+ Aus verwaltetem Code kann ein Ereignis nur innerhalb der Klasse ausgelöst werden, in der es definiert ist. Finden Sie unter [Ereignis](../windows/event-cpp-component-extensions.md) für Weitere Informationen.  
   
  Das Schlüsselwort `__raise` bewirkt die Ausgabe eines Fehlers bei einem nicht ereignisgebundenen Aufruf.  
   
 > [!NOTE]
 >  Eine von einer Vorlage gebildete Klasse oder Struktur kann keine Ereignisse enthalten.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // EventHandlingRef_raise.cpp  
@@ -71,7 +88,7 @@ int main() {
 }  
 ```  
   
-## Siehe auch  
- [C\+\+\-Schlüsselwörter](../cpp/keywords-cpp.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Stichwörter](../cpp/keywords-cpp.md)   
  [Ereignisbehandlung](../cpp/event-handling.md)   
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+ [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)

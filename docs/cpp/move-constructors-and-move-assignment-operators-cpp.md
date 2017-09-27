@@ -1,30 +1,47 @@
 ---
-title: "Bewegungskonstruktoren und Bewegungszuweisungsoperatoren (C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Bewegungskonstruktor"
+title: Bewegungskonstruktoren und Bewegungszuweisungsoperatoren (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- move constructor
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
 caps.latest.revision: 13
-caps.handback.revision: "13"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Bewegungskonstruktoren und Bewegungszuweisungsoperatoren (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 07debd120c7757c049d1e3d23dfe1bb065a3cc17
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-In diesem Thema wird beschrieben, wie ein *Bewegungskonstruktor* und ein Bewegungszuweisungsoperator für eine C\+\+\-Klasse geschrieben werden.  Ein Bewegungskonstruktor ermöglicht Ihnen die Implementierung von Bewegungssemantik, mit der die Leistung Ihrer Anwendungen bedeutend verbessert werden kann.  Weitere Informationen zur Bewegungssemantik finden Sie unter [Rvalue\-Verweisdeklarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
+---
+# <a name="move-constructors-and-move-assignment-operators-c"></a>Bewegungskonstruktoren und Bewegungszuweisungsoperatoren (C++)
+In diesem Thema wird beschrieben, wie zum Schreiben einer *bewegungskonstruktor* und ein bewegungszuweisungsoperator für eine C++-Klasse. Ein Bewegungskonstruktor ermöglicht Ihnen die Implementierung von Bewegungssemantik, mit der die Leistung Ihrer Anwendungen bedeutend verbessert werden kann. Weitere Informationen zur bewegungssemantik finden Sie unter [Rvalue-Verweisdeklarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
- Dieses Thema baut auf der C\+\+\-Klasse `MemoryBlock` auf, mit der ein Arbeitsspeicherpuffer verwaltet wird.  
+ Dieses Thema baut auf der C++-Klasse `MemoryBlock` auf, mit der ein Arbeitsspeicherpuffer verwaltet wird.  
   
 ```cpp  
 // MemoryBlock.h  
@@ -102,11 +119,11 @@ private:
 };  
 ```  
   
- Die folgenden Prozeduren beschreiben, wie ein Bewegungskonstruktor und ein Bewegungszuweisungsoperator für die C\+\+\-Beispielklasse geschrieben werden.  
+ Die folgenden Prozeduren beschreiben, wie ein Bewegungskonstruktor und ein Bewegungszuweisungsoperator für die C++-Beispielklasse geschrieben werden.  
   
-### So erstellen Sie einen Bewegungskonstruktor für eine C\+\+\-Klasse  
+### <a name="to-create-a-move-constructor-for-a-c-class"></a>So erstellen Sie einen Bewegungskonstruktor für eine C++-Klasse  
   
-1.  Definieren Sie, wie im folgenden Beispiel veranschaulicht, eine leere Konstruktormethode, die einen rvalu\-Verweis auf den Klassentyp als Parameter akzeptiert:  
+1.  Definieren Sie, wie im folgenden Beispiel veranschaulicht, eine leere Konstruktormethode, die einen rvalu-Verweis auf den Klassentyp als Parameter akzeptiert:  
   
     ```cpp  
     MemoryBlock(MemoryBlock&& other)  
@@ -123,16 +140,16 @@ private:
     _length = other._length;  
     ```  
   
-3.  Weisen Sie den Standardwerten die Datenmember des Quellobjekts zu.  Das hindert den Destruktor an der mehrfachen Freigabe von Ressourcen \(z. B. Arbeitsspeicher\):  
+3.  Weisen Sie den Standardwerten die Datenmember des Quellobjekts zu. Das hindert den Destruktor an der mehrfachen Freigabe von Ressourcen (z. B. Arbeitsspeicher):  
   
     ```cpp  
     other._data = nullptr;  
     other._length = 0;  
     ```  
   
-### So erstellen Sie einen Bewegungszuweisungsoperator für eine C\+\+\-Klasse  
+### <a name="to-create-a-move-assignment-operator-for-a-c-class"></a>So erstellen Sie einen Bewegungszuweisungsoperator für eine C++-Klasse  
   
-1.  Definieren Sie, wie im folgenden Beispiel veranschaulicht, einen leeren Zuweisungsoperator, der einen rvalu\-Verweis auf den Klassentyp als dessen Parameter akzeptiert und einen Verweis auf den Klassentyp zurückgibt:  
+1.  Definieren Sie, wie im folgenden Beispiel veranschaulicht, einen leeren Zuweisungsoperator, der einen rvalu-Verweis auf den Klassentyp als dessen Parameter akzeptiert und einen Verweis auf den Klassentyp zurückgibt:  
   
     ```cpp  
     MemoryBlock& operator=(MemoryBlock&& other)  
@@ -148,9 +165,9 @@ private:
     }  
     ```  
   
-3.  Geben Sie in der Bedingungsanweisung alle Ressourcen \(z. B. Arbeitsspeicher\) aus dem Objekt, dem sie zugewiesen sind, frei.  
+3.  Geben Sie in der Bedingungsanweisung alle Ressourcen (z. B. Arbeitsspeicher) aus dem Objekt, dem sie zugewiesen sind, frei.  
   
-     Im folgenden Beispiel wird der `_data`\-Member vom zugewiesenen Objekt freigegeben.  
+     Im folgenden Beispiel wird der `_data`-Member vom zugewiesenen Objekt freigegeben.  
   
     ```cpp  
     // Free the existing resource.  
@@ -177,8 +194,8 @@ private:
     return *this;  
     ```  
   
-## Beispiel  
- Im folgenden Beispiel wird der vollständige Bewegungskonstruktor und der Bewegungszuweisungsoperator für die `MemoryBlock`\-Klasse veranschaulicht:  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird der vollständige Bewegungskonstruktor und der Bewegungszuweisungsoperator für die `MemoryBlock`-Klasse veranschaulicht:  
   
 ```cpp  
 // Move constructor.  
@@ -225,8 +242,8 @@ MemoryBlock& operator=(MemoryBlock&& other)
 }  
 ```  
   
-## Beispiel  
- Im folgenden Beispiel wird eine Verbesserung der Leistung Ihrer Anwendungen mithilfe von Bewegungssemantik veranschaulicht.  Im Beispiel werden einem Vektorobjekt zwei Elemente hinzugefügt, daraufhin wird ein neues Element zwischen den beiden bestehenden Elementen eingefügt.  In [!INCLUDE[cpp_dev10_long](../build/includes/cpp_dev10_long_md.md)] wird Bewegungssemantik von der `vector`\-Klasse zum effizienten Ausführen des Einfügevorgangs verwendet, indem die Elemente des Vektors verschoben anstatt kopiert werden.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird eine Verbesserung der Leistung Ihrer Anwendungen mithilfe von Bewegungssemantik veranschaulicht. Im Beispiel werden einem Vektorobjekt zwei Elemente hinzugefügt, daraufhin wird ein neues Element zwischen den beiden bestehenden Elementen eingefügt. In Visual C++ 2010 die `vector` Klasse verwendet die move-Semantik des Einfügevorgangs effizient ausführen, indem verschieben die Elemente des Vektors anstatt kopiert werden.  
   
 ```cpp  
 // rvalue-references-move-semantics.cpp  
@@ -271,7 +288,7 @@ In ~MemoryBlock(). length = 50. Deleting resource.
 In ~MemoryBlock(). length = 75. Deleting resource.  
 ```  
   
- Vor [!INCLUDE[cpp_dev10_long](../build/includes/cpp_dev10_long_md.md)] wird in diesem Beispiel die folgende Ausgabe erzeugt:  
+ Vor Visual C++ 2010 erzeugt dieses Beispiel die folgende Ausgabe:  
   
 ```  
 In MemoryBlock(size_t). length = 25.  
@@ -296,12 +313,12 @@ In ~MemoryBlock(). length = 75. Deleting resource.
   
  Die Version dieses Beispiels mit Bewegungssemantik ist effizienter als die Version ohne Bewegungssemantik, da weniger Vorgänge zum Kopieren, zur Speicherbelegung und zur Freigabe der Speicherbelegung ausgeführt werden.  
   
-## Robuste Programmierung  
- Zur Vermeidung von Ressourcenverlusten geben Sie Ressourcen \(z. B. Arbeitsspeicher, Dateihandles und Sockets\) im Bewegungszuweisungsoperator immer frei.  
+## <a name="robust-programming"></a>Stabile Programmierung  
+ Zur Vermeidung von Ressourcenverlusten geben Sie Ressourcen (z. B. Arbeitsspeicher, Dateihandles und Sockets) im Bewegungszuweisungsoperator immer frei.  
   
  Um eine nicht behebbare Zerstörung von Ressourcen zu verhindern, müssen Sie die Selbstzuweisung im Bewegungszuweisungsoperator ordnungsgemäß behandeln.  
   
- Werden sowohl ein Bewegungskonstruktor als auch ein Bewegungszuweisungsoperator für die Klasse bereitgestellt, kann redundanter Code vermeiden werden, indem der Bewegungskonstruktor für den Aufruf des Bewegungszuweisungsoperators geschrieben wird.  Im folgenden Beispiel wird eine überarbeitete Version des Bewegungskonstruktors, der den Bewegungszuweisungsoperator aufruft, veranschaulicht:  
+ Werden sowohl ein Bewegungskonstruktor als auch ein Bewegungszuweisungsoperator für die Klasse bereitgestellt, kann redundanter Code vermeiden werden, indem der Bewegungskonstruktor für den Aufruf des Bewegungszuweisungsoperators geschrieben wird. Im folgenden Beispiel wird eine überarbeitete Version des Bewegungskonstruktors, der den Bewegungszuweisungsoperator aufruft, veranschaulicht:  
   
 ```  
 // Move constructor.  
@@ -313,8 +330,8 @@ MemoryBlock(MemoryBlock&& other)
 }  
 ```  
   
- Die [std::move](../Topic/move.md)\-Funktion bewahrt die rvalue\-Eigenschaft des `other`\-Parameters.  
+ Die [Move](../standard-library/utility-functions.md#move) -Funktion bewahrt die Rvalue-Eigenschaft von der `other` Parameter.  
   
-## Siehe auch  
- [Rvalue\-Verweisdeklarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md)   
- [\<Programm\> move](assetId:///abef7e85-9dd6-4724-85da-d7f7fe95dca9)
+## <a name="see-also"></a>Siehe auch  
+ [Rvalue-Verweisdeklarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md)   
+ [\<Hilfsprogramm > verschieben](http://msdn.microsoft.com/en-us/abef7e85-9dd6-4724-85da-d7f7fe95dca9)

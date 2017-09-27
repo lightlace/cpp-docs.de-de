@@ -1,56 +1,71 @@
 ---
-title: "Operatoren f&#252;r den Memberzugriff: . und -&gt;"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - "."
-  - "->"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ". Operator"
-  - "->-Operator"
-  - "Punktoperator (.)"
-  - "Memberzugriff"
-  - "Memberzugriff, Ausdrücke"
-  - "Memberzugriff, Operatoren"
-  - "Operatoren [C++], Memberzugriff"
-  - "Postfixoperatoren"
+title: "Operatoren für den Memberzugriff:. \"und\" -&gt; | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- .
+- ->
+dev_langs:
+- C++
+helpviewer_keywords:
+- member access, expressions
+- operators [C++], member access
+- dot operator (.)
+- -> operator
+- member access, operators
+- postfix operators
+- . operator
+- member access
 ms.assetid: f8fc3df9-d728-40c5-b384-276927f5f1b3
 caps.latest.revision: 11
-caps.handback.revision: "9"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Operatoren f&#252;r den Memberzugriff: . und -&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 7c4e69727c474cb89f931832da2dbde6e20c16b9
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-## Syntax  
+---
+# <a name="member-access-operators--and--gt"></a>Operatoren für den Memberzugriff:. "und" -&gt;
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      postfix-expression   
-      . name  
-postfix-expression –> name  
+postfix-expression . name  
+postfix-expression -> name  
 ```  
   
-## Hinweise  
- Die Memberzugriffsoperatoren **.** und **\-\>** verweisen auf Member von Strukturen, Unions und Klassen.  Memberzugriffsausdrücke haben den Wert und Typ des ausgewählten Members.  
+## <a name="remarks"></a>Hinweise  
+ Die Operatoren für den Memberzugriff **.** und ** -> ** werden verwendet, um auf Member von Strukturen, Unions und Klassen verweisen. Memberzugriffsausdrücke haben den Wert und Typ des ausgewählten Members.  
   
  Es gibt zwei Arten von Memberzugriffsausdrücken:  
   
-1.  In der ersten Form stellt *postfix\-expression* einen Wert vom Typ "struct", "class" oder "union" dar, und *name* gibt den Namen eines Members der angegebenen Struktur, Union oder Klasse an.  Der Wert des Vorgangs entspricht *name* und ist ein I\-Wert, wenn *postfix\-expression* ein I\-Wert ist.  
+1.  In der ersten Form stellt *postfixausdruck* stellt einen Wert von der Struktur, Klasse oder union-Typ und *Namen* Namen eines Members der angegebenen Struktur, Union oder Klasse. Der Wert des Vorgangs ist der *Namen* und ist ein l-Wert, wenn *postfixausdruck* ist ein l-Wert.  
   
-2.  In der zweiten Form stellt *postfix\-expression* einen Zeiger auf eine Struktur, Union oder Klasse dar, und *name* gibt den Namen eines Members der angegebenen Struktur, Union oder Klasse an.  Der Wert ist ein I\-Wert und entspricht *name*.  Der Operator **–\>** dereferenziert den Zeiger.  Daher führen die Ausdrücke *e***–\>**`member` und **\(\****e***\)**.`member` \(wobei *e* einen Zeiger darstellt\) zu identischen Ergebnissen \(außer wenn die Operatoren **–\>** oder **\*** überladen werden\).  
+2.  In der zweiten Form *postfixausdruck* stellt einen Zeiger auf eine Struktur, Union oder Klasse, und *Namen* Namen eines Members der angegebenen Struktur, Union oder Klasse. Der Wert ist der *Namen* und ist ein l-Wert. Die ** -> ** Operator dereferenziert den Zeiger. Daher sind die Begriffe *e* ** -> ** `member` und **(\****e***)**.`member` (, in denen *e* stellt einen Zeiger) identische Ergebnisse ergeben (Ausnahme: Wenn die Operatoren ** -> ** oder ** \* ** überladen werden).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel werden beide Formen des Memberzugriffsoperators dargestellt.  
   
 ```  
@@ -80,11 +95,13 @@ int main() {
 }  
 ```  
   
-  **2\/1\/1900**  
-**2\/1\/2000**   
-## Siehe auch  
+```Output  
+2/1/1900  
+2/1/2000  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
  [Postfixausdrücke](../cpp/postfix-expressions.md)   
- [C\+\+\-Operatoren](../misc/cpp-operators.md)   
- [C\+\+\-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Integrierte C++-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Klassen und Strukturen](../cpp/classes-and-structs-cpp.md)   
- [Struktur\- und Unionmember](../c-language/structure-and-union-members.md)
+ [Struktur- und Unionmember](../c-language/structure-and-union-members.md)

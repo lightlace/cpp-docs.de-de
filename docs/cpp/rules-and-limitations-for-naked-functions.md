@@ -1,47 +1,64 @@
 ---
-title: "Regeln und Einschr&#228;nkungen f&#252;r Naked-Funktionen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "naked-Funktionen"
+title: "Regeln und Einschränkungen für Naked-Funktionen | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- naked functions
 ms.assetid: ff203858-2dd3-4a76-8a57-d0d06817adef
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Regeln und Einschr&#228;nkungen f&#252;r Naked-Funktionen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: a02eb245ffae169f75f5d8edb261d0af9618856d
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-## Microsoft\-spezifisch  
- Die folgenden Regeln und Einschränkungen treffen auf naked\-Funktionen zu:  
+---
+# <a name="rules-and-limitations-for-naked-functions"></a>Regeln und Einschränkungen für Naked-Funktionen
+## <a name="microsoft-specific"></a>Microsoft-spezifisch  
+ Die folgenden Regeln und Einschränkungen treffen auf naked-Funktionen zu:  
   
--   Die `return`\-Anweisung ist nicht zulässig.  
+-   Die `return`-Anweisung ist nicht zulässig.  
   
--   Konstrukte für die strukturierte Ausnahmebehandlung und C\+\+\-Ausnahmebehandlung sind nicht zulässig, da sie über den Stapelrahmen entladen werden müssen.  
+-   Konstrukte für die strukturierte Ausnahmebehandlung und C++-Ausnahmebehandlung sind nicht zulässig, da sie über den Stapelrahmen entladen werden müssen.  
   
 -   Aus demselben Grund ist jede Form von `setjmp` nicht zulässig.  
   
--   Die Verwendung der `_alloca`\-Funktion ist nicht zulässig.  
+-   Die Verwendung der `_alloca`-Funktion ist nicht zulässig.  
   
--   Um sicherzustellen, dass kein Initialisierungscode für lokale Variablen vor der Prologsequenz vorkommt, sind initialisierte lokale Variablen im Funktionsbereich nicht zulässig.  Insbesondere ist die Deklaration von C\+\+\-Objekten im Funktionsbereich nicht zulässig.  Es können jedoch initialisierte Daten in einem geschachtelten Bereich vorhanden sein.  
+-   Um sicherzustellen, dass kein Initialisierungscode für lokale Variablen vor der Prologsequenz vorkommt, sind initialisierte lokale Variablen im Funktionsbereich nicht zulässig. Insbesondere ist die Deklaration von C++-Objekten im Funktionsbereich nicht zulässig. Es können jedoch initialisierte Daten in einem geschachtelten Bereich vorhanden sein.  
   
--   Framezeigeroptimierung \(die Compileroption "\/Oy"\) wird nicht empfohlen, sie wird jedoch für eine naked\-Funktion automatisch unterdrückt.  
+-   Framezeigeroptimierung (die Compileroption "/Oy") wird nicht empfohlen, sie wird jedoch für eine naked-Funktion automatisch unterdrückt.  
   
--   Sie können C\+\+\-Klassenobjekte nicht im lexikalischen Bereich der Funktion deklarieren.  Sie können jedoch Objekte in einem geschachtelten Block deklarieren.  
+-   Sie können C++-Klassenobjekte nicht im lexikalischen Bereich der Funktion deklarieren. Sie können jedoch Objekte in einem geschachtelten Block deklarieren.  
   
--   Das `naked`\-Schlüsselwort wird beim Kompilieren mit [\/clr](../build/reference/clr-common-language-runtime-compilation.md) ignoriert.  
+-   Die `naked` Schlüsselwort wird ignoriert, bei der Kompilierung mit ["/ CLR"](../build/reference/clr-common-language-runtime-compilation.md).  
   
--   Immer dann, wenn bei mit [\_\_fastcall](../cpp/fastcall.md) aufgerufenen naked\-Funktionen ein Verweis in C\-\/C\+\+\-Code auf eines der Registerargumente vorhanden ist, sollte der Prologcode die Werte dieses Registers in den Stapelspeicherort für diese Variable speichern.  Beispiel:  
+-   Für [__fastcall](../cpp/fastcall.md) naked-Funktionen, wenn ein Verweis in C-/C++-Code auf eines der Registerargumente vorhanden ist, sollte der Prologcode die Werte dieses Registers in den Stapelspeicherort für diese Variable speichern. Zum Beispiel:  
   
 ```  
 // nkdfastcl.cpp  
@@ -78,7 +95,7 @@ __declspec(naked) int __fastcall  power(int i, int j) {
 }  
 ```  
   
-## Ende Microsoft\-spezifisch  
+**Ende Microsoft-spezifisch**  
   
-## Siehe auch  
- [Naked\-Funktionsaufrufe](../cpp/naked-function-calls.md)
+## <a name="see-also"></a>Siehe auch  
+ [Naked-Funktionsaufrufe](../cpp/naked-function-calls.md)

@@ -1,30 +1,47 @@
 ---
-title: "Arrays (C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Arrays [C++]"
-  - "Deklarieren von Arrays, Informationen über das Deklarieren von Arrays"
-  - "Mehrdimensionale Arrays"
+title: Arrays (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- declaring arrays, about declaring arrays
+- multidimensional arrays
+- arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
 caps.latest.revision: 12
-caps.handback.revision: "10"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Arrays (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: efd124254ece8f863afee13e132eea7945525a0e
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Ein Array ist eine Auflistung von gleichen Objekten.  Der einfachste Fall eines Arrays ist ein Vektor, der mit der folgenden Sequenz deklariert werden kann:  
+---
+# <a name="arrays-c"></a>Arrays (C++)
+Ein Array ist eine Auflistung von gleichen Objekten. Der einfachste Fall eines Arrays ist ein Vektor, der mit der folgenden Sequenz deklariert werden kann:  
   
 ```  
   
@@ -35,25 +52,25 @@ decl-specifier identifier [ constant-expression ]
 [ constant-expression ] . . .  
 ```  
   
- 1.  Der Deklarationsbezeichner:  
+ 1. Der Deklarationsbezeichner:  
   
 -   Ein optionaler Speicherklassenbezeichner.  
   
--   Optionale **const**\- und\/oder `volatile`\-Bezeichner.  
+-   Optionale **const** und/oder `volatile` Spezifizierer.  
   
 -   Der Typname der Elemente des Arrays.  
   
- 2.  Der Deklarator:  
+ 2. Der Deklarator:  
   
 -   Der Bezeichner.  
   
--   Ein Konstantenausdruck des ganzzahligen Typs, eingeschlossen in Klammern, **\[\].** Wenn mehrere Dimensionen mit zusätzlichen Klammern deklariert wurden, kann der Konstantenausdruck im ersten Satz von Klammern weggelassen werden.  
+-   Ein Konstantenausdruck des ganzzahligen Typs, eingeschlossen in Klammern **[].** Wenn mehrere Dimensionen mit zusätzlichen Klammern deklariert wurden, kann der Konstante Ausdruck für den ersten Satz von Klammern weggelassen werden.  
   
 -   Optionale zusätzliche Klammern, die Konstantenausdrücke einschließen.  
   
- 3.  Ein optionaler Initialisierer.  Weitere Informationen erhalten Sie unter [Initialisierer](../cpp/initializers.md).  
+ 3. Ein optionaler Initialisierer.  Finden Sie unter [Initialisierer](../cpp/initializers.md).  
   
- Die Anzahl von Elementen im Array wird durch den Konstantenausdruck angegeben.  Das erste Element im Array ist das nullte Element, und das letzte Element ist das Element \(*n*\-1\), wobei *n* die Zahl der Elemente angibt, die das Array enthalten kann.  Der *Konstantenausdruck* muss ein ganzzahliger Typ und größer als 0 sein.  Ein Array der Größe null ist nur gültig, wenn das Array das letzte Feld in `struct` oder **union** ist, und die Verwendung der Microsoft\-Erweiterungen \(\/Ze\) aktiviert ist.  
+ Die Anzahl von Elementen im Array wird durch den Konstantenausdruck angegeben. Das erste Element im Array ist 0. Element und das letzte Element ist das (*n*-1) Element, in dem * n * ist die Anzahl der Elemente, die das Array enthalten kann. Die *Konstantenausdruck* muss ein ganzzahliger Typ sein und muss größer als 0 sein. Ein Array der Größe 0 (null) ist gültig, nur, wenn das Array das letzte Feld in ist eine `struct` oder **Union** und wenn die Microsoft-Erweiterungen (/ Ze) aktiviert sind.  
   
  Die folgenden Beispiele zeigen, wie ein Array zur Laufzeit definiert wird:  
   
@@ -80,7 +97,7 @@ int main() {
   
  Arrays sind abgeleitete Typen und können daher von jedem anderen abgeleiteten oder grundlegenden Typ erstellt werden, außer von Funktionen, Verweisen und `void`.  
   
- Bei Arrays, die von anderen Arrays erstellt werden, handelt es sich um mehrdimensionale Arrays.  Diese mehrdimensionalen Arrays werden angegeben, indem nacheinander mehrere Konstantenausdrücke in Klammern gesetzt werden.  Ein Beispiel ist diese Deklaration:  
+ Bei Arrays, die von anderen Arrays erstellt werden, handelt es sich um mehrdimensionale Arrays. Diese mehrdimensionalen Arrays werden angegeben, indem nacheinander mehrere Konstantenausdrücke in Klammern gesetzt werden. Ein Beispiel ist diese Deklaration:  
   
 ```  
 int i2[5][7];  
@@ -88,10 +105,10 @@ int i2[5][7];
   
  Sie gibt ein Array vom Typ `int` an, das konzeptionell in einer zweidimensionalen Matrix von fünf Zeilen und sieben Spalten angeordnet ist, wie in der folgenden Abbildung gezeigt:  
   
- ![Konzeptionelles Layout eines mehrdimensionalen Arrays](../cpp/media/vc38rc1.png "vc38RC1")  
+ ![Konzeptionelles Layout eines mehrere &#45;-dimensionales Array](../cpp/media/vc38rc1.gif "vc38RC1")  
 Konzeptionelles Layout eines mehrdimensionalen Arrays  
   
- In den Deklarationen mehrdimensionaler Arrays mit einer Initialisiererliste \(wie unter [Initialisierer](../cpp/initializers.md) beschrieben\), kann der Konstantenausdruck weggelassen werden, der die Begrenzungen für die erste Dimension angibt.  Beispiel:  
+ In Deklarationen mehrdimensionaler Arrays mit einer Initialisiererliste (wie in beschrieben [Initialisierer](../cpp/initializers.md)), der Konstante Ausdruck, der angibt, das die Begrenzung für die erste Dimension kann ausgelassen werden. Zum Beispiel:  
   
 ```  
 // arrays2.cpp  
@@ -105,7 +122,7 @@ double TransportCosts[][cMarkets] = {
 };  
 ```  
   
- Die vorhergehende Deklaration definiert ein Array, das aus vier Spalten mit je drei Zeilen besteht.  Die Zeilen stellen Factorys dar und die Spalten Märkte, die von den Factorys beliefert werden.  Die Werte entsprechen den Transportkosten von den Factorys zu den Märkten.  Die erste Dimension des Arrays wird ausgelassen, aber der Compiler füllt sie aus, indem er den Initialisierer untersucht.  
+ Die vorhergehende Deklaration definiert ein Array, das aus vier Spalten mit je drei Zeilen besteht. Die Zeilen stellen Factorys dar und die Spalten Märkte, die von den Factorys beliefert werden. Die Werte entsprechen den Transportkosten von den Factorys zu den Märkten. Die erste Dimension des Arrays wird ausgelassen, aber der Compiler füllt sie aus, indem er den Initialisierer untersucht.  
   
  Themen in diesem Abschnitt:  
   
@@ -113,13 +130,13 @@ double TransportCosts[][cMarkets] = {
   
 -   [Arrays in Ausdrücken](../cpp/arrays-in-expressions.md)  
   
--   [Interpretation des Subscript\-Operators](../cpp/interpretation-of-subscript-operator.md)  
+-   [Interpretation des Subscript-Operators](../cpp/interpretation-of-subscript-operator.md)  
   
 -   [Dereferenzierung auf Arraytypen](../cpp/indirection-on-array-types.md)  
   
--   [Reihenfolge von C\+\+\-Arrays](../cpp/ordering-of-cpp-arrays.md)  
+-   [Reihenfolge von C++-Arrays](../cpp/ordering-of-cpp-arrays.md)  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Die Möglichkeit des Umgehens von Begrenzungsspezifikationen für die erste Dimension eines mehrdimensionalen Arrays kann auch in Funktionsdeklarationen verwendet werden:  
   
 ```  
@@ -169,9 +186,12 @@ double FindMinToMkt(int Mkt, double myTransportCosts[][cMkts], int mycFacts) {
 }  
 ```  
   
-  **Der Mindestaufwand für Markt 3 ist: 17,29**   
-## Kommentare  
+```Output  
+The minimum cost to Market 3 is: 17.29  
+```  
+  
+## <a name="comments"></a>Kommentare  
  Die Funktion `FindMinToMkt` ist so geschrieben, dass das Hinzufügen von neuen Factorys keine Codeänderungen erfordert, sondern nur eine erneute Kompilierung.  
   
-## Siehe auch  
- [C\+\+ Abstract Declarators](assetId:///e7e18c18-0cad-4450-942b-d27e1d4dd088)
+## <a name="see-also"></a>Siehe auch  
+ 

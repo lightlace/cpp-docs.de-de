@@ -1,45 +1,60 @@
 ---
-title: "typename | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "typename"
-  - "typename_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "typename-Vorlagenspezifizierer"
+title: Typname | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- typename
+- typename_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- typename template specifier
 ms.assetid: 52e1d901-220d-4f0d-ab43-dae7e05fb491
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# typename
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 95283efc5d3b92a461ba6507e669f6f3e2af2689
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Teilt dem Compiler mit, dass ein unbekannter Bezeichner ein Typ ist.  
+---
+# <a name="typename"></a>typename
+In den Vorlagendefinitionen bietet einem Hinweis für den Compiler an, dass ein Unbekannter Bezeichner ein Typ ist. In Vorlagenparameterlisten verwendet, um einen Typparameter anzugeben.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
 typename identifier;  
 ```  
   
-## Hinweise  
- Verwenden Sie dieses Schlüsselwort nur in Vorlagendefinitionen.  
+## <a name="remarks"></a>Hinweise  
+ Dieses Schlüsselwort muss verwendet werden, wenn ein Name in eine Vorlagendefinition ein qualifizierter Name ist, der von einem Vorlagenargument abhängig ist. Es ist optional, wenn der qualifizierte Name nicht abhängig ist. Weitere Informationen finden Sie unter [Vorlagen und namensauflösung](../cpp/templates-and-name-resolution.md).  
   
- Dieses Schlüsselwort muss verwendet werden, wenn der Name ein qualifizierter Name ist, der von einem Vorlagenargument abhängig ist; er ist optional, wenn der qualifizierte Name nicht abhängig ist.  Weitere Informationen finden Sie unter [Vorlagen und Namensauflösung](../cpp/templates-and-name-resolution.md).  
-  
- Das **typename**\-Schlüsselwort kann von jedem Typ an einer beliebigen Stelle in der Vorlagendeklaration oder \-definition verwendet werden.  Es ist in der Basisklassenliste nicht zulässig, außer als Vorlagenargument für eine Vorlagenbasisklasse.  
+ **TypeName** können von jedem Typ an einer beliebigen Stelle in einer Vorlagendeklaration oder-Definition verwendet werden. Es ist in der Basisklassenliste nicht zulässig, außer als Vorlagenargument für eine Vorlagenbasisklasse.  
   
 ```  
 template <class T>  
@@ -50,14 +65,14 @@ class C2 : A<typename T::InnerType>  // typename OK.
 {};  
 ```  
   
- Das **typename**\-Schlüsselwort kann in Vorlagenparameterlisten auch anstelle von **class** verwendet werden.  Die folgenden Anweisungen sind beispielsweise identisch:  
+ Die **Typename** -Schlüsselwort kann auch verwendet werden, anstelle von **Klasse** führt in der Template-Parameter. Beispielsweise sind die folgenden Anweisungen semantisch gleichwertig:  
   
 ```  
 template<class T1, class T2>...  
 template<typename T1, typename T2>...  
 ```  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // typename.cpp  
@@ -71,6 +86,6 @@ int main()
 }  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Vorlagen](../cpp/templates-cpp.md)   
- [C\+\+\-Schlüsselwörter](../cpp/keywords-cpp.md)
+ [Schlüsselwörter](../cpp/keywords-cpp.md)

@@ -1,36 +1,53 @@
 ---
-title: "uuid (C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - "uuid"
-  - "uuid_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__declspec-Schlüsselwort [C++], uuid"
-  - "uuid __declspec-Schlüsselwort"
+title: UUID (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- uuid
+- uuid_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- __declspec keyword [C++], uuid
+- uuid __declspec keyword
 ms.assetid: 9d004621-09bc-4a8d-871b-648f5d5102d7
 caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "mblome"
-manager: "ghogen"
----
-# uuid (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 80975b751b6e167573a038e55042b3546821c68f
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-**Microsoft\-spezifisch**  
+---
+# <a name="uuid-c"></a>uuid (C++)
+**Microsoft-spezifisch**  
   
- Der Compiler fügt eine GUID an eine Klasse oder Struktur an, die mit dem `uuid`\-Attribut deklariert oder definiert ist \(nur vollständige COM\-Objektdefinitionen\).  
+ Der Compiler fügt eine GUID an eine Klasse oder Struktur an, die mit dem `uuid`-Attribut deklariert oder definiert ist (nur vollständige COM-Objektdefinitionen).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -39,20 +56,20 @@ ComObjectGUID
 ") ) declarator  
 ```  
   
-## Hinweise  
- Das `uuid`\-Attribut nimmt eine Zeichenfolge als sein Argument an.  Diese Zeichenfolge gibt eine GUID im normalen Registrierungsformat mit oder ohne die Trennzeichen **{ }** an.  Beispiel:  
+## <a name="remarks"></a>Hinweise  
+ Das `uuid`-Attribut nimmt eine Zeichenfolge als sein Argument an. Diese Zeichenfolge gibt eine GUID im normalen Registrierungsformat mit oder ohne die **{}** Trennzeichen. Zum Beispiel:  
   
 ```  
 struct __declspec(uuid("00000000-0000-0000-c000-000000000046")) IUnknown;  
 struct __declspec(uuid("{00020400-0000-0000-c000-000000000046}")) IDispatch;  
 ```  
   
- Dieses Attribut kann in einer Neudeklaration angewendet werden.  Auf diese Weise können die Systemheader die Definitionen von Schnittstellen bereitstellen, wie **IUnknown**, und die Neudeklaration in einem anderen Header \(z. B. COMDEF.H\) zum Angeben der GUID ist ebenfalls möglich.  
+ Dieses Attribut kann in einer Neudeklaration angewendet werden. Dadurch können die Systemheader die Definitionen von Schnittstellen bereitstellen, wie **IUnknown**, und die Neudeklaration in einem anderen Header (z. B. COMDEF. H) zum Angeben der GUID.  
   
- Das Schlüsselwort [\_\_uuidof](../cpp/uuidof-operator.md) kann angewendet werden, um die konstante GUID abzurufen, welche an einen benutzerdefinierten Typ angefügt ist.  
+ Das Schlüsselwort [__uuidof](../cpp/uuidof-operator.md) angewendet werden können, um die Konstante abzurufen, GUID, die an einen benutzerdefinierten Typ angefügt.  
   
- **END Microsoft\-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
- [\_\_declspec](../cpp/declspec.md)   
- [C\+\+\-Schlüsselwörter](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [__declspec](../cpp/declspec.md)   
+ [Schlüsselwörter](../cpp/keywords-cpp.md)

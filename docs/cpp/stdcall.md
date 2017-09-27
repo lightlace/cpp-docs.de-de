@@ -1,59 +1,76 @@
 ---
-title: "__stdcall | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__stdcall_cpp"
-  - "__stdcall"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__stdcall-Schlüsselwort [C++]"
+title: __stdcall | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __stdcall_cpp
+- __stdcall
+dev_langs:
+- C++
+helpviewer_keywords:
+- __stdcall keyword [C++]
 ms.assetid: e212594b-1827-4d07-9527-7d412b300df8
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# __stdcall
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 6c4998d3f53a76246545a6290e735f52206d70ad
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-**Microsoft\-spezifisch**  
+---
+# <a name="stdcall"></a>__stdcall
+**Microsoft-spezifisch**  
   
- Die `__stdcall`\-Aufrufkonvention wird zum Aufrufen von Win32\-API\-Funktionen verwendet.  Der Aufgerufene löscht den Stapel. Daher kann der Compiler **vararg**\-Funktionen `__cdecl` machen.  Für Funktionen, die diese Aufrufkonvention verwenden, ist ein Funktionsprototyp erforderlich.  
+ Die `__stdcall`-Aufrufkonvention wird zum Aufrufen von Win32-API-Funktionen verwendet. Entleert der aufgerufene den Stapel, damit der Compiler stellt **Vararg** Funktionen `__cdecl`. Für Funktionen, die diese Aufrufkonvention verwenden, ist ein Funktionsprototyp erforderlich.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
 return-type __stdcall function-name[(argument-list)]  
 ```  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Die folgende Liste zeigt die Implementierung dieser Aufrufkonvention.  
   
 |Element|Implementierung|  
-|-------------|---------------------|  
+|-------------|--------------------|  
 |Reihenfolge der Argumentübergabe|Von rechts nach links.|  
 |Argumentübergabekonvention|Nach Wert, es sei denn, ein Zeiger oder ein Referenztyp wird übergeben.|  
 |Stapelwartungszuständigkeit|Die aufgerufene Funktion nimmt die eigenen Argumente vom Stapel auf.|  
-|Namensergänzungskonvention|Ein Unterstrich \(\_\) wird dem Namen vorangestellt.  Dem Namen folgt das @\-Zeichen, gefolgt von der Anzahl von Bytes \(als Dezimalzahl\) in der Argumentliste.  Daher wird die Funktion, die als `int func( int a, double b )` deklariert ist, wie folgt ergänzt: `_func@12`|  
-|Konvention zur Umwandlung von Groß\- in Kleinbuchstaben und umgekehrt|Keine|  
+|Namensergänzungskonvention|Ein Unterstrich (_) wird dem Namen vorangestellt. Dem Namen folgt das @-Zeichen, gefolgt von der Anzahl von Bytes (als Dezimalzahl) in der Argumentliste. Daher wird die Funktion, die als `int func( int a, double b )` deklariert ist, wie folgt ergänzt: `_func@12`|  
+|Konvention zur Umwandlung von Groß- in Kleinbuchstaben und umgekehrt|Keine|  
   
- Die [\/Gz](../build/reference/gd-gr-gv-gz-calling-convention.md)\-Compileroption gibt `__stdcall` für alle Funktionen an, die nicht explizit mit einer anderen Aufrufkonvention deklariert wurden.  
+ Die [/GZ](../build/reference/gd-gr-gv-gz-calling-convention.md) -Compileroption gibt `__stdcall` für alle Funktionen, die nicht explizit mit einer anderen Aufrufkonvention deklariert wurden.  
   
- Funktionen, die mithilfe des `__stdcall`\-Modifizierers deklariert werden, geben Werte auf die gleiche Art und Weise zurück wie die Funktionen, die mit [\_\_cdecl](../cpp/cdecl.md) deklariert werden.  
+ Mit deklarierten Funktionen der `__stdcall` Modifizierer return Werte die gleiche Weise wie mit deklarierten Funktionen [__cdecl](../cpp/cdecl.md).  
   
- Auf ARM und x64\-Prozessoren wird `__stdcall` vom Compiler akzeptiert und ignoriert. Auf ARM und x64\-Architekturen werden Argumente konventionsgerecht möglichst in Registern und folgende Argumente auf dem Stapel übergeben.  
+ Auf ARM und x64-Prozessoren wird `__stdcall` vom Compiler akzeptiert und ignoriert. Auf ARM und x64-Architekturen werden Argumente konventionsgerecht möglichst in Registern und folgende Argumente auf dem Stapel übergeben.  
   
- Wenn die Funktion bei nicht statischen Klassenfunktionen abweichend definiert ist, muss der Aufrufkonventionsmodifizierer nicht in der abweichenden Definition angegeben werden.  Das bedeutet, dass für nicht statische Membermethoden der Klasse zum Zeitpunkt der Definition die während der Deklaration angegebene Aufrufkonvention angenommen wird.  Bei der Klassendefinition  
+ Wenn die Funktion bei nicht statischen Klassenfunktionen abweichend definiert ist, muss der Aufrufkonventionsmodifizierer nicht in der abweichenden Definition angegeben werden. Das bedeutet, dass für nicht statische Membermethoden der Klasse zum Zeitpunkt der Definition die während der Deklaration angegebene Aufrufkonvention angenommen wird. Bei der Klassendefinition  
   
 ```cpp  
 struct CMyClass {  
@@ -73,16 +90,16 @@ void CMyClass::mymethod() { return; }
 void __stdcall CMyClass::mymethod() { return; }  
 ```  
   
-## Beispiel  
- Im folgenden Beispiel führt die Verwendung von \_\_**stdcall** in allen `WINAPI`\-Funktionstypen dazu, dass sie als Standardaufruf behandelt werden:  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel Verwendung von __**"stdcall"** führt alle `WINAPI` -Funktionstypen als Standardaufruf behandelt:  
   
-```c  
+```cpp  
 // Example of the __stdcall keyword  
 #define WINAPI __stdcall  
 // Example of the __stdcall keyword on function pointer  
 typedef BOOL (__stdcall *funcname_ptr)(void * arg1, const char * arg2, DWORD flags, ...);  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Argumentübergabe und Benennungskonventionen](../cpp/argument-passing-and-naming-conventions.md)   
- [C\+\+\-Schlüsselwörter](../cpp/keywords-cpp.md)
+ [Schlüsselwörter](../cpp/keywords-cpp.md)

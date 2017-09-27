@@ -1,35 +1,52 @@
 ---
-title: "_bstr_t::length | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_bstr_t::length"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BSTR-Objekt, Länge"
-  - "length-Methode"
+title: _bstr_t::Length | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _bstr_t::length
+dev_langs:
+- C++
+helpviewer_keywords:
+- length method
+- BSTR object, length
 ms.assetid: 4f2e2c76-8894-4ef9-833f-4c6e796d0654
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# _bstr_t::length
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: b28d413b2922a4b47ef489fe326c40efe9b18159
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-**Microsoft\-spezifisch**  
+---
+# <a name="bstrtlength"></a>_bstr_t::length
+**Microsoft-spezifisch**  
   
- Gibt die Anzahl von Zeichen in `_bstr_t` ohne das abschließende NULL\-Zeichen des gekapselten `BSTR` zurück.  
+ Gibt die Anzahl von Zeichen in `_bstr_t` ohne das abschließende NULL-Zeichen des gekapselten `BSTR` zurück.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -37,8 +54,8 @@ unsigned int length ( ) const throw( );
   
 ```  
   
-## Hinweise  
- **END Microsoft\-spezifisch**  
+## <a name="remarks"></a>Hinweise  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
- [\_bstr\_t\-Klasse](../cpp/bstr-t-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [_bstr_t-Klasse](../cpp/bstr-t-class.md)

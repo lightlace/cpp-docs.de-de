@@ -1,90 +1,207 @@
 ---
-title: "if-else-Anweisung (C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - "else_cpp"
-  - "else"
-  - "if_cpp"
-  - "if"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "else-Schlüsselwort [C++]"
-  - "if-Schlüsselwort [C++]"
-  - "if-Schlüsselwort [C++], if-else"
+title: If-else-Anweisung (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 07/17/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- else_cpp
+- else
+- if_cpp
+- if
+dev_langs:
+- C++
+helpviewer_keywords:
+- if keyword [C++]
+- else keyword [C++]
+- if keyword [C++], if-else
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
 caps.latest.revision: 13
-caps.handback.revision: "11"
-ms.author: "mblome"
-manager: "ghogen"
----
-# if-else-Anweisung (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 7f6d2a553e34b5f15e53fa142241af83d8e91255
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Steuert die bedingte Verzweigung.  
+---
+# <a name="if-else-statement-c"></a>if-else-Anweisung (C++)
+Steuert den bedingten Branch. Anweisungen in der *If-Block* werden nur ausgeführt, wenn die *If-Ausdruck* ergibt einen Wert ungleich 0 (oder `true`). Wenn der Wert der *Ausdruck* ungleich NULL ist *statement1* und allen anderen Anweisungen im Block ausgeführt werden und der else-Block, falls vorhanden, wird übersprungen. Wenn der Wert der *Ausdruck* 0 (null), wird der If-Block wird übersprungen, und der else-Block, falls vorhanden, wird ausgeführt. Ausdrücke, die ausgewertet ungleich NULL sind.
+- `true`
+- ein nicht-Null-Zeiger
+- alle arithmetischen Wert ungleich NULL, oder 
+- Geben Sie ein Klassentyp, der eine eindeutige Konvertierung in einen arithmetischen, Boolean oder vom Zeigertyp definiert. (Weitere Informationen über Konvertierungen finden Sie unter [Standardkonvertierungen](../cpp/standard-conversions.md).)   
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
-      if ( expression )  
-   statement1  
-[else  
-   statement2]  
+if ( expression )  
+{
+   statement1;
+   ...  
+}
+else  // optional
+{
+   statement2;
+   ...
+} 
+
+// Visual Studio 2017 version 15.3 and later:
+if ( initialization; expression )  
+{
+   statement1;
+   ...  
+}
+else  // optional
+{
+   statement2;
+   ...
+}  
+
+// Visual Studio 2017 version 15.3 and later:
+if constexpr (expression)
+{
+    statement1;
+    ...
+}
+else  // optional
+{
+   statement2;
+   ...
+} 
 ```  
-  
-## Hinweise  
- Wenn der Wert von *expression* ungleich 0 \(null\) ist, wird *statement1* ausgeführt.  Wenn das optionale **else** vorhanden ist, wird *statement2* ausgeführt, wenn der Wert von *expression* 0 \(null\) ist.  *expression* muss vom arithmetischen Typ oder vom Zeigertyp sein, oder es muss von einem Klassentyp sein, der eine eindeutige Konvertierung in einen arithmetischen Typ oder Zeigertyp definiert. \(Weitere Informationen über Konvertierungen finden Sie unter [Standardkonvertierungen](../cpp/standard-conversions.md)\).  
-  
- In beiden Formen der **if**\-Anweisung wird *expression* \(kann einen beliebigen Wert außer einer Struktur aufweisen\) ausgewertet, einschließlich aller Nebeneffekte.  Das Steuerelement wird von der **if**\-Anweisung an die nächste Anweisung im Programm übergeben, es sei denn, eine der *\-Anweisung*en enthält [break](../cpp/break-statement-cpp.md), [continue](../cpp/continue-statement-cpp.md) oder [goto](../cpp/goto-statement-cpp.md).  
-  
- Die **else**\-Klausel einer `if...else`\-Anweisung wird der nächststehenden vorangegangenen **if**\-Anweisung zugewiesen, im gleichen Gültigkeitsbereich, der keine entsprechende **else**\-Anweisung aufweist.  
-  
- Damit dieses Beispiel eindeutig ist bezüglich `if...else`\-Kopplung, heben Sie die Auskommentierung der Klammern auf.  
-  
-## Beispiel  
-  
+## <a name="example"></a>Beispiel  
 ```  
 // if_else_statement.cpp  
-#include <stdio.h>  
+#include <iostream>
+
+using namespace std;
+
+class C
+{
+    public:
+    void do_somthing(){}
+};
+void init(C){}
+bool is_true() { return true; }
+int x = 10;
+
+int main()
+{
+    if (is_true())
+    {
+        cout << "b is true!\n";  // executed
+    }
+    else
+    {
+        cout << "b is false!\n";
+    }
+
+  // no else statement
+    if (x == 10)
+    {
+        x = 0; 
+    }
+    
   
-int main()   
-{  
-   int x = 0;  
-   if (x == 0)  
-   {  
-      printf_s("x is 0!\n");  
-   }  
-   else  
-   {  
-      printf_s("x is not 0!\n"); // this statement will not be executed  
-   }  
-  
-   x = 1;  
-   if (x == 0)  
-   {  
-      printf_s("x is 0!\n"); // this statement will not be executed  
-   }  
-   else  
-   {  
-      printf_s("x is not 0!\n");  
-   }  
-  
-   return 0;  
-}  
+    C* c;
+  init(c);
+    if (c)
+    {
+        c->do_something();
+    }
+    else
+    {
+        cout << "c is null!\n";
+    }
+}
 ```  
+## <a name="if-statement-with-an-initializer"></a>Wenn die Anweisung mit einem Initialisierer
+**Visual Studio 2017 15,3 und höher** (verfügbar mit [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md)): ein **Wenn** Anweisung enthält möglicherweise auch einen Ausdruck, der eine benannte-Variable deklariert und initialisiert. Verwenden Sie diese Form der If-Anweisung, wenn die Variable nur innerhalb des Bereichs der If-Block erforderlich ist. 
+
+```cpp
+## Example  
+#include <iostream>
+#include <mutex>
+#include <map>
+#include <string>
+#include <algorithm>
+
+
+using namespace std;
+
+map<int, string> m;
+mutex mx;
+bool shared_flag; // guarded by mx
+void unsafe_operation() {}
+
+int main()
+{
+
+    if (auto it = m.find(10); it != m.end())
+    {
+        cout << it->second;
+        return 0;
+    }
+
+    if (char buf[10]; fgets(buf, 10, stdin))
+    {
+        m[0] += buf;
+    }
+
+    if (lock_guard<mutex> lock(mx); shared_flag)
+    {
+        unsafe_operation();
+        shared_flag = false;
+    }
+
+
+    string s{ "if" };
+    if (auto keywords = { "if", "for", "while" }; any_of(keywords.begin(), keywords.end(), [&s](const char* kw) { return s == kw; }))
+    {
+        cout << "Error! Token must not be a keyword\n";
+    }
+
+}
+```
+
+ In allen Formularen von der **Wenn** -Anweisung *Ausdruck*, wofür einen beliebigen Wert außer einer Struktur wird ausgewertet, einschließlich aller Nebeneffekte. Wird die Steuerung von der **Wenn** Anweisung an die nächste Anweisung im Programm, wenn eines der *Anweisung*s enthält eine [Break](../cpp/break-statement-cpp.md), [zuFortfahren](../cpp/continue-statement-cpp.md), oder [Goto](../cpp/goto-statement-cpp.md).  
   
-  **x ist 0\!**  
-**x ist nicht 0\!**   
-## Siehe auch  
+ Die **else** -Klausel eine `if...else` Anweisung bezieht sich auf die nächstgelegene vorherigen **Wenn** Anweisung im gleichen Bereich, die eine entsprechende keinen **else** -Anweisung.   
+
+## <a name="constexpr-if-statements"></a>Constexpr Wenn Anweisungen
+**Visual Studio 2017 15,3 und höher** (verfügbar mit [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md)): In den Funktionsvorlagen, können Sie eine **Constexpr Wenn** -Anweisung zum Zeitpunkt der Kompilierung Verzweigen Entscheidungen treffen ohne mehrere funktionsüberladungen verwenden. Beispielsweise können Sie einer einzelnen Funktion schreiben, diese Handles Parameter Entpacken (keine Überladung von NULL-Parameter ist erforderlich): 
+
+```cpp
+template <class T, class... Rest>
+void f(T&& t, Rest&&... r)
+{
+// handle t
+   do_something(t);
+
+   // handle r conditionally
+   constexpr if (sizeof...(r)) 
+   {
+      
+      f(r...); 
+   }
+   else
+   {
+       g(r...);
+   }
+}
+```
+
+  
+ 
+## <a name="see-also"></a>Siehe auch  
  [Auswahlanweisungen](../cpp/selection-statements-cpp.md)   
- [C\+\+\-Schlüsselwörter](../cpp/keywords-cpp.md)   
- [switch\-Anweisung \(C\+\+\)](../cpp/switch-statement-cpp.md)
+ [Stichwörter](../cpp/keywords-cpp.md)   
+ [switch-Anweisung (C++)](../cpp/switch-statement-cpp.md)

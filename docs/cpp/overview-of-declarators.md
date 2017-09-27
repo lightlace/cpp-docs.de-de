@@ -1,39 +1,57 @@
 ---
-title: "&#220;bersicht &#252;ber Deklaratoren | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Deklaratoren, die Informationen über Deklaratoren"
+title: "Übersicht über Deklaratoren | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- declarators, about declarators
 ms.assetid: 0f2e2312-80bd-4154-8345-718bd9ed2173
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# &#220;bersicht &#252;ber Deklaratoren
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 4a8f795a23f4e93f02d5d6b5ce98d60555a432d6
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Deklaratoren sind die Komponenten einer Deklaration, die Namen von Objekten oder Funktionen angeben. Deklaratoren geben auch an, ob das benannte Objekt ein Objekt, ein Zeiger, ein Verweis oder ein Array ist.  Obwohl Deklaratoren nicht den Basistyp angeben, ändern sie die Typinformationen im Basistyp, sodass dieser abgeleitete Typen, wie Zeiger, Verweise und Arrays, angibt.  Auf Funktionen angewendet arbeitet der Deklarator mit dem Typspezifizierer, um den Rückgabetyp einer Funktion vollständig als Objekt, Zeiger oder Verweis anzugeben. (Bezeichner, die in beschriebenen [Deklarationen](../misc/declarations.md), übermitteln Eigenschaften, wie z. B. Typ und Speicherklasse. Modifizierer, erläutert in diesem Abschnitt und im [Microsoft-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md), ändern Deklaratoren.) Die folgende Abbildung zeigt eine vollständige Deklaration von `MyFunction` und ruft die Komponenten der Deklaration auf.  
+---
+# <a name="overview-of-declarators"></a>Übersicht über Deklaratoren
+Deklaratoren sind die Komponenten einer Deklaration, die Namen von Objekten oder Funktionen angeben. Deklaratoren geben auch an, ob das benannte Objekt ein Objekt, ein Zeiger, ein Verweis oder ein Array ist.  Obwohl Deklaratoren nicht den Basistyp angeben, ändern sie die Typinformationen im Basistyp, sodass dieser abgeleitete Typen, wie Zeiger, Verweise und Arrays, angibt.  Auf Funktionen angewendet arbeitet der Deklarator mit dem Typspezifizierer, um den Rückgabetyp einer Funktion vollständig als Objekt, Zeiger oder Verweis anzugeben. (Bezeichner, die in beschriebenen [Deklarationen und Definitionen](declarations-and-definitions-cpp.md), übermitteln Eigenschaften, wie Typ und Speicherklasse. Modifizierer, erläutert in diesem Abschnitt und in [Microsoft-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md), ändern Deklaratoren.) Die folgende Abbildung zeigt eine vollständige Deklaration von `MyFunction` und ruft die Komponenten der Deklaration auf.  
   
- ![Modifizierer, Spezifizierer und Deklaratoren](../cpp/media/vc38qy1.png "vc38QY1")  
+ ![Modifizierer, Spezifizierer und Deklaratoren](../cpp/media/vc38qy1.gif "vc38QY1")  
 Bezeichner, Modifizierer und Deklaratoren  
   
  **Microsoft-spezifisch**  
   
- Die meisten erweiterten Microsoft-Schlüsselwörter können als Modifizierer verwendet werden, um abgeleitete Typen zu bilden. Dabei handelt es sich nicht um Spezifizierer oder Deklaratoren. (Siehe [Microsoft-Specific Modifizierer](../cpp/microsoft-specific-modifiers.md).)  
+ Die meisten erweiterten Microsoft-Schlüsselwörter können als Modifizierer verwendet werden, um abgeleitete Typen zu bilden. Dabei handelt es sich nicht um Spezifizierer oder Deklaratoren. (Siehe [Microsoft-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md).)  
   
- **ENDE Microsoft-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
- Deklaratoren erscheinen in der Syntax für Deklarationen nach einer optionalen Liste mit Spezifizierern. Diese Spezifizierer finden Sie im Abschnitt [Deklarationen.](../misc/declarations.md) Eine Deklaration kann mehr als einen Deklarator enthalten, aber jeder Deklarator deklariert nur einen Namen.  
+ Deklaratoren erscheinen in der Syntax für Deklarationen nach einer optionalen Liste mit Spezifizierern. Diese Spezifizierer werden in erläutert [Deklarationen.](declarations-and-definitions-cpp.md) Eine Deklaration kann mehr als einen Deklarator enthalten, aber jeder Deklarator deklariert nur einen Namen.  
   
  Die folgende Beispieldeklaration zeigt, wie Spezifizierer und Deklaratoren kombiniert werden, um eine vollständige Deklaration zu bilden:  
   
@@ -53,7 +71,7 @@ const char *pch, ch;
   
  **Deklaratoren für Zeiger, Verweise und Arrays**  
   
- Zeigeroperatoren, die vor dem Namen eingefügt werden, bewirken, dass das Objekt zu einem Zeiger oder Verweis wird.  Die **\*** -Operator deklariert den Namen als Zeiger, die **&** -Operator deklariert ihn als Verweis.  
+ Zeigeroperatoren, die vor dem Namen eingefügt werden, bewirken, dass das Objekt zu einem Zeiger oder Verweis wird.  Die ** \* ** -Operator deklariert den Namen als Zeiger, der ** & ** -Operator deklariert ihn als Verweis.  
   
 ```  
 int *i; // declarator is *i  
@@ -69,7 +87,7 @@ const char *pcc; // pointer to const char
 const char *const cpcc; // const pointer to const char  
 ```  
   
- Weitere Informationen finden Sie unter [const- und volatile-Zeiger](../cpp/const-and-volatile-pointers.md).  
+ Weitere Informationen finden Sie [const- und volatile-Zeiger](../cpp/const-and-volatile-pointers.md).  
   
  Ein Zeiger auf einen Member einer Klasse oder Struktur wird mit dem entsprechenden geschachtelten Namenspezifizierer deklariert:  
   
@@ -95,8 +113,6 @@ int i[2][2]; // two dimensional array
 ```  
 int f(int a, int b, int c);  
 ```  
-  
- Informationen zu Argumentlisten finden Sie unter [Funktionsdeklarationen](assetId:///3f9b4e14-60d2-47c1-acd8-4fa8fc988be7).  
   
  Zeiger und Verweise auf Funktionen werden deklariert, indem Sie den Zeiger- oder Verweisoperator dem Funktionsnamen wie unten dargestellt voranstellen.  Klammern, die normalerweise optional sind, sind erforderlich, um einen Zeiger auf eine Funktion von einer Funktion zu unterscheiden, die einen Zeiger zurückgibt:  
   
@@ -151,7 +167,7 @@ PIFN pifnDispatchArray[7];
 int ( *pifnDispatchArray[7] )( char * );  
 ```  
   
- Weitere Informationen zu Typedef finden Sie unter [typedef-Spezifizierer](assetId:///cc96cf26-ba93-4179-951e-695d1f5fdcf1).  
+ Weitere Informationen zu Typedef finden Sie unter [Aliase und Typedefs](aliases-and-typedefs-cpp.md).  
   
  Zeiger, Verweise und Arrays eines einzelnen Basistyps können in einer einzigen Deklaration (durch Trennzeichen getrennt) zu Folgendem kombiniert werden:  
   
@@ -177,7 +193,7 @@ int a, *b, c[5], **d, &e=a;
 6. ( declarator )  
 ```  
   
--   und *-Operator für Zeiger auf* ist eine von:  
+-   und *Zeiger-Operator* ist einer von:  
   
 ```  
   
@@ -186,7 +202,7 @@ int a, *b, c[5], **d, &e=a;
 ::nested-name-specifier * [cv-qualfiers]  
 ```  
   
- Da ein Deklarator Deklaratoren enthalten kann, ist es möglich, anhand der oben genannten Regeln komplexere abgeleitete Typen zu erstellen (z. B. Arrays von Zeigern, Funktionen, die Arrays von Funktionszeigern zurückgeben).  Um die einzelnen Schritte der Konstruktion zu bilden, beginnen Sie mit dem Bezeichner, der den Basisdatentyp darstellt, und wenden Sie die Syntaxregel oben mit dem vorherigen Ausdruck als `declarator` an.  Die Anwendung der Syntaxregeln sollte der umgekehrten Reihenfolge des Ausdrucks auf Englisch entsprechen.  Wenn die *-Operator für Zeiger auf* -Syntaxregel auf ein Array- oder Funktionsausdruck Klammern ggf. einen Zeiger auf das Array oder eine Funktion, wie in der letzten Zeile in der folgenden Tabelle verwenden.  
+ Da ein Deklarator Deklaratoren enthalten kann, ist es möglich, anhand der oben genannten Regeln komplexere abgeleitete Typen zu erstellen (z. B. Arrays von Zeigern, Funktionen, die Arrays von Funktionszeigern zurückgeben).  Um die einzelnen Schritte der Konstruktion zu bilden, beginnen Sie mit dem Bezeichner, der den Basisdatentyp darstellt, und wenden Sie die Syntaxregel oben mit dem vorherigen Ausdruck als `declarator` an.  Die Anwendung der Syntaxregeln sollte der umgekehrten Reihenfolge des Ausdrucks auf Englisch entsprechen.  Wenn Anwenden der *Zeiger-Operator* -Syntaxregel auf einen Array- oder Funktionsausdruck, verwenden Sie Klammern, wenn Sie einen Zeiger auf das Array oder eine Funktion, wie in der letzten Zeile in der folgenden Tabelle werden soll.  
   
  Das folgende Beispiel zeigt die Konstruktion von "Zeiger zu Array von 10 Zeigern zu int".  
   
@@ -197,4 +213,4 @@ int a, *b, c[5], **d, &e=a;
 |Array von 10|`(*i)[10]`|4|  
 |Zeiger auf|`*((*i)[10])`|6 und anschließend 5|  
   
- Wenn mehrere Zeiger-, Verweis-, Array- oder Funktionsmodifizierer verwendet werden, werden Deklaratoren möglicherweise recht kompliziert.  Das Thema [Interpretieren von komplexeren Deklaratoren](../c-language/interpreting-more-complex-declarators.md) beschreibt die Syntax komplexeren Deklaratoren gelesen.  Das Thema trifft auf C und C++ ist, obwohl in C++ die * zeigt an, einen Zeiger, ein qualifizierter Name wie beispielsweise MyClass::\* kann verwendet werden, um einen Zeiger auf einen Member einer Klasse angeben.
+ Wenn mehrere Zeiger-, Verweis-, Array- oder Funktionsmodifizierer verwendet werden, werden Deklaratoren möglicherweise recht kompliziert.  Das Thema [Interpretieren von komplexeren Deklaratoren](../c-language/interpreting-more-complex-declarators.md) beschreibt die Syntax komplexeren Deklaratoren gelesen.  Das Thema trifft auf C und C++, obwohl in C++ ist der * wird verwendet, um anzugeben, einen Zeiger ist ein qualifizierter Name wie beispielsweise MyClass::\* kann verwendet werden, um einen Zeiger auf einen Member einer Klasse angeben.

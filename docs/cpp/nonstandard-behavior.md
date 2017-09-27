@@ -1,35 +1,52 @@
 ---
-title: "Nicht dem Standard entsprechendes Verhalten | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Kompatibilität und Compliance, Nicht dem Standard entsprechendes Verhalten"
-  - "Microsoft-spezifisch, Compilerverhalten"
-  - "Nicht dem Standard entsprechendes Verhalten, Compliance und Kompatibilität"
+title: Nicht dem Standard entsprechendes Verhalten | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- compatibility and compliance, nonstandard behavior
+- Microsoft-specific, compiler behavior
+- nonstandard behavior, compliance and compatibility
 ms.assetid: a57dea27-dc79-4f64-8a83-017e84841773
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Nicht dem Standard entsprechendes Verhalten
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 13420db99afa801d02306f4dd8af4104ec322bd5
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Die folgenden Abschnitte listen einige Bereiche auf, wo die Visual C\+\+\-Implementierung von C\+\+ nicht mit dem C\+\+\-Standard übereinstimmt.  Die unten angegebenen Abschnittszahlen beziehen sich auf die Abschnittszahlen im C\+\+ 11\-Standard \(ISO\/IEC 14882:2011\(E\)\).  
+---
+# <a name="nonstandard-behavior"></a>Nicht dem Standard entsprechendes Verhalten
+Die folgenden Abschnitte listen einige Bereiche auf, wo die Visual C++-Implementierung von C++ nicht mit dem C++-Standard übereinstimmt. Die unten angegebenen Abschnittszahlen beziehen sich auf die Abschnittszahlen im C++ 11-Standard (ISO/IEC 14882:2011(E)).  
   
- Die Liste von Compilerlimits, die sich von denen unterscheiden, die im C\+\+\-Standard definiert wurden, wird in [Compiler Limits](../cpp/compiler-limits.md) angegeben.  
+ Die Liste von compilerlimits, die von den in der C++-Standard definierten abweichen Situation, in der [Compilerlimits](../cpp/compiler-limits.md).  
   
-## Covariant\-Rückgabetypen  
- Virtuelle Basisklassen werden nicht als Covariant\-Rückgabetypen unterstützt, wenn die virtuelle Funktion eine variable Anzahl von Argumenten hat.  Dies entspricht nicht Abschnitt 10.3, Absatz 7 der C\+\+ ISO\-Spezifikation.  Das folgende Beispiel wird nicht kompiliert, es wird Compilerfehler [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md) ausgegeben  
+## <a name="covariant-return-types"></a>Kovariante Rückgabetypen  
+ Virtuelle Basisklassen werden nicht als Covariant-Rückgabetypen unterstützt, wenn die virtuelle Funktion eine variable Anzahl von Argumenten hat. Dies entspricht nicht Abschnitt 10.3, Absatz 7 der C++ ISO-Spezifikation. Im folgende Beispiel wird nicht kompiliert, wodurch Compilerfehler [C2688 generiert](../error-messages/compiler-errors-2/compiler-error-c2688.md)  
   
 ```cpp  
 // CovariantReturn.cpp  
@@ -44,8 +61,8 @@ class B : virtual A
 };  
 ```  
   
-## Bindung von nicht abhängigen Namen in Vorlagen  
- Der Visual C\+\+\-Compiler unterstützt aktuell nicht die Bindung von nicht abhängigen Namen, wenn die Vorlage anfänglich analysiert wird.  Dies entspricht nicht Abschnitt 14.6.3, Absatz 7 der C\+\+ ISO\-Spezifikation.  Das kann zu Überladungen führen, die deklariert werden, nachdem die Vorlage \(aber bevor die Vorlage instanziiert wird\) angezeigt werden kann.  
+## <a name="binding-nondependent-names-in-templates"></a>Bindung von nicht abhängigen Namen in Vorlagen  
+ Der Visual C++-Compiler unterstützt aktuell nicht die Bindung von nicht abhängigen Namen, wenn die Vorlage anfänglich analysiert wird. Dies entspricht nicht Abschnitt 14.6.3, Absatz 7 der C++ ISO-Spezifikation. Das kann zu Überladungen führen, die deklariert werden, nachdem die Vorlage (aber bevor die Vorlage instanziiert wird) angezeigt werden kann.  
   
 ```cpp  
 #include <iostream>  
@@ -70,18 +87,18 @@ int main() {
   
 ```  
   
-## Funktionsausnahmebezeichner  
- Funktionsausnahmebezeichner mit Ausnahme von `throw()` werden analysiert, aber nicht verwendet.  Dies entspricht nicht Abschnitt 15.4 der C\+\+ ISO C\+\+\-Spezifikation.  Beispiel:  
+## <a name="function-exception-specifiers"></a>Funktionsausnahmebezeichner  
+ Funktionsausnahmebezeichner mit Ausnahme von `throw()` werden analysiert, aber nicht verwendet. Dies entspricht nicht Abschnitt 15.4 der C++ ISO C++-Spezifikation. Zum Beispiel:  
   
 ```cpp  
 void f() throw(int); // parsed but not used  
 void g() throw();    // parsed and used  
 ```  
   
- Weitere Informationen zu Ausnahmespezifikationen finden Sie unter [Aunahmespezifikationen](../cpp/exception-specifications-throw-cpp.md).  
+ Weitere Informationen zu Ausnahmespezifikationen finden Sie unter [Ausnahmespezifikationen](../cpp/exception-specifications-throw-cpp.md).  
   
-## char\_traits::eof\(\)  
- Der C\+\+\-Standard gibt an, dass [char\_traits::eof](../Topic/char_traits::eof.md) nicht einem gültigen `char_type`\-Wert entsprechen darf.  Der Visual C\+\+\-Compiler erzwingt diese Einschränkung für Typ `char`, jedoch nicht für Typ `wchar_t`.  Dies entspricht nicht der Anforderung in Tabelle 62, in Abschnitt 12.1.1 der C\+\+ ISO\-Spezifikation.  Das unten gezeigte Beispiel veranschaulicht dies.  
+## <a name="chartraitseof"></a>char_traits::eof()  
+ Der C++-Standard gibt an, dass [char_traits](../standard-library/char-traits-struct.md#eof) muss nicht entsprechen, die eine gültige `char_type` Wert. Der Visual C++-Compiler erzwingt diese Einschränkung für Typ `char`, jedoch nicht für Typ `wchar_t`. Dies entspricht nicht der Anforderung in Tabelle 62, in Abschnitt 12.1.1 der C++ ISO-Spezifikation. Das unten gezeigte Beispiel veranschaulicht dies.  
   
 ```cpp  
 #include <iostream>  
@@ -98,5 +115,5 @@ int main()
 }  
 ```  
   
-## Speicherort für Objekte  
- Der C\+\+\-Standard \(Abschnitt 1,8, Absatz 6\) erfordert vollständige C\+\+\-Objekte, um eindeutige Speicherpositionen zu haben.  Bei Visual C\+\+ gibt es jedoch Fälle, in denen Typen ohne Datenmember einen Speicherort während der Lebensdauer des Objekts für andere Typen freigeben.
+## <a name="storage-location-of-objects"></a>Speicherort für Objekte  
+ Der C++-Standard (Abschnitt 1,8, Absatz 6) erfordert vollständige C++-Objekte, um eindeutige Speicherpositionen zu haben. Bei Visual C++ gibt es jedoch Fälle, in denen Typen ohne Datenmember einen Speicherort während der Lebensdauer des Objekts für andere Typen freigeben.
