@@ -30,11 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
-ms.openlocfilehash: c5de7e4f11b2e1aa87eab408c5e85e08632a42f2
+ms.translationtype: HT
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: d35603be262e21e2570e21bb72ff2bc40c3d6d76
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="visual-c-samples"></a>Visual C++-Beispiele
@@ -42,11 +42,11 @@ Die unten aufgeführten Visual C++-Beispiele zeigen verschiedene Funktionen in m
   
  [Visual Studio-Beispiele](http://code.msdn.microsoft.com/vstudio/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%2B%2B)  
   
- [Windows Store-App Beispiele](http://code.msdn.microsoft.com/windowsapps/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%2B%2B&f%5B0%5D.Text=C%2B%2B)  
+ [Beispiele für Windows Store-App](http://code.msdn.microsoft.com/windowsapps/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%2B%2B&f%5B0%5D.Text=C%2B%2B)  
   
  [Das All-In-One Code Framework](http://1code.codeplex.com/)  
   
- [Windows Desktop-Codebeispiele](http://code.msdn.microsoft.com/windowsdesktop/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%2B%2B&f%5B0%5D.Text=C%2B%2B)  
+ [Windows Desktop code samples](http://code.msdn.microsoft.com/windowsdesktop/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%2B%2B&f%5B0%5D.Text=C%2B%2B)  
   
  [MFC-Beispiele](http://code.msdn.microsoft.com/site/search?query=mfc&f%5B0%5D.Value=mfc&f%5B0%5D.Type=SearchText&ac=4)  
   
