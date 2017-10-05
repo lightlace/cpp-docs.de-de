@@ -1,43 +1,60 @@
 ---
-title: "Dereferenzierungsoperator: *"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "*-Operator"
-  - "Dereferenzierungsoperator"
-  - "Dereferenzierungsoperator, Syntax"
-  - "Operatoren [C++], Dereferenzierung"
+title: 'Dereferenzierungsoperator: * | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- '* operator'
+- indirection operator
+- operators [C++], indirection
+- indirection operator, syntax
 ms.assetid: c50309e1-6c02-4184-9fcb-2e13c1f4ac03
 caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Dereferenzierungsoperator: *
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 1f9b758e3bfa1a01ed2b2a428758c3e4a982fdae
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-## Syntax  
+---
+# <a name="indirection-operator-"></a>Dereferenzierungsoperator: *
+## <a name="syntax"></a>Syntax  
   
 ```  
   
 * cast-expression  
 ```  
   
-## Hinweise  
- Der unäre Dereferenzierungsoperator \(**\***\) dereferenziert einen Zeiger, d. h. er konvertiert er einen Zeigerwert in einen l\-Wert.  Der Operand des Dereferenzierungsoperators muss ein Zeiger auf einen Typ sein.  Das Ergebnis des Dereferenzierungsausdrucks ist der Typ, aus dem der Zeigertyp abgeleitet wird.  Die Verwendung des **\***\-Operators in diesem Kontext unterscheidet sich von seiner Bedeutung als binärer Operator \(Multiplikation\).  
+## <a name="remarks"></a>Hinweise  
+ Der unäre Dereferenzierungsoperator (**\***) dereferenziert einen Zeiger, d. h. konvertiert einen Zeigerwert in einen l-Wert. Der Operand des Dereferenzierungsoperators muss ein Zeiger auf einen Typ sein. Das Ergebnis des Dereferenzierungsausdrucks ist der Typ, aus dem der Zeigertyp abgeleitet wird. Die Verwendung der ** \* ** -Operators in diesem Kontext unterscheidet sich von seiner Bedeutung als binärer Operator Multiplikation ist.  
   
- Wenn der Operand auf eine Funktion verweist, ist das Ergebnis ein Funktionsbezeichner.  Wenn an einen Speicherort verwiesen wird, ist das Ergebnis ein l\-Wert, der den Speicherort festlegt.  
+ Wenn der Operand auf eine Funktion verweist, ist das Ergebnis ein Funktionsbezeichner. Wenn an einen Speicherort verwiesen wird, ist das Ergebnis ein l-Wert, der den Speicherort festlegt.  
   
- Der Dereferenzierungsoperator kann kumulativ verwendet werden, um Zeiger zu Zeigern zu dereferenzieren.  Beispiel:  
+ Der Dereferenzierungsoperator kann kumulativ verwendet werden, um Zeiger zu Zeigern zu dereferenzieren. Zum Beispiel:  
   
 ```  
 // expre_Indirection_Operator.cpp  
@@ -59,9 +76,9 @@ int main() {
 }  
 ```  
   
- Wenn der Zeigerwert ungültig ist, ist das Ergebnis nicht definiert.  Die folgende Liste umfasst einige der häufigsten Bedingungen, die einen Zeigerwert ungültig machen.  
+ Wenn der Zeigerwert ungültig ist, ist das Ergebnis nicht definiert. Die folgende Liste umfasst einige der häufigsten Bedingungen, die einen Zeigerwert ungültig machen.  
   
--   Der Zeiger ist ein NULL\-Zeiger.  
+-   Der Zeiger ist ein NULL-Zeiger.  
   
 -   Der Zeiger gibt die Adresse eines lokalen Elements an, das zum Zeitpunkt des Verweises nicht sichtbar ist.  
   
@@ -69,9 +86,8 @@ int main() {
   
 -   Der Zeiger gibt eine Adresse an, die nicht vom ausgeführten Programm verwendet wird.  
   
-## Siehe auch  
- [Ausdrücke mit unären Operatoren](../cpp/expressions-with-unary-operators.md)   
- [C\+\+\-Operatoren](../misc/cpp-operators.md)   
- [C\+\+\-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [Address\-of\-Operator: &](../cpp/address-of-operator-amp.md)   
- [Dereferenzierungs\- und address\-of\-Operatoren](../c-language/indirection-and-address-of-operators.md)
+## <a name="see-also"></a>Siehe auch  
+ [Ausdrücke mit Unäroperatoren](../cpp/expressions-with-unary-operators.md)   
+ [Integrierte C++-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Address-of-Operator: &](../cpp/address-of-operator-amp.md)   
+ [Dereferenzierungs- und Address-of-Operatoren](../c-language/indirection-and-address-of-operators.md)

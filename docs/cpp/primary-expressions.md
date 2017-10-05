@@ -1,47 +1,62 @@
 ---
-title: "Prim&#228;re Ausdr&#252;cke | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Ausdrücke [C++], Literal"
-  - "Ausdrücke [C++], Name"
-  - "Ausdrücke [C++], Primär"
-  - "Ausdrücke [C++], Qualifizierte Namen"
-  - "Primäre Ausdrücke"
+title: "Ausdrücke (primär) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- primary expressions
+- expressions [C++], name
+- expressions [C++], literal
+- expressions [C++], primary
+- expressions [C++], qualified names
 ms.assetid: 8ef9a814-6058-4b93-9b6e-e8eb8350b1ca
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Prim&#228;re Ausdr&#252;cke
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 2ba603c19a88849c15c9402e21d2acf39bb9f54d
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Primäre Ausdrücke sind die Bausteine für komplexere Ausdrücke.  Es handelt sich um Literale, Namen und Namen, die vom Bereichsauflösungsoperator \(`::`\) qualifiziert werden.  Ein primärer Ausdruck kann jede der folgenden Formen haben:  
+---
+# <a name="primary-expressions"></a>Primäre Ausdrücke
+Primäre Ausdrücke sind die Bausteine für komplexere Ausdrücke. Es handelt sich um Literale, Namen und Namen, die vom Bereichsauflösungsoperator (`::`) qualifiziert werden.  Ein primärer Ausdruck kann jede der folgenden Formen haben:  
   
 ```  
   
-        literal  
-this  
-:: name  
-name   
-( expression )  
+      literal  
+      this  
+:: namename( expression )  
 ```  
   
- Ein *Literal* ist ein konstanter primärer Ausdruck.  Sein Typ hängt von der Form seiner Spezifikation ab.  Alle Informationen über das Festlegen von Literalen finden Sie unter [Literals](../cpp/numeric-boolean-and-pointer-literals-cpp.md).  
+ Ein *literal* ist ein konstanter primärer Ausdruck. Sein Typ hängt von der Form seiner Spezifikation ab. Finden Sie unter [Literale](../cpp/numeric-boolean-and-pointer-literals-cpp.md) für ausführliche Informationen zum Festlegen von Literalen.  
   
- Das Schlüsselwort **this** ist ein Zeiger auf ein Klassenobjekt.  Es ist innerhalb von nicht statische Memberfunktionen verfügbar und zeigt auf die Instanz der Klasse, für die die Funktion aufgerufen wurde.  Das Schlüsselwort **this** kann nicht außerhalb des Texts der Klassenmemberfunktion verwendet werden.  
+ Die **dies** -Schlüsselwort ist ein Zeiger auf ein Klassenobjekt. Es ist innerhalb von nicht statische Memberfunktionen verfügbar und zeigt auf die Instanz der Klasse, für die die Funktion aufgerufen wurde. Die **dies** Schlüsselwort kann nicht außerhalb des Texts eine Klassenmemberfunktion verwendet werden.  
   
- Der Typ des **this**\-Zeigers ist `type` **\*const** \(wobei `type` der Klassenname ist\) innerhalb von Funktionen, die den **this**\-Zeiger nicht speziell ändern.  Das folgende Beispiel zeigt Memberfunktionsdeklarationen und die Typen von **this**:  
+ Der Typ des der **dies** Zeiger ist `type` ** \*const** (, in denen `type` der Klassenname ist) innerhalb von Funktionen, die nicht speziell ändern die **dieser** Zeiger. Das folgende Beispiel zeigt Member Funktionsdeklarationen und die Typen von **dies**:  
   
 ```  
 // expre_Primary_Expressions.cpp  
@@ -55,13 +70,13 @@ public:
 };  
 ```  
   
- Weitere Informationen über das Ändern des Typs des **this**\-Zeigers finden Sie unter [Type of this Pointer](../misc/type-of-this-pointer.md).  
+ Finden Sie unter [this-Zeiger](this-pointer.md) für Weitere Informationen zum Ändern des Typs der **dies** Zeiger.  
   
- Der Bereichsauflösungsoperator \(`::`\) gefolgt von einem Namen stellt einen primären Ausdruck dar.  Solche Namen müssen Namen von globaler Reichweite sein, nicht Membernamen.  Der Typ dieses Ausdrucks wird durch die Deklaration des Namens bestimmt.  Es ist ein l\-Wert \(das heißt, er kann auf der linken Seite eines Zuweisungsoperatorausdrucks angezeigt werden\), wenn der deklarierende Name ein l\-Wert ist.  Der Bereichsauflösungsoperator lässt zu, dass auf einen globalen Namen verwiesen wird, selbst wenn dieser Name im aktuellen Bereich ausgeblendet ist.  Ein Beispiel für die Verwendung des Bereichsauflösungsoperators finden Sie unter [Scope](../cpp/scope-visual-cpp.md).  
+ Der Bereichsauflösungsoperator (`::`) gefolgt von einem Namen stellt einen primären Ausdruck dar.  Solche Namen müssen Namen von globaler Reichweite sein, nicht Membernamen.  Der Typ dieses Ausdrucks wird durch die Deklaration des Namens bestimmt. Es ist ein l-Wert (das heißt, er kann auf der linken Seite eines Zuweisungsoperatorausdrucks angezeigt werden), wenn der deklarierende Name ein l-Wert ist. Der Bereichsauflösungsoperator lässt zu, dass auf einen globalen Namen verwiesen wird, selbst wenn dieser Name im aktuellen Bereich ausgeblendet ist. Finden Sie unter [Bereich](../cpp/scope-visual-cpp.md) ein Beispiel mit dem Bereichsauflösungsoperator.  
   
- Ein in Klammern eingefasster Ausdruck ist ein primärer Ausdruck, dessen Typ und Wert mit denen des nicht in Klammern stehenden Ausdrucks identisch sind.  Es ist ein l\-Wert, wenn der nicht in Klammern stehende Ausdruck ein l\-Wert ist.  
+ Ein in Klammern eingefasster Ausdruck ist ein primärer Ausdruck, dessen Typ und Wert mit denen des nicht in Klammern stehenden Ausdrucks identisch sind. Es ist ein l-Wert, wenn der nicht in Klammern stehende Ausdruck ein l-Wert ist.  
   
- Im Kontext der oben gezeigten primären Ausdruckssyntax bedeutet *name*  alles in der Syntax, das für [Names](assetId:///1c49cc24-08d5-4884-b170-ba8ed42d80db) beschrieben wird. Wenn jedoch der Bereichsauflösungsoperators vor dem Namen verwendet wird, sind Typen von Namen, die in einer Klasse auftreten können, nicht zulässig.  Dazu gehören Funktionsnamen für benutzerdefinierte Konvertierung und Destruktornamen.  
+ Im Kontext der oben angegebenen primären Ausdruckssyntax *Namen* bedeutet, dass alle Elemente in der Syntax beschrieben, für das [Namen](http://msdn.microsoft.com/en-us/1c49cc24-08d5-4884-b170-ba8ed42d80db), auch wenn mit dem Bereichsauflösungsoperator vor Ihrem Namen, Typen von Namen die nur möglich, in einer Klasse sind nicht zulässig.  Dazu gehören Funktionsnamen für benutzerdefinierte Konvertierung und Destruktornamen.  
   
  Zu den Beispielen von primären Ausdrücken gehören:  
   
@@ -75,7 +90,7 @@ this // in a member function, a pointer to the class instance
 ( i + 1 ) // a parenthesized expression  
 ```  
   
- Alle unten gezeigten Beispiele gelten als *names*, und daher sind sie primäre Ausdrücke in verschiedenen Formen:  
+ Folgende Beispiele gelten alle *Namen*, und daher sind Sie primäre Ausdrücke in verschiedenen Formen:  
   
 ```  
 MyClass // a identifier  
@@ -87,5 +102,5 @@ A::B   // a qualified name
 A<int> // a template id  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Ausdruckstypen](../cpp/types-of-expressions.md)

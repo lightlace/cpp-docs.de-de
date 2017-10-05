@@ -1,35 +1,52 @@
 ---
-title: "Indizierung | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Arrays [C++], Indizierung"
-  - "Operatoren überladen, Beispiele"
-  - "Operatoren [C++], Überladen"
-  - "Indexoperator"
-  - "Indexoperator, Überladen"
-  - "Indizierung"
+title: Indizierung | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- subscript operator, overloaded
+- arrays [C++], subscripting
+- subscripting
+- operators [C++], overloading
+- operator overloading, examples
+- subscript operator
 ms.assetid: eb151281-6733-401d-9787-39ab6754c62c
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Indizierung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 82feaa68724e36c7ac7e739397d8a11a18e970a0
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Der Indexoperator \(**\[ \]**\) wird wie der Funktionsaufrufoperator als binärer Operator betrachtet.  Der Indexoperator muss eine nicht statische Memberfunktion sein, die ein einzelnes Argument akzeptiert.  Dieses Argument kann einen beliebigen Typ aufweisen und legt den gewünschten Arrayindex fest.  
+---
+# <a name="subscripting"></a>Indizierung 
+Der Indexoperator (**[]**) wie der Funktionsaufrufoperator als binärer Operator betrachtet wird. Der Indexoperator muss eine nicht statische Memberfunktion sein, die ein einzelnes Argument akzeptiert. Dieses Argument kann einen beliebigen Typ aufweisen und legt den gewünschten Arrayindex fest.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt, wie ein Vektor vom Typ `int` erstellt werden kann, der die Überprüfung der Begrenzungen implementiert:  
   
 ```  
@@ -81,23 +98,26 @@ int main() {
 }  
 ```  
   
-  **Verletzung von Arraygrenzen.**  
-**Element: \[0\] \= 0**  
-**Element: \[1\] \= 1**  
-**Element: \[2\] \= 2**  
-**Element: \[3\] \= 9**  
-**Element: \[4\] \= 4**  
-**Element: \[5\] \= 5**  
-**Element: \[6\] \= 6**  
-**Element: \[7\] \= 7**  
-**Element: \[8\] \= 8**  
-**Element: \[9\] \= 9**  
-**Verletzung von Arraygrenzen.**  
-**Element: \[10\] \= 10**   
-## Kommentare  
+```Output  
+Array bounds violation.  
+Element: [0] = 0  
+Element: [1] = 1  
+Element: [2] = 2  
+Element: [3] = 9  
+Element: [4] = 4  
+Element: [5] = 5  
+Element: [6] = 6  
+Element: [7] = 7  
+Element: [8] = 8  
+Element: [9] = 9  
+Array bounds violation.  
+Element: [10] = 10  
+```  
+  
+## <a name="comments"></a>Kommentare  
  Wenn `i` im vorangehenden Programm 10 erreicht, erkennt `operator[]`, dass ein Index außerhalb des gültigen Bereichs verwendet wird, und gibt eine Fehlermeldung aus.  
   
- Beachten Sie, dass die Funktion `operator[]` einen Verweistyp zurückgibt.  Dadurch wird sie zu einem L\-Wert, und Sie können auf beiden Seiten von Zuweisungsoperatoren indizierte Ausdrücke verwenden.  
+ Beachten Sie, dass die Funktion `operator[]` einen Verweistyp zurückgibt. Dadurch wird sie zu einem L-Wert, und Sie können auf beiden Seiten von Zuweisungsoperatoren indizierte Ausdrücke verwenden.  
   
-## Siehe auch  
- [Überladen von Operatoren](../cpp/operator-overloading.md)
+## <a name="see-also"></a>Siehe auch  
+ [Operatorüberladung](../cpp/operator-overloading.md)

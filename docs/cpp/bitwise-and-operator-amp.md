@@ -1,32 +1,49 @@
 ---
-title: "Bitweiser AND-Operator: &amp;"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - "bitand"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "& (Operator), Bitweise Operatoren"
-  - "AND-Operator"
-  - "Bitweise Operatoren, AND-Operator"
+title: 'Bitweiser AND-Operator: &amp; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- bitand
+dev_langs:
+- C++
+helpviewer_keywords:
+- AND operator
+- bitwise operators, AND operator
+- '& operator, bitwise operators'
 ms.assetid: 76f40de3-c417-47b9-8a77-532f3fc990a5
 caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Bitweiser AND-Operator: &amp;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 99ff65f38abf5cfcac135e2cc54e3df6df5f336d
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-## Syntax  
+---
+# <a name="bitwise-and-operator-amp"></a>Bitweiser AND-Operator:&amp;
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -36,17 +53,17 @@ expression
   
 ```  
   
-## Hinweise  
- Die Ausdrücke können andere und\-Ausdrücke sein oder \(unter Berücksichtigung der Typeinschränkungen, die unten genannt werden\) Gleichheitsausdrücke, relationale Ausdrücke, additive Ausdrücke, multiplikative Ausdrücke, Zeiger\-zu\-Member\-Ausdrücke, Umwandlungsausdrücke, unäre Ausdrücke, Postfix\-Ausdrücke oder primäre Ausdrücke.  
+## <a name="remarks"></a>Hinweise  
+ Die Ausdrücke können andere und-Ausdrücke sein oder (unter Berücksichtigung der Typeinschränkungen, die unten genannt werden) Gleichheitsausdrücke, relationale Ausdrücke, additive Ausdrücke, multiplikative Ausdrücke, Zeiger-zu-Member-Ausdrücke, Umwandlungsausdrücke, unäre Ausdrücke, Postfix-Ausdrücke oder primäre Ausdrücke.  
   
- Der bitweise AND\-Operator \(**&**\) vergleicht jedes Bit des ersten Operanden mit dem entsprechenden Bit des zweiten Operanden.  Wenn beide Bits 1 sind, wird das entsprechende Ergebnisbit auf 1 festgelegt.  Andernfalls wird das entsprechende Ergebnisbit auf 0 \(null\) festgelegt.  
+ Der bitweise AND-Operator (**&**) vergleicht jedes Bit des ersten Operanden mit dem entsprechenden Bit des zweiten Operanden. Wenn beide Bits 1 sind, wird das entsprechende Ergebnisbit auf 1 festgelegt. Andernfalls wird das entsprechende Ergebnisbit auf 0 (null) festgelegt.  
   
- Beide Operanden im bitweisen AND\-Operator müssen vom Ganzzahltyp sein.  Die üblichen arithmetischen Konvertierungen, die in [Arithmetische Konvertierungen](../misc/arithmetic-conversions.md) abgedeckt werden, werden auf die Operanden angewendet.  
+ Beide Operanden im bitweisen AND-Operator müssen vom Ganzzahltyp sein. Die üblichen arithmetischen Konvertierungen finden Sie im [Standardkonvertierungen](standard-conversions.md), auf die Operanden angewendet werden.  
   
-## Operator\-Schlüsselwort für &  
- Der `bitand`\-Operator ist die Textentsprechung von **&**.  Es gibt zwei Möglichkeiten, wie Sie in Programmen auf den `bitand`\-Operator zugreifen können: Fügen Sie die Headerdatei `iso646.h` ein, oder kompilieren Sie mit der Option [\/Za](../build/reference/za-ze-disable-language-extensions.md) \(Spracherweiterungen deaktivieren\).  
+## <a name="operator-keyword-for-"></a>Operator-Schlüsselwort für &  
+ Die `bitand` Operator ist die textentsprechung von ** & **. Es gibt zwei Möglichkeiten, den Zugriff auf die `bitand` -Operator in Programmen: Fügen Sie die Headerdatei `iso646.h`, oder Kompilieren Sie mit der ["/ Za"](../build/reference/za-ze-disable-language-extensions.md) -Compileroption (spracherweiterungen deaktivieren).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // expre_Bitwise_AND_Operator.cpp  
@@ -62,8 +79,7 @@ int main() {
 }  
 ```  
   
-## Siehe auch  
- [C\+\+\-Operatoren zur Bitmanipulation](../misc/cpp-bitwise-operators.md)   
- [C\+\+\-Operatoren](../misc/cpp-operators.md)   
- [C\+\+\-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [C\-Operatoren zur Bitmanipulation](../c-language/c-bitwise-operators.md)
+## <a name="see-also"></a>Siehe auch  
+ [C++-Built-in-Operatoren, Rangfolge und Assoziativität](cpp-built-in-operators-precedence-and-associativity.md)  
+ [Integrierte C++-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C-Operatoren zur Bitmanipulation](../c-language/c-bitwise-operators.md)

@@ -1,31 +1,48 @@
 ---
-title: "Anweisungen mit Bezeichnung | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "goto"
-  - "case"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Anweisung mit Bezeichnung"
-  - "Anweisungen, Mit Bezeichnung"
+title: Mit der Bezeichnung Anweisungen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- goto
+- case
+dev_langs:
+- C++
+helpviewer_keywords:
+- labeled statement
+- statements, labeled
 ms.assetid: 456a26d5-0fcc-4d1a-b71f-fa9ff3d73b91
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Anweisungen mit Bezeichnung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9011728bf6b8eac5a8ce13ebca2301fc36ad633a
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="labeled-statements"></a>Anweisungen mit Bezeichnung
 Bezeichnungen werden verwendet, um die Programmsteuerung direkt an die angegebene Anweisung zu übertragen.  
   
 ```  
@@ -36,8 +53,8 @@ default :  statement
   
  Der Umfang einer Bezeichnung ist die gesamte Funktion, in der diese deklariert wurde.  
   
-## Hinweise  
- Es gibt drei Typen von bezeichneten Anweisungen.  Alle verwenden einen Doppelpunkt, um einen Bezeichnungstyp von der Anweisung zu trennen.  Die case\- und default\-Bezeichnungen sind für case\-Anweisungen bestimmt.  
+## <a name="remarks"></a>Hinweise  
+ Es gibt drei Typen von bezeichneten Anweisungen. Alle verwenden einen Doppelpunkt, um einen Bezeichnungstyp von der Anweisung zu trennen. Die case- und default-Bezeichnungen sind für case-Anweisungen bestimmt.  
   
 ```cpp  
 #include <iostream>   
@@ -66,13 +83,13 @@ int main() {
   
 ```  
   
- **Die goto\-Anweisung**  
+ **Die Goto-Anweisung**  
   
- Eine *identifier*\-Bezeichnung im Quellprogramm deklariert eine Bezeichnung.  Nur eine [goto](../cpp/goto-statement-cpp.md)\-Anweisung kann die Steuerung an eine *identifier*\-Bezeichnung übergeben.  Das folgende Codefragment zeigt die Verwendung der `goto`\-Anweisung und einer *identifier*\-Bezeichnung:  
+ Die Darstellung einer *Bezeichner* -Bezeichnung im Quellprogramm deklariert eine Bezeichnung. Nur eine [Goto](../cpp/goto-statement-cpp.md) Anweisung kann übertragen Sie die Steuerung an eine *Bezeichner* Bezeichnung. Das folgende Codefragment veranschaulicht die Verwendung von der `goto` Anweisung und eine *Bezeichner* Bezeichnung:  
   
- Eine Bezeichnung kann nicht allein stehen, sondern muss immer an eine Anweisung angefügt werden.  Wenn eine Bezeichnung allein benötigt wird, platzieren Sie nach ihr eine NULL\-Anweisung.  
+ Eine Bezeichnung kann nicht allein stehen, sondern muss immer an eine Anweisung angefügt werden. Wenn eine Bezeichnung allein benötigt wird, platzieren Sie nach ihr eine NULL-Anweisung.  
   
- Die Bezeichnung gilt funktionsweit und kann nicht innerhalb der Funktion erneut deklariert werden.  Allerdings kann derselbe Name in verschiedenen Funktionen als Bezeichnung verwendet werden.  
+ Die Bezeichnung gilt funktionsweit und kann nicht innerhalb der Funktion erneut deklariert werden. Allerdings kann derselbe Name in verschiedenen Funktionen als Bezeichnung verwendet werden.  
   
 ```  
 // labels_with_goto.cpp  
@@ -91,9 +108,9 @@ int main() {
 //Output: At Test2 label.  
 ```  
   
- **Die case\-Anweisung**  
+ **Der Case-Anweisung**  
   
- Bezeichnungen, die nach dem **case**\-Schlüsselwort angezeigt werden, können nicht ebenfalls außerhalb einer `switch`\-Anweisung angezeigt werden.  \(Diese Einschränkung gilt auch für das **default**\-Schlüsselwort.\) Folgendes Codefragment zeigt die korrekte Verwendung von **case**\-Bezeichnungen:  
+ Bezeichnungen, die nach Auftreten der **Fall** Schlüsselwort kann nicht auch außerhalb der angezeigt werden. eine `switch` Anweisung. (Diese Einschränkung gilt auch für die **Standard** Schlüsselwort.) Das folgende Codefragment zeigt die korrekte Verwendung von **Fall** Bezeichnungen:  
   
 ```  
 // Sample Microsoft Windows message processing loop.  
@@ -121,8 +138,8 @@ switch( msg )
 }  
 ```  
   
-## Bezeichnungen in der case\-Anweisung  
- Bezeichnungen, die nach dem **case**\-Schlüsselwort angezeigt werden, können nicht ebenfalls außerhalb einer `switch`\-Anweisung angezeigt werden.  \(Diese Einschränkung gilt auch für das **default**\-Schlüsselwort.\) Folgendes Codefragment zeigt die korrekte Verwendung von **case**\-Bezeichnungen:  
+## <a name="labels-in-the-case-statement"></a>Bezeichnungen in der case-Anweisung  
+ Bezeichnungen, die nach Auftreten der **Fall** Schlüsselwort kann nicht auch außerhalb der angezeigt werden. eine `switch` Anweisung. (Diese Einschränkung gilt auch für die **Standard** Schlüsselwort.) Das folgende Codefragment zeigt die korrekte Verwendung von **Fall** Bezeichnungen:  
   
 ```  
 // Sample Microsoft Windows message processing loop.  
@@ -165,12 +182,12 @@ switch( msg )
 }  
 ```  
   
-## Bezeichnungen in der goto\-Anweisung  
- Eine *identifier*\-Bezeichnung im Quellprogramm deklariert eine Bezeichnung.  Nur eine [goto](../cpp/goto-statement-cpp.md)\-Anweisung kann die Steuerung an eine *identifier*\-Bezeichnung übergeben.  Das folgende Codefragment zeigt die Verwendung der `goto`\-Anweisung und einer *identifier*\-Bezeichnung:  
+## <a name="labels-in-the-goto-statement"></a>Bezeichnungen in der goto-Anweisung  
+ Die Darstellung einer *Bezeichner* -Bezeichnung im Quellprogramm deklariert eine Bezeichnung. Nur eine [Goto](../cpp/goto-statement-cpp.md) Anweisung kann übertragen Sie die Steuerung an eine *Bezeichner* Bezeichnung. Das folgende Codefragment veranschaulicht die Verwendung von der `goto` Anweisung und eine *Bezeichner* Bezeichnung:  
   
- Eine Bezeichnung kann nicht allein stehen, sondern muss immer an eine Anweisung angefügt werden.  Wenn eine Bezeichnung allein benötigt wird, platzieren Sie nach ihr eine NULL\-Anweisung.  
+ Eine Bezeichnung kann nicht allein stehen, sondern muss immer an eine Anweisung angefügt werden. Wenn eine Bezeichnung allein benötigt wird, platzieren Sie nach ihr eine NULL-Anweisung.  
   
- Die Bezeichnung gilt funktionsweit und kann nicht innerhalb der Funktion erneut deklariert werden.  Allerdings kann derselbe Name in verschiedenen Funktionen als Bezeichnung verwendet werden.  
+ Die Bezeichnung gilt funktionsweit und kann nicht innerhalb der Funktion erneut deklariert werden. Allerdings kann derselbe Name in verschiedenen Funktionen als Bezeichnung verwendet werden.  
   
 ```  
 // labels_with_goto.cpp  
@@ -189,6 +206,6 @@ int main() {
   
 ```  
   
-## Siehe auch  
- [Übersicht über C\+\+\-Anweisungen](../cpp/overview-of-cpp-statements.md)   
- [switch\-Anweisung \(C\+\+\)](../cpp/switch-statement-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [Übersicht über C++-Anweisungen](../cpp/overview-of-cpp-statements.md)   
+ [switch-Anweisung (C++)](../cpp/switch-statement-cpp.md)

@@ -1,81 +1,98 @@
 ---
-title: "struct (C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - "struct"
-  - "struct_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Strukturkonstruktoren"
+title: Struktur (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- struct
+- struct_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- struct constructors
 ms.assetid: 3c6ba273-e248-4ff1-8c69-d2abcf1263c6
 caps.latest.revision: 9
-caps.handback.revision: "9"
-ms.author: "mblome"
-manager: "ghogen"
----
-# struct (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 4918adb779a620afd4a0c1e4ef64ef9892de1ba8
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Das `struct`\-Schlüsselwort definiert einen Strukturtyp und\/oder eine Variable eines Strukturtyps.  
+---
+# <a name="struct-c"></a>struct (C++)
+Das `struct`-Schlüsselwort definiert einen Strukturtyp und/oder eine Variable eines Strukturtyps.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-[template-spec] struct [ms-decl-spec] [tag [: base-list ]]  
-{   
-   member-list   
+[template-spec] struct[ms-decl-spec] [tag [: base-list ]]  
+{   
+   member-list   
 } [declarators];  
 [struct] tag declarators;  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `template-spec`  
- Optionale Vorlagenspezifikationen.  Weitere Informationen finden Sie unter [Vorlagenspezifikationen](../Topic/Template%20Specifications.md).  
+ Optionale Vorlagenspezifikationen. Weitere Informationen finden Sie unter [Vorlagenspezifikationen](templates-cpp.md).  
   
  `struct`  
- Das `struct`\-Schlüsselwort.  
+ Das `struct`-Schlüsselwort.  
   
  `ms-decl-spec`  
- Optionale Speicherklassenspezifikation.  Weitere Informationen finden Sie im Zusammenhang mit dem [\_\_declspec](../cpp/declspec.md)\-Schlüsselwort.  
+ Optionale Speicherklassenspezifikation. Weitere Informationen finden Sie unter der [__declspec](../cpp/declspec.md) Schlüsselwort.  
   
  `tag`  
- Der Typname, der für die Struktur angegeben wurde.  Das Tag wird ein reserviertes Wort innerhalb des Gültigkeitsbereichs der Struktur.  Das Tag ist optional.  Wenn es nicht angegeben wird, wird eine anonyme Struktur definiert.  Weitere Informationen finden Sie unter [Anonyme Klassentypen](../cpp/anonymous-class-types.md).  
+ Der Typname, der für die Struktur angegeben wurde. Das Tag wird ein reserviertes Wort innerhalb des Gültigkeitsbereichs der Struktur. Das Tag ist optional. Wenn es nicht angegeben wird, wird eine anonyme Struktur definiert. Weitere Informationen finden Sie unter [Anonyme Klassentypen](../cpp/anonymous-class-types.md).  
   
  `base-list`  
- Optionale Liste von Klassen oder Strukturen, von denen diese Struktur ihre Member ableitet.  Weitere Informationen finden Sie unter [Basisklassen](../cpp/base-classes.md).  Jedem Basisklassen\- oder Strukturnamen kann ein Zugriffsspezifizierer \([public](../cpp/public-cpp.md), [private](../cpp/private-cpp.md), [protected](../cpp/protected-cpp.md)\) und das [virtual](../cpp/virtual-cpp.md)\-Schlüsselwort vorangestellt werden.  Weitere Informationen finden Sie in der Memberzugriffstabelle unter [Steuern des Zugriffs auf Klassenmember](../misc/controlling-access-to-class-members.md).  
+ Optionale Liste von Klassen oder Strukturen, von denen diese Struktur ihre Member ableitet. Finden Sie unter [Basisklassen](../cpp/base-classes.md) für Weitere Informationen. Jede Klasse oder Struktur Basisnamen kann einen Zugriffsspezifizierer vorangestellt werden ([öffentlichen](../cpp/public-cpp.md), [private](../cpp/private-cpp.md), [geschützt](../cpp/protected-cpp.md)) und die [virtuellen](../cpp/virtual-cpp.md) Schlüsselwort. Finden Sie in der memberzugriffstabelle in [Steuern des Zugriffs auf Klassenmember](member-access-control-cpp.md) für Weitere Informationen.  
   
  `member-list`  
- Liste der Strukturmember.  Weitere Informationen finden Sie unter [Übersicht über Klassenmember](../cpp/class-member-overview.md).  Der einzige Unterschied besteht darin, dass `struct` anstelle von `class` verwendet wird.  
+ Liste der Strukturmember. Verweisen auf [Member Klassenüberblick](../cpp/class-member-overview.md) für Weitere Informationen. Der einzige Unterschied besteht darin, dass `struct` anstelle von `class` verwendet wird.  
   
  `declarators`  
- Deklaratorliste, die die Namen der Klasse angibt.  Deklaratorlisten deklarieren eine oder mehrere Instanzen des Strukturtyps.  Deklaratoren können Initialisierungslisten enthalten, wenn alle Datenmember der Klasse `public` sind.  Initialisierungslisten werden häufig in Strukturen verwendet, da Datenmember standardmäßig `public` sind.  Weitere Informationen finden Sie unter [Übersicht über Deklaratoren](../cpp/overview-of-declarators.md).  
+ Deklaratorliste, die die Namen der Klasse angibt. Deklaratorlisten deklarieren eine oder mehrere Instanzen des Strukturtyps. Deklaratoren können Initialisierungslisten enthalten, wenn alle Datenmember der Klasse `public` sind. Initialisierungslisten werden häufig in Strukturen verwendet, da Datenmember standardmäßig `public` sind.  Finden Sie unter [Übersicht von Deklaratoren](../cpp/overview-of-declarators.md) für Weitere Informationen.  
   
-## Hinweise  
- Ein Strukturtyp ist ein benutzerdefinierter zusammengesetzter Typ.  Er setzt sich aus Feldern oder Membern zusammen, die unterschiedliche Typen aufweisen können.  
+## <a name="remarks"></a>Hinweise  
+ Ein Strukturtyp ist ein benutzerdefinierter zusammengesetzter Typ. Er setzt sich aus Feldern oder Membern zusammen, die unterschiedliche Typen aufweisen können.  
   
- In C\+\+ ist eine Struktur identisch mit einer Klasse, mit der Ausnahme, dass die Member standardmäßig `public` sind.  
+ In C++ ist eine Struktur identisch mit einer Klasse, mit der Ausnahme, dass die Member standardmäßig `public` sind.  
   
- Weitere Informationen über verwaltete Klassen und Strukturen finden Sie unter [Klassen und Strukturen](../windows/classes-and-structs-cpp-component-extensions.md).  
+ Informationen über verwaltete Klassen und Strukturen finden Sie unter [Klassen und Strukturen](../windows/classes-and-structs-cpp-component-extensions.md).  
   
-## Verwenden einer Struktur  
- In C müssen Sie explizit das `struct`\-Schlüsselwort verwenden, um eine Struktur zu deklarieren.  In C\+\+ müssen Sie das `struct`\-Schlüsselwort nicht verwenden, nachdem der Typ definiert wurde.  
+## <a name="using-a-structure"></a>Verwenden einer Struktur  
+ In C müssen Sie explizit das `struct`-Schlüsselwort verwenden, um eine Struktur zu deklarieren. In C++ müssen Sie das `struct`-Schlüsselwort nicht verwenden, nachdem der Typ definiert wurde.  
   
  Sie können Variablen deklarieren, wenn der Strukturtyp so definiert wurde, dass mindestens ein durch Trennzeichen getrennter Variablenname zwischen schließender Klammer und Semikolon steht.  
   
- Strukturvariablen können initialisiert werden.  Die Initialisierung für jede Variable muss in Klammern eingeschlossen sein.  
+ Strukturvariablen können initialisiert werden. Die Initialisierung für jede Variable muss in Klammern eingeschlossen sein.  
   
- Weitere Informationen finden Sie unter [Klasse](../cpp/class-cpp.md), [Union](../cpp/unions.md) und [Enumeration](../cpp/enumerations-cpp.md).  
+ Weitere Informationen finden Sie unter [Klasse](../cpp/class-cpp.md), [Union](../cpp/unions.md), und [Enum](../cpp/enumerations-cpp.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 #include <iostream>  
@@ -114,5 +131,4 @@ int main() {
 // my_cell.character = 1  
 ```  
   
-## Siehe auch  
- [\(NOTINBUILD\) Defining Class Types](assetId:///e8c65425-0f3a-4dca-afc2-418c3b1e57da)
+

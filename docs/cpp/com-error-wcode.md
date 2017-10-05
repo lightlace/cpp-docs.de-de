@@ -1,36 +1,53 @@
 ---
-title: "_com_error::WCode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_com_error.WCode"
-  - "_com_error::WCode"
-  - "WCode"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "WCode-Methode"
+title: '_com_error:: wcode | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _com_error.WCode
+- _com_error::WCode
+- WCode
+dev_langs:
+- C++
+helpviewer_keywords:
+- WCode method
 ms.assetid: f3b21852-f8ea-4e43-bff1-11c2d35454c4
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _com_error::WCode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 15c0d860a5faffc160def725630fbbb1d84d8ed8
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-**Microsoft\-spezifisch**  
+---
+# <a name="comerrorwcode"></a>_com_error::WCode
+**Microsoft-spezifisch**  
   
- Ruft den 16\-Bit\-Fehlercode ab, der dem gekapselten `HRESULT` zugeordnet ist.  
+ Ruft den 16-Bit-Fehlercode ab, der dem gekapselten `HRESULT` zugeordnet ist.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -38,15 +55,15 @@ WORD WCode ( ) const throw( );
   
 ```  
   
-## Rückgabewert  
- Wenn `HRESULT` innerhalb des Bereichs 0x80040200 bis 0x8004FFFF liegt, gibt die **WCode**\-Methode `HRESULT` minus 0x80040200 zurück; andernfalls 0 \(null\).  
+## <a name="return-value"></a>Rückgabewert  
+ Wenn die `HRESULT` innerhalb des Bereichs 0 x 80040200 bis 0x8004ffff liegt, wird die **WCode** Methode gibt die `HRESULT` minus 0 x 80040200; zurückgegeben, andernfalls 0 (null).  
   
-## Hinweise  
- Die **WCode**\-Methode wird verwendet, um eine Zuordnung rückgängig zu machen, die im COM\-Unterstützungscode vorgenommen wird.  Der Wrapper für eine **dispinterface**\-Eigenschaft oder \-Methode ruft eine Unterstützungsroutine auf, die die Argumente verpackt und **IDispatch::Invoke** aufruft.  Wenn ein Fehler `HRESULT` `DISP_E_EXCEPTION` zurückgegeben wird, werden die Fehlerinformationen nach der Rückgabe aus der **EXCEPINFO**\-Struktur abgerufen, die an **IDispatch::Invoke** übergeben wurde.  Der Fehlercode kann entweder ein 16\-Bit\-Wert sein, der im Member `wCode` der Struktur **EXCEPINFO** gespeichert ist oder ein vollständiger 32\-bit\-Wert im Member **scode** der Struktur **EXCEPINFO**.  Wenn ein 16\-Bit\-`wCode` zurückgegeben wird, muss er zuerst einem 32\-Bit\-Fehler\-`HRESULT` zugeordnet werden.  
+## <a name="remarks"></a>Hinweise  
+ Die **WCode** Methode wird verwendet, um eine Zuordnung rückgängig zu machen, die in der COM-Unterstützungscode vorgenommen wird. Der Wrapper für eine **Dispinterface** -Eigenschaft oder-Methode ruft eine unterstützungsroutine auf, die die Argumente und Aufrufe verpackt **IDispatch:: Invoke**. Nach der Rückgabe bei einem Fehler `HRESULT` von `DISP_E_EXCEPTION` zurückgegeben wird, wird die Fehlerinformationen abgerufen, von der **EXCEPINFO** Struktur übergeben, um **IDispatch:: Invoke**. Der Fehlercode kann entweder einem 16-Bit-Wert in der `wCode` Mitglied der **EXCEPINFO** Struktur- oder einen 32-Bit-Wert in der **Scode** Mitglied der **EXCEPINFO**Struktur. Wenn ein 16-Bit-`wCode` zurückgegeben wird, muss er zuerst einem 32-Bit-Fehler-`HRESULT` zugeordnet werden.  
   
- **END Microsoft\-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
- [\_com\_error::HRESULTToWCode](../cpp/com-error-hresulttowcode.md)   
- [\_com\_error::WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)   
- [\_com\_error\-Klasse](../cpp/com-error-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [_com_error::HRESULTToWCode](../cpp/com-error-hresulttowcode.md)   
+ [_com_error::WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)   
+ [_com_error-Klasse](../cpp/com-error-class.md)

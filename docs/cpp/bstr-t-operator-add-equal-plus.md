@@ -1,36 +1,53 @@
 ---
-title: "_bstr_t::operator +=, +"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_bstr_t::operator+"
-  - "_bstr_t::operator+="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "+-Operator, _bstr_t-Objekte"
-  - "+=-Operator, Anfügen von Zeichenfolgen"
+title: _bstr_t::Operator +=, + | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _bstr_t::operator+
+- _bstr_t::operator+=
+dev_langs:
+- C++
+helpviewer_keywords:
+- += operator, appending strings
+- + operator, _bstr_t objects
 ms.assetid: d28316ce-c2c8-4a38-bdb3-44fa4e582c44
 caps.latest.revision: 6
-caps.handback.revision: "6"
-ms.author: "mblome"
-manager: "ghogen"
----
-# _bstr_t::operator +=, +
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 0ba8936df56359523a76992866642521f899af69
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-**Microsoft\-spezifisch**  
+---
+# <a name="bstrtoperator--"></a>_bstr_t::operator +=, +
+**Microsoft-spezifisch**  
   
- Fügt Zeichen am Ende des `_bstr_t`\-Objekts hinzu oder verkettet zwei Zeichenfolgen.  
+ Fügt Zeichen am Ende des `_bstr_t`-Objekts hinzu oder verkettet zwei Zeichenfolgen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -50,28 +67,28 @@ friend _bstr_t operator+(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  *s1*  
- Ein `_bstr_t`\-Objekt.  
+ Ein `_bstr_t`-Objekt.  
   
  *s2*  
  Eine Mehrbytezeichenfolge.  
   
  `s3`  
- Eine Unicode\-Zeichenfolge.  
+ Eine Unicode-Zeichenfolge.  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Diese Operatoren führen eine Zeichenfolgenverkettung aus:  
   
--   **operator\+\=\(**  *s1*  **\)** Fügt die Zeichen im gekapselten `BSTR` von *s1* dem Ende des gekapselten `BSTR` dieses Objekts an.  
+-   **Operator += (***s1***)** fügt die Zeichen in das gekapselte `BSTR` von *s1* am Ende dieses Objekts gekapselten `BSTR`.      
   
--   **operator\+\(**  *s1*  **\)** Gibt das neue `_bstr_t` zurück, das durch die Verkettung des `BSTR` dieses Objekts mit dem von *s1* gebildet wird.  
+-   **Operator + (***s1***)** gibt die neue `_bstr_t` , wird gebildet, indem Sie dieses Objekt verketten `BSTR` mit der *s1*.      
   
--   **operator\+\(**  *s2*  **&#124;**  *s1*  **\)** Gibt ein neues `_bstr_t` zurück, das durch die Verkettung einer Mehrbytezeichenfolge *s2* \(in Unicode konvertiert\) mit `BSTR` \(in *s1* gekapselt\) gebildet wird.  
+-   **Operator + (***s2***&#124;** *s1***)** gibt eine neue `_bstr_t` , wird gebildet, indem eine multibyte-Zeichenfolge verketten *s2*, umgewandelt in Unicode, mit der `BSTR` in den gekapselt *s1*.          
   
--   **operator\+\(**  `s3` **,**  *s1*  **\)** Gibt ein neues `_bstr_t` zurück, das durch die Verkettung einer Unicode\-Zeichenfolge `s3` mit dem `BSTR` gebildet wird, das in *s1* gekapselt ist.  
+-   **Operator + (** `s3` **,***s1***)** gibt eine neue `_bstr_t` , wird gebildet, indem Sie eine Unicode-Zeichenfolge verketten `s3` mit der `BSTR` in gekapselt *s1*.        
   
- **END Microsoft\-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
- [\_bstr\_t\-Klasse](../cpp/bstr-t-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [_bstr_t-Klasse](../cpp/bstr-t-class.md)

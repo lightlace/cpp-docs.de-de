@@ -1,34 +1,51 @@
 ---
-title: "Allgemeine Regeln f&#252;r die &#220;berladung von Operatoren | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Operatoren überladen, Regeln"
+title: "Allgemeine Regeln für Operatorüberladung | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- operator overloading, rules
 ms.assetid: eb2b3754-35f7-4832-b1da-c502893dc0c7
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Allgemeine Regeln f&#252;r die &#220;berladung von Operatoren
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 882c3777d2744a8a693512f564d7c3b1f1c1a46e
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Die folgenden Regeln schränken die Art und Weise ein, wie überladene Operatoren implementiert werden.  Allerdings gelten sie nicht für die Operatoren [new](../cpp/new-operator-cpp.md) und [delete](../cpp/delete-operator-cpp.md), die separat behandelt werden.  
+---
+# <a name="general-rules-for-operator-overloading"></a>Allgemeine Regeln für die Überladung von Operatoren
+Die folgenden Regeln schränken die Art und Weise ein, wie überladene Operatoren implementiert werden. Aber sie gelten nicht für die [neue](../cpp/new-operator-cpp.md) und [löschen](../cpp/delete-operator-cpp.md) Operatoren, die separat behandelt werden.  
   
--   Sie können keine neuen Operatoren, wie etwa \*\*, definieren.  
+-   Sie können keine neuen Operatoren, wie etwa **, definieren.  
   
 -   Sie können die Bedeutung von Operatoren nicht neu definieren, wenn sie auf integrierte Datentypen angewendet werden.  
   
--   Überladene Operatoren müssen entweder eine nicht statische Klassenmemberfunktion oder eine globale Funktion sein.  Eine globale Funktion, die auf private oder geschützte Klassenmember zugreifen muss, muss als Friend dieser Klasse deklariert sein.  Eine globale Funktion muss mindestens ein Argument annehmen, das vom Klassen\- oder Aufzählungstyp ist, oder das ein Verweis auf einen Klassen\- oder Aufzählungstyp ist.  Beispiel:  
+-   Überladene Operatoren müssen entweder eine nicht statische Klassenmemberfunktion oder eine globale Funktion sein. Eine globale Funktion, die auf private oder geschützte Klassenmember zugreifen muss, muss als Friend dieser Klasse deklariert sein. Eine globale Funktion muss mindestens ein Argument annehmen, das vom Klassen- oder Aufzählungstyp ist, oder das ein Verweis auf einen Klassen- oder Aufzählungstyp ist. Zum Beispiel:  
   
     ```  
     // rules_for_operator_overloading.cpp  
@@ -47,23 +64,23 @@ Die folgenden Regeln schränken die Art und Weise ein, wie überladene Operatore
     }  
     ```  
   
-     Das vorhergehende Codebeispiel deklariert den Less Than\-Operator als Memberfunktion. Allerdings werden die Additionsoperatoren als globale Funktionen deklariert, die Friend\-Zugriff haben.  Beachten Sie, dass mehr als eine Implementierung für einen angegebenen Operator bereitgestellt werden kann.  Im Fall des vorhergehenden Additionsoperators werden die beiden Implementierungen bereitgestellt, um Kommutativität zu ermöglichen.  Es ist ebenso wahrscheinlich, dass Operatoren, die `Point` `Point`, `int` einem `Point` usw. hinzufügen, implementiert werden könnten.  
+     Das vorhergehende Codebeispiel deklariert den Less Than-Operator als Memberfunktion. Allerdings werden die Additionsoperatoren als globale Funktionen deklariert, die Friend-Zugriff haben. Beachten Sie, dass mehr als eine Implementierung für einen angegebenen Operator bereitgestellt werden kann. Im Fall des vorhergehenden Additionsoperators werden die beiden Implementierungen bereitgestellt, um Kommutativität zu ermöglichen. Es ist ebenso wahrscheinlich, dass Operatoren, die `Point` `Point`, `int` einem `Point` usw. hinzufügen, implementiert werden könnten.  
   
--   Operatoren unterliegen der Priorität, Gruppierung und Anzahl von Operanden, die durch ihre typische Verwendung mit integrierten Typen vorgegeben werden.  Daher gibt es keine Möglichkeit, das Konzept zu beschreiben, gemäß dem 2 und 3 einem Objekt vom Typ `Point` hinzugefügt werden, wobei erwartet wird, dass 2 der *x*\-Koordinate hinzugefügt und 3 der *y*\-Koordinate hinzugefügt wird.  
+-   Operatoren unterliegen der Priorität, Gruppierung und Anzahl von Operanden, die durch ihre typische Verwendung mit integrierten Typen vorgegeben werden. Daher besteht keine Möglichkeit, das Konzept "ein Objekt vom Typ 2 und 3 hinzufügen `Point`," erwartet 2 hinzugefügt werden die *x* Koordinate und 3 hinzugefügt werden die *y* koordinieren.  
   
 -   Unäre Operatoren, die als Memberfunktionen deklariert werden, akzeptieren keine Argumente. Wenn sie als globale Funktionen deklariert werden, nehmen sie ein Argument an.  
   
 -   Binäre Operatoren, die als Memberfunktionen deklariert werden, akzeptieren ein Argument. Wenn sie als globale Funktionen deklariert werden, nehmen sie zwei Argumente an.  
   
--   Wenn ein Operator sowohl als unärer als auch als binärer Operator verwendet werden kann \(**&**, **\***, **\+** und **\-**\), können Sie jede Verwendung separat überladen.  
+-   Wenn ein Operator als unärer oder binärer Operator verwendet werden kann (**&**, ** \* **, ** + **, und ** - **), können Sie jede Verwendung separat überladen.  
   
 -   Überladene Operatoren können keine Standardargumente haben.  
   
--   Alle überladenen Operatoren außer der Zuweisung \(`operator=`\) werden von abgeleiteten Klassen geerbt.  
+-   Alle überladenen Operatoren außer der Zuweisung (`operator=`) werden von abgeleiteten Klassen geerbt.  
   
--   Das erste Argument für mit Memberfunktionen überladene Operatoren weist immer den Klassentyp des Objekts auf, für das der Operator aufgerufen wird \(die Klasse, in der der Operator deklariert ist, oder eine Klasse, die von dieser Klasse abgeleitet ist\).  Es werden keine Konvertierungen für das erste Argument bereitgestellt.  
+-   Das erste Argument für mit Memberfunktionen überladene Operatoren weist immer den Klassentyp des Objekts auf, für das der Operator aufgerufen wird (die Klasse, in der der Operator deklariert ist, oder eine Klasse, die von dieser Klasse abgeleitet ist). Es werden keine Konvertierungen für das erste Argument bereitgestellt.  
   
- Beachten Sie, dass die Bedeutung aller Operatoren vollständig geändert werden kann.  Das schließt die Bedeutung des address\-of\-Operators \(**&**\), des Zuweisungsoperators \(**\=**\) und des function\-call\-Operators mit ein.  Auch Identitäten, auf denen integrierte Typen basieren können, können mithilfe der Operatorüberladung geändert werden.  Beispielsweise sind die folgenden vier Anweisungen normalerweise gleichwertig, wenn sie vollständig ausgewertet werden:  
+ Beachten Sie, dass die Bedeutung aller Operatoren vollständig geändert werden kann. Enthält die Bedeutung der Adresse des (**&**), Zuweisung (**=**), und Funktionsaufruf Operatoren. Auch Identitäten, auf denen integrierte Typen basieren können, können mithilfe der Operatorüberladung geändert werden. Beispielsweise sind die folgenden vier Anweisungen normalerweise gleichwertig, wenn sie vollständig ausgewertet werden:  
   
 ```  
 var = var + 1;  
@@ -72,10 +89,10 @@ var++;
 ++var;  
 ```  
   
- Klassentypen, die Operatoren überladen, können nicht auf dieser Identität basieren.  Darüber hinaus sind einige der Anforderungen, die für die Verwendung dieser Operatoren für grundlegende Typen gelten, für überladene Operatoren weniger strikt.  Zum Beispiel erfordert der Additions\-\/Zuweisungsoperator, `+=`, dass der linke Operand ein L\-Wert ist, wenn er auf grundlegende Typen angewendet wird. Wenn der Operator überladen wird, gibt es keine solche Anforderung.  
+ Klassentypen, die Operatoren überladen, können nicht auf dieser Identität basieren. Darüber hinaus sind einige der Anforderungen, die für die Verwendung dieser Operatoren für grundlegende Typen gelten, für überladene Operatoren weniger strikt. Zum Beispiel erfordert der Additions-/Zuweisungsoperator, `+=`, dass der linke Operand ein L-Wert ist, wenn er auf grundlegende Typen angewendet wird. Wenn der Operator überladen wird, gibt es keine solche Anforderung.  
   
 > [!NOTE]
->  Aus Gründen der Konsistenz ist es oft am besten, beim Definieren überladener Operatoren das Modell der integrierten Typen zu befolgen.  Wenn sich die Semantik eines überladenen Operators deutlich von seiner Bedeutung in anderen Kontexten unterscheidet, kann das eher verwirrend als nützlich sein.  
+>  Aus Gründen der Konsistenz ist es oft am besten, beim Definieren überladener Operatoren das Modell der integrierten Typen zu befolgen. Wenn sich die Semantik eines überladenen Operators deutlich von seiner Bedeutung in anderen Kontexten unterscheidet, kann das eher verwirrend als nützlich sein.  
   
-## Siehe auch  
- [Überladen von Operatoren](../cpp/operator-overloading.md)
+## <a name="see-also"></a>Siehe auch  
+ [Operatorüberladung](../cpp/operator-overloading.md)

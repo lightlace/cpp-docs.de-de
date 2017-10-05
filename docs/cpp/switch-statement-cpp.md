@@ -1,63 +1,79 @@
 ---
-title: "switch-Anweisung (C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - "default"
-  - "default_cpp"
-  - "switch"
-  - "switch_cpp"
-  - "case"
-  - "case_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "case-Schlüsselwort [C++], In switch-Anweisungen"
-  - "default-Schlüsselwort [C++]"
-  - "switch-Schlüsselwort [C++]"
+title: Switch-Anweisung (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- default
+- default_cpp
+- switch
+- switch_cpp
+- case
+- case_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- switch keyword [C++]
+- case keyword [C++], in switch statements
+- default keyword [C++]
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
 caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "mblome"
-manager: "ghogen"
----
-# switch-Anweisung (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 5e05299d88cadfafb9ccb7523aac33096b90d46b
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="switch-statement-c"></a>switch-Anweisung (C++)
 Ermöglicht die Auswahl von mehreren Codeabschnitten, abhängig vom Wert eines ganzzahligen Ausdrucks.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      switch ( expression )  
-   case constant-expression : statement  
-   [default  : statement]  
+   switch ( init; expression )  
+   case constant-expression : statement  
+   [default  : statement]  
 ```  
   
-## Hinweise  
- Der *Ausdruck* muss einen integralen Typ aufweisen oder einen Klassentyp, für den eine eindeutige Konvertierung in einen integralen Typ möglich ist.  Ganzzahlige Erweiterung wird wie in [Ganzzahlige Erweiterungen](../misc/integral-promotions.md) beschrieben ausgeführt.  
+## <a name="remarks"></a>Hinweise  
+ Die *Ausdruck* muss ein ganzzahliger Typ oder von einem Klassentyp sein, die für die eine eindeutige Konvertierung in ganzzahligen Typ vorhanden ist. Ganzzahlige Erweiterung wird ausgeführt, wie in beschrieben [Standardkonvertierungen](standard-conversions.md).  
   
- Der `switch`\-Anweisungstext besteht aus einer Reihe von der **case**\-Bezeichnungen und einer optionalen **default**\-Bezeichnung.  Es können nicht zwei konstante Ausdrücke in **case**\-Anweisungen zum gleichen Wert ausgewertet werden.  Die Bezeichnung **default** kann nur einmal vorkommen.  Die bezeichneten Anweisungen sind für die Syntax nicht erforderlich, aber die Anweisung `switch` ist ohne sie bedeutungslos.   Die default\-Anweisung muss nicht am Ende stehen. Sie kann überall im Text der switch\-Anweisung vorkommen.  Eine case\- oder default\-Bezeichnung kann nur innerhalb einer switch\-Anweisung angezeigt werden.  
+ Die `switch` -Anweisungstext besteht aus einer Reihe von **Fall** Bezeichnungen sowie ein optionales **Standard** Bezeichnung. Keine zwei Konstante Ausdrücke in **Fall** Anweisungen können auf den gleichen Wert ausgewertet. Die **Standard** Bezeichnung kann nur einmal vorkommen. Die bezeichneten Anweisungen sind für die Syntax nicht erforderlich, aber die Anweisung `switch` ist ohne sie bedeutungslos.   Die default-Anweisung muss nicht am Ende stehen. Sie kann überall im Text der switch-Anweisung vorkommen. Eine case- oder default-Bezeichnung kann nur innerhalb einer switch-Anweisung angezeigt werden.  
   
- Der *Konstantenausdruck* in jeder **case**\-Bezeichnung wird in den Typ des *Ausdrucks* konvertiert und mit *Ausdruck* hinsichtlich ihrer Gleichheit überprüft.  Das Steuerelement wird an die Anweisung übergeben, deren **case***Konstantenausdruck* dem Wert des *Ausdrucks* entspricht.  Der resultierende Verhalten wird in der folgenden Tabelle gezeigt.  
+ Die *Konstantenausdruck* in jedem **Fall** Bezeichnung wird in den Typ des konvertiert *Ausdruck* und im Vergleich zu *Ausdruck* für auf Gleichheit. Die Steuerung an die Anweisung, deren **Fall** *Konstantenausdruck* entspricht dem Wert *Ausdruck*. Der resultierende Verhalten wird in der folgenden Tabelle gezeigt.  
   
-### Verhalten der switch\-Anweisung  
+### <a name="switch-statement-behavior"></a>Verhalten der switch-Anweisung  
   
 |Bedingung|Aktion|  
 |---------------|------------|  
 |Der konvertierte Wert stimmt mit dem des hochgestuften steuernden Ausdrucks überein.|Die Steuerung wird an die Anweisung übertragen, die auf die Bezeichnug folgt.|  
-|Keine der Konstanten entspricht den Konstanten in den **case**\-Bezeichnungen. Eine **default**\-Bezeichnung ist vorhanden.|Die Steuerung wird an die **default**\-Bezeichnung übertragen.|  
-|Keine der Konstanten entspricht den Konstanten in den **case**\-Bezeichnungen. Eine **default**\-Bezeichnung ist nicht vorhanden.|Nachdem die `switch`\-Anweisung ausgeführt wurde, wird die Steuerung an die Anweisung übergeben.|  
+|Keine der Konstanten entspricht den Konstanten in der **Fall** Bezeichnungen; eine **Standard** Bezeichnung vorhanden ist.|Die Steuerung an die **Standard** Bezeichnung.|  
+|Keine der Konstanten entspricht den Konstanten in der **Fall** Bezeichnungen. **Standard** -Bezeichnung ist nicht vorhanden.|Nachdem die `switch`-Anweisung ausgeführt wurde, wird die Steuerung an die Anweisung übergeben.|  
   
- Wenn ein entsprechender Ausdruck gefunden wird, wird die Steuerung nicht von nachfolgenden **case**\- oder **default**\-Bezeichnungen beeinflusst.  Die [break](../cpp/break-statement-cpp.md)\-Anweisung wird verwendet, um die Ausführung der Anweisung und die Übertragung der Steuerung nach der `switch`\-Anweisung zu beenden.  Ohne eine **break**\-Anweisung wird jede Anweisung von der gefundenen **case**\-Bezeichnung bis zum Ende von `switch` \(einschließlich **default**\) ausgeführt.  Beispiel:  
+ Wenn ein entsprechender Ausdruck gefunden wird, ist Steuerelement nicht von nachfolgenden behindert **Fall** oder **Standard** Bezeichnungen. Die [Break](../cpp/break-statement-cpp.md) Anweisung wird verwendet, um die Ausführung beendet und die Übertragung der Steuerung der Anweisung nach der `switch` Anweisung. Ohne eine **Break** -Anweisung wird jede Anweisung von der entsprechenden **Fall** -Bezeichnung bis zum Ende des der `switch`, einschließlich der **Standard**, ausgeführt wird. Zum Beispiel:  
   
 ```  
 // switch_statement1.cpp  
@@ -88,11 +104,52 @@ int main() {
 }  
 ```  
   
- Im obigen Beispiel wird `capa` inkrementiert, wenn `c` ein groß geschriebenes `A` ist.  Die `break`\-Anweisung nach `capa++` beendet die Ausführung des `switch`\-Anweisungstexts und übergibt an die `while`\-Schleife.  Ohne die `break`\-Anweisung würden `lettera` und `nota` ebenfalls erhöht.  Einen ähnlichen Zweck erfüllt die `break`\-Anweisung für `case 'a'`.  Wenn `c` ein klein geschriebenes `a` ist, wird `lettera` erhöht, und die `break`\-Anweisung beendet den `switch`\-Anweisungstext.  Wenn `c` nicht `a` oder `A` ist, wird die `default`\-Anweisung ausgeführt.  
+ Im obigen Beispiel wird `capa` inkrementiert, wenn `c` ein groß geschriebenes `A` ist. Die `break`-Anweisung nach `capa++` beendet die Ausführung des `switch`-Anweisungstexts und übergibt an die `while`-Schleife. Ohne die `break` -Anweisung Ausführung würde "globalere" die nächste bezeichnete Anweisung, damit `lettera` und `nota` ebenfalls erhöht. Einen ähnlichen Zweck erfüllt die `break`-Anweisung für `case 'a'`. Wenn `c` ein klein geschriebenes `a` ist, wird `lettera` erhöht, und die `break`-Anweisung beendet den `switch`-Anweisungstext. Wenn `c` nicht `a` oder `A` ist, wird die `default`-Anweisung ausgeführt.  
+
+ **Visual Studio 2017 und höher:** (verfügbar mit [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md)) die `[[fallthrough]]` -Attribut im C ++ 17-standard angegeben ist. Kann verwendet werden, eine `switch` Anweisung als Hinweis für den Compiler (oder für Personen, die beim Lesen des Codes) richtet sich dieses Verhalten fallen durch. Visual C++-Compiler warnt derzeit nicht auf Fallthrough Verhalten, damit dieses Attribut keine Compilerverhalten Auswirkungen hat. Beachten Sie, dass das Attribut auf eine leere Anweisung innerhalb der Anweisung mit Bezeichnung angewendet wird. mit anderen Worten ist das Semikolon erforderlich.
+
+```cpp
+int main()
+{
+    int n = 5;
+    switch (n)
+    {
+
+    case 1:
+        a();
+        break;
+    case 2:
+        b();
+        d();
+        [[fallthrough]]; // I meant to do this!
+    case 3:
+        c();
+        break;
+    default:
+        d();
+        break;
+    }
+
+    return 0;
+}
+```
+
+ **Visual Studio 2017 15,3 und höher** (verfügbar mit [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md)): eine Switch-Anweisung kann einführen und initialisieren Sie eine Variable, deren Bereich auf den Block der Switch-Anweisung beschränkt ist:
+
+```cpp
+ switch (Gadget gadget(args); auto s = gadget.get_status())
+        {
+        case status::good:
+            gadget.zip();
+            break;
+        case status::bad:
+            throw BadGadget();
+        };
+```
+
+ Ein innerer Block einer `switch`-Anweisung kann Definitionen mit Initialisierungen enthalten, solange sie erreichbar sind, d. h. nicht von allen möglichen Ausführungspfaden umgangen. Namen, die mit diesen Deklarationen eingeführt werden, weisen einen lokalen Gültigkeitsbereich auf. Zum Beispiel:  
   
- Ein innerer Block einer `switch`\-Anweisung kann Definitionen mit Initialisierungen enthalten, solange sie erreichbar sind, d. h. nicht von allen möglichen Ausführungspfaden umgangen.  Namen, die mit diesen Deklarationen eingeführt werden, weisen einen lokalen Gültigkeitsbereich auf.  Beispiel:  
-  
-```  
+```cpp  
 // switch_statement2.cpp  
 // C2360 expected  
 #include <iostream>  
@@ -125,16 +182,17 @@ int main(int argc, char *argv[])
 }  
 ```  
   
- Eine `switch` Anweisung kann geschachtelt sein.  In solchen Fällen werden die Bezeichnungen **case** oder **default** der nächsten `switch`\-Anweisung zugeordnet, die sie umschließt.  
+ Eine `switch` Anweisung kann geschachtelt sein. In solchen Fällen **Fall** oder **Standard** zuordnen Bezeichnungen mit der nächsten `switch` -Anweisung, die sie umschließt.  
+
+ 
+## <a name="microsoft-specific"></a>Microsoft-spezifisch  
+ In Microsoft C wird die Anzahl von case-Werten in einer `switch`-Anweisung nicht beschränkt. Die Anzahl wird nur durch den verfügbaren Speicher beschränkt. ANSI C erfordert, dass mindestens 257 case-Abschnitte in einer `switch`-Anweisung zulässig sind.  
   
-## Microsoft\-spezifisch  
- In Microsoft C wird die Anzahl von case\-Werten in einer `switch`\-Anweisung nicht beschränkt.  Die Anzahl wird nur durch den verfügbaren Speicher beschränkt.  ANSI C erfordert, dass mindestens 257 case\-Abschnitte in einer `switch`\-Anweisung zulässig sind.  
+ Bei Microsoft C sind die Microsoft-Erweiterungen standardmäßig aktiviert. Verwenden der ["/ Za"](../build/reference/za-ze-disable-language-extensions.md) Compileroption, um diese Erweiterungen zu deaktivieren.  
   
- Bei Microsoft C sind die Microsoft\-Erweiterungen standardmäßig aktiviert.  Verwenden Sie die [\/Za](../build/reference/za-ze-disable-language-extensions.md)\-Compileroption, um diese Erweiterungen zu deaktivieren.  
+**Ende Microsoft-spezifisch**  
   
-## END Microsoft\-spezifisch  
-  
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Auswahlanweisungen](../cpp/selection-statements-cpp.md)   
- [C\+\+\-Schlüsselwörter](../cpp/keywords-cpp.md)   
- [\(NOTINBUILD\) Using Labels in the case Statement](assetId:///a6ff057d-1aee-42ed-a28d-ee6a565b3197)
+ [Schlüsselwörter](../cpp/keywords-cpp.md)   
+ 

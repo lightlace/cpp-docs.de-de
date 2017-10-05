@@ -1,42 +1,59 @@
 ---
-title: "Lambda-Ausdruckssyntax | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "VCF1 Lambda_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lambda-Ausdrücke [C++], Syntax"
+title: Lambda-Ausdruckssyntax | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- VCF1 Lambda_CPP
+dev_langs:
+- C++
+helpviewer_keywords:
+- lambda expressions [C++], syntax
 ms.assetid: 5d6154a4-f34d-4a15-970d-7e7de45f54e9
 caps.latest.revision: 26
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# Lambda-Ausdruckssyntax
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9daa1ce8d7b55f71113dcf7559394715bd93c604
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Dieser Artikel beschreibt Syntax und Strukturelemente von Lambda\-Ausdrücken.  Eine Beschreibung der Lambda\-Ausdrücke finden Sie unter [Lambda\-Ausdrücke](../cpp/lambda-expressions-in-cpp.md).  
+---
+# <a name="lambda-expression-syntax"></a>Lambdaausdruckssyntax
+Dieser Artikel beschreibt Syntax und Strukturelemente von Lambdaausdrücken. Eine Beschreibung der Lambda-Ausdrücke, finden Sie unter [Lambda-Ausdrücke](../cpp/lambda-expressions-in-cpp.md).  
   
-## Funktionsobjekte undLambdas  
- Sie werden beim Schreiben von Code wahrscheinlich Funktionszeiger und Funktionsobjekte zum Löschen von Problemen und zum Ausführen von Berechnungen verwenden, besonders, wenn Sie mit [STL\-Algorithmen](../cpp/algorithms-modern-cpp.md) arbeiten.  Funktionszeiger und Funktionsobjekte haben beide Vorteile und Nachteile – z. B. weisen Funktionszeiger minimalen syntaktischen Mehraufwand auf, behalten aber innerhalb eines Bereichs den Zustand nicht bei. Hingegen können Funktionsobjekte den Zustand zwar beibehalten, erfordern allerdings den syntaktischen Mehraufwand einer Klassendefinition.  
+## <a name="function-objects-vs-lambdas"></a>Funktionsobjekte und Lambdas  
+ Wenn Sie Code schreiben, verwenden Sie vermutlich Funktionszeiger und Funktionsobjekte um Lösung von Problemen sowie Berechnungen, insbesondere bei Verwendung von [C++-Standardbibliothek Algorithmen](../cpp/algorithms-modern-cpp.md). Funktionszeiger und Funktionsobjekte haben beide Vorteile und Nachteile – z. B. weisen Funktionszeiger minimalen syntaktischen Mehraufwand auf, behalten aber innerhalb eines Bereichs den Zustand nicht bei. Hingegen können Funktionsobjekte den Zustand zwar beibehalten, erfordern allerdings den syntaktischen Mehraufwand einer Klassendefinition.  
   
- Bei einem Lambda werden die Vorteile von Funktionszeigern und Funktionsobjekten kombiniert und deren Nachteile gleichzeitig vermieden.  Wie bei Funktionsobjekten ist ein Lambda flexibel und kann den Zustand beibehalten, aber anders als ein Funktionsobjekt benötigt seine kompakte Syntax keine explizite Klassendefinition.  Mit der Verwendung von Lambdas können Sie Code schreiben, der weniger schwerfällig und weniger fehleranfällig als Code für ein entsprechendes Funktionsobjekt ist.  
+ Bei einem Lambda werden die Vorteile von Funktionszeigern und Funktionsobjekten kombiniert und deren Nachteile gleichzeitig vermieden. Wie bei Funktionsobjekten ist ein Lambda flexibel und kann den Zustand beibehalten, aber anders als ein Funktionsobjekt benötigt seine kompakte Syntax keine explizite Klassendefinition. Mit der Verwendung von Lambdas können Sie Code schreiben, der weniger schwerfällig und weniger fehleranfällig als Code für ein entsprechendes Funktionsobjekt ist.  
   
- In den folgenden Beispielen wird die Verwendung eines Lambda\-Ausdrucks mit der Verwendung eines Funktionsobjekts verglichen.  Im ersten Beispiel wird ein Lambda\-Ausdruck verwendet, um auf der Konsole auszugeben, ob jedes Element in einem `vector`\-Objekt gerade oder ungerade ist.  Im zweiten Beispiel wird für die gleiche Aufgabe ein Funktionsobjekt verwendet.  
+ In den folgenden Beispielen wird die Verwendung eines Lambda-Ausdrucks mit der Verwendung eines Funktionsobjekts verglichen. Im ersten Beispiel wird ein Lambda-Ausdruck verwendet, um auf der Konsole auszugeben, ob jedes Element in einem `vector`-Objekt gerade oder ungerade ist. Im zweiten Beispiel wird für die gleiche Aufgabe ein Funktionsobjekt verwendet.  
   
-## Beispiel 1: Verwendung eines Lambda\-Ausdrucks  
- In diesem Beispiel wird Lambda an die `for_each`\-Funktion übergeben.  Lambda druckt ein Ergebnis, das besagt, ob jedes Element in einem `vector` \-Objekt ist, gerade oder ungerade.  
+## <a name="example-1-using-a-lambda"></a>Beispiel 1: Verwendung eines Lambda-Ausdrucks  
+ In diesem Beispiel wird Lambda an die `for_each`-Funktion übergeben. Lambda druckt ein Ergebnis, das besagt, ob jedes Element in einem `vector` -Objekt ist, gerade oder ungerade.  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```cpp  
 // even_lambda.cpp  
@@ -73,26 +90,31 @@ int main()
 }  
 ```  
   
-### Ausgabe  
-  **1 ist ungerade**  
-**2 ist gerade**  
-**3 ist ungerade**  
-**4 ist gerade**  
-**5 ist ungerade**  
-**6 ist gerade**  
-**7 ist ungerade**  
-**8 ist gerade**  
-**9 ist ungerade**  
-**Der Vektor enthält 4 gerade Zahlen.**   
-### Kommentare  
- Im Beispiel handelt es sich beim dritten Argument für die `for_each`\-Funktion um ein Lambda.  Mit dem `[&evenCount]`\-Teil wird die Erfassungsklausel des Ausdrucks angegeben. Mit `(int n)` wird die Parameterliste und mit dem Rest der Text des Ausdrucks angegeben.  
+### <a name="output"></a>Ausgabe  
   
-## Beispiel 2: Verwendung eines Funktionsobjekts  
- Manchmal wäre die Ausweitung eines Lambdas über den Umfang des vorherigen Beispiels hinaus zu hinderlich.  Im folgenden Beispiel wird ein Funktionsobjekt zusammen mit der `for_each`\-Funktion anstelle eines Lambda\-Ausdrucks verwendet, um die gleichen Ergebnisse wie in Beispiel 1 zu liefern.  In beiden Beispielen wird die Anzahl gerader Zahlen in einem `vector`\-Objekt gespeichert.  Um den Zustand des Vorgangs beizubehalten, wird die `FunctorClass`\-Variable von der `m_evenCount`\-Klasse mithilfe eines Verweises als Membervariable gespeichert.  Zum Ausführen des Vorgangs wird von `FunctorClass` der Funktionsaufrufoperator, `operator()` implementiert.  Der Visual C\+\+\-Compiler generiert Code, der an Größe und Leistung mit dem in Lambda\-Codebeispiel 1 vergleichbar ist.  Bei einem grundlegenden Problem, wie dem in diesem Artikel, ist der einfachere Lambda\-Entwurf wahrscheinlich besser geeignet, als der Funktionsobjektentwurf.  Wenn Sie allerdings der Meinung sind, die Funktionalität erfordere zukünftig möglicherweise beträchtliche Erweiterungen, verwenden Sie einen Funktionsobjektentwurf. Damit ist die Codeverwaltung einfacher.  
+```Output  
+1 is odd  
+2 is even  
+3 is odd  
+4 is even  
+5 is odd  
+6 is even  
+7 is odd  
+8 is even  
+9 is odd  
+There are 4 even numbers in the vector.  
   
- Weitere Informationen zum `operator()` finden Sie unter [Funktionsaufruf](../cpp/function-call-cpp.md).  Weitere Informationen zur `for_each`\-Funktion finden Sie unter [for\_each](../Topic/for_each.md).  
+```  
   
-### Code  
+### <a name="comments"></a>Kommentare  
+ Im Beispiel handelt es sich beim dritten Argument für die `for_each`-Funktion um ein Lambda. Mit dem `[&evenCount]`-Teil wird die Erfassungsklausel des Ausdrucks angegeben. Mit `(int n)` wird die Parameterliste und mit dem Rest der Text des Ausdrucks angegeben.  
+  
+## <a name="example-2-using-a-function-object"></a>Beispiel 2: Verwendung eines Funktionsobjekts  
+ Manchmal wäre die Ausweitung eines Lambdas über den Umfang des vorherigen Beispiels hinaus zu hinderlich. Im folgenden Beispiel wird ein Funktionsobjekt zusammen mit der `for_each`-Funktion anstelle eines Lambda-Ausdrucks verwendet, um die gleichen Ergebnisse wie in Beispiel 1 zu liefern. In beiden Beispielen wird die Anzahl gerader Zahlen in einem `vector`-Objekt gespeichert. Um den Zustand des Vorgangs beizubehalten, wird die `FunctorClass`-Variable von der `m_evenCount`-Klasse mithilfe eines Verweises als Membervariable gespeichert. Zum Ausführen des Vorgangs wird von `FunctorClass` der Funktionsaufrufoperator, `operator()` implementiert. Der Visual C++-Compiler generiert Code, der an Größe und Leistung mit dem in Lambda-Codebeispiel 1 vergleichbar ist. Bei einem grundlegenden Problem, wie dem in diesem Artikel, ist der einfachere Lambda-Entwurf wahrscheinlich besser geeignet, als der Funktionsobjektentwurf. Wenn Sie allerdings der Meinung sind, die Funktionalität erfordere zukünftig möglicherweise beträchtliche Erweiterungen, verwenden Sie einen Funktionsobjektentwurf. Damit ist die Codeverwaltung einfacher.  
+  
+ Weitere Informationen zu den `operator()`, finden Sie unter [Funktionsaufruf](../cpp/function-call-cpp.md). Weitere Informationen zu den `for_each` funktionieren, finden Sie unter [For_each](../standard-library/algorithm-functions.md#for_each).  
+  
+### <a name="code"></a>Code  
   
 ```cpp  
 // even_functor.cpp  
@@ -150,23 +172,28 @@ int main()
   
 ```  
   
-## Ausgabe  
-  **1 ist ungerade**  
-**2 ist gerade**  
-**3 ist ungerade**  
-**4 ist gerade**  
-**5 ist ungerade**  
-**6 ist gerade**  
-**7 ist ungerade**  
-**8 ist gerade**  
-**9 ist ungerade**  
-**Der Vektor enthält 4 gerade Zahlen.**   
-## Siehe auch  
- [Lambda\-Ausdrücke](../cpp/lambda-expressions-in-cpp.md)   
- [Beispiele für Lambda\-Ausdrücke](../cpp/examples-of-lambda-expressions.md)   
- [Generieren](../Topic/generate.md)   
- [generate\_n](../Topic/generate_n.md)   
- [for\_each](../Topic/for_each.md)   
- [Ausnahmespezifikationen \(throw\)](../cpp/exception-specifications-throw-cpp.md)   
- [Compilerwarnung \(Stufe 1\) C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)   
- [Microsoft\-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md)
+## <a name="output"></a>Ausgabe  
+  
+```Output  
+1 is odd  
+2 is even  
+3 is odd  
+4 is even  
+5 is odd  
+6 is even  
+7 is odd  
+8 is even  
+9 is odd  
+There are 4 even numbers in the vector.  
+  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Lambda-Ausdrücke](../cpp/lambda-expressions-in-cpp.md)   
+ [Beispiele für Lambda-Ausdrücke](../cpp/examples-of-lambda-expressions.md)   
+ [Generieren](../standard-library/algorithm-functions.md#generate)   
+ [generate_n](../standard-library/algorithm-functions.md#generate_n)   
+ [for_each](../standard-library/algorithm-functions.md#for_each)   
+ [Ausnahmespezifikationen (Throw)](../cpp/exception-specifications-throw-cpp.md)   
+ [Compilerwarnung (Stufe 1) C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)   
+ [Microsoft-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md)

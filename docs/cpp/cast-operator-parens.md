@@ -1,31 +1,48 @@
 ---
-title: "Umwandlungsoperator: ()"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "()-Umwandlungsoperator"
-  - "Umwandlungsoperatoren"
+title: 'Umwandlungsoperator: () | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- cast operators
+- () cast operator
 ms.assetid: 4c99eb92-1b19-4a5d-9840-5d8c29b8453e
 caps.latest.revision: 10
-caps.handback.revision: "8"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Umwandlungsoperator: ()
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: bf8299fb0992f42fabe49bbbbffe0693fc93d961
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="cast-operator-"></a>Umwandlungsoperator: ()
 Eine Typumwandlung stellt eine Möglichkeit zum expliziten Konvertieren des Typs eines Objekts in einer bestimmten Situation bereit.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -33,12 +50,12 @@ Eine Typumwandlung stellt eine Möglichkeit zum expliziten Konvertieren des Typs
 ( type-name ) cast-expression  
 ```  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Jeder unäre Ausdruck wird als Umwandlungsausdruck betrachtet.  
   
- Der Compiler behandelt *cast\-expression* als *type\-name*\-Typ, nachdem eine Typumwandlung vorgenommen wurde.  Umwandlungen können verwendet werden, um Objekte eines beliebigen skalaren Typs in einen oder aus einem anderen skalaren Typ zu konvertieren.  Explizite Typumwandlungen werden über die gleichen Regeln eingeschränkt, die die Auswirkungen von impliziten Konvertierungen bestimmen.  Zusätzliche Einschränkungen für Typumwandlungen ergeben sich möglicherweise aus den tatsächlichen Größen oder der Darstellung bestimmter Typen.  
+ Der Compiler behandelt *cast-expression* als *type-name*-Typ, nachdem eine Typumwandlung vorgenommen wurde. Umwandlungen können verwendet werden, um Objekte eines beliebigen skalaren Typs in einen oder aus einem anderen skalaren Typ zu konvertieren. Explizite Typumwandlungen werden über die gleichen Regeln eingeschränkt, die die Auswirkungen von impliziten Konvertierungen bestimmen. Zusätzliche Einschränkungen für Typumwandlungen ergeben sich möglicherweise aus den tatsächlichen Größen oder der Darstellung bestimmter Typen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // expre_CastOperator.cpp  
@@ -58,7 +75,7 @@ int main()
 }  
 ```  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // expre_CastOperator2.cpp  
@@ -121,14 +138,16 @@ int main()
 }  
 ```  
   
-  **RawBytes auf 10 Zeichen gekürzt:   Aufregend\!\!**  
-**Umgewandelte Bytes:   Aufregend**  
-**Beachten Sie, dass die Umwandlung die unformatierte interne Zeichenfolge geändert hat**  
-**Nicht formatierte Bytes in Typumwandlung:   Aufregend**   
-## Siehe auch  
- [Ausdrücke mit unären Operatoren](../cpp/expressions-with-unary-operators.md)   
- [C\+\+\-Operatoren](../misc/cpp-operators.md)   
- [C\+\+\-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [Operator für die explizite Typkonvertierung: \(\)](../cpp/explicit-type-conversion-operator-parens.md)   
+```Output  
+RawBytes truncated to 10 chars:   Exciting!!  
+Casted Bytes:   Exciting  
+Note that the cast changed the raw internal string  
+Raw Bytes after cast:   Exciting  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Ausdrücke mit Unäroperatoren](../cpp/expressions-with-unary-operators.md)   
+ [Integrierte C++-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operator für explizite Typkonvertierung:)](../cpp/explicit-type-conversion-operator-parens.md)   
  [Umwandlungsoperatoren](../cpp/casting-operators.md)   
  [Umwandlungsoperatoren](../c-language/cast-operators.md)

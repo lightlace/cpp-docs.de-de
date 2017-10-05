@@ -1,35 +1,52 @@
 ---
-title: "Un&#228;rer Plus- und Negationsoperatoren: + und -"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - "+"
-  - "-"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "--Operator"
-  - "+-Operator"
-  - "+-Operator, Unäre Operatoren"
-  - "Negationsoperator"
-  - "Unäre Operatoren, plus"
+title: "Unärer Plus- und Negationsoperatoren: + und - | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- +
+- '-'
+dev_langs:
+- C++
+helpviewer_keywords:
+- unary operators, plus
+- '- operator'
+- negation operator
+- + operator, unary operators
+- + operator
 ms.assetid: 2c58c4f4-0d92-4ae3-9d0c-1a6157875cc1
 caps.latest.revision: 8
-caps.handback.revision: "8"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Un&#228;rer Plus- und Negationsoperatoren: + und -
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9c664cd382685693da7ab12ba85891bc2ab0d7e8
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-## Syntax  
+---
+# <a name="unary-plus-and-negation-operators--and--"></a>Unärer Plus- und Negationsoperatoren: + und -
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -39,23 +56,21 @@ manager: "ghogen"
 ```  
   
 - cast-expression  
-  
 ```  
   
-## \+\-Operator  
- Das Ergebnis des unären Plus\-Operators \(**\+**\) ist der Wert seines Operanden.  Der Operand für den unären Plus\-Operator muss ein arithmetischer Typ sein.  
+## <a name="-operator"></a>+-Operator  
+ Das Ergebnis des unären plus -Operators (**+**) ist der Wert seines Operanden. Der Operand für den unären Plus-Operator muss ein arithmetischer Typ sein.  
   
- Ganzzahlige Erweiterung wird für ganzzahlige Operanden ausgeführt.  Der resultierende Typ ist der Typ, in den der Operand heraufgestuft wird.  Daher resultiert der Ausdruck `+ch`, in dem `ch` vom Typ `char` ist, im Typ `int`. Der Wert bleibt unverändert.  Weitere Informationen über die Durchführung der Heraufstufung erhalten Sie unter [Ganzzahlige Erweiterungen](../misc/integral-promotions.md).  
+ Ganzzahlige Erweiterung wird für ganzzahlige Operanden ausgeführt. Der resultierende Typ ist der Typ, in den der Operand heraufgestuft wird. Daher resultiert der Ausdruck `+ch`, in dem `ch` vom Typ `char` ist, im Typ `int`. Der Wert bleibt unverändert. Finden Sie unter [Standardkonvertierungen](standard-conversions.md) für Weitere Informationen zur Durchführung der heraufstufung.  
   
-## \-\-Operator  
- Der unäre Negationsoperator \(**–**\) erzeugt den negativen Wert des Operanden.  Der Operand für den unären Negationsoperator muss ein arithmetischer Typ sein.  
+## <a name="--operator"></a>--Operator  
+ Der unäre Negationsoperator (**-**) erzeugt den negativen Wert seines Operanden. Der Operand für den unären Negationsoperator muss ein arithmetischer Typ sein.  
   
- Ganzzahlige Erweiterung wird für ganzzahlige Operanden durchgeführt, und der resultierende Typ ist der Typ, auf den der Operand erweitert wird.  Weitere Informationen zur Ausführung der Heraufstufung finden Sie unter [Ganzzahlige Erweiterungen](../misc/integral-promotions.md).  
+ Ganzzahlige Erweiterung wird für ganzzahlige Operanden durchgeführt, und der resultierende Typ ist der Typ, auf den der Operand erweitert wird. Finden Sie unter [Standardkonvertierungen](standard-conversions.md) für Weitere Informationen zur Ausführung der heraufstufung.  
   
-## Microsoft\-spezifisch  
- Eine unäre Negation von Mengen ohne Vorzeichen wird ausgeführt, indem der Wert des Operanden von 2^n subtrahiert wird, wobei n die Anzahl von Bits in einem Objekt des angegebenen vorzeichenlosen Typs ist.  \(Microsoft C\+\+ wird auf Prozessoren ausgeführt, die Zweierkomplementarithmetik verwenden.  Bei anderen Prozessoren kann der Algorithmus für Negationen abweichen.\)  
+## <a name="microsoft-specific"></a>Microsoft-spezifisch  
+ Eine unäre Negation von Mengen ohne Vorzeichen wird ausgeführt, indem der Wert des Operanden von 2^n subtrahiert wird, wobei n die Anzahl von Bits in einem Objekt des angegebenen vorzeichenlosen Typs ist. (Microsoft C++ wird auf Prozessoren ausgeführt, die Zweierkomplementarithmetik verwenden. Bei anderen Prozessoren kann der Algorithmus für Negationen abweichen.)  
   
-## Siehe auch  
- [Ausdrücke mit unären Operatoren](../cpp/expressions-with-unary-operators.md)   
- [C\+\+\-Operatoren](../misc/cpp-operators.md)   
- [C\+\+\-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+## <a name="see-also"></a>Siehe auch  
+ [Ausdrücke mit Unäroperatoren](../cpp/expressions-with-unary-operators.md)   
+ [C++-Built-in-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

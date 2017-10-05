@@ -1,32 +1,49 @@
 ---
-title: "_set_com_error_handler | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_set_com_error_handler-Funktion"
+title: _set_com_error_handler | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- _set_com_error_handler function
 ms.assetid: 49fe4fca-5e37-4d83-abaf-15be5ce37f94
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# _set_com_error_handler
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 626227fb9c5162e5b9fc72fc64348b75ecb27e44
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-**Microsoft\-spezifisch**  
+---
+# <a name="setcomerrorhandler"></a>_set_com_error_handler
+**Microsoft-spezifisch**  
   
- Ersetzt die Standardfunktion für die COM\-Fehlerbehandlung.  
+ Ersetzt die Standardfunktion für die COM-Fehlerbehandlung.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void __stdcall _set_com_error_handler(  
@@ -37,22 +54,22 @@ void __stdcall _set_com_error_handler(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `pHandler`  
  Zeiger auf die Ersetzungsfunktion.  
   
  `hr`  
- `HRESULT`\-Informationen.  
+ `HRESULT`-Informationen.  
   
  `perrinfo`  
- `IErrorInfo`\-Objekt  
+ `IErrorInfo`-Objekt  
   
-## Hinweise  
- Standardmäßig behandelt [\_com\_raise\_error](../cpp/com-raise-error.md) alle COM\-Fehler.  Sie können dieses Verhalten ändern, indem Sie `_set_com_error_handler` verwenden, um eine eigene Fehlerbehandlungsfunktion aufzurufen.  
+## <a name="remarks"></a>Hinweise  
+ Standardmäßig [_com_raise_error](../cpp/com-raise-error.md) behandelt alle COM-Fehler. Sie können dieses Verhalten ändern, indem Sie `_set_com_error_handler` verwenden, um eine eigene Fehlerbehandlungsfunktion aufzurufen.  
   
  Die Ersetzungsfunktion muss über eine Signatur verfügen, die der von `_com_raise_error` entspricht.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // _set_com_error_handler.cpp  
@@ -89,11 +106,14 @@ int main()
 }  
 ```  
   
-  **Ausnahme ausgelöst: Es konnte keine Verbindung hergestellt werden\!**   
-## Anforderungen  
+```Output  
+Exception raised: Unable to establish the connection!  
+```  
+  
+## <a name="requirements"></a>Anforderungen  
  **Header:** comdef.h  
   
- **Lib:** wenn die Compileroption "wchar\_t ist der systemeigene Typ" aktiviert ist, verwenden Sie "comsuppw.lib" oder "comsuppwd.lib".  Wenn "wchar\_t ist der systemeigene Typ" deaktiviert ist, verwenden Sie "comsupp.lib".  Weitere Informationen finden Sie unter [\/Zc:wchar\_t \(wchar\_t ist der systemeigene Typ\)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
+ **LIB:** Wenn die **Wchar_t ist der systemeigene Typ** Compileroption ist, verwenden Sie "comsuppw.lib" oder "comsuppwd.lib". Wenn **Wchar_t ist der systemeigene Typ** deaktiviert ist, verwenden "comsupp.lib". Weitere Informationen finden Sie unter[/Zc:wchar_t (wchar_t ist der systemeigene Typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
   
-## Siehe auch  
- [Globale Funktionen des Compiler\-COM](../cpp/compiler-com-global-functions.md)
+## <a name="see-also"></a>Siehe auch  
+ [Globale COM-Funktionen des Compilers](../cpp/compiler-com-global-functions.md)

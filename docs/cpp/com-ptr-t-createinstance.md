@@ -1,35 +1,52 @@
 ---
-title: "_com_ptr_t::CreateInstance | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_com_ptr_t::CreateInstance"
-  - "_com_ptr_t.CreateInstance"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CreateInstance-Methode"
+title: _com_ptr_t::CreateInstance | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _com_ptr_t::CreateInstance
+- _com_ptr_t.CreateInstance
+dev_langs:
+- C++
+helpviewer_keywords:
+- CreateInstance method
 ms.assetid: ab89b0e1-9da3-4784-a079-58b17340f111
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _com_ptr_t::CreateInstance
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 1c07f7366c76c96580fc989475bd7f5ea23a38fe
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-**Microsoft\-spezifisch**  
+---
+# <a name="comptrtcreateinstance"></a>_com_ptr_t::CreateInstance
+**Microsoft-spezifisch**  
   
- Erstellt eine neue Instanz eines Objekts, dem ein **CLSID** oder **ProgID** übergeben wurde.  
+ Erstellt eine neue Instanz eines Objekts mit einem **CLSID** oder **ProgID**.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -50,32 +67,32 @@ HRESULT CreateInstance(
 ) throw( );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `rclsid`  
  Die **CLSID** eines Objekts.  
   
  `clsidString`  
- Eine Unicode\-Zeichenfolge, die entweder eine **CLSID** \(beginnend mit "**{**"\) oder eine **ProgID** enthält.  
+ Eine Unicodezeichenfolge, die entweder eine **CLSID** (beginnend mit "**{**") oder ein **ProgID**.  
   
  `clsidStringA`  
- Eine Mehrbytezeichenfolge mit der ANSI\-Codepage, die entweder eine **CLSID** \(beginnend mit "**{**"\) oder eine **ProgID** enthält.  
+ Eine mehrbytezeichenfolge mit der ANSI-Codepage, die entweder eine **CLSID** (beginnend mit "**{**") oder ein **ProgID**.  
   
  `dwClsContext`  
  Kontext für die Ausführung von ausführbarem Code.  
   
  `pOuter`  
- Die äußere Unbekannte für die [Aggregation](../atl/aggregation.md).  
+ Die äußere unbekannte für [Aggregation](../atl/aggregation.md).  
   
-## Hinweise  
- Diese Memberfunktionen rufen `CoCreateInstance` auf, um ein neues COM\-Objekt zu erstellen, und fragen dann den Schnittstellentyp dieses intelligenten Zeigers ab.  Das Zeigerergebnis wird dann innerhalb dieses `_com_ptr_t`\-Objekts gekapselt.  **Release** wird aufgerufen, um den Verweiszähler für den zuvor gekapselten Zeiger zu verringern.  Diese Routine gibt `HRESULT` zurück, um einen Erfolg oder Fehler anzuzeigen.  
+## <a name="remarks"></a>Hinweise  
+ Diese Memberfunktionen rufen `CoCreateInstance` auf, um ein neues COM-Objekt zu erstellen, und fragen dann den Schnittstellentyp dieses intelligenten Zeigers ab. Das Zeigerergebnis wird dann innerhalb dieses `_com_ptr_t`-Objekts gekapselt. **Version** wird aufgerufen, um den Verweiszähler für den zuvor gekapselten Zeiger zu verringern. Diese Routine gibt `HRESULT` zurück, um einen Erfolg oder Fehler anzuzeigen.  
   
--   **CreateInstance\(**  `rclsid` **,**  `dwClsContext`  **\)** Erstellt eine neue ausgeführte Instanz eines angegebenen Objekts, dem ein **CLSID** übergeben wurde.  
+-   **CreateInstance (** `rclsid` **,**`dwClsContext`**)** erstellt eine neue ausgeführte Instanz eines Objekts mit einem **CLSID**.        
   
--   **CreateInstance\(**  `clsidString` **,**  `dwClsContext`  **\)** Erstellt eine neue ausgeführte Instanz eines Objekts, dem eine Unicode\-Zeichenfolge übergeben wurde, die entweder **CLSID** \(beginnend mit "**{**"\) oder **ProgID** enthält.  
+-   **CreateInstance (** `clsidString` **,**`dwClsContext`**)** erstellt eine neue ausgeführte Instanz eines Objekts mit der eine Unicodezeichenfolge, die entweder eine **CLSID** (beginnend mit "**{**") oder ein **ProgID**.        
   
--   **CreateInstance\(**  `clsidStringA` **,**  `dwClsContext`  **\)** Erstellt eine neue ausgeführte Instanz eines Objekts, dem eine Mehrfachzeichen\-Zeichenfolge übergeben wurde, die entweder **CLSID** \(beginnend mit "**{**"\) oder **ProgID** enthält.  Ruft [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072) auf, die davon ausgeht, dass die Zeichenfolge in der ANSI\-Codepage anstatt eine OEM\-Codepage ist.  
+-   **CreateInstance (** `clsidStringA` **,**`dwClsContext`**)** erstellt eine neue ausgeführte Instanz eines Objekts mit einer Multibyte-Zeichenfolge, die entweder eine ** CLSID** (beginnend mit "**{**") oder ein **ProgID**.       Aufrufe [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), die davon ausgeht, dass die Zeichenfolge in die ANSI-Codepage anstatt eine OEM-Codepage.  
   
- **END Microsoft\-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
- [\_com\_ptr\_t\-Klasse](../cpp/com-ptr-t-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [_com_ptr_t-Klasse](../cpp/com-ptr-t-class.md)

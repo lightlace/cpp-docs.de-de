@@ -1,40 +1,57 @@
 ---
-title: "Explizite &#220;berschreibungen (C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Abgeleitete Klassen, Virtuelle Funktionen"
-  - "Explizites Überschreiben von virtuellen Funktionen"
-  - "Explizite Überschreibungen von virtuellen Funktionen"
-  - "Überschreiben, Funktionen"
-  - "Virtuelle Funktionen, Explizite Überschreibungen"
+title: "Explizite Überschreibungen (C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- virtual functions, explicit overrides
+- overriding, functions
+- derived classes, virtual functions
+- explicit virtual function overrides
+- explicit override of virtual function
 ms.assetid: ee583234-5cda-4e90-b55e-3f9fbf079ced
 caps.latest.revision: 12
-caps.handback.revision: "10"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Explizite &#220;berschreibungen (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9ee79034ca7c74094753094cce29fc4a11b044ff
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-**Microsoft\-spezifisch**  
+---
+# <a name="explicit-overrides-c"></a>Explizite Überschreibungen (C++)
+**Microsoft-spezifisch**  
   
- Wenn dieselbe virtuelle Funktion in zwei oder mehr [Schnittstellen](../cpp/interface.md) deklariert ist und wenn eine Klasse von diesen Schnittstellen abgeleitet ist, können Sie jede virtuelle Funktion explizit überschreiben.  
+ Wenn dieselbe virtuelle Funktion, in zwei oder mehr deklariert wird [Schnittstellen](../cpp/interface.md) und wenn eine Klasse, die von diesen Schnittstellen abgeleitet ist, können Sie jede virtuelle Funktion explizit überschreiben.  
   
- Informationen über explizite Überschreibungen in verwaltetem Code mithilfe der neuen verwalteten Syntax finden Sie unter [Explizite Überschreibungen](../windows/explicit-overrides-cpp-component-extensions.md).  
+ Weitere Informationen über explizite in verwaltetem Code mithilfe der neuen verwalteten Syntax überschreibt, finden Sie unter [explizite Überschreibungen](../windows/explicit-overrides-cpp-component-extensions.md).  
   
- **END Microsoft\-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Codebeispiel wird die Verwendung der expliziten Überschreibung veranschaulicht:  
   
 ```  
@@ -112,17 +129,20 @@ int main() {
   
    // Cast to a CMyClass pointer so that the destructor gets called  
       CMyClass *p = dynamic_cast<CMyClass *>(pIMyInt1);  
-      delete p;  
+      delete p;  
 }  
 ```  
   
-  **In CMyClass::IMyInt1::mf1\(\)**  
-**In CMyClass::IMyInt1::mf1\(int\)**  
-**In CMyClass::IMyInt1::mf2\(\)**  
-**In CMyClass::IMyInt1::mf2\(int\)**  
-**In CMyClass::IMyInt2::mf1\(\)**  
-**In CMyClass::IMyInt2::mf1\(int\)**  
-**In CMyClass::IMyInt2::mf2\(\)**  
-**In CMyClass::IMyInt2::mf2\(int\)**   
-## Siehe auch  
+```Output  
+In CMyClass::IMyInt1::mf1()  
+In CMyClass::IMyInt1::mf1(int)  
+In CMyClass::IMyInt1::mf2()  
+In CMyClass::IMyInt1::mf2(int)  
+In CMyClass::IMyInt2::mf1()  
+In CMyClass::IMyInt2::mf1(int)  
+In CMyClass::IMyInt2::mf2()  
+In CMyClass::IMyInt2::mf2(int)  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
  [Vererbung](../cpp/inheritance-cpp.md)

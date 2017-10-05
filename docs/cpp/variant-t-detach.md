@@ -1,37 +1,54 @@
 ---
-title: "_variant_t::Detach | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_variant_t::Detach"
-  - "_variant_t.Detach"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Detach-Methode"
-  - "VARIANT-Objekt"
-  - "VARIANT-Objekt, detatch"
+title: _variant_t::Detach | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _variant_t::Detach
+- _variant_t.Detach
+dev_langs:
+- C++
+helpviewer_keywords:
+- VARIANT object, detatch
+- Detach method
+- VARIANT object
 ms.assetid: c348ac08-62cf-4657-a16f-974a79c12158
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# _variant_t::Detach
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 402d8bfeb6aea45460124bdeaaa8b3ee485df622
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-**Microsoft\-spezifisch**  
+---
+# <a name="varianttdetach"></a>_variant_t::Detach
+**Microsoft-spezifisch**  
   
- Trennt das gekapselte **VARIANT**\-Objekt von diesem `_variant_t`\-Objekt.  
+ Trennt das gekapselte **VARIANT** -Objekt von diesem `_variant_t` Objekt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -39,13 +56,13 @@ VARIANT Detach( );
   
 ```  
   
-## Rückgabewert  
- Gekapseltes **VARIANT**\-Objekt.  
+## <a name="return-value"></a>Rückgabewert  
+ Das gekapselte **VARIANT**.  
   
-## Hinweise  
- Das gekapselte **VARIANT**\-Objekt wird extrahiert und zurückgegeben, nachfolgend wird das `_variant_t`\-Objekt geleert, ohne es zu löschen.  Diese Memberfunktion entfernt **VARIANT** aus der Kapselung und legt **VARTYPE** für dieses `_variant_t`\-Objekt auf `VT_EMPTY` fest.  Sie können entscheiden, ob Sie das zurückgegebene **VARIANT**\-Objekt durch den Aufruf der [VariantClear](assetId:///28741d81-8404-4f85-95d3-5c209ec13835)\-Funktion freigeben.  
+## <a name="remarks"></a>Hinweise  
+ Extrahiert und gibt den gekapselten **VARIANT**, löscht Sie dies `_variant_t` Objekt, ohne Sie zu zerstören. Diese Memberfunktion entfernt die **VARIANT** aus der Kapselung und legt die **VARTYPE** dieses `_variant_t` -Objekt `VT_EMPTY`. Es liegt bei Ihnen das Freigeben der zurückgegebenen **VARIANT** durch Aufrufen der [VariantClear](http://msdn.microsoft.com/en-us/28741d81-8404-4f85-95d3-5c209ec13835) Funktion.  
   
- **END Microsoft\-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
- [\_variant\_t\-Klasse](../cpp/variant-t-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [_variant_t-Klasse](../cpp/variant-t-class.md)

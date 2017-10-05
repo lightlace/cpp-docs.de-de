@@ -1,76 +1,95 @@
 ---
-title: "ActiveX-Steuerelementcontainer: Behandeln von Ereignissen eines ActiveX-Steuerelements | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX-Steuerelementcontainer [C++], Ereignissenken"
-  - "ActiveX-Steuerelemente [C++], Ereignisse"
-  - "BEGIN_EVENTSINK_MAP-Makro"
-  - "END_EVENTSINK_MAP-Makro, Verwenden"
-  - "Ereignishandler [C++], ActiveX-Steuerelemente"
-  - "Ereignisbehandlung [C++], ActiveX-Steuerelemente"
-  - "Ereignisse [C++], ActiveX-Steuerelemente"
-  - "ON_EVENT-Makro"
+title: 'ActiveX-Steuerelementcontainer: Behandeln von Ereignissen eines ActiveX-Steuerelements | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- event handlers [MFC], ActiveX controls
+- ActiveX control containers [MFC], event sinks
+- event handling [MFC], ActiveX controls
+- ON_EVENT macro [MFC]
+- ActiveX controls [MFC], events [MFC]
+- END_EVENTSINK_MAP macro, using
+- events [MFC], ActiveX controls
+- BEGIN_EVENTSINK_MAP macro
 ms.assetid: f9c106db-052f-4e32-82ad-750646aa760b
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# ActiveX-Steuerelementcontainer: Behandeln von Ereignissen eines ActiveX-Steuerelements
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 3903be230f130aeaeb1953faf73a0c8af4c3492f
+ms.openlocfilehash: a8fb283d8b5b8afbf3b06e27495ccc957e0099ad
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-In diesem Artikel werden mithilfe des Eigenschaftenfensters, um Ereignishandler für ActiveX\-Steuerelemente in ein ActiveX\-Steuerelementcontainer zu installieren.  Die Ereignishandler werden verwendet, um Benachrichtigungen \(vom Steuerelement\) über bestimmte Ereignisse empfängt und eine Aktion in der Antwort auszuführen.  Diese Benachrichtigung wird "Auslösen" des Ereignisses aufgerufen.  
+---
+# <a name="activex-control-containers-handling-events-from-an-activex-control"></a>ActiveX-Steuerelementcontainer: Behandeln von Ereignissen eines ActiveX-Steuerelements
+In diesem Artikel wird erläutert, mithilfe des Eigenschaftenfensters Ereignishandlern für ActiveX-Steuerelemente in einem ActiveX-Steuerelementcontainer installieren. Die Ereignishandler dienen zum Empfang von Benachrichtigungen (aus dem Steuerelement) über bestimmte Ereignisse und Ausführen einer Aktion als Antwort. Diese Benachrichtigung wird das Ereignis "Auslösen" aufgerufen.  
   
 > [!NOTE]
->  Dieser Artikel wird ein auf Dialogfeldern basierenden ActiveX\-Steuerelementcontainer Projekt benannten Container ein eingebettetes Steuerelement, das Circ als Beispiele in den Prozeduren und im Code ".  
+>  In diesem Artikel verwendet eine Dialogfeldern basierende ActiveX-Steuerelementcontainer-Projekt mit dem Namen Container und ein eingebettetes Steuerelement mit dem Namen Circ als Beispiele in den Prozeduren und den Code.  
   
- Mit der Schaltfläche Ereignisse Sie im Eigenschaftenfenster, können Sie eine Zuordnung von Ereignissen erstellen, die in der ActiveX\-Steuerelement\-Containeranwendung auftreten können.  Diese Zuordnung, als "Ereignissenkenzuordnung," wird von Visual C\+\+ erstellt und verwaltet, wenn Sie der Steuerelementcontainerklasse Ereignishandler hinzufügen.  Jeder Ereignishandler implementiert, mit einem Ereigniszuordnungseintrag, ordnet einem bestimmten Ereignis an eine Containerereignishandlermemberfunktion zu.  Diese Ereignishandlerfunktion wird aufgerufen, wenn das angegebene Ereignis vom ActiveX\-Steuerelementobjekt ausgelöst wird.  
+ Verwenden die Schaltfläche "Ereignisse" im Eigenschaftenfenster angezeigt, können Sie eine Übersicht der Ereignisse, die auftreten können erstellen, in der ActiveX-Steuerelementcontainer-Anwendung. Dieser Zuordnung wird aufgerufen, eine "Senke ereigniszuordnung," wird erstellt und von Visual C++ verwaltet werden, wenn Sie Ereignishandler der Control-Container-Klasse hinzufügen. Jeder Ereignishandler mit einem Ereigniszuordnungseintrag implementiert wird ein bestimmtes Ereignis ein Ereignishandler-containermemberfunktion zugeordnet. Diese Ereignishandlerfunktion wird aufgerufen, wenn das angegebene Ereignis durch das ActiveX-Steuerelementobjekt ausgelöst wird.  
   
- Weitere Informationen über Ereignissenkenzuordnungen, finden Sie unter [Ereignissenkenzuordnungen](../mfc/reference/event-sink-maps.md) in der Class Library Reference.  
+ Weitere Informationen zu ereignissenkenzuordnungen, finden Sie unter [Ereigniszuordnungen Senke](../mfc/reference/event-sink-maps.md) in der *Klassenbibliotheksreferenz*.  
   
-##  <a name="_core_event_handler_modifications_to_the_project"></a> Ereignishandler\-Änderungen zum Projekt  
- Wenn Sie das Eigenschaftenfenster verwenden, um Ereignishandler hinzuzufügen, wird eine Ereignissenkenzuordnung im Projekt deklariert und definiert.  Die folgenden Anweisungen werden zur Steuercpp\-datei hinzugefügt, wenn ein Ereignishandler hinzugefügt wird.  Dieser Code deklariert eine Ereignissenkenzuordnung für die Dialogfeldklasse \(in diesem Fall, `CContainerDlg`\):  
+##  <a name="_core_event_handler_modifications_to_the_project"></a>Ereignis-Handler Änderungen am Projekt  
+ Wenn Sie das Eigenschaftenfenster verwenden, um Ereignishandler hinzuzufügen, wird eine Senke ereigniszuordnung deklariert und in Ihrem Projekt definiert. Die folgenden Anweisungen werden an das Steuerelement hinzugefügt. Ein Ereignishandler hinzugefügt wird zum ersten Mal CPP-Datei. Dieser Code deklariert eine Ereignis Sink-Zuordnung für die Dialogfeldklasse (in diesem Fall `CContainerDlg`):  
   
- [!CODE [NVC_MFC_AxCont#8](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxCont#8)]  
-[!CODE [NVC_MFC_AxCont#9](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxCont#9)]  
+ [!code-cpp[NVC_MFC_AxCont#8](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_1.cpp)]  
+[!code-cpp[NVC_MFC_AxCont#9](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_2.cpp)]  
   
- Während Sie das Eigenschaftenfenster verwenden, um Ereignisse hinzufügen möchten, ist ein Ereigniszuordnungseintrag \(`ON_EVENT`\) zur Ereignissenkenzuordnung und zu einem Ereignishandler hinzugefügt, die Funktion zur Implementierungsdatei des Containers \(.CPP\) hinzugefügt wird.  
+ Wie Sie das Eigenschaftenfenster verwenden, um Ereignisse hinzuzufügen, zuordnen ein Ereignisses Eintrag (`ON_EVENT`) hinzugefügt wird, die Senke ereigniszuordnung und ein Ereignishandler Funktion des Containers Implementierung hinzugefügt (. CPP)-Datei.  
   
- Das folgende Beispiel deklariert einen Ereignishandler, `OnClickInCircCtrl`, für das Circ\- **ClickIn**\-Ereignis des Steuerelements:  
+ Das folgende Beispiel deklariert einen Ereignishandler namens `OnClickInCircCtrl`, für des Circ Steuerelements **ClickIn** Ereignis:  
   
- [!CODE [NVC_MFC_AxCont#10](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxCont#10)]  
+ [!code-cpp[NVC_MFC_AxCont#10](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_3.cpp)]  
   
- Außerdem wird die folgende Vorlage der Datei `CContainerDlg` \(.CPP Klassenimplementierung\) für die Ereignishandlermemberfunktion hinzugefügt:  
+ Darüber hinaus wird die folgende Vorlage hinzugefügt, um die `CContainerDlg` klassenimplementierung (. CPP)-Datei für die Ereignishandler-Memberfunktion:  
   
- [!CODE [NVC_MFC_AxCont#11](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxCont#11)]  
+ [!code-cpp[NVC_MFC_AxCont#11](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_4.cpp)]  
   
- Weitere Informationen über Ereignissenkenmakros, finden Sie unter [Ereignissenkenzuordnungen](../mfc/reference/event-sink-maps.md) in der Class Library Reference.  
+ Weitere Informationen zu Ereignissenke Makros finden Sie unter [Ereignissenkenzuordnungen](../mfc/reference/event-sink-maps.md) in der *Klassenbibliotheksreferenz*.  
   
-#### Um eine Ereignishandlerfunktion erstellen  
+#### <a name="to-create-an-event-handler-function"></a>So erstellen eine Ereignishandlerfunktion  
   
-1.  In der Klassenansicht die Dialogfeldklasse aus, die das ActiveX\-Steuerelement enthält.  Verwenden Sie beispielsweise `CContainerDlg`.  
+1.  Wählen Sie in der Klassenansicht die Dialogfeldklasse, die das ActiveX-Steuerelement enthält. In diesem Beispiel verwenden `CContainerDlg`.  
   
-2.  Klicken Sie im Eigenschaftenfenster auf die Schaltfläche **Ereignisse**.  
+2.  Klicken Sie im Eigenschaftenfenster auf die **Ereignisse** Schaltfläche.  
   
-3.  Wählen Sie im Eigenschaftenfenster die Steuerelement\-ID des eingebetteten ActiveX\-Steuerelements aus.  Verwenden Sie beispielsweise `IDC_CIRCCTRL1`.  
+3.  Wählen Sie im Fenster Eigenschaften die Steuerelement-ID des eingebetteten ActiveX-Steuerelements. In diesem Beispiel verwenden `IDC_CIRCCTRL1`.  
   
-     Das Eigenschaftenfenster zeigt eine Liste von Ereignissen an, die das ActiveX\-Steuerelement eingebettete ausgelöst werden können.  Jede Memberfunktion, die in Fettdruck wurde veranschaulicht wird bereits, die Handlerfunktionen, die an sie zugewiesen werden.  
+     Das Eigenschaftenfenster zeigt eine Liste der Ereignisse, die vom eingebetteten ActiveX-Steuerelement ausgelöst werden können. Eine Memberfunktion leiten, die bereits in fetter Schrift hat Handlerfunktionen zugewiesen.  
   
-4.  Wählen Sie das Ereignis aus, das Sie der Dialogfeldklasse behandeln soll.  In diesem Beispiel die Option **Klicken** aus.  
+4.  Wählen Sie das Ereignis, das die Dialogfeldklasse behandelt werden soll. Wählen Sie für dieses Beispiel **klicken Sie auf**.  
   
-5.  Wählen Sie im Dropdown\-Listenfeld rechts, und wählen Sie **\<Add\> ClickCircctrl1** aus.  
+5.  Wählen Sie aus dem Dropdown-Listenfeld auf der rechten Seite ** \<hinzufügen > ClickCircctrl1 aus**.  
   
-6.  Doppelklicken Sie auf die neue Handlerfunktion von der Klassenansicht, um zum Ereignishandlercode in der Implementierungsdatei \(.CPP\) von `CContainerDlg` zu wechseln.  
+6.  Doppelklicken Sie auf die neue Handlerfunktion springen zu der Ereignishandlercode in der Implementierung der Klassenansicht (. CPP)-Datei des `CContainerDlg`.  
   
-## Siehe auch  
- [ActiveX\-Steuerelementcontainer](../mfc/activex-control-containers.md)
+## <a name="see-also"></a>Siehe auch  
+ [ActiveX-Steuerelementcontainer](../mfc/activex-control-containers.md)
+
+

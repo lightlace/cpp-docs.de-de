@@ -1,38 +1,56 @@
 ---
-title: "Explizite Instantiierung | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Vorlagen, Instanziierung"
-  - "Explizite Instantiierung"
-  - "Instantiierung, explizite"
+title: Explizite Instanziierung | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- templates, instantiation
+- explicit instantiation
+- instantiation, explicit
 ms.assetid: 8b0d4e32-45a6-49d5-8041-1ebdd674410e
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Explizite Instantiierung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: ecd8f8c893abab10699a0bd43f368356335c6e10
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Mit expliziter Instanziierung können Sie eine Instanziierung einer auf Vorlagen basierenden Klasse oder Funktion erstellen, ohne sie tatsächlich im Code zu verwenden.  Da dies nützlich ist, wenn Sie Bibliotheksdateien \(LIB\-Dateien\) erstellen, die Vorlagen zur Verteilung verwenden, werden nicht instanziierte Vorlagendefinitionen nicht in Objektdateien \(OBJ\-Dateien\) abgelegt.  
+---
+# <a name="explicit-instantiation"></a>Explizite Instantiierung
+Mit expliziter Instanziierung können Sie eine Instanziierung einer auf Vorlagen basierenden Klasse oder Funktion erstellen, ohne sie tatsächlich im Code zu verwenden. Da dies nützlich ist, wenn Sie Bibliotheksdateien (LIB-Dateien) erstellen, die Vorlagen zur Verteilung verwenden, werden nicht instanziierte Vorlagendefinitionen nicht in Objektdateien (OBJ-Dateien) abgelegt.  
   
- Dieser Code instanziiert `MyStack` explizit für `int`\-Variablen und sechs Elemente:  
+ Dieser Code instanziiert `MyStack` explizit für `int`-Variablen und sechs Elemente:  
   
 ```cpp  
 template class MyStack<int, 6>;  
 ```  
   
- Diese Anweisung erstellt eine Instanziierung von `MyStack`, ohne Speicher für ein Objekt zu reservieren.  Code wird für alle Member generiert.  
+ Diese Anweisung erstellt eine Instanziierung von `MyStack`, ohne Speicher für ein Objekt zu reservieren. Code wird für alle Member generiert.  
   
  Die nächste Zeile instanziiert explizit nur die Konstruktormemberfunktion:  
   
@@ -40,9 +58,9 @@ template class MyStack<int, 6>;
 template MyStack<int, 6>::MyStack( void );  
 ```  
   
- Sie können Funktionsvorlagen explizit instanziieren, indem Sie ein bestimmtes Typargument verwenden, um sie erneut zu deklarieren, wie im Beispiel unter [Funktionsvorlageninstanziierung](../cpp/function-template-instantiation.md) dargestellt.  
+ Funktionsvorlagen können explizit instanziiert werden, mithilfe eines bestimmten Typarguments, erneut deklarieren, wie im Beispiel gezeigt [Funktionsvorlageninstanziierung](../cpp/function-template-instantiation.md).  
   
- Sie können das `extern`\-Schlüsselwort verwenden, um die automatische Instanziierung von Membern zu verhindern.  Beispiel:  
+ Sie können das `extern`-Schlüsselwort verwenden, um die automatische Instanziierung von Membern zu verhindern. Zum Beispiel:  
   
 ```cpp  
 extern template class MyStack<int, 6>;  
@@ -54,10 +72,10 @@ extern template class MyStack<int, 6>;
 extern template MyStack<int, 6>::MyStack( void );  
 ```  
   
- Sie können das Schlüsselwort `extern` verwenden, um den Compiler daran zu hindern, den gleichen Instanziierungscode in mehr als einem Objektmodul zu generieren.  Sie müssen die Vorlagenfunktion instanziieren, indem Sie die angegebenen expliziten Vorlagenparameter in mindestens einem verknüpften Modul verwenden, wenn die Funktion aufgerufen wird. Andernfalls erhalten Sie einen Linkerfehler, wenn das Programm erstellt wird.  
+ Sie können das Schlüsselwort `extern` verwenden, um den Compiler daran zu hindern, den gleichen Instanziierungscode in mehr als einem Objektmodul zu generieren. Sie müssen die Vorlagenfunktion instanziieren, indem Sie die angegebenen expliziten Vorlagenparameter in mindestens einem verknüpften Modul verwenden, wenn die Funktion aufgerufen wird. Andernfalls erhalten Sie einen Linkerfehler, wenn das Programm erstellt wird.  
   
 > [!NOTE]
->  Das Schlüsselwort `extern` in der Spezialisierung gilt nur für Memberfunktionen, die außerhalb des Texts der Klasse definiert wurden.  Die Funktionen, die in der Klassendeklaration definiert werden, gelten als Inlinefunktionen und werden immer instanziiert.  
+>  Das Schlüsselwort `extern` in der Spezialisierung gilt nur für Memberfunktionen, die außerhalb des Texts der Klasse definiert wurden. Die Funktionen, die in der Klassendeklaration definiert werden, gelten als Inlinefunktionen und werden immer instanziiert.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Funktionsvorlagen](../cpp/function-templates.md)

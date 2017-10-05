@@ -1,39 +1,56 @@
 ---
-title: "novtable | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "novtable"
-  - "novtable_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__declspec-Schlüsselwort [C++], novtable"
-  - "novtable __declspec-Schlüsselwort"
+title: Novtable | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- novtable
+- novtable_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- novtable __declspec keyword
+- __declspec keyword [C++], novtable
 ms.assetid: cfef09c5-8c1e-4b14-8a72-7d726ded4484
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# novtable
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 7064bd08a97f3eabbf337b1a351614e94d6458dd
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-## Microsoft\-spezifisch  
- Dies ist ein erweitertes `__declspec`\-Attribut.  
+---
+# <a name="novtable"></a>novtable
+## <a name="microsoft-specific"></a>Microsoft-spezifisch  
+ Dies ist ein erweitertes `__declspec`-Attribut.  
   
- Diese Form von `__declspec` kann auf eine beliebige Klassendeklaration angewendet werden. Sie sollte jedoch nur auf reine Schnittstellenklassen angewendet werden, d. h. auf Klassen, die nie separat instanziiert werden.  Mit dem `__declspec`\-Attribut wird die Codegenerierung des Compilers gestoppt, um "vfptr" im Konstruktor\/in den Konstruktoren und dem Destruktor der Klasse zu initialisieren.  In vielen Fällen werden hierdurch die einzigen Verweise auf "vtable" entfernt, die der Klasse zugeordnet sind, sodass der Linker diese entfernt.  Mit dieser Form des `__declspec`\-Attributs kann eine erhebliche Verringerung der Codegröße erreicht werden.  
+ Diese Form von `__declspec` kann auf eine beliebige Klassendeklaration angewendet werden. Sie sollte jedoch nur auf reine Schnittstellenklassen angewendet werden, d. h. auf Klassen, die nie separat instanziiert werden. Mit dem `__declspec`-Attribut wird die Codegenerierung des Compilers gestoppt, um "vfptr" im Konstruktor/in den Konstruktoren und dem Destruktor der Klasse zu initialisieren. In vielen Fällen werden hierdurch die einzigen Verweise auf "vtable" entfernt, die der Klasse zugeordnet sind, sodass der Linker diese entfernt. Mit dieser Form des `__declspec`-Attributs kann eine erhebliche Verringerung der Codegröße erreicht werden.  
   
- Wenn Sie versuchen, eine Klasse zu instanziieren, die mit `novtable` gekennzeichnet ist, und dann auf einen Klassenmember zugreifen, tritt eine Zugriffsverletzung \(AV\) auf.  
+ Wenn Sie versuchen, eine Klasse zu instanziieren, die mit `novtable` gekennzeichnet ist, und dann auf einen Klassenmember zugreifen, tritt eine Zugriffsverletzung (AV) auf.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // novtable.cpp  
@@ -58,9 +75,12 @@ int main() {
 }  
 ```  
   
-  **In Y**   
-## END Microsoft\-spezifisch  
+```Output  
+In Y  
+```  
   
-## Siehe auch  
- [\_\_declspec](../cpp/declspec.md)   
- [C\+\+\-Schlüsselwörter](../cpp/keywords-cpp.md)
+**Ende Microsoft-spezifisch**  
+  
+## <a name="see-also"></a>Siehe auch  
+ [__declspec](../cpp/declspec.md)   
+ [Schlüsselwörter](../cpp/keywords-cpp.md)

@@ -1,44 +1,60 @@
 ---
-title: "Pointer-to-Member-Operatoren: .* und -&gt;*"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - ".*"
-  - "->*"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".*-Operator"
-  - "->*-Operator"
-  - "Ausdrücke [C++], Operatoren"
-  - "Ausdrücke [C++], Zeiger"
-  - "Zeiger-auf-Member-Operatoren"
+title: Pointer-to-Member-Operatoren:. * "und" -&gt;* | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- .*
+- ->*
+dev_langs:
+- C++
+helpviewer_keywords:
+- expressions [C++], pointer
+- pointer-to-member operators
+- .* operator
+- expressions [C++], operators
+- ->* operator
 ms.assetid: 2632be3f-1c81-4523-b56c-982a92a68688
 caps.latest.revision: 9
-caps.handback.revision: "9"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Pointer-to-Member-Operatoren: .* und -&gt;*
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 1dad74e99612df6ef868b4cd1f0b2ca5abb9c506
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-## Syntax  
+---
+# <a name="pointer-to-member-operators--and--gt"></a>Pointer-to-Member-Operatoren:. * "und" -&gt;*
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      expression .* expression  
-expression –>* expression  
+expression .* expression  
+expression ->* expression  
 ```  
   
-## Hinweise  
- Für Zeiger\-auf\-Member\-Operatoren, .\* und –\>\*, geben Sie den Wert eines bestimmten Klassenmembers für das Objekt wieder, das auf der linken Seite des Ausdrucks angegeben wurde.  Die rechte Seite muss einen Klassenmember angeben.  Im folgenden Beispiel wird die Verwendung dieser Operatoren dargestellt:  
+## <a name="remarks"></a>Hinweise  
+ Pointer-to-Member-Operatoren,. * und ->\*, Rückgabe des Werts eines bestimmten Klassenmembers für das Objekt, das auf der linken Seite des Ausdrucks angegeben.  Die rechte Seite muss einen Klassenmember angeben.  Im folgenden Beispiel wird die Verwendung dieser Operatoren dargestellt:  
   
 ```  
 // expre_Expressions_with_Pointer_Member_Operators.cpp  
@@ -78,7 +94,7 @@ int main() {
 }  
 ```  
   
-## Ausgabe  
+## <a name="output"></a>Ausgabe  
   
 ```  
 m_func1  
@@ -87,17 +103,17 @@ m_func1
 2  
 ```  
   
- Im vorherigen Beispiel wird ein Zeiger auf einen Member, `pmfn` verwendet, um die Memberfunktion `m_func1` aufzurufen.  Mit einem weiteren Zeiger auf einen Member, `pmd`, erfolgt der Zugriff auf den `m_num`\-Member.  
+ Im vorherigen Beispiel wird ein Zeiger auf einen Member, `pmfn` verwendet, um die Memberfunktion `m_func1` aufzurufen. Mit einem weiteren Zeiger auf einen Member, `pmd`, erfolgt der Zugriff auf den `m_num`-Member.  
   
- Der binäre Operator. \* kombiniert den ersten Operanden, der ein Objekt des Klassentyps sein muss, mit dem zweiten Operanden, der ein "Pointer\-to\-Member"\-Typ sein muss.  
+ Der binäre Operator. * kombiniert den ersten Operanden, der ein Objekt des Klassentyps sein muss, mit dem zweiten Operanden, der vom Typ „Pointer-to-Member“ sein muss.  
   
- Der binäre Operator –\>\* kombiniert den ersten Operanden, der ein Zeiger auf ein Objekt des Klassentyps sein muss, mit dem zweiten Operanden, der ein "Pointer\-to\-Member"\-Typ sein muss.  
+ Der binäre Operator -> * kombiniert den ersten Operanden, der einen Zeiger auf ein Objekt des Klassentyps sein, mit dem zweiten Operanden, die ein "Pointer-to-Member"-Typ sein muss.  
   
- In einem Ausdruck, der den .\*\-Operator enthält, muss der erste Operand vom Klassentyp des Zeigers auf den Member sein \(oder er muss auf ihn zugreifen können\), der im zweiten Operanden angegeben wurde, oder er muss ein zugreifbarer Typ sein, der eindeutig von dieser Klasse abgeleitet wurde und für diese Klasse zugreifbar ist.  
+ In einem Ausdruck, der den .*-Operator enthält, muss der erste Operand vom Klassentyp des Zeigers auf den Member sein (oder er muss auf ihn zugreifen können), der im zweiten Operanden angegeben wurde, oder er muss ein zugreifbarer Typ sein, der eindeutig von dieser Klasse abgeleitet wurde und für diese Klasse zugreifbar ist.  
   
- In einem Ausdruck, der den –\>\*\-Operator enthält, muss der erste Operand vom Typ "Zeiger auf den Klassentyp" sein, der vom Typ im zweiten Operanden angegeben ist, oder er muss von einem Typ sein, der eindeutig von dieser Klasse abgeleitet ist.  
+ In einem Ausdruck mit der-> *-Operator, der erste Operand muss vom Typ "Zeiger auf den Klassentyp" des Typs angegeben werden im zweiten Operanden, oder es muss werden von einem Typ eindeutig von dieser Klasse abgeleitet.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Berücksichtigen Sie die folgenden Klassen und das Programmfragment:  
   
 ```  
@@ -136,11 +152,12 @@ int main() {
 }  
 ```  
   
- Das Ergebnis der .\*\- oder –\>\*\-Zeiger\-auf\-Member\-Operatoren ist ein Objekt oder eine Funktion des Typs, der in der Deklaration des Zeigers auf den Member angegeben wird.  Im vorherigen Beispiel ist das Ergebnis des Ausdrucks `ADerived.*pmfnFunc1()` ein Zeiger auf eine Funktion, die "void" zurückgibt.  Dieses Ergebnis ist ein l\-Wert, wenn der zweite Operand ein l\-Wert ist.  
+ Das Ergebnis der. * oder ->\* Pointer-to-Member-Operatoren ist ein Objekt oder eine Funktion des Typs in der Deklaration eines Zeigers auf den Member angegeben. Im vorherigen Beispiel ist das Ergebnis des Ausdrucks `ADerived.*pmfnFunc1()` ein Zeiger auf eine Funktion, die "void" zurückgibt. Dieses Ergebnis ist ein l-Wert, wenn der zweite Operand ein l-Wert ist.  
   
 > [!NOTE]
->  Wenn das Ergebnis eines der Zeiger\-auf\-Member\-Operatoren eine Funktion ist, kann das Ergebnis nur als Operand für den Funktionsaufrufoperator verwendet werden.  
+>  Wenn das Ergebnis eines der Zeiger-auf-Member-Operatoren eine Funktion ist, kann das Ergebnis nur als Operand für den Funktionsaufrufoperator verwendet werden.  
   
-## Siehe auch  
- [C\+\+\-Operatoren](../misc/cpp-operators.md)   
- [C\+\+\-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+## <a name="see-also"></a>Siehe auch  
+ [C++-Built-in-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+
+

@@ -1,45 +1,62 @@
 ---
-title: "Anpassen der C++-Befehlszeilenverarbeitung"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_setenvp"
-  - "_setargv"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_setargv-Funktion"
-  - "_setenvp-Funktion"
-  - "Befehlszeile, Verarbeiten"
-  - "Befehlszeile, Verarbeiten von Argumenten"
-  - "Befehlszeilenverarbeitung"
-  - "Umgebung, Umgebungsverarbeitende Routine"
-  - "Startcode, Anpassen der Befehlszeilenverarbeitung"
-  - "Unterdrücken der Umgebungsverarbeitung"
+title: Anpassen der C++-Befehlszeilenverarbeitung | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _setenvp
+- _setargv
+dev_langs:
+- C++
+helpviewer_keywords:
+- command line, processing
+- command-line processing
+- startup code, customizing command-line processing
+- environment, environment-processing routine
+- _setargv function
+- command line, processing arguments
+- suppressing environment processing
+- _setenvp function
 ms.assetid: aae01cbb-892b-48b8-8e1f-34f22421f263
 caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Anpassen der C++-Befehlszeilenverarbeitung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 977ab6f5a7a8dbddf045e83a14127ac979a114a9
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-## Microsoft\-spezifisch  
- Wenn das Programm keine Befehlszeilenargumente akzeptiert, können Sie ein wenig Platz sparen, indem Sie die Verwendung der Bibliotheksroutine unterdrücken, die die Befehlszeilenverarbeitung ausführt.  Diese Routine wird **\_setargv** genannt und in [Platzhaltererweiterung](../cpp/wildcard-expansion.md) beschrieben.  Um die Verwendung zu unterdrücken, definieren Sie eine Routine, die in der Datei mit der **main**\-Funktion keine Aktion ausführt, und benennen Sie sie **\_setargv**.  Der Aufruf von **\_setargv** wird dann durch Ihre Definition von **\_setargv** erfüllt, und die Bibliotheksversion wird nicht geladen.  
+---
+# <a name="customizing-c-command-line-processing"></a>Anpassen der C++-Befehlszeilenverarbeitung
+## <a name="microsoft-specific"></a>Microsoft-spezifisch  
+ Wenn das Programm keine Befehlszeilenargumente akzeptiert, können Sie ein wenig Platz sparen, indem Sie die Verwendung der Bibliotheksroutine unterdrücken, die die Befehlszeilenverarbeitung ausführt. Diese Routine hat die Bezeichnung **_setargv** und wird im beschrieben [Platzhaltererweiterung](../cpp/wildcard-expansion.md). Um seine Verwendung zu unterdrücken, definieren Sie eine Routine, "nothing" in der Datei mit den **main** -Funktion, und nennen Sie sie **_setargv**. Der Aufruf von **_setargv** erfüllt wird dann durch Ihre Definition von **_setargv**, und die Bibliotheksversion wird nicht geladen.  
   
- Auch wenn Sie niemals auf die Umgebungstabelle vom `envp`\-Argument aus zugreifen, können Sie anstelle der umgebungsverarbeitenden Routine **\_setenvp** Ihre eigene leere Routine bereitstellen.  Wie bei der **\_setargv**\-Funktion muss **\_setenvp** als **extern "C"** deklariert werden.  
+ Ebenso sollten Sie nie auf die umgebungstabelle zugreifen der `envp` Argument, Sie können eine eigene leere Routine anstelle von bereitstellen **_setenvp**, die umgebungsverarbeitende Routine. Wie bei der **_setargv** Funktion **_setenvp** muss deklariert werden, als **"extern"C""**.  
   
- Das Programm ruft möglicherweise die **spawn**\- oder `exec`\-Gruppe von Routinen in der C\-Laufzeitbibliothek auf.  Wenn dies der Fall ist, sollten Sie die umgebungsverarbeitende Routine nicht unterdrücken, da diese Routine verwendet wird, um eine Umgebung aus dem übergeordneten Prozess an den untergeordneten Prozess zu übergeben.  
+ Das Programm möglicherweise Aufrufe an die **Spawn** oder `exec` -Gruppe von Routinen in C-Laufzeitbibliothek. Wenn dies der Fall ist, sollten Sie die umgebungsverarbeitende Routine nicht unterdrücken, da diese Routine verwendet wird, um eine Umgebung aus dem übergeordneten Prozess an den untergeordneten Prozess zu übergeben.  
   
-## END Microsoft\-spezifisch  
+**Ende Microsoft-spezifisch**  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [main: Programmstart](../cpp/main-program-startup.md)

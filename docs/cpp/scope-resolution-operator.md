@@ -1,44 +1,65 @@
 ---
-title: "Bereichsaufl&#246;sungsoperator: :: | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "::"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "::-Operator"
-  - "Operatoren [C++], Bereichsauflösung"
-  - "Bereichsauflösungsoperator"
-  - "Gültigkeitsbereich, Bereichsauflösungsoperator"
+title: "Bereichsauflösungsoperator::: | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- '::'
+dev_langs:
+- C++
+helpviewer_keywords:
+- scope, scope resolution operator
+- operators [C++], scope resolution
+- scope resolution operator
+- ':: operator'
 ms.assetid: fd5de9d3-c716-4e12-bae9-03a16fd79a50
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Bereichsaufl&#246;sungsoperator: ::
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 715eb7c5e004d7e0731ef599e54beb5fc6690e50
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Der Bereichsauflösungsoperator `::` wird zur Identifikation und eindeutigen Angabe von Bezeichnern in unterschiedlichen Geltungsbereichen verwendet.  Weitere Informationen zu Geltungsbereichen finden Sie unter [Bereich](../cpp/scope-visual-cpp.md).  
+---
+# <a name="scope-resolution-operator-"></a>Bereichsauflösungsoperator: ::
+Der Bereichsauflösungsoperator `::` wird zur Identifikation und eindeutigen Angabe von Bezeichnern in unterschiedlichen Geltungsbereichen verwendet. Weitere Informationen zum Bereich finden Sie unter [Bereich](../cpp/scope-visual-cpp.md).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-:: identifier class-name :: identifier namespace :: identifier enum class :: identifier enum struct :: identifier  
+:: identifier  
+class-name :: identifier  
+namespace :: identifier  
+enum class :: identifier  
+enum struct :: identifier  
 ```  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  `identifier` kann eine Variable, eine Funktion oder ein Enumerationswert sein.  
   
-## Mit Klassen und Namespaces  
+## <a name="with-classes-and-namespaces"></a>Mit Klassen und Namespaces  
  Das folgende Beispiel zeigt die Verwendung des Bereichsauflösungsoperators mit Namespaces und Klassen:  
   
 ```cpp  
@@ -85,7 +106,7 @@ int main() {
 }  
 ```  
   
- Mit dem Bereichsauflösungsoperator können Sie ein Mitglied eines Namespaces oder einen Namespace, der den Namespace des Mitglieds benennt, in einer using\-Anweisung identifizieren.  Im folgenden Beispiel können Sie `NamespaceC` zum Qualifizieren von `ClassB` verwenden, obwohl `ClassB` im Namespace `NamespaceB` deklariert wurde, da `NamespaceB` in `NamespaceC` durch eine using\-Anweisung benannt wurde.  
+ Mit dem Bereichsauflösungsoperator können Sie ein Mitglied eines Namespaces oder einen Namespace, der den Namespace des Mitglieds benennt, in einer using-Anweisung identifizieren. Im folgenden Beispiel können Sie `NamespaceC` zum Qualifizieren von `ClassB` verwenden, obwohl `ClassB` im Namespace `NamespaceB` deklariert wurde, da `NamespaceB` in `NamespaceC` durch eine using-Anweisung benannt wurde.  
   
 ```cpp  
 namespace NamespaceB {  
@@ -109,7 +130,7 @@ int main() {
   
 ```  
   
- Bereichsauflösungsoperatoren können verkettet werden.  Im folgenden Beispiel identifiziert `NamespaceD::NamespaceD1` den geschachtelten Namespace `NamespaceD1`, und `NamespaceE::ClassE::ClassE1` identifiziert die geschachtelte Klasse `ClassE1`.  
+ Bereichsauflösungsoperatoren können verkettet werden. Im folgenden Beispiel identifiziert `NamespaceD::NamespaceD1` den geschachtelten Namespace `NamespaceD1`, und `NamespaceE::ClassE::ClassE1` identifiziert die geschachtelte Klasse `ClassE1`.  
   
 ```cpp  
 namespace NamespaceD{  
@@ -137,7 +158,7 @@ int main() {
   
 ```  
   
-## Mit statischen Members  
+## <a name="with-static-members"></a>Mit statischen Members  
  Sie müssen den Bereichsauflösungsoperator verwenden, um statische Member von Klassen aufzurufen.  
   
 ```cpp  
@@ -157,8 +178,8 @@ int main() {
   
 ```  
   
-## Mit bereichsbezogenen Enumerationen  
- Der Bereichsauflösungsoperator wird außerdem mit den Werten einer bereichsbezogenen Enumeration in [Enumerationsdeklarationen](../cpp/enumerations-cpp.md) verwendet, wie im folgenden Beispiel gezeigt:  
+## <a name="with-scoped-enumerations"></a>Mit bereichsbezogenen Enumerationen  
+ Der Bereichsauflösungsoperator wird außerdem mit den Werten einer bereichsbezogenen Enumeration verwendet [Enumerationsdeklarationen](../cpp/enumerations-cpp.md), wie im folgenden Beispiel:  
   
 ```cpp  
 enum class EnumA{  
@@ -174,7 +195,6 @@ int main() {
   
 ```  
   
-## Siehe auch  
- [C\+\+\-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Integrierte C++-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Namespaces](../cpp/namespaces-cpp.md)   
- [Namen und qualifizierte Namen](../misc/names-and-qualified-names.md)

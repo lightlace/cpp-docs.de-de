@@ -1,33 +1,50 @@
 ---
-title: "Schreiben eines Ausnahmefilters | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Ausnahmebehandlung, Filter"
+title: Schreiben eines Ausnahmefilters | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- exception handling, filters
 ms.assetid: 47fc832b-a707-4422-b60a-aaefe14189e5
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Schreiben eines Ausnahmefilters
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 07bce97cdac37a920716e72f88bdda2d164fc479
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Sie können eine Ausnahme behandeln, indem Sie entweder auf die Ebene des Ausnahmehandlers wechseln oder die Ausführung fortsetzen.  Statt den Code im Ausnahmehandler zu verwenden, um die Ausnahme und das Durchfallen zu behandeln, können Sie *filter* verwenden, um das Problem zu bereinigen und anschließend, durch die Rückgabe von –1, den normalen Fluss fortzusetzen, ohne den Stapel zu löschen.  
+---
+# <a name="writing-an-exception-filter"></a>Schreiben eines Ausnahmefilters
+Sie können eine Ausnahme behandeln, indem Sie entweder auf die Ebene des Ausnahmehandlers wechseln oder die Ausführung fortsetzen. Anstatt den Code im Ausnahmehandler, um die Ausnahme und das durchfallen zu behandeln, können Sie *Filter* bereinigen Sie das Problem, und klicken Sie dann durch Zurückgeben von -1, normalen Fluss fortzusetzen, ohne dass der Stapel gelöscht.  
   
 > [!NOTE]
->  Einige Ausnahmen können nicht fortgesetzt werden.  Wenn *filter* für eine derartige Ausnahme –1 ergibt, löst das System eine neue Ausnahme aus.  Wenn Sie [RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552) aufrufen, bestimmen Sie, ob die Ausnahme fortgesetzt wird.  
+>  Einige Ausnahmen können nicht fortgesetzt werden. Wenn *Filter* ergibt auf-1 für eine derartige Ausnahme, löst das System eine neue Ausnahme aus. Beim Aufruf [RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552), Sie bestimmen, ob die Ausnahme fortgesetzt wird.  
   
- Beispielsweise verwendet der folgende Code einen Funktionsaufruf im *filter*\-Ausdruck: Diese Funktion behandelt das Problem und gibt \-1 zurück, um mit der normalen Ablaufsteuerung fortzufahren:  
+ Der folgende Code verwendet beispielsweise einen Funktionsaufruf in der *Filter* Ausdruck: Diese Funktion behandelt das Problem, und klicken Sie dann gibt – 1, um die normalen ablaufsteuerung fortzufahren:  
   
 ```  
 // exceptions_Writing_an_Exception_Filter.cpp  
@@ -54,19 +71,19 @@ int Eval_Exception ( int n_except ) {
 }  
 ```  
   
- Sie sollten einen Funktionsaufruf im *filter*\-Ausdruck verwenden, sobald *filter* komplexe Funktionen ausführen muss.  Das Auswerten des Ausdrucks verursacht die Ausführung der Funktion, in diesem Fall `Eval_Exception`.  
+ Es ist ratsam, verwenden Sie einen Funktionsaufruf in der *Filter* Ausdruck immer *Filter* komplexe Funktionen ausführen muss. Das Auswerten des Ausdrucks verursacht die Ausführung der Funktion, in diesem Fall `Eval_Exception`.  
   
- Beachten Sie die Verwendung von [GetExceptionCode](http://msdn.microsoft.com/library/windows/desktop/ms679356), um die Ausnahme zu bestimmen.  Sie müssen diese Funktion innerhalb des Filters selbst aufrufen.  `Eval_Exception` kann **GetExceptionCode** nicht aufrufen, jedoch muss ihr der Ausnahmecode übergeben werden.  
+ Beachten Sie die Verwendung von [GetExceptionCode](http://msdn.microsoft.com/library/windows/desktop/ms679356) auf die Ausnahme zu bestimmen. Sie müssen diese Funktion innerhalb des Filters selbst aufrufen. `Eval_Exception`kann nicht aufgerufen werden **GetExceptionCode**, muss jedoch den Ausnahmecode übergeben wird.  
   
- Dieser Handler übergibt die Steuerung an einen anderen Handler, sofern die Ausnahme keine Ganzzahl oder ein Gleitkommaüberlauf ist.  Wenn dies der Fall ist, ruft der Handler eine Funktion \(`ResetVars` ist nur ein Beispiel, keine API\-Funktion\) auf, um mehrere globale Variablen zurückzusetzen.  *Anweisungsblock 2*, der in diesem Beispiel leer ist, kann nie ausgeführt werden, da `Eval_Exception` nie EXCEPTION\_EXECUTE\_HANDLER \(1\) zurückgibt.  
+ Dieser Handler übergibt die Steuerung an einen anderen Handler, sofern die Ausnahme keine Ganzzahl oder ein Gleitkommaüberlauf ist. Wenn dies der Fall ist, ruft der Handler eine Funktion (`ResetVars` ist nur ein Beispiel, keine API-Funktion) auf, um mehrere globale Variablen zurückzusetzen. *Anweisung Anweisungsblock 2*, die in diesem Beispiel leer ist, kann nie ausgeführt werden, da `Eval_Exception` nie exception_execute_handler (1).  
   
- Die Verwendung eines Funktionsaufrufs ist ein gutes allgemeines Verfahren für die Behandlung von komplexen Filterausdrücken.  Zwei andere hilfreiche Funktionen der Programmiersprache C sind:  
+ Die Verwendung eines Funktionsaufrufs ist ein gutes allgemeines Verfahren für die Behandlung von komplexen Filterausdrücken. Zwei andere hilfreiche Funktionen der Programmiersprache C sind:  
   
 -   Der bedingte Operator  
   
 -   Der Kommaoperator  
   
- Der bedingte Operator ist häufig nützlich, da er verwendet werden kann, um nach einem bestimmten Rückgabecode zu suchen und dann einen von zwei unterschiedlichen Werten zurückzugeben.  Zum Beispiel erkennt der Filter im folgenden Code die Ausnahme nur, wenn die Ausnahme `STATUS_INTEGER_OVERFLOW` ist:  
+ Der bedingte Operator ist häufig nützlich, da er verwendet werden kann, um nach einem bestimmten Rückgabecode zu suchen und dann einen von zwei unterschiedlichen Werten zurückzugeben. Zum Beispiel erkennt der Filter im folgenden Code die Ausnahme nur, wenn die Ausnahme `STATUS_INTEGER_OVERFLOW` ist:  
   
 ```  
 __except( GetExceptionCode() == STATUS_INTEGER_OVERFLOW ? 1 : 0 ) {  
@@ -78,14 +95,14 @@ __except( GetExceptionCode() == STATUS_INTEGER_OVERFLOW ? 1 : 0 ) {
 __except( GetExceptionCode() == STATUS_INTEGER_OVERFLOW ) {  
 ```  
   
- Der bedingte Operator ist in Situationen, in denen der Filter \-1, EXCEPTION\_CONTINUE\_EXECUTION auswerten soll, nützlicher.  
+ Der bedingte Operator ist nützlicher in Situationen, bei dem Sie die Filter-1, EXCEPTION_CONTINUE_EXECUTION auswerten möchten.  
   
- Der Komma\-Operator ermöglicht die Ausführung mehrerer unabhängiger Vorgänge innerhalb eines einzelnen Ausdrucks.  Die Wirkung gleicht ungefähr der Ausführung mehrerer Anweisungen und der anschließenden Rückgabe des Wertes des letzten Ausdrucks.  Der folgenden Code speichert z. B. den Ausnahmecode in einer Variablen und testet dann auf:  
+ Der Komma-Operator ermöglicht die Ausführung mehrerer unabhängiger Vorgänge innerhalb eines einzelnen Ausdrucks. Die Wirkung gleicht ungefähr der Ausführung mehrerer Anweisungen und der anschließenden Rückgabe des Wertes des letzten Ausdrucks. Der folgenden Code speichert z. B. den Ausnahmecode in einer Variablen und testet dann auf:  
   
 ```  
 __except( nCode = GetExceptionCode(), nCode == STATUS_INTEGER_OVERFLOW )  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Schreiben eines Ausnahmehandlers](../cpp/writing-an-exception-handler.md)   
- [Strukturierte Ausnahmebehandlung](../cpp/structured-exception-handling-c-cpp.md)
+ [Strukturierte Ausnahmebehandlung (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

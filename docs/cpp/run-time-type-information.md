@@ -1,48 +1,65 @@
 ---
-title: "Laufzeit-Typinformationen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "index-page "
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RTTI-Compileroption"
-  - "Laufzeit, Typüberprüfung"
-  - "Laufzeitüberprüfungen, Typüberprüfung"
-  - "Laufzeit-Typinformationen"
-  - "Typinformationen, Laufzeittypüberprüfung"
+title: Laufzeit-Typeninformation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: 'index-page '
+dev_langs:
+- C++
+helpviewer_keywords:
+- RTTI compiler option
+- run-time type information
+- run time, type checking
+- type information, run-time type checking
+- run-time checks, type checking
 ms.assetid: becbd0e5-0439-4c61-854f-8a74f7160c54
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Laufzeit-Typinformationen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: ec36acfdba274a0eaf36c099da11f4462f2aad70
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Laufzeittypinformationen \(Run\-Time Type Information, RTTI\) sind ein Mechanismus, mit dem der Typ eines Objekts während der Programmausführung bestimmt werden kann.  Laufzeittypinformationen wurden zur Programmiersprache C\+\+ hinzugefügt, da viele Anbieter von Klassenbibliotheken diese Funktion selbst implementiert haben.  Dies verursachte Inkompatibilitäten zwischen Bibliotheken.  Deshalb wurde es offensichtlich, dass eine Unterstützung der Laufzeittypinformationen auf Sprachebene erforderlich war.  
+---
+# <a name="run-time-type-information"></a>Laufzeit-Typinformationen
+Laufzeittypinformationen (Run-Time Type Information, RTTI) sind ein Mechanismus, mit dem der Typ eines Objekts während der Programmausführung bestimmt werden kann. Laufzeittypinformationen wurden zur Programmiersprache C++ hinzugefügt, da viele Anbieter von Klassenbibliotheken diese Funktion selbst implementiert haben. Dies verursachte Inkompatibilitäten zwischen Bibliotheken. Deshalb wurde es offensichtlich, dass eine Unterstützung der Laufzeittypinformationen auf Sprachebene erforderlich war.  
   
- Aus Gründen der Übersichtlichkeit wird die Erläuterung der Laufzeittypinformationen nahezu ausschließlich auf Zeiger beschränkt.  Jedoch gelten die erläuterten Konzepte auch für Verweise.  
+ Aus Gründen der Übersichtlichkeit wird die Erläuterung der Laufzeittypinformationen nahezu ausschließlich auf Zeiger beschränkt. Jedoch gelten die erläuterten Konzepte auch für Verweise.  
   
- Es gibt drei primäre Sprachelemente von C\+\+ zur Ausführung von Laufzeittypinformationen:  
+ Es gibt drei primäre Sprachelemente von C++ zur Ausführung von Laufzeittypinformationen:  
   
--   Der Operator [dynamic\_cast](../cpp/dynamic-cast-operator.md).  
+-   Die [Dynamic_cast](../cpp/dynamic-cast-operator.md) Operator.  
   
      Wird zur Konvertierung von polymorphen Typen verwendet.  
   
--   Der Operator [typeid](../cpp/typeid-operator.md).  
+-   Die [Typeid](../cpp/typeid-operator.md) Operator.  
   
      Wird zum Kennzeichnen des genauen Typ eines Objekts verwendet.  
   
--   Die Klasse [type\_info](../cpp/type-info-class.md).  
+-   Die [Type_info](../cpp/type-info-class.md) Klasse.  
   
-     Wird verwendet, um die Typinformationen zu speichern, die vom `typeid`\-Operator zurückgegeben werden.  
+     Wird verwendet, um die Typinformationen zu speichern, die vom `typeid`-Operator zurückgegeben werden.  
   
-## Siehe auch  
- [Umwandlung von Typen](../cpp/casting.md)
+## <a name="see-also"></a>Siehe auch  
+ [Umwandlung](../cpp/casting.md)

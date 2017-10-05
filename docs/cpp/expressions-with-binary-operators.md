@@ -1,104 +1,121 @@
 ---
-title: "Ausdr&#252;cke mit bin&#228;ren Operatoren | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Binäre Operatoren"
-  - "Ausdrücke [C++], Binäre Operatoren"
-  - "Operatoren [C++], Binär"
+title: "Ausdrücke mit binären Operatoren | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- operators [C++], binary
+- binary operators
+- expressions [C++], binary operators
 ms.assetid: 6dea3df4-a4bd-42c3-9807-4a27c120ac9a
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Ausdr&#252;cke mit bin&#228;ren Operatoren
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: cedb72a925b21c6bf121092626bc52214fc9c0f0
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Binäre Operatoren agieren in zwei Operanden in einem Ausdruck.  Die binären Operatoren sind:  
+---
+# <a name="expressions-with-binary-operators"></a>Ausdrücke mit binären Operatoren
+Binäre Operatoren agieren in zwei Operanden in einem Ausdruck. Die binären Operatoren sind:  
   
 -   [Multiplikative Operatoren](../cpp/multiplicative-operators-and-the-modulus-operator.md)  
   
-    -   Multiplikation \(\*\)  
+    -   Multiplikation (*)  
   
-    -   Division \(\/\)  
+    -   Division (/)  
   
-    -   Modulo \(%\)  
+    -   Modulo (%)  
   
 -   [Additive Operatoren](../cpp/additive-operators-plus-and.md)  
   
-    -   Addition \(\+\)  
+    -   Addition (+)  
   
-    -   Subtraktion \(–\)  
+    -   Subtraction (-)  
   
--   [Schiebeoperatoren](../cpp/left-shift-and-right-shift-operators-input-and-output.md)  
+-   [Shift operators (Schiebeoperatoren)](../cpp/left-shift-and-right-shift-operators-input-and-output.md)  
   
-    -   Nach rechts verschieben \(\>\>\)  
+    -   Rechtsverschiebung (>>)  
   
-    -   Nach links verschieben \(\<\<\)  
+    -   Nach links verschieben (<<)  
   
--   [Relationale und Gleichheitsoperatoren](../cpp/relational-operators-equal-and-equal.md)  
+-   [Relationale Operatoren und Gleichheitsoperatoren](../cpp/relational-operators-equal-and-equal.md)  
   
-    -   Kleiner als \(\<\)  
+    -   Kleiner als (\<)  
   
-    -   Größer als \(\>\)  
+    -   Größer als (>)  
   
-    -   Kleiner oder gleich \(\<\=\)  
+    -   Kleiner als oder gleich (\<=)  
   
-    -   Größer oder gleich \(\>\=\)  
+    -   Größer oder gleich (>=)  
   
-    -   Ist gleich \(\=\=\)  
+    -   Ist gleich (==)  
   
-    -   Ist ungleich \(\!\=\)  
+    -   Ist ungleich (!=)  
   
 -   Bitweise Operatoren  
   
-    -   [Bitweises AND \(&\)](../cpp/bitwise-and-operator-amp.md)  
+    -   [Bitweises AND (&)](../cpp/bitwise-and-operator-amp.md)  
   
-    -   [Bitweises exklusives OR \(^\)](../cpp/bitwise-exclusive-or-operator-hat.md)  
+    -   [Bitweises exklusives OR (^)](../cpp/bitwise-exclusive-or-operator-hat.md)  
   
-    -   [Bitweises inklusives OR \(&#124;\)](../cpp/bitwise-inclusive-or-operator-pipe.md)  
+    -   [Bitweisen inklusiven OR-Operator (&#124;)](../cpp/bitwise-inclusive-or-operator-pipe.md)  
   
 -   Logische Operatoren  
   
-    -   [Logisches AND \(&&\)](../cpp/logical-and-operator-amp-amp.md)  
+    -   [Logisches AND (& &)](../cpp/logical-and-operator-amp-amp.md)  
   
-    -   [Logisches OR \(&#124;&#124;\)](../cpp/logical-or-operator-pipe-pipe.md)  
+    -   [Logisches OR (&#124; &#124;)](../cpp/logical-or-operator-pipe-pipe.md)  
   
--   [Zuweisungsoperatoren](../cpp/assignment-operators.md)  
+-   [Assignment operators (Zuweisungsoperatoren)](../cpp/assignment-operators.md)  
   
-    -   Zuweisung \(\=\)  
+    -   Zuweisung (=)  
   
-    -   Additionszuweisung \(\+\=\)  
+    -   Additionszuweisung (+=)  
   
-    -   Subtraktionszuweisung \(–\=\)  
+    -   Subtraktionszuweisung (–)  
   
-    -   Multiplikationszuweisung \(\*\=\)  
+    -   Multiplikationszuweisung (*=)  
   
-    -   Divisionszuweisung \(\/\=\)  
+    -   Divisionszuweisung (/=)  
   
-    -   Modulozuweisung \(%\=\)  
+    -   Modulozuweisung (%=)  
   
-    -   Linksschiebezuweisung \(\<\<\=\)  
+    -   Linksschiebezuweisung (<\<=)  
   
-    -   Rechtsschiebezuweisung \(\>\>\=\)  
+    -   Rechtsschiebezuweisung (>>=)  
   
-    -   Bitweise AND\-Zuweisung \(&\=\)  
+    -   Bitweise AND-Zuweisung (&=)  
   
-    -   Bitweise exklusive OR\-Zuweisung \(^\=\)  
+    -   Bitweise exklusive OR-Zuweisung (^=)  
   
-    -   Bitweise inklusive OR\-Zuweisung \(&#124;\=\)  
+    -   Bitweise inklusive OR-Zuweisung (&#124; =)  
   
--   [Kommaoperator](../cpp/comma-operator.md) \(,\)  
+-   [Komma-Operators](../cpp/comma-operator.md) (,)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Ausdruckstypen](../cpp/types-of-expressions.md)

@@ -1,33 +1,50 @@
 ---
-title: "Geschachtelte Klassendeklarationen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Klassen [C++], Deklarieren"
-  - "Deklarationen, Klasse"
-  - "Deklarationen, Geschachtelte Klassen"
-  - "Deklarieren von Klassen"
-  - "Geschachtelte Klassen"
-  - "Geschachtelte Klassen, Deklarieren"
+title: Geschachtelte Klassendeklarationen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- classes [C++], declaring
+- declarations, class
+- nested classes
+- nested classes, declaring
+- declaring classes
+- declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Geschachtelte Klassendeklarationen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c66636f2780e15df83d016b604f78adae7b62143
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Eine Klasse kann im Bereich einer anderen Klasse deklariert werden.  Eine solche Klasse wird als "geschachtelte Klasse" bezeichnet. Geschachtelte Klassen gelten als innerhalb des Bereichs der einschließenden Klasse befindlich und sind für die Verwendung innerhalb dieses Bereichs verfügbar.  Um auf eine geschachtelte Klasse aus einem anderen als dem unmittelbar einschließenden Bereich zu verweisen, müssen Sie einen vollqualifizierten Namen angeben.  
+---
+# <a name="nested-class-declarations"></a>Geschachtelte Klassendeklarationen
+Eine Klasse kann im Bereich einer anderen Klasse deklariert werden. Eine solche Klasse wird als "geschachtelte Klasse" bezeichnet. Geschachtelte Klassen gelten als innerhalb des Bereichs der einschließenden Klasse befindlich und sind für die Verwendung innerhalb dieses Bereichs verfügbar. Um auf eine geschachtelte Klasse aus einem anderen als dem unmittelbar einschließenden Bereich zu verweisen, müssen Sie einen vollqualifizierten Namen angeben.  
   
  Im folgenden Beispiel wird das Deklarieren geschachtelter Klassen veranschaulicht:  
   
@@ -63,14 +80,14 @@ int main()
 }  
 ```  
   
- `BufferedIO::BufferedInput` und `BufferedIO::BufferedOutput` werden innerhalb `BufferedIO` deklariert.  Diese Klassennamen sind außerhalb des gültigen Bereichs der Klasse `BufferedIO` nicht sichtbar.  Ein Objekt vom Typ `BufferedIO` enthält jedoch keine Objekte des Typs `BufferedInput` oder `BufferedOutput`.  
+ `BufferedIO::BufferedInput` und `BufferedIO::BufferedOutput` werden innerhalb `BufferedIO` deklariert. Diese Klassennamen sind außerhalb des gültigen Bereichs der Klasse `BufferedIO` nicht sichtbar. Ein Objekt vom Typ `BufferedIO` enthält jedoch keine Objekte des Typs `BufferedInput` oder `BufferedOutput`.  
   
- Geschachtelte Klassen können Namen, Typnamen, Namen statischer Member und Enumeratoren nur aus der einschließenden Klasse direkt verwenden.  Um Namen von anderen Klassenmembern zu verwenden, müssen Sie Zeiger, Verweise oder Objektnamen verwenden.  
+ Geschachtelte Klassen können Namen, Typnamen, Namen statischer Member und Enumeratoren nur aus der einschließenden Klasse direkt verwenden. Um Namen von anderen Klassenmembern zu verwenden, müssen Sie Zeiger, Verweise oder Objektnamen verwenden.  
   
- Im vorherigen Beispiel mit `BufferedIO` kann auf die Enumeration `IOError` direkt von Memberfunktionen in den geschachtelten Klassen `BufferedIO::BufferedInput` oder `BufferedIO::BufferedOutput` zugegriffen werden, wie in der `good`\-Funktion gezeigt wird.  
+ Im vorherigen Beispiel mit `BufferedIO` kann auf die Enumeration `IOError` direkt von Memberfunktionen in den geschachtelten Klassen `BufferedIO::BufferedInput` oder `BufferedIO::BufferedOutput` zugegriffen werden, wie in der `good`-Funktion gezeigt wird.  
   
 > [!NOTE]
->  Geschachtelte Klassen deklarieren nur Typen innerhalb des gültigen Klassenbereichs.  Sie führen nicht dazu, dass enthaltene Objekte der geschachtelten Klasse erstellt werden.  Das vorhergehende Beispiel deklariert zwei geschachtelte Klassen, jedoch keine Objekte dieser Klassentypen.  
+>  Geschachtelte Klassen deklarieren nur Typen innerhalb des gültigen Klassenbereichs. Sie führen nicht dazu, dass enthaltene Objekte der geschachtelten Klasse erstellt werden. Das vorhergehende Beispiel deklariert zwei geschachtelte Klassen, jedoch keine Objekte dieser Klassentypen.  
   
  Eine Ausnahme von der Bereichssichtbarkeit einer Deklaration der geschachtelten Klasse ist, wenn ein Typname zusammen mit einer Vorwärtsdeklaration deklariert ist.  In diesem Fall ist der Klassenname, der von der Vorwärtsdeklaration deklariert wird, außerhalb der einschließenden Klasse sichtbar, wobei sein Bereich als kleinster einschließender Nichtklassenbereich definiert wird.  Zum Beispiel:  
   
@@ -99,11 +116,11 @@ int main()
 }  
 ```  
   
-## Zugriffsrecht in geschachtelten Klassen  
- Das Schachteln einer Klasse in einer anderen Klasse gewährt keine speziellen Zugriffsrechte auf die Memberfunktionen der geschachtelten Klasse.  Ebenso bieten Memberfunktionen der einschließenden Klasse keinen speziellen Zugriff auf die Member der geschachtelten Klasse.  
+## <a name="access-privilege-in-nested-classes"></a>Zugriffsrecht in geschachtelten Klassen  
+ Das Schachteln einer Klasse in einer anderen Klasse gewährt keine speziellen Zugriffsrechte auf die Memberfunktionen der geschachtelten Klasse. Ebenso bieten Memberfunktionen der einschließenden Klasse keinen speziellen Zugriff auf die Member der geschachtelten Klasse.  
   
-## Memberfunktionen in geschachtelten Klassen  
- Die Memberfunktionen, die in den geschachtelten Klassen deklariert werden, können im Dateibereich definiert werden.  Das vorhergehende Beispiel könnte so aussehen:  
+## <a name="member-functions-in-nested-classes"></a>Memberfunktionen in geschachtelten Klassen  
+ Die Memberfunktionen, die in den geschachtelten Klassen deklariert werden, können im Dateibereich definiert werden. Das vorhergehende Beispiel könnte so aussehen:  
   
 ```  
 // member_functions_in_nested_classes.cpp  
@@ -141,13 +158,13 @@ int main()
 }  
 ```  
   
- Im vorherigen Beispiel wird die *qualified\-type\-name*\-Syntax verwendet, um den Funktionsnamen zu deklarieren.  Die Deklaration:  
+ Im vorherigen Beispiel der *qualified-Type-Name* Syntax wird verwendet, um den Namen der Funktion zu deklarieren. Die Deklaration:  
   
 ```  
 BufferedIO::BufferedInput::read()  
 ```  
   
- bedeutet "die `read`\-Funktion, die ein Member der `BufferedInput`\-Klasse ist, die im Bereich der `BufferedIO`\-Klasse liegt". Da diese Deklaration die *qualified\-type\-name*\-Syntax verwendet, sind Konstrukte der folgenden Form möglich:  
+ bedeutet "die `read`-Funktion, die ein Member der `BufferedInput`-Klasse ist, die im Bereich der `BufferedIO`-Klasse liegt". Da diese Deklaration verwendet die *qualified-Type-Name* Syntax Konstrukte der folgenden Form sind möglich:  
   
 ```  
 typedef BufferedIO::BufferedInput BIO_INPUT;  
@@ -155,10 +172,10 @@ typedef BufferedIO::BufferedInput BIO_INPUT;
 int BIO_INPUT::read()  
 ```  
   
- Die vorhergehende Deklaration entspricht der vorherigen, aber sie verwendet einen `typedef`\-Namen anstelle von Klassennamen.  
+ Die vorhergehende Deklaration entspricht der vorherigen, aber sie verwendet einen `typedef`-Namen anstelle von Klassennamen.  
   
-## Friend\-Funktionen in geschachtelten Klassen  
- Die friend\-Funktionen, die in einer geschachtelten Klasse deklariert werden, gelten als zum Bereich der geschachtelten Klasse zugehörig, nicht der einschließenden Klasse.  Daher erhalten die friend\-Funktionen keine besonderen Zugriffsrechte auf Member oder Memberfunktionen der einschließenden Klasse.  Wenn Sie einen Namen verwenden möchten, der in einer geschachtelten Klasse in einer friend\-Funktion deklariert ist, und diese friend\-Funktion im Dateibereich definiert ist, verwenden Sie qualifizierte Typnamen wie folgt:  
+## <a name="friend-functions-in-nested-classes"></a>Friend-Funktionen in geschachtelten Klassen  
+ Die friend-Funktionen, die in einer geschachtelten Klasse deklariert werden, gelten als zum Bereich der geschachtelten Klasse zugehörig, nicht der einschließenden Klasse. Daher erhalten die friend-Funktionen keine besonderen Zugriffsrechte auf Member oder Memberfunktionen der einschließenden Klasse. Wenn Sie einen Namen verwenden möchten, der in einer geschachtelten Klasse in einer friend-Funktion deklariert ist, und diese friend-Funktion im Dateibereich definiert ist, verwenden Sie qualifizierte Typnamen wie folgt:  
   
 ```  
 // friend_functions_and_nested_classes.cpp  
@@ -204,7 +221,7 @@ int main()
 }  
 ```  
   
- Der folgende Code zeigt die Funktion `GetExtendedErrorStatus` als friend\-Funktion deklariert.  In der Funktion, die im Dateibereich definiert ist, wird eine Nachricht von einem statischen Array in einen Klassenmember kopiert.  Beachten Sie, dass eine bessere Implementierung von `GetExtendedErrorStatus` erfolgt, wenn dies wie folgt deklariert wird:  
+ Der folgende Code zeigt die Funktion `GetExtendedErrorStatus` als friend-Funktion deklariert. In der Funktion, die im Dateibereich definiert ist, wird eine Nachricht von einem statischen Array in einen Klassenmember kopiert. Beachten Sie, dass eine bessere Implementierung von `GetExtendedErrorStatus` erfolgt, wenn dies wie folgt deklariert wird:  
   
 ```  
 int GetExtendedErrorStatus( char *message )  
@@ -212,5 +229,5 @@ int GetExtendedErrorStatus( char *message )
   
  Bei der vorherigen Schnittstelle können mehrere Klassen die Dienste dieser Funktion verwenden, indem eine Speicheradresse übergeben wird, an welche die Fehlermeldung kopiert werden soll.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Klassen und Strukturen](../cpp/classes-and-structs-cpp.md)

@@ -1,36 +1,54 @@
 ---
-title: "Partielle Spezialisierung von Klassenvorlagen (C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Teilweise Spezialisierung von Klassenvorlagen"
+title: Spezialisierung einer Klassenvorlage (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- partial specialization of class templates
 ms.assetid: f3c67c0b-3875-434a-b8d8-bb47e99cf4f0
 caps.latest.revision: 12
-caps.handback.revision: "10"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Partielle Spezialisierung von Klassenvorlagen (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
+ms.openlocfilehash: 6e6cf3d4ad48a50d6f4cdffa81cd4ca330ed33a9
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Klassenvorlagen können teilweise spezialisiert werden, und die resultierende Klasse ist immer noch eine Vorlage.  Durch die teilweise Spezialisierung kann Vorlagencode für bestimmte Typen teilweise angepasst werden, in bestimmten Situationen wie:  
+---
+# <a name="template-specialization-c"></a>Spezialisierung einer Klassenvorlage (C++)
+
+Klassenvorlagen können teilweise spezialisiert werden, und die resultierende Klasse ist immer noch eine Vorlage. Durch die teilweise Spezialisierung kann Vorlagencode für bestimmte Typen teilweise angepasst werden, in bestimmten Situationen wie:  
   
--   Eine Vorlage verfügt über mehrere Typen und nur einige von ihnen müssen spezialisiert werden.  Das Ergebnis ist eine Vorlage, die auf Grundlage der restlichen Typen parametrisiert wird.  
+-   Eine Vorlage verfügt über mehrere Typen und nur einige von ihnen müssen spezialisiert werden. Das Ergebnis ist eine Vorlage, die auf Grundlage der restlichen Typen parametrisiert wird.  
   
--   Eine Vorlage verfügt nur über einen Typ, aber eine Spezialisierung wird für Zeiger\-, Verweis\-, Memberzeiger\- oder Funktionszeigertypen benötigt.  Die Spezialisierung selbst ist immer noch eine Vorlage für den Typ, auf den verwiesen oder gezeigt wird.  
+-   Eine Vorlage verfügt nur über einen Typ, aber eine Spezialisierung wird für Zeiger-, Verweis-, Memberzeiger- oder Funktionszeigertypen benötigt. Die Spezialisierung selbst ist immer noch eine Vorlage für den Typ, auf den verwiesen oder gezeigt wird.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-```  
+```cpp
 // partial_specialization_of_class_templates.cpp  
 template <class T> struct PTS {  
    enum {  
@@ -71,13 +89,17 @@ int main() {
 }  
 ```  
   
-  **PTS\<S\>::IsPointer \=\= 0 PTS\<S\>::IsPointerToDataMember \=\= 0**  
-**PTS\<S\*\>::IsPointer \=\= 1 PTS\<S\*\>::IsPointerToDataMember \=\=0**  
-**PTS\<int S::\*\>::IsPointer \=\= 0 PTS\<int S::\*\>::IsPointerToDataMember \=\= 1**   
-## Beispiel  
- Wenn Sie über eine Vorlagenauflistungsklasse verfügen, die jeden Typ **T** akzeptiert, können Sie eine teilweise Spezialisierung erstellen, die jeden beliebigen Zeigertyp **T\*** akzeptiert.  Der folgende Code zeigt die Auflistung von Klassenvorlagen `Bag` und eine teilweise Spezialisierung für Zeigertypen, wobei die Auflistung die Zeigertypen dereferenziert, bevor sie diese ins Array kopiert.  Die Auflistung speichert dann die Werte, auf die gezeigt wird.  Bei der ursprünglichen Vorlage wären nur die Zeiger selbst in der Auflistung gespeichert worden, sodass sich Löschungen und Änderungen auf die Daten auswirken können.  In dieser speziellen Zeigerversion der Auflistung wird ein Code zur Suche eines NULL\-Zeigers in der `add`\-Methode hinzugefügt.  
-  
+```Output  
+PTS<S>::IsPointer == 0 PTS<S>::IsPointerToDataMember == 0  
+PTS<S*>::IsPointer == 1 PTS<S*>::IsPointerToDataMember ==0  
+PTS<int S::*>::IsPointer == 0 PTS<int S::*>::IsPointerToDataMember == 1  
 ```  
+  
+## <a name="example"></a>Beispiel
+
+ Wenn Sie eine vorlagenauflistungsklasse verfügen, die jeden Typ akzeptiert **T**, können Sie eine teilweise Spezialisierung, der einen Zeigertyp akzeptiert erstellen **T***. Der folgende Code zeigt die Auflistung von Klassenvorlagen `Bag` und eine teilweise Spezialisierung für Zeigertypen, wobei die Auflistung die Zeigertypen dereferenziert, bevor sie diese ins Array kopiert. Die Auflistung speichert dann die Werte, auf die gezeigt wird. Bei der ursprünglichen Vorlage wären nur die Zeiger selbst in der Auflistung gespeichert worden, sodass sich Löschungen und Änderungen auf die Daten auswirken können. In dieser speziellen Zeigerversion der Auflistung wird ein Code zur Suche eines NULL-Zeigers in der `add`-Methode hinzugefügt.  
+  
+```cpp
 // partial_specialization_of_class_templates2.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -178,14 +200,18 @@ int main() {
 }  
 ```  
   
-  **10 9 8**   
-**a b c**   
-**Null pointer\!**  
-**3 87 8 100**    
-## Beispiel  
- Im folgenden Beispiel wird eine Vorlagenklasse definiert, die Paare von beliebigen zwei Typen nimmt und dann eine teilweise Spezialisierung dieser spezialisierten Vorlagenklasse definiert, sodass einer der Typen `int` ist.  Die Spezialisierung definiert eine zusätzliche Sortiermethode, die eine einfache Bubble Sort auf Grundlage der Ganzzahl implementiert.  
-  
+```Output  
+10 9 8   
+a b c   
+Null pointer!  
+3 87 8 100   
 ```  
+  
+## <a name="example"></a>Beispiel
+
+ Im folgenden Beispiel wird eine Vorlagenklasse definiert, die Paare von beliebigen zwei Typen nimmt und dann eine teilweise Spezialisierung dieser spezialisierten Vorlagenklasse definiert, sodass einer der Typen `int` ist. Die Spezialisierung definiert eine zusätzliche Sortiermethode, die eine einfache Bubble Sort auf Grundlage der Ganzzahl implementiert.  
+  
+```cpp
 // partial_specialization_of_class_templates3.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -314,17 +340,19 @@ int main() {
 }  
 ```  
   
-  **{apple, fruit}**  
-**{banana, fruit}**  
-**{dog, animal}**  
-**{100, apple}**  
-**{101, banana}**  
-**{103, dog}**  
-**{89, cat}**  
-**Sorted list:**  
-**{89, cat}**  
-**{100, apple}**  
-**{101, banana}**  
-**{103, dog}**   
-## Siehe auch  
- [Explizite Spezialisierung von Klassenvorlagen](../Topic/Explicit%20Specialization%20of%20Class%20Templates.md)
+```Output  
+{apple, fruit}  
+{banana, fruit}  
+{dog, animal}  
+{100, apple}  
+{101, banana}  
+{103, dog}  
+{89, cat}  
+  
+Sorted list:  
+{89, cat}  
+{100, apple}  
+{101, banana}  
+{103, dog}  
+```  
+

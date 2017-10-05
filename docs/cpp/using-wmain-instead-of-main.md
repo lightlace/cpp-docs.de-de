@@ -1,42 +1,59 @@
 ---
-title: "Verwenden von &quot;wmain&quot; anstelle von &quot;main&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "wmain"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "main-Funktion, Im Vergleich zu wmain"
-  - "wmain-Funktion"
+title: Mithilfe von "wmain" anstelle von Main | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- wmain
+dev_langs:
+- C++
+helpviewer_keywords:
+- main function, vs. wmain
+- wmain function
 ms.assetid: 7abb1257-b85c-413a-b913-d45b1582a71d
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Verwenden von &quot;wmain&quot; anstelle von &quot;main&quot;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: ef24360507c3c58d2c0839f780062340f8d7654f
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-## Microsoft\-spezifisch  
- Im Unicode\-Programmiermodell können Sie eine Breitzeichenversion der **main**\-Funktion definieren.  Verwenden Sie **wmain** anstelle von **main**, wenn Sie portablen Code schreiben möchten, der der Unicode\-Spezifizierung entspricht.  
+---
+# <a name="using-wmain-instead-of-main"></a>Verwenden von "wmain" anstelle von "main"
+## <a name="microsoft-specific"></a>Microsoft-spezifisch  
+ Im Unicode-Programmiermodell können Sie eine Breitzeichenversion der **main**-Funktion definieren. Verwendung **"wmain"** anstelle von **main** sollten Sie portablen Code schreiben, die die Unicode-Spezifikation entspricht.  
   
- Sie deklarieren die formalen Parameter für **wmain** unter Verwendung eines ähnlichen Formats wie für **main**.  Sie können anschließend Breitzeichen\-Argumente und optional einen Breitzeichen\-Umgebungszeiger übergeben, der auf das Programm verweist.  Der `argv`\-Parameter und der `envp`\-Parameter, die auf **wmain** verweisen, sind vom Typ `wchar_t*`.  
+ Sie deklarieren die formalen Parameter für **wmain** unter Verwendung eines ähnlichen Formats wie für **main**. Sie können anschließend Breitzeichen-Argumente und optional einen Breitzeichen-Umgebungszeiger übergeben, der auf das Programm verweist. Der `argv`-Parameter und der `envp`-Parameter, die auf **wmain** verweisen, sind vom Typ `wchar_t*`.  
   
- Wenn in einem Programm eine **main**\-Funktion verwendet wird, wird die Mehrbyte\-Zeichenumgebung beim Programmstart vom Betriebssystem erstellt.  Eine Breitzeichenkopie der Umgebung wird nur bei Bedarf erstellt \(z. B. durch einen Aufruf der [\_wgetenv](../c-runtime-library/reference/getenv-wgetenv.md)\-Funktion oder der [\_wputenv](../c-runtime-library/reference/putenv-wputenv.md)\-Funktion\).  Wenn bereits eine MBCS\-Umgebung vorhanden ist, wird beim ersten Aufruf von `_wputenv` oder beim ersten Aufruf von `_wgetenv` eine entsprechende Breitzeichen\-Zeichenfolgenumgebung erstellt. Auf diese Umgebung zeigt dann die globale Variable `_wenviron`, die eine Breitzeichenversion der globalen Variablen `_environ` ist.  Zu diesem Zeitpunkt sind zwei Kopien der Umgebung \(MBCS und Unicode\) gleichzeitig vorhanden und werden während der Lebensdauer des Programms vom Betriebssystem verwaltet.  
+ Wenn Ihre Anwendung verwendet ein **main** -Funktion, die Mehrbyte-zeichenumgebung wird vom Betriebssystem beim Programmstart erstellt. Eine Breitzeichen-Kopie der Umgebung wird nur bei Bedarf erstellt (z. B. durch einen Aufruf der [_wgetenv](../c-runtime-library/reference/getenv-wgetenv.md) oder [_wputenv](../c-runtime-library/reference/putenv-wputenv.md) Funktionen). Wenn bereits eine MBCS-Umgebung vorhanden ist, wird beim ersten Aufruf von `_wputenv` oder beim ersten Aufruf von `_wgetenv` eine entsprechende Breitzeichen-Zeichenfolgenumgebung erstellt. Auf diese Umgebung zeigt dann die globale Variable `_wenviron`, die eine Breitzeichenversion der globalen Variablen `_environ` ist. Zu diesem Zeitpunkt sind zwei Kopien der Umgebung (MBCS und Unicode) gleichzeitig vorhanden und werden während der Lebensdauer des Programms vom Betriebssystem verwaltet.  
   
- Wenn ein Programm eine **wmain**\-Funktion verwendet, wird entsprechend beim ersten Aufruf von `_putenv` oder `getenv` eine MBCS\-Umgebung \(ASCII\) erstellt, auf die die `_environ` globale Variable zeigt.  
+ Auf ähnliche Weise, wenn Ihre Anwendung verwendet ein **"wmain"** -Funktion, eine Umgebung MBCS (ASCII) wird beim ersten Aufruf von erstellt `_putenv` oder `getenv`, und verweist die `_environ` (globale Variable).  
   
- Weitere Informationen zur MBCS\-Umgebung finden Sie in der *Laufzeitbibliotheksreferenz* unter [Einzelbyte\- und Mehrbyte\-Zeichensätze](../c-runtime-library/single-byte-and-multibyte-character-sets.md).  
+ Weitere Informationen zur MBCS-Umgebung, finden Sie unter [Einzelbyte- und Mehrbyte-Zeichensätze](../c-runtime-library/single-byte-and-multibyte-character-sets.md) in die *Run-Time Library Reference.*  
   
-## END Microsoft\-spezifisch  
+**Ende Microsoft-spezifisch**  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [main: Programmstart](../cpp/main-program-startup.md)

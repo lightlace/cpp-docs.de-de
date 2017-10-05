@@ -1,50 +1,67 @@
 ---
-title: "__unaligned | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__unaligned_cpp"
-  - "__unaligned"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__unaligned-Schlüsselwort [C++]"
+title: __unaligned | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __unaligned_cpp
+- __unaligned
+dev_langs:
+- C++
+helpviewer_keywords:
+- __unaligned keyword [C++]
 ms.assetid: 0cd83aad-1840-47e3-ad33-59bfcbe6375b
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# __unaligned
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9f899add9a1306344a10840220f3b7504e917d91
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Wenn Sie einen Zeiger mit dem `__unaligned`\-Modifizierer deklarieren, geht der Compiler davon aus, dass der Zeiger auf Daten verweist, die nicht ausgerichtet sind.  Aus diesem Grund erstellt der Compiler für eine Anwendung, die auf einen Computer der Itanium\-Prozessorfamilie \(IPF\) ausgerichtet ist, Code, der die nicht ausgerichteten Daten ein Byte nach dem anderen liest.  
+---
+# <a name="unaligned"></a>__unaligned
+Wenn Sie einen Zeiger mit dem `__unaligned`-Modifizierer deklarieren, geht der Compiler davon aus, dass der Zeiger auf Daten verweist, die nicht ausgerichtet sind. Aus diesem Grund erstellt der Compiler für eine Anwendung, die auf einen Computer der Itanium-Prozessorfamilie (IPF) ausgerichtet ist, Code, der die nicht ausgerichteten Daten ein Byte nach dem anderen liest.  
   
-## Hinweise  
- Der `__unaligned`\-Modifizierer ist für die [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]\- und [!INCLUDE[vcpritanium](../cpp/includes/vcpritanium_md.md)]\-Compiler gültig, wirkt sich jedoch nur auf Anwendungen aus, die auf einen IPF\-Computer ausgerichtet sind.  Dieser Modifizierer beschreibt nur die Ausrichtung der adressierten Daten. Für den Zeiger selbst wird angenommen, dass er bereits ausgerichtet ist.  
+## <a name="remarks"></a>Hinweise  
+ Die `__unaligned` Modifizierer ist gültig für die [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] und [!INCLUDE[vcpritanium](../cpp/includes/vcpritanium_md.md)] Compiler aber betrifft nur Anwendungen, die auf einen IPF-Computer ausgerichtet. Dieser Modifizierer beschreibt nur die Ausrichtung der adressierten Daten. Für den Zeiger selbst wird angenommen, dass er bereits ausgerichtet ist.  
   
- Der Prozessor [!INCLUDE[vcpritanium](../cpp/includes/vcpritanium_md.md)] generiert einen Ausrichtungsfehler, wenn er auf falsch ausgerichtete Daten zugreift, und die Zeit, um den Fehler zu verarbeiten, mindert die Leistung.  Verwenden Sie den `__unaligned`\-Modifizierer, um den Prozessor zu veranlassen, die Daten ein Byte nach dem anderen zu lesen und so den Fehler zu vermeiden.  Dieser Modifizierer ist für [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]\-Anwendungen nicht erforderlich, da der [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]\-Prozessor falsch ausgerichtete Daten ohne Fehler verarbeiten kann.  
+ Die [!INCLUDE[vcpritanium](../cpp/includes/vcpritanium_md.md)] Prozessor generiert einen Ausrichtungsfehler, wenn er auf falsch ausgerichtete Daten zugreift, und die Zeit für den Fehler zu verarbeiten, mindert die Leistung. Verwenden Sie den `__unaligned`-Modifizierer, um den Prozessor zu veranlassen, die Daten ein Byte nach dem anderen zu lesen und so den Fehler zu vermeiden. Dieser Modifizierer ist nicht erforderlich für [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] Anwendungen da die [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] -Prozessor falsch ausgerichtete Daten ohne Fehler verarbeiten kann.  
   
  Weitere Informationen zur Ausrichtung finden Sie unter:  
   
 -   [align](../cpp/align-cpp.md)  
   
--   [\_\_alignof\-Operator](../cpp/alignof-operator.md)  
+-   [__alignof-Operator](../cpp/alignof-operator.md)  
   
 -   [pack](../preprocessor/pack.md)  
   
--   [\/Zp \(Ausrichten des Strukturmembers\)](../build/reference/zp-struct-member-alignment.md)  
+-   [/ Zp (Strukturmembers)](../build/reference/zp-struct-member-alignment.md)  
   
 -   [Beispiele für die Strukturausrichtung](../build/examples-of-structure-alignment.md)  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // unaligned_keyword.cpp  
@@ -68,5 +85,5 @@ int main() {
 }  
 ```  
   
-## Siehe auch  
- [C\+\+\-Schlüsselwörter](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [Schlüsselwörter](../cpp/keywords-cpp.md)

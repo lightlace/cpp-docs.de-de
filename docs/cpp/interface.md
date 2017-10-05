@@ -1,33 +1,50 @@
 ---
-title: "__interface | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__interface"
-  - "__interface_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__interface-Schlüsselwort [C++]"
+title: __interface | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __interface
+- __interface_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- __interface keyword [C++]
 ms.assetid: ca5d400b-d6d8-4ba2-89af-73f67e5ec056
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# __interface
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: e502574b9d55238d6f9aed33949e06db3ec6349d
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-**Microsoft\-spezifisch**  
+---
+# <a name="interface"></a>__interface
+**Microsoft-spezifisch**  
   
- Eine Visual C\+\+\-Schnittstelle kann wie folgt definiert werden:  
+ Eine Visual C++-Schnittstelle kann wie folgt definiert werden:  
   
 -   Kann von null oder mehreren Basisschnittstellen erben.  
   
@@ -41,7 +58,7 @@ caps.handback.revision: 8
   
 -   Kann keine Datenmember enthalten. Eigenschaften sind zulässig.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -49,10 +66,10 @@ modifier
  __interface interface-name {interface-definition};  
 ```  
   
-## Hinweise  
- Eine C\+\+\-[Klasse](../cpp/class-cpp.md) oder C\+\+\-[Struktur](../cpp/struct-cpp.md) könnte mit diesen Regeln implementiert werden, `__interface` erzwingt diese jedoch.  
+## <a name="remarks"></a>Hinweise  
+ C++ [Klasse](../cpp/class-cpp.md) oder [Struktur](../cpp/struct-cpp.md) mit diesen Regeln implementiert werden kann, aber `__interface` erzwingt diese.  
   
- Im Folgenden ist eine Beispiel\-Schnittstellendefinition angegeben:  
+ Im Folgenden ist eine Beispiel-Schnittstellendefinition angegeben:  
   
 ```  
 __interface IMyInterface {  
@@ -61,17 +78,17 @@ __interface IMyInterface {
 };  
 ```  
   
- Weitere Informationen zu verwalteten Schnittstellen finden Sie unter [Schnittstellenklasse](../windows/interface-class-cpp-component-extensions.md).  
+ Informationen zu verwalteten Schnittstellen finden Sie unter [Schnittstellenklasse](../windows/interface-class-cpp-component-extensions.md).  
   
- Sie müssen nicht explizit angeben, dass die `CommitX`\- und `get_X`\-Funktionen rein virtuell sind.  Eine entsprechende Deklaration für die erste Funktion wäre:  
+ Sie müssen nicht explizit angeben, dass die `CommitX`- und `get_X`-Funktionen rein virtuell sind. Eine entsprechende Deklaration für die erste Funktion wäre:  
   
 ```  
 virtual HRESULT CommitX() = 0;  
 ```  
   
- `__interface` impliziert den [novtable](../cpp/novtable.md) `__declspec`\-Modifizierer.  
+ `__interface`impliziert den [Novtable](../cpp/novtable.md) `__declspec` Modifizierer.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Die folgenden Beispiele zeigen, wie die in einer Schnittstelle deklarierten Eigenschaften verwendet werden.  
   
 ```  
@@ -147,10 +164,13 @@ int main()
 }  
 ```  
   
-  **p\-\>int\_data \= 100**  
-**bstr\_data \= Tests**   
-## END Microsoft\-spezifisch  
+```Output  
+p->int_data = 100  
+bstr_data = Testing  
+```  
   
-## Siehe auch  
- [C\+\+\-Schlüsselwörter](../cpp/keywords-cpp.md)   
- [Interface Attributes](../windows/interface-attributes.md)
+**Ende Microsoft-spezifisch**  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Stichwörter](../cpp/keywords-cpp.md)   
+ [Schnittstellenattribut](../windows/interface-attributes.md)

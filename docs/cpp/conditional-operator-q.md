@@ -1,54 +1,71 @@
 ---
-title: "Bedingter Operator: ? :"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - "?:"
-  - "?"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "? :-Operator"
-  - "Bedingte Operatoren"
+title: 'Bedingter Operator:? : | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- '?:'
+- '?'
+dev_langs:
+- C++
+helpviewer_keywords:
+- conditional operators
+- '? : operator'
 ms.assetid: 88643ee8-7100-4f86-880a-705ec22b6271
 caps.latest.revision: 10
-caps.handback.revision: "10"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Bedingter Operator: ? :
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: f66e1eb9364503988178c70f3628b44fa3d5b93a
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-## Syntax  
+---
+# <a name="conditional-operator--"></a>Bedingter Operator:? :
+## <a name="syntax"></a>Syntax  
   
 ```  
   
 expression ? expression : expression  
 ```  
   
-## Hinweise  
- Der bedingte Operator \(**? :**\) ist ein dreifacher Operator \(er übernimmt drei Operanden\).  Der bedingte Operator funktioniert wie folgt:  
+## <a name="remarks"></a>Hinweise  
+ Der bedingte Operator (**?:**) ist ein dreifacher Operator (er übernimmt drei Operanden). Der bedingte Operator funktioniert wie folgt:  
   
--   Der erste Operand wird implizit in `bool` konvertiert.  Er wird ausgewertet, und alle Nebeneffekte werden vor dem nächsten Schritt abgeschlossen.  
+-   Der erste Operand wird implizit in `bool` konvertiert. Er wird ausgewertet, und alle Nebeneffekte werden vor dem nächsten Schritt abgeschlossen.  
   
--   Wenn der erste Operand als **true** \(1\) ausgewertet wird, wird der zweite Operand ausgewertet.  
+-   Wenn der erste Operand als **"true"** (1), der zweite Operand ausgewertet.  
   
--   Wenn der erste Operand als **false** \(0\) ausgewertet wird, wird der dritte Operand ausgewertet.  
+-   Wenn der erste Operand als **"false"** (0), der dritte Operand ausgewertet wird.  
   
- Das Ergebnis des bedingten Operators ist das Ergebnis des ausgewerteten Operanden – der zweite oder dritte.  Nur einer der letzten zwei Operanden wird in einem bedingten Ausdruck ausgewertet.  
+ Das Ergebnis des bedingten Operators ist das Ergebnis des ausgewerteten Operanden – der zweite oder dritte. Nur einer der letzten zwei Operanden wird in einem bedingten Ausdruck ausgewertet.  
   
- Bedingte Ausdrücke besitzen Assoziativität von rechts nach links.  Der erste Operand muss ein ganzzahliger Typ oder ein Zeigertyp sein.  Die folgenden Regeln gelten für die zweiten und dritten Operanden:  
+ Bedingte Ausdrücke besitzen Assoziativität von rechts nach links. Der erste Operand muss ein ganzzahliger Typ oder ein Zeigertyp sein. Die folgenden Regeln gelten für die zweiten und dritten Operanden:  
   
 -   Wenn beide Operanden vom selben Typ sind, ist das Ergebnis von diesem Typ.  
   
--   Wenn beide Operanden arithmetische oder Enumerationstypen sind, werden die üblichen arithmetischen Konvertierungen \(siehe [Arithmetische Konvertierungen](../misc/arithmetic-conversions.md)\) ausgeführt, um sie in einen gemeinsamen Typ zu konvertieren.  
+-   Wenn beide Operanden arithmetische oder Enumerationstypen Typen, die üblichen arithmetischen Konvertierungen (finden Sie im [Standardkonvertierungen](standard-conversions.md)) werden ausgeführt, um sie in einen gemeinsamen Typ zu konvertieren.  
   
 -   Wenn beide Operanden Zeigertypen sind, oder wenn einer ein Zeigertyp und der andere ein konstanter Ausdruck ist, der 0 ergibt, werden Zeigerkonvertierungen ausgeführt, um sie in einen gemeinsamen Typ zu konvertieren.  
   
@@ -58,14 +75,14 @@ expression ? expression : expression
   
 -   Wenn beide Operanden vom selben benutzerdefinierten Typ sind, ist der gemeinsame Typ dieser Typ.  
   
--   Wenn die Operanden unterschiedliche Typen aufweisen und mindestens einer der Operanden den benutzerdefinierten Typ aufweist, werden die Sprachregeln zum Bestimmen des allgemeinen Typs verwendet.  \(Siehe obige Warnung.\)  
+-   Wenn die Operanden unterschiedliche Typen aufweisen und mindestens einer der Operanden den benutzerdefinierten Typ aufweist, werden die Sprachregeln zum Bestimmen des allgemeinen Typs verwendet. (Siehe obige Warnung.)  
   
- Alle Kombinationen von zweiten und dritten Operanden, die nicht in der vorangehenden Liste enthalten sind, sind ungültig.  Der Ergebnistyp ist der gemeinsame Typ, und es ist ein l\-Wert, wenn die zweiten und dritten Operanden vom selben Typ und beide l\-Werte sind.  
+ Alle Kombinationen von zweiten und dritten Operanden, die nicht in der vorangehenden Liste enthalten sind, sind ungültig. Der Ergebnistyp ist der gemeinsame Typ, und es ist ein l-Wert, wenn die zweiten und dritten Operanden vom selben Typ und beide l-Werte sind.  
   
 > [!WARNING]
->  Wenn die Typen der zweiten und dritten Operanden nicht identisch sind, werden komplexe Typkonvertierungsregeln gemäß C\+\+\-Standard aufgerufen.  Diese Konvertierungen können zu unerwartetem Verhalten führen, einschließlich der Erstellung und Zerstörung von temporären Objekten.  Aus diesem Grund empfehlen wir dringend, dass Sie entweder \(1\) keine benutzerdefinierten Typen als Operanden mit dem bedingten Operator verwenden oder \(2\) explizit jeden Operanden in einen gemeinsamen Typ umwandeln, wenn Sie benutzerdefinierte Typen verwenden.  
+>  Wenn die Typen der zweiten und dritten Operanden nicht identisch sind, werden komplexe Typkonvertierungsregeln gemäß C++-Standard aufgerufen. Diese Konvertierungen können zu unerwartetem Verhalten führen, einschließlich der Erstellung und Zerstörung von temporären Objekten. Aus diesem Grund empfehlen wir dringend, dass Sie entweder (1) keine benutzerdefinierten Typen als Operanden mit dem bedingten Operator verwenden oder (2) explizit jeden Operanden in einen gemeinsamen Typ umwandeln, wenn Sie benutzerdefinierte Typen verwenden.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // expre_Expressions_with_the_Conditional_Operator.cpp  
@@ -79,7 +96,6 @@ int main() {
 }  
 ```  
   
-## Siehe auch  
- [C\+\+\-Operatoren](../misc/cpp-operators.md)   
- [C\+\+\-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Integrierte C++-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Bedingter Ausdrucksoperator](../c-language/conditional-expression-operator.md)

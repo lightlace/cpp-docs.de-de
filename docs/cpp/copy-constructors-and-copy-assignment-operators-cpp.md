@@ -1,39 +1,56 @@
 ---
-title: "Kopierkonstruktoren und Kopierzuweisungsoperatoren (C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "=-Operator, Kopieren von Objekten"
-  - "Zuweisen von Werten zum Kopieren von Objekten"
-  - "Zuweisungsoperatoren, Zum Kopieren von Objekten"
-  - "Zuweisungsanweisungen, Kopieren von Objekten"
-  - "Kopieren von Objekten"
-  - "Initialisieren von Objekten, Durch Kopieren von Objekten"
-  - "Objekte [C++], Kopieren"
+title: Kopierkonstruktoren und Kopierzuweisungsoperatoren (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- = operator, copying objects
+- assignment statements, copying objects
+- assignment operators, for copying objects
+- objects [C++], copying
+- initializing objects, by copying objects
+- copying objects
+- assigning values to copy objects
 ms.assetid: a94fe1f9-0289-4fb9-8633-77c654002c0d
 caps.latest.revision: 12
-caps.handback.revision: "12"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Kopierkonstruktoren und Kopierzuweisungsoperatoren (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: cf4bda1b14450a5be3ffa9a95661db7d1ad360d2
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="copy-constructors-and-copy-assignment-operators-c"></a>Kopierkonstruktoren und Kopierzuweisungsoperatoren (C++)
 > [!NOTE]
->  Ab C \+\+ 11 werden zwei Arten von Aufgaben unterstützt: *Kopierzuweisung* und *Bewegungszuweisung*.  In diesem Artikel bedeutet "Zuweisung" immer "Kopierzuweisung", sofern nicht explizit anders angegeben.  Informationen zu Bewegungszuweisungen finden Sie unter [Bewegungskonstruktoren und Bewegungszuweisungsoperatoren \(C\+\+\)](assetId:///1442de5f-37a5-42a1-83a6-ec9cfe0414db).  
+>  Ab C ++ 11 werden zwei Arten von Aufgaben in der Sprache unterstützt: *kopieren Zuweisung* und *verschiebezuweisung*. In diesem Artikel bedeutet "Zuweisung" immer "Kopierzuweisung", sofern nicht explizit anders angegeben. Informationen zu bewegungszuweisungen finden Sie unter [Bewegungskonstruktoren und Bewegungszuweisungsoperatoren (C++)](http://msdn.microsoft.com/en-us/1442de5f-37a5-42a1-83a6-ec9cfe0414db).  
 >   
 >  Objekte können sowohl mit dem Zuordnungsvorgang als auch dem Initialisierungsvorgang kopiert werden.  
   
--   **Zuordnung**: Wenn der Wert eines Objekts einem anderen Objekt zugewiesen wird, wird das erste Objekt in das zweite Objekt kopiert.  Daher eignet sich  
+-   **Zuweisung**: Wenn der Wert eines Objekts in ein anderes Objekt zugewiesen wird, wird das erste Objekt dem zweiten Objekt kopiert. Daher eignet sich  
   
     ```cpp  
     Point a, b;  
@@ -43,9 +60,9 @@ manager: "ghogen"
   
      dazu, den Wert von `b` nach `a` zu kopieren.  
   
--   **Initialisierung**: Die Initialisierung erfolgt zum Zeitpunkt der Deklaration eines neuen Objekts, wenn Argumente an Funktionen nach Wert übergeben werden und wenn Werte von Funktionen nach Wert zurückgegeben werden.  
+-   **Initialisierung**: Initialisierung erfolgt, wenn ein neues Objekt deklariert wird, wenn Argumente an Funktionen nach Wert übergeben werden, oder wenn Werte von Funktionen nach Wert zurückgegeben werden.  
   
- Sie können die Semantik von "kopieren" für Objekte des Klassentyps definieren.  Betrachten Sie beispielsweise folgenden Code:  
+ Sie können die Semantik von "kopieren" für Objekte des Klassentyps definieren. Betrachten Sie beispielsweise folgenden Code:  
   
 ```cpp  
 TextFile a, b;  
@@ -56,15 +73,13 @@ b = a;
   
  Der vorhergehende Code kann "Den Inhalt von FILE1.DAT auf FILE2.DAT kopieren" oder "FILE2.DAT ignorieren und `b` als zweiten Ziehpunkt für FILE1.DAT erstellen" bedeuten. Jeder Klasse muss wie folgt eine entsprechende Kopiersemantik beigefügt werden.  
   
--   Durch Verwendung des Zuweisungsoperators `operator=` mit einem Verweis auf den Klassentyp als Rückgabetyp und den Parameter, der vom `const`\-Verweis übergeben wird, beispielsweise `ClassName& operator=(const ClassName& x);`.  
+-   Durch Verwendung des Zuweisungsoperators `operator=` mit einem Verweis auf den Klassentyp als Rückgabetyp und den Parameter, der vom `const`-Verweis übergeben wird, beispielsweise `ClassName& operator=(const ClassName& x);`.  
   
--   Durch Verwendung des Kopierkonstruktors.  Weitere Informationen über den Kopierkonstruktor finden Sie unter [Regeln zum Deklarieren von Konstruktoren](../misc/rules-for-declaring-constructors.md).  
+-   Durch Verwendung des Kopierkonstruktors.   
   
- Wenn Sie keinen Kopierkonstruktor deklarieren, generiert der Compiler einen memberweisen Kopierkonstruktor für Sie.  Wenn Sie keinen Kopierkonstruktoroperator deklarieren, generiert der Compiler einen memberweisen Kopierkonstruktoroperator für Sie. Das Deklarieren eines Kopierkonstruktors unterdrückt nicht den vom Compiler generierten Kopierzuweisungsoperator \(und umgekehrt\).  Wenn Sie einen implementieren, sollten Sie auch den anderen implementieren, damit die Codebedeutung eindeutig ist.  
-  
- Die memberweise Zuweisung wird ausführlich in [\(NOTINBUILD\) Memberwise Assignment and Initialization](assetId:///94048213-8b49-4416-8069-b1b7a6f271f9) besprochen.  
-  
- Der Kopierkonstruktor nutzt ein Argument des Typs *class\-name***&**, wobei *class\-name* für den Namen der Klasse steht, für die der Konstruktor definiert ist.  Zum Beispiel:  
+ Wenn Sie keinen Kopierkonstruktor deklarieren, generiert der Compiler einen memberweisen Kopierkonstruktor für Sie.  Wenn Sie keinen Kopierkonstruktoroperator deklarieren, generiert der Compiler einen memberweisen Kopierkonstruktoroperator für Sie. Das Deklarieren eines Kopierkonstruktors unterdrückt nicht den vom Compiler generierten Kopierzuweisungsoperator (und umgekehrt). Wenn Sie einen implementieren, sollten Sie auch den anderen implementieren, damit die Codebedeutung eindeutig ist.  
+   
+ Der Kopierkonstruktor nutzt ein Argument des Typs *Klassenname***&**, wobei *Klassenname* ist der Name der Klasse für die der Konstruktor definiert ist. Zum Beispiel:  
   
 ```cpp  
 // spec1_copying_class_objects.cpp  
@@ -81,21 +96,20 @@ int main()
 ```  
   
 > [!NOTE]
->  Nutzen Sie soweit möglich für den Kopierkonstruktor den Argumenttyp *const class\-name***&**.  Dadurch wird verhindert, dass der Kopierkonstruktor fälschlicherweise das Objekt ändert, aus dem er kopiert.  Zudem wird auch das Kopieren von **const**\-Objekten ermöglicht.  
+>  Stellen Sie den Kopierkonstruktor den Argumenttyp *const Klassenname* ** & ** wann immer möglich. Dadurch wird verhindert, dass der Kopierkonstruktor fälschlicherweise das Objekt ändert, aus dem er kopiert. Ermöglicht auch über Kopiervorgang **const** Objekte.  
   
-## Vom Compiler generierte Kopierkonstruktoren  
- Vom Compiler generierte Kopierkonstruktoren, wie benutzerdefinierte Kopierkonstruktoren, verfügen über ein einzelnes Argument vom Typ "Verweis auf *class\-name*". Eine Ausnahme liegt vor, wenn alle Basisklassen und Memberklassen Kopierkonstruktoren so deklariert haben, dass sie ein einzelnes Argument vom Typ **const** *class\-name***&** akzeptieren.  In einem solchen Fall ist das vom Compiler generierte Argument eines Kopierkonstruktors auch **const**.  
+## <a name="compiler-generated-copy-constructors"></a>Vom Compiler generierte Kopierkonstruktoren  
+ Vom Compiler generierte Kopierkonstruktoren, wie benutzerdefinierte Kopierkonstruktoren, verfügen über ein einzelnes Argument vom Typ "Verweis auf *Klassenname*." Eine Ausnahme ist, wenn alle Basisklassen und Memberklassen Kopierkonstruktoren so deklariert, dass Sie ein einzelnes Argument vom Typ erwartet haben **const** *Klassenname***&**. In einem solchen Fall ist die vom Compiler generierte Argument eines Kopierkonstruktors auch **const**.  
   
- Wenn der Argumenttyp für den Kopierkonstruktor nicht **const** ist, erzeugt die Initialisierung durch Kopieren eines **const**\-Objekts einen Fehler.  Das Gegenteil trifft nicht zu: Wenn das Argument **const** ist, können Sie eine Initialisierung vornehmen, indem Sie ein Objekt kopieren, das nicht **const** ist.  
+ Wenn der Argumenttyp für den Kopierkonstruktor ist nicht **const**, Initialisierung durch Kopieren einer **const** Objekt wird ein Fehler generiert. Das Gegenteil trifft nicht: Wenn das Argument ist **const**, können Sie ein Objekt kopieren, nicht initialisieren **const**.  
   
- Vom Compiler generierte Zuweisungsoperatoren folgen bezüglich **const** demselben Muster. Sie akzeptieren ein einzelnes Argument vom Typ *class\-name***&**, es sei denn, die Zuweisungsoperatoren in allen Basis\- und Memberklassen akzeptieren Argumente vom Typ **const** *class\-name&*. In diesem Fall akzeptiert der generierte Zuweisungsoperator der Klasse ein **const**\-Argument.  
+ Vom Compiler generierte Zuweisungsoperatoren folgen dem gleichen Muster bezüglich **const.** Nehmen sie ein einzelnes Argument vom Typ *Klassenname* ** & ** es sei denn, die Zuweisungsoperatoren in allen Basis- und Memberklassen Argumente vom Typ akzeptieren **const** *Klassenname &.* In diesem Fall die Klasse des akzeptiert generierte Zuweisungsoperator ein **const** Argument.  
   
 > [!NOTE]
 >  Wenn virtuelle Basisklassen von Kopierkonstruktoren – vom Compiler generiert oder benutzerdefiniert – initialisiert werden, werden sie nur einmal initialisiert: bei der Erstellung.  
   
- Die Auswirkungen ähneln denen beim Kopierkonstruktor.  Wenn der Argumenttyp nicht **const** ist, erzeugt die Zuweisung von einem **const**\-Objekt einen Fehler.  Das Gegenteil trifft nicht zu: Wenn ein **const**\-Wert einem Wert zugewiesen ist, der nicht **const** ist, ist die Zuweisung erfolgreich.  
+ Die Auswirkungen ähneln denen beim Kopierkonstruktor. Wenn der Argumenttyp ist nicht **const**, Zuweisung von einem **const** Objekt wird ein Fehler generiert. Das Gegenteil trifft nicht: Wenn ein **const** Wert zugewiesen wird, auf einen Wert, der nicht **const**, die Zuweisung erfolgreich.  
   
  Weitere Informationen zu überladenen Zuweisungsoperatoren finden Sie unter [Zuweisung](../cpp/assignment.md).  
   
-## Siehe auch  
- [Spezielle Memberfunktionen](../misc/special-member-functions-cpp.md)
+

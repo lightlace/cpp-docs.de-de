@@ -1,35 +1,52 @@
 ---
-title: "_bstr_t::GetBSTR | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "GetBSTR"
-  - "_bstr_t::GetBSTR"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetBSTR-Methode"
+title: _bstr_t::GetBSTR | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- GetBSTR
+- _bstr_t::GetBSTR
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetBSTR method
 ms.assetid: 0c62ff16-4433-4183-a03c-d5a0a9b731ef
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _bstr_t::GetBSTR
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 376951862a82d6588221b592238c9346d31bad4d
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-**Microsoft\-spezifisch**  
+---
+# <a name="bstrtgetbstr"></a>_bstr_t::GetBSTR
+**Microsoft-spezifisch**  
   
  Zeigt auf den Anfang des `BSTR`, das vom `_bstr_t` umschlossen ist.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -37,16 +54,16 @@ BSTR& GetBSTR( );
   
 ```  
   
-## Rückgabewert  
+## <a name="return-value"></a>Rückgabewert  
  Der Anfang des `BSTR`, der vom `_bstr_t` umschlossen ist.  
   
-## Hinweise  
- `GetBSTR` wirkt sich auf alle `_bstr_t`\-Objekte aus, die ein `BSTR` freigeben.  Mehr als eine `_bstr_t` kann eine `BSTR` durch die Verwendung des Kopierkonstruktors und des `operator=` freigeben.  
+## <a name="remarks"></a>Hinweise  
+ `GetBSTR` wirkt sich auf alle `_bstr_t`-Objekte aus, die ein `BSTR` freigeben. Mehr als eine `_bstr_t` kann eine `BSTR` durch die Verwendung des Kopierkonstruktors und des `operator=` freigeben.  
   
-## Beispiel  
- Unter [\_bstr\_t::Assign](../cpp/bstr-t-assign.md) finden Sie ein Beispiel für die Verwendung von `GetBSTR`.  
+## <a name="example"></a>Beispiel  
+ Finden Sie unter [_bstr_t:: Assign](../cpp/bstr-t-assign.md) ein Beispiel mit `GetBSTR`.  
   
- **END Microsoft\-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
- [\_bstr\_t\-Klasse](../cpp/bstr-t-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [_bstr_t-Klasse](../cpp/bstr-t-class.md)

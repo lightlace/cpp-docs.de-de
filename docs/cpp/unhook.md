@@ -1,34 +1,51 @@
 ---
-title: "__unhook | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__unhook"
-  - "__unhook_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__unhook-Schlüsselwort [C++]"
-  - "Ereignishandler, Aufhebung der Zuordnung von Ereignissen"
+title: __unhook | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __unhook
+- __unhook_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- event handlers, dissociating events
+- __unhook keyword [C++]
 ms.assetid: 953a14f3-5199-459d-81e5-fcf015a19878
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# __unhook
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 2b1909cf5d7bde440d434bb44ff2276e68679e78
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="unhook"></a>__unhook
 Trennt eine Handlermethode von einem Ereignis.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -47,70 +64,70 @@ long  __unhook(
 );  
 ```  
   
-#### Parameter  
- **&** *SourceClass* `::` *EventMethod*  
+#### <a name="parameters"></a>Parameter  
+ **&***SourceClass* `::` *EventMethod*  
  Ein Zeiger auf die Ereignismethode, von der Sie die Ereignishandlermethode lösen:  
   
--   Systemeigene C\+\+\-Ereignisse: *SourceClass* ist die Ereignisquellenklasse, und *EventMethod* ist das Ereignis.  
+-   Systemeigene C++-Ereignisse: *SourceClass* ist die Ereignisquellenklasse und *EventMethod* ist das Ereignis.  
   
--   COM\-Ereignisse: *SourceClass* ist die Quellschnittstelle des Ereignisses, und *EventMethod* ist eine ihrer Methoden.  
+-   COM-Ereignisse: *SourceClass* ist die Quellschnittstelle des Ereignisses und *EventMethod* ist einer der Methoden.  
   
--   Verwaltete Ereignisse: *SourceClass* ist die Ereignisquellenklasse, und *EventMethod* ist das Ereignis.  
+-   Verwaltete Ereignisse: *SourceClass* ist die Ereignisquellenklasse und *EventMethod* ist das Ereignis.  
   
  `interface`  
- Der Name der Schnittstelle, der von `receiver` gelöst wird. Gilt nur bei COM\-Ereignisempfängern, bei welchen der *layout\_dependent*\-Parameter des [event\_receiver](../windows/event-receiver.md)\-Attributs **true** ist.  
+ Der Schnittstellenname aus entfernt wird `receiver`, nur für COM-Ereignisempfänger, in dem die *Layout_dependent* Parameter von der [Event_receiver](../windows/event-receiver.md) -Attribut ist **"true"**.  
   
- *source*  
- Ein Zeiger auf eine Instanz der Ereignisquelle.  Abhängig vom Code `type`, der in **event\_receiver** angegeben wird, kann *source* einer der folgenden Werte sein:  
+ *Datenquelle*  
+ Ein Zeiger auf eine Instanz der Ereignisquelle. Abhängig vom Code `type` im angegebenen **Event_receiver**, *Quelle* kann eines der folgenden sein:  
   
--   Ein systemeigener Ereignisquellen\-Objektzeiger.  
+-   Ein systemeigener Ereignisquellen-Objektzeiger.  
   
--   Ein **IUnknown**\-basierter Zeiger \(COM\-Quelle\).  
+-   Ein **IUnknown**-basierte Zeiger (COM-Quelle).  
   
--   Ein Zeiger des verwalteten Objekts \(für verwaltete Ereignisse\).  
+-   Ein Zeiger des verwalteten Objekts (für verwaltete Ereignisse).  
   
- **&** *ReceiverClass* `::` `HandlerMethod`  
- Ein Zeiger auf die Ereignishandlermethode, die von einem Ereignis gelöst werden soll.  Der Handler wird als eine Methode einer Klasse oder als Verweis auf selbige angegeben; wenn Sie den Klassennamen nicht angeben, geht `__unhook` davon aus, dass die Klasse diejenige ist, in welcher er aufgerufen wird.  
+ **&***ReceiverClass* `::``HandlerMethod`  
+ Ein Zeiger auf die Ereignishandlermethode, die von einem Ereignis gelöst werden soll. Der Handler wird als eine Methode einer Klasse oder als Verweis auf selbige angegeben; wenn Sie den Klassennamen nicht angeben, geht `__unhook` davon aus, dass die Klasse diejenige ist, in welcher er aufgerufen wird.  
   
--   Systemeigene C\+\+\-Ereignisse: *ReceiverClass* ist die Ereignisempfängerklasse, und `HandlerMethod` ist der Handler.  
+-   Systemeigene C++-Ereignisse: *ReceiverClass* ist die Ereignisempfängerklasse und `HandlerMethod` ist der Handler.  
   
--   COM\-Ereignisse: *ReceiverClass* ist die Ereignisempfängerschnittstelle, und `HandlerMethod` ist einer der Handler.  
+-   COM-Ereignisse: *ReceiverClass* ist die ereignisempfängerschnittstelle und `HandlerMethod` ist einer der Handler.  
   
--   Verwaltete Ereignisse: *ReceiverClass* ist die Ereignisempfängerklasse, und `HandlerMethod` ist der Handler.  
+-   Verwaltete Ereignisse: *ReceiverClass* ist die Ereignisempfängerklasse und `HandlerMethod` ist der Handler.  
   
- `receiver`\(optional\)  
- Ein Zeiger auf eine Instanz der Ereignisempfängerklasse.  Wenn Sie keinen Empfänger angeben, wird standardmäßig die Empfängerklasse oder Struktur verwendet, in der `__unhook` aufgerufen wird.  
+ `receiver`(optional)  
+ Ein Zeiger auf eine Instanz der Ereignisempfängerklasse. Wenn Sie keinen Empfänger angeben, wird standardmäßig die Empfängerklasse oder Struktur verwendet, in der `__unhook` aufgerufen wird.  
   
-## Verwendung  
+## <a name="usage"></a>Verwendung  
  Kann in jedem Gültigkeitsbereich der Funktion verwendet werden, einschließlich Main, außerhalb der Ereignisempfängerklasse.  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Verwenden Sie die systeminterne Funktion `__unhook` in einem Ereignisempfänger, um eine Handlermethode von einer Ereignismethode zu lösen bzw. die Zuordnung aufzuheben.  
   
- Es gibt drei Formen von `__unhook`.  Sie können in den meisten Fällen das erste \(four\-argument\) Formular verwenden.  Sie können das zweite \(two\-argument\) Formular von `__unhook` nur für einen COM\-Ereignisempfänger verwenden. Dadurch wird die gesamte Ereignisschnittstelle gelöst.  Sie können das dritte \(one\-argument\) Formular verwenden, um bei allen Delegaten aus der angegebenen Quelle die Bindung zu lösen.  
+ Es gibt drei Formen von `__unhook`. Sie können in den meisten Fällen das erste (four-argument) Formular verwenden. Sie können das zweite (two-argument) Formular von `__unhook` nur für einen COM-Ereignisempfänger verwenden. Dadurch wird die gesamte Ereignisschnittstelle gelöst. Sie können das dritte (one-argument) Formular verwenden, um bei allen Delegaten aus der angegebenen Quelle die Bindung zu lösen.  
   
- Ein Wert ungleich null gibt an, dass ein Fehler aufgetreten ist \(verwaltete Ereignisse lösen eine Ausnahme aus\).  
+ Ein Wert ungleich null gibt an, dass ein Fehler aufgetreten ist (verwaltete Ereignisse lösen eine Ausnahme aus).  
   
  Wenn Sie `__unhook` für ein Ereignis und einen Ereignishandler aufrufen, die nicht bereits verknüpft sind, hat dies keine Auswirkungen.  
   
  Zur Kompilierzeit überprüft der Compiler, dass das Ereignis vorhanden ist und führt eine Parametertypüberprüfung mit dem angegebenen Handler aus.  
   
- Mit Ausnahme von COM\-Ereignissen können `__hook` und `__unhook` außerhalb des Ereignisempfängers aufgerufen werden.  
+ Mit Ausnahme von COM-Ereignissen können `__hook` und `__unhook` außerhalb des Ereignisempfängers aufgerufen werden.  
   
- Eine Alternative zur Verwendung von `__unhook` ist die Verwendung des Operators "\-\=".  
+ Eine Alternative zur Verwendung von `__unhook` ist die Verwendung des Operators "-=".  
   
- Weitere Informationen über die Codierung von verwalteten Ereignissen in der neuen Syntax finden Sie unter [event](../windows/event-cpp-component-extensions.md).  
+ Informationen zu codieren verwaltete Ereignisse in der neuen Syntax finden Sie unter [Ereignis](../windows/event-cpp-component-extensions.md).  
   
 > [!NOTE]
 >  Eine von einer Vorlage gebildete Klasse oder Struktur kann keine Ereignisse enthalten.  
   
-## Beispiel  
- Beispiele finden Sie unter [Ereignisbehandlung in systemeigenem C\+\+](../cpp/event-handling-in-native-cpp.md) und [Ereignisbehandlung in COM](../cpp/event-handling-in-com.md).  
+## <a name="example"></a>Beispiel  
+ Finden Sie unter [Ereignisbehandlung in systemeigenem C++](../cpp/event-handling-in-native-cpp.md) und [Ereignisbehandlung in COM](../cpp/event-handling-in-com.md) Beispiele.  
   
-## Siehe auch  
- [C\+\+\-Schlüsselwörter](../cpp/keywords-cpp.md)   
- [event\_source](../windows/event-source.md)   
- [event\_receiver](../windows/event-receiver.md)   
- [\_\_event](../cpp/event.md)   
- [\_\_hook](../cpp/hook.md)   
- [\_\_raise](../cpp/raise.md)
+## <a name="see-also"></a>Siehe auch  
+ [Stichwörter](../cpp/keywords-cpp.md)   
+ [event_source](../windows/event-source.md)   
+ [event_receiver](../windows/event-receiver.md)   
+ [__event](../cpp/event.md)   
+ [__hook](../cpp/hook.md)   
+ [__raise](../cpp/raise.md)

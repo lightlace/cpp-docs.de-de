@@ -1,47 +1,75 @@
 ---
-title: "using-Deklaration | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "using-Deklaration"
-  - "Deklarieren von Namespaces, nicht qualifizierte Namen in Namespaces"
-  - "Deklarationen [C++], using-Deklaration"
-  - "Namespaces [C++], nicht qualifizierte Namen in"
-  - "using-Schlüsselwort [C++]"
-  - "Deklarationen [C++], Namespaces"
+title: using-Deklaration | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- using declaration
+- declaring namespaces, unqualified names in namespaces
+- declarations [C++], using-declaration
+- namespaces [C++], unqualified names in
+- using keyword [C++]
+- declarations [C++], namespaces
 ms.assetid: 4184e2b1-3adc-408e-b5f3-0b3f8b554723
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# using-Deklaration
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c55abac758c636bce596b0613e0ad5671fc9c430
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Die `using`\-Deklaration erstellt einen Namen im deklarativen Bereich, in dem die `using`\-Deklaration angezeigt wird.  
+---
+# <a name="using-declaration"></a>using-Deklaration
+Die using-Deklaration führt einen Namen im deklarativen Bereich, in denen die using-Deklaration wird angezeigt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      using [typename][::] nested-name-specifier unqualified-id  
-using :: unqualified-id  
+using [typename] nested-name-specifier unqualified-id ;  
+using declarator-list ;  
 ```  
   
-## Hinweise  
- Der Name wird zum Synonym für eine Entität, die an anderer Stelle deklariert wurde.  Sie können einen *individuellen* Namen von einem bestimmten Namespace ohne [explizite Qualifizierung](../misc/explicit-qualification.md) verwenden.  Dies steht im Gegensatz zur `using`\-Direktive, mit der *alle* Namen in einem Namespace ohne Qualifikation verwendet werden können.  Weitere Information finden Sie im Artikel zu [using\-Direktive](../misc/using-directive-cpp.md).  Dieses Schlüsselwort wird auch für [Typaliase](../cpp/aliases-and-typedefs-cpp.md) verwendet.  
+### <a name="parameters"></a>Parameter
   
-## Beispiel  
- Eine using\-Deklaration kann in einer Klassendefinition verwendet werden.  
+*geschachtelten namenspezifizierer*  
+    Eine Sequenz von Namespace, Klasse, oder Enumeration Namen und bereichsauflösungsoperatoren (:), die durch ein Bereichsauflösungsoperator beendet. Ein einzelnes Bereichsauflösungsoperator kann verwendet werden, um einen Namen aus dem globalen Namespace einzuführen. Das Schlüsselwort `typename` ist optional und kann verwendet werden, um abhängige Namen, wenn von einer Basisklasse in einer Klassenvorlage eingeleitet zu beheben.  
+  
+*nicht qualifizierte id*  
+    Ein nicht qualifizierte Id-Ausdruck, der einen Bezeichner, Name eines überladenen Operators, ein benutzerdefiniertes literal Operator oder Konvertierung Funktionsname, einen Destruktor Klassennamen oder eine Liste der Namen und die Argumentliste sein kann.  
+  
+*Deklaratorliste*  
+    Eine durch Trennzeichen getrennte Liste von [`typename`] *geschachtelten namenspezifizierer* *nicht qualifizierte Id* Deklaratoren, optional gefolgt von einem Auslassungszeichen.
+    
+## <a name="remarks"></a>Hinweise  
+Eine using-Deklaration einen nicht qualifizierten Namen führt, als ein Synonym für eine Entität an anderer Stelle deklariert. Sie können einen einzelnen Namen aus einem bestimmten Namespace ohne explizite Qualifizierung in der Deklaration Region verwendet werden, in dem er angezeigt wird. Dies steht im Gegensatz zur der [using-Direktive](../cpp/namespaces-cpp.md#using_directives), womit *alle* die Namen in einem Namespace ohne Qualifikation verwendet werden. Die `using` Schlüsselwort dient außerdem zum [Geben Sie Aliase](../cpp/aliases-and-typedefs-cpp.md).  
+  
+## <a name="example"></a>Beispiel  
+ Eine using-Deklaration kann in einer Klassendefinition verwendet werden.  
   
 ```cpp  
 // using_declaration1.cpp  
@@ -59,16 +87,16 @@ public:
   
 class D : B {  
 public:  
-   using B::f;  
-   using B::g;  
+   using B::f;    // B::f(char) is now visible as D::f(char)  
+   using B::g;    // B::g(char) is now visible as D::g(char)  
    void f(int) {  
       printf_s("In D::f()\n");  
-      f('c');  
+      f('c');     // Invokes B::f(char) instead of recursing  
    }  
   
    void g(int) {  
       printf_s("In D::g()\n");  
-      g('c');  
+      g('c');     // Invokes B::g(char) instead of recursing  
    }  
 };  
   
@@ -79,11 +107,14 @@ int main() {
 }  
 ```  
   
-  **In D::f\(\)**  
-**In B::f\(\)**  
-**In B::g\(\)**   
-## Beispiel  
- Bei Verwendung zum Deklarieren eines Members muss eine using\-Deklaration auf den Member einer Basisklasse verweisen.  
+```Output  
+In D::f()  
+In B::f()  
+In B::g()  
+```  
+  
+## <a name="example"></a>Beispiel  
+Bei Verwendung zum Deklarieren eines Members muss eine using-Deklaration auf den Member einer Basisklasse verweisen.  
   
 ```cpp  
 // using_declaration2.cpp  
@@ -117,9 +148,12 @@ int main() {
 }  
 ```  
   
-  **In B::f\(\)**   
-## Beispiel  
- Member, die mit einer using\-Deklaration deklariert werden, können mithilfe der expliziten Qualifikation referenziert werden.  Das Präfix `::` verweist auf den globalen Namespace.  
+```Output  
+In B::f()  
+```  
+  
+## <a name="example"></a>Beispiel  
+Member deklariert hat, mithilfe einer Deklaration, explizite Qualifizierung mit verwiesen werden kann. Das Präfix `::` verweist auf den globalen Namespace.  
   
 ```cpp  
 // using_declaration3.cpp  
@@ -136,8 +170,8 @@ namespace A {
 }  
   
 namespace X {  
-   using ::f;   // global f  
-   using A::g;   // A's g  
+   using ::f;   // global f is also visible as X::f  
+   using A::g;   // A's g is now visible as X::g 
 }  
   
 void h() {  
@@ -151,13 +185,16 @@ int main() {
 }  
 ```  
   
-  **In h**  
-**In f**  
-**In A::g**   
-## Beispiel  
- Wenn eine using\-Deklaration erfolgt, verweist das von der Deklaration erstellte Synonym nur auf Definitionen, die zum Zeitpunkt der using\-Deklaration gültig waren.  Definitionen, die nach der using\-Deklaration einem Namespace hinzugefügt werden, sind ungültige Synonyme.  
+```Output  
+In h  
+In f  
+In A::g  
+```  
   
- Ein Name, der durch eine using\-Deklaration definiert wird, ist ein Alias für den ursprünglichen Namen.  Er wirkt sich nicht auf den Typ, die Verknüpfung oder andere Attribute der ursprünglichen Deklaration aus.  
+## <a name="example"></a>Beispiel  
+Wenn eine using-Deklaration erfolgt, verweist das von der Deklaration erstellte Synonym nur auf Definitionen, die zum Zeitpunkt der using-Deklaration gültig waren. Definitionen, die nach der using-Deklaration einem Namespace hinzugefügt werden, sind ungültige Synonyme.  
+  
+Ein Name, der definiert, indem Sie eine `using` Deklaration ist ein Alias für den ursprünglichen Namen. Er wirkt sich nicht auf den Typ, die Verknüpfung oder andere Attribute der ursprünglichen Deklaration aus.  
   
 ```cpp  
 // post_declaration_namespace_additions.cpp  
@@ -182,8 +219,8 @@ void b() {
 }  
 ```  
   
-## Beispiel  
- In Bezug auf Funktionen in Namespaces gilt Folgendes: Wenn eine Reihe von lokalen Deklarationen und using\-Deklarationen in einem deklarativen Gültigkeitsbereich für einen einzelnen Namen angegeben werden, müssen alle auf dieselbe Entität verweisen, oder sie müssen alle auf Funktionen verweisen.  
+## <a name="example"></a>Beispiel  
+In Bezug auf Funktionen in Namespaces gilt Folgendes: Wenn eine Reihe von lokalen Deklarationen und using-Deklarationen in einem deklarativen Gültigkeitsbereich für einen einzelnen Namen angegeben werden, müssen alle auf dieselbe Entität verweisen, oder sie müssen alle auf Funktionen verweisen.  
   
 ```cpp  
 // functions_in_namespaces1.cpp  
@@ -202,10 +239,10 @@ void g() {
 }  
 ```  
   
- Im Beispiel oben veranlasst die `using B::i`\-Anweisung, dass eine zweite `int i` in der `g()`\-Funktion deklariert wird.  Die `using B::f`\-Anweisung steht nicht mit der `f(char)`\-Funktion in Konflikt, da die Funktionsnamen, die von `B::f` eingeführt werden, über verschiedene Parametertypen verfügen.  
+ Im Beispiel oben veranlasst die `using B::i`-Anweisung, dass eine zweite `int i` in der `g()`-Funktion deklariert wird. Die `using B::f`-Anweisung steht nicht mit der `f(char)`-Funktion in Konflikt, da die Funktionsnamen, die von `B::f` eingeführt werden, über verschiedene Parametertypen verfügen.  
   
-## Beispiel  
- Eine lokale Funktionsdeklaration kann nicht den gleichen Namen und Typ wie eine Funktion haben, die von einer using\-Deklaration eingeführt wird.  Beispiel:  
+## <a name="example"></a>Beispiel  
+ Eine lokale Funktionsdeklaration kann nicht den gleichen Namen und Typ wie eine Funktion haben, die von einer using-Deklaration eingeführt wird. Zum Beispiel:  
   
 ```cpp  
 // functions_in_namespaces2.cpp  
@@ -230,8 +267,8 @@ void h() {
 }  
 ```  
   
-## Beispiel  
- In Bezug auf Vererbung gilt Folgendes: Wenn eine using\-Deklaration einen Namen aus einer Basisklasse in den Gültigkeitsbereich einer abgeleiteten Klasse einführt, überschreiben Memberfunktionen in der abgeleiteten Klasse virtuelle Memberfunktionen in der Basisklasse, die denselben Namen und dieselben Argumenttypen aufweisen.  
+## <a name="example"></a>Beispiel  
+ In Bezug auf Vererbung gilt Folgendes: Wenn eine using-Deklaration einen Namen aus einer Basisklasse in den Gültigkeitsbereich einer abgeleiteten Klasse einführt, überschreiben Memberfunktionen in der abgeleiteten Klasse virtuelle Memberfunktionen in der Basisklasse, die denselben Namen und dieselben Argumenttypen aufweisen.  
   
 ```cpp  
 // using_declaration_inheritance1.cpp  
@@ -268,9 +305,9 @@ struct D : B {
 };  
   
 void f(D* pd) {  
-   pd->f(1);   // calls D::f(int)  
+   pd->f(1);     // calls D::f(int)  
    pd->f('a');   // calls B::f(char)  
-   pd->g(1);   // calls B::g(int)  
+   pd->g(1);     // calls B::g(int)  
    pd->g('a');   // calls D::g(char)  
 }  
   
@@ -280,14 +317,17 @@ int main() {
 }  
 ```  
   
-  **In D::f\(int\)**  
-**In B::f\(char\)**  
-**In B::g**  
-**In D::g\(char\)**   
-## Beispiel  
- Alle in einer using\-Deklaration erwähnten Instanzen eines Namens müssen verfügbar sein.  Insbesondere muss der Membername zugänglich sein, wenn eine abgeleitete Klasse eine using\-Deklaration verwendet, um auf einen Member einer Basisklasse zuzugreifen.  Wenn der Name der einer überladenen Memberfunktion ist, muss auf alle genannten Funktionen zugegriffen werden können.  
+```Output  
+In D::f(int)  
+In B::f(char)  
+In B::g  
+In D::g(char)  
+```  
   
- Weitere Informationen über den Zugriff von Membern erhalten Sie im Artikel über [Memberzugriffssteuerung](../cpp/member-access-control-cpp.md).  
+## <a name="example"></a>Beispiel  
+Alle in einer using-Deklaration erwähnten Instanzen eines Namens müssen verfügbar sein. Insbesondere muss der Membername zugänglich sein, wenn eine abgeleitete Klasse eine using-Deklaration verwendet, um auf einen Member einer Basisklasse zuzugreifen. Wenn der Name der einer überladenen Memberfunktion ist, muss auf alle genannten Funktionen zugegriffen werden können.  
+  
+Weitere Informationen über Barrierefreiheitsfeatures von Elementen finden Sie unter [Memberzugriffssteuerung](../cpp/member-access-control-cpp.md).  
   
 ```cpp  
 // using_declaration_inheritance2.cpp  
@@ -308,6 +348,6 @@ public:
 };  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Namespaces](../cpp/namespaces-cpp.md)   
- [C\+\+\-Schlüsselwörter](../cpp/keywords-cpp.md)
+ [Schlüsselwörter](../cpp/keywords-cpp.md)

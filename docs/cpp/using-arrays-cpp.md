@@ -1,28 +1,45 @@
 ---
-title: "Verwenden von Arrays (C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Arrays [C++]"
+title: Verwenden von Arrays (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- arrays [C++]
 ms.assetid: 7818a7fe-7e82-4881-a3d1-7d25162b7fc7
 caps.latest.revision: 10
-caps.handback.revision: "10"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Verwenden von Arrays (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 31402e2f113deb89fce6d2d8b6c3633f06a944be
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Sie können auf einzelne Elemente eines Arrays zugreifen, indem Sie den Arrayfeldindex\-Operator \(`[ ]`\) verwenden.  Wenn ein eindimensionales Array in einem Ausdruck ohne Feldindex verwendet wird, wird der Arrayname als Zeiger auf das ersten Element im Array ausgewertet.  
+---
+# <a name="using-arrays-c"></a>Verwenden von Arrays (C++)
+Sie können auf einzelne Elemente eines Arrays zugreifen, indem Sie den Arrayfeldindex-Operator (`[ ]`) verwenden. Wenn ein eindimensionales Array in einem Ausdruck ohne Feldindex verwendet wird, wird der Arrayname als Zeiger auf das ersten Element im Array ausgewertet.  
   
 ```  
 // using_arrays.cpp  
@@ -55,7 +72,7 @@ int main() {
 }  
 ```  
   
- Im vorangegangenen Code ist `multi` ein dreidimensionales Array vom Typ `double`.  Der `p2multi`\-Zeiger zeigt auf ein Array vom Typ `double` der Größe drei.  In diesem Beispiel wird das Array mit einem, zwei oder drei Feldindizes verwendet.  Obwohl im Allgemeinen alle Feldindizes angegeben werden, wie in der `cout`\-Anweisung, ist es manchmal sinnvoll, eine bestimmte Teilmenge von Arrayelementen auszuwählen, wie in den Anweisungen gezeigt, die `cout` folgen.  
+ Im vorangegangenen Code ist `multi` ein dreidimensionales Array vom Typ `double`. Der `p2multi`-Zeiger zeigt auf ein Array vom Typ `double` der Größe drei. In diesem Beispiel wird das Array mit einem, zwei oder drei Feldindizes verwendet. Obwohl im Allgemeinen alle Feldindizes angegeben werden, wie in der `cout`-Anweisung, ist es manchmal sinnvoll, eine bestimmte Teilmenge von Arrayelementen auszuwählen, wie in den Anweisungen gezeigt, die `cout` folgen.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Arrays](../cpp/arrays-cpp.md)

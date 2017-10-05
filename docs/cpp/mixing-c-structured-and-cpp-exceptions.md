@@ -1,50 +1,67 @@
 ---
-title: "Kombination von C (strukturiert)- und C++-Ausnahmen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C++-Ausnahmebehandlung, Gemischte Sprache"
-  - "catch-Schlüsselwort [C++], Gemischt"
-  - "Ausnahmen, Kombiniert (C und C++)"
-  - "Strukturierte Ausnahmebehandlung, Kombiniert (C und C++)"
-  - "try-catch-Schlüsselwort [C++], Gemischte Sprache"
+title: Mischen von C (strukturiert)- und C++-Ausnahmen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- exceptions, mixed C and C++
+- C++ exception handling, mixed-language
+- structured exception handling, mixed C and C++
+- catch keyword [C++], mixed
+- try-catch keyword [C++], mixed-language
 ms.assetid: a149154e-36dd-4d1a-980b-efde2a563a56
 caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Kombination von C (strukturiert)- und C++-Ausnahmen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 074ff13ed281d30caeede227cdab2cff090fab1e
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Wenn Sie besser portierbaren Code schreiben möchten, wird das Verwenden der strukturierten Ausnahmebehandlung in einem C\+\+\-Programm nicht empfohlen.  Vielleicht möchten Sie jedoch gelegentlich mit **\/EHa** kompilieren und strukturierte Ausnahmen und C\+\+\-Quellcode kombinieren und benötigen daher einige Funktionen zur Behandlung beider Arten von Ausnahmen.  Da ein strukturierter Ausnahmehandler nicht über ein Konzept von Objekten oder von typisierten Ausnahmen verfügt, kann er keine Ausnahmen behandeln, die durch C\+\+\-Code ausgelöst werden. Allerdings können **catch**\-Handler von C\+\+ strukturierte Ausnahmen behandeln.  Deshalb wird die C\+\+\-Ausnahmebehandlungssyntax \(**try**, `throw`, **catch**\) nicht vom C\-Compiler akzeptiert, aber strukturierte Ausnahmebehandlungssyntax \(`__try`, `__except`, `__finally`\) wird vom C\+\+\-Compiler unterstützt.  
+---
+# <a name="mixing-c-structured-and-c-exceptions"></a>Kombination von C (strukturiert)- und C++-Ausnahmen
+Wenn Sie besser portierbaren Code schreiben möchten, wird das Verwenden der strukturierten Ausnahmebehandlung in einem C++-Programm nicht empfohlen. Möchten Sie jedoch möglicherweise manchmal mit Kompilieren **/EHa** strukturierte Ausnahmen und C++-Quellcode kombinieren und benötigen daher einige Funktionen zur Behandlung beider Arten von Ausnahmen. Da ein strukturierter Ausnahmehandler kein Konzept von Objekten oder typisierten Ausnahmen verfügt, wird es kann nicht von C++-Code ausgelöste Ausnahmen behandelt; Allerdings C++ **catch** Handler strukturierte Ausnahmen behandeln können. Als solche, C++-ausnahmebehandlungssyntax (**versuchen**, `throw`, **catch**) wird nicht akzeptiert, durch den C-Compiler, aber strukturierte ausnahmebehandlungssyntax (`__try`, `__except`, `__finally`) wird vom C++-Compiler unterstützt.  
   
- Unter [\_set\_se\_translator](../c-runtime-library/reference/set-se-translator.md) finden Sie Informationen zur Behandlung strukturierter Ausnahmen als C\+\+\-Ausnahmen.  
+ Finden Sie unter [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) Informationen zur Behandlung von strukturierte Ausnahmen als C++-Ausnahmen.  
   
- Wenn Sie strukturierte und C\+\+\-Ausnahmen kombinieren, beachten Sie Folgendes:  
+ Wenn Sie strukturierte und C++-Ausnahmen kombinieren, beachten Sie Folgendes:  
   
-1.  C\+\+\-Ausnahmen und strukturierte Ausnahmen können nicht in derselben Funktion kombiniert werden.  
+1.  C++-Ausnahmen und strukturierte Ausnahmen können nicht in derselben Funktion kombiniert werden.  
   
-2.  Beendigungshandler \(`__finally`\-Blöcke\) werden immer ausgeführt, sogar während des Entladens, nachdem eine Ausnahme ausgelöst wird.  
+2.  Beendigungshandler (`__finally`-Blöcke) werden immer ausgeführt, sogar während des Entladens, nachdem eine Ausnahme ausgelöst wird.  
   
-3.  Die C\+\+\-Ausnahmebehandlung kann Entladungssemantik in allen Modulen abfangen und beibehalten, die mit der Compileroption [\/EH](../build/reference/eh-exception-handling-model.md) kompiliert werden \(diese Option aktiviert die Entladungssemantik\).  
+3.  C++-Ausnahmebehandlung abfangen und Beibehalten von entladungssemantik in allen Modulen mit kompiliert die [/EH](../build/reference/eh-exception-handling-model.md) -Compileroption (diese Option aktiviert die entladungssemantik).  
   
-4.  Es kann Situationen geben, in denen Destruktorfunktionen nicht für alle Objekte aufgerufen werden.  Wenn beispielsweise eine strukturierte Ausnahme beim Versuch auftritt, einen Funktionsaufruf über einen nicht initialisierten Funktionszeiger auszuführen, und diese Funktion Objekte als Parameter nutzt, die vor dem Aufruf erstellt wurden, werden die Destruktoren dieser Objekte nicht während der Stapelentladung aufgerufen.  
+4.  Es kann Situationen geben, in denen Destruktorfunktionen nicht für alle Objekte aufgerufen werden. Wenn beispielsweise eine strukturierte Ausnahme beim Versuch auftritt, einen Funktionsaufruf über einen nicht initialisierten Funktionszeiger auszuführen, und diese Funktion Objekte als Parameter nutzt, die vor dem Aufruf erstellt wurden, werden die Destruktoren dieser Objekte nicht während der Stapelentladung aufgerufen.  
   
-## Worüber möchten Sie mehr erfahren?  
+## <a name="what-do-you-want-to-know-more-about"></a>Worüber möchten Sie mehr erfahren?  
   
--   [Verwenden von setjmp oder longjmp in C\+\+\-Programmen](../cpp/using-setjmp-longjmp.md)  
+-   [Verwenden von Setjmp oder Longjmp in C++-Programmen](../cpp/using-setjmp-longjmp.md)  
   
--   [Unterschiede zwischen SEH und C\+\+ EH](../cpp/exception-handling-differences.md)  
+-   [Unterschiede zwischen SEH und C++ EH](../cpp/exception-handling-differences.md)  
   
-## Siehe auch  
- [C\+\+\-Ausnahmebehandlung](../cpp/cpp-exception-handling.md)
+## <a name="see-also"></a>Siehe auch  
+ [C++-Ausnahmebehandlung](../cpp/cpp-exception-handling.md)

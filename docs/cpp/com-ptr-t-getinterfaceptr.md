@@ -1,47 +1,64 @@
 ---
-title: "_com_ptr_t::GetInterfacePtr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_com_ptr_t::GetInterfacePtr"
-  - "_com_ptr_t.GetInterfacePtr"
-  - "GetInterfacePtr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetInterfacePtr-Methode"
+title: _com_ptr_t::GetInterfacePtr | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _com_ptr_t::GetInterfacePtr
+- _com_ptr_t.GetInterfacePtr
+- GetInterfacePtr
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetInterfacePtr method
 ms.assetid: 55e3e2c7-c939-48b5-a905-4b9cbefeea7e
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _com_ptr_t::GetInterfacePtr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 74155de4cce5f5393b2b8039874f0e4f5efe9f8d
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-**Microsoft\-spezifisch**  
+---
+# <a name="comptrtgetinterfaceptr"></a>_com_ptr_t::GetInterfacePtr
+**Microsoft-spezifisch**  
   
  Gibt den gekapselten Schnittstellenzeiger zurück.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
-      Interface* GetInterfacePtr( ) const throw( );   
+      Interface* GetInterfacePtr( ) const throw( );   
 Interface*& GetInterfacePtr() throw();  
 ```  
   
-## Hinweise  
- Gibt den gekapselten Schnittstellenzeiger zurück, der möglicherweise **NULL** ist.  
+## <a name="remarks"></a>Hinweise  
+ Gibt den gekapselten Schnittstellenzeiger, der möglicherweise **NULL**.  
   
- **END Microsoft\-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
- [\_com\_ptr\_t\-Klasse](../cpp/com-ptr-t-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [_com_ptr_t-Klasse](../cpp/com-ptr-t-class.md)

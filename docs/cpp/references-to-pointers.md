@@ -1,33 +1,50 @@
 ---
-title: "Verweise auf Zeiger | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Referenzen, Auf Zeiger"
+title: Verweise auf Zeiger | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- references, to pointers
 ms.assetid: 4ce48b08-1511-4d2f-a31f-95f99eac0c70
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Verweise auf Zeiger
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: cf7a3fe930e8b862578286908598c9152943f134
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Verweise auf Zeiger können nahezu auf die gleiche Weise wie Verweise auf Objekte deklariert werden.  Das Deklarieren eines Verweises auf einen Zeiger führt zu einem änderbaren Wert, der wie ein normaler Zeiger verwendet wird.  
+---
+# <a name="references-to-pointers"></a>Verweise auf Zeiger
+Verweise auf Zeiger können nahezu auf die gleiche Weise wie Verweise auf Objekte deklariert werden. Das Deklarieren eines Verweises auf einen Zeiger führt zu einem änderbaren Wert, der wie ein normaler Zeiger verwendet wird.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Die folgenden Codebeispiele veranschaulichen den Unterschied zwischen einem Zeiger auf einen Zeiger und einem Verweis auf einen Zeiger.  
   
- Die Funktionen `Add1` und `Add2` sind funktional äquivalent \(obwohl sie nicht auf die gleiche Weise aufgerufen werden.\)  Der Unterschied besteht darin, dass `Add1` eine doppelte Indirektion verwendet, während `Add2` die Vorteile eines Verweises auf einen Zeiger nutzt.  
+ Die Funktionen `Add1` und `Add2` sind funktional äquivalent (obwohl sie nicht auf die gleiche Weise aufgerufen werden.) Der Unterschied besteht darin, dass `Add1` eine doppelte Indirektion verwendet, während `Add2` die Vorteile eines Verweises auf einen Zeiger nutzt.  
   
 ```  
 // references_to_pointers.cpp  
@@ -36,7 +53,7 @@ Verweise auf Zeiger können nahezu auf die gleiche Weise wie Verweise auf Objekt
 #include <iostream>  
 #include <string>  
   
-// STL namespace  
+// C++ Standard Library namespace  
 using namespace std;  
   
 enum {  
@@ -157,9 +174,15 @@ int Add2( BTree*& Root, char *szToAdd ) {
 }  
 ```  
   
-  **Verwendung: Refptr \[1 &#124; 2\]**  
-**Dabei gilt:**  
-**1 verwendet doppelte Dereferenzierung**  
-**2 verwendet Verweis auf einen Zeiger.  Die Eingabe ist von stdin.**    
-## Siehe auch  
+```Output  
+Usage: Refptr [1 | 2]  
+  
+where:  
+1 uses double indirection  
+2 uses a reference to a pointer.  
+  
+Input is from stdin.  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
  [Verweise](../cpp/references-cpp.md)

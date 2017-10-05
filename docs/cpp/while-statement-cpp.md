@@ -1,47 +1,64 @@
 ---
-title: "while-Anweisung (C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - "while_cpp"
-  - "while"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "while-Schlüsselwort [C++]"
-  - "while-Schlüsselwort [C++], Syntax"
+title: While-Anweisung (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- while_cpp
+- while
+dev_langs:
+- C++
+helpviewer_keywords:
+- while keyword [C++]
+- while keyword [C++], syntax
 ms.assetid: 358dbe76-5e5e-4af5-b575-c2293c636899
 caps.latest.revision: 8
-caps.handback.revision: "8"
-ms.author: "mblome"
-manager: "ghogen"
----
-# while-Anweisung (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 694852e40699ac7b2663392cb8a4c02218a422a7
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Führt *Anweisung* so lange aus, bis *Ausdruck* mit Null ausgewertet wird.  
+---
+# <a name="while-statement-c"></a>while-Anweisung (C++)
+Führt *Anweisung* solange wiederholt, bis *Ausdruck* wird zu NULL ausgewertet.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
       while ( expression )  
-   statement  
+   statement  
 ```  
   
-## Hinweise  
- Der *Ausdruck* wird vor jeder Ausführung der Schleife getestet. Deshalb wird eine `while`\-Schleife nie oder mehrmals ausgeführt.  *Ausdruck* muss ein Ganzzahltyp, ein Zeigertyp oder ein Klassentyp mit einer eindeutigen Konvertierung in einen Ganzzahl\- oder Zeigertyp sein.  
+## <a name="remarks"></a>Hinweise  
+ Der Test von *Ausdruck* erfolgt vor jeder Ausführung der Schleife aus diesem Grund eine `while` Schleife 0 (null) oder mehrmals ausgeführt. *Ausdruck* muss ein ganzzahliger Typ, ein Zeigertyp oder ein Klassentyp mit einer eindeutigen Konvertierung in einen Ganzzahl- oder Zeigertyp sein.  
   
- Eine `while`\-Schleife kann auch beendet werden, wenn innerhalb des Anweisungstexts [break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md) oder [return](../cpp/return-statement-cpp.md) ausgeführt wird.  Verwenden Sie [continue](../cpp/continue-statement-cpp.md) zum Beenden der aktuelle Iteration, ohne auch die `while`\-Schleife zu beenden.  Mit **continue** wird die Steuerung an die nächste Iteration der `while`\-Schleife übergeben.  
+ Ein `while` Schleife kann auch beendet werden, wenn eine [Break](../cpp/break-statement-cpp.md), [Goto](../cpp/goto-statement-cpp.md), oder [zurückgeben](../cpp/return-statement-cpp.md) Text wird in der Anweisung ausgeführt. Verwendung [weiterhin](../cpp/continue-statement-cpp.md) ohne beendet die aktuelle Iteration beendet die `while` Schleife. **weiterhin** übergibt die Steuerung an die nächste Iteration der der `while` Schleife.  
   
- Im folgenden Code wird eine `while`\-Schleife verwendet, um nachstehende Unterstriche von einer Zeichenfolge abzuschneiden:  
+ Im folgenden Code wird eine `while`-Schleife verwendet, um nachstehende Unterstriche von einer Zeichenfolge abzuschneiden:  
   
 ```  
 // while_statement.cpp  
@@ -70,11 +87,11 @@ int main()
 }  
 ```  
   
- Die Beendigungsbedingung wird am Anfang der Schleife ausgewertet.  Solange keine nachgestellten Unterstriche vorhanden sind, wird die Schleife nicht ausgeführt.  
+ Die Beendigungsbedingung wird am Anfang der Schleife ausgewertet. Solange keine nachgestellten Unterstriche vorhanden sind, wird die Schleife nicht ausgeführt.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Iterationsanweisungen](../cpp/iteration-statements-cpp.md)   
- [C\+\+\-Schlüsselwörter](../cpp/keywords-cpp.md)   
- [do\-while\-Anweisung \(C\+\+\)](../cpp/do-while-statement-cpp.md)   
- [for\-Anweisung \(C\+\+\)](../cpp/for-statement-cpp.md)   
- [Bereichsbasiert für Anweisung \(C\+\+\)](../cpp/range-based-for-statement-cpp.md)
+ [Stichwörter](../cpp/keywords-cpp.md)   
+ [do-while-Anweisung (C++)](../cpp/do-while-statement-cpp.md)   
+ [for-Anweisung (C++)](../cpp/for-statement-cpp.md)   
+ [Bereichsbasiert für Anweisung (C++)](../cpp/range-based-for-statement-cpp.md)

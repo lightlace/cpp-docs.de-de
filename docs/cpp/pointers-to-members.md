@@ -1,36 +1,52 @@
 ---
-title: "Zeiger auf Member | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Klassenmember, Zeiger auf"
-  - "Deklarationen, Zeiger"
-  - "Member, Zeiger auf"
-  - "Zeiger, Deklarationen"
-  - "Zeiger, Auf Member"
+title: Zeiger auf Member | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- declarations, pointers
+- class members, pointers to
+- pointers, to members
+- members, pointers to
+- pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Zeiger auf Member
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 98a6db086443c15964a1dcf0a345b2fbaccfa233
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="pointers-to-members"></a>Zeiger auf Member
 Deklarationen von Zeigern auf Member sind Sonderfälle von Zeigerdeklarationen.  Sie können mithilfe der folgenden Sequenz deklariert werden:  
   
 ```  
-[storage-class-specifiers] [cv-qualifiers] type-specifiers [ms-modifier]  
-qualified-name ::* [cv-qualifiers] identifier  
+[storage-class-specifiers] [cv-qualifiers] type-specifiers [ms-modifier]qualified-name ::* [cv-qualifiers] identifier  
 [= & qualified-name :: member-name];  
 ```  
   
@@ -38,29 +54,29 @@ qualified-name ::* [cv-qualifiers] identifier
   
     -   Ein optionaler Speicherklassenbezeichner.  
   
-    -   Optionale **const**\- und\/oder `volatile`\-Bezeichner.  
+    -   Optionale **const** und/oder `volatile` Spezifizierer.  
   
     -   Der Typspezifizierer: der Name eines Typs  Dies ist der Typ des Members, auf das gezeigt werden muss, nicht der der Klasse.  
   
 2.  Der Deklarator:  
   
-    -   Ein optionaler Microsoft\-spezifischer Modifizierer.  Weitere Informationen finden Sie unter [Microsoft\-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md).  
+    -   Ein optionaler Microsoft-spezifischer Modifizierer. Weitere Informationen finden Sie unter [Microsoft-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md).  
   
-    -   Der qualifizierte Name der Klasse, die die Member enthält, auf die gezeigt werden muss.  Siehe [Namen und qualifizierte Namen](../misc/names-and-qualified-names.md).  
+    -   Der qualifizierte Name der Klasse, die die Member enthält, auf die gezeigt werden muss.   
   
     -   Der Operator "::"  
   
-    -   Der Operator **\***.  
+    -   Die ** \* ** Operator.  
   
-    -   Optionale **const**\- und\/oder `volatile`\-Bezeichner.  
+    -   Optionale **const** und/oder `volatile` Spezifizierer.  
   
     -   Der Bezeichner, der den Zeiger auf ein Member benennt.  
   
     -   Ein optionaler Initialisierer:  
   
- Dem Operator **\=**.  
+ Die ** = ** Operator.  
   
- Der Operator **&**.  
+ Die ** & ** Operator.  
   
  Der qualifizierte Name der Klasse.  
   
@@ -68,9 +84,9 @@ qualified-name ::* [cv-qualifiers] identifier
   
  Der Name eines nicht statischen Members der Klasse des entsprechenden Typs.  
   
- Wie immer sind mehrere Deklaratoren \(sowie alle zugeordneten Initialisierer\) in einer einzelnen Deklaration zulässig.  
+ Wie immer sind mehrere Deklaratoren (sowie alle zugeordneten Initialisierer) in einer einzelnen Deklaration zulässig.  
   
- Ein Zeiger auf einen Member einer Klasse unterscheidet sich von einem normalen Zeiger, da er Typinformationen für den Membertyp und die Klasse besitzt, zu der der Member gehört.  Ein normaler Zeiger identifiziert nur ein einzelnes Objekt im Arbeitsspeicher \(hat nur die Adresse dieses Objekts\).  Ein Zeiger auf einen Member einer Klasse identifiziert den Member in jeder Instanz der Klasse.  Im folgenden Beispiel werden die Klasse `Window` und mehrere Zeiger auf Memberdaten deklariert.  
+ Ein Zeiger auf einen Member einer Klasse unterscheidet sich von einem normalen Zeiger, da er Typinformationen für den Membertyp und die Klasse besitzt, zu der der Member gehört. Ein normaler Zeiger identifiziert nur ein einzelnes Objekt im Arbeitsspeicher (hat nur die Adresse dieses Objekts). Ein Zeiger auf einen Member einer Klasse identifiziert den Member in jeder Instanz der Klasse. Im folgenden Beispiel werden die Klasse `Window` und mehrere Zeiger auf Memberdaten deklariert.  
   
 ```  
 // pointers_to_members1.cpp  
@@ -92,14 +108,14 @@ int main()
 }  
 ```  
   
- Im obigen Beispiel ist `pwCaption` ein Zeiger auf einen Member der Klasse `Window`, die zum Typ **char\*** gehört.  Der Typ von `pwCaption` lautet `char * Window::*`.  Im nächsten Codefragment werden Zeiger auf die Memberfunktionen `SetCaption` und `GetCaption` deklariert.  
+ Im vorherigen Beispiel `pwCaption` ist ein Zeiger auf einen Member der Klasse `Window` , die weist den Typ **Char\***. Der Typ von `pwCaption` lautet `char * Window::*`. Im nächsten Codefragment werden Zeiger auf die Memberfunktionen `SetCaption` und `GetCaption` deklariert.  
   
 ```  
 const char * (Window::*pfnwGC)() = &Window::GetCaption;  
 bool (Window::*pfnwSC)( const char * ) = &Window::SetCaption;  
 ```  
   
- Die Zeiger `pfnwGC` und `pfnwSC` zeigen auf `GetCaption` bzw. `SetCaption` der Klasse `Window`.  Mithilfe des Zeigers auf den Member `pwCaption` kopiert der Code Informationen direkt in die Fensterbeschriftung:  
+ Die Zeiger `pfnwGC` und `pfnwSC` zeigen auf `GetCaption` bzw. `SetCaption` der Klasse `Window`. Mithilfe des Zeigers auf den Member `pwCaption` kopiert der Code Informationen direkt in die Fensterbeschriftung:  
   
 ```  
 Window wMainWindow;  
@@ -114,9 +130,9 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';  
 ```  
   
- Der Unterschied zwischen den Operatoren **.\*** und **–\>\*** \(Memberzeiger\-Operatoren\) besteht darin, dass der Operator **.\*** die Member anhand eines Objekts oder Objektverweises auswählt, während der Operator **–\>\*** Member über einen Zeiger auswählt.  \(Weitere Informationen zu diesen Operatoren finden Sie unter [Ausdrücke mit Memberzeiger\-Operatoren](../cpp/pointer-to-member-operators-dot-star-and-star.md).\)  
+ Der Unterschied zwischen der **.\* ** und ** -> \* ** Operatoren (Pointer-to-Member-Operatoren) ist, die die **.\* ** Operator wählt Elemente erhält eine Objekts oder Objektverweises, dagegen die ** -> \* ** Operator wählt Member über einen Zeiger. (Weitere Informationen zu diesen Operatoren finden Sie unter [Ausdrücke mit Zeiger-auf-Member-Operatoren](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
   
- Das Ergebnis der Memberzeiger\-Operatoren ist der Membertyp – in diesem Fall **char \***.  
+ Das Ergebnis der Pointer-to-Member-Operatoren ist der Typ des Members – in diesem Fall **Char \* **.  
   
  Im folgenden Codefragment werden die Memberfunktionen `GetCaption` und `SetCaption` mithilfe der Zeiger auf Member aufgerufen:  
   
@@ -135,13 +151,13 @@ strcat_s( szCaptionBase, sizeOfBuffer, " [View 1]" );
 (pwChildWindow->*pfnwSC)( szCaptionBase );  
 ```  
   
-## Einschränkungen für Zeiger auf Member  
- Die Adresse eines statischen Members ist kein Zeiger auf einen Member.  Es ist ein regulärer Zeiger auf die eine Instanz des statischen Members.  Da nur eine Instanz eines statischen Members für alle Objekte einer angegebenen Klasse vorhanden ist, können der normale address\-of\-Operator **\(&\)** und der Dereferenzierungsoperator **\(\*\)** verwendet werden.  
+## <a name="restrictions-on-pointers-to-members"></a>Einschränkungen für Zeiger auf Member  
+ Die Adresse eines statischen Members ist kein Zeiger auf einen Member. Es ist ein regulärer Zeiger auf die eine Instanz des statischen Members. Da nur eine Instanz eines statischen Members für alle Objekte einer bestimmten Klasse, die normale Address-of vorhanden ist **(&)** und dereferenzieren **(\*)** Operatoren können verwendet werden.  
   
-## Zeiger auf Member und virtuelle Funktionen  
- Das Aufrufen einer virtuellen Funktion durch einen Zeiger auf eine Memberfunktion verhält sich wie beim direkten Aufruf der Funktion. Die ordnungsgemäße Funktion wird in v\-table gesucht und aufgerufen.  
+## <a name="pointers-to-members-and-virtual-functions"></a>Zeiger auf Member und virtuelle Funktionen  
+ Das Aufrufen einer virtuellen Funktion durch einen Zeiger auf eine Memberfunktion verhält sich wie beim direkten Aufruf der Funktion. Die ordnungsgemäße Funktion wird in v-table gesucht und aufgerufen.  
   
- Entscheidend für das Funktionieren von virtuellen Funktionen ist immer, dass sie durch einen Zeiger auf eine Basisklasse aufgerufen werden.  \(Weitere Informationen zu virtuellen Funktionen finden Sie unter [Virtuelle Funktionen](../cpp/virtual-functions.md).\)  
+ Entscheidend für das Funktionieren von virtuellen Funktionen ist immer, dass sie durch einen Zeiger auf eine Basisklasse aufgerufen werden. (Weitere Informationen zu virtuellen Funktionen finden Sie unter [virtuelle Funktionen](../cpp/virtual-functions.md).)  
   
  Der folgende Code zeigt, wie eine virtuelle Funktion durch einen Zeiger auf eine Memberfunktion aufgerufen werden kann:  
   
@@ -188,5 +204,5 @@ bPtr = &dObject;    // Set pointer to address of dObject.
 Print function for class Derived  
 ```  
   
-## Siehe auch  
- [C\+\+\-Deklaratoren \(abstrakt\)](assetId:///e7e18c18-0cad-4450-942b-d27e1d4dd088)
+## <a name="see-also"></a>Siehe auch  
+ 

@@ -1,36 +1,53 @@
 ---
-title: "_bstr_t::operator !"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_bstr_t::operator!"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "! Operator"
-  - "Operator !, bstr"
-  - "Operator!, bstr"
+title: _bstr_t::operator ! | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _bstr_t::operator!
+dev_langs:
+- C++
+helpviewer_keywords:
+- '! operator'
+- operator!, bstr
+- operator !, bstr
 ms.assetid: 6e60b5a5-2d28-4eec-9e12-790da8f1fdd4
 caps.latest.revision: 6
-caps.handback.revision: "6"
-ms.author: "mblome"
-manager: "ghogen"
----
-# _bstr_t::operator !
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 06866cfca077c776b086e5cde9ccf1a0278eca25
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-**Microsoft\-spezifisch**  
+---
+# <a name="bstrtoperator-"></a>_bstr_t::operator !
+**Microsoft-spezifisch**  
   
- Überprüft, ob das gekapselte `BSTR` eine **NULL**\-Zeichenfolge ist.  
+ Überprüft, ob das gekapselte `BSTR` ist ein **NULL** Zeichenfolge.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -38,10 +55,10 @@ bool operator!( ) const throw( );
   
 ```  
   
-## Rückgabewert  
- Wenn dies der Fall ist, wird **true** zurückgegeben, andernfalls **false**.  
+## <a name="return-value"></a>Rückgabewert  
+ Es gibt **"true"** Falls Ja, **"false"** Wenn dies nicht.  
   
- **END Microsoft\-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
- [\_bstr\_t\-Klasse](../cpp/bstr-t-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [_bstr_t-Klasse](../cpp/bstr-t-class.md)

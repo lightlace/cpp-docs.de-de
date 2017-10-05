@@ -1,38 +1,55 @@
 ---
-title: "__uuidof-Operator | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__LIBID_"
-  - "__LIBID_cpp"
-  - "__uuidof"
-  - "__uuidof_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__LIBID_-Schlüsselwort [C++]"
-  - "__uuidof-Schlüsselwort [C++]"
+title: __uuidof-Operator | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __LIBID_
+- __LIBID_cpp
+- __uuidof
+- __uuidof_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- __uuidof keyword [C++]
+- __LIBID_ keyword [C++]
 ms.assetid: badfe709-809b-4b66-ad48-ee35039d25c6
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# __uuidof-Operator
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 172ed545eb2c46db8df12e3e12a2296a5f172a1f
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-**Microsoft\-spezifisch**  
+---
+# <a name="uuidof-operator"></a>__uuidof-Operator
+**Microsoft-spezifisch**  
   
  Ruft die GUID ab, die dem Ausdruck angefügt ist.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -41,22 +58,22 @@ caps.handback.revision: 9
 )  
 ```  
   
-## Hinweise  
- Der *Ausdruck* kann ein Typname, ein Zeiger, ein Verweis oder ein Array dieses Typs, eine Vorlage, die auf diese Typen spezialisiert ist, oder eine Variable dieser Typen sein.  Das Argument ist gültig, solange der Compiler es verwenden kann, um das angefügte GUID zu suchen.  
+## <a name="remarks"></a>Hinweise  
+ Die *Ausdruck* einen Typnamen, Zeiger, Verweis oder Array dieses Typs ist möglich, eine Vorlage, die auf diese Typen oder eine Variable dieser Typen spezialisiert. Das Argument ist gültig, solange der Compiler es verwenden kann, um das angefügte GUID zu suchen.  
   
- Ein Sonderfall dieser systeminternen Funktion liegt vor, wenn entweder **0** oder **NULL** als Argument angegeben wird.  In diesem Fall gibt `__uuidof` eine GUID zurück, die aus Nullen besteht.  
+ Ist ein Sonderfall dieser systeminternen Funktion, wenn entweder **0** oder **NULL** als Argument angegeben ist. In diesem Fall gibt `__uuidof` eine GUID zurück, die aus Nullen besteht.  
   
  Verwenden Sie dieses Schlüsselwort, um die an folgende Elemente angefügte GUID zu extrahieren:  
   
--   Ein Objekt durch das erweiterte [uuid](../cpp/uuid-cpp.md)\-Attribut.  
+-   Ein Objekt durch die [Uuid](../cpp/uuid-cpp.md) erweiterten Attribute.  
   
--   Ein Bibliotheksblock, der mit dem [module](../windows/module-cpp.md)\-Attribut erstellt wird.  
+-   Ein bibliotheksblock erstellt, mit der [Modul](../windows/module-cpp.md) Attribut.  
   
 > [!NOTE]
->  In einem Debugbuild initialisiert `__uuidof` ein Objekt immer dynamisch \(zur Laufzeit\).  In einem Releasebuild kann `__uuidof` ein Objekt statistisch initialisieren \(zur Kompilierzeit\).  
+>  In einem Debugbuild initialisiert `__uuidof` ein Objekt immer dynamisch (zur Laufzeit). In einem Releasebuild kann `__uuidof` ein Objekt statistisch initialisieren (zur Kompilierzeit).  
   
-## Beispiel  
- Mit dem folgenden Code \(kompiliert mit "ole32.lib"\) wird das "uuid" eines Bibliotheksblocks angezeigt, der mit dem Modulattribut erstellt wird:  
+## <a name="example"></a>Beispiel  
+ Mit dem folgenden Code (kompiliert mit "ole32.lib") wird das "uuid" eines Bibliotheksblocks angezeigt, der mit dem Modulattribut erstellt wird:  
   
 ```  
 // expre_uuidof.cpp  
@@ -79,15 +96,15 @@ int main() {
 }  
 ```  
   
-## Kommentare  
- In Fällen, in denen sich der Bibliotheksname nicht mehr im Gültigkeitsbereich befindet, können Sie \_\_LIBID\_ anstelle von `__uuidof` verwenden.  Beispiel:  
+## <a name="comments"></a>Kommentare  
+ In Fällen, in denen der Bibliotheksname nicht mehr im Gültigkeitsbereich, können Sie __LIBID\_ anstelle von `__uuidof`. Zum Beispiel:  
   
 ```  
 StringFromCLSID(__LIBID_, &lpolestr);  
 ```  
   
- **Ende Microsoft\-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
- [Ausdrücke mit unären Operatoren](../cpp/expressions-with-unary-operators.md)   
- [C\+\+\-Schlüsselwörter](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [Ausdrücke mit Unäroperatoren](../cpp/expressions-with-unary-operators.md)   
+ [Schlüsselwörter](../cpp/keywords-cpp.md)

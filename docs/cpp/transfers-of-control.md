@@ -1,31 +1,48 @@
 ---
-title: "&#220;bertragung der Steuerung | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Ablaufsteuerung, Verzweigen"
-  - "Ablaufsteuerung, Übertragen der Steuerung"
+title: "Übertragung der Steuerung | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- control flow, branching
+- control flow, transferring control
 ms.assetid: aa51e7f2-060f-4106-b0fe-331f04357423
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# &#220;bertragung der Steuerung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: a604c95bb21ad0098a3d4563738971791fc94a07
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-Sie können die `goto`\-Anweisung oder eine **case**\-Bezeichnung in einer `switch`\-Anweisung verwenden, um ein Programm anzugeben, das sich hinter einem Initialisierer verzweigt.  Solcher Code ist nicht zulässig, es sei denn, die Deklaration, die den Initialisierer enthält, befindet sich in einem Block, der von dem Block eingeschlossen wird, in dem die Sprunganweisung auftritt.  
+---
+# <a name="transfers-of-control"></a>Übertragung der Steuerung
+Können Sie die `goto` Anweisung oder eine **Fall** -Bezeichnung in einer `switch` Anweisung, um ein Programm anzugeben, die hinter einem Initialisierer verzweigt. Solcher Code ist nicht zulässig, es sei denn, die Deklaration, die den Initialisierer enthält, befindet sich in einem Block, der von dem Block eingeschlossen wird, in dem die Sprunganweisung auftritt.  
   
- Das folgende Beispiel zeigt eine Schleife, welche die Objekte `total`, `ch` und `i` deklariert und initialisiert.  Es gibt auch eine fehlerhafte `goto`\-Anweisung, die die Steuerung jenseits eines Initialisierers überträgt.  
+ Das folgende Beispiel zeigt eine Schleife, welche die Objekte `total`, `ch` und `i` deklariert und initialisiert. Es gibt auch eine fehlerhafte `goto`-Anweisung, die die Steuerung jenseits eines Initialisierers überträgt.  
   
 ```  
 // transfers_of_control.cpp  
@@ -57,9 +74,8 @@ int main()
 }  
 ```  
   
- Im vorherigen Beispiel versucht die `goto`\-Anweisung, die Steuerung an der Initialisierung von `i` vorbei zu übergeben.  Wenn jedoch `i` zwar deklariert, aber nicht initialisiert ist, wäre die Übertragung gültig.  
+ Im vorherigen Beispiel versucht die `goto`-Anweisung, die Steuerung an der Initialisierung von `i` vorbei zu übergeben. Wenn jedoch `i` zwar deklariert, aber nicht initialisiert ist, wäre die Übertragung gültig.  
   
- Die Objekte `total` und `ch`, die im Block deklariert wurden, der als *Anweisung* der `while`\-Anweisung verwendet wird, werden gelöscht, wenn dieser Block mit der `break`\-Anweisung beendet wird.  
+ Die Objekte `total` und `ch`, deklariert im-Block, der als dient der *Anweisung* von der `while` -Anweisung werden zerstört, wenn dieser Block beendet wird, mit der `break` Anweisung.  
   
-## Siehe auch  
- [\(NOTINBUILD\) Declaration of Automatic Objects](assetId:///81f941e9-c1b1-4d1c-a28d-70b6ee9765db)
+

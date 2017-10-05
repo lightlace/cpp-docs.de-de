@@ -1,37 +1,54 @@
 ---
-title: "_variant_t::ChangeType | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_variant_t::ChangeType"
-  - "_variant_t.ChangeType"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ChangeType-Methode"
-  - "VARIANT-Objekt"
-  - "VARIANT-Objekt, ChangeType"
+title: _variant_t::ChangeType | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _variant_t::ChangeType
+- _variant_t.ChangeType
+dev_langs:
+- C++
+helpviewer_keywords:
+- ChangeType method
+- VARIANT object, ChangeType
+- VARIANT object
 ms.assetid: 829d2eeb-3338-4a88-9dce-0ca145f47aac
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _variant_t::ChangeType
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 535bc332a108cf50badca116c496661b7c257bf7
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-**Microsoft\-spezifisch**  
+---
+# <a name="varianttchangetype"></a>_variant_t::ChangeType
+**Microsoft-spezifisch**  
   
- Ändert den Typ des `_variant_t`\-Objekts in den angegebenen **VARTYPE**.  
+ Ändert den Typ des der `_variant_t` Objekt für das angezeigte **VARTYPE**.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -41,17 +58,17 @@ caps.handback.revision: 6
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `vartype`  
- Der **VARTYPE** für dieses `_variant_t`\-Objekt.  
+ Die **VARTYPE** dafür `_variant_t` Objekt.  
   
  `pSrc`  
- Ein Zeiger auf das `_variant_t`\-Objekt, das umgewandelt werden soll.  Wenn dieser Wert **NULL** ist, wird die Konvertierung direkt ausgeführt.  
+ Ein Zeiger auf das `_variant_t`-Objekt, das umgewandelt werden soll. Wenn dieser Wert ist **NULL**, Konvertierung direkt ausgeführt.  
   
-## Hinweise  
- Diese Memberfunktion konvertiert ein `_variant_t`\-Objekt in das angegebene **VARTYPE**.  Wenn `pSrc` **NULL** ist, erfolgt die Konvertierung direkt. Andernfalls wird dieses `_variant_t`\-Objekt von `pSrc` kopiert und dann konvertiert.  
+## <a name="remarks"></a>Hinweise  
+ Diese Memberfunktion konvertiert ein `_variant_t` in das angegebene Objekt **VARTYPE**. Wenn `pSrc` ist **NULL**, die Konvertierung erfolgt eingerichtet ist, andernfalls das `_variant_t` Objekt wird von kopiert `pSrc` und anschließend konvertiert.  
   
- **END Microsoft\-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
- [\_variant\_t\-Klasse](../cpp/variant-t-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [_variant_t-Klasse](../cpp/variant-t-class.md)

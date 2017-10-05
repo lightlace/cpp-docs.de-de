@@ -1,80 +1,97 @@
 ---
-title: "_com_ptr_t-Extraktoren | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_com_ptr_t::operatorInterface&"
-  - "operatorInterface*"
-  - "operatorInterface&"
-  - "_com_ptr_t::operatorbool"
-  - "_com_ptr_t.operator->"
-  - "_com_ptr_t.operator*"
-  - "_com_ptr_t::operator->"
-  - "_com_ptr_t::operator*"
-  - "_com_ptr_t.operatorInterface&"
-  - "_com_ptr_t.operatorbool"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "&-Operator, Mit spezifischen Objekten"
-  - "*-Operator, Mit spezifischen Objekten"
-  - "->-Operator, Mit spezifischen Objekten"
-  - "Extraktoren"
-  - "Extraktoren, _com_ptr_t-Klasse"
-  - "Operator *"
-  - "operator bool"
-  - "Operator Interface&"
-  - "Operator Interface*"
-  - "Operator&"
-  - "Operator*"
-  - "Operator->"
+title: _com_ptr_t-extraktoren | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _com_ptr_t::operatorInterface&
+- operatorInterface*
+- operatorInterface&
+- _com_ptr_t::operatorbool
+- _com_ptr_t.operator->
+- _com_ptr_t.operator*
+- _com_ptr_t::operator->
+- _com_ptr_t::operator*
+- _com_ptr_t.operatorInterface&
+- _com_ptr_t.operatorbool
+dev_langs:
+- C++
+helpviewer_keywords:
+- operator Interface&
+- '* operator, with specific objects'
+- operator&
+- operator*
+- -> operator, with specific objects
+- '& operator, with specific objects'
+- operator Interface*
+- operator *
+- operator->
+- operator bool
+- extractors, _com_ptr_t class
+- extractors
 ms.assetid: 194b9e0e-123c-49ff-a187-0a7fcd68145a
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _com_ptr_t-Extraktoren
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 136afa55361ff25f9ad606886be938a00551393d
+ms.contentlocale: de-de
+ms.lasthandoff: 09/25/2017
 
-**Microsoft\-spezifisch**  
+---
+# <a name="comptrt-extractors"></a>_com_ptr_t-Extraktoren
+**Microsoft-spezifisch**  
   
- Extrahieren Sie den gekapselten COM\-Schnittstellenzeiger.  
+ Extrahieren Sie den gekapselten COM-Schnittstellenzeiger.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
-      operator Interface*( ) const throw( );   
-operator Interface&( ) const;   
-Interface& operator*( ) const;   
-Interface* operator->( ) const;   
-Interface** operator&( ) throw( );   
+      operator Interface*( ) const throw( );   
+operator Interface&( ) const;   
+Interface& operator*( ) const;   
+Interface* operator->( ) const;   
+Interface** operator&( ) throw( );   
 operator bool( ) const throw( );  
 ```  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
   
--   **operator Interface\*** Gibt den gekapselten Schnittstellenzeiger zurück, der möglicherweise **NULL** ist.  
+-   **Operator Interface\* ** gibt den gekapselten Schnittstellenzeiger, der möglicherweise **NULL**.  
   
--   **operator Interface&** Gibt einen Verweis auf den gekapselten Schnittstellenzeiger zurück, und gibt eine Fehlermeldung heraus, wenn der Zeiger **NULL** ist.  
+-   **Operator Interface &** gibt einen Verweis auf den gekapselten Schnittstellenzeiger und gibt einen Fehler aus, wenn der Zeiger **NULL**.  
   
--   **operator\*** Ermöglicht es einem intelligenten Zeigerobjekt, so zu fungieren, als wäre es die tatsächliche gekapselte Schnittstelle beim Dereferenzieren.  
+-   **Operator\* ** ermöglicht es einem intelligenten Zeigerobjekt fungieren, als wäre es die tatsächliche gekapselte Schnittstelle beim Dereferenzieren.  
   
--   **operator\-\>** Ermöglicht es einem intelligenten Zeigerobjekt, so zu fungieren, als wäre es die tatsächliche gekapselte Schnittstelle beim Dereferenzieren.  
+-   **Operator ->** ermöglicht es einem intelligenten Zeigerobjekt fungieren, als wäre es die tatsächliche gekapselte Schnittstelle beim Dereferenzieren.  
   
--   **operator&** Gibt jeden gekapselten Schnittstellenzeiger frei, ersetzt ihn durch **NULL** und gibt die Adresse des gekapselten Zeigers zurück.  Dies ermöglicht es dem intelligenten Zeiger, durch eine Adresse einer Funktion übergeben zu werden, die einen **out**\-Parameter hat, durch den sie einen Schnittstellenzeiger zurückgibt.  
+-   **Operator &** gibt jeden gekapselten Schnittstellenzeiger, ersetzt ihn durch frei **NULL**, und gibt die Adresse des gekapselten Zeigers zurück. Dies ermöglicht es den intelligenten Zeiger, durch die Adresse an eine Funktion übergeben zu werden, ein **out** Parameter, die über den er gibt einen Schnittstellenzeiger zurück.  
   
--   **operator bool** Ermöglicht die Verwendung eines intelligenten Zeigerobjekts in einem bedingten Ausdruck.  Dieser Operator gibt **true** zurück, wenn der Zeiger nicht **NULL** ist.  
+-   **Operator Bool** ermöglicht es einem intelligenten Zeigerobjekt, die in einem bedingten Ausdruck verwendet werden. Dieser Operator gibt **"true"** ist der Zeiger nicht **NULL**.  
   
- **END Microsoft\-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
- [\_com\_ptr\_t\-Klasse](../cpp/com-ptr-t-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [_com_ptr_t-Klasse](../cpp/com-ptr-t-class.md)
