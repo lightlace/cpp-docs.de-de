@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- address-of
+- '&'
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -46,7 +46,6 @@ ms.lasthandoff: 09/25/2017
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 & cast-expression  
 ```  
   
@@ -136,3 +135,4 @@ int main() {
  [Integrierte C++-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Lvalue-Verweisdeklarator: &](../cpp/lvalue-reference-declarator-amp.md)   
  [Dereferenzierungs- und Address-of-Operatoren](../c-language/indirection-and-address-of-operators.md)
+
