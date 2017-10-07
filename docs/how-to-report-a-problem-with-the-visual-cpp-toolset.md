@@ -15,14 +15,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
 ms.openlocfilehash: 2ea129ac94cb1ddc7486ba69280dc0390896e088
+ms.contentlocale: de-de
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Melden eines Problems mit dem Visual C++-Toolset
@@ -40,7 +37,7 @@ Wenn Sie Probleme mit dem Visual C++-Compiler, -Linker oder anderen Tools haben,
   
  Ihre Berichte sind wichtig für uns und andere Entwickler wie Sie. Vielen Dank für Ihren Beitrag zur Verbesserung von Visual C++!  
   
-##  <a name="a-namepreparea-how-to-prepare-your-report"></a><a name="prepare"></a> Vorbereiten des Berichts  
+##  <a name="prepare"></a> Vorbereiten des Berichts  
  Das Erstellen eines Berichts hoher Qualität ist wichtig, da es sehr schwierig ist, das bei Ihnen aufgetretene Problem auf unseren Computern zu reproduzieren, wenn die Informationen nicht vollständig sind. Je besser Ihr Bericht, desto effektiver können wir das Problem reproduzieren und untersuchen.  
   
  Ihr Bericht sollte mindestens die folgenden Elemente enthalten:  
@@ -144,7 +141,7 @@ INTERNAL COMPILER ERROR in 'd:\o\dev\otools\bin\x64\cl.exe'
     Help menu, or open the Technical Support help file for more information   
 ```  
   
-####  <a name="a-namebackendcrasha-backend-code-generation-crash"></a><a name="backend_crash"></a> Back-End-Absturz (Codegenerierung)  
+####  <a name="backend_crash"></a> Back-End-Absturz (Codegenerierung)  
  Back-End-Abstürze erfolgen in der Codegenerierungsphase des Compilers. Der Compiler gibt in der Regel [Schwerwiegender Fehler C1001](error-messages/compiler-errors-1/fatal-error-c1001.md) aus und verweist ggf. nicht auf die Quellcodedatei und Zeilennummer, in der das Problem aufgetreten ist. Häufig wird eine Datei des Typs „compiler\utc\src\p2\main.c“ erwähnt, was Sie jedoch ignorieren können.  
   
  Stellen Sie bei dieser Art des Absturzes bei Verwendung von Link-Zeitcodegenerierung (Link-Time Code Generation, LTCG) eine [Linkreproduktion](#link_repro) oder andernfalls eine [vorverarbeitete Reproduktion](#preprocessed_repro) bereit. LTGC wird aktiviert, indem „cl.exe“ das Befehlszeilenargument `/GL` angegeben wird.  
@@ -217,7 +214,7 @@ CONTEXT:
   
  Stellen Sie bei dieser Art des Absturzes bei Verwendung von Link-Zeitcodegenerierung (Link-Time Code Generation, LTCG) eine [Linkreproduktion](#link_repro) oder andernfalls eine [vorverarbeitete Reproduktion](#preprocessed_repro) bereit. LTGC wird aktiviert, indem „cl.exe“ das Befehlszeilenargument `/GL` angegeben wird.  
   
-##  <a name="a-namesenda-ways-to-send-your-report"></a><a name="send"></a> Möglichkeiten zum Senden Ihres Berichts  
+##  <a name="send"></a> Möglichkeiten zum Senden Ihres Berichts  
  Es gibt mehrere Möglichkeiten, uns Ihren Bericht zu übermitteln. Sie können einen Fehler auf Microsoft Connect melden, uns eine E-Mail senden oder das in Visual Studio integrierte Tool „Problem melden“ verwenden. Die beste Wahl für Ihren Bericht hängt von der Art des aufgetretenen Problems und davon ab, wie Sie sich mit den Entwicklern austauschen möchten, die Ihren Bericht untersuchen. Ein weiterer Aspekt ist, ob Sie den Status nachverfolgen oder Ihren Bericht mit der Community teilen möchten.  
   
 > [!NOTE]
@@ -268,7 +265,7 @@ Source code and repro steps:
 > [!TIP]
 >  Für andere Arten von Problemen, die ggf. in Visual Studio auftreten und ohne Beziehung zum Toolset sind (z.B. Probleme mit der Benutzeroberfläche, gestörte IDE-Funktionen oder allgemeine Abstürze), kann das Tool „Problem melden“ eine gute Wahl sein, und zwar aufgrund seiner Funktionen für Screenshots und zum Aufzeichnen von Aktionen auf der Benutzeroberfläche, die zum aufgetretenen Problem geführt haben. Microsoft Connect kann auch eine gute Wahl für die Berichterstattung dieser anderen Arten von Fehlern sein, bietet jedoch nicht die zusätzlichen Funktionen des Tools „Problem melden“. Diese anderen Arten von Fehlern dürfen Sie auf keinen Fall durch Senden einer E-Mail an compilercrash@microsoft.com melden.  
   
-##  <a name="a-namegeneratea-generating-repros"></a><a name="generate"></a> Generieren von Reproduktionen  
+##  <a name="generate"></a> Generieren von Reproduktionen  
  Eine Reproduktion ist ein vollständiges und unabhängiges Codebeispiel, das das Problem veranschaulicht, das Sie melden. Eine Reproduktion ist **kein** Codeausschnitt, sondern muss ein vollständiges Beispiel sein, für das ein Build erstellt wird und die Ausführung erfolgt (bzw. erfolgen würde, wenn es die Probleme nicht gäbe, die Sie melden). Es muss alle erforderlichen #include-Direktiven, sogar für die Standardheader, enthalten.  
   
  Es folgen weitere Eigenschaften einer guten Reproduktion:  
@@ -285,7 +282,7 @@ Source code and repro steps:
   
  Es folgenden Anweisungen zum Generieren der verschiedenen Arten von Reproduktionen, mit deren Hilfe Sie verschiedene Arten von Problemen melden.  
   
-###  <a name="a-namepreprocessedreproa-preprocessed-repos"></a><a name="preprocessed_repro"></a> Vorverarbeitete Reproduktionen  
+###  <a name="preprocessed_repro"></a> Vorverarbeitete Reproduktionen  
  Eine vorverarbeitete Reproduktion ist eine einzelne Quelldatei, die ein Problem veranschaulicht und aus der Ausgabe des C-Präprozessors generiert wurde, indem die ursprüngliche Quelldatei verarbeitet wurde. Bei diesem Prozess wird für eingeschlossene Header „inline“ angegeben, um Abhängigkeiten von zusätzlichen Quell- und Headerdateien zu entfernen und zudem Makros, ifdefs und andere Präprozessorbefehle aufzulösen, die von Ihrer lokalen Umgebung abhängig sein könnten.  
   
 > [!NOTE]
@@ -313,7 +310,7 @@ Source code and repro steps:
   
  Fügen Sie schließlich diese Reproduktion an Ihren Bericht an.  
   
-###  <a name="a-namelinkreproa-link-repros"></a><a name="link_repro"></a> Linkreproduktionen  
+###  <a name="link_repro"></a> Linkreproduktionen  
  Eine Linkreproduktion ist ein einzelnes Verzeichnis mit Buildartefakten, die zusammen ein Problem veranschaulichen, das zur Verknüpfungszeit auftritt. Dies kann ein Back-End-Absturz bei Verwenden von LTCG (Link-Time Code Generation, Link-Zeitcodegenerierung) oder Linkerabsturz sein. Die enthaltenen Buildartefakte sind diejenigen, die als Linkereingabe benötigt werden, damit das Problem reproduziert werden kann. Linkreproduktionen können problemlos mithilfe der Funktionen erstellt werden, die der Linker bietet.  
   
 ##### <a name="to-generate-a-link-repro"></a>So generieren Sie eine Linkreproduktion:  
@@ -332,12 +329,7 @@ Source code and repro steps:
   
  Packen Sie abschließend die Reproduktion durch Komprimieren des gesamten Verzeichnisses in einer ZIP-Datei o.ä., und fügen Sie sie an Ihren Bericht an.  
   
-###  <a name="a-nameotherreprosa-other-repros"></a><a name="other_repros"></a> Andere Reproduktionen  
+###  <a name="other_repros"></a> Andere Reproduktionen  
  Wenn Sie das Problem nicht auf eine einzelne Quelldatei oder vorverarbeitete Reproduktion reduzieren können und das Problem keine Linkreproduktion verlangt, können wir ein IDE-Projekt untersuchen. Der Code im Projekt darf weiter nur minimal sein, wobei weiter alle in diesem Dokument beschriebenen Leitlinien gelten.  
   
  Erstellen Sie Ihre Reproduktion als minimales IDE-Projekt, und erstellen Sie dann ein Paket, indem Sie die gesamte Verzeichnisstruktur in einer ZIP-Datei o.ä. komprimieren und diese an Ihren Bericht anfügen.
-
-
-<!--HONumber=Feb17_HO4-->
-
-
