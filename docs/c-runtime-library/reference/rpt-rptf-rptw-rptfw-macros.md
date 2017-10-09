@@ -99,30 +99,15 @@ caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: ca0ae546af28c342db2e452bec432ced0437738a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 43efb76381db85f4f1d601cb6d83dd82074e960a
 ms.contentlocale: de-de
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT-, _RPTF-, _RPTW- und _RPTFW-Makros
-Verfolgt den Status einer Anwendung durch Generieren eines Debugberichts (nur in der Debugversion). Beachten Sie, dass *n* die Anzahl der Argumente in `args` angibt und 0, 1, 2, 3, 4 oder 5 sein kann.  
+Verfolgt den Status einer Anwendung durch Generieren eines Debugberichts (nur in der Debugversion). Beachten Sie, dass  *n*  gibt die Anzahl von Argumenten in `args` und 0, 1, 2, 3, 4 oder 5 sein können.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -169,7 +154,7 @@ _RPTFWn(
   
  Die `_RPTW`- und `_RPTFW`-Makros sind Breitzeichenversionen dieser Makros. Sie verhalten sich wie `wprintf` und nehmen Argumente mit Breitzeichen entgegen.  
   
- Die `_RPT`-Makros rufen die [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)-Funktion auf, um einen Debugbericht mit einer Benutzermeldung zu erstellen. Die `_RPTW`-Makros rufen die `_CrtDbgReportW`-Funktion auf, um den gleichen Berichts mit Breitzeichen zu generieren. Die `_RPTF`- und `_RPTFW`-Makros erstellen einen Debugbericht mit der Quelldatei und der Zeilennummer, in denen das Berichtsmakro zusätzlich zur Benutzermeldung aufgerufen wurde. Die Benutzermeldung wird erstellt, indem die `arg`[*n*]-Argumente in der `format`-Zeichenfolge ersetzt werden und dabei die gleichen Regeln verwendet werden, die auch von der [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)-Funktion definiert sind.  
+ Die `_RPT`-Makros rufen die [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)-Funktion auf, um einen Debugbericht mit einer Benutzermeldung zu erstellen. Die `_RPTW`-Makros rufen die `_CrtDbgReportW`-Funktion auf, um den gleichen Berichts mit Breitzeichen zu generieren. Die `_RPTF`- und `_RPTFW`-Makros erstellen einen Debugbericht mit der Quelldatei und der Zeilennummer, in denen das Berichtsmakro zusätzlich zur Benutzermeldung aufgerufen wurde. Die Meldung für den Benutzer wird erstellt, durch das Ersetzen der `arg`[*n*]-Argumente der `format` "string", mit den gleichen Regeln der [Printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) Funktion.  
   
  `_CrtDbgReport` oder `_CrtDbgReportW` generiert den Debugbericht und bestimmt seine Ziele, basierend auf den aktuellen Berichtsmodi und der für `reportType` definierten Datei. Die Funktionen [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) und [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md) werden verwendet, um die Ziele für jeden Berichtstyp zu definieren.  
   

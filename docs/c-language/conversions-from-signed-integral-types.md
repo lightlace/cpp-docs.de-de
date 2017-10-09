@@ -21,25 +21,11 @@ caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: d7ed58066cecc42492f3b163b130ff8a4ef53ed0
+ms.translationtype: HT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: ccda8d6fa2573245f34a38f327395955bf92fdc2
 ms.contentlocale: de-de
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="conversions-from-signed-integral-types"></a>Konvertierungen von ganzzahligen Typen mit Vorzeichen
@@ -54,7 +40,7 @@ printf_s( "%hu\n", u );  // Prints 65533
   
 ```  
   
- Beim Konvertieren einer Ganzzahl mit Vorzeichen in einen Gleitkommawert gehen keine Informationen verloren, wenn jedoch ein**long int**- oder **unsigned long int**-Wert in einen **float**-Wert konvertiert wird, wirkt sich dies geringfügig auf die Genauigkeit aus.  
+ Beim Konvertieren einer Ganzzahl mit Vorzeichen in einen Gleitkommawert gehen keine Informationen verloren, wenn jedoch ein **long int**- oder **unsigned long int**-Wert in einen **float**-Wert konvertiert wird, wirkt sich dies geringfügig auf die Genauigkeit aus.  
   
  In der folgenden Tabelle sind die Konvertierungen von ganzzahligen Typen mit Vorzeichen zusammengefasst. In dieser Tabelle wird davon ausgegangen, dass der Typ **char** standardmäßig ein Vorzeichen hat. Wenn Sie eine Kompilierzeitoption verwenden, um den Standardwert für den **char**-Typ in einen Typ ohne Vorzeichen zu ändern, gelten die Konvertierungen aus der Tabelle [Conversions from Unsigned Integral Types (Konvertierungen von integralen Typen ohne Vorzeichen)](../c-language/conversions-from-unsigned-integral-types.md) für den Typ **unsigned char** anstelle der Konvertierungen in der folgenden Tabelle „Konvertierungen von integralen Typen mit Vorzeichen“.  
   

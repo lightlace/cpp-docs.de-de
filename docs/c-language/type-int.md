@@ -21,10 +21,10 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: 921cd8a91ecc1fe3cc746c23a79928fef9142ecc
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: cdf2a76e75b7ca453b908af586954454f7ce09f2
 ms.contentlocale: de-de
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="type-int"></a>Typ "int"

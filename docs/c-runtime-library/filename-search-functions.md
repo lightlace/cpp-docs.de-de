@@ -30,26 +30,11 @@ caps.latest.revision: 26
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: c802f99eab05ea59971c69c53f999f1b8f12240f
+ms.translationtype: HT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ee67049241067285f564e59791f408347cc0c747
 ms.contentlocale: de-de
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="filename-search-functions"></a>Dateinamen-Suchfunktionen
@@ -108,7 +93,7 @@ Diese Funktionen suchen nach angegebenen Dateinamen und schließen die Suche ab:
  `_A_SYSTEM`  
  Systemdatei. In der Regel mit dem Befehl **DIR** nicht angezeigt, es sei denn, die Option **/A** oder **/A:S** wird angegeben. Wert: 0x04.  
   
- `_findnext` sucht den nächsten Namen, falls vorhanden, der mit dem `filespec`-Argument übereinstimmt, das in einem vorhergegangenen Aufruf von `_findfirst` angegeben wurde. Das `fileinfo` -Argument sollte auf eine Struktur verweisen, die durch den vorhergehenden Aufruf von `_findfirst`initialisiert wurde. Wenn eine Übereinstimmung gefunden wird, wird der Inhalt der `fileinfo` -Struktur wie zuvor beschrieben geändert. Andernfalls bleibt er unverändert. `_findclose` schließt das angegebene Suchhandle und gibt alle zugeordneten Ressourcen sowohl für `_findfirst` als auch für `_findnext` frei. Das von `_findfirst` oder `_findnext` zurückgegebene Handle muss zuerst an `_findclose`übergeben werden, bevor Änderungsvorgänge, wie etwa Löschen, für die Verzeichnisse ausgeführt werden können, die in den übergebenen Pfaden vorkommen.  
+ `_findnext` sucht den nächsten Namen, falls vorhanden, der mit dem `filespec` -Argument übereinstimmt, das in einem vorhergegangenen Aufruf von `_findfirst`angegeben wurde. Das `fileinfo` -Argument sollte auf eine Struktur verweisen, die durch den vorhergehenden Aufruf von `_findfirst`initialisiert wurde. Wenn eine Übereinstimmung gefunden wird, wird der Inhalt der `fileinfo` -Struktur wie zuvor beschrieben geändert. Andernfalls bleibt er unverändert. `_findclose` schließt das angegebene Suchhandle und gibt alle zugeordneten Ressourcen sowohl für `_findfirst` als auch für `_findnext`frei. Das von `_findfirst` oder `_findnext` zurückgegebene Handle muss zuerst an `_findclose`übergeben werden, bevor Änderungsvorgänge, wie etwa Löschen, für die Verzeichnisse ausgeführt werden können, die in den übergebenen Pfaden vorkommen.  
   
  Die `_find` -Funktionen können verschachtelt werden. Wenn ein Aufruf von `_findfirst` oder `_findnext` beispielsweise feststellt, dass sich die Datei in einem Unterverzeichnis befindet, kann eine neue Suche mit einem weiteren Aufruf von `_findfirst` oder `_findnext`eingeleitet werden.  
   
@@ -116,9 +101,9 @@ Diese Funktionen suchen nach angegebenen Dateinamen und schließen die Suche ab:
   
  `_findfirst` und `_findnext` verwenden den 64-Bit-Uhrzeittyp. Wenn Sie stattdessen den alten 32-Bit-Uhrzeittyp verwenden müssen, können Sie `_USE_32BIT_TIME_T`definieren. Die Versionen dieser Funktionen, die das `32` -Suffix im Namen aufweisen, verwenden den 32-Bit-Uhrzeittyp, und die mit dem `64` -Suffix verwenden den 64-Bit-Uhrzeittyp.  
   
- Die Funktionen `_findfirst32i64`, `_findnext32i64`, `_wfindfirst32i64`und `_wfindnext32i64` verhalten sich ebenfalls identisch wie die Versionen dieser Funktionen mit dem 32-Bit-Uhrzeittyp, mit dem Unterschied, dass sie 64-Bit-Dateilängen verwenden und zurückgeben. Die Funktionen `_findfirst64i32`, `_findnext64i32`, `_wfindfirst64i32` und `_wfindnext64i32` verwenden den 64-Bit-Uhrzeittyp, aber Dateilängen von 32 Bit. Diese Funktionen verwenden entsprechende Varianten des `_finddata_t` -Typs, bei denen die Felder verschiedene Typen für die Uhrzeit und die Dateigröße aufweisen.  
+ Die Funktionen `_findfirst32i64`, `_findnext32i64`, `_wfindfirst32i64`und `_wfindnext32i64` verhalten sich ebenfalls identisch wie die Versionen dieser Funktionen mit dem 32-Bit-Uhrzeittyp, mit dem Unterschied, dass sie 64-Bit-Dateilängen verwenden und zurückgeben. Die Funktionen `_findfirst64i32`, `_findnext64i32`, `_wfindfirst64i32`und `_wfindnext64i32` verwenden den 64-Bit-Uhrzeittyp, aber Dateilängen von 32 Bit. Diese Funktionen verwenden entsprechende Varianten des `_finddata_t` -Typs, bei denen die Felder verschiedene Typen für die Uhrzeit und die Dateigröße aufweisen.  
   
- `_finddata_t` ist eigentlich ein Makro, das zu `_finddata64i32_t` ausgewertet wird (oder `_finddata32_t`, wenn `_USE_32BIT_TIME_T` definiert ist). In der folgenden Tabelle sind die Varianten von `_finddata_t`zusammengefasst:  
+ `_finddata_t` ist tatsächlich ein Makro, das zu `_finddata64i32_t` ausgewertet wird (oder `_finddata32_t` , wenn `_USE_32BIT_TIME_T` definiert ist). In der folgenden Tabelle sind die Varianten von `_finddata_t`zusammengefasst:  
   
 |Struktur|Uhrzeittyp|Dateigrößentyp|  
 |---------------|---------------|--------------------|  

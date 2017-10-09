@@ -30,25 +30,11 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 65541d9e6f15bcc56811fa6a5d9d168737131108
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 1e6bf79ce5de5d19468b3cbb230e16882483dc30
 ms.contentlocale: de-de
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase-Klasse
@@ -93,11 +79,11 @@ class CComPtrBase
 |----------|-----------------|  
 |[CComPtrBase::operator T *](#operator_t_star)|Der Cast-Operator.|  
 |[CComPtrBase::operator!](#operator_not)|Der NOT-Operator.|  
-|[CComPtrBase::operator /](#operator_amp)|Die / Operator.|  
+|[CComPtrBase::operator &](#operator_amp)|Der &-Operator.|  
 |[CComPtrBase::operator *](#operator_star)|Der *-Operator.|  
-|[CComPtrBase::operator](#ccomptrbase__operator lt)|Kleiner-als-Operator.|  
+|[CComPtrBase::operator <](#ccomptrbase__operator lt)|Kleiner-als-Operator.|  
 |[CComPtrBase::operator ==](#operator_eq_eq)|Den Gleichheitsoperator.|  
-|[CComPtrBase::operator->](#operator_ptr)|Der Zeiger auf Member-Operator.|  
+|[CComPtrBase::operator ->](#operator_ptr)|Der Zeiger auf Member-Operator.|  
   
 ### <a name="public-data-members"></a>Öffentliche Datenmember  
   
@@ -238,7 +224,7 @@ bool IsEqualObject(IUnknown* pOther) throw();
   
 ### <a name="parameters"></a>Parameter  
  `pOther`  
- Die **IUnknown \*** , verglichen werden soll.  
+ Die **IUnknown \***  , verglichen werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt "true" zurück, wenn die Objekte identisch, andernfalls false sind.  
@@ -254,7 +240,7 @@ bool operator!() const throw();
  Gibt "true" zurück, wenn die `CComHeapPtr` Zeiger gleich NULL, "false" andernfalls.  
   
 ##  <a name="operator_amp"></a>CComPtrBase::operator&amp;  
- Die / Operator.  
+ Der &-Operator.  
   
 ```
 T** operator&() throw();

@@ -20,25 +20,11 @@ caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 034a59533307f294788e5d690f9ca7dfc037c859
+ms.translationtype: HT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: 1fda4b8a6c530d494640d486227d3bdda25ea728
 ms.contentlocale: de-de
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="implementation-defined-behavior"></a>Von der Implementierung abhängiges Verhalten
@@ -47,7 +33,7 @@ ANSI X3.159-1989 (*American National Standard for Information Systems* - *Progra
  Dieser Abschnitt hat die gleiche Reihenfolge wie der ANSI-Abschnitt. Jedes berücksichtigte Element enthält Verweise auf das ANSI-Format, das das implementierungsdefinierte Verhalten erläutert.  
   
 > [!NOTE]
->  Dieser Abschnitt beschreibt nur die US- amerikanische Sprachversion des C-Compilers. Implementierungen von Microsoft C für andere Sprachen können sich geringfügig unterscheiden.  
+>  In diesem Abschnitt wird beschrieben, die USA Englische Sprachversion von der C-Compiler. Implementierungen von Microsoft C für andere Sprachen können sich geringfügig unterscheiden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [C-Sprachreferenz](../c-language/c-language-reference.md)

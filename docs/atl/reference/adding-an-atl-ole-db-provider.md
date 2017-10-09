@@ -1,42 +1,47 @@
 ---
-title: "Hinzuf&#252;gen eines ATL-OLE DB-Anbieters | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL-OLE DB-Anbieter"
-  - "ATL-Projekte, Hinzufügen von ATL-OLE DB-Anbietern"
-  - "OLE DB, Hinzufügen von ATL-OLE DB-Anbietern zu Projekten"
+title: "Hinzufügen eines ATL-OLE DB-Anbieters | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE DB, adding ATL OLE DB provider to projects
+- ATL projects, adding ATL OLE DB providers
+- ATL OLE DB providers
 ms.assetid: 26fba1e3-880f-4bc6-90e5-2096a48a3a6c
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Hinzuf&#252;gen eines ATL-OLE DB-Anbieters
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: b71664847041d54d6aa86b1c013627e7ad7029d0
+ms.contentlocale: de-de
+ms.lasthandoff: 10/09/2017
 
-Mithilfe dieses Assistenten fügen Sie einem Projekt einen ATL\-OLE DB\-Anbieter hinzu.  Ein ATL\-OLE DB\-Anbieter umfasst eine Datenquelle, eine Sitzung, einen Befehl und Rowsetklassen.  Es ist erforderlich, dass das Projekt als ATL COM\-Anwendung erstellt wurde.  
+---
+# <a name="adding-an-atl-ole-db-provider"></a>Hinzufügen eines ATL-OLE DB-Anbieters
+Verwenden Sie diesen Assistenten zum Hinzufügen von ATL-OLE DB-Anbieter zu einem Projekt ein. ATL-OLE DB-Anbieter besteht aus einer Datenquelle, Sitzung Befehl und Schemarowset-Klassen. Das Projekt muss als eine ATL-COM-Anwendung erstellt wurde.  
   
-### So fügen Sie dem Projekt einen ATL\-OLE DB\-Anbieter hinzu  
+### <a name="to-add-an-atl-ole-db-provider-to-your-project"></a>ATL-OLE DB-Anbieter zum Projekt hinzufügen  
   
-1.  Klicken Sie in der Klassenansicht mit der rechten Maustaste auf das Projekt.  Klicken Sie im Kontextmenü auf **Hinzufügen** und dann auf **Klasse hinzufügen**.  
+1.  In der Klassenansicht mit der rechten Maustaste des Projekts. Klicken Sie im Kontextmenü auf **hinzufügen** , und klicken Sie dann auf **Klasse hinzufügen**.  
   
-2.  Doppelklicken Sie im Visual C\+\+\-Ordner auf das Symbol **ATL\-OLE DB\-Anbieter**, oder markieren Sie es, und klicken Sie auf **Öffnen**.  
+2.  Doppelklicken Sie in der Visual C++-Ordner auf dem **ATL-OLE DB-Anbieter** Symbol oder wählen Sie ihn, und klicken Sie auf **öffnen**.  
   
-     Der ATL\-OLE DB\-Anbieter\-Assistent wird geöffnet.  
+     Der ATL-OLE DB-Anbieter-Assistent wird geöffnet.  
   
-3.  Legen Sie die Einstellungen fest, wie unter [ATL\-OLE DB\-Anbieter\-Assistent](../../atl/reference/atl-ole-db-provider-wizard.md) beschrieben.  
+3.  Hiermit werden Einstellungen wie in beschrieben [ATL-OLE DB-Anbieter-Assistenten](../../atl/reference/atl-ole-db-provider-wizard.md).  
   
-4.  Klicken Sie auf **Fertig stellen**, um den Assistenten zu schließen. Daraufhin wird der neu erstellte Code für den OLE DB\-Anbieter in das Projekt eingefügt.  
+4.  Klicken Sie auf **Fertig stellen** zum Schließen des Assistenten, die den neu erstellten OLE DB-Anbieter-Code in Ihrem Projekt eingefügt wird.  
   
-## Siehe auch  
- [Hinzufügen neuer Funktionen mit Code\-Assistenten](../../ide/adding-functionality-with-code-wizards-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [Hinzufügen neuer Funktionen mit Code-Assistenten](../../ide/adding-functionality-with-code-wizards-cpp.md)
+
+

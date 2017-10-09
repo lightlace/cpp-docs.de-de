@@ -1,46 +1,49 @@
 ---
-title: "_countof-Makro | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_countof"
-  - "countof"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_countof-Makro"
-  - "countof-Makro"
+title: _countof-Makro | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _countof
+- countof
+dev_langs:
+- C++
+helpviewer_keywords:
+- countof macro
+- _countof macro
 ms.assetid: 86198767-f7e5-4beb-898d-3cbbf60350a3
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# _countof-Makro
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: 71d4310525f1d96184749b5b0b24cb0cf1da8512
+ms.contentlocale: de-de
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="countof-macro"></a>_countof-Makro
 Berechnen Sie die Anzahl von Elementen in einem statisch zugeordneten Array.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 size_t _countof(   
@@ -48,23 +51,23 @@ size_t _countof(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `array`  
  Der Name eines Arrays.  
   
-## Rückgabewert  
+## <a name="return-value"></a>Rückgabewert  
  Die Anzahl der Elemente im Array als `size_t` ausgedrückt.  
   
-## Hinweise  
- Stellen Sie sicher, `array` tatsächlich ein Array ist, und kein Zeiger.  `_countof` erzeugt in C fehlerhafte Ergebnisse, wenn `array` ein Zeiger ist.  `_countof` generiert einen Kompilierungsfehler in C, wenn `array` ein Zeiger ist.  
+## <a name="remarks"></a>Hinweise  
+ Stellen Sie sicher, `array` tatsächlich ein Array ist, und kein Zeiger. `_countof` erzeugt in C fehlerhafte Ergebnisse, wenn `array` ein Zeiger ist. `_countof` generiert einen Kompilierungsfehler in C, wenn `array` ein Zeiger ist.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Makro|Erforderlicher Header|  
-|-----------|---------------------------|  
-|`_countof`|\<stdlib.h\>|  
+|-----------|---------------------|  
+|`_countof`|\<stdlib.h>|  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_countof.cpp  
@@ -86,7 +89,10 @@ int main( void )
 }  
 ```  
   
-  **sizeof\(arr\) \= 40 bytes**  
-**\_countof\(arr\) \= 20 elements**   
-## Siehe auch  
- [sizeof\-Operator](../../cpp/sizeof-operator.md)
+```Output  
+sizeof(arr) = 40 bytes  
+_countof(arr) = 20 elements  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [sizeof Operator](../../cpp/sizeof-operator.md)

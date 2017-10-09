@@ -1,46 +1,51 @@
 ---
-title: "Schnittstellen, ATL-Steuerelement-Assistent | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "vc.codewiz.class.atl.control.interfaces"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL-Steuerelement-Assistent, Schnittstellen"
+title: Schnittstellen, ATL-Steuerelement-Assistent | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- vc.codewiz.class.atl.control.interfaces
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL Control Wizard, interfaces
 ms.assetid: 971eadcd-6a1e-46f2-b8fe-ee6b53dfe3ea
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Schnittstellen, ATL-Steuerelement-Assistent
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: d3d93dc4e80178b1bdd90a6fe86e4a6f051f77f4
+ms.contentlocale: de-de
+ms.lasthandoff: 10/09/2017
 
-Auf dieser Seite des Assistenten werden die vom Steuerelement unterstützten Schnittstellen angegeben.  Unterstützte Schnittstellen sind standardmäßig Schnittstellen, die normalerweise von den meisten Containern verwendet werden.  
+---
+# <a name="interfaces-atl-control-wizard"></a>Schnittstellen, ATL-Steuerelement-Assistent
+Auf dieser Seite des Assistenten identifiziert die Schnittstellen, die das Steuerelement unterstützt. Standardmäßig sind die unterstützten Schnittstellen in der Regel von den meisten Containern verwendet.  
   
 > [!NOTE]
->  Wenn Sie auf der Registerkarte [Optionen](../../atl/reference/options-atl-control-wizard.md) die Option **Minimal\-Steuerelement** ausgewählt haben, werden im Listenfeld **Unterstützt** standardmäßig keine Schnittstellen angezeigt.  
+>  Wenn Sie ausgewählt haben **nur minimale Kontrolle** auf die [Optionen](../../atl/reference/options-atl-control-wizard.md) Registerkarte keine Schnittstellen angezeigt wird, wird standardmäßig in der **unterstützte** Listenfeld.  
   
- **Nicht unterstützt**  
- Gibt die verfügbaren Schnittstellen an, die derzeit nicht für das Steuerelement unterstützt werden.  
+ **Nicht unterstützt.**  
+ Gibt an, die verfügbaren Schnittstellen, die derzeit für das Steuerelement nicht unterstützt.  
   
  **Unterstützt**  
- Gibt die Schnittstellen an, die derzeit für das Steuerelement unterstützt werden.  
+ Gibt an, die Schnittstellen, die derzeit für das Steuerelement unterstützt werden.  
   
-|Übertragungsschaltfläche|Description|  
-|------------------------------|-----------------|  
-|**\>**|Fügt der Liste **Unterstützt** die derzeit in der Liste **Nicht unterstützt** markierte Schnittstelle hinzu.|  
-|**\>\>**|Fügt der Liste **Unterstützt** alle in der Liste **Nicht unterstützt** verfügbaren Schnittstellen hinzu.|  
-|**\<**|Entfernt die derzeit markierte Schnittstelle aus der Liste **Unterstützt**.|  
-|**\<\<**|Entfernt alle derzeit in der Liste **Unterstützt** enthaltenen Schnittstellen aus der Liste.|  
+|Übertragen Sie die Schaltfläche|Beschreibung|  
+|---------------------|-----------------|  
+|**>**|Hinzugefügt, die **unterstützte** Liste der derzeit im ausgewählten Schnittstellenname der **nicht unterstützt** Liste.|  
+|**>>**|Hinzugefügt der **unterstützte** Liste alle Schnittstellennamen zur Verfügung, in der **nicht unterstützt** Liste.|  
+|**<**|Entfernt die derzeit im ausgewählten Schnittstelle die **unterstützte** Liste.|  
+|**<<**|Entfernt alle derzeit aufgeführt Schnittstellennamen, der **unterstützte** Liste.|  
   
-## Siehe auch  
- [ATL\-Steuerelement\-Assistent](../../atl/reference/atl-control-wizard.md)
+## <a name="see-also"></a>Siehe auch  
+ [ATL-Steuerelement-Assistent](../../atl/reference/atl-control-wizard.md)
+
+

@@ -43,25 +43,11 @@ caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e213247266cad2c0f96b96057cf8e6933dfe45c6
+ms.translationtype: MT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: 6d8beea978bcbd6aaf876c92a2ff80d3b8325b93
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="kbhit"></a>_kbhit
@@ -78,10 +64,10 @@ int _kbhit( void );
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- `_kbhit` gibt einen Wert ungleich&0; (null) zurück, wenn eine Taste gedrückt wurde. Andernfalls wird 0 (null) zurückgegeben.  
+ `_kbhit` gibt einen Wert ungleich 0 (null) zurück, wenn eine Taste gedrückt wurde. Andernfalls wird 0 (null) zurückgegeben.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `_kbhit`-Funktion überprüft die Konsole auf eine neue Tastatureingabe. Wenn die Funktion einen Wert ungleich&0; (null) zurückgibt, befindet sich eine Tastatureingabe im Puffer. Das Programm kann dann `_getch` oder `_getche` aufrufen, um die Tastatureingabe zu erhalten.  
+ Die `_kbhit`-Funktion überprüft die Konsole auf eine neue Tastatureingabe. Wenn die Funktion einen Wert ungleich 0 (null) zurückgibt, befindet sich eine Tastatureingabe im Puffer. Das Programm kann dann `_getch` oder `_getche` aufrufen, um die Tastatureingabe zu erhalten.  
   
 ## <a name="requirements"></a>Anforderungen  
   

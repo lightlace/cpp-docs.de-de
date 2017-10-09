@@ -1,5 +1,5 @@
 ---
-title: Klasse CDefaultHashTraits | Microsoft-Dokumentation
+title: CDefaultHashTraits Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,29 +21,15 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 5191327e5e60935829750c7d1e04ba89fcddc771
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 932969a5d06a3bd06755ec60d43b3257a4de9785
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="cdefaulthashtraits-class"></a>CDefaultHashTraits-Klasse
-Diese Klasse stellt eine statische Funktion zur Berechnung der Hashwerte.  
+Diese Klasse stellt eine statische Funktion zum Berechnen von Hashwerten bereit.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -62,10 +48,10 @@ class CDefaultHashTraits
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CDefaultHashTraits::Hash](#hash)|(Statisch) Rufen Sie diese Funktion, um einen Hashwert für ein bestimmtes Element zu berechnen.|  
+|[CDefaultHashTraits::Hash](#hash)|(Statisch) Mit dieser Funktion können einen Hashwert für ein angegebenes Element zu berechnen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Klasse enthält eine einzelne statische Funktion, die einen Hashwert für ein bestimmtes Element zurückgibt. Diese Klasse wird verwendet, indem die [CDefaultElementTraits Klasse](../../atl/reference/cdefaultelementtraits-class.md).  
+ Diese Klasse enthält eine einzelne statische Funktion, die einen Hashwert für ein angegebenes Element zurückgibt. Diese Klasse wird verwendet, durch die [CDefaultElementTraits Klasse](../../atl/reference/cdefaultelementtraits-class.md).  
   
  Weitere Informationen finden Sie unter [ATL-Auflistungsklassen](../../atl/atl-collection-classes.md).  
   
@@ -73,7 +59,7 @@ class CDefaultHashTraits
  **Header:** atlcoll.h  
   
 ##  <a name="hash"></a>CDefaultHashTraits::Hash  
- Rufen Sie diese Funktion, um einen Hashwert für ein bestimmtes Element zu berechnen.  
+ Mit dieser Funktion können einen Hashwert für ein angegebenes Element zu berechnen.  
   
 ```
 static ULONG Hash(const T& element) throw();
@@ -87,8 +73,8 @@ static ULONG Hash(const T& element) throw();
  Gibt den Hashwert zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Standardhashalgorithmus ist sehr einfach: der Rückgabewert ist die Anzahl der Element. Überschreiben Sie diese Funktion, wenn ein komplizierter Algorithmus erforderlich ist.  
+ Der Standardhashalgorithmus ist sehr einfach: der Rückgabewert ist die Anzahl der Element. Überschreiben Sie diese Funktion, wenn ein etwas komplizierter Algorithmus erforderlich ist.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)
+ [Klassenübersicht](../../atl/atl-class-overview.md)
 

@@ -1,5 +1,5 @@
 ---
-title: _ATL_MODULE70 Struktur | Microsoft-Dokumentation
+title: _ATL_MODULE70 Struktur | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,29 +22,15 @@ caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4e393abb2a904a0f5e101efe3d78d0645664397b
-ms.openlocfilehash: ea1d87d3d500fc08f3da16de6820ca003e899419
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 104596d55ee2580cbee3cfc916ad9ef7390ce4c1
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="atlmodule70-structure"></a>_ATL_MODULE70-Struktur
-Enthält Daten, die von jedem ATL verwendet wird.  
+Enthält Daten, die von jedem ATL-Modul verwendet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -57,18 +43,18 @@ struct _ATL_MODULE70 {
 };
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
  `cbSize`  
- Die Größe der Struktur, die für die Versionskontrolle verwendet.  
+ Die Größe der Struktur, die für die versionsverwaltung verwendet.  
   
  `m_nLockCnt`  
- Verweiszähler um zu bestimmen, wie lange das Modul aktiv bleiben soll.  
+ Verweiszähler um zu bestimmen, wie lange das Modul aktiv bleiben sollen.  
   
  **m_pTermFuncs**  
- Titel-Funktionen, die aufgerufen werden, wenn ATL heruntergefahren registriert wurden.  
+ Verfolgt-Funktionen, die aufgerufen werden, wenn Sie ATL fährt registriert wurden.  
   
  **m_csStaticDataInitAndTypeInfo**  
- Verwendet, um Zugriff auf interne Daten in mehreren Threads Situationen zu koordinieren.  
+ Verwendet, um den Zugriff auf interne Daten in mehreren Threads Situationen zu koordinieren.  
   
 ## <a name="remarks"></a>Hinweise  
  [_ATL_MODULE](atl-typedefs.md#_atl_module) ist definiert als Typedef von `_ATL_MODULE70`.  

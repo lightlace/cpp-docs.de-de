@@ -37,25 +37,11 @@ caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: dbffe7023e178949f7167f283107e147ed13cb66
+ms.translationtype: MT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: 39e8b9520672c676ffec470ab2e89fccdfaf3442
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="isatty"></a>_isatty
@@ -75,7 +61,7 @@ int fd
  Dateideskriptor, der auf das zu testende Gerät verweist.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `_isatty` gibt einen Wert ungleich&0; (null) zurück, wenn ein Deskriptor einem Zeichengerät zugeordnet ist. Andernfalls gibt `_isatty` 0 zurück.  
+ `_isatty` gibt einen Wert ungleich 0 (null) zurück, wenn ein Deskriptor einem Zeichengerät zugeordnet ist. Andernfalls gibt `_isatty` 0 zurück.  
   
 ## <a name="remarks"></a>Hinweise  
  Die `_isatty`-Funktion bestimmt, ob `fd` einem Zeichengerät zugeordnet ist (Terminal, Konsole, Drucker oder serieller Anschluss).  

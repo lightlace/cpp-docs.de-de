@@ -1,5 +1,5 @@
 ---
-title: CSocketAddr-Klasse | Microsoft-Dokumentation
+title: CSocketAddr Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,29 +26,15 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: ee3f69874460d09e495a237985a98ace19134a01
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 33e82acc7b246c1c28eb991c49010f811420094b
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="csocketaddr-class"></a>CSocketAddr-Klasse
-Diese Klasse stellt Methoden zum Konvertieren von Host-Namen in Adressen, IPv4 und IPV6-Formate unterstützen.  
+Diese Klasse stellt Methoden zum Konvertieren von Hostnamen in Hostadressen, IPv4 und IPV6-Formate unterstützen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -68,16 +54,16 @@ class CSocketAddr
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CSocketAddr::FindAddr](#findaddr)|Rufen Sie diese Methode, um dem angegebenen Hostnamen in die Adresse des Hosts zu konvertieren.|  
-|[CSocketAddr::FindINET4Addr](#findinet4addr)|Rufen Sie diese Methode, um den IPv4-Hostnamen in die Adresse des Hosts zu konvertieren.|  
-|[CSocketAddr::FindINET6Addr](#findinet6addr)|Rufen Sie diese Methode, um den IPv6-Hostnamen in die Adresse des Hosts zu konvertieren.|  
+|[CSocketAddr::FindAddr](#findaddr)|Rufen Sie diese Methode, um den bereitgestellten Hostnamen in die Adresse des Hosts zu konvertieren.|  
+|[CSocketAddr::FindINET4Addr](#findinet4addr)|Rufen Sie diese Methode, um den Namen des IPv4-Hosts in die Adresse des Hosts zu konvertieren.|  
+|[CSocketAddr::FindINET6Addr](#findinet6addr)|Rufen Sie diese Methode, um die IPv6-Hostname in die Adresse des Hosts zu konvertieren.|  
 |[CSocketAddr::GetAddrInfo](#getaddrinfo)|Rufen Sie diese Methode, um die Rückgabe eines Zeigers auf ein bestimmtes Element in der **Addrinfo** Liste.|  
 |[CSocketAddr::GetAddrInfoList](#getaddrinfolist)|Rufen Sie diese Methode, um die Rückgabe eines Zeigers auf die **Addrinfo** Liste.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Klasse stellt eine IP-Version sprachunabhängigen Ansatz für die Suche nach Adressen im Netzwerk für die Verwendung mit Windows sockets-API-Funktionen und Socket-Wrapper in Bibliotheken.  
+ Diese Klasse stellt eine IP-Version agnostisch Ansatz für das Nachschlagen von Netzwerkadressen für die Verwendung mit Windows sockets-API-Funktionen und Socket-Wrappern in Bibliotheken.  
   
- Die Member dieser Klasse, die verwendet werden, um Adressen im Netzwerk zu suchen, verwenden die Win32-API-Funktion [Getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520).  
+ Die Member dieser Klasse, die verwendet werden, zum Nachschlagen von Netzwerkadressen verwenden Sie die Win32-API-Funktion [Getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520).  
   
  Diese Klasse unterstützt sowohl IPv4-Netzwerkadressen, andIPv6.  
   
@@ -95,7 +81,7 @@ CSocketAddr();
  Erstellt ein neues `CSocketAddr` -Objekt und initialisiert die verknüpfte Liste, die Antwortinformationen über den Host enthält.  
   
 ##  <a name="findaddr"></a>CSocketAddr::FindAddr  
- Rufen Sie diese Methode, um dem angegebenen Hostnamen in die Adresse des Hosts zu konvertieren.  
+ Rufen Sie diese Methode, um den bereitgestellten Hostnamen in die Adresse des Hosts zu konvertieren.  
   
 ```
 int FindAddr(
@@ -120,7 +106,7 @@ int FindAddr(
  Der Hostname oder die IP-Adresse.  
   
  *szPortOrServiceName*  
- Die Portnummer oder der Name des Diensts auf dem Host.  
+ Die Portnummer oder den Namen des Diensts auf dem Host.  
   
  `nPortNo`  
  Die Portnummer.  
@@ -129,22 +115,22 @@ int FindAddr(
  0 oder eine Kombination von AI_PASSIVE, AI_CANONNAME oder AI_NUMERICHOST.  
   
  *addr_family*  
- Adressenfamilie (z. B. PF_INET).  
+ Adressfamilie (z. B. PF_INET).  
   
  `sock_type`  
- Socket-Datentyp (z. B. SOCK_STREAM).  
+ Sockettyp (z. B. SOCK_STREAM).  
   
  *ai_proto*  
  Protokoll (z. B. IPPROTO_IP oder IPPROTO_IPV6).  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt&0; (null), wenn die Adresse erfolgreich berechnet wird. Gibt einen Wert ungleich NULL Windows Socket-Fehlercode bei einem Fehler zurück. Wenn erfolgreich, die berechnete Adresse in einer verknüpften Liste gespeichert ist, die referenziert werden kann, mit `CSocketAddr::GetAddrInfoList` und `CSocketAddr::GetAddrInfo`.  
+ Gibt 0 (null), wenn die Adresse erfolgreich berechnet wird. Gibt einen Wert ungleich NULL Windows Socket-Fehlercode bei einem Fehler zurück. Wenn erfolgreich, die berechnete Adresse in eine verknüpfte Liste gespeichert ist, die mit verwiesen werden kann `CSocketAddr::GetAddrInfoList` und `CSocketAddr::GetAddrInfo`.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Host-Name-Parameter möglicherweise entweder IPv4 oder IPv6-Format. Diese Methode ruft die Win32-API-Funktion [Getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) zum Ausführen der Konvertierung.  
+ Der Namensparameter der Host kann im IPv4- oder IPv6-Format sein. Diese Methode ruft die Win32-API-Funktion [Getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) zum Durchführen der Konvertierung.  
   
 ##  <a name="findinet4addr"></a>CSocketAddr::FindINET4Addr  
- Rufen Sie diese Methode, um den IPv4-Hostnamen in die Adresse des Hosts zu konvertieren.  
+ Rufen Sie diese Methode, um den Namen des IPv4-Hosts in die Adresse des Hosts zu konvertieren.  
   
 ```
 int FindINET4Addr(
@@ -165,16 +151,16 @@ int FindINET4Addr(
  0 oder eine Kombination von AI_PASSIVE, AI_CANONNAME oder AI_NUMERICHOST.  
   
  `sock_type`  
- Socket-Datentyp (z. B. SOCK_STREAM).  
+ Sockettyp (z. B. SOCK_STREAM).  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt&0; (null), wenn die Adresse erfolgreich berechnet wird. Gibt einen Wert ungleich NULL Windows Socket-Fehlercode bei einem Fehler zurück. Wenn erfolgreich, die berechnete Adresse in einer verknüpften Liste gespeichert ist, die referenziert werden kann, mit `CSocketAddr::GetAddrInfoList` und `CSocketAddr::GetAddrInfo`.  
+ Gibt 0 (null), wenn die Adresse erfolgreich berechnet wird. Gibt einen Wert ungleich NULL Windows Socket-Fehlercode bei einem Fehler zurück. Wenn erfolgreich, die berechnete Adresse in eine verknüpfte Liste gespeichert ist, die mit verwiesen werden kann `CSocketAddr::GetAddrInfoList` und `CSocketAddr::GetAddrInfo`.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode ruft die Win32-API-Funktion [Getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) zum Ausführen der Konvertierung.  
+ Diese Methode ruft die Win32-API-Funktion [Getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) zum Durchführen der Konvertierung.  
   
 ##  <a name="findinet6addr"></a>CSocketAddr::FindINET6Addr  
- Rufen Sie diese Methode, um den IPv6-Hostnamen in die Adresse des Hosts zu konvertieren.  
+ Rufen Sie diese Methode, um die IPv6-Hostname in die Adresse des Hosts zu konvertieren.  
   
 ```
 int FindINET6Addr(
@@ -195,13 +181,13 @@ int FindINET6Addr(
  0 oder eine Kombination von AI_PASSIVE, AI_CANONNAME oder AI_NUMERICHOST.  
   
  `sock_type`  
- Socket-Datentyp (z. B. SOCK_STREAM).  
+ Sockettyp (z. B. SOCK_STREAM).  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt&0; (null), wenn die Adresse erfolgreich berechnet wird. Gibt einen Wert ungleich NULL Windows Socket-Fehlercode bei einem Fehler zurück. Wenn erfolgreich, die berechnete Adresse in einer verknüpften Liste gespeichert ist, die referenziert werden kann, mit `CSocketAddr::GetAddrInfoList` und `CSocketAddr::GetAddrInfo`.  
+ Gibt 0 (null), wenn die Adresse erfolgreich berechnet wird. Gibt einen Wert ungleich NULL Windows Socket-Fehlercode bei einem Fehler zurück. Wenn erfolgreich, die berechnete Adresse in eine verknüpfte Liste gespeichert ist, die mit verwiesen werden kann `CSocketAddr::GetAddrInfoList` und `CSocketAddr::GetAddrInfo`.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode ruft die Win32-API-Funktion [Getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) zum Ausführen der Konvertierung.  
+ Diese Methode ruft die Win32-API-Funktion [Getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) zum Durchführen der Konvertierung.  
   
 ##  <a name="getaddrinfo"></a>CSocketAddr::GetAddrInfo  
  Rufen Sie diese Methode, um die Rückgabe eines Zeigers auf ein bestimmtes Element in der **Addrinfo** Liste.  
@@ -215,7 +201,7 @@ addrinfo* const GetAddrInfoint nIndex = 0) const;
  Ein Verweis auf ein bestimmtes Element in der [Addrinfo](http://msdn.microsoft.com/library/windows/desktop/ms737530) Liste.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt einen Zeiger auf die **Addrinfo** auf die Struktur `nIndex` in der verknüpften Liste, die Antwortinformationen über den Host enthält.  
+ Gibt einen Zeiger auf die **Addrinfo** Struktur verweist `nIndex` in der verknüpften Liste, die Antwortinformationen über den Host enthält.  
   
 ##  <a name="getaddrinfolist"></a>CSocketAddr::GetAddrInfoList  
  Rufen Sie diese Methode, um die Rückgabe eines Zeigers auf die **Addrinfo** Liste.  
@@ -225,8 +211,8 @@ addrinfo* const GetAddrInfoList() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Zeiger auf eine verknüpfte Liste von einem oder mehreren `addrinfo` Strukturen, die Antwortinformationen über den Host enthält. Weitere Informationen zu den `addrinfo` -Struktur, finden Sie im Artikel "Addrinfo" in der [MSDN-Bibliothek](http://go.microsoft.com/fwlink/linkid=556)  
+ Zeiger auf eine verknüpfte Liste von einem oder mehreren `addrinfo` Strukturen, die Antwortinformationen über den Host. Weitere Informationen zu den `addrinfo` -Struktur, finden Sie im Artikel "Addrinfo" in der [MSDN Library](http://go.microsoft.com/fwlink/linkid=556)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)
+ [Klassenübersicht](../../atl/atl-class-overview.md)
 
