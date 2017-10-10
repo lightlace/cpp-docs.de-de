@@ -1,37 +1,40 @@
 ---
-title: "Compilerfehler C3073 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3073"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3073"
+title: Compilerfehler C3073 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3073
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3073
 ms.assetid: b24b9b8b-f9fb-4c3c-a1a0-97fad2081bfc
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Compilerfehler C3073
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 860cc8fccb545a8c66a8a5724b9854e9547deb10
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Typ': Die Verweisklasse hat keinen benutzerdefinierten Kopierkonstruktor  
+---
+# <a name="compiler-error-c3073"></a>Compilerfehler C3073
+'Typ': Verweisklasse verfügt nicht über einen benutzerdefinierten Kopierkonstruktor  
   
- In einer [\/clr \(Common Language Runtime\-Kompilierung\)](../../build/reference/clr-common-language-runtime-compilation.md)\-Kompilierung generiert der Compiler keinen Kopierkonstruktor für einen Referenztyp.  Sie müssen in jeder **\/clr**\-Kompilierung einen eigenen Kopierkonstruktor für einen Referenztyp definieren, wenn eine Instanz des Typs kopiert werden soll.  
+ In einem [/CLR (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md) Kompilierung, generiert der Compiler einen Kopierkonstruktor für einen Verweistyp nicht. In einem **"/ CLR"** Kompilierung, müssen Sie eigene Kopierkonstruktor für einen Verweistyp definieren, wenn Sie davon ausgehen, dass eine Instanz des Typs kopiert werden soll.  
   
- Weitere Informationen finden Sie unter [C\+\+\-Stack\-Semantik für Referenztypen](../../dotnet/cpp-stack-semantics-for-reference-types.md).  
+ Weitere Informationen finden Sie unter [C++-Stapelsemantik für Referenztypen](../../dotnet/cpp-stack-semantics-for-reference-types.md).  
   
-## Beispiel  
- Im folgenden Beispiel wird C3073 generiert.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird C3073 generiert.  
   
 ```  
 // C3073.cpp  

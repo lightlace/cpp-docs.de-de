@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: af2d6ef4fe93730265de6081fcb83f074dc6e4ec
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f3162ab8241781cda521fa4fc9dc51f14fa42897
 ms.contentlocale: de-de
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3039"></a>Compilerfehler C3039
 "var": Die Indexvariable in der For-Anweisung von OpenMP kann keine reduction-Variable sein.  
   
- Eine Indexvariable implizit privat ist, ist, die Variable verwendet werden, in einer [Verringerung](../../parallel/openmp/reference/reduction.md) -Klausel in der einschließenden [parallele](../../parallel/openmp/reference/parallel.md) Richtlinie.  
+ Da eine Indexvariable implizit privat ist, kann die Variable nicht in einer [reduction](../../parallel/openmp/reference/reduction.md) -Klausel in der einschließenden [parallel](../../parallel/openmp/reference/parallel.md) -Direktive verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird C3039 generiert:  

@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C2802 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2802"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2802"
+title: Compilerfehler C2802 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2802
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2802
 ms.assetid: 08b68c0e-9382-40ac-8949-39a7a2749e05
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Compilerfehler C2802
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: adc1b4178caebe9893727aaf8ff802d6f030e986
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-Statischer Member 'Operator Operator' besitzt keine formalen Parameter  
+---
+# <a name="compiler-error-c2802"></a>Compilerfehler C2802
+statische Member-'Operator Operator' hat keine formalen Parameter  
   
- Ein Operator, der durch eine `static`\-Memberfunktion deklariert wird, muss mindestens einen Parameter haben.  
+ Ein Operator deklariert, indem eine `static` Memberfunktion muss mindestens einen Parameter verfügen.  
   
- Im folgenden Beispiel wird C2802 generiert:  
+ Im folgende Beispiel wird C2802 generiert:  
   
 ```  
 // C2802.cpp  

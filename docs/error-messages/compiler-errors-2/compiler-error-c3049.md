@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: a5fbd2416488675e76490c6b23728e882080137d
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e2c81bf792be0340cd558ce3ad8efccd64d0d8a7
 ms.contentlocale: de-de
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3049"></a>Compilerfehler C3049
 "Arg": Ungültiges Argument in der "default"-Klausel von OpenMP  
   
- Ein falscher Wert wurde übergeben, um eine [Standard](../../parallel/openmp/reference/default-openmp.md) Klausel.  
+ Es wurde ein falscher Wert an eine [default](../../parallel/openmp/reference/default-openmp.md) -Klausel übergeben.  
   
  Im folgenden Beispiel wird C3049 generiert:  
   

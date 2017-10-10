@@ -1,42 +1,45 @@
 ---
-title: "Compilerfehler C2530 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2530"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2530"
+title: Compilerfehler C2530 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2530
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2530
 ms.assetid: b790a312-48df-4a6a-9e27-be2c5f32f16c
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Compilerfehler C2530
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f9438937ad99e66d9e623e1e3703dc6496f8153a
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2530"></a>Compilerfehler C2530
 'Bezeichner': Verweise müssen initialisiert werden  
   
- Nach der Deklaration muss ein Verweis initialisiert werden, es sei denn, dies ist bereits geschehen:  
+ Sie müssen einen Verweis initialisieren, wenn es deklariert wurde, es sei denn, es bereits deklariert ist:  
   
--   Mit dem Schlüsselwort [extern](../../cpp/using-extern-to-specify-linkage.md).  
+-   Mit dem Schlüsselwort ["extern"](../../cpp/using-extern-to-specify-linkage.md).  
   
--   Als Member einer Klasse, Struktur oder Union \(und er wird im Konstruktor initialisiert\).  
+-   Als Mitglied einer Klasse, Struktur oder Union (und er wird im Konstruktor initialisiert).  
   
--   Als Parameter in einer Funktionsdeklaration oder \-definition.  
+-   Als Parameter in einer Deklaration oder Definition.  
   
 -   Als Rückgabetyp einer Funktion.  
   
- Im folgenden Beispiel wird C2530 generiert:  
+ Im folgende Beispiel wird C2530 generiert:  
   
 ```  
 // C2530.cpp  

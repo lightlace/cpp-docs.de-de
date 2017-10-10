@@ -1,32 +1,35 @@
 ---
-title: "Compilerfehler C2990 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2990"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2990"
+title: Compilerfehler C2990 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2990
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2990
 ms.assetid: 674e9f6a-6743-4af0-a7ed-cbe11103a2f8
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Compilerfehler C2990
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 9a2433bec7992c73fb7e9b7f358e89b7e75da384
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Klasse': Nicht\-Klassentyp wurde bereits als Klassentyp deklariert  
+---
+# <a name="compiler-error-c2990"></a>Compilerfehler C2990
+'Klasse': nicht-Klassentyp wurde bereits als Typ einer Klasse deklariert  
   
- In einer Klasse, die nicht generisch und keine Vorlagenklasse ist, wird eine generische oder Vorlagenklasse neu definiert.  Prüfen Sie die Headerdateien auf Konflikte.  
+ Die nicht generische oder Vorlagenklasse definiert eine generische oder Vorlagenklasse-Klasse. Überprüfen Sie die Headerdateien für Konflikte.  
   
  Im folgenden Beispiel wird C2990 generiert:  
   
@@ -49,7 +52,7 @@ ref struct GC;
 ref struct GC {};   // C2990  
 ```  
   
- C2990 kann auch aufgrund einer unterbrechenden Änderung im Visual C\+\+\-Compiler für Visual C\+\+ 2005 auftreten. Der Compiler erfordert jetzt, dass mehrere Deklarationen desselben Typs hinsichtlich der Vorlagenspezifikation identisch sind.  
+ C2990 kann auch aufgrund eine wichtige Änderung in der Visual C++-Compiler für Visual C++ 2005 auftreten. der Compiler benötigt jetzt an, dass mehrere Deklarationen desselben Typs in Bezug auf die Vorlagenspezifikation identisch sein.  
   
  Im folgenden Beispiel wird C2990 generiert:  
   

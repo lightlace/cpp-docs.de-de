@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C2701 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2701"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2701"
+title: Compiler-Fehler C2701 generiert | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2701
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2701
 ms.assetid: 31cf2ab7-ced9-4f75-aa51-e169e20407fb
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Compilerfehler C2701
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 9aff17907695e48661af7d6e9a6538af4f22ba4c
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Funktion': Eine Funktionsvorlage darf kein Friend einer lokalen Klasse sein  
+---
+# <a name="compiler-error-c2701"></a>Compiler-Fehler C2701 generiert
+'Funktion': eine Funktionsvorlage handelt es sich nicht um einen "Friend" einer lokalen Klasse  
   
- Eine lokale Klasse darf keine Vorlagenfunktion als Friend\-Funktion haben.  
+ Eine lokale Klasse kann nicht als Friend-Funktion eine Vorlagenfunktion haben.  
   
- Im folgenden Beispiel wird C2701 generiert:  
+ Im folgende Beispiel wird C2701 generiert:  
   
 ```  
 // C2701.cpp  

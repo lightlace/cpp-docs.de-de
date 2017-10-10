@@ -1,32 +1,35 @@
 ---
-title: "Compilerfehler C2800 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2800"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2800"
+title: Compilerfehler C2800 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2800
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2800
 ms.assetid: a2f1a590-9fe6-44cb-ad09-b4505ef47c6a
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Compilerfehler C2800
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 330b859b4b24f741388be716fb464fc33c3abaa3
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2800"></a>Compilerfehler C2800
 'Operator Operator' kann nicht überladen werden  
   
- Die folgenden Operatoren können nicht überladen werden: Klassenmemberzugriff \(`.`\), Memberzeiger \(`.*`\), Bereichsauflösung \(`::`\), bedingter Ausdruck \(`? :`\) und `sizeof`.  
+ Die folgenden Operatoren können nicht überladen werden: Klasse Memberzugriff (`.`), Zeiger auf Member (`.*`), Bereich Auflösung (`::`), bedingte Ausdruck (`? :`), und `sizeof`.  
   
  Im folgenden Beispiel wird C2800 generiert:  
   

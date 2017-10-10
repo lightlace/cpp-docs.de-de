@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C2648 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2648"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2648"
+title: Compiler-Fehler C2648 generiert | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2648
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2648
 ms.assetid: ce338337-9154-4f85-bb61-b05fdbfad75d
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Compilerfehler C2648
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 99d52f3c07c0c20e49fa46baeba4cde618e286c7
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Bezeichner' : Das Verwenden von Membern als Standardparameter erfordert statische Member  
+---
+# <a name="compiler-error-c2648"></a>Compiler-Fehler C2648 generiert
+'Bezeichner': Verwenden von Membern als Standardparameter statischer Member benötigt.  
   
- Ein nicht statischer Member wird als Standardparameter verwendet.  
+ Ein nicht statisches Member wird als Standardparameter verwendet.  
   
- Im folgenden Beispiel wird C2648 generiert:  
+ Im folgende Beispiel wird C2648 generiert:  
   
 ```  
 // C2648.cpp  

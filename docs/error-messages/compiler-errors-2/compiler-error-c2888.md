@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C2888 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2888"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2888"
+title: Compilerfehler C2888 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2888
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2888
 ms.assetid: 244f593e-ff25-4dad-b31f-84dafa3bc84a
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Compilerfehler C2888
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1d2d24f81bb658ab298998507dcb967bcef6644c
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2888"></a>Compilerfehler C2888
 'Bezeichner': Symbol kann nicht im Namespace 'Namespace' definiert werden  
   
- Ein Symbol, das Namespace A angehört, muss in einem Namespace definiert werden, der A umschließt.  
+ Ein Symbol, das zum A-Namespace gehören muss in einem Namespace definiert werden, die a umschließt.  
   
- Im folgenden Beispiel wird C2888 generiert:  
+ Im folgende Beispiel wird C2888 generiert:  
   
 ```  
 // C2888.cpp  

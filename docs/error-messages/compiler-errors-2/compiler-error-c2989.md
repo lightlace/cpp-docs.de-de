@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C2989 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2989"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2989"
+title: Compilerfehler C2989 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2989
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2989
 ms.assetid: 936303d8-eb3b-4746-82ec-2f18020a6f64
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Compilerfehler C2989
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 447d7d21cfc1ed95c9851ef310a4cb15bcdaf53e
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Klasse': Klassentyp wurde bereits als Nicht\-Klassentyp deklariert  
+---
+# <a name="compiler-error-c2989"></a>Compilerfehler C2989
+'Klasse': Klassentyp wurde bereits als ein Klassentyp deklariert  
   
- Die generische oder Vorlagenklasse definiert eine nicht auf Vorlagen basierende oder nicht generische Klasse neu.  Prüfen Sie die Headerdateien auf Konflikte.  
+ Die generische oder Vorlagenklasse definiert eine nicht von der Vorlage oder eine nicht generische Klasse. Überprüfen Sie die Headerdateien für Konflikte.  
   
- Wenn Sie Teilspezialisierungen einer Klassenvorlage verwenden, informieren Sie sich im Knowledge Base\-Artikel Q240866 \(nur auf Englisch verfügbar\).  
+ Bei Verwendung von partiellen Klasse vorlagenspezialisierungen finden Sie in Knowledge Base-Artikel Q240866.  
   
  Im folgenden Beispiel wird C2989 generiert:  
   

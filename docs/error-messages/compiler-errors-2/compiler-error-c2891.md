@@ -1,39 +1,44 @@
 ---
-title: "Compilerfehler C2891 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2891"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2891"
+title: Compilerfehler C2891 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2891
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2891
 ms.assetid: e12cfb2d-df45-4b0d-b155-c51d17e812fa
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Compilerfehler C2891
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6c35294472fe4142e7e6689adfc5f5f71c27b664
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Parameter': die Adresse eines Vorlagenparameters kann nicht verwendet werden  
+---
+# <a name="compiler-error-c2891"></a>Compilerfehler C2891
+'Parameter': die Adresse eines Vorlagenparameters nicht übernehmen  
   
- Verwenden Sie anstelle von:  
+ Die Adresse eines Vorlagenparameters nicht akzeptiert werden, es sei denn, es sich um ein Lvalue ist. Typparameter sind nicht Lvalues, da sie keine Adresse besitzen. Nichttyp-Werte in Vorlagenparameterlisten, die nicht Lvalues sind auch eine Adresse keine. Dies ist ein Beispiel für Code, der bewirkt, Compilerfehler C2891 dass, weil der Wert mit dem Vorlagenparameter übergeben eine vom Compiler generierte Kopie das Vorlagenargument.  
   
 ```  
 template <int i> int* f() { return &i; }  
 ```  
   
- den folgenden Code:  
+ Vorlagenparameter, die Lvalues, z. B. Verweistypen sind, kann ihre Adresse übernommen werden.  
   
 ```  
-template <int i> int* f() { return i; }  
-```
+template <int& r> int* f() { return &r; }  
+```  
+  
+ Um diesen Fehler zu beheben, führen Sie nicht die Adresse eines Vorlagenparameters, wenn es sich um ein Lvalue ist.

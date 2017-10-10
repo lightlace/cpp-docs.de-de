@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C3028 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3028"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3028"
+title: Compiler-Fehler C3028 generiert | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3028
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3028
 ms.assetid: 175e697f-8e8f-492a-8456-6240ffbbb900
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Compilerfehler C3028
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 56d1ed561b4f414cc85c7b0d7f2c112648ae6281
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Member' : Nur eine Variable oder ein statischer Datenmember kann in einer Datenfreigabeklausel verwendet werden  
+---
+# <a name="compiler-error-c3028"></a>Compiler-Fehler C3028 generiert
+'Member': nur eine Variable oder ein statischer Datenmember kann in einer Datenfreigabeklausel verwendet werden  
   
- Ein anderes Symbol als ein variabler oder statischer Datenmember wurde an die reduction\-Klausel übergeben.  
+ Ein Symbol, das eine Variable oder ein statischer Datenmember wurde an die Reduction-Klausel übergeben.  
   
- Im folgenden Beispiel wird C3028 generiert:  
+ Im folgende Beispiel wird C3028 generiert:  
   
 ```  
 // C3028.cpp  

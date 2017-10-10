@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C2867 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2867"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2867"
+title: Compilerfehler C2867 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2867
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2867
 ms.assetid: 63be26b2-d9ab-4f3d-a8b7-981ce3e4d6b9
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Compilerfehler C2867
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 34fd8669dc210c15488d31a48ffb32198536965d
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Bezeichner': Ist kein Namespace  
+---
+# <a name="compiler-error-c2867"></a>Compilerfehler C2867
+'Bezeichner': ist kein Namespace  
   
- Eine `using` \-Direktive wird auf etwas anderes als einen Namespace angewendet.  
+ Ein `using` Richtlinie auf einem anderen Knotentyp als einem Namespace angewendet wird.  
   
- Im folgenden Beispiel wird C2867 generiert:  
+ Im folgende Beispiel wird C2867 generiert:  
   
 ```  
 // C2867.cpp  

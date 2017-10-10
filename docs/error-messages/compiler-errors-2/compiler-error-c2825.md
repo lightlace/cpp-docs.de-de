@@ -1,37 +1,40 @@
 ---
-title: "Compilerfehler C2825 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2825"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2825"
+title: Compilerfehler C2825 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2825
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2825
 ms.assetid: c832f1c1-5184-4fc2-9356-12b21daa7af3
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Compilerfehler C2825
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ebe700fed581eadbab256c9c4f9e2f71bf1d1585
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-var: muss eine Klasse oder ein Namespace sein, wenn '::' darauf folgt  
+---
+# <a name="compiler-error-c2825"></a>Compilerfehler C2825
+Var: muss eine Klasse oder Namespace verwenden, wenn gefolgt von "::"  
   
- Der Versuch, einen gekennzeichneten Namen zu erstellen, ist fehlgeschlagen.  
+ Nicht erfolgreiche versucht, einen qualifizierten Namen zu bilden.  
   
- Stellen Sie beispielsweise sicher, dass der Code keine Funktionsdeklaration enthält, deren Funktionsname mit `::` beginnt.  
+ Beispielsweise stellen Sie sicher, dass Ihr Code keine Deklaration einer Funktion enthält, an den Namen der Funktion beginnt mit::.  
   
-## Beispiel  
- Im folgenden Beispiel wird C2825 generiert:  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird C2825 generiert:  
   
 ```  
 // C2825.cpp  

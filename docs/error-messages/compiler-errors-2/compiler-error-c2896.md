@@ -1,32 +1,35 @@
 ---
-title: "Compilerfehler C2896 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2896"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2896"
+title: Compilerfehler C2896 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2896
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2896
 ms.assetid: b600407b-cb05-42e3-9069-2aa6960f0eaa
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Compilerfehler C2896
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b60848dcaa06bb41ec290e3fb91a65fda025a8df
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Funktion1': Funktionsvorlage 'Funktion2' kann nicht als Argument verwendet werden  
+---
+# <a name="compiler-error-c2896"></a>Compilerfehler C2896
+"Funktion1": Funktion Vorlage "Funktion2" kann nicht als Argument verwenden  
   
- Eine Funktionsvorlage kann nicht als Argument für eine andere Funktionsvorlage verwendet werden.  
+ Eine Funktionsvorlage kann nicht über ein Argument an eine andere Funktionsvorlage sein.  
   
  Im folgenden Beispiel wird C2896 generiert:  
   
