@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C2361 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2361"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2361"
+title: Compilerfehler C2361 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2361
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2361
 ms.assetid: efbdaeb9-891c-4f7d-97da-89088a8413f3
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Compilerfehler C2361
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3e80c1a1ebcd56b4125ef9aa43e904d9093fc8a9
+ms.contentlocale: de-de
+ms.lasthandoff: 10/09/2017
 
-Initialisierung von 'Bezeichner' durch 'Standard'\-Marke übersprungen  
+---
+# <a name="compiler-error-c2361"></a>Compilerfehler C2361
+Initialisierung von 'Bezeichner' ist 'Default' Bezeichnung übersprungen.  
   
- Die Initialisierung von `identifier` kann in einer `switch`\-Anweisung übersprungen werden.  Sprünge hinter eine Deklaration sind bei einer Initialisierung nicht zulässig, es sein denn, sie befindet sich innerhalb eines Blockes. \(Sofern die Variable nicht innerhalb eines Blockes definiert ist, befindet sie sich bis zum Ende der `switch`\-Anweisung innerhalb des Gültigkeitsbereichs.\)  
+ Die Initialisierung des `identifier` kann übersprungen werden, eine `switch` Anweisung. Sie können nicht hinter einer Deklaration mit einem Initialisierer springen, es sei denn, die Deklaration in einem Block eingeschlossen ist. (Es sei denn, es in einem Block deklariert wird, ist die Variable im Gültigkeitsbereich bis zum Ende der `switch` Anweisung.)  
   
- Im folgenden Beispiel wird C2361 generiert:  
+ Im folgende Beispiel wird C2361 generiert:  
   
 ```  
 // C2361.cpp  

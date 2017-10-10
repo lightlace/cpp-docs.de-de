@@ -41,25 +41,11 @@ caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: bd3572d2941f911f10c067a24dd4e7323c3c3f8c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c6d0fde64db90c53e5a745551e378000f898fe7e
 ms.contentlocale: de-de
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-errors-c2400-through-c2499"></a>Compilerfehler C2400 bis C2499
@@ -77,7 +63,7 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C2402](compiler-error-c2402.md)|"*Bezeichner*": Register muss in Index sein "*Kontext*"|  
 |[Compilerfehler C2403](compiler-error-c2403.md)|"*Bezeichner*": Register muss in die Basis/Index sein "*Kontext*"|  
 |[Compilerfehler C2404](compiler-error-c2404.md)|"*Bezeichner*": Unzulässiges Register in "*Kontext*"|  
-|[Compilerfehler C2405](compiler-error-c2405.md)|unzulässiger kurzer Vorwärtsverweis mit Offset|  
+|[Compilerfehler C2405](compiler-error-c2405.md)|unzulässiger kurzer Vorwärtsverweis mit offset|  
 |[Compilerfehler C2406](compiler-error-c2406.md)|"*Bezeichner*": Name ist nicht definiert '*Kontext*"|  
 |[Compilerfehler C2407](compiler-error-c2407.md)|Registrieren Sie ungültige 'Float' in '*Kontext*"|  
 |[Compilerfehler C2408](compiler-error-c2408.md)|Unzulässiger Typ in dem Operator PTR in "*Kontext*"|  
@@ -115,12 +101,12 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C2440](compiler-error-c2440.md)|"*Konvertierung*': Konvertierung von '*TYP_1*'to'*TYP_2*"|  
 |[Compilerfehler C2441](compiler-error-c2441.md)|"*Variable*": ein Symbol mit __declspec(process) deklariertes muss const in/CLR: pure-Modus|  
 |Compilerfehler Fehler C2442|"*Bezeichner*': geschachtelte Namespacedefinition nicht Inline oder Attribute aufweisen|  
-|[Compilerfehler C2443](compiler-error-c2443.md)|Operanden unterschiedlicher Größe|  
+|[Compilerfehler C2443](compiler-error-c2443.md)|Operanden Größe Konflikt|  
 |[Compilerfehler C2444](compiler-error-c2444.md)|"*Bezeichner*': verwendet ANSI-Prototypen, 'Typ', erwartet gefunden ' {' oder ';'|  
 |[Compilerfehler C2446](compiler-error-c2446.md)|"*Operator*': keine Konvertierung von '*TYP_1*'to'*TYP_2*"|  
 |[Compilerfehler C2447](compiler-error-c2447.md)|"{": fehlende Funktionsheader (im alten Stil Parameterliste?)|  
 |[Compilerfehler C2448](compiler-error-c2448.md)|"*Bezeichner*": Initialisierer im Funktionsformat anscheinend einer Funktionsdefinition|  
-|[Compilerfehler C2449](compiler-error-c2449.md)|"{" auf Dateiebene gefunden - fehlt der Funktionsheader?|  
+|[Compilerfehler C2449](compiler-error-c2449.md)|gefunden ' {' im Dateigültigkeitsbereich (fehlende Funktionsheader?)|  
 |[Compilerfehler C2450](compiler-error-c2450.md)|Switch-Ausdruck vom Typ "*Typ*" ist nicht zulässig|  
 |[Compilerfehler C2451](compiler-error-c2451.md)|bedingte Ausdruck des Typs "*Typ*" ist nicht zulässig|  
 |[Compilerfehler C2452](compiler-error-c2452.md)|"*Typ*': Ungültige Quell-Typ für" safe_cast "|  
@@ -136,10 +122,10 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C2462](compiler-error-c2462.md)|"*Bezeichner*": Definieren Sie einen Typ kann nicht in 'new-Ausdruck'|  
 |[Compilerfehler C2464](compiler-error-c2464.md)|"*Typ*": kann nicht "new" verwenden, um einen Verweis zuweisen|  
 |[Compilerfehler C2465](compiler-error-c2465.md)|Definition anonymer Typen innerhalb von Klammern nicht möglich|  
-|[Compilerfehler C2466](compiler-error-c2466.md)|Zuordnung eines Arrays der konstanten Größe 0 nicht möglich.|  
+|[Compilerfehler C2466](compiler-error-c2466.md)|ein Array von Konstanten Größe 0 kann nicht zugeordnet werden.|  
 |[Compilerfehler C2467](compiler-error-c2467.md)|Ungültige Deklaration eines anonymen '*User_defined_type*"|  
 |Compilerfehler Fehler C2468|Konstruktor nicht mit "Constexpr" in einer Klasse oder Struktur mit virtuellen Basisklassen|  
-|[Compilerfehler C2469](compiler-error-c2469.md)|"new": Zuordnung von "void"-Objekten nicht möglich|  
+|[Compilerfehler C2469](compiler-error-c2469.md)|'new': kann nicht 'void' Objekte zuordnen|  
 |[Compilerfehler C2470](compiler-error-c2470.md)|"*Funktion*": sieht wie eine Funktionsdefinition, aber es gibt keinen Parameter Liste; offensichtlich Text überspringen|  
 |[Compilerfehler C2471](compiler-error-c2471.md)|kann nicht aktualisiert werden Programmdatenbank '*Filename*"|  
 |[Compilerfehler C2472](compiler-error-c2472.md)|"*Funktion*" kann nicht in verwaltetem Code generiert werden: "*Nachricht*"; Kompilieren Sie mit "/ CLR", um ein gemischtes Image zu generieren.|  
@@ -154,14 +140,14 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C2482](compiler-error-c2482.md)|"*Bezeichner*": der dynamischen Initialisierung von threadlokalen Daten in verwalteten/WINRT-Code nicht zulässig.|  
 |[Compilerfehler C2483](compiler-error-c2483.md)|"*Bezeichner*": Objekt mit Destruktor oder nicht aggregierter Typ kann nicht mit Thread-Speicherdauer deklariert werden, in verwalteten/WINRT-Code|  
 |[Compilerfehler C2485](compiler-error-c2485.md)|"*Bezeichner*': nicht erkanntes erweitertes Attribut|  
-|[Compilerfehler C2486](compiler-error-c2486.md)|"__LOCAL_SIZE" nur in Funktionen mit dem "naked"-Attribut zulässig|  
+|[Compilerfehler C2486](compiler-error-c2486.md)|"__LOCAL_SIZE" nur zulässig, in der Funktion mit dem 'naked'-Attribut|  
 |[Compilerfehler C2487](compiler-error-c2487.md)|"*Bezeichner*': Member der Klasse kann nicht mit der Dll-Schnittstelle deklariert werden|  
 |[Compilerfehler C2488](compiler-error-c2488.md)|"*Bezeichner*': 'naked' kann nur auf nicht-memberoperators Funktionsdefinitionen angewendet werden|  
 |[Compilerfehler C2489](compiler-error-c2489.md)|"*Bezeichner*': Initialisierte automatische oder Registervariable im Funktionsbereich in naked-Funktion nicht zulässig|  
 |[Compilerfehler C2490](compiler-error-c2490.md)|"*Schlüsselwort*' in Funktion 'naked'-Attribut nicht zulässig|  
 |[Compilerfehler C2491](compiler-error-c2491.md)|"*Bezeichner*': Definition von Dllimport *Funktion* nicht zulässig|  
 |[Compilerfehler C2492](compiler-error-c2492.md)|"*Variable*": Daten mit Speicherdauer Thread können keine Dll-Schnittstelle|  
-|[Compilerfehler C2493](compiler-error-c2493.md)|Unzulässige Form von "__based"|  
+|[Compilerfehler C2493](compiler-error-c2493.md)|Unzulässige Form von __based|  
 |[Compilerfehler C2494](compiler-error-c2494.md)|"*Schlüsselwort*" kann nicht innerhalb eines Filterausdrucks aufgerufen werden oder \_ \_schließlich/finally-block|  
 |[Compilerfehler C2495](compiler-error-c2495.md)|"*Bezeichner*": "__declspec(noexcept)" kann nur auf Funktionsdeklarationen oder-Definitionen angewendet werden|  
 |[Compilerfehler C2496](compiler-error-c2496.md)|"*Bezeichner*': 'Selectany' kann nur für Datenelemente mit externer Bindung angewendet werden|  

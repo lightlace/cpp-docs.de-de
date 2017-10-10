@@ -1,34 +1,37 @@
 ---
-title: "Schwerwiegender Fehler C1308 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1308"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1308"
+title: Schwerwiegender Fehler C1308 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1308
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1308
 ms.assetid: 46177997-069e-433a-8e20-93c846d78ffd
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Schwerwiegender Fehler C1308
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f9958ccb3daa537f8789d7485822fd623da8c703
+ms.contentlocale: de-de
+ms.lasthandoff: 10/09/2017
 
-Verknüpfen von Assemblys wird nicht unterstützt  
+---
+# <a name="fatal-error-c1308"></a>Schwerwiegender Fehler C1308
+Verknüpfen von Assemblys wird nicht unterstützt.  
   
- netmodule. zulässig, wie als Eingabe für den Linker, jedoch keine Assembly.  Dieser Fehler kann generiert werden, wenn versucht wird, eine mit `/clr:safe` kompilierte Assembly zu verknüpfen.  
+ Eine NETMODULE-Datei als Eingabe für den Linker zulässig ist, aber eine Assembly ist. Dieser Fehler kann generiert werden, wenn versucht wird, verknüpfen Sie eine Assembly kompiliert, die mit `/clr:safe`.  
   
- Weitere Informationen finden Sie unter [NETMODULE\-Dateien als Eingabe für den Linker](../../build/reference/netmodule-files-as-linker-input.md).  
+ Weitere Informationen finden Sie unter [NETMODULE-Dateien als Eingabe für den Linker](../../build/reference/netmodule-files-as-linker-input.md).  
   
  Im folgenden Beispiel wird C1308 generiert:  
   
@@ -41,7 +44,7 @@ public:
 };  
 ```  
   
- und anschließend  
+ Und dann  
   
 ```  
 // C1308b.cpp  

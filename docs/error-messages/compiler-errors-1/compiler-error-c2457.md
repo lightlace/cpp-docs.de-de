@@ -1,35 +1,38 @@
 ---
-title: "Compilerfehler C2457 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2457"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2457"
+title: Compilerfehler C2457 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2457
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2457
 ms.assetid: 347e169d-23ad-434f-8836-5b09b53980ff
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Compilerfehler C2457
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fd5d73850839c73ea6260165151415115251a59e
+ms.contentlocale: de-de
+ms.lasthandoff: 10/09/2017
 
-'Makro': Ein vordefiniertes Makro kann nicht außerhalb eines Funktionstextes stehen  
+---
+# <a name="compiler-error-c2457"></a>Compilerfehler C2457
+"Makro": das vordefinierte Makro kann nicht außerhalb eines Funktionsrumpfs angezeigt werden  
   
- Es wurde versucht, ein vordefiniertes Makro, z. B. [\_\_FUNCTION\_\_](../../preprocessor/predefined-macros.md), in einem globalen Namensbereich zu verwenden.  
+ Sie haben versucht, ein vordefiniertes Makro verwenden, z. B. [__FUNCTION\_\_](../../preprocessor/predefined-macros.md), in einem globalen Bereich.  
   
-## Beispiel  
- Im folgenden Beispiel wird C2457 generiert:  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird C2457 generiert:  
   
 ```  
 // C2457.cpp  

@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C2341 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2341"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2341"
+title: Compilerfehler C2341 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2341
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2341
 ms.assetid: aa2a7da5-e1c8-4225-9939-5bdc50158f31
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Compilerfehler C2341
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5460ff70c95fd593539a16140c52fa1490bffc4e
+ms.contentlocale: de-de
+ms.lasthandoff: 10/09/2017
 
-'Abschnittsname': Das Segment muss vor der Verwendung mit \#pragma data\_seg, code\_seg oder section definiert werden  
+---
+# <a name="compiler-error-c2341"></a>Compilerfehler C2341
+'Abschnittsname': Segment muss definiert werden, mithilfe von #pragma Data_seg, Code_seg oder vorherigen Abschnitt verwendet  
   
- Eine [allocate](../../cpp/allocate.md)\-Anweisung bezieht sich auf ein Segment, das noch nicht durch die Pragmas [code\_seg](../../preprocessor/code-seg.md), [data\_seg](../../preprocessor/data-seg.md) oder [section](../../preprocessor/section.md) definiert wurde.  
+ Ein [zuordnen](../../cpp/allocate.md) Anweisung verweist auf ein Segment, das noch nicht durch definiert [Code_seg](../../preprocessor/code-seg.md), [Data_seg](../../preprocessor/data-seg.md), oder [Abschnitt](../../preprocessor/section.md) Pragmas.  
   
- Im folgenden Beispiel wird C2341 generiert:  
+ Im folgende Beispiel wird C2341 generiert:  
   
 ```  
 // C2341.cpp  

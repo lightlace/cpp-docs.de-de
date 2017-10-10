@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2441 generiert | Microsoft-Dokumentation
+title: Compilerfehler C2441 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,35 +19,21 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 1b98c85df0db4e947ceb5722715f5d020e1ecbec
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6868feadda4c0c0f3d65a86c77a403b8965fded5
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2441"></a>Compilerfehler C2441
-'Variable': ein mit __declspec(process) deklariertes muss konstant sein in/CLR: pure-Modus  
+'Variable': ein Symbol mit __declspec(process) deklariertes muss const in/CLR: pure-Modus  
   
- Die **/CLR: pure** und **/CLR: safe** Compileroptionen in Visual Studio 2015 veraltet sind.  
+ Die Compileroptionen **/clr:pure** und **/clr:safe** sind in Visual Studio 2015 veraltet.  
   
- Variablen werden standardmäßig pro Anwendungsdomäne unter **/CLR: pure**. Markiert eine Variable `__declspec(process)` unter **/CLR: pure** fehleranfällig, wenn in einer Anwendungsdomäne geändert und in einer anderen gelesen wird.  
+ Standardmäßig sind Variablen pro Anwendungsdomäne unter **/CLR: pure**. Markiert eine Variable `__declspec(process)` unter **/CLR: pure** fehleranfällig, wenn in einer Anwendungsdomäne geändert und in einer anderen gelesen wird.  
   
- Aus diesem Grund erzwingt der Compiler Variablen `const` unter **/CLR: pure**, machen sie lesen nur in allen Anwendungsdomänen.  
+ Aus diesem Grund erzwingt der Compiler prozessspezifische Variablen `const` unter **/CLR: pure**, machen sie lesen nur in allen Anwendungsdomänen.  
   
  Weitere Informationen finden Sie unter [Prozess](../../cpp/process.md) und [/CLR (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md).  
   

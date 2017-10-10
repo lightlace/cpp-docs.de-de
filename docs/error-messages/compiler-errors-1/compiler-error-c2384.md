@@ -1,36 +1,39 @@
 ---
-title: "Compiler Error C2384 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2384"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2384"
+title: Compilerfehler C2384 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2384
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2384
 ms.assetid: 8145f7ad-31b1-406d-ac43-0d557feab635
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# Compiler Error C2384
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0d87769a2e02e6214e474dab2b74859e85a6880b
+ms.contentlocale: de-de
+ms.lasthandoff: 10/09/2017
 
-„Member“ : \_\_declspec\(thread\) kann nicht auf einen Member einer managed\- oder WinRT\-Klasse angewendet werden.  
+---
+# <a name="compiler-error-c2384"></a>Compilerfehler C2384
+„Member“ : __declspec(thread) kann nicht auf einen Member einer managed- oder WinRT-Klasse angewendet werden.  
   
- Der [Thread](../../cpp/thread.md) `__declspec`\-Modifizierer kann nicht für einen Member einer verwalteten bzw. Windows\-Runtime verwendet werden.  
+ Die [Thread](../../cpp/thread.md) `__declspec` Modifizierer kann nicht auf einen Member eines verwalteten oder Windows-Runtime-Klasse verwendet werden.  
   
- Statischer lokaler Threadspeicher kann im verwalteten Code nur für statisch geladene DLLs verwendet werden; die DLL muss bei Prozessstart statisch geladen sein.  Windows\-Runtime unterstützt keinen lokalen Threadspeicher.  
+ Der statische threadlokale Speicher kann im verwalteten Code nur für statisch geladene DLLs verwendet werden; die DLL muss bei Prozessstart statisch geladen sein. Windows-Runtime unterstützt keinen lokalen Threadspeicher.  
   
- Mit der folgenden Zeile wird C2384 generiert und gezeigt, wie dieser Fehler im C\+\+\-\/CLI\-Code behoben werden kann:  
+ Mit der folgenden Zeile wird C2384 generiert und gezeigt, wie dieser Fehler im C++-/CLI-Code behoben werden kann:  
   
 ```  
 // C2384.cpp  

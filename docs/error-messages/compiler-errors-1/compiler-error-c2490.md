@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C2490 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2490"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2490"
+title: Compilerfehler C2490 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2490
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2490
 ms.assetid: 9de6bddd-b2e2-4ce6-b33b-201a8c2c8c54
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Compilerfehler C2490
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3c71f65364923af09e259cc722b5472f3603ba8f
+ms.contentlocale: de-de
+ms.lasthandoff: 10/09/2017
 
-'Schlüsselwort' in Funktionen mit dem 'naked'\-Attribut nicht erlaubt  
+---
+# <a name="compiler-error-c2490"></a>Compilerfehler C2490
+'Schlüsselwort' in Funktion 'naked'-Attribut nicht zulässig  
   
- Eine Funktion, die als [naked](../../cpp/naked-cpp.md) definiert wurde, kann keine strukturierte Ausnahmebehandlung verwenden.  
+ Eine Funktion definiert, die als [naked](../../cpp/naked-cpp.md) können keine strukturierte Ausnahmebehandlung.  
   
- Im folgenden Beispiel wird C2490 generiert:  
+ Im folgende Beispiel wird C2490 generiert:  
   
 ```  
 // C2490.cpp  
