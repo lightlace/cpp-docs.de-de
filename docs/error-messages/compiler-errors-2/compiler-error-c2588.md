@@ -1,36 +1,39 @@
 ---
-title: "Compilerfehler C2588 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2588"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2588"
+title: Compilerfehler C2588 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2588
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2588
 ms.assetid: 19a0cabd-ca13-44a5-9be3-ee676abf9bc4
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Compilerfehler C2588
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c6d71e5bfe442f2b3f2225cd4dc6cb88fc73d24a
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'::~Bezeichner': Ungültiger globaler Destruktor  
+---
+# <a name="compiler-error-c2588"></a>Compilerfehler C2588
+':: ~ Identifier': Ungültiger globaler Destruktor  
   
- Der Destruktor wurde nicht für eine Klasse, Struktur oder Union definiert.  Dies ist nicht zulässig.  
+ Der Destruktor wird für ein Element als eine Klasse, Struktur oder Union definiert. Dies ist nicht zulässig.  
   
- Auf der linken Seite des Bereichsauflösungsoperators \(`::`\) fehlt der Name einer Klasse, Struktur oder Union.  
+ Dieser Fehler kann verursacht werden, durch eine fehlende Klasse, Struktur oder union Namen auf der linken Seite des Bereichsauflösungsoperators (`::`) Operator.  
   
- Im folgenden Beispiel wird C2588 generiert:  
+ Im folgende Beispiel wird C2588 generiert:  
   
 ```  
 // C2588.cpp  

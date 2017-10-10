@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C2635 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2635"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2635"
+title: Compiler-Fehler C2635 generiert | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2635
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2635
 ms.assetid: 9deca2a8-2d61-42eb-9783-6578132ee3fb
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Compilerfehler C2635
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8a8ff1361a312c8d2abf7e07de3add2dbd3254ca
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-Konvertierung von 'Bezeichner1\*' in 'Bezeichner2\*' nicht möglich; implizite Konvertierung einer virtuellen Basisklasse  
+---
+# <a name="compiler-error-c2635"></a>Compiler-Fehler C2635 generiert
+Konvertierung einer 'Bezeichner1 *"in einer" Bezeichner2\*"; Konvertierung von einer virtuellen Basisklasse wird impliziert.  
   
- Für die Konvertierung ist eine Typumwandlung von einer `virtual`\-Basisklasse in eine abgeleitete Klasse erforderlich. Dies ist jedoch nicht zulässig.  
+ Die Konvertierung erfordert eine Umwandlung aus einem `virtual` Basisklasse in eine abgeleitete Klasse, was nicht zulässig ist.  
   
- Im folgenden Beispiel wird C2635 generiert:  
+ Im folgende Beispiel wird C2635 generiert:  
   
 ```  
 // C2635.cpp  

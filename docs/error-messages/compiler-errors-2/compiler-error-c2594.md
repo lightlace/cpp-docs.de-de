@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C2594 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2594"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2594"
+title: Compilerfehler C2594 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2594
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2594
 ms.assetid: 68cd708f-266e-44b0-a211-3e3ab63b11bf
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Compilerfehler C2594
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a6a73e5202b90a0bc436d93be142162531c6d204
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Operator': Mehrdeutige Konvertierung von 'Typ1' in 'Typ2'  
+---
+# <a name="compiler-error-c2594"></a>Compilerfehler C2594
+'Operator': mehrdeutige Konvertierungen von "Typ1" in "Typ2"  
   
- Keine Konvertierung von *type1* in *type2* war direkter als die andere.  Es werden zwei mögliche Lösungen zum Konvertieren von *type1* in *type2* vorgeschlagen.  Die erste Möglichkeit ist, eine direkte Konvertierung von *type1* in *type2* zu definieren, und die zweite Option ist, einer Sequenz von Konvertierungen von *type1* in *type2* festlegen.  
+ Keine Konvertierung von *Typ1* auf *Typ2* wurde eine direktere als alle anderen Werte. Wir empfehlen zwei mögliche Lösungen für die Konvertierung von *Typ1* auf *Typ2*. Die erste Möglichkeit besteht, definieren Sie eine direkte Konvertierung vom *Typ1* auf *Typ2*, und die zweite Möglichkeit ist die Angabe eine Sequenz von Konvertierungen von *Typ1* auf  *Typ2*.  
   
- Im folgenden Beispiel wird C2594 generiert.  Für die Behebung des Fehlers wird eine Abfolge von Konvertierungen vorgeschlagen:  
+ Im folgende Beispiel wird C2594 generiert. Die vorgeschlagene Lösung des Fehlers ist eine Sequenz von Konvertierungen:  
   
 ```  
 // C2594.cpp  

@@ -1,35 +1,38 @@
 ---
-title: "Compilerfehler C2614 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2614"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2614"
+title: Compiler-Fehler C2614 generiert | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2614
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2614
 ms.assetid: a550c1d5-8718-4e17-a888-b2619e00fe11
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Compilerfehler C2614
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 077762fef5474b3761c504224c58de83d82bdb12
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Klasse1': Unzulässige Memberinitialisierung: 'Klasse2' ist weder Basis noch Member  
+---
+# <a name="compiler-error-c2614"></a>Compiler-Fehler C2614 generiert
+'Klasse1': Unzulässiger Memberinitialisierung: "Klasse2" ist nicht an eine Basis oder ein Member  
   
- Nur Member oder Basisklassen dürfen in der Initialisierungsliste für Klassen und Strukturen stehen.  
+ Nur Member oder Basisklassen können in der Initialisierungsliste für eine Klasse oder Struktur angezeigt werden.  
   
-## Beispiel  
- Im folgenden Beispiel wird C2614 generiert.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird C2614 generiert.  
   
 ```  
 // C2614.cpp  

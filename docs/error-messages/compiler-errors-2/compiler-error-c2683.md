@@ -1,36 +1,39 @@
 ---
-title: "Compilerfehler C2683 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2683"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2683"
+title: Compiler-Fehler C2683 generiert | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2683
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2683
 ms.assetid: db605e4f-601b-4d05-92a1-c43ca24de08d
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Compilerfehler C2683
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b3e79c1a05ac0d1fab713e2dfa97c9da740088bb
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Umwandlung': 'Typ' ist kein polymorpher Typ  
+---
+# <a name="compiler-error-c2683"></a>Compiler-Fehler C2683 generiert
+'cast': 'Typ' ist kein polymorphen Typ  
   
- Sie können [dynamic\_cast](../../cpp/dynamic-cast-operator.md) nicht verwenden, um von einer nicht polymorphen Klasse \(d. h. einer Klasse ohne virtuelle Funktionen\) umzuwandeln.  
+ Sie können keine [Dynamic_cast](../../cpp/dynamic-cast-operator.md) zum Konvertieren von einer nicht polymorphen Klasse (eine Klasse keine virtuellen Funktionen).  
   
- Sie können [static\_cast](../../cpp/static-cast-operator.md) verwenden, um Konvertierungen von nicht polymorphen Typen durchzuführen.  Bei Verwendung von `static_cast` wird jedoch keine Laufzeitüberprüfung durchgeführt.  
+ Sie können [Static_cast](../../cpp/static-cast-operator.md) zum Durchführen von Konvertierungen von nicht polymorphen Typen. Allerdings `static_cast` führt eine Überprüfung zur Laufzeit keine.  
   
- Im folgenden Beispiel wird C2683 generiert:  
+ Im folgende Beispiel wird C2683 generiert:  
   
 ```  
 // C2683.cpp  

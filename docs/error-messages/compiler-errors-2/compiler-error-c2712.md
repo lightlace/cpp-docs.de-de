@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2712 | Microsoft-Dokumentation
+title: Compilerfehler Fehler C2712 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 89b7d0ad3c7e175db1525c2f3fb8407240ce943c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: af8f975960f34307c0e297f58f613eaf92018ef2
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
-# <a name="compiler-error-c2712"></a>Compiler-Fehler C2712
+# <a name="compiler-error-c2712"></a>Compilerfehler Fehler C2712
 __try kann nicht in Funktionen verwendet werden, die eine Objektentladung benötigen  
   
- Fehler C2712 kann auftreten, wenn Sie [/EHsc](../../build/reference/eh-exception-handling-model.md), und eine Funktion mit strukturierter Ausnahmebehandlung auch Objekte, die Entladung (Zerstörung) benötigen.  
+ Fehler C2712 kann auftreten, wenn Sie [/EHsc /](../../build/reference/eh-exception-handling-model.md), und eine Funktion mit strukturierter Ausnahmebehandlung auch Objekte besitzt, die Entladung (Zerstörung) benötigen.  
   
  Folgende Lösungen sind möglich:  
   
@@ -53,12 +39,12 @@ __try kann nicht in Funktionen verwendet werden, die eine Objektentladung benöt
   
 -   Kompilieren ohne /EHsc  
   
- Fehler C2712 kann auch auftreten, wenn Sie eine Methode deklariert mithilfe von Aufrufen der [__event](../../cpp/event.md) Schlüsselwort. Da das Ereignis möglicherweise in einer Multithreadumgebung verwendet wird, generiert der Compiler Code, die Bearbeitung des zugrunde liegenden Ereignisobjekts verhindert, und schließt den generierten Code dann in eine SEH- [Try-finally-Anweisung](../../cpp/try-finally-statement.md). Folglich wird Fehler C2712 auftreten, wenn Sie die Ereignismethode aufrufen und ein Argument, dessen Typ einen Destruktor enthält, als Wert übergeben. Eine Lösung besteht in diesem Fall darin, das Argument als konstanten Verweis zu übergeben.  
+ Fehler C2712 kann auch auftreten, wenn Sie eine Methode deklariert, indem Aufrufen der [__event](../../cpp/event.md) Schlüsselwort. Da das Ereignis möglicherweise in einer Multithreadumgebung verwendet werden, generiert der Compiler Code, der Bearbeitung des zugrunde liegenden Ereignisobjekts verhindert, und schließt den generierten Code dann in eine SEH- [Try-finally-Anweisung](../../cpp/try-finally-statement.md). Folglich wird Fehler C2712 auftreten, wenn Sie die Ereignismethode aufrufen und ein Argument, dessen Typ einen Destruktor enthält, als Wert übergeben. Eine Lösung besteht in diesem Fall darin, das Argument als konstanten Verweis zu übergeben.  
   
 ## <a name="example"></a>Beispiel  
- C2712 kann auch auftreten, wenn Sie die Kompilierung mit **/CLR: pure** , und deklarieren Sie ein statisches Array von Zeigern auf Funktionen in einem `__try` Block. Ein statischer Member erfordert, dass der Compiler dynamische Initialisierung unter **/CLR: pure**, wodurch eine C++-Ausnahmebehandlung impliziert. Eine C++-Ausnahmebehandlung ist jedoch in einem `__try`-Block nicht zulässig.  
+ C2712 kann auch auftreten, wenn beim Kompilieren mit **/CLR: pure** , und deklarieren Sie einen statischen Array von Zeigern auf Funktionen in einer `__try` Block. Ein statischer Member benötigt den Compiler an, verwenden Sie die dynamische Initialisierung unter **/CLR: pure**, wodurch eine C++-Ausnahmebehandlung impliziert. Eine C++-Ausnahmebehandlung ist jedoch in einem `__try`-Block nicht zulässig.  
   
- Die **/CLR: pure** und **/CLR: safe** Compileroptionen in Visual Studio 2015 veraltet sind.  
+ Die Compileroptionen **/clr:pure** und **/clr:safe** sind in Visual Studio 2015 veraltet.  
   
  Im folgenden Beispiel wird C2712 generiert und gezeigt, wie Sie diesen Fehler beheben:  
   

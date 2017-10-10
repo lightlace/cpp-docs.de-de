@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C2695 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2695"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2695"
+title: Compiler-Fehler C2695 generiert | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2695
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2695
 ms.assetid: 3f6f2091-c38b-40ea-ab6c-f1846f5702d7
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Compilerfehler C2695
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1ae253ade1093d447616a39e788a80b843290f6a
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Funktion1': Die überschreibende virtuelle Funktion unterscheidet sich von 'Funktion2' nur durch die Aufrufkonvention  
+---
+# <a name="compiler-error-c2695"></a>Compiler-Fehler C2695 generiert
+"Funktion1": Überschreiben der virtuellen Funktion unterscheidet sich von "Funktion2" nur durch die Aufrufkonvention  
   
- Durch die Signatur einer Funktion in einer abgeleiteten Klasse kann eine Funktion innerhalb einer Basisklasse nicht überschrieben und auch keine Aufrufkonvention geändert werden.  
+ Die Signatur einer Funktion in einer abgeleiteten Klasse kann keine Funktion in einer Basisklasse zu überschreiben und ändern die Aufrufkonvention.  
   
- Im folgenden Beispiel wird C2695 generiert:  
+ Im folgende Beispiel wird C2695 generiert:  
   
 ```  
 // C2695.cpp  

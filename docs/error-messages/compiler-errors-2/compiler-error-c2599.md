@@ -1,37 +1,39 @@
 ---
-title: "Compilerfehler C2599 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2599"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2599"
+title: Compilerfehler C2599 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2599
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2599
 ms.assetid: 88515f36-7589-47e2-862e-0de8b18d6668
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# Compilerfehler C2599
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e71bf7f08591ed80489b6e83590696cabdb57c03
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-**"**   
- ***Enumeration* ": Vorwärtsdeklaration des Enumerationstyps ist nicht zulässig**  
+---
+# <a name="compiler-error-c2599"></a>Compilerfehler C2599
+"Enum": Die Vorwärtsdeklaration Enum-Typs ist nicht zulässig.  
   
- Der Compiler unterstützt die Vorwärtsdeklaration einer verwalteten Enumeration nicht mehr.  
+ Der Compiler unterstützt nicht mehr Vorwärtsdeklaration einer verwalteten Enumeration.  
   
- Die Vorwärtsdeklaration eines Enumerationstyps ist bei Verwendung von [\/Za](../../build/reference/za-ze-disable-language-extensions.md) nicht zulässig.  
+ Vorwärtsdeklaration einer Enum-Typs darf nicht unter ["/ Za"](../../build/reference/za-ze-disable-language-extensions.md).  
   
- Im folgenden Beispiel wird C2599 generiert:  
+ Im folgende Beispiel wird C2599 generiert:  
   
 ```  
 // C2599.cpp  

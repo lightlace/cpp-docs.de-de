@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C2518 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2518"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2518"
+title: Compilerfehler C2518 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2518
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2518
 ms.assetid: a7895b47-da90-4851-ac97-18e81479595a
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Compilerfehler C2518
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2a76c528def49b1235460fa4d6632efd196417d3
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-Schlüsselwort 'Schlüsselwort' ist in der Basisklassenliste unzulässig und wird ignoriert  
+---
+# <a name="compiler-error-c2518"></a>Compilerfehler C2518
+Schlüsselwort 'Schlüsselwort' in der Basisklassenliste; unzulässig ignoriert  
   
- Die Schlüsselwörter `class` und `struct` dürfen nicht in einer Basisklassenliste vorkommen.  
+ Die Schlüsselwörter `class` und `struct` sollte nicht in einer Basisklassenliste verwendet werden.  
   
- Im folgenden Beispiel wird C2518 generiert:  
+ Im folgende Beispiel wird C2518 generiert:  
   
 ```  
 // C2518.cpp  

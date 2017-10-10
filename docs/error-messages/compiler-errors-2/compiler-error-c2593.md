@@ -1,36 +1,39 @@
 ---
-title: "Compilerfehler C2593 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2593"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2593"
+title: Compilerfehler C2593 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2593
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2593
 ms.assetid: 4a0fe9bb-2163-447d-91f6-1890ed8250f6
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Compilerfehler C2593
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: cb0b752259503f7e14cd78298e487f5304e13a0d
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2593"></a>Compilerfehler C2593
 'Operator Bezeichner' ist mehrdeutig  
   
- Für einen überladenen Operator wurden mehrere mögliche Operatoren definiert.  
+ Mehr als einen möglichen Operator wird für einen überladenen Operator definiert.  
   
- Dieser Fehler wird möglicherweise behoben, wenn Sie auf einen oder mehrere Parameter eine explizite Umwandlung anwenden.  
+ Dieser Fehler möglicherweise behoben werden, wenn Sie eine explizite Umwandlung auf mindestens einen tatsächlichen Parameter verwenden.  
   
- Im folgenden Beispiel wird C2593 generiert:  
+ Im folgende Beispiel wird C2593 generiert:  
   
 ```  
 // C2593.cpp  
@@ -48,9 +51,9 @@ int main() {
 }  
 ```  
   
- Dieser Fehler kann verursacht werden, wenn mit einem `CArchive`\-Objekt eine Gleitkommavariable serialisiert wird.  Der Compiler identifiziert den Operator `<<` als mehrdeutig.  Die einzigen primitiven C\+\+\-Typen, die `CArchive` serialisieren kann, sind die Typen fester Größe `BYTE`, `WORD`, `DWORD` und `LONG`.  Alle ganzzahligen Typen müssen in einen dieser Typen für die Serialisierung umgewandelt werden.  Gleitkommatypen müssen mithilfe der `CArchive::Write()`\-Memberfunktion archiviert werden.  
+ Dieser Fehler kann verursacht werden, durch die Serialisierung einer Gleitkommazahl Variable mit einem `CArchive` Objekt. Der Compiler identifiziert die `<<` Operator als mehrdeutig. Die einzigen primitiven C++-Typen, `CArchive` serialisieren kann sind die Typen mit fester Größe `BYTE`, `WORD`, `DWORD`, und `LONG`. Alle ganzzahligen Typen müssen für die Serialisierung in einem dieser Typen umgewandelt werden. Gleitkommatypen müssen archiviert werden, mithilfe der `CArchive::Write()` Memberfunktion.  
   
- Das folgende Beispiel verdeutlicht die Archivierung einer Gleitkommavariablen \(`f`\) in einem Archiv `ar`:  
+ Im folgende Beispiel wird gezeigt, wie eine Gleitkommavariable archivieren (`f`) Archiv `ar`:  
   
 ```  
 ar.Write(&f, sizeof( float ));  

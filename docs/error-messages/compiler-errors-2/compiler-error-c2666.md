@@ -19,26 +19,11 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 0aa7af12e49f152256c2efe7d16d02e1f1c45f68
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fb6c45ad153a428d090d05c8fa24c05eef024607
 ms.contentlocale: de-de
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2666"></a>Compilerfehler Fehler C2666
@@ -68,7 +53,7 @@ int main() {
   
 -   Qualifizierung eine Konvertierung ist nicht identisch mit der Identity-Konvertierung  
   
- Für die binären Operatoren \<, >, \<=, und > = wird ein übergebener Parameter ist jetzt implizit konvertiert, auf den Typ des Operanden den Typ des Parameters einen benutzerdefinierte Konvertierung-Operator, um in den Typ des Operanden konvertiert definiert. Es ist jetzt Mehrdeutigkeiten führen.  
+ Für die binären Operatoren \<, >, \<= und > =, eine übergebene Parameter ist jetzt implizit konvertiert, auf den Typ des Operanden den Typ des Parameters einen benutzerdefinierte Konvertierung-Operator, um in den Typ des Operanden konvertiert definiert. Es ist jetzt Mehrdeutigkeiten führen.  
   
  Rufen Sie für Code, der im Visual Studio .NET 2003 und Visual Studio .NET Versionen von Visual C++ gültig ist Operators Klasse Funktionssyntax explizit zu verwenden.  
   

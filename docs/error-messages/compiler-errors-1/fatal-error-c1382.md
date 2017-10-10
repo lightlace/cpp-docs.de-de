@@ -1,31 +1,34 @@
 ---
-title: "Schwerwiegender Fehler C1382 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1382"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1382"
+title: Schwerwiegender Fehler C1382 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1382
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1382
 ms.assetid: 7a100f8c-3179-4927-a2f1-98de4c753850
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Schwerwiegender Fehler C1382
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ddb016e14b01b3bc1dfd45c7d5a8ad1aa489ac3a
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-Die PCH\-Datei 'Datei' wurde neu erstellt, seitdem 'Objekt' generiert wurde.Erstellen Sie dieses Objekt neu  
+---
+# <a name="fatal-error-c1382"></a>Schwerwiegender Fehler C1382
+die PCH-Datei 'File' wurde neu erstellt, da "Obj" generiert wurde. Erstellen Sie dieses Objekt neu.  
   
- Der Compiler hat bei Verwendung von [\/LTCG](../../build/reference/ltcg-link-time-code-generation.md) eine PCH\-Datei gefunden, die aktueller als eine CIL\-OBJ\-Datei ist, die auf diese Datei verweist.  Die Informationen in der CIL\-OBJ\-Datei sind veraltet.  Erstellen Sie das Objekt neu.  
+ Bei Verwendung [/LTCG](../../build/reference/ltcg-link-time-code-generation.md), der Compiler hat eine PCH-Datei, die neuer als eine CIL OBJ-Datei ist, die auf diese Seite verweist. Die Informationen in der CIL-OBJ-Datei ist nicht aktuell. Erstellen Sie das Objekt neu.  
   
- C1382 kann auch auftreten, wenn mit **\/Yc** kompiliert wird und trotzdem mehrere Quellcodedateien an den Compiler übergeben werden.  Um das Problem zu beheben, verwenden Sie **\/Yc** nicht, wenn mehrere Quellcodedateien an den Compiler übergeben werden.  Weitere Informationen finden Sie unter [\/Yc \(Datei der vorkompilierten Header erstellen\)](../../build/reference/yc-create-precompiled-header-file.md).
+ C1382 kann auch auftreten, wenn beim Kompilieren mit **"/ Yc"**, jedoch mehreren Quellcodedateien an den Compiler übergeben.  Verwenden Sie zum Beheben nicht **"/ Yc"** bei mehreren Quellcodedateien an den Compiler übergeben.  Weitere Informationen finden Sie unter [/Yc (Datei der vorkompilierten Header erstellen)](../../build/reference/yc-create-precompiled-header-file.md).

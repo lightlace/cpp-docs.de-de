@@ -1,32 +1,35 @@
 ---
-title: "Compilerfehler C2680 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2680"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2680"
+title: Compilerfehler Fehler C2680 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2680
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2680
 ms.assetid: d6f7129e-dd17-4661-b680-18d6b925b1cc
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Compilerfehler C2680
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f3a7d58aa7eb126392a0484ce28753c477d6137c
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2680"></a>Compilerfehler Fehler C2680
 'Typ': Ungültiger Zieltyp für Name  
   
- Ein Umwandlungsoperator hat versucht, eine Typumwandlung in einen Typ durchzuführen, der kein Zeiger oder Verweis ist.  Der Operator [dynamic\_cast](../../cpp/dynamic-cast-operator.md) kann nur für Zeiger oder Verweise verwendet werden.  
+ Ein Typumwandlungsoperator wurde versucht, auf einen Typ zu konvertieren, der keinem Zeiger oder Verweis ist. Die [Dynamic_cast](../../cpp/dynamic-cast-operator.md) -Operator kann nur für Zeiger oder Verweise verwendet werden.  
   
  Im folgenden Beispiel wird C2680 generiert:  
   
