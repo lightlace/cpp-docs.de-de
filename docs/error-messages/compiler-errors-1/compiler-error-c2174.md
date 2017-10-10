@@ -1,29 +1,32 @@
 ---
-title: "Compilerfehler C2174 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2174"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2174"
+title: Compilerfehler C2174 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2174
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2174
 ms.assetid: 161d563c-76e9-47e9-9142-7812e9ea169e
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Compilerfehler C2174
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d01a99cf6bd1a4c95b2e5c8609b79e83437dbbf4
+ms.contentlocale: de-de
+ms.lasthandoff: 10/09/2017
 
-'Funktion': Übergebener Parameter ist vom Typ 'void': Parameter Nummer1, Parameterliste Nummer2  
+---
+# <a name="compiler-error-c2174"></a>Compilerfehler C2174
+'Funktion': Parameter hat den Typ 'Void': Parameter "number1", Parameterliste Nummer2  
   
- Der an Parameterliste *Nummer2* übergebene Parameter *Nummer1* ist ein Parameter vom Typ `void`.  Parameter können nicht vom Typ `void` sein.  Verwenden Sie stattdessen `void*`.
+ Parameter `number1` übergebene Parameter `number2` ist eine `void` Parameter. Parameter sind keine Typ `void`. Verwenden Sie stattdessen `void*`.

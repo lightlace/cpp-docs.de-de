@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2143 | Microsoft-Dokumentation
+title: Compilerfehler C2143 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,40 +19,25 @@ caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: faa9361da0091ec86628af19a03eadb133ea43cc
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 31ea645b9dd22fd15bbf4695935482d899a13386
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2143"></a>Compilerfehler C2143
-Syntaxfehler: Fehlendes 'token1' vor 'token2'  
+Syntaxfehler: Fehlender "ttoken1" vor "token2"  
   
- Der Compiler hat ein spezifisches Token (d. h. ein Sprachelement als ein Leerzeichen) erwartet und stattdessen ein anderes Token gefunden.  
+ Der Compiler hat ein spezifisches Token (d. h. ein Sprachelement als Leerzeichen) erwartet und stattdessen ein anderes Token gefunden.  
   
- Informationen zu diesem Fehler, wenn es tritt auf, wenn Sie einen Function-Try-Block verwenden, finden Sie unter [Knowledge Base-Artikel 241706](http://support.microsoft.com/kb/241706).  
+ Informationen zu diesem Fehler bei der Ausführung bei der Verwendung eines Funktion Try-Blocks, finden Sie unter [Knowledge Base-Artikel 241706](http://support.microsoft.com/kb/241706).  
   
- Überprüfen Sie die [C++-Sprachreferenz](../../cpp/cpp-language-reference.md) bestimmt der Code syntaktisch falsch ist. Da der Compiler diesen Fehler zu melden kann, nachdem sie die Zeile stößt, die das Problem verursacht, überprüfen Sie einige Codezeilen vor der fehlerhaften.  
+ Überprüfen Sie die [C++-Sprachreferenz](../../cpp/cpp-language-reference.md) um zu bestimmen, wo Code syntaktisch falsch ist. Überprüfen Sie mehrere Codezeilen, die den Fehler vorausgehen, weil der Compiler diesen Fehler zu melden möglicherweise nach der Zeile gefunden wird, die das Problem verursacht.  
   
  C2143 kann in verschiedenen Situationen auftreten.  
   
- Er kann auftreten, wenn ein Operator, der einen Namen zu qualifizieren, kann (`::`, `->`, und `.`) muss das Schlüsselwort folgen `template`, wie im folgenden Beispiel:  
+ Er kann auftreten, wenn ein Operator, der einen Namen zu qualifizieren, kann (`::`, `->`, und `.`) muss das Schlüsselwort folgen `template`, wie in diesem Beispiel:  
   
 ```cpp  
 class MyClass  
@@ -65,7 +50,7 @@ class MyClass
   
 ```  
   
- Standardmäßig C++ setzt voraus, dass `Ty::PutFuncType` keine Vorlage; daher die folgenden `<` wird als ein interpretiert-als-Zeichen.  Sie müssen den Compiler anweisen explizit, die `PutFuncType` ist eine Vorlage, damit es ordnungsgemäß auf die Spitze Klammer analysieren kann. Um diesen Fehler zu korrigieren, verwenden die `template` Schlüsselwort im abhängigen Typ-Namen, wie hier gezeigt:  
+ Standardmäßig C++ setzt voraus, dass `Ty::PutFuncType` keine Vorlage ist; daher die folgenden `<` wird interpretiert, als ein kleiner-als-Zeichen.  Sie müssen den Compiler anweisen, explizit, die `PutFuncType` ist eine Vorlage aus, sodass die Spitze Klammer ordnungsgemäß analysiert werden kann. Verwenden Sie zum Beheben dieses Fehlers die `template` Schlüsselwort im abhängigen Typ-Namen, wie hier gezeigt:  
   
 ```cpp  
 class MyClass  
@@ -78,7 +63,7 @@ class MyClass
   
 ```  
   
- C2143 kann auftreten, wenn **/CLR** wird verwendet, und ein `using` Richtlinie einen Syntaxfehler aufweist:  
+ C2143 kann auftreten, wenn **"/ CLR"** wird verwendet, und ein `using` Anweisung einen Syntaxfehler aufweist:  
   
 ```cpp  
 // C2143a.cpp  
@@ -87,7 +72,7 @@ using namespace System.Reflection;   // C2143
 using namespace System::Reflection;  
 ```  
   
- Es kann auch auftreten, wenn Sie versuchen, eine Quellcodedatei mit CLR-Syntax ohne Kompilieren **/CLR**:  
+ Er kann auch auftreten, wenn Sie versuchen, eine Quellcodedatei mit CLR-Syntax ohne Kompilieren **"/ CLR"**:  
   
 ```cpp  
 // C2143b.cpp  
@@ -101,7 +86,7 @@ int main() {
 }  
 ```  
   
- Das erste folgende Zeichen kein Leerzeichen ein `if` -Anweisung muss eine öffnende runde Klammer sein. Der Compiler kann nicht alles andere übersetzen:  
+ Das erste nicht-Leerzeichen, das folgt eine `if` -Anweisung muss eine linke Klammer sein. Der Compiler kann nicht in etwas anderes übersetzen:  
   
 ```cpp  
 // C2143c.cpp  
@@ -116,7 +101,7 @@ int main() {
 }  
 ```  
   
- C2143 kann auftreten, wenn eine schließende geschweifte Klammer, eine Klammer oder ein Semikolon in der Zeile nicht vorhanden ist, in dem der Fehler aufgetreten ist, oder auf eine der Zeilen direkt über:  
+ C2143 tritt auf, wenn eine schließende geschweifte Klammer, eine Klammer oder ein Semikolon in der Zeile nicht vorhanden ist, in dem der Fehler aufgetreten ist, oder auf eine der Zeilen nur über:  
   
 ```cpp  
 // C2143d.cpp  
@@ -127,7 +112,7 @@ class X {
 } x;  
 ```  
   
- Oder wenn ein ungültiges Tag in einer Klassendeklaration:  
+ Oder in einer Klassendeklaration ein ungültiges Tag vorhanden ist:  
   
 ```cpp  
 // C2143e.cpp  
@@ -139,7 +124,7 @@ class + {};   // C2143 + is an invalid tag name
 class ValidName {};   // OK  
 ```  
   
- Oder wenn eine Bezeichnung nicht an eine Anweisung angefügt ist. Wenn Sie eine Bezeichnung allein platzieren müssen, z. B. am Ende einer zusammengesetzten Anweisung fügen Sie es an eine null-Anweisung:  
+ Oder wenn eine Bezeichnung nicht an eine Anweisung angefügt ist. Wenn Sie eine Bezeichnung allein setzen müssen, z. B. am Ende einer verbundanweisung, fügen Sie es an eine null-Anweisung:  
   
 ```cpp  
 // C2143f.cpp  
@@ -153,7 +138,7 @@ void func1() {
 }  
 ```  
   
- Der Fehler kann auftreten, wenn ein nicht qualifizierter Aufruf an einen Typ in der C++-Standardbibliothek hergestellt wird:  
+ Der Fehler kann auftreten, wenn ein nicht qualifizierter Aufruf auf einen Typ in der C++-Standardbibliothek ausgeführt wird:  
   
 ```cpp  
 // C2143g.cpp  
@@ -195,7 +180,7 @@ template void PrintType(float i, float j){}   // C2143
 template void PrintType(float i, float j);   // OK  
 ```  
   
- In einem C-Programm müssen Variablen am Anfang der Funktion deklariert werden, und sie können nicht deklariert werden, nachdem die Funktion nicht-Declaration-Anweisungen ausführt.  
+ In einem C-Programm Variablen müssen am Anfang der Funktion deklariert werden, und sie können nicht deklariert werden, nachdem die Funktion nicht-Declaration-Anweisungen ausführt.  
   
 ```C  
 // C2143j.c  

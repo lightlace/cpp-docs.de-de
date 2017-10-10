@@ -1,37 +1,40 @@
 ---
-title: "Compilerfehler C2140 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2140"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2140"
+title: Compilerfehler C2140 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2140
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2140
 ms.assetid: d44a0500-002c-4632-9e5e-c71c3a473ec4
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Compilerfehler C2140
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: cee9861b991ae853443a49e158634c7578dcb913
+ms.contentlocale: de-de
+ms.lasthandoff: 10/09/2017
 
-'Typ': Ein Typ, der von einem generischen Typparameter abhängig ist, ist als Argument für das systeminterne Typmerkmal 'Merkmal' des Compilers nicht zulässig  
+---
+# <a name="compiler-error-c2140"></a>Compilerfehler C2140
+'Typ': ein Typ, der einen generischen Typparameter abhängig ist, ist nicht als Argument für das systeminterne Typmerkmal 'Merkmal' des Compilers zulässig  
   
- Ein ungültiger Typspezifizierer wurde an ein Typmerkmal übergeben.  
+ Ein Merkmal "Typ" wurde ein ungültiger Typbezeichner übergeben.  
   
- Weitere Informationen finden Sie unter [Compiler Support for Type Traits](../../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
+ Weitere Informationen finden Sie unter [Compilerunterstützung für Typmerkmale](../../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
-## Beispiel  
- Im folgenden Beispiel wird C2140 generiert.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird C2140 generiert.  
   
 ```  
 // C2140.cpp  

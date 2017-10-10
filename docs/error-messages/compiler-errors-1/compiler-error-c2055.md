@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C2055 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2055"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2055"
+title: Compilerfehler Fehler C2055 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2055
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2055
 ms.assetid: 6cec79cc-6bec-443f-9897-fbf5452718c7
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Compilerfehler C2055
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c447d79179f3575230353b3db70717702b542b68
+ms.contentlocale: de-de
+ms.lasthandoff: 10/09/2017
 
-Liste formaler Parameter erwartet, nicht Typenliste  
+---
+# <a name="compiler-error-c2055"></a>Compilerfehler Fehler C2055
+erwartete formellen Parameterliste, keiner Liste  
   
- Anstatt einer Liste formaler Parameter enthält eine Funktionsdefinition eine Parametertypenliste.  Bei ANSI C müssen formale Parameter benannt werden, sofern sie nicht vom Typ `void` sind oder Auslassungszeichen \(`...`\) darstellen.  
+ Eine Funktionsdefinition enthält eine Liste der Parameter anstelle einer formellen Parameterliste. ANSI C erfordert formale Parameter benannt werden, sofern sie Sie nicht "void" oder ein Auslassungszeichen (`...`).  
   
- Im folgenden Beispiel wird C2055 generiert:  
+ Im folgende Beispiel wird C2055 generiert:  
   
 ```  
 // C2055.c  

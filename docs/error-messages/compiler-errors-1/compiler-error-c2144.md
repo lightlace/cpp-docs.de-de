@@ -1,40 +1,43 @@
 ---
-title: "Compilerfehler C2144 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2144"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2144"
+title: Compilerfehler C2144 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2144
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2144
 ms.assetid: 49f3959b-324f-4c06-9588-c0ecef5dc5b3
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# Compilerfehler C2144
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0f541465009dcc137b8853351d10ceb9d5db4d05
+ms.contentlocale: de-de
+ms.lasthandoff: 10/09/2017
 
-Syntaxfehler: 'Typ' sollte auf 'Token' folgen  
+---
+# <a name="compiler-error-c2144"></a>Compilerfehler C2144
+Syntaxfehler: 'Typ' soll 'Token' voranstehen  
   
- Der Compiler hat `token` erwartet, jedoch `type` gefunden.  
+ Der Compiler erwartet `token` und `type` stattdessen.  
   
- Dieser Fehler kann durch das Fehlen einer schließenden geschweiften Klammer, einer rechten Klammer oder eines Semikolons verursacht werden.  
+ Dieser Fehler kann durch eine fehlende schließende Klammer gefunden, schließende Klammern oder durch Semikolons verursacht werden.  
   
- C2144 kann auch auftreten, wenn ein Makro mit einem CLR\-Schlüsselwort erstellt wird, das ein Leerzeichen enthält.  
+ C2144 kann auch auftreten, wenn Sie versuchen, erstellen Sie ein Makro aus einem CLR-Schlüsselwort, das ein Leerzeichen enthält.  
   
- Möglicherweise wird C2144 auch angezeigt, wenn Sie eine Typweiterleitung durchführen.  Weitere Informationen finden Sie unter [Type Forwarding \(C\+\+\/CLI\)](../../windows/type-forwarding-cpp-cli.md).  
+ C2144 möglicherweise auch angezeigt, wenn Sie versuchen, die Weiterleitung eingeben. Finden Sie unter [Typweiterleitung (C + c++ / CLI)](../../windows/type-forwarding-cpp-cli.md) für Weitere Informationen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird C2144 generiert.  
   
 ```  
@@ -48,7 +51,7 @@ REF struct MyStruct0;   // C2144
 REF1 MyStruct1;  
 ```  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird C2144 generiert.  
   
 ```  

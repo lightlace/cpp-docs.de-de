@@ -1,35 +1,38 @@
 ---
-title: "Compilerfehler C2027 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2027"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2027"
+title: Compilerfehler Fehler C2027 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2027
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2027
 ms.assetid: a39150c0-ec04-45ec-934c-a838bfe76627
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Compilerfehler C2027
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2a2fec9194858127ca08ecc0a891a81a91de48fa
+ms.contentlocale: de-de
+ms.lasthandoff: 10/09/2017
 
-Verwendung des undefinierten Typs 'Typ'  
+---
+# <a name="compiler-error-c2027"></a>Compilerfehler Fehler C2027
+Verwenden eines undefinierten Typs 'Typ'  
   
- Typen können erst verwendet werden, nachdem sie definiert wurden.  Um den Fehler zu beheben, stellen Sie sicher, dass der Typ vollständig definiert ist, bevor Sie einen Verweis darauf erstellen.  
+ Ein Typ kann nicht verwendet werden, bis er definiert ist. Um den Fehler zu beheben, achten Sie darauf, dass der Typ vollständig definiert ist, bevor auf Sie verwiesen wird.  
   
-## Beispiel  
- Im folgenden Beispiel wird C2027 generiert.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird C2027 generiert.  
   
 ```  
 // C2027.cpp  
@@ -49,10 +52,10 @@ int main() {
 }  
 ```  
   
-## Beispiel  
- Es ist möglich, einen Zeiger auf einen deklarierten, jedoch nicht definierten Typ zu deklarieren.  In Visual C\+\+ ist jedoch keinen Verweis auf einen nicht definierten Typ zulässig.  
+## <a name="example"></a>Beispiel  
+ Es ist möglich, deklarieren Sie einen Zeiger auf einen Typ deklariert, aber nicht definiert.  Visual C++, nicht jedoch einen Verweis auf einen undefinierten Typ.  
   
- Im folgenden Beispiel wird C2027 generiert.  
+ Im folgende Beispiel wird C2027 generiert.  
   
 ```  
 // C2027_b.cpp  

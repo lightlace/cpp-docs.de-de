@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2259 | Microsoft-Dokumentation
+title: Compilerfehler C2259 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,26 +19,11 @@ caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 0837d8f5e48ccf0de0ba8630801667da2ddb6bfa
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 865eea3ed69ea817aafea011e81033f2bd4ca5f4
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2259"></a>Compilerfehler C2259
@@ -77,7 +62,7 @@ B b;  // OK, B defines func()
   
 -   Verwenden Sie den Bereichsauflösungsoperator für die in der abgeleiteten Klasse definierten Schnittstellenmethoden, um den Namen der implementierten Methode mit dem Namen der Schnittstelle zu kennzeichnen.  
   
- C2259 kann außerdem infolge einer konformitätsverbesserung, die in Visual C++ 2005 wurde **/Zc: wchar_t** ist jetzt standardmäßig aktiviert. In diesem Fall kann der Fehler C2599 behoben entweder durch eine Kompilierung mit werden **/Zc:wchar_t-**, um das Verhalten zu erhalten, aus früheren Versionen oder vorzugsweise Aktualisierung Ihrer Typen, sodass diese kompatibel sind. Weitere Informationen finden Sie unter [/Zc:wchar_t (wchar_t ist der native Typ)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
+ C2259 kann außerdem infolge einer konformitätsverbesserung, die in Visual C++ 2005 erstellt wurde **/Zc: wchar_t** ist jetzt standardmäßig aktiviert. In diesem Fall kann der Fehler C2599 behoben entweder durch eine Kompilierung mit werden **/Zc:wchar_t-**, um das Verhalten abzurufen, aus früheren Versionen oder bevorzugt Aktualisierung Ihrer Typen, sodass diese kompatibel sind. Weitere Informationen finden Sie unter[/Zc:wchar_t (wchar_t ist der systemeigene Typ)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
   
  Im folgende Beispiel wird C2259 generiert:  
   
