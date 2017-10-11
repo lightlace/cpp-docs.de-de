@@ -1,32 +1,35 @@
 ---
-title: "Compiler Error C3387 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3387"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3387"
+title: Compilerfehler C3387 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3387
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3387
 ms.assetid: c54d9925-ed14-4976-b8db-e8d4dc84e536
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Compiler Error C3387
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 79b38cd1793509c92ec2d2941fbb3eb2e7121ee7
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-„member“: \_\_\_\_declspec\(dllexport\)\/\_\_declspec\(dllimport\) kann nicht auf einen Member eines verwalteten oder WinRT\-Typs angewendet werden.  
+---
+# <a name="compiler-error-c3387"></a>Compilerfehler C3387
+'Member': __declspec(dllexport) /\__declspec(dllimport) kann nicht auf einen Member eines verwalteten oder WinRT-Typ angewendet werden  
   
- Die `__declspec`\-Modifizierer `dllimport` und [dllexport](../../cpp/dllexport-dllimport.md) sind für Member eines verwalteten oder WinRT\-Typs nicht zulässig .  
+ Die `dllimport` und [Dllexport](../../cpp/dllexport-dllimport.md) `__declspec` Modifizierer sind nicht gültig für Member eines verwalteten oder WinRT-Typs.  
   
  Im folgenden Beispiel wird C3387 generiert und gezeigt, wie Sie diesen Fehler beheben:  
   

@@ -19,26 +19,11 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 83a215b1c4883ba7ed4b285af8c4efafe2cfaa05
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 42923edc2d238e7f0b64858561f7d23d211abd80
 ms.contentlocale: de-de
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3490"></a>Compilerfehler C3490
@@ -51,7 +36,7 @@ ms.lasthandoff: 04/04/2017
 -   Entfernen Sie den `const` -Modifizierer aus der Methodendeklaration.  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird C3490 generiert, da es sich um die Membervariable ändert `_i` in einem `const` Methode:  
+ Im folgenden Beispiel wird C3490 generiert, da die Membervariable `_i` in einer `const` -Methode geändert wird:  
   
 ```  
 // C3490a.cpp  

@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C3395 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3395"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3395"
+title: Compilerfehler C3395 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3395
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3395
 ms.assetid: 26a9ebc9-ed97-47ce-b436-19aa2bcf6e50
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Compilerfehler C3395
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 93009d77c40535997ecc42ccb715f5fe81d79798
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Funktion' : \_\_declspec \(dllexport\) kann nicht auf eine Funktion mit \_\_clrcall\-Aufrufkonvention angewendet werden  
+---
+# <a name="compiler-error-c3395"></a>Compilerfehler C3395
+'Funktion': __declspec(dllexport) kann nicht angewendet werden, an eine Funktion mit dem \__clrcall Aufrufkonvention  
   
- `__declspec(dllexport)` und [\_\_clrcall](../../cpp/clrcall.md) sind nicht kompatibel.  Weitere Informationen finden Sie unter [dllexport, dllimport](../../cpp/dllexport-dllimport.md).  
+ `__declspec(dllexport)`und [__clrcall](../../cpp/clrcall.md) sind nicht kompatibel.  Weitere Informationen finden Sie unter [Dllexport, Dllimport](../../cpp/dllexport-dllimport.md).  
   
- Im folgenden Beispiel wird C3395 generiert:  
+ Im folgende Beispiel wird C3395 generiert:  
   
 ```  
 // C3395.cpp  

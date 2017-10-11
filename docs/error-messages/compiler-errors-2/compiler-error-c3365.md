@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C3365 generiert | Microsoft-Dokumentation
+title: Compilerfehler C3365 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 2ad4d2d5b926001fad668b62b6cbf0abe21542c0
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2352ff83181fe1127e1faa60829d00f03508bccd
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3365"></a>Compilerfehler C3365
 Operator-Operator: Unterschiedliche Operanden vom Typ "Typ1" und "Typ2".  
   
-Es wurde versucht, Delegaten mit unterschiedlichen Typen zu erstellen.  Finden Sie unter [Gewusst wie: definieren und verwenden Delegaten (C++ / CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md) für Weitere Informationen über Delegaten.  
+Es wurde versucht, Delegaten mit unterschiedlichen Typen zu erstellen.  Finden Sie unter [wie: definieren und verwenden Delegaten (C + c++ / CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md) für Weitere Informationen über Delegaten.  
   
 ## <a name="example"></a>Beispiel  
 Im folgenden Beispiel wird C3365 generiert:  

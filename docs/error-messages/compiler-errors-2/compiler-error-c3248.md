@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C3248 | Microsoft-Dokumentation
+title: Compilerfehler C3248 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 017e0f42e4e29b07600b5502362b4a60bdf906d9
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a1cc7f831a1071e19f7009037e142c385904ea7f
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3248"></a>Compilerfehler C3248
 "Funktion1": Eine als "__sealed" deklarierte Funktion kann nicht von "Funktion2" überschrieben werden.  
   
-Eine abgeleitete Klasse hat versucht, Überschreiben einer **__sealed** virtuelle Methode.  
+Eine abgeleitete Klasse hat versucht, virtuelle **__sealed** Methode zu überschreiben.  
   
-C3248 ist nur erreichbar, mit der veralteten-Compileroption **/CLR: oldSyntax**.  
+C3248 ist nur über die veraltete Compileroption erreichbar **/CLR: oldSyntax**.  
 

@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C3155 generiert | Microsoft-Dokumentation
+title: Compiler-Fehler C3155 generiert | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 651eb1a03eed55a3d383a32f027991a4a56d4371
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 75156c7b4611038b522501a20468595de10863af
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3155"></a>Compiler-Fehler C3155 generiert
-In einem Eigenschaftenindexer sind keine Attribute zulässig.  
+Attribute sind in einem Eigenschaft-Indexer nicht zulässig.  
   
-Eine indizierte Eigenschaft wurde falsch deklariert. Weitere Informationen finden Sie unter [Gewusst wie: Verwenden von Eigenschaften in C++ / CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).  
+Eine indizierte Eigenschaft wurde falsch deklariert. Weitere Informationen finden Sie unter [wie: Verwenden von Eigenschaften in C + c++ / CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).  
   
 ## <a name="example"></a>Beispiel  
 Im folgende Beispiel wird C3155 generiert.  

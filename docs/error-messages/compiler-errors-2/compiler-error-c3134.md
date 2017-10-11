@@ -1,32 +1,35 @@
 ---
-title: "Compilerfehler C3134 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3134"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3134"
+title: Compilerfehler Fehler C3134 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3134
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3134
 ms.assetid: f887e4d2-7740-49e4-9972-7edceb8fa77b
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Compilerfehler C3134
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: bd84ae5c02d360af2dffa3c242f4fc02b4bd30b2
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Wert': Wert des Attributarguments 'Attribut' verfügt nicht über gültigen Typ 'Typ'  
+---
+# <a name="compiler-error-c3134"></a>Compilerfehler Fehler C3134
+"Value": Wert Attributargument 'Attribut' enthält keinen gültigen Typ 'Typ'  
   
- Beim Zuweisen des Werts zu einem Attribut wurde ein Syntaxfehler gefunden.  
+ Ein Syntaxfehler wurde erkannt, wenn ein Attribut ein Wert zugewiesen wurde.  
   
-## Siehe auch  
- [Attributes by Usage](../../windows/attributes-by-usage.md)
+## <a name="see-also"></a>Siehe auch  
+ [Attribute nach Verwendung](../../windows/attributes-by-usage.md)

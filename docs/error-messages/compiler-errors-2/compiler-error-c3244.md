@@ -19,32 +19,17 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 08758b22847e07442aafdfa2c7d9d5cf1381c5e2
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 225b3e95e2f0ba7e41959732f2c11b8860ef8b3b
 ms.contentlocale: de-de
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3244"></a>Compilerfehler C3244
 'methode': Diese Methode wurde von 'schnittstelle' eingeführt, nicht von 'schnittstelle'  
   
- Sie haben versucht, [explizit überschreiben](../../cpp/explicit-overrides-cpp.md) ein Element, das in der angegebenen Schnittstelle nicht vorhanden, aber in einer anderen Basisklasse vorhanden.  
+ Versuch zum [expliziten Überschreiben](../../cpp/explicit-overrides-cpp.md) eines Members, der in der angegebenen Schnittstelle nicht vorhanden ist, wohl aber in einer anderen Basisklasse.  
   
  Im folgenden Beispiel wird C3244 generiert:  
   

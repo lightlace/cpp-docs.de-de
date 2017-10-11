@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C3181 generiert | Microsoft-Dokumentation
+title: Compiler-Fehler C3181 generiert | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 4229a9d9811bad46035451c5d64b7ed06da476d2
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 84f725f64e22dc5da1736eb64696b03b0b7ea36a
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3181"></a>Compiler-Fehler C3181 generiert
 'Typ': Ungültiger Operand für Operator  
   
-Ein ungültiger Parameter übergeben wurde, um die [Typeid](../../windows/typeid-cpp-component-extensions.md) Operator. Der Parameter muss ein verwalteter Typ sein.  
+Ein ungültiger Parameter wurde übergeben, um die [Typeid](../../windows/typeid-cpp-component-extensions.md) Operator. Der Parameter muss ein verwalteter Typ sein.  
   
-Beachten Sie, dass der Compiler Aliasnamen für systemeigene Typen verwendet, die Typen in der common Language Runtime zugeordnet.  
+Beachten Sie, dass der Compiler Aliase für systemeigene Typen verwendet, die in der common Language Runtime-Typen zugeordnet.  
   
 Im folgende Beispiel wird C3181 generiert:  
   

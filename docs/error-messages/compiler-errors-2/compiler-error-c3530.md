@@ -1,39 +1,42 @@
 ---
-title: "Compilerfehler C3530 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3530"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3530"
+title: Compilerfehler C3530 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3530
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3530
 ms.assetid: 21be81ce-b699-4c74-81bc-80a0c34d2d5a
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Compilerfehler C3530
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0d66e76fc3e44a037f52aa6e217fae848f1338d2
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-"Auto" kann nicht mit einem anderen Typspezifizierer kombiniert werden  
+---
+# <a name="compiler-error-c3530"></a>Compilerfehler C3530
+'Auto' kann nicht mit einem anderen Typspezifizierer kombiniert werden  
   
- Ein Typspezifizierer wird mit dem `auto`\-Schlüsselwort verwendet.  
+ Ein Typspezifizierer wird verwendet, mit dem `auto` Schlüsselwort.  
   
-### So beheben Sie diesen Fehler  
+### <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1.  Verwenden Sie keinen Typspezifizierer in einer Variablendeklaration, die das `auto`\-Schlüsselwort verwendet.  
+1.  Verwenden Sie keinen Typspezifizierer in einer Variablendeklaration, die mithilfe der `auto` Schlüsselwort.  
   
-## Beispiel  
- Im folgenden Beispiel wird C3530 erzeugt, da die Variable `x` sowohl mit dem `auto`\-Schlüsselwort als auch mit dem `int`\-Typ deklariert und das Beispiel mit **\/Zc:auto** kompiliert wird.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel wird C3530 erzeugt, da Variable `x` wird deklariert, mit der `auto` -Schlüsselwort und Datentyp `int`, und da im Beispiel mit kompiliert wird **/Zc: Auto**.  
   
 ```  
 // C3530.cpp  
@@ -45,5 +48,5 @@ int main()
 }  
 ```  
   
-## Siehe auch  
- [Auto\-Schlüsselwort](../../cpp/auto-keyword.md)
+## <a name="see-also"></a>Siehe auch  
+ [Auto-Schlüsselwort](../../cpp/auto-keyword.md)

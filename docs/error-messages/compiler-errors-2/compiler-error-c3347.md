@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: d20934732a3b04bcd49485c3e0ba5b3562b147c5
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 75d81462324690ae126938ffeab5a8eea9334426
 ms.contentlocale: de-de
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3347"></a>Compilerfehler C3347
 'Arg': Das erforderliche Argument ist nicht im Attribut 'idl_modules' festgelegt.  
   
- Ein erforderliches Argument wurde nicht übergeben, um die [Idl_module](../../windows/idl-module.md) Attribut.  
+ Ein erforderliches Argument wurde nicht an das [idl_module](../../windows/idl-module.md) -Attribut übergeben.  
   
  Im folgenden Beispiel wird C3347 generiert:  
   

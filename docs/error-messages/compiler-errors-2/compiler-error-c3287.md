@@ -19,26 +19,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 9ebc689db4ede54ec8ae33e2f9bc0a90afe31c69
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b09d2af16ca6d38e476e7298b2b5fb61b2b30129
 ms.contentlocale: de-de
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3287"></a>Compilerfehler C3287
@@ -46,7 +31,7 @@ Der Typ 'Typ' (Rückgabetyp von 'GetEnumerator') muss eine passende öffentliche
   
  Benutzerdefinierte Auflistungsklassen müssen Definitionen für `MoveNext` und `Current`enthalten.  
   
- Finden Sie unter [Vorgehensweise: Iterate Over a User-Defined-Auflistung mit für die einzelnen](../../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md) für Weitere Informationen.  
+ Weitere Informationen finden Sie unter [How to: Iterate Over a User-Defined Collection with for each](../../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md) .  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird C3287 generiert:  

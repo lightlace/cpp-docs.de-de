@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 81819235fc30cb5601315e994b57b6d1ad7edd5e
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1bc5af03841fe0a06b1ae0a31887565a3c1eb197
 ms.contentlocale: de-de
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3371"></a>Compilerfehler C3371
 "idl_module": Hier ist nur die "name"-Eigenschaft zulässig  
   
- [Idl_module](../../windows/idl-module.md) Verwendung direkt in einer Funktionsdeklaration sind keinen Parameter als Name.  
+ Die direkte Verwendung von[idl_module](../../windows/idl-module.md) in einer Funktionsdeklaration kann keine anderen Parameter als „name“ aufweisen.  
   
  Im folgenden Beispiel wird C3371 generiert:  
   

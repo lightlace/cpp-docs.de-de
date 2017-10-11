@@ -1,39 +1,42 @@
 ---
-title: "Compilerfehler C3487 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3487"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3487"
+title: Compilerfehler C3487 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3487
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3487
 ms.assetid: 39bda474-4418-4a79-98bf-2b22fa92eaaa
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Compilerfehler C3487
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: eb659f2d7971d1dd2ff27c438839336d4744767e
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'return type': Alle Rückgabeausdrücke müssen in denselben Typ hergeleitet werden: Zuvor war es 'return type'.  
+---
+# <a name="compiler-error-c3487"></a>Compilerfehler C3487
+„Rückgabetyp“: Alle Rückgabeausdrücke müssen in denselben Typ hergeleitet werden: Zuvor war es „Rückgabetyp“.  
   
- Ein Lambda\-Ausdruck muss seinen eigenen Rückgabetyp angeben, es sei denn, es enthält eine einzelne Rückgabeanweisung.  Wenn ein Lambda\-Ausdruck mehrere Rückgabeanweisungen enthält, müssen alle den gleichen Typ aufweisen.  
+ Ein Lambdaausdruck muss seinen eigenen Rückgabetyp angeben, es sei denn, er enthält eine einzelne Rückgabeanweisung. Wenn ein Lambda-Ausdruck mehrere Rückgabeanweisungen enthält, müssen alle den gleichen Typ aufweisen.  
   
-### So beheben Sie diesen Fehler  
+### <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Geben Sie einen nachgestellten Rückgabetyp für den Lambda\-Ausdruck an.  Stellen Sie sicher, dass alle Rückgaben vom Lambda denselben Typ aufweisen oder implizit zu diesem Rückgabetyp konvertiert werden können.  
+-   Geben Sie einen nachgestellten Rückgabetyp für den Lambda-Ausdruck an. Stellen Sie sicher, dass alle Rückgaben vom Lambda denselben Typ aufweisen oder implizit zu diesem Rückgabetyp konvertiert werden können.  
   
-## Beispiel  
- Im folgende Beispiel wird C3487 generiert, da die Rückgabetypen vom Lambda nicht übereinstimmen.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird „C3487“ generiert, da die Rückgabetypen vom Lambda nicht übereinstimmen.  
   
 ```  
 // C3487.cpp  
@@ -50,5 +53,5 @@ int* test(int* pi) {
 }  
 ```  
   
-## Siehe auch  
- [Lambda\-Ausdrücke](../../cpp/lambda-expressions-in-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [Lambda-Ausdrücke](../../cpp/lambda-expressions-in-cpp.md)
