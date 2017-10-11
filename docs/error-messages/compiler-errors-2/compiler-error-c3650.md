@@ -1,36 +1,39 @@
 ---
-title: "Compilerfehler C3650 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3650"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3650"
+title: Compilerfehler C3650 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3650
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3650
 ms.assetid: ca4d8de4-b027-4d13-9b9f-03ca62905c33
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Compilerfehler C3650
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a58e0605fcdcb318b3357e142ac2b106bb8c0f7c
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Schnittstellenmethode' : Kann nicht als explizite Überschreibung verwendet werden. Muss eine virtuelle Memberfunktion einer Basisklasse sein  
+---
+# <a name="compiler-error-c3650"></a>Compilerfehler C3650
+'Schnittstellenmethode': kann nicht als explizite Überschreibung verwendet werden, muss eine virtuelle Memberfunktion einer Basisklasse  
   
- Es wurde versucht, einen nicht virtuellen Member explizit zu überschreiben.  
+ Es wurde versucht, eine explizite Überschreibung für ein Element ausführen, die nicht virtuelle war.  
   
- Weitere Informationen finden Sie unter [Explizite Überschreibungen](../../windows/explicit-overrides-cpp-component-extensions.md).  
+ Weitere Informationen finden Sie unter [explizite Überschreibungen](../../windows/explicit-overrides-cpp-component-extensions.md).  
   
- Im folgenden Beispiel wird C3650 generiert:  
+ Im folgende Beispiel wird C3650 generiert:  
   
 ```  
 // C3650.cpp  

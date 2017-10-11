@@ -79,25 +79,11 @@ caps.latest.revision: 1
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: ef3728a46e1a9b10814b994c21fbae3de0d0bc04
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7060d03845cf81aeaedc5eff48db3aec59716112
 ms.contentlocale: de-de
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c3100-through-c3199"></a>Compilerfehler Fehler C3100 über C3199 generiert
@@ -118,10 +104,10 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |Compilerfehler Fehler C3105|"*Symbol*": kann nicht als Attribut verwendet werden|  
 |[Compilerfehler C3106](compiler-error-c3106.md)|"*Attribut*": unbenannte Argumente müssen vor benannte Argumenten stehen.|  
 |Compilerfehler Fehler C3107|"*Attribut*": Memberfunktionen systemeigener Attribute können nicht definiert werden|  
-|Compilerfehler Fehler C3108|Kann einen Typ nicht herleiten, da eine Initialisiererliste kein Ausdruck ist.|  
+|Compilerfehler Fehler C3108|einen Typ kann nicht hergeleitet werden, da es sich bei eine Initialisiererliste kein Ausdruck ist|  
 |Compilerfehler Fehler C3109|"*Bezeichner*': Schnittstellenmethoden müssen entweder die '__stdcall' oder"__cdecl"-Aufrufkonvention verwenden|  
 |[Compilerfehler C3110](compiler-error-c3110.md)|"*Funktion*": kann nicht überladen eine COM-Schnittstellen-Methode|  
-|Compilerfehler Fehler C3111|Eine Initialisiererliste kann nicht als Standardargument für einen Vorlagenparameter verwendet werden.|  
+|Compilerfehler Fehler C3111|Eine Initialisiererliste kann nicht als das Standardargument für einen Vorlagenparameter verwendet werden|  
 |Compilerfehler Fehler C3112|"*Schnittstelle*': eine Schnittstelle kann nur im globalen deklariert werden oder Namespacebereich|  
 |[Compilerfehler C3113](compiler-error-c3113.md)|"Schnittstelle/Enum" darf keine Vorlagen-/generische sein.|  
 |[Compilerfehler C3114](compiler-error-c3114.md)|"*Bezeichner*': kein gültiges benanntes Attributargument.|  
@@ -129,28 +115,28 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C3116](compiler-error-c3116.md)|"*Spezifizierer*': Ungültige Speicherklasse für Schnittstellen-Methode|  
 |[Compilerfehler C3117](compiler-error-c3117.md)|"*Schnittstelle*': eine Schnittstelle kann nur eine Basisklasse haben|  
 |[Compilerfehler C3118](compiler-error-c3118.md)|"*Schnittstelle*": Schnittstellen unterstützen keine virtuellen Vererbung|  
-|Compilerfehler Fehler C3119|alignas(void) ist nicht zulässig|  
+|Compilerfehler Fehler C3119|alignas(void) ist nicht zulässig.|  
 |[Compilerfehler C3120](compiler-error-c3120.md)|"*Bezeichner*': Schnittstellenmethoden keine Liste variabler Argumente akzeptiert|  
 |[Compilerfehler C3121](compiler-error-c3121.md)|GUID kann nicht geändert werden, für die Klasse*Klasse*"|  
 |Compilerfehler Fehler C3122|"*Schnittstelle*': eine generische WinRT-Schnittstelle sind keine GUID|  
-|Compilerfehler Fehler C3123|Eine generische WinRT-Schnittstelle darf keine Einschränkungen aufweisen.|  
+|Compilerfehler Fehler C3123|WinRT generische Schnittstelle darf keine Einschränkungen aufweisen.|  
 |Compilerfehler Fehler C3124|"signed Char" ist kein gültiger Typ WinRT Daten. Verwenden Sie stattdessen "unsigned Char", "Wchar_t" oder "Short mit Vorzeichen".|  
 |Compilerfehler Fehler C3125|"*Typ*': Typ kann nicht direkt oder indirekt abgeleitet"Platform:: Exception"|  
 |[Compilerfehler C3126](compiler-error-c3126.md)|eine Union kann nicht definiert "*Union*"innerhalb von verwaltetem/WinRT-Typ"*Typ*"|  
 |Compilerfehler Fehler C3127|"*Typ*": "*Merkmals*" Merkmal "" kann nur verwendet werden, auf eine Verweisklasse WinRT|  
 |Compilerfehler Fehler C3128|"*Typ*"besitzt keine vtable enthält, der von eingeführt wurde"*Typ*"|  
 |Compilerfehler Fehler C3129|"*Typ*': __default_vptr_for_base kann nur verwendet werden, auf die lokal definierte polymorphen Typen und Basen|  
-|[Compilerfehler C3130](compiler-error-c3130.md)|Interner Compilerfehler: Eingefügter Codeblock kann nicht in PDB geschrieben werden|  
-|[Compilerfehler C3131](compiler-error-c3131.md)|Das Projekt muss ein "Modulattribut" mit der Eigenschaft "Name" besitzen|  
+|[Compilerfehler C3130](compiler-error-c3130.md)|Interner Compilerfehler: Fehler bei eingefügten Codeblock in PDB-Datei schreiben|  
+|[Compilerfehler C3131](compiler-error-c3131.md)|Projekt muss ein 'Module'-Attribut mit der Eigenschaft "Name" aufweisen.|  
 |[Compilerfehler C3132](compiler-error-c3132.md)|"*Parameter*': Parameterarrays können nur auf einem formalen Argument vom Typ 'eindimensionalem verwaltet/WinRT-Array' angewendet werden|  
-|[Compilerfehler C3133](compiler-error-c3133.md)|Attribute können nicht auf varargs in C++ angewendet werden.|  
+|[Compilerfehler C3133](compiler-error-c3133.md)|Attribute können nicht auf C++-Variablenargumente angewendet werden|  
 |[Compilerfehler C3134](compiler-error-c3134.md)|"*Wert*": Wert Attributargument '*Argument*"enthält keinen gültigen Typ"*Typ*"|  
 |[Compilerfehler C3135](compiler-error-c3135.md)|"*Bezeichner*': eine Eigenschaft kann nicht"Const"aufweisen, oder geben Sie"volatile"|  
 |[Compilerfehler C3136](compiler-error-c3136.md)|"*Schnittstelle*': eine COM-Schnittstelle kann nur von einem anderen COM-Schnittstelle erben '*Schnittstelle*' ist keine COM-Schnittstelle|  
 |[Compilerfehler C3137](compiler-error-c3137.md)|"*Bezeichner*': eine Eigenschaft kann nicht initialisiert werden|  
 |[Compilerfehler C3138](compiler-error-c3138.md)|"*Bezeichner*': eine"*Attribut*"Schnittstelle muss von IDispatch oder von einer Schnittstelle, die von IDispatch erbt erben.|  
 |[Compilerfehler C3139](compiler-error-c3139.md)|"*Typ*': einen UDT ohne Mitglieder kann nicht exportiert werden.|  
-|[Compilerfehler C3140](compiler-error-c3140.md)|Es können nicht mehrere "module"-Attribute in der gleichen Kompilationseinheit vorhanden sein|  
+|[Compilerfehler C3140](compiler-error-c3140.md)|mehrere "Module"-Attribute können nicht in der gleichen Kompilierungseinheit verwenden werden.|  
 |[Compilerfehler C3141](compiler-error-c3141.md)|"*Schnittstelle*": Schnittstellen unterstützen nur öffentliche Vererbung|  
 |[Compilerfehler C3142](compiler-error-c3142.md)|"*Eigenschaft*': Sie können die Adresse einer Eigenschaft nicht übernehmen|  
 |Compilerfehler Fehler C3143|"*Argument*": Attribute-Argument kann nicht mehrere Werte aufweisen|  
@@ -165,9 +151,9 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C3152](compiler-error-c3152.md)|"*Funktion*": "*Schlüsselwort*" kann nur auf eine Klasse, Struktur oder virtuelle Memberfunktion angewendet werden|  
 |[Compilerfehler C3153](compiler-error-c3153.md)|"*Schnittstelle*': Sie können keine Instanz einer Schnittstelle erstellen|  
 |[Compilerfehler C3154](compiler-error-c3154.md)|Erwartet ',', bevor Sie mit den Auslassungspunkten. Nicht durch Trennzeichen getrennte Auslassungszeichen werden unter Parameter Array-Funktionen nicht unterstützt.|  
-|[Compilerfehler C3155](compiler-error-c3155.md)|In einem Eigenschaftenindexer sind keine Attribute zulässig.|  
+|[Compilerfehler C3155](compiler-error-c3155.md)|Attribute sind in einem Eigenschaft-Indexer nicht zulässig.|  
 |[Compilerfehler C3156](compiler-error-c3156.md)|"*Klasse*': eine lokale Definition eines verwalteten/WinRT-Typs keine|  
-|[Compilerfehler C3157](compiler-error-c3157.md)|Das ParamArray-Attribut kann nur auf den letzten Parameter angewendet werden.|  
+|[Compilerfehler C3157](compiler-error-c3157.md)|ParamArray-Attribut kann nur auf den letzten Parameter angewendet werden|  
 |Compilerfehler Fehler C3158|"*Funktion*": "*Schlüsselwort*" kann nur auf eine virtuelle Memberfunktion angewendet werden|  
 |[Compilerfehler C3159](compiler-error-c3159.md)|"*Bezeichner*': Array von Zeigern auf Werttyp kann nicht deklariert werden|  
 |[Compilerfehler C3160](compiler-error-c3160.md)|"*Typ*": ein Datenmember einer verwalteten/WinRT-Klasse kann nicht diesen Typ aufweisen|  
@@ -177,14 +163,14 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |Compilerfehler Fehler C3164|Veraltet.|  
 |Compilerfehler Fehler C3165|"*Wert*": kann nicht in einen Ganzzahl- oder Gleitkommawert konvertiert werden|  
 |[Compilerfehler C3166](compiler-error-c3166.md)|Veraltet. "*Typ*": ein Datenmember einer verwalteten/WinRT-Klasse keinen Typ "*Pointer_type* zu inneren *Managed_pointer_type*"|  
-|[Compilerfehler C3167](compiler-error-c3167.md)|.NET Framework konnte nicht initialisiert werden: Vergewissern Sie sich, dass es installiert ist|  
+|[Compilerfehler C3167](compiler-error-c3167.md)|Kann nicht initialisiert werden, .NET Framework: Stellen Sie sicher, dass es installiert ist|  
 |[Compilerfehler C3168](compiler-error-c3168.md)|"*Typ*": Ungültiger zugrunde liegender Typ für Enumeration|  
 |Compilerfehler Fehler C3169|"*Typ*': Typ für 'Auto' kann nicht aus hergeleitet"*Typ*"|  
-|[Compilerfehler C3170](compiler-error-c3170.md)|Es können nicht verschiedene Modulbezeichner in einem Projekt vorhanden sein.|  
+|[Compilerfehler C3170](compiler-error-c3170.md)|keine anderen Modulbezeichner in einem Projekt|  
 |[Compilerfehler C3171](compiler-error-c3171.md)|"*Modul*": Geben Sie andere Modulattribute kann nicht in einem Projekt|  
 |[Compilerfehler C3172](compiler-error-c3172.md)|"*Bezeichner*": Geben Sie unterschiedliche Idl_module-Attribute können nicht in einem Projekt|  
-|[Compilerfehler C3173](compiler-error-c3173.md)|Versionskonflikt beim Zusammenführen von idl|  
-|[Compilerfehler C3174](compiler-error-c3174.md)|Das Modulattribut wurde nicht angegeben|  
+|[Compilerfehler C3173](compiler-error-c3173.md)|Versionskonflikt bei Merge von idl|  
+|[Compilerfehler C3174](compiler-error-c3174.md)|Modulattribut wurde nicht angegeben.|  
 |[Compilerfehler C3175](compiler-error-c3175.md)|"*Funktion*': eine Methode eines verwalteten Typs kann nicht aufgerufen werden, von nicht verwalteten Funktion"*Funktion*"|  
 |[Compilerfehler C3176](compiler-error-c3176.md)|"*Typ*": lokale Werttyp kann nicht deklariert werden.|  
 |Compilerfehler Fehler C3177|eine Umwandlungsfunktion in einen Typ, enthält keine "*Typ*"|  
@@ -202,12 +188,12 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C3189](compiler-error-c3189.md)|"Typeid <*Deklarator*>": Diese Syntax ist nicht mehr unterstützt, use::typeid stattdessen|  
 |[Compilerfehler C3190](compiler-error-c3190.md)|"*Deklarator*"mit den bereitgestellten Vorlagenargumenten ist nicht die explizite Instanziierung der Memberfunktionen von"*Typ*"|  
 |Compiler-Fehler C3191 generiert|Veraltet.|  
-|[Compilerfehler C3192](compiler-error-c3192.md)|Syntaxfehler: "^" ist kein Präfixoperator. (Meinten Sie "*"?)|  
+|[Compilerfehler C3192](compiler-error-c3192.md)|Syntaxfehler: "^" ist kein Präfixoperator (meinten Sie ' *'?)|  
 |Compilerfehler Fehler C3193|"*erstellen*": erfordert "/ Clr" oder "/ ZW" Befehlszeilenoption|  
 |[Compilerfehler C3194](compiler-error-c3194.md)|"*Typ*": ein Werttyp keinen Zuweisungsoperator|  
 |[Compilerfehler C3195](compiler-error-c3195.md)|"*Schlüsselwort*": ist reserviert und kann nicht als Mitglied einer Ref oder eines Werttyps verwendet werden. CLR/WinRT-Operatoren müssen mit dem Schlüsselwort "Operator" definiert werden|  
 |[Compilerfehler C3196](compiler-error-c3196.md)|"*Bezeichner*": mehrmals verwendet|  
 |[Compilerfehler C3197](compiler-error-c3197.md)|"*Schlüsselwort*": kann nur in Definitionen verwendet werden|  
-|[Compilerfehler C3198](compiler-error-c3198.md)|Ungültige Verwendung von Gleitkommapragmas: "fenv_access pragma" funktioniert nur im precise-Modus.|  
-|[Compilerfehler C3199](compiler-error-c3199.md)|Ungültige Verwendung von Gleitkommapragmas: Ausnahmen werden in einem anderen als dem precise-Modus nicht unterstützt.|  
+|[Compilerfehler C3198](compiler-error-c3198.md)|Ungültige Verwendung eines Gleitkommapragmas: Fenv_access-Pragma unterstützt nur im präzise-Modus|  
+|[Compilerfehler C3199](compiler-error-c3199.md)|Ungültige Verwendung eines Gleitkommapragmas: Ausnahmen werden in nicht-präzisen Modus nicht unterstützt.|  
 

@@ -1,36 +1,39 @@
 ---
-title: "Compilerfehler C3893 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3893"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3893"
+title: Compilerfehler C3893 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3893
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3893
 ms.assetid: 90d52eae-6ef2-4db1-b7ad-92f9e8b140fb
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Compilerfehler C3893
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 49097d988175e7571c5825b4d54e1dd496fb2ba7
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'var': Die Verwendung des L\-Werts eines initonly\-Datenmembers ist nur in einem Instanzenkonstruktor der 'type\_name'\-Klasse zulässig  
+---
+# <a name="compiler-error-c3893"></a>Compilerfehler C3893
+"Var": l-Wert-Verwendung von Initonly-Datenmember ist nur zulässig, in einem Instanzenkonstruktor der Klasse "Type_name"  
   
- Statische [initonly](../../dotnet/initonly-cpp-cli.md)\-Datenmember können nur in einem statischen Konstruktor ihre Adresse übernehmen.  
+ Statische [Initonly](../../dotnet/initonly-cpp-cli.md) Datenmember dürfen nur über ihre Adresse in einem statischen Konstruktor verfügen.  
   
- initonly\-Datenmember einer Instanz \(nicht statisch\) können nur in Instanzenkonstruktoren \(nicht statisch\) ihre Adresse übernehmen.  
+ Instanz (nicht statische) Initonly-Datenmember können nur in Instanzkonstruktoren (nicht statisch) ihre Adresse haben.  
   
- Im folgenden Beispiel wird C3893 generiert:  
+ Im folgende Beispiel wird C3893 generiert:  
   
 ```  
 // C3893.cpp  

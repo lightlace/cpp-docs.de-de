@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C3736 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3736"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3736"
+title: Compilerfehler C3736 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3736
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3736
 ms.assetid: 579b773c-41e7-40ea-8382-2e3ce2667f4c
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Compilerfehler C3736
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0c2d7f548a1795221a72d0ac7be01e8ed87fa6ce
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Ereignis': muss eine Methode oder bei verwalteten Ereignissen optional ein Datenmember sein  
+---
+# <a name="compiler-error-c3736"></a>Compilerfehler C3736
+'Ereignis': muss eine Methode oder im Fall von verwalteten Ereignissen, optional ein Datenmember  
   
- Systemeigene und COM\-Ereignisse müssen Methoden sein. .NET\-Ereignisse können auch Datenmember sein.  
+ Systemeigene und COM-Ereignisse müssen Methoden sein. Ereignisse können auch Datenmember sein.  
   
- Im folgenden Beispiel wird C3736 generiert:  
+ Im folgende Beispiel wird C3736 generiert:  
   
 ```  
 // C3736.cpp  

@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C3670 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3670"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3670"
+title: Compilerfehler C3670 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3670
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3670
 ms.assetid: d0fa9c6e-8f90-48c7-9066-31b4fa5942eb
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Compilerfehler C3670
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 773ee85df3e19245b665521be8d65055ffe3bf17
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Überschreiben': Die 'Methode'\-Basisklassenmethode ist nicht zugreifbar und kann nicht überschrieben werden  
+---
+# <a name="compiler-error-c3670"></a>Compilerfehler C3670
+"override": kann nicht Basisklasse kann nicht zugegriffen werden, Methode "-Schnittstellenmethode überschreiben  
   
- Eine Überschreibung kann nur bei einer Funktion stattfinden, deren Zugriffsebene sie in einem abgeleiteten Typ zur Verfügung stellt.  Weitere Informationen finden Sie unter [Explizite Überschreibungen](../../windows/explicit-overrides-cpp-component-extensions.md).  
+ Eine Außerkraftsetzung kann nur auf eine Funktion stattfinden, deren Zugriffsebene in einem abgeleiteten Typ verfügbar macht. Weitere Informationen finden Sie unter [explizite Überschreibungen](../../windows/explicit-overrides-cpp-component-extensions.md).  
   
- Im folgenden Beispiel wird C3670 generiert:  
+ Im folgende Beispiel wird C3670 generiert:  
   
 ```  
 // C3670.cpp  

@@ -1,35 +1,38 @@
 ---
-title: "Compilerfehler C3666 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3666"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3666"
+title: Compilerfehler C3666 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3666
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3666
 ms.assetid: 459e51dd-cefb-4346-99b3-644f2d8b65b2
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Compilerfehler C3666
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0bd78e2d14805ab84f1d32300f1cf95a1daf91d0
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Konstruktor' : Eine Überschreibung des Spezifizierers 'Schlüsselwort' ist bei einem Konstruktor nicht zulässig  
+---
+# <a name="compiler-error-c3666"></a>Compilerfehler C3666
+'Konstruktor': Überschreibungsspezifizierer 'Schlüsselwort' für einen Konstruktor nicht zulässig.  
   
- Ein Überschreibungsspezifizierer wurde bei einem Konstruktor verwendet. Dies ist nicht zulässig.  Weitere Informationen finden Sie unter [Überschreibungsspezifizierer](../../windows/override-specifiers-cpp-component-extensions.md).  
+ Ein Überschreibungsspezifizierer wurde für einen Konstruktor verwendet, und, nicht zulässig ist. Weitere Informationen finden Sie unter [Überschreibungsspezifizierer](../../windows/override-specifiers-cpp-component-extensions.md).  
   
-## Beispiel  
- Im folgenden Beispiel wird C3666 generiert.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird C3666 generiert.  
   
 ```  
 // C3666.cpp  

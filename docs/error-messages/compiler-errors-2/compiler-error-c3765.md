@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C3765 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3765"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3765"
+title: Compilerfehler C3765 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3765
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3765
 ms.assetid: feadee7a-fcfb-402c-af2f-0e656f814a13
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Compilerfehler C3765
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 44311ab210a85b05d86eb48aebe8294c95bfb5ab
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Ereignis': Ein Ereignis kann nicht in einer Klasse\/Struktur 'Typ' definiert werden, die als ein event\_receiver gekennzeichnet ist  
+---
+# <a name="compiler-error-c3765"></a>Compilerfehler C3765
+'Ereignis': Definieren Sie ein Ereignis kann nicht in einer Klasse/Struktur 'Typ' als ein Event_receiver gekennzeichnet  
   
- Wenn eine Klasse mit dem [event\_receiver](../../windows/event-receiver.md)\-Attribut gekennzeichnet ist, kann die Klasse keine [\_\_event](../../cpp/event.md)\-Deklaration enthalten.  
+ Wenn eine Klasse mit gekennzeichnet ist die [Event_receiver](../../windows/event-receiver.md) -Attribut die Klasse kann nicht enthalten, eine [__event](../../cpp/event.md) Deklaration.  
   
- Im folgenden Beispiel wird C3765 generiert:  
+ Im folgende Beispiel wird C3765 generiert:  
   
 ```  
 // C3765.cpp  

@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C3883 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3883"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3883"
+title: Compilerfehler C3883 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3883
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3883
 ms.assetid: cdd1c1f4-f268-4469-9c62-d52303114b0c
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Compilerfehler C3883
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ef1203b3162aa08f1de9a5a4ee68277d2c3489cc
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'var': Ein statischer initonly\-Datenmember muss initialisiert werden  
+---
+# <a name="compiler-error-c3883"></a>Compilerfehler C3883
+"Var": ein statischer Datenmember Initonly muss initialisiert werden  
   
- Eine mit [initonly](../../dotnet/initonly-cpp-cli.md) markierte Variable wurde nicht ordnungsgemäß initialisiert.  
+ Eine Variable mit markierten [Initonly](../../dotnet/initonly-cpp-cli.md) wurde nicht ordnungsgemäß initialisiert.  
   
- Im folgenden Beispiel wird C3883 generiert:  
+ Im folgende Beispiel wird C3883 generiert:  
   
 ```  
 // C3883.cpp  
@@ -39,7 +42,7 @@ ref struct Y1 {
 };  
 ```  
   
- Das folgende Beispiel veranschaulicht eine mögliche Auflösung:  
+ Das folgende Beispiel zeigt eine mögliche Lösung:  
   
 ```  
 // C3883b.cpp  
@@ -50,7 +53,7 @@ ref struct Y1 {
 };  
 ```  
   
- Anhand des folgenden Beispiels wird gezeigt, wie die Initialisierung in einem statischen Konstruktor erfolgt:  
+ Im folgende Beispiel wird gezeigt, wie in einem statischen Konstruktor initialisiert wird:  
   
 ```  
 // C3883c.cpp  

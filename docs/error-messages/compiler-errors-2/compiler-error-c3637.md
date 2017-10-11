@@ -1,32 +1,35 @@
 ---
-title: "Compilerfehler C3637 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3637"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3637"
+title: Compilerfehler C3637 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3637
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3637
 ms.assetid: 72391377-8519-43d9-870a-73a6423deb74
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Compilerfehler C3637
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 111e4025122ca298939e696901cb37f079d4be21
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Funktion': Die Definition einer Friend\-Funktion darf keine Spezialisierung einer Funktionsvorlage sein  
+---
+# <a name="compiler-error-c3637"></a>Compilerfehler C3637
+'Funktion': die Definition einer Friend-Funktion darf keine Spezialisierung der kein Funktionstyp sein  
   
- Eine Friend\-Funktion wurde für eine Vorlage oder generisch falsch definiert.  
+ Eine Friend-Funktion wurde nicht ordnungsgemäß für eine Vorlage oder die generische definiert.  
   
  Im folgenden Beispiel wird C3637 generiert:  
   

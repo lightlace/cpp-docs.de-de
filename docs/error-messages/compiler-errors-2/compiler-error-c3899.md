@@ -1,37 +1,40 @@
 ---
-title: "Compilerfehler C3899 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3899"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3899"
+title: Compilerfehler C3899 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3899
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3899
 ms.assetid: 14e07e4a-f7a7-4309-baaa-649d69e12e23
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Compilerfehler C3899
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c7d9d32b3063dbecde375159ad90eec5bf128d56
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'var' : Die Verwendung des L\-Werts eines initonly\-Datenmembers ist nicht direkt innerhalb eines parallelen Bereichs in der Klasse 'Klasse' zulässig  
+---
+# <a name="compiler-error-c3899"></a>Compilerfehler C3899
+"Var": l-Wert-Verwendung von Initonly-Datenmember ist direkt innerhalb eines parallelen Bereichs in Klasse 'Klasse' nicht zulässig  
   
- Ein [initonly](../../dotnet/initonly-cpp-cli.md)\-Datenmember kann nicht in dem Teil eines Konstruktors initialisiert werden, der sich innerhalb eines [parallel](../../parallel/openmp/reference/parallel.md)\-Bereichs befindet.  Der Grund hierfür ist, dass der Compiler intern eine Verschiebeung dieses Codes vornimmt, sodass der Code anschließend nicht mehr Teil des Konstruktors ist.  
+ Ein [Initonly (C + c++ / CLI)](../../dotnet/initonly-cpp-cli.md) -Datenmember kann nicht initialisiert werden, in diesem Teil einen Konstruktor, der in einem [parallele](../../parallel/openmp/reference/parallel.md) Region.  Dies ist, da der Compiler eine interne Verschiebungen dieses Codes ist, sodass er effektiv nicht mehr Teil des Konstruktors ist.  
   
- Um dieses Problem zu beheben, initialisieren Sie den initonly\-Datenmember im Konstruktor, aber außerhalb des parallelen Bereichs.  
+ Initialisieren Sie zum Beheben der Initonly-Datenmember im Konstruktor, aber außerhalb des parallelen Bereichs ein.  
   
-## Beispiel  
- Im folgenden Beispiel wird C3899 generiert.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird C3899 generiert.  
   
 ```  
 // C3899.cpp  

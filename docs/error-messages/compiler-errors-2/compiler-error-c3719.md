@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C3719 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3719"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3719"
+title: Compilerfehler C3719 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3719
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3719
 ms.assetid: d0d59d4e-babb-4480-9ef7-70cf1a28165c
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Compilerfehler C3719
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 06cdce1925470ce8af8df78e50f069763addb150
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Schnittstelle': Nur eine Ereignisquelle, die auf einer Schnittstelle basiert, kann für COM\-Ereignisse verwendet werden  
+---
+# <a name="compiler-error-c3719"></a>Compilerfehler C3719
+'Schnittstelle': eine Ereignisquelle Schnittstelle basiert kann nur verwendet werden, für COM-Ereignisse  
   
- Sie haben eine Schnittstelle in einem COM\-fremden Kontext deklariert.  
+ Deklariert eine Schnittstelle in einem nicht-COM-Kontext.  
   
- Im folgenden Beispiel wird C3719 generiert:  
+ Im folgende Beispiel wird C3719 generiert:  
   
 ```  
 // C3719a.cpp  
@@ -55,7 +58,7 @@ int main() {
 }  
 ```  
   
- Um diesen Fehler zu beheben, wenden Sie die Attribute [object](../../windows/object-cpp.md), [coclass](../../windows/coclass.md), [event\_source](../../windows/event-source.md) und [event\_receiver](../../windows/event-receiver.md) richtig an, um die Klassen, in denen die Schnittstelle verwendet wird, in COM\-Klassen umzuwandeln.  Beispiel:  
+ Um diesen Fehler zu beheben, gelten die [Objekt](../../windows/object-cpp.md), [Co-Klasse](../../windows/coclass.md), [Event_source](../../windows/event-source.md), und [Event_receiver](../../windows/event-receiver.md) entsprechend um Stellen Attribute der Klassen, die in denen Sie die Schnittstelle COM-Klassen verwenden. Zum Beispiel:  
   
 ```  
 // C3719b.cpp  

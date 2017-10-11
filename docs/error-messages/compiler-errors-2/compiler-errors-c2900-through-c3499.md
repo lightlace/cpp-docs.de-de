@@ -85,25 +85,11 @@ caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 6ef55aa655692e6ecbd1550bb1ace2eca01bdbad
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 535a1d42d9d43022bbf513b72bac18dd5accad82
 ms.contentlocale: de-de
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c2900-through-c2999"></a>Compilerfehler C2900 bis C2999
@@ -140,8 +126,8 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C2921](compiler-error-c2921.md)|Neudefinition: '*Typ*': Klasse Vorlagen-/generische neu deklariert wird als*Deklaration*"|  
 |Compilerfehler Fehler C2922|"*Schnittstelle*": ein WinRT-Schnittstelle kann nicht statische Member enthalten|  
 |[Compilerfehler C2923](compiler-error-c2923.md)|"*Typ*": "*Bezeichner*"ist kein gültiger Vorlagen-/generische Typargument für Parameter"*Parameter*"|  
-|Compilerfehler Fehler C2924|Das Argument der __declspec(interrupt)-Routine befindet sich nicht in R2.|  
-|Compilerfehler Fehler C2925|Die __declspec(interrupt)-Routine kann kein Gleitkomma verwenden.|  
+|Compilerfehler Fehler C2924|Das Argument der __declspec(Interrupt)-Routine befindet sich nicht in R2|  
+|Compilerfehler Fehler C2925|__declspec(Interrupt)-Routine kann kein Gleitkomma verwenden.|  
 |Compiler-Fehler C2926 generiert|"*Bezeichner*': eine Standard-Memberinitialisierer ist für einen Member einer anonymen Struktur innerhalb einer Union nicht zulässig.|  
 |[Compilerfehler C2927](compiler-error-c2927.md)|"*Bezeichner*': eine Funktionsvorlage muss mit mindestens einem Argument aufgerufen werden|  
 |[Compilerfehler C2928](compiler-error-c2928.md)|Explizite Instanziierung; "*Bezeichner*"ist kein statisches Datenmember der Vorlagenklasse oder Funktion"*Klasse*"|  
@@ -165,17 +151,17 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C2946](compiler-error-c2946.md)|Explizite Instanziierung; "*Typ*' ist keine Spezialisierung einer Vorlagenklasse|  
 |[Compilerfehler C2947](compiler-error-c2947.md)|erwartet wurde ">" Beenden der Vorlagenargumente gefunden "*token*"|  
 |[Compilerfehler C2948](compiler-error-c2948.md)|Explizite Instanziierung; Speicherklassenspezifizierer "*Spezifizierer*" auf die Spezialisierung nicht zulässig|  
-|Compilerfehler Fehler C2949|"thread_local" wird mit "/kernel" nicht unterstützt.|  
+|Compilerfehler Fehler C2949|Thread_local wird mit/Kernel für den nicht unterstützt.|  
 |Compilerfehler C2950|Veraltet.|  
 |[Compilerfehler C2951](compiler-error-c2951.md)|Vorlagen-/generische Deklarationen dürfen nur im globalen, Namespace- oder Klassengültigkeitsbereich|  
 |[Compilerfehler C2952](compiler-error-c2952.md)|"*Deklaration*": Vorlagen-/generische Deklaration Vorlagen-/generische Parameterliste fehlt|  
 |[Compilerfehler C2953](compiler-error-c2953.md)|"*Typ*': Klassenvorlage wurde bereits definiert.|  
-|Compiler-Fehler C2954 generiert|Anweisungswortargument liegt außerhalb des Bereichs.|  
+|Compiler-Fehler C2954 generiert|Anweisung Word-Argument nicht im Bereich|  
 |[Compilerfehler C2955](compiler-error-c2955.md)|"*Typ*': Klasse Vorlagen-/generische erfordert Vorlagen-/generische Argumentliste|  
 |Compilerfehler Fehler C2956|Größeninformationen-Funktion "Delete-Operator (Void *, Size_t)" würde als Platzierung Aufhebung-Funktion ausgewählt werden.|  
 |[Compilerfehler C2957](compiler-error-c2957.md)|"*token*': Ungültiges linkes Trennzeichen: erwartet" < "|  
 |[Compilerfehler C2958](compiler-error-c2958.md)|Links *Trennzeichen* finden Sie unter "*Datei*(*Line_number*)" wurde nicht ordnungsgemäß zugeordnet.|  
-|[Compilerfehler C2959](compiler-error-c2959.md)|Eine generische Klasse oder Funktion kann kein Member einer Vorlage sein.|  
+|[Compilerfehler C2959](compiler-error-c2959.md)|eine generische Klasse oder Funktion möglicherweise nicht Mitglied einer Vorlage|  
 |Compilerfehler Fehler C2960|Veraltet.|  
 |Compilerfehler Fehler C2961|"*Funktion*": explizite Instanziierungen inkonsistent, eine vorherigen explizite Instanziierung hat keinen "*Argument*"|  
 |[Compilerfehler C2962](compiler-error-c2962.md)|Syntaxfehler: "*token*': Definition der Vorlagenklasse Memberfunktion endet nicht mit"} "|  
@@ -196,7 +182,7 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C2977](compiler-error-c2977.md)|"*Typ*': zu viele Vorlagen-/generische Argumente|  
 |[Compilerfehler C2978](compiler-error-c2978.md)|Syntaxfehler: erwartet "*Schlüsselwort1*'oder'*Schlüsselwort2*"; gefunden wurde der Typ"*Typ*"; Nichttyp-Parameter werden in Generika nicht unterstützt.|  
 |[Compilerfehler C2979](compiler-error-c2979.md)|Explizite Spezialisierungen werden für Generika nicht unterstützt.|  
-|Compilerfehler Fehler C2980|C++-Ausnahmebehandlung wird mit /kernel nicht unterstützt.|  
+|Compilerfehler Fehler C2980|C++-Ausnahmebehandlung ist nicht mit/Kernel für den unterstützt.|  
 |Compilerfehler Fehler C2981|die dynamische Form "*Schlüsselwort*" ist nicht mit/Kernel für den unterstützt|  
 |Compilerfehler Fehler C2982|"*Deklaration*': unterschiedliche __declspec(code_seg(...)) verwendet: wurde"*Bezeichner1*"jetzt"*Bezeichner2*"|  
 |Compilerfehler Fehler C2983|"*Deklaration*": alle Deklarationen müssen eine identische __declspec(code_seg(...)) aufweisen.|  
@@ -204,10 +190,10 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |Compilerfehler Fehler C2985|"*Argument*': das Argument für __declspec(code_seg(...)) muss einen Textabschnitt|  
 |Compilerfehler Fehler C2986|"*Bezeichner*': __declspec(code_seg(...)) kann nur auf eine Klasse oder eine Funktion angewendet werden|  
 |Compilerfehler Fehler C2987|eine Deklaration sind keine beide __declspec (Code_seg ("*Bezeichner*")) und __declspec (Code_seg ("*Wert*"))|  
-|[Compilerfehler C2988](compiler-error-c2988.md)|Unerkannte Vorlagendeklaration/-definition|  
+|[Compilerfehler C2988](compiler-error-c2988.md)|Zeitplanattributs Vorlagendefinition/Deklaration|  
 |[Compilerfehler C2989](compiler-error-c2989.md)|"*Klasse*": wurde bereits als ein nicht klassenbasierte Vorlagen-/generische Klasse Vorlagen-/generische deklariert|  
 |[Compilerfehler C2990](compiler-error-c2990.md)|"*Klasse*': nicht klassenbasierte Vorlagen-/generische als eine Klasse Vorlagen-/generische wurde bereits deklariert|  
-|[Compilerfehler C2991](compiler-error-c2991.md)|Neudefinition des Vorlagen-/generische Parameter "*-Parameter*"|  
+|[Compilerfehler C2991](compiler-error-c2991.md)|Neudefinition des Vorlagen-/generische Parameter "*Parameter*"|  
 |[Compilerfehler C2992](compiler-error-c2992.md)|"*Klasse*": Ungültige oder fehlende Vorlagen-/generische Parameterliste|  
 |[Compilerfehler C2993](compiler-error-c2993.md)|"*Typ*": Ungültiger Typ für den Nichttyp-Vorlagenparameter "*Bezeichner*"|  
 |[Compilerfehler C2994](compiler-error-c2994.md)|Unbenannte Klasse in der Vorlagen-Parameterliste|  

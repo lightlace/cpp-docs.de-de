@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C3767 | Microsoft-Dokumentation
+title: Compilerfehler C3767 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,26 +19,11 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: b0cce511d895aae218c1b2ab04d129173b049983
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6ebbcbe30a0c9359116d259c36d702a968b333c9
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3767"></a>Compilerfehler C3767
@@ -46,10 +31,10 @@ ms.lasthandoff: 02/24/2017
   
  Bei einer in einer Klasse definierten Friend-Funktion wird nicht davon ausgegangen, dass sie so behandelt wird, als wäre sie im globalen Gültigkeitsbereich des Namespaces definiert und deklariert worden. Sie kann jedoch mittels einer argumentbezogenen Suche gefunden werden.  
   
- C3767 kann auch von einer wichtigen Änderung verursacht worden sein: systemeigene Typen sind jetzt standardmäßig privat ein **/CLR** -Kompilierung finden Sie unter [geben Sichtbarkeit](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) Weitere Informationen.  
+ C3767 kann auch von einer wichtigen Änderung verursacht worden sein: systemeigene Typen sind nun standardmäßig im privaten eine **"/ CLR"** -Kompilierung finden Sie unter [geben Sichtbarkeit](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) für Weitere Informationen.  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird C3767 generiert:  
+ Im folgenden Beispiel wird C3767 generiert:  
   
 ```  
 // C3767a.cpp  
@@ -80,7 +65,7 @@ int main() {
 };  
 ```  
   
- Im folgende Beispiel wird C3767 generiert:  
+ Im folgenden Beispiel wird C3767 generiert:  
   
 ```  
 // C3767c.cpp  
@@ -102,9 +87,9 @@ ref class Der : public Base {
 };  
 ```  
   
- In Visual C++ .NET 2002 wurde die Compilersuche nach Symbolen wie geändert. In einigen Fällen suchte der Compiler automatisch nach Symbolen in einem bestimmten Namespace. Nun wird die argumentbezogene Suche verwendet.  
+ In Visual C++ .NET 2002 geändert der Compiler die Möglichkeit, die sie nach Symbolen gesucht. In einigen Fällen suchte der Compiler automatisch nach Symbolen in einem bestimmten Namespace. Nun wird die argumentbezogene Suche verwendet.  
   
- Im folgende Beispiel wird C3767 generiert:  
+ Im folgenden Beispiel wird C3767 generiert:  
   
 ```  
 // C3767e.cpp  

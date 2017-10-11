@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C3723 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3723"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3723"
+title: Compilerfehler C3723 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3723
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3723
 ms.assetid: ef0fb1ff-3f9a-4093-a6b6-894d1ab0c4b9
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Compilerfehler C3723
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6406d664cea17b75fa9ff703ae15e26d7baf042c
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Funktion': Das Ereignis konnte nicht aufgelöst werden  
+---
+# <a name="compiler-error-c3723"></a>Compilerfehler C3723
+'Funktion': Ereignis konnte nicht aufgelöst werden  
   
- Das aufzurufende Ereignis konnte von der `function` nicht ermittelt werden.  
+ `function`das aufzurufende Ereignis konnte nicht aufgelöst werden.  
   
- Im folgenden Beispiel wird C3723 generiert:  
+ Im folgende Beispiel wird C3723 generiert:  
   
 ```  
 // C3723.cpp  
@@ -51,9 +54,9 @@ int main() {
 }  
 ```  
   
- `__hook` und `__unhook` sind nicht kompatibel mit \/clr\-Programmierung.  Verwenden Sie stattdessen die Operatoren \+\= und \-\=.  
+ `__hook`und `__unhook` sind nicht kompatibel mit/CLR-Programmierung.  Verwenden Sie stattdessen die Operatoren += und -=.  
   
- Im folgenden Beispiel wird C3723 generiert:  
+ Im folgende Beispiel wird C3723 generiert:  
   
 ```  
 // C3723b.cpp  

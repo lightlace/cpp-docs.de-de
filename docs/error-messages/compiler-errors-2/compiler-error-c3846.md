@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C3846 generiert | Microsoft-Dokumentation
+title: Compilerfehler C3846 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 04807182611beed23bf388d1f42a4fba0a3acea7
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 58ffd3f240505d173014f1f9b358b4957a41eaf5
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3846"></a>Compilerfehler C3846
 'Symbol': Symbol aus "assembly2" kann nicht importiert werden: 'Symbol' wurde bereits von einer anderen Assembly 'assembly1' importiert  
   
- Ein Symbol konnte nicht aus einer referenzierten Assembly importiert werden, da sie zuvor aus einer referenzierten Assembly importiert wurde.  
+ Ein Symbol konnte nicht aus einer referenzierten Assembly importiert werden, da er zuvor aus einer referenzierten Assembly importiert wurde.  
   
 ## <a name="example"></a>Beispiel
 Im folgende Beispiel wird C3846 generiert:  

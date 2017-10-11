@@ -1,39 +1,42 @@
 ---
-title: "Compilerwarnung C4485 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4485"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4485"
+title: Compilerwarnung C4485 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4485
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4485
 ms.assetid: a6f2b437-ca93-4dcd-b9cb-df415e10df86
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Compilerwarnung C4485
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 435e49a857e3c448ac7e5f7ef00bb9032320aa25
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'override\_function': Stimmt mit der 'base\_class\_function '\-Basismethode der Verweisklasse überein, ist jedoch nicht als 'new' oder 'override' markiert; 'new' \(und 'virtual'\) wird angenommen  
+---
+# <a name="compiler-warning-c4485"></a>Compilerwarnung C4485
+'Überschreibungsfunktion': Basis Ref-Klassenmethode "Basisklassenfunktion" entspricht, ist jedoch nicht markierte 'new' oder 'override'; "new" (und "virtual") werden angenommen.  
   
- Ein Accessor überschreibt mit oder ohne `virtual`\-Schlüsselwort eine Basisklassen\-Accessorfunktion, der `override`\-Spezifizierer oder der `new`\-Spezifizierer war jedoch nicht Teil der überschreibenden Funktionssignatur.  Fügen Sie den `new`\-Spezifizierer oder den `override`\-Spezifizierer hinzu, um diese Warnung zu vermeiden.  
+ Ein Accessor überschreibt mit oder ohne die `virtual` -Schlüsselwort, eine Basisklasse Accessor-Funktion, aber die `override` oder `new` Spezifizierer war nicht Teil der überschreibenden Funktionssignatur. Hinzufügen der `new` oder `override` Spezifizierer, um diese Warnung zu beheben.  
   
- Weitere Informationen finden Sie unter [override](../../windows/override-cpp-component-extensions.md) und [new \(new slot in vtable\)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md).  
+ Finden Sie unter [überschreiben](../../windows/override-cpp-component-extensions.md) und [new (neuer Slot in Vtable)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md) für Weitere Informationen.  
   
- C4485 wird immer als Fehler ausgegeben.  Verwenden Sie das [warning](../../preprocessor/warning.md)\-Pragma, um C4485 zu unterdrücken.  
+ C4485 wird immer als Fehler ausgegeben. Verwenden der [Warnung](../../preprocessor/warning.md) -Pragma, um C4485 zu unterdrücken.  
   
-## Beispiel  
- Im folgenden Beispiel wird C4485 generiert:  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird C4485 generiert:  
   
 ```  
 // C4485.cpp  

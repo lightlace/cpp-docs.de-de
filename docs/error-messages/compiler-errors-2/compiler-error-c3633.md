@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C3633 generiert | Microsoft-Dokumentation
+title: Compilerfehler C3633 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 76b98ae31e8d8416360415fd5989975533d6fb66
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 982075cdaa72ddd5b1a4fdafdeaaf433b27bcf77
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3633"></a>Compilerfehler C3633
 'Member' kann nicht als Member des verwalteten 'Typs' definiert werden.  
   
-CLR-Verweisklassendatenmember der Klasse darf nicht von einem nicht - POD C++-Typ sein.  Sie können nur einen systemeigenen POD-Typ in einen CLR-Typ instanziieren.  Ein POD-Typ kann nicht z. B. ein Kopierkonstruktor oder einen Zuweisungsoperator enthalten.  
+CLR-Verweisklassendatenmember darf nicht von einer nicht - POD-C++-Typ sein.  Sie können nur einen systemeigenen POD-Typ in einen CLR-Typ instanziieren.  Beispielsweise darf kein POD-Typ einen Kopierkonstruktor oder Zuweisungsoperator enthalten.  
   
 ## <a name="example"></a>Beispiel  
 Im folgende Beispiel wird C3633 generiert.  

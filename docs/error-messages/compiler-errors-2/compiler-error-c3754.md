@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C3754 generiert | Microsoft-Dokumentation
+title: Compilerfehler C3754 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 2a72db01b88f062f2b8866109cab6375930121ef
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 01fe6b5568da2e55d5ade4eca22a84ea4a0041e7
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3754"></a>Compilerfehler C3754
-Delegatkonstruktor: Member-Funktion 'Funktion' kann nicht für eine Instanz des Typs 'Typ' aufgerufen  
+Delegatkonstruktor: Member-Funktion 'Funktion' kann nicht in einer Instanz von Typ 'Typ' aufgerufen werden  
   
- Eine Funktion über einen Zeiger auf einen Typ wurde aufgerufen, die die Funktion nicht enthält.  
+ Eine Puffermethode wurde eine Funktion durch einen Zeiger auf einen Typ aufgerufen, die die Funktion nicht enthält.  
   
 ## <a name="example"></a>Beispiel  
  Im folgende Beispiel wird C3754 generiert:  

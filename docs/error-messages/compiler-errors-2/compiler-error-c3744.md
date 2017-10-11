@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C3744 | Microsoft-Dokumentation
+title: Compilerfehler C3744 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: f6cd256454b51a103d9c4249b050c8c05781bc78
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 87df3fd92ac3fcad9b3e87f02f16b8151e678b77
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3744"></a>Compilerfehler C3744
-__unhook muss wenigstens 3 Argumente für verwaltete Ereignisse haben  
+__unhook muss mindestens 3 Argumente für verwaltete Ereignisse haben.  
   
- Die [__unhook](../../cpp/unhook.md) Funktion muss akzeptiert drei Parameter, wenn Sie in einem Programm verwendet werden soll, die für Managed Extensions for C++ kompiliert wird.  
+ Die [__unhook](../../cpp/unhook.md) -Funktion muss akzeptiert drei Parameter bei Verwendung in einem Programm, das für Managed Extensions für C++ kompiliert wird.  
   
  `__hook`und `__unhook` sind nicht kompatibel mit/CLR-Programmierung. Verwenden Sie stattdessen die Operatoren += und -=.  
   
- C3744 ist nur erreichbar, mit der veralteten-Compileroption **/CLR: oldSyntax**.  
+ C3744 ist nur über die veraltete Compileroption erreichbar **/CLR: oldSyntax**.  
 

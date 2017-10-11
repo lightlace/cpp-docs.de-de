@@ -1,37 +1,40 @@
 ---
-title: "Compilerfehler C3867 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3867"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3867"
+title: Compilerfehler C3867 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3867
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3867
 ms.assetid: bc5de03f-e01a-4407-88c3-2c63f0016a1e
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# Compilerfehler C3867
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4f8e4612dc12274c689ec0d4e9406dea74c608f4
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-„func“: Dem Funktionsaufruf fehlt die Argumentliste. Verwenden Sie „&func“, um einen Zeiger auf den Member zu erstellen.  
+---
+# <a name="compiler-error-c3867"></a>Compilerfehler C3867
+'func': Dem Funktionsaufruf fehlt die Argumentliste. Verwenden Sie '&func', um einen Zeiger auf den Member zu erstellen.  
   
- Sie haben versucht, die Adresse einer Memberfunktion zu verwenden, ohne die Memberfunktion mit dem Klassennamen und dem address\-of\-Operator zu qualifizieren.  
+ Sie haben versucht, die Adresse einer Memberfunktion zu verwenden, ohne die Memberfunktion mit dem Klassennamen und dem address-of-Operator zu qualifizieren.  
   
- Dieser Fehler kann außerdem infolge einer Konformitätsverbesserung für Compiler für Visual C\+\+ 2005 auftreten: Verbesserte Pointer\-to\-Member\-Konformität.  Code, der vor Visual C\+\+ 2005 kompiliert wurde, generiert nun C3867.  
+ Dieser Fehler kann außerdem infolge einer Konformitätsverbesserung für Compiler für Visual C++ 2005 auftreten: Verbesserte Pointer-to-Member-Konformität. Code, der vor Visual C++ 2005 kompiliert wurde, generiert nun C3867.  
   
-## Beispiel  
- C3867 kann der Compiler mit einem irreführenden Lösungsvorschlag ausgegeben.  Verwenden Sie nach Möglichkeit die am stärksten abgeleitete Klasse.  
+## <a name="example"></a>Beispiel  
+ Der Compiler kann „C3867“ mit einem irreführenden Auflösungsvorschlag ausgegeben. Verwenden Sie nach Möglichkeit die am stärksten abgeleitete Klasse.  
   
  Im folgenden Beispiel wird C3867 generiert und gezeigt, wie Sie diesen Fehler beheben.  
   
@@ -53,7 +56,7 @@ void Derived::Bar() {
 }  
 ```  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird C3867 generiert und gezeigt, wie Sie diesen Fehler beheben.  
   
 ```  
@@ -84,7 +87,7 @@ int main() {
 }  
 ```  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird C3867 generiert und gezeigt, wie Sie diesen Fehler beheben.  
   
 ```  
@@ -102,7 +105,7 @@ int main() {
 }  
 ```  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird C3867 generiert.  
   
 ```  
@@ -125,7 +128,7 @@ public:
 };  
 ```  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird C3867 generiert.  
   
 ```  

@@ -65,25 +65,11 @@ caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: a41480c57b281c7a4fbb1e7697d11b5057b5da48
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 31df41ea122c762428e153fe406efba1175c64f2
 ms.contentlocale: de-de
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c2500-through-c2599"></a>Compilerfehler C2500 bis C2599
@@ -104,7 +90,7 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C2505](compiler-error-C2505.md)|"*Symbol*": "__declspec (*Spezifizierer*)" kann nur auf Deklarationen oder Definitionen für globale Objekte oder statische Datenmember angewendet werden|  
 |[Compilerfehler C2506](compiler-error-C2506.md)|"*Member*": "__declspec (*Spezifizierer*)" kann nicht auf dieses Symbol angewendet werden|  
 |[Compilerfehler C2507](compiler-error-C2507.md)|"*Bezeichner*': zu viele virtuelle Modifizierer in der Basisklasse|  
-|Compilerfehler Fehler C2508|"*Bezeichner*": "\_\_Declspec (*spezifizierer1*)" kann nicht kombiniert werden, mit "\_\_Declspec (*Bezeichner2*)"|  
+|Compilerfehler Fehler C2508|"*Bezeichner*": "\_\_Declspec (*spezifizierer1*)" kann nicht kombiniert werden, mit "\_\_Declspec (*Bezeichner2*)'|  
 |[Compilerfehler C2509](compiler-error-C2509.md)|"*Bezeichner*': Memberfunktion nicht deklariert werden,"*Klasse*"|  
 |[Compilerfehler C2510](compiler-error-C2510.md)|"*Bezeichner*": linke Teil von '::' muss eine Klasse/Struktur/Union sein|  
 |[Compilerfehler C2511](compiler-error-C2511.md)|"*Bezeichner*": überladene Memberfunktion nicht gefunden "*Klasse*"|  
@@ -136,32 +122,32 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C2537](compiler-error-C2537.md)|"*Spezifizierer*': Unzulässiger Verknüpfungsspezifikation|  
 |Compilerfehler C2538|Veraltet.|  
 |Compilerfehler Fehler C2539|Veraltet.|
-|[Compilerfehler C2540](compiler-error-C2540.md)|Kein konstanter Ausdruck als Arraygrenze|  
+|[Compilerfehler C2540](compiler-error-C2540.md)|nicht konstanter Ausdruck als Arraygrenze|  
 |[Compilerfehler C2541](compiler-error-C2541.md)|"*Bezeichner*': Objekte, die keine Zeiger kann nicht gelöscht werden.|  
 |[Compilerfehler C2542](compiler-error-C2542.md)|"*Bezeichner*": Klassenobjekt besitzt keinen Konstruktor zur Initialisierung|  
 |[Compilerfehler C2543](compiler-error-C2543.md)|erwartet ']' für den Operator "[]"|  
-|[Compilerfehler C2544](compiler-error-C2544.md)|")" für Operator "()" erwartet|  
+|[Compilerfehler C2544](compiler-error-C2544.md)|erwartet ') "für den Operator '(')|  
 |[Compilerfehler C2545](compiler-error-C2545.md)|"*Operator*': Operator nicht gefunden, die überladen|  
 |Compilerfehler Fehler C2546|"*Bezeichner*": Wenn ein Typ definiert ist, in der PIA und ein No-PIA-PIA zuerst verwiesen werden muss|  
 |Compilerfehler Fehler C2547|"*Bezeichner*": alle Parameter einer Methode veröffentlichten müssen explizit benannt werden, für die Deklaration|  
 |[Compilerfehler C2548](compiler-error-C2548.md)|"*Funktion*': Fehlender Standardparameter für Parameter *Parameter*|  
-|[Compilerfehler C2549](compiler-error-C2549.md)|Angabe von Ergebnistypen für selbst definierte Konvertierungen nicht zulässig|  
+|[Compilerfehler C2549](compiler-error-C2549.md)|benutzerdefinierte Konvertierung kann keinen Rückgabetyp angeben.|  
 |[Compilerfehler C2550](compiler-error-C2550.md)|"*Bezeichner*': Initialisierungslisten dürfen nur auf Definitionen von Konstruktor|  
 |[Compilerfehler C2551](compiler-error-C2551.md)|"void *"-Zeiger muss explizit in einen Typ umgewandelt werden|  
 |[Compilerfehler C2552](compiler-error-C2552.md)|"*Bezeichner*': nicht-Aggregate können nicht mit einer Initialisiererliste nicht initialisiert werden|  
-|[Compilerfehler C2553](compiler-error-C2553.md)|"*Typ* *Derived_class*::*Funktion*": Überschreiben der virtuellen Funktion unterscheidet sich der Rückgabetyp von "*Typ* *basis_klasse*::*Funktion*"|  
-|[Compilerfehler C2555](compiler-error-C2555.md)|"*Derived_class*::*Funktion*": Überschreiben der virtuellen Funktion-Rückgabetyp unterscheidet sich und ist nicht über kovariante "*basis_klasse*::*Funktion*"|  
-|[Compilerfehler C2556](compiler-error-C2556.md)|"*Typ1* *Klasse*::*Funktion*": überladene Funktion unterscheidet sich nur durch den Rückgabetyp von "*Typ2* *Klasse*::*Funktion*"|  
+|[Compilerfehler C2553](compiler-error-C2553.md)|"*Typ* *Derived_class*::*Funktion*": Überschreiben von virtuellen Funktionsrückgabetyp unterscheidet sich von "*Typ* *Base_ Klasse*::*Funktion*"|  
+|[Compilerfehler C2555](compiler-error-C2555.md)|"*Derived_class*::*Funktion*": Überschreiben der virtuellen Funktion-Rückgabetyp unterscheidet sich und ist nicht über kovariante "*basis_klasse*::*Funktion*'|  
+|[Compilerfehler C2556](compiler-error-C2556.md)|"*Typ1* *Klasse*::*Funktion*": überladene Funktion unterscheidet sich nur durch den Rückgabetyp von "*Typ2* *-Klasse*::*Funktion*"|  
 |[Compilerfehler C2557](compiler-error-C2557.md)|"*Bezeichner*": private und geschützte Member können nicht ohne Konstruktor initialisiert werden|  
 |[Compilerfehler C2558](compiler-error-C2558.md)|Klasse*Klasse*': Kein Kopierkonstruktor verfügbar oder der Kopierkonstruktor ist als 'explicit' deklariert|  
 |Compilerfehler Fehler C2559|"*Bezeichner*': eine Memberfunktion ohne Ref-Qualifizierer mit einer Memberfunktion mit Ref-Qualifizierer können nicht überladen werden.|  
 |Compilerfehler Fehler C2560|"*Bezeichner*': eine Memberfunktion mit Ref-Qualifizierer mit einer Memberfunktion ohne Ref-Qualifizierer können nicht überladen werden.|  
 |[Compilerfehler C2561](compiler-error-C2561.md)|"*Funktion*': Funktion muss einen Wert zurückgeben|  
 |[Compilerfehler C2562](compiler-error-C2562.md)|"*Funktion*': 'void'-Funktion einen Wert zurückgeben|  
-|[Compilerfehler C2563](compiler-error-C2563.md)|Listen der formalen Parameter stimmen nicht überein|  
-|{1&gt;Compilerfehler C2564&lt;1}|Veraltet.|  
+|[Compilerfehler C2563](compiler-error-C2563.md)|übereinstimmende Datentypen in der Liste formaler parameter|  
+|Compilerfehler C2564|Veraltet.|  
 |Compilerfehler Fehler C2565|"*Bezeichner*": Ref-Qualifizierer ist ungültig für Konstruktor/Destruktor|  
-|[Compilerfehler C2566](compiler-error-C2566.md)|Überladene Funktion in einem Bedingungsausdruck|  
+|[Compilerfehler C2566](compiler-error-C2566.md)|überladene Funktion in bedingten Ausdruck|  
 |[Compilerfehler C2567](compiler-error-C2567.md)|kann nicht geöffnet werden Metadaten in "*Filename*", *Possible_reason*|  
 |[Compilerfehler C2568](compiler-error-C2568.md)|"*Bezeichner*": kann nicht funktionsüberladungen aufgelöst werden|  
 |[Compilerfehler C2569](compiler-error-C2569.md)|"*Bezeichner*': Enumeration/Union kann nicht als Basisklasse verwendet werden|  
@@ -181,7 +167,7 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C2583](compiler-error-C2583.md)|"*Bezeichner*':" Const/Volatile"this-Zeiger ist ungültig für Konstruktor/Destruktor|  
 |[Compilerfehler C2584](compiler-error-C2584.md)|"*Klasse*": direkte Basisklasse "*base_class2*" kann nicht zugegriffen werden; bereits eine Basis von "*base_class1*"|  
 |[Compilerfehler C2585](compiler-error-C2585.md)|explizite Konvertierung in "*Typ*" ist nicht eindeutig|  
-|[Compilerfehler C2586](compiler-error-C2586.md)|Fehlerhafte benutzerdefinierte Konvertierungssyntax: unzulässige Dereferenzierungen|  
+|[Compilerfehler C2586](compiler-error-C2586.md)|Unzulässige benutzerdefinierte Konvertierungssyntax: Ungültige Dereferenzierungen|  
 |[Compilerfehler C2587](compiler-error-C2587.md)|"*Bezeichner*': Unzulässige Verwendung der lokalen Variablen als Standardparameter|  
 |[Compilerfehler C2588](compiler-error-C2588.md)|':: ~*Bezeichner*': Unzulässiger globale Destruktor/Finalizer|  
 |[Compilerfehler C2589](compiler-error-C2589.md)|'*Bezeichner*': Ungültiges Token auf der rechten Seite des '::'|  
@@ -193,5 +179,5 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |Compilerfehler Fehler C2595|"*Bezeichner*" ein WinRT-Attributtyp, muss versiegelt sein|  
 |Compilerfehler Fehler C2596|"*Bezeichner*" ein WinRT-Attributfeld kann nur 'public Enum Class', 'Int', 'unsigned Int', 'Bool', "Platform:: Type", "Platform:: String" oder "Windows:: Foundation:: HResult"|  
 |[Compilerfehler C2597](compiler-error-C2597.md)|illegaler Verweis auf nicht statische Member '*Bezeichner*"|  
-|[Compilerfehler C2598](compiler-error-C2598.md)|Bindungsinformationen müssen einen globalen Gültigkeitsbereich haben|  
+|[Compilerfehler C2598](compiler-error-C2598.md)|Verknüpfungsspezifikation muss im globalen Gültigkeitsbereich sein.|  
 |[Compilerfehler C2599](compiler-error-C2599.md)|"*Bezeichner*": Die Vorwärtsdeklaration einer verwalteten/WinRT-Enumeration ist nicht zulässig.|  

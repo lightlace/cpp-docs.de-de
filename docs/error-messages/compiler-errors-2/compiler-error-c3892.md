@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C3892 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3892"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3892"
+title: Compilerfehler C3892 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3892
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3892
 ms.assetid: 83fff42c-ea48-442f-bc2e-b33a6b99d890
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Compilerfehler C3892
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0f005a91e3d1d2179dd424ca82e9c64746d3886d
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'var': Zuweisung zu einer const\-Variablen nicht möglich  
+---
+# <a name="compiler-error-c3892"></a>Compilerfehler C3892
+"Var": Sie können eine Variable, die eine Konstante ist zuweisen  
   
- Eine const\-Variable kann nicht geändert werden, nachdem sie deklariert und initialisiert wurde.  
+ Eine const-Variablen kann nicht geändert werden, nachdem sie deklariert und initialisiert wird.  
   
- Im folgenden Beispiel wird C3892 generiert:  
+ Im folgende Beispiel wird C3892 generiert:  
   
 ```  
 // C3892.cpp  

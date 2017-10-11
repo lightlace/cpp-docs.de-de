@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C3712 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3712"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3712"
+title: Compilerfehler C3712 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3712
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3712
 ms.assetid: 65b1fcaf-be89-4c55-9e40-25ec03457253
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Compilerfehler C3712
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 69f23d7192bc72f5f287a3a5b84b7840f9d25310
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Methode': Eine Ereignishandlermethode muss dieselben Typen wie die Quelle 'Methode' ausgeben  
+---
+# <a name="compiler-error-c3712"></a>Compilerfehler C3712
+'Methode': eine Ereignishandlermethode muss denselben Typ wie die Quelle 'Methode' zurückgeben  
   
- Sie haben eine Ereignishandlermethode definiert, die nicht denselben Typ zurückgegeben hat wie die Quellereignismethode.  Um diesen Fehler zu beheben, weisen Sie der Ereignishandlermethode denselben Rückgabetyp wie der Quellereignismethode zu.  
+ Sie definiert eine Ereignishandlermethode, die nicht den gleichen Typ wie die Quelle Ereignis-Methode zurückgegeben wurde. Um diesen Fehler zu beheben, geben Sie der Ereignishandlermethode denselben Rückgabetyp als die Quelle Ereignis-Methode.  
   
- Im folgenden Beispiel wird C3712 generiert:  
+ Im folgende Beispiel wird C3712 generiert:  
   
 ```  
 // C3712.cpp  

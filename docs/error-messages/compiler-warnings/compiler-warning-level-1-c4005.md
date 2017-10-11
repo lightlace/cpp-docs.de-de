@@ -1,46 +1,49 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4005 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4005"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4005"
+title: Compilerwarnung (Stufe 1) C4005 generiert | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4005
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4005
 ms.assetid: 7f2dc79a-9fcb-4d5b-be61-120d9cb487ad
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Compilerwarnung (Stufe 1) C4005
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 21023cf79a2ec25f94dc68cd3a55f722fa8316d8
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-"Bezeichner": Makro\-Neudefinition  
+---
+# <a name="compiler-warning-level-1-c4005"></a>Compilerwarnung (Stufe 1) C4005 generiert
+'Bezeichner': Neudefinition von Makros  
   
- Der Makrobezeichner wurde zweimal definiert.  Der Compiler verwendet die zweite Makrodefinition.  
+ Die Makro-Bezeichner wird zweimal definiert. Der Compiler verwendet die zweite Makrodefinition.  
   
-### Dieser Fehler kann eine der folgenden Ursachen haben:  
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Dieser Fehler kann eine der folgenden Ursachen haben:  
   
-1.  Ein Makro in der Befehlszeile und im Code wurde mit einer `#define`\-Direktive definiert.  
+1.  Definieren ein Makro in der Befehlszeile und im Code mit einem `#define` Richtlinie.  
   
-2.  Aus Includedateien importierte Makros.  
+2.  Makros, die von Include-Dateien importiert werden.  
   
-### Beachten Sie die folgenden Vorschläge zur Problembehebung:  
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>So beheben Sie den Fehler (unterschiedliche Lösungsmöglichkeiten)  
   
 1.  Entfernen Sie eine der Definitionen.  
   
-2.  Verwenden Sie eine [\#undef](../../preprocessor/hash-undef-directive-c-cpp.md)\-Direktive vor der zweiten Definition.  
+2.  Verwenden einer [#undef](../../preprocessor/hash-undef-directive-c-cpp.md) Richtlinie vor der zweiten Definition.  
   
- Im folgenden Beispiel wird C4005 generiert:  
+ Im folgende Beispiel wird C4005 generiert:  
   
 ```  
 // C4005.cpp  

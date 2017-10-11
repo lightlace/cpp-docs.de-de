@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C3713 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3713"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3713"
+title: Compilerfehler C3713 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3713
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3713
 ms.assetid: 75c6b9b6-955b-49bd-9bc8-ced88b496a1f
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Compilerfehler C3713
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 13387629ab4dda3965bc8b835e2e092ef29ef880
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Methode': Eine Ereignishandlermethode muss dieselben Funktionsparameter wie die Quelle 'Methode' haben  
+---
+# <a name="compiler-error-c3713"></a>Compilerfehler C3713
+'Methode': eine Ereignishandlermethode muss die Parameter für die gleichen wie die Quelle 'Methode' haben  
   
- Sie haben eine Ereignishandlermethode definiert, die nicht dieselben Parameter verwendet hat wie die Quellereignismethode.  Um diesen Fehler zu beheben, weisen Sie der Ereignishandlermethode dieselben Parameter wie der Quellereignismethode zu.  
+ Sie definiert eine Ereignishandlermethode, die nicht die gleichen Parameter wie die Quelle Ereignis-Methode verwendet haben. Um diesen Fehler zu beheben, geben Sie der Ereignishandlermethode die gleichen Parameter wie die von der Quelle Ereignis-Methode.  
   
- Im folgenden Beispiel wird C3713 generiert:  
+ Im folgende Beispiel wird C3713 generiert:  
   
 ```  
 // C3713.cpp  

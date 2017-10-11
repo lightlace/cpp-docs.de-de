@@ -1,35 +1,38 @@
 ---
-title: "Compilerfehler C3869 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3869"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3869"
+title: Compilerfehler C3869 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3869
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3869
 ms.assetid: 85b2ad72-95c1-4ed6-9761-6ef66c3802b7
 caps.latest.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 3
----
-# Compilerfehler C3869
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 902786dcce2a9bc8b959eb42b037c7476fad0738
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-In der gcnew\-Einschränkung fehlt die leere Parameterliste '\(\)'  
+---
+# <a name="compiler-error-c3869"></a>Compilerfehler C3869
+Gcnew-Einschränkung ist nicht leere Parameter Liste '(')  
   
- Die spezielle `gcnew`\-Einschränkung wurde ohne die leere Parameterliste angegeben.  Weitere Informationen finden Sie unter [Constraints on Generic Type Parameters \(C\+\+\/CLI\)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
+ Die `gcnew` speziellen Einschränkung wurde ohne die leere Parameterliste angegeben. Finden Sie unter [Einschränkungen für generische Typparameter (C + c++ / CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md) für Weitere Informationen.  
   
-## Beispiel  
- Im folgenden Beispiel wird C3869 generiert.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird C3869 generiert.  
   
 ```  
 // C3869.cpp  

@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C3624 generiert | Microsoft-Dokumentation
+title: Compilerfehler C3624 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: b7862590432e2aaa5c41126abb1ebd92ebeb05a3
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8ce571a05b801361f8e0a5f21c9dba1c159bbf88
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3624"></a>Compilerfehler C3624
 'Typ': die Verwendung dieses Typs erfordert einen Verweis auf Assembly "Assembly"  
   
- Eine Assembly (Referenz), die zum Kompilieren von Code wurde nicht angegeben. übergeben Sie die Assembly, die [#using](../../preprocessor/hash-using-directive-cpp.md) Richtlinie.  
+ Eine Assembly (Referenz), die zum Kompilieren des Codes erforderlich wurde nicht angegeben. übergeben Sie die Assembly, die [#using](../../preprocessor/hash-using-directive-cpp.md) Richtlinie.  
   
 ## <a name="example"></a>Beispiel  
 Im folgende Beispiel wird C3624 generiert:  

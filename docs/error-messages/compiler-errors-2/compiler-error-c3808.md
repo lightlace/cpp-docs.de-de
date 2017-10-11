@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C3808 generiert | Microsoft-Dokumentation
+title: Compilerfehler C3808 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 989f17e8f59afc6a04ed4101204053fc971c6a62
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4d6a255bebeccc0c63ba621a7c5886fd318ffd5f
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3808"></a>Compilerfehler C3808
-'Typ': eine Klasse mit dem ComImport-Attribut kann nicht Member "Member", nur abstrakte definieren oder Dllimport-Funktionen sind zulässig.  
+'Typ': eine Klasse mit dem ComImport-Attribut kann nicht der Member "Member", nur abstrakte definieren oder Dllimport-Funktionen sind zulässig.  
   
- Ein Typ, der von abgeleiteten <xref:System.Runtime.InteropServices.ComImportAttribute>kann nicht definiert `member`.</xref:System.Runtime.InteropServices.ComImportAttribute>  
+ Ein Typ, der von abgeleitet <xref:System.Runtime.InteropServices.ComImportAttribute> keine definieren `member`.  
   
- Die **/CLR: pure** und **/CLR: safe** Compileroptionen in Visual Studio 2015 veraltet sind.  
+ Die Compileroptionen **/clr:pure** und **/clr:safe** sind in Visual Studio 2015 veraltet.  
   
 ## <a name="example"></a>Beispiel  
  Im folgende Beispiel wird C3808 generiert.  

@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C3803 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3803"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3803"
+title: Compilerfehler C3803 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3803
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3803
 ms.assetid: bad5fb9a-ed9a-4c15-96e7-cf06e200a50d
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Compilerfehler C3803
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: aec9e416833894bcd4c4d430b293e0867f544757
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Eigenschaft': Eigenschaft hat einen Typ, der mit einem seiner Accessoren 'Accessor' inkompatibel ist  
+---
+# <a name="compiler-error-c3803"></a>Compilerfehler C3803
+"Property": Eigenschaft hat einen Typ, der nicht kompatibel mit einem seiner Accessoren 'Accessor'  
   
- Der Typ einer mit [property](../../cpp/property-cpp.md) definierten Eigenschaft stimmt nicht mit dem Rückgabetyp für eine ihrer Accessorfunktionen überein.  
+ Der Typ einer Eigenschaft definiert, die mit [Eigenschaft](../../cpp/property-cpp.md) entspricht nicht den Rückgabetyp für eine ihrer Accessorfunktionen.  
   
- Im folgenden Beispiel wird C3803 generiert:  
+ Im folgende Beispiel wird C3803 generiert:  
   
 ```  
 // C3803.cpp  

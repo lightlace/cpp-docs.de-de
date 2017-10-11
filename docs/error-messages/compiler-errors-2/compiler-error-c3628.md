@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C3628 generiert | Microsoft-Dokumentation
+title: Compilerfehler C3628 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: e8723f85289d1094a6969d2bf26c30a85ccf382b
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 131b2829991d0d8c40b64c903afd45b485b9ba55
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3628"></a>Compilerfehler C3628
-'Basisklasse': verwaltete oder WinRTclasses unterstützen nur die öffentliche Vererbung  
+'base Class': verwaltete oder WinRTclasses unterstützen nur öffentliche Vererbung  
   
-Es wurde versucht, ein verwaltetes oder WinRT-Klasse als eine [private](../../cpp/private-cpp.md) oder [geschützt](../../cpp/protected-cpp.md) Basisklasse. Eines verwalteten oder WinRT-Klasse kann nur verwendet werden, als einer Basisklasse mit [öffentlichen](../../cpp/public-cpp.md) Zugriff.  
+Es wurde versucht, mithilfe eines verwalteten oder WinRT Klasse als eine [private](../../cpp/private-cpp.md) oder [geschützt](../../cpp/protected-cpp.md) Basisklasse. Eine verwaltete oder WinRT-Klasse kann nur verwendet werden, als eine Basisklasse mit [öffentlichen](../../cpp/public-cpp.md) Zugriff.  
   
 Im folgenden Beispiel wird C3628 generiert und gezeigt, wie Sie diesen Fehler beheben:  
   

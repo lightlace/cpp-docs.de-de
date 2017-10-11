@@ -1,35 +1,37 @@
 ---
-title: "Compilerfehler C3763 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3763"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3763"
+title: Compilerfehler C3763 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3763
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3763
 ms.assetid: 58b1f079-cd1d-46e0-9431-ea18210106b7
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Compilerfehler C3763
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 51810524b36a714404ce45a51186bc635dacebd3
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-**"**   
- ***Typ* ": "retval" und "out" kann nur in einem Datenzeigertyp verwendet werden.**  
+---
+# <a name="compiler-error-c3763"></a>Compilerfehler C3763
+'Typ': 'Retval' und 'Out' kann nur auf einen Datenzeiger Typ angezeigt werden.  
   
- Die Attribute [out](../../windows/out-cpp.md) oder [retval](../../windows/retval.md) können nur in Parametern mit Zeigertyp vorkommen.  Entfernen Sie entweder das Attribut, oder versehen Sie den Parameter mit dem Zeigertyp.  
+ Die [out](../../windows/out-cpp.md) oder [Retval](../../windows/retval.md) Attribute können nur auf Parameter vom typzeiger angezeigt werden. Entweder entfernen Sie das Attribut, oder stellen Sie die Parameter vom typzeiger.  
   
- Im folgenden Beispiel wird C3763 generiert:  
+ Im folgende Beispiel wird C3763 generiert:  
   
 ```  
 // C3763.cpp  

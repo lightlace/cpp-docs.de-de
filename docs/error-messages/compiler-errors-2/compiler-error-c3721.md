@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C3721 | Microsoft-Dokumentation
+title: Compilerfehler C3721 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: f90319164eca1e4f32918c814f0edbf7b859d1af
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b2a0e91b3ccb6bbcb5ecef15e7fb33754c239932
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3721"></a>Compilerfehler C3721
-'Signatur': nicht kompatible Signatur für das Ereignis  
+"Signature": Inkompatible Signatur für Ereignis  
   
  Ein Ereignis wurde falsch deklariert. Weitere Informationen finden Sie unter [__event](../../cpp/event.md).  
   
- C3721 ist nur mit der veralteten-Compileroption erreichbar **/CLR: oldSyntax**.  
+ C3721 ist nur über die veraltete Compileroption erreichbar **/CLR: oldSyntax**.  
 
