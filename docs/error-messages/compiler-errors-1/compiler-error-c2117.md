@@ -1,38 +1,41 @@
 ---
-title: "Compilerfehler C2117 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2117"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2117"
+title: Compilerfehler C2117 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2117
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2117
 ms.assetid: b947379d-5861-42fc-ac26-170318579cbd
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Compilerfehler C2117
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3e326e7a7dde296439d1a9c24c1d042af63dc6f9
+ms.contentlocale: de-de
+ms.lasthandoff: 10/09/2017
 
-'Bezeichner': Arraygrenzen\-Überlauf  
+---
+# <a name="compiler-error-c2117"></a>Compilerfehler C2117
+"Bezeichner": Arraygrenze überschritten  
   
- Ein Array verfügt über zu viele Initialisierer:  
+ Ein Array hat zu viele Initialisierungen:  
   
--   Größe und Anzahl von Arrayelementen und Initialisierer weichen voneinander ab.  
+-   Arrayelemente und Initialisierungen stimmen in Größe und Anzahl nicht überein.  
   
--   Eine Zeichenfolge bietet keinen Platz für den NULL\-Terminator.  
+-   Kein Speicherplatz für das Nullabschlusszeichen in einer Zeichenfolge.  
   
- Im folgenden Beispiel wird C2117 generiert:  
+ Im folgende Beispiel wird C2117 generiert:  
   
 ```  
 // C2117.cpp  

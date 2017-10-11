@@ -1,32 +1,35 @@
 ---
-title: "Compilerfehler C3857 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3857"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3857"
+title: Compilerfehler C3857 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3857
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3857
 ms.assetid: 9f746d1e-9708-4945-bc29-3150d5371d3c
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Compilerfehler C3857
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e9c553adf8eb9b326bcb2b3b35a381973c9c4a50
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Typ': Mehrere Typparameterlisten sind nicht zulässig  
+---
+# <a name="compiler-error-c3857"></a>Compilerfehler C3857
+'Typ': mehrere Typparameterlisten sind nicht zulässig.  
   
- Unzulässigerweise wurden für denselben Typ mehrere Vorlagen oder Generika angegeben.  
+ Größer als eine Vorlage oder generische wurde angegeben, für den gleichen Typ, was nicht zulässig ist.  
   
  Im folgenden Beispiel wird C3857 generiert:  
   

@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C3891 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3891"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3891"
+title: Compilerfehler C3891 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3891
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3891
 ms.assetid: 6e1a9458-97f5-4580-bc0f-aa97a1bfd20d
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Compilerfehler C3891
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b9db8f6142e4d2d99071d9d02255e0789a14dd50
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'var': Ein literal\-Datenmember kann nicht als L\-Wert verwendet werden  
+---
+# <a name="compiler-error-c3891"></a>Compilerfehler C3891
+"Var": Ein literal-Datenmember kann nicht als ein l-Wert verwendet werden  
   
- Eine [literal](../../windows/literal-cpp-component-extensions.md)\-Variable ist eine Konstante, deren Wert nicht nach der Initialisierung in der Deklaration geändert werden kann.  
+ Ein [literal](../../windows/literal-cpp-component-extensions.md) -Variable ist eine Konstante, und der Wert kann nicht geändert werden, nachdem er in der Deklaration initialisiert wurde.  
   
- Im folgenden Beispiel wird C3891 generiert:  
+ Im folgende Beispiel wird C3891 generiert:  
   
 ```  
 // C3891.cpp  

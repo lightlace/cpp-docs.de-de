@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3063 | Microsoft-Dokumentation
+title: Compilerfehler C3063 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,34 +19,20 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: ce6a597e0246cee5c62dd6612d48fe4946505e77
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 26d30e56c3e694b39f583b29d8bd378b6dcaee0f
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3063"></a>Compilerfehler C3063
-Operator 'Operator': alle Operanden müssen den gleichen Enumerationstyp aufweisen  
+Operator "Operator": alle Operanden müssen den gleichen Enumerationstyp aufweisen  
   
-Wenn Sie Operatoren auf Enumeratoren verwenden, müssen beide Operanden des Enumerationstyps sein. Weitere Informationen finden Sie unter [Gewusst wie: definieren und Verarbeiten von Enumerationen in C++ / CLI](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md).  
+Bei Verwendung von Operatoren für Enumeratoren müssen beide Operanden des Enumerationstyps sein. Weitere Informationen finden Sie unter [wie: definieren und Verarbeiten von Enumerationen in c++ / CLI](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md).  
   
 ## <a name="example"></a>Beispiel  
-Im folgenden Beispiel wird C3063 generiert und gezeigt, wie Sie diesen Fehler beheben:  
+Im folgende Beispiel wird C3063 generiert und gezeigt, wie sie diesen Fehler beheben:  
   
 ```  
 // C3063.cpp  

@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C3138 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3138"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3138"
+title: Compiler-Fehler C3138 generiert | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3138
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3138
 ms.assetid: 364ee9e8-9358-410e-bd35-9c4a226a3753
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Compilerfehler C3138
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0ba06bed1ce02c8a3030720152892e0e35760afa
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Schnittstelle': eine 'Attribut'\-Schnittstelle muss von IDispatch erben oder von einer Schnittstelle, die von IDispatch erbt  
+---
+# <a name="compiler-error-c3138"></a>Compiler-Fehler C3138 generiert
+'Schnittstelle': 'Attribut'-Schnittstelle muss von IDispatch oder von einer Schnittstelle, die von IDispatch erbt erben  
   
- Eine Schnittstelle mit den Attributen [dual](../../windows/dual.md) oder [dispinterface](../../windows/dispinterface.md) verfügt nicht über `IDispatch` als direkte oder indirekte Basisschnittstelle.  
+ Eine Schnittstelle mit dem [duale](../../windows/dual.md) oder [Dispinterface](../../windows/dispinterface.md) Attribute verfügt nicht über `IDispatch` als eine direkte oder indirekte Basisschnittstelle.  
   
- Im folgenden Beispiel wird C3138 generiert:  
+ Im folgende Beispiel wird C3138 generiert:  
   
 ```  
 // C3138.cpp  

@@ -1,39 +1,42 @@
 ---
-title: "Compilerfehler C3531 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3531"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3531"
+title: Compilerfehler C3531 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3531
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3531
 ms.assetid: 2bdb9fdc-9ddf-403e-8b92-02763d434487
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Compilerfehler C3531
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7753e30e305b7b36adc3b4d2b535f755fa455bdd
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-"Symbol": ein Symbol, dessen Typ "Auto" enthält, muss einen Initialisierer haben  
+---
+# <a name="compiler-error-c3531"></a>Compilerfehler C3531
+'Symbol': ein Symbol, dessen Typ 'auto' enthält, muss einen Initialisierer haben  
   
- Die angegebene Variable verfügt nicht über einen Initialisiererausdruck.  
+ Einen Initialisierungsausdruck keinen für die angegebene Variable.  
   
-### So beheben Sie diesen Fehler  
+### <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1.  Geben Sie einen Initialisiererausdruck an, wenn Sie die Variable deklarieren, z. B. eine einfache Zuweisung mit Gleichheitszeichensyntax.  
+1.  Geben Sie einen Initialisierungsausdruck, z. B. eine einfache Zuweisung, die Gleichheitszeichensyntax, verwendet werden, wenn die Variable zu deklarieren.  
   
-## Beispiel  
- Das folgende Beispiel erzeugt C3531, da die Variablen `x1`, `y1, y2, y3` und `z2` nicht initialisiert werden.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel C3531, da Variablen `x1`, `y1, y2, y3`, und `z2` nicht initialisiert werden.  
   
 ```  
 // C3531.cpp  
@@ -47,5 +50,5 @@ int main()
 }  
 ```  
   
-## Siehe auch  
- [Auto\-Schlüsselwort](../../cpp/auto-keyword.md)
+## <a name="see-also"></a>Siehe auch  
+ [Auto-Schlüsselwort](../../cpp/auto-keyword.md)

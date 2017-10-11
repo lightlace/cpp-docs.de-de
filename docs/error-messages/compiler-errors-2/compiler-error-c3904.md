@@ -1,41 +1,44 @@
 ---
-title: "Compilerfehler C3904 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3904"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3904"
+title: Compilerfehler C3904 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3904
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3904
 ms.assetid: 08297605-e4f2-4c6c-b637-011f1fd40631
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Compilerfehler C3904
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 31a6f728fdbfb9540245cf85879adef8c1827d2e
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'property\_accessor' : Muss Zahl Parameter angeben  
+---
+# <a name="compiler-error-c3904"></a>Compilerfehler C3904
+"Property_accessor": muss Zahl Parameter angeben  
   
- Vergleichen Sie die Zahl der Parameter in der `get`\-Methode und der `set`\-Methode mit den Eigenschaftendimensionen.  
+ Überprüfen Sie die Anzahl von Parametern in Ihre `get` und `set` Methoden für die Eigenschaftendimensionen.  
   
--   Die Anzahl der Parameter für die `get`\-Methode muss mit der Anzahl der Dimensionen der Eigenschaft übereinstimmen oder bei nicht indizierten Eigenschaften 0 \(null\) sein.  
+-   Die Anzahl von Parametern für die `get` Methode muss gleich der Anzahl der Dimensionen der Eigenschaft oder NULL für nicht indizierte Eigenschaften.  
   
--   Die Anzahl der Parameter der `set`\-Methode muss der Anzahl der Dimensionen der Eigenschaft plus 1 entsprechen.  
+-   Die Anzahl der Parameter, der die `set` Methode muss entweder mehr als die Anzahl der Dimensionen der Eigenschaft.  
   
- Weitere Informationen finden Sie unter [Eigenschaft](../../windows/property-cpp-component-extensions.md).  
+ Weitere Informationen finden Sie unter [property](../../windows/property-cpp-component-extensions.md).  
   
-## Beispiel  
- Im folgenden Beispiel wird C3904 generiert.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird C3904 generiert.  
   
 ```  
 // C3904.cpp  
@@ -55,8 +58,8 @@ ref class X {
 };  
 ```  
   
-## Beispiel  
- Im folgenden Beispiel wird C3904 generiert.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird C3904 generiert.  
   
 ```  
 // C3904b.cpp  

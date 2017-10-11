@@ -1,38 +1,32 @@
 ---
-title: "ATL Global Variables | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, Globale Variablen"
-  - "Globale Variablen, ATL"
+title: Globale Variablen ATL | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- global variables, ATL
+- ATL, global variables
 ms.assetid: e881a319-99ca-4f5d-8a0b-34b3dcd0f37f
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# ATL Global Variables
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 0a7f17415ce6df7070ef2e8b57857902ef02fa91
+ms.contentlocale: de-de
+ms.lasthandoff: 10/09/2017
 
-Die folgenden globalen Variablen werden als Teil der ATL\-Klassen bereitgestellt:  
-  
-|||  
-|-|-|  
-|[\_pAtlModule](../../atl/reference/patlmodule.md)|Eine Variable, die einen Zeiger auf das aktuelle Modul speichert.|  
-  
-## Siehe auch  
- [ATL COM Desktop Components](../../atl/atl-com-desktop-components.md)   
- [Funktionen](../../atl/reference/atl-functions.md)   
- [Macros](../../atl/reference/atl-macros.md)   
- [Strukturen](../../atl/reference/atl-structures.md)   
- [Typedefs](../../atl/reference/atl-typedefs.md)   
- [Klassen](../../atl/reference/atl-classes.md)
+---
+# <a name="atl-global-variables"></a>ATL-globale Variablen
+
+
+
+

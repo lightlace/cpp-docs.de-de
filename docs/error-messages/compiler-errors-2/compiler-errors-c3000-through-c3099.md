@@ -51,25 +51,11 @@ caps.latest.revision: 1
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 16d0f336ec66329d0a92a151e1bc224433b0b03a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 59ac61f0ae50f3a6b1d7170ea0b965c3bb8d0fe2
 ms.contentlocale: de-de
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c3000-through-c3099"></a>Compilerfehler Fehler C3000 über C3099
@@ -101,12 +87,12 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C3016](compiler-error-c3016.md)|"*Bezeichner*": Indexvariable in OpenMP for-Anweisung muss ganzzahligen Typ signiert|  
 |[Compilerfehler C3017](compiler-error-c3017.md)|Der Beendigungstest in der For-Anweisung von OpenMP weist eine ungültige Form auf.|  
 |[Compilerfehler C3018](compiler-error-c3018.md)|"*Bezeichner*': OpenMP"for"Test oder das Inkrement Striches Indexvariable"*Variable*"|  
-|[Compilerfehler C3019](compiler-error-c3019.md)|Das Inkrement in der For-Anweisung von OpenMP weist eine ungültige Form auf.|  
+|[Compilerfehler C3019](compiler-error-c3019.md)|Inkrementierung in OpenMP-for-Anweisung weist eine ungültige form|  
 |[Compilerfehler C3020](compiler-error-c3020.md)|"*Variable*": Indexvariable von OpenMP "for-Schleife kann nicht geändert werden, im Schleifenkörper|  
 |[Compilerfehler C3021](compiler-error-c3021.md)|"*Argument*': Argument von OpenMP ist leer"*Richtlinie*"Richtlinie|  
 |[Compilerfehler C3022](compiler-error-c3022.md)|"*Richtlinie*": Ungültiger Plantyp von "*Richtlinie*"für die von OpenMP"*Richtlinie*" Richtlinie|  
 |[Compilerfehler C3023](compiler-error-c3023.md)|"*Argument*": Unerwartetes Token gefunden, die im Argument für die OpenMP "*Richtlinie*"-Klausel|  
-|[Compilerfehler C3024](compiler-error-c3024.md)|"schedule(runtime)": Der chunk_size -Ausdruck ist nicht zulässig.|  
+|[Compilerfehler C3024](compiler-error-c3024.md)|"schedule(runtime)": Chunk_size-Ausdruck ist nicht zulässig.|  
 |[Compilerfehler C3025](compiler-error-c3025.md)|"*Klausel*": ein ganzzahliger Ausdruck erwartet|  
 |[Compilerfehler C3026](compiler-error-c3026.md)|"*Klausel*": konstanter Ausdruck muss positiv sein|  
 |[Compilerfehler C3027](compiler-error-c3027.md)|"*Klausel*": arithmetische oder Zeiger-Ausdruck erwartet.|  
@@ -126,7 +112,7 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C3041](compiler-error-c3041.md)|"*Bezeichner*': Variable in der Copyprivate-Klausel muss im umschließenden Kontext privat sein|  
 |[Compilerfehler C3042](compiler-error-c3042.md)|'Copyprivate' und 'Nowait-Klauseln können nicht zusammen auftreten, für die von OpenMP "*Richtlinie*" Richtlinie|  
 |[Compilerfehler C3043](compiler-error-c3043.md)|Die critical-Direktive von OpenMP kann nicht in einer critical-Direktive mit dem gleichen Namen geschachtelt werden.|  
-|[Compilerfehler C3044](compiler-error-c3044.md)|"section": nur bei direkter Schachtelung unter einer "sections"-Direktive von OpenMP zulässig|  
+|[Compilerfehler C3044](compiler-error-c3044.md)|'Abschnitt': nur zulässig, direkter Schachtelung unter einer Sections-Direktive von OpenMP|  
 |[Compilerfehler C3045](compiler-error-c3045.md)|Es wurde erwartet, dass auf die sections-Direktive von OpenMP eine Verbundanweisung folgt. '{' fehlt|  
 |[Compilerfehler C3046](compiler-error-c3046.md)|Fehlender strukturierter Block in einem #pragma omp sections-Bereich von OpenMP.|  
 |[Compilerfehler C3047](compiler-error-c3047.md)|Vor einem strukturierten Block in einem sections-Bereich von OpenMP muss sich "#pragma omp section" befinden.|  
@@ -148,7 +134,7 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C3063](compiler-error-c3063.md)|Operator '*Operator*": alle Operanden müssen den gleichen Enumerationstyp aufweisen|  
 |Compilerfehler Fehler C3064|"*Bezeichner*': muss ein einfacher Typ oder aufgelöst zu einer|  
 |[Compilerfehler C3065](compiler-error-c3065.md)|Die Eigenschaftendeklaration im Nichtklassenbereich ist nicht zulässig.|  
-|[Compilerfehler C3066](compiler-error-c3066.md)|Es gibt verschiedene Möglichkeiten, um ein Objekt dieses Typs mit diesen Argumenten aufzurufen.|  
+|[Compilerfehler C3066](compiler-error-c3066.md)|Es gibt mehrere Möglichkeiten, ein Objekt dieses Typs aufgerufen werden, kann mit diesen Argumenten|  
 |Compilerfehler Fehler C3067|eine Initialisiererliste kann nicht verwendet werden, mit der integrierten Operator]|  
 |[Compilerfehler C3068](compiler-error-c3068.md)|"*Bezeichner*': eine naked-Funktion kann keine Objekte enthalten, die Entladung erforderlich wäre, wenn eine C++-Ausnahme aufgetreten ist.|  
 |[Compilerfehler C3069](compiler-error-c3069.md)|Operator '*Operator*': für den Enumerationstyp nicht zulässig.|  
@@ -156,19 +142,19 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C3071](compiler-error-c3071.md)|Operator '*Operator*"kann nur auf eine Instanz einer Verweisklasse oder einen Werttyp angewendet werden|  
 |[Compilerfehler C3072](compiler-error-c3072.md)|Operator '*Operator*"kann nicht mit einer Instanz von einem Ref-Klasse verwenden, die der unäre '% s'-Operator, um eine Instanz einer Verweisklasse konvertieren Klasse, um ein Handle angewendet werden|  
 |[Compilerfehler C3073](compiler-error-c3073.md)|"*Bezeichner*": Verweisklasse verfügt nicht über einen benutzerdefinierten Kopierkonstruktor|  
-|Compilerfehler Fehler C3074|Ein Array kann nicht mit einem Initialisierer in Klammern initialisiert werden.|  
+|Compilerfehler Fehler C3074|ein Array kann nicht mit einer Initialisiererliste in Klammern initialisiert werden|  
 |[Compilerfehler C3075](compiler-error-c3075.md)|"*Bezeichner*': Sie können keine Instanz eines Verweistyps einbetten"*Typ*", in einen Werttyp|  
 |[Compilerfehler C3076](compiler-error-c3076.md)|"*Bezeichner*': Sie können keine Instanz eines Verweistyps einbetten"*Typ*", in einem systemeigenen Typ|  
 |[Compilerfehler C3077](compiler-error-c3077.md)|"*Bezeichner*": ein Finalizer kann nur ein Member eines Verweistyps sein|  
 |Compilerfehler Fehler C3078|Array-Größe muss im neuen Ausdrücke angegeben werden|  
-|Compilerfehler Fehler C3079|Eine Initialisiererliste kann nicht als rechter Operand dieses Zuweisungsoperators verwendet werden.|  
+|Compilerfehler Fehler C3079|eine Initialisiererliste werden nicht als der Rechte Operand des dieser Zuweisungsoperator verwendet|  
 |[Compilerfehler C3080](compiler-error-c3080.md)|"*Finalizer*": ein Finalizer keinen Storage-Class-Specifier|  
 |Compilerfehler Fehler C3081|Veraltet.|  
 |Compilerfehler C3082|Veraltet.|  
 |[Compilerfehler C3083](compiler-error-c3083.md)|"*Bezeichner*': das Symbol auf der linken Seite des ein '::' muss ein Handletyp sein|  
 |[Compilerfehler C3084](compiler-error-c3084.md)|"*Bezeichner*": ein Destruktor/Finalizer nicht mit "*Schlüsselwort*"|  
 |[Compilerfehler C3085](compiler-error-c3085.md)|"*Bezeichner*": ein Konstruktor nicht mit "*Schlüsselwort*"|  
-|Compilerfehler Fehler C3086|"std::initializer_list" kann nicht gefunden werden: Sie müssen #include <initializer_list> verwenden|  
+|Compilerfehler Fehler C3086|"Std:: initializer_list" wurde nicht gefunden: Sie müssen #include < initializer_list-Element >|  
 |[Compilerfehler C3087](compiler-error-c3087.md)|"*Bezeichner*": Aufrufen von "*Deklaration*" dieser Member bereits initialisiert.|  
 |Compilerfehler Fehler C3088|"*Klasse*": Attributkonstruktor muss formale Argumente benannt|  
 |Compilerfehler Fehler C3089|"*Bezeichner*": Name des Parameters entspricht keine Elementnamen|  

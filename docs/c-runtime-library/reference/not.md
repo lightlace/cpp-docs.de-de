@@ -1,46 +1,49 @@
 ---
-title: "not | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "std::not"
-  - "std.not"
-  - "Not"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "not-Funktion"
+title: not | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- std::not
+- std.not
+- Not
+dev_langs:
+- C++
+helpviewer_keywords:
+- not function
 ms.assetid: d2ddbd5c-33c0-4aff-8961-feac155b4ba1
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# not
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: 62a6cba9111bc5c60ad286b3409ff76257fc4cfc
+ms.contentlocale: de-de
+ms.lasthandoff: 10/09/2017
 
-Eine Alternative zum \!\-Operator.  
+---
+# <a name="not"></a>not
+Eine Alternative zu ! operator (.) verwendet.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -48,10 +51,10 @@ Eine Alternative zum \!\-Operator.
   
 ```  
   
-## Hinweise  
- Das Makro gibt den Operator \! aus.  
+## <a name="remarks"></a>Hinweise  
+ Das Makro gibt den Operator ! aus.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // iso646_not.cpp  
@@ -72,7 +75,10 @@ int main( )
 }  
 ```  
   
-  **a ist null**  
-**a ist null**   
-## Anforderungen  
- **Header:** \<iso646.h\>
+```Output  
+a is zero  
+a is zero  
+```  
+  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<iso646.h>

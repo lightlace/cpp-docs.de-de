@@ -1,36 +1,39 @@
 ---
-title: "Compilerfehler C3894 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3894"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3894"
+title: Compilerfehler C3894 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3894
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3894
 ms.assetid: 6d5ac903-1dea-431d-8e3a-cebca4342983
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Compilerfehler C3894
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 46dffabb57e871e1635738434e7efb4812850379
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Variable': Die Verwendung des L\-Werts eines statischen initonly\-Datenmembers ist nur im Klassenkonstruktor der 'Klasse'\-Klasse zulässig.  
+---
+# <a name="compiler-error-c3894"></a>Compilerfehler C3894
+'Var': Verwendung statischer Datenmember Initonly l-Wert ist nur zulässig, in den Konstruktor der Klasse der Klasse "Klasse"  
   
- Statische [initonly](../../dotnet/initonly-cpp-cli.md)\-Datenmember können nur als L\-Werte zum Zeitpunkt der Deklaration oder in einem statischen Konstruktor verwendet werden.  
+ Statische [Initonly](../../dotnet/initonly-cpp-cli.md) Datenmember können nur als l-Werte zum Zeitpunkt der Deklaration oder in einem statischen Konstruktor verwendet werden.  
   
- \(Nicht statische\) initonly\-Instanzendatenmember können nur als L\-Werte zum Zeitpunkt der Deklaration oder als \(nicht statische\) Instanzenkonstruktoren verwendet werden.  
+ Instanz (nicht statische) Initonly-Datenmember können nur als l-Werte zum Zeitpunkt der Deklaration oder in der Instanz (nicht statische) Konstruktoren verwendet werden.  
   
- Im folgenden Beispiel wird C3894 generiert:  
+ Im folgende Beispiel wird C3894 generiert:  
   
 ```  
 // C3894.cpp  

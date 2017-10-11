@@ -1,35 +1,37 @@
 ---
-title: "Compilerfehler C2541 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2541"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2541"
+title: Compilerfehler C2541 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2541
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2541
 ms.assetid: ed95180f-00df-4e62-a8e9-1b6dab8281bf
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Compilerfehler C2541
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 24bb63554f67d5496e46fb1ab8fa7133fadc38c5
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-**"**   
- ***delete* ": delete: Objekte, die keine Zeiger sind, können nicht gelöscht werden**  
+---
+# <a name="compiler-error-c2541"></a>Compilerfehler C2541
+'delete': löschen: Objekte, die keine Zeiger kann nicht gelöscht werden.  
   
- Der Operator [delete](../../cpp/delete-operator-cpp.md) wurde für ein Objekt verwendet, das kein Zeiger ist.  
+ Die [löschen](../../cpp/delete-operator-cpp.md) -Operator auf ein Objekt, das kein Zeiger ist verwendet wurde.  
   
- Im folgenden Beispiel wird C2541 generiert:  
+ Im folgende Beispiel wird C2541 generiert:  
   
 ```  
 // C2541.cpp  

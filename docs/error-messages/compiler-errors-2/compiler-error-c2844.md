@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2844 | Microsoft-Dokumentation
+title: Compilerfehler C2844 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: c6bfb80408e058d22977ff068c9a0c21d5353a90
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 45e0a7eb7a8846d90cc8e0743f5484ba1b58208a
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2844"></a>Compilerfehler C2844
-'Member': kann kein Element der Schnittstelle "Schnittstelle" sein  
+'Member': ein Member der Schnittstelle "Schnittstelle" nicht möglich  
   
- Ein [Schnittstellenklasse](../../windows/interface-class-cpp-component-extensions.md) kann einen Datenmember enthalten, es sei denn, er auch eine Eigenschaft ist.  
+ Ein [Schnittstellenklasse](../../windows/interface-class-cpp-component-extensions.md) darf keine Datenmember enthalten, es sei denn, sie auch eine Eigenschaft ist.  
   
- Etwas anderes als eine Eigenschaft oder Member-Funktion ist in einer Schnittstelle nicht zulässig. Darüber hinaus sind die Konstruktoren, Destruktoren und Operatoren nicht zulässig.  
+ Etwas anderes als eine Eigenschaft oder der Member-Funktion ist in einer Schnittstelle nicht zulässig. Darüber hinaus sind die Konstruktoren, Destruktoren und Operatoren nicht zulässig.  
   
  Im folgende Beispiel wird C2844 generiert:  
   

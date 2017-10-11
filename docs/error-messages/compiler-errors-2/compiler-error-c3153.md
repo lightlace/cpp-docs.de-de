@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3153 | Microsoft-Dokumentation
+title: Compilerfehler C3153 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: e7755c5924af2d2266fdf5e97a76eac3d229aa79
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 9d6a2ad948ae8d5517f7b98316b4e3c67bea5afb
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3153"></a>Compilerfehler C3153
-"Schnittstelle": Sie können keine Instanz einer Schnittstelle erstellen  
+'Schnittstelle': Sie können keine Instanz einer Schnittstelle erstellen  
   
  Eine Schnittstelle kann nicht instanziiert werden. Um die Member einer Schnittstelle zu verwenden, leiten Sie eine Klasse von der Schnittstelle, implementieren Sie die Schnittstellenmember und verwenden Sie die Elemente.  
   
- Im folgende Beispiel wird C3153 generiert:  
+ Im folgenden Beispiel wird C3153 generiert:  
   
 ```  
 // C3153.cpp  

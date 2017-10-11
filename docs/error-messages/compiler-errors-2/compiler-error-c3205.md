@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C3205 | Microsoft-Dokumentation
+title: Compilerfehler C3205 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 368997af54b7fff2d057a8a94dfca86e2eda5762
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 46b42d19bd42bafbb6baf6b8af368bd10c9dd1ec
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3205"></a>Compilerfehler C3205
 Argumentliste für den Vorlagenparameter "Parameter" fehlt.  
   
-Ein [Vorlage](../../cpp/templates-cpp.md) -Parameter fehlt.  
+Ein [Vorlagenparameter](../../cpp/templates-cpp.md) fehlt.  
   
 ## <a name="example"></a>Beispiel  
 Im folgenden Beispiel wird C3205 generiert:  

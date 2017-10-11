@@ -19,26 +19,11 @@ caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 8eb7283942a8a89fc3322983c41c68082b6c5cee
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c43ddf0e336d9964d08939bb7c1dd145caf6c848
 ms.contentlocale: de-de
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-c4957"></a>Compilerwarnung C4957
@@ -46,11 +31,11 @@ ms.lasthandoff: 04/12/2017
   
  Eine Umwandlung ergibt ein nicht überprüfbares Image.  
   
- Einige Umwandlungen sind sicher (z. B. eine `static_cast` die benutzerdefinierte Umwandlungen auslöst, und eine `const_cast`). Ein ["safe_cast"](../../windows/safe-cast-cpp-component-extensions.md) wird sichergestellt, dass zum Erzeugen von überprüfbarem Code.  
+ Einige Umwandlungen sind sicher (z. B. eine `static_cast` die benutzerdefinierte Umwandlungen auslöst, und eine `const_cast`). Eine [safe_cast](../../windows/safe-cast-cpp-component-extensions.md) generiert auf jeden Fall überprüfbaren Code.  
   
  Weitere Informationen finden Sie unter [reiner und überprüfbarer Code (C + c++ / CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).  
   
- Diese Warnung wird als Fehler ausgegeben und kann deaktiviert werden, mit der [Warnung](../../preprocessor/warning.md) Pragmas oder der [/WD](../../build/reference/compiler-option-warning-level.md) -Compileroption.  
+ Diese Warnung wird als Fehler ausgegeben. Sie kann mithilfe des [warning](../../preprocessor/warning.md) -Pragmas oder der Compileroption [/wd](../../build/reference/compiler-option-warning-level.md) deaktiviert werden.  
   
  Im folgenden Beispiel wird C4957 generiert:  
   

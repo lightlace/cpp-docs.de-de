@@ -1,35 +1,38 @@
 ---
-title: "Compilerfehler C2009 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2009"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2009"
+title: Compiler-Fehler C2009 generiert | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2009
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2009
 ms.assetid: fe9d94ed-20a5-4d83-b9c4-60ee69d2f30a
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Compilerfehler C2009
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2bbae441d7b4c9e57a4080dd643f6563eed6c48e
+ms.contentlocale: de-de
+ms.lasthandoff: 10/09/2017
 
-Mehrfachverwendung des formalen Makroparameters 'Bezeichner'  
+---
+# <a name="compiler-error-c2009"></a>Compiler-Fehler C2009 generiert
+Mehrfachverwendung des formalen Makroparameters "identifier"  
   
- Der Bezeichner wird in der Liste der formalen Parameter einer Makrodefinition mehrmals verwendet.  Bezeichner in der Makroparameterliste müssen eindeutig sein.  
+ Den Bezeichner wird von die Liste der formalen Parameter einer Makrodefinition mehrmals verwendet. Bezeichner in der Parameterliste für das Makro müssen eindeutig sein.  
   
-## Beispiel  
- Im folgenden Beispiel wird C2009 generiert:  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird C2009 generiert:  
   
 ```  
 // C2009.cpp  
@@ -43,7 +46,7 @@ int main()
 }  
 ```  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Mögliche Lösung:  
   
 ```  

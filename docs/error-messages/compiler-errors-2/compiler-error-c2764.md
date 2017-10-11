@@ -1,35 +1,38 @@
 ---
-title: "Compilerfehler C2764 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2764"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2764"
+title: Compiler-Fehler C2764 generiert | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2764
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2764
 ms.assetid: 3754f5af-e094-4425-be20-d0c9a9b5baec
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Compilerfehler C2764
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 18e32646c3930dfae79ffd1ed13dfa014da4ce1a
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Parameter': Vorlagenparameter wurde in teilweiser Spezialisierung 'Spezialisierung' nicht verwendet oder ist nicht ableitbar  
+---
+# <a name="compiler-error-c2764"></a>Compiler-Fehler C2764 generiert
+'Param': Template-Parameter nicht verwendet oder in die teilweise Spezialisierung "Spezialisierung" ableitbar  
   
- Ein Vorlagenparameter wird in einer teilweisen Spezialisierung nicht verwendet.  Dadurch wird die teilweise Spezialisierung unbrauchbar, da der Vorlagenparameter nicht abgeleitet werden kann.  
+ Ein Template-Parameter wird nicht in eine teilweise Spezialisierung verwendet. Dadurch wird die teilweise Spezialisierung kann nicht verwendet werden, da die Vorlagenparameter nicht abgeleitet werden kann.  
   
-## Beispiel  
- Im folgenden Beispiel wird C2764 generiert:  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird C2764 generiert:  
   
 ```  
 // C2764.cpp  

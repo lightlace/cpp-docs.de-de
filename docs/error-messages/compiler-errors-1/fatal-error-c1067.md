@@ -1,35 +1,38 @@
 ---
-title: "Schwerwiegender Fehler C1067 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1067"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1067"
+title: Schwerwiegender Fehler C1067 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1067
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1067
 ms.assetid: e2c94be6-4573-4571-aac9-73d657fe9f96
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Schwerwiegender Fehler C1067
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7ef424de5d375f2d198a5f358976d058d556c506
+ms.contentlocale: de-de
+ms.lasthandoff: 10/09/2017
 
-Compilerlimit: Die Größenbeschränkung von 64 KB für Typeneinträge wurde überschritten  
+---
+# <a name="fatal-error-c1067"></a>Schwerwiegender Fehler C1067
+Compilerlimit: 64 KB für Typeneinträge Größe wurde überschritten  
   
- Dieser Fehler tritt z. B. auf, wenn ein Symbol über einen ergänzten Namen mit mehr als 247 Zeichen verfügt.  Verkürzen Sie den Symbolnamen, um das Problem zu beheben.  
+ Dieser Fehler kann auftreten, wenn ein Symbol, das einen ergänzten Namen, die länger als 247 Zeichen aufweist.  Verkürzen Sie den Symbolnamen um zu beheben.  
   
- Bei der Erstellung von Debuginformationen durch den Compiler werden Typeneinträge ausgegeben, um im Quellcode gefundene Typen zu definieren.  Typeneinträge enthalten beispielsweise einfache Strukturen und Argumentlisten von Funktionen.  Einige dieser Typeneinträge können große Listen sein.  
+ Wenn der Compiler Debuginformationen generiert, Typeneinträge zum Definieren von Typen, die im Quellcode gefunden.  Typeneinträge enthalten beispielsweise einfache Strukturen und Argumentlisten von Funktionen.  Einige dieser Typ Datensätze können umfangreiche Listen sein.  
   
- Typeneinträge dürfen eine Größe von je 64 KB nicht überschreiten.  Wird diese 64 KB\-Grenze überschritten, wird die oben stehende Fehlermeldung angezeigt.  
+ Auf die Größe eines beliebigen Typs Datensatzes ist maximal 64 KB.  Wenn dieser 64 KB-Grenze überschritten wird, wird dieser Fehler auftreten.  
   
- C1067 wird möglicherweise auch ausgegeben, wenn viele Symbole mit langen Namen vorhanden sind oder wenn eine Klasse, Struktur oder Union über zu viele Member verfügt.
+ C1067 kann auch auftreten, wenn viele Symbole mit langen Namen vorhanden sind oder wenn eine Klasse, Struktur oder Union verfügt über zu viele Member.

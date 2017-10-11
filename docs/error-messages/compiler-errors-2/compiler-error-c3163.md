@@ -1,38 +1,41 @@
 ---
-title: "Compilerfehler C3163 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3163"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3163"
+title: Compilerfehler C3163 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3163
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3163
 ms.assetid: 17dcafa3-f416-4e04-a232-f9569218ba75
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Compilerfehler C3163
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 95fb254036d2883b6efe6b81bda54864d533c2a8
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Konstrukt': Attribute stimmen nicht mit vorheriger Deklaration überein  
+---
+# <a name="compiler-error-c3163"></a>Compilerfehler C3163
+'construct': Attribute, die mit der vorherigen Deklaration nicht konsistent.  
   
- Die für eine Definition angegebenen Attribute stimmen nicht mit den Attributen einer Deklaration überein.  
+ Die Attribute, die für die Definition einer angewendet werden in Konflikt mit den Attributen, die eine Deklaration angewendet werden.  
   
- Eine Möglichkeit zum Beheben des Fehlers C3163 besteht darin, Attribute in der Vorwärtsdeklaration zu entfernen.  Die Anzahl von Attributen in einer Vorwärtsdeklaration muss kleiner oder zumindest gleich der Attributanzahl in der Definition sein.  
+ Eine Möglichkeit zum Auflösen von C3163 ist um Attribute für die Vorwärtsdeklaration zu entfernen. Alle Attribute in einer Vorwärtsdeklaration sollte niedriger sein als die Attribute für die Definition oder höchstens gleich.  
   
- Eine mögliche Ursache des Fehlers C3163 ist die Source Code Annotation Language von Microsoft \(SAL\).  Die SAL\-Makros werden nur erweitert, wenn Sie das Projekt mit dem **\/analyze**\-Kennzeichen kompilieren.  Bei einem Programm, das problemlos ohne "\/analyze" kompiliert wird, kann der Fehler C3163 ausgelöst werden, wenn Sie versuchen, es mit der \/analyze\-Option erneut zu kompilieren.  Weitere Informationen über SAL finden Sie unter [SAL\-Anmerkungen](../../c-runtime-library/sal-annotations.md).  
+ Eine mögliche Ursache des Fehlers C3163 umfasst Microsoft Source Code Annotation Language (SAL). Die SAL-Makros nicht erweitern, wenn Sie das Projekt, mithilfe kompiliert der **/ analyze** Flag. Ein Programm, das kompiliert wird ordnungsgemäß heruntergefahren, ohne / analyze möglicherweise C3163 auslösen, wenn Sie versuchen, kompilieren sie mit der / analyze-Option. Weitere Informationen zu SAL, finden Sie unter [SAL-Anmerkungen](../../c-runtime-library/sal-annotations.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird C3163 generiert.  
   
 ```  
@@ -46,5 +49,5 @@ using namespace System;
 // [CLSCompliant(true)] void f() {}  
 ```  
   
-## Siehe auch  
- [SAL\-Anmerkungen](../../c-runtime-library/sal-annotations.md)
+## <a name="see-also"></a>Siehe auch  
+ [SAL-Anmerkungen](../../c-runtime-library/sal-annotations.md)

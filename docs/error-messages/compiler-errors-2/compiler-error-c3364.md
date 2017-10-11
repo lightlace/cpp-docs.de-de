@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3364 | Microsoft-Dokumentation
+title: Compilerfehler C3364 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 783e05439168a63c21a3900c993813dd973a642a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6ca9b4d5ca4362e1d728a854bb776573d25969d7
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3364"></a>Compilerfehler C3364
-'Delegat': Delegatkonstruktor: Argument muss ein Zeiger auf Member-Funktion der verwalteten Klasse oder eine globale Funktion sein  
+'Delegat': Delegatkonstruktor: Argument muss ein Zeiger auf Memberfunktion einer verwalteten Klasse oder einer globalen Funktion sein  
   
- Der zweite Parameter des Delegatkonstruktors akzeptiert entweder die Adresse einer Memberfunktion oder die Adresse einer statischen Memberfunktion einer beliebigen Klasse. Beide werden als einfache Adressen behandelt.  
+ Der zweite Parameter des Delegatkonstruktors akzeptiert die Adresse einer Memberfunktion oder die Adresse einer statischen Memberfunktion einer beliebigen Klasse. Beide werden als einfache Adressen behandelt.  
   
  Im folgende Beispiel wird C3364 generiert:  
   

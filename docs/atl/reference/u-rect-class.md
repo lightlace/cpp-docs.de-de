@@ -1,5 +1,5 @@
 ---
-title: Klasse _U_RECT | Microsoft-Dokumentation
+title: _U_RECT Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,32 +22,18 @@ caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 5a375921fd51b19eb2e9020d3175a56df8549461
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: a8c7d4e7b34256d9544cd75dc71dbfb8294db30b
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="urect-class"></a>_U_RECT-Klasse
-Dieses Argument-Adapterklasse ermöglicht `RECT` Zeiger oder Verweise auf eine Funktion übergeben werden, die im Hinblick auf Zeiger implementiert wird.  
+Dieses Argument-Adapterklasse ermöglicht entweder `RECT` Zeiger oder Verweise auf eine Funktion übergeben werden, die im Hinblick auf Zeigern implementiert wird.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member werden nicht in Anwendungen verwendet, die in der Windows-Runtime ausgeführt.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
   
 ## <a name="syntax"></a>Syntax  
   

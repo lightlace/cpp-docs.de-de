@@ -1,5 +1,5 @@
 ---
-title: _ATL_BASE_MODULE70 Struktur | Microsoft-Dokumentation
+title: _ATL_BASE_MODULE70 Struktur | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,29 +22,15 @@ caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 347e7bf7cd9173fb2815f44fc052ec23ab4055a6
-ms.openlocfilehash: 7456d441d7b3fb74f404f29c893c492feab10ed9
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 1e824c2b85e7f80ad93a1f154be7f2e680bd00a9
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="atlbasemodule70-structure"></a>_ATL_BASE_MODULE70-Struktur
-Jedes Projekt, das ATL verwendet werden  
+Von jedem Projekt, die ATL verwendet verwendet  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -61,9 +47,9 @@ struct _ATL_BASE_MODULE70 {
 };
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
  `cbSize`  
- Die Größe der Struktur, die für die Versionskontrolle verwendet.  
+ Die Größe der Struktur, die für die versionsverwaltung verwendet.  
   
  `m_hInst`  
  Die **hInstance** für dieses Modul (Exe oder Dll).  
@@ -72,19 +58,19 @@ struct _ATL_BASE_MODULE70 {
  Ressourcenhandle für Standard-Instanz.  
   
  **m_bNT5orWin98**  
- Versionsinformationen zum Betriebssystem. Wird intern verwendet, ATL  
+ Informationen zur Betriebssystemversion. Wird intern vom ATL verwendet  
   
  **dwAtlBuildVer**  
  Speichert die Version von ATL Derzeit 0x0700.  
   
  **pguidVer**  
- ATL interne GUID.  
+ Interne des ATL-GUID.  
   
  **m_csResource**  
- Zum Synchronisieren des Zugriffs auf die **M_rgResourceInstance** Array. Wird intern verwendet, ATL  
+ Zum Synchronisieren des Zugriffs auf die **M_rgResourceInstance** Array. Wird intern vom ATL verwendet  
   
  **m_rgResourceInstance**  
- Array verwendet, um die Suche nach Ressourcen in allen Ressourceninstanzen der ATL bekannt ist. Wird intern verwendet, ATL  
+ Array verwendet, um die Suche nach Ressourcen in der Ressourceninstanzen der ATL fähig ist. Wird intern vom ATL verwendet  
   
 ## <a name="remarks"></a>Hinweise  
  [_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module) ist definiert als Typedef von `_ATL_BASE_MODULE70`.  

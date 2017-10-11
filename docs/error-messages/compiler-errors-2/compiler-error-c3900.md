@@ -1,36 +1,39 @@
 ---
-title: "Compilerfehler C3900 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3900"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3900"
+title: Compilerfehler C3900 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3900
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3900
 ms.assetid: a94cc561-8fa8-4344-9e01-e81ff462fae5
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Compilerfehler C3900
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 29a2210ec372de6f752091a8eb13a4e5eb4f4aa7
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Member': Ist im aktuellen Gültigkeitsbereich nicht zulässig  
+---
+# <a name="compiler-error-c3900"></a>Compilerfehler C3900
+'Member': im aktuellen Bereich nicht zulässig.  
   
- Eigenschaftenblöcke können nur Funktionsdeklarationen und Inlinefunktionsdefinitionen enthalten.  In Eigenschaftenblöcken sind nur Funktionen als Member erlaubt.  Typdefinitionen, Operatoren oder Friend\-Funktionen sind nicht zulässig.  Weitere Informationen finden Sie unter [Eigenschaft](../../windows/property-cpp-component-extensions.md).  
+ Eigenschaftenblöcken können Funktionsdeklarationen und Inlinefunktionsdefinitionen nur enthalten. Keine Member als Funktionen sind in Eigenschaftenblöcken zulässig. Keine Typdefinitionen, Operatoren oder Friend-Funktionen sind zulässig. Weitere Informationen finden Sie unter [property](../../windows/property-cpp-component-extensions.md).  
   
- Ereignisdefinitionen können nur Zugriffsmethoden und Funktionen enthalten.  
+ Ereignisdefinitionen können nur über Zugriffsmethoden und Funktionen enthalten.  
   
- Im folgenden Beispiel wird C3900 generiert:  
+ Im folgende Beispiel wird C3900 generiert:  
   
 ```  
 // C3900.cpp  
@@ -43,7 +46,7 @@ ref class X {
 };  
 ```  
   
- Im folgenden Beispiel wird C3900 generiert:  
+ Im folgende Beispiel wird C3900 generiert:  
   
 ```  
 // C3900b.cpp  

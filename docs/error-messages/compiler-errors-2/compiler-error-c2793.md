@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C2793 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2793"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2793"
+title: Compilerfehler Fehler C2793 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2793
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2793
 ms.assetid: ce35f4e8-c357-40ca-95c4-15ff001ad69d
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Compilerfehler C2793
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: af1f43489d8f12b5923cc46cc197e7b749338c83
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Token': Auf '::' folgen unerwartete Token; Bezeichner oder Schlüsselwort 'operator' erwartet  
+---
+# <a name="compiler-error-c2793"></a>Compilerfehler Fehler C2793
+"token": Unerwartetes token Folgendes "::", Bezeichner oder ein Schlüsselwort "Operator" erwartet  
   
- Die einzigen Token, die auf `__super::` folgen können, sind ein Bezeichner oder das Schlüsselwort `operator`.  
+ Die einzigen Token, die folgen können `__super::` sind ein Bezeichner oder das Schlüsselwort `operator`.  
   
- Im folgenden Beispiel wird C2793 generiert:  
+ Im folgende Beispiel wird C2793 generiert:  
   
 ```  
 // C2793.cpp  

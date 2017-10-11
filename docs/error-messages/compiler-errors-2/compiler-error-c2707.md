@@ -1,43 +1,46 @@
 ---
-title: "Compilerfehler C2707 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2707"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2707"
+title: Compiler-Fehler C2707 generiert | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2707
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2707
 ms.assetid: 3deaf45c-74da-4c9d-acc6-b82412720b74
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Compilerfehler C2707
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 46ca756cf6491506cefc38e34992fa5e3fb67429
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Bezeichner' : Falscher Kontext für systeminterne Funktion  
+---
+# <a name="compiler-error-c2707"></a>Compiler-Fehler C2707 generiert
+'Bezeichner': Ungültiger Kontext für die systeminterne Funktion  
   
- Systeminterne Funktionen für die strukturierte Ausnahmebehandlung sind in bestimmten Kontexten unzulässig:  
+ Strukturierte Ausnahmebehandlung systeminternen Funktionen sind in bestimmten Kontexten ungültig:  
   
--   `_exception_code()` außerhalb eines Ausnahmefilters oder eines `__except`\-Blockes  
+-   `_exception_code()`außerhalb eines Ausnahmefilters oder `__except` Block  
   
--   `_exception_info()` außerhalb eines Ausnahmefilters  
+-   `_exception_info()`außerhalb eines Ausnahmefilters  
   
--   `_abnormal_termination()` außerhalb eines `__finally`\-Blockes  
+-   `_abnormal_termination()`außerhalb einer `__finally` Block  
   
- Um den Fehler zu beheben, sollten Sie sicherstellen, dass systeminterne Funktionen für die Ausnahmebehandlung im richtigen Kontext verwendet werden.  
+ Um den Fehler zu beheben, achten Sie darauf, dass die Ausnahmebehandlung systeminternen Funktionen im entsprechenden Kontext platziert werden.  
   
-## Beispiel  
- Im folgenden Beispiel wird C2707 generiert.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird C2707 generiert.  
   
 ```  
 // C2707.cpp  

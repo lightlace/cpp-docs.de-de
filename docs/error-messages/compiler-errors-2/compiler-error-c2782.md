@@ -1,32 +1,35 @@
 ---
-title: "Compilerfehler C2782 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2782"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2782"
+title: Compilerfehler Fehler C2782 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2782
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2782
 ms.assetid: 8b685422-294d-4f64-9f3d-c14eaf03a93d
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Compilerfehler C2782
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 125092771675363eb896d3524b8e093493f9719b
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Deklaration': Vorlagenparameter 'Bezeichner' ist mehrdeutig  
+---
+# <a name="compiler-error-c2782"></a>Compilerfehler Fehler C2782
+'Declaration': Vorlagenparameter 'Bezeichner' ist mehrdeutig  
   
- Der Compiler kann den Typ eines Vorlagenarguments nicht feststellen.  
+ Der Compiler kann nicht den Typ von einem Vorlagenargument ermitteln.  
   
  Im folgenden Beispiel wird C2782 generiert:  
   

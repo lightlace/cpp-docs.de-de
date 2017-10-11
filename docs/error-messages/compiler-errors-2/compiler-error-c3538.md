@@ -1,39 +1,42 @@
 ---
-title: "Compilerfehler C3538 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3538"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3538"
+title: Compilerfehler C3538 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3538
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3538
 ms.assetid: ef3698a5-7356-4c62-b9af-5d3a4baed958
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Compilerfehler C3538
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: da21036ddd4cc8b468f291079e0c475ca1b7c4b3
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c3538"></a>Compilerfehler C3538
 In einer Deklaratorliste muss "auto" immer in denselben Typ hergeleitet werden.  
   
  Nicht alle deklarierten Variablen in einer Deklarationsliste werden in den gleichen Typ aufgelöst.  
   
-### So beheben Sie diesen Fehler  
+### <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1.  Stellen Sie sicher, dass alle `auto`\-Deklarationen in der Liste in denselben Typ hergeleitet werden.  
+1.  Stellen Sie sicher, dass alle `auto`-Deklarationen in der Liste in denselben Typ hergeleitet werden.  
   
-## Beispiel  
- Die folgenden Anweisungen erzeugen C3538.  Jede Anweisung deklariert mehrere Variablen, aber jede Verwendung des `auto`\-Schlüsselworts wird nicht in den gleichen Typ abgeleitet.  
+## <a name="example"></a>Beispiel  
+ Die folgenden Anweisungen erzeugen C3538. Jede Anweisung deklariert mehrere Variablen, aber jede Verwendung des `auto`-Schlüsselworts wird nicht in den gleichen Typ abgeleitet.  
   
 ```  
 // C3538.cpp  
@@ -53,5 +56,5 @@ int main()
 }  
 ```  
   
-## Siehe auch  
- [Auto\-Schlüsselwort](../../cpp/auto-keyword.md)
+## <a name="see-also"></a>Siehe auch  
+ [Auto-Schlüsselwort](../../cpp/auto-keyword.md)

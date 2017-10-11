@@ -19,36 +19,21 @@ caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 4b85385c97f5873c1b370cd72f0866439263f787
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 26e55c8a675ada3fd2e88976bc9d9a51cfa8b751
 ms.contentlocale: de-de
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3888"></a>Compilerfehler C3888
 "name": Der diesem literal-Datenmember zugeordnete Konstantenausdruck wird von C++/CLI nicht unterstützt  
   
- Die *Namen* Datenmember, die mit deklariert wird die [literal](../../windows/literal-cpp-component-extensions.md) Schlüsselwort wird initialisiert, mit einem Wert, der vom Compiler nicht unterstützt. Der Compiler unterstützt nur konstante integrale, Enumerations- oder Zeichenfolgentypen. Der Fehler **C3888** wurde wahrscheinlich dadurch verursacht, dass das Datenmember mit einem Bytearray initialisiert wird.  
+ Das *name* -Datenmember, das mit dem [literal](../../windows/literal-cpp-component-extensions.md) -Schlüsselwort deklariert wird, wird mit einem Wert initialisiert, der vom Compiler nicht unterstützt wird. Der Compiler unterstützt nur konstante integrale, Enumerations- oder Zeichenfolgentypen. Der Fehler **C3888** wurde wahrscheinlich dadurch verursacht, dass das Datenmember mit einem Bytearray initialisiert wird.  
   
 ### <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
 1.  Vergewissern Sie sich, dass das deklarierte literal-Datenmember ein unterstützter Typ ist.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Zeichenfolgenliterale](../../windows/literal-cpp-component-extensions.md)
+ [literal](../../windows/literal-cpp-component-extensions.md)

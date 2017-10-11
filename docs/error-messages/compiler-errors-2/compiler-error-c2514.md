@@ -1,36 +1,39 @@
 ---
-title: "Compilerfehler C2514 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2514"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2514"
+title: Compilerfehler C2514 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2514
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2514
 ms.assetid: 4b7085e5-6714-4261-80b7-bc72e64ab3e8
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Compilerfehler C2514
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f91dfffe27127cfbff20d7b2e67d097b65cae358
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2514"></a>Compilerfehler C2514
 'Klasse': Klasse besitzt keine Konstruktoren  
   
- Für die Klasse, Struktur oder Union ist kein Konstruktor mit einer Liste von Parametern vorhanden, die den Parametern zur Instanziierung der Klasse, Struktur oder Union entsprechen.  
+ Die Klasse, Struktur oder Union verfügt über keinen Konstruktor mit einer Parameterliste, die den Parametern, die verwendet wird, um sie zu instanziieren übereinstimmt.  
   
- Eine Klasse muss vollständig deklariert werden, damit sie instanziiert werden kann.  
+ Eine Klasse muss vollständig deklariert werden, bevor es instanziiert werden kann.  
   
- Im folgenden Beispiel wird C2514 generiert:  
+ Im folgende Beispiel wird C2514 generiert:  
   
 ```  
 // C2514.cpp  

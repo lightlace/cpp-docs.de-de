@@ -1,41 +1,44 @@
 ---
-title: "Compilerfehler C3532 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3532"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3532"
+title: Compilerfehler C3532 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3532
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3532
 ms.assetid: 51067853-eda8-4f59-86e8-8924e16d3a95
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Compilerfehler C3532
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e78db21d00ea93378358a1147163276fb12bdfd5
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-"Typ": falsche Verwendung von "Auto"  
+---
+# <a name="compiler-error-c3532"></a>Compilerfehler C3532
+'Typ': falsche Verwendung von "Auto"  
   
- Der angegebene Typ kann nicht mit dem `auto`\-Schlüsselwort deklariert werden.  Beispielsweise können Sie das `auto`\-Schlüsselwort nicht verwenden, um ein Array oder einen Methodenrückgabetyp zu deklarieren.  
+ Der angegebene Typ kann nicht deklariert werden, mit dem `auto` Schlüsselwort. Angenommen, Sie können keine der `auto` -Schlüsselwort zu deklarieren, ein Array oder eine Methode Typ zurückgeben.  
   
-### So beheben Sie diesen Fehler  
+### <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
 1.  Stellen Sie sicher, dass der Initialisierungsausdruck einen gültigen Typ ergibt.  
   
-2.  Stellen Sie sicher, dass Sie kein Array und keinen Methodenrückgabetyp deklarieren.  
+2.  Stellen Sie sicher, dass Sie ein Array oder ein Rückgabetyp der Methode nicht deklarieren.  
   
-## Beispiel  
- Im folgenden Beispiel wird C3532 erzeugt, da das `auto`\-Schlüsselwort keinen Methodenrückgabetyp deklarieren kann.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird C3532 erzeugt, da die `auto` Schlüsselwort kann nicht der Rückgabetyp einer Methode deklariert werden.  
   
 ```  
 // C3532a.cpp  
@@ -43,8 +46,8 @@ caps.handback.revision: 6
 auto f(){}   // C3532  
 ```  
   
-## Beispiel  
- Im folgenden Beispiel wird C3532 erzeugt, da das `auto`\-Schlüsselwort kein Array deklarieren kann.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird C3532 erzeugt, da die `auto` Schlüsselwort kann kein Array deklariert.  
   
 ```  
 // C3532b.cpp  
@@ -61,5 +64,5 @@ int main()
 }  
 ```  
   
-## Siehe auch  
- [Auto\-Schlüsselwort](../../cpp/auto-keyword.md)
+## <a name="see-also"></a>Siehe auch  
+ [Auto-Schlüsselwort](../../cpp/auto-keyword.md)

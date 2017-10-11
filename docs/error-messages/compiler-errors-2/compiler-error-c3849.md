@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C3849 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3849"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3849"
+title: Compilerfehler C3849 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3849
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3849
 ms.assetid: 5347140e-1a81-4841-98c0-b63d98264b64
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Compilerfehler C3849
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7fbe46ee4f83dc5477eeb67e0debf14fe4f9fad5
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-function\-style\-Aufruf an einen Ausdruck des Typs 'Typ' verliert möglicherweise die const\- und\/oder volatile\-Qualifizierer für alle 'Anzahl' verfügbaren Operatorüberladungen  
+---
+# <a name="compiler-error-c3849"></a>Compilerfehler C3849
+Funktionstypen Aufruf ein Ausdruck vom Typ "Type" würden const "und/oder" volatile-Qualifizierer für alle Zahl verfügbaren operatorüberladungen verlieren.  
   
- Eine Variable mit einem festgelegten **const\-volatile**\-Typ kann nur Memberfunktionen aufrufen, die mit denselben oder höher wertigen **const\-volatile**\-Qualifizierungen definiert wurden.  
+ Eine Variable mit einem angegebenen Const-Volatile-Typ kann Member nur mit dieselbe oder eine höhere Const-Volatile-Qualifikationen definierten Funktionen aufrufen.  
   
- Um diesen Fehler zu beheben, stellen Sie eine entsprechende Memberfunktion bereit.  Sie können keine Konvertierung für ein mit `const` oder `volatile` gekennzeichnetes Objekt ausführen, wenn die Konvertierung zu einer geringer wertigen Qualifizierung führt.  Die Anzahl der Qualifizierer darf sich durch eine Konvertierung erhöhen, jedoch nicht verringern.  
+ Um diesen Fehler zu beheben, geben Sie eine entsprechenden Member-Funktion. Eine Konvertierung kann nicht auf ein Const oder volatile qualifiziertes Objekt ausgeführt werden, wenn die Konvertierung zu einer Qualifikation führt. Der Qualifizierer darf jedoch nicht Qualifizierer in einer Konvertierung.  
   
  In den folgenden Beispielen wird C3849 generiert:  
   

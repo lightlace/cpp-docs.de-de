@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C2776 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2776"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2776"
+title: Compiler-Fehler C2776 generiert | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2776
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2776
 ms.assetid: 9d80addc-62c7-40fc-a2cc-60303abb87df
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Compilerfehler C2776
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5642335519263c3b191d1c14399f3d00f366a8c9
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-Nur eine "get"\-Methode kann pro Eigenschaft angegeben werden  
+---
+# <a name="compiler-error-c2776"></a>Compiler-Fehler C2776 generiert
+nur eine "get"-Methode kann pro Eigenschaft angegeben werden  
   
- Sie können nur eine `get`\-Funktion im erweiterten [property](../../cpp/property-cpp.md)\-Attribut angeben.  Dieser Fehler tritt auf, wenn mehrere `get`\-Funktionen angegeben sind.  
+ Nur eine angeben `get` -Funktion in der [Eigenschaft](../../cpp/property-cpp.md) erweiterten Attribute. Dieser Fehler tritt auf, wenn mehrere `get` Funktionen angegeben werden.  
   
- Im folgenden Beispiel wird C2776 generiert:  
+ Im folgende Beispiel wird C2776 generiert:  
   
 ```  
 // C2776.cpp  

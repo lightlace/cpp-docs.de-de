@@ -1,37 +1,40 @@
 ---
-title: "Compilerfehler C3114 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3114"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3114"
+title: Compiler-Fehler C3114 generiert | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3114
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3114
 ms.assetid: b5d2df4f-87d0-4292-9981-25c6a6013c05
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Compilerfehler C3114
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e4ec82d31e26b33364a73384aae08f6adc48da02
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Argument': Kein gültiges benanntes Attributargument  
+---
+# <a name="compiler-error-c3114"></a>Compiler-Fehler C3114 generiert
+'Argument': kein gültiges benanntes Attributargument.  
   
- Damit eine Datenmember einer Attributklasse ein gültiges benanntes Argument sein kann, darf es nicht mit `static`, `const` oder `literal` gekennzeichnet werden.  Wenn es sich um eine Eigenschaft handelt, darf die Eigenschaft nicht `static` sein, und sie muss über get\- und set\-Accessoren verfügen.  
+ In der Reihenfolge für Datenmember einer Attributklasse ein gültiges benanntes Argument sein, er muss nicht gekennzeichnet werden `static`, `const`, oder `literal`. Wenn eine Eigenschaft, die Eigenschaft muss nicht `static` und verfügen über get- und set-Accessoren müssen.  
   
- Weitere Informationen finden Sie unter [property](../../windows/property-cpp-component-extensions.md) und [User\-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).  
+ Weitere Informationen finden Sie unter [Eigenschaft](../../windows/property-cpp-component-extensions.md) und [benutzerdefinierte Attribute](../../windows/user-defined-attributes-cpp-component-extensions.md).  
   
-## Beispiel  
- Im folgenden Beispiel wird C3114 generiert.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird C3114 generiert.  
   
 ```  
 // C3114.cpp  

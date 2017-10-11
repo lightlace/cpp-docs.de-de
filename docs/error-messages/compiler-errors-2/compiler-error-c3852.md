@@ -1,32 +1,35 @@
 ---
-title: "Compilerfehler C3852 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3852"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3852"
+title: Compilerfehler C3852 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3852
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3852
 ms.assetid: 194e5c5e-0dfb-414e-86db-791c11eb610c
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Compilerfehler C3852
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1aef83942bb84908cd032ae9f23a7492e299e7e5
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Member' vom Typ 'Typ': Aggregatsinitialisierung konnte diesen Member nicht initialisieren  
+---
+# <a name="compiler-error-c3852"></a>Compilerfehler C3852
+'Member' mit Typ 'Typ': dieser Member von aggregierter Initialisierung konnte nicht initialisiert werden  
   
- Es wurde versucht, einem Datenmember, dem in einer Aggregatsinitialisierung keine Standardinitialisierung zugewiesen werden kann, eine Standardinitialisierung als Teil einer Aggregatsinitialisierung zuzuweisen.  
+ Es wurde versucht, eine standardinitialisierung als Teil einer aggregierter Initialisierung einem Datenmember zuweisen, die eine standardinitialisierung in eine aggregatinitialisierung empfangen kann.  
   
  In den folgenden Beispielen wird C3852 generiert:  
   

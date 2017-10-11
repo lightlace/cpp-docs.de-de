@@ -1,40 +1,43 @@
 ---
-title: "Compilerfehler C2660 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2660"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2660"
+title: Compilerfehler C2660 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2660
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2660
 ms.assetid: 2e01a1db-4f00-4df6-a04d-cb6f70a6922b
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Compilerfehler C2660
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1a93046493897b69e4b557607d823566d82070f5
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2660"></a>Compilerfehler C2660
 'Funktion': Funktion akzeptiert keine 'Anzahl' Parameter  
   
  Die Funktion wurde mit einer unzulässigen Anzahl von Parametern aufgerufen.  
   
- C2660 kann auftreten, wenn anstelle einer MFC\-Memberfunktion versehentlich eine Windows\-API\-Funktion desselben Namens aufgerufen wurde.  So beheben Sie dieses Problem  
+ C2660 kann auftreten, wenn anstelle einer MFC-Memberfunktion versehentlich eine Windows-API-Funktion desselben Namens aufgerufen wurde. So beheben Sie dieses Problem  
   
 -   Passen Sie den Funktionsaufruf an das Format des Memberfunktionsaufrufs an.  
   
--   Verwenden Sie den Bereichsauflösungsoperator \(`::`\), um den Compiler aufzufordern, den Funktionsnamen im globalen Namespace zu suchen.  
+-   Verwenden Sie den Bereichsauflösungsoperator (`::`), um den Compiler aufzufordern, den Funktionsnamen im globalen Namespace zu suchen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird C2660 generiert.  
   
 ```  
@@ -47,8 +50,8 @@ int main() {
 }  
 ```  
   
-## Beispiel  
- C2660 kann auch auftreten, wenn Sie die Dispose\-Methode eines verwalteten Typs direkt aufrufen.  Weitere Informationen finden Sie unter [Destruktoren und Finalizer](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).  Im folgenden Beispiel wird C2660 generiert.  
+## <a name="example"></a>Beispiel  
+ C2660 kann auch auftreten, wenn Sie die Dispose-Methode eines verwalteten Typs direkt aufrufen. Weitere Informationen finden Sie unter [Destruktoren und Finalizer](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers). Im folgenden Beispiel wird C2660 generiert.  
   
 ```  
 // C2660_a.cpp  
@@ -68,7 +71,7 @@ int main() {
 }  
 ```  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  C2660 tritt auf, wenn eine abgeleitete Klasse eine Funktion ausblendet.  
   
 ```  
@@ -98,7 +101,7 @@ int main() {
 }  
 ```  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  C2660 kann auftreten, wenn Sie eine indizierte Eigenschaft falsch aufrufen.  
   
 ```  
@@ -122,7 +125,7 @@ int main() {
 }  
 ```  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  C2660 kann auftreten, wenn Sie eine indizierte Eigenschaft falsch aufrufen.  
   
 ```  
@@ -144,7 +147,7 @@ int main() {
 }  
 ```  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  C2660 kann auftreten, wenn Sie einen neuen Operator in einer Vorlagenklasse definieren, dieser neue Operator jedoch ein Objekt erzeugt, dessen Typ vom übergeordneten Typ abweicht.  
   
 ```  

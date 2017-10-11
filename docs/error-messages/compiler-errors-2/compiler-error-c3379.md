@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3379 | Microsoft-Dokumentation
+title: Compilerfehler C3379 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 16c62e48a0190096e04dc4ccf0c17ca66c2f4094
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e6fa111a525d81c418d3285c05af86b700e8cb08
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3379"></a>Compilerfehler C3379
-'Klasse': eine geschachtelte Klasse darf nicht als Teil der Deklaration einer Assemblyzugriffsspezifizierer haben  
+'Klasse': eine geschachtelte Klasse darf nicht als Teil der Deklaration einen Assembly-Zugriffsspezifizierer haben  
   
- Bei Anwendung auf einen verwalteten Typ, z. B. Klasse oder Struktur, die [öffentlichen](../../cpp/public-cpp.md) und [private](../../cpp/private-cpp.md) -Schlüsselwort geben an, ob die Klasse über Assemblymetadaten verfügbar gemacht wird. `public`oder `private` kann nicht angewendet werden, um eine geschachtelte Klasse, die den Assemblyzugriff von der übergeordneten Klasse erben.  
+ Bei Anwendung auf einem verwalteten Typ, z. B. Klasse oder Struktur, die [öffentlichen](../../cpp/public-cpp.md) und [private](../../cpp/private-cpp.md) -Schlüsselwort geben an, ob die Klasse über Assemblymetadaten verfügbar gemacht werden. `public`oder `private` kann nicht angewendet werden, um eine geschachtelte Klasse, die den Assemblyzugriff der einschließenden Klasse erben.  
   
- Bei Verwendung mit [/CLR](../../build/reference/clr-common-language-runtime-compilation.md), `ref` und `value` -Schlüsselwort geben an, dass eine verwaltete Klasse handelt (finden Sie unter [Klassen und Strukturen](../../windows/classes-and-structs-cpp-component-extensions.md)).  
+ Bei Verwendung mit ["/ CLR"](../../build/reference/clr-common-language-runtime-compilation.md), `ref` und `value` -Schlüsselwort geben an, dass eine Klasse verwaltet wird (finden Sie unter [Klassen und Strukturen](../../windows/classes-and-structs-cpp-component-extensions.md)).  
   
  Im folgende Beispiel wird C3379 generiert:  
   

@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C2736 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2736"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2736"
+title: Compiler-Fehler C2736 generiert | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2736
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2736
 ms.assetid: 95a6bc28-c0cb-49dc-87e6-e993dbbba881
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Compilerfehler C2736
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 303ca2ead2411bcc0ceb24ee1329094de2adbb8a
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-Schlüsselwort 'Schlüsselwort' ist in Typumwandlung nicht erlaubt  
+---
+# <a name="compiler-error-c2736"></a>Compiler-Fehler C2736 generiert
+' Schlüsselwort ' ist in Typumwandlung nicht zulässig.  
   
  Das Schlüsselwort ist in einer Typumwandlung ungültig.  
   
- Im folgenden Beispiel wird C2736 generiert:  
+ Im folgende Beispiel wird C2736 generiert:  
   
 ```  
 // C2736.cpp  

@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C3141 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3141"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3141"
+title: Compilerfehler C3141 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3141
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3141
 ms.assetid: b4fd65c3-50cc-46cd-8de0-6a6d24cb9cda
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Compilerfehler C3141
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 00266db4fde48b175b9374ca31a89b15ca13ced2
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'interface\_name': Schnittstellen unterstützen nur die öffentliche Vererbung  
+---
+# <a name="compiler-error-c3141"></a>Compilerfehler C3141
+'Interface_name': Schnittstellen unterstützen nur öffentliche Vererbung  
   
- Schnittstellen, die mit dem Schlüsselwort [interface \(oder \_\_interface\)](../../cpp/interface.md) definiert wurden, unterstützen nur die öffentliche Vererbung.  
+ Schnittstellen mit definiert die [-Schnittstelle (oder __interface)](../../cpp/interface.md) Schlüsselwort nur öffentliche Vererbung unterstützt.  
   
- Im folgenden Beispiel wird C3141 generiert:  
+ Im folgende Beispiel wird C3141 generiert:  
   
 ```  
 // C3141.cpp  

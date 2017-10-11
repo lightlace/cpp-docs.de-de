@@ -47,25 +47,11 @@ caps.latest.revision: 1
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 1d63e4faaafe9ba208e17857a8ac60723c6c5cf5
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 87910db946d51d740c93134b7085e5af7d3ccadc
 ms.contentlocale: de-de
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c3200-through-c3299"></a>Compilerfehler Fehler C3200 über C3299
@@ -92,7 +78,7 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C3211](compiler-error-c3211.md)|"*Funktion*": explizite Spezialisierung verwendet teilweise Spezialisierungssyntax, verwenden Sie stattdessen Vorlage <>|  
 |[Compilerfehler C3212](compiler-error-c3212.md)|"*Funktion*': eine explizite Spezialisierung eines Vorlagenmembers muss ein Member einer expliziten Spezialisierung sein|  
 |[Compilerfehler C3213](compiler-error-c3213.md)|Basisklasse*Klasse*"ist weniger zugreifbar als"*Derived_class*"|  
-|[Compilerfehler C3214](compiler-error-c3214.md)|"*Argument*': Ungültiges Typargument für generischen Parameter"*-Parameter*"des generischen"*Typ*", Einschränkung wird nicht erfüllt"*Einschränkung*"|  
+|[Compilerfehler C3214](compiler-error-c3214.md)|"*Argument*': Ungültiges Typargument für generischen Parameter"*Parameter*"des generischen"*Typ*", Einschränkung wird nicht erfüllt"*Einschränkung*'|  
 |[Compilerfehler C3215](compiler-error-c3215.md)|"*einschränkung1*': generische Typparameter eingeschränkt bereits von"*einschränkung2*"|  
 |[Compilerfehler C3216](compiler-error-c3216.md)|Einschränkung muss ein generischer Parameter nicht "*Typ*"|  
 |[Compilerfehler C3217](compiler-error-c3217.md)|"*Parameter*': generische Parameter kann nicht in dieser Deklaration nicht eingeschränkt werden|  
@@ -127,7 +113,7 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C3246](compiler-error-c3246.md)|"*Klasse*": kann nicht Vererben "*basis_klasse*"als es als deklariert wurde"*Vererbung*"|  
 |[Compilerfehler C3247](compiler-error-c3247.md)|"*Coclass*': eine Co-Klasse kann nicht von einer anderen Co-Klasse erben*basis_klasse*"|  
 |[Compilerfehler C3248](compiler-error-c3248.md)|Veraltet. "*Funktion*': Funktion deklariert als"sealed"kann nicht überschrieben werden, indem"*Funktion*"|  
-|Compilerfehler Fehler C3249|Ungültige Anweisung oder ungültiger Unterausdruck für die "constexpr"-Funktion|  
+|Compilerfehler Fehler C3249|Ungültige Anweisung oder Unterausdruck für "Constexpr"-Funktion|  
 |Compilerfehler Fehler C3250|"*Deklaration*": Deklaration ist in "Constexpr" Funktionsrumpf nicht zulässig.|  
 |[Compilerfehler C3251](compiler-error-c3251.md)|Eine Basisklassenmethode kann nicht für eine Werttypinstanz aufgerufen werden|  
 |[Compilerfehler C3252](compiler-error-c3252.md)|"*Funktion*": Zugriff auf eine virtuelle Methode in einem verwalteten/WinRT-Typ kann nicht reduziert werden.|  
@@ -137,7 +123,7 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |Compilerfehler Fehler C3256|"*Funktion*': Variable verwenden erzeugt keinen konstanten Ausdruck|  
 |Compilerfehler C3257|Veraltet.|  
 |Compilerfehler Fehler C3258|Veraltet.|  
-|Compilerfehler Fehler C3259|"constexpr"-Funktionen können nur eine return-Anweisung aufweisen.|  
+|Compilerfehler Fehler C3259|"Constexpr"-Funktionen können nur eine return-Anweisung verfügen.|  
 |Compilerfehler Fehler C3260|"*token*": Unerwartete(s) Token vor der Lambda-Text überspringen|  
 |Compilerfehler Fehler C3261|eine Funktion, die eine verwaltete/WinRT-Array benötigen Arrayklammern am Ende der Deklaration enthalten sein: "*Bezeichner*(...) []'|  
 |[Compilerfehler C3262](compiler-error-c3262.md)|Ungültige Array-Indizierung: *Anzahl* Dimension(en) wurden für angegebene *Anzahl*-dimensionalen "*Typ*"|  
@@ -169,13 +155,13 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C3288](compiler-error-c3288.md)|"*Typ*': unzulässige Dereferenzierung eines Handletyps|  
 |[Compilerfehler C3289](compiler-error-c3289.md)|"*Bezeichner*': eine triviale-Eigenschaft kann nicht indiziert werden|  
 |[Compilerfehler C3290](compiler-error-c3290.md)|"*Typ*': eine triviale-Eigenschaft kann keinen Verweistyp aufweisen|  
-|[Compilerfehler C3291](compiler-error-c3291.md)|"default": kann nicht der Name einer trivial-Eigenschaft sein|  
+|[Compilerfehler C3291](compiler-error-c3291.md)|"Default": kann nicht der Name einer trivial-Eigenschaft|  
 |[Compilerfehler C3292](compiler-error-c3292.md)|Der cli-Namespace kann nicht erneut geöffnet werden.|  
 |[Compilerfehler C3293](compiler-error-c3293.md)|"*Bezeichner*": "Default" verwenden, auf die Standardeigenschaft (Indexer) für die Klasse*Klasse*"|  
 |Compilerfehler C3294|Veraltet.|  
 |[Compilerfehler C3295](compiler-error-c3295.md)|"#pragma *Spezifizierer*' kann nur verwendet werden, im globalen oder Namespace-Gültigkeitsbereich|  
 |[Compilerfehler C3296](compiler-error-c3296.md)|"*Bezeichner*': eine Eigenschaft mit diesem Namen ist bereits vorhanden.|  
 |[Compilerfehler C3297](compiler-error-c3297.md)|" *einschränkung2*": kann nicht verwendet " *einschränkung1*" als Einschränkung da " *einschränkung1*' die werteinschränkung aufweist|  
-|[Compilerfehler C3298](compiler-error-c3298.md)|" *einschränkung1*": kann nicht verwendet " *einschränkung2*" als Einschränkung da " *einschränkung2*" hat die Ref-Einschränkung und " *einschränkung1*' die werteinschränkung aufweist|  
+|[Compilerfehler C3298](compiler-error-c3298.md)|" *einschränkung1*": kann nicht verwendet " *einschränkung2*" als Einschränkung da " *einschränkung2*" hat die Ref-Einschränkung und " *einschränkung1*" die werteinschränkung aufweist|  
 |[Compilerfehler C3299](compiler-error-c3299.md)|" *Funktion*": Einschränkungen, können nicht angegeben werden sie von der Basismethode geerbt|  
 

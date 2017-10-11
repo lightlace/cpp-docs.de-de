@@ -1,31 +1,34 @@
 ---
-title: "Compiler Error C2919 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2919"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2919"
+title: Compilerfehler C2919 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2919
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2919
 ms.assetid: 140a6db9-eb48-4c5e-84a7-a09d2653605b
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Compiler Error C2919
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a70b679d4add5fa4ad2904e3c0d103e1c8881280
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'type': Operatoren können nicht direkt auf der veröffentlichten Oberfläche eines WinRT\-Typs verwendet werden.  
+---
+# <a name="compiler-error-c2919"></a>Compilerfehler C2919
+'type': Operatoren können nicht direkt auf der veröffentlichten Oberfläche eines WinRT-Typs verwendet werden.  
   
- Das Windows\-Runtime\-Typsystem unterstützt nicht die Operatormemberfunktionen auf der veröffentlichten Oberfläche eines Typs.  Dies liegt daran, weil nicht alle Sprachen Operatormemberfunktionen verwenden können.  Sie können private oder interne Operatormemberfunktionen erstellen, die über C\+\+\-Code in derselben Klasse oder Kompilationskomponente aufgerufen werden können.  
+ Das Windows-Runtime-Typsystem unterstützt nicht die Operatormemberfunktionen auf der veröffentlichten Oberfläche eines Typs. Dies liegt daran, weil nicht alle Sprachen Operatormemberfunktionen verwenden können. Sie können private oder interne Operatormemberfunktionen erstellen, die über C++-Code in derselben Klasse oder Kompilationskomponente aufgerufen werden können.  
   
- Entfernen Sie zum Beheben dieses Problems die Operatormemberfunktion aus der öffentlichen Schnittstelle, oder ändern Sie sie in eine benannte Memberfunktion.  Benennen Sie die Memberfunktion beispielsweise anstelle von `operator==` in `Equals` um.
+ Entfernen Sie zum Beheben dieses Problems die Operatormemberfunktion aus der öffentlichen Schnittstelle, oder ändern Sie sie in eine benannte Memberfunktion. Benennen Sie die Memberfunktion beispielsweise anstelle von `operator==` in `Equals` um.

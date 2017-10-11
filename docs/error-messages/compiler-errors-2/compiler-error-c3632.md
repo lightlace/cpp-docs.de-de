@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C3632 | Microsoft-Dokumentation
+title: Compilerfehler C3632 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: e64ccfba0345a5efe37d431b02bfb8225ae3726f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: aceeae92ee2efa180ba46c913f1c30d436d9f21b
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3632"></a>Compilerfehler C3632
-"Ereignis": Unzulässiger Ereignisstil für Konstrukt  
+'Ereignis': Unzulässiger Stil des Ereignisses for-Konstrukt  
   
  [__event](../../cpp/event.md) Deklarationen sind nicht in allen Konstrukten zulässig.  
   
- C3632 ist nur über die veralteten Compileroption erreichbar **/CLR: oldSyntax**.  
+ C3632 ist nur über die veraltete Compileroption erreichbar **/CLR: oldSyntax**.  
 

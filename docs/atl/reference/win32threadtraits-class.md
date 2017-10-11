@@ -1,5 +1,5 @@
 ---
-title: Klasse Win32ThreadTraits | Microsoft-Dokumentation
+title: Win32ThreadTraits Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -23,32 +23,18 @@ caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
-ms.openlocfilehash: fa331e05d647b5e2b9a0a76581e75d6b40366f95
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: a777b3c1ae6056fe4ae414371cbed4eee1accd86
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="win32threadtraits-class"></a>Win32ThreadTraits-Klasse
-Diese Klasse stellt die Funktion für ein Windows-Thread. Verwenden Sie diese Klasse, wenn der Thread keine CRT-Funktionen verwenden möchten.  
+Diese Klasse stellt die Funktion für einen Windows-Thread. Verwenden Sie diese Klasse, wenn der Thread CRT-Funktionen nicht verwenden.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member werden nicht in Anwendungen verwendet, die in der Windows-Runtime ausgeführt.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -62,10 +48,10 @@ class Win32ThreadTraits
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Win32ThreadTraits::CreateThread](#createthread)|(Statisch) Rufen Sie diese Funktion, um einen Thread zu erstellen, der keine CRT-Funktionen verwenden sollten.|  
+|[Win32ThreadTraits::CreateThread](#createthread)|(Statisch) Mit dieser Funktion wird zur Erstellung eines Threads, das CRT-Funktionen nicht verwendet werden soll.|  
   
 ## <a name="remarks"></a>Hinweise  
- Thread-Merkmale sind Klassen, die eine Funktion für einen bestimmten Thread zu ermöglichen. Die Funktion verfügt über die gleiche Signatur und Semantik wie die Windows- [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) Funktion.  
+ Thread-Merkmale sind Klassen, die eine Funktion für einen bestimmten Typ des Threads zu ermöglichen. Die Erstellungsfunktion weist die gleiche Signatur und die Semantik wie die Windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) Funktion.  
   
  Thread-Merkmale werden durch die folgenden Klassen verwendet:  
   
@@ -79,7 +65,7 @@ class Win32ThreadTraits
  **Header:** atlbase.h  
   
 ##  <a name="createthread"></a>Win32ThreadTraits::CreateThread  
- Rufen Sie diese Funktion, um einen Thread zu erstellen, der keine CRT-Funktionen verwenden sollten.  
+ Mit dieser Funktion wird zur Erstellung eines Threads, das CRT-Funktionen nicht verwendet werden soll.  
   
 ```
 static HANDLE CreateThread(
@@ -108,16 +94,16 @@ static HANDLE CreateThread(
  Die Erstellung flags (0 oder CREATE_SUSPENDED).  
   
  `pdwThreadId`  
- [out] Die Adresse der DWORD-Variablen, die bei Erfolg die Thread-ID des neu erstellten Threads empfängt.  
+ [out] Die Adresse der DWORD-Variablen, die bei Erfolg, die Thread-ID des neu erstellten Threads empfängt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt das Handle für den neu erstellten Thread oder NULL bei einem Fehler zurück. Rufen Sie [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) um erweiterte Fehlerinformationen abzurufen.  
+ Gibt das Handle an den neu erstellten Thread oder NULL bei einem Fehler zurück. Rufen Sie [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) um erweiterte Fehlerinformationen abzurufen.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) Weitere Informationen über die Parameter dieser Funktion.  
+ Finden Sie unter [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) für Weitere Informationen zu den Parametern für diese Funktion.  
   
- Diese Funktion ruft `CreateThread` auf den Thread zu erstellen.  
+ Diese Funktion ruft `CreateThread` um den Thread erstellen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)
+ [Klassenübersicht](../../atl/atl-class-overview.md)
 

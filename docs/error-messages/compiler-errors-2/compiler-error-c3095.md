@@ -19,26 +19,11 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 18b971fb51a6b11763eef0e83ade411f7abf9a97
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a47e7b6ee006bc7a490a01a825a29a265586b0aa
 ms.contentlocale: de-de
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3095"></a>Compilerfehler C3095
@@ -46,7 +31,7 @@ ms.lasthandoff: 04/12/2017
   
  Einige Attribute werden so deklariert, dass mehrere Vorkommen des Attributs auf ein Ziel angewendet werden können.  
   
- Weitere Informationen finden Sie unter [benutzerdefinierte Attribute](../../windows/user-defined-attributes-cpp-component-extensions.md).  
+ Weitere Informationen finden Sie unter [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird C3095 generiert.  

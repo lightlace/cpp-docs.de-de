@@ -1,5 +1,5 @@
 ---
-title: Klasse CElementTraitsBase | Microsoft-Dokumentation
+title: CElementTraitsBase Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,25 +24,11 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: a06af7698afb24c1c2391b762673c7e3633018d4
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 8680fc73480fd95c8b2d613f716868d8162a96c8
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="celementtraitsbase-class"></a>CElementTraitsBase-Klasse
@@ -65,18 +51,18 @@ class CElementTraitsBase
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CElementTraitsBase::INARGTYPE](#inargtype)|Der Datentyp für das Klassenobjekt Auflistung Elemente hinzugefügt.|  
-|[CElementTraitsBase::OUTARGTYPE](#outargtype)|Der Datentyp für das Abrufen von Elementen aus der-Auflistung-Klasse.|  
+|[CElementTraitsBase::INARGTYPE](#inargtype)|Der Datentyp zum Hinzufügen von Elementen auf das Klassenobjekt Auflistung verwendet werden soll.|  
+|[CElementTraitsBase::OUTARGTYPE](#outargtype)|Der Datentyp zum Abrufen von Elementen aus der Auflistung-Klassenobjekt verwendet werden soll.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CElementTraitsBase::CopyElements](#copyelements)|Rufen Sie diese Methode, um in ein Objekt der Klasse Auflistung gespeicherten Elemente kopieren.|  
-|[CElementTraitsBase::RelocateElements](#relocateelements)|Rufen Sie diese Methode, um in ein Objekt der Klasse Auflistung gespeicherten Elemente zu verschieben.|  
+|[CElementTraitsBase::CopyElements](#copyelements)|Rufen Sie diese Methode, um ein Klassenobjekt Auflistung gespeicherten Elemente kopieren.|  
+|[CElementTraitsBase::RelocateElements](#relocateelements)|Rufen Sie diese Methode, um ein Klassenobjekt Auflistung gespeicherten Elemente zu verschieben.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Basisklasse definiert Methoden zum Kopieren und Verschieben von Elementen in einer Auflistungsklasse. Es wird von den Klassen verwendet [CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md), [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md), und [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).  
+ Diese Basisklasse definiert Methoden zum Kopieren und Verschieben von Elementen in einer Auflistungsklasse. Es wird verwendet, durch die Klassen [CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md), [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md), und [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).  
   
  Weitere Informationen finden Sie unter [ATL-Auflistungsklassen](../../atl/atl-collection-classes.md).  
   
@@ -84,7 +70,7 @@ class CElementTraitsBase
  **Header:** atlcoll.h  
   
 ##  <a name="copyelements"></a>CElementTraitsBase::CopyElements  
- Rufen Sie diese Methode, um in ein Objekt der Klasse Auflistung gespeicherten Elemente kopieren.  
+ Rufen Sie diese Methode, um ein Klassenobjekt Auflistung gespeicherten Elemente kopieren.  
   
 ```
 static void CopyElements(
@@ -95,16 +81,16 @@ static void CopyElements(
   
 ### <a name="parameters"></a>Parameter  
  `pDest`  
- Ein Zeiger auf das erste Element, das die kopierten Daten empfängt.  
+ Zeiger auf das erste Element, das die kopierten Daten erhält.  
   
  `pSrc`  
- Ein Zeiger auf das erste Element zu kopieren.  
+ Zeiger auf das erste Element zu kopieren.  
   
  `nElements`  
  Die Anzahl der zu kopierenden Elemente.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Quelle und Ziel-Elemente sollten sich nicht überschneiden.  
+ Die Quell- und Zielschemas Elemente sollten sich nicht überschneiden.  
   
 ##  <a name="inargtype"></a>CElementTraitsBase::INARGTYPE  
  Der Datentyp für Elemente der Auflistung hinzugefügt werden soll.  
@@ -114,14 +100,14 @@ typedef const T& INARGTYPE;
 ```  
   
 ##  <a name="outargtype"></a>CElementTraitsBase::OUTARGTYPE  
- Der Datentyp für das Abrufen von Elementen aus der Auflistung.  
+ Der Datentyp zum Abrufen von Elementen aus der Auflistung verwendet werden soll.  
   
 ```
 typedef T& OUTARGTYPE;
 ```  
   
 ##  <a name="relocateelements"></a>CElementTraitsBase::RelocateElements  
- Rufen Sie diese Methode, um in ein Objekt der Klasse Auflistung gespeicherten Elemente zu verschieben.  
+ Rufen Sie diese Methode, um ein Klassenobjekt Auflistung gespeicherten Elemente zu verschieben.  
   
 ```
 static void RelocateElements(
@@ -132,17 +118,17 @@ static void RelocateElements(
   
 ### <a name="parameters"></a>Parameter  
  `pDest`  
- Ein Zeiger auf das erste Element, das die verschobenen Daten empfängt.  
+ Zeiger auf das erste Element, das die verschobenen Daten erhält.  
   
  `pSrc`  
- Ein Zeiger auf das erste Element zu verschieben.  
+ Zeiger auf das erste Element zu verschieben.  
   
  `nElements`  
- Die Anzahl der Elemente, die zu verschieben.  
+ Die Anzahl der Elemente zu verschieben.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode ruft [Memmove](../../c-runtime-library/reference/memmove-wmemmove.md), dies ist ausreichend für die meisten Datentypen. Die verschobene Objekte, Zeiger auf ihre eigenen Member enthalten, müssen diese Methode außer Kraft gesetzt werden.  
+ Diese Methode ruft [Memmove](../../c-runtime-library/reference/memmove-wmemmove.md), dies ist ausreichend für die meisten Datentypen. Wenn die Objekte, die verschobene Zeiger auf ihre eigenen Member enthalten, müssen diese Methode außer Kraft gesetzt werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)
+ [Klassenübersicht](../../atl/atl-class-overview.md)
 

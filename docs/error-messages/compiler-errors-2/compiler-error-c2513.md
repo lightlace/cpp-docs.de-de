@@ -1,32 +1,35 @@
 ---
-title: "Compilerfehler C2513 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2513"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2513"
+title: Compilerfehler C2513 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2513
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2513
 ms.assetid: ab5b21d3-61e2-4df7-8eea-6f14d6ba8620
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Compilerfehler C2513
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7eb4e7c63821f449bf9677cb5fe03c448bbbc6ee
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Typ': Keine Variable vor '\=' deklariert  
+---
+# <a name="compiler-error-c2513"></a>Compilerfehler C2513
+'Typ': keine Variable vor '=' deklariert  
   
- Der Typspezifizierer steht in einer Deklaration, die keinen Variablenbezeichner enthält.  
+ Der Typspezifizierer wird in der Deklaration mit keine Variablenbezeichner angezeigt.  
   
  Im folgenden Beispiel wird C2513 generiert:  
   
@@ -38,7 +41,7 @@ int main() {
 }  
 ```  
   
- Dieser Fehler kann auch aufgrund einer Verbesserung der Compilerkonformität in Visual Studio .NET 2003 ausgegeben werden: Initialisierungen einer `typedef` sind nicht mehr zulässig.  Die Initialisierung einer `typedef` ist gemäß Standard nicht zulässig und verursacht jetzt einen Compilerfehler.  
+ Dieser Fehler kann außerdem infolge einer konformitätsverbesserung für Compiler für Visual Studio .NET 2003 durchgeführt generiert werden: die Initialisierung einer typedef, die nicht mehr erlaubt. Die Initialisierung einer TypeDef ist gemäß dem Standard nicht zulässig und wird nun ein Compilerfehler generiert.  
   
 ```  
 // C2513b.cpp  
@@ -50,4 +53,4 @@ typedef struct S {
 // } S;  
 ```  
   
- Als Alternative könnte `typedef` gelöscht werden, um eine Variable mit einer Aggregatinitialisiererliste zu definieren. Dies ist jedoch nicht empfehlenswert, da hierdurch eine Variable mit demselben Namen des Typs erstellt und der Typname versteckt wird.
+ Eine Alternative wäre löschen `typedef` zum Definieren einer Variablen mit aggregierter Initialisiererliste angezeigt, aber dies werden nicht empfohlen, da erstellt es eine Variable mit dem gleichen Namen wie der Typ und den Typnamen ausblenden.

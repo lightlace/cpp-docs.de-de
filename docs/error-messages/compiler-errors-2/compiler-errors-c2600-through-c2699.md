@@ -67,26 +67,11 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 78e2d8ed0100bfa0ea39d0e4b2347d65153a4136
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ec696a2a1fa323850210ba87c637c07dd5577ea1
 ms.contentlocale: de-de
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c2600-through-c2699"></a>Compilerfehler C2600 bis C2699
@@ -144,7 +129,7 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |Compilerfehler Fehler C2642|Veraltet.|  
 |Compilerfehler Fehler C2643|Veraltet.|  
 |Compilerfehler Fehler C2644|Veraltet.|  
-|[Compilerfehler C2645](compiler-error-c2645.md)|Kein vollständiger Name für Elementzeiger (":: *" gefunden)|  
+|[Compilerfehler C2645](compiler-error-c2645.md)|keine qualifizierten Namen für Zeiger auf Member (gefunden ':: *')|  
 |[Compilerfehler C2646](compiler-error-c2646.md)|eine anonyme Struktur/Union im globalen oder Namespacebereich muss als statisch deklariert werden|  
 |[Compilerfehler C2647](compiler-error-c2647.md)|"*Operator*": kann nicht dereferenziert werden eine "*Typ1*" auf einen '*Typ2*"|  
 |[Compilerfehler C2648](compiler-error-c2648.md)|"*Bezeichner*": Verwenden von Membern als Standardparameter statischer Member benötigt.|  
@@ -168,12 +153,12 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C2666](compiler-error-c2666.md)|"*Funktion*": *Anzahl* Überladungen haben ähnliche Konvertierungen|  
 |[Compilerfehler C2667](compiler-error-c2667.md)|"*Funktion*': keiner der *Anzahl* Überladungen aufweisen, eine optimale Konvertierung|  
 |[Compilerfehler C2668](compiler-error-c2668.md)|"*Funktion*': Mehrdeutiger Aufruf einer überladenen Funktion|  
-|[Compilerfehler C2669](compiler-error-c2669.md)|Die Memberfunktion ist in einer anonymen Union nicht zulässig|  
+|[Compilerfehler C2669](compiler-error-c2669.md)|Member-Funktion, die in einer anonymen Union nicht zulässig.|  
 |[Compilerfehler C2670](compiler-error-c2670.md)|"*Funktion*": die Funktionsvorlage kann nicht konvertiert werden Parameter *Anzahl* vom Typ "*Typ*"|  
 |[Compilerfehler C2671](compiler-error-c2671.md)|"*Funktion*': statische Memberfunktionen haben keinen this-Zeiger|  
 |Compilerfehler Fehler C2672|"*Funktion*': kein passendes überladene Funktion gefunden|  
 |[Compilerfehler C2673](compiler-error-c2673.md)|"*Funktion*': globale Funktionen verfügen nicht über die this-Zeiger|  
-|[Compilerfehler C2674](compiler-error-c2674.md)|In diesem Kontext ist keine generische Deklaration zulässig.|  
+|[Compilerfehler C2674](compiler-error-c2674.md)|eine generische Deklaration ist in diesem Kontext nicht zulässig.|  
 |[Compilerfehler C2675](compiler-error-c2675.md)|unäre "*Operator*": "*Typ*' definiert diesen Operator oder eine Konvertierung in einen zulässigen Typ keine für den vordefinierten Operator|  
 |[Compilerfehler C2676](compiler-error-c2676.md)|binäre "*Operator*": "*Typ*' definiert diesen Operator oder eine Konvertierung in einen zulässigen Typ keine für den vordefinierten Operator|  
 |[Compilerfehler C2677](compiler-error-c2677.md)|binäre "*Operator*': kein globaler Operator gefunden, der den Typ akzeptiert"*Typ*"(oder es ist keine zulässige Konvertierung)|  
@@ -185,7 +170,7 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C2683](compiler-error-c2683.md)|"*Umwandlung*": "*Typ*" ist kein polymorpher Typ|  
 |Compilerfehler Fehler C2684|"*Deklarator*": gelöschte, und auf den Standardwert festgelegte Funktionen werden in verwalteten/WinRT-Klassen nicht unterstützt.|  
 |Compilerfehler Fehler C2685|"*Deklarator*": explizite einschränkungsspezifizierer werden nicht gelöschte, und auf den Standardwert festgelegte Funktionen unterstützt|  
-|Compilerfehler Fehler C2686|Statische und nicht-statische Memberfunktionen mit denselben Parametertypen können nicht überladen werden|  
+|Compilerfehler Fehler C2686|statische und nicht statische Memberfunktionen können nicht mit den gleichen Parametertypen überladen werden.|  
 |[Compilerfehler C2687](compiler-error-c2687.md)|"*Typ*": Exception-Deklaration kann nicht "void" sein oder einen unvollständigen Typ oder Zeiger oder Verweis auf einen unvollständigen Typ zu kennzeichnen|  
 |[Compilerfehler C2688](compiler-error-c2688.md)|"*Typ*::*Member*": covariant-Rückgaben mit mehreren oder virtuelle Vererbung für Varargs-Funktionen nicht unterstützt.|  
 |[Compilerfehler C2689](compiler-error-c2689.md)|"*Funktion*': eine Friend-Funktion kann nicht innerhalb einer lokalen Klasse definiert werden|  

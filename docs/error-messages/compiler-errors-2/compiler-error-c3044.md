@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 07b7fd0668eef1137f81d435dd89fefe314ad64e
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 313b5d1d6b0d8204d4d4716d0671e8093f4978d5
 ms.contentlocale: de-de
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3044"></a>Compilerfehler C3044
 section: Nur bei direkter Schachtelung unter einer sections-Direktive von OpenMP zulässig.  
   
- Der Compiler hat herausgefunden, dass eine `section` -Direktive falsch verwendet wurde. Weitere Informationen finden Sie unter [Abschnitte](../../parallel/openmp/reference/sections-openmp.md).  
+ Der Compiler hat herausgefunden, dass eine `section` -Direktive falsch verwendet wurde. Weitere Informationen finden Sie unter [sections](../../parallel/openmp/reference/sections-openmp.md).  
   
  Im folgenden Beispiel wird C3044 generiert:  
   

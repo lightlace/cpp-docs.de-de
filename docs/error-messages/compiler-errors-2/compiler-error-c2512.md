@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C2512 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2512"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2512"
+title: Compilerfehler C2512 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2512
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2512
 ms.assetid: 15206da9-1164-451a-b869-280e00711aad
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Compilerfehler C2512
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 63090bc7dac08aa87bcd68e77c076185176a7285
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2512"></a>Compilerfehler C2512
 'identifier': Kein geeigneter Standardkonstruktor verfügbar  
   
- Für die angegebene Klasse, Struktur oder Union steht kein standardmäßiger Konstruktor zur Verfügung.  Der Compiler stellt nur dann einen standardmäßigen Konstruktor bereit, wenn keine benutzerdefinierten Konstruktoren bereitgestellt werden.  
+ Für die angegebene Klasse, Struktur oder Union steht kein standardmäßiger Konstruktor zur Verfügung. Der Compiler stellt nur dann einen standardmäßigen Konstruktor bereit, wenn keine benutzerdefinierten Konstruktoren bereitgestellt werden.  
   
- Wenn Sie einen Konstruktor bereitstellen, der einen Nicht\-„void“\-Parameter verwendet und Sie ermöglichen möchten, dass Ihre Klasse ohne Parameter erstellt wird \(beispielsweise wie die Elemente eines Arrays\), müssen Sie zudem einen standardmäßigen Konstruktor bereitstellen.  Beim standardmäßigen Konstruktor kann es sich um einen Konstruktor mit standardmäßigen Werten für alle Parameter handeln.  
+ Wenn Sie einen Konstruktor bereitstellen, der einen Nicht-„void“-Parameter verwendet und Sie ermöglichen möchten, dass Ihre Klasse ohne Parameter erstellt wird (beispielsweise wie die Elemente eines Arrays), müssen Sie zudem einen standardmäßigen Konstruktor bereitstellen. Beim standardmäßigen Konstruktor kann es sich um einen Konstruktor mit standardmäßigen Werten für alle Parameter handeln.  
   
  Im folgenden Beispiel wird C2512 generiert und gezeigt, wie Sie diesen Fehler beheben:  
   
@@ -46,7 +49,7 @@ int main() {
 }  
 ```  
   
- Das folgende Beispiel zeigt ein dezenteres C2512.  Ordnen Sie den zum Beheben dieses Fehlers den Code neu an, um die Klasse zu definieren, bevor ihr Konstruktor referenziert wird.  
+ Das folgende Beispiel zeigt ein dezenteres C2512. Ordnen Sie den zum Beheben dieses Fehlers den Code neu an, um die Klasse zu definieren, bevor ihr Konstruktor referenziert wird.  
   
 ```  
 // C2512b.cpp  
@@ -74,7 +77,7 @@ void T::f() {
 }  
 ```  
   
- C2512 kann auch durch einen Aufruf für die standardmäßige Erstellung einer Klasse, die ein „const“\- oder Verweisdatenmember aufweist, verursacht werden.  Diese Member müssen in einer Konstruktorinitialisiererliste initialisiert werden. Diese verhindert, dass der Compiler einen Standardkonstruktor generiert.  
+ C2512 kann auch durch einen Aufruf für die standardmäßige Erstellung einer Klasse, die ein „const“- oder Verweisdatenmember aufweist, verursacht werden. Diese Member müssen in einer Konstruktorinitialisiererliste initialisiert werden. Diese verhindert, dass der Compiler einen Standardkonstruktor generiert.  
   
  Im folgenden Beispiel wird C2512 generiert und gezeigt, wie Sie diesen Fehler beheben:  
   

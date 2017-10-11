@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C3641 generiert | Microsoft-Dokumentation
+title: Compilerfehler C3641 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 1f928242a26ed45a48cc9bc19be231e2d0e09a51
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 992e2a5d34b380146a99f6f78145b022eacd21d6
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3641"></a>Compilerfehler C3641
-'Funktion': ungültige Aufrufkonvention 'Aufrufkonvention' für die Funktion, die Kompilierung mit/clr: pure oder/clr: safe  
+'Funktion': ungültige Aufrufkonvention 'Aufrufkonvention' für die Funktion, die mit "/ CLR" kompiliert: pure oder/clr: safe  
   
- Die **/CLR: pure** und **/CLR: safe** Compileroptionen in Visual Studio 2015 veraltet sind.  
+ Die Compileroptionen **/clr:pure** und **/clr:safe** sind in Visual Studio 2015 veraltet.  
   
  Nur [__clrcall](../../cpp/clrcall.md) Aufrufkonvention kann mit [/CLR: pure](../../build/reference/clr-common-language-runtime-compilation.md).  
   

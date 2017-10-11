@@ -1,37 +1,40 @@
 ---
-title: "Compilerfehler C2893 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2893"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2893"
+title: Compilerfehler C2893 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2893
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2893
 ms.assetid: ec0cbe43-005d-45da-8742-aaeb9b81d28e
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Compilerfehler C2893
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6ad558968720a13b95fecc6860df5826b47874aa
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-Funktionsvorlage 'Vorlagenname' konnte nicht spezialisiert werden  
+---
+# <a name="compiler-error-c2893"></a>Compilerfehler C2893
+Fehler beim spezialisieren der Funktionsvorlage "Vorlagenname"  
   
- Der Compiler war nicht in der Lage, eine Funktionsvorlage zu spezialisieren.  Für diesen Fehler kommen mehrere Ursachen in Betracht.  
+ Der Compiler Fehler beim spezialisieren der Funktionsvorlage. Es kann viele Ursachen für diesen Fehler.  
   
- Im Allgemeinen kann ein C2893\-Fehler behoben werden, indem die Signatur der Funktion überprüft sowie sichergestellt wird, dass alle Typen instanziiert werden können.  
+ Im Allgemeinen ist die Möglichkeit, einen C2893-Fehler zu beheben, überprüfen die Signatur der Funktion, und stellen Sie sicher, dass jeder Typ instanziiert werden können.  
   
-## Beispiel  
- C2893 tritt auf, da der zu `f` zugehörige Vorlagenparameter `T` abgeleitet wird, um `std::map<int,int>` zu erhalten, `std::map<int,int>` jedoch nicht über einen Member `data_type` verfügt. \(`T::data_type` kann nicht mit `T = std::map<int,int>` instanziiert werden.\)  Im folgenden Beispiel wird C2893 generiert.  
+## <a name="example"></a>Beispiel  
+ C2893 tritt auf, weil `f`des Vorlagenparameter `T` abgeleitet wird, um `std::map<int,int>`, aber `std::map<int,int>` weist keinen Member `data_type` (`T::data_type` kann nicht instanziiert werden, mit `T = std::map<int,int>`.). Im folgenden Beispiel wird C2893 generiert.  
   
 ```  
 // C2893.cpp  

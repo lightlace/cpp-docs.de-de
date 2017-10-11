@@ -1,29 +1,32 @@
 ---
-title: "Compilerfehler C3501 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3501"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3501"
+title: Compilerfehler C3501 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3501
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3501
 ms.assetid: cad69fab-2687-41ac-961f-25dc4c51b167
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Compilerfehler C3501
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fc778fe6719de9d370af3f23ebee1d7c131b1517
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-für die ProgID 'ProgID' ist keine Typbibliothek registriert  
+---
+# <a name="compiler-error-c3501"></a>Compilerfehler C3501
+Es ist keine Typbibliothek registriert, die für die ProgID "progid"  
   
- Die Klassen\-ID einer bestimmten ProgID hat keine verknüpfte Typbibliothek.  Diese ProgID kann deshalb nicht an die `#import`\-Anweisung übergeben werden.
+ Die Klassen-ID für eine angegebene progid verfügt nicht über eine zugeordnete Typbibliothek. Aus diesem Grund können nicht übergeben Sie das progid der `#import` Anweisung.

@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2249 | Microsoft-Dokumentation
+title: Compilerfehler C2249 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,34 +19,20 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 043c28c9fa11dc28425c58aea2efc6a2cefe4065
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5878c28ed0b4fc2663c17021aa9e277ccaa8ad4e
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2249"></a>Compilerfehler C2249
-'Member': kein Pfad zugegriffen werden kann, Zugriff auf Element deklariert wird, in der virtuellen Basisklasse "Klasse"  
+'Member': kein Zugriff auf den Pfad Zugriff auf Element deklariert wird, in der virtuellen Basis 'Class'  
   
  Die `member` wird von einem Nonpublic geerbt `virtual` Basisklasse der Klasse oder Struktur.  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird C2249 generiert.  
+ Im folgenden Beispiel wird C2249 generiert.  
   
 ```  
 // C2249.cpp  
@@ -66,7 +52,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Beispiel  
- C2249 kann auch auftreten, wenn Sie versuchen, einen Stream aus der C++-Standardbibliothek in einen anderen Stream zuzuweisen.  Im folgende Beispiel wird C2249 generiert.  
+ C2249 kann auch auftreten, wenn Sie versuchen, einen Stream aus der C++-Standardbibliothek in einen anderen Stream zuzuweisen.  Im folgenden Beispiel wird C2249 generiert.  
   
 ```  
 // C2249_2.cpp  

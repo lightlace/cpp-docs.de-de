@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C2886 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2886"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2886"
+title: Compilerfehler C2886 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2886
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2886
 ms.assetid: c01588a1-484c-4dc9-a3f1-f900c6e44543
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Compilerfehler C2886
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: cbb4ab1d50a4a6c5bb9ea3c392febf786197e0fa
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'class::identifier' : Symbol kann nicht in der using\-Deklaration eines Members verwendet werden  
+---
+# <a name="compiler-error-c2886"></a>Compilerfehler C2886
+'class:: Identifier': Symbol kann nicht in der using-Deklaration eines Elements verwendet werden  
   
- Eine `using`\-Deklaration verwendet ein Symbol, z. B. den Namen für einen Namespace.  `using`\-Deklarationen werden zum Deklarieren von Basisklassenmembern verwendet.  
+ Ein `using` Deklaration verwendet ein Symbol, z. B. einen Namespacenamen an. Ein `using` Deklaration für Member der Basisklasse deklariert ist.  
   
- Im folgenden Beispiel wird C2886 generiert:  
+ Im folgende Beispiel wird C2886 generiert:  
   
 ```  
 // C2886.cpp  

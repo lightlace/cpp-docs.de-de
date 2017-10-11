@@ -1,35 +1,38 @@
 ---
-title: "Compilerfehler C3673 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3673"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3673"
+title: Compilerfehler C3673 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3673
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3673
 ms.assetid: bb6d2079-05af-4e2c-be0e-75c892e6c590
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Compilerfehler C3673
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4958f3652119e105ed327d5476c084ad6707fb9a
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Typ' : Kein Kopierkonstruktor für die Klasse vorhanden  
+---
+# <a name="compiler-error-c3673"></a>Compilerfehler C3673
+'Typ': Klasse verfügt nicht über einen Kopierkonstruktor  
   
- Ein benutzerdefinierter Konstruktor ist erforderlich, um Objekte der CLR\-ref\-Typen zu kopieren.  Weitere Informationen finden Sie unter [C\+\+\-Stack\-Semantik für Referenztypen](../../dotnet/cpp-stack-semantics-for-reference-types.md).  
+ Ein benutzerdefinierten Konstruktor ist erforderlich, um Objekte der Ref-CLR-Typen zu kopieren. Weitere Informationen finden Sie unter [C++-Stapelsemantik für Referenztypen](../../dotnet/cpp-stack-semantics-for-reference-types.md).  
   
-## Beispiel  
- Im folgenden Beispiel wird C3673 generiert.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird C3673 generiert.  
   
 ```  
 // C3673.cpp  
@@ -47,8 +50,8 @@ int main() {
 }  
 ```  
   
-## Beispiel  
- Im folgenden Beispiel wird C3673 generiert.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird C3673 generiert.  
   
 ```  
 // C3673_b.cpp  

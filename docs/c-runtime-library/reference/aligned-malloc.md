@@ -1,49 +1,52 @@
 ---
-title: "_aligned_malloc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_aligned_malloc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-heap-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_aligned_malloc"
-  - "alligned_malloc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_aligned_malloc-Funktion"
-  - "aligned_malloc-Funktion"
+title: _aligned_malloc | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _aligned_malloc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-heap-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _aligned_malloc
+- alligned_malloc
+dev_langs:
+- C++
+helpviewer_keywords:
+- aligned_malloc function
+- _aligned_malloc function
 ms.assetid: fb788d40-ee94-4039-aa4d-97d73dab1ca0
 caps.latest.revision: 25
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# _aligned_malloc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: e81ecad3276abc34243f18a8df367d82122a1064
+ms.contentlocale: de-de
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="alignedmalloc"></a>_aligned_malloc
 Weist Speicher mit einer definierten Zuweisungsgrenze zu.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void * _aligned_malloc(  
@@ -52,30 +55,30 @@ void * _aligned_malloc(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `size`  
  Größe der angeforderten Speicherzuweisung.  
   
  `alignment`  
  Der Zuweisungswert, muss eine ganzzahlige Potenz von 2 sein.  
   
-## Rückgabewert  
- Ein Zeiger zum Speicherblock, der belegt wurde, oder `NULL`bei fehlgeschlagenem Vorgang.  Der Zeiger ist ein Vielfaches von `alignment`.  
+## <a name="return-value"></a>Rückgabewert  
+ Ein Zeiger zum Speicherblock, der belegt wurde, oder `NULL`bei fehlgeschlagenem Vorgang. Der Zeiger ist ein Vielfaches von `alignment`.  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  `_aligned_malloc` basiert auf [malloc](../../c-runtime-library/reference/malloc.md).  
   
- `_aligned_malloc` ist als `__declspec(noalias)` und `__declspec(restrict)` gekennzeichnet, das bedeutet, dass die Funktion globale Variablen definitiv nicht ändert und dass der zurückgegebene Zeiger keinen Alias hat.  Weitere Informationen finden Sie unter [noalias](../../cpp/noalias.md) und [restrict](../../cpp/restrict.md).  
+ `_aligned_malloc` ist als `__declspec(noalias)` und `__declspec(restrict)` gekennzeichnet, das bedeutet, dass die Funktion globale Variablen definitiv nicht ändert und dass der zurückgegebene Zeiger keinen Alias hat. Weitere Informationen finden Sie unter [noalias](../../cpp/noalias.md) und [restrict](../../cpp/restrict.md).  
   
- Diese Funktion legt `errno` auf `ENOMEM` fest, wenn die Speicherbelegung fehlgeschlagen ist oder die angeforderte Größe größer als `_HEAP_MAXREQ` war.  Weitere Informationen zu `errno` finden Sie unter [errno, \_doserrno, \_sys\_errlist und \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  Darüber hinaus überprüft `_aligned_malloc` auch die eigenen Parameter.  Wenn `alignment` keine Potenz von 2 oder `size` Null ist, ruft diese Funktion den Handler für ungültige Parameter auf, wie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die weitere Ausführung zugelassen wird, gibt diese Funktion `NULL` zurück und stellt `errno` auf `EINVAL` ein.  
+ Diese Funktion legt `errno` auf `ENOMEM` fest, wenn die Speicherbelegung fehlgeschlagen ist oder die angeforderte Größe größer als `_HEAP_MAXREQ` war. Weitere Informationen zu `errno` finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Darüber hinaus überprüft `_aligned_malloc` auch die eigenen Parameter. Wenn `alignment` keine Potenz von 2 oder `size` Null ist, ruft diese Funktion den Handler für ungültige Parameter auf, wie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt diese Funktion `NULL` zurück und stellt `errno` auf `EINVAL` ein.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_aligned_malloc`|\<malloc.h\>|  
+|-------------|---------------------|  
+|`_aligned_malloc`|\<malloc.h>|  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_aligned_malloc.c  
@@ -150,9 +153,12 @@ int main() {
 }  
 ```  
   
-  **This\-Zeiger, 3280880, wird an 16 ausgerichtet**  
-**This\-Zeiger, 3280880, wird an 16 ausgerichtet**  
-**This\-Zeiger, 3280891, wird von 5 auf Ausrichtung an 16 versetzt**  
-**This\-Zeiger, 3280891, wird von 5 auf Ausrichtung an 16 versetzt**   
-## Siehe auch  
+```Output  
+This pointer, 3280880, is aligned on 16  
+This pointer, 3280880, is aligned on 16  
+This pointer, 3280891, is offset by 5 on alignment of 16  
+This pointer, 3280891, is offset by 5 on alignment of 16  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
  [Datenausrichtung](../../c-runtime-library/data-alignment.md)

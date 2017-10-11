@@ -1,35 +1,38 @@
 ---
-title: "Compilerfehler C3918 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3918"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3918"
+title: Compilerfehler C3918 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3918
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3918
 ms.assetid: a8b3a90a-3fe1-4244-a5ff-a31cdae97d98
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Compilerfehler C3918
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1bf9cf676cf7435eaf1f0b924fbadcaddef842b4
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-Für die Syntax muss 'Member' ein Datenmember sein  
+---
+# <a name="compiler-error-c3918"></a>Compilerfehler C3918
+Die Syntax muss "Member", um einen Datenmember werden  
   
- C3918 kann aus mehreren Gründen in Bezug auf Ereignisse auftreten.  
+ C3918 kann verschiedene Ursachen, die im Zusammenhang mit Ereignissen auftreten.  
   
-## Beispiel  
- C3918 kann auftreten, weil ein Klassenmember im aktuellen Kontext erforderlich ist.  Im folgenden Beispiel wird C3918 generiert.  
+## <a name="example"></a>Beispiel  
+ C3918 kann auftreten, da ein Klassenmember im aktuellen Kontext erforderlich ist. Im folgenden Beispiel wird C3918 generiert.  
   
 ```  
 // C3918.cpp  
@@ -49,8 +52,8 @@ public:
 };  
 ```  
   
-## Beispiel  
- C3918 wird auch verursacht, wenn Sie ein triviales Ereignis auf NULL überprüfen \(der Ereignisname bietet keinen direkten Zugriff mehr auf zugrunde liegende Speicherdelegaten für das Ereignis\).  
+## <a name="example"></a>Beispiel  
+ C3918 wird auch verursacht, wenn Sie versuchen, ein triviales Ereignis für Null-Zeichen (der Namen des Ereignisses wird nicht mehr an den Delegaten der dahinter liegende Speicher für das Ereignis ermöglichen von direktem Zugriff).  
   
  Im folgenden Beispiel wird C3918 generiert.  
   
@@ -73,8 +76,8 @@ ref struct EventSource : public IEFace {
 };  
 ```  
   
-## Beispiel  
- C3918 kann auch auftreten, wenn Sie ein Ereignis falsch abonnieren.  Im folgenden Beispiel wird C3918 generiert.  
+## <a name="example"></a>Beispiel  
+ C3918 kann auch auftreten, wenn Sie nicht ordnungsgemäß auf ein Ereignis abonnieren. Im folgenden Beispiel wird C3918 generiert.  
   
 ```  
 // C3918_3.cpp  

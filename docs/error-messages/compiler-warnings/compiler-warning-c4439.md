@@ -1,36 +1,39 @@
 ---
-title: "Compilerwarnung C4439 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4439"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4439"
+title: Compilerwarnung C4439 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4439
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4439
 ms.assetid: 9449958f-f407-4824-829b-9e092f2af97d
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Compilerwarnung C4439
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: eec228922a6f5796587243fe2d1f2c6cc1cf6b1c
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Funktion': Die Funktionsdefinition mit einem verwalteten Typ in der Signatur muss eine \_\_clrcall\-Aufrufkonvention aufweisen  
+---
+# <a name="compiler-warning-c4439"></a>Compilerwarnung C4439
+'Funktion': Definition der Funktion mit einem verwalteten Typ in der Signatur benötigen eine __clrcall-Aufrufkonvention  
   
- Der Compiler hat eine Aufrufkonvention implizit mit [\_\_clrcall](../../cpp/clrcall.md) ersetzt.  Um diese Warnung zu vermeiden, entfernen Sie die `__cdecl`\-Aufrufkonvention oder die `__stdcall`\-Aufrufkonvention.  
+ Der Compiler implizit eine Aufrufkonvention mit ersetzt [__clrcall](../../cpp/clrcall.md). Um diese Warnung zu beheben, entfernen die `__cdecl` oder `__stdcall` Aufrufkonvention.  
   
- C4439 wird immer als Fehler ausgegeben.  Sie können diese Warnung mit `#pragma warning` oder **\/wd** deaktivieren. Weitere Informationen finden Sie unter [warning](../../preprocessor/warning.md) oder [\/w, \/Wn, \/WX, \/Wall, \/wln, \/wdn, \/wen, \/won \(Warnstufe\)](../../build/reference/compiler-option-warning-level.md).  
+ C4439 wird immer als Fehler ausgegeben. Sie können diese Warnung mit Deaktivieren der `#pragma warning` oder **/WD**; finden Sie unter [Warnung](../../preprocessor/warning.md) oder  [ /w, / W0, /W1, /W2, /W3, / W4, /w1, /w2, /w3, / W4, / Wall, / WD, / we, /, wo WV, / WX (Warnstufe)](../../build/reference/compiler-option-warning-level.md)für Weitere Informationen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird C4439 generiert.  
   
 ```  

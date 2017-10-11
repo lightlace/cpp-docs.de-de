@@ -1,52 +1,55 @@
 ---
-title: "_swab | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_swab"
-  - "stdlib/_swab"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_swab"
-  - "stdlib/_swab"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_swap-Funktion"
-  - "Bytes, Austauschen"
-  - "swab-Funktion"
-  - "Austauschen von Bytes"
+title: _swab | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _swab
+- stdlib/_swab
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _swab
+- stdlib/_swab
+dev_langs:
+- C++
+helpviewer_keywords:
+- _swab function
+- swapping bytes
+- swab function
+- bytes, swapping
 ms.assetid: 017142f2-050c-4f6a-8b49-6b094f58ec94
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# _swab
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: a3043abf425055d8cb21108a30db2e6382e19c1a
+ms.contentlocale: de-de
+ms.lasthandoff: 10/09/2017
 
-Vertauscht Bytes aus.  
+---
+# <a name="swab"></a>_swab
+Tauscht Bytes.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void _swab(  
@@ -56,52 +59,56 @@ void _swab(
 );  
 ```  
   
-#### Parameter  
+## <a name="parameters"></a>Parameter  
  `src`  
- Kopiert werden und Daten ausgetauscht wurde.  
+ Zu kopierende und tauschende Daten.  
   
  `dest`  
- Speicherort für ausgetauschte Daten.  
+ Speicherort für getauschte Daten.  
   
  `n`  
- Zahl kopiert werden und ausgetauscht wurde Bytes.  
+ Anzahl der zu kopierenden und tauschender Bytes.  
   
-## Hinweise  
- Wenn `n` gerade ist, kopiert die `_swab``n`\-Funktion von Bytes `src`, tauscht jedes Paar benachbarte Bytes aus und speichert das Ergebnis bei `dest`.  Wenn `n` ungerade ist, kopiert `_swab` und tauscht die ersten `n-1` Bytes von `src` aus.  `_swab` wird in der Regel verwendet, um Binärdaten für die Übertragung auf einen Computer vorbereiten, der eine andere Bytereihenfolge verwendet.  
+## <a name="return-value"></a>Rückgabewert
+ Die Funktion `swab` gibt keinen Wert zurück. Die Funktion legt `errno` auf `EINVAL` fest, wenn entweder der `src`- oder der `dest`-Zeiger NULL oder `n` kleiner als null ist, und der Handler für ungültige Parameter wird aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben.  
   
-## Anforderungen  
+ Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+ 
+## <a name="remarks"></a>Hinweise  
+ Wenn `n` gerade ist, kopiert die `_swab`-Funktion `n` Bytes von `src`, tauscht jedes Paar von benachbarten Bytes und speichert das Ergebnis in `dest`. Wenn `n` ungerade ist, kopiert und tauscht `_swab` die ersten `n-1` Bytes von `src`, und das letzte Byte wird nicht kopiert. Die Funktion `_swab` wird normalerweise verwendet, um Binärdaten auf die Übertragung auf einen Computer vorzubereiten, der eine andere Bytereihenfolge verwendet.  
   
+## <a name="requirements"></a>Anforderungen  
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_swab`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`_swab`|C: \<stdlib.h> C++: \<cstdlib> oder \<stdlib.h>|  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
-  
-```  
+## <a name="example"></a>Beispiel  
+```C 
 // crt_swab.c  
   
 #include <stdlib.h>  
 #include <stdio.h>  
   
 char from[] = "BADCFEHGJILKNMPORQTSVUXWZY";  
-char to[] =   "..........................";  
+char to[] =   "...........................";  
   
 int main()  
 {  
-    printf( "Before: %s\n        %s\n\n", from, to );  
-    _swab( from, to, sizeof( from ) );  
-    printf( "After:  %s\n        %s\n\n", from, to );  
+    printf("Before: %s  %d bytes\n        %s\n\n", from, sizeof(from), to);  
+    _swab(from, to, sizeof(from));  
+    printf("After:  %s\n        %s\n\n", from, to);  
 }  
 ```  
   
-  **Vorher: BADCFEHGJILKNMPORQTSVUXWZY**  
- **..........................**  
-**Nachher: BADCFEHGJILKNMPORQTSVUXWZY**  
- **ABCDEFGHIJKLMNOPQRSTUVWXYZ**   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+Before: BADCFEHGJILKNMPORQTSVUXWZY  27 bytes  
+        ...........................  
   
-## Siehe auch  
+After:  BADCFEHGJILKNMPORQTSVUXWZY  
+        ABCDEFGHIJKLMNOPQRSTUVWXYZ.  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
  [Pufferbearbeitung](../../c-runtime-library/buffer-manipulation.md)

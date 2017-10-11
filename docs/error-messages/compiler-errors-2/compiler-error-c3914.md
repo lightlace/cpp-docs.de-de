@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C3914 generiert | Microsoft-Dokumentation
+title: Compilerfehler C3914 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,34 +19,20 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: fd21be63cc46f6108bd84615e9dbeccbcb39b1cc
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4d38483d3edd477babb7a240a7b79841850f6a9e
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3914"></a>Compilerfehler C3914
-Eine Standardeigenschaft kann nicht statisch sein.  
+eine Standardeigenschaft kann nicht statisch sein.  
   
-Eine Standardeigenschaft wurde falsch deklariert.  Weitere Informationen finden Sie unter [Gewusst wie: Verwenden von Eigenschaften in C++ / CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).  
+Eine Standardeigenschaft wurde falsch deklariert.  Weitere Informationen finden Sie unter [wie: Verwenden von Eigenschaften in C + c++ / CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).  
   
 ## <a name="example"></a>Beispiel  
-Im folgenden Beispiel wird C3914 generiert und gezeigt, wie Sie diesen Fehler beheben.  
+Im folgende Beispiel wird C3914 generiert und gezeigt, wie sie diesen Fehler beheben.  
   
 ```  
 // C3914.cpp  

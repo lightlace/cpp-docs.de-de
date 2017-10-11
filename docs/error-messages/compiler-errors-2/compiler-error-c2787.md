@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C2787 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2787"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2787"
+title: Compiler-Fehler C2787 generiert | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2787
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2787
 ms.assetid: 34cb57e6-cafe-4ce7-bcc6-53d194629bd0
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Compilerfehler C2787
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 71924ae6e24eba04e27ec366ef73dedc2fa65263
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Bezeichner': Keine GUID mit diesem Objekt verbunden  
+---
+# <a name="compiler-error-c2787"></a>Compiler-Fehler C2787 generiert
+'Bezeichner': keine GUID dieses Objekt zugeordnet wurde  
   
- Der Operator [\_\_uuidof](../../cpp/uuidof-operator.md) akzeptiert entweder einen mit einer GUID verbundenen benutzerdefinierten Typ oder ein Objekt eines solchen benutzerdefinierten Typs.  Dieser Fehler tritt auf, wenn das Argument ein benutzerdefinierter Typ ohne GUID ist.  
+ Die [__uuidof](../../cpp/uuidof-operator.md) -Operator hat einen benutzerdefinierten Typ mit einer GUID verbundenen oder ein Objekt eines solchen benutzerdefinierten Typs. Dieser Fehler tritt auf, wenn das Argument einen benutzerdefinierten Typ ohne GUID ist.  
   
- Im folgenden Beispiel wird C2787 generiert:  
+ Im folgende Beispiel wird C2787 generiert:  
   
 ```  
 // C2787.cpp  

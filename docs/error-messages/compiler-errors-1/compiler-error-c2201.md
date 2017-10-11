@@ -1,32 +1,35 @@
 ---
-title: "Compilerfehler C2201 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2201"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2201"
+title: Compilerfehler C2201 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2201
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2201
 ms.assetid: ed927659-6e9c-447d-9963-19969ae1e957
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Compilerfehler C2201
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e68912ce5468f07bf18fb953adc996b755500aca
+ms.contentlocale: de-de
+ms.lasthandoff: 10/09/2017
 
-'Bezeichner': Externe Bindung erforderlich, um Export\/Import zu ermöglichen  
+---
+# <a name="compiler-error-c2201"></a>Compilerfehler C2201
+'Bezeichner': müssen externe Verknüpfungen aufweisen, damit ex-bzw. importiert werden  
   
- Der exportierte Bezeichner hat den Typ `static`.  
+ Der exportierte Bezeichner ist `static`.  
   
  Im folgenden Beispiel wird C2286 generiert:  
   
@@ -37,5 +40,5 @@ __declspec(dllexport) static void func() {}   // C2201 func() is static
 __declspec(dllexport) void func2() {}   // OK  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verknüpfungstypen](../../cpp/types-of-linkage.md)

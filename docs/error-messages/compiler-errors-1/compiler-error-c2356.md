@@ -1,40 +1,43 @@
 ---
-title: "Compilerfehler C2356 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2356"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2356"
+title: Compilerfehler C2356 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2356
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2356
 ms.assetid: 84d5a816-9a61-4d45-9978-38e485bbf767
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Compilerfehler C2356
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 99f29fb1e651c8182c8aa4dc037fc8cd6af6c6cc
+ms.contentlocale: de-de
+ms.lasthandoff: 10/09/2017
 
-Initialisierungssegment darf während der Übersetzungseinheit nicht geändert werden  
+---
+# <a name="compiler-error-c2356"></a>Compilerfehler C2356
+Initialisierungssegment muss während der Übersetzungseinheit nicht geändert.  
   
  Mögliche Ursachen:  
   
--   Vor `#pragma init_seg` seht Segmentinitialisierungscode  
+-   `#pragma init_seg`Segmentinitialisierungscode vorangestellt  
   
--   `#pragma init_seg` steht hinter einem anderen `#pragma init_seg`  
+-   `#pragma init_seg`durch eine andere voranstehen`#pragma init_seg`  
   
- Verschieben Sie den Segmentinitialisierungscode an den Anfang des Moduls.  Wenn mehrere Bereiche initialisiert werden müssen, verschieben Sie sie in gesonderte Module.  
+ Um zu beheben, verschieben Sie Segmentinitialisierungscode an den Anfang des Moduls. Verschieben Sie mehrere Bereiche initialisiert werden müssen, sie um Module zu trennen.  
   
- Im folgenden Beispiel wird C2356 generiert:  
+ Im folgende Beispiel wird C2356 generiert:  
   
 ```  
 // C2356.cpp  

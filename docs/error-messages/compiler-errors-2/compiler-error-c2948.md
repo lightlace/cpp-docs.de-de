@@ -1,29 +1,32 @@
 ---
-title: "Compilerfehler C2948 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2948"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2948"
+title: Compilerfehler C2948 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2948
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2948
 ms.assetid: 780c6ed3-43a0-4112-8d00-b7bf79086c05
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Compilerfehler C2948
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 30975999bff106e878332d44336f5cdbb31cea97
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-Explizite Instanziierung: Speicherklassenspezifizierer 'Spezifizierer' ist bei einer Spezialisierung nicht erlaubt  
+---
+# <a name="compiler-error-c2948"></a>Compilerfehler C2948
+Explizite Instanziierung; Speicherklassenspezifizierer "Spezifizierer" auf die Spezialisierung nicht zulässig  
   
- Speicherklassenspezifizierer, wie `extern`, können nicht bei der Spezialisierung einer Vorlagenklasse verwendet werden, die bereits explizit instanziiert wurde.
+ Sie können keine Speicherklassenspezifizierer (z. B. `extern`) in einer Spezialisierung einer Vorlagenklasse, die zuvor explizit instanziiert wurde.

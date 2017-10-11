@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C2647 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2647"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2647"
+title: Compiler-Fehler C2647 generiert | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2647
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2647
 ms.assetid: 1034589e-bc3e-41a6-831f-2a1a4b8a2500
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Compilerfehler C2647
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8d9a068e70f39f05624cc1af843f1c8ae8db7caf
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Operator' : Dereferenzierung von 'Typ1' auf 'Typ2' nicht möglich  
+---
+# <a name="compiler-error-c2647"></a>Compiler-Fehler C2647 generiert
+'Operator': 'Typ1' in 'Typ2' kann nicht dereferenziert werden.  
   
- Der linke Operand eines Memberzeigeroperators \( `->*` oder `.*` \) kann nicht implizit in einen Typ konvertiert werden, der sich auf die rechte Seite des Operators bezieht.  
+ Der linke Operand des einen Zeiger auf Member-Operator ( `->*` oder `.*` ) kann nicht implizit in einen Typ im Zusammenhang mit der rechten Operator konvertiert werden.  
   
- Im folgenden Beispiel wird C2647 generiert:  
+ Im folgende Beispiel wird C2647 generiert:  
   
 ```  
 // C2647.cpp  

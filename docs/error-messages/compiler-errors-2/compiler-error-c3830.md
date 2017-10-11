@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C3830 generiert | Microsoft-Dokumentation
+title: Compilerfehler C3830 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 970a3f032ac367ec24cb5b036e3f3723732da754
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f2f821b1ba6dc523ba3a664fb9c8b658dee1c78f
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3830"></a>Compilerfehler C3830
-'Typ1': kann nicht von 'Typ2', Wert Typen können nur von Schnittstellenklassen erben erben  
+"Typ1": kann nicht von "Typ2", Wert Typen können nur von Schnittstellenklassen erben erben  
   
- Ein Werttyp kann keine Basisklasse erben.  Weitere Informationen finden Sie unter [Klassen und Strukturen](../../windows/classes-and-structs-cpp-component-extensions.md).  
+ Ein Werttyp erben keine Basisklasse.  Weitere Informationen finden Sie unter [Klassen und Strukturen](../../windows/classes-and-structs-cpp-component-extensions.md).  
   
 ## <a name="example"></a>Beispiel  
  Im folgende Beispiel wird C3830 generiert:  

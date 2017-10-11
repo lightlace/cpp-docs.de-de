@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2653 | Microsoft-Dokumentation
+title: Compilerfehler Fehler C2653 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: eb0c1bf407d1478451c246cf615d031ef6c45bf9
-ms.openlocfilehash: 2203cf8a09dbb05f6145ed238ab9fc03e458aaa5
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: cc7990614283a20e9d07f52187258dbccad7c075
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
-# <a name="compiler-error-c2653"></a>Compiler-Fehler C2653
-'Bezeichner': ist keine Klasse oder Namespace  
+# <a name="compiler-error-c2653"></a>Compilerfehler Fehler C2653
+'Bezeichner': ist kein Name für eine Klasse oder Namespace  
   
-Die Syntax erfordert eine Klasse, Struktur, Union oder Namespacename.  
+Die Syntax ist erforderlich, eine Klasse, Struktur, Union oder Namespacename.  
   
-Im folgende Beispiel wird C2653 generiert:  
+Im folgenden Beispiel wird C2653 generiert:  
   
 ```cpp  
 // C2653.cpp  
@@ -58,7 +44,7 @@ void xx::func1(int m) {}   // C2653
 void yy::func1(int m) {}   // OK  
 ```  
   
-C2653 ist auch möglich, wenn Sie versuchen, Sie definieren eine *zusammengesetzten Namespace*, einen Namespace, einen oder mehrere Bereich geschachtelten Namespacenamen enthält, wenn Sie eine Version von Visual C++ vor Visual Studio 2015 Update 3 verwenden. Zusammengesetzte Namespace Definitionen in C++ vor C ++&17; sind unzulässig. Ab Visual C++ 2015 Update 3 unterstützt der Compiler zusammengesetzten Namespacedefinitionen bei der [/std:c ++ neueste](../../build/reference/std-specify-language-standard-version.md) -Compileroption angegeben wird:  
+C2653 ist auch möglich, wenn Sie versuchen, Sie definieren eine *zusammengesetzten Namespace*, einen Namespace, eine oder mehrere Bereich geschachtelten Namespace-Namen, enthält, wenn Sie eine Version von Visual C++ vor Visual Studio 2015 Update 3 verwenden. Zusammengesetzte Namespace Definitionen in C++ vor C ++ 17 sind nicht zulässig. Ab Visual C++ 2015 Update 3, unterstützt der Compiler zusammengesetzten Namespacedefinitionen bei der [/std:c ++ neueste](../../build/reference/std-specify-language-standard-version.md) -Compileroption angegeben ist:  
 ```cpp  
 // C2653b.cpp  
 namespace a::b {int i;}   // C2653 prior to Visual C++ 2015 Update 3,  

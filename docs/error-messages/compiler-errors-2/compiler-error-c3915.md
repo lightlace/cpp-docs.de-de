@@ -1,36 +1,39 @@
 ---
-title: "Compilerfehler C3915 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3915"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3915"
+title: Compilerfehler C3915 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3915
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3915
 ms.assetid: 2b0a5e5f-3aec-4a4b-9157-233031817084
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Compilerfehler C3915
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b753abc02e84c8373fe6115a5bf2f2a0719094f3
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Typ' hat keine indizierte Standardeigenschaft \(Klassenindexer\)  
+---
+# <a name="compiler-error-c3915"></a>Compilerfehler C3915
+'Type' hat keine indizierte Standardeigenschaft (Klassenindexer)  
   
- Ein Typ verfügt über keine indizierte Standardeigenschaft.  
+ Ein Typ verfügt nicht über, einer standardmäßigen, indizierten Eigenschaft.  
   
- Weitere Informationen finden Sie unter [Eigenschaft](../../windows/property-cpp-component-extensions.md).  
+ Weitere Informationen finden Sie unter [property](../../windows/property-cpp-component-extensions.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird C3915 generiert.  
   
 ```  
@@ -54,8 +57,8 @@ int main() {
 }  
 ```  
   
-## Beispiel  
- C3915 kann auch bei dem Versuch auftreten, einen Standardindexer in derselben Kompiliereinheit zu verwenden, in der er mit <xref:System.Reflection.DefaultMemberAttribute> definiert wurde.  
+## <a name="example"></a>Beispiel  
+ C3915 kann auch auftreten, wenn Sie versuchen, einen Standardindexer in dieselbe Kompiliereinheit nutzen, wo er definiert wurde mit <xref:System.Reflection.DefaultMemberAttribute>.  
   
  Im folgenden Beispiel wird C3915 generiert.  
   

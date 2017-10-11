@@ -1,32 +1,35 @@
 ---
-title: "Compilerfehler C2819 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2819"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2819"
+title: Compilerfehler C2819 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2819
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2819
 ms.assetid: fcc7762d-cb82-4bb1-a715-0d82da832edf
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Compilerfehler C2819
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 770609ed06fd3e123ce02688e3f091018c9f5444
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-Typ "Typ" hat keinen überladenen Elementoperator "\-\>"  
+---
+# <a name="compiler-error-c2819"></a>Compilerfehler C2819
+Typ 'Typ' weist keinen überladenen Memberoperator"->" auf.  
   
- Sie müssen `operator->()` definieren, um diese Zeigeroperation verwenden zu können.  
+ Sie definieren müssen `operator->()` dieser Zeigervorgang verwenden.  
   
  Im folgenden Beispiel wird C2819 generiert:  
   
@@ -58,7 +61,7 @@ void F(D j) {
 }  
 ```  
   
- C2819 kann auch auftreten, wenn [C\+\+\-Stack\-Semantik für Referenztypen](../../dotnet/cpp-stack-semantics-for-reference-types.md) verwendet wird.  Im folgenden Beispiel wird C2819 generiert:  
+ C2819 kann auch auftreten, wenn [C++-Stapelsemantik für Referenztypen](../../dotnet/cpp-stack-semantics-for-reference-types.md). Im folgenden Beispiel wird C2819 generiert:  
   
 ```  
 // C2819_b.cpp  

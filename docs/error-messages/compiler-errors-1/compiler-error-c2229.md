@@ -1,38 +1,41 @@
 ---
-title: "Compilerfehler C2229 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2229"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2229"
+title: Compilerfehler C2229 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2229
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2229
 ms.assetid: 933c7cf2-a463-4e74-b0b4-59dedad987fb
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Compilerfehler C2229
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c54e3affb39cb396df1caaafe6450d5c6ac80f6e
+ms.contentlocale: de-de
+ms.lasthandoff: 10/09/2017
 
-Typ 'Bezeichner' enthält ein Array der unzulässigen Größe 0 \(null\).  
+---
+# <a name="compiler-error-c2229"></a>Compilerfehler C2229
+Typ "Identifier" wurde ein ungültiger NULL-array  
   
- Ein Member einer Struktur oder eines Bitfelds enthält ein Array der Größe 0 \(null\), bei dem es sich nicht um den letzten Member handelt.  
+ Ein Member einer Struktur oder ein Bit enthält ein Array der Größe 0 (null), die nicht das letzte Element ist.  
   
- Da Sie als letzten Member einer Struktur ein Array der Größe 0 \(null\) verwenden können, müssen Sie beim Zuweisen der Struktur seine Größe angeben.  
+ Da Sie als das letzte Element der Struktur der Array 0 (null) Größe aufweisen darf, müssen Sie seine Größe angeben, wenn Sie die Struktur zuordnen.  
   
- Wenn das Array der Größe 0 \(null\) nicht der letzte Member der Struktur ist, ist der Compiler nicht in der Lage, den Offset für die übrigen Felder zu berechnen .  
+ Wenn 0 (null) großen Arrays nicht das letzte Element der Struktur ist, kann der Compiler nicht den Offset für die verbleibenden Felder berechnen.  
   
- Im folgenden Beispiel wird C2229 generiert:  
+ Im folgende Beispiel wird C2229 generiert:  
   
 ```  
 // C2229.cpp  

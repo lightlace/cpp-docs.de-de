@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C2676 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2676"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2676"
+title: Compilerfehler C2676 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2676
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2676
 ms.assetid: 838a5e34-c92f-4f65-a597-e150bf8cf737
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Compilerfehler C2676
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ed21b76da0834ff4a2aaa8af647d791fdaac075a
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2676"></a>Compilerfehler C2676
 Binärer 'Operator': 'Typ' definiert diesen Operator oder eine Konvertierung in einen für den vordefinierten Operator geeigneten Typ nicht  
   
  Um den Operator zu verwenden, müssen Sie ihn für den angegebenen Typ überladen oder eine Konvertierung in einen Typ definieren, für den der Operator definiert ist.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird C2676 generiert.  
   
 ```  
@@ -59,10 +62,10 @@ int main() {
 }  
 ```  
   
-## Beispiel  
- C2676 kann auch bei dem Versuch auftreten, im `this`\-Zeiger eines Referenztyps eine Zeigerarithmetik auszuführen.  
+## <a name="example"></a>Beispiel  
+ C2676 kann auch bei dem Versuch auftreten, im `this`-Zeiger eines Referenztyps eine Zeigerarithmetik auszuführen.  
   
- Der `this`\-Zeiger tritt in einem Referenztyp als Handletyp auf.  Weitere Informationen finden Sie unter [Semantik dieses Zeigers](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer).  
+ Der `this`-Zeiger tritt in einem Referenztyp als Handletyp auf. Weitere Informationen finden Sie unter [Semantik dieses Zeigers](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer).  
   
  Im folgenden Beispiel wird C2676 generiert.  
   

@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C2750 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2750"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2750"
+title: Compiler-Fehler C2750 generiert | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2750
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2750
 ms.assetid: 30450034-feb5-448c-9655-b8c5f3639695
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Compilerfehler C2750
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fbe3ee423183bb841e3e6777db94e4645b94355d
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Typ': 'new' kann für den Referenztyp nicht verwendet werden. Verwenden Sie stattdessen 'gcnew'  
+---
+# <a name="compiler-error-c2750"></a>Compiler-Fehler C2750 generiert
+'Typ': kann nicht auf den Verweistyp; "new" verwenden Verwenden Sie stattdessen "Gcnew"  
   
- Um eine Instanz eines CLR\-Typs zu erstellen, der veranlasst, dass die Instanz auf dem Heap der Garbage Collection abgelegt wird, muss [gcnew](../../windows/ref-new-gcnew-cpp-component-extensions.md) verwendet werden.  
+ Zum Erstellen einer Instanz eines CLR-Typs, wodurch die Instanz auf dem Heap der Garbage collection platziert wird, verwenden Sie [Gcnew](../../windows/ref-new-gcnew-cpp-component-extensions.md).  
   
- Im folgenden Beispiel wird C2750 generiert:  
+ Im folgende Beispiel wird C2750 generiert:  
   
 ```  
 // C2750.cpp  

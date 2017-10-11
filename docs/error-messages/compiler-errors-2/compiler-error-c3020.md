@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C3020 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3020"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3020"
+title: Compilerfehler C3020 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3020
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3020
 ms.assetid: f625c7a3-afaa-4bd8-9c1b-51891b832f36
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Compilerfehler C3020
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4da505740eba9b291d8c4139cf9cd6fded70fdfa
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Variable': Die Indexvariable der for\-Schleife von OpenMP kann nicht innerhalb der Schleife geändert werden  
+---
+# <a name="compiler-error-c3020"></a>Compilerfehler C3020
+"Var": Indexvariable von OpenMP "for-Schleife kann nicht geändert werden, im Schleifenkörper  
   
- Der Index \(Schleifenzähler\) innerhalb der `for`\-Schleife darf von einer OpenMP\-`for`\-Schleife nicht geändert werden.  
+ Eine OpenMP `for` Schleife möglicherweise nicht ändern Sie den Index (Schleifenzähler) im Hauptteil der `for` Schleife.  
   
- Im folgenden Beispiel wird C3020 generiert:  
+ Im folgende Beispiel wird C3020 generiert:  
   
 ```  
 // C3020.cpp  
@@ -47,9 +50,9 @@ int main() {
 }  
 ```  
   
- Eine mit [lastprivate](../../parallel/openmp/reference/lastprivate.md) deklarierte Variable kann nicht als Index innerhalb einer parallelisierten Schleife verwendet werden.  
+ Eine Variable mit [Lastprivate](../../parallel/openmp/reference/lastprivate.md) kann nicht als Index innerhalb einer parallelisierten Schleife verwendet werden.  
   
- Im folgenden Beispiel wird für das zweite lastprivate der Fehler C3020 ausgegeben, da dadurch eine Schreiboperation in idx\_a innerhalb der äußersten for\-Schleife ausgelöst wird.  Durch das erste lastprivate wird keine Fehlermeldung ausgegeben, da dadurch eine Schreiboperation in idx\_a außerhalb der äußersten for\-Schleife ausgelöst wird \(technisch gesehen ganz am Ende der letzten Iteration\).  Im folgenden Beispiel wird C3020 generiert.  
+ Im folgende Beispiel erhalten C3020 für die zweite Lastprivate, da dadurch das Schreiben in Idx_a innerhalb der äußersten for-Schleife ausgelöst wird. Die erste Lastprivate wird keine Fehlermeldung ausgegeben, da dadurch das Schreiben in Idx_a außerhalb der äußersten for-Schleife (technisch gesehen ist am Ende der letzten Iteration) löst. Im folgenden Beispiel wird C3020 generiert.  
   
 ```  
 // C3020b.cpp  
@@ -68,7 +71,7 @@ void test(int first, int last)
 }  
 ```  
   
- Das folgende Beispiel veranschaulicht eine mögliche Auflösung:  
+ Das folgende Beispiel zeigt eine mögliche Lösung:  
   
 ```  
 // C3020c.cpp  

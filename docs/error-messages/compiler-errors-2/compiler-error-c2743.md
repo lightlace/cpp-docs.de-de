@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2743 generiert | Microsoft-Dokumentation
+title: Compiler-Fehler C2743 generiert | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 7420231e64515b556cfe81fc695eda5f75231506
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f45e7617bbf162c23994897c42aab44abeacea88
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2743"></a>Compiler-Fehler C2743 generiert
-'Typ': catch von systemeigenem Typ mit __clrcall-Destruktor oder Kopierkonstruktor kann nicht  
+'Typ': einen systemeigenen Typ mit __clrcall-Destruktor oder Kopierkonstruktor nicht abfangen  
   
- Ein Modul kompiliert mit **/CLR** hat versucht, eine Ausnahme systemeigenen Typs aufzufangen, wobei Destruktor des Typs oder der Kopierkonstruktor verwendet `__clrcall` Aufrufkonvention.  
+ Ein Modul mit kompiliert **"/ CLR"** hat versucht, eine Ausnahme des systemeigenen Typs und, bei denen Destruktor des Typs oder der Kopierkonstruktor nutzt `__clrcall` Aufrufkonvention.  
   
- Bei der Kompilierung mit **/CLR**, Ausnahmebehandlung erwartet die Memberfunktionen in einem systemeigenen Typ zu [__cdecl](../../cpp/cdecl.md) und nicht [__clrcall](../../cpp/clrcall.md). Systemeigene Typen mit Memberfunktionen verwenden `__clrcall` Aufrufkonvention kann nicht aufgefangen werden, in einem Modul kompiliert mit **/CLR**.  
+ Beim Kompilieren mit **"/ CLR"**, Behandlung von Ausnahmen erwartet die Memberfunktionen in einem systemeigenen Typ sein [__cdecl](../../cpp/cdecl.md) und nicht [__clrcall](../../cpp/clrcall.md). Systemeigene Typen mit Memberfunktionen verwenden `__clrcall` Aufrufkonvention kann nicht aufgefangen werden, in einem Modul kompiliert mit **"/ CLR"**.  
   
  Weitere Informationen finden Sie unter [/clr (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md).  
   

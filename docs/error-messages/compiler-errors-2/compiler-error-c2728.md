@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2728 generiert | Microsoft-Dokumentation
+title: Compilerfehler Fehler C2728 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,28 +19,14 @@ caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 4e28f463dffeda0bc1b44da4d4e228771f59cc4c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0f83665f1f2b388ac751dd4fd4aec2f75e8651a3
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
-# <a name="compiler-error-c2728"></a>Compiler-Fehler C2728 generiert
+# <a name="compiler-error-c2728"></a>Compilerfehler Fehler C2728
 'type' : Ein systemeigenes Array darf diesen Typ nicht enthalten.  
   
  Erstellung von Arraysyntax verwendet, um ein Array von verwalteten oder WinRT-Objekten zu erstellen. Sie können kein Array von verwalteten oder WinRT-Objekten mit systemeigener Array-Syntax erstellen.  

@@ -1,5 +1,5 @@
 ---
-title: Compiler-Warnung C4936 | Microsoft-Dokumentation
+title: Compilerwarnung C4936 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,38 +19,23 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 58d702067c186eeeea94768a03836b64577961ca
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a4342c749c5db4d66f206209a146ad7d7aef7041
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-c4936"></a>Compilerwarnung C4936
 __declspec wird nur bei einer Kompilierung mit /clr oder /clr:pure unterstützt.  
   
- Die **/CLR: pure** -Compileroption in Visual Studio 2015 veraltet ist.  
+ Die **/CLR: pure** -Compileroption in Visual Studio 2015 als veraltet markiert ist.  
   
- Ein `__declspec` -Modifizierer wurde verwendet, die aber `__declspec` Modifizierer ist nur gültig, wenn Sie mit einem kompiliert die [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) Optionen.  
+ Ein `__declspec` -Modifizierer wurde verwendet, der `__declspec` -Modifizierer ist aber nur gültig, wenn er mit einer der [/clr](../../build/reference/clr-common-language-runtime-compilation.md) -Optionen kompiliert wird.  
   
- Weitere Informationen finden Sie unter [Appdomain](../../cpp/appdomain.md) und [Prozess](../../cpp/process.md).  
+ Weitere Informationen finden Sie unter [appdomain](../../cpp/appdomain.md) und [process](../../cpp/process.md).  
   
- C4936 wird immer als Fehler ausgegeben.  Sie können mit C4936 Deaktivieren der [Warnung](../../preprocessor/warning.md) Pragma.  
+ C4936 wird immer als Fehler ausgegeben.  Sie können C4936 mit dem [warning](../../preprocessor/warning.md) -Pragma deaktivieren.  
   
  Im folgenden Beispiel wird C4936 generiert:  
   

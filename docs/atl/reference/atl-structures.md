@@ -1,69 +1,75 @@
 ---
-title: "ATL Structures | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "index-page "
-f1_keywords: 
-  - "vc.atl.structures"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, Strukturen"
-  - "Strukturen, ATL"
+title: ATL-Strukturen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: 'index-page '
+f1_keywords:
+- vc.atl.structures
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL, structures
+- structures, ATL
 ms.assetid: 622173c8-6f2e-457c-8fae-28d4e80ecdb5
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# ATL Structures
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 2546608c3c84a2228fba35bb1470064f64c2212b
+ms.contentlocale: de-de
+ms.lasthandoff: 10/09/2017
 
-Active Template Library umfasst die folgenden Strukturen ein.  
+---
+# <a name="atl-structures"></a>ATL-Strukturen
+
+
+Der Active Template Library enthält die folgenden Strukturen.  
   
-## In diesem Abschnitt  
- [ATL\_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md)  
- Enthält die Informationen, die zum Rendern an verschiedene Ziele, wie einem Drucker, einer Metadatei oder einem ActiveX\-Steuerelement verwendet werden.  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md)  
+ Enthält Informationen zum Rendern an verschiedene Ziele, wie Drucker, Metadatei oder ActiveX-Steuerelement verwendet.  
   
- [\_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)  
- Enthält Klasseninstanzdaten im Fenstercode in ATL.  
+ [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)  
+ Enthält die Klasse Instanzdaten Windowing Code im ATL  
   
- [\_ATL\_BASE\_MODULE70](../../atl/reference/atl-base-module70-structure.md)  
- Wird von einem Projekt, das ATL verwendet.  
+ [_ATL_BASE_MODULE70](../../atl/reference/atl-base-module70-structure.md)  
+ Von jedem Projekt, die ATL verwendet verwendet  
   
- [\_ATL\_COM\_MODULE70](../../atl/reference/atl-com-module70-structure.md)  
- Wird vom Code nämlich in ATL.  
+ [_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md)  
+ Verwendung durch COM-bezogenen Code in ATL  
   
- [\_ATL\_FUNC\_INFORMATION](../../atl/reference/atl-func-info-structure.md)  
- Enthält die Informationen, die verwendet werden, um eine Methode oder eine Eigenschaft für eine Dispatchschnittstelle zu beschreiben.  
+ [SIE _ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md)  
+ Enthält die Typinformationen verwendet, um eine Methode oder Eigenschaft auf eine Dispinterface beschreiben.  
   
- [\_ATL\_MODULE70](../../atl/reference/atl-module70-structure.md)  
- Enthält die Daten, die in jedes ATL\-Modul verwendet werden.  
+ [_ATL_MODULE70](../../atl/reference/atl-module70-structure.md)  
+ Enthält Daten, die von jedem ATL-Modul verwendet.  
   
- [\_ATL\_WIN\_MODULE70](../../atl/reference/atl-win-module70-structure.md)  
- Wird von Fenstercode in ATL.  
+ [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)  
+ Verwendet von Windowing Code in ATL  
   
-## Verwandte Abschnitte  
- [ATL\-Referenz](../../atl/atl-com-desktop-components.md)  
- Enthält Referenzmaterial zur ATL\-Bibliothek, einer Gruppe vorlagenbasierter Visual C\+\+\-Klassen, die die Programmierung von COM\-Objekten vereinfachen.  
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ [ATL-Referenz](../../atl/atl-com-desktop-components.md)  
+ Enthält Referenzmaterial zur ATL-Bibliothek, einer Gruppe vorlagenbasierter Visual C++-Klassen, die die Programmierung von COM-Objekten vereinfachen.  
   
- [ATL\-Funktionen](../../atl/reference/atl-functions.md)  
- Enthält Referenzmaterial auf globalen Funktionen bereit, die alphabetisch geordnet sind.  Enthält die Themen, die die Funktionen in Kategorien aufteilen.  
+ [ATL-Funktionen](../../atl/reference/atl-functions.md)  
+ Enthält Referenzmaterial für die globalen Funktionen alphabetisch geordnet. Enthält Themen, die die Funktionen in Kategorien organisiert.  
   
- [Globale Variablen ATL](../../atl/reference/atl-global-variables.md)  
- Enthält Referenzmaterial auf den globalen Variablen bereit, die alphabetisch geordnet sind.  
+ [Globale ATL-Variablen](../../atl/reference/atl-global-variables.md)  
+ Enthält Referenzmaterial für die globalen Variablen alphabetisch geordnet.  
   
- [ATL\-Makros](../../atl/reference/atl-macros.md)  
- Enthält Referenzmaterial auf den Makros bereit, die alphabetisch geordnet sind.  Enthält die Themen, die die Makros in Kategorien aufteilen.  
+ [ATL-Makros](../../atl/reference/atl-macros.md)  
+ Enthält Referenzmaterial für die Makros in alphabetischer Reihenfolge angeordnet. Enthält Themen, die die Makros in Kategorien organisiert.  
   
- [ATL\-typedefs](../../atl/reference/atl-typedefs.md)  
- Enthält Referenzmaterial auf den Typdefinitionen bereit, die alphabetisch geordnet sind  
+ [ATL-Typdefinitionen](../../atl/reference/atl-typedefs.md)  
+ Enthält Referenzmaterial für die Typdefinitionen alphabetisch geordnet  
   
- [ATL\-Klassen](../../atl/reference/atl-classes.md)  
- Enthält Referenzmaterial für die Klassen bereit, die alphabetisch geordnet sind.
+ [ATL-Klassen](../../atl/reference/atl-classes.md)  
+ Enthält Referenzmaterial für die Klassen in alphabetischer Reihenfolge angeordnet.
+

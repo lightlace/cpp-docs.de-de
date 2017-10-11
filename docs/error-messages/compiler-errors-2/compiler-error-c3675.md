@@ -1,37 +1,40 @@
 ---
-title: "Compilerfehler C3675 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3675"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3675"
+title: Compilerfehler C3675 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3675
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3675
 ms.assetid: 87461613-6633-430b-b95d-c7cb1bb63776
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Compilerfehler C3675
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d45236fc32fd0d10e9617b6946683d8ebd73ef0e
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Funktion': Ist reserviert, da 'Eigenschaft' definiert ist  
+---
+# <a name="compiler-error-c3675"></a>Compilerfehler C3675
+'Funktion': ist reserviert, da 'Eigenschaft' definiert ist  
   
- Wenn Sie eine einfache Eigenschaft deklarieren, generiert der Compiler die get\-Accessormethode und die set\-Accessormethode. Diese Namen sind im Gültigkeitsbereich des Programms vorhanden.  Die vom Compiler generierten Namen werden gebildet, indem get\_ und set\_ dem Eigenschaftennamen vorangestellt wird.  Daher können keine Funktionen mit gleichem Namen wie die vom Compiler generierten Accessoren deklariert werden.  
+ Wenn Sie eine einfache Eigenschaft deklarieren, generiert der Compiler die Get- und Set-Zugriffsmethoden und den Namen in den Bereich des Programms vorhanden sind.  Die vom Compiler generierte gebildet vorangestellt Get_ und Set_ des Eigenschaftennamens.  Aus diesem Grund können Sie Funktionen mit dem gleichen Namen wie die vom Compiler generierten Accessoren nicht deklarieren.  
   
- Weitere Informationen finden Sie unter [property](../../windows/property-cpp-component-extensions.md).  
+ Weitere Informationen finden Sie unter [property](../../windows/property-cpp-component-extensions.md) .  
   
-## Beispiel  
- Im folgenden Beispiel wird C3675 generiert.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird C3675 generiert.  
   
 ```  
 // C3675.cpp  

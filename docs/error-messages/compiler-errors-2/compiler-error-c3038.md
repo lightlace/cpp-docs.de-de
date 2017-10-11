@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 32a63dcc218d7319b74a4b6941b2b25d6910e4a5
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3ddd3aaface0e500dc92778333cd3672398909da
 ms.contentlocale: de-de
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3038"></a>Compilerfehler C3038
 "Var": Die Variable in der private-Klausel kann im umschließenden Kontext keine reduction-Variable sein.  
   
- Variablen in der [Verringerung](../../parallel/openmp/reference/reduction.md) -Klausel einer parallel-Anweisung kann nicht angegeben werden, einem [private](../../parallel/openmp/reference/private-openmp.md) -Klausel für eine arbeitsteilungsanweisung, die an das parallele Konstrukt gebunden.  
+ Variablen in der [reduction](../../parallel/openmp/reference/reduction.md) -Klausel einer parallel-Direktive können nicht in einer [private](../../parallel/openmp/reference/private-openmp.md) -Klausel für eine Arbeitsteilungsdirektive angegeben werden, die an das parallele Konstrukt gebunden ist.  
   
  Im folgenden Beispiel wird C3038 generiert.  
   

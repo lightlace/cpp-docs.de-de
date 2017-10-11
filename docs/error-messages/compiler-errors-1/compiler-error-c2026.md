@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2026 | Microsoft-Dokumentation
+title: Compilerfehler Fehler C2026 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,37 +19,23 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
-ms.openlocfilehash: c429f81c64b7710b7edc2b8540d98e8c790e4062
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 97937579c12730fecfa89c69d9e7cf51229b5c6c
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
-# <a name="compiler-error-c2026"></a>Compiler-Fehler C2026
-Zeichenfolge zu lang, Zeichen am Ende wurden entfernt  
+# <a name="compiler-error-c2026"></a>Compilerfehler Fehler C2026
+Zeichenfolge zu lang, nachfolgende Zeichen gekürzt  
   
- Die Zeichenfolge ist länger als der maximal 16380 Einzelbytezeichen.  
+ Die Zeichenfolge wurde länger als das Limit von 16380 Einzelbyte-Zeichen.  
   
- Vor angrenzende Zeichenfolgen verkettet werden darf keine Zeichenfolge maximal 16380 Einzelbyte-Zeichen lang sein.  
+ Vor der angrenzenden Zeichenfolgen verkettet werden darf keine Zeichenfolge länger als 16380 Einzelbyte-Zeichen sein.  
   
- Eine Unicode-Zeichenfolge von ungefähr halb so lang würde auch diese Fehler generiert.  
+ Eine Unicode-Zeichenfolge mit ungefähr die Hälfte dieser Länge würde auch dieser Fehler generiert.  
   
- Wenn Sie eine Zeichenfolge, die wie folgt definiert haben, wird es C2026:  
+ Wenn Sie eine Zeichenfolge, die wie folgt definiert haben, wird es C2026 generiert:  
   
 ```  
 char sz[] =  
@@ -59,7 +45,7 @@ long string here\
 ";  
 ```  
   
- Sie könnten es wie folgt aufteilen:  
+ Sie können es wie folgt zusammensetzen:  
   
 ```  
 char sz[] =  
@@ -69,4 +55,4 @@ imagine a really, really "
 ";  
 ```  
   
- Möglicherweise möchten Sie zum Speichern von sehr umfangreiche Zeichenfolgenliterale (32 KB oder mehr) aus einer benutzerdefinierten Ressource oder eine externe Datei. Finden Sie unter [Erstellen einer neuen benutzerdefinierten Ressource oder Datenressource](../../windows/creating-a-new-custom-or-data-resource.md) Weitere Informationen.
+ Sie wollen außergewöhnlich große Zeichenfolgenliterale (32 KB oder mehr) speichern in einer benutzerdefinierten Ressource oder eine externe Datei. Finden Sie unter [Erstellen einer neuen benutzerdefinierten Ressource oder Datenressource](../../windows/creating-a-new-custom-or-data-resource.md) für Weitere Informationen.

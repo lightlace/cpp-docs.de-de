@@ -1,35 +1,38 @@
 ---
-title: "Compilerfehler C3671 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3671"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3671"
+title: Compilerfehler C3671 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3671
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3671
 ms.assetid: d684e4ae-87e2-4424-80bb-6f346652c831
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Compilerfehler C3671
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b64c8be94bc6eb89fea04d7edee342e0015b8a9b
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Funktion\_1': Funktion überschreibt 'Funktion\_2' nicht  
+---
+# <a name="compiler-error-c3671"></a>Compilerfehler C3671
+'Funktion_1': Funktion überschreibt keine 'Funktion_2'  
   
- Beim Verwenden einer expliziten Überschreibungssyntax generiert der Compiler einen Fehler, wenn eine Funktion nicht überschrieben wird.  Weitere Informationen finden Sie unter [Explicit Overrides](../../windows/explicit-overrides-cpp-component-extensions.md).  
+ Bei der expliziten Überschreibungssyntax zu verwenden, generiert der Compiler einen Fehler aus, wenn eine Funktion nicht überschrieben wird.  Finden Sie unter [explizite Überschreibungen](../../windows/explicit-overrides-cpp-component-extensions.md) für Weitere Informationen.  
   
-## Beispiel  
- Im folgenden Beispiel wird C3671 generiert.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird C3671 generiert.  
   
 ```  
 // C3671.cpp  

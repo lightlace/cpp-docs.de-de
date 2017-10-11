@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C3149 | Microsoft-Dokumentation
+title: Compilerfehler C3149 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,35 +19,21 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 555b3a7ac8e0d1e5de8eacd763c9ee63101e5b78
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: dc5abf02a3210ca3d7bd858662e0c02d4f42d75d
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3149"></a>Compilerfehler C3149
-'Typ': Dieser Typ ohne einen auf der obersten Ebene 'Char' kann nicht verwenden  
+'Typ': Dieser Typ ohne einen auf oberster Ebene 'Char' kann nicht verwenden  
   
  Eine Deklaration wurde nicht ordnungsgemäß angegeben.  
   
  Angenommen, Sie möglicherweise einen CLR-Typ im globalen Gültigkeitsbereich definiert und versucht, eine Variable des Typs als Teil der Definition zu erstellen. Da globale Variablen von CLR-Typen nicht zulässig sind, generiert der Compiler C3149 generiert.  
   
- Um diesen Fehler zu beheben, deklarieren Sie Variablen von CLR-Typen innerhalb einer Funktion oder Typdefinition.  
+ Deklarieren Sie Variablen von CLR-Typen innerhalb einer Funktion oder eines Typs Funktionsdefinition, um diesen Fehler zu beheben.  
   
  Im folgende Beispiel wird C3149 generiert:  
   

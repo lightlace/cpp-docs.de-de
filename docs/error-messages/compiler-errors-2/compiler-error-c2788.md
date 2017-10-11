@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C2788 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2788"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2788"
+title: Compiler-Fehler C2788 generiert | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2788
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2788
 ms.assetid: 8688fc5c-e652-43b4-b407-9c488c76f2db
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Compilerfehler C2788
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b3d66496da2940a08d87f968678125b5836587ac
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Bezeichner': Mehr als eine GUID mit diesem Objekt verbunden  
+---
+# <a name="compiler-error-c2788"></a>Compiler-Fehler C2788 generiert
+'Bezeichner': mehr als eine GUID, die diesem Objekt zugeordnet  
   
- Der Operator [\_\_uuidof](../../cpp/uuidof-operator.md) akzeptiert entweder einen mit einer GUID verbundenen benutzerdefinierten Typ oder ein Objekt eines solchen benutzerdefinierten Typs.  Dieser Fehler tritt auf, wenn das Argument ein Objekt mit mehreren GUIDs ist.  
+ Die [__uuidof](../../cpp/uuidof-operator.md) -Operator hat einen benutzerdefinierten Typ mit einer GUID verbundenen oder ein Objekt eines solchen benutzerdefinierten Typs. Dieser Fehler tritt auf, wenn das Argument ein Objekt mit mehreren GUIDs ist.  
   
- Im folgenden Beispiel wird C2788 generiert:  
+ Im folgende Beispiel wird C2788 generiert:  
   
 ```  
 // C2788.cpp  

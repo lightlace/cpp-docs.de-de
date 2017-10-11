@@ -1,36 +1,39 @@
 ---
-title: "Compilerfehler C2273 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2273"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2273"
+title: Compilerfehler C2273 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2273
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2273
 ms.assetid: 3c682c66-97bf-4a23-a22c-d9a26a92bf95
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Compilerfehler C2273
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 58f7f13303b9941cf07e90685d68d7114213ea2d
+ms.contentlocale: de-de
+ms.lasthandoff: 10/09/2017
 
-"Typ": Unzulässig auf der rechten Seite '\-\>' des Operators  
+---
+# <a name="compiler-error-c2273"></a>Compilerfehler C2273
+'Typ': unzulässig auf der rechten Seite des Operators "->"  
   
- Als rechter Operand des Operators `->` wird ein Typ angezeigt.  
+ Ein Typ wird als der Rechte Operand des eine `->` Operator.  
   
- Dieser Fehler kann auftreten, wenn auf eine benutzerdefinierte Typkonvertierung zugegriffen wird.  Verwenden Sie das `operator`\-Schlüsselwort zwischen \-\> und `type`.  
+ Dieser Fehler kann verursacht werden, indem Sie versuchen, eine Konvertierung für einen benutzerdefinierten Typ zugreifen. Verwenden Sie das Schlüsselwort `operator` zwischen -> und `type`.  
   
- Im folgenden Beispiel wird C2273 generiert:  
+ Im folgende Beispiel wird C2273 generiert:  
   
 ```  
 // C2273.cpp  

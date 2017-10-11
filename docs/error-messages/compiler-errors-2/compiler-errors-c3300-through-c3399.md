@@ -113,25 +113,11 @@ caps.latest.revision: 1
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: cd62452e19eb25e4b5911a44cc3558a3fd154c6f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 58f9d6de7b350a4d03f0f938d459bcd50c390ca2
 ms.contentlocale: de-de
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c3300-through-c3399"></a>Compilerfehler Fehler C3300 über C3399
@@ -155,7 +141,7 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |Compilerfehler Fehler C3308|" *Funktion*": direkter Aufruf über importierte Klasse wird nicht unterstützt.|  
 |[Compilerfehler C3309](compiler-error-c3309.md)|"*Makro*/*Schlüsselwort*": Modulname darf kein Makro oder Schlüsselwort sein.|  
 |Compilerfehler Fehler C3310|"*Bezeichner*": Modul Namenskonflikt|  
-|Compilerfehler Fehler C3311|Modulattribute müssen im globalen Gültigkeitsbereich definiert sein|  
+|Compilerfehler Fehler C3311|Modulattribut muss im globalen Gültigkeitsbereich definiert werden|  
 |Compilerfehler Fehler C3312|nicht aufgerufen werden kann "*Bezeichner*'Funktion gefunden für Typ'*Typ*"|  
 |Compilerfehler Fehler C3313|"*Bezeichner*': Variable kann keinen Typ '*Typ*"|  
 |Compilerfehler Fehler C3314|"*Symbol*': nicht unterstützter IDL-Modul-Typ|  
@@ -165,9 +151,9 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |Compilerfehler Fehler C3318|"*Typ*": ein Array keinen Elementtyp, der "auto" enthält|  
 |Compilerfehler Fehler C3319|Veraltet.|  
 |[Compilerfehler C3320](compiler-error-c3320.md)|"*Typ*': Typ kann nicht den gleichen Namen wie das Modul"Name"-Eigenschaft aufweisen|  
-|Compilerfehler Fehler C3321|Eine Initialisiererliste wird in diesem Kontext nicht erwartet.|  
+|Compilerfehler Fehler C3321|eine Initialisiererliste ist in diesem Kontext unerwartet|  
 |[Compilerfehler C3322](compiler-error-c3322.md)|"*Eigenschaft*": ist keine gültige Eigenschaft für das Attribut "*Attribut*"|  
-|Compilerfehler Fehler C3323|"alignas" und "__declspec(align)" sind in Funktionsdeklarationen nicht zulässig.|  
+|Compilerfehler Fehler C3323|bei Funktionsdeklarationen sind "Alignas" und "__declspec(align)" nicht zulässig.|  
 |Compilerfehler Fehler C3324|"*Eigenschaft*": Eigenschaft mehrfach im Attribut "*Attribut*"|  
 |Compilerfehler Fehler C3325|"*Attribut*": Attribut wurden zu viele Argumente|  
 |Compilerfehler Fehler C3326|"*Wert*": ist kein gültiger Wert für Eigenschaft '*Eigenschaft*"des Attributs"*Attribut*"|  
@@ -180,10 +166,10 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C3333](compiler-error-c3333.md)|"*Bibliothek*": kann nicht #import beschädigte Typbibliothek|  
 |[Compilerfehler C3334](compiler-error-c3334.md)|#import für beschädigte Typbibliothek nicht möglich.|  
 |Compilerfehler Fehler C3335|"*Bezeichner*": Es kann höchstens eine Standardschnittstelle für einer Co-Klasse*Klasse*"|  
-|Compilerfehler Fehler C3336|Dieser Vorgang muss im Gültigkeitsbereich der Klasse durchgeführt werden|  
+|Compilerfehler Fehler C3336|Dieser Vorgang muss im Gültigkeitsbereich einer Klasse ausgeführt werden|  
 |Compilerfehler Fehler C3337|"*Bezeichner*': Defaultvtable muss eine Ereignisquelle für einer Co-Klasse*Klasse*"|  
 |Compilerfehler Fehler C3338|"*Bezeichner*": Es kann höchstens eine Standardschnittstelle an, die auch eine Ereignisquelle für einer Co-Klasse*Klasse*"|  
-|Compilerfehler Fehler C3339|Für den template-Vorlagenparameter ist entweder 'class' oder 'typename' nach der Parameterliste erforderlich.|  
+|Compilerfehler Fehler C3339|Template-Vorlagenparameter erfordert "Class" oder "Typname" nach der Parameterliste|  
 |[Compilerfehler C3340](compiler-error-c3340.md)|"*Bezeichner*": Schnittstelle darf nicht 'restricted' und 'default' in Co-Klasse sein*Klasse*"|  
 |Compilerfehler Fehler C3341|"*Schnittstelle*': eine Defaultvtable-Schnittstelle muss entweder"dual"oder"Benutzerdefiniert"|  
 |[Compilerfehler C3342](compiler-error-c3342.md)|"*Bezeichner*': Mehrdeutiges Attribut|  
@@ -221,7 +207,7 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C3374](compiler-error-c3374.md)|Adresse des nicht übernehmen " *Funktion*", wenn die Erstellung der Delegatinstanz|  
 |[Compilerfehler C3375](compiler-error-c3375.md)|"*Funktion*': mehrdeutige Delegatfunktion.|  
 |Compiler-Fehler auf C3376|"*Vorlage*': nur statische Daten Membervorlagen sind zulässig.|  
-|Compilerfehler Fehler C3377|"decltype(auto)" ist in einem neuen Ausdruck nicht zulässig.|  
+|Compilerfehler Fehler C3377|"decltype(Auto)""wird in einen neuen Ausdruck nicht zulässig.|  
 |Compilerfehler Fehler C3378|eine Deklaration kann nur vom Modul Schnittstelle Einheit exportiert werden sollen|  
 |[Compilerfehler C3379](compiler-error-c3379.md)|"*Klasse*': eine geschachtelte Klasse darf nicht als Teil der Deklaration einen Assembly-Zugriffsspezifizierer haben|  
 |[Compilerfehler C3380](compiler-error-c3380.md)|"*Spezifizierer*": Ungültiger Assembler-Zugriffsspezifizierer - nur "public" oder "private" sind zulässig.|  
@@ -240,7 +226,7 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C3393](compiler-error-c3393.md)|Syntaxfehler in Einschränkungsklausel: "*Bezeichner*" ist kein Typ|  
 |[Compilerfehler C3394](compiler-error-c3394.md)|Syntaxfehler in Einschränkungsklausel: gefunden '*Symbol*' jedoch ein Typ erwartet|  
 |[Compilerfehler C3395](compiler-error-c3395.md)|" *Funktion*": __declspec(dllexport) kann nicht auf eine Funktion angewendet werden, mit der __clrcall-Aufrufkonvention|  
-|[Compilerfehler C3396](compiler-error-c3396.md)|'*class*. *Member*": benutzerdefinierte Attribut nicht gefunden wird,"*Namespace*"|  
+|[Compilerfehler C3396](compiler-error-c3396.md)|"*Klasse*. *Member*": benutzerdefinierte Attribut nicht gefunden wird,"*Namespace*"|  
 |[Compilerfehler C3397](compiler-error-c3397.md)|Die Aggregatinitialisierung ist in Standardargumenten nicht zulässig.|  
 |[Compilerfehler C3398](compiler-error-c3398.md)|"*Operator*': Konvertierung von '*Typ*'to'*Typ*". Der Quellausdruck muss ein Funktionssymbol sein.|  
 |[Compilerfehler C3399](compiler-error-c3399.md)|"*Typ*": beim Erstellen einer Instanz eines generischen Parameters können Argumente nicht bereitgestellt|  

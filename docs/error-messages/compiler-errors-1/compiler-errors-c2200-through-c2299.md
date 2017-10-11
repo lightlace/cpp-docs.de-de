@@ -65,25 +65,11 @@ caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d7d097b399d3681ef523d8787ecc38af472840f6
-ms.openlocfilehash: f47a6fe23a8a0bf18f9c5c4399162d836667cab6
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 07d87f9828bac1a025f9ac2375c79f29d96a89b4
 ms.contentlocale: de-de
-ms.lasthandoff: 04/28/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-errors-c2200-through-c2299"></a>Compilerfehler C2200 bis C2299
@@ -99,7 +85,7 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C2200](compiler-error-c2200.md)|"*Funktion*': Funktion wurde bereits definiert.|  
 |[Compilerfehler C2201](compiler-error-c2201.md)|"*Bezeichner*": müssen externe Verknüpfungen aufweisen, damit ex-bzw. importiert werden|  
 |Compiler-Fehler c2202 generiert|"*Funktion*': nicht alle Steuerelementpfade geben einen Wert zurück.|  
-|[Compilerfehler C2203](compiler-error-c2203.md)|delete-Operator kann keine Arraygrenzen festlegen|  
+|[Compilerfehler C2203](compiler-error-c2203.md)|Löschen von Operator: Grenzen für ein Array kann nicht angegeben werden.|  
 |[Compilerfehler C2204](compiler-error-c2204.md)|"*Typ*': Typdefinition innerhalb Klammern gefunden|  
 |[Compilerfehler C2205](compiler-error-c2205.md)|"*Bezeichner*": kann nicht initialisiert werden "extern" Variablen mit Blockbereich|  
 |[Compilerfehler C2206](compiler-error-c2206.md)|"*Funktion*": Typedef kann nicht verwendet werden, für die Funktionsdefinition|  
@@ -110,12 +96,12 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |Compilerfehler Fehler C2211|Ein in einer Verweisklasse, die von einer Verweisklasse mit einem öffentlichen Destruktor abgeleitet und nicht virtuellen Destruktor muss ebenfalls öffentlich sein.|  
 |[Compilerfehler C2212](compiler-error-c2212.md)|"*Bezeichner*": __based ist nicht verfügbar für Zeiger auf Funktionen|  
 |[Compilerfehler C2213](compiler-error-c2213.md)|"*Bezeichner*': Ungültiges Argument auf __based|  
-|Compilerfehler Fehler C2214|Zeiger basierend auf "void" erfordern die Verwendung von ":>"|  
+|Compilerfehler Fehler C2214|Zeigern auf Grundlage von 'Void' erfordern die Verwendung von: >|  
 |Compilerfehler Fehler C2215|"*Schlüsselwort*" kann nicht verwendet werden, mit "/ Arch: SSE"|  
 |[Compilerfehler C2216](compiler-error-c2216.md)|"*Schlüsselwort1*"cannot be used with"*Schlüsselwort2*"|  
 |[Compilerfehler C2217](compiler-error-c2217.md)|"*Attribut1*"erfordert"*Attribut2*"|  
 |[Compilerfehler C2218](compiler-error-c2218.md)|"*Aufruftyp*" kann nicht verwendet werden, mit "/ Arch: IA32"|  
-|[Compilerfehler C2219](compiler-error-c2219.md)|Syntaxfehler: Typqualifizierer muss auf "*" folgen|  
+|[Compilerfehler C2219](compiler-error-c2219.md)|Syntaxfehler: Typqualifizierer muss später sein als "*"|  
 |[Compilerfehler C2220](compiler-error-c2220.md)|Warnung als Fehler behandelt - keine "*Filetype*" generierte Datei|  
 |Compilerfehler Fehler C2221|Veraltet.|  
 |[Compilerfehler C2222](compiler-error-c2222.md)|Unerwarteter Typ "*Typ*': eine Basisklasse oder ein Element wurde erwartet.|  
@@ -148,7 +134,7 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C2249](compiler-error-c2249.md)|"*Bezeichner*': kein Zugriff auf den Pfad zum *Barrierefreiheit* *Member* in der virtuellen Basisklasse deklariert"*Klasse*"|  
 |[Compilerfehler C2250](compiler-error-c2250.md)|"*Bezeichner*': Mehrdeutige Vererbung von *Klasse*::*Member*"|  
 |[Compilerfehler C2251](compiler-error-c2251.md)|Namespace "*Namespace*"besitzt keine Mitglied"*Bezeichner*"-Meinten Sie "*Member*"?|  
-|[Compilerfehler C2252](compiler-error-c2252.md)|Eine explizite Instanziierung einer Vorlage kann nur im Namespacebereich erfolgen.|  
+|[Compilerfehler C2252](compiler-error-c2252.md)|eine explizite Instanziierung einer Vorlage kann nur im Namespacebereich auftreten.|  
 |[Compilerfehler C2253](compiler-error-c2253.md)|"*Funktion*": reiner Spezifizierer oder ein abstrakter Überschreibungsspezifizierer ist nur für eine virtuelle Funktion zulässig.|  
 |[Compilerfehler C2254](compiler-error-c2254.md)|"*Funktion*": reiner Spezifizierer oder ein abstrakter Überschreibungsspezifizierer ist für die Friend-Funktion nicht zulässig|  
 |[Compilerfehler C2255](compiler-error-c2255.md)|"*Element*": außerhalb einer Klassendefinition nicht zulässig.|  
@@ -175,13 +161,13 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C2276](compiler-error-c2276.md)|"*Operator*": Ungültiger Vorgang für gebundene Funktion Elementausdruck|  
 |[Compilerfehler C2277](compiler-error-c2277.md)|"*Funktion*': Adresse von dieser Memberfunktion nicht übernehmen|  
 |Compilerfehler Fehler C2278|Veraltet.|  
-|[Compilerfehler C2279](compiler-error-c2279.md)|Ausnahmespezifikation kann nicht in einer typedef-Deklaration enthalten sein|  
-|[Compilerfehler Fehler C2280](compiler-error-c2280.md)|"*Klasse*::*Funktion*": Es wird versucht, eine gelöschte Funktion zu verweisen|  
+|[Compilerfehler C2279](compiler-error-c2279.md)|Ausnahmespezifikation kann nicht in einer Typedef-Deklaration angezeigt werden.|  
+|[Compilerfehler C2280](compiler-error-c2280.md)|"*Klasse*::*Funktion*": Es wird versucht, eine gelöschte Funktion zu verweisen|  
 |Compilerfehler Fehler C2281|"*Klasse*::*Funktion*': eine Funktion kann nur gelöscht werden, auf die erste Deklaration|  
 |Compilerfehler Fehler C2282|"*Funktion1*"darf nicht außer Kraft setzen"*Funktion2*"|  
 |[Compilerfehler C2283](compiler-error-c2283.md)|"*Bezeichner*": reiner Spezifizierer oder ein abstrakter Überschreibungsspezifizierer ist für unbenannte Klasse/Struktur nicht zulässig|  
 |Compiler-Fehler C2284 generiert|"*Funktion*': Ungültiges Argument an eine systeminterne Funktion Parameter *Anzahl*|  
-|[Compilerfehler C2285](compiler-error-c2285.md)|Typ vorausdeklarierter Zeiger auf Objekte bereits festgelegt - Pragma wird ignoriert|  
+|[Compilerfehler C2285](compiler-error-c2285.md)|Zeiger auf Member-Darstellung wurde bereits festgelegt - Pragma wird ignoriert|  
 |[Compilerfehler C2286](compiler-error-c2286.md)|Zeiger auf Member von "*Bezeichner*' Darstellung ist bereits festgelegt, um *Vererbung* -Deklaration ignoriert|  
 |[Compilerfehler C2287](compiler-error-c2287.md)|"*Bezeichner*': Vererbung:"*Inheritiance*"ist kleiner als die erforderliche allgemeine"*Vererbung*"|  
 |Compilerfehler Fehler C2288|Veraltet.|  
@@ -194,6 +180,6 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C2295](compiler-error-c2295.md)|mit einem Escapezeichen versehen "*Zeichen*': in Makrodefinition ungültig ist|  
 |[Compilerfehler C2296](compiler-error-c2296.md)|"*Operator*': ungültig, da der linke Operand ist vom Typ"*Typ*"|  
 |[Compilerfehler C2297](compiler-error-c2297.md)|"*Operator*': ungültig, da der Rechte Operand ist vom Typ"*Typ*"|  
-|[Compilerfehler C2298](compiler-error-c2298.md)|Fehlender Aufruf zum Binden von Zeiger an Memberfunktion.|  
+|[Compilerfehler C2298](compiler-error-c2298.md)|Zeiger auf eine Memberfunktion gebundenen Aufruf fehlt|  
 |[Compilerfehler C2299](compiler-error-c2299.md)|"*Funktion*": verhaltensänderung: eine explizite Spezialisierung darf nicht sein, ein Kopierkonstruktor oder Kopierzuweisungsoperator|  
 

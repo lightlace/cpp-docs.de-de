@@ -1,5 +1,5 @@
 ---
-title: _ATL_COM_MODULE70 Struktur | Microsoft-Dokumentation
+title: _ATL_COM_MODULE70 Struktur | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,29 +22,15 @@ caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4e393abb2a904a0f5e101efe3d78d0645664397b
-ms.openlocfilehash: 503c2a29cf0e70020b012911c51b056f00562374
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: a269820c5a0965553989bc57d7c239aa95e527ef
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="atlcommodule70-structure"></a>_ATL_COM_MODULE70-Struktur
-Verwendung durch COM-bezogene Code in ATL  
+Verwendung durch COM-bezogenen Code in ATL  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -58,21 +44,21 @@ struct _ATL_COM_MODULE70 {
 };
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
  `cbSize`  
- Die Größe der Struktur, die für die Versionskontrolle verwendet.  
+ Die Größe der Struktur, die für die versionsverwaltung verwendet.  
   
  `m_hInstTypeLib`  
- Der Handle-Instanz, die die Typbibliothek für dieses Modul.  
+ Die Handle-Instanz, auf die Typbibliothek für dieses Modul.  
   
  **m_ppAutoObjMapFirst**  
- Die Adresse des Arrayelements, die den Beginn der Einträge in der Objekt-Zuordnung für dieses Modul.  
+ Die Adresse des Arrayelements, der angibt, der des Anfang der Objekt-Zuordnungseinträge für dieses Modul.  
   
  **m_ppAutoObjMapLast**  
- Die Adresse des Arrayelements, der das Ende der Objekt-Zuordnungseinträge für dieses Modul.  
+ Die Adresse des Arrayelements, die das Ende der Objekt-Zuordnungseinträge für dieses Modul.  
   
  `m_csObjMap`  
- Kritischen Abschnitt zum Zugriff auf den Zuordnungseinträgen Objekt zu serialisieren. Wird intern verwendet, ATL  
+ Kritischen Abschnitt, um die Serialisierung des Zugriffs auf die Objekt-Zuordnungseinträge. Wird intern vom ATL verwendet  
   
 ## <a name="remarks"></a>Hinweise  
  [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module) ist definiert als Typedef von `_ATL_COM_MODULE70`.  

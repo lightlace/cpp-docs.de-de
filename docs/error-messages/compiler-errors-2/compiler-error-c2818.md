@@ -1,29 +1,32 @@
 ---
-title: "Compilerfehler C2818 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2818"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2818"
+title: Compilerfehler C2818 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2818
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2818
 ms.assetid: 715fc7c9-0c6d-452b-b7f5-1682cea5e907
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Compilerfehler C2818
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 02c1b8e67679e7b8ce69b202c3ddef899439095d
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-Anwendung rekursiven durchgehenden Typs "\>' Typ" \- iss des überladenen Operators '  
+---
+# <a name="compiler-error-c2818"></a>Compilerfehler C2818
+Anwendung von überladenen 'Operator ->"wird durch den Typ 'Typ'  
   
- Eine Neudefinition des Zugriffsoperators für Klassenmember enthält eine rekursive `return`\-Anweisung.  Um den Operator `->` mit Rekursion neu zu definieren, müssen Sie die rekursive Routine in eine separate Funktion verschieben, die durch die Funktion zum Überschreiben des Operators aufgerufen wird.
+ Eine Neudefinition des dem Klassenmemberzugriffs-Operator enthält einen rekursiven `return` Anweisung. Neudefinieren der `->` -Operator mit Rekursion, müssen Sie verschieben Funktion zum Überschreiben der rekursive Routine an eine separate Funktion, die von der Operator aufgerufen.

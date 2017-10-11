@@ -1,32 +1,35 @@
 ---
-title: "Compilerfehler C3828 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3828"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3828"
+title: Compilerfehler C3828 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3828
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3828
 ms.assetid: 8d9cee75-9504-4bc8-88b6-2413618a3f45
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Compilerfehler C3828
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1b2dfaa6e0c414c80122bcb4291bb021bc1f3c74
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-„Objekttyp“: Positionierungsargumente sind während des Erstellens von Instanzen von verwalteten oder WinRT\-Klassen nicht zulässig.  
+---
+# <a name="compiler-error-c3828"></a>Compilerfehler C3828
+'Objekttyp': Positionierungsargumente nicht zulässig, während des Erstellens von Instanzen von verwalteten oder WinRTclasses  
   
- Wenn Sie ein Objekt des verwalteten oder des Windows\-Runtime\-Typs erstellen, dürfen Sie die Positionierungsform des [ref new, gcnew](../../windows/ref-new-gcnew-cpp-component-extensions.md)\- oder [new](../../cpp/new-operator-cpp.md)\-Operators nicht verwenden.  
+ Wenn Sie ein Objekt des verwalteten oder WinRT-Typs zu erstellen, können keine Format für die Platzierung des Operators [Ref neue Gcnew](../../windows/ref-new-gcnew-cpp-component-extensions.md) oder [neue](../../cpp/new-operator-cpp.md).  
   
  Im folgenden Beispiel wird C3828 generiert und gezeigt, wie Sie diesen Fehler beheben:  
   

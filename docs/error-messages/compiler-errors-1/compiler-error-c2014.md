@@ -1,32 +1,35 @@
 ---
-title: "Compilerfehler C2014 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2014"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2014"
+title: Compilerfehler Fehler C2014 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2014
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2014
 ms.assetid: 231d8e9c-48c0-4027-99a3-245d186275ec
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Compilerfehler C2014
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a4c6a3cc07b28e5636e61769b6dce0760938c591
+ms.contentlocale: de-de
+ms.lasthandoff: 10/09/2017
 
-Präprozessordirektive muss mit dem ersten Zeichen in der Zeile beginnen  
+---
+# <a name="compiler-error-c2014"></a>Compilerfehler Fehler C2014
+Präprozessorbefehl muss mit dem ersten beginnen.  
   
- Das `#`\-Zeichen einer Präprozessordirektive muss das erste Zeichen in einer Zeile sein, die keinen Leerraum darstellt.  
+ Die `#` Signieren einer Präprozessordirektive muss das erste Zeichen in einer Zeile, der kein Leerzeichen ist.  
   
  Im folgenden Beispiel wird C2014 generiert:  
   

@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C3270 generiert | Microsoft-Dokumentation
+title: Compilerfehler C3270 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 13ef4bca19de5b1dcda8fd0c22a15d43f00257b7
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 326f53f06c6cc4d93eb85f265df161c7b2b86535
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3270"></a>Compilerfehler C3270
 "Feld": Das FieldOffset-Attribut ist im Kontext von "StructLayout(Explicit)" erforderlich und kann nur in diesem Kontext verwendet werden  
   
-Ein Feld mit gekennzeichnet wurde **FieldOffset**, das ist nur zulässig, wenn **StructLayout(Explicit)** gültig ist.  
+Ein Feld wurde mit markiert **FieldOffset**, das ist nur zulässig, wenn **StructLayout(Explicit)"** ist aktiviert.  
   
 Im folgenden Beispiel wird C3270 generiert:  
   

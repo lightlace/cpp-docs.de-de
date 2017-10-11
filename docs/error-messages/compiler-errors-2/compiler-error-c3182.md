@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C3182 generiert | Microsoft-Dokumentation
+title: Compilerfehler Fehler C3182 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 3dfd76788c55e74625172dedf2ceb5b8bdfaa061
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7af33bd1854525bebd5d0cb423558d6077366431
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
-# <a name="compiler-error-c3182"></a>Compiler-Fehler C3182 generiert
-'Klasse': eine Memberdeklaration using-Deklaration oder der Zugriff ist nicht zulässig, innerhalb einer verwalteten oder WinRTtype  
+# <a name="compiler-error-c3182"></a>Compilerfehler Fehler C3182
+'Klasse': eine using-Deklaration oder Zugriffsdeklaration für Member ist innerhalb eines verwalteten oder WinRTtype nicht zulässig  
   
  Ein [mit](../../cpp/using-declaration.md) -Deklaration ist in sämtlichen verwalteten Klassen unzulässig.  
   

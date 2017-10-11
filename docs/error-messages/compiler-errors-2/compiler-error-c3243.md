@@ -19,32 +19,17 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: bbd6363499e2c0eec0365b8e445b7d3a0f7e05f2
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0539a411d6df5d9054a6530683b2809137190c4b
 ms.contentlocale: de-de
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3243"></a>Compilerfehler C3243
 Keine der überladenen Funktionen wurde von "Schnittstelle" eingeführt  
   
- Sie haben versucht, [explizit überschreiben](../../cpp/explicit-overrides-cpp.md) ein Element, das in der angegebenen Schnittstelle nicht vorhanden ist.  
+ Sie haben versucht, einen Member, der in der angegebenen Schnittstelle nicht nicht vorhanden ist, [explizit zu überschreiben](../../cpp/explicit-overrides-cpp.md) .  
   
  Im folgenden Beispiel wird C3243 generiert:  
   

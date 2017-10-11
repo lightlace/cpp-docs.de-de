@@ -1,32 +1,35 @@
 ---
-title: "Compilerfehler C3855 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3855"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3855"
+title: Compilerfehler C3855 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3855
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3855
 ms.assetid: ed90f8c0-4154-4243-b066-493913df5727
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Compilerfehler C3855
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 76d9101fd58d419db227803d3964198523ce3630
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Klasse': Typparameter 'param' ist mit der Deklaration nicht kompatibel  
+---
+# <a name="compiler-error-c3855"></a>Compilerfehler C3855
+'Klasse': Typparameter "Param" ist nicht kompatibel mit der Deklaration  
   
- Der Compiler hat eine nontype\-Vorlage oder generische Parameter mit unterschiedlichen Namen gefunden.  Dieser Fehler kann auftreten, wenn ein angegebener Vorlagenparameter in der Definition einer Vorlagenspezialisierung mit seiner Deklaration nicht kompatibel ist.  
+ Der Compiler hat Nichttyp-Vorlage oder die generische Parameter mit unterschiedlichen Namen gefunden. Dies kann auftreten, wenn ein angegebene Vorlagenparameter in der Definition einer Spezialisierung einer Klassenvorlage mit der Deklaration nicht kompatibel ist.  
   
  Im folgenden Beispiel wird C3855 generiert:  
   

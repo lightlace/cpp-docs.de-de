@@ -1,71 +1,74 @@
 ---
-title: "_get_heap_handle | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_get_heap_handle"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-heap-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_get_heap_handle"
-  - "get_heap_handle"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Heapfunktionen"
-  - "speicherbelegung, Heapspeicher"
-  - "_get_heap_handle-Funktion"
-  - "get_heap_handle-Funktion"
+title: _get_heap_handle | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _get_heap_handle
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-heap-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _get_heap_handle
+- get_heap_handle
+dev_langs:
+- C++
+helpviewer_keywords:
+- heap functions
+- memory allocation, heap memory
+- _get_heap_handle function
+- get_heap_handle function
 ms.assetid: a4d05049-8528-494a-8281-a470d1e1115c
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# _get_heap_handle
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2e8c08ed0ccffb7196133de89d4b9588333e1bfa
+ms.contentlocale: de-de
+ms.lasthandoff: 10/09/2017
 
-Gibt das Handle des Heaps zurück, der vom C\-Laufzeitsystem verwendet wird.  
+---
+# <a name="getheaphandle"></a>_get_heap_handle
+Gibt das Handle des Heaps zurück, der vom C-Laufzeitsystem verwendet wird.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 intptr_t _get_heap_handle( void );  
 ```  
   
-## Rückgabewert  
- Gibt das Handle an den Win32\-Heap zurück, der vom C\-Laufzeitsystem verwendet wird.  
+## <a name="return-value"></a>Rückgabewert  
+ Gibt das Handle an den Win32-Heap zurück, der vom C-Laufzeitsystem verwendet wird.  
   
-## Hinweise  
- Verwenden Sie diese Funktion, wenn Sie [HeapSetInformation](http://msdn.microsoft.com/library/windows/desktop/aa366705) aufrufen und niedrige Heap\-Fragmentierung auf dem CRT\-Heap aktivieren möchten.  
+## <a name="remarks"></a>Hinweise  
+ Verwenden Sie diese Funktion, wenn Sie [HeapSetInformation](http://msdn.microsoft.com/library/windows/desktop/aa366705) aufrufen und niedrige Heap-Fragmentierung auf dem CRT-Heap aktivieren möchten.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_get_heap_handle`|\<malloc.h\>|  
+|-------------|---------------------|  
+|`_get_heap_handle`|\<malloc.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Beispiel  
+## <a name="sample"></a>Beispiel  
   
 ```  
 // crt_get_heap_handle.cpp  
@@ -88,5 +91,5 @@ int main(void)
 }  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Speicherbelegung](../../c-runtime-library/memory-allocation.md)

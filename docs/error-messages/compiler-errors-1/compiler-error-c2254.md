@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C2254 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2254"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2254"
+title: Compilerfehler C2254 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2254
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2254
 ms.assetid: 49bb3d7e-3bdf-4af6-937c-fa627be412a9
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Compilerfehler C2254
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: cf8eb577b027b1d6cd4b62b28cb0da785349091f
+ms.contentlocale: de-de
+ms.lasthandoff: 10/09/2017
 
-'Funktion': pure\-Spezifizierer oder abstrakter Überschreibungsspezifizierer ist in Friend\-Funktion nicht zulässig  
+---
+# <a name="compiler-error-c2254"></a>Compilerfehler C2254
+'Funktion': reiner Spezifizierer oder ein abstrakter Überschreibungsspezifizierer ist für die Friend-Funktion nicht zulässig  
   
- Eine `friend`\-Funktion wurde als rein `virtual` deklariert.  
+ Ein `friend` -Funktion wird als rein angegeben `virtual`.  
   
- Im folgenden Beispiel wird C2254 generiert:  
+ Im folgende Beispiel wird C2254 generiert:  
   
 ```  
 // C2254.cpp  

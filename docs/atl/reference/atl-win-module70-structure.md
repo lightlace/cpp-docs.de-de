@@ -1,5 +1,5 @@
 ---
-title: _ATL_WIN_MODULE70 Struktur | Microsoft-Dokumentation
+title: _ATL_WIN_MODULE70 Struktur | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,29 +22,15 @@ caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4e393abb2a904a0f5e101efe3d78d0645664397b
-ms.openlocfilehash: 383384c8f08b98592f92b5d38850137c1c0c6d54
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 7f521b418b7d179eb506a5e9df2887addec059ef
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="atlwinmodule70-structure"></a>_ATL_WIN_MODULE70-Struktur
-Windowing-Code in ATL verwendet  
+Verwendet von Windowing Code in ATL  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -57,18 +43,18 @@ struct _ATL_WIN_MODULE70 {
 };
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
  `cbSize`  
- Die Größe der Struktur, die für die Versionskontrolle verwendet.  
+ Die Größe der Struktur, die für die versionsverwaltung verwendet.  
   
  `m_csWindowCreate`  
- Zum Zugriff auf Fenster Registrierungscode zu serialisieren. Wird intern verwendet, ATL  
+ Verwendet, um die Serialisierung des Zugriffs auf Registrierungscode Fenster. Wird intern vom ATL verwendet  
   
  **m_pCreateWndList**  
- Zum Binden von Windows in ihre Objekte verwendet. Wird intern verwendet, ATL  
+ Zum Binden von Windows an ihre Objekte verwendet. Wird intern vom ATL verwendet  
   
  **m_rgWindowClassAtoms**  
- Verwendet, um das Fenster Klasse Registrierungen verfolgen, damit sie ordnungsgemäß bei Beendigung aufgehoben werden können. Wird intern verwendet, ATL  
+ Verwendet, um das Fenster Klasse Registrierungen nachverfolgt werden, damit sie ordnungsgemäß bei Beendigung aufgehoben werden können. Wird intern vom ATL verwendet  
   
 ## <a name="remarks"></a>Hinweise  
  [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module) ist definiert als Typedef von `_ATL_WIN_MODULE70`.  

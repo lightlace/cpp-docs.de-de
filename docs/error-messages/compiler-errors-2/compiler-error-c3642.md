@@ -1,38 +1,41 @@
 ---
-title: "Compilerfehler C3642 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3642"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3642"
+title: Compilerfehler C3642 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3642
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3642
 ms.assetid: 429790c2-9614-4d85-b31c-687c8d8f83ff
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Compilerfehler C3642
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4b5d73344b99a42dfc4caf2b9f6b8cf7c9dc18bc
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'return\_type\/args': Mit der \_\_clrcall\-Aufrufkonvention aus systemeigenem Code kann keine Funktion aufgerufen werden  
+---
+# <a name="compiler-error-c3642"></a>Compilerfehler C3642
+' Return_type/Args': eine Funktion kann nicht aufgerufen werden, mit der __clrcall-Aufrufkonvention von systemeigenem Code  
   
- Eine Funktion, die mit der [\_\_clrcall](../../cpp/clrcall.md)\-Aufrufkonvention markiert ist, kann nicht von systemeigenem \(nicht verwaltetem\) Code aufgerufen werden.  
+ Eine Funktion, die mit der [__clrcall](../../cpp/clrcall.md) Aufrufkonvention kann nicht von systemeigenem (nicht verwalteten) Code aufgerufen werden.  
   
- *return\_type\/args* ist entweder der Name der Funktion oder der Typ der Funktion `__clrcall`, die aufgerufen werden soll.  Ein Typ wird verwendet, wenn der Aufruf über einen Funktionszeiger erfolgt.  
+ *Return_type-Args* ist entweder der Name der Funktion oder der Typ, der die `__clrcall` Funktion, die Sie aufrufen möchten.  Ein Typ wird verwendet, wenn Sie über einen Funktionszeiger aufrufen.  
   
- Um eine verwaltete Funktion aus einem systemeigenen Kontext aufzurufen, können Sie eine Wrapperfunktion hinzufügen, die die `__clrcall`\-Funktion aufruft.  Als Alternative können Sie den CLR\-Marshallingmechanismus verwenden. Weitere Informationen finden Sie unter [Gewusst wie: Marshallen von Funktionszeigern mit PInvoke](../../dotnet/how-to-marshal-function-pointers-using-pinvoke.md).  
+ Um eine verwaltete Funktion aus einem systemeigenen Kontext aufzurufen, können Sie hinzufügen, eine ""-Wrapperfunktion, die aufgerufen wird, wird die `__clrcall` Funktion. Oder Sie können den CLR-marshalling-Mechanismus verwenden; finden Sie unter [wie: Marshallen Funktion Zeigern mithilfe von PInvoke](../../dotnet/how-to-marshal-function-pointers-using-pinvoke.md) für Weitere Informationen.  
   
- Im folgenden Beispiel wird C3642 generiert:  
+ Im folgende Beispiel wird C3642 generiert:  
   
 ```  
 // C3642.cpp  

@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C2582 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2582"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2582"
+title: Compilerfehler C2582 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2582
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2582
 ms.assetid: ee1b9378-8bcd-4792-b87e-6d7a466d29ed
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Compilerfehler C2582
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f210884bcc1fa9519e4f5fef01035356502c527b
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-Funktion 'Funktion' ist in 'Typ' nicht verfügbar  
+---
+# <a name="compiler-error-c2582"></a>Compilerfehler C2582
+' Funktion ' ist in "Type" nicht verfügbar  
   
- Es wurde eine Objektzuweisung auf einem Objekt versucht, das über keinen Zuweisungsoperator verfügt.  
+ Es wurde versucht, ein Objekt zuweisen, die nicht über einen Zuweisungsoperator verfügt.  
   
- Im folgenden Beispiel wird C2582 generiert:  
+ Im folgende Beispiel wird C2582 generiert:  
   
 ```  
 // C2582.cpp  

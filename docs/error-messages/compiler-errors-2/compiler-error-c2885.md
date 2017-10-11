@@ -1,37 +1,40 @@
 ---
-title: "Compilerfehler C2885 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2885"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2885"
+title: Compilerfehler C2885 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2885
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2885
 ms.assetid: 7743e5f3-a034-44b4-9ee8-5a6254c27f8c
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Compilerfehler C2885
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a19f209d53d7d0b37cddbf559fa3dc02ee50db7e
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Klasse::Bezeichner': Keine gültige using\-Deklaration im Gültigkeitsbereich der Nichtklasse.  
+---
+# <a name="compiler-error-c2885"></a>Compilerfehler C2885
+'class:: Identifier': keine gültige using-Deklaration im Gültigkeitsbereich einer nicht-Klasse  
   
- Eine [using](../../cpp/using-declaration.md)\-Deklaration wurde nicht ordnungsgemäß verwendet.  
+ Sie verwendet ein [mit](../../cpp/using-declaration.md) Deklaration nicht ordnungsgemäß.  
   
-## Beispiel  
- Dieser Fehler kann infolge einer Verbesserung der Compilerkonformität für Visual C\+\+ 2005 generiert werden: Es ist nicht mehr zulässig, eine `using`\-Deklaration zu verwenden, die sich auf einen geschachtelten Typ bezieht. Sie müssen jeden Verweis auf den verschachtelten Typ explizit qualifizieren, den Typ in einem Namespace ablegen oder eine Typdefinition erstellen.  
+## <a name="example"></a>Beispiel  
+ Dieser Fehler kann infolge einer konformitätsverbesserung für Visual C++ 2005 erstellt wurde, die generiert werden: Es ist nicht mehr zulässig, eine `using` Deklaration, um einen geschachtelten Typ handelt; qualifizieren Sie explizit alle Verweise, die Sie, um den geschachtelten Typ, der den Typ in einen Namen einfügen vornehmen Speicherplatz, oder erstellen Sie eine Typdefinition.  
   
- Im folgenden Beispiel wird C2885 generiert.  
+ Im folgende Beispiel wird C2885 generiert.  
   
 ```  
 // C2885.cpp  
@@ -60,10 +63,10 @@ int main () {
 }  
 ```  
   
-## Beispiel  
- Wenn Sie das `using`\-Schlüsselwort mit einem Klassenmember verwenden, ist es in C\+\+ erforderlich, dass dieser Member innerhalb einer anderen \(abgeleiteten\) Klasse definiert wird.  
+## <a name="example"></a>Beispiel  
+ Bei Verwendung der `using` -Schlüsselwort mit einem Klassenmember C++ erfordert, dass Sie dieses Element innerhalb einer anderen Klasse (in einer abgeleiteten Klasse) zu definieren.  
   
- Im folgenden Beispiel wird C2885 generiert.  
+ Im folgende Beispiel wird C2885 generiert.  
   
 ```  
 // C2885_b.cpp  

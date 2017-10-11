@@ -1,49 +1,52 @@
 ---
-title: "_aligned_realloc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_aligned_realloc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-heap-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_aligned_realloc"
-  - "aligned_realloc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aligned_realloc-Funktion"
-  - "_aligned_realloc-Funktion"
+title: _aligned_realloc | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _aligned_realloc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-heap-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _aligned_realloc
+- aligned_realloc
+dev_langs:
+- C++
+helpviewer_keywords:
+- aligned_realloc function
+- _aligned_realloc function
 ms.assetid: 80ce96e8-6087-416f-88aa-4dbb8cb1d218
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# _aligned_realloc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2d572e7f5fa58e354ffb571bc822d8861703b564
+ms.contentlocale: de-de
+ms.lasthandoff: 10/09/2017
 
-Ändert die Größe eines Speicherblocks, der mit [\_aligned\_malloc](../../c-runtime-library/reference/aligned-malloc.md) oder [\_aligned\_offset\_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md) zugeordnet wurde.  
+---
+# <a name="alignedrealloc"></a>_aligned_realloc
+Ändert die Größe eines Speicherblocks, der mit [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) oder [_aligned_offset_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md) belegt wurde.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void * _aligned_realloc(  
@@ -53,34 +56,34 @@ void * _aligned_realloc(
 );  
 ```  
   
-#### Parameter  
- \[in\] `memblock`  
- Der aktuelle Speicherblockzeiger.  
+#### <a name="parameters"></a>Parameter  
+ [in] `memblock`  
+ Der Zeiger auf den aktuellen Speicherblock.  
   
- \[in\] `size`  
+ [in] `size`  
  Die Größe der angeforderten Speicherbelegung.  
   
- \[in\] `alignment`  
- Der Ausrichtungswert, der eine ganzzahlige Potenz von 2 sein muss.  
+ [in] `alignment`  
+ Der Zuweisungswert, muss eine ganzzahlige Potenz von 2 sein.  
   
-## Rückgabewert  
- `_aligned_realloc` gibt ein void\-Zeiger zum neu zugeordnete \(und möglicherweise bewegt\) Speicherblock zurück.  Der Rückgabewert ist `NULL`, wenn die Größe \(null und das Pufferargument nicht `NULL` ist oder wenn nicht genügend verfügbarer Speicher gibt, z des Blocks der angegebenen Größe zu erweitern.  Im ersten Fall wird der erste Block freigegeben.  In das zweite ist der erste Block unverändert.  Der Rückgabewert zeigt auf einem Speicherplatz, der garantiert wird, zum Speichern eines beliebigen Typs Objekt ordnungsgemäß ausgerichtet sind.  Um einen Zeiger auf einen anderen Typ als void abzurufen, verwenden Sie eine Typumwandlung für den Rückgabewert.  
+## <a name="return-value"></a>Rückgabewert  
+ `_aligned_realloc` gibt einen leeren Zeiger auf den neu belegten (und möglicherweise verschobenen) Speicherblock zurück. Der Rückgabewert ist `NULL`, wenn die Größe 0 ist und das Pufferargument nicht `NULL` ist oder wenn nicht genügend Speicherplatz vorhanden ist, um den Block auf die vorgegebene Größe auszudehnen. Im ersten Fall wird der ursprüngliche Block freigegeben. Im zweiten Fall wird der ursprüngliche Block nicht geändert. Der Rückgabewert zeigt auf einen Speicherplatz, der für die Speicherung eines beliebigen Objekttyps geeignet ist. Um einen Zeiger auf einen anderen Typ als den leeren zurückzugeben, verwenden Sie eine Typumwandlung für den Rückgabewert.  
   
- Es ist ein Fehler, um den Arbeitsspeicher neu belegen und der Ausrichtung eines Blocks zu ändern.  
+ Es ist ein Fehler, wenn ein Speicher neu belegt und die Ausrichtung eines Blocks geändert wird.  
   
-## Hinweise  
- `_aligned_realloc` basiert auf `malloc`.  Weitere Informationen zum Verwenden von `_aligned_offset_malloc`, finden Sie unter [malloc](../../c-runtime-library/reference/malloc.md).  
+## <a name="remarks"></a>Hinweise  
+ `_aligned_realloc` ist auf `malloc` basiert. Weitere Informationen über die Verwendung von `_aligned_offset_malloc` finden Sie unter [malloc](../../c-runtime-library/reference/malloc.md).  
   
- Diese Funktion legt `errno` auf `ENOMEM` fest, wenn die Speicherbelegung fehlgeschlagen ist oder die angeforderte Größe größer als `_HEAP_MAXREQ` war.  Weitere Informationen zu `errno` finden Sie unter [errno, \_doserrno, \_sys\_errlist und \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  Darüber hinaus überprüft `_aligned_realloc` auch die eigenen Parameter.  Wenn `alignment` keine Potenz von 2 ist, Aufrufe dieser Funktion Parameterhandler der ungültige, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die weitere Ausführung zugelassen wird, gibt diese Funktion `NULL` zurück und stellt `errno` auf `EINVAL` ein.  
+ Diese Funktion legt `errno` auf `ENOMEM` fest, wenn die Speicherbelegung fehlgeschlagen ist oder die angeforderte Größe größer als `_HEAP_MAXREQ` war. Weitere Informationen zu `errno` finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Darüber hinaus überprüft `_aligned_realloc` auch die eigenen Parameter. Wenn `alignment` keine Potenz von 2, ruft diese Funktion den Handler für ungültige Parameter auf, wie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt diese Funktion `NULL` zurück und stellt `errno` auf `EINVAL` ein.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_aligned_realloc`|\<malloc.h\>|  
+|-------------|---------------------|  
+|`_aligned_realloc`|\<malloc.h>|  
   
-## Beispiel  
- Weitere Informationen finden Sie unter [\_aligned\_malloc](../../c-runtime-library/reference/aligned-malloc.md).  
+## <a name="example"></a>Beispiel  
+ Weitere Informationen finden Sie unter [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Datenausrichtung](../../c-runtime-library/data-alignment.md)

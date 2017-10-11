@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C3821 | Microsoft-Dokumentation
+title: Compilerfehler C3821 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,36 +19,22 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 24212b0df7b665f8c8ab2614b9a23e66f19586af
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 47e0a2ed3c824ed1598f7e998d4966b95cc9233b
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3821"></a>Compilerfehler C3821
-'Funktion': nicht verwaltete Typ oder die Funktion in eine nicht verwaltete Funktion verwendet werden  
+'Funktion': verwaltete Typ oder die Funktion kann nicht in eine nicht verwaltete Funktion verwendet werden  
   
- Funktionen mit Inlineassembly oder [Setjmp](../../c-runtime-library/reference/setjmp.md) können keine Werttypen oder verwaltete Klassen enthalten. Um diesen Fehler zu beheben, entfernen Sie die Inlineassembly und `setjmp` oder die verwalteten Objekte.  
+ Funktionen mit Inlineassembly oder [Setjmp](../../c-runtime-library/reference/setjmp.md) Werttypen oder verwaltete Klassen sind nicht zulässig. Um diesen Fehler zu beheben, entfernen Sie die Inlineassembly und `setjmp` oder entfernen Sie die verwalteten Objekte.  
   
- C3821 kann auch auftreten, wenn Sie versuchen, die automatische Speicherung in einer Vararg-Funktion verwenden.  Weitere Informationen finden Sie unter [Variablenargumentlisten (...) (C++ / CLI) ](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md) und [C++-Stack-Semantik für Referenztypen](../../dotnet/cpp-stack-semantics-for-reference-types.md).  
+ C3821 kann auch auftreten, wenn Sie versuchen, die automatische Speicherung in einer Vararg-Funktion verwenden.  Weitere Informationen finden Sie unter [Variablenargumentlisten (...) (C + C++ / CLI) ](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md) und [C++-Stapelsemantik für Referenztypen](../../dotnet/cpp-stack-semantics-for-reference-types.md).  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird C3821 generiert.  
+ Im folgenden Beispiel wird C3821 generiert.  
   
 ```  
 // C3821a.cpp  
@@ -60,7 +46,7 @@ void test1(...) {
 ```  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird C3821 generiert.  
+ Im folgenden Beispiel wird C3821 generiert.  
   
 ```  
 // C3821b.cpp  

@@ -1,36 +1,39 @@
 ---
-title: "Compilerfehler C2296 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2296"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2296"
+title: Compilerfehler C2296 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2296
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2296
 ms.assetid: 47d270f4-13ce-4c16-81e2-7d67c6c4a540
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Compilerfehler C2296
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e915df8a0ab9a9baa5b314f850434e41087be8b5
+ms.contentlocale: de-de
+ms.lasthandoff: 10/09/2017
 
-'Operator': Falscher linker Operand  
+---
+# <a name="compiler-error-c2296"></a>Compilerfehler C2296
+'Operator': Ungültiger Linker Operand  
   
- Der linke Operand für *Operator* ist ungültig.  
+ Der linke Operand mit `operator` ist ungültig.  
   
- Der Compiler interpretiert möglicherweise an einer Stelle eine Deklaration, an der Sie einen Funktionsaufruf beabsichtigt haben.  
+ Beispielsweise kann der Compiler eine Erklärung finden Sie unter, in dem Sie einen Funktionsaufruf vorgesehen.  
   
- Im folgenden Beispiel wird C2296 generiert:  
+ Im folgende Beispiel wird C2296 generiert:  
   
 ```  
 // C2296.cpp  

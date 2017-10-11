@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C2234 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2234"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2234"
+title: Compilerfehler C2234 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2234
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2234
 ms.assetid: cfa42458-c803-4717-a017-9eca1c0cbfb0
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Compilerfehler C2234
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b556efc1e73ae04f749441e1888d46cd5499e8ea
+ms.contentlocale: de-de
+ms.lasthandoff: 10/09/2017
 
-'Name': Arrays aus Verweisen sind unzulässig  
+---
+# <a name="compiler-error-c2234"></a>Compilerfehler C2234
+'Name': Arrays Verweise sind nicht zulässig  
   
- Ebenso wenig wie Zeiger auf Verweise können Arrays aus Verweisen verwendet werden.  
+ Da ein Zeiger auf Verweise nicht zulässig sind, sind Arrays Verweise nicht möglich.  
   
- Im folgenden Beispiel wird C2234 generiert:  
+ Im folgende Beispiel wird C2234 generiert:  
   
 ```  
 // C2234.cpp  

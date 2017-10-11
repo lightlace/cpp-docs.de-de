@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 05edbf62dfe8d5ed916ccc971b8ae9a286e1aeb8
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8c1b4ac942c4b17785b57d6206cd2f5a8724bd99
 ms.contentlocale: de-de
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3056"></a>Compilerfehler C3056
 'symbol': Das Symbol befindet sich nicht im gleichen Bereich wie die 'threadprivate'-Direktive.  
   
- Ein Symbol in verwendet eine [Threadprivate](../../parallel/openmp/reference/threadprivate.md) -Klausel muss im gleichen Bereich wie lauten die `threadprivate` Klausel.  
+ Ein in einer [threadprivate](../../parallel/openmp/reference/threadprivate.md) -Klausel verwendetes Symbol muss sich im gleichen Bereich wie die `threadprivate` -Klausel befinden.  
   
  Im folgenden Beispiel wird C3056 generiert:  
   

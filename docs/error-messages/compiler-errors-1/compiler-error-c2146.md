@@ -1,40 +1,43 @@
 ---
-title: "Compilerfehler C2146 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2146"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2146"
+title: Compilerfehler C2146 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2146
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2146
 ms.assetid: 6bfb7de6-6723-4486-9350-c66ef88d7a64
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Compilerfehler C2146
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 92e94ae29c1a7a3fc6adfdc0b3e82f5ce4dfcaf0
+ms.contentlocale: de-de
+ms.lasthandoff: 10/09/2017
 
-Syntaxfehler: Fehlendes 'Token' vor Bezeichner 'Bezeichner'  
+---
+# <a name="compiler-error-c2146"></a>Compilerfehler C2146
+Syntaxfehler: Fehlendes "token" vor Bezeichner "Bezeichner"  
   
- Der Compiler hat ein `token` erwartet, jedoch einen `identifier` gefunden.  Mögliche Ursachen:  
+ Der Compiler erwartet `token` und `identifier` stattdessen.  Mögliche Ursachen:  
   
-1.  Schreibfehler oder falsche Groß\-\/Kleinschreibung.  
+1.  Fehler bei Schreibweise oder Groß-/Kleinschreibung.  
   
 2.  Fehlender Typspezifizierer in der Deklaration des Bezeichners.  
   
- Dieser Fehler wird möglicherweise durch einen typografischen Fehler verursacht.  Der Fehler [C2065](../../error-messages/compiler-errors-1/compiler-error-c2065.md) geht diesem Fehler normalerweise voraus.  
+ Dieser Fehler kann durch einen Tippfehler verursacht werden. Fehler beim [C2065](../../error-messages/compiler-errors-1/compiler-error-c2065.md) in der Regel vor dem dieser Fehler.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird C2146 generiert.  
   
 ```  
@@ -52,10 +55,10 @@ int main() {
 }  
 ```  
   
-## Beispiel  
- Dieser Fehler kann auch aufgrund einer Verbesserung der Compilerkonformität in Visual Studio .NET 2003 ausgegeben werden: fehlendes `typename`\-Schlüsselwort.  
+## <a name="example"></a>Beispiel  
+ Dieser Fehler kann außerdem infolge einer konformitätsverbesserung für Visual Studio .NET 2003 durchgeführt wurde, die generiert werden: fehlende `typename` Schlüsselwort.  
   
- Der folgende Beispielcode wird in Visual Studio .NET 2002 kompiliert, verursacht in Visual Studio .NET 2003 jedoch einen Fehler:  
+ Im folgende Beispiel in Visual Studio .NET 2003 treten jedoch in Visual Studio .NET 2002 kompiliert wird:  
   
 ```  
 // C2146b.cpp  
@@ -76,12 +79,12 @@ template <typename T>
 typename X<T>::Y func() { }  
 ```  
   
-## Beispiel  
- Dieser Fehler kann auch aufgrund einer Verbesserung der Compilerkonformität in Visual Studio .NET 2003 ausgegeben werden: explizite Spezialisierungen finden nicht länger Vorlagenparameter aus der primären Vorlage.  
+## <a name="example"></a>Beispiel  
+ Sehen Sie auch diesen Fehler infolge einer konformitätsverbesserung, die für Visual Studio .NET 2003 durchgeführt wurde: explizite spezialisierungen werden nicht mehr aus der primären Vorlage Vorlagenparameter finden.  
   
- Die Verwendung von `T` aus der primären Vorlage ist in der expliziten Spezialisierung nicht zulässig.  In Code, der in der Visual Studio .NET 2003\-Version und der Visual Studio .NET\-Version von Visual C\+\+ gültig sein soll, ersetzen Sie alle Instanzen des Vorlagenparameters in der Spezialisierung durch den explizit spezialisierten Typ.  
+ Die Verwendung von `T` aus der primären Vorlage ist in der expliziten Spezialisierung nicht zulässig. Ersetzen Sie alle Instanzen des Vorlagenparameters in der Spezialisierung für Code in der Visual Studio .NET 2003 und Visual Studio .NET Versionen von Visual C++ gültig ist mit dem explizit spezialisierte Typ.  
   
- Der folgende Beispielcode wird in Visual Studio .NET kompiliert, verursacht in Visual Studio .NET 2003 jedoch einen Fehler:  
+ Im folgende Beispiel in Visual Studio .NET 2003 treten jedoch in Visual Studio .NET kompiliert wird:  
   
 ```  
 // C2146_c.cpp  

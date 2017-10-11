@@ -1,34 +1,37 @@
 ---
-title: "Compilerfehler C3705 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3705"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3705"
+title: Compilerfehler C3705 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3705
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3705
 ms.assetid: 8361017d-5782-4214-a9d7-e9825fd29bc8
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Compilerfehler C3705
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ba08854d9d9ac6f0e644a64a80133b1d8b70a167
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Funktion': Die ereignisauslösende Schnittstelle konnte nicht gefunden werden  
+---
+# <a name="compiler-error-c3705"></a>Compilerfehler C3705
+'Funktion': Ereignisse-Schnittstelle wurde nicht gefunden  
   
- Um COM\-Ereignisse zu verwenden, müssen Sie eine Ereignisschnittstelle definieren.  Beachten Sie, dass die `#include`\-Zeilen der ATL\-Headerdateien aus dem folgenden Beispiel für die Verwendung von COM\-Ereignissen erforderlich sind.  Um diesen Fehler zu beheben, kommentieren Sie die Definition der `IEvents`\-Schnittstelle im Beispielcode aus.  
+ Sie müssen eine Ereignisschnittstelle zur Verwendung von COM-Ereignisse definieren. Beachten Sie, dass die `#include` Zeilen der ATL-Headerdateien, die im folgenden Beispiel gezeigt für die Verwendung von COM-Ereignisse erforderlich sind. Um diesen Fehler zu beheben, kommentieren Sie die Definition der `IEvents` Schnittstelle im Beispielcode.  
   
- Im folgenden Beispiel wird C3705 generiert:  
+ Im folgende Beispiel wird C3705 generiert:  
   
 ```  
 // C3705.cpp  

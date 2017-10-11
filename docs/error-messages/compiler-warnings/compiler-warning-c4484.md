@@ -1,45 +1,48 @@
 ---
-title: "Compilerwarnung C4484 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4484"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4484"
+title: Compilerwarnung C4484 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4484
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4484
 ms.assetid: 3d30e5b3-2297-45b7-a37a-1360056fdd0e
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Compilerwarnung C4484
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 06246c811c59ff126cd61d5c10d0d30a68857c2c
+ms.contentlocale: de-de
+ms.lasthandoff: 10/10/2017
 
-'Überschreibungsfunktion': Stimmt mit der 'Basisklassenfunktion'\-Basismethode der Verweisklasse überein, ist jedoch nicht als 'new' oder 'override' markiert; 'new' \(und 'virtual'\) wird angenommen.  
+---
+# <a name="compiler-warning-c4484"></a>Compilerwarnung C4484
+'Überschreibungsfunktion': Basis Ref-Klassenmethode "Basisklassenfunktion" entspricht, ist jedoch nicht gekennzeichnet "virtual", "new" oder "override"; "new" (und nicht "virtual") wird angenommen.  
   
- Beim Kompilieren mit **\/clr** wird die Basisklassenfunktion nicht implizit vom Compiler überschrieben. Dies hat zur Folge, dass der Funktion in der Vtable ein neuer Slot zugewiesen wird.  Um das Problem zu beheben, geben Sie explizit an, ob es sich bei einer Funktion um eine Überschreibungsfunktion handelt.  
+ Beim Kompilieren mit **"/ CLR"**, wird nicht vom Compiler implizit für eine Basisklasse-Funktion, d. h. die Funktion erhält einen neuen Platz im Vtable überschrieben. Um zu beheben, geben Sie explizit an, ob eine Funktion eine Überschreibung darstellt.  
   
  Weitere Informationen finden Sie unter:  
   
--   [\/clr \(Common Language Runtime\-Kompilierung\)](../../build/reference/clr-common-language-runtime-compilation.md)  
+-   [/ CLR (common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md)  
   
 -   [override](../../windows/override-cpp-component-extensions.md)  
   
--   [new \(new slot in vtable\)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md)  
+-   [New (neuer Slot in Vtable)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md)  
   
- C4484 wird immer als Fehler ausgegeben.  Verwenden Sie das [warning](../../preprocessor/warning.md)\-Pragma, um C4484 zu unterdrücken.  
+ C4484 wird immer als Fehler ausgegeben. Verwenden der [Warnung](../../preprocessor/warning.md) -Pragma, um C4484 zu unterdrücken.  
   
-## Beispiel  
- Im folgenden Beispiel wird C4484 generiert.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird C4484 generiert.  
   
 ```  
 // C4484.cpp  
