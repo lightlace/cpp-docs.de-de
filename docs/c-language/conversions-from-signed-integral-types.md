@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - integral conversions, from signed
 - integers, converting
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - data type conversion [C++], signed and unsigned integers
 - type conversion [C++], signed and unsigned integers
 ms.assetid: 5eea32f8-8b14-413d-acac-c063b3d118d7
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: ccda8d6fa2573245f34a38f327395955bf92fdc2
-ms.contentlocale: de-de
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="conversions-from-signed-integral-types"></a>Konvertierungen von ganzzahligen Typen mit Vorzeichen
 Wenn eine ganze Zahl mit Vorzeichen in eine ganze Zahl ohne Vorzeichen mit der gleichen Größe oder länger konvertiert wird und der Wert der ganzen Zahl mit Vorzeichen nicht negativ ist, bleibt der Wert unverändert. Die Konvertierung erfolgt durch Zeichenerweiterung der ganzen Zahl mit Vorzeichen. Eine ganze Zahl mit Vorzeichen wird in eine kürzere Zahl mit Vorzeichen konvertiert, indem die höherwertigen Bits abgeschnitten werden. Das Ergebnis wird als Wert ohne Vorzeichen interpretiert, wie in diesem Beispiel gezeigt wird.  

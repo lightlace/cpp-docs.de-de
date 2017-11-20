@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - program startup [C++]
 - entry points, program
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - main function
 - programs [C++], terminating
 ms.assetid: 5984f1bd-072d-4e06-8640-122fb1454401
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 7635595adedf961c014bf8792316ca4943dc84a7
-ms.contentlocale: de-de
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="main-function-and-program-execution"></a>main-Funktion und Programmausführung
 Jedes C-Programm verfügt über eine primäre Funktion (main), die mit **main** benannt werden muss. Wenn der Code dem Unicode-Programmiermodell entspricht, können Sie die Breitzeichenversion von **main**, **wmain**, verwenden. Die **main**-Funktion ist der Ausgangspunkt für die Programmausführung. Es steuert in der Regel die Programmausführung durch Verweisen der Aufrufe an andere Funktionen im Programm. Ein Programm hält normalerweise die Ausführung am Ende von **main** an, obwohl es an anderen Punkten im Programm aus mehreren Gründen beendet werden kann. Manchmal sollten Sie u. U. die Beendigung eines Programms erzwingen, wenn ein bestimmter Fehler erkannt wird. Verwenden Sie dazu die **exit**-Funktion. Weitere Informationen und ein Beispiel für die Verwendung der [exit](../c-runtime-library/reference/exit-exit-exit.md)-Funktion finden Sie in der *Laufzeitbibliotheksreferenz*.  

@@ -4,26 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - complex declarators
 - interpreting complex declarators
 ms.assetid: dd5b7019-c86d-4645-a5cc-21f834de6f4a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: ae753f1a483c05843797268641c4cc0c5d64c52a
-ms.contentlocale: de-de
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="interpreting-more-complex-declarators"></a>Interpretieren von komplexeren Deklaratoren
 Sie können einen beliebigen Deklarator in Klammern einschließen, um eine bestimmte Interpretation eines "komplexen Deklarators" anzugeben. Ein komplexer Deklarator ist ein Bezeichner, der durch mehr als einen Array-, Zeiger- oder Funktionsmodifizierer qualifiziert wird. Sie können verschiedene Kombinationen von Array-, Zeiger- und Funktionsmodifizierern auf einen einzelnen Bezeichner anwenden. Im Allgemeinen kann `typedef` verwendet werden, um Deklarationen zu vereinfachen. Weitere Informationen finden Sie unter [Typedef-Deklarationen](../c-language/typedef-declarations.md).  

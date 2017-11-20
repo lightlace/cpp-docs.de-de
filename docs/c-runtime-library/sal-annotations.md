@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - __z annotation
 - ref annotation
@@ -56,16 +54,15 @@ helpviewer_keywords:
 - ecount annotation
 - bcount annotation
 ms.assetid: 81893638-010c-41a0-9cb3-666fe360f3e0
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 91ed1da73fc6d104e89da9cd928d3d91cfb704f0
-ms.contentlocale: de-de
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="sal-annotations"></a>SAL-Anmerkungen
 Wenn Sie die Headerdateien der Bibliothek untersuchen, fallen Ihnen unter Umständen einige ungewöhnliche Anmerkungen auf, z. B. `_In_z` und `_Out_z_cap_(_Size)`. Dies sind Beispiele für die Microsoft-Quellcodeanmerkungssprache (Source-Code Annotation Language, SAL). Mit den darin verfügbaren Anmerkungen kann beschrieben werden, wie eine Funktion ihre Parameter verwendet, z. B. die getroffenen Annahmen und die Garantien für den Abschluss. In der Headerdatei \<sal.h> sind die Anmerkungen definiert.  

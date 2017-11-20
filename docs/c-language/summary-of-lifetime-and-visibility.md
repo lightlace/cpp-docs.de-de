@@ -4,26 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - lifetime, and visibility
 - visibility, identifiers
 ms.assetid: ea05a253-7658-482c-9a6b-abd71169c42d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 8e8c676a950979906bbc741679735ba452baec18
-ms.contentlocale: de-de
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>Zusammenfassung von Lebensdauer und Sichtbarkeit
 Die folgende Tabelle ist eine Zusammenfassung der Lebensdauer- und Sichtbarkeitseigenschaften der meisten Bezeichner. Die ersten drei Spalten geben die Attribute an, die die Lebensdauer und die Sichtbarkeit definieren. Ein Bezeichner mit den Attributen, die durch die ersten drei Spalten angegeben sind, weist die Lebensdauer und Sichtbarkeit auf, die in der vierten und fünften Spalte angezeigt werden. Allerdings deckt die Tabelle nicht alle möglichen Fälle ab. Weitere Informationen finden Sie unter [Speicherklassen](../c-language/c-storage-classes.md).  

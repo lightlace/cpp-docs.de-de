@@ -1,34 +1,8 @@
 ---
 redirect_url: /cpp/security/running-as-a-member-of-the-users-group
-caps.handback.revision: 17
+ms.openlocfilehash: 6873f5fc7f19bb446eaf20d98efb60114d4bfbee
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Ausf&#252;hren als Mitglied der Gruppe Benutzer
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Dieses Thema zeigt, wie Sie durch Konfigurieren von Windows\-Benutzerkonten als ein Mitglied der Gruppe Benutzer \(im Gegensatz zur Gruppe Administratoren\) die Sicherheit erhöhen und die Wahrscheinlichkeit einer Infektion mit bösartigem Code verringern.  
-  
-## Sicherheitsrisiken  
- Eine Ausführung als Administrator macht ihr System anfällig für Sicherheitsangriffe, z. B. durch "Trojaner" oder "Pufferüberlauf". Schon das Besuchen einer Internetsite als Administrator kann dem System schaden, da von einer Internetsite heruntergeladener, bösartiger Code den Computer angreifen kann.  Bei einem erfolgreichen Angriff erbt der Angreifer die Administratorrechte und kann anschließend z. B. alle Dateien löschen, die Festplatte formatieren oder ein neues Benutzerkonto mit Administratorzugriff erstellen.  
-  
-## Benutzergruppen ohne Administratorrechte  
- Die von Entwicklern normalerweise verwendeten Windows\-Benutzerkonten sollten entweder der Gruppe Benutzer oder der Gruppe Hauptbenutzer hinzugefügt werden.  Entwickler sollten zusätzlich der Debuggergruppe hinzugefügt werden.  Als Mitglied der Gruppe Benutzer können Sie Routineaufgaben ausführen, z. B. Programme ausführen und Internetsites besuchen, ohne dabei den Computer unnötigen Sicherheitsrisiken auszusetzen.  Als Mitglied der Gruppe Hauptbenutzer können Sie darüber hinaus weitere Aufgaben ausführen, z. B. das Installieren von Anwendungen, die Installation eines Druckers und einen Großteil der Operationen der Systemsteuerung.  Wenn Sie Verwaltungsaufgaben wie die Aktualisierung des Betriebssystems oder die Konfiguration von Systemparametern ausführen müssen, sollten Sie sich nur solange als Administrator anmelden, wie es für die Ausführung der Verwaltungsaufgabe erforderlich ist.  Alternativ kann der Windows\-Befehl **runas** verwendet werden, um bestimmte Anwendungen mit Verwaltungszugriff zu starten.  
-  
-## Sicherheitsrisiken für Kunden  
- Insbesondere für Entwickler ist es wichtig, nicht Mitglied der Gruppe Administratoren zu sein. Abgesehen vom Schutz der Entwicklungscomputer werden Entwickler auf diese Weise daran gehindert, unbeabsichtigt Anwendungscode zu schreiben, für dessen spätere Ausführung die Kunden Mitglieder der Gruppe Administratoren sein müssen.  Wenn bei der Entwicklung Code eingeführt wird, der Administratorzugriff erfordert, schlägt die Ausführung des Codes zur Laufzeit fehl, und Sie werden in einer Warnung darauf hingewiesen, dass die Kunden für die Fortführung der Anwendung als Administratoren angemeldet sein müssen.  
-  
-## Code, der Administratorrechte erfordert  
- Das Ausführen von bestimmtem Code erfordert Administratorzugriff.  Nach Möglichkeit sollten Sie Alternativen für diesen Code finden.  Beispiele für Codeoperationen, die Administratorzugriff erfordern:  
-  
--   Schreiben in geschützte Bereiche des Dateisystems, z. B. in das Verzeichnis Windows oder das Verzeichnis Programme  
-  
--   Schreiben in geschützte Bereiche der Registrierung, z. B. HKEY\_LOCAL\_MACHINE  
-  
--   Installieren von Assemblys im globalen Assemblycache \(GAC\)  
-  
- Im Allgemeinen sollten diese Aktionen auf Anwendungsinstallationsprogramme beschränkt werden.  Auf diese Weise kann der Benutzer den Administratorstatus nur vorübergehend verwenden.  
-  
-## Debuggen  
- Sie können jede Anwendung, die Sie innerhalb von Visual Studio starten \(systemeigen oder nicht verwaltet\), als Benutzer ohne Administratorrechte debuggen, indem Sie Mitglied der Debuggergruppe werden.  Dies schließt die Möglichkeit ein, sich an eine laufende Anwendung anzuhängen \(mit dem Befehl An den Prozess anhängen\).  Für das Debuggen von systemeigenen oder verwalteten Anwendungen, die von einem anderen Benutzer gestartet wurden, müssen Sie hingegen Mitglied der Gruppe Administratoren sein.  
-  
-## Siehe auch  
- [Empfohlene Vorgehensweisen bezüglich der Sicherheit](../top/security-best-practices-for-cpp.md)

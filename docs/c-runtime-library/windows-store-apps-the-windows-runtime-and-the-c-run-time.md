@@ -4,37 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 356d6d8d-76ee-4181-9ad0-6f24b2fede38
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
-ms.openlocfilehash: fc0ed4b45e04357fae46fb1391d55d184440f12d
-ms.contentlocale: de-de
-ms.lasthandoff: 06/01/2017
-
+ms.openlocfilehash: b332e392db2ca788d041cb73e73cf42cce85906c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="windows-store-apps-the-windows-runtime-and-the-c-run-time"></a>Windows Store-Apps, die Windows-Runtime und die C-Laufzeit
 [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)]-Apps sind in der Windows-Runtime ausgeführte Programme, die auf [!INCLUDE[win8](../build/reference/includes/win8_md.md)] ausgeführt werden.  Bei der Windows-Runtime handelt es sich um eine vertrauenswürdige Umgebung, die die Funktionen, Variablen und Ressourcen steuert, die für eine [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)]-App verfügbar sind. Standardmäßig verhindern Windows-Runtime-Einschränkungen jedoch die Verwendung der meisten CRT-Bibliotheksfunktionen (C Run-Time) in [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)]-Apps.  

@@ -4,44 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.io
-dev_langs:
-- C++
+f1_keywords: c.io
+dev_langs: C++
 helpviewer_keywords:
 - I/O routines, stream I/O
 - I/O [CRT], stream
 - stream I/O
 ms.assetid: dc7874d3-a91b-456a-9015-4748bb358217
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: f342fb51cf2a1e97afa28db710fbb966b31a386b
-ms.contentlocale: de-de
-ms.lasthandoff: 03/29/2017
-
+ms.openlocfilehash: 72772912097cf868538a496d3350d4708af5dc83
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="stream-io"></a>Stream-E/A
 Diese Funktionen verarbeiten die Daten in verschiedenen Größen und Formate, angefangen bei einzelnen Zeichen bis hin zu großen Datenstrukturen. Darüber hinaus verwenden sie Pufferung, wodurch die Leistung verbessert werden kann. Die Standardgröße eines Streamingpuffers beträgt 4 KB. Diese Routinen wirken sich nur auf Puffer aus, die von den Routinen der Laufzeitbibliothek erstellt wurden. Sie haben keine Auswirkungen auf die vom Betriebssystem erstellten Puffer.  
@@ -52,7 +33,7 @@ Diese Funktionen verarbeiten die Daten in verschiedenen Größen und Formate, an
 |-------------|---------|  
 |[clearerr](../c-runtime-library/reference/clearerr.md), [clearerr_s](../c-runtime-library/reference/clearerr-s.md)|Fehlerindikator für Stream löschen|  
 |[fclose](../c-runtime-library/reference/fclose-fcloseall.md)|Stream schließen|  
-|[_fcloseall](../c-runtime-library/reference/fclose-fcloseall.md)|Alle geöffneten Streams schließen, außer `stdin`, `stdout` und `stderr`|  
+|[_fcloseall](../c-runtime-library/reference/fclose-fcloseall.md)|Alle geöffneten Streams schließen, außer `stdin`, `stdout`und `stderr`|  
 |[_fdopen, wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)|Stream dem Dateideskriptor der geöffneten Datei zuordnen|  
 |[feof](../c-runtime-library/reference/feof.md)|Test für das Dateiende (End-of-File) im Stream|  
 |[ferror](../c-runtime-library/reference/ferror.md)|Test für Fehler im Stream|  
@@ -118,7 +99,7 @@ Diese Funktionen verarbeiten die Daten in verschiedenen Größen und Formate, an
   
  Jede Datei, die ausdrücklich entweder mit der `c` - oder der `n` -Kennzeichnung geöffnet wird, weist das für die Kennzeichnung spezifische Verhalten auf, und zwar unabhängig von der globalen Kennzeichnung für ein Commit/No-Commit.  
   
- Wenn Ihre Anwendung einen Stream nicht explizit schließt, wird der Stream beim Beenden des Programms automatisch geschlossen. Sie solltne einen Stream nach dem Beenden des Programms jedoch schließen, da die Anzahl der Streams, die gleichzeitig geöffnet sein können, begrenzt ist. Weitere Informationen zu dieser Begrenzung finden Sie unter [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md).  
+ Wenn Ihre Anwendung einen Stream nicht explizit schließt, wird der Stream beim Beenden des Programms automatisch geschlossen. Sie solltne einen Stream nach dem Beenden des Programms jedoch schließen, da die Anzahl der Streams, die gleichzeitig geöffnet sein können, begrenzt ist. Weitere Informationen zu dieser Begrenzung finden Sie unter [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md) .  
   
  Die Eingabe kann nur dann direkt auf die Ausgabe folgen, wenn zwischenzeitlich ein Aufruf von `fflush` oder einer dateipositionierenden Funktion (`fseek`, `fsetpos`oder `rewind`) erfolgt. Die Ausgabe kann ohne einen zwischenzeitlichen Aufruf einer dateipositionierenden Funktion auf die Eingabe folgen, wenn der Eingabevorgang auf das Ende der Datei trifft.  
   

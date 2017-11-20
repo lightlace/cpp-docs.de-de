@@ -5,22 +5,18 @@ keywords: vcpkg
 author: mikeblome
 ms.author: mblome
 ms.date: 05/30/2017
-ms.technology:
-- cpp-ide
+ms.technology: cpp-ide
 ms.tgt_pltfrm: windows
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 manager: ghogen
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ed0e4505b68c2ea198e0771b6301e685daa8662e
 ms.openlocfilehash: de5825e64abac210561cb8cbe0dc3320a740cbee
-ms.contentlocale: de-de
-ms.lasthandoff: 06/30/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-
 # <a name="vcpkg-c-package-manager-for-windows"></a>vcpkg: Ein C++-Paket-Manager für Windows 
 Vcpkg ist ein Befehlszeilen-Paket-Manager, der den Erwerb und die Installation von Drittanbieterbibliotheken für Windows erheblich vereinfacht. Wenn Ihr Projekt Drittanbieterbibliotheken verwendet, wird empfohlen, dass Sie vcpkg verwenden, um diese zu installieren. Vcpkg unterstützt sowohl Open Source- als auch proprietäre Bibliotheken. Alle Bibliotheken im öffentlichen vcpkg-Katalog wurden auf ihre Kompatibilität mit Visual Studio 2015 und Visual Studio 2017 getestet. Ab Mai 2017 sind über 238 Bibliotheken im Katalog vorhanden, und die C++-Community fügt fortlaufend weitere Bibliotheken hinzu.
 
@@ -158,4 +154,3 @@ Der Inhalt einer vcpkg-Instanz sieht folgendermaßen aus:
   **`--triplet <t>`** Geben Sie die Zielarchitektur-Dreiergruppe an. (Standard: `%VCPKG_DEFAULT_TRIPLET%`, siehe auch `vcpkg help triplet`)
 
   **`--vcpkg-root <path>`** Geben Sie das vcpkg-Stammverzeichnis an (Standard: `%VCPKG_ROOT%`).
-

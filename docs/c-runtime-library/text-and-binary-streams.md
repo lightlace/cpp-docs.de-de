@@ -4,26 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - binary streams
 - text streams
 ms.assetid: 57035e4a-955d-4e04-a560-fcf67ce68b4e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: fd9cfcc54e672d16b631662d9d41c02327ac2a57
-ms.contentlocale: de-de
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="text-and-binary-streams"></a>Text- und binäre Streams
 Ein Textstream besteht aus einer oder mehreren Textzeilen, die in eine textorientierte Anzeige geschrieben werden können, sodass sie gelesen werden können. Beim Lesen aus einem Textstream liest das Programm einen `NL` (Zeilenvorschub) am Ende jeder Zeile. Beim Schreiben in einen Textstream schreibt das Programm ein `NL`, um das Ende einer Zeile anzugeben. Um unterschiedliche Konventionen in Zielumgebungen für die Darstellung von Text in Dateien einander zuzuordnen, können die Bibliotheksfunktionen die Anzahl und Darstellungen der Zeichen ändern, die zwischen dem Programm und einem Textstream übertragen werden.  

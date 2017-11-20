@@ -4,26 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - concatenating strings
 - strings [C++], concatenating
 ms.assetid: 51486b1f-4b1e-4061-9add-1aa38c6cdb3c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 5974e192e32c612fe995cbc736e703f6168a3e8d
-ms.contentlocale: de-de
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="string-literal-concatenation"></a>Zeichenfolgenliteral-Verkettung
 Um Zeichenfolgenliterale zu bilden, die mehr als eine Zeile umfassen, können Sie die beiden Zeichenfolgen verketten. Geben Sie dazu einen umgekehrten Schrägstrich ein, und drücken Sie die EINGABETASTE. Der umgekehrte Schrägstrich bewirkt, dass der Compiler das folgende Zeilenumbruchszeichen ignoriert. Beispielweise ist das Zeichenfolgenliteral  

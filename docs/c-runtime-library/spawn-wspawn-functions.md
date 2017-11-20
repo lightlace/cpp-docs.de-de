@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apilocation:
@@ -29,8 +28,7 @@ f1_keywords:
 - _tspawnv
 - _tspawnle
 - wspawn
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _tspawnve function
 - _spawn functions
@@ -54,31 +52,15 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 1794395cd9e6684788458aad424336efbc421c0a
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 10de882f1d1942d2abec027da76aa40a201bfaad
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="spawn-wspawn-functions"></a>_spawn-, _wspawn-Funktionen
 Jede der `_spawn`-Funktionen erstellt einen neuen Prozess und führt ihn aus:  
@@ -99,7 +81,7 @@ Jede der `_spawn`-Funktionen erstellt einen neuen Prozess und führt ihn aus:
  Befehlszeilenargumente werden einzeln an die `_spawn`-Funktion übergeben. Dieses Suffix wird normalerweise verwendet, wenn die Anzahl der Parameter im neuen Prozess im Voraus bekannt ist.  
   
  `p`  
-Die  `PATH`-Umgebungsvariable wird verwendet, um die auszuführende Datei zu suchen.  
+ Die `PATH`-Umgebungsvariable wird verwendet, um die auszuführende Datei zu suchen.  
   
  `v`  
  `argv`: Array von Zeigern zu Befehlszeilenargumenten, wird an die `_spawn`-Funktion übergeben. Dieses Suffix wird normalerweise verwendet, wenn die Anzahl der Parameter im neuen Prozess variabel ist.  

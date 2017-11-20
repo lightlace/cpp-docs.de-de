@@ -4,26 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - converting floating point
 - floating-point conversion
 ms.assetid: 96804c8e-fa3b-4742-9006-0082ed9e57f2
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 4974edd25d0fcdd8d990b60459517bb1148c74ae
-ms.contentlocale: de-de
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="conversions-from-floating-point-types"></a>Konvertierungen von Gleitkommatypen
 Bei einem **float**-Wert, der in einen **double**- oder `long double`-Wert konvertiert wird, oder einem **double**-Wert, der in einen `long double`-Wert konvertiert wird, wird keine Änderung des Werts vorgenommen. Ein **double**-Wert, der in einen **float**-Wert konvertiert wird, wird exakt dargestellt, sofern dies möglich ist. Genauigkeit geht möglicherweise verloren, wenn der Wert nicht exakt dargestellt werden kann. Wenn das Ergebnis außerhalb des gültigen Bereichs liegt, ist das Verhalten nicht definiert. Weitere Informationen über den Bereich von Gleitkommatypen erhalten Sie unter [Grenzwerte für Gleitkommakonstanten](../c-language/limits-on-floating-point-constants.md).  

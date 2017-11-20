@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - union keyword [C], tags
 - enumeration tags
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - tags, structure tags
 - union keyword [C]
 ms.assetid: b4bda1d1-cb5e-4f60-ac2b-29af93d8a9a2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: ba0a5fcce92c0d8afe19e3b98d2ba20e1d22d6a4
-ms.contentlocale: de-de
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="name-spaces"></a>Namespaces
 Der Compiler richtet "Namespaces" ein, um zwischen den Bezeichnern zu unterscheiden, die für verschiedene Arten von Elementen verwendet werden. Die Namen innerhalb eines Namespace müssen einmalig sein, um Konflikte zu vermeiden, aber ein identischer Name kann in mehreren Namespaces vorhanden sein. Dies bedeutet, dass Sie den gleichen Bezeichner für zwei oder mehr unterschiedliche Elemente verwenden können, vorausgesetzt, dass sich die Elemente in unterschiedlichen Namespaces befinden. Der Compiler kann Verweise auf Grundlage des syntaktischen Kontexts des Bezeichners im Programm auflösen.  

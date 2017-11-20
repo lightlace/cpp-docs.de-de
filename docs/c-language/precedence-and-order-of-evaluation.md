@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - associativity of operators [C++]
 - precedence [C++], operators
 - data binding [C++], operator precedence
 - operators [C++], precedence
 ms.assetid: 201f7864-0c51-4c55-9d6f-39c5d013bcb0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 38dfcb75db204a501cb3669a5ba292037d7b7759
-ms.contentlocale: de-de
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="precedence-and-order-of-evaluation"></a>Vorrang und Auswertungsreihenfolge
 Die Rangfolge und Assoziativität von C-Operatoren beeinflussen das Gruppieren und die Auswertung von Operanden in Ausdrücken. Eine Operatorrangfolge ist nur sinnvoll, wenn andere Operatoren mit einer höheren oder niedrigerer Rangfolge vorhanden sind. Ausdrücke mit vorrangigen Operatoren werden zuerst ausgewertet. Rangfolge kann auch mit dem Wort "Bindung" beschrieben werden. Es wird davon ausgegangen, dass Operatoren mit einer höheren Priorität eine festere Bindung haben.  

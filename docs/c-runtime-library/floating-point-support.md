@@ -4,29 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.math
-dev_langs:
-- C++
+f1_keywords: c.math
+dev_langs: C++
 helpviewer_keywords:
 - floating-point numbers, math routines
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 60a2131b08b9f0ac119bdcd414f2d4d1761a9b6c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: HT
-ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
-ms.openlocfilehash: 3c30aa62fb24f1536c865b43e8147d030efc4c58
-ms.contentlocale: de-de
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="floating-point-support"></a>Gleitkommaunterstützung
 Die Microsoft C-Laufzeitbibliothek (C Runtime Library, CRT) stellt viele Gleitkommafunktionen in der mathematischen Bibliothek bereit, einschließlich der laut ISO C99 erforderlichen Funktionen. Diese Funktionen werden implementiert, damit die Sprache ebenso leistungsfähig wie korrekt ist. Da das korrekt gerundete Ergebnis nur sehr teuer errechenbar ist, wurden diese Funktionen dazu entworfen, eine starke Annäherung an das korrekt gerundete Ergebnis zu erzielen. In den meisten Fällen liegt das erzeugte Ergebnis innerhalb von +/-1 an der letzten Nachkommastelle des korrekt gerundeten Ergebnisses, obwohl die Ungenauigkeit auch größer ausfallen kann.  

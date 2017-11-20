@@ -81,7 +81,7 @@
 ### [A.13   Verwenden der flush-Direktive mit einer Liste](a-13-using-the-flush-directive-with-a-list.md)
 ### [A.14   Verwenden der flush-Direktive ohne eine Liste](a-14-using-the-flush-directive-without-a-list.md)
 ### [A.15   Ermitteln der Anzahl von verwendeten Threads](a-15-determining-the-number-of-threads-used.md)
-### [A.&16;   Verwenden von Locks](a-16-using-locks.md)
+### [A. 16   Verwenden von Locks](a-16-using-locks.md)
 ### [A.17   Verwenden von schachtelbaren Locks](a-17-using-nestable-locks.md)
 ### [A.18   Geschachtelte for-Direktiven](a-18-nested-for-directives.md)
 ### [A.19   Beispiele für falsche Verschachtelung von Arbeitsteilungsdirektiven](a-19-examples-showing-incorrect-nesting-of-work-sharing-directives.md)

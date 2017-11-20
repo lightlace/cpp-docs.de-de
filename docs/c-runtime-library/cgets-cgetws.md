@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -24,8 +23,7 @@ f1_keywords:
 - cgetws
 - _cgetws
 - _cgets
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _cgetws function
 - strings [C++], getting from console
@@ -34,31 +32,15 @@ helpviewer_keywords:
 - cgetws function
 - cgets function
 ms.assetid: 4d5e134a-58c3-4f62-befd-5d235b0212f4
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 57e2d4bf3c84c44917ccfea8ca6584f1c94f5200
-ms.contentlocale: de-de
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: ced8ca3ec392caf29cd3cbc41fe462bd24546f26
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cgets-cgetws"></a>_cgets, _cgetws
 Ruft eine Zeichenfolge aus der Konsole ab. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md).  
@@ -98,9 +80,9 @@ wchar_t *_cgetws(
 ## <a name="remarks"></a>Hinweise  
  Diese Funktionen lesen eine Zeichenfolge von der Konsole und speichern die Zeichenfolge und ihre Länge im Speicherort, auf den `buffer`zeigt. Der `buffer` -Parameter muss ein Zeiger auf ein Zeichenarray sein. `buffer[0]`, das erste Element des Arrays, muss die maximale Länge (in Zeichen) der zu lesenden Zeichenfolge enthalten. Das Array muss genügend Elemente enthalten, um die Zeichenfolge, ein abschließendes Nullzeichen ('\0') und zwei zusätzliche Bytes einzuschließen. Die Funktion liest die Zeichen bis zu einer Kombination aus Wagenrücklauf und Zeilenvorschub (CR-LF) oder bis die angegebene Anzahl von Zeichen gelesen ist. Die Zeichenfolge wird ab `buffer[2]`gespeichert. Wenn die Funktion ein CR-LF liest, speichert sie das NULL-Zeichen ('\0'). Die Funktion speichert dann im zweiten Arrayelement `buffer[1]`die tatsächliche Länge der Zeichenfolge.  
   
- Da alle Bearbeitungsschlüssel aktiv sind, wenn `_cgets` oder`_cgetws` in einem Konsolenfenster aufgerufen wird, wird durch Drücken der F3-TASTE der letzte eingegebene Eintrag wiederholt.  
+ Da alle Bearbeitungsschlüssel aktiv sind, wenn `_cgets` oder `_cgetws` in einem Konsolenfenster aufgerufen wird, wird durch Drücken der F3-TASTE der letzte eingegebene Eintrag wiederholt.  
   
- In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sicheren Entsprechungen dieser Funktionen aufgerufen werden. Weitere Informationen finden Sie unter [Secure Template Overloads (Sichere Vorlagenüberladungen)](../c-runtime-library/secure-template-overloads.md).  
+ In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sicheren Entsprechungen dieser Funktionen aufgerufen werden. Weitere Informationen finden Sie unter [Secure Template Overloads](../c-runtime-library/secure-template-overloads.md).  
   
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
