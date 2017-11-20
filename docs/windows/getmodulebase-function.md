@@ -1,47 +1,46 @@
 ---
-title: "GetModuleBase-Funktion | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::GetModuleBase"
-dev_langs: 
-  - "C++"
+title: GetModuleBase-Funktion | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::GetModuleBase
+dev_langs: C++
 ms.assetid: 123d3b14-2eaf-4e02-8dcd-b6567917c6a6
-caps.latest.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 30ff77fd81b63019f9c6c3bcfc8c6b676a1351f7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# GetModuleBase-Funktion
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ruft einen Zeiger [ModuleBase](../windows/modulebase-class.md) ab, der das Erhöhen und Verringern des Verweiszählers [RuntimeClass](../windows/runtimeclass-class.md) eines Objekts ermöglicht.  
+# <a name="getmodulebase-function"></a>GetModuleBase-Funktion
+Ruft eine [ModuleBase](../windows/modulebase-class.md) Zeiger, der zum Inkrementieren und Dekrementieren den Verweiszähler des ermöglicht eine [RuntimeClass](../windows/runtimeclass-class.md) Objekt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 inline Details::ModuleBase* GetModuleBase() throw()  
 ```  
   
-## Rückgabewert  
- Ein Zeiger auf ein `ModuleBase`\-Objekt.  
+## <a name="return-value"></a>Rückgabewert  
+ Ein Zeiger auf eine `ModuleBase` Objekt.  
   
-## Hinweise  
- Diese Funktion wird intern verwendet, um Objektverweisanzahlen zu inkrementieren und zu dekrementieren.  
+## <a name="remarks"></a>Hinweise  
+ Diese Funktion wird intern zum Inkrementieren und Dekrementieren verwendet Verweiszähler des Objekts.  
   
- Sie können diese Funktion verwenden, um von Verweiszählern zu steuern, indem Sie [ModuleBase::IncrementObjectCount](../windows/modulebase-incrementobjectcount-method.md) und [ModuleBase::DecrementObjectCount](../windows/modulebase-decrementobjectcount-method.md) aufgerufen werden.  
+ Sie können diese Funktion verwenden, zum Steuern der Verweiszähler durch Aufrufen von [modulebase:: Incrementobjectcount](../windows/modulebase-incrementobjectcount-method.md) und [modulebase:: Decrementobjectcount](../windows/modulebase-decrementobjectcount-method.md).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** implements.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [Microsoft::WRL\-Namespace](../windows/microsoft-wrl-namespace.md)
+## <a name="see-also"></a>Siehe auch  
+ [Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)

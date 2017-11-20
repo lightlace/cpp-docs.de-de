@@ -1,41 +1,39 @@
 ---
-title: "hash_set::generic_value (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::generic_value"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_value-Member [STL/CLR]"
+title: hash_set::generic_value (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::generic_value
+dev_langs: C++
+helpviewer_keywords: generic_value member [STL/CLR]
 ms.assetid: 48d6445f-d320-480a-9b35-c70b151a5a0b
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 81e5966d11fce79d0a63693ca08d112b2e17a2d7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::generic_value (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Der Typ eines Elements mit der generischen Schnittstelle für den Container.  
+# <a name="hashsetgenericvalue-stlclr"></a>hash_set::generic_value (STL/CLR)
+Der Typ eines Elements für die Verwendung mit der generischen Schnittstelle für den Container.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef GValue generic_value;  
 ```  
   
-## Hinweise  
- Der Typ beschreibt ein Objekt des Typs `GValue`, der den gespeicherten Elementwert zur Verwendung mit der generischen Schnittstelle für diese Vorlagencontainerklasse beschreibt.  
+## <a name="remarks"></a>Hinweise  
+ Der Typ beschreibt ein Objekt des Typs `GValue` , beschreibt die gespeicherten Elementwert für die Verwendung mit der generischen Schnittstelle für diese Vorlage Container-Klasse.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_hash_set_generic_value.cpp   
@@ -70,16 +68,19 @@ int main()
   
 ```  
   
-  **ein b c**  
- **ein b c**  
- **a**   
-## Anforderungen  
- **Header:** \<cliext\/hash\_set\>  
+```Output  
+a b c  
+a b c  
+a  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext Hash_set/>  
   
-## Siehe auch  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::generic\_container](../dotnet/hash-set-generic-container-stl-clr.md)   
- [hash\_set::generic\_iterator](../dotnet/hash-set-generic-iterator-stl-clr.md)   
- [hash\_set::generic\_reverse\_iterator](../dotnet/hash-set-generic-reverse-iterator-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set::generic_container (STL/CLR)](../dotnet/hash-set-generic-container-stl-clr.md)   
+ [hash_set::generic_iterator (STL/CLR)](../dotnet/hash-set-generic-iterator-stl-clr.md)   
+ [hash_set::generic_reverse_iterator (STL/CLR)](../dotnet/hash-set-generic-reverse-iterator-stl-clr.md)

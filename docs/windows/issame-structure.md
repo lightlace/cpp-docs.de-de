@@ -1,32 +1,30 @@
 ---
-title: "IsSame-Struktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "internal/Microsoft::WRL::Details::IsSame"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IsSame-Struktur"
+title: IsSame-Struktur | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: internal/Microsoft::WRL::Details::IsSame
+dev_langs: C++
+helpviewer_keywords: IsSame structure
 ms.assetid: 1eddbc3f-3cc5-434f-8495-e4477e1f868e
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1bdc19519367780444da5df3e1287b32634430c1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# IsSame-Struktur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Unterstützt die WRL\-Infrastruktur und nicht beabsichtigt, direkt im Code verwendet werden.  
+# <a name="issame-structure"></a>IsSame-Struktur
+Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <  
@@ -40,31 +38,31 @@ template <
 struct IsSame<T1, T1>;  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `T1`  
  Ein Typ.  
   
  `T2`  
- Andere geben ein.  
+ Ein anderer Typ.  
   
-## Hinweise  
- Testet, ob ein angegebener Typ identisch mit einem anderen bestimmten Typ ist.  
+## <a name="remarks"></a>Hinweise  
+ Überprüft, ob ein Typ angegebener ist identisch mit einem anderen angegebenen Typ.  
   
-## Member  
+## <a name="members"></a>Mitglieder  
   
-### Öffentliche Konstanten  
+### <a name="public-constants"></a>Öffentliche Konstanten  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[IsSame::value\-Konstante](../windows/issame-value-constant.md)|Gibt an, ob ein Typ der gleiche wie andere.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[IsSame::value-Konstante](../windows/issame-value-constant.md)|Gibt an, ob ein Typ mit einer anderen identisch ist.|  
   
-## Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `IsSame`  
   
-## Anforderungen  
- **Header:**  internal.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** internal.h  
   
- **Namespace:**  Microsoft::WRL::Details  
+ **Namespace:** Microsoft::WRL::Details  
   
-## Siehe auch  
- [Microsoft::WRL::Details\-Namespace](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Siehe auch  
+ [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

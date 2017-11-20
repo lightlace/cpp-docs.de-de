@@ -4,49 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4794
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4794
+f1_keywords: C4794
+dev_langs: C++
+helpviewer_keywords: C4794
 ms.assetid: badc9c36-fa1a-4fec-929b-7bfda7a7b79f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 8f73e3da504960f737f175fff4c9d7b07084833a
-ms.contentlocale: de-de
-ms.lasthandoff: 04/12/2017
-
+ms.openlocfilehash: cd5c04107afefca59b84059330b6b0b891b974e9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4794"></a>Compilerwarnung (Stufe 1) C4794
 Segment der Variable 'Variable' im lokalen Thread-Speicher von 'Abschnittsname' nach '.tls$' verschoben  
   
- Sie verwendet [#pragma Data_seg](../../preprocessor/data-seg.md) eine Tls-Variable in einem Abschnitt beginnt nicht mit .tls$ aufgenommen werden sollen.  
+ Sie haben [#pragma data_seg](../../preprocessor/data-seg.md) verwendet, um eine tls-Variable in einem Abschnitt zu positionieren, der nicht mit „.tls$“ beginnt.  
   
- Der .tls$*x* Abschnitt ist vorhanden, in der Objektdatei, wo [__declspec(thread)](../../cpp/thread.md) Variablen definiert werden. Durch diese Abschnitte ergibt sich ein „.tls“-Abschnitt in der EXE- oder DLL-Datei.  
+ Der Abschnitt „.tls$*x* “ befindet sich in der Objektdatei, wo die [__declspec(thread)](../../cpp/thread.md) -Variablen definiert werden. Durch diese Abschnitte ergibt sich ein „.tls“-Abschnitt in der EXE- oder DLL-Datei.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird C4794 generiert.  

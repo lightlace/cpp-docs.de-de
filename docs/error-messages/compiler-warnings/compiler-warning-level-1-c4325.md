@@ -1,51 +1,49 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4325 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4325"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4325"
+title: Compilerwarnung (Stufe 1) C4325 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4325
+dev_langs: C++
+helpviewer_keywords: C4325
 ms.assetid: 8127a08c-d626-481b-aa7b-04a3fdc9a9ec
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 5b5ce2e90705a1f3a899ef31313d1a402d2ecc04
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Compilerwarnung (Stufe 1) C4325
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**Attribute für Standardabschnitt '**   
- ***Abschnitt* ' werden ignoriert**  
+# <a name="compiler-warning-level-1-c4325"></a>Compilerwarnung (Stufe 1) C4325
+**Attribute für Standardabschnitt "**   
+ ***Abschnitt* "ignoriert**  
   
- Die Attribute eines Standardabschnitts dürfen nicht geändert werden.  Beispiel:  
+ Sie können die Attribute eines Abschnitts standard nicht ändern. Zum Beispiel:  
   
 ```  
 #pragma section(".sdata", long)  
 ```  
   
- Dadurch würde der Standardabschnitt `.sdata` überschrieben, in dem der Datentyp **short** zusammen mit dem Datentyp **long** verwendet wird.  
+ Dies würde zu überschreiben die `.sdata` Standardabschnitt verwendet die **kurze** Datentyp mit der **lange** -Datentyp.  
   
- Im Folgenden die Standardabschnitte, deren Attribute nicht geändert werden dürfen:  
+ Standard-Abschnitten enthalten, deren Attribute nicht geändert werden dürfen,  
   
--   .data  
+-   .Data  
   
--   .sdata  
+-   ".sdata"  
   
--   .bss  
+-   ".BSS"  
   
 -   .sbss  
   
--   .text  
+-   .Text erstellen  
   
 -   .const  
   
@@ -57,5 +55,5 @@ caps.handback.revision: 6
   
  Weitere Abschnitte können später hinzugefügt werden.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [section](../../preprocessor/section.md)

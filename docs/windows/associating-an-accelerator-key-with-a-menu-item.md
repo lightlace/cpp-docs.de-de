@@ -1,35 +1,35 @@
 ---
-title: "Associating an Accelerator Key with a Menu Item | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "menus, shortcut keys"
-  - "keyboard shortcuts, menu association"
+title: "Verknüpfen einer Zugriffstaste zu einem Menüeintrag | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- menus, shortcut keys
+- keyboard shortcuts, menu association
 ms.assetid: 15087bdd-3481-4ea9-9481-49f31845be70
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d6ee10aaf2486788ba468235b48597652c531c63
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Associating an Accelerator Key with a Menu Item
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="associating-an-accelerator-key-with-a-menu-item"></a>Verknüpfen einer Zugriffstaste mit einem Menüelement
+In vielen Fällen möchten Sie über ein Menüelement und eine Tastenkombination verfügen, um denselben Programmbefehl auszugeben. Hierzu weisen Sie dieselbe Ressourcen-ID zum Menüelement und zum Eintrag in der Zugriffstastentabelle Ihrer Anwendung zu. Sie können die Beschriftung des Menüelements ändern, um den Namen der Zugriffstaste anzuzeigen. Weitere Informationen über Menüelemente und Zugriffstasten finden Sie unter [Verknüpfen eines Menübefehls mit einer Zugriffstaste](../windows/associating-a-menu-command-with-an-accelerator-key.md).  
+  
 
-In vielen Fällen möchten Sie über ein Menüelement und eine Tastenkombination verfügen, um denselben Programmbefehl auszugeben.  Hierzu weisen Sie dieselbe Ressourcen\-ID zum Menüelement und zum Eintrag in der Zugriffstastentabelle Ihrer Anwendung zu.  Sie können die Beschriftung des Menüelements ändern, um den Namen der Zugriffstaste anzuzeigen.  Weitere Informationen über Menüelemente und Zugriffstasten finden Sie unter [Verknüpfen eines Menübefehls mit einer Zugriffstaste](../windows/associating-a-menu-command-with-an-accelerator-key.md).  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
-  
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  Win32  
   
-## Siehe auch  
- [Accelerator Editor](../mfc/accelerator-editor.md)   
- [Resource Editors](../mfc/resource-editors.md)
+## <a name="see-also"></a>Siehe auch  
+ [Zugriffstasten-Editor](../windows/accelerator-editor.md)   
+ [Ressourcen-Editor](../windows/resource-editors.md)

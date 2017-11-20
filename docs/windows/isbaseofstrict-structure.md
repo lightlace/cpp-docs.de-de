@@ -1,32 +1,30 @@
 ---
-title: "IsBaseOfStrict-Struktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "internal/Microsoft::WRL::Details::IsBaseOfStrict"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IsBaseOfStrict-Struktur"
+title: IsBaseOfStrict-Struktur | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: internal/Microsoft::WRL::Details::IsBaseOfStrict
+dev_langs: C++
+helpviewer_keywords: IsBaseOfStrict structure
 ms.assetid: 6fed7366-c8d4-4991-b4fb-43ed93f8e1bf
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fd3d232094ed9a56db9cd0e14776ca0ec9eca8c1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# IsBaseOfStrict-Struktur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Unterstützt die WRL\-Infrastruktur und nicht beabsichtigt, direkt im Code verwendet werden.  
+# <a name="isbaseofstrict-structure"></a>IsBaseOfStrict-Struktur
+Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <  
@@ -41,33 +39,33 @@ template <
 struct IsBaseOfStrict<Base, Base>;  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `Base`  
  Der Basistyp.  
   
  `Derived`  
  Der abgeleitete Typ.  
   
-## Hinweise  
- Testet, ob ein Typ Grundlage von anderen ist.  
+## <a name="remarks"></a>Hinweise  
+ Testet, ob ein Typ die Basis eines anderen ist.  
   
- Die erste Vorlage überprüft wird, ob ein Typ von einem Basistyp abgeleitet wird, der auch **true** oder **false** führen kann.  Die zweite Vorlage überprüft wird, ob ein Typ sich von abgeleitet wird, der immer **false** ergibt.  
+ Die erste Vorlage testet, ob ein Typ von einem Basistyp abgeleitet ist ergeben **"true"** oder **"false"**. Die zweite Vorlage testet, ob ein Typ von sich selbst zu abgeleitet ist, ergibt immer **"false"**.  
   
-## Member  
+## <a name="members"></a>Member  
   
-### Öffentliche Konstanten  
+### <a name="public-constants"></a>Öffentliche Konstanten  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[IsBaseOfStrict::value\-Konstante](../windows/isbaseofstrict-value-constant.md)|Gibt an, ob ein Typ Grundlage von anderen ist.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[IsBaseOfStrict::value-Konstante](../windows/isbaseofstrict-value-constant.md)|Gibt an, ob ein Typ die Basis eines anderen ist.|  
   
-## Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `IsBaseOfStrict`  
   
-## Anforderungen  
- **Header:**  internal.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** internal.h  
   
- **Namespace:**  Microsoft::WRL::Details  
+ **Namespace:** Microsoft::WRL::Details  
   
-## Siehe auch  
- [Microsoft::WRL::Details\-Namespace](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Siehe auch  
+ [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

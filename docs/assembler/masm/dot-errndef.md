@@ -1,37 +1,35 @@
 ---
-title: ".ERRNDEF"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - ".ERRNDEF"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".ERRNDEF directive"
+title: . ERRNDEF | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .ERRNDEF
+dev_langs: C++
+helpviewer_keywords: .ERRNDEF directive
 ms.assetid: 9fab57bb-02ad-486f-b46d-bcd23980f00d
-caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: cc421928deafc6c096133993f5fc7c1c7f24448a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# .ERRNDEF
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Generiert einen Fehler, wenn der *Name* nicht definiert wurde.  
+# <a name="errndef"></a>.ERRNDEF
+Wird ein Fehler generiert, wenn *Namen* wurde nicht definiert.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
 .ERRNDEF name [[, message]]  
 ```  
   
-## Siehe auch  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)

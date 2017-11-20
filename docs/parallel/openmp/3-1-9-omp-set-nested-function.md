@@ -1,42 +1,42 @@
 ---
-title: "3.1.9 omp_set_nested Function"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 3.1.9 Omp_set_nested-Funktion | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: e4afc3aa-bb96-4314-9849-fd5df5f437d9
-caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6a70406e42904c40ac81901ffd174991c0ebc54d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# 3.1.9 omp_set_nested Function
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die **omp\_set\_nested**\-Funktion aktiviert oder deaktiviert geschachtelten Parallelität.  Es wird folgendes Format verwendet:  
+# <a name="319-ompsetnested-function"></a>3.1.9 omp_set_nested-Funktion
+Die **Omp_set_nested** Funktion aktiviert oder deaktiviert die geschachtelten Parallelität. Es wird folgendes Format verwendet:  
   
 ```  
 #include <omp.h>  
 void omp_set_nested(int nested);  
 ```  
   
- Wenn Sie *geschachtelt sind,* wertet bis 0, wird geschachtelter Parallelität deaktiviert, der Standardwert ist, und geschachtelten parallelen Bereiche werden vom aktuellen Thread serialisiert und ausgeführt.  Wenn Sie *geschachtelt sind,* wertet auf einen Wert ungleich 0 \(null\), wird geschachtelter Parallelität aktiviert, und parallele Bereiche, die geschachtelt sind, stellen möglicherweise zusätzliche Threads bereit, um geschachtelte Teams zu bilden.  
+ Wenn *geschachtelte* ergibt 0 (null) und geschachtelte Parallelität deaktiviert ist, dies ist die Standardeinstellung und geschachtelten parallele Regionen serialisiert und vom aktuellen Thread ausgeführt werden. Wenn *geschachtelte* ergibt einen Wert ungleich NULL geschachtelten Parallelität aktiviert ist, und parallele Bereiche, die geschachtelt sind möglicherweise zusätzliche Threads zum Bilden von geschachtelten Teams bereitstellen.  
   
- Diese Funktion besitzt die Auswirkungen, die oben beschriebenen wenn sie von einem Teil des Programms aufgerufen wird, in dem die **omp\_in\_parallel**\-Funktion \(null\) zurückgibt.  Wenn sie für einen Teil des Programms aufgerufen wird, in dem die **omp\_in\_parallel**\-Funktion einen Wert ungleich 0 \(null\) zurückgibt, ist das Verhalten dieser Funktion nicht definiert.  
+ Diese Funktion wirkt sich die oben beschriebenen, beim Aufrufen durch einen Teil des Programms, in dem die **Omp_in_parallel** Funktion gibt 0 (null) zurück. Wenn sie von einem Teil des Programms aufgerufen wird, in dem die **Omp_in_parallel** Funktion gibt einen Wert ungleich NULL zurück, das Verhalten dieser Funktion ist nicht definiert.  
   
- Dieser Aufruf hat Vorrang vor der **OMP\_NESTED** Umgebungsvariablen.  
+ Dieser Aufruf hat Vorrang gegenüber der **OMP_NESTED** -Umgebungsvariablen angegeben.  
   
- Wenn geschachtelter Parallelität aktiviert ist, wird die Anzahl der Threads, die verwendet werden, um geschachtelte Bereiche parallele Ausführen Implementierung\-definiert.  Daher werden OpenMP\-kompatiblen Implementierungen ermöglicht, dass parallele geschachtelte Bereiche zu serialisieren, auch wenn geschachtelter Parallelität aktiviert ist.  
+ Wenn geschachtelte Parallelität aktiviert ist, wird die Anzahl der Threads, die zum Ausführen von geschachtelten paralleler Regions Implementierung definiert. Daher dürfen OpenMP-kompatible Implementierung geschachtelten parallele Regionen zu serialisieren, auch wenn geschachtelte Parallelität aktiviert ist.  
   
-## Querverweise:  
+## <a name="cross-references"></a>Referenzen:  
   
--   **OMP\_NESTED** Umgebungsvariablen finden [Abschnitt 4.4](../../parallel/openmp/4-4-omp-nested.md) auf Seite 49.  
+-   **OMP_NESTED** Umgebung-Variable verwenden, finden Sie unter [Abschnitt 4.4](../../parallel/openmp/4-4-omp-nested.md) auf Seite "49".  
   
--   **omp\_in\_parallel**\-Funktion finden [3.1.6 Abschnitt](../../parallel/openmp/3-1-6-omp-in-parallel-function.md) auf Seite 38.
+-   **Omp_in_parallel** funktionieren, finden Sie unter [Abschnitt 3.1.6](../../parallel/openmp/3-1-6-omp-in-parallel-function.md) auf Seite 38.

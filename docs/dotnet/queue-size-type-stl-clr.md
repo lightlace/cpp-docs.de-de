@@ -1,41 +1,39 @@
 ---
-title: "queue::size_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::size_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size_type-Member [STL/CLR]"
+title: 'Queue:: size_type (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::size_type
+dev_langs: C++
+helpviewer_keywords: size_type member [STL/CLR]
 ms.assetid: 9b24c931-cc23-4d25-a29f-950ffff762ef
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a9cdc1bccc00e22d980429435ca460f6ffcce638
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# queue::size_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Der Typ eines Abstands mit Vorzeichen zwischen zwei Element.  
+# <a name="queuesizetype-stlclr"></a>queue::size_type (STL/CLR)
+Der Typ eines Abstands mit Vorzeichen zwischen zwei Elementen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef int size_type;  
 ```  
   
-## Hinweise  
- Der Typ beschreibt eine nicht negative Elementanzahl.  
+## <a name="remarks"></a>Hinweise  
+ Der Typ beschreibt ein nicht negativer Elementanzahl.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_queue_size_type.cpp   
@@ -66,13 +64,16 @@ int main()
   
 ```  
   
-  **ein b c**  
-**Größenunterschied \= 2**   
-## Anforderungen  
- **Header:** \<cliext\/Warteschlange\>  
+```Output  
+ a b c  
+size difference = 2  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext bzw. einer neuen Warteschlange >  
   
-## Siehe auch  
- [queue](../dotnet/queue-stl-clr.md)   
- [queue::empty](../dotnet/queue-empty-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Warteschlange (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [queue::empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md)

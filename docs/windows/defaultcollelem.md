@@ -1,32 +1,30 @@
 ---
-title: "defaultcollelem | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.defaultcollelem"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "defaultcollelem attribute"
+title: Defaultcollelem | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.defaultcollelem
+dev_langs: C++
+helpviewer_keywords: defaultcollelem attribute
 ms.assetid: 3dbbd293-8b83-4f70-a36b-64cc1d0b6713
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8bfb6fb41e61fded3994beb6c9a31fd7661c5e2f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# defaultcollelem
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Wird für Visual Basic\-Code\-Optimierung.  
+# <a name="defaultcollelem"></a>defaultcollelem
+Zur Optimierung der Visual Basic-Code verwendet.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -34,11 +32,11 @@ Wird für Visual Basic\-Code\-Optimierung.
   
 ```  
   
-## Hinweise  
- Das Attribut **defaultcollelem** C\+\+ verfügt über die gleichen Funktionen wie das [defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792) MIDL\-Attribut.  
+## <a name="remarks"></a>Hinweise  
+ Die **Defaultcollelem** C++-Attribut hat die gleiche Funktionalität wie die [Defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792) MIDL-Attribut.  
   
-## Beispiel  
- Im folgenden Code wird eine Schnittstellenmethode mit dem **defaultcollelem**\-Attributs an:  
+## <a name="example"></a>Beispiel  
+ Der folgende Code zeigt die Verwendung einer Schnittstelle Methode der **Defaultcollelem** Attribut:  
   
 ```  
 // cpp_attr_ref_defaultcollelem.cpp  
@@ -55,20 +53,19 @@ __interface IMyForm
 };  
 ```  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
 |**Betrifft**|Schnittstellenmethode|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Keine|  
+|**Ungültige Attribute**|Keine|  
   
- Weitere Informationen finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [IDL-Attribute](../windows/idl-attributes.md)   
+ [Methodenattribut](../windows/method-attributes.md)   

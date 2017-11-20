@@ -1,49 +1,47 @@
 ---
-title: "deque::resize (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::resize"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "resize-Member [STL/CLR]"
+title: 'deque:: Resize (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::resize
+dev_langs: C++
+helpviewer_keywords: resize member [STL/CLR]
 ms.assetid: c83f3c57-38b3-4706-a124-59bafbf88484
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 915a4dd77f4a4dd1fedb90c60f10ac19c206af1e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# deque::resize (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ändert die Anzahl der Elemente.  
+# <a name="dequeresize-stlclr"></a>deque::resize (STL/CLR)
+Ändert die Anzahl der Elemente an.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void resize(size_type new_size);  
 void resize(size_type new_size, value_type val);  
 ```  
   
-#### Parameter  
- new\_size  
+#### <a name="parameters"></a>Parameter  
+ new_size  
  Neue Größe der gesteuerten Sequenz.  
   
- val  
- Wert des Auffüllungselements.  
+ Val  
+ Der Wert des Elements Auffüllung.  
   
-## Hinweise  
- Die Memberfunktionen beide sicherstellen, dass [deque::size](../dotnet/deque-size-stl-clr.md)`()` künftig `new_size` zurückgibt.  Wenn die gesteuerte Sequenz länger machen muss, wird die erste Memberfunktion Elemente mit Wert `value_type()` an, während die zweite Memberfunktion Elemente mit Wert `val` anzufügen.  So die gesteuerte Sequenz kürzer effektiv ausführen, Zeit Löschen beiden Memberfunktionen, das das letzte Element [deque::size](../dotnet/deque-size-stl-clr.md)`() -` `new_size` bildet.  Sie verwenden sie, um, dass die gesteuerte Sequenz Größe `new_size` verfügt, entweder durch Einschränkung Innenabstand oder sicherzustellen die aktuelle gesteuerte Sequenz.  
+## <a name="remarks"></a>Hinweise  
+ Die beiden Memberfunktionen sicher, dass [deque:: Size (STL/CLR)](../dotnet/deque-size-stl-clr.md) `()` künftig gibt `new_size`. Wenn die gesteuerte Sequenz verlängert werden muss, fügt die erste Memberfunktion Elemente mit dem Wert `value_type()` an, während die zweite Memberfunktion Elemente mit dem Wert `val` anfügt. Um die gesteuerte Sequenz kürzere zu machen, beide Memberfunktionen effektiv das letzte Element löschen [deque:: Size (STL/CLR)](../dotnet/deque-size-stl-clr.md) `() -` `new_size` Zeiten. Sie können damit stellen Sie sicher, dass die kontrollierte Sequenz Größe hat `new_size`, indem Sie verkürzen oder Auffüllen von der aktuellen gesteuerten Sequenz.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_deque_resize.cpp   
@@ -74,17 +72,20 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **0 0 0 0**  
-**size\(\) \= 0**  
- **x x x x x**   
-## Anforderungen  
- **Header:** \<cliext\/Doppelschlange\>  
+```Output  
+size() = 0  
+ 0 0 0 0  
+size() = 0  
+ x x x x x  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/doppelschlange >  
   
-## Siehe auch  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::clear](../dotnet/deque-clear-stl-clr.md)   
- [deque::erase](../dotnet/deque-erase-stl-clr.md)   
- [deque::insert](../dotnet/deque-insert-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque:: Clear (STL/CLR)](../dotnet/deque-clear-stl-clr.md)   
+ [deque:: Erase (STL/CLR)](../dotnet/deque-erase-stl-clr.md)   
+ [deque::insert (STL/CLR)](../dotnet/deque-insert-stl-clr.md)

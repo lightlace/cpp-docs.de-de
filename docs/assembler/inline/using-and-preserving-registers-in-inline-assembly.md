@@ -1,47 +1,47 @@
 ---
-title: "Verwenden und Beibehalten von Registern in der Inlineassembly | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__asm-Schlüsselwort [C++], Registerwerte"
-  - "Inlineassembly, Register"
-  - "Beibehalten von Registern"
-  - "Register, Inlineassembly"
+title: Verwenden und Beibehalten von Registern in der Inlineassembly | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- __asm keyword [C++], register values
+- inline assembly, registers
+- registers, inline assembly
+- preserving registers
 ms.assetid: dbcd7360-6f3e-4b22-9ee2-9f65ca6f2543
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: bc9b874535e2169a1ca16bb934fb4d13029c46e6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Verwenden und Beibehalten von Registern in der Inlineassembly
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Microsoft\-spezifisch  
- Im Allgemeinen sollten Sie nicht davon ausgehen, dass ein Register über einen angegebenen Wert verfügt, wenn ein `__asm`\-Block beginnt.  Registerwerte nicht garantiert werden, über separate `__asm` Blöcke beibehalten werden muss.  Wenn Sie einen Block von Inlinecodes beenden und andere beginnen, können Sie nicht auf die Register im zweiten Block verlassen, um ihre Werte aus dem ersten Block festzulegen.  Ein `__asm`\-Block erbt, welche Registerwerte in normalen Programmablauf resultieren.  
+# <a name="using-and-preserving-registers-in-inline-assembly"></a>Verwenden und Beibehalten von Registern in der Inlineassembly
+## <a name="microsoft-specific"></a>Microsoft-spezifisch  
+ Im Allgemeinen sollten Sie nicht davon ausgehen, dass einen bestimmten Wert ein Registers haben bei einem `__asm` Block beginnt. Registerwerte sind nicht unbedingt über Separate beibehalten werden `__asm` blockiert. Wenn Sie einen Block von Inlinecode zu beenden und starten eine andere, können nicht Sie auf die für den zweiten Block, behalten ihre Werte aus den ersten Block-Register verlassen. Ein `__asm` Block erbt alle von Ihnen gewünschten Werte Ergebnis aus dem normalen Fluss des Steuerelements registrieren.  
   
- Wenn Sie die `__fastcall` \- Aufrufkonvention verwenden, führt der Compiler Funktionsargumente in Registern statt auf des Stapels.  Dies kann Probleme mit Funktionen `__asm` Blöcke erstellen, da keine Möglichkeit hat, eine Funktion zu übermitteln, welcher Parameter ist in der Register.  Wenn die Funktion einen Fall EAX Parameter in sofort zu empfangen und etwas Anderes an EAX speichert, ist der erste Parameter verloren.  Außerdem müssen Sie im ECX\-Register in jeder Funktion beibehalten, die mit `__fastcall`deklariert ist.  
+ Bei Verwendung der `__fastcall` -Aufrufkonvention, übergibt der Compiler Funktionsargumente in Registern anstelle von auf dem Stapel. Dies kann Probleme verursachen, in Funktionen mit `__asm` blockiert, da eine Funktion keine Möglichkeit festzustellen weist, welche Parameter in der Registrierung ist. Wenn die Funktion geschieht, um einen Parameter in EAX zu erhalten und sofort etwas in EAX speichert, ist der ursprünglichen Parameter verloren. Darüber hinaus müssen Sie das ECX-Register in jeder Funktion deklariert mit beibehalten `__fastcall`.  
   
- Um solche Register Konflikte zu vermeiden, verwenden Sie nicht die `__fastcall` Konvention für Funktionen die einen `__asm`\-Block enthalten.  Wenn Sie die Konvention `__fastcall` global mit der Compileroption \/Gr\- angeben, deklarieren Sie alle Funktionen, die einen `__asm`\-Block mit `__cdecl` oder `__stdcall`enthält.  \(Das `__cdecl`\-Attribut weist den Compiler an, um die C\-Aufrufkonvention für diese Funktion zu verwenden.\) Wenn Sie nicht mit \/Gr kompilieren, sollten Sie die Funktion mit dem `__fastcall`\-Attribut zu deklarieren.  
+ Um solche Register-Konflikte zu vermeiden, verwenden Sie nicht die `__fastcall` Konvention für Funktionen enthalten eine `__asm` Block. Bei Angabe der `__fastcall` Konvention Global mit der Compileroption/GR, deklarieren Sie jede Funktion, ein `__asm` -block mit `__cdecl` oder `__stdcall`. (Die `__cdecl` Attribut teilt dem Compiler mit der C-Aufrufkonvention für diese Funktion zu verwenden.) Wenn Sie nicht mit/GR kompilieren, zu vermeiden, deklarieren die Funktion mit dem `__fastcall` Attribut.  
   
- Wenn funktioniert die Verwendung von `__asm` , um Assemblersprache in C\/C\+\+ geschrieben werden soll, muss keine Sie die EAX\-, EBX\-, ECX\-, EDX\-, ESI\- oder EDI\-Register beizubehalten.  Beispielsweise wird im POWER2.C\-Beispiel in [Schreiben\-Funktionen mit Inlineassembly](../../assembler/inline/writing-functions-with-inline-assembly.md), behält die `power2`\-Funktion nicht den Wert im EAX\-Register bei.  Die Verwendung dieser Register auswirken, da die Qualität des Codes für diese Register nicht verwendet werden kann, um Werte zu `__asm` Blöcke zu speichern.  Darüber hinaus indem Sie EBX, oder ESI EDI im Inlineassemblycode verwenden, Erzwingen von der Compiler diese Register in der Funktion einleitung und Epilog zu speichern und wiederherstellen.  
+ Bei Verwendung `__asm` um Assemblysprache in C/C++-Funktionen zu schreiben, müssen Sie nicht die Register EAX, EBX, ECX, EDX, ESI oder EDI-beibehalten. Beispielsweise ist in der POWER2. C#-Beispiel in [Schreiben von Funktionen mit der Inlineassembly](../../assembler/inline/writing-functions-with-inline-assembly.md)die `power2` Funktion nicht den Wert in EAX-Register beibehalten. Verwenden diese Register wirkt sich jedoch der Codequalität, da die Zuweisung registrieren sie, zum Speichern von Werten verwenden kann `__asm` blockiert. Darüber hinaus zwingen mithilfe EBX, ESI oder EDI in Inline-Assemblycode, den Compiler, speichern und diese Registern in der funktionsprolog und Epilog wiederherstellen.  
   
- Sie können andere Register, die Sie beibehalten werden \(z DS, kennzeichnet ss, SP, BP\) für Register und den Bereich des `__asm`\-Blocks verwenden.  Sie sollten die ESP\- EBP\-Register und beibehalten, es sei denn, Sie einige Grund sie zu ändern \(Stapel wechseln, z\).  Siehe auch [Optimieren der Inlineassembly](../../assembler/inline/optimizing-inline-assembly.md).  
+ Sie sollten andere Register, die Sie (z. B. DS, SS SP, BP und Flags Register verwenden) beibehalten, für den Bereich des der `__asm` Block. Sie sollten die ESP und im EBP-Register beibehalten, es sei denn, Sie aus irgendeinem Grund (um z. B. Stapel, wechseln Sie) geändert haben. Siehe auch [Optimieren der Inlineassembly](../../assembler/inline/optimizing-inline-assembly.md).  
   
- Eine SSE\-Typen erfordern die Acht BYTE\-Stapel erzwingen und die Ausrichtung der Compiler dynamischen Stapel Ausrichtung Code auszugeben.  Um die lokalen Variablen und Funktionsparameter nach der Ausrichtung zuzugreifen, wartet der Compiler zwei Framezeiger.  Wenn der Compiler auslassung Framezeiger \(FPO\) ausführt, verwendet er EBP und ESP.  Wenn der Compiler keine FPO ausführt, verwendet er EBX und EBP.  Um Code wird ordnungsgemäß zu gewährleisten, ändern Sie nicht EBX in asm\-Code wenn die Funktion dynamische Stapel benötigt die Ausrichtung der Framezeiger ändern könnte.  Entweder verschieben Sie die Acht BYTE ausgerichteten Typen aus der Funktion oder vermeiden Sie mithilfe EBX.  
+ Einige SSE-Typen erfordern Ausrichtung von 8-Byte-Stapel, der Compiler zum Ausgeben von dynamischen Stapel-Ausrichtung Code gezwungen wird. Um die lokalen Variablen und Parameter der Funktion nach der die Ausrichtung auf zugreifen zu können, verwaltet der Compiler zwei Framezeiger.  Wenn der Compiler Frame Zeiger Auslassung (FPO) ausführt, wird als auch ESP EBP verwendet.  Wenn der Compiler keine FPO ausführt, wird EBX und im EBP verwendet. Um sicherzustellen, dass Code ändern ausgeführt wird ordnungsgemäß, Sie nicht EBX Asm-Code, wenn die Funktion dynamischer Stapel-Ausrichtung benötigt, wie die Frame-Pointer geändert werden kann. Verschieben Sie die Typen der 8-Byte-ausgerichteten Rücksprung aus der Funktion oder zu vermeiden Sie, EBX verwenden.  
   
 > [!NOTE]
->  Wenn der Inlineassemblycode das Richtungs flag mithilfe der std\- oder CLD\-Anweisungen ändert, müssen Sie das Flag auf den ursprünglichen Wert zurücksetzen.  
+>  Wenn die Inline-Assemblycode das Richtungsflag mithilfe der Anweisungen STD oder CLD ändert, müssen Sie das Flag auf den ursprünglichen Wert wiederherstellen.  
   
- **Microsoft ENDES bestimmten**  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Inlineassembler](../../assembler/inline/inline-assembler.md)

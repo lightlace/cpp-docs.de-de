@@ -1,32 +1,30 @@
 ---
-title: ".LISTIF"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - ".LISTIF"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".LISTIF directive"
+title: . LISTIF | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .LISTIF
+dev_langs: C++
+helpviewer_keywords: .LISTIF directive
 ms.assetid: 1189ff45-1fa1-4035-a74f-70c2c62b06fd
-caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: edfe5aebc3ccbdc4893d12013dc3fdf063f7ddcc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# .LISTIF
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Startet Listen von Anweisungen in falschen bedingte Blöcke.  
+# <a name="listif"></a>.LISTIF
+Startet eine Liste der Anweisungen in "false" bedingte Blöcke.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -34,8 +32,8 @@ Startet Listen von Anweisungen in falschen bedingte Blöcke.
   
 ```  
   
-## Hinweise  
- Identisch mit [.LFCOND](../../assembler/masm/dot-lfcond.md).  
+## <a name="remarks"></a>Hinweise  
+ Identisch mit [. LFCOND](../../assembler/masm/dot-lfcond.md).  
   
-## Siehe auch  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)

@@ -1,32 +1,31 @@
 ---
-title: "Berechnen der erforderlichen Werte | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Hilfsfunktionen, Berechnen der erforderlichen Werte"
+title: Berechnen der erforderlichen Werte | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: helper functions, calculating necessary values
 ms.assetid: 4f037d0f-881a-4a48-a9d2-9f8872dfccb7
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6351de62aa9141d98c5afabe1425d4586ca54371
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Berechnen der erforderlichen Werte
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Zwei entscheidende Informationen müssen von der Hilfsfunktion für verzögertes Laden berechnet werden.  Zur Berechnung dieser Informationen befinden sich in der Headerdatei **delayimp.h** zwei Inlinefunktionen.  
+# <a name="calculating-necessary-values"></a>Berechnen der erforderlichen Werte
+Zwei wichtige Angaben müssen durch die Verzögerung Hilfsroutine berechnet werden soll. Zu diesem Zweck stehen zwei Inlinefunktionen in delayhlp.cpp zum Berechnen dieser Informationen.  
   
--   Die erste berechnet den Index des aktuellen Imports in die drei verschiedenen Tabellen \(Importadressentabelle \(IAT\), gebundene Importadressentabelle \(BIAT\) und ungebundene Importadressentabelle \(UIAT\)\).  
+-   Die erste berechnet den Index des aktuellen Imports in die drei verschiedenen Tabellen (Local Address Table (IAT), gebundene Importadresstabelle (BIAT) und ungebundene Importadresstabelle (UIAT) importiert).  
   
--   Die zweite zählt die Anzahl der Importe in einer gültigen Importadressentabelle \(IAT\).  
+-   Die zweite zählt die Anzahl von "Imports" in eine gültige IAT.  
   
 ```  
 // utility function for calculating the index of the current import  
@@ -50,5 +49,5 @@ CountOfImports(PCImgThunkData pitdBase) {
     }  
 ```  
   
-## Siehe auch  
- [Understanding the Helper Function](assetId:///6279c12c-d908-4967-b0b3-cabfc3e91d3d)
+## <a name="see-also"></a>Siehe auch  
+ [Die Hilfsfunktion](understanding-the-helper-function.md)

@@ -1,48 +1,47 @@
 ---
-title: "ICommandTextImpl::GetCommandText | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "GetCommandText"
-  - "ICommandTextImpl.GetCommandText"
-  - "ICommandTextImpl::GetCommandText"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetCommandText-Methode"
+title: 'ICommandTextImpl:: Getcommandtext | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- GetCommandText
+- ICommandTextImpl.GetCommandText
+- ICommandTextImpl::GetCommandText
+dev_langs: C++
+helpviewer_keywords: GetCommandText method
 ms.assetid: 0f8da470-b1c3-4573-974f-1acc111e3984
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: df72d8d6e5c3c5c85d1216bf321216aef515a1d8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# ICommandTextImpl::GetCommandText
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Gibt den Textbefehlssatz vom letzten Aufruf der [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md) zurück.  
+# <a name="icommandtextimplgetcommandtext"></a>ICommandTextImpl::GetCommandText
+Gibt den Text Befehlssatz, der vom letzten Aufruf von [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
-      STDMETHOD(GetCommandText)(   
-   GUID * pguidDialect,   
-   LPOLESTR * ppwszCommand    
+      STDMETHOD(GetCommandText)(   
+   GUID * pguidDialect,   
+   LPOLESTR * ppwszCommand    
 );  
 ```  
   
-#### Parameter  
- Siehe [ICommandText::GetCommandText](https://msdn.microsoft.com/en-us/library/ms709825.aspx) in der *OLE* DB\-Programmierreferenz.  Der *pguidDialect*\-Parameter wird standardmäßig ignoriert.  
+#### <a name="parameters"></a>Parameter  
+ Finden Sie unter [ICommandText::GetCommandText](https://msdn.microsoft.com/en-us/library/ms709825.aspx) in der *OLE DB Programmer's Reference*. Die *PguidDialect* Parameter ist standardmäßig ignoriert.  
   
-## Anforderungen  
- **Header:** atldb.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** „atldb.h“  
   
-## Siehe auch  
- [ICommandTextImpl\-Klasse](../../data/oledb/icommandtextimpl-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [ICommandTextImpl-Klasse](../../data/oledb/icommandtextimpl-class.md)

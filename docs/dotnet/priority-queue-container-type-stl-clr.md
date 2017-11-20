@@ -1,41 +1,39 @@
 ---
-title: "priority_queue::container_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::container_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "container_type-Member [STL/CLR]"
+title: 'priority_queue:: container_type (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::container_type
+dev_langs: C++
+helpviewer_keywords: container_type member [STL/CLR]
 ms.assetid: 97d79791-53cb-48f9-a139-69502517569f
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 83041a535ae1b7e07fecf2dc20e053fa633783d2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# priority_queue::container_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="priorityqueuecontainertype-stlclr"></a>priority_queue::container_type (STL/CLR)
 Der Typ des zugrunde liegenden Containers.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef Container value_type;  
 ```  
   
-## Hinweise  
- Der Typ ist ein Synonym für den Vorlagenparameter `Container`.  
+## <a name="remarks"></a>Hinweise  
+ Der Type stellt ein Synonym für den Vorlagenparameter `Container` dar.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_priority_queue_container_type.cpp   
@@ -60,12 +58,15 @@ int main()
   
 ```  
   
-  **c ein b**   
-## Anforderungen  
- **Header:** \<cliext\/Warteschlange\>  
+```Output  
+c a b  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext bzw. einer neuen Warteschlange >  
   
-## Siehe auch  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [priority\_queue::get\_container](../dotnet/priority-queue-get-container-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::get_container (STL/CLR)](../dotnet/priority-queue-get-container-stl-clr.md)

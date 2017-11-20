@@ -1,41 +1,39 @@
 ---
-title: "priority_queue::pop (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::pop"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pop-Member [STL/CLR]"
+title: 'priority_queue:: POP (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::pop
+dev_langs: C++
+helpviewer_keywords: pop member [STL/CLR]
 ms.assetid: d363b3f1-247b-466a-a300-c5918b0dfd4e
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: acae74ab615a85cbf76050c5c7179242d7bcbf4f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# priority_queue::pop (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Entfernt das höchste\-proirity Element.  
+# <a name="priorityqueuepop-stlclr"></a>priority_queue::pop (STL/CLR)
+Entfernt das Element der höchsten Proirity.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void pop();  
 ```  
   
-## Hinweise  
- Die Memberfunktion entfernt das höchste Element der gesteuerten Sequenz, die nicht leer sein muss.  Sie verwenden sie, um die Warteschlange von einem Element an zurück zu verkürzen.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion entfernt die höchste Priorität-Element der gesteuerten Sequenz, die nicht leer sein darf. Sie verwenden es, um indem Sie ein Element auf der Rückseite die Warteschlange zu verkürzen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_priority_queue_pop.cpp   
@@ -65,13 +63,16 @@ int main()
   
 ```  
   
-  **c ein b**  
- **a b**   
-## Anforderungen  
- **Header:** \<cliext\/Warteschlange\>  
+```Output  
+c a b  
+b a  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext bzw. einer neuen Warteschlange >  
   
-## Siehe auch  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [priority\_queue::push](../dotnet/priority-queue-push-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::push (STL/CLR)](../dotnet/priority-queue-push-stl-clr.md)

@@ -1,71 +1,72 @@
 ---
-title: "Adding Controls to a Dialog Causes the Dialog to No Longer Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controls [C++], troubleshooting"
-  - "common controls, troubleshooting"
-  - "troubleshooting controls"
-  - "dialog boxes, troubleshooting"
-  - "dialog box controls, troubleshooting"
-  - "InitCommonControls"
+title: "Hinzufügen von Steuerelementen zu einem Dialogfeld führt dazu, dass das Dialogfeld nicht mehr funktioniert | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- controls [C++], troubleshooting
+- common controls, troubleshooting
+- troubleshooting controls
+- dialog boxes, troubleshooting
+- dialog box controls, troubleshooting
+- InitCommonControls
 ms.assetid: b2dd4574-ea59-4343-8d65-b387cead5da6
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fb068822956508b747b8c97d7cd46e5bc19e8e58
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Adding Controls to a Dialog Causes the Dialog to No Longer Function
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Nachdem einem Dialogfeld ein allgemeines oder RichEdit\-Steuerelement hinzugefügt wurde, wird das Steuerelement oder das Dialogfeld selbst beim Testen des Dialogfelds nicht angezeigt.  
+# <a name="adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function"></a>Das Dialogfeld funktioniert nach dem Hinzufügen von Steuerelementen nicht mehr
+Nach dem Hinzufügen einer allgemeinen Steuerelements oder eine rich-Edit-Steuerelement in einem Dialogfeld an, es nicht angezeigt, wenn Sie das Dialogfeld Testen oder das Dialogfeld selbst wird nicht angezeigt.  
   
- **Nachstellung des Problems**  
+ **Beispiel für das problem**  
   
-1.  Erstellen Sie ein Win32\-Projekt, und ändern Sie die Anwendungseinstellungen, um eine Windows\-Anwendung \(keine Konsolenanwendung\) zu erstellen.  
+1.  Erstellen Sie ein Win32-Projekt, und ändern die Anwendungseinstellungen, daher Sie eine Windows-Anwendung (keine Konsolen-app erstellen).  
   
-2.  Doppelklicken Sie in der [Ressourcenansicht](../windows/resource-view-window.md) auf die RC\-Datei.  
+2.  In [Ressourcenansicht](../windows/resource-view-window.md), einen Doppelklick auf die RC-Datei.  
   
-3.  Doppelklicken Sie unter der Dialogfeldoption auf das Feld **Info**.  
+3.  Klicken Sie unter der Dialogfeldoption Doppelklicken auf die **zu** Feld.  
   
-4.  Fügen Sie dem Dialogfeld ein **IP\-Adressensteuerelement** hinzu.  
+4.  Hinzufügen einer **IP-Adressensteuerelement** auf das Dialogfeld.  
   
-5.  Speichern Sie, und wählen Sie **Alles neu erstellen**.  
+5.  Speichern und **alle neu erstellen**.  
   
-6.  Führen Sie das Programm aus.  
+6.  Führen Sie das Programm an.  
   
-7.  Klicken Sie im Menü **Hilfe** des Dialogfelds auf den Befehl **Info**. Es wird kein Dialogfeld angezeigt.  
+7.  Auf des Dialogfelds **Hilfe** Menü klicken Sie auf der **zu** Befehl; kein Dialogfeld angezeigt wird.  
   
- **Problemursache**  
+ **Die Ursache**  
   
- Code wird dem Projekt derzeit vom Dialog\-Editor nicht automatisch hinzugefügt, wenn Sie die folgenden allgemeinen oder RichEdit\-Steuerelemente mittels Drag & Drop in einem Dialogfeld ablegen.  Darüber hinaus wird in Visual Studio keine Fehler\- oder Warnmeldung ausgegeben, wenn dieses Problem auftritt.  Daher müssen Sie Code für das Steuerelement manuell hinzufügen.  
+ Derzeit werden Dialog-Editor nicht automatisch hinzugefügt Code zu Ihrem Projekt beim Ziehen und Ablegen der folgenden allgemeinen Steuerelemente oder Rich--Steuerelemente in einem Dialogfeld Edit. Und Visual Studio bietet einen Fehler oder eine Warnung, wenn dieses Problem auftritt. Sie müssen den Code für das Steuerelement manuell hinzufügen.  
   
 ||||  
 |-|-|-|  
-|Schiebereglersteuerung|Strukturansicht|Datums\-\/Zeitauswahl|  
-|Drehfeld\-Steuerelement|Registersteuerelement|Monatskalender|  
-|Statuskontrolle|Animationssteuerung|IP\-Adressensteuerelement|  
-|Abkürzungstaste\-Steuerelement|RichEdit\-Steuerelement|Erweitertes Kombinationsfeld|  
-|Listensteuerelement|Rich\-Edit\-2.0\-Steuerelement|Benutzerdefiniertes Steuerelement|  
+|Schiebereglersteuerung|Strukturansicht-Steuerelements|Datums-/Zeitauswahl|  
+|Drehfeld-Steuerelement|Registerkarten-Steuerelement|Monatskalender|  
+|Statuskontrolle|Animation-Steuerelement|IP-Adressensteuerelement|  
+|Abkürzungstaste|Rich-Edit-Steuerelement|Erweitertes Kombinationsfeld|  
+|Strukturelement-Steuerelement|Rich Edit 2.0-Steuerelement|Benutzerdefiniertes Steuerelement|  
   
-## Korrektur für allgemeine Steuerelemente  
- Damit allgemeine Steuerelemente in einem Dialogfeld verwendet werden können, muss vor dem Erstellen des Dialogfelds [InitCommonControlsEx](http://msdn.microsoft.com/library/windows/desktop/bb775697) oder **AFXInitCommonControls** aufgerufen werden.  
+## <a name="the-fix-for-common-controls"></a>Fehlerbehebung für allgemeine Steuerelemente  
+ Um allgemeine Steuerelemente in einem Dialogfeld verwenden zu können, müssen Sie rufen [InitCommonControlsEx](http://msdn.microsoft.com/library/windows/desktop/bb775697) oder **AFXInitCommonControls aufgerufen werden** vor dem Erstellen des Dialogfelds "".  
   
-## Korrektur für RichEdit\-Steuerelemente  
- Für RichEdit\-Steuerelemente muss **LoadLibrary** aufgerufen werden.  Weitere Informationen finden Sie unter [Verwenden des RichEdit 1.0\-Steuerelements mit MFC](../mfc/using-the-richedit-1-0-control-with-mfc.md), [About Rich Edit Controls](http://msdn.microsoft.com/library/windows/desktop/bb787873) im [!INCLUDE[winsdkshort](../atl/reference/includes/winsdkshort_md.md)] sowie unter [Übersicht über das RichEdit\-Steuerelement](../mfc/overview-of-the-rich-edit-control.md).  
+## <a name="the-fix-for-richedit-controls"></a>Fehlerbehebung für RichEdit-Steuerelemente  
+ Rufen Sie **LoadLibrary** für Rich--Steuerelemente Edit. Weitere Informationen finden Sie unter [Verwenden des RichEdit 1.0-Steuerelements mit MFC](../windows/using-the-richedit-1-0-control-with-mfc.md), [über Rich-Edit-Steuerelemente](http://msdn.microsoft.com/library/windows/desktop/bb787873) in der [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)], und [Überblick über das Rich-Edit-Steuerelement](../mfc/overview-of-the-rich-edit-control.md).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  Win32  
   
-## Siehe auch  
- [Troubleshooting the Dialog Editor](../mfc/troubleshooting-the-dialog-editor.md)   
- [Dialog Editor](../mfc/dialog-editor.md)
+## <a name="see-also"></a>Siehe auch  
+ [Problembehandlung für den Dialog-Editor](../windows/troubleshooting-the-dialog-editor.md)   
+ [Dialog-Editor](../windows/dialog-editor.md)
+

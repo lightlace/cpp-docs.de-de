@@ -1,102 +1,101 @@
 ---
-title: "Namen, Assistent zum Hinzuf&#252;gen von Eigenschaften | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.prop.overview"
-dev_langs: 
-  - "C++"
+title: "Namen, Eigenschaft Assistent zum Hinzufügen | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.codewiz.prop.overview
+dev_langs: C++
 ms.assetid: 0453b7ea-89cb-41a1-80a2-d45f61589c0a
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 310ac33fa4e34e75273732f715472114bab9650f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Namen, Assistent zum Hinzuf&#252;gen von Eigenschaften
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Verwenden Sie diesen Assistenten, um einer Schnittstelle eine Eigenschaft hinzuzufügen.  
+# <a name="names-add-property-wizard"></a>Namen, Assistent zum Hinzufügen von Eigenschaften
+Verwenden Sie diesen Assistenten, um eine Schnittstelle eine Eigenschaft hinzugefügt.  
   
  **Eigenschaftentyp**  
- Legt den Typ der Eigenschaft fest, die Sie hinzufügen.  Geben Sie für MFC\-Dispatchschnittstellen einen eigenen Typ an, oder wählen Sie einen Typ aus der vordefinierten Liste aus.  Wenn Sie eine vordefinierte Implementierung einer Eigenschaft angeben, wird **Eigenschaftentyp** auf den vordefinierten Typ gesetzt und kann nicht geändert werden.  
+ Legt den Typ der Eigenschaft, die Sie hinzufügen. Geben Sie für MFC-Dispatchschnittstellen einen eigenen Typ, oder wählen Sie aus der vordefinierten Liste aus. Wenn Sie eine vordefinierte Implementierung einer Eigenschaft bereitstellen **Eigenschaftentyp** ist auf den vordefinierten Typ festgelegt und kann nicht geändert.  
   
  **Eigenschaftenname**  
- Legt den Namen der Eigenschaft fest.  Für mit ActiveX\-Steuerelementen verknüpfte MFC\-Dispatchschnittstellen können Sie einen eigenen Namen angeben oder einen vordefinierten Eigenschaftennamen aus der vordefinierten Liste auswählen.  Wenn Sie einen eigenen Eigenschaftennamen eingeben, ist der Implementierungstyp **Vordefiniert** nicht verfügbar.  Eine Beschreibung der Eigenschaften in der Liste finden Sie unter [Basiseigenschaften](../ide/stock-properties.md).  
+ Legt den Namen der Eigenschaft fest. Für MFC-Dispatchschnittstellen ActiveX-Steuerelementen zugeordnet können Sie Ihren eigenen Namen angeben, oder können, wählen Sie einen Namen für die Systemeigenschaft aus der vordefinierten Liste. Wenn Sie einen eigenen Eigenschaftennamen angeben der **Stock** Implementierungstyp ist nicht verfügbar. Finden Sie unter [Basiseigenschaften](../ide/stock-properties.md) eine Beschreibung der Eigenschaften in der Liste.  
   
 |Schnittstellentyp|Beschreibung|  
-|-----------------------|------------------|  
-|Duale ATL\-Schnittstelle, benutzerdefinierte Schnittstelle und lokale benutzerdefinierte Schnittstelle|Geben Sie einen Eigenschaftennamen an.|  
-|MFC\-Dispatchschnittstelle, MFC\-ActiveX\-Steuerelement\-Dispatchschnittstelle|Geben Sie einen Eigenschaftennamen an, oder wählen Sie eine Basiseigenschaft aus der Liste aus.  Wenn Sie eine Eigenschaft aus der Liste auswählen, wird im Feld **Eigenschaftentyp** der entsprechende Wert angezeigt.  Je nach Auswahl unter Implementierungstyp können Sie diesen Typ ändern.|  
+|--------------------|-----------------|  
+|Duale ATL-Schnittstelle, benutzerdefinierte Schnittstelle und lokale benutzerdefinierte Schnittstelle|Geben Sie einen Eigenschaftennamen.|  
+|MFC-Dispinterface, MFC-ActiveX-Steuerelement Disp-Schnittstelle|Geben Sie einen Eigenschaftennamen ein, oder wählen Sie aus der Liste eine Systemeigenschaft. Wenn Sie eine Eigenschaft aus der Liste auswählen, der entsprechende Wert angezeigt wird, der **Eigenschaftentyp** Feld. Sie können dieses Typs ändern, abhängig von Ihrer Auswahl unter **Implementierungstyp**.|  
   
  **Rückgabetyp**  
- Nur ATL\-Schnittstellen.  Legt den Rückgabetyp für die Eigenschaft fest.  Bei dualen Schnittstellen ist der Rückgabetyp immer `HRESULT`, und dieses Feld ist nicht verfügbar.  Bei benutzerdefinierten Schnittstellen können Sie einen Rückgabetyp aus der Liste auswählen.  `HRESULT` wird weiterhin empfohlen, da er als Standardtyp für die Rückgabe von Fehlern gilt.  
+ Nur ATL-Schnittstellen. Legt den Rückgabetyp für die Eigenschaft fest. Für duale Schnittstellen `HRESULT` ist immer der Rückgabetyp ein, und dieses Feld ist nicht verfügbar. Für benutzerdefinierte Schnittstellen können Sie einen Rückgabetyp aus der Liste auswählen. `HRESULT`wird weiterhin empfohlen, da es sich um ein gängiges Verfahren zum Fehler bereitstellt.  
   
  **Variablenname**  
- Nur MFC\-Dispatchschnittstellen.  Ist nur verfügbar, wenn Sie unter **Implementierungstyp** die Option **Membervariable** auswählen.  Legt den Namen der Membervariablen fest, mit der die Eigenschaft verknüpft wird.  Der Name der Variablen lautet standardmäßig m\_*Eigenschaftenname*.  Sie können diesen Namen bearbeiten.  
+ MFC nur Disp-Schnittstellen. Nur verfügbar, wenn Sie angeben, **Membervariable** unter **Implementierungstyp**. Legt den Namen der Membervariable, die Eigenschaft zugeordnet ist. Standardmäßig wird der Variablenname m_ festgelegt*PropertyName*. Sie können diesen Namen bearbeiten.  
   
  **Benachrichtigungsfunktion**  
- Nur MFC\-Dispatchschnittstellen.  Ist nur verfügbar, wenn Sie unter **Implementierungstyp** die Option **Membervariable** auswählen.  Legt den Namen der Benachrichtigungsfunktion fest, die aufgerufen wird, wenn die Eigenschaft geändert wird.  Der Name der Benachrichtigungsfunktion lautet standardmäßig On*Eigenschaftenname*Changed.  Sie können diesen Namen bearbeiten.  
+ MFC nur Disp-Schnittstellen. Nur verfügbar, wenn Sie angeben, **Membervariable** unter **Implementierungstyp**. Legt dem Namen der Benachrichtigung aufgerufen wird, wenn die eigenschaftenänderungen an. Wird standardmäßig der Name der Benachrichtigungsfunktion für auf festgelegt ist*PropertyName*geändert. Sie können diesen Namen bearbeiten.  
   
- **Get\-Funktion**  
- Für MFC\-Dispatchschnittstellen.  Ist nur verfügbar, wenn Sie unter **Implementierungstyp** die Option **Get\/Set\-Methoden** auswählen.  Legt den Namen der Funktion fest, mit der die Eigenschaft abgefragt wird.  Der Name der **Get**\-Funktion lautet standardmäßig **Get**Eigenschaftenname.  Sie können diesen Namen bearbeiten.  Wenn Sie den Namen löschen, wird die Funktion [GetNotSupported](../Topic/COleControl::GetNotSupported.md) in die Dispatchzuordnung der Schnittstelle eingefügt.  Die **Get**Eigenschaftenname\-Funktion gibt an, dass die Eigenschaft lesbar ist.  
+ **Get-Funktion**  
+ Für MFC-Dispatchschnittstellen. Nur verfügbar, wenn Sie angeben, **Get/Set-Methoden** unter **Implementierungstyp**. Legt den Namen der Funktion zum Abrufen der Eigenschaft fest. Standardmäßig der Namen der Get-Funktion festgelegt ist, um Get*PropertyName*. Sie können diesen Namen bearbeiten. Wenn Sie den Namen, die Funktion löschen [GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported) wird in die Dispatchzuordnung der Schnittstelle eingefügt. Die Get*PropertyName* Funktion gibt an, dass die Eigenschaft lesbar.  
   
- **Set\-Funktion**  
- Nur MFC\-Dispatchschnittstellen.  Ist nur verfügbar, wenn Sie unter **Implementierungstyp** die Option **Get\/Set\-Methoden** auswählen.  Gibt den Namen der Funktion an, mit der die Eigenschaft festgelegt wird.  Der Name der `Set`\-Funktion lautet standardmäßig `Set`Eigenschaftenname.  Sie können diesen Namen bearbeiten.  Wenn Sie den Namen löschen, wird die Funktion [SetNotSupported](../Topic/COleControl::SetNotSupported.md) in die Dispatchzuordnung der Schnittstelle eingefügt.  Die `Set`Eigenschaftenname\-Funktion gibt an, dass die Eigenschaft schreibbar ist.  
+ **Set-Funktion**  
+ MFC nur Disp-Schnittstellen. Nur verfügbar, wenn Sie angeben, **Get/Set-Methoden** unter **Implementierungstyp**. Legt den Namen der Funktion zum Festlegen der Eigenschaft. Wird standardmäßig der Name des Set-Funktion festgelegt ist, Satz*PropertyName*. Sie können diesen Namen bearbeiten. Wenn Sie den Namen, die Funktion löschen [SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported) wird in die Dispatchzuordnung der Schnittstelle eingefügt. Der Satz*PropertyName* -Funktion gibt an, dass die Eigenschaft beschreibbar ist.  
   
  **Implementierungstyp**  
- Nur MFC\-Dispatchschnittstellen.  Legt fest, wie die hinzuzufügende Eigenschaft implementiert wird.  
+ MFC nur Disp-Schnittstellen. Gibt an, wie die Eigenschaft implementieren, die Sie hinzufügen.  
   
 |Implementierungstyp|Beschreibung|  
-|-------------------------|------------------|  
-|**Vordefiniert**|Legt eine vordefinierte Implementierung für die Eigenschaft fest, die in **Eigenschaftenname** ausgewählt wurde.  Der Standardwert.  Weitere Informationen finden Sie unter [Basiseigenschaften](../ide/stock-properties.md).<br /><br /> Wenn Sie **Vordefiniert** auswählen, werden **Eigenschaftentyp**, **Parametertyp** und **Parametername** abgeblendet.|  
-|**Membervariable**|Gibt an, dass die Eigenschaft als Membervariable hinzugefügt wird.  Benutzerdefinierte sowie die meisten Basiseigenschaften können als Membervariablen hinzugefügt werden.  Für die Eigenschaften **Caption**, **hWnd** und **Text** ist die Option **Membervariable** nicht verfügbar.<br /><br /> Unter **Variablenname** und **Benachrichtigungsfunktion** werden Standardnamen bereitgestellt.  Sie können diesen Namen bearbeiten.|  
-|**Get\/Set\-Methoden**|Gibt an, dass die Eigenschaft standardmäßig als **Get**Eigenschaftenname\-Funktion und `Set`Eigenschaftenname\-Funktion hinzugefügt wird.  Diese Namen werden unter **Get\-Funktion** und **Set\-Funktion** angezeigt.<br /><br /> Sie können den standardmäßigen **Eigenschaftentyp** ändern, der einen Wert für die **Get**\-Funktion übergibt.  Außerdem können Sie Parameter für die **Get**\-Funktion und die `Set`\-Funktion festlegen.|  
+|-------------------------|-----------------|  
+|**Stock**|Gibt eine vordefinierte Implementierung für die Eigenschaft, die im ausgewählten **Eigenschaftsname**. Der Standardwert. Finden Sie unter [Basiseigenschaften](../ide/stock-properties.md) für Weitere Informationen.<br /><br /> Bei Angabe von **Stock**, klicken Sie dann **Eigenschaftentyp**, **Parametertyp**, und **Parametername** sind abgeblendet.|  
+|**Membervariablen**|Gibt an, dass die Eigenschaft als Membervariable hinzugefügt wird. Sie können die benutzerdefinierten Eigenschaften oder die meisten Basiseigenschaften als Membervariablen hinzufügen. Sie können keine angeben **Membervariable** für **Beschriftung**, **hWnd**, und **Text** Eigenschaften.<br /><br /> Stellt die Standardnamen unter **Variablenname** und **Benachrichtigungsfunktion**. Sie können diesen Namen bearbeiten.|  
+|**Get/Set-Methoden**|Gibt an, die Eigenschaft wird als Get hinzugefügt*PropertyName* und festgelegte*PropertyName* Funktionen, die in der Standardeinstellung. Diese Namen werden unter **Get-Funktion** und **Set-Funktion**.<br /><br /> Sie können die Standardeinstellung ändern **Eigenschaftentyp**, die einen Wert für die Get-Funktion übergibt. Sie können die Parameter zum Angeben der **abrufen** und `Set` Funktionen.|  
   
- **Get\-Funktion**  
- Für ATL\-Schnittstellen.  Definiert die Eigenschaft als lesbar, d. h., die **Get**\-Methode zum Abrufen dieser Eigenschaft aus dem Objekt wird erstellt.  Sie müssen **Get**, `Put` oder beide Funktionen auswählen.  
+ **Get-Funktion**  
+ Bei ATL-Schnittstellen. Legt die Eigenschaft als lesbar; Das heißt, er erstellt die **abrufen** Methode zum Abrufen dieser Eigenschaft aus dem Objekt. Sie müssen auswählen, **abrufen**, `Put`, oder beides.  
   
- **Put\-Funktion**  
- Nur ATL\-Schnittstellen.  Definiert die Eigenschaft als schreibbar, d. h., die `Put`\-Methode zum Festlegen dieser Eigenschaft des Objekts wird erstellt.  Sie müssen **Get**, `Put` oder beide Funktionen auswählen.  Wenn Sie diese Option auswählen, können Sie zwischen den folgenden beiden Optionen zur Implementierung der Methode wählen:  
+ **Put-Funktion**  
+ Nur ATL-Schnittstellen. Legt die Eigenschaft beschreibbar; Das heißt, er erstellt die `Put` Methode für das Festlegen oder "Einfügen", diese Eigenschaft des Objekts. Sie müssen auswählen, **abrufen**, `Put`, oder beides. Wenn Sie diese Option auswählen, können Sie von den folgenden zwei Verfahren zur Implementierung der Methode:  
   
 |Option|Beschreibung|  
-|------------|------------------|  
-|**PropPut**|Die [PropPut](../windows/propput.md)\-Funktion gibt eine Kopie des Objekts zurück.  Dies ist die Standardoption und die einfachste Methode, um die Eigenschaft schreibbar zu machen.|  
-|**PropPutRef**|Die [PropPutRef](../windows/propputref.md)\-Funktion gibt anstelle der Objektkopie einen Verweis auf das Objekt zurück.  Die Verwendung dieser Option bietet sich für Objekte wie umfangreiche Strukturen oder Arrays an, deren Initialisierung u. U. aufwendiger ist.|  
+|------------|-----------------|  
+|**PropPut**|Die [PropPut](../windows/propput.md) Funktion gibt eine Kopie des Objekts zurück. Dies ist die Standardeinstellung und die gängigste Methode, um die Eigenschaft beschreibbar zu machen.|  
+|**PropPutRef**|Die [PropPutRef](../windows/propputref.md) Funktion gibt einen Verweis auf das Objekt, anstatt die Kopie des Objekts selbst zurückgeben. Erwägen Sie diese Option für Objekte, z. B. große Strukturen oder Arrays, die Initialisierung auswirken können.|  
   
  **Parameterattribute**  
- Nur ATL\-Schnittstellen.  Legt fest, ob der durch **Parametername** angegebene Parameter **in**, **out**, beides oder keines von beiden ist.  
+ Nur ATL-Schnittstellen. Legt fest, ob der Parameter vom angegebenen **Parametername** ist **in**, **out**, beides oder keines.  
   
 |Option|Beschreibung|  
-|------------|------------------|  
-|**in**|Gibt an, dass der Parameter von der aufrufenden an die aufgerufene Prozedur übergeben wird.|  
-|**out**|Gibt an, dass der Zeigerparameter von der aufgerufenen Prozedur an die aufrufende Prozedur \(d. h. vom Server an den Client\) zurückgegeben wird.|  
+|------------|-----------------|  
+|**in**|Gibt an, dass die Parameter an die aufgerufene Prozedur aus der aufrufenden Prozedur übergeben wird.|  
+|**out**|Gibt an, dass der Zeigerparameter von der aufgerufenen Prozedur an die aufrufende Prozedur (vom Server an den Client) zurückgegeben wird.|  
   
  **Parametertyp**  
- Legt den Datentyp des Parameters fest.  Wählen Sie den Typ aus der Liste aus.  
+ Legt den Datentyp des Parameters fest. Wählen Sie den Typ aus der Liste aus.  
   
  **Parametername**  
- Legt den Namen eines Parameters fest, den Sie für die Eigenschaft hinzufügen, falls die Eigenschaft über Parameter verfügt.  Nachdem Sie auf **Hinzufügen** geklickt haben, wird der Parametername in der **Parameterliste** angezeigt.  
+ Legt den Namen eines Parameters, die Sie für die Eigenschaft hinzufügen, wenn die Eigenschaft über Parameter verfügt. Nach dem Klicken auf **hinzufügen**, der Name des Parameters angezeigt wird, im **Parameterliste**.  
   
  **Parameterliste**  
- Zeigt die Liste der Attribute an, die der Eigenschaft hinzugefügt werden sollen.  Jedes Element in der Liste besteht aus dem Parameternamen, dem Parametertyp und Attributen.  Verwenden Sie **Hinzufügen** und **Entfernen**, um die Liste zu aktualisieren.  
+ Zeigt die Liste der Attribute, die die Eigenschaft hinzugefügt werden. Jedes Element in der Liste besteht aus der Parametername, Parametertyp und Attribute. Verwendung **hinzufügen** und **entfernen** zum Aktualisieren der Liste.  
   
- **add**  
- Fügt der **Parameterliste** den unter **Parametername** und **Parametertyp** angegebenen Parameter hinzu.  Um einen Parameter in die Liste aufzunehmen, müssen Sie auf **Hinzufügen** klicken.  
+ **Add**  
+ Fügt die Parameter, die Sie, in angeben **Parametername** und **Parametertyp** auf die **Parameterliste**. Klicken Sie auf **hinzufügen** der Liste einen Parameter hinzu.  
   
  **Entfernen**  
- Entfernt den in der **Parameterliste** markierten Parameter.  
+ Entfernt den Parameter, die Sie, in auswählen **Parameterliste**.  
   
- **Standardeigenschaft**  
- Nur MFC\-Dispatchschnittstellen.  Definiert diese Eigenschaft als Standardeigenschaft für die Schnittstelle.  Eine Schnittstelle kann nur eine Standardeigenschaft besitzen. Sobald die Standardeigenschaft definiert wurde, ist dieses Feld für weitere Eigenschaften, die Sie der Schnittstelle hinzufügen, nicht mehr verfügbar.  
+ **Standard-Eigenschaft**  
+ MFC-Dispinterface nur. Wird diese Eigenschaft als Standard für die Schnittstelle an. Eine Schnittstelle kann nur eine Standardeigenschaft besitzen; Dieses Feld ist nicht verfügbar, nachdem Sie die Standardeigenschaft für alle anderen Eigenschaften angeben, die Sie die Schnittstelle hinzufügen.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Hinzufügen einer Eigenschaft](../ide/adding-a-property-visual-cpp.md)   
- [IDL\-Attribute, Assistent zum Hinzufügen von Eigenschaften](../ide/idl-attributes-add-property-wizard.md)   
+ [IDL-Attribute, hinzufügen Eigenschaft Assistent zum](../ide/idl-attributes-add-property-wizard.md)   
  [Implementieren einer Schnittstelle](../ide/implementing-an-interface-visual-cpp.md)

@@ -1,46 +1,45 @@
 ---
-title: "range_adapter::operator= (STL/CLR)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::operator="
-  - "cliext::range_adapter::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Operator= Member [STL/CLR]"
+title: range_adapter::Operator = (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- cliext::operator=
+- cliext::range_adapter::operator=
+dev_langs: C++
+helpviewer_keywords: operator= member [STL/CLR]
 ms.assetid: ac378ccc-a42c-4a90-bc27-9b416bee7fa9
-caps.latest.revision: 9
-caps.handback.revision: "7"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5fc0d33f9cfeec2b9ad2345491bd843c3fcb9170
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# range_adapter::operator= (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ersetzt die gespeicherten Iteratorpaare.  
+# <a name="rangeadapteroperator-stlclr"></a>range_adapter::operator= (STL/CLR)
+Ersetzt den gespeicherten Iterator-Paar.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 range_adapter<Iter>% operator=(range_adapter<Iter>% right);  
 ```  
   
-#### Parameter  
- right  
+#### <a name="parameters"></a>Parameter  
+ Rechts  
  Adapter zu kopieren.  
   
-## Hinweise  
- Der Member, den Operator `right` zum Objekt kopiert, dann, `*this` zurückgibt.  Sie verwenden sie, um die gespeicherten Iteratorpaare durch eine Kopie der gespeicherten Iteratorpaare in `right` zu ersetzen.  
+## <a name="remarks"></a>Hinweise  
+ Die Member-Operator Kopien `right` klicken Sie dann auf das Objekt gibt `*this`. Sie nutzen, um den gespeicherten Iterator-Paar mit einer Kopie der gespeicherte Iterator-Paar ersetzen `right`.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_range_adapter_operator_as.cpp   
@@ -74,12 +73,15 @@ int main()
   
 ```  
   
-  **ein b c**  
- **ein b c**   
-## Anforderungen  
- **Header:** \<cliext\/Adapter\>  
+```Output  
+a b c  
+a b c  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext-Adapter >  
   
-## Siehe auch  
- [range\_adapter](../dotnet/range-adapter-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [range_adapter (STL/CLR)](../dotnet/range-adapter-stl-clr.md)

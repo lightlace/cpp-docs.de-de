@@ -1,41 +1,40 @@
 ---
-title: "LIB-Referenz | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Lib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "32-Bit-Bibliotheks-Manager"
-  - "LIB [C++]"
-  - "Bibliotheks-Manager"
-  - "Statische Bibliotheken"
-  - "Statische Bibliotheken, Festlegen von IDE-Optionen"
+title: LIB-Referenz | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Lib
+dev_langs: C++
+helpviewer_keywords:
+- static libraries
+- static libraries, setting IDE options
+- Library Manager
+- LIB [C++]
+- 32-Bit Library Manager
 ms.assetid: ecc7f643-bbd4-47a3-8dc6-b360f880db91
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 4593e3fb5cdd511bde8beb262c8a3cb9fd247fd0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# LIB-Referenz
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Der Bibliotheks\-Manager von Microsoft \(LIB.EXE\) erstellt und verwaltet eine Bibliothek mit Objektdateien im COFF\-Format \(Common Object File Format\).  LIB kann auch dafür verwendet werden, Exportdateien und Importbibliotheken zu erstellen, um auf exportierte Definitionen zu verweisen.  
+# <a name="lib-reference"></a>LIB-Referenz
+Die Microsoft-Bibliotheks-Manager (LIB.exe) erstellt und verwaltet eine Bibliothek mit Objektdateien Common Object File Format (COFF). LIB kann auch zum Erstellen von Exportdateien und Importbibliotheken Verweise auf exportierte Definitionen verwendet werden.  
   
 > [!NOTE]
->  Sie können dieses Tool nur von der [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]\-Eingabeaufforderung aus starten.  Sie können es nicht von einer Systemeingabeaufforderung oder vom Datei\-Explorer aus starten.  
+>  Sie können dieses Tool nur von der [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]-Eingabeaufforderung aus starten. Sie können es nicht von einer Systemeingabeaufforderung oder vom Datei-Explorer aus starten.  
   
 -   [Übersicht über LIB](../../build/reference/overview-of-lib.md)  
   
--   [Gewusst wie: Festlegen der LIB.EXE\-Optionen in der Visual Studio\-Entwicklungsumgebung](../../build/reference/how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md)  
+-   [Vorgehensweise: Festlegen der LIB.EXE-Optionen in der Visual Studio-Entwicklungsumgebung](../../build/reference/how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md)  
   
 -   [Ausführen von LIB](../../build/reference/running-lib.md)  
   
@@ -45,5 +44,5 @@ Der Bibliotheks\-Manager von Microsoft \(LIB.EXE\) erstellt und verwaltet eine B
   
 -   [Arbeiten mit Importbibliotheken und Exportdateien](../../build/reference/working-with-import-libraries-and-export-files.md)  
   
-## Siehe auch  
- [C\/C\+\+\-Buildtools](../../build/reference/c-cpp-build-tools.md)
+## <a name="see-also"></a>Siehe auch  
+ [C/C++-Buildtools](../../build/reference/c-cpp-build-tools.md)

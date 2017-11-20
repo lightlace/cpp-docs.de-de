@@ -1,11 +1,10 @@
 ---
-title: uint_3-Klasse | Microsoft-Dokumentation
+title: uint_3-Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -78,33 +77,17 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_3::yxz
 - amp_short_vectors/Concurrency::graphics::uint_3::set_xzy
 - amp_short_vectors/Concurrency::graphics::uint_3::operator-=
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 5e22c277-9d4f-4a3a-b38c-a83d5fcab33c
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 034478144d77abcc9dba8bf1a1909c4711f7119c
-ms.contentlocale: de-de
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 12e2e25dd6a1ba2a31130196f04f336cecf6b34e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="uint3-class"></a>uint_3-Klasse
 Stellt einen kurzen Vektor von drei ganzen Zahlen ohne Vorzeichen dar.  
@@ -175,16 +158,16 @@ class uint_3;
 |Name|Beschreibung|  
 |----------|-----------------|  
 |uint_3::--||  
-|uint_3:: % =||  
+|uint_3:: Operator% =||  
 |uint_3:: & =||  
 |uint_3:: * =||  
 |uint_3:: Operator / =||  
 |uint_3:: ^ =||  
-|uint_3:: | =||  
+|uint_3:: &#124; =||  
 |uint_3:: ~||  
-|uint_3:: Operator++||  
+|uint_3:: Operator++-||  
 |uint_3:: Operator +=||  
-|uint_3::\<=||  
+|uint_3:: <\<=||  
 |uint_3:: =||  
 |uint_3:: Operator-=||  
 |uint_3:: >> =||  
@@ -291,13 +274,13 @@ explicit inline uint_3(
   
 ### <a name="parameters"></a>Parameter  
  `_V0`  
- Der Wert 0-Element zu initialisieren.  
+ Der Wert 0-Element initialisiert werden.  
   
  `_V1`  
  Der Wert 1 Element initialisiert werden.  
   
  `_V2`  
- Der Wert 2-Element zu initialisieren.  
+ Der Wert 2-Element initialisiert werden.  
   
  `_V`  
  Der Wert für die Initialisierung.  
@@ -313,4 +296,3 @@ static const int size = 3;
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)
-

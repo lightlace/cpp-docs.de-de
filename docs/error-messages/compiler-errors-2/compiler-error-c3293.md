@@ -1,53 +1,35 @@
 ---
-title: Compiler-Fehler C3293 generiert | Microsoft-Dokumentation
+title: Compilerfehler C3293 | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 07/21/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3293
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3293
+f1_keywords: C3293
+dev_langs: C++
+helpviewer_keywords: C3293
 ms.assetid: b772cf98-52e0-4e24-be23-1f5d87d999ac
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 43695cc21fa63403f9aa2b8dd83af27c00d483de
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 7bfa8c58bec79558f3d71868e9464242b9da9ea8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3293"></a>Compilerfehler C3293
 'Accessor': Verwenden Sie 'default', um auf die Standardeigenschaft (Indexer) der 'Typ'-Klasse zuzugreifen.  
   
- Auf eine indizierte Eigenschaft wurde nicht ordnungsgemäß zugegriffen.  Finden Sie unter [Gewusst wie: Verwenden von Eigenschaften in C++ / CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md) Weitere Informationen.  
+ Auf eine indizierte Eigenschaft wurde nicht ordnungsgemäß zugegriffen.  Finden Sie unter [wie: Verwenden von Eigenschaften in C + c++ / CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md) für Weitere Informationen.  
+
+ **Visual Studio 2017 und höher**: In Visual Studio 2015 und frühere Versionen der Compiler in einigen Fällen eine Standardeigenschaft als einen Standardindexer falsch kategorisiert. Es war möglich das Problem zu umzugehen, indem mithilfe des „default“-Bezeichners auf die Eigenschaft zugegriffen wurde. Die Lösung selbst wurde problematisch, nachdem default als Schlüsselwort in C++11 eingeführt wurde. Aus diesem Grund wurden in Visual Studio 2017 Fehler behoben, die die Problemumgehung erforderten, und der Compiler löst jetzt einen Fehler aus, wenn „default“ verwendet wird, um auf die Standardeigenschaft für eine Klasse zuzugreifen.
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird C3293 generiert:  
+ Im folgenden Beispiel wird C3293 in Visual Studio 2015 und früher.  
   
 ```  
 // C3293.cpp  
@@ -64,12 +46,12 @@ public:
   
 int main() {  
    IndexerClass ^ ic = gcnew IndexerClass;  
-   ic->Item[0] = 21;   // C3293  
-   ic->default[0] = 21;   // OK  
+   ic->Item[0] = 21;   // C3293 in VS2015 OK in VS2017
+   ic->default[0] = 21;   // OK in VS2015 and earlier
   
    String ^s = "Hello";  
-   wchar_t wc = s->Chars[0];   // C3293  
-   wchar_t wc2 = s->default[0];   // OK  
+   wchar_t wc = s->Chars[0];   // C3293 in VS2015 OK in VS2017
+   wchar_t wc2 = s->default[0];   // OK in VS2015 and earlier  
    Console::WriteLine(wc2);  
 }  
 ```

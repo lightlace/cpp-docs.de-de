@@ -1,97 +1,97 @@
 ---
-title: "/INCREMENTAL (inkrementell verkn&#252;pfen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/incremental"
-  - "VC.Project.VCLinkerTool.LinkIncremental"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/INCREMENTAL (Linkeroption)"
-  - "INCREMENTAL (Linkeroption)"
-  - "-INCREMENTAL (Linkeroption)"
-  - "Inkrementelle Verknüpfung"
-  - "Inkrementell verknüpfen (Option)"
-  - "LINK-Tool [C++], Optionen für vollständiges Verknüpfen"
+title: "-INKREMENTELLE (inkrementell verknüpfen) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /incremental
+- VC.Project.VCLinkerTool.LinkIncremental
+dev_langs: C++
+helpviewer_keywords:
+- /INCREMENTAL linker option
+- -INCREMENTAL linker option
+- INCREMENTAL linker option
+- link incrementally option
+- LINK tool [C++], options for full linking
+- incremental linking
 ms.assetid: 135656ff-94fa-4ad4-a613-22e1a2a5d16b
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8866988a800a4d6c2a942af1a613c1d6906abc78
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# /INCREMENTAL (inkrementell verkn&#252;pfen)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="incremental-link-incrementally"></a>/INCREMENTAL (inkrementell verknüpfen)
 ```  
 /INCREMENTAL[:NO]  
 ```  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Steuert, wie der Linker inkrementelle Verknüpfungen behandelt.  
   
- Standardmäßig wird der Linker im inkrementellen Modus ausgeführt.  Um einen inkrementellen Standardlink zu überschreiben, müssen Sie "\/INCREMENTAL:NO" angeben.  
+ Standardmäßig wird der Linker im inkrementellen Modus ausgeführt. Um einen inkrementellen Standardlink zu überschreiben, müssen Sie "/INCREMENTAL:NO" angeben.  
   
- Ein inkrementell verknüpftes Programm ist funktional gleichwertig mit einem Programm, das nicht inkrementell verknüpft wurde.  Da eine inkrementell verknüpfte ausführbare Datei \(EXE\-Datei\) oder DLL jedoch für spätere inkrementelle Links vorbereitet ist, gilt für sie Folgendes:  
+ Ein inkrementell verknüpftes Programm ist funktionell gleichwertig mit einem Programm, das nicht inkrementell verknüpft ist. Jedoch, da es für spätere inkrementelle Links, eine inkrementell verknüpfte ausführbare Datei, die statische Bibliothek oder Dynamic Link Library-Datei vorbereitet wird:  
   
--   Sie ist größer als ein nicht inkrementell verknüpftes Programm, da Code und Daten ergänzt werden. \(Die Auffüllung ermöglicht es dem Linker, die Größe von Funktionen und Daten zu erhöhen, ohne die EXE\-Datei neu erstellen zu müssen.\)  
+-   Ist größer als ein nicht inkrementell verknüpftes Programm aufgrund von Code und Daten. Auffüllung ermöglicht es den Linker an, die Größe der Funktionen und Daten zu erhöhen, ohne die Datei neu zu erstellen.  
   
--   Sie kann Sprung\-Thunks enthalten, um das Verschieben von Funktionen auf neue Adressen zu verarbeiten.  
+-   Sie kann Sprung-Thunks enthalten, um das Verschieben von Funktionen auf neue Adressen zu verarbeiten.  
   
     > [!NOTE]
-    >  Um sicherzustellen, dass das Releasebuild keine Füllzeichen oder Thunks enthält, sollten Sie Ihr Programm nicht inkrementell verknüpfen.  
+    >  Um sicherzustellen, dass das Releasebuild keine Füllzeichen oder Thunks enthält, wird verknüpfen Sie das Programm nicht inkrementell.  
   
- Um unabhängig von der Standardeinstellung die inkrementelle Verknüpfung vorzunehmen, müssen Sie "\/INCREMENTAL" angeben.  Wenn diese Option gewählt wurde, gibt der Linker eine Warnung aus, falls er keine inkrementelle Verknüpfung durchführen kann, und verknüpft dann das Programm nicht inkrementell.  Bei bestimmten Optionen und in bestimmten Situationen wird "\/INCREMENTAL" überschrieben.  
+ Um unabhängig von der Standardeinstellung die inkrementelle Verknüpfung vorzunehmen, müssen Sie "/INCREMENTAL" angeben. Wenn diese Option aktiviert ist, wird der Linker eine Warnung ausgegeben, wenn er keine inkrementelle Verknüpfung kann nicht und verknüpft dann das Programm nicht inkrementell. Bei bestimmten Optionen und in bestimmten Situationen wird "/INCREMENTAL" überschrieben.  
   
- Die meisten Programme können inkrementell verknüpft werden.  Einige Änderungen sind jedoch zu umfangreich, und bestimmte Optionen sind mit dem inkrementellen Verknüpfen nicht kompatibel.  LINK führt einen vollständigen Verknüpfungsvorgang durch, wenn eine der folgenden Optionen angegeben wurde:  
+ Die meisten Programme können inkrementell verknüpft werden. Einige Änderungen sind jedoch zu umfangreich, und bestimmte Optionen sind mit dem inkrementellen Verknüpfen nicht kompatibel. LINK führt einen vollständigen Verknüpfungsvorgang durch, wenn eine der folgenden Optionen angegeben wurde:  
   
--   Inkrementell verknüpfen wurde nicht ausgewählt \("\/INCREMENTAL:NO"\).  
+-   Inkrementell verknüpfen wurde nicht ausgewählt ("/INCREMENTAL:NO").  
   
--   "\/OPT:REF" wurde ausgewählt.  
+-   "/OPT:REF" wurde ausgewählt.  
   
--   "\/OPT:ICF" wurde ausgewählt.  
+-   "/OPT:ICF" wurde ausgewählt.  
   
--   "\/OPT:LBR" wurde ausgewählt.  
+-   "/OPT:LBR" wurde ausgewählt.  
   
--   "\/ORDER" wurde ausgewählt.  
+-   "/ORDER" wurde ausgewählt.  
   
- Beim Festlegen von [\/DEBUG](../../build/reference/debug-generate-debug-info.md) wird "\/INCREMENTAL" impliziert.  
+ / INCREMENTAL wird impliziert, wenn [/DEBUG](../../build/reference/debug-generate-debug-info.md) angegeben ist.  
   
  Außerdem führt "LINK" einen vollständigen Verknüpfungsvorgang durch, wenn eine der folgenden Situationen eintritt:  
   
--   Die inkrementelle Statusdatei \(ILK\-Datei\) fehlt. \(LINK erstellt eine neue ILK\-Datei zur Vorbereitung auf spätere inkrementelle Verknüpfungen.\)  
+-   Die inkrementelle Statusdatei (ILK-Datei) fehlt. (LINK erstellt eine neue ILK-Datei zur Vorbereitung auf spätere inkrementelle Verknüpfungen.)  
   
--   Es sind keine Schreibrechte für die ILK\-Datei vorhanden. \("LINK" berücksichtigt die ILK\-Datei nicht und verknüpft nicht inkrementell.\)  
+-   Es sind keine Schreibrechte für die ILK-Datei vorhanden. (LINK berücksichtigt die ILK-Datei und verknüpft nicht inkrementell.)  
   
--   Die EXE\- oder DLL\-Ausgabedatei fehlt.  
+-   Die EXE- oder DLL-Ausgabedatei fehlt.  
   
--   Der Zeitstempel der ILK\-, EXE\- oder DLL\-Datei hat sich geändert.  
+-   Der Zeitstempel der ILK-, EXE- oder DLL-Datei hat sich geändert.  
   
--   Eine LINK\-Option hat sich geändert.  Die meisten LINK\-Optionen führen, wenn sie zwischen zwei Erstellungsvorgängen geändert werden, zu einer vollständigen Verknüpfung.  
+-   Eine LINK-Option hat sich geändert. Die meisten LINK-Optionen führen, wenn sie zwischen zwei Erstellungsvorgängen geändert werden, zu einer vollständigen Verknüpfung.  
   
--   Eine Objektdatei \(OBJ\-Datei\) wurde hinzugefügt oder ausgelassen.  
+-   Eine Objektdatei (OBJ-Datei) wurde hinzugefügt oder ausgelassen.  
   
-### So legen Sie diese Linkeroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Wählen Sie den Ordner **Linker** aus.  
+2.  Wählen Sie die **Linker** Ordner.  
   
 3.  Wählen Sie die Eigenschaftenseite **Allgemein** aus.  
   
-4.  Ändern Sie die Eigenschaft **Inkrementelles Verknüpfen aktivieren**.  
+4.  Ändern der **inkrementelles Verknüpfen aktivieren** Eigenschaft.  
   
-### So legen Sie diese Linkeroption programmgesteuert fest  
+### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
   
-1.  Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.LinkIncremental*>.  
+1.  Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.LinkIncremental%2A>.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
  [Linkeroptionen](../../build/reference/linker-options.md)

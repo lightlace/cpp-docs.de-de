@@ -1,34 +1,32 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4730 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4730"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4730"
+title: Compilerwarnung (Stufe 1) C4730 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4730
+dev_langs: C++
+helpviewer_keywords: C4730
 ms.assetid: 11303e3f-162b-4b19-970a-479686123a68
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c27a63b826249c094b507eb4efb3041ab8147973
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Compilerwarnung (Stufe 1) C4730
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'main' : Das Kombinieren von \_m64 und Gleitkommaausdrücken kann zu fehlerhaftem Code führen  
+# <a name="compiler-warning-level-1-c4730"></a>Compilerwarnung (Stufe 1) C4730
+'main': Kombinieren von _m64 und Ausdrücke möglicherweise falsche Code führen  
   
- Eine Funktion verwendet [\_\_m64](../../cpp/m64.md) und den Typ **float**\/**double**.  Da die MMX\- und Gleitkommaregister denselben physischen Registerbereich nutzen \(die gleichzeitige Verwendung ist nicht möglich\), kann die Verwendung von `__m64` und der Typen **float**\/**double** in derselben Funktion zu fehlerhaften Daten und folglich zu einer Ausnahme führen.  
+ Eine Funktion verwendet [__m64](../../cpp/m64.md) und **"float"**/**doppelte** Typen. Da die MMX- und Gleitkommaregister denselben physischen Speicherplatz zu registrieren (kann nicht gleichzeitig verwendet werden), mit `__m64` und **"float"**/**doppelte** Typen in der gleichen Funktion kann dazu führen, dass Daten beschädigt, möglicherweise eine Ausnahme auszulösen.  
   
- Um `__m64`\-Typen und Gleitkommatypen problemlos verwenden arbeiten identisch, jede Anweisung die einen dieser Typen von **\_m\_empty\(\)** \(für MMX\) oder systeminterne Funktion **\_m\_femms\(\)** \(für 3DNow\!\).  
+ Zum sicheren verwenden `__m64` Typen und Gleitkommatypen in derselben Funktion sollte jede Anweisung, die einen der Typen verwendet getrennt werden, durch die **_m_empty()** (für MMX) oder **_m_femms()** (für 3DNow!) systeminterne Funktion.  
   
  Im folgenden Beispiel wird C4730 generiert:  
   

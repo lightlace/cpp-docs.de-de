@@ -1,64 +1,64 @@
 ---
-title: "optimize | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc-pragma.optimize"
-  - "optimize_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "optimize-Pragma"
-  - "Pragmas, optimize"
+title: Optimieren der | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc-pragma.optimize
+- optimize_CPP
+dev_langs: C++
+helpviewer_keywords:
+- pragmas, optimize
+- optimize pragma
 ms.assetid: cb13c1cc-186a-45bc-bee7-95a8de7381cc
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d71effb9c39fe3e815c289295a0e8865abd7ce7a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# optimize
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="optimize"></a>optimize
 Gibt die Optimierungen an, die für jede einzelne Funktion durchgeführt werden sollen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
 #pragma optimize( "[optimization-list]", {on | off} )  
 ```  
   
-## Hinweise  
- Das **optimize**\-Pragma muss außerhalb der Funktion angezeigt werden und tritt mit der ersten Funktionsdefinition in Kraft, nachdem das Pragma angezeigt wird.  Mit den **on**\- und **off**\-Argumenten werden Optionen aktiviert oder deaktiviert, die in der *Optimierungsliste* festgelegt sind.  
+## <a name="remarks"></a>Hinweise  
+ Die **optimieren** Pragma muss außerhalb der Funktion angezeigt werden und wird wirksam, die erste Funktion definiert, nachdem das Pragma angezeigt wird. Die **auf** und **deaktiviert** -Argumenten werden Optionen, die im angegebenen aktiviert die *Optimierungsliste* ein- oder ausschalten.  
   
- Die *Optimierungsliste* kann keine oder mehrere Parameter aus der folgenden Tabelle enthalten.  
+ Die *Optimierungsliste* kann 0 (null) oder mehrere Parameter in der folgenden Tabelle gezeigt.  
   
-### Parameter des optimize\-Pragmas  
+### <a name="parameters-of-the-optimize-pragma"></a>Parameter des optimize-Pragmas  
   
 |Parameter|Typ der Optimierung|  
-|---------------|-------------------------|  
+|--------------------|--------------------------|  
 |**g**|Aktivieren globale Optimierungen.|  
 |**s** oder **t**|Geben kurze oder schnelle Sequenzen von Computercode an.|  
 |**y**|Generieren Framezeiger im Programmstapel.|  
   
- Hierbei handelt es sich um dieselben Buchstaben, die mit den [\/O](../build/reference/o-options-optimize-code.md)\-Compileroptionen verwendet werden.  Beispielsweise ist folgendes Pragma mit der **\/Os**\-Compileroption identisch:  
+ Hierbei handelt es sich um dieselben Buchstaben verwendet werden, mit der [/o](../build/reference/o-options-optimize-code.md) Compileroptionen. Beispielsweise ist Folgendes Pragma entspricht der **/OS** Compileroption:  
   
 ```  
 #pragma optimize( "ts", on )  
 ```  
   
- Die Verwendung des **optimize**\-Pragmas mit der leeren Zeichenfolge \(**""**\) ist eine besondere Form der Direktive:  
+ Mithilfe der **optimieren** Pragma mit einer leeren Zeichenfolge (**""**) ist eine besondere Form der Direktive:  
   
- Wenn Sie den **off**\-Parameter verwenden, werden die in der Tabelle weiter oben in diesem Thema angegebenen Optimierungen deaktiviert.  
+ Bei Verwendung der **deaktiviert** Parameter, er wird in der Tabelle weiter oben in diesem Thema aufgeführt sind, deaktiviert Optimierungen.  
   
- Wenn Sie den **on**\-Parameter verwenden, werden die Optimierungen auf die Optimierungen zurückgesetzt, die Sie mit der [\/O](../build/reference/o-options-optimize-code.md)\-Compileroption angegeben haben.  
+ Bei Verwendung der **auf** Parameter, die Optimierungen auf zurückgesetzt, die Sie angegeben haben, mit der [/o](../build/reference/o-options-optimize-code.md) -Compileroption.  
   
 ```  
 #pragma optimize( "", off )  
@@ -68,5 +68,5 @@ Gibt die Optimierungen an, die für jede einzelne Funktion durchgeführt werden 
 #pragma optimize( "", on )   
 ```  
   
-## Siehe auch  
- [Pragma\-Direktiven und das \_\_Pragma\-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>Siehe auch  
+ [Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

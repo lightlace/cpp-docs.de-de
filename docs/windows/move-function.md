@@ -1,32 +1,30 @@
 ---
-title: "Move-Funktion | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "internal/Microsoft::WRL::Details::Move"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Move-Funktion"
+title: Move-Funktion | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: internal/Microsoft::WRL::Details::Move
+dev_langs: C++
+helpviewer_keywords: Move function
 ms.assetid: c9525426-97e8-4d8c-9877-b689d8a0dc67
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a894ca11eb6b5703c116d3fa3a36a45bb46d4ed3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Move-Funktion
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Unterstützt die WRL\-Infrastruktur und nicht beabsichtigt, direkt im Code verwendet werden.  
+# <a name="move-function"></a>Move-Funktion
+Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<  
@@ -37,25 +35,25 @@ inline typename RemoveReference<T>::Type&& Move(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `T`  
  Der Typ des Arguments.  
   
  `arg`  
- Ein Argument zu verschiebenden.  
+ Ein Argument zu verschieben.  
   
-## Rückgabewert  
- Parameter `arg` nach Bezugs\- oder Bezugsmerkmalen ggf. wurden entfernt.  
+## <a name="return-value"></a>Rückgabewert  
+ Parameter `arg` nach Verweis oder Rvalue-Verweis Traits, sofern vorhanden, wurden entfernt.  
   
-## Hinweise  
- Verschiebt das angegebene Argument von einem Speicherort auf einen anderen.  
+## <a name="remarks"></a>Hinweise  
+ Verschiebt das angegebene Argument zwischen Speicherorten.  
   
- Weitere Informationen finden Sie im Abschnitt **Verschiebesemantik** von [Rvalue\-Verweisdeklarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
+ Weitere Informationen finden Sie unter der **verschieben Semantik** Abschnitt [Rvalue-Verweisdeklarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
-## Anforderungen  
- **Header:**  internal.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** internal.h  
   
- **Namespace:**  Microsoft::WRL::Details  
+ **Namespace:** Microsoft::WRL::Details  
   
-## Siehe auch  
- [Microsoft::WRL::Details\-Namespace](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Siehe auch  
+ [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

@@ -1,40 +1,39 @@
 ---
-title: "Attributes by Group | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "index-page "
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "attributes [C++]"
+title: Attribute nach Gruppen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: 'index-page '
+dev_langs: C++
+helpviewer_keywords: attributes [C++]
 ms.assetid: 9f4dd43f-9909-43d6-91d2-05734643876e
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3550a1e06c1fda8733111371b680f22748aab439
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Attributes by Group
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die C\+\+\-Attribute werden in die folgenden funktionalen Gruppen organisiert.  
+# <a name="attributes-by-group"></a>Attribute nach Gruppen
+Die C++-Attribute werden in der folgenden funktionalen Gruppen organisiert.  
   
-|Attribut|Description|  
-|--------------|-----------------|  
-|[COM\-Attribute](../windows/com-attributes.md)|Fügen Sie Code ein, um zahlreiche Bereiche von COM\-Entwicklung und von .NET Framework\-Common Language Runtime\-Entwicklung zu unterstützen.|  
-|[IDL\-Attribute](../windows/idl-attributes.md)|Aktivieren Sie die Änderung der IDL\-Datei von einer Quellcodedatei ohne Verwendung eines Assistenten und ohne Kenntnis der Struktur und der Syntax dieser Datei.|  
-|[OLE DB\-Consumerattribute](../windows/ole-db-consumer-attributes.md)|Fügen Sie codebasiert auf [OLE DB\-Consumervorlagen](../data/oledb/ole-db-consumer-templates-reference.md) ein \- um ein funktionierender OLE DB\-Consumer zu erstellen, der Aufgaben wie Öffnungstabellen ausführt, Befehle ausführt, und auf Daten zugreift.|  
-|[Compiler\-Attribute](../windows/compiler-attributes.md)|Wenn vom Visual C\+\+\-Compiler.|  
+|Attribut|Beschreibung|  
+|---------------|-----------------|  
+|[COM-Attribute](../windows/com-attributes.md)|Fügen Sie Code aus, um mehrere Bereiche von COM-Entwicklung und .NET Framework common Language Runtime-Entwicklung unterstützt.|  
+|[IDL-Attribute](../windows/idl-attributes.md)|Aktivieren Sie die Änderung der IDL-Datei aus einer Quellcodedatei, ohne die Verwendung eines Assistenten und ohne Kenntnisse der Struktur und Syntax dieser Datei.|  
+|[OLE DB-Consumerattribute](../windows/ole-db-consumer-attributes.md)|Einfügen von Code – basierend auf den [OLE DB-Consumervorlagen](../data/oledb/ole-db-consumer-templates-reference.md)– um eine funktionierende OLE DB-Consumer, die Aufgaben wie das Öffnen von Tabellen, führt Ausführen von Befehlen und den Zugriff auf Daten zu erstellen.|  
+|[Compilerattribute](../windows/compiler-attributes.md)|Vom Visual C++-Compiler bereitgestellt.|  
   
- Informationen darüber, wie Sie benutzerdefinierte Attribute für die .NET Framework\-Anwendung, finden Sie unter [User\-Defined Attributes](../windows/user-defined-attributes-cpp-component-extensions.md) definiert.  
+ Informationen zum Definieren von benutzerdefinierter Attributen für .NET Framework-Anwendung finden Sie unter [benutzerdefinierte Attribute](../windows/user-defined-attributes-cpp-component-extensions.md).  
   
-## Siehe auch  
- [C\+\+ Attributes Reference](../windows/cpp-attributes-reference.md)   
- [Concepts](../windows/attributed-programming-concepts.md)   
- [Attributes by Usage](../windows/attributes-by-usage.md)   
- [Attributes Alphabetical Reference](../windows/attributes-alphabetical-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [C++-Attributreferenz](../windows/cpp-attributes-reference.md)   
+ [Konzepte](../windows/attributed-programming-concepts.md)   
+ [Attribute nach Verwendung](../windows/attributes-by-usage.md)   
+ [Alphabetische Attributreferenz](../windows/attributes-alphabetical-reference.md)

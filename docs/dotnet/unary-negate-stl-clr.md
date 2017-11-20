@@ -1,32 +1,30 @@
 ---
-title: "unary_negate (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::unary_negate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unary_negate-Funktion [STL/CLR]"
+title: Unary_negate (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::unary_negate
+dev_langs: C++
+helpviewer_keywords: unary_negate function [STL/CLR]
 ms.assetid: 83bbdd86-199c-4451-9f70-72f9ade2264a
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 530a75cdebd5799e8c46fd6f8ae1f40d4f785ba6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# unary_negate (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die Vorlagenklasse beschreibt ein Funktionselement, die, wenn sie aufgerufen wird, dem logischen Nicht des gespeicherten EinArgumentfunktionselements zurückgibt.  Sie verwenden sie angeben einem Funktionsobjekt hinsichtlich sein gespeichertes Funktionselement.  
+# <a name="unarynegate-stlclr"></a>unary_negate (STL/CLR)
+Die Vorlagenklasse beschreibt ein Funktionselement ist, die beim Aufruf gibt den logischen nicht von seiner gespeicherte Funktionselement mit nur einem Argument. Sie verwenden, geben Sie ein Funktionsobjekt im Hinblick auf seine gespeicherte Funktionselement.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<typename Fun>  
@@ -48,33 +46,33 @@ public:
     };  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  Fun  
- Der Typ des gespeicherten Feature\-Elements.  
+ Der Typ des gespeicherten Funktionselement.  
   
-## Memberfunktionen  
+## <a name="member-functions"></a>Memberfunktionen  
   
-|Typdefinition|**Beschreibung**|  
-|-------------------|----------------------|  
-|argument\_type|Der Typ des Funktionselementarguments.|  
-|delegate\_type|Der Typ des generischen Delegaten.|  
-|result\_type|Der Typ des Funktionselementergebnisses.|  
+|Typdefinition|Beschreibung|  
+|---------------------|-----------------|  
+|argument_type|Der Typ des Arguments Funktionselement.|  
+|delegate_type|Der Typ des generischen Delegaten.|  
+|RESULT_TYPE|Der Typ des Ergebnisses Funktionselement.|  
   
-|Member|**Beschreibung**|  
-|------------|----------------------|  
-|unary\_negate|Erstellt das Funktionselement.|  
+|Member|Beschreibung|  
+|------------|-----------------|  
+|unary_negate|Erstellt das Funktionselement.|  
   
-|Operator|**Beschreibung**|  
-|--------------|----------------------|  
-|operator\(\)|Berechnet die gewünschte Funktion.|  
-|delegate\_type^|Wandelt das Funktionselement zu einem Delegaten um.|  
+|Operator|Beschreibung|  
+|--------------|-----------------|  
+|Operator()|Berechnet die gewünschte Funktion.|  
+|Delegate_type ^|Wandelt das Funktionselement an einen Delegaten an.|  
   
-## Hinweise  
- Die Vorlagenklasse beschreibt ein EinArgumentfunktionselement, das ein anderes EinArgumentfunktionselement speichert.  Sie definiert den Memberoperator, `operator()`, wenn das Objekt als Funktion aufgerufen, wird sie dem logischen Nicht des gespeicherten Feature\-Elements zurückgibt, das dem Argument aufgerufen wird.  
+## <a name="remarks"></a>Hinweise  
+ Die Vorlagenklasse beschreibt ein Funktionselement ist, die eine andere nur einem Argument Funktionselement speichert nur einem Argument. Die Memberoperator definiert `operator()` , wenn das Objekt als eine Funktion aufgerufen wird, gibt die logische nicht von der gespeicherten Funktionselement mit dem Argument aufgerufen.  
   
- Sie können das Objekt auch übergeben, da ein Funktionsargument, dessen Typ `delegate_type^` ist und es entsprechend konvertiert wird.  
+ Sie können auch das Objekt übergeben, als ein Funktionsargument, dessen Typ ist `delegate_type^` und werden entsprechend konvertiert werden.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_unary_negate.cpp   
@@ -116,13 +114,16 @@ int main()
   
 ```  
   
-  **4 0**  
- **1 0**  
- **1 0**   
-## Anforderungen  
- **Header:** \<cliext\/funktionsfähig\>  
+```Output  
+4 0  
+1 0  
+1 0  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/funktionale >  
   
-## Siehe auch  
- [not1](../dotnet/not1-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [not1 (STL/CLR)](../dotnet/not1-stl-clr.md)

@@ -1,46 +1,46 @@
 ---
-title: "COM Attributes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "attributes [C++], reference topics"
-  - "attributes [COM]"
-  - "COM, attributes"
+title: COM-Attribute | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- attributes [C++], reference topics
+- attributes [COM]
+- COM, attributes
 ms.assetid: 52a5dd70-e8be-4bba-afd6-daf90fe689a0
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f9cd3657426a2a51a582ab695376287a3e975056
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# COM Attributes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die COM\-Attribute fügen Code ein, um eine Vielzahl von Bereichen und COM\-Entwicklung von .NET Framework\-Common Language Runtime\-Entwicklung zu unterstützen.  Diese Bereiche reichen von der benutzerdefinierten Schnittstellenimplementierung und der Unterstützung vorhandener Schnittstellen bis zum Unterstützen von vordefinierten Eigenschaften, Methoden und Ereignisse.  Darüber hinaus kann die Unterstützung für Verbund und ActiveX\-Steuerelement\-Implementierung gefunden werden.  
+# <a name="com-attributes"></a>COM-Attribute
+Die COM-Attribute fügen Code um mehrere Bereiche von COM-Entwicklung und .NET Framework common Language Runtime-Entwicklung zu unterstützen. Diese Bereiche reichen von benutzerdefinierten Implementierung und Unterstützung von vorhandenen Schnittstellen zur Unterstützung von vordefinierten Eigenschaften, Methoden und Ereignisse. Darüber hinaus kann die Unterstützung für zusammengesetzte und ActiveX-Steuerelement Implementierung gefunden werden.  
   
 |Attribut|Beschreibung|  
-|--------------|------------------|  
-|[aggregierbar](../windows/aggregatable.md)|Gibt an, dass ein Steuerelement durch ein anderes Steuerelement aggregiert werden kann.|  
+|---------------|-----------------|  
+|[Aggregierbar](../windows/aggregatable.md)|Gibt an, dass ein Steuerelement durch ein anderes Steuerelement aggregiert werden kann.|  
 |[Aggregate](../windows/aggregates.md)|Gibt an, dass ein Steuerelement die Zielklasse aggregiert.|  
-|[Co\-Klasse](../windows/coclass.md)|Erstellt ein COM\-Objekt, das eine COM\-Schnittstelle implementieren kann.|  
-|[com\_interface\_entry](../windows/com-interface-entry-cpp.md)|Fügt einen Eintrag für eine COM\-Zuordnung Schnittstellen hinzu.|  
-|[implements\_category](../windows/implements-category.md)|Gibt implementierte Teil Kategorien für die Klasse.|  
-|[ProgID](../windows/progid.md)|Definiert die ProgID für ein Steuerelement.|  
+|[coclass](../windows/coclass.md)|Erstellt ein COM-Objekt, die eine COM-Schnittstelle implementieren können.|  
+|[COM_INTERFACE_ENTRY](../windows/com-interface-entry-cpp.md)|Fügt einen Eintrag für die Schnittstelle zu einer COM-Zuordnung.|  
+|[implements_category](../windows/implements-category.md)|Gibt an, für die Klasse implementierten Komponentenkategorien.|  
+|[progid](../windows/progid.md)|Definiert die ProgID für ein Steuerelement an.|  
 |[rdx](../windows/rdx.md)|Erstellt oder ändert einen Registrierungsschlüssel.|  
-|[registration\_script](../windows/registration-script.md)|Führt das angegebene Registrierung von Skripts aus.|  
-|[requires\_category](../windows/requires-category.md)|Gibt Kategorien erforderlicher Teil für die Klasse an.|  
-|[support\_error\_information](../windows/support-error-info.md)|Unterstützt die Fehlerberichterstellung für das Zielobjekt.|  
-|[synchronisieren Sie](../windows/synchronize.md)|Synchronisiert den Zugriff auf eine Methode.|  
-|[Threading](../windows/threading-cpp.md)|Gibt das Threadingmodell für ein COM\-Objekt an.|  
-|[vi\_progid](../windows/vi-progid.md)|Definiert ein versionsunabhängiges ProgID für ein Steuerelement.|  
+|[registration_script](../windows/registration-script.md)|Führt die angegebene Registrierungsskript aus.|  
+|[requires_category](../windows/requires-category.md)|Gibt die erforderliche Komponente von Kategorien für die Klasse an.|  
+|[support_error_info](../windows/support-error-info.md)|Unterstützt die Fehlerberichterstattung für das Zielobjekt.|  
+|[synchronize](../windows/synchronize.md)|Synchronisiert den Zugriff auf eine Methode an.|  
+|[Threading](../windows/threading-cpp.md)|Gibt das Threadingmodell für ein COM-Objekt.|  
+|[vi_progid](../windows/vi-progid.md)|Definiert eine versionsunabhängige ProgID eines Steuerelements an.|  
   
-## Siehe auch  
- [Attributes by Group](../windows/attributes-by-group.md)
+## <a name="see-also"></a>Siehe auch  
+ [Attribute nach Gruppen](../windows/attributes-by-group.md)

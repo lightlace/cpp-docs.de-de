@@ -4,39 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- output streams, one-argument manipulators
+dev_langs: C++
+helpviewer_keywords: output streams, one-argument manipulators
 ms.assetid: e381dee8-6b16-4cef-805a-4a6a1d2b696b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9a2162085b6a78cb376c5bbd7d76943f76115d30
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: a3d453746b9f9af7219f181949ba9958c27a1577
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="other-one-argument-output-stream-manipulators"></a>Andere Ausgabestreammanipulatoren mit einem Argument
 Im folgenden Beispiel wird eine `money`-Klasse verwendet, die ein `long`-Typ ist. Der `setpic`-Manipulator fügt eine „Bild“-Formatierungszeichenfolge zur Klasse hinzu, die vom überladenen Operator zum Einfügen des Datenstroms der Klasse `money` verwendet werden kann. Die Bildzeichenfolge wird als statische Variable in der `money`-Klasse und nicht als Datenmember einer Streamklasse gespeichert, sodass Sie keine neue Ausgabestreamklasse ableiten müssen.  
@@ -103,5 +85,4 @@ int main( )
   
 ## <a name="see-also"></a>Siehe auch  
  [Benutzerdefinierte Manipulatoren mit Argumenten](../standard-library/custom-manipulators-with-arguments.md)
-
 

@@ -1,30 +1,28 @@
 ---
-title: "Module::RegisterCOMObject-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::RegisterCOMObject"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RegisterCOMObject-Methode"
+title: 'Module:: registercomobject-Methode | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::RegisterCOMObject
+dev_langs: C++
+helpviewer_keywords: RegisterCOMObject method
 ms.assetid: 59f223dc-03c6-429d-95da-b74b3f73b702
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 69210063663440299639dc2a39a466ecf2df99cf
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Module::RegisterCOMObject-Methode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ein oder mehrere COM-Objekte registriert, damit andere Programme zugreifen können.  
+# <a name="moduleregistercomobject-method"></a>Module::RegisterCOMObject-Methode
+Registriert ein oder mehrere COM-Objekte, damit andere Anwendungen herstellen können.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,21 +44,21 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
  Ein Array von CLSIDs registrieren.  
   
  `factories`  
- Ein Array von IUnknown Schnittstellen die Objekte der Klasse, deren Verfügbarkeit veröffentlicht wird.  
+ Ein Array von IUnknown-Schnittstellen, der die Objekte der Klasse, deren Verfügbarkeit veröffentlicht wird.  
   
  `cookies`  
- Wenn der Vorgang abgeschlossen ist, Objekte ein Array von Zeigern auf Werte, die die Klasse zu identifizieren, die registriert wurden. Diese Werte werden später verwendet, die Registrierung aufzuheben.  
+ Bei Abschluss des Vorgangs Objekte ein Array von Zeigern auf Werte, die die Klasse zu identifizieren, die registriert wurden. Diese Werte werden später verwendet, die Registrierung aufzuheben.  
   
  `count`  
  Die Anzahl der CLSIDs registrieren.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK Wenn Successfu; andernfalls ein HRESULT wie z. B. CO_E_OBJISREG, die den Grund angibt Fehler aufgetreten.  
+ S_OK Wenn Successfu; Andernfalls ist fehlgeschlagen HRESULT z. B. CO_E_OBJISREG, die den Grund angibt.  
   
 ## <a name="remarks"></a>Hinweise  
  Die COM-Objekte werden mit dem Enumerator CLSCTX_LOCAL_SERVER der Enumeration CLSCTX registriert.  
   
- Die Art der Verbindung auf die registrierten Objekte wird angegeben, indem eine Kombination des aktuellen `comflag` Vorlagenparameter und den Enumerator REGCLS_SUSPENDED REGCLS-Enumeration.  
+ Der Typ der Verbindung auf die registrierte Objekte wird durch eine Kombination des aktuellen angegeben `comflag` Template-Parameter und den Enumerator REGCLS_SUSPENDED REGCLS-Enumeration.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** module.h  

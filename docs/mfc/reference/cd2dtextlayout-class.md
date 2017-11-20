@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -22,8 +21,7 @@ f1_keywords:
 - AFXRENDERTARGET/CD2DTextLayout::SetFontFamilyName
 - AFXRENDERTARGET/CD2DTextLayout::SetLocaleName
 - AFXRENDERTARGET/CD2DTextLayout::m_pTextLayout
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CD2DTextLayout [MFC], CD2DTextLayout
 - CD2DTextLayout [MFC], Create
@@ -37,16 +35,15 @@ helpviewer_keywords:
 - CD2DTextLayout [MFC], SetLocaleName
 - CD2DTextLayout [MFC], m_pTextLayout
 ms.assetid: 724bd13c-f2ef-4e55-a775-8cb04b7b7908
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: bf5a4b554f3ee06c9f7aab60fe615ef9be0e544a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 3d1307eb4f747fa06a21d9b2b8fd65dec2defbe5
-ms.contentlocale: de-de
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cd2dtextlayout-class"></a>CD2DTextLayout-Klasse
 Ein Wrapper für IDWriteTextLayout.  
@@ -279,4 +276,3 @@ BOOL SetLocaleName(
   
 ## <a name="see-also"></a>Siehe auch  
  [Klassen](../../mfc/reference/mfc-classes.md)
-

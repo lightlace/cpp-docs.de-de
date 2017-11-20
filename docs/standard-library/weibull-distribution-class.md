@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,9 +21,7 @@ f1_keywords:
 - random/std::weibull_distribution::param_type::b
 - random/std::weibull_distribution::param_type::operator==
 - random/std::weibull_distribution::param_type::operator!=
-- random/std::weibull_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::weibull_distribution [C++]
 - std::weibull_distribution [C++], reset
@@ -36,16 +33,15 @@ helpviewer_keywords:
 - std::weibull_distribution [C++], param_type
 - std::weibull_distribution [C++], param_type
 ms.assetid: f20b49d3-1b9a-41af-8db4-baf800eaa02b
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 319a00cfd69ef2e83da5744606b9c4c10d4f9942
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 87677d884a80c2cc2038f759c31a725299e523f6
-ms.contentlocale: de-de
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="weibulldistribution-class"></a>weibull_distribution-Klasse
 Generiert eine Weibull-Verteilung.  
@@ -275,7 +271,6 @@ Diese Struktur kann bei der Instanziierung an den Klassenkonstruktor des Verteil
   
 ## <a name="see-also"></a>Siehe auch  
  [\<random>](../standard-library/random.md)
-
 
 
 

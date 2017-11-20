@@ -1,42 +1,24 @@
 ---
-title: Task_options-Klasse (Concurrency Runtime) | Microsoft-Dokumentation
+title: Task_options-Klasse (Concurrency Runtime) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- ppltasks/concurrency::task_options
-dev_langs:
-- C++
+f1_keywords: ppltasks/concurrency::task_options
+dev_langs: C++
 ms.assetid: f93d146b-70f7-46ec-8c2f-c33b8bb0af69
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 9b0d7d245ae204fd59715c8142a836adbb63c10a
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 0bacd04cb1662e8fffecbb5b1b6c12b430c25b9b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="taskoptions-class-concurrency-runtime"></a>task_options-Klasse (Concurrency Runtime)
 Stellt die zulässigen Optionen zum Erstellen einer Aufgabe dar  
@@ -71,7 +53,7 @@ class task_options;
  `task_options`  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** ppltasks.h  
+ **Header:** "ppltasks.h"  
   
  **Namespace:** Parallelität  
   
@@ -179,4 +161,3 @@ task_options(
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)
-

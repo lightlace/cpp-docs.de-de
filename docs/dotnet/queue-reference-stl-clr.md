@@ -1,41 +1,39 @@
 ---
-title: "queue::reference (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Verweismember [STL/CLR]"
+title: Queue::Reference (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::reference
+dev_langs: C++
+helpviewer_keywords: reference member [STL/CLR]
 ms.assetid: cca05237-5b95-4cca-ac21-b786aa8a3c96
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e37da954b3726c2cff6816efa8ef9a8ffca45a0c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# queue::reference (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="queuereference-stlclr"></a>queue::reference (STL/CLR)
 Der Typ eines Verweises auf ein Element.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef value_type% reference;  
 ```  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Der Typ beschreibt einen Verweis auf ein Element.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_queue_reference.cpp   
@@ -66,14 +64,17 @@ int main()
   
 ```  
   
-  **ein b c**  
- **ein b x**   
-## Anforderungen  
- **Header:** \<cliext\/Warteschlange\>  
+```Output  
+a b c  
+a b x  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext bzw. einer neuen Warteschlange >  
   
-## Siehe auch  
- [queue](../dotnet/queue-stl-clr.md)   
- [queue::const\_reference](../dotnet/queue-const-reference-stl-clr.md)   
- [queue::value\_type](../dotnet/queue-value-type-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Warteschlange (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [Queue::const_reference (STL/CLR)](../dotnet/queue-const-reference-stl-clr.md)   
+ [queue::value_type (STL/CLR)](../dotnet/queue-value-type-stl-clr.md)

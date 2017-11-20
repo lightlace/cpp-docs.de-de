@@ -1,31 +1,31 @@
 ---
-title: "B. Stubs for Run-time Library Functions"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "B. Stubs für Run-Time-Bibliotheksfunktionen | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: fdfdabe0-f678-4551-80d5-827b62354427
-caps.latest.revision: 6
-caps.handback.revision: "6"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e360e075cf8c721b9357746b2afa3a08df3c851a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# B. Stubs for Run-time Library Functions
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Dieser Abschnitt enthält Stubs für die Laufzeitbibliotheksfunktionen bereit, die in OpenMP C und C\+\+ APIs definiert sind.  Die Stubs werden bereitgestellt, um die Portabilität auf Plattformen zu aktivieren, die keine OpenMP C und C\+\+ APIs unterstützen.  Auf diesen Plattformen müssen OpenMP\-Programme einer Bibliothek verknüpft sind, die diese Funktionen Stub enthält.  Die Funktionen Stub davon ausgegangen, dass die Direktiven im OpenMP\-Programm ignoriert werden.  Daher wird der serielle Semantik emulieren.  
+# <a name="b-stubs-for-run-time-library-functions"></a>B. Stubs für Run-Time Library-Funktionen
+Dieser Abschnitt enthält die Stubs für die Laufzeit-Bibliothekscode-Funktionen, die in der OpenMP-C- und C++-API definiert. Die Stubs werden bereitgestellt, um die Portabilität auf Plattformen zu aktivieren, die nicht der OpenMP-C- und C++-API unterstützen. Auf diesen Plattformen müssen OpenMP-Programme mit einer Bibliothek, die diese Stubfunktionen enthält verknüpft werden. Die Stubfunktionen wird davon ausgegangen, dass die darin enthaltenen Direktiven der OpenMP-Programm ignoriert werden. Daher emulieren sie serielle Semantik.  
   
 > [!NOTE]
->  Die Sperren, die in den variablen von Sperren angezeigt wird, muss über diese Features ausschließlich darauf zugegriffen werden.  Er sollte nicht im Anwenderprogramm initialisiert werden oder geändert werden.  Benutzer sollten keine Annahmen über die Mechanismen, die von OpenMP C verwendet werden und C\+\+\-Implementierungen zum Implementieren der Sperren auf Grundlage des Schemas, das von der Stub Funktionen verwendet wird.  
+>  Die Sperren der Variable, die in der Lock-Funktionen angezeigt wird, muss ausschließlich über diese Funktionen zugegriffen werden. Es sollte nicht initialisiert oder andernfalls geändert werden in der Anwendung für Benutzer. Benutzer sollten keine Annahmen über die Mechanismen, die von OpenMP-C- und C++-Implementierungen verwendet werden, um Sperren auf Grundlage des Schemas, die von der Stubfunktionen zu implementieren vornehmen.  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 #include <stdio.h>  

@@ -1,29 +1,27 @@
 ---
-title: "Ressourcencompiler: Fehler RC2162 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "RC2162"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RC2162"
+title: 'Ressourcencompiler: Fehler RC2162 | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: RC2162
+dev_langs: C++
+helpviewer_keywords: RC2162
 ms.assetid: 4ac713b7-3067-436c-83fd-4180438c4f2c
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7b1136d74697645e4a560f81ff7f6cef490e85e9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Ressourcencompiler: Fehler RC2162
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Formaler Makroparameter erwartet  
+# <a name="resource-compiler-error-rc2162"></a>Ressourcencompiler: Fehler RC2162
+formaler Makroparameter erwartet  
   
- Bei dem auf einen Zeichenfolgenoperator \(**\#**\) folgenden Symbol handelte es sich nicht um den Namen eines formalen Parameters.
+ Das Token einen Zeichenfolgenoperator folgenden (**#**) war keine formale Parametername.

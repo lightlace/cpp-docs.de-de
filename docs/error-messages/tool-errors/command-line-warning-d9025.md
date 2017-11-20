@@ -1,39 +1,37 @@
 ---
-title: "Befehlszeilenwarnung D9025 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "D9025"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "D9025"
+title: Befehlszeilenwarnung D9025 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: D9025
+dev_langs: C++
+helpviewer_keywords: D9025
 ms.assetid: 6edff72c-1508-46c2-99f4-0e4b3c5e60c9
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 05193a8db423bae2acdd61cd450c29d7695f6a18
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Befehlszeilenwarnung D9025
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Überschreiben von 'Option1' mit 'Option2'  
+# <a name="command-line-warning-d9025"></a>Befehlszeilenwarnung D9025
+Überschreiben von 'option1' mit 'option2'  
   
- Die *Option1*\-Option wurde angegeben, aber durch *Option2* überschrieben.  Die *Option2*\-Option wurde verwendet.  
+ Die *option1* -Option wurde angegeben, aber durch überschrieben *option2*. Die *option2* Option wurde verwendet.  
   
- Wenn zwei Optionen widersprüchliche oder inkompatible Direktiven angeben, wird die Direktive verwendet, die am weitesten rechts in der Befehlszeile angegeben oder impliziert wird.  
+ Wenn zwei Optionen widersprüchliche oder inkompatible Direktiven angeben, wird die Richtlinie angegeben oder impliziert die Option am weitesten rechts in der Befehlszeile verwendet.  
   
- Wenn Sie beim Kompilieren aus der Entwicklungsumgebung diese Warnung erhalten und nicht sicher sind, woher die miteinander in Konflikt stehenden Optionen stammen, überprüfen Sie Folgendes:  
+ Wenn Sie diese Warnung beim Kompilieren von der Entwicklungsumgebung erhalten und sich nicht sicher sind, in dem die in Konflikt stehenden Optionen von kommen, berücksichtigen Sie Folgendes:  
   
--   Eine Option kann entweder im Code oder in den Projekteinstellungen des Projekts angegeben werden.  Wenn auf den [Eigenschaftenseiten der Befehlszeile](../../ide/command-line-property-pages.md) die miteinander in Konflikt stehenden Optionen im Feld **Alle Optionen** angezeigt werden, sind die Optionen auf den Eigenschaftenseiten des Projekts angegeben, andernfalls im Quellcode.  
+-   Eine Option kann im Code oder in den projekteinstellungen für das Projekt angegeben werden. Bei Betrachtung des Compilers [Befehlszeile Eigenschaftenseiten](../../ide/command-line-property-pages.md) und wenn Sie die in Konflikt stehenden Optionen finden Sie unter der **alle Optionen** Feld, und klicken Sie dann die Optionen in den Eigenschaftenseiten des Projekts, andernfalls die Optionen festgelegt werden werden im Quellcode festgelegt.  
   
-     Wenn die Optionen auf den Eigenschaftenseiten des Projekts festgelegt sind, sehen Sie auf der Eigenschaftenseite des Compiler\-Präprozessors nach \(wobei der Projektknoten im Projektmappen\-Explorer ausgewählt ist\).  Wenn dort die festgelegte Option nicht angezeigt wird, überprüfen Sie die Einstellungen der Präprozessor\-Eigenschaftenseite für alle Quellcodedateien \(im Projektmappen\-Explorer\), um sicherzustellen, dass sie nicht dort hinzugefügt wurde.  
+     Wenn die Optionen in den Eigenschaftenseiten des Projekts festgelegt werden, suchen Sie auf der Compiler Präprozessor Eigenschaftenseite (mit den Projektknoten im Projektmappen-Explorer ausgewählt).  Wenn Sie nicht die Option dort festlegen, stellen Sie sicher, die seiteneinstellungen Präprozessor-Eigenschaft für jede Quelle-Codedatei (in Projektmappen-Explorer) angezeigt wird er es nicht hinzugefügt.  
   
-     Wenn die Optionen im Code festgelegt wurden, kann dies entweder im Code oder in den Windows\-Headern geschehen sein.  Sie können versuchen, eine vorverarbeitete Datei \([\/P](../../build/reference/p-preprocess-to-a-file.md)\) zu erstellen und diese nach dem Symbol zu durchsuchen.
+     Wenn die Optionen im Code festgelegt sind, konnte es entweder im Code oder in der Windows-Header festgelegt werden.  Sie könnten versuchen, eine vorverarbeitete Datei erstellen ([/p](../../build/reference/p-preprocess-to-a-file.md)) und das Symbol gesucht.

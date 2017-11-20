@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -168,19 +167,17 @@ helpviewer_keywords:
 - C1901
 - C1903
 - C1904
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: b51fc7bc078733cc432b8d63dc160cf0ef3078c5
-ms.contentlocale: de-de
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Schwerwiegende Compilerfehler C999 bis C1999
 In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen Unterabschnitt der Visual C++-Compilerfehler enthalten. Sie können hier auf die Informationen zugreifen oder im Fenster **Ausgabe** in Visual Studio eine Fehlernummer auswählen und dann die F1-TASTE drücken.  

@@ -1,56 +1,54 @@
 ---
-title: "__identifier (C++/CLI)"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__identifier"
-  - "__identifier_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__identifier keyword [C++]"
+title: __identifier (C + c++ / CLI) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __identifier
+- __identifier_cpp
+dev_langs: C++
+helpviewer_keywords: __identifier keyword [C++]
 ms.assetid: 348428af-afa7-4ff3-b571-acf874301cf2
-caps.latest.revision: 18
-caps.handback.revision: "18"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d9eca3bf99c0a798fd31dfa70e00769274a379b5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# __identifier (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ermöglicht die Verwendung von Visual C\+\+\-Schlüsselworten als Bezeichner.  
+# <a name="identifier-ccli"></a>__identifier (C++/CLI)
+Ermöglicht die Verwendung von Visual C++-Schlüsselwörter als Bezeichner an.  
   
-## Alle Plattformen  
- **Syntax**  
+## <a name="all-platforms"></a>Alle Plattformen  
+**Syntax**  
   
 ```  
-  
 __identifier(  
 Visual_C++_keyword  
 )  
   
 ```  
   
- **Hinweise**  
+**Hinweise**  
   
- Verwendung des `__identifier`\-Schlüsselwort für Bezeichner, die keine Schlüsselwörter sind, ist zulässig, jedoch abgeraten stark wie eine Frage des Stils.  
+Verwenden der `__identifier` Schlüsselwort für Bezeichner entsprechen, die keine Schlüsselwörter sind zulässig, jedoch als stilistischen dringend abgeraten.  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+## <a name="windows-runtime"></a>Windows-Runtime  
   
-### Voraussetzungen  
- Compileroption: **\/ZW**  
+### <a name="requirements"></a>Anforderungen  
+ Compileroption: **/ZW**  
   
-### Beispiele  
+### <a name="examples"></a>Beispiele  
  **Beispiel**  
   
- Im folgenden Beispiel wird eine Klasse, die `template`, in C\# erstellt und verteilt als DLL.  Im Visual C\+\+\-Programm, das die `template`\-Klasse verwendet, wird das `__identifier`\-Schlüsselwort der Tatsache, dass `template` ein Standard\-C\+\+\-Schlüsselwort ist.  
+ Im folgenden Beispiel eine Klasse mit dem Namen `template` in c# erstellt und als DLL verteilt wird. In der Visual C++-Programm, verwendet der `template` -Klasse, die `__identifier` Schlüsselwort verbirgt die Tatsache, `template` ist ein standard C++-Schlüsselwort.  
   
 ```  
 // identifier_template.cs  
@@ -70,18 +68,18 @@ int main() {
 }  
 ```  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
+## <a name="common-language-runtime"></a>Common Language Runtime 
  **Hinweise**  
   
- Das Schlüsselwort `__identifier` ist mit den Compileroptionen **\/clr** und **\/clr:oldSyntax** zulässig.  
+ Die `__identifier` -Schlüsselwort ist gültig, wenn die **"/ CLR"** -Compileroption.  
   
-### Voraussetzungen  
- Compileroption: **\/clr**  
+### <a name="requirements"></a>Anforderungen  
+ Compileroption: **/clr**  
   
-### Beispiele  
+### <a name="examples"></a>Beispiele  
  **Beispiel**  
   
- Im folgenden Beispiel wird eine Klasse, die `template`, in C\# erstellt und verteilt als DLL.  Im Visual C\+\+\-Programm, das die `template`\-Klasse verwendet, wird das `__identifier`\-Schlüsselwort der Tatsache, dass `template` ein Standard\-C\+\+\-Schlüsselwort ist.  
+ Im folgenden Beispiel eine Klasse mit dem Namen `template` in c# erstellt und als DLL verteilt wird. In der Visual C++-Programm, verwendet der `template` -Klasse, die `__identifier` Schlüsselwort verbirgt die Tatsache, `template` ist ein standard C++-Schlüsselwort.  
   
 ```  
 // identifier_template.cs  
@@ -102,6 +100,6 @@ int main() {
 }  
 ```  
   
-## Siehe auch  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)   
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>Siehe auch  
+ [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)   
+ [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)

@@ -1,45 +1,43 @@
 ---
-title: "multiset::operator= (STL/CLR)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Operator= Member [STL/CLR]"
+title: multiset::Operator = (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::operator=
+dev_langs: C++
+helpviewer_keywords: operator= member [STL/CLR]
 ms.assetid: 74e60042-d0d6-471f-8fdb-79b3c6856440
-caps.latest.revision: 8
-caps.handback.revision: "6"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1339d26047e65a5a509ab1a17295de5928f38f3d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# multiset::operator= (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ersetzt die gesteuerte Sequenz.  
+# <a name="multisetoperator-stlclr"></a>multiset::operator= (STL/CLR)
+Ersetzt die kontrollierte Sequenz.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 multiset<Key>% operator=(multiset<Key>% right);  
 ```  
   
-#### Parameter  
- right  
- Container zu kopieren.  
+#### <a name="parameters"></a>Parameter  
+ Rechts  
+ Der zu kopierende Container.  
   
-## Hinweise  
- Der Member, den Operator `right` zum Objekt kopiert, dann, `*this` zurückgibt.  Sie verwenden sie, um die gesteuerte Sequenz durch eine Kopie der gesteuerten Sequenz in `right` zu ersetzen.  
+## <a name="remarks"></a>Hinweise  
+ Die Member-Operator Kopien `right` klicken Sie dann auf das Objekt gibt `*this`. Sie können ihn verwenden, um die kontrollierte Sequenz durch eine Kopie der kontrollierten Sequenz in `right` zu ersetzen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_multiset_operator_as.cpp   
@@ -71,12 +69,15 @@ int main()
   
 ```  
   
-  **ein b c**  
- **ein b c**   
-## Anforderungen  
- **Header:** \<cliext\/Satz\>  
+```Output  
+a b c  
+a b c  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Set >  
   
-## Siehe auch  
- [multiset](../dotnet/multiset-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)

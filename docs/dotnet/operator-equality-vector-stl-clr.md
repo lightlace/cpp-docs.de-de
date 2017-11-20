@@ -1,32 +1,30 @@
 ---
-title: "operator== (vector) (STL/CLR)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::operator=="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Operator== Member [STL/CLR]"
+title: Operator == (Vektor) (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::operator==
+dev_langs: C++
+helpviewer_keywords: operator== member [STL/CLR]
 ms.assetid: b552c9a1-8d06-4090-b394-d08a84947594
-caps.latest.revision: 16
-caps.handback.revision: "14"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4bd80969e3e35b970f68cf48f8327326ea9ebadb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# operator== (vector) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gleicher Vergleich des Vektors.  
+# <a name="operator-vector-stlclr"></a>operator== (vector) (STL/CLR)
+Vektor gleich Vergleich.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<typename Value>  
@@ -34,17 +32,17 @@ template<typename Value>
         vector<Value>% right);  
 ```  
   
-#### Parameter  
- left  
- Linker Container zu vergleichen.  
+#### <a name="parameters"></a>Parameter  
+ links  
+ Linker zu vergleichender Container.  
   
- right  
- Rechter Container zu vergleichen.  
+ Rechts  
+ Rechter zu vergleichender Container.  
   
-## Hinweise  
- Die Operatorfunktionsrückgaben true, wenn die Sequenzen, die von `left` und `right` gesteuert werden, die gleiche Länge und, für die einzelnen Positionen `i`, `left``[i] ==` `right``[i]`.  Sie verwenden sie, um zu testen, ob `left` wie `right` sortiert wird, wenn die beiden Vektoren verglichenes Element durch Element sind.  
+## <a name="remarks"></a>Hinweise  
+ Die Operatorfunktion gibt "true" nur, wenn die Sequenzen von gesteuert `left` und `right` haben die gleiche Länge und für die einzelnen Positionen `i`, `left[i] ==` `right[i]`. Sie verwenden es, um zu testen, ob `left` sortiert wird, ist identisch mit `right` Wenn die beiden Vektoren verglichenen elementweise sind.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_vector_operator_eq.cpp   
@@ -83,19 +81,22 @@ int main()
   
 ```  
   
-  **ein b c**  
- **ein b d**  
-**\[ein b c\] \=\= ist \[ein b c\] erfüllt**  
-**\[ein b c\] \=\= ein b ist \[d\] falsch**   
-## Anforderungen  
- **Header:** \<cliext\/Vektor\>  
+```Output  
+ a b c  
+ a b d  
+[a b c] == [a b c] is True  
+[a b c] == [a b d] is False  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Vektor >  
   
-## Siehe auch  
- [Vektor](../dotnet/vector-stl-clr.md)   
- [operator\!\= \(vector\)](../dotnet/operator-inequality-vector-stl-clr.md)   
- [operator\< \(vector\)](../dotnet/operator-less-than-vector-stl-clr.md)   
- [operator\>\= \(vector\)](../dotnet/operator-greater-or-equal-vector-stl-clr.md)   
- [operator\> \(vector\)](../dotnet/operator-greater-than-vector-stl-clr.md)   
- [operator\<\= \(vector\)](../dotnet/operator-less-or-equal-vector-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Vektor (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [Operator! = (Vektor) (STL/CLR)](../dotnet/operator-inequality-vector-stl-clr.md)   
+ [Operator\< (Vektor) (STL/CLR)](../dotnet/operator-less-than-vector-stl-clr.md)   
+ [Operator > = (Vektor) (STL/CLR)](../dotnet/operator-greater-or-equal-vector-stl-clr.md)   
+ [Operator > (Vektor) (STL/CLR)](../dotnet/operator-greater-than-vector-stl-clr.md)   
+ [operator<= (vector) (STL/CLR)](../dotnet/operator-less-or-equal-vector-stl-clr.md)

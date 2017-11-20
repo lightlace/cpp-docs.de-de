@@ -1,58 +1,57 @@
 ---
-title: "/Qpar (Automatische Parallelisierung) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.EnableParallelCodeGeneration"
-dev_langs: 
-  - "C++"
+title: -Qpar (automatische Parallelisierung) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VC.Project.VCCLCompilerTool.EnableParallelCodeGeneration
+dev_langs: C++
 ms.assetid: 33ecf49d-c0d5-4f34-bce3-84ff03f38918
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 82f33d178799f56465f0d1a9794dacad7c01c77a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# /Qpar (Automatische Parallelisierung)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ermöglicht die [Automatische Parallelisierung](../../parallel/auto-parallelization-and-auto-vectorization.md)\-Funktion des Compilers, die Schleifen im Code automatisch zu parallelisieren.  
+# <a name="qpar-auto-parallelizer"></a>/Qpar (Automatische Parallelisierung)
+Ermöglicht die [Auto-Parallelisierer](../../parallel/auto-parallelization-and-auto-vectorization.md) Funktion des Compilers, Schleifen im Code automatisch zu parallelisieren.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /Qpar  
 ```  
   
-## Hinweise  
- Wenn der Compiler automatisch Schleifen im Code parallelisiert, überträgt der Berechnung zu mehreren Prozessorkernen.  Eine Schleife parallelisiert wird, wenn der Compiler bestimmt, dass sie gültig ist, dies nachzuholen und dass Parallelisierung Leistung verbessert wird.  
+## <a name="remarks"></a>Hinweise  
+ Wenn der Compiler automatisch Schleifen im Code parallelisiert, byteweise in mehrere Prozessorkerne Berechnung. Nur, wenn der Compiler bestimmt, dass es dazu rechtliche und diese Parallelisierung würde die Leistung verbessern, ist eine Schleife parallelisiert.  
   
- Die `#pragma loop()`\-Direktive sind verfügbar, den Optimierer helfen, bestimmte Schleifen zu parallelisieren.  Weitere Informationen finden Sie unter [Schleife](../../preprocessor/loop.md).  
+ Die `#pragma loop()` Direktiven sind verfügbar, in denen den Optimierer bestimmte Schleifen zu parallelisieren. Weitere Informationen finden Sie unter [Schleife](../../preprocessor/loop.md).  
   
- Informationen darüber, wie Sie die für die automatische Parallelisierung, finden Sie unter [\/Qpar\-report \(Auto\-Parallelizer\-Berichtsebene\)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md).  
+ Informationen zum Aktivieren der ausgehende Nachrichten für den Auto-parallelisierer finden Sie unter [/qpar-Report (Auto-Parallelisierer Reporting Stufe)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md).  
   
-### So die Compileroption \/Qpar\- in Visual Studio fest  
+### <a name="to-set-the-qpar-compiler-option-in-visual-studio"></a>So legen Sie die /Qpar-Compileroption in Visual Studio fest  
   
-1.  In **Projektmappen\-Explorer** öffnen Sie das Kontextmenü für das Projekt und dann **Eigenschaften** aus.  
+1.  Öffnen Sie im **Projektmappen-Explorer**das Kontextmenü für das Projekt, und wählen Sie **Eigenschaften**aus.  
   
-2.  Im Dialogfeld **Eigenschaftenseiten** unter **C\/C\+\+**, wählen Sie **Befehlszeile** aus.  
+2.  In der **Eigenschaftenseiten** Dialogfeld unter **C/C++-**Option **Befehlszeile**.  
   
-3.  Im Feld **Zusätzliche Optionen** geben Sie `/Qpar` ein.  
+3.  In der **Zusatzoptionen** geben `/Qpar`.  
   
-### So die \/Qpar\- Compileroption programmgesteuert fest  
+### <a name="to-set-the-qpar-compiler-option-programmatically"></a>So legen Sie die /Qpar-Compileroption programmgesteuert fest  
   
--   Verwenden Sie das Codebeispiel in <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions*>.  
+-   Verwenden Sie hierzu das Codebeispiel unter <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Siehe auch  
- [\/Q\-Optionen \(Operationen auf niedriger Ebene\)](../../build/reference/q-options-low-level-operations.md)   
- [\/Qpar\-report \(Auto\-Parallelizer\-Berichtsebene\)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)   
+## <a name="see-also"></a>Siehe auch  
+ [/ Q-Optionen (Operationen auf niedriger Ebene)](../../build/reference/q-options-low-level-operations.md)   
+ [/ Qpar-Report-(Auto-Parallelizer-Berichtsebene)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)   
  [Compileroptionen](../../build/reference/compiler-options.md)   
  [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)   
- [\#pragma loop\(\)](../../preprocessor/loop.md)   
+ [#pragma loop()](../../preprocessor/loop.md)   
  [Parallele Programmierung in systemeigenem Code](http://go.microsoft.com/fwlink/?LinkId=263662)

@@ -1,63 +1,62 @@
 ---
-title: "/PDBPATH | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/pdbpath"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".pdb-Dateien, Pfad"
-  - "/PDBPATH (dumpbin-Option)"
-  - "PDB-Dateien, Pfad"
-  - "PDBPATH (dumpbin-Option)"
-  - "-PDBPATH (dumpbin-Option)"
+title: -PDBPATH | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /pdbpath
+dev_langs: C++
+helpviewer_keywords:
+- .pdb files, path
+- -PDBPATH dumpbin option
+- /PDBPATH dumpbin option
+- PDBPATH dumpbin option
+- PDB files, path
 ms.assetid: ccf67dcd-0b23-4250-ad47-06c48acbe82b
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 024e6bae368a171b4bd35434d99261155947d4ae
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# /PDBPATH
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="pdbpath"></a>/PDBPATH
 ```  
 /PDBPATH[:VERBOSE] filename  
 ```  
   
-## Hinweise  
- Hierbei ist:  
+## <a name="remarks"></a>Hinweise  
+ Dabei gilt:  
   
  *filename*  
- Der Name der DLL\- oder EXE\-Datei, für die Sie die entsprechende PDB\-Datei suchen möchten.  
+ Der Name der .dll oder .exe-Datei, die für die zugehörige PDB-Datei gefunden werden sollen.  
   
- VERBOSE \(optional\)  
- Meldet alle Verzeichnisse, in denen versucht wurde, die PDB\-Datei zu finden.  
+ VERBOSE (optional)  
+ Meldet alle Verzeichnisse, in dem versucht wurde, die PDB-Datei zu suchen.  
   
-## Hinweise  
- \/PDBPATH durchsucht dieselben Computerpfade, die der Debugger auf der Suche nach einer PDB\-Datei verwendet. Dabei wird gemeldet, ob bzw. welche PDB\-Dateien der in *filename* angegebenen Datei entsprechen.  
+## <a name="remarks"></a>Hinweise  
+ / PDBPATH durchsucht Ihren Computer entlang der gleichen Pfade, die der Debugger keine PDB-Datei suchen würde, und meldet, die ggf. die Datei im angegebenen PDB-Dateien entsprechen *Filename*.  
   
- Beim Ausführen des Visual Studio\-Debuggers können Probleme auftreten, und zwar aufgrund der Tatsache, dass der Debugger eine PDB\-Datei für eine andere Version einer von Ihnen gedebuggten Datei verwendet.  
+ Wenn Sie Visual Studio-Debugger verwenden, können darauf zurückzuführen, dass der Debugger keine PDB-Datei für eine andere Version der Datei verwendet wird, die Sie Debuggen ein Problem auftreten.  
   
- \/PDBPATH sucht PDB\-Dateien unter den folgenden Pfaden:  
+ / PDBPATH sucht nach den folgenden Pfaden PDB-Dateien:  
   
--   Suche an dem Speicherort, an dem sich die ausführbare Datei befindet.  
+-   Überprüfen Sie den Speicherort, in dem die ausführbare Datei befindet.  
   
--   Suche an dem Speicherort der PDB, die in die ausführbare Datei geschrieben wurde.  Dieser entspricht in der Regel dem Speicherort, der beim Verknüpfen des Bildes gültig war.  
+-   Überprüfen Sie den Speicherort der PDB-Datei in die ausführbare Datei geschrieben. Dies ist normalerweise der Speicherort, zu dem Zeitpunkt, den das Bild verknüpft wurde.  
   
--   Suche entsprechend dem Suchpfad, der in der Visual Studio IDE konfiguriert ist.  
+-   Überprüfen Sie entlang den Suchpfad, der in der Visual Studio-IDE konfiguriert.  
   
--   Suche entsprechend den Pfaden in den Umgebungsvariablen \_NT\_SYMBOL\_PATH und \_NT\_ALT\_SYMBOL\_PATH.  
+-   Überprüfen Sie entlang der Pfade in der _NT_SYMBOL_PATH und _NT_ALT_SYMBOL_PATH Umgebungsvariablen.  
   
--   Suche im Windows\-Verzeichnis  
+-   Überprüfen Sie im Windows-Verzeichnis.  
   
-## Siehe auch  
- [DUMPBIN\-Optionen](../../build/reference/dumpbin-options.md)   
- [\/PDBALTPATH \(Use Alternate PDB Path\)](../../build/reference/pdbaltpath-use-alternate-pdb-path.md)
+## <a name="see-also"></a>Siehe auch  
+ [DUMPBIN-Optionen](../../build/reference/dumpbin-options.md)   
+ [/ PDBALTPATH (mit alternativen PDB-Pfad)](../../build/reference/pdbaltpath-use-alternate-pdb-path.md)

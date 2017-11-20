@@ -1,58 +1,57 @@
 ---
-title: "Accelerator Keys for the Dialog Editor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.dialog"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Dialog editor, shortcut keys"
+title: "Zugriffstasten für den Dialog-Editor | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.dialog
+dev_langs: C++
+helpviewer_keywords: Dialog editor, shortcut keys
 ms.assetid: 940270e9-a974-425b-a681-dfeaba0adf66
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 34b75667af85ce4d312eb4e9e2ea7402f97b26ab
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Accelerator Keys for the Dialog Editor
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Im Folgenden sind die Standardzugriffstasten für die Befehle des Dialog\-Editors aufgeführt.  Zum Ändern der Tastenkombinationen klicken Sie im Menü **Extras** auf **Optionen**, und wählen Sie dann im Ordner **Umgebung** die Option **Tastatur** aus.  Weitere Informationen hierzu finden Sie unter [Identifizieren und Anpassen von Tastenkombinationen](../Topic/Identifying%20and%20Customizing%20Keyboard%20Shortcuts%20in%20Visual%20Studio.md).  
+# <a name="accelerator-keys-for-the-dialog-editor"></a>Zugriffstasten für den Dialog-Editor
+Im folgenden sind die Zugriffstasten für den Dialogfeld-Editor-Befehle. Um Tastenkombinationen zu ändern, klicken Sie auf **Optionen** auf die **Tools** Menü Wählen Sie dann **Tastatur** unter der **Umgebung** Ordner. Weitere Informationen finden Sie unter [Identifizieren und Anpassen von Tastenkombinationen in Visual Studio](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).  
   
 > [!NOTE]
->  Die in einem Dialogfeld verfügbaren Optionen sowie die Namen und Positionen der angezeigten Menübefehle können sich je nach den persönlichen aktiven Einstellungen oder der verwendeten Version von den in der Hilfe beschriebenen Optionen unterscheiden.  Wählen Sie im Menü **Extras** die Option **Einstellungen importieren und exportieren** aus, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](assetId:///22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Die in einem Dialogfeld verfügbaren Optionen sowie die Namen und Positionen der angezeigten Menübefehle können sich je nach den persönlichen aktiven Einstellungen oder der verwendeten Version von den in der Hilfe beschriebenen Optionen unterscheiden. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-|Befehl|Schlüssel|Beschreibung|  
-|------------|---------------|------------------|  
-|Format.AlignBottoms|STRG \+ UMSCHALT \+ NACH\-UNTEN|Richtet den unteren Rand der ausgewählten Steuerelemente am bestimmenden Steuerelement aus.|  
-|Format.AlignCenters|UMSCHALT \+ F9|Richtet die vertikalen Mittelpunkte der ausgewählten Steuerelemente am bestimmenden Steuerelement aus.|  
-|Format.AlignLefts|STRG \+ UMSCHALT \+ NACH\-LINKS|Richtet den linken Rand der ausgewählten Steuerelemente am bestimmenden Steuerelement aus.|  
-|Format.AlignMiddles|F9|Richtet die horizontalen Mittelpunkte der ausgewählten Steuerelemente am bestimmenden Steuerelement aus.|  
-|Format.AlignRights|STRG \+ UMSCHALT \+ NACH\-RECHTS|Richtet den rechten Rand der ausgewählten Steuerelemente am bestimmenden Steuerelement aus.|  
-|Format.AlignTops|STRG \+ UMSCHALT \+ NACH\-OBEN|Richtet den oberen Rand der ausgewählten Steuerelemente am bestimmenden Steuerelement aus.|  
-|Format.ButtonBottom|STRG \+ B|Positioniert die ausgewählten Schaltflächen entlang dem unteren Mittelpunkt des Dialogfelds.|  
-|Format.ButtonRight|STRG\+R|Positioniert die ausgewählten Schaltflächen in der oberen rechten Ecke des Dialogfelds.|  
-|Format.CenterHorizontal|STRG \+ UMSCHALT \+ F9|Zentriert die Steuerelemente im Dialogfeld horizontal.|  
-|Format.CenterVertical|STRG \+ F9|Zentriert die Steuerelemente im Dialogfeld vertikal.|  
-|Format.CheckMnemonics|STRG \+ M|Überprüft die Eindeutigkeit von Zugriffstasten.|  
-|Format.SizeToContent|UMSCHALT \+ F7|Passt die Größe der ausgewählten Steuerelemente an den Beschriftungstext an.|  
-|Format.SpaceAcross|ALT \+ NACH\-LINKS|Ordnet die ausgewählten Steuerelemente horizontal in gleichmäßigen Abständen an.|  
-|Format.SpaceDown|ALT \+ NACH\-UNTEN|Ordnet die ausgewählten Steuerelemente vertikal in gleichmäßigen Abständen an.|  
-|Format.TabOrder|STRG \+ D|Legt die Reihenfolge der Steuerelemente innerhalb des Dialogfelds fest.|  
-|Format.TestDialog|STRG\+T|Führt das Dialogfeld aus, um Darstellung und Verhalten zu überprüfen.|  
-|Format.ToggleGuides|STRG \+ G|Aktiviert oder deaktiviert Raster bzw. Führungslinien bei der Dialogfeldbearbeitung.|  
+|Befehl|Tasten|Beschreibung|  
+|-------------|----------|-----------------|  
+|Format.AlignBottoms|STRG + UMSCHALT + NACH-UNTEN-TASTE|Richtet den unteren Rand der ausgewählten Steuerelemente des bestimmenden Steuerelements|  
+|Format.AlignCenters|UMSCHALT + F9|Richtet die vertikalen Mittelpunkte der ausgewählten Steuerelemente mit des bestimmenden Steuerelements|  
+|Format.AlignLefts|STRG + UMSCHALT + NACH-LINKS|Richtet den linken Rand der ausgewählten Steuerelemente des bestimmenden Steuerelements|  
+|Format.AlignMiddles|F9|Richtet die horizontalen Mittelpunkte der ausgewählten Steuerelemente mit des bestimmenden Steuerelements|  
+|Format.AlignRights|STRG + UMSCHALT + NACH-RECHTS|Richtet den rechten Rand der ausgewählten Steuerelemente des bestimmenden Steuerelements|  
+|Format.AlignTops|STRG + UMSCHALT + NACH-OBEN|Richtet den oberen Rand der ausgewählten Steuerelemente des bestimmenden Steuerelements|  
+|Format.ButtonBottom|STRG + B|Setzt die ausgewählte Schaltflächen unten in der Mitte des Dialogfelds|  
+|Format.ButtonRight|STRG + R|Stellen Sie die ausgewählten Schaltflächen in der oberen rechten Ecke des Dialogfelds|  
+|Format.CenterHorizontal|STRG + UMSCHALT + F9|Zentriert die Steuerelemente horizontal innerhalb des Dialogfelds ""|  
+|Format.CenterVertical|STRG + F9|Zentriert die Steuerelemente vertikal innerhalb des Dialogfelds ""|  
+|Format.CheckMnemonics|STRG + M|Überprüft die Eindeutigkeit von Zugriffstasten|  
+|Format.SizeToContent|UMSCHALT + F7|Ändert die Größe der ausgewählten Steuerelemente entsprechend den Beschriftungstext|  
+|Format.SpaceAcross|ALT + NACH-LINKS|Die ausgewählten Steuerelemente horizontal in gleichmäßigen Abständen an.|  
+|Format.SpaceDown|ALT + NACH-UNTEN-TASTE|Die ausgewählten Steuerelemente vertikal in gleichmäßigen Abständen an.|  
+|Format.TabOrder|STRG + D|Legt die Reihenfolge von Steuerelementen innerhalb des Dialogfelds fest|  
+|Format.TestDialog|STRG + T|Führt das Dialogfeld, um Aussehen und Verhalten zu testen.|  
+|Format.ToggleGuides|STRG + G|Wechselt zwischen keine Raster, Richtlinien und Raster zum Dialogfeld bearbeiten|  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](https://msdn.microsoft.com/library/f45fce5x.aspx) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](https://msdn.microsoft.com/library/xbx3z216.aspx). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  Win32  
   
-## Siehe auch  
- [Dialog Editor](../mfc/dialog-editor.md)
+## <a name="see-also"></a>Siehe auch  
+ [Dialog-Editor](../windows/dialog-editor.md)
+

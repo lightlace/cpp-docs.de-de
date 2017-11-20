@@ -1,40 +1,40 @@
 ---
-title: "Verweisen auf eine Eigenschaft im Anbieter | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB-Anbieter, Eigenschaften"
-  - "Referenzen, Zu Eigenschaften in Anbietern"
-  - "Verweisen auf Eigenschaften in Anbietern"
+title: Verweisen auf eine Eigenschaft im Anbieter | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB providers, properties
+- references, to properties in providers
+- referencing properties in providers
 ms.assetid: bfbb3851-5eed-467a-a179-4a97a9515525
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9ccd06ab229f5bf6643145c03d8396d48c45a303
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Verweisen auf eine Eigenschaft im Anbieter
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Suchen Sie die Eigenschaftengruppe und Eigenschaften\-ID der gewünschten Eigenschaft.  Weitere Informationen finden Sie in der *OLE DB Programmer's Reference* unter [OLE DB Properties](https://msdn.microsoft.com/en-us/library/ms722734.aspx) \(nur auf Englisch verfügbar\).  
+# <a name="referencing-a-property-in-your-provider"></a>Verweisen auf eine Eigenschaft im Anbieter
+Suchen Sie die Eigenschaftsgruppe und die Eigenschafts-ID für die gewünschte Eigenschaft. Weitere Informationen finden Sie unter [OLE DB-Eigenschaften](https://msdn.microsoft.com/en-us/library/ms722734.aspx) in der *OLE DB Programmer's Reference*.  
   
- Im folgenden Beispiel wird davon ausgegangen, dass Sie eine Eigenschaft aus dem Rowset ermitteln möchten.  Der Code zur Verwendung der Sitzung oder des Befehls ist zwar ähnlich, verwendet jedoch eine andere Schnittstelle.  
+ Im folgende Beispiel wird davon ausgegangen, dass Sie eine Eigenschaft aus dem Rowset abrufen möchten. Der Code für die Verwendung der Sitzung oder den Befehl ähnelt, aber eine andere Schnittstelle verwendet.  
   
- Erstellen Sie ein [CDBPropSet](../../data/oledb/cdbpropset-class.md)\-Objekt, und verwenden Sie die Eigenschaftengruppe als Parameter für den Konstruktor.  Beispiel:  
+ Erstellen einer [CDBPropSet](../../data/oledb/cdbpropset-class.md) -Objekt unter Verwendung der Eigenschaftengruppe als Parameter an den Konstruktor übergibt. Zum Beispiel:  
   
 ```  
 CDBPropSet propset(DBPROPSET_ROWSET);  
 ```  
   
- Rufen Sie [AddProperty](../../data/oledb/cdbpropset-addproperty.md) auf, und übergeben Sie die Eigenschaften\-ID und einen Wert, der der Eigenschaft zugeordnet werden soll.  Der Werttyp richtet sich nach der verwendeten Eigenschaft.  
+ Rufen Sie [AddProperty](../../data/oledb/cdbpropset-addproperty.md), übergeben sie die Eigenschaften-ID und einen Wert der Eigenschaft zugewiesen werden. Der Typ des Werts ist abhängig von der Eigenschaft, die Sie verwenden.  
   
 ```  
 CDBPropSet propset(DBPROPSET_ROWSET);  
@@ -43,7 +43,7 @@ propset.AddProperty(DBPROP_UPDATABILITY,
 DBPROPVAL_UP_INSERT | DBPROPVAL_UP_CHANGE | DBPROPVAL_UP_DELETE);  
 ```  
   
- Rufen Sie **GetProperties** mithilfe der `IRowset`\-Schnittstelle auf.  Übergeben Sie das Eigenschaftenset als Parameter.  Der fertige Code sieht wie folgt aus:  
+ Verwenden der `IRowset` Schnittstelle aufrufen **GetProperties**. Übergeben Sie die Eigenschaft als Parameter festgelegt. Hier ist der endgültige Code ein:  
   
 ```  
 CAgentRowset<CMyProviderCommand>* pRowset = (CAgentRowset<CMyProviderCommand>*) pThis;  
@@ -72,5 +72,5 @@ if (pPropSet)
 }  
 ```  
   
-## Siehe auch  
- [Arbeiten mit OLE DB\-Anbietervorlagen](../../data/oledb/working-with-ole-db-provider-templates.md)
+## <a name="see-also"></a>Siehe auch  
+ [Arbeiten mit OLE DB-Anbietervorlagen](../../data/oledb/working-with-ole-db-provider-templates.md)

@@ -1,65 +1,65 @@
 ---
-title: "Verwenden von C++-Interop (implizites PInvoke)"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".NET [C++], Portieren von C++-eigenem auf"
-  - "Blitfähige Typen [C++]"
-  - "C++ COM-Interop"
-  - "C++ Interop"
-  - "C++, Interop"
-  - "COM-Schnittstellen [C++]"
-  - "Datenmarshalling [C++], C++ Interop-Features"
-  - "Beispiele [C++], Interoperabilität"
-  - "Impliziter Plattformaufruf"
-  - "Interop [C++], Funktionen"
-  - "Interoperabilität [C++]"
-  - "Interoperabilität [C++], Implizites PInvoke"
-  - "Marshaling [C++], C++ Interop-Features"
-  - "Plattformaufruf [C++], Beispiele"
-  - "Plattformaufruf [C++], Implizite"
-  - "Portieren [C++], Von C++-eigenem auf .NET"
-  - "Typen [C++], Blitfähig"
+title: Mit C++-Interop (implizites PInvoke) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- blittable types [C++]
+- platform invoke [C++], implicit
+- interop [C++], features
+- data marshaling [C++], C++ Interop features
+- porting [C++], C++ native to .NET
+- COM interfaces [C++]
+- implicit platform invoke
+- examples [C++], interoperability
+- types [C++], blittable
+- marshaling [C++], C++ Interop features
+- platform invoke [C++], examples
+- interoperability [C++]
+- C++ Interop
+- interoperability [C++], Implicit PInvoke
+- C++, interop
+- C++ COM Interop
+- .NET [C++], porting C++ native to
 ms.assetid: 5f710bf1-88ae-4c4e-8326-b3f0b7c4c68a
-caps.latest.revision: 27
-caps.handback.revision: "25"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "27"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1f400ed3e93af8f7e0727d3fe378d0ac471bd18f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Verwenden von C++-Interop (implizites PInvoke)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Im Gegensatz zu anderen .NET\-Sprachen verfügt Visual C\+\+ über eine Interoperabilitätsunterstützung, dank der verwalteter und nicht verwalteter Code in derselben Anwendung und sogar in derselben Datei verwendet werden können \(mit den [managed, unmanaged](../preprocessor/managed-unmanaged.md)\-Pragmas\).  Auf diese Weise können Visual C\+\+\-Entwickler .NET\-Funktionalität in vorhandene Visual C\+\+\-Anwendungen integrieren, ohne den Rest der Anwendung zu beeinträchtigen.  
+# <a name="using-c-interop-implicit-pinvoke"></a>Verwenden von C++-Interop (implizites PInvoke)
+Im Gegensatz zu anderen Sprachen .NET Visual C++ bietet interoperabilitätsunterstützung, die verwalteten und nicht verwalteten Code vorhanden sein, in der gleichen Anwendung und sogar in der gleichen Datei ermöglicht (mit der [verwaltete, unverwaltete](../preprocessor/managed-unmanaged.md) Pragmas). Auf diese Weise können Visual C++-Entwickler .NET-Funktionalität in vorhandene Visual C++-Anwendungen integrieren, ohne den Rest der Anwendung zu beeinträchtigen.  
   
- Mit [dllexport, dllimport](../cpp/dllexport-dllimport.md) können Sie außerdem nicht verwaltete Funktionen aus einer verwalteten Kompiliereinheit aufrufen.  
+ Sie können auch nicht verwaltete Funktionen aufrufen, aus einer verwalteten Kompiliereinheit mit [Dllexport, Dllimport](../cpp/dllexport-dllimport.md).  
   
  Implizites PInvoke ist sinnvoll, wenn Sie das Marshalling von Funktionsparametern oder andere Details, die bei einem expliziten Aufruf von DllImportAttribute angegeben werden können, nicht festlegen müssen.  
   
- Visual C\+\+ bietet zwei Möglichkeiten für die Interoperation von verwalteten und nicht verwalteten Funktionen:  
+ Visual C++ bietet zwei Möglichkeiten für die Interoperation von verwalteten und nicht verwalteten Funktionen:  
   
--   [Verwenden von explizitem PInvoke in C\+\+ \(DllImport\-Attribut\)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)  
+-   [Verwenden von explizitem PInvoke in C++ (DllImport-Attribut)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)  
   
- Explizites PInvoke wird von .NET Framework unterstützt und ist in den meisten .NET\-Sprachen verfügbar.  Doch wie der Name schon sagt, ist C\+\+\-Interop Visual C\+\+\-spezifisch.  
+ Explizites PInvoke wird von .NET Framework unterstützt und ist in den meisten .NET-Sprachen verfügbar. Doch wie der Name schon sagt, ist C++-Interop Visual C++-spezifisch.  
   
-## C\+\+ Interop  
- C\+\+\-Interop wird gegenüber explizitem PInvoke empfohlen, da es bessere Typsicherheit bietet, normalerweise einfacher zu implementieren ist, sich bei Änderungen der nicht verwalteten API leichter handhaben lässt und Leistungsverbesserungen erlaubt, die mit explizitem PInvoke nicht möglich sind.  C\+\+\-Interop kann jedoch nicht verwendet werden, wenn der nicht verwaltete Quellcode nicht verfügbar ist oder die Kompilierung mit **\/clr:safe** durchgeführt wird \(weitere Informationen finden Sie unter [Reiner und überprüfbarer Code](../dotnet/pure-and-verifiable-code-cpp-cli.md)\).  
+## <a name="c-interop"></a>C++ Interop  
+ C++-Interop wird gegenüber explizitem PInvoke empfohlen, da es bessere Typsicherheit bietet, normalerweise einfacher zu implementieren ist, sich bei Änderungen der nicht verwalteten API leichter handhaben lässt und Leistungsverbesserungen erlaubt, die mit explizitem PInvoke nicht möglich sind. C++-Interop ist jedoch nicht verwendet werden, wenn der nicht verwaltete Quellcode nicht verfügbar ist oder beim Kompilieren mit **/CLR: safe**. Die Compileroptionen **/clr:pure** und **/clr:safe** sind in Visual Studio 2015 veraltet. Informationen finden Sie unter [reiner und überprüfbarer Code (C + c++ / CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md).  
   
-## C\+\+\-COM\-Interop  
- Die von Visual C\+\+ unterstützten Interoperabilitätsfunktionen bieten einen besonderen Vorteil gegenüber anderen .NET\-Sprachen, wenn es um die Interoperation mit COM\-Komponenten geht.  Da es nicht durch die Einschränkungen der .NET Framework\-[Tlbimp.exe \(Type Library Importer\)](../Topic/Tlbimp.exe%20\(Type%20Library%20Importer\).md) beschränkt ist, z. B. durch beschränkte Unterstützung für Datentypen und das obligatorische Verfügbarmachen jedes einzelnen Members der einzelnen COM\-Schnittstellen, kann mit C\+\+\-Interop beliebig auf COM\-Komponenten zugegriffen werden, ohne dass separate Interop\-Assemblys erforderlich sind.  Weitere Informationen finden Sie unter [Using COM from .NET](assetId:///03976661-6278-4227-a6c1-3b3315502c15).  
+## <a name="c-com-interop"></a>C++-COM-Interop  
+ Die von Visual C++ unterstützten Interoperabilitätsfunktionen bieten einen besonderen Vorteil gegenüber anderen .NET-Sprachen, wenn es um die Interoperation mit COM-Komponenten geht. Keine Beschränkung auf die Einschränkungen von .NET Framework [Tlbimp.exe (Type Library Importer-Tool)](/dotnet/framework/tools/tlbimp-exe-type-library-importer), z. B. eingeschränkte Unterstützung für Datentypen und die erforderliche Offenlegung von jedes Mitglied jeder COM-Schnittstelle, C++-Interop ermöglicht es COM Komponenten am Zugriff auf und erfordert keine separate Interop-Assemblys. Weitere Informationen finden Sie unter [Using COM aus .NET](http://msdn.microsoft.com/en-us/03976661-6278-4227-a6c1-3b3315502c15).  
   
-## Blitfähige Typen  
- Bei nicht verwalteten APIs, die einfache, systeminterne Typen verwenden \(siehe [Blittable and Non\-Blittable Types](../Topic/Blittable%20and%20Non-Blittable%20Types.md)\), ist keine spezielle Codierung erforderlich, da diese Datentypen im Arbeitsspeicher auf dieselbe Weise dargestellt werden, während komplexere Datentypen ein explizites Datenmarshalling erfordern.  Ein Beispiel finden Sie unter [Gewusst wie: Aufrufen von systemeigenen DLLs in verwaltetem Code mithilfe von PInvoke](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md).  
+## <a name="blittable-types"></a>Blitfähige Typen  
+ Für nicht verwaltete APIs, die einfache, systeminterne Typen verwenden (siehe [blitfähige und nicht blitfähige Typen](http://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)), keine besondere Codierung ist erforderlich, da diese Datentypen die gleiche Darstellung im Arbeitsspeicher haben, aber eine komplexere Datentypen ist erforderlich, explizite Daten-Marshalling. Ein Beispiel finden Sie unter [Vorgehensweise: Aufrufen von systemeigenen DLLs aus verwaltetem Code mithilfe von PInvoke](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // vcmcppv2_impl_dllimp.cpp  
@@ -84,61 +84,64 @@ int main() {
 }  
 ```  
   
-  **Signalton starten**  
-**Fertig**   
-## In diesem Abschnitt  
+```Output  
+Begin beep  
+Done  
+```  
   
--   [Gewusst wie: Marshallen von ANSI\-Zeichenfolgen mit C\+\+\-Interop](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)  
+## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Gewusst wie: Marshallen von Unicode\-Zeichenfolgen mit C\+\+\-Interop](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)  
+-   [Vorgehensweise: Marshallen von ANSI-Zeichenfolgen mit C++-Interop](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)  
   
--   [Gewusst wie: Marshallen von COM\-Zeichenfolgen mit C\+\+\-Interop](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)  
+-   [Vorgehensweise: Marshallen von Unicode-Zeichenfolgen mit C++-Interop](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)  
   
--   [Gewusst wie: Marshallen von Strukturen mit C\+\+\-Interop](../dotnet/how-to-marshal-structures-using-cpp-interop.md)  
+-   [Vorgehensweise: Marshallen von COM-Zeichenfolgen mit C++-Interop](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)  
   
--   [Gewusst wie: Marshallen von Arrays mit C\+\+\-Interop](../dotnet/how-to-marshal-arrays-using-cpp-interop.md)  
+-   [Vorgehensweise: Marshallen von Strukturen mit C++-Interop](../dotnet/how-to-marshal-structures-using-cpp-interop.md)  
   
--   [Gewusst wie: Marshallen von Rückrufen und Delegaten mit C\+\+\-Interop](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)  
+-   [Vorgehensweise: Marshallen von Arrays mit C++-Interop](../dotnet/how-to-marshal-arrays-using-cpp-interop.md)  
   
--   [Gewusst wie: Marshallen von eingebetteten Zeigern mit C\+\+\-Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)  
+-   [Vorgehensweise: Marshallen von Rückrufen und Delegaten mit C++-Interop](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)  
   
--   [Gewusst wie: Zugriff auf Zeichen in einem System::String](../dotnet/how-to-access-characters-in-a-system-string.md)  
+-   [Vorgehensweise: Marshallen von eingebetteten Zeigern mit C++-Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)  
   
--   [Gewusst wie: Umwandeln von char \* String nach System::Byte Array](../dotnet/how-to-convert-char-star-string-to-system-byte-array.md)  
+-   [Vorgehensweise: Zugriff auf Zeichen in einem System::String](../dotnet/how-to-access-characters-in-a-system-string.md)  
   
--   [Gewusst wie: Umwandeln von System::String nach wchar\_t\* oder char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)  
+-   [Vorgehensweise: Umwandeln von char * String nach System::Byte Array](../dotnet/how-to-convert-char-star-string-to-system-byte-array.md)  
   
--   [Gewusst wie: Konvertieren von System::String zu Standardzeichenfolge](../dotnet/how-to-convert-system-string-to-standard-string.md)  
+-   [Vorgehensweise: Konvertieren von System:: String nach Wchar_t * oder Char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)  
   
--   [Gewusst wie: Konvertieren einer Standardzeichenfolge nach System::String](../dotnet/how-to-convert-standard-string-to-system-string.md)  
+-   [Vorgehensweise: Konvertieren von System::String zu Standardzeichenfolge](../dotnet/how-to-convert-system-string-to-standard-string.md)  
   
--   [Gewusst wie: Abrufen eines Zeigers auf ein Byte\-Array](../dotnet/how-to-obtain-a-pointer-to-byte-array.md)  
+-   [Vorgehensweise: Konvertieren einer Standardzeichenfolge nach System::String](../dotnet/how-to-convert-standard-string-to-system-string.md)  
   
--   [Gewusst wie: Laden von nicht verwalteten Ressourcen in ein Byte\-Array](../dotnet/how-to-load-unmanaged-resources-into-a-byte-array.md)  
+-   [Vorgehensweise: Abrufen eines Zeigers auf ein Byte-Array](../dotnet/how-to-obtain-a-pointer-to-byte-array.md)  
   
--   [Gewusst wie: Ändern der Verweisklasse in einer systemeigenen Funktion](../dotnet/how-to-modify-reference-class-in-a-native-function.md)  
+-   [Vorgehensweise: Laden von nicht verwalteten Ressourcen in ein Byte-Array](../dotnet/how-to-load-unmanaged-resources-into-a-byte-array.md)  
   
--   [Gewusst wie: Ermitteln, ob ein Bild systemeigen oder CLR ist](../dotnet/how-to-determine-if-an-image-is-native-or-clr.md)  
+-   [Vorgehensweise: Ändern der Verweisklasse in einer nativen Funktion](../dotnet/how-to-modify-reference-class-in-a-native-function.md)  
   
--   [Gewusst wie: Hinzufügen einer systemeigenen DLL zum globalen Assemblycache](../dotnet/how-to-add-native-dll-to-global-assembly-cache.md)  
+-   [Vorgehensweise: Ermitteln, ob ein Bild nativ oder CLR ist](../dotnet/how-to-determine-if-an-image-is-native-or-clr.md)  
   
--   [Gewusst wie: Verweis auf Werttyp in systemeigenem Typ](../dotnet/how-to-hold-reference-to-value-type-in-native-type.md)  
+-   [Vorgehensweise: Hinzufügen einer nativen DLL zum globalen Assemblycache](../dotnet/how-to-add-native-dll-to-global-assembly-cache.md)  
   
--   [Gewusst wie: Objektverweis in nicht verwaltetem Arbeitsspeicher](../dotnet/how-to-hold-object-reference-in-unmanaged-memory.md)  
+-   [Vorgehensweise: Verweis auf Werttyp in nativem Typ](../dotnet/how-to-hold-reference-to-value-type-in-native-type.md)  
   
--   [Gewusst wie: Erkennen der \/clr\-Kompilierung](../dotnet/how-to-detect-clr-compilation.md)  
+-   [Vorgehensweise: Objektverweis in nicht verwaltetem Arbeitsspeicher](../dotnet/how-to-hold-object-reference-in-unmanaged-memory.md)  
   
--   [Gewusst wie: Konvertieren zwischen System::Guid und \_GUID](../dotnet/how-to-convert-between-system-guid-and-guid.md)  
+-   [Vorgehensweise: Erkennen von/CLR-Kompilierung](../dotnet/how-to-detect-clr-compilation.md)  
   
--   [Gewusst wie: Angeben eines out\-Parameters](../dotnet/how-to-specify-an-out-parameter.md)  
+-   [Vorgehensweise: Konvertieren zwischen System::Guid und _GUID](../dotnet/how-to-convert-between-system-guid-and-guid.md)  
   
--   [Gewusst wie: Verwenden eines systemeigenen Typs in einer \/clr\-Kompilierung](../dotnet/how-to-use-a-native-type-in-a-clr-compilation.md)  
+-   [Vorgehensweise: Angeben eines out-Parameters](../dotnet/how-to-specify-an-out-parameter.md)  
   
--   [Gewusst wie: Deklarieren von Handles in systemeigenen Typen](../dotnet/how-to-declare-handles-in-native-types.md)  
+-   [Vorgehensweise: Verwenden eines systemeigenen Typs in einer/CLR-Kompilierung](../dotnet/how-to-use-a-native-type-in-a-clr-compilation.md)  
   
--   [Gewusst wie: Kapseln einer systemeigenen Klasse zur Verwendung in C\#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)  
+-   [Vorgehensweise: Deklarieren von Handles in nativen Typen](../dotnet/how-to-declare-handles-in-native-types.md)  
   
- Informationen über die Verwendung von Delegaten in einem Interop\-Szenario finden Sie unter [delegate](../windows/delegate-cpp-component-extensions.md).  
+-   [Vorgehensweise: Kapseln einer nativen Klasse zur Verwendung in C#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)  
   
-## Siehe auch  
- [Aufrufen systemeigener Funktionen aus verwaltetem Code](../dotnet/calling-native-functions-from-managed-code.md)
+ Informationen zum Verwenden von Delegaten in einem Interop-Szenario finden Sie unter [Delegate (Komponentenerweiterungen für C++)](../windows/delegate-cpp-component-extensions.md).  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Aufrufen nativer Funktionen aus verwaltetem Code](../dotnet/calling-native-functions-from-managed-code.md)

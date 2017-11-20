@@ -1,31 +1,31 @@
 ---
-title: "Deklaration eines CLR-Verweisklassenobjekts | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Verweistypen, CLR"
-  - "Typen [C++], Verweistypen"
+title: Deklaration eines CLR-Klasse Verweisobjekt | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- types [C++], reference types
+- reference types, CLR
 ms.assetid: 6d64f746-3715-4948-ada3-88859f4150e4
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 973500cc276d95e523859a5fcc1b9a5f7a707bb0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Deklaration eines CLR-Verweisklassenobjekts
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die Syntax zum Deklarieren und Instanziieren eines Objekts vom Verweisklassentyp hat sich in [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] gegenüber Managed Extensions for C\+\+ geändert.  
+# <a name="declaration-of-a-clr-reference-class-object"></a>Deklaration eines CLR-Verweisklassenobjekts
+Die Syntax zum Deklarieren und instanziieren Sie ein Objekt eines Verweistyps für die Klasse hat gegenüber Managed Extensions für C++ in Visual C++ geändert.  
   
- In Managed Extensions wird ein Verweisklassenobjekt mit der ISO\-C\+\+\-Zeigersyntax deklariert, wahlweise unter Verwendung des `__gc`\-Schlüsselworts links vom Sternchen \(`*`\).  Es folgt eine Reihe von Beispielen für Deklarationen von Objekten vom Typ Verweisklasse in der Managed Extensions\-Syntax:  
+ In Managed Extensions wird einem Typ Referenzklassenobjekt deklariert wird, indem die ISO C++-Zeiger-Syntax mit einer optionalen Verwendungsmöglichkeit eines der `__gc` Schlüsselwort auf der linken Seite des Sterns (`*`). Hier sind beispielsweise eine Vielzahl von Verweis Klassendeklarationen Typ-Objekt in der Managed Extensions-Syntax:  
   
 ```  
 public __gc class Form1 : public System::Windows::Forms::Form {  
@@ -45,15 +45,15 @@ private:
 };  
 ```  
   
- In der neuen Syntax wird ein Objekt vom Typ Verweisklasse mit einem neuen deklarativen Token \(`^`\) deklariert, das formell als *Trackinghandle* und informell als *Hut* bezeichnet wird. \(Tracking bedeutet, dass sich ein Referenztyp im CLR\-Heap befindet und deshalb bei der Komprimierung des Heaps während der Garbage Collection auf transparente Weise den Speicherplatz wechseln kann.\)  Ein Trackinghandle wird während der Laufzeit transparent aktualisiert.  Zwei ähnliche Konzepte, nämlich der *Nachverfolgungsverweis* \(`%`\) und der *innere Zeiger* \(`interior_ptr<>`\), werden unter [Werttypsemantik](../dotnet/value-type-semantics.md) erläutert.  
+ In der neuen Syntax deklarieren Sie ein Objekt vom Typ Verweisklasse mit einem neuen deklarativen Token (`^`) formal als bezeichnet eine *Trackinghandle* und informell als eine *Hat*. (Tracking bedeutet, dass ein Verweistyp in dem CLR-Heap befindet, und daher während der Garbage Collection-Heapkomprimierung auf transparent verschieben kann. Ein Trackinghandle wird während der Laufzeit transparent aktualisiert. Zwei ähnliche Konzepte der *Nachverfolgungsverweis* (`%`), und die *innerer Zeiger* (`interior_ptr<>`), erläutert in [Werttypsemantik](../dotnet/value-type-semantics.md).  
   
- Es gibt im Wesentlichen zwei Gründe, bei der deklarativen Syntax auf eine Wiederverwendung der ISO\-C\+\+\-Zeigersyntax zu verzichten:  
+ Die Hauptgründe für die deklarative Syntax eine Wiederverwendung der Syntax der ISO C++-Zeiger verschieben lauten wie folgt:  
   
--   Die Verwendung der Zeigersyntax ließ eine direkte Anwendung überladener Operatoren auf ein Verweisobjekt nicht zu;  vielmehr musste der Operator über seinen internen Namen, z. B. `rV1->op_Addition(rV2)`, aufgerufen werden, statt über das intuitivere `rV1+rV2`.  
+-   Der Zeigersyntax überladene Operatoren direkt auf ein Verweis-Objekt angewendet werden soll nicht zulässig. Stattdessen eine den Operator aufrufen, indem Sie den internen Namen, z. B. mit musste `rV1->op_Addition(rV2)` anstelle der intuitiver `rV1+rV2`.  
   
--   Es gibt eine Reihe von Zeigeroperationen, wie Umwandeln und Zeigerarithmetik, die unzulässig sind für Objekte, die auf einem Heap gespeichert sind, der der Garbage Collection unterliegt.  Das Konzept eines Trackinghandles wird der Natur eines CLR\-Referenztyps eher gerecht.  
+-   Eine Anzahl von Zeiger-Vorgänge, z. B. die Umwandlung und Zeigerarithmetik, nicht zulässig für Objekte, die auf einen Garbage gespeichert gesammelten Heap. Der Begriff ein Trackinghandle besser erfasst das Wesen einen CLR-Referenztyp darstellt.  
   
- Die Anwendung eines `__gc`\-Modifizierers auf ein Trackinghandle ist unnötig und wird nicht unterstützt.  Die Verwendung des Objekts selbst wurde nicht geändert; es greift weiterhin durch den Zeigermember\-Auswahloperator \(`->`\) auf Member zu.  So sieht beispielsweise das vorherige Managed Extensions\-Codebeispiel übersetzt in die neue Syntax aus:  
+ Die `__gc` ein Trackinghandle-Modifizierer ist nicht erforderlich und wird nicht unterstützt. Die Verwendung des Objekts selbst wird nicht geändert. immer noch auf Member zugreift, durch die Zeiger Memberauswahloperator (`->`). Hier wird beispielsweise im vorherigen Codebeispiel für Managed Extensions in der neuen Syntax übersetzt:  
   
 ```  
 public ref class Form1: public System::Windows::Forms::Form {  
@@ -72,8 +72,8 @@ private:
 };  
 ```  
   
-## Dynamische Zuordnung eines Objekts auf dem CLR\-Heap  
- In Managed Extensions war das Vorhandensein von zwei verschiedenen `new`\-Ausdrücken für Zuordnungen zum unverwalteten und verwalteten Heap weitgehend transparent.  In nahezu allen Instanzen ist der Compiler in der Lage, aufgrund des Kontexts zu bestimmen, ob der unverwaltete oder der verwaltete Heap gemeint ist.  Beispiel:  
+## <a name="dynamic-allocation-of-an-object-on-the-clr-heap"></a>Dynamische Zuweisung eines Objekts auf dem CLR-Heap  
+ In Managed Extensions wird das Vorhandensein von zwei `new` Ausdrücke, die zwischen dem systemeigenen und verwalteten Heap zugeordnet war weitestgehend transparent. In fast allen Fällen kann der Compiler den Kontext verwenden, um zu ermitteln, ob aus dem systemeigenen oder verwalteten Heap belegt. Beispiel:  
   
 ```  
 Button *button1 = new Button; // OK: managed heap  
@@ -81,7 +81,7 @@ int *pi1 = new int;           // OK: native heap
 Int32 *pi2 = new Int32;       // OK: managed heap  
 ```  
   
- Wenn keine kontextbezogene Heapzuordnung gewünscht ist, kann der Compiler entweder mit dem `__gc`\-Schlüsselwort oder dem `__nogc`\-Schlüsselwort gesteuert werden.  In der neuen Syntax wird der separaten Natur der beiden neuen Ausdrücke durch die Einführung des `gcnew`\-Schlüsselworts explizit Rechnung getragen.  Zum Beispiel sehen die drei vorherigen Deklarationen in der neuen Syntax wie folgt aus:  
+ Wenn Sie nicht die kontextbezogene Heapreservierung möchten, könnten Sie weitergeleitet werden den Compiler entweder mit der `__gc` oder `__nogc` Schlüsselwort. In der neuen Syntax wird der separaten Natur der beiden neuen Ausdrücke werden zu expliziten Informationen mit der Einführung der `gcnew` Schlüsselwort. Beispielsweise sehen die vorherigen drei Deklarationen wie folgt in der neuen Syntax:  
   
 ```  
 Button^ button1 = gcnew Button;        // OK: managed heap  
@@ -89,7 +89,7 @@ int * pi1 = new int;                   // OK: native heap
 Int32^ pi2 = gcnew Int32; // OK: managed heap  
 ```  
   
- Hier ist die Managed Extensions\-Initialisierung der im vorherigen Abschnitt deklarierten `Form1`\-Member:  
+ Hier ist die Initialisierung Managed Extensions die `Form1` Member deklariert hat, im vorherigen Abschnitt:  
   
 ```  
 void InitializeComponent() {  
@@ -102,7 +102,7 @@ void InitializeComponent() {
 }  
 ```  
   
- Hier die gleiche Initialisierung in der neuen Syntax.  Beachten Sie, dass der Hut für den Referenztyp nicht erforderlich ist, wenn es sich um das Ziel eines `gcnew`\-Ausdrucks handelt.  
+ Hier ist die gleiche Initialisierung der neuen Syntax. Beachten Sie, dass die Hat nicht für den Verweistyp erforderlich ist, wenn es sich um das Ziel ist eine `gcnew` Ausdruck.  
   
 ```  
 void InitializeComponent() {  
@@ -115,8 +115,8 @@ void InitializeComponent() {
 }  
 ```  
   
-## Ein Nachverfolgungsverweis auf kein Objekt  
- In der neuen Syntax stellt `0` nicht mehr eine NULL\-Adresse dar, sondern wird einfach wie eine ganze Zahl behandelt, genau wie `1`, `10` oder `100`.  Deshalb musste ein spezielles Token zur Darstellung eines NULL\-Werts für einen Nachverfolgungsverweis eingeführt werden.  Zum Beispiel initialisieren wir in Managed Extensions einen Referenztyp, der kein Objekt adressiert, wie folgt:  
+## <a name="a-tracking-reference-to-no-object"></a>Ein Nachverfolgungsverweis auf kein Objekt  
+ In der neuen Syntax `0` nicht mehr eine null-Adresse entspricht im Gegensatz zu wird als eine ganze Zahl, die identisch behandelt `1`, `10`, oder `100`. Ein neues spezielles Token stellt einen null-Wert für ein Nachverfolgungsverweis dar. In Managed Extensions initialisieren wir z. B. einen Verweistyp um kein Objekt wie folgt beheben:  
   
 ```  
 // OK: we set obj to refer to no object  
@@ -126,7 +126,7 @@ Object * obj = 0;
 Object * obj2 = 1;  
 ```  
   
- In der neuen Syntax führt jede Initialisierung oder Zuweisung eines Werttyps zu einem `Object` zu implizitem Boxing dieses Werttyps.  In der neuen Syntax werden `obj` und `obj2` mit adressierten, geschachtelten Int32\-Objekten initialisiert, die den Wert 0 bzw. 1 haben.  Beispiel:  
+ In der neuen Syntax eine Initialisierung oder Zuweisung eines Werts geben Sie an einer `Object` bewirkt, dass ein implizites Boxing eines Werttyps. In der neuen Syntax beide `obj` und `obj2` behandelt geschachtelte Int32-Objekten, die die Werte 0 und 1, jeweils mit initialisiert werden. Zum Beispiel:  
   
 ```  
 // causes the implicit boxing of both 0 and 1  
@@ -134,7 +134,7 @@ Object ^ obj = 0;
 Object ^ obj2 = 1;  
 ```  
   
- Um die explizite Initialisierung, Wertzuweisung und den Vergleich eines Trackinghandles mit NULL zu ermöglichen, ist das neue `nullptr`\-Schlüsselwort verfügbar.  Die korrekte Überarbeitung des ursprünglichen Beispiels sieht wie folgt aus:  
+ Aus diesem Grund um explizite Initialisierung, Zuweisung und ein Trackinghandle für null-Vergleich auszuführen, verwenden Sie ein neues Schlüsselwort `nullptr`.  Die richtige Version des im ursprünglichen Beispiel sieht wie folgt aus:  
   
 ```  
 // OK: we set obj to refer to no object  
@@ -144,7 +144,7 @@ Object ^ obj = nullptr;
 Object ^ obj2 = 1;  
 ```  
   
- Dies erschwert die Portierung von vorhandenem Code in die neue Syntax ein wenig.  Betrachten Sie z. B. die folgende Wertklassendeklaration:  
+ Dadurch wird der etwas das Portieren von vorhandenem Code in der neuen Syntax komplizierter. Betrachten Sie beispielsweise die folgende Klassendeklaration für den Wert aus:  
   
 ```  
 __value struct Holder {  
@@ -163,7 +163,7 @@ private:
 };  
 ```  
   
- Hier handelt es sich sowohl bei `args` als auch bei `env` um CLR\-Referenztypen.  Die Initialisierung dieser beiden Member mit `0` im Konstruktor kann nicht unverändert in die neue Syntax übernommen werden.  Vielmehr muss sie in `nullptr` geändert werden:  
+ Hier wird sowohl `args` und `env` sind CLR-Referenztypen. Die Initialisierung des dieser beiden Member mit `0` im Konstruktor kann nicht unverändert in die Umstellung auf die neue Syntax. Sie müssen vielmehr geändert werden, um `nullptr`:  
   
 ```  
 value struct Holder {  
@@ -183,7 +183,7 @@ private:
 };  
 ```  
   
- Ähnlich müssen Prüfungen, in denen diese Member mit `0` verglichen werden, so geändert werden, dass die Member mit `nullptr` verglichen werden.  Dies ist die Managed Extensions\-Syntax:  
+ Für diese Elemente, die sie zu vergleichen, die auf ähnliche Weise testet `0` muss ebenfalls geändert werden, um die Elemente zu vergleichen `nullptr`. Hier ist die Managed Extensions-Syntax:  
   
 ```  
 Sexpr * Loop (Sexpr* input) {  
@@ -205,7 +205,7 @@ Sexpr * Loop (Sexpr* input) {
 }  
 ```  
   
- Und hier die Überarbeitung, in der jede `0`\-Instanz durch `nullptr` ersetzt wurde.  \(Das Übersetzungstool kann fast alle Instanzen automatisch transformieren, einschließlich der Verwendung des `NULL`\-Makros.\)  
+ Hier wird die Revision, ersetzen jede `0` -Instanz mit einem `nullptr`. Das Übersetzungstool hilfreich automatisieren viele, wenn nicht alle Vorkommen, einschließlich der Verwendung von der `NULL` Makro.  
   
 ```  
 Sexpr ^ Loop (Sexpr^ input) {  
@@ -227,18 +227,18 @@ Sexpr ^ Loop (Sexpr^ input) {
 }  
 ```  
   
- Der `nullptr` wird in einen beliebigen Zeiger\- oder Trackinghandletyp konvertiert, jedoch nicht zu einem ganzzahligen Typ erweitert.  Bei der folgenden Reihe von Initialisierungen beispielsweise ist `nullptr` nur als Anfangswert der ersten beiden zulässig.  
+ Die `nullptr` , die in ein beliebiges Handle Zeiger- oder konvertiert wird, aber nicht in einen ganzzahligen Typ heraufgestuft wird. In den folgenden Satz von Initialisierungen, beispielsweise die `nullptr` nur als einen Anfangswert für die ersten beiden gültig ist.  
   
 ```  
 // OK: we set obj and pstr to refer to no object  
 Object^ obj = nullptr;  
 char*   pstr = nullptr; // 0 would also work here  
   
-// Error: no conversion of nullptr to 0 …  
+// Error: no conversion of nullptr to 0  
 int ival = nullptr;  
 ```  
   
- Ähnlich verhält es sich bei einer Reihe von überladenen Methoden:  
+ Auf ähnliche Weise betrachten einen überladenen Satz von Methoden wie z. B. Folgendes ein:  
   
 ```  
 void f( Object^ ); // (1)  
@@ -246,26 +246,26 @@ void f( char* );   // (2)
 void f( int );     // (3)  
 ```  
   
- Ein Aufruf mit `nullptr`\-Literal, wie der folgende  
+ Ein Aufruf mit `nullptr` literal, z. B. Folgendes ein,  
   
 ```  
 // Error: ambiguous: matches (1) and (2)  
 f(  nullptr );  
 ```  
   
- ist mehrdeutig, weil `nullptr` sowohl mit einem Trackinghandle als auch mit einem Zeiger übereinstimmt und keiner der beiden Typen Vorrang gegenüber dem anderen hat. \(Diese Situation erfordert eine explizite Umwandlung, um Eindeutigkeit herzustellen.\)  
+ ist mehrdeutig, da die `nullptr` entspricht ein Trackinghandle und ein Zeiger ist, und es gibt keine Präferenz auf einen anderen. (Dies erfordert eine explizite Umwandlung, um eindeutig zu machen.)  
   
- Ein Aufruf mit `0` entspricht genau Instanz \(3\):  
+ Ein Aufruf mit `0` entspricht genau Instanz (3):  
   
 ```  
 // OK: matches (3)  
 f( 0 );  
 ```  
   
- Der Grund dafür ist, dass `0` eine ganze Zahl ist.  Wäre `f(int)` nicht vorhanden, würde der Aufruf durch eine Standardkonvertierung eindeutig mit `f(char*)` übereinstimmen.  Die Übereinstimmungsregeln räumen einer genauen Übereinstimmung Vorrang gegenüber einer Standardkonvertierung ein.  Wenn keine genaue Übereinstimmung gefunden wird, wird der Standardkonvertierung Vorrang gegenüber implizitem Boxing eines Werttyps eingeräumt.  Daher gibt es keine Mehrdeutigkeit.  
+ Da `0` vom Typ Integer ist. Wurden `f(int)` nicht vorhanden ist, der Aufruf eindeutig entsprechen `f(char*)` über eine standardkonvertierung. Die Abgleichsregeln Vorrang eine genaue Übereinstimmung über eine standardkonvertierung. Eine genaue Übereinstimmung vorhanden ist wird eine standardkonvertierung Vorrang über ein implizites Boxing eines Werttyps zugewiesen. Aus diesem Grund ist es keine Mehrdeutigkeit.  
   
-## Siehe auch  
- [Verwaltete Typen \(C\+\+\/CL\)](../dotnet/managed-types-cpp-cl.md)   
- [Classes and Structs](../windows/classes-and-structs-cpp-component-extensions.md)   
- [Handle für Objekt \(^\)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Verwaltete Typen (C + c++ / CL)](../dotnet/managed-types-cpp-cl.md)   
+ [Klassen und Strukturen](../windows/classes-and-structs-cpp-component-extensions.md)   
+ [Handle für Objekt (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)   
  [nullptr](../windows/nullptr-cpp-component-extensions.md)

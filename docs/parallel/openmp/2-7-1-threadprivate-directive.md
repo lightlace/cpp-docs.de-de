@@ -1,58 +1,58 @@
 ---
-title: "2.7.1 threadprivate Directive"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.7.1 Threadprivate-Direktive | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 08e0b70f-5359-4607-b0ca-38c2d570d7b3
-caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 75214320f40ad60940ff4713dc80b8d3111378c0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# 2.7.1 threadprivate Directive
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die `threadprivate`\-Direktive machen den benannten Dateigültigkeitsbereich, den Namespacebereich Blockbereichs oder statischen Variablen die *Variable* in der *Liste* angegeben sind, die zu einem Thread privat ist.  *Variable Liste* ist eine durch Trennzeichen getrennte Liste von Variablen, die nicht über einen unvollständigen Typ aufweisen.  Die Syntax der `threadprivate`\-Direktive sieht wie folgt aus:  
+# <a name="271-threadprivate-directive"></a>2.7.1 threadprivate-Anweisung
+Die `threadprivate` -Direktive macht die benannte Dateigültigkeitsbereich, Namespace-Gültigkeitsbereich oder Blockbereiche statische Variablen in der *Variablenliste* einem Thread zugehörig. *Variablenliste* ist eine durch Trennzeichen getrennte Liste von Variablen, die nicht über einen unvollständigen Typ verfügen. Die Syntax der `threadprivate` Richtlinie lautet wie folgt:  
   
 ```  
 #pragma omp threadprivate(variable-list) new-line  
 ```  
   
- Jede Kopie einer `threadprivate`\-Variable wird einmal an einem angegebenen Punkt im Programm nicht vor dem ersten Verweis auf diese Kopie als auch in der üblichen Weise initialisiert \(das heißt die als Masterkopie in einer serielle Ausführung des Programms erneut initialisiert wird.\)  Beachten Sie, dass, wenn ein Objekt in ein expliziter Initialisierer einer `threadprivate`\-Variable \(verwiesen wird und der Wert des Objekts vor dem ersten Verweis auf eine Kopie der Variablen geändert wird. Anschließend wird das Verhalten nicht angegeben ist.  
+ Jede Kopie einer `threadprivate` Variable initialisiert wird einmal an ein nicht angegebener Punkt im Programm vor dem ersten Verweis auf diese Kopie, und klicken Sie auf die übliche Weise (d. h., wie die Masterkopie in eine serielle Ausführung des Programms initialisiert werden, würde). Beachten Sie, dass, wenn ein Objekt, in eine explizite Initialisierung von verwiesen wird einer `threadprivate` Variablen und den Wert des Objekts vor dem ersten Verweis auf eine Kopie der Variablen geändert wird, dann ist das Verhalten undefiniert.  
   
- Wie bei allen privaten Variable darf kein Thread die Kopie eines Objekts `threadprivate` eines anderen Threads nicht verweisen.  Während der seriellen Bereiche und Vorlagen Bereiche des Programms sind Verweise auf die Kopie des Masterthreads des Objekts.  
+ Wie mit eine private Variable, ein Thread nicht einem anderen Thread Kopie verweisen muss ein `threadprivate` Objekt. Während der seriellen Regionen und master Bereiche des Programms werden die Verweise auf die master-Thread-Kopie des Objekts.  
   
- Nach der ersten parallelen Bereich ausführt, wird die Daten in den `threadprivate` sichergestellt, dass Objekte beibehalten werden sollen, wenn der dynamischen Mechanismus für den Thread deaktiviert wurde, und sobald die Anzahl blockierter Threads für alle parallelen Bereiche unverändert bleibt.  
+ Nach der Ausführung des ersten parallelen Bereichs, der der Daten in der `threadprivate` wird sichergestellt, dass Objekte beibehalten werden, nur wenn dynamischen Mechanismus threads deaktiviert wurde, und wenn die Anzahl der Threads für parallele Vertriebsgebieten unverändert bleibt.  
   
- Die Einschränkungen auf `threadprivate`\-Direktive lauten wie folgt:  
+ Die Einschränkungen fest, die `threadprivate` Richtlinie lauten wie folgt:  
   
--   `threadprivate`\-Direktive für Dateigültigkeitsbereichs\- oder Namespacebereichs variablen müssen außerhalb einer Definition oder Deklaration werden und müssen allen Verweisen zu den Variablen in der Liste lexikalisch stehen.  
+-   Ein `threadprivate` Richtlinie für Datei- oder Namespace-Gültigkeitsbereich Variablen müssen außerhalb einer Definition oder Deklaration angezeigt werden, und alle Verweise auf eine der Variablen muss lexikalisch in der Liste vor.  
   
--   Jede Variablen in der *Liste Variablen*`threadprivate`\-Direktive in der Datei oder dem Namespacebereich muss eine Variablendeklaration an der Datei oder dem Namespacebereich verweisen, die lexikalisch der Direktive vorangeht.  
+-   Jede Variable in der *Variablenliste* von einer `threadprivate` -Direktive am Datei- oder Namespacebereich muss finden Sie in einer Variablendeklaration auf Datei- oder Namespacebereich, der die Richtlinie lexikalisch vorausgeht.  
   
--   Blockbereichs `threadprivate`\-Direktive für statische Variablen müssen im Gültigkeitsbereich der Variablen und nicht in einem geschachtelten Bereich angezeigt werden.  Diese Direktiven müssen allen Verweisen auf einen der Variablen in der Liste lexikalisch stehen.  
+-   Ein `threadprivate` Richtlinie für Blockbereiche mit statischen Variablen muss im Gültigkeitsbereich der Variablen und nicht in einen verschachtelten Bereich angezeigt. Die Direktive muss lexikalisch alle Verweise auf Variablen einen in der Liste der vorangehen.  
   
--   Jede Variablen in der *Liste Variablen*`threadprivate`\-Direktive im Blockbereich muss eine Variablendeklaration im gleichen Bereich verweisen, die lexikalisch der Direktive vorangeht.  Die Variablendeklaration muss den statischen Speicherklassenspezifizierer verwenden.  
+-   Jede Variable in der *Variablenliste* von einer `threadprivate` Richtlinie im Blockbereich muss finden Sie in einer Variablendeklaration im gleichen Bereich, der die Richtlinie lexikalisch vorausgeht. Die Variablendeklaration festlegen, muss die statische Speicherklassenspezifizierer verwenden.  
   
--   Wenn eine Variable in `threadprivate`\-Direktive in einer Übersetzungseinheit angegeben ist, muss sie in `threadprivate`\-Direktive in jeder Übersetzungseinheit angegeben werden, in der sie deklariert wurde.  
+-   Wenn eine Variable, in angegeben wird eine `threadprivate` -Direktive in einer Übersetzungseinheit, er muss angegeben werden einer `threadprivate` -Direktive in jeder Übersetzungseinheit, die in der sie deklariert ist.  
   
--   Eine `threadprivate`\-Variable darf in keiner \- Klausel `copyin`, es sei denn, `copyprivate``schedule`, `num_threads`oder die **If**\-Klausel angegeben werden.  
+-   Ein `threadprivate` Variable muss nicht angezeigt werden, in jede beliebige Klausel, mit Ausnahme der `copyin`, `copyprivate`, `schedule`, `num_threads`, oder die **Wenn** Klausel.  
   
--   Die Adresse einer `threadprivate`\-Variable ist keine Adressen konstant.  
+-   Die Adresse von einem `threadprivate` Variable ist nicht mit einer Adresse-Konstante.  
   
--   Eine `threadprivate`\-Variable darf einen unvollständigen Typ oder einen Verweistyp enthalten.  
+-   Ein `threadprivate` Variable muss einen unvollständigen Typ oder ein Verweistyp nicht aufweisen.  
   
--   Eine `threadprivate`\-Variable mit Nicht HÜLSE Klassentyp muss über einen zugreifbaren, eindeutigen Kopierkonstruktor verfügen, wenn sie mit einem expliziten Initialisierers deklariert ist.  
+-   Ein `threadprivate` Variable mit nicht-POD-Klassentyp benötigen eine erreichbare, eindeutige Kopierkonstruktor, wenn er mit einem expliziten Initialisierer deklariert wird.  
   
- Das folgende Beispiel zeigt, wie das Ändern einer Variablen, die in einer Initialisierung wird, nicht definiertes Verhalten zur Folge haben und kann auch die Verwendung dieses Problem vermeiden, indem ein zusätzliches Objekt und einen Kopierkonstruktor verwendet.  
+ Im folgende Beispiel wird veranschaulicht, wie ändern eine Variable, die in einer Initialisierung nicht definiertes Verhalten verursachen kann, sowie Informationen zu diesem Problem zu vermeiden, indem Sie ein zusätzliches Objekt und einen Kopierkonstruktor.  
   
 ```  
 int x = 1;  
@@ -74,8 +74,8 @@ void f(int n) {
 }  
 ```  
   
-## Querverweise:  
+## <a name="cross-references"></a>Referenzen:  
   
--   Dynamische Threads finden [3.1.7 Abschnitt](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) auf Seite 39.  
+-   Dynamische Threads finden Sie unter [Abschnitt 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) auf Seite 39.  
   
--   `OMP_DYNAMIC` Umgebungsvariablen finden [Abschnitt 4.3](../../parallel/openmp/4-3-omp-dynamic.md) auf Seite 49.
+-   `OMP_DYNAMIC`Umgebung-Variable verwenden, finden Sie unter [Abschnitt 4.3](../../parallel/openmp/4-3-omp-dynamic.md) auf Seite "49".

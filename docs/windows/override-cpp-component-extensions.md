@@ -1,38 +1,38 @@
 ---
-title: "override  (C++ Component Extensions)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "overriding, override keyword [C++]"
-  - "override keyword [C++]"
+title: "außer Kraft setzen (Komponentenerweiterungen für C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- overriding, override keyword [C++]
+- override keyword [C++]
 ms.assetid: 34d19257-1686-4fcd-96f5-af07c70ba914
-caps.latest.revision: 19
-caps.handback.revision: "19"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "19"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c16b79d50ad0494956ee27f0928daabfefdacaed
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# override  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Das kontextbezogene `override`\-Schlüsselwort gibt an, dass ein Member eines Typs eine Basisklasse oder einen Basisschnittstellenmember überschreibt.  
+# <a name="override--c-component-extensions"></a>override (Komponentenerweiterungen für C++)
+Das kontextbezogene `override`-Schlüsselwort gibt an, dass ein Member eines Typs eine Basisklasse oder einen Basisschnittstellenmember überschreibt.  
   
-## Hinweise  
- Das `override`\-Schlüsselwort ist beim Kompilieren für systemeigene Ziele \(standardmäßige Compileroption\), für Windows\-Runtime\-Ziele \(**\/ZW**\-Compileroption\) oder Common Language Runtime\-Ziele \(**\/clr**\-Compileroption\) gültig.  
+## <a name="remarks"></a>Hinweise  
+ Die `override` Schlüsselwort ist gültig, beim Kompilieren für systemeigene Ziele (standardmäßige Compileroption), Windows-Runtime-Ziele (**/Zw** -Compileroption), oder der common Language Runtime-Ziele (**"/ CLR"** Compiler (Option).  
   
- Weitere Informationen zu Überschreibungsspezifizierern finden Sie unter [override\-Bezeichner](../cpp/override-specifier.md) und [Überschreibungsspezifizierer und systemeigene Kompilierungen](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).  
+ Weitere Informationen zu überschreibungsspezifizierern finden Sie unter [Überschreibungsspezifizierer](../cpp/override-specifier.md) und [Überschreibungsspezifizierer und Native Kompilierungen](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).  
   
  Weitere Informationen zu kontextbezogenen Schlüsselwörtern finden Sie unter [Kontextbezogene Schlüsselwörter](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
-## Beispiele  
+## <a name="examples"></a>Beispiele  
  **Beispiel**  
   
  Das folgende Codebeispiel zeigt, dass `override` auch in systemeigenen Kompilierungen verwendet werden kann.  
@@ -51,7 +51,7 @@ struct X : public I1 {
   
  **Beispiel**  
   
- Das folgende Codebeispiel zeigt, dass `override` auch in Windows\-Runtime\-Kompilierungen verwendet werden kann.  
+ Das folgende Codebeispiel zeigt, dass `override` auch in Windows-Runtime-Kompilierungen verwendet werden kann.  
   
 ```cpp#  
 // override_keyword_2.cpp  
@@ -65,13 +65,13 @@ ref struct X : public I1 {
 };  
 ```  
   
- **Voraussetzungen**  
+ **Anforderungen**  
   
- Compileroption: **\/ZW**  
+ Compileroption: **/ZW**  
   
  **Beispiel**  
   
- Das folgende Codebeispiel zeigt, dass `override` auch in Common Language Runtime\-Kompilierungen verwendet werden kann.  
+ Das folgende Codebeispiel zeigt, dass `override` auch in Common Language Runtime-Kompilierungen verwendet werden kann.  
   
 ```cpp#  
 // override_keyword_3.cpp  
@@ -85,10 +85,10 @@ ref struct X : public I1 {
 };  
 ```  
   
- **Voraussetzungen**  
+ **Anforderungen**  
   
- Compileroption: **\/clr**  
+ Compileroption: **/clr**  
   
-## Siehe auch  
- [override\-Bezeichner](../cpp/override-specifier.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Überschreibungsspezifizierer](../cpp/override-specifier.md)   
  [Überschreibungsspezifizierer](../windows/override-specifiers-cpp-component-extensions.md)

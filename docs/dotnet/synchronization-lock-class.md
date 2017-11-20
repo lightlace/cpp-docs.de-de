@@ -1,31 +1,30 @@
 ---
-title: "Synchronisierung (lock-Klasse) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lock-Klasse"
+title: Synchronisierung (Lock-Klasse) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: lock class
 ms.assetid: 5d468122-875d-4e81-b5ba-c9486a873335
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: db715fd7edad7083469a1642e1e5aaa92a5181d0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Synchronisierung (lock-Klasse)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Stellt einen Mechanismus bereit, um das Erstellen einer Sperre zu automatisieren, die den Zugriff auf ein Objekt synchronisiert.  
+# <a name="synchronization-lock-class"></a>Synchronisierung (lock-Klasse)
+Bietet einen Mechanismus zum Automatisieren der Sperre, die Zugriff auf ein Objekt synchronisiert.  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
  [lock](../dotnet/lock.md)  
   
-## Siehe auch  
- [C\+\+\-Unterstützungsbibliothek](../dotnet/cpp-support-library.md)
+## <a name="see-also"></a>Siehe auch  
+ [C++-Standardbibliothek](../dotnet/cpp-support-library.md)

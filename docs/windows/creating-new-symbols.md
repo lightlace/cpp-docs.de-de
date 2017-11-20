@@ -1,54 +1,53 @@
 ---
-title: "Creating New Symbols | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.symbol.creating"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "New Symbol dialog box"
-  - "symbols, creating"
+title: Erstellen neuer Symbole | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.symbol.creating
+dev_langs: C++
+helpviewer_keywords:
+- New Symbol dialog box
+- symbols, creating
 ms.assetid: 35168d31-3af6-4ecd-9362-3707d47b53f3
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 05a6414f88bf6afd5eac14ac0caf665bb2b11050
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Creating New Symbols
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="creating-new-symbols"></a>Erstellen neuer Symbole
 Wenn Sie ein neues Projekt anfangen, finden Sie es möglicherweise hilfreich, die benötigten Symbolnamen entwerfen, bevor Sie die Ressourcen erstellen, zu denen sie zugewiesen werden.  
   
-### So erstellen Sie ein neues Symbol mithilfe des Ressourcensymbol\-Dialogfelds  
+### <a name="to-create-a-new-symbol-using-the-resource-symbols-dialog-box"></a>So erstellen Sie ein neues Symbol mithilfe des Ressourcensymbol-Dialogfelds  
   
-1.  Wählen Sie **Neu** im Dialogfeld [Ressourcensymbole](../windows/resource-symbols-dialog-box.md) aus.  
+1.  In der [Ressourcensymbole (Dialogfeld)](../windows/resource-symbols-dialog-box.md), wählen Sie **neu**.  
   
-2.  Geben Sie einen Symbolnamen in das Feld **Name** ein.  
+2.  In der **Namen** geben einen Symbolnamen.  
   
 3.  Akzeptieren Sie den zugewiesenen Symbolwert.  
   
-     \- oder \-  
+     - oder -   
   
-     Geben Sie einen neuen Wert in das Feld **Wert** ein.  
+     In der **Wert** Geben Sie einen neuen Wert.  
   
-4.  Klicken Sie auf **OK**, um der Symbolliste das neue Symbol hinzuzufügen.  
+4.  Klicken Sie auf **OK** der Symbolliste das neue Symbol hinzu.  
   
- Wenn Sie einen bereits vorhandenen Symbolnamen eingeben, wird eine Meldung angezeigt, aus der hervorgeht, dass ein Symbol mit diesem Namen bereits definiert ist.  Sie können nicht zwei oder mehr Symbole mit demselben Namen definieren. Sie können jedoch unterschiedliche Symbole mit demselben numerischen Wert definieren.  Weitere Informationen finden Sie unter [Beschränkungen bei Symbolnamen](../windows/symbol-name-restrictions.md) und [Beschränkungen bei Symbolwerten](../windows/symbol-value-restrictions.md).  
+ Wenn Sie einen bereits vorhandenen Symbolnamen eingeben, wird eine Meldung angezeigt, aus der hervorgeht, dass ein Symbol mit diesem Namen bereits definiert ist. Sie können nicht zwei oder mehr Symbole mit demselben Namen definieren. Sie können jedoch unterschiedliche Symbole mit demselben numerischen Wert definieren. Weitere Informationen finden Sie unter [Beschränkungen bei Symbolnamen](../windows/symbol-name-restrictions.md) und [Beschränkungen für Symbolwerte](../windows/symbol-value-restrictions.md).  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)aus.  
   
  Anforderungen  
   
  Win32  
   
-## Siehe auch  
- [Viewing Resource Symbols](../windows/viewing-resource-symbols.md)   
- [Predefined Symbol IDs](../windows/predefined-symbol-ids.md)
+## <a name="see-also"></a>Siehe auch  
+ [Anzeigen von Ressourcensymbolen](../windows/viewing-resource-symbols.md)   
+ [Vordefinierte Symbol-IDs](../windows/predefined-symbol-ids.md)

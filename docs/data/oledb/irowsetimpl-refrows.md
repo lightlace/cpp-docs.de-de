@@ -1,36 +1,35 @@
 ---
-title: "IRowsetImpl::RefRows | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::IRowsetImpl::RefRows"
-  - "ATL.IRowsetImpl.RefRows"
-  - "IRowsetImpl.RefRows"
-  - "RefRows"
-  - "IRowsetImpl::RefRows"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RefRows-Methode"
+title: 'IRowsetImpl:: Refrows | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::IRowsetImpl::RefRows
+- ATL.IRowsetImpl.RefRows
+- IRowsetImpl.RefRows
+- RefRows
+- IRowsetImpl::RefRows
+dev_langs: C++
+helpviewer_keywords: RefRows method
 ms.assetid: 1c048a2a-65dc-4bba-9c81-a23c0dc249c8
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1ace41e40b1a6d8a08060288209d3d2b60a626fa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetImpl::RefRows
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Wird von [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) und [ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md) auf den Inkrement oder geben einen Verweiszähler einem vorhandenen Zeilenhandle frei.  
+# <a name="irowsetimplrefrows"></a>IRowsetImpl::RefRows
+Wird aufgerufen, indem [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) und [ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md) erhöhen, oder einen Verweiszähler für eine vorhandene Zeilenhandle freigeben.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -43,15 +42,15 @@ Wird von [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) und [ReleaseRo
 );  
 ```  
   
-#### Parameter  
- Siehe [IRowset::AddRefRows](https://msdn.microsoft.com/en-us/library/ms719619.aspx) in der *OLE* DB\-Programmierreferenz.  
+#### <a name="parameters"></a>Parameter  
+ Finden Sie unter [IRowset::AddRefRows](https://msdn.microsoft.com/en-us/library/ms719619.aspx) in der *OLE DB Programmer's Reference*.  
   
-## Rückgabewert  
- Ein Standard\- `HRESULT`\-Wert.  
+## <a name="return-value"></a>Rückgabewert  
+ Ein Standard `HRESULT` -Wert.  
   
-## Anforderungen  
- **Header:** atldb.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** „atldb.h“  
   
-## Siehe auch  
- [IRowsetImpl\-Klasse](../../data/oledb/irowsetimpl-class.md)   
- [CSimpleRow\-Klasse](../../data/oledb/csimplerow-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [IRowsetImpl-Klasse](../../data/oledb/irowsetimpl-class.md)   
+ [CSimpleRow-Klasse](../../data/oledb/csimplerow-class.md)

@@ -1,34 +1,34 @@
 ---
-title: "Definieren von Makros | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Definieren von Makros"
-  - "Makros, NMAKE"
-  - "NMAKE (Programm), Definieren von Makros"
+title: Definieren von Makros WHERE | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- defining macros
+- macros, NMAKE
+- NMAKE program, defining macros
 ms.assetid: 0fc59ec5-5f58-4644-b7da-7b021f7001af
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: cfb17f531df5c232f1f376cd003acb7bf5a62206
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Definieren von Makros
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Makros werden in einer Befehlszeile, einer Befehlsdatei, einem Makefile oder in der Datei Tools.ini definiert.  
+# <a name="where-to-define-macros"></a>Definieren von Makros
+Definieren von Makros in einer Befehlszeile, Befehlsdatei, Makefile oder der Datei Tools.ini.  
   
- In einem Makefile oder der Datei Tools.ini muss sich jede Makrodefinition in einer separaten Zeile befinden und kann nicht mit einem Leerzeichen oder Tabstopp beginnen.  Leerzeichen oder Tabstopps um das Gleichheitszeichen werden ignoriert.  Alle [Zeichen der Zeichenfolge](../build/defining-an-nmake-macro.md) sind literal, einschließlich der sie umgebenden Anführungszeichen sowie eingebetteter Leerzeichen.  
+ In einem Makefile oder der Datei Tools.ini jede Makrodefinition muss in einer separaten Zeile angezeigt werden und darf nicht mit einem Leerzeichen oder Tabstopp beginnen. Leerzeichen bzw. Tabstopps, um das Gleichheitszeichen werden ignoriert. Alle [Zeichenfolge mit Zeichen](../build/defining-an-nmake-macro.md) literal, einschließlich der umgebenden Anführungszeichen und eingebettete Leerzeichen sind.  
   
- In einer Befehlszeile oder Befehlsdatei werden Argumente von Leerzeichen und Tabstopps getrennt. Daher darf das Gleichheitszeichen nicht von Leerzeichen und Tabstopps umgeben sein.  Wenn `string` eingebettete Leerzeichen oder Tabstopps enthält, wird entweder die Zeichenfolge oder das gesamte Makro in doppelte Anführungszeichen \(**" "**\) eingeschlossen.  
+ In einer Befehlszeile oder Befehlsdatei Leerzeichen und Tabulatoren begrenzen die Argumente und können nicht das Gleichheitszeichen umschließen. Wenn `string` eingebettete Leerzeichen oder Tabstopps, schließen Sie die Zeichenfolge oder das gesamte Makro in doppelte Anführungszeichen ("").  
   
-## Siehe auch  
- [Definieren eines NMAKE\-Makros](../build/defining-an-nmake-macro.md)
+## <a name="see-also"></a>Siehe auch  
+ [Definieren eines NMAKE-Makros](../build/defining-an-nmake-macro.md)

@@ -1,87 +1,88 @@
 ---
-title: "Editing Parts of an Image (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Image editor [C++], editing images"
-  - "Clipboard [C++], pasting"
-  - "images [C++], editing"
-  - "images [C++], deleting selected parts"
-  - "images [C++], copying selected parts"
-  - "images [C++], moving selected parts"
-  - "images [C++], dragging and replicating selected parts"
-  - "images [C++], pasting into"
-  - "graphics [C++], editing"
+title: "Bearbeiten von Bestandteilen eines Bilds (Bildbearbeitung für Symbole) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Image editor [C++], editing images
+- Clipboard [C++], pasting
+- images [C++], editing
+- images [C++], deleting selected parts
+- images [C++], copying selected parts
+- images [C++], moving selected parts
+- images [C++], dragging and replicating selected parts
+- images [C++], pasting into
+- graphics [C++], editing
 ms.assetid: ff4f5fef-71a4-4fd8-825e-049399fed391
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4018f3816c75333fd8020c2856ab2538bf54bf1a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Editing Parts of an Image (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Für eine [Markierung](../mfc/selecting-an-area-of-an-image-image-editor-for-icons.md) können Sie Standardbearbeitungsoperationen ausführen, wie Ausschneiden, Kopieren, Löschen und Verschieben. Dabei spielt es keine Rolle, ob die Markierung das gesamte Bild oder nur einen Ausschnitt umfasst.  Da der Grafik\-Editor die Zwischenablage verwendet, können Sie Bilder zwischen der Grafik\-Editor und andere Anwendungen für Windows übertragen.  
+# <a name="editing-parts-of-an-image-image-editor-for-icons"></a>Bearbeiten von Bestandteilen eines Bilds (Bildbearbeitung für Symbole)
+Können Sie standard Bearbeitungsvorgänge ausführen – Ausschneiden, kopieren, löschen und Verschieben von – auf einer [Auswahl](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), ob die Auswahl auf das gesamte Bild oder bilden nur einen Teil davon ist. Da die Grafik-Editor die Windows-Zwischenablage verwendet wird, können Sie Bilder zwischen dem Bild-Editor und anderen Anwendungen für Windows übertragen.  
   
- Zusätzlich können Sie die Größe der Markierung ändern, und zwar unabhängig davon, ob das gesamte Bild oder nur ein Ausschnitt markiert ist.  
+ Darüber hinaus können Sie die Auswahl ändern, ob es sich um das gesamte Bild oder nur ein Teil enthält.  
   
-### So schneiden Sie die aktuelle Markierung aus und kopieren sie in die Zwischenablage  
+### <a name="to-cut-the-current-selection-and-move-it-to-the-clipboard"></a>So schneiden Sie die aktuelle Auswahl und verschieben Sie sie in die Zwischenablage  
   
-1.  Klicken Sie im Menü **Bearbeiten** auf **Ausschneiden**.  
+1.  Klicken Sie auf **Ausschneiden** auf die **bearbeiten** Menü.  
   
-### So kopieren Sie die Markierung  
+### <a name="to-copy-the-selection"></a>So kopieren Sie die Auswahl  
   
-1.  Positionieren Sie den Mauszeiger auf einer beliebigen Stelle in oder auf dem Markierungsrahmen, nicht aber auf den Ziehpunkten.  
+1.  Positionieren Sie den Zeiger innerhalb der Auswahlrahmen oder eine beliebige Stelle auf, mit Ausnahme der Ziehpunkte.  
   
-2.  Halten Sie die **STRG**\-TASTE gedrückt, während Sie die Markierung auf eine neue Position ziehen.  Der ursprünglich markierte Bereich wird nicht geändert.  
+2.  Halten Sie die **STRG** Schlüssel, wie Sie die Auswahl in einem neuen Speicherort ziehen. Der Bereich der ursprünglichen Auswahl ist unverändert.  
   
-3.  Um die Markierung an der aktuellen Position in das Bild zu kopieren, klicken Sie auf eine Stelle außerhalb des Markierungscursors.  
+3.  Um die Auswahl in das Image auf seinem aktuellen Speicherort zu kopieren, klicken Sie außerhalb des Cursors Auswahl.  
   
-### So fügen Sie den Inhalt der Zwischenablage in ein Bild ein  
+### <a name="to-paste-the-clipboard-contents-into-an-image"></a>Der Inhalt der Zwischenablage in ein Bild einfügen  
   
-1.  Wählen Sie im Menü **Bearbeiten** den Befehl **Einfügen**.  
+1.  Aus der **bearbeiten** Menü wählen **einfügen**.  
   
-     Der Inhalt der Zwischenablage, der sich innerhalb des Markierungsrahmens befindet, wird in der oberen linken Ecke des Fensterbereichs angezeigt.  
+     Der Inhalt der Zwischenablage, von der Markierungsrahmen umgeben werden in der oberen linken Ecke des Bereichs angezeigt.  
   
-2.  Positionieren Sie den Mauszeiger innerhalb des Markierungsrahmens, und ziehen Sie das Bild auf die gewünschte Position im Bild.  
+2.  Positionieren Sie den Zeiger innerhalb der Markierungsrahmen umgeben, und ziehen Sie das Bild an die gewünschte Position auf dem Bild.  
   
-3.  Um das Bild an der neuen Position zu verankern, klicken Sie auf eine Stelle außerhalb des Markierungsrahmens.  
+3.  Um das Bild an seiner neuen Position zu verankern, klicken Sie auf außerhalb der Markierungsrahmen umgeben.  
   
-### So löschen Sie die aktuelle Markierung, ohne sie in die Zwischenablage zu verschieben  
+### <a name="to-delete-the-current-selection-without-moving-it-to-the-clipboard"></a>Die aktuelle Auswahl zu löschen, ohne dass diese in die Zwischenablage verschoben werden  
   
-1.  Wählen Sie im Menü **Bearbeiten** den Befehl **Löschen**.  
+1.  Aus der **bearbeiten** Menü wählen **löschen**.  
   
-     Der ursprünglich markierte Bereich wird mit der aktuellen Hintergrundfarbe gefüllt.  
+     Der ursprüngliche Bereich der Auswahl ist mit der aktuellen Hintergrundfarbe gefüllt.  
   
     > [!NOTE]
-    >  Die Befehle Ausschneiden, Kopieren, Einfügen und Löschen können im Fenster Ressourcenansicht durch einen Klick mit der rechten Maustaste ausgewählt werden.  
+    >  Sie können Zugriff auf die Ausschneide-, Kopier-, Einfüge- und Löschbefehlen, indem Sie mit der mit der rechten Maustaste in das Fenster "Ressourcenansicht".  
   
-### So verschieben Sie die Markierung  
+### <a name="to-move-the-selection"></a>So verschieben Sie die Auswahl  
   
-1.  Positionieren Sie den Mauszeiger auf einer beliebigen Stelle in oder auf dem Markierungsrahmen, nicht aber auf den Ziehpunkten.  
+1.  Positionieren Sie den Zeiger innerhalb der Auswahlrahmen oder eine beliebige Stelle auf, mit Ausnahme der Ziehpunkte.  
   
-2.  Ziehen Sie die Markierung auf die neue Position.  
+2.  Ziehen Sie die Auswahl an die neue Position.  
   
-3.  Um die Markierung im Bild an der neuen Position zu verankern, klicken Sie auf eine Stelle außerhalb des Markierungsrahmens.  
+3.  Um die Auswahl in der Abbildung an seiner neuen Position zu verankern, klicken Sie außerhalb der Markierungsrahmen umgeben.  
   
- Weitere Informationen zum Zeichnen mit einer Auswahl finden Sie unter [Erstellen von benutzerdefinierten Pinseln](../mfc/creating-a-custom-brush-image-editor-for-icons.md).  
+ Weitere Informationen zum Zeichnen mit einer Auswahl finden Sie unter [Erstellen von benutzerdefinierten Pinseln](../windows/creating-a-custom-brush-image-editor-for-icons.md).  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](https://msdn.microsoft.com/library/f45fce5x.aspx) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](https://msdn.microsoft.com/library/xbx3z216.aspx). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
  Anforderungen  
   
- Kein  
+ Keine  
   
-## Siehe auch  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>Siehe auch  
+ [Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Bearbeiten von Grafischen Ressourcen](../windows/editing-graphical-resources-image-editor-for-icons.md)   
+ [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)
+

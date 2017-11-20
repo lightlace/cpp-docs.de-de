@@ -1,34 +1,32 @@
 ---
-title: "Compilerwarnung (Stufe 2) C4150 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4150"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4150"
+title: Compilerwarnung (Stufe 2) C4150 generiert | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4150
+dev_langs: C++
+helpviewer_keywords: C4150
 ms.assetid: ff1760ec-0d9f-4d45-b797-94261624becf
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: abf4b51e79cd282ab3a76e89f6c746f4e5cf5298
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Compilerwarnung (Stufe 2) C4150
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Löschen eines Zeigers auf den nicht definierten Typ 'Typ'. Destruktor wurde nicht aufgerufen  
+# <a name="compiler-warning-level-2-c4150"></a>Compilerwarnung (Stufe 2) C4150 generiert
+Löschen eines Zeigers auf unvollständigen Typ 'Typ'; keinen Destruktor wird aufgerufen  
   
- Der Operator **delete** wurde zum Löschen eines Typs aufgerufen, der zwar deklariert, aber nicht definiert wurde, sodass der Compiler keinen Destruktor finden konnte.  
+ Die **löschen** Operator wird aufgerufen, um ein Typ, der wurde deklariert, aber nicht definiert ist, löschen, damit der Compiler einen Destruktor nicht finden kann.  
   
- Im folgenden Beispiel wird C4150 generiert:  
+ Im folgende Beispiel wird C4150 generiert:  
   
 ```  
 // C4150.cpp  

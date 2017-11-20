@@ -4,41 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- LNK2005
-dev_langs:
-- C++
-helpviewer_keywords:
-- LNK2005
+f1_keywords: LNK2005
+dev_langs: C++
+helpviewer_keywords: LNK2005
 ms.assetid: d9587adc-68be-425c-8a30-15dbc86717a4
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: 40097ea2b5c5519a5b883aad09788cf2f802ea36
-ms.contentlocale: de-de
-ms.lasthandoff: 05/10/2017
-
+ms.openlocfilehash: 72fc5157bb1863fe3aebe99b2a9d59ee965cf563
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="linker-tools-error-lnk2005"></a>Linkertoolfehler LNK2005
 *Symbol* bereits im-Objekt definiert.  
@@ -49,7 +30,7 @@ Diesem Fehler folgt der schwerwiegende Fehler [LNK1169](../../error-messages/too
   
 ### <a name="possible-causes-and-solutions"></a>Mögliche Ursachen und Lösungen  
   
-Im Allgemeinen, dieser Fehler weist darauf hin Ihre unterbrochen der *eine Definitionsregel*, dadurch wird nur eine Definition für jede verwendete Vorlage, eine Funktion, ein Typ oder eine Objekt in einer bestimmten Objektdatei "und" nur eine Definition für die gesamte ausführbare Datei für extern sichtbaren Objekte oder Funktionen.  
+Im Allgemeinen, dieser Fehler weist darauf hin Ihre unterbrochen der *eine Definition-Regel*, wodurch nur eine Definition für jede verwendete Vorlage, eine Funktion, ein Typ oder eine Objekt in einer bestimmten Objektdatei "und" nur eine Definition für die gesamte ausführbare Datei für extern sichtbaren Objekte oder Funktionen.  
   
 Hier sind einige häufige Ursachen für diesen Fehler.  
   
@@ -118,7 +99,7 @@ Hier sind einige häufige Ursachen für diesen Fehler.
   
 -   Dieser Fehler kann auftreten, wenn Sie mehr als eine Version der Standardbibliothek oder CRT verknüpfen. Wenn Sie versuchen, die sowohl den Einzelhandel und CRT-Debugbibliotheken oder die statischen und dynamischen Versionen einer Bibliothek oder zwei verschiedene Versionen einer standard-Bibliothek mit der ausführbaren Datei zu verknüpfen, kann dieser Fehler beispielsweise oft gemeldet werden. Um dieses Problem zu beheben, entfernen Sie alle außer einer Kopie für jede Bibliothek von Link-Befehl. Wir empfehlen nicht Mischen Einzelhandel und Bibliotheken oder verschiedene Versionen einer Bibliothek, in die ausführbare Datei zu debuggen.  
   
-    Geben Sie anzuweisen, den Linker an, in der Befehlszeile andere Bibliotheken als die Standardwerte verwenden der Bibliotheken verwenden, und die [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) Option aus, um die Standardbibliotheken zu deaktivieren. Fügen Sie in der IDE Verweise im Projekt an, die Bibliotheken, und öffnen Sie dann die **Eigenschaftenseiten** Dialogfeld für das Projekt, und klicken Sie in der **Linker**, **Eingabe** Eigenschaftenseite, legen Sie entweder **alle Standardbibliotheken ignorieren**, oder **bestimmte Standardbibliotheken ignorieren** Eigenschaften, um die Standardbibliotheken zu deaktivieren.   
+    Geben Sie anzuweisen, den Linker an, in der Befehlszeile andere Bibliotheken als die Standardwerte verwenden der Bibliotheken verwenden, und die [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) Option aus, um die Standardbibliotheken zu deaktivieren. Fügen Sie in der IDE Verweise im Projekt an, die Bibliotheken, und öffnen Sie dann die **Eigenschaftenseiten** Dialogfeld für das Projekt, und klicken Sie in der **Linker**, **Eingabe** Eigenschaft Seite, legen Sie entweder **alle Standardbibliotheken ignorieren**, oder **bestimmte Standardbibliotheken ignorieren** Eigenschaften, um die Standardbibliotheken zu deaktivieren.   
   
 -   Dieser Fehler kann auftreten, wenn Sie die Verwendung der statischen und dynamischen Bibliotheken kombinieren, bei der Verwendung der ["/ CLR"](../../build/reference/clr-common-language-runtime-compilation.md) Option. Dieser Fehler kann beispielsweise auftreten, wenn Sie eine DLL für die Verwendung in der ausführbaren Datei, das einen Link in der statischen CRT erstellen. Um dieses Problem zu beheben, verwenden Sie nur statische Bibliotheken oder nur dynamische Bibliotheken, für die gesamte ausführbare und für alle Bibliotheken, die Sie erstellen, um in die ausführbare Datei zu verwenden.  
   
@@ -147,4 +128,3 @@ Wenn Sie eine ältere Version des Toolsets verwenden, finden Sie in folgenden Kn
   
 -   [Sie erhalten LNK2005-Fehler beim Kompilieren eines ATL-ausführbare Datei (.exe)-Projekts in Visual C++](https://support.microsoft.com/kb/184235).  
   
-

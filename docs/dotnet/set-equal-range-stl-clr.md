@@ -1,45 +1,43 @@
 ---
-title: "set::equal_range (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::equal_range"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "equal_range-Member [STL/CLR]"
+title: 'Set:: equal_range (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::equal_range
+dev_langs: C++
+helpviewer_keywords: equal_range member [STL/CLR]
 ms.assetid: f0b20a65-f37a-44b1-a291-09c33c10c355
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 47078cca08ed8f2ccdea13e1d9df3db0ed9fea1f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# set::equal_range (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Suchen reichen die mit einem bestimmten Schlüssel.  
+# <a name="setequalrange-stlclr"></a>set::equal_range (STL/CLR)
+Sucht den Bereich, der einem angegebenen Schlüssel entspricht.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 cliext::pair<iterator, iterator> equal_range(key_type key);  
 ```  
   
-#### Parameter  
- Schlüssel  
- Für zu suchen Schlüsselwert.  
+#### <a name="parameters"></a>Parameter  
+ Key  
+ Der zu suchende Schlüsselwert.  
   
-## Hinweise  
- Die Memberfunktion gibt einem Paar Iteratoren `cliext::pair<iterator, iterator>(` [set::lower\_bound](../dotnet/set-lower-bound-stl-clr.md)`(``key``),` [set::upper\_bound](../dotnet/set-upper-bound-stl-clr.md)`(``key``))` zurück.  Sie verwenden sie, um den Bereich von Elementen in der gesteuerten Sequenz nur ermitteln, die einen angegebenen Schlüssel übereinstimmen.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt ein Paar von Iteratoren `cliext::pair<iterator, iterator>(` [Set:: lower_bound (STL/CLR)](../dotnet/set-lower-bound-stl-clr.md) `(key),` [Set:: upper_bound (STL/CLR)](../dotnet/set-upper-bound-stl-clr.md)`(key))`. Sie können damit um des Bereichs von Elementen, die derzeit in der gesteuerten Sequenz zu ermitteln, die einen angegebenen Schlüssel entsprechen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_set_equal_range.cpp   
@@ -75,17 +73,20 @@ int main()
   
 ```  
   
-  **ein b c**  
-**equal\_range \(L'x leer\) \= True**  
- **b**   
-## Anforderungen  
- **Header:** \<cliext\/Satz\>  
+```Output  
+ a b c  
+equal_range(L'x') empty = True  
+ b  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Set >  
   
-## Siehe auch  
- [set](../dotnet/set-stl-clr.md)   
- [set::count](../dotnet/set-count-stl-clr.md)   
- [set::find](../dotnet/set-find-stl-clr.md)   
- [set::lower\_bound](../dotnet/set-lower-bound-stl-clr.md)   
- [set::upper\_bound](../dotnet/set-upper-bound-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Legen Sie (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [Set:: Count (STL/CLR)](../dotnet/set-count-stl-clr.md)   
+ [Set:: Find (STL/CLR)](../dotnet/set-find-stl-clr.md)   
+ [Set:: lower_bound (STL/CLR)](../dotnet/set-lower-bound-stl-clr.md)   
+ [set::upper_bound (STL/CLR)](../dotnet/set-upper-bound-stl-clr.md)

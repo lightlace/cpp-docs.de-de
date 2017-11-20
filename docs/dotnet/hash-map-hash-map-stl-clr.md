@@ -1,32 +1,30 @@
 ---
-title: "hash_map::hash_map (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::hash_map"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "hash_map-Member [STL/CLR]"
+title: 'hash_map:: hash_map (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::hash_map
+dev_langs: C++
+helpviewer_keywords: hash_map member [STL/CLR]
 ms.assetid: d65eb3fa-4bf9-4186-95f8-5517c90ef1fa
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b00688397cc76bb618631dfa92f4da16e6f4bc4a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# hash_map::hash_map (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Erstellt ein container\-Objekt.  
+# <a name="hashmaphashmap-stlclr"></a>hash_map::hash_map (STL/CLR)
+Erstellt ein container-Objekt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 hash_map();  
@@ -49,104 +47,90 @@ hash_map(System::Collections::Generic::IEnumerable<GValue>^ right,
     key_compare^ pred, hasher^ hashfn);  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  first  
- Anfang Einfügen des Bereichs.  
+ Anfang des Bereichs, der eingefügt.  
   
  hashfn  
- Hashfunktion für die Zuordnung von Schlüsseln auf die Buckets.  
+ Hash-Funktion für die Zuordnung von Schlüsseln zu Buckets.  
   
  last  
- Ende Einfügen des Bereichs.  
+ Das Ende des Bereichs einfügen.  
   
  pred  
- Reihenfolgenprädikat für die gesteuerte Sequenz.  
+ Sortierung Prädikat für die gesteuerte Sequenz.  
   
- right  
- Objekt oder Bereich Einfüge\-.  
+ Rechts  
+ Einzufügendes Objekt bzw. einzufügender Bereich.  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Der Konstruktor:  
   
  `hash_map();`  
   
- initialisiert die gesteuerte Sequenz ohne Elemente, mit dem Standardreihenfolgenprädikat `key_compare()` mit der Standardhashfunktion.  Sie verwenden sie, um eine leere gesteuerten ursprünglichen Sequenz, mit dem Standardreihenfolgenprädikat und \-Hashfunktion anzugeben.  
+ Initialisiert die gesteuerte Sequenz keine Elemente mit der standardmäßigen Reihenfolge Prädikat `key_compare()`, und klicken Sie mit der Standard-Hashfunktion. Sie können damit Geben Sie eine leere gesteuerte Sequenz, mit der standardmäßigen Reihenfolge Prädikat und Hash-Funktion.  
   
  Der Konstruktor:  
   
  `explicit hash_map(key_compare^ pred);`  
   
- initialisiert die gesteuerte Sequenz ohne Elemente, mit dem Reihenfolgenprädikat `pred` mit der Standardhashfunktion.  Sie verwenden sie, um eine leere gesteuerten ursprünglichen Sequenz, mit dem angegebenen Reihenfolgenprädikat und der Standardhashfunktion anzugeben.  
+ Initialisiert die gesteuerte Sequenz keine Elemente, mit dem Prädikat Reihenfolge `pred`, und klicken Sie mit der Standard-Hashfunktion. Sie können damit Geben Sie eine leere gesteuerte Sequenz, mit der angegebenen Reihenfolge Prädikat und die Standard-Hashfunktion.  
   
  Der Konstruktor:  
   
  `hash_map(key_compare^ pred, hasher^ hashfn);`  
   
- initialisiert die gesteuerte Sequenz ohne Elemente, mit dem Reihenfolgenprädikat `pred` mit der Hashfunktion `hashfn`.  Sie verwenden sie, um eine leere gesteuerten ursprünglichen Sequenz, mit dem angegebenen Reihenfolgenprädikat und \-Hashfunktion anzugeben.  
+ Initialisiert die gesteuerte Sequenz keine Elemente, mit dem Prädikat Reihenfolge `pred`, und bei der Hashfunktion `hashfn`. Sie können damit Geben Sie eine leere gesteuerte Sequenz, mit der angegebenen Reihenfolge Prädikat und Hash-Funktion.  
   
  Der Konstruktor:  
   
  `hash_map(hash_map<Key, Mapped>% right);`  
   
- initialisiert die gesteuerte Sequenz mit der Sequenz `[``right``.`[hash\_map::begin](../dotnet/hash-map-begin-stl-clr.md)`(),` `right``.`[hash\_map::end](../dotnet/hash-map-end-stl-clr.md)`())`, mit dem Standardreihenfolgenprädikat und mit der Standardhashfunktion.  Sie verwenden sie, um einer gesteuerten ursprünglichen Sequenz angeben, die eine Kopie dieser Folge ist, die vom hash\_map Objekt `right`, mit dem Standardreihenfolgenprädikat und \-Hashfunktion gesteuert wird.  
+ Initialisiert die gesteuerte Sequenz durch die Sequenz [`right.begin()`, `right.end()`), mit dem Prädikat Reihenfolge und mit der Standard-Hashfunktion. Sie können damit eine gesteuerte Sequenz angeben, die eine Kopie der Sequenz, die durch das Hash_map-Objekt gesteuert wird `right`, mit der Sortierung standardprädikat und Hash-Funktion.  
   
  Der Konstruktor:  
   
  `hash_map(hash_map<Key, Mapped>^ right);`  
   
- initialisiert die gesteuerte Sequenz mit der Sequenz `[``right``->`[hash\_map::begin](../dotnet/hash-map-begin-stl-clr.md)`(),` `right``->`[hash\_map::end](../dotnet/hash-map-end-stl-clr.md)`())`, mit dem Standardreihenfolgenprädikat und mit der Standardhashfunktion.  Sie verwenden sie, um einer gesteuerten ursprünglichen Sequenz angeben, die eine Kopie dieser Folge ist, die vom hash\_map Objekt `right`, mit dem Standardreihenfolgenprädikat und \-Hashfunktion gesteuert wird.  
+ Initialisiert die gesteuerte Sequenz durch die Sequenz [`right->begin()`, `right->end()`), mit dem Prädikat Reihenfolge und mit der Standard-Hashfunktion. Sie können damit eine gesteuerte Sequenz angeben, die eine Kopie der Sequenz, die durch das Hash_map-Objekt gesteuert wird `right`, mit der Sortierung standardprädikat und Hash-Funktion.  
   
  Der Konstruktor:  
   
- `template<typename InIter>`  
+ `template<typename InIter> hash_map(InIter first, InIter last);`  
   
- `hash_map(InIter first, InIter last);`  
-  
- initialisiert die gesteuerte Sequenz mit der Sequenz `[``first``,` `last``)`, mit dem Standardreihenfolgenprädikat und mit der Standardhashfunktion.  Sie verwenden sie, um die gesteuerte Sequenz eine Kopie einer anderen Sequenz, mit dem Standardreihenfolgenprädikat und \-Hashfunktion zu erstellen.  
+ Initialisiert die gesteuerte Sequenz durch die Sequenz [`first`, `last`), mit dem Prädikat Reihenfolge und mit der Standard-Hashfunktion. Sie mit ihrer Hilfe der gesteuerten Sequenz eine Kopie einer anderen Sequenz mit der standardmäßigen Reihenfolge Prädikat und Hash-Funktion.  
   
  Der Konstruktor:  
   
- `template<typename InIter>`  
+ `template<typename InIter> hash_map(InIter first, InIter last, key_compare^ pred);`  
   
- `hash_map(InIter first, InIter last,`  
-  
- `key_compare^ pred);`  
-  
- initialisiert die gesteuerte Sequenz mit der Sequenz `[``first``,` `last``)`, mit dem Reihenfolgenprädikat `pred` mit der Standardhashfunktion.  Sie verwenden sie, um die gesteuerte Sequenz eine Kopie einer anderen Sequenz, mit dem angegebenen Reihenfolgenprädikat und der Standardhashfunktion zu erstellen.  
+ Initialisiert die gesteuerte Sequenz durch die Sequenz [`first`, `last`), mit der Sortierung Prädikat `pred`, und klicken Sie mit der Standard-Hashfunktion. Sie mit ihrer Hilfe der gesteuerten Sequenz eine Kopie einer anderen Sequenz, mit der angegebenen Reihenfolge Prädikat und die Standard-Hashfunktion.  
   
  Der Konstruktor:  
   
- `template<typename InIter>`  
+ `template<typename InIter> hash_map(InIter first, InIter last, key_compare^ pred, hasher^ hashfn);`  
   
- `hash_map(InIter first, InIter last,`  
-  
- `key_compare^ pred, hasher^ hashfn);`  
-  
- initialisiert die gesteuerte Sequenz mit der Sequenz `[``first``,` `last``)`, mit dem Reihenfolgenprädikat `pred` mit der Hashfunktion `hashfn`.  Sie verwenden sie, um die gesteuerte Sequenz eine Kopie einer anderen Sequenz, mit dem angegebenen Reihenfolgenprädikat und \-Hashfunktion zu erstellen.  
+ Initialisiert die gesteuerte Sequenz durch die Sequenz [`first`, `last`), mit der Sortierung Prädikat `pred`, und bei der Hashfunktion `hashfn`. Sie mit ihrer Hilfe der gesteuerten Sequenz eine Kopie einer anderen Sequenz, mit der angegebenen Reihenfolge Prädikat und Hash-Funktion.  
   
  Der Konstruktor:  
   
  `hash_map(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- initialisiert die gesteuerte Sequenz mit der Folge, die der Enumerator `right` festgelegt wird, mit dem Standardreihenfolgenprädikat und mit der Standardhashfunktion.  Sie verwenden sie, um die gesteuerte Sequenz eine Kopie einer anderen Sequenz erstellen, die von ein Enumerator, mit dem Standardreihenfolgenprädikat und \-Hashfunktion beschrieben wird.  
+ Initialisiert die gesteuerte Sequenz durch die Sequenz, die vom Enumerator festgelegte `right`, mit dem Prädikat Reihenfolge und mit der Standard-Hashfunktion. Sie mit ihrer Hilfe der gesteuerten Sequenz eine Kopie einer anderen Sequenz, die durch ein Enumerator, mit der standardmäßigen Reihenfolge Prädikat und Hash-Funktion beschrieben.  
   
  Der Konstruktor:  
   
- `hash_map(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ `hash_map(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- `key_compare^ pred);`  
-  
- initialisiert die gesteuerte Sequenz mit der Folge, die der Enumerator `right` festgelegt wird, mit dem Reihenfolgenprädikat `pred` mit der Standardhashfunktion.  Sie verwenden sie, um die gesteuerte Sequenz eine Kopie einer anderen Sequenz erstellen, die von ein Enumerator, mit der angegebenen Reihenfolgenprädikat\- und \-Standardhashfunktion beschrieben wird.  
+ Initialisiert die gesteuerte Sequenz durch die Sequenz, die vom Enumerator festgelegt `right`, mit der Sortierung Prädikat `pred`, und klicken Sie mit der Standard-Hashfunktion. Sie mit ihrer Hilfe der gesteuerten Sequenz eine Kopie einer anderen Sequenz, die durch ein Enumerator, mit der angegebenen Reihenfolge Prädikat und Standard-Hashfunktion beschrieben.  
   
  Der Konstruktor:  
   
- `hash_map(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ `hash_map(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred, hasher^ hashfn);`  
   
- `key_compare^ pred, hasher^ hashfn);`  
+ Initialisiert die gesteuerte Sequenz durch die Sequenz, die vom Enumerator festgelegte `right`, mit der Sortierung Prädikat `pred`, und bei der Hashfunktion `hashfn`. Sie mit ihrer Hilfe der gesteuerten Sequenz eine Kopie einer anderen Sequenz, die durch ein Enumerator, mit der angegebenen Reihenfolge Prädikat und Hash-Funktion beschrieben.  
   
- initialisiert die gesteuerte Sequenz mit der Folge, die der Enumerator `right` festgelegt wird, mit dem Reihenfolgenprädikat `pred` mit der Hashfunktion `hashfn`.  Sie verwenden sie, um die gesteuerte Sequenz eine Kopie einer anderen Sequenz erstellen, die von ein Enumerator, mit dem angegebenen Reihenfolgenprädikat und \-Hashfunktion beschrieben wird.  
-  
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_hash_map_construct.cpp   
@@ -258,26 +242,32 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **\[1\] \[2\] \[bc 3\]**  
-**size\(\) \= 0**  
- **\[1\] \[2\] \[bc 3\]**  
-**size\(\) \= 0**  
- **c \[3\] \[2\] \[b1\]**  
- **\[1\] \[2\] \[bc 3\]**  
- **\[1\] \[2\] \[bc 3\]**  
- **c \[3\] \[2\] \[b1\]**  
- **\[1\] \[2\] \[bc 3\]**  
- **\[1\] \[2\] \[bc 3\]**  
- **c \[3\] \[2\] \[b1\]**  
- **\[1\] \[2\] \[bc 3\]**  
- **\[1\] \[2\] \[bc 3\]**   
-## Anforderungen  
- **Header:** \<cliext\/hash\_map\>  
+```Output  
+size() = 0  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [c 3] [b 2] [a 1]  
   
- **Namespace:** cliext  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
   
-## Siehe auch  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::generic\_container](../dotnet/hash-map-generic-container-stl-clr.md)   
- [hash\_map::operator\=](../dotnet/hash-map-operator-assign-stl-clr.md)
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
+  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [c 3]  
+```  
+  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext Hash_map/>  
+  
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [hash_map-Element (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::generic_container (STL/CLR)](../dotnet/hash-map-generic-container-stl-clr.md)   
+ [hash_map::operator= (STL/CLR)](../dotnet/hash-map-operator-assign-stl-clr.md)

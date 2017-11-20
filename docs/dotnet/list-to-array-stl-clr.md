@@ -1,41 +1,39 @@
 ---
-title: "list::to_array (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::to_array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "to_array-Member [STL/CLR]"
+title: List::to_array (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::to_array
+dev_langs: C++
+helpviewer_keywords: to_array member [STL/CLR]
 ms.assetid: 3ea7b90c-127b-43cd-804b-019b86b77582
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 113c6330e9fd3e82c83e2d4bf018e4ea101c64c6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# list::to_array (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Kopiert die gesteuerte Sequenz zu einem neuen Array.  
+# <a name="listtoarray-stlclr"></a>list::to_array (STL/CLR)
+Kopiert die gesteuerte Sequenz in ein neues Array.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 cli::array<Value>^ to_array();  
 ```  
   
-## Hinweise  
- Die Memberfunktion gibt ein Array zurück, das die gesteuerte Sequenz enthält.  Sie verwenden sie, um eine Kopie der gesteuerten Sequenz in der Arrayform zu erhalten.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt ein Array mit der kontrollierten Sequenz zurück. Sie können sie eine Kopie der gesteuerten Sequenz im Arrayform abrufen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_list_to_array.cpp   
@@ -66,12 +64,15 @@ int main()
   
 ```  
   
-  **ein b c d**  
- **ein b c**   
-## Anforderungen  
- **Header:** \<cliext\/Liste\>  
+```Output  
+a b c d  
+a b c  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/List >  
   
-## Siehe auch  
- [list](../dotnet/list-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [list (STL/CLR)](../dotnet/list-stl-clr.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Concurrency:: fast_math-Namespace Funktionen | Microsoft-Dokumentation'
+title: 'Concurrency:: fast_math-Namespace Funktionen | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -50,18 +50,17 @@ f1_keywords:
 - amp_math/Concurrency::fast_math::tanf
 - amp_math/Concurrency::fast_math::tanhf
 - amp_math/Concurrency::fast_math::trunc
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: f5763d62-795b-4de6-a7a5-c7115f158708
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 2ca8b085c7dcc226a216032060e628c7c7ce0a4a
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: c9566468c2b9ba6447ce3a8ef2c09e4981edafef
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="concurrencyfastmath-namespace-functions"></a>Concurrency:: fast_math-Namespace-Funktionen
 ||||  
@@ -101,7 +100,7 @@ inline float acos(float _X) restrict(amp);
  Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt den Arkuskosinus-Wert des Arguments zurück  
+ Gibt den arkuskosinuswert des Arguments zurück  
   
 ##  <a name="acosf"></a>acosf  
  Berechnet den Arkuskosinus des Arguments  
@@ -115,7 +114,7 @@ inline float acosf(float _X) restrict(amp);
  Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt den Arkuskosinus-Wert des Arguments zurück  
+ Gibt den arkuskosinuswert des Arguments zurück  
   
 ##  <a name="asin"></a> asin  
  Berechnet den Arkussinus des Arguments  
@@ -129,7 +128,7 @@ inline float asin(float _X) restrict(amp);
  Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt den Arkussinus-Wert des Arguments zurück  
+ Gibt den arkussinuswert des Arguments zurück  
   
 ##  <a name="asinf"></a>asinf  
  Berechnet den Arkussinus des Arguments  
@@ -143,7 +142,7 @@ inline float asinf(float _X) restrict(amp);
  Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt den Arkussinus-Wert des Arguments zurück  
+ Gibt den arkussinuswert des Arguments zurück  
   
 ##  <a name="atan"></a> atan  
  Berechnet den Arkustangens des Arguments  
@@ -176,7 +175,7 @@ inline float atan2(
  Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt den Arkustangens-Wert von _Y/_X  
+ Gibt den Wert der Arkustangens von _Y/_X  
   
 ##  <a name="atan2f"></a>atan2f  
  Berechnet den Arkustangens von _Y/_X  
@@ -195,7 +194,7 @@ inline float atan2f(
  Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt den Arkustangens-Wert von _Y/_X  
+ Gibt den Wert der Arkustangens von _Y/_X  
   
 ##  <a name="atanf"></a>atanf  
  Berechnet den Arkustangens des Arguments  
@@ -307,7 +306,7 @@ inline float exp(float _X) restrict(amp);
  Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt die vom Argument exponential Basis-e  
+ Gibt die Exponentialzahl zur Basis e des Arguments  
   
 ##  <a name="exp2"></a>EXP2  
  Berechnet die Basis-2, die vom Argument exponential ist  
@@ -321,7 +320,7 @@ inline float exp2(float _X) restrict(amp);
  Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt die vom Argument exponential Basis-2  
+ Gibt die Basis-2, die vom Argument Exponential ist  
   
 ##  <a name="exp2f"></a>exp2f  
  Berechnet die Basis-2, die vom Argument exponential ist  
@@ -335,7 +334,7 @@ inline float exp2f(float _X) restrict(amp);
  Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt die vom Argument exponential Basis-2  
+ Gibt die Basis-2, die vom Argument Exponential ist  
   
 ##  <a name="expf"></a>expf  
  Berechnet die Basis-E, die vom Argument exponential ist  
@@ -349,7 +348,7 @@ inline float expf(float _X) restrict(amp);
  Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt die vom Argument exponential Basis-e  
+ Gibt die Exponentialzahl zur Basis e des Arguments  
   
 ##  <a name="fabs"></a>Fabs  
  Gibt den absoluten Wert des Arguments zurück.  
@@ -391,7 +390,7 @@ inline float floor(float _X) restrict(amp);
  Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt die Untergrenze des Arguments  
+ Gibt den Tiefstwert des Arguments zurück  
   
 ##  <a name="floorf"></a>floorf  
  Berechnet den Tiefstwert des Arguments  
@@ -405,7 +404,7 @@ inline float floorf(float _X) restrict(amp);
  Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt die Untergrenze des Arguments  
+ Gibt den Tiefstwert des Arguments zurück  
   
 ##  <a name="fmax"></a>Fmax  
  Festlegung des höchsten numerischen Werts der Argumente  
@@ -571,7 +570,7 @@ inline int isfinite(float _X) restrict(amp);
  Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt einen Wert ungleich NULL nur, wenn das Argument einen begrenzten Wert verfügt.  
+ Gibt einen Wert ungleich NULL zurück, wenn das Argument einen endlichen Wert verfügt  
   
 ##  <a name="isinf"></a>isinf  
  Bestimmt, ob das Argument unendlich ist  
@@ -585,7 +584,7 @@ inline int isinf(float _X) restrict(amp);
  Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt einen Wert ungleich NULL nur, wenn das Argument einen unendlichen Wert hat.  
+ Gibt einen Wert ungleich NULL zurück, wenn das Argument einen unendlichen Wert verfügt  
   
 ##  <a name="isnan"></a>IsNaN  
  Bestimmt, ob das Argument ein NaN  
@@ -599,7 +598,7 @@ inline int isnan(float _X) restrict(amp);
  Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt einen Wert ungleich NULL nur, wenn das Argument einen NaN-Wert hat.  
+ Gibt einen Wert ungleich NULL zurück, wenn das Argument einen NaN-Wert verfügt  
   
 ##  <a name="ldexp"></a>ldexp  
  Berechnet eine reelle Zahl aus der Mantisse und dem Exponent  
@@ -665,7 +664,7 @@ inline float log10(float _X) restrict(amp);
  Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt die Base-10-Logarithmus des Arguments  
+ Gibt den Base-10-Logarithmus des Arguments zurück  
   
 ##  <a name="log10f"></a>log10f  
  Berechnet den Basis-10-Logarithmus des Arguments  
@@ -679,7 +678,7 @@ inline float log10f(float _X) restrict(amp);
  Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt die Base-10-Logarithmus des Arguments  
+ Gibt den Base-10-Logarithmus des Arguments zurück  
   
 ##  <a name="log2"></a>Log2  
  Berechnet den Basis-2-Logarithmus des Arguments  
@@ -693,7 +692,7 @@ inline float log2(float _X) restrict(amp);
  Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt den Logarithmus Basis&2; des Arguments zurück  
+ Gibt den Logarithmus Basis 2 des Arguments zurück  
   
 ##  <a name="log2f"></a>log2f  
  Berechnet den Basis-2-Logarithmus des Arguments  
@@ -707,7 +706,7 @@ inline float log2f(float _X) restrict(amp);
  Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt die Base-10-Logarithmus des Arguments  
+ Gibt den Base-10-Logarithmus des Arguments zurück  
   
 ##  <a name="logf"></a>logf  
  Berechnet den Basis-E-Logarithmus des Arguments  
@@ -739,7 +738,7 @@ inline float modf(
  `_Ip`  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt den Bruchteil mit Vorzeichen von _X  
+ Gibt den Bruchteil mit Vorzeichen von _x ab  
   
 ##  <a name="modff"></a>modff  
  Teilt _X in Nachkommastellen und ganze Zahlen auf.  
@@ -757,7 +756,7 @@ inline float modff(
  `_Ip`  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt den Bruchteil mit Vorzeichen von _X  
+ Gibt den Bruchteil mit Vorzeichen von _x ab  
   
 ##  <a name="pow"></a> pow  
  Berechnet _X potenziert mit _Y  
@@ -773,10 +772,10 @@ inline float pow(
  Gleitkommawert, Basis  
   
  `_Y`  
- Gleitkommawert, exponent  
+ Gleitkomma-Wert, exponent  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt den Wert der _X potenziert mit _y  
+ Gibt den Wert von _X potenziert mit _y  
   
 ##  <a name="powf"></a>powf  
  Berechnet _X potenziert mit _Y  
@@ -792,11 +791,11 @@ inline float powf(
  Gleitkommawert, Basis  
   
  `_Y`  
- Gleitkommawert, exponent  
+ Gleitkomma-Wert, exponent  
   
 ### <a name="return-value"></a>Rückgabewert  
   
-##  <a name="round"></a>runden  
+##  <a name="round"></a>Roundrobin  
  Rundet _X auf die nächste ganze Zahl  
   
 ```  
@@ -808,7 +807,7 @@ inline float round(float _X) restrict(amp);
  Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt die nächste ganze Zahl von _X  
+ Gibt die nächste ganze Zahl von _x ab  
   
 ##  <a name="roundf"></a>roundf  
  Rundet _X auf die nächste ganze Zahl  
@@ -822,7 +821,7 @@ inline float roundf(float _X) restrict(amp);
  Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt die nächste ganze Zahl von _X  
+ Gibt die nächste ganze Zahl von _x ab  
   
 ##  <a name="rsqrt"></a>rsqrt  
  Gibt den Kehrwert der Quadratwurzel des Arguments zurück  
@@ -853,7 +852,7 @@ inline float rsqrtf(float _X) restrict(amp);
  Gibt den Kehrwert der Quadratwurzel des Arguments zurück  
   
 ##  <a name="signbit"></a>signbit  
- Bestimmt, ob die Vorzeichen von _X negativ ist.  
+ Bestimmt, ob die Vorzeichen des _X negativ ist.  
   
 ```  
 inline int signbit(float _X) restrict(amp);
@@ -864,10 +863,10 @@ inline int signbit(float _X) restrict(amp);
  Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt einen Wert ungleich NULL zurück, wenn die Vorzeichen des _X negativ ist  
+ Gibt einen Wert ungleich NULL zurück, wenn die Vorzeichen des _X negativ ist.  
   
 ##  <a name="signbitf"></a>signbitf  
- Bestimmt, ob die Vorzeichen von _X negativ ist.  
+ Bestimmt, ob die Vorzeichen des _X negativ ist.  
   
 ```  
 inline int signbitf(float _X) restrict(amp);
@@ -878,7 +877,7 @@ inline int signbitf(float _X) restrict(amp);
  Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt einen Wert ungleich NULL zurück, wenn die Vorzeichen des _X negativ ist  
+ Gibt einen Wert ungleich NULL zurück, wenn die Vorzeichen des _X negativ ist.  
   
 ##  <a name="sin"></a> sin  
  Berechnet den Sinuswert des Arguments  
@@ -923,10 +922,10 @@ inline void sincos(
  Gleitkommawert  
   
  `_S`  
- Gibt den Sinuswert des _X  
+ Gibt den Sinuswert von _x ab  
   
  `_C`  
- Gibt den Kosinuswert von _X  
+ Gibt den Kosinuswert von _x ab  
   
 ##  <a name="sincosf"></a>sincosf  
  Berechnet Sinus- und Kosinuswert von _X  
@@ -943,10 +942,10 @@ inline void sincosf(
  Gleitkommawert  
   
  `_S`  
- Gibt den Sinuswert des _X  
+ Gibt den Sinuswert von _x ab  
   
  `_C`  
- Gibt den Kosinuswert von _X  
+ Gibt den Kosinuswert von _x ab  
   
 ##  <a name="sinh"></a> sinh  
  Berechnet den Hyperbelsinuswert des Arguments  
@@ -960,7 +959,7 @@ inline float sinh(float _X) restrict(amp);
  Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt den hyperbolischen Sinus-Wert des Arguments zurück  
+ Gibt den hyperbelsinuswert des Arguments zurück  
   
 ##  <a name="sinhf"></a>sinhf  
  Berechnet den Hyperbelsinuswert des Arguments  
@@ -974,7 +973,7 @@ inline float sinhf(float _X) restrict(amp);
  Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt den hyperbolischen Sinus-Wert des Arguments zurück  
+ Gibt den hyperbelsinuswert des Arguments zurück  
   
 ##  <a name="sqrt"></a> sqrt  
  Berechnet den Squre Stamm des Arguments  
@@ -1072,7 +1071,7 @@ inline float trunc(float _X) restrict(amp);
  Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt die ganze Zahl-Komponente des Arguments zurück  
+ Gibt den ganzzahligen des Arguments zurück  
   
 ##  <a name="truncf"></a>truncf  
  Schneidet das Argument der ganzzahligen Komponente ab  
@@ -1086,11 +1085,10 @@ inline float truncf(float _X) restrict(amp);
  Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt die ganze Zahl-Komponente des Arguments zurück  
+ Gibt den ganzzahligen des Arguments zurück  
 
 ## <a name="requirements"></a>Anforderungen
 **Header:** amp_math.h **Namespace:** Concurrency:: fast_math
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency::fast_math Namespace](concurrency-fast-math-namespace.md)
-

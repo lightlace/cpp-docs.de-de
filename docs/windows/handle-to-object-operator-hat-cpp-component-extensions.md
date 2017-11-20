@@ -1,55 +1,54 @@
 ---
-title: "Handle f&#252;r Objekt (^) (Komponentenerweiterungen f&#252;r C++)"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "^-Handle für Objekt [C++]"
+title: "Handle für Objekt-Operator (^) (Komponentenerweiterungen für C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: ^ handle to object [C++]
 ms.assetid: 70c411e6-be57-4468-a944-6ea7be89f392
-caps.latest.revision: 26
-caps.handback.revision: "24"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "26"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 85adbf7c14f0d610cea4085169b945b55d6b5ab9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Handle f&#252;r Objekt (^) (Komponentenerweiterungen f&#252;r C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Der *Handledeklarator* \(`^`\) modifiziert den [Typbezeichner](../cpp/overview-of-declarators.md) so, dass das deklarierte Objekt automatisch gelöscht wird, wenn das System feststellt, dass das Objekt nicht mehr zugänglich ist.  
+# <a name="handle-to-object-operator---c-component-extensions"></a>Handle für Objekt (^) (Komponentenerweiterungen für C++)
+Die *handledeklarator* (`^`, Aussprache "hat"), modifiziert den [Spezifizierer](../cpp/overview-of-declarators.md) bedeutet, dass das deklarierte Objekt automatisch gelöscht werden soll, wenn das System feststellt, dass das Objekt ist nicht mehr zugegriffen werden kann.  
   
-## Zugreifen auf das deklarierte Objekt  
- Eine Variable, die mit dem Handledeklarator deklariert wird, verhält sich wie ein Zeiger auf das Objekt.  Allerdings verweist die Variable auf das gesamte Objekt, kann also nicht auf einen Member des Objekts verweisen, und unterstützt keine Zeigerarithmetik.  Verwenden Sie den Dereferenzierungsoperator \(`*`\), um auf das Objekt zuzugreifen, und den Pfeil\-Memberzugriffsoperator \(`->`\), um auf einen Member des Objekts zuzugreifen.  
+## <a name="accessing-the-declared-object"></a>Zugreifen auf das deklarierte Objekt  
+ Eine Variable, die mit dem Handledeklarator deklariert wird, verhält sich wie ein Zeiger auf das Objekt. Allerdings verweist die Variable auf das gesamte Objekt, kann also nicht auf einen Member des Objekts verweisen, und unterstützt keine Zeigerarithmetik. Verwenden Sie den Dereferenzierungsoperator (`*`), um auf das Objekt zuzugreifen, und den Pfeil-Memberzugriffsoperator (`->`), um auf einen Member des Objekts zuzugreifen.  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- Der Compiler verwendet den Mechanismus der COM\-*Verweiszählung*, um zu bestimmen, wann das Objekt nicht mehr verwendet wird und gelöscht werden kann.  Dies ist möglich, da es sich bei einem Objekt, das von einer Windows Runtime\-Schnittstelle abgeleitet wird, um ein COM\-Objekt handelt.  Der Verweiszähler wird inkrementiert, wenn das Objekt erstellt oder kopiert wird, und dekrementiert, wenn das Objekt auf NULL festgelegt wird oder den gültigen Bereichs verlässt.  Wenn der Verweiszähler den Wert 0 erreicht, wird das Objekt automatisch und sofort gelöscht.  
+## <a name="windows-runtime"></a>Windows-Runtime  
+ Der Compiler verwendet den COM *verweiszählung* Mechanismus, um zu bestimmen, ob das Objekt nicht mehr verwendet wird und gelöscht werden kann. Dies ist möglich, da es sich bei einem Objekt, das von einer Windows Runtime-Schnittstelle abgeleitet wird, um ein COM-Objekt handelt. Der Verweiszähler wird inkrementiert, wenn das Objekt erstellt oder kopiert wird, und dekrementiert, wenn das Objekt auf NULL festgelegt wird oder den gültigen Bereichs verlässt. Wenn der Verweiszähler den Wert 0 erreicht, wird das Objekt automatisch und sofort gelöscht.  
   
- Der Vorteil des Handledeklarators ist, dass Sie in COM den Verweiszählerwert für ein Objekt nicht mehr explizit verwalten müssen, was ein langwieriger und fehleranfälliger Prozess ist.  Dabei müssen Sie alle AddRef\(\)\- bzw. Release\(\)\-Methoden des Objekts aufrufen, um den Verweiszähler zu inkrementieren bzw. zu dekrementieren.  Wenn Sie dagegen ein Objekt mit dem Handledeklarator deklarieren, generiert der Visual C\+\+\-Compiler Code, der den Verweiszähler automatisch anpasst.  
+ Der Vorteil des Handledeklarators ist, dass Sie in COM den Verweiszählerwert für ein Objekt nicht mehr explizit verwalten müssen, was ein langwieriger und fehleranfälliger Prozess ist. Dabei müssen Sie alle AddRef()- bzw. Release()-Methoden des Objekts aufrufen, um den Verweiszähler zu inkrementieren bzw. zu dekrementieren. Wenn Sie dagegen ein Objekt mit dem Handledeklarator deklarieren, generiert der Visual C++-Compiler Code, der den Verweiszähler automatisch anpasst.  
   
- Weitere Informationen über die Instanziierung eines Objekts finden Sie unter [ref new](../windows/ref-new-gcnew-cpp-component-extensions.md).  
+ Informationen zum Instanziieren eines Objekts finden Sie unter [Ref neue](../windows/ref-new-gcnew-cpp-component-extensions.md).  
   
-## Voraussetzungen  
- Compileroption: **\/ZW**  
+## <a name="requirements"></a>Anforderungen  
+ Compileroption: **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- Das System verwendet den CLR\-*Garbage Collector*\-Mechanismus, um zu bestimmen, wann das Objekt nicht mehr verwendet wird und gelöscht werden kann.  Die Common Language Runtime verwaltet einen Heap, auf dem sie Objekten Arbeitsspeicher zuordnet, und verwendet im Programm verwaltete Verweise \(Variablen\), die den Speicherort von Objekten auf dem Heap angeben.  Wenn ein Objekt nicht mehr verwendet wird, wird der Arbeitsspeicher freigegeben, den das Objekt auf dem Heap belegt.  In regelmäßigen Abständen komprimiert der Garbage Collector den Heap, damit der freigegebene Arbeitsspeicher optimal verwendet werden kann.  Das Komprimieren des Heaps kann Objekte auf dem Heap verschieben, wodurch die von den verwalteten Verweisen bezeichneten Speicherorte ungültig werden.  Deshalb berücksichtigt der Garbage Collector die Positionen in allen verwalteten Verweisen und aktualisiert sie automatisch, damit sie weiterhin die aktuellen Positionen der Objekte auf dem Heap angeben.  
+## <a name="common-language-runtime"></a>Common Language Runtime 
+ Das System verwendet die CLR *Garbage Collector* Mechanismus, um zu bestimmen, ob das Objekt nicht mehr verwendet wird und gelöscht werden kann. Die Common Language Runtime verwaltet einen Heap, auf dem sie Objekten Arbeitsspeicher zuordnet, und verwendet im Programm verwaltete Verweise (Variablen), die den Speicherort von Objekten auf dem Heap angeben. Wenn ein Objekt nicht mehr verwendet wird, wird der Arbeitsspeicher freigegeben, den das Objekt auf dem Heap belegt. In regelmäßigen Abständen komprimiert der Garbage Collector den Heap, damit der freigegebene Arbeitsspeicher optimal verwendet werden kann. Das Komprimieren des Heaps kann Objekte auf dem Heap verschieben, wodurch die von den verwalteten Verweisen bezeichneten Speicherorte ungültig werden. Deshalb berücksichtigt der Garbage Collector die Positionen in allen verwalteten Verweisen und aktualisiert sie automatisch, damit sie weiterhin die aktuellen Positionen der Objekte auf dem Heap angeben.  
   
- Weil aber systemeigene C\+\+\-Zeiger \(`*`\) und Verweise \(`&`\) keine verwalteten Verweise sind, kann der Garbage Collector die Adressen, auf die sie zeigen, nicht automatisch aktualisieren.  Zur Umgehung dieses Problems verwenden Sie den Handledeklarator, um für eine Variable festzulegen, dass sie vom Garbage Collector verwaltet und automatisch aktualisiert werden soll.  
+ Weil aber systemeigene C++-Zeiger (`*`) und Verweise (`&`) keine verwalteten Verweise sind, kann der Garbage Collector die Adressen, auf die sie zeigen, nicht automatisch aktualisieren. Zur Umgehung dieses Problems verwenden Sie den Handledeklarator, um für eine Variable festzulegen, dass sie vom Garbage Collector verwaltet und automatisch aktualisiert werden soll.  
   
- In Visual C\+\+ 2002 und Visual C\+\+ 2003 wurde `__gc *` verwendet, um ein Objekt auf dem verwalteten Heap zu deklarieren.  `^` ersetzt `__gc *` in der neuen Syntax.  
+ In Visual C++ 2002 und Visual C++ 2003 wurde `__gc *` verwendet, um ein Objekt auf dem verwalteten Heap zu deklarieren.  `^` ersetzt `__gc *` in der neuen Syntax.  
   
- Weitere Informationen finden Sie unter [Gewusst wie: Deklarieren von Handles in systemeigenen Typen](../dotnet/how-to-declare-handles-in-native-types.md).  
+ Weitere Informationen finden Sie unter [wie: Deklarieren Sie in systemeigenen Typen behandelt](../dotnet/how-to-declare-handles-in-native-types.md).  
   
-### Beispiele  
+### <a name="examples"></a>Beispiele  
  **Beispiel**  
   
- Dieses Beispiel zeigt, wie eine Instanz eines Referenztyps auf dem verwalteten Heap erstellt wird.  In diesem Beispiel wird außerdem gezeigt, dass Sie ein Handle mit einem anderen initialisieren können, wodurch Sie zwei Verweise auf dasselbe Objekt auf dem verwaltetem Heap mit Garbage Collection erhalten.  Beachten Sie, dass die Zuweisung von [nullptr](../windows/nullptr-cpp-component-extensions.md) zu einem Handle das Objekt nicht für die Garbage Collection markiert.  
+ Dieses Beispiel zeigt, wie eine Instanz eines Referenztyps auf dem verwalteten Heap erstellt wird.  In diesem Beispiel wird außerdem gezeigt, dass Sie ein Handle mit einem anderen initialisieren können, wodurch Sie zwei Verweise auf dasselbe Objekt auf dem verwaltetem Heap mit Garbage Collection erhalten. Beachten Sie, Zuweisen von [Nullptr](../windows/nullptr-cpp-component-extensions.md) an ein Handle nicht markiert, das Objekt für die Garbagecollection.  
   
 ```  
 // mcppv2_handle.cpp  
@@ -78,10 +77,14 @@ int main() {
   
  **Ausgabe**  
   
- **1**   
-**2** **Beispiel**  
+```Output  
+1  
+2  
+```  
   
- Das folgende Beispiel zeigt, wie ein Handle für ein Objekt auf dem verwalteten Heap deklariert wird, wobei der Objekttyp ein geschachtelter Werttyp ist.  Das Beispiel zeigt auch, wie Sie den Werttyp des geschachtelten Objekts abrufen.  
+ **Beispiel**  
+  
+ Das folgende Beispiel zeigt, wie ein Handle für ein Objekt auf dem verwalteten Heap deklariert wird, wobei der Objekttyp ein geschachtelter Werttyp ist. Das Beispiel zeigt auch, wie Sie den Werttyp des geschachtelten Objekts abrufen.  
   
 ```  
 // mcppv2_handle_2.cpp  
@@ -108,10 +111,14 @@ int main() {
   
  **Ausgabe**  
   
-  **Not a boxed int**  
- **100** **Beispiel**  
+```Output  
+Not a boxed int  
+100  
+```  
   
- Dieses Beispiel zeigt, dass das allgemeine C\+\+\-Idiom zur Anwendung eines void\*\-Zeigers für den Verweis auf ein beliebiges Objekt durch Object^ ersetzt wird, das ein Handle zu einer beliebigen Verweisklasse enthalten kann.  Es zeigt auch, dass sämtliche Typen, auch Arrays und Delegaten, in ein Objekthandle konvertiert werden können.  
+ **Beispiel**  
+  
+ Dieses Beispiel zeigt, dass das allgemeine C++-Idiom zur Anwendung eines void*-Zeigers für den Verweis auf ein beliebiges Objekt durch Object^ ersetzt wird, das ein Handle zu einer beliebigen Verweisklasse enthalten kann. Es zeigt auch, dass sämtliche Typen, auch Arrays und Delegaten, in ein Objekthandle konvertiert werden können.  
   
 ```  
 // mcppv2_handle_3.cpp  
@@ -150,9 +157,15 @@ int main() {
   
  **Ausgabe**  
   
-  **Type is System.Collections.ArrayList**  
- **Type is System.Int32**  
- **Type is MyDel** **Beispiel**  
+```Output  
+Type is System.Collections.ArrayList  
+  
+Type is System.Int32  
+  
+Type is MyDel  
+```  
+  
+ **Beispiel**  
   
  Dieses Beispiel zeigt, dass ein Handle dereferenzierbar ist, und dass auf einen Member mit einem dereferenzierten Handle zugegriffen werden kann.  
   
@@ -196,10 +209,15 @@ int main() {
   
  **Ausgabe**  
   
-  **Array value: 7**  
- **Cannot access array element 11, size is 10** **Beispiel**  
+```Output  
+Array value: 7  
   
- Dieses Beispiel zeigt, dass ein systemeigener Verweis \(`&`\) nicht an einen `int`\-Member eines verwalteten Typs binden kann, da `int` möglicherweise in dem von der Garbage Collection bearbeiteten Heap gespeichert wird und systemeigene Verweise nicht an Objektverschiebungen im verwalteten Heap angepasst werden.  Zur Behebung dieses Problems können Sie eine lokale Variable verwenden, oder ändern Sie `&` in `%`, um einen Nachverfolgungsverweis zu erhalten.  
+Cannot access array element 11, size is 10  
+```  
+  
+ **Beispiel**  
+  
+ Dieses Beispiel zeigt, dass ein systemeigener Verweis (`&`) nicht an einen `int`-Member eines verwalteten Typs binden kann, da `int` möglicherweise in dem von der Garbage Collection bearbeiteten Heap gespeichert wird und systemeigene Verweise nicht an Objektverschiebungen im verwalteten Heap angepasst werden. Zur Behebung dieses Problems können Sie eine lokale Variable verwenden, oder ändern Sie `&` in `%`, um einen Nachverfolgungsverweis zu erhalten.  
   
 ```  
 // mcppv2_handle_5.cpp  
@@ -221,9 +239,9 @@ int main() {
 }  
 ```  
   
-### Voraussetzungen  
- Compileroption: **\/clr**  
+### <a name="requirements"></a>Anforderungen  
+ Compileroption: **/clr**  
   
-## Siehe auch  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)   
- [Tracking Reference Operator](../windows/tracking-reference-operator-cpp-component-extensions.md)
+## <a name="see-also"></a>Siehe auch  
+ [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)   
+ [Nachverfolgungsverweisoperator](../windows/tracking-reference-operator-cpp-component-extensions.md)

@@ -1,38 +1,38 @@
 ---
-title: "__emul, __emulu | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__emulu_cpp"
-  - "__emul"
-  - "__emul_cpp"
-  - "__emulu"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__emul (systemintern)"
-  - "__emulu (systemintern)"
+title: __emul __emulu | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __emulu_cpp
+- __emul
+- __emul_cpp
+- __emulu
+dev_langs: C++
+helpviewer_keywords:
+- __emul intrinsic
+- __emulu intrinsic
 ms.assetid: 79545236-cca2-40b8-a4e1-8abce9b26311
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d41c645ee08dab91eeee66d1f96cb9b8aff8178a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# __emul, __emulu
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft\-spezifisch**  
+# <a name="emul-emulu"></a>__emul, __emulu
+**Microsoft-spezifisch**  
   
- Führt Multiplikationen aus, die überschreiten, was eine 32\-Bit\-Ganzzahl enthalten kann.  
+ Führt Multiplikationen, die "Überlauf", was eine ganze 32-Bit-Zahl aufnehmen kann.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 __int64 __emul(  
@@ -45,31 +45,31 @@ unsigned __int64 __emulu(
 );  
 ```  
   
-#### Parameter  
- \[in\] `a`  
- Der erste ganzzahlige Operanden der Multiplikation.  
+#### <a name="parameters"></a>Parameter  
+ [in] `a`  
+ Der erste Operand vom Typ ganze Zahl der Multiplikation.  
   
- \[in\] `b`  
- Der zweite ganzzahlige Operanden der Multiplikation.  
+ [in] `b`  
+ Der zweite Operand vom Typ ganze Zahl der Multiplikation.  
   
-## Rückgabewert  
+## <a name="return-value"></a>Rückgabewert  
  Das Ergebnis der Multiplikation.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Intrinsisch|Architektur|  
-|-----------------|-----------------|  
+|Systemintern|Architektur|  
+|---------------|------------------|  
 |`__emul`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`__emulu`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Headerdatei** \<intrin.h\>  
+ **Headerdatei** \<intrin.h >  
   
-## Hinweise  
- `__emul` akzeptiert zwei 32\-Bit\-Werte mit Vorzeichen und gibt das Ergebnis der Multiplikation als 64\-Bit\-Ganzzahl mit Vorzeichen zurück.  
+## <a name="remarks"></a>Hinweise  
+ `__emul`nimmt zwei 32-Bit-Werte mit Vorzeichen und gibt das Ergebnis der Multiplikation als 64-Bit-Ganzzahlwert mit Vorzeichen zurück.  
   
- `__emulu` akzeptiert zwei Wert einer 32\-Bit\-Ganzzahl ohne Vorzeichen und gibt das Ergebnis der Multiplikation als Wert einer 64\-Bit\-Ganzzahl ohne Vorzeichen zurück.  
+ `__emulu`zwei 32-Bit-Ganzzahl ohne Vorzeichen Werte und gibt das Ergebnis der Multiplikation als ein 64-Bit-Ganzzahlwert ohne Vorzeichen zurück.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // emul.cpp  
@@ -101,14 +101,14 @@ int main()
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Ausgabe  
   
 ```  
 -268435456 * 2 = -536870912  
 4294967295 * 251658240 = 1080863910317260800  
 ```  
   
-### Microsoft ENDES bestimmten  
+**Ende Microsoft-spezifisch**  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

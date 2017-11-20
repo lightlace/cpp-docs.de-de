@@ -1,26 +1,26 @@
 ---
-title: "A.25   Examples of the copyprivate Data Attribute Clause"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "A.25 Beispiele für die Copyprivate-Klausel Data-Attribut | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 7b1cb6a5-5691-4b95-b3ac-d7543ede6405
-caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d141ec66aa7ed0bac53c8242a87d08e092272eaa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# A.25   Examples of the copyprivate Data Attribute Clause
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**Beispiel 1:** die `copyprivate` Clause \([2.7.2.8 Abschnitt](../../parallel/openmp/2-7-2-8-copyprivate.md) auf Seite 32\) kann verwendet werden, um die Werte zu übertragen, die durch einen einzelnen Thread direkt für alle Instanzen des privaten Variablen in anderen Threads abgerufen werden.  
+# <a name="a25---examples-of-the-copyprivate-data-attribute-clause"></a>A.25   Beispiele der copyprivate-Datenattributklausel
+**Beispiel 1:** der `copyprivate` -Klausel ([Abschnitt 2.7.2.8](../../parallel/openmp/2-7-2-8-copyprivate.md) auf der Seite "32") kann verwendet werden, um Werte über einen einzelnen Thread direkt für alle Instanzen der in anderen Threads privaten Variablen abgerufen.  
   
 ```  
 float x, y;  
@@ -40,9 +40,9 @@ void init( )
 }  
 ```  
   
- Wenn Routine\-init aus einem seriellen Bereich aufgerufen wird, ist das Verhalten nicht durch das Vorhandensein der Direktiven betroffen.  Nach dem Aufruf der Routine *get\_values* durch einen Thread ausgeführt wurde, bewirkt, dass kein Thread bis das Konstrukt private Objekte, die von *a*, *b*, *x*und *y* festgelegt werden, in allen Threads sind mit dem Wert lesen definiert geworden.  
+ Wenn Sie routinemäßige *Init* wird aufgerufen, aus einer seriellen Region wird das Verhalten nicht durch das Vorhandensein der Direktiven für die beeinflusst. Nach dem Aufruf der *Get_values* Routine wurde von einem Thread ausgeführt, der kein Thread das Konstrukt verlässt, bis die privaten Objekte, die vom angegebenen *eine*, *b*, *x*, und *y* in allen Threads haben mit den Werten lesen definiert werden.  
   
- **Beispiel 2:** im Gegensatz zum vorherigen Beispiel wird davon ausgegangen, dass das Lesen von einem bestimmten Thread ausgeführt werden muss, lautet der Masterthread.  In diesem Fall kann die `copyprivate`\-Klausel nicht verwendet werden, um die Übertragung direkt auszuführen, aber sie kann verwendet werden, um den Zugriff auf einen temporären freigegebenen Objekt zu gewähren.  
+ **Beispiel 2:** im Gegensatz zum vorherigen Beispiel nehmen Sie an der Lesevorgang muss von einem bestimmten Thread, z. B. das master-Thread ausgeführt werden. In diesem Fall die `copyprivate` Klausel kann nicht verwendet werden, um die Übertragung direkt zu tun, aber es kann für den Zugriff auf ein freigegebenes temporäre Objekt verwendet werden.  
   
 ```  
 float read_next( )   
@@ -73,7 +73,7 @@ float read_next( )
 }  
 ```  
   
- **Beispiel 3:** wird davon ausgegangen, dass die Anzahl der Sperren von Objekten, die innerhalb eines parallelen Bereichs benötigt werden, nicht vor dem Eingeben sie leicht ermittelt werden kann.  Die `copyprivate`\-Klausel kann verwendet werden, um den Zugriff auf Objekte die gemeinsame Sperre zu ermöglichen, die innerhalb von parallelen Bereichs zugeordnet sind.  
+ **Beispiel 3:** nehmen wir an, dass die Anzahl der Sperrobjekte, die erforderlich sind, innerhalb eines parallelen Bereichs problemlos bestimmt werden kann, bevor sie die Eingabe. Die `copyprivate` -Klausel kann verwendet werden, um den Zugriff auf freigegebene Sperrobjekte bereitzustellen, die innerhalb dieser parallelen Bereichs zugeordnet werden.  
   
 ```  
 #include <omp.h>  

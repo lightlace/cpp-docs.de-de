@@ -1,56 +1,56 @@
 ---
-title: "/DEFAULTLIB (Standardbibliothek festlegen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.DefaultLibraries"
-  - "/defaultlib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/DEFAULTLIB (Linkeroption)"
-  - "DEFAULTLIB (Linkeroption)"
-  - "-DEFAULTLIB (Linkeroption)"
-  - "Bibliotheken, Hinzufügen zur Liste der"
+title: -DEFAULTLIB (Standardbibliothek festlegen) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.DefaultLibraries
+- /defaultlib
+dev_langs: C++
+helpviewer_keywords:
+- -DEFAULTLIB linker option
+- DEFAULTLIB linker option
+- /DEFAULTLIB linker option
+- libraries, adding to list of
 ms.assetid: 6af7ff49-c170-4a13-97e2-2b9ae2de20c9
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0f130dd9f445f51f68f24946bc9d541e95581b9f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# /DEFAULTLIB (Standardbibliothek festlegen)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="defaultlib-specify-default-library"></a>/DEFAULTLIB (Standardbibliothek festlegen)
 ```  
 /DEFAULTLIB:library  
 ```  
   
-## Hinweise  
- Hierbei ist:  
+## <a name="remarks"></a>Hinweise  
+ Dabei gilt:  
   
- *library*  
- der Name einer Bibliothek, die beim Auflösen externer Verweise gesucht wird.  
+ *Bibliothek*  
+ Der Name einer Bibliothek beim Auflösen externer Verweise durchsucht.  
   
-## Hinweise  
- Die Option **\/DEFAULTLIB** fügt eine *Bibliothek* zur Liste der Bibliotheken hinzu, die **LINK** beim Auflösen von Verweisen durchsucht.  Eine mit **\/DEFAULTLIB** angegebene Bibliothek wird nach den in der Befehlszeile genannten Bibliotheken und vor den in OBJ\-Dateien genannten Standardbibliotheken durchsucht.  
+## <a name="remarks"></a>Hinweise  
+ Die Option Option Fügt eine *Bibliothek* zur Liste der Bibliotheken, mit dem LINK, beim Auflösen von Verweisen gesucht. Eine Bibliothek mit der Option angegeben, wird nach Bibliotheken in der Befehlszeile und vor Standardbibliotheken, die mit dem Namen in der OBJ-Dateien durchsucht.  
   
- Die Option [\/NODEFAULTLIB \(Bibliotheken ignorieren\)](../../build/reference/nodefaultlib-ignore-libraries.md) überschreibt die Option **\/DEFAULTLIB**:*Bibliothek*.  Die Option [\/NODEFAULTLIB \(Bibliotheken ignorieren\)](../../build/reference/nodefaultlib-ignore-libraries.md) überschreibt **\/DEFAULTLIB**:*Bibliothek*, wenn in beiden Optionen derselbe *Bibliothek*sname verwendet wird.  
+ Die [alle Standardbibliotheken ignorieren](../../build/reference/nodefaultlib-ignore-libraries.md) (/ NODEFAULTLIB) überschreibt Option:*Bibliothek*. Die [Bibliotheken ignorieren](../../build/reference/nodefaultlib-ignore-libraries.md) (/ NODEFAULTLIB:*Bibliothek*) überschreibt Option:*Bibliothek* Wenn identisch *Bibliothek* Name ist in beiden angegeben.  
   
-### So legen Sie diese Linkeroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
   
--   Die Linkeroption ist in der Visual Studio\-Entwicklungsumgebung nicht verfügbar.  Wenn Sie eine Bibliothek in der Verknüpfungsphase einfügen möchten, müssen Sie auf der Eigenschaftenseite **Eingabe** die Eigenschaft **Zusätzliche Abhängigkeiten** verwenden.  
+-   Diese Linkeroption ist nicht in der Visual Studio-Entwicklungsumgebung verfügbar. Um eine Bibliothek der Linkphase hinzuzufügen, verwenden Sie die **zusätzliche Abhängigkeiten** Eigenschaft aus der **Eingabe** Eigenschaftenseite.  
   
-### So legen Sie diese Linkeroption programmgesteuert fest  
+### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
   
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions*>.  
+-   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
  [Linkeroptionen](../../build/reference/linker-options.md)

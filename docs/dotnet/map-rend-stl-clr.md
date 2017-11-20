@@ -1,41 +1,39 @@
 ---
-title: "map::rend (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::rend"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rend-Member [STL/CLR]"
+title: 'Map:: rend (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::rend
+dev_langs: C++
+helpviewer_keywords: rend member [STL/CLR]
 ms.assetid: 132d9a82-f76a-4f3e-8d21-26de17e1245f
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 642e5aa236018094eedaf46c3a8d0a6e7578fe95
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# map::rend (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="maprend-stlclr"></a>map::rend (STL/CLR)
 Legt das Ende der umgekehrten kontrollierten Sequenz fest.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 reverse_iterator rend();  
 ```  
   
-## Hinweise  
- Die Memberfunktion gibt einem umgekehrten Iterator zurück, der nur über den Anfang der Sequenz gesteuerten hinaus zeigt.  Demzufolge wird der `end` der umgekehrten Sequenz bestimmt.  Sie können damit einen Iterator abrufen, der das `current` Ende der kontrollierten Sequenz in umgekehrter Reihenfolge bestimmt; der Zustand kann sich jedoch ändern, sobald sich die Länge der kontrollierten Sequenz ändert.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt einem reverse-Iterator, verweist direkt hinter dem Anfang der kontrollierten Sequenz zurück. Daher kennzeichnet es die `end` der umgekehrten Sequenz. Es mit der einen Iterator abrufen, bestimmt die `current` Ende der kontrollierten Sequenz in umgekehrter Reihenfolge, aber dessen Status kann ändern, wenn die Länge der gesteuerten Sequenz geändert wird.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_map_rend.cpp   
@@ -69,16 +67,19 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[bc 3\]**  
-**\*\- \-\-rend\(\) \= \[b 2\]**  
-**\*\-\-rend\(\) \= \[1\]**   
-## Anforderungen  
- **Header:** \<cliext\/Zuordnung\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+*-- --rend() = [b 2]  
+*--rend() = [a 1]  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Map >  
   
-## Siehe auch  
- [map](../dotnet/map-stl-clr.md)   
- [map::begin](../dotnet/map-begin-stl-clr.md)   
- [map::end](../dotnet/map-end-stl-clr.md)   
- [map::rbegin](../dotnet/map-rbegin-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Karte (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [Map:: begin (STL/CLR)](../dotnet/map-begin-stl-clr.md)   
+ [Map:: End (STL/CLR)](../dotnet/map-end-stl-clr.md)   
+ [map::rbegin (STL/CLR)](../dotnet/map-rbegin-stl-clr.md)

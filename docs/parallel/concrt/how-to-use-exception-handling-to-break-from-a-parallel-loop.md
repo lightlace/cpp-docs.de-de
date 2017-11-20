@@ -1,78 +1,84 @@
 ---
-title: "Gewusst wie: Verwenden der Ausnahmebehandlung zum Verlassen einer Parallel-Schleife | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Suchalgorithmus, Schreiben [Concurrency Runtime]"
-  - "Schreiben eines Suchalgorithmus [Concurrency Runtime]"
+title: 'Vorgehensweise: Verwenden der Ausnahmebehandlung zum Verlassen einer Parallel-Schleife | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- search algorithm, writing [Concurrency Runtime]
+- writing a search algorithm [Concurrency Runtime]
 ms.assetid: 16d7278c-2d10-4014-9f58-f1899e719ff9
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1b75c1779ae4f660acb925b07e857c1883f43fe8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Gewusst wie: Verwenden der Ausnahmebehandlung zum Verlassen einer Parallel-Schleife
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="how-to-use-exception-handling-to-break-from-a-parallel-loop"></a>Gewusst wie: Verwenden der Ausnahmebehandlung zum Verlassen einer Parallel-Schleife
+In diesem Thema wird gezeigt, wie ein Suchalgorithmus für eine einfache Baumstruktur geschrieben wird.  
+  
+ Das Thema [Abbruch](cancellation-in-the-ppl.md) erläutert die Rolle des Abbruchs in der Parallel Patterns Library. Die Verwendung der Ausnahmebehandlung ist eine weniger effiziente Möglichkeit zum Abbrechen paralleler Aufgaben als die Verwendung der [task_group](reference/task-group-class.md#cancel) und [Concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel) Methoden. Ein Szenario, in denen die Verwendung der Ausnahmebehandlung abbrechen Aufgaben eignet sich, ist jedoch, wenn Sie in einer Bibliothek eines Drittanbieters, die Aufgaben oder parallelen Algorithmen verwendet aufrufen, bietet jedoch eine `task_group` oder `structured_task_group` Objekt auf "Abbrechen".  
 
-In diesem Thema wird erläutert, wie ein Suchalgorithmus für eine einfache Baumstruktur geschrieben wird.  
   
- Das Thema [Abbruch](../../parallel/concrt/cancellation-in-the-ppl.md) erläutert die Rolle des Abbruchs in der Parallel Patterns Library.  Die Verwendung der Ausnahmebehandlung ist weniger effizient, parallele Arbeitsvorgänge als die Verwendung von den Methoden [concurrency::task\_group::cancel](../Topic/task_group::cancel%20Method.md) und [concurrency::structured\_task\_group::cancel](../Topic/structured_task_group::cancel%20Method.md).  Die Verwendung der Ausnahmebehandlung zum Abbrechen eines Arbeitsvorgangs ist jedoch angemessen, wenn Sie die Bibliothek eines Drittanbieters mit Aufgaben oder parallelen Algorithmen aufrufen, diese jedoch kein `task_group`\- oder `structured_task_group`\-Objekt zum Abbrechen bereitstellt.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt eine grundlegende `tree` Typ, der einem Datenelement und eine Liste mit untergeordneten Knoten enthält. Der folgende Abschnitt zeigt den Hauptteil der `for_all` -Methode, der rekursiv eine Arbeitsfunktion für jeden untergeordneten Knoten ausführt.  
   
-## Beispiel  
- Im folgenden Beispiel wird ein grundlegender `tree`\-Typ dargestellt, der ein Datenelement und eine Liste untergeordneter Knoten enthält.  Der folgende Abschnitt zeigt den Text der `for_all`\-Methode an, der rekursiv eine Arbeitsfunktion für jeden untergeordneten Knoten ausführt.  
+ [!code-cpp[concrt-task-tree-search#2](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_1.cpp)]  
   
- [!CODE [concrt-task-tree-search#2](../CodeSnippet/VS_Snippets_ConcRT/concrt-task-tree-search#2)]  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt die `for_all` Methode. Er verwendet die [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) -Algorithmus eine Arbeitsfunktion auf jedem Knoten der Struktur parallel ausgeführt.  
   
-## Beispiel  
- Im folgenden Beispiel wird die `for_all`\-Methode dargestellt.  Es verwendet den [concurrency::parallel\_for\_each](../Topic/parallel_for_each%20Function.md) \- Algorithmus, um eine Arbeitsfunktion für jeden Knoten in der Baumstruktur parallel auszuführen.  
+ [!code-cpp[concrt-task-tree-search#1](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_2.cpp)]  
   
- [!CODE [concrt-task-tree-search#1](../CodeSnippet/VS_Snippets_ConcRT/concrt-task-tree-search#1)]  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt die `search_for_value`-Funktion, die nach einem Wert im bereitgestellten `tree`-Objekt sucht. Diese Funktion übergibt an die `for_all` -Methode eine Arbeitsfunktion, die ausgelöst wird, wenn einen Strukturknoten gefunden wird, die den angegebenen Wert enthält.  
   
-## Beispiel  
- Im folgenden Beispiel wird die `search_for_value`\-Funktion veranschaulicht, die nach einem Wert im bereitgestellten `tree`\-Objekt sucht.  Diese Funktion übergibt eine Arbeitsfunktion an die `for_all`\-Methode; diese Arbeitsfunktion wird ausgelöst, wenn sie auf einen Strukturknoten trifft, der den bereitgestellten Wert enthält.  
+ Vorausgesetzt, dass die `tree` Klasse wird von einer Bibliothek eines Drittanbieters bereitgestellt und können nicht geändert. In diesem Fall die Verwendung der Ausnahmebehandlung ist sinnvoll, da der `for_all` Methode bietet eine `task_group` oder `structured_task_group` Objekt an den Aufrufer. Daher ist die Arbeitsfunktion kann nicht direkt auf die übergeordnete Aufgabengruppe abgebrochen wird.  
   
- Angenommen, die `tree`\-Klasse wird von der Bibliothek eines Drittanbieters bereitgestellt und kann nicht geändert werden.  Die Verwendung der Ausnahmebehandlung ist für dieses Beispiel geeignet, da die `for_all`\-Methode dem Aufrufer kein `task_group`\-Objekt oder `structured_task_group`\-Objekt bereitstellt.  Daher kann die Arbeitsfunktion nicht direkt ihre übergeordnete Aufgabengruppe abbrechen.  
+ Wenn die Arbeitsfunktion, die Sie, an einer Aufgabengruppe bereitstellen eine Ausnahme auslöst, wird die Common Language Runtime alle Aufgaben, die in der Aufgabengruppe (sowie alle untergeordneten Aufgabengruppen) beendet und alle, die noch nicht gestarteten Aufgaben verworfen. Die `search_for_value` Funktion verwendet eine `try` - `catch` Block, um die Ausnahme zu erfassen und das Ergebnis in der Konsole auszugeben.  
   
- Wenn die Arbeitsfunktion, die Sie für eine Aufgabengruppe bereitstellen, eine Ausnahme auslöst, beendet die Laufzeit alle Aufgaben in der Aufgabengruppe \(einschließlich aller untergeordneten Aufgabengruppen\) und verwirft alle Aufgaben, die noch nicht gestartet wurden.  Die `search_for_value`\-Funktion verwendet einen `try`\-`catch`\-Block, um die Ausnahme zu erfassen und das Ergebnis in der Konsole auszugeben.  
+ [!code-cpp[concrt-task-tree-search#3](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_3.cpp)]  
   
- [!CODE [concrt-task-tree-search#3](../CodeSnippet/VS_Snippets_ConcRT/concrt-task-tree-search#3)]  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel erstellt eine `tree` -Objekt und mehrere Werte gleichzeitig sucht. Die `build_tree` Funktion wird weiter unten in diesem Thema gezeigt.  
   
-## Beispiel  
- Im folgenden Beispiel wird ein `tree`\-Objekt erstellt und darin parallel nach mehreren Werten gesucht.  Die `build_tree`\-Funktion wird weiter unten in diesem Thema dargestellt.  
+ [!code-cpp[concrt-task-tree-search#4](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_4.cpp)]  
   
- [!CODE [concrt-task-tree-search#4](../CodeSnippet/VS_Snippets_ConcRT/concrt-task-tree-search#4)]  
+ Dieses Beispiel verwendet die [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) Algorithmus, parallel nach Werten gesucht werden soll. Weitere Informationen zu diesem Algorithmus finden Sie unter [parallele Algorithmen](../../parallel/concrt/parallel-algorithms.md).  
   
- Dieses Beispiel verwendet den [concurrency::parallel\_invoke](../Topic/parallel_invoke%20Function.md), um für Algorithmus parallel nach Werten.  Weitere Informationen zu diesem Algorithmus finden Sie unter [Parallele Algorithmen](../../parallel/concrt/parallel-algorithms.md).  
+## <a name="example"></a>Beispiel  
+ Im folgende vollständige Beispiel mithilfe der Ausnahmebehandlung zum Suchen nach Werten in eine einfache Struktur.  
   
-## Beispiel  
- Im folgenden vollständigen Beispiel wird anhand der Ausnahmebehandlung nach Werten in einer einfachen Baumstruktur gesucht.  
-  
- [!CODE [concrt-task-tree-search#5](../CodeSnippet/VS_Snippets_ConcRT/concrt-task-tree-search#5)]  
+ [!code-cpp[concrt-task-tree-search#5](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_5.cpp)]  
   
  Dieses Beispiel erzeugt die folgende Beispielausgabe.  
   
-  **Starten Sie einen Knoten mit Wert 32614.**  
-**Starten Sie einen Knoten mit Wert 86131.**  
-**Hat keine Knoten mit Wert 17522.**   
-## Kompilieren des Codes  
- Kopieren Sie den Beispielcode und fügen Sie ihn in ein Visual Studio\-Projekt ein, oder fügen Sie ihn in eine Datei mit dem Namen `task-tree-search.cpp` ein, und dann folgenden Befehl in einem Visual Studio\-Eingabeaufforderung ausgeführt.  
+```Output  
+Found a node with value 32614.  
+Found a node with value 86131.  
+Did not find node with value 17522.  
+```  
   
- **cl.exe \/EHsc task\-tree\-search.cpp**  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
+ Kopieren Sie den Beispielcode und fügen Sie ihn in ein Visual Studio-Projekt, oder fügen Sie ihn in eine Datei mit dem Namen `task-tree-search.cpp` und dann den folgenden Befehl in eine Visual Studio-Eingabeaufforderungsfenster ausführen.  
   
-## Siehe auch  
- [Abbruch](../../parallel/concrt/cancellation-in-the-ppl.md)   
+ **CL.exe/EHsc / Task-Struktur-search.cpp**  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Abbruch in der PPL](cancellation-in-the-ppl.md)   
  [Ausnahmebehandlung](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)   
  [Aufgabenparallelität](../../parallel/concrt/task-parallelism-concurrency-runtime.md)   
  [Parallele Algorithmen](../../parallel/concrt/parallel-algorithms.md)   
- [task\_group\-Klasse](../Topic/task_group%20Class.md)   
- [structured\_task\_group\-Klasse](../../parallel/concrt/reference/structured-task-group-class.md)   
- [parallel\_for\_each\-Funktion](../Topic/parallel_for_each%20Function.md)
+ [Task_group-Klasse](reference/task-group-class.md)   
+ [Structured_task_group-Klasse](../../parallel/concrt/reference/structured-task-group-class.md)   
+ [Parallel_for_each-Funktion](reference/concurrency-namespace-functions.md#parallel_for_each)
+
+

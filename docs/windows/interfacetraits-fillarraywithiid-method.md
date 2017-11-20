@@ -1,32 +1,30 @@
 ---
-title: "InterfaceTraits::FillArrayWithIid-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::InterfaceTraits::FillArrayWithIid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "FillArrayWithIid-Methode"
+title: 'Interfacetraits:: Fillarraywithiid-Methode | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::InterfaceTraits::FillArrayWithIid
+dev_langs: C++
+helpviewer_keywords: FillArrayWithIid method
 ms.assetid: 73583177-adc9-4fcb-917d-fa7e6d07c990
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 014d47e650cf27f7e5a70ad63b0f6de21e5e5ccd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# InterfaceTraits::FillArrayWithIid-Methode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Unterstützt die WRL\-Infrastruktur und nicht beabsichtigt, direkt im Code verwendet werden.  
+# <a name="interfacetraitsfillarraywithiid-method"></a>InterfaceTraits::FillArrayWithIid-Methode
+Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 __forceinline static void FillArrayWithIid(  
@@ -36,25 +34,25 @@ __forceinline static void FillArrayWithIid(
   
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `index`  
- Zeiger auf ein Feld, das einen nullbasierten Indexwert enthält.  
+ Ein Zeiger auf ein Feld, das einen nullbasierter Indexwert enthält.  
   
  `iids`  
- Ein Array Schnittstellen\-IDs.  
+ Ein Array von Schnittstellen-IDs.  
   
-## Hinweise  
- Weist die Schnittstellen\-ID von `Base` z Arrayelement zu, das vom Indexargument angegeben wird.  
+## <a name="remarks"></a>Hinweise  
+ Weist die Schnittstellen-ID des `Base` auf das Arrayelement, das durch die Indexargument angegeben.  
   
- Umkehrung zum Namen dieser API, nur ein Arrayelement wird geändert; nicht das gesamte Array.  
+ Im Gegensatz zur den Namen dieser API wird nur ein Arrayelement geändert; nicht das gesamte Array.  
   
- Weitere Informationen zu `Base`, finden Sie den öffentlichen typedef\-Abschnitt in [InterfaceTraits\-Struktur](../windows/interfacetraits-structure.md).  
+ Weitere Informationen zu `Base`, finden Sie im Abschnitt Öffentliche Typedefs [InterfaceTraits-Struktur](../windows/interfacetraits-structure.md).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** implements.h  
   
- **Namespace:**  Microsoft::WRL::Details  
+ **Namespace:** Microsoft::WRL::Details  
   
-## Siehe auch  
- [InterfaceTraits\-Struktur](../windows/interfacetraits-structure.md)   
- [Microsoft::WRL::Details\-Namespace](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Siehe auch  
+ [InterfaceTraits-Struktur](../windows/interfacetraits-structure.md)   
+ [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

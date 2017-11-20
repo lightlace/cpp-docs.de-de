@@ -1,67 +1,67 @@
 ---
-title: "/MIDL (Optionen f&#252;r MIDL-Befehlszeile festlegen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/midl"
-  - "VC.Project.VCLinkerTool.MidlCommandFile"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/MIDL (Linkeroption)"
-  - "MIDL"
-  - "MIDL (Linkeroption)"
-  - "-MIDL (Linkeroption)"
-  - "MIDL, Befehlszeilenoptionen"
+title: "-MIDL (Optionen für MIDL-Befehlszeile festlegen) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /midl
+- VC.Project.VCLinkerTool.MidlCommandFile
+dev_langs: C++
+helpviewer_keywords:
+- -MIDL linker option
+- MIDL
+- /MIDL linker option
+- MIDL linker option
+- MIDL, command line options
 ms.assetid: 22dc259e-b34c-4ed3-a380-4beb734482c1
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 957d9679c57cd15162c5820ccd7dc41bdea0fa2d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# /MIDL (Optionen f&#252;r MIDL-Befehlszeile festlegen)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="midl-specify-midl-command-line-options"></a>/MIDL (Optionen für MIDL-Befehlszeile festlegen)
 ```  
 /MIDL:@file  
 ```  
   
-## Hinweise  
- Hierbei ist:  
+## <a name="remarks"></a>Hinweise  
+ Dabei gilt:  
   
  `file`  
- der Name der Datei, die die [MIDL\-Befehlszeilenoptionen](http://msdn.microsoft.com/library/windows/desktop/aa366839) enthält.  
+ Der Name der Datei, die mit [MIDL-Befehlszeilenoptionen](http://msdn.microsoft.com/library/windows/desktop/aa366839).  
   
-## Hinweise  
- Alle für die Konvertierung einer IDL\-Datei in eine TLB\-Datei notwendigen Optionen müssen in `file` angegeben sein; MIDL\-Befehlszeilenoptionen können in der Befehlszeile des Linkers nicht angegeben werden.  Falls **\/MIDL** nicht angegeben wurde, wird der MIDL\-Compiler mit nur einem IDL\-Dateinamen ohne weitere Optionen aufgerufen.  
+## <a name="remarks"></a>Hinweise  
+ Bei allen Optionen für die Konvertierung einer IDL-Datei in eine TLB-Datei müssen im erhalten `file`; MIDL-Befehlszeilenoptionen können nicht in der Linker-Befehlszeile angegeben werden. / MIDL nicht angegeben ist, wird die MIDL-Compiler mit nur die Namen der IDL-Datei und keine anderen Optionen aufgerufen werden.  
   
- Die Datei sollte pro Zeile eine MIDL\-Befehlszeilenoption enthalten.  
+ Die Datei muss es sich um eine MIDL-Befehlszeilenoption pro Zeile enthalten.  
   
-### So legen Sie diese Linkeroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Festlegen von Visual C\+\+\-Projekteigenschaften](../../ide/working-with-project-properties.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Klicken Sie auf den Ordner **Linker**.  
+2.  Klicken Sie auf die **Linker** Ordner.  
   
-3.  Klicken Sie auf die Eigenschaftenseite **Eingebettete IDL**.  
+3.  Klicken Sie auf die **eingebettete IDL** Eigenschaftenseite.  
   
-4.  Ändern Sie die Eigenschaft **MIDL\-Befehle**.  
+4.  Ändern der **MIDL-Befehle** Eigenschaft.  
   
-### So legen Sie diese Linkeroption programmgesteuert fest  
+### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
   
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MidlCommandFile*>.  
+-   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MidlCommandFile%2A>.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
- [Linkeroptionen](../../build/reference/linker-options.md)   
- [\/IDLOUT \(Namen der MIDL\-Ausgabedateien\)](../../build/reference/idlout-name-midl-output-files.md)   
- [\/IGNOREIDL \(Attribute nicht in MIDL verarbeiten\)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)   
- [\/TLBOUT \(TLB\-Datei benennen\)](../../build/reference/tlbout-name-dot-tlb-file.md)   
- [Building an Attributed Program](../../windows/building-an-attributed-program.md)
+ [Optionen des Linkers](../../build/reference/linker-options.md)   
+ [/ IDLOUT (Namen der MIDL-Ausgabedateien)](../../build/reference/idlout-name-midl-output-files.md)   
+ [/ IGNOREIDL (Attribute nicht in verarbeiten "MIDL")](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)   
+ [/ TLBOUT (Name. TLB-Datei)](../../build/reference/tlbout-name-dot-tlb-file.md)   
+ [Erstellen eines attributierten Programms](../../windows/building-an-attributed-program.md)

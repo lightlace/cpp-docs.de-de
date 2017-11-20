@@ -1,147 +1,146 @@
 ---
-title: "Referenz der OLE&#160;DB-Consumervorlagen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc-attr.db_param"
-  - "vc-attr.db_column"
-  - "vc-attr.db_accessor"
-  - "vc-attr.db_command"
-  - "vc-attr.db_table"
-  - "vc.templates.ole"
-  - "vc-attr.db_source"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB-Consumervorlagen, Klassen"
+title: OLE DB-Consumer-Vorlagenreferenz | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc-attr.db_param
+- vc-attr.db_column
+- vc-attr.db_accessor
+- vc-attr.db_command
+- vc-attr.db_table
+- vc.templates.ole
+- vc-attr.db_source
+dev_langs: C++
+helpviewer_keywords: OLE DB consumer templates, classes
 ms.assetid: cfc7f698-1a0e-4a09-a4d3-ccb99e6654fe
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4c401cebf9fd09686a532031322793fd9bedac50
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Referenz der OLE&#160;DB-Consumervorlagen
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die OLE DB\-Consumervorlagen enthalten die folgenden Klassen.  Das Referenzmaterial enthält auch Themen zu [Makros für OLE DB\-Consumervorlagen](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
+# <a name="ole-db-consumer-templates-reference"></a>Referenz der OLE DB-Consumervorlagen
+Der OLE DB-Consumervorlagen enthalten die folgenden Klassen. Das Referenzmaterial enthält außerdem Themen auf der [Makros für OLE DB-Consumervorlagen](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
   
-## Sitzungs\-Klassen  
+## <a name="session-classes"></a>Sitzungsklassen  
  [CDataConnection](../../data/oledb/cdataconnection-class.md)  
- Verwaltet die Verbindung mit der Datenquelle.  Dies ist eine nützliche Klasse zum Erstellen von Clients, da notwendige Objekte \(Sitzung und Datenquelle\) und zur Arbeit kapselt, die Sie, bei der Verbindung mit einer Datenquelle ausführen müssen.  
+ Verwaltet die Verbindung mit der Datenquelle. Dies ist eine nützliche für Clients erstellen, da sie kapselt erforderlichen Objekte (Datenquelle und Sitzung), und einige der Aufgaben, die Sie beim Verbinden mit einer Datenquelle ausführen müssen.  
   
- [Ableiten](../../data/oledb/cdatasource-class.md)  
- Entspricht einem OLE DB\-Datenquellenobjekt und stellt eine Verbindung durch einen Anbieter zu einer Datenquelle dar.  Eine oder mehrere Datenbanksitzungen, jede, die durch ein `CSession`\-Objekt dargestellt wird, können in einer einzelnen Verbindung stattfinden.  
+ [CDataSource](../../data/oledb/cdatasource-class.md)  
+ Entspricht einem OLE DB-Datenquellenobjekt, über einen Anbieter eine Verbindung mit einer Datenquelle darstellt. Eine oder mehrere datenbanksitzungen, von jeder dargestellt ein `CSession` Objekt, kann über eine einzelne Verbindung stattfinden.  
   
  [CEnumerator](../../data/oledb/cenumerator-class.md)  
- Entspricht einem OLE DB\-Enumeratorobjekt, das Rowsetinformationen über verfügbare Datenquellen abgerufen.  
+ Entspricht einem OLE DB-Enumerator-Objekt, das Rowsetinformationen zu verfügbaren Datenquellen abruft.  
   
  [CEnumeratorAccessor](../../data/oledb/cenumeratoraccessor-class.md)  
- Wird von `CEnumerator`, um Daten vom Enumeratorrowset zuzugreifen.  Dieses Rowset besteht Datenquellen und den Enumeratoren, die vom aktuellen Enumerator sichtbar sind.  
+ Verwendet von `CEnumerator` für den Datenzugriff aus dem Enumerator-Rowset. Dieses Rowset besteht aus den Datenquellen und Enumeratoren, die aus dem aktuellen Enumerator sichtbar.  
   
  [CSession](../../data/oledb/csession-class.md)  
- Stellt eine einzelne Datenbankzugriffssitzung dar.  Eine oder mehrere Sitzungen können mit jedem `CDataSource`\-Objekt zugeordnet werden.  
+ Stellt eine einzelne Datenbank-Access-Sitzung dar. Eine oder mehrere Sitzungen kann mit jedem zugeordneten `CDataSource` Objekt.  
   
-## Accessorklassen  
+## <a name="accessor-classes"></a>Accessorklassen  
  [CAccessor](../../data/oledb/caccessor-class.md)  
- Wird für Datensätze, die statisch mit einer Datenquelle gebunden werden.  Verwenden Sie diese Accessorklasse, wenn Ihnen die Struktur der Datenquelle kennen.  
+ Verwendet für Datensätze, die statisch mit einer Datenquelle gebunden sind. Verwenden Sie diese Zugriffsmethode-Klasse, wenn Sie wissen, dass die Struktur der Datenquelle.  
   
  [CAccessorBase](../../data/oledb/caccessorbase-class.md)  
- Basisklasse für alle Accessorklassen.  
+ Die Basisklasse für alle Accessorklassen.  
   
  [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)  
- Ein Accessor, der zur Laufzeit erstellt werden, auf dem die Spalteninformationen des Rowsets.  Verwenden Sie diese Klasse, um Daten abzurufen, wenn Ihnen die Struktur der Datenquelle kennen.  
+ Ein Accessor, der zur Laufzeit basierend auf den Informationen in der Spalte des Rowsets erstellt werden kann. Verwenden Sie diese Klasse zum Abrufen von Daten, wenn Sie nicht, dass die Struktur der Datenquelle wissen.  
   
  [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)  
- Ein Accessor, der verwendet werden kann, wenn Befehlstypen unbekannt sind.  Setzt die Parameterinformationen durch Aufrufen der `ICommandWithParameters`\-Schnittstelle ein, wenn der Anbieter die Schnittstelle unterstützt.  
+ Ein Accessor, der verwendet werden kann, wenn Befehlstypen unbekannt sind. Ruft die Parameterinformationen durch Aufrufen der `ICommandWithParameters` -Schnittstelle ein, wenn der Anbieter die Schnittstelle unterstützt.  
   
  [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md)  
- Ermöglicht Ihnen, auf eine Datenquelle zuzugreifen, wenn Sie keine Kenntnisse der zugrunde liegende Struktur der Datenbank verfügen.  
+ Können Sie eine Datenquelle zugreifen, wenn Sie keine Kenntnisse der zugrunde liegende Struktur der Datenbank verfügen.  
   
  [CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md)  
- Wie auch `CDynamicStringAccessor` allerdings zu dieser Klasse benötigt die Daten, die vom Datenspeicher als ANSI\-Zeichenfolgendaten zugegriffen werden.  
+ Ähnlich wie `CDynamicStringAccessor` mit dem Unterschied, dass diese Klasse aus dem Datenspeicher als ANSI-Zeichenfolgendaten verwendete Daten anfordert.  
   
  [CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md)  
- Wie auch `CDynamicStringAccessor` allerdings zu dieser Klasse benötigt die Daten, die vom Datenspeicher als Unicode\-Zeichenfolgen\-Daten zugegriffen werden.  
+ Ähnlich wie `CDynamicStringAccessor` mit dem Unterschied, dass diese Klasse aus dem Datenspeicher als Unicode-Zeichenfolgendaten verwendete Daten anfordert.  
   
  [CManualAccessor](../../data/oledb/cmanualaccessor-class.md)  
- Ein Accessor mit Methoden, um Spalten und von Befehlsparametern zu behandeln.  Mit dieser Klasse können Sie alle Datentypen verwenden, sofern der Anbieter konvertieren kann.  
+ Ein Accessor mit Methoden zum Behandeln von Spalten und Parameter des Befehls. Mit dieser Klasse können Sie alle Datentypen verwenden, solange der Anbieter den Typ konvertieren kann.  
   
  [CNoAccessor](../../data/oledb/cnoaccessor-class.md)  
- Kann als Vorlagenargument verwendet werden, wenn Sie die Klasse Parameter oder Ausgabespalten nicht unterstützen soll.  
+ Kann als ein Vorlagenargument verwendet werden, wenn Sie nicht die Klasse zur Unterstützung von Parametern oder Spalten ausgeben möchten.  
   
  [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)  
- Wie auch `CDynamicStringAccessor` allerdings zu dieser Klasse konvertiert alle Daten, die vom Datenspeicher als \(markiert\) zugegriffen werden Daten im XML\-Format.  
+ Ähnlich wie `CDynamicStringAccessor` mit dem Unterschied, dass diese Klasse alle Daten, die aus dem Datenspeicher als XML-Format (tagged) Daten zugegriffen konvertiert.  
   
-## Rowset\-Klassen  
+## <a name="rowset-classes"></a>Schemarowset-Klassen  
  [CAccessorRowset](../../data/oledb/caccessorrowset-class.md)  
- Kapselt ein Rowset und seine zugeordneten Accessoren.  
+ Kapselt ein Rowset und ihre zugeordneten Accessoren.  
   
  [CArrayRowset](../../data/oledb/carrayrowset-class.md)  
- Wird verwendet, um auf Elemente eines Rowsets mithilfe von Arraysyntax zuzugreifen.  
+ Zugriff auf Elemente eines Rowsets mit Arraysyntax verwendet.  
   
  [CBulkRowset](../../data/oledb/cbulkrowset-class.md)  
- Wird verwendet, um Zeilen durch das Abrufen von mehrere Zeilenhandles mit einem einzelnen Aufruf in Massenauslagerungsvorgängen abzurufen und zu bearbeiten.  
+ Zum Abrufen und Bearbeiten von Zeilen in einer Massenoperation durch das Abrufen von mehreren Zeilenhandles mit einem einzigen Aufruf verwendet werden.  
   
  [CNoRowset](../../data/oledb/cnorowset-class.md)  
- Kann als Vorlagenargument verwendet werden, wenn der Befehl keinen Rowset zurückgibt.  
+ Kann als ein Vorlagenargument verwendet werden, wenn der Befehl kein Rowset zurückgibt.  
   
  [CRestrictions](../../data/oledb/crestrictions-class.md)  
- Wird verwendet, um Einschränkungen für Schemarowsets anzugeben.  
+ Dient zum Angeben von Einschränkungen für Schemarowsets.  
   
  [CRowset](../../data/oledb/crowset-class.md)  
- Wird verwendet, um Rowsetdaten bearbeiten, festzulegen und abzurufen.  
+ Zum Bearbeiten, festlegen und Abrufen von Rowsetdaten verwendet.  
   
  [CStreamRowset](../../data/oledb/cstreamrowset-class.md)  
- Gibt ein `ISequentialStream`\-Objekt statt eines Rowsets zurück; Sie verwenden dann die **Lesen**\-Methode, um Daten in XML\-Format abzurufen. \(SQL Server 2000 führt die Formatierung; Beachten Sie, dass diese Funktion nur mit SQL Server 2000.\)  
+ Gibt eine `ISequentialStream` -Objekt anstelle eines Rowsets werden; verwenden Sie dann die **lesen** Methode zum Abrufen von Daten im XML-Format. (SQL Server 2000 ist die Formatierung, beachten Sie, dass dieses Feature nur mit SQL Server 2000 funktioniert.)  
   
  [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md)  
- Enthält eine blinde Implementierung für `IRowsetNotify`, mit leeren Funktionen für die `IRowsetNotify`\-Methoden `OnFieldChange`, `OnRowChange` und `OnRowsetChange`.  
+ Stellt eine dummy-Implementierung für `IRowsetNotify`, mit leeren Funktionen für die `IRowsetNotify` Methoden `OnFieldChange`, `OnRowChange`, und `OnRowsetChange`.  
   
- [Schemarowset\-Klassen und typedef\-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)  
+ [Schemarowset-Klassen und Typedef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)  
   
- Die OLE DB\-Vorlagen bieten einen Satz von Klassen, die in OLE DB\-Schemarowsets entsprechen.  
+ Der OLE DB-Vorlagen bieten Ihnen eine Reihe von Klassen, die die OLE DB-Schemarowsets entsprechen.  
   
-## Befehlsklassen  
+## <a name="command-classes"></a>Befehlsklassen  
  [CCommand](../../data/oledb/ccommand-class.md)  
- Wird verwendet, um einen parameterbasierten OLE DB\-Befehl festzulegen und auszuführen.  Um lediglich ein einfaches Rowset zu öffnen, verwenden Sie stattdessen `CTable`.  
+ Zum Festlegen und einen Parameter-basierte OLE DB-Befehl ausführen. Verwenden, um lediglich öffnen ein einfaches Rowsets `CTable` stattdessen.  
   
  [CMultipleResults](../../data/oledb/cmultipleresults-class.md)  
- Wird als Vorlagenargument für die `CCommand` \- Vorlage, wenn Sie den Befehl möchten, mehrere Resultsets behandeln zu können.  
+ Verwendet als Vorlagenargument für die `CCommand` Vorlage, wenn Sie den Befehl aus, um mehrere Resultsets verarbeiten soll.  
   
  [CNoAccessor](../../data/oledb/cnoaccessor-class.md)  
- Wird als Vorlagenargument für Vorlagenklassen, wie `CCommand` und `CTable`, die ein Accessorklassenargument nehmen.  Verwenden Sie `CNoAccessor`, wenn die Klasse Parameter oder Ausgabespalten nicht unterstützen soll.  
+ Verwendet als Vorlagenargument für Vorlagenklassen, z. B. `CCommand` und `CTable`, nehmen ein Argument der Accessor-Klasse. Verwendung `CNoAccessor` , wenn Sie nicht die Klasse zur Unterstützung von Parametern oder Spalten ausgeben möchten.  
   
  [CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md)  
- Wird als Vorlagenargument für die `CCommand` \- Vorlage, wenn Sie den Befehl soll, ein einzelnes Rowset zu behandeln.  `CNoMultipleResults` ist der Standardwert für das Vorlagenargument.  
+ Verwendet als Vorlagenargument für die `CCommand` Vorlage, wenn Sie den Befehl aus, um ein einzelnes Rowset behandeln soll. `CNoMultipleResults`ist der Standardwert für das Vorlagenargument an.  
   
  [CNoRowset](../../data/oledb/cnorowset-class.md)  
- Wird als Vorlagenargument für `CCommand` oder `CTable`, wenn der Befehl oder die Tabelle keinen Rowset zurückgibt.  
+ Verwendet als Vorlagenargument für `CCommand` oder `CTable` , wenn der Befehl oder die Tabelle kein Rowset zurückgibt.  
   
  [CTable](../../data/oledb/ctable-class.md)  
- Wird verwendet, um ein einfaches Rowset ohne Parameter zugreifen.  
+ Verwendet, um den Zugriff eines einfachen Rowsets ohne Parameter.  
   
-## Eigenschaften\-Klassen  
+## <a name="property-classes"></a>Eigenschaftenklassen  
  [CDBPropIDSet](../../data/oledb/cdbpropidset-class.md)  
- Wird verwendet, um ein Array Eigenschaften\-IDs übergeben, für die der Consumer Eigenschafteninformationen wünscht.  Die Eigenschaften gehören einem Eigenschaft.  
+ Verwendet, um ein Array von Eigenschaften-IDs zu übergeben, für die der Consumer Informationen wünscht. Die Eigenschaften gehören zum einen Eigenschaftensatz.  
   
  [CDBPropSet](../../data/oledb/cdbpropset-class.md)  
- Wird verwendet, um Eigenschaften in einem Anbieter festzulegen.  
+ Zum Festlegen von Eigenschaften für einen Anbieter verwendet.  
   
-## Bookmark\-Klasse  
+## <a name="bookmark-class"></a>Bookmark-Klasse  
  [CBookmark](../../data/oledb/cbookmark-class.md)  
- Wird als Index für den Zugriff auf Daten in einem Rowset.  
+ Als Index verwendet für den Zugriff auf Daten in einem Rowset.  
   
-## Fehlertyps  
+## <a name="error-class"></a>Error-Klasse  
  [CDBErrorInfo](../../data/oledb/cdberrorinfo-class.md)  
- Wird verwendet, um DB\-Fehlerinformationen OLE abzurufen.  
+ Zum Abrufen von Fehlerinformationen der OLE DB verwendet.  
   
-## Siehe auch  
- [Referenz der OLE DB\-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-reference.md)   
- [OLE DB\-Vorlagen](../../data/oledb/ole-db-templates.md)
+## <a name="see-also"></a>Siehe auch  
+ [OLE DB-Anbieter-Vorlagenreferenz](../../data/oledb/ole-db-provider-templates-reference.md)   
+ [OLE DB-Vorlagen](../../data/oledb/ole-db-templates.md)

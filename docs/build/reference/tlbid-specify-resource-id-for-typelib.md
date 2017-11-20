@@ -1,64 +1,64 @@
 ---
-title: "/TLBID (Ressourcen-ID f&#252;r TypeLib festlegen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/tlbid"
-  - "VC.Project.VCLinkerTool.TypeLibraryResourceID"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".tlb-Dateien, Angeben der Ressourcen-ID"
-  - "/TLBID (Linkeroption)"
-  - "TLB-Dateien, Angeben der Ressourcen-ID"
-  - "TLBID (Linkeroption)"
-  - "-TLBID (Linkeroption)"
-  - "Typbibliotheken, Angeben der Ressourcen-ID"
+title: "-TLBID (Angeben der Ressourcen-ID für typelib festlegen) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /tlbid
+- VC.Project.VCLinkerTool.TypeLibraryResourceID
+dev_langs: C++
+helpviewer_keywords:
+- tlb files, specifying resource ID
+- -TLBID linker option
+- .tlb files, specifying resource ID
+- /TLBID linker option
+- TLBID linker option
+- type libraries, specifying resource ID
 ms.assetid: 434b28a2-4656-4d52-ac82-8b18bf486fb2
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 9a260882b7e4623149e9e82a3a635f7230b6985a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# /TLBID (Ressourcen-ID f&#252;r TypeLib festlegen)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="tlbid-specify-resource-id-for-typelib"></a>/TLBID (Ressourcen-ID für TypeLib festlegen)
 ```  
 /TLBID:id  
 ```  
   
-## Hinweise  
- Hierbei ist:  
+## <a name="remarks"></a>Hinweise  
+ Dabei gilt:  
   
  `id`  
- ein benutzerdefinierter Wert für eine vom Linker erstellte Typbibliothek.  Die Standardressourcen\-ID \(1\) wird dadurch überschrieben.  
+ Ein vom Benutzer angegebener Wert für eine vom Linker erstellte Typbibliothek. Es überschreibt die Standard-Ressourcen-ID von 1.  
   
-## Hinweise  
- Beim Kompilieren eines Programms, das Attribute verwendet, erstellt der Linker eine Typbibliothek.  Der Linker weist der Typbibliothek die Ressourcen\-ID 1 zu.  
+## <a name="remarks"></a>Hinweise  
+ Beim Kompilieren eines Programms, das Attribute verwendet, erstellt der Linker eine Typbibliothek. Der Linker weist eine Ressourcen-ID 1 in der Typbibliothek.  
   
- Wenn diese Ressourcen\-ID einen Konflikt mit einer der vorhandenen Ressourcen hervorruft, können Sie mithilfe von **\/TLBID** eine andere ID festlegen.  Der für `id` gültige Wertebereich umfasst Zahlen von 1 bis 65535.  
+ Wenn diese Ressourcen-ID mit einer der vorhandenen Ressourcen in Konflikt steht, können Sie eine andere ID mit/TLBID angeben. Der Bereich von Werten, die Sie übergeben können `id` liegt zwischen 1 und 65535.  
   
-### So legen Sie diese Linkeroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Festlegen von Visual C\+\+\-Projekteigenschaften](../../ide/working-with-project-properties.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Klicken Sie auf den Ordner **Linker**.  
+2.  Klicken Sie auf die **Linker** Ordner.  
   
-3.  Klicken Sie auf die Eigenschaftenseite **Eingebettete IDL**.  
+3.  Klicken Sie auf die **eingebettete IDL** Eigenschaftenseite.  
   
-4.  Ändern Sie die Eigenschaft **TypeLib\-Ressourcen\-ID**.  
+4.  Ändern der **Ressourcen-ID für TypeLib** Eigenschaft.  
   
-### So legen Sie diese Linkeroption programmgesteuert fest  
+### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
   
-1.  Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TypeLibraryResourceID*>.  
+1.  Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TypeLibraryResourceID%2A>.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
  [Linkeroptionen](../../build/reference/linker-options.md)

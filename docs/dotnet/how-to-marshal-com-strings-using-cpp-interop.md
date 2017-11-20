@@ -1,41 +1,41 @@
 ---
-title: "Gewusst wie: Marshallen von COM-Zeichenfolgen mit C++-Interop"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C++ Interop, Zeichenfolgen"
-  - "COM [C++], Marshallen von Zeichenfolgen"
-  - "Datenmarshalling [C++], Zeichenfolgen"
-  - "Interop [C++], Zeichenfolgen"
-  - "Marshaling [C++], Zeichenfolgen"
+title: 'Wie: Marshallen von COM-Zeichenfolgen mit C++-Interop | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- interop [C++], strings
+- marshaling [C++], strings
+- C++ Interop, strings
+- data marshaling [C++], strings
+- COM [C++], marshaling strings
 ms.assetid: 06590759-bf99-4e34-a3a9-4527ea592cc2
-caps.latest.revision: 15
-caps.handback.revision: "15"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8c2400407c6a8ec5191df46f049113ad1d435ad1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Gewusst wie: Marshallen von COM-Zeichenfolgen mit C++-Interop
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In diesem Thema wird beschrieben, wie BSTR \(das bei der COM\-Programmierung bevorzugte grundlegende Zeichenfolgenformat\) von einer verwalteten an eine nicht verwaltete Funktion und umgekehrt übergeben werden kann.  Informationen zur Interoperation mit anderen Zeichenfolgentypen finden Sie in den folgenden Themen:  
+# <a name="how-to-marshal-com-strings-using-c-interop"></a>Gewusst wie: Marshallen von COM-Zeichenfolgen mit C++-Interop
+In diesem Thema wird veranschaulicht, wie BSTR (das grundlegende Zeichenfolgenformat bevorzugt wird in COM-Programmierung) werden kann von einer verwalteten an eine nicht verwaltete Funktion (und umgekehrt) übergeben. Zusammenarbeit mit anderen Zeichenfolgen-Datentypen, finden Sie unter den folgenden Themen:  
   
--   [Gewusst wie: Marshallen von Unicode\-Zeichenfolgen mit C\+\+\-Interop](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)  
+-   [Vorgehensweise: Marshallen von Unicode-Zeichenfolgen mit C++-Interop](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)  
   
--   [Gewusst wie: Marshallen von ANSI\-Zeichenfolgen mit C\+\+\-Interop](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)  
+-   [Vorgehensweise: Marshallen von ANSI-Zeichenfolgen mit C++-Interop](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)  
   
- In den folgenden Codebeispielen werden die [managed, unmanaged](../preprocessor/managed-unmanaged.md)\-\#pragma\-Direktiven verwendet, um verwaltete und nicht verwaltete Funktionen in derselben Datei zu implementieren. Diese Funktionen arbeiten jedoch auf dieselbe Weise zusammen, wenn sie in separaten Dateien definiert werden.  Dateien, die ausschließlich nicht verwaltete Funktionen enthalten, müssen nicht mit [\/clr \(Common Language Runtime\-Kompilierung\)](../build/reference/clr-common-language-runtime-compilation.md) kompiliert werden.  
+ Im folgenden Codebeispiel Beispiele verwenden die [verwaltete, unverwaltete](../preprocessor/managed-unmanaged.md) #pragma-Direktiven zum Implementieren verwalteten und nicht verwaltete Funktionen in derselben Datei, aber diese Funktionen auf dieselbe Weise zusammenarbeiten, wenn in separaten Dateien definiert. Dateien, die ausschließlich nicht verwaltete Funktionen müssen nicht kompiliert werden [/CLR (Common Language Runtime-Kompilierung)](../build/reference/clr-common-language-runtime-compilation.md).  
   
-## Beispiel  
- Das folgende Beispiel zeigt, wie BSTR \(ein in der COM\-Programmierung verwendetes Zeichenfolgenformat\) von einer verwalteten an eine nicht verwaltete Funktion übergeben werden kann.  Die aufrufende verwaltete Funktion verwendet <xref:System.Runtime.InteropServices.Marshal.StringToBSTR*> zum Abrufen der Adresse einer BSTR\-Darstellung der Inhalte eines .NET\-System.String.  Dieser Zeiger wird mit [pin\_ptr \(C\+\+\/CLI\)](../windows/pin-ptr-cpp-cli.md) fixiert, um sicherzustellen, dass seine physische Adresse während eines Garbage Collection\-Zyklus bei Ausführung einer nicht verwalteten Funktion nicht geändert wird.  Der Garbage Collector kann so lange keinen Arbeitsspeicher verschieben, bis [pin\_ptr \(C\+\+\/CLI\)](../windows/pin-ptr-cpp-cli.md) den Bereich verlassen hat.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird veranschaulicht, wie ein BSTR (ein Zeichenfolgenformat in COM-Programmierung verwendet) übergeben werden kann von einer verwalteten an eine nicht verwaltete Funktion. Der aufrufende verwaltete Funktion verwendet <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> die Adresse einer BSTR-Darstellung des Inhalts eines beziehen. This-Zeiger ist fixiert mit [Pin_ptr (C + c++ / CLI)](../windows/pin-ptr-cpp-cli.md) um sicherzustellen, dass seine physische Adresse während einer Garbage Collection-Zyklus nicht geändert wird, während die nicht verwaltete Funktion ausgeführt wird. Der Garbage Collector untersagt Arbeitsspeicher verschieben, bis die [Pin_ptr (C + c++ / CLI)](../windows/pin-ptr-cpp-cli.md) den Gültigkeitsbereich verlässt.  
   
 ```  
 // MarshalBSTR1.cpp  
@@ -70,8 +70,8 @@ int main() {
 }  
 ```  
   
-## Beispiel  
- Das folgende Beispiel zeigt, wie eine BSTR\-Zeichenfolge von einer nicht verwalteten an eine verwaltete Funktion übergeben werden kann.  Die empfangende verwaltete Funktion kann entweder die Zeichenfolge als BSTR übernehmen oder <xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR*> zur Konvertierung in <xref:System.String> verwenden, damit sie mit anderen verwalteten Funktionen verwendet werden kann.  Da der BSTR darstellende Arbeitsspeicher auf dem nicht verwalteten Heap belegt ist, ist keine Fixierung erforderlich, denn auf dem nicht verwalteten Heap erfolgt keine Garbage Collection.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird veranschaulicht, wie ein BSTR übergeben werden kann von einer nicht verwalteten an eine nicht verwaltete Funktion. Der empfangenden verwalteten Funktion kann entweder die Zeichenfolge als BSTR verwenden oder <xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A> , die sie zum Konvertieren einer <xref:System.String> für die Verwendung mit anderen verwaltete Funktionen. Da der BSTR darstellende Arbeitsspeicher auf dem nicht verwalteten Heap zugewiesen ist, ist keine Fixierung erforderlich, da es keine Garbagecollection auf dem nicht verwalteten Heap wird.  
   
 ```  
 // MarshalBSTR2.cpp  
@@ -108,5 +108,5 @@ int main() {
 }  
 ```  
   
-## Siehe auch  
- [Verwenden von C\+\+\-Interop \(implizites PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Siehe auch  
+ [Verwenden von C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

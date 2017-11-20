@@ -1,32 +1,30 @@
 ---
-title: "operator== (stack) (STL/CLR)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::operator=="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Operator== Member [STL/CLR]"
+title: Operator == (Stapel) (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::operator==
+dev_langs: C++
+helpviewer_keywords: operator== member [STL/CLR]
 ms.assetid: 862e7130-150a-44ea-9ec4-9f091ab7653d
-caps.latest.revision: 15
-caps.handback.revision: "13"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cbf6bdbef6751e414577586513662aacd22a1c5d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# operator== (stack) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gleicher Vergleich des Stapels.  
+# <a name="operator-stack-stlclr"></a>operator== (stack) (STL/CLR)
+Stack-gleich-Vergleich.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<typename Value,  
@@ -35,17 +33,17 @@ template<typename Value,
         stack<Value, Container>% right);  
 ```  
   
-#### Parameter  
- left  
- Linker Container zu vergleichen.  
+#### <a name="parameters"></a>Parameter  
+ links  
+ Linker zu vergleichender Container.  
   
- right  
- Rechter Container zu vergleichen.  
+ Rechts  
+ Rechter zu vergleichender Container.  
   
-## Hinweise  
- Die Operatorfunktionsrückgaben true, wenn die Sequenzen, die von `left` und `right` gesteuert werden, die gleiche Länge und, für die einzelnen Positionen `i`, `left``[i] ==` `right``[i]`.  Sie verwenden sie, um zu testen, ob `left` wie `right` sortiert wird, wenn die zwei Stapel verglichenes Element durch Element sind.  
+## <a name="remarks"></a>Hinweise  
+ Die Operatorfunktion gibt "true" nur, wenn die Sequenzen von gesteuert `left` und `right` haben die gleiche Länge und für die einzelnen Positionen `i`, `left[i] ==` `right[i]`. Sie verwenden es, um zu testen, ob `left` sortiert wird, ist identisch mit `right` bei beiden verglichenen elementweise sind.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_stack_operator_eq.cpp   
@@ -85,19 +83,22 @@ int main()
   
 ```  
   
-  **ein b c**  
- **ein b d**  
-**\[ein b c\] \=\= ist \[ein b c\] erfüllt**  
-**\[ein b c\] \=\= ein b ist \[d\] falsch**   
-## Anforderungen  
- **Header:** \<cliext\/Stapel\>  
+```Output  
+ a b c  
+ a b d  
+[a b c] == [a b c] is True  
+[a b c] == [a b d] is False  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Stack >  
   
-## Siehe auch  
- [Stapel](../dotnet/stack-stl-clr.md)   
- [operator\!\= \(stack\)](../dotnet/operator-inequality-stack-stl-clr.md)   
- [operator\< \(stack\)](../dotnet/operator-less-than-stack-stl-clr.md)   
- [operator\>\= \(stack\)](../dotnet/operator-greater-or-equal-stack-stl-clr.md)   
- [operator\> \(stack\)](../dotnet/operator-greater-than-stack-stl-clr.md)   
- [operator\<\= \(stack\)](../dotnet/operator-less-or-equal-stack-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Stack (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [Operator! = (Stapel) (STL/CLR)](../dotnet/operator-inequality-stack-stl-clr.md)   
+ [Operator\< (Stapel) (STL/CLR)](../dotnet/operator-less-than-stack-stl-clr.md)   
+ [Operator > = (Stapel) (STL/CLR)](../dotnet/operator-greater-or-equal-stack-stl-clr.md)   
+ [Operator > (Stapel) (STL/CLR)](../dotnet/operator-greater-than-stack-stl-clr.md)   
+ [operator<= (stack) (STL/CLR)](../dotnet/operator-less-or-equal-stack-stl-clr.md)

@@ -1,41 +1,39 @@
 ---
-title: "vector::generic_value (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::generic_value"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_value-Member [STL/CLR]"
+title: Vector::generic_value (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::generic_value
+dev_langs: C++
+helpviewer_keywords: generic_value member [STL/CLR]
 ms.assetid: 01fdc5c5-27d3-4dc2-b242-cae2fd04a60d
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5678d9353b49dd9a85b51e44a338401a58a56371
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# vector::generic_value (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Der Typ eines Elements mit der generischen Schnittstelle für den Container.  
+# <a name="vectorgenericvalue-stlclr"></a>vector::generic_value (STL/CLR)
+Der Typ eines Elements für die Verwendung mit der generischen Schnittstelle für den Container.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef GValue generic_value;  
 ```  
   
-## Hinweise  
- Der Typ beschreibt ein Objekt des Typs `GValue`, der den gespeicherten Elementwert zur Verwendung mit der generischen Schnittstelle für diese Vorlagencontainerklasse beschreibt.  
+## <a name="remarks"></a>Hinweise  
+ Der Typ beschreibt ein Objekt des Typs `GValue` , beschreibt die gespeicherten Elementwert für die Verwendung mit der generischen Schnittstelle für diese Vorlage Container-Klasse.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_vector_generic_value.cpp   
@@ -72,16 +70,19 @@ int main()
   
 ```  
   
-  **ein b c**  
- **ein b c**  
- **ein a\-c**   
-## Anforderungen  
- **Header:** \<cliext\/Vektor\>  
+```Output  
+a b c  
+a b c  
+a a c  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Vektor >  
   
-## Siehe auch  
- [Vektor](../dotnet/vector-stl-clr.md)   
- [vector::generic\_container](../dotnet/vector-generic-container-stl-clr.md)   
- [vector::generic\_iterator](../dotnet/vector-generic-iterator-stl-clr.md)   
- [vector::generic\_reverse\_iterator](../dotnet/vector-generic-reverse-iterator-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Vektor (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [Vector::generic_container (STL/CLR)](../dotnet/vector-generic-container-stl-clr.md)   
+ [Vector::generic_iterator (STL/CLR)](../dotnet/vector-generic-iterator-stl-clr.md)   
+ [vector::generic_reverse_iterator (STL/CLR)](../dotnet/vector-generic-reverse-iterator-stl-clr.md)

@@ -1,26 +1,26 @@
 ---
-title: "2.7.2.7 copyin"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.7.2.7 Copyin | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 76cfb9f8-bf65-4585-adbf-fd933f5606b4
-caps.latest.revision: 5
-caps.handback.revision: "5"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cd296192146e76085e1b987e29a377eb621917ae
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# 2.7.2.7 copyin
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die **copyin**\-Klausel stellt einen Mechanismus bereit, um denselben Wert **threadprivate**\-Variablen für jeden Thread im Team zuweisen, das den parallelen Bereich ausgeführt wird.  Für jede Variable, die in einer **copyin**\-Klausel angegeben ist, wird der Wert der Variablen im Masterthread des Teams, als sei es durch Zuweisung, threadprivaten Kopien zu Beginn des parallelen Bereichs kopiert.  Die Syntax der **copyin**\-Klausel lautet wie folgt:  
+# <a name="2727-copyin"></a>2.7.2.7 copyin
+Die **Copyin** Klausel bietet einen Mechanismus zum Zuweisen des gleichen Werts **Threadprivate** Variablen für jeden Thread im Team, die Ausführung des parallelen Bereichs. Für jede Variable, die im angegebenen eine **Copyin** -Klausel, die den Wert der Variablen in der master-Thread der vom Team kopiert werden, als wäre durch eine Zuweisung der Threads privaten Kopien am Anfang des parallelen Bereichs. Die Syntax der **Copyin** -Klausel ist wie folgt:  
   
 ```  
   
@@ -30,8 +30,8 @@ variable-list
   
 ```  
   
- Die Einschränkungen zur **copyin**\-Klausel lauten wie folgt:  
+ Die Einschränkungen fest, die **Copyin** Klausel lauten wie folgt:  
   
--   Eine Variable, die in der **copyin**\-Klausel angegeben wird, muss über einen zugreifbaren, eindeutigen Kopierzuweisungsoperator sein.  
+-   Eine Variable, die im angegebenen der **Copyin** -Klausel muss eine erreichbare, eindeutige Kopierzuweisungsoperator aufweisen.  
   
--   Eine Variable, die in der **copyin**\-Klausel angegeben wird, muss eine **threadprivate**\-Variable sein.
+-   Eine Variable, die im angegebenen der **Copyin** -Klausel muss eine **Threadprivate** Variable.

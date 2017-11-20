@@ -1,37 +1,37 @@
 ---
-title: "Probleme bei Inlinefunktionen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Ob1 (C++-Compileroption)"
-  - "/Ob2 (C++-Compileroption)"
-  - "Probleme bei Inlinefunktionen"
-  - "Inlinefunktionen, Probleme"
-  - "-Ob1 (C++-Compileroption)"
-  - "-Ob2 (C++-Compileroption)"
+title: Probleme bei Inlinefunktionen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs: C++
+helpviewer_keywords:
+- /Ob1 C++ compiler option
+- inline functions, problems
+- -Ob1 C++ compiler option
+- /Ob2 C++ compiler option
+- -Ob2 C++ compiler option
+- function inlining problems
 ms.assetid: 65d59943-4b3c-4a43-aeb6-dccbf7686740
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 4817093bf52ab5398f1d4a788b96bcff16384c1f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Probleme bei Inlinefunktionen
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Bei der Verwendung von Inlinefunktionen sollte Folgendes beachtet werden:  
+# <a name="function-inlining-problems"></a>Probleme bei Inlinefunktionen
+Wenn Sie Inlinefunktionen verwenden, müssen Sie folgende Schritte ausführen:  
   
--   Inlinefunktionen müssen in der Headerdatei implementiert werden, die eingelesen wird.  
+-   Haben Sie die Inlinefunktionen, die in der Headerdatei, die Sie einschließen implementiert.  
   
--   Die Verwendung von Inlinefunktionen muss in der Headerdatei aktiviert sein.  
+-   Haben inlining in der Headerdatei ist aktiviert.  
   
 ```  
 // LNK2019_function_inline.cpp  
@@ -63,11 +63,11 @@ int main() {
 }  
 ```  
   
- Falls Sie die Compilerdirektive `#pragma inline_depth` verwenden, stellen Sie sicher, dass mindestens ein Wert von 2 festgelegt wurde.  Durch den Wert 0 wird die Unterstützung von Inlinefunktionen deaktiviert.  Achten Sie außerdem darauf, die Compileroption **\/Ob1** oder **\/Ob2** zu verwenden.  
+ Bei Verwendung der `#pragma inline_depth` Compiler, stellen Sie sicher, dass Sie einen Wert von 2 oder höher festgelegt haben. Der Wert 0 (null) deaktiviert inlining. Außerdem stellen Sie sicher, dass Sie die **/Ob1** oder **/Ob2** Compileroptionen.  
   
- Das Kombinieren von Inline\- und Nicht\-Inlinecompileroptionen bei verschiedenen Modulen kann zeitweise zu Problemen führen.  Wenn eine C\+\+\-Bibliothek mit aktivierten Inlinefunktionen \([\/Ob1](../../build/reference/ob-inline-function-expansion.md) oder [\/Ob2](../../build/reference/ob-inline-function-expansion.md)\) erstellt wird, Inlinefunktionen in der zugehörigen Headerdatei mit den Funktionsbeschreibungen jedoch deaktiviert sind \(keine Option\), erhalten Sie den Fehler LNK2001.  Die Funktionen werden nicht "inline" im Code der Headerdatei deklariert. Da sie sich jedoch nicht in der Bibliotheksdatei befinden, existiert keine Adresse, um den Verweis aufzulösen.  
+ Mischen von Inline- und nicht Kompilierungsoptionen auf andere Module kann in einigen Fällen Probleme verursachen. Wenn eine C++-Bibliothek mit Inlinefunktionen eingeschaltet erstellt wird ([/Ob1](../../build/reference/ob-inline-function-expansion.md) oder [/Ob2](../../build/reference/ob-inline-function-expansion.md)), aber die entsprechende Headerdatei, beschreibt die Funktionen hat inlining deaktiviert (keine Option), erhalten Sie die Fehlermeldung LNK2001. Die Funktionen erhalten keine Inline in den Code aus der Headerdatei, aber da sie nicht in die Bibliotheksdatei sind ist keine Adresse zum Auflösen des Verweises.  
   
- Auch bei einem Projekt, das Inlinefunktionen verwendet und die Funktionen in einer CPP\-Datei und nicht in der Headerdatei definiert, tritt LNK2019 auf.  Zwar wird die Headerdatei an jeder geeigneten Stelle eingelesen, die Funktionen werden jedoch nur "inline" deklariert, wenn die CPP\-Datei vom Compiler verarbeitet wird. Daher werden diese Funktionen vom Linker als nicht aufgelöste externe Verweise angesehen, wenn sie in anderen Modulen verwendet werden.  
+ Auf ähnliche Weise definiert ein Projekt, das Inlinefunktionen verwendet noch die Funktionen in einer CPP-Datei statt in den Header-Datei auch LNK2019 erhalten. Die Header-Datei enthalten ist überall als geeignet eingestuft, aber die Funktionen sind nur inline, wenn der Compiler; die CPP-Datei durchläuft Daher erkennt der Linker die Funktionen als nicht aufgelösten externen bei der Verwendung in anderen Modulen ausgeführt werden.  
   
 ```  
 // LNK2019_FIP.h  
@@ -76,7 +76,7 @@ struct testclass {
 };  
 ```  
   
- und anschließend  
+ Und dann  
   
 ```  
 // LNK2019_FIP.cpp  
@@ -85,7 +85,7 @@ struct testclass {
 inline void testclass::PublicStatMemFunc1(void) {}  
 ```  
   
- und anschließend  
+ Und dann  
   
 ```  
 // LNK2019_FIP_2.cpp  
@@ -100,5 +100,5 @@ int main() {
 }  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Linkertoolfehler LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)

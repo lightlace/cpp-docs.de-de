@@ -1,34 +1,32 @@
 ---
-title: "Compilerwarnung (Stufe 4) C4211 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4211"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4211"
+title: Compilerwarnung (Stufe 4) C4211 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4211
+dev_langs: C++
+helpviewer_keywords: C4211
 ms.assetid: 3eea3455-6faa-4cdb-8730-73db7026bd1f
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 9e985dd1a2742fff675642b1dcd1bdddcd8d7379
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Compilerwarnung (Stufe 4) C4211
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Nicht dem Standard entsprechende Erweiterung: Neudefinition von extern als statisch  
+# <a name="compiler-warning-level-4-c4211"></a>Compilerwarnung (Stufe 4) C4211
+nicht dem Standard entsprechende Erweiterung: Neudefinition von Extern als statisch  
   
- Bei Verwendung der Microsoft\-Standarderweiterungen \(**\/Ze**\) können Sie einen `extern`\-Bezeichner neu als **static** definieren.  
+ Mit den Standard-Microsoft-Erweiterungen (/ Ze), können Sie definieren eine `extern` Bezeichner als **statische**.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // C4211.c  
@@ -41,7 +39,8 @@ int main()
 }  
 ```  
   
- Derartige Neudefinitionen sind bei Einhaltung der ANSI\-Kompatibilität \([\/Za](../../build/reference/za-ze-disable-language-extensions.md)\) ungültig.  
+ Derartige Neudefinitionen sind ungültig, ANSI-Kompatibilität (["/ Za"](../../build/reference/za-ze-disable-language-extensions.md)).  
   
-## Siehe auch  
- [\(NOTINBUILD\)Static Storage\-Class Specifiers](assetId:///3ba9289a-a412-4a17-b319-ceb2c087df48)
+## <a name="see-also"></a>Siehe auch  
+
+

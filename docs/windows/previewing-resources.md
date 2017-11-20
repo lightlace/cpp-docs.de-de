@@ -1,35 +1,35 @@
 ---
-title: "Previewing Resources | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.resvw.resource.previewing"
-  - "vs.resvw.resource.previewing"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "resources [Visual Studio], viewing"
-  - "resource previews"
-  - "code, viewing"
+title: Anzeigen einer Vorschau Ressourcen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.resvw.resource.previewing
+- vs.resvw.resource.previewing
+dev_langs: C++
+helpviewer_keywords:
+- resources [Visual Studio], viewing
+- resource previews
+- code, viewing
 ms.assetid: d6abda66-0e2b-4ac3-a59a-a57b8c6fb70b
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bce36839b0736eabdbc850d9a2b2f9434cc820d1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Previewing Resources
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Durch die Vorschau auf Ressourcen können Sie eine grafische Ressource betrachten, ohne sie zu öffnen.  Die Vorschaufunktion ist auch nach der Kompilierung ausführbarer Dateien hilfreich, da die Ressourcenbezeichner in Ziffern geändert werden.  Da diese numerischen Bezeichner oft nicht genügend Informationen liefern, können Sie sie mittels der Ressourcenvorschau schnell identifizieren.  
+# <a name="previewing-resources"></a>Anzeigen von Ressourcen in der Vorschau
+Ausführen einer Vorschau für Ihre Ressourcen können Sie grafische Ressourcen anzeigen, ohne sie zu öffnen. Anzeigen einer Vorschau ist auch nützlich für ausführbare Dateien, nachdem Sie sie kompiliert haben, da der Ressourcen-IDs in Zahlen zu ändern. Da diese numerischen Bezeichnern nicht oft genug Informationen bereitstellen, hilft der Ressourcenvorschau schnell identifizieren.  
   
- In einer Vorschau kann das Layout der folgenden Ressourcentypen angezeigt werden:  
+ Sie können das visuelle Layout der die folgenden Ressourcentypen Vorschau anzeigen:  
   
 -   Bitmap  
   
@@ -43,28 +43,29 @@ Durch die Vorschau auf Ressourcen können Sie eine grafische Ressource betrachte
   
 -   Symbolleiste  
   
- Für Ressourcen, wie Zugriffstasten, Manifeste, Zeichenfolgentabellen und Versionsinformationen, ist die visuelle Vorschau nicht verfügbar.  
+ Die Vorschau-Funktion gilt nicht für die Zugriffstaste, Manifest Zeichenfolgentabelle und Versionsinformationen Ressourcen.  
   
-### So zeigen Sie eine Ressourcenvorschau an  
+### <a name="to-preview-resources"></a>Um Ressourcen in der Vorschau anzeigen  
   
-1.  Wählen Sie die Ressource in der [Ressourcenansicht](../windows/resource-view-window.md) oder in einem Dokumentfenster aus, z. B. **IDD\_ABOUTBOX**.  
+1.  In [Ressourcenansicht](../windows/resource-view-window.md) oder einem Dokumentfenster angezeigt, wählen Sie die Ressource, z. B. "IDD_ABOUTBOX".  
   
-     **Hinweis** Wenn das Projekt noch keine RC\-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).  
+     **Hinweis** Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Klicken Sie im [Eigenschaftenfenster](../Topic/Properties%20Window.md) auf die Schaltfläche **Eigenschaftenseiten**.  
+2.  In der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window), klicken Sie auf die **Eigenschaftenseiten** Schaltfläche.  
   
-     \- oder \-  
+     \- oder –  
   
-3.  Klicken Sie im Menü **Ansicht** auf die Option **Eigenschaftenseiten**.  
+3.  Auf der **Ansicht** Menü klicken Sie auf **Eigenschaftenseiten**.  
   
-     Die Eigenschaftenseite der Ressource wird mit einer Vorschau der Ressource geöffnet.  Anschließend können Sie mit der NACH\-OBEN\- bzw. NACH\-UNTEN\-TASTE durch die Strukturansicht in der Ressourcenansicht oder im Dokumentfenster navigieren.  Die **Eigenschaftenseite** bleibt geöffnet und zeigt jede Ressource an, die den Fokus besitzt und die die Vorschaufunktion unterstützt.  
+     Die Eigenschaftenseite für die Ressource wird geöffnet, zeigt eine Vorschau der Ressource. Sie können mithilfe der nach-oben und nach-unten-Taste, um das Strukturansicht-Steuerelement in der Ressourcenansicht oder das Dokumentfenster zu navigieren. Die Eigenschaftenseite bleibt geöffnet und zeigt alle Ressourcen, die Fokus hat und kann in der Vorschau angezeigt werden.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](https://msdn.microsoft.com/library/f45fce5x.aspx) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](https://msdn.microsoft.com/library/xbx3z216.aspx). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
  **Anforderungen**  
   
  Win32  
   
-## Siehe auch  
- [How to: Open a Resource Script File Outside of a Project \(Standalone\)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)   
- [Resource Editors](../mfc/resource-editors.md)
+## <a name="see-also"></a>Siehe auch  
+ [Vorgehensweise: Öffnen eine Ressourcenskriptdatei außerhalb eines Projekts (eigenständig)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)   
+ [Ressourcen-Editor](../windows/resource-editors.md)
+

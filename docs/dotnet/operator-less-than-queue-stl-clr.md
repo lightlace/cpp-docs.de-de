@@ -1,32 +1,30 @@
 ---
-title: "operator&lt; (queue) (STL/CLR)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::operator<"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator<-Member [STL/CLR]"
+title: Operator&lt; (Warteschlange) (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::operator<
+dev_langs: C++
+helpviewer_keywords: operator< member [STL/CLR]
 ms.assetid: 2c981e2b-9a88-4b4a-8060-9ac24d5631f5
-caps.latest.revision: 15
-caps.handback.revision: "13"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8706d0f4c4ee2aa0a01fa9b260771d799290f6ed
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# operator&lt; (queue) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Warteschlangenkleiner\-als\-vergleich.  
+# <a name="operatorlt-queue-stlclr"></a>Operator&lt; (Warteschlange) (STL/CLR)
+Kleiner als-Vergleich in die Warteschlange.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<typename Value,  
@@ -35,17 +33,17 @@ template<typename Value,
         queue<Value, Container>% right);  
 ```  
   
-#### Parameter  
- left  
- Linker Container zu vergleichen.  
+#### <a name="parameters"></a>Parameter  
+ links  
+ Linker zu vergleichender Container.  
   
- right  
- Rechter Container zu vergleichen.  
+ Rechts  
+ Rechter zu vergleichender Container.  
   
-## Hinweise  
- Die Operatorfunktionsrückgaben true, wenn für die niedrigste Position für die `i``!(``right``[i] <` `left``[i])` ist es auch dass `left``[i] <` `right``[i]` aus.  Andernfalls ist `left``->`[queue::size](../dotnet/queue-size-stl-clr.md)`() <` `right``->size()` zurück, das Sie es verwenden, um zu testen, ob `left` vor `right` sortiert wird, wenn die beiden verglichenes Warteschlangen Element durch Element sind.  
+## <a name="remarks"></a>Hinweise  
+ Der Operator-Funktion gibt "true" zurück, wenn, für die niedrigste Position `i` für die `!(right[i] < left[i])` es ist auch, die "true" `left[i] < right[i]`. Andernfalls wird zurückgegeben `left->` [Queue:: Size (STL/CLR)](../dotnet/queue-size-stl-clr.md) `() <` `right->size()` Sie zum Testen verwenden, ob `left` sortiert ist, bevor Sie `right` bei beiden Warteschlangen verglichenen elementweise sind.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_queue_operator_lt.cpp   
@@ -85,19 +83,22 @@ int main()
   
 ```  
   
-  **ein b c**  
- **ein b d**  
-**\[ein b c\] \< \[ein b c\] ist falsch**  
-**\[ein b c ein b\] \< \[d\] gilt**   
-## Anforderungen  
- **Header:** \<cliext\/Warteschlange\>  
+```Output  
+ a b c  
+ a b d  
+[a b c] < [a b c] is False  
+[a b c] < [a b d] is True  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext bzw. einer neuen Warteschlange >  
   
-## Siehe auch  
- [queue](../dotnet/queue-stl-clr.md)   
- [operator\=\= \(queue\)](../dotnet/operator-equality-queue-stl-clr.md)   
- [operator\!\= \(queue\)](../dotnet/operator-inequality-queue-stl-clr.md)   
- [operator\>\= \(queue\)](../dotnet/operator-greater-or-equal-queue-stl-clr.md)   
- [operator\> \(queue\)](../dotnet/operator-greater-than-queue-stl-clr.md)   
- [operator\<\= \(queue\)](../dotnet/operator-less-or-equal-queue-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Warteschlange (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [Operator == (Warteschlange) (STL/CLR)](../dotnet/operator-equality-queue-stl-clr.md)   
+ [Operator! = (Warteschlange) (STL/CLR)](../dotnet/operator-inequality-queue-stl-clr.md)   
+ [Operator > = (Warteschlange) (STL/CLR)](../dotnet/operator-greater-or-equal-queue-stl-clr.md)   
+ [Operator > (Warteschlange) (STL/CLR)](../dotnet/operator-greater-than-queue-stl-clr.md)   
+ [operator<= (queue) (STL/CLR)](../dotnet/operator-less-or-equal-queue-stl-clr.md)

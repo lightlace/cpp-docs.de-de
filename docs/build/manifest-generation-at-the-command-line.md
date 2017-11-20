@@ -1,33 +1,33 @@
 ---
-title: "Manifestgenerierung &#252;ber die Befehlszeile | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Manifesttool (mt.exe)"
-  - "Manifeste [C++]"
+title: "Manifestgenerierung über die Befehlszeile | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- manifests [C++]
+- manifest tool (mt.exe)
 ms.assetid: fc2ff255-82b1-4c44-af76-8405c5850292
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: bbbee2fc1402a49aa773afc8eb6ae830edaffcc8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Manifestgenerierung &#252;ber die Befehlszeile
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Beim Erstellen von C\/C\+\+\-Anwendungen über die Befehlszeile – mithilfe von nmake oder einem ähnlichen Tool – wird das Manifest generiert, nachdem der Linker alle Objektdateien verarbeitet und die endgültige Binärdatei erstellt hat.  Der Linker sammelt die in den Objektdateien gespeicherten Assemblyinformationen und kombiniert diese Informationen zu einer endgültigen Manifestdatei.  Standardmäßig generiert der Linker eine Datei, die binary\_name.extension.manifest \<, um\>die\>endgültige\<Binärdatei zu beschreiben genannt wird.  Der Linker ist nicht in der Lage, eine Manifestdatei in die Binärdatei einzubetten, sondern kann ein Manifest nur als externe Datei generieren.  Es gibt verschiedene Möglichkeiten, ein Manifest in die endgültige Binärdatei einzubetten, z. B. die Verwendung des [Manifesttools \(mt.exe\)](http://msdn.microsoft.com/library/aa375649) oder das Kompilieren des Manifests in eine Ressourcendatei.  Beachten Sie, dass beim Einbetten eines Manifests in die endgültige Binärdatei spezielle Regeln befolgt werden müssen, damit Features wie inkrementelles Verknüpfen, Signierung und Bearbeiten und Fortfahren funktionieren.  Diese und weitere Optionen beim Erstellen über die Befehlszeile werden in [Gewusst wie: Einbetten eines Manifests in eine C\/C\+\+\-Anwendung](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md) beschrieben.  
+# <a name="manifest-generation-at-the-command-line"></a>Manifestgenerierung über die Befehlszeile
+Beim Erstellen von C/C++-Anwendungen über die Befehlszeile mithilfe von Nmake oder ähnliche Tools, wird das Manifest generiert, nachdem der Linker verarbeitet alle Objektdateien und die endgültige Binärdatei erstellt hat. Der Linker in Objektdateien gespeicherten Assemblyinformationen erfasst und kombiniert diese Informationen in einer endgültigen Manifestdatei. Standardmäßig generiert der Linker eine Datei mit dem Namen < name_der_binärdatei >. \<Erweiterung > Manifest, um die endgültige Binärdatei zu beschreiben. Der Linker bettet die Manifestdatei in die Binärdatei nicht und kann nur ein Manifest als externe Datei generieren. Es gibt mehrere Möglichkeiten zum Einbetten eines Manifests in die endgültige Binärdatei, z. B. mit der [Manifesttool (mt.exe)](http://msdn.microsoft.com/library/aa375649) oder Kompilieren das Manifest in eine Ressourcendatei. Es ist wichtig zu bedenken, die bestimmte Regeln befolgt werden, wenn das Einbetten eines Manifests in die endgültige Binärdatei mit Funktionen wie inkrementelles Verknüpfen aktivieren "Signierung", und bearbeiten und fortfahren. Diese und andere Optionen werden im erläutert [Vorgehensweise: Einbetten einer Manifest innerhalb eines C/C++-Anwendung](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md) beim Erstellen über die Befehlszeile.  
   
-## Siehe auch  
- [Manifeste](http://msdn.microsoft.com/library/aa375365)   
- [\/INCREMENTAL \(inkrementell verknüpfen\)](../build/reference/incremental-link-incrementally.md)   
- [Assemblys mit starken Namen \(Assemblysignierung\)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)   
- ["Bearbeiten und Fortfahren"](../Topic/Edit%20and%20Continue.md)   
- [Manifestgenerierung für C\/C\+\+\-Programme](../build/understanding-manifest-generation-for-c-cpp-programs.md)
+## <a name="see-also"></a>Siehe auch  
+ [Bereitstellungsmanifeste](http://msdn.microsoft.com/library/aa375365)   
+ [/ INCREMENTAL (inkrementell verknüpfen)](../build/reference/incremental-link-incrementally.md)   
+ [Assemblys mit starken Namen (Assemblysignierung) (C + c++ / CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)   
+ [Bearbeiten und fortfahren](/visualstudio/debugger/edit-and-continue)   
+ [Manifestgenerierung für C/C++-Programme](../build/understanding-manifest-generation-for-c-cpp-programs.md)

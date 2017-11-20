@@ -1,32 +1,30 @@
 ---
-title: "pointer_default | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.pointer_default"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pointer_default attribute"
+title: Pointer_default | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.pointer_default
+dev_langs: C++
+helpviewer_keywords: pointer_default attribute
 ms.assetid: 2d0c7bbc-a1e8-4337-9e54-e304523e2735
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5e7eed7dbb4fbd7648e02857897dc4f0c541af7c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# pointer_default
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gibt die Standardzeiger Attribut für alle Zeiger, außer Zeiger auf oberster Ebene angezeigt, die in den Parameterlisten enthalten sein.  
+# <a name="pointerdefault"></a>pointer_default
+Gibt das Standardattribut für die Zeiger für alle Zeiger, mit Ausnahme der obersten Ebene Zeiger, die in Parameterlisten angezeigt werden.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -35,30 +33,29 @@ Gibt die Standardzeiger Attribut für alle Zeiger, außer Zeiger auf oberster Eb
 ) ]  
 ```  
   
-#### Parameter  
- *Wert*  
- Ein Wert, der den Zeigertyp beschrieben werden: **PTR**, `ref`oder **eindeutig**.  
+#### <a name="parameters"></a>Parameter  
+ *value*  
+ Ein Wert, der beschreibt, den Zeigertyp: **Ptr**, `ref`, oder **eindeutige**.  
   
-## Hinweise  
- Das Attribut **pointer\_default** C\+\+ verfügt über die gleichen Funktionen wie das [pointer\_default](http://msdn.microsoft.com/library/windows/desktop/aa367141) MIDL\-Attribut.  
+## <a name="remarks"></a>Hinweise  
+ Die **Pointer_default** C++-Attribut hat die gleiche Funktionalität wie die [Pointer_default](http://msdn.microsoft.com/library/windows/desktop/aa367141) MIDL-Attribut.  
   
-## Beispiel  
- Weitere Informationen finden Sie im Beispiel für [defaultvalue](../windows/defaultvalue.md) B. für eine Verwendung von **pointer\_default**.  
+## <a name="example"></a>Beispiel  
+ Siehe das Beispiel für ["DefaultValue"](../windows/defaultvalue.md) für ein Beispiel für die Verwendung von **Pointer_default**.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
 |**Betrifft**|`interface`|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Keine|  
+|**Ungültige Attribute**|Keine|  
   
- Weitere Informationen über das kontexte finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [IDL-Attribute](../windows/idl-attributes.md)   
+ [Schnittstellenattribut](../windows/interface-attributes.md)   

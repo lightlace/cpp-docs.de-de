@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -33,8 +32,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationBaseObject::m_nGroupID
 - AFXANIMATIONCONTROLLER/CAnimationBaseObject::m_nObjectID
 - AFXANIMATIONCONTROLLER/CAnimationBaseObject::m_pParentController
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationBaseObject [MFC], CAnimationBaseObject
 - CAnimationBaseObject [MFC], ApplyTransitions
@@ -59,16 +57,15 @@ helpviewer_keywords:
 - CAnimationBaseObject [MFC], m_nObjectID
 - CAnimationBaseObject [MFC], m_pParentController
 ms.assetid: 76b25917-940e-4eba-940f-31d270702603
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 5b1fb434158d263b57fb34d15d976d9bae41c4df
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 0e866ec4858ecc32c4608d1fd9cbd9d42d4b1eee
-ms.contentlocale: de-de
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="canimationbaseobject-class"></a>CAnimationBaseObject-Klasse
 Die Basisklasse für alle Animationsobjekte.  
@@ -444,4 +441,3 @@ void SetUserData (DWORD dwUserData);
   
 ## <a name="see-also"></a>Siehe auch  
  [Klassen](../../mfc/reference/mfc-classes.md)
-

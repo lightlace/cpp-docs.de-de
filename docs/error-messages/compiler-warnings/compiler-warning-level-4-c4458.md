@@ -4,41 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4458
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4458
+f1_keywords: C4458
+dev_langs: C++
+helpviewer_keywords: C4458
 ms.assetid: 7bdaa1b1-0caf-4d68-98c4-6bdd441c23fb
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: 07b8db673b2db27f456f0e7228695c83497d1278
-ms.contentlocale: de-de
-ms.lasthandoff: 05/10/2017
-
+ms.openlocfilehash: 455b7173221e05b0da0f73a5c1401d1114297b14
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-4-c4458"></a>Compilerwarnung (Stufe 4) C4458
   
@@ -66,4 +47,3 @@ struct S {
     }
 } s;
 ```  
-

@@ -1,33 +1,32 @@
 ---
-title: "swap-Funktion (auto_gcroot) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::swap"
-  - "msclr.swap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "swap-Funktion"
+title: Swap-Funktion (Auto_gcroot) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::swap
+- msclr.swap
+dev_langs: C++
+helpviewer_keywords: swap function
 ms.assetid: 2fe8146b-a7f7-445a-9ae9-53b5556be701
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5aecd0e745566a357612af2df3cf7f1be9d5ebe8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# swap-Funktion (auto_gcroot)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Austauschobjekte zwischen einem `auto_gcroot` und andere.  
+# <a name="swap-function-autogcroot"></a>swap-Funktion (auto_gcroot)
+Tauscht Objekte zwischen einer `auto_gcroot` und eine andere.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<typename _element_type>  
@@ -37,14 +36,14 @@ void swap(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `_left`  
- Ein `auto_gcroot`.  
+ Eine `auto_gcroot`.  
   
  `_right`  
  Eine andere `auto_gcroot`.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // msl_swap_auto_gcroot.cpp  
@@ -66,13 +65,16 @@ int main() {
 }  
 ```  
   
-  **s1 \= "Zeichenfolge eine", s2 \= Zeichenfolge "zwei"**  
-**s1 \= Zeichenfolge "zwei", s2 \= eine "Zeichenfolge"**   
-## Anforderungen  
- **Headerdatei** \<msclr\\auto\_gcroot.h\>  
+```Output  
+s1 = 'string one', s2 = 'string two'  
+s1 = 'string two', s2 = 'string one'  
+```  
   
- **Namespace** msclr  
+## <a name="requirements"></a>Anforderungen  
+ **Headerdatei** \<msclr\auto_gcroot.h >  
   
-## Siehe auch  
- [auto\_gcroot](../dotnet/auto-gcroot.md)   
- [auto\_gcroot::swap](../dotnet/auto-gcroot-swap.md)
+ **Namespace** Msclr  
+  
+## <a name="see-also"></a>Siehe auch  
+ [auto_gcroot](../dotnet/auto-gcroot.md)   
+ [auto_gcroot::swap](../dotnet/auto-gcroot-swap.md)

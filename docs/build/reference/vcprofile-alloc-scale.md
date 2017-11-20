@@ -1,51 +1,49 @@
 ---
-title: "VCPROFILE_ALLOC_SCALE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VCPROFILE_ALLOC_SCALE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "VCPROFILE_ALLOC_SCALE-Umgebungsvariable"
+title: VCPROFILE_ALLOC_SCALE | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VCPROFILE_ALLOC_SCALE
+dev_langs: C++
+helpviewer_keywords: VCPROFILE_ALLOC_SCALE environment variable
 ms.assetid: 5cb5ce27-f9b8-489b-b46c-d6e9bcab2d34
-caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ed767299778b65a7275bbfd225daaf46ec0e98be
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# VCPROFILE_ALLOC_SCALE
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ändern Sie den für die Profildaten belegten Arbeitsspeicher.  
+# <a name="vcprofileallocscale"></a>VCPROFILE_ALLOC_SCALE
+Ändern Sie die Speichermenge belegt werden, um die Profildaten enthält.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 VCPROFILE_ALLOC_SCALE=scale_value  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `scale_value`  
- Der Skalierungswert für den Arbeitsspeicher, den Sie für die Ausführung von Testszenarien reservieren möchten.  Standardwert: 1.  
+ Der Wert für die Dezimalstellen für die Menge an Arbeitsspeicher zum Ausführen des Testszenarios werden sollen.  Der Standard ist 1.  
   
-## Hinweise  
- In seltenen Fällen kann es vorkommen, dass während der Ausführung von Testszenarien der freie Arbeitsspeicher für die Erfassung von Profildaten nicht ausreicht.  In diesem Fall können Sie den verfügbaren Arbeitsspeicher mit `VCPROFILE_ALLOC_SCALE` erhöhen.  
+## <a name="remarks"></a>Hinweise  
+ In seltenen Fällen kann es werden genügend Arbeitsspeicher zur Unterstützung beim Ausführen des Testszenarios Profil Datensammlung.  In diesen Fällen können Sie erhöhen die Größe des Arbeitsspeichers mit `VCPROFILE_ALLOC_SCALE`.  
   
- Wenn bei einem Testlauf aufgrund von unzureichendem Arbeitspeicher eine Fehlermeldung ausgegeben wird, weisen Sie `VCPROFILE_ALLOC_SCALE` einen höheren Wert zu, bis der Testlauf ohne eine solche Fehlermeldung ausgeführt und abgeschlossen wird.  
+ Wenn Sie während eines Testlaufs eine Fehlermeldung, der angibt erhalten, dass Sie nicht genügend Arbeitsspeicher verfügen, weisen Sie einen höheren Wert zu `VCPROFILE_ALLOC_SCALE`, bis der Test abgeschlossen, ohne Out-of-Memory-Fehler ausgeführt wird.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 set VCPROFILE_ALLOC_SCALE=2  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Umgebungsvariablen für profilgesteuerte Optimierungen](../../build/reference/environment-variables-for-profile-guided-optimizations.md)

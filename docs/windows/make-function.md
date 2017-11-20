@@ -1,32 +1,30 @@
 ---
-title: "Make-Funktion | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Make"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Make-Funktion"
+title: Make-Funktion | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Make
+dev_langs: C++
+helpviewer_keywords: Make function
 ms.assetid: 66704143-df99-4a95-904d-ed99607e1034
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ec9edad09252402578788eeccb8e9ea7508ab98d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Make-Funktion
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Initialisiert die angegebene [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]\-Klasse.  Verwenden Sie diese Funktion, um eine Komponente zu instanziieren, die in demselben Modul definiert ist.  
+# <a name="make-function"></a>Make-Funktion
+Initialisiert die angegebene Windows-Runtime-Klasse. Verwenden Sie diese Funktion, eine Komponente zu instanziieren, die im selben Modul definiert ist.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <  
@@ -170,74 +168,74 @@ template <
 ComPtr<T> Make();  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `T`  
- Eine vom Benutzer angegebene Klasse, die von `WRL::RuntimeClass` erbt.  
+ Eine benutzerdefinierte Klasse, die erbt `WRL::RuntimeClass`.  
   
  `TArg1`  
- Typ vom Argument 1, das der angegebenen Laufzeitklasse übergeben wird.  
+ Typ des Arguments 1, der auf dem angegebenen Common Language Runtime-Klasse übergeben wird.  
   
  `TArg2`  
- Typ vom Argument 2, das der angegebenen Laufzeitklasse übergeben wird.  
+ Typ des Arguments 2, der auf dem angegebenen Common Language Runtime-Klasse übergeben wird.  
   
  `TArg3`  
- Typ vom Argument 3, das der angegebenen Laufzeitklasse übergeben wird.  
+ Typ des Arguments 3, die an die angegebene Runtime-Klasse übergeben wird.  
   
  `TArg4`  
- Typ vom Argument 4, das der angegebenen Laufzeitklasse übergeben wird.  
+ Typ des Arguments 4, der auf dem angegebenen Common Language Runtime-Klasse übergeben wird.  
   
  `TArg5`  
- Typ vom Argument 5, das der angegebenen Laufzeitklasse übergeben wird.  
+ Typ des Arguments 5, der auf dem angegebenen Common Language Runtime-Klasse übergeben wird.  
   
  `TArg6`  
- Typ vom Argument 6, das der angegebenen Laufzeitklasse übergeben wird.  
+ Typ des Arguments 6, der auf dem angegebenen Common Language Runtime-Klasse übergeben wird.  
   
  `TArg7`  
- Typ vom Argument 7, das der angegebenen Laufzeitklasse übergeben wird.  
+ Typ des Arguments 7, die an die angegebene Runtime-Klasse übergeben wird.  
   
  `TArg8`  
- Typ vom Argument 8, das der angegebenen Laufzeitklasse übergeben wird.  
+ Typ des Arguments 8, der auf dem angegebenen Common Language Runtime-Klasse übergeben wird.  
   
  `TArg9`  
- Typ vom Argument 9, das der angegebenen Laufzeitklasse übergeben wird.  
+ Typ des Arguments 9, die an die angegebene Runtime-Klasse übergeben wird.  
   
  `arg1`  
- Argument 1, das der angegebenen Laufzeitklasse übergeben wird.  
+ Argument 1, der auf dem angegebenen Common Language Runtime-Klasse übergeben wird.  
   
  `arg2`  
- Argument 2, das der angegebenen Laufzeitklasse übergeben wird.  
+ Argument 2, das an die angegebene Runtime-Klasse übergeben wird.  
   
  `arg3`  
- Argument 3, das der angegebenen Laufzeitklasse übergeben wird.  
+ Argument 3, das an die angegebene Runtime-Klasse übergeben wird.  
   
  `arg4`  
- Argument 4, das der angegebenen Laufzeitklasse übergeben wird.  
+ Argument 4, der auf dem angegebenen Common Language Runtime-Klasse übergeben wird.  
   
  `arg5`  
- Argument 5, das der angegebenen Laufzeitklasse übergeben wird.  
+ Argument 5, der auf dem angegebenen Common Language Runtime-Klasse übergeben wird.  
   
  `arg6`  
- Argument 6, das der angegebenen Laufzeitklasse übergeben wird.  
+ Argument 6, das an die angegebene Runtime-Klasse übergeben wird.  
   
  `arg7`  
- Argument 7, das der angegebenen Laufzeitklasse übergeben wird.  
+ Argument 7, das an die angegebene Runtime-Klasse übergeben wird.  
   
  `arg8`  
- Argument 8, das der angegebenen Laufzeitklasse übergeben wird.  
+ Argument 8, das an die angegebene Runtime-Klasse übergeben wird.  
   
  `arg9`  
- Argument 9, das der angegebenen Laufzeitklasse übergeben wird.  
+ Argument 9, die an die angegebene Runtime-Klasse übergeben wird.  
   
-## Rückgabewert  
- Ein `ComPtr<T>`\-Objekt, wenn erfolgreich; andernfalls `nullptr`.  
+## <a name="return-value"></a>Rückgabewert  
+ Ein `ComPtr<T>` -Objekt, wenn erfolgreich, andernfalls `nullptr`.  
   
-## Hinweise  
- Siehe [Gewusst wie: Direktes Instanziieren von WRL\-Komponenten](../windows/how-to-instantiate-wrl-components-directly.md), um die Unterschiede zwischen dieser Funktion und [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) zu erfahren und ein Beispiel.  
+## <a name="remarks"></a>Hinweise  
+ Finden Sie unter [Vorgehensweise: WRL-Komponenten direkt instanziieren](../windows/how-to-instantiate-wrl-components-directly.md) um die Unterschiede zwischen dieser Funktion zu erfahren und [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md), und ein Beispiel.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** implements.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [Microsoft::WRL\-Namespace](../windows/microsoft-wrl-namespace.md)
+## <a name="see-also"></a>Siehe auch  
+ [Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)

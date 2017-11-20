@@ -1,41 +1,39 @@
 ---
-title: "priority_queue::generic_value (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::generic_value"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_value-Member [STL/CLR]"
+title: priority_queue::generic_value (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::generic_value
+dev_langs: C++
+helpviewer_keywords: generic_value member [STL/CLR]
 ms.assetid: d534e95b-7939-4fb4-bb71-2164e2b97c4f
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5470a1fda4cd44575744218a8e0363c0cc9cd7e1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# priority_queue::generic_value (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Der Typ eines Elements mit der generischen Schnittstelle für den Container.  
+# <a name="priorityqueuegenericvalue-stlclr"></a>priority_queue::generic_value (STL/CLR)
+Der Typ eines Elements für die Verwendung mit der generischen Schnittstelle für den Container.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef GValue generic_value;  
 ```  
   
-## Hinweise  
- Der Typ beschreibt ein Objekt des Typs `GValue`, der den gespeicherten Elementwert zur Verwendung mit der generischen Schnittstelle für diese Vorlagencontainerklasse beschreibt. \(`GValue` ist entweder `value_type` oder `value_type^`, wenn `value_type` ein Referenz\-Typ ist.\)  
+## <a name="remarks"></a>Hinweise  
+ Der Typ beschreibt ein Objekt des Typs `GValue` , beschreibt die gespeicherten Elementwert für die Verwendung mit der generischen Schnittstelle für diese Vorlage Container-Klasse. (`GValue` handelt es sich um `value_type` oder `value_type^` Wenn `value_type` ein Ref-Typ ist.)  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_priority_queue_generic_value.cpp   
@@ -74,15 +72,18 @@ int main()
   
 ```  
   
-  **c ein b**  
- **c ein b**  
- **c a b**   
-## Anforderungen  
- **Header:** \<cliext\/Warteschlange\>  
+```Output  
+c a b  
+c a b  
+c b a  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext bzw. einer neuen Warteschlange >  
   
-## Siehe auch  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [priority\_queue::generic\_container](../dotnet/priority-queue-generic-container-stl-clr.md)   
- [priority\_queue::value\_type](../dotnet/priority-queue-value-type-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::generic_container (STL/CLR)](../dotnet/priority-queue-generic-container-stl-clr.md)   
+ [priority_queue::value_type (STL/CLR)](../dotnet/priority-queue-value-type-stl-clr.md)

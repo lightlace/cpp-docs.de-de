@@ -4,43 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xfunctional/std::less_equal
-- less_equal
-dev_langs:
-- C++
+f1_keywords: xfunctional/std::less_equal
+dev_langs: C++
 helpviewer_keywords:
 - less_equal function
 - less_equal struct
 ms.assetid: 32085782-c7e0-4310-9b40-8aa3c1bff211
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 58e188cc830140ace78777a03959a7f4e170f328
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: b568198401ceb36a0b094609e3e2e4c118b3821f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="lessequal-struct"></a>less_equal-Struktur
 Ein binäres Prädikat, das den kleiner-oder-gleich-Vorgang (`operator<=`) mit den Argumenten ausführt.  
@@ -75,7 +56,7 @@ struct less_equal<void>
  Der rechte Operand des kleiner-oder-gleich-Vorgangs. Die nicht spezialisierte Vorlage besitzt ein lvalue-Verweisargument vom Typ `Type`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von lvalue und rvalue-Verweisargumenten des abgeleiteten Typs `U`.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Das Ergebnis von `Left``<=``Right`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung des Ergebnisses mit dem von `operator<=` zurückgegebenen Typs.  
+ Das Ergebnis von `Left <= Right`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung des Ergebnisses mit dem von `operator<=` zurückgegebenen Typs.  
   
 ## <a name="remarks"></a>Hinweise  
  Das binäre Prädikat `less_equal`< `Type`> stellt eine strenge, schwache Sortierung eines Satzes von Elementwerten vom Typ `Type` in Äquivalenzklassen bereit, wenn und nur wenn dieser Typ den mathematischen Standardanforderungen für eine solche Sortierung entspricht. Die Spezialisierungen für einen Zeigertyp ergeben eine gesamte Sortierung von Elementen, insofern, dass alle Elemente unterschiedlicher Werte zueinander in Beziehung stehend sortiert werden.  
@@ -148,7 +129,6 @@ Sorted vector v1 = (2836 2836 2836 6205 15251 31247 37154 48755)
   
 ## <a name="see-also"></a>Siehe auch  
  [C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

@@ -1,32 +1,30 @@
 ---
-title: "Compilerwarnung (Stufe 4) C4210 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4210"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4210"
+title: Compilerwarnung (Stufe 4) C4210 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4210
+dev_langs: C++
+helpviewer_keywords: C4210
 ms.assetid: f8600adf-dfe2-4022-a37a-3d4997641dfd
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3abb4f7f25b33b8cd0c95047c7fb72209bd9643d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Compilerwarnung (Stufe 4) C4210
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Nicht dem Standard entsprechende Erweiterung: Funktion gehört zum Gültigkeitsbereich der Datei  
+# <a name="compiler-warning-level-4-c4210"></a>Compilerwarnung (Stufe 4) C4210
+nicht dem Standard entsprechende Erweiterung: Funktion im Gültigkeitsbereich der Datei  
   
- Bei Verwendung der Microsoft\-Standarderweiterungen \([\/Ze](../../build/reference/za-ze-disable-language-extensions.md)\) befinden sich Funktionsdeklarationen innerhalb des Dateigültigkeitsbereichs.  
+ Mit den Standard-Microsoft-Erweiterungen (["/ Ze"](../../build/reference/za-ze-disable-language-extensions.md)), Funktionsdeklarationen haben einen Dateigültigkeitsbereich.  
   
 ```  
 // C4210.c  
@@ -42,4 +40,4 @@ int main()
 }                //  /Za passes 4 as type int  
 ```  
   
- Durch diese Erweiterung kann verhindert werden, dass der Code auf andere Compiler portierbar ist.
+ Diese Erweiterung kann verhindern, dass den Code wird auf andere Compiler übertragbar.

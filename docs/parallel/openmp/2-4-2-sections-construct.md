@@ -1,58 +1,57 @@
 ---
-title: "2.4.2 sections Construct"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.4.2 sections-Konstrukt | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: e9e6e3ea-7fc9-4925-8f68-92b8a5bb1e76
-caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 22aa4cc1bde59234d70803c2e878d3fbf83f499e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# 2.4.2 sections Construct
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die **Abschnitte**\-Direktive identifizieren ein einfaches Arbeitsteilungs konstrukt, das einen Satz von Konstrukten angibt, die unter Threads in einem Team unterteilt werden sollen.  Jeder Abschnitt wird einmal durch einen Thread im Team ausgeführt.  Die Syntax der **Abschnitte**\-Direktive sieht wie folgt aus:  
+# <a name="242-sections-construct"></a>2.4.2 sections-Konstrukt
+Die **Abschnitte** Richtlinie identifiziert ein noniterative Arbeit sharing-Konstrukt, das einen Satz von Konstrukte angibt, die zwischen Threads in einem Team unterteilt werden. Jeder Abschnitt wird von einem Thread im Team einmal ausgeführt. Die Syntax der **Abschnitte** Richtlinie lautet wie folgt:  
   
 ```  
 #pragma omp sections [clause[[,] clause] ...] new-line  
    {  
    [#pragma omp section new-line]  
       structured-block  
-   [#pragma omp section new-line  
-      structured-block ]  
+   [#pragma omp section new-linestructured-block ]  
 ...  
 }  
 ```  
   
- Die Klausel ist eine der folgenden Aktionen aus:  
+ Die-Klausel ist eine der folgenden:  
   
- **\(privat**Variable*Liste***\)**  
+ **Private (** *Variablenliste* **)**  
   
- **\(firstprivate**Variable*Liste***\)**  
+ **Firstprivate (** *Variablenliste* **)**  
   
- **\(lastprivate**Variable*Liste***\)**  
+ **Lastprivate (** *Variablenliste* **)**  
   
- *Operator* **\(Verringerung :**  *Variable Liste* **\)**  
+ **Verringerung (** *Operator* **:***Variablenliste* **)**   
   
  **nowait**  
   
- Jeder Abschnitt wird von **Abschnitt**\-Direktive vorangestellt, obwohl die **Abschnitt**\-Direktive für den ersten Abschnitt optional sind.  Die **Abschnitt**\-Direktive muss innerhalb des lexikalischen Wertebereichs der **Abschnitte**\-Direktive angezeigt werden.  Es gibt eine implizite Grenze am Ende eines **Abschnitte** Konstrukts, es sei denn, **nowait** angegeben wird.  
+ Jeder Abschnitt vorangestellt ist ein **Abschnitt** Richtlinie, obwohl die **Abschnitt** Richtlinie ist für den ersten Abschnitt optional. Die **Abschnitt** Direktiven müssen innerhalb der lexikalische Wertebereich angezeigt werden die **Abschnitte** Richtlinie. Besteht eine implizite Barriere am Ende einer **Abschnitte** erstellen, es sei denn, eine **Nowait** angegeben ist.  
   
- Einschränkungen für **Abschnitte**\-Direktive lauten wie folgt:  
+ Einschränkungen für die **Abschnitte** Richtlinie lauten wie folgt:  
   
--   **Abschnitt**\-Direktive darf nicht außerhalb des lexikalischen Wertebereichs der **Abschnitte**\-Direktive angezeigt werden.  
+-   Ein **Abschnitt** Richtlinie muss nicht außerhalb der lexikalische Wertebereich angezeigt werden. die **Abschnitte** Richtlinie.  
   
--   Nur eine einzige **nowait**\-Klausel kann auf **Abschnitte**\-Direktive angezeigt werden.  
+-   Nur ein einzelner **Nowait** -Klausel kann angezeigt werden, auf eine **Abschnitte** Richtlinie.  
   
-## Querverweise:  
+## <a name="cross-references"></a>Referenzen:  
   
--   **private**, **firstprivate**, **lastprivate**und **Verringerung**\-Klauseln finden [2.7.2 Abschnitt](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) auf Seite 25.
+-   **private**, **Firstprivate**, **Lastprivate**, und **Verringerung** -Klausel finden Sie unter [Abschnitt 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) auf Seite "25".

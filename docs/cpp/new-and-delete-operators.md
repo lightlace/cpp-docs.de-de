@@ -4,36 +4,33 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - delete_cpp
 - new
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - new keyword [C++], dynamic allocation of objects
 - nothrownew.obj
 - delete keyword [C++], syntax
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 88f91e113ef47dc44ec0a300a99051cfaed3f08c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: df873b168c4257f9bfa05c9a382c4412627fe4bb
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="new-and-delete-operators"></a>Operatoren "new" und "delete"
 
 C++ unterstützt die dynamische Zuordnung und Freigabe von Objekten mit dem [neue](../cpp/new-operator-cpp.md) und [löschen](../cpp/delete-operator-cpp.md) Operatoren. Diese Operatoren belegen Speicher für Objekte aus einem Pool, der als freier Speicher bezeichnet wird. Die `new` Operator Ruft die Spezialfunktion [new-Operator](../cpp/new-operator-cpp.md), und die `delete` Operator Ruft die Spezialfunktion [Delete-Operator](../cpp/delete-operator-cpp.md).  
   
- In Visual C++ .NET 2002 die `new` -Funktion in der C++-Standardbibliothek unterstützen das Verhalten in der C++-Standard, d. eine Std:: bad_alloc-Ausnahme auslösen h., wenn die speicherbelegung fehlschlägt. Falls Sie weiterhin die nicht auslösende Version von benötigen `new`, das Programm mit nothrownew.obj verknüpfen. Jedoch, wenn Sie mit nothrownew.obj verknüpfen, die Standardeinstellung `operator new` in der C++-Standardbibliothek nicht mehr funktioniert.  
+ Die `new` -Funktion in der C++-Standardbibliothek unterstützt das Verhalten in der C++-Standard, d. eine Std:: bad_alloc-Ausnahme auslösen h., wenn die speicherbelegung fehlschlägt. Falls Sie weiterhin die nicht auslösende Version von benötigen `new`, das Programm mit nothrownew.obj verknüpfen. Jedoch, wenn Sie mit nothrownew.obj verknüpfen, die Standardeinstellung `operator new` in der C++-Standardbibliothek nicht mehr funktioniert.  
   
  Eine Liste der Bibliotheksdateien, die die C-Laufzeitbibliothek und C++-Standardbibliothek umfassen, finden Sie unter [CRT-Bibliotheksfunktionen](../c-runtime-library/crt-library-features.md).  
   
@@ -58,7 +55,7 @@ Die beiden Bereiche für `operator new`-Funktionen werden in der folgenden Tabel
 |**:: new-Operator**|Global|  
 |*Klassenname* **:: new-Operator**|Klasse|  
   
- Das erste Argument für **new-Operator** muss vom Typ **Size_t** (ein Typ, der im STDDEF definiert ist. H), und der Rückgabetyp ist immer **"void" \* **.  
+ Das erste Argument für **new-Operator** muss vom Typ **Size_t** (ein Typ, der im STDDEF definiert ist. H), und der Rückgabetyp ist immer **"void" \*** .  
   
  Die globale **new-Operator** Funktion wird aufgerufen, wenn die **neue** Operator wird verwendet, um Objekte des integrierten Typs zuweisen, Objekte des Klassentyps, die keine enthalten benutzerdefinierte **new-Operator** Funktionen und Arrays eines beliebigen Typs. Wenn die **neue** Operator wird verwendet, um Objekte eines Klassentyps zuzuweisen, in denen ein **new-Operator** definiert ist, dieser Klasse **new-Operator** aufgerufen wird.  
   
@@ -155,7 +152,7 @@ void operator delete( void * );
 void operator delete( void *, size_t );  
 ```  
   
- Nur einer der vorangehenden zwei Formen kann für eine bestimmte Klasse vorhanden sein. Die erste Form akzeptiert ein einzelnes Argument vom Typ **"void" \* **, das einen Zeiger auf das Objekt, das Aufheben der Zuordnung enthält. Die zweite Form – Zuordnung mit Größeninformationen – akzeptiert zwei Argumente: das erste ist ein Zeiger auf den freizugebenden Speicherblock und das zweite ist die Anzahl der freizugebenden Bytes. Ist der Rückgabetyp der beiden Formen `void` (**Delete-Operator** kann keinen Wert zurückgeben).  
+ Nur einer der vorangehenden zwei Formen kann für eine bestimmte Klasse vorhanden sein. Die erste Form akzeptiert ein einzelnes Argument vom Typ **"void" \*** , das einen Zeiger auf das Objekt, das Aufheben der Zuordnung enthält. Die zweite Form – Zuordnung mit Größeninformationen – akzeptiert zwei Argumente: das erste ist ein Zeiger auf den freizugebenden Speicherblock und das zweite ist die Anzahl der freizugebenden Bytes. Ist der Rückgabetyp der beiden Formen `void` (**Delete-Operator** kann keinen Wert zurückgeben).  
   
  Zur Beschleunigung Suche für die richtige Größenkategorie des Objekts, das gelöscht werden, die häufig nicht in der Nähe der Zuordnung selbst gespeichert und wahrscheinlich nicht zwischengespeichert wird ist die zweite Form; die zweite Form ist besonders nützlich, wenn ein **Delete-Operator** Funktion von einer Basisklasse wird verwendet, um ein Objekt einer abgeleiteten Klasse zu löschen.  
   
@@ -232,5 +229,4 @@ void f() {
    delete [] pX;  
 }  
 ```  
-
 

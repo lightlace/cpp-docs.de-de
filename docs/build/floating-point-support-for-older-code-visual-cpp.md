@@ -1,26 +1,26 @@
 ---
-title: "Gleitkommaunterst&#252;tzung f&#252;r &#228;lteren Code (Visual C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Gleitkommaunterstützung für älteren Code (Visual C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: a2a26b96-7bc2-418a-981a-51aa1a0294a2
-caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3ddc151a2a0f74c6f77be68cd026147a318a595a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Gleitkommaunterst&#252;tzung f&#252;r &#228;lteren Code (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die MMX\- und Gleitkomma\-Stapelregister \(MM0\-MM7\/ST0\-ST7\) werden durch Kontextschalter beibehalten.  Es gibt keine explizite Aufrufkonvention für diese Register.  Die Verwendung dieser Register ist im Kernelmoduscode in keinem Fall zulässig.  
+# <a name="floating-point-support-for-older-code-visual-c"></a>Gleitkommaunterstützung für älteren Code (Visual C++)
+MMX und Gleitkomma-Stack-Register (MM0-MM7/ST0-ST7) werden über Kontextwechsel beibehalten.  Es ist keine explizite Aufrufkonvention für diese Register.  Die Verwendung von diese Register ist streng in Kernelmoduscode nicht zulässig.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Aufrufkonvention](../build/calling-convention.md)

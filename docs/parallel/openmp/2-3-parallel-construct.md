@@ -1,108 +1,107 @@
 ---
-title: "2.3 parallel Construct"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.3 parallel-Konstrukt | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 190eacdf-2c16-4c06-8cb7-ac60eb211425
-caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: eb1d43207e7276aadac32e38a43cfa4ae47b9186
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# 2.3 parallel Construct
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die folgende Direktive definieren einen parallelen Bereichs, der ein Bereich des Programms ist, das durch mehrere Threads parallel ausgeführt werden soll.  Dies ist das grundlegende Konstrukt, das die parallele Ausführung beginnt.  
+# <a name="23-parallel-construct"></a>2.3 parallel-Konstrukt
+Die folgende Direktive definiert ein paralleles Bereichs, das einer Region des Programms ist, die durch mehrere Threads parallel ausgeführt werden soll. Dies ist das grundlegende Konstrukt, das mit der parallelen Ausführung beginnt.  
   
 ```  
-#pragma omp parallel [clause[ [, ]clause] ...] new-line  
-   structured-block  
+#pragma omp parallel [clause[ [, ]clause] ...] new-line   structured-block  
 ```  
   
- Die *Klausel* ist eine der folgenden Aktionen aus:  
+ Die *Klausel* ist eines der folgenden:  
   
- **\(falls** *Ausdruck* **\)**  
+ **Wenn (** *Ausdruck für skalare* **)**  
   
- **\(privat**Variable*Liste***\)**  
+ **Private (** *Variablenliste* **)**  
   
- **\(firstprivate**Variable*Liste***\)**  
+ **Firstprivate (** *Variablenliste* **)**  
   
- **default \(Shared &#124; keine\)**  
+ **Standard (freigegebenen &#124; none)**  
   
- **\(Shared**Variable*Liste***\)**  
+ **Freigegebene (** *Variablenliste* **)**  
   
- **\(copyin**Variable*Liste***\)**  
+ **Copyin (** *Variablenliste* **)**  
   
- *Operator* **\(Verringerung :**  *Variable Liste* **\)**  
+ **Verringerung (** *Operator* **:***Variablenliste* **)**   
   
- **\(num\_threads**Zahl*Ausdruck***\)**  
+ **Num_threads (** *Ganzzahlausdruck* **)**  
   
- Wenn ein Thread ein paralleles Konstrukt entdeckt, wird ein Team von Threads erstellt, wenn einer der folgenden Fälle zutrifft:  
+ Wenn ein Thread ein paralleles Konstrukts auftritt, wird ein Team von Threads erstellt, wenn eine der folgenden Fälle zutrifft:  
   
--   Keine **If**\-Klausel vorhanden ist.  
+-   Nicht **Wenn** -Klausel vorhanden ist.  
   
--   Der **If** Ausdruck wird auf einen Wert ungleich 0 \(null\) aus.  
+-   Die **Wenn** Ausdruck einen Wert ungleich NULL ausgewertet wird.  
   
- Dieser Thread wird der Masterthread des Teams mit einer Zahl von 0 Threads sowie alle Threads im Team, einschließlich des Masterthread, führen den Bereich parallel aus.  Wenn der Wert des **If** Ausdrucks \(null\) ist, wird der Bereich serialisiert.  
+ Dieser Thread wird die master-Thread des Teams, mit der eine Thread-Anzahl 0 (null), und alle Threads im Team, einschließlich der master-Thread die Region parallel ausgeführt. Wenn der Wert der **Wenn** Ausdruck NULL ist, wird der Bereich wird serialisiert.  
   
- Um die Anzahl der Threads zu ermitteln, die angefordert werden, werden die folgenden Regeln in der angegebenen Reihenfolge betrachtet.  Die erste Regel, deren Bedingung erfüllt ist, wird:  
+ Um die Anzahl der Threads zu bestimmen, die angefordert werden, werden die folgenden Regeln in der Reihenfolge angesehen. Die erste Regel, deren Bedingung erfüllt ist, werden angewendet werden:  
   
-1.  Wenn die **num\_threads**\-Klausel vorhanden ist, ist der ganzzahlige Wert des Ausdrucks, der die Anzahl der angeforderten Threads.  
+1.  Wenn die **Num_threads** -Klausel vorhanden ist, und klicken Sie dann der Wert des Ausdrucks ganze Zahl ist die Anzahl der angeforderten Threads.  
   
-2.  Wenn die **omp\_set\_num\_threads** Bibliotheksfunktion aufgerufen wurde, ist der Wert des Arguments des zuletzt ausgeführten Aufruf die Anzahl der angeforderten Threads.  
+2.  Wenn die **Omp_set_num_threads** Library-Funktion aufgerufen wurde, und klicken Sie dann der Wert des Arguments in den zuletzt ausgeführten Aufruf wird die Anzahl der Threads angefordert.  
   
-3.  Wenn die Umgebungsvariable **OMP\_NUM\_THREADS** definiert ist, ist der Wert dieser Umgebungsvariablen die Anzahl der angeforderten Threads.  
+3.  Wenn die Umgebungsvariable **OMP_NUM_THREADS** definiert ist, und klicken Sie dann der Wert dieser Umgebungsvariablen die Anzahl der Threads, die angefordert wird.  
   
-4.  Wenn keiner der oben beschriebenen Methoden verwendet wurden, wird die Anzahl der angeforderten Implementierung\-definiert Threads.  
+4.  Wenn keine der oben genannten Methoden verwendet wurden, wird die Anzahl der angeforderten Threads Implementierung definiert.  
   
- Wenn die **num\_threads**\-Klausel vorhanden ist, wird die Anzahl der Threads ab, die von der **omp\_set\_num\_threads** Bibliotheksfunktion oder die **OMP\_NUM\_THREADS** Umgebungsvariable nur für den parallelen Bereich angefordert werden, den sie angewendet wird.  Der nächste parallele Bereiche werden durch sie nicht betroffen.  
+ Wenn die **Num_threads** -Klausel vorhanden ist, und klicken Sie dann die Anzahl der Threads, die vom angeforderten ersetzende der **Omp_set_num_threads** Bibliotheksfunktion oder das **OMP_NUM_THREADS** nur für den parallelen Bereich-Umgebungsvariablen angegeben wird, angewendet. Nachfolgende parallele Bereiche sind nicht betroffen.  
   
- Die Anzahl von Threads, die den parallelen Bereichs ebenfalls ausgeführt werden, hängt auf ab, ob dynamische Anpassung der Anzahl von Threads aktiviert ist.  Wenn dynamische Anpassung deaktiviert ist, verhält sich die angeforderte Anzahl von Threads den parallelen Bereich aus.  Wenn dynamische Anpassung dann aktiviert ist, ist die angeforderte Anzahl von Threads die maximale Anzahl von Threads, die möglicherweise den parallelen Bereich ausführen.  
+ Die Anzahl der Threads, die den parallelen Bereich ausführen auch hängt davon ab, und zwar unabhängig davon, ob die dynamische Anpassung der Anzahl der Threads aktiviert ist. Wenn dynamische Anpassung deaktiviert ist, wird die angeforderte Anzahl von Threads die parallelen Bereichs ausgeführt. Wenn die dynamische Anpassung aktiviert ist, ist die angeforderte Anzahl von Threads die maximale Anzahl von Threads, die den parallelen Bereich ausführen kann.  
   
- Wenn ein paralleler Bereich auftritt, während dynamische Anpassung der Anzahl von Threads deaktiviert ist und die Anzahl der Threads, die für den parallelen Bereich angefordert werden, die Zahl übersteigt, die das Laufzeitsystem bereitstellen kann, wird das Verhalten des Programms Implementierung\-definiert.  Eine Implementierung führt möglicherweise zum Beispiel die Ausführung des Programms serialisiert, oder sie kann den parallelen Bereich.  
+ Wenn es sich bei ein paralleler Bereich gefunden wird, während dynamische Anpassung der Anzahl von Threads ist deaktiviert, und die Anzahl der Threads, die für den parallelen Bereich angeforderten überschreitet die Anzahl, die das Laufzeitsystem bereitstellen kann, ist das Verhalten des Programms Implementierung definiert. Eine Implementierung kann z. B. die Ausführung des Programms unterbrechen oder des parallelen Bereichs serialisieren kann.  
   
- Die **omp\_set\_dynamic** Bibliotheksfunktion und die **OMP\_DYNAMIC** Umgebungsvariablen können verwendet werden, um dynamische Anpassung der Anzahl von Threads zu aktivieren und zu deaktivieren.  
+ Die **Omp_set_dynamic** Library-Funktion und die **OMP_DYNAMIC** Umgebungsvariable aktivieren und deaktivieren die dynamische Anpassung der Anzahl von Threads verwendet werden kann.  
   
- Die Anzahl der physischen Prozessoren, welche Threads tatsächlich zu einem bestimmten Zeitpunkt hosten, wird Implementierung\-definiert.  Sobald erstellt wird, bleibt die Anzahl der Threads im Team für die Dauer des parallelen Bereichs konstant.  Sie können entweder vom Benutzer oder automatisch vom Laufzeitsystem eines parallelen Bereichs explizit in eine andere geändert werden.  
+ Die Anzahl der physischen Prozessoren, die tatsächlich hosting Threads zu einem beliebigen Zeitpunkt ist die Implementierung definiert. Nach der Erstellung bleibt die Anzahl der Threads im Team für die Dauer von dieser parallelen Bereichs konstant. Sie können entweder explizit vom Benutzer oder automatisch vom System zur Laufzeit aus einem parallelen Bereich in eine andere geändert werden.  
   
- Die Anweisungen, die innerhalb des dynamischen Wertebereichs eines parallelen Bereichs enthalten sind, werden durch jeden Thread ausgeführt, und jeder Thread kann einen Pfad von Anweisungen aus, der für die anderen Threads verschieden ist.  Die Direktive, die außerhalb des lexikalischen Wertebereichs eines parallelen Bereichs aufgetreten sind, werden als verwaiste Direktive.  
+ Die Anweisungen, die als Bestandteil der dynamischen Wertebereich des parallelen Bereichs durch alle Threads ausgeführt werden, und jeder Thread einen Pfad von Anweisungen, die sich von anderen Threads ausgeführt werden kann. Anweisungen, die außerhalb der lexikalische Wertebereich eines parallelen Bereichs gefunden werden als verwaiste Direktiven bezeichnet.  
   
- Es gibt eine implizite Grenze am Ende eines parallelen Bereichs.  Nur der Masterthread des Teams wird die Ausführung am Ende eines parallelen Bereichs fort.  
+ Es gibt eine implizite Barriere am Ende eines parallelen Bereichs ein. Nur die master-Thread des Teams wird die Ausführung am Ende eines parallelen Bereichs fortgesetzt.  
   
- Wenn ein Thread in einem Team, das einen parallelen Bereich ausgeführt werden, parallel ein anderes Konstrukt entdeckt, stellt er ein neues Team erstellt, und es wird dem Master\- dieses neuen Teams.  Geschachtelte parallele Bereiche sind standardmäßig serialisiert.  Folglich wird standardmäßig ein geschachtelter parallelen Bereich von einem Team ausgeführt, das aus einem Thread besteht.  Das Standardverhalten wird geändert werden, indem entweder die Ablaufzeit bibliotheksfunktion **omp\_set\_nested** oder die Umgebungsvariable **OMP\_NESTED**verwendet.  Allerdings wird die Anzahl von Threads in einem Team, die einen geschachtelten parallelen Bereich ausführen, Implementierung\-definiert.  
+ Wenn ein Thread in einem Team Ausführen eines parallelen Bereichs ein anderes paralleles Konstrukt trifft, erstellt ein neues Team und wird als übergeordneter das neue Team. Geschachtelte parallele Bereiche werden standardmäßig serialisiert. Standardmäßig wird daher ein geschachtelten paralleles Bereichs von einem Team besteht aus einem Thread ausgeführt. Das Standardverhalten kann geändert werden, mit der Common Language Runtime-Bibliotheksfunktion **Omp_set_nested** oder die Umgebungsvariable **OMP_NESTED**. Die Anzahl der Threads in einem Team, die ausführen ein geschachtelten paralleles Bereichs ist jedoch die Implementierung definiert.  
   
- Einschränkungen für **Ähnlichkeit**\-Direktive lauten wie folgt:  
+ Einschränkungen für die **parallele** Richtlinie lauten wie folgt:  
   
--   Höchstens kann eine **If**\-Klausel in der Direktive angezeigt werden.  
+-   Darf höchstens ein **Wenn** Klausel kann auf die Richtlinie angezeigt werden.  
   
--   Sie ist ob alle Nebeneffekte in Unspecified, wenn Ausdruck oder **num\_threads** Ausdruck auftreten.  
+-   Es ist nicht angegeben, ob alle Effekte innerhalb der If clientseitigen Ausdruck oder **Num_threads** Ausdruck auftreten.  
   
--   **Wurf** , das sich innerhalb eines parallelen Bereichs ausgeführt wird, muss dazu führen, dass die Ausführung innerhalb des dynamischen Wertebereichs desselben strukturierten Block fortgesetzt, und er muss vom gleichen Thread abgefangen werden, der die Ausnahme ausgelöst hat.  
+-   Ein **auslösen** innerhalb ein paralleles Bereichs muss dazu führen, dass in der dynamischen Wertebereich denselben strukturierten Block Fortsetzen der Ausführung ausgeführt, und sie müssen dem gleichen Thread, der die Ausnahme ausgelöst hat abgefangen werden.  
   
--   Nur eine einzige **num\_threads**\-Klausel kann in der Direktive angezeigt werden.  Der Ausdruck wird **num\_threads** außerhalb des Kontexts des parallelen Bereichs ausgewertet und muss auf einen positiven ganzzahligen Wert ausgewertet werden.  
+-   Nur ein einzelner **Num_threads** Klausel kann auf die Richtlinie angezeigt werden. Die **Num_threads** Ausdruck wird außerhalb des Kontexts des parallelen Bereichs ausgewertet, und muss eine positive ganze Zahl ergeben.  
   
--   Die Reihenfolge der Auswertung der **If** und **num\_threads**\-Klauseln ist nicht angegeben.  
+-   Die Reihenfolge der Auswertung der **Wenn** und **Num_threads** Klauseln ist nicht angegeben.  
   
-## Querverweise:  
+## <a name="cross-references"></a>Referenzen:  
   
--   **private**, **firstprivate**, **Standardwert**, **Shared**, **copyin**und **Verringerung** Klauseln finden [2.7.2 Abschnitt](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) auf Seite 25.  
+-   **private**, **Firstprivate**, **Standard**, **freigegebenen**, **Copyin**, und **Verringerung**-Klausel finden Sie unter [Abschnitt 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) auf Seite "25".  
   
--   **OMP\_NUM\_THREADS** Umgebungsvariablen [Abschnitt 4.2](../../parallel/openmp/4-2-omp-num-threads.md) auf Seite 48.  
+-   **OMP_NUM_THREADS** Umgebungsvariablen [Abschnitt 4.2](../../parallel/openmp/4-2-omp-num-threads.md) auf Seite 48.  
   
--   **omp\_set\_dynamic** Bibliotheksfunktion finden [3.1.7 Abschnitt](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) auf Seite 39.  
+-   **Omp_set_dynamic** Library-Funktion finden Sie unter [Abschnitt 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) auf Seite 39.  
   
--   **OMP\_DYNAMIC** Umgebungsvariablen finden [Abschnitt 4.3](../../parallel/openmp/4-3-omp-dynamic.md) auf Seite 49.  
+-   **OMP_DYNAMIC** Umgebung-Variable verwenden, finden Sie unter [Abschnitt 4.3](../../parallel/openmp/4-3-omp-dynamic.md) auf Seite "49".  
   
--   **omp\_set\_nested**\-Funktion finden [3.1.9 Abschnitt](../../parallel/openmp/3-1-9-omp-set-nested-function.md) auf Seite 40.  
+-   **Omp_set_nested** funktionieren, finden Sie unter [Abschnitt 3.1.9](../../parallel/openmp/3-1-9-omp-set-nested-function.md) auf der Seite "40".  
   
--   **OMP\_NESTED** Umgebungsvariablen finden [Abschnitt 4.4](../../parallel/openmp/4-4-omp-nested.md) auf Seite 49.  
+-   **OMP_NESTED** Umgebung-Variable verwenden, finden Sie unter [Abschnitt 4.4](../../parallel/openmp/4-4-omp-nested.md) auf Seite "49".  
   
--   **omp\_set\_num\_threads** Bibliotheksfunktion finden [3.1.1 Abschnitt](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md) auf Seite 36.
+-   **Omp_set_num_threads** Library-Funktion finden Sie unter [Abschnitt 3.1.1](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md) auf Seite 36.

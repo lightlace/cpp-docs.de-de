@@ -1,35 +1,33 @@
 ---
-title: "Projektbuildfehler PRJ0004 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0004"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0004"
+title: Projektbuildfehler prj0004 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0004
+dev_langs: C++
+helpviewer_keywords: PRJ0004
 ms.assetid: 1858769f-0be4-40ed-ab70-2cee550488c7
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: bea7d383375794f158c8914efa571b9cb2f1c354
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Projektbuildfehler PRJ0004
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die Befehlszeile für das "Tool" Tool konnte nicht generiert werden.  
+# <a name="project-build-error-prj0004"></a>Projektbuildfehler PRJ0004
+Befehlszeile für das Tool "Tool" konnte nicht erstellt werden.  
   
- Eine oder mehrere Eigenschaften wurden so festgelegt, dass die Syntax für den Aufruf von ***Tool*** unzulässig ist:  
+ Eine oder mehrere Eigenschaften wurden angegeben, so, dass die Syntax des Aufrufs von ***Tool*** unzulässig:  
   
--   Möglicherweise wurden falsch generierte oder unbekannte Makros festgelegt.  
+-   Sie können nicht wohlgeformter oder unbekannte Makros angegeben haben.  
   
--   Auf dem Computer ist nicht genügend Festplattenspeicher verfügbar.  
+-   Ihr Computer möglicherweise freier Speicherplatz gering sein.  
   
- Sie können die Einstellungen für das Tool auf der [Eigenschaftenseite "Befehlszeile"](../../ide/command-line-property-pages.md) überprüfen.
+ Möglicherweise möchten Sie die Einstellungen für das Tool überprüfen anhand der [Befehlszeile Eigenschaftenseite](../../ide/command-line-property-pages.md).

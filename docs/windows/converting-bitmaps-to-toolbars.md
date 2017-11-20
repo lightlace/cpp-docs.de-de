@@ -1,52 +1,53 @@
 ---
-title: "Converting Bitmaps to Toolbars | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bitmaps [C++], converting to toolbars"
-  - "Toolbar editor, converting bitmaps"
-  - "toolbars [C++], converting bitmaps"
+title: Konvertieren von Bitmaps in Symbolleisten | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- bitmaps [C++], converting to toolbars
+- Toolbar editor, converting bitmaps
+- toolbars [C++], converting bitmaps
 ms.assetid: 971c181b-40f5-44be-843d-677a7c235667
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 43eda0c6bd875b9fd82ee97d346e3f5d89584795
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Converting Bitmaps to Toolbars
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Durch Konvertierung einer Bitmap kann eine neue Symbolleiste erstellt werden.  Die Grafik der Bitmap wird in die Schaltflächenbilder für eine Symbolleiste konvertiert.  Normalerweise enthält eine einzelne Bitmap mehrere Schaltflächenbilder, die jeweils ein Symbol pro Schaltfläche darstellen.  Die Bilder können eine beliebige Größe aufweisen; in der Standardeinstellung hat das Bild eine Breite und Höhe von 16 Pixel.  Die Größe der Schaltflächenbilder kann im [Dialogfeld "Neue Symbolleistenressource"](../mfc/new-toolbar-resource-dialog-box.md) festgelegt werden, wenn Sie den Befehl **Symbolleisten\-Editor** im Menü **Bild** des Grafik\-Editors auswählen.  
+# <a name="converting-bitmaps-to-toolbars"></a>Konvertieren von Bitmaps in Symbolleisten
+Sie können eine neue Symbolleiste erstellen, durch die Konvertierung einer Bitmap. Die Grafik aus der Bitmap, die in der Schaltflächenbilder für eine Symbolleiste konvertiert werden. Die Bitmap wird in der Regel mehrere Bilder in einer einzigen Bitmap mit einem Bild für jede Schaltfläche enthält. Bilder können eine beliebige Größe sein; Der Standardwert ist 16 Pixel breit und die Höhe des Bilds. Können Sie angeben, die Größe der Schaltflächenbilder in der [neue Symbolleistenressource (Dialogfeld)](../windows/new-toolbar-resource-dialog-box.md) bei Auswahl von Symbolleisten-Editor aus der **Image** in der Grafik-Editor im Menü.  
   
-### So konvertieren Sie Bitmaps in eine Symbolleiste  
+### <a name="to-convert-bitmaps-to-a-toolbar"></a>Konvertieren von Bitmaps in einer Symbolleiste  
   
-1.  Öffnen Sie eine vorhandene Bitmapressource im [Grafik\-Editor](../mfc/image-editor-for-icons.md).  \(Falls die Bitmap noch nicht in der RC\-Datei enthalten ist, klicken Sie mit der rechten Maustaste auf die RC\-Datei, wählen im Kontextmenü die Option **Importieren**, navigieren zu der Bitmap, die der RC\-Datei hinzugefügt werden soll, und klicken dann auf **Öffnen**.\)  
+1.  Öffnen Sie eine vorhandene Bitmapressource in der [bildbearbeitung](../windows/image-editor-for-icons.md). (Wenn die Bitmap in der RC-Datei noch nicht vorhanden ist, mit der rechten Maustaste in der RC-Datei, wählen Sie **Import** aus dem Kontextmenü aus, navigieren Sie zu der Bitmap, die Sie auf die RC-Datei hinzufügen möchten, und klicken Sie auf **öffnen**.)  
   
-2.  Wählen Sie im Menü **Bild** den Befehl **Symbolleisten\-Editor**.  
+2.  Aus der **Image** Menü wählen **Symbolleisten-Editor**.  
   
-     Das [Dialogfeld "Neue Symbolleistenressource"](../mfc/new-toolbar-resource-dialog-box.md) wird geöffnet.  Sie können die Breite und Höhe der Symbolbilder ändern, um sie an die Bitmap anzupassen.  Das Symbolleistenbild wird anschließend im Symbolleisten\-Editor angezeigt.  
+     Die [neue Symbolleistenressource (Dialogfeld)](../windows/new-toolbar-resource-dialog-box.md) angezeigt wird. Sie können die Breite und Höhe der Symbolbilder Bitmap entsprechend ändern. Das Symbolleistenbild wird in der Symbolleisten-Editor angezeigt.  
   
-3.  Um die Konvertierung zu beenden, ändern Sie die Befehls\-ID der Schaltfläche im [Eigenschaftenfenster](../Topic/Properties%20Window.md).  Geben Sie die neue ID ein, oder wählen Sie eine ID aus der Dropdownliste aus.  
+3.  Um die Konvertierung zu beenden, ändern Sie den Befehl **ID** der Schaltfläche mit den [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window). Geben Sie den neuen **ID** , oder wählen Sie eine **ID** aus der Dropdown-Liste.  
   
     > [!TIP]
-    >  In der Titelleiste des Eigenschaftenfensters befindet sich eine Schaltfläche in Form einer Heftzwecke.  Durch Klicken auf diese Schaltfläche wird die Funktion **Automatisch im Hintergrund** für das Fenster aktiviert bzw. deaktiviert.  Um schnell alle Eigenschaften der Symbolleisten\-Schaltflächen zu durchlaufen, ohne einzelne Eigenschaftenfenster erneut öffnen zu müssen, deaktivieren Sie **Automatisch im Hintergrund**, sodass das Eigenschaftenfenster geöffnet bleibt.  
+    >  Das Eigenschaftenfenster enthält eine PIN-Schaltfläche in der Titelleiste. Klicken auf diese Schaltfläche aktiviert oder deaktiviert automatisch im Hintergrund, für das Fenster. Um schnell alle Eigenschaften der Symbolleisten-Schaltfläche zu durchlaufen, ohne einzelne Eigenschaft erneut öffnen, deaktivieren Sie automatisch im Hintergrund, sodass das Eigenschaftenfenster geöffnet bleibt.  
   
- Sie können die Befehls\-IDs der Schaltflächen auch auf der neuen Symbolleiste ändern, indem Sie das [Eigenschaftenfenster](../Topic/Properties%20Window.md) verwenden.  Informationen über das Bearbeiten der neuen Symbolleiste finden Sie unter [Erstellen, Verschieben und Bearbeiten von Schaltflächen der Symbolleiste](../mfc/creating-moving-and-editing-toolbar-buttons.md).  
+ Sie können auch die Befehls-IDs der Schaltflächen auf der neuen Symbolleiste ändern, mit der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window). Informationen zum Bearbeiten der neue Symbolleiste finden Sie unter [erstellen, verschieben und Bearbeiten von Schaltflächen der Symbolleiste](../windows/creating-moving-and-editing-toolbar-buttons.md).  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](https://msdn.microsoft.com/library/f45fce5x.aspx) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](https://msdn.microsoft.com/library/xbx3z216.aspx). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
  Anforderungen  
   
  MFC oder ATL  
   
-## Siehe auch  
- [Creating New Toolbars](../mfc/creating-new-toolbars.md)   
- [Toolbar Editor](../mfc/toolbar-editor.md)
+## <a name="see-also"></a>Siehe auch  
+ [Erstellen neuer Symbolleisten](../windows/creating-new-toolbars.md)   
+ [Symbolleisten-Editor](../windows/toolbar-editor.md)
+

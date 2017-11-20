@@ -1,26 +1,26 @@
 ---
-title: "3.2.4 omp_unset_lock and omp_unset_nest_lock Functions"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 3.2.4 Omp_unset_lock and Omp_unset_nest_lock-Funktionen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 5357e43e-a7c0-41d7-b529-3f7d15da8b11
-caps.latest.revision: 6
-caps.handback.revision: "6"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c7a3aebc404205c85627820188e137713317eb7d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# 3.2.4 omp_unset_lock and omp_unset_nest_lock Functions
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Diese Funktionen stellen eine Möglichkeit zum Freigeben des Besitz der Sperre.  Es wird folgendes Format verwendet:  
+# <a name="324-ompunsetlock-and-ompunsetnestlock-functions"></a>3.2.4 omp_unset_lock and omp_unset_nest_lock-Funktionen
+Diese Funktionen bieten die Möglichkeit des Freigebens von Besitz einer Sperre. Es wird folgendes Format verwendet:  
   
 ```  
 #include <omp.h>  
@@ -28,8 +28,8 @@ void omp_unset_lock(omp_lock_t *lock);
 void omp_unset_nest_lock(omp_nest_lock_t *lock);  
 ```  
   
- Das Argument für jede dieser Funktionen müssen sich auf einen initialisierten variablen Besitzen der Sperre vom Thread verweisen, der die Funktion ausgeführt wird.  Das Verhalten ist nicht definiert, wenn der Thread nicht diese Sperre besitzt.  
+ Das Argument für jede dieser Funktionen muss auf ein initialisiertes Sperren der Variable im Besitz der Thread für die Ausführung der Funktion verweisen. Das Verhalten ist undefiniert, wenn der Thread diese Sperre nicht besitzt.  
   
- Für eine einfache Funktion `omp_unset_lock` die Sperre lässt der Thread, der die Funktion im Besitz der Sperre ausgeführt wird.  
+ Für eine einfache Sperre der `omp_unset_lock` Funktion gibt der Thread für die Ausführung der Funktion aus den Besitz der Sperre frei.  
   
- Für eine schachtelbare Sperren verringert die Anzahl Schachtelungs die Funktion `omp_unset_nest_lock` und die Versionen der Thread, der die Funktion im Besitz der Sperre ausgeführt wird, wenn das Rekursionsergebnis \(null\) ist.
+ Für eine omp_nest_lock_t Sperre der `omp_unset_nest_lock` Funktion verringert die Anzahl der Schachtelungsebenen und Versionen der Thread, der die Funktion aus den Besitz der Sperre ausgeführt wird, wenn das Rekursionsergebnis 0 (null) ist.

@@ -6,16 +6,43 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- valarray/std::operator!=
+- valarray/std::operator%
+- valarray/std::operator&amp;
+- valarray/std::operator&amp;&amp;
+- valarray/std::operator&gt;
+- valarray/std::operator&gt;&gt;
+- valarray/std::operator&gt;=
+- valarray/std::operator&lt;
+- valarray/std::operator&lt;&lt;
+- valarray/std::operator&lt;=
+- valarray/std::operator*
+- valarray/std::operator+
+- valarray/std::operator-
+- valarray/std::operator/
+- valarray/std::operator==
+- valarray/std::operator^
+- valarray/std::operator|
+- valarray/std::operator||
+dev_langs: C++
 ms.assetid: 8a53562c-90ab-4eb3-85d3-ada5259d90b0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: aa730db3fd5e9a3ea4919bb255d49532f7440981
-ms.contentlocale: de-de
-ms.lasthandoff: 04/29/2017
-
+helpviewer_keywords:
+- std::operator!= (valarray), std::operator&amp; (valarray)
+- std::operator&amp;&amp; (valarray)
+- std::operator&gt; (valarray)
+- std::operator&gt;&gt; (valarray)
+- std::operator&gt;= (valarray)
+- std::operator&lt; (valarray)
+- std::operator&lt;&lt; (valarray)
+- std::operator&lt;= (valarray), std::operator== (valarray)
+ms.openlocfilehash: b422f33addb61eed4ce04eeef74a76a597f799ee
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltvalarraygt-operators"></a>&lt;valarray&gt;-Operatoren
 ||||  
@@ -149,7 +176,7 @@ operator%(
  Ein Wert oder ein valarray-Objekt, der bzw. das als Divisor dient und der einen anderen Wert oder ein anderes valarray-Objekt dividiert.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Valarray-Objekts, dessen Elemente elementweisen Reste wurden, der `left` dividiert durch `right`.  
+ Valarray-Objekts, dessen Elemente elementweisen Reste wurden, der `left` geteilt durch `right`.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -232,7 +259,7 @@ operator&(
  Valarray-Objekts, dessen Elemente die elementweise Kombination aus der bitweisen AND-Operation sind, der `left` und `right`.  
   
 ### <a name="remarks"></a>Hinweise  
- Eine bitweise Operation kann nur verwendet werden, um Bits in `char`- und `int`-Datentypen und -Varianten und nicht in den Datentypen **float**, **double**, **longdouble**, `void``bool` oder in anderen komplexeren Datentypen bearbeitet werden.  
+ Eine bitweise Operation kann nur verwendet werden, um Bits in `char`- und `int`-Datentypen und -Varianten und nicht in den Datentypen **float**, **double**, **longdouble**, `void`, `bool` oder in anderen komplexeren Datentypen bearbeitet werden.  
   
  Für die bitweise **AND**-Operation gilt dieselbe Wahrheitstabelle wie für die logische **AND**-Operation. Die bitweise AND-Operation wird jedoch nur auf den Datentyp auf der Ebene der Einzelbits angewendet. Der [operator&&](../standard-library/valarray-operators.md#amp) wird auf Elementebene angewendet, wobei alle Werte, die nicht null sind, als TRUE zählen, und das Ergebnis ein valarray-Objekt mit booleschen Werten ist. Der bitweise **ANDoperator&** kann dagegen je nach dem Ergebnis der bitweisen Operation ein valarray-Objekt mit anderen Werten als 0 und 1 ergeben.  
   
@@ -1331,7 +1358,7 @@ operator^(
  Valarray-Objekts, dessen Elemente die elementweise Kombination des bitweisen sind **XOR** Vorgang `left` und `right`.  
   
 ### <a name="remarks"></a>Hinweise  
- Eine bitweise Operation kann nur verwendet werden, um Bits in `char`- und `int`-Datentypen und -Varianten und nicht in den Datentypen **float**, **double**, `long double`, `void``bool` oder in anderen komplexeren Datentypen bearbeitet werden.  
+ Eine bitweise Operation kann nur verwendet werden, zum Bearbeiten von Bits in `char` und `int` Datentypen und Varianten und nicht unter **"float"**, **doppelte**, `long double`, `void`, `bool` oder anderen komplexen Datentypen.  
   
  Der Operator exklusives `OR` ( **XOR**) weist die folgende Semantik auf: Wenn die Bits *b*1 und *b*2 gegeben sind, ist *b*1 **XOR** *b*2 **TRUE**, wenn exakt eines der Bits TRUE ist; **FALSE**, wenn beide Bits FALSE sind oder beide Bits TRUE sind.  
   
@@ -1509,7 +1536,7 @@ operator||(
  Valarray-Objekts, dessen Elemente vom Typ sind `bool` und elementweise Kombination aus dem logischen OR-Operation mit `left` und `right`.  
   
 ### <a name="remarks"></a>Hinweise  
- Der logische `OR``operator||` wird auf Elementebene angewendet, wobei alle Werte, die nicht Null sind, als **TRUE** zählen, und das Ergebnis ein valarray-Objekt mit booleschen Werten ist. Die bitweise Version von `OR`, [operator&#124;](../standard-library/valarray-operators.md#op_or) kann dagegen je nach dem Ergebnis der bitweisen Operation ein valarray-Objekt mit anderen Werten als 0 und 1 ergeben.  
+ Die logische `OR` `operator||` gilt, die auf eine Elementebene zählen alle Werte als **"true"**, und das Ergebnis ist ein valarray-Objekt von booleschen Werten. Die bitweise Version von `OR`, [operator&#124;](../standard-library/valarray-operators.md#op_or) kann dagegen je nach dem Ergebnis der bitweisen Operation ein valarray-Objekt mit anderen Werten als 0 und 1 ergeben.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1564,5 +1591,4 @@ The element-by-element result of the logical OR operator|| is the
   
 ## <a name="see-also"></a>Siehe auch  
  [\<valarray>](../standard-library/valarray.md)
-
 

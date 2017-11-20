@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,8 +17,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromRange::m_duration
 - AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromRange::m_period
 - AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromRange::m_slope
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CSinusoidalTransitionFromRange [MFC], CSinusoidalTransitionFromRange
 - CSinusoidalTransitionFromRange [MFC], Create
@@ -29,16 +27,15 @@ helpviewer_keywords:
 - CSinusoidalTransitionFromRange [MFC], m_period
 - CSinusoidalTransitionFromRange [MFC], m_slope
 ms.assetid: 8b66a729-5f10-431a-b055-e3600d0065da
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: a01360d79d752e37da42759f22aecbb0cd65b52f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: f830dcbf7ca4e17fadd0b5e7eaea14f7ee0c628e
-ms.contentlocale: de-de
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="csinusoidaltransitionfromrange-class"></a>CSinusoidalTransitionFromRange-Klasse
 Kapselt einen Übergang mit sinusförmigem Bereich und angegebenem Schwingungsbereich.  
@@ -167,4 +164,3 @@ UI_ANIMATION_SLOPE m_slope;
   
 ## <a name="see-also"></a>Siehe auch  
  [Klassen](../../mfc/reference/mfc-classes.md)
-

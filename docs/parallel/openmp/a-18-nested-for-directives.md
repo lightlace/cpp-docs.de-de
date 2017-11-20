@@ -1,26 +1,26 @@
 ---
-title: "A.18   Nested for Directives"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "A.18 für Direktiven geschachtelt | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: ae2b2e0b-ec94-43f8-928c-6d621b51f0df
-caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bdbd65d74b45ed1d7bfc69c24c214383e0567a31
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# A.18   Nested for Directives
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Im folgenden Beispiel richtungweisender Schachtelung `for` \([Abschnitt 2.9](../../parallel/openmp/2-9-directive-nesting.md) auf Seite 33\) kompatibel ist, da die innere und äußere `for`\-Direktive an verschiedenen parallelen Bereichen:  
+# <a name="a18---nested-for-directives"></a>A.18   Geschachtelte for-Direktiven
+Im folgenden Beispiel `for` Richtlinie Schachtelung ([Abschnitt 2.9](../../parallel/openmp/2-9-directive-nesting.md) auf der Seite "33") kompatibel ist da inneren und äußeren `for` Direktiven für verschiedene parallele Regionen binden:  
   
 ```  
 #pragma omp parallel default(shared)  
@@ -38,7 +38,7 @@ Im folgenden Beispiel richtungweisender Schachtelung `for` \([Abschnitt 2.9](../
 }  
 ```  
   
- Eine folgenden Variante des vorherigen Beispiels auch kompatibel ist:  
+ Eine folgende Abwandlung des obigen Beispiels ist auch kompatibel:  
   
 ```  
 #pragma omp parallel default(shared)  

@@ -1,32 +1,30 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4930 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4930"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4930"
+title: Compilerwarnung (Stufe 1) C4930 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4930
+dev_langs: C++
+helpviewer_keywords: C4930
 ms.assetid: 89a206c9-c536-4186-8e81-1cde3e7f4f5b
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 457124730ea38f1e91f7dab0c709568f23cf6fc2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Compilerwarnung (Stufe 1) C4930
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'Prototyp': Funktion mit Prototyp wurde nicht aufgerufen \(war eine Variablendefinition gemeint?\)  
+# <a name="compiler-warning-level-1-c4930"></a>Compilerwarnung (Stufe 1) C4930
+'Prototyp': Funktion mit Prototyp nicht aufgerufen (war eine Variablendefinition vorgesehen?)  
   
- Der Compiler hat einen nicht verwendeten Funktionsprototyp gefunden.  Falls der Prototyp als Variablendeklaration gedacht war, entfernen Sie die öffnende\/schließende runde Klammer.  
+ Der Compiler hat einen nicht verwendeten Funktionsprototyp erkannt. Der Prototyp als Variablendeklaration durchgeführt wurde, entfernen Sie die Klammern öffnen/schließen.  
   
  Im folgenden Beispiel wird C4930 generiert:  
   
@@ -48,7 +46,7 @@ int main() {
 }  
 ```  
   
- C4930 kann auch auftreten, wenn der Compiler nicht zwischen einer Funktionsprototypdeklaration und einem Funktionsaufruf unterscheiden kann.  
+ C4930 kann auch auftreten, wenn der Compiler zwischen der Deklaration einer Funktion Prototyp und einem Funktionsaufruf unterscheiden kann.  
   
  Im folgenden Beispiel wird C4930 generiert:  
   
@@ -121,4 +119,4 @@ int main()
 }  
 ```  
   
- Im oben gezeigten Beispiel wird das Ergebnis einer Methode, die null Argumente akzeptiert, als Argument an den Konstruktor einer unbenannten lokalen Klassenvariablen übergeben.  Sie können die Mehrdeutigkeit dieses Aufrufs aufheben, indem Sie entweder die lokale Variable benennen oder dem Methodenaufruf eine Objektinstanz zusammen mit dem entsprechenden Operator Zeiger\-auf\-Member voranstellen.
+ Im obigen Beispiel ist das Ergebnis einer Methode, die keine Argumente annimmt an den Konstruktor einer unbenannten lokalen Klasse Variablen als Argument übergeben. Der Aufruf kann eindeutig gemacht werden, benennen die lokale Variable oder den Aufruf der Methode, mit der eine Objektinstanz zusammen mit den entsprechenden Pointer-to-Member-Operator voranstellen.

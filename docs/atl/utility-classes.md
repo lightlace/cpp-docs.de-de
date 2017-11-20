@@ -1,44 +1,43 @@
 ---
-title: "Utility Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.atl.classes.utility"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "utility classes"
+title: Dienstprogrammklassen (ATL) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.atl.classes.utility
+dev_langs: C++
+helpviewer_keywords: utility classes
 ms.assetid: 33d5da9d-89a5-49f9-a873-a26499299d17
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a6fdf94140b321e86df4ee25a92a2f8fc4693880
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Utility Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die folgenden MFC\-unabhängigen Hilfsklassen bereitgestellt werden:  
+# <a name="utility-classes"></a>Dienstprogrammklassen
+Die folgenden MFC-unabhängigen Hilfsklassen stehen zur Verfügung:  
   
--   [CImage](../atl-mfc-shared/reference/cimage-class.md) Bietet erweiterte Bit\-Übersichtsunterstützung, einschließlich der Möglichkeit, Bilder, JPEG\-, GIF\- und PNG\-Dateien in Stilen des Portablen Network Graphics \(PNG\) zu laden und zu speichern.  
+-   [CImage](../atl-mfc-shared/reference/cimage-class.md) bietet erweiterte Bitmapunterstützung, einschließlich der Möglichkeit zum Laden und speichern Sie die Bilder in JPEG, GIF, BMP und Portable Network Graphics (PNG) formatiert.  
   
--   [CPoint](../atl-mfc-shared/reference/cpoint-class.md) stellt eine Implementierung zum Speichern der Koordinate bereit \(x, y\) von Paaren.  
+-   [CPoint](../atl-mfc-shared/reference/cpoint-class.md) stellt eine Implementierung zum Speichern von Koordinaten (X, y)-Paaren bereit.  
   
--   [CRect](../atl-mfc-shared/reference/crect-class.md) stellt eine Implementierung für das Speichern von Koordinaten von rechteckige Bereiche bereit.  
+-   [CRect](../atl-mfc-shared/reference/crect-class.md) stellt eine Implementierung zum Speichern von Koordinaten rechteckige Bereiche bereit.  
   
--   [CSize](../atl-mfc-shared/reference/csize-class.md) stellt eine Implementierung für das Speichern von Dunkelgrün, der relativen Positionen bei oder der zugeordneten Werte bereit.  
+-   [CSize](../atl-mfc-shared/reference/csize-class.md) stellt eine Implementierung zum Speichern von Abstand, relativen Positionen oder paarweise zugeordneten Werte bereit.  
   
 -   [CString](../atl-mfc-shared/reference/cstringt-class.md) stellt eine Implementierung zum Speichern von Zeichenfolgen bereit.  
   
--   Einfache Vorlage [CAdapt](../atl/reference/cadapt-class.md) A verwendet wird, um Klassen zu umschließen, die dem Adressoperator neu definieren.  
+-   [CAdapt](../atl/reference/cadapt-class.md) eine einfache Vorlage verwendet, um Klassen zu umschließen, die den Adressoperator neu definieren.  
   
--   [\_U\_RECT](../atl/reference/u-rect-class.md) eine Argumentadapterklasse, die entweder `RECT` Zeiger gewährt oder verweist, an eine Funktion übergeben werden, die im Hinblick auf Zeiger implementiert wird.  
+-   [_U_RECT](../atl/reference/u-rect-class.md) ein Argument-Adapterklasse, die mit der `RECT` Zeiger oder Verweise auf eine Funktion übergeben werden, die im Hinblick auf Zeigern implementiert wird.  
   
-## Siehe auch  
- [Class Overview](../atl/atl-class-overview.md)
+## <a name="see-also"></a>Siehe auch  
+ [Klassenübersicht](../atl/atl-class-overview.md)
+

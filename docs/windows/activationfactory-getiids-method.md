@@ -1,32 +1,30 @@
 ---
-title: "ActivationFactory::GetIids-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::ActivationFactory::GetIids"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetIids-Methode"
+title: 'Activationfactory:: Getiids-Methode | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::ActivationFactory::GetIids
+dev_langs: C++
+helpviewer_keywords: GetIids method
 ms.assetid: 0983d709-d155-4d65-aae4-5b2c8bb0fede
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4fb9d71da187e12f119dd9b020e1bbab730855c4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# ActivationFactory::GetIids-Methode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ruft ein Array implementierte Schnittstellen\-IDs ab.  
+# <a name="activationfactorygetiids-method"></a>ActivationFactory::GetIids-Methode
+Ruft ein Array von implementierten Schnittstellen-IDs ab.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 STDMETHOD(  
@@ -34,20 +32,20 @@ STDMETHOD(
 )(_Out_ ULONG *iidCount, _Deref_out_ _Deref_post_cap_(*iidCount) IID **iids);  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `iidCount`  
- Wenn dieser Vorgang abgeschlossen ist, die Anzahl von interace IDs `iids` im Array.  
+ Wenn dieser Vorgang abgeschlossen wird, die Anzahl der interace-IDs in der `iids` Array.  
   
  `iids`  
- Wenn dieser Vorgang abgeschlossen ist, ein Array Schnittstellen\-IDs implementierte.  
+ Wenn dieser Vorgang abgeschlossen ist, implementiert ein Array von Schnittstellen-IDs an.  
   
-## Rückgabewert  
- S\_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler beschreibt.  E\_OUTOFMEMORY ist ein beliebiges Fehler\-HRESULT.  
+## <a name="return-value"></a>Rückgabewert  
+ „S_OK“ im Erfolgsfall, andernfalls ein HRESULT, das den Fehler beschreibt. E_OUTOFMEMORY ist möglicherweise ein Fehler HRESULT.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** module.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [ActivationFactory\-Klasse](../windows/activationfactory-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [ActivationFactory-Klasse](../windows/activationfactory-class.md)

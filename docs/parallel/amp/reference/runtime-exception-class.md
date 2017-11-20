@@ -1,11 +1,10 @@
 ---
-title: Runtime_exception-Klasse | Microsoft-Dokumentation
+title: Runtime_exception-Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,36 +12,18 @@ f1_keywords:
 - AMPRT/runtime_exception
 - AMPRT/Concurrency::runtime_exception
 - AMPRT/Concurrency::runtime_exception::get_error_code
-dev_langs:
-- C++
-helpviewer_keywords:
-- runtime_exception class
+dev_langs: C++
+helpviewer_keywords: runtime_exception class
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 399d2531c06285012df12d703b4cda6e18469c38
-ms.contentlocale: de-de
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: ffc18357c4c10eec4fde900cda001cd0d3528680
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="runtimeexception-class"></a>runtime_exception-Klasse
 Der Basistyp für Ausnahmen in der C++ Accelerated Massive Parallelism (AMP)-Bibliothek.  
@@ -156,4 +137,3 @@ runtime_exception & operator= (    const runtime_exception & _Other ) throw();
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)
-

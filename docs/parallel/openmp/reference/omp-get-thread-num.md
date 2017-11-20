@@ -1,42 +1,40 @@
 ---
-title: "omp_get_thread_num | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_get_thread_num"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_get_thread_num OpenMP function"
+title: Omp_get_thread_num | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_get_thread_num
+dev_langs: C++
+helpviewer_keywords: omp_get_thread_num OpenMP function
 ms.assetid: b9cd4f53-afc5-4980-85c4-e21c9cd378e3
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a727d7176a1f4d7fba12b7c866a9600dfe831223
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# omp_get_thread_num
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Gibt die Thread Nummer des Threads zurück, der innerhalb des Teams Thread ausgeführt wird.  
+# <a name="ompgetthreadnum"></a>omp_get_thread_num
+Gibt die Thread-Anzahl der ausgeführten Threads innerhalb Hashteams Thread zurück.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 int omp_get_thread_num( );  
 ```  
   
-## Hinweise  
- Weitere Informationen finden Sie unter [3.1.4 omp\_get\_thread\_num Function](../../../parallel/openmp/3-1-4-omp-get-thread-num-function.md).  
+## <a name="remarks"></a>Hinweise  
+ Weitere Informationen finden Sie unter [3.1.4 Omp_get_thread_num-Funktion](../../../parallel/openmp/3-1-4-omp-get-thread-num-function.md).  
   
-## Beispiel  
- Weitere Informationen finden Sie unter [parallel](../../../parallel/openmp/reference/parallel.md) als ein Beispiel für die Verwendung von `omp_get_thread_num`.  
+## <a name="example"></a>Beispiel  
+ Finden Sie unter [parallele](../../../parallel/openmp/reference/parallel.md) ein Beispiel der Verwendung von `omp_get_thread_num`.  
   
-## Siehe auch  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+## <a name="see-also"></a>Siehe auch  
+ [Funktionen](../../../parallel/openmp/reference/openmp-functions.md)

@@ -1,40 +1,38 @@
 ---
-title: "Linkertoolfehler LNK2020 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK2020"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK2020"
+title: Linkertoolfehler Lnk2020 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK2020
+dev_langs: C++
+helpviewer_keywords: LNK2020
 ms.assetid: 4dd017d0-5e83-471b-ac8a-538ac1ed6870
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d9a4bedb06ccad45a105c0e47fbc1f839891bea7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Linkertoolfehler LNK2020
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Nicht aufgelöstes Token 'Token'  
+# <a name="linker-tools-error-lnk2020"></a>Linkertoolfehler LNK2020
+nicht aufgelöstes Token 'Token'  
   
- Vergleichbar mit einem nicht definierten externen Fehler, mit dem Unterschied, dass der Verweis über Metadaten erfolgt.  In Metadaten müssen alle Funktionen und Daten definiert werden.  
+ Ähnlich wie ein nicht definierter externe Fehler mit dem Unterschied, dass der Verweis über Metadaten ist. In den Metadaten die alle Funktionen und Daten definiert werden.  
   
- So beheben Sie diesen Fehler:  
+ So lösen Sie:  
   
--   Definieren Sie die fehlende Funktion bzw. die fehlenden Daten. \- oder \-  
+-   Definieren Sie die fehlende Funktion oder Daten, oder  
   
--   Lesen Sie die Objektdatei oder die Bibliothek ein, in der die fehlende Funktion bzw. die Daten bereits definiert sind.  
+-   Schließen Sie die Objektdatei oder die Bibliothek, die in dem die fehlende Funktion oder die Daten bereits definiert ist.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird LNK2020 generiert.  
   
 ```  
@@ -52,8 +50,8 @@ ref struct B {
 };  
 ```  
   
-## Beispiel  
- LNK2020 tritt auch dann auf, wenn Sie eine Variable eines verwalteten Vorlagentyps erstellen, jedoch diesen Typ nicht instaziieren.  
+## <a name="example"></a>Beispiel  
+ LNK2020 erfolgt auch, wenn Sie eine Variable eines verwalteten Vorlagentyps erstellen, aber auch nicht den Typ instanziiert wird.  
   
  Im folgenden Beispiel wird LNK2020 generiert.  
   

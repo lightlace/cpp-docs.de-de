@@ -1,71 +1,70 @@
 ---
-title: "__vmx_vmptrld | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__vmx_vmptrld"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__vmx_vmptrld intrinsic"
-  - "VMPTRLD-Anweisung"
+title: __vmx_vmptrld | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __vmx_vmptrld
+dev_langs: C++
+helpviewer_keywords:
+- __vmx_vmptrld intrinsic
+- VMPTRLD instruction
 ms.assetid: 95c9ec5b-1a81-41ba-983e-327bd6a65fcb
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6491eb24b8ed615d6309f81ceb0770ba0973d79b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# __vmx_vmptrld
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft\-spezifisch**  
+# <a name="vmxvmptrld"></a>__vmx_vmptrld
+**Microsoft-spezifisch**  
   
- Lädt den Zeiger auf die aktuelle Kontrollstruktur des virtuellen Computers \(VMCS\) aus der angegebenen Adresse.  
+ Lädt den Zeiger auf die aktuelle VM-Steuerelement-Struktur (VMCS) von der angegebenen Adresse an.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-int __vmx_vmptrld(   
-   unsigned __int64 *VmcsPhysicalAddress   
+int __vmx_vmptrld(   
+   unsigned __int64 *VmcsPhysicalAddress   
 );  
 ```  
   
-#### Parameter  
- \[in\]  \*`VmcsPhysicalAddress`  
- Die Adresse, in der der VMCS\-Zeiger gespeichert wird.  
+#### <a name="parameters"></a>Parameter  
+ [in] *`VmcsPhysicalAddress`  
+ Die Adresse, wo der Zeiger VMCS gespeichert werden.  
   
-## Rückgabewert  
+## <a name="return-value"></a>Rückgabewert  
  0  
- Der Vorgang war erfolgreich.  
+ Der Vorgang wurde erfolgreich ausgeführt.  
   
  1  
- Der Vorgang fehlgeschlagen ist mit dem erweiterten Status verfügbar in `VM-instruction error field` des aktuellen VMCS.  
+ Bei dem Vorgang ist ein Fehler mit erweitertem Status aufgetreten, der im `VM-instruction error field` der aktuellen VMCS verfügbar ist.  
   
  2  
- Der Vorgang fehlgeschlagen ist, ohne den Status verfügbar.  
+ Bei dem Vorgang ist ein Fehler ohne verfügbaren Status aufgetreten.  
   
-## Hinweise  
- Der VMCS\-Zeiger ist eine 64\-Bit\-physische Adresse.  
+## <a name="remarks"></a>Hinweise  
+ Der VMCS-Zeiger ist eine physische 64-Bit-Adresse.  
   
- Die `__vmx_vmptrld`\-Funktion ähnelt dem `VMPTRLD` Computeranweisung.  Diese Funktion unterstützt die Interaktion des Bildschirms des virtuellen Computers eines Hosts mit einem Betriebssystem Gast und ihren Anwendungen.  Weitere Informationen zur Suche für das Dokument „Intel\-Virtualisierungs\-technische Spezifikation für die Architektur, Intel IA\-32“ Belegnummer C97063 \-002 auf der Website [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) .  
+ Die `__vmx_vmptrld` -Funktion ist gleichbedeutend mit der `VMPTRLD` computeranweisung. Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Dokumentieren Sie für Weitere Informationen suchen, für das Dokument "Intel Virtualization technische Spezifikation für der IA-32 Intel Architecture" Dokumentnummer C97063-002 auf der [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) Standort.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Intrinsisch|Architektur|  
-|-----------------|-----------------|  
+|Systemintern|Architektur|  
+|---------------|------------------|  
 |`__vmx_vmptrld`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Headerdatei** \<intrin.h\>  
+ **Headerdatei** \<intrin.h >  
   
-## Microsoft ENDES bestimmten  
+**Ende Microsoft-spezifisch**  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)   
- [\_\_vmx\_vmptrst](../intrinsics/vmx-vmptrst.md)
+ [__vmx_vmptrst](../intrinsics/vmx-vmptrst.md)

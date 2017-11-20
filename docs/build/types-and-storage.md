@@ -1,26 +1,26 @@
 ---
-title: "Typen und Speicher | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Typen und Speicher | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 7fe008b2-520f-4b71-8cb5-35fd513146ce
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d112d7d27d798c410cd6873d5e3433cdf92a31eb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Typen und Speicher
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In diesem Abschnitt wird die Enumeration und Speicherung von Datentypen für die [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]\-Architektur beschrieben.  
+# <a name="types-and-storage"></a>Typen und Speicher
+In diesem Abschnitt wird beschrieben, die Enumeration und Speicherung von Datentypen für die [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] Architektur.  
   
 -   [Skalare Typen](../build/scalar-types.md)  
   
@@ -30,7 +30,7 @@ In diesem Abschnitt wird die Enumeration und Speicherung von Datentypen für die
   
 -   [Bitfelder](../build/bitfields.md)  
   
--   [Konflikt mit dem x86\-Compiler](../build/conflicts-with-the-x86-compiler.md)  
+-   [Konflikt mit dem x86-Compiler](../build/conflicts-with-the-x86-compiler.md)  
   
-## Siehe auch  
- [x64\-Softwarekonventionen](../build/x64-software-conventions.md)
+## <a name="see-also"></a>Siehe auch  
+ [x64-Softwarekonventionen](../build/x64-software-conventions.md)

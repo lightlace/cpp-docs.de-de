@@ -1,32 +1,30 @@
 ---
-title: "helpstringdll | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.helpstringdll"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "helpstringdll attribute [C++]"
+title: Helpstringdll | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.helpstringdll
+dev_langs: C++
+helpviewer_keywords: helpstringdll attribute [C++]
 ms.assetid: 121271fa-f061-492b-b87f-bbfcf4b02e7b
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c98db43b922571a41139dfe19eddacb56a024729
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# helpstringdll
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gibt den Namen der DLL an, der verwendet wird, um Zeichenfolgen Dokumente Lokalisierung \(Discovery\) auszuführen.  
+# <a name="helpstringdll"></a>helpstringdll
+Gibt den Namen der DLL zu verwenden, um das Dokument Zeichenfolgensuche (Lokalisierung) ausführen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -35,14 +33,14 @@ Gibt den Namen der DLL an, der verwendet wird, um Zeichenfolgen Dokumente Lokali
 ) ]  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `string`  
- Das Ausführen von Dokumenten verwendete Formatzeichenfolgen Suche zu verwendende DLL.  
+ Die DLL-Datei verwenden, um Dokument Zeichenfolgensuche durchzuführen.  
   
-## Hinweise  
- Das Attribut **helpstringdll** C\+\+ verfügt über die gleichen Funktionen wie das [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) MIDL\-Attribut.  
+## <a name="remarks"></a>Hinweise  
+ Die **Helpstringdll** C++-Attribut hat die gleiche Funktionalität wie die [Helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) MIDL-Attribut.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cpp_attr_ref_helpstringdll.cpp  
@@ -57,22 +55,21 @@ __interface IMyI
 };  
 ```  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
-|**Betrifft**|**Klasse**, `interface`, Schnittstellenmethode|  
+|**Betrifft**|**Klasse**, `interface`,-Schnittstellenmethode|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Keine|  
+|**Ungültige Attribute**|Keine|  
   
- Weitere Informationen finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [IDL-Attribute](../windows/idl-attributes.md)   
+ [Schnittstellenattribut](../windows/interface-attributes.md)   
+ [Klassenattribute](../windows/class-attributes.md)   
+ [Methodenattribut](../windows/method-attributes.md)   

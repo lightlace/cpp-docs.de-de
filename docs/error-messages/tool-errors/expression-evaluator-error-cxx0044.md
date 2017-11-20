@@ -1,32 +1,31 @@
 ---
-title: "Ausdrucksauswertungsfehler CXX0044 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0044"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0044"
-  - "CXX0044"
+title: Ausdrucksauswertungsfehler CXX0044 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0044
+dev_langs: C++
+helpviewer_keywords:
+- CXX0044
+- CAN0044
 ms.assetid: d59868b5-c1ec-46ac-91d6-5d575a4d6b49
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c9bb0dd6e9bbd595e45af50156689c2e557964b0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Ausdrucksauswertungsfehler CXX0044
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die Verwendung eines \_based \(void\) \- Zeigers verlangt:\>\-Operator  
+# <a name="expression-evaluator-error-cxx0044"></a>Ausdrucksauswertungsfehler CXX0044
+Verwendung von _based(void)-Zeigers erfordert: >-operator  
   
- Ein auf `void` basierender Zeiger kann nicht direkt verwendet werden.  Sie müssen einen vollständigen Zeiger mithilfe des Operators **:\>** besteht.  
+ Ein Zeiger auf der Grundlage `void` kann nicht direkt verwendet werden. Sie müssen ein vollständiger Zeiger mit bilden die **: >** Operator.  
   
  Dieser Fehler ist mit CAN0044 identisch.

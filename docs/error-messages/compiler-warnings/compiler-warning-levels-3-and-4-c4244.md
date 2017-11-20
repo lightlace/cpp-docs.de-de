@@ -1,36 +1,34 @@
 ---
-title: "Compilerwarnung (Stufes 3 and 4) C4244 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4244"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4244"
+title: Compilerwarnung (Stufen 3 und 4) C4244 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4244
+dev_langs: C++
+helpviewer_keywords: C4244
 ms.assetid: f116bb09-c479-4b4e-a647-fe629a1383f6
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: bbcbe9d1c37827a28ce07849d909d58f5784a5a6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Compilerwarnung (Stufes 3 and 4) C4244
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-levels-3-and-4-c4244"></a>Compilerwarnung (Stufen 3 und 4) C4244
 'conversion': Umwandlung von 'type1' in 'type2', Datenverlust ist möglich  
   
- Ein ganzzahliger Typ wird in einen kleineren ganzzahligen Typ konvertiert.  Dies ist eine Warnung der Stufe 4, wenn *type1* gleich `int` und *type2* kleiner als `int` ist.  Andernfalls ist es eine Warnung der Stufe 3 \(ein Wert vom Typ [\_\_int64](../../cpp/int8-int16-int32-int64.md) wird einer Variablen vom Typ `unsigned int` zugewiesen\).  Möglicherweise ist ein Datenverlust aufgetreten.  
+ Ein ganzzahliger Typ wird in einen kleineren ganzzahligen Typ konvertiert. Dies ist eine Warnung der Stufe 4, wenn *Typ1* ist `int` und *Typ2* ist kleiner als `int`. Andernfalls ist eine Stufe 3 (Zuweisen eines Werts vom Typ [__int64](../../cpp/int8-int16-int32-int64.md) einer Variablen vom Typ `unsigned int`). Möglicherweise ist ein Datenverlust aufgetreten.  
   
  Wenn C4244 angezeigt wird, sollten Sie das Programm für das Verwenden von kompatiblen Typen ändern Logik zu Ihrem Code hinzufügen, um sicherzustellen, dass der Bereich möglicher Werte immer mit den verwendeten Typen kompatibel sind.  
   
- C4244 kann auch auf Ebene 2 ausgelöst werden. Weitere Informationen finden Sie unter [Compilerwarnung \(Stufe 2\) C4244](../../error-messages/compiler-warnings/compiler-warning-level-2-c4244.md).  
+ C4244 kann auch auf Ebene 2 ausgelöst werden. finden Sie unter [Compilerwarnung (Stufe 2) C4244](../../error-messages/compiler-warnings/compiler-warning-level-2-c4244.md) für Weitere Informationen.  
   
  Die Konvertierung hat möglicherweise ein Problem durch implizite Konvertierungen.  
   
@@ -52,7 +50,7 @@ int main() {
 }  
 ```  
   
- Weitere Informationen finden Sie unter [Übliche arithmetische Konvertierungen](../../c-language/usual-arithmetic-conversions.md).  
+ Weitere Informationen finden Sie unter [übliche arithmetische Konvertierungen](../../c-language/usual-arithmetic-conversions.md).  
   
 ```  
 // C4244_level3.cpp  
@@ -63,9 +61,9 @@ int main() {
 }  
 ```  
   
- Warnung C4244 kann auftreten, wenn Code für 64\-Bit\-Ziele erstellt wird, der keine Warnung generiert, wenn er für 32\-Bit\-Ziele erstellt wird.  Beispielsweise ist ein Unterschied zwischen Zeigern eine 32\-Bit\-Menge auf 32\-Bit\-Plattformen, aber eine 64\-Bit\-Menge auf 64\-Bit\-Plattformen.  
+ Warnung C4244 kann auftreten, wenn Code für 64-Bit-Ziele erstellt wird, der keine Warnung generiert, wenn er für 32-Bit-Ziele erstellt wird. Beispielsweise ist ein Unterschied zwischen Zeigern eine 32-Bit-Menge auf 32-Bit-Plattformen, aber eine 64-Bit-Menge auf 64-Bit-Plattformen.  
   
- Im folgenden Beispiel wird C4244 generiert, wenn für 64\-Bit\-Ziele kompiliert wird:  
+ Im folgenden Beispiel wird C4244 generiert, wenn für 64-Bit-Ziele kompiliert wird:  
   
 ```  
 // C4244_level3_b.cpp  

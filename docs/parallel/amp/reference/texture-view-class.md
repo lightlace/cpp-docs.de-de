@@ -1,11 +1,10 @@
 ---
-title: Texture_view-Klasse | Microsoft-Dokumentation
+title: Texture_view-Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,33 +19,17 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::sample
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::value_type
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 4896b3ee55a5955c33e1c2652eb73851e4ec5a64
-ms.contentlocale: de-de
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: d03b67b1207827ae753c9d2583d57eab49dc223a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="textureview-class"></a>texture_view-Klasse
 Stellt einer Textur Lese- und Schreibzugriff zur Verfügung. `texture_view` kann nur verwendet werden, um Texturen zu lesen, deren Werttyp `int`, `unsigned int` oder `float` mit 32-Bit-Standard ist. Verwenden Sie zum Lesen anderer Texturformate `texture_view<const value_type, _Rank>`.  
@@ -107,7 +90,7 @@ class texture_view<const value_type, _Rank>
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[Operator()](#operator_call)|Überladen. Ruft den Elementwert durch Index ab.|  
-|[Operator]](#operator_at)|Überladen. Ruft den Elementwert durch Index ab.|  
+|[[]-Operator](#operator_at)|Überladen. Ruft den Elementwert durch Index ab.|  
 |[operator=](#operator_eq)|Überladen. Zuweisungsoperator.|  
   
 ### <a name="public-data-members"></a>Öffentliche Datenmember  
@@ -126,7 +109,7 @@ class texture_view<const value_type, _Rank>
   
  **Namespace:** Concurrency:: Graphics  
   
-##  <a name="dtor"></a>~ texture_view-Objekts 
+##  <a name="dtor"></a>~ Texture_view 
 
  Zerstört die `texture_view`-Instanz.  
   
@@ -134,7 +117,7 @@ class texture_view<const value_type, _Rank>
 ~texture_view() restrict(amp, cpu);
 ```  
   
-##  <a name="ctor"></a>texture_view-Objekts 
+##  <a name="ctor"></a>texture_view 
 
  Erstellt eine `texture_view`-Instanz.  
   
@@ -184,7 +167,7 @@ texture_view(// [7] copy constructor
  [5]-Kopierkonstruktor  
  Das schreibbare `texture_view`-Quellobjekt.  
   
- [6, 7]. Kopierkonstruktor  
+ [6, 7] Copy-Konstruktor  
  Das nicht schreibbare `texture_view`-Quellobjekt.  
   
  `_Mipmap_level`  
@@ -368,7 +351,7 @@ texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf diese `texture_view`-Instanz.  
   
-##  <a name="operator_at"></a>Operator] 
+##  <a name="operator_at"></a>[]-Operator 
 
  Gibt den Elementwert durch Index zurück.  
   
@@ -509,7 +492,7 @@ void set(
  `value`  
  Der Wert, auf den das Element festgelegt werden soll.  
   
-##  <a name="value_type"></a>Werttyp 
+##  <a name="value_type"></a>value_type 
 
  Der Werttyp der Elemente des texture_view-Objekts.  
   
@@ -519,4 +502,3 @@ typedef typename const value_type value_type;
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)
-

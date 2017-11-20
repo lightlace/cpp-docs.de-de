@@ -1,11 +1,10 @@
 ---
-title: Agent-Klasse | Microsoft-Dokumentation
+title: Agent-Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,36 +20,18 @@ f1_keywords:
 - AGENTS/concurrency::agent::wait_for_one
 - AGENTS/concurrency::agent::done
 - AGENTS/concurrency::agent::run
-dev_langs:
-- C++
-helpviewer_keywords:
-- agent class
+dev_langs: C++
+helpviewer_keywords: agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 1e6e23e742137bffd9035ecf69ecc32d199ca0c5
-ms.contentlocale: de-de
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: f3bcd353def1f42269a851c39a1c96e451caa577
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="agent-class"></a>agent-Klasse
 Diese Klasse ist als Basisklasse für alle unabhängigen Agents vorgesehen. Sie wird verwendet, um den Zustand von anderen Agents auszublenden und mithilfe von Meldungsübergabe zu interagieren.  
@@ -67,27 +48,27 @@ class agent;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Agent](#ctor)|Überladen. Erstellt einen Agent.|  
+|[Agent](#ctor)|Überladen. Erstellt einen Agent an.|  
 |[~ Agent-Destruktor](#dtor)|Zerstört den Agent.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Abbrechen](#cancel)|Versetzt einen Agent aus der `agent_created` oder `agent_runnable` Status der `agent_canceled` Zustand.|  
-|[start](#start)|Versetzt einen Agent aus der `agent_created` Zustand der `agent_runnable` Status, und plant die Ausführung.|  
-|[status](#status)|Eine synchrone Quelle der Statusinformationen vom Agent.|  
-|[status_port](#status_port)|Eine asynchrone Quelle der Statusinformationen vom Agent.|  
-|[Warte](#wait)|Wartet, bis ein Agent seine Aufgabe abgeschlossen.|  
-|[wait_for_all](#wait_for_all)|Wartet, bis alle angegebenen Agents, ihre Aufgaben auszuführen.|  
-|[wait_for_one](#wait_for_one)|Wartet auf eine der angegebenen Agents seine Aufgabe abgeschlossen.|  
+|[Abbrechen](#cancel)|Verschiebt einen Agent von entweder der `agent_created` oder `agent_runnable` Status der `agent_canceled` Zustand.|  
+|[start](#start)|Verschiebt einen Agent von der `agent_created` Zustands, in der `agent_runnable` Zustand, und plant die Ausführung.|  
+|[Status](#status)|Eine synchrone Informationsquelle Status des Agents.|  
+|[status_port](#status_port)|Eine asynchrone Datenquelle Statusinformationen vom Agent.|  
+|[Warte](#wait)|Für einen Agent zum Abschließen des Tasks wartet.|  
+|[wait_for_all](#wait_for_all)|Wartet, bis alle angegebenen Agents, um ihre Tasks auszuführen.|  
+|[wait_for_one](#wait_for_one)|Wartet auf eine der angegebenen Agents Abschließen des Tasks.|  
   
 ### <a name="protected-methods"></a>Geschützte Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Fertig](#done)|Versetzt einen Agent in der `agent_done` Zustand, der angibt, dass der Agent abgeschlossen wurde.|  
-|[run](#run)|Stellt die Hauptaufgabe eines Agents dar. `run`in einer abgeleiteten Klasse überschrieben werden soll, und gibt an, was der Agent machen soll, nachdem es gestartet wurde.|  
+|[Fertig](#done)|Verschiebt einen Agent in der `agent_done` Zustand, der angibt, dass der Agent abgeschlossen wurde.|  
+|[run](#run)|Stellt die Hauptaufgabe eines Agents dar. `run`in einer abgeleiteten Klasse überschrieben werden soll, und gibt an, welche Aktion der Agent ausführen soll, nachdem es gestartet wurde.|  
   
 ## <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [asynchrone Agents](../../../parallel/concrt/asynchronous-agents.md).  
@@ -102,7 +83,7 @@ class agent;
   
 ##  <a name="ctor"></a>Agent 
 
- Erstellt einen Agent.  
+ Erstellt einen Agent an.  
   
 ```
 agent();
@@ -114,13 +95,13 @@ agent(ScheduleGroup& _PGroup);
   
 ### <a name="parameters"></a>Parameter  
  `_PScheduler`  
- Die `Scheduler` in der Ausführung des Agents geplanten-Objekt.  
+ Die `Scheduler` Objekt, in dem der ausführungstask des Agents geplant ist.  
   
  `_PGroup`  
- Die `ScheduleGroup` in der Ausführung des Agents geplanten-Objekt. Das verwendete `Scheduler` -Objekt wird von der Planungsgruppe impliziert.  
+ Die `ScheduleGroup` Objekt, in dem der ausführungstask des Agents geplant ist. Das verwendete `Scheduler` -Objekt wird von der Planungsgruppe impliziert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Laufzeit verwendet den Standardplaner, wenn Sie keinen angeben der `_PScheduler` oder `_PGroup` Parameter.  
+ Die Laufzeit mithilfe des Standardplaners aus, wenn Sie keinen angeben der `_PScheduler` oder `_PGroup` Parameter.  
   
 ##  <a name="dtor"></a>~ Agent 
 
@@ -131,47 +112,47 @@ virtual ~agent();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Es ist ein Fehler, einen Agent zu zerstören, die nicht in einem Endzustand ist (entweder `agent_done` oder `agent_canceled`). Dies kann vermieden werden, warten Sie, bis des Agents einen Endzustand im Destruktor einer Klasse erreicht, die von erbt die `agent` Klasse.  
+ Es ist ein Fehler auf einen Agent zu zerstören, die nicht in ein Endzustand ist (entweder `agent_done` oder `agent_canceled`). Dies kann vermieden werden, warten Sie, bis des Agents einen Endzustand im Destruktor einer Klasse erreicht, die von erben die `agent` Klasse.  
   
 ##  <a name="cancel"></a>Abbrechen 
 
- Versetzt einen Agent aus der `agent_created` oder `agent_runnable` Status der `agent_canceled` Zustand.  
+ Verschiebt einen Agent von entweder der `agent_created` oder `agent_runnable` Status der `agent_canceled` Zustand.  
   
 ```
 bool cancel();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true`Wenn der Agent abgebrochen wurde, `false` andernfalls. Ein Agent kann nicht abgebrochen werden, wenn er bereits gestartet oder abgeschlossen wurde.  
+ `true`Wenn der Agent abgebrochen wurde, `false` andernfalls. Ein Agent kann nicht abgebrochen werden, wenn er bereits gestartet oder bereits abgeschlossen wurde.  
   
 ##  <a name="done"></a>Fertig 
 
- Versetzt einen Agent in der `agent_done` Zustand, der angibt, dass der Agent abgeschlossen wurde.  
+ Verschiebt einen Agent in der `agent_done` Zustand, der angibt, dass der Agent abgeschlossen wurde.  
   
 ```
 bool done();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true`Wenn der Agent auf den `agent_done` Zustand `false` andernfalls. Ein Agent, der abgebrochen wurde nicht verschoben werden, um die `agent_done` Zustand.  
+ `true`Wenn der Agent, um verschoben wird die `agent_done` Zustand `false` andernfalls. Ein Agent, der abgebrochen wurde kann nicht verschoben werden, um die `agent_done` Zustand.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sollte aufgerufen werden, am Ende der `run` Methode, wenn Sie wissen, dass die Ausführung des Agents abgeschlossen wurde.  
   
-##  <a name="run"></a>Ausführen 
+##  <a name="run"></a>Führen Sie 
 
- Stellt die Hauptaufgabe eines Agents dar. `run`in einer abgeleiteten Klasse überschrieben werden soll, und gibt an, was der Agent machen soll, nachdem es gestartet wurde.  
+ Stellt die Hauptaufgabe eines Agents dar. `run`in einer abgeleiteten Klasse überschrieben werden soll, und gibt an, welche Aktion der Agent ausführen soll, nachdem es gestartet wurde.  
   
 ```
 virtual void run() = 0;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Agent-Status wird geändert, um `agent_started` unmittelbar bevor diese Methode aufgerufen wird. Aufrufen der Methode sollte `done` für den Agent mit einem entsprechenden Status vor dem zurückgeben, und kann keine Ausnahmen auslösen.  
+ Der Agent-Status wird geändert, um `agent_started` mit der rechten Maustaste, bevor diese Methode aufgerufen wird. Aufrufen der Methode sollte `done` für den Agent mit einem entsprechenden Status vor der Rückgabe, und kann keine Ausnahmen auslösen.  
   
 ##  <a name="start"></a>Starten 
 
- Versetzt einen Agent aus der `agent_created` Zustand der `agent_runnable` Status, und plant die Ausführung.  
+ Verschiebt einen Agent von der `agent_created` Zustands, in der `agent_runnable` Zustand, und plant die Ausführung.  
   
 ```
 bool start();
@@ -182,29 +163,29 @@ bool start();
   
 ##  <a name="status"></a>Status 
 
- Eine synchrone Quelle der Statusinformationen vom Agent.  
+ Eine synchrone Informationsquelle Status des Agents.  
   
 ```
 agent_status status();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt den aktuellen Zustand des Agents zurück. Beachten Sie, dass dieser zurückgegebene Zustand sofort nach zurückgegeben werden konnte.  
+ Gibt den aktuellen Status des Agents zurück. Beachten Sie, dass dieser zurückgegebene Status ändern könnte, sofort nach dem zurückgegeben wird.  
   
 ##  <a name="status_port"></a>status_port 
 
- Eine asynchrone Quelle der Statusinformationen vom Agent.  
+ Eine asynchrone Datenquelle Statusinformationen vom Agent.  
   
 ```
 ISource<agent_status>* status_port();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt die Nachrichtenquelle, die Nachrichten über den aktuellen Zustand des Agents senden kann.  
+ Gibt eine Nachrichtenquelle, die Nachrichten über den aktuellen Status des Agents senden kann.  
   
 ##  <a name="wait"></a>Warte 
 
- Wartet, bis ein Agent seine Aufgabe abgeschlossen.  
+ Für einen Agent zum Abschließen des Tasks wartet.  
   
 ```
 static agent_status __cdecl wait(
@@ -214,7 +195,7 @@ static agent_status __cdecl wait(
   
 ### <a name="parameters"></a>Parameter  
  `_PAgent`  
- Ein Zeiger auf den Agent zu warten.  
+ Ein Zeiger auf den Agent gewartet werden soll.  
   
  `_Timeout`  
  Die maximale Zeit für die Wartezeit in Millisekunden.  
@@ -223,13 +204,13 @@ static agent_status __cdecl wait(
  Die `agent_status` des Agents des Wartevorgangs. Dies kann entweder `agent_canceled` oder `agent_done`.  
   
 ### <a name="remarks"></a>Hinweise  
- Eine Agent-Aufgabe ist abgeschlossen, wenn der Agent die `agent_canceled` oder `agent_done` Zustände.  
+ Ein Agent-Task abgeschlossen ist, wenn der Agent die `agent_canceled` oder `agent_done` Status.  
   
- Wenn der Parameter `_Timeout` verfügt über einen anderen Wert als die Konstante `COOPERATIVE_TIMEOUT_INFINITE`, der die Ausnahme [Operation_timed_out](operation-timed-out-class.md) wird ausgelöst, wenn die angegebene Zeitspanne abläuft, bevor der Agent seine Aufgabe abgeschlossen hat.  
+ Wenn der Parameter `_Timeout` verfügt über einen anderen Wert als die Konstante `COOPERATIVE_TIMEOUT_INFINITE`, die Ausnahme [Operation_timed_out](operation-timed-out-class.md) wird ausgelöst, wenn die angegebene Zeitspanne abläuft, bevor der Agent seine Aufgabe abgeschlossen ist.  
   
 ##  <a name="wait_for_all"></a>wait_for_all 
 
- Wartet, bis alle angegebenen Agents, ihre Aufgaben auszuführen.  
+ Wartet, bis alle angegebenen Agents, um ihre Tasks auszuführen.  
   
 ```
 static void __cdecl wait_for_all(
@@ -241,25 +222,25 @@ static void __cdecl wait_for_all(
   
 ### <a name="parameters"></a>Parameter  
  `count`  
- Die Anzahl der Agentzeiger im Array `_PAgents`.  
+ Die Anzahl von Agent-Zeigern, die im Array vorhanden `_PAgents`.  
   
  `_PAgents`  
- Ein Array von Zeigern auf die Agents warten.  
+ Ein Array von Zeigern auf die Agents gewartet werden soll.  
   
  `_PStatus`  
- Ein Zeiger auf ein Array von Agent-Status. Jeder Statuswert wird beim Beenden die Methode den Status des zugehörigen Agents darstellen.  
+ Ein Zeiger auf ein Array von Agent-Status. Jeder Statuswert repräsentiert den Status des entsprechenden Agents beim Beenden der Methode.  
   
  `_Timeout`  
  Die maximale Zeit für die Wartezeit in Millisekunden.  
   
 ### <a name="remarks"></a>Hinweise  
- Eine Agent-Aufgabe ist abgeschlossen, wenn der Agent die `agent_canceled` oder `agent_done` Zustände.  
+ Ein Agent-Task abgeschlossen ist, wenn der Agent die `agent_canceled` oder `agent_done` Status.  
   
- Wenn der Parameter `_Timeout` verfügt über einen anderen Wert als die Konstante `COOPERATIVE_TIMEOUT_INFINITE`, der die Ausnahme [Operation_timed_out](operation-timed-out-class.md) wird ausgelöst, wenn die angegebene Zeitspanne abläuft, bevor der Agent seine Aufgabe abgeschlossen hat.  
+ Wenn der Parameter `_Timeout` verfügt über einen anderen Wert als die Konstante `COOPERATIVE_TIMEOUT_INFINITE`, die Ausnahme [Operation_timed_out](operation-timed-out-class.md) wird ausgelöst, wenn die angegebene Zeitspanne abläuft, bevor der Agent seine Aufgabe abgeschlossen ist.  
   
 ##  <a name="wait_for_one"></a>wait_for_one 
 
- Wartet auf eine der angegebenen Agents seine Aufgabe abgeschlossen.  
+ Wartet auf eine der angegebenen Agents Abschließen des Tasks.  
   
 ```
 static void __cdecl wait_for_one(
@@ -272,25 +253,24 @@ static void __cdecl wait_for_one(
   
 ### <a name="parameters"></a>Parameter  
  `count`  
- Die Anzahl der Agentzeiger im Array `_PAgents`.  
+ Die Anzahl von Agent-Zeigern, die im Array vorhanden `_PAgents`.  
   
  `_PAgents`  
- Ein Array von Zeigern auf die Agents warten.  
+ Ein Array von Zeigern auf die Agents gewartet werden soll.  
   
  `_Status`  
- Ein Verweis auf eine Variable, in dem der Status des Agents platziert werden.  
+ Ein Verweis auf eine Variable, in dem der Agent-Status platziert werden.  
   
  `_Index`  
- Ein Verweis auf eine Variable, in dem der Agent-Index gespeichert wird.  
+ Ein Verweis auf eine Variable, in dem der Agent-Index platziert werden.  
   
  `_Timeout`  
  Die maximale Zeit für die Wartezeit in Millisekunden.  
   
 ### <a name="remarks"></a>Hinweise  
- Eine Agent-Aufgabe ist abgeschlossen, wenn der Agent die `agent_canceled` oder `agent_done` Zustände.  
+ Ein Agent-Task abgeschlossen ist, wenn der Agent die `agent_canceled` oder `agent_done` Status.  
   
- Wenn der Parameter `_Timeout` verfügt über einen anderen Wert als die Konstante `COOPERATIVE_TIMEOUT_INFINITE`, der die Ausnahme [Operation_timed_out](operation-timed-out-class.md) wird ausgelöst, wenn die angegebene Zeitspanne abläuft, bevor der Agent seine Aufgabe abgeschlossen hat.  
+ Wenn der Parameter `_Timeout` verfügt über einen anderen Wert als die Konstante `COOPERATIVE_TIMEOUT_INFINITE`, die Ausnahme [Operation_timed_out](operation-timed-out-class.md) wird ausgelöst, wenn die angegebene Zeitspanne abläuft, bevor der Agent seine Aufgabe abgeschlossen ist.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)
-

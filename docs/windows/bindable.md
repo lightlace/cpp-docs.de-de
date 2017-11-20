@@ -1,32 +1,30 @@
 ---
-title: "bindable | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.bindable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bindable attribute"
+title: Bindbare | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.bindable
+dev_langs: C++
+helpviewer_keywords: bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b6e099c726a36b76dbe86ecc7385da629f8af36c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# bindable
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gibt an, dass die Eigenschaft Datenbindungen unterstützt.  
+# <a name="bindable"></a>bindable
+Gibt an, dass die Eigenschaft die Datenbindung unterstützt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -34,19 +32,19 @@ Gibt an, dass die Eigenschaft Datenbindungen unterstützt.
   
 ```  
   
-## Hinweise  
- Das Attribut **bindable** C\+\+ verfügt über die gleichen Funktionen wie das [bindbar](http://msdn.microsoft.com/library/windows/desktop/aa366738) MIDL\-Attribut.  Sie können es für die Eigenschaften verwenden, die mit [propget](../windows/propget.md), [propput](../windows/propput.md)oder [propputref](../windows/propputref.md)\-Attributen definiert werden, oder Sie können eine bindbare Methode manuell definieren.  
+## <a name="remarks"></a>Hinweise  
+ Die **bindbare** C++-Attribut hat die gleiche Funktionalität wie die [bindbare](http://msdn.microsoft.com/library/windows/desktop/aa366738) MIDL-Attribut. Können Sie sie auf Eigenschaften, die definiert, mit der [Propget](../windows/propget.md), [Propput](../windows/propput.md), oder [Propputref](../windows/propputref.md) Attribute, oder Sie können eine bindbare Methode manuell definieren.  
   
- Die folgenden MFC\-Beispiele veranschaulichen die Verwendung von **bindable**an:  
+ Die folgende MFC-Beispiele veranschaulichen die Verwendung der **bindbare**:  
   
--   [Kontrollproben: ActiveX\-Steuerelemente MFC\-basierte](assetId:///a44adf86-0ba0-4504-bedb-512b6cba2e63)  
+-   [Beispiele für Steuerelemente: MFC-basierte ActiveX-Steuerelemente](http://msdn.microsoft.com/en-us/a44adf86-0ba0-4504-bedb-512b6cba2e63)  
   
--   [CIRC\-Beispiel: ActiveX\-Steuerelement](assetId:///9ba34d04-280e-49f4-90ae-41a6be44c95b)  
+-   [CIRC-Beispiel: ActiveX-Steuerelement](http://msdn.microsoft.com/en-us/9ba34d04-280e-49f4-90ae-41a6be44c95b)  
   
--   [TESTHELP\-Beispiel: ActiveX\-Steuerelement mit QuickInfo und Hilfe](assetId:///d822861d-c6f0-4d0a-ad11-970eebb1e8cd)  
+-   [TESTHELP-Beispiel: ActiveX-Steuerelement mit QuickInfos und Hilfe](http://msdn.microsoft.com/en-us/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)  
   
-## Beispiel  
- Der folgende Code zeigt, wie Sie **bindable** für eine Eigenschaft verwenden können:  
+## <a name="example"></a>Beispiel  
+ Der folgende Code zeigt, wie Sie verwenden können **bindbare** für eine Eigenschaft:  
   
 ```  
 // cpp_attr_ref_bindable.cpp  
@@ -69,24 +67,23 @@ __interface IPropDemo : IDispatch {
 [ module(name="PropDemoLib", uuid="479B29E2-9A2C-11D0-B696-00A0C903487A", version="1.0", helpstring="property demo") ];  
 ```  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
 |**Betrifft**|Schnittstellenmethode|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Keine|  
+|**Ungültige Attribute**|Keine|  
   
- Weitere Informationen über das kontexte finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
+## <a name="see-also"></a>Siehe auch  
+ [IDL-Attribute](../windows/idl-attributes.md)   
+ [Methodenattribut](../windows/method-attributes.md)   
  [defaultbind](../windows/defaultbind.md)   
  [displaybind](../windows/displaybind.md)   
  [immediatebind](../windows/immediatebind.md)   
  [requestedit](../windows/requestedit.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

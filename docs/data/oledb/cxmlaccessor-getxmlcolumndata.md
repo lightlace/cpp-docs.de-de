@@ -1,53 +1,52 @@
 ---
-title: "CXMLAccessor::GetXMLColumnData | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CXMLAccessor.GetXMLColumnData"
-  - "CXMLAccessor::GetXMLColumnData"
-  - "CXMLAccessor.GetXMLColumnData"
-  - "ATL::CXMLAccessor::GetXMLColumnData"
-  - "GetXMLColumnData"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetXMLColumnData-Methode"
+title: 'CXMLAccessor:: GetXMLColumnData | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CXMLAccessor.GetXMLColumnData
+- CXMLAccessor::GetXMLColumnData
+- CXMLAccessor.GetXMLColumnData
+- ATL::CXMLAccessor::GetXMLColumnData
+- GetXMLColumnData
+dev_langs: C++
+helpviewer_keywords: GetXMLColumnData method
 ms.assetid: 719e8efe-8758-4af7-a855-0e44ea196546
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b0e0d34a9e726912cd631972091df65157de061d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# CXMLAccessor::GetXMLColumnData
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ruft die Ständerinformationen einer Tabelle als Zeichenfolgendaten im XML\-Format, nach Spalten ab.  
+# <a name="cxmlaccessorgetxmlcolumndata"></a>CXMLAccessor::GetXMLColumnData
+Ruft die Typinformationen Spalte einer Tabelle als XML-formatierte Zeichenfolgedaten nach Spalten ab.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
-      HRESULT GetXMLColumnData(   
-   CSimpleStringW& strOutput    
+      HRESULT GetXMLColumnData(   
+   CSimpleStringW& strOutput    
 ) throw( );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `strOutput`  
- \[out\] Einen Verweis auf einen Zeichenfolgenpuffer, der abgerufen werden Ständerinformationen enthält.  Die Zeichenfolge wird mit XML\-Tagnamen formatiert, die die Spaltennamen des Datenspeichers übereinstimmen.  
+ [out] Ein Verweis auf einen Zeichenfolgenpuffer, enthält die Spalte Typinformationen abgerufen werden sollen. Die Zeichenfolge wird mit XML-Tagnamen formatiert, die den Datenspeicher Spaltennamen entsprechen.  
   
-## Rückgabewert  
- Einer der Standard\- `HRESULT`\-Werte.  
+## <a name="return-value"></a>Rückgabewert  
+ Zu den standardmäßigen `HRESULT` Werte.  
   
-## Hinweise  
- Im Folgenden wird gezeigt, wie die Ständerinformationen in XML formatiert werden.  `type` gibt den Datentyp der Spalte an.  Beachten Sie dass die Datentypen basieren auf OLE DB\-Datentypen, nicht die der Datenbank, die zugegriffen wird.  
+## <a name="remarks"></a>Hinweise  
+ Das folgende Beispiel zeigt, wie die Spalteninformationen für den Typ in XML formatiert ist. `type`Gibt an, der Datentyp der Spalte. Beachten Sie, dass die Datentypen auf OLE DB-Datentypen, die nicht die von der Datenbank, auf die zugegriffen wird basieren.  
   
  `<columninfo>`  
   
@@ -55,8 +54,8 @@ Ruft die Ständerinformationen einer Tabelle als Zeichenfolgendaten im XML\-Form
   
  `</columninfo>`  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  
   
-## Siehe auch  
- [CXMLAccessor\-Klasse](../../data/oledb/cxmlaccessor-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [CXMLAccessor-Klasse](../../data/oledb/cxmlaccessor-class.md)

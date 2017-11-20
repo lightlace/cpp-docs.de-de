@@ -1,26 +1,26 @@
 ---
-title: "Struktur- und Konstantendefinitionen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Struktur- und Konstantendefinitionen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 1df7cf46-b853-4788-a257-100d5c37997f
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a93975903451e609676baa6b32641e41221fa005
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Struktur- und Konstantendefinitionen
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die Standardhilfsfunktion verwendet verschiedene Strukturen, um mit den Hookfunktionen bei beliebigen Ausnahmen zu kommunizieren.  Nachstehend sind die Benachrichtigungs\- und Fehlerwerte, die Informationsstrukturen und der Typ der Funktion zur Umwandlung eines Zeigers in einen Hook, der an die Hooks übergeben werden, aufgeführt:  
+# <a name="structure-and-constant-definitions"></a>Struktur- und Konstantendefinitionen
+Die Standard-Hilfsroutine verwendet mehrere Strukturen für die Kommunikation mit den Hookfunktionen sowie während der Ausnahmen an. Hier sind die Werte für Benachrichtigung und Fehler, Informationsstrukturen und der Zeiger auf Hookfunktion-Typ, der an die Hooks übergeben:  
   
 ```  
 //  
@@ -78,5 +78,5 @@ typedef struct ImgDelayDescr {
     } ImgDelayDescr, * PImgDelayDescr;  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Die Hilfsfunktion](../../build/reference/understanding-the-helper-function.md)

@@ -1,30 +1,28 @@
 ---
-title: "Module::Module-Konstruktor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::Module"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Module, Konstruktor"
+title: 'Module:: Module-Konstruktor | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::Module
+dev_langs: C++
+helpviewer_keywords: Module, constructor
 ms.assetid: 5436fc74-61dc-41b6-81af-4f03177159aa
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 33d8d31a7f605fb22e3ca925d53b22b3034c0a7b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Module::Module-Konstruktor
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Initialisiert eine neue Instanz der Modul-Klasse.  
+# <a name="modulemodule-constructor"></a>Module::Module-Konstruktor
+Initialisiert eine neue Instanz der Module-Klasse.  
   
 ## <a name="syntax"></a>Syntax  
   

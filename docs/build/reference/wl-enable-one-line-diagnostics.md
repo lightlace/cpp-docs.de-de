@@ -1,43 +1,42 @@
 ---
-title: "/WL (Einzeilige Diagnostik aktivieren) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/wl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/WL (Compileroption) [C++]"
-  - "WL (Compileroption) [C++]"
-  - "-WL (Compileroption) [C++]"
+title: -WL (einzeilige-Diagnostik aktivieren) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /wl
+dev_langs: C++
+helpviewer_keywords:
+- -WL compiler option [C++]
+- /WL compiler option [C++]
+- WL compiler option [C++]
 ms.assetid: 332cadb4-8ea6-45fe-b67d-33ddec1f2c2e
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 74591dab7c47a8ffc36c357a6c53acb25563e382
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# /WL (Einzeilige Diagnostik aktivieren)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Hängt zusätzliche Informationen an eine Fehler\- oder Warnmeldung an.  
+# <a name="wl-enable-one-line-diagnostics"></a>/WL (Einzeilige Diagnostik aktivieren)
+Fügt zusätzliche Informationen zu einer Warnung oder Fehlermeldung an.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /WL  
 ```  
   
-## Hinweise  
- An Fehler\- und Warnmeldungen vom C\+\+\-Compiler können sich zusätzliche Informationen anschließen, die standardmäßig in der nächsten Zeile angezeigt werden.  Wenn Sie von der Befehlszeile aus kompilieren, kann die zusätzliche Informationszeile an die Fehler\- oder Warnmeldung angehängt werden.  Das kann erwünscht sein, wenn Sie die Buildausgabe in einer Protokolldatei speichern und diese dann verarbeiten, um alle Fehler und Warnungen zu berücksichtigen.  Die Fehler\- oder Warnmeldung wird durch ein Semikolon von der Zusatzzeile getrennt.  
+## <a name="remarks"></a>Hinweise  
+ Fehler- und Warnmeldungen aus dem C++-Compiler können zusätzliche Informationen folgen, die standardmäßig in einer neuen Zeile angezeigt wird. Wenn Sie über die Befehlszeile kompilieren, kann die zusätzliche Zeile mit Informationen zu der Warnung oder Fehlermeldung angefügt werden. Dies möglicherweise wünschenswert, wenn Sie die Buildausgabe in einer Protokolldatei erfassen und Verarbeiten dieses Protokoll, um alle Fehler und Warnungen zu suchen. Ein Semikolon wird die Fehlermeldung oder Warnung von der zusätzliche Zeile getrennt werden.  
   
- Nicht alle Fehler\- und Warnmeldungen haben eine zusätzliche Informationszeile.  Der folgende Code generiert einen Fehler mit einer Zusatzzeile mit Informationen. Die Auswirkungen können Sie mithilfe von **\/WL** testen.  
+ Nicht alle Fehler und Warnungen werden gemeldet haben eine zusätzliche Zeile der Informationen. Im folgende Code wird ein Fehler generiert, der eine zusätzliche Zeile Informationen verfügt; Damit können Sie die Auswirkungen zu testen, bei der Verwendung **/WL**.  
   
 ```  
 // compiler_option_WL.cpp  
@@ -49,20 +48,20 @@ int main() {
 }  
 ```  
   
-### So legen Sie diese Compileroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Gewusst wie: Öffnen von Projekteigenschaftenseiten](../../misc/how-to-open-project-property-pages.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Klicken Sie auf den Ordner **C\/C\+\+**.  
+2.  Klicken Sie auf den Ordner **C/C++** .  
   
-3.  Klicken Sie auf die Eigenschaftenseite **Befehlszeile**.  
+3.  Klicken Sie auf die Eigenschaftenseite **Befehlszeile** .  
   
 4.  Geben Sie die Compileroption im Feld **Zusätzliche Optionen** ein.  
   
-### So legen Sie diese Compileroption programmgesteuert fest  
+### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
   
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions*>.  
+-   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Compileroptionen](../../build/reference/compiler-options.md)   
  [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

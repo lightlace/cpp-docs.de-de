@@ -1,48 +1,46 @@
 ---
-title: "map::make_value (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::make_value"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "make_value-Member [STL/CLR]"
+title: Map::make_value (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::make_value
+dev_langs: C++
+helpviewer_keywords: make_value member [STL/CLR]
 ms.assetid: a0bc4081-b8b7-450e-b041-a49ac42b279f
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 639fb391b1feaa86bba1edd05f502d015c46779f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# map::make_value (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="mapmakevalue-stlclr"></a>map::make_value (STL/CLR)
 Erstellt ein Wertobjekt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 static value_type make_value(key_type key, mapped_type mapped);  
 ```  
   
-#### Parameter  
- Schlüssel  
- So verwenden Schlüsselwert.  
+#### <a name="parameters"></a>Parameter  
+ Key  
+ Schlüsselwert verwenden.  
   
- zugeordnet  
- Zugeordneter Wert zu suchen.  
+ Zugeordnet  
+ Zugeordnet zu suchende Wert.  
   
-## Hinweise  
- Die Memberfunktion `value_type` gibt ein Objekt zurück, dessen Schlüssel `key` und dessen zugehörige Wert `mapped` ist.  Sie verwenden sie, um ein Objekt zu erstellen, das zur Verwendung mit verschiedenen anderen Memberfunktionen geeignet ist.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt eine `value_type` Objekts, dessen Schlüssel `key` und dessen zugeordnete Wert ist `mapped`. Sie verwenden es, um ein Objekt, das für die Verwendung mit anderen Memberfunktionen geeignet zu verfassen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_map_make_value.cpp   
@@ -66,14 +64,17 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[bc 3\]**   
-## Anforderungen  
- **Header:** \<cliext\/Zuordnung\>  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Map >  
   
-## Siehe auch  
- [map](../dotnet/map-stl-clr.md)   
- [map::key\_type](../dotnet/map-key-type-stl-clr.md)   
- [map::mapped\_type](../dotnet/map-mapped-type-stl-clr.md)   
- [map::value\_type](../dotnet/map-value-type-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Karte (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [Map:: KEY_TYPE (STL/CLR)](../dotnet/map-key-type-stl-clr.md)   
+ [Map:: mapped_type (STL/CLR)](../dotnet/map-mapped-type-stl-clr.md)   
+ [map::value_type (STL/CLR)](../dotnet/map-value-type-stl-clr.md)

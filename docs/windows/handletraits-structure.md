@@ -1,59 +1,57 @@
 ---
-title: "HANDLETraits-Struktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "HANDLETraits-Struktur"
+title: HANDLETraits-Struktur | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits
+dev_langs: C++
+helpviewer_keywords: HANDLETraits structure
 ms.assetid: 22963e88-d857-4624-9182-7c986daff722
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1d020adfbcb9ee1a47750dd16b5466cf76391906
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# HANDLETraits-Struktur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Definiert allgemeine Eigenschaften eines Handles.  
+# <a name="handletraits-structure"></a>HANDLETraits-Struktur
+Definiert die gemeinsame Merkmale eines Handles.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct HANDLETraits;  
 ```  
   
-## Member  
+## <a name="members"></a>Mitglieder  
   
-### Öffentliche Typedefs  
+### <a name="public-typedefs"></a>Öffentliche Typedefs  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
+|Name|Beschreibung|  
+|----------|-----------------|  
 |`Type`|Ein Synonym für HANDLE.|  
   
-### Öffentliche Methoden  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[HANDLETraits::Close\-Methode](../windows/handletraits-close-method.md)|Schließt das angegebene Handle.|  
-|[HANDLETraits::GetInvalidValue\-Methode](../windows/handletraits-getinvalidvalue-method.md)|Stellt ein ungültiges Handle dar.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[HANDLETraits::Close-Methode](../windows/handletraits-close-method.md)|Schließt das angegebene Handle.|  
+|[HANDLETraits::GetInvalidValue-Methode](../windows/handletraits-getinvalidvalue-method.md)|Stellt ein ungültiges Handle dar.|  
   
-## Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `HANDLETraits`  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  
   
- **Namespace:**  Microsoft::WRL::Wrappers::HandleTraits  
+ **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
   
-## Siehe auch  
- [Microsoft::WRL::Wrappers::HandleTraits\-Namespace](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+## <a name="see-also"></a>Siehe auch  
+ [Microsoft::WRL::Wrappers::HandleTraits-Namespace](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

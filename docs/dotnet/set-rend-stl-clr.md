@@ -1,41 +1,39 @@
 ---
-title: "set::rend (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::rend"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rend-Member [STL/CLR]"
+title: 'Set:: rend (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::rend
+dev_langs: C++
+helpviewer_keywords: rend member [STL/CLR]
 ms.assetid: 4a98d138-ad89-4dee-b757-e798da2e0c0e
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 785bb6116a311c504a40b0c7e6ce22dfa20e48aa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# set::rend (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="setrend-stlclr"></a>set::rend (STL/CLR)
 Legt das Ende der umgekehrten kontrollierten Sequenz fest.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 reverse_iterator rend();  
 ```  
   
-## Hinweise  
- Die Memberfunktion gibt einem umgekehrten Iterator zurück, der nur über den Anfang der Sequenz gesteuerten hinaus zeigt.  Demzufolge wird der `end` der umgekehrten Sequenz bestimmt.  Sie können damit einen Iterator abrufen, der das `current` Ende der kontrollierten Sequenz in umgekehrter Reihenfolge bestimmt; der Zustand kann sich jedoch ändern, sobald sich die Länge der kontrollierten Sequenz ändert.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt einem reverse-Iterator, verweist direkt hinter dem Anfang der kontrollierten Sequenz zurück. Daher kennzeichnet es die `end` der umgekehrten Sequenz. Es mit der einen Iterator abrufen, bestimmt die `current` Ende der kontrollierten Sequenz in umgekehrter Reihenfolge, aber dessen Status kann ändern, wenn die Länge der gesteuerten Sequenz geändert wird.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_set_rend.cpp   
@@ -65,16 +63,19 @@ int main()
   
 ```  
   
-  **ein b c**  
-**\*\- \-\-rend\(\) \= b**  
-**\*\-\-rend\(\) \= "**   
-## Anforderungen  
- **Header:** \<cliext\/Satz\>  
+```Output  
+ a b c  
+*-- --rend() = b  
+*--rend() = a  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Set >  
   
-## Siehe auch  
- [set](../dotnet/set-stl-clr.md)   
- [set::begin](../dotnet/set-begin-stl-clr.md)   
- [set::end](../dotnet/set-end-stl-clr.md)   
- [set::rbegin](../dotnet/set-rbegin-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Legen Sie (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [Set:: begin (STL/CLR)](../dotnet/set-begin-stl-clr.md)   
+ [Set:: End (STL/CLR)](../dotnet/set-end-stl-clr.md)   
+ [set::rbegin (STL/CLR)](../dotnet/set-rbegin-stl-clr.md)

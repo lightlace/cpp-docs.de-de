@@ -1,45 +1,44 @@
 ---
-title: "auto_handle::~auto_handle"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_handle.~auto_handle"
-  - "msclr.auto_handle.~auto_handle"
-  - "auto_handle::~auto_handle"
-  - "~auto_handle"
-  - "msclr::auto_handle::~auto_handle"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_handle::~auto_handle"
+title: 'Auto_handle:: ~ Auto_handle | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_handle.~auto_handle
+- msclr.auto_handle.~auto_handle
+- auto_handle::~auto_handle
+- ~auto_handle
+- msclr::auto_handle::~auto_handle
+dev_langs: C++
+helpviewer_keywords: auto_handle::~auto_handle
 ms.assetid: e83e95a8-015b-4f27-ad63-70efb3690726
-caps.latest.revision: 9
-caps.handback.revision: "7"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 53f9f97044d2a8723723a586e48d252b1917ab02
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# auto_handle::~auto_handle
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Der `auto_handle` \- Destruktor.  
+# <a name="autohandleautohandle"></a>auto_handle::~auto_handle
+Die `auto_handle` Destruktor.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 ~auto_handle();  
 ```  
   
-## Hinweise  
- Der Destruktor zerstört auch das Besitze Objekt.  
+## <a name="remarks"></a>Hinweise  
+ Der Destruktor destructs auch im Besitz befindliches Objekt.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // msl_auto_handle_dtor.cpp  
@@ -68,15 +67,18 @@ int main()
 }  
 ```  
   
-  **ClassA\-Konstruktor**  
-**ClassA\-Destruktor**  
-**dein**   
-## Anforderungen  
- **Headerdatei** \<msclr\\auto\_handle.h\>  
+```Output  
+ClassA constructor  
+ClassA destructor  
+done  
+```  
   
- **Namespace** msclr  
+## <a name="requirements"></a>Anforderungen  
+ **Headerdatei** \<msclr\auto_handle.h >  
   
-## Siehe auch  
- [auto\_handle\-Member](../dotnet/auto-handle-members.md)   
- [auto\_handle::release](../dotnet/auto-handle-release.md)   
- [auto\_handle::auto\_handle](../dotnet/auto-handle-auto-handle.md)
+ **Namespace** Msclr  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Auto_handle-Member](../dotnet/auto-handle-members.md)   
+ [auto_handle::Release](../dotnet/auto-handle-release.md)   
+ [auto_handle::auto_handle](../dotnet/auto-handle-auto-handle.md)

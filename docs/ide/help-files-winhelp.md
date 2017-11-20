@@ -1,46 +1,45 @@
 ---
-title: "Hilfedateien (WinHelp) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Dateitypen [C++], WinHelp-Dateien"
+title: Hilfedateien (WinHelp) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: file types [C++], WinHelp files
 ms.assetid: 4fdcbd66-66b0-4866-894a-fd7b4c2557e4
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a5036aa329c0b4004bd7ada724c62e1a1669f050
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Hilfedateien (WinHelp)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die folgenden Dateien werden erstellt, wenn Sie der Anwendung WinHelp\-Hilfeunterstützung hinzufügen. Sie aktivieren dazu das Kontrollkästchen **Kontextbezogene Hilfe** und wählen dann auf der Seite [Erweiterte Features](../mfc/reference/advanced-features-mfc-application-wizard.md) des MFC\-Anwendungs\-Assistenten **WinHelp\-Format** aus.  
+# <a name="help-files-winhelp"></a>Hilfedateien (WinHelp)
+Die folgenden Dateien werden erstellt, wenn Sie die WinHelp-Typ der Hilfe und Unterstützung für Ihre Anwendung, indem Sie die Auswahl hinzufügen der **kontextbezogene Hilfe** Kontrollkästchen auswählen und dann **WinHelp-Format** in der [Erweiterte Funktionen](../mfc/reference/advanced-features-mfc-application-wizard.md) Seite des Assistenten für die MFC-Anwendung.  
   
-|Dateiname|Verzeichnis|Anzeige im Projektmappen\-Explorer|Beschreibung|  
-|---------------|-----------------|----------------------------------------|------------------|  
-|*Projname*.hpj|*Projname*\\hlp|Quelldateien|Hilfeprojektdatei, mit der der Hilfecompiler die Hilfedatei des Programms oder Steuerelements erstellt.|  
-|*Projname*.rtf|*Projname*\\hlp|Hilfedateien|Enthält Themenvorlagen, die Sie bearbeiten können, sowie Informationen zur Anpassung der HPJ\-Datei.|  
-|*Projname*.cnt|*Projname*\\hlp|Hilfedateien|Stellt die Struktur für das Fenster **Inhalt** in der Windows\-Hilfe bereit.|  
-|Makehelp.bat|*Projname*|Quelldateien|Wird vom System bei der Projektkompilierung zum Erstellen des Hilfeprojekts verwendet.|  
-|Print.rtf|*Projname*\\hlp|Hilfedateien|Wird erstellt, wenn das Projekt Druckunterstützung \(Standard\) umfasst.  Diese Datei beschreibt die Druckbefehle und Dialogfelder.|  
-|\*.bmp|*Projname*\\hlp|Ressourcendateien|Enthalten Bilder für die verschiedenen erstellten Hilfedateithemen.|  
+|Dateiname|Speicherort für das Verzeichnis|Speicherort für den Projektmappen-Explorer|Beschreibung|  
+|---------------|------------------------|--------------------------------|-----------------|  
+|*Projektname*HPJ|*Projektname*\hlp|Quelldateien|Die Hilfeprojektdatei, die vom Hilfecompiler zum Erstellen von Ihrer Anwendung oder die Hilfedatei des Steuerelements verwendet wird.|  
+|*Projektname*RTF|*Projektname*\hlp|Hilfedateien|Enthält Informationen zum Anpassen der HPJ-Datei und Vorlage Themen, die Sie bearbeiten können.|  
+|*Projektname*CNT|*Projektname*\hlp|Hilfedateien|Stellt die Struktur für die **Inhalt** Fenster in der Windows-Hilfe.|  
+|MakeHelp.bat|*Projektname*|Quelldateien|Vom System verwendet, um das Help-Projekt zu erstellen, wenn das Projekt kompiliert wird.|  
+|Print.RTF|*Projektname*\hlp|Hilfedateien|Erstellt, wenn Ihr Projekt druckunterstützung (Standard) umfasst. Beschreibt die Druckbefehle und Dialogfelder.|  
+|*.bmp|*Projektname*\hlp|Ressourcendateien|Enthalten Sie Bilder für die verschiedenen generierten Datei Hilfethemen.|  
   
- Sie können einem MFC\-ActiveX\-Steuerelementprojekt WinHelp\-Unterstützung hinzufügen, indem Sie auf der Registerkarte [Anwendungseinstellungen](../mfc/reference/application-settings-mfc-activex-control-wizard.md) des MFC\-ActiveX\-Steuerelement\-Assistenten **Hilfedateien erstellen** auswählen.  Die folgenden Dateien werden dem Projekt hinzugefügt, nachdem Sie einem MFC\-ActiveX\-Steuerelement Hilfeunterstützung hinzugefügt haben:  
+ Sie können die WinHelp-Unterstützung zu einem MFC-ActiveX-Steuerelement-Projekt hinzufügen, durch Auswahl **Hilfedateien generieren** in der [Anwendungseinstellungen](../mfc/reference/application-settings-mfc-activex-control-wizard.md) MFC-ActiveX-Steuerelement-Assistenten auf der Registerkarte. Die folgenden Dateien werden dem Projekt hinzugefügt, wenn Sie Hilfe und Unterstützung auf MFC-ActiveX-Steuerelement hinzufügen:  
   
-|Dateiname|Verzeichnis|Anzeige im Projektmappen\-Explorer|Beschreibung|  
-|---------------|-----------------|----------------------------------------|------------------|  
-|*Projname*.hpj|*Projname*\\hlp|Quelldateien|Projektdatei, mit der der Hilfecompiler die Hilfedatei des Programms oder Steuerelements erstellt.|  
-|*Projname*.rtf|*Projname*\\hlp|Project|Enthält Themenvorlagen, die Sie bearbeiten können, sowie Informationen zur Anpassung der HPJ\-Datei.|  
-|Makehelp.bat|*Projname*|Quelldateien|Wird vom System bei der Projektkompilierung zum Erstellen des Hilfeprojekts verwendet.|  
-|Bullet.bmp|*Projname*|Ressourcendateien|Wird in Standard\-Hilfedateithemen zur Darstellung von Listen mit Aufzählungszeichen verwendet.|  
+|Dateiname|Speicherort für das Verzeichnis|Speicherort für den Projektmappen-Explorer|Beschreibung|  
+|---------------|------------------------|--------------------------------|-----------------|  
+|*Projektname*HPJ|*Projektname*\hlp|Quelldateien|Die Projektdatei, die vom Hilfecompiler zum Erstellen von Ihrer Anwendung oder die Hilfedatei des Steuerelements verwendet wird.|  
+|*Projektname*RTF|*Projektname*\hlp|Projekt|Enthält Informationen zum Anpassen der HPJ-Datei und Vorlage Themen, die Sie bearbeiten können.|  
+|MakeHelp.bat|*Projektname*|Quelldateien|Vom System verwendet, um das Help-Projekt zu erstellen, wenn das Projekt kompiliert wird.|  
+|Bullet.bmp|*Projektname*|Ressourcendateien|Von standard-Hilfethemen verwendet, um Aufzählung darzustellen.|  
   
-## Siehe auch  
- [Für Visual C\+\+\-Projekte erstellte Dateitypen](../ide/file-types-created-for-visual-cpp-projects.md)
+## <a name="see-also"></a>Siehe auch  
+ [Für Visual C++-Projekte erstellte Dateitypen](../ide/file-types-created-for-visual-cpp-projects.md)

@@ -1,11 +1,10 @@
 ---
-title: Klasse CSimpleMapEqualHelperFalse | Microsoft-Dokumentation
+title: CSimpleMapEqualHelperFalse Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,38 +12,21 @@ f1_keywords:
 - ATLSIMPCOLL/ATL::CSimpleMapEqualHelperFalse
 - ATLSIMPCOLL/ATL::CSimpleMapEqualHelperFalse::IsEqualKey
 - ATLSIMPCOLL/ATL::CSimpleMapEqualHelperFalse::IsEqualValue
-dev_langs:
-- C++
-helpviewer_keywords:
-- CSimpleMapEqualHelperFalse class
+dev_langs: C++
+helpviewer_keywords: CSimpleMapEqualHelperFalse class
 ms.assetid: a873eea3-e130-45cc-a476-61ee79511c3b
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 68a08ffc0ba126c523a779e3d1a72217dead6235
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 1dda098f54b0589a610e10713cc2f936172e26e1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="csimplemapequalhelperfalse-class"></a>CSimpleMapEqualHelperFalse-Klasse
-Diese Klasse ist eine Hilfsklasse für die [CSimpleMap](../../atl/reference/csimplemap-class.md) Klasse.  
+Diese Klasse ist ein Hilfsprogramm für die [CSimpleMap](../../atl/reference/csimplemap-class.md) Klasse.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -59,19 +41,19 @@ class CSimpleMapEqualHelperFalse
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CSimpleMapEqualHelperFalse::IsEqualKey](#isequalkey)|(Statisch) Testet zwei Schlüssel auf Gleichheit.|  
-|[CSimpleMapEqualHelperFalse::IsEqualValue](#isequalvalue)|(Statisch) Gibt False zurück.|  
+|[CSimpleMapEqualHelperFalse::IsEqualKey](#isequalkey)|(Statisch) Testet zwei Schlüsseln auf Gleichheit.|  
+|[CSimpleMapEqualHelperFalse::IsEqualValue](#isequalvalue)|(Statisch) Gibt "false".|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese "traits"-Klasse ist eine Ergänzung zu den `CSimpleMap` Klasse. Eine Methode zum Vergleichen von zwei Elemente in der `CSimpleMap` -Objekt, insbesondere zwei Elemente mit dem Wert oder zwei Hauptelemente.  
+ Diese Merkmalklasse ist eine Ergänzung zur der `CSimpleMap` Klasse. Es bietet eine Methode zum Vergleichen von zwei Elemente in der `CSimpleMap` Objekts, insbesondere zwei Wertelemente oder zwei wichtige Elemente.  
   
- Der Wertevergleich gibt immer false zurück und darüber hinaus ruft `ATLASSERT` mit dem Argument False, wenn es jemals verwiesen wird. In Situationen, in denen der Gleichheitstest auf ist nicht ausreichend definiert, mit dieser Klasse können Sie eine Karte mit Schlüssel-Wert-Paare, um eine klar definierte Weise für Methoden, die für Vergleiche, wie z. B. abhängen tritt jedoch ordnungsgemäß für die meisten Methoden [CSimpleMap::FindVal](../../atl/reference/csimplemap-class.md#findval).  
+ Der Wertevergleich immer "false" zurückgeben, und darüber hinaus ruft `ATLASSERT` mit dem Argument "false", wenn es jemals verwiesen wird. In Situationen, in dem der Gleichheitstest auf ist nicht ausreichend definiert, diese Klasse ermöglicht es eine Karte mit Schlüssel-Wert-Paaren für die meisten Methoden ordnungsgemäß ausgeführt werden, jedoch in einer klar definierten Weise für Methoden, die für Vergleiche, wie z. B. abhängen fehl [CSimpleMap:: FindVal](../../atl/reference/csimplemap-class.md#findval).  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlsimpcoll.h  
   
 ##  <a name="isequalkey"></a>CSimpleMapEqualHelperFalse::IsEqualKey  
- Testet zwei Schlüssel auf Gleichheit.  
+ Testet zwei Schlüsseln auf Gleichheit.  
   
 ```
 static bool IsEqualKey(const TKey& k1, const TKey& k2);
@@ -85,7 +67,7 @@ static bool IsEqualKey(const TKey& k1, const TKey& k2);
  Der zweite Schlüssel.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt True zurück, wenn die Schlüssel gleich sind.  
+ Gibt "true" zurück, wenn die Schlüssel gleich "false", andernfalls sind.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode ruft [CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md).  
@@ -101,9 +83,8 @@ static bool IsEqualValue(const TVal&, const TVal&);
  Gibt false zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode immer "false" zurückgibt und ruft `ATLASSERT` mit dem Argument False, wenn es jemals verwiesen wird. Der Zweck der `CSimpleMapEqualHelperFalse::IsEqualValue` besteht darin, erzwingen Methoden mit Vergleiche in einer klar definierten Weise fehlschlägt, wenn Tests auf Gleichheit nicht angemessen definiert wurden.  
+ Diese Methode immer "false" zurückgegeben, und rufen `ATLASSERT` mit dem Argument "false", wenn es jemals verwiesen wird. Der Zweck der `CSimpleMapEqualHelperFalse::IsEqualValue` wird gezwungen Methoden mit, dass Vergleiche in einer klar definierten Weise fehl, wenn Gleichheitstests nicht adäquat definiert wurden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CSimpleMapEqualHelper-Klasse](../../atl/reference/csimplemapequalhelper-class.md)   
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)
-
+ [Klassenübersicht](../../atl/atl-class-overview.md)

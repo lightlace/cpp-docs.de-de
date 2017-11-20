@@ -1,32 +1,30 @@
 ---
-title: "map::map (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::map"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "map-Member [STL/CLR]"
+title: 'Map:: Map (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::map
+dev_langs: C++
+helpviewer_keywords: map member [STL/CLR]
 ms.assetid: c91f699a-4742-4859-b2b3-c2a01a750bea
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d8fe3e0dd20ae07f3378bd528d7e19986c2aed6b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# map::map (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Erstellt ein container\-Objekt.  
+# <a name="mapmap-stlclr"></a>map::map (STL/CLR)
+Erstellt ein container-Objekt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 map();  
@@ -43,79 +41,71 @@ map(System::Collections::Generic::IEnumerable<GValue>^ right,
     key_compare^ pred);  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  first  
- Anfang Einfügen des Bereichs.  
+ Anfang des Bereichs, der eingefügt.  
   
  last  
- Ende Einfügen des Bereichs.  
+ Das Ende des Bereichs einfügen.  
   
  pred  
- Reihenfolgenprädikat für die gesteuerte Sequenz.  
+ Sortierung Prädikat für die gesteuerte Sequenz.  
   
- right  
- Objekt oder Bereich Einfüge\-.  
+ Rechts  
+ Einzufügendes Objekt bzw. einzufügender Bereich.  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Der Konstruktor:  
   
  `map();`  
   
- initialisiert die gesteuerte Sequenz ohne Elemente, mit dem Standardreihenfolgenprädikat `key_compare()`.  Sie verwenden sie, um eine leere gesteuerten ursprünglichen Sequenz, mit dem Standardreihenfolgenprädikat anzugeben.  
+ Initialisiert die gesteuerte Sequenz keine Elemente mit der standardmäßigen Reihenfolge Prädikat `key_compare()`. Sie können damit eine leere gesteuerte Sequenz, mit der standardmäßigen Reihenfolge Prädikat angeben.  
   
  Der Konstruktor:  
   
  `explicit map(key_compare^ pred);`  
   
- initialisiert die gesteuerte Sequenz ohne Elemente, mit dem Reihenfolgenprädikat `pred`.  Sie verwenden sie, um eine leere gesteuerten ursprünglichen Sequenz, mit dem angegebenen Reihenfolgenprädikat anzugeben.  
+ Initialisiert die gesteuerte Sequenz keine Elemente, mit dem Prädikat Reihenfolge `pred`. Sie können damit eine leere gesteuerte Sequenz, mit der angegebenen Reihenfolge Prädikat angeben.  
   
  Der Konstruktor:  
   
  `map(map<Key, Mapped>% right);`  
   
- initialisiert die gesteuerte Sequenz mit der Sequenz `[``right``.`[map::begin](../dotnet/map-begin-stl-clr.md)`(),` `right``.`[map::end](../dotnet/map-end-stl-clr.md)`())`, mit dem Standardreihenfolgenprädikat.  Sie verwenden sie, um einer gesteuerten ursprünglichen Sequenz, die eine Kopie der Sequenz, die erfolgen durch das Zuordnungsobjekt `right` gesteuert wird, mit dem Standardreihenfolgenprädikat anzugeben.  
+ Initialisiert die gesteuerte Sequenz durch die Sequenz [`right.begin()`, `right.end()`), mit der standardmäßigen Reihenfolge Prädikat. Verwenden sie eine gesteuerte Sequenz an, die eine Kopie der Sequenz, die von der Map-Objekt gesteuert wird `right`, mit der standardmäßigen Reihenfolge Prädikat.  
   
  Der Konstruktor:  
   
  `map(map<Key, Mapped>^ right);`  
   
- initialisiert die gesteuerte Sequenz mit der Sequenz `[``right``->`[map::begin](../dotnet/map-begin-stl-clr.md)`(),` `right``->`[map::end](../dotnet/map-end-stl-clr.md)`())`, mit dem Standardreihenfolgenprädikat.  Sie verwenden sie, um einer gesteuerten ursprünglichen Sequenz, die eine Kopie der Sequenz, die erfolgen durch das Zuordnungsobjekt `right` gesteuert wird, mit dem Standardreihenfolgenprädikat anzugeben.  
+ Initialisiert die gesteuerte Sequenz durch die Sequenz [`right->begin()`, `right->end()`), mit der standardmäßigen Reihenfolge Prädikat. Verwenden sie eine gesteuerte Sequenz an, die eine Kopie der Sequenz, die von der Map-Objekt gesteuert wird `right`, mit der standardmäßigen Reihenfolge Prädikat.  
   
  Der Konstruktor:  
   
- `template<typename InIter>`  
+ `template<typename InIter> map(InIter first, InIter last);`  
   
- `map(InIter first, InIter last);`  
-  
- initialisiert die gesteuerte Sequenz mit der Sequenz `[``first``,` `last``)`, mit dem Standardreihenfolgenprädikat.  Sie verwenden sie, um die gesteuerte Sequenz eine Kopie einer anderen Sequenz, mit dem Standardreihenfolgenprädikat zu erstellen.  
+ Initialisiert die gesteuerte Sequenz durch die Sequenz [`first`, `last`), mit der standardmäßigen Reihenfolge Prädikat. Sie können damit der kontrollierten Sequenz eine Kopie einer anderen Sequenz mit der standardmäßigen Reihenfolge Prädikat erstellen.  
   
  Der Konstruktor:  
   
- `template<typename InIter>`  
+ `template<typename InIter> map(InIter first, InIter last, key_compare^ pred);`  
   
- `map(InIter first, InIter last,`  
-  
- `key_compare^ pred);`  
-  
- initialisiert die gesteuerte Sequenz mit der Sequenz `[``first``,` `last``)`, mit dem Reihenfolgenprädikat `pred`.  Sie verwenden sie, um die gesteuerte Sequenz eine Kopie einer anderen Sequenz, mit dem angegebenen Reihenfolgenprädikat zu erstellen.  
+ Initialisiert die gesteuerte Sequenz durch die Sequenz [`first`, `last`), mit dem Prädikat Reihenfolge `pred`. Sie können damit der gesteuerten Sequenz eine Kopie einer anderen Sequenz, mit dem angegebenen Reihenfolge Prädikat erstellen.  
   
  Der Konstruktor:  
   
  `map(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- initialisiert die gesteuerte Sequenz mit der Folge, die der Enumerator `right`, mit dem Standardreihenfolgenprädikat festgelegt wird.  Sie verwenden sie, um die gesteuerte Sequenz eine Kopie einer anderen Sequenz erstellen, die von ein Enumerator, mit dem Standardreihenfolgenprädikat beschrieben wird.  
+ Initialisiert die gesteuerte Sequenz durch die Sequenz, die vom Enumerator festgelegte `right`, mit der standardmäßigen Reihenfolge Prädikat. Sie mit ihrer Hilfe der gesteuerten Sequenz eine Kopie einer anderen Sequenz, die durch ein Enumerator, mit der standardmäßigen Reihenfolge Prädikat beschrieben.  
   
  Der Konstruktor:  
   
- `map(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ `map(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- `key_compare^ pred);`  
+ Initialisiert die gesteuerte Sequenz durch die Sequenz, die vom Enumerator festgelegte `right`, mit dem Prädikat Reihenfolge `pred`. Sie mit ihrer Hilfe der gesteuerten Sequenz eine Kopie einer anderen Sequenz, die durch ein Enumerator, mit dem angegebenen Reihenfolge Prädikat beschrieben.  
   
- initialisiert die gesteuerte Sequenz mit der Folge, die der Enumerator `right`, mit dem Reihenfolgenprädikat `pred` festgelegt wird.  Sie verwenden sie, um die gesteuerte Sequenz eine Kopie einer anderen Sequenz erstellen, die von ein Enumerator, mit dem angegebenen Reihenfolgenprädikat beschrieben wird.  
+## <a name="example"></a>Beispiel  
   
-## Beispiel  
-  
-```  
+```cpp  
 // cliext_map_construct.cpp   
 // compile with: /clr   
 #include <cliext/map>   
@@ -189,22 +179,25 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **\[1\] \[2\] \[bc 3\]**  
-**size\(\) \= 0**  
- **c \[3\] \[2\] \[b1\]**  
- **\[1\] \[2\] \[bc 3\]**  
- **c \[3\] \[2\] \[b1\]**  
- **\[1\] \[2\] \[bc 3\]**  
- **c \[3\] \[2\] \[b1\]**  
- **c \[3\] \[2\] \[b1\]**  
- **\[1\] \[2\] \[bc 3\]**   
-## Anforderungen  
- **Header:** \<cliext\/Zuordnung\>  
+```Output  
+size() = 0  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [c 3] [b 2] [a 1]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
+ [c 3] [b 2] [a 1]  
+ [a 1] [b 2] [c 3]  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Map >  
   
-## Siehe auch  
- [map](../dotnet/map-stl-clr.md)   
- [map::generic\_container](../dotnet/map-generic-container-stl-clr.md)   
- [map::operator\=](../dotnet/map-operator-assign-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Karte (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [Map::generic_container (STL/CLR)](../dotnet/map-generic-container-stl-clr.md)   
+ [map::operator= (STL/CLR)](../dotnet/map-operator-assign-stl-clr.md)

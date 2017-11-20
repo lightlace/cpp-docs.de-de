@@ -1,33 +1,33 @@
 ---
-title: "Gewusst wie: Verwenden von regul&#228;ren Ausdr&#252;cken zum Extrahieren von Datenfeldern (C++/CLI)"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Daten [C++], Extrahieren aus Zeichenfolgen"
-  - "Formatierte Zeichenfolgen [C++]"
-  - "Reguläre Ausdrücke [C++], Extrahieren von Datenfeldern"
-  - "Zeichenfolgen [C++], Extrahieren von Daten aus"
+title: "Vorgehensweise: Verwenden von regulären Ausdrücken zum Extrahieren von Datenfeldern (C + c++ / CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- strings [C++], extracting data from
+- formatted strings [C++]
+- regular expressions [C++], extracting data fields
+- data [C++], extracting from strings
 ms.assetid: b581d9b6-630e-48fa-94fe-20b0f7b89b06
-caps.latest.revision: 11
-caps.handback.revision: "11"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a297ee1676fb3ffbff45d46334d20280beeab078
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Gewusst wie: Verwenden von regul&#228;ren Ausdr&#252;cken zum Extrahieren von Datenfeldern (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Im folgenden Codebeispiel wird die Verwendung von regulären Ausdrücken zum Extrahieren von Daten aus einer formatierten Zeichenfolge dargestellt.  Das folgende Codebeispiel verwendet die <xref:System.Text.RegularExpressions.Regex>\-Klasse, um ein Schema festzulegen, das einer E\-Mail\-Adresse entspricht.  Zu diesem Schema gehören Feldbezeichner, mit denen der Benutzerbereich und der Hostbereich jeder E\-Mail\-Adresse abgerufen werden können.  Die <xref:System.Text.RegularExpressions.Match>\-Klasse wird verwendet, um den eigentlichen Mustervergleich auszuführen.  Wenn die E\-Mail\-Adresse gültig ist, werden der Benutzername und der Host extrahiert und angezeigt.  
+# <a name="how-to-use-regular-expressions-to-extract-data-fields-ccli"></a>Gewusst wie: Verwenden von regulären Ausdrücken zum Extrahieren von Datenfeldern (C++/CLI)
+Das folgende Codebeispiel veranschaulicht die Verwendung von regulären Ausdrücken zum Extrahieren von Daten aus einer formatierten Zeichenfolge. Im folgenden Codebeispiel wird mit der <xref:System.Text.RegularExpressions.Regex> Klasse, um ein Muster anzugeben, die eine e-Mail-Adresse entspricht. Diese gehören Feldbezeichner, die verwendet werden kann, um den Benutzer und Hostbereich alle e-Mail-Adressen abzurufen. Die <xref:System.Text.RegularExpressions.Match> Klasse wird verwendet, um die eigentlichen Mustervergleich auszuführen. Wenn die angegebene e-Mail-Adresse gültig ist, den Benutzernamen und den Hostnamen extrahiert und angezeigt.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // Regex_extract.cpp  
@@ -70,6 +70,6 @@ int main()
 }  
 ```  
   
-## Siehe auch  
- [Reguläre Ausdrücke von .NET Framework](../Topic/.NET%20Framework%20Regular%20Expressions.md)   
- [.NET\-Programmierung mit C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [Reguläre Ausdrücke von .NET Framework](/dotnet/standard/base-types/regular-expressions)   
+ [.NET-Programmierung mit C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

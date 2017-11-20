@@ -1,49 +1,49 @@
 ---
-title: "Boxing  (C++ Component Extensions)"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "boxing, Visual C++"
+title: "Boxing (Komponentenerweiterungen für C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: boxing, Visual C++
 ms.assetid: b5fd2c98-c578-4f83-8257-6dd663478665
-caps.latest.revision: 27
-caps.handback.revision: "25"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "27"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f8d597466204aa17475ee732b77f321464ccc010
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Boxing  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Der Visual C\+\+ Compiler kann Werttypen in einem Vorgang mit der Bezeichnung *Boxing* in Objekte und Objekte in einem Vorgang namens *Unboxing* in Werttypen konvertieren.  
+# <a name="boxing--c-component-extensions"></a>Boxing (Komponentenerweiterungen für C++)
+Visual C++-Compiler kann Werttypen konvertieren, auf Objekte in einem Vorgang namens *Boxing*, und Konvertieren von Objekten in Werttypen in einem Vorgang namens *unboxing*.  
   
-## Alle Laufzeiten  
- \(Es gibt keine Hinweise für diese Sprachfunktion, die für alle Laufzeiten gültig sind.\)  
+## <a name="all-runtimes"></a>Alle Laufzeiten  
+ (Es gibt keine Hinweise für diese Sprachfunktion, die für alle Laufzeiten gültig sind.)  
   
-## Windows\-Runtime  
- [!INCLUDE[cppwrt_short](../build/reference/includes/cppwrt_short_md.md)] unterstützt eine Kurzsyntax für Boxing\-Werttypen und Unboxing\-Verweistypen.  Ein Werttyp mittels Boxing konvertiert, wenn sie einer Variable des Typs `Object` zugewiesen wird.  Eine `Object`\-Variable wird mittels Unboxing konvertiert, wenn sie einer Werttypvariable zugeordnet ist und der Unboxing\-Typ in Klammern angegeben wird; d. h., wenn die Objektvariable in einen Werttyp umgewandelt wird.  
+## <a name="windows-runtime"></a>Windows-Runtime  
+ C + c++ / CX unterstützt eine Kurzsyntax für Boxing-Werttypen und unboxing-Verweistypen. Ein Werttyp mittels Boxing konvertiert, wenn sie einer Variable des Typs `Object` zugewiesen wird. Eine `Object`-Variable wird mittels Unboxing konvertiert, wenn sie einer Werttypvariable zugeordnet ist und der Unboxing-Typ in Klammern angegeben wird; d. h., wenn die Objektvariable in einen Werttyp umgewandelt wird.  
   
 ```  
   
-Platform::Object^ object_variable  = value_variable;  
+  Platform::Object^  
+  object_variable  = value_variable;  
 value_variable = (value_type) object_variable;  
   
 ```  
   
-### Anforderungen  
- Compileroption: **\/ZW**  
+### <a name="requirements"></a>Anforderungen  
+ Compileroption: **/ZW**  
   
-### Beispiele  
- Im folgenden Beispiel wird ein `DateTime`\-Wert mittels Boxing und Unboxing konvertiert.  Zunächst ruft das Beispiel einen DateTime\-Wert ab, der das aktuelle Datum und die Uhrzeit darstellt, und weist ihm eine DateTime\-Variable zu.  Anschließend wird die DateTime durch Zuweisen einer Objektvariabler mittels Boxing konvertiert.  Schließlich wird der Boxing\-Wert mittels Unboxing zurückkonvertiert, indem ihm eine andere DateTime\-Variable zugewiesen wird.  
+### <a name="examples"></a>Beispiele  
+ Im folgenden Beispiel wird ein `DateTime`-Wert mittels Boxing und Unboxing konvertiert. Zunächst ruft das Beispiel einen DateTime-Wert ab, der das aktuelle Datum und die Uhrzeit darstellt, und weist ihm eine DateTime-Variable zu. Anschließend wird die DateTime durch Zuweisen einer Objektvariabler mittels Boxing konvertiert. Schließlich wird der Boxing-Wert mittels Unboxing zurückkonvertiert, indem ihm eine andere DateTime-Variable zugewiesen wird.  
   
- Um das Beispiel zu testen, erstellen Sie ein BlankApplication\-Projekt, ersetzen Sie die BlankPage::OnNavigatedTo\(\)\-Methode und geben Sie dann bei der schließenden Klammer Haltepunkte und die Zuweisung zur Variable str1 an.  Im Beispiel wird die schließende Klammer erreicht, untersuchen Sie str1.  
+ Um das Beispiel zu testen, erstellen Sie ein BlankApplication-Projekt, ersetzen Sie die BlankPage::OnNavigatedTo()-Methode und geben Sie dann bei der schließenden Klammer Haltepunkte und die Zuweisung zur Variable str1 an. Im Beispiel wird die schließende Klammer erreicht, untersuchen Sie str1.  
   
 ```  
   
@@ -79,27 +79,27 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
   
 ```  
   
- Weitere Informationen finden Sie unter [Boxing \(C\+\+\/CX\)](http://msdn.microsoft.com/library/windows/apps/hh969554.aspx).  
+ Weitere Informationen finden Sie unter [Boxing (C + c++ / CX)](http://msdn.microsoft.com/library/windows/apps/hh969554.aspx).  
   
-## Common Language Runtime  
- Visual C\+\+\-Compiler konvertiert nun Boxing\-Werttypen in  <xref:System.Object>.  Dies ist möglich durch eine compiler\-definierte Konvertierung zur Konvertierung von Werttypen in <xref:System.Object>.  
+## <a name="common-language-runtime"></a>Common Language Runtime  
+ Visual C++-Compiler konvertiert nun Boxing-Werttypen in  <xref:System.Object>.  Dies ist möglich durch eine compiler-definierte Konvertierung zur Konvertierung von Werttypen in <xref:System.Object>.  
   
- Mit Boxing und Unboxing können Werttypen wie Objekte behandelt werden.  Werttypen, einschließlich Strukturtypen und integrierten Typen wie int, können in und aus dem Typ <xref:System.Object> konvertiert werden.  
+ Mit Boxing und Unboxing können Werttypen wie Objekte behandelt werden. Werttypen, einschließlich Strukturtypen und integrierten Typen wie int, können in und aus dem Typ <xref:System.Object> konvertiert werden.  
   
  Weitere Informationen finden Sie unter:  
   
--   [Gewusst wie: Explizites Anfordern von Boxing](../dotnet/how-to-explicitly-request-boxing.md)  
+-   [Vorgehensweise: Explizites Anfordern von Boxing](../dotnet/how-to-explicitly-request-boxing.md)  
   
--   [Gewusst wie: Verwenden von gcnew zum Erstellen von Werttypen und für implizites Boxing](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)  
+-   [Vorgehensweise: Verwenden von gcnew zum Erstellen von Werttypen und für implizites Boxing](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)  
   
--   [Gewusst wie: Unboxing](../dotnet/how-to-unbox.md)  
+-   [Vorgehensweise: Unboxing](../dotnet/how-to-unbox.md)  
   
 -   [Standardumwandlungen und implizites Boxing](../dotnet/standard-conversions-and-implicit-boxing.md)  
   
-### Anforderungen  
- Compileroption: **\/clr**  
+### <a name="requirements"></a>Anforderungen  
+ Compileroption: **/clr**  
   
-### Beispiele  
+### <a name="examples"></a>Beispiele  
  **Beispiel**  
   
  Das folgende Beispiel zeigt wie implizites Boxing funktioniert.  
@@ -176,14 +176,25 @@ int main() {
   
  **Ausgabe**  
   
-  **1**  
- **xx \= 10**  
- **in A**  
- **Klasse V mit implizitem Boxing übergeben**  
- **Klasse V mit erzwungenem Boxing übergeben**  
- **Schnittstellen\-Funktion**  
- **in func1\(V2^\)**  
- **in func2\(System::ValueType^\)**  
- **in func2\(System::ValueType^\)**   
-## Siehe auch  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+```Output  
+1  
+  
+xx = 10  
+  
+in A  
+  
+Class V passed using implicit boxing  
+  
+Class V passed with forced boxing  
+  
+Interface function  
+  
+in func1(V2^)  
+  
+in func2(System::ValueType^)  
+  
+in func2(System::ValueType^)  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)

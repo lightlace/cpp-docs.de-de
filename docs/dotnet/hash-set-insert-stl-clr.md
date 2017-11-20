@@ -1,32 +1,30 @@
 ---
-title: "hash_set::insert (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::insert"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "insert-Member [STL/CLR]"
+title: 'hash_set:: Insert (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::insert
+dev_langs: C++
+helpviewer_keywords: insert member [STL/CLR]
 ms.assetid: 0a9bc9aa-012e-4101-9e8c-f1f4b6b76af7
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f8aa213c24886951f57cf6c8d670fb430a8da530
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::insert (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashsetinsert-stlclr"></a>hash_set::insert (STL/CLR)
 Fügt Elemente hinzu.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 cliext::pair<iterator, bool> insert(value_type val);  
@@ -36,36 +34,36 @@ template<typename InIter>
 void insert(System::Collections::Generic::IEnumerable<value_type>^ right);  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  first  
- Anfang Einfügen des Bereichs.  
+ Anfang des Bereichs, der eingefügt.  
   
  last  
- Ende Einfügen des Bereichs.  
+ Das Ende des Bereichs einfügen.  
   
- right  
- Einzufügen Enumeration.  
+ Rechts  
+ Die Enumeration eingefügt.  
   
- val  
- Einzufügen Schlüsselwert.  
+ Val  
+ Schlüssel-Wert einfügen.  
   
- deinen  
- Wo von im Container \(Mallory nur Hinweis\).  
+ wo  
+ Die Position, im Container (nur Hinweis) einfügen.  
   
-## Hinweise  
- Jede der Memberfunktionen fügen eine Sequenz ein, die für die übrigen Operanden angegeben wird.  
+## <a name="remarks"></a>Hinweise  
+ Jede der Memberfunktionen Fügt eine Sequenz, die von den verbleibenden Operanden angegeben.  
   
- Die erste Memberfunktion ermittelt, ein Element mit dem Wert `val` einzufügen und gibt ein Paar Werten `X` zurück.  Wenn `X.second` true ist, legt das `X.first` neu eingefügte Element fest; Andernfalls legt `X.first` ein Element mit entsprechender Reihenfolge fest, die bereits vorhanden ist und kein neues Element wird eingefügt.  Sie verwenden ihn, um ein einzelnes Element einzufügen.  
+ Die erste Memberfunktion zum Einfügen eines Elements mit dem Wert versucht `val`, und gibt ein Wertepaar `X`. Wenn `X.second` ist "true", `X.first` bestimmt das neu eingefügte Element; andernfalls `X.first` kennzeichnet ein Element mit entsprechender Sortierung, die bereits vorhanden ist und kein neues Element eingefügt wird. Es können Sie verwenden, um ein einzelnes Element einzufügen.  
   
- Die zweite Memberfunktion wird ein Element mit dem Wert `val`, wobei `where` als Hinweis \(Leistung verbessern\) und gibt ein Iterator ein, der das Element neu eingefügte festlegt.  Sie verwenden sie, um ein einzelnes Element einzufügen, das möglicherweise neben einem Element könnte, das, Sie kennen.  
+ Die zweite Memberfunktion Fügt ein Element mit dem Wert `val`mit `where` als Hinweis (zur Verbesserung der Leistung), und gibt einen Iterator, der das neu eingefügte Element festlegt. Damit können sie ein einzelnes Element einfügen, das neben einem Element möglicherweise, die Sie kennen.  
   
- Die dritte Memberfunktion wird die Sequenz `[``first``,` `last``)`.  Sie verwenden sie, dass Nullen oder mehr Elemente einfügen kopiert aus einer anderen Sequenz.  
+ Die dritte Memberfunktion fügt die Sequenz [`first`, `last`). Sie verwenden ihn zum Einfügen von NULL oder mehr Elementen aus einer anderen Sequenz kopiert.  
   
- Die vierte Memberfunktion wird die Sequenz ein, die durch `right` festgelegt ist.  Sie verwenden sie, um eine Sequenz einzufügen, die Angriffen einen Enumerator beschrieben wird.  
+ Die vierte Memberfunktion fügt die Sequenz, die vom angegebenen der `right`. Sie verwenden es, fügen Sie eine Sequenz, die durch einen Enumerator beschrieben.  
   
- Jede Einfügen wird die Zeit, die z Logarithmus der Anzahl der Elemente in der Sequenz gesteuerten proportional ist.  Einfüge\- kann in der amortisierten konstanten Zeitpunkt auftreten einen Hinweis jedoch zugewiesen, der ein Element neben der Einfügemarke festlegt.  
+ Jede elementeinfügung dauert einige Zeit, die proportional zum Logarithmus der Anzahl der Elemente in der kontrollierten Sequenz. Kann in amortisierter konstanter Zeit, jedoch die Einfügung erhält einen Hinweis, der ein Element, das neben der Einfügemarke festlegt.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_hash_set_insert.cpp   
@@ -126,18 +124,21 @@ int main()
   
 ```  
   
-  **ein b c**  
-**Einfüge\- \(L'x\) \= \[x True\]**  
-**Einfüge\- \(L'b\) \= \[b False\]**  
- **ein b c x**  
-**insert\(begin\(\), L'y\) \= y**  
- **ein x\-y b c**  
- **ein b c x**  
- **ein x\-y b c**   
-## Anforderungen  
- **Header:** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+insert(L'x') = [x True]  
+insert(L'b') = [b False]  
+ a b c x  
+insert(begin(), L'y') = y  
+ a b c x y  
+ a b c x  
+ a b c x y  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext Hash_set/>  
   
-## Siehe auch  
- [hash\_set](../dotnet/hash-set-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)

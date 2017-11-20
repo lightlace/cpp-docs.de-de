@@ -1,43 +1,41 @@
 ---
-title: "Linkertoolwarnung LNK4006 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4006"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4006"
+title: Linkertoolwarnung Lnk4006 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4006
+dev_langs: C++
+helpviewer_keywords: LNK4006
 ms.assetid: 3a637d17-1676-4ea6-bd8b-290137d28d3b
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c39482dbf53e5a919e8af1927697ef06ba7972b3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Linkertoolwarnung LNK4006
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Symbol bereits in Objekt definiert; zweite Definition wird ignoriert  
+# <a name="linker-tools-warning-lnk4006"></a>Linkertoolwarnung LNK4006
+bereits im Objekt definiertes Symbol zweite Definition wird ignoriert  
   
- Das angegebene *Symbol*, das in seiner ergänzten Form dargestellt wird, wurde mehrfach definiert.  Wenn diese Warnung auftritt, wird *Symbol* zweimal hinzugefügt, es wird jedoch nur seine erste Form verwendet.  
+ Das gegebene `symbol`, angezeigt in seiner ergänzten Form, wurde mehrfach definiert. Wenn diese Warnung erkannt wird, `symbol` wird zweimal hinzugefügt werden, aber nur die erste Form verwendet werden.  
   
- Diese Warnung kann ausgegeben werden, wenn Sie versuchen, zwei Importbibliotheken in einer zusammenzuführen.  
+ Sie können diese Warnung erhalten, wenn Sie versuchen, zwei Importbibliotheken in einer Zelle zusammenzuführen.  
   
- Wenn Sie die C\-Laufzeitbibliothek neu erstellen, können Sie diese Meldung ignorieren.  
+ Wenn Sie die C-Laufzeitbibliothek neu sind, können Sie diese Meldung ignorieren.  
   
-### Beachten Sie die folgenden Vorschläge zur Problembehebung:  
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>So beheben Sie den Fehler (unterschiedliche Lösungsmöglichkeiten)  
   
-1.  Das angegebene *Symbol* ist möglicherweise eine Paketfunktion, die durch die Kompilierung mit [\/Gy](../../build/reference/gy-enable-function-level-linking.md) erstellt wurde.  Dieses Symbol wurde in mehr als eine Datei eingelesen, zwischen den Kompilierungen jedoch geändert.  Kompilieren Sie alle Dateien neu, die das *Symbol* enthalten.  
+1.  Der angegebene `symbol` möglicherweise eine Paketfunktion, erstellt durch Kompilierung mit [/Gy](../../build/reference/gy-enable-function-level-linking.md). Dieses Symbol wurde in mehr als eine Datei enthalten, aber zwischen Kompilationen geändert. Kompilieren Sie alle Dateien, einschließlich der `symbol`.  
   
-2.  Das angegebene *Symbol* kann in zwei Memberobjekten in verschiedenen Bibliotheken unterschiedlich definiert sein.  
+2.  Der angegebene `symbol` möglicherweise unterschiedlich definiert sein in zwei Memberobjekten in verschiedenen Bibliotheken.  
   
-3.  Ein absolutes Symbol wurde möglicherweise zweimal mit unterschiedlichen Werten in zwei Definitionen definiert.  
+3.  Ein absoluter möglicherweise zweimal, mit einem anderen Wert in jeder Definition definiert wurden.  
   
-4.  Tritt die Fehlermeldung beim Kombinieren von Bibliotheken auf, ist das *Symbol* bereits in der Bibliothek, der es hinzugefügt wird, vorhanden.
+4.  Wenn die Fehlermeldung erhalten, beim Kombinieren von Bibliotheken haben, `symbol` bereits in der Bibliothek hinzugefügt wird.

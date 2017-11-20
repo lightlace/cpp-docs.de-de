@@ -1,32 +1,30 @@
 ---
-title: "list::splice (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::splice"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "splice-Member [STL/CLR]"
+title: 'List:: splice (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::splice
+dev_langs: C++
+helpviewer_keywords: splice member [STL/CLR]
 ms.assetid: ebc424b9-8341-4a88-b101-86d56324f5ac
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9bbc7517013edd4c7af7c40c3787d8ec7749df32
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# list::splice (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Restitch\-Links zwischen Knoten.  
+# <a name="listsplice-stlclr"></a>list::splice (STL/CLR)
+Restitch Links zwischen Knoten.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void splice(iterator where, list<Value>% right);  
@@ -36,27 +34,27 @@ void splice(iterator where, list<Value>% right,
     iterator first, iterator last);  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  first  
- Anfang zum Verbinden des Bereichs.  
+ Der Anfang des Bereichs, die zusammengeführt werden sollen.  
   
  last  
- Ende zum Verbinden des Bereichs.  
+ Das Ende des Bereichs, die zusammengeführt werden sollen.  
   
- right  
- Ziehen zum Verbinden, Container.  
+ Rechts  
+ Container für die Zusammenführung.  
   
- deinen  
- Wo von im Container zuvor eine Verbindung herstellt.  
+ wo  
+ Die Position, im Container für die Zusammenführung vor.  
   
-## Hinweise  
- Die Memberfunktion wird die erste Sequenz ein, die durch `right` vor dem Element in der Sequenz gesteuerten gesteuert wird, die auf den durch `where` gezeigt wird.  Sie entfernt auch alle Elemente von `right`. \(`%``right``this` darf nicht entsprechen.\) Sie verwenden sie, um die ganze Liste in eine andere zu verbinden.  
+## <a name="remarks"></a>Hinweise  
+ Die erste Memberfunktion fügt die Sequenz, die vom gesteuerte `right` vor dem Element in der kontrollierten Sequenz verweist `where`. Es entfernt auch alle Elemente aus `right`. (`%right` dürfen nicht gleich sein `this`.) Sie können damit alle einer Liste in eine andere zusammengeführt werden sollen.  
   
- Die zweite Memberfunktion entfernt das Element, auf den durch in der Sequenz `first` dargestellt wird, die durch `right` gesteuert wird und fügt es vor dem Element in der Sequenz gesteuerten ein, die auf den durch `where` gezeigt wird. \(Wenn `where` `==` `first` `||` `where` `== ++``first`, keine Änderung.\) Sie verwenden ihn, um ein einzelnes Element aus einer Liste in andere zu verbinden.  
+ Die zweite Memberfunktion entfernt das Element verweist `first` in der Sequenz von gesteuert `right` und fügt das Element vor das Element in der kontrollierten Sequenz auf verweist `where`. (Wenn `where` `==` `first` `||` `where` `== ++first`, findet keine Änderung statt.) Damit können sie ein einzelnes Element einer Liste in eine andere zusammengeführt werden sollen.  
   
- Die dritte Memberfunktion fügt den Unterbereich ein, der vom `[``first``,` `last``)` über die Reihenfolge festgelegt wird, die von `right` vor dem Element in der Sequenz gesteuerten gesteuert wird, die auf den durch `where` gezeigt wird.  Sie entfernt auch den ursprünglichen Unterbereich der Sequenz, die durch `right` gesteuert wird. \(Wenn `right` `==` `this`, des `[``first``,` `last``)`\-Element nicht angeben darf, auf den durch `where` gezeigt wird\). Sie verwenden sie, um eine Untersequenz von null oder mehr Elementen aus einer Liste in andere zu verbinden.  
+ Die dritte Memberfunktion fügt die durch festgelegten Unterbereich [`first`, `last`) aus der Sequenz von gesteuert `right` vor dem Element in der kontrollierten Sequenz verweist `where`. Es entfernt auch den Original-Unterbereich aus der durch `right` gespeicherten Sequenz. (If `right` `==` `this`, Bereich [`first`, `last`) das Element verweist, darf keine enthalten `where`.) Sie können damit eine teilsequenz von NULL oder mehr Elemente aus einer Liste in eine andere zusammengeführt werden sollen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_list_splice.cpp   
@@ -104,20 +102,23 @@ int main()
   
 ```  
   
-  **ein b c**  
-**c1.size\(\) \= 0**  
- **ein b c**  
- **a**  
- **b c**  
- **c a b**  
-**c2.size\(\) \= 0**   
-## Anforderungen  
- **Header:** \<cliext\/Liste\>  
+```Output  
+ a b c  
+c1.size() = 0  
+ a b c  
+ a  
+ b c  
+ b c a  
+c2.size() = 0  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/List >  
   
-## Siehe auch  
- [list](../dotnet/list-stl-clr.md)   
- [list::assign](../dotnet/list-assign-stl-clr.md)   
- [list::insert](../dotnet/list-insert-stl-clr.md)   
- [list::merge](../dotnet/list-merge-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Liste (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List:: Assign (STL/CLR)](../dotnet/list-assign-stl-clr.md)   
+ [List:: Insert (STL/CLR)](../dotnet/list-insert-stl-clr.md)   
+ [list::merge (STL/CLR)](../dotnet/list-merge-stl-clr.md)

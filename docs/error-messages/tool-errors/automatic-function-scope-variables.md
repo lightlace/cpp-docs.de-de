@@ -1,31 +1,31 @@
 ---
-title: "Automatische Variablen (mit Funktionsg&#252;ltigkeitsbereich) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Automatische Variablen"
-  - "Funktionen [C++], Gültigkeitsbereich"
-  - "Gültigkeitsbereich, Deklariert innerhalb von Funktionen"
-  - "Variablen, Automatisch"
+title: "Automatische Variablen (Funktionsgültigkeitsbereich) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs: C++
+helpviewer_keywords:
+- automatic variables
+- variables, automatic
+- functions [C++], scope
+- scope, declared within functions
 ms.assetid: 6e1a14c2-1fb0-4937-8628-8d963cc35ed4
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 5101d25a043248fe7f9a83813462e75b792d7fd3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Automatische Variablen (mit Funktionsg&#252;ltigkeitsbereich)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Eine Variable, die innerhalb einer Funktion deklariert wurde, kann nur innerhalb des Gültigkeitsbereichs dieser Funktion verwendet werden.  
+# <a name="automatic-function-scope-variables"></a>Automatische Variablen (mit Funktionsgültigkeitsbereich)
+Eine Variable, die innerhalb einer Funktion deklariert, kann nur innerhalb des Bereichs dieser Funktion verwendet werden.  
   
 ```  
 // LNK2019_AV.cpp  
@@ -42,7 +42,7 @@ int main() {
 }  
 ```  
   
- und anschließend  
+ Und dann  
   
 ```  
 // LNK2019_AV_2.cpp  
@@ -62,5 +62,5 @@ void test(void) {
 }  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Linkertoolfehler LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)

@@ -1,26 +1,26 @@
 ---
-title: "3.2.1 omp_init_lock and omp_init_nest_lock Functions"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 3.2.1 Omp_init_lock and Omp_init_nest_lock-Funktionen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 098a2721-b16a-484f-bc83-4b8e281e382c
-caps.latest.revision: 6
-caps.handback.revision: "6"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e00772d4abb7fc72827a116d18c30940ade499db
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# 3.2.1 omp_init_lock and omp_init_nest_lock Functions
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Diese Funktionen stellen das einzige eine Möglichkeit zum Initialisieren einer Sperre.  Jede Funktion initialisiert die Sperre, die der Parameter *sperre* für die Verwendung bei nachfolgenden Aufrufen zugeordnet ist.  Es wird folgendes Format verwendet:  
+# <a name="321-ompinitlock-and-ompinitnestlock-functions"></a>3.2.1 omp_init_lock and omp_init_nest_lock-Funktionen
+Diese Funktionen geben die einzige Möglichkeit, eine Sperre zu initialisieren. Jede Funktion initialisiert die Sperre dem Parameter zugeordnet *Sperre* für die Verwendung in nachfolgenden Aufrufen. Es wird folgendes Format verwendet:  
   
 ```  
 #include <omp.h>  
@@ -28,4 +28,4 @@ void omp_init_lock(omp_lock_t *lock);
 void omp_init_nest_lock(omp_nest_lock_t *lock);  
 ```  
   
- Der Ausgangszustand entsperrt wird \(das heißt besitzt kein Thread die Sperre\).  Für eine schachtelbare Sperre ist die ursprüngliche Schachtelungs für die Anzahl Nullen.  Sie ist inkompatibel, dass diese Routinen mit einer Sperre variable aufzurufen, die bereits initialisiert wurde.
+ Der ursprüngliche Status ist nicht gesperrt (d. h. kein Thread die Sperre besitzt). Für omp_nest_lock_t Sperren verwenden ist der anfängliche schachteln Anzahl 0 (null). Es ist nicht kompatibel, entweder diese Routinen mit einer Sperre Variablen aufzurufen, der bereits initialisiert wurde.

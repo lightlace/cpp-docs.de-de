@@ -1,41 +1,39 @@
 ---
-title: "stack::empty (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::empty"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "empty-Member [STL/CLR]"
+title: 'Stack:: Empty (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::empty
+dev_langs: C++
+helpviewer_keywords: empty member [STL/CLR]
 ms.assetid: 30bb4ec6-e7a1-4137-99ba-0e0ebdf31baf
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d560c7618d528e5f630db69e3aa71ef71b5c5e90
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# stack::empty (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Testet, dass keine Elemente vorhanden sind.  
+# <a name="stackempty-stlclr"></a>stack::empty (STL/CLR)
+Testet, ob keine Elemente vorhanden sind.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 bool empty();  
 ```  
   
-## Hinweise  
- Die Memberfunktionsrückgaben true für eine leere gesteuerte Sequenz.  Sie besteht darin [stack::size](../dotnet/stack-size-stl-clr.md)`() == 0`.  Sie verwenden sie, um zu testen, ob der Stapel leer ist.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt „true“ für eine leere gesteuerte Sequenz zurück. Dies ist äquivalent zum [Stack:: Size (STL/CLR)](../dotnet/stack-size-stl-clr.md)`() == 0`. Sie verwenden sie zum Überprüfen, ob der Stapel leer ist.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_stack_empty.cpp   
@@ -68,16 +66,19 @@ int main()
   
 ```  
   
-  **ein b c**  
-**size\(\) \= 3**  
-**empty\(\) \= False**  
-**size\(\) \= 0**  
-**empty\(\) \= True**   
-## Anforderungen  
- **Header:** \<cliext\/Stapel\>  
+```Output  
+ a b c  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Stack >  
   
-## Siehe auch  
- [Stapel](../dotnet/stack-stl-clr.md)   
- [stack::size](../dotnet/stack-size-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Stack (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [stack::size (STL/CLR)](../dotnet/stack-size-stl-clr.md)

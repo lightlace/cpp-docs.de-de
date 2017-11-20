@@ -1,54 +1,52 @@
 ---
-title: "__readeflags | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__readeflags"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__readeflags intrinsic"
+title: __readeflags | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __readeflags
+dev_langs: C++
+helpviewer_keywords: __readeflags intrinsic
 ms.assetid: f9d2f4d8-c428-491f-b8de-04d0566b2b6b
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 86e1497bccadf9afd6d26ec3bf4ab8b83e2a2a21
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# __readeflags
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Liest das Programmstatus\- und \-steuer\(EFLAGS\) Register.  
+# <a name="readeflags"></a>__readeflags
+Lesevorgänge, die der Status der Anwendung und das Steuerelement (EFLAGS) zu registrieren.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 unsigned     int __readeflags(void);  
 unsigned __int64 __readeflags(void);  
 ```  
   
-## Rückgabewert  
- Der Wert des EFLAGS\-Registers.  Der Rückgabewert ist 32 Bits lang auf einer 32\-Bit\-Plattform und 64 Bits lang auf einer 64\-Bit\-Plattform.  
+## <a name="return-value"></a>Rückgabewert  
+ Der Wert des Registers EFLAGS. Der Rückgabewert ist 32 Bits lang auf einer 32-Bit-Plattform und 64 Bit lang auf einer 64-Bit-Plattform.  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Diese Routinen sind nur als systeminterne Funktionen verfügbar.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Intrinsisch|Architektur|  
-|-----------------|-----------------|  
+|Systemintern|Architektur|  
+|---------------|------------------|  
 |`__readeflags`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Headerdatei** \<intrin.h\>  
+ **Headerdatei** \<intrin.h >  
   
-## Microsoft ENDES bestimmten  
+**Ende Microsoft-spezifisch**  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)   
- [\_\_writeeflags](../intrinsics/writeeflags.md)
+ [__writeeflags](../intrinsics/writeeflags.md)

@@ -1,72 +1,70 @@
 ---
-title: "SECTIONS (C/C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "SECTIONS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SECTIONS-Anweisung in .def-Dateien"
+title: ABSCHNITTE (C/C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: SECTIONS
+dev_langs: C++
+helpviewer_keywords: SECTIONS .def file statement
 ms.assetid: 7b974366-9ef5-4e57-bbcc-73a1df6f8857
-caps.latest.revision: 9
-caps.handback.revision: "9"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 9d1564d068f4d69c3190b8bb24a32e7efb01dbef
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# SECTIONS (C/C++)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Durch die Anweisung wird ein Abschnitt mit einer oder mehreren `definitions` eingeleitet, die Zugriffsspezifizierer für Abschnitte in der Projektausgabedatei darstellen.  
+# <a name="sections-cc"></a>SECTIONS (C/C++)
+Stellt einen Abschnitt einer oder mehrerer `definitions` Zugriffsspezifizierer für Abschnitte in der Ausgabedatei des Projekts sind.  
   
 ```  
 SECTIONS  
 definitions  
 ```  
   
-## Hinweise  
- Jede Definition muss in einer eigenen Zeile stehen.  Das `SECTIONS`\-Schlüsselwort kann sich in derselben Zeile wie die erste Definition oder in einer eigenen, vorangestellten Zeile befinden.  Die DEF\-Datei kann eine oder mehrere `SECTIONS`\-Anweisungen enthalten.  
+## <a name="remarks"></a>Hinweise  
+ Jede Definition muss sich in einer separaten Zeile befinden. Die `SECTIONS` Schlüsselwort kann in der gleichen Zeile wie die erste Definition oder in einer vorherigen Zeile sein. Die DEF-Datei kann eine oder mehrere enthalten `SECTIONS` Anweisungen.  
   
- Mit dieser `SECTIONS`\-Anweisung werden Attribute für einen oder mehrere Abschnitte in der Abbilddatei festgelegt. Sie kann zum Überschreiben der Standardattribute für beliebige Abschnittstypen verwendet werden.  
+ Dies `SECTIONS` Anweisung Attribute für einen oder mehrere Abschnitte in der Bilddatei enthaltenen festgelegt und kann verwendet werden, um die Standardattribute für jeden Abschnitt überschreiben.  
   
- Die Syntax der Definition lautet:  
+ Das Format für `definitions` ist:  
   
  `.section_name specifier`  
   
- wobei `.section_name` dem Namen eines Abschnitts im Programmabbild und `specifier`einem oder mehreren der folgenden Zugriffsmodifizierer entspricht:  
+ wobei `.section_name` ist der Name eines Abschnitts im Programmabbild und `specifier` kann einen oder mehrere der folgenden Zugriffsmodifizierer:  
   
-|Modifizierer|**Beschreibung**|  
-|------------------|----------------------|  
-|`EXECUTE`|Der betreffende Abschnitt ist ausführbar|  
+|Modifizierer|Beschreibung|  
+|--------------|-----------------|  
+|`EXECUTE`|Der Abschnitt ist ausführbar|  
 |`READ`|Ermöglicht Lesevorgänge für Daten|  
-|`SHARED`|Gibt den Abschnitt für alle Prozesse frei, die das Abbild laden|  
+|`SHARED`|Teilt den Abschnitt für alle Prozesse, die das Image laden|  
 |`WRITE`|Ermöglicht Schreibvorgänge für Daten|  
   
- Spezifizierer müssen durch ein Leerzeichen voneinander getrennt werden.  Beispiel:  
+ Trennen Sie Namen von Spezifizierer, mit einem Leerzeichen. Zum Beispiel:  
   
 ```  
 SECTIONS  
 .rdata READ WRITE  
 ```  
   
- `SECTIONS` kennzeichnet den Beginn einer Liste mit `definitions` des Abschnitts.  Jede `definition` muss in einer eigenen Zeile stehen.  Das `SECTIONS`\-Schlüsselwort kann sich in derselben Zeile wie die erste `definition` oder in einer vorangestellten Zeile befinden.  Die DEF\-Datei kann eine oder mehrere `SECTIONS`\-Anweisungen enthalten.  Das `SEGMENTS`\-Schlüsselwort wird als Synonym für `SECTIONS` unterstützt.  
+ `SECTIONS`kennzeichnet den Anfang einer Liste der Abschnitt `definitions`. Jede `definition` muss in einer separaten Zeile sein. Die `SECTIONS` Schlüsselwort kann in der gleichen Zeile wie der erste `definition` oder in einer vorherigen Zeile. Die DEF-Datei kann eine oder mehrere enthalten `SECTIONS` Anweisungen. Die `SEGMENTS` Schlüsselwort wird als ein Synonym für unterstützt `SECTIONS`.  
   
- In älteren Versionen von Visual C\+\+ wurde Folgendes unterstützt:  
+ Ältere Versionen von Visual C++ unterstützt:  
   
 ```  
 section [CLASS 'classname'] specifier  
 ```  
   
- Das `CLASS`\-Schlüsselwort wird zwar aus Kompatibilitätsgründen unterstützt, es wird jedoch ignoriert.  
+ Die `CLASS` Schlüsselwort für die Kompatibilität unterstützt wird, wird jedoch ignoriert.  
   
- Alternativ können Abschnittsattribute auch mit der [\/SECTION](../../build/reference/section-specify-section-attributes.md)\-Option festgelegt werden.  
+ Genauso wie Abschnittsattribute ist mit der [/SECTION](../../build/reference/section-specify-section-attributes.md) Option.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Regeln für Moduldefinitionsanweisungen](../../build/reference/rules-for-module-definition-statements.md)

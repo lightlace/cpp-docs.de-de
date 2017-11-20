@@ -1,32 +1,30 @@
 ---
-title: "FtmBase::GetUnmarshalClass-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ftm/Microsoft::WRL::FtmBase::GetUnmarshalClass"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetUnmarshalClass-Methode"
+title: 'Ftmbase:: GetUnmarshalClass-Methode | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: ftm/Microsoft::WRL::FtmBase::GetUnmarshalClass
+dev_langs: C++
+helpviewer_keywords: GetUnmarshalClass method
 ms.assetid: 535fc539-5b97-4967-b158-f7568f13d341
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 967c8e8cc397a7f9efdb145bf337049627f24a2c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# FtmBase::GetUnmarshalClass-Methode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ruft CLSID ab, dem COM verwendet, um die DLL zu suchen, die den Code für den entsprechenden Proxy enthält.  COM lädt diese DLL, um eine nicht initialisierte Instanz des Proxytyps zu erstellen.  
+# <a name="ftmbasegetunmarshalclass-method"></a>FtmBase::GetUnmarshalClass-Methode
+Ruft die CLSID, die COM verwendet, um die DLL, die den Code für den entsprechenden Proxy zu suchen. COM lädt diese DLL aus, um eine nicht initialisierte Instanz des Proxys zu erstellen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 STDMETHODIMP GetUnmarshalClass(  
@@ -39,35 +37,35 @@ STDMETHODIMP GetUnmarshalClass(
 ) override;  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `riid`  
- Verweis auf den Bezeichner der gemarshallt werden Schnittstelle.  
+ Verweis auf den Bezeichner der Schnittstelle, die gemarshallt werden.  
   
  `pv`  
- Zeiger zur gemarshallt werden Schnittstelle; kann NULL sein, wenn der Aufrufer einen Zeiger nicht zur gewünschten Schnittstelle ist.  
+ Zeiger auf die Schnittstelle, die gemarshallt werden; NULL kann sein, wenn der Aufrufer nicht über einen Zeiger auf die gewünschte Schnittstelle besitzt.  
   
  `dwDestContext`  
- Zielkontext, bei dem die angegebene Schnittstelle das Marshalling rückgängig gemacht werden soll.  
+ Zielkontext, in dem die angegebene Schnittstelle werden rückgängig gemacht werden.  
   
- Geben Sie ein oder mehrere MSHCTX\-Enumerationswerten an.  
+ Geben Sie eine oder mehrere MSHCTX-Enumerationswerte.  
   
- Unmarshalling kann entweder in einem anderen Apartment des aktuellen Prozesses \(MSHCTX\_INPROC\) oder in einem anderen Prozess auf dem gleichen Computer wie der aktuelle Prozess \(MSHCTX\_LOCAL\) auftreten.  
+ Methodeninformationen kann entweder in einem anderen Apartment des aktuellen Prozesses (MSHCTX_INPROC) oder in einem anderen Prozess auf dem gleichen Computer wie der aktuelle Prozess (MSHCTX_LOCAL) auftreten.  
   
  `pvDestContext`  
- Für zukünftige Verwendung reserviert; NULL sein muss.  
+ Für die zukünftige Verwendung reserviert. NULL muss sein.  
   
  `mshlflags`  
- Wenn dieser Vorgang abgeschlossen hat, Zeiger auf, um einen Proxy verwendet werden CLSID im Clientprozess zu erstellen.  
+ Wenn dieser Vorgang abgeschlossen wird, Zeiger auf die CLSID zum Erstellen eines Proxys im Clientprozess verwendet werden.  
   
  `pCid`  
   
-## Rückgabewert  
- S\_OK, wenn erfolgreich; andernfalls S\_FALSE.  
+## <a name="return-value"></a>Rückgabewert  
+ S_OK, wenn erfolgreich; Anderenfalls "S_FALSE".  
   
-## Anforderungen  
- **Header:**  ftm.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** ftm.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [FtmBase\-Klasse](../windows/ftmbase-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [FtmBase-Klasse](../windows/ftmbase-class.md)

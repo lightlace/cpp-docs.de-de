@@ -1,41 +1,39 @@
 ---
-title: "priority_queue::size_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::size_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size_type-Member [STL/CLR]"
+title: 'priority_queue:: size_type (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::size_type
+dev_langs: C++
+helpviewer_keywords: size_type member [STL/CLR]
 ms.assetid: 0f38e670-4f61-474a-990c-0b8cd31ada5e
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6e98c9c180bb376032eb8ec74e431ba5408af3f9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# priority_queue::size_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Der Typ eines Abstands mit Vorzeichen zwischen zwei Element.  
+# <a name="priorityqueuesizetype-stlclr"></a>priority_queue::size_type (STL/CLR)
+Der Typ eines Abstands mit Vorzeichen zwischen zwei Elementen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef int size_type;  
 ```  
   
-## Hinweise  
- Der Typ beschreibt eine nicht negative Elementanzahl.  
+## <a name="remarks"></a>Hinweise  
+ Der Typ beschreibt ein nicht negativer Elementanzahl.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_priority_queue_size_type.cpp   
@@ -66,13 +64,16 @@ int main()
   
 ```  
   
-  **c ein b**  
-**Größenunterschied \= 2**   
-## Anforderungen  
- **Header:** \<cliext\/Warteschlange\>  
+```Output  
+ c a b  
+size difference = 2  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext bzw. einer neuen Warteschlange >  
   
-## Siehe auch  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [priority\_queue::empty](../dotnet/priority-queue-empty-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::empty (STL/CLR)](../dotnet/priority-queue-empty-stl-clr.md)

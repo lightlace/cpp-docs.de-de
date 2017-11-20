@@ -1,35 +1,33 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4047 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4047"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4047"
+title: Compilerwarnung (Stufe 1) C4047 generiert | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4047
+dev_langs: C++
+helpviewer_keywords: C4047
 ms.assetid: b75ad6fb-5c93-4434-a85f-c4083051a5de
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: fafa1878b62b2e010f2f80541c454082b07e6059
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Compilerwarnung (Stufe 1) C4047
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'Operator': 'Bezeichner1' unterscheidet sich in Ebenen der Dereferenzierung von 'Bezeichner2'  
+# <a name="compiler-warning-level-1-c4047"></a>Compilerwarnung (Stufe 1) C4047 generiert
+„Operator“: „Bezeichner1“ unterscheidet sich in Ebenen der Dereferenzierung von „Bezeichner2“.  
   
- Ein Zeiger kann auf eine Variable \(eine Dereferenzierungsebene\), auf einen anderen Zeiger, der auf eine Variable zeigt \(zwei Dereferenzierungsebenen\), zeigen usw.  
+ Ein Zeiger kann auf eine Variable (eine Dereferenzierungsebene), mit einem anderen Zeiger zeigen, die auf eine Variable (zwei Dereferenzierungsebenen) usw. verweist.  
   
-## Beispiel  
- Im folgenden Beispiel wird C4047 generiert:  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird C4047 generiert:  
   
 ```  
 // C4047.c  
@@ -47,8 +45,8 @@ int main() {
 }  
 ```  
   
-## Beispiel  
- Im folgenden Beispiel wird C4047 generiert:  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird C4047 generiert:  
   
 ```  
 // C4047b.c  

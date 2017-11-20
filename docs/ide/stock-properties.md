@@ -1,43 +1,43 @@
 ---
-title: "Basiseigenschaften | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Basiseigenschaften"
-  - "Basiseigenschaften, Informationen über Basiseigenschaften"
+title: Vordefinierte Eigenschaften | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- stock properties, about stock properties
+- stock properties
 ms.assetid: a89fc454-0b8e-447a-9033-4c8af46a24d9
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8712e75aad6eeaa50227989043a2aaad6973193d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Basiseigenschaften
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Wenn Sie einer MFC\-Dispatchschnittstelle  mithilfe des [Assistenten zum Hinzufügen von Eigenschaften](../ide/idl-attributes-add-property-wizard.md) eine Eigenschaft hinzufügen, können Sie im Assistenten auf der Seite [Namen](../ide/names-add-property-wizard.md) aus der Liste **Eigenschaftenname** eine Basiseigenschaft auswählen.  Dort stehen die folgenden Eigenschaften zur Auswahl:  
+# <a name="stock-properties"></a>Basiseigenschaften
+Wenn Sie eine Eigenschaft mit einem MFC-Dispinterface Hinzufügen der [Assistent zum Hinzufügen von Eigenschaften](../ide/idl-attributes-add-property-wizard.md), können Sie eine Systemeigenschaft aus der **Eigenschaftsname** in Liste der [Namen](../ide/names-add-property-wizard.md) auf der Seite der Assistenten. Dort stehen die folgenden Eigenschaften zur Auswahl:  
   
-|Eigenschaftenname|Beschreibung|  
-|-----------------------|------------------|  
-|**Darstellung**|Gibt einen Wert zurück, der die Darstellung des Steuerelements bestimmt, oder legt diesen fest.  Die Eigenschaft **Darstellung** des Steuerelements kann dreidimensionale Anzeigeeffekte umfassen oder nicht.  Es handelt sich um eine **Ambient**\-Eigenschaft mit Lese\-\/Schreibzugriff.|  
-|`BackColor`|Gibt die **Ambient**\-Eigenschaft `BackColor` des Steuerelements zurück oder legt für diese Eigenschaft entweder eine Palettenfarbe \(RGB\) oder eine vordefinierte Systemfarbe fest.  Standardmäßig entspricht dieser Wert der Vordergrundfarbe des Steuerelementcontainers.  Es handelt sich um eine **Ambient**\-Eigenschaft mit Lese\-\/Schreibzugriff.|  
-|`BorderStyle`|Gibt die Rahmenart für ein Steuerelement zurück oder legt diese fest.  Dies ist eine Eigenschaft mit Lese\-\/Schreibzugriff.|  
-|**Beschriftung**|Gibt die **Caption**\-Eigenschaft des Steuerelements zurück oder legt diese fest.  Die Beschriftung entspricht dem Fenstertitel.  Der Implementierungstyp **Membervariable** ist für **Capiton** nicht verfügbar.|  
-|**Aktiviert**|Gibt die **Enabled**\-Eigenschaft des Steuerelements zurück oder legt diese fest.  Ein aktiviertes Steuerelement kann auf von Benutzern erstellte Ereignisse reagieren.|  
-|**Schriftart**|Gibt die **Ambient**\-Eigenschaft **Font** des Steuerelements zurück oder legt diese fest.  **NULL**, falls das Steuerelement keine Schriftart besitzt.|  
-|`ForeColor`|Gibt die **Ambient**\-Eigenschaft `ForeColor` des Steuerelements zurück oder legt diese fest.|  
-|**hWnd**|Gibt die **hWnd**\-Eigenschaft des Steuerelements zurück oder legt diese fest.  **hWnd** verfügt nicht über den Implementierungstyp **Membervariable**.|  
-|**ReadyState**|Gibt die **ReadyState**\-Eigenschaft des Steuerelements zurück oder legt diese fest.  Ein Steuerelement kann initialisiert, nicht initialisiert, interaktiv, abgeschlossen sein oder geladen werden.  Weitere Informationen finden Sie im *Internet\-SDK* unter [READYSTATE](https://msdn.microsoft.com/en-us/library/aa768362.aspx).|  
-|**Text**|Gibt in einem Steuerelement enthaltenen Text zurück oder legt diesen fest.  Der Implementierungstyp **Membervariable** ist für **Text** nicht verfügbar.|  
+|Name der Eigenschaft|Beschreibung|  
+|-------------------|-----------------|  
+|**Darstellung**|Gibt an, oder legt einen Wert, der bestimmt, die Darstellung des Steuerelements fest. Des Steuerelements **Darstellung** Eigenschaft eingeschlossen oder weglassen von dreidimensionale Anzeigeeffekte kann. Dies ist eine ambient Lese-Schreib-Eigenschaft.|  
+|`BackColor`|Gibt zurück, oder legt des Steuerelements ambient `BackColor` Eigenschaft, um eine (RGB)-Palettenfarbe oder eine vordefinierte Systemfarbe. Standardmäßig entspricht dieser Wert die Vordergrundfarbe des Containers des Steuerelements. Dies ist eine ambient Lese-Schreib-Eigenschaft.|  
+|`BorderStyle`|Gibt an, oder legt die Rahmenart für ein Steuerelement. Dies ist eine Schreib-Lese-Eigenschaft.|  
+|**Beschriftung**|Gibt zurück, oder legt das Steuerelement **Beschriftung** Eigenschaft. Die Beschriftung ist der Titel des Fensters. **Beschriftung** hat keine **Membervariable** Implementierungstyp.|  
+|**Aktiviert**|Gibt zurück, oder legt das Steuerelement **aktiviert** Eigenschaft. Ein aktiviertes Steuerelement kann auf vom Benutzer generierte Ereignisse reagieren.|  
+|**Schriftart**|Gibt zurück, oder legt ihn fest Ambiente-Schriftart des Steuerelements. NULL, wenn das Steuerelement keine Schriftart besitzt.|  
+|`ForeColor`|Gibt zurück, oder legt des Steuerelements ambient `ForeColor` Eigenschaft.|  
+|**hWnd**|Gibt zurück, oder legt das Steuerelement **hWnd** Eigenschaft. **hWnd** hat keine **Membervariable** Implementierungstyp.|  
+|**ReadyState**|Gibt zurück, oder legt das Steuerelement **ReadyState** Eigenschaft. Ein Steuerelement kann nicht initialisiert, initialisiert, das Laden, interaktiven oder abgeschlossen sein. Finden Sie unter [READYSTATE](https://msdn.microsoft.com/en-us/library/aa768362.aspx) in der *Internet SDK* für Weitere Informationen.|  
+|**Text**|Gibt an, oder legt den Text in einem Steuerelement enthalten. **Text** hat keine **Membervariable** Implementierungstyp.|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Hinzufügen einer Eigenschaft](../ide/adding-a-property-visual-cpp.md)   
- [IDL\-Attribute, Assistent zum Hinzufügen von Eigenschaften](../ide/idl-attributes-add-property-wizard.md)
+ [IDL-Attribute, Assistent zum Hinzufügen von Eigenschaften](../ide/idl-attributes-add-property-wizard.md)

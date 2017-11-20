@@ -1,32 +1,30 @@
 ---
-title: "object (C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.object"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "object attribute"
+title: Objekt (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.object
+dev_langs: C++
+helpviewer_keywords: object attribute
 ms.assetid: f2d3c231-630d-4b4c-bd15-b1c30df362dd
-caps.latest.revision: 9
-caps.handback.revision: "9"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 75694398f01cdf790b292d53aff5466b1e27a919
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# object (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Identifiziert eine benutzerdefinierte Schnittstelle.  
+# <a name="object-c"></a>object (C++)
+Identifiziert eine benutzerdefinierte Schnittstelle an.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -34,32 +32,31 @@ Identifiziert eine benutzerdefinierte Schnittstelle.
   
 ```  
   
-## Hinweise  
- Wenn einer Schnittstellendefinition vorangestellt ist, wird das Attribut **Objekt** C\+\+ Schnittstelle in die IDL\-Datei als benutzerdefinierte Oberfläche abgelegt werden.  
+## <a name="remarks"></a>Hinweise  
+ Wenn vor der Schnittstellendefinition einer, die **Objekt** C++-Attribut bewirkt, dass die Schnittstelle in der IDL-Datei als eine benutzerdefinierte Schnittstelle abgelegt werden soll.  
   
- Alle Schnittstellen, die mit Objekt gekennzeichnet wird, muss der **IUnknown**erben.  Diese Bedingung ist wenn eine der Basisschnittstellen erben von **IUnknown**erfüllt.  Wenn keine Basisschnittstellen von **IUnknown**erben, führt der Compiler die Schnittstelle, die mit **Objekt** gekennzeichnet ist, um von **IUnknown**zu berechnen.  
+ Alle mit Objekt markierte Schnittstelle erben muss **IUnknown**. Diese Bedingung erfüllt wird, wenn einer der Basisschnittstellen erben **IUnknown**. Wenn keine Basisschnittstellen erben **IUnknown**, der Compiler führt dazu, dass die Schnittstelle, die mit markierten **Objekt** Ableitung **IUnknown**.  
   
-## Beispiel  
- Weitere Informationen finden Sie unter [nonbrowsable](../windows/nonbrowsable.md) als Beispiel zur Verwendung **Objekt**verwendet.  
+## <a name="example"></a>Beispiel  
+ Finden Sie unter [Nonbrowsable](../windows/nonbrowsable.md) ein Beispiel zum Verwenden von **Objekt**.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
 |**Betrifft**|`interface`|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Keine|  
+|**Ungültige Attribute**|Keine|  
   
- Weitere Informationen über das kontexte finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [dual](../windows/dual.md)   
- [dispinterface](../windows/dispinterface.md)   
- [custom](../windows/custom-cpp.md)   
- [\_\_interface](../cpp/interface.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [IDL-Attribute](../windows/idl-attributes.md)   
+ [Schnittstellenattribut](../windows/interface-attributes.md)   
+ [Duale](../windows/dual.md)   
+ [Disp-Schnittstelle](../windows/dispinterface.md)   
+ [benutzerdefinierte](../windows/custom-cpp.md)   
+ [__interface](../cpp/interface.md)   

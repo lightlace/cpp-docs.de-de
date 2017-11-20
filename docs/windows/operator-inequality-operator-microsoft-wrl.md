@@ -1,30 +1,29 @@
 ---
-title: "operator!=-Operator (Microsoft::WRL)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::operator!="
-dev_langs: 
-  - "C++"
+title: 'Operator! =-Operator (Microsoft:: wrl) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::operator!=
+dev_langs: C++
 ms.assetid: 785435da-87a6-4454-9bce-9d288a96dc26
-caps.latest.revision: 3
-caps.handback.revision: "3"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7c4219cc4bd7a4445a483c9af816e43b6485bbdd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# operator!=-Operator (Microsoft::WRL)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ungleichheitsoperator für [ComPtr](../windows/comptr-class.md) und [ComPtrRef](../windows/comptrref-class.md)\-Objekte.  
+# <a name="operator-operator-microsoftwrl"></a>operator!=-Operator (Microsoft::WRL)
+Ungleichheitsoperator für [ComPtr](../windows/comptr-class.md) und [ComPtrRef](../windows/comptrref-class.md) Objekte.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 WRL_NOTHROW bool operator!=(  
@@ -61,20 +60,20 @@ WRL_NOTHROW bool operator!=(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `a`  
- Das linksobjekt.  
+ Das linke Objekt.  
   
  `b`  
- Das richtige Objekt.  
+ Das rechte Objekt.  
   
-## Rückgabewert  
- `true`, wenn die Objekte ungleich sind, andernfalls `false`.  
+## <a name="return-value"></a>Rückgabewert  
+ `true`Wenn die Objekte nicht gleich sind; andernfalls `false`.  
   
-## Anforderungen  
- **Header:**  client.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** client.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [Microsoft::WRL\-Namespace](../windows/microsoft-wrl-namespace.md)
+## <a name="see-also"></a>Siehe auch  
+ [Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)

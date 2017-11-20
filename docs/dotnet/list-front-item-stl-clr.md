@@ -1,41 +1,39 @@
 ---
-title: "list::front_item (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::front_item"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "front_item-Member [STL/CLR]"
+title: 'List:: front_item (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::front_item
+dev_langs: C++
+helpviewer_keywords: front_item member [STL/CLR]
 ms.assetid: c871873b-7745-442b-9760-9d8096fa8610
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b0d280d84a6cec1c0024adc1b6223a75eb349f96
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# list::front_item (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listfrontitem-stlclr"></a>list::front_item (STL/CLR)
 Greift auf das erste Element zu.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 property value_type front_item;  
 ```  
   
-## Hinweise  
- Die Eigenschaft wird auf das erste Element der gesteuerten Sequenz zu, die nicht leer sein muss.  Sie verwenden sie, um zu lesen, oder, das erste Element zu schreiben, wenn Sie es wissen, vorhanden ist.  
+## <a name="remarks"></a>Hinweise  
+ Die Eigenschaft greift auf das erste Element der gesteuerten Sequenz, die nicht leer sein darf. Sie verwenden ihn zum Lesen oder schreiben das erste Element, wenn Sie wissen, dass es vorhanden ist.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_list_front_item.cpp   
@@ -67,16 +65,19 @@ int main()
   
 ```  
   
-  **ein b c**  
-**front\_item \= "**  
- **x b c**   
-## Anforderungen  
- **Header:** \<cliext\/Liste\>  
+```Output  
+ a b c  
+front_item = a  
+ x b c  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/List >  
   
-## Siehe auch  
- [list](../dotnet/list-stl-clr.md)   
- [list::back](../dotnet/list-back-stl-clr.md)   
- [list::back\_item](../dotnet/list-back-item-stl-clr.md)   
- [list::front](../dotnet/list-front-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Liste (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List:: Back (STL/CLR)](../dotnet/list-back-stl-clr.md)   
+ [List:: back_item (STL/CLR)](../dotnet/list-back-item-stl-clr.md)   
+ [list::front (STL/CLR)](../dotnet/list-front-stl-clr.md)

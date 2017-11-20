@@ -1,40 +1,40 @@
 ---
-title: "Gewusst wie: Marshallen von Zeichenfolgen mit PInvoke | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Datenmarshalling [C++], Zeichenfolgen"
-  - "Interop [C++], Zeichenfolgen"
-  - "Marshaling [C++], Zeichenfolgen"
-  - "Plattformaufruf [C++], Zeichenfolgen"
+title: 'Wie: Marshallen von Zeichenfolgen mit PInvoke | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- interop [C++], strings
+- marshaling [C++], strings
+- data marshaling [C++], strings
+- platform invoke [C++], strings
 ms.assetid: bcc75733-7337-4d9b-b1e9-b95a98256088
-caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0047c76000d336ce18d2bbbab741dc965c1fbc59
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Gewusst wie: Marshallen von Zeichenfolgen mit PInvoke
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In diesem Thema wird beschrieben, wie systemeigene Funktionen, die Zeichenfolgen in C\-Format akzeptieren, über den CLR\-Zeichenfolgentyp System::String aufgerufen werden können, indem die .NET Framework\-Unterstützung für Plattformaufrufe verwendet wird.  Visual C\+\+\-Programmierern wird empfohlen, stattdessen \(sofern möglich\) die C\+\+\-Interop\-Funktionen zu verwenden, da P\/Invoke eine sehr eingeschränkte Berichterstattung von Kompilierungsfehlern bietet, nicht typsicher ist und eine aufwändige Implementierung erfordern kann.  Wenn die nicht verwaltete API als DLL gepackt und der Quellcode nicht verfügbar ist, stellt P\/Invoke die einzige Option dar, andernfalls siehe [Verwenden von C\+\+\-Interop \(implizites PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
+# <a name="how-to-marshal-strings-using-pinvoke"></a>Gewusst wie: Marshallen von Zeichenfolgen mit PInvoke
+In diesem Thema wird erläutert, wie systemeigene Funktionen, die Zeichenfolgen im C-Stil können aufgerufen werden, mithilfe der CLR-Zeichenfolge akzeptieren System:: String mithilfe der Plattformaufruf von .NET Framework-Unterstützung. Visual C++-Programmierern werden empfohlen, stattdessen die C++-Interop-Funktionen (wenn möglich), da P/Invoke bietet nur wenig Kompilierzeitfehler reporting, ist nicht typsicher, und kann einfacher zu implementieren. Wenn die nicht verwaltete API wird als DLL verpackt, und der Quellcode nicht verfügbar ist, klicken Sie dann P/Invoke ist die einzige Option, jedoch andernfalls finden Sie unter [mithilfe von C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
   
- Verwaltete und nicht verwaltete Zeichenfolgen werden im Arbeitsspeicher unterschiedlich angelegt, daher erfordert das Übergeben von Zeichenfolgen von verwalteten an nicht verwaltete Funktionen das <xref:System.Runtime.InteropServices.MarshalAsAttribute>\-Attribut. Damit wird der Compiler angewiesen, die erforderlichen Konvertierungsmechanismen für das Marshalling der Zeichenfolgedaten korrekt und sicher einzufügen.  
+ Verwaltete und nicht verwaltete Zeichenfolgen werden angeordnet, anders als im Arbeitsspeicher, also die Übergabe von Zeichenfolgen aus verwaltetem zu nicht verwalteten Funktionen erfordert die <xref:System.Runtime.InteropServices.MarshalAsAttribute> Attribut, um den Compiler anzuweisen, fügen Sie die erforderliche Konvertierung Mechanismen für das Marshalling von Zeichenfolgendaten ordnungsgemäß und sicher.  
   
- Wie bei Funktionen, die nur systeminterne Datentypen verwenden, wird das <xref:System.Runtime.InteropServices.DllImportAttribute> verwendet, um verwaltete Einstiegspunkte in die systemeigenen Funktionen zu deklarieren. Für die Übergabe von Zeichenfolgen kann anstelle einer Definition dieser Einstiegspunkte für die Übernahme von Zeichenfolgen in C\-Format ein Handle für den <xref:System.String>\-Typ verwendet werden.  Hierdurch wird der Compiler aufgefordert, Code zur Ausführung der erforderlichen Konvertierung einzufügen.  Für jedes Funktionsargument in einer nicht verwalteten Funktion, das eine Zeichenfolge akzeptiert, sollte das <xref:System.Runtime.InteropServices.MarshalAsAttribute>\-Attribut verwendet werden, um anzugeben, dass das Zeichenfolgenobjekt als Zeichenfolge in C\-Format an die systemeigene Funktion gemarshallt werden soll.  
+ Wie bei Funktionen, die nur systeminterne Datentypen verwenden <xref:System.Runtime.InteropServices.DllImportAttribute> wird verwendet, um verwaltete Einstiegspunkte in die systemeigenen Funktionen allerdings--für die Übergabe von Zeichenfolgen--anstatt diese Einstiegspunkte als Zeichenfolgen im C-Stil, ein Handle für dauert deklarieren die <xref:System.String> Typ Stattdessen verwendet werden können. Dies fordert den Compiler Code einfügen, der die erforderliche Konvertierung ausführt. Für jedes Funktionsargument in eine nicht verwaltete Funktion, die eine Zeichenfolge akzeptiert die <xref:System.Runtime.InteropServices.MarshalAsAttribute> Attribut sollte verwendet werden, um anzugeben, dass das String-Objekt an die systemeigene Funktion als eine Zeichenfolge im C-Stil gemarshallt werden sollen.  
   
-## Beispiel  
- Der folgende Code besteht aus einem verwalteten und einem nicht verwalteten Modul.  Bei dem nicht verwalteten Modul handelt es sich um eine DLL, die eine Funktion mit dem Namen TakesAString definiert, die eine ANSI\-Zeichenfolge in C\-Format als char\* akzeptiert.  Das verwaltete Modul ist eine Befehlszeilenanwendung, von der die TakesAString\-Funktion importiert wird, wobei die Eingabe jedoch nicht als char\*, sondern als verwalteter System.String definiert wird.  Das <xref:System.Runtime.InteropServices.MarshalAsAttribute>\-Attribut wird verwendet, um anzugeben, wie die verwaltete Zeichenfolge beim Aufruf von TakesAString gemarshallt wird.  
+## <a name="example"></a>Beispiel  
+ Der folgende Code besteht aus einem nicht verwalteten und ein verwaltetes Modul. Nicht verwaltete Modul ist eine DLL, die eine Funktion aufgerufen, die eine C-Stil ANSI-Zeichenfolge in Form von Char * akzeptiert TakesAString definiert. Verwaltete Modul ist eine befehlszeilenanwendung, die die Funktion TakesAString importiert, aber wird definiert als eine verwaltete System.String anstelle von Char dauert\*. Die <xref:System.Runtime.InteropServices.MarshalAsAttribute> Attribut wird verwendet, um anzugeben, wie die verwaltete Zeichenfolge gemarshallt werden sollen, wenn TakesAString aufgerufen wird.  
   
- Das verwaltete Modul wird mit \/clr kompiliert, es kann jedoch auch \/clr:pure verwendet werden.  
+ Verwaltete Modul mit "/ CLR", aber "/ CLR" kompiliert wird: reine funktioniert ebenfalls.  
   
 ```  
 // TraditionalDll2.cpp  
@@ -82,9 +82,9 @@ int main() {
 }  
 ```  
   
- Bei dieser Technik wird eine Kopie der Zeichenfolge auf dem nicht verwalteten Heap erstellt, daher werden von der systemeigenen Funktion ausgeführte Änderungen der Zeichenfolge in der verwalteten Kopie der Zeichenfolge nicht wiedergegeben.  
+ Dieses Verfahren wird eine Kopie der Zeichenfolge, die auf dem nicht verwalteten Heap erstellt werden, damit die Änderungen auf die Zeichenfolge von der systemeigenen Funktion nicht in der verwalteten Kopie der Zeichenfolge reflektiert werden.  
   
- Beachten Sie, dass über die herkömmliche \#include\-Direktive kein Teil der DLL für den verwalteten Code verfügbar gemacht wird.  Tatsächlich wird auf die DLL nur zur Laufzeit zugegriffen, sodass Probleme mit Funktionen, die mit `DllImport` importiert wurden, zur Kompilierungszeit nicht erkannt werden.  
+ Beachten Sie, dass kein Teil der DLL, auf den verwalteten Code über die herkömmliche bereitgestellt wird #include-Direktive. Tatsächlich wird die DLL nur zur Laufzeit zugegriffen, damit Probleme mit Funktionen mit importiert `DllImport` zum Zeitpunkt der Kompilierung nicht erkannt werden.  
   
-## Siehe auch  
- [Verwenden von explizitem PInvoke in C\+\+ \(DllImport\-Attribut\)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+## <a name="see-also"></a>Siehe auch  
+ [Verwenden von explizitem PInvoke in C++ (DllImport-Attribut)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

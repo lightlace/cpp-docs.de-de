@@ -1,26 +1,26 @@
 ---
-title: "4.4 OMP_NESTED"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 4.4 OMP_NESTED | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: fd17b6f4-84e8-44c0-a96a-3a9e5ba33688
-caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fbb45bb04db612451c7d081f3a7afad8031da643
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# 4.4 OMP_NESTED
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die `OMP_NESTED` Umgebungsvariablen aktiviert oder deaktiviert geschachtelten Parallelität, es sei denn, geschachtelter Parallelität aktiviert oder deaktiviert werden, indem Sie die routine Bibliothek `o`**mp\_set\_nested** aufruft.  Wenn auf true festgelegt ist, geschachtelter Parallelität aktiviert. falls er zu **FALSE**festgelegt ist, wird geschachtelter Parallelität deaktiviert.  Der Standardwert ist **FALSE**.  
+# <a name="44-ompnested"></a>4.4 OMP_NESTED
+Die `OMP_NESTED` Umgebungsvariable aktiviert oder geschachtelte Parallelität deaktiviert, es sei denn, geschachtelte Parallelität aktiviert oder werden, durch Aufrufen deaktiviert der `o` **Mp_set_nested** Bibliotheksroutine. Wenn auf festgelegt **"true"**, geschachtelte Parallelität aktiviert ist; Wenn sie, um festgelegt ist **"false"**, geschachtelte Parallelität deaktiviert ist. Der Standardwert ist **"false"**.  
   
  Beispiel:  
   
@@ -28,6 +28,6 @@ Die `OMP_NESTED` Umgebungsvariablen aktiviert oder deaktiviert geschachtelten Pa
 setenv OMP_NESTED TRUE  
 ```  
   
-## Querverweis:  
+## <a name="cross-reference"></a>Referenz:  
   
--   `omp_set_nested`\-Funktion finden [3.1.9 Abschnitt](../../parallel/openmp/3-1-9-omp-set-nested-function.md) auf Seite 40.
+-   `omp_set_nested`funktionieren, finden Sie unter [Abschnitt 3.1.9](../../parallel/openmp/3-1-9-omp-set-nested-function.md) auf der Seite "40".

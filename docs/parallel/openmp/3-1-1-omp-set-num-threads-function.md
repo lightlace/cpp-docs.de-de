@@ -1,44 +1,44 @@
 ---
-title: "3.1.1 omp_set_num_threads Function"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 3.1.1 Omp_set_num_threads-Funktion | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: b94cf2b5-8011-4a3b-ba56-676982642857
-caps.latest.revision: 8
-caps.handback.revision: "8"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 568f01aacd361437929606307186bb7cd2eaad7c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# 3.1.1 omp_set_num_threads Function
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die `omp_set_num_threads`\-Funktion legt die Standardanzahl von Threads fest, der für parallele folgenden Bereiche zu verwenden, die keine `num_threads`\-Klausel angeben.  Es wird folgendes Format verwendet:  
+# <a name="311-ompsetnumthreads-function"></a>3.1.1 omp_set_num_threads-Funktion
+Die `omp_set_num_threads` Funktion legt die Standardanzahl von Threads zur Verwendung für nachfolgende parallele Bereiche, die keinen angeben einer `num_threads` Klausel. Es wird folgendes Format verwendet:  
   
 ```  
 #include <omp.h>  
 void omp_set_num_threads(int num_threads);  
 ```  
   
- Der Wert der Parameter *num\_threads* muss eine positive ganze Zahl sein.  Der Effekt ist auf ab, ob dynamische Anpassung der Anzahl von Threads aktiviert ist.  Für einen umfassenden Satz von Regeln zur Interaktion zwischen der `omp_set_num_threads`\-Funktion und der dynamischen Anpassung von Threads finden Sie im Abschnitt 2.3 auf Seite 8.  
+ Der Wert des Parameters *Num_threads* muss eine positive ganze Zahl sein. Seine Auswirkungen hängt davon ab, ob die dynamische Anpassung der Anzahl der Threads aktiviert ist. Für einen umfassenden Satz von Regeln über die Interaktion zwischen der `omp_set_num_threads` -Funktion und die dynamische Anpassung der Threads, finden Sie in Abschnitt 2.3 auf der Seite "8".  
   
- Diese Funktion besitzt die Auswirkungen, die oben beschriebenen wenn sie von einem Teil des Programms aufgerufen wird, in dem die `omp_in_parallel`\-Funktion \(null\) zurückgibt.  Wenn sie für einen Teil des Programms aufgerufen wird, in dem die `omp_in_parallel`\-Funktion einen Wert ungleich 0 \(null\) zurückgibt, ist das Verhalten dieser Funktion nicht definiert.  
+ Diese Funktion wirkt sich die oben beschriebenen, beim Aufrufen durch einen Teil des Programms, in dem die `omp_in_parallel` Funktion gibt 0 (null) zurück. Wenn sie von einem Teil des Programms aufgerufen wird, in dem die `omp_in_parallel` Funktion gibt einen Wert ungleich NULL zurück, das Verhalten dieser Funktion ist nicht definiert.  
   
- Dieser Aufruf hat Vorrang vor der `OMP_NUM_THREADS` Umgebungsvariablen.  Der Standardwert für die Anzahl von Threads, die möglicherweise eingerichtet werden, indem `omp_set_num_threads` aufrufen oder indem die `OMP_NUM_THREADS` Umgebungsvariable festgelegt wird, kann für einzelne **Ähnlichkeit**\-Direktive explizit überschrieben werden, indem die `num_threads`\-Klausel angegeben.  
+ Dieser Aufruf hat Vorrang gegenüber der `OMP_NUM_THREADS` -Umgebungsvariablen angegeben. Der Standardwert für die Anzahl der Threads, die durch den Aufruf hergestellt werden kann `omp_set_num_threads` oder durch Festlegen der `OMP_NUM_THREADS` Umgebungsvariablen kann explizit überschrieben werden, auf einem einzelnen **parallele** Richtlinie durch Angabe der `num_threads` Klausel.  
   
-## Querverweise:  
+## <a name="cross-references"></a>Referenzen:  
   
--   `omp_set_dynamic`\-Funktion finden [3.1.7 Abschnitt](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) auf Seite 39.  
+-   `omp_set_dynamic`funktionieren, finden Sie unter [Abschnitt 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) auf Seite 39.  
   
--   `omp_get_dynamic`\-Funktion finden [3.1.8 Abschnitt](../../parallel/openmp/3-1-8-omp-get-dynamic-function.md) auf Seite 40.  
+-   `omp_get_dynamic`funktionieren, finden Sie unter [Abschnitt 3.1.8](../../parallel/openmp/3-1-8-omp-get-dynamic-function.md) auf Seite "40".  
   
--   `OMP_NUM_THREADS` Umgebungsvariablen finden [Abschnitt 4.2](../../parallel/openmp/4-2-omp-num-threads.md) auf Seite 48 und Seite 8, Abschnitt 2.3 auf.  
+-   `OMP_NUM_THREADS`Umgebung-Variable verwenden, finden Sie unter [Abschnitt 4.2](../../parallel/openmp/4-2-omp-num-threads.md) auf Seite 48 und Abschnitt 2.3 auf Seite "8".  
   
--   `num_threads`\-Klausel finden [Abschnitt 2.3](../../parallel/openmp/2-3-parallel-construct.md) auf Seite 8
+-   `num_threads`-Klausel finden Sie unter [Abschnitt 2.3](../../parallel/openmp/2-3-parallel-construct.md) auf Seite 8

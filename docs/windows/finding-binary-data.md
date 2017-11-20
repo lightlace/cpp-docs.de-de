@@ -1,50 +1,50 @@
 ---
-title: "Finding Binary Data | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.binary"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "hexadecimal bytes in binary data"
-  - "strings [C++], searching for"
-  - "file searches [C++]"
-  - "binary data, finding"
-  - "ASCII characters, finding in binary data"
+title: "Suchen von Binärdaten | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.binary
+dev_langs: C++
+helpviewer_keywords:
+- hexadecimal bytes in binary data
+- strings [C++], searching for
+- file searches [C++]
+- binary data, finding
+- ASCII characters, finding in binary data
 ms.assetid: 1675b19c-66e3-4040-82c2-5dde4b1793f8
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 430f69eb6ae4d46ceb301db56ba9ee1904d028b6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Finding Binary Data
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Sie können nach ASCII\-Zeichenfolgen oder hexadezimalen Bytes suchen.  Um z. B. die Zeichenfolge "Hello" zu finden, können Sie entweder nach der Zeichenfolge "Hello" oder nach der hexadezimalen Entsprechung "48 65 6C 6C 6F" suchen.  
+# <a name="finding-binary-data"></a>Suchen von Binärdaten
+Sie können für ASCII-Zeichenfolgen oder hexadezimale Bytes suchen. Angenommen, um "Hello" zu suchen, Sie können entweder die Zeichenfolge "Hello" oder suchen für "48 65 6 c 6 C 6F" (die hexadezimale Entsprechung).  
   
-### So suchen Sie Binärdaten  
+### <a name="to-find-binary-data"></a>Binäre Daten gefunden  
   
-1.  Klicken Sie im Menü **Bearbeiten** auf [Suchen](../Topic/Find%20Command.md).  
+1.  Aus der **bearbeiten** Menü klicken Sie auf [suchen](/visualstudio/ide/reference/find-command).  
   
-2.  Wählen Sie in der Dropdownliste im Feld **Suchen nach** einen früheren Suchbegriff aus, oder geben Sie die zu suchenden Daten ein.  
+2.  In der **Suchen nach** Feld, wählen Sie einen früheren Suchbegriff aus der Dropdown-Liste aus, oder geben Sie die Daten, die Sie suchen möchten.  
   
-3.  Wählen Sie beliebige Suchoptionen aus.  
+3.  Aktivieren Sie keines der **suchen** Optionen.  
   
 4.  Klicken Sie auf **Weitersuchen**.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](https://msdn.microsoft.com/library/f45fce5x.aspx) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](https://msdn.microsoft.com/library/xbx3z216.aspx). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
  Anforderungen  
   
- None  
+ Keine  
   
-## Siehe auch  
- [Binary Editor](../mfc/binary-editor.md)
+## <a name="see-also"></a>Siehe auch  
+ [Binary Editor](binary-editor.md)
+

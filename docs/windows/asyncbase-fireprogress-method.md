@@ -1,32 +1,30 @@
 ---
-title: "AsyncBase::FireProgress-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "async/Microsoft::WRL::AsyncBase::FireProgress"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "FireProgress-Methode"
+title: 'Asyncbase:: Fireprogress-Methode | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: async/Microsoft::WRL::AsyncBase::FireProgress
+dev_langs: C++
+helpviewer_keywords: FireProgress method
 ms.assetid: 4512bef6-0ebc-4465-9b8a-4c9dfa82084c
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: dd7aa1d66697058d711edd38b3c2eb0679b73c07
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# AsyncBase::FireProgress-Methode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ruft den aktuellen Statusereignishandler auf.  
+# <a name="asyncbasefireprogress-method"></a>AsyncBase::FireProgress-Methode
+Wird der aktuelle Fortschritt-Ereignishandler aufgerufen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void FireProgress(  
@@ -34,17 +32,17 @@ void FireProgress(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `arg`  
- Die aufzurufen Ereignishandlermethode.  
+ Die Ereignishandlermethode aufgerufen.  
   
-## Hinweise  
- `ProgressTraits` ist von [ArgTraitsHelper\-Struktur](../windows/argtraitshelper-structure.md) abgeleitet.  
+## <a name="remarks"></a>Hinweise  
+ `ProgressTraits`stammt aus [ArgTraitsHelper-Struktur](../windows/argtraitshelper-structure.md).  
   
-## Anforderungen  
- **Header:**  async.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** async.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [AsyncBase\-Klasse](../windows/asyncbase-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [AsyncBase-Klasse](../windows/asyncbase-class.md)

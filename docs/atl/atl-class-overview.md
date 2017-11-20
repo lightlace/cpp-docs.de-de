@@ -1,59 +1,59 @@
 ---
-title: "ATL Class Overview | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.atl.classes"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, class reference"
-  - "Klassen [C++], ATL"
+title: "Übersicht über die ATL-Klasse | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.atl.classes
+dev_langs: C++
+helpviewer_keywords:
+- classes [C++], ATL
+- ATL, class reference
 ms.assetid: c38ac93d-c3a2-4ce7-8153-f1d34c0f0fa6
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ab4ee45f254a1b0149f05c2b8ba63f95c98fcf66
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# ATL Class Overview
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Klassen in der ATL \(Active Template Library\) können kategorisiert werden, wie folgt:  
+# <a name="atl-class-overview"></a>Übersicht über die ATL-Klasse
+Klassen in der Active Template Library (ATL) können wie folgt kategorisiert werden:  
   
 |||  
 |-|-|  
-|[Class Factory](../atl/class-factories-classes.md)|[Speicherverwaltung](../atl/memory-management-classes.md)|  
-|[Klasseninformationen](../atl/class-information-classes.md)|[MMC\-Snap\-In](../atl/mmc-snap-in-classes.md)|  
-|[Collection](../atl/collection-classes.md)|[die Objektsicherheit](../atl/object-safety-classes.md)|  
-|[COM\-Module](../atl/com-modules-classes.md)|[Dauerhaftigkeit](../atl/persistence-classes.md)|  
+|[Klassenfactorys](../atl/class-factories-classes.md)|[Speicherverwaltung](../atl/memory-management-classes.md)|  
+|[Klasseninformation](../atl/class-information-classes.md)|[MMC-Snap-In](../atl/mmc-snap-in-classes.md)|  
+|[Auflistung](../atl/collection-classes.md)|[Objekt-Sicherheit](../atl/object-safety-classes.md)|  
+|[Com-Modulen](../atl/com-modules-classes.md)|[Persistenz](../atl/persistence-classes.md)|  
 |[Zusammengesetzte Steuerelemente](../atl/composite-controls-classes.md)|[Eigenschaften und Eigenschaftenseiten](../atl/properties-and-property-pages-classes.md)|  
-|[Verbindungspunkte](../atl/connection-points-classes.md)|[Registrierungs\-Unterstützung](../atl/registry-support-classes.md)|  
-|[Steuerkapselung](../atl/control-containment-classes.md)|[Ausführen von Objekte](../atl/running-objects-classes.md)|  
-|[Steuerelemente: Allgemeine Unterstützung](../atl/controls-general-support-classes.md)|[Sicherheit](../atl/security-classes.md)|  
-|[Datenübertragung](../atl/data-transfer-classes.md)|[Dienstanbieter\-Unterstützung](../atl/service-provider-support-classes.md)|  
-|[Datentypen](../atl/data-types-classes.md)|[Site\-Informationen](../atl/site-information-classes.md)|  
-|[Debuggen und Ausnahme](../atl/debugging-and-exceptions-classes.md)|[Zeichenfolge und Text](../atl/string-and-text-classes.md)|  
-|[Duale Schnittstellen](../atl/dual-interfaces-classes.md)|[Tearoff\-Schnittstellen](../atl/tear-off-interfaces-classes.md)|  
-|[Enumeratoren und Auflistungen](../atl/enumerators-and-collections-classes.md)|[Thread\-Pooling](../atl/thread-pooling-classes.md)|  
-|[Fehlerinformationen](../atl/error-information-classes.md)|[Threadingmodelle und kritische Abschnitte](../atl/threading-models-and-critical-sections-classes.md)|  
-|[Datei\-Behandlung](../atl/file-handling-classes.md)|[die Benutzeroberflächenunterstützung](../atl/ui-support-classes.md)|  
-|[Schnittstellenzeiger](../atl/interface-pointers-classes.md)|[Windows\-Unterstützung](../atl/windows-support-classes.md)|  
-|[IUnknown\-Implementierung](../atl/iunknown-implementation-classes.md)|[Hilfsprogramm](../atl/utility-classes.md)|  
+|[Verbindungspunkte](../atl/connection-points-classes.md)|[Unterstützung der Registrierung](../atl/registry-support-classes.md)|  
+|[-Steuerelementkapselung](../atl/control-containment-classes.md)|[Ausführen von Objekten](../atl/running-objects-classes.md)|  
+|[Steuerelementen: Unterstützung Allgemein](../atl/controls-general-support-classes.md)|[Sicherheit](../atl/security-classes.md)|  
+|[Datenübertragung](../atl/data-transfer-classes.md)|[Service-Anbieter-Unterstützung](../atl/service-provider-support-classes.md)|  
+|[Datentypen](../atl/data-types-classes.md)|[Standortinformationen](../atl/site-information-classes.md)|  
+|[Debuggen und -Ausnahme](../atl/debugging-and-exceptions-classes.md)|[Zeichenfolgen- und Textfelder](../atl/string-and-text-classes.md)|  
+|[Duale Schnittstellen](../atl/dual-interfaces-classes.md)|[Abtrennbare Schnittstellen](../atl/tear-off-interfaces-classes.md)|  
+|[Enumeratoren und Auflistungen](../atl/enumerators-and-collections-classes.md)|[Pooling von Threads](../atl/thread-pooling-classes.md)|  
+|[Fehlerinformationen](../atl/error-information-classes.md)|[Threading, Modelle und kritische Abschnitte](../atl/threading-models-and-critical-sections-classes.md)|  
+|[Dateibehandlung](../atl/file-handling-classes.md)|[Benutzeroberflächenautomatisierungs-Unterstützung](../atl/ui-support-classes.md)|  
+|[Schnittstellenzeiger](../atl/interface-pointers-classes.md)|[Unterstützung für Windows](../atl/windows-support-classes.md)|  
+|[Implementierung von IUnknown](../atl/iunknown-implementation-classes.md)|[Hilfsprogramm](../atl/utility-classes.md)|  
   
- Für zusätzliche Klassen, die in den ATL\-Projekten verwendet werden können, finden Sie unter [Freigegebene Klassen](../atl-mfc-shared/atl-mfc-shared-classes.md).  
+ Zusätzliche Klassen, die in ATL-Projekte verwendet werden können, finden Sie unter [freigegebenen Klassen](../atl-mfc-shared/atl-mfc-shared-classes.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Klassen](../atl/reference/atl-classes.md)   
- [ATL COM Desktop Components](../atl/atl-com-desktop-components.md)   
+ [ATL COM-Desktop-Komponenten](../atl/atl-com-desktop-components.md)   
  [Funktionen](../atl/reference/atl-functions.md)   
- [Global Variables](../atl/reference/atl-global-variables.md)   
- [Macros](../atl/reference/atl-macros.md)   
+ [Globale Variablen](../atl/reference/atl-global-variables.md)   
+ [Makros](../atl/reference/atl-macros.md)   
  [Strukturen](../atl/reference/atl-structures.md)   
- [Typedefs](../atl/reference/atl-typedefs.md)
+ [Typdefinitionen](../atl/reference/atl-typedefs.md)
+

@@ -1,39 +1,37 @@
 ---
-title: "Compilerfehler C3533 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3533"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3533"
+title: Compilerfehler C3533 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C3533
+dev_langs: C++
+helpviewer_keywords: C3533
 ms.assetid: a68b1ba5-466e-4190-a1a4-505ccfe548b7
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b519a08080edb8dda37760bd826224657365afae
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Compilerfehler C3533
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-"Typ": ein Parameter kann keinen Typ haben, der "Auto" enthält  
+# <a name="compiler-error-c3533"></a>Compilerfehler C3533
+'Typ': ein Parameter keinen Typ, der "auto" enthält  
   
- Eine Methode oder ein Vorlagenparameter kann nicht mit dem `auto`\-Schlüsselwort deklariert werden, wenn die standardmäßige [\/Zc:auto](../../build/reference/zc-auto-deduce-variable-type.md)\-Compileroption gültig ist.  
+ Parameter-Methode oder die Vorlage kann nicht deklariert werden, mit der `auto` Schlüsselwort Wenn standardmäßig [/Zc: Auto](../../build/reference/zc-auto-deduce-variable-type.md) (Compileroption) gültig ist.  
   
-### So beheben Sie diesen Fehler  
+### <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1.  Entfernen Sie das `auto`\-Schlüsselwort aus der Parameterdeklaration.  
+1.  Entfernen Sie die `auto` -Schlüsselwort aus der Parameterdeklaration.  
   
-## Beispiel  
- Im folgenden Beispiel wird C3535 erzeugt, da ein Funktionsparameter mit dem `auto`\-Schlüsselwort deklariert und mit **\/Zc:auto** kompiliert wird.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird C3535 erzeugt, da es sich um einen Funktionsparameter mit deklariert die `auto` -Schlüsselwort, und es wird mit kompiliert **/Zc: Auto**.  
   
 ```  
 // C3533a.cpp  
@@ -41,8 +39,8 @@ caps.handback.revision: 6
 void f(auto j){} // C3533  
 ```  
   
-## Beispiel  
- Im folgenden Beispiel wird C3535 erzeugt, da ein Vorlagenparameter mit dem `auto`\-Schlüsselwort deklariert und mit **\/Zc:auto** kompiliert wird.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird C3535 erzeugt, da sie mit einen Template-Parameter deklariert die `auto` -Schlüsselwort, und es wird mit kompiliert **/Zc: Auto**.  
   
 ```  
 // C3533b.cpp  
@@ -50,6 +48,6 @@ void f(auto j){} // C3533
 template<auto T> class C{}; // C3533  
 ```  
   
-## Siehe auch  
- [Auto\-Schlüsselwort](../../cpp/auto-keyword.md)   
- [\/Zc:auto \(Variablentyp ableiten\)](../../build/reference/zc-auto-deduce-variable-type.md)
+## <a name="see-also"></a>Siehe auch  
+ [Auto-Schlüsselwort](../../cpp/auto-keyword.md)   
+ [/ Zc: Auto (Variablentyp ableiten)](../../build/reference/zc-auto-deduce-variable-type.md)

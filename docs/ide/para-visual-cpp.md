@@ -1,48 +1,48 @@
 ---
-title: "&lt;para&gt; (Visual C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "<para>"
-  - "para"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<para> C++-XML-Tag"
-  - "para (C++-XML-Tag)"
+title: '&lt;Para&gt; (Visual C++) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <para>
+- para
+dev_langs: C++
+helpviewer_keywords:
+- <para> C++ XML tag
+- para C++ XML tag
 ms.assetid: 35f2a1b3-bc14-4f13-bcb0-c39ccbf74d59
-caps.latest.revision: 8
-caps.handback.revision: "8"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7b73e3d37adb6339e2edf85eb62834611dd141fa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# &lt;para&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Das \<para\>\-Tag ist für die Verwendung innerhalb eines Tags, wie [\<summary\>](../ide/summary-visual-cpp.md), [\<remarks\>](../ide/remarks-visual-cpp.md) oder [\<returns\>](../ide/returns-visual-cpp.md), vorgesehen und ermöglicht die Strukturierung des Texts.  
+# <a name="ltparagt-visual-c"></a>&lt;Para&gt; (Visual C++)
+Das Tag \<para> ist für die Verwendung innerhalb eines Tags wie [\<summary>](../ide/summary-visual-cpp.md), [\<remarks>](../ide/remarks-visual-cpp.md) oder [\<returns>](../ide/returns-visual-cpp.md) gedacht und ermöglicht es Ihnen, den Text zu strukturieren.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <para>content</para>  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `content`  
- Der Text des Absatzes.  
+ Der Text des Absatzes  
   
-## Hinweise  
- Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit ["\/doc"](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.  
+## <a name="remarks"></a>Hinweise  
+ Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.  
   
-## Beispiel  
- Ein Beispiel für das Verwenden von \<para\> finden Sie unter [\<summary\>](../ide/summary-visual-cpp.md).  
+## <a name="example"></a>Beispiel  
+ Unter [\<summary>](../ide/summary-visual-cpp.md) finden Sie ein Beispiel für die Verwendung von \<para>.  
   
-## Siehe auch  
- [XML\-Dokumentation](../ide/xml-documentation-visual-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [XML-Dokumentation](../ide/xml-documentation-visual-cpp.md)

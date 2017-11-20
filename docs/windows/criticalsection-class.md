@@ -1,67 +1,65 @@
 ---
-title: "Critical_Section-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::CriticalSection"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CriticalSection-Klasse"
+title: Critical_section-Klasse | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::CriticalSection
+dev_langs: C++
+helpviewer_keywords: CriticalSection class
 ms.assetid: f2e0a024-71a3-4f6b-99ea-d93a4a608ac4
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 89587f87bd71d2688bba2c128d28c01212b50b71
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Critical_Section-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Stellt einem kritischen Abschnittsobjekt dar.  
+# <a name="criticalsection-class"></a>CriticalSection-Klasse
+Stellt ein kritisches Abschnittsobjekt dar.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CriticalSection;  
 ```  
   
-## Member  
+## <a name="members"></a>Member  
   
-### Konstruktor  
+### <a name="constructor"></a>Konstruktor  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[CriticalSection::CriticalSection\-Konstruktor](../windows/criticalsection-criticalsection-constructor.md)|Initialisiert ein Synchronisierungsobjekt, das auf ein Mutex\-Objekt ähnelt, jedoch mit nur die Threads eines einzelnen Prozesses verwendet werden.|  
-|[CriticalSection::~CriticalSection\-Destruktor](../windows/criticalsection-tilde-criticalsection-destructor.md)|Deinitialisiert und zerstört das aktuelle CriticalSections\-Objekt.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[CriticalSection::CriticalSection-Konstruktor](../windows/criticalsection-criticalsection-constructor.md)|Initialisiert ein Synchronisierungsobjekt, das ein Mutex-Objekt ähnelt, jedoch kann von nur die Threads eines einzelnen Prozesses verwendet werden.|  
+|[CriticalSection::~CriticalSection-Destruktor](../windows/criticalsection-tilde-criticalsection-destructor.md)|Hebt die Initialisierung und das aktuelle CriticalSection-Objekt zerstört.|  
   
-### Öffentliche Methoden  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[CriticalSection::TryLock\-Methode](../windows/criticalsection-trylock-method.md)|Versucht, einen kritischen Abschnitt einzugeben, ohne zu blockieren.  Wenn der Aufruf erfolgreich ist, wird der aufrufende Thread Besitz des kritischen Abschnitts.|  
-|[CriticalSection::Lock\-Methode](../windows/criticalsection-lock-method.md)|Wartet Besitzer des angegebenen Abschnittsobjekts kritischen.  Die Funktion wird zurückgegeben, wenn der aufrufende Thread Besitz gewährt wird.|  
-|[CriticalSection::IsValid\-Methode](../windows/criticalsection-isvalid-method.md)|Gibt an, ob der aktuelle kritischen Abschnitt gültig ist.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[CriticalSection::TryLock-Methode](../windows/criticalsection-trylock-method.md)|Versucht, einen kritischen Abschnitt ohne Blockierung zu geben. Wenn der Aufruf erfolgreich ist, übernimmt der aufrufende Thread den Besitz der kritische Abschnitt.|  
+|[CriticalSection::Lock-Methode](../windows/criticalsection-lock-method.md)|Wartet auf den Besitz des Objekts angegebenen kritischen Abschnitts. Gibt die Funktion, wenn der aufrufende Thread den Besitz gewährt wird.|  
+|[CriticalSection::IsValid-Methode](../windows/criticalsection-isvalid-method.md)|Gibt an, ob der aktuelle kritische Abschnitt gültig ist.|  
   
-### Geschützte Datenmember  
+### <a name="protected-data-members"></a>Geschützte Datenmember  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[CriticalSection::cs\_\-Datenmember](../windows/criticalsection-cs-data-member.md)|Deklariert einen Datenmember des kritischen Abschnitts.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[CriticalSection::cs_-Datenmember](../windows/criticalsection-cs-data-member.md)|Deklariert einen kritischen Abschnitt Datenmember.|  
   
-## Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `CriticalSection`  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## Siehe auch  
- [Microsoft::WRL::Wrappers\-Namespace](../windows/microsoft-wrl-wrappers-namespace.md)
+## <a name="see-also"></a>Siehe auch  
+ [Microsoft::WRL::Wrappers-Namespace](../windows/microsoft-wrl-wrappers-namespace.md)

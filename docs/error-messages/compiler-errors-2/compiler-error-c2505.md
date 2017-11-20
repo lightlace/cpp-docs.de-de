@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2505
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2505
+f1_keywords: C2505
+dev_langs: C++
+helpviewer_keywords: C2505
 ms.assetid: b19f5c53-399d-425e-90db-fe3ca9b40858
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: e703a5f36a5edd5febbcfaf4b75394bbbb28ee4d
-ms.contentlocale: de-de
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c2505"></a>Compilerfehler C2505
 'Symbol': '__declspec(modifer)' kann nur angewendet werden, um Deklarationen oder Definitionen für globale Objekte oder statische Datenmember  

@@ -1,32 +1,30 @@
 ---
-title: "operator&gt; (stack) (STL/CLR)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::operator>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator>-Member [STL/CLR]"
+title: Operator&gt; (Stapel) (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::operator>
+dev_langs: C++
+helpviewer_keywords: operator> member [STL/CLR]
 ms.assetid: 77979026-bed5-4d24-a2af-f720f8c362a2
-caps.latest.revision: 16
-caps.handback.revision: "14"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 66b4c83e114d6f4515d568c26f065896d8734476
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# operator&gt; (stack) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Stapelgrößer\-als\-vergleich.  
+# <a name="operatorgt-stack-stlclr"></a>Operator&gt; (Stapel) (STL/CLR)
+Der Stapel ist größer als-Vergleich.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<typename Value,  
@@ -35,17 +33,17 @@ template<typename Value,
         stack<Value, Container>% right);  
 ```  
   
-#### Parameter  
- left  
- Linker Container zu vergleichen.  
+#### <a name="parameters"></a>Parameter  
+ links  
+ Linker zu vergleichender Container.  
   
- right  
- Rechter Container zu vergleichen.  
+ Rechts  
+ Rechter zu vergleichender Container.  
   
-## Hinweise  
- Die Operatorfunktion gibt `right` `<` `left` zurück.  Sie verwenden diesen, um zu testen, ob `left` nach `right` sortiert wird, wenn die zwei Stapel verglichenes Element durch Element sind.  
+## <a name="remarks"></a>Hinweise  
+ Gibt die Operatorfunktion `right` `<` `left`. Verwenden sie zum Testen, ob `left` sortiert wird, ist nach `right` bei beiden verglichenen elementweise sind.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_stack_operator_gt.cpp   
@@ -85,19 +83,22 @@ int main()
   
 ```  
   
-  **ein b c**  
- **ein b d**  
-**\[ein b c\] \> \[ein b c\] ist falsch**  
-**\[ein b d\] \> \[ein b c\] gilt**   
-## Anforderungen  
- **Header:** \<cliext\/Stapel\>  
+```Output  
+ a b c  
+ a b d  
+[a b c] > [a b c] is False  
+[a b d] > [a b c] is True  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Stack >  
   
-## Siehe auch  
- [Stapel](../dotnet/stack-stl-clr.md)   
- [operator\=\= \(stack\)](../dotnet/operator-equality-stack-stl-clr.md)   
- [operator\!\= \(stack\)](../dotnet/operator-inequality-stack-stl-clr.md)   
- [operator\< \(stack\)](../dotnet/operator-less-than-stack-stl-clr.md)   
- [operator\>\= \(stack\)](../dotnet/operator-greater-or-equal-stack-stl-clr.md)   
- [operator\<\= \(stack\)](../dotnet/operator-less-or-equal-stack-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Stack (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [Operator == (Stapel) (STL/CLR)](../dotnet/operator-equality-stack-stl-clr.md)   
+ [Operator! = (Stapel) (STL/CLR)](../dotnet/operator-inequality-stack-stl-clr.md)   
+ [Operator\< (Stapel) (STL/CLR)](../dotnet/operator-less-than-stack-stl-clr.md)   
+ [Operator > = (Stapel) (STL/CLR)](../dotnet/operator-greater-or-equal-stack-stl-clr.md)   
+ [operator<= (stack) (STL/CLR)](../dotnet/operator-less-or-equal-stack-stl-clr.md)

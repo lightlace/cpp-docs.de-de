@@ -1,42 +1,42 @@
 ---
-title: "__lzcnt16, __lzcnt, __lzcnt64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__lzcnt64"
-  - "__lzcnt16"
-  - "__lzcnt"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__lzcnt intrinsic"
-  - "lzcnt-Anweisung"
-  - "lzcnt16 intrinsic"
-  - "lzcnt intrinsic"
-  - "__lzcnt16 intrinsic"
-  - "lzcnt64 intrinsic"
-  - "__lzcnt64 intrinsic"
+title: __lzcnt16, __lzcnt, __lzcnt64 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __lzcnt64
+- __lzcnt16
+- __lzcnt
+dev_langs: C++
+helpviewer_keywords:
+- __lzcnt intrinsic
+- lzcnt instruction
+- lzcnt16 intrinsic
+- lzcnt intrinsic
+- __lzcnt16 intrinsic
+- lzcnt64 intrinsic
+- __lzcnt64 intrinsic
 ms.assetid: 412113e7-052e-46e5-8bfa-d5ad72abc10e
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 983d8ff684887ba670e81bf6561d2f47022ff744
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# __lzcnt16, __lzcnt, __lzcnt64
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft\-spezifisch**  
+# <a name="lzcnt16-lzcnt-lzcnt64"></a>__lzcnt16, __lzcnt, __lzcnt64
+**Microsoft-spezifisch**  
   
- Ermittelt die Anzahl von führenden Nullen in eine Drehung um 16 Grad, 32 oder 64 Byte\-ganze Zahl.  
+ Anzahl Nullen die Anzahl der führenden in eine 16-, 32- oder 64-Byte-Ganzzahl.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 unsigned short __lzcnt16(  
@@ -50,29 +50,31 @@ unsigned __int64 __lzcnt64(
 );  
 ```  
   
-#### Parameter  
- \[in\] `value`  
- Das 16 \-, 32 \- oder für führende Nullen zu überprüfende 64\-Bit\-Ganzzahl ohne Vorzeichen.  
+#### <a name="parameters"></a>Parameter  
+ [in] `value`  
+ Die 16, 32- oder 64-Bit-Ganzzahl ohne Vorzeichen für führende Nullen scannen.  
   
-## Rückgabewert  
- Die Anzahl der Bits der führenden Null in `value`\-Parameter.  Wenn `value` \(null\) ist, ist der Rückgabewert die Größe des Eingabe\- operanden \(16, 32 oder 64\).  Wenn das höchstwertige Byte eines `value` eins ist, ist der Rückgabewert \(null\).  
+## <a name="return-value"></a>Rückgabewert  
+ Die Anzahl führender Nullbits in der `value` Parameter. Wenn `value` NULL ist, wird die Größe der Eingabe Operanden (16, 32 oder 64) zurückgegeben. Wenn das wichtigste Bit der `value` ist 1, der Rückgabewert ist 0 (null).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Intrinsisch|Architektur|  
-|-----------------|-----------------|  
-|`__lzcnt16`|Erweiterte Bitmanipulation|  
-|`__lzcnt`|Erweiterte Bitmanipulation|  
-|`__lzcnt64`|Erweiterte Bitmanipulation im 64\-Bit\-Modus.|  
+|Systemintern|Architektur|  
+|---------------|------------------|  
+|`__lzcnt16`|AMD: Erweiterte Bitmanipulation (abm wird)<br /><br /> Intel: Haswell|  
+|`__lzcnt`|AMD: Erweiterte Bitmanipulation (abm wird)<br /><br /> Intel: Haswell|  
+|`__lzcnt64`|AMD: Erweitert (abm wird Bit Manipulation) im 64-Bit-Modus.<br /><br /> Intel: Haswell|  
   
- **Headerdatei** \<intrin.h\>  
+ **Headerdatei** \<intrin.h >  
   
-## Hinweise  
- Jede dieser systeminternen Funktionen generiert die `lzcnt`\-Anweisung.  Die Größe des Werts, den die`lzcnt`\-Anweisung zurückgibt, entspricht der Größe des Arguments.  In 32\-Bit\- Modus gibt es keine 64\-Bit\- allgemeinen Register, sodass kein 64\-Bit\- `lzcnt`.  
+## <a name="remarks"></a>Hinweise  
+ Jede Diese systeminternen Funktionen generiert der `lzcnt` Anweisung.  Die Größe des Werts, der `lzcnt` Anweisung gibt die Größe des Arguments identisch ist.  In 32-Bit-Modus sind keine 64-Bit-Allzweckregistern, daher keine 64-Bit- `lzcnt`.  
   
- Um Hardwareunterstützung für die`lzcnt`\-Anweisung zu bestimmen `__cpuid` direkt aufrufen und `InfoType=0x80000001` mit Prüfbit 5 von `CPUInfo[2] (ECX)`.  Das Bit beträgt 1, wenn die Anweisung unterstützt wird, andernfalls 0.  Wenn Sie diesen Code ausführen, der Hardware, das auf die ist, die nicht direkt`lzcnt`\-Anweisung unterstützt, die Ergebnisse sind unvorhersehbar.  
+ Um zu bestimmen, Hardware-Unterstützung für die `lzcnt` Anweisungsaufruf der `__cpuid` systeminternen Funktionen mit `InfoType=0x80000001` und überprüfen Sie Bit 5 von `CPUInfo[2] (ECX)`. Dieses Bit wird 1, wenn die Anweisung unterstützt wird und 0 andernfalls. Wenn Sie Code, verwendet dieser systeminternen Funktion auf Hardware ausgeführt, die nicht unterstützt wird die `lzcnt` -Anweisung, die die Ergebnisse sind unvorhersehbar.  
   
-## Beispiel  
+ Auf Intel-Prozessoren, die nicht unterstützen die `lzcnt` -Anweisung, die bytecodierung Anweisung ausgeführt wird, als `bsr` (Überprüfung Reverse-bit). Wenn Codeportabilität relevant ist, stellen die `_BitScanReverse` systeminterne stattdessen. Weitere Informationen finden Sie unter [_BitScanReverse _BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md).  
+  
+## <a name="example"></a>Beispiel  
   
 ```  
 // Compile this test with: /EHsc  
@@ -100,15 +102,18 @@ int main()
   
 ```  
   
-  **\_\_lzcnt16 \(0x0\) \= 16**  
- **\_\_lzcnt16 \(0xff\) \= 8**  
- **\_\_lzcnt16 \(0xffff\) \= 0**  
- **\_\_lzcnt \(0x0\) \= 32**  
- **\_\_lzcnt \(0xff\) \= 24**  
- **\_\_lzcnt \(0xffff\) \= 16**  
- **\_\_lzcnt \(0xffffffff\) \= 0**   
-## BEENDEN Sie Microsoft\-Besonderen  
- Copyright 2007 bis Advanced Micro Devices, Inc.  Alle Rechte vorbehalten.  Reproduziert mit zulässigen Advanced Micro Devices, Inc.  
+```Output  
+__lzcnt16(0x0) = 16  
+__lzcnt16(0xff) = 8  
+__lzcnt16(0xffff) = 0  
+__lzcnt(0x0) = 32  
+__lzcnt(0xff) = 24  
+__lzcnt(0xffff) = 16  
+__lzcnt(0xffffffff) = 0  
+```  
   
-## Siehe auch  
+**Ende Microsoft-spezifisch**  
+ Teile dieses Inhalts sind Copyright 2007 Advanced Micro-Geräte, Inc. Alle Rechte vorbehalten. Reproduziert mit Genehmigung Advanced Micro-Geräte, Inc.  
+  
+## <a name="see-also"></a>Siehe auch  
  [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

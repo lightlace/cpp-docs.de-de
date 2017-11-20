@@ -1,33 +1,33 @@
 ---
-title: "Gewusst wie: Lesen einer Bin&#228;rdatei (C++/CLI)"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Binärdateien, Lesen in C++"
-  - "Dateien [C++], Binär"
+title: "Vorgehensweise: Lesen einer Binärdatei (C + c++ / CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- files [C++], binary
+- binary files, reading in C++
 ms.assetid: 41ad9ad1-5cac-489c-874e-4bb3a649073a
-caps.latest.revision: 13
-caps.handback.revision: "13"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 894332d7d63bc5a7c8d4ff701061c1ad15cd1e03
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Gewusst wie: Lesen einer Bin&#228;rdatei (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Im folgenden Codebeispiel wird das Lesen von Binärdaten aus einer Datei, mithilfe von zwei Klassen aus dem <xref:System.IO?displayProperty=fullName>\-Namespace: <xref:System.IO.FileStream> und <xref:System.IO.BinaryReader> verdeutlicht.  <xref:System.IO.FileStream> repräsentiert die eigentliche Datei.  <xref:System.IO.BinaryReader> stellt eine Schnittstelle zum Stream für den Binärzugriff bereit.  
+# <a name="how-to-read-a-binary-file-ccli"></a>Gewusst wie: Lesen einer Binärdatei (C++/CLI)
+Im folgenden Codebeispiel wird das Lesen von Binärdaten aus einer Datei, mithilfe von zwei Klassen aus dem <xref:System.IO?displayProperty=fullName>-Namespace: <xref:System.IO.FileStream> und <xref:System.IO.BinaryReader> verdeutlicht. <xref:System.IO.FileStream> repräsentiert die eigentliche Datei. <xref:System.IO.BinaryReader> stellt eine Schnittstelle zum Stream für den Binärzugriff bereit.  
   
- Im Codebeispiel wird eine Datei namens "data.bin" gelesen, in der ganze Zahlen im Binärformat enthalten sind.  Weitere Informationen über diese Art von Datei finden Sie unter [Gewusst wie: Schreiben einer Binärdatei](../dotnet/how-to-write-a-binary-file-cpp-cli.md).  
+ Im Codebeispiel wird eine Datei namens "data.bin" gelesen, in der ganze Zahlen im Binärformat enthalten sind. Informationen über diese Art von Datei finden Sie unter [wie: Schreiben einer Binärdatei (C + c++ / CLI)](../dotnet/how-to-write-a-binary-file-cpp-cli.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // binary_read.cpp  
@@ -62,6 +62,6 @@ int main()
 }  
 ```  
   
-## Siehe auch  
- [Datei\- und Stream\-E\/A](../Topic/File%20and%20Stream%20I-O.md)   
- [.NET\-Programmierung mit C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [Datei- und Datenstrom-E/A](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
+ [.NET-Programmierung mit C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

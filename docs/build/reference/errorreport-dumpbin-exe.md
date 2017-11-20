@@ -1,39 +1,38 @@
 ---
-title: "/ERRORREPORT (dumpbin.exe)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "/ERRORREPORT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/ERRORREPORT (dumpbin-Option)"
-  - "ERRORREPORT (dumpbin-Option)"
-  - "-ERRORREPORT (dumpbin-Option)"
+title: -ERRORREPORT (dumpbin.exe) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /ERRORREPORT
+dev_langs: C++
+helpviewer_keywords:
+- -ERRORREPORT dumpbin option
+- ERRORREPORT dumpbin option
+- /ERRORREPORT dumpbin option
 ms.assetid: 51178c43-4f95-4fda-8f97-50a257d1c948
-caps.latest.revision: 5
-caps.handback.revision: "5"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 9cb7c5dfebc1f88e92aa9bb38ff62374964c44c1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# /ERRORREPORT (dumpbin.exe)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="errorreport-dumpbinexe"></a>/ERRORREPORT (dumpbin.exe)
 ```  
 /ERRORREPORT[NONE | PROMPT | QUEUE | SEND ]  
 ```  
   
-## Hinweise  
- Wenn die Ausführung von dumpbin.exe zur Laufzeit fehlschlägt, können mit **\/ERRORREPORT** Informationen über diese internen Fehler an Microsoft gesendet werden.  
+## <a name="remarks"></a>Hinweise  
+ Wenn dumpbin.exe zur Laufzeit fehlschlägt, können Sie **/errorreport** Informationen zu diesen internen Fehlern an Microsoft zu senden.  
   
- Weitere Informationen zu **\/ERRORREPORT** finden Sie unter [\/errorReport \(Meldung über interne Compilerfehler\)](../../build/reference/errorreport-report-internal-compiler-errors.md).  
+ Weitere Informationen zu **/errorreport**, finden Sie unter [/errorreport (Bericht interne Compilerfehler)](../../build/reference/errorreport-report-internal-compiler-errors.md).  
   
-## Siehe auch  
- [DUMPBIN\-Optionen](../../build/reference/dumpbin-options.md)
+## <a name="see-also"></a>Siehe auch  
+ [DUMPBIN-Optionen](../../build/reference/dumpbin-options.md)

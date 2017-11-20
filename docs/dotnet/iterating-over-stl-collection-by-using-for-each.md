@@ -1,38 +1,37 @@
 ---
-title: "Eine STL-Auflistung mit der for-each-Klausel durchlaufen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DTL-Auflistungen, Iteration über"
+title: "Durchlaufen von C++-Standard-Bibliothekssammlung für jede mit | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: DTL collections, iterating over
 ms.assetid: 9358ca29-b982-4a19-bbfd-bef50fe66c9a
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f18b4bfdcb1c525e6e05b133e853d09b2dbd0a56
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Eine STL-Auflistung mit der for-each-Klausel durchlaufen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Das `for each`\-Schlüsselwort kann verwendet werden, um zu einer Collection der C\+\+\-Standardbibliothek \(STL\) durchlaufen.  
+# <a name="iterating-over-c-standard-library-collection-by-using-for-each"></a>C++-Standard-Bibliothekssammlung durchlaufen für jede mit
+Die `for each` -Schlüsselwort kann verwendet werden, um eine C++-Standardbibliothek Auflistung zu durchlaufen.  
   
-## Alle Plattformen  
+## <a name="all-platforms"></a>Alle Plattformen  
  **Hinweise**  
   
- Eine STL\-Auflistung wird auch als *Container*.  Weitere Informationen finden Sie unter [STL Containers](../standard-library/stl-containers.md).  
+ Eine Auflistung von C++-Standardbibliothek ist auch bekannt als ein *Container*. Weitere Informationen finden Sie unter [C++-Standardbibliothekcontainer](../standard-library/stl-containers.md).  
   
-## Beispiele  
+## <a name="examples"></a>Beispiele  
  **Beispiel**  
   
- Im folgenden Codebeispiel wird `for each` verwendet, um zur [\< Zuordnung \>](../standard-library/map.md) zu durchlaufen.  
+ Im folgenden Codebeispiel wird mit `for each` zum Durchlaufen einer [ \<Zuordnung >](../standard-library/map.md).  
   
 ```  
 // for_each_stl.cpp  
@@ -74,9 +73,13 @@ int main() {
   
  **Ausgabe**  
   
-  **Monaten mit 30 verbleibenden Tagen \= 4** **Beispiel**  
+```Output  
+Months with 30 days = 4  
+```  
   
- Im folgenden Codebeispiel wird einen \- \(`const&`\) für eine Iterationsvariable mit STL\-Containern.  Sie können einen Verweis \(`&`\) als Iterationsvariable auf jede Auflistung eines Typs verwenden, der als *T*`&` deklariert werden kann.  
+ **Beispiel**  
+  
+ Das folgende Codebeispiel verwendet ein const-verweist (`const&`) für eine Iterationsvariable mit C++-Standardbibliothek-Containern. Sie können einen Verweis (`&`) als eine Iterationsvariable auf einer beliebigen Datensammlung ein Typ, der als deklariert werden, kann eine *T*`&`.  
   
 ```  
 // for_each_stl_2.cpp  
@@ -102,23 +105,26 @@ int main() {
   
  **Ausgabe**  
   
-  **retval: 60**   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+```Output  
+retval: 60  
+```  
+  
+## <a name="windows-runtime"></a>Windows-Runtime  
  **Hinweise**  
   
- Es gibt keine Hinweise plattformspezifischen über diese Funktion.  
+ Es gibt keine plattformspezifischen Hinweise zu dieser Funktion.  
   
-### Voraussetzungen  
- Compileroption: **\/ZW**  
+### <a name="requirements"></a>Anforderungen  
+ Compileroption: **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
+## <a name="common-language-runtime"></a>Common Language Runtime 
  **Hinweise**  
   
- Es gibt keine Hinweise plattformspezifischen über diese Funktion.  
+ Es gibt keine plattformspezifischen Hinweise zu dieser Funktion.  
   
-### Voraussetzungen  
- Compileroption: **\/clr**  
+### <a name="requirements"></a>Anforderungen  
+ Compileroption: **/clr**  
   
-## Siehe auch  
- [for each, in](../dotnet/for-each-in.md)   
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>Siehe auch  
+ [für jedes in](../dotnet/for-each-in.md)   
+ [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)

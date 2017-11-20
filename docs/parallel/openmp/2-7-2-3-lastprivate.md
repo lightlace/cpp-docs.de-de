@@ -1,37 +1,37 @@
 ---
-title: "2.7.2.3 lastprivate"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.7.2.3 Lastprivate | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 77f6a5c9-704f-4a88-8476-29db852ed800
-caps.latest.revision: 6
-caps.handback.revision: "6"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d4b6c904766699c2cccdd129f32461a5d612113d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# 2.7.2.3 lastprivate
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die `lastprivate`\-Klausel stellt eine Obermenge der Funktionen, die von der `private`\-Klausel.  Die Syntax der `lastprivate`\-Klausel lautet wie folgt:  
+# <a name="2723-lastprivate"></a>2.7.2.3 lastprivate
+Die `lastprivate` -Klausel bietet eine Obermenge der gebotenen Funktionen der `private` Klausel. Die Syntax der `lastprivate` -Klausel ist wie folgt:  
   
 ```  
 lastprivate(variable-list)  
 ```  
   
- Die Variablen, die in der *Liste Variable* angegeben werden `private`\-Klausel enthalten ist.  Wenn eine `lastprivate`\-Klausel in der Direktive wird, die ein Arbeitsteilungs konstrukt, den Wert einer Variable aus der `lastprivate` sequenziell letzten Iteration der Schleife zugeordneten Direktiven oder die lexikalisch letzten Abschnitt wird an das ursprüngliche Objekt identifiziert, der der Variablen zugewiesen.  Variablen, die keinen Wert durch die letzte Iteration **nach** oder des **für Ähnlichkeit**lexikalisch oder über den letzten Abschnitt der **Abschnitte** oder **parallele Abschnitte**\-Direktive zugewiesen sind, können unbestimmte Werte nach dem Konstrukt.  Nicht zugewiesen Unterobjekte verfügen auch über einen unbestimmten Wert nach dem Konstrukt.  
+ Variablen in der *Variablenliste* haben `private` Klausel Semantik. Wenn eine `lastprivate` -Klausel wird angezeigt, auf die Richtlinie, die ein Konstrukt Freigeben von Arbeit, den Wert der einzelnen identifiziert `lastprivate` Variable aus der sequenziell letzten Iteration der Schleife zugeordnet, oder die lexikalisch letzten abschnittsdirektive, zugewiesen ist die Variablen des ursprünglichen Objekts. Variablen, die nicht die letzte Iteration der ein Wert zugewiesen der **für** oder **für parallele**, oder durch lexikalisch letzten Abschnitt der **Abschnitte** oder  **Parallel Sections-** Richtlinie haben unbestimmte Werte nach der Erstellung. Nicht zugewiesene Unterobjekte haben auch einen unbestimmten Wert nach dem Konstrukt.  
   
- Die Einschränkungen zur `lastprivate`\-Klausel lauten wie folgt:  
+ Die Einschränkungen fest, die `lastprivate` Klausel lauten wie folgt:  
   
--   Alle Einschränkungen gelten für `private` .  
+-   Alle Einschränkungen für `private` anwenden.  
   
--   Eine Variable mit einem Klassentyp, der angegeben wird, während `lastprivate` einen zugreifbaren, eindeutigen Kopierzuweisungsoperator sein muss.  
+-   Eine Variable mit einem Klassentyp sein, die als angegeben wird `lastprivate` benötigen eine erreichbare, eindeutige Kopierzuweisungsoperator.  
   
--   Variablen, die innerhalb eines parallelen Bereichs privat sind oder die in der `reduction`\-Klausel **Ähnlichkeit**\-Direktive angezeigt werden, können nicht in einer `lastprivate`\-Klausel auf Arbeitsteilungs direktiven angegeben werden, die zum parallelen Konstrukt bindet.
+-   Variablen, die innerhalb eines parallelen Bereichs privaten sind bzw. die angezeigt werden, in, der `reduction` -Klausel der eine **parallele** Richtlinie kann nicht angegeben werden, eine `lastprivate` -Klausel für eine arbeitsteilungsanweisung, die an das parallele Konstrukt gebunden.

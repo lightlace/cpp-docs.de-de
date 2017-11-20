@@ -1,30 +1,30 @@
 ---
-title: "Puffer&#252;berlauf | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Pufferüberläufe [C++]"
-  - "Puffer [C++], Zeichengrößen"
-  - "MBCS [C++], Pufferüberlauf"
+title: "Pufferüberlauf | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- buffers [C++], character sizes
+- buffer overflows [C++]
+- MBCS [C++], buffer overflow
 ms.assetid: f2b7e40a-f02b-46d8-a449-51d26fc0c663
-caps.latest.revision: 8
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: c5d5cb06359cb8328347426efbe3618276e1ebf1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Puffer&#252;berlauf
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Unterschiedliche Zeichengrößen führen unter Umständen zu Problemen, wenn Zeichen in einem Puffer gespeichert werden.  Betrachten Sie den folgenden Code, von dem Zeichen aus der Zeichenfolge `sz` in den Puffer `rgch` kopiert werden:  
+# <a name="buffer-overflow"></a>Pufferüberlauf
+Zeichengrößen VARYING kann Probleme verursachen, wenn Sie die Zeichen in einen Puffer abgelegt. Betrachten Sie den folgenden Code, der Zeichen aus einer Zeichenfolge kopiert, `sz`, in einen Puffer `rgch`:  
   
 ```  
 cb = 0;  
@@ -32,7 +32,7 @@ while( cb < sizeof( rgch ) )
     rgch[ cb++ ] = *sz++;  
 ```  
   
- Folgende Frage stellt sich: War das zuletzt kopierte Byte ein führendes Byte?  Der folgende Code löst das Problem nicht, da durch seine Ausführung ein Pufferüberlauf verursacht werden kann:  
+ Die Frage ist: der zuletzt kopierte Byte ein führendes Byte wurde? Folgendes ist nicht das Problem, da es möglicherweise den Puffer überlaufen kann:  
   
 ```  
 cb = 0;  
@@ -44,7 +44,7 @@ while( cb < sizeof( rgch ) )
 }  
 ```  
   
- Durch den `_mbccpy`\-Aufruf wird versucht, das Zeichen vollständig zu kopieren, unabhängig davon, ob es sich um ein oder zwei Bytes handelt.  Dabei wird jedoch nicht berücksichtigt, dass das letzte Zeichen möglicherweise nicht im Puffer abgelegt werden kann, wenn das Zeichen eine Länge von zwei Bytes hat.  Die richtige Lösung lautet wie folgt:  
+ Die `_mbccpy` Aufruf versucht, das richtige tun – kopieren Sie das vollständige Zeichen, ob es sich um 1 oder 2 Bytes ist. Aber sie nimmt nicht berücksichtigt, dass das letzte Zeichen nicht auf den Puffer passt möglicherweise, wenn das Zeichen 2 Bytes breit ist. Die richtige Lösung ist:  
   
 ```  
 cb = 0;  
@@ -56,11 +56,11 @@ while( (cb + _mbclen( sz )) <= sizeof( rgch ) )
 }  
 ```  
   
- Im Rahmen des Schleifentests wird von diesem Code zunächst ein Test bezüglich eines möglichen Pufferüberlaufs durchgeführt. Hierbei wird mit `_mbclen` die Größe des Zeichens überprüft, auf das derzeit durch `sz` verwiesen wird.  Wenn Sie die `_mbsnbcpy`\-Funktion aufrufen, können Sie den Code in der `while`\-Schleife durch eine einzelne Codezeile ersetzen.  Beispiel:  
+ Dieser Code überprüft mögliche Pufferüberlauf in der Schleife zu testen, mit `_mbclen` So testen Sie die Größe des aktuellen Zeichens verweist `sz`. Von einem Aufruf an die `_mbsnbcpy` -Funktion, ersetzen Sie den Code in der `while` Schleife mit einer einzigen Codezeile. Zum Beispiel:  
   
 ```  
 _mbsnbcpy( rgch, sz, sizeof( rgch ) );  
 ```  
   
-## Siehe auch  
- [Tipps für die MBCS\-Programmierung](../text/mbcs-programming-tips.md)
+## <a name="see-also"></a>Siehe auch  
+ [Tipps für die MBCS-Programmierung](../text/mbcs-programming-tips.md)

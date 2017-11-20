@@ -1,41 +1,39 @@
 ---
-title: "queue::size (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::size"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size-Member [STL/CLR]"
+title: 'Queue:: Size (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::size
+dev_langs: C++
+helpviewer_keywords: size member [STL/CLR]
 ms.assetid: 864510ef-5a00-4377-b286-1e73f237e359
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 12ffbe3943bdd2c0475658b214b831122364a17f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# queue::size (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ermittelt die Anzahl der Elemente.  
+# <a name="queuesize-stlclr"></a>queue::size (STL/CLR)
+Ermittelt die Anzahl von Elementen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 size_type size();  
 ```  
   
-## Hinweise  
- Die Memberfunktion gesteuerten gibt die Länge der Sequenz zurück.  Sie verwenden sie, um die Anzahl der Elemente in der Sequenz gesteuerten derzeit zu bestimmen.  Wenn alle Elemente, die Sie sich interessieren, geht, ob die Reihenfolge Größe ungleich 0 \(null\) aufweist, finden Sie unter [queue::empty](../dotnet/queue-empty-stl-clr.md)`()`.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt die Länge der gesteuerten Sequenz zurück. Sie können erkennen, die Anzahl der Elemente, die derzeit in der kontrollierten Sequenz. Wenn Sie von Interesse ist, ob die Sequenz ungleich Größe finden Sie unter hat, [Queue:: Empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md)`()`.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_queue_size.cpp   
@@ -69,15 +67,18 @@ int main()
   
 ```  
   
-  **ein b c**  
-**size\(\) \= 3 beginnend mit 3**  
-**size\(\) \= 2 nach Bringen**  
-**size\(\) \= 4, wenn 2 hinzugefügt wurden**   
-## Anforderungen  
- **Header:** \<cliext\/Warteschlange\>  
+```Output  
+ a b c  
+size() = 3 starting with 3  
+size() = 2 after popping  
+size() = 4 after adding 2  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext bzw. einer neuen Warteschlange >  
   
-## Siehe auch  
- [queue](../dotnet/queue-stl-clr.md)   
- [queue::empty](../dotnet/queue-empty-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Warteschlange (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [queue::empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md)

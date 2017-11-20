@@ -1,49 +1,49 @@
 ---
-title: "&lt;summary&gt; (Visual C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "<summary>"
-  - "summary"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<summary> C++-XML-Tag"
-  - "summary (C++-XML-Tag)"
+title: '&lt;Zusammenfassung&gt; (Visual C++) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <summary>
+- summary
+dev_langs: C++
+helpviewer_keywords:
+- <summary> C++ XML tag
+- summary C++ XML tag
 ms.assetid: cdeeefbb-1339-45d6-9002-10042a9a2726
-caps.latest.revision: 9
-caps.handback.revision: "9"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a37446278dd1148afe6483f6867f3f8f1332fec4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# &lt;summary&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Das \<summary\>\-Tag sollte verwendet werden, um einen Typ oder einen Typmember zu beschreiben.  Mit [\<remarks\>](../ide/remarks-visual-cpp.md) können Sie zusätzliche Informationen zu einer Typbeschreibung angeben.  
+# <a name="ltsummarygt-visual-c"></a>&lt;Zusammenfassung&gt; (Visual C++)
+Das \<summary>-Tag sollte verwendet werden, um einen Typ oder einen Typmember zu beschreiben. Verwenden Sie [\<remarks>](../ide/remarks-visual-cpp.md), um zusätzliche Informationen zu einer Typbeschreibung hinzuzufügen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <summary>description</summary>  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `description`  
- eine Zusammenfassung des Objekts.  
+ Eine Übersicht des Objekts.  
   
-## Hinweise  
- Der Text für das \<summary\>\-Tag ist die einzige Informationsquelle zu Typ in IntelliSense und wird auch in [Objektkatalog](assetId:///f89acfc5-1152-413d-9f56-3dc16e3f0470) und im Webbericht über Codekommentare angezeigt.  
+## <a name="remarks"></a>Hinweise  
+ Der Text für die \<summary > Tag ist die einzige Quelle der Informationen über den Typ in IntelliSense und wird auch angezeigt, der [Objektkatalog](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) und in der Webbericht.  
   
- Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit ["\/doc"](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.  
+ Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // xml_summary_tag.cpp  
@@ -64,5 +64,5 @@ public:
 };  
 ```  
   
-## Siehe auch  
- [XML\-Dokumentation](../ide/xml-documentation-visual-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [XML-Dokumentation](../ide/xml-documentation-visual-cpp.md)

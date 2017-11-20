@@ -1,54 +1,54 @@
 ---
-title: "Modulzust&#228;nde einer regul&#228;ren, dynamisch mit MFC verkn&#252;pften DLL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLLs [C++], Modulzustände"
-  - "MFC-DLLs [C++], Reguläre DLLs"
-  - "Modulzustände [C++]"
-  - "Modulzustände [C++], Reguläre DLLs – dynamisch verknüpft mit"
-  - "Reguläre DLLs [C++], Dynamisch verknüpft mit MFC"
+title: "Modulzustände einer regulären MFC-DLL dynamisch mit MFC verknüpfte | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- regular MFC DLLs [C++], dynamically linked to MFC
+- module states [C++]
+- MFC DLLs [C++], regular MFC DLLs
+- module states [C++], regular MFC DLLs dynamically linked to
+- DLLs [C++], module states
 ms.assetid: b4493e79-d25e-4b7f-a565-60de5b32c723
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8908fb93cf6bc1c5a0c19cbbdb6597451c1cfa51
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Modulzust&#228;nde einer regul&#228;ren, dynamisch mit MFC verkn&#252;pften DLL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Sie haben die Möglichkeit, eine reguläre DLL dynamisch mit einer MFC\-DLL zu verknüpfen und auf diese Weise sehr komplizierte Konfigurationen zu erstellen.  Eine reguläre DLL und die ausführbare Datei, die die DLL verwendet, können z. B. beide dynamisch mit der MFC\-DLL und beliebigen Erweiterungs\-DLLs verknüpft werden.  
+# <a name="module-states-of-a-regular-mfc-dll-dynamically-linked-to-mfc"></a>Modulzustände einer regulären MFC-DLL dynamisch mit MFC verknüpften
+Die Möglichkeit, eine reguläre MFC-DLL dynamisch mit MFC-DLL verknüpfen ermöglicht, dass einige Konfigurationen, die sehr kompliziert sind. Beispielsweise können eine reguläre MFC-DLL und die ausführbare Datei, die verwendet werden beide dynamisch mit MFC-DLL und alle MFC-Erweiterungs-DLLs verknüpfen.  
   
- Mit dieser Konfiguration ergibt sich ein Problem in Hinblick auf die globalen MFC\-Daten wie den Zeiger auf das aktuelle `CWinApp`\-Objekt und Handlezuordnungen.  
+ Diese Konfiguration stellt ein Problem im Hinblick auf die globalen MFC-Daten, z. B. den Zeiger auf den aktuellen `CWinApp` Objekt und Handlezuordnungen.  
   
- In früheren Versionen als MFC Version 4.0 werden diese globalen Daten in der MFC\-DLL selbst gespeichert und von allen Modulen im Prozess gemeinsam genutzt.  Da jeder Prozess, der eine Win32\-DLL verwendet, über eine eigene Kopie der Daten in der DLL verfügt, wird durch dieses Schema eine einfache Möglichkeit zum Nachverfolgen prozessspezifischer Daten bereitgestellt.  Darüber hinaus können diese Elemente in der MFC\-DLL selbst nachverfolgt werden, da das AFXDLL\-Modell davon ausgeht, dass nur ein `CWinApp`\-Objekt und nur ein Satz von Handlezuordnungen im Prozess vorhanden sind.  
+ Vor MFC, Version 4.0 diese globalen Daten in der MFC-DLL selbst befand und wurde von allen Modulen im Prozess gemeinsam verwendet. Da jeder Prozess eine Win32-DLL auf eine eigene Kopie der DLL Daten abruft, bereitgestellten dieses Schema eine einfache Möglichkeit zum Nachverfolgen von Daten pro Prozess. Darüber hinaus da AFXDLL-Modell davon ausgegangen, dass es nur eine wäre `CWinApp` Objekt und nur ein Satz von Handlezuordnungen im Prozess, diese Elemente in der MFC-DLL selbst nachverfolgt werden.  
   
- Durch die Möglichkeit, eine reguläre DLL dynamisch mit der MFC\-DLL zu verknüpfen, ist es mittlerweile möglich, dass zwei oder mehr `CWinApp`\-Objekte und auch zwei oder mehr Sets von Handlezuordnungen in einem Prozess vorhanden sind.  Wie entscheidet nun MFC, welche davon verwendet werden sollen?  
+ Aber mit der Fähigkeit, eine reguläre MFC-DLL dynamisch mit MFC-DLL zu verknüpfen, ist es jetzt möglich, dass zwei oder mehr `CWinApp` Objekte in einem Prozess – und auch mindestens zwei Sätze von Handlezuordnungen. Wie MFC nachverfolgen, welche von verwendet werden sollte?  
   
- Die Lösung besteht darin, für jedes Modul \(Anwendung oder reguläre DLL\) eine eigene Kopie dieser globalen Zustandsinformationen bereitzustellen.  Auf diese Weise wird durch den Aufruf von  `in der regulären DLL ein Zeiger auf das CWinApp`\-Objekt in der DLL zurückgegeben und nicht auf das in der ausführbaren Datei.  Diese modulspezifische Kopie der globalen MFC\-Daten wird als "Modulzustand" bezeichnet. Eine Beschreibung finden Sie im [technischen Hinweis 58 zu MFC](../mfc/tn058-mfc-module-state-implementation.md).  
+ Die Lösung besteht darin, jedes Modul (Anwendung oder reguläre MFC-DLL) Geben Sie eine eigene Kopie dieser globalen Zustandsinformationen. Daher einen Aufruf von **AfxGetApp** in reguläre MFC-DLL gibt einen Zeiger auf die `CWinApp` Objekt in der DLL, die nicht dem GUID in die ausführbare Datei. Dieser pro Modul Kopie der globalen MFC-Daten wird als eine Modulstatus bezeichnet und ist in der beschriebenen [MFC technischer Hinweis 58](../mfc/tn058-mfc-module-state-implementation.md).  
   
- Die allgemeine MFC\-Fensterprozedur wechselt automatisch zum korrekten Modulzustand, sodass dieser Umstand nicht in den Meldungshandlern berücksichtigt werden muss, die in der regulären DLL implementiert sind.  Wenn jedoch die ausführbare Datei einen Aufruf in der regulären DLL vornimmt, müssen Sie den aktuellen Modulzustand explizit auf den Zustand der DLL setzen.  Sie verwenden dazu in jeder aus der DLL exportierten Funktion das `AFX_MANAGE_STATE`\-Makro.  Fügen Sie zu diesem Zweck die folgende Codezeile am Anfang der aus der DLL exportierten Funktionen ein:  
+ Die Fensterprozedur der MFC-common wechselt automatisch in die richtige Modulstatus, damit Sie nicht in jeder in der regulären MFC-DLL implementiert Meldungshandler kümmern müssen. Aber wenn Ihre ausführbare Datei in der regulären MFC-DLL aufgerufen wird, müssen Sie zum expliziten Festlegen von den aktuellen Zustand des Moduls auf das Objekt für die DLL. Verwenden Sie hierzu die **AFX_MANAGE_STATE** Makro in jeder Funktion aus der DLL exportierten. Dies erfolgt durch die folgende Codezeile am Anfang des aus der DLL exportierten Funktionen hinzufügen:  
   
 ```  
 AFX_MANAGE_STATE(AfxGetStaticModuleState( ))  
 ```  
   
-## Worüber möchten Sie mehr erfahren?  
+## <a name="what-do-you-want-to-know-more-about"></a>Worüber möchten Sie mehr erfahren?  
   
--   [Verwalten der Statusdaten von MFC\-Modulen](../mfc/managing-the-state-data-of-mfc-modules.md)  
+-   [Verwalten der Statusdaten von MFC-Modulen](../mfc/managing-the-state-data-of-mfc-modules.md)  
   
--   [Reguläre, dynamisch mit MFC verknüpfte DLLs](../build/regular-dlls-dynamically-linked-to-mfc.md)  
+-   [Reguläre, dynamisch mit MFC verknüpfte MFC-DLLs](../build/regular-dlls-dynamically-linked-to-mfc.md)  
   
--   [Erweiterungs\-DLLs](../build/extension-dlls-overview.md)  
+-   [MFC extension DLLs (MFC-Erweiterungs-DLLs)](../build/extension-dlls-overview.md)  
   
-## Siehe auch  
- [DLLs in Visual C\+\+](../build/dlls-in-visual-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [DLLs in Visual C++](../build/dlls-in-visual-cpp.md)

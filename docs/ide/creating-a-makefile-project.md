@@ -1,49 +1,48 @@
 ---
-title: "Erstellen eines Makefile-Projekts | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.makefile.project"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Makefile-Projekte, Erstellen"
-  - "Projektdateien [C++], Makefile-Projekte"
+title: Erstellen eines Makefile-Projekts | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.appwiz.makefile.project
+dev_langs: C++
+helpviewer_keywords:
+- Makefile projects, creating
+- project files [C++], Makefile projects
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 834475840fbe20a0d6938c563f3541c294e09bee
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Erstellen eines Makefile-Projekts
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Wenn Sie ein Projekt von der Befehlszeile mit einem Makefile erstellen, wird das Projekt in der Visual Studio\-Entwicklungsumgebung nicht erkannt.  Um das Projekt mithilfe von [!INCLUDE[vsUltShort](../ide/includes/vsultshort_md.md)], [!INCLUDE[vsPro](../ide/includes/vspro_md.md)] oder Visual Studio Express für Windows Desktop zu öffnen und zu erstellen, erstellen Sie zuerst ein leeres Projekt, indem Sie die MakeFile\-Projektvorlage auswählen.  Anschließend können Sie Ihr Projekt auf der Grundlage dieses Projekts in der Visual Studio\-Entwicklungsumgebung erstellen.  
+# <a name="creating-a-makefile-project"></a>Erstellen eines Makefile-Projekts
+Wenn Sie ein Projekt von der Befehlszeile mit einem Makefile erstellen, wird das Projekt in der Visual Studio-Entwicklungsumgebung nicht erkannt. Öffnen und erstellen das Projekt mithilfe [!INCLUDE[vsUltShort](../ide/includes/vsultshort_md.md)], Visual Studio Professional oder Visual Studio Express für Windows Desktop, müssen Sie ein leeres Projekt zuerst erstellen, indem Sie die MakeFile-Projektvorlage auswählen. Anschließend können Sie Ihr Projekt auf der Grundlage dieses Projekts in der Visual Studio-Entwicklungsumgebung erstellen.  
   
- Im Projektmappen\-Explorer werden keine Dateien dieses Projekts angezeigt.  Die Buildeinstellungen, die auf der Eigenschaftenseite des Projekts angezeigt werden, werden vom Projekt festgelegt.  
+ Im Projektmappen-Explorer werden keine Dateien dieses Projekts angezeigt. Die Buildeinstellungen, die auf der Eigenschaftenseite des Projekts angezeigt werden, werden vom Projekt festgelegt.  
   
  Die Ausgabedatei, die Sie im Projekt festlegen, hat keinen Einfluss auf den vom Buildskript erstellten Namen; sie deklariert lediglich die Bestimmung.  
   
-### So erstellen Sie ein Makefile\-Projekt  
+### <a name="to-create-a-makefile-project"></a>So erstellen Sie ein Makefile-Projekt  
   
-1.  Folgen Sie den Anweisungen im Hilfethema [Erstellen eines Projekts mit einem Visual C\+\+\-Anwendungs\-Assistenten](../ide/creating-desktop-projects-by-using-application-wizards.md).  
+1.  Befolgen Sie die Anweisungen im Hilfethema [Erstellen eines Projekts mit einem Visual C++-Anwendungs-Assistenten](../ide/creating-desktop-projects-by-using-application-wizards.md).  
   
-2.  Wählen Sie im Dialogfeld **Neues Projekt** im Vorlagenbereich die Option **Makefile\-Projekt** aus, um den Assistenten zu öffnen.  
+2.  In der **neues Projekt** wählen Sie im Dialogfeld **Makefile-Projekt** im Bereich Vorlagen aus, um den Assistenten zu öffnen.  
   
-3.  Geben Sie auf der Seite [Anwendungseinstellungen](../ide/application-settings-makefile-project-wizard.md) Befehls\-, Ausgabe\-, Bereinigungs\- und Neuerstellungsinformationen an.  
+3.  In der [Anwendungseinstellungen](../ide/application-settings-makefile-project-wizard.md) Seite, geben Sie den Befehl ausgeben, bereinigen und neuerstellungsinformationen.  
   
-4.  Klicken Sie auf **Fertig stellen**, um den Assistenten zu schließen und das neue Projekt im **Projektmappen\-Explorer** zu öffnen.  
+4.  Klicken Sie auf **Fertig stellen** um den Assistenten schließen und öffnen Sie das neu erstellte Projekt in **Projektmappen-Explorer**.  
   
- Sie können die Projekteigenschaften auf der Eigenschaftenseite des Projekts anzeigen und bearbeiten.  Weitere Informationen zum Anzeigen der Eigenschaftenseite finden Sie unter [Festlegen von Visual C\+\+\-Projekteigenschaften](../ide/working-with-project-properties.md).  
+ Sie können die Projekteigenschaften auf der Eigenschaftenseite des Projekts anzeigen und bearbeiten. Finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../ide/working-with-project-properties.md) Informationen zum Anzeigen der Eigenschaftenseite.  
   
-## Siehe auch  
- [Makefile\-Projekt\-Assistent](../ide/makefile-project-wizard.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Makefile-Projekt-Assistent](../ide/makefile-project-wizard.md)   
  [Sonderzeichen in einem Makefile](../build/special-characters-in-a-makefile.md)   
  [Inhalt eines Makefiles](../build/contents-of-a-makefile.md)

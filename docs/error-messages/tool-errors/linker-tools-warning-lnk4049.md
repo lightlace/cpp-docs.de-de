@@ -1,55 +1,53 @@
 ---
-title: "Linkertoolwarnung LNK4049 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4049"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4049"
+title: Linkertoolwarnung Lnk4049 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4049
+dev_langs: C++
+helpviewer_keywords: LNK4049
 ms.assetid: 5fd5fb24-c860-4149-a557-0ac26a65d97c
-caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 80a9fbeb3609f10f0f10b050b8e59601045396c0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Linkertoolwarnung LNK4049
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Lokal definiertes Symbol "Symbol" wurde importiert  
+# <a name="linker-tools-warning-lnk4049"></a>Linkertoolwarnung LNK4049
+Lokal definiertes Symbol 'Symbol' nicht importiert  
   
- Das Symbol wurde sowohl aus dem Programm exportiert als auch in das Programm importiert.  
+ Das Symbol wurde sowohl aus exportiert und an das Programm importiert.  
   
- Diese Warnung wird vom Linker generiert, wenn Sie ein Symbol mit dem `__declspec(dllexport)`\-Speicherklassenattribut in einer Objektdatei deklarieren und mit dem `__declspec(dllimport)`\-Attribut in einer anderen Objektdatei darauf verweisen.  
+ Diese Warnung wird vom Linker generiert, wenn Sie ein Symbol mit deklarieren die `__declspec(dllexport)` Storage-Class-Attribut in der Datei für ein Objekt, und verweisen sie mit der `__declspec(dllimport)` Attribut in einer anderen.  
   
- Warnung LNK4049 ist eine allgemeinere Version von [Linkertoolwarnung LNK4217](../../error-messages/tool-errors/linker-tools-warning-lnk4217.md).  Der Linker generiert die Warnung LNK4049, wenn nicht bestimmt werden kann, von welcher Funktion auf das importierte Symbol verwiesen wurde.  
+ Linkertoolwarnung LNK4049 ist eine allgemeinere Version von [Linker Tools Warning LNK4217](../../error-messages/tool-errors/linker-tools-warning-lnk4217.md). Wenn nicht bestimmt werden kann von der Funktion das importierte Symbol verwiesen wurde, generiert der Linker Warnung LNK4049.  
   
- Häufig wird LNK4049 in folgenden Fällen statt LNK4217 generiert:  
+ Allgemeine Fälle, in denen LNK4049, statt LNK4217 generiert wird, sind:  
   
--   Inkrementelles Verknüpfen mit der Option [\/INCREMENTAL](../../build/reference/incremental-link-incrementally.md)  
+-   Inkrementelles Verknüpfen mit der [/INCREMENTAL](../../build/reference/incremental-link-incrementally.md) Option.  
   
--   Optimierung des ganzen Programms mit der Option [\/LTCG](../../build/reference/ltcg-link-time-code-generation.md)  
+-   Ausführen der Optimierung des gesamten Programms mithilfe der [/LTCG](../../build/reference/ltcg-link-time-code-generation.md) Option.  
   
- Führen Sie einen der folgenden Schritte aus, um die Warnung LNK4049 zu vermeiden:  
+ Um LNK4049 zu beheben, führen Sie eine der folgenden aus:  
   
--   Entfernen Sie die `__declspec(dllimport)`\-Namensdeklaration aus der Vorwärtsdeklaration des Symbols, das LNK4049 ausgelöst hat.  Sie können nach Symbolen in einem Binärdateiabbild suchen, indem Sie das Dienstprogramm **DUMPBIN** verwenden.  Der **DUMPBIN\/SYMBOLS**\-Schalter zeigt die COFF\-Symboltabelle des Abbilds an.  Weitere Informationen zum Dienstprogramm **DUMPBIN** finden Sie unter [DUMPBIN\-Referenz](../../build/reference/dumpbin-reference.md).  
+-   Entfernen Sie die `__declspec(dllimport)` benennen-Deklaration aus der Vorwärtsdeklaration des Symbols, das LNK4049 ausgelöst hat. Sie können nach Symbolen in einem binären Bild suchen, mit der **DUMPBIN** Hilfsprogramm. Die **DUMPBIN/SYMBOLE** Schalter zeigt der COFF-Symboltabelle des Abbilds an. Weitere Informationen zu den **DUMPBIN** -Dienstprogramm finden Sie unter [DUMPBIN-Referenz](../../build/reference/dumpbin-reference.md).  
   
--   Deaktivieren Sie das inkrementelle Verknüpfen und die Optimierung des ganzen Programms vorübergehend.  Bei einer Neukompilierung der Anwendung wird die Warnung LNK4217 generiert, die den Namen der Funktion enthält, von der auf das importierte Symbol verwiesen wurde.  Entfernen Sie die `__declspec(dllimport)`\-Deklaration aus dem importierten Symbol, und aktivieren Sie je nach Bedarf das inkrementelle Verknüpfen oder die Optimierung des ganzen Programms.  
+-   Vorübergehendes Deaktivieren von inkrementelles Verknüpfen und die Optimierung des gesamten Programms. Erneutes Kompilieren der Anwendung generiert Linkertoolwarnung LNK4217, darunter der Name der Funktion wird von dem das importierte Symbol verwiesen wurde. Entfernen Sie die `__declspec(dllimport)` Deklaration aus der importierten Symbole und Enable inkrementelles Verknüpfen oder die Optimierung des gesamten Programms nach Bedarf.  
   
- Der letztendlich generierte Code verhält sich zwar richtig, der Code zum Aufrufen der importierten Funktion ist jedoch weniger effizient als ein direkter Aufruf der Funktion.  Diese Warnung wird nicht angezeigt, wenn Sie zum Kompilieren die Option [\/clr](../../build/reference/clr-common-language-runtime-compilation.md) verwenden  
+ Obwohl der endgültige generierten Code ordnungsgemäß erfolgt, ist der Code zum Aufrufen der importierten Funktion weniger effizient als direkter Aufruf der Funktion. Diese Warnung wird nicht angezeigt, wenn Sie Kompilieren mit der Option ["/ CLR"](../../build/reference/clr-common-language-runtime-compilation.md).  
   
- Weitere Informationen zum Importieren und Exportieren von Datendeklarationen finden Sie unter [dllexport, dllimport](../../cpp/dllexport-dllimport.md).  
+ Weitere Informationen zum Importieren und Exportieren von Datendeklarationen, finden Sie unter [Dllexport, Dllimport](../../cpp/dllexport-dllimport.md).  
   
-## Beispiel  
- Durch das Verknüpfen der beiden folgenden Module wird LNK4049 generiert.  Das erste Modul generiert eine Objektdatei, die eine einzelne exportierte Funktion enthält.  
+## <a name="example"></a>Beispiel  
+ Verknüpfen die folgenden beiden Module wird LNK4049 generiert. Das erste Modul generiert eine Objektdatei, die eine exportierte Funktion enthält.  
   
 ```  
 // LNK4049a.cpp  
@@ -61,8 +59,8 @@ __declspec(dllexport) int func()
 }  
 ```  
   
-## Beispiel  
- Das zweite Modul generiert eine Objektdatei, die eine Vorwärtsdeklaration zu der im ersten Modul exportierten Funktion sowie einen Aufruf dieser Funktion in der `main`\-Funktion enthält.  Durch das Verknüpfen dieses Moduls mit dem ersten Modul wird LNK4049 generiert.  Diese Warnung kann vermieden werden, indem die `__declspec(dllimport)`\-Deklaration entfernt wird.  
+## <a name="example"></a>Beispiel  
+ Das zweite Modul generiert eine Objektdatei, die eine Vorwärtsdeklaration für die im ersten Modul zusammen mit einem Aufruf dieser Funktion in exportierten Funktion enthält die `main` Funktion. Verknüpfen dieses Modul mit dem ersten Modul wird LNK4049 generiert. Entfernen der `__declspec(dllimport)` Deklaration die Warnung aufgelöst wird.  
   
 ```  
 // LNK4049b.cpp  
@@ -79,6 +77,6 @@ int main()
 }  
 ```  
   
-## Siehe auch  
- [Linkertoolwarnung LNK4217](../../error-messages/tool-errors/linker-tools-warning-lnk4217.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Linkertoolwarnung Lnk4217](../../error-messages/tool-errors/linker-tools-warning-lnk4217.md)   
  [dllexport, dllimport](../../cpp/dllexport-dllimport.md)

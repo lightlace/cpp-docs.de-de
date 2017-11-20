@@ -1,41 +1,39 @@
 ---
-title: "multimap::size_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::size_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size_type-Member [STL/CLR]"
+title: 'multimap:: size_type (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::size_type
+dev_langs: C++
+helpviewer_keywords: size_type member [STL/CLR]
 ms.assetid: 6dfa2381-1b2a-4537-9c98-ac660480079b
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0d352e61e35f01e51b898022e0252a852a6bfc6f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# multimap::size_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Der Typ eines Abstands mit Vorzeichen zwischen zwei Element.  
+# <a name="multimapsizetype-stlclr"></a>multimap::size_type (STL/CLR)
+Der Typ eines Abstands mit Vorzeichen zwischen zwei Elementen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef int size_type;  
 ```  
   
-## Hinweise  
- Der Typ beschreibt eine nicht negative Elementanzahl.  
+## <a name="remarks"></a>Hinweise  
+ Der Typ beschreibt ein nicht negativer Elementanzahl.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_multimap_size_type.cpp   
@@ -65,13 +63,16 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[bc 3\]**  
-**end\(\)\-begin\(\) \= 3**   
-## Anforderungen  
- **Header:** \<cliext\/Zuordnung\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+end()-begin() = 3  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Map >  
   
-## Siehe auch  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::empty](../dotnet/multimap-empty-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap::empty (STL/CLR)](../dotnet/multimap-empty-stl-clr.md)

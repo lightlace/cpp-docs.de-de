@@ -1,36 +1,36 @@
 ---
-title: "Variadic-Makros | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "variadic-Makros [C++]"
-  - "__VA_ARGS__ variadic-Makrospezifizierer"
+title: Variadic-Makros | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- variadic macros [C++]
+- __VA_ARGS__ variadic macro specifier
 ms.assetid: 51e757dc-0134-4bb2-bb74-64ea5ad75134
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 9913c9413659c0d2491588642a32482fa203e106
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Variadic-Makros
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Variadic\-Makros sind funktionsähnliche Makros, die eine variable Anzahl von Argumenten enthalten.  
+# <a name="variadic-macros"></a>Variadic-Makros
+Variadic-Makros sind funktionsähnliche Makros, die eine variable Anzahl von Argumenten enthalten.  
   
-## Hinweise  
- Um variadic\-Makros zu verwenden, können die Auslassungszeichen als endgültiges formales Argument in einer Makrodefinition angegeben werden, und mit dem Ersetzungsbezeichner `__VA_ARGS__` können Sie in der Definition die zusätzlichen Argumente einfügen. `__VA_ARGS__` wird von allen Argumenten, die mit den Auslassungszeichen übereinstimmen, einschließlich Kommas zwischen ihnen, ersetzt.  
+## <a name="remarks"></a>Hinweise  
+ Um Variadic-Makros verwenden, kann mit der Auslassungspunkten als das letzte formale Argument in einer Makrodefinition stehen, und die Austausch-ID angegeben werden `__VA_ARGS__` dürfen in der Definition verwendet werden, um die zusätzlichen Argumente einzufügen.  `__VA_ARGS__`wird von allen Argumenten ersetzt, die mit den Auslassungspunkten, einschließlich der Trennzeichen dazwischen entsprechen.  
   
- Der C\-Standard gibt an, dass mindestens ein Argument an die Auslassungszeichen übergeben werden muss, um sicherzustellen, dass das Makro sich nicht in einen Ausdruck mit einem nachfolgenden Komma auflöst.  Die Implementierung von Visual C\+\+ unterdrückt ein nachfolgendes Komma, wenn keine Argumente an die Auslassungszeichen übergeben werden.  
+ Der C-Standard gibt an, dass mindestens ein Argument an die Auslassungszeichen übergeben werden muss, um sicherzustellen, dass das Makro sich nicht in einen Ausdruck mit einem nachfolgenden Komma auflöst.  Die Implementierung von Visual C++ unterdrückt ein nachfolgendes Komma, wenn keine Argumente an die Auslassungszeichen übergeben werden.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```cpp  
 // variadic_macros.cpp  
@@ -59,7 +59,7 @@ int main() {
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Ausgabe  
   
 ```  
 here are some varargs1(1)  
@@ -67,8 +67,7 @@ here are some varargs2(4)
 here are some varargs3(5)  
 hello, world  
 error  
-  
 ```  
   
-## Siehe auch  
- [Makros](../preprocessor/macros-c-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [Makros (C/C++)](../preprocessor/macros-c-cpp.md)

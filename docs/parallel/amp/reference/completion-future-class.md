@@ -1,11 +1,10 @@
 ---
-title: Completion_future-Klasse | Microsoft-Dokumentation
+title: Completion_future-Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,33 +18,17 @@ f1_keywords:
 - AMPRT/Concurrency::completion_future::wait
 - AMPRT/Concurrency::completion_future::wait_for
 - AMPRT/Concurrency::completion_future::wait_until
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 1c6d8e880fbdb784b22b1e9c879473efa7bc9802
-ms.contentlocale: de-de
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 40f4c4821a6141e7795f37f5a276a544677ba48b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="completionfuture-class"></a>completion_future-Klasse
 Stellt ein "future"-Objekt dar, das einer asynchronen C++ AMP-Operation entspricht.  
@@ -81,7 +64,7 @@ class completion_future;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Operator Std:: shared_future\<void >](#operator_shared_future)|Konvertiert implizit das `completion_future`-Objekt zu einem `std::shared_future`-Objekt.|  
+|[Operator Std:: shared_future\<"void" >](#operator_shared_future)|Konvertiert implizit das `completion_future`-Objekt zu einem `std::shared_future`-Objekt.|  
 |[operator=](#operator_eq)|Kopiert den Inhalt des angegebenen `completion_future`-Objekts in dieses Objekt.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
@@ -111,15 +94,15 @@ completion_future(
   
 ### <a name="parameters"></a>Parameter  
  `_Other`  
- Das `completion_future` Objekt kopieren oder verschieben.  
+ Die `completion_future` Objekt kopiert oder verschoben werden.  
   
 ### <a name="overloads-list"></a>Überladungsliste  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|`completion_future();`|Initialisiert eine neue Instanz der der `completion_future` Klasse|  
-|`completion_future(const completion_future& _Other);`|Initialisiert eine neue Instanz der `completion_future` -Klasse durch Kopieren eines Konstruktors.|  
-|`completion_future(completion_future&& _Other);`|Initialisiert eine neue Instanz der der `completion_future` Klasse durch einen Konstruktor verschieben.|  
+|`completion_future();`|Initialisiert eine neue Instanz der dem `completion_future` Klasse|  
+|`completion_future(const completion_future& _Other);`|Initialisiert eine neue Instanz der dem `completion_future` -Klasse durch Kopieren eines Konstruktors.|  
+|`completion_future(completion_future&& _Other);`|Initialisiert eine neue Instanz der dem `completion_future` Klasse durch einen Konstruktor zu verschieben.|  
   
 ## <a name="get"></a>Erhalten 
 
@@ -182,7 +165,7 @@ void then(const _Functor & _Func ) const;
   
 ### <a name="parameters"></a>Parameter  
  `_Functor`  
- Der Rückruf zu kennen.  
+ Das Rückruf-Funktionselement.  
   
  `_Func`  
  Das Rückrufobjekt-Funktion.  
@@ -198,7 +181,7 @@ concurrency::task<void> to_task() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein `task` Objekt entspricht, der auf den zugeordneten asynchronen Vorgang.  
+ Ein `task` -Objekt, das dem zugeordneten asynchronen Vorgang entspricht.  
   
 ## <a name="valid"></a>gültige 
 
@@ -211,7 +194,7 @@ bool valid() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true`Wenn das Objekt einem asynchronen Vorgang zugeordnet ist. andernfalls `false`.  
+ `true`Wenn das Objekt einen asynchronen Vorgang zugeordnet ist. andernfalls `false`.  
   
 ## <a name="wait"></a>Warte 
 
@@ -303,4 +286,3 @@ Zerstört das `completion_future`-Objekt.
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)
-

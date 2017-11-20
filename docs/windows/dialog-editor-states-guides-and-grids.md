@@ -1,51 +1,51 @@
 ---
-title: "Dialog Editor States (Guides and Grids) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Dialog editor, guides and margins"
+title: "Dialog-Editor-Status (Führungslinien und Raster) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: Dialog editor, guides and margins
 ms.assetid: dbacf9ef-e8b0-4125-a7ce-84911c482e98
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1e6f0456946fd5fc85d3aa91db5b38b837eedf54
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Dialog Editor States (Guides and Grids)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Der Dialog\-Editor bietet drei Modi, um die Steuerelemente in Dialogfeldern anzuordnen:  
+# <a name="dialog-editor-states-guides-and-grids"></a>Modi des Dialog-Editors (Führungslinien und Raster)
+Sie können Steuerelemente in Dialogfeldern mit dem Dialog-Editor in einem von drei unterschiedlichen Zuständen annehmen angeordnet werden:  
   
--   Aktivierte Führungslinien und Ränder \(Standardeinstellung\)  
+-   Mit dem Führungslinien und Ränder (Standardeinstellung)  
   
--   Aktiviertes Layoutraster  
+-   Mit das Layoutraster für  
   
--   Ohne Einrast\- oder Ausrichtungsfeatures  
+-   Ohne Funktionen andocken oder Ausrichtung  
   
- Die [Symbolleiste des Dialog\-Editors](../mfc/showing-or-hiding-the-dialog-editor-toolbar.md) enthält Schaltflächen, mit denen der jeweilige Modus aktiviert werden kann.  Um den Modus zu ändern, klicken Sie auf das entsprechende Symbol.  Darüber hinaus kann der Modus über den Befehl **Führungslinieneinstellungen** im Menü **Format** geändert werden.  
+ Die [Dialog-Editor-Symbolleiste](../windows/showing-or-hiding-the-dialog-editor-toolbar.md) enthält Schaltflächen, die den Status zu steuern. Klicken Sie auf das entsprechende Symbol, um den Status zu ändern. Sie können auch die Status ändern, mit der **Handbuch Einstellungen** Befehl die **Format** Menü.  
   
--   [Erstellen und Festlegen von Führungslinien und Rändern](../mfc/creating-and-setting-guides-and-margins.md)  
+-   [Erstellen und Festlegen von Führungslinien und Rändern](creating-and-setting-guides-and-margins.md)  
   
--   [Ausrichten von Steuerelementen an einer Führungslinie](../mfc/aligning-controls-on-a-guide.md)  
+-   [Ausrichten von Steuerelementen an einer Führungslinie](../windows/aligning-controls-on-a-guide.md)  
   
--   [Deaktivieren von Führungslinien](../mfc/disabling-guides.md)  
+-   [Deaktivieren von Führungslinien](../windows/disabling-guides.md)  
   
--   [Ändern des Layoutrasters](../mfc/modifying-the-layout-grid.md)  
+-   [Ändern des Layoutrasters](../windows/modifying-the-layout-grid.md)  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](https://msdn.microsoft.com/library/f45fce5x.aspx) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](https://msdn.microsoft.com/library/xbx3z216.aspx). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  Win32  
   
-## Siehe auch  
- [Arrangement of Controls on Dialog Boxes](../mfc/arrangement-of-controls-on-dialog-boxes.md)   
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>Siehe auch  
+ [Anordnung von Steuerelementen in Dialogfeldern](../windows/arrangement-of-controls-on-dialog-boxes.md)   
+ [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)   
+ [Steuerelemente (MFC)](../mfc/controls-mfc.md)
+

@@ -1,32 +1,30 @@
 ---
-title: "priority_queue::priority_queue (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::priority_queue"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "priority_queue-Member [STL/CLR]"
+title: 'priority_queue:: priority_queue (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::priority_queue
+dev_langs: C++
+helpviewer_keywords: priority_queue member [STL/CLR]
 ms.assetid: aab423d7-959e-48fd-9028-e9f45f43cb8a
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 77486fdadaafe9b98e93998b73a4f5eb42f7865b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# priority_queue::priority_queue (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Erstellt ein Containeradapterobjekt.  
+# <a name="priorityqueuepriorityqueue-stlclr"></a>priority_queue::priority_queue (STL/CLR)
+Erstellt ein Container-Adapter-Objekt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 priority_queue();  
@@ -44,84 +42,74 @@ template<typename InIt>
         value_compare^ pred, container_type% cont);  
 ```  
   
-#### Parameter  
- fort.  
- Container zu kopieren.  
+#### <a name="parameters"></a>Parameter  
+ Fortsetzung  
+ Der zu kopierende Container.  
   
  first  
- Anfang Einfügen des Bereichs.  
+ Anfang des Bereichs, der eingefügt.  
   
  last  
- Ende Einfügen des Bereichs.  
+ Das Ende des Bereichs einfügen.  
   
  pred  
- Reihenfolgenprädikat für die gesteuerte Sequenz.  
+ Sortierung Prädikat für die gesteuerte Sequenz.  
   
- right  
- Objekt oder Bereich Einfüge\-.  
+ Rechts  
+ Einzufügendes Objekt bzw. einzufügender Bereich.  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Der Konstruktor:  
   
  `priority_queue();`  
   
- stellt einen leeren umschlossenen Container, mit dem Standardreihenfolgenprädikat erstellt.  Sie verwenden sie, um eine leere gesteuerten ursprünglichen Sequenz, mit dem Standardreihenfolgenprädikat anzugeben.  
+ erstellt einen leeren umschlossenen Container mit der standardmäßigen Reihenfolge Prädikat. Sie können damit eine leere gesteuerte Sequenz, mit der standardmäßigen Reihenfolge Prädikat angeben.  
   
  Der Konstruktor:  
   
  `priority_queue(priority_queue<Value, Container>% right);`  
   
- stellt einen Container zeichnen, die eine Kopie von `right.get_container()`, mit dem Reihenfolgenprädikat `right.value_comp()`.  Sie verwenden sie, um einer gesteuerten ursprünglichen Sequenz, die eine Kopie der Sequenz, die erfolgen durch das Objekt `right` gesteuert wird, mit dem gleichen Reihenfolgenprädikat anzugeben.  
+ erstellt einen umschlossenen Container, der eine Kopie des `right.get_container()`, mit dem Prädikat Reihenfolge `right.value_comp()`. Verwenden sie eine gesteuerte Sequenz an, die eine Kopie der Sequenz, die durch das Warteschlangenobjekt gesteuert wird `right`, mit der gleichen Reihenfolge Prädikat.  
   
  Der Konstruktor:  
   
  `priority_queue(priority_queue<Value, Container>^ right);`  
   
- stellt einen Container zeichnen, die eine Kopie von `right->get_container()`, mit dem Reihenfolgenprädikat `right->value_comp()`.  Sie verwenden sie, um einer gesteuerten ursprünglichen Sequenz, die eine Kopie der Sequenz, die erfolgen durch das Objekt `*right` gesteuert wird, mit dem gleichen Reihenfolgenprädikat anzugeben.  
+ erstellt einen umschlossenen Container, der eine Kopie des `right->get_container()`, mit dem Prädikat Reihenfolge `right->value_comp()`. Verwenden sie eine gesteuerte Sequenz an, die eine Kopie der Sequenz, die durch das Warteschlangenobjekt gesteuert wird `*right`, mit der gleichen Reihenfolge Prädikat.  
   
  Der Konstruktor:  
   
  `explicit priority_queue(value_compare^ pred);`  
   
- stellt einen leeren umschlossenen Container, mit dem Reihenfolgenprädikat `pred`.  Sie verwenden sie, um eine leere gesteuerten ursprünglichen Sequenz, mit dem angegebenen Reihenfolgenprädikat anzugeben.  
+ erstellt einen leeren umschlossenen Container mit dem Prädikat Reihenfolge `pred`. Sie können damit eine leere gesteuerte Sequenz, mit der angegebenen Reihenfolge Prädikat angeben.  
   
  Der Konstruktor:  
   
  `priority_queue(value_compare^ pred, container_type cont);`  
   
- stellt einen leeren umschlossenen Container, mit dem Reihenfolgenprädikat `pred` erstellt, dann gibt alle Elemente von `cont`, die Sie es verwenden, um einer gesteuerten ursprünglichen Sequenz aus einem vorhandenen Container anzugeben, mit dem angegebenen Reihenfolgenprädikat.  
+ erstellt einen leeren umschlossenen Container mit dem Prädikat Reihenfolge `pred`, stellt dann alle Elemente der `cont` können sie eine gesteuerte Sequenz aus einem vorhandenen Container mit der angegebenen Reihenfolge Prädikat angeben.  
   
  Der Konstruktor:  
   
- `template<typename InIt>`  
+ `template<typename InIt> priority_queue(InIt first, InIt last);`  
   
- `priority_queue(InIt first, InIt last);`  
-  
- stellt einen leeren umschlossenen Container, mit dem Standardreihenfolgenprädikat erstellt, dann drückt die Sequenz `[``first``,` `last``)`.  Sie verwenden sie, um einer gesteuerten ursprünglichen Sequenz aus einem angegebenen eqeuence, mit dem angegebenen Reihenfolgenprädikat anzugeben.  
+ erstellt einen leeren umschlossenen Container mit der Sortierung standardprädikat, dann wird die Sequenz [`first`, `last`). Sie können damit eine gesteuerte Sequenz aus einem angegebenen Eqeuence mit der angegebenen Reihenfolge Prädikat angeben.  
   
  Der Konstruktor:  
   
- `template<typename InIt>`  
+ `template<typename InIt> priority_queue(InIt first, InIt last, value_compare^ pred);`  
   
- `priority_queue(InIt first, InIt last,`  
-  
- `value_compare^ pred);`  
-  
- stellt einen leeren umschlossenen Container, mit dem Reihenfolgenprädikat `pred` erstellt, dann drückt die Sequenz `[``first``,` `last``)`.  Sie verwenden sie, um einer gesteuerten ursprünglichen Sequenz aus einem angegebenen seqeuence, mit dem angegebenen Reihenfolgenprädikat anzugeben.  
+ erstellt einen leeren umschlossenen Container mit dem Prädikat Reihenfolge `pred`, dann wird die Sequenz [`first`, `last`). Sie können damit eine gesteuerte Sequenz aus einem angegebenen Seqeuence mit der angegebenen Reihenfolge Prädikat angeben.  
   
  Der Konstruktor:  
   
- `template<typename InIt>`  
+ `template<typename InIt> priority_queue(InIt first, InIt last, value_compare^ pred, container_type% cont);`  
   
- `priority_queue(InIt first, InIt last,`  
+ erstellt einen leeren umschlossenen Container mit dem Prädikat Reihenfolge `pred`, stellt dann alle Elemente der `cont` sowie die Sequenz [`first`, `last`). Sie können damit eine gesteuerte Sequenz aus einem vorhandenen Container und eine angegebene Seqeuence mit der angegebenen Reihenfolge Prädikat angeben.  
   
- `value_compare^ pred, container_type% cont);`  
+## <a name="example"></a>Beispiel  
   
- stellt einen leeren umschlossenen Container, mit dem Reihenfolgenprädikat `pred` erstellt, dann gibt alle Elemente von `cont` sowie die Sequenz `[``first``,` `last``)`.  Sie verwenden sie, um einer gesteuerten ursprünglichen Sequenz aus einem vorhandenen Container und einem angegebenen seqeuence, mit dem angegebenen Reihenfolgenprädikat anzugeben.  
-  
-## Beispiel  
-  
-```  
+```cpp  
 // cliext_priority_queue_construct.cpp   
 // compile with: /clr   
 #include <cliext/queue>   
@@ -204,24 +192,27 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **c ein b**  
-**size\(\) \= 0**  
- **a\-c b**  
- **a\-c b**  
- **c ein b**  
- **a\-c b**  
- **ein b c c b**  
- **c ein b**  
- **c ein b**  
- **a\-c b**   
-## Anforderungen  
- **Header:** \<cliext\/Warteschlange\>  
+```Output  
+size() = 0  
+ c a b  
+size() = 0  
+ a c b  
+ a c b  
+ c a b  
+ a c b  
+ a a b c c b  
+ c a b  
+ c a b  
+ a c b  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext bzw. einer neuen Warteschlange >  
   
-## Siehe auch  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [priority\_queue::assign](../dotnet/priority-queue-assign-stl-clr.md)   
- [priority\_queue::generic\_container](../dotnet/priority-queue-generic-container-stl-clr.md)   
- [priority\_queue::operator\=](../dotnet/priority-queue-operator-assign-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue:: Assign (STL/CLR)](../dotnet/priority-queue-assign-stl-clr.md)   
+ [priority_queue::generic_container (STL/CLR)](../dotnet/priority-queue-generic-container-stl-clr.md)   
+ [priority_queue::operator= (STL/CLR)](../dotnet/priority-queue-operator-assign-stl-clr.md)

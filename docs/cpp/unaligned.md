@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- __unaligned_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- __unaligned keyword [C++]
+f1_keywords: __unaligned_cpp
+dev_langs: C++
+helpviewer_keywords: __unaligned keyword [C++]
 ms.assetid: 0cd83aad-1840-47e3-ad33-59bfcbe6375b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 9f899add9a1306344a10840220f3b7504e917d91
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 1c148803da11ea85857cb77753d2e6af6a6ae22e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="unaligned"></a>__unaligned
 Wenn Sie einen Zeiger mit dem `__unaligned`-Modifizierer deklarieren, geht der Compiler davon aus, dass der Zeiger auf Daten verweist, die nicht ausgerichtet sind. Aus diesem Grund erstellt der Compiler für eine Anwendung, die auf einen Computer der Itanium-Prozessorfamilie (IPF) ausgerichtet ist, Code, der die nicht ausgerichteten Daten ein Byte nach dem anderen liest.  

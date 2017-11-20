@@ -1,41 +1,39 @@
 ---
-title: "set::rbegin (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::rbegin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rbegin-Member [STL/CLR]"
+title: 'Set:: rbegin (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::rbegin
+dev_langs: C++
+helpviewer_keywords: rbegin member [STL/CLR]
 ms.assetid: b9da72dc-0b75-489e-b179-74c27a4bcfb7
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 852e9d38c886baf1309ae5e672e62ed509751d5f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# set::rbegin (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="setrbegin-stlclr"></a>set::rbegin (STL/CLR)
 Legt den Anfang der umgekehrten kontrollierten Sequenz fest.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 reverse_iterator rbegin();  
 ```  
   
-## Hinweise  
- Die Memberfunktion gibt einem umgekehrten Iterator, der das letzte Element der gesteuerten Reihenfolge festgelegt wird, oder direkt über dem Anfang eine leere Sequenz hinaus zurück.  Demzufolge wird der `beginning` der umgekehrten Sequenz bestimmt.  Sie können damit einen Iterator abrufen, der den `current` Anfang der kontrollierten Sequenz in umgekehrter Reihenfolge bestimmt; der Zustand kann sich jedoch ändern, sobald sich die Länge der kontrollierten Sequenz ändert.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt einen umgekehrten Iterator, der das letzte Element der kontrollierten Sequenz oder nur vor dem Anfang einer leeren Sequenz zurück. Daher kennzeichnet es die `beginning` der umgekehrten Sequenz. Es mit der einen Iterator abrufen, bestimmt die `current` Anfang der kontrollierten Sequenz in umgekehrter Reihenfolge kann ändern, wenn die Länge der gesteuerten Sequenz geändert wird.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_set_rbegin.cpp   
@@ -64,16 +62,19 @@ int main()
   
 ```  
   
-  **ein b c**  
-**\*rbegin\(\) \= c**  
-**\*\+\+rbegin\(\) \= b**   
-## Anforderungen  
- **Header:** \<cliext\/Satz\>  
+```Output  
+ a b c  
+*rbegin() = c  
+*++rbegin() = b  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Set >  
   
-## Siehe auch  
- [set](../dotnet/set-stl-clr.md)   
- [set::begin](../dotnet/set-begin-stl-clr.md)   
- [set::end](../dotnet/set-end-stl-clr.md)   
- [set::rend](../dotnet/set-rend-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Legen Sie (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [Set:: begin (STL/CLR)](../dotnet/set-begin-stl-clr.md)   
+ [Set:: End (STL/CLR)](../dotnet/set-end-stl-clr.md)   
+ [set::rend (STL/CLR)](../dotnet/set-rend-stl-clr.md)

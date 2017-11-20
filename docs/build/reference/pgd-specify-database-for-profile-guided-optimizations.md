@@ -1,61 +1,60 @@
 ---
-title: "/PGD (Angeben einer Datenbank f&#252;r die profilgesteuerte Optimierungen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.ProfileGuidedDatabase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/PGD (Linkeroption)"
-  - "-PGD (Linkeroption)"
+title: "-PGD (Angeben einer Datenbank für Profilgesteuerte Optimierungen) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VC.Project.VCLinkerTool.ProfileGuidedDatabase
+dev_langs: C++
+helpviewer_keywords:
+- -PGD linker option
+- /PGD linker option
 ms.assetid: 9f312498-493b-461f-886f-92652257e443
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 37113ef23adbbb50e36b51ed8ef0035ee20e885e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# /PGD (Angeben einer Datenbank f&#252;r die profilgesteuerte Optimierungen)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-\/PGD:`filename`  
+# <a name="pgd-specify-database-for-profile-guided-optimizations"></a>/PGD (Angeben einer Datenbank für die profilgesteuerte Optimierungen)
+/ PGD:`filename`  
   
-## Hinweise  
- Hierbei ist:  
+## <a name="remarks"></a>Hinweise  
+ Dabei gilt:  
   
  `filename`  
- Gibt einen Namen für die PGD\-Datei an, in der Informationen zum ausgeführten Programm gespeichert werden.  
+ Gibt den Namen der PGD-Datei, die zum Speichern von Informationen zum ausgeführten Programm verwendet werden.  
   
-## Hinweise  
- Wenn Sie [\/LTCG:PGINSTRUMENT](../../build/reference/ltcg-link-time-code-generation.md) verwenden, geben Sie mit \/PGD einen nicht standardmäßigen Namen oder Speicherort für die PGD\-Datei an.  Wenn Sie \/PGD nicht angeben, stimmt der Name der PGD\-Datei mit dem Namen der Ausgabedatei \(EXE oder DLL\) überein, und die PGD\-Datei wird in demselben Verzeichnis erstellt, in dem der Link aufgerufen wird.  
+## <a name="remarks"></a>Hinweise  
+ Bei Verwendung [/LTCG: PGINSTRUMENT](../../build/reference/ltcg-link-time-code-generation.md), verwenden Sie/PGD, um einen nicht standardmäßigen Namen oder Speicherort für die PGD-Datei anzugeben. Wenn Sie/PGD nicht angeben, wird der Name der PGD-Datei wird der Name der Ausgabedatei (.exe oder .dll) identisch sein und erstellt werden, im gleichen Verzeichnis, von dem die Verknüpfung aufgerufen wurde.  
   
- Wenn Sie \/LTCG:PGOPTIMIZE verwenden, geben Sie mit \/PGD den Namen der PGD\-Datei an, mit der das optimierte Bild erstellt wird.  
+ Bei Verwendung von/LTCG: PGOPTIMIZE mit der/PGD Geben Sie den Namen der PGD-Datei zu verwenden, um das optimierte Image zu erstellen.  
   
- Weitere Informationen finden Sie unter [Profilgesteuerte Optimierung \(PGO\)](../../build/reference/profile-guided-optimizations.md).  
+ Weitere Informationen finden Sie unter [Profilgesteuerte Optimierung](../../build/reference/profile-guided-optimizations.md).  
   
-### So legen Sie diese Linkeroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Festlegen von Visual C\+\+\-Projekteigenschaften](../../ide/working-with-project-properties.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Erweitern Sie den Knoten **Konfigurationseigenschaften**.  
+2.  Erweitern Sie die **Konfigurationseigenschaften** Knoten.  
   
-3.  Erweitern Sie den Knoten **Linker**.  
+3.  Erweitern Sie die **Linker** Knoten.  
   
-4.  Wählen Sie die Eigenschaftenseite **Optimierung** aus.  
+4.  Wählen Sie die **Optimierung** Eigenschaftenseite.  
   
-5.  Ändern Sie die Eigenschaft **Profilgesteuerte Datenbank**.  
+5.  Ändern der **Profilgesteuerte Datenbank** Eigenschaft.  
   
-### So legen Sie diese Linkeroption programmgesteuert fest  
+### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
   
-1.  Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ProfileGuidedDatabase*>.  
+1.  Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ProfileGuidedDatabase%2A>.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
  [Linkeroptionen](../../build/reference/linker-options.md)

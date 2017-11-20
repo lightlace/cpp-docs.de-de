@@ -4,41 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - Visual C++, regular expressions
 - regular expressions, Visual C++
 - regular expressions
 ms.assetid: aafe202a-1d96-4b36-a270-d676dfd3c51c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: ac4dc70360682aff3a28eabeed0e4f05e4c509a8
-ms.contentlocale: de-de
-ms.lasthandoff: 04/24/2017
-
+ms.openlocfilehash: 9c32cc76c27b89bd3820e24bc7f38da0d12e0add
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="regular-expressions-c"></a>Reguläre Ausdrücke (C++)
 Die C++-Standardbibliothek unterstützt mehrere Grammatiken für reguläre Ausdrücke. Dieses Thema erläutert die Grammatik Variationen verfügbar bei Verwendung von regulären Ausdrücken.  
@@ -57,7 +40,7 @@ Wenn keine Grammatik angegeben wird, standardmäßig `ECMAScript` wird angenomme
   
 Neben der Grammatik können mehrere Flags verwendet werden:  
 -   `icase`: Ignorieren Sie Groß-/Kleinschreibung, beim Ermitteln von Übereinstimmungen.  
--   `nosubs`: Ignorieren Sie markierte Übereinstimmungen (d. h., Ausdrücke in Klammern); Es werden keine substitutionen gespeichert.  
+-   `nosubs`: Ignorieren Sie markierte Übereinstimmungen (d. h. Ausdrücke in Klammern); Es werden keine substitutionen gespeichert.  
 -   `optimize`: Stellen Sie schneller auf die möglichen Ausgaben für größer Konstruktionszeit Abgleich.  
 -   `collate`: Verwenden Sie gebietsschemabezogene Sortierreihenfolgen (z. B. Bereiche im Format "[a-Z]").  
   
@@ -165,13 +148,13 @@ Neben der Grammatik können mehrere Flags verwendet werden:
   
  Für alle Grammatiken außer `basic` und `grep` können für eine Wiederholungsanzahl folgende Formate verwendet werden:  
   
--   "". Entspricht "{0,1}".  
+-   "?". Entspricht "{0,1}".  
   
 -   "+". Entspricht "{1,unbounded}".  
   
  Beispiele:  
   
--   "a" entspricht der Zielsequenz "" und der Zielsequenz "a", jedoch nicht der Zielsequenz "aa".  
+-   "a"? entspricht der Zielsequenz "" und der Zielsequenz "a", aber nicht der Zielsequenz "aa".  
   
 -   "a+" entspricht der Zielsequenz "a", der Zielsequenz "aa" usw., jedoch nicht der Zielsequenz "".  
   
@@ -217,7 +200,7 @@ Neben der Grammatik können mehrere Flags verwendet werden:
 |Wiederholung mit "{}"||+|+||+|+|  
 |Wiederholung mit "\\{\\}"|+|||+|||  
 |Wiederholung mit "*"|+|+|+|+|+|+|  
-|Wiederholung mit '' und '+'||+|+||+|+|  
+|Wiederholung mit "?" und "+"||+|+||+|+|  
 |Unicode-Escapesequenz|||+||||  
 |Platzhalterzeichen|+|+|+|+|+|+|  
 |Wortgrenzenassertion|||+||||  
@@ -327,20 +310,20 @@ Neben der Grammatik können mehrere Flags verwendet werden:
  Eine hexadezimale Escapesequenz ist ein umgekehrter Schrägstrich, gefolgt vom Buchstaben "x", auf den zwei hexadezimale Ziffern (0-9a-fA-F) folgen. Sie entspricht einem Zeichen in der Zielsequenz mit dem Wert, der durch die zwei Ziffern angegeben wird. Beispielsweise entspricht "\x41" der Zielsequenz "A", wenn die ASCII-Zeichencodierung verwendet wird.  
   
 ### <a name="identity-escape"></a>Identitätsescapezeichen  
- Ein Identitätsescapezeichen ist ein umgekehrter Schrägstrich, auf den ein einzelnes Zeichen folgt. Es entspricht diesem Zeichen. Das Escapezeichen ist erforderlich, wenn das Zeichen eine besondere Bedeutung hat. Durch das Identitätsescapezeichen wird die besondere Bedeutung aufgehoben. Beispiel:  
+ Ein Identitätsescapezeichen ist ein umgekehrter Schrägstrich, auf den ein einzelnes Zeichen folgt. Es entspricht diesem Zeichen. Das Escapezeichen ist erforderlich, wenn das Zeichen eine besondere Bedeutung hat. Durch das Identitätsescapezeichen wird die besondere Bedeutung aufgehoben. Zum Beispiel:  
   
--   "a*" entspricht der Zielsequenz "aaa", stimmt jedoch nicht mit der Zielsequenz "a\*" überein.  
+-   "eine\*" entspricht der Zielsequenz "aaa", stimmt jedoch nicht mit der Zielsequenz "eine\*".  
   
--   "a\\*" entspricht der Zielsequenz "aaa" nicht, stimmt jedoch mit der Zielsequenz "a\*" überein.  
+-   "eine\\\*" entspricht nicht die Zielsequenz "aaa", jedoch mit der Zielsequenz "eine\*".  
   
  Der Satz von Zeichen, die in einem Identitätsescapezeichen zulässig sind, hängt von der Grammatik für die regulären Ausdrücke ab, wie in der folgenden Tabelle dargestellt.  
   
 |Grammatik|Zulässige Identitätsescapezeichen|  
 |-------------|----------------------------------------|  
-|`basic`, `grep`|{ '(', ')', '{', '}', '.', '[', '\\', '*', '^', '$' }|  
-|`extended`, `egrep`|{ '(', ')', '{', '.', '[', '\\', '*', '^', '$', '+', '', '&#124;' }|  
+|`basic`, `grep`|{ '(', ')', '{', '}', '.', '[', '\\', '\*', '^', '$' }|  
+|`extended`, `egrep`|{ '(', ')', '{', '.', '[', '\\', '\*', '^', '$', '+', '?', '&#124;' }|  
 |`awk`|`extended` plus { '"', '/' }|  
-|`ECMAScript`|Alle Zeichen außer denjenigen, die Bestandteil eines Bezeichners sein können. In der Regel umfasst dies Buchstaben, Ziffern, "$", "_" und Unicode-Escapesequenzen. Weitere Informationen finden Sie in der ECMAScript-Sprachspezifikation.|  
+|`ECMAScript`|Alle Zeichen außer denjenigen, die Bestandteil eines Bezeichners sein können. In der Regel umfasst dies Buchstaben, Ziffern, "$", "\_", und die Unicode-Escapesequenzen. Weitere Informationen finden Sie in der ECMAScript-Sprachspezifikation.|  
   
 ### <a name="individual-character"></a>Einzelnes Zeichen  
  Ein einzelnes Zeichen in einem Klammerausdruck fügt dieses Zeichen dem Zeichensatz hinzu, der durch den Klammerausdruck definiert wird. Überall in einem Klammerausdruck, außer zu Beginn, stellt sicher ein "^" selbst dar.  
@@ -378,10 +361,10 @@ Neben der Grammatik können mehrere Flags verwendet werden:
  Eine negative Wortgrenzenassertion stimmt überein, wenn die aktuelle Position in der Zielzeichenfolge nicht unmittelbar hinter einer *Wortgrenze* liegt.  
   
 ### <a name="non-capture-group"></a>Nichterfassungsgruppe  
- Eine Nichterfassungsgruppe markiert ihren Inhalt als einzelne Einheit in der Grammatik für reguläre Ausdrücke, versieht den Zieltext jedoch nicht mit einer Bezeichnung. Beispiel: "(a)(:b)*(c)" entspricht dem Zieltext "abbc" und ordnet die Erfassungsgruppe 1 der Untersequenz "a" und die Erfassungsgruppe 2 der Untersequenz "c" zu.  
+ Eine Nichterfassungsgruppe markiert ihren Inhalt als einzelne Einheit in der Grammatik für reguläre Ausdrücke, versieht den Zieltext jedoch nicht mit einer Bezeichnung. Z. B. "(a)(:b)\*(c)" entspricht dem Zieltext "Abbc" und ordnet die Erfassungsgruppe 1 der Untersequenz "ein"und die Erfassungsgruppe 2 der Untersequenz "c".  
   
 ### <a name="non-greedy-repetition"></a>Nicht gierige Wiederholung  
- Eine nicht gierige Wiederholung nutzt die kürzeste Untersequenz der Zielsequenz, die dem Muster entspricht. Eine gierige Wiederholung verwendet die längste Untersequenz. Beispiel: "(a+)(a*b)" entspricht der Zielsequenz "aaab". Wenn eine nicht gierige Wiederholung verwendet wird, wird die Erfassungsgruppe 1 der Untersequenz "a" am Anfang der Zielsequenz und die Erfassungsgruppe 2 der Untersequenz "aab" am Ende der Zielsequenz zugeordnet. Wenn eine gierige Übereinstimmung verwendet wird, wird die Erfassungsgruppe 1 der Untersequenz "aaa" und die Erfassungsgruppe 2 der Untersequenz "b" zugeordnet.  
+ Eine nicht gierige Wiederholung nutzt die kürzeste Untersequenz der Zielsequenz, die dem Muster entspricht. Eine gierige Wiederholung verwendet die längste Untersequenz. Beispielsweise "(a+) (eine\*b)" entspricht der Zielsequenz "Aaab". Wenn eine nicht gierige Wiederholung verwendet wird, wird die Erfassungsgruppe 1 der Untersequenz "a" am Anfang der Zielsequenz und die Erfassungsgruppe 2 der Untersequenz "aab" am Ende der Zielsequenz zugeordnet. Wenn eine gierige Übereinstimmung verwendet wird, wird die Erfassungsgruppe 1 der Untersequenz "aaa" und die Erfassungsgruppe 2 der Untersequenz "b" zugeordnet.  
   
 ### <a name="octal-escape-sequence"></a>Oktale Escapesequenz  
  Eine oktale Escapesequenz ist ein umgekehrter Schrägstrich, gefolgt von einer, zwei oder drei Oktalziffern (0-7). Sie entspricht einem Zeichen in der Zielsequenz mit dem Wert, der durch diese Ziffern angegeben wird. Wenn alle Ziffern "0 " sind, ist die Sequenz ungültig. Beispielsweise entspricht "\101" der Zielsequenz "A", wenn die ASCII-Zeichencodierung verwendet wird.  
@@ -391,7 +374,7 @@ Neben der Grammatik können mehrere Flags verwendet werden:
   
  In `ECMAScript` haben die folgenden Zeichen eine besondere Bedeutung:  
   
--   ^  $  \  .  *  +    (  )  [  ]  {  }  &#124;  
+-   ^  $  \  .  *  +  ?  (  )  [  ]  {  }  &#124;  
   
  In `basic` und `grep` haben die folgenden Zeichen eine besondere Bedeutung:  
   
@@ -399,7 +382,7 @@ Neben der Grammatik können mehrere Flags verwendet werden:
   
  In `basic` und `grep` verfügen die folgenden Zeichen außerdem über eine besondere Bedeutung, wenn sie in einem bestimmten Kontext verwendet werden:  
   
--   "*" hat in jedem Fall eine besondere Bedeutung, außer wenn es sich um das erste Zeichen in einem regulären Ausdruck oder das erste Zeichen handelt, das einem anfänglichen "^" in einem regulären Ausdruck folgt, oder wenn es das erste Zeichen einer Erfassungsgruppe oder das erste Zeichen ist, das dem anfänglichen "^" in einer Erfassungsgruppe folgt.  
+-   "\*" hat eine besondere Bedeutung in allen Fällen, außer wenn es das erste Zeichen in einem regulären Ausdruck oder das erste Zeichen, das einem anfänglichen "^" in einem regulären Ausdruck, oder wenn es das erste Zeichen einer Aufzeichnungsinstanz Gruppe oder das erste Zeichen ein, folgt einen anfänglichen "^" in einer Erfassungsgruppe.  
   
 -   "^" hat eine besondere Bedeutung, wenn es das erste Zeichen eines regulären Ausdrucks ist.  
   
@@ -407,7 +390,7 @@ Neben der Grammatik können mehrere Flags verwendet werden:
   
  In `extended`, `egrep` und `awk` haben die folgenden Zeichen eine besondere Bedeutung:  
   
--   .   [   \   (   *   +      {   &#124;  
+-   .   [   \   (   *   +   ?   {   &#124;  
   
  In `extended`, `egrep` und `awk` verfügen die folgenden Zeichen außerdem über eine besondere Bedeutung, wenn sie in einem bestimmten Kontext verwendet werden:  
   
@@ -424,9 +407,9 @@ Neben der Grammatik können mehrere Flags verwendet werden:
   
  Beispiele:  
   
--   "(=aa)(a*)" entspricht der Zielsequenz "aaaa" und ordnet die Erfassungsgruppe 1 der Untersequenz "aaaa" zu.  
+-   "(=AA) (eine\*)" entspricht der Zielsequenz "Aaaa" und ordnet die Erfassungsgruppe 1 der Untersequenz "Aaaa".  
   
--   "(aa)(a*)" entspricht der Zielsequenz "aaaa" und ordnet die Erfassungsgruppe 1 der Untersequenz "aa" am Anfang der Zielsequenz und die Erfassungsgruppe 2 der Untersequenz "aa" am Ende der Zielsequenz zu.  
+-   "(aa) (eine\*)" entspricht der Zielsequenz "Aaaa" und ordnet die Erfassungsgruppe 1 der Untersequenz "aa" am Anfang der Sequenz und zeichnen Sie Zielgruppe 2 der Untersequenz "aa" am Ende der Zielsequenz.  
   
 -   "(=aa)(a)&#124;(a)" entspricht der Zielsequenz "a" und ordnet die Erfassungsgruppe 1 einer leeren Sequenz (aufgrund eines Fehlers bei der positiven Assertion) und die Erfassungsgruppe 2 der Untersequenz "a" zu. Außerdem entspricht die Zielsequenz "aa" und ordnet die Erfassungsgruppe 1 der Untersequenz "aa" und die Erfassungsgruppe 2 einer leeren Sequenz zu.  
   
@@ -472,7 +455,7 @@ Neben der Grammatik können mehrere Flags verwendet werden:
 |"$&"|"&"|Die Zeichensequenz, die dem gesamten regulären Ausdruck entspricht (`[match[0].first, match[0].second)`)|  
 |"$$"||"$"|  
 ||"\\&"|"&"|  
-|"$`" (Dollarzeichen gefolgt vom Graviszeichen)||Die Zeichensequenz, die der Untersequenz vorausgeht, die dem regulären Ausdruck entspricht (`[match.prefix().first, match.prefix().second)`)|  
+|"$\`" (Dollarzeichen gefolgt vom Graviszeichen)||Die Zeichensequenz, die der Untersequenz vorausgeht, die dem regulären Ausdruck entspricht (`[match.prefix().first, match.prefix().second)`)|  
 |"$ '" (Dollarzeichen gefolgt vom Vorwärtsanführungszeichen)||Die Zeichensequenz, die der Untersequenz folgt, die dem regulären Ausdruck entspricht (`[match.suffix().first, match.suffix().second)`)|  
 |"$n"|"\n"|Die Zeichensequenz, die der Erfassungsgruppe in Position entspricht `n`, wobei `n` ist eine Zahl zwischen 0 und 9 (`[match[n].first, match[n].second)`)|  
 ||"\\\n"|"\n"|  
@@ -480,5 +463,4 @@ Neben der Grammatik können mehrere Flags verwendet werden:
   
 ## <a name="see-also"></a>Siehe auch  
  [Überblick über die C++-Standardbibliothek](../standard-library/cpp-standard-library-overview.md)
-
 

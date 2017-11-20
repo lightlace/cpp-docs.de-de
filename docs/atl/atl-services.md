@@ -1,59 +1,60 @@
 ---
-title: "ATL-Dienste | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CServiceModule"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL-Dienste"
-  - "COM-Objekte, ATL"
-  - "CServiceModule-Klasse"
-  - "Dienste, ATL"
+title: ATL-Dienste | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: CServiceModule
+dev_langs: C++
+helpviewer_keywords:
+- CServiceModule class
+- COM objects, ATL
+- services, ATL
+- ATL services
 ms.assetid: 8c09d1a8-7548-4d2c-947c-9d795a81659b
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5b0572f4d83cfc6b098f290cda53592dbe4aa54b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# ATL-Dienste
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Um das ATL COM\-Objekt erstellen damit es in einen Dienst ausgeführt wird, wählen Sie einfach Dienst \(EXE\) aus der Liste von Serveroptionen im ATL\-Projekt\-Assistenten aus.  Der Assistent erstellt anschließend eine Klasse, die von `CAtlServiceModuleT` abgeleitet wird, um den Dienst zu implementieren.  
+# <a name="atl-services"></a>ATL-Dienste
+Um das ATL-COM-Objekt zu erstellen, damit es in einem Dienst ausgeführt wird, wählen Sie einfach Service (EXE) aus der Liste der Serveroptionen im ATL-Projekt-Assistenten. Der Assistent erstellt dann eine Klasse abgeleitet `CAtlServiceModuleT` Implementieren des Diensts.  
   
- Wenn das ATL COM\-Objekt als Dienst erstellt wird, wird es nur als lokaler Server registriert, und es wird nicht in der Liste der Dienste in der Systemsteuerung.  Dies ist, da es einfacher ist, den Dienst als lokaler Server als Dienst zu debuggen.  Um es als Dienst zu installieren, führen Sie an der Eingabeaufforderung aus:  
+ Wenn Sie ATL-COM-Objekts als ein Dienst erstellt wird, wird nur als lokaler Server registriert werden und erscheint nicht in der Liste der Dienste in der Systemsteuerung. Dies ist, da es einfacher, den Dienst als lokaler Server als als Dienst Debuggen ist. Um es als Dienst zu installieren, führen Sie Folgendes an der Eingabeaufforderung ein:  
   
  `YourEXE` `.exe /Service`  
   
- Um sie zu deinstallieren, führen Sie Folgendes aus:  
+ Führen Sie den folgenden Aktionen aus, um es zu deinstallieren:  
   
  `YourEXE` `.exe /UnregServer`  
   
- Die ersten vier Themen in diesem Abschnitt behandeln die Aktionen, die während der Ausführung von `CAtlServiceModuleT`\-Memberfunktionen auftreten.  Diese Themen werden in derselben Reihenfolge, die die Funktionen in der Regel aufgerufen werden.  Um das Verständnis dieser Themen zu verbessern, empfiehlt es sich den Quellcode zu verwenden, der vom ATL\-Projekt\-Assistenten als Verweis generiert wird.  Diese ersten vier Themen sind:  
+ Die ersten vier Themen in diesem Abschnitt erläutern die Aktionen, die während der Ausführung auftreten `CAtlServiceModuleT` Memberfunktionen. Diese Themen werden in derselben Reihenfolge angezeigt, während die Funktionen in der Regel aufgerufen werden. Um Ihr Verständnis dieser Themen zu verbessern, ist es ratsam, den Quellcode, generiert der ATL-Projekt-Assistent als Referenz verwenden. Diese ersten vier Themen sind:  
   
--   [Die CAtlServiceModuleT::Start\-Funktion](../atl/catlservicemodulet-start-function.md)  
+
+-   [Die CServiceModule:: Start-Funktion](../atl/reference/catlservicemodulet-class.md#start)  
   
--   [Die CAtlServiceModuleT::ServiceMain\-Funktion](../atl/catlservicemodulet-servicemain-function.md)  
+-   [Die CAtlServiceModuleT::ServiceMain-Funktion](../atl/reference/catlservicemodulet-class.md#servicemain)  
   
--   [Die CAtlServiceModuleT::Run\-Funktion](../atl/catlservicemodulet-run-function.md)  
+-   [Die CServiceModule:: Run-Funktion](../atl/reference/catlservicemodulet-class.md#run)  
   
--   [Die CAtlServiceModuleT::Handler\-Funktion](../atl/catlservicemodulet-handler-function.md)  
+-   [Die CAtlServiceModuleT::Handler-Funktion](../atl/reference/catlservicemodulet-class.md#handler)  
   
- Die letzten drei Themen werden die Konzepte, die zur Entwicklung eines Diensts verknüpft werden:  
+ Die letzten drei Themen erläutert Konzepte im Zusammenhang mit der Entwicklung von einem Dienst an:  
   
--   [Registrierungseinträge](../atl/registry-entries.md) für ATL\-Dienstleistungen  
+-   [Registrierungseinträge](../atl/registry-entries.md) für ATL-Dienste  
   
 -   [DCOMCNFG](../atl/dcomcnfg.md)  
   
--   [Tipps zum Debuggen](../atl/debugging-tips.md) für ATL\-Dienstleistungen  
+-   [Tipps zum Debuggen](../atl/debugging-tips.md) für ATL-Dienste  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Konzepte](../atl/active-template-library-atl-concepts.md)
+

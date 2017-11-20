@@ -1,43 +1,43 @@
 ---
-title: "Allgemeine Sprach&#228;nderungen (C++/CLI)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Allgemeine Sprachänderungen (C + c++ / CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 79a70768-225c-4ae2-84d1-178b20a9b042
-caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3f9d5a04a5613d9a8ee10fbd115672234034b9dc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Allgemeine Sprach&#228;nderungen (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Eine Reihe von CLR\-Sprachfeatures wurden in [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] gegenüber Managed Extensions for C\+\+ geändert.  
+# <a name="general-language-changes-ccli"></a>Allgemeine Sprachänderungen (C++/CLI)
+Eine Anzahl von CLR-Sprachfunktionen, die von Managed Extensions for C++ auf Visual C++ geändert.  
   
- Die in diesem Abschnitt beschriebenen Änderungen sind eine Art Sprachsammlung.  Hierbei handelt es sich um eine Änderung bei der Behandlung von Zeichenfolgenliteralen, eine Änderung bei der Überladungsauflösung zwischen einer Auslassung und dem `Param`\-Attribut, die Änderung von `typeof` in `typeid`, eine Änderung im Aufruf von Initialisiererlisten für Konstruktoren und die Einführung einer neuen Umwandlungsnotation für `safe_cast`.  
+ Die Änderungen, die in diesem Abschnitt beschriebenen sind eine Art von Language – Vermischtes. Es beinhaltet eine Änderung bei der Behandlung von Zeichenfolgenliteralen, eine Änderung an der die überladungsauflösung zwischen einem Auslassungszeichen und das `Param` -Attributs sind die Änderung des `typeof` zu `typeid`, eine Änderung in der aufrufenden von Initialisiererlisten Konstruktor, und die eine neue Umwandlungsnotation Einführung der `safe_cast`.  
   
- [Zeichenfolgenliterale](../dotnet/string-literal.md)  
- Erläutert Änderungen bei der Behandlung von Zeichenfolgenliteralen.  
+ [Zeichenfolgenliteral](../dotnet/string-literal.md)  
+ Erläutert, wie die Behandlung von Zeichenfolgenliteralen geändert hat.  
   
  [Parameterarray und Ellipse](../dotnet/param-array-and-ellipsis.md)  
- Erläutert die neue Vorrangstellung von `ParamArray` gegenüber Auslassungen \(`…`\) bei der Auflösung von Funktionsaufrufen mit einer variierenden Anzahl von Argumenten.  
+ Erläutert, wie `ParamArray` ist jetzt Vorrang vor den drei Punkten (`...`) zum Auflösen von Funktionsaufrufen mit einer unterschiedlichen Anzahl von Argumenten.  
   
  [typeof wird zu T::typeid](../dotnet/typeof-goes-to-t-typeid.md)  
- Erläutert das Ersetzen des Operators `typeof` durch `typeid`.  
+ Erläutert, wie die `typeof` -Operator wurde ersetzt wurde, indem Sie `typeid`.  
   
  [Initialisiererlisten](../dotnet/initializer-lists.md)  
- Erläutert Änderungen in der Aufrufreihenfolge von Initialisiererlisten.  
+ Werden Änderungen in der aufrufenden Reihenfolge von Initialisiererlisten erläutert.  
   
- [Umwandlungsnotation und Einführung in safe\_cast\<\>](../dotnet/cast-notation-and-introduction-of-safe-cast-angles.md)  
- Erläutert Änderungen der Umwandlungsnotation, insbesondere die Einführung von `safe_cast`.  
+ [Umwandlungsnotation und Einführung in safe_cast<>](../dotnet/cast-notation-and-introduction-of-safe-cast-angles.md)  
+ Erläutert Änderungen an Umwandlungsnotation und insbesondere die Einführung von `safe_cast`.  
   
-## Siehe auch  
- [Einführung in die C\+\+\/CLI\-Migration](../dotnet/cpp-cli-migration-primer.md)
+## <a name="see-also"></a>Siehe auch  
+ [Einführung in die C++/CLI-Migration](../dotnet/cpp-cli-migration-primer.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -62,33 +61,17 @@ helpviewer_keywords:
 - C2367
 - C2398
 - C2399
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 07ca45b5-b2f0-4049-837b-40a7a3caed88
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 8d8925a68ffbb7ba607e37be8db5eca33300ef23
-ms.contentlocale: de-de
-ms.lasthandoff: 04/24/2017
-
+ms.openlocfilehash: f8e1dcf350c974f5be96b971d3d70e69b95ebc9e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-errors-c2300-through-c2399"></a>Compilerfehlers C2300 Through C2399
 In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen Unterabschnitt der Visual C++-Compilerfehler enthalten. Sie können hier auf die Informationen zugreifen oder im Fenster **Ausgabe** in Visual Studio eine Fehlernummer auswählen und dann die F1-TASTE drücken.  
@@ -108,9 +91,9 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |Compilerfehler Fehler C2305|"*Datei*" enthält keine Debuginformationen für dieses Modul|  
 |Compilerfehler Fehler C2306|"*Datei*' enthält nicht die neueste Debuginformationen für dieses Modul|  
 |[Compilerfehler C2307](compiler-error-c2307.md)|Pragma *Richtlinie* außerhalb der Funktion verschoben werden müssen, wenn die inkrementelle Kompilierung aktiviert ist|  
-|[Compilerfehler C2308](compiler-error-c2308.md)|Nicht übereinstimmende Zeichenfolgen werden verkettet.|  
-|[Compilerfehler C2309](compiler-error-c2309.md)|catch-Handler erwartet eine Ausnahmedeklaration in Klammern|  
-|[Compilerfehler C2310](compiler-error-c2310.md)|catch-Handler muss einen Typ angeben|  
+|[Compilerfehler C2308](compiler-error-c2308.md)|nicht übereinstimmende Zeichenfolgen verketten|  
+|[Compilerfehler C2309](compiler-error-c2309.md)|Catch-Handler erwartet eine Ausnahmedeklaration|  
+|[Compilerfehler C2310](compiler-error-c2310.md)|Catch-Handler müssen einen Typ angeben.|  
 |[Compilerfehler C2311](compiler-error-c2311.md)|"*Typ*": wurde aufgefangen durch "..." in Zeile *Anzahl*|  
 |[Compilerfehler C2312](compiler-error-c2312.md)|"*Typ1*": wurde aufgefangen durch "*Typ2*" in Zeile *Anzahl*|  
 |[Compilerfehler C2313](compiler-error-c2313.md)|"*Typ1*": wurde aufgefangen durch Verweis ('*Typ2*") in Zeile *Anzahl*|  
@@ -130,7 +113,7 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C2327](compiler-error-c2327.md)|"*Bezeichner*": ist kein Typname, statischen oder Enumerator|  
 |Compilerfehler Fehler C2328|"*Schlüsselwort*': Schlüsselwort wird noch nicht unterstützt.|  
 |Compilerfehler Fehler C2329|"*Bezeichner*": __ptr64 für Zeiger auf Funktionen nicht verfügbar.|  
-|Compilerfehler Fehler C2330|"implementation_key( )" ist nur in einem Bereich gültig, der durch #pragma start_map_region/stop_map_region eingeschlossen ist|  
+|Compilerfehler Fehler C2330|"Implementation_key ()" ist nur gültig, in einer Region durch #pragma Start_map_region/stop_map_region eingeschlossen ist|  
 |Compilerfehler Fehler C2331|der Zugriff auf "*Bezeichner*"jetzt als"*accessibility1*", es wurde zuvor definiert, um werden"*accessibility2*"|  
 |[Compilerfehler C2332](compiler-error-c2332.md)|"*Typedef*": fehlende Tagname|  
 |[Compilerfehler C2333](compiler-error-c2333.md)|"*Funktion*": Fehler in Funktionsdeklaration; Funktionsrumpf überspringen|  
@@ -142,7 +125,7 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |Compilerfehler Fehler C2339|"*Bezeichner*': Unzulässiger Typ in eingebetteter IDL|  
 |Compilerfehler Fehler C2340|"*Bezeichner*": "static" kann nur innerhalb einer Klassendefinition verwendet werden|  
 |[Compilerfehler C2341](compiler-error-c2341.md)|"*Abschnitt*': Segment muss definiert werden, mithilfe von #pragma Data_seg, Code_seg oder vorherigen Abschnitt verwendet|  
-|Compilerfehler Fehler C2342|Syntaxfehler: Typqualifizierer stehen in Konflikt|  
+|Compilerfehler Fehler C2342|Syntaxfehler: Typqualifizierer|  
 |Compilerfehler Fehler C2343|"*Abschnitt*": Abschnittsattribute|  
 |[Compilerfehler C2344](compiler-error-c2344.md)|align (*Anzahl*): Ausrichtung muss eine Potenz von zwei sein|  
 |[Compilerfehler C2345](compiler-error-c2345.md)|align (*Anzahl*): Ungültiger Ausrichtungswert|  
@@ -151,12 +134,12 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C2348](compiler-error-c2348.md)|"*Typ*": ist kein Aggregat im C-Format und kann nicht in eingebettete IDL exportiert werden|  
 |[Compilerfehler C2349](compiler-error-c2349.md)|"*Funktion*" kann nicht als verwaltet kompiliert werden: "*Erklärung*"; verwenden Sie nicht verwaltete #pragma|  
 |[Compilerfehler C2350](compiler-error-c2350.md)|"*Bezeichner*' ist kein statischer Member|  
-|[Compilerfehler C2351](compiler-error-c2351.md)|Veraltete Syntax für die Initialisierung eines C++-Konstruktors|  
+|[Compilerfehler C2351](compiler-error-c2351.md)|Veraltete Initialisierungssyntax für C++-Konstruktor|  
 |[Compilerfehler C2352](compiler-error-c2352.md)|"*Bezeichner*': Unzulässiger Aufruf einer nicht statischen Memberfunktion|  
 |[Compilerfehler C2353](compiler-error-c2353.md)|Ausnahmespezifikation ist nicht zulässig.|  
 |Compiler-Fehler C2354 generiert|Veraltet.|  
-|[Compilerfehler C2355](compiler-error-c2355.md)|"this": Nur innerhalb nicht statischer Memberfunktionen verfügbar oder nicht statischer Datenmemberinitialisierer verfügbar.|  
-|[Compilerfehler C2356](compiler-error-c2356.md)|Initialisierungssegment darf während der Übersetzungseinheit nicht geändert werden|  
+|[Compilerfehler C2355](compiler-error-c2355.md)|"this": kann nur innerhalb nicht statischer Memberfunktionen oder nicht statische datenmemberinitialisierer verwiesen werden|  
+|[Compilerfehler C2356](compiler-error-c2356.md)|Initialisierungssegment muss während der Übersetzungseinheit nicht geändert.|  
 |[Compilerfehler C2357](compiler-error-c2357.md)|"*Bezeichner*': muss eine Funktion vom Typ"*Typ*"|  
 |Compilerfehler Fehler C2358|"*Bezeichner*': eine statische Eigenschaft kann nicht außerhalb einer Klassendefinition definiert werden|  
 |Compilerfehler Fehler C2359|Veraltet.|  
@@ -200,4 +183,3 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C2397](compiler-error-c2397.md)|Konvertierung von '*Typ1*'to'*Typ2*"ist eine einschränkende Konvertierung erforderlich|  
 |Compilerfehler Fehler C2398|Element "*Anzahl*': Konvertierung von '*Typ1*'to'*Typ2*" ist eine einschränkende Konvertierung erforderlich|  
 |Compilerfehler Fehler C2399|Veraltet.|  
-

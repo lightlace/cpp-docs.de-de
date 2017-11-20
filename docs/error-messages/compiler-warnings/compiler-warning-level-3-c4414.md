@@ -1,34 +1,32 @@
 ---
-title: "Compilerwarnung (Stufe 3) C4414 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4414"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4414"
+title: Compilerwarnung (Stufe 3) C4414 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4414
+dev_langs: C++
+helpviewer_keywords: C4414
 ms.assetid: bc81d3ad-55dc-4a6b-a6f2-ec0ef38347df
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 90644170953976d0fb661f1491b59915d5dd3667
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Compilerwarnung (Stufe 3) C4414
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'Funktion': short\-Sprung zur Funktion konvertiert in near  
+# <a name="compiler-warning-level-3-c4414"></a>Compilerwarnung (Stufe 3) C4414
+'Funktion': short-Sprung zur Funktion konvertiert in near  
   
- short\-Sprünge erzeugen eine kompakte Anweisung, die zu einer Adresse innerhalb eines begrenzten Bereichs der Anweisung verzweigt wird.  Die Anweisung enthält ein short\-Offset, das die Distanz zwischen der Sprung\- und der Zieladresse, d. h. der Funktionsdefinition, darstellt.  Während der Verknüpfung kann eine Funktion verschoben werden oder Link\-Time\-Optimierungen unterliegen, wodurch die Funktion aus dem von einem short\-Offset erreichbaren Bereich verschoben wird.  Der Compiler muss einen speziellen Datensatz für den Sprung erzeugen. Der Sprung erfordert, dass die jmp\-Anweisung entweder NEAR oder FAR ist.  Die Konvertierung wurde vom Compiler durchgeführt.  
+ Kurze Sprünge erzeugen compact Anweisung, welche in eine Adresse in einen begrenzten Bereich von der Anweisung Verzweigungen. Die Anweisung enthält einen kurze Offset, der den Abstand zwischen den Sprung und die Zieladresse der Definition der Funktion darstellt. Während der Verknüpfung möglicherweise eine Funktion verschoben werden oder Link-Time-Optimierungen, die dazu führen, dass die Funktion außerhalb des Bereichs erreichbar aus einem kurzen Offset verschoben werden. Der Compiler muss einen speziellen Datensatz für den Sprung generieren erfordert die Anweisung jmp NAHER oder ganz sein. Der Compiler versucht, die Konvertierung.  
   
- Der folgende Code generiert z. B. C4414:  
+ Im folgende Code wird z. B. C4414 generiert:  
   
 ```  
 // C4414.cpp  

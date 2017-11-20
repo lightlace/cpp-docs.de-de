@@ -1,80 +1,81 @@
 ---
-title: "Accelerator Keys (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.bitmap"
-  - "vc.editors.icon"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "accelerator keys"
-  - "Image editor [C++], accelerator keys"
+title: "Zugriffstasten (Bildbearbeitung für Symbole) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.editors.bitmap
+- vc.editors.icon
+dev_langs: C++
+helpviewer_keywords:
+- accelerator keys
+- Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4eb2440602fefbbd2f42cbdde3f56745777e8e02
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Accelerator Keys (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Im Folgenden sind die Zugriffstasten für die Befehle des Grafik\-Editors aufgeführt, die standardmäßig an Tasten gebunden sind.  Um die Zugriffstasten zu ändern, klicken Sie im Menü **Extras** auf **Optionen**, und wählen anschließend unter dem Ordner **Umgebung** die Option **Tastatur** aus.  Weitere Informationen hierzu finden Sie unter [Identifizieren und Anpassen von Tastenkombinationen](../Topic/Identifying%20and%20Customizing%20Keyboard%20Shortcuts%20in%20Visual%20Studio.md).  
+# <a name="accelerator-keys-image-editor-for-icons"></a>Zugriffstasten (Bildbearbeitung für Symbole)
+Im folgenden sind die Zugriffstasten für den Bild-Editor-Befehle, die Schlüssel standardmäßig gebunden sind. Um Zugriffstasten zu ändern, klicken Sie auf **Optionen** auf die **Tools** Menü, und wählen Sie dann **Tastatur** unter der **Umgebung** Ordner. Weitere Informationen finden Sie unter [Identifizieren und Anpassen von Tastenkombinationen in Visual Studio](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).  
   
 > [!NOTE]
->  Die in einem Dialogfeld verfügbaren Optionen sowie die Namen und Positionen der angezeigten Menübefehle können sich je nach den persönlichen aktiven Einstellungen oder der verwendeten Version von den in der Hilfe beschriebenen Optionen unterscheiden.  Wählen Sie im Menü **Extras** die Option **Einstellungen importieren und exportieren** aus, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](assetId:///22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Die in einem Dialogfeld verfügbaren Optionen sowie die Namen und Positionen der angezeigten Menübefehle können sich je nach den persönlichen aktiven Einstellungen oder der verwendeten Version von den in der Hilfe beschriebenen Optionen unterscheiden. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-|Befehl|Schlüssel|Beschreibung|  
-|------------|---------------|------------------|  
-|Image.AirBrushTool|STRG\+A|Zeichnet einen Airbrusheffekt mit der ausgewählten Größe und Farbe.|  
-|Image.BrushTool|STRG \+ B|Zeichnet mit einem Pinsel der ausgewählten Form, Größe und Farbe.|  
-|Image.CopyAndOutlineSelection|STRG\+UMSCHALT\+U|Erstellt eine Kopie der aktuellen Auswahl und versieht sie mit einer Umrisslinie.  Wenn die Hintergrundfarbe in der aktuellen Auswahl enthalten ist, wird sie bei Verwendung einer [transparenten](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md) Farbe von der Auswahl ausgeschlossen.|  
-|Image.DrawOpaque|STRG\+J|Stellt die aktuelle Auswahl entweder [deckend oder transparent](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md) dar.|  
-|Image.EllipseTool|STRG\+P|Zeichnet eine Ellipse mit der ausgewählten Linienstärke und Farbe.|  
-|Image.EraserTool|STRG\+UMSCHALT\+I|Entfernt einen Teil des Bildes \(unter Verwendung der aktuellen Hintergrundfarbe\).|  
-|Image.FilledEllipseTool|STRG\+UMSCHALT\+ALT\+P|Zeichnet eine ausgefüllte Ellipse.|  
-|Image.FilledRectangleTool|STRG\+UMSCHALT\+ALT\+R|Zeichnet ein ausgefülltes Rechteck.|  
-|Image.FilledRoundRectangleTool|STRG\+UMSCHALT\+ALT\+W|Zeichnet ein ausgefülltes, abgerundetes Rechteck.|  
-|Image.FillTool|STRG \+ F|Füllt einen Bereich.|  
-|Image.FlipHorizontal|STRG\+H|Kippt das Bild oder die Markierung horizontal.|  
-|Image.FlipVertical|UMSCHALT\+ALT\+H|Kippt das Bild oder die Auswahl vertikal.|  
-|Image.LargerBrush|STRG\+\=|Erhöht die Pinselgröße in jede Richtung um ein Pixel.  Um die Pinselgröße zu verringern, siehe "Image.SmallerBrush" in dieser Tabelle.|  
-|Image.LineTool|STRG\+L|Zeichnet eine gerade Linie von der ausgewählten Form, Größe und Farbe.|  
-|Image.MagnificationTool|STRG \+ M|Aktiviert das Tool **Vergrößern**, mit dem bestimmte Bildbereiche vergrößert werden können.|  
-|Image.Magnify|STRG\+UMSCHALT\+M|Schaltet zwischen der aktuellen Vergrößerung und dem Vergrößerungsfaktor 1:1 um.|  
-|Image.NewImageType|EINFG|Öffnet das [Dialogfeld "Neuer \<Gerät\> Bildtyp"](../mfc/new-device-image-type-dialog-box-image-editor-for-icons.md), in dem Sie ein Bild für einen anderen Bildtyp erstellen können.|  
-|Image.NextColor|STRG\+\]<br /><br /> \- oder \-<br /><br /> STRG\+NACH\-RECHTS|Wechselt von der zum Zeichnen verwendeten Vordergrundfarbe zur nächsten Palettenfarbe.|  
-|Image.NextRightColor|STRG\+UMSCHALT\+\]<br /><br /> \- oder \-<br /><br /> UMSCHALT\+STRG\+NACH\-RECHTS|Wechselt von der zum Zeichnen verwendeten Hintergrundfarbe zur nächsten Palettenfarbe.|  
-|Image.OutlinedEllipseTool|UMSCHALT\+ALT\+P|Zeichnet eine ausgefüllte Ellipse mit einem Rand.|  
-|Image.OutlinedRectangleTool|UMSCHALT\+ALT\+R|Zeichnet ein ausgefülltes Rechteck mit einem Rand.|  
-|Image.OutlinedRoundRectangleTool|UMSCHALT\+ALT\+W|Zeichnet ein ausgefülltes, abgerundetes Rechteck mit einem Rand.|  
-|Image.PencilTool|STRG\+I|Zeichnet mit einem Stift von einem Pixel Breite.|  
-|Image.PreviousColor|STRG\+\[<br /><br /> \- oder \-<br /><br /> STRG\+NACH\-LINKS|Wechselt von der zum Zeichnen verwendeten Vordergrundfarbe zur vorherigen Palettenfarbe.|  
-|Image.PreviousRightColor|STRG\+UMSCHALT\+\[<br /><br /> \- oder \-<br /><br /> UMSCHALT\+STRG\+NACH\-LINKS|Wechselt von der zum Zeichnen verwendeten Hintergrundfarbe zur vorherigen Palettenfarbe.|  
-|Image.RectangleSelectionTool|UMSCHALT\+ALT\+S|Wählt einen rechteckigen Bildbereich zum Verschieben, Kopieren oder Bearbeiten aus.|  
-|Image.RectangleTool|ALT\+R|Zeichnet ein Rechteck mit der ausgewählten Linienstärke und Farbe.|  
-|Image.Rotate90Degrees|STRG\+UMSCHALT\+H|Dreht das Bild oder die Auswahl um 90 Grad.|  
-|Image.RoundedRectangleTool|ALT\+W|Zeichnet ein abgerundetes Rechteck mit der ausgewählten Linienstärke und Farbe.|  
-|Image.ShowGrid|STRG\+ALT\+S|Wechselt zwischen der Pixelrasteroption \(aktiviert oder deaktiviert die Option **Pixelraster** im [Dialogfeld "Rastereinstellungen"](../mfc/grid-settings-dialog-box-image-editor-for-icons.md)\).|  
-|Image.ShowTileGrid|STRG\+UMSCHALT\+ALT\+S|Wechselt zwischen der Grobrasteroption \(aktiviert oder deaktiviert die Option **Grobraster** im [Dialogfeld "Rastereinstellungen"](../mfc/grid-settings-dialog-box-image-editor-for-icons.md)\).|  
-|Image.SmallBrush|STRG\+.  \(Punkt\)|Reduziert die Pinselgröße auf 1 Pixel.  \(Siehe auch "Image.LargerBrush" und "Image.SmallerBrush" in dieser Tabelle.\)|  
-|Image.SmallerBrush|STRG\+\- \(Minus\)|Verringert die Pinselgröße in jede Richtung um ein Pixel.  Um die Pinselgröße wieder zu erhöhen, siehe "Image.LargerBrush" in dieser Tabelle.|  
-|Image.TextTool|STRG\+T|Öffnet das [Dialogfeld "Texttool"](../mfc/text-tool-dialog-box-image-editor-for-icons.md).|  
-|Image.UseSelectionAsBrush|STRG\+U|Zeichnet unter Verwendung der aktuellen Markierung als Pinsel.|  
-|Image.ZoomIn|STRG\+UMSCHALT\+.  \(Punkt\)<br /><br /> \- oder \-<br /><br /> STRG\+NACH\-OBEN|Erhöht den Vergrößerungsfaktor für die aktuelle Ansicht.|  
-|Image.ZoomOut|STRG\+, \(Komma\)<br /><br /> \- oder \-<br /><br /> STRG\+NACH\-UNTEN|Verringert den Vergrößerungsfaktor für die aktuelle Ansicht.|  
+|Befehl|Tasten|Beschreibung|  
+|-------------|----------|-----------------|  
+|Image.AirBrushTool|STRG + A|Zeichnet einen Airbrusheffekt mit der ausgewählten Größe und Farbe.|  
+|Image.BrushTool|STRG + B|Zeichnet einen Pinsel mit der ausgewählten Form, Größe und Farbe.|  
+|Image.CopyAndOutlineSelection|STRG + UMSCHALT + U|Erstellt eine Kopie der aktuellen Auswahl und versieht sie mit einer Umrisslinie. Wenn die Hintergrundfarbe in der aktuellen Auswahl enthalten ist, es wird ausgeschlossen haben [transparent](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md) ausgewählten.|  
+|Image.DrawOpaque|STRG + J|Stellt die aktuelle Auswahl entweder [undurchsichtig oder transparent](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).|  
+|Image.EllipseTool|STRG + P|Zeichnet eine Ellipse mit der ausgewählten Zeile Breite und Farbe.|  
+|Image.EraserTool|STRG + UMSCHALT + I|Löscht einen Teil des Bilds (mit der aktuellen Hintergrundfarbe).|  
+|Image.FilledEllipseTool|STRG + UMSCHALT + ALT + P|Zeichnet eine ausgefüllte Ellipse.|  
+|Image.FilledRectangleTool|STRG + UMSCHALT + ALT + R|Zeichnet ein ausgefülltes Rechteck.|  
+|Image.FilledRoundRectangleTool|STRG + UMSCHALT + ALT + W|Zeichnet ein ausgefülltes, abgerundetes Rechteck.|  
+|Image.FillTool|STRG + F|Füllt einen Bereich.|  
+|Image.FlipHorizontal|STRG+H|Kippt das Bild oder die Markierung horizontal.|  
+|Image.FlipVertical|UMSCHALT + ALT + H|Kippt das Bild oder die Auswahl vertikal.|  
+|Image.LargerBrush|STRG + =|Erhöht die Pinselgröße in jede Richtung um ein Pixel. Um die Pinselgröße zu verringern, siehe "Image.SmallerBrush" in dieser Tabelle.|  
+|Image.LineTool|STRG+L|Zeichnet eine gerade Linie von der ausgewählten Form, Größe und Farbe.|  
+|Image.MagnificationTool|STRG + M|Aktiviert die **Magnify** Tool, das Ihnen ermöglicht, die bestimmte Abschnitte des Bilds zu vergrößern.|  
+|Image.Magnify|STRG + UMSCHALT + M|Schaltet zwischen der aktuellen Vergrößerung und dem Vergrößerungsfaktor 1:1 um.|  
+|Image.NewImageType|EINFÜGEN|Startet die [neu \<Gerät > Dialogfeld Bildtyp](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md) mit dem Sie ein Bild für ein anderes Bild erstellen können.|  
+|Image.NextColor|STRG +]<br /><br /> - oder -<br /><br /> STRG + NACH-RECHTS|Wechselt von der zum Zeichnen verwendeten Vordergrundfarbe zur nächsten Palettenfarbe.|  
+|Image.NextRightColor|STRG + UMSCHALT +]<br /><br /> - oder -<br /><br /> UMSCHALT + STRG + NACH-RECHTS|Wechselt von der zum Zeichnen verwendeten Hintergrundfarbe zur nächsten Palettenfarbe.|  
+|Image.OutlinedEllipseTool|UMSCHALT + ALT + P|Zeichnet eine ausgefüllte Ellipse mit einem Rand.|  
+|Image.OutlinedRectangleTool|UMSCHALT + ALT + R|Zeichnet ein ausgefülltes Rechteck mit einem Rand.|  
+|Image.OutlinedRoundRectangleTool|UMSCHALT + ALT + W|Zeichnet ein ausgefülltes, abgerundetes Rechteck mit einem Rand.|  
+|Image.PencilTool|STRG + I|Zeichnet mit einem Stift von einem Pixel Breite.|  
+|Image.PreviousColor|STRG + [<br /><br /> - oder -<br /><br /> STRG + NACH-LINKS|Wechselt von der zum Zeichnen verwendeten Vordergrundfarbe zur vorherigen Palettenfarbe.|  
+|Image.PreviousRightColor|STRG + UMSCHALT + [<br /><br /> - oder -<br /><br /> UMSCHALT + STRG + NACH-LINKS|Wechselt von der zum Zeichnen verwendeten Hintergrundfarbe zur vorherigen Palettenfarbe.|  
+|Image.RectangleSelectionTool|UMSCHALT + ALT + S|Wählt einen rechteckigen Teil des Bilds zum Verschieben, kopieren oder zu bearbeiten.|  
+|Image.RectangleTool|ALT + R|Zeichnet ein Rechteck mit der ausgewählten Zeile Breite und Farbe.|  
+|Image.Rotate90Degrees|STRG + UMSCHALT + H|Dreht das Bild oder die Auswahl um 90 Grad.|  
+|Image.RoundedRectangleTool|ALT + W|Zeichnet ein abgerundetes Rechteck mit der ausgewählten Zeile Breite und Farbe.|  
+|Image.ShowGrid|STRG + ALT + S|Schaltet die Pixelraster (aktiviert oder deaktiviert die **Pixelraster** -Option in der [Rastereinstellungen (Dialogfeld)](../windows/grid-settings-dialog-box-image-editor-for-icons.md)).|  
+|Image.ShowTileGrid|STRG + UMSCHALT + ALT + S|Schaltet die Kachel-Raster (aktiviert oder deaktiviert die **Kachel Raster** -Option in der [Rastereinstellungen (Dialogfeld)](../windows/grid-settings-dialog-box-image-editor-for-icons.md)).|  
+|Image.SmallBrush|STRG +. (Punkt)|Reduziert die **Pinsel** auf 1 Pixel. (Siehe auch "Image.LargerBrush" und "Image.SmallerBrush" in dieser Tabelle.)|  
+|Image.SmallerBrush|STRG + – (minus)|Verringert die Pinselgröße in jede Richtung um ein Pixel. Um die Pinselgröße wieder zu erhöhen, siehe "Image.LargerBrush" in dieser Tabelle.|  
+|Image.TextTool|STRG + T|Öffnet die [Texttool (Dialogfeld)](../windows/text-tool-dialog-box-image-editor-for-icons.md).|  
+|Image.UseSelectionAsBrush|STRG + U|Zeichnet unter Verwendung der aktuellen Markierung als Pinsel.|  
+|Image.ZoomIn|STRG + UMSCHALT +. (Punkt)<br /><br /> - oder -<br /><br /> STRG + NACH-OBEN|Erhöht den Vergrößerungsfaktor für die aktuelle Ansicht.|  
+|Image.ZoomOut|STRG +, (Komma)<br /><br /> - oder -<br /><br /> STRG + NACH-UNTEN-TASTE|Verringert den Vergrößerungsfaktor für die aktuelle Ansicht.|  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](https://msdn.microsoft.com/library/f45fce5x.aspx) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](https://msdn.microsoft.com/library/xbx3z216.aspx). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
-## Anforderungen  
- None  
+## <a name="requirements"></a>Anforderungen  
+ Keine  
   
-## Siehe auch  
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>Siehe auch  
+ [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)
+

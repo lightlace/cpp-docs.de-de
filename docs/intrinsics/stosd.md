@@ -1,69 +1,68 @@
 ---
-title: "__stosd | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__stosd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "stosd-Anweisung"
-  - "rep stosd-Anweisung"
-  - "__stosd (systemintern)"
+title: __stosd | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __stosd
+dev_langs: C++
+helpviewer_keywords:
+- stosd instruction
+- rep stosd instruction
+- __stosd intrinsic
 ms.assetid: 03104247-1cea-49f6-b6f8-287917bf5680
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a489531113ce17cee28414a07662114e58a61341
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# __stosd
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft\-spezifisch**  
+# <a name="stosd"></a>__stosd
+**Microsoft-spezifisch**  
   
- Generiert eine Speicherung von Zeichenfolgen Statement \(`rep stosd`\).  
+ Generiert eine Store-Zeichenfolge-Anweisung (`rep stosd`).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-void __stosd(   
-   unsigned long* Dest,   
-   unsigned long Data,   
-   size_t Count   
+void __stosd(   
+   unsigned long* Dest,   
+   unsigned long Data,   
+   size_t Count   
 );  
 ```  
   
-#### Parameter  
- \[out\] `Dest`  
+#### <a name="parameters"></a>Parameter  
+ [out] `Dest`  
  Das Ziel des Vorgangs.  
   
- \[in\] `Data`  
- Die zu speichernden Daten.  
+ [in] `Data`  
+ Die Daten zu speichern.  
   
- \[in\] `Count`  
- Die Länge des Blocks zu schreibende der Doppelworte.  
+ [in] `Count`  
+ Die Länge des Textblocks Doppelwort schreiben.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Intrinsisch|Architektur|  
-|-----------------|-----------------|  
+|Systemintern|Architektur|  
+|---------------|------------------|  
 |`__stosd`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Headerdatei** \<intrin.h\>  
+ **Headerdatei** \<intrin.h >  
   
-## Hinweise  
- Das Ergebnis ist, dass das Doppelwort `Data` in einen Block `Count` Doppelworte an der Speicheradresse geschrieben wird, die durch `Dest`dargestellt wird.  
+## <a name="remarks"></a>Hinweise  
+ Das Ergebnis ist, zeigt das Doppelwort `Data` wird geschrieben, in einen Block von `Count` Doppelwort an der Speicheradresse verweist `Dest`.  
   
- Diese Routine ist als systeminterne Funktion nur verfügbar.  
+ Diese Routine ist nur als systeminterne Funktion verfügbar.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // stosd.c  
@@ -88,8 +87,11 @@ printf_s( "%u %u %u %u",
 }  
 ```  
   
-  **0 99999 99999 0**   
-## Microsoft ENDES bestimmten  
+```Output  
+0 99999 99999 0  
+```  
   
-## Siehe auch  
+**Ende Microsoft-spezifisch**  
+  
+## <a name="see-also"></a>Siehe auch  
  [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

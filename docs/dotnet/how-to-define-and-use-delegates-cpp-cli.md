@@ -1,37 +1,37 @@
 ---
-title: "Gewusst wie: Definieren und Verwenden von Delegaten (C++/CLI)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Delegaten"
+title: 'Vorgehensweise: definieren und Verwenden von Delegaten (C + c++ / CLI) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: delegates
 ms.assetid: 1cdf3420-89c1-47c0-b796-aa984020e0f8
-caps.latest.revision: 13
-caps.handback.revision: "11"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 22483b1b1e90c406d1a2f6bd1731f15008b58daa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Gewusst wie: Definieren und Verwenden von Delegaten (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In diesem Artikel wird gezeigt, wie Delegaten in [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)] definiert und verwendet.  
+# <a name="how-to-define-and-use-delegates-ccli"></a>Gewusst wie: Definieren und Verwenden von Delegaten (C++/CLI)
+In diesem Artikel wird gezeigt, wie zum Definieren und Verarbeiten von Delegaten in c++ / CLI.  
   
- Obwohl .NET Framework verschiedene Delegaten enthält, manchmal müssen Sie möglicherweise neue Delegaten definieren.  
+ Obwohl .NET Framework eine Anzahl von Delegaten enthält, können manchmal müssen Sie neue Delegaten definieren.  
   
- Das folgende Codebeispiel definiert einen Delegaten, die `MyCallback` genannt wird.  Die Ereignisbehandlungscode\-dfunktion, die aufgerufen wird, wenn dieser neue Delegat ist, ausgelöste\-muss einen Rückgabetyp verfügen `void` und <xref:System.String> einen Verweis verwenden.  
+ Das folgende Codebeispiel definiert einen Delegaten mit dem Namen `MyCallback`. Den Ereignisbehandlungscode – die Funktion, die aufgerufen wird, wenn diese neuen Delegaten ausgelöst wird – benötigen einen Rückgabetyp von `void` und ergreifen Sie eine <xref:System.String> Verweis.  
   
- Die Hauptfunktion verwendet eine statische Methode, die von `SomeClass` definiert wird, um den Delegaten `MyCallback` zu instanziieren.  Der Delegat wird anschließend eine alternative Methode zum Aufrufen dieser Funktion, wie dargestellt, indem einzelne" die "Zeichenfolge zum Delegatobjekt sendet.  Nachfolgende, zusätzliche Instanzen von `MyCallback` werden zusammen verknüpft ausgeführt und anschließend durch einen Aufruf an Delegatobjekt.  
+ Die main-Funktion verwendet eine statische Methode, die von definiert ist `SomeClass` zum Instanziieren der `MyCallback` delegieren. Der Delegat wird dann eine alternative Methode zum Aufrufen dieser Funktion, wie durch die Zeichenfolge "einfach" senden, um das Delegatobjekt veranschaulicht. Weiter, zusätzliche Instanzen von `MyCallback` miteinander verknüpft sind, und klicken Sie dann durch einen Aufruf des Delegaten-Objekts ausgeführt.  
   
 ```  
-// use_delegate.cpp  
+  
+      // use_delegate.cpp  
 // compile with: /clr  
 using namespace System;  
   
@@ -84,11 +84,15 @@ int main( )
   
  **Ausgabe**  
   
-  **statisches SomeClass::Func \- sondern Sie aus**  
-**statisches SomeClass::Func \- verkettet**  
-**statisches SomeClass::Func \- verkettet**  
-**OtherClass::Method \- verkettet, numerische \= 99**  
-**OtherClass::Method \- verkettet, numerische \= 100** Das folgende Codebeispiel zeigt, wie ein Delegat mit einem Member einer Werteklasse zuordnet.  
+```Output  
+static SomeClass::Func - single  
+static SomeClass::Func - chained  
+static SomeClass::Func - chained  
+OtherClass::Method - chained, num = 99  
+OtherClass::Method - chained, num = 100  
+```  
+  
+ Im nächste Codebeispiel wird gezeigt, wie ein Delegat mit einem Member einer Wertklasse zugeordnet.  
   
 ```  
 // mcppv2_del_mem_value_class.cpp  
@@ -115,10 +119,13 @@ int main() {
   
  **Ausgabe**  
   
-  **Testen**  
-**Testen**   
-## Wie Sie Delegaten erstellt  
- Sie können den Operator "`-`" verwenden, um einen Mithilfe von einem zusammengesetzten Delegaten entfernen.  
+```Output  
+test  
+test  
+```  
+  
+## <a name="how-to-compose-delegates"></a>Gewusst wie: Erstellen von Delegaten  
+ Sie können die "`-`" Operator, um einen Delegaten für die Komponente aus einem zusammengesetzten Delegaten zu entfernen.  
   
 ```  
 // mcppv2_compose_delegates.cpp  
@@ -158,19 +165,22 @@ int main() {
   
  **Ausgabe**  
   
-  **Aufrufen von Delegaten auf:**  
-**Hello\!, A**  
-**Aufrufen von Delegaten b:**  
- **goodbye, B\!**  
-**Aufrufen von Delegaten c:**  
-**Hello\!, C**  
- **goodbye, C\!**  
-**Aufrufen von Delegaten d:**  
- **goodbye, D\!**   
-## Führen Sie ein delegate^ an eine systemeigene Funktion, die einen Funktionszeiger erwartet  
- Von einer verwalteten Komponente können Sie eine systemeigene Funktion mit Funktionszeigerparametern aufrufen, in denen systemeigene Funktion die Memberfunktion des verwalteten Delegaten der Komponente dann aufrufen kann.  
+```Output  
+Invoking delegate a:  
+Hello, A!  
+Invoking delegate b:  
+  Goodbye, B!  
+Invoking delegate c:  
+Hello, C!  
+  Goodbye, C!  
+Invoking delegate d:  
+  Goodbye, D!  
+```  
   
- Dieses Beispiel erstellt die DLL\-, der die systemeigene Funktion exportiert:  
+## <a name="pass-a-delegate-to-a-native-function-that-expects-a-function-pointer"></a>Übergeben eines Delegaten ^ an eine native Funktion, die einen Funktionszeiger erwartet  
+ In einer verwalteten Komponente können Sie eine systemeigene Funktion mit Zeigerparametern aufrufen, in denen kann die systemeigene Funktion klicken Sie dann die Member-Funktion, die verwaltete Komponente Delegaten aufrufen.  
+  
+ Dieses Beispiel erstellt die DLL-Datei, die von der systemeigenen Funktion exportiert:  
   
 ```  
 // delegate_to_native_function.cpp  
@@ -184,7 +194,7 @@ extern "C" {
 }  
 ```  
   
- Im folgenden Beispiel wird die .dll und übergibt ein Delegathandle die systemeigene Funktion, die einen Funktionszeiger erwartet.  
+ Im nächste Beispiel nutzt die DLL-Datei und übergibt einen Delegaten-Handle an die systemeigene Funktion, die einen Funktionszeiger erwartet.  
   
 ```  
 // delegate_to_native_function_2.cpp  
@@ -212,9 +222,12 @@ int main() {
   
  **Ausgabe**  
   
-  **Aufruf zur verwalteten Funktion**   
-## So Delegaten mit nicht verwalteten Funktionen zuordnen  
- Um einen Delegaten mit einer systemeigenen Funktion zuordnen, müssen Sie die systemeigene Funktion in einem verwalteten Typ umschließen und die durch `PInvoke` aufgerufen werden Funktion deklarieren.  
+```Output  
+Call to Managed Function  
+```  
+  
+## <a name="to-associate-delegates-with-unmanaged-functions"></a>Zuordnen von Delegaten zu nicht verwalteten Funktionen  
+ Um einen Delegaten mit einer systemeigenen Funktion zuzuordnen, müssen Sie die systemeigene Funktion in einem verwalteten Typ umschließen und deklarieren Sie die Funktion über aufzurufende `PInvoke`.  
   
 ```  
 // mcppv2_del_to_umnangd_func.cpp  
@@ -252,21 +265,24 @@ int main() {
   
  **Ausgabe**  
   
-  **Hello**   
-## So fügen Sie ungebundene Delegaten verwenden  
- Sie können einem ungebundenen Delegaten, um eine Instanz des Typs zu übergeben, dessen Funktion Sie aufrufen möchten, wenn der Delegat aufgerufen wird.  
+```Output  
+hello  
+```  
   
- Ungebundene Delegaten sind besonders nützlich, wenn Sie die Objekte in einer Auflistung\-durch die Verwendung von [for each, in](../dotnet/for-each-in.md) durchlaufen Schlüsselwort\- und eine Memberfunktion auf jeder Instanz aufrufen möchten.  
+## <a name="to-use-unbound-delegates"></a>Verwenden Sie nicht gebundene Delegate  
+ Sie können einen ungebundenen Delegaten verwenden, Übergabe eine Instanz des Typs, dessen Funktion aufgerufen wird, wenn der Delegat aufgerufen wird.  
   
- Im Folgenden, wie sowohl Ungebunden Delegaten deklariert, instanziiert und aufgerufen wird:  
+ Nicht gebundene Delegate sind besonders nützlich, wenn die Objekte in einer Auflistung durchlaufen werden sollen – mit [für jedes in](../dotnet/for-each-in.md) Schlüsselwörter – eine Memberfunktion für jede Instanz aufgerufen.  
   
-|Aktion|Grenzen\-Delegaten|Ungebundene Delegaten|  
-|------------|------------------------|---------------------------|  
-|Declare|Die Signatur muss mit der Signatur der Funktion übereinstimmen, die Sie über den Delegaten aufrufen möchten.|Der erste Parameter der Delegatsignatur ist der Typ von `this` für das Objekt, das Sie aufrufen möchten.<br /><br /> Nach dem ersten Parameter muss die Delegatsignatur die Signatur der Funktion übereinstimmen, die Sie über den Delegaten aufrufen möchten.|  
-|Instantiate|Wenn Sie einen gebundenen Delegaten instanziiert, können Sie einer Instanzfunktion angeben oder eine globale oder statische Memberfunktion.<br /><br /> Um eine Instanzfunktion anzugeben, ist der erste Parameter eine Instanz des Typs dessen Memberfunktion Sie aufrufen möchten und der zweite Parameter die Adresse der Funktion ist, die Sie aufrufen möchten.<br /><br /> Wenn Sie eine globale oder statische Memberfunktion aufrufen möchten, übergeben Sie einfach den Namen einer globalen Funktion oder Namen der statischen Memberfunktion.|Wenn Sie einem ungebundenen Delegaten instanziiert, übergeben Sie einfach die Adresse der Funktion, die Sie aufrufen möchten.|  
-|Call|Wenn Sie einen gebundenen Delegaten aufrufen, übergeben Sie einfach die Parameter, die von der Delegatsignatur benötigt werden.|Wie ein gebundener Delegat, denken Sie nur daran, dass der erste Parameter eine Instanz des Objekts sein muss, das die Funktion enthält, die, die Sie aufrufen möchten.|  
+ Hier wird erklärt, wie Sie deklarieren, instanziieren und Aufrufen gebunden und ungebundenen Delegaten:  
   
- Dieses Beispiel demonstriert, wie Delegaten deklariert, ungebundene instanziiert und aufgerufen wird:  
+|Aktion|Delegaten gebunden|Nicht gebundene Delegate|  
+|------------|---------------------|-----------------------|  
+|Declare|Die Signatur des Delegaten muss es sich um die Signatur der Funktion übereinstimmen, die durch Delegaten aufgerufen werden soll.|Der erste Parameter von der Signatur des Delegaten ist der Typ des `this` für das Objekt aufgerufen werden soll.<br /><br /> Nach den ersten Parameter muss die Signatur des Delegaten die Signatur der Funktion übereinstimmen, die Sie über den Delegaten aufrufen möchten.|  
+|Instanziieren|Wenn Sie einen gebundenen Delegaten instanziieren, können Sie eine Instanzfunktion oder eine globale oder statische Memberfunktion angeben.<br /><br /> Um eine Instanzfunktion anzugeben, der erste Parameter ist eine Instanz des Typs, dessen Memberfunktion aufgerufen werden soll, und der zweite Parameter ist die Adresse der Funktion, die Sie aufrufen möchten.<br /><br /> Wenn Sie eine globale oder statische Memberfunktion aufrufen möchten, übergeben Sie einfach den Namen einer globalen Funktion oder der Name der statischen Memberfunktion.|Wenn Sie einen ungebundenen Delegaten instanziieren, übergeben Sie einfach die Adresse der Funktion, die Sie aufrufen möchten.|  
+|Call|Wenn Sie einen gebundenen Delegaten aufrufen, übergeben Sie einfach die Parameter, die von der Signatur des Delegaten erforderlich sind.|Identisch mit einer Grenze delegieren, aber beachten Sie, dass der erste Parameter eine Instanz des Objekts sein muss, die die Funktion enthält, die Sie aufrufen möchten.|  
+  
+ Dieses Beispiel veranschaulicht die deklarieren, instanziieren und ungebundene Delegaten aufrufen:  
   
 ```  
 // unbound_delegates.cpp  
@@ -331,16 +347,20 @@ int main() {
   
  **Ausgabe**  
   
-  **2**  
-**3**  
-**2**  
-**3**  
-**2**  
-**7**  
-**8**  
-**7**  
-**8**  
-**7** Das folgende Beispiel zeigt, wie eine ungebundene Delegaten und die Schlüsselwörter [for each, in](../dotnet/for-each-in.md) verwendet, um Objekte in einer Auflistung durchlaufen und eine Memberfunktion auf jeder Instanz aufgerufen.  
+```Output  
+2  
+3  
+2  
+3  
+2  
+7  
+8  
+7  
+8  
+7  
+```  
+  
+ Das nächste Beispiel veranschaulicht die Verwendung von ungebundenen Delegaten und der [für jedes in](../dotnet/for-each-in.md) Schlüsselwörtern, um Objekte in einer Auflistung durchlaufen und eine Memberfunktion für jede Instanz aufrufen.  
   
 ```  
 // unbound_delegates_2.cpp  
@@ -372,7 +392,7 @@ int main() {
 }  
 ```  
   
- Dieses Beispiel stellt einen Delegaten in den ungebundenen Accessorfunktionen einer Eigenschaft erstellt:  
+ Dieses Beispiel erstellt einen ungebundenen Delegaten an eine Eigenschaft Accessor-Funktionen:  
   
 ```  
 // unbound_delegates_3.cpp  
@@ -403,7 +423,11 @@ int main() {
   
  **Ausgabe**  
   
-  **11** Das folgende Beispiel zeigt, wie ein Multicastdelegaten aufruft, in dem eine Instanz gebunden ist und eine Instanz ungebunden ist.  
+```Output  
+11  
+```  
+  
+ Im folgende Beispiel wird gezeigt, wie ein multicast-Delegat aufgerufen wird, in dem eine Instanz gebunden ist und eine Instanz entfernt wird.  
   
 ```  
 // unbound_delegates_4.cpp  
@@ -438,8 +462,12 @@ int main() {
   
  **Ausgabe**  
   
-  **f \(in R\-^ r\)**  
-**in f\(\)** Das folgende Beispiel zeigt, wie Sie einem ungebundenen generischen Delegaten erstellt und aufgerufen wird.  
+```Output  
+in f(R ^ r)  
+in f()  
+```  
+  
+ Im nächste Beispiel veranschaulicht das Erstellen und einen ungebundenen generischen Delegaten aufrufen.  
   
 ```  
 // unbound_delegates_5.cpp  
@@ -478,7 +506,10 @@ int main() {
   
  **Ausgabe**  
   
-  **12**  
-**14**   
-## Siehe auch  
- [delegate](../windows/delegate-cpp-component-extensions.md)
+```Output  
+12  
+14  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [delegate (Komponentenerweiterungen für C++)](../windows/delegate-cpp-component-extensions.md)

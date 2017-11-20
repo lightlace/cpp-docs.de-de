@@ -1,30 +1,28 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4348 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4348"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4348"
+title: Compilerwarnung (Stufe 1) C4348 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4348
+dev_langs: C++
+helpviewer_keywords: C4348
 ms.assetid: 816010eb-6079-48d5-a41b-0fc4d67cfe4c
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ec91b979c6c7e55e7a0d11b486ed62731dbbeecd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Compilerwarnung (Stufe 1) C4348
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'Typ': Neudefinition des Standardparameters: Parameter Nummer  
+# <a name="compiler-warning-level-1-c4348"></a>Compilerwarnung (Stufe 1) C4348
+'Typ': Neudefinition des Standardparameters: Parameternummer  
   
  Ein Vorlagenparameter wurde neu definiert.  
   

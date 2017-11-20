@@ -1,35 +1,34 @@
 ---
-title: "attribute | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.attribute"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__typeof keyword"
-  - "custom attributes, creating"
-  - "attribute attribute"
-  - "attributes [C++], custom"
+title: Attribut | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.attribute
+dev_langs: C++
+helpviewer_keywords:
+- __typeof keyword
+- custom attributes, creating
+- attribute attribute
+- attributes [C++], custom
 ms.assetid: 8cb3489f-65c4-44ea-b0aa-3c3c6b15741d
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6d5233e5b3f2a27fc821c786d99cb3d996e5c039
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# attribute
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ermöglicht es Ihnen, ein benutzerdefiniertes Attribut zu erstellen.  
+# <a name="attribute"></a>Attribut
+Ermöglicht Ihnen die Erstellung ein benutzerdefiniertes Attributs.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -40,34 +39,34 @@ Ermöglicht es Ihnen, ein benutzerdefiniertes Attribut zu erstellen.
 ) ]  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  *AllowOn*  
- Gibt die Sprachelemente auf, in denen das benutzerdefinierte Attribut angewendet werden kann.  Der Standardwert ist **System::AttributeTargets::Alle** \(siehe [System::AttributeTargets](https://msdn.microsoft.com/en-us/library/system.attributetargets.aspx)\).  
+ Gibt die Language-Elemente, die zu denen das benutzerdefinierte Attribut angewendet werden kann. Standardmäßig wird **System::AttributeTargets::All** (siehe [System::AttributeTargets](https://msdn.microsoft.com/en-us/library/system.attributetargets.aspx)).  
   
  `AllowMultiple`  
- Gibt an, ob das benutzerdefinierte Attribut auf ein Konstrukt mehrfach angewendet werden kann.  Der Standardwert ist **FALSE**.  
+ Gibt an, ob das benutzerdefinierte Attribut wiederholt auf ein Konstrukt angewendet werden kann. Standardmäßig wird **"false"**.  
   
  `Inherited`  
- Gibt an, ob das Attribut von Unterklassen geerbt werden soll.  Der Compiler unterstützt keine besondere Unterstützung für diese Funktion. Dies entspricht der Reihenfolge der Attribute für die Reflektion \(z. B.\), die Informationen zu berücksichtigen.  Wenn `Inherited`**TRUE**ist, wird das Attribut geerbt.  Wenn `AllowMultiple`**TRUE**ist, akkumuliert das Attribut auf der abgeleiteten Membern. `AllowMultiple` wenn **FALSE**ist, überschreibt das Attribut \(oder ersetzen\) in der Vererbung.  Wenn `Inherited`**FALSE**ist, wird das Attribut nicht vererbt werden.  Der Standardwert ist **TRUE**.  
+ Gibt an, ob das Attribut von Unterklassen geerbt werden. Der Compiler bietet keine spezielle Unterstützung für diese Funktionalität; Es ist die Aufgabe Consumer Attribut (z. B. Reflektion), um diese Informationen zu berücksichtigen. Wenn `Inherited` ist **"true"**, das Attribut geerbt wird. Wenn `AllowMultiple` ist **"true"**, wird das Attribut für das abgeleitete Element; ansammeln, wenn `AllowMultiple` ist **"false"**, das Attribut wird außer Kraft setzen (oder ersetzen) bei der Vererbung. Wenn `Inherited` ist **"false"**, das Attribut nicht geerbt werden. Standardmäßig wird **"true"**.  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
->  Das `attribute`\-Attribut ist mittlerweile veraltet.  Verwenden des Common Language Runtime\-Attribut System.Attribute direkt zu, um die benutzerdefinierte attirbutes zu erstellen.  Weitere Informationen finden Sie unter [User\-Defined Attributes](../windows/user-defined-attributes-cpp-component-extensions.md).  
+>  Die `attribute` Attribut ist jetzt veraltet.  Verwenden Sie die common Language Runtime-Attribut System.Attribute direkt, um eine benutzerdefinierte Attirbutes zu erstellen.  Weitere Informationen finden Sie unter [benutzerdefinierte Attribute](../windows/user-defined-attributes-cpp-component-extensions.md).  
   
- Sie definieren [benutzerdefiniertes Attribut](../windows/custom-attributes-cpp.md) , indem Sie das `attribute`\-Attribut in einer verwalteten Klasse oder Strukturdefinition platzieren.  Der Name der Klasse ist das benutzerdefinierte Attribut.  Beispiele:  
+ Sie definieren eine [benutzerdefiniertes Attribut](../windows/custom-attributes-cpp.md) platziert die `attribute` Attribut auf eine verwaltete Definition der Klasse oder Struktur. Der Name der Klasse ist das benutzerdefinierte Attribut. Zum Beispiel:  
   
 ```  
 [ attribute(Parameter) ]  
 public ref class MyAttr {};  
 ```  
   
- definiert ein Attribut, das MyAttr aufgerufen wird, das an den Funktionsparametern angewendet werden kann.  Die Klasse muss öffentlich sein, wenn das Attribut in anderen Assemblys verwendet werden soll.  
+ definiert ein Attribut namens MyAttr, der Funktionsparameter übernommen werden kann. Die Klasse muss als öffentlich, wenn das Attribut in anderen Assemblys verwendet werden soll.  
   
 > [!NOTE]
->  Um zu verhindern, dass Konflikte Namespace, beenden alle Attributnamen implizit mit „Attribut“; In diesem Beispiel ist der Name des Attributs ist und die Klasse MyAttrAttribute, aber tatsächlich MyAttr und MyAttrAttribute kann synonym verwendet werden.  
+>  Um zu verhindern, dass die Namespacekonflikte enden Attributnamen implizit mit "Attribut" In diesem Beispiel der Namen des Attributs und der Klasse wird tatsächlich MyAttrAttribute allerdings MyAttr und MyAttrAttribute austauschbar.  
   
- Die öffentlichen Konstruktoren der Klasse definieren die unbenannten Parameter des Attributs.  Überladene Konstruktoren ermöglichen es mehrere Möglichkeiten zum Bereitstellen des Attributs, sodass ein benutzerdefiniertes Attribut, das die folgende Methode definiert ist:  
+ Öffentliche Konstruktoren für die Klasse definieren unbenannte Parameter des Attributs. Überladene Konstruktoren gestatten es mehrere Möglichkeiten, das Attribut anzugeben, damit ein benutzerdefiniertes Attribut, das wie folgt definiert:  
   
 ```  
 // cpp_attr_ref_attribute.cpp  
@@ -87,7 +86,7 @@ ref class ClassA {};   // Attribute with no parameters
 ref class ClassB {};   // Attribute with one parameter  
 ```  
   
- Durch die öffentlichen Datenmember und Eigenschaften Klasse sind die optionalen benannten Parameter des Attributs:  
+ Öffentliche Datenmember und Eigenschaften der Klasse sind optionale benannte Parameter für das Attribut:  
   
 ```  
 // cpp_attr_ref_attribute_2.cpp  
@@ -111,11 +110,11 @@ public:
 ref class ClassC {};  
 ```  
   
- Eine Liste der möglichen Attribut parametertypen finden Sie unter [Benutzerdefinierte Attribute](../windows/custom-attributes-cpp.md).  
+ Eine Liste der möglichen Attributparametertypen, finden Sie unter [benutzerdefinierte Attribute](../windows/custom-attributes-cpp.md).  
   
- Weitere Informationen finden Sie unter [User\-Defined Attributes](../windows/user-defined-attributes-cpp-component-extensions.md) für eine Diskussion ein Attribut zielen.  
+ Finden Sie unter [benutzerdefinierte Attribute](../windows/user-defined-attributes-cpp-component-extensions.md) eine Diskussion zur Attributziele.  
   
- Das `attribute`\-Attribut verfügt über einen `AllowMultiple`\-Parameter, der angibt, ob das custom\-Attribut einzelne Verwendung oder wiederverwendet werden kann \(kann sich in derselben Entität mehrmals angegeben werden\).  
+ Die `attribute` Attribut hat einen `AllowMultiple` Parameter, der angibt, ob das benutzerdefinierte Attribut einzelne verwendet wird oder Multiuse (stehen mehr als einmal auf die gleiche Entität).  
   
 ```  
 // cpp_attr_ref_attribute_3.cpp  
@@ -130,36 +129,36 @@ ref struct MyAttr {
 ref class ClassA {};  
 ```  
   
- Mit benutzerdefinierten Attributklassen sind direkt oder indirekt von <xref:System.ComponentModel.AttributeCollection.#ctor*>abgeleitet, das Attributbeschreibungen in den Metadaten schnell und einfach identifiziert werden können.  Das bedeutet `attribute`\-Attribut vom System::VererbungAttribut, sodass die explizite Ableitungen ist nicht notwendig:  
+ Benutzerdefinierte Attributklassen abgeleitet sind direkt oder indirekt <xref:System.ComponentModel.AttributeCollection.%23ctor%2A>, welche macht Attributdefinitionen in Metadaten schnell und einfach zu identifizieren. Die `attribute` -Attributs impliziert Vererbung von System:: Attribute, damit explizite Ableitung nicht erforderlich ist:  
   
 ```  
 [ attribute(Class) ]  
 ref class MyAttr  
 ```  
   
- der folgenden Syntax:  
+ für die folgende Syntax:  
   
 ```  
 [ attribute(Class) ]  
 ref class MyAttr : System::Attribute   // OK, but redundant.  
 ```  
   
- `attribute` ist ein Alias für <xref:System.AttributeUsageAttribute?displayProperty=fullName> \(nicht AttributeAttribute. Hierbei handelt es sich um eine Ausnahme von der Attribut\-Benennungs die Regel\).  
+ `attribute`ist ein Alias für <xref:System.AttributeUsageAttribute?displayProperty=fullName> (nicht AttributeAttribute; Dies ist eine Ausnahme aus, um das Attribut Benennungsregel).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
-|**Betrifft**|`ref` **Klasse**, **ref\-Struktur**|  
+|**Betrifft**|`ref`**Klasse**, **Referenzstruktur**|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Keine|  
+|**Ungültige Attribute**|Keine|  
   
- Weitere Informationen über das kontexte finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cpp_attr_ref_attribute_4.cpp  
@@ -174,8 +173,8 @@ ref struct ABC {
 ref class MyClass {};  
 ```  
   
-## Beispiel  
- Das `Inherited` benannten Arguments gibt an, ob ein benutzerdefiniertes Attribut, das auf einer Basisklasse angewendete sich auf die Reflektion einer abgeleiteten Klasse veranschaulicht.  
+## <a name="example"></a>Beispiel  
+ Die `Inherited` benanntes Argument gibt an, ob ein benutzerdefiniertes Attribut in einer Basisklasse angewendet werden, auf Reflektion einer abgeleiteten Klasse angezeigt wird.  
   
 ```  
 // cpp_attr_ref_attribute_5.cpp  
@@ -211,7 +210,10 @@ int main() {
 }  
 ```  
   
-  **2**   
-## Siehe auch  
- [Attributes Alphabetical Reference](../windows/attributes-alphabetical-reference.md)   
- [Custom Attributes](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+```Output  
+2  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Alphabetische Attributreferenz](../windows/attributes-alphabetical-reference.md)   
+ [Benutzerdefinierte Attribute](http://msdn.microsoft.com/en-us/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

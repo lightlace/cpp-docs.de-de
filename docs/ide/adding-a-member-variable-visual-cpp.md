@@ -1,67 +1,66 @@
 ---
-title: "Hinzuf&#252;gen einer Membervariablen (Visual C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.classes.member.variable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Membervariablen"
-  - "Membervariablen, Hinzufügen"
+title: "Hinzufügen einer Membervariablen (Visual C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.codewiz.classes.member.variable
+dev_langs: C++
+helpviewer_keywords:
+- member variables, adding
+- member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-caps.latest.revision: 6
-caps.handback.revision: "6"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2722d45da00349c797d6091506fda82a06614d1c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Hinzuf&#252;gen einer Membervariablen (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In der Klassenansicht können Sie einer Klasse eine Membervariable hinzufügen.  Membervariablen sind entweder für den [Datenaustausch und die Datenvalidierung](../mfc/dialog-data-exchange-and-validation.md) bestimmt oder allgemein gebräuchlich.  Der Assistent zum Hinzufügen von Membervariablen wurde speziell zu dem Ziel entwickelt, die relevanten Informationen aufzunehmen und dazu zu verwenden, um Elemente an den geeigneten Stellen in die Quelldateien einzufügen.  Sie können eine Membervariable mithilfe des [Dialog\-Editors](../mfc/dialog-editor.md) in der [Ressourcenansicht](../windows/resource-view-window.md) oder aber in der [Klassenansicht](assetId:///8d7430a9-3e33-454c-a9e1-a85e3d2db925) hinzufügen.  
+# <a name="adding-a-member-variable--visual-c"></a>Hinzufügen einer Membervariablen (Visual C++)
+Sie können eine Membervariable zu einer Klasse mit der Klassenansicht hinzufügen. Membervariablen kann entweder für [Datenaustausch und datenvalidierung](../mfc/dialog-data-exchange-and-validation.md), oder sie können generisch sein. Der Assistent Variablen Member ist speziell für nehmen die relevante Informationen und zum Einfügen von Elementen in den Quelldateien an den entsprechenden Stellen verwenden. Sie können eine Membervariable vom Hinzufügen der [Dialog-Editor](../windows/dialog-editor.md) in [Ressourcenansicht](../windows/resource-view-window.md), oder von [Klassenansicht](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  
   
 > [!NOTE]
->  Beim Entwerfen und Implementieren eines Dialogfelds erscheint es Ihnen möglicherweise effizienter, die Dialogfeld\-Steuerelemente mit dem Dialog\-Editor hinzuzufügen und anschließend die Membervariablen des Steuerelements zu implementieren.  
+>  Beim Entwerfen und implementieren ein Dialogfeld an, Sie es effizienter finden vielleicht, verwenden Sie das Dialogfeld-Editor, um das Dialogfeld-Steuerelemente hinzufügen und anschließend die Steuerelemente Membervariablen zu implementieren.  
   
-### So fügen Sie ein Dialogfeld\-Steuerelement mit dem Assistenten zum Hinzufügen von Membervariablen in der Ressourcenansicht hinzu  
+### <a name="to-add-a-member-variable-for-a-dialog-control-in-resource-view-using-the-add-member-variable-wizard"></a>Hinzufügen eine Membervariablen für Dialogfeldsteuerelement in der Ressourcenansicht Verwendung mit dem Assistenten zum Hinzufügen von Member  
   
-1.  Erweitern Sie in der Ressourcenansicht den Projektknoten und den Dialogknoten, um die Dialogfelder des Projekts aufzulisten.  
+1.  Erweitern Sie in der Ressourcenansicht den Projektknoten, und das Dialogfeld-Knoten, um die Liste der Dialogfelder des Projekts anzuzeigen.  
   
-2.  Doppelklicken Sie auf das Dialogfeld, dem Sie die Membervariable hinzufügen möchten, um es im Dialog\-Editor zu öffnen.  
+2.  Doppelklicken Sie auf das Dialogfeld, zu dem Sie die Membervariable, um sie im Dialog-Editor Öffnen hinzufügen möchten.  
   
-3.  Klicken Sie im Dialogfeld, das im Dialog\-Editor angezeigt wird, mit der rechten Maustaste auf das Steuerelement, dem Sie die Membervariable hinzufügen möchten.  
+3.  Im Dialogfeld im Dialog-Editor angezeigt mit der rechten Maustaste des Steuerelements, zu dem Sie die Membervariable hinzufügen möchten.  
   
-4.  Klicken Sie im Kontextmenü auf **Variable hinzufügen**, um den [Assistenten zum Hinzufügen von Membervariablen](../ide/add-member-variable-wizard.md) aufzurufen.  
+4.  Klicken Sie im Kontextmenü auf **Variable hinzufügen** zum Anzeigen der [Assistenten zum Hinzufügen von Membervariablen](../ide/add-member-variable-wizard.md).  
   
     > [!NOTE]
-    >  Das Feld **Steuerelement\-ID** enthält bereits einen Standardwert.  
+    >  Ein Standardwert ist bereits im bereitgestellt **Kontroll-ID**.  
   
-5.  Geben Sie Informationen in die entsprechenden Assistentenfelder ein.  Weitere Informationen finden Sie unter [Dialogfeld\-Steuerelemente und Variablentypen](../ide/dialog-box-controls-and-variable-types.md).  
+5.  Geben Sie die Informationen in den Dialogfeldern des entsprechenden Assistenten. Finden Sie unter [Dialogfeld-Steuerelemente und Variablentypen](../ide/dialog-box-controls-and-variable-types.md) für Weitere Informationen.  
   
-6.  Klicken Sie auf **Fertig stellen**, um dem Projekt den Definitions\- und Implementierungscode hinzuzufügen und den Assistenten zu schließen.  
+6.  Klicken Sie auf **Fertig stellen** auf das Projekt der Definition und Implementierung Code hinzu, und schließen Sie den Assistenten.  
   
-### So fügen Sie eine Membervariable mit dem Assistenten zum Hinzufügen von Membervariablen in der Klassenansicht hinzu  
+### <a name="to-add-a-member-variable-from-class-view-using-the-add-member-variable-wizard"></a>So fügen Sie eine Membervariable aus Klassenansicht Verwendung mit dem Assistenten zum Hinzufügen von Member hinzu  
   
-1.  Erweitern Sie in der [Klassenansicht](assetId:///8d7430a9-3e33-454c-a9e1-a85e3d2db925) den Projektknoten, um die Projektklassen anzuzeigen.  
+1.  In [Klassenansicht](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), erweitern Sie den Projektknoten, um die Klassen im Projekt anzuzeigen.  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Klasse, der Sie eine Variable hinzufügen möchten.  
+2.  Mit der rechten Maustaste in der Klasse, zu der Sie eine Variable hinzufügen möchten.  
   
-3.  Klicken Sie im Kontextmenü auf **Hinzufügen** und dann auf **Variable hinzufügen**, um den Assistenten zum Hinzufügen von Membervariablen anzuzeigen.  
+3.  Klicken Sie im Kontextmenü auf **hinzufügen**, und klicken Sie dann auf **Variable hinzufügen** den Assistenten zum Hinzufügen von Member angezeigt.  
   
-4.  Geben Sie Informationen in die entsprechenden Assistentenfelder ein.  Ausführliche Informationen finden Sie unter [Assistent zum Hinzufügen von Membervariablen](../ide/add-member-variable-wizard.md).  
+4.  Geben Sie die Informationen in den Dialogfeldern des entsprechenden Assistenten. Finden Sie unter [Assistenten zum Hinzufügen von Membervariablen](../ide/add-member-variable-wizard.md) Details.  
   
-5.  Klicken Sie auf **Fertig stellen**, um dem Projekt den Definitions\- und Implementierungscode hinzuzufügen und den Assistenten zu schließen.  
+5.  Klicken Sie auf **Fertig stellen** auf das Projekt der Definition und Implementierung Code hinzu, und schließen Sie den Assistenten.  
   
-## Siehe auch  
- [Hinzufügen neuer Funktionen mit Code\-Assistenten](../ide/adding-functionality-with-code-wizards-cpp.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Hinzufügen neuer Funktionen mit Code-Assistenten](../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Hinzufügen einer Klasse](../ide/adding-a-class-visual-cpp.md)   
  [Hinzufügen einer Memberfunktion](../ide/adding-a-member-function-visual-cpp.md)   
- [MFC\-Meldungshandler](../mfc/reference/adding-an-mfc-message-handler.md)   
+ [MFC-Meldungshandler](../mfc/reference/adding-an-mfc-message-handler.md)   
  [Navigieren in der Klassenstruktur](../ide/navigating-the-class-structure-visual-cpp.md)

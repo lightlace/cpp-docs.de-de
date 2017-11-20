@@ -1,41 +1,39 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4683 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4683"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4683"
+title: Compilerwarnung (Stufe 1) C4683 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4683
+dev_langs: C++
+helpviewer_keywords: C4683
 ms.assetid: e6e77364-dba1-46dd-ae1d-03da23070bce
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 120da429e4f296b6be1881da806434f7548383ac
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Compilerwarnung (Stufe 1) C4683
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-1-c4683"></a>Compilerwarnung (Stufe 1) C4683
 **'**   
- ***function* ': Die Ereignisquelle hat einen 'Out'\-Parameter. Seien Sie vorsichtig, wenn Sie für mehrere Ereignishandler eine Hookfunktion erstellen**  
+ ***Funktion* ": Ereignisquelle hat einen 'Out'-Parameter, seien Sie äußerst vorsichtig, wenn mehrere Ereignishandler einbinden**  
   
- Wenn eine COM\-Ereignisquelle von mehreren Ereignissenken abgefragt wird, wird der Wert eines Out\-Parameters u. U. ignoriert.  
+ Wenn mehr als eine Ereignissenke auf eine COM-Ereignisquelle abhört, kann der Wert eines Ausgabeparameters ignoriert.  
   
- In den folgenden Situationen treten Speicherverluste auf:  
+ Achten Sie darauf, dass ein Speicherverlust in den folgenden Situationen auftreten:  
   
-1.  Wenn eine Methode einen Out\-Parameter hat, der intern reserviert ist, z. B. BSTR \*.  
+1.  Wenn eine Methode einen Ausgabeparameter, der intern zugeordnet ist besitzt, z. B. einen BSTR *.  
   
-2.  Wenn das Ereignis mindestens zwei Handler hat \(d. h. ein Multicastereignis ist\)  
+2.  Wenn das Ereignis mehrere Ereignishandler (ist ein multicast-Ereignis)  
   
- Die Ursache für den Speicherverlust liegt darin, dass der Out\-Parameter von mindestens zwei Handlern festgelegt, aber nur vom letzten Handler an die Aufrufsite zurückgegeben wird.  
+ Der Grund für den Speicherverlust ist, dass der Out-Parameter, indem mehrere Handler festlegen, doch nur von der letzten Handler zur Aufrufsite zurückgegeben.  
   
  Im folgenden Beispiel wird C4683 generiert:  
   

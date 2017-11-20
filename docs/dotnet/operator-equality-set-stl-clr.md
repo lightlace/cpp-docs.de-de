@@ -1,32 +1,30 @@
 ---
-title: "operator== (set) (STL/CLR)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::operator=="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Operator== Member [STL/CLR]"
+title: Operator == (Set) (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::operator==
+dev_langs: C++
+helpviewer_keywords: operator== member [STL/CLR]
 ms.assetid: 013a0a76-11fa-4fde-8a84-d96e26f56774
-caps.latest.revision: 15
-caps.handback.revision: "13"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b6fc0e8c3ae4f7493559d2e69168197c6fb69ab0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# operator== (set) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Führen Sie dieselben Vergleich auf.  
+# <a name="operator-set-stlclr"></a>operator== (set) (STL/CLR)
+Liste gleich Vergleich.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<typename Key>  
@@ -34,17 +32,17 @@ template<typename Key>
         set<Key>% right);  
 ```  
   
-#### Parameter  
- left  
- Linker Container zu vergleichen.  
+#### <a name="parameters"></a>Parameter  
+ links  
+ Linker zu vergleichender Container.  
   
- right  
- Rechter Container zu vergleichen.  
+ Rechts  
+ Rechter zu vergleichender Container.  
   
-## Hinweise  
- Die Operatorfunktionsrückgaben true, wenn die Sequenzen, die von `left` und `right` gesteuert werden, die gleiche Länge und, für die einzelnen Positionen `i`, `left``[i] ==` `right``[i]`.  Sie verwenden sie, um zu testen, ob `left` wie `right` sortiert wird, wenn die beiden Sätze verglichenes Element durch Element sind.  
+## <a name="remarks"></a>Hinweise  
+ Die Operatorfunktion gibt "true" nur, wenn die Sequenzen von gesteuert `left` und `right` haben die gleiche Länge und für die einzelnen Positionen `i`, `left[i] ==` `right[i]`. Sie verwenden es, um zu testen, ob `left` sortiert wird, ist identisch mit `right` bei die beiden Sätzen verglichenen elementweise sind.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_set_operator_eq.cpp   
@@ -84,19 +82,22 @@ int main()
   
 ```  
   
-  **ein b c**  
- **ein b d**  
-**\[ein b c\] \=\= ist \[ein b c\] erfüllt**  
-**\[ein b c\] \=\= ein b ist \[d\] falsch**   
-## Anforderungen  
- **Header:** \<cliext\/Satz\>  
+```Output  
+ a b c  
+ a b d  
+[a b c] == [a b c] is True  
+[a b c] == [a b d] is False  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Set >  
   
-## Siehe auch  
- [set](../dotnet/set-stl-clr.md)   
- [operator\!\= \(set\)](../dotnet/operator-inequality-set-stl-clr.md)   
- [operator\< \(set\)](../dotnet/operator-less-than-set-stl-clr.md)   
- [operator\>\= \(set\)](../dotnet/operator-greater-or-equal-set-stl-clr.md)   
- [operator\> \(set\)](../dotnet/operator-greater-than-set-stl-clr.md)   
- [operator\<\= \(set\)](../dotnet/operator-less-or-equal-set-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Legen Sie (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [Operator! = (Set) (STL/CLR)](../dotnet/operator-inequality-set-stl-clr.md)   
+ [Operator\< (Set) (STL/CLR)](../dotnet/operator-less-than-set-stl-clr.md)   
+ [Operator > = (Set) (STL/CLR)](../dotnet/operator-greater-or-equal-set-stl-clr.md)   
+ [Operator > (Set) (STL/CLR)](../dotnet/operator-greater-than-set-stl-clr.md)   
+ [operator<= (set) (STL/CLR)](../dotnet/operator-less-or-equal-set-stl-clr.md)

@@ -1,42 +1,41 @@
 ---
-title: "2.5.2 parallel sections Construct"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.5.2 parallel Sections-Konstrukt | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 94220e27-14f8-465c-bd8d-eb960b4b5dee
-caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 086552c72e37822920e0afa213c7966befa052f7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# 2.5.2 parallel sections Construct
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die **parallele Abschnitte**\-Direktive Verknüpfung erstellen ein Formular zum Angeben eines **Ähnlichkeit** Bereichs bereit, der nur einzelne **Abschnitte**\-Direktive enthält.  Die Semantik ist mit **Ähnlichkeit**\-Direktive explizit angeben identisch, die sofort aus **Abschnitte**\-Direktive folgen.  Die Syntax der **parallele Abschnitte**\-Direktive sieht wie folgt aus:  
+# <a name="252-parallel-sections-construct"></a>2.5.2 parallel sections-Konstrukt
+Die **parallel Sections-** Richtlinie stellt eine Verknüpfung Form zum Angeben einer **parallele** mit nur einem einzelnen Region **Abschnitte** Richtlinie. Die Semantik ist identisch mit der Angabe von explizit eine **parallele** Richtlinie unmittelbar gefolgt von einer **Abschnitte** Richtlinie. Die Syntax der **parallel Sections-** Richtlinie lautet wie folgt:  
   
 ```  
 #pragma omp parallel sections  [clause[[,] clause] ...] new-line  
    {  
    [#pragma omp section new-line]  
       structured-block  
-   [#pragma omp section new-line  
-      structured-block  ]  
+   [#pragma omp section new-linestructured-block  ]  
    ...  
 }  
 ```  
   
- Die *Klausel* kann eine der Klauseln sein, die von der **Ähnlichkeit** und **Abschnitte**\-Direktive, mit Ausnahme der **nowait**\-Klausel akzeptiert werden.  
+ Die *Klausel* kann eine der Klauseln, die vom akzeptiert die **parallele** und **Abschnitte** Direktiven, mit Ausnahme der **Nowait** Klausel.  
   
-## Querverweise:  
+## <a name="cross-references"></a>Referenzen:  
   
--   **Ähnlichkeit**\-Direktive finden [Abschnitt 2.3](../../parallel/openmp/2-3-parallel-construct.md) auf Seite 8.  
+-   **Parallele** -Direktive finden Sie unter [Abschnitt 2.3](../../parallel/openmp/2-3-parallel-construct.md) auf Seite "8".  
   
--   **Abschnitte**\-Direktive finden [2.4.2 Abschnitt](../../parallel/openmp/2-4-2-sections-construct.md) auf Seite 14.
+-   **Abschnitte** -Direktive finden Sie unter [Abschnitt 2.4.2](../../parallel/openmp/2-4-2-sections-construct.md) auf Seite "14".

@@ -1,32 +1,30 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4927 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4927"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4927"
+title: Compilerwarnung (Stufe 1) C4927 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4927
+dev_langs: C++
+helpviewer_keywords: C4927
 ms.assetid: 7009e740-a2ef-4130-96ba-482e092f717a
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ef83c97d45a614738f08764ef25d0714832da313
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Compilerwarnung (Stufe 1) C4927
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Unzulässige Konvertierung. Es wurden mehrere benutzerdefinierte Konvertierungen implizit übernommen.  
+# <a name="compiler-warning-level-1-c4927"></a>Compilerwarnung (Stufe 1) C4927
+Unzulässige Konvertierung. mehrere benutzerdefinierte Konvertierungen wurden implizit übernommen.  
   
- Für einen einzelnen Wert wurden mehrere benutzerdefinierte Konvertierungen implizit übernommen. Vom Compiler wurde keine explizite, sondern eine andere Konvertierung gefunden und verwendet.  
+ Mehr als eine benutzerdefinierte Konvertierung implizit auf einen einzelnen Wert--angewendet wird der Compiler eine explizite Konvertierung wurde nicht gefunden wurde, aber gefunden eine Konvertierung, die es verwendet.  
   
  Im folgenden Beispiel wird C4927 generiert:  
   

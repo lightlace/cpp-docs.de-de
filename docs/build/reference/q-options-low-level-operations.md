@@ -1,47 +1,46 @@
 ---
-title: "/Q-Optionen (Operationen auf niedriger Ebene) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/q"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Q (Compileroption) [C++]"
-  - "-Q (Compileroption) [C++]"
-  - "/Q (Compileroption) [C++]"
+title: -Q-Optionen (Operationen auf niedriger Ebene) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /q
+dev_langs: C++
+helpviewer_keywords:
+- Q compiler option [C++]
+- -Q compiler option [C++]
+- /Q compiler option [C++]
 ms.assetid: 9fa738b9-630a-4bde-bc87-bdfa30552be4
-caps.latest.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0fb7ef41e40b2ce6f4b3555de5b2369cc2d7a460
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# /Q-Optionen (Operationen auf niedriger Ebene)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Sie können die **\/Q**\-Compileroptionen zur Durchführung der folgenden Compilervorgänge auf niedriger Ebene verwenden:  
+# <a name="q-options-low-level-operations"></a>/Q-Optionen (Operationen auf niedriger Ebene)
+Sie können die **/q /** -Compileroptionen zur Durchführung der folgenden Compilervorgänge:  
   
--   [\/Qfast\_transcendentals \(Erzwingen von schnellen Transzendenten\)](../../build/reference/qfast-transcendentals-force-fast-transcendentals.md): Generiert schnelle Transzendente.  
+-   [/ Qfast_transcendentals (Erzwingen von schnellen transzendenten)](../../build/reference/qfast-transcendentals-force-fast-transcendentals.md): generiert schnelle Transzendente.  
   
--   [\/QIfist \(\_ftol unterdrücken\)](../../build/reference/qifist-suppress-ftol.md): Unterdrückt `_ftol`, wenn eine Konvertierung von einem Gleitkommatyp in einem ganzzahligen Typ erforderlich ist \(nur x86\).  
+-   [/ QIfist (_ftol unterdrücken)](../../build/reference/qifist-suppress-ftol.md): unterdrückt `_ftol` Wenn eine Konvertierung von einem Gleitkommatyp zu einem ganzzahligen Typ erforderlich (nur X86) ist.  
   
--   [\/Qimprecise\_fwaits \(Entfernen von fwaits in Try\-Blöcken\)](../../build/reference/qimprecise-fwaits-remove-fwaits-inside-try-blocks.md): Entfernt `fwait`\-Befehle in `try`\-Blöcken.  
+-   [/ Qimprecise_fwaits (Entfernen von Fwaits in Try-Blöcken)](../../build/reference/qimprecise-fwaits-remove-fwaits-inside-try-blocks.md): entfernt `fwait` -Befehle in `try` blockiert.  
   
--   [\/Qpar \(Automatische Parallelisierung\)](../../build/reference/qpar-auto-parallelizer.md): Ermöglicht automatische Parallelisierung von Schleifen, die mit der [\#pragma loop\(\)](../../preprocessor/loop.md)\-Direktive gekennzeichnet sind.  
+-   [/ Qpar (automatische Parallelisierung)](../../build/reference/qpar-auto-parallelizer.md): ermöglicht automatische Parallelisierung von Schleifen, die mit markiert sind die [#pragma loop()](../../preprocessor/loop.md) Richtlinie.  
   
--   [\/Qpar\-report \(Auto\-Parallelizer\-Berichtsebene\)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md): Aktiviert die Berichterstellungsebenen für die automatische Parallelisierung.  
+-   [/ Qpar-Report (Auto-Parallelisierer Reporting Stufe)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md): aktiviert die Berichterstellungsebenen für die automatische Parallelisierung.  
   
--   [\/Qsafe\_fp\_loads](../../build/reference/qsafe-fp-loads.md): Unterdrückt Optimierungen beim Laden von Gleitkommaregistern und für Verschiebungen zwischen Arbeitsspeicher und MMX\-Registern.  
+-   [/ Qsafe_fp_loads](../../build/reference/qsafe-fp-loads.md): unterdrückt Optimierungen für Gleitkommaregister lädt und für wechselt zwischen Arbeitsspeicher und MMX registriert.  
   
--   [\/Qvec\-report \(Auto\-Vectorizer\-Berichtsebene\)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md): Aktiviert die Berichterstellungsebenen für die automatische Vektorisierung.  
+-   [/ Qvec-Report (Auto-Vektorisierer Reporting Stufe)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md): aktiviert die Berichterstellungsebenen für die automatische Vektorisierung.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Compileroptionen](../../build/reference/compiler-options.md)   
  [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

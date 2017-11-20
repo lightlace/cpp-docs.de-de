@@ -1,33 +1,33 @@
 ---
-title: "OpenMP C and C++ Application Program Interface"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: OpenMP-C- und C++-Anwendung programmieren Schnittstelle | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: efec8865-a755-452f-838f-ddbfecab44d4
-caps.latest.revision: 6
-caps.handback.revision: "6"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8d807d8e9b3ef7012ac574cf8bcccb152b2c5d26
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# OpenMP C and C++ Application Program Interface
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Erläutert OpenMP C und C\+\+ API, wie in der Spezifikation für die Version 2.0 des OpenMP\-Architektur\-Prüfausschuss dokumentiert.  
+# <a name="openmp-c-and-c-application-program-interface"></a>OpenMP - C- und C++-Anwendungsprogrammierschnittstelle
+OpenMP-C- und C++-API erläutert, wie in der 2.0-Versionsspezifikation von Prüfungsgremium der OpenMP-Architektur beschrieben.  
   
- Version 2.0 im März 2002  
+ Version 2.0 March 2002  
   
- Urheberrechts\-OpenMP\-Architektur\-Prüfausschuss 1997\-2002.  
+ Copyright 1997-2002 OpenMP Architektur Prüfungsgremium.  
   
- Berechtigung, ohne Gebühren alle oder nur einen Teil dieses Material zu kopieren, gewähren OpenMP\-Architektur\-Prüfausschuss dem bereitgestellten urheberrechtshinweis und der Titel dieses Dokuments erscheinen.  Begriff ist angegeben, dass das Kopieren von Berechtigungen des OpenMP\-Architektur\-Prüfausschusses ist.  
+ Berechtigung zum Gebühren-, die alle bzw. Teil dieses Materials kopieren gewährt, den OpenMP-Architektur Prüfungsgremium Urheberrechtshinweis bereitgestellt, und der Titel des Dokuments angezeigt. Beachten Sie, dass wird vorausgesetzt, dass das Kopieren von Berechtigung der OpenMP-Architektur-Prüfungsgremium ist.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [OpenMP](../../parallel/openmp/openmp-in-visual-cpp.md)   
- [Contents](../../parallel/openmp/contents.md)
+ [Inhalt](../../parallel/openmp/contents.md)

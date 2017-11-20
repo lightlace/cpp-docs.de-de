@@ -1,91 +1,91 @@
 ---
-title: "Pr&#228;prozessorgrammatik | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Grammatik, Präprozessor"
-  - "Präprozessor"
-  - "Präprozessor, Grammatik"
+title: "Präprozessor-Grammatik | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- preprocessor
+- grammar, preprocessor
+- preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3c64c5a1855d80d5abc60d959bd68b33a380583b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Pr&#228;prozessorgrammatik
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**\#define**  *identifier* *token\-string*opt  
+# <a name="preprocessor-grammar"></a>Präprozessor-Grammatik
+**#define***Bezeichner* *-Token-String*abonnieren    
   
- *\#* **define**  *identifier*\[**\(** *identifier*opt**,** *...* **,** *identifier*opt **\)**\] *token\-string*opt  
+ *#***definieren***Bezeichner*[**(** *Bezeichner*opt**,** *...*  **,** *Bezeichner*opt **)**] *-Token-String*abonnieren    
   
- **defined\(**  *identifier* **\)**  
+ **definiert (***Bezeichner* **)**   
   
- **defined**  *identifier*  
+ **definiert***Bezeichner*   
   
- `#include` **"***path\-spec***"**  
+ `#include`**"***Path-Spec***"**  
   
- `#include` **\<***path\-spec***\>**  
+ `#include` **\<**  *Path-Spec***>**  
   
- **\#line**  *digit\-sequence*  **"** *filename* **"** opt  
+ **#line***Ziffernfolge***"** *Filename* **"**abonnieren      
   
- *\#* **undef**  *identifier*  
+ *#***Undef***Bezeichner*   
   
- **\#error**  *token\-string*  
+ **#error***-Token-Zeichenfolge*   
   
- **\#pragma**  *token\-string*  
+ **#pragma***-Token-Zeichenfolge*   
   
- *conditional* :  
- *if\-part elif\-parts* opt *else\-part*opt *endif\-line*  
+ *bedingte* :  
+ *If-Teil Elif-Teile*opt*else-Teil*opt*Endif-Zeile*  
   
- *if\-part* :  
- *if\-linetext*  
+ *If-Teil* :  
+ *If-linetext*  
   
- *if\-line* :  
- **\#if**  *constant\-expression*  
+ *If-Line-* :  
+ **#if***Konstantenausdruck*   
   
- **\#ifdef**  *identifier*  
+ **#ifdef***Bezeichner*   
   
- **\#ifndef**  *identifier*  
+ **#ifndef***Bezeichner*   
   
- *elif\-parts* :  
- *elif\-line text*  
+ *Elif-Teile* :  
+ *Elif-Line-text*  
   
- *elif\-parts elif\-line text*  
+ *Elif-Teile Elif-Line-text*  
   
- *elif\-line* :  
- **\#elif**  *constant\-expression*  
+ *Elif-Line-* :  
+ **#elif***Konstantenausdruck*   
   
- *else\-part* :  
- *else\-linetext*  
+ *else-Teil* :  
+ *Else-linetext*  
   
- *else\-line* :  
+ *Else-Line* :  
  `#else`  
   
- *endif\-line* :  
+ *Endif-Line-* :  
  `#endif`  
   
- *digit\-sequence* :  
+ *Ziffernfolge* :  
  *digit*  
   
- *digit\-sequence\-Stelle*  
+ *digit-sequence digit*  
   
- *digit* : Eine von:  
+ *Ziffer* : einer der  
  **0 1 2 3 4 5 6 7 8 9**  
   
- *token\-string* :  
+ *Token-String* :  
  Zeichenfolge von Tokens  
   
- *token* :  
+ *Token* :  
  *keyword*  
   
  *identifier*  
@@ -96,17 +96,17 @@ caps.handback.revision: 7
   
  `punctuator`  
   
- *filename* :  
+ *FileName* :  
  Gültiger Dateiname des Betriebssystems  
   
- *path\-spec* :  
+ *Path-Spec* :  
  Gültiger Dateipfad  
   
- *text* :  
+ *Text* :  
  Eine beliebige Textsequenz  
   
 > [!NOTE]
->  Die folgenden Nichtterminale werden in Anhang A, [Zusammenfassung der Grammatik](../misc/grammar-summary-cpp.md), der *C\+\+\-Programmiersprachenreferenz* weiter ausgeführt: `constant`, `constant`\-*expression*, *identifier*, *keyword*, `operator` und `punctuator`.  
+>  Die folgenden Nichtterminale werden der [lexikalische Konventionen](../cpp/lexical-conventions.md) Teil der *C++-Sprachreferenz*: `constant`, `constant` - *Ausdruck* , *Bezeichner*, *Schlüsselwort*, `operator`, und `punctuator`.  
   
-## Siehe auch  
- [Grammatikzusammenfassung](../preprocessor/grammar-summary-c-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [Grammatikzusammenfassung (C/C++)](../preprocessor/grammar-summary-c-cpp.md)

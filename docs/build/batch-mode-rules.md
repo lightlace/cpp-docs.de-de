@@ -1,46 +1,46 @@
 ---
-title: "Stapelverarbeitungsregeln | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Batchmodus-Rückschlussregeln in NMAKE"
-  - "Rückschlussregeln in NMAKE"
-  - "NMAKE (Programm), Rückschlussregeln"
+title: Stapelverarbeitungsregeln | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- inference rules in NMAKE
+- NMAKE program, inference rules
+- batch-mode inference rules in NMAKE
 ms.assetid: 0650b547-ef19-4455-9bba-fa567dcf88f2
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: be8c00009e285ec84f42ae6f53c578a3084432de
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Stapelverarbeitungsregeln
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="batch-mode-rules"></a>Stapelverarbeitungsregeln
 ```  
 {frompath}.fromext{topath}.toext::  
    commands  
 ```  
   
- Rückschlussregeln im Batchmodus stellen nur einen Aufruf der Rückschlussregel bereit, wenn *n* Befehle diese Rückschlussregel durchlaufen.  Ohne Rückschlussregeln im Batchmodus müssten *n* Befehle aufgerufen werden.  Dabei ist *n* die Anzahl der abhängigen Dateien, die die Rückschlussregel auslösen.  
+ Batchmodus Rückschlussregeln geben nur einen einzelnen Aufruf der Rückschlussregel aus, wenn N Befehle diese Rückschlussregel durchlaufen. Ohne Batchmodus Rückschlussregeln müssten N Befehle aufgerufen werden. N ist die Anzahl der abhängigen Elemente, die die Rückschlussregel auslösen.  
   
- Für Makefiles, die Rückschlussregeln im Batchmodus enthalten, muss NMAKE, Version 1.62 oder höher, verwendet werden.  Um die NMAKE\-Version zu überprüfen, wird das **\_NMAKE\_VER**\-Makro ausgeführt, das zusammen mit NMAKE, Version 1.62 oder höher, verfügbar ist.  Dieses Makro gibt eine Zeichenfolge zurück, die die Produktversion von Visual C\+\+ repräsentiert.  
+ Makefiles, die im Batchmodus-Rückschlussregeln enthalten müssen NMAKE Version 1.62 oder höher verwenden. Um die NMAKE-Version zu überprüfen, führen Sie die verfügbaren Makros _NMAKE_VER mit NMAKE Version, 1.62 oder höher. Dieses Makro gibt eine Zeichenfolge, die Visual C++-Produktversion darstellt.  
   
- Der einzige syntaktische Unterschied zur Standardrückschlussregel besteht darin, dass die Rückschlussregel im Batchmodus mit zwei Doppelpunkten \(`::`\) beendet wird.  
+ Der nur syntaktische Unterschied aus standard Rückschlussregel ist, dass die Rückschlussregel im Batchmodus mit zwei Doppelpunkten (:) beendet wurde.  
   
 > [!NOTE]
->  Das aufgerufene Tool muss mehrere Dateien verarbeiten können.  Die Rückschlussregel im Batchmodus muss `$<` als Makro für den Zugriff auf abhängige Dateien verwenden.  
+>  Das aufgerufene Tool muss mehrere Dateien behandelt werden können. Rückschlussregel im Batchmodus Striches `$<` als Makro auf abhängige Dateien zugreifen.  
   
- Die Rückschlussregeln im Batchmodus können den Buildprozess beschleunigen.  Es ist schneller, dem Compiler die Dateien im Batch anzugeben, da der Compilertreiber dann nur einmal aufgerufen wird.  Der Compiler für C und C\+\+ arbeitet z. B. beim Behandeln eines Dateiensatzes schneller, da der Compiler während des Prozesses speicherresident bleiben kann.  
+ Der Batchmodus Rückschlussregeln können während des Erstellungsprozesses beschleunigen. Ist es schneller, geben Sie die Dateien an den Compiler im Batch, da der Compilertreiber nur einmal aufgerufen wird. Beispielsweise bietet der C- und C++-Compiler eine bessere Leistung bei der Behandlung von einen Satz von Dateien, da es während des Prozesses speicherresident bleiben kann.  
   
- Im folgenden Beispiel wird gezeigt, wie Rückschlussregeln im Batchmodus verwendet werden:  
+ Im folgende Beispiel wird gezeigt, wie im Batchmodus-Rückschlussregeln verwendet wird:  
   
 ```  
 #  
@@ -65,7 +65,7 @@ $(Objs) :
 #end of makefile  
 ```  
   
- Die folgende Ausgabe wird von NMAKE ohne Rückschlussregeln im Batchmodus generiert:  
+ NMAKE erzeugt die folgende Ausgabe ohne Batchmodus Rückschlussregeln:  
   
 ```  
 E:\tmp> nmake -f test.mak -a NOBatch=1  
@@ -82,7 +82,7 @@ foo3.cpp
 foo4.cpp  
 ```  
   
- Das folgende Ergebnis wird von NMAKE mit Rückschlussregeln im Batchmodus generiert:  
+ NMAKE führt zu folgendem Ergebnis mit den Batchmodus Rückschlussregeln:  
   
 ```  
 E:\tmp> nmake -f test.mak -a  
@@ -98,5 +98,5 @@ foo4.cpp
 Generating Code...  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Rückschlussregeln](../build/inference-rules.md)

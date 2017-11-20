@@ -1,32 +1,30 @@
 ---
-title: "RuntimeClass::GetIids-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::RuntimeClass::GetIids"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetIids-Methode"
+title: 'Runtimeclass:: Getiids-Methode | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::RuntimeClass::GetIids
+dev_langs: C++
+helpviewer_keywords: GetIids method
 ms.assetid: 826a67d1-ebc4-4940-b5d5-7cd66885e4a1
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d80e5ea7b068b1d362b46430a1c55f7ff6e620a5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# RuntimeClass::GetIids-Methode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ruft ein Array ab, das die Schnittstellen\-IDs enthalten kann, die durch das aktuelle RuntimeClass\-Objekt implementiert werden.  
+# <a name="runtimeclassgetiids-method"></a>RuntimeClass::GetIids-Methode
+Ruft ein Array, die die Schnittstelle IDs vom aktuellen RuntimeClass-Objekt implementiert enthalten kann.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 STDMETHOD(  
@@ -36,20 +34,20 @@ STDMETHOD(
    _Deref_out_ _Deref_post_cap_(*iidCount) IID **iids);  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `iidCount`  
- Wenn dieser Vorgang abgeschlossen ist, die Gesamtanzahl von Elementen im Array `iids`.  
+ Wenn dieser Vorgang abgeschlossen ist, die Gesamtanzahl der Elemente im Array `iids`.  
   
  `iids`  
- Wenn dieser Vorgang abgeschlossen ist, ein Zeiger auf ein Array Schnittstellen\-IDs.  
+ Wenn dieser Vorgang abgeschlossen wird, einen Zeiger auf ein Array von Schnittstellen-IDs.  
   
-## Rückgabewert  
- S\_OK, wenn erfolgreich; andernfalls E\_OUTOFMEMORY.  
+## <a name="return-value"></a>Rückgabewert  
+ S_OK, wenn erfolgreich; andernfalls E_OUTOFMEMORY.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** implements.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [RuntimeClass\-Klasse](../windows/runtimeclass-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [RuntimeClass-Klasse](../windows/runtimeclass-class.md)

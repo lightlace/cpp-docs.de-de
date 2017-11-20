@@ -1,67 +1,66 @@
 ---
-title: "_mm_cvtsi64x_ss | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mm_cvtsi64x_ss"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cvtsi2ss-Anweisung"
-  - "_mm_cvtsi64x_ss (systemintern)"
+title: _mm_cvtsi64x_ss | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _mm_cvtsi64x_ss
+dev_langs: C++
+helpviewer_keywords:
+- cvtsi2ss instruction
+- _mm_cvtsi64x_ss intrinsic
 ms.assetid: 01e5d321-c18a-46fd-a6f6-324364514e1f
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: aecb28648e32e099d2381fa49b1b7f5a42618543
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# _mm_cvtsi64x_ss
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft\-spezifisch**  
+# <a name="mmcvtsi64xss"></a>_mm_cvtsi64x_ss
+**Microsoft-spezifisch**  
   
- Generiert die [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] erweiterte Version der Bekehrt64\-bit\-ganzzahl zur skalaren Anweisung des Gleitkommazahl mit einfacher Genauigkeit \(`cvtsi2ss`\).  
+ Generiert die [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] erweiterte Version der Konvertieren von 64-Bit-Ganzzahl, mit einfacher Genauigkeit Floating-Skalarwert (`cvtsi2ss`) Anweisung.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-__m128 _mm_cvtsi64x_ss(   
-   __m128 a,   
-   __int64 b   
+__m128 _mm_cvtsi64x_ss(   
+   __m128 a,   
+   __int64 b   
 );  
 ```  
   
-#### Parameter  
- \[in\] `a`  
- Eine `__m128` Struktur, die vier Gleitkommazahlen mit einfacher Genauigkeit enthält.  
+#### <a name="parameters"></a>Parameter  
+ [in] `a`  
+ Eine `__m128` Struktur mit vier Gleitkommawerten mit einfacher Genauigkeit.  
   
- \[in\] `b`  
- Eine in einen Gleitkommawert zu konvertierende 64\-Bit\-Ganzzahl.  
+ [in] `b`  
+ Eine 64-Bit-Ganzzahl in einen Gleitkommawert konvertiert wird.  
   
-## Rückgabewert  
- Eine `__m128` Struktur, deren erster Gleitkommawert das Ergebnis der Konvertierung darstellt.  Die anderen drei Werte werden von `a`unverändert kopiert.  
+## <a name="return-value"></a>Rückgabewert  
+ Eine `__m128` -Struktur, deren erste Gleitkommawert das Ergebnis der Konvertierung ist. Die anderen drei Werte sind dieselben wie kopiert `a`.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Intrinsisch|Architektur|  
-|-----------------|-----------------|  
+|Systemintern|Architektur|  
+|---------------|------------------|  
 |`_mm_cvtsi64x_ss`|x64|  
   
- **Headerdatei** \<intrin.h\>  
+ **Headerdatei** \<intrin.h >  
   
-## Hinweise  
- Die `__m128` Struktur stellt ein XMM\-Register dar, sodass können systeminterne den Wert in ein vom `b` XMM\-Register zu verschiebenden Systemspeicher.  
+## <a name="remarks"></a>Hinweise  
+ Die `__m128` Struktur darstellt, ein XMM-Register, sodass dieser systeminternen Funktion als Wert kann `b` registrieren vom Systemspeicher in eine XMM verschoben werden soll.  
   
- Diese Routine ist als systeminterne Funktion nur verfügbar.  
+ Diese Routine ist nur als systeminterne Funktion verfügbar.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // _mm_cvtsi64x_ss.cpp  
@@ -89,9 +88,12 @@ int main()
 }  
 ```  
   
-  **54.000000 0.000000 0.000000 0.000000**   
-## Microsoft ENDES bestimmten  
+```Output  
+54.000000 0.000000 0.000000 0.000000  
+```  
   
-## Siehe auch  
- [\_\_m128](../cpp/m128.md)   
+**Ende Microsoft-spezifisch**  
+  
+## <a name="see-also"></a>Siehe auch  
+ [__m128](../cpp/m128.md)   
  [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

@@ -1,32 +1,30 @@
 ---
-title: "parallel | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "parallel"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "parallel OpenMP directive"
+title: Parallele | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: parallel
+dev_langs: C++
+helpviewer_keywords: parallel OpenMP directive
 ms.assetid: b8e90073-e85b-4d39-8ed8-0364441794fb
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 289a4928c9c46f6d758ddc2f30ed864488ab725e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# parallel
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Definiert einen parallelen Bereich mit dem Code, der von mehreren Threads parallel ausgeführt werden.  
+# <a name="parallel"></a>parallel
+Definiert einen parallelen Bereich, also Code, die durch mehrere Threads parallel ausgeführt wird.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #pragma omp parallel [clauses]  
@@ -35,14 +33,14 @@ Definiert einen parallelen Bereich mit dem Code, der von mehreren Threads parall
 }  
 ```  
   
-## Hinweise  
- Hierbei ist:  
+## <a name="remarks"></a>Hinweise  
+ wobei  
   
- `clause` \(optional\)  
- Null oder mehr Klauseln.  Weitere Informationen finden Sie im Abschnitt " Hinweise " für eine Liste von Klauseln, die von **Ähnlichkeit**unterstützt werden.  
+ `clause` (optional)  
+ NULL oder mehr Klauseln.  Finden Sie im Abschnitt "Hinweise" eine Liste von unterstützten Klauseln **parallele**.  
   
-## Hinweise  
- Die **Ähnlichkeit** unterstützen die folgenden Direktiven OpenMP\-Klauseln:  
+## <a name="remarks"></a>Hinweise  
+ Die **parallele** Richtlinie unterstützt die folgenden OpenMP-Klauseln:  
   
 -   [copyin](../../../parallel/openmp/reference/copyin.md)  
   
@@ -52,20 +50,20 @@ Definiert einen parallelen Bereich mit dem Code, der von mehreren Threads parall
   
 -   [if](../../../parallel/openmp/reference/if-openmp.md)  
   
--   [num\_threads](../../../parallel/openmp/reference/num-threads.md)  
+-   [num_threads](../../../parallel/openmp/reference/num-threads.md)  
   
 -   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
 -   [reduction](../../../parallel/openmp/reference/reduction.md)  
   
--   [shared](../../../parallel/openmp/reference/shared-openmp.md)  
+-   [freigegebene](../../../parallel/openmp/reference/shared-openmp.md)  
   
- **Ähnlichkeit** kann mit den [sections](../../../parallel/openmp/reference/sections-openmp.md) und [for](../../../parallel/openmp/reference/for-openmp.md)\-Direktive verwendet werden.  
+ **Parallele** kann auch verwendet werden, mit der [Abschnitte](../../../parallel/openmp/reference/sections-openmp.md) und [für](../../../parallel/openmp/reference/for-openmp.md) Direktiven.  
   
- Weitere Informationen finden Sie unter [2.3 parallel Construct](../../../parallel/openmp/2-3-parallel-construct.md).  
+ Weitere Informationen finden Sie unter [2.3 parallel-Konstrukt](../../../parallel/openmp/2-3-parallel-construct.md).  
   
-## Beispiel  
- Im folgenden Beispiel wird gezeigt, wie die Anzahl der Threads festgelegt und einen parallelen Bereich definiert.  Standardmäßig ist die Anzahl von Threads gleich der Anzahl von logischen Prozessoren auf dem Computer.  Wenn Sie beispielsweise einen Computer mit einem physischen Prozessoren verfügen, der die Hyperthreading aktiviert hat, verfügt es zwei logische Prozessoren und daher zwei Threads.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt, wie die Anzahl von Threads und Definieren eines parallelen Bereichs. Standardmäßig ist die Anzahl der Threads gleich der Anzahl der logischen Prozessoren auf dem Computer. Z. B. Wenn Sie einen Computer mit einem physischen Prozessor, die Hyperthreading aktiviert wurde verfügen, wird er zwei logischen Prozessoren und somit zwei Threads haben.  
   
 ```  
 // omp_parallel.cpp  
@@ -82,12 +80,15 @@ int main() {
 }  
 ```  
   
-  **Hallo der Thread 0**  
-**Hallo der Thread 1**  
-**Hallo der Thread 2**  
-**Hallo der Thread 3**   
-## Kommentar  
- Beachten Sie, dass die Reihenfolge der Ausgabe auf verschiedenen Computern unterschiedlich sein kann.  
+```Output  
+Hello from thread 0  
+Hello from thread 1  
+Hello from thread 2  
+Hello from thread 3  
+```  
   
-## Siehe auch  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+## <a name="comment"></a>Kommentar  
+ Beachten Sie, dass die Reihenfolge der Ausgabe auf verschiedenen Computern variieren kann.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Anweisungen](../../../parallel/openmp/reference/openmp-directives.md)

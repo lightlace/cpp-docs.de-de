@@ -1,41 +1,39 @@
 ---
-title: "queue::difference_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::difference_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "difference_type-Member [STL/CLR]"
+title: Queue::difference_type (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::difference_type
+dev_langs: C++
+helpviewer_keywords: difference_type member [STL/CLR]
 ms.assetid: d7a716e1-b331-4928-bda3-f3c74a57307e
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3e25924c7b6e3dfad79ef6efda62b7beaf1f6194
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# queue::difference_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die Typen eines Abstands mit Vorzeichen zwischen zwei Elementen.  
+# <a name="queuedifferencetype-stlclr"></a>queue::difference_type (STL/CLR)
+Die Typen des Abstands mit Vorzeichen zwischen zwei Elementen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef int difference_type;  
 ```  
   
-## Hinweise  
- Der Typ beschreibt eine Anzahl des möglicherweise negativen Elements.  
+## <a name="remarks"></a>Hinweise  
+ Der Typ beschreibt ein möglicherweise negativ Elementanzahl.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_queue_difference_type.cpp   
@@ -74,14 +72,17 @@ int main()
   
 ```  
   
-  **ein b c**  
-**Druckt 2 \= \-2**  
-**3 \= 3 hinzu**   
-## Anforderungen  
- **Header:** \<cliext\/Warteschlange\>  
+```Output  
+ a b c  
+pushing 2 = -2  
+popping 3 = 3  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext bzw. einer neuen Warteschlange >  
   
-## Siehe auch  
- [queue](../dotnet/queue-stl-clr.md)   
- [queue::size\_type](../dotnet/queue-size-type-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Warteschlange (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [queue::size_type (STL/CLR)](../dotnet/queue-size-type-stl-clr.md)

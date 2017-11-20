@@ -1,65 +1,65 @@
 ---
-title: "/hotpatch (Erstellen eines Hotpatch-f&#228;higen Abbildes) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/hotpatch"
-  - "VC.Project.VCCLCompilerTool.CreateHotpatchableImage"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Hotpatching"
-  - "-hotpatch (Compileroption) [C++]"
-  - "/hotpatch (Compileroption) [C++]"
-  - "hotpatch"
+title: "-Hotpatch (erstellen Hotpatch-fähiges Abbild) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /hotpatch
+- VC.Project.VCCLCompilerTool.CreateHotpatchableImage
+dev_langs: C++
+helpviewer_keywords:
+- hot patching
+- -hotpatch compiler option [C++]
+- /hotpatch compiler option [C++]
+- hotpatching
 ms.assetid: aad539b6-c053-4c78-8682-853d98327798
-caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: fb5eaebb9ee8de01a9b2418333e2959cd5b4a21f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# /hotpatch (Erstellen eines Hotpatch-f&#228;higen Abbildes)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hotpatch-create-hotpatchable-image"></a>/hotpatch (Erstellen eines Hotpatch-fähigen Abbildes)
 Bereitet ein Image für Hotpatching vor.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /hotpatch  
 ```  
   
-## Hinweise  
- Wenn für eine Kompilierung **\/hotpatch** verwendet wird, wird durch den Compiler sichergestellt, dass die erste Anweisung jeder Funktion mindestens über die für das Hotpatching erforderliche Größe von zwei Bytes verfügt.  
+## <a name="remarks"></a>Hinweise  
+ Wenn **/hotpatch** wird verwendet, in einer Kompilierung der Compiler stellt sicher, dass die erste Anweisung jeder Funktion mindestens zwei Bytes ist die für das HotPatching erforderlich ist.  
   
- Zum Abschließen der Vorbereitung von einem Image, damit es hotpatchfähig wird, müssen Sie nach der Verwendung von **\/hotpatch** mit [\/FUNCTIONPADMIN \(Erstellen eines Hotpatch\-fähigen Abbildes\)](../../build/reference/functionpadmin-create-hotpatchable-image.md) einen Link erstellen.  Wenn Sie zum Kompilieren und Verknüpfen von einem Image einen einzelnen Aufruf von CL.EXE verwenden, impliziert **\/hotpatch** die Option **\/functionpadmin**.  
+ Zum Abschließen der Vorbereitung auf ein Bild eines vornehmen, nachdem Sie mit **/hotpatch** um kompilieren, verwenden Sie [/FUNCTIONPADMIN (Erstellen eines Hotpatch-fähigen Abbildes)](../../build/reference/functionpadmin-create-hotpatchable-image.md) verknüpfen. Wenn Sie kompilieren und verknüpfen Sie ein Bild mit einem Aufruf von cl.exe, **/hotpatch** impliziert **/functionpadmin**.  
   
- Da Befehle in der ARM\-Architektur immer zwei Bytes oder mehr umfassen und die x64\-Kompilierung immer so ausgeführt wird, als wäre **\/hotpatch** festgelegt, müssen Sie **\/hotpatch** nicht angeben, wenn Sie für diese Ziele kompilieren. Sie müssen jedoch weiterhin mithilfe von **\/functionpadmin** linken, um hotpatchfähige Images für diese Ziele zu erstellen.  Die **\/hotpatch**\-Compileroption beeinflusst nur die x86\-Kompilierung.  
+ Da Anweisungen immer zwei Bytes sind oder auf der ARM-Architektur und da X64 Kompilierung wird immer behandelt wie **/hotpatch** angegeben wurde, müssen nicht angeben **/hotpatch** bei Sie Kompilieren für diese Ziele. Sie müssen jedoch weiterhin Verknüpfen mit **/functionpadmin** um hotpatchfähige Images für sie erstellen. Die **/hotpatch** Compiler Option nur wirkt sich auf X86 Kompilierung.  
   
-### So legen Sie diese Compileroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Gewusst wie: Öffnen von Projekteigenschaftenseiten](../../misc/how-to-open-project-property-pages.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Wählen Sie den Ordner **C\/C\+\+** aus.  
+2.  Wählen Sie die **C/C++-** Ordner.  
   
-3.  Wählen Sie die Eigenschaftenseite **Befehlszeile** aus.  
+3.  Wählen Sie die **Befehlszeile** Eigenschaftenseite.  
   
-4.  Fügen Sie die Compileroption dem Feld **Zusätzliche Optionen** hinzu.  
+4.  Fügen Sie die Compileroption ", um die **Zusatzoptionen** Feld.  
   
-### So legen Sie diese Compileroption programmgesteuert fest  
+### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
   
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions*>.  
+-   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Empfehlungen  
- Weitere Informationen über die Updateverwaltung finden Sie im Leitfaden zur Sicherheit für die Updateverwaltung unter [http:\/\/www.microsoft.com\/technet\/security\/guidance\/PatchManagement.mspx](http://www.microsoft.com/technet/security/guidance/PatchManagement.mspx).  
+## <a name="guidance"></a>Empfehlungen  
+ Weitere Informationen zur updateverwaltung finden Sie unter "Security Guidance for Update Management" [http://www.microsoft.com/technet/security/guidance/PatchManagement.mspx](http://www.microsoft.com/technet/security/guidance/PatchManagement.mspx).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Compileroptionen](../../build/reference/compiler-options.md)   
  [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

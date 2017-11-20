@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 04/21/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -44,19 +43,17 @@ helpviewer_keywords:
 - C3092
 - C3093
 - C3098
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 01b7b9cb-b351-4b5a-8cb0-1fcddb08d2ab
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 59ac61f0ae50f3a6b1d7170ea0b965c3bb8d0fe2
-ms.contentlocale: de-de
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-errors-c3000-through-c3099"></a>Compilerfehler Fehler C3000 über C3099
 In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen Unterabschnitt der Visual C++-Compilerfehler enthalten. Sie können hier auf die Informationen zugreifen oder im Fenster **Ausgabe** in Visual Studio eine Fehlernummer auswählen und dann die F1-TASTE drücken.  
@@ -168,4 +165,3 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C3097](compiler-error-c3097.md)|"*Attribut*": Attribut muss der Bereich werden mit ' Assembly:' oder ' Modul: "|  
 |Compilerfehler Fehler C3098|"*Bezeichner*": Attribut hat keine benutzerdefinierten Konstruktoren|  
 |[Compilerfehler C3099](compiler-error-c3099.md)|"*Schlüsselwort*': Verwenden Sie [System:: AttributeUsageAttribute] / [Windows::Foundation::Metadata::AttributeUsageAttribute] für verwaltete/WinRT-Attribute|  
-

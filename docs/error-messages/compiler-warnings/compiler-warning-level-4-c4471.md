@@ -4,41 +4,22 @@ ms.custom:
 ms.date: 04/24/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4471
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4471
+f1_keywords: C4471
+dev_langs: C++
+helpviewer_keywords: C4471
 ms.assetid: ccfd8bd5-bc1b-4be7-a6ea-0e3a7add6607
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d7d097b399d3681ef523d8787ecc38af472840f6
-ms.openlocfilehash: fc0ddb07ec768804be61185211bbac0ee6fbf2b6
-ms.contentlocale: de-de
-ms.lasthandoff: 04/28/2017
-
+ms.openlocfilehash: a1476beca6b34e8afb53058c7961822f0fb48109
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-4-c4471"></a>Compilerwarnung (Stufe 4) C4471
 "*Enumeration*': eine Vorwärtsdeklaration einer Enumeration ohne bereichseinschränkung benötigen einen zugrunde liegenden Typ (Int wird angenommen)  
@@ -70,7 +51,7 @@ enum Example;    // C4471
 ```  
   
 ## <a name="example"></a>Beispiel  
-In C ++ 11 können Sie einen expliziten Typ und dessen Vorwärtsdeklaration einer Enumeration ohne bereichseinschränkung hinzufügen. Diese Lösung wird empfohlen, nur dann, wenn die Verwendung der Definition anstelle einer Vorwärtsdeklaration complex-Header Aufnahme Logik verhindert wird. Diese Lösung kann dazu führen, dass ein Wartungsproblem: Wenn Sie den zugrunde liegenden Typ, der für die Enumerationsdefinition verwendet, müssen Sie auch alle von der Vorwärtsdeklarationen entsprechend ändern, oder ändern unter automatischen Fehler im Code müssen Umständen. Sie können eine Headerdatei, um dieses Problem weitgehendst auszuschließen Vorwärtsdeklaration abgelegt.  
+In C ++ 11 können Sie einen expliziten Typ und dessen Vorwärtsdeklaration einer Enumeration ohne bereichseinschränkung hinzufügen. Diese Lösung wird empfohlen, nur dann, wenn die Verwendung der Definition anstelle einer Vorwärtsdeklaration complex-Header Aufnahme Logik verhindert wird. Diese Lösung kann dazu führen, dass ein Wartungsproblem: Wenn Sie den zugrunde liegenden Typ, der für die Enumerationsdefinition verwendet, müssen Sie auch alle von der Vorwärtsdeklarationen entsprechend ändern, oder ändern unter Automatische Fehler im Code müssen Umständen. Sie können eine Headerdatei, um dieses Problem weitgehendst auszuschließen Vorwärtsdeklaration abgelegt.  
   
 ```cpp  
 // C4471c.cpp
@@ -113,4 +94,3 @@ enum class Example { item = 0 };
 // ...
 ```  
   
-

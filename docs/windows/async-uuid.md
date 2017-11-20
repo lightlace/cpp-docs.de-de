@@ -1,32 +1,30 @@
 ---
-title: "async_uuid | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.async_uuid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "async_uuid attribute"
+title: Async_uuid | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.async_uuid
+dev_langs: C++
+helpviewer_keywords: async_uuid attribute
 ms.assetid: 235cb0d7-be58-4dd9-983c-e2a21bbc42c6
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b35791f67b712139210f383a0f9ef605efbacd0e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# async_uuid
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gibt das UUID an, das den MIDL\-Compiler, weist die synchronen und asynchronen Versionen einer COM\-Schnittstelle zu definieren.  
+# <a name="asyncuuid"></a>async_uuid
+Gibt an, die synchrone und asynchrone Versionen einer COM-Schnittstelle definiert die MIDL-Compiler anweist, UUID.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -35,14 +33,14 @@ Gibt das UUID an, das den MIDL\-Compiler, weist die synchronen und asynchronen V
 )]  
 ```  
   
-#### Parameter  
- *uuid*  
- Ein UUID, das die Version der Schnittstelle identifiziert.  
+#### <a name="parameters"></a>Parameter  
+ *UUID*  
+ Die Version der Schnittstelle identifiziert UUID.  
   
-## Hinweise  
- Das Attribut **async\_uuid** C\+\+ verfügt über die gleichen Funktionen wie das [async\_uuid](http://msdn.microsoft.com/library/windows/desktop/aa366735) MIDL\-Attribut.  
+## <a name="remarks"></a>Hinweise  
+ Die **Async_uuid** C++-Attribut hat die gleiche Funktionalität wie die [Async_uuid](http://msdn.microsoft.com/library/windows/desktop/aa366735) MIDL-Attribut.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cpp_attr_ref_async_uuid.cpp  
@@ -56,20 +54,19 @@ __interface ICustom {
 };  
 ```  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
 |**Betrifft**|`interface`|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|**dual**, **dispinterface**|  
+|**Erforderliche Attribute**|Keine|  
+|**Ungültige Attribute**|**Duale**, **Disp-Schnittstelle**|  
   
- Weitere Informationen über das kontexte finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [IDL-Attribute](../windows/idl-attributes.md)   
+ [Schnittstellenattribut](../windows/interface-attributes.md)   

@@ -1,35 +1,34 @@
 ---
-title: "lock::lock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "lock::lock"
-  - "lock.lock"
-  - "msclr.lock.lock"
-  - "msclr::lock::lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lock-Konstruktor"
+title: Lock::lock | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- lock::lock
+- lock.lock
+- msclr.lock.lock
+- msclr::lock::lock
+dev_langs: C++
+helpviewer_keywords: lock constructor
 ms.assetid: c9ad6c71-36ec-49c5-8ebd-f5c3a0cc94f0
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0bc0c0e61b4500bae9589cbf6b536f1a23ae45c8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# lock::lock
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Erstellt ein `lock`\-Objekt optional und wartet, um die Sperre für immer, für eine bestimmte Zeitdauer abzurufen oder überhaupt nicht.  
+# <a name="locklock"></a>lock::lock
+Erstellt eine `lock` -Objekt, optional darauf warten, die Sperre für eine bestimmte Zeitspanne oder überhaupt nicht immer erhalten.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class T> lock(  
@@ -49,27 +48,27 @@ template<class T> lock(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `_object`  
  Das zu sperrende Objekt.  
   
  `_timeout`  
- Timeoutwert in Millisekunden bzw. als <xref:System.TimeSpan>.  
+ Timeoutwert in Millisekunden oder als eine <xref:System.TimeSpan>.  
   
-## Ausnahmen  
- Löst <xref:System.ApplicationException> aus, wenn Sperrendatenerfassung nicht vor Timeout auftritt.  
+## <a name="exceptions"></a>Ausnahmen  
+ Löst <xref:System.ApplicationException> Wenn Sperre nicht vor dem Timeout auftritt.  
   
-## Hinweise  
- Die ersten drei Formen des Konstruktors versuchen, eine Sperre auf `_object` im angegebenen Timeout \(oder <xref:System.Threading.Timeout.Infinite>, abgerufen wenn keines angegeben wurde\).  
+## <a name="remarks"></a>Hinweise  
+ Die ersten drei Formulare des Konstruktors versuchen zu Sperren auf `_object` innerhalb des angegebenen Zeitlimits (oder <xref:System.Threading.Timeout.Infinite> Falls keiner angegeben ist).  
   
- Das vierte Formular des Konstruktors wird keine Sperre auf `_object`.  `lock_later` ist ein Member [lock\_when\-Enumeration](../dotnet/lock-when-enum.md).  Verwenden Sie [lock::acquire](../dotnet/lock-acquire.md) oder [lock::try\_acquire](../dotnet/lock-try-acquire.md), um die Sperre in diesem Fall abzurufen.  
+ Das vierte Formular des Konstruktors erwirbt eine Sperre auf `_object`. `lock_later`ist ein Mitglied der [Lock_when-Enumeration](../dotnet/lock-when-enum.md). Verwendung [lock::acquire](../dotnet/lock-acquire.md) oder [lock::try_acquire](../dotnet/lock-try-acquire.md) , in diesem Fall die Sperre abzurufen.  
   
- Die Sperre wird automatisch freigegeben, wenn der Destruktor aufgerufen wird.  
+ Die Sperre wird automatisch freigegeben werden, wenn der Destruktor aufgerufen wird.  
   
- `_object` darf nicht <xref:System.Threading.ReaderWriterLock> sein.  Wenn sie ist, tritt ein Compilerfehler.  
+ `_object` darf nicht <xref:System.Threading.ReaderWriterLock> sein.  Wenn dies der Fall, führt ein Compilerfehler ausgelöst.  
   
-## Beispiel  
- In diesem Beispiel wird eine einzelne Instanz einer Klasse über mehrere Threads.  Die Klasse verwendet eine Sperre auf sich, um sicherzustellen, dass auf auf die internen Daten für jeden Thread konsistent sind.  Der Hauptthread verwendet eine Sperre auf der gleichen Instanz der Klasse, die in regelmäßigen Abständen zu überprüfen, dass Arbeitsthreads ggf. anzuzeigen noch vorhanden, und wartet, bis alle Arbeitsthreads beendet haben ihre Aufgaben abgeschlossen.  
+## <a name="example"></a>Beispiel  
+ Dieses Beispiel verwendet eine einzelne Instanz einer Klasse über mehrere Threads hinweg.  Die Klasse verwendet eine Sperre auf sich selbst, um sicherzustellen, dass der Zugriff auf die internen Daten für jeden Thread konsistent sind.  Thread der hauptanwendung verwendet eine Sperre für dieselbe Instanz der Klasse in regelmäßigen Abständen überprüfen, um festzustellen, ob alle Arbeitsthreads noch vorhanden sind, und wartet, bis alle Arbeitsthreads aktiviert beenden ihre Aufgaben abgeschlossen haben.  
   
 ```  
 // msl_lock_lock.cpp  
@@ -143,24 +142,27 @@ int main() {
 }  
 ```  
   
-  **Im Thread 3, Zähler \= 0**  
-**Im Thread 3, Zähler \= 10**  
-**Im Thread 5, Zähler \= 0**  
-**Im Thread 5, Zähler \= 10**  
-**Im Thread 7, Zähler \= 0**  
-**Im Thread 7, Zähler \= 10**  
-**Im Thread 4, Zähler \= 0**  
-**Im Thread 4, Zähler \= 10**  
-**Im Thread 6, Zähler \= 0**  
-**Im Thread 6, Zähler \= 10**  
-**Alle Threads abgeschlossen.**   
-## Anforderungen  
- **Headerdatei** \<msclr\\lock.h\>  
+```Output  
+In thread 3, Counter = 0  
+In thread 3, Counter = 10  
+In thread 5, Counter = 0  
+In thread 5, Counter = 10  
+In thread 7, Counter = 0  
+In thread 7, Counter = 10  
+In thread 4, Counter = 0  
+In thread 4, Counter = 10  
+In thread 6, Counter = 0  
+In thread 6, Counter = 10  
+All threads completed.  
+```  
   
- **Namespace** msclr  
+## <a name="requirements"></a>Anforderungen  
+ **Headerdatei** \<msclr\lock.h >  
   
-## Siehe auch  
- [lock\-Member](../dotnet/lock-members.md)   
- [lock::~lock](../dotnet/lock-tilde-lock.md)   
- [lock::acquire](../dotnet/lock-acquire.md)   
- [lock::try\_acquire](../dotnet/lock-try-acquire.md)
+ **Namespace** Msclr  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Lock-Member](../dotnet/lock-members.md)   
+ [Sperre:: ~ Sperre](../dotnet/lock-tilde-lock.md)   
+ [Lock::acquire](../dotnet/lock-acquire.md)   
+ [lock::try_acquire](../dotnet/lock-try-acquire.md)

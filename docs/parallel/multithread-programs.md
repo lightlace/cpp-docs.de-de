@@ -1,33 +1,33 @@
 ---
-title: "Multithreadprogramme | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Multithreading [C++], Informationen über Threads"
-  - "Threading [C++], Informationen über das Threading"
+title: Multithreadprogramme | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- threading [C++], about threading
+- multithreading [C++], about threads
 ms.assetid: 02443596-f7e1-48d0-b3a4-39ee0e54e444
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: effbb235ef678253f5258d3eb01a3a82292385cf
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Multithreadprogramme
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Bei einem Thread handelt es sich im Grunde um einen Ausführungspfad durch ein Programm.  Er ist außerdem die kleinste Ausführungseinheit, die von Win32 geplant wird.  Ein Thread besteht aus einem Stapel, dem Status der CPU\-Register und einem Eintrag in die Ausführungsliste des Systemschedulers.  Von jedem Thread werden sämtliche Ressourcen des jeweiligen Prozesses gemeinsam genutzt.  
+# <a name="multithread-programs"></a>Multithreadprogramme
+Ein Thread ist im Grunde einen Ausführungspfad über ein Programm. Es ist auch die kleinste Ausführungseinheit Win32 plant. Ein Thread besteht aus einem Stapel, den Status der CPU-Register und einen Eintrag in der Ausführungsliste des Zeitplanungsmoduls System. Jeder Thread gibt aller Prozesse Ressourcen frei.  
   
- Ein Prozess besteht aus einem oder mehreren Threads sowie dem Code, den Daten und anderen Ressourcen eines im Speicher befindlichen Programms.  Typische Programmressourcen sind geöffnete Dateien, Semaphore und dynamisch belegter Speicher.  Ein Programm wird ausgeführt, wenn der Systemscheduler einem seiner Threads die Ausführungssteuerung überträgt.  Vom Scheduler wird festgelegt, welche Threads zu welchem Zeitpunkt ausgeführt werden sollen.  Dabei müssen eventuell Threads mit einer niedrigeren Priorität warten, bis Threads mit einer höheren Priorität ihre Tasks abgeschlossen haben.  Auf Computern mit mehreren Prozessoren kann der Scheduler einzelne Threads auf unterschiedliche Prozessoren verschieben, um eine gleichmäßige CPU\-Auslastung zu erzielen.  
+ Ein Prozess besteht aus einem oder mehreren Threads und den Code, Daten und andere Ressourcen von einem Programm im Arbeitsspeicher. Typische Programmressourcen sind geöffneten Dateien, Semaphoren und dynamisch reservierten Speicher. Ein Programm ausgeführt wird, wenn das System Zeitplanungsmodul eines Threads ausführungssteuerung bietet. Der Planer bestimmt, welche Threads ausgeführt werden sollen und wann ausgeführt werden soll. Threads mit niedrigerer Priorität möglicherweise warten, während Threads mit höherer Priorität ihre Tasks auszuführen. Auf Computern mit mehreren Prozessoren kann der Planer einzelne Threads auf verschiedenen Prozessoren die CPU-Last zu verteilen verschieben.  
   
- Die Threads in einem Prozess arbeiten unabhängig voneinander.  Solange Sie diese nicht einander "sichtbar" machen, werden Threads einzeln und ohne Kenntnis der anderen Threads in einem Prozess ausgeführt.  Threads, die allgemeine Ressourcen gemeinsam nutzen, müssen ihre Tätigkeit mithilfe von Semaphoren oder einer anderen Form der Interprozesskommunikation koordinieren.  Weitere Informationen über das Synchronisieren von Threads finden Sie unter [Schreiben von Win32\-Multithreadprogrammen](../parallel/writing-a-multithreaded-win32-program.md).  
+ Jeder Thread in einem Prozess arbeitet unabhängig. Wenn Sie diese miteinander sichtbar machen, werden Threads einzeln ausgeführt und sind keine Kenntnis von anderen Threads in einem Prozess. Threads, die gemeinsame Nutzung allgemeiner Ressourcen müssen jedoch erlaubt, ihre Arbeit zu koordinieren, mithilfe von Semaphoren oder eine andere Methode für die prozessübergreifende Kommunikation. Weitere Informationen zum Synchronisieren von Threads finden Sie unter [Schreiben von Win32-Multithreadprogrammen](../parallel/writing-a-multithreaded-win32-program.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Multithreading bei C und Win32](../parallel/multithreading-with-c-and-win32.md)

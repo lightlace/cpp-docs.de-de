@@ -1,30 +1,29 @@
 ---
-title: "SimpleActivationFactory::GetTrustLevel-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::SimpleActivationFactory::GetTrustLevel"
-dev_langs: 
-  - "C++"
+title: 'Simpleactivationfactory:: Gettrustlevel-Methode | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::SimpleActivationFactory::GetTrustLevel
+dev_langs: C++
 ms.assetid: 99aa9bc9-d954-4a6f-902b-4abe00e43039
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fbb709d0f79a1fd57dfe84567b0bc7f8d1d15c3d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# SimpleActivationFactory::GetTrustLevel-Methode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ruft die Vertrauensebene einer Instanz der Klasse ab, die durch den `Base`\-Klassenvorlagenparameter angegeben wird.  
+# <a name="simpleactivationfactorygettrustlevel-method"></a>SimpleActivationFactory::GetTrustLevel-Methode
+Ruft die Vertrauensebene einer Instanz der Klasse, die gemäß der `Base` Klassenvorlagenparameter.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 STDMETHOD(  
@@ -32,17 +31,17 @@ STDMETHOD(
 )(_Out_ TrustLevel* trustLvl);  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `trustLvl`  
- Wenn dieser Vorgang abgeschlossen ist, die Vertrauensebene des aktuellen Klassenobjekts.  
+ Wenn dieser Vorgang abgeschlossen wird, die Vertrauensebene des aktuellen Klassenobjekts.  
   
-## Rückgabewert  
- Immer S\_OK.  
+## <a name="return-value"></a>Rückgabewert  
+ Stets S_OK.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** module.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [SimpleActivationFactory\-Klasse](../windows/simpleactivationfactory-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [SimpleActivationFactory-Klasse](../windows/simpleactivationfactory-class.md)

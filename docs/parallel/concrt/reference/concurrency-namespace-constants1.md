@@ -1,5 +1,5 @@
 ---
-title: Concurrency-namespacekonstanten | Microsoft-Dokumentation
+title: Concurrency-namespacekonstanten | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,18 +19,17 @@ f1_keywords:
 - concrt/concurrency::ResourceManagerEventGuid
 - concrt/concurrency::ScheduleGroupEventGuid
 - concrt/concurrency::VirtualProcessorEventGuid
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 6f81fc4c-b10c-479e-8717-9c292360d5a0
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 807579ee48ec543a050d9e96bf0672fc91b1f2f5
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: a30b1c8a9949ab00259dc3335bb842ffc80a0f4f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="concurrency-namespace-constants"></a>Concurrency-Namespace-Konstanten
 ||||  
@@ -58,7 +57,7 @@ const __declspec(selectany) GUID ChoreEventGuid =
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Kategorie von Ereignissen wird derzeit nicht von der Concurrency Runtime ausgelöst.  
+ Diese Kategorie der Ereignisse wird derzeit nicht von der Concurrency Runtime ausgelöst.  
   
 ##  <a name="concrt_providerguid"></a>ConcRT_ProviderGuid  
  Der ETW-Anbieter-GUID für die Concurrency Runtime.  
@@ -84,7 +83,7 @@ const __declspec(selectany) GUID ConcRTEventGuid =
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Kategorie von Ereignissen wird derzeit nicht von der Concurrency Runtime ausgelöst.  
+ Diese Kategorie der Ereignisse wird derzeit nicht von der Concurrency Runtime ausgelöst.  
   
 ##  <a name="cooperative_timeout_infinite"></a>COOPERATIVE_TIMEOUT_INFINITE  
  Ein Wert, der angibt, dass ein Wartevorgang nie durch einen Timeout beendet werden sollte.  
@@ -124,7 +123,7 @@ const __declspec(selectany) GUID LockEventGuid =
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Kategorie von Ereignissen wird derzeit nicht von der Concurrency Runtime ausgelöst.  
+ Diese Kategorie der Ereignisse wird derzeit nicht von der Concurrency Runtime ausgelöst.  
   
 ##  <a name="maxexecutionresources"></a>MaxExecutionResources  
  Ein besonderer Wert für die Richtlinienschlüssel `MinConcurrency` und `MaxConcurrency`. Wird, falls keine anderen Einschränkungen vorliegen, standardmäßig auf die Anzahl von Hardwarethreads auf dem Computer festgelegt.  
@@ -166,7 +165,7 @@ const __declspec(selectany) GUID ResourceManagerEventGuid =
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Kategorie von Ereignissen wird derzeit nicht von der Concurrency Runtime ausgelöst.  
+ Diese Kategorie der Ereignisse wird derzeit nicht von der Concurrency Runtime ausgelöst.  
   
 ##  <a name="schedulegroupeventguid"></a>ScheduleGroupEventGuid  
  Ein Kategorie-GUID, die ETW-Ereignisse beschreibt, die von der Concurrency Runtime ausgelöst werden und sich direkt auf Planungsgruppen beziehen.  
@@ -177,7 +176,7 @@ const __declspec(selectany) GUID ScheduleGroupEventGuid =
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Kategorie von Ereignissen wird derzeit nicht von der Concurrency Runtime ausgelöst.  
+ Diese Kategorie der Ereignisse wird derzeit nicht von der Concurrency Runtime ausgelöst.  
   
 ##  <a name="schedulereventguid"></a>SchedulerEventGuid  
  Ein Kategorie-GUID, die ETW-Ereignisse beschreibt, die von der Concurrency Runtime ausgelöst werden und sich direkt auf Planeraktivitäten beziehen.  
@@ -197,4 +196,3 @@ const __declspec(selectany) GUID VirtualProcessorEventGuid =
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)
-

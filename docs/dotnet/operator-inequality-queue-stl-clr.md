@@ -1,32 +1,30 @@
 ---
-title: "operator!= (queue) (STL/CLR)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::operator!="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator!=-Member [STL/CLR]"
+title: Operator! = (Warteschlange) (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::operator!=
+dev_langs: C++
+helpviewer_keywords: operator!= member [STL/CLR]
 ms.assetid: aa9e23e5-518e-473c-b15c-9b610bb215d6
-caps.latest.revision: 15
-caps.handback.revision: "13"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 18a0700acea20cb4f30a93d144c5bf217200bd77
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# operator!= (queue) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gleicher Vergleich der Warteschlange nicht.  
+# <a name="operator-queue-stlclr"></a>operator!= (queue) (STL/CLR)
+Ungleich-Vergleich in die Warteschlange.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<typename Value,  
@@ -35,17 +33,17 @@ template<typename Value,
         queue<Value, Container>% right);  
 ```  
   
-#### Parameter  
- left  
- Linker Container zu vergleichen.  
+#### <a name="parameters"></a>Parameter  
+ links  
+ Linker zu vergleichender Container.  
   
- right  
- Rechter Container zu vergleichen.  
+ Rechts  
+ Rechter zu vergleichender Container.  
   
-## Hinweise  
- Die Operatorfunktion gibt `!(``left` `==` `right``)` zurück.  Sie verwenden sie, um zu testen, ob `left` gleich wie `right` nicht sortiert wird, wenn die beiden verglichenes Warteschlangen Element durch Element sind.  
+## <a name="remarks"></a>Hinweise  
+ Gibt die Operatorfunktion `!(left == right)`. Verwenden sie zum Testen, ob `left` nicht sortiert wird, ist identisch mit `right` bei beiden Warteschlangen verglichenen elementweise sind.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_queue_operator_ne.cpp   
@@ -85,19 +83,22 @@ int main()
   
 ```  
   
-  **ein b c**  
- **ein b d**  
-**\[ein b c\!\]\= \[ein b c\] ist falsch**  
-**\[ein b c\!\]\= \[ein b d\] gilt**   
-## Anforderungen  
- **Header:** \<cliext\/Warteschlange\>  
+```Output  
+ a b c  
+ a b d  
+[a b c] != [a b c] is False  
+[a b c] != [a b d] is True  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext bzw. einer neuen Warteschlange >  
   
-## Siehe auch  
- [queue](../dotnet/queue-stl-clr.md)   
- [operator\=\= \(queue\)](../dotnet/operator-equality-queue-stl-clr.md)   
- [operator\< \(queue\)](../dotnet/operator-less-than-queue-stl-clr.md)   
- [operator\>\= \(queue\)](../dotnet/operator-greater-or-equal-queue-stl-clr.md)   
- [operator\> \(queue\)](../dotnet/operator-greater-than-queue-stl-clr.md)   
- [operator\<\= \(queue\)](../dotnet/operator-less-or-equal-queue-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Warteschlange (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [Operator == (Warteschlange) (STL/CLR)](../dotnet/operator-equality-queue-stl-clr.md)   
+ [Operator\< (Warteschlange) (STL/CLR)](../dotnet/operator-less-than-queue-stl-clr.md)   
+ [Operator > = (Warteschlange) (STL/CLR)](../dotnet/operator-greater-or-equal-queue-stl-clr.md)   
+ [Operator > (Warteschlange) (STL/CLR)](../dotnet/operator-greater-than-queue-stl-clr.md)   
+ [operator<= (queue) (STL/CLR)](../dotnet/operator-less-or-equal-queue-stl-clr.md)

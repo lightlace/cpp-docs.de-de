@@ -1,68 +1,68 @@
 ---
-title: "2.6.5 flush Directive"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.6.5 flush-Direktive | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: a2ec5f74-9c37-424a-8376-47ab4a5829a2
-caps.latest.revision: 8
-caps.handback.revision: "8"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a1911efe811545c13e62ab9f917ddfc284af35b0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# 2.6.5 flush Directive
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die **leer**\-Direktive, ob explizit oder implizit, geben einen „threadübergreifenden“ Sequenzpunkt an, in dem die Implementierung erforderlich ist, um sicherzustellen, dass alle Threads in einem Team eine konsistente Ansicht von bestimmten Objekten \(unten angegeben\) im Arbeitsspeicher verfügen.  Dies bedeutet, dass vorherige Auswertungen von Ausdrücken, die diese Objekte verweisen, vollständige und nachfolgende Auswertungen sind noch nicht gestartet wurden.  Beispielsweise müssen Compiler die Werte der Objekte aus Register Arbeitsspeicher und Hardware wiederherstellen, muss möglicherweise Pufferspeicher zum Arbeitsspeicher löscht und die Werte der Objekte aus dem Arbeitsspeicher.  
+# <a name="265-flush-directive"></a>2.6.5 flush-Anweisung
+Die **leeren** Richtlinie, ob explizit oder implizit, gibt einen "threadübergreifenden" Sequenzpunkt, an dem die Implementierung erforderlich ist, um sicherzustellen, dass alle Threads in einem Team eine konsistente Sicht der bestimmte Objekte (unten) in angegeben haben, Arbeitsspeicher. Dies bedeutet, dass vorherige auswertungen von Ausdrücken, die auf diese Objekte verweisen, abgeschlossen sind, und nachfolgende auswertungen wurden noch nicht gestartet. Z. B. Compiler müssen die Werte der Objekte von Registern wiederherstellen, in den Speicher und Hardware möglicherweise leeren Schreibzugriff Puffer in den Speicher und die Werte der Objekte aus dem Speicher erneut zu laden.  
   
- Die Syntax der **leer**\-Direktive sieht wie folgt aus:  
+ Die Syntax der **leeren** Richtlinie lautet wie folgt:  
   
 ```  
 #pragma omp flush [(variable-list)]  new-line  
 ```  
   
- Wenn die Objekte, die eine Synchronisierung erfordern, durch alle Variablen festgelegt werden können, können diese Variablen in der *Liste Variablen*optionalen angegeben werden.  Ist ein Zeiger auf die *Variable Liste*enthalten ist, wird der Zeiger auf das Objekt selbst, nicht entleert, die der Zeiger verweist.  
+ Wenn die Objekte, die eine Synchronisierung erfordern alle Variablen festgelegt werden können, und klicken Sie dann diese Variablen werden, in dem optionalen angegeben können *Variablenliste*. Wenn ein Zeiger im vorhanden ist die *Variablenliste*, der Zeiger selbst geleert wird, nicht das Objekt der Zeiger verweist auf.  
   
- **leer**\-Direktive ohne eine *Variable Liste* synchronisieren alle freigegebenen Objekte außer nicht zugänglich Objekte mit automatischer Speicherung dauer.  \(Dies kann mehr als **leer** Mehraufwand mit einer *Variablen Liste*zu haben.\) **leer**\-Direktive ohne eine *Variable Liste* werden für die folgenden Direktiven Folgendes bedeutet:  
+ Ein **leeren** ohne die Richtlinie ein *Variablenliste* aller freigegebenen Objekte außer kann nicht zugegriffen werden Objekte mit automatischer Speicherdauer synchronisiert. (Dies ist wahrscheinlich mehr Aufwand beim Nachrichtenübergabemechanismus gegenüber einer **leeren** mit einer *Variablenliste*.) Ein **leeren** ohne die Richtlinie ein *Variablenliste* wird impliziert, für die folgenden Direktiven:  
   
 -   `barrier`  
   
--   Am Eintrag und Beenden von **Kritisch**  
+-   Bei Eingang und das Ende von **kritisch**  
   
--   Am Eintrag und Beenden von `ordered`  
+-   Bei Eingang und das Ende von`ordered`  
   
--   Am Eintrag und Beenden von **Ähnlichkeit**  
+-   Bei Eingang und das Ende von **parallel**  
   
--   Verlassen Sie an der **nach**  
+-   Beenden Sie at **für**  
   
--   Verlassen Sie an der **Abschnitte**  
+-   Beenden Sie at **Abschnitte**  
   
--   Verlassen Sie an der **Einfach**  
+-   Beenden Sie at **einzelne**  
   
--   Am Eintrag und Beenden von **für Ähnlichkeit**  
+-   Bei Eingang und das Ende von **für parallele**  
   
--   Am Eintrag und Beenden von **parallele Abschnitte**  
+-   Bei Eingang und das Ende von **parallel Sections-**  
   
- Die Direktive wird nicht, wenn eine `nowait`\-Klausel vorhanden ist.  Es sollte beachtet werden, dass die **leer**\-Direktive nicht für alle der folgenden Elemente gedacht sind:  
+ Die Richtlinie wird nicht impliziert, wenn eine `nowait` -Klausel vorhanden ist. Es sollte beachtet werden, die **leeren** Richtlinie gilt nicht für eine der folgenden:  
   
--   Am Eintrag **nach**  
+-   Auf Eintrag **für**  
   
--   Am Eintrag oder Verlassen **Master**  
+-   Auf Eintrag oder Beenden von **master**  
   
--   Am Eintrag **Abschnitte**  
+-   Auf Eintrag **Abschnitte**  
   
--   Am Eintrag **Einfach**  
+-   Auf Eintrag **einzelne**  
   
- Ein Verweis, der den Wert eines Objekts mit einem flüchtig\-qualifizierten Typ zugegriffen wird, verhält sich, als ob es **leer** gab, das dieses Objekt am vorherigen Sequenzpunkt angibt richtungweisend ist.  Ein Verweis, der den Wert eines Objekts mit einem flüchtig\-qualifizierten Typ ändert, verhält sich, als ob es **leer** gab, das dieses Objekt am nächsten Sequenzpunkt angibt richtungweisend ist.  
+ Ein Verweis, der den Wert eines Objekts mit einem Volatile-qualified-Typ greift auf verhält, als wäre es ein **leeren** Richtlinie, die das Objekt am vorherigen Sequenzpunkt angeben. Ein Verweis, der den Wert eines Objekts mit einem Volatile-qualified-Typ ändert, verhält sich, als wäre es ein **leeren** Richtlinie, die dieses Objekt die nachfolgende Folge Zeitpunkt angeben.  
   
- Da die **leer**\-Direktive Wechselstrom\-Sprachanweisung nicht als Teil der Syntax haben, jedoch einige Einschränkungen bezüglich ihrer Platzierung innerhalb eines Programms vorhanden ist.  Weitere Informationen finden Sie unter [Anhang C](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md) für die formale Grammatik.  Das folgende Beispiel verdeutlicht diese Einschränkungen.  
+ Beachten Sie, dass, weil die **leeren** Richtlinie verfügt nicht über eine C-Language-Anweisung als Teil der Syntax, bestehen einige Einschränkungen auf die Platzierung innerhalb eines Programms. Finden Sie unter [Anhang C](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md) für die formale Grammatik. Das folgende Beispiel veranschaulicht diese Einschränkungen.  
   
 ```  
 /* ERROR - The flush directive cannot be the immediate  
@@ -80,6 +80,6 @@ if (x!=0) {
 }  
 ```  
   
- Einschränkungen für **leer**\-Direktive lauten wie folgt:  
+ Einschränkungen für die **leeren** Richtlinie lauten wie folgt:  
   
--   Eine Variable, die in **leer**\-Direktive angegeben ist, darf einen Verweistyp enthalten.
+-   Eine Variable, die im angegebenen eine **leeren** Richtlinie dürfen keinen Referenztyp darstellt.

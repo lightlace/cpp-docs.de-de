@@ -1,32 +1,30 @@
 ---
-title: "replace_copy (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::replace_copy"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "replace_copy-Funktion [STL/CLR]"
+title: Replace_copy (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::replace_copy
+dev_langs: C++
+helpviewer_keywords: replace_copy function [STL/CLR]
 ms.assetid: b531b49b-b16d-4b04-8f80-74f43dd496a4
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f347e8d7f5212900878c645e0c0594935c306088
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# replace_copy (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Überprüft jedes Element in einem Quellbereich und ersetzt, sofern eines angegebenen Werts beim Kopieren des Ergebnisses in einen neuen Zielbereich entspricht.  
+# <a name="replacecopy-stlclr"></a>replace_copy (STL/CLR)
+Überprüft jedes Element in einem Quellbereich und ersetzt es, sofern es einem angegebenen Wert entspricht, während das Ergebnis in einen neuen Zielbereich kopiert wird.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class _InIt, class _OutIt, class _Ty> inline  
@@ -34,13 +32,13 @@ template<class _InIt, class _OutIt, class _Ty> inline
         const _Ty% _Oldval, const _Ty% _Newval);  
 ```  
   
-## Hinweise  
- Diese Funktion verhält sich genauso wie die STL\-Funktion `replace_copy`.  Weitere Informationen finden Sie unter [replace\_copy](../Topic/replace_copy.md).  
+## <a name="remarks"></a>Hinweise  
+ Diese Funktion verhält sich wie die C++-Standardbibliothek Funktion `replace_copy`. Weitere Informationen finden Sie unter [Replace_copy](../standard-library/algorithm-functions.md#replace_copy).  
   
-## Anforderungen  
- **Header:** \<cliext\/Algorithmus\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext-Algorithmus >  
   
- **Namespace:** cliext  
+ **Namespace:** Cliext  
   
-## Siehe auch  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Siehe auch  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

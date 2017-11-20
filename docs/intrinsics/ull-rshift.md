@@ -1,65 +1,64 @@
 ---
-title: "__ull_rshift | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__ull_rshift"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ull_rshift intrinsic"
-  - "__ull_rshift intrinsic"
+title: __ull_rshift | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __ull_rshift
+dev_langs: C++
+helpviewer_keywords:
+- ull_rshift intrinsic
+- __ull_rshift intrinsic
 ms.assetid: b7ff5254-3540-4e6e-b57c-a6c4beb7dca2
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0d1519ead8d57e350ca0de95ab5db0c9fae14f05
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# __ull_rshift
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft\-spezifisch**  
+# <a name="ullrshift"></a>__ull_rshift
+**Microsoft-spezifisch**  
   
- Ein 64\-Bit\-Wert Verschiebungen x64 für den ersten Parameter angegeben durch mehrere Bits nach rechts angegeben durch den zweiten Parameter.  
+ auf X64 Verschiebt einen 64-Bit-Wert, der durch den ersten Parameter auf der rechten Seite angegeben eine Anzahl von Bits, die durch den zweiten Parameter angegeben.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-unsigned __int64 __ull_rshift(   
-   unsigned __int64 mask,    
-   int nBit   
+unsigned __int64 __ull_rshift(   
+   unsigned __int64 mask,    
+   int nBit   
 );  
 ```  
   
-#### Parameter  
- \[in\] `mask`  
- Der 64\-Bit\-Ganzzahlwert Rechts, um das verschoben werden soll.  
+#### <a name="parameters"></a>Parameter  
+ [in] `mask`  
+ Der 64-Bit-Ganzzahl-Wert nach rechts verschoben werden soll.  
   
- \[in\] `nBit`  
- Die Anzahl der Bits verschoben. von Modulo 32 auf x86 und Modulo 64 x64.  
+ [in] `nBit`  
+ Die Anzahl der zu verschiebenden modulo 32 auf X86 und modulo auf X64 64 Bits.  
   
-## Rückgabewert  
- Die Maske durch `nBit` Bits verschoben.  
+## <a name="return-value"></a>Rückgabewert  
+ Die Maske verschoben werden, indem `nBit` Bits.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Intrinsisch|Architektur|  
-|-----------------|-----------------|  
+|Systemintern|Architektur|  
+|---------------|------------------|  
 |`__ull_rshift`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Headerdatei** \<intrin.h\>  
+ **Headerdatei** \<intrin.h >  
   
-## Hinweise  
- Wenn der zweite Parameter größer als 31 \(63 auf x86 auf x64\), wird diese Zahl den Modulo \(64 32, ausgeführt auf x64\), um die Anzahl der Bits zu bestimmen, um sich selbst zu verschieben.  `ull` im Namen vorhanden ist `unsigned long long (unsigned __int64)`an.  
+## <a name="remarks"></a>Hinweise  
+ Wenn der zweite Parameter größer als 31 auf X86 (63 auf X64),, die Anzahl modulo 32 (64 auf X64) ausgeführt wird ist, um zu bestimmen, die Anzahl der zu verschiebenden Bits. Die `ull` gibt den Namen an `unsigned long long (unsigned __int64)`.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // ull_rshift.cpp  
@@ -80,15 +79,15 @@ int main()
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Ausgabe  
   
 ```  
 1  
 ```  
   
-### Microsoft ENDES bestimmten  
+**Ende Microsoft-spezifisch**  
   
-## Siehe auch  
- [\_\_ll\_lshift](../intrinsics/ll-lshift.md)   
- [\_\_ll\_rshift](../intrinsics/ll-rshift.md)   
+## <a name="see-also"></a>Siehe auch  
+ [__ll_lshift](../intrinsics/ll-lshift.md)   
+ [__ll_rshift](../intrinsics/ll-rshift.md)   
  [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

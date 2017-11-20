@@ -1,29 +1,27 @@
 ---
-title: "Linkertoolwarnung LNK4073 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4073"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4073"
+title: Linkertoolwarnung Lnk4073 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4073
+dev_langs: C++
+helpviewer_keywords: LNK4073
 ms.assetid: a0c80242-3395-45bd-bbe7-4f31d7ac9e3a
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 04511385cf3b5a7d5b657ecfbb2645ad36f6da8c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Linkertoolwarnung LNK4073
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Zuordnung für ILK\-Datei kann nicht erstellt werden; Bindung erfolgt nicht inkrementell  
+# <a name="linker-tools-warning-lnk4073"></a>Linkertoolwarnung LNK4073
+Zuordnung für ILK-Datei kann nicht erstellt werden; ILK-Datei  
   
- Für LINK stand nicht genügend zusammenhängender Speicherplatz im gemeinsam genutzten Speicher zur Verfügung, um die inkrementelle Statusdatei \(**.ilk**\) zu erstellen.  Es wurde ein nicht inkrementelles Build von LINK durchgeführt.
+ War nicht genügend Speicherplatz im gemeinsam genutzten Speicherbereich für den LINK, um die inkrementelle Statusdatei (ILK) zu erstellen. LINK ausgeführt, ein nicht inkrementelles erstellen.

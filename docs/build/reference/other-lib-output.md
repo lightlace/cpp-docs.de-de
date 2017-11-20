@@ -1,36 +1,34 @@
 ---
-title: "Sonstige LIB-Ausgabe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Lib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Ausgabedateien, LIB"
+title: Sonstige LIB-Ausgabe | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Lib
+dev_langs: C++
+helpviewer_keywords: output files, LIB
 ms.assetid: 656864a6-0b7a-4633-8dc6-ee3b1766d836
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 039117b08a3985e1d29f8be50a8869156699b415
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Sonstige LIB-Ausgabe
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Im Standardmodus können Sie mit der **\/LIST**\-Option Informationen über die resultierende Bibliothek anzeigen.  Sie können diese Ausgabe auch in eine Datei umleiten.  
+# <a name="other-lib-output"></a>Sonstige LIB-Ausgabe
+Im Standardmodus können Sie die Option/List zum Anzeigen von Informationen über die resultierende Bibliothek. Sie können diese Ausgabe in eine Datei umleiten.  
   
- LIB zeigt eine Copyrightmeldung, die Versionsnummer und die ausgeführten Befehlsdateien an, es sei denn, die **\/NOLOGO**\-Option wird verwendet.  
+ LIB zeigt eine Meldung Copyright- und und Befehlsdateien, es sei denn, die/nologo-Option verwendet wird.  
   
- Wenn Sie `lib` ohne weitere Angaben eingeben, wird ein Verwendungshinweis angezeigt, in dem die LIB\-Optionen zusammengefasst sind.  
+ Bei der Eingabe `lib` keine anderen Eingabe LIB zeigt eine nutzungsanweisung an, die die Optionen zusammengefasst sind.  
   
- Fehler\- und Warnmeldungen werden von LIB im Format LNKnnnn ausgegeben.  Die Tools **LINK**, **DUMPBIN** und **EDITBIN** verwenden den gleichen Satz von Fehlernummern.  Hilfe erhalten Sie, indem Sie im Ausgabefenster den Fehler markieren und anschließend F1 drücken.  
+ Fehler- und warnungsmeldungen, die Nachrichten von LIB ausgestellt haben das Format LNK*nnnn*. Der LINK, DUMPBIN und EDITBIN verwenden ebenfalls dieses Bereichs von Fehlern. Hilfe ist verfügbar, indem Sie den Fehler im Fenster "Ausgabe" auswählen und durch Drücken von F1.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Übersicht über LIB](../../build/reference/overview-of-lib.md)

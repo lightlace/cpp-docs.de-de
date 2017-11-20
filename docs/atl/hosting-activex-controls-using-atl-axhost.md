@@ -1,60 +1,61 @@
 ---
-title: "Hosting ActiveX Controls Using ATL AXHost | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX-Steuerelemente [C++], Hosting"
-  - "AXHost method"
-  - "Calendar control (ActiveX)"
-  - "Calendar control (ActiveX), hosting with ATL AXHost"
-  - "CAxWindow2T class"
-  - "Hosting von ActiveX-Steuerelementen"
+title: Hosting von ActiveX-Steuerelementen mit ATL AXHost | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- CAxWindow2T class
+- Calendar control (ActiveX), hosting with ATL AXHost
+- Calendar control (ActiveX)
+- ActiveX controls [C++], hosting
+- hosting ActiveX controls
+- AXHost method
 ms.assetid: 2c1200ec-effb-4814-820a-509519699468
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bb2e7da3ed12b48f82f5769dd8436f0440031226
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Hosting ActiveX Controls Using ATL AXHost
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Das Beispiel in diesem Thema wird gezeigt, wie AXHost erstellt und wie ein ActiveX\-Steuerelement mithilfe verschiedener ATL\-Funktionen hostet.  Es zeigt auch, wie auf das Steuerelement zugegriffen wird und Ereignisse \(mithilfe [IDispEventImpl](../atl/reference/idispeventimpl-class.md)\) vom Steuerelement sinkt, das gehostet wird.  Das Beispiel hostet das Kalendersteuerelement in einem Hauptfenster oder in einem untergeordneten Fenster.  
+# <a name="hosting-activex-controls-using-atl-axhost"></a>Hosting von ActiveX-Steuerelementen mit ATL AXHost
+Im Beispiel in diesem Thema wird gezeigt, wie AXHost erstellt und wie mit verschiedenen Funktionen von ATL-ActiveX-Steuerelement gehostet. Außerdem wird gezeigt, wie auf das Steuerelement und die Senke Ereignisse zugreifen (mit [IDispEventImpl](../atl/reference/idispeventimpl-class.md)) aus dem Steuerelement, das gehostet wird. Im Beispiel hostet das Kalender-Steuerelement in ein Hauptfenster oder ein untergeordnetes Fenster.  
   
- Beachten Sie die Definition des Symbols `USE_METHOD`.  Sie können den Wert dieses Symbols ändern, um zwischen 1 und 8. variiert.  Der Wert des Symbols bestimmt, wie das Steuerelement erstellt wird:  
+ Beachten Sie die Definition der `USE_METHOD` Symbol. Sie können den Wert dieses Symbols variiert zwischen 1 und 8 ändern. Der Wert des Symbols wird bestimmt, wie das Steuerelement erstellt wird:  
   
--   Für nur Werte von `USE_METHOD`, ordnet der aufrufen, um des Hosts erstellen ein Fenster unter und konvertiert sie in einem Steuerhost.  Für ungerade Werte erstellt der Code ein untergeordnetes Fenster, das als Host fungiert.  
+-   Für Werte des gerader `USE_METHOD`, den Aufruf beim Erstellen von der Host-Unterklassen eines Fensters und konvertiert sie in einem Steuerelementhost. Für die ungeraden Werte erstellt der Code ein untergeordnetes Fenster, das als Host fungiert.  
   
--   Für Werte von `USE_METHOD` zwischen 1 und 4, werden Zugriff auf das Steuerelement und das Verringern von Ereignissen im Aufruf erreicht, der auch den Host erstellt.  Werte zwischen 5 und 8 fragen den Host für Schnittstellen ab und verknüpfen die Senke.  
+-   Für Werte des `USE_METHOD` zwischen 1 und 4, der Zugriff auf das Steuerelement und Auffangen von Ereignissen von aktivitätsdesignerattribute im Aufruf, die auch auf den Host erstellt. Werte zwischen 5 und 8 Fragen Sie den Host für die Schnittstellen und die Senke zu verknüpfen.  
   
- Es folgt eine Zusammenfassung:  
+ Hier finden Sie eine Zusammenfassung:  
   
-|USE\_METHOD|Host|Zugriff und Ereignissinken|Funktion veranschaulicht|  
-|-----------------|----------|--------------------------------|------------------------------|  
+|USE_METHOD|Host|Steuern des Zugriffs und Auffangen|Funktion veranschaulicht|  
+|-----------------|----------|--------------------------------------|---------------------------|  
 |1|Untergeordnete Fenster|Ein Schritt|CreateControlLicEx|  
-|2|Hauptfenster|Ein Schritt|AtlAxCreateControlLicEx|  
+|2|Im Hauptfenster|Ein Schritt|AtlAxCreateControlLicEx|  
 |3|Untergeordnete Fenster|Ein Schritt|CreateControlEx|  
-|4|Hauptfenster|Ein Schritt|AtlAxCreateControlEx|  
+|4|Im Hauptfenster|Ein Schritt|AtlAxCreateControlEx|  
 |5|Untergeordnete Fenster|Mehrere Schritte|CreateControlLic|  
-|6|Hauptfenster|Mehrere Schritte|AtlAxCreateControlLic|  
+|6|Im Hauptfenster|Mehrere Schritte|AtlAxCreateControlLic|  
 |7|Untergeordnete Fenster|Mehrere Schritte|CreateControl|  
-|8|Hauptfenster|Mehrere Schritte|AtlAxCreateControl|  
+|8|Im Hauptfenster|Mehrere Schritte|AtlAxCreateControl|  
   
- [!CODE [NVC_ATL_AxHost#1](../CodeSnippet/VS_Snippets_Cpp/NVC_ATL_AxHost#1)]  
+ [!code-cpp[NVC_ATL_AxHost#1](../atl/codesnippet/cpp/hosting-activex-controls-using-atl-axhost_1.cpp)]  
   
-## Siehe auch  
- [Fragen und Antworten zur Steuerelementkapselung](../atl/atl-control-containment-faq.md)   
- [AtlAxCreateControl](../Topic/AtlAxCreateControl.md)   
- [AtlAxCreateControlEx](../Topic/AtlAxCreateControlEx.md)   
- [AtlAxCreateControlLic](../Topic/AtlAxCreateControlLic.md)   
- [AtlAxCreateControlLicEx](../Topic/AtlAxCreateControlLicEx.md)   
- [CAxWindow2T Class](../atl/reference/caxwindow2t-class.md)   
- [IAxWinHostWindowLic Interface](../atl/reference/iaxwinhostwindowlic-interface.md)
+## <a name="see-also"></a>Siehe auch  
+ [Zur steuerelementkapselung](../atl/atl-control-containment-faq.md)   
+ [AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol)   
+ [AtlAxCreateControlEx](reference/composite-control-global-functions.md#atlaxcreatecontrolex)   
+ [AtlAxCreateControlLic](reference/composite-control-global-functions.md#atlaxcreatecontrollic)   
+ [AtlAxCreateControlLicEx](reference/composite-control-global-functions.md#atlaxcreatecontrolex)   
+ [CAxWindow2T-Klasse](../atl/reference/caxwindow2t-class.md)   
+ [IAxWinHostWindowLic-Schnittstelle](../atl/reference/iaxwinhostwindowlic-interface.md)
+
