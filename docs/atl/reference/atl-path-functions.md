@@ -1,34 +1,33 @@
 ---
-title: ATL-Funktionen | Microsoft-Dokumentation
+title: ATL-Pfadfunktionen | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords:
-- ATL, Pfad
+keywords: ATL, Pfad
 ms.assetid: d1ec2b8d-7ec7-43ea-90dd-0a740d2a742b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
-translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
 ms.openlocfilehash: 97d585eb8bbe59a8ccd92b866819fb869d35f64c
-ms.lasthandoff: 02/24/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="atl-path-functions"></a>ATL-Funktionen
 
-ATL stellt die ATLPath-Klasse zum Bearbeiten von Pfaden in Form von [CPathT](cpatht-class.md). Dieser Code kann in atlpath.h gefunden werden.  
+ATL stellt die Klasse ATLPath zum Bearbeiten von Pfaden in Form von [CPathT](cpatht-class.md). Dieser Code kann in atlpath.h gefunden werden.  
   
 ### <a name="related-classes"></a>Verwandte Klassen  
   
 |||  
 |-|-|  
-|[CPathT-Klasse](cpatht-class.md)|Diese Klasse stellt einen Pfad.|  
+|[CPathT-Klasse](cpatht-class.md)|Diese Klasse stellt einen Pfad an.|  
 
-### <a name="related-typedefs"></a>Verwandte Typdefinitionen  
+### <a name="related-typedefs"></a>Verwandte Typedefs  
   
 |||  
 |-|-|  
@@ -80,7 +79,7 @@ ATL stellt die ATLPath-Klasse zum Bearbeiten von Pfaden in Form von [CPathT](cpa
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlpath.h  
 
-## <a name="a-nameaddbackslasha-atlpathaddbackslash"></a><a name="addbackslash"></a>ATLPath::AddBackSlash
+## <a name="addbackslash"></a>ATLPath::AddBackSlash
 
 Diese Funktion ist ein überladener Wrapper für [PathAddBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773561).  
   
@@ -92,12 +91,12 @@ inline wchar_t* AddBackslash(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [PathAddBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773561) Details.  
+ Finden Sie unter [PathAddBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773561) für Details.  
   
  
   
 
-## <a name="a-nameaddextensiona-atlpathaddextension"></a><a name="addextension"></a>ATLPath::AddExtension
+## <a name="addextension"></a>ATLPath::AddExtension
  Diese Funktion ist ein überladener Wrapper für [PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563).  
   
 ### <a name="syntax"></a>Syntax  
@@ -108,9 +107,9 @@ inline BOOL AddExtension(wchar_t* pszPath, const wchar_t* pszExtension);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563) Details. 
+ Finden Sie unter [PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563) für Details. 
   
-## <a name="a-nameappenda-atlpathappend"></a><a name="append"></a>ATLPath::Append
+## <a name="append"></a>ATLPath::Append
  Diese Funktion ist ein überladener Wrapper für [PathAppend](http://msdn.microsoft.com/library/windows/desktop/bb773565).  
   
 ### <a name="syntax"></a>Syntax  
@@ -126,7 +125,7 @@ inline BOOL Append(wchar_t* pszPath, const wchar_t* pszMore);
  
   
 
-## <a name="a-namebuildroota-atlpathbuildroot"></a><a name="buildroot"></a>ATLPath::BuildRoot
+## <a name="buildroot"></a>ATLPath::BuildRoot
  Diese Funktion ist ein überladener Wrapper für [PathBuildRoot](http://msdn.microsoft.com/library/windows/desktop/bb773567).  
   
 ### <a name="syntax"></a>Syntax  
@@ -137,12 +136,12 @@ inline wchar_t* BuildRoot(wchar_t* pszPath, int iDrive);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [PathBuildRoot](http://msdn.microsoft.com/library/windows/desktop/bb773567) Details.  
+ Finden Sie unter [PathBuildRoot](http://msdn.microsoft.com/library/windows/desktop/bb773567) für Details.  
   
  
   
 
-## <a name="a-namecanonicalizea-atlpathcanonicalize"></a><a name="canonicalize"></a>ATLPath::Canonicalize
+## <a name="canonicalize"></a>ATLPath::Canonicalize
  Diese Funktion ist ein überladener Wrapper für [PathCanonicalize](http://msdn.microsoft.com/library/windows/desktop/bb773569).  
   
 ### <a name="syntax"></a>Syntax  
@@ -153,12 +152,12 @@ inline BOOL Canonicalize(wchar_t* pszDest, const wchar_t* pszSrc);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [PathCanonicalize](http://msdn.microsoft.com/library/windows/desktop/bb773569) Details.  
+ Finden Sie unter [PathCanonicalize](http://msdn.microsoft.com/library/windows/desktop/bb773569) für Details.  
   
  
   
 
-## <a name="a-namecombinea-atlpathcombine"></a><a name="combine"></a>ATLPath::Combine 
+## <a name="combine"></a>ATLPath::Combine 
 Diese Funktion ist ein überladener Wrapper für [PathCombine](https://msdn.microsoft.com/en-us/library/windows/desktop/bb773571).  
 
 ### <a name="syntax"></a>Syntax  
@@ -175,10 +174,10 @@ inline wchar_t* Combine(
    const wchar_t* pszFile);
 ```
 ### <a name="remarks"></a>Hinweise
-Einzelheiten finden Sie unter PathCombine.
+Informationen finden Sie in der PathCombine.
 
 
-## <a name="a-namecommonprefixa-atlpathcommonprefix"></a><a name="commonprefix"></a>ATLPath::CommonPrefix
+## <a name="commonprefix"></a>ATLPath::CommonPrefix
  Diese Funktion ist ein überladener Wrapper für [PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574).  
   
 ### <a name="syntax"></a>Syntax  
@@ -196,12 +195,12 @@ inline int CommonPrefix(
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574) Details.  
+ Finden Sie unter [PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574) für Details.  
   
  
   
 
-## <a name="a-namecompactpatha-atlpathcompactpath"></a><a name="compactpath"></a>ATLPath::CompactPath
+## <a name="compactpath"></a>ATLPath::CompactPath
  Diese Funktion ist ein überladener Wrapper für [PathCompactPath](http://msdn.microsoft.com/library/windows/desktop/bb773575).  
   
 ### <a name="syntax"></a>Syntax  
@@ -219,12 +218,12 @@ inline BOOL CompactPath(
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [PathCompactPath](http://msdn.microsoft.com/library/windows/desktop/bb773575) Details.  
+ Finden Sie unter [PathCompactPath](http://msdn.microsoft.com/library/windows/desktop/bb773575) für Details.  
   
  
   
 
-## <a name="a-namecompactpathexa-atlpathcompactpathex"></a><a name="compactpathex"></a>ATLPath::CompactPathEx
+## <a name="compactpathex"></a>ATLPath::CompactPathEx
  Diese Funktion ist ein überladener Wrapper für [PathCompactPathEx](http://msdn.microsoft.com/library/windows/desktop/bb773578).  
   
 ### <a name="syntax"></a>Syntax  
@@ -244,12 +243,12 @@ inline BOOL CompactPathEx(
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [PathCompactPathEx](http://msdn.microsoft.com/library/windows/desktop/bb773578) Details.  
+ Finden Sie unter [PathCompactPathEx](http://msdn.microsoft.com/library/windows/desktop/bb773578) für Details.  
   
  
   
 
-## <a name="a-namefileexistsa-atlpathfileexists"></a><a name="fileexists"></a>ATLPath::FileExists
+## <a name="fileexists"></a>ATLPath::FileExists
  Diese Funktion ist ein überladener Wrapper für [PathFileExists](http://msdn.microsoft.com/library/windows/desktop/bb773584).  
   
 ### <a name="syntax"></a>Syntax  
@@ -260,12 +259,12 @@ inline BOOL FileExists(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [PathFileExists](http://msdn.microsoft.com/library/windows/desktop/bb773584) Details.  
+ Finden Sie unter [PathFileExists](http://msdn.microsoft.com/library/windows/desktop/bb773584) für Details.  
   
  
   
 
-## <a name="a-namefindextensiona-atlpathfindextension"></a><a name="findextension"></a>ATLPath::FindExtension
+## <a name="findextension"></a>ATLPath::FindExtension
  Diese Funktion ist ein überladener Wrapper für [PathFindExtension](http://msdn.microsoft.com/library/windows/desktop/bb773587).  
   
 ### <a name="syntax"></a>Syntax  
@@ -276,12 +275,12 @@ inline wchar_t* FindExtension(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [PathFindExtension](http://msdn.microsoft.com/library/windows/desktop/bb773587) Details.  
+ Finden Sie unter [PathFindExtension](http://msdn.microsoft.com/library/windows/desktop/bb773587) für Details.  
   
  
   
 
-## <a name="a-namefindfilenamea-atlpathfindfilename"></a><a name="findfilename"></a>ATLPath::FindFileName
+## <a name="findfilename"></a>ATLPath::FindFileName
  Diese Funktion ist ein überladener Wrapper für [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589).  
   
 ### <a name="syntax"></a>Syntax  
@@ -292,12 +291,12 @@ inline wchar_t* FindFileName(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589) Details.  
+ Finden Sie unter [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589) für Details.  
   
  
   
 
-## <a name="a-namegetdrivenumbera-atlpathgetdrivenumber"></a><a name="getdrivenumber"></a>ATLPath::GetDriveNumber  
+## <a name="getdrivenumber"></a>ATLPath::GetDriveNumber  
  Diese Funktion ist ein überladener Wrapper für [PathGetDriveNumber](http://msdn.microsoft.com/library/windows/desktop/bb773612).  
   
 ### <a name="syntax"></a>Syntax  
@@ -308,12 +307,12 @@ inline int GetDriveNumber(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [PathGetDriveNumber](http://msdn.microsoft.com/library/windows/desktop/bb773612) Details.  
+ Finden Sie unter [PathGetDriveNumber](http://msdn.microsoft.com/library/windows/desktop/bb773612) für Details.  
   
  
 
 
-## <a name="a-nameisdirectorya--atlpathisdirectory"></a><a name="isdirectory"></a>ATLPath::IsDirectory 
+## <a name="isdirectory"></a>ATLPath::IsDirectory 
 Diese Funktion ist ein überladener Wrapper für [PathIsDirectory](https://msdn.microsoft.com/en-us/library/windows/desktop/bb773621).
 
 ```  
@@ -321,9 +320,9 @@ inline BOOL IsDirectory(const char* pszPath);
 inline BOOL IsDirectory(const wchar_t* pszPath);
 ```  
 ### <a name="remarks"></a>Hinweise
-Einzelheiten finden Sie unter PathIsDirectory.  
+Informationen finden Sie in der PathIsDirectory.  
 
-## <a name="a-nameisfilespeca-atlpathisfilespec"></a><a name="isfilespec"></a>ATLPath::IsFileSpec
+## <a name="isfilespec"></a>ATLPath::IsFileSpec
  Diese Funktion ist ein überladener Wrapper für [PathIsFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773627).  
   
 ### <a name="syntax"></a>Syntax  
@@ -334,12 +333,12 @@ inline BOOL IsFileSpec(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [PathIsFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773627) Details.  
+ Finden Sie unter [PathIsFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773627) für Details.  
   
  
   
 
-## <a name="a-nameisprefixa-atlpathisprefix"></a><a name="isprefix"></a>ATLPath::IsPrefix
+## <a name="isprefix"></a>ATLPath::IsPrefix
  Diese Funktion ist ein überladener Wrapper für [PathIsPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773650).  
   
 ### <a name="syntax"></a>Syntax  
@@ -350,12 +349,12 @@ inline BOOL IsPrefix(const wchar_t* pszPrefix, const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [PathIsPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773650) Details.  
+ Finden Sie unter [PathIsPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773650) für Details.  
   
  
   
 
-## <a name="a-nameisrelativea-atlpathisrelative"></a><a name="isrelative"></a>ATLPath::IsRelative
+## <a name="isrelative"></a>ATLPath::IsRelative
  Diese Funktion ist ein überladener Wrapper für [PathIsRelative](http://msdn.microsoft.com/library/windows/desktop/bb773660).  
   
 ### <a name="syntax"></a>Syntax  
@@ -366,12 +365,12 @@ inline BOOL IsRelative(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [PathIsRelative](http://msdn.microsoft.com/library/windows/desktop/bb773660) Details.  
+ Finden Sie unter [PathIsRelative](http://msdn.microsoft.com/library/windows/desktop/bb773660) für Details.  
   
  
   
 
-## <a name="a-nameisroota-atlpathisroot"></a><a name="isroot"></a>ATLPath::IsRoot
+## <a name="isroot"></a>ATLPath::IsRoot
  Diese Funktion ist ein überladener Wrapper für [PathIsRoot](http://msdn.microsoft.com/library/windows/desktop/bb773674).  
   
 ### <a name="syntax"></a>Syntax  
@@ -382,12 +381,12 @@ inline BOOL IsRoot(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [PathIsRoot](http://msdn.microsoft.com/library/windows/desktop/bb773674) Details.  
+ Finden Sie unter [PathIsRoot](http://msdn.microsoft.com/library/windows/desktop/bb773674) für Details.  
   
  
   
 
-## <a name="a-nameissameroota-atlpathissameroot"></a><a name="issameroot"></a>ATLPath::IsSameRoot
+## <a name="issameroot"></a>ATLPath::IsSameRoot
  Diese Funktion ist ein überladener Wrapper für [PathIsSameRoot](http://msdn.microsoft.com/library/windows/desktop/bb773687).  
   
 ### <a name="syntax"></a>Syntax  
@@ -398,12 +397,12 @@ inline BOOL IsSameRoot(const wchar_t* pszPath1, const wchar_t* pszPath2);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [PathIsSameRoot](http://msdn.microsoft.com/library/windows/desktop/bb773687) Details.  
+ Finden Sie unter [PathIsSameRoot](http://msdn.microsoft.com/library/windows/desktop/bb773687) für Details.  
   
  
   
 
-## <a name="a-nameisunca-atlpathisunc"></a><a name="isunc"></a>ATLPath::IsUNC
+## <a name="isunc"></a>ATLPath::IsUNC
  Diese Funktion ist ein überladener Wrapper für [PathIsUNC](http://msdn.microsoft.com/library/windows/desktop/bb773712).  
   
 ### <a name="syntax"></a>Syntax  
@@ -414,12 +413,12 @@ inline BOOL IsUNC(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [PathIsUNC](http://msdn.microsoft.com/library/windows/desktop/bb773712) Details.  
+ Finden Sie unter [PathIsUNC](http://msdn.microsoft.com/library/windows/desktop/bb773712) für Details.  
   
  
   
 
-## <a name="a-nameisuncservera-atlpathisuncserver"></a><a name="isuncserver"></a>ATLPath::IsUNCServer
+## <a name="isuncserver"></a>ATLPath::IsUNCServer
  Diese Funktion ist ein überladener Wrapper für [PathIsUNCServer](http://msdn.microsoft.com/library/windows/desktop/bb773722).  
   
 ### <a name="syntax"></a>Syntax  
@@ -430,12 +429,12 @@ inline BOOL IsUNCServer(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [PathIsUNCServer](http://msdn.microsoft.com/library/windows/desktop/bb773722) Details.  
+ Finden Sie unter [PathIsUNCServer](http://msdn.microsoft.com/library/windows/desktop/bb773722) für Details.  
   
  
   
 
-## <a name="a-nameisuncserversharea-atlpathisuncservershare"></a><a name="isuncservershare"></a>ATLPath::IsUNCServerShare
+## <a name="isuncservershare"></a>ATLPath::IsUNCServerShare
  Diese Funktion ist ein überladener Wrapper für [PathIsUNCServerShare](http://msdn.microsoft.com/library/windows/desktop/bb773723).  
   
 ### <a name="syntax"></a>Syntax  
@@ -446,12 +445,12 @@ inline BOOL IsUNCServerShare(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [PathIsUNCServerShare](http://msdn.microsoft.com/library/windows/desktop/bb773723) Details.  
+ Finden Sie unter [PathIsUNCServerShare](http://msdn.microsoft.com/library/windows/desktop/bb773723) für Details.  
   
  
   
 
-## <a name="a-namemakeprettya-atlpathmakepretty"></a><a name="makepretty"></a>ATLPath::MakePretty
+## <a name="makepretty"></a>ATLPath::MakePretty
  Diese Funktion ist ein überladener Wrapper für [PathMakePretty](http://msdn.microsoft.com/library/windows/desktop/bb773725).  
   
 ### <a name="syntax"></a>Syntax  
@@ -462,12 +461,12 @@ inline BOOL MakePretty(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [PathMakePretty](http://msdn.microsoft.com/library/windows/desktop/bb773725) Details.  
+ Finden Sie unter [PathMakePretty](http://msdn.microsoft.com/library/windows/desktop/bb773725) für Details.  
   
  
   
 
-## <a name="a-namematchspeca-atlpathmatchspec"></a><a name="matchspec"></a>ATLPath::MatchSpec  
+## <a name="matchspec"></a>ATLPath::MatchSpec  
  Diese Funktion ist ein überladener Wrapper für [PathMatchSpec](http://msdn.microsoft.com/library/windows/desktop/bb773727).  
   
 ### <a name="syntax"></a>Syntax  
@@ -478,12 +477,12 @@ inline BOOL MatchSpec(const wchar_t* pszPath, const wchar_t* pszSpec);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [PathMatchSpec](http://msdn.microsoft.com/library/windows/desktop/bb773727) Details.  
+ Finden Sie unter [PathMatchSpec](http://msdn.microsoft.com/library/windows/desktop/bb773727) für Details.  
   
  
   
 
-## <a name="a-namequotespacesa-atlpathquotespaces"></a><a name="quotespaces"></a>ATLPath::QuoteSpaces  
+## <a name="quotespaces"></a>ATLPath::QuoteSpaces  
  Diese Funktion ist ein überladener Wrapper für [PathQuoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773739).  
   
 ### <a name="syntax"></a>Syntax  
@@ -494,12 +493,12 @@ inline void QuoteSpaces(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [PathQuoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773739) Details.  
+ Finden Sie unter [PathQuoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773739) für Details.  
   
  
   
 
-## <a name="a-namerelativepathtoa-atlpathrelativepathto"></a><a name="relativepathto"></a>ATLPath::RelativePathTo
+## <a name="relativepathto"></a>ATLPath::RelativePathTo
  Diese Funktion ist ein überladener Wrapper für [PathRelativePathTo](http://msdn.microsoft.com/library/windows/desktop/bb773740).  
   
 ### <a name="syntax"></a>Syntax  
@@ -521,12 +520,12 @@ inline BOOL RelativePathTo(
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [PathRelativePathTo](http://msdn.microsoft.com/library/windows/desktop/bb773740) Details.  
+ Finden Sie unter [PathRelativePathTo](http://msdn.microsoft.com/library/windows/desktop/bb773740) für Details.  
   
  
   
 
-## <a name="a-nameremoveargsa-atlpathremoveargs"></a><a name="removeargs"></a>ATLPath::RemoveArgs  
+## <a name="removeargs"></a>ATLPath::RemoveArgs  
  Diese Funktion ist ein überladener Wrapper für [PathRemoveArgs](http://msdn.microsoft.com/library/windows/desktop/bb773742).  
   
 ### <a name="syntax"></a>Syntax  
@@ -537,12 +536,12 @@ inline void RemoveArgs(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [PathRemoveArgs](http://msdn.microsoft.com/library/windows/desktop/bb773742) Details.  
+ Finden Sie unter [PathRemoveArgs](http://msdn.microsoft.com/library/windows/desktop/bb773742) für Details.  
   
  
   
 
-## <a name="a-nameremovebackslasha-atlpathremovebackslash"></a><a name="removebackslash"></a>ATLPath::RemoveBackslash
+## <a name="removebackslash"></a>ATLPath::RemoveBackslash
  Diese Funktion ist ein überladener Wrapper für [PathRemoveBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773743).  
   
 ### <a name="syntax"></a>Syntax  
@@ -553,12 +552,12 @@ inline wchar_t* RemoveBackslash(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [PathRemoveBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773743) Details.  
+ Finden Sie unter [PathRemoveBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773743) für Details.  
   
  
   
 
-## <a name="a-nameremoveblanksa-atlpathremoveblanks"></a><a name="removeblanks"></a>ATLPath::RemoveBlanks
+## <a name="removeblanks"></a>ATLPath::RemoveBlanks
  Diese Funktion ist ein überladener Wrapper für [PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745).  
   
 ### <a name="syntax"></a>Syntax  
@@ -569,12 +568,12 @@ inline void RemoveBlanks(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745) Details.  
+ Finden Sie unter [PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745) für Details.  
   
  
   
 
-## <a name="a-nameremoveextensiona-atlpathremoveextension"></a><a name="removeextension"></a>ATLPath::RemoveExtension
+## <a name="removeextension"></a>ATLPath::RemoveExtension
  Diese Funktion ist ein überladener Wrapper für [PathRemoveExtension](http://msdn.microsoft.com/library/windows/desktop/bb773746).  
   
 ### <a name="syntax"></a>Syntax  
@@ -585,12 +584,12 @@ inline void RemoveExtension(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [PathRemoveExtension](http://msdn.microsoft.com/library/windows/desktop/bb773746) Details.  
+ Finden Sie unter [PathRemoveExtension](http://msdn.microsoft.com/library/windows/desktop/bb773746) für Details.  
   
  
   
 
-## <a name="a-nameremovefilespeca-atlpathremovefilespec"></a><a name="removefilespec"></a>ATLPath::RemoveFileSpec
+## <a name="removefilespec"></a>ATLPath::RemoveFileSpec
  Diese Funktion ist ein überladener Wrapper für [PathRemoveFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773748).  
   
 ### <a name="syntax"></a>Syntax  
@@ -601,12 +600,12 @@ inline BOOL RemoveFileSpec(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [PathRemoveFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773748) Details.  
+ Finden Sie unter [PathRemoveFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773748) für Details.  
   
  
   
 
-## <a name="a-namerenameextensiona-atlpathrenameextension"></a><a name="renameextension"></a>ATLPath::RenameExtension
+## <a name="renameextension"></a>ATLPath::RenameExtension
  Diese Funktion ist ein überladener Wrapper für [PathRenameExtension](http://msdn.microsoft.com/library/windows/desktop/bb773749).  
   
 ### <a name="syntax"></a>Syntax  
@@ -617,12 +616,12 @@ inline BOOL RenameExtension(wchar_t* pszPath, const wchar_t* pszExt);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [PathRenameExtension](http://msdn.microsoft.com/library/windows/desktop/bb773749) Details.  
+ Finden Sie unter [PathRenameExtension](http://msdn.microsoft.com/library/windows/desktop/bb773749) für Details.  
   
  
   
 
-## <a name="a-nameskiproota-atlpathskiproot"></a><a name="skiproot"></a>ATLPath::SkipRoot
+## <a name="skiproot"></a>ATLPath::SkipRoot
  Diese Funktion ist ein überladener Wrapper für [PathSkipRoot](http://msdn.microsoft.com/library/windows/desktop/bb773754).  
   
 ### <a name="syntax"></a>Syntax  
@@ -633,12 +632,12 @@ inline wchar_t* SkipRoot(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [PathSkipRoot](http://msdn.microsoft.com/library/windows/desktop/bb773754) Details.  
+ Finden Sie unter [PathSkipRoot](http://msdn.microsoft.com/library/windows/desktop/bb773754) für Details.  
   
  
   
 
-## <a name="a-namestrippatha-atlpathstrippath"></a><a name="strippath"></a>ATLPath::StripPath
+## <a name="strippath"></a>ATLPath::StripPath
  Diese Funktion ist ein überladener Wrapper für [PathStripPath](http://msdn.microsoft.com/library/windows/desktop/bb773756).  
   
 ### <a name="syntax"></a>Syntax  
@@ -649,13 +648,13 @@ inline void StripPath(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [PathStripPath](http://msdn.microsoft.com/library/windows/desktop/bb773756) Details.  
+ Finden Sie unter [PathStripPath](http://msdn.microsoft.com/library/windows/desktop/bb773756) für Details.  
   
  
   
 
 
-## <a name="a-namestriptoroota-atlpathstriptoroot"></a><a name="striptoroot"></a>ATLPath::StripToRoot
+## <a name="striptoroot"></a>ATLPath::StripToRoot
  Diese Funktion ist ein überladener Wrapper für [PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757).  
   
 ### <a name="syntax"></a>Syntax  
@@ -666,12 +665,12 @@ inline BOOL StripToRoot(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757) Details.  
+ Finden Sie unter [PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757) für Details.  
   
  
   
 
-## <a name="a-nameunquotespacesa-atlpathunquotespaces"></a><a name="unquotespaces"></a>ATLPath::UnquoteSpaces
+## <a name="unquotespaces"></a>ATLPath::UnquoteSpaces
  Diese Funktion ist ein überladener Wrapper für [PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763).  
   
 ### <a name="syntax"></a>Syntax  
@@ -682,9 +681,8 @@ inline void UnquoteSpaces(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763) Details.  
+ Finden Sie unter [PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763) für Details.  
   
  
   
  
-

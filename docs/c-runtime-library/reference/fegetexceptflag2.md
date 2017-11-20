@@ -1,49 +1,48 @@
 ---
-title: "fegetexceptflag2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fegetexceptflag"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fegetexceptflag"
-  - "fenv/fegetexceptflag"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Fegetexceptflag-Funktion"
+title: fegetexceptflag2 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname: fegetexceptflag
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fegetexceptflag
+- fenv/fegetexceptflag
+dev_langs: C++
+helpviewer_keywords: fegetexceptflag function
 ms.assetid: 2d28f0ca-70c9-4cff-be8b-3d876eacde71
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0211ab1ec1e3144a0f9596b4500029b3f83095ee
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# fegetexceptflag
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Speichert den aktuellen Zustand der angegebenen Gleitkommaausnahme Flags.  
+# <a name="fegetexceptflag"></a>fegetexceptflag
+Speichert den aktuellen Zustand der angegebenen Gleitkommaausnahme-Flags.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 int fegetexceptflag(   
@@ -53,40 +52,40 @@ int fegetexceptflag(
   
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `pstatus`  
- Ein Zeiger auf ein `fexcept_t` Objekt, das die aktuellen Werte der angegebenen Ausnahme\-Flags enthalten `excepts`.  
+ Ein Zeiger auf ein `fexcept_t`-Objekt, das die aktuellen Werte der Ausnahme-Flags enthält, die von `excepts` angegeben sind.  
   
  `excepts`  
- Die Gleitkomma\-Ausnahme\-Flags zum Speichern in `pstatus`.  
+ Die in `pstatus` zu speichernden Gleitkommaausnahme-Flags.  
   
-## Rückgabewert  
- Bei Erfolg zurückgegeben 0. Andernfalls wird einen Wert ungleich NULL zurückgegeben.  
+## <a name="return-value"></a>Rückgabewert  
+ Bei Erfolg wird 0 zurückgegeben. Andernfalls wird ein Wert ungleich null zurückgegeben.  
   
-## Hinweise  
- Die `fegetexceptflag` Funktion speichert den aktuellen Zustand der Gleitkommaausnahme Status\-Flags, die durch angegebene `excepts` in der `fexcept_t` Objekt verweist `pstatus`.`pstatus` muss einen Verweis auf eine gültige `fexcept_t` Objekt oder nachfolgendes Verhalten ist nicht definiert. Die `fegetexceptflag` \-Funktion unterstützt diese Ausnahmemakros in \< fenv.h \> definiert:  
+## <a name="remarks"></a>Hinweise  
+ Die Funktion `fegetexceptflag` speichert den aktuellen Zustand der von `excepts` angegebenen Gleitkommaausnahme-Statusflags im `fexcept_t`-Objekt, auf die `pstatus` verweist.  `pstatus` muss auf ein gültiges `fexcept_t`-Objekt zeigen. Andernfalls ist das daraus resultierende Verhalten nicht definiert. Die Funktion `fegetexceptflag` unterstützt diese in \<fenv.h> definierten Ausnahmemakros:  
   
-|Ausnahme\-Makro|Beschreibung|  
-|---------------------|------------------|  
-|FE\_DIVBYZERO|Eine Singularität oder pol Fehler in einer zuvor Gleitkommaoperation; ein Unendlichkeitswert erstellt wurde.|  
-|FE\_INEXACT|Die Funktion wurde erzwungen, das gespeicherte Ergebnis einer zuvor Gleitkommaoperation gerundet.|  
-|FE\_INVALID|Domänenfehler in einer zuvor Gleitkommaoperation.|  
-|FE\_OVERFLOW|Ein Fehler aufgetreten. eine frühere Gleitkommaoperation Ergebnis war zu groß dargestellt werden soll.|  
-|FE\_UNDERFLOW|Eine frühere Gleitkommaoperation Ergebnis war zu klein für die bei voller Genauigkeit dargestellt werden; ein Denormal\-Wert wurde erstellt.|  
-|FE\_ALLEXCEPT|Der bitweise OR aller unterstützt Gleitkommaausnahmen.|  
+|Ausnahmemakro|Beschreibung|  
+|---------------------|-----------------|  
+|FE_DIVBYZERO|Eine Singularität oder ein Polstellenfehler aus einer früheren Gleitkommaoperation; ein Unendlichkeitswert wurde erstellt.|  
+|FE_INEXACT|Die Funktion wurde gezwungen, das gespeicherte Ergebnis einer früheren Gleitkommaoperation zu runden.|  
+|FE_INVALID|Ein Domänenfehler ist in einer früheren Gleitkommaoperation aufgetreten.|  
+|FE_OVERFLOW|Ein Bereichsfehler ist aufgetreten; das Ergebnis einer früheren Gleitkommaoperation war zu groß, um dargestellt zu werden.|  
+|FE_UNDERFLOW|Das Ergebnis einer früheren Gleitkommaoperation war zu klein, um ganz genau dargestellt zu werden; ein nicht normaler Wert wurde erstellt.|  
+|FE_ALLEXCEPT|Bitweiser OR-Operator oder alle unterstützten Gleitkommaausnahmen|  
   
- Die `excepts` Argument NULL ist, werden möglicherweise einer der unterstützten Gleitkommaausnahme Makros oder das bitweise oder der zwei oder mehr der Makros. Jeder andere Argumentwert wird nicht definiert.  
+ Das Argument `excepts` kann entweder null, eines der unterstützten Gleitkommaausnahme-Makros oder das bitweise OR von mindestens zwei der Makros sein. Der Effekt von jedem anderen Argumentwert ist nicht definiert.  
   
- Um diese Funktion verwenden zu können, müssen Sie wieder deaktivieren Gleitkomma Optimierungen, die Zugriff mithilfe von verhindern könnten die `#pragma fenv_access(on)` Richtlinie vor dem Aufruf. Weitere Informationen finden Sie unter [fenv\_access](../../preprocessor/fenv-access.md).  
+ Um diese Funktion zu verwenden, müssen Sie vor dem Aufruf Gleitkommaoptimierungen deaktivieren, die den Zugriff mithilfe der `#pragma fenv_access(on)`-Direktive verhindern könnten. Weitere Informationen finden Sie unter [fenv_access](../../preprocessor/fenv-access.md).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Funktion|C\-Header|C\+\+\-Header|  
-|--------------|---------------|-------------------|  
-|`fegetexceptflag`|\<fenv.h\>|\<cfenv\>|  
+|Funktion|C-Header|C++-Header|  
+|--------------|--------------|------------------|  
+|`fegetexceptflag`|\<fenv.h>|\<cfenv>|  
   
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
+ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Alphabetische Funktionsreferenz](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [fesetexceptflag](../../c-runtime-library/reference/fesetexceptflag2.md)

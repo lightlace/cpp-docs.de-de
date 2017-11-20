@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - '* operator'
 - indirection operator
 - operators [C++], indirection
 - indirection operator [C++], syntax
 ms.assetid: c50309e1-6c02-4184-9fcb-2e13c1f4ac03
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 1f9b758e3bfa1a01ed2b2a428758c3e4a982fdae
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 271708c8908e6d213047283c431e03726946e059
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="indirection-operator-"></a>Dereferenzierungsoperator: *
 ## <a name="syntax"></a>Syntax  
@@ -36,7 +33,7 @@ ms.lasthandoff: 09/25/2017
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Der unäre Dereferenzierungsoperator (**\***) dereferenziert einen Zeiger, d. h. konvertiert einen Zeigerwert in einen l-Wert. Der Operand des Dereferenzierungsoperators muss ein Zeiger auf einen Typ sein. Das Ergebnis des Dereferenzierungsausdrucks ist der Typ, aus dem der Zeigertyp abgeleitet wird. Die Verwendung der ** \* ** -Operators in diesem Kontext unterscheidet sich von seiner Bedeutung als binärer Operator Multiplikation ist.  
+ Der unäre Dereferenzierungsoperator (**\***) dereferenziert einen Zeiger, d. h. konvertiert einen Zeigerwert in einen l-Wert. Der Operand des Dereferenzierungsoperators muss ein Zeiger auf einen Typ sein. Das Ergebnis des Dereferenzierungsausdrucks ist der Typ, aus dem der Zeigertyp abgeleitet wird. Die Verwendung der  **\***  -Operators in diesem Kontext unterscheidet sich von seiner Bedeutung als binärer Operator Multiplikation ist.  
   
  Wenn der Operand auf eine Funktion verweist, ist das Ergebnis ein Funktionsbezeichner. Wenn an einen Speicherort verwiesen wird, ist das Ergebnis ein l-Wert, der den Speicherort festlegt.  
   

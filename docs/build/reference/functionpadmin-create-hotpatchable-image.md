@@ -1,64 +1,63 @@
 ---
-title: "/FUNCTIONPADMIN (Erstellen eines Hotpatch-f&#228;higen Abbildes) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/functionpadmin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/FUNCTIONPADMIN (Linkeroption)"
-  - "-FUNCTIONPADMIN (Linkeroption)"
+title: "-FUNCTIONPADMIN (erstellen Hotpatch-fähiges Abbild) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /functionpadmin
+dev_langs: C++
+helpviewer_keywords:
+- -FUNCTIONPADMIN linker option
+- /FUNCTIONPADMIN linker option
 ms.assetid: 25b02c13-1add-4fbd-add9-fcb30eb2cae7
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0f286cf0cb595f640768f97c1619517f6000fd39
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# /FUNCTIONPADMIN (Erstellen eines Hotpatch-f&#228;higen Abbildes)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="functionpadmin-create-hotpatchable-image"></a>/FUNCTIONPADMIN (Erstellen eines Hotpatch-fähigen Abbildes)
 Bereitet ein Image für Hotpatching vor.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /FUNCTIONPADMIN[:space]  
 ```  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  wobei  
   
- `space` \(optional\)  
- Die Menge Padding, der dem Anfang jeder Funktion hinzuzufügen, 5, 6, 16 oder x86\-Bilder erfordern. fünf Bytes Abstand, benötigen x64\-Bilder 6 Bytes, und die Bilder, die für die Itanium\-Prozessorfamilie erstellt werden, erfordern 16 Bytes Innenabstand zu Beginn jeder Funktion.  
+ `space` (optional)  
+ Die Größe der Auffüllung am Anfang jeder Funktion hinzufügen 5, 6 oder 16.  X86 Images erfordern fünf Byte-Auffüllung, X64 Images erfordern 6 Bytes und für die Itanium-Prozessorfamilie erstellte Images erfordern 16 Byte-Auffüllung am Anfang jeder Funktion.  
   
- In der Standardeinstellung fügt der Compiler auf Grundlage des Computertyps des Abbildes die erforderliche Menge an Füllzeichen in das Abbild ein.  
+ Standardmäßig wird der Compiler die richtige Menge an Speicherplatz im Abbild, basierend auf dem Computertyp des Bilds hinzufügen.  
   
- Damit vom Linker ein Hotpatch\-fähiges Abbild erstellt wird, müssen die OBJj\-Dateien mit [\/hotpatch \(Erstellen eines Hotpatch\-fähigen Abbildes\)](../../build/reference/hotpatch-create-hotpatchable-image.md) kompiliert werden.  
+ Damit der Linker ein Hotpatch-fähiges Abbild erstellt werden kann, die OBJ-Dateien müssen wurden kompiliert mit [/hotpatch (Erstellen eines Hotpatch-fähigen Abbildes)](../../build/reference/hotpatch-create-hotpatchable-image.md).  
   
- Wenn Sie beim Kompilieren ein Abbild mit einem einzelnen Aufruf von cl.exe verknüpfen, impliziert **\/hotpatch** die Option **\/functionpadmin**.  
+ Wenn Sie kompilieren und verknüpfen ein Bild mit einem einzelnen Aufruf von cl.exe, **/hotpatch** impliziert **/functionpadmin**.  
   
-### So legen Sie diese Linkeroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Festlegen von Visual C\+\+\-Projekteigenschaften](../../ide/working-with-project-properties.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Klicken Sie auf den Ordner **Linker**.  
+2.  Klicken Sie auf die **Linker** Ordner.  
   
-3.  Klicken Sie auf die Eigenschaftenseite **Befehlszeile**.  
+3.  Klicken Sie auf die Eigenschaftenseite **Befehlszeile** .  
   
-4.  Geben Sie die Option im Feld **Zusätzliche Optionen** ein.  
+4.  Geben Sie die Option in der **Zusatzoptionen** Feld.  
   
-### So legen Sie diese Linkeroption programmgesteuert fest  
+### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
   
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions*>.  
+-   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
  [Linkeroptionen](../../build/reference/linker-options.md)

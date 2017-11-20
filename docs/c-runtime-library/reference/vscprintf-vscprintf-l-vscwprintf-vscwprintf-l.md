@@ -1,68 +1,68 @@
 ---
-title: "_vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_vscprintf"
-  - "_vscprintf_l"
-  - "_vscwprintf_l"
-  - "_vscwprintf"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "vscprintf_l"
-  - "vscwpeintf"
-  - "_vscwprintf"
-  - "_vsctprintf"
-  - "_vscprintf"
-  - "vscwprintf_l"
-  - "vscprintf"
-  - "_vscwprintf_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_vscprintf-Funktion"
-  - "_vscprintf_l-Funktion"
-  - "_vsctprintf-Funktion"
-  - "_vsctprintf_l-Funktion"
-  - "_vscwprintf-Funktion"
-  - "_vscwprintf_l-Funktion"
-  - "Formatierter Text [C++]"
-  - "vscprintf-Funktion"
-  - "vscprintf_l-Funktion"
-  - "vsctprintf-Funktion"
-  - "vsctprintf_l-Funktion"
-  - "vscwprintf-Funktion"
-  - "vscwprintf_l-Funktion"
+title: _vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _vscprintf
+- _vscprintf_l
+- _vscwprintf_l
+- _vscwprintf
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- vscprintf_l
+- vscwpeintf
+- _vscwprintf
+- _vsctprintf
+- _vscprintf
+- vscwprintf_l
+- vscprintf
+- _vscwprintf_l
+dev_langs: C++
+helpviewer_keywords:
+- vsctprintf function
+- _vscprintf_l function
+- _vsctprintf_l function
+- _vsctprintf function
+- _vscwprintf_l function
+- vscwprintf_l function
+- _vscprintf function
+- _vscwprintf function
+- vscwprintf function
+- vsctprintf_l function
+- formatted text [C++]
+- vscprintf function
+- vscprintf_l function
 ms.assetid: 1bc67d3d-21d5-49c9-ac8d-69e26b16a3c3
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 089ad22184700509b651f31b830c6414d3455e6f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# _vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Gibt die Anzahl der Zeichen in der formatierten Zeichenfolge mithilfe eines Zeigers auf eine Liste der Argumente zurück.  
+# <a name="vscprintf-vscprintfl-vscwprintf-vscwprintfl"></a>_vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l
+Gibt die Anzahl der Zeichen in der formatierten Zeichenfolge mithilfe eines Zeigers auf eine Liste von Argumenten zurück.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 int _vscprintf(  
@@ -85,7 +85,7 @@ int _vscwprintf_l(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `format`  
  Formatsteuerzeichenfolge.  
   
@@ -97,42 +97,42 @@ int _vscwprintf_l(
   
  Weitere Informationen finden Sie unter [Formatangaben](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
-## Rückgabewert  
- `_vscprintf` gibt die Anzahl von Zeichen zurück, die generiert werden, wenn die Zeichenfolge, die von der Liste der Argumente gezeigt wurde, in einer Datei oder einem Puffer mithilfe der angegebenen Formatierungscodes gedruckt oder gesendet wurde.  Der zurückgegebene Wert enthält nicht das NULL.  `_vscwprintf` führt die gleiche Aufgabe für Breitzeichen erfüllt.  
+## <a name="return-value"></a>Rückgabewert  
+ `_vscprintf` gibt die Anzahl der Zeichen zurück, die erzeugt würden, wenn die Zeichenfolge, auf die durch die Liste von Argumenten gezeigt wird, gedruckt oder mithilfe der angegebenen Formatierungscodes an eine Datei oder einen Puffer gesendet würde. Im zurückgegebenen Wert ist das abschließende Nullzeichen nicht enthalten. `_vscwprintf` führt die gleiche Funktion für Breitzeichen aus.  
   
- Die Versionen dieser Funktionen mit dem `_l`\-Suffix sind beinahe identisch, verwenden jedoch den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Threadgebietsschemas.  
+ Die Versionen dieser Funktionen mit dem `_l` -Suffix sind beinahe identisch, verwenden jedoch den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Threadgebietsschemas.  
   
- Wenn `format` ein NULL\-Zeiger ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die weitere Ausführung zugelassen wird, geben die Funktionen – 1 zurück und legen `errno` auf `EINVAL` fest.  
+ Wenn `format` ein NULL-Zeiger ist, wird der Handler für ungültige Parameter wie unter [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben aufgerufen. Wenn die weitere Ausführung zugelassen wird, geben die Funktionen – 1 zurück und legen `errno` auf `EINVAL` fest.  
   
-## Hinweise  
- Jedes `argument` \(falls vorhanden\) wird entsprechend der entsprechenden Formatangabe in `format` konvertiert.  Das Format besteht aus normalen Zeichen und hat die gleiche Form und Funktion wie das `format`\-Argument für [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
+## <a name="remarks"></a>Hinweise  
+ Jedes `argument` (falls vorhanden) wird entsprechend der jeweiligen Formatangabe in `format` konvertiert. Das Format besteht aus normalen Zeichen und hat die gleiche Form und Funktion wie das `format`-Argument für [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
   
 > [!IMPORTANT]
->  Stellen Sie sicher, dass, wenn `format` eine benutzerdefinierte Zeichenfolge ist, die beendet NULL ist und hat die richtige Anzahl und den Typen der Parameter.  Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
+>  Stellen Sie sicher, dass `format` mit NULL abgeschlossen wird, wenn es sich dabei um eine benutzerdefinierte Zeichenfolge handelt, und dass es über die richtige Anzahl und den richtigen Typ von Parametern verfügt. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|TCHAR.H\-Routine|\_UNICODE & \_MBCS nicht definiert|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|----------------------------------------|----------------------|-------------------------|  
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_vsctprintf`|`_vscprintf`|`_vscprintf`|`_vscwprintf`|  
 |`_vsctprintf_l`|`_vscprintf_l`|`_vscprintf_l`|`_vscwprintf_l`|  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_vscprintf`, `_vscprintf_l`|\<stdio.h\>|  
-|`_vscwprintf`, `_vscwprintf_l`|\<stdio.h\> oder \<wchar.h\>|  
+|-------------|---------------------|  
+|`_vscprintf`, `_vscprintf_l`|\<stdio.h>|  
+|`_vscwprintf`, `_vscwprintf_l`|\<stdio.h> oder \<wchar.h>|  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
- Im Beispiel für [vsprintf](../../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md).  
+## <a name="example"></a>Beispiel  
+ Ein Beispiel hierfür finden Sie unter [vsprintf](../../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md).  
   
-## Siehe auch  
- [Stream\-E\/A](../../c-runtime-library/stream-i-o.md)   
- [fprintf, \_fprintf\_l, fwprintf, \_fwprintf\_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf, \_printf\_l, wprintf, \_wprintf\_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [scanf, \_scanf\_l, wscanf, \_wscanf\_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sscanf, \_sscanf\_l, swscanf, \_swscanf\_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
- [vprintf\-Funktionen](../../c-runtime-library/vprintf-functions.md)
+## <a name="see-also"></a>Siehe auch  
+ [Stream-E/A](../../c-runtime-library/stream-i-o.md)   
+ [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
+ [sscanf, _sscanf_l, swscanf, _swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
+ [vprintf-Funktionen](../../c-runtime-library/vprintf-functions.md)

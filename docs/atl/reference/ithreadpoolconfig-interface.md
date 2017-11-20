@@ -1,11 +1,10 @@
 ---
-title: IThreadPoolConfig Schnittstelle | Microsoft-Dokumentation
+title: IThreadPoolConfig Schnittstelle | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,41 +14,24 @@ f1_keywords:
 - ATLUTIL/ATL::GetTimeout
 - ATLUTIL/ATL::SetSize
 - ATLUTIL/ATL::SetTimeout
-dev_langs:
-- C++
-helpviewer_keywords:
-- IThreadPoolConfig interface
+dev_langs: C++
+helpviewer_keywords: IThreadPoolConfig interface
 ms.assetid: 69e642bf-6925-46e6-9a37-cce52231b1cc
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: e10885373442890978feff42cda99309692a21d0
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 9ae9aea7c6517e2369901ea7e435627eff180c69
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ithreadpoolconfig-interface"></a>IThreadPoolConfig-Schnittstelle
-Diese Schnittstelle stellt Methoden zum Konfigurieren eines Threadpools.  
+Diese Schnittstelle bietet Methoden zum Konfigurieren eines Threadpools.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können in Anwendungen, die in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)] ausgeführt werden, nicht verwendet werden.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -58,16 +40,16 @@ __interface
     __declspec(uuid("B1F64757-6E88-4fa2-8886-7848B0D7E660")) IThreadPoolConfig : public IUnknown
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="methods"></a>Methoden  
   
 |||  
 |-|-|  
 |[GetSize](#getsize)|Rufen Sie diese Methode, um die Anzahl der Threads im Pool zu erhalten.|  
-|[GetTimeout](#gettimeout)|Rufen Sie diese Methode, um die maximale Zeit in Millisekunden abzurufen, die der Threadpool, bis ein Thread warten soll beendet.|  
+|[GetTimeout](#gettimeout)|Rufen Sie diese Methode, um die maximale Zeit in Millisekunden abzurufen, die der Threadpool darauf gewartet, dass ein Thread beendet wird.|  
 |[SetSize](#setsize)|Rufen Sie diese Methode, um die Anzahl der Threads im Pool festgelegt.|  
-|[SetTimeout](#settimeout)|Rufen Sie diese Methode, um die maximale Zeit in Millisekunden, die der Threadpool, bis ein Thread warten soll beendet.|  
+|[SetTimeout](#settimeout)|Rufen Sie diese Methode zum Festlegen der maximalen Zeit in Millisekunden, die der Threadpool darauf gewartet, dass ein Thread beendet wird.|  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Schnittstelle wird implementiert, indem [CThreadPool](../../atl/reference/cthreadpool-class.md).  
@@ -90,10 +72,10 @@ STDMETHOD(GetSize)(int* pnNumThreads);
  Gibt bei Erfolg S_OK oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities&#134;](../../atl/codesnippet/cpp/ithreadpoolconfig-interface_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#134](../../atl/codesnippet/cpp/ithreadpoolconfig-interface_1.cpp)]  
   
 ##  <a name="gettimeout"></a>IThreadPoolConfig::GetTimeout  
- Rufen Sie diese Methode, um die maximale Zeit in Millisekunden abzurufen, die der Threadpool, bis ein Thread warten soll beendet.  
+ Rufen Sie diese Methode, um die maximale Zeit in Millisekunden abzurufen, die der Threadpool darauf gewartet, dass ein Thread beendet wird.  
   
 ```
 STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
@@ -101,7 +83,7 @@ STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
   
 ### <a name="parameters"></a>Parameter  
  `pdwMaxWait`  
- [out] Die Adresse der Variablen, die bei Erfolg die maximale Zeit in Millisekunden, die der Threadpool warten soll, bis ein Thread erhält beendet.  
+ [out] Die Adresse der Variablen, die bei Erfolg, die maximale Zeit in Millisekunden empfängt, die der Threadpool darauf gewartet, dass ein Thread beendet wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg S_OK oder einen HRESULT-Fehler bei einem Fehler zurück.  
@@ -120,9 +102,9 @@ STDMETHOD(SetSize)int nNumThreads);
  `nNumThreads`  
  Die angeforderte Anzahl von Threads im Pool.  
   
- Wenn `nNumThreads` ist negativ, der Absolute Wert multipliziert die Anzahl der Prozessoren auf dem Computer, um die Gesamtzahl der Threads abzurufen.  
+ Wenn `nNumThreads` ist negativ ist, dessen absoluter Wert multipliziert die Anzahl der Prozessoren auf dem Computer, um die Gesamtanzahl der Threads abzurufen.  
   
- Wenn `nNumThreads` NULL ist, [ATLS_DEFAULT_THREADSPERPROC](http://msdn.microsoft.com/library/e0dcf107-72a9-4122-abb4-83c63aa7d571) multipliziert die Anzahl der Prozessoren auf dem Computer, um die Gesamtzahl der Threads abzurufen.  
+ Wenn `nNumThreads` ist 0 (null), [ATLS_DEFAULT_THREADSPERPROC](http://msdn.microsoft.com/library/e0dcf107-72a9-4122-abb4-83c63aa7d571) multipliziert die Anzahl der Prozessoren auf dem Computer, um die Gesamtanzahl der Threads abzurufen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg S_OK oder einen HRESULT-Fehler bei einem Fehler zurück.  
@@ -131,7 +113,7 @@ STDMETHOD(SetSize)int nNumThreads);
  Finden Sie unter [IThreadPoolConfig::GetSize](#getsize).  
   
 ##  <a name="settimeout"></a>IThreadPoolConfig::SetTimeout  
- Rufen Sie diese Methode, um die maximale Zeit in Millisekunden, die der Threadpool, bis ein Thread warten soll beendet.  
+ Rufen Sie diese Methode zum Festlegen der maximalen Zeit in Millisekunden, die der Threadpool darauf gewartet, dass ein Thread beendet wird.  
   
 ```
 STDMETHOD(SetTimeout)(DWORD dwMaxWait);
@@ -139,7 +121,7 @@ STDMETHOD(SetTimeout)(DWORD dwMaxWait);
   
 ### <a name="parameters"></a>Parameter  
  `dwMaxWait`  
- Die angeforderte maximale Zeit in Millisekunden, die der Threadpool, bis ein Thread warten soll beendet wird.  
+ Die angeforderte maximale Zeit in Millisekunden, die der Threadpool darauf gewartet, dass ein Thread beendet wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg S_OK oder einen HRESULT-Fehler bei einem Fehler zurück.  
@@ -150,4 +132,3 @@ STDMETHOD(SetTimeout)(DWORD dwMaxWait);
 ## <a name="see-also"></a>Siehe auch  
  [Klassen](../../atl/reference/atl-classes.md)   
  [CThreadPool-Klasse](../../atl/reference/cthreadpool-class.md)
-

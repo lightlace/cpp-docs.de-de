@@ -1,36 +1,35 @@
 ---
-title: "CAccessor-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CAccessor<T>"
-  - "ATL::CAccessor"
-  - "CAccessor"
-  - "ATL::CAccessor<T>"
-  - "ATL.CAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAccessor-Klasse"
+title: CAccessor-Klasse | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CAccessor<T>
+- ATL::CAccessor
+- CAccessor
+- ATL::CAccessor<T>
+- ATL.CAccessor
+dev_langs: C++
+helpviewer_keywords: CAccessor class
 ms.assetid: b2ba959f-a686-46f3-8837-176248aef748
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 759ea7436124c1806ae26fb6a91a59d56c86d04a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# CAccessor-Klasse
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Stellt einen der Accessortypen dar.  
+# <a name="caccessor-class"></a>CAccessor-Klasse
+Stellt einen Accessor Typen dar.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -40,20 +39,20 @@ Stellt einen der Accessortypen dar.
 class CAccessor : public CAccessorBase, public T  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `T`  
- Die Benutzerdatensatz\-Klasse.  
+ Die Benutzerdatensatz-Klasse.  
   
-## Hinweise  
- Sie wird verwendet, wenn ein Datensatz statisch an eine Datenquelle gebunden ist.  Der Datensatz enthält den Puffer.  Diese Klasse unterstützt mehrere Accessoren in einem Rowset.  
+## <a name="remarks"></a>Hinweise  
+ Wird verwendet, wenn ein Datensatz statisch mit einer Datenquelle gebunden ist. Der Datensatz enthält den Puffer. Diese Klasse unterstützt mehrere Accessoren für ein Rowset.  
   
- Verwenden Sie diesen Accessortyp, wenn Ihnen die Struktur und den Typ der Datenbank zu kennen.  
+ Verwenden Sie diesen Accessortyp, wenn Sie wissen, dass die Struktur und den Typ der Datenbank.  
   
- Wenn der Accessor Felder enthält, die auf Arbeitsspeicher zeigen \(wie `BSTR` oder einer Schnittstelle\) die freigegeben werden müssen, rufen Sie die Memberfunktion [CAccessorRowset::FreeRecordMemory](../../data/oledb/caccessorrowset-freerecordmemory.md) auf, bevor der nächste Datensatz gelesen wird.  
+ Wenn der Accessor Felder enthält, die in den Arbeitsspeicher zu verweisen (z. B. eine `BSTR` oder Schnittstelle) sein muss freigegeben ist, rufen Sie die Memberfunktion [CAccessorRowset:: Freerecordmemory](../../data/oledb/caccessorrowset-freerecordmemory.md) vor der nächsten Datensatz gelesen wird.  
   
-## Anforderungen  
- **Header:**  atldbcli.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** atldbcli.h  
   
-## Siehe auch  
- [OLE DB\-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenz der OLE DB\-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)

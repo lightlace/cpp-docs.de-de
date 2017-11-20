@@ -1,36 +1,35 @@
 ---
-title: "IRowsetNotifyCP::Fire_OnRowChange | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetNotifyCP.Fire_OnRowChange"
-  - "ATL.IRowsetNotifyCP.Fire_OnRowChange"
-  - "Fire_OnRowChange"
-  - "ATL::IRowsetNotifyCP::Fire_OnRowChange"
-  - "IRowsetNotifyCP::Fire_OnRowChange"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Fire_OnRowChange-Methode"
+title: 'IRowsetNotifyCP:: Fire_onrowchange | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IRowsetNotifyCP.Fire_OnRowChange
+- ATL.IRowsetNotifyCP.Fire_OnRowChange
+- Fire_OnRowChange
+- ATL::IRowsetNotifyCP::Fire_OnRowChange
+- IRowsetNotifyCP::Fire_OnRowChange
+dev_langs: C++
+helpviewer_keywords: Fire_OnRowChange method
 ms.assetid: 6f9beed6-7a69-4c92-936f-422e98f3de5c
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fe3f9413912c50e07be88a5913353dc5e7f0d1c9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetNotifyCP::Fire_OnRowChange
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-[OnRowChange](https://msdn.microsoft.com/en-us/library/ms722694.aspx) Überträgt ein Ereignis an alle Listener für den Verbindungspunkt **IID\_IRowsetNotify**, um Consumern zu einer Änderung zu benachrichtigen, die die Zeilen angewendet.  
+# <a name="irowsetnotifycpfireonrowchange"></a>IRowsetNotifyCP::Fire_OnRowChange
+Überträgt ein [OnRowChange](https://msdn.microsoft.com/en-us/library/ms722694.aspx) Ereignis an alle Listener auf dem Verbindungspunkt **IID_IRowsetNotify** eine Änderung der Auswirkungen auf die Zeilen Verbraucher darüber informieren.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -44,11 +43,11 @@ caps.handback.revision: 8
 );  
 ```  
   
-#### Parameter  
- Siehe [IRowsetNotify::OnRowChange](https://msdn.microsoft.com/en-us/library/ms722694.aspx) in der *OLE* DB\-Programmierreferenz.  
+#### <a name="parameters"></a>Parameter  
+ Finden Sie unter [IRowsetNotify::OnRowChange](https://msdn.microsoft.com/en-us/library/ms722694.aspx) in der *OLE DB Programmer's Reference*.  
   
-## Anforderungen  
- **Header:** atldb.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** „atldb.h“  
   
-## Siehe auch  
- [IRowsetNotifyCP\-Klasse](../../data/oledb/irowsetnotifycp-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [IRowsetNotifyCP-Klasse](../../data/oledb/irowsetnotifycp-class.md)

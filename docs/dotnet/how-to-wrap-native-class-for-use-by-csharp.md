@@ -1,31 +1,31 @@
 ---
-title: "Gewusst wie: Kapseln einer systemeigenen Klasse zur Verwendung in C# | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Klassen [C++], Visual C# und"
-  - "Systemeigener Code [C++], Visual C# und"
+title: 'Vorgehensweise: Kapseln einer systemeigenen Klasse zur Verwendung von c# | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- native code [C++], Visual C# and
+- classes [C++], Visual C# and
 ms.assetid: 988819ae-cc6a-4453-8ff5-be369210d962
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9ff0c2a3700c20c78d3cbbf9b67810a65bb89fc3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Gewusst wie: Kapseln einer systemeigenen Klasse zur Verwendung in C#
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In diesem Beispiel wird eine systemeigene C\+\+\-Klasse umschlossen, um sie für Code in C\# oder eine andere .NET\-Sprache verfügbar zu machen.  
+# <a name="how-to-wrap-native-class-for-use-by-c"></a>Gewusst wie: Kapseln einer systemeigenen Klasse zur Verwendung in C#
+Dieses Beispiel zeigt, wie eine systemeigene C++-Klasse umschlossen wird, damit er von Code in c# oder anderen genutzt werden kann.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // wrap_native_class_for_mgd_consumption.cpp  
@@ -75,5 +75,5 @@ private:
 };  
 ```  
   
-## Siehe auch  
- [Verwenden von C\+\+\-Interop \(implizites PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Siehe auch  
+ [Verwenden von C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

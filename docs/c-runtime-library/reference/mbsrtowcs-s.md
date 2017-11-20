@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- mbsrtowcs_s
+apiname: mbsrtowcs_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,37 +21,19 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- mbsrtowcs_s
-dev_langs:
-- C++
-helpviewer_keywords:
-- mbsrtowcs_s function
+f1_keywords: mbsrtowcs_s
+dev_langs: C++
+helpviewer_keywords: mbsrtowcs_s function
 ms.assetid: 4ee084ec-b15d-4e5a-921d-6584ec3b5a60
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 920af1d0e06c7af71c3a98bf07f451f4d50f2659
-ms.contentlocale: de-de
-ms.lasthandoff: 03/29/2017
-
+ms.openlocfilehash: 72489315ad23bf65086105c5d76da1edea48674d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="mbsrtowcss"></a>mbsrtowcs_s
 Konvertieren einer Zeichenfolge mit Multibytezeichen im aktuellen Gebietsschema in die entsprechende Zeichenfolge mit Breitzeichen. Eine Version von [mbsrtowcs](../../c-runtime-library/reference/mbsrtowcs.md) mit Sicherheitserweiterungen wie sie unter [Sicherheitserweiterungen im CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben ist.  
@@ -123,13 +103,13 @@ errno_t mbsrtowcs_s(
   
  Wenn `count` der spezielle Wert [_TRUNCATE](../../c-runtime-library/truncate.md) ist, konvertiert `mbsrtowcs_s` einen so großen Teil der Zeichenfolge wie in den Zielpuffer passt, während weiterhin Platz für einen NULL-Terminator bleibt.  
   
- Wenn `mbsrtowcs_s` die Quellzeichenfolge erfolgreich konvertiert, wird die Größe der konvertierten Zeichenfolge in Breitzeichen und der NULL-Terminator in `*``pReturnValue` geschrieben, vorausgesetzt, `pReturnValue` ist kein NULL-Zeiger. Dieser Fehler tritt auf, selbst wenn das `wcstr`-Argument ein NULL-Zeiger ist und Sie die erforderliche Puffergröße bestimmen können. Beachten Sie, dass wenn `wcstr` ein NULL-Zeiger ist, wird `count` ignoriert.  
+ Wenn `mbsrtowcs_s` die Quellzeichenfolge erfolgreich konvertiert, wird die Größe der konvertierten Zeichenfolge in Breitzeichen und der NULL-Terminator in `*pReturnValue` geschrieben, vorausgesetzt, `pReturnValue` ist kein NULL-Zeiger. Dieser Fehler tritt auf, selbst wenn das `wcstr`-Argument ein NULL-Zeiger ist und Sie die erforderliche Puffergröße bestimmen können. Beachten Sie, dass wenn `wcstr` ein NULL-Zeiger ist, wird `count` ignoriert.  
   
  Wenn `wcstr` kein NULL-Zeiger ist, wird das Zeigerobjekt, auf das von `mbstr` verwiesen wird, einem NULL-Zeiger zugewiesen, wenn die Konvertierung beendet wird, da ein abschließendes Nullzeichen erreicht wurde. Andernfalls wird es ggf. der Adresse unmittelbar nach dem letzten konvertierten Multibytezeichen zugewiesen. Auf diese Weise kann ein nachfolgender Funktionsaufruf die Konvertierung an der Stelle neu starten, an der der Aufruf beendet wurde.  
   
  Wenn `mbstate` ein NULL-Zeiger ist, wird das bibliotheksinterne statische `mbstate_t`-Konvertierungszustandobjekt verwendet. Da dieses interne statische Objekt nicht threadsicher ist, wird empfohlen, immer Ihren eigenen `mbstate`-Wert zu übergeben.  
   
- Wenn `mbsrtowcs_s` ein Multibytezeichen erkennt, das im aktuellen Gebietsschema ungültig ist, wird –1 in `*``pReturnValue` geschrieben, der Zielpuffer `wcstr` auf eine leere Zeichenfolge festgelegt, `errno` auf `EILSEQ` festgelegt und `EILSEQ` zurückgegeben.  
+ Wenn `mbsrtowcs_s` ein Multibytezeichen erkennt, das im aktuellen Gebietsschema ungültig ist, wird –1 in `*pReturnValue` geschrieben, der Zielpuffer `wcstr` auf eine leere Zeichenfolge festgelegt, `errno` auf `EILSEQ` festgelegt und `EILSEQ` zurückgegeben.  
   
  Wenn die Sequenzen, auf die von `mbstr` und `wcstr` verwiesen wird, überlappen, ist das Verhalten von `mbsrtowcs_s` nicht definiert. `mbsrtowcs_s` wird von der LC_TYPE-Kategorie des aktuellen Gebietsschemas beeinflusst.  
   

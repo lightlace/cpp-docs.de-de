@@ -1,42 +1,40 @@
 ---
-title: "vector::generic_reverse_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::generic_reverse_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_reverse_iterator-Member [STL/CLR]"
+title: Vector::generic_reverse_iterator (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::generic_reverse_iterator
+dev_langs: C++
+helpviewer_keywords: generic_reverse_iterator member [STL/CLR]
 ms.assetid: f769bd6e-4015-4730-b142-ab89c407d811
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 234a2e94bb23b22e443eef2f55c8341b50e91227
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# vector::generic_reverse_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Der Typ eines umgekehrten Iterators zur Verwendung mit der generischen Schnittstelle für den Container.  
+# <a name="vectorgenericreverseiterator-stlclr"></a>vector::generic_reverse_iterator (STL/CLR)
+Der Typ eines umgekehrten Iterators für die Verwendung mit der generischen Schnittstelle für den Container.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ReverseRandomAccessIterator<generic_value> generic_reverse_iterator;  
 ```  
   
-## Hinweise  
- Der Typ beschreibt einen generischen umgekehrten Iterator, der mit der generischen Schnittstelle für diese Vorlagencontainerklasse verwendet werden kann.  
+## <a name="remarks"></a>Hinweise  
+ Der Typ beschreibt einen generischen reverse-Iterator, der für diese Vorlage Container-Klasse mit der generischen Schnittstelle verwendet werden kann.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_vector_generic_reverse_iterator.cpp   
@@ -73,15 +71,18 @@ int main()
   
 ```  
   
-  **ein b c**  
- **ein b c**  
- **a\-c c**   
-## Anforderungen  
- **Header:** \<cliext\/Vektor\>  
+```Output  
+a b c  
+a b c  
+a c c  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Vektor >  
   
-## Siehe auch  
- [Vektor](../dotnet/vector-stl-clr.md)   
- [vector::generic\_container](../dotnet/vector-generic-container-stl-clr.md)   
- [vector::generic\_iterator](../dotnet/vector-generic-iterator-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Vektor (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [Vector::generic_container (STL/CLR)](../dotnet/vector-generic-container-stl-clr.md)   
+ [vector::generic_iterator (STL/CLR)](../dotnet/vector-generic-iterator-stl-clr.md)

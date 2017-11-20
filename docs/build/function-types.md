@@ -1,32 +1,32 @@
 ---
-title: "Funktionstypen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Funktionstypen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 7e33d5f4-dabb-406d-afb3-13777b995028
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d43daef2095fb63bd79644c940627754e00e199b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Funktionstypen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Es gibt zwei Typen von Funktionen.  Eine Funktion, die einen Stapelrahmen erfordert, wird als Rahmenfunktion bezeichnet.  Eine Funktion, die keinen Stapelrahmen erfordert, wird als Endfunktion bezeichnet.  
+# <a name="function-types"></a>Funktionstypen
+Es gibt im Wesentlichen zwei Arten von Funktionen. Eine Funktion, die einen Stapelrahmen erfordert, wird eine Frame-Funktion aufgerufen. Eine Funktion, die nicht über einen Stapelrahmen erfordert, wird eine Blattebene-Funktion aufgerufen.  
   
- Eine Rahmenfunktion ist eine Funktion, die Stapelspeicher zuweist, andere Funktionen aufruft, nicht flüchtige Register speichert oder eine Ausnahmebehandlung verwendet.  Außerdem erfordert sie einen Funktionstabelleneintrag.  Eine Rahmenfunktion benötigt einen Prolog und einen Epilog.  Eine Rahmenfunktion kann Stapelspeicher dynamisch zuordnen und einen Framezeiger verwenden.  Ihr steht der volle Funktionsumfang dieses Aufrufstandards zur Verfügung.  
+ Eine Frame-Funktion ist eine Funktion, die Stapelspeicher zuweist, andere Funktionen aufruft, um nicht flüchtigen Register speichert oder mithilfe der Ausnahmebehandlung. Darüber hinaus wird eine Tabelle Funktionsstart erforderlich. Eine Frame-Funktion erfordert einen Prolog und einen Epilog. Eine Funktion Frame Stapelspeicher dynamisch zuweisen und Frame-Pointer verwenden. Eine Frame-Funktion weist die vollen Fähigkeiten der dies verfügbare standard aufrufen.  
   
- Wenn eine Rahmenfunktion keine andere Funktion aufruft, muss sie nicht den Stapel ausrichten \(siehe den Abschnitt [Stapelreservierung](../build/stack-allocation.md)\).  
+ Wenn eine Frame-Funktion nicht eine andere Funktion aufruft, muss es ist nicht erforderlich, um den Stapel auszurichten (Siehe den Abschnitt [Stapelzuordnung](../build/stack-allocation.md)).  
   
- Eine Endfunktion benötigt keinen Funktionstabelleneintrag.  Sie kann keine Funktionen aufrufen, keinen Speicherplatz zuweisen und keine nicht flüchtigen Register speichern.  Sie kann bei der Ausführung einen Stapel unausgerichtet verlassen.  
+ Eine Blattebene-Funktion ist eine, die eine Tabelle Funktionsstart nicht erfordert. Sie können Änderungen vornehmen, um alle nicht flüchtigen Register, einschließlich RSP, was bedeutet, dass keine Funktionen aufrufen oder Stapelspeicher reservieren. Es ist zulässig, den Stapel nicht ausgerichteten lassen, während sie ausgeführt wird.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verwendung von Stapeln](../build/stack-usage.md)

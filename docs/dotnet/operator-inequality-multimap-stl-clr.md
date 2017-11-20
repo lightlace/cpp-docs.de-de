@@ -1,32 +1,30 @@
 ---
-title: "operator!= (multimap) (STL/CLR)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::operator!="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator!=-Member [STL/CLR]"
+title: Operator! = (Multimap) (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::operator!=
+dev_langs: C++
+helpviewer_keywords: operator!= member [STL/CLR]
 ms.assetid: bc98c310-4528-4285-8182-23a055b7732e
-caps.latest.revision: 15
-caps.handback.revision: "13"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6a93061a21aba89b96c4d27dee2a0aa9693ef8ef
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# operator!= (multimap) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Führen Sie nicht denselben Vergleich auf.  
+# <a name="operator-multimap-stlclr"></a>operator!= (multimap) (STL/CLR)
+Liste nicht gleich sein Vergleich aus.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<typename Key,  
@@ -35,17 +33,17 @@ template<typename Key,
         multimap<Key, Mapped>% right);  
 ```  
   
-#### Parameter  
- left  
- Linker Container zu vergleichen.  
+#### <a name="parameters"></a>Parameter  
+ links  
+ Linker zu vergleichender Container.  
   
- right  
- Rechter Container zu vergleichen.  
+ Rechts  
+ Rechter zu vergleichender Container.  
   
-## Hinweise  
- Die Operatorfunktion gibt `!(``left` `==` `right``)` zurück.  Sie verwenden sie, um zu testen, ob `left` gleich wie `right` nicht sortiert wird, wenn die beiden Multimaps verglichenes Element durch Element sind.  
+## <a name="remarks"></a>Hinweise  
+ Gibt die Operatorfunktion `!(left == right)`. Sie zum Testen verwenden, ob `left` nicht sortiert wird, ist identisch mit `right` Wenn den zwei multimap-Objekte aus verglichenen elementweise sind.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_multimap_operator_ne.cpp   
@@ -85,19 +83,22 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[bc 3\]**  
- **\[1\] \[2\] \[bd 4\]**  
-**\[ein b c\!\]\= \[ein b c\] ist falsch**  
-**\[ein b c\!\]\= \[ein b d\] gilt**   
-## Anforderungen  
- **Header:** \<cliext\/Zuordnung\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [d 4]  
+[a b c] != [a b c] is False  
+[a b c] != [a b d] is True  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Map >  
   
-## Siehe auch  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [operator\=\= \(multimap\)](../dotnet/operator-equality-multimap-stl-lr.md)   
- [operator\< \(multimap\)](../dotnet/operator-less-than-multimap-stl-clr.md)   
- [operator\>\= \(multimap\)](../dotnet/operator-greater-or-equal-multimap-stl-clr.md)   
- [operator\> \(multimap\)](../dotnet/operator-greater-than-multimap-stl-clr.md)   
- [operator\<\= \(multimap\)](../dotnet/operator-less-or-equal-multimap-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [Operator == (Multimap) (STL/CLR)](../dotnet/operator-equality-multimap-stl-clr.md)   
+ [Operator\< (Multimap) (STL/CLR)](../dotnet/operator-less-than-multimap-stl-clr.md)   
+ [Operator > = (Multimap) (STL/CLR)](../dotnet/operator-greater-or-equal-multimap-stl-clr.md)   
+ [Operator > (Multimap) (STL/CLR)](../dotnet/operator-greater-than-multimap-stl-clr.md)   
+ [operator<= (multimap) (STL/CLR)](../dotnet/operator-less-or-equal-multimap-stl-clr.md)

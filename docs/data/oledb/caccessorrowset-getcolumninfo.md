@@ -1,34 +1,33 @@
 ---
-title: "CAccessorRowset::GetColumnInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "GetColumnInfo"
-  - "CAccessorRowset.GetColumnInfo"
-  - "CAccessorRowset::GetColumnInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetColumnInfo-Methode"
+title: 'CAccessorRowset:: GetColumnInfo | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- GetColumnInfo
+- CAccessorRowset.GetColumnInfo
+- CAccessorRowset::GetColumnInfo
+dev_langs: C++
+helpviewer_keywords: GetColumnInfo method
 ms.assetid: 8ade2388-3c58-43cd-8ed6-499ee0531291
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3f982c516ef6c85ae2650bb26e2a7e1cdf28b7be
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# CAccessorRowset::GetColumnInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ruft Spalteninformationen vom geöffneten Rowsets ab.  
+# <a name="caccessorrowsetgetcolumninfo"></a>CAccessorRowset::GetColumnInfo
+Ruft die Spalteninformationen aus dem geöffneten Rowset ab.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -43,19 +42,19 @@ HRESULT GetColumnInfo(
 );  
 ```  
   
-#### Parameter  
- Siehe [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx) in der *OLE* DB\-Programmierreferenz.  
+#### <a name="parameters"></a>Parameter  
+ Finden Sie unter [IColumnsInfo:: GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx) in der *OLE DB Programmer's Reference*.  
   
-## Rückgabewert  
- Standard\- `HRESULT`.  
+## <a name="return-value"></a>Rückgabewert  
+ Ein Standard `HRESULT`-Objekt.  
   
-## Hinweise  
- Der Benutzer muss dem zurückgegebenen Eigenschaften der Kategorien Spalteninformationen und \-Zeichenfolgenpuffer freigeben.  Verwenden Sie die zweite Version dieser Methode, wenn Sie [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) verwenden und bindet überschreiben müssen.  
+## <a name="remarks"></a>Hinweise  
+ Der Benutzer muss die zurückgegebenen Spalteninformationen und Zeichenfolgenpuffer freigeben. Verwenden Sie die zweite Version dieser Methode, bei der Verwendung [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) und die Bindungen überschreiben müssen.  
   
- Weitere Informationen finden Sie unter [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx) in der *OLE* DB\-Programmierreferenz.  
+ Weitere Informationen finden Sie unter [IColumnsInfo:: GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx) in der *OLE DB Programmer's Reference*.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  
   
-## Siehe auch  
- [CAccessorRowset\-Klasse](../../data/oledb/caccessorrowset-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [CAccessorRowset-Klasse](../../data/oledb/caccessorrowset-class.md)

@@ -1,182 +1,167 @@
 ---
-title: "localeconv | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "localeconv"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "localeconv"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lconv-Typ"
-  - "localeconv-Funktion"
-  - "Gebietsschemas, Abrufen von Informationen zu"
+title: localeconv | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname: localeconv
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords: localeconv
+dev_langs: C++
+helpviewer_keywords:
+- lconv type
+- localeconv function
+- locales, getting information on
 ms.assetid: 7ecdb1f2-88f5-4037-a0e7-c754ab003660
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: aa001a4c8dde1337eb576ae3a2c78108e4cb3199
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# localeconv
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ruft Informationen über Gebietsschema ab.  
+# <a name="localeconv"></a>localeconv
+Ruft detaillierte Informationen über Gebietsschemaeinstellungen ab.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
 struct lconv *localeconv( void );  
 ```  
   
-## Rückgabewert  
- `localeconv` gibt einen Zeiger auf dem soliden Objekt des Typs [Struktur lconv](../../c-runtime-library/standard-types.md) zurück.  Die Werte, die im Objekt enthalten sind, können durch nachfolgende Aufrufe an `localeconv` überschrieben und nicht direkt ändern das Objekt.  Aufrufe von [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) mit `category`\-Werte von `LC_ALL`, `LC_MONETARY` oder `LC_NUMERIC` überschreiben den Inhalt der Struktur.  
+## <a name="return-value"></a>Rückgabewert  
+ `localeconv` gibt einen Zeiger auf ein ausgefülltes Objekt vom Typ [struct lconv](../../c-runtime-library/standard-types.md) zurück. Die in dem Objekt enthaltenen Werte aus den gebietsschemaeinstellungen im threadlokalen Speicher kopiert werden, und kann überschrieben werden, durch nachfolgende Aufrufe von `localeconv`. Zu den Werten in diesem Objekt vorgenommenen Änderungen ändern nicht die gebietsschemaeinstellungen. Aufrufe von [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) mit `category`-Werten von `LC_ALL`, `LC_MONETARY` oder `LC_NUMERIC` überschreiben den Inhalt der Struktur.  
   
-## Hinweise  
- Die `localeconv`\-Funktion ruft ausführliche Informationen zur Formatierung für numerische das aktuelle Gebietsschema ab.  Diese Informationen werden in einer Struktur des Typs **lconv** gespeichert.  Die **lconv**\-Struktur, die in LOCALE.H, enthält die folgenden Member:  
+## <a name="remarks"></a>Hinweise  
+ Die `localeconv`-Funktion ruft detaillierte Informationen zur numerischen Formatierung für das aktuelle Gebietsschema ab. Diese Informationen werden in einer Struktur des Typs gespeichert `lconv`. Die `lconv` Struktur, die im GEBIETSSCHEMA definiert. H, enthält die folgenden Elemente:  
   
  `char *decimal_point, wchar_t *_W_decimal_point`  
- Dezimaltrennzeichenzeichen für nicht\-monetäre Mengen.  
+ Dezimaltrennzeichen für nichtmonetäre Mengen.  
   
  `char *thousands_sep, wchar_t *_W_thousands_sep`  
- Zeichen, das Gruppen Ziffern links des Dezimaltrennzeichens für nicht\-monetäre Mengen trennt.  
+ Zeichen, die Gruppen von Ziffern links vom Dezimaltrennzeichen für nichtmonetäre Mengen trennt.  
   
  `char *grouping`  
- Größe der Gruppe Ziffern in den nicht\-monetären Mengen.  
+ Zeiger auf eine `char`-Größe ganze Zahl, die Größe der einzelnen Gruppen von Ziffern in nonmonetary Mengen enthält.  
   
  `char *int_curr_symbol, wchar_t *_W_int_curr_symbol`  
- Internationales Währungssymbol für aktuelle Gebietsschema.  Erste drei Zeichen geben alphabetischem internationalem Währungssymbol an, wie in den *Code ISO 4217 für die Darstellung der Währung und der Kapitalien* definiert, die Standard sind.  Viertes Zeichen \(unmittelbar vor NULL\-Zeichen\) trennt internationales Währungssymbol vom Währungsbetrag.  
+ Das internationale Währungssymbol für das aktuelle Gebietsschema. Die ersten drei Zeichen geben das alphabetische internationale Währungssymbol an, wie im Standard *ISO 4217 – Codes für die Darstellung der Währung und Fonds* definiert. Das vierte Zeichen (unmittelbar vorausgehendes Zeichen NULL) trennt das internationale Währungssymbol von der monetären Menge.  
   
  `char *currency_symbol, wchar_t *_W_currency_symbol`  
- Währungssymbol für aktuelle Gebietsschema.  
+ Das lokale Währungssymbol für das aktuelle Gebietsschema.  
   
  `char *mon_decimal_point, wchar_t *_W_mon_decimal_point`  
- Dezimaltrennzeichenzeichen für Währungsbeträge.  
+ Dezimaltrennzeichen für monetäre Mengen.  
   
  `char *mon_thousands_sep, wchar_t *_W_mon_thousands_sep`  
- Trennzeichen für Zahlengruppen links Dezimalstelle der in den Währungsbeträgen.  
+ Trennzeichen für Gruppen von Ziffern links von der Dezimalstelle in monetären Mengen.  
   
  `char *mon_grouping`  
- Größe der Gruppe Ziffern in den Währungsbeträgen.  
+ Zeiger auf eine `char`-Größe ganze Zahl, die Größe der einzelnen Gruppen von Ziffern in monetäre Mengen enthält.  
   
  `char *positive_sign, wchar_t *_W_positive_sign`  
- Zeichenfolge, die Zeichen für nicht negative Währungsbeträge bezeichnet.  
+ Die Zeichenfolge, die das Zeichen für nicht negative monetären Mengen angibt.  
   
  `char *negative_sign, wchar_t *_W_negative_sign`  
- Zeichenfolge, die Zeichen für negative Währungsbeträge bezeichnet.  
+ Die Zeichenfolge, die das Zeichen für negative monetären Mengen angibt.  
   
  `char int_frac_digits`  
- Die Anzahl von Ziffern rechts des Dezimaltrennzeichens in für die internationale Programmierung formatierten Währungsbeträgen.  
+ Die Anzahl der Ziffern rechts vom Dezimaltrennzeichen in international formatierten monetären Mengen.  
   
  `char frac_digits`  
- Die Anzahl von Ziffern rechts des Dezimaltrennzeichens im formatierten Währungsbeträgen.  
+ Die Anzahl der Ziffern rechts vom Dezimaltrennzeichen in formatierten monetären Mengen.  
   
  `char p_cs_precedes`  
- Wird auf 1 festgelegt, wenn Währungssymbol Wert für nicht negative Währungsbetrag formatierten vorausgeht.  Wird auf 0 festgelegt, wenn Symbol Wert folgt.  
+ Auf 1 festgelegt, wenn dem Währungssymbol ein Wert für eine nicht negative, formatierte monetäre Menge vorangeht. Auf 0 festgelegt, wenn das Symbol einem Wert folgt.  
   
  `char p_sep_by_space`  
- Wird auf 1 festgelegt, wenn Währungssymbol durch Leerzeichen vom Wert für nicht negative Währungsbetrag formatierten getrennt wird.  Wird auf 0 festgelegt, wenn keine Leerzeichentrennung gibt.  
+ Auf 1 festgelegt, wenn das Währungssymbol durch Leerzeichen von einem Wert für eine nicht negative, formatierte monetäre Menge getrennt ist. Auf 0 festgelegt, wenn es keine Leerzeichentrennung gibt.  
   
  `char n_cs_precedes`  
- Wird auf 1 festgelegt, wenn Währungssymbol für formatierten Wert negativ Währungsbetrag vorausgeht.  Wird auf 0 festgelegt, wenn Symbol Wert folgt.  
+ Auf 1 festgelegt, wenn dem Währungssymbol ein Wert für eine negative, formatierte monetäre Menge vorangeht. Auf 0 festgelegt, wenn das Symbol einem Wert nachfolgt.  
   
  `char n_sep_by_space`  
- Wird auf 1 festgelegt, wenn Währungssymbol durch Leerzeichen vom Wert negativ für formatierten Währungsbetrag getrennt wird.  Wird auf 0 festgelegt, wenn keine Leerzeichentrennung gibt.  
+ Auf 1 festgelegt, wenn das Währungssymbol durch Leerzeichen von einem Wert für eine negative, formatierte monetäre Menge getrennt ist. Auf 0 festgelegt, wenn es keine Leerzeichentrennung gibt.  
   
  `char p_sign_posn`  
- Position des Vorzeichens positiven in nicht negative formatierten Währungsbeträgen.  
+ Die Position des positiven Vorzeichens in nicht negativen, formatierten monetären Mengen.  
   
  `char n_sign_posn`  
- Position des Vorzeichens positiven in den formatierten Währungsbeträgen negativ.  
+ Die Position des positiven Vorzeichens in negativen, formatierten monetären Mengen.  
   
- Member der Struktur, der `char` `*` und `wchar_t *`\-Versionen besitzen, sind Zeiger auf Zeichenfolgen.  Irgendwelches dieses gleich `""` \(oder `L""` für `wchar_t *`\) ist entweder von der Länge 0 oder unterstützt nicht im aktuellen Gebietsschema.  Beachten Sie, dass `decimal_point` und `_W_decimal_point` immer und Länge der ungleich 0 \(null\) unterstützt werden.  
+Sofern angegeben, Mitglied der `lconv` -Struktur, die über `char *` und `wchar_t *` Versionen sind Zeiger auf Zeichenfolgen. Jeder von diesen, der gleich `""` (oder `L""` für `wchar_t *`) ist, hat entweder die Länge 0 oder wird nicht im aktuellen Gebietsschema unterstützt. Bitte beachten Sie, dass `decimal_point` und `_W_decimal_point` immer unterstützt werden, und dass deren Länge immer ungleich null ist.  
   
- Die Member `char` der Struktur sind kleine nicht negative Zahlen, keine Zeichen.  Irgendwelches dieses gleich **CHAR\_MAX** wird nicht in das aktuelle Gebietsschema unterstützt.  
+Die `char`-Member der Struktur sind kleine nicht negative Zahlen, keine Zeichen. Eines dieser, die gleich `CHAR_MAX` ist im aktuellen Gebietsschema nicht unterstützt.  
   
- Die Elemente aus **grouping** und **mon\_grouping** werden entsprechend den folgenden Regeln interpretiert.  
+Die Werte der `grouping` und `mon_grouping` gemäß den folgenden Regeln interpretiert werden:  
   
- **CHAR\_MAX**  
- Führen Sie keine weitere Gruppieren aus.  
+- `CHAR_MAX`-Führen Sie nicht weiter gruppieren.  
   
- 0  
- Verwenden Sie wenn für jede der verbleibenden Ziffern.  
+- 0 – verwenden Sie vorangehenden Element für jede der verbleibenden Ziffern.  
   
- *n*  
- Zahl Ziffern, die aktuelle Gruppe besteht.  Folgendes Element wird überprüft, um Größe der folgenden Gruppe Ziffern zu bestimmen, bevor aktuell, gruppieren.  
+- *n*-Anzahl der Ziffern, die aktuelle Gruppe bilden. Das nächste Element wird untersucht, um die Größe der nächsten Gruppe von Zeichen vor der aktuellen Gruppe zu bestimmen.  
   
- Die Werte für **int\_curr\_symbol** werden entsprechend den folgenden Regeln interpretiert:  
+Die Werte für `int_curr_symbol` gemäß den folgenden Regeln interpretiert werden:  
   
--   Die ersten drei Zeichen geben den internationalen alphabetischen Währungssymbol an, wie in den *Code ISO 4217 für die Darstellung der Währung und der Kapitalien* definiert, die Standard sind.  
+-   Die ersten drei Zeichen geben das alphabetische internationale Währungssymbol an, wie im Standard *ISO 4217 – Codes für die Darstellung der Währung und Fonds* definiert.  
   
--   Das vierte Zeichen \(direkt vor das Nullzeichen\) trennt das internationale Währungssymbol vom Währungsbetrag.  
+-   Das vierte Zeichen (unmittelbar vorausgehendes Zeichen NULL) trennt das internationale Währungssymbol von der monetären Menge.  
   
- Die Werte für **p\_cs\_precedes** und **n\_cs\_precedes** werden entsprechend den folgenden Regeln interpretiert \(die **n\_cs\_precedes** Regel ist in Klammern\):  
+Die Werte für `p_cs_precedes` und `n_cs_precedes` werden gemäß den folgenden Regeln interpretiert (die `n_cs_precedes` Regel wird in Klammern angegeben):  
   
- 0  
- Währungssymbol folgt Wert für nicht negative \(negative\) formatierten Währungswert.  
+- 0 – folgt Währungssymbol Wert für nicht negative (negativ) formatierte Währungswert an.  
   
- 1  
- Währungssymbol geht Wert für nicht negative \(negative\) formatierten Währungswert voran.  
+- 1 - Währungssymbol vorangestellt Wert für nicht negative (negativ) formatierte Währungswert.  
   
- Die Werte für **p\_sep\_by\_space** und **n\_sep\_by\_space** werden entsprechend den folgenden Regeln interpretiert \(die **n\_sep\_by\_space** Regel ist in Klammern\):  
+Die Werte für `p_sep_by_space` und `n_sep_by_space` werden gemäß den folgenden Regeln interpretiert (die `n_sep_by_space` Regel wird in Klammern angegeben):  
   
- 0  
- Währungssymbol wird vom Wert von Speicher für nicht negative \(negative\) formatierten Währungswert getrennt.  
+- 0 - Währungssymbol vom Wert von Speicherplatz für nicht negative (negativ) formatierte Währungswert getrennt ist.  
   
- 1  
- Es gibt keine Leerzeichentrennung zwischen Währungssymbol und Wert für nicht negative \(negative\) formatierten Währungswert.  
+- 1 – Es gibt keine Trennung Leerzeichen zwischen dem Währungssymbol und der Wert für nicht negative (negativ) formatierte Währungswert.  
   
- Die Werte für **p\_sign\_posn** und **n\_sign\_posn** werden entsprechend den folgenden Regeln interpretiert:  
+Die Werte für `p_sign_posn` und `n_sign_posn` gemäß den folgenden Regeln interpretiert werden:  
   
- 0  
- Klammereinfassungsmenge und \-Währungssymbol.  
+- 0 – Klammern umgeben Menge und Currency Symbol.  
   
- 1  
- Zeichenzeichenfolge geht Menge und Währungssymbol voran.  
+- 1 - Anmelde-Zeichenfolge ist die Menge und Currency Symbol vorangestellt.  
   
- 2  
- Zeichenzeichenfolge folgt Menge und Währungssymbol.  
+- 2 - Anmelde-Zeichenfolge folgt Menge und Currency Symbol.  
   
- 3  
- Zeichenzeichenfolge wechselt sofort Währungssymbol voran.  
+- 3 - Anmelde-Zeichenfolge ist sofort Währungssymbol vorangestellt.  
   
- 4  
- Zeichenzeichenfolge folgt direkt Währungssymbol.  
+- 4 – Anmeldung Zeichenfolge unmittelbar folgt Währungssymbol.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`localeconv`|\<locale.h\>|  
+|-------------|---------------------|  
+|`localeconv`|\<locale.h>|  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Bibliotheken  
- Alle Versionen [C\-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Bibliotheken  
+ Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Locale](../../c-runtime-library/locale.md)   
  [setlocale](../../preprocessor/setlocale.md)   
- [strcoll\-Funktionen](../../c-runtime-library/strcoll-functions.md)   
- [strftime, wcsftime, \_strftime\_l, \_wcsftime\_l](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)   
- [strxfrm, wcsxfrm, \_strxfrm\_l, \_wcsxfrm\_l](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)
+ [strcoll-Funktionen](../../c-runtime-library/strcoll-functions.md)   
+ [strftime, wcsftime, _strftime_l, _wcsftime_l](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)   
+ [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)

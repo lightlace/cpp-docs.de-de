@@ -1,46 +1,47 @@
 ---
-title: "Reference Counting | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AddRef method [C++]"
-  - "AddRef method [C++], reference counting"
-  - "reference counting"
-  - "reference counts"
-  - "Referenzen, Zählen"
+title: "Verweiszählung (ATL) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- AddRef method [C++], reference counting
+- reference counting
+- AddRef method [C++]
+- reference counts
+- references, counting
 ms.assetid: b1fd4514-6de6-429f-9e60-2777c0d07a3d
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9bef78ba6047305ccb20e5740ae03535ca2c366b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Reference Counting
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-COM selbst nicht automatisch versucht, ein Objekt aus dem Arbeitsspeicher zu entfernen, wenn es erstellen möchten, dass das Objekt nicht mehr verwendet wird.  Stattdessen muss der Objektprogrammierer das nicht verwendete Objekt entfernen.  Der Programmierer bestimmt, ob ein Objekt auf Grundlage eines Verweiszähler entfernt werden kann.  
+# <a name="reference-counting"></a>Verweiszählung
+COM selbst versucht automatisch nicht, ein Objekt aus dem Arbeitsspeicher entfernen, wenn er davon ausgeht, dass das Objekt nicht mehr verwendet wird. Stattdessen muss der Programmierer nicht verwendete Objekt entfernen. Der Programmierer bestimmt, ob ein Objekt basierend auf einer Verweisanzahl entfernt werden kann.  
   
- COM verwendet die **IUnknown**\-Methoden, [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) und [Version](http://msdn.microsoft.com/library/windows/desktop/ms682317), um den Verweiszähler von Schnittstellen in einem Objekt zu verwalten.  Die allgemeinen Regeln zum Aufrufen dieser Methoden sind:  
+ COM verwendet die **IUnknown** Methoden [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) und [Version](http://msdn.microsoft.com/library/windows/desktop/ms682317), um den Verweiszähler der Schnittstellen für ein Objekt zu verwalten. Die allgemeinen Regeln für das Aufrufen dieser Methoden sind:  
   
--   Wenn ein Client einen Schnittstellenzeiger empfängt, muss `AddRef` aufgerufen werden mit der Schnittstelle.  
+-   Wenn ein Client einen Schnittstellenzeiger empfängt `AddRef` muss auf der Schnittstelle aufgerufen werden.  
   
--   Sobald der Client mithilfe des Schnittstellenzeigers beendet, muss er **Release** aufrufen.  
+-   Wenn der Client mit den Schnittstellenzeiger abgeschlossen ist, muss er ihn aufzurufen **Version**.  
   
- In einer einfachen Implementierung dekrementiert Inkremente jedes `AddRef` Aufrufs und jeder **Release** Aufruf eine Zählervariable innerhalb des Objekts.  Wenn die Anzahlrückgaben auf null, die Schnittstelle nicht mehr alle Benutzer hat und entscheiden, sich vom Arbeitsspeicher zu entfernen.  
+ In eine einfache Implementierung jedes `AddRef` aufrufen Inkremente und jede **Version** aufrufen dekrementiert eine Zählervariable innerhalb des Objekts. Wenn die Anzahl 0 (null) zurückgibt, wird die Schnittstelle nicht mehr hat jeder Benutzer und kann nach Belieben selbst aus dem Arbeitsspeicher entfernt wird.  
   
- Verweiszählung kann auch implementiert werden, damit jeder Verweis auf das Objekt \(nicht zu einer einzelnen Schnittstelle\) gezählt werden.  In diesem Fall gibt jedes `AddRef` und **Release** Aufrufsdelegaten auf eine zentrale Implementierung für das Objekt und **Release** das gesamte Objekt wenn seine Verweiszählerreichweiten null frei.  
+ Verweiszählung kann ebenfalls implementiert werden, damit, dass jeder Verweis auf das Objekt (nicht auf eine einzelne Schnittstelle) gezählt wird. In diesem Fall jedes `AddRef` und **Release** Delegaten an eine zentrale Implementierung für das Objekt aufrufen und **Version** des gesamten Objekts freigegeben, wenn der entsprechende Verweiszähler 0 (null) erreicht.  
   
 > [!NOTE]
->  Wenn `CComObject` von abgeleitetes Objekt wird mithilfe des **new**\-Operator, der Verweiszähler ist 0.  Daher muss ein Aufruf `AddRef` gemacht werden, nachdem erfolgreich `CComObject` von abgeleitetes Objekt erstellt hat.  
+>  Wenn eine `CComObject`-abgeleitete Objekt wird erstellt, mit der **neue** -Operator, der den Verweiszähler dieser Planergruppe ist 0. Deshalb wird ein Aufruf zum `AddRef` muss erfolgen, nachdem Sie erfolgreich erstellt die `CComObject`-abgeleitetes Objekt.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Einführung in COM](../atl/introduction-to-com.md)   
- [Managing Object Lifetimes through Reference Counting](http://msdn.microsoft.com/library/windows/desktop/ms687260)
+ [Verwaltung der Objektlebensdauer durch Verweiszählung](http://msdn.microsoft.com/library/windows/desktop/ms687260)
+

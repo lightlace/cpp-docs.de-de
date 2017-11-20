@@ -1,11 +1,10 @@
 ---
-title: Klasse CComAllocator | Microsoft-Dokumentation
+title: CComAllocator Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,38 +13,21 @@ f1_keywords:
 - ATLBASE/ATL::CComAllocator::Allocate
 - ATLBASE/ATL::CComAllocator::Free
 - ATLBASE/ATL::CComAllocator::Reallocate
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComAllocator class
+dev_langs: C++
+helpviewer_keywords: CComAllocator class
 ms.assetid: 0cd706fd-0c7b-42d3-9054-febe2966fc8e
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: d395d347e81b24462a41de5ae3b9d8791d7f82fd
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: b1ba2b12110e4c312b84b2a24831687e782cc339
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomallocator-class"></a>CComAllocator-Klasse
-Diese Klasse stellt Methoden zum Verwalten von Speicher mithilfe von COM-Arbeitsspeicher Routinen.  
+Diese Klasse stellt Methoden zum Verwalten von Speicher mithilfe des COM-Arbeitsspeicher Routinen bereit.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -59,12 +41,12 @@ class CComAllocator
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CComAllocator::Allocate](#allocate)|Rufen Sie diese statische Methode, um Speicher zu belegen.|  
-|[CComAllocator::Free](#free)|Rufen Sie diese statische Methode, um den belegten Speicher freizugeben.|  
+|[CComAllocator::Allocate](#allocate)|Rufen Sie diese statische Methode, um Arbeitsspeicher zuzuordnen.|  
+|[CComAllocator::Free](#free)|Rufen Sie diese statische Methode, um den belegten Arbeitsspeicher freizugeben.|  
 |[CComAllocator::Reallocate](#reallocate)|Rufen Sie diese statische Methode, um Arbeitsspeicher neu zuzuordnen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Klasse wird verwendet, indem [CComHeapPtr](../../atl/reference/ccomheapptr-class.md) der COM-Arbeitsspeicher Reservierungsroutinen bereitstellen. Die Klasse Gegenstück [CCRTAllocator](../../atl/reference/ccrtallocator-class.md), bietet die gleichen Methoden mithilfe der CRT-Routinen.  
+ Diese Klasse wird verwendet, indem [CComHeapPtr](../../atl/reference/ccomheapptr-class.md) der COM-Arbeitsspeicher Reservierungsroutinen bereitstellen kann. Die Klasse Gegenstück [CCRTAllocator](../../atl/reference/ccrtallocator-class.md), bietet die gleichen Methoden, die mit der CRT-Routinen.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlbase.h  
@@ -84,10 +66,10 @@ static void* Allocate(size_t nBytes) throw();
  Gibt einen void-Zeiger auf den belegten Speicherplatz oder NULL zurück, wenn nicht genügend Speicher verfügbar ist.  
   
 ### <a name="remarks"></a>Hinweise  
- Belegt Arbeitsspeicher. Finden Sie unter [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727) für weitere Details.  
+ Belegt Arbeitsspeicher. Finden Sie unter [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727) Weitere Details.  
   
 ##  <a name="free"></a>CComAllocator::Free  
- Rufen Sie diese statischen Funktion um belegten Speicher freizugeben.  
+ Rufen Sie diese statischen Funktion um belegten Arbeitsspeicher freizugeben.  
   
 ```
 static void Free(void* p) throw();
@@ -98,7 +80,7 @@ static void Free(void* p) throw();
  Zeiger auf zugewiesenen Speicher.  
   
 ### <a name="remarks"></a>Hinweise  
- Gibt den Arbeitsspeicher frei. Finden Sie unter [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722) für weitere Details.  
+ Gibt den belegten Arbeitsspeicher frei. Finden Sie unter [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722) Weitere Details.  
   
 ##  <a name="reallocate"></a>CComAllocator::Reallocate  
  Rufen Sie diese statischen Funktion auf, um Arbeitsspeicher neu zuzuordnen.  
@@ -118,10 +100,9 @@ static void* Reallocate(void* p, size_t nBytes) throw();
  Gibt einen void-Zeiger auf den zugeordneten Speicherplatz oder NULL zurück, wenn nicht genügend Arbeitsspeicher  
   
 ### <a name="remarks"></a>Hinweise  
- Ändert die Größe des belegten Speichers. Finden Sie unter [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280) für weitere Details.  
+ Ändert die Größe des belegten Speichers. Finden Sie unter [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280) Weitere Details.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CComHeapPtr-Klasse](../../atl/reference/ccomheapptr-class.md)   
  [CCRTAllocator-Klasse](../../atl/reference/ccrtallocator-class.md)   
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)
-
+ [Klassenübersicht](../../atl/atl-class-overview.md)

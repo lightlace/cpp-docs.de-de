@@ -1,45 +1,43 @@
 ---
-title: "pair::swap (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::pair::swap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "swap-Member [STL/CLR]"
+title: 'Pair:: Swap (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::pair::swap
+dev_langs: C++
+helpviewer_keywords: swap member [STL/CLR]
 ms.assetid: 7f5cbfa0-3702-40ab-a3f4-ffde02126095
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 19df7f3a290ffa14e63b557e3cea2d1d8f645a77
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# pair::swap (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Vertauscht den Inhalt von beiden aus Paaren.  
+# <a name="pairswap-stlclr"></a>pair::swap (STL/CLR)
+Vertauscht den Inhalt von zwei Wertepaaren.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void swap(pair<Value1, Value2>% right);  
 ```  
   
-#### Parameter  
- right  
- Paaren, um den Inhalt mit auszutauschen.  
+#### <a name="parameters"></a>Parameter  
+ Rechts  
+ Paar, das Inhalt mit austauschen.  
   
-## Hinweise  
- Die Memberfunktion tauscht die gespeicherten Paare von Werten zwischen `*this` und `right` aus.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion tauscht den gespeicherten Wertepaar zwischen `*this` und `right`.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_pair_swap.cpp   
@@ -83,15 +81,18 @@ int main()
   
 ```  
   
-  **ein b c**  
- **x x x x x**  
- **x x x x x**  
- **ein b c**   
-## Anforderungen  
- **Header:** \<cliext\/Hilfsprogramm\>  
+```Output  
+a b c  
+x x x x x  
+x x x x x  
+a b c  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext-Hilfsprogramm >  
   
-## Siehe auch  
- [pair](../dotnet/pair-stl-clr.md)   
- [pair::operator\=](../dotnet/pair-operator-assign-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Paar (STL/CLR)](../dotnet/pair-stl-clr.md)   
+ [pair::operator= (STL/CLR)](../dotnet/pair-operator-assign-stl-clr.md)

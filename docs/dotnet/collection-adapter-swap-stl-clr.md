@@ -1,45 +1,43 @@
 ---
-title: "collection_adapter::swap (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::collection_adapter::swap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "swap-Member [STL/CLR]"
+title: collection_adapter::Swap (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::collection_adapter::swap
+dev_langs: C++
+helpviewer_keywords: swap member [STL/CLR]
 ms.assetid: 778f85bf-c6e3-48ff-bc97-0488f3e8f143
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ef46dd324b2da8ed34298c82245af25ef0ce479b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# collection_adapter::swap (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="collectionadapterswap-stlclr"></a>collection_adapter::swap (STL/CLR)
 Vertauscht den Inhalt von zwei Containern.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void swap(collection_adapter<Coll>% right);  
 ```  
   
-#### Parameter  
- right  
- Container, mit denen Inhalt getauscht werden soll.  
+#### <a name="parameters"></a>Parameter  
+ Rechts  
+ Container für den Tausch von Inhalten.  
   
-## Hinweise  
- Die Memberfunktion tauscht die gespeicherten BCL\-Handles zwischen `*this` und `right` aus.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion tauscht den gespeicherten BCL Handles zwischen `*this` und `right`.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_collection_adapter_swap.cpp   
@@ -83,15 +81,18 @@ int main()
   
 ```  
   
-  **ein b c**  
- **x x x x x**  
- **x x x x x**  
- **ein b c**   
-## Anforderungen  
- **Header:** \<cliext\/Adapter\>  
+```Output  
+a b c  
+x x x x x  
+x x x x x  
+a b c  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext-Adapter >  
   
-## Siehe auch  
- [collection\_adapter](../dotnet/collection-adapter-stl-clr.md)   
- [collection\_adapter::operator\=](../dotnet/collection-adapter-operator-assign-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)   
+ [collection_adapter::operator= (STL/CLR)](../dotnet/collection-adapter-operator-assign-stl-clr.md)

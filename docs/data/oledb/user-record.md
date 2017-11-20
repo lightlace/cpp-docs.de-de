@@ -1,32 +1,32 @@
 ---
-title: "Benutzerdatensatz | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB-Anbieter, Benutzerdatensatz"
-  - "Datensätze, Benutzer"
-  - "Rowsets, Benutzerdatensatz"
-  - "Benutzerdatensätze"
-  - "Benutzerdatensätze, Beschreibung"
+title: Benutzerdatensatz | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- records, user
+- OLE DB providers, user record
+- user records
+- user records, described
+- rowsets, user record
 ms.assetid: 9c0d2864-2738-4f62-a750-1016d9c3523f
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 08b0e369629bc93002ee73a31978ef8d00493f6d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Benutzerdatensatz
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Durch den Benutzerdatensatz wird Code und die Datenstruktur bereitgestellt, die die Spaltendaten für ein Rowset darstellt.  Ein Benutzerdatensatz kann zur Kompilierungs\- oder zur Laufzeit erstellt werden.  Wenn Sie einen Anbieter mit dem ATL\-OLE DB\-Anbieter\-Assistenten erstellen, generiert der Assistent einen mit dem folgenden Beispiel vergleichbaren Standardbenutzerdatensatz \(es wird davon ausgegangen, dass Sie einen Anbieternamen \[kurzer Name\] für "MyProvider" angegeben haben\):  
+# <a name="user-record"></a>Benutzerdatensatz
+Benutzerdatensatz enthält den Code und die Struktur, die die Spaltendaten für ein Rowset darstellt. Ein Benutzerdatensatz kann zur Kompilierzeit oder zur Laufzeit erstellt werden. Wenn Sie einen Anbieter mithilfe der ATL-OLE DB-Anbieter-Assistenten erstellen, erstellt der Assistent einen Standard-Benutzerdatensatz, der wie folgt aussieht (vorausgesetzt, dass Sie einen Anbieternamen [kurzer Name] "MyProvider" angegeben):  
   
 ```  
 class CWindowsFile:  
@@ -45,35 +45,35 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- Durch die OLE DB\-Anbietervorlagen werden alle OLE DB\-spezifischen Aspekte in Bezug auf die Clientinteraktionen abgedeckt.  Um die für eine Antwort benötigten Spaltendaten zu erhalten, ruft der Anbieter die `GetColumnInfo`\-Funktion auf, die Sie in den Benutzerdatensatz einfügen müssen.  Sie können `GetColumnInfo` im Benutzerdatensatz durch die im Folgenden dargestellte Deklaration in der H\-Datei explizit überschreiben:  
+ Der OLE DB-Anbietervorlagen werden alle OLE DB-spezifischen Aspekte in Bezug auf die Clientinteraktionen abgedeckt. Zum Abrufen der Spaltendaten benötigt, die auf eine Antwort der Anbieter Ruft die `GetColumnInfo` -Funktion, die Sie im Benutzerdatensatz platzieren müssen. Sie können explizit überschreiben `GetColumnInfo` im Benutzerdatensatz, z. B. durch Deklarieren sie in der .h-Datei wie hier gezeigt:  
   
 ```  
 template <class T>  
 static ATLCOLUMNINFO* GetColumnInfo(T* pThis, ULONG* pcCols)   
 ```  
   
- Dies ist identisch mit:  
+ Das entspricht:  
   
 ```  
 static ATLCOLUMNINFO* GetColumnInfo(CommandClass* pThis, ULONG* pcCols)  
 static ATLCOLUMNINFO* GetColumnInfo(RowsetClass* pThis, ULONG* pcCols)  
 ```  
   
- Zusätzlich muss `GetColumnInfo` in der CPP\-Datei des Benutzerdatensatzes implementiert werden.  
+ Sie müssen auch implementieren `GetColumnInfo` in der Benutzerdatensatz cpp-Datei.  
   
- Die **PROVIDER\_COLUMN\_MAP**\-Makros bieten Unterstützung beim Erstellen einer `GetColumnInfo`\-Funktion:  
+ Die Makro-Makros zu unterstützen, bei der Erstellung einer `GetColumnInfo` Funktion:  
   
--   Durch **BEGIN\_PROVIDER\_COLUMN\_MAP** werden der Funktionsprototyp und ein statisches Array mit **ATLCOLUMNINFO**\-Strukturen definiert.  
+-   BEGIN_PROVIDER_COLUMN_MAP definiert, der Funktionsprototyp und einen statischen Array von **ATLCOLUMNINFO-Struktur** Strukturen.  
   
--   Durch `PROVIDER_COLUMN_ENTRY` wird eine einzelne **ATLCOLUMNINFO**\-Struktur definiert und initialisiert.  
+-   PROVIDER_COLUMN_ENTRY definiert und initialisiert ein einzelnes **ATLCOLUMNINFO-Struktur**.  
   
--   Durch **END\_PROVIDER\_COLUMN\_MAP** werden das Array und die Funktion geschlossen.  Zusätzlich wird die Anzahl der Arrayelemente in den `pcCols`\-Parameter eingefügt.  
+-   END_PROVIDER_COLUMN_MAP schließt das Array und die Funktion. Es wird auch die Anzahl der Arrayelemente in das `pcCols` Parameter.  
   
- Wenn ein Benutzerdatensatz zur Laufzeit erstellt wird, verwendet **GetColumnInfo** den `pThis`\-Parameter, um einen Zeiger auf ein Rowset oder auf eine Befehlsinstanz zu erhalten.  Befehle und Rowsets müssen die `IColumnsInfo`\-Schnittstelle unterstützen, sodass über diesen Zeiger Spalteninformationen abgerufen werden können.  
+ Wenn ein Benutzerdatensatz zur Laufzeit erstellt wird **GetColumnInfo** verwendet die `pThis` Parameter um einen Zeiger auf eine Instanz von Rowset- oder zu empfangen. Befehle und Rowsets unterstützen, müssen die `IColumnsInfo` Schnittstelle, damit Informationen in der Spalte, die aus dieser Zeiger abgerufen werden kann.  
   
- **CommandClass** und **RowsetClass** entsprechen dem Befehl und dem Rowset, der bzw. das den Benutzerdatensatz verwendet.  
+ **CommandClass** und **RowsetClass** sind die Befehls- und Rowsetobjekte, die den Benutzerdatensatz zu verwenden.  
   
- Ein ausführliches Beispiel dazu, wie `GetColumnInfo` in einem Benutzerdatensatz überschrieben wird, finden Sie unter [Dynamisches Festlegen der an den Consumer zurückgegebenen Spalten](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).  
+ Ein ausführlicheres Beispiel zum Überschreiben von `GetColumnInfo` in einem Benutzerdatensatz finden Sie unter [Dynamisches Festlegen der an den Consumer zurückgegebenen Spalten](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).  
   
-## Siehe auch  
- [Architektur von OLE DB\-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)
+## <a name="see-also"></a>Siehe auch  
+ [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)

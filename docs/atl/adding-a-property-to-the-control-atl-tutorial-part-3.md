@@ -1,68 +1,69 @@
 ---
-title: "Hinzuf&#252;gen einer Eigenschaft zum Steuerelement (ATL-Lernprogramm, Teil 3) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
+title: "Hinzufügen einer Eigenschaft zum Steuerelement (ATL-Lernprogramm, Teil 3) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
 ms.assetid: f775fe34-103b-4f07-9999-400e987ee030
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f9bd5890dbe73cfcd99b2c3b37a25618775f592e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Hinzuf&#252;gen einer Eigenschaft zum Steuerelement (ATL-Lernprogramm, Teil 3)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-`IPolyCtl` ist die Schnittstelle, die die benutzerdefinierten Methoden und die Eigenschaften des Steuerelements enthält, und Sie fügen eine Eigenschaft hinzu.  
+# <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>Hinzufügen einer Eigenschaft zum Steuerelement (ATL-Lernprogramm, Teil 3)
+`IPolyCtl`ist die Schnittstelle, die das Steuerelement benutzerdefinierte Methoden und Eigenschaften enthält, und fügen Sie eine Eigenschaft zu.  
   
-### So legen Sie eine Eigenschaft mit dem Assistenten zum Hinzufügen von Eigenschaften hinzufügen  
+### <a name="to-add-a-property-using-the-add-property-wizard"></a>So fügen Sie einer Eigenschaft mithilfe des Assistenten zum Hinzufügen von Eigenschaften hinzu  
   
-1.  Erweitern Sie in der Klassenansicht die Polygonverzweigung.  
+1.  Erweitern Sie in der Klassenansicht das Polygon-Verzweigung aus.  
   
-2.  Klicken Sie auf IPolyCtl mit der rechten Maustaste.  
+2.  Mit der rechten Maustaste IPolyCtl.  
   
-3.  Klicken Sie im Kontextmenü **Hinzufügen** klicken Sie auf und dann auf **Eigenschaft hinzufügen**.  
+3.  Klicken Sie im Kontextmenü auf **hinzufügen**, und klicken Sie dann auf **Eigenschaft hinzufügen**.  
   
-     Der Assistent zum Hinzufügen von Eigenschaften angezeigt wird.  
+     Der Assistent zum Hinzufügen von Eigenschaften wird angezeigt.  
   
-4.  In der Dropdownliste von Eigenschaftentypen, wählen Sie `SHORT`.  
+4.  Wählen Sie in der Dropdown-Liste von Eigenschaftentypen `SHORT`.  
   
-5.  Typ `Seiten` als **Eigenschaftenname.**  
+5.  Typ `Sides` als die **Eigenschaftsname.**  
   
-6.  Klicken Sie auf die Eigenschaft hinzuzufügen, zu beenden **Fertig stellen**.  
+6.  Klicken Sie auf **Fertig stellen** auf die Eigenschaft hinzuzufügen.  
   
- Wenn Sie die Eigenschaft der Schnittstelle hinzufügen, definiert MIDL \(das Programm, das .idl\-Dateien kompiliert\), eine `Get`\-Methode zum Abrufen des Werts und eine `Put`\-Methode zum Festlegen eines neuen Werts.  Die Methoden werden benannt, indem `put_` und `get_` dem Eigenschaftennamen vorangestellt wird.  
+ Wenn Sie die Eigenschaft auf die Schnittstelle hinzufügen, MIDL (das Programm, das kompiliert IDL-Dateien) definiert ein `Get` Methode zum Abrufen des Wertes und eine `Put` Methode zum Festlegen eines neuen Werts. Die Methoden werden mit dem Namen vorangestellt `put_` und `get_` des Eigenschaftennamens.  
   
- Der Assistent zum Hinzufügen von Eigenschaften fügt die erforderlichen Zeilen der IDL\-Datei hinzu.  Es wird auch die `Get` und `Put`\-Funktionsprototypen der Klassendefinition in PolyCtl.h hinzu und fügt eine leere Implementierung PolyCtl.cpp hinzu.  Sie können dies überprüfen, indem Sie PolyCtl.cpp öffnen und nach den Funktionen `get_Sides` und `put_Sides` suchen.  
+ Der Assistent zum Hinzufügen von Eigenschaften hinzugefügt der IDL-Datei die erforderlichen Zeilen. Sie fügt außerdem die `Get` und `Put` memberfunktionsprototypen der Klassendefinition in PolyCtl.h hinzu und fügt eine leere Implementierung PolyCtl.cpp. Sie können überprüfen, indem PolyCtl.cpp öffnen und den Funktionen wünschen `get_Sides` und `put_Sides`.  
   
- Obwohl Sie jetzt die Skelettfunktionen haben, zum Festlegen der Eigenschaft und abzurufen, erfordert sie einen Platz, gespeichert werden.  Sie erstellen eine Variable, um die Eigenschaft zu speichern und die Funktionen entsprechend zu aktualisieren.  
+ Obwohl Sie nun das Gerüst eines Funktionen festlegen und Abrufen der Eigenschaft, benötigt er einen Ort gespeichert werden soll. Erstellen Sie eine Variable, um die Eigenschaft zu speichern und aktualisieren Sie dementsprechend die Funktionen.  
   
-#### So erstellen Sie eine Variable, um die Eigenschaft zu speichern und vorbereitet aktualisieren und Methoden abzurufen  
+#### <a name="to-create-a-variable-to-store-the-property-and-update-the-put-and-get-methods"></a>So erstellen eine Variable, um die Eigenschaft, speichern und Aktualisieren der Put und get-Methoden  
   
-1.  Im Projektmappen\-Explorer fügen geöffnete PolyCtl.h und die folgende Zeile nach der Definition von `m_clrFillColor` hinzu:  
+1.  Öffnen Sie im Projektmappen-Explorer PolyCtl.h hinzu, und fügen Sie die folgende Zeile nach der Definition von `m_clrFillColor`:  
   
-     [!CODE [NVC_ATL_Windowing#44](../CodeSnippet/VS_Snippets_Cpp/NVC_ATL_Windowing#44)]  
+     [!code-cpp[NVC_ATL_Windowing#44](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_1.h)]  
   
-2.  Legen Sie den Standardwert von `m_nSides` fest.  Führen Sie die standardmäßige Form ein Dreieck, indem Sie eine Zeile an den Konstruktor in PolyCtl.h hinzufügen:  
+2.  Legen Sie den Standardwert `m_nSides`. Stellen Sie die Standardeinstellung, ein Dreieck Form durch Hinzufügen einer Zeile an den Konstruktor in PolyCtl.h hinzu:  
   
-     [!CODE [NVC_ATL_Windowing#45](../CodeSnippet/VS_Snippets_Cpp/NVC_ATL_Windowing#45)]  
+     [!code-cpp[NVC_ATL_Windowing#45](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_2.h)]  
   
-3.  Implementieren Sie die `Get`\-Methode und die `Put`\-Methode.  Die `get_Sides` und `put_Sides`\-Funktionsdeklarationen sind zu PolyCtl.h hinzugefügt.  Ersetzen Sie den Code in PolyCtl.cpp für `get_Sides` und in `put_Sides` durch folgenden Code:  
+3.  Implementieren der `Get` und `Put` Methoden. Die `get_Sides` und `put_Sides` Funktionsdeklarationen PolyCtl.h hinzugefügt wurden. Ersetzen Sie den Code in PolyCtl.cpp für `get_Sides` und `put_Sides` durch den folgenden Code:  
   
-     [!CODE [NVC_ATL_Windowing#46](../CodeSnippet/VS_Snippets_Cpp/NVC_ATL_Windowing#46)]  
+     [!code-cpp[NVC_ATL_Windowing#46](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_3.cpp)]  
   
- Die `get_Sides`\-Methode gibt den aktuellen Wert der `Sides`\-Eigenschaft durch den `pVal` Zeiger zurück.  In der `put_Sides`\-Methode erstellt der Code sicher, dass der Benutzer die `Sides`\-Eigenschaft einen zulässigen Wert festgelegt wird.  Das Minimum muss 2 und da ein Array aus Punkten für jede Seite verwendet wird, 100 sein ist eine angemessene Grenzwert für einen Höchstwert.  
+ Die `get_Sides` Methode gibt den aktuellen Wert von der `Sides` Eigenschaft über die `pVal` Zeiger. In der `put_Sides` -Methode, der Code wird sichergestellt, dass der Benutzer wird das Festlegen der `Sides` Eigenschaft auf einen akzeptablen Wert. Der Minimalwert muss 2 sein, und da ein Array von Punkten für jede Seite verwendet werden, ist 100 für einen Höchstwert ein vernünftiges Maß beschränken.  
   
- Sie verfügen jetzt über eine Eigenschaft, die `Sides` aufgerufen wird.  Im nächsten Schritt ändern Sie den Zeichencode, ihn zu verwenden.  
+ Sie verfügen nun über eine Eigenschaft mit dem Namen `Sides`. Im nächsten Schritt ändern Sie den Code für dessen Verwendung zum Zeichnen.  
   
- [Zurück zu Schritt 2](../atl/adding-a-control-atl-tutorial-part-2.md) &#124; [Klicken Sie zu Schritt 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)  
+ [Zurück zu Schritt 2](../atl/adding-a-control-atl-tutorial-part-2.md) &#124; [Mit Schritt 4 fort](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Lernprogramm](../atl/active-template-library-atl-tutorial.md)
+

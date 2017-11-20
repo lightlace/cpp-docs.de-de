@@ -1,45 +1,43 @@
 ---
-title: "multiset::count (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::count"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "count-Member [STL/CLR]"
+title: 'multiset:: Count (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::count
+dev_langs: C++
+helpviewer_keywords: count member [STL/CLR]
 ms.assetid: 6c668667-0047-4101-8dfc-0f538655b3d1
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 48bb9059a48d4a9b78a0508b74818264cf7a5e3e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# multiset::count (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Sucht die Anzahl von Elementen, die einen angegebenen Schlüssel übereinstimmen.  
+# <a name="multisetcount-stlclr"></a>multiset::count (STL/CLR)
+Sucht die Anzahl von Elementen, die einem angegebenen Schlüssel entsprechen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 size_type count(key_type key);  
 ```  
   
-#### Parameter  
- Schlüssel  
- Für zu suchen Schlüsselwert.  
+#### <a name="parameters"></a>Parameter  
+ Key  
+ Der zu suchende Schlüsselwert.  
   
-## Hinweise  
- Die Memberfunktion wird die Anzahl der Elemente in der Sequenz zurück gesteuerten, die entsprechende Reihenfolge mit `key` haben.  Damit können Sie die Anzahl der Elemente in der kontrollierten Sequenz ermitteln, die derzeit einem angegebenen Schlüssel entsprechen.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt die Anzahl der Elemente in der kontrollierten Sequenz, die über entsprechende Sortierung mit `key`. Es können Sie verwenden, um die Anzahl der Elemente, die derzeit in der gesteuerten Sequenz zu ermitteln, die einen angegebenen Schlüssel entsprechen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_multiset_count.cpp   
@@ -67,15 +65,18 @@ int main()
   
 ```  
   
-  **ein b c**  
-**Anzahl \(L'A\) \= 0**  
-**Anzahl \(L'b\) \= 1**  
-**Anzahl \(L'C\) \= 0**   
-## Anforderungen  
- **Header:** \<cliext\/Satz\>  
+```Output  
+ a b c  
+count(L'A') = 0  
+count(L'b') = 1  
+count(L'C') = 0  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Set >  
   
-## Siehe auch  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::equal\_range](../dotnet/multiset-equal-range-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset::equal_range (STL/CLR)](../dotnet/multiset-equal-range-stl-clr.md)

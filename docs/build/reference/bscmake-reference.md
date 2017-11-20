@@ -1,58 +1,58 @@
 ---
-title: "BSCMAKE-Referenz | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BSC-Dateien, Erstellen"
-  - "Browserinformationsdateien (.bsc), Erstellen"
-  - "Browserfenster"
-  - "BSC-Dateien, Erstellen"
-  - "BSCMAKE"
-  - "BSCMAKE, Referenz"
-  - "Microsoft Browse Information Maintenance-Dienstprogramm"
+title: BSCMAKE-Referenz | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- BSCMAKE, reference
+- Microsoft Browse Information Maintenance Utility
+- browse windows
+- browse information files (.bsc), building
+- .bsc files, building
+- bsc files, building
+- BSCMAKE
 ms.assetid: b97ad994-1355-4809-98db-6abc12c6fb13
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f5551c498e4cb48c0dc32d5b44b376bcd56bc4ca
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# BSCMAKE-Referenz
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="bscmake-reference"></a>BSCMAKE-Referenz
 > [!WARNING]
->  Obwohl BSCMAKE weiterhin mit Visual Studio installiert wird, wird es nicht mehr von der IDE verwendet.  Seit Visual Studio 2008 werden Browse\- und Symbolinformationen automatisch in einer SQL Server\-.SDF\-Datei im Projektmappenordner gespeichert.  
+> Obwohl BSCMAKE weiterhin mit Visual Studio installiert wird, wird es nicht mehr von der IDE verwendet. Seit Visual Studio 2008 werden Browse- und Symbolinformationen automatisch in einer SQL Server-.SDF-Datei im Projektmappenordner gespeichert.  
   
- Das Microsoft Browse Information Maintenance\-Programm \(BSCMAKE.EXE\) erstellt eine neue Browseinformationsdatei \(.bsc\) aus SBR\-Dateien, die während der Kompilierung erstellt wurden.  Sie zeigen eine Browseinformationsdatei im Objektkatalog an.  Informationen über den Objektkatalog finden Sie unter [Navigieren im Objektkatalog](assetId:///53eb91aa-08c6-4299-8e3c-a877ae8d0c55).  
+ Das Microsoft Browse Information Maintenance-Programm (BSCMAKE.EXE) erstellt eine neue Browseinformationsdatei (.bsc) aus SBR-Dateien, die während der Kompilierung erstellt wurden. Bestimmte Tools eines Drittanbieters verwenden BSC-Dateien für die Codeanalyse. 
   
- Wenn Sie ein Programm erstellen, können Sie eine Browseinformationsdatei für das Programm automatisch mithilfe von BSCMAKE zum Erstellen der Datei erstellen.  Sie müssen nicht wissen, wie BSCMAKE ausgeführt wird, wenn Sie Ihre Browseinformationsdatei in der Visual C\+\+\-Entwicklungsumgebung erstellen.  Vielleicht möchten Sie dieses Thema jedoch lesen, um die verfügbaren Optionen kennenzulernen.  
+ Wenn Sie ein Programm erstellen, können Sie eine Browseinformationsdatei für das Programm automatisch mithilfe von BSCMAKE zum Erstellen der Datei erstellen. Sie müssen nicht wissen, wie BSCMAKE ausgeführt wird, wenn Sie Ihre Browseinformationsdatei in der Visual C++-Entwicklungsumgebung erstellen. Vielleicht möchten Sie dieses Thema jedoch lesen, um die verfügbaren Optionen kennenzulernen.  
   
- Wenn Sie ein Programm außerhalb der Entwicklungsumgebung erstellen, können Sie weiterhin eine benutzerdefinierte BSC\-Datei erstellen, die Sie in der Umgebung untersuchen können.  Führen Sie BSCMAKE für die SBR\-Dateien aus, die Sie während der Kompilierung erstellt haben.  
+ Wenn Sie ein Programm außerhalb der Entwicklungsumgebung erstellen, können Sie weiterhin eine benutzerdefinierte BSC-Datei erstellen, die Sie in der Umgebung untersuchen können. Führen Sie BSCMAKE für die SBR-Dateien aus, die Sie während der Kompilierung erstellt haben.  
   
 > [!NOTE]
->  Sie können dieses Tool nur von der [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]\-Eingabeaufforderung aus starten.  Sie können es nicht von einer Systemeingabeaufforderung oder vom Datei\-Explorer aus starten.  
+>  Sie können dieses Tool nur von Visual Studio Developer-Eingabeaufforderung starten. Sie können es nicht von einer Systemeingabeaufforderung oder vom Datei-Explorer aus starten.  
   
  Dieser Abschnitt schließt folgende Themen ein:  
   
 -   [Erstellen von Browseinformationsdateien: Übersicht](../../build/reference/building-browse-information-files-overview.md)  
   
--   [Erstellen einer BSC\-Datei](../../build/reference/building-a-dot-bsc-file.md)  
+-   [Erstellen einer BSC-Datei](../../build/reference/building-a-dot-bsc-file.md)  
   
--   [BSCMAKE\-Befehlszeile](../../build/reference/bscmake-command-line.md)  
+-   [BSCMAKE-Befehlszeile](../../build/reference/bscmake-command-line.md)  
   
--   [BSCMAKE\-Befehlszeile](../../build/reference/bscmake-command-file-response-file.md)  
+-   [BSCMAKE-Befehlszeile](../../build/reference/bscmake-command-file-response-file.md)  
   
--   [BSCMAKE\-Optionen](../../build/reference/bscmake-options.md)  
+-   [BSCMAKE-Optionen](../../build/reference/bscmake-options.md)  
   
--   [BSCMAKE\-Exitcodes](../../build/reference/bscmake-exit-codes.md)  
+-   [BSCMAKE-Exitcodes](../../build/reference/bscmake-exit-codes.md)  
   
-## Siehe auch  
- [C\/C\+\+\-Buildtools](../../build/reference/c-cpp-build-tools.md)
+## <a name="see-also"></a>Siehe auch  
+ [C/C++-Buildtools](../../build/reference/c-cpp-build-tools.md)

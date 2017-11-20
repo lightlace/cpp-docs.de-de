@@ -1,32 +1,30 @@
 ---
-title: "binary_negate (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::binary_negate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "binary_negate-Funktion [STL/CLR]"
+title: Binary_negate (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::binary_negate
+dev_langs: C++
+helpviewer_keywords: binary_negate function [STL/CLR]
 ms.assetid: 0c3b47eb-0f37-4cb2-b879-4c9f0e57d275
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: afb2a3617dcd162ac3298d95cfa16b9044ef7fb0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# binary_negate (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die Vorlagenklasse beschreibt ein Funktionselement, die, wenn sie aufgerufen wird, dem logischen Nicht des gespeicherten ZweiArgumentfunktionselements zurückgibt.  Sie verwenden sie angeben einem Funktionsobjekt hinsichtlich sein gespeichertes Funktionselement.  
+# <a name="binarynegate-stlclr"></a>binary_negate (STL/CLR)
+Die Vorlagenklasse beschreibt ein Funktionselement ist, die beim Aufruf gibt den logischen nicht von der gespeicherten zwei Argumenten Funktionselement. Sie verwenden, geben Sie ein Funktionsobjekt im Hinblick auf seine gespeicherte Funktionselement.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<typename Fun>  
@@ -50,35 +48,35 @@ public:
     };  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  Fun  
- Der Typ des gespeicherten Feature\-Elements.  
+ Der Typ des gespeicherten Funktionselement.  
   
-## Memberfunktionen  
+## <a name="member-functions"></a>Memberfunktionen  
   
-|Typdefinition|**Beschreibung**|  
-|-------------------|----------------------|  
-|delegate\_type|Der Typ des generischen Delegaten.|  
-|first\_argument\_type|Der Typ des ersten Arguments des Feature\-Elements.|  
-|result\_type|Der Typ des Funktionselementergebnisses.|  
-|second\_argument\_type|Der Typ des Funktionselementzweiten Argumente.|  
-|stored\_function\_type|Der Typ des Feature\-Elements.|  
+|Typdefinition|Beschreibung|  
+|---------------------|-----------------|  
+|delegate_type|Der Typ des generischen Delegaten.|  
+|first_argument_type|Der Typ des ersten Arguments Funktionselement.|  
+|RESULT_TYPE|Der Typ des Ergebnisses Funktionselement.|  
+|second_argument_type|Der Typ des zweiten Arguments Funktionselement.|  
+|stored_function_type|Der Typ, der das Funktionselement.|  
   
-|Member|**Beschreibung**|  
-|------------|----------------------|  
-|binary\_negate|Erstellt das Funktionselement.|  
+|Member|Beschreibung|  
+|------------|-----------------|  
+|binary_negate|Erstellt das Funktionselement.|  
   
-|Operator|**Beschreibung**|  
-|--------------|----------------------|  
-|operator\(\)|Berechnet die gewünschte Funktion.|  
-|Operator delegate\_type^\(\)|Wandelt das Funktionselement zu einem Delegaten um.|  
+|Operator|Beschreibung|  
+|--------------|-----------------|  
+|Operator()|Berechnet die gewünschte Funktion.|  
+|Operator delegate_type^()|Wandelt das Funktionselement an einen Delegaten an.|  
   
-## Hinweise  
- Die Vorlagenklasse beschreibt ein ZweiArgumentfunktionselement, das ein anderes ZweiArgumentfunktionselement speichert.  Sie definiert den Memberoperator, `operator()`, wenn das Objekt als Funktion aufgerufen, wird sie dem logischen Nicht des gespeicherten Feature\-Elements zurückgibt, das mit den zwei Argumenten aufgerufen wird.  
+## <a name="remarks"></a>Hinweise  
+ Die Vorlagenklasse beschreibt ein Funktionselement ist, die anderen zwei Argumenten Funktionselement speichert zwei Argumenten. Die Memberoperator definiert `operator()` , wenn das Objekt als eine Funktion aufgerufen wird, gibt die logische nicht von der gespeicherten Funktionselement aufgerufen wird, über die zwei Argumente.  
   
- Sie können das Objekt auch übergeben, da ein Funktionsargument, dessen Typ `delegate_type^` ist und es entsprechend konvertiert wird.  
+ Sie können auch das Objekt übergeben, als ein Funktionsargument, dessen Typ ist `delegate_type^` und werden entsprechend konvertiert werden.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_binary_negate.cpp   
@@ -128,14 +126,17 @@ int main()
   
 ```  
   
-  **4 3**  
- **4 4**  
- **1 0**  
- **1 0**   
-## Anforderungen  
- **Header:** \<cliext\/funktionsfähig\>  
+```Output  
+4 3  
+4 4  
+1 0  
+1 0  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/funktionale >  
   
-## Siehe auch  
- [not2](../dotnet/not2-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [not2 (STL/CLR)](../dotnet/not2-stl-clr.md)

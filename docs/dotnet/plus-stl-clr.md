@@ -1,32 +1,30 @@
 ---
-title: "plus (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::plus"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "plus-Funktion [STL/CLR]"
+title: Plus (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::plus
+dev_langs: C++
+helpviewer_keywords: plus function [STL/CLR]
 ms.assetid: 7ec8228a-72c7-4e47-9e63-23525d4a5416
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1e9bb76e3d4d96cea13c59222de42c3bcc20d517
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# plus (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die Vorlagenklasse beschreibt ein Funktionselement, die, wenn sie aufgerufen wird, das erste Argument und das zweite zurückgibt.  Sie verwenden sie angeben einem Funktionsobjekt hinsichtlich den Argumenttyp.  
+# <a name="plus-stlclr"></a>plus (STL/CLR)
+Die Vorlagenklasse beschreibt ein Funktionselement ist, dass beim Aufrufen, gibt das erste Argument und der zweite. Sie verwenden ein Funktionsobjekt im Hinblick auf seine Argumenttyp angeben.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<typename Arg>  
@@ -49,34 +47,34 @@ public:
     };  
 ```  
   
-#### Parameter  
- Arg  
- Der Typ der Argumente und des Rückgabewerts.  
+#### <a name="parameters"></a>Parameter  
+ arg  
+ Der Typ der Argumente und der Rückgabewert.  
   
-## Memberfunktionen  
+## <a name="member-functions"></a>Memberfunktionen  
   
-|Typdefinition|**Beschreibung**|  
-|-------------------|----------------------|  
-|delegate\_type|Der Typ des generischen Delegaten.|  
-|first\_argument\_type|Der Typ des ersten Arguments des Feature\-Elements.|  
-|result\_type|Der Typ des Funktionselementergebnisses.|  
-|second\_argument\_type|Der Typ des Funktionselementzweiten Argumente.|  
+|Typdefinition|Beschreibung|  
+|---------------------|-----------------|  
+|delegate_type|Der Typ des generischen Delegaten.|  
+|first_argument_type|Der Typ des ersten Arguments Funktionselement.|  
+|RESULT_TYPE|Der Typ des Ergebnisses Funktionselement.|  
+|second_argument_type|Der Typ des zweiten Arguments Funktionselement.|  
   
-|Member|**Beschreibung**|  
-|------------|----------------------|  
+|Member|Beschreibung|  
+|------------|-----------------|  
 |plus|Erstellt das Funktionselement.|  
   
-|Operator|**Beschreibung**|  
-|--------------|----------------------|  
-|operator\(\)|Berechnet die gewünschte Funktion.|  
-|Operator delegate\_type^|Wandelt das Funktionselement zu einem Delegaten um.|  
+|Operator|Beschreibung|  
+|--------------|-----------------|  
+|Operator()|Berechnet die gewünschte Funktion.|  
+|Operator Delegate_type ^|Wandelt das Funktionselement an einen Delegaten an.|  
   
-## Hinweise  
- Die Vorlagenklasse beschreibt ein ZweiArgumentfunktionselement.  Sie definiert den Memberoperator, `operator()`, wenn das Objekt als Funktion aufgerufen wird, das erste Argument und das zweite zurückgibt.  
+## <a name="remarks"></a>Hinweise  
+ Die Vorlagenklasse beschreibt ein Funktionselement ist zwei Argumenten. Die Memberoperator definiert `operator()` , wenn das Objekt als eine Funktion aufgerufen wird, gibt das erste Argument und der zweite.  
   
- Sie können das Objekt auch übergeben, da ein Funktionsargument, dessen Typ `delegate_type^` ist und es entsprechend konvertiert wird.  
+ Sie können auch das Objekt übergeben, als ein Funktionsargument, dessen Typ ist `delegate_type^` und werden entsprechend konvertiert werden.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_plus.cpp   
@@ -116,13 +114,16 @@ int main()
   
 ```  
   
-  **4 3**  
- **2 1**  
- **6 4**   
-## Anforderungen  
- **Header:** \<cliext\/funktionsfähig\>  
+```Output  
+4 3  
+2 1  
+6 4  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/funktionale >  
   
-## Siehe auch  
- [minus](../dotnet/minus-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [minus (STL/CLR)](../dotnet/minus-stl-clr.md)

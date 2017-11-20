@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -34,8 +33,7 @@ f1_keywords:
 - stdio/_swprintf_s_l
 - _sprintf_s_l
 - _swprintf_s_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - stprintf_s function
 - stprintf_s_l function
@@ -49,30 +47,15 @@ helpviewer_keywords:
 - _sprintf_s_l function
 - formatted text [C++]
 ms.assetid: 424f0a29-22ef-40e8-b565-969f5f57782f
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 06afe4f945413ae1f45ff9249dcec0cb87cab987
-ms.contentlocale: de-de
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 12b5799c9471ffaf8328d4f8aa6a994319e4f30f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="sprintfs-sprintfsl-swprintfs-swprintfsl"></a>sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l
 Schreiben Sie formatierte Daten in eine Zeichenfolge. Dies sind Versionen von [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) mit Sicherheitsverbesserungen, wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
@@ -148,7 +131,7 @@ int swprintf_s(
   
  Ein Hauptunterschied zwischen `sprintf_s` und `sprintf` besteht darin, dass `sprintf_s` die Formatzeichenfolge auf gültige Formatierungszeichen überprüft. Dagegen überprüft `sprintf` nur, ob es sich bei der Formatzeichenfolge oder beim Puffer um einen `NULL` -Zeiger handelt. Wenn bei einer der beiden Überprüfungen ein Fehler auftritt, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation](../../c-runtime-library/parameter-validation.md)beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion -1 zurück und stellt `errno` auf `EINVAL`ein.  
   
- Der andere Hauptunterschied zwischen `sprintf_s` und `sprintf` besteht darin, dass `sprintf_s` einen Längenparameter akzeptiert, der die Größe des Ausgabepuffers in den Zeichen angibt. Wenn der Puffer für den formatierten Text einschließlich abschließendem NULL-Zeichen zu klein ist, wird er auf eine leere Zeichenfolge festgelegt, indem ein NULL-Zeichen in `buffer``[0]`gespeichert wird, und der Handler für ungültige Parameter wird aufgerufen. Im Gegensatz zu `_snprintf`garantiert `sprintf_s` , dass der Puffer mit NULL endet (es sei denn, die Puffergröße ist gleich null).  
+ Der andere Hauptunterschied zwischen `sprintf_s` und `sprintf` besteht darin, dass `sprintf_s` einen Längenparameter akzeptiert, der die Größe des Ausgabepuffers in den Zeichen angibt. Wenn der Puffer für den formatierten Text einschließlich abschließendem NULL-Zeichen zu klein ist, wird er auf eine leere Zeichenfolge festgelegt, indem ein NULL-Zeichen in `buffer[0]`gespeichert wird, und der Handler für ungültige Parameter wird aufgerufen. Im Gegensatz zu `_snprintf`garantiert `sprintf_s` , dass der Puffer mit NULL endet (es sei denn, die Puffergröße ist gleich null).  
   
  `swprintf_s` ist eine Breitzeichen-Version von `sprintf_s`. Die Zeigerargumente zu `swprintf_s` sind Breitzeichen-Zeichenfolgen. Die Erkennung von Codierungsfehlern in `swprintf_s` unterscheidet sich möglicherweise von der in `sprintf_s`. Die Versionen dieser Funktionen mit dem `_l` -Suffix sind beinahe identisch, verwenden jedoch den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Threadgebietsschemas.  
   

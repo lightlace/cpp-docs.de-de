@@ -1,41 +1,41 @@
 ---
-title: "Datenquellen und Sitzungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Verbindungen [C++], Datenquelle"
-  - "Datenquellen [C++], OLE DB"
-  - "OLE DB-Consumervorlagen [C++], Datenquellen"
+title: Datenquellen und Sitzungen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- data sources [C++], OLE DB
+- connections [C++], data source
+- OLE DB consumer templates [C++], data sources
 ms.assetid: 6ee52216-e082-4869-a1d6-ce561cfb76e5
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 500ed062dd81681466ada4c749f8a835b9822cb2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Datenquellen und Sitzungen
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-In der folgenden Abbildung sehen Sie die Klassen, die eine Verbindung mit einer Datenquelle und den Zugriff auf eine Datenquelle unterstützen.  Jede Klasse basiert auf einer standardmäßigen OLE DB\-Komponentenimplementierung.  
+# <a name="data-sources-and-sessions"></a>Datenquellen und Sitzungen
+Die folgende Abbildung zeigt die Klassen, die eine Verbindung mit und Zugreifen auf eine Datenquelle unterstützen. Jede Klasse basiert auf einer standardmäßigen Implementierung der OLE DB-Komponente.  
   
- ![Datenquelle und Sitzungsklassen](../../data/oledb/media/vcdatasourcesessionclasses.png "vcDataSourceSessionClasses")  
+ ![Daten-Datenquelle und Sitzungsklassen](../../data/oledb/media/vcdatasourcesessionclasses.gif "Vcdatasourcesessionclasses")  
 Datenquelle und Sitzungsklassen  
   
  Die Klassen sind:  
   
--   [CDataSource](../../data/oledb/cdatasource-class.md) Diese Klasse instanziiert das Datenquellenobjekt, das eine Verbindung zu einer Datenquelle mithilfe eines OLE DB\-Anbieters erstellt und verwaltet.  Die Datenquelle nimmt Informationen, z. B. die Datenquelladresse und Authentifizierungsinformationen, in Form einer Verbindungszeichenfolge an.  
+-   [CDataSource](../../data/oledb/cdatasource-class.md) diese Klasse instanziiert das Datenquellenobjekt, das eine Verbindung mit einer Datenquelle über einen OLE DB-Anbieter erstellt und verwaltet. Die Datenquelle nimmt Informationen wie die Adresse und die Authentifizierung Datenquelleninformationen in Form einer Verbindungszeichenfolge.  
   
-     Häufig wird auch die Hilfsklasse [CEnumerator](../../data/oledb/cenumerator-class.md) vor dem Aufbau einer Verbindung verwendet, um eine Liste der in einem System verfügbaren registrierten Anbieter zu erhalten.  Dadurch können Sie einen Anbieter als Datenquelle auswählen.  Im Dialogfeld **Datenverknüpfungseigenschaften** wird diese Klasse beispielsweise verwendet, um die Liste der Anbieter auf der Registerkarte **Anbieter** auszufüllen.  Sie entspricht der **SQLBrowseConnect**\-Funktion oder der **SQLDriverConnect**\-Funktion.  
+     Es ist auch zu beachten, dass die Hilfsklasse [CEnumerator](../../data/oledb/cenumerator-class.md) wird häufig verwendet werden, bevor eine Verbindung hergestellt wird, um eine Liste der verfügbaren Anbieter registriert auf einem System abzurufen. Dadurch können Sie einen Anbieter als Datenquelle auswählen. Z. B. die **Datenlinkeigenschaften** Dialogfeld verwendet diese Klasse zum Auffüllen der Liste der Anbieter auf dem **Anbieter** Registerkarte. Dies entspricht der **SQLBrowseConnect** oder **SQLDriverConnect** Funktion.  
   
--   [CSession](../../data/oledb/csession-class.md) Diese Klasse instanziiert das Sitzungsobjekt, das eine einzelne Zugriffssitzung zur Datenquelle repräsentiert.  Sie können jedoch auch mehrere Sitzungen für eine Datenquelle erstellen.  Für jede Sitzung können Sie Rowsets, Befehle und andere Objekte erstellen, um auf Daten aus der Datenquelle zuzugreifen.  Die Sitzung behandelt Transaktionen.  
+-   [CSession](../../data/oledb/csession-class.md) diese Klasse instanziiert das Sitzungsobjekt, das eine einzelnen Access-Sitzung mit der Datenquelle darstellt. Allerdings können Sie mehrere Sitzungen für eine Datenquelle erstellen. Für jede Sitzung können Sie Rowsets, Befehle und anderer Objekte, den Zugriff auf Daten aus der Datenquelle erstellen. Die Sitzung behandelt Transaktionen.  
   
-## Siehe auch  
- [OLE DB\-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)

@@ -1,11 +1,10 @@
 ---
-title: CSecurityAttributes Klasse | Microsoft-Dokumentation
+title: CSecurityAttributes Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,41 +12,24 @@ f1_keywords:
 - ATLSECURITY/ATL::CSecurityAttributes
 - ATLSECURITY/ATL::CSecurityAttributes::CSecurityAttributes
 - ATLSECURITY/ATL::CSecurityAttributes::Set
-dev_langs:
-- C++
-helpviewer_keywords:
-- CSecurityAttributes class
+dev_langs: C++
+helpviewer_keywords: CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 24dfba8b6125172cc2d4ff7a32b61da412bfe2be
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 8ed8a9336a60b3577f856f0bc2bd6baa358aec6d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="csecurityattributes-class"></a>CSecurityAttributes-Klasse
-Diese Klasse ist ein einfacher Wrapper für die Struktur der Sicherheits-Attribute.  
+Diese Klasse ist ein thin Wrapper für die Struktur der Sicherheits-Attribute.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member werden nicht in Anwendungen verwendet, die in der Windows-Runtime ausgeführt.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -70,9 +52,9 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 |[CSecurityAttributes:: Set](#set)|Rufen Sie diese Methode, um die Attribute der Festlegen der `CSecurityAttributes` Objekt.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die **SECURITY_ATTRIBUTES** Struktur enthält eine [Sicherheitsdeskriptor](http://msdn.microsoft.com/library/windows/desktop/aa379561) verwendet für die Erstellung eines Objekts und gibt an, ob das Handle abgerufen, indem die Angabe dieser Struktur geerbt werden kann.  
+ Die **SECURITY_ATTRIBUTES** Struktur enthält eine [Sicherheitsbeschreibung](http://msdn.microsoft.com/library/windows/desktop/aa379561) für die Erstellung eines Objekts verwendet, und gibt an, ob das Handle abgerufen werden, durch Angeben dieser Struktur geerbt werden kann.  
   
- Eine Einführung in das Zugriffssteuerungsmodell in Windows, finden Sie unter [Zugriffssteuerung](http://msdn.microsoft.com/library/windows/desktop/aa374860) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Eine Einführung in das Zugriffssteuerungsmodell in Windows erhalten finden Sie unter [Access Control](http://msdn.microsoft.com/library/windows/desktop/aa374860) im Windows SDK.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `SECURITY_ATTRIBUTES`  
@@ -115,9 +97,8 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
  Diese Methode wird vom Konstruktor initialisiert werden, verwendet die `CSecurityAttributes` Objekt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Beispiel für die Sicherheit](../../visual-cpp-samples.md)   
+ [Beispiel für nachrichtensicherheit](../../visual-cpp-samples.md)   
  [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)   
- [Sicherheitsdeskriptor](http://msdn.microsoft.com/library/windows/desktop/aa379561)   
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)   
- [Globale Funktionen für Sicherheit](../../atl/reference/security-global-functions.md)
-
+ [Sicherheitsbeschreibung](http://msdn.microsoft.com/library/windows/desktop/aa379561)   
+ [Klassenübersicht](../../atl/atl-class-overview.md)   
+ [Globale Sicherheitsfunktionen](../../atl/reference/security-global-functions.md)

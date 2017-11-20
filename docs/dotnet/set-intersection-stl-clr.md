@@ -1,32 +1,30 @@
 ---
-title: "set_intersection (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set_intersection"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "set_intersection-Funktion [STL/CLR]"
+title: Set_intersection (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set_intersection
+dev_langs: C++
+helpviewer_keywords: set_intersection function [STL/CLR]
 ms.assetid: 8a799b20-55a5-4fba-a9c1-a48597cbdae6
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1102aac340973e57c560953d61ebd8050a8bcd14
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# set_intersection (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Vereinigt alle Elemente, die beiden Quellbereichen sortierten in einen einzelnen gehören, sortierten Zielbereich, wobei Sortierkriterium möglicherweise durch ein binäres Prädikat angegeben wird.  
+# <a name="setintersection-stlclr"></a>set_intersection (STL/CLR)
+Vereinigt alle Elemente, die zu beiden sortierten Quellbereichen gehören, in einen einzelnen sortierten Zielbereich, wobei das Sortierkriterium durch ein binäres Prädikat angegeben werden kann.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class _InIt1, class _InIt2, class _OutIt> inline  
@@ -37,13 +35,13 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
         _InIt2 _First2, _InIt2 _Last2, _OutIt _Dest, _Pr _Pred);  
 ```  
   
-## Hinweise  
- Diese Funktion verhält sich genauso wie die STL\-Funktion `set_intersection`.  Weitere Informationen finden Sie unter [set\_intersection](../Topic/set_intersection.md).  
+## <a name="remarks"></a>Hinweise  
+ Diese Funktion verhält sich wie die C++-Standardbibliothek Funktion `set_intersection`. Weitere Informationen finden Sie unter [Set_intersection](../standard-library/algorithm-functions.md#set_intersection).  
   
-## Anforderungen  
- **Header:** \<cliext\/Algorithmus\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext-Algorithmus >  
   
- **Namespace:** cliext  
+ **Namespace:** Cliext  
   
-## Siehe auch  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Siehe auch  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

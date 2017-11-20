@@ -1,47 +1,46 @@
 ---
-title: "Entwerfen und Erstellen einer Datensatzansicht (MFC-Datenzugriff) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Anwendungsassistenten [C++], Erstellen von Datensatzansichtsklassen"
-  - "Entwerfen von Formularen"
-  - "Entwerfen von Datensatzansichten"
-  - "Formulare [C++], Entwerfen"
-  - "Datensatzansichten, Erstellen"
-  - "Datensatzansichten, Entwerfen"
+title: Entwerfen und Erstellen einer Datensatzansicht (MFC-Datenzugriff) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- designing forms
+- record views, creating
+- forms [C++], designing
+- record views, designing
+- application wizards [C++], creating record view classes
+- designing record views
 ms.assetid: 1d6f5439-754f-4b8b-a19d-841a4657827b
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a164bd7d07fac68de5b2e8fb4b49fa4e399c7cb2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Entwerfen und Erstellen einer Datensatzansicht (MFC-Datenzugriff)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Sie können die Datensatzansichtsklasse mit dem [MFC\-Anwendungs\-Assistenten](../mfc/reference/database-support-mfc-application-wizard.md) erstellen.  Wenn Sie einen Anwendungs\-Assistenten verwenden, erstellt er die Datensatzansichtsklasse und eine Dialogfeldvorlagen\-Ressource \(ohne Steuerelemente\).  Sie müssen den Visual C\+\+\-Dialog\-Editor verwenden, um der Dialogfeldvorlagen\-Ressource Steuerelemente hinzuzufügen.  Andererseits müssen Sie bei der Verwendung von **Klasse hinzufügen** zunächst die Dialogfeldvorlagen\-Ressource im Dialogfeld\-Editor und dann die Datensatzansichtsklasse erstellen.  
+# <a name="designing-and-creating-a-record-view--mfc-data-access"></a>Entwerfen und Erstellen einer Datensatzansicht (MFC-Datenzugriff)
+Sie können die datensatzansichtsklasse mit Erstellen der [MFC-Anwendung-Assistent](../mfc/reference/database-support-mfc-application-wizard.md). Wenn Sie einen Anwendungs-Assistenten verwenden, erstellt er die Datensatzansichtsklasse und eine Dialogfeldvorlagen-Ressource (ohne Steuerelemente). Sie müssen den Visual C++-Dialog-Editor verwenden, um der Dialogfeldvorlagen-Ressource Steuerelemente hinzuzufügen. Andererseits, bei Verwendung von **Klasse hinzufügen**, müssen Sie zunächst die Dialogfeldvorlagen-Ressource im Dialogfeld Editor erstellen und dann die datensatzansichtsklasse erstellen.  
   
- Diese Informationen gelten sowohl für `CRecordView` als auch `CDaoRecordView`.  
   
-#### So erstellen Sie eine Datensatzansicht mit dem MFC\-Anwendungs\-Assistenten  
+#### <a name="to-create-your-record-view-with-the-mfc-application-wizard"></a>So erstellen Sie eine Datensatzansicht mit dem MFC-Anwendungs-Assistenten  
   
-1.  Siehe [Datenbankunterstützung, MFC\-Anwendungs\-Assistent](../mfc/reference/database-support-mfc-application-wizard.md).  
+1.  Finden Sie unter [Datenbankunterstützung, MFC-Anwendung-Assistent](../mfc/reference/database-support-mfc-application-wizard.md).  
   
-#### So entwerfen Sie ein Formular  
+#### <a name="to-design-your-form"></a>So entwerfen Sie ein Formular  
   
-1.  Siehe [Dialog\-Editor](../mfc/dialog-editor.md).  
+1.  Finden Sie unter [Dialog-Editor](../windows/dialog-editor.md).  
   
-#### So erstellen Sie eine Datensatzansichtsklasse  
+#### <a name="to-create-your-record-view-class"></a>So erstellen Sie eine Datensatzansichtsklasse  
   
-1.  Siehe [Hinzufügen eines MFC\-ODBC\-Consumers](../mfc/reference/adding-an-mfc-odbc-consumer.md).  
+1.  Finden Sie unter [Hinzufügen eines MFC-ODBC-Consumers](../mfc/reference/adding-an-mfc-odbc-consumer.md).  
   
  Die folgenden Themen erläutern die zusätzlichen Informationen zur Verwendung von Datensatzansichten:  
   
@@ -51,7 +50,7 @@ Sie können die Datensatzansichtsklasse mit dem [MFC\-Anwendungs\-Assistenten](.
   
 -   [Datensatzansichten: Füllen eines Listenfelds aus einem zweiten Recordset](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)  
   
-## Siehe auch  
- [Datensatzansichten \(MFC\-Datenzugriff\)](../data/record-views-mfc-data-access.md)   
- [Recordset \(ODBC\)](../data/odbc/recordset-odbc.md)   
- [Liste der ODBC\-Treiber](../data/odbc/odbc-driver-list.md)
+## <a name="see-also"></a>Siehe auch  
+ [Datensatzansichten (MFC-Datenzugriff)](../data/record-views-mfc-data-access.md)   
+ [Recordset (ODBC)](../data/odbc/recordset-odbc.md)   
+ [Liste der ODBC-Treiber](../data/odbc/odbc-driver-list.md)

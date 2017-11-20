@@ -1,39 +1,39 @@
 ---
-title: "Inlineassembler-&#220;bersicht | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__asm-Schlüsselwort [C++], Aufrufen des Inlineassemblers"
-  - "Inlineassembler"
-  - "Inlineassembly, Inlineassembler"
-  - "Aufrufen des Inlineassemblers"
+title: "Übersicht über Inlineassembler | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- inline assembler
+- __asm keyword [C++], invoking inline assembler
+- invoking inline assembler
+- inline assembly, inline assembler
 ms.assetid: d990331a-0e33-4760-8d7a-b720b0288335
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7733398f5a444fa5e7461ea52295624d6d16f9a4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Inlineassembler-&#220;bersicht
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft\-spezifisch**  
+# <a name="inline-assembler-overview"></a>Übersicht über Inlineassembler
+**Microsoft-spezifisch**  
   
- Der Inlineassembler können Sie Assemblysprachanweisungen in C\# und C\+\+\-Quellprogrammen ohne zusätzliche Assembly\- und Link Bereitstellungsschritte einbetten.  Der Inlineassembler wird in den Compiler erstellt benötigen Sie keinen separaten Assembler \(z. B. der Microsoft Macro Assembler \(MASM\).  
+ Der Inlineassembler können Sie Assemblysprachanweisungen in Ihrem C- und C++-Quellprogramme ohne zusätzliche Assembly- und Verknüpfungsschritte einbetten. Der Inlineassembler ist im Compiler integriert, daher benötigen Sie keinen getrennten Assembler wie den Microsoft Macro Assembler (MASM).  
   
- Da der Inlineassembler nicht Schritte der separaten Assemblys und des Links erfordert, ist es einfacher als ein separater Assembler.  Inlineassemblycode kann jedes C oder C\+\+\-Variable oder Funktionsnamens verwenden, die im Gültigkeitsbereich befindet, ist es einfach, sodass er mit C\- und C\+\+\-Code des Programms zu integrieren.  Und da der Assemblycode mit C\- und C\+\+\-Anweisungen kombiniert werden kann, kann diese Aufgaben ausführen, die lästig oder in C oder C\+\+ nicht unmöglich sind.  
+ Da der Inlineassembler keine separaten Assembly- und Verknüpfungsschritte erfordert, ist er einfacher als ein getrennter Assembler. Inline-Assemblycode kann alle C- oder C++ Variablen und-Funktionsnamen verwenden, die im Gültigkeitsbereich befindet, daher ist es einfach, ihn mit Ihrem C- und C++-Programmcode zu integrieren. Und da der Assemblycode mit C und C++-Anweisungen kombiniert werden kann, kann er Aufgaben, die in C oder C++ allein mühsam oder unmöglich sind.  
   
- Das Schlüsselwort [\_\_asm](../../assembler/inline/asm.md) den Inlineassembler auf und kann, oder C\+\+\-Anweisung scheinen, wo eine gültig ist.  Sie kann nicht allein angegeben werden.  Es muss eine Assemblyanweisung, einer Gruppe von Anweisungen, die in geschweifte Klammern eingeschlossen werden, oder allerwenigsten aus einem leeren Paar Klammern folgen.  Der Begriff „Block“ bezieht sich auf eine beliebige Stelle`__asm`\-Anweisung bzw. Gruppe von Anweisungen, ob in geschweifte Klammern an.  
+ Die [__asm](../../assembler/inline/asm.md) -Schlüsselwort ruft den Inlineassembler und können angezeigt werden, wo eine C- oder C++-Anweisung gültig ist. Es kann nicht allein stehen. Ihm muss eine Assemblyanweisung, eine Gruppe von Anweisungen, die in geschweifte Klammern eingeschlossen sind, oder zumindest ein leeres Paar geschweifter Klammern folgen. Der Begriff "`__asm`-Block" bezieht sich hier auf eine beliebige Anweisung bzw. Gruppe von Anweisungen, unabhängig davon, ob in geschweifte Klammern gesetzt oder nicht.  
   
- Der folgende Code ist ein einfacher `__asm`\-Block, der in geschweifte Klammern eingeschlossen wird.  \(Der Code ist eine benutzerdefinierte Funktion einleitungs sequence\).  
+ Der folgende Code zeigt eine einfache `__asm` Block in geschweifte Klammern eingeschlossen. (Der Code ist eine Prologsequenz für eine benutzerdefinierte Funktion).  
   
 ```  
 // asm_overview.cpp  
@@ -55,13 +55,7 @@ void __declspec(naked) main()
 }  
 ```  
   
- Alternativ können Sie `__asm` vor jeder Assemblyanweisung setzen:  
-  
-```  
-__asm push ebp   __asm mov  ebp, esp   __asm sub  esp, __LOCAL_SIZE  
-```  
-  
- Da das `__asm`\-Schlüsselwort ein Trennzeichen ist, können Sie auch Assemblyanweisungen auf dieselbe Zeile einfügen:  
+ Alternativ können Sie `__asm` vor jede Assemblyanweisung setzen:  
   
 ```  
 __asm push ebp  
@@ -69,7 +63,13 @@ __asm mov  ebp, esp
 __asm sub  esp, __LOCAL_SIZE  
 ```  
   
- **Microsoft ENDES bestimmten**  
+ Da das `__asm`-Schlüsselwort ein Trennzeichen für Anweisungen ist, können Sie die Assemblyanweisungen auch in die gleiche Zeile einfügen:  
   
-## Siehe auch  
+```  
+__asm push ebp   __asm mov  ebp, esp   __asm sub  esp, __LOCAL_SIZE  
+```  
+  
+ **Ende Microsoft-spezifisch**  
+  
+## <a name="see-also"></a>Siehe auch  
  [Inlineassembler](../../assembler/inline/inline-assembler.md)

@@ -1,47 +1,45 @@
 ---
-title: "Using IDispEventSimpleImpl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDispEventSimpleImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDispEventSimpleImpl class, Verwenden"
+title: Verwendung von IDispEventSimpleImpl (ATL) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDispEventSimpleImpl
+dev_langs: C++
+helpviewer_keywords: IDispEventSimpleImpl class, using
 ms.assetid: 8640ad1a-4bd0-40a5-b5e4-7322685d7aab
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1118a119039d5bd3c58619fc957008b365c72d07
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Using IDispEventSimpleImpl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Wenn Sie `IDispEventSimpleImpl` verwenden, um Ereignisse zu behandeln, benötigen Sie:  
+# <a name="using-idispeventsimpleimpl"></a>Verwendung von IDispEventSimpleImpl
+Bei Verwendung `IDispEventSimpleImpl` um Ereignisse zu behandeln, müssen Sie:  
   
--   Leiten Sie die Klasse von [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md).  
+-   Leiten Sie eine Klasse von [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md).  
   
--   Fügen Sie [Ereignissenkenzuordnung](../Topic/BEGIN_SINK_MAP.md) der Klasse hinzu.  
+-   Fügen Sie ein Ereignis Sink-Zuordnung der Klasse hinzu.  
   
--   Definieren Sie [\_ATL\_FUNC\_INFORMATION](../atl/reference/atl-func-info-structure.md)\-Strukturen, die die Ereignisse beschreiben.  
+-   Definieren Sie [Sie _ATL_FUNC_INFO](../atl/reference/atl-func-info-structure.md) Strukturen, die die Ereignisse beschreibt.  
   
--   Fügen Sie Einträge der Ereignissenkenzuordnung mithilfe des [SINK\_ENTRY\_INFORMATION](../Topic/SINK_ENTRY_INFO.md)\-Makros hinzu.  
+-   Fügen Sie Einträge mit dem Ereignissenke Zuordnung der [SINK_ENTRY_INFO](reference/composite-control-macros.md#sink_entry_info) Makro.  
   
--   Implementieren Sie die Methoden, dass Sie bei der Behandlung von Interesse sind.  
+-   Implementieren Sie die Methoden, die Sie behandeln interessiert sind.  
   
--   Melden Sie sich an und benachrichtigen Sie die Ereignisquelle ab.  
+-   Melden Sie an und die Ereignisquelle.  
   
-## Beispiel  
- Im Beispiel unten wird gezeigt, wie Sie das **DocumentChange**\-Ereignisses, das von Word **Application**\-Objekt ausgelöst wird.  Dieses Ereignis wird als Methode auf der **ApplicationEvents** Dispatchschnittstelle definiert.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel veranschaulicht das Behandeln der **DocumentChange** Ereignis ausgelöst wird, von Word **Anwendung** Objekt. Dieses Ereignis wird als eine Methode definiert, auf die **ApplicationEvents** Disp-Schnittstelle.  
   
- Das Beispiel ist von [ATLEventHandling\-Beispiel](../top/visual-cpp-samples.md).  
+ Das Beispiel stammt aus dem [ATLEventHandling-Beispiel](../visual-cpp-samples.md).  
   
  `[`  
   
@@ -71,20 +69,21 @@ Wenn Sie `IDispEventSimpleImpl` verwenden, um Ereignisse zu behandeln, benötige
   
  `};`  
   
- Im Beispiel wird `#import`, um die erforderlichen Headerdateien von Word Typbibliothek zu generieren.  Wenn Sie dieses Beispiel mit anderen Versionen von Word verwenden möchten, müssen Sie die richtige Datei mso.dll angeben.  stellt beispielsweise mso9.dll Office 2000 und Office Xp stellt mso.dll.  Dieser Code wird von stdafx.h vereinfacht:  
+ Im Beispiel wird `#import` zum Generieren der erforderlichen Headerdateien aus der Typbibliothek für Word. Wenn Sie dieses Beispiel mit anderen Versionen von Word verwenden möchten, müssen Sie die korrekte Mso-Dll-Datei angeben. Z. B. Office 2000 bietet mso9.dll und OfficeXP mso.dll bereit. Dieser Code wird von "stdafx.h" vereinfacht:  
   
- [!CODE [NVC_ATL_EventHandlingSample#1](../CodeSnippet/VS_Snippets_Cpp/NVC_ATL_EventHandlingSample#1)]  
+ [!code-cpp[NVC_ATL_EventHandlingSample#1](../atl/codesnippet/cpp/using-idispeventsimpleimpl_1.h)]  
   
- Die einzigen Informationen aus der Typbibliothek, die tatsächlich in diesem Beispiel verwendet wird, sind die CLSID des Objekts Word **Application** und des IID der **ApplicationEvents**\-Schnittstelle.  Diese Informationen werden nur zur Kompilierzeit verwendet.  
+ Die einzige Informationen aus der Typbibliothek, die tatsächlich verwendeten in diesem Beispiel wird die CLSID des Worts **Anwendung** -Objekt und die IID der **ApplicationEvents** Schnittstelle. Diese Informationen werden nur zum Zeitpunkt der Kompilierung verwendet.  
   
- Im folgenden Code wird in Simple.h.  Der relevante Code wird durch Kommentare erwähnt:  
+ Im folgende Code wird im Simple.h angezeigt. Der relevante Code wird durch Kommentare aufgeführt:  
   
- [!CODE [NVC_ATL_EventHandlingSample#3](../CodeSnippet/VS_Snippets_Cpp/NVC_ATL_EventHandlingSample#3)]  
+ [!code-cpp[NVC_ATL_EventHandlingSample#3](../atl/codesnippet/cpp/using-idispeventsimpleimpl_2.h)]  
   
- Der folgende Code ist von Simple.cpp:  
+ Der folgende Code stammt aus Simple.cpp:  
   
- [!CODE [NVC_ATL_EventHandlingSample#4](../CodeSnippet/VS_Snippets_Cpp/NVC_ATL_EventHandlingSample#4)]  
+ [!code-cpp[NVC_ATL_EventHandlingSample#4](../atl/codesnippet/cpp/using-idispeventsimpleimpl_3.cpp)]  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Ereignisbehandlung](../atl/event-handling-and-atl.md)   
- [ATLEventHandling\-Beispiel](../top/visual-cpp-samples.md)
+ [ATLEventHandling-Beispiel](../visual-cpp-samples.md)
+

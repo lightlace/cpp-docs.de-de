@@ -1,35 +1,34 @@
 ---
-title: "CRestrictions::Open | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CRestrictions.Open"
-  - "ATL::CRestrictions::Open"
-  - "ATL.CRestrictions.Open"
-  - "CRestrictions::Open"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Open-Methode"
+title: 'CRestrictions:: Open | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CRestrictions.Open
+- ATL::CRestrictions::Open
+- ATL.CRestrictions.Open
+- CRestrictions::Open
+dev_langs: C++
+helpviewer_keywords: Open method
 ms.assetid: 0aff0cc3-543a-47d2-8d6b-ebb36926b6db
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 907609807b8e152f1fab737d7d336a4fd999b554
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# CRestrictions::Open
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Gibt ein Resultset entsprechend den vom Benutzer bereitgestellten Einschränkungen zurück.  
+# <a name="crestrictionsopen"></a>CRestrictions::Open
+Gibt ein Resultset entsprechend die benutzerdefinierte Einschränkungen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -46,27 +45,27 @@ Gibt ein Resultset entsprechend den vom Benutzer bereitgestellten Einschränkung
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `session`  
- \[in\] gibt einem vorhandenen Sitzungsobjekt fest, das verwendet wird, um die Datenquelle herzustellen.  
+ [in] Gibt ein vorhandenes Session-Objekt, das für die Verbindung mit der Datenquelle verwendet.  
   
  *lpszParam*  
- \[in\] gibt den Einschränkungen im Schemarowset an.  
+ [in] Gibt an, die Einschränkungen für das Schemarowset.  
   
  `bBind`  
- \[in\] gibt an, ob die Spaltenzuordnung automatisch gebunden wird.  Der Standardwert ist **true**, der die Spaltenzuordnung wird, automatisch gebunden werden.  Einstellung `bBind` von **false** verhindert die automatische Bindung der Spaltenzuordnung, damit Sie manuell binden können. \(Das manuelle Bindung ist von besonderem Interesse für OLAP\-Benutzern.\)  
+ [in] Gibt an, ob die spaltenzuordnung automatisch zu binden. Die Standardeinstellung ist **"true"**, womit die spaltenzuordnung automatisch gebunden werden. Festlegen von `bBind` auf **"false"** wird verhindert, dass die automatische Bindung der spaltenzuordnung, damit Sie manuell binden können. (Manuelle Bindung ist von besonderem Interesse für OLAP-Benutzer).  
   
-## Rückgabewert  
- Einer der Standard\- `HRESULT`\-Werte.  
+## <a name="return-value"></a>Rückgabewert  
+ Zu den standardmäßigen `HRESULT` Werte.  
   
-## Hinweise  
- Sie können eine Maximal\- von sieben Beschränkungen für ein Schemarowset angeben.  
+## <a name="remarks"></a>Hinweise  
+ Sie können maximal sieben Einschränkungen für ein Schemarowset angeben.  
   
- Siehe [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) für Informationen über die definierten Einschränkungen auf jedem Schemarowset.  
+ Finden Sie unter [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) für Informationen zu den definierten Einschränkungen für jedes Schemarowset.  
   
-## Anforderungen  
- **Header:** atldbsch.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** "atldbsch.h" Einfügen  
   
-## Siehe auch  
- [CRestrictions\-Klasse](../../data/oledb/crestrictions-class.md)   
- [Schemarowset\-Klassen und Typedef\-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)
+## <a name="see-also"></a>Siehe auch  
+ [CRestrictions-Klasse](../../data/oledb/crestrictions-class.md)   
+ [Schemarowset-Klassen und Typedef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

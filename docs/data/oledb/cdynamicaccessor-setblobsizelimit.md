@@ -1,36 +1,35 @@
 ---
-title: "CDynamicAccessor::SetBlobSizeLimit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicAccessor::SetBlobSizeLimit"
-  - "SetBlobSizeLimit"
-  - "CDynamicAccessor.SetBlobSizeLimit"
-  - "ATL.CDynamicAccessor.SetBlobSizeLimit"
-  - "ATL::CDynamicAccessor::SetBlobSizeLimit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetBlobSizeLimit-Methode"
+title: 'CDynamicAccessor:: Setblobsizelimit | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicAccessor::SetBlobSizeLimit
+- SetBlobSizeLimit
+- CDynamicAccessor.SetBlobSizeLimit
+- ATL.CDynamicAccessor.SetBlobSizeLimit
+- ATL::CDynamicAccessor::SetBlobSizeLimit
+dev_langs: C++
+helpviewer_keywords: SetBlobSizeLimit method
 ms.assetid: fb8cb85d-f841-408e-a344-37895b10993f
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7d7d522663bf08ede5a83e262044bc8f6846fde1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# CDynamicAccessor::SetBlobSizeLimit
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Legt die maximale BLOBgröße in Bytes fest.  
+# <a name="cdynamicaccessorsetblobsizelimit"></a>CDynamicAccessor::SetBlobSizeLimit
+Legt die maximale BLOB-Größe in Bytes fest.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -39,17 +38,17 @@ Legt die maximale BLOBgröße in Bytes fest.
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `nBlobSize`  
- Gibt die BLOBgrößengrenze an.  
+ Gibt das Größenlimit für BLOBs an.  
   
-## Hinweise  
- Legt die maximale BLOBgröße in Bytes fest; die Spaltendaten, die größer als dieser Wert sind, werden als BLOB behandelt.  Einige Anbieter geben extrem große Größen für Spalten \(z 2 GB\).  Anstatt beim Versuch, eine Spalte diese Größe Speicher zu belegen, wird normalerweise versuchen, diese Spalten als Blobs zu binden.  Auf diese Weise müssen Sie nicht den gesamten belegten Arbeitsspeicher zuordnen, Sie können jedoch alle Daten ohne Angst vor Kürzung ausgelesen werden.  Es gibt jedoch einige Situationen, in denen Sie `CDynamicAccessor` erzwingen sollten, um große Spalten in ihren systemeigenen Datentypen zu binden.  Hierzu rufen `SetBlobSizeLimit` auf, bevor Sie **Öffnen** aufrufen.  
+## <a name="remarks"></a>Hinweise  
+ Legt die maximale BLOB-Größe in Bytes fest. Spaltendaten, die größer als dieser Wert werden als BLOB behandelt. Einige Anbieter bieten extrem große Größen für Spalten (z. B. 2 GB). Anstatt zu versuchen, Zuweisen von Arbeitsspeicher für eine Spalte dieser Größe, würde in der Regel versucht, diese Spalten als BLOBs zu binden. Auf diese Weise müssen Sie nicht sämtlichen Arbeitsspeicher zuzuweisen, aber Sie können weiterhin alle Daten ohne abgeschnitten zu lesen. Es gibt jedoch einige Fälle, in dem gewünschten erzwungen `CDynamicAccessor` große Spalten in ihren systemeigenen Datentypen zu binden. Zu diesem Zweck rufen `SetBlobSizeLimit` vor dem Aufruf **öffnen**.  
   
- Die Konstruktormethode [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) legt die maximale BLOBgröße auf den Standardwert 8.000 Bytes fest.  
+ Die Konstruktormethode [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) legt die maximale BLOB-Größe auf einen Standardwert von 8.000 Bytes.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  
   
-## Siehe auch  
- [CDynamicAccessor\-Klasse](../../data/oledb/cdynamicaccessor-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [CDynamicAccessor-Klasse](../../data/oledb/cdynamicaccessor-class.md)

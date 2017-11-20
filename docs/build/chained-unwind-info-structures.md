@@ -1,36 +1,36 @@
 ---
-title: "Verkettete Entladeinfostrukturen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Verkettete Entladeinfostrukturen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 176835bf-f118-45d9-9128-9db4b7571864
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8e608d3b6826eb8bfbcebdec7fdf9891d033b418
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Verkettete Entladeinfostrukturen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Wenn das UNW\_FLAG\_CHAININFO\-Flag festgelegt wird, dann ist eine Entladeinfostruktur eine sekundäre Struktur, und das gemeinsame Adressfeld für Ausnahmehandler\/Verkettungsinformationn enthält die primären Entladeinformationen.  Im folgenden Code werden die primären Entladeinformationen abgerufen, unter der Annahme, dass `unwindInfo` die Struktur ist, für die das UNW\_FLAG\_CHAININFO\-Flag festgelegt wurde.  
+# <a name="chained-unwind-info-structures"></a>Verkettete Entladeinfostrukturen
+Wenn das UNW_FLAG_CHAININFO-Flag festgelegt ist, klicken Sie dann eine Entladung Info-Struktur ist ein sekundärer und Feld für die freigegebenen Ausnahme-Handler/verkettet-Info-Adresse enthält die primären Entladung-Informationen. Der folgende Code Ruft die primäre entladen Informationen, vorausgesetzt, dass `unwindInfo` die Struktur, die das UNW_FLAG_CHAININFO-flag festgelegt ist.  
   
 ```  
 PRUNTIME_FUNCTION primaryUwindInfo = (PRUNTIME_FUNCTION)&(unwindInfo->UnwindCode[( unwindInfo->CountOfCodes + 1 ) & ~1]);  
 ```  
   
- Verkettungsinformationen sind in zwei Situationen hilfreich.  Zunächst können sie für nicht zusammenhängende Codesegmente verwendet werden.  Durch Verwendung von Verkettungsinformationen kann die Größe der erforderlichen Entladeinformationen verringert werden, da das Entladecode\-Array aus den primären Entladeinformationen nicht dupliziert werden muss.  
+ Verkettete Info ist in zwei Situationen nützlich. Zunächst können sie für nicht zusammenhängende Codesegmente verwendet werden. Mithilfe verketteter Info können Sie die Größe der Informationen zur erforderlichen Entladung reduzieren, da Sie keine Entladung Codes Array aus der primären Entladung Info zu duplizieren.  
   
- Sie können auch verkettete Infos verwenden, um flüchtige Registerspeicherungen zu gruppieren.  Vom Compiler wird möglicherweise eine Verzögerung der Speicherung flüchtiger Register veranlasst, bis der Funktionseintragsprolog verlassen wurde.  Dies kann aufgezeichnet werden, indem primäre Entladeinformationen für den Teil der Funktion, der sich vor dem gruppierten Code befindet, verwendet werden. Die Verkettungsinformationen werden dann mit einem Prolog mit einer Länge ungleich 0 \(Null\) eingerichtet, wobei die Entladecodes in den Verkettungsinformationen die Speicherungen der nicht flüchtigen Register wiedergeben.  In diesem Fall sind die Entladecodes sämtlich Instanzen von UWOP\_SAVE\_NONVOL.  Gruppierend speichert das nicht flüchtige Register, indem ein PUSH verwendet oder ändert das RSP\-Register, indem eine zusätzliche feste Stapelreservierungsgröße verwendet, wird nicht unterstützt.  
+ Verkettete Informationen können auch die flüchtige Register speichert gruppieren. Der Compiler kann eine Verzögerung von einigen volatile Register gespeichert, bis er außerhalb des Funktionsprologs-Eintrag ist. Können Sie dies, dass der primäre Entladung Informationen für den Teil der Funktion vor dem gruppierten Code aufzeichnen und Informationen mit einer nicht-NULL-Größe von Prolog, in dem die entladungscodes in der verketteten Info speichert nicht flüchtigen Register wiedergeben verkettet dann einrichten. In diesem Fall sind die entladungscodes alle Instanzen von UWOP_SAVE_NONVOL. Eine Gruppe, die mithilfe einer CLIENTPUSHINSTALLATION nicht flüchtige Register speichert oder ändert die RSP-Registrierung mithilfe einer zusätzlichen festen stapelzuordnung wird nicht unterstützt.  
   
- Ein UNWIND\_INFO\-Element, bei dem UNW\_FLAG\_CHAININFO festgelegt ist, kann einen RUNTIME\_FUNCTION\-Eintrag enthalten, bei dessen UNWIND\_INFO\-Element UNW\_FLAG\_CHAININFO ebenfalls festgelegt ist \(mehrfache Komprimierung\).  Die Verweise der verketteten Entladeinformationszeiger erreichen schließlich ein UNWIND\_INFO\-Element mit deaktiviertem UNW\_FLAG\_CHAININFO; dies ist das primäre UNWIND\_INFO\-Element, das auf den tatsächlichen Einstiegspunkt der Prozedur verweist.  
+ Ein UNWIND_INFO-Element, das UNW_FLAG_CHAININFO festgelegt ist kann einen RUNTIME_FUNCTION-Eintrag enthalten, dessen UNWIND_INFO-Element auch UNW_FLAG_CHAININFO (mehrere Komprimierung) festgelegt ist. Die verketteten entladen schließlich Informationen, die Zeiger auf ein Element UNWIND_INFO eingehen, die UNW_FLAG_CHAININFO deaktiviert ist; Dies ist das primäre UNWIND_INFO-Element, die auf der tatsächlichen Prozedureinstiegspunkt verweist.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Entladedaten für die Ausnahmebehandlung, Debuggerunterstützung](../build/unwind-data-for-exception-handling-debugger-support.md)

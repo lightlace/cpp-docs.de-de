@@ -1,68 +1,67 @@
 ---
-title: "CXMLAccessor-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CXMLAccessor"
-  - "CXMLAccessor"
-  - "ATL.CXMLAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CXMLAccessor-Klasse"
+title: CXMLAccessor-Klasse | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CXMLAccessor
+- CXMLAccessor
+- ATL.CXMLAccessor
+dev_langs: C++
+helpviewer_keywords: CXMLAccessor class
 ms.assetid: c88c082c-ec2f-4351-8947-a330b15e448a
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 102dee928d1a6b8bbfcde80c46f097d67cf76a42
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# CXMLAccessor-Klasse
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ermöglicht Sie zu den Zugriffsdatenquellen als Zeichenfolgendaten, wenn Sie das Schema des Datenspeichers nicht haben \(die zugrunde liegende Struktur\).  
+# <a name="cxmlaccessor-class"></a>CXMLAccessor-Klasse
+Gibt Ihnen Zugriff auf Datenquellen als Zeichenfolgendaten, wenn Sie keine Kenntnisse der Datenspeicher-Schema (zugrunde liegende Struktur) verfügen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CXMLAccessor : public CDynamicStringAccessorW  
 ```  
   
-## Member  
+## <a name="members"></a>Member  
   
-### Methoden  
+### <a name="methods"></a>Methoden  
   
 |||  
 |-|-|  
-|[GetXMLColumnData](../../data/oledb/cxmlaccessor-getxmlcolumndata.md)|Ruft die Spalteninformationen ab.|  
-|[GetXMLRowData](../../data/oledb/cxmlaccessor-getxmlrowdata.md)|Ruft den gesamten Inhalt einer Tabelle mit Zeilen ab.|  
+|[GetXMLColumnData](../../data/oledb/cxmlaccessor-getxmlcolumndata.md)|Ruft die Informationen in der Spalte ab.|  
+|[GetXMLRowData](../../data/oledb/cxmlaccessor-getxmlrowdata.md)|Ruft den gesamten Inhalt einer Tabelle nach Zeilen ab.|  
   
-## Hinweise  
- `CXMLAccessor` unterscheidet sich jedoch dadurch von `CDynamicStringAccessorW`, dass es alle Daten konvertiert, die vom Datenspeicher als \(markiert\) zugegriffen werden Daten im XML\-Format.  Dies ist für die Ausgabe an XML\-bewussten Webseiten besonders nützlich.  Die gleichen XML\-Tagnamen die Spaltennamen des Datenspeichers angestrebt ab, wie möglich.  
+## <a name="remarks"></a>Hinweise  
+ Allerdings `CXMLAccessor` unterscheidet sich von `CDynamicStringAccessorW` , konvertiert Sie alle Daten aus dem Datenspeicher als XML-Format (tagged) Daten zugegriffen. Dies ist besonders nützlich für die Ausgabe auf XML-fähigen Webseiten. Die XML-Tagnamen entspricht der Datenspeicher Spaltennamen so getreu wie möglich.  
   
- Verwenden Sie `CDynamicAccessor`\-Methoden, um Spalteninformationen zu beziehen.  Sie verwenden diese Spalteninformationen, um einen Accessor zur Laufzeit dynamisch zu erstellen.  
+ Verwendung `CDynamicAccessor` Methoden zum Abrufen von Spalteninformationen. Sie verwenden diese Informationen in der Spalte um einen Accessor zur Laufzeit dynamisch zu erstellen.  
   
- Die Spalteninformationen werden in einem Puffer gespeichert, der von dieser Klasse erstellt und verwaltet wird.  Bringt Spalteninformationen mit [GetXMLColumnData](../../data/oledb/cxmlaccessor-getxmlcolumndata.md) ein oder abgerufen Sie Spaltendaten durch Zeilen mithilfe [GetXMLRowData](../../data/oledb/cxmlaccessor-getxmlrowdata.md).  
+ Die Informationen in der Spalte befindet sich in einem Puffer, die von dieser Klasse erstellt und verwaltet. Rufen Sie Spalte Informationen mit [GetXMLColumnData](../../data/oledb/cxmlaccessor-getxmlcolumndata.md) oder Spaltendaten abrufen, indem Sie Zeilen mithilfe von [GetXMLRowData](../../data/oledb/cxmlaccessor-getxmlrowdata.md).  
   
-## Beispiel  
- [!CODE [NVC_OLEDB_Consumer#14](../CodeSnippet/VS_Snippets_Cpp/NVC_OLEDB_Consumer#14)]  
+## <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_OLEDB_Consumer#14](../../data/oledb/codesnippet/cpp/cxmlaccessor-class_1.cpp)]  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header**: atldbcli.h  
   
-## Siehe auch  
- [OLE DB\-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenz der OLE DB\-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [CAccessor\-Klasse](../../data/oledb/caccessor-class.md)   
- [CDynamicAccessor\-Klasse](../../data/oledb/cdynamicaccessor-class.md)   
- [CDynamicParameterAccessor\-Klasse](../../data/oledb/cdynamicparameteraccessor-class.md)   
- [CDynamicStringAccessor\-Klasse](../../data/oledb/cdynamicstringaccessor-class.md)   
- [CDynamicStringAccessorA\-Klasse](../../data/oledb/cdynamicstringaccessora-class.md)   
- [CDynamicStringAccessorW\-Klasse](../../data/oledb/cdynamicstringaccessorw-class.md)   
- [CManualAccessor\-Klasse](../../data/oledb/cmanualaccessor-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [OLE DB-Consumer-Vorlagenreferenz](../../data/oledb/ole-db-consumer-templates-reference.md)   
+ [CAccessor-Klasse](../../data/oledb/caccessor-class.md)   
+ [CDynamicAccessor-Klasse](../../data/oledb/cdynamicaccessor-class.md)   
+ [CDynamicParameterAccessor-Klasse](../../data/oledb/cdynamicparameteraccessor-class.md)   
+ [CDynamicStringAccessor-Klasse](../../data/oledb/cdynamicstringaccessor-class.md)   
+ [CDynamicStringAccessorA-Klasse](../../data/oledb/cdynamicstringaccessora-class.md)   
+ [CDynamicStringAccessorW-Klasse](../../data/oledb/cdynamicstringaccessorw-class.md)   
+ [CManualAccessor-Klasse](../../data/oledb/cmanualaccessor-class.md)

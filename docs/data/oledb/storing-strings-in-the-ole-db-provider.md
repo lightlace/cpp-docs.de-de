@@ -1,28 +1,27 @@
 ---
-title: "Speichern von Zeichenfolgen im OLE&#160;DB-Anbieter | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Benutzerdatensätze, Bearbeiten"
+title: Speichern von Zeichenfolgen im OLE DB-Anbieter | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: user records, editing
 ms.assetid: 36cb9635-067c-4cad-8f85-962f28026f6a
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: de8fdb6583f175505fc6a77070e30412aee38ae8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Speichern von Zeichenfolgen im OLE&#160;DB-Anbieter
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Der ATL\-OLE DB\-Anbieter\-Assistent erstellt in der Datei MyProviderRS.h einen Standardbenutzerdatensatz mit dem Namen `CWindowsFile`.  Um die beiden Zeichenfolgen zu verarbeiten, ändern Sie entweder `CWindowsFile` oder fügen, wie im folgenden Code dargestellt, einen eigenen Benutzerdatensatz hinzu:  
+# <a name="storing-strings-in-the-ole-db-provider"></a>Speichern von Zeichenfolgen im OLE DB-Anbieter
+In MyProviderRS.h, der ATL-OLE DB-Anbieter-Assistent erstellt einen Standard-Benutzerdatensatz aufgerufen `CWindowsFile`. Um die beiden Zeichenfolgen zu behandeln, ändern Sie entweder `CWindowsFile` oder eigene Benutzerdatensatz hinzufügen, wie im folgenden Code gezeigt:  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -49,11 +48,11 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- Die Datenmember `szCommand` und `szText` stehen für die beiden Zeichenfolgen, wobei `szCommand2` und `szText2` ggf. zusätzliche Spalten bereitstellen.  Der `dwBookmark`\-Datenmember wird für diesen einfachen schreibgeschützten Anbieter nicht benötigt, er wird jedoch später zum Hinzufügen einer `IRowsetLocate`\-Schnittstelle verwendet, siehe [Erweitern des einfachen schreibgeschützten Anbieters](../../data/oledb/enhancing-the-simple-read-only-provider.md).  Der Operator "`==`" wird zum Vergleichen von Instanzen verwendet \(er kann optional implementiert werden\).  
+ Die Datenmember `szCommand` und `szText` stehen für die zwei Zeichenfolgen mit `szCommand2` und `szText2` bei Bedarf zusätzliche Spalten bereitstellen. Das Datenelement `dwBookmark` ist für diesen einfachen schreibgeschützten Anbieters nicht erforderlich, jedoch wird später verwendet, um das Hinzufügen einer `IRowsetLocate` Schnittstelle; finden Sie unter [Erweitern des einfachen lesen nur Anbieters](../../data/oledb/enhancing-the-simple-read-only-provider.md). Die `==` Operator vergleicht Instanzen (Implementierung dieses Operators ist optional).  
   
- Anschließend sollte der Anbieter bereit für die Kompilierung und Ausführung sein.  Um den Anbieter zu testen, benötigen Sie einen Consumer mit übereinstimmenden Funktionen.  Unter [Implementieren eines einfachen Consumers](../../data/oledb/implementing-a-simple-consumer.md) erfahren Sie, wie Sie einen solchen Testconsumer erstellen.  Führen Sie den Testconsumer mit dem Anbieter aus.  Stellen Sie sicher, dass der Testconsumer die richtigen Zeichenfolgen vom Anbieter abruft, wenn Sie im Dialogfeld **Testconsumer** auf **Ausführen** klicken.  
+ Nachdem dies geschehen ist, sollte Ihr Anbieter bereit sein zu kompilieren und auszuführen. Um den Anbieter zu testen, benötigen Sie einen Consumer mit übereinstimmenden Funktionen. [Implementieren eines einfachen Consumers](../../data/oledb/implementing-a-simple-consumer.md) wird gezeigt, wie solche einen Testconsumer erstellen. Führen Sie den Testconsumer mit dem Anbieter an. Stellen Sie sicher, dass der Testconsumer Ruft die richtigen Zeichenfolgen vom Anbieter ab, wenn Sie auf die **ausführen** Schaltfläche der **Testconsumer** (Dialogfeld).  
   
- Wenn Sie den Anbieter erfolgreich getestet haben, können Sie seinen Funktionsumfang durch die Implementierung zusätzlicher Schnittstellen erweitern.  Unter [Erweitern des einfachen schreibgeschützten Anbieters](../../data/oledb/enhancing-the-simple-read-only-provider.md) finden Sie ein Beispiel dazu.  
+ Wenn Sie Ihren Anbieter erfolgreich getestet haben, empfiehlt es sich um die Funktionalität zu erhöhen, indem Sie weitere Schnittstellen implementieren. Ein Beispiel ist dargestellt, [Erweitern des einfachen schreibgeschützten Anbieters](../../data/oledb/enhancing-the-simple-read-only-provider.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Implementieren des einfachen schreibgeschützten Anbieters](../../data/oledb/implementing-the-simple-read-only-provider.md)

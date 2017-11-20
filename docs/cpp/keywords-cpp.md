@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: 'index-page '
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - Visual C++, keywords
 - keywords [C++]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Microsoft-specific keywords
 - __identifer keyword [C++]
 ms.assetid: d7ca94a8-f785-41ce-9f73-d3c4fd508489
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: dd09e3b7ca574203b381edb524037d5f462b5ad1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 58551edf5663d7ecbaf50f4ce0660247c00249c9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="keywords-c"></a>Schlüsselwörter (C++)
 Schlüsselwörter sind vordefinierte, reservierte Bezeichner, die besondere Bedeutungen haben. Sie können in einem Programm nicht als Bezeichner verwendet werden. Die folgenden Schlüsselwörter sind für Microsoft C++ reserviert. Namen mit vorangestellten Unterstrichen sind Microsoft-Erweiterungen.  
@@ -108,4 +105,3 @@ Schlüsselwörter sind vordefinierte, reservierte Bezeichner, die besondere Bede
 ## <a name="see-also"></a>Siehe auch  
  [Lexikalische Konventionen](../cpp/lexical-conventions.md)   
  [C++-Built-in-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
-

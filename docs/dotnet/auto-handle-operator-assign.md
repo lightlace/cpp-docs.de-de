@@ -1,35 +1,34 @@
 ---
-title: "auto_handle::operator="
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_handle::operator="
-  - "msclr.auto_handle.operator="
-  - "msclr::auto_handle::operator="
-  - "auto_handle.operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_handle::operator="
+title: auto_handle::Operator = | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_handle::operator=
+- msclr.auto_handle.operator=
+- msclr::auto_handle::operator=
+- auto_handle.operator=
+dev_langs: C++
+helpviewer_keywords: auto_handle::operator=
 ms.assetid: 503ca172-e766-4a78-af98-36fd48c931ee
-caps.latest.revision: 10
-caps.handback.revision: "8"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 49b05ad1fe25c7e5e99c02fdb0af3a554b324f42
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# auto_handle::operator=
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="autohandleoperator"></a>auto_handle::operator=
 Zuweisungsoperator.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 auto_handle<_element_type> % operator=(  
@@ -41,14 +40,14 @@ auto_handle<_element_type> % operator=(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `_right`  
- Zugewiesen werden aktuellen `auto_handle`, `auto_handle`.  
+ Die `auto_handle` das aktuelle zuzuweisenden `auto_handle`.  
   
-## Rückgabewert  
- Aktuelle `auto_handle`, `_right` besitzend jetzt.  
+## <a name="return-value"></a>Rückgabewert  
+ Die aktuelle `auto_handle`, jetzt besitzenden `_right`.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // msl_auto_handle_op_assign.cpp  
@@ -98,18 +97,21 @@ int main()
 }  
 ```  
   
-  **in ClassA\-Konstruktor: erstens**  
-**Hello zuerst von A\!**  
-**in ClassA\-Konstruktor: zweitens**  
-**Hello von zweitem B\!**  
-**in ClassA\-Destruktor: erstens**  
-**Hello von zweitem A\!**  
-**dein**  
-**in ClassA\-Destruktor: zweitens**   
-## Anforderungen  
- **Headerdatei** \<msclr\\auto\_handle.h\>  
+```Output  
+in ClassA constructor: first  
+Hello from first A!  
+in ClassA constructor: second  
+Hello from second B!  
+in ClassA destructor: first  
+Hello from second A!  
+done  
+in ClassA destructor: second  
+```  
   
- **Namespace** msclr  
+## <a name="requirements"></a>Anforderungen  
+ **Headerdatei** \<msclr\auto_handle.h >  
   
-## Siehe auch  
- [auto\_handle\-Member](../dotnet/auto-handle-members.md)
+ **Namespace** Msclr  
+  
+## <a name="see-also"></a>Siehe auch  
+ [auto_handle-Members](../dotnet/auto-handle-members.md)

@@ -1,30 +1,28 @@
 ---
-title: ".LALL"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - ".LALL"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".LALL directive"
+title: . LALL | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .LALL
+dev_langs: C++
+helpviewer_keywords: .LALL directive
 ms.assetid: 23d7baf0-6a68-44d9-a980-33100a977fc6
-caps.latest.revision: 6
-caps.handback.revision: "6"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a3fa8d8f233048feba18950fdc4926bb3caf4bc3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# .LALL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Syntax  
+# <a name="lall"></a>.LALL
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -32,8 +30,8 @@ manager: "ghogen"
   
 ```  
   
-## Hinweise  
- Weitere Informationen finden Sie unter [.LISTMACROALL](../../assembler/masm/dot-listmacroall.md).  
+## <a name="remarks"></a>Hinweise  
+ Finden Sie unter [. LISTMACROALL](../../assembler/masm/dot-listmacroall.md).  
   
-## Siehe auch  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)

@@ -1,32 +1,30 @@
 ---
-title: "set::value_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::value_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "value_type-Member [STL/CLR]"
+title: 'Set:: value_type (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::value_type
+dev_langs: C++
+helpviewer_keywords: value_type member [STL/CLR]
 ms.assetid: 9af2fe12-9a8e-4919-9619-7a2f80988951
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e26cfef4ebe1ba904cc374cf7bfed5862607e77d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# set::value_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="setvaluetype-stlclr"></a>set::value_type (STL/CLR)
 Der Typ eines Elements.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -34,10 +32,10 @@ typedef generic_value value_type;
   
 ```  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Der Typ ist ein Synonym für `generic_value`.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_set_value_type.cpp   
@@ -65,14 +63,17 @@ int main()
   
 ```  
   
-  **ein b c**   
-## Anforderungen  
- **Header:** \<cliext\/Satz\>  
+```Output  
+a b c  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Set >  
   
-## Siehe auch  
- [set](../dotnet/set-stl-clr.md)   
- [set::const\_reference](../dotnet/set-const-reference-stl-clr.md)   
- [set::key\_type](../dotnet/set-key-type-stl-clr.md)   
- [set::reference](../dotnet/set-reference-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Legen Sie (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [Set:: const_reference (STL/CLR)](../dotnet/set-const-reference-stl-clr.md)   
+ [Set:: KEY_TYPE (STL/CLR)](../dotnet/set-key-type-stl-clr.md)   
+ [set::reference (STL/CLR)](../dotnet/set-reference-stl-clr.md)

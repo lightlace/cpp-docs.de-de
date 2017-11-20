@@ -1,95 +1,94 @@
 ---
-title: "/CLRSUPPORTLASTERROR (Letzten Fehlercode f&#252;r PInvoke-Aufrufe beibehalten) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/CLRSUPPORTLASTERROR"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/CLRSUPPORTLASTERROR (Linkeroption)"
-  - "-CLRSUPPORTLASTERROR (Linkeroption)"
+title: "-CLRSUPPORTLASTERROR (Preserve letzten Fehlercode für PInvoke-Aufrufe) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /CLRSUPPORTLASTERROR
+dev_langs: C++
+helpviewer_keywords:
+- /CLRSUPPORTLASTERROR linker option
+- -CLRSUPPORTLASTERROR linker option
 ms.assetid: b7057990-4154-4b1d-9fc9-6236f7be7575
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 23f8215e94139417c6bd098b669904783fb88b36
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# /CLRSUPPORTLASTERROR (Letzten Fehlercode f&#252;r PInvoke-Aufrufe beibehalten)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-In der Standardeinstellung ist **\/CLRSUPPORTLASTERROR** aktiviert und behält den letzten Fehlercode für Funktionen bei, die durch den P\/Invoke\-Mechanismus aufgerufen wurden. Dadurch sind Sie in der Lage, in mit **\/clr** kompiliertem Code systemeigene Funktionen in DLLs aufzurufen.  
+# <a name="clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls"></a>/CLRSUPPORTLASTERROR (Letzten Fehlercode für PInvoke-Aufrufe beibehalten)
+**/ CLRSUPPORTLASTERROR**, die ist standardmäßig aktiviert, behält der letzte Fehlercode von Funktionen aufgerufen werden, mithilfe der P/Invoke-Mechanismus, dadurch können Sie Code aufrufen systemeigene Funktionen in DLLS kompiliert mit **"/ CLR"**.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /CLRSUPPORTLASTERROR{:NO | SYSTEMDLL}  
 ```  
   
-## Hinweise  
- Wenn der letzte Fehlercode beibehalten wird, führt dies zu einer verringerten Leistung.  Stellen Sie eine Verknüpfung mit **\/CLRSUPPORTLASTERROR:NO** her, wenn Sie keine Verringerung der Leistung durch Beibehalten des letzten Fehlercodes in Kauf nehmen möchten.  
+## <a name="remarks"></a>Hinweise  
+ Beibehalten von den letzten Fehlercode bedeutet eine Abnahme der Leistung.  Wenn Sie nicht, die Leistungseinbußen bei der Beibehaltung des letzten Fehlercodes erforderlich war möchten, eine Verknüpfung mit **/CLRSUPPORTLASTERROR:NO**.  
   
- Sie können die Leistungsminderung durch Verknüpfen mit **\/CLRSUPPORTLASTERROR:SYSTEMDLL** minimieren. Auf diese Weise wird lediglich für Funktionen in System\-DLLs der letzte Fehlercode beibehalten.  Bei einer System\-DLL handelt es sich um eine der folgenden DLLs:  
+ Sie können die Auswirkungen auf die Leistung minimieren, durch eine Verknüpfung mit **/CLRSUPPORTLASTERROR:SYSTEMDLL**, die nur den letzten Fehlercode für Funktionen beibehalten, im System-DLLs.  Eine DLL des Mailsystems ist als eine der folgenden definiert:  
   
 |||||  
 |-|-|-|-|  
-|ACLUI.DLL|ACTIVEDS.DLL|ADPTIF.DLL|ADVAPI32.DLL|  
-|ASYCFILT.DLL|AUTHZ.DLL|AVICAP32.DLL|AVIFIL32.DLL|  
-|CABINET.DLL|CLUSAPI.DLL|COMCTL32.DLL|COMDLG32.DLL|  
-|COMSVCS.DLL|CREDUI.DLL|CRYPT32.DLL|CRYPTNET.DLL|  
-|CRYPTUI.DLL|D3D8THK.DLL|DBGENG.DLL|DBGHELP.DLL|  
-|DCIMAN32.DLL|DNSAPI.DLL|DSPROP.DLL|DSUIEXT.DLL|  
-|GDI32.DLL|GLU32.DLL|HLINK.DLL|ICM32.DLL|  
-|IMAGEHLP.DLL|IMM32.DLL|IPHLPAPI.DLL|IPROP.DLL|  
-|KERNEL32.DLL|KSUSER.DLL|LOADPERF.DLL|LZ32.DLL|  
-|MAPI32.DLL|MGMTAPI.DLL|MOBSYNC.DLL|MPR.DLL|  
-|MPRAPI.DLL|MQRT.DLL|MSACM32.DLL|MSCMS.DLL|  
-|MSI.DLL|MSIMG32.DLL|MSRATING.DLL|MSTASK.DLL|  
-|MSVFW32.DLL|MSWSOCK.DLL|MTXEX.DLL|NDDEAPI.DLL|  
-|NETAPI32.DLL|NPPTOOLS.DLL|NTDSAPI.DLL|NTDSBCLI.DLL|  
-|NTMSAPI.DLL|ODBC32.DLL|ODBCBCP.DLL|OLE32.DLL|  
-|OLEACC.DLL|OLEAUT32.DLL|OLEDLG.DLL|OPENGL32.DLL|  
-|PDH.DLL|POWRPROF.DLL|QOSNAME.DLL|QUERY.DLL|  
-|RASAPI32.DLL|RASDLG.DLL|RASSAPI.DLL|RESUTILS.DLL|  
-|RICHED20.DLL|RPCNS4.DLL|RPCRT4.DLL|RTM.DLL|  
-|RTUTILS.DLL|SCARDDLG.DLL|SECUR32.DLL|SENSAPI.DLL|  
-|SETUPAPI.DLL|SFC.DLL|SHELL32.DLL|SHFOLDER.DLL|  
-|SHLWAPI.DLL|SISBKUP.DLL|SNMPAPI.DLL|SRCLIENT.DLL|  
-|STI.DLL|TAPI32.DLL|TRAFFIC.DLL|URL.DLL|  
-|URLMON.DLL|USER32.DLL|USERENV.DLL|USP10.DLL|  
-|UXTHEME.DLL|VDMDBG.DLL|VERSION.DLL|WINFAX.DLL|  
-|WINHTTP.DLL|WININET.DLL|WINMM.DLL|WINSCARD.DLL|  
-|WINTRUST.DLL|WLDAP32.DLL|WOW32.DLL|WS2\_32.DLL|  
-|WSNMP32.DLL|WSOCK32.DLL|WTSAPI32.DLL|XOLEHLP.DLL|  
+|ACLUI. DLL|ACTIVEDS. DLL|ADPTIF. DLL|ADVAPI32. DLL|  
+|ASYCFILT. DLL|AUTHZ. DLL|AVICAP32. DLL|AVIFIL32. DLL|  
+|CAB-DATEI. DLL|CLUSAPI. DLL|COMCTL32. DLL|COMDLG32. DLL|  
+|COMSVCS. DLL|CREDUI. DLL|CRYPT32. DLL|CRYPTNET. DLL|  
+|CRYPTUI. DLL|D3D8THK. DLL|DBGENG. DLL|DBGHELP. DLL|  
+|DCIMAN32. DLL|DNSAPI. DLL|DSPROP. DLL|DSUIEXT. DLL|  
+|GDI32. DLL|GLU32. DLL|HLINK. DLL|ICM32. DLL|  
+|IMAGEHLP. DLL|IMM32. DLL|IPHLPAPI. DLL|IPROP. DLL|  
+|KERNEL32. DLL|KSUSER. DLL|LOADPERF. DLL|LZ32. DLL|  
+|MAPI32. DLL|MGMTAPI. DLL|MOBSYNC. DLL|MPR. DLL|  
+|MPRAPI. DLL|MQRT. DLL|MSACM32. DLL|MSCMS. DLL|  
+|MSI-DATEI. DLL|MSIMG32. DLL|MSRATING. DLL|MSTASK. DLL|  
+|MSVFW32. DLL|MSWSOCK. DLL|MTXEX. DLL|NDDEAPI. DLL|  
+|NETAPI32. DLL|NPPTOOLS. DLL|NTDSAPI. DLL|NTDSBCLI. DLL|  
+|NTMSAPI. DLL|ODBC32. DLL|ODBCBCP. DLL|OLE32. DLL|  
+|OLEACC. DLL|OLEAUT32. DLL|OLEDLG. DLL|OPENGL32. DLL|  
+|PDH. DLL|POWRPROF. DLL|QOSNAME. DLL|ABGEFRAGT WERDEN. DLL|  
+|RASAPI32. DLL|RASDLG. DLL|RASSAPI. DLL|RESUTILS. DLL|  
+|RICHED20. DLL|RPCNS4. DLL|RPCRT4. DLL|RTM. DLL|  
+|RTUTILS. DLL|SCARDDLG. DLL|SECUR32. DLL|SENSAPI. DLL|  
+|SETUPAPI. DLL|SFC. DLL|SHELL32. DLL|SHFOLDER. DLL|  
+|SETZT. DLL|SISBKUP. DLL|SNMPAPI. DLL|SRCLIENT. DLL|  
+|STI UMGEWANDELT WERDEN. DLL|TAPI32. DLL|DATENVERKEHR. DLL|URL. DLL|  
+|URLMON. DLL|USER32. DLL|USERENV. DLL|USP10. DLL|  
+|UXTHEME. DLL|VDMDBG. DLL|VERSION. DLL|WINFAX. DLL|  
+|WINHTTP. DLL|WININET. DLL|WINMM. DLL|WINSCARD. DLL|  
+|WINTRUST. DLL|WLDAP32. DLL|WOW32. DLL|WS2_32.DLL|  
+|WSNMP32. DLL|WSOCK32.DLL|WTSAPI32. DLL|XOLEHLP. DLL|  
   
 > [!NOTE]
->  Ein Beibehalten des letzten Fehlercodes wird nicht von nicht verwalteten Funktionen unterstützt, die in demselben Modul von CLR\-Code verwendet werden.  
+>  Den letzten Fehler beibehalten wird für nicht verwaltete Funktionen, die von CLR-Code im selben Modul genutzt werden, nicht unterstützt.  
   
--   Weitere Informationen finden Sie unter [\/clr \(Common Language Runtime\-Kompilierung\)](../../build/reference/clr-common-language-runtime-compilation.md).  
+-   Weitere Informationen finden Sie unter [/clr (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md).  
   
-### So legen Sie diese Linkeroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Festlegen von Visual C\+\+\-Projekteigenschaften](../../ide/working-with-project-properties.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Klicken Sie auf den Ordner **Linker**.  
+2.  Klicken Sie auf die **Linker** Ordner.  
   
-3.  Klicken Sie auf die Eigenschaftenseite **Befehlszeile**.  
+3.  Klicken Sie auf die Eigenschaftenseite **Befehlszeile** .  
   
-4.  Geben Sie die Option im Feld **Zusätzliche Optionen** ein.  
+4.  Geben Sie die Option in der **Zusatzoptionen** Feld.  
   
-### So legen Sie diese Linkeroption programmgesteuert fest  
+### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
   
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions*>.  
+-   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
   
-## Beispiel  
- Im folgenden Beispiel wird eine systemeigene DLL mit einer exportierten Funktion definiert, durch die der letzte Fehler geändert wird.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel definiert eine systemeigene DLL mit einer exportierten Funktion, die letzten Fehler ändert.  
   
 ```  
 // CLRSUPPORTLASTERROR_dll.cpp  
@@ -104,8 +103,8 @@ __declspec(dllexport) double MySqrt(__int64 n) {
 }  
 ```  
   
-## Beispiel  
- Das folgende Beispiel enthält diese DLL, und die Verwendung von **\/CLRSUPPORTLASTERROR** wird dargestellt.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel verwendet die DLL, und die Verwendung **/CLRSUPPORTLASTERROR**.  
   
 ```  
 // CLRSUPPORTLASTERROR_client.cpp  
@@ -151,8 +150,11 @@ int main() {
 }  
 ```  
   
-  **GetLastError für Anwendungsaufruf fehlgeschlagen \(127\).**  
-**GetLastError für Systemaufruf erfolgreich \(183\).**   
-## Siehe auch  
+```Output  
+GetLastError for application call failed (127).  
+GetLastError for system call succeeded (183).  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
  [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
  [Linkeroptionen](../../build/reference/linker-options.md)

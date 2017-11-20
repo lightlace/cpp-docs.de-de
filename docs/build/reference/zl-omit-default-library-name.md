@@ -1,54 +1,54 @@
 ---
-title: "/Zl (Kein Standardbibliotheksname) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/zi"
-  - "VC.Project.VCCLCompilerTool.OmitDefaultLibName"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Zl (Compileroption) [C++]"
-  - "Standardbibliotheken, Weglassen von Namen"
-  - "Kein Standardbibliotheksname (Compileroption)"
-  - "ZI (Compileroption)"
-  - "-Zl (Compileroption) [C++]"
+title: -Zl (Standardbibliotheksname) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /zi
+- VC.Project.VCCLCompilerTool.OmitDefaultLibName
+dev_langs: C++
+helpviewer_keywords:
+- -Zl compiler option [C++]
+- ZI compiler option
+- Omit Default Library Name compiler option
+- /Zl compiler option [C++]
+- default libraries, omitting names
 ms.assetid: b27d39d0-44d6-498c-84ae-27c1326fee59
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8b0d4f865d060ceaf99a808d87574cb6d088f139
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# /Zl (Kein Standardbibliotheksname)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Mit dieser Option wird der Name der Standard\-C\-Laufzeitbibliothek in der OBJ\-Datei weggelassen.  Standardmäßig legt der Compiler den Namen der Bibliothek in der OBJ\-Datei ab, um den Linker zur richtigen Bibliothek zu leiten.  
+# <a name="zl-omit-default-library-name"></a>/Zl (Kein Standardbibliotheksname)
+Lässt den C-Laufzeit Standardbibliotheksnamen aus der OBJ-Datei an. Standardmäßig legt der Compiler den Namen der Bibliothek in der OBJ-Datei ab, um den Linker zur richtigen Bibliothek zu leiten.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /Zl  
 ```  
   
-## Hinweise  
- Weitere Informationen über die Standardbibliothek finden Sie unter [Laufzeitbibliothek verwenden](../../build/reference/md-mt-ld-use-run-time-library.md).  
+## <a name="remarks"></a>Hinweise  
+ Weitere Informationen über die Standardbibliothek finden Sie unter [Use Run-Time Library](../../build/reference/md-mt-ld-use-run-time-library.md).  
   
- Mit **\/Zl** können Sie OBJ\-Dateien kompilieren, die in eine Bibliothek eingefügt werden sollen.  Das Unterdrücken des Bibliotheksnamens spart bei einer einzigen OBJ\-Datei nur wenig Platz ein. In einer Bibliothek, die viele Objektmodule enthält, ist der ingesamt eingesparte Platz jedoch beträchtlich.  
+ Sie können **Zl** OBJ-Dateien kompiliert eine Bibliothek abgelegt werden sollen. Obwohl das Weglassen der Bibliotheksname nur eine kleine Menge an Speicherplatz für einen einzelnen OBJ-Datei speichert, spielt der Gesamtspeicherplatz, gespeichert in einer Bibliothek, die viele Objektmodule enthält.  
   
- Diese Option ist eine erweiterte Option.  Durch Festlegen dieser Option werden bestimmte Unterstützungen der C\-Laufzeitbibliothek entfernt, die für Ihre Anwendung möglicherweise erforderlich sind. Daher werden bei der Verknüpfung Fehler ausgegeben, wenn die Anwendung von dieser Unterstützung abhängig ist.  Wenn Sie diese Option verwenden, müssen Sie die erforderlichen Komponenten auf eine andere Weise bereitstellen.  
+ Diese Option ist eine erweiterte Option. Festlegen dieser Option werden bestimmte Unterstützung der C-Laufzeit-Bibliothek, die möglicherweise, durch die Anwendung erforderlich, was zu Link-Time-Fehler, wenn die Anwendung abhängig ist diese Unterstützung entfernt. Wenn Sie diese Option verwenden, müssen Sie die erforderlichen Komponenten auf andere Weise bereitstellen.  
   
- Verwenden Sie [\/NODEFAULTLIB \(Bibliotheken ignorieren\)](../../build/reference/nodefaultlib-ignore-libraries.md). an den Linker, verweisen Bibliotheksreferenzen in allen OBJ\-Dateien zu ignorieren.  
+ Verwendung [/NODEFAULTLIB (Bibliotheken ignorieren)](../../build/reference/nodefaultlib-ignore-libraries.md). Ignorieren der Library-Verweise in allen OBJ-Dateien den Linker weiterleiten.  
   
- Weitere Informationen finden Sie unter [CRT\-Bibliotheksfunktionen](../../c-runtime-library/crt-library-features.md).  
+ Weitere Informationen finden Sie unter [CRT Library Features (CRT-Bibliotheksfunktionen)](../../c-runtime-library/crt-library-features.md).  
   
- Wenn Sie mit **\/Zl** kompilieren, wird `_VC_NODEFAULTLIB` definiert.  Beispiel:  
+ Beim Kompilieren mit **Zl**, `_VC_NODEFAULTLIB` definiert ist.  Zum Beispiel:  
   
 ```  
 // vc_nodefaultlib.cpp  
@@ -62,20 +62,20 @@ void Test() {
 }  
 ```  
   
-### So legen Sie diese Compileroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Gewusst wie: Öffnen von Projekteigenschaftenseiten](../../misc/how-to-open-project-property-pages.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Klicken Sie auf den Ordner **C\/C\+\+**.  
+2.  Klicken Sie auf den Ordner **C/C++** .  
   
-3.  Klicken Sie auf die Eigenschaftenseite **Erweitert**.  
+3.  Klicken Sie auf die **erweitert** Eigenschaftenseite.  
   
-4.  Ändern Sie die Eigenschaft **Standardbibliotheknamen unterdrücken**.  
+4.  Ändern der **weglassen Standard-Bibliotheksnamen** Eigenschaft.  
   
-### So legen Sie diese Compileroption programmgesteuert fest  
+### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
   
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.OmitDefaultLibName*>.  
+-   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.OmitDefaultLibName%2A>.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Compileroptionen](../../build/reference/compiler-options.md)   
  [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

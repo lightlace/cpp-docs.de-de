@@ -1,88 +1,88 @@
 ---
-title: "CColumnDomainUsage, CColumnDomainUsageInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "m_szTableSchema"
-  - "m_szCatalog"
-  - "m_nColumnPropID"
-  - "CColumnDomainUsageInfo"
-  - "COLUMN_GUID"
-  - "DOMAIN_NAME"
-  - "m_szColumnName"
-  - "DOMAIN_SCHEMA"
-  - "DOMAIN_CATALOG"
-  - "m_szTableCatalog"
-  - "m_szSchema"
-  - "COLUMN_PROPID"
-  - "m_guidColumn"
-  - "CColumnDomainUsage"
-  - "m_szTableName"
-  - "m_szName"
-  - "COLUMN_DOMAIN_USAGE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CColumnDomainUsage-Typedefklasse"
-  - "CColumnDomainUsageInfo-Parameterklasse"
-  - "COLUMN_DOMAIN_USAGE"
-  - "COLUMN_GUID"
-  - "COLUMN_NAME"
-  - "COLUMN_PROPID"
-  - "DOMAIN_CATALOG"
-  - "DOMAIN_NAME"
-  - "DOMAIN_SCHEMA"
-  - "m_guidColumn"
-  - "m_nColumnPropID"
-  - "m_szCatalog"
-  - "m_szColumnName"
-  - "m_szName"
-  - "m_szSchema"
-  - "m_szTableCatalog"
-  - "m_szTableName"
-  - "m_szTableSchema"
-  - "TABLE_CATALOG"
-  - "TABLE_NAME"
-  - "TABLE_SCHEMA"
+title: CColumnDomainUsage, CColumnDomainUsageInfo | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- m_szTableSchema
+- m_szCatalog
+- m_nColumnPropID
+- CColumnDomainUsageInfo
+- COLUMN_GUID
+- DOMAIN_NAME
+- m_szColumnName
+- DOMAIN_SCHEMA
+- DOMAIN_CATALOG
+- m_szTableCatalog
+- m_szSchema
+- COLUMN_PROPID
+- m_guidColumn
+- CColumnDomainUsage
+- m_szTableName
+- m_szName
+- COLUMN_DOMAIN_USAGE
+dev_langs: C++
+helpviewer_keywords:
+- COLUMN_PROPID
+- m_szSchema
+- DOMAIN_NAME
+- DOMAIN_SCHEMA
+- m_szTableSchema
+- TABLE_CATALOG
+- m_szCatalog
+- TABLE_NAME
+- m_nColumnPropID
+- CColumnDomainUsageInfo parameter class
+- TABLE_SCHEMA
+- m_szColumnName
+- COLUMN_NAME
+- m_szName
+- m_szTableCatalog
+- m_szTableName
+- COLUMN_DOMAIN_USAGE
+- COLUMN_GUID
+- CColumnDomainUsage typedef class
+- m_guidColumn
+- DOMAIN_CATALOG
 ms.assetid: 5ff331f1-b99c-4002-9e04-367708c5759f
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e158e5ad1380ec36383fac7bca8329af192857aa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# CColumnDomainUsage, CColumnDomainUsageInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Rufen Sie die typedef\-Klasse **CColumnDomainUsage** auf, um dessen Parameterklasse **CColumnDomainUsageInfo** zu implementieren.  
+# <a name="ccolumndomainusage-ccolumndomainusageinfo"></a>CColumnDomainUsage, CColumnDomainUsageInfo
+Rufen Sie die-typedefklasse **CColumnDomainUsage** zum Implementieren der Parameterklasse **CColumnDomainUsageInfo**.  
   
-## Hinweise  
- Siehe [Schemarowset\-Klassen und typedef\-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) weitere Informationen zur Verwendung von Informationen.  
+## <a name="remarks"></a>Hinweise  
+ Finden Sie unter [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) für Weitere Informationen zur Verwendung von typedef-Klassen.  
   
- Diese Klasse identifiziert die Spalten, definiert im Katalog, die von einer Domäne abhängig sind, die im Katalog definiert ist und einen bestimmten Benutzer gehört ist.  
+ Diese Klasse gibt die Spalten, in dem Katalog definiert, die einer Domäne im Katalog definierten und Eigentümer ein angegebener Benutzer abhängig sind.  
   
- Die folgende Tabelle zeigt die Klassendatenmember und ihre entsprechenden OLE DB Spalten auf.  Siehe [COLUMN\_DOMAIN\_USAGE\-Rowset](https://msdn.microsoft.com/en-us/library/ms711240.aspx) in *der OLE DB\-Programmierreferenz* weitere Informationen über das Schema und Spalten.  
+ Die folgende Tabelle enthält die Datenmember der Klasse und ihre entsprechenden OLE DB-Spalten. Finden Sie unter [COLUMN_DOMAIN_USAGE-Rowset](https://msdn.microsoft.com/en-us/library/ms711240.aspx) in der *OLE DB Programmer's Reference* für Weitere Informationen über das Schema und die Spalten.  
   
-|Datenmember|OLE DB\-Spalten|  
-|-----------------|---------------------|  
-|m\_szCatalog|DOMAIN\_CATALOG|  
-|m\_szSchema|DOMAIN\_SCHEMA|  
-|m\_szName|DOMAIN\_NAME|  
-|m\_szTableCatalog|TABLE\_CATALOG|  
-|m\_szTableSchema|TABLE\_SCHEMA|  
-|m\_szTableName|TABLE\_NAME|  
-|m\_szColumnName|COLUMN\_NAME|  
-|m\_guidColumn|COLUMN\_GUID|  
-|m\_nColumnPropID|COLUMN\_PROPID|  
+|Datenmember|OLE DB-Spalten|  
+|------------------|--------------------|  
+|m_szCatalog|DOMAIN_CATALOG|  
+|m_szSchema|DOMAIN_SCHEMA|  
+|m_szName|DOMAIN_NAME|  
+|m_szTableCatalog|TABLE_CATALOG|  
+|m_szTableSchema|TABLE_SCHEMA|  
+|m_szTableName|TABLE_NAME|  
+|m_szColumnName|COLUMN_NAME|  
+|m_guidColumn|COLUMN_GUID|  
+|m_nColumnPropID|COLUMN_PROPID|  
   
-## Voraussetzungen  
- **Header:**  atldbsch.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** "atldbsch.h" Einfügen  
   
-## Siehe auch  
- [CRestrictions\-Klasse](../../data/oledb/crestrictions-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [CRestrictions-Klasse](../../data/oledb/crestrictions-class.md)

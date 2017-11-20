@@ -1,59 +1,123 @@
 ---
-title: "Platform::STAThreadAttribute-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::STAThreadAttribute"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Platform::STAThreadAttribute-Klasse"
+title: 'Platform:: STAThreadAttribute-Klasse | Microsoft Docs'
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- COLLECTION/Platform::Platform
+- COLLECTION/Platform::Platform::STAThreadAttribute constructor 1
+- COLLECTION/Platform::Platform::STAThreadAttribute::Equals
+- COLLECTION/Platform::Platform::STAThreadAttribute::GetHashCode
+- COLLECTION/Platform::Platform::STAThreadAttribute::ToString
+dev_langs: C++
+helpviewer_keywords: Platform::STAThreadAttribute Class
 ms.assetid: f97960fc-e673-4d9e-910a-54c8415411c4
-caps.latest.revision: 3
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 54e4b7621879252b14fa0fe71c837439da147df5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Platform::STAThreadAttribute-Klasse
-Legt Singlethreaded Apartment \(STA\) als Threadingmodell für Anwendungen fest.  
+# <a name="platformstathreadattribute-class"></a>Platform::STAThreadAttribute-Klasse
+Legt Singlethreaded Apartment (STA) als Threadingmodell für Anwendungen fest.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 public ref class STAThreadAttribute sealed : Attribute  
 ```  
   
-## Mitglieder  
+### <a name="members"></a>Mitglieder  
   
-### Öffentliche Konstruktoren  
-  
-|Name|Beschreibung|  
-|----------|------------------|  
-|[STAThreadAttribute\-Konstruktor](../cppcx/stathreadattribute-constructor-1.md)|Initialisiert eine neue Instanz der Klasse.|  
-  
-### Öffentliche Methoden  
- Das STAThreadAttribute\-Attribut erbt von [Platform::Object\-Klasse](../cppcx/platform-object-class.md). „STAThreadAttribute“ wird zudem überladen oder weist die folgenden Member auf:  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
 |Name|Beschreibung|  
-|----------|------------------|  
-|[STAThreadAttribute::Equals](../cppcx/stathreadattribute-equals.md)|Bestimmt, ob das angegebene Objekt mit dem aktuellen Objekt identisch ist.|  
-|[STAThreadAttribute::GetHashCode](../cppcx/stathreadattribute-gethashcode.md)|Gibt den Hashcode für diese Instanz zurück.|  
-|[STAThreadAttribute::ToString](../cppcx/stathreadattribute-tostring.md)|Gibt eine Zeichenfolge zurück, die das aktuelle Objekt darstellt.|  
+|----------|-----------------|  
+|[STAThreadAttribute-Konstruktor 1](#ctor)|Initialisiert eine neue Instanz der Klasse.|  
   
-## Vererbungshierarchie  
+### <a name="public-methods"></a>Öffentliche Methoden  
+ Das STAThreadAttribute-Attribut erbt von [Platform:: Object-Klasse](../cppcx/platform-object-class.md). „STAThreadAttribute“ wird zudem überladen oder weist die folgenden Member auf:  
+  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[STAThreadAttribute::Equals](#equals)|Bestimmt, ob das angegebene Objekt mit dem aktuellen Objekt identisch ist.|  
+|[STAThreadAttribute::GetHashCode](#gethashcode)|Gibt den Hashcode für diese Instanz zurück.|  
+|[STAThreadAttribute::ToString](#tostring)|Gibt eine Zeichenfolge zurück, die das aktuelle Objekt darstellt.|  
+  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `Platform`  
   
-## Anforderungen  
+### <a name="requirements"></a>Anforderungen  
  **Header:** collection.h  
   
  **Namespace:** Platform  
+
+
+
+## <a name="ctor"></a> STAThreadAttribute constructor
+Initialisiert eine neue Instanz der STAThreadAttribute-Klasse.  
   
-## Siehe auch  
- [\(NOTINBUILD\) Plattformnamespace](http://msdn.microsoft.com/de-de/f3ce3eab-028c-4204-ba9f-9ab8af17c8c4)
+### <a name="syntax"></a>Syntax  
+  
+```cpp  
+public:STAThreadAttribute()  
+```  
+  
+
+
+## <a name="equals"></a>STAThreadAttribute::Equals
+Bestimmt, ob das angegebene Objekt mit dem aktuellen Objekt identisch ist.  
+  
+### <a name="syntax"></a>Syntax  
+  
+```cpp  
+public:virtual override bool Equals(  Object^ obj)  
+```  
+  
+### <a name="parameters"></a>Parameter  
+ obj  
+ Das zu vergleichende Objekt.  
+  
+### <a name="return-value"></a>Rückgabewert  
+ `true`, wenn die Objekte gleich sind, andernfalls `false`.  
+  
+
+
+## <a name="gethashcode"></a>STAThreadAttribute::GetHashCode
+Gibt den Hashcode für diese Instanz zurück.  
+  
+### <a name="syntax"></a>Syntax  
+  
+```cpp  
+public:int GetHashCode()  
+```  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Der Hashcode für diese Instanz.  
+  
+
+
+## <a name="tostring"></a>STAThreadAttribute::ToString
+Gibt eine Zeichenfolge zurück, die das aktuelle Objekt darstellt.  
+  
+### <a name="syntax"></a>Syntax  
+  
+```cpp  
+public:String^ ToString()  
+```  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Eine Zeichenfolge, die das aktuelle Objekt darstellt.  
+  
+
+  
+## <a name="see-also"></a>Siehe auch  
+ [Platform-Namespace](platform-namespace-c-cx.md)

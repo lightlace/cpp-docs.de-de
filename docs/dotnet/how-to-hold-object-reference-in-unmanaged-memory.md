@@ -1,33 +1,33 @@
 ---
-title: "Gewusst wie: Objektverweis in nicht verwaltetem Arbeitsspeicher | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "gcroot-Schlüsselwort [C++], Objektverweis in systemeigener Funktion"
-  - "Objektverweise, In systemeigenen Funktionen"
-  - "Objekte [C++], Verweise in systemeigenen Funktionen"
-  - "Referenzen, Auf Objekte in systemeigenen Funktionen"
+title: 'Vorgehensweise: Objektverweis in nicht verwalteten Speicher | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- object references, in native functions
+- objects [C++], reference in native functions
+- references, to objects in native functions
+- gcroot keyword [C++], object reference in native function
 ms.assetid: a61eb8ce-3982-477d-8d3d-2173fd57166d
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2d4f5a54d71a49d76b1fbc2ba31a0ffe42738b92
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Gewusst wie: Objektverweis in nicht verwaltetem Arbeitsspeicher
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Sie können gcroot.h verwenden, das <xref:System.Runtime.InteropServices.GCHandle> umschließt, um einen CLR\-Objektverweis in nicht verwaltetem Arbeitsspeicher zu halten.  Wahlweise können Sie `GCHandle` direkt verwenden.  
+# <a name="how-to-hold-object-reference-in-unmanaged-memory"></a>Gewusst wie: Objektverweis in nicht verwaltetem Arbeitsspeicher
+Sie können gcroot.h verwenden, das umschließt <xref:System.Runtime.InteropServices.GCHandle>zur Aufnahme eines CLR-Objektverweis in nicht verwalteten Speicher. Alternativ können Sie `GCHandle` direkt.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // hold_object_reference.cpp  
@@ -59,9 +59,12 @@ int main() {
 }  
 ```  
   
-  **StringWrapper::x \=\= ManagedString**   
-## Beispiel  
- `GCHandle` ermöglicht Ihnen, in einem nicht verwalteten Arbeitsspeicher einen verwalteten Objektverweis zu halten.  Mit der <xref:System.Runtime.InteropServices.GCHandle.Alloc*>\-Methode erstellen Sie ein nicht transparentes Handle für ein verwaltetes Objekt, und mit <xref:System.Runtime.InteropServices.GCHandle.Free*> geben Sie es frei.  Außerdem können Sie den Objektverweis von dem Handle in verwaltetem Code zurückholen, indem Sie die <xref:System.Runtime.InteropServices.GCHandle.Target*>\-Methode verwenden.  
+```Output  
+StringWrapper::x == ManagedString  
+```  
+  
+## <a name="example"></a>Beispiel  
+ `GCHandle`bietet Ihnen eine Möglichkeit zum Verweis auf ein verwaltetes Objekt im nicht verwalteten Speicher zu behalten.  Verwenden Sie die <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> Methode, um ein nicht transparentes Handle zu einem verwalteten Objekt zu erstellen und <xref:System.Runtime.InteropServices.GCHandle.Free%2A> , diese freizugeben. Darüber hinaus die <xref:System.Runtime.InteropServices.GCHandle.Target%2A> Methode können Sie den Objektverweis wieder aus dem Handle in verwaltetem Code zu erhalten.  
   
 ```  
 // hold_object_reference_2.cpp  
@@ -94,6 +97,9 @@ int main() {
 }  
 ```  
   
-  **StringWrapper::m\_handle \=\= ManagedString**   
-## Siehe auch  
- [Verwenden von C\+\+\-Interop \(implizites PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+```Output  
+StringWrapper::m_handle == ManagedString  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Verwenden von C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

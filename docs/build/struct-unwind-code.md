@@ -1,131 +1,131 @@
 ---
-title: "struct UNWIND_CODE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Struktur UNWIND_CODE | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 104955d8-7e33-4c5a-b0c6-3254648f0af3
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 40b47b2b04d73c30e6c876199dbd98483490f4f9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# struct UNWIND_CODE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Das Entladecode\-Array wird zum Aufzeichnen der Folge von Vorgängen im Prolog verwendet, die sich auf nicht veränderliche Register und RSP auswirken.  Jedes Codeelement hat das folgende Format:  
+# <a name="struct-unwindcode"></a>struct UNWIND_CODE
+Das entladungscode-Array wird verwendet, um die Abfolge der Vorgänge im Prolog, die Einfluss auf die nicht flüchtigen Register und RSP aufzuzeichnen. Jedes Codeelement weist das folgende Format:  
   
 |||  
 |-|-|  
-|UBYTE|Offset im Prolog|  
-|UBYTE: 4|Entladeoperationscode|  
-|UBYTE: 4|Operationsinfo|  
+|UBYTE|Offset im prolog|  
+|UBYTE: 4|Entladungscode Vorgang|  
+|UBYTE: 4|Vorgang info|  
   
  Das Array wird in absteigender Reihenfolge des Offsets im Prolog sortiert.  
   
- **Offset im Prolog**  
- Offset vom Anfang des Prologs vom Ende der Anweisung, die diese Operation ausführt, plus 1 \(d. h. der Offset des Starts der nächsten Anweisung\).  
+ **Offset im prolog**  
+ Offset vom Anfang des Prologs vom Ende der Anweisung ausführt, die diesen Vorgang plus 1 (d. h. der Offset des Beginns der nächsten Anweisung).  
   
- **Entladeoperationscode**  
- Hinweis: Bestimmte Operationscodes erfordern einen Offset ohne Vorzeichen für einen Wert im lokalen Stapelrahmen.  Dies ist ein Offset vom Anfang \(der niedrigsten Adresse\) der festen Stapelzuweisung.  Wenn das Frameregisterfeld in UNWIND\_INFO 0 \(null\) ist, ist dies ein Offset von RSP.  Wenn das Frameregisterfeld einen Wert ungleich 0 \(null\) hat, ist dies der Offset vom Speicherort von RSP zum Zeitpunkt der Einrichtung von FP reg.  Dies entspricht FP reg minus dem FP reg\-Offset \(16 \* der skalierte Frameregisteroffset in UNWIND\_INFO\).  Wenn ein FP reg verwendet wird, kann ein Entladecode mit einem Offset erst verwendet werden, nachdem im Prolog FP reg eingerichtet wurde.  
+ **Entladungscode Vorgang**  
+ Hinweis: Bestimmte Operationscodes erfordern einen Offset ohne Vorzeichen in einen Wert im lokalen Stapelrahmen. Dieser Offset ist ab dem Anfang (niedrigste Adresse) den festen stapelzuordnung. Wenn der Frame registrieren Feld UNWIND_INFO 0 (null) ist, ist dies ein Offset von RSP. Wenn das Feld Frame erfassen ungleich NULL ist, ist dies der Offset, in denen RSP gefunden wurde, wenn das FP Reg eingerichtet wurde. Dies entspricht das FP Reg minus dem FP Reg-Offset (16 * skalierten Rahmens registrieren Offset in UNWIND_INFO). Wenn ein FP Reg verwendet wird, muss alle entladungscode dauert einen Offset nur verwendet werden nach dem im Prolog FP Reg hergestellt wird.  
   
- Bei allen Opcodes mit Ausnahme von UWOP\_SAVE\_XMM128 und UWOP\_SAVE\_XMM128\_FAR ist der Offset immer ein Vielfaches von 8, da alle relevanten Stapelwerte auf 8\-Byte\-Grenzen gespeichert sind \(der Stapel selbst ist stets in 16 Byte ausgerichtet\).  Bei Operationscodes mit kurzem Offset \(weniger als 512 K\) enthält der letzte USHORT in den Knoten für diesen Code den Offset geteilt durch 8.  Bei Operationscodes mit langem Offset \(512 K \<\= Offset \< 4 GB\) enthalten die letzten beiden USHORT\-Knoten für diesen Code den Offset \(im Little\-Endian\-Format\).  
+ Für alle Opcodes mit Ausnahme von UWOP_SAVE_XMM128 und UWOP_SAVE_XMM128_FAR wird der Offset immer ein Vielfaches von 8 sein, da alle Stack-Werte von Interesse an 8-Byte-Grenzen gespeichert werden (der Stapel selbst ist immer 16-Byte-ausgerichtet). Für Operationscodes mit einem kurzen Offset (weniger als 512 KB), enthält die endgültigen "ushort" in den Knoten für diesen Code den Offset, dividiert durch 8. Für Operationscodes mit langem Offset (512 KB < = < 4-GB-offset), die letzten beiden "ushort" Knoten für diesen Code, den Offset (im little-Endian-Format) zu belassen.  
   
- Bei den Opcodes UWOP\_SAVE\_XMM128 und UWOP\_SAVE\_XMM128\_FAR ist der Offset immer ein Vielfaches von 16, da alle 128\-Bit\-XMM\-Operationen in einem in 16 Byte ausgerichteten Speicher erfolgen müssen.  Deshalb wird ein Skalierungsfaktor von 16 für UWOP\_SAVE\_XMM128 verwendet, der Offsets von weniger als 1 M erlaubt.  
+ Für den Opcodes UWOP_SAVE_XMM128 und UWOP_SAVE_XMM128_FAR werden der Offset immer ein Vielfaches von 16 an, da alle 128-Bit-XMM-Vorgänge auf 16-Byte-ausgerichtete Speicher vorliegen müssen. Aus diesem Grund wird ein Skalierungsfaktor von 16 für UWOP_SAVE_XMM128 verwendet, die Offsets von weniger als 1 M verwendet.  
   
- Für den Entladeoperationscode gibt es folgende Möglichkeiten:  
+ Der Vorgang entladungscode ist eine der folgenden:  
   
- UWOP\_PUSH\_NONVOL \(0\)1 Knoten  
+ UWOP_PUSH_NONVOL (0) 1 Knoten  
   
- Ein nicht veränderliches Ganzzahlregister wird verschoben und RSP um 8 dekrementiert.  Die Operationsinfo ist die Anzahl der Register.  Beachten Sie, dass aufgrund der Beschränkungen für Epiloge UWOP\_PUSH\_NONVOL\-Entladecodes zuerst im Prolog und dementsprechend zuletzt im Entladecode\-Array auftreten müssen.  Diese relative Anordnung gilt mit Ausnahme von UWOP\_PUSH\_MACHFRAME für alle anderen Entladecodes.  
+ Bewirken Sie, dass ein nicht veränderliches Ganzzahlregister Dekrementieren RSP durch 8. Das Vorgang Info ist die Anzahl des Registers. Beachten Sie, dass aufgrund der Beschränkungen-epilogen UWOP_PUSH_NONVOL entladungscodes werden als erstes im Prolog und dementsprechend in das entladungscode-Array zuletzt werden müssen. Diese relative Reihenfolge gilt für alle anderen Entladecodes außer UWOP_PUSH_MACHFRAME.  
   
- UWOP\_ALLOC\_LARGE \(1\)2 oder 3 Knoten  
+ UWOP_ALLOC_LARGE (1) 2 oder 3 Knoten  
   
- Zuweisen eines großen Bereichs auf dem Stapel.  Dies kann in zwei Formen erfolgen.  Wenn die Operationsinfo gleich 0 \(null\) ist, wird die Größe der Zuweisung geteilt durch 8 im nächsten Slot aufgezeichnet, sodass eine Zuweisung bis zu 512 K – 8 möglich ist.  Wenn die Operationsinfo 1 ist, wird die unskalierte Größe der Zuweisung im Little\-Endian\-Format in den nächsten beiden Slots aufgezeichnet, sodass Zuweisungen bis zu 4 GB – 8 möglich sind.  
+ Zuweisen eines großen Bereichs auf dem Stapel. Es gibt zwei Formen. Info Vorgang 0, und klicken Sie dann auf die Größe der Zuweisung geteilt durch gleich wird 8 im nächsten Slot aufgezeichnet, sodass eine Zuweisung bis zu 512 KB - 8. Wenn die Vorgang-Infos gleich 1, der nicht skalierte Größe der speicherbelegung wird in den nächsten beiden Slots in little-Endian-Format, sodass Zuweisungen aufgezeichnet bis zu 4GB - 8.  
   
- UWOP\_ALLOC\_SMALL \(2\)1 Knoten  
+ UWOP_ALLOC_SMALL (2) 1 Knoten  
   
- Zuweisen eines kleinen Bereichs auf dem Stapel.  Die Größe der Zuweisung ist das Operationsinfofeld \* 8 \+ 8, sodass Zuweisungen von 8 bis 128 Byte möglich sind.  
+ Ordnen Sie einen kleinen Bereich auf dem Stapel an. Die Größe der Zuordnung ist der Vorgang Info-Feld * 8 + 8, sodass Zuweisungen von 8 bis 128 Byte.  
   
- Für den Entladecode für eine Stapelreservierung sollte immer eine so kurze Codierung wie möglich verwendet werden:  
-  
-|||  
-|-|-|  
-|**Zuweisungsgröße**|**Entladecode**|  
-|8 bis 128 Byte|UWOP\_ALLOC\_SMALL|  
-|136 bis 512 K \- 8\-Byte|UWOP\_ALLOC\_LARGE, Operationsinfo \= 0|  
-|512 K bis 4 G \- 8 Byte|UWOP\_ALLOC\_LARGE, Operationsinfo \= 1|  
-  
- UWOP\_SET\_FPREG \(3\)1 Knoten  
-  
- Erstellen Sie das Framezeigerregister, indem Sie für das Register einen Offset vom aktuellen RSP angeben.  Der Offset entspricht dem Frameregisteroffset\-Feld \(skaliert\) in UNWIND\_INFO \* 16 mit möglichen Offsets von 0 bis 240.  Die Verwendung eines Offsets erlaubt die Erstellung eines Framezeigers, der auf die Mitte der festen Stapelzuweisung verweist. Dies unterstützt eine höhere Codedichte, da mehr Zugriffe für die Verwendung kurzer Anweisungsformen möglich sind.  Beachten Sie, dass das Operationsinfofeld reserviert ist und nicht verwendet werden sollte.  
-  
- UWOP\_SAVE\_NONVOL \(4\)2 Knoten  
-  
- Ein nicht veränderliches Ganzzahlregister wird auf dem Stapel mit einem MOV anstelle eines PUSH gespeichert.  Dies wird hauptsächlich zum platzsparenden Verpacken verwendet, bei dem ein nicht veränderliches Register auf dem Stapel in einer zuvor zugewiesenen Position gespeichert wird.  Die Operationsinfo ist die Anzahl der Register.  Der um 8 skalierte Stapeloffset wird im nächsten Entladeoperationscode\-Slot aufgezeichnet, wie im Hinweis oben beschrieben.  
-  
- UWOP\_SAVE\_NONVOL\_FAR \(5\)3 Knoten  
-  
- Ein nicht veränderliches Ganzzahlregister wird auf dem Stapel mit langem Offset gespeichert, wobei ein MOV anstelle eines PUSH verwendet wird.  Dies wird hauptsächlich zum platzsparenden Verpacken verwendet, bei dem ein nicht veränderliches Register auf dem Stapel in einer zuvor zugewiesenen Position gespeichert wird.  Die Operationsinfo ist die Anzahl der Register.  Der unskalierte Stapeloffset wird in den nächsten beiden Entladeoperationscode\-Slots aufgezeichnet, wie im Hinweis oben beschrieben.  
-  
- UWOP\_SAVE\_XMM128 \(8\)2 Knoten  
-  
- Die gesamten 128 Bits eines nicht veränderlichen XMM\-Registers werden auf dem Stapel gespeichert.  Die Operationsinfo ist die Anzahl der Register.  Der um 16 skalierte Stapeloffset wird im nächsten Slot aufgezeichnet.  
-  
- UWOP\_SAVE\_XMM128\_FAR \(9\)3 Knoten  
-  
- Die gesamten 128 Bits eines nicht veränderlichen XMM\-Registers werden auf dem Stapel mit einem langen Offset gespeichert.  Die Operationsinfo ist die Anzahl der Register.  Der unskalierte Stapeloffset wird in den nächsten beiden Slots aufgezeichnet.  
-  
- UWOP\_PUSH\_MACHFRAME \(10\)1 Knoten  
-  
- Verschieben eines Computerframes.  Dies wird verwendet, um die Auswirkungen eines Hardware\-Interrupts oder einer Ausnahme aufzuzeichnen.  Dies kann in zwei Formen erfolgen.  Wenn die Operationsinfo 0 \(null\) ist, wurde Folgendes auf dem Stapel abgelegt:  
+ Der entladungscode für eine stapelzuordnung sollten immer die kürzeste mögliche-Codierung verwenden:  
   
 |||  
 |-|-|  
-|RSP\+32|SS|  
-|RSP\+24|Alter RSP|  
-|RSP\+16|EFLAGS|  
-|RSP\+8|CS|  
+|**Zuordnungsgröße**|**Entladungscode**|  
+|8 bis 128 Byte|UWOP_ALLOC_SMALL|  
+|136 auf 512 KB - 8-Byte|UWOP_ALLOC_LARGE Vorgang Info = 0|  
+|512 KB und 4G - 8-Byte|UWOP_ALLOC_LARGE Vorgang Info = 1|  
+  
+ UWOP_SET_FPREG (3) 1 Knoten  
+  
+ Richten Sie das Framezeigerregister durch Festlegen der Register einen Offset vom aktuellen RSP angeben. Der Offset ist gleich der Frame registrieren Offset Feld (skaliert) in UNWIND_INFO * 16, sodass Offsets von 0 bis 240. Die Verwendung eines Offsets ermöglicht die Frame-Pointer, die auf die Mitte der festen stapelzuordnung helfen Code Dichte können weitere Zugriffe auf die kurze instruktionsformen verwenden verweist einrichten. Beachten Sie, dass der Vorgang Info-Feld reserviert ist und nicht verwendet werden sollte.  
+  
+ UWOP_SAVE_NONVOL (4) 2 Knoten  
+  
+ Ein nicht veränderliches Ganzzahlregister gespeichert, auf dem Stapel mit einem MOV anstelle eines PUSH. Dies wird hauptsächlich für die Komprimierung, verwendet, in dem ein nicht flüchtiges Register auf den Stapel an einer Position gespeichert ist, der zuvor zugewiesen wurde. Das Vorgang Info ist die Anzahl des Registers. Der Stapeloffset skaliert-by-8-wird aufgezeichnet, in der nächsten Vorgangscode Slot, entladen, wie zuvor beschrieben.  
+  
+ UWOP_SAVE_NONVOL_FAR (5) 3 Knoten  
+  
+ Ein nicht veränderliches Ganzzahlregister gespeichert, auf dem Stapel mit einem langen Offset, der mit einem MOV anstelle eines PUSH. Dies wird hauptsächlich für die Komprimierung, verwendet, in dem ein nicht flüchtiges Register auf den Stapel an einer Position gespeichert ist, der zuvor zugewiesen wurde. Das Vorgang Info ist die Anzahl des Registers. Der Stapeloffset nicht skalierten wird aufgezeichnet, in der nächsten zwei Vorgangscode Slots entladen, wie zuvor beschrieben.  
+  
+ UWOP_SAVE_XMM128 (8) 2 Knoten  
+  
+ Speichern Sie alle 128 Bits von einem nichtflüchtigen XMM registrieren, auf dem Stapel. Das Vorgang Info ist die Anzahl des Registers. Der Stapeloffset skaliert 16 wird im nächsten Slot aufgezeichnet.  
+  
+ UWOP_SAVE_XMM128_FAR (9) 3 Knoten  
+  
+ Speichern Sie alle 128 Bits von einem nichtflüchtigen XMM registrieren, auf dem Stapel mit einem langen Offset. Das Vorgang Info ist die Anzahl des Registers. Der Stapeloffset nicht skalierten wird in den nächsten beiden Slots aufgezeichnet.  
+  
+ UWOP_PUSH_MACHFRAME (10) 1 Knoten  
+  
+ Bewirken Sie, dass einen Computer Frame.  Dies wird verwendet, um die Auswirkung eines Hardware-Interrupt oder Ausnahme aufzuzeichnen. Es gibt zwei Formen. Wenn das Vorgang Info gleich 0 ist, hat die folgenden auf dem Stapel abgelegt wurden:  
+  
+|||  
+|-|-|  
+|RSP + 32|SS|  
+|RSP + 24|Alte RSP|  
+|RSP + 16|EFLAGS|  
+|RSP + 8|CS|  
 |RSP|RIP|  
   
- Ist die Operationsinfo 1, wurde stattdessen Folgendes abgelegt:  
+ Die Vorgang-Infos 1, gleich, und klicken Sie dann die folgenden stattdessen verschoben wurden:  
   
 |||  
 |-|-|  
-|RSP\+40|SS|  
-|RSP\+32|Alter RSP|  
-|RSP\+24|EFLAGS|  
-|RSP\+16|CS|  
-|RSP\+8|RIP|  
+|RSP + 40|SS|  
+|RSP + 32|Alte RSP|  
+|RSP + 24|EFLAGS|  
+|RSP + 16|CS|  
+|RSP + 8|RIP|  
 |RSP|Fehlercode|  
   
- Dieser Entladecode tritt stets in einem Platzhalter\-Prolog auf, der nie tatsächlich ausgeführt wird, sondern vor dem wirklichen Einstiegspunkt einer Interruptroutine als Platzhalter für die Simulation der Verschiebung eines Computerframes dient.  UWOP\_PUSH\_MACHFRAME zeichnet diese Simulation auf, die angibt, dass der Computer konzeptuell wie folgt vorgegangen ist:  
+ Dieser Code entladen wird immer in eine dummy-Prolog angezeigt, die tatsächlich nie ausgeführt wird, jedoch stattdessen vor der tatsächlichen Einstiegspunkt eine Interrupt-Routine angezeigt wird, und dient nur dazu, um einen Ort zum Simulieren der Push eines Rahmens Computer verfügbar zu machen. UWOP_PUSH_MACHFRAME zeichnet diese Simulation gibt an, dass der Computer konzeptionell Folgendes ausgeführt wurde:  
   
- Auslesen der RIP\-Rückgabeadresse oben im Stapel in *Temp*  
+ POP-RIP Rückgabeadresse vom Anfang des Stapels in *Temp*  
   
- Ablegen von SS  
+ Push-SS  
   
  Ablegen des alten RSP  
   
- Ablegen der EFLAGS  
+ Der EFLAGS  
   
- Ablegen von CS  
+ Push-CS  
   
- Ablegen von *Temp*  
+ Mithilfe von Push übertragen *Temp*  
   
- Ablegen des Fehlercodes \(wenn op info 1 ist\)  
+ Push-Fehlercode (falls Op Info 1 ist)  
   
- Die simulierte UWOP\_PUSH\_MACHFRAME\-Operation dekrementiert RSP um 40 \(op info ist 0\) oder um 48 \(op info ist 1\).  
+ Das simulierte UWOP_PUSH_MACHFRAME Operation dekrementiert RSP um 40 (Op Info ist 0) oder 48 (Op Info ist 1).  
   
- **Operationsinfo**  
- Die Bedeutung dieser 4 Bits ist abhängig vom Operationscode.  Für die Codierung eines Allzweckregisters \(ganzzahlig\) wird folgende Zuordnung verwendet:  
+ **Vorgang info**  
+ Die Bedeutung dieser 4 Bits richtet sich nach dem Vorgangscode. Um eine allgemeine (Integer) registrieren zu codieren, wird die folgende Zuordnung verwendet:  
   
 |||  
 |-|-|  
@@ -137,7 +137,7 @@ Das Entladecode\-Array wird zum Aufzeichnen der Folge von Vorgängen im Prolog v
 |5|RBP|  
 |6|RSI|  
 |7|RDI|  
-|8 bis 15|R8 to R15|  
+|8 bis 15|R8 bis R15|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Entladedaten für die Ausnahmebehandlung, Debuggerunterstützung](../build/unwind-data-for-exception-handling-debugger-support.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -20,36 +19,20 @@ f1_keywords:
 - ATLBASE/ATL::m_Allocator
 - ATLBASE/ATL::m_nThreads
 - ATLBASE/ATL::m_pApartments
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CComAutoThreadModule class
 - apartment model modules
 ms.assetid: 13063ea5-a57e-4aac-97d3-227137262811
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 8e3ad5333d684daff5d8baf462ae805ef8b4b51d
-ms.contentlocale: de-de
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: d07a29ff12edcd590379f9bb30cdc122806a83c6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomautothreadmodule-class"></a>CComAutoThreadModule-Klasse
 Zum Zeitpunkt der ATL 7.0 `CComAutoThreadModule` ist veraltet: finden Sie unter [ATL-Modulklassen](../../atl/atl-module-classes.md) Weitere Details.  
@@ -68,7 +51,7 @@ class CComAutoThreadModule : public CComModule
  `ThreadAllocator`  
  [in] Die Verwaltung von Threads Auswahl-Klasse. Der Standardwert ist [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="methods"></a>Methoden  
   
@@ -102,7 +85,7 @@ class CComAutoThreadModule : public CComModule
   
  Standardmäßig wird der ATL-COM-AppWizard (ATL-Projekt-Assistenten in Visual Studio .NET) leiten Sie das Modul aus `CComModule`. Mit `CComAutoThreadModule`, ändern Sie die Definition der Klasse. Zum Beispiel:  
   
- [!code-cpp[NVC_ATL_AxHost #2](../../atl/codesnippet/cpp/ccomautothreadmodule-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_AxHost#2](../../atl/codesnippet/cpp/ccomautothreadmodule-class_1.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [_ATL_MODULE](atl-typedefs.md#_atl_module)  
@@ -259,4 +242,3 @@ LONG Unlock();
 ## <a name="see-also"></a>Siehe auch  
  [Klassenübersicht](../../atl/atl-class-overview.md)   
  [Modulklassen](../../atl/atl-module-classes.md)
-

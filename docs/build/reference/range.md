@@ -1,54 +1,53 @@
 ---
-title: "/RANGE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/RANGE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/RANGE (dumpbin-Option)"
-  - "-RANGE (dumpbin-Option)"
+title: -BEREICH | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /RANGE
+dev_langs: C++
+helpviewer_keywords:
+- /RANGE dumpbin option
+- -RANGE dumpbin option
 ms.assetid: 7eeba266-32be-49cc-a350-96bdf541f98a
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2558beae1a7bd689beba001f4637b1109b70faa5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# /RANGE
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Wenn \/RANGE mit anderen dumpbin\-Optionen wie \/RAWDATA oder \/DISASM verwendet wird, dient diese Option dem Ändern der Ausgabe von dumpbin.  
+# <a name="range"></a>/RANGE
+Ändert die Ausgabe von Dumpbin bei Verwendung mit anderen Dumpbin-Optionen, z. B./RAWDATA oder/DISASM an.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /RANGE:vaMin[,vaMax]  
 ```  
   
-## Flags  
+## <a name="flags"></a>Flags  
  **vaMin**  
- Die virtuelle Adresse, an der die dumpbin\-Operation starten soll.  
+ Die virtuelle Adresse, an der Sie der Dumpbin beginnen soll.  
   
- **vaMax** \(optional\)  
- Die virtuelle Adresse, an der die dumpbin\-Operation beendet werden soll.  Wenn dieser Parameter nicht angegeben wird, wird dumpbin bis zum Ende der Datei ausgeführt.  
+ **VaMax** (optional)  
+ Die virtuelle Adresse, an der die Dumpbin-Operation beendet werden soll. Wenn nicht angegeben wird, geht die Dumpbin bis zum Ende der Datei.  
   
-## Hinweise  
- Um die virtuellen Adressen für ein Bild anzuzeigen, verwenden Sie die Zuordnungsdatei für das Bild \(RVA \+ Basis\), die **\/DISASM**\-Option oder **\/HEADERS**\-Option von dumpbin oder im Visual Studio\-Debugger das Disassemblyfenster.  
+## <a name="remarks"></a>Hinweise  
+ Um die virtuellen Adressen für ein Bild angezeigt wird, verwenden Sie die Zuordnungsdatei für das Bild (RVA + Basis), die **DISASM** oder **/Headers** -Option von Dumpbin oder im Disassemblyfenster in Visual Studio-Debugger.  
   
-## Beispiel  
- In diesem Beispiel wird mit **\/range** die Anzeige der **\/disasm**\-Option geändert.  Der Startwert wird in diesem Beispiel als Dezimalzahl ausgedrückt, und der Endwert wird als Hexadezimalzahl angegeben.  
+## <a name="example"></a>Beispiel  
+ In diesem Beispiel **/range** wird verwendet, um die Anzeige der Ändern der **DISASM** Option. In diesem Beispiel wird der Startwert wird als Dezimalzahl angegeben, und der Endwert als eine hexadezimale Zahl angegeben wird.  
   
 ```  
 dumpbin /disasm /range:4219334,0x004061CD t.exe  
 ```  
   
-## Siehe auch  
- [DUMPBIN\-Optionen](../../build/reference/dumpbin-options.md)
+## <a name="see-also"></a>Siehe auch  
+ [DUMPBIN-Optionen](../../build/reference/dumpbin-options.md)

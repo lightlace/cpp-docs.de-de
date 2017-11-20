@@ -1,65 +1,65 @@
 ---
-title: "/SWAPRUN (Linkerausgabe in Auslagerungsdatei laden) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.SwapRunFromNet"
-  - "/swaprun"
-  - "VC.Project.VCLinkerTool.SwapRunFromCD"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/SWAPRUN (Linkeroption)"
-  - "Dateien [C++], LINK"
-  - "LINK-Tool [C++], Ausgabe"
-  - "Linker [C++], Kopieren der Ausgabe in eine Auslagerungsdatei"
-  - "Ausgabedateien, Linker"
-  - "Auslagerungsdatei für Linker-Ausgabe"
-  - "SWAPRUN (Linkeroption)"
-  - "-SWAPRUN (Linkeroption)"
+title: -SWAPRUN (Linkerausgabe in Auslagerungsdatei laden) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.SwapRunFromNet
+- /swaprun
+- VC.Project.VCLinkerTool.SwapRunFromCD
+dev_langs: C++
+helpviewer_keywords:
+- -SWAPRUN linker option
+- files [C++], LINK
+- LINK tool [C++], output
+- linker [C++], copying output to swap file
+- swap file for linker output
+- output files, linker
+- /SWAPRUN linker option
+- SWAPRUN linker option
 ms.assetid: 4a1e7f46-4399-4161-8dfc-d6a71beaf683
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f41a89e74ec2e9ed34e0add12717dd0c135ce723
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# /SWAPRUN (Linkerausgabe in Auslagerungsdatei laden)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="swaprun-load-linker-output-to-swap-file"></a>/SWAPRUN (Linkerausgabe in Auslagerungsdatei laden)
 ```  
 /SWAPRUN:{NET|CD}  
 ```  
   
-## Hinweise  
- Die \/SWAPRUN\-Option teilt dem Betriebssystem mit, dass zuerst die Linkerausgabe in eine Auslagerungsdatei kopiert und das Image anschließend von dort aus ausgeführt wird.  Dies ist eine Funktion von Windows NT 4.0 \(oder höher\).  
+## <a name="remarks"></a>Hinweise  
+ Die Option/SWAPRUN weist dem Betriebssystem auf die erste Kopie den Linker-Ausgabe in eine Auslagerungsdatei, und führen Sie das Image von dort aus. Dies ist ein Windows NT 4.0 (oder höher)-Funktion.  
   
- Ist NET angegeben, kopiert das Betriebssystem zuerst das Binärimage vom Netzwerk in eine Auslagerungsdatei und lädt es von dort.  Diese Option ist beim Ausführen von Anwendungen über das Netzwerk hilfreich.  Wenn **CD** angegeben wird, kopiert das Betriebssystem das Bild in eine Auslagerungsdatei auf einem wechselbaren Datenträger und lädt es dann.  
+ Wenn NET angegeben wird, das Betriebssystem zuerst das binäre Abbild aus dem Netzwerk in eine Auslagerungsdatei zu kopieren und von dort aus zu laden. Diese Option eignet sich zum Ausführen von Anwendungen über das Netzwerk. Wenn CD angegeben wird, wird das Betriebssystem das Abbild auf einem Wechseldatenträger in eine Auslagerungsdatei kopieren und dann zu laden.  
   
-### So legen Sie diese Linkeroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Festlegen von Visual C\+\+\-Projekteigenschaften](../../ide/working-with-project-properties.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Klicken Sie auf den Ordner **Linker**.  
+2.  Klicken Sie auf die **Linker** Ordner.  
   
-3.  Klicken Sie auf die Eigenschaftenseite **System**.  
+3.  Klicken Sie auf die **System** Eigenschaftenseite.  
   
 4.  Ändern Sie eine der folgenden Eigenschaften:  
   
-    -   **Wechseln zum Ausführen von der CD\-ROM**  
+    -   **Wechseln zum Ausführen von CD**  
   
-    -   **Wechseln zum Ausführen vom Netz**  
+    -   **Wechseln zum Ausführen vom Netzwerk**  
   
-### So legen Sie diese Linkeroption programmgesteuert fest  
+### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
   
-1.  Siehe die Eigenschaften <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.SwapRunFromCD*> und <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.SwapRunFromNet*>.  
+1.  Siehe die Eigenschaften <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.SwapRunFromCD%2A> und <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.SwapRunFromNet%2A>.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
  [Linkeroptionen](../../build/reference/linker-options.md)

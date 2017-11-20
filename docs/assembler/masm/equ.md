@@ -1,32 +1,30 @@
 ---
-title: "EQU | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "EQU"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "EQU directive"
+title: EQU | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: EQU
+dev_langs: C++
+helpviewer_keywords: EQU directive
 ms.assetid: 96db466a-1eab-45bd-a3c2-5a59bd754eab
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: bc466f35b06790fd503c3b4684714e84f6ebac6a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# EQU
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die ersten Direktive weisen numerischen Wert *des Ausdrucks* *auf den Namen*zu.  
+# <a name="equ"></a>EQU
+Die erste Anweisung weist den numerischen Wert der *Ausdruck* auf *Namen*.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -34,10 +32,10 @@ Die ersten Direktive weisen numerischen Wert *des Ausdrucks* *auf den Namen*zu.
 name EQU <text>  
 ```  
   
-## Hinweise  
- Der *Name* kann später nicht neu definiert werden.  
+## <a name="remarks"></a>Hinweise  
+ Die *Namen* nicht später neu definiert werden.  
   
- Die zweite Direktive weisen *Sie dem Namen*angegebenen *Text* an.  Der *Name* kann einen anderen *Text* später zugewiesen werden.  Weitere Informationen finden Sie unter [TEXTEQU](../../assembler/masm/textequ.md).  
+ Die zweite Anweisung weist angegeben *Text* auf *Namen*. Die *Namen* kann ein anderes zugewiesen werden *Text* später erneut. Finden Sie unter [TEXTEQU](../../assembler/masm/textequ.md).  
   
-## Siehe auch  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)

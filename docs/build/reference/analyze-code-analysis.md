@@ -1,83 +1,83 @@
 ---
-title: "/analyze (Codeanalyse) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.EnablePREfast"
-  - "/analyze"
-  - "VC.Project.VCCLCompilerTool.PREfastAdditionalOptions"
-  - "VC.Project.VCCLCompilerTool.PREfastAdditionalPlugins"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/analyze (Compileroption) [C++]"
-  - "analyze (Compileroption) [C++]"
-  - "-analyze (Compileroption) [C++]"
+title: -analyze (Codeanalyse) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.EnablePREfast
+- /analyze
+- VC.Project.VCCLCompilerTool.PREfastAdditionalOptions
+- VC.Project.VCCLCompilerTool.PREfastAdditionalPlugins
+dev_langs: C++
+helpviewer_keywords:
+- /analyze compiler option [C++]
+- -analyze compiler option [C++]
+- analyze compiler option [C++]
 ms.assetid: 81da536a-e030-4bd4-be18-383927597d08
-caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b640d042f1f8a30246f4d7277a8a5b001722acd9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# /analyze (Codeanalyse)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Aktiviert Codeanalyse\- und Steueroptionen.  
+# <a name="analyze-code-analysis"></a>/analyze (Codeanalyse)
+Aktiviert Codeanalyse- und Steueroptionen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /analyze[-][:WX-][:log filename][:quiet][:stacksize number][:max_paths number][:only]  
 ```  
   
-## Argumente  
- \/analyze  
- Aktiviert die Analyse im Standardmodus.  Die Analyseausgabe erfolgt, wie andere Fehlermeldungen auch, im Fenster **Ausgabe**.  Verwenden Sie **\/analyze\-**, um die Analyse explizit zu deaktivieren.  
+## <a name="arguments"></a>Argumente  
+ /analyze  
+ Aktiviert die Analyse im Standardmodus. Analyseausgabe der **Ausgabe** wie andere Fehlermeldungen im Fenster. Verwendung **/ analyze-** Analyse explizit zu deaktivieren.  
   
- \/analyze:WX\-  
- Die Angabe von **\/analyze:WX\-** bedeutet, dass Codeanalysewarnungen nicht als Fehler behandelt werden, wenn Sie zum Kompilieren **\/WX** verwenden.  Weitere Informationen finden Sie unter [\/w, \/Wn, \/WX, \/Wall, \/wln, \/wdn, \/wen, \/won \(Warnstufe\)](../../build/reference/compiler-option-warning-level.md).  
+ /analyze:WX-  
+ Angeben von **/ analyze: WX -** bedeutet, die codeanalysewarnungen nicht als Fehler behandelt werden, wenn Sie bei der Kompilierung **/WX**. Weitere Informationen finden Sie unter [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX (Warnstufe)](../../build/reference/compiler-option-warning-level.md).  
   
- \/analyze:log `filename`  
+ /analyze:log `filename`  
  Ausführliche Analysergebnisse werden als XML in die von `filename` angegebene Datei geschrieben.  
   
- \/analyze:quiet  
- Deaktiviert die Analyseausgabe im Fenster **Ausgabe**.  
+ /analyze:quiet  
+ Aktiviert die Analyseausgabe der **Ausgabe** Fenster.  
   
- \/analyze:stacksize `number`  
- Der mit dieser Option verwendete Parameter `number` gibt die Größe des Stapelrahmens in Byte an, für den die Warnung [C6262](../Topic/C6262.md) generiert wird.  Wenn dieser Parameter nicht angegeben wird, beträgt die Größe des Stapelrahmens standardmäßig 16 KB.  
+ /analyze:stacksize `number`  
+ Die `number` mit dieser Option verwendete Parameter gibt die Größe in Bytes, des Stapelrahmens für den die Warnung [C6262](/visualstudio/code-quality/c6262) wird generiert. Wenn dieser Parameter nicht angegeben wird, beträgt die Größe des Stapelrahmens standardmäßig 16 KB.  
   
- \/analyze:max\_paths `number`  
- Der mit dieser Option verwendete Parameter `number` gibt die maximale Anzahl der zu analysierenden Codepfade an.  Wenn dieser Parameter nicht angegeben wird, beträgt die Anzahl standardmäßig 256.  Bei höheren Werten ist die Überprüfung gründlicher, die Analyse dauert aber möglicherweise auch länger.  
+ /analyze:max_paths `number`  
+ Der mit dieser Option verwendete Parameter `number` gibt die maximale Anzahl der zu analysierenden Codepfade an. Wenn dieser Parameter nicht angegeben wird, beträgt die Anzahl standardmäßig 256. Bei höheren Werten ist die Überprüfung gründlicher, die Analyse dauert aber möglicherweise auch länger.  
   
- \/analyze:only  
- In der Regel generiert der Compiler Code und führt nach der Ausführung der Analyse eine erweiterte Syntaxprüfung durch.  Die Option **\/analyze:only** deaktiviert diesen Codegenerierungsdurchgang; dadurch wird zwar die Analyse beschleunigt, allerdings werden manche Compilerfehler und \-warnungen, die bei der Codegenerierung möglicherweise entdeckt worden wären, nicht ausgegeben.  Wenn das Programm Codegenerierungsfehler enthält, sind die Analyseergebnisse möglicherweise unzuverlässig; daher wird empfohlen, diese Option nur zu verwenden, wenn der Code die Syntaxüberprüfung bereits bestanden hat.  
+ /analyze:only  
+ In der Regel generiert der Compiler Code und führt nach der Ausführung der Analyse eine erweiterte Syntaxprüfung durch. Die **/ analyze: nur** Option deaktiviert diesen; dies Analyse beschleunigt aber Kompilierungsfehler und Warnungen, die durch die Übergabe des Code-Generierung des Compilers ermittelt wurden möglicherweise nicht ausgegeben. Wenn das Programm Codegenerierungsfehler enthält, sind die Analyseergebnisse möglicherweise unzuverlässig; daher wird empfohlen, diese Option nur zu verwenden, wenn der Code die Syntaxüberprüfung bereits bestanden hat.  
   
-## Hinweise  
- Weitere Informationen finden Sie unter [Übersicht über die Codeanalyse für C\/C\+\+](../Topic/Code%20Analysis%20for%20C-C++%20Overview.md) und [Codeanalyse für C\/C\+\+\-Warnungen](../Topic/Code%20Analysis%20for%20C-C++%20Warnings.md).  
+## <a name="remarks"></a>Hinweise  
+ Weitere Informationen finden Sie unter [Codeanalyse für C/C++-Übersicht](/visualstudio/code-quality/code-analysis-for-c-cpp-overview) und [Codeanalyse für C/C++-Warnungen](/visualstudio/code-quality/code-analysis-for-c-cpp-warnings).  
   
-### So legen Sie diese Compileroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Gewusst wie: Öffnen von Projekteigenschaftenseiten](../../misc/how-to-open-project-property-pages.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Erweitern Sie den Knoten **Konfigurationseigenschaften**.  
+2.  Erweitern Sie die **Konfigurationseigenschaften** Knoten.  
   
-3.  Erweitern Sie den Knoten **Codeanalyse**.  
+3.  Erweitern Sie die **Codeanalyse** Knoten.  
   
 4.  Wählen Sie die Eigenschaftenseite **Allgemein** aus.  
   
-5.  Ändern Sie mindestens eine Eigenschaft unter **Codeanalyse**.  
+5.  Ändern Sie eine oder mehrere der **Codeanalyse** Eigenschaften.  
   
-### So legen Sie diese Compileroption programmgesteuert fest  
+### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
   
-1.  Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnablePREfast*>.  
+1.  Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnablePREfast%2A>.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Compileroptionen](../../build/reference/compiler-options.md)   
  [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

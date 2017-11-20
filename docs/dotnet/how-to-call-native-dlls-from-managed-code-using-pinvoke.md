@@ -1,38 +1,38 @@
 ---
-title: "Gewusst wie: Aufrufen von systemeigenen DLLs in verwaltetem Code mithilfe von PInvoke | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Datenmarshalling [C++], Aufrufen systemeigener DLLs"
-  - "Interop [C++], Aufrufen systemeigener DLLs"
-  - "Marshaling [C++], Aufrufen systemeigener DLLs"
-  - "Plattformaufruf [C++], Aufrufen systemeigener DLLs"
+title: 'Vorgehensweise: Aufrufen von systemeigenen DLLs in verwaltetem Code mithilfe von PInvoke | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- platform invoke [C++], calling native DLLs
+- interop [C++], calling native DLLs
+- marshaling [C++], calling native DLLs
+- data marshaling [C++], calling native DLLs
 ms.assetid: 3273eb4b-38d1-4619-92a6-71bda542be72
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8ebf8d806b5decdbc3e694fc62146a55ef53151c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Gewusst wie: Aufrufen von systemeigenen DLLs in verwaltetem Code mithilfe von PInvoke
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Funktionen, die in nicht verwalteten DLLs implementiert sind, können von verwaltetem Code über Plattformaufrufe \(P\/Invoke\) aufgerufen werden.  Wenn der Quellcode für die DLL nicht verfügbar ist, ist P\/Invoke die einzige Option für die Interoperation.  Im Gegensatz zu anderen .NET\-Sprachen stellt Visual C\+\+ jedoch eine Alternative zu P\/Invoke bereit.  Weitere Informationen finden Sie unter [Verwenden von C\+\+\-Interop \(implizites PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
+# <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>Gewusst wie: Aufrufen von systemeigenen DLLs in verwaltetem Code mithilfe von PInvoke
+Funktionen, die in nicht verwaltete DLLs implementiert werden, können in verwaltetem Code mithilfe des Plattformaufrufs (P/Invoke) aufgerufen werden. Wenn der Quellcode für die DLL nicht verfügbar ist, ist P/Invoke die einzige Option für die Interoperation. Im Gegensatz zu anderen bietet Visual C++ jedoch eine Alternative zum P/Invoke. Weitere Informationen finden Sie unter [mithilfe von C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
   
-## Beispiel  
- Im folgenden Codebeispiel wird mit der [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385)\-Funktion von Win32 die aktuelle Auflösung des Bildschirms in Pixel abgerufen.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Codebeispiel wird mithilfe der Win32- [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385) -Funktion zum Abrufen der aktuellen Auflösung des Bildschirms in Pixel.  
   
- Bei Funktionen, die als Argumente und Rückgabewerte nur systeminterne Typen verwenden, müssen keine weiteren Aufgaben durchgeführt werden.  Für andere Datentypen wie Funktionszeiger, Arrays und Strukturen sind weitere Attribute erforderlich, um ein ordnungsgemäßes Datenmarshalling sicher zu stellen.  
+ Für Funktionen, die nur systeminterne Typen als Argumente und Rückgabewerte verwenden, ist keine zusätzliche Arbeit erforderlich. Andere Datentypen wie Funktionszeiger, Arrays und Strukturen, erfordern zusätzliche Attribute, um sicherzustellen, dass der richtige Daten-Marshalling.  
   
- Obwohl dies nicht erforderlich ist, stellt es eine gute Übung dar, die P\/Invoke\-Deklarationen als statische Member einer Werteklasse zu erstellen. Wie im folgenden Beispiel dargestellt, sind die Deklarationen auf diese Weise nicht im globalen Namespace vorhanden.  
+ Obwohl es nicht erforderlich ist, ist es empfiehlt sich, P/Invoke-Deklarationen, statische Member einer Wertklasse vornehmen, damit sie nicht im globalen Namespace vorhanden sind, wie im folgenden Beispiel veranschaulicht.  
   
 ```  
 // pinvoke_basic.cpp  
@@ -59,5 +59,5 @@ int main() {
 }  
 ```  
   
-## Siehe auch  
- [Verwenden von explizitem PInvoke in C\+\+ \(DllImport\-Attribut\)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+## <a name="see-also"></a>Siehe auch  
+ [Verwenden von explizitem PInvoke in C++ (DllImport-Attribut)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

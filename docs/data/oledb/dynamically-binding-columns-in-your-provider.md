@@ -1,48 +1,48 @@
 ---
-title: "Dynamisches Binden von Spalten im Anbieter | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Spalten [C++], Dynamische Spaltenbindung"
-  - "Dynamische Spaltenbindung"
-  - "Anbieter [C++], Dynamische Spaltenbindung"
+title: Dynamisches Binden von Spalten im Anbieter | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- columns [C++], dynamic column binding
+- dynamic column binding
+- providers [C++], dynamic column binding
 ms.assetid: 45e811e3-f5a7-4627-98cc-bf817c4e556e
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d942ea203b018e39a98bd731fe2ca9e89b55d3e0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Dynamisches Binden von Spalten im Anbieter
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Prüfen Sie, ob die dynamische Spaltenbindung wirklich erforderlich ist.  Möglicherweise ist sie aus folgenden Gründen erforderlich:  
+# <a name="dynamically-binding-columns-in-your-provider"></a>Dynamisches Binden von Spalten im Anbieter
+Stellen Sie sicher, dass Sie dynamische spaltenbindung eigentlich benötigen. Sie können ihn benötigen, da:  
   
--   Rowsetspalten werden nicht zur Kompilierungszeit definiert.  
+-   Die Rowsetspalten sind nicht zum Zeitpunkt der Kompilierung definiert.  
   
--   Es werden Elemente wie Lesezeichen unterstützt, durch die Spalten hinzugefügt werden.  
+-   Sie unterstützen ein Element wie das Lesezeichen, die Spalten hinzugefügt.  
   
-### So implementieren Sie die dynamische Spaltenbindung  
+### <a name="to-implement-dynamic-column-binding"></a>Dynamische spaltenbindung implementieren.  
   
-1.  Entfernen Sie alle **PROVIDER\_COLUMN\_MAP**\-Zuordnungen aus dem Code.  
+1.  Entfernen Sie alle **Makro**s aus dem Code.  
   
-2.  Fügen Sie dem Benutzerdatensatz \(Ihrer Struktur\) die folgende Deklaration hinzu:  
+2.  Fügen Sie im Benutzerdatensatz (Ihrer Struktur) die folgende Deklaration hinzu:  
   
     ```  
     static ATLCOLUMNINFO* GetColumnInfo(void* pThis, ULONG* pcCols);  
     ```  
   
-3.  Implementieren Sie die `GetColumnInfo`\-Funktion.  Diese Funktion legt fest, wie die Informationen gespeichert und angeordnet werden.  Für diese Funktion müssen Sie u. U. Eigenschaften oder andere Informationen abrufen.  Um die Informationen hinzuzufügen, können Sie ein Makro wie [COLUMN\_ENTRY](../../data/oledb/column-entry.md) erstellen.  
+3.  Implementieren der `GetColumnInfo` Funktion. Diese Funktion Layout wie die Informationen gespeichert werden. Möglicherweise müssen Sie die Eigenschaften oder andere Informationen für diese Funktion zu erhalten. Möglicherweise möchten Sie erstellen Sie ein Makro, ähnlich wie die [COLUMN_ENTRY](../../data/oledb/column-entry.md) -Makro, um Ihre eigenen Informationen hinzuzufügen.  
   
-     Im folgenden Beispiel ist eine `GetColumnInfo`\-Funktion dargestellt.  
+     Das folgende Beispiel zeigt eine `GetColumnInfo` Funktion.  
   
     ```  
     // Check the property flag for bookmarks, if it is set, set the zero  
@@ -95,5 +95,5 @@ Prüfen Sie, ob die dynamische Spaltenbindung wirklich erforderlich ist.  Mögli
     }  
     ```  
   
-## Siehe auch  
- [Arbeiten mit OLE DB\-Anbietervorlagen](../../data/oledb/working-with-ole-db-provider-templates.md)
+## <a name="see-also"></a>Siehe auch  
+ [Arbeiten mit OLE DB-Anbietervorlagen](../../data/oledb/working-with-ole-db-provider-templates.md)

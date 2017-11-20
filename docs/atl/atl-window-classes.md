@@ -1,59 +1,60 @@
 ---
-title: "ATL-Fensterklassen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, Fenster"
-  - "Erstellen von Unterklassen für ATL-Fensterklassen"
-  - "Erstellen von übergeordneten Klassen"
-  - "Erstellen von übergeordneten Klassen, ATL"
-  - "Fenster [C++], ATL"
-  - "Fenster [C++], Unterklasse erstellen"
-  - "Fenster [C++], Erstellen von übergeordneten Klassen"
+title: ATL-Fensterklassen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ATL, windows
+- windows [C++], subclassing
+- windows [C++], superclassing
+- windows [C++], ATL
+- subclassing ATL window classes
+- superclassing
+- superclassing, ATL
 ms.assetid: 1d12b708-de3e-49d5-9e41-42fe4769fa62
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 18925307a685dc338912a80398154065edfa12dd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# ATL-Fensterklassen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-ATL enthält mehrere Klassen, die es Ihnen ermöglichen, Fenster zu verwenden und zu implementieren.  Diese Klassen, wie andere ATL\-Klassen, bieten eine effiziente Implementierung, die einen Mehraufwand nicht im Code erzwingt.  
+# <a name="atl-window-classes"></a>ATL-Fensterklassen
+ATL umfasst mehrere Klassen, mit denen Sie zur Verwendung und Implementierung von Windows. Diese Klassen, z. B. anderen ATL-Klassen bieten eine effiziente Implementierung, die unterscheiden sich ein Mehraufwand für Ihren Code.  
   
- In diesem Abschnitt werden die ATL\-Fensterklassen und erläutert, wie sie verwendet.  
+ In diesem Abschnitt wird beschrieben, die ATL-Fensterklassen und erläutert deren Verwendung.  
   
-## In diesem Abschnitt  
- [Einführung in ATL\-Fensterklassen](../atl/introduction-to-atl-window-classes.md)  
- Beschreibt kurz jede ATL\-Fensterklasse und enthält Links zur Referenzmaterial auf ihnen bereit.  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [Einführung in ATL-Fensterklassen](../atl/introduction-to-atl-window-classes.md)  
+ Kurzbeschreibung jeder ATL-Fensterklasse und Links zu den Referenzmaterial darauf.  
   
  [Verwenden eines Fensters](../atl/using-a-window.md)  
- Erläutert, wie `CWindow` verwendet, um ein Fenster zu bearbeiten.  
+ Erläutert, wie `CWindow` zum Bearbeiten eines Fensters.  
   
  [Implementieren eines Fensters](../atl/implementing-a-window.md)  
- Erläutert Meldungshandler, Meldungszuordnungen und Verwenden von `CWindowImpl`.  Enthält Informationen über das Erstellen einer übergeordneten Klasse für und das Erstellen von Unterklassen von ein.  
+ Erläutert Meldungshandler, nachrichtenzuordnungen und mit `CWindowImpl`. Enthält Informationen zum Erstellen von übergeordneten Klassen und Unterklassen.  
   
  [Implementieren eines Dialogfelds](../atl/implementing-a-dialog-box.md)  
- Erläutert die zwei Methoden für das Hinzufügen einer Dialogfeldklasse und zeigt ein Codebeispiel an.  
+ Beschreibt die zwei Methoden zum Hinzufügen einer Dialogfeldklasse, und zeigt ein Beispiel.  
   
- [Verwenden von Windows enthaltenen](../atl/using-contained-windows.md)  
- Discusses enthielt Fenster in ATL, die Fenster sind, die ihre Nachrichten zu einem Containerobjekt delegieren, anstatt in ihrer eigenen Klasse zu behandeln.  
+ [Verwenden von enthaltenen Fenstern](../atl/using-contained-windows.md)  
+ Erläutert die enthaltenen Fenstern in ATL, Windows, die ihre Nachrichten an ein Container-Objekt nicht in ihrer eigenen Klasse zu delegieren.  
   
- [Verständnisfenster\-Merkmale](../atl/understanding-window-traits.md)  
- Erläutert Fenstermerkmalklassen in ATL.  Diese Klassen bieten eine einfache Methode für die Normung der Formate bereit, die für die Erstellung eines Fensterobjekts verwendet werden.  
+ [Einführung in Fenstermerkmale](../atl/understanding-window-traits.md)  
+ Erläutert Fenster Traits-Klassen in ATL Diese Klassen bieten eine einfache Methode zum für die Erstellung eines Objekts Fenster verwendeten Stile zu standardisieren.  
   
-## Verwandte Abschnitte  
+## <a name="related-sections"></a>Verwandte Abschnitte  
  [ATL](../atl/active-template-library-atl-concepts.md)  
- Enthält Links zu konzeptionellen Themen darüber, wie mit Active Template Library Programmierung.  
+ Enthält Links zu konzeptionellen Themen über die Programmierung mit der Active Template Library.  
   
- [Windows\-Stützklassen](../atl/windows-support-classes.md)  
- Führt zusätzliche ATL\-Klassen auf, die Fenster und Meldungszuordnungen in ATL unterstützen.
+ [Klassen für den Windows Support](../atl/windows-support-classes.md)  
+ Führt zusätzliche ATL-Klassen, die Unterstützung von Windows und den meldungszuordnungen in ATL
+

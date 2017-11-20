@@ -1,63 +1,62 @@
 ---
-title: "CColumnAccessor-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CColumnAccessor"
-  - "ATL::CColumnAccessor"
-  - "ATL.CColumnAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CColumnAccessor-Klasse"
+title: CColumnAccessor-Klasse | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CColumnAccessor
+- ATL::CColumnAccessor
+- ATL.CColumnAccessor
+dev_langs: C++
+helpviewer_keywords: CColumnAccessor class
 ms.assetid: 6ce1e67f-6a20-490d-9326-c168b43eee7e
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 80193ff0304d55597e6690ac57ce06a482ef792d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# CColumnAccessor-Klasse
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Generiert Zusammenfassungstabelle Consumercode ein.  
+# <a name="ccolumnaccessor-class"></a>CColumnAccessor-Klasse
+Generiert Consumercode eingefügten.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CColumnAccessor : public CAccessorBase  
 ```  
   
-## Hinweise  
- Im eingefügten Code wird jede Spalte als separater Accessor gebunden.  Sie sollten beachten, dass diese Klasse im eingefügten Code \(beispielsweise, können Sie ihn an, als Debuggen\), verwendet werden, aber Sie müssen ihn oder seine Methoden in der Regel nie direkt verwenden.  
+## <a name="remarks"></a>Hinweise  
+ In den eingefügten Code wird jede Spalte als eine separate Accessor gebunden. Sollten Sie bedenken, dass diese Klasse in den eingefügten Code verwendet wird (z. B. Sie rechnen müssen sie beim Debuggen), jedoch in der Regel nie müssen Sie es oder seine Methoden direkt verwenden.  
   
- `CColumnAccessor` implementiert die folgenden Stubmethoden, von denen jede der Funktionen zu anderen Accessorklassenmethoden entsprechen:  
+ `CColumnAccessor`implementiert die folgenden Stubmethoden, von denen jedes an der Funktionalität anderer Methoden des Eigenschaftenaccessors Klasse entsprechen:  
   
--   `CColumnAccessor`; der Konstruktor instanziiert und initialisiert das `CColumnAccessor`\-Objekt.  
+-   `CColumnAccessor`Der Konstruktor; instanziiert und initialisiert die `CColumnAccessor` Objekt.  
   
--   `CreateAccessor` belegt für die Bindung Strukturen der Spalte Speicher und initialisiert die Spaltendatenmembern.  
+-   `CreateAccessor`Belegt Speicher für die Spalte bindungsstrukturen aus, und die spaltendatenmember initialisiert.  
   
--   **BindColumns** ausführen zu den Accessoren.  
+-   **BindColumns** Spalten Accessoren gebunden.  
   
--   **SetParameterBuffer** ordnet Puffern für Parameter zu.  
+-   **SetParameterBuffer** weist Puffer für Parameter.  
   
--   `AddParameter` fügt ein Parametereintrag den Parametereintragsstrukturen hinzu.  
+-   `AddParameter`Die Parameter Eintrag Strukturen wird ein Parametereintrag eines hinzugefügt.  
   
--   **HasOutputColumns** legt fest, ob der Accessor Ausgabespalten hat  
+-   **HasOutputColumns** bestimmt, ob der Accessor Ausgabespalten hat  
   
--   **HasParameters** legt fest, ob der Accessor Parameter verfügt.  
+-   **HasParameters** bestimmt, ob der Accessor über Parameter verfügt.  
   
--   `BindParameters` umschließt die erstellten Parameter an Spalten.  
+-   `BindParameters`Die erstellte Parameter an Spalten gebunden.  
   
-## Anforderungen  
- **Header:**  atldbcli.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** atldbcli.h  
   
-## Siehe auch  
- [OLE DB\-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenz der OLE DB\-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)

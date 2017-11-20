@@ -1,54 +1,43 @@
 ---
-title: "Registrierung der Makros für den Datenaustausch | Microsoft-Dokumentation"
+title: Registrierungsdaten Exchange Makros | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- RegistryDataExchange function, macros
+f1_keywords:
+- atlplus/ATL::BEGIN_RDX_MAP
+- atlplus/ATL::END_RDX_MAP
+- atlplus/ATL::RDX_BINARY
+- atlplus/ATL::RDX_CSTRING_TEXT
+- atlplus/ATL::RDX_DWORD
+- atlplus/ATL::RDX_TEXT
+dev_langs: C++
+helpviewer_keywords: RegistryDataExchange function, macros
 ms.assetid: c1bc5e79-2307-43d2-9d10-3a62ffadf473
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: ee3c1d639ee4a6c6bd6cf26a8c59bb1a37a4fa02
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: f0864a46faf7fa083a2272cd56c72c8e4210ec5e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="registry-data-exchange-macros"></a>Registrierung Data Exchange-Makros
-Diese Makros Registrierung Data Exchange-Vorgänge.  
+Diese Makros Registrierung Datenaustausch-Vorgänge.  
   
 |||  
 |-|-|  
 |[BEGIN_RDX_MAP](#begin_rdx_map)|Markiert den Beginn der Registrierung den Datenaustausch Zuordnung.|  
 |[END_RDX_MAP](#end_rdx_map)|Markiert das Ende der Zuordnung Registrierung Datenaustausch.|  
-|[RDX_BINARY](#rdx_binary)|Ordnet den angegebenen Registrierungseintrag eine angegebene Membervariable vom Typ BYTE.|  
-|[RDX_CSTRING_TEXT](#rdx_cstring_text)|Ordnet den angegebenen Registrierungseintrag einen angegebenen Membervariable vom Typ CString.|  
-|[RDX_DWORD](#rdx_dword)|Ordnet den angegebenen Registrierungseintrag einen angegebenen Membervariable vom Typ DWORD.|  
-|[RDX_TEXT](#rdx_text)|Ordnet den angegebenen Registrierungseintrag einen angegebenen Membervariable vom Typ TCHAR.|  
+|[RDX_BINARY](#rdx_binary)|Ordnet den angegebenen Registrierungseintrag mit einer Variablen angegebene Element vom Typ BYTE.|  
+|[RDX_CSTRING_TEXT](#rdx_cstring_text)|Ordnet den angegebenen Registrierungseintrag mit einer angegebenen Membervariable vom Typ CString.|  
+|[RDX_DWORD](#rdx_dword)|Ordnet den angegebenen Registrierungseintrag mit einer angegebenen Membervariable vom Typ DWORD.|  
+|[RDX_TEXT](#rdx_text)|Ordnet den angegebenen Registrierungseintrag mit einer angegebenen Membervariable der TCHAR-Typ.|  
 
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlplus.h  
@@ -61,16 +50,16 @@ BEGIN_RDX_MAP
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die folgenden Makros werden in der Registrierung den Datenaustausch-Zuordnung verwendet, zum Lesen und Schreiben von Einträgen in der Registrierung:  
+ Die folgenden Makros werden in der Registrierung den Datenaustausch-Zuordnung zum Lesen und Schreiben von Einträgen in der systemregistrierung verwendet:  
   
 |Makro|Beschreibung|  
 |-----------|-----------------|  
-|[RDX_BINARY](#rdx_binary)|Ordnet den angegebenen Registrierungseintrag eine angegebene Membervariable vom Typ BYTE.|  
-|[RDX_DWORD](#rdx_dword)|Ordnet den angegebenen Registrierungseintrag einen angegebenen Membervariable vom Typ DWORD.|  
-|[RDX_CSTRING_TEXT](#rdx_cstring_text)|Ordnet den angegebenen Registrierungseintrag einen angegebenen Membervariable vom Typ CString.|  
-|[RDX_TEXT](#rdx_text)|Ordnet den angegebenen Registrierungseintrag einen angegebenen Membervariable vom Typ TCHAR.|  
+|[RDX_BINARY](#rdx_binary)|Ordnet den angegebenen Registrierungseintrag mit einer Variablen angegebene Element vom Typ BYTE.|  
+|[RDX_DWORD](#rdx_dword)|Ordnet den angegebenen Registrierungseintrag mit einer angegebenen Membervariable vom Typ DWORD.|  
+|[RDX_CSTRING_TEXT](#rdx_cstring_text)|Ordnet den angegebenen Registrierungseintrag mit einer angegebenen Membervariable vom Typ CString.|  
+|[RDX_TEXT](#rdx_text)|Ordnet den angegebenen Registrierungseintrag mit einer angegebenen Membervariable der TCHAR-Typ.|  
   
- Die globale Funktion [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), oder die Member-Funktion mit dem gleichen Namen erstellt, indem die `BEGIN_RDX_MAP` und `END_RDX_MAP` Makros, sollte immer der Code muss auf den Datenaustausch zwischen der Registrierung und in der Zuordnung RDX angegebenen Variablen verwendet werden.  
+ Die globale Funktion [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), oder die Member-Funktion mit demselben Namen erstellt, indem die `BEGIN_RDX_MAP` und `END_RDX_MAP` Makros sollte verwendet werden, wenn Code für den Datenaustausch zwischen der systemregistrierung implementiert werden muss und die Variablen, die in der RDX-Zuordnung angegeben werden.  
   
 ##  <a name="end_rdx_map"></a>END_RDX_MAP  
  Markiert das Ende der Zuordnung Registrierung Datenaustausch.  
@@ -80,7 +69,7 @@ END_RDX_MAP
 ```  
   
 ##  <a name="rdx_binary"></a>RDX_BINARY  
- Ordnet den angegebenen Registrierungseintrag eine angegebene Membervariable vom Typ BYTE.  
+ Ordnet den angegebenen Registrierungseintrag mit einer Variablen angegebene Element vom Typ BYTE.  
   
 ```
 RDX_BINARY(
@@ -93,7 +82,7 @@ RDX_BINARY(
   
 ### <a name="parameters"></a>Parameter  
  `rootkey`  
- Der Schlüssel Registrierungsstamm.  
+ Die wichtigsten Registrierungsstamm.  
   
  `subkey`  
  Der Registrierungsunterschlüssel.  
@@ -102,16 +91,16 @@ RDX_BINARY(
  Der Registrierungsschlüssel.  
   
  `member`  
- Die Membervariable den angegebenen Eintrag zugeordnet.  
+ Die Membervariable, den angegebenen Registrierungseintrag zugeordnet werden soll.  
   
  `member_size`  
- Die Größe in Bytes, der Membervariablen.  
+ Die Größe in Bytes, der die Membervariablen gespeichert.  
   
 ### <a name="remarks"></a>Hinweise  
- Dieses Makro wird verwendet, in Verbindung mit der `BEGIN_RDX_MAP` und `END_RDX_MAP` Makros, einen bestimmten Registrierungseintrag eine Membervariable zugeordnet. Die globale Funktion [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), oder die Member-Funktion mit dem gleichen Namen erstellt, indem die `BEGIN_RDX_MAP` und `END_RDX_MAP` Makros sollte verwendet werden, um den Austausch von Daten zwischen der Registrierung und die Membervariablen in der Zuordnung RDX ausführen.  
+ Dieses Makro wird verwendet, in Verbindung mit der `BEGIN_RDX_MAP` und `END_RDX_MAP` Makros, einen bestimmten Registrierungseintrag eine Membervariable zugeordnet werden soll. Die globale Funktion [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), oder die Member-Funktion mit demselben Namen erstellt, indem die `BEGIN_RDX_MAP` und `END_RDX_MAP` Makros sollte verwendet werden, um den Austausch von Daten zwischen der systemregistrierung und das Element ausführen Variablen in der RDX-Zuordnung.  
   
 ##  <a name="rdx_cstring_text"></a>RDX_CSTRING_TEXT  
- Ordnet den angegebenen Registrierungseintrag einen angegebenen Membervariable vom Typ CString.  
+ Ordnet den angegebenen Registrierungseintrag mit einer angegebenen Membervariable vom Typ CString.  
   
 ```
 RDX_CSTRING_TEXT(
@@ -124,7 +113,7 @@ RDX_CSTRING_TEXT(
   
 ### <a name="parameters"></a>Parameter  
  `rootkey`  
- Der Schlüssel Registrierungsstamm.  
+ Die wichtigsten Registrierungsstamm.  
   
  `subkey`  
  Der Registrierungsunterschlüssel.  
@@ -133,16 +122,16 @@ RDX_CSTRING_TEXT(
  Der Registrierungsschlüssel.  
   
  `member`  
- Die Membervariable den angegebenen Eintrag zugeordnet.  
+ Die Membervariable, den angegebenen Registrierungseintrag zugeordnet werden soll.  
   
  `member_size`  
- Die Größe in Bytes, der Membervariablen.  
+ Die Größe in Bytes, der die Membervariablen gespeichert.  
   
 ### <a name="remarks"></a>Hinweise  
- Dieses Makro wird verwendet, in Verbindung mit der `BEGIN_RDX_MAP` und `END_RDX_MAP` Makros, einen bestimmten Registrierungseintrag eine Membervariable zugeordnet. Die globale Funktion [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), oder die Member-Funktion mit dem gleichen Namen erstellt, indem die `BEGIN_RDX_MAP` und `END_RDX_MAP` Makros sollte verwendet werden, um den Austausch von Daten zwischen der Registrierung und die Membervariablen in der Zuordnung RDX ausführen.  
+ Dieses Makro wird verwendet, in Verbindung mit der `BEGIN_RDX_MAP` und `END_RDX_MAP` Makros, einen bestimmten Registrierungseintrag eine Membervariable zugeordnet werden soll. Die globale Funktion [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), oder die Member-Funktion mit demselben Namen erstellt, indem die `BEGIN_RDX_MAP` und `END_RDX_MAP` Makros sollte verwendet werden, um den Austausch von Daten zwischen der systemregistrierung und das Element ausführen Variablen in der RDX-Zuordnung.  
   
 ##  <a name="rdx_dword"></a>RDX_DWORD  
- Ordnet den angegebenen Registrierungseintrag einen angegebenen Membervariable vom Typ DWORD.  
+ Ordnet den angegebenen Registrierungseintrag mit einer angegebenen Membervariable vom Typ DWORD.  
   
 ```
 RDX_DWORD(
@@ -155,7 +144,7 @@ RDX_DWORD(
   
 ### <a name="parameters"></a>Parameter  
  `rootkey`  
- Der Schlüssel Registrierungsstamm.  
+ Die wichtigsten Registrierungsstamm.  
   
  `subkey`  
  Der Registrierungsunterschlüssel.  
@@ -164,16 +153,16 @@ RDX_DWORD(
  Der Registrierungsschlüssel.  
   
  `member`  
- Die Membervariable den angegebenen Eintrag zugeordnet.  
+ Die Membervariable, den angegebenen Registrierungseintrag zugeordnet werden soll.  
   
  `member_size`  
- Die Größe in Bytes, der Membervariablen.  
+ Die Größe in Bytes, der die Membervariablen gespeichert.  
   
 ### <a name="remarks"></a>Hinweise  
- Dieses Makro wird verwendet, in Verbindung mit der `BEGIN_RDX_MAP` und `END_RDX_MAP` Makros, einen bestimmten Registrierungseintrag eine Membervariable zugeordnet. Die globale Funktion [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), oder die Member-Funktion mit dem gleichen Namen erstellt, indem die `BEGIN_RDX_MAP` und `END_RDX_MAP` Makros sollte verwendet werden, um den Austausch von Daten zwischen der Registrierung und die Membervariablen in der Zuordnung RDX ausführen.  
+ Dieses Makro wird verwendet, in Verbindung mit der `BEGIN_RDX_MAP` und `END_RDX_MAP` Makros, einen bestimmten Registrierungseintrag eine Membervariable zugeordnet werden soll. Die globale Funktion [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), oder die Member-Funktion mit demselben Namen erstellt, indem die `BEGIN_RDX_MAP` und `END_RDX_MAP` Makros sollte verwendet werden, um den Austausch von Daten zwischen der systemregistrierung und das Element ausführen Variablen in der RDX-Zuordnung.  
   
 ##  <a name="rdx_text"></a>RDX_TEXT  
- Ordnet den angegebenen Registrierungseintrag einen angegebenen Membervariable vom Typ TCHAR.  
+ Ordnet den angegebenen Registrierungseintrag mit einer angegebenen Membervariable der TCHAR-Typ.  
   
 ```
 RDX_TEXT(
@@ -186,7 +175,7 @@ RDX_TEXT(
   
 ### <a name="parameters"></a>Parameter  
  `rootkey`  
- Der Schlüssel Registrierungsstamm.  
+ Die wichtigsten Registrierungsstamm.  
   
  `subkey`  
  Der Registrierungsunterschlüssel.  
@@ -195,18 +184,17 @@ RDX_TEXT(
  Der Registrierungsschlüssel.  
   
  `member`  
- Die Membervariable den angegebenen Eintrag zugeordnet.  
+ Die Membervariable, den angegebenen Registrierungseintrag zugeordnet werden soll.  
   
  `member_size`  
- Die Größe in Bytes, der Membervariablen.  
+ Die Größe in Bytes, der die Membervariablen gespeichert.  
   
 ### <a name="remarks"></a>Hinweise  
- Dieses Makro wird verwendet, in Verbindung mit der `BEGIN_RDX_MAP` und `END_RDX_MAP` Makros, einen bestimmten Registrierungseintrag eine Membervariable zugeordnet. Die globale Funktion [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), oder die Member-Funktion mit dem gleichen Namen erstellt, indem die `BEGIN_RDX_MAP` und `END_RDX_MAP` Makros sollte verwendet werden, um den Austausch von Daten zwischen der Registrierung und die Membervariablen in der Zuordnung RDX ausführen.  
+ Dieses Makro wird verwendet, in Verbindung mit der `BEGIN_RDX_MAP` und `END_RDX_MAP` Makros, einen bestimmten Registrierungseintrag eine Membervariable zugeordnet werden soll. Die globale Funktion [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), oder die Member-Funktion mit demselben Namen erstellt, indem die `BEGIN_RDX_MAP` und `END_RDX_MAP` Makros sollte verwendet werden, um den Austausch von Daten zwischen der systemregistrierung und das Element ausführen Variablen in der RDX-Zuordnung.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Makros](../../atl/reference/atl-macros.md)   
  [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)
-
 
 
 

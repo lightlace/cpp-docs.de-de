@@ -1,37 +1,35 @@
 ---
-title: ".STACK"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - ".STACK"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".STACK directive"
+title: . STAPEL | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .STACK
+dev_langs: C++
+helpviewer_keywords: .STACK directive
 ms.assetid: 70019463-5d4f-41b6-8464-023a8ac2466f
-caps.latest.revision: 6
-caps.handback.revision: "6"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 20557bf243db1c004d6ec62dcb589cfb8605a285
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# .STACK
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Wenn Sie mit [.MODEL](../../assembler/masm/dot-model.md)verwendet werden, definiert ein Segment \(mit segment Stapel Name des STAPEL\).  Optionale `size` gibt die Anzahl der Bytes für den Stapel an \(Standardwert 1,024\).  Die `.STACK`\-Direktive schließen automatisch die Stapel Statement.  
+# <a name="stack"></a>.STACK
+Bei Verwendung mit [. Modell](../../assembler/masm/dot-model.md), definiert einen Zeitabschnitt Stapel (mit Segmentnamen Stapel). Das optionale `size` gibt die Anzahl der Bytes für den Stapel (Standard 1.024). Die `.STACK` Richtlinie schließt automatisch die Stack-Anweisung.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
 .STACK [[size]]  
 ```  
   
-## Siehe auch  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)

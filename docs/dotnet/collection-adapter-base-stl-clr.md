@@ -1,41 +1,39 @@
 ---
-title: "collection_adapter::base (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::collection_adapter::base"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Basismember [STL/CLR]"
+title: collection_adapter::Base (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::collection_adapter::base
+dev_langs: C++
+helpviewer_keywords: base member [STL/CLR]
 ms.assetid: 44928046-3fda-4974-817f-bc61a6f11b9f
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 87d8c557250f0ff97c0ef1d53e8cd4bb65b0476e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# collection_adapter::base (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Legt die umschlossene BCL\-Schnittstelle fest.  
+# <a name="collectionadapterbase-stlclr"></a>collection_adapter::base (STL/CLR)
+Legt die umschlossene BCL-Schnittstelle.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 Coll^ base();  
 ```  
   
-## Hinweise  
- Die Memberfunktion gibt dem gespeicherten BCL\-Schnittstellenhandle zurück.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt das gespeicherte BCL Schnittstelle Handle zurück.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_collection_adapter_base.cpp   
@@ -61,12 +59,15 @@ int main()
   
 ```  
   
-  **x x x x x x**  
-**base\(\) gleichen \= True**   
-## Anforderungen  
- **Header:** \<cliext\/Adapter\>  
+```Output  
+ x x x x x x  
+base() same = True  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext-Adapter >  
   
-## Siehe auch  
- [collection\_adapter](../dotnet/collection-adapter-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)

@@ -1,43 +1,44 @@
 ---
-title: "Adding Functionality to the Composite Control | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX-Steuerelemente [C++], Ereignisse"
-  - "Zusammengesetzte Steuerelemente, Ereignisbehandlung"
-  - "event handlers [C++], ActiveX-Steuerelemente"
+title: "Hinzufügen von Funktionalität zu zusammengesetztes Steuerelement | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- event handlers [C++], ActiveX controls
+- composite controls, handling events
+- ActiveX controls [C++], events
 ms.assetid: 98f85681-9564-480d-af38-03f9733fe58b
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7282ba7eb80fd30175751bb5234818a5e3cf1431
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Adding Functionality to the Composite Control
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Nachdem Sie alle erforderlichen Steuerelemente in das zusammengesetzte Steuerelement eingefügt haben, besteht der nächste Schritt mit ein, neue Funktionen hinzuzufügen.  Diese neuen Funktionen gehören normalerweise zwei Kategorien:  
+# <a name="adding-functionality-to-the-composite-control"></a>Hinzufügen von Funktionalität zu zusammengesetzten Steuerelementen
+Nachdem Sie alle erforderlichen Steuerelemente in der zusammengesetzten Steuerelements eingefügt haben, besteht der nächste Schritt das Hinzufügen neuer Funktionen. Diese neue Funktionalität liegt in der Regel in zwei Kategorien unterteilt:  
   
--   Zusätzliche Schnittstellen und Anpassen des Verhaltens des zusammengesetzten Steuerelements mit weiteren, bestimmte Funktionen unterstützen.  
+-   Unterstützung zusätzlicher Schnittstellen und Anpassen des Verhaltens des zusammengesetzten Steuerelements mit zusätzlichen bestimmte Funktionen.  
   
--   Das Behandeln vom übergeordneten ActiveX\-Steuerelement \(oder von Steuerelementen\).  
+-   Behandlung von Ereignissen aus enthaltenen ActiveX-Steuerelement (oder Steuerelemente) aus.  
   
- Für und für den Gültigkeitsbereich dieses Artikels, konzentriert sich der Rest dieses Abschnitts nur auf Ereignisbehandlung von ActiveX\-Steuerelementen.  
+ Konzentriert sich für den Zweck und der Gegenstand dieses Artikels der übrige Teil dieses Abschnitts ausschließlich auf die Behandlung von Ereignissen von ActiveX-Steuerelemente.  
   
 > [!NOTE]
->  Wenn Sie Meldungen von den Windows\-Steuerelementen bearbeiten müssen, finden Sie weitere Informationen zu [Implementieren eines Fensters](../atl/implementing-a-window.md) Meldungsbehandlung in ATL.  
+>  Wenn Sie Nachrichten von Windows-Steuerelemente behandeln müssen, finden Sie unter [Implementieren eines Fensters](../atl/implementing-a-window.md) für Weitere Informationen zu Meldungsbehandlung in ATL  
   
- Nachdem Sie ein ActiveX\-Steuerelement in der Dialogfeldressource eingefügt haben, klicken Sie mit der rechten Maustaste auf das Steuerelement und klicken Sie auf **Ereignishandler hinzufügen**.  Wählen Sie das Ereignis aus, das Sie auf **Hinzufügen und bearbeiten** behandeln und auf.  Der Ereignishandler wird der H\-Datei des Steuerelements hinzugefügt.  
+ Nach dem Einfügen eines ActiveX-Steuerelements in der Dialogfeldressource, mit der rechten Maustaste in des Steuerelements, und klicken Sie auf **Ereignishandler hinzufügen**. Wählen Sie das Ereignis zu behandeln, und klicken Sie auf **hinzufügen und Bearbeiten von**. Der Ereignishandlercode wird das Steuerelement .h-Datei hinzugefügt werden.  
   
- Verbindungspunkte für ActiveX\-Steuerelemente im zusammengesetzten Steuerelement werden automatisch über Aufrufe [CComCompositeControl::AdviseSinkMap](../Topic/CComCompositeControl::AdviseSinkMap.md) verbunden und getrennt.  
+ Verbindungspunkte für ActiveX-Steuerelemente in der zusammengesetzten Steuerelements automatisch verbunden und über Aufrufe von getrennt [:: AdviseSinkMap](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Grundlagen von zusammengesetzten Steuerelementen](../atl/atl-composite-control-fundamentals.md)
+

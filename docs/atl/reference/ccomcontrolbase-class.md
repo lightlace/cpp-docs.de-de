@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -84,35 +83,18 @@ f1_keywords:
 - ATLCTL/ATL::CComControlBase::m_spDataAdviseHolder
 - ATLCTL/ATL::CComControlBase::m_spInPlaceSite
 - ATLCTL/ATL::CComControlBase::m_spOleAdviseHolder
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComControlBase class
+dev_langs: C++
+helpviewer_keywords: CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 7ad253d42c916ec957ef1e6f5067027696103c79
-ms.contentlocale: de-de
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 8e7e3ab049a7fc7935b9027746fc4cdebb3428cd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomcontrolbase-class"></a>-Klasse
 Diese Klasse stellt Methoden zum Erstellen und Verwalten von ATL-Steuerelementen.  
@@ -146,7 +128,7 @@ class ATL_NO_VTABLE CComControlBase
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[CComControlBase::ControlQueryInterface](#controlqueryinterface)|Ruft einen Zeiger auf die angeforderte Schnittstelle ab.|  
-|[CComControlBase::DoesVerbActivate](#doesverbactivate)|Überprüft, ob die `iVerb` vom verwendeter Parameter `IOleObjectImpl::DoVerb` entweder die Benutzeroberfläche für das Steuerelement aktiviert ( `iVerb` gleich `OLEIVERB_UIACTIVATE`), definiert die Aktion ausgeführt, wenn der Benutzer das Steuerelement doppelklickt ( `iVerb` gleich `OLEIVERB_PRIMARY`), zeigt das Steuerelement ( `iVerb` gleich `OLEIVERB_SHOW`), oder aktiviert das Steuerelement ( `iVerb` gleich **OLEIVERB_INPLACEACTIVATE**).|  
+|[CComControlBase::DoesVerbActivate](#doesverbactivate)|Überprüft, ob die `iVerb` vom verwendeter Parameter `IOleObjectImpl::DoVerb` entweder aktiviert das Steuerelement-Benutzeroberfläche ( `iVerb` gleich `OLEIVERB_UIACTIVATE`), definiert die Aktion ausgeführt, wenn der Benutzer das Steuerelement doppelklickt ( `iVerb` gleich `OLEIVERB_PRIMARY`), zeigt das Steuerelement ( `iVerb` gleich `OLEIVERB_SHOW`), oder das Steuerelement aktiviert ( `iVerb` gleich **OLEIVERB_INPLACEACTIVATE**).|  
 |[CComControlBase::DoesVerbUIActivate](#doesverbuiactivate)|Überprüft, ob die `iVerb` vom verwendeter Parameter `IOleObjectImpl::DoVerb` bewirkt, dass das Steuerelement-Benutzeroberfläche zu aktivieren, und gibt **"true"**.|  
 |[CComControlBase::DoVerbProperties](#doverbproperties)|Zeigt die Eigenschaftenseiten für das Steuerelement.|  
 |[CComControlBase::FireViewChange](#fireviewchange)|Rufen Sie diese Methode zum Erkennen des Containers kann das Steuerelement neu gezeichnet werden, oder benachrichtigen Sie die registrierten Advise-senken, die Ansicht des Steuerelements geändert wurde.|  
@@ -155,7 +137,7 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::GetAmbientBackColor](#getambientbackcolor)|Ruft ab **DISPID_AMBIENT_BACKCOLOR**, die Ambiente-Hintergrundfarbe für alle Steuerelemente, die vom Container definiert.|  
 |[CComControlBase::GetAmbientCharSet](#getambientcharset)|Ruft ab **DISPID_AMBIENT_CHARSET**, die ambient-Zeichensatz für alle Steuerelemente, die vom Container definiert.|  
 |[CComControlBase::GetAmbientCodePage](#getambientcodepage)|Ruft ab **DISPID_AMBIENT_CODEPAGE**, die ambient-Zeichensatz für alle Steuerelemente, die vom Container definiert.|  
-|[CComControlBase:: GetAmbientDisplayAsDefault](#getambientdisplayasdefault)|Ruft ab **DISPID_AMBIENT_DISPLAYASDEFAULT**, ein Flag, das **"true"** , wenn der Container das Steuerelement an diesem Standort zu einer Standardschaltfläche markiert wurde, und daher ein Schaltflächen-Steuerelement selbst mit einem breiteren Rahmen zeichnen soll.|  
+|[CComControlBase:: GetAmbientDisplayAsDefault](#getambientdisplayasdefault)|Ruft ab **DISPID_AMBIENT_DISPLAYASDEFAULT**, ein Flag, das **"true"** Wenn der Container das Steuerelement an diesem Standort zu einer Standardschaltfläche markiert wurde, und daher ein Schaltflächen-Steuerelement sollte zeichnen sich selbst bei einem Dicker Frame.|  
 |[CComControlBase::GetAmbientDisplayName](#getambientdisplayname)|Ruft ab **DISPID_AMBIENT_DISPLAYNAME**, den Namen der Container für das Steuerelement angegeben hat.|  
 |[CComControlBase::GetAmbientFont](#getambientfont)|Ruft ein Zeiger auf den Container des ambient `IFont` Schnittstelle.|  
 |[CComControlBase::GetAmbientFontDisp](#getambientfontdisp)|Ruft ein Zeiger auf den Container des ambient **IFontDisp** Dispatch-Schnittstelle.|  
@@ -283,10 +265,10 @@ virtual HRESULT ControlQueryInterface(const IID& iid,
  Nur behandelt Schnittstellen in der COM-Zuordnungstabelle.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_COM #15](../../atl/codesnippet/cpp/ccomcontrolbase-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_COM#15](../../atl/codesnippet/cpp/ccomcontrolbase-class_1.cpp)]  
   
 ##  <a name="doesverbactivate"></a>CComControlBase::DoesVerbActivate  
- Überprüft, ob die `iVerb` vom verwendeter Parameter `IOleObjectImpl::DoVerb` entweder die Benutzeroberfläche für das Steuerelement aktiviert ( `iVerb` gleich `OLEIVERB_UIACTIVATE`), definiert die Aktion ausgeführt, wenn der Benutzer das Steuerelement doppelklickt ( `iVerb` gleich `OLEIVERB_PRIMARY`), zeigt das Steuerelement ( `iVerb` gleich `OLEIVERB_SHOW`), oder aktiviert das Steuerelement ( `iVerb` gleich **OLEIVERB_INPLACEACTIVATE**).  
+ Überprüft, ob die `iVerb` vom verwendeter Parameter `IOleObjectImpl::DoVerb` entweder aktiviert das Steuerelement-Benutzeroberfläche ( `iVerb` gleich `OLEIVERB_UIACTIVATE`), definiert die Aktion ausgeführt, wenn der Benutzer das Steuerelement doppelklickt ( `iVerb` gleich `OLEIVERB_PRIMARY`), zeigt das Steuerelement ( `iVerb` gleich `OLEIVERB_SHOW`), oder das Steuerelement aktiviert ( `iVerb` gleich **OLEIVERB_INPLACEACTIVATE**).  
   
 ```
 BOOL DoesVerbActivate(LONG iVerb);
@@ -334,9 +316,9 @@ HRESULT DoVerbProperties(LPCRECT /* prcPosRect */, HWND hwndParent);
  Einer der standardmäßigen HRESULT-Werte.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_COM NR. 19](../../atl/codesnippet/cpp/ccomcontrolbase-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_COM#19](../../atl/codesnippet/cpp/ccomcontrolbase-class_2.cpp)]  
   
- [!code-cpp[NVC_ATL_COM NR. 20](../../atl/codesnippet/cpp/ccomcontrolbase-class_3.h)]  
+ [!code-cpp[NVC_ATL_COM#20](../../atl/codesnippet/cpp/ccomcontrolbase-class_3.h)]  
   
 ##  <a name="fireviewchange"></a>CComControlBase::FireViewChange  
  Rufen Sie diese Methode zum Erkennen des Containers kann das Steuerelement neu gezeichnet werden, oder benachrichtigen Sie die registrierten Advise-senken, die Ansicht des Steuerelements geändert wurde.  
@@ -352,7 +334,7 @@ HRESULT FireViewChange();
  Wenn das Steuerelement aktiv ist (die Steuerelement-Klassendatenmember [CComControlBase::m_bInPlaceActive](#m_binplaceactive) ist **"true"**), benachrichtigt dem Container, dass das gesamte Steuerelement neu gezeichnet werden soll. Wenn das Steuerelement aktiv ist, wird darauf hingewiesen, das Steuerelement des registriert advise-Empfänger (über die Control-Klassendatenmember [CComControlBase::m_spAdviseSink](#m_spadvisesink)), die Ansicht des Steuerelements geändert wurde.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_COM #21](../../atl/codesnippet/cpp/ccomcontrolbase-class_4.cpp)]  
+ [!code-cpp[NVC_ATL_COM#21](../../atl/codesnippet/cpp/ccomcontrolbase-class_4.cpp)]  
   
 ##  <a name="getambientappearance"></a>CComControlBase  
  Ruft ab **DISPID_AMBIENT_APPEARANCE**, die aktuelle Darstellung, die für das Steuerelement festlegen: 0 für flache und 1 für 3D.  
@@ -369,7 +351,7 @@ HRESULT GetAmbientAppearance(short& nAppearance);
  Einer der standardmäßigen HRESULT-Werte.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_COM #22](../../atl/codesnippet/cpp/ccomcontrolbase-class_5.h)]  
+ [!code-cpp[NVC_ATL_COM#22](../../atl/codesnippet/cpp/ccomcontrolbase-class_5.h)]  
   
 ##  <a name="getambientautoclip"></a>CComControlBase::GetAmbientAutoClip  
  Ruft ab **DISPID_AMBIENT_AUTOCLIP**und ein Kennzeichen, das angibt, ob der Container automatische Clipping bei den Anzeigebereich des Steuerelements unterstützt.  
@@ -428,7 +410,7 @@ HRESULT GetAmbientCodePage(ULONG& ulCodePage);
  Gibt bei Erfolg S_OK oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
 ##  <a name="getambientdisplayasdefault"></a>CComControlBase:: GetAmbientDisplayAsDefault  
- Ruft ab **DISPID_AMBIENT_DISPLAYASDEFAULT**, ein Flag, das **"true"** , wenn der Container das Steuerelement an diesem Standort zu einer Standardschaltfläche markiert wurde, und daher ein Schaltflächen-Steuerelement selbst mit einem breiteren Rahmen zeichnen soll.  
+ Ruft ab **DISPID_AMBIENT_DISPLAYASDEFAULT**, ein Flag, das **"true"** Wenn der Container das Steuerelement an diesem Standort zu einer Standardschaltfläche markiert wurde, und daher ein Schaltflächen-Steuerelement sollte zeichnen sich selbst bei einem Dicker Frame.  
   
 ```
 HRESULT GetAmbientDisplayAsDefault(BOOL& bDisplayAsDefault);
@@ -744,7 +726,7 @@ HRESULT InPlaceActivate(LONG iVerb, const RECT* prcPosRect = NULL);
 ### <a name="remarks"></a>Hinweise  
  Vor der Aktivierung diese Methode überprüft, ob das Steuerelement verfügt über eine Client-Website, überprüft, wie viel des Steuerelements sichtbar ist, und ruft die Position des Steuerelements in das übergeordnete Fenster. Nachdem das Steuerelement aktiviert ist, wird diese Methode aktiviert das Steuerelement-Benutzeroberfläche und weist den Container aus, um das Steuerelement sichtbar zu machen.  
   
- Diese Methode ruft auch ab einem `IOleInPlaceSite`, **IOleInPlaceSiteEx**, oder **IOleInPlaceSiteWindowless** Schnittstellenzeiger für das Steuerelement und speichert sie in der Steuerelementklasse-Datenmember [CComControlBase::m_spInPlaceSite](#m_spinplacesite). Die Steuerelement-Klassendatenmember [CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex), [CComControlBase::m_bWndLess](#m_bwndless), [CComControlBase::m_bWasOnceWindowless](#m_bwasoncewindowless), und [CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd) auf "true" entsprechend festgelegt werden.  
+ Diese Methode ruft auch ab einem `IOleInPlaceSite`, **IOleInPlaceSiteEx**, oder **IOleInPlaceSiteWindowless** Schnittstellenzeiger für das Steuerelement und speichert ihn in der Steuerelementklasse Datenmember [CComControlBase::m_spInPlaceSite](#m_spinplacesite). Die Steuerelement-Klassendatenmember [CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex), [CComControlBase::m_bWndLess](#m_bwndless), [CComControlBase::m_bWasOnceWindowless](#m_bwasoncewindowless), und [ CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd) auf "true" entsprechend festgelegt werden.  
   
 ##  <a name="internalgetsite"></a>CComControlBase::InternalGetSite  
  Rufen Sie diese Methode, um die Website des Steuerelements für einen Zeiger auf die angegebene Schnittstelle abzufragen.  
@@ -779,7 +761,7 @@ unsigned m_bAutoSize:1;
 > [!NOTE]
 >  Um dieses Datenelement innerhalb der Steuerelementklasse verwenden zu können, müssen Sie es als Datenmember in der Steuerelementklasse deklarieren. Die Steuerelementklasse wird dieses Datenelement nicht von der Basisklasse erben, da er in einer Union in der Basisklasse deklariert ist.  
   
- Wenn Sie beim Hinzufügen der **Automatische Größe der** auf die option der [Basiseigenschaften](../../atl/reference/stock-properties-atl-control-wizard.md) der ATL-Steuerelement-Assistent, den Assistenten auf der Registerkarte dieses Datenelement in der Steuerelementklasse erstellt, erstellt automatisch PUT- und get-Methoden für die Eigenschaft, und unterstützt [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) Container automatisch zu benachrichtigen, wenn die Eigenschaft ändert.  
+ Wenn Sie beim Hinzufügen der **Automatische Größe der** option die [Basiseigenschaften](../../atl/reference/stock-properties-atl-control-wizard.md) der ATL-Steuerelement-Assistent, den Assistenten auf der Registerkarte dieses Datenelement in der Steuerelementklasse erstellt, erstellt automatisch PUT- und get-Methoden für die Eigenschaft , und unterstützt [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) Container automatisch zu benachrichtigen, wenn die Eigenschaft ändert.  
   
 ##  <a name="m_bdrawfromnatural"></a>CComControlBase::m_bDrawFromNatural  
  Flag zeigt an, dass `IDataObjectImpl::GetData` und `CComControlBase::GetZoomInfo` fest, dass die Steuerelementgröße auf `m_sizeNatural` anstatt von `m_sizeExtent`.  
@@ -1397,4 +1379,3 @@ void SetDirty(BOOL bDirty);
 ## <a name="see-also"></a>Siehe auch  
  [CComControl-Klasse](../../atl/reference/ccomcontrol-class.md)   
  [Klassenübersicht](../../atl/atl-class-overview.md)
-

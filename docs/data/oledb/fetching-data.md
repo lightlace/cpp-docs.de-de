@@ -1,37 +1,37 @@
 ---
-title: "Abrufen von Daten | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Daten [C++], Abrufen"
-  - "Abrufen"
-  - "OLE DB-Consumervorlagen [C++], Abrufen von Daten"
-  - "Rowsets [C++], Abrufen"
+title: Abrufen von Daten | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- data [C++], fetching
+- rowsets [C++], fetching
+- fetching
+- OLE DB consumer templates [C++], fetching data
 ms.assetid: b07f747f-9855-4f27-a03d-b1d5b10fa284
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5ae486150a23af4c1aa04177650d675087ce4e16
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Abrufen von Daten
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Nachdem Sie die Datenquelle, die Sitzung und die Rowset\-Objekte geöffnet haben, können Sie Daten abrufen.  Dabei hängt es vom verwendeten Accessortyp ab, ob Sie Spalten binden müssen.  
+# <a name="fetching-data"></a>Abrufen von Daten
+Nachdem Sie die Datenquelle, die Sitzung und die Rowset-Objekte geöffnet haben, können Sie Daten abrufen. Je nach Art der Zugriffsmethode, die Sie verwenden, müssen Sie die Spalten zu binden.  
   
-### So rufen Sie Daten ab  
+### <a name="to-fetch-data"></a>Zum Abrufen von Daten  
   
-1.  Öffnen Sie das Rowset mit dem entsprechenden Befehl zum **Öffnen**.  
+1.  Öffnen Sie das Rowset mit dem entsprechenden **öffnen** Befehl.  
   
-2.  Wenn Sie `CManualAccessor` verwenden, binden Sie die Ausgabespalten, sofern Sie dies noch nicht getan haben.  Rufen Sie zum Binden der Spalten `GetColumnInfo` auf, und erstellen Sie anschließend einen Accessor mit den Bindungen, wie im folgenden Beispiel dargestellt:  
+2.  Bei Verwendung von `CManualAccessor`, binden Sie die Ausgabespalten aus, wenn Sie nicht bereits geschehen. Rufen Sie zum Binden der Spalten `GetColumnInfo`, und erstellen Sie einen Accessor mit den Bindungen, wie im folgenden Beispiel gezeigt:  
   
     ```  
     // From the DBViewer Sample CDBTreeView::OnQueryEdit  
@@ -48,7 +48,7 @@ Nachdem Sie die Datenquelle, die Sitzung und die Rowset\-Objekte geöffnet haben
     rs.Bind();  
     ```  
   
-3.  Schreiben Sie eine `while`\-Schleife, um die Daten abzurufen.  Rufen Sie in der Schleife `MoveNext` auf, um die Einfügemarke zu verschieben, und vergleichen Sie den Rückgabewert mit S\_OK, wie im folgenden Beispiel dargestellt:  
+3.  Schreiben einer `while` Schleife zum Abrufen der Daten. Rufen Sie in der Schleife `MoveNext` , setzen den Cursor und den Rückgabewert mit S_OK, testen, wie im folgenden Beispiel gezeigt:  
   
     ```  
     while (rs.MoveNext() == S_OK)  
@@ -58,9 +58,9 @@ Nachdem Sie die Datenquelle, die Sitzung und die Rowset\-Objekte geöffnet haben
     }  
     ```  
   
-4.  Innerhalb der `while`\-Schleife können Sie Daten entsprechend dem verwendeten Accessortyp abrufen.  
+4.  Innerhalb der `while` Schleife, können Sie die Daten gemäß Ihrer Accessortyp abzurufen.  
   
-    -   Wenn Sie die [CAccessor](../../data/oledb/caccessor-class.md)\-Klasse verwenden, sollten Sie über einen Benutzerdatensatz verfügen, der Datenmember enthält.  Mithilfe dieser Datenmember können Sie wie im folgenden Beispiel auf die Daten zugreifen:  
+    -   Bei Verwendung der [CAccessor](../../data/oledb/caccessor-class.md) -Klasse, Sie müssen einen Benutzerdatensatz, der Datenmember enthält. Sie können Ihre Daten mit diesen Datenmember zugreifen, wie im folgenden Beispiel gezeigt:  
   
         ```  
         while (rs.MoveNext() == S_OK)  
@@ -72,7 +72,7 @@ Nachdem Sie die Datenquelle, die Sitzung und die Rowset\-Objekte geöffnet haben
         }  
         ```  
   
-    -   Wenn Sie die Klassen `CDynamicAccessor` oder `CDynamicParameterAccessor` verwenden, können Sie Daten mithilfe der Zugriffsfunktionen `GetValue` und `GetColumn` abrufen \(siehe folgendes Beispiel\).  Wenn Sie bestimmen möchten, welchen Datentyp Sie verwenden, verwenden Sie `GetType`.  
+    -   Bei Verwendung der `CDynamicAccessor` oder `CDynamicParameterAccessor` -Klasse, können Sie die Daten abzurufen, mit den Zugriff auf Funktionen `GetValue` und `GetColumn`, wie im folgenden Beispiel gezeigt. Wenn Sie den Typ der Daten bestimmen möchten, verwenden, verwenden Sie `GetType`.  
   
         ```  
         while (rs.MoveNext() == S_OK)  
@@ -87,7 +87,7 @@ Nachdem Sie die Datenquelle, die Sitzung und die Rowset\-Objekte geöffnet haben
         }  
         ```  
   
-    -   Wenn Sie `CManualAccessor` verwenden, müssen Sie die eigenen Datenmember angeben, sie selbst binden und direkt auf sie zugreifen, wie im folgenden Beispiel dargestellt:  
+    -   Bei Verwendung von `CManualAccessor`, müssen Sie eigene Datenmember angeben, sie selbst binden und sie greifen direkt auf, wie im folgenden Beispiel gezeigt:  
   
         ```  
         while (rs.MoveNext() == S_OK)  
@@ -99,5 +99,5 @@ Nachdem Sie die Datenquelle, die Sitzung und die Rowset\-Objekte geöffnet haben
         }  
         ```  
   
-## Siehe auch  
- [Arbeiten mit OLE DB\-Consumervorlagen](../../data/oledb/working-with-ole-db-consumer-templates.md)
+## <a name="see-also"></a>Siehe auch  
+ [Arbeiten mit OLE DB-Consumervorlagen](../../data/oledb/working-with-ole-db-consumer-templates.md)

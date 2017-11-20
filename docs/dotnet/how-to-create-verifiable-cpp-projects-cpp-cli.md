@@ -1,65 +1,65 @@
 ---
-title: "Gewusst wie: Erstellen &#252;berpr&#252;fbarer C++-Projekte (C++/CLI)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Konvertierungen, C++-Projekte"
-  - "Überprüfbare Assemblys [C++], Erstellen"
-  - "Visual C++-Projekte"
+title: "Vorgehensweise: Erstellen überprüfbarer C++-Projekte (C + c++ / CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- verifiable assemblies [C++], creating
+- conversions, C++ projects
+- Visual C++ projects
 ms.assetid: 4ef2cc1a-e3e5-4d67-8d8d-9c614f8ec5d3
-caps.latest.revision: 11
-caps.handback.revision: "11"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: aad327c26c8684804c294fe5eb6b5bf41507f603
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Gewusst wie: Erstellen &#252;berpr&#252;fbarer C++-Projekte (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Mit Visual C\+\+\-Anwendungs\-Assistenten können keine überprüfbaren Projekte erstellt werden, es können jedoch Projekte in überprüfbare Projekte konvertiert werden.  In diesem Thema wird beschrieben, wie Projekteigenschaften festgelegt und Quellcodedateien von Projekten geändert werden, um aus Visual C\+\+\-Projekte überprüfbare Anwendungen zu generieren.  
+# <a name="how-to-create-verifiable-c-projects-ccli"></a>Gewusst wie: Erstellen überprüfbarer C++-Projekte (C++/CLI)
+Visual C++-Anwendungs-Assistenten keine überprüfbar Projekte erstellen, aber Projekte konvertiert werden können, um überprüfbar zu sein. In diesem Thema wird beschrieben, wie Projekteigenschaften festlegen und ändern die Quelle der Projektdateien zum Transformieren der Visual C++-Projekte zur überprüfbare Anwendung löst.  
   
-## Compiler\- und Linkereinstellungen  
- .NET\-Projekte verwenden standardmäßig das Compilerflag \/clr und konfigurieren den Linker für x86\-Hardware.  Für überprüfbaren Code müssen Sie das Flag \/clr:safe verwenden, und Sie müssen den Linker anweisen, statt systemeigene Maschinenbefehle MSIL zu generieren.  
+## <a name="compiler-and-linker-settings"></a>Compiler und Linker-Einstellungen  
+ Standardmäßig .NET Projekte verwenden das compilerkennzeichen "/ CLR" und den Linker Zielhardware X86 konfigurieren. Für überprüfbaren Code müssen Sie das Flag/CLR: safe verwenden, und Sie müssen den Linker an, für die Generierung von MSIL anstatt systemeigene maschinenanweisungen anweisen.  
   
-#### So ändern Sie die Compiler\- und Linkereinstellungen  
+#### <a name="to-change-the-compiler-and-linker-settings"></a>So ändern Sie die Einstellungen für Compiler und linker  
   
-1.  Zeigen Sie die Eigenschaftenseite des Projekts an.  Weitere Informationen finden Sie unter [Gewusst wie: Öffnen von Projekteigenschaftenseiten](../misc/how-to-open-project-property-pages.md).  
+1.  Zeigen Sie die Eigenschaftenseite des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../ide/working-with-project-properties.md).  
   
-2.  Legen Sie auf der Seite **Allgemein** unter dem Knoten **Konfigurationseigenschaften** die **Common Language Runtime\-Unterstützung**\-Eigenschaft auf **Sichere MSIL Common Language Runtime\-Unterstützung \(\/clr:safe\)** fest.  
+2.  Auf der **allgemeine** Seite der **Konfigurationseigenschaften** Knotensatz, der **Common Language Runtime-Unterstützung** Eigenschaft **Sichere MSIL Common Language Runtime-Unterstützung (/ CLR: safe)**.  
   
-3.  Legen Sie auf der Seite **Erweitert** unter dem Knoten **Linker** die **CLR\-Bildtyp**\-Eigenschaft auf **Sicheres IL\-Bild erzwingen \(\/CLRIMAGETYPE: SAFE\)** fest.  
+3.  Auf der **erweitert** Seite unter der **Linker** , durch das Festlegen der **CLR-Imagetyps** Eigenschaft **sicheres IL-Bild erzwingen (/ CLRIMAGETYPE: safe)**.  
   
-## Entfernen von systemeigenen Datentypen  
- Da systemeigene Datentypen auch dann nicht überprüfbar sind, wenn sie nicht verwendet werden, müssen alle Headerdateien mit systemeigenen Typen entfernt werden.  
+## <a name="removing-native-data-types"></a>Entfernen von systemeigenen Datentypen  
+ Da die systemeigenen Datentypen nicht überprüfbar sind, auch wenn sie nicht tatsächlich verwendet werden, müssen Sie alle Header-Dateien, die mit systemeigenen Typen entfernen.  
   
 > [!NOTE]
->  Die im Folgenden beschriebene Vorgehensweise bezieht sich auf Projekte für Windows Forms \(.NET\)\- und Konsolenanwendungsprojekte \(.NET\).  
+>  Das folgende Verfahren gilt für Windows Forms-Anwendung (.NET) und die Konsole (.NET) Projekte.  
   
-#### So entfernen Sie Verweise auf systemeigene Datentypen  
+#### <a name="to-remove-references-to-native-data-types"></a>So entfernen Sie Verweise auf die systemeigenen Datentypen  
   
-1.  Kommentieren Sie in der Datei Stdafx.h alles aus.  
+1.  Kommentieren Sie alles in der Datei "stdafx.h".  
   
-## Konfigurieren eines Einstiegspunktes  
- Da überprüfbare Anwendungen keine C\-Laufzeitbibliotheken \(CRT\) verwenden können, dürfen sie nicht von CRT abhängig sein, um die Hauptfunktion als Standardeinstiegspunkt aufzurufen.  Das bedeutet, dass Sie den Namen der Funktion explizit angeben müssen, die vom Linker beim Start aufgerufen werden soll. \(In diesem Fall wird zum Angeben eines CRT\-fremden Einstiegspunktes Main\(\) und nicht main\(\) oder \_tmain\(\) verwendet. Da der Einstiegspunkt explizit angegeben werden muss, ist dieser Name jedoch frei wählbar.\)  
+## <a name="configuring-an-entry-point"></a>Konfigurieren eines Einstiegspunktes  
+ Da C-Laufzeitbibliotheken (CRT) nicht überprüfbare Anwendungen verwenden können, können nicht sie CRT, rufen Sie die main-Funktion als standard Einstiegspunkt abhängig sind. Dies bedeutet, dass Sie den Namen der Funktion, die anfänglich aufgerufen werden, an den Linker explizit angeben müssen. (In diesem Fall Main() statt main() oder _tmain () verwendet, um einen nicht-CRT-Einstiegspunkt anzugeben, aber da Einstiegspunkt explizit angegeben werden muss, ist dieser Name willkürlich.)  
   
 > [!NOTE]
->  Die folgende Vorgehensweise bezieht sich auf Konsolenanwendungsprojekte \(.NET\).  
+>  Die folgenden Verfahren gelten für Konsole (.NET) Projekte.  
   
-#### So konfigurieren Sie einen Einstiegspunkt  
+#### <a name="to-configure-an-entry-point"></a>So konfigurieren Sie einen Einstiegspunkt  
   
-1.  Ändern Sie in der Haupt\-CPP\-Datei des Projekts \_tmain \(\) in Main\(\).  
+1.  Ändern Sie _tmain () in Main() in der wichtigsten cpp-Datei des Projekts.  
   
-2.  Zeigen Sie die Eigenschaftenseite des Projekts an.  Weitere Informationen finden Sie unter [Gewusst wie: Öffnen von Projekteigenschaftenseiten](../misc/how-to-open-project-property-pages.md).  
+2.  Zeigen Sie die Eigenschaftenseite des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../ide/working-with-project-properties.md).  
   
-3.  Geben Sie auf der Seite **Erweitert** unter dem Knoten **Linker** als **Einstiegspunkt**\-Eigenschaftswert `Main` ein.  
+3.  Auf der **erweitert** Seite unter das **Linker** Knoten, geben Sie `Main` als die **Einstiegspunkt** Eigenschaftswert.  
   
-## Siehe auch  
- [Reiner und überprüfbarer Code](../dotnet/pure-and-verifiable-code-cpp-cli.md)
+## <a name="see-also"></a>Siehe auch  
+ [Reiner und überprüfbarer Code (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)

@@ -1,37 +1,37 @@
 ---
-title: "Gewusst wie: Marshallen von Arrays mit C++-Interop"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Arrays [C++], Marshalling"
-  - "C++ Interop, Arrays"
-  - "Datenmarshalling [C++], Arrays"
-  - "Interop [C++], Arrays"
-  - "Marshaling [C++], Arrays"
+title: 'Wie: Marshallen von Arrays mit C++-Interop | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- arrays [C++], marshaling
+- marshaling [C++], arrays
+- interop [C++], arrays
+- C++ Interop, arrays
+- data marshaling [C++], arrays
 ms.assetid: c2b37ab1-8acf-4855-ad3c-7d2864826b14
-caps.latest.revision: 18
-caps.handback.revision: "18"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 605e3ba14af37fd13b3d6eac75f76610cf29af65
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Gewusst wie: Marshallen von Arrays mit C++-Interop
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Dieses Thema veranschaulicht einen Aspekt der Visual C\+\+\-Interoperabilität.  Weitere Informationen finden Sie unter [Verwenden von C\+\+\-Interop \(implizites PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
+# <a name="how-to-marshal-arrays-using-c-interop"></a>Gewusst wie: Marshallen von Arrays mit C++-Interop
+Dieses Thema veranschaulicht einen Aspekt der Visual C++-Interoperabilität. Weitere Informationen finden Sie unter [mithilfe von C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
   
- In den folgenden Codebeispielen werden die [managed, unmanaged](../preprocessor/managed-unmanaged.md)\-\#pragma\-Direktiven verwendet, um verwaltete und nicht verwaltete Funktionen in derselben Datei zu implementieren. Diese Funktionen arbeiten jedoch auf dieselbe Weise zusammen, wenn sie in separaten Dateien definiert werden.  Dateien, die ausschließlich nicht verwaltete Funktionen enthalten, müssen nicht mit [\/clr \(Common Language Runtime\-Kompilierung\)](../build/reference/clr-common-language-runtime-compilation.md) kompiliert werden.  
+ Im folgenden Codebeispiel Beispiele verwenden die [verwaltete, unverwaltete](../preprocessor/managed-unmanaged.md) #pragma-Direktiven zum Implementieren verwalteten und nicht verwaltete Funktionen in derselben Datei, aber diese Funktionen auf dieselbe Weise zusammenarbeiten, wenn in separaten Dateien definiert. Dateien, die ausschließlich nicht verwaltete Funktionen müssen nicht kompiliert werden [/CLR (Common Language Runtime-Kompilierung)](../build/reference/clr-common-language-runtime-compilation.md).  
   
-## Beispiel  
- Im folgenden Beispiel wird dargestellt, wie ein verwaltetes Array an eine nicht verwaltete Funktion übergeben wird.  Die verwaltete Funktion verwendet [pin\_ptr \(C\+\+\/CLI\)](../windows/pin-ptr-cpp-cli.md), um Garbage Collection für das Array zu unterdrücken, bevor die nicht verwaltete Funktion aufgerufen wird.  Indem die nicht verwaltete Funktion mit einem fixierten Zeiger auf den GC\-Heap versehen wird, kann der zusätzliche Aufwand durch das Kopieren des Arrays vermieden werden.  Um zu verdeutlichen, dass die nicht verwaltete Funktion auf den Arbeitsspeicher auf dem GC\-Heap zugreift, wird durch die nicht verwaltete Funktion der Inhalt des Arrays geändert. Diese Änderungen werden wiedergegeben, wenn die verwaltete Funktion die Steuerung erneut übernimmt.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird veranschaulicht, wie ein verwaltetes Array an eine nicht verwaltete Funktion übergeben wird. Die verwaltete Funktion verwendet [Pin_ptr (C + c++ / CLI)](../windows/pin-ptr-cpp-cli.md) Garbagecollection für das Array vor dem Aufrufen von nicht verwalteten Funktion unterdrückt. Durch die Bereitstellung der nicht verwalteten Funktion mit einer festen Zeiger in den GC-Heap, kann der Aufwand für das Erstellen einer Kopie des Arrays vermieden werden. Um zu zeigen, dass die nicht verwaltete Funktion greift auf GC-Heap-Speicher, er den Inhalt des Arrays ändert und die Änderungen werden berücksichtigt beim Steuerelement von die verwaltete Funktion fortgesetzt wird.  
   
 ```  
 // PassArray1.cpp  
@@ -88,8 +88,8 @@ int main() {
 }  
 ```  
   
-## Beispiel  
- Im folgenden Beispiel wird die Übergabe eines nicht verwalteten Arrays an eine verwaltete Funktion dargestellt.  Die verwaltete Funktion greift direkt auf den Arrayspeicher zu \(im Gegensatz zum Erstellen eines verwalteten Arrays und Kopieren des Arrayinhalts\). Dadurch können von der verwalteten Funktion Änderungen vorgenommen werden, die in der nicht verwalteten Funktion wiedergegeben werden, wenn diese erneut die Steuerung übernimmt.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird veranschaulicht, ein nicht verwaltetes Array an eine verwaltete Funktion übergeben. Die verwaltete Funktion greift auf den Array Arbeitsspeicher direkt (im Gegensatz zur Erstellung eines verwalteten Arrays, und Kopieren des Arrayinhalts), wodurch Änderungen, die in der nicht verwalteten Funktion berücksichtigt werden, wenn sie wieder die Steuerung von der verwalteten Funktion.  
   
 ```  
 // PassArray2.cpp  
@@ -135,5 +135,5 @@ int main() {
 }  
 ```  
   
-## Siehe auch  
- [Verwenden von C\+\+\-Interop \(implizites PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Siehe auch  
+ [Verwenden von C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

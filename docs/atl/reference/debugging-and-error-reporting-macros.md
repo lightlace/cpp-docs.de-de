@@ -4,39 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- macros, error reporting
+f1_keywords:
+- atldef/ATL::_ATL_DEBUG_INTERFACES
+- atldef/ATL::_ATL_DEBUG_QI
+- atldef/ATL::ATLASSERT
+- afx/ATL::ATLENSURE
+- atltrace/ATL::ATLTRACENOTIMPL
+- atltrace/ATL::ATLTRACE
+dev_langs: C++
+helpviewer_keywords: macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: f59c09b7eb1621094b170d3bed31b5891081194e
-ms.contentlocale: de-de
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: e14ffb58ba19c6c3c8d3e59181a045532f5cfb92
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Debuggen und die Fehlerberichterstattung-Makros
 Diese Makros stellen nützlich, Debuggen und Ablaufverfolgung Funktionen bereit.  
@@ -136,7 +125,7 @@ ATLENSURE_THROW(booleanExpression, hr);
  Der Unterschied zwischen **ATLENSURE** und `ATLASSERT` handelt, **ATLENSURE** löst eine Ausnahme in Version ebenfalls, wie in der Debug-Builds erstellt.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities #108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]  
 
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afx.h  
@@ -156,7 +145,7 @@ ATLTRACENOTIMPL(funcname);
  Einfach in Releasebuilds zurückgibt **E_NOTIMPL**.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[127 NVC_ATL_Utilities](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_2.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#127](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_2.cpp)]  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atltrace.h 
@@ -254,13 +243,13 @@ ATLTRACE2(
   
  Um eine benutzerdefinierte Ablaufverfolgungskategorie zu deklarieren, deklarieren Sie eine globale Instanz von der `CTraceCategory` -Klasse wie folgt:  
   
- [!code-cpp[NVC_ATL_Utilities #109](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_3.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#109](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_3.cpp)]  
   
  Der Kategoriename, `MY_CATEGORY` in diesem Beispiel wird der Name, die Sie, die angeben die `category` Parameter. Der erste Parameter ist, den Namen der Kategorie, der in den ATL-/MFC-Ablaufverfolgungsprogramm angezeigt werden. Der zweite Parameter ist der Standard-Ablaufverfolgungsebene. Dieser Parameter ist optional, und die standardmäßige Ablaufverfolgungsebene ist 0.  
   
  So verwenden Sie eine benutzerdefinierte Kategorie:  
   
- [!code-cpp[NVC_ATL_Utilities #110](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_4.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#110](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_4.cpp)]  
   
  Um anzugeben, dass Sie die Ablaufverfolgungsmeldungen filtern möchten, legen Sie Definitionen für diese Makros in "stdafx.h", bevor die `#include <atlbase.h>` Anweisung.  
   
@@ -275,9 +264,8 @@ ATLTRACE2(
  **ATLTRACE** und `ATLTRACE2` weisen das gleiche Verhalten **ATLTRACE** wird aus Gründen der Abwärtskompatibilität.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities #111](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_5.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#111](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_5.cpp)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [Makros](../../atl/reference/atl-macros.md)   
  [Debuggen und globale Funktionen für die Fehlerberichterstattung](../../atl/reference/debugging-and-error-reporting-global-functions.md)
-

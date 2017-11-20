@@ -1,41 +1,39 @@
 ---
-title: "hash_map::empty (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::empty"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "empty-Member [STL/CLR]"
+title: 'hash_map:: Empty (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::empty
+dev_langs: C++
+helpviewer_keywords: empty member [STL/CLR]
 ms.assetid: 2a145e16-a48a-4304-8fa6-5b2361693083
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b0fc23e13e04604bfb1f63349140dcca23332e0d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# hash_map::empty (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Testet, dass keine Elemente vorhanden sind.  
+# <a name="hashmapempty-stlclr"></a>hash_map::empty (STL/CLR)
+Testet, ob keine Elemente vorhanden sind.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 bool empty();  
 ```  
   
-## Hinweise  
- Die Memberfunktionsrückgaben true für eine leere gesteuerte Sequenz.  Sie besteht darin [hash\_map::size](../dotnet/hash-map-size-stl-clr.md)`() == 0`.  Sie verwenden sie, um zu testen, ob das hash\_map leer ist.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt „true“ für eine leere gesteuerte Sequenz zurück. Dies ist äquivalent zum [hash_map:: Size (STL/CLR)](../dotnet/hash-map-size-stl-clr.md)`() == 0`. Sie verwenden sie zum Überprüfen, ob das hash_map-Element leer ist.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_hash_map_empty.cpp   
@@ -66,16 +64,19 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[bc 3\]**  
-**size\(\) \= 3**  
-**empty\(\) \= False**  
-**size\(\) \= 0**  
-**empty\(\) \= True**   
-## Anforderungen  
- **Header:** \<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext Hash_map/>  
   
-## Siehe auch  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::size](../dotnet/hash-map-size-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [hash_map-Element (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::size (STL/CLR)](../dotnet/hash-map-size-stl-clr.md)

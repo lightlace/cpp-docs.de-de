@@ -1,39 +1,39 @@
 ---
-title: "ARM Assembler Diagnostic Messages | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Diagnosemeldungen des ARM-Assembler | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 52b38267-6023-4bdc-a0ef-863362f48eec
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6457e82928a5a705377b90e2acc0989768fcd9f1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# ARM Assembler Diagnostic Messages
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Der Microsoft\-ARM\-Assembler \(*Armasm*\) Diagnose Warnungen und Fehler ausgibt, wenn diese auftreten.  Dieser Artikel beschreibt die Nachrichten häufig auftreten.  
+# <a name="arm-assembler-diagnostic-messages"></a>Diagnosemeldungen des ARM-Assemblers
+Der Microsoft-ARM-Assembler (*Armasm*) Diagnose Warnungen und Fehler ausgibt, wenn sie gefunden wird. Dieser Artikel beschreibt die Nachrichten häufig auftreten.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
 filename(lineno) : [error|warning] Anum: message  
 ```  
   
-## Diagnosemeldungen  
+## <a name="diagnostic-messages"></a>Diagnosemeldungen  
   
-### Fehler  
- A2193: Diese Anweisung generiert unvorhersehbares Verhalten  
- ARM\-Architektur kann nicht dafür garantieren, was passiert, wenn diese Anweisung ausgeführt wird.  Informationen über die klar definierten Formen dieser Anweisung finden Sie in der [ARM Architektur Referenzhandbuch](http://go.microsoft.com/fwlink/?LinkId=246464).  
+### <a name="errors"></a>Fehler  
+ A2193: Diese Anweisung wird zu einem unvorhersehbaren Verhalten generiert.  
+ Die ARM-Architektur kann nicht garantieren, was geschieht, wenn diese Anweisung ausgeführt wird.  Weitere Informationen zu den fest definierten Formen der diese Anweisung, wenden Sie sich an den [ARM Architecture Reference Manual](http://go.microsoft.com/fwlink/?LinkId=246464).  
   
 ```  
   
@@ -41,10 +41,10 @@ ADD r0, r8, pc         ; A2193: this instruction generates unpredictable behavio
   
 ```  
   
- A2196: Anweisung nicht in 16 Bits codiert sein  
- Die angegebene Anweisung nicht als eine 16\-Bit\-Thumb\-Anweisung nicht codiert sein.  Geben Sie eine 32\-Bit\-Anweisung an, oder neu ordnen Sie Code die Zielmarke in den Bereich einer 16\-Bit\-Anweisung zu bringen an.  
+ A2196: Anweisung kann nicht in den 16 Bits codiert werden  
+ Die angegebene Anweisung kann nicht als 16-Bit-Thumb-Anweisung nicht codiert werden.  Geben Sie eine 32-Bit-Anweisung oder erneute Anordnen von Code aus, um die Ziel-Bezeichnung in den Bereich einer 16-Bit-Anweisung zu bringen.  
   
- Der Assembler versucht möglicherweise, eine Niederlassung in 16 Bits codiert und mit diesem Fehler fehlschlagen, obwohl eine 32\-Bit\-Verzweigung ermöglichen ist.  Sie können dieses Problem beheben, indem Sie mit der `.W` Bezeichner, um den Zweig als 32\-Bit explizit kennzeichnen.  
+ Der Assembler versucht möglicherweise, codieren eine Verzweigung in 16 Bits lang sein und dieser Fehler auftreten, obwohl eine 32-Bit-Verzweigung Sicherheitsrichtlinienverwendung ist. Sie können dieses Problem beheben, indem Sie mit der `.W` Bezeichner, die als 32-Bit-Verzweigung explizit zu markieren.  
   
 ```  
   
@@ -57,8 +57,8 @@ label
   
 ```  
   
- A2202: Pre\-UAL\-Anweisungssyntax in DAUMEN Region unzulässig.  
- Thumb\-Code muss die Unified\-Assembler\-Sprache \(UAL\)\-Syntax verwenden.  Die alte Syntax wird nicht mehr akzeptiert.  
+ A2202: Pre-UAL-Anweisungssyntax in THUMB-Region unzulässig.  
+ Thumb-Code muss die Unified-Assembler-Sprache (UAL)-Syntax verwenden.  Die alte Syntax wird nicht mehr akzeptiert.  
   
 ```  
   
@@ -67,8 +67,8 @@ ADDSEQ r0, r1         ; OK
   
 ```  
   
- A2513: Die Drehung muss gerade sein.  
- Im ARM\-Modus gibt es eine alternative Syntax für das Angeben von Konstanten.  Anstelle von `#<const>`, können Sie schreiben `#<byte>,#<rot>`, die darstellt, des konstanten Wertes, der durch Drehen des Werts `<byte>` direkt `<rot>`.  Wenn Sie diese Syntax verwenden, müssen Sie den Wert der `<rot>` selbst.  
+ A2513: Drehung muss gerade sein.  
+ In ARM-Modus besteht eine alternative Syntax zum Angeben von Konstanten zur Verfügung.  Anstelle des Schreibens von `#<const>`, können Sie schreiben `#<byte>,#<rot>`, der den konstanten Wert an, die abgerufen werden, indem Sie den Wert drehen darstellt `<byte>` nach rechts um `<rot>`.  Wenn Sie diese Syntax verwenden, müssen Sie vergewissern, dass den Wert des `<rot>` selbst.  
   
 ```  
   
@@ -77,8 +77,8 @@ MOV r0, #4, #1       ; A2513: Rotation must be even
   
 ```  
   
- A2557: Falsche Anzahl von Bytes zurück schreiben  
- Klicken Sie auf die NEON\-Struktur laden und Speichern von Anweisungen \(`VLDn`, `VSTn`\), gibt es eine alternative Syntax für das Rückschreiben in die Basisregister angeben.  Anstatt ein Ausrufezeichen \(\!\) nach der Adresse zu verwenden, können Sie einen sofortigen Wert angeben, der angibt, den Offset der Basisregister hinzugefügt werden.  Wenn Sie diese Syntax verwenden, müssen Sie die genaue Anzahl der Bytes angeben, die geladen oder von der Anweisung gespeichert wurden.  
+ A2557: Falsche Anzahl von Bytes zum Zurückschreiben  
+ Klicken Sie auf die NEON-Struktur laden und speichern Sie die Anweisungen (`VLDn`, `VSTn`), es ist eine alternative Syntax für das Rückschreiben von Daten in die Basisregister angeben.  Anstatt ein Ausrufezeichen (!) nach der Adresse einfügen, können Sie einen unmittelbaren nutzen angeben, der den Offset der Basisregister hinzuzufügende angibt.  Wenn Sie diese Syntax verwenden, müssen Sie die genaue Anzahl von Bytes angeben, die von der Anweisung gespeichert oder geladen wurden.  
   
 ```  
   
@@ -88,11 +88,11 @@ VLD1.8 {d0-d3}, [r0], #100    ; A2557: Incorrect number of bytes to write back
   
 ```  
   
-### Warnungen  
- A4228: Der Ausrichtungswert überschreitet Bereich Ausrichtung; Ausrichtung nicht garantiert  
- Die Ausrichtung, die in einer `ALIGN` Richtlinie ist größer als die Ausrichtung des umgebenden `AREA`.  Als Folge der Assembler nicht garantieren, dass die `ALIGN` Richtlinie wird berücksichtigt.  
+### <a name="warnings"></a>Warnungen  
+ A4228: Ausrichtungswert überschreitet Bereich Ausrichtung; Ausrichtung nicht garantiert.  
+ Die Ausrichtung, die im angegebenen ein `ALIGN` Richtlinie ist größer als die Ausrichtung des einschließenden `AREA`.  Daher der Assembler nicht garantieren, dass die `ALIGN` Richtlinie berücksichtigt.  
   
- Um dieses Problem zu beheben, können Sie festlegen, auf die `AREA` Richtlinie ein `ALIGN` \-Attribut, das gleich oder größer als die gewünschte Ausrichtung.  
+ Um dieses Problem zu beheben, können Sie auf angeben, die `AREA` Richtlinie eine `ALIGN` -Attribut, das die gewünschte Ausrichtung größer oder gleich ist.  
   
 ```  
   
@@ -104,8 +104,8 @@ ALIGN 8           ; OK
   
 ```  
   
- A4508: Verwendung dieser gedrehte Konstante ist veraltet.  
- Im ARM\-Modus gibt es eine alternative Syntax für das Angeben von Konstanten.  Anstelle von `#<const>`, können Sie schreiben `#<byte>,#<rot>`, die darstellt, des konstanten Wertes, der durch Drehen des Werts `<byte>` direkt `<rot>`.  In einigen Kontexten hat ARM die Verwendung der folgenden gedrehten veraltet.  In diesen Fällen verwenden Sie die grundlegenden `#<const>` Syntax statt.  
+ A4508: Mithilfe dieser gedreht Konstante ist veraltet.  
+ In ARM-Modus besteht eine alternative Syntax zum Angeben von Konstanten zur Verfügung.  Anstelle des Schreibens von `#<const>`, können Sie schreiben `#<byte>,#<rot>`, der den konstanten Wert an, die abgerufen werden, indem Sie den Wert drehen darstellt `<byte>` nach rechts um `<rot>`.  In einigen Kontexten wurde die Verwendung der folgenden Konstanten gedreht von ARM als veraltet. Verwenden Sie in diesen Fällen ist die grundlegende `#<const>` Syntax stattdessen.  
   
 ```  
   
@@ -115,9 +115,9 @@ ANDS r0, r0, #4, #2            ; A4508: Use of this rotated constant is deprecat
 ```  
   
  A4509: Diese Form der bedingten Anweisung ist veraltet.  
- Diese Form der bedingten Anweisung wurde als veraltet markiert, ARM in der ARMv8\-Architektur.  Wir empfehlen, den Code, bedingte Verzweigungen zu ändern.  Sehen die bedingten Anweisungen noch unterstützt werden, finden Sie in der [ARM Architektur Referenzhandbuch](http://go.microsoft.com/fwlink/?LinkId=246464).  
+ Diese Form der bedingten Anweisung wurde vom ARM in der Architektur ARMv8 als veraltet markiert. Es wird empfohlen, dass Sie den Code, um bedingte Verzweigungen verwenden ändern. Um festzustellen, welche bedingten Anweisungen weiterhin unterstützt werden, finden Sie in der [ARM Architecture Reference Manual](http://go.microsoft.com/fwlink/?LinkId=246464).  
   
- Diese Warnung wird nicht ausgegeben, wenn die  `- Oldit` Befehlszeilenoption verwendet wird.  
+ Diese Warnung wird nicht ausgegeben, wenn die `-oldit` Befehlszeilenoption verwendet wird.  
   
 ```  
   
@@ -125,6 +125,6 @@ ADDEQ r0, r1, r8              ; A4509: This form of conditional instruction is d
   
 ```  
   
-## Siehe auch  
- [ARM Assembler Command\-Line Reference](../../assembler/arm/arm-assembler-command-line-reference.md)   
- [ARM Assembler Directives](../../assembler/arm/arm-assembler-directives.md)
+## <a name="see-also"></a>Siehe auch  
+ [Befehlszeilenreferenz des ARM-Assembler](../../assembler/arm/arm-assembler-command-line-reference.md)   
+ [ARM-Assemblyanweisungen](../../assembler/arm/arm-assembler-directives.md)

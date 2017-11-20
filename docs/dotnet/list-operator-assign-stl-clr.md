@@ -1,45 +1,43 @@
 ---
-title: "list::operator= (STL/CLR)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Operator= Member [STL/CLR]"
+title: List::Operator = (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::operator=
+dev_langs: C++
+helpviewer_keywords: operator= member [STL/CLR]
 ms.assetid: 0e4fdcc6-7574-40af-b947-98c2c683676d
-caps.latest.revision: 14
-caps.handback.revision: "12"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a308c3af69d3a83a5a9a1ec461e1b086abbaa7fe
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# list::operator= (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ersetzt die gesteuerte Sequenz.  
+# <a name="listoperator-stlclr"></a>list::operator= (STL/CLR)
+Ersetzt die kontrollierte Sequenz.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 list<Value>% operator=(list<Value>% right);  
 ```  
   
-#### Parameter  
- right  
- Container zu kopieren.  
+#### <a name="parameters"></a>Parameter  
+ Rechts  
+ Der zu kopierende Container.  
   
-## Hinweise  
- Der Member, den Operator `right` zum Objekt kopiert, dann, `*this` zurückgibt.  Sie verwenden sie, um die gesteuerte Sequenz durch eine Kopie der gesteuerten Sequenz in `right` zu ersetzen.  
+## <a name="remarks"></a>Hinweise  
+ Die Member-Operator Kopien `right` klicken Sie dann auf das Objekt gibt `*this`. Sie können ihn verwenden, um die kontrollierte Sequenz durch eine Kopie der kontrollierten Sequenz in `right` zu ersetzen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_list_operator_as.cpp   
@@ -69,13 +67,16 @@ int main()
   
 ```  
   
-  **ein b c**  
- **ein b c**   
-## Anforderungen  
- **Header:** \<cliext\/Liste\>  
+```Output  
+a b c  
+a b c  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/List >  
   
-## Siehe auch  
- [list](../dotnet/list-stl-clr.md)   
- [list::assign](../dotnet/list-assign-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Liste (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list::assign (STL/CLR)](../dotnet/list-assign-stl-clr.md)

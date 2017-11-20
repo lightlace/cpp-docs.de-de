@@ -1,41 +1,40 @@
 ---
-title: "operator *"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "operator *"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "* operator, syntax"
-  - "* operator"
-  - "multiplication operator [C++], syntax"
-  - "arithmetic operators [C++], multiplication"
-  - "operators [MASM], multiplication"
+title: Operator * | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: operator *
+dev_langs: C++
+helpviewer_keywords:
+- '* operator, syntax'
+- '* operator'
+- multiplication operator [C++], syntax
+- arithmetic operators [C++], multiplication
+- operators [MASM], multiplication
 ms.assetid: 6a66521c-664f-41c3-8a77-5a948df1e9ad
-caps.latest.revision: 6
-caps.handback.revision: "6"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a764a6932f48e1e847b9de8f34f3656be66419e8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# operator *
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Gibt *expression1* Zeiten *expression2 zurück*.  
+# <a name="operator-"></a>Operator *
+Gibt *expression1* Zeiten *expression2*.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
 expression1 * expression2  
 ```  
   
-## Siehe auch  
- [Operators Reference](../../assembler/masm/operators-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Operatoren – Referenz](../../assembler/masm/operators-reference.md)

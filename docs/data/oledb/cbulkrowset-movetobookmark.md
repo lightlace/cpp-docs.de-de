@@ -1,38 +1,37 @@
 ---
-title: "CBulkRowset::MoveToBookmark | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CBulkRowset<TAccessor>::MoveToBookmark"
-  - "CBulkRowset.MoveToBookmark"
-  - "MoveToBookmark"
-  - "ATL.CBulkRowset.MoveToBookmark"
-  - "CBulkRowset::MoveToBookmark"
-  - "ATL::CBulkRowset<TAccessor>::MoveToBookmark"
-  - "ATL::CBulkRowset::MoveToBookmark"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MoveToBookmark-Methode"
+title: 'CBulkRowset:: MoveToBookmark | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CBulkRowset<TAccessor>::MoveToBookmark
+- CBulkRowset.MoveToBookmark
+- MoveToBookmark
+- ATL.CBulkRowset.MoveToBookmark
+- CBulkRowset::MoveToBookmark
+- ATL::CBulkRowset<TAccessor>::MoveToBookmark
+- ATL::CBulkRowset::MoveToBookmark
+dev_langs: C++
+helpviewer_keywords: MoveToBookmark method
 ms.assetid: 76aab025-819e-4ecd-ae0a-d8d3fb2d2099
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1671a0b03b3dbc637d83fd1e0f5125bc4abb1f1d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# CBulkRowset::MoveToBookmark
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ruft die Zeile ab, die von ein Lesezeichen gekennzeichnet oder die Zeile an einem angegebenen Offset \(`lSkip`\) von diesem Lesezeichen.  
+# <a name="cbulkrowsetmovetobookmark"></a>CBulkRowset::MoveToBookmark
+Dadurch wird die Zeile markiert ein Lesezeichen bzw. die Zeile mit einem angegebenen Offset (`lSkip`) von diesem Lesezeichen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -42,18 +41,18 @@ Ruft die Zeile ab, die von ein Lesezeichen gekennzeichnet oder die Zeile an eine
 ) throw( );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `bookmark`  
- \[in\] a\-Lesezeichen, das die Position markiert, von dem Sie Daten abrufen möchten.  
+ [in] Ein Lesezeichen, markieren den Speicherort, aus dem Daten abgerufen werden sollen.  
   
  `lSkip`  
- \[in\] Die Zahlenanzahl von Zeilen im Lesezeichen die Zielzeile.  Wenn `lSkip` null ist, ist die erste Zeile abgerufene die mit Lesezeichen versehene Zeile.  Wenn `lSkip` 1 ist, ist die erste Zeile abgerufene die Zeile nach der mit Lesezeichen versehene Zeile.  Wenn `lSkip` \- 1, während die erste Zeile ist die Zeile vor der mit Lesezeichen versehene Zeile.  
+ [in] Die Anzahl Anzahl von Zeilen aus das Lesezeichen Zielzeile. Wenn `lSkip` NULL ist, wird die erste Zeile abgerufen wird, dem Lesezeichen versehenen Zeile. Wenn `lSkip` 1, ist die erste Zeile abgerufen wird die Zeile nach dem Lesezeichen versehenen Zeile. Wenn `lSkip` ist-1 und die erste Zeile abgerufen wird, die Zeile vor dem Lesezeichen versehenen Zeile.  
   
-## Rückgabewert  
- Siehe [IRowset::GetData](https://msdn.microsoft.com/en-us/library/ms716988.aspx) in der *OLE* DB\-Programmierreferenz.  
+## <a name="return-value"></a>Rückgabewert  
+ Finden Sie unter [IRowset:: GetData](https://msdn.microsoft.com/en-us/library/ms716988.aspx) in der *OLE DB Programmer's Reference*.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  
   
-## Siehe auch  
- [CBulkRowset\-Klasse](../../data/oledb/cbulkrowset-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [CBulkRowset-Klasse](../../data/oledb/cbulkrowset-class.md)

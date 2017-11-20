@@ -1,32 +1,30 @@
 ---
-title: "logical_and (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::logical_and"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "logical_and-Funktion [STL/CLR]"
+title: Logical_and (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::logical_and
+dev_langs: C++
+helpviewer_keywords: logical_and function [STL/CLR]
 ms.assetid: ae103802-11e0-4060-a4f3-4f6fdc209e7c
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 085266bea35e59de593d9aa8437be71bc48c71a7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# logical_and (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die Vorlagenklasse beschreibt ein Funktionselement, die, wenn sie aufgerufen werden, wird nur das erste Argument und der zweite Test als true ausrichten.  Sie verwenden sie angeben einem Funktionsobjekt hinsichtlich den Argumenttyp.  
+# <a name="logicaland-stlclr"></a>logical_and (STL/CLR)
+Die Vorlagenklasse beschreibt ein Funktionselement ist, dass beim Aufrufen, gibt true zurück, nur, wenn das erste Argument und der zweite Test als "true". Sie verwenden ein Funktionsobjekt im Hinblick auf seine Argumenttyp angeben.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<typename Arg>  
@@ -49,34 +47,34 @@ public:
     };  
 ```  
   
-#### Parameter  
- Arg  
+#### <a name="parameters"></a>Parameter  
+ arg  
  Der Typ der Argumente.  
   
-## Memberfunktionen  
+## <a name="member-functions"></a>Memberfunktionen  
   
-|Typdefinition|**Beschreibung**|  
-|-------------------|----------------------|  
-|delegate\_type|Der Typ des generischen Delegaten.|  
-|first\_argument\_type|Der Typ des ersten Arguments des Feature\-Elements.|  
-|result\_type|Der Typ des Funktionselementergebnisses.|  
-|second\_argument\_type|Der Typ des Funktionselementzweiten Argumente.|  
+|Typdefinition|Beschreibung|  
+|---------------------|-----------------|  
+|delegate_type|Der Typ des generischen Delegaten.|  
+|first_argument_type|Der Typ des ersten Arguments Funktionselement.|  
+|RESULT_TYPE|Der Typ des Ergebnisses Funktionselement.|  
+|second_argument_type|Der Typ des zweiten Arguments Funktionselement.|  
   
-|Member|**Beschreibung**|  
-|------------|----------------------|  
-|logical\_and|Erstellt das Funktionselement.|  
+|Member|Beschreibung|  
+|------------|-----------------|  
+|logical_and|Erstellt das Funktionselement.|  
   
-|Operator|**Beschreibung**|  
-|--------------|----------------------|  
-|operator\(\)|Berechnet die gewünschte Funktion.|  
-|Operator delegate\_type^|Wandelt das Funktionselement zu einem Delegaten um.|  
+|Operator|Beschreibung|  
+|--------------|-----------------|  
+|Operator()|Berechnet die gewünschte Funktion.|  
+|Operator Delegate_type ^|Wandelt das Funktionselement an einen Delegaten an.|  
   
-## Hinweise  
- Die Vorlagenklasse beschreibt ein ZweiArgumentfunktionselement.  Sie definiert den Memberoperator, `operator()`, wenn das Objekt als Funktion aufgerufen wird sie nur true, wenn das erste Argument und der zweite Test als true zurückgibt.  
+## <a name="remarks"></a>Hinweise  
+ Die Vorlagenklasse beschreibt ein Funktionselement ist zwei Argumenten. Die Memberoperator definiert `operator()` , wenn das Objekt als eine Funktion aufgerufen wird, wird "true" nur, wenn das erste Argument und der zweite Test als "true".  
   
- Sie können das Objekt auch übergeben, da ein Funktionsargument, dessen Typ `delegate_type^` ist und es entsprechend konvertiert wird.  
+ Sie können auch das Objekt übergeben, als ein Funktionsargument, dessen Typ ist `delegate_type^` und werden entsprechend konvertiert werden.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_logical_and.cpp   
@@ -116,13 +114,16 @@ int main()
   
 ```  
   
-  **2 0**  
- **3 0**  
- **1 0**   
-## Anforderungen  
- **Header:** \<cliext\/funktionsfähig\>  
+```Output  
+2 0  
+3 0  
+1 0  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/funktionale >  
   
-## Siehe auch  
- [logical\_or](../dotnet/logical-or-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [logical_or (STL/CLR)](../dotnet/logical-or-stl-clr.md)

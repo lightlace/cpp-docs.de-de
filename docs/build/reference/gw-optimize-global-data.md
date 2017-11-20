@@ -1,61 +1,60 @@
 ---
-title: "/Gw (Optimieren globaler Daten) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/Gw"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Gw (Compileroption) [C++]"
-  - "-Gw (Compileroption) [C++]"
+title: -Gw (optimieren globaler Daten) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /Gw
+dev_langs: C++
+helpviewer_keywords:
+- /Gw compiler option [C++]
+- -Gw compiler option [C++]
 ms.assetid: 6f90f4e9-5eb8-4c47-886e-631278a5a4a9
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 5e822bf88091d8124a58f6f462ae7934450b5b7c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# /Gw (Optimieren globaler Daten)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Fasst globale Daten zur Optimierung in COMDAT\-Abschnitten zusammen.  
+# <a name="gw-optimize-global-data"></a>/Gw (Optimieren globaler Daten)
+Fasst globale Daten zur Optimierung in COMDAT-Abschnitten zusammen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /Gw[-]  
 ```  
   
-## Hinweise  
- Die **\/Gw**\-Option bewirkt, dass der Compiler globale Daten in einzelnen COMDAT\-Abschnitten verpackt.  Standardmäßig ist **\/Gw** deaktiviert und muss explizit aktiviert werden.  Zur expliziten Deaktivierung verwenden Sie **\/Gw\-**.  Wenn sowohl **\/Gw** als auch [\/GL](../../build/reference/gl-whole-program-optimization.md) aktiviert ist, verwendet der Linker die programmübergreifende Optimierung, um COMDAT\-Abschnitte über mehrere Objektdateien hinweg zu vergleichen, wobei nicht referenzierte globale Daten ausgeschlossen oder identische schreibgeschützte globale Daten zusammengeführt werden.  Dies kann die Größe der resultierenden binären ausführbaren Datei deutlich reduzieren.  
+## <a name="remarks"></a>Hinweise  
+ Die **/GW** Option veranlasst den Compiler, fasst globale Daten in einzelnen COMDAT-Abschnitten. Standardmäßig **/GW** ist deaktiviert und muss explizit aktiviert werden. Verwenden Sie zur expliziten Deaktivierung, **/Gw-**. Wenn beide **/GW** und [/GL](../../build/reference/gl-whole-program-optimization.md) sind aktiviert, verwendet der Linker Optimierung des gesamten Programms um COMDAT-Abschnitte über mehrere Objektdateien hinweg zu vergleichen, wobei nicht referenzierte globale Daten ausgeschlossen oder zusammenführen Identische schreibgeschützte globale Daten. Dies kann die Größe der resultierenden binären ausführbaren Datei deutlich reduzieren.  
   
- Wenn Sie getrennt kompilieren und binden, können Sie die Linkeroption [\/OPT:REF](../../build/reference/opt-optimizations.md) verwenden, um aus der ausführbaren Datei die nicht referenzierten globalen Daten in Objektdateien auszuschließen, die mit der **\/Gw**\-Option kompiliert wurden.  
+ Wenn Sie separat kompilieren und verknüpfen, können Sie die [/OPT: REF](../../build/reference/opt-optimizations.md) (Linkeroption) zum Ausschließen der ausführbaren Datei mit der nicht referenzierten globalen Daten in Objektdateien kompiliert die **/GW** Option.  
   
- Sie können auch die Linkeroptionen [\/OPT:ICF](../../build/reference/opt-optimizations.md) und [\/LTCG](../../build/reference/ltcg-link-time-code-generation.md) verwenden, um in der ausführbaren Datei alle identischen globalen schreibgeschützten Daten zusammenzuführen, die aus Objektdateien stammen, die mit der **\/Gw**\-Option kompiliert wurden.  
+ Sie können auch die [/OPT: ICF](../../build/reference/opt-optimizations.md) und [/LTCG](../../build/reference/ltcg-link-time-code-generation.md) Optionen des Linkers zusammen, die in der ausführbaren Datei zusammenzuführen identischen schreibgeschützte globale Daten über mehrere Objektdateien hinweg mit kompiliert die   **/GW** Option.  
   
- Weitere Informationen finden Sie unter [Introducing ‘\/Gw’ Compiler Switch](http://blogs.msdn.com/b/vcblog/archive/2013/09/11/introducing-gw-compiler-switch.aspx) im Visual C\+\+\-Team\-Blog.  
+ Weitere Informationen finden Sie unter [Einführung/GW Compilerschalter](http://blogs.msdn.com/b/vcblog/archive/2013/09/11/introducing-gw-compiler-switch.aspx) im Visual C++-Team-Blog.  
   
-### So legen Sie diese Compileroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Wählen Sie den Ordner **C\/C\+\+** aus.  
+2.  Wählen Sie die **C/C++-** Ordner.  
   
-3.  Wählen Sie die Eigenschaftenseite **Befehlszeile** aus.  
+3.  Wählen Sie die **Befehlszeile** Eigenschaftenseite.  
   
-4.  Ändern Sie die Eigenschaft **Zusätzliche Optionen**, damit sie **\/Gw** einschließt, und wählen Sie dann **OK** aus.  
+4.  Ändern der **Zusatzoptionen** Eigenschaft einschließen **/GW** und wählen Sie dann **OK**.  
   
-### So legen Sie diese Compileroption programmgesteuert fest  
+### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
   
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions*>.  
+-   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Compileroptionen](../../build/reference/compiler-options.md)   
  [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

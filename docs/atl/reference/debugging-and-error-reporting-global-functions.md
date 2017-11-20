@@ -4,39 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- functions [ATL], error reporting
+f1_keywords:
+- atlcomcli/ATL::AtlHresultFromLastError
+- atlcom/ATL::AtlReportError
+- atldef/ATL::AtlThrow
+dev_langs: C++
+helpviewer_keywords: functions [ATL], error reporting
 ms.assetid: 11339c02-98cd-428d-b3b9-7deeb155a6a3
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 6c328c82c5e2ef5ff6f413d4eb3f1b62e2b693d8
-ms.contentlocale: de-de
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: ea41febbb9de28ff70d89bfe4f6fcebc9a452ed2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>Debuggen und globale Funktionen für die Fehlerberichterstattung
 Diese Funktionen geben nützlich, Debuggen und Ablaufverfolgung Einrichtungen.  
@@ -154,7 +140,7 @@ HRESULT WINAPI AtlReportError(
  [in] Der Pfad und Name der Hilfedatei, die den Fehler beschreibt.  
   
  `hInst`  
- [in] Das Handle für die Ressource. Standardmäßig ist dieser Parameter **__AtlBaseModuleModule::GetResourceInstance**, wobei **__AtlBaseModuleModule** wird die globale Instanz von [CAtlBaseModule](../../atl/reference/catlbasemodule-class.md) oder eine Klasse abgeleitet.  
+ [in] Das Handle für die Ressource. Standardmäßig ist dieser Parameter **__AtlBaseModuleModule::GetResourceInstance**, wobei **__AtlBaseModuleModule** wird die globale Instanz von [CAtlBaseModule](../../atl/reference/catlbasemodule-class.md) oder einer Klasse daraus abgeleitet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wenn die `hRes` Parameter ungleich NULL ist, wird den Wert des `hRes`. Wenn `hRes` ist 0 (null), und klicken Sie dann auf die ersten vier Versionen des `AtlReportError` zurückgeben `DISP_E_EXCEPTION`. Die letzten beiden Versionen zurück, das Ergebnis des Makros **MAKE_HRESULT (1, FACILITY_ITF,** `nID` **)**.  
@@ -163,7 +149,7 @@ HRESULT WINAPI AtlReportError(
  Die Zeichenfolge *LpszDesc* als die textbeschreibung des Fehlers verwendet wird. Wenn der Client empfängt die `hRes` zurückgegebenen `AtlReportError`, kann der Client zugreifen, die **IErrorInfo** Struktur Einzelheiten zum Fehler.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_COM #52](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_1.cpp)]  
+ [!code-cpp[NVC_ATL_COM#52](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_1.cpp)]  
   
 > [!CAUTION]
 >  Verwenden Sie keine `AtlReportError` in C++ catch-Handler. Einige überschreibungen von Funktionen verwenden die ATL-Makros zur zeichenfolgenkonvertierung intern, die wiederum die `_alloca` intern funktioniert. Mithilfe von `AtlReportError` in einem C++-Catch Handler kann dazu führen, dass Ausnahmen im Catch-Handler von C++.  
@@ -187,7 +173,7 @@ __declspec(noreturn) inline void AtlThrow(HRESULT hr);
   
  In allen Fällen verfolgt diese Funktion das HRESULT für den Debugger.  
   
- In Visual Studio 2015 Update 3 und höher, wird diese Funktion attributiertes __declspec(noreturn) um unbegründete SAL-Warnungen zu vermeiden.  
+ In Visual Studio 2015 Update 3 und höher, wird diese Funktion attributierte __declspec(noreturn) um unbegründete SAL-Warnungen zu vermeiden.  
   
  Wenn **_ATL_NO_EXCEPTIONS** ist nicht definiert in einem MFC-Projekt, diese Funktion löst einen [CMemoryException](../../mfc/reference/cmemoryexception-class.md) oder ein [COleException](../../mfc/reference/coleexception-class.md) basierend auf dem Wert von HRESULT.  
   
@@ -198,7 +184,7 @@ __declspec(noreturn) inline void AtlThrow(HRESULT hr);
  Für ATL-Projekte ist es möglich, geben Sie Ihre eigene Implementierung dieser Funktion von ATL, die im Fall eines Fehlers verwendet werden. Zu diesem Zweck definieren Sie Ihre eigene Funktion mit der gleichen Signatur wie `AtlThrow` und #define `AtlThrow` werden der Name der Funktion. Dies muss vor dem Einfügen von atlexcept.h (d. h. es durchgeführt werden muss, bevor die ATL-Header einschließen, da atlbase.h atlexcept.h umfasst) erfolgen. Attribut Ihrer Funktion `__declspec(noreturn)` um unbegründete SAL-Warnungen zu vermeiden.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Windowing #95](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]  
+ [!code-cpp[NVC_ATL_Windowing#95](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]  
 
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atldef.h  
@@ -226,7 +212,6 @@ inline void AtlThrowLastWin32();
 ## <a name="see-also"></a>Siehe auch  
  [Funktionen](../../atl/reference/atl-functions.md)   
  [Debuggen und Fehlerberichterstattungs-Makros](../../atl/reference/debugging-and-error-reporting-macros.md)
-
 
 
 

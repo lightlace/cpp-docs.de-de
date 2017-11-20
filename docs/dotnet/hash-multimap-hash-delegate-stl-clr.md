@@ -1,41 +1,39 @@
 ---
-title: "hash_multimap::hash_delegate (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::hash_delegate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "hash_delegate-Member [STL/CLR]"
+title: hash_multimap::hash_delegate (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::hash_delegate
+dev_langs: C++
+helpviewer_keywords: hash_delegate member [STL/CLR]
 ms.assetid: 2a459f6d-9bb1-4b03-a013-0998ba842c25
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b9ca318a34f3592379e9b487ca3d14d7e37c347e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multimap::hash_delegate (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Sucht ein Element, der einem angegebenen Schlüssel entspricht.  
+# <a name="hashmultimaphashdelegate-stlclr"></a>hash_multimap::hash_delegate (STL/CLR)
+Sucht ein Element, das einem angegebenen Schlüssel entspricht.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 hasher^ hash_delegate();  
 ```  
   
-## Hinweise  
- Die Memberfunktion gibt den Delegaten zurück, der verwendet wird, um einen Schlüsselwert in eine ganze Zahl zu konvertieren.  Sie verwenden sie, um Schlüssel zu gehasht.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt der Delegat, der zum Konvertieren von Schlüssel-Wert in eine ganze Zahl zurück. Sie verwenden es, einen Schlüssel für den Hashvorgang.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_hash_multimap_hash_delegate.cpp   
@@ -55,13 +53,16 @@ int main()
   
 ```  
   
-  **Hash \(L'a\) \= 1616896120**  
-**Hash \(L'b\) \= 570892832**   
-## Anforderungen  
- **Header:** \<cliext\/hash\_map\>  
+```Output  
+hash(L'a') = 1616896120  
+hash(L'b') = 570892832  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext Hash_map/>  
   
-## Siehe auch  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::hasher](../dotnet/hash-multimap-hasher-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [hash_multimap-Element (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap::hasher (STL/CLR)](../dotnet/hash-multimap-hasher-stl-clr.md)

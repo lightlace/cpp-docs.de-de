@@ -1,32 +1,30 @@
 ---
-title: "FORC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "FORC"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "FORC directive"
+title: FORC | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: FORC
+dev_langs: C++
+helpviewer_keywords: FORC directive
 ms.assetid: 57c05099-0c46-44bc-9ae5-27ce850ccdff
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 49efdac6210d843d290aaf2821c954b8110cc2f7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# FORC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Markiert einen Block, der einmal für jedes Zeichen in `string`wiederholt wird, wenn das aktuelle Zeichen ersetzt `parameter` bei jeder Wiederholung.  
+# <a name="forc"></a>FORC
+Einen Block, der einmal für jedes Zeichen in wiederholt wird, kennzeichnet `string`, mit dem aktuellen Zeichen ersetzen `parameter` bei jeder Wiederholung.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -35,8 +33,8 @@ parameter, <string> statements
 ENDM  
 ```  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Identisch mit [IRPC](../../assembler/masm/irpc.md).  
   
-## Siehe auch  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)

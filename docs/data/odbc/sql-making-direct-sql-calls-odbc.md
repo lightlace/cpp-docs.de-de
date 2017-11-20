@@ -1,47 +1,47 @@
 ---
-title: "SQL: Durchf&#252;hren direkter SQL-Aufrufe (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Direkte SQL-Aufrufe aus ODBC"
-  - "ODBC, SQL-Aufrufe"
-  - "SQL-Aufrufe"
-  - "SQL, Aufrufen direkt aus ODBC"
-  - "SQL, Direkte Aufrufe aus ODBC"
+title: "SQL: Durchführen direkter SQL-Aufrufe (ODBC) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- SQL, direct calls from ODBC
+- SQL, calling directly from ODBC
+- ODBC, SQL calls
+- SQL calls
+- direct SQL calls from ODBC
 ms.assetid: 091988d2-f5a5-4c2d-aa09-8779a9fb9607
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cac2844c64bf2157a9984a29b8885434eb07b811
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# SQL: Durchf&#252;hren direkter SQL-Aufrufe (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="sql-making-direct-sql-calls-odbc"></a>SQL: Durchführen direkter SQL-Aufrufe (ODBC)
 In diesem Thema wird Folgendes erläutert:  
   
--   Wann Sie direkte SQL\-Aufrufe verwenden sollten.  
+-   Verwendung von direkter SQL aufruft.  
   
--   [Wie Sie direkte SQL\-Aufrufe für die Datenquelle durchführen](#_core_making_direct_sql_function_calls).  
+-   [Wie können Sie direkte SQL Aufrufe von der Datenquelle](#_core_making_direct_sql_function_calls).  
   
 > [!NOTE]
->  Diese Informationen beziehen sich auf die MFC\-ODBC\-Klassen.  Wenn Sie mit den MFC\-DAO\-Klassen arbeiten, lesen Sie in der DAO\-Hilfe das Thema "Vergleich von Microsoft Jet Database Engine\-SQL und ANSI\-SQL".  
+>  Diese Informationen gelten für die MFC-ODBC-Klassen. Wenn Sie mit den MFC-DAO-Klassen arbeiten, finden Sie im Thema "Vergleich von Microsoft Jet-Datenbank-Engine-SQL und ANSI-SQL" DAO-Hilfe.  
   
-##  <a name="_core_when_to_call_sql_directly"></a> Wann Sie direkte SQL\-Aufrufe verwenden sollten  
- Wenn Sie Tabellen anlegen, löschen oder ändern bzw. Indizes anlegen oder sonstige SQL\-Funktionen aufrufen möchten, die das Schema der [Datenquelle \(ODBC\)](../../data/odbc/data-source-odbc.md) verändern, muss hierzu unter Verwendung von DDL \(Database Definition Language\) eine SQL\-Anweisung direkt an die Datenquelle übergeben werden.  Wenn Sie zur Entwurfszeit einen Assistenten für die Erstellung eines Recordsets verwenden, können Sie auswählen, welche Tabellenspalten im Recordset repräsentiert werden sollen.  Hierbei sind Spalten ausgeschlossen, die Sie oder andere Benutzer der Datenquelle der Tabelle erst hinzufügen, nachdem das Programm kompiliert wurde.  Die Datenbankklassen unterstützen DDL nicht direkt, Sie können aber trotzdem Code erstellen, um neue Spalten während der Laufzeit dynamisch an das Recordset zu binden.  Weitere Informationen zu diesem Bindungsvorgang finden Sie unter [Recordset: Dynamisches Binden von Datenspalten \(ODBC\)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).  
+##  <a name="_core_when_to_call_sql_directly"></a>Wenn SQL direkt aufrufen  
+ Zum Erstellen neuer Tabellen, löschen (Delete) Tabellen, Ändern von vorhandenen Tabellen, Indizes zu erstellen und Ausführen von anderen SQL-Funktionen, die sich ändern die [Datenquelle (ODBC)](../../data/odbc/data-source-odbc.md) Schema, müssen Sie eine SQL-Anweisung ausgeben, direkt mit der Datenquelle, die mit der Datenbank Definition Language (DDL). Wenn Sie einen Assistenten verwenden, erstellen Sie ein Recordset für eine Tabelle (Entwurfszeit), können Sie die Spalten der Tabelle, die im Recordset darstellen auswählen. Dies lässt sich nicht für Spalten, die Sie oder ein anderer Benutzer der Datenquelle der Tabelle später hinzufügen, nachdem das Programm kompiliert wurde. Die Datenbankklassen unterstützen DDL nicht direkt, aber Sie können immer noch Code schreiben, um eine neue Spalte zur Laufzeit dynamisch an das Recordset zu binden. Weitere Informationen dazu, wie auf diese Bindung verwenden, finden Sie unter [Recordset: Dynamisches Binden von Spalten (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).  
   
- Sie können das Schema mit DBMS oder einem anderen Tool verändern, mit dem DDL\-Funktionen ausgeführt werden können.  Sie können SQL\-Anweisungen auch mit ODBC\-Funktionsaufrufen verschicken, z. B. durch Aufruf einer vordefinierten Abfrage \(gespeicherte Prozedur\), die keine Datensätze zurückliefert.  
+ Das DBMS selbst können Sie die alter Schema oder ein anderes Tool, mit der DDL-Funktionen ausgeführt werden können. Sie können auch die ODBC-Funktionsaufrufe verwenden, für das Senden von SQL-Anweisungen, wie das Aufrufen einer vordefinierten Abfrage (gespeicherten Prozedur), die keinen Datensätze zurückgibt.  
   
-##  <a name="_core_making_direct_sql_function_calls"></a> Direkter Aufruf von SQL\-Funktionen  
- Mit einem [CDatabase Class](../../mfc/reference/cdatabase-class.md)\-Objekt können Sie einen direkten SQL\-Aufruf durchführen.  Stellen Sie die SQL\-Anweisungszeichenfolge \(gewöhnlich in `CString`\) zusammen, und übergeben Sie diese an die [CDatabase::ExecuteSQL](../Topic/CDatabase::ExecuteSQL.md)\-Memberfunktion des `CDatabase`\-Objekts.  Falls Sie eine SQL\-Anweisung, die normalerweise Datensätze zurückliefert, mit ODBC\-Funktionsaufrufen senden, werden die Datensätze ignoriert.  
+##  <a name="_core_making_direct_sql_function_calls"></a>Festlegen, dass direkter SQL-Funktionsaufrufe  
+ Sie können direkt ausführen, einen SQL-Aufruf mithilfe einer [CDatabase-Klasse](../../mfc/reference/cdatabase-class.md) Objekt. Richten Sie Ihre SQL-Anweisungszeichenfolge (in der Regel in einer `CString`) und übergeben sie an der [CDatabase:: ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql) Memberfunktion von Ihrer `CDatabase` Objekt. Wenn Sie ODBC-Funktionsaufrufe verwenden, um eine SQL-Anweisung zu senden, die normalerweise Datensätze zurückgibt, werden die Einträge ignoriert.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [SQL](../../data/odbc/sql.md)

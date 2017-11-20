@@ -1,11 +1,10 @@
 ---
-title: Klasse CAtlFile | Microsoft-Dokumentation
+title: CAtlFile Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -24,41 +23,24 @@ f1_keywords:
 - ATLFILE/ATL::CAtlFile::UnlockRange
 - ATLFILE/ATL::CAtlFile::Write
 - ATLFILE/ATL::CAtlFile::m_pTM
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAtlFile class
+dev_langs: C++
+helpviewer_keywords: CAtlFile class
 ms.assetid: 93ed160b-af2a-448c-9cbe-e5fa46c199bb
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 5ba8aa0bc5544d8d541fecb87e2eb0108c2c5ebd
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 557c0451f0c33e13a8fb572f77c387b43daea6f8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="catlfile-class"></a>CAtlFile-Klasse
-Diese Klasse stellt einen einfacher Wrapper für die Windows-API-Datei verarbeitet.  
+Diese Klasse bietet einen funktionsarmen Wrapper um die Windows-Datei-API-Behandlung.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member werden nicht in Anwendungen verwendet, die in der Windows-Runtime ausgeführt.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -78,17 +60,17 @@ class CAtlFile : public CHandle
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CAtlFile::Create](#create)|Rufen Sie diese Methode zum Erstellen oder Öffnen einer Datei.|  
-|[CAtlFile::Flush](#flush)|Rufen Sie diese Methode, um den Puffer für die Datei löschen und dazu führen, dass alle gepufferte Daten in die Datei geschrieben werden.|  
-|[CAtlFile::GetOverlappedResult](#getoverlappedresult)|Rufen Sie diese Methode zum Abrufen der Ergebnisse eines überlappenden Vorgangs für die Datei.|  
-|[CAtlFile::GetPosition](#getposition)|Rufen Sie diese Methode, um die aktuelle Dateiposition Zeiger aus der Datei zu erhalten.|  
+|[CAtlFile::Create](#create)|Rufen Sie diese Methode zum Erstellen oder öffnen Sie eine Datei.|  
+|[CAtlFile::Flush](#flush)|Rufen Sie diese Methode, um den Puffer für die Datei löschen und dazu führen, dass alle gepufferte Daten in die Datei geschrieben werden sollen.|  
+|[CAtlFile::GetOverlappedResult](#getoverlappedresult)|Rufen Sie diese Methode, um die Ergebnisse eines überlappenden Vorgangs für die Datei zu erhalten.|  
+|[CAtlFile::GetPosition](#getposition)|Rufen Sie diese Methode, um die aktuelle Zeigerposition für die Datei aus der Datei zu erhalten.|  
 |[CAtlFile::GetSize](#getsize)|Rufen Sie diese Methode, um die Größe in Bytes der Datei abrufen.|  
-|[CAtlFile::LockRange](#lockrange)|Rufen Sie diese Methode, um einen Bereich in der Datei, um zu verhindern, dass andere Prozesse Zugriff zu sperren.|  
-|[CAtlFile::Read](#read)|Rufen Sie diese Methode zum Lesen von Daten aus einer Datei, die an der Position des Zeigers Datei ab.|  
+|[CAtlFile::LockRange](#lockrange)|Rufen Sie diese Methode, um einen Bereich in der Datei, um zu verhindern, dass andere Prozesse zugegriffen wird zu sperren.|  
+|[CAtlFile::Read](#read)|Rufen Sie diese Methode zum Lesen von Daten aus einer Datei, ab der Position des Dateizeigers erkennbar.|  
 |[CAtlFile::Seek](#seek)|Rufen Sie diese Methode, um den Dateizeiger der Datei zu verschieben.|  
 |[CAtlFile::SetSize](#setsize)|Rufen Sie diese Methode, um die Größe der Datei festgelegt.|  
 |[CAtlFile::UnlockRange](#unlockrange)|Rufen Sie diese Methode, um einen Bereich der Datei zu entsperren.|  
-|[CAtlFile::Write](#write)|Rufen Sie diese Methode, um Daten in der Datei, ab der Position des Zeigers Datei zu schreiben.|  
+|[CAtlFile::Write](#write)|Rufen Sie diese Methode zum Schreiben von Daten in der Datei, ab der Position des Dateizeigers erkennbar.|  
   
 ### <a name="protected-data-members"></a>Geschützte Datenmember  
   
@@ -97,7 +79,7 @@ class CAtlFile : public CHandle
 |[CAtlFile::m_pTM](#m_ptm)|Zeiger auf `CAtlTransactionManager` Objekt|  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden Sie diese Klasse, wenn Dateibehandlung Anforderungen relativ einfach sind, aber mehr Abstraktion als die Windows-API bietet ohne MFC Abhängigkeiten erforderlich ist.  
+ Verwenden Sie diese Klasse, wenn Dateibehandlung Anforderungen relativ einfach sind, aber weitere Abstraktion als die Windows-API bietet ohne MFC Abhängigkeiten erforderlich ist.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CHandle](../../atl/reference/chandle-class.md)  
@@ -119,7 +101,7 @@ explicit CAtlFile(HANDLE hFile) throw();
   
 ### <a name="parameters"></a>Parameter  
  `file`  
- Das File-Objekt.  
+ Das Objekt "Datei".  
   
  `hFile`  
  Das Dateihandle.  
@@ -128,10 +110,10 @@ explicit CAtlFile(HANDLE hFile) throw();
  Zeiger auf CAtlTransactionManager-Objekt  
   
 ### <a name="remarks"></a>Hinweise  
- Der Kopierkonstruktor überträgt den Besitz des Dateihandles aus dem ursprünglichen `CAtlFile` Objekt, das das neu erstellte Objekt.  
+ Der Kopierkonstruktor überträgt den Besitz des Dateihandles aus der ursprünglichen `CAtlFile` Objekt, das das neu erstellte Objekt.  
   
 ##  <a name="create"></a>CAtlFile::Create  
- Rufen Sie diese Methode zum Erstellen oder Öffnen einer Datei.  
+ Rufen Sie diese Methode zum Erstellen oder öffnen Sie eine Datei.  
   
 ```
 HRESULT Create(
@@ -149,31 +131,31 @@ HRESULT Create(
  Der Dateiname.  
   
  `dwDesiredAccess`  
- Der gewünschte Zugriff. Finden Sie unter `dwDesiredAccess` in [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Der gewünschte Zugriff. Finden Sie unter `dwDesiredAccess` in [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) im Windows SDK.  
   
  `dwShareMode`  
- Der Share-Modus. Finden Sie unter `dwShareMode` in **CreateFile**.  
+ Der Freigabemodus. Finden Sie unter `dwShareMode` in **CreateFile**.  
   
  `dwCreationDisposition`  
  Die Disposition erstellen. Finden Sie unter `dwCreationDisposition` in **CreateFile**.  
   
  `dwFlagsAndAttributes`  
- Der Flags und Attribute. Finden Sie unter `dwFlagsAndAttributes` in **CreateFile**.  
+ Die Flags und Attribute. Finden Sie unter `dwFlagsAndAttributes` in **CreateFile**.  
   
  `lpsa`  
- Die Attribute für die Sicherheit. Finden Sie unter *LpSecurityAttributes* in **CreateFile**.  
+ Die Sicherheitsattribute. Finden Sie unter *LpSecurityAttributes* in **CreateFile**.  
   
  `hTemplateFile`  
- Die Datei der Vorlage. Finden Sie unter `hTemplateFile` in **CreateFile**.  
+ Die Vorlagendatei. Finden Sie unter `hTemplateFile` in **CreateFile**.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt `S_OK` auf Erfolg oder Fehler `HRESULT` bei einem Fehler.  
   
 ### <a name="remarks"></a>Hinweise  
- Aufrufe [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) erstellen oder öffnen die Datei.  
+ Aufrufe [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) erstellen oder öffnen Sie die Datei.  
   
 ##  <a name="flush"></a>CAtlFile::Flush  
- Rufen Sie diese Methode, um den Puffer für die Datei löschen und dazu führen, dass alle gepufferte Daten in die Datei geschrieben werden.  
+ Rufen Sie diese Methode, um den Puffer für die Datei löschen und dazu führen, dass alle gepufferte Daten in die Datei geschrieben werden sollen.  
   
 ```
 HRESULT Flush() throw();
@@ -183,10 +165,10 @@ HRESULT Flush() throw();
  Gibt `S_OK` auf Erfolg oder Fehler `HRESULT` bei einem Fehler.  
   
 ### <a name="remarks"></a>Hinweise  
- Aufrufe [FlushFileBuffers](http://msdn.microsoft.com/library/windows/desktop/aa364439) gepufferte Daten auf die Datei zu speichern.  
+ Aufrufe [FlushFileBuffers](http://msdn.microsoft.com/library/windows/desktop/aa364439) gepufferte Daten in die Datei geleert.  
   
 ##  <a name="getoverlappedresult"></a>CAtlFile::GetOverlappedResult  
- Rufen Sie diese Methode zum Abrufen der Ergebnisse eines überlappenden Vorgangs für die Datei.  
+ Rufen Sie diese Methode, um die Ergebnisse eines überlappenden Vorgangs für die Datei zu erhalten.  
   
 ```
 HRESULT GetOverlappedResult(
@@ -197,22 +179,22 @@ HRESULT GetOverlappedResult(
   
 ### <a name="parameters"></a>Parameter  
  `pOverlapped`  
- Die überlappende Struktur. Finden Sie unter `lpOverlapped` in [GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Die überlappende Struktur. Finden Sie unter `lpOverlapped` in [GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) im Windows SDK.  
   
  *dwBytesTransferred*  
  Die Bytes übertragen. Finden Sie unter *LpNumberOfBytesTransferred* in `GetOverlappedResult`.  
   
  `bWait`  
- Die Wait-Option. Siehe auch `bWait` in `GetOverlappedResult`.  
+ Die Abfragewartezeit (Option). Siehe auch `bWait` in `GetOverlappedResult`.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt `S_OK` auf Erfolg oder Fehler `HRESULT` bei einem Fehler.  
   
 ### <a name="remarks"></a>Hinweise  
- Aufrufe [GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) zum Abrufen der Ergebnisse eines überlappenden Vorgangs für die Datei.  
+ Aufrufe [GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) um die Ergebnisse eines überlappenden Vorgangs für die Datei zu erhalten.  
   
 ##  <a name="getposition"></a>CAtlFile::GetPosition  
- Rufen Sie diese Methode, um die aktuelle Dateiposition Zeiger zu erhalten.  
+ Rufen Sie diese Methode, um die aktuelle Zeigerposition für die Datei zu erhalten.  
   
 ```
 HRESULT GetPosition(ULONGLONG& nPos) const throw();
@@ -226,7 +208,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
  Gibt `S_OK` auf Erfolg oder Fehler `HRESULT` bei einem Fehler.  
   
 ### <a name="remarks"></a>Hinweise  
- Aufrufe [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) die aktuelle Dateiposition Zeiger abgerufen.  
+ Aufrufe [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) zum Abrufen der aktuellen Position des Datei-Zeiger.  
   
 ##  <a name="getsize"></a>CAtlFile::GetSize  
  Rufen Sie diese Methode, um die Größe in Bytes der Datei abrufen.  
@@ -243,10 +225,10 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
  Gibt `S_OK` auf Erfolg oder Fehler `HRESULT` bei einem Fehler.  
   
 ### <a name="remarks"></a>Hinweise  
- Aufrufe [GetFileSize](http://msdn.microsoft.com/library/windows/desktop/aa364955) die Größe der Datei in Bytes ab.  
+ Aufrufe [' GetFileSize '](http://msdn.microsoft.com/library/windows/desktop/aa364955) zum Abrufen der Größe der Datei in Bytes.  
   
 ##  <a name="lockrange"></a>CAtlFile::LockRange  
- Rufen Sie diese Methode, um einen Bereich in der Datei, um zu verhindern, dass andere Prozesse Zugriff zu sperren.  
+ Rufen Sie diese Methode, um einen Bereich in der Datei, um zu verhindern, dass andere Prozesse zugegriffen wird zu sperren.  
   
 ```
 HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
@@ -257,16 +239,16 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
  Die Position in der Datei, in dem die Sperre beginnen soll.  
   
  `nCount`  
- Die Länge des Bytebereichs gesperrt werden soll.  
+ Die Länge des Bytebereichs gesperrt werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt `S_OK` auf Erfolg oder Fehler `HRESULT` bei einem Fehler.  
   
 ### <a name="remarks"></a>Hinweise  
- Aufrufe [Sperrdatei](http://msdn.microsoft.com/library/windows/desktop/aa365202) , einen Bereich in der Datei zu sperren. Das Sperren von Bytes in einer Datei verhindert den Zugriff auf diese Bytes durch andere Prozesse. Sie können mehrere Bereiche einer Datei sperren, jedoch keine überlappenden Bereiche sind zulässig. Wenn Sie eine Region entsperren, [CAtlFile::UnlockRange](#unlockrange), der Bytebereich muss entspricht exakt der Region, die zuvor gesperrt war. `LockRange`nicht zusammen benachbarte Bereiche; Wenn zwei gesperrte Bereiche nebeneinander angeordnet sind, müssen Sie jeweils einzeln entsperren.  
+ Aufrufe [Sperrdatei](http://msdn.microsoft.com/library/windows/desktop/aa365202) , einen Bereich in der Datei zu sperren. Das Sperren von Bytes in einer Datei verhindert den Zugriff auf diese Bytes durch andere Prozesse. Sie können mehr als ein Bereich einer Datei sperren, aber keine überlappenden Bereiche sind zulässig. Wenn Sie eine Region entsperrt werden, mithilfe von [CAtlFile::UnlockRange](#unlockrange), der Bytebereich muss genau in der Region, die zuvor gesperrt war entsprechen. `LockRange`angrenzende Regionen werden nicht zusammengeführt werden; Wenn zwei gesperrte Bereiche nebeneinander angeordnet sind, müssen Sie jede separat entsperren.  
   
 ##  <a name="m_ptm"></a>CAtlFile::m_pTM  
- Zeiger auf ein `CAtlTransactionManager` Objekt.  
+ Zeiger auf eine `CAtlTransactionManager` Objekt.  
   
 ```
 CAtlTransactionManager* m_pTM;
@@ -275,7 +257,7 @@ CAtlTransactionManager* m_pTM;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="read"></a>CAtlFile::Read  
- Rufen Sie diese Methode zum Lesen von Daten aus einer Datei, die an der Position des Zeigers Datei ab.  
+ Rufen Sie diese Methode zum Lesen von Daten aus einer Datei, ab der Position des Dateizeigers erkennbar.  
   
 ```
 HRESULT Read(
@@ -301,7 +283,7 @@ HRESULT Read(
   
 ### <a name="parameters"></a>Parameter  
  `pBuffer`  
- Zeiger auf den Puffer, der die Daten empfängt, die aus der Datei gelesen werden.  
+ Zeiger auf den Puffer, der aus der Datei gelesenen Daten erhalten.  
   
  `nBufSize`  
  Die Puffergröße in Byte.  
@@ -310,16 +292,16 @@ HRESULT Read(
  Die Anzahl von gelesenen Bytes.  
   
  `pOverlapped`  
- Die überlappende Struktur. Finden Sie unter `lpOverlapped` in [ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Die überlappende Struktur. Finden Sie unter `lpOverlapped` in [ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467) im Windows SDK.  
   
  `pfnCompletionRoutine`  
- Abschlussroutine beendet hat. Finden Sie unter *LpCompletionRoutine* in [ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Abschlussroutine beendet hat. Finden Sie unter *LpCompletionRoutine* in [ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468) im Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt `S_OK` auf Erfolg oder Fehler `HRESULT` bei einem Fehler.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie die ersten drei Formen [ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467), das letzte [ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468) zum Lesen von Daten aus der Datei. Verwendung [CAtlFile::Seek](#seek) den Dateizeiger verschoben.  
+ Rufen Sie die ersten drei Formulare [ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467), den letzten [ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468) zum Lesen von Daten aus der Datei. Verwendung [CAtlFile::Seek](#seek) den Dateizeiger verschoben.  
   
 ##  <a name="seek"></a>CAtlFile::Seek  
  Rufen Sie diese Methode, um den Dateizeiger der Datei zu verschieben.  
@@ -332,7 +314,7 @@ HRESULT Seek(
   
 ### <a name="parameters"></a>Parameter  
  `nOffset`  
- Der Offset vom Ausgangspunkt vom `dwFrom`.  
+ Der Offset vom den Anfangspunkt, die vom `dwFrom`.  
   
  `dwFrom`  
  Der Anfangspunkt (FILE_BEGIN, FILE_CURRENT oder FILE_END).  
@@ -358,7 +340,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
  Gibt `S_OK` auf Erfolg oder Fehler `HRESULT` bei einem Fehler.  
   
 ### <a name="remarks"></a>Hinweise  
- Aufrufe [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) und [SetEndOfFile](http://msdn.microsoft.com/library/windows/desktop/aa365531) die Größe der Datei festlegen. Bei der Rückgabe wird der Dateizeiger am Ende der Datei positioniert.  
+ Aufrufe [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) und [SetEndOfFile](http://msdn.microsoft.com/library/windows/desktop/aa365531) zum Festlegen der Größe der Datei. Bei der Rückgabe wird der Dateizeiger am Ende der Datei positioniert.  
   
 ##  <a name="unlockrange"></a>CAtlFile::UnlockRange  
  Rufen Sie diese Methode, um einen Bereich der Datei zu entsperren.  
@@ -369,7 +351,7 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
   
 ### <a name="parameters"></a>Parameter  
  `nPos`  
- Die Position in der Datei, wo das Entsperren beginnen soll.  
+ Die Position in der Datei, in dem das Entsperren beginnen soll.  
   
  `nCount`  
  Die Länge des Bytebereichs entsperrt werden.  
@@ -381,7 +363,7 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
  Aufrufe [UnlockFile](http://msdn.microsoft.com/library/windows/desktop/aa365715) um einen Bereich der Datei zu entsperren.  
   
 ##  <a name="write"></a>CAtlFile::Write  
- Rufen Sie diese Methode, um Daten in der Datei, ab der Position des Zeigers Datei zu schreiben.  
+ Rufen Sie diese Methode zum Schreiben von Daten in der Datei, ab der Position des Dateizeigers erkennbar.  
   
 ```
 HRESULT Write(
@@ -403,16 +385,16 @@ HRESULT Write(
   
 ### <a name="parameters"></a>Parameter  
  `pBuffer`  
- Der Puffer mit den Daten in die Datei geschrieben werden.  
+ Der Puffer mit den Daten in die Datei geschrieben werden sollen.  
   
  `nBufSize`  
  Die Anzahl der Bytes, die aus dem Puffer übertragen werden.  
   
  `pOverlapped`  
- Die überlappende Struktur. Finden Sie unter `lpOverlapped` in [WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Die überlappende Struktur. Finden Sie unter `lpOverlapped` in [WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747) im Windows SDK.  
   
  `pfnCompletionRoutine`  
- Abschlussroutine beendet hat. Finden Sie unter *LpCompletionRoutine* in [WriteFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365748) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Abschlussroutine beendet hat. Finden Sie unter *LpCompletionRoutine* in [WriteFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365748) im Windows SDK.  
   
  `pnBytesWritten`  
  Die Bytes geschrieben.  
@@ -421,10 +403,9 @@ HRESULT Write(
  Gibt `S_OK` auf Erfolg oder Fehler `HRESULT` bei einem Fehler.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie die ersten drei Formen [WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747), ruft der letzten [WriteFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365748) Daten in die Datei geschrieben. Verwendung [CAtlFile::Seek](#seek) den Dateizeiger verschoben.  
+ Rufen Sie die ersten drei Formulare [WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747), ruft die letzte [WriteFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365748) Daten in die Datei schreiben. Verwendung [CAtlFile::Seek](#seek) den Dateizeiger verschoben.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Marquee-Beispiel](../../visual-cpp-samples.md)   
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)   
+ [Laufschriften-Beispiel](../../visual-cpp-samples.md)   
+ [Klassenübersicht](../../atl/atl-class-overview.md)   
  [CHandle-Klasse](../../atl/reference/chandle-class.md)
-

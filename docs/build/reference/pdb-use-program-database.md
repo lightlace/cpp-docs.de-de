@@ -1,67 +1,67 @@
 ---
-title: "/PDB (Programmdatenbank verwenden) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/pdb"
-  - "VC.Project.VCLinkerTool.ProgramDatabaseFile"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".pdb-Dateien, Erstellen"
-  - "/PDB (Linkeroption)"
-  - "PDB-Dateien, Erstellen"
-  - "PDB (Linkeroption)"
-  - "-PDB (Linkeroption)"
+title: -PDB (Programmdatenbank verwenden) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /pdb
+- VC.Project.VCLinkerTool.ProgramDatabaseFile
+dev_langs: C++
+helpviewer_keywords:
+- -PDB linker option
+- /PDB linker option
+- PDB linker option
+- PDB files, creating
+- .pdb files, creating
 ms.assetid: d23db0ce-10cb-427a-bc60-d6b2a852723d
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0ea27dd7106e8490e9ba8ec9eacdcbbb02d33036
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# /PDB (Programmdatenbank verwenden)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="pdb-use-program-database"></a>/PDB (Programmdatenbank verwenden)
 ```  
 /PDB:filename  
 ```  
   
-## Hinweise  
- Hierbei ist:  
+## <a name="remarks"></a>Hinweise  
+ Dabei gilt:  
   
  *filename*  
- ein benutzerdefinierter Name für die vom Linker erzeugte Programmdatenbank \(PDB\).  Er wird anstelle des Standardnamens verwendet.  
+ Ein benutzerdefinierter Name für die Programmdatenbank (PDB), die der Linker erstellt. Er ersetzt den Standardnamen.  
   
-## Hinweise  
- Wenn die Option [\/DEBUG](../../build/reference/debug-generate-debug-info.md) angegeben wird, erstellt der Linker standardmäßig eine Programmdatenbank \(PDB\), in der Debuginformationen enthalten sind.  Der Standarddateiname für die PDB enthält den Basisnamen des Programms und hat die Erweiterung ".pdb".  
+## <a name="remarks"></a>Hinweise  
+ In der Standardeinstellung Wenn [/DEBUG](../../build/reference/debug-generate-debug-info.md) angegeben ist, wird der Linker erstellt eine Programmdatenbank (PDB) die Debuginformationen enthält. Der Standarddateiname für die PDB-Datei hat den Namen des Programms und die Erweiterung PDB-Datei.  
   
- Geben Sie den Namen der PDB\-Datei mithilfe von **\/PDB**:*filename* an.  Wenn **\/DEBUG** nicht angegeben wurde, wird die Option **\/PDB** ignoriert.  
+ Verwenden Sie/PDB:*Filename* den Namen der PDB-Datei angeben. Wenn "/ Debug" nicht angegeben ist, wird der/PDB-Option ignoriert.  
   
- Die Größe einer PDB\-Datei kann bis zu 2 GB betragen.  
+ Eine PDB-Datei kann bis zu 2 GB sein.  
   
- Weitere Informationen finden Sie unter [PDB\-Dateien als Eingabe für den Linker](../../build/reference/dot-pdb-files-as-linker-input.md).  
+ Weitere Informationen finden Sie unter [PDB-Dateien als Linkereingabe](../../build/reference/dot-pdb-files-as-linker-input.md).  
   
-### So legen Sie diese Linkeroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Festlegen von Visual C\+\+\-Projekteigenschaften](../../ide/working-with-project-properties.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Klicken Sie auf den Ordner **Linker**.  
+2.  Klicken Sie auf die **Linker** Ordner.  
   
-3.  Klicken Sie auf die Eigenschaftenseite **Debuggen**.  
+3.  Klicken Sie auf die **Debuggen** Eigenschaftenseite.  
   
-4.  Ändern Sie die Eigenschaft **Programmdatenbank\-Datei erstellen**.  
+4.  Ändern der **Programmdatenbank-Datei erstellen** Eigenschaft.  
   
-### So legen Sie diese Linkeroption programmgesteuert fest  
+### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
   
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ProgramDatabaseFile*>.  
+-   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ProgramDatabaseFile%2A>.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
  [Linkeroptionen](../../build/reference/linker-options.md)

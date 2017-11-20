@@ -1,38 +1,38 @@
 ---
-title: "Arbeiten mit Importbibliotheken und Exportdateien | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Exportdateien"
-  - "Importbibliotheken"
-  - "Importbibliotheken, Erstellen"
-  - "LIB [C++], /DEF-Option"
-  - "LIB [C++], Importbibliotheken und Exportdateien"
+title: Arbeiten mit Importbibliotheken und Exportdateien | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- LIB [C++], /DEF option
+- import libraries
+- LIB [C++], import libraries and export files
+- export files
+- import libraries, creating
 ms.assetid: d8175596-9773-4c2f-959d-b05b065a5161
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a78f6e4c7cdb5dbd25354d93d9bafc2892098c7d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Arbeiten mit Importbibliotheken und Exportdateien
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Sie können LIB mit der **\/DEF**\-Option verwenden, um eine Importbibliothek und eine Exportdatei zu erstellen.  **LINK** verwendet die Exportdatei, um ein Programm zu erstellen, das Exporte \(in der Regel eine DLL \(Dynamic Link Library\)\) enthält, und die Importbibliothek, um Verweise auf diese Exporte in anderen Programmen aufzulösen.  
+# <a name="working-with-import-libraries-and-export-files"></a>Arbeiten mit Importbibliotheken und Exportdateien
+LIB können mit der DEF-Option Sie um eine Importbibliothek und einer Exportdatei zu erstellen. LINK verwendet, die die Exportdatei ein Programm erstellen, enthält exportiert (in der Regel eine Dynamic Link Library (DLL)), und die Importbibliothek verwendet, um Verweise auf diese Exporte in anderen Programmen zu beheben.  
   
- Wenn Sie die Importbibliothek in einem vorherigen Schritt erstellen, muss vor der Erstellung der DLL derselbe Satz von Objektdateien zur Erstellung der DLL übergeben werden wie bei der Erstellung der Importbibliothek.  
+ Beachten Sie, dass wenn Sie die Importbibliothek in einem vorherigen Schritt erstellen, bevor Sie die DLL-Datei erstellen, den gleichen Satz von Objektdateien müssen beim Erstellen der DLL übergeben werden wie bei der Erstellung der Importbibliothek her.  
   
- In den meisten Fällen müssen Importbibliotheken nicht mithilfe von LIB erstellt werden.  Beim Verknüpfen eines Programms, das Exporte enthält \(entweder eine ausführbare Datei oder eine DLL\), erstellt **LINK** automatisch eine Importbibliothek, in der die Exporte beschrieben werden.  Wenn Sie später ein Programm verknüpfen, das Verweise auf diese Exporte enthält, geben Sie einfach die Importbibliothek an.  
+ In den meisten Fällen müssen Sie keine LIB verwenden, um die Importbibliothek zu erstellen. Wenn Sie ein Programm (eine ausführbare Datei oder DLL), das Exporte enthält verknüpfen, erstellt LINK automatisch eine Importbibliothek, die die Exporte beschreibt. Wenn Sie ein Programm, die diese Exporte verweist verknüpfen, geben Sie später der Importbibliothek her.  
   
- Wenn jedoch eine DLL in ein Programm exportiert, aus dem die DLL auch direkt oder indirekt importiert, müssen Sie eine dieser Importbibliotheken unter Verwendung von LIB erstellen.  Beim Erstellen einer Importbibliothek erstellt LIB auch eine Exportdatei.  Diese Exportdatei müssen Sie verwenden, wenn Sie eine der DLLs verknüpfen.  
+ Jedoch, wenn eine DLL mit einem Programm exportiert werden, die es auch importiert, gibt an, ob direkt oder indirekt LIB können Importbibliotheken erstellen. Beim Erstellen eine Importbibliothek LIB erstellt wird auch eine Exportdatei erstellt. Wenn eine DLL verknüpfen, müssen Sie die Exportdatei verwenden.  
   
-## Siehe auch  
- [LIB\-Referenz](../../build/reference/lib-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [LIB-Referenz](../../build/reference/lib-reference.md)

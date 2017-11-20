@@ -1,32 +1,32 @@
 ---
-title: "Erstellen von Text f&#252;r die Inlinedatei | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Inlinedateien, Erstellen von Text"
-  - "NMAKE (Programm), Inlinedateien"
-  - "Text, Inlinedatei"
+title: Erstellen von Text Inlinedatei | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- inline files, creating text
+- NMAKE program, inline files
+- text, inline file
 ms.assetid: b8a332ed-8244-4ff8-89e6-029d7f659725
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 174160657e5494f5566fd0828815b3c0f1b3d601
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Erstellen von Text f&#252;r die Inlinedatei
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Inlinedateien sind temporär oder permanent.  
+# <a name="creating-inline-file-text"></a>Erstellen von Text für die Inlinedatei
+Inlinedateien sind temporär oder dauerhaft ausgeführt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -37,10 +37,10 @@ Inlinedateien sind temporär oder permanent.
 <<[KEEP | NOKEEP]  
 ```  
   
-## Hinweise  
- *inlinetext* wird in der ersten Zeile nach dem Befehl eingegeben.  Markieren Sie das Ende mit doppelten spitzen Klammern \(\<\<\) am Anfang eine eigene Zeile.  Die Datei enthält den gesamten *inlinetext* vor den begrenzenden Klammern.  *inlinetext* kann Makroerweiterungen und Makroersetzungen enthalten, jedoch keine Direktiven oder Makefilekommentare.  Leerzeichen, Tabstopps und Zeilenendemarken werden als Literalzeichen behandelt.  
+## <a name="remarks"></a>Hinweise  
+ Geben Sie *Inlinetext* in der ersten Zeile nach dem Befehl. Markieren Sie das Ende mit doppelten spitzen Klammern (<<) am Anfang einer separaten Zeile. Die Datei enthält alle *Inlinetext* vor den begrenzenden Klammern. Die *Inlinetext* makroerweiterungen und Ersetzungen, jedoch keine Richtlinien oder Makefile Kommentare haben können. Leerzeichen, Tabulatoren und Zeilenumbruchzeichen werden als solcher behandelt.  
   
- Eine temporäre Datei ist für die Dauer der Sitzung vorhanden und kann von anderen Befehlen wieder verwendet werden.  **KEEP** wird nach den abschließenden Winkelklammern eingegeben, damit die Datei nach der NMAKE\-Sitzung beibehalten wird. Eine unbenannte Datei bleibt auf dem Datenträger mit dem generierten Dateinamen erhalten.  Geben Sie **NOKEEP** oder nichts für eine temporäre Datei ein.  Bei **KEEP** und **NOKEEP** wird die Groß‑\/Kleinschreibung nicht beachtet.  
+ Eine temporäre Datei für die Dauer der Sitzung vorhanden ist und anderen Befehlen verwendet werden kann. Geben Sie **behalten** nach der schließenden spitzen Klammern um die Datei nach der NMAKE-Sitzung beibehalten wird eine unbenannte Datei auf dem Datenträger mit dem generierten Dateinamen beibehalten. Geben Sie **NOKEEP** oder kein Zeichen für eine temporäre Datei. **Behalten Sie** und **NOKEEP** sind nicht in der Groß-/Kleinschreibung beachtet.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Inlinedateien in einem Makefile](../build/inline-files-in-a-makefile.md)

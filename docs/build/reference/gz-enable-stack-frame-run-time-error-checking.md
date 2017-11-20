@@ -1,60 +1,59 @@
 ---
-title: "/GZ (Laufzeitfehler&#252;berpr&#252;fung f&#252;r Stapelrahmen aktivieren) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/gz"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Gz (Compileroption) [C++]"
-  - "Debugbuilds, Abfangen von Releasebuildfehlern"
-  - "Gz (Compileroption) [C++]"
-  - "-Gz (Compileroption) [C++]"
-  - "Releasebuildfehler"
+title: "-GZ (Aktivieren der Stapel Frame-Fehlerprüfungen zur Laufzeit überprüft) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /gz
+dev_langs: C++
+helpviewer_keywords:
+- -GZ compiler option [C++]
+- release-build errors
+- /GZ compiler option [C++]
+- GZ compiler option [C++]
+- debug builds, catch release-build errors
 ms.assetid: b3efeeff-d5e3-4057-91c9-f6fc73d0270c
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f3e4dc59154d64d79db0f4d15471b51ce67bed58
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# /GZ (Laufzeitfehler&#252;berpr&#252;fung f&#252;r Stapelrahmen aktivieren)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Führt die gleichen Operationen wie die [\/RTC \(Laufzeitfehlerüberprüfungen\)](../../build/reference/rtc-run-time-error-checks.md)\-Option aus.  Veraltet.  
+# <a name="gz-enable-stack-frame-run-time-error-checking"></a>/GZ (Laufzeitfehlerüberprüfung für Stapelrahmen aktivieren)
+Führt die gleichen Vorgänge wie die [/RTC (Run-Time Checks Fehler)](../../build/reference/rtc-run-time-error-checks.md) Option. Veraltet.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /GZ  
 ```  
   
-## Hinweise  
- **\/GZ** ist nur zur Verwendung in einem nicht optimierten \([\/Od \(Deaktivieren \(Debuggen\)\)](../../build/reference/od-disable-debug.md)\) Build geeignet.  
+## <a name="remarks"></a>Hinweise  
+ **/ GZ** ist nur für die Verwendung in einer nicht optimierten ([/Od (deaktivieren (Debuggen))](../../build/reference/od-disable-debug.md)) erstellen.  
   
- **\/GZ** ist veraltet. Verwenden Sie stattdessen [\/RTC \(Laufzeitfehlerüberprüfungen\)](../../build/reference/rtc-run-time-error-checks.md).  Weitere Informationen finden Sie unter [Deprecated Compiler Options in Visual C\+\+ 2005](assetId:///aa59fce3-50b8-4f66-9aeb-ce09a7a84cce).  
+ **/ GZ** ist veraltet, da Visual Studio 2005; verwenden Sie [/RTC (Run-Time Checks Fehler)](../../build/reference/rtc-run-time-error-checks.md) stattdessen. Eine Liste der veralteten Compileroptionen, finden Sie unter **veraltete und entfernte Compileroptionen** in [Compileroptionen nach Kategorien sortiert](../../build/reference/compiler-options-listed-by-category.md).  
   
-### So legen Sie diese Compileroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Gewusst wie: Öffnen von Projekteigenschaftenseiten](../../misc/how-to-open-project-property-pages.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Klicken Sie auf den Ordner **C\/C\+\+**.  
+2.  Klicken Sie auf den Ordner **C/C++** .  
   
-3.  Klicken Sie auf die Eigenschaftenseite **Befehlszeile**.  
+3.  Klicken Sie auf die Eigenschaftenseite **Befehlszeile** .  
   
 4.  Geben Sie die Compileroption im Feld **Zusätzliche Optionen** ein.  
   
-### So legen Sie diese Compileroption programmgesteuert fest  
+### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
   
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions*>.  
+-   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Compileroptionen](../../build/reference/compiler-options.md)   
  [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

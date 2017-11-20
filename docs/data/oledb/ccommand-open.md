@@ -1,35 +1,34 @@
 ---
-title: "CCommand::Open | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CCommand.Open"
-  - "ATL::CCommand::Open"
-  - "CCommand.Open"
-  - "CCommand::Open"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Open-Methode"
+title: 'CCommand:: Open | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CCommand.Open
+- ATL::CCommand::Open
+- CCommand.Open
+- CCommand::Open
+dev_langs: C++
+helpviewer_keywords: Open method
 ms.assetid: 4c9b8f31-faf3-452d-9a29-3d3e5f54d6f8
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 13945181ac92ec35e0b252f31382202414333bc6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# CCommand::Open
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Führt aus und bindet optional den Befehl.  
+# <a name="ccommandopen"></a>CCommand::Open
+Führt ein, und bindet optional den Befehl.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -68,56 +67,56 @@ HRESULT Open(
 ) throw( );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `session`  
- \[in\] in der die Sitzung, um den Befehl ausführen.  
+ [in] Die Sitzung, in dem den Befehl ausgeführt werden soll.  
   
  `wszCommand`  
- \[in\] der Befehl auszuführen, übergeben als Unicode\-Zeichenfolge.  Kann **NULL**, wenn `CAccessor` verwendet wird, wird der Befehl im Wert abgerufen wird, der zum [DEFINE\_COMMAND](../../data/oledb/define-command.md)\-Makro übergeben wird.  Siehe [ICommand::Execute](https://msdn.microsoft.com/en-us/library/ms718095.aspx) in *der OLE DB\-Programmierreferenz* für Details.  
+ [in] Der Befehl ausgeführt wird, werden als Unicode-Zeichenfolge übergeben. Kann **NULL** Verwendung `CAccessor`, in diesem Fall der Befehl aus der an übergebene Wert abgerufen wird die [DEFINE_COMMAND](../../data/oledb/define-command.md) Makro. Finden Sie unter [ICommand:: Execute](https://msdn.microsoft.com/en-us/library/ms718095.aspx) in der *OLE DB Programmer's Reference* Details.  
   
  `szCommand`  
- \[in\] nimmt `wszCommand` identisch außer dass dieser Parameter eine ANSI\-Befehlszeichenfolge.  Das vierte Formular dieser Methode kann einen NULL\-Wert akzeptiert.  Siehe "Hinweise" weiter unten in diesem Thema für Details.  
+ [in] Identisch mit `wszCommand` außer dass dieser Parameter eine Befehlszeichenfolge ANSI verwendet. Der vierte diese Methode kann einen NULL-Wert handeln. Finden Sie unter "Hinweise" weiter unten in diesem Thema Informationen ein.  
   
- *pPropSet*  
- \[in\] strukturiert Ein Zeiger auf ein Array von [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) das Einbinden von festgelegt werden Eigenschaften und Werte.  Siehe [Eigenschaftensätze und Eigenschaftengruppen](https://msdn.microsoft.com/en-us/library/ms713696.aspx) in *der OLE DB\-Programmierreferenz* in [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ *DBPROPSET*  
+ [in] Ein Zeiger auf ein Array von [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) Strukturen, die Eigenschaften und Werten festgelegt werden. Finden Sie unter [Eigenschaftensätze und Eigenschaftengruppen](https://msdn.microsoft.com/en-us/library/ms713696.aspx) in der *OLE DB Programmer's Reference* im Windows SDK.  
   
  `pRowsAffected`  
- \[in\/out\] Ein Zeiger auf den Speicher, in dem die Anzahl von Zeilen, die über einen Befehl gelten, zurückgegeben wird.  Wenn es ist keine **NULL**, Zeilenanzahl zurückgegeben wird *\*pRowsAffected*.  Andernfalls legt **Öffnen** \*`pRowsAffected` entsprechend den folgenden Bedingungen fest:  
+ [in/Out] Ein Zeiger auf Speicher, in dem die Anzahl der von einem Befehl betroffenen Zeilen zurückgegeben wird. Wenn  *\*pRowsAffected* ist **NULL**, keine Zeilenanzahl zurückgegeben wird. Andernfalls **öffnen** legt *`pRowsAffected` entsprechend der folgenden Bedingungen:  
   
 |If|Then|  
 |--------|----------|  
-|Das **cParamSets**\-Element von `pParams` ist größer als 1|\*`pRowsAffected` stellt die Gesamtzahl der Zeilen dar, die von allen Parametersätze beeinflusst werden, die bei der Ausführung angegeben werden.|  
-|Die Anzahl der betroffenen Zeilen ist nicht verfügbar|\* \-`pRowsAffected` auf 1 festgelegt.|  
-|Der Befehl nicht aktualisiert oder löscht, fügt darin Zeilen ein|\*`pRowsAffected` nicht definiert ist.|  
+|Die **cParamSets** Element des `pParams` ist größer als 1|*`pRowsAffected`Stellt die Gesamtanzahl der Zeilen, die alle von der bei der Ausführung angegebenen Parametersätzen betroffen.|  
+|Die Anzahl der betroffenen Zeilen ist nicht verfügbar|*`pRowsAffected`wird auf-1 festgelegt.|  
+|Der Befehl nicht aktualisiert, löschen oder Einfügen von Zeilen|*`pRowsAffected`ist nicht definiert.|  
   
  `guidCommand`  
- \[in\] Eine GUID, die der Syntax und die allgemeinen Regeln angibt, den der Anbieter verwendet, wenn es den Befehlstext analysiert.  Siehe [ICommandText::GetCommandText](https://msdn.microsoft.com/en-us/library/ms709825.aspx) und [ICommandText::SetCommandText](https://msdn.microsoft.com/en-us/library/ms709757.aspx) in der *OLE* DB\-Programmierreferenz für Details.  
+ [in] Eine GUID, die Syntax und die allgemeinen Regeln für den zu verwendenden Anbieter angibt, bei der Analyse des Befehlstexts. Finden Sie unter [ICommandText::GetCommandText](https://msdn.microsoft.com/en-us/library/ms709825.aspx) und [ICommandText:: SetCommandText](https://msdn.microsoft.com/en-us/library/ms709757.aspx) in der *OLE DB Programmer's Reference* Details.  
   
  `bBind`  
- \[in\] gibt an, ob der Befehl automatisch gebunden, nach ausgeführt werden.  Der Standardwert ist **true**, der den Befehl auslöst, automatisch gebunden werden.  Einstellung `bBind` von **false** verhindert die automatische Bindung des Befehls, damit Sie manuell binden können. \(Das manuelle Bindung ist von besonderem Interesse für OLAP\-Benutzern.\)  
+ [in] Gibt an, ob den Befehl automatisch zu binden, nach der gerade ausgeführt wird. Die Standardeinstellung ist **"true"**, die bewirkt, dass der Befehl automatisch gebunden werden. Festlegen von `bBind` auf **"false"** wird verhindert, dass die automatische Bindung des Befehls, sodass manuell gebunden werden kann. (Manuelle Bindung ist von besonderem Interesse für OLAP-Benutzer).  
   
  `ulPropSets`  
- \[in\] hat die Anzahl der [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx)\-Strukturen in das *pPropSet*\-Argument.  
+ [in] Die Anzahl der [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) Strukturen zu übergeben, der *DBPROPSET* Argument.  
   
-## Rückgabewert  
- Standard\- `HRESULT`.  
+## <a name="return-value"></a>Rückgabewert  
+ Ein Standard `HRESULT`-Objekt.  
   
-## Hinweise  
- Die ersten drei Formen von **Öffnen** werden eine Sitzung, einen Befehl erstellen und führen Sie den Befehl aus und ggf. binden alle Parameter.  
+## <a name="remarks"></a>Hinweise  
+ Die ersten drei Formen von **öffnen** schalten Sie eine Sitzung, einen Befehl erstellen und führen Sie den Befehl, Parameter nach Bedarf binden.  
   
- Das erste Format von **Öffnen** wird eine Unicode\-Befehlszeichenfolge und besitzt keinen Standardwert.  
+ Die erste Form der **öffnen** eine Zeichenfolge mit Unicode-Befehl akzeptiert und hat keinen Standardwert.  
   
- Das zweite Format von **Öffnen** wird eine ANSI\-Befehlszeichenfolge und keinen Standardwert \(bereitgestellt für Abwärtskompatibilität mit vorhandenen ANSI\-Anwendungen\).  
+ Die zweite Form der **öffnen** nimmt eine Befehlszeichenfolge ANSI und kein Standardwert (für Abwärtskompatibilität mit vorhandenen ANSI-Anwendungen bereitgestellt).  
   
- Das dritte Format von **Öffnen** kann der Befehlszeichenfolge, um, aufgrund des Typs `int` mit einem Standardwert NULL NULL sein.  Es wird für das Aufrufen von `Open(session, NULL);` oder `Open(session);` bereitgestellt, da NULL vom Typ `int` ist.  Diese Version erfordert und erläutert, dass der Parameter `int` NULL ist.  
+ Die dritte Form des **öffnen** die Befehlszeichenfolge NULL, weil Typ aufweisen können `int` hat den Standardwert NULL. Es dient für den Aufruf von `Open(session, NULL);` oder `Open(session);` da NULL Typ `int`. Diese Version erfordert und bestätigt, die die `int` Parameter NULL sein.  
   
- Verwenden Sie das vierte Format von **Öffnen**, wenn Sie bereits einen Befehl erstellt und Sie einzelnen [Vorbereiten vor](../../data/oledb/ccommand-prepare.md) und mehrere Testläufe ausführen möchten.  
+ Die vierte Form von **öffnen** Wenn Sie bereits einen Befehl erstellt haben und Sie ein einzelnes ausführen möchten [vorbereiten](../../data/oledb/ccommand-prepare.md) und mehrere Ausführungen.  
   
 > [!NOTE]
->  **Öffnen** ruft **Ausführen** auf, das wiederum `GetNextResult` aufgerufen wird.  
+>  **Open** Aufrufe **Execute**, die wiederum ruft `GetNextResult`.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  
   
-## Siehe auch  
- [CCommand\-Klasse](../../data/oledb/ccommand-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [CCommand-Klasse](../../data/oledb/ccommand-class.md)

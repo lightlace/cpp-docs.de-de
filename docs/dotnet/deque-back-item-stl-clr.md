@@ -1,41 +1,39 @@
 ---
-title: "deque::back_item (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::back_item"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "back_item-Member [STL/CLR]"
+title: 'deque:: back_item (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::back_item
+dev_langs: C++
+helpviewer_keywords: back_item member [STL/CLR]
 ms.assetid: b112636a-2f18-4eb0-abd6-076acdabeff7
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d20a8ffdfa84c56c4716df31a8f4c3951566cead
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# deque::back_item (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dequebackitem-stlclr"></a>deque::back_item (STL/CLR)
 Greift auf das letzte Element zu.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 property value_type back_item;  
 ```  
   
-## Hinweise  
- Die Eigenschaft wird auf das letzte Element der gesteuerten Sequenz zu, die nicht leer sein muss.  Sie verwenden sie, um zu lesen, oder, das letzte Element zu schreiben, wenn Sie es wissen, vorhanden ist.  
+## <a name="remarks"></a>Hinweise  
+ Die Eigenschaft greift auf das letzte Element der gesteuerten Sequenz, die nicht leer sein darf. Sie verwenden ihn zum Lesen oder schreiben das letzte Element, wenn Sie wissen, dass es vorhanden ist.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_deque_back_item.cpp   
@@ -67,16 +65,19 @@ int main()
   
 ```  
   
-  **ein b c**  
-**back\_item \= c**  
- **ein b x**   
-## Anforderungen  
- **Header:** \<cliext\/Doppelschlange\>  
+```Output  
+ a b c  
+back_item = c  
+ a b x  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/doppelschlange >  
   
-## Siehe auch  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::back](../dotnet/deque-back-stl-clr.md)   
- [deque::front](../dotnet/deque-front-stl-clr.md)   
- [deque::front\_item](../dotnet/deque-front-item-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque:: Back (STL/CLR)](../dotnet/deque-back-stl-clr.md)   
+ [deque:: Front (STL/CLR)](../dotnet/deque-front-stl-clr.md)   
+ [deque::front_item (STL/CLR)](../dotnet/deque-front-item-stl-clr.md)

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _chsize
+apiname: _chsize
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,10 +21,8 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- _chsize
-dev_langs:
-- C++
+f1_keywords: _chsize
+dev_langs: C++
 helpviewer_keywords:
 - size
 - _chsize function
@@ -34,30 +30,15 @@ helpviewer_keywords:
 - files [C++], changing size
 - chsize function
 ms.assetid: b3e881c5-7b27-4837-a3d4-c51591ab10ff
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 2d75597dceaedb3e43be5a530be4a7decdd1defc
-ms.contentlocale: de-de
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: f232929282b8884f1362985d9c9b68bf0fc5a1cf
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="chsize"></a>_chsize
 Ändert die Größe einer Datei. Es ist eine sicherere Version verfügbar. Informationen dazu finden Sie unter [_chsize_s](../../c-runtime-library/reference/chsize-s.md).  
@@ -79,7 +60,7 @@ int _chsize(
  Neue Länge der Datei in Bytes.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `_chsize` gibt den Wert 0 zurück, wenn die Dateigröße erfolgreich geändert wurde. Ein Rückgabewert von – 1 zeigt einen Fehler: `errno` festgelegt ist, um `EACCES` Wenn die angegebene Datei für den Zugriff auf gesperrt ist, zu `EBADF` , wenn die angegebene Datei schreibgeschützt ist oder die Beschreibung ungültig ist, `ENOSPC` Wenn kein auf dem Gerät Speicherplatz oder `EINVAL` Wenn `size` ist kleiner als 0 (null).  
+ `_chsize` gibt den Wert 0 zurück, wenn die Dateigröße erfolgreich geändert wurde. Ein Rückgabewert von – 1 zeigt einen Fehler: `errno` festgelegt ist, um `EACCES` , wenn die angegebene Datei zu vor Zugriff, gesperrt ist `EBADF` , wenn die angegebene Datei schreibgeschützt ist oder die Beschreibung ungültig ist, `ENOSPC` , wenn kein auf dem Gerät oder Speicherplatz`EINVAL` Wenn `size` ist kleiner als 0 (null).  
   
  Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   

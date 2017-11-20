@@ -1,53 +1,53 @@
 ---
-title: "DCOMCNFG | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DCOMCNFG"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DCOM, configuring in ATL"
-  - "DCOMCNFG utility"
+title: DCOMCNFG | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: DCOMCNFG
+dev_langs: C++
+helpviewer_keywords:
+- DCOMCNFG utility
+- DCOM, configuring in ATL
 ms.assetid: 5a8126e9-ef27-40fb-a66e-9dce8d1a7e80
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bffed7658232d11dd7741900d6eca14de341e855
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# DCOMCNFG
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**DCOMCNFG** ist ein Windows NT 4.0\-Hilfsprogramm, das Ihnen ermöglicht, verschiedene DCOM\-Besondere Einstellungen in der Registrierung zu konfigurieren.  Das **DCOMCNFG** Fenster hat drei Seiten: Standard Sicherheit, Standardeigenschaften und Anwendungen.  Unter Windows 2000 ist eine vierte Seite, Standard\-Protokolle, vorhanden.  
+# <a name="dcomcnfg"></a>DCOMCNFG
+**DCOMCNFG** ist ein Windows NT 4.0-Hilfsprogramm, das Ihnen ermöglicht, die verschiedene DCOM-spezifische Einstellungen in der Registrierung zu konfigurieren. Die **DCOMCNFG** Fenster hat drei Seiten: Default Security Standardeigenschaften und Anwendungen. Unter Windows 2000 ist eine vierte Seite Standardprotokolle vorhanden.  
   
-## Standard Sicherheits\-Seite  
- Sie können die standardmäßige Sicherheitsseite verwenden, um Standardberechtigungen für Objekte auf dem System anzugeben.  Die standardmäßige Sicherheitsseite hat drei Abschnitte: Zugriff, Starten und Konfiguration.  Um die Standardeinstellungen eines Abschnitts zu ändern, klicken Sie auf die entsprechende Schaltfläche **Edit Default**.  Diese Standardsicherheitseinstellungen werden in der Registrierung unter `HKEY_LOCAL_MACHINE\Software\Microsoft\OLE` gespeichert.  
+## <a name="default-security-page"></a>Standard-Seite "Sicherheit"  
+ Die Standardsicherheit-Seite können Sie die Standardberechtigungen für Objekte auf dem System angeben. Die Seite "Sicherheit standardmäßig" besteht aus drei Abschnitten: Zugriff, Start und Konfiguration. Um einen Abschnitt Standardwerte zu ändern, klicken Sie auf den entsprechenden **Standard bearbeiten** Schaltfläche. Diese Standard-Sicherheitseinstellungen werden gespeichert, in der Registrierung unter `HKEY_LOCAL_MACHINE\Software\Microsoft\OLE`.  
   
-## Standard\-Protokoll\-Seite  
- Diese Seite zeigt den von Netzwerkprotokollen auf, die zu DCOM auf diesem Computer verfügbar sind.  Die Reihenfolge spiegelt die Priorität, in der sie verwendet werden; das erste in der Liste hat die höchste Priorität.  Protokolle können von dieser Seite hinzugefügt oder gelöscht werden.  
+## <a name="default-protocols-page"></a>Standardseite "Protokolle"  
+ Diese Seite enthält den Satz von Netzwerkprotokollen für DCOM auf diesem Computer verfügbar. Die Reihenfolge wiedergibt, die Priorität an, in der sie verwendet werden sollen; die erste Aufgabe in der Liste hat die höchste Priorität. Protokolle können hinzugefügt oder aus dieser Seite gelöscht werden.  
   
-## Standardeigenschafts\-Seite  
- Auf den Standardeigenschaften Seite, müssen Sie das **Enable Distributed COM on this computer** Kontrollkästchen aktivieren, wenn Sie die Clients auf anderen Computern auf COM\-Objekte zugreifen soll die auf diesen Computer.  Das Auswählen dieser Option wird den `HKEY_LOCAL_MACHINE\Software\Microsoft\OLE\EnableDCOM`\-Wert zu `Y` fest.  
+## <a name="default-properties-page"></a>Standardseite "Eigenschaften"  
+ Sie müssen auf der Seite "Standardeigenschaften" Auswählen der **aktivieren (Distributed COM) auf diesem Computer** das Kontrollkästchen, wenn Clients auf anderen Computern zum Zugreifen auf COM-Objekte, die auf diesem Computer ausgeführt werden soll. Wählen diese Option wird die `HKEY_LOCAL_MACHINE\Software\Microsoft\OLE\EnableDCOM` Wert `Y`.  
   
-## Anwendungsseite  
- Sie ändern die Einstellungen für ein bestimmtes Objekt mit der Anwendungsseite.  Wählen Sie die Anwendung einfach aus der Liste aus und klicken Sie auf die Schaltfläche **Eigenschaften**.  Das Eigenschaftenfenster verfügt über fünf Seiten:  
+## <a name="applications-page"></a>Seite "Anwendungen"  
+ Sie ändern die Einstellungen für ein bestimmtes Objekt mit der Seite "Anwendungen". Wählen Sie zuerst die Anwendung aus der Liste und klicken Sie auf die **Eigenschaften** Schaltfläche. Das Eigenschaftenfenster hat fünf Seiten:  
   
--   Die allgemeine Seite bestätigt die Anwendung, mit der Sie arbeiten.  
+-   Die Seite "Allgemein" bestätigt die Anwendung, mit dem Sie arbeiten.  
   
--   Die Speicherortseite ermöglicht es Ihnen, um anzugeben, wo die Anwendung ausgeführt werden soll, wenn ein Client `CoCreateInstance` auf dem relevanten CLSID aufruft.  Wenn Sie das Kontrollkästchen **Anwendung auf dem folgenden Computer ausführen** eingeben und einen Computernamen auswählen, wird ein `RemoteServerName`\-Wert unter dem AppID für diese Anwendung hinzugefügt.  Das **Anwendung auf diesem Computer ausführen** Kontrollkästchen Löschen, benennt den `LocalService`\-Wert zu `_LocalService` deaktiviert und ihn so.  
+-   Die Seite "Speicherort" können Sie angeben, in dem die Anwendung ausgeführt werden soll, wenn ein Client aufruft `CoCreateInstance` auf die relevanten CLSID. Bei Auswahl der **führen Sie die Anwendung auf die folgenden Computer** Kontrollkästchen und geben Sie einen Computernamen ein `RemoteServerName` Wert unter der AppID der Anwendung hinzugefügt wird. Deaktivieren der **führen Sie die Anwendung auf diesem Computer** benennt das Kontrollkästchen der `LocalService` Wert `_LocalService` und somit wird deaktiviert.  
   
--   Die Seite Sicherheit ist in die Sicherheitsseite vergleichbar, die im **DCOMCNFG** Fenster gefunden wird, dass diese Einstellungen gelten nur für die aktuelle Anwendung zu.  Auch hier werden die Einstellungen unter dem AppID für dieses Objekt gespeichert.  
+-   Die Seite "Sicherheit" ähnelt der Default-Security Seite, in gefunden der **DCOMCNFG** Fenster, mit dem Unterschied, dass diese Einstellungen nur für die aktuelle Anwendung gelten. Die Einstellungen werden erneut aus, unter der AppID für dieses Objekt gespeichert.  
   
--   Die Bestimmungsseite identifiziert, welcher Benutzer verwendet wird, um die Anwendung auszuführen.  
+-   Die Seite identifizieren identifiziert, die der Benutzer verwendet wird, um die Anwendung auszuführen.  
   
--   Die Endpunktseite zeigt den Satz von Protokollen und Endpunkten auf, die für Clients des ausgewählten DCOM\-Servers verfügbar sind.  
+-   Seite "Endpunkte" werden die Protokolle und Endpunkte für die Verwendung durch Clients des ausgewählten DCOM-Servers zur Verfügung.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Dienste](../atl/atl-services.md)
+

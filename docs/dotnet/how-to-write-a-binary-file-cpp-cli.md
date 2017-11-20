@@ -1,33 +1,33 @@
 ---
-title: "Gewusst wie: Schreiben einer Bin&#228;rdatei (C++/CLI)"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Binärdateien, Schreiben in C++"
-  - "Dateien [C++], Binär"
+title: "Vorgehensweise: Schreiben einer Binärdatei (C + c++ / CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- binary files, writing in C++
+- files [C++], binary
 ms.assetid: 35d97ee6-fc7e-4c36-be18-8bbb3b44b3ae
-caps.latest.revision: 10
-caps.handback.revision: "10"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4aada166d8843665c645fbac90e58ef31714ab13
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Gewusst wie: Schreiben einer Bin&#228;rdatei (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Im folgenden Codebeispiel wird das Schreiben von Binärdaten in eine Datei veranschaulicht.  Zwei Klassen des <xref:System.IO>\-Namespace werden verwendet: <xref:System.IO.FileStream> und <xref:System.IO.BinaryWriter>.  <xref:System.IO.FileStream> repräsentiert die eigentliche Datei, während <xref:System.IO.BinaryWriter> eine Schnittstelle zum Stream für den Binärzugriff bereitstellt.  
+# <a name="how-to-write-a-binary-file-ccli"></a>Gewusst wie: Schreiben einer Binärdatei (C++/CLI)
+Im folgenden Codebeispiel wird das Schreiben von Binärdaten in eine Datei veranschaulicht. Zwei Klassen des <xref:System.IO>-Namespace werden verwendet: <xref:System.IO.FileStream> und <xref:System.IO.BinaryWriter>. <xref:System.IO.FileStream> repräsentiert die eigentliche Datei, während <xref:System.IO.BinaryWriter> eine Schnittstelle zum Stream für den Binärzugriff bereitstellt.  
   
- Im folgenden Codebeispiel wird eine Datei erzeugt, die ganze Zahlen im Binärformat enthält.  Diese Datei kann mit dem Code in [Gewusst wie: Lesen einer Binärdatei](../dotnet/how-to-read-a-binary-file-cpp-cli.md) gelesen werden.  
+ Im folgenden Codebeispiel wird eine Datei erzeugt, die ganze Zahlen im Binärformat enthält. Diese Datei gelesen werden kann, durch den Code in [wie: Lesen einer Binärdatei (C + c++ / CLI)](../dotnet/how-to-read-a-binary-file-cpp-cli.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // binary_write.cpp  
@@ -64,6 +64,6 @@ int main()
 }  
 ```  
   
-## Siehe auch  
- [Datei\- und Stream\-E\/A](../Topic/File%20and%20Stream%20I-O.md)   
- [.NET\-Programmierung mit C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [Datei- und Datenstrom-E/A](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
+ [.NET-Programmierung mit C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

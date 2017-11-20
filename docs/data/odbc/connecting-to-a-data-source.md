@@ -1,46 +1,46 @@
 ---
-title: "Aufbauen der Verbindung zu einer Datenquelle | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Verbindungen [C++], Datenquelle"
-  - "Datenquellen [C++], Verbinden mit"
-  - "Datenbankverbindungen [C++], MFC-ODBC-Klassen"
-  - "Datenbankverbindungen [C++], ODBC"
-  - "Datenbanken [C++], Verbinden mit"
-  - "ODBC-Verbindungen [C++], Verwenden"
-  - "ODBC-Datenquellen [C++], Verbindungen"
+title: Herstellen einer Verbindung mit einer Datenquelle | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- database connections [C++], ODBC
+- ODBC connections [C++], using
+- connections [C++], data source
+- databases [C++], connecting to
+- data sources [C++], connecting to
+- ODBC data sources [C++], connections
+- database connections [C++], MFC ODBC classes
 ms.assetid: ef6c8c98-5979-43a8-9fb5-5bb06fc59f36
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ea788921b72d06deb44ed67ecdfa49c5efe43ed2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Aufbauen der Verbindung zu einer Datenquelle
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Eine ODBC\-Datenquelle setzt sich zusammen aus einem bestimmten Satz von Daten, den Informationen, die für das Zugreifen auf die Daten notwendig sind, und der Position der Datenquelle, die in Form eines Datenquellennamens beschrieben werden kann.  Aus Sicht eines Programms besteht die Datenquelle aus den Daten, dem DBMS, dem Netzwerk \(falls vorhanden\) und ODBC.  
+# <a name="connecting-to-a-data-source"></a>Aufbauen der Verbindung zu einer Datenquelle
+Eine ODBC-Datenquelle handelt es sich um einen bestimmten Satz von Daten, die erforderlichen Informationen zum Zugriff auf diese Daten und den Speicherort der Datenquelle, die mithilfe einer Datenquellennamens beschrieben werden kann. Aus Sicht des Programms enthält die Datenquelle die Daten, das DBMS die Netzwerk (sofern vorhanden) und ODBC.  
   
- Um auf die von einer Datenquelle bereitgestellten Daten zugreifen zu können, muss das Programm zuerst eine Verbindung zu der Datenquelle aufbauen.  Alle Datenzugriffe werden über diese Verbindung getätigt.  
+ Für den Zugriff auf Daten, die von einer Datenquelle bereitgestellt, muss das Programm zuerst eine Verbindung mit der Datenquelle herstellen. Alle der Datenzugriff wird über diese Verbindung verwaltet.  
   
- Datenquellenverbindungen sind in die [CDatabase](../../mfc/reference/cdatabase-class.md)\-Klasse eingeschlossen.  Wenn ein `CDatabase`\-Objekt mit einer Datenquelle verbunden ist, können Sie:  
+ Datenquellen-Verbindungen sind von Klasse gekapselte [CDatabase](../../mfc/reference/cdatabase-class.md). Wenn ein `CDatabase` Objekt mit einer Datenquelle verbunden ist, können Sie:  
   
--   [Recordsets](../../mfc/reference/crecordset-class.md) erstellen, die Datensätze aus Tabellen oder Abfragen auswählen.  
+-   Erstellen Sie [Recordsets](../../mfc/reference/crecordset-class.md), die Datensätze aus Tabellen oder Abfragen auswählen.  
   
--   [Transaktionen](../../data/odbc/transaction-odbc.md) verwalten, d. h., Aktualisierungen in Form einer Batchverarbeitung speichern, sodass für sämtliche Aktualisierungen in der Datenquelle gleichzeitig ein Commit ausgeführt werden kann, sofern die Datenquelle die erforderliche Transaktionsebene unterstützt \(andernfalls wird für die gesamte Transaktion ein Rollback ausgeführt, sodass die Daten unverändert bleiben\).  
+-   Verwalten von [Transaktionen](../../data/odbc/transaction-odbc.md), Batchverarbeitung Updates, d. h. alle auf einmal an die Datenquelle übergeben werden (oder die gesamte Transaktion zurückgesetzt wird, zurück, damit die Datenquelle nicht geändert wurden) – Wenn die Datenquelle über das erforderliche Servicelevel Transaktionen unterstützt.  
   
--   Führen Sie direkt unter [SQL](../../data/odbc/sql.md)\-Anweisungen aus.  
+-   Direktes Ausführen von [SQL](../../data/odbc/sql.md) Anweisungen.  
   
- Sobald die Arbeit mit einer Datenquellenverbindung beendet ist, schließen Sie das `CDatabase`\-Objekt, zerstören es oder verwenden es erneut für eine neue Verbindung.  Weitere Informationen über Datenquellenverbindungen finden unter [Datenquelle \(ODBC\)](../../data/odbc/data-source-odbc.md).  
+ Wenn Sie die Arbeit mit einer Datenquelle Verbindung abgeschlossen haben, schließen Sie die `CDatabase` Objekt und zerstören, oder es für eine neue Verbindung wiederverwenden. Weitere Informationen zu den Datenquellen-Verbindungen finden Sie unter [Datenquelle (ODBC)](../../data/odbc/data-source-odbc.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [ODBC und MFC](../../data/odbc/odbc-and-mfc.md)

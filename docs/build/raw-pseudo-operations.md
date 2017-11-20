@@ -1,41 +1,41 @@
 ---
-title: "Unformatierte Pseudooperationen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Unformatierte Pseudooperationen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 4def1a0e-ec28-4736-91fb-fac95fba1f36
-caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 521714defb8503c5b51b276a6718f9f4f2735048
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Unformatierte Pseudooperationen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="raw-pseudo-operations"></a>Unformatierte Pseudooperationen
 In diesem Thema werden die Pseudooperationen aufgelistet.  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
   
-|Pseudooperation|Beschreibung|  
-|---------------------|------------------|  
-|PROC FRAME \[:ehandler\]|Veranlasst MASM, einen Funktionstabelleneintrag in .pdata und Entladeinformationen in .xdata für das Entladeverhalten bei der strukturierten Ausnahmebehandlung zu erzeugen.  Wenn ehandler vorhanden ist, wird dieser proc als sprachspezifischer Handler in .xdata eingetragen.<br /><br /> Wenn das FRAME\-Attribut verwendet wird, muss ihm eine .ENDPROLOG\-Direktive folgen.  Wenn die Funktion eine Endfunktion \(wie in [Funktionstypen](../build/function-types.md) definiert\) ist, werden das FRAME\-Attribut und die übrigen Pseudooperationen nicht benötigt.|  
-|.PUSHREG reg|Erzeugt einen UWOP\_PUSH\_NONVOL\-Entladecodeeintrag für die angegebene Registernummer mit dem aktuellen Offset im Prolog.<br /><br /> Dies sollte nur bei nicht flüchtigen Ganzzahlregistern verwendet werden.  Verwenden Sie für push\-Anweisungen flüchtiger Register stattdessen einen .ALLOCSTACK 8.|  
-|.SETFRAME reg, Offset|Füllt das Frameregisterfeld und den Offset in den Entladeinformationen mit den angegebenen Registern und Offsets.  Der Offset muss ein Vielfaches von 16 und kleiner oder gleich 240 sein.  Diese Direktive generiert auch einen UWOP\_SET\_FPREG\-Entladecodeeintrag für das angegebene Register mit dem aktuellen Prologoffset.|  
-|.ALLOCSTACK Größe|Erzeugt einen UWOP\_ALLOC\_SMALL oder einen UWOP\_ALLOC\_LARGE mit der angegebenen Größe für den aktuellen Offset im Prolog.<br /><br /> Der Größenoperand muss ein Vielfaches von 8 sein.|  
-|.SAVEREG reg, Offset|Erzeugt entweder einen UWOP\_SAVE\_NONVOL\- oder einen UWOP\_SAVE\_NONVOL\_FAR\-Entladecodeeintrag für das angegebene Register und den angegebenen Offset mit dem aktuellen Prologoffset.  Von MASM wird die effizienteste Codierung ausgewählt.<br /><br /> Der Offset muss positiv und ein Vielfaches von 8 sein.  Der Offset bezieht sich auf die Basis des Prozedurrahmens, der sich im Allgemeinen in RSP oder bei Verwendung eines Framezeigers im unskalierten Framezeiger befindet.|  
-|.SAVEXMM128 reg, Offset|Erzeugt entweder einen UWOP\_SAVE\_XMM128\- oder einen UWOP\_SAVE\_XMM128\_FAR\-Entladecodeeintrag für das angegebene XXM\-Register und den angegebenen Offset mit dem aktuellen Prologoffset.  Von MASM wird die effizienteste Codierung ausgewählt.<br /><br /> Der Offset muss positiv und ein Vielfaches von 16 sein.  Der Offset bezieht sich auf die Basis des Prozedurrahmens, der sich im Allgemeinen in RSP oder bei Verwendung eines Framezeigers im unskalierten Framezeiger befindet.|  
-|.PUSHFRAME \[Code\]|Erzeugt einen UWOP\_PUSH\_MACHFRAME\-Entladecodeeintrag.  Wenn der optionale Code angegeben wird, erhält der Entladecodeeintrag den Modifizierer 1.  Andernfalls ist der Modifizierer 0.|  
-|.ENDPROLOG|Signalisiert das Ende der Prologdeklarationen.  Muss in den ersten 255 Byte der Funktion auftreten.|  
+|Pseudo-Vorgang|Beschreibung|  
+|----------------------|-----------------|  
+|PROC-FRAME [: Ehandler]|Ursachen MASM generiert eine Funktion Tabelleneintrag in .pdata und Entladen von Informationen im .xdata für eine Funktion der strukturierten Ausnahmebehandlung entladen Verhalten.  Wenn Ehandler vorhanden ist, wird diese Prozedur als der sprachspezifischer Handler in .xdata eingegeben.<br /><br /> Wenn der FRAME-Attribut verwendet wird, es muss darauf folgen ein. ENDPROLOG-Direktive.  Wenn die Funktion eine Endfunktion (gemäß Definition in [Funktionstypen](../build/function-types.md)) die FRAME-Attribut ist nicht erforderlich, wie die restlichen Pseudooperationen sind.|  
+|. PUSHREG reg|Generiert einen UWOP_PUSH_NONVOL Entladung Code-Eintrag für die angegebene Registernummer mit dem aktuellen offset im Prolog.<br /><br /> Dies sollte nur mit permanentem Ganzzahlregister verwendet werden.  Für Pushbenachrichtigungen von volatile Register, verwendet ein. ALLOCSTACK 8, stattdessen|  
+|. SETFRAME Reg, offset|Füllt das Registrieren Feld und einem festen Offset in die Entladung-Informationen, die mit dem angegebenen Register und Offset. Der Offset muss ein Vielfaches von 16 sein und kleiner oder gleich 240. Diese Direktive generiert außerdem einen UWOP_SET_FPREG Entladung Code-Eintrag für das angegebene Register mit den aktuellen Prologoffset.|  
+|. ALLOCSTACK Größe|Generiert eine UWOP_ALLOC_SMALL oder einen UWOP_ALLOC_LARGE mit der angegebenen Größe für den aktuellen Offset im Prolog.<br /><br /> Die Größenoperand muss ein Vielfaches von 8 sein.|  
+|. SAVEREG Reg, offset|Generiert einen UWOP_SAVE_NONVOL oder einen UWOP_SAVE_NONVOL_FAR Entladung Code-Eintrag für den angegebenen registrieren und einem festen Offset unter Verwendung der aktuellen Prolog Verschiebung. MASM wird die effizienteste Codierung auswählen.<br /><br /> Offset muss positiv und ein Vielfaches von 8 sein.  Offset ist relativ zu der Basis des Rahmens für die Prozedur, die im Allgemeinen RSP angibt, oder, wenn der Frame-Pointer, die nicht skalierten Frame-Pointer verwenden.|  
+|. SAVEXMM128 Reg, offset|Generiert einen UWOP_SAVE_XMM128 oder einen UWOP_SAVE_XMM128_FAR Entladung Code-Eintrag für den angegebenen XMM-Register und einem festen Offset unter Verwendung der aktuellen Prolog Verschiebung. MASM wird die effizienteste Codierung auswählen.<br /><br /> Offset muss positiv und ein Vielfaches von 16 sein.  Offset ist relativ zu der Basis des Rahmens für die Prozedur, die im Allgemeinen RSP angibt, oder, wenn der Frame-Pointer, die nicht skalierten Frame-Pointer verwenden.|  
+|. PUSHFRAME [Code]|Generiert einen UWOP_PUSH_MACHFRAME Entladung Codeeintrag an. Wenn der optionale Code angegeben wird, erhält der Entladung Codeeintrag einen 1-Modifizierer. Andernfalls wird der Modifizierer 0.|  
+|.ENDPROLOG|Signalisiert das Ende der Prologdeklarationen.  Muss in die ersten 255 Byte der Funktion auftreten.|  
   
- Im Folgenden finden Sie ein Beispielfunktionsprolog mit richtiger Verwendung der meisten Opcodes:  
+ Dies ist eine Beispiel-Funktionsprologs mit richtiger Verwendung der meisten Opcodes:  
   
 ```  
 sample PROC FRAME     
@@ -84,5 +84,5 @@ ret
 sample ENDP  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Entladehilfen für MASM](../build/unwind-helpers-for-masm.md)

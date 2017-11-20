@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- bsearch_s
+apiname: bsearch_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,39 +21,21 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- bsearch_s
-dev_langs:
-- C++
+f1_keywords: bsearch_s
+dev_langs: C++
 helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 67caa4f6f6f9ba43c5d4b8a23af8be9bebcc717b
-ms.contentlocale: de-de
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: a31ba82059748d49087546e2812d1f1fd32f4628
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="bsearchs"></a>bsearch_s
 Führt eine binäre Suche eines sortierten Arrays aus. Dies ist eine Version von [bsearch](../../c-runtime-library/reference/bsearch.md) mit Sicherheitsverbesserungen, wie dies unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben wird.  
@@ -93,9 +73,9 @@ void *bsearch_s(
  Ein Zeiger auf ein Objekt, auf das in der Vergleichsfunktion zugegriffen werden kann.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `bsearch_s` gibt einen Zeiger auf ein Vorkommen von `key` in dem Array zurück, auf das `base` verweist. Wenn `key` nicht gefunden wird, gibt die Funktion `NULL`zurück. Wenn das Array nicht in aufsteigender Reihenfolge sortiert ist oder doppelte Datensätze mit identischen Schlüsseln enthält, ist das Ergebnis nicht vorhersehbar.  
+ `bsearch_s` gibt einen Zeiger auf ein Vorkommen von `key` in dem Array zurück, auf das `base` verweist. Wenn `key` nicht gefunden wird, wird `NULL`zurückgegeben. Wenn das Array nicht in aufsteigender Reihenfolge sortiert ist oder doppelte Datensätze mit identischen Schlüsseln enthält, ist das Ergebnis nicht vorhersehbar.  
   
- Wenn ungültige Parameter an die Funktion übergeben werden, ruft sie den Handler für ungültige Parameter auf, wie in [Parameter Validation](../../c-runtime-library/parameter-validation.md)beschrieben. If execution is allowed to continue, `errno` is set to `EINVAL` and the function returns `NULL`. Weitere Informationen finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Wenn ungültige Parameter an die Funktion übergeben werden, ruft sie den Handler für ungültige Parameter auf, wie in [Parameter Validation](../../c-runtime-library/parameter-validation.md)beschrieben. Wenn die weitere Ausführung zugelassen wird, wird `errno` auf `EINVAL` gesetzt, und die Funktion gibt `NULL`zurück. Weitere Informationen finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ### <a name="error-conditions"></a>Fehlerbedingungen  
   

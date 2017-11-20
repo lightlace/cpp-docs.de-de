@@ -1,41 +1,39 @@
 ---
-title: "hash_map::key_comp (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::key_comp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "key_comp-Member [STL/CLR]"
+title: 'hash_map:: key_comp (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::key_comp
+dev_langs: C++
+helpviewer_keywords: key_comp member [STL/CLR]
 ms.assetid: 08bd31cc-3a7c-49a3-ac48-089262b3bd44
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8d0ee15404928cc2446c0dfcc7d3457c9f293b67
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# hash_map::key_comp (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Kopiert den Reihenfolgendelegaten für zwei Schlüssel.  
+# <a name="hashmapkeycomp-stlclr"></a>hash_map::key_comp (STL/CLR)
+Kopiert der Delegat für zwei Schlüssel.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 key_compare^key_comp();  
 ```  
   
-## Hinweise  
- Die Memberfunktion gibt den Reihenfolgendelegaten zurück, der verwendet wird, um die gesteuerte Reihenfolge zu sortieren.  Damit können Sie zwei Schlüssel vergleichen.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt der Delegat zum Sortieren der kontrollierten Sequenz zurück. Sie können sie zwei Schlüssel vergleichen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_hash_map_key_comp.cpp   
@@ -71,18 +69,22 @@ int main()
   
 ```  
   
-  **Vergleichen \(L'a, L'a\) \= True**  
-**Vergleichen \(L'a, L'b\) \= True**  
-**Vergleichen \(L'b, L'a\) \= False**  
-**Vergleichen \(L'a, L'a\) \= False**  
-**Vergleichen \(L'a, L'b\) \= False**  
-**Vergleichen \(L'b, L'a\) \= True**   
-## Anforderungen  
- **Header:** \<cliext\/hash\_map\>  
+```Output  
+compare(L'a', L'a') = True  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
   
- **Namespace:** cliext  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = False  
+compare(L'b', L'a') = True  
+```  
   
-## Siehe auch  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::key\_compare](../dotnet/hash-map-key-compare-stl-clr.md)   
- [hash\_map::key\_type](../dotnet/hash-map-key-type-stl-clr.md)
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext Hash_map/>  
+  
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [hash_map-Element (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map:: key_compare (STL/CLR)](../dotnet/hash-map-key-compare-stl-clr.md)   
+ [hash_map::key_type (STL/CLR)](../dotnet/hash-map-key-type-stl-clr.md)

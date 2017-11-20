@@ -1,82 +1,83 @@
 ---
-title: "Programmieren mit CComBSTR (ATL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CComBSTR-Klasse, Programmieren mit"
-  - "Unicode, Verwenden von CComBSTR [ATL]"
+title: Programmieren mit CComBSTR (ATL) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- CComBSTR class, programming with
+- Unicode, using CComBSTR [ATL]
 ms.assetid: d3bd0851-d132-4be9-9c4c-6ccba17acb2b
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4d75d2df47f69384ead62712836eee057aed94f3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Programmieren mit CComBSTR (ATL)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die ATL\-Klasse [CComBSTR](../atl/reference/ccombstr-class.md) stellt einen Wrapper um den `BSTR` Datentyp bereit.  Während `CComBSTR` ein nützliches Tool ist, gibt es einige Situationen, die Vorsicht erfordern.  
+# <a name="programming-with-ccombstr-atl"></a>Programmieren mit CComBSTR (ATL)
+Die ATL-Klasse [CComBSTR](../atl/reference/ccombstr-class.md) stellt einen Wrapper um die `BSTR` -Datentyp. Während `CComBSTR` ist ein nützliches Tool, es gibt mehrere Situationen mit Vorsicht.  
   
 -   [Konvertierungsprobleme](#programmingwithccombstr_conversionissues)  
   
--   [Bereichs\-Probleme](#programmingwithccombstr_scopeissues)  
+-   [Bereichs-Probleme](#programmingwithccombstr_scopeissues)  
   
--   [Das CComBSTR\-Objekt explizit freigeben](#programmingwithccombstr_explicitlyfreeing)  
+-   [CComBSTR-Objekt freigeben explizit](#programmingwithccombstr_explicitlyfreeing)  
   
--   [Verwenden CComBSTR\-Objekte in\-Schleifen](#programmingwithccombstr_usingloops)  
+-   [Verwenden von CComBSTR-Objekten in Schleifen](#programmingwithccombstr_usingloops)  
   
--   [Speicherverlust\-Probleme](#programmingwithccombstr_memoryleaks)  
+-   [Verlust von Arbeitsspeicherproblemen](#programmingwithccombstr_memoryleaks)  
   
-##  <a name="programmingwithccombstr_conversionissues"></a> Konvertierungsprobleme  
- Obwohl einige `CComBSTR`\-Methoden automatisch ein ANSI\-Zeichenfolgenargument in Unicode konvertieren, geben die Methoden immer Unicode\-Formatzeichenfolgen zurück.  Um die Ausgabezeichenfolge zurück in ANSI zu konvertieren, verwenden Sie eine ATL\-Konvertierungsklasse.  Weitere Informationen über die ATL\-Konvertierungsklassen, finden Sie unter [ATL und Makros für MFC\-Zeichenfolgenkonvertierung](../Topic/ATL%20and%20MFC%20String%20Conversion%20Macros.md).  
+##  <a name="programmingwithccombstr_conversionissues"></a>Konvertierungsprobleme  
+ Obwohl mehrere `CComBSTR` Methoden werden automatisch ein Zeichenfolgenargument ANSI in Unicode konvertiert, die Methoden immer Unicode-Formatzeichenfolgen zurück. Um die Ausgabezeichenfolge wieder in ANSI zu konvertieren, verwenden Sie eine ATL-Konvertierung-Klasse. Weitere Informationen zu den ATL-konvertierungsklassen, finden Sie unter [ATL- und MFC-Makros zur Zeichenfolgenkonvertierung](reference/string-conversion-macros.md).  
   
-### Beispiel  
- [!CODE [NVC_ATL_Utilities#114](../CodeSnippet/VS_Snippets_Cpp/NVC_ATL_Utilities#114)]  
+### <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_ATL_Utilities#114](../atl/codesnippet/cpp/programming-with-ccombstr-atl_1.cpp)]  
   
- Wenn Sie ein Zeichenfolgenliteral verwenden, um ein `CComBSTR`\-Objekt zu ändern, verwenden Sie Breitzeichen\-Zeichenfolgen.  Dies reduziert unnötige Konvertierungen.  
+ Wenn Sie ein Zeichenfolgenliteral verwenden, so ändern Sie eine `CComBSTR` Objekt, das Breitzeichen-Zeichenfolgen verwenden. Dies reduziert die unnötige Konvertierung.  
   
-### Beispiel  
- [!CODE [NVC_ATL_Utilities#115](../CodeSnippet/VS_Snippets_Cpp/NVC_ATL_Utilities#115)]  
+### <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_ATL_Utilities#115](../atl/codesnippet/cpp/programming-with-ccombstr-atl_2.cpp)]  
   
-##  <a name="programmingwithccombstr_scopeissues"></a> Bereichs\-Probleme  
- Wie bei allen gut konzipierte Klasse, gibt `CComBSTR` seine Ressourcen frei, wenn sie den Gültigkeitsbereich verlässt.  Wenn eine Funktion einen Zeiger auf die `CComBSTR` Zeichenfolge zurückgibt, kann diese Probleme verursachen, da der Zeiger Arbeitsspeicher verweist, der bereits freigegeben ist.  In diesen Fällen verwenden Sie die Methode **Copy**, wie unten dargestellt.  
+##  <a name="programmingwithccombstr_scopeissues"></a>Bereichs-Probleme  
+ Wie bei einer gut konzipierte Klasse `CComBSTR` wird seine Ressourcen freizugeben, wenn sie den Gültigkeitsbereich verlässt. Wenn eine Funktion zurückgegeben wird einen Zeiger auf die `CComBSTR` Zeichenfolge, dies kann Probleme verursachen, wie die Zeiger auf Speicher verweist, das bereits freigegeben wurde. In diesen Fällen verwenden die **Kopie** Methode, wie unten dargestellt.  
   
-### Beispiel  
- [!CODE [NVC_ATL_Utilities#116](../CodeSnippet/VS_Snippets_Cpp/NVC_ATL_Utilities#116)]  
+### <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_ATL_Utilities#116](../atl/codesnippet/cpp/programming-with-ccombstr-atl_3.cpp)]  
   
-##  <a name="programmingwithccombstr_explicitlyfreeing"></a> Das CComBSTR\-Objekt explizit freigeben  
- Es ist möglich, die Zeichenfolge explizit freizugeben, die im `CComBSTR`\-Objekt enthalten ist, bevor das Objekt Gültigkeitsbereich verlässt.  Wenn die Zeichenfolge verworfen wird, ist das Objekt `CComBSTR` ungültig.  
+##  <a name="programmingwithccombstr_explicitlyfreeing"></a>CComBSTR-Objekt freigeben explizit  
+ Es ist möglich, eine Zeichenfolge, die explizit freigeben der `CComBSTR` -Objekt, bevor das Objekt außerhalb des Bereichs befindet. Wenn die Zeichenfolge freigegeben wird, die `CComBSTR` Objekt ist ungültig.  
   
-### Beispiel  
- [!CODE [NVC_ATL_Utilities#117](../CodeSnippet/VS_Snippets_Cpp/NVC_ATL_Utilities#117)]  
+### <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_ATL_Utilities#117](../atl/codesnippet/cpp/programming-with-ccombstr-atl_4.cpp)]  
   
-##  <a name="programmingwithccombstr_usingloops"></a> Verwenden CComBSTR\-Objekte in\-Schleifen  
- Da die `CComBSTR`\-Klasse einen Puffer erfolgt, um bestimmte Vorgänge, wie der `+=`\-Operator oder die **Append**\-Methode auszuführen, wird es nicht empfohlen, Zeichenfolgenbearbeitung innerhalb einer kurzen Schleife ausführen.  In diesen Situationen stellt `CStringT` eine bessere Leistung.  
+##  <a name="programmingwithccombstr_usingloops"></a>Verwenden von CComBSTR-Objekten in Schleifen  
+ Als die `CComBSTR` Klasse reserviert einen Puffer, um bestimmte Vorgänge ausführen, wie etwa die `+=` Operator oder **Append** Methode nicht empfohlen, dass Sie Zeichenfolgen in einer engen Schleife ausführen. In diesen Situationen `CStringT` bietet eine bessere Leistung.  
   
-### Beispiel  
- [!CODE [NVC_ATL_Utilities#118](../CodeSnippet/VS_Snippets_Cpp/NVC_ATL_Utilities#118)]  
+### <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_ATL_Utilities#118](../atl/codesnippet/cpp/programming-with-ccombstr-atl_5.cpp)]  
   
-##  <a name="programmingwithccombstr_memoryleaks"></a> Speicherverlust\-Probleme  
- Die Übergabe der Adresse von initialisierten `CComBSTR` zu einer Funktion als **\[out\]**\-Parameter verursacht einen Speicherverlust.  
+##  <a name="programmingwithccombstr_memoryleaks"></a>Verlust von Arbeitsspeicherproblemen  
+ Übergeben die Adresse des eine initialisierte `CComBSTR` an eine Funktion als ein **[Out]** Parameter bewirkt, dass einen Speicherverlust.  
   
- Im Beispiel unten, wird die Zeichenfolge, die zugeordnet ist, um die Zeichenfolge `"Initialized"` anzuhalten, verloren geht, wenn die Funktion `MyGoodFunction` die Zeichenfolge ersetzt.  
+ Im folgenden Beispiel wird die Zeichenfolge für die Zeichenfolge zugeordnet `"Initialized"` wurde abgegriffen, wenn die Funktion `MyGoodFunction` ersetzt die Zeichenfolge.  
   
- [!CODE [NVC_ATL_Utilities#119](../CodeSnippet/VS_Snippets_Cpp/NVC_ATL_Utilities#119)]  
+ [!code-cpp[NVC_ATL_Utilities#119](../atl/codesnippet/cpp/programming-with-ccombstr-atl_6.cpp)]  
   
- Um den Verlust zu vermeiden, rufen Sie die Methode **Empty** auf vorhandene `CComBSTR`\-Objekten auf bevor Sie die Adresse als **\[out\]**\-Parameter übergeben.  
+ Um den Verlust zu vermeiden, rufen die **leere** Methode auf vorhandenen `CComBSTR` Objekte vor Übergabe der Adresse als eine **[Out]** Parameter.  
   
- Beachten Sie, dass der gleiche Code ohne Datenverlust führen würde, wenn der Parameter der Funktion **\[in, out\]** war.  
+ Beachten Sie, dass der gleiche Code kein Speicherverlust führen würde, wenn die Funktion Parameter wurde **[in, out]**.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Konzepte](../atl/active-template-library-atl-concepts.md)   
- [CStringT Class](../atl-mfc-shared/reference/cstringt-class.md)   
- [wstring](../Topic/wstring.md)   
- [String Conversion Macros](../atl/reference/string-conversion-macros.md)
+ [CStringT-Klasse](../atl-mfc-shared/reference/cstringt-class.md)   
+ [wstring](../standard-library/basic-string-class.md)   
+ [Zeichenfolgenkonvertierungs-Makros](../atl/reference/string-conversion-macros.md)
+

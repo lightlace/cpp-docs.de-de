@@ -1,63 +1,63 @@
 ---
-title: "&#196;nderungen an der Hilfsfunktion f&#252;r das verz&#246;gerte Laden von DLLs seit Visual&#160;C++ 6.0"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__delayLoadHelper2-Funktion"
-  - "Verzögertes Laden von DLLs, Neues"
-  - "Hilfsfunktionen, Neues"
-  - "PFromRva-Methode"
+title: "Änderungen an der das verzögerte Laden von Hilfsfunktion seit Visual C++ 6.0 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- delayed loading of DLLs, what's changed
+- PFromRva method
+- __delayLoadHelper2 function
+- helper functions, what's changed
 ms.assetid: 99f0be69-105d-49ba-8dd5-3be7939c0c72
-caps.latest.revision: 6
-caps.handback.revision: "6"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: fb16beb6f2ddb07f57fe9f35c67552348cac56cc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# &#196;nderungen an der Hilfsfunktion f&#252;r das verz&#246;gerte Laden von DLLs seit Visual&#160;C++ 6.0
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Wenn verschiedene Versionen von Visual C\+\+ auf dem Computer verwendet werden oder wenn eine eigene Hilfsfunktion definiert wird, können die an der Hilfsfunktion für verzögertes Laden von DLLs vorgenommenen Änderungen Auswirkungen aufweisen.  Beispiel:  
+# <a name="changes-in-the-dll-delayed-loading-helper-function-since-visual-c-60"></a>Änderungen an der Hilfsfunktion für das verzögerte Laden von DLLs seit Visual C++ 6.0
+Wenn Sie mehrere Versionen von Visual C++ auf Ihrem Computer haben oder wenn Sie eine eigene Hilfsfunktion definiert haben, es möglicherweise von kommt verzögert Änderungen an der DLL laden Hilfsfunktion. Zum Beispiel:  
   
--   **\_\_delayLoadHelper** ist jetzt **\_\_delayLoadHelper2**  
+-   **__delayLoadHelper** ist jetzt **__delayLoadHelper2**  
   
--   **\_\_pfnDliNotifyHook** ist jetzt **\_\_pfnDliNotifyHook2**  
+-   **__pfnDliNotifyHook** ist jetzt **__pfnDliNotifyHook2**  
   
--   **\_\_pfnDliFailureHook** ist jetzt **\_\_pfnDliFailureHook2**  
+-   **__pfnDliFailureHook** ist jetzt **__pfnDliFailureHook2**  
   
--   **\_\_FUnloadDelayLoadedDLL** ist jetzt **\_\_FUnloadDelayLoadedDLL2**  
+-   **__FUnloadDelayLoadedDLL** ist jetzt **__FUnloadDelayLoadedDLL2**  
   
 > [!NOTE]
->  Wenn die Standardhilfsfunktion verwendet wird, werden sich die Änderungen nicht auswirken.  Es sind keine Änderungen beim Aufruf des Linkers zu berücksichtigen.  
+>  Wenn Sie die Standard-Hilfsfunktion verwenden, werden diese Änderungen nicht betroffen. Es sind keine Änderungen bezüglich wie den Linker aufrufen.  
   
-## Mehrere Versionen von Visual C\+\+  
- Stellen Sie sicher, dass der Linker delayimp.lib entspricht, wenn Sie verschiedene Versionen von Visual C\+\+ auf dem Computer verwenden.  Ist das nicht der Fall, wird ein Linkerfehler auftreten, der darüber informiert, dass es sich entweder bei `___delayLoadHelper2@8` oder `___delayLoadHelper@8` um ein nicht aufgelöstes externes Symbol handelt.  Die erste Meldung bedeutet, dass Sie einen neuen Linker mit einer alten Version von **delayimp.lib** verwenden. Die zweite Meldung bedeutet, dass Sie einen alten Linker mit einer neuen Version von **delayimp.lib** verwenden.  
+## <a name="multiple-versions-of-visual-c"></a>Mehrere Versionen von Visual C++  
+ Wenn Sie mehrere Versionen von Visual C++ auf Ihrem Computer verfügen, stellen Sie sicher, dass der Linker "delayimp.lib" übereinstimmt. Wenn es ein Konflikt besteht, erhalten Sie einen Linkerfehler entweder `___delayLoadHelper2@8` oder `___delayLoadHelper@8` als ein nicht aufgelöstes externes Symbol. Dies bedeutet eine neue Verknüpfung mit einer alten "delayimp.lib" und letztere impliziert einen alten Linker mit einer neuen "delayimp.lib".  
   
- Tritt ein nicht aufgelöster Linkerfehler auf, führen Sie [dumpbin \/linkermember](../../build/reference/linkermember.md):1 für die Datei delayimp.lib aus, die die Hilfsfunktion erwartungsgemäß enthält. Auf diese Weise ermitteln Sie, welche Hilfsfunktion stattdessen definiert wurde.  Die Hilfsfunktion kann auch in einer Objektdatei definiert sein. Rufen Sie [dumpbin \/symbols](../../build/reference/symbols.md) auf, und suchen Sie nach `delayLoadHelper(2)`.  
+ Führen Sie eine nicht aufgelöste Linkerfehler [Dumpbin/linkermember](../../build/reference/linkermember.md): 1 für die "delayimp.lib", die Sie erwarten, enthalten die Hilfsfunktion, um festzustellen, welche Hilfsfunktion stattdessen definiert ist. Die Hilfsfunktion kann auch in einer Objektdatei definiert werden; Führen Sie [Dumpbin/Symbols](../../build/reference/symbols.md) und suchen Sie nach `delayLoadHelper(2)`.  
   
- Wenn Sie den Linker von Visual C\+\+ 6.0 verwenden, gehen Sie folgendermaßen vor:  
+ Wenn Sie wissen müssen Sie dann den Linker Visual C++ 6.0:  
   
--   Führen Sie **dumpbin** für die LIB\-Datei oder die OBJ\-Datei der Hilfsfunktion für verzögertes Laden aus, um festzustellen, ob **\_\_delayLoadHelper2** in ihr definiert wird.  Wenn nicht, tritt beim Verknüpfen ein Fehler auf.  
+-   Ausführen von Dumpbin für Verzögerung Hilfsfunktion für das Laden des lib- oder OBJ-Datei, um zu bestimmen, ob es definiert **__delayLoadHelper2**. Wenn dies nicht der Fall ist, wird die Verknüpfung fehl.  
   
--   Definieren Sie **\_\_delayLoadHelper** in der LIB\-Datei oder der OBJ\-Datei der Hilfsfunktion für verzögertes Laden.  
+-   Definieren Sie **__delayLoadHelper** in die Verzögerung der Hilfsfunktion lib- oder OBJ-Datei zu laden.  
   
-## Benutzerdefinierte Hilfsfunktion  
- Wenn Sie eine eigene Hilfsfunktion definiert haben und die aktuelle Version von Visual C\+\+ verwenden, gehen Sie folgendermaßen vor:  
+## <a name="user-defined-helper-function"></a>Benutzerdefinierte Hilfsfunktion  
+ Wenn Sie eine eigene Hilfsfunktion definiert und die aktuelle Version von Visual C++ verwenden, führen Sie folgende Schritte aus:  
   
--   Benennen Sie die Hilfsfunktion in **\_\_delayLoadHelper2** um.  
+-   Benennen Sie die Hilfsfunktion auf **__delayLoadHelper2**.  
   
--   Da die Zeiger im Verzögerungsdeskriptor \(**ImgDelayDescr** in **delayimp.h**\) von absoluten Adressen \(VAs\) zu relativen Adressen \(RVAs\) geändert wurden, um sowohl in 32\-Bit\-Programmen als auch in 64\-Bit\-Programmen erwartungsgemäß zu funktionieren, müssen Sie diese in Zeiger zurückkonvertieren.  Eine neue Funktion, PFromRva, wurde eingeführt und ist in delayhlp.cpp enthalten.  Sie können diese Funktion für jedes der Felder im Deskriptor verwenden, um es entweder in 32\-Bit\- oder 64\-Bit\-Zeiger zu konvertieren.  Die Standardhilfsfunktion für verzögertes Laden stellt weiterhin eine gute Vorlage dar, um sie als Beispiel zu verwenden.  
+-   Da die Zeiger im Verzögerungsdeskriptor (ImgDelayDescr in delayimp.h) von absoluten Adressen (VAs) zu relativen Adressen (RVA) in beide 32- und 64-Bit-Programme wie erwartet funktioniert geändert wurden, müssen Sie diese wieder in Zeiger konvertiert. Es wurde eine neue Funktion eingeführt: PFromRva, in delayhlp.cpp gefunden. Diese Funktion können auf jedes der Felder im Deskriptor Sie um sie wieder auf entweder 32 oder 64-Bit-Zeiger zu konvertieren. Die Hilfsfunktion Standard verzögertes Laden wird weiterhin eine gute Vorlage als Beispiel verwendet werden.  
   
-## Laden aller Importe für eine verzögert geladene DLL  
- Der Linker kann alle Importe aus einer DLL laden, die als verzögert geladen festgelegt wurde.  Weitere Informationen finden Sie unter [Laden aller Importe für eine verzögert geladene DLL](../../build/reference/loading-all-imports-for-a-delay-loaded-dll.md).  
+## <a name="load-all-imports-for-a-delay-loaded-dll"></a>Laden Sie aller Importe für eine verzögert geladene DLL  
+ Der Linker kann alle Importe aus einer DLL laden, die Sie angegeben haben, um die Verzögerung geladen werden. Finden Sie unter [Laden aller Importe für eine verzögert geladene DLL](../../build/reference/loading-all-imports-for-a-delay-loaded-dll.md) für Weitere Informationen.  
   
-## Siehe auch  
- [Understanding the Helper Function](assetId:///6279c12c-d908-4967-b0b3-cabfc3e91d3d)
+## <a name="see-also"></a>Siehe auch  
+ [Die Hilfsfunktion](understanding-the-helper-function.md)

@@ -1,32 +1,30 @@
 ---
-title: "count_if (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::count_if"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "count_if-Funktion [STL/CLR]"
+title: Count_if (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::count_if
+dev_langs: C++
+helpviewer_keywords: count_if function [STL/CLR]
 ms.assetid: a8aa149d-20b8-4b3f-917b-1ec66f178a5d
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9a0e3f43960d120e63d8bdc7c25b14ff51072be5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# count_if (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gibt die Anzahl der Elemente in einem Bereich zurück, dessen Werte einer angegebenen Bedingung entsprechen.  
+# <a name="countif-stlclr"></a>count_if (STL/CLR)
+Gibt die Anzahl von Elementen in einem Bereich zurück, dessen Werte mit einer angegebenen Bedingung übereinstimmen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class _InIt, class _Pr> inline  
@@ -34,13 +32,13 @@ template<class _InIt, class _Pr> inline
         count_if(_InIt _First, _InIt _Last, _Pr _Pred);  
 ```  
   
-## Hinweise  
- Diese Funktion verhält sich genauso wie die STL\-Funktion `count_if`.  Weitere Informationen finden Sie unter [count\_if](../Topic/count_if.md).  
+## <a name="remarks"></a>Hinweise  
+ Diese Funktion verhält sich wie die C++-Standardbibliothek Funktion `count_if`. Weitere Informationen finden Sie unter [Count_if](../standard-library/algorithm-functions.md#count_if).  
   
-## Anforderungen  
- **Header:** \<cliext\/Algorithmus\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext-Algorithmus >  
   
- **Namespace:** cliext  
+ **Namespace:** Cliext  
   
-## Siehe auch  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Siehe auch  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

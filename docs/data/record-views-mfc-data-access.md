@@ -1,37 +1,36 @@
 ---
-title: "Datensatzansichten (MFC-Datenzugriff) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DAO [C++], Datensatzansichten"
-  - "Datenbanken [C++], Datensatzansichten"
-  - "Formulare [C++], Datenzugriffsaufgaben"
-  - "MFC [C++], Datensatzansichten"
-  - "ODBC-Recordsets [C++], Datensatzansichten"
-  - "Datensatzansichten [C++]"
+title: Aufzeichnen von Ansichten (MFC-Datenzugriff) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- MFC [C++], record views
+- ODBC recordsets [C++], record views
+- databases [C++], record views
+- record views [C++]
+- forms [C++], data access tasks
 ms.assetid: 562122d9-01d8-4284-acf6-ea109ab0408d
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 38c5d65e89aa4fb76ff96fa82cd52e42475e2353
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Datensatzansichten (MFC-Datenzugriff)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Dieser Abschnitt bezieht sich nur auf MFC\-ODBC\- und DAO\-Klassen.  Informationen zu OLE DB\-Datensatzansichten finden Sie unter [COleDBRecordView](../mfc/reference/coledbrecordview-class.md) und [Verwenden von OLE DB\-Datensatzansichten](../data/oledb/using-ole-db-record-views.md).  
+# <a name="record-views--mfc-data-access"></a>Datensatzansichten (MFC-Datenzugriff)
+Dieser Abschnitt gilt nur für die MFC-ODBC-Klassen. Informationen zu OLE DB-Datensatzansichten finden Sie unter [COleDBRecordView](../mfc/reference/coledbrecordview-class.md) und [mithilfe von OLE DB-Datensatzansichten](../data/oledb/using-ole-db-record-views.md).  
   
- Zur Unterstützung von formularbasierten Datenzugriffsanwendungen stellt die Klassenbibliothek die Klasse [CRecordView](../mfc/reference/crecordview-class.md) und die Klasse [CDaoRecordView](../mfc/reference/cdaorecordview-class.md) zur Verfügung.  Eine Datensatzansicht ist ein Formularansichtsobjekt, dessen Steuerelemente den Felddatenmembern eines [Recordset](../data/odbc/recordset-odbc.md)\-Objekts zugeordnet sind \(und indirekt den entsprechenden Spalten in einem Abfrageergebnis oder einer Tabelle in der Datenquelle\).  Wie ihre Basisklasse [CFormView](../mfc/reference/cformview-class.md), `CRecordView` und `CDaoRecordView` basieren sie auf einer Dialogfeldvorlagen\-Ressource.  
+ Zur Unterstützung von formularbasierten formularbasierten datenzugriffsanwendungen stellt die Klassenbibliothek die Klasse [CRecordView](../mfc/reference/crecordview-class.md). Eine Datensatzansicht ist ein Formularansichtsobjekt, dessen Steuerelemente direkt an den Felddatenmembern zugeordnet sind, ein [Recordset](../data/odbc/recordset-odbc.md) Objekt (und indirekt den entsprechenden Spalten in einem Abfrageergebnis oder einer Tabelle in der Datenquelle). Wie seine Basisklasse [CFormView](../mfc/reference/cformview-class.md), `CRecordView` basiert auf einer Dialogfeldvorlagen-Ressource.  
   
-## Verwendungszwecke für Formulare  
+## <a name="form-uses"></a>Verwendungszwecke für Formulare  
  Formulare eignen sich für eine Vielzahl von Datenzugriffsaufgaben:  
   
 -   Eingeben von Daten  
@@ -40,12 +39,12 @@ Dieser Abschnitt bezieht sich nur auf MFC\-ODBC\- und DAO\-Klassen.  Information
   
 -   Aktualisieren von Daten  
   
-## Weitere Informationen zu Datensatzansichten  
- Die Informationen in diesen Themen gelten für die ODBC\-basierten und DAO\-basierte Klassen.  Verwenden Sie `CRecordView` für ODBC und `CDaoRecordView` für DAO.  
+## <a name="further-reading-about-record-views"></a>Weitere Informationen zu Datensatzansichten  
+ Die Informationen in diesen Themen gelten für die ODBC-basierten und DAO-basierte Klassen. Verwenden Sie `CRecordView` für ODBC und `CDaoRecordView` für DAO.  
   
  Folgende Themen werden behandelt:  
   
--   [Features von Datensatzansichts\-Klassen](../data/features-of-record-view-classes-mfc-data-access.md)  
+-   [Features von Datensatzansichts-Klassen](../data/features-of-record-view-classes-mfc-data-access.md)  
   
 -   [Datenaustausch für Datensatzansichten](../data/data-exchange-for-record-views-mfc-data-access.md)  
   
@@ -55,6 +54,6 @@ Dieser Abschnitt bezieht sich nur auf MFC\-ODBC\- und DAO\-Klassen.  Information
   
 -   [Verwenden einer Datensatzansicht](../data/using-a-record-view-mfc-data-access.md)  
   
-## Siehe auch  
- [Datenzugriffsprogrammierung \(MFC\/ATL\)](../data/data-access-programming-mfc-atl.md)   
- [Liste der ODBC\-Treiber](../data/odbc/odbc-driver-list.md)
+## <a name="see-also"></a>Siehe auch  
+ [Datenzugriffsprogrammierung (MFC/ATL)](../data/data-access-programming-mfc-atl.md)   
+ [Liste der ODBC-Treiber](../data/odbc/odbc-driver-list.md)

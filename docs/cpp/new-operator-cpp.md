@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- new keyword [C++]
+dev_langs: C++
+helpviewer_keywords: new keyword [C++]
 ms.assetid: 69fee812-1c28-4882-8fda-d1ad17860004
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: a7386d45f5188e7217ebfd4c235c0763bfd70044
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 05b83a284dcf599890985f1f01d8327ac5ef75e4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="new-operator-c"></a>new-Operator (C++)
 Belegt Speicher für ein Objekt oder Array von Objekten des *Typname* aus dem freien Speicher und einen typisierten Zeiger ungleich NULL für das Objekt zurückgegeben.  
@@ -238,7 +234,7 @@ int main()
   
  Die **neue** -Operator Ruft die Funktion `operator new`. Für Arrays eines beliebigen Typs und für Objekte, die nicht von **Klasse**, `struct`, oder **Union** Typen, die eine globale Funktion **:: new-Operator**, wird aufgerufen, um Speicher zu belegen. Klassentypobjekte können ihre eigene statische `operator new`-Memberfunktion auf Basis einer einzelnen Klasse definieren.  
   
- Wenn der Compiler erkennt die **neue** Operator, um ein Objekt des Typs zuordnen `type`, einen Aufruf von ausgestellten `type` **:: new-Operator ("sizeof" (** `type` **)) ** oder, wenn keine benutzerdefinierten `operator new` definiert ist, **:: new-Operator (Sizeof (** `type` **))**. Aus diesem Grund die **neue** -Operator die richtige Menge an Arbeitsspeicher für das Objekt zuordnen kann.  
+ Wenn der Compiler erkennt die **neue** Operator, um ein Objekt des Typs zuordnen `type`, einen Aufruf von ausgestellten `type` **:: new-Operator ("sizeof" (** `type` **))**  oder, wenn keine benutzerdefinierten `operator new` definiert ist, **:: new-Operator (Sizeof (** `type` **))**. Aus diesem Grund die **neue** -Operator die richtige Menge an Arbeitsspeicher für das Objekt zuordnen kann.  
   
 > [!NOTE]
 >  Das Argument für `operator new` ist vom Typ **Size_t**. Dieser Typ ist in DIRECT.H, MALLOC.H, MEMORY.H, SEARCH.H, STDDEF.H, STDIO.H, STDLIB.H, STRING.H und TIME.H definiert.  

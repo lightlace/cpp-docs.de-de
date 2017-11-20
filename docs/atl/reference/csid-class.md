@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -25,35 +24,18 @@ f1_keywords:
 - ATLSECURITY/ATL::CSid::LoadAccount
 - ATLSECURITY/ATL::CSid::Sid
 - ATLSECURITY/ATL::CSid::SidNameUse
-dev_langs:
-- C++
-helpviewer_keywords:
-- CSid class
+dev_langs: C++
+helpviewer_keywords: CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: f1e731c82892c5622dcb437498d2d318086f66d8
-ms.contentlocale: de-de
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: f5f49805438e124a6407a5a4c8428851ebe241d9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="csid-class"></a>CSid-Klasse
 Diese Klasse ist ein Wrapper für eine `SID` Struktur (Sicherheits-ID).  
@@ -122,7 +104,7 @@ class CSid
   
  Anwendungen sollten nicht ändern, die `SID` Struktur direkt, sondern stattdessen die in diese Wrapperklasse bereitgestellten Methoden verwenden. Siehe auch [AtlGetOwnerSid](security-global-functions.md#atlgetownersid), [AtlSetGroupSid](security-global-functions.md#atlsetgroupsid), [AtlGetGroupSid](security-global-functions.md#atlgetgroupsid), und [AtlSetOwnerSid](security-global-functions.md#atlsetownersid).  
   
- Eine Einführung in das Zugriffssteuerungsmodell in Windows erhalten finden Sie unter [Zugriffssteuerung](http://msdn.microsoft.com/library/windows/desktop/aa374860) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Eine Einführung in das Zugriffssteuerungsmodell in Windows erhalten finden Sie unter [Access Control](http://msdn.microsoft.com/library/windows/desktop/aa374860) im Windows SDK.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlsecurity.h  
@@ -239,7 +221,7 @@ bool EqualPrefix(const CSid& rhs) const throw();
  Gibt **"true"** bei Erfolg **"false"** bei einem Fehler.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [EqualPrefixSid](http://msdn.microsoft.com/library/windows/desktop/aa446621) in die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] Weitere Details.  
+ Finden Sie unter [EqualPrefixSid](http://msdn.microsoft.com/library/windows/desktop/aa446621) in das Windows SDK für weitere Details.  
   
 ##  <a name="getlength"></a>CSid::GetLength  
  Gibt die Länge der `CSid` Objekt.  
@@ -536,4 +518,3 @@ SID_NAME_USE SidNameUse() const throw();
  [Klassenübersicht](../../atl/atl-class-overview.md)   
  [Sicherheit, globale Funktionen](../../atl/reference/security-global-functions.md)   
  [Operatoren](../../atl/reference/atl-operators.md)
-

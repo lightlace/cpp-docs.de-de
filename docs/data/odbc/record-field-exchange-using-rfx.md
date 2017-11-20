@@ -1,56 +1,58 @@
 ---
-title: "Datensatzfeldaustausch: Verwenden von RFX | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RFX (ODBC), Implementieren"
+title: 'Datensatzfeldaustausch: Verwenden von RFX | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: RFX (ODBC), implementing
 ms.assetid: ada8f043-37e6-4d41-9db3-92c997a61957
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0a1a30b1643127f1451654f5bdaf3edfa56896bc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Datensatzfeldaustausch: Verwenden von RFX
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-In diesem Thema wird erläutert, was Sie tun müssen, um RFX zu verwenden, und welche Rolle das Framework dabei spielt.  
+# <a name="record-field-exchange-using-rfx"></a>Datensatzfeldaustausch: Verwenden von RFX
+In diesem Thema wird erläutert, was Sie tun, um RFX in Bezug auf, was bewirkt, dass das Framework verwenden.  
   
 > [!NOTE]
->  Dieses Thema bezieht sich auf von [CRecordset](../../mfc/reference/crecordset-class.md) abgeleitete Klassen, in denen der gesammelte Zeilenabruf nicht implementiert wurde.  Beim gesammelten Abrufen von Zeilen wird der Sammel\-Datensatzfeldaustausch \(Bulk\-RFX\) implementiert.  Der Bulk\-RFX ist mit RFX vergleichbar.  Unter [Recordset: Abrufen von Datensätzen in einer Sammeloperation \(ODBC\)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) werden die Unterschiede erläutert.  
+>  Dieses Thema bezieht sich auf von abgeleiteten Klassen [CRecordset](../../mfc/reference/crecordset-class.md) in denen der gesammelte Abrufen von Zeilen nicht implementiert wurde. Wenn Sie gesammelte verwenden, wird der Massen-Datensatzfeldaustausch (Bulk-RFX) implementiert. Bulk RFX ähnelt RFX. Um die Unterschiede zu verstehen, finden Sie unter [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Die folgenden Themen enthalten verwandte Informationen:  
+ Die folgenden Themen enthalten Informationen an:  
   
--   [Datensatzfeldaustausch: Arbeiten mit Assistenten\-Code](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md) enthält eine Einführung in die Hauptkomponenten von RFX sowie eine Erläuterung des Codes, den der MFC\-Anwendungs\-Assistent und **Klasse hinzufügen** \(wie unter [Hinzufügen eines MFC\-ODBC\-Consumers](../../mfc/reference/adding-an-mfc-odbc-consumer.md) beschrieben\) zur Unterstützung von RFX erstellen, und erläutert, wie der Assistentencode geändert werden kann.  
+-   [Datensatzfeldaustausch: Arbeiten mit Assistenten-Code](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md) führt die Hauptkomponenten von RFX und erklärt, den Code, der MFC-Anwendung-Assistent und **Klasse hinzufügen** (wie in beschrieben [Hinzufügen eines MFC-ODBC-Consumers ](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) schreiben, die zur Unterstützung von RFX und wie Sie den assistentencode ändern möchten.  
   
--   [Datensatzfeldaustausch: Verwenden der RFX\-Funktionen](../../data/odbc/record-field-exchange-using-the-rfx-functions.md) erläutert, wie Sie in der überschriebenen `DoFieldExchange`\-Version RFX\-Funktionen aufrufen.  
+-   [Datensatzfeldaustausch: Verwenden der RFX-Funktionen](../../data/odbc/record-field-exchange-using-the-rfx-functions.md) erläutert das Schreiben von Aufrufen der RFX-Funktionen in Ihrer `DoFieldExchange` außer Kraft setzen.  
   
- Die folgende Tabelle zeigt, welche Aufgaben von Ihnen durchgeführt werden müssen und welche vom Framework durchgeführt werden.  
+ Die folgende Tabelle zeigt die Rolle in Bezug auf die Frameworks.  
   
-### Verwenden von RFX: Interaktion mit dem Framework  
+### <a name="using-rfx-you-and-the-framework"></a>Verwenden von RFX: Sie und das Framework  
   
-|Benutzer|Framework|  
-|--------------|---------------|  
-|Sie deklarieren die Recordset\-Klassen mit einem Assistenten.  Sie geben die Namen und Datentypen der Felddatenmember an.|Der Assistent leitet eine `CRecordset`\-Klasse ab und fügt eine überschriebene Version von [DoFieldExchange](../Topic/CRecordset::DoFieldExchange.md) ein, die für jeden Felddatenmember einen RFX\-Funktionsaufruf enthält.|  
-|\(Optional\) Sie fügen der Klasse manuell die benötigten Parameterdatenmember hinzu.  Sie fügen manuell für jeden Parameterdatenmember einen RFX\-Funktionsaufruf für `DoFieldExchange` und für die Parametergruppe einen Aufruf für [CFieldExchange::SetFieldType](../Topic/CFieldExchange::SetFieldType.md) hinzu. Geben Sie danach die Gesamtzahl der Parameter in [m\_nParams](../Topic/CRecordset::m_nParams.md) an.  Siehe [Recordset: Parametrisieren eines Recordsets \(ODBC\)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).||  
-|\(Optional\) Sie binden von Hand zusätzliche Spalten an Felddatenmember.  Sie erhöhen [m\_nFields](../Topic/CRecordset::m_nFields.md) manuell.  Siehe [Recordset: Dynamisches Binden von Datenspalten \(ODBC\)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).||  
-|Sie erstellen ein Objekt der Recordset\-Klasse.  Bevor Sie das Objekt verwenden, stellen Sie bei Bedarf die Werte der zugehörigen Parameterdatenmember ein.|Aus Effizienzgründen führt das Framework mithilfe von ODBC eine Vorbindung der Parameter durch.  Wenn Sie Parameterwerte übergeben, gibt das Framework diese an die Datenquelle weiter.  Bei Neuabfragen sendet das Framework lediglich die Parameterwerte, es sei denn, die Sortier\- und\/oder Filterzeichenfolgen hätten sich geändert.|  
-|Sie öffnen ein Recordset\-Objekt mit [CRecordset::Open](../Topic/CRecordset::Open.md).|Das Framework führt die Abfrage des Recordsets aus, bindet Spalten an Felddatenmember des Recordsets und ruft `DoFieldExchange` auf, um Daten zwischen dem ersten ausgewählten Datensatz und den Felddatenmembern des Recordsets zu übertragen.|  
-|Sie scrollen durch das Recordset mit [CRecordset::Move](../Topic/CRecordset::Move.md) oder über einen Menü\- oder Symbolleistenbefehl.|Ruft `DoFieldExchange` auf, um Daten aus dem neuen aktuellen Datensatz in die Felddatenmember zu übertragen.|  
-|Fügt Datensätze hinzu, aktualisiert oder löscht diese.|Das Framework ruft `DoFieldExchange` auf, um Daten zur Datenquelle zu übertragen.|  
+|Benutzer|Das Framework|  
+|---------|-------------------|  
+
+| Deklarieren Sie die Recordset-Klassen, mit einem Assistenten. Geben Sie Namen und Datentypen der Felddatenmember. | Der Assistent leitet ein `CRecordset` Klasse und schreibt eine [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) Außerkraftsetzung für Sie, einen RFX-Funktionsaufruf für jedes felddatenelement. |  
+| (Optional) Alle erforderlichen Parameterdatenmember manuell der Klasse hinzufügen. RFX-Funktion, manuell hinzufügen `DoFieldExchange` für jedes Datenelement Parameter fügen Sie einen Aufruf von [CFieldExchange::](../../mfc/reference/cfieldexchange-class.md#setfieldtype) für die Gruppe der Parameter, und geben Sie die Gesamtanzahl von Parametern in [M_nParams ](../../mfc/reference/crecordset-class.md#m_nparams). Finden Sie unter [Recordset: Parametrisieren eines Recordsets (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md). ||  
+| (Optional) Zusätzliche Spalten manuell Felddatenmembern zu binden. Inkrementiert manuell [M_nFields](../../mfc/reference/crecordset-class.md#m_nfields). Finden Sie unter [Recordset: Dynamisches Binden von Datenspalten (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md). ||  
+
+| Erstellen Sie ein Objekt der Recordset-Klasse. Vor der Verwendung des Objekts an, legen Sie die Werte des Parameters Datenmember, sofern vorhanden. | Aus Effizienzgründen Vorbindung die Parameter, die mithilfe von ODBC. Wenn Sie Parameterwerte übergeben, übergibt das Framework sie mit der Datenquelle an. Wenn die Sortierung und/oder die Filterung Zeichenfolgen geändert haben, werden nur die Parameterwerte für Neuabfragen, gesendet. |  
+| Öffnen Sie ein Recordset-Objekt mit [CRecordset](../../mfc/reference/crecordset-class.md#open). | Führt die Abfrage des Recordsets, bindet Spalten an Felddatenmember der Recordset und Aufrufe `DoFieldExchange` zum Austauschen von Daten zwischen dem ersten ausgewählten Datensatz und das Recordset-Felddatenmember. |  
+| Blättern Sie in den Recordset mithilfe [CRecordset](../../mfc/reference/crecordset-class.md#move) oder einen Befehl im Menü oder auf der Symbolleiste. | Aufrufe `DoFieldExchange` zur Datenübertragung an den Felddatenmembern aus der neuen aktuellen Datensatz. |  
+| Hinzufügen, aktualisieren und Löschen von Datensätzen. | Aufrufe `DoFieldExchange` zur Datenübertragung an die Datenquelle. |  
   
-## Siehe auch  
- [Datensatzfeldaustausch \(RFX\)](../../data/odbc/record-field-exchange-rfx.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Datensatzfeldaustausch (RFX)](../../data/odbc/record-field-exchange-rfx.md)   
  [Datensatzfeldaustausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)   
- [Recordset: Abrufen von Summen und anderen Aggregatergebnissen \(ODBC\)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)   
- [CRecordset Class](../../mfc/reference/crecordset-class.md)   
- [CFieldExchange Class](../../mfc/reference/cfieldexchange-class.md)   
- [Makros, globale Funktionen und globale Variablen](../Topic/Macros,%20Global%20Functions,%20and%20Global%20Variables.md)
+ [Recordset: Abrufen von Summen und anderen Aggregatergebnissen (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)   
+ [CRecordset-Klasse](../../mfc/reference/crecordset-class.md)   
+ [CDBException-Klasse](../../mfc/reference/cfieldexchange-class.md)   
+ [Makros, globale Funktionen und globale Variablen](../../mfc/reference/mfc-macros-and-globals.md)
+

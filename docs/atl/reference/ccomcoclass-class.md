@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,36 +14,20 @@ f1_keywords:
 - ATLCOM/ATL::CComCoClass::Error
 - ATLCOM/ATL::CComCoClass::GetObjectCLSID
 - ATLCOM/ATL::CComCoClass::GetObjectDescription
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CComCoClass class
 - aggregation [C++], aggregation models
 ms.assetid: 67cfefa4-8df9-47fa-ad58-2d1a1ae25762
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 967c919bb68890c51be6a0800db90692346e2b7d
-ms.contentlocale: de-de
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 966fe76858d24e47664667c043d88a953be91716
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomcoclass-class"></a>CComCoClass-Klasse
 Diese Klasse stellt Methoden zum Erstellen von Instanzen einer Klasse und ihre Eigenschaften abrufen.  
@@ -85,7 +68,7 @@ class CComCoClass
   
  Sie können diese Standardeinstellungen überschreiben, indem Sie ein anderes Makro in der Klasse angeben. Beispielsweise verwenden [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md) anstelle von `CComClassFactory`, geben Sie die [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2) Makro:  
   
- [!code-cpp[NVC_ATL_COM NR. 2](../../atl/codesnippet/cpp/ccomcoclass-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/ccomcoclass-class_1.h)]  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlcom.h  
@@ -112,7 +95,7 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
  [out] Die Adresse einer Zeigervariablen, die den angeforderten Schnittstellenzeiger empfängt, bei erfolgreicher Erstellung.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Standard `HRESULT` -Wert. Finden Sie unter [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] eine Beschreibung der möglichen Rückgabewerte.  
+ Ein Standard `HRESULT` -Wert. Finden Sie unter [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615) in das Windows SDK für eine Beschreibung der möglichen Rückgabewerte.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie die erste Überladung dieser Funktion für die typische objekterstellung; Verwenden Sie die zweite Überladung, wenn Sie benötigen, um das zu erstellende Objekt zu aggregieren.  
@@ -126,7 +109,7 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel `CDocument` ist eine vom Assistenten generierten ATL abgeleitete Klasse `CComCoClass` , implementiert die **IDocument** Schnittstelle. Die Klasse wird in der objektzuordnung mit registriert die `OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO` Makros, damit Instanzen des Dokuments mithilfe von Clients erstellt werden können [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615). `CApplication`ist eine Co-Klasse, die eine Methode auf einem eigenen COM-Schnittstellen zum Erstellen von Instanzen der Dokumentklasse bereitstellt. Der folgende Code zeigt, wie einfach es zum Erstellen von Instanzen der Klasse für das Dokument mit der `CreateInstance` Element geerbt wird, von der `CComCoClass` Basisklasse.  
   
- [!code-cpp[NVC_ATL_COM NR. 11](../../atl/codesnippet/cpp/ccomcoclass-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_COM#11](../../atl/codesnippet/cpp/ccomcoclass-class_2.cpp)]  
   
 ##  <a name="error"></a>CComCoClass::Error  
  Diese statische Funktion richtet die `IErrorInfo` Schnittstelle, um Informationen an den Client zu senden.  
@@ -224,7 +207,7 @@ static LPCTSTR WINAPI GetObjectDescription();
 ### <a name="remarks"></a>Hinweise  
  Gibt die standardmäßige Implementierung **NULL**. Sie können angeben, überschreiben diese Methode mit dem [DECLARE_OBJECT_DESCRIPTION](object-map-macros.md#declare_object_description) Makro. Zum Beispiel:  
   
- [!code-cpp[NVC_ATL_COM #12](../../atl/codesnippet/cpp/ccomcoclass-class_3.h)]  
+ [!code-cpp[NVC_ATL_COM#12](../../atl/codesnippet/cpp/ccomcoclass-class_3.h)]  
   
  `GetObjectDescription`wird aufgerufen, indem **IComponentRegistrar::GetComponents**. **IComponentRegistrar** ist eine Automatisierungsschnittstelle, mit der Sie beim Registrieren und Aufheben der einzelne Komponenten in einer DLL. Wenn Sie eine Komponente Registrierungsstelle-Objekt mit dem ATL-Projekt-Assistenten erstellen, wird der Assistent automatisch implementieren die **IComponentRegistrar** Schnittstelle. **IComponentRegistrar** wird meist von Microsoft Transaction Server verwendet.  
   
@@ -232,4 +215,3 @@ static LPCTSTR WINAPI GetObjectDescription();
   
 ## <a name="see-also"></a>Siehe auch  
  [Klassenübersicht](../../atl/atl-class-overview.md)
-

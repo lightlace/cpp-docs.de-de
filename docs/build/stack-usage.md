@@ -1,28 +1,28 @@
 ---
-title: "Verwendung von Stapeln | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Verwendung des Stapels | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 383f0072-0438-489f-8829-cca89582408c
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c7a74abff7a2971fe66fa2df878078ac95f58fe8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Verwendung von Stapeln
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Der gesamte Arbeitsspeicher jenseits der aktuellen Adresse von RSP wird als flüchtig angesehen: Das Betriebssystem oder ein Debugger können diesen Speicher während der Debugsitzung eines Benutzers oder eines Interrupthandlers überschreiben.  Daher muss RSP immer zuerst festgelegt werden, bevor Werte in einen Stapelrahmen geschrieben oder aus ihm gelesen werden können.  
+# <a name="stack-usage"></a>Verwendung von Stapeln
+Alle Speicher außerhalb der aktuellen Adresse des RSP gilt volatile: das Betriebssystem oder ein Debugger kann diesen Arbeitsspeicher während einer Debugsitzung für Benutzer oder ein nicht maskierbarer Interrupt überschreiben. Daher muss RSP immer festgelegt werden, bevor Sie versuchen, das Lesen und Schreiben von Werten in einen Stapelrahmen.  
   
- In diesem Abschnitt wird die Reservierung von Stapelspeicher für lokale Variablen und das systeminterne **alloca** erläutert.  
+ Dieser Abschnitt beschreibt die Zuordnung von Stapelspeicher für lokale Variablen und die **Alloca** systeminterne.  
   
 -   [Stapelreservierung](../build/stack-allocation.md)  
   
@@ -30,9 +30,9 @@ Der gesamte Arbeitsspeicher jenseits der aktuellen Adresse von RSP wird als flü
   
 -   [Funktionstypen](../build/function-types.md)  
   
--   [malloc\-Ausrichtung](../build/malloc-alignment.md)  
+-   [malloc-Ausrichtung](../build/malloc-alignment.md)  
   
 -   [alloca](../build/alloca.md)  
   
-## Siehe auch  
- [x64\-Softwarekonventionen](../build/x64-software-conventions.md)
+## <a name="see-also"></a>Siehe auch  
+ [x64-Softwarekonventionen](../build/x64-software-conventions.md)

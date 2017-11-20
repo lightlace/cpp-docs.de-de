@@ -1,34 +1,34 @@
 ---
-title: "operator ADDR | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ADDR"
-  - "operator ADDR"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ADDR operator"
-  - "operator ADDR"
+title: Operator ADDR | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ADDR
+- operator ADDR
+dev_langs: C++
+helpviewer_keywords:
+- ADDR operator
+- operator ADDR
 ms.assetid: 9c2a46e4-3222-4a5b-baa2-07bdb62b7d03
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 750bddad34885de6cdc89344c15a27ae762a9b5e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# operator ADDR
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Zeigen Sie die [AUFRUF](../../assembler/masm/invoke.md)\-Direktive.  
+# <a name="operator-addr"></a>Operator ADDR
+Finden Sie unter der [INVOKE](../../assembler/masm/invoke.md) Richtlinie.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -36,5 +36,5 @@ ADDR
   
 ```  
   
-## Siehe auch  
- [Operators Reference](../../assembler/masm/operators-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Operatoren – Referenz](../../assembler/masm/operators-reference.md)

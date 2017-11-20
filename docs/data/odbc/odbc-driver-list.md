@@ -1,46 +1,46 @@
 ---
-title: "Liste der ODBC-Treiber | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Treiber, ODBC"
-  - "ODBC-Treiber"
-  - "ODBC-Treiber, Liste"
+title: Liste der ODBC-Treiber | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC drivers
+- ODBC drivers, list of
+- drivers, ODBC
 ms.assetid: 4e12c832-39fe-44f7-9230-5c8d37203f11
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fc65d14e27574fead708ef9e67c543a3b6201643
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Liste der ODBC-Treiber
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Visual C\+\+ stellt für folgende Datenbanken ODBC\-Treiber zur Verfügung:  
+# <a name="odbc-driver-list"></a>Liste der ODBC-Treiber
+Visual C++ bietet ODBC-Treiber für die folgenden Datenbanken:  
   
--   SQL Server  
+-   SQL Server  
   
--   Microsoft Access  
+-   Microsoft Access  
   
--   Microsoft Excel  
+-   Microsoft Excel  
   
--   dBASE  
+-   DBASE  
   
 -   Paradox  
   
--   Microsoft Oracle ODBC  
+-   Microsoft Oracle ODBC  
   
 -   Textdateien  
   
- Informationen über ODBC\-Treiber, die von Microsoft oder anderen Herstellern erhältlich sind \(z. B. ODBC Driver Pack\) erhalten Sie vom Microsoft\-Produktsupport.  
+ Informationen zum ODBC-Treiber von Microsoft und anderen Unternehmen, einschließlich des ODBC-Treiber-Packs wenden Sie sich an Microsoft Product Support Services.  
   
-## Siehe auch  
- [Open Database Connectivity \(ODBC\)](../../data/odbc/open-database-connectivity-odbc.md)
+## <a name="see-also"></a>Siehe auch  
+ [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

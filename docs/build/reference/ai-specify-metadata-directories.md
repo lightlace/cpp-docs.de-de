@@ -1,62 +1,62 @@
 ---
-title: "/AI (Metadatenverzeichnisse festlegen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.AdditionalUsingDirectories"
-  - "VC.Project.VCNMakeTool.AssemblySearchPath"
-  - "/AI"
-  - "VC.Project.VCCLWCECompilerTool.AdditionalUsingDirectories"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/AI (Compileroption) [C++]"
-  - "AI (Compileroption) [C++]"
-  - "-AI (Compileroption) [C++]"
+title: -AI (Metadatenverzeichnisse) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.AdditionalUsingDirectories
+- VC.Project.VCNMakeTool.AssemblySearchPath
+- /AI
+- VC.Project.VCCLWCECompilerTool.AdditionalUsingDirectories
+dev_langs: C++
+helpviewer_keywords:
+- /AI compiler option [C++]
+- AI compiler option [C++]
+- -AI compiler option [C++]
 ms.assetid: fb9c1846-504c-4a3b-bb39-c8696de32f6f
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 74f8b429d920a070df01e69deab4e570afb6dd72
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# /AI (Metadatenverzeichnisse festlegen)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Gibt ein Verzeichnis an, das der Compiler durchsucht, um Dateiverweise aufzulösen, die an die `#using`\-Direktive übergeben wurden.  
+# <a name="ai-specify-metadata-directories"></a>/AI (Metadatenverzeichnisse festlegen)
+Gibt ein Verzeichnis an, das der Compiler durchsucht, um Dateiverweise aufzulösen, die an die `#using`-Direktive übergeben wurden.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /AIdirectory  
 ```  
   
-## Argumente  
+## <a name="arguments"></a>Argumente  
  `directory`  
  Das Verzeichnis oder der Pfad, den der Compiler durchsuchen soll.  
   
-## Hinweise  
- Es kann nur ein Verzeichnis an einen **\/AI**\-Aufruf übergeben werden.  Geben Sie eine **\/AI**\-Option für jeden Pfad an, den der Compiler durchsuchen soll.  Wenn Sie beispielsweise dem Compilersuchpfad für `#using`\-Direktiven sowohl C:\\Project\\Meta als auch C:\\Common\\Meta hinzufügen möchten, fügen Sie zur Befehlszeile des Compilers `/AI"C:\Project\Meta" /AI"C:\Common\Meta"` hinzu oder fügen Sie die beiden Verzeichnisse zur Eigenschaft **Zusätzliche \#using\-Verweise** in Visual Studio hinzu.  
+## <a name="remarks"></a>Hinweise  
+ Nur ein Verzeichnis übergeben werden kann, um eine **/AI** aufrufen. Geben Sie einen **/AI** -Option für jeden Pfad, den der Compiler durchsuchen soll. Um beispielsweise dem compilersuchpfad für sowohl C:\Project\Meta als auch C:\Common\Meta hinzufügen `#using` Direktiven hinzufügen `/AI"C:\Project\Meta" /AI"C:\Common\Meta"` an der Befehlszeile des Compilers oder jedes Verzeichnis zum Hinzufügen der **zusätzliche #using Verzeichnisse** die Eigenschaft in Visual Studio.  
   
-### So legen Sie diese Compileroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Gewusst wie: Öffnen von Projekteigenschaftenseiten](../../misc/how-to-open-project-property-pages.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Wählen Sie im Navigationsbereich **Konfigurationseigenschaften**, **C\/C\+\+**, **Allgemein** aus.  
+2.  Wählen Sie im Navigationsbereich **Konfigurationseigenschaften**, **C/C++-**, **allgemeine**.  
   
-3.  Bearbeiten Sie die Eigenschaft **Zusätzliche \#using\-Verweise**.  
+3.  Ändern der **zusätzliche #using Verzeichnisse** Eigenschaft.  
   
-### So legen Sie diese Compileroption programmgesteuert fest  
+### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
   
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalUsingDirectories*>.  
+-   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalUsingDirectories%2A>.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Compileroptionen](../../build/reference/compiler-options.md)   
  [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)   
- [\#using\-Direktive](../../preprocessor/hash-using-directive-cpp.md)
+ [#using-Direktive](../../preprocessor/hash-using-directive-cpp.md)

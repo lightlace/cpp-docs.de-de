@@ -1,36 +1,35 @@
 ---
-title: "hash_multiset (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<cliext/hash_set>-Header [STL/CLR]"
-  - "<hash_set>-Header [STL/CLR]"
-  - "hash_multiset-Klasse [STL/CLR]"
+title: hash_multiset-Element (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset
+dev_langs: C++
+helpviewer_keywords:
+- <cliext/hash_set> header [STL/CLR]
+- hash_multiset class [STL/CLR]
+- <hash_set> header [STL/CLR]
 ms.assetid: 8462bd21-6829-4dd3-ac81-c42d6fdf92f0
-caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8b98e8d858c154e344320c759ac4a38c1cf78cbf
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multiset (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die Vorlagenklasse beschreibt ein Objekt, das eine VARYINGLängen\-Folge von Elementen steuert, die bidirektionalen Zugriff hat.  Mit dem Container `hash_multiset`, um eine Sequenz von Elementen als Hashtabelle, jedes Tabellenelement eine bidirektionale verknüpfte Liste von Knoten Speichern, und jeden Knoten zu verwalten ein Element Speichern.  Der Wert jedes Elements ist als Schlüssel, für Sortierungen der Sequenz verwendet.  
+# <a name="hashmultiset-stlclr"></a>hash_multiset (STL/CLR)
+Die Vorlagenklasse beschreibt ein Objekt, das eine Elementsequenz variabler Länge steuert, die bidirektionalen Zugriff hat. Verwenden Sie den Container `hash_multiset` zum Verwalten einer Sequenz von Elementen als Hashtabelle verknüpft jeder Tabelleneintrag speichern eine bidirektionale Liste der Knoten, und jeder Knoten ein Element speichern kann. Der Wert jedes Element wird als Schlüssel für die Anordnung der Sequenz verwendet.  
   
- In der unten stehenden Beschreibung, `GValue` ist das `GKey` identisch, das wiederum das `Key` identisch ist, es sei denn, das zweite ein Referenz\-Typ ist, in diesem Fall `Key^` dar.  
+ In der folgenden Beschreibung `GValue` ist identisch mit `GKey`, die wiederum ist identisch mit `Key` , wenn die zweite Datei einen Ref-Typ ist, in diesem Fall wird `Key^`.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<typename Key>  
@@ -46,119 +45,119 @@ template<typename Key>
     { ..... };  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  Key  
- Der Typ der Schlüsselkomponente eines Elements in der kontrollierten Sequenz.  
+ Der Typ, der die zentrale Komponente eines Elements in der kontrollierten Sequenz.  
   
-## Member  
+## <a name="members"></a>Mitglieder  
   
-|Typdefinition|**Beschreibung**|  
-|-------------------|----------------------|  
-|[hash\_multiset::const\_iterator](../dotnet/hash-multiset-const-iterator-stl-clr.md)|Der Typ eines konstanten Iterators für die gesteuerte Sequenz.|  
-|[hash\_multiset::const\_reference](../dotnet/hash-multiset-const-reference-stl-clr.md)|Der Typ eines konstanten Verweises auf ein Element.|  
-|[hash\_multiset::const\_reverse\_iterator](../dotnet/hash-multiset-const-reverse-iterator-stl-clr.md)|Der Typ eines konstanten umgekehrten Iterators für die gesteuerte Sequenz.|  
-|[hash\_multiset::difference\_type](../dotnet/hash-multiset-difference-type-stl-clr.md)|Der Typ der Abstand eine \(möglicherweise mit Vorzeichen\) zwischen zwei Elementen.|  
-|[hash\_multiset::generic\_container](../dotnet/hash-multiset-generic-container-stl-clr.md)|Der Typ der generischen Schnittstelle für den Container.|  
-|[hash\_multiset::generic\_iterator](../dotnet/hash-multiset-generic-iterator-stl-clr.md)|Der Typ eines Iterators für die generische Schnittstelle für den Container.|  
-|[hash\_multiset::generic\_reverse\_iterator](../dotnet/hash-multiset-generic-reverse-iterator-stl-clr.md)|Der Typ eines umgekehrten Iterators für die generische Schnittstelle für den Container.|  
-|[hash\_multiset::generic\_value](../dotnet/hash-multiset-generic-value-stl-clr.md)|Der Typ des Elements für die generische Schnittstelle für den Container.|  
-|[hash\_multiset::hasher](../dotnet/hash-multiset-hasher-stl-clr.md)|Der Hashverfahrensdelegat für einen Schlüssel.|  
-|[hash\_multiset::iterator](../dotnet/hash-multiset-iterator-stl-clr.md)|Der Typ eines Iterators für die gesteuerte Sequenz.|  
-|[hash\_multiset::key\_compare](../dotnet/hash-multiset-key-compare-stl-clr.md)|Der Reihenfolgendelegat für zwei Schlüssel.|  
-|[hash\_multiset::key\_type](../dotnet/hash-multiset-key-type-stl-clr.md)|Der Typ eines Sortierschlüssels.|  
-|[hash\_multiset::reference](../dotnet/hash-multiset-reference-stl-clr.md)|Der Typ eines Verweises auf ein Element.|  
-|[hash\_multiset::reverse\_iterator](../dotnet/hash-multiset-reverse-iterator-stl-clr.md)|Der Typ eines umgekehrten Iterators für die gesteuerte Sequenz.|  
-|[hash\_multiset::size\_type](../dotnet/hash-multiset-size-type-stl-clr.md)|Der Typ \(nicht negative a\) Abstands zwischen zwei Elementen.|  
-|[hash\_multiset::value\_compare](../dotnet/hash-multiset-value-compare-stl-clr.md)|Der Reihenfolgendelegat für zwei Elementwerte.|  
-|[hash\_multiset::value\_type](../dotnet/hash-multiset-value-type-stl-clr.md)|Der Typ eines Elements.|  
+|Typdefinition|Beschreibung|  
+|---------------------|-----------------|  
+|[hash_multiset::const_iterator (STL/CLR)](../dotnet/hash-multiset-const-iterator-stl-clr.md)|Der Typ eines konstanten Iterators für die gesteuerte Sequenz.|  
+|[hash_multiset::const_reference (STL/CLR)](../dotnet/hash-multiset-const-reference-stl-clr.md)|Der Typ eines konstanten Verweises auf ein Element.|  
+|[hash_multiset::const_reverse_iterator (STL/CLR)](../dotnet/hash-multiset-const-reverse-iterator-stl-clr.md)|Der Typ eines konstanten umgekehrten Iterators für die gesteuerte Sequenz.|  
+|[hash_multiset::difference_type (STL/CLR)](../dotnet/hash-multiset-difference-type-stl-clr.md)|Der Typ des Abstands zwischen zwei Elementen (möglicherweise mit Vorzeichen).|  
+|[hash_multiset::generic_container (STL/CLR)](../dotnet/hash-multiset-generic-container-stl-clr.md)|Der Typ der generischen Schnittstelle für den Container.|  
+|[hash_multiset::generic_iterator (STL/CLR)](../dotnet/hash-multiset-generic-iterator-stl-clr.md)|Der Typ eines Iterators für die generische Schnittstelle für den Container.|  
+|[hash_multiset::generic_reverse_iterator (STL/CLR)](../dotnet/hash-multiset-generic-reverse-iterator-stl-clr.md)|Der Typ eines umgekehrten Iterators für die generische Schnittstelle für den Container.|  
+|[hash_multiset::generic_value (STL/CLR)](../dotnet/hash-multiset-generic-value-stl-clr.md)|Der Typ eines Elements für die generische Schnittstelle für den Container.|  
+|[hash_multiset::hasher (STL/CLR)](../dotnet/hash-multiset-hasher-stl-clr.md)|Der Hashalgorithmus Delegat für einen Schlüssel.|  
+|[hash_multiset::iterator (STL/CLR)](../dotnet/hash-multiset-iterator-stl-clr.md)|Der Typ eines Iterators für die gesteuerte Sequenz.|  
+|[hash_multiset::key_compare (STL/CLR)](../dotnet/hash-multiset-key-compare-stl-clr.md)|Der Delegat für zwei Schlüssel.|  
+|[hash_multiset::key_type (STL/CLR)](../dotnet/hash-multiset-key-type-stl-clr.md)|Der Typ eines Sortierschlüssels.|  
+|[hash_multiset::reference (STL/CLR)](../dotnet/hash-multiset-reference-stl-clr.md)|Der Typ eines Verweises auf ein Element.|  
+|[hash_multiset::reverse_iterator (STL/CLR)](../dotnet/hash-multiset-reverse-iterator-stl-clr.md)|Der Typ eines umgekehrten Iterators für die gesteuerte Sequenz.|  
+|[hash_multiset::size_type (STL/CLR)](../dotnet/hash-multiset-size-type-stl-clr.md)|Der Typ eines Abstands zwischen zwei Elementen (negativ).|  
+|[hash_multiset::value_compare (STL/CLR)](../dotnet/hash-multiset-value-compare-stl-clr.md)|Der Delegat für zwei Elementwerte.|  
+|[hash_multiset::value_type (STL/CLR)](../dotnet/hash-multiset-value-type-stl-clr.md)|Der Typ eines Elements.|  
   
-|Memberfunktion|**Beschreibung**|  
-|--------------------|----------------------|  
-|[hash\_multiset::begin](../dotnet/hash-multiset-begin-stl-clr.md)|Legt den Anfang der kontrollierten Sequenz fest.|  
-|[hash\_multiset::bucket\_count](../dotnet/hash-multiset-bucket-count-stl-clr.md)|Zählt die Anzahl Buckets.|  
-|[hash\_multiset::clear](../dotnet/hash-multiset-clear-stl-clr.md)|Entfernt alle Elemente.|  
-|[hash\_multiset::count](../dotnet/hash-multiset-count-stl-clr.md)|Zählt die Elemente, die einen angegebenen Schlüssel übereinstimmen.|  
-|[hash\_multiset::empty](../dotnet/hash-multiset-empty-stl-clr.md)|Testet, dass keine Elemente vorhanden sind.|  
-|[hash\_multiset::end](../dotnet/hash-multiset-end-stl-clr.md)|Legt das Ende der kontrollierten Sequenz fest.|  
-|[hash\_multiset::equal\_range](../dotnet/hash-multiset-equal-range-stl-clr.md)|Suchen reichen die mit einem bestimmten Schlüssel.|  
-|[hash\_multiset::erase](../dotnet/hash-multiset-erase-stl-clr.md)|Entfernt Elemente an den angegebenen Positionen.|  
-|[hash\_multiset::find](../dotnet/hash-multiset-find-stl-clr.md)|Sucht ein Element, der einem angegebenen Schlüssel entspricht.|  
-|[hash\_multiset::hash\_delegate](../dotnet/hash-multiset-hash-delegate-stl-clr.md)|Kopiert den Hashverfahrensdelegaten für einen Schlüssel.|  
-|[hash\_multiset::hash\_multiset](../dotnet/hash-multiset-hash-multiset-stl-clr.md)|Erstellt ein container\-Objekt.|  
-|[hash\_multiset::insert](../dotnet/hash-multiset-insert-stl-clr.md)|Fügt Elemente hinzu.|  
-|[hash\_multiset::key\_comp](../dotnet/hash-multiset-key-comp-stl-clr.md)|Kopiert den Reihenfolgendelegaten für zwei Schlüssel.|  
-|[hash\_multiset::load\_factor](../dotnet/hash-multiset-load-factor-stl-clr.md)|Zählt die durchschnittliche Anzahl Elemente pro Bucket.|  
-|[hash\_multiset::lower\_bound](../dotnet/hash-multiset-lower-bound-stl-clr.md)|Sucht Anfang des Bereichs, der einen angegebenen Schlüssel entspricht.|  
-|[hash\_multiset::make\_value](../dotnet/hash-multiset-make-value-stl-clr.md)|Erstellt ein Wertobjekt.|  
-|[hash\_multiset::max\_load\_factor](../dotnet/hash-multiset-max-load-factor-stl-clr.md)|Ruft die maximale Elemente pro Bucket fest.|  
-|[hash\_multiset::rbegin](../dotnet/hash-multiset-rbegin-stl-clr.md)|Legt den Anfang der umgekehrten kontrollierten Sequenz fest.|  
-|[hash\_multiset::rehash](../dotnet/hash-multiset-rehash-stl-clr.md)|Erstellt die Hashtabelle neu.|  
-|[hash\_multiset::rend](../dotnet/hash-multiset-rend-stl-clr.md)|Legt das Ende der umgekehrten kontrollierten Sequenz fest.|  
-|[hash\_multiset::size](../dotnet/hash-multiset-size-stl-clr.md)|Ermittelt die Anzahl der Elemente.|  
-|[hash\_multiset::swap](../dotnet/hash-multiset-swap-stl-clr.md)|Vertauscht den Inhalt von zwei Containern.|  
-|[hash\_multiset::to\_array](../dotnet/hash-multiset-to-array-stl-clr.md)|Kopiert die gesteuerte Sequenz zu einem neuen Array.|  
-|[hash\_multiset::upper\_bound](../dotnet/hash-multiset-upper-bound-stl-clr.md)|Suchenende des Bereichs, der einen angegebenen Schlüssel entspricht.|  
-|[hash\_multiset::value\_comp](../dotnet/hash-multiset-value-comp-stl-clr.md)|Kopiert den Reihenfolgendelegaten für zwei Elementwerte.|  
+|Memberfunktion|Beschreibung|  
+|---------------------|-----------------|  
+|[hash_multiset::begin (STL/CLR)](../dotnet/hash-multiset-begin-stl-clr.md)|Legt den Anfang der kontrollierten Sequenz fest.|  
+|[hash_multiset::bucket_count (STL/CLR)](../dotnet/hash-multiset-bucket-count-stl-clr.md)|Zählt die Anzahl der Buckets an.|  
+|[hash_multiset::clear (STL/CLR)](../dotnet/hash-multiset-clear-stl-clr.md)|Entfernt alle Elemente.|  
+|[hash_multiset::count (STL/CLR)](../dotnet/hash-multiset-count-stl-clr.md)|Zählt die Elemente, die einem angegebenen Schlüssel entsprechen.|  
+|[hash_multiset::empty (STL/CLR)](../dotnet/hash-multiset-empty-stl-clr.md)|Testet, ob keine Elemente vorhanden sind.|  
+|[hash_multiset::end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)|Legt das Ende der kontrollierten Sequenz fest.|  
+|[hash_multiset::equal_range (STL/CLR)](../dotnet/hash-multiset-equal-range-stl-clr.md)|Sucht den Bereich, der einem angegebenen Schlüssel entspricht.|  
+|[hash_multiset::erase (STL/CLR)](../dotnet/hash-multiset-erase-stl-clr.md)|Entfernt Elemente an den angegebenen Positionen.|  
+|[hash_multiset::find (STL/CLR)](../dotnet/hash-multiset-find-stl-clr.md)|Sucht ein Element, das einem angegebenen Schlüssel entspricht.|  
+|[hash_multiset::hash_delegate (STL/CLR)](../dotnet/hash-multiset-hash-delegate-stl-clr.md)|Kopiert den hashing Delegaten für einen Schlüssel an.|  
+|[hash_multiset::hash_multiset (STL/CLR)](../dotnet/hash-multiset-hash-multiset-stl-clr.md)|Erstellt ein container-Objekt.|  
+|[hash_multiset::insert (STL/CLR)](../dotnet/hash-multiset-insert-stl-clr.md)|Fügt Elemente hinzu.|  
+|[hash_multiset::key_comp (STL/CLR)](../dotnet/hash-multiset-key-comp-stl-clr.md)|Kopiert der Delegat für zwei Schlüssel.|  
+|[hash_multiset::load_factor (STL/CLR)](../dotnet/hash-multiset-load-factor-stl-clr.md)|Zählt die durchschnittliche Anzahl von Elementen pro Bucket.|  
+|[hash_multiset::lower_bound (STL/CLR)](../dotnet/hash-multiset-lower-bound-stl-clr.md)|Sucht den Anfang des Bereichs, die einem angegebenen Schlüssel entspricht.|  
+|[hash_multiset::make_value (STL/CLR)](../dotnet/hash-multiset-make-value-stl-clr.md)|Erstellt ein Wertobjekt.|  
+|[hash_multiset::max_load_factor (STL/CLR)](../dotnet/hash-multiset-max-load-factor-stl-clr.md)|Ruft die maximale Anzahl von Elementen pro Bucket ab oder legt sie fest.|  
+|[hash_multiset::rbegin (STL/CLR)](../dotnet/hash-multiset-rbegin-stl-clr.md)|Legt den Anfang der umgekehrten kontrollierten Sequenz fest.|  
+|[hash_multiset::rehash (STL/CLR)](../dotnet/hash-multiset-rehash-stl-clr.md)|Erstellt die Hashtabelle neu.|  
+|[hash_multiset::rend (STL/CLR)](../dotnet/hash-multiset-rend-stl-clr.md)|Legt das Ende der umgekehrten kontrollierten Sequenz fest.|  
+|[hash_multiset::size (STL/CLR)](../dotnet/hash-multiset-size-stl-clr.md)|Ermittelt die Anzahl von Elementen.|  
+|[hash_multiset::swap (STL/CLR)](../dotnet/hash-multiset-swap-stl-clr.md)|Vertauscht den Inhalt von zwei Containern.|  
+|[hash_multiset::to_array (STL/CLR)](../dotnet/hash-multiset-to-array-stl-clr.md)|Kopiert die gesteuerte Sequenz in ein neues Array.|  
+|[hash_multiset::upper_bound (STL/CLR)](../dotnet/hash-multiset-upper-bound-stl-clr.md)|Sucht nach Ende des Bereichs, die einem angegebenen Schlüssel entspricht.|  
+|[hash_multiset::value_comp (STL/CLR)](../dotnet/hash-multiset-value-comp-stl-clr.md)|Der Delegat für zwei Elementwerte wird kopiert.|  
   
-|Operator|**Beschreibung**|  
-|--------------|----------------------|  
-|[hash\_multiset::operator\=](../dotnet/hash-multiset-operator-assign-stl-clr.md)|Ersetzt die gesteuerte Sequenz.|  
+|Operator|Beschreibung|  
+|--------------|-----------------|  
+|[hash_multiset::operator= (STL/CLR)](../dotnet/hash-multiset-operator-assign-stl-clr.md)|Ersetzt die kontrollierte Sequenz.|  
   
-## Schnittstellen  
+## <a name="interfaces"></a>Schnittstellen  
   
-|Schnittstelle|**Beschreibung**|  
-|-------------------|----------------------|  
-|<xref:System.ICloneable>|Ein Objekt duplizieren.|  
-|<xref:System.Collections.IEnumerable>|Sequenz durch Elemente.|  
-|<xref:System.Collections.ICollection>|Unbegrenztes Beibehalten Elementgruppe bei.|  
-|<xref:System.Collections.Generic.IEnumerable`1>|Sequenz von typisierten Elemente.|  
-|<xref:System.Collections.Generic.ICollection`1>|Unbegrenztes Beibehalten Gruppe typisierten Elemente bei.|  
-|IHashKey \<, Value\>|Warten Sie generischen Container.|  
+|Schnittstelle|Beschreibung|  
+|---------------|-----------------|  
+|<xref:System.ICloneable>|Duplizieren Sie ein Objekt.|  
+|<xref:System.Collections.IEnumerable>|Durch die Elemente der Sequenz.|  
+|<xref:System.Collections.ICollection>|Behalten Sie die Gruppe von Elementen.|  
+|<xref:System.Collections.Generic.IEnumerable%601>|Durch die Elemente der typisierte Sequenz.|  
+|<xref:System.Collections.Generic.ICollection%601>|Behalten Sie die Gruppe von typisierten Elementen.|  
+|IHash\<Schlüssel, Wert >|Verwalten von generischen Container.|  
   
-## Hinweise  
- Das Objekt belegt und gibt die Sequenz für Speicher frei, die er als einzelne Knoten in einer bidirektionalen verknüpften Liste steuert.  Um Zugriff zu beschleunigen, verwaltet das Objekt auch ein VARYINGLängen\-Array Zeiger in der Liste \(die Hashtabelle\) bei und effektiv verwaltet die ganze Liste als Sequenz von Unterlisten oder die Buckets.  Es werden Elemente in Bucket, den es Relevanz enthält, indem die Links zwischen Knoten ändert, nie ein, indem der Inhalt von einem Knoten zum anderen kopiert.  Das bedeutet, dass Sie Elemente beunruhigende ohne verbleibende Elemente frei einfügen und löschen können.  
+## <a name="remarks"></a>Hinweise  
+ Das Objekt weist und Speicherplatz für die Sequenz, die als einzelner Knoten in einer verknüpften Liste des bidirektionalen Steuersoftware frei. Um den Zugriff zu beschleunigen, gibt das Objekt auch ein variabler Länge Array von Zeigern in der Liste (die Hashtabelle), effektive Verwaltung der gesamten Liste als Sequenz von Unterlisten, verwaltet oder buckets. Er fügt Elemente in einem Bucket, die darin geordnete die Links zwischen Knoten sind, nie durch Kopieren den Inhalt eines Knotens zu einem anderen ändern. Bedeutet, dass Sie einfügen können, und Elemente beliebig ohne beunruhigende verbleibenden Elemente entfernen.  
   
- Das Objekt ordnet jeden Bucket, die steuert, indem ein gespeichertes Delegatobjekt des Typs [hash\_set::key\_compare](../dotnet/hash-set-key-compare-stl-clr.md).  Sie können dem gespeicherten Delegatobjekt angeben, wenn Sie das hash\_set erstellen; Wenn Sie kein Delegatobjekt angeben, gilt standardmäßig der Vergleich `operator<=(key_type, key_type)`.  
+ Das Objekt ordnet jedem Bucket Steuersoftware durch Aufrufen einer gespeicherten Delegatobjekt des Typs [hash_set:: key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md). Sie können das gespeicherte Delegatobjekt angeben, beim Erstellen von Hash_set; Wenn Sie keine Delegatobjekt angeben, wird der Standardwert ist der Vergleich `operator<=(key_type, key_type)`.  
   
- Sie greifen auf das gespeicherte Delegatobjekt zu, indem Sie die Memberfunktion [hash\_set::key\_comp](../dotnet/hash-set-key-comp-stl-clr.md)`()` aufrufen.  Ein solches Delegatobjekt muss entsprechende Reihenfolge zwischen Schlüsseln des Typs [hash\_set::key\_type](../dotnet/hash-set-key-type-stl-clr.md) definieren.  Das heißt, für alle zwei Schlüssel `X` und `Y`:  
+ Sie greifen auf das gespeicherte Delegatobjekt durch Aufrufen der Memberfunktion [hash_set:: key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)`()`. Solche ein Delegatobjekt muss die entsprechende Reihenfolge zwischen Schlüssel vom Typ definieren [hash_set:: KEY_TYPE (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md). Bedeutet, dass für zwei beliebige Tasten `X` und `Y`:  
   
- `key_comp()(X, Y)` gibt die gleichen Auswirkungen auf booleschen jeden Aufruf zurück.  
+ `key_comp()(X, Y)`Gibt der gleiche booleschen führen bei jedem Aufruf.  
   
- Wenn `key_comp()(X, Y) && key_comp()(Y, X)` true ist, werden `X` und `Y` gibt an, um übereinstimmende Reihenfolge zu haben.  
+ Wenn `key_comp()(X, Y) && key_comp()(Y, X)` ist "true", klicken Sie dann `X` und `Y` gelten als die entsprechende Reihenfolge aufweisen.  
   
- Jede Reihenfolgenregel, die wie `operator<=(key_type, key_type)`, `operator>=(key_type, key_type)` oder `operator==(key_type, key_type)` verhält, definiert eqivalent Reihenfolge.  
+ Jede Reihenfolge Regel, die sich wie verhält `operator<=(key_type, key_type)`, `operator>=(key_type, key_type)` oder `operator==(key_type, key_type)` Eqivalent Sortierung definiert.  
   
- Beachten Sie, dass der Container wird sichergestellt, dass nur Elemente, deren Schlüssel entsprechende Reihenfolge verfügen \(und die denselben Hashwert bilden ganzzahligen\), innerhalb eines Buckets aneinandergrenzen.  Im Gegensatz Vorlagenklasse [hash\_set](../dotnet/hash-set-stl-clr.md), benötigt ein Objekt der Vorlagenklasse `hash_multiset` nicht, dass Tasten für alle Elemente eindeutig sind. \(zwei oder mehrere Tasten können entsprechende Reihenfolge haben.\)  
+ Beachten Sie, dass der Container nur wird sichergestellt, dass Elemente, deren Schlüssel die entsprechende Reihenfolge aufweisen (und welche Hash auf den gleichen Wert für ganze Zahl) in einem Bucket nebeneinander angeordnet sind. Im Gegensatz zur Vorlagenklasse [Hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md), ein Objekt der Vorlagenklasse `hash_multiset` erfordert nicht, dass der Schlüssel für alle Elemente eindeutig sind. (Mindestens zwei Tasten können die entsprechende Reihenfolge aufweisen.)  
   
- Das Objekt bestimmt, den Bucket eine angegebene Reihenfolgentaste enthalten soll, indem er ein Delegatobjekt gespeichertes des Typs [hash\_set::hasher](../dotnet/hash-set-hasher-stl-clr.md).  Sie greifen auf das gespeicherte Objekt zu, indem Sie die Memberfunktion [hash\_set::hash\_delegate](../dotnet/hash-set-hash-delegate-stl-clr.md)`()` aufrufen, um einen ganzzahligen Wert zu erhalten, der vom Schlüsselwert abhängt.  Sie können dem gespeicherten Delegatobjekt angeben, wenn Sie das hash\_set erstellen; Wenn Sie kein Delegatobjekt angeben, ist der Standardwert die Funktion `System::Object::hash_value(key_type)`.  Das heißt, für beliebige Schlüssel `X` und `Y`:  
+ Das Objekt bestimmt, welche Bucket einen bestimmten Reihenfolge Schlüssel enthalten soll, durch den Aufruf einer gespeicherten Delegatobjekt des Typs [hash_set::hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md). Sie Zugriff auf diesem gespeicherten Objekt durch Aufrufen der Memberfunktion [hash_set::hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md) `()` um einen ganzzahligen Wert zu erhalten, die den Schlüsselwert abhängt. Sie können das gespeicherte Delegatobjekt angeben, beim Erstellen von Hash_set; Wenn Sie keine Delegatobjekt angeben, wird der Standardwert ist die Funktion `System::Object::hash_value(key_type)`. Bedeutet, dass für sämtliche Schlüssel `X` und `Y`:  
   
- `hash_delegate()(X)` gibt der ganzzahligen gleichen Auswirkungen auf jeden Aufruf zurück.  
+ `hash_delegate()(X)`Gibt den gleichen Ganzzahlergebnis bei jedem Aufruf zurück.  
   
- Wenn `X` und `Y` entsprechende Reihenfolge haben, sollte `hash_delegate()(X)` den ganzzahligen gleichen Ergebnis wie `hash_delegate()(Y)` zurückgeben.  
+ Wenn `X` und `Y` haben Sie die entsprechende Reihenfolge, klicken Sie dann `hash_delegate()(X)` sollte dasselbe Ergebnis als ganze Zahl zurückgeben `hash_delegate()(Y)`.  
   
- Jedes Element dient als Schlüssel und Wert.  Die Sequenz wird so dargestellt, die Ermittlung, Einfügen und Entfernen eines beliebigen Elements mit Operationen zulässt, das unabhängig von der Anzahl der Elemente in der Sequenz ist \(konstante Zeit\) \- mindestens im am von Situationen.  Außerdem ein Element Einfügen macht keine Iteratoren ungültig, und ein Element entfernen, Iteratoren ungültig macht nur die am entfernten Element zeigen.  
+ Jedes Element dient als Schlüssel und Wert. Die Sequenz wird so dargestellt, die ermöglicht Such-, Einfüge- und Entfernung eines beliebigen Elements mit einer Reihen von Vorgängen, die unabhängig von der Anzahl der Elemente in der Sequenz (Konstante Zeit)--mindestens das beste aus Fällen wird. Darüber hinaus führt das Einfügen eines Elements nicht dazu, dass Iteratoren ungültig werden, und durch das Entfernen eines Elements werden nur solche Iteratoren ungültig, die auf das entfernte Element gezeigt haben.  
   
- Wenn gehashte Werte jedoch nicht gleichmäßig verteilt werden kann degenerieren eine Hashtabelle.  Im Extrem \- für eine Hashfunktion, die immer den gleichen Wert zurückgibt \- Suche, Einfüge\- und \- Abrufvorgänge zur Anzahl der Elemente in der Sequenz proportional \(linear Zeit\).  Der Container ermittelt, eine angemessene Hashfunktion, eine Durchschnittbucketgröße und eine Hash\-Tabelle Größe \(Gesamtzahl Buckets\) auszuwählen, Sie können jedoch beliebige oder alle diese Optionen überschreiben.  Siehe, beispielsweise, die [hash\_set::max\_load\_factor](../dotnet/hash-set-max-load-factor-stl-clr.md) und [hash\_set::rehash](../dotnet/hash-set-rehash-stl-clr.md).  
+ Wenn die Hashwerte nicht gleichmäßig verteilt sind, kann jedoch eine Hashtabelle degenerierte. Im Extremfall – für eine Hashfunktion, die immer den gleichen Wert--zurückgibt werden Such-, Einfüge- und Entfernvorgänge proportional zur Anzahl der Elemente in der Sequenz (lineare Zeit). Der Container versucht wird, wählen Sie eine angemessene Hashfunktion, die mittlere Bucketgröße und Hashtabelle Größe (gesamte Anzahl der Buckets), aber Sie können einige oder alle diese Optionen außer Kraft setzen. Anzeigen, z. B. die Funktionen [hash_set::max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md) und [hash_set::rehash (STL/CLR)](../dotnet/hash-set-rehash-stl-clr.md).  
   
- Ein hash\_multiset unterstützt bidirektionale Iteratoren, dass Sie zu benachbarten Elementen werden kann, dass ein Iterator angegeben werden, der ein Element in der Sequenz gesteuerten festlegt.  Ein spezieller Hauptknoten entspricht dem Iterator, der durch [hash\_multiset::end](../dotnet/hash-multiset-end-stl-clr.md)`()` zurückgegeben wird.  Sie können diesen Iterator Dekrementieren, um das letzte Element der gesteuerten Sequenz erreicht, wenn vorhanden.  Sie können einen hash\_multiset Iterator erhöhen, um den Hauptknoten erreicht, und vergleicht er dann gleich `end()`.  Sie können jedoch den Iterator nicht möglich, der von `end()` zurückgegeben wird.  
+ Ein hash_multiset-Element unterstützt bidirektionale Iteratoren, was bedeutet, dass Sie schrittweise können, um benachbarte Elemente, die einen Iterator, der ein Element in der kontrollierten Sequenz angegeben. Ein spezieller Hauptknoten entspricht vom zurückgegebenen Iterator [hash_multiset:: End (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`()`. Dieser Iterator für das letzte Element in der kontrollierten Sequenz erreichen können ggf. verringert werden. Sie können einen Hash_multiset-Iterator für den Hauptknoten erreichen erhöhen und wird dann Vergleichen gleich `end()`. Aber Sie können nicht dereferenziert werden vom zurückgegebenen Iterator `end()`.  
   
- Beachten Sie, dass Sie ein hash\_multiset Element zugreifen können, das direkt die numerische Position angegeben wird \- das erfordert einen Iterator mit wahlfreier Zugriff.  
+ Beachten Sie, dass Sie auf ein Hash_multiset-Element, das direkt erhält die numerische Position--, die einen Iterator mit zufälligem Zugriff erfordert verweisen können.  
   
- Ein hash\_multiset Iterator speichert ein Handle auf dem zugeordneten hash\_multiset Knoten, der wiederum ein Handle auf dem zugeordneten Container speichert.  Sie können Iteratoren nur mit ihren zugeordneten Containerobjekten verwenden.  Ein hash\_multiset Iterator bleibt gültig, solange der zugehörige hash\_multiset Knoten mit einigen hash\_multiset zugeordnet ist.  Darüber hinaus ist ein gültiger dereferencable Iterator \- Sie können ihn verwenden, um auf den Elementwert zuzugreifen oder zu ändern, der festlegt wird \- solange er nicht gleich `end()` ist.  
+ Ein Iterator hash_multiset-Objekt speichert ein Handle zum Knoten zugeordnete hash_multiset-Objekt, der wiederum ein Handle für den zugehörigen Container speichert. Sie können nur mit ihrer zugeordneten Containerobjekte Iteratoren verwenden. Ein Hash_multiset-Iterator bleibt gültig, solange die Knoten der zugeordneten Hash_multiset einige hash_multiset-Objekt zugeordnet ist. Darüber hinaus ein gültiger Iterator ist dereferencable – können sie Zugriff haben und den Elementwert, die er festlegt – ändern, solange er nicht gleich `end()`.  
   
- Ein Element Löschen oder entfernen, wird der Destruktor für den gespeicherten Wert auf.  Die Container Löschen eines Auflistungsobjekts, löscht alle Elemente.  Somit wird sichergestellt ein Container, dessen Elementtyp eine Verweisklasse, ist, dass keine Elemente den Container Beibehaltene Objekte.  Beachten Sie jedoch dem Container Handles `not` bewirkt, zerstören seine Elemente.  
+ Löschen oder Entfernen eines Elements ruft der Destruktor für den gespeicherten Wert. Zerstören von dem Container löscht alle Elemente. Somit wird sichergestellt, dass ein Container, dessen Elementtyp eine Verweisklasse ist, dass keine Elemente den Container Überleben. Beachten Sie jedoch, dass ein Container von Handles ist `not` seine Elemente zu zerstören.  
   
-## Anforderungen  
- **Header:** \<cliext\/hash\_set\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext Hash_set/>  
   
- **Namespace:** cliext  
+ **Namespace:** Cliext  
   
-## Siehe auch  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [map](../dotnet/map-stl-clr.md)   
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset](../dotnet/multiset-stl-clr.md)   
- [set](../dotnet/set-stl-clr.md)   
- [STL\/CLR\-Bibliothek](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [hash_map-Element (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_multiset-Element](../dotnet/hash-multiset-stl-clr.md)   
+ [Hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [Karte (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [Multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [Multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [Legen Sie (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [Referenz zur STL/CLR-Bibliothek](../dotnet/stl-clr-library-reference.md)

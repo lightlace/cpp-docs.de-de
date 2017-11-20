@@ -1,50 +1,50 @@
 ---
-title: "Specifying Property Pages | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ISpecifyPropertyPages"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ISpecifyPropertyPages method"
-  - "Eigenschaftenseiten, Angeben"
+title: Festlegen von Eigenschaftenseiten (ATL) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ISpecifyPropertyPages
+dev_langs: C++
+helpviewer_keywords:
+- ISpecifyPropertyPages method
+- property pages, specifying
 ms.assetid: ee8678cf-c708-49ab-b0ad-fc2db31f1ac3
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a4519bee0d1f9c5e433114f12a6568bde6b8c4fb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Specifying Property Pages
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Wenn Sie ein ActiveX\-Steuerelement erstellen, sollten Sie es häufig mit Eigenschaftenseiten zuordnen, die verwendet werden können, um die Eigenschaften des Steuerelements festzulegen.  Steuerelementcontainer verwenden die **ISpecifyPropertyPages**\-Schnittstelle, um zu ermitteln, die Eigenschaftenseiten verwendet werden können, um die Eigenschaften des Steuerelements festzulegen.  Sie müssen diese Schnittstelle im Steuerelement implementieren.  
+# <a name="specifying-property-pages"></a>Festlegen von Eigenschaftenseiten
+Wenn Sie ein ActiveX-Steuerelement erstellen, sollten Sie häufig mit Eigenschaftenseiten zuordnen, die zum Festlegen der Eigenschaften des Steuerelements verwendet werden können. Steuern der Verwendung von Containern die **ISpecifyPropertyPages** Schnittstelle, um herauszufinden, welche Eigenschaftenseiten zum Festlegen der Eigenschaften des Steuerelements verwendet werden können. Sie müssen diese Schnittstelle für das Steuerelement zu implementieren.  
   
- Um **ISpecifyPropertyPages** mit ATL zu implementieren, müssen Sie die folgenden Schritte:  
+ Implementiert **ISpecifyPropertyPages** mit ATL, gehen Sie folgendermaßen vor:  
   
-1.  Leiten Sie die Klasse von [ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md).  
+1.  Leiten Sie eine Klasse von [ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md).  
   
-2.  Fügen Sie einen Eintrag für **ISpecifyPropertyPages** der COM\-Zuordnung der Klasse hinzu.  
+2.  Fügen Sie einen Eintrag für **ISpecifyPropertyPages** Ihre Klasse COM-Zuordnung.  
   
-3.  Fügen Sie einen Eintrag [PROP\_PAGE](../Topic/PROP_PAGE.md) der Eigenschaftenzuordnung für jede Seite hinzu, die dem Steuerelement zugeordnet ist.  
+3.  Hinzufügen einer [PROP_PAGE](reference/property-map-macros.md#prop_page) Eintrag auf die eigenschaftszuordnung für jede Seite, die dem Steuerelement zugeordnet.  
   
 > [!NOTE]
->  Wenn Sie ein Standardsteuerelement mithilfe [ATL\-Steuerelement\-Assistent](../atl/reference/atl-control-wizard.md) generieren, müssen Sie nur die `PROP_PAGE` Einträge der Eigenschaftenzuordnung hinzufügen.  Der Assistent generiert den erforderlichen Code für die anderen Schritte.  
+>  Beim Generieren von einem Standardsteuerelement mithilfe der [ATL-Steuerelement-Assistent](../atl/reference/atl-control-wizard.md), Sie müssen nur hinzufügen der `PROP_PAGE` Einträge auf die eigenschaftszuordnung. Der Assistent generiert den erforderlichen Code für die anderen Schritte.  
   
- Gut konzipierte Container zeigen die angegebenen Eigenschaftenseiten in derselben Reihenfolge, die die `PROP_PAGE` Einträge in der Eigenschaft zuordnen.  Im Allgemeinen sollten Sie Standardeigenschaftenseiteneinträge nachdem die Einträge für Ihre benutzerdefinierten Seiten in die Eigenschaftenzuordnung einfügen, sodass die Seiten finden, die dem Steuerelement zuerst spezifisch sind.  
+ Gut konzipierte Container werden die angegebene Eigenschaftenseiten werden angezeigt, in der gleichen Reihenfolge wie die `PROP_PAGE` Einträge in der eigenschaftenzuordnung. Im Allgemeinen sollten Sie Standardeigenschaft seiteneinträge nach den Einträgen für Ihren benutzerdefinierten Seiten in der eigenschaftenzuordnung ablegen, sodass Benutzer auf das Steuerelement bestimmte Seiten zuerst angezeigt.  
   
-## Beispiel  
- Die folgende Klasse für ein Kalendersteuerelement verwendet die **ISpecifyPropertyPages**\-Schnittstelle, um Containern mitzuteilen, dass seine Eigenschaften mit einer benutzerdefinierten Datumsseite und der vordefinierten Farbenseite festgelegt werden können.  
+## <a name="example"></a>Beispiel  
+ Die folgende Klasse für einen Kalender steuern verwendet der **ISpecifyPropertyPages** Schnittstelle Container zu informieren, die die Eigenschaften mithilfe einer benutzerdefinierten Formatbezeichner für Datum und die vordefinierten Farbe Seite festgelegt werden können.  
   
- [!CODE [NVC_ATL_Windowing#72](../CodeSnippet/VS_Snippets_Cpp/NVC_ATL_Windowing#72)]  
+ [!code-cpp[NVC_ATL_Windowing#72](../atl/codesnippet/cpp/specifying-property-pages_1.h)]  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Eigenschaftenseiten](../atl/atl-com-property-pages.md)   
- [ATLPages\-Beispiel](../top/visual-cpp-samples.md)
+ [ATLPages-Beispiel](../visual-cpp-samples.md)
+

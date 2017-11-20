@@ -1,40 +1,40 @@
 ---
-title: "Suchpfade in Regeln | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Rückschlussregeln in NMAKE"
-  - "Regeln, Rückschluss"
-  - "Suchpfade in NMAKE-Rückschlussregeln"
+title: Suchpfade in Regeln | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- search paths in NMAKE inference rules
+- inference rules in NMAKE
+- rules, inference
 ms.assetid: 38feded6-536d-425d-bf40-fff3173a5506
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 808ec39bafd6ad5c7982f63055ba92fccff7a285
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Suchpfade in Regeln
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="search-paths-in-rules"></a>Suchpfade in Regeln
 ```  
 {frompath}.fromext{topath}.toext:  
    commands  
 ```  
   
-## Hinweise  
- Eine Rückschlussregel ist nur dann auf eine Abhängigkeit anwendbar, wenn die in der Abhängigkeit angegebenen Pfade genau mit den Pfaden der Rückschlussregel übereinstimmen.  Das Verzeichnis der abhängigen Datei wird in *frompath* und das Verzeichnis des Ziels in *topath* angegeben. Es sind keine Leerzeichen zulässig.  Nur ein Pfad pro Erweiterung soll angegeben werden.  Ein Pfad auf eine Erweiterung erfordert einen Pfad auf die andere Erweiterung.  Um das aktuelle Verzeichnis anzugeben, werden entweder ein Punkt \(.\) oder leere geschweifte Klammern \({ {\) verwendet.  Makros können *frompath* und *topath* repräsentieren; sie werden während des Präprozessorlaufs aufgerufen.  
+## <a name="remarks"></a>Hinweise  
+ Eine Rückschlussregel mithilfe eines gilt für eine Abhängigkeit nur dann, wenn genau in Abhängigkeit der angegebenen Pfade Rückschlussregel Pfade entsprechen. Geben Sie die abhängigen Verzeichnis in *Frompath* und das Zielverzeichnis im *Topath*; sind keine Leerzeichen zulässig. Geben Sie nur ein Pfad für jede Erweiterung ein. Ein Pfad auf eine Erweiterung muss einen Pfad auf dem anderen. Um das aktuelle Verzeichnis anzugeben, verwenden Sie einen Punkt (.) oder leere geschweifte Klammern ({}). Makros können repräsentieren *Frompath* und *Topath*; sie werden aufgerufen, während der vorverarbeitung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 {dbi\}.cpp{$(ODIR)}.obj::  
@@ -65,5 +65,5 @@ caps.handback.revision: 7
         $(CC) $(CFLAGS) $<  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Definieren einer Regel](../build/defining-a-rule.md)

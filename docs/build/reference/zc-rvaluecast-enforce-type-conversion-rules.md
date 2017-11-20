@@ -1,47 +1,47 @@
 ---
-title: "/Zc:rvalueCast (Typkonvertierungsregeln erzwingen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "rvaluecast"
-  - "/Zc:rvalueCast"
-  - "VC.Project.VCCLCompilerTool.EnforceTypeConversionRules"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Zc (Compileroptionen) [C++]"
-  - "Typkonvertierungsregeln erzwingen"
-  - "rvaluecast"
-  - "Zc (Compileroptionen) [C++]"
-  - "-Zc (Compileroptionen) [C++]"
+title: '-Zc: RvalueCast (typkonvertierungsregeln erzwingen) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- rvaluecast
+- /Zc:rvalueCast
+- VC.Project.VCCLCompilerTool.EnforceTypeConversionRules
+dev_langs: C++
+helpviewer_keywords:
+- -Zc compiler options (C++)
+- rvaluecast
+- Enforce type conversion rules
+- /Zc compiler options (C++)
+- Zc compiler options (C++)
 ms.assetid: 7825277d-e565-4c48-b0fb-76ac0b0c6e38
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 068d1e0e9061645729728c4d0a3c956e521948cc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# /Zc:rvalueCast (Typkonvertierungsregeln erzwingen)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Wenn die Option **\/Zc:rvalueCast** angegeben ist, identifiziert der Compiler ordnungsgemäß einen rvalue\-Verweistyp als Ergebnis eines Umwandlungsvorgangs entsprechend dem Standard C\+\+11.  Wenn diese Option nicht angegeben ist, entspricht das Compilerverhalten dem von Visual Studio 2012.  **\/Zc:rvalueCast** ist standardmäßig deaktiviert.  Zur Erhaltung der Konformität und um Fehler bei der Verwendung von Umwandlungen zu vermeiden, wird empfohlen, **\/Zc:rvalueCast** zu verwenden.  
+# <a name="zcrvaluecast-enforce-type-conversion-rules"></a>/Zc:rvalueCast (Typkonvertierungsregeln erzwingen)
+Wenn die **/Zc: rvaluecast** angegeben wird, identifiziert der Compiler ordnungsgemäß einen Rvalue-Verweistyp als Ergebnis eines Umwandlungsvorgangs entsprechend dem standard C ++ 11. Wenn diese Option nicht angegeben ist, entspricht das Compilerverhalten dem von Visual Studio 2012. Standardmäßig **/Zc: rvaluecast** ist deaktiviert. Für Konformität und um Fehler bei der Verwendung von Umwandlungen zu vermeiden, empfehlen wir die Verwendung **/Zc: rvaluecast**.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /Zc:rvalueCast[-]  
 ```  
   
-## Hinweise  
- Wenn **\/Zc:rvalueCast** angegeben wird, folgt der Compiler Abschnitt 5.4 des C\+\+11\-Standards und behandelt nur Umwandlungsausdrücke als rvalue\-Typen, die zu Typen ohne Verweis führen sowie Umwandlungsausdrücke, die zu rvalue\-Verweisen zu Nichtfunktionstypen führen.  Standardmäßig oder wenn **\/Zc:rvalueCast\-** angegeben wird, ist der Compiler nicht konform und behandelt alle Umwandlungsausdrücke, die zu rvalue\-Verweisen führen, als rvalues.  
+## <a name="remarks"></a>Hinweise  
+ Wenn **/Zc: rvaluecast** angegeben wird, folgt der Compiler Abschnitt 5.4 des standard C ++ 11 und behandelt nur Umwandlungsausdrücke, die in Typen ohne Verweis führen sowie Umwandlungsausdrücke, die zu Rvalue-verweisen zu nichtfunktionstypen führen als Rvalue-Typen. Standardmäßig oder wenn **/Zc:rvalueCast-** angegeben wird, der Compiler nicht konform und behandelt alle Umwandlungsausdrücke, die zu Rvalue-Verweise als Rvalues führen.  
   
- Verwenden Sie **\/Zc:rvalueCast**, wenn Sie einen Umwandlungsausdruck als Argument an eine Funktion übergeben, die einen rvalu\-Verweistyp akzeptiert.  Das Standardverhalten verursacht Compilerfehler [C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md), wenn der Compiler fälschlicherweise den Typ des Umwandlungsausdrucks bestimmt.  Dieses Beispiel demonstriert einen Compilerfehler im korrekten Code, wenn "\/Zc:rvalueCast" nicht angegeben ist:  
+ Verwendung **/Zc: rvaluecast** , wenn Sie einen Umwandlungsausdruck als Argument an eine Funktion übergeben, die einen Rvalue-Verweistyp akzeptiert. Das Standardverhalten verursacht Compilerfehler [C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) Wenn der Compiler fälschlicherweise den Typ des Umwandlungsausdrucks bestimmt. Dieses Beispiel demonstriert einen Compilerfehler im korrekten Code, wenn "/Zc:rvalueCast" nicht angegeben ist:  
   
 ```cpp  
 // Test of /Zc:rvalueCast  
@@ -80,7 +80,7 @@ struct Test1 {
   
 ```  
   
- Das standardmäßige Compilerverhalten meldet möglicherweise keinen Fehler C2102, wenn dies angemessen ist.  In diesem Beispiel meldet der Compiler keinen Fehler, wenn die Adresse eines durch Identitätsumwandlung erstellten rvalue verwendet wird, wenn **\/Zc:rvalueCast** nicht angegeben ist:  
+ Das standardmäßige Compilerverhalten meldet möglicherweise keinen Fehler C2102, wenn dies angemessen ist. In diesem Beispiel wird der Compiler meldet keine Fehler ab, wenn die Adresse des durch eine Identität umgewandelt identitätsumwandlung erstellten Rvalue verwendet wird **/Zc: rvaluecast** nicht angegeben wird:  
   
 ```cpp  
 int main() {  
@@ -91,17 +91,17 @@ int main() {
 }  
 ```  
   
- Weitere Informationen über Konformitätsprobleme in Visual C\+\+ finden Sie unter [Nicht dem Standard entsprechendes Verhalten](../../cpp/nonstandard-behavior.md).  
+ Weitere Informationen über Konformitätsprobleme in Visual C++ finden Sie unter [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).  
   
-### So legen Sie diese Compileroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Wählen Sie den Ordner **C\/C\+\+** aus.  
+2.  Wählen Sie die **C/C++-** Ordner.  
   
-3.  Wählen Sie die Eigenschaftenseite **Befehlszeile** aus.  
+3.  Wählen Sie die **Befehlszeile** Eigenschaftenseite.  
   
-4.  Ändern Sie die Eigenschaft **Zusätzliche Optionen**, damit sie **\/Zc:rvalueCast** einschließt, und wählen Sie dann **OK** aus.  
+4.  Ändern der **Zusatzoptionen** Eigenschaft einschließen **/Zc: rvaluecast** und wählen Sie dann **OK**.  
   
-## Siehe auch  
- [\/Zc \(Übereinstimmung\)](../../build/reference/zc-conformance.md)
+## <a name="see-also"></a>Siehe auch  
+ [/ Zc (Übereinstimmung)](../../build/reference/zc-conformance.md)

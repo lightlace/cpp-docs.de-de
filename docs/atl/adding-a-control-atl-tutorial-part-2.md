@@ -1,94 +1,94 @@
 ---
-title: "Hinzuf&#252;gen eines Steuerelements (ATL-Lernprogramm, Teil 2) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
+title: "Hinzufügen eines Steuerelements (ATL-Lernprogramm, Teil 2) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
 ms.assetid: c9575a75-1064-41f1-9697-7aada560c669
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8802dc25400b96d70bfaec65cd88f68db7650023
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Hinzuf&#252;gen eines Steuerelements (ATL-Lernprogramm, Teil 2)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="adding-a-control-atl-tutorial-part-2"></a>Hinzufügen eines Steuerelements (ATL-Lernprogramm, Teil 2)
 In diesem Schritt fügen Sie Ihrem Projekt ein Steuerelement hinzu, erstellen es und testen es auf einer Webseite.  
   
-## Prozeduren  
+## <a name="procedures"></a>Verfahren  
   
-#### So fügen Sie einem ATL\-Projekt ein Objekt hinzu  
+#### <a name="to-add-an-object-to-an-atl-project"></a>So fügen Sie einem ATL-Projekt ein Objekt hinzu  
   
 1.  Klicken Sie in der Klassenansicht mit der rechten Maustaste auf das Projekt "Polygon".  
   
-2.  Zeigen Sie auf **Hinzufügen** im Kontextmenü, und klicken Sie im Untermenü auf **Klasse**.  
+2.  Zeigen Sie auf **hinzufügen** auf das Kontextmenü, und klicken Sie auf **Klasse** im Untermenü.  
   
-     Das Dialogfeld **Klasse hinzufügen** wird angezeigt.  Die verschiedenen Objektkategorien werden in der Baumstruktur links aufgeführt.  
+     Die **Klasse hinzufügen** Dialogfeld wird angezeigt. Die verschiedenen Objektkategorien werden in der Struktur links aufgeführt.  
   
-3.  Klicken Sie auf den Ordner **ATL**.  
+3.  Klicken Sie auf die **ATL** Ordner.  
   
-4.  In der Liste der Vorlagen auf der rechten Seite, wählen Sie **ATL\-Steuerelement** aus.  Klicken Sie auf **Hinzufügen**.  Der ATL\-Steuerelement\-Assistent wird geöffnet, und Sie können das Steuerelement konfigurieren.  
+4.  Wählen Sie in der Liste der Vorlagen auf der rechten Seite, **ATL-Steuerelement**. Klicken Sie auf **Hinzufügen**. Der ATL-Steuerelement-Assistent wird geöffnet, und Sie können das Steuerelement konfigurieren.  
   
-5.  Geben Sie `PolyCtl` als den Kurznamen ein, und beachten Sie, dass die anderen Felder automatisch vervollständigt werden.  Klicken Sie noch nicht auf **Fertig stellen**, da Sie einige Änderungen vornehmen müssen.  
+5.  Typ `PolyCtl` als den Kurznamen ein, und beachten Sie, dass die anderen Felder automatisch vervollständigt werden. Klicken Sie nicht auf **Fertig stellen** noch, da einige Änderungen vorgenommen werden muss.  
   
- Die Seite **Namen** des ATL\-Steuerelement\-Assistenten enthält die folgenden Felder:  
+ Der ATL-Steuerelement-Assistent **Namen** Seite enthält die folgenden Felder:  
   
 |Feld|Inhalt|  
-|----------|------------|  
-|**Kurzer Name**|Der Name, den Sie für das Steuerelement eingegeben haben.|  
-|**Klasse**|Der C\+\+\-Klassenname, der erstellt wurde, um das Steuerelement zu implementieren.|  
-|**.h\-Datei**|Die Datei, die erstellt wurde, um die Definition der C\+\+\-Klasse zu enthalten.|  
-|**.cpp\-Datei**|Die Datei, die erstellt wurde, um die Implementierung der C\+\+\-Klasse zu enthalten.|  
-|**Coclass**|Der Name der Komponentenklasse für dieses Steuerelement.|  
-|**Schnittstelle**|Der Name der Schnittstelle, auf der das Steuerelement die benutzerdefinierten Methoden und Eigenschaften implementiert.|  
+|-----------|--------------|  
+|**Kurzname**|Der Name, den Sie für das Steuerelement eingegeben haben.|  
+|**Klasse**|Der C++-Klassenname, der erstellt wurde, um das Steuerelement zu implementieren.|  
+|**.h-Datei**|Die Datei, die erstellt wurde, um die Definition der C++-Klasse zu enthalten.|  
+|**CPP-Datei**|Die Datei, die erstellt wurde, um die Implementierung der C++-Klasse zu enthalten.|  
+|**Co-Klasse**|Der Name der Komponentenklasse für dieses Steuerelement.|  
+|**Interface**|Der Name der Schnittstelle, auf der das Steuerelement die benutzerdefinierten Methoden und Eigenschaften implementiert.|  
 |**Typ**|Eine Beschreibung für das Steuerelement.|  
 |**ProgID**|Der lesbare Name, der verwendet werden kann, um die CLSID des Steuerelements zu suchen.|  
   
- Sie müssen einige zusätzliche Einstellungen im ATL\-Steuerelement\-Assistenten vornehmen.  
+ Sie müssen einige zusätzliche Einstellungen im ATL-Steuerelement-Assistenten vornehmen.  
   
-#### So aktivieren Sie die Unterstützung für aussagekräftige Fehlerinformationen und Verbindungspunkte  
+#### <a name="to-enable-support-for-rich-error-information-and-connection-points"></a>So aktivieren Sie die Unterstützung für aussagekräftige Fehlerinformationen und Verbindungspunkte  
   
-1.  Klicken Sie auf **Optionen**, um die Seite **Optionen** zu öffnen.  
+1.  Klicken Sie auf **Optionen** So öffnen die **Optionen** Seite.  
   
-2.  Aktivieren Sie das Kontrollkästchen **Verbindungspunkte**.  Dadurch wird die Unterstützung einer Ausgangsschnittstelle in der IDL\-Datei erstellt.  
+2.  Wählen Sie die **Verbindungspunkte** Kontrollkästchen. Dadurch wird die Unterstützung einer Ausgangsschnittstelle in der IDL-Datei erstellt.  
   
  Sie können das Steuerelement auch einfügbar machen. Das heißt, es kann in Anwendungen eingebettet werden, die eingebettete Objekten unterstützen, wie z. B. Excel oder Word.  
   
-#### So machen Sie das Steuerelement einfügbar  
+#### <a name="to-make-the-control-insertable"></a>So machen Sie das Steuerelement einfügbar  
   
-1.  Klicken auf **Darstellung**, um die Seite **Darstellung** zu öffnen.  
+1.  Klicken Sie auf **Darstellung** So öffnen die **Darstellung** Seite.  
   
-2.  Aktivieren Sie das Kontrollkästchen **Einfügbar**.  
+2.  Wählen Sie die **einfügbar** Kontrollkästchen.  
   
- Das Polygon, das durch das Objekt angezeigt wird, verfügt über einfarbige Füllung. Deshalb müssen Sie eine `Fill Color`\-Basiseigenschaft hinzufügen.  
+ Das Polygon, das durch das Objekt angezeigt wird, verfügt über einfarbige Füllung. Deshalb müssen Sie eine `Fill Color`-Basiseigenschaft hinzufügen.  
   
-#### So fügen Sie eine Füllfarben\-Basiseigenschaft hinzu und erstellen das Steuerelement  
+#### <a name="to-add-a-fill-color-stock-property-and-create-the-control"></a>So fügen Sie eine Füllfarben-Basiseigenschaft hinzu und erstellen das Steuerelement  
   
-1.  Klicken auf **Basiseigenschaften**, um die Seite **Basiseigenschaften** zu öffnen.  
+1.  Klicken Sie auf **Basiseigenschaften** So öffnen die **Basiseigenschaften** Seite.  
   
-2.  Führen Sie unter **Nicht unterstützt** auf der Liste möglicher Basiseigenschaften den Bildlauf nach unten durch.  Doppelklicken Sie auf `Fill Color`, um es in die Liste **Unterstützt** zu verschieben.  
+2.  Klicken Sie unter **nicht unterstützt**, führen Sie einen Bildlauf nach unten in der Liste möglicher Basiseigenschaften. Doppelklicken Sie auf `Fill Color` verschoben werden sollen die **unterstützte** Liste.  
   
-3.  Dies vervollständigt die Optionen für das Steuerelement.  Klicken Sie auf **Fertig stellen**.  
+3.  Dies vervollständigt die Optionen für das Steuerelement. Klicken Sie auf **Fertig stellen**.  
   
- Während der Assistent das Steuerelement erstellte, wurden mehrere Codeänderungen und Dateihinzufügungen ausgeführt.  Die folgenden Dateien wurden erstellt:  
+ Während der Assistent das Steuerelement erstellte, wurden mehrere Codeänderungen und Dateihinzufügungen ausgeführt. Die folgenden Dateien wurden erstellt:  
   
 |Datei|Beschreibung|  
-|-----------|------------------|  
-|PolyCtl.h|Sie enthält den größten Teil der Implementierung der C\+\+\-Klasse `CPolyCtl`.|  
+|----------|-----------------|  
+|PolyCtl.h|Sie enthält den größten Teil der Implementierung der C++-Klasse `CPolyCtl`.|  
 |PolyCtl.cpp|Sie enthält die verbleibenden Teile von `CPolyCtl`.|  
 |PolyCtl.rgs|Eine Textdatei, die das Registrierungsskript enthält, das verwendet wird, um das Steuerelement zu registrieren.|  
 |PolyCtl.htm|Eine Webseite, die einen Verweis auf das neu erstellte Steuerelement enthält.|  
   
  Der Assistent führt auch die folgenden Codeänderungen aus:  
   
--   Er fügte den Dateien "stdafx.h" und "stdafx.cpp" eine `#include`\-Anweisung hinzu, um die zur Unterstützung von Steuerelementen erforderlichen ATL\-Dateien einzuschließen.  
+-   Er fügte den Dateien "stdafx.h" und "stdafx.cpp" eine `#include`-Anweisung hinzu, um die zur Unterstützung von Steuerelementen erforderlichen ATL-Dateien einzuschließen.  
   
 -   Er änderte Polygon.idl, um Details des neuen Steuerelements einzuschließen.  
   
@@ -96,20 +96,21 @@ In diesem Schritt fügen Sie Ihrem Projekt ein Steuerelement hinzu, erstellen es
   
  Jetzt können Sie das Steuerelement erstellen, um es in Aktion zu sehen.  
   
-## Erstellen und Testen des Steuerelements  
+## <a name="building-and-testing-the-control"></a>Erstellen und Testen des Steuerelements  
   
-#### So erstellen Sie das Steuerelement und testen es  
+#### <a name="to-build-and-test-the-control"></a>So erstellen Sie das Steuerelement und testen es  
   
-1.  Klicken Sie im Menü **Erstellen** auf **Polygon erstellen**.  
+1.  Auf der **erstellen** Menü klicken Sie auf **Polygon erstellen**.  
   
-     Sobald die Erstellung des Steuerelements abgeschlossen ist, klicken Sie im **Projektmappen\-Explorer** mit der rechten Maustaste auf PolyCtl.htm und wählen Sie **In Browser anzeigen** aus.  Die HTML\-Webseite, die das Steuerelement enthält, wird angezeigt.  Eine Seite mit dem Titel "ATL 8.0\-Testseite für Objekt PolyCtl" sowie der Text **PolyCtl** sollten angezeigt werden.  Dies ist Ihr Steuerelement.  
+     Sobald das Steuerelement erstellen beendet wurde, mit der rechten Maustaste PolyCtl.htm in **Projektmappen-Explorer** , und wählen Sie **in Browser anzeigen**. Die HTML-Webseite, die das Steuerelement enthält, wird angezeigt. Daraufhin sollte eine Seite mit dem Titel "ATL 8.0-Testseite für Objekt PolyCtl" und der Text **PolyCtl**. Dies ist Ihr Steuerelement.  
   
 > [!NOTE]
->  Wenn Sie beim Abschließen dieses Lernprogramms eine Fehlermeldung erhalten, dass die DLL\-Datei nicht erstellt werden kann, schließen Sie die Datei "PolyCtl.htm" und den Testcontainer für ActiveX\-Steuerelemente und erstellen Sie die Projektmappe erneut.  Wenn Sie die DLL immer noch nicht erstellen können, starten Sie den Computer neu oder melden Sie sich ab \(wenn Sie die Terminaldienste verwenden\).  
+>  Wenn Sie beim Abschließen dieses Lernprogramms eine Fehlermeldung erhalten, dass die DLL-Datei nicht erstellt werden kann, schließen Sie die Datei "PolyCtl.htm" und den Testcontainer für ActiveX-Steuerelemente und erstellen Sie die Projektmappe erneut. Wenn Sie die DLL immer noch nicht erstellen können, starten Sie den Computer neu oder melden Sie sich ab (wenn Sie die Terminaldienste verwenden).  
   
  Als Nächstes fügen Sie dem Steuerelement eine benutzerdefinierte Eigenschaft hinzu.  
   
  [Zurück zu Schritt 1](../atl/creating-the-project-atl-tutorial-part-1.md) &#124; [Weiter zu Schritt 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Lernprogramm](../atl/active-template-library-atl-tutorial.md)
+

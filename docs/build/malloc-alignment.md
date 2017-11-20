@@ -1,30 +1,30 @@
 ---
-title: "malloc-Ausrichtung | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Malloc-Ausrichtung | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: a8d1d1b4-5122-456f-9a64-a50e105e55a5
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 66ec1e2e86996b8044909961bef9ab4ea3e76312
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# malloc-Ausrichtung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-[malloc](../c-runtime-library/reference/malloc.md) gibt immer den Speicher zurück, der zum Speichern eines beliebigen Objekts geeignet ist, das eine grundlegende Ausrichtung hat und in den zugeordneten Speicher passt.  Eine *grundlegende Ausrichtung* ist eine Ausrichtung, die kleiner oder gleich der größten Ausrichtung ist, die von der Implementierung ohne Ausrichtungsspezifikation unterstützt wird. \(In Visual C\+\+ ist dies die Ausrichtung, die für einen `double` oder 8 Bytes erforderlich ist.  In einem Code, der auf 64\-Bit\-Plattformen ausgerichtet ist, sind es 16 Bytes.\) Beispielsweise kann eine Vier\-Byte\-Speicherbelegung an einer Begrenzung ausgerichtet werden, die ein Objekt unterstützt, das maximal vier Byte groß ist.  
+# <a name="malloc-alignment"></a>malloc-Ausrichtung
+["malloc"](../c-runtime-library/reference/malloc.md) wird sichergestellt, dass Arbeitsspeicher zurückgeben, die zeigt, passend ausgerichtet ist, für das Speichern jedes Objekt, das eine grundlegende Ausrichtung und die hat hinsichtlich der Menge an Arbeitsspeicher passt konnte, der zugeordnet ist. Ein *grundlegende Ausrichtung* ist eine Ausrichtung, die kleiner oder gleich der größten Ausrichtung, die von der Implementierung ohne Ausrichtungsspezifikation unterstützt wird. (In Visual C++ ist dies die Ausrichtung, die für einen `double` oder 8 Bytes erforderlich ist. In einem Code, der auf 64-Bit-Plattformen ausgerichtet ist, sind es 16 Bytes.) Beispielsweise kann eine Vier-Byte-Speicherbelegung an einer Begrenzung ausgerichtet werden, die ein Objekt unterstützt, das maximal vier Byte groß ist.  
   
- Visual C\+\+ unterstützt Typen mit einer *erweiterten Ausrichtung*, die auch als *über\-ausgerichtete* Typen bezeichnet werden.  Die SEE\-Typen [\_\_m128](../cpp/m128.md) und `__m256` sowie die Typen, die von `__declspec(align(``n``))` deklariert werden, wobei `n` größer ist als 8, verfügen beispielsweise über eine erweiterte Ausrichtung.  Eine Speicherausrichtung an einer Grenze, die für ein Objekt geeignet ist, das eine erweiterte Ausrichtung erfordert, wird von `malloc` nicht gewährleistet.  Verwenden Sie zur Speicherbelegung für über\-ausgerichtete Typen [\_aligned\_malloc](../c-runtime-library/reference/aligned-malloc.md) und verwandte Funktionen.  
+ Visual C++ unterstützt Typen mit *Erweiterte Ausrichtung*, auch bekannt als sind *ausgerichtete* Typen. Z. B. die SSE-Typen [__m128](../cpp/m128.md) und `__m256`, sowie Typen, die mithilfe von deklariert werden `__declspec(align( n ))` , in denen `n` ist größer als 8, Ausrichtung erweitert haben. Eine Speicherausrichtung an einer Grenze, die für ein Objekt geeignet ist, das eine erweiterte Ausrichtung erfordert, wird von `malloc` nicht gewährleistet. Verwenden Sie zum Reservieren von Speicher für ausgerichtetes Typen [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md) und verwandte Funktionen verweisen.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verwendung von Stapeln](../build/stack-usage.md)   
- [align](../cpp/align-cpp.md)   
- [\_\_declspec](../cpp/declspec.md)
+ [Ausrichten](../cpp/align-cpp.md)   
+ [__declspec](../cpp/declspec.md)

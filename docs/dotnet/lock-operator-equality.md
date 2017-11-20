@@ -1,35 +1,34 @@
 ---
-title: "lock::operator=="
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "reference"
-f1_keywords: 
-  - "lock::operator=="
-  - "msclr.lock.operator=="
-  - "msclr::lock::operator=="
-  - "lock.operator=="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lock::operator=="
+title: Lock::Operator == | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- lock::operator==
+- msclr.lock.operator==
+- msclr::lock::operator==
+- lock.operator==
+dev_langs: C++
+helpviewer_keywords: lock::operator==
 ms.assetid: 3dcf1e5a-53fc-495d-9df5-d7849a41c36c
-caps.latest.revision: 6
-caps.handback.revision: "4"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 33e372deb0bbae86efdf1a7c928d45e673e0b334
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# lock::operator==
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="lockoperator"></a>lock::operator==
 Gleichheitsoperator.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class T> bool operator==(  
@@ -37,14 +36,14 @@ template<class T> bool operator==(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `t`  
- Das auf Gleichheit zu prüfende Objekt.  
+ Das Objekt auf Gleichheit verglichen werden soll.  
   
-## Rückgabewert  
- Gibt `true`, wenn `t` mit dem Objekt der Sperre befindet; andernfalls `false` zurück.  
+## <a name="return-value"></a>Rückgabewert  
+ Gibt `true` Wenn `t` ist identisch mit der Sperrenobjekt `false` andernfalls.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // msl_lock_op_eq.cpp  
@@ -64,12 +63,15 @@ int main () {
 }  
 ```  
   
-  **Gleich\!**   
-## Anforderungen  
- **Headerdatei** \<msclr\\lock.h\>  
+```Output  
+Equal!  
+```  
   
- **Namespace** msclr  
+## <a name="requirements"></a>Anforderungen  
+ **Headerdatei** \<msclr\lock.h >  
   
-## Siehe auch  
- [lock\-Member](../dotnet/lock-members.md)   
- [lock::operator\!\=](../dotnet/lock-operator-inequality.md)
+ **Namespace** Msclr  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Lock-Member](../dotnet/lock-members.md)   
+ [lock::operator!=](../dotnet/lock-operator-inequality.md)

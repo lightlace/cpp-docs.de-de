@@ -1,32 +1,30 @@
 ---
-title: "divides (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::divides"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "divides-Funktion [STL/CLR]"
+title: dividiert (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::divides
+dev_langs: C++
+helpviewer_keywords: divides function [STL/CLR]
 ms.assetid: 4c36026a-02ba-475d-af68-854599647f4b
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b235cfb80ebcbfe104dc9e7dacdcd56e16cf07cc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# divides (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die Vorlagenklasse beschreibt ein Funktionselement, die, wenn sie aufgerufen wird, das erste Argument zurückgibt, das im zweiten unterteilt wird.  Sie verwenden sie angeben einem Funktionsobjekt hinsichtlich den Argumenttyp.  
+# <a name="divides-stlclr"></a>divides (STL/CLR)
+Die Vorlagenklasse beschreibt ein Funktionselement ist, dass beim Aufrufen, gibt die ersten Arguments dividiert durch den zweiten. Sie verwenden ein Funktionsobjekt im Hinblick auf seine Argumenttyp angeben.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<typename Arg>  
@@ -49,34 +47,34 @@ public:
     };  
 ```  
   
-#### Parameter  
- Arg  
- Der Typ der Argumente und des Rückgabewerts.  
+#### <a name="parameters"></a>Parameter  
+ arg  
+ Der Typ der Argumente und der Rückgabewert.  
   
-## Memberfunktionen  
+## <a name="member-functions"></a>Memberfunktionen  
   
-|Typdefinition|**Beschreibung**|  
-|-------------------|----------------------|  
-|delegate\_type|Der Typ des generischen Delegaten.|  
-|first\_argument\_type|Der Typ des ersten Arguments des Feature\-Elements.|  
-|result\_type|Der Typ des Funktionselementergebnisses.|  
-|second\_argument\_type|Der Typ des Funktionselementzweiten Argumente.|  
+|Typdefinition|Beschreibung|  
+|---------------------|-----------------|  
+|delegate_type|Der Typ des generischen Delegaten.|  
+|first_argument_type|Der Typ des ersten Arguments Funktionselement.|  
+|RESULT_TYPE|Der Typ des Ergebnisses Funktionselement.|  
+|second_argument_type|Der Typ des zweiten Arguments Funktionselement.|  
   
-|Member|**Beschreibung**|  
-|------------|----------------------|  
+|Member|Beschreibung|  
+|------------|-----------------|  
 |divides|Erstellt das Funktionselement.|  
   
-|Operator|**Beschreibung**|  
-|--------------|----------------------|  
-|operator\(\)|Berechnet die gewünschte Funktion.|  
-|Operator delegate\_type^\(\)|Wandelt das Funktionselement zu einem Delegaten um.|  
+|Operator|Beschreibung|  
+|--------------|-----------------|  
+|Operator()|Berechnet die gewünschte Funktion.|  
+|Operator delegate_type^()|Wandelt das Funktionselement an einen Delegaten an.|  
   
-## Hinweise  
- Die Vorlagenklasse beschreibt ein ZweiArgumentfunktionselement.  Sie definiert den Memberoperator, `operator()`, wenn das Objekt als Funktion aufgerufen wird, dem ersten Argument zurückgibt, das im zweiten unterteilt wird.  
+## <a name="remarks"></a>Hinweise  
+ Die Vorlagenklasse beschreibt ein Funktionselement ist zwei Argumenten. Die Memberoperator definiert `operator()` , wenn das Objekt als eine Funktion aufgerufen wird, wird der ersten Arguments dividiert durch den zweiten zurückgegeben.  
   
- Sie können das Objekt auch übergeben, da ein Funktionsargument, dessen Typ `delegate_type^` ist und es entsprechend konvertiert wird.  
+ Sie können auch das Objekt übergeben, als ein Funktionsargument, dessen Typ ist `delegate_type^` und werden entsprechend konvertiert werden.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_divides.cpp   
@@ -116,14 +114,17 @@ int main()
   
 ```  
   
-  **4 3**  
- **2 1**  
- **2 3**   
-## Anforderungen  
- **Header:** \<cliext\/funktionsfähig\>  
+```Output  
+4 3  
+2 1  
+2 3  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/funktionale >  
   
-## Siehe auch  
- [Modulo](../dotnet/modulus-stl-clr.md)   
- [multiplies](../dotnet/multiplies-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Modulo (STL/CLR)](../dotnet/modulus-stl-clr.md)   
+ [multiplies (STL/CLR)](../dotnet/multiplies-stl-clr.md)

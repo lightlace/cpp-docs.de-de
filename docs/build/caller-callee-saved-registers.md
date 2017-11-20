@@ -1,28 +1,28 @@
 ---
-title: "Gespeicherte Register von Aufrufer/Aufgerufenem | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Gespeicherte Register von Aufrufer Aufgerufenem | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 0533bd4b-d6bb-4ce1-8201-495e16870cbb
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ebdcf30ea56587b71015a04b5e514dd9ff21aeba
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Gespeicherte Register von Aufrufer/Aufgerufenem
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die Register RAX, RCX, RDX, R8, R9, R10, R11 werden als flüchtig betrachtet und müssen bei Funktionsaufrufen als undefiniert betrachtet werden \(sofern ein gesicherter Zusatnd nicht durch Analysen, z. B. eine vollständige Programmoptimierung, nachgewiesen wird\).  
+# <a name="callercallee-saved-registers"></a>Gespeicherte Register von Aufrufer/Aufgerufenem
+Zerstört die Register RAX, RCX, RDX, R8, R9, R10, R11 volatile betrachtet werden und berücksichtigt werden muss Funktionsaufrufe (es sei denn, andernfalls für Sicherheit, provable durch Analyse z. B. Optimierung des ganzen Programms).  
   
- Die Register RBX, RBP, RDI, RSI, RSP, R12, R13, R14 und R15 werden als nicht flüchtig betrachtet und müssen vor der Verwendung durch eine Funktion gesichert und wiederhergestellt werden.  
+ Die Register RBX, RBP, RDI, RSI, RSP, R12, R13, R14 und R15 gelten als nicht flüchtig und müssen gespeichert werden und wiederhergestellt, indem eine Funktion, die verwendet werden.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Aufrufkonvention](../build/calling-convention.md)

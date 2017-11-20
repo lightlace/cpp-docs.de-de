@@ -1,11 +1,10 @@
 ---
-title: Klasse IOleControlImpl | Microsoft-Dokumentation
+title: IOleControlImpl Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,41 +14,24 @@ f1_keywords:
 - ATLCTL/ATL::IOleControlImpl::GetControlInfo
 - ATLCTL/ATL::IOleControlImpl::OnAmbientPropertyChange
 - ATLCTL/ATL::IOleControlImpl::OnMnemonic
-dev_langs:
-- C++
-helpviewer_keywords:
-- IOleControlImpl class
+dev_langs: C++
+helpviewer_keywords: IOleControlImpl class
 ms.assetid: 5a4255ad-ede4-49ca-ba9a-07c2e919fa85
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 5e63849a504b931de30141dd91af557f16c67fd8
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 4bbebb6f5bd885c70d9c4fe4903a00c86bb83cf3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="iolecontrolimpl-class"></a>IOleControlImpl-Klasse
-Diese Klasse enthält die standardmäßige Implementierung der **IOleControl** -Schnittstelle und implementiert **IUnknown**.  
+Diese Klasse stellt eine Standardimplementierung von der **IOleControl** Schnittstelle und implementiert **IUnknown**.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können in Anwendungen, die in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)] ausgeführt werden, nicht verwendet werden.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -60,7 +42,7 @@ class IOleControlImpl
   
 #### <a name="parameters"></a>Parameter  
  `T`  
- Abgeleitet von die Klasse `IOleControlImpl`.  
+ Die Klasse abgeleitet `IOleControlImpl`.  
   
 ## <a name="members"></a>Mitglieder  
   
@@ -68,15 +50,15 @@ class IOleControlImpl
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[IOleControlImpl::FreezeEvents](#freezeevents)|Gibt an, ob der Container ignoriert oder Ereignisse aus dem Steuerelement akzeptiert.|  
-|[IOleControlImpl::GetControlInfo](#getcontrolinfo)|Informationen über die Tastaturverhalten des Steuerelements eingefügt. Der ATL-Implementierung zurückgegeben **E_NOTIMPL**.|  
-|[IOleControlImpl::OnAmbientPropertyChange](#onambientpropertychange)|Informiert ein Steuerelement, dass eine oder mehrere der ambient-Eigenschaften des Containers geändert hat. Der ATL-Implementierung zurückgegeben `S_OK`.|  
-|[IOleControlImpl::OnMnemonic](#onmnemonic)|Benachrichtigt, dass ein Benutzer eine angegebene Tastenkombination gedrückt hat das Steuerelement. Der ATL-Implementierung zurückgegeben **E_NOTIMPL**.|  
+|[IOleControlImpl::FreezeEvents](#freezeevents)|Gibt an, ob der Container ignoriert oder Ereignisse vom Steuerelement akzeptiert.|  
+|[IOleControlImpl::GetControlInfo](#getcontrolinfo)|Informationen über die Tastaturverhalten des Steuerelements füllt. Gibt die ATL-Implementierung **E_NOTIMPL**.|  
+|[IOleControlImpl::OnAmbientPropertyChange](#onambientpropertychange)|Informiert ein Steuerelement, dass mindestens eines der Container Umgebungseigenschaften geändert hat. Gibt die ATL-Implementierung `S_OK`.|  
+|[IOleControlImpl::OnMnemonic](#onmnemonic)|Informiert, dass ein Benutzer eine angegebene Tastatureingabe gedrückt hat dem Steuerelement. Gibt die ATL-Implementierung **E_NOTIMPL**.|  
   
 ## <a name="remarks"></a>Hinweise  
- Klasse `IOleControlImpl` enthält die standardmäßige Implementierung der [IOleControl](http://msdn.microsoft.com/library/windows/desktop/ms694320) -Schnittstelle und implementiert **IUnknown** durch Senden von Informationen an das Speicherabbild Gerät im Debugmodus erstellt.  
+ Klasse `IOleControlImpl` stellt eine Standardimplementierung von der [IOleControl](http://msdn.microsoft.com/library/windows/desktop/ms694320) Schnittstelle und implementiert **IUnknown** durch Senden von Informationen an das Speicherabbild Gerät im Debugmodus erstellt.  
   
- **Artikel** [ATL-Lernprogramm](../../atl/active-template-library-atl-tutorial.md), [Erstellen eines ATL-Projekts](../../atl/reference/creating-an-atl-project.md)  
+ **Verwandte Artikel** [ATL-Lernprogramm](../../atl/active-template-library-atl-tutorial.md), [Erstellen eines ATL-Projekts](../../atl/reference/creating-an-atl-project.md)  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `IOleControl`  
@@ -87,32 +69,32 @@ class IOleControlImpl
  **Header:** atlctl.h  
   
 ##  <a name="freezeevents"></a>IOleControlImpl::FreezeEvents  
- In ATL Implementierung `FreezeEvents` erhöht der Control-Klasse `m_nFreezeEvents` -Datenmember Wenn `bFreeze` ist **TRUE**, und dekrementiert `m_nFreezeEvents` Wenn `bFreeze` ist **FALSE**.  
+ In ATLs-Implementierung `FreezeEvents` erhöht der Steuerelementklasse `m_nFreezeEvents` -Datenmember Wenn `bFreeze` ist **"true"**, und dekrementiert `m_nFreezeEvents` Wenn `bFreeze` ist **"false"**.  
   
 ```
 HRESULT FreezeEvents(BOOL bFreeze);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- `FreezeEvents`Gibt `S_OK`.  
+ `FreezeEvents`Anschließend gibt `S_OK`.  
   
- Finden Sie unter [IOleControl:: FreezeEvents](http://msdn.microsoft.com/library/windows/desktop/ms678482) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Finden Sie unter [IOleControl:: FreezeEvents](http://msdn.microsoft.com/library/windows/desktop/ms678482) im Windows SDK.  
   
 ##  <a name="getcontrolinfo"></a>IOleControlImpl::GetControlInfo  
- Informationen über die Tastaturverhalten des Steuerelements eingefügt.  
+ Informationen über die Tastaturverhalten des Steuerelements füllt.  
   
 ```
 HRESULT GetControlInfo(LPCONTROLINFO pCI);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IOleControl:GetControlInfo](http://msdn.microsoft.com/library/windows/desktop/ms693730) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Finden Sie unter [IOleControl:GetControlInfo](http://msdn.microsoft.com/library/windows/desktop/ms693730) im Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt **E_NOTIMPL**.  
   
 ##  <a name="onambientpropertychange"></a>IOleControlImpl::OnAmbientPropertyChange  
- Informiert ein Steuerelement, dass eine oder mehrere der ambient-Eigenschaften des Containers geändert hat.  
+ Informiert ein Steuerelement, dass mindestens eines der Container Umgebungseigenschaften geändert hat.  
   
 ```
 HRESULT OnAmbientPropertyChange(DISPID dispid);
@@ -122,10 +104,10 @@ HRESULT OnAmbientPropertyChange(DISPID dispid);
  Gibt `S_OK`zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IOleControl::OnAmbientPropertyChange](http://msdn.microsoft.com/library/windows/desktop/ms690175) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Finden Sie unter [IOleControl::OnAmbientPropertyChange](http://msdn.microsoft.com/library/windows/desktop/ms690175) im Windows SDK.  
   
 ##  <a name="onmnemonic"></a>IOleControlImpl::OnMnemonic  
- Benachrichtigt, dass ein Benutzer eine angegebene Tastenkombination gedrückt hat das Steuerelement.  
+ Informiert, dass ein Benutzer eine angegebene Tastatureingabe gedrückt hat dem Steuerelement.  
   
 ```
 HRESULT OnMnemonic(LPMSG pMsg);
@@ -135,10 +117,9 @@ HRESULT OnMnemonic(LPMSG pMsg);
  Gibt **E_NOTIMPL**.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IOleControl::OnMnemonic](http://msdn.microsoft.com/library/windows/desktop/ms680699) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Finden Sie unter [IOleControl::OnMnemonic](http://msdn.microsoft.com/library/windows/desktop/ms680699) im Windows SDK.  
   
 ## <a name="see-also"></a>Siehe auch  
  [IOleObjectImpl-Klasse](../../atl/reference/ioleobjectimpl-class.md)   
  [ActiveX-Steuerelemente Schnittstellen](http://msdn.microsoft.com/library/windows/desktop/ms692724)   
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)
-
+ [Klassenübersicht](../../atl/atl-class-overview.md)

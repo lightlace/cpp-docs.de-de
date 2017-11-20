@@ -1,40 +1,39 @@
 ---
-title: "Verwenden &#252;berpr&#252;fbarer Assemblys mit SQL Server (C++/CLI)"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Überprüfbare Assemblys [C++], Mit SQL Server"
+title: "Verwenden überprüfbarer Assemblys mit SQLServer (C + c++ / CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: verifiable assemblies [C++], with SQL Server
 ms.assetid: 5248a60d-aa88-4ff3-b30a-b791c3ea2de9
-caps.latest.revision: 21
-caps.handback.revision: "21"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8c102d06e360c97f5c86e613ece869d4d38c4fc9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Verwenden &#252;berpr&#252;fbarer Assemblys mit SQL Server (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In Dynamic Link Libraries \(DLLs\) gepackte, erweiterte gespeicherte Prozeduren bieten eine Möglichkeit, SQL Server\-Funktionalität durch Funktionen zu erweitern, die mit [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] entwickelt wurden.  Erweiterte gespeicherte Prozeduren werden in DLLs als Funktionen implementiert.  Neben Funktionen können erweiterte gespeicherte Prozeduren auch [benutzerdefinierte Typen](../cpp/classes-and-structs-cpp.md) und [Aggregatfunktionen](assetId:///de255454-f45e-4281-81f9-bc61893ac5da) \(z. B. SUM oder AVG\) definieren.  
+# <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Verwenden überprüfbarer Assemblys mit SQL Server (C++/CLI)
+Erweiterte gespeicherte Prozeduren, die als Dynamic Link Libraries (DLLs), verpackt bieten eine Möglichkeit zum Erweitern der Funktionalität von SQL Server über Funktionen, die mit Visual C++ entwickelt wurde. Erweiterte gespeicherte Prozeduren werden als Funktionen in DLLs implementiert. Zusätzlich zu den Funktionen, erweiterte gespeicherte Prozeduren können auch definieren [von benutzerdefinierten Typen](../cpp/classes-and-structs-cpp.md) und [Aggregatfunktionen](http://msdn.microsoft.com/en-us/de255454-f45e-4281-81f9-bc61893ac5da) (z. B. SUM oder AVG).  
   
- Wenn ein Client eine erweiterte gespeicherte Prozedur ausführt, sucht SQL Server nach der DLL, die mit der erweiterten gespeicherten Prozedur verknüpft ist, und lädt diese DLL.  Die angeforderte erweiterte gespeicherte Prozedur wird durch SQL Server aufgerufen und in einem vorgegebenen Sicherheitskontext ausgeführt.  Die erweiterte gespeicherte Prozedur übergibt dann Ergebnisse und gibt Parameter an den Server zurück.  
+ Wenn ein Client eine erweiterte gespeicherte Prozedur ausgeführt wird, sucht SQL Server für die DLL der erweiterten gespeicherten Prozedur zugeordnet, und lädt diese DLL. SQL Server die angeforderte erweiterte gespeicherte Prozedur aufruft und in einem angegebenen Sicherheitskontext ausgeführt. Die erweiterte gespeicherte Prozedur, und klicken Sie dann übergibt Resultsets und Parameter an den Server zurückgegeben.  
   
- [!INCLUDE[sqprsqlong](../dotnet/includes/sqprsqlong_md.md)] stellt Erweiterungen für Transact\-SQL \(T\-SQL\) zur Verfügung, damit Sie in SQL Server überprüfbare Assemblys installieren können.  Der SQL Server\-Berechtigungssatz gibt über die folgenden Sicherheitsebenen den Sicherheitskontext an:  
+ [!INCLUDE[sqprsqlong](../dotnet/includes/sqprsqlong_md.md)]Stellt Erweiterungen in Transact-SQL (T-SQL), die überprüfbare Assemblys in SQL Server installieren können. Der SQL Server-Berechtigungssatz gibt den Sicherheitskontext an, mit der Sicherheit die folgenden Ebenen:  
   
--   Uneingeschränkter Modus: Führen Sie den Code auf eigene Gefahr aus. Der Code ist unter Umständen nicht nachweisbar typsicher.  
+-   Uneingeschränkt: Ausführen von Code auf eigenes Risiko; Code muss nicht überprüfbar typsicher sein.  
   
--   Abgesicherter Modus: Führen Sie nachweisbar typsicheren, mit \/clr:safe kompilierten Code aus.  
+-   Im abgesicherten Modus: Führen Sie überprüfbar typsicheren Code; mit/clr: safe kompiliert.  
   
- Für den abgesicherten Modus müssen die ausgeführten Assemblys nachweisbar typsicher sein.  
+ Im Abgesicherter Modus erfordert, dass die ausgeführten Assemblys überprüfbar typsicher sein.  
   
- Um eine überprüfbare Assembly zu erstellen und in SQL Server zu laden, verwenden Sie die Transact\-SQL\-Befehle CREATE ASSEMBLY und DROP ASSEMBLY wie folgt:  
+ Erstellen und eine überprüfbare Assembly in SQL Server laden, verwenden Sie die Transact-SQL-Befehle CREATE ASSEMBLY und DROP ASSEMBLY wie folgt:  
   
 ```  
 CREATE ASSEMBLY <assemblyName> FROM <'Assembly UNC Path'> WITH   
@@ -42,9 +41,9 @@ CREATE ASSEMBLY <assemblyName> FROM <'Assembly UNC Path'> WITH
 DROP ASSEMBLY <assemblyName>  
 ```  
   
- Der Befehl PERMISSION\_SET gibt den Sicherheitskontext an und kann die Werte UNRESTRICTED, SAFE oder EXTENDED erhalten.  
+ Die PERMISSION_SET-Befehl gibt den Sicherheitskontext und kann die Werte eingeschränkt, SAFE oder erweiterte aufweisen.  
   
- Außerdem können Sie den Befehl CREATE FUNCTION verwenden, um in einer Klasse an Methodennamen zu binden:  
+ Darüber hinaus können Sie die CREATE FUNCTION-Befehl verwenden, zum Binden an die Namen von Methoden in einer Klasse:  
   
 ```  
 CREATE FUNCTION <FunctionName>(<FunctionParams>)  
@@ -52,8 +51,8 @@ RETURNS returnType
 [EXTERNAL NAME <AssemblyName>:<ClassName>::<StaticMethodName>]  
 ```  
   
-## Beispiel  
- Das folgende SQL\-Skript \(z. B. "MyScript.sql"\) lädt eine Assembly in SQL Server und stellt eine Methode einer Klasse zur Verfügung:  
+## <a name="example"></a>Beispiel  
+ Die folgende SQL-Skript (z. B. benannte "MyScript.sql"), lädt eine Assembly in SQL Server und stellt eine Methode einer Klasse zur Verfügung:  
   
 ```  
 -- Create assembly without external access  
@@ -77,12 +76,12 @@ select dbo.GetQuoteNoEA('MSFT')
 go  
 ```  
   
- SQL\-Skripts können interaktiv in SQL Query Analyzer oder über die Befehlszeilenoption mit dem Dienstprogramm sqlcmd.exe ausgeführt werden.  Durch die folgende Befehlszeile wird eine Verbindung zu MyServer hergestellt, und mithilfe der Standarddatenbank und einer vertrauenswürdigen Verbindung wird MyScript.sql eingegeben und MyResult.txt ausgegeben.  
+ SQL-Skripts können interaktiv in SQL Query Analyzer oder in der Befehlszeile mit dem Hilfsprogramm sqlcmd.exe ausgeführt werden. Die folgende Befehlszeile eine Verbindung mit "EigenerServer", wird die Standarddatenbank verwendet, verwendet eine vertrauenswürdige Verbindung, MyScript.sql Eingaben und Ausgaben MyResult.txt.  
   
 ```  
-sqlcmd –S MyServer -E –i myScript.sql –o myResult.txt  
+sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt  
 ```  
   
-## Siehe auch  
- [Gewusst wie: Migrieren auf \/clr:safe](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Vorgehensweise: Migrieren zu/CLR: safe (C + c++ / CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)   
  [Klassen und Strukturen](../cpp/classes-and-structs-cpp.md)

@@ -1,49 +1,49 @@
 ---
-title: "Ausw&#228;hlen des Formats von .netmodule-Eingabedateien"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Auswählen des Formats von NETMODULE-Dateien Eingabe | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 4653d1bd-300f-4083-86f5-d1a06f44e61c
-caps.latest.revision: 9
-caps.handback.revision: "9"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0be66a528585bd86c4dbc39c17917229c3353bd9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Ausw&#228;hlen des Formats von .netmodule-Eingabedateien
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Eine MSIL\-OBJ\-Datei \(kompiliert mit [\/clr](../../build/reference/clr-common-language-runtime-compilation.md)\) kann als .netmodule\-Datei auch verwendet werden.  OBJ\-Dateien enthalten Metadaten und systemeigene Symbole.  .netmodules enthalten nur Metadaten.  
+# <a name="choosing-the-format-of-netmodule-input-files"></a>Auswählen des Formats von .netmodule-Eingabedateien
+Eine MSIL-OBJ-Datei (kompiliert mit ["/ CLR"](../../build/reference/clr-common-language-runtime-compilation.md)) kann auch als eine NETMODULE-Datei verwendet werden.  OBJ-Dateien werden Metadaten und systemeigene Symbole enthalten.  NETMODULE-Dateien enthalten nur Metadaten.  
   
- Sie können eine MSIL\-OBJ\-Datei über die Compileroption \/addmodule an einen beliebigen anderen Visual Studio\-Compiler übergeben. \(Beachten Sie jedoch, dass die OBJ\-Datei Teil der erstellten Assembly wird und zusammen mit dieser versendet werden muss.\)  Zum Beispiel verfügen Visual C\# und Visual Basic über die Compileroption \/addmodule.  
+ Sie können eine MSIL-OBJ-Datei an andere Visual Studio-Compiler übergeben, über die/addmodule-Compileroption (aber beachten Sie, dass die OBJ-Datei die resultierende Assembly wird und mit der Assembly ausgeliefert werden muss).  Beispielsweise haben in Visual c# und Visual Basic/addmodule-Compileroption.  
   
 > [!NOTE]
->  In den meisten Fällen müssen Sie für den Linker die OBJ\-Datei von der Kompilierung übergeben, die das Modul .net\- erstellt hat.  Eine Ausnahme hierzu besteht, wenn .netmodule mit [\/clr:pure](../../build/reference/clr-common-language-runtime-compilation.md) erstellt wurde.  Das Übergeben einer DLL\- oder der Moduldatei .netmodules MSIL den Linker kann LNK1107.  
+>  In den meisten Fällen müssen Sie an den Linker die OBJ-Datei aus der Kompilierung übergeben, die das Modul .net erstellt.  Einzige Ausnahme hierbei ist, wenn die NETMODULE-Datei erstellt wurde, mit [/CLR: pure](../../build/reference/clr-common-language-runtime-compilation.md).  Eine DLL- oder NETMODULE-MSIL-Modul-Datei an dem Linker übergeben kann dazu führen, dass LNK1107.  
   
- OBJ\-Dateien, zusammen mit ihren zugeordneten H\-Dateien, die Sie für \#include in Quelle verweisen, können C\+\+\-Anwendungen, das systemeigene nutzen Typen in das Modul, während in einer .netmodule\-Datei, nur die verwalteten Typen durch einer C\+\+\-Anwendung genutzt werden können.  Beim Übergeben einer OBJ\-Datei mit \#using sind keine Informationen zu systemeigenen Typen verfügbar. Fügen Sie stattdessen mit \#include die H\-Datei der OBJ\-Datei ein.  
+ OBJ-Dateien sowie ihre zugeordneten h-Dateien, die Sie, über verweisen #include in der Quelle, C++-Anwendungen für die systemeigenen Typen im Modul nutzen können, dagegen in eine NETMODULE-Datei nur die verwalteten Typen, die von einer C++-Anwendung genutzt werden können.  Wenn Sie versuchen, eine OBJ-Datei übergeben #using, Informationen zu systemeigenen Typen nicht zur Verfügung; #include Sie stattdessen die OBJ-Datei .h-Datei.  
   
- Andere Visual Studio\-Compiler können nur verwaltete Typen eines Moduls verwenden.  
+ Andere Visual Studio-Compiler können nur verwaltete Typen aus einem Modul nutzen.  
   
- Verwenden Sie das folgende, um festzustellen, ob Sie .netmodule verwenden müssen, oder eine OBJ\-Datei als Modul zu Visual C\+\+ dem Linker eingab:  
+ Verwenden Sie Folgendes, um zu bestimmen, ob Sie eine NETMODULE-Datei oder eine OBJ-Datei als Moduleingabe an den Visual C++-Linker verwenden müssen:  
   
--   Wenn Sie einem Visual Studio\-Compiler als Visual C\+\+ erstellen, erzeugen .netmodule und verwenden Sie .netmodule, wie als Eingabe für den Linker.  
+-   Wenn Sie mit einem Visual Studio-Compiler als Visual C++ erstellen, erstellen Sie eine NETMODULE, und verwenden Sie die NETMODULE-Datei als Eingabe an den Linker.  
   
--   Wenn Sie den Visual C\+\+\-Compiler verwenden, Module zu erzeugen und wenn Module verwendet werden, um ein anderes Ergebnis als eine Bibliothek zu erstellen, verwenden Sie die OBJ\-Dateien, die vom Compiler als Modul erstellt werden, das den Linker eingegeben wird; verwenden Sie die .netmodule\-Datei nicht, als Eingabe.  
+-   Wenn Sie Visual C++-Compiler verwenden werden, um zu erzeugen, Module und wenn die Module verwendet wird, um etwas anderes als eine Bibliothek zu erstellen, verwenden Sie die OBJ-Dateien, die vom Compiler als Moduleingabe an den Linker erstellt; Verwenden Sie nicht die NETMODULE-Datei als Eingabe.  
   
--   Wenn die Module zur Erstellung einer systemeigenen \(und nicht einer verwalteten\) Bibliothek verwendet werden, verwenden Sie die OBJ\-Dateien als Moduleingabe in den Linker, und erstellen Sie eine LIB\-Bibliotheksdatei.  
+-   Wenn Ihre Module Erstellen einer systemeigenen (keine verwaltete)-Bibliothek verwendet werden soll, verwenden Sie die OBJ-Dateien als Moduleingabe an den Linker und generieren Sie eine LIB-Bibliotheksdatei.  
   
--   Wenn die Module verwendet werden, um eine verwaltete Bibliothek zu erstellen und wenn alle Moduleingabe den Linker \(erstellt mit \/clr:safe\) überprüfbar ist, Verwendungsobj\-dateien als Moduleingabe den Linker und eine Bibliotheksdatei .dll \(Assembly\) oder .netmodules \(Modul\) generieren.  
+-   Wenn Ihre Module verwendet werden, um eine verwaltete Bibliothek zu erstellen, und wenn alle Moduleingabe an den Linker überprüfbar sind (erstellt mit/clr: safe), verwenden Sie die OBJ-Dateien als Moduleingabe an den Linker, und erstellen Sie eine DLL-Datei (Assembly) oder die Bibliotheksdatei NETMODULE-Datei (Modul).  
   
--   Wenn die Module verwendet werden, um eine verwaltete Bibliothek zu erstellen und wenn alle Moduleingabe den Linker mit \/clr:pure oder \/clr:safe, Verwendungsobj\-dateien als Moduleingabe den Linker und eine DLL\-Datei \(Assembly\) zu generieren oder .netmodule \(Modul\) erzeugten wenn Sie nur verwaltete Typen von der Bibliothek verfügbar machen möchten.  Wenn Sie verwaltete Typen aus der Bibliothek verfügbar machen möchten und die systemeigenen Typen in der Bibliothek außerdem von C\+\+\-Anwendungen verwendet werden sollen, besteht ihre Bibliothek aus den OBJ\-Dateien für die Komponentenmodule der Bibliothek \(wahrscheinlich möchten Sie auch die H\-Dateien für jedes Modul versenden, sodass diese mit \#include vom Quellcode referenziert werden können\).  
+-   Wenn Ihre Module verwendet werden, um eine verwaltete Bibliothek zu erstellen und alle Moduleingabe an den Linker mit erzeugt werden **/CLR: pure** oder **/CLR: safe**, verwenden Sie die OBJ-Dateien als Moduleingabe an den Linker und generiert eine DLL ( Assembly) oder NETMODULE-Datei (Modul), wenn Sie nur verwaltete Typen aus der Bibliothek verfügbar machen möchten. Die Compileroptionen **/clr:pure** und **/clr:safe** sind in Visual Studio 2015 veraltet. Wenn verwalteter Typen aus der Bibliothek und gegebenenfalls auch C++-Anwendungen nutzen die systemeigenen Typen in der Bibliothek verfügbar gemacht werden sollen, wird Ihrer Bibliothek aus der OBJ-Dateien für die Bibliotheken für die komponentenverwaltung bestehen (Sie werden auch die h-Dateien für jedes Modul versenden möchten Damit sie mit verwiesen werden können #include aus Quellcode).  
   
--   Wenn die Module zur Erstellung einer verwalteten Bibliothek verwendet werden und wenn mindestens ein Eingabemodul für den Linker ausschließlich mit \/clr erstellt wird, verwenden Sie OBJ\-Dateien als Moduleingabe in den Linker, und erstellen Sie eine DLL\-Datei \(Assembly\).  Wenn Sie verwaltete Typen aus der Bibliothek verfügbar machen möchten und die systemeigenen Typen in der Bibliothek außerdem von C\+\+\-Anwendungen verwendet werden sollen, besteht ihre Bibliothek aus den OBJ\-Dateien für die Komponentenmodule der Bibliothek \(wahrscheinlich möchten Sie auch die H\-Dateien für jedes Modul versenden, sodass diese mit \#include vom Quellcode referenziert werden können\).  
+-   Wenn Ihre Module verwendet werden, um eine verwaltete Bibliothek zu erstellen und eine oder mehrere Module Eingabe an den Linker mit nur "/ CLR" erzeugt werden, verwenden Sie die OBJ-Dateien als Moduleingabe an den Linker und generiert eine DLL-Datei (Assembly).  Wenn verwalteter Typen aus der Bibliothek und gegebenenfalls auch C++-Anwendungen nutzen die systemeigenen Typen in der Bibliothek verfügbar gemacht werden sollen, wird Ihrer Bibliothek aus der OBJ-Dateien für die Bibliotheken für die komponentenverwaltung bestehen (Sie werden auch die h-Dateien für jedes Modul versenden möchten Damit sie mit verwiesen werden können #include aus Quellcode).  
   
-## Siehe auch  
- [.NETMODULE\-Dateien als Eingabe für den Linker](../../build/reference/netmodule-files-as-linker-input.md)
+## <a name="see-also"></a>Siehe auch  
+ [.NETMODULE-Dateien als Eingabe für den Linker](../../build/reference/netmodule-files-as-linker-input.md)

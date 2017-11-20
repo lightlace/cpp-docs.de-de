@@ -1,49 +1,50 @@
 ---
-title: "Hinzuf&#252;gen eines ATL-Steuerelements | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL-Projekte, Hinzufügen von Steuerelementen"
-  - "Steuerelemente [ATL], Hinzufügen zu Projekten"
+title: "Hinzufügen eines ATL-Steuerelements | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- ATL projects, adding controls
+- controls [ATL], adding to projects
 ms.assetid: 10223e7e-fdb7-4163-80c6-44aeafa8e6ce
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fb5ad74cf1905b14db46cb119766914e5e57f6cc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Hinzuf&#252;gen eines ATL-Steuerelements
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="adding-an-atl-control"></a>Hinzufügen eines ATL-Steuerelements
+Verwenden Sie diesen Assistenten, um ein Benutzerobjekt für die Schnittstelle zu einem Projekt hinzufügen, die Schnittstellen für alle möglichen Container unterstützt. Um diese Schnittstellen unterstützen zu können, dass das Projekt als ATL-Anwendung oder als eine MFC-Anwendung, die ATL-Unterstützung enthält erstellt wurde. Können Sie die [ATL-Projektassistenten](../../atl/reference/atl-project-wizard.md) zum Erstellen einer Anwendung ATL oder [Hinzufügen eines ATL-Objekts zu der MFC-Anwendung](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) ATL-Unterstützung für eine MFC-Anwendung zu implementieren.  
+  
+### <a name="to-add-an-atl-control-to-your-project"></a>ATL-Steuerelement zu Ihrem Projekt hinzufügen  
+  
+1.  In beiden **Projektmappen-Explorer** oder [Klassenansicht](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), mit der rechten Maustaste in des Namens des Projekts, dem Sie das einfache ATL-Objekt hinzufügen möchten.  
+  
+2.  Klicken Sie auf **hinzufügen** aus dem Kontextmenü, und klicken Sie dann auf **Klasse hinzufügen**.  
+  
+3.  In der [Klasse hinzufügen](../../ide/add-class-dialog-box.md) (Dialogfeld), klicken Sie im Bereich "Vorlagen" klicken Sie auf **ATL-Steuerelement**, und klicken Sie dann auf **hinzufügen** zum Anzeigen der [ATL-Steuerelement-Assistent](../../atl/reference/atl-control-wizard.md).  
+  
+ Mithilfe der **ATL-Steuerelement-Assistent**, Sie können einen von drei Typen von Steuerelementen erstellen:  
+  
+-   Ein standard-Steuerelement  
+  
+-   Ein zusammengesetztes Steuerelement  
+  
+-   DHTML-Steuerelemente  
+  
+ Darüber hinaus können Sie reduzieren Sie die Größe des Steuerelements und Schnittstellen, die nicht von den meisten Containern, durch Auswahl verwendet werden entfernen **nur minimale Kontrolle** auf die **Optionen** Seite des Assistenten.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Hinzufügen von Funktionalität zu zusammengesetzten Steuerelementen](../../atl/adding-functionality-to-the-composite-control.md)   
+ [Grundlagen von ATL-COM-Objekten](../../atl/fundamentals-of-atl-com-objects.md)   
+ [ATLFire-Beispiel](http://msdn.microsoft.com/en-us/5b2649f1-f45b-4cfb-9c4b-4d9459c26b09)
 
-Mithilfe dieses Assistenten können Sie einem Projekt, das Schnittstellen für alle möglichen Container unterstützt, ein Benutzeroberflächenobjekt hinzufügen.  Damit diese Schnittstellen unterstützt werden, ist es erforderlich, dass das Projekt als ATL\-Anwendung oder als MFC\-Anwendung mit integrierter ATL\-Unterstützung erstellt wurde.  Sie können den [ATL\-Projekt\-Assistenten](../../atl/reference/atl-project-wizard.md) verwenden, um eine ATL\-Anwendung zu erstellen, oder der [MFC\-Anwendung ein ATL\-Objekt hinzufügen](../../mfc/reference/adding-atl-support-to-your-mfc-project.md), um die ATL\-Unterstützung in eine MFC\-Anwendung zu implementieren.  
-  
-### So fügen Sie dem Projekt ein ATL\-Steuerelement hinzu  
-  
-1.  Klicken Sie entweder im **Projektmappen\-Explorer** oder in der [Klassenansicht](assetId:///8d7430a9-3e33-454c-a9e1-a85e3d2db925) mit der rechten Maustaste auf den Namen des Projekts, dem Sie das einfache ATL\-Objekt hinzufügen möchten.  
-  
-2.  Klicken Sie im Kontextmenü auf **Hinzufügen** und dann auf **Klasse hinzufügen**.  
-  
-3.  Klicken Sie im Dialogfeld [Klasse hinzufügen](../../ide/add-class-dialog-box.md) im Vorlagenbereich zunächst auf **ATL\-Steuerelement** und dann auf **Hinzufügen**, um den [ATL\-Steuerelement\-Assistenten](../../atl/reference/atl-control-wizard.md) aufzurufen.  
-  
- Mithilfe des **ATL\-Steuerelement\-Assistenten** können drei Arten von Steuerelementen erstellt werden:  
-  
--   Standardsteuerelemente  
-  
--   Zusammengesetzte Steuerelemente  
-  
--   DHTML\-Steuerelemente  
-  
- Darüber hinaus können Sie die Größe des Steuerelements verringern und Schnittstellen entfernen, die von den meisten Containern nicht verwendet werden. Sie wählen dazu auf der Seite **Optionen** des Assistenten die Option **Minimal\-Steuerelement**.  
-  
-## Siehe auch  
- [Adding Functionality to the Composite Control](../../atl/adding-functionality-to-the-composite-control.md)   
- [Fundamentals of ATL COM Objects](../../atl/fundamentals-of-atl-com-objects.md)   
- [ATLFire Sample](assetId:///5b2649f1-f45b-4cfb-9c4b-4d9459c26b09)

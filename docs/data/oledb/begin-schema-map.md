@@ -1,32 +1,30 @@
 ---
-title: "BEGIN_SCHEMA_MAP | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BEGIN_SCHEMA_MAP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BEGIN_SCHEMA_MAP-Makro"
+title: BEGIN_SCHEMA_MAP | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BEGIN_SCHEMA_MAP
+dev_langs: C++
+helpviewer_keywords: BEGIN_SCHEMA_MAP macro
 ms.assetid: 4e751023-35bc-4efd-9018-5448dd1ad751
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ab6caf2e84f84731439b899b271817b57c550c77
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# BEGIN_SCHEMA_MAP
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Deutet auf den Beginn einer Schemazuordnung.  
+# <a name="beginschemamap"></a>BEGIN_SCHEMA_MAP
+Kennzeichnet den Beginn einer schemazuordnung an.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -35,18 +33,18 @@ Deutet auf den Beginn einer Schemazuordnung.
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  *SchemaClass*  
- Die Klasse, die die ZUORDNUNG enthält.  In der Regel ist dies die Sitzungsklasse.  
+ Die Klasse, die die Zuordnung enthält. Dies wird in der Regel die Sitzungsklasse sein.  
   
-## Hinweise  
- Siehe [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) in [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] zu Informationen über Schemarowsets.  
+## <a name="remarks"></a>Hinweise  
+ Finden Sie unter [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) in das Windows SDK für Weitere Informationen zu Schemarowsets.  
   
-## Anforderungen  
- **Header:** atldb.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** „atldb.h“  
   
-## Siehe auch  
- [Makros für OLE DB\-Anbietervorlagen](../../data/oledb/macros-for-ole-db-provider-templates.md)   
- [SCHEMA\_ENTRY](../../data/oledb/schema-entry.md)   
- [END\_SCHEMA\_MAP](../../data/oledb/end-schema-map.md)   
- [IDBSchemaRowsetImpl\-Klasse](../../data/oledb/idbschemarowsetimpl-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [Makros für OLE DB-Anbietervorlagen](../../data/oledb/macros-for-ole-db-provider-templates.md)   
+ [SCHEMA_ENTRY](../../data/oledb/schema-entry.md)   
+ [END_SCHEMA_MAP](../../data/oledb/end-schema-map.md)   
+ [IDBSchemaRowsetImpl-Klasse](../../data/oledb/idbschemarowsetimpl-class.md)

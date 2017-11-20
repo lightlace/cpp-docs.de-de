@@ -1,41 +1,39 @@
 ---
-title: "priority_queue::empty (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::empty"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "empty-Member [STL/CLR]"
+title: 'priority_queue:: Empty (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::empty
+dev_langs: C++
+helpviewer_keywords: empty member [STL/CLR]
 ms.assetid: bb2bc4cf-395f-4c4f-b432-550b85e1865d
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 26426ddd55a6c0f8c5aeededb5a4766f7a4ce796
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# priority_queue::empty (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Testet, dass keine Elemente vorhanden sind.  
+# <a name="priorityqueueempty-stlclr"></a>priority_queue::empty (STL/CLR)
+Testet, ob keine Elemente vorhanden sind.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 bool empty();  
 ```  
   
-## Hinweise  
- Die Memberfunktionsrückgaben true für eine leere gesteuerte Sequenz.  Es ist zu [priority\_queue::size](../dotnet/priority-queue-size-stl-clr.md)`() == 0`.  Sie verwenden sie, um zu testen, ob das priority\_queue leer ist.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt „true“ für eine leere gesteuerte Sequenz zurück. Dies ist äquivalent zum [priority_queue:: Size (STL/CLR)](../dotnet/priority-queue-size-stl-clr.md)`() == 0`. Sie verwenden sie zum Überprüfen, ob die Priority_queue leer ist.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_priority_queue_empty.cpp   
@@ -68,16 +66,19 @@ int main()
   
 ```  
   
-  **c ein b**  
-**size\(\) \= 3**  
-**empty\(\) \= False**  
-**size\(\) \= 0**  
-**empty\(\) \= True**   
-## Anforderungen  
- **Header:** \<cliext\/Warteschlange\>  
+```Output  
+ c a b  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext bzw. einer neuen Warteschlange >  
   
-## Siehe auch  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [priority\_queue::size](../dotnet/priority-queue-size-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::size (STL/CLR)](../dotnet/priority-queue-size-stl-clr.md)

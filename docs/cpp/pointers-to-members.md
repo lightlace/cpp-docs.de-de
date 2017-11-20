@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - declarations, pointers
 - class members [C++], pointers to
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 98a6db086443c15964a1dcf0a345b2fbaccfa233
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: d8a8a8c4d88f0ccd7c879eb361643ea22e2ec41b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="pointers-to-members"></a>Zeiger auf Member
 Deklarationen von Zeigern auf Member sind Sonderfälle von Zeigerdeklarationen.  Sie können mithilfe der folgenden Sequenz deklariert werden:  
@@ -52,7 +49,7 @@ Deklarationen von Zeigern auf Member sind Sonderfälle von Zeigerdeklarationen. 
   
     -   Der Operator "::"  
   
-    -   Die ** \* ** Operator.  
+    -   Die  **\***  Operator.  
   
     -   Optionale **const** und/oder `volatile` Spezifizierer.  
   
@@ -60,9 +57,9 @@ Deklarationen von Zeigern auf Member sind Sonderfälle von Zeigerdeklarationen. 
   
     -   Ein optionaler Initialisierer:  
   
- Die ** = ** Operator.  
+ Die  **=**  Operator.  
   
- Die ** & ** Operator.  
+ Die  **&**  Operator.  
   
  Der qualifizierte Name der Klasse.  
   
@@ -116,9 +113,9 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';  
 ```  
   
- Der Unterschied zwischen der **.\* ** und ** -> \* ** Operatoren (Pointer-to-Member-Operatoren) ist, die die **.\* ** Operator wählt Elemente erhält eine Objekts oder Objektverweises, dagegen die ** -> \* ** Operator wählt Member über einen Zeiger. (Weitere Informationen zu diesen Operatoren finden Sie unter [Ausdrücke mit Zeiger-auf-Member-Operatoren](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
+ Der Unterschied zwischen der **.\***  und  **-> \***  Operatoren (Pointer-to-Member-Operatoren) ist, die die **.\***  Operator wählt Elemente erhält eine Objekts oder Objektverweises, dagegen die  **-> \***  Operator wählt Member über einen Zeiger. (Weitere Informationen zu diesen Operatoren finden Sie unter [Ausdrücke mit Zeiger-auf-Member-Operatoren](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
   
- Das Ergebnis der Pointer-to-Member-Operatoren ist der Typ des Members – in diesem Fall **Char \* **.  
+ Das Ergebnis der Pointer-to-Member-Operatoren ist der Typ des Members – in diesem Fall **Char \*** .  
   
  Im folgenden Codefragment werden die Memberfunktionen `GetCaption` und `SetCaption` mithilfe der Zeiger auf Member aufgerufen:  
   

@@ -1,42 +1,43 @@
 ---
-title: "ATL und der freethreaded Marshaller | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, Freethreaded Marshaler"
-  - "Freethreaded Marshaler"
-  - "FTM in ATL"
-  - "Threading [ATL], Freethreaded Marshaler"
-  - "Threading [C++], Marshaler in ATL"
+title: ATL und der freethreaded Marshaller | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ATL, free threaded marshaler
+- free threaded marshaler
+- threading [C++], marshaler in ATL
+- threading [ATL], free threaded marshaler
+- FTM in ATL
 ms.assetid: 2db88a13-2217-4ebc-aa7e-432d5da902eb
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ed5660be9a5559d5f51d0cdb0ec2e5bc185bd0b4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# ATL und der freethreaded Marshaller
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die Attributseite des ATL\-Assistenten für einfache Objekte enthält eine Option, die der Klasse ermöglicht, den Free\-Threaded Marshaller \(FTM\) zu aggregieren.  
+# <a name="atl-and-the-free-threaded-marshaler"></a>ATL und der freethreaded Marshaller
+Der ATL-Assistent für einfache Objekte der Seite "Attribute" bietet eine Option, die Ihre Klasse der freethreaded Marshaller (FTM) aggregieren kann.  
   
- Der Assistent generiert Code, um eine Instanz des Free\-Threaded Marshallers in `FinalConstruct` zu erstellen und diese Instanz in `FinalRelease` freizugeben.  Ein `COM_INTERFACE_ENTRY_AGGREGATE`\-Makro wird automatisch der COM\-Zuordnung hinzugefügt, um sicherzustellen, dass `QueryInterface` Anforderungen für [IMarshal](http://msdn.microsoft.com/library/windows/desktop/dd542707) durch den Marshaller Free\-Threaded bearbeitet wird.  
+ Der Assistent generiert Code zum Erstellen einer Instanz von der freethreaded Marshaller in `FinalConstruct` und gibt diese Instanz in `FinalRelease`. Ein `COM_INTERFACE_ENTRY_AGGREGATE` Makro wird automatisch hinzugefügt, um sicherzustellen, dass die COM-Zuordnung `QueryInterface` Anforderungen für [IMarshal](http://msdn.microsoft.com/library/windows/desktop/dd542707) werden von der freethreaded Marshaller behandelt.  
   
- Der Free\-Threaded Marshaller ermöglicht Direktzugriff auf Schnittstellen für das Objekt von jedem Thread im gleichen Prozess und beschleunigt apartmentübergreifenden Aufrufe.  Diese Option wird für Klassen ausgelöst, die beide Threadingmodell verwenden.  
+ Freethreaded Marshaler ermöglicht den direkten Zugriff auf Schnittstellen für das Objekt von jedem Thread im selben Prozess apartmentübergreifende Aufrufe beschleunigen. Diese Option ist für Klassen vorgesehen, die beide Threadingmodell verwenden.  
   
- Wenn diese Option verwenden, müssen Klassen Verantwortung für Threadsicherheit ihrer Daten angewendet.  Außerdem Objekte, die den Free\-Threaded Marshaller aggregieren und Anforderung, Schnittstellenzeiger zu verwenden aus anderen Objekten muss zusätzliche Schritte unternehmen, um sicherzustellen, dass die abgerufenen Schnittstellen ordnungsgemäß gemarshallt werden.  In der Regel bedeutet dies, die Schnittstellenzeiger zu speichern in die globale Schnittstellentabelle \(GIT\) mit ein und den Zeiger vom GIT abzurufen, wenn es verwendet wird.  ATL stellt die Klasse [CComGITPtr](../atl/reference/ccomgitptr-class.md), die Ihnen helfen, die Schnittstellenzeiger zu verwenden, die im GIT gespeichert werden.  
+ Wenn Sie diese Option verwenden zu können, müssen Klassen Verantwortung für die Threadsicherheit ihrer Daten übernehmen. Darüber hinaus müssen Objekte, die die freethreaded Marshaler aggregiert und Schnittstellenzeigern abgerufen, die von anderen Objekten verwenden müssen zusätzliche Schritte Unternehmen, stellen Sie sicher, dass die Schnittstellen richtig gemarshallt werden. In der Regel umfasst dies Schnittstellenzeiger in der globalen Schnittstellentabelle (GIT) speichern und Abrufen von des Zeigers aus der GIT jedes Mal, die sie verwendet wird. ATL stellt die Klasse [CComGITPtr](../atl/reference/ccomgitptr-class.md) lassen sich in der GIT gespeicherten Schnittstellenzeigern verwenden.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Konzepte](../atl/active-template-library-atl-concepts.md)   
  [CoCreateFreeThreadedMarshaler](http://msdn.microsoft.com/library/windows/desktop/ms694500)   
  [IMarshal](http://msdn.microsoft.com/library/windows/desktop/dd542707)   
- [When to Use the Global Interface Table](http://msdn.microsoft.com/library/windows/desktop/ms693729)   
- [In\-Process Server Threading Issues](http://msdn.microsoft.com/library/windows/desktop/ms687205)
+ [Verwenden der globalen Schnittstellentabelle](http://msdn.microsoft.com/library/windows/desktop/ms693729)   
+ [In-Process-Server Threadingprobleme](http://msdn.microsoft.com/library/windows/desktop/ms687205)
+

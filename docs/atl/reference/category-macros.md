@@ -1,53 +1,59 @@
 ---
-title: Kategorie-Makros | Microsoft-Dokumentation
+title: Kategorie Makros | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
+f1_keywords:
+- atlbase/ATL::AtlGetHexValue
+- atlbase/ATL::AtlGetVersion
+- atlenc/ATL::AtlHexDecode
+- atlenc/ATL::AtlHexDecodeGetRequiredLength
+- atlenc/ATL::AtlHexEncode
+- atlenc/ATL::AtlHexEncodeGetRequiredLength
+- atlenc/ATL::AtlHexValue
+- atlenc/ATL::BEncode
+- atlenc/ATL::BEncodeGetRequiredLength
+- atlenc/ATL::EscapeXML
+- atlenc/ATL::GetExtendedChars
+- atlenc/ATL::IsExtendedChar
+- atlenc/ATL::QEncode
+- atlenc/ATL::QEncodeGetRequiredLength
+- atlenc/ATL::QPDecode
+- atlenc/ATL::QPDecodeGetRequiredLength
+- atlenc/ATL::QPEncode
+- atlenc/ATL::QPEncodeGetRequiredLength
+- atlenc/ATL::UUDecode
+- atlenc/ATL::UUDecodeGetRequiredLength
+- atlenc/ATL::UUEncode
+- atlenc/ATL::UUEncodeGetRequiredLength
+dev_langs: C++
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 26eea5cc8ce8e18af84a9ca89e5ddc94272be44c
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 9c9a34bcc230ebbb55867c1412b24f10dc5134d4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="category-macros"></a>Kategorie-Makros
-Diese Makros definieren Kategorie zugeordnet.  
+Diese Makros definieren Zuordnungen Kategorie.  
   
 |||  
 |-|-|  
 |[BEGIN_CATEGORY_MAP](#begin_category_map)|Markiert den Beginn der Zuordnung Kategorie.|  
 |[END_CATEGORY_MAP](#end_category_map)|Markiert das Ende der Zuordnung Kategorie.|  
-|[IMPLEMENTED_CATEGORY](#implemented_category)|Gibt die Kategorien, die vom COM-Objekt implementiert werden.|  
-|[REQUIRED_CATEGORY](#required_category)|Gibt die Kategorien, die vom COM-Objekt des Containers erforderlich sind.|  
+|[IMPLEMENTED_CATEGORY](#implemented_category)|Gibt an, Kategorien, die von der COM-Objekt implementiert werden.|  
+|[REQUIRED_CATEGORY](#required_category)|Gibt an, Kategorien, die von der COM-Objekt den Container erforderlich sind.|  
 
 ## <a name="requirements"></a>Anforderungen  
- **Header:** Standardschnittstellen  
+ **Header:** atlcom.h  
 
 ##  <a name="begin_category_map"></a>BEGIN_CATEGORY_MAP  
  Markiert den Beginn der Zuordnung Kategorie.  
@@ -58,22 +64,22 @@ BEGIN_CATEGORY_MAP(theClass)
   
 ### <a name="parameters"></a>Parameter  
  `theClass`  
- [in] Der Name der Klasse, die die Zuordnung der Kategorie enthält.  
+ [in] Der Name der Klasse, die die Kategorie-Zuordnung enthält.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Kategorie-Zuordnung wird verwendet, welche Komponentenkategorien angeben, die COM-Klasse implementiert wird und welche Kategorien von seinem Container erfordert.  
+ Die Kategorie-Zuordnung wird verwendet, um welche Komponentenkategorien anzugeben, die COM-Klasse implementiert wird und welche Kategorien aus dem zugehörigen Container erfordert.  
   
- Hinzufügen einer [IMPLEMENTED_CATEGORY](#implemented_category) Eintrag, um die Zuordnung für jede Kategorie, die von der COM-Klasse implementiert. Hinzufügen einer [REQUIRED_CATEGORY](#required_category) Eintrag, um die Zuordnung für jede Kategorie, die die Klasse implementieren Clients erfordert. Markieren Sie am Ende der Zuordnung mit den [END_CATEGORY_MAP](#end_category_map) Makro.  
+ Hinzufügen einer [IMPLEMENTED_CATEGORY](#implemented_category) Eintrag zur Zuordnung für jede Kategorie, die von der COM-Klasse implementiert. Hinzufügen einer [REQUIRED_CATEGORY](#required_category) Eintrag zur Zuordnung für jede Kategorie, die die Klasse seinen Clients implementiert erfordert. Markieren Sie das Ende der Zuordnung mit der [END_CATEGORY_MAP](#end_category_map) Makro.  
   
- Die Komponentenkategorien aufgeführt, die in der Zuordnung werden automatisch registriert werden, wenn das Modul registriert ist, wenn die Klasse eine zugeordnete hat [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) oder [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto).  
+ Die Komponentenkategorien aufgeführt, die in der Zuordnung werden automatisch registriert werden, wenn das Modul registriert wird, wenn die Klasse ein zugehöriges verfügt [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) oder [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) .  
   
 > [!NOTE]
->  ATL verwendet die standardmäßige Komponentenkategorien-Manager Komponentenkategorien zu registrieren. Ist der Manager nicht auf dem System vorhanden, wenn das Modul registriert ist, Registrierung ist erfolgreich, aber die Komponentenkategorien für diese Klasse nicht registriert.  
+>  ATL verwendet Standardkomponente Kategorien-Managers Komponentenkategorien zu registrieren. Ist der Manager nicht auf dem System vorhanden, wenn das Modul registriert ist, Registrierung ist erfolgreich, aber die Komponentenkategorien werden für diese Klasse nicht registriert werden.  
   
- Weitere Informationen zu Komponentenkategorien, finden Sie unter [was Komponentenkategorien sind und deren Funktionsweise](http://msdn.microsoft.com/library/windows/desktop/ms694322) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Weitere Informationen zu den Komponentenkategorien finden Sie unter [was Komponentenkategorien sind und wie Arbeiten sie](http://msdn.microsoft.com/library/windows/desktop/ms694322) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Windowing&#100;](../../atl/codesnippet/cpp/category-macros_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]  
   
 ##  <a name="end_category_map"></a>END_CATEGORY_MAP  
  Markiert das Ende der Zuordnung Kategorie.  
@@ -86,7 +92,7 @@ END_CATEGORY_MAP()
  Siehe das Beispiel für [BEGIN_CATEGORY_MAP](#begin_category_map).  
   
 ##  <a name="implemented_category"></a>IMPLEMENTED_CATEGORY  
- Hinzufügen einer `IMPLEMENTED_CATEGORY` Makro für Ihre Komponentennamens [Kategorie Karte](#begin_category_map) angegeben wird, dass er registriert werden soll, wie die Implementierung der identifizierte Kategorie der `catID` Parameter.  
+ Hinzufügen einer `IMPLEMENTED_CATEGORY` Makro für Ihre Komponentennamens [Kategorie Zuordnung](#begin_category_map) um anzugeben, dass es registriert werden soll, als die Kategorie identifizierte implementieren die `catID` Parameter.  
   
 ```
 IMPLEMENTED_CATEGORY(catID)
@@ -94,32 +100,32 @@ IMPLEMENTED_CATEGORY(catID)
   
 ### <a name="parameters"></a>Parameter  
  `catID`  
- [in] Ein **CATID** Konstante oder Variable mit den globally unique Identifier (GUID) für die implementierten Kategorie. Die Adresse des `catID` wird erstellt und dem Schema hinzugefügt werden. Finden Sie in der folgenden Tabelle eine Auswahl von vordefinierten Kategorien.  
+ [in] Ein **CATID** Konstante oder Variable, die mit den globally unique Identifier (GUID) für die implementierten Kategorie. Die Adresse des `catID` entnommen und dem Schema hinzugefügt. Siehe folgende Tabelle für eine Reihe von vordefinierten Kategorien an.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Komponentenkategorien aufgeführt, die in der Zuordnung werden automatisch registriert werden, wenn das Modul registriert ist, wenn die Klasse eine zugeordnete hat [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) oder [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) Makro.  
+ Die Komponentenkategorien aufgeführt, die in der Zuordnung werden automatisch registriert werden, wenn das Modul registriert wird, wenn die Klasse ein zugehöriges verfügt [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) oder [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) Makro.  
   
- Clients können für die Klasse erfasst Informationen zu den Kategorien verwenden, um seine Funktionen und Anforderungen zu ermitteln, ohne eine Instanz davon erstellen zu müssen.  
+ Clients können die Kategorieinformationen registriert, die für die Klasse verwenden, um seine Funktionen und Anforderungen zu ermitteln, ohne eine Instanz erstellen zu müssen.  
   
- Weitere Informationen zu Komponentenkategorien, finden Sie unter [was Komponentenkategorien sind und deren Funktionsweise](http://msdn.microsoft.com/library/windows/desktop/ms694322) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Weitere Informationen zu den Komponentenkategorien finden Sie unter [was Komponentenkategorien sind und wie Arbeiten sie](http://msdn.microsoft.com/library/windows/desktop/ms694322) im Windows SDK.  
   
 ### <a name="a-selection-of-stock-categories"></a>Eine Auswahl von vordefinierten Kategorien  
   
-|Beschreibung|Symbol|Registrierung GUID|  
+|Beschreibung|Symbol|GUID-Registrierung|  
 |-----------------|------------|-------------------|  
-|Für Scripting sicher sind|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|  
+|Sicher für Skripting|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|  
 |Sicher für Initialisierung|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|  
-|Einfache Frame Site Containment|CATID_SimpleFrameControl|{157083E0-2368-11cf-87B9-00AA006C8166}|  
+|Einfacher Frame-Site-Kapselung|CATID_SimpleFrameControl|{157083E0-2368-11cf-87B9-00AA006C8166}|  
 |einfache Datenbindung|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|  
-|Erweiterte Bindung|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|  
+|Erweiterte Datenbindung|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|  
 |Fensterlose Steuerelemente|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|  
-|Internet-Objekte|Finden Sie unter [Internetobjekte](http://msdn.microsoft.com/library/windows/desktop/ms690561) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] eine Beispiel-Liste.||  
+|Internet unterstützende Objekte|Finden Sie unter [Internetobjekte](http://msdn.microsoft.com/library/windows/desktop/ms690561) in das Windows SDK für eine Beispielliste.||  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Windowing&#100;](../../atl/codesnippet/cpp/category-macros_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]  
   
 ##  <a name="required_category"></a>REQUIRED_CATEGORY  
- Hinzufügen einer `REQUIRED_CATEGORY` Makro für Ihre Komponentennamens [Kategorie Karte](#begin_category_map) angeben, dass es erfordern, die Kategorien von registriert werden soll die `catID` Parameter.  
+ Hinzufügen einer `REQUIRED_CATEGORY` Makro für Ihre Komponentennamens [Kategorie Zuordnung](#begin_category_map) um anzugeben, dass es erfordern, der Kategorie identifizierte registriert werden soll die `catID` Parameter.  
   
 ```
 REQUIRED_CATEGORY( catID )
@@ -127,30 +133,29 @@ REQUIRED_CATEGORY( catID )
   
 ### <a name="parameters"></a>Parameter  
  `catID`  
- [in] Ein **CATID** Konstante oder Variable mit den globally unique Identifier (GUID) für die gewünschte Kategorie. Die Adresse des `catID` wird erstellt und dem Schema hinzugefügt werden. Finden Sie in der folgenden Tabelle eine Auswahl von vordefinierten Kategorien.  
+ [in] Ein **CATID** Konstante oder Variable, die mit den globally unique Identifier (GUID) für die Anforderungskategorie. Die Adresse des `catID` entnommen und dem Schema hinzugefügt. Siehe folgende Tabelle für eine Reihe von vordefinierten Kategorien an.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Komponentenkategorien aufgeführt, die in der Zuordnung werden automatisch registriert werden, wenn das Modul registriert ist, wenn die Klasse eine zugeordnete hat [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) oder [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) Makro.  
+ Die Komponentenkategorien aufgeführt, die in der Zuordnung werden automatisch registriert werden, wenn das Modul registriert wird, wenn die Klasse ein zugehöriges verfügt [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) oder [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) Makro.  
   
- Clients können für die Klasse erfasst Informationen zu den Kategorien verwenden, um seine Funktionen und Anforderungen zu ermitteln, ohne eine Instanz davon erstellen zu müssen. Z. B. möglicherweise ein Steuerelement, dass ein Container Bindung unterstützen. Container kann herausfinden, ob es die Funktionalität zum Hosten des Steuerelements durch Abfragen der Kategorie-Manager für die Kategorien, die von diesem Steuerelement erforderlich ist. Wenn der Container eine erforderliche Funktion nicht unterstützt, kann es ablehnen zum Hosten des COM-Objekts.  
+ Clients können die Kategorieinformationen registriert, die für die Klasse verwenden, um seine Funktionen und Anforderungen zu ermitteln, ohne eine Instanz erstellen zu müssen. Beispielsweise kann ein Steuerelement die Datenbindung zu ein Container unterstützen erforderlich. Die Container erhalten, wenn sie die Funktionen, die zum Hosten des Steuerelements durch Abfragen des Category-Managers für die Kategorien, die erforderlich sind, indem das entsprechende Steuerelement verfügt. Wenn der Container eine erforderliche Funktion nicht unterstützt, kann es ablehnen zum Hosten des COM-Objekts.  
   
- Weitere Informationen zu Komponentenkategorien, einschließlich einer Beispielliste finden Sie unter [was Komponentenkategorien sind und deren Funktionsweise](http://msdn.microsoft.com/library/windows/desktop/ms694322) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Weitere Informationen zu Komponentenkategorien, einschließlich einer Beispielliste finden Sie unter [was Komponentenkategorien sind und wie Arbeiten sie](http://msdn.microsoft.com/library/windows/desktop/ms694322) im Windows SDK.  
   
 ### <a name="a-selection-of-stock-categories"></a>Eine Auswahl von vordefinierten Kategorien  
   
-|Beschreibung|Symbol|Registrierung GUID|  
+|Beschreibung|Symbol|GUID-Registrierung|  
 |-----------------|------------|-------------------|  
-|Für Scripting sicher sind|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|  
+|Sicher für Skripting|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|  
 |Sicher für Initialisierung|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|  
-|Einfache Frame Site Containment|CATID_SimpleFrameControl|{157083E0-2368-11cf-87B9-00AA006C8166}|  
+|Einfacher Frame-Site-Kapselung|CATID_SimpleFrameControl|{157083E0-2368-11cf-87B9-00AA006C8166}|  
 |einfache Datenbindung|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|  
-|Erweiterte Bindung|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|  
+|Erweiterte Datenbindung|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|  
 |Fensterlose Steuerelemente|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|  
-|Internet-Objekte|Finden Sie unter [Internetobjekte](http://msdn.microsoft.com/library/windows/desktop/ms690561) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] eine Beispiel-Liste.||  
+|Internet unterstützende Objekte|Finden Sie unter [Internetobjekte](http://msdn.microsoft.com/library/windows/desktop/ms690561) in das Windows SDK für eine Beispielliste.||  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Windowing&#135;](../../atl/codesnippet/cpp/category-macros_2.h)]  
+ [!code-cpp[NVC_ATL_Windowing#135](../../atl/codesnippet/cpp/category-macros_2.h)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [Makros](../../atl/reference/atl-macros.md)
-

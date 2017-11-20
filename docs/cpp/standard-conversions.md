@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - standard conversions, categories of
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 97967ad789fe5491aec2be983f28a08e2c143b95
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 954ba431378317a3f9079677f49223a336af5d9e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="standard-conversions"></a>Standardkonvertierungen
 Die Programmiersprache C++ definiert Konvertierungen zwischen ihren grundlegenden Typen. Sie definiert auch Konvertierungen für Zeiger- und Verweistypen sowie und für abgeleitete "pointer-to-member"-Typen. Diese Konvertierungen werden als Standardkonvertierungen bezeichnet. (Weitere Informationen über Typen, Standardtypen und abgeleiteten Typen finden Sie unter [Typen](http://msdn.microsoft.com/en-us/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
@@ -80,11 +77,11 @@ long_num2 = int_num * long_num2;
   
  Wertneutrale Erweiterungen und vorzeichenneutrale Erweiterungen erzeugen normalerweise dieselben Ergebnisse. Allerdings können sie zu unterschiedlichen Ergebnissen führen, wenn das erweiterte Objekt eines der folgenden ist:  
   
--   Ein Operand vom ** / **, `%`, `/=`, `%=`, ** < **, ** \< = **, ** > **, oder**>=**  
+-   Ein Operand vom  **/** , `%`, `/=`, `%=`,  **<** ,  **\< =** ,  **>** , oder**>=**  
   
      Diese Operatoren benötigen Vorzeichen zum Bestimmen des Ergebnisses. Daher ergeben wert- und vorzeichenneutrale Erweiterungen andere Ergebnisse, wenn sie auf diese Operanden angewendet werden.  
   
--   Der linke Operand des ** >> ** oder**>>=**  
+-   Der linke Operand des  **>>**  oder**>>=**  
   
      Diese Operatoren behandeln Mengen mit Vorzeichen und Mengen ohne Vorzeichen unterschiedlich, wenn eine Verschiebeoperation ausgeführt wird. Für Mengen mit Vorzeichen wird das Vorzeichenbit beim Verschieben einer Menge nach rechts in die frei werdenden Bitpositionen übertragen. Bei Mengen ohne Vorzeichen werden die frei werdenden Bitpositionen mit Nullen gefüllt.  
   
@@ -253,12 +250,12 @@ int main()
  Der Zeiger `pA` ist vom Typ `A *`, der als "Zeiger auf ein Objekt vom Typ `A`" interpretiert werden kann. Mitglieder der `bObject` `(`wie z. B. `BComponent` und `BMemberFunc`) gelten nur für geben `B` und sind daher nicht zugegriffen werden kann, über `pA`. Der `pA`-Zeiger erlaubt nur Zugriff auf die Eigenschaften (Memberfunktionen und Daten) des Objekts, die in der Klasse `A` definiert sind.  
   
 ### <a name="pointer-to-function"></a>Zeiger auf Funktion  
- Ein Zeiger auf eine Funktion kann in den Typ konvertiert werden **"void" \* **, wenn Typ **"void" \* ** ist groß genug, um diesen Zeiger aufzunehmen.  
+ Ein Zeiger auf eine Funktion kann in den Typ konvertiert werden **"void" \*** , wenn Typ **"void" \***  ist groß genug, um diesen Zeiger aufzunehmen.  
   
 ### <a name="pointer-to-void"></a>Zeiger auf void  
  Zeiger auf den Typ `void` können in Zeiger auf einen beliebigen anderen Typ konvertiert werden, aber nur mit einer expliziten Typumwandlung (im Gegensatz zu C). (Siehe [Ausdrücke mit expliziten Typkonvertierungen](http://msdn.microsoft.com/en-us/060ad6b4-9592-4f3e-8509-a20ac84a85ae) Weitere Informationen zu Typumwandlungen.) Ein Zeiger auf einen beliebigen Typ kann implizit in einen Zeiger auf Typ `void` konvertiert werden. Ein Zeiger auf ein unvollständiges Objekt eines Typ kann in einen Zeiger auf `void` (implizit) und wieder zurück (explizit) konvertiert werden. Das Ergebnis einer solchen Konvertierung entspricht dem Wert des ursprünglichen Zeigers. Ein Objekt gilt als unvollständig, wenn es zwar deklariert ist, die Informationen zur Bestimmung seiner Größe oder Basisklasse jedoch unzureichend sind.  
   
- Ein Zeiger auf ein Objekt, das nicht **const** oder `volatile` implizit in einen Zeiger vom Typ konvertiert werden können **"void" \* **.  
+ Ein Zeiger auf ein Objekt, das nicht **const** oder `volatile` implizit in einen Zeiger vom Typ konvertiert werden können **"void" \*** .  
   
 ### <a name="const-and-volatile-pointers"></a>const- und volatile-Zeiger  
  C++ stellt keine standardkonvertierung von einem **const** oder `volatile` Typ in einen Typ, der nicht **const** oder `volatile`. Allerdings kann jede Art der Konvertierung mithilfe expliziter Typumwandlungen festgelegt werden (einschließlich unsicherer Konvertierungen).  

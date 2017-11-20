@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- malloc
+apiname: malloc
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,38 +21,21 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- malloc
-dev_langs:
-- C++
+f1_keywords: malloc
+dev_langs: C++
 helpviewer_keywords:
 - malloc function
 - memory allocation
 ms.assetid: 144fcee2-be34-4a03-bb7e-ed6d4b99eea0
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 3c024862e1bf993c4e602846d4da125599f3fe7f
-ms.contentlocale: de-de
-ms.lasthandoff: 03/29/2017
-
+ms.openlocfilehash: 72dd949aa8d894ba49f53a6440de20beea070e2b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="malloc"></a>malloc
 Weist Speicherblöcke zu.  
@@ -72,7 +53,7 @@ void *malloc(
  Zuzuordnende Bytes.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `malloc` gibt einen void-Zeiger auf den zugeordneten Speicherplatz oder `NULL` zurück, wenn nicht genügend Speicher verfügbar ist. Um einen Zeiger auf einen anderen Typ als `void` zurückzugeben, verwenden Sie eine Typumwandlung für den Rückgabewert. Es ist sichergestellt, dass der Speicherplatz, auf den der Rückgabewert zeigt, passend für einen Speicher von einem beliebigen Objekttyp ist, dessen Ausrichtungsanforderungen kleiner oder gleich der grundlegenden Ausrichtung sind. (In Visual C++ ist die grundlegende Ausrichtung die Ausrichtung, die für `double` oder 8 Bytes erforderlich ist. In einem Code, der auf 64-Bit-Plattformen ausgerichtet ist, sind es 16 Bytes.) Verwenden Sie [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md), um Speicher für Objekte mit höheren Ausrichtungsanforderungen zuzuordnen, beispielsweise die SSE-Typen [__m128](../../cpp/m128.md) und `__m256` und Typen, die durch das Verwenden von `__declspec(align(``n``))` deklariert werden, wobei `n` größer ist als 8. Wenn `size` 0 ist, weist `malloc` ein Element der Länge 0 im Heap zu und gibt einen gültigen Zeiger auf dieses Element zurück. Überprüfen Sie immer die Rückgabe von `malloc`, auch wenn der angeforderte Speicherplatz klein ist.  
+ `malloc` gibt einen void-Zeiger auf den zugeordneten Speicherplatz oder `NULL` zurück, wenn nicht genügend Speicher verfügbar ist. Um einen Zeiger auf einen anderen Typ als `void` zurückzugeben, verwenden Sie eine Typumwandlung für den Rückgabewert. Es ist sichergestellt, dass der Speicherplatz, auf den der Rückgabewert zeigt, passend für einen Speicher von einem beliebigen Objekttyp ist, dessen Ausrichtungsanforderungen kleiner oder gleich der grundlegenden Ausrichtung sind. (In Visual C++ ist die grundlegende Ausrichtung die Ausrichtung, die für `double` oder 8 Bytes erforderlich ist. In einem Code, der auf 64-Bit-Plattformen ausgerichtet ist, sind es 16 Bytes.) Verwenden Sie [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md), um Speicher für Objekte mit höheren Ausrichtungsanforderungen zuzuordnen, beispielsweise die SSE-Typen [__m128](../../cpp/m128.md) und `__m256` und Typen, die durch das Verwenden von `__declspec(align( n ))` deklariert werden, wobei `n` größer ist als 8. Wenn `size` 0 ist, weist `malloc` ein Element der Länge 0 im Heap zu und gibt einen gültigen Zeiger auf dieses Element zurück. Überprüfen Sie immer die Rückgabe von `malloc`, auch wenn der angeforderte Speicherplatz klein ist.  
   
 ## <a name="remarks"></a>Hinweise  
  Die `malloc`-Funktion weist einen Speicherblock von mindestens `size` Bytes zu. Der Block kann aufgrund des Platzes, der für die Ausrichtung und die Wartungsinformationen benötigt wird, größer sein als `size` Bytes.  
@@ -154,4 +135,3 @@ Memory freed
  [free](../../c-runtime-library/reference/free.md)   
  [realloc](../../c-runtime-library/reference/realloc.md)   
  [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md)
-

@@ -1,32 +1,32 @@
 ---
-title: "Gewusst wie: Konvertieren einer Standardzeichenfolge nach System::String | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C++-Standardbibliothek, Konvertieren von Zeichenfolgen in System::String"
-  - "Zeichenfolgenkonvertierung [C++], Zeichenfolge in C++-Standardbibliothek"
-  - "Zeichenfolgen [C++], Konvertieren"
+title: 'Vorgehensweise: Konvertieren einer Standardzeichenfolge nach System:: String | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- C++ Standard Library, converting strings to System::String
+- string conversion [C++], C++ Standard Library string
+- strings [C++], converting
 ms.assetid: 1fde79a0-9d0b-44e5-981b-e8f2676c199d
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: eca51cbafdb858b511facfaee5ff4dd55786c856
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Gewusst wie: Konvertieren einer Standardzeichenfolge nach System::String
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In diesem Thema wird das Konvertieren einer Standardzeichenfolge aus einer C\+\+\-Bibliothek \([\<string\>](../standard-library/string.md)\) nach <xref:System.String> beschrieben.  
+# <a name="how-to-convert-standard-string-to-systemstring"></a>Gewusst wie: Konvertieren einer Standardzeichenfolge nach System::String
+In diesem Thema wird das Konvertieren einer C++-Standardbibliothek ([\<Zeichenfolge >](../standard-library/string.md)) zu einem <xref:System.String>.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // convert_standard_string_to_system_string.cpp  
@@ -48,8 +48,11 @@ int main() {
 }  
 ```  
   
-  **Testen**  
-**Testen**  
-**Testen**   
-## Siehe auch  
- [Verwenden von C\+\+\-Interop \(implizites PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+```Output  
+test  
+test  
+test  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Verwenden von C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

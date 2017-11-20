@@ -1,35 +1,36 @@
 ---
-title: "Design Principles for Collection and Enumerator Interfaces | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "collection interfaces"
-  - "enumerator interfaces"
+title: Entwerfen von Auflistung und Enumerator-Schnittstellen (ATL) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- enumerator interfaces
+- collection interfaces
 ms.assetid: ea19a39e-6333-41a1-be62-5435c236640e
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 40aa94226b93a42b14dfd23a64e12fff00e22729
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Design Principles for Collection and Enumerator Interfaces
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="design-principles-for-collection-and-enumerator-interfaces"></a>Entwurfsprinzipien für Sammlung und den Enumerator-Schnittstellen
+Es gibt verschiedene Entwurfsprinzipien für jeden Typ der Schnittstelle:  
+  
+-   Stellt eine sammlungsschnittstelle *zufällige* Zugriff auf eine *einzelne* Element in der Auflistung über die **Element** -Methode, können Sie ermitteln, wie viele Elemente in der Auflistung werden Clients über die **Anzahl** -Eigenschaft, und oft ermöglicht es Clients, hinzufügen und Entfernen von Elementen.  
+  
+-   Stellt eine Enumeratorschnittstelle *serielle* Zugriff auf *mehrere* Elemente in einer Auflistung, es kann keine des Clients zu ermitteln, wie viele Elemente in der Sammlung befinden (bis der Enumerator zurückgeben beendet Elemente), und es bietet keine Möglichkeit zum Hinzufügen oder Entfernen von Elementen.  
+  
+ Jeder Typ der Schnittstelle spielt eine andere Rolle Zugriff auf die Elemente in einer Sammlung bereitstellen.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Auflistungen und-Enumerationen](../atl/atl-collections-and-enumerators.md)
 
-Es gibt verschiedene Entwurfsprinzipien hinter jedem Typ Schnittstelle:  
-  
--   Eine Auflistungsschnittstelle stellt *wahlfreien Zugriff* auf ein *einzelnes*\-Element in der Auflistung über die **Item** Möglichkeit, können sie Client ermitteln, wie viele Elemente in der Auflistung über die **Count**\-Eigenschaft sind, und können häufig Client, um Elemente hinzuzufügen und zu entfernen.  
-  
--   Eine Enumeratorschnittstelle bietet *seriellen* Zugriff auf *mehrere* Elemente in einer Auflistung, sie erlaubt dem Client nicht, zu ermitteln, wie viele Elemente in der Auflistung sind \(bis der Enumerator aufhört, Elemente zurückzugeben\), und sie stellt keine Methode zum Hinzufügen oder Entfernen von Elementen bereit.  
-  
- Jeder Typ Schnittstelle gibt eine andere Rolle erneut, wenn er den Zugriff auf die Elemente einer Auflistung bietet.  
-  
-## Siehe auch  
- [Auflistungen und Enumerationen](../atl/atl-collections-and-enumerators.md)

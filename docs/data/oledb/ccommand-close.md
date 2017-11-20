@@ -1,53 +1,52 @@
 ---
-title: "CCommand::Close | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CCommand.Close"
-  - "CCommand::Close"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Close-Methode"
+title: 'CCommand:: Close | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CCommand.Close
+- CCommand::Close
+dev_langs: C++
+helpviewer_keywords: Close method
 ms.assetid: 4da9c02c-7082-4e47-a0fa-78b546f0f7d2
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 51ed32c8c4298198b0d54390151e4a904ebd918d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# CCommand::Close
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Gibt das Accessorrowset frei, das dem Befehl zugeordnet ist.  
+# <a name="ccommandclose"></a>CCommand::Close
+Gibt den Accessor-Rowset, das mit dem Befehl verknüpfte frei.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void Close( );  
 ```  
   
-## Hinweise  
- Ein Befehl verwendet ein Rowset, Resultsetaccessor und \(optional\) einen Parameteraccessor \(außer Tabellen, die keine Parameter unterstützen und keinen Parameteraccessor erfordern\).  
+## <a name="remarks"></a>Hinweise  
+ Ein Befehl verwendet ein Rowset, Ergebnis Set-Accessor und (optional) Parameteraccessor (im Gegensatz zu Tabellen, bei denen unterstützen keine Parameter und Parameteraccessor ist nicht erforderlich).  
   
- Wenn Sie einen Befehl ausführen, müssen Sie `Close` und [ReleaseCommand](../../data/oledb/ccommand-releasecommand.md) nach dem Befehl aufrufen.  
+ Wenn Sie einen Befehl ausführen, sollten Sie beide Aufrufen `Close` und [ReleaseCommand](../../data/oledb/ccommand-releasecommand.md) nach dem Befehl.  
   
- Wenn Sie den gleichen Befehl wiederholt ausführen möchten, sollten Sie jeden Resultsetaccessor freigeben, indem Sie `Close` aufrufen, bevor Sie `Execute` aufrufen.  Am Ende der Zeile, sollten Sie den Parameteraccessor schützen, indem Sie `ReleaseCommand` aufrufen.  Ein anderes allgemeines Szenario ruft eine gespeicherte Prozedur auf, die einzigen Ausgabeparameter.  Auf vielen Anbietern \(wie dem OLE DB\-Anbieter für SQL Server\) sind der Ausgabeparameterwerte nicht zugreifen, bis Sie den Resultsetaccessor schließen.  Rufen Sie `Close` auf, um den zurückgegebenen Rowset\- und Resultsetaccessor zu schließen, jedoch nicht den Parameteraccessor und Sie so können, um der Ausgabeparameterwerte.  
+ Wenn Sie denselben Befehl wiederholt ausführen möchten, sollten Sie jedes Ergebnis Set-Accessor freigeben, durch den Aufruf `Close` vor dem Aufruf `Execute`. Sie sollten die Parameteraccessor durch Aufrufen von freigeben, am Ende der Reihe `ReleaseCommand`. Ein weiteres gängiges Szenario ist das Aufrufen einer gespeicherten Prozedur, die Output-Parameter verfügt. Auf viele Anbieter (z. B. der OLE DB-Anbieter für SQL Server) können die Werte der Ausgabeparameter nicht zugegriffen werden, bis Sie die Set-Zugriffsmethode Ergebnis schließen. Rufen Sie `Close` um das zurückgegebene Rowset und Ergebnis-Set-Accessor, jedoch nicht die Parameteraccessor zu schließen, wodurch Sie die Ausgabeparameterwerte abgerufen.  
   
-## Beispiel  
- Das folgende Beispiel zeigt, wie Sie `Close` und `ReleaseCommand` aufrufen können, wenn Sie den gleichen Befehl wiederholt ausführen.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt, wie Sie aufrufen können `Close` und `ReleaseCommand` Wenn Sie denselben Befehl wiederholt ausführen.  
   
- [!CODE [NVC_OLEDB_Consumer#2](../CodeSnippet/VS_Snippets_Cpp/NVC_OLEDB_Consumer#2)]  
+ [!code-cpp[NVC_OLEDB_Consumer#2](../../data/oledb/codesnippet/cpp/ccommand-close_1.cpp)]  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  
   
-## Siehe auch  
- [CCommand\-Klasse](../../data/oledb/ccommand-class.md)   
+## <a name="see-also"></a>Siehe auch  
+ [CCommand-Klasse](../../data/oledb/ccommand-class.md)   
  [CCommand::ReleaseCommand](../../data/oledb/ccommand-releasecommand.md)

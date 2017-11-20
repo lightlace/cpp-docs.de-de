@@ -1,44 +1,43 @@
 ---
-title: "/SYMBOLS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/symbols"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/SYMBOLS (dumpbin-Option)"
-  - "Öffentliche Symbols"
-  - "Symboltabellen"
-  - "SYMBOLS (dumpbin-Option)"
-  - "-SYMBOLS (dumpbin-Option)"
-  - "Symbole, Anzeigen der COFF-Symboltabelle"
-  - "Symbole, Dumperstellung"
+title: -SYMBOLE | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /symbols
+dev_langs: C++
+helpviewer_keywords:
+- symbols, dumping
+- public symbols
+- symbols, displaying COFF symbol table
+- symbol tables
+- SYMBOLS dumpbin option
+- /SYMBOLS dumpbin option
+- -SYMBOLS dumpbin option
 ms.assetid: 34bcae90-4561-4c77-a80c-065508dec39a
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 360f26de5043eae7f5cdb4688612f95b96be8fbd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# /SYMBOLS
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="symbols"></a>/SYMBOLS
 ```  
 /SYMBOLS  
 ```  
   
- Durch diese Option wird die COFF\-Symboltabelle angezeigt.  Symboltabellen gibt es in allen Objektdateien.  Eine COFF\-Symboltabelle wird nur in einer Bilddatei angezeigt, wenn sie mit **\/DEBUG** verknüpft ist.  
+ Diese Option zeigt die COFF-Symboltabelle. Symboltabellen sind in allen Objektdateien vorhanden. Nur, wenn sie mit "/ Debug" verknüpft ist, wird in eine Bilddatei eine COFF-Symboltabelle angezeigt.  
   
- Im Folgenden sehen Sie eine Beschreibung der **\/SYMBOLS**\-Ausgabe.  Zusätzliche Informationen zur Bedeutung der **\/SYMBOLS**\-Ausgabe finden Sie in **winnt.h** \(IMAGE\_SYMBOL und IMAGE\_AUX\_SYMBOL\) oder in der COFF\-Dokumentation.  
+ Im folgenden ist eine Beschreibung der Ausgabe für/Symbols. Weitere Informationen zur Bedeutung der/Symbols Ausgabe kann durch einen Blick in "Winnt.h" (IMAGE_SYMBOL und IMAGE_AUX_SYMBOL) oder in COFF-Dokumentation gefunden werden.  
   
- Betrachten Sie das folgende Dumpbeispiel:  
+ Betrachten Sie das folgende Beispiel Speicherabbild:  
   
 ```  
 Dump of file main.obj  
@@ -63,18 +62,18 @@ Summary
       23 .text  
 ```  
   
-## Hinweise  
- In der folgenden Beschreibung werden bei Zeilen, die mit einer Symbolnummer beginnen, die Spalten mit wichtigen Informationen für den Benutzer erörtert:  
+## <a name="remarks"></a>Hinweise  
+ Die folgende Beschreibung, die Zeilen, die mit einer Zahl Symbol beginnen beschreibt Spalten, die für Benutzer relevante Informationen an:  
   
--   Die erste dreistellige Nummer entspricht dem Symbolindex bzw. der Symbolnummer.  
+-   Die erste dreistellige Zahl wird das Symbol Indexnummer.  
   
--   Enthält die dritte Spalte den Eintrag SECT*x*, ist das Symbol im betreffenden Abschnitt der Objektdatei definiert.  Wenn UNDEF angezeigt wird, ist es nicht in diesem Objekt definiert und muss anderweitig aufgelöst werden.  
+-   Wenn die dritte Spalte SECT enthält*x*, das Symbol ist in diesem Abschnitt der Objektdatei definiert. Aber wenn UNDEF angezeigt wird, ist nicht in diesem Objekt definiert und muss behoben werden, an anderer Stelle.  
   
--   Durch die fünfte Spalte \(Static, External\) wird angegeben, ob das Symbol nur in diesem Objekt sichtbar oder ob es öffentlich \(d. h. extern sichtbar\) ist.  Ein `Static`\-Symbol **\_sym** würde nicht mit einem `Public`\-Symbol **\_sym** verknüpft werden, da es sich um zwei verschiedene Funktionsinstanzen mit dem Namen "\_sym" handelt.  
+-   Die fünfte Spalte (statisch und extern) informiert, ob das Symbol nur innerhalb dieses Objekt sichtbar ist, oder ob er öffentlich ist (sichtbar extern). Ein statisches Symbols _sym würde nicht mit einem öffentlichen Symboldateien _sym verknüpft werden; Diese würde zwei verschiedene Instanzen von Funktionen, die mit dem Namen _sym sein.  
   
- Die letzte Spalte in einer nummerierten Zeile entspricht dem Symbolnamen, der ergänzt oder nicht ergänzt sein kann.  
+ Die letzte Spalte in einer nummerierten Zeile wird den Symbolnamen, ergänzt sowohl undekorierten.  
   
- Für Dateien, die mit der [\/GL](../../build/reference/gl-whole-program-optimization.md)\-Compileroption erstellt wurden, kann nur die DUMPBIN\-Option [\/HEADERS](../../build/reference/headers.md) verwendet werden.  
+ Nur die [/Headers](../../build/reference/headers.md) DUMPBIN-Option ist verfügbar für die Verwendung in den Dateien erstellt wird, mit der [/GL](../../build/reference/gl-whole-program-optimization.md) -Compileroption.  
   
-## Siehe auch  
- [DUMPBIN\-Optionen](../../build/reference/dumpbin-options.md)
+## <a name="see-also"></a>Siehe auch  
+ [DUMPBIN-Optionen](../../build/reference/dumpbin-options.md)

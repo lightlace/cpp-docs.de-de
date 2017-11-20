@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - array-element initializers
 - initializing arrays [C++], initializers
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - declarators, as initializers
 - initializers, array element
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: d58a1d8ed688f927719411bdae29fe08969961c5
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 17231b9d541163d5b14509bafb991fcd32215fca
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="initializers"></a>Initialisierer
 Ein Initialisierer gibt den Anfangswert einer Variablen an. Sie können Variablen in diesen Kontexten initialisieren:  
@@ -530,11 +527,10 @@ int main()
  ![Entscheidungsdiagramm zur Initialisierung von Verweistypen](../cpp/media/vc38s71.gif "vc38S71")  
 Entscheidungsdiagramm zur Initialisierung von Verweistypen  
   
- Verweise auf `volatile` Typen (deklariert als `volatile` *Typename* ** & ** *Bezeichner*) initialisiert werden kann, mit `volatile` Objekte des gleichen Typs oder mit Objekten, die nicht als deklariert worden sein `volatile`. Sie können jedoch nicht, initialisiert werden, mit **const** Objekte dieses Typs. Auf ähnliche Weise Verweise auf **const** Typen (deklariert als **const** *Typename* ** & ** *Bezeichner *) initialisiert werden kann, mit **const** Objekte desselben Typs (oder, das eine Konvertierung in diesen Typ oder mit Objekten, die nicht als deklariert worden sein **const**). Sie können jedoch nicht mit `volatile`-Objekten dieses Typs initialisiert werden.  
+ Verweise auf `volatile` Typen (deklariert als `volatile` *Typename*  **&**  *Bezeichner*) initialisiert werden kann, mit `volatile` Objekte des gleichen Typs oder mit Objekten, die nicht als deklariert worden sein `volatile`. Sie können jedoch nicht, initialisiert werden, mit **const** Objekte dieses Typs. Auf ähnliche Weise Verweise auf **const** Typen (deklariert als **const** *Typename*  **&**  *Bezeichner* ) initialisiert werden kann, mit **const** Objekte desselben Typs (oder, das eine Konvertierung in diesen Typ oder mit Objekten, die nicht als deklariert worden sein **const**). Sie können jedoch nicht mit `volatile`-Objekten dieses Typs initialisiert werden.  
   
  Verweise, die entweder mit nicht qualifiziert sind die **const** oder `volatile` Schlüsselwort kann nur mit Objekten, die als weder deklariert initialisiert werden **const** noch `volatile`.  
   
 ### <a name="initialization-of-external-variables"></a>Initialisierung von externen Variablen  
  Deklarationen von automatischen, statischen und externen Variablen können Initialisierer enthalten. Allerdings können Deklarationen von externen Variablen nur dann Initialisierer enthalten, wenn die Variablen nicht als `extern` deklariert werden.
   
-

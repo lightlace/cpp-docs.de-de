@@ -1,49 +1,48 @@
 ---
-title: "fetestexcept1 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fetestexcept"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fetestexcept"
-  - "fenv/fetestexcept"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Fetestexept-Funktion"
+title: fetestexcept1 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname: fetestexcept
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fetestexcept
+- fenv/fetestexcept
+dev_langs: C++
+helpviewer_keywords: fetestexept function
 ms.assetid: ca4dc43f-5573-440d-bc19-ead7571b13dc
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a2fa4448bc71fc8b01abffaa0655f63e6ef474a0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# fetestexcept
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Bestimmt, welcher der angegebenen Gleitkommaausnahme Status\-Flags momentan festgelegt sind.  
+# <a name="fetestexcept"></a>fetestexcept
+Bestimmt, welche der angegebenen Gleitkommaausnahme-Statusflags momentan festgelegt sind  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 int fetestexcept(  
@@ -52,38 +51,38 @@ int fetestexcept(
   
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `excepts`  
- Eine bitweise OR Gleitkomma\-Status\-Flags zu testen.  
+ Bitweiser OR der zu testenden Gleitkomma-Statusflags  
   
-## Rückgabewert  
- Legen bei Erfolg gibt eine Bitmaske, die mit einer bitweisen OR der Gleitkommaausnahme Makros, die derzeit den Ausnahme\-Status\-Flags entsprechen. Gibt 0, wenn keine Ausnahmen werden festgelegt.  
+## <a name="return-value"></a>Rückgabewert  
+ Gibt bei Erfolg eine Bitmaske mit einem bitweisen OR der Gleitkommaausnahme-Makros zurück, die den derzeit festgelegten Ausnahmestatusflags entsprechen. Gibt 0 zurück, wenn keine Ausnahmen festgelegt wurden.  
   
-## Hinweise  
- Verwenden Sie die Fetestexcept\-Funktion, um zu bestimmen, welche Ausnahmen ausgelöst wurden, durch einen Gleitkommawert Vorgang zeigen. Verwenden der `excepts` Parameter, um die Ausnahme\-Status\-Flags zu testen. Die `fetestexcept` \-Funktion verwendet diese in \< fenv.h \> in Ausnahmemakros `excepts` und der Rückgabewert:  
+## <a name="remarks"></a>Hinweise  
+ Verwenden Sie die Funktion „fetestexcept“, um zu bestimmen, welche Ausnahmen durch einen Gleitkommavorgang ausgelöst wurden. Verwenden Sie den Parameter `excepts`, um die zu testenden Ausnahmestatusflags anzugeben. Die Funktion `fetestexcept` verwendet diese in \<fenv.h> definierten Ausnahmemakros in `excepts` und den Rückgabewert:  
   
-|Ausnahme\-Makro|Beschreibung|  
-|---------------------|------------------|  
-|FE\_DIVBYZERO|Eine Singularität oder pol Fehler in einer zuvor Gleitkommaoperation; ein Unendlichkeitswert erstellt wurde.|  
-|FE\_INEXACT|Die Funktion wurde erzwungen, das gespeicherte Ergebnis einer zuvor Gleitkommaoperation gerundet.|  
-|FE\_INVALID|Domänenfehler in einer zuvor Gleitkommaoperation.|  
-|FE\_OVERFLOW|Ein Fehler aufgetreten. eine frühere Gleitkommaoperation Ergebnis war zu groß dargestellt werden soll.|  
-|FE\_UNDERFLOW|Eine frühere Gleitkommaoperation Ergebnis war zu klein für die bei voller Genauigkeit dargestellt werden; ein Denormal\-Wert wurde erstellt.|  
-|FE\_ALLEXCEPT|Der bitweise OR aller unterstützt Gleitkommaausnahmen.|  
+|Ausnahmemakro|Beschreibung|  
+|---------------------|-----------------|  
+|FE_DIVBYZERO|Eine Singularität oder ein Polstellenfehler aus einer früheren Gleitkommaoperation; ein Unendlichkeitswert wurde erstellt.|  
+|FE_INEXACT|Die Funktion wurde gezwungen, das gespeicherte Ergebnis einer früheren Gleitkommaoperation zu runden.|  
+|FE_INVALID|Ein Domänenfehler ist in einer früheren Gleitkommaoperation aufgetreten.|  
+|FE_OVERFLOW|Ein Bereichsfehler ist aufgetreten; das Ergebnis einer früheren Gleitkommaoperation war zu groß, um dargestellt zu werden.|  
+|FE_UNDERFLOW|Das Ergebnis einer früheren Gleitkommaoperation war zu klein, um ganz genau dargestellt zu werden; ein nicht normaler Wert wurde erstellt.|  
+|FE_ALLEXCEPT|Bitweiser OR-Operator oder alle unterstützten Gleitkommaausnahmen|  
   
- Das angegebene `excepts` Argument kann 0 sein, einer der unterstützten Gleitkommaausnahme Makros oder das bitweise oder der zwei oder mehr der Makros. Die Auswirkung eines anderen `excepts` Argumentwert ist nicht definiert.  
+ Das angegebene Argument `excepts` kann entweder 0, eines der unterstützten Gleitkommaausnahme-Makros oder das bitweise OR von mindestens zwei der Makros sein. Der Effekt von jedem anderen `excepts`-Argumentwert ist nicht definiert.  
   
- Um diese Funktion verwenden zu können, müssen Sie wieder deaktivieren Gleitkomma Optimierungen, die Zugriff mithilfe von verhindern könnten die `#pragma fenv_access(on)` Richtlinie vor dem Aufruf. Weitere Informationen finden Sie unter [fenv\_access](../../preprocessor/fenv-access.md).  
+ Um diese Funktion zu verwenden, müssen Sie vor dem Aufruf Gleitkommaoptimierungen deaktivieren, die den Zugriff mithilfe der `#pragma fenv_access(on)`-Direktive verhindern könnten. Weitere Informationen finden Sie unter [fenv_access](../../preprocessor/fenv-access.md).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Funktion|C\-Header|C\+\+\-Header|  
-|--------------|---------------|-------------------|  
-|`fetestexcept`|\<fenv.h\>|\<cfenv\>|  
+|Funktion|C-Header|C++-Header|  
+|--------------|--------------|------------------|  
+|`fetestexcept`|\<fenv.h>|\<cfenv>|  
   
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
+ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Alphabetische Funktionsreferenz](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [feclearexcept](../../c-runtime-library/reference/feclearexcept1.md)   
  [feraiseexcept](../../c-runtime-library/reference/feraiseexcept.md)

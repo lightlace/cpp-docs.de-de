@@ -1,26 +1,26 @@
 ---
-title: "Sprachspezifischer Handler | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Sprachspezifischer Handler | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 6503e0cd-2d3a-4330-a925-8bed8c27c2be
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3f9e548dc3c9262349fc05bd6bea19290b57ad94
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Sprachspezifischer Handler
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die relative Adresse des sprachspezifischen Handlers ist in UNWIND\_INFO vorhanden, wenn die Flags UNW\_FLAG\_EHANDLER oder UNW\_FLAG\_UHANDLER festgelegt sind.  Wie im vorherigen Abschnitt beschrieben, wird der sprachspezifische Handler als Teil der Suche nach einem Ausnahmehandler oder als Teil eines Entladevorgangs aufgerufen.  Er besitzt folgenden Prototyp:  
+# <a name="language-specific-handler"></a>Sprachspezifischer Handler
+Die relative Adresse der sprachspezifischer Handler ist in UNWIND_INFO vorhanden, wenn Flags UNW_FLAG_EHANDLER oder UNW_FLAG_UHANDLER festgelegt sind. Wie im vorherigen Abschnitt beschrieben wird, wird die sprachspezifischer Handler als Teil der Suche nach einem Ausnahmehandler oder als Teil einer Entladung aufgerufen. Es sind die folgenden Prototyp:  
   
 ```  
 typedef EXCEPTION_DISPOSITION (*PEXCEPTION_ROUTINE) (  
@@ -31,13 +31,13 @@ typedef EXCEPTION_DISPOSITION (*PEXCEPTION_ROUTINE) (
 );  
 ```  
   
- **ExceptionRecord** gibt einen Zeiger auf einen Ausnahmedatensatz an, der die Standard\-Win64\-Definition aufweist.  
+ **ExceptionRecord** gibt einen Zeiger auf einen Ausnahmedatensatz, der standard Win64-Definition aufweist.  
   
- **EstablisherFrame** ist die Adresse der Basis der festen Stapelzuweisung für diese Funktion.  
+ **EstablisherFrame** ist die Adresse der Basis des für diese Funktion den festen stapelzuordnung.  
   
- **ContextRecord** verweist auf den Ausnahmekontext zur Zeit der Auslösung der Ausnahme \(im Fall eines Ausnahmehandlers\) oder auf den aktuellen Entladekontext \(im Fall eines Beendigungshandlers\).  
+ **ContextRecord** verweist auf den Ausnahmekontext zum Zeitpunkt der Ausnahme (im Fall Handler Ausnahme) ausgelöst wurde oder die aktuelle "abgewickelt" Kontext (im Fall Handler Beendigung).  
   
- **DispatcherContext** verweist auf den Verteilerkontext für diese Funktion.  Er hat folgende Definition:  
+ **DispatcherContext** an den Verteilerkontext für diese Funktion verweist. Er ist wie folgt definiert:  
   
 ```  
 typedef struct _DISPATCHER_CONTEXT {  
@@ -52,21 +52,21 @@ typedef struct _DISPATCHER_CONTEXT {
 } DISPATCHER_CONTEXT, *PDISPATCHER_CONTEXT;  
 ```  
   
- **ControlPc** ist der Wert des RIP innerhalb dieser Funktion.  Dabei handelt es sich entweder um eine Ausnahmeadresse oder die Adresse, an der die Funktion verlassen wurde.  Dieser RIP dient zur Feststellung, ob sich die Steuerung innerhalb eines überwachten Konstrukts in dieser Funktion befindet \(z. B. \_\_try\-Block für \_\_try\/\_\_except oder \_\_try\/\_\_finally\).  
+ **ControlPc** ist der Wert des RIP innerhalb dieser Funktion. Dies ist eine Ausnahmeadresse oder die Adresse, an dem Steuerelement die Funktion verlassen. Dies ist die RIP, der verwendet wird, um festzustellen, ob das Steuerelement innerhalb eines überwachten Konstrukts in diese Funktion befindet (z. B. einen __try-Block für \__finally /\__except oder \__finally /\___identifier).  
   
- **ImageBase** ist die Anwendungsbasis \(Ladeadresse\) des Moduls, das diese Funktion enthält. Sie wird den 32\-Bit\-Offsets im Funktionseintrag und in den Entladeinformationen hinzugefügt, um relative Adressen aufzuzeichnen.  
+ **"ImageBase"** ist die Anwendungsbasis (Last-Adresse) des Moduls mit dieser Funktion, um die 32-Bit-Offsets, die in den Funktionsstart verwendet hinzugefügt werden und Informationen zum Aufzeichnen von relativer Adressen entladen.  
   
- **FunctionEntry** enthält einen Zeiger auf den RUNTIME\_FUNCTION\-Funktionseintrag, der die auf die Anwendungsbasis bezogenen relativen Adressen der Funktion und der Entladeinformationen für diese Funktion enthält.  
+ **FunctionEntry** stellt einen Zeiger auf den RUNTIME_FUNCTION Funktionseinstieg, halten die Funktion und Info Abbildbasis relative Adressen für diese Funktion zu entladen.  
   
- **EstablisherFrame** ist die Adresse der Basis der festen Stapelzuweisung für diese Funktion.  
+ **EstablisherFrame** ist die Adresse der Basis des für diese Funktion den festen stapelzuordnung.  
   
- **TargetIp** enthält eine optionale Anweisungsadresse, die die Fortsetzungsadresse des Entladevorgangs angibt.  Diese Adresse wird ignoriert, wenn **EstablisherFrame** nicht angegeben ist.  
+ **TargetIp** liefert eine optionale Anweisungsadresse, die die Fortsetzung Adresse die Entladung angibt. Diese Adresse wird ignoriert, wenn **EstablisherFrame** nicht angegeben wird.  
   
- **ContextRecord** verweist auf den Ausnahmekontext, zur Verwendung durch den Systemausnahmeauslösungs\-\/Entladecode.  
+ **ContextRecord** verweist auf den Ausnahmekontext, für die Verwendung durch den Dispatch/entladen System Ausnahmecode.  
   
- **LanguageHandler** verweist auf die sprachspezifische Sprachhandlerroutine, die aufgerufen wird.  
+ **LanguageHandler** verweist auf die sprachspezifische Handlerroutine aufgerufen werden.  
   
- **HandlerData** verweist auf die sprachspezifischen Handlerdaten für diese Funktion.  
+ **HandlerData** verweist auf die sprachspezifische Handlerdaten für diese Funktion.  
   
-## Siehe auch  
- [Ausnahmebehandlung \(x64\)](../build/exception-handling-x64.md)
+## <a name="see-also"></a>Siehe auch  
+ [Ausnahmebehandlung (x64)](../build/exception-handling-x64.md)

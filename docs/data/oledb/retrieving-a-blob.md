@@ -1,32 +1,32 @@
 ---
-title: "Abrufen eines BLOBs | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BLOB (Binary Large Object), Abrufen"
-  - "OLE DB, BLOB (Binary Large Object)"
-  - "Abrufen von BLOBs"
+title: Abrufen eines BLOBs | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- retrieving BLOBs
+- BLOB (binary large object), retrieving
+- OLE DB, BLOBs (binary large objects)
 ms.assetid: 2893eb0a-5c05-4016-8914-1e40ccbaf0b3
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ac10d34fbb5e0cc6320d6c7f8ff1a52efc36f1b0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Abrufen eines BLOBs
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Es gibt verschiedene Möglichkeiten zum Abrufen eines Binary Large Object \(BLOB\).  Sie können **DBTYPE\_BYTES** verwenden, um das BLOB als Bytesequenz abzurufen, oder Sie können eine Schnittstelle wie `ISequentialStream` verwenden.  Weitere Informationen finden Sie unter [BLOBS und OLE\-Objekte](https://msdn.microsoft.com/en-us/library/ms711511.aspx) in der *OLE\-Programmierreferenz*.  
+# <a name="retrieving-a-blob"></a>Abrufen eines BLOBs
+Sie können ein binary large Object (BLOB) auf verschiedene Weise abrufen. Sie können **DBTYPE_BYTES** das BLOB als eine Folge von Bytes abzurufen, oder verwenden eine Schnittstelle wie `ISequentialStream`. Weitere Informationen finden Sie unter [BLOBS und OLE-Objekte](https://msdn.microsoft.com/en-us/library/ms711511.aspx) in der *OLE DB Programmer's Reference*.  
   
- Der folgende Code veranschaulicht, wie Sie ein BLOB mithilfe von `ISequentialStream` abrufen können.  Das Makro [BLOB\_ENTRY](../../data/oledb/blob-entry.md) ermöglicht es Ihnen, die Schnittstelle sowie die für die Schnittstelle verwendeten Flags festzulegen.  Nach dem Öffnen der Tabelle ruft der Code in `ISequentialStream` wiederholt **Read** auf, damit Bytes aus dem BLOB gelesen werden.  Der Code ruft **Release** auf, um den Schnittstellenzeiger zu verwerfen, bevor `MoveNext` aufgerufen wird, um den nächsten Datensatz zu beziehen.  
+ Der folgende Code zeigt, wie ein BLOB mit abgerufen `ISequentialStream`. Das Makro [BLOB_ENTRY](../../data/oledb/blob-entry.md) können Sie die Schnittstelle und die Flags, die die Schnittstelle zum angeben. Nach dem Öffnen der Tabelle an, der Code ruft **lesen** wiederholt `ISequentialStream` , Bytes aus dem BLOB zu lesen. Der Code ruft **Release** zum Verwerfen des Schnittstellenzeigers vor dem Aufruf `MoveNext` zum Abrufen des nächsten Datensatzes.  
   
 ```  
 class CCategories  
@@ -55,8 +55,8 @@ while (categories.MoveNext() == S_OK)
 }  
 ```  
   
- Weitere Informationen zu Makros, mit denen BLOB\-Daten behandelt werden können, finden Sie unter "Spaltenzuordnungsmakros" in [Makros und globale Funktionen für OLE DB\-Consumervorlagen](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
+ Weitere Informationen zu Makros, die BLOB-Daten behandelt, finden Sie unter "Spaltenzuordnungsmakros" in [Makros und globale Funktionen für OLE DB-Consumervorlagen](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verwenden von Accessoren](../../data/oledb/using-accessors.md)   
- [Makros und globale Funktionen für OLE\-Consumervorlagen](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)
+ [Makros und globale Funktionen für OLE-Consumervorlagen](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)

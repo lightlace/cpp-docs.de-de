@@ -1,75 +1,75 @@
 ---
-title: "_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_atoldbl"
-  - "_atoldbl_l"
-  - "_atodbl"
-  - "_atoflt"
-  - "_atoflt_l"
-  - "_atodbl_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_atoflt"
-  - "_atoflt_l"
-  - "atodbl_l"
-  - "atoflt_l"
-  - "_atoldbl"
-  - "_atoldbl_l"
-  - "atodbl"
-  - "_atodbl_l"
-  - "atoldbl"
-  - "atoflt"
-  - "atoldbl_l"
-  - "_atodbl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_atodbl-Funktion"
-  - "_atoldbl_l-Funktion"
-  - "atoflt-Funktion"
-  - "atoflt_l-Funktion"
-  - "atoldbl-Funktion"
-  - "_atoldbl-Funktion"
-  - "atodbl_l-Funktion"
-  - "_atoflt_l-Funktion"
-  - "atoldbl_l-Funktion"
-  - "atodbl-Funktion"
-  - "Zeichenfolgenkonvertierung, in Gleitkommawerte"
-  - "_atoflt-Funktion"
-  - "_atodbl_l-Funktion"
+title: _atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _atoldbl
+- _atoldbl_l
+- _atodbl
+- _atoflt
+- _atoflt_l
+- _atodbl_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _atoflt
+- _atoflt_l
+- atodbl_l
+- atoflt_l
+- _atoldbl
+- _atoldbl_l
+- atodbl
+- _atodbl_l
+- atoldbl
+- atoflt
+- atoldbl_l
+- _atodbl
+dev_langs: C++
+helpviewer_keywords:
+- _atodbl function
+- _atoldbl_l function
+- atoflt function
+- atoflt_l function
+- atoldbl function
+- _atoldbl function
+- atodbl_l function
+- _atoflt_l function
+- atoldbl_l function
+- atodbl function
+- string conversion, to floating point values
+- _atoflt function
+- _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
-caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 5c845d5662e8193f1a4e3c3357086bd207696559
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# _atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Konvertiert eine Zeichenfolge in einen double \(`_atodbl`\)\-, long double \(`_atoldbl`\)\- oder float \(`_atoflt`\)\-Wert.  
+# <a name="atodbl-atodbll-atoldbl-atoldbll-atoflt-atofltl"></a>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
+Konvertiert eine Zeichenfolge in einen double (`_atodbl`)-, long double (`_atoldbl`)- oder float (`_atoflt`)-Wert.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 int _atodbl(  
@@ -101,9 +101,9 @@ int _atoflt_l(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `value`  
- Der double\-, long double\- oder float\-Wert, der erstellt wird, indem die Zeichenfolge in einen Gleitkommawert konvertiert wird.  Diese Werte werden in eine Struktur eingeschlossen.  
+ Der double-, long double- oder float-Wert, der erstellt wird, indem die Zeichenfolge in einen Gleitkommawert konvertiert wird. Diese Werte werden in eine Struktur eingeschlossen.  
   
  `str`  
  Die zu analysierende Zeichenfolge, die in einen Gleitkommawert konvertiert wird.  
@@ -111,23 +111,23 @@ int _atoflt_l(
  `locale`  
  Das zu verwendende Gebietsschema.  
   
-## Rückgabewert  
- Gibt bei Erfolg 0 zurück.  Mögliche Fehlercodes sind `_UNDERFLOW` oder `_OVERFLOW`, die in der Headerdatei "Math.h" definiert werden.  
+## <a name="return-value"></a>Rückgabewert  
+ Gibt bei Erfolg 0 zurück. Mögliche Fehlercodes sind `_UNDERFLOW` oder `_OVERFLOW`, die in der Headerdatei "Math.h" definiert werden.  
   
-## Hinweise  
- Diese Funktionen konvertieren eine Zeichenfolge in einen Gleitkommawert.  Der Unterschied zwischen diesen Funktionen und der `atof`\-Familie der Funktionen ist der, dass diese Funktionen keinen Gleitkommacode generieren und keine Hardwareausnahmen verursachen.  Stattdessen werden Fehlerzustände als Fehlercodes gemeldet.  
+## <a name="remarks"></a>Hinweise  
+ Diese Funktionen konvertieren eine Zeichenfolge in einen Gleitkommawert. Der Unterschied zwischen diesen Funktionen und der `atof`-Familie der Funktionen ist der, dass diese Funktionen keinen Gleitkommacode generieren und keine Hardwareausnahmen verursachen. Stattdessen werden Fehlerzustände als Fehlercodes gemeldet.  
   
  Wenn eine Zeichenfolge keine gültige Interpretation als Gleitkommawert aufweist, wird `value` auf 0 gesetzt und der Rückgabewert ist 0.  
   
- Die Versionen dieser Funktionen mit dem `_l`\-Suffix sind identisch mit den Versionen, die keinen Suffix haben, verwenden jedoch den übergebenen Gebietsschemaparameter anstelle des aktuellen Threadgebietsschemas.  
+ Die Versionen dieser Funktionen mit dem `_l`-Suffix sind identisch mit den Versionen, die keinen Suffix haben, verwenden jedoch den übergebenen Gebietsschemaparameter anstelle des aktuellen Threadgebietsschemas.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routinen|Erforderlicher Header|  
-|--------------|---------------------------|  
-|`_atodbl`, `_atoldbl`, `_atoflt`<br /><br /> `_atodbl_l`, `_atoldbl_l`, `_atoflt_l`|\<stdlib.h\>|  
+|--------------|---------------------|  
+|`_atodbl`, `_atoldbl`, `_atoflt`<br /><br /> `_atodbl_l`, `_atoldbl_l`, `_atoflt_l`|\<stdlib.h>|  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_atodbl.c  
@@ -169,16 +169,22 @@ int main()
 }  
 ```  
   
-  **Double\-Wert: 3,141593**  
-**Rückgabewert: 0**  
-**Gleitkommawert: 3,141593**  
-**Rückgabewert: 0**  
-**Gleitkommawert: 0,000000**  
-**Rückgabewert: 0**  
-**Gleitkommawert: 1.\#INF00**  
-**Rückgabewert: 3**   
-## Siehe auch  
+```Output  
+Double value: 3.141593  
+Return value: 0  
+  
+Float value: 3.141593  
+Return value: 0  
+  
+Float value: 0.000000  
+Return value: 0  
+  
+Float value: 1.#INF00  
+Return value: 3  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
  [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   
- [Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)   
+ [Gleitkomma-Unterstützung](../../c-runtime-library/floating-point-support.md)   
  [Locale](../../c-runtime-library/locale.md)   
- [atof, \_atof\_l, \_wtof, \_wtof\_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)
+ [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)

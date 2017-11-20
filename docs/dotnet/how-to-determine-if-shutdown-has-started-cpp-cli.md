@@ -1,33 +1,33 @@
 ---
-title: "Gewusst wie: Ermitteln, ob das Herunterfahren begonnen hat (C++/CLI)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".NET Framework, Herunterfahren"
-  - "Anwendungen [C++], Herunterfahren"
-  - "Herunterfahren"
-  - "Terminierung"
+title: 'Vorgehensweise: bestimmen, ob das Herunterfahren begonnen hat (C + c++ / CLI) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- .NET Framework, shutdown
+- shutdown
+- termination
+- applications [C++], shutdown
 ms.assetid: a8d39731-dea8-4f0a-96b7-2a5de09b21d7
-caps.latest.revision: 9
-caps.handback.revision: "9"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7f4575f212752a43df2b130fbde9aa7264186d6f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Gewusst wie: Ermitteln, ob das Herunterfahren begonnen hat (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Im folgenden Codebeispiel wird dargestellt, wie festgestellt werden kann, ob die Anwendung oder .NET Framework gerade beendet wird.  Dies ist für den Zugriff auf statische Elemente im .NET Framework sinnvoll, da diese Konstrukte beim Herunterfahren durch das System beendet werden und nicht verlässlich genutzt werden können.  Sie können potenzielle Fehler vermeiden, indem Sie zuerst die <xref:System.Environment.HasShutdownStarted*>\-Eigenschaft überprüfen und ggf. nicht auf diese Elemente zugreifen.  
+# <a name="how-to-determine-if-shutdown-has-started-ccli"></a>Gewusst wie: Ermitteln, ob das Herunterfahren begonnen hat (C++/CLI)
+Im folgenden Codebeispiel wird veranschaulicht, wie zu bestimmen, ob die Anwendung oder .NET Framework gerade beendet wird. Dies ist nützlich für den Zugriff auf statische Elemente in .NET Framework, da während des Herunterfahrens können diese Konstrukte durch das System beendet werden und können nicht zuverlässig verwendet werden kann. Durch Überprüfen der <xref:System.Environment.HasShutdownStarted%2A> Eigenschaft zunächst können Sie potenzielle Fehler vermeiden, indem Sie nicht auf diese Elemente zugreifen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // check_shutdown.cpp  
@@ -43,6 +43,6 @@ int main()
 }  
 ```  
   
-## Siehe auch  
- [Windows\-Vorgänge](../dotnet/windows-operations-cpp-cli.md)   
- [.NET\-Programmierung mit C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [Windows-Vorgänge (C + c++ / CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [.NET-Programmierung mit C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

@@ -1,32 +1,30 @@
 ---
-title: "ML Nonfatal Error A2010 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "A2010"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "A2010"
+title: ML nicht schwerwiegende Fehler A2010 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: A2010
+dev_langs: C++
+helpviewer_keywords: A2010
 ms.assetid: 8bcd57f4-1e3f-421f-9ef8-e702daf57fcb
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 5d81c3c4ea3dfd91344f54b8e8157d6f4f9608f1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# ML Nonfatal Error A2010
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**Ungültiger Typ Ausdruck**  
+# <a name="ml-nonfatal-error-a2010"></a>Nicht schwerwiegender ML-Fehler A2010
+**Ungültiger Ausdruck**  
   
- Der Operand zu [DIESES](../../assembler/masm/operator-this.md) oder [PTR](../../assembler/masm/operator-ptr.md) war kein gültiger Typ Ausdruck.  
+ Der Operand für [THIS](../../assembler/masm/operator-this.md) oder [PTR](../../assembler/masm/operator-ptr.md) ist kein gültiger Typausdruck.  
   
-## Siehe auch  
- [ML Error Messages](../../assembler/masm/ml-error-messages.md)
+## <a name="see-also"></a>Siehe auch  
+ [ML-Fehlermeldungen](../../assembler/masm/ml-error-messages.md)

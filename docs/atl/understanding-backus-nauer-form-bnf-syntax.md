@@ -1,110 +1,111 @@
 ---
-title: "Understanding Backus Nauer Form (BNF) Syntax | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Backus Nauer Form (BNF) syntax"
-  - "BNF notation"
+title: ATL-Registrierung und Backus Nauer Form (BNF)-Syntax | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- BNF notation
+- Backus Nauer Form (BNF) syntax
 ms.assetid: 994bbef0-9077-4aa8-bdfe-b7e830af9acc
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6ff141818e05f9b5b36b6d0cfc5a58170fa97ab0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Understanding Backus Nauer Form (BNF) Syntax
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die Skripts, die vom ATL\-Registrator verwendet werden, werden in diesem Thema mit BNF\-Syntax beschrieben, die die Notation verwendet, die in der folgenden Tabelle gezeigt wird.  
+# <a name="understanding-backus-nauer-form-bnf-syntax"></a>Grundlegendes zu Backus Nauer Form (BNF)-Syntax
+In diesem Thema mithilfe der BNF-Syntax, die in der folgenden Tabelle aufgeführten Notation verwendet, werden die Skripts, die verwendet werden, durch die ATL-Registrierung beschrieben.  
   
-|Konvention\/Symbol|Bedeutung|  
-|------------------------|---------------|  
+|Konvention-symbol|Bedeutung|  
+|------------------------|-------------|  
 |`::=`|Entsprechung|  
-|`&#124;`|OR|  
-|`X+`|Eine oder mehrere `X` S.|  
-|`[X]`|`X` ist optional.  Optionale Trennzeichen werden durch `[]` gekennzeichnet.|  
-|Alle **bold** Text|Ein Zeichenfolgenliteral.|  
-|Beliebiger Text *kursiv gedruckter*|Wie das Zeichenfolgenliteral erstellt.|  
+|`&#124;`|ODER|  
+|`X+`|Eine oder mehrere `X`s.|  
+|`[X]`|`X` ist optional. Optionale Trennzeichen sind gekennzeichnet durch `[]`.|  
+|Alle **fett** Text|Ein Zeichenfolgenliteral.|  
+|Alle *Kursiv* Text|Wie das Zeichenfolgenliteral erstellt.|  
   
- Wie in der vorangehenden Tabelle angegeben, verwenden Registrierungsstellenskripte Zeichenfolgenliterale.  Diese Werte sind tatsächlicher Text, der im Skript angezeigt werden muss.  Die folgende Tabelle beschreibt die Zeichenfolgenliterale, die in einem ATL\-Registrator\-Skript verwendet werden.  
+ Wie in der obigen Tabelle angegeben wird, verwenden Sie registrierungsskripte Zeichenfolgenliterale. Diese Werte sind die tatsächlichen Text, der im Skript verwendet werden muss. Die folgende Tabelle beschreibt die Zeichenfolgenliterale in einem Skript ATL-Registrierung.  
   
-|Zeichenfolgenliteral|Aktion|  
-|--------------------------|------------|  
-|**ForceRemove**|Entfernt vollständig die folgenden Schlüssel \(sofern vorhanden\) und erstellt sie dann neu.|  
-|**NoRemove**|Entfernt die folgenden Schlüssel nicht während Registrierung aufheben.|  
-|**val**|Gibt an, dass `<Key Name>` tatsächlich ein benannter Wert ist.|  
-|**Delete**|Löscht die folgenden Schlüssel während des Registers.|  
-|**s**|Gibt an, dass der folgenden Wert eine Zeichenfolge \(**REG\_SZ**\) ist.|  
-|**d**|Gibt an, dass der folgenden Wert **DWORD** \(**REG\_DWORD**\) ist.|  
-|**m**|Gibt an, dass der folgenden Wert eine mehrteilige Zeichenfolge \(**REG\_MULTI\_SZ**\) ist.|  
-|**'b'**|Gibt an, dass der folgenden Wert ein Binärwert \(**REG\_BINARY**\) ist.|  
+|Ein Zeichenfolgenliteral handeln|Aktion|  
+|--------------------|------------|  
+|**ForceRemove**|Den nächsten Schlüssel entfernt, vollständig (falls vorhanden) und dann neu erstellt.|  
+|**NoRemove**|Den nächsten Schlüssel werden nicht während der Aufhebung der Registrierung entfernt werden.|  
+|**val**|Gibt an, dass `<Key Name>` ist tatsächlich ein benannter Wert.|  
+|**Löschen**|Löscht den nächsten Schlüssel während der Registrierung.|  
+|**s**|Gibt an, dass der nächste Wert eine Zeichenfolge ist (**REG_SZ**).|  
+|**d**|Gibt an, dass der nächste Wert ist ein **DWORD** (**REG_DWORD**).|  
+|**m**|Gibt an, dass der nächste Wert eine mehrteilige Zeichenfolge ist (**REG_MULTI_SZ**).|  
+|**b**|Gibt an, dass der nächste Wert ein binärer Wert ist (**REG_BINARY**).|  
   
-## BNF\-Syntax\-Beispiele  
- Im Folgenden einige Syntaxbeispiele, die Sie bei, zu verstehen, wie die Notation und die Zeichenfolgenliterale in einem ATL\-Registrator\-Skript arbeiten.  
+## <a name="bnf-syntax-examples"></a>Beispiele für BNF-Syntax  
+ Hier sind einige Syntaxbeispiele um besser zu verstehen, wie die Notation und Zeichenfolgenliterale in einem Skript ATL-Registrierung funktionieren.  
   
-### Syntax\-Beispiel 1  
+### <a name="syntax-example-1"></a>Syntaxbeispiel 1  
   
 ```  
 <registry expression> ::= <Add Key>  
 ```  
   
- gibt an, dass `registry expression` zu `Add Key` entspricht.  
+ Gibt an, dass `registry expression` entspricht `Add Key`.  
   
-### Syntax\-Beispiel 2  
+### <a name="syntax-example-2"></a>Syntaxbeispiel 2  
   
 ```  
 <registry expression> ::= <Add Key> | <Delete Key>  
 ```  
   
- gibt an, dass `registry expression` entweder zu `Add Key` oder zu `Delete Key` entspricht.  
+ Gibt an, dass `registry expression` entspricht entweder `Add Key` oder `Delete Key`.  
   
-### Syntax\-Beispiel 3  
+### <a name="syntax-example-3"></a>Syntaxbeispiel 3  
   
 ```  
 <Key Name> ::= '<AlphaNumeric>+'  
 ```  
   
- gibt an, dass `Key Name` auf eine oder mehrere `AlphaNumerics` entspricht.  
+ Gibt an, dass `Key Name` entspricht einer oder mehreren `AlphaNumerics`.  
   
-### Syntax\-Beispiel 4  
+### <a name="syntax-example-4"></a>Syntaxbeispiel 4  
   
 ```  
 <Add Key> ::= [ForceRemove | NoRemove | val]<Key Name>  
 ```  
   
- gibt an, dass `Add Key` zu `Key Name` entsprechend ist und dass die Zeichenfolgenliterale, `ForceRemove`, `NoRemove` und `val`, optional sind.  
+ Gibt an, dass `Add Key` entspricht `Key Name`, und dass die Zeichenfolgenliterale `ForceRemove`, `NoRemove`, und `val`, sind optional.  
   
-### Syntax\-Beispiel 5  
+### <a name="syntax-example-5"></a>Syntaxbeispiel 5  
   
 ```  
 <AlphaNumeric> ::= any character not NULL, that is, ASCII 0  
 ```  
   
- gibt an, dass `AlphaNumeric` zu jedem Nichtnullzeichen entspricht.  
+ Gibt an, dass `AlphaNumeric` entspricht, nicht-NULL-Zeichen.  
   
-### Syntax\-Beispiel 6  
+### <a name="syntax-example-6"></a>Syntaxbeispiel 6  
   
 ```  
 val 'testmulti' = m 'String 1\0String 2\0'  
 ```  
   
- gibt an, dass der Schlüsselname `testmulti` ein Wert der mehrteiligen Zeichenfolge ist, der aus `String 1` und `String 2` besteht.  
+ Gibt an, dass der Schlüsselname `testmulti` besteht aus ein Wert für mehrteilige Zeichenfolgen `String 1` und `String 2`.  
   
-### Syntax\-Beispiel 7  
+### <a name="syntax-example-7"></a>Syntaxbeispiel 7  
   
 ```  
 val 'testhex' = d '&H55'  
 ```  
   
- gibt an, dass der Schlüsselname `testhex` ein **DWORD** \-Wert ist, der zu Hexadezimal\- 55 \(dezimal 85\) festgelegt ist.  Beachten Sie dieses Format entspricht die **&H** Notation, wie in der Visual Basic\-Spezifikation gefunden.  
+ Gibt an, dass der Schlüsselname `testhex` ist ein **DWORD** Wert auf hexadezimale 55 (85 dezimal) festgelegt. Beachten Sie dieses Format entspricht der **& H** Schreibweise wie in der Visual Basic-Spezifikation gefunden.  
   
-## Siehe auch  
- [Creating Registrar Scripts](../atl/creating-registrar-scripts.md)
+## <a name="see-also"></a>Siehe auch  
+ [Erstellen von Registrierungsskripts](../atl/creating-registrar-scripts.md)
+

@@ -1,69 +1,68 @@
 ---
-title: "CL: Starten des Linkers | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cl.exe-Compiler [C++], Kompilieren ohne Verknüpfen"
-  - "cl.exe-Compiler [C++], Steuern des Linkers"
-  - "Kompilieren von Quellcode [C++], Ohne Verknüpfen"
-  - "Aufrufen des Linkers aus dem Compiler"
-  - "LINK-Tool [C++], Aufrufen aus dem CL-Compiler"
+title: CL des Linkers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: cl
+dev_langs: C++
+helpviewer_keywords:
+- compiling source code [C++], without linking
+- invoking linker from the compiler
+- LINK tool [C++], invoking from CL compiler
+- cl.exe compiler [C++], compiling without linking
+- cl.exe compiler [C++], controlling linker
 ms.assetid: eae47ef7-09eb-40c9-b318-7c714cd452fc
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 15d37f6adb5d6a5588d9b727ff8ba5adb56dda67
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# CL: Starten des Linkers
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-CL startet den Linker automatisch nach dem Kompilieren, sofern nicht die \/c\-Option verwendet wird.  CL übergibt dem Linker die Namen der OBJ\-Dateien, die während des Kompilierens erstellt wurden, und die Namen aller anderen in der Befehlszeile angegebenen Dateien.  Der Linker verwendet die Optionen, die in der Umgebungsvariablen **LINK** aufgeführt sind.  Mit der \/link\-Option können in der CL\-Befehlszeile Optionen für den Linker angegeben werden.  Optionen, die der \/link\-Option folgen, überschreiben die Optionen in der Umgebungsvariablen **LINK**.  Die Optionen in der nachfolgenden Tabelle unterdrücken das Verknüpfen.  
+# <a name="cl-invokes-the-linker"></a>CL: Starten des Linkers
+CL Ruft den Linker automatisch nach dem Kompilieren, es sei denn, die/c-Option verwendet wird. CL wird an den Linker übergeben, die Namen der OBJ-Dateien, die während des Kompilierens erstellt und die Namen aller anderen Dateien, die in der Befehlszeile angegeben. Der Linker verwendet die in der Umgebungsvariablen LINK aufgeführten Optionen. / Link-Option können Sie die Optionen des Linkers in der CL-Befehlszeile angeben. Optionen, die die Option/Link folgen, überschreiben die in der Umgebungsvariablen LINK. Die Optionen in der folgenden Tabelle unterdrücken Sie verknüpfen.  
   
-|Option|**Beschreibung**|  
-|------------|----------------------|  
-|\/c|Kompilieren ohne Verknüpfen|  
-|\/E, \/EP, \/P|Vorverarbeiten ohne Kompilieren und Verknüpfen|  
-|\/Zg|Funktionsprototypen generieren|  
-|\/Zs|Syntax prüfen|  
+|Option|Beschreibung|  
+|------------|-----------------|  
+|/c|Kompilieren ohne Verknüpfen|  
+|/ E/EP, / P|Vorverarbeiten Sie ohne kompilieren und verknüpfen|  
+|/Zg|Funktionsprototypen generieren|  
+|/Zs|Überprüfen Sie syntax|  
   
- Weitere Details zum Verknüpfen finden Sie im Abschnitt [Linkeroptionen](../../build/reference/linker-options.md).  
+ Weitere Details zu verknüpfen, finden Sie unter [Optionen des Linkers](../../build/reference/linker-options.md).  
   
-## Beispiel  
- Angenommen, Sie kompilieren drei C\-Quelldateien: MAIN.c, MOD1.c, and MOD2.c.  Jede Datei enthält einen Aufruf einer in einer anderen Datei definierten Funktion:  
+## <a name="example"></a>Beispiel  
+ Angenommen, Sie drei C-Quelldateien kompilieren: MAIN.c, MOD1.c und MOD2.c. Jede Datei enthält einen Aufruf an eine Funktion, die in einer anderen Datei definiert:  
   
--   **MAIN.c** ruft die Funktion `func1` in **MOD1.c** und die Funktion `func2` in **MOD2.c** auf.  
+-   MAIN.c ruft die Funktion `func1` in MOD1.c und die Funktion `func2` in MOD2.c auf.  
   
--   MOD1.c ruft die Standardbibliotheksfunktionen `printf_s` und `scanf_s` auf.  
+-   MOD1.c ruft die Standardbibliotheksfunktionen `printf_s` und `scanf_s`.  
   
--   **MOD2.c** ruft die Grafikfunktionen `myline` und `mycircle` auf, die in der Bibliothek **MYGRAPH.lib** definiert sind.  
+-   MOD2.c ruft Grafikfunktionen `myline` und `mycircle`, die in der Bibliothek MYGRAPH.lib definiert werden.  
   
- Zum Erstellen dieses Programms kompilieren Sie mit folgender Befehlszeile:  
+ Um dieses Programm zu erstellen, kompilieren Sie mit der folgenden Befehlszeile:  
   
 ```  
 CL MAIN.c MOD1.C MOD2.C MYGRAPH.lib  
 ```  
   
- CL kompiliert zunächst die C\-Quelldateien und erstellt die Objektdateien **MAIN.obj**, **MOD1.obj** und **MOD2.obj**.  Der Compiler legt den Namen der Standardbibliothek in jeder OBJ\-Datei ab.  Näheres dazu finden Sie unter [Laufzeitbibliothek verwenden](../../build/reference/md-mt-ld-use-run-time-library.md).  
+ CL zuerst kompiliert die C-Quelldateien und erstellt die Objektdateien MAIN.obj, MOD1.obj und MOD2.obj. Der Compiler fügt den Namen der Standardbibliothek in jeder OBJ-Datei. Weitere Informationen finden Sie unter [Use Run-Time Library](../../build/reference/md-mt-ld-use-run-time-library.md).  
   
- CL übergibt die Namen der OBJ\-Dateien zusammen mit dem Namen **MYGRAPH.lib** an den Linker.  Der Linker löst die externen Verweise folgendermaßen auf:  
+ CL übergibt die Namen der die OBJ-Dateien zusammen mit dem Namen MYGRAPH.lib an den Linker. Der Linker löst externe Verweise wie folgt aus:  
   
-1.  In **MAIN.obj** wird der Verweis auf `func1` mit der Definition aus **MOD1.obj** und der Verweis auf `func2` mit der Definition aus **MOD2.obj** aufgelöst.  
+1.  In den Verweis auf MAIN.obj `func1` wird mit der Definition in MOD1.obj; aufgelöst den Verweis auf `func2` wird mit der Definition in MOD2.obj aufgelöst.  
   
-2.  In MOD1.obj werden die Verweise auf `printf_s` und `scanf_s` mit den Definitionen in der Bibliothek aufgelöst, deren Namen der Linker in MOD1.obj vorfindet.  
+2.  In der Verweise auf MOD1.obj `printf_s` und `scanf_s` mit den Definitionen in die Bibliothek, die der Linker sucht mit dem Namen innerhalb von MOD1.obj aufgelöst werden.  
   
-3.  In **MOD2.obj** werden die Verweise auf `myline` und `mycircle` mit den Definitionen aus **MYGRAPH.lib** aufgelöst.  
+3.  In der Verweise auf MOD2.obj `myline` und `mycircle` mit den Definitionen aus MYGRAPH.lib aufgelöst werden.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Compileroptionen](../../build/reference/compiler-options.md)   
  [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

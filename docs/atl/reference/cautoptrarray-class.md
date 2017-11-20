@@ -1,52 +1,34 @@
 ---
-title: Klasse CAutoPtrArray | Microsoft-Dokumentation
+title: CAutoPtrArray Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CAutoPtrArray
 - ATLCOLL/ATL::CAutoPtrArray
 - ATLCOLL/ATL::CAutoPtrArray::CAutoPtrArray
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAutoPtrArray class
+dev_langs: C++
+helpviewer_keywords: CAutoPtrArray class
 ms.assetid: 880a70da-8c81-4427-8ac6-49aa8d424244
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 58ee329c7a3925fe3a29cf9738670cfa71df6777
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 952f6a6d9fa06c0f0c34e5769b4302c6230abb43
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cautoptrarray-class"></a>CAutoPtrArray-Klasse
-Diese Klasse enthält Methoden, die hilfreich beim Erstellen eines Arrays von intelligenten Zeigern.  
+Diese Klasse bietet Methoden, die hilfreich beim Erstellen ein Array von intelligenten Zeigern.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member werden nicht in Anwendungen verwendet, die in der Windows-Runtime ausgeführt.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -70,7 +52,7 @@ class CAutoPtrArray : public CAtlArray<
 |[CAutoPtrArray::CAutoPtrArray](#cautoptrarray)|Der Konstruktor.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Klasse stellt einen Konstruktor bereit und leitet Sie Methoden von [CAtlArray](../../atl/reference/catlarray-class.md) und [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) zur Unterstützung der Erstellung eines Klassenobjekts Auflistung Speichern von intelligenten Zeigern.  
+ Diese Klasse stellt einen Konstruktor bereit, und leitet Sie Methoden aus [CAtlArray](../../atl/reference/catlarray-class.md) und [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) für die Erstellung eines Klassenobjekts Auflistung Speichern von intelligenten Zeigern verwendet.  
   
  Weitere Informationen finden Sie unter [ATL-Auflistungsklassen](../../atl/atl-collection-classes.md).  
   
@@ -96,5 +78,4 @@ CAutoPtrArray() throw();
  [CAtlArray-Klasse](../../atl/reference/catlarray-class.md)   
  [CAutoPtrElementTraits-Klasse](../../atl/reference/cautoptrelementtraits-class.md)   
  [CAutoPtrList-Klasse](../../atl/reference/cautoptrlist-class.md)   
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)
-
+ [Klassenübersicht](../../atl/atl-class-overview.md)

@@ -1,55 +1,56 @@
 ---
-title: "/CLRHEADER | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/CLRHEADER"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/CLRHEADER (dumpbin-Option)"
-  - "CLRHEADER (dumpbin-Option)"
-  - "-CLRHEADER (dumpbin-Option)"
+title: -CLRHEADER | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /CLRHEADER
+dev_langs: C++
+helpviewer_keywords:
+- -CLRHEADER dumpbin option
+- /CLRHEADER dumpbin option
+- CLRHEADER dumpbin option
 ms.assetid: cf73424f-4541-47e2-b94e-69b95266ef2a
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 699fa0e97236b1c5cf207e73dcbb39156bfbb130
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# /CLRHEADER
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="clrheader"></a>/CLRHEADER
 ```  
 /CLRHEADER file  
 ```  
   
-## Hinweise  
- Hierbei ist:  
+## <a name="remarks"></a>Hinweise  
+ Dabei gilt:  
   
  `file`  
- Eine mit [\/clr](../../build/reference/clr-common-language-runtime-compilation.md) erstellte Abbilddatei.  
+ Eine Bilddatei mit erstellten ["/ CLR"](../../build/reference/clr-common-language-runtime-compilation.md).  
   
-## Hinweise  
- **CLRHEADER** zeigt Informationen über die in verwalteten Programmen verwendeten .NET\-Header an.  Die Ausgabe zeigt Position und Größe des .NET\-Headers \(in Bytes\) sowie Abschnitte im Header an.  
+## <a name="remarks"></a>Hinweise  
+ CLRHEADER zeigt Informationen über die in jeder verwalteten Anwendung verwendet. Die Ausgabe zeigt den Speicherort und die Größe in Bytes, die .NET Header und die Abschnitte in der Kopfzeile an.  
   
- Für Dateien, die mit der [\/GL](../../build/reference/gl-whole-program-optimization.md)\-Compileroption erstellt wurden, kann nur die DUMPBIN\-Option [\/HEADERS](../../build/reference/headers.md) verwendet werden.  
+ Nur die [/Headers](../../build/reference/headers.md) DUMPBIN-Option ist verfügbar für die Verwendung in den Dateien erstellt wird, mit der [/GL](../../build/reference/gl-whole-program-optimization.md) -Compileroption.  
   
- Wenn \/CLRHEADER bei einer mit \/clr kompilierten Datei verwendet wird, ist in der dumpbin\-Ausgabe der Abschnitt **clr Header:** enthalten.  Der Wert von **flags** gibt an, welche \/clr\-Option verwendet wurde:  
+ Beim CLRHEADER auf eine Datei verwendet wird, die mit "/ CLR" kompiliert wurde, ergibt sich eine **Clr-Header:** Abschnitt in der Dumpbin-Ausgabe.  Der Wert der **Flags** gibt an, welche Option "/ CLR" verwendet wurde:  
   
--   0  \-\- \/clr \(Abbild enthält möglicherweise systemeigenen Code\).  
+-   0 – "/ CLR" (Image darf nativen Code).  
   
--   1 \-\- \/clr:safe \(Abbild ist nur MSIL, kompatibel mit allen CLR\-Plattformen und möglicherweise überprüfbar\).  
+-   1 – / CLR: safe (Abbildung ist MSIL nur auf einer beliebigen CLR-Plattform ausführen und möglicherweise überprüfbar).  
   
--   3 \-\- \/clr:pure \(Abbild ist nur MSIL, kann jedoch nur auf x86\-Plattformen ausgeführt werden\).  
+-   3 – / clr: pure (Image ist nur MSIL, jedoch nur zum Ausführen auf X86 Plattformen).  
   
- Sie können auch programmgesteuert überprüfen, ob ein Abbild für Common Language Runtime erstellt wurde.  Weitere Informationen finden Sie unter [Gewusst wie: Ermitteln, ob ein Bild systemeigen oder CLR ist](../../dotnet/how-to-determine-if-an-image-is-native-or-clr.md).  
+ Sie können auch programmgesteuert überprüfen, wenn ein Bild für die common Language Runtime erstellt wurde.  Weitere Informationen finden Sie unter [wie: bestimmen, ob ein Bild systemeigen oder CLR ist](../../dotnet/how-to-determine-if-an-image-is-native-or-clr.md).  
   
-## Siehe auch  
- [DUMPBIN\-Optionen](../../build/reference/dumpbin-options.md)
+ Die Compileroptionen **/clr:pure** und **/clr:safe** sind in Visual Studio 2015 veraltet.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [DUMPBIN-Optionen](../../build/reference/dumpbin-options.md)

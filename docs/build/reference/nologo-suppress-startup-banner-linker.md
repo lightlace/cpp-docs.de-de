@@ -1,55 +1,55 @@
 ---
-title: "/NOLOGO (Startbanner unterdr&#252;cken) (Linker) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.SuppressStartupBanner"
-  - "/nologo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/NOLOGO (Linkeroption)"
-  - "Banner, Unterdrücken des Starts"
-  - "Copyrightmeldung"
-  - "NOLOGO (Linkeroption)"
-  - "-NOLOGO (Linkeroption)"
-  - "Startbanner unterdrücken (Linkeroption)"
-  - "Versionsnummern, Verhindern der Linkeranzeige"
+title: "-NOLOGO (Startbanner unterdrücken) (Linker) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.SuppressStartupBanner
+- /nologo
+dev_langs: C++
+helpviewer_keywords:
+- suppress startup banner linker option
+- -NOLOGO linker option
+- /NOLOGO linker option
+- copyright message
+- version numbers, preventing linker display
+- banners, suppressing startup
+- NOLOGO linker option
 ms.assetid: 3b20dddd-eca6-4545-a331-9f70bf720197
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1460563303f6a619d316a1b3ff4f885a31247a72
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# /NOLOGO (Startbanner unterdr&#252;cken) (Linker)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="nologo-suppress-startup-banner-linker"></a>/NOLOGO (Startbanner unterdrücken) (Linker)
 ```  
 /NOLOGO  
 ```  
   
-## Hinweise  
- Die \/NOLOGO\-Option verhindert die Anzeige der Copyrightmeldung und der Versionsnummer.  
+## <a name="remarks"></a>Hinweise  
+ Die Option/nologo Verhindert die Anzeige der Copyrightmeldung und der Versionsnummer.  
   
- Sie unterdrückt auch die Wiedergabe von Befehlsdateien.  Weitere Einzelheiten finden Sie unter [LINK\-Befehlsdateien](../../build/reference/link-command-files.md).  
+ Diese Option unterdrückt die Anzeige von Befehlsdateien. Weitere Informationen finden Sie unter [LINK-Befehlsdateien](../../build/reference/link-command-files.md).  
   
- Standardmäßig werden diese Informationen vom Linker an das Ausgabefenster gesendet.  In der Befehlszeile werden sie an die Standardausgabe gesendet und können in eine Datei umgeleitet werden.  
+ Standardmäßig werden diese Informationen durch den Linker an, das Fenster "Ausgabe" gesendet. In der Befehlszeile an die Standardausgabe gesendet wird, und können in eine Datei umgeleitet werden.  
   
-### So legen Sie diese Linkeroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Diese Option sollte nur in der Befehlszeile verwendet werden.  
+1.  Diese Option sollte nur über die Befehlszeile verwendet werden.  
   
-### So legen Sie diese Linkeroption programmgesteuert fest  
+### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
   
-1.  Diese Linkeroption kann nicht über ein Programm geändert werden.  
+1.  Diese Linkeroption kann programmgesteuert geändert werden.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
  [Linkeroptionen](../../build/reference/linker-options.md)

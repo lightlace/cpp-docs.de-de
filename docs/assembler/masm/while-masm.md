@@ -1,32 +1,30 @@
 ---
-title: "WHILE (MASM) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "while"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "WHILE directive"
+title: BEIM (MASM) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: while
+dev_langs: C++
+helpviewer_keywords: WHILE directive
 ms.assetid: ff9d908e-7e7f-4983-9f6b-31ff51ef0fad
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 4cd18a5e6c893d08e923243f5af9cb69c9a3a6a5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# WHILE (MASM)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Wiederholt Assembly des Blocks `statements` , solange *Ausdruck* true ist.  
+# <a name="while-masm"></a>WHILE (MASM)
+Assembly-Blocks wiederholt `statements` solange *Ausdruck* "true" bleibt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -35,5 +33,5 @@ statements
 ENDM  
 ```  
   
-## Siehe auch  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)

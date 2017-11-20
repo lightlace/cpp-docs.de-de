@@ -1,37 +1,36 @@
 ---
-title: "CDynamicParameterAccessor::GetParamType | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicParameterAccessor.GetParamType"
-  - "CDynamicParameterAccessor:GetParamType"
-  - "CDynamicParameterAccessor::GetParamType"
-  - "ATL.CDynamicParameterAccessor.GetParamType"
-  - "GetParamType"
-  - "ATL::CDynamicParameterAccessor::GetParamType"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetParamType-Methode"
+title: 'CDynamicParameterAccessor:: GetParamType | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicParameterAccessor.GetParamType
+- CDynamicParameterAccessor:GetParamType
+- CDynamicParameterAccessor::GetParamType
+- ATL.CDynamicParameterAccessor.GetParamType
+- GetParamType
+- ATL::CDynamicParameterAccessor::GetParamType
+dev_langs: C++
+helpviewer_keywords: GetParamType method
 ms.assetid: d9c46775-c2a6-4100-8b69-99f13c52958b
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fa98a0e653faad8de189fab6e77d6cd67e4dc7f1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# CDynamicParameterAccessor::GetParamType
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cdynamicparameteraccessorgetparamtype"></a>CDynamicParameterAccessor::GetParamType
 Ruft den Datentyp eines angegebenen Parameters ab.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -41,18 +40,18 @@ Ruft den Datentyp eines angegebenen Parameters ab.
 ) const throw( );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `nParam`  
- \[in\] die einen Parameterwert \(Offset von 1\).  Parameter 0 wird für Rückgabewerte reserviert.  In einen Parameterwert ist der Index des Parameters anhand ihrer Reihenfolge im SQL\- oder Prozeduraufruf.  Ein Beispiel finden Sie unter [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md).  
+ [in] Die Parameteranzahl (Offset von 1). Parameter 0 ist für Rückgabewerte reserviert. Die Parameteranzahl ist der Index des Parameters basierend auf der Reihenfolge der SQL-oder einen Aufruf einer gespeicherten Prozedur. Finden Sie unter [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) ein Beispiel.  
   
  `pType`  
- \[out\] Ein Zeiger auf die Variablen, die den Datentyp des angegebenen Parameters enthält.  
+ [out] Ein Zeiger auf die Variable, die den Datentyp des angegebenen Parameters enthält.  
   
-## Rückgabewert  
- **true** Gibt bei Erfolg oder **false** auf Fehler.  
+## <a name="return-value"></a>Rückgabewert  
+ Gibt **"true"** bei Erfolg oder **"false"** bei einem Fehler.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  
   
-## Siehe auch  
- [CDynamicParameterAccessor\-Klasse](../../data/oledb/cdynamicparameteraccessor-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [CDynamicParameterAccessor-Klasse](../../data/oledb/cdynamicparameteraccessor-class.md)

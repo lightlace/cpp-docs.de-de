@@ -1,52 +1,52 @@
 ---
-title: "Calling C++ Code from DHTML"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DHTML, calling C++ code from"
+title: Aufrufen von C++-Code von DHTML | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: DHTML, calling C++ code from
 ms.assetid: 37329acd-4c22-40ca-a85a-b7480748f75f
-caps.latest.revision: 12
-caps.handback.revision: "7"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b86bd8874e054dc2d2865523e77436e1f8cf6f81
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Calling C++ Code from DHTML
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-DHTML\-Steuerelemente kann in einem Container, wie Testcontainer oder Internet Explorer gehostet werden.  Siehe [Tests\-Eigenschaften und Ereignisse mit Testcontainer](../mfc/testing-properties-and-events-with-test-container.md) zu Informationen dazu, wie Sie auf Testcontainer zugreift.  
+# <a name="calling-c-code-from-dhtml"></a>Aufrufen von C++-Code aus DHTML
+DHTML-Steuerelemente kann in einem Container, z. B. Testcontainer oder Internet Explorer gehostet werden. Finden Sie unter [Testen von Eigenschaften und Ereignisse mit Test Container](../mfc/testing-properties-and-events-with-test-container.md) Informationen zum Testcontainer zugreifen.  
   
- Der Container, der das Steuerelement hostet, ist das Steuerelement mit den normalen Antriebssteuerungen kommunizieren.  DHTML verwendet die Dispatchschnittstelle, die endet mit "Benutzeroberfläche", um sich mit dem C\+\+\-Code und der HTML\-Ressource zu kommunizieren.  In [Ändern des Steuerelements ATL DHTML](../atl/modifying-the-atl-dhtml-control.md) können Sie die verschiedenen, von dieser Schnittstellen aufgerufen werden Methoden zum üben.  
+ Der Container, der das Steuerelement kommuniziert mit dem Steuerelement über die normalen Steuerelement-Schnittstellen. DHTML verwendet die Dispatchschnittstelle, die mit "UI" für die Kommunikation mit C++-Code und die HTML-Ressource endet. In [ändern das ATL-DHTML-Steuerelement](../atl/modifying-the-atl-dhtml-control.md), können Sie üben, Hinzufügen von Methoden, die von diesen verschiedenen Schnittstellen aufgerufen werden.  
   
- Um ein Beispiel des Aufrufens von C\+\+ anzuzeigen codieren Sie von DHTML, [erstellen Sie ein DHTML\-Steuerelement](../atl/creating-an-atl-dhtml-control.md) mit dem ATL\-Steuerelement\-Assistenten und überprüfen Sie den Code in der Headerdatei und in der HTML\-Datei.  
+ Um ein Beispiel für das Aufrufen von C++-Code aus DHTML, finden Sie unter [Erstellen eines DHTML-Steuerelements](../atl/creating-an-atl-dhtml-control.md) mithilfe des ATL-Steuerelement-Assistenten, und überprüfen Sie den Code in der Headerdatei und der HTML-Datei.  
   
-## Deklarieren von ActiveX\-Steuerelement browsermethoden in der Headerdatei  
- Um C\+\+\-Methoden vom DHTML Benutzeroberfläche aufzurufen, müssen Sie Methoden das Benutzeroberfläche des Steuerelements hinzufügen.  Beispielsweise enthält die Headerdatei, die vom ATL\-Steuerelement\-Assistenten erstellt wird, die C\+\+\-Methode `OnClick`, die Mitglied der Benutzeroberfläche des vom Assistenten erstellten Steuerelements ist.  
+## <a name="declaring-webbrowser-methods-in-the-header-file"></a>Deklarieren von WebBrowser-Methoden in der Headerdatei  
+ Zum Aufrufen von C++-Methoden aus der DHTML-UI müssen Sie Methoden des Steuerelements Benutzeroberfläche hinzufügen. Beispielsweise enthält die Header-Datei, die durch die ATL-Steuerelement-Assistent erstellt die C++-Methode `OnClick`, also ein Mitglied der Benutzeroberfläche des Assistenten generierte-Steuerelements.  
   
- Überprüfen Sie `OnClick` in der H\-Datei des Steuerelements:  
+ Untersuchen Sie `OnClick` in das Steuerelement .h-Datei:  
   
- [!CODE [NVC_ATL_COM#4](../CodeSnippet/VS_Snippets_Cpp/NVC_ATL_COM#4)]  
+ [!code-cpp[NVC_ATL_COM#4](../atl/codesnippet/cpp/calling-cpp-code-from-dhtml_1.h)]  
   
- Der erste Parameter, `pdispBody`, ist ein Zeiger auf die Dispatchschnittstelle des Textobjekts.  Der zweite Parameter, `varColor`, identifiziert die Farbe, um auf das Steuerelement anzuwenden.  
+ Der erste Parameter `pdispBody`, ist ein Zeiger auf Dispatch-Schnittstelle für das Body-Objekt. Der zweite Parameter `varColor`, identifiziert die Farbe an, auf das Steuerelement angewendet.  
   
-## Aufrufen von C\+\+\-Code in der HTML\-Datei  
- Sobald Sie die ActiveX\-Steuerelement browsermethoden in der Headerdatei deklariert haben, können Sie die Methoden in der HTML\-Datei aufrufen.  Begriff in der HTML\-Datei, dass die ATL\-Steuerelement\-Assistenten\-Einfügungen drei Windows\-Dispatchmethoden: `OnClick` drei Methoden, die Meldungen der, um die Hintergrundfarbe des Steuerelements ändern.  
+## <a name="calling-c-code-in-the-html-file"></a>Aufrufen von C++-Code in der HTML-Datei  
+ Nachdem Sie die WebBrowser-Methoden in der Headerdatei deklariert haben, können Sie die Methoden aus der HTML-Datei aufrufen. Beachten Sie, dass die HTML-Datei, die ATL-Steuerelement-Assistent fügt drei Methoden der Windows-Verteilung ein: drei `OnClick` Methoden, mit denen Nachrichten so ändern Sie die Hintergrundfarbe des Steuerelements zu verteilen.  
   
- Überprüfen Sie eine der Methoden in der HTML\-Datei:  
+ Überprüfen Sie eine der Methoden in der HTML-Datei:  
   
  `<BUTTON onclick='window.external.OnClick(theBody, "red");'>Red</BUTTON>`  
   
- Im oben HTML\-Code, wird die externe Methoden des Fensters, `OnClick`, als Teil des Schaltflächentags aufgerufen.  Die Methode verfügt über zwei Parameter: `theBody`, das den Text des HTML\-Dokuments verweist, und `"red"`, das angibt, ob die Hintergrundfarbe des Steuerelements in Rot geändert wird, wenn auf die Schaltfläche geklickt wird.  `Red`, das dem Tag folgt, ist die Bezeichnung der Schaltfläche.  
+ In der HTML-Code über die externe Methode Fenster `OnClick`, als Teil des Tags Schaltfläche aufgerufen wird. Die Methode verfügt über zwei Parameter: `theBody`, das auf den Text des HTML-Dokuments verweist und `"red"`, was bedeutet, dass die Hintergrundfarbe des Steuerelements in Rot geändert wird, wenn auf die Schaltfläche geklickt wird. Die `Red` befolgen das Tag ist die Bezeichnung der Schaltfläche.  
   
- Siehe [Ändern des Steuerelements ATL DHTML](../atl/modifying-the-atl-dhtml-control.md) weitere Informationen über das Bereitstellen eigener Methoden.  Siehe [Identifizieren der DHTML\-Steuerelementprojekts](../atl/identifying-the-elements-of-the-dhtml-control-project.md) weitere Informationen über die HTML\-Datei.  
+ Finden Sie unter [ändern das ATL-DHTML-Steuerelement](../atl/modifying-the-atl-dhtml-control.md) für Weitere Informationen zum Bereitstellen Ihrer eigenen Methoden. Finden Sie unter [identifizieren die Elemente eines DHTML-Steuerelementprojekts](../atl/identifying-the-elements-of-the-dhtml-control-project.md) für Weitere Informationen über die HTML-Datei.  
   
-## Siehe auch  
- [Unterstützung für DHTML\-Steuerelemente](../atl/atl-support-for-dhtml-controls.md)
+## <a name="see-also"></a>Siehe auch  
+ [Unterstützung für DHTML-Steuerelemente](../atl/atl-support-for-dhtml-controls.md)
+

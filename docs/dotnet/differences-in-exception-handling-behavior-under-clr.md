@@ -1,32 +1,32 @@
 ---
-title: "Unterschiede im Ausnahmebehandlungsverhalten unter /CLR | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "EXCEPTION_CONTINUE_EXECUTION-Makro"
-  - "set_se_translator-Funktion"
+title: Unterschiede im Ausnahmebehandlungsverhalten unter CLR-| Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- EXCEPTION_CONTINUE_EXECUTION macro
+- set_se_translator function
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
-caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 16962e39533eb2ac3d698622f8bb3a27d068b0ad
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Unterschiede im Ausnahmebehandlungsverhalten unter /CLR
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-[Grundlegende Konzepte, wenn verwaltete Ausnahmen verwendet werden](../dotnet/basic-concepts-in-using-managed-exceptions.md) erläutert Ausnahmebehandlung in verwalteten Anwendungen.  In diesem Thema werden Unterschiede zum Standardverhalten der Ausnahmebehandlung und einige Einschränkungen im Detail erläutert.  Weitere Informationen finden Sie unter [Die \_set\_se\_translator Funktion](../c-runtime-library/reference/set-se-translator.md).  
+# <a name="differences-in-exception-handling-behavior-under-clr"></a>Unterschiede im Ausnahmebehandlungsverhalten unter /CLR
+[Grundlegende Konzepte zur Verwendung verwalteter Ausnahmen](../dotnet/basic-concepts-in-using-managed-exceptions.md) Ausnahmebehandlung in verwalteten Anwendungen erläutert. In diesem Thema werden die Unterschiede zu das Standardverhalten der Ausnahmebehandlung und einige Einschränkungen im Detail erläutert. Weitere Informationen finden Sie unter [_set_se_translator-Funktion](../c-runtime-library/reference/set-se-translator.md).  
   
-##  <a name="vcconjumpingoutofafinallyblock"></a> Herausspringen eines Finally\-Blocks  
- In systemeigenen C\/C\+\+\-Code wird das Herausspringen eines **finally**\-Blocks mit der strukturierten Ausnahmebehandlung \(SEH\) zulässig, obwohl eine Warnung generiert.  Gemäß [\/clr](../build/reference/clr-common-language-runtime-compilation.md) führt das Herausspringen eines **finally**\-Blocks einen Fehler:  
+##  <a name="vcconjumpingoutofafinallyblock"></a>Herausspringen aus einer Finally-Block  
+ In systemeigenen C/C++-Code aus einem __ springen**schließlich** strukturierte Ausnahmebehandlung (SEH) mit Block ist zulässig, auch wenn es sich um eine Warnung erzeugt.  Klicken Sie unter ["/ CLR"](../build/reference/clr-common-language-runtime-compilation.md), Herausspringen aus einer **schließlich** Block wird ein Fehler verursacht:  
   
 ```  
 // clr_exception_handling_4.cpp  
@@ -39,10 +39,10 @@ int main() {
 }   // C3276  
 ```  
   
-##  <a name="vcconraisingexceptionswithinanexceptionfilter"></a> Auslösen von Ausnahmen in einem Ausnahme\-Filters  
- Wenn eine Ausnahme während der Verarbeitung von [Ausnahmefilter](../cpp/writing-an-exception-filter.md) innerhalb des verwalteten Codes ausgelöst wird, wird die Ausnahme als ob die Filterrückgaben 0 abgefangen und behandelt.  
+##  <a name="vcconraisingexceptionswithinanexceptionfilter"></a>Auslösen von Ausnahmen innerhalb eines Ausnahmefilters  
+ Wenn eine Ausnahme ausgelöst wird, während der Verarbeitung einer [Ausnahmefilter](../cpp/writing-an-exception-filter.md) in verwaltetem Code wird die Ausnahme abgefangen und behandelt, als ob der Filter "0" zurück.  
   
- Im Gegensatz zu dem Verhalten im systemeigenen Code, in dem eine geschachtelte Ausnahme ausgelöst wird, das Feld **ExceptionRecord** in der **EXCEPTION\_RECORD**\-Struktur \(z von [GetExceptionInformation](http://msdn.microsoft.com/library/windows/desktop/ms679357) zurückgegeben\) wird festgelegt und die **ExceptionFlags** Feldsätze das Bit 0x10.  Das folgende Beispiel veranschaulicht diesen Unterschied des Verhaltens:  
+ Dies steht im Gegensatz zu dem Verhalten in systemeigenem Code, in dem eine geschachtelte Ausnahme ausgelöst wird, die **ExceptionRecord** -Feld in der **EXCEPTION_RECORD** Struktur (wie vom [ GetExceptionInformation](http://msdn.microsoft.com/library/windows/desktop/ms679357)) festgelegt ist, und die **ExceptionFlags** Feld legt das Bit 0 x 10. Das folgende Beispiel veranschaulicht diesen Unterschied im Verhalten:  
   
 ```  
 // clr_exception_handling_5.cpp  
@@ -95,17 +95,17 @@ int main() {
 }  
 ```  
   
-### Ausgabe  
+### <a name="output"></a>Ausgabe  
   
 ```  
 Caught a nested exception  
 We should execute this handler if compiled to native  
 ```  
   
-##  <a name="vccondisassociatedrethrows"></a> Die Eigenschaft löst erneut aus  
- **\/clr** unterstützt keine erneute Auslösen einer Ausnahme außerhalb eines catch\-Handlers \(ist die Zuordnung nicht lösen Sie erneut aus\).  Ausnahmen dieses Typs werden behandelt, während Standard\-C\+\+ erneut auslösen.  Wenn die Zuordnung nicht auftritt erneut auslösen, wenn eine aktive verwaltete Ausnahme gibt, wird die Ausnahme als eine C\+\+\-Ausnahme umschlossen und dann erneut ausgelöst.  Ausnahmen dieses Typs können als Ausnahme des Typs [System::SEHException](https://msdn.microsoft.com/en-us/library/system.runtime.interopservices.sehexception.aspx) nur abgefangen werden.  
+##  <a name="vccondisassociatedrethrows"></a>Erneutes Auslösen mit aufgehobener  
+ **"/ CLR"** unterstützt nicht das erneute Auslösen einer Ausnahme außerhalb einer Catch-Handler (als Auslösen mit aufgehobener Zuordnung bezeichnet). Behandelt Ausnahmen dieses Typs als standard C++ Rethrow. Wenn ein nicht verbundenes Rethrow gefunden wird, wenn eine aktive verwaltete Ausnahme vorhanden ist, wird die Ausnahme als C++-Ausnahme umschlossen und dann erneut ausgelöst. Ausnahmen dieses Typs können nur als eine Ausnahme vom Typ abgefangen werden [System:: SEHException](https://msdn.microsoft.com/en-us/library/system.runtime.interopservices.sehexception.aspx).  
   
- Das folgende Beispiel zeigt eine verwaltete Ausnahme, die als eine C\+\+\-Ausnahme erneut ausgelöst wird:  
+ Im folgende Beispiel wird veranschaulicht, eine verwaltete Ausnahme, die als eine C++-Ausnahme erneut ausgelöst wird:  
   
 ```  
 // clr_exception_handling_6.cpp  
@@ -147,14 +147,14 @@ int main() {
 }  
 ```  
   
-### Ausgabe  
+### <a name="output"></a>Ausgabe  
   
 ```  
 caught an SEH Exception  
 ```  
   
-##  <a name="vcconexceptionfiltersandexception_continue_execution"></a> Ausnahme\-Filter und EXCEPTION\_CONTINUE\_EXECUTION  
- Wenn ein Filter `EXCEPTION_CONTINUE_EXECUTION` in einer verwalteten Anwendung zurückgibt, wird er behandelt, als ob der Filter `EXCEPTION_CONTINUE_SEARCH` zurückgibt.  Weitere Informationen über diese Konstanten, finden Sie unter [try\-except\-Anweisung](../cpp/try-except-statement.md).  
+##  <a name="vcconexceptionfiltersandexception_continue_execution"></a>Ausnahmefilter und EXCEPTION_CONTINUE_EXECUTION  
+ Wenn Sie ein Filter gibt `EXCEPTION_CONTINUE_EXECUTION` in einer verwalteten Anwendung wird behandelt, als ob der Filter zurückgegeben `EXCEPTION_CONTINUE_SEARCH`. Weitere Informationen zu diesen Konstanten finden Sie unter [versuchen-except-Anweisung](../cpp/try-except-statement.md).  
   
  Das folgende Beispiel veranschaulicht diesen Unterschied:  
   
@@ -187,14 +187,14 @@ int main() {
 }  
 ```  
   
-### Ausgabe  
+### <a name="output"></a>Ausgabe  
   
 ```  
 Counter=-3  
 ```  
   
-##  <a name="vcconthe_set_se_translatorfunction"></a> Die \_set\_se\_translator Funktion  
- Die Übersetzerfunktion, von einen Aufruf an `_set_se_translator`, der beeinflusst Erfassungen nur in nicht verwaltetem Code.  Im folgenden Beispiel wird diese Einschränkung:  
+##  <a name="vcconthe_set_se_translatorfunction"></a>Die _set_se_translator-Funktion  
+ Legen Sie die Translator-Funktion durch einen Aufruf von `_set_se_translator`, wirkt sich auf nur fängt in nicht verwaltetem Code. Das folgende Beispiel veranschaulicht diese Einschränkung:  
   
 ```  
 // clr_exception_handling_8.cpp  
@@ -271,7 +271,7 @@ int main( int argc, char ** argv ) {
 }  
 ```  
   
-### Ausgabe  
+### <a name="output"></a>Ausgabe  
   
 ```  
 This is invoked since _set_se_translator is not supported when /clr is used  
@@ -279,7 +279,7 @@ In my_trans_func.
 Caught an SEH exception with exception code: e0000101  
 ```  
   
-## Siehe auch  
- [Exception Handling](../windows/exception-handling-cpp-component-extensions.md)   
- [safe\_cast](../windows/safe-cast-cpp-component-extensions.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Ausnahmebehandlung](../windows/exception-handling-cpp-component-extensions.md)   
+ ["safe_cast"](../windows/safe-cast-cpp-component-extensions.md)   
  [Ausnahmebehandlung](../cpp/exception-handling-in-visual-cpp.md)

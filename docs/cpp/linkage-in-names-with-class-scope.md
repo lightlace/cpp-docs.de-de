@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - scope [C++], linkage rules
 - linkage [C++], scope linkage rules
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - scope [C++], class names
 - class scope [C++], linkage in names with
 ms.assetid: 45275ff3-6e94-4967-82c8-ba540ef4da28
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 37a0dcca1da0ae56a8144adf862eda89bfb1c4d6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 8cc10af2fc65de8382d5b8a26ac70cad9b9727e8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="linkage-in-names-with-class-scope"></a>Verknüpfung in Namen mit Klassenbereich
 Die folgenden Verknüpfungsregeln gelten für Namen mit Klassenbereich:  

@@ -1,76 +1,75 @@
 ---
-title: "CStreamRowset-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CStreamRowset<TAccessor>"
-  - "ATL::CStreamRowset"
-  - "CStreamRowset"
-  - "ATL.CStreamRowset<TAccessor>"
-  - "ATL.CStreamRowset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CStreamRowset-Klasse"
+title: CStreamRowset-Klasse | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CStreamRowset<TAccessor>
+- ATL::CStreamRowset
+- CStreamRowset
+- ATL.CStreamRowset<TAccessor>
+- ATL.CStreamRowset
+dev_langs: C++
+helpviewer_keywords: CStreamRowset class
 ms.assetid: a106e953-a38a-464e-8ea5-28963d9e4811
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 003b6b84195c491d1c72c3de289de375459ba261
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# CStreamRowset-Klasse
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Wird in einer `CCommand` oder `CTable`\-Deklaration.  
+# <a name="cstreamrowset-class"></a>CStreamRowset-Klasse
+Verwendet eine `CCommand` oder `CTable` Deklaration.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class TAccessor = CAccessorBase>  
 class CStreamRowset  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `TAccessor`  
- Eine Accessorklasse.  
+ Ein Accessorklasse.  
   
-## Member  
+## <a name="members"></a>Mitglieder  
   
-### Methoden  
+### <a name="methods"></a>Methoden  
   
 |||  
 |-|-|  
-|[CStreamRowset](../../data/oledb/cstreamrowset-cstreamrowset.md)|Konstruktor.  Instanziiert und initialisiert das `CStreamRowset`\-Objekt.|  
-|[Schließen](../../data/oledb/cstreamrowset-close.md)|Gibt den [ISequentialStream](https://msdn.microsoft.com/en-us/library/ms718035.aspx) von Schnittstellenzeigern in der Klasse frei.|  
+|[CStreamRowset](../../data/oledb/cstreamrowset-cstreamrowset.md)|Konstruktor. Instanziiert und initialisiert die `CStreamRowset` Objekt.|  
+|[Schließen](../../data/oledb/cstreamrowset-close.md)|Versionen der [ISequentialStream](https://msdn.microsoft.com/en-us/library/ms718035.aspx) Schnittstellenzeiger in der Klasse.|  
   
-## Hinweise  
- Verwenden Sie `CStreamRowset` in der `CCommand``CTable` oder Deklaration, beispielsweise:  
+## <a name="remarks"></a>Hinweise  
+ Verwendung `CStreamRowset` in Ihrer `CCommand` oder `CTable` Deklaration, z. B.:  
   
- [!CODE [NVC_OLEDB_Consumer#11](../CodeSnippet/VS_Snippets_Cpp/NVC_OLEDB_Consumer#11)]  
+ [!code-cpp[NVC_OLEDB_Consumer#11](../../data/oledb/codesnippet/cpp/cstreamrowset-class_1.cpp)]  
   
  oder  
   
- [!CODE [NVC_OLEDB_Consumer#12](../CodeSnippet/VS_Snippets_Cpp/NVC_OLEDB_Consumer#12)]  
+ [!code-cpp[NVC_OLEDB_Consumer#12](../../data/oledb/codesnippet/cpp/cstreamrowset-class_2.cpp)]  
   
- `ICommand::Execute` gibt ein `ISequentialStream` \- Zeiger zurück, der im `m_spStream` gespeichert wird.  Sie verwenden dann die **Lesen**\-Methode, um die Daten \(Unicode\-Zeichenfolge\) im XML\-Format abzurufen.  Beispiel:  
+ `ICommand::Execute`Gibt eine `ISequentialStream` -Zeiger ist, die in gespeichert ist `m_spStream`. Verwenden Sie dann die **lesen** Methode zum Abrufen der Daten (Unicode-Zeichenfolge) im XML-Format. Zum Beispiel:  
   
- [!CODE [NVC_OLEDB_Consumer#13](../CodeSnippet/VS_Snippets_Cpp/NVC_OLEDB_Consumer#13)]  
+ [!code-cpp[NVC_OLEDB_Consumer#13](../../data/oledb/codesnippet/cpp/cstreamrowset-class_3.cpp)]  
   
- SQL Server 2000 führt die XML\-Formatierung durch und wird alle Spalten und Zeilen des Rowsets als eine XML\-Zeichenfolge zurück.  
+ SQL Server 2000 führt die XML-Formatierung und gibt alle Spalten und Zeilen des Rowsets als eine XML-Zeichenfolge zurück.  
   
 > [!NOTE]
->  Diese Funktion ist nur mit SQL Server 2000.  
+>  Dieses Feature funktioniert nur mit SQL Server 2000.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  
   
-## Siehe auch  
- [OLE DB\-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenz der OLE DB\-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)

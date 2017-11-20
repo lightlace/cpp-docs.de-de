@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -38,35 +37,18 @@ f1_keywords:
 - ATLSECURITY/ATL::CSecurityDesc::SetOwner
 - ATLSECURITY/ATL::CSecurityDesc::SetSacl
 - ATLSECURITY/ATL::CSecurityDesc::ToString
-dev_langs:
-- C++
-helpviewer_keywords:
-- CSecurityDesc class
+dev_langs: C++
+helpviewer_keywords: CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 334081ba67c3b034c4b8170b095fcd77d712dda6
-ms.contentlocale: de-de
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 1a46a501c443baa65ab4c6da8bc4524c53e44989
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc-Klasse
 Diese Klasse ist ein Wrapper für die **SECURITY_DESCRIPTOR** Struktur.  
@@ -132,7 +114,7 @@ class CSecurityDesc
   
  Anwendungen sollten nicht ändern, die **SECURITY_DESCRIPTOR** Struktur direkt und stattdessen sollte die bereitgestellten Klassenmethoden verwenden.  
   
- Eine Einführung in das Zugriffssteuerungsmodell in Windows erhalten finden Sie unter [Zugriffssteuerung](http://msdn.microsoft.com/library/windows/desktop/aa374860) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Eine Einführung in das Zugriffssteuerungsmodell in Windows erhalten finden Sie unter [Access Control](http://msdn.microsoft.com/library/windows/desktop/aa374860) im Windows SDK.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlsecurity.h  
@@ -640,4 +622,3 @@ bool ToString(
  [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561)   
  [Klassenübersicht](../../atl/atl-class-overview.md)   
  [Globale Sicherheitsfunktionen](../../atl/reference/security-global-functions.md)
-

@@ -1,32 +1,30 @@
 ---
-title: "@CurSeg"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "@CurSeg"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "@CurSeg symbol"
+title: '@CurSeg| Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: '@CurSeg'
+dev_langs: C++
+helpviewer_keywords: '@CurSeg symbol'
 ms.assetid: 8fbf90c1-7734-4113-9ba2-6ec664b3b59f
-caps.latest.revision: 6
-caps.handback.revision: "6"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ebfb7a90b46588685983d7b9f889568f3c31e76e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# @CurSeg
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Der Name des aktuellen Segments Makro \(Text\).  
+# <a name="curseg"></a>@CurSeg
+Der Name der das aktuelle Segment (Textmakro).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -34,5 +32,5 @@ Der Name des aktuellen Segments Makro \(Text\).
   
 ```  
   
-## Siehe auch  
- [Symbols Reference](../../assembler/masm/symbols-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Symbole – Verweis](../../assembler/masm/symbols-reference.md)

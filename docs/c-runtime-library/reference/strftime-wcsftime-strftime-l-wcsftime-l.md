@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - _tcsftime
 - strftime
 - wcsftime
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _strftime_l function
 - strftime function
@@ -41,31 +39,15 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 1a5331b77e218c5fe5796b2df6d0f61578657758
-ms.contentlocale: de-de
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: ec9c46f1a6d52a8769e5db454d44baf9ec9d8a8a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="strftime-wcsftime-strftimel-wcsftimel"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 Formatieren einer Zeitzeichenfolge  
@@ -130,7 +112,7 @@ size_t _wcsftime_l(
 > [!NOTE]
 >  In Versionen vor Visual C++ 2005 hat der `format`-Parameter von `wcsftime` laut der Dokumentation den Datentypparameter `const wchar_t *`, aber die tatsächliche Implementierung des `format`-Datentyps war `const char *`. Die Implementierung der `format` -Datentyp wurde aktualisiert, um die vorherige und aktuelle-Dokumentation, d. h. widerspiegeln `const wchar_t *`.  
   
- Diese Funktion überprüft ihre Parameter. Wenn `strDest`, `format`, oder `timeptr` ist ein null-Zeiger oder, wenn die `tm` Datenstruktur adressiert werden, indem `timeptr` ist ungültig (z. B., wenn er außerhalb des gültigen Bereichswerte enthält, für das Datum oder Uhrzeit), oder, wenn die `format` enthält eine ungültige Formatierungscode, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, gibt die Funktion 0 zurück und stellt `errno` auf `EINVAL` ein.  
+ Diese Funktion überprüft ihre Parameter. Wenn `strDest`, `format`, oder `timeptr` ein null-Zeiger ist oder wenn die `tm` Datenstruktur adressiert werden, indem `timeptr` ist ungültig (z. B., wenn er außerhalb des gültigen Bereichswerte enthält, für das Datum oder Uhrzeit), oder wenn die `format` Zeichenfolge enthält eine ungültige Formatierungscode Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, gibt die Funktion 0 zurück und stellt `errno` auf `EINVAL` ein.  
   
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   

@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - constructors [C++]
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: ece3414dbc7f4d362fa7dcc6f060e408b50e54e6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 77007b3d3805bb2fa159680c88d8e41825336da2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="constructors-c"></a>Konstruktoren (C++)
 Ein Konstruktor ist eine Art einer Memberfunktion, die eine Instanz ihrer Klasse initialisiert. Ein Konstruktor hat den gleichen Namen wie die Klasse und weist keinen Rückgabewert auf. Ein Konstruktor kann über eine beliebige Anzahl von Parametern verfügen, und eine Klasse weist möglicherweise eine beliebige Anzahl an überladenen Konstruktoren auf. Konstruktoren können jede Erreichbarkeit aufweisen: öffentlich, geschützt oder privat. Wenn Sie keine Konstruktoren definieren, generiert der Compiler einen Standardkonstruktor, der keine Parameter verwendet. Sie können dieses Verhalten überschreiben, indem Sie einen Standardkonstruktor als gelöscht deklarieren.  
@@ -613,7 +610,7 @@ class Derived : T {
   
  Ein vom Compiler generierter Kopierkonstruktor richtet ein neues Objekt ein und führt eine memberspezifische Kopie des Inhalts des zu kopierenden Objekts aus. Wenn Basisklassen- oder Memberkonstruktoren vorhanden sind, werden sie aufgerufen; andernfalls wird der bitweise Kopiervorgang ausgeführt.  
   
- Wenn alle Basis- und Memberklassen der Klasse `type` haben Kopierkonstruktoren, die akzeptieren ein **const** Argument, das vom Compiler generierte Kopierkonstruktor akzeptiert ein einzelnes Argument vom Typ **const** `type` **&**. Andernfalls akzeptiert der vom Compiler generierte Kopierkonstruktor ein einzelnes Argument vom Typ `type` ** & **.  
+ Wenn alle Basis- und Memberklassen der Klasse `type` haben Kopierkonstruktoren, die akzeptieren ein **const** Argument, das vom Compiler generierte Kopierkonstruktor akzeptiert ein einzelnes Argument vom Typ **const** `type` **&**. Andernfalls akzeptiert der vom Compiler generierte Kopierkonstruktor ein einzelnes Argument vom Typ `type`  **&** .  
   
  Verwenden Sie einen Konstruktor zum Initialisieren einer **const** oder `volatile` -Objekt, aber der Konstruktor selbst kann nicht als deklariert werden **const** oder `volatile`. Ist der einzige zulässige Speicherklasse für einen Konstruktor **Inline**; verwenden, der eine beliebige andere Speicherklassenmodifizierer, einschließlich der `__declspec` -Schlüsselwort, klicken Sie mit einem Konstruktor, verursacht einen Compilerfehler.  
   
@@ -699,4 +696,3 @@ int main()
   
  `Base::Base` ruft die `f`-Funktion auf, bei der es sich um eine virtuelle Funktion handelt. Normalerweise würde `Derived::f` aufgerufen, da das Objekt `d` vom Typ `Derived` ist. Da es sich bei der `Base::Base`-Funktion um einen Konstruktor handelt, ist das Objekt noch nicht vom Typ `Derived`, und `Base::f` wird aufgerufen.  
   
-

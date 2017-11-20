@@ -1,33 +1,33 @@
 ---
-title: "Unterst&#252;tzen des Freethreadings im Anbieter | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB-Anbieter, Multithread"
-  - "Threading [C++], Anbieter"
+title: "Unterstützen des Freethreadings im Anbieter | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB providers, multithreaded
+- threading [C++], providers
 ms.assetid: a91270dc-cdf9-4855-88e7-88a54be7cbe8
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7d062a17fd71d53451aa8de3aa7d498f8a5ec68a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Unterst&#252;tzen des Freethreadings im Anbieter
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Alle OLE DB\-Anbieterklassen sind threadsicher, und die Registrierungseinträge werden entsprechend festgelegt.  Sie sollten Freethreading unterstützen, damit in Mehrbenutzersituationen eine hohe Leistung gewährleistet ist.  Damit der Anbieter threadsicher bleibt, müssen Sie sicherstellen, dass der Code ordnungsgemäß blockiert wird.  Sobald Daten geschrieben oder gespeichert werden, muss der Zugriff auf kritische Abschnitte blockiert werden.  
+# <a name="supporting-free-threading-in-your-provider"></a>Unterstützen des Freethreadings im Anbieter
+Die OLE DB-Anbieterklassen sind threadsicher und Registrierungseinträge werden entsprechend festgelegt. Es ist eine gute Idee, unterstützen Freethreadings so ein hohes Maß an Leistung in Situationen Mehrbenutzer bereitzustellen. Damit Ihr Anbieter Threadsicherheit bleibt, müssen Sie sicherstellen, dass der Code ordnungsgemäß blockiert wird. Bei jedem Schreiben oder Daten zu speichern, müssen Sie den Zugriff mit kritischen Abschnitten blockieren.  
   
- Jedes OLE DB\-Anbietervorlagenobjekt verfügt über einen eigenen kritischen Abschnitt.  Um das Blockieren zu erleichtern, sollte jede neu erstellte Klasse eine Vorlagenklasse sein, die den Namen der übergeordneten Klasse als Argument annimmt.  
+ Einzelnen Vorlagenobjekte für OLE DB-Anbieter hat einen eigenen kritischen Abschnitt. Um blockierende einfacher zu machen, muss jede neue Klasse, die Sie erstellen eine Vorlagenklasse, die die übergeordnete Klasse dauert Name als Argument.  
   
- Im folgenden Beispiel wird das Blockieren von Code veranschaulicht:  
+ Im folgende Beispiel wird gezeigt, wie Code blockiert wird:  
   
 ```  
 template <class T>  
@@ -46,9 +46,9 @@ HRESULT MyObject::MyMethod(void)
 }  
 ```  
   
- Weitere Informationen dazu, wie Sie kritische Abschnitte mithilfe von `Lock` und `Unlock` schützen, finden Sie unter [Multithreading: Verwendungsweise der Synchronisierungsklassen](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
+ Weitere Informationen zur Vorgehensweise beim Schützen von kritische Abschnitte mit `Lock` und `Unlock`, finden Sie unter [Multithreading: Gewusst wie: Verwenden von Synchronisierungsklassen](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
   
- Darüber hinaus müssen Sie sicherstellen, dass alle überschriebenen Methoden \(z. B. `Execute`\) threadsicher sind.  
+ Sie müssen auch sicherstellen, dass alle Methoden außer Kraft setzen (z. B. `Execute`) sind threadsicher.  
   
-## Siehe auch  
- [Arbeiten mit OLE DB\-Anbietervorlagen](../../data/oledb/working-with-ole-db-provider-templates.md)
+## <a name="see-also"></a>Siehe auch  
+ [Arbeiten mit OLE DB-Anbietervorlagen](../../data/oledb/working-with-ole-db-provider-templates.md)

@@ -1,48 +1,46 @@
 ---
-title: "hash_multimap::max_load_factor (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::max_load_factor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "max_load_factor-Member [STL/CLR]"
+title: hash_multimap::max_load_factor (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::max_load_factor
+dev_langs: C++
+helpviewer_keywords: max_load_factor member [STL/CLR]
 ms.assetid: acea6293-9c6f-4c5e-a9a3-998e755ba1fd
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b564a780d24468a4d4c53629de54fdaad51b15c2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multimap::max_load_factor (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ruft die maximale Elemente pro Bucket fest.  
+# <a name="hashmultimapmaxloadfactor-stlclr"></a>hash_multimap::max_load_factor (STL/CLR)
+Ruft die maximale Anzahl von Elementen pro Bucket ab oder legt sie fest.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 float max_load_factor();  
 void max_load_factor(float new_factor);  
 ```  
   
-#### Parameter  
- new\_factor  
- Neuer zu speichern Höchstlastfaktor.  
+#### <a name="parameters"></a>Parameter  
+ new_factor  
+ Neue maximale Lastfaktor zu speichern.  
   
-## Hinweise  
- Die erste Memberfunktion gibt den aktuellen Höchstlastfaktor gespeicherten zurück.  Sie verwenden sie, um die maximale durchschnittliche Bucketgröße zu bestimmen.  
+## <a name="remarks"></a>Hinweise  
+ Die erste Memberfunktion gibt den aktuellen gespeicherten maximalen Lastfaktor zurück. Sie können damit um die maximale durchschnittliche Bucketgröße zu bestimmen.  
   
- Die zweite Memberfunktion ersetzt den Speicherhöchstlastfaktor durch `new_factor`.  Kein automatische Durchführen eines Rehash tritt auf eine nachfolgende Einfügen auf.  
+ Die zweite Memberfunktion ersetzt den maximalen Lastfaktor Store mit `new_factor`. Kein automatisches erneutes Hashing durchführen tritt auf, bis eine nachfolgende einfügen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_hash_multimap_max_load_factor.cpp   
@@ -88,23 +86,28 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[bc 3\]**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0,1875**  
-**max\_load\_factor\(\) \= 4**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0,1875**  
-**max\_load\_factor\(\) \= 0,25**  
-**bucket\_count\(\) \= 128**  
-**load\_factor\(\) \= 0,0234375**  
-**max\_load\_factor\(\) \= 0,25**   
-## Anforderungen  
- **Header:** \<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 4  
   
- **Namespace:** cliext  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 0.25  
   
-## Siehe auch  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::bucket\_count](../dotnet/hash-multimap-bucket-count-stl-clr.md)   
- [hash\_multimap::load\_factor](../dotnet/hash-multimap-load-factor-stl-clr.md)   
- [hash\_multimap::rehash](../dotnet/hash-multimap-rehash-stl-clr.md)
+bucket_count() = 128  
+load_factor() = 0.0234375  
+max_load_factor() = 0.25  
+```  
+  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext Hash_map/>  
+  
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [hash_multimap-Element (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap::bucket_count (STL/CLR)](../dotnet/hash-multimap-bucket-count-stl-clr.md)   
+ [hash_multimap::load_factor (STL/CLR)](../dotnet/hash-multimap-load-factor-stl-clr.md)   
+ [hash_multimap::rehash (STL/CLR)](../dotnet/hash-multimap-rehash-stl-clr.md)
