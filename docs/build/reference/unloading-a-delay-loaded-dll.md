@@ -1,31 +1,31 @@
 ---
-title: "Entladen einer verz&#246;gert geladenen DLL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__FUnloadDelayLoadedDLL2"
-  - "Verzögertes Laden von DLLs, Entladen"
+title: "Entladen einer verzögert geladenen DLL | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- __FUnloadDelayLoadedDLL2
+- delayed loading of DLLs, unloading
 ms.assetid: 6463bc71-020e-4aff-a4ca-90360411c54e
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0962059e6e55ce68133960cc9f8d1de8c7f0ef61
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Entladen einer verz&#246;gert geladenen DLL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Von der standardmäßig bereitgestellten Hilfsfunktion für verzögertes Laden wird überprüft, ob die Deskriptoren für verzögertes Laden im **pUnloadIAT**\-Feld einen Zeiger und eine Kopie der ursprünglichen Importadressentabelle \(IAT\) besitzen.  Falls ja, wird in einer Liste ein Zeiger auf den Deskriptor für verzögertes Importieren gespeichert.  Dadurch kann die DLL von der Hilfsfunktion über ihren Namen gefunden und das explizite Entladen dieser DLL unterstützt werden.  
+# <a name="unloading-a-delay-loaded-dll"></a>Entladen einer verzögert geladenen DLL
+Das Hilfsobjekt standardmäßig bereitgestellten verzögerte Laden überprüft, ob die Deskriptoren für verzögertes Laden ein Zeiger und eine Kopie der ursprünglichen Importadresstabelle (IAT) im Feld "Name" aufweisen. Wenn dies der Fall ist, speichert es einen Zeiger in einer Liste auf den Import Verzögerungsdeskriptor. Dadurch wird die Hilfsfunktion, die anhand des Namens zur Unterstützung dieser DLL explizit Entladen der DLL zu suchen.  
   
- Nachstehend sind die verbundenen Strukturen und Funktionen aufgeführt, die zum expliziten Entladen einer verzögert geladenen DLL erforderlich sind:  
+ Hier werden die zugehörigen Strukturen und Funktionen für Explizites Entladen einer verzögert geladenen DLL:  
   
 ```  
 //  
@@ -52,21 +52,21 @@ ExternC
 PUnloadInfo __puiHead;  
 ```  
   
- Die **UnloadInfo**\-Struktur wird durch eine C\+\+\-Klasse implementiert, die eine **LocalAlloc**\-Implementierung für den Operator **new** und eine **LocalFree**\-Implementierung für den Operator **delete** verwendet.  Diese Optionen werden in einer standardmäßig verknüpften Liste mit dem **\_\_puiHead**\-Header verwaltet.  
+ Die-Implementierung-Struktur wird mithilfe von einem C++-Klasse, die verwendet implementiert **LocalAlloc** und **LocalAlloc** Implementierungen als seinen Operator **neue** and -Operator  **Löschen Sie** bzw.. Diese Optionen werden in einer standardmäßigen verknüpfte Liste, die mithilfe von __puiHead als den Anfang der Liste beibehalten.  
   
- Beim Aufruf von **\_\_FUnloadDelayLoadedDLL** wird versucht, den angegeben Namen in der Liste der geladenen DLLs zu finden, wobei exakte Übereinstimmung erforderlich ist.  Wenn der Name gefunden wird, wird die IAT\-Kopie in **pUnloadIAT** an den Anfang der ausgeführten IAT kopiert, um die Thunkzeiger wiederherzustellen. Danach wird die Bibliothek mit **FreeLibrary** freigegeben, die Verknüpfung des entsprechenden **UnloadInfo**\-Datensatzes mit der Liste aufgehoben, der Datensatz gelöscht und **TRUE** zurückgegeben.  
+ Aufrufen von __FUnloadDelayLoadedDLL versucht, den Namen zu finden Sie in der Liste der geladenen DLLs (eine genaue Übereinstimmung erforderlich ist) bereitstellen. Wenn gefunden, die Kopie der IAT in Name kopiert wird über den oberen Rand ausgeführten IAT Thunk Zeiger wiederhergestellt werden soll, wird die Bibliothek mit freigegeben **FreeLibrary**, den entsprechenden **-Implementierung** Datensatz aus aufgehoben wird die Liste gelöscht und "true" zurückgegeben.  
   
- Vom Argument von **\_\_FUnloadDelayLoadedDLL2** wird Groß\- und Kleinschreibung beachtet.  Folgendes kann angegeben werden:  
+ Das Argument von __FUnloadDelayLoadedDLL2 wird Groß-/Kleinschreibung beachtet. Beispielsweise würden Sie Folgendes angeben:  
   
 ```  
 __FUnloadDelayLoadedDLL2("user32.DLL");  
 ```  
   
- aber nicht:  
+ und nicht:  
   
 ```  
 __FUnloadDelayLoadedDLL2("User32.DLL");.  
 ```  
   
-## Siehe auch  
- [Understanding the Helper Function](assetId:///6279c12c-d908-4967-b0b3-cabfc3e91d3d)
+## <a name="see-also"></a>Siehe auch  
+ [Die Hilfsfunktion](understanding-the-helper-function.md)
