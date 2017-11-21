@@ -1,41 +1,39 @@
 ---
-title: "collection_adapter::key_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::collection_adapter::key_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "key_type-Member [STL/CLR]"
+title: collection_adapter::KEY_TYPE (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::collection_adapter::key_type
+dev_langs: C++
+helpviewer_keywords: key_type member [STL/CLR]
 ms.assetid: 71ed32b0-af5b-4bac-ae09-2f5d08f0a79b
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 815e52fc75212128aa48293aef8630456a47f919
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# collection_adapter::key_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Der Typ einer Wörterbuch\-Schlüssel.  
+# <a name="collectionadapterkeytype-stlclr"></a>collection_adapter::key_type (STL/CLR)
+Der Typ eines Schlüssels Wörterbuch.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef Key key_type;  
 ```  
   
-## Hinweise  
- Der Typ ist ein Synonym für den Vorlagenparameter `Key`, in einer Spezialisierung für `IDictionary` oder `IDictionary<Value>`; Andernfalls wird sie nicht definiert.  
+## <a name="remarks"></a>Hinweise  
+ Der Typ ist ein Synonym für den Vorlagenparameter `Key`, in der eine Spezialisierung für `IDictionary` oder `IDictionary<Value>`; andernfalls ist es nicht definiert.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_collection_adapter_key_type.cpp   
@@ -68,12 +66,15 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[bc 3\]**   
-## Anforderungen  
- **Header:** \<cliext\/Adapter\>  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext-Adapter >  
   
-## Siehe auch  
- [collection\_adapter](../dotnet/collection-adapter-stl-clr.md)   
- [collection\_adapter::mapped\_type](../dotnet/collection-adapter-mapped-type-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)   
+ [collection_adapter::mapped_type (STL/CLR)](../dotnet/collection-adapter-mapped-type-stl-clr.md)

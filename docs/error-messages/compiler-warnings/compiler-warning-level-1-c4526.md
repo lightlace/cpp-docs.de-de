@@ -1,34 +1,32 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4526 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4526"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4526"
+title: Compilerwarnung (Stufe 1) C4526 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4526
+dev_langs: C++
+helpviewer_keywords: C4526
 ms.assetid: 490f8916-5fdc-4cad-b412-76c3382a5976
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 00ffa9e20781d8d5d1405d6bf5546b47a6530b88
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Compilerwarnung (Stufe 1) C4526
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'Funktion': Statische Memberfunktion kann die virtuelle Funktion 'virtuelle Funktion' nicht überschreiben.  Das Überschreiben wird ignoriert und die virtuelle Funktion ausgeblendet.  
+# <a name="compiler-warning-level-1-c4526"></a>Compilerwarnung (Stufe 1) C4526
+'Funktion': statische Memberfunktion kann nicht virtuelle Funktion, die außer Kraft setzen "virtuelle function'override ignoriert, virtuelle Funktion wird ausgeblendet  
   
- Die statische Memberfunktion erfüllt die Kriterien zum Überschreiben der virtuellen Funktion. Dadurch ist die Memberfunktion sowohl **virtual** als auch **static**.  
+ Die statische Memberfunktion erfüllt die Kriterien für die virtuelle Funktion überschreiben, wodurch die Memberfunktion sowohl statische als auch virtuelle.  
   
- Im folgenden Code wird C4526 generiert:  
+ Der folgende Code generiert C4526:  
   
 ```  
 // C4526.cpp  
@@ -43,8 +41,8 @@ struct myStruct2: public myStruct1 {
 };  
 ```  
   
- Die folgenden Korrekturmaßnahmen sind möglich:  
+ Im folgenden sind mögliche Korrekturen aufgeführt:  
   
--   Wenn die virtuelle Funktion der Basisklasse durch die Funktion überschrieben werden sollte, entfernen Sie den **static**\-Spezifizierer.  
+-   Wenn die Funktion wurde der virtuellen Funktion der Basisklasse überschreiben, entfernen Sie den statischen Spezifizierer.  
   
--   Wenn die Funktion eine **static**\-Memberfunktion sein sollte, benennen Sie sie um, sodass kein Konflikt mit der virtuellen Funktion der Basisklasse entsteht.
+-   Wenn die Funktion eine statische Memberfunktion sein sollte, benennen Sie sie, sodass kein Konflikt mit der virtuellen Basisklasse-Funktion entsteht.

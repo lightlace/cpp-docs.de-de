@@ -1,32 +1,30 @@
 ---
-title: "unary_delegate (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::unary_delegate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unary_delegate-Funktion [STL/CLR]"
+title: Unary_delegate (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::unary_delegate
+dev_langs: C++
+helpviewer_keywords: unary_delegate function [STL/CLR]
 ms.assetid: b3ee253c-98e8-466e-a272-505e47aed061
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 50a59472b2aa2873cf1efe00741f3ddfd98f0e5e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# unary_delegate (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die genereic Klasse beschreibt einen EinArgumentdelegaten.  Sie verwenden sie angeben einem Delegaten in BNF Argument und Rückgabetypen.  
+# <a name="unarydelegate-stlclr"></a>unary_delegate (STL/CLR)
+Die Genereic Klasse beschreibt einen Delegaten mit nur einem Argument. Sie verwenden, geben Sie einen Delegaten im Hinblick auf die Argument- und Rückgabetypen Typen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 generic<typename Arg,  
@@ -34,31 +32,31 @@ generic<typename Arg,
     delegate Result unary_delegate(Arg);  
 ```  
   
-#### Parameter  
- Arg  
+#### <a name="parameters"></a>Parameter  
+ arg  
  Der Typ des Arguments.  
   
  Ergebnis  
  Der Rückgabetyp.  
   
-## Hinweise  
- Der genereic Delegat beschreibt eine EinArgumentfunktion.  
+## <a name="remarks"></a>Hinweise  
+ Der Delegat Genereic beschreibt eine Funktion nur einem Argument.  
   
- Beachten Sie das für:  
+ Beachten Sie, dass für:  
   
  `unary_delegare<int, int> Fun1;`  
   
  `unary_delegare<int, int> Fun2;`  
   
- die Typen `Fun1` und `Fun2` sind Synonyme, während für:  
+ die Typen `Fun1` und `Fun2` sind Synonyme, während er sich für:  
   
  `delegate int Fun1(int);`  
   
  `delegate int Fun2(int);`  
   
- sie sind nicht der gleiche Typ.  
+ sind sie nicht den gleichen Typ.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_unary_delegate.cpp   
@@ -82,14 +80,17 @@ int main()
   
 ```  
   
-  **Hash \(L'a\) \= 5**  
-**Hash \(L'b\) \= 22**   
-## Anforderungen  
- **Header:** \<cliext\/funktionsfähig\>  
+```Output  
+hash(L'a') = 5  
+hash(L'b') = 22  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/funktionale >  
   
-## Siehe auch  
- [binary\_delegate](../dotnet/binary-delegate-stl-clr.md)   
- [binary\_delegate\_noreturn](../dotnet/binary-delegate-noreturn-stl-clr.md)   
- [unary\_delegate\_noreturn](../dotnet/unary-delegate-noreturn-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Binary_delegate (STL/CLR)](../dotnet/binary-delegate-stl-clr.md)   
+ [Binary_delegate_noreturn (STL/CLR)](../dotnet/binary-delegate-noreturn-stl-clr.md)   
+ [unary_delegate_noreturn (STL/CLR)](../dotnet/unary-delegate-noreturn-stl-clr.md)

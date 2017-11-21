@@ -1,103 +1,102 @@
 ---
-title: "Makros und globale Funktionen f&#252;r OLE-Consumervorlagen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.templates.ole"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Makros, OLE DB-Consumervorlagen"
-  - "OLE DB-Consumervorlagen, Makros"
+title: "Makros und globale Funktionen für OLE DB-Consumervorlagen | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.templates.ole
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB consumer templates, macros
+- macros, OLE DB consumer template
 ms.assetid: 8765eb7b-32dd-407c-bacf-8890ef959837
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 541425a073b4d179a20a33646844723d655f8160
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Makros und globale Funktionen f&#252;r OLE-Consumervorlagen
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die OLE DB\-Consumervorlagen umfassen die folgenden Makros und globalen Funktionen:  
+# <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>Makros und globale Funktionen für OLE-Consumervorlagen
+Der OLE DB-Consumervorlagen umfassen die folgenden Makros und globale Funktionen:  
   
-### Globale Funktionen  
+### <a name="global-functions"></a>Globale Funktionen  
   
 |||  
 |-|-|  
-|[AtlTraceErrorRecords](../../data/oledb/atltraceerrorrecords.md)|Sichert OLE DB Fehler\-Registerinformation zum Sicherungsgerät, wenn ein Fehler zurückgegeben wird.|  
+|[AtlTraceErrorRecords](../../data/oledb/atltraceerrorrecords.md)|Sichert OLE DB-Fehlerdatensatz Informationen auf dem Sicherungsmedium aus, wenn ein Fehler zurückgegeben wird.|  
   
-### Accessor\-Zuordnungs\-Makros  
-  
-|||  
-|-|-|  
-|[BEGIN\_ACCESSOR](../../data/oledb/begin-accessor.md)|Markiert den Beginn eines Accessoreintrags.|  
-|[BEGIN\_ACCESSOR\_MAP](../../data/oledb/begin-accessor-map.md)|Markiert den Beginn der Accessorzuordnungseinträge.|  
-|[END\_ACCESSOR](../../data/oledb/end-accessor.md)|Markiert das Ende eines Accessoreintrags.|  
-|[END\_ACCESSOR\_MAP](../../data/oledb/end-accessor-map.md)|Markiert das Ende der Accessorzuordnungseinträge.|  
-  
-### Spalten\-Zuordnungs\-Makros  
+### <a name="accessor-map-macros"></a>Accessor Ereigniszuordnungs-Makros  
   
 |||  
 |-|-|  
-|[BEGIN\_COLUMN\_MAP](../../data/oledb/begin-column-map.md)|Markiert den Beginn der Spaltenzuordnungseinträge in der Benutzerdatensatz\-Klasse.|  
-|[BLOB\_ENTRY](../../data/oledb/blob-entry.md)|Wird verwendet, um ein Binary Large Object \(BLOB\) binden.|  
-|[BLOB\_ENTRY\_LENGTH](../../data/oledb/blob-entry-length.md)|Meldet die Länge der BLOBdatenspalte.|  
-|[BLOB\_ENTRY\_LENGTH\_STATUS](../../data/oledb/blob-entry-length-status.md)|Gibt die Länge und über den Status der BLOBdatenspalte.|  
-|[BLOB\_ENTRY\_STATUS](../../data/oledb/blob-entry-status.md)|Gibt den Status der BLOBdatenspalte.|  
-|[BLOB\_NAME](../../data/oledb/blob-name.md)|Wird verwendet, um ein Binary Large Object von Spaltennamen zu binden.|  
-|[BLOB\_NAME\_LENGTH](../../data/oledb/blob-name-length.md)|Meldet die Länge der BLOBdatenspalte.|  
-|[BLOB\_NAME\_LENGTH\_STATUS](../../data/oledb/blob-name-length-status.md)|Gibt die Länge und über den Status der BLOBdatenspalte.|  
-|[BLOB\_NAME\_STATUS](../../data/oledb/blob-name-status.md)|Gibt den Status der BLOBdatenspalte.|  
-|[BOOKMARK\_ENTRY](../../data/oledb/bookmark-entry.md)|Stellt einen Lesezeicheneintrag im Rowset dar.  Ein Lesezeicheneintrag ist eine besondere Art Spalteneintrag.|  
-|[COLUMN\_ENTRY](../../data/oledb/column-entry.md)|Stellt eine Bindung zu einer bestimmten Spalte in der Datenbank dar.|  
-|[COLUMN\_ENTRY\_EX](../../data/oledb/column-entry-ex.md)|Stellt eine Bindung zur spezifischen Spalte in der Datenbank dar.  Unterstützt `type`, *Länge*, *Genauigkeit*, `scale` und *Status* parameter.|  
-|[COLUMN\_ENTRY\_LENGTH](../../data/oledb/column-entry-length.md)|Stellt eine Bindung zur spezifischen Spalte in der Datenbank dar.  Unterstützt die *Längen* variable.|  
-|[COLUMN\_ENTRY\_LENGTH\_STATUS](../../data/oledb/column-entry-length-status.md)|Stellt eine Bindung zur spezifischen Spalte in der Datenbank dar.  Stütz *status\-* und \- *Längen* parameter.|  
-|[COLUMN\_ENTRY\_PS](../../data/oledb/column-entry-ps.md)|Stellt eine Bindung zur spezifischen Spalte in der Datenbank dar.  Stützgenauigkeit Parameter und `scale`.|  
-|[COLUMN\_ENTRY\_PS\_LENGTH](../../data/oledb/column-entry-ps-length.md)|Stellt eine Bindung zur spezifischen Spalte in der Datenbank dar.  Unterstützt die *Längenvariable*, *die Genauigkeit* und die `scale`\-Parameter.|  
-|[COLUMN\_ENTRY\_PS\_LENGTH\_STATUS](../../data/oledb/column-entry-ps-length-status.md)|Stellt eine Bindung zur spezifischen Spalte in der Datenbank dar.  Stützstatus\- und *\-Längenvariablen*, *Genauigkeit* und Parameter `scale`.|  
-|[COLUMN\_ENTRY\_PS\_STATUS](../../data/oledb/column-entry-ps-status.md)|Stellt eine Bindung zur spezifischen Spalte in der Datenbank dar.  Unterstützt die *Statusvariable*, *die Genauigkeit* und die `scale`\-Parameter.|  
-|[COLUMN\_ENTRY\_STATUS](../../data/oledb/column-entry-status.md)|Stellt eine Bindung zur spezifischen Spalte in der Datenbank dar.  Unterstützt die *Status* variable.|  
-|[COLUMN\_ENTRY\_TYPE](../../data/oledb/column-entry-type.md)|Stellt eine Bindung zu einer bestimmten Spalte in der Datenbank dar.  Unterstützt `type`\-Parameter.|  
-|[COLUMN\_ENTRY\_TYPE\_SIZE](../../data/oledb/column-entry-type-size.md)|Stellt eine Bindung zur spezifischen Spalte in der Datenbank dar.  Unterstützung Parameter `type` und `size`.|  
-|[COLUMN\_NAME](../../data/oledb/column-name.md)|Stellt eine Bindung zu einer bestimmten Spalte in der Datenbank über dar.|  
-|[COLUMN\_NAME\_EX](../../data/oledb/column-name-ex.md)|Stellt eine Bindung zu einer bestimmten Spalte in der Datenbank über dar.  Unterstützt Spezifikation des Datentyps, der Größe, einer Genauigkeit, Umfang, der Spaltenlänge und des Spaltenstatus.|  
-|[COLUMN\_NAME\_LENGTH](../../data/oledb/column-name-length.md)|Stellt eine Bindung zu einer bestimmten Spalte in der Datenbank über dar.  Unterstützt Spezifikation die Spaltenlänge.|  
-|[COLUMN\_NAME\_LENGTH\_STATUS](../../data/oledb/column-name-length-status.md)|Stellt eine Bindung zu einer bestimmten Spalte in der Datenbank über dar.  Unterstützt Spezifikation der Spaltenlänge und \-Status.|  
-|[COLUMN\_NAME\_PS](../../data/oledb/column-name-ps.md)|Stellt eine Bindung zu einer bestimmten Spalte in der Datenbank über dar.  Unterstützt Spezifikation von Genauigkeit und Umfang.|  
-|[COLUMN\_NAME\_PS\_LENGTH](../../data/oledb/column-name-ps-length.md)|Stellt eine Bindung zu einer bestimmten Spalte in der Datenbank über dar.  Unterstützt Spezifikation von Genauigkeit, der Skalierung und die Spaltenlänge.|  
-|[COLUMN\_NAME\_PS\_LENGTH\_STATUS](../../data/oledb/column-name-ps-length-status.md)|Stellt eine Bindung zu einer bestimmten Spalte in der Datenbank über dar.  Unterstützt Spezifikation von Genauigkeit, Umfang, der Spaltenlänge und des Spaltenstatus.|  
-|[COLUMN\_NAME\_PS\_STATUS](../../data/oledb/column-name-ps-status.md)|Stellt eine Bindung zu einer bestimmten Spalte in der Datenbank über dar.  Unterstützt Spezifikation von Genauigkeit, der Skalierung und des Spaltenstatus.|  
-|[COLUMN\_NAME\_STATUS](../../data/oledb/column-name-status.md)|Stellt eine Bindung zu einer bestimmten Spalte in der Datenbank über dar.  Unterstützt Spezifikation des Spaltenstatus.|  
-|[COLUMN\_NAME\_TYPE](../../data/oledb/column-name-type.md)|Stellt eine Bindung zu einer bestimmten Spalte in der Datenbank über dar.  Unterstützt Spezifikation des Datentyps.|  
-|[COLUMN\_NAME\_TYPE\_PS](../../data/oledb/column-name-type-ps.md)|Stellt eine Bindung zu einer bestimmten Spalte in der Datenbank über dar.  Unterstützt Spezifikation des Datentyps, von Genauigkeit und Umfang.|  
-|[COLUMN\_NAME\_TYPE\_SIZE](../../data/oledb/column-name-type-size.md)|Stellt eine Bindung zu einer bestimmten Spalte in der Datenbank über dar.  Unterstützt Spezifikation des Datentyps und Größe.|  
-|[COLUMN\_NAME\_TYPE\_STATUS](../../data/oledb/column-name-type-status.md)|Stellt eine Bindung zu einer bestimmten Spalte in der Datenbank über dar.  Unterstützt Spezifikation des Datentyp\- und Spaltenstatus.|  
-|[END\_COLUMN\_MAP](../../data/oledb/end-column-map.md)|Markiert das Ende der Spaltenzuordnungseinträge.|  
+|[BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)|Markiert den Beginn eines Eintrags Accessor.|  
+|[BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)|Markiert den Beginn der Accessor-Zuordnungseinträge.|  
+|[END_ACCESSOR](../../data/oledb/end-accessor.md)|Markiert das Ende eines Eintrags Accessor.|  
+|[END_ACCESSOR_MAP](../../data/oledb/end-accessor-map.md)|Markiert das Ende der Accessor-Zuordnungseinträge.|  
   
-### Befehls\-Makros  
+### <a name="column-map-macros"></a>Spalte Ereigniszuordnungs-Makros  
   
 |||  
 |-|-|  
-|[DEFINE\_COMMAND](../../data/oledb/define-command.md)|Gibt den Befehl an, der verwendet wird, um das Rowset zu erstellen, wenn die [CCommand](../../data/oledb/ccommand-class.md)\-Klasse verwendet.  Akzeptiert die nur Zeichenfolgentypen, die den angegebenen Anwendungstyp übereinstimmen \(ANSI oder Unicode\).  Es wird empfohlen, dass Sie [DEFINE\_COMMAND\_EX](../../data/oledb/define-command-ex.md) anstelle von `DEFINE_COMMAND` verwenden.|  
-|[DEFINE\_COMMAND\_EX](../../data/oledb/define-command-ex.md)|Gibt den Befehl an, der verwendet wird, um das Rowset zu erstellen, wenn die [CCommand](../../data/oledb/ccommand-class.md)\-Klasse verwendet.  Anwendungen der Unterstützungs\- ANSI und Unicode\-.|  
+|[BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)|Markiert den Beginn der Zuordnungseinträge Spalte in die Benutzerdatensatz-Klasse.|  
+|[BLOB_ENTRY](../../data/oledb/blob-entry.md)|Wird verwendet, um ein binary large Object (BLOB) zu binden.|  
+|[BLOB_ENTRY_LENGTH](../../data/oledb/blob-entry-length.md)|Gibt die Länge der BLOB-Spalte.|  
+|[BLOB_ENTRY_LENGTH_STATUS](../../data/oledb/blob-entry-length-status.md)|Gibt die Länge und den Status der BLOB-Spalte.|  
+|[BLOB_ENTRY_STATUS](../../data/oledb/blob-entry-status.md)|Meldet den Status der BLOB-Spalte.|  
+|[BLOB_NAME](../../data/oledb/blob-name.md)|Wird verwendet, um ein binary large Object anhand des Spaltennamens zu binden.|  
+|[BLOB_NAME_LENGTH](../../data/oledb/blob-name-length.md)|Gibt die Länge der BLOB-Spalte.|  
+|[BLOB_NAME_LENGTH_STATUS](../../data/oledb/blob-name-length-status.md)|Gibt die Länge und den Status der BLOB-Spalte.|  
+|[BLOB_NAME_STATUS](../../data/oledb/blob-name-status.md)|Meldet den Status der BLOB-Spalte.|  
+|[BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md)|Stellt einen Lesezeicheneintrag für das Rowset an. Ein Lesezeicheneintrag ist eine besondere Art von Eintrag in der Spalte.|  
+|[COLUMN_ENTRY](../../data/oledb/column-entry.md)|Stellt eine Bindung zu einer bestimmten Spalte in der Datenbank dar.|  
+|[COLUMN_ENTRY_EX](../../data/oledb/column-entry-ex.md)|Stellt eine Bindung an die spezifische Spalte in der Datenbank dar. Unterstützt `type`, *Länge*, *Genauigkeit*, `scale`, und *Status* Parameter.|  
+|[COLUMN_ENTRY_LENGTH](../../data/oledb/column-entry-length.md)|Stellt eine Bindung an die spezifische Spalte in der Datenbank dar. Unterstützt die *Länge* Variable.|  
+|[COLUMN_ENTRY_LENGTH_STATUS](../../data/oledb/column-entry-length-status.md)|Stellt eine Bindung an die spezifische Spalte in der Datenbank dar. Unterstützt *Status* und *Länge* Parameter.|  
+|[COLUMN_ENTRY_PS](../../data/oledb/column-entry-ps.md)|Stellt eine Bindung an die spezifische Spalte in der Datenbank dar. Unterstützt *Genauigkeit* und `scale` Parameter.|  
+|[COLUMN_ENTRY_PS_LENGTH](../../data/oledb/column-entry-ps-length.md)|Stellt eine Bindung an die spezifische Spalte in der Datenbank dar. Unterstützt die *Länge* Variable *Genauigkeit* und `scale` Parameter.|  
+|[COLUMN_ENTRY_PS_LENGTH_STATUS](../../data/oledb/column-entry-ps-length-status.md)|Stellt eine Bindung an die spezifische Spalte in der Datenbank dar. Unterstützt *Status* und *Länge* Variablen *Genauigkeit* und `scale` Parameter.|  
+|[COLUMN_ENTRY_PS_STATUS](../../data/oledb/column-entry-ps-status.md)|Stellt eine Bindung an die spezifische Spalte in der Datenbank dar. Unterstützt die *Status* Variable *Genauigkeit* und `scale` Parameter.|  
+|[COLUMN_ENTRY_STATUS](../../data/oledb/column-entry-status.md)|Stellt eine Bindung an die spezifische Spalte in der Datenbank dar. Unterstützt die *Status* Variable.|  
+|[COLUMN_ENTRY_TYPE](../../data/oledb/column-entry-type.md)|Stellt eine Bindung zu einer bestimmten Spalte in der Datenbank dar. Unterstützt `type` Parameter.|  
+|[COLUMN_ENTRY_TYPE_SIZE](../../data/oledb/column-entry-type-size.md)|Stellt eine Bindung an die spezifische Spalte in der Datenbank dar. Unterstützt `type` und `size` Parameter.|  
+|[COLUMN_NAME](../../data/oledb/column-name.md)|Stellt eine Bindung an eine bestimmte Spalte in der Datenbank nach Namen dar.|  
+|[COLUMN_NAME_EX](../../data/oledb/column-name-ex.md)|Stellt eine Bindung an eine bestimmte Spalte in der Datenbank nach Namen dar. Unterstützt die Spezifikation von Datentyp, Größe, Genauigkeit, Dezimalstellen, Spaltenlänge und Status in der Spalte.|  
+|[COLUMN_NAME_LENGTH](../../data/oledb/column-name-length.md)|Stellt eine Bindung an eine bestimmte Spalte in der Datenbank nach Namen dar. Unterstützt die Angabe der Spaltenlänge.|  
+|[COLUMN_NAME_LENGTH_STATUS](../../data/oledb/column-name-length-status.md)|Stellt eine Bindung an eine bestimmte Spalte in der Datenbank nach Namen dar. Unterstützt die Spezifikation der Spaltenlänge und Status.|  
+|[COLUMN_NAME_PS](../../data/oledb/column-name-ps.md)|Stellt eine Bindung an eine bestimmte Spalte in der Datenbank nach Namen dar. Unterstützt die Spezifikation von Genauigkeit und festen Dezimalstellen.|  
+|[COLUMN_NAME_PS_LENGTH](../../data/oledb/column-name-ps-length.md)|Stellt eine Bindung an eine bestimmte Spalte in der Datenbank nach Namen dar. Unterstützt die Spezifikation Länge, Genauigkeit, Dezimalstellen und Spalte.|  
+|[COLUMN_NAME_PS_LENGTH_STATUS](../../data/oledb/column-name-ps-length-status.md)|Stellt eine Bindung an eine bestimmte Spalte in der Datenbank nach Namen dar. Unterstützt die Spezifikation von Genauigkeit, Dezimalstellen, Spaltenlänge und Status in der Spalte.|  
+|[COLUMN_NAME_PS_STATUS](../../data/oledb/column-name-ps-status.md)|Stellt eine Bindung an eine bestimmte Spalte in der Datenbank nach Namen dar. Unterstützt die Spezifikation von Genauigkeit, Dezimalstellen und die Spalte Status.|  
+|[COLUMN_NAME_STATUS](../../data/oledb/column-name-status.md)|Stellt eine Bindung an eine bestimmte Spalte in der Datenbank nach Namen dar. Unterstützt die Angabe der Spalte Status.|  
+|[COLUMN_NAME_TYPE](../../data/oledb/column-name-type.md)|Stellt eine Bindung an eine bestimmte Spalte in der Datenbank nach Namen dar. Unterstützt die Angabe des Datentyps.|  
+|[COLUMN_NAME_TYPE_PS](../../data/oledb/column-name-type-ps.md)|Stellt eine Bindung an eine bestimmte Spalte in der Datenbank nach Namen dar. Unterstützt die Spezifikation von Datentyp, Genauigkeit und Dezimalstellen.|  
+|[COLUMN_NAME_TYPE_SIZE](../../data/oledb/column-name-type-size.md)|Stellt eine Bindung an eine bestimmte Spalte in der Datenbank nach Namen dar. Unterstützt die Spezifikation von Datentyp und Größe.|  
+|[COLUMN_NAME_TYPE_STATUS](../../data/oledb/column-name-type-status.md)|Stellt eine Bindung an eine bestimmte Spalte in der Datenbank nach Namen dar. Unterstützt die Angabe von Typ und die Spalte Status von Daten.|  
+|[END_COLUMN_MAP](../../data/oledb/end-column-map.md)|Markiert das Ende der Spalte-Zuordnungseinträge.|  
   
-### Parameter\-Zuordnungs\-Makros  
+### <a name="command-macros"></a>Befehlsmakros  
   
 |||  
 |-|-|  
-|[BEGIN\_PARAM\_MAP](../../data/oledb/begin-param-map.md)|Markiert den Beginn der Parameterzuordnungseinträge in der Benutzerdatensatz\-Klasse.|  
-|[END\_PARAM\_MAP](../../data/oledb/end-param-map.md)|Markiert das Ende der Parameterzuordnungseinträge.|  
-|[SET\_PARAM\_TYPE](../../data/oledb/set-param-type.md)|Gibt `COLUMN_ENTRY`\-Makros, die das `SET_PARAM_TYPE`\-Makro ausführen, als Eingabe, Ausgabe oder Eingabe\/Ausgabe an.|  
+|[DEFINE_COMMAND](../../data/oledb/define-command.md)|Gibt den Befehl an, der verwendet wird, um das Rowset zu erstellen, bei Verwendung der [CCommand](../../data/oledb/ccommand-class.md) Klasse. Akzeptiert nur Zeichenfolgen-Datentypen, die den angegebenen Anwendungstyp (ANSI oder Unicode) entsprechen. Es wird empfohlen, die Verwendung von [DEFINE_COMMAND_EX](../../data/oledb/define-command-ex.md) anstelle von `DEFINE_COMMAND`.|  
+|[DEFINE_COMMAND_EX](../../data/oledb/define-command-ex.md)|Gibt den Befehl an, der verwendet wird, um das Rowset zu erstellen, bei Verwendung der [CCommand](../../data/oledb/ccommand-class.md) Klasse. Unterstützt ANSI- und Unicode-Anwendungen.|  
   
-## Siehe auch  
- [OLE DB\-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB\-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenz der OLE DB\-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)
+### <a name="parameter-map-macros"></a>Parameter-Zuordnungsmakros  
+  
+|||  
+|-|-|  
+|[BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md)|Markiert den Beginn der Parameter-Zuordnungseinträge in die Benutzerdatensatz-Klasse.|  
+|[END_PARAM_MAP](../../data/oledb/end-param-map.md)|Markiert das Ende der Parameter-Zuordnungseinträge.|  
+|[SET_PARAM_TYPE](../../data/oledb/set-param-type.md)|Gibt an, `COLUMN_ENTRY` Makros, die Folgen der `SET_PARAM_TYPE` Makro als Eingabe-, Ausgabe- oder Eingabe-/Ausgabe.|  
+  
+## <a name="see-also"></a>Siehe auch  
+ [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)

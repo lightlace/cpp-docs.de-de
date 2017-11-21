@@ -1,69 +1,132 @@
 ---
-title: "Platform::ArrayReference-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::ArrayReference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Platform::ArrayReference-Klasse"
+title: 'Platform:: arrayreference-Klasse | Microsoft Docs'
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: VCCORLIB/Platform::ArrayReference::ArrayReference
+dev_langs: C++
+helpviewer_keywords: Platform::ArrayReference Class
 ms.assetid: 9ab3b15e-8a60-4600-8fcb-7d6c86284f4b
-caps.latest.revision: 4
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: d2de3a679f4abd70dfeda04cd0ea8a2ebcd3b4c6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Platform::ArrayReference-Klasse
-`ArrayReference` ist ein Optimierungstyp, den Sie als Ersatz für [Platform::Array^](../cppcx/platform-array-class.md) in den Eingabeparametern verwenden können, wenn Sie ein Array im C\-Format mit Eingabedaten füllen möchten.  
+# <a name="platformarrayreference-class"></a>Platform::ArrayReference-Klasse
+`ArrayReference` ist ein Optimierungstyp, den Sie als Ersatz für [Platform::Array^](../cppcx/platform-array-class.md) in den Eingabeparametern verwenden können, wenn Sie ein Array im C-Format mit Eingabedaten füllen möchten.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
-```vb  
+```cpp  
+class ArrayReference  
+```
   
-```  
+### <a name="members"></a>Mitglieder  
   
-```csharp  
-  
-```  
-  
-## Mitglieder  
-  
-### Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
 |Name|Beschreibung|  
-|----------|------------------|  
-|[ArrayReference::ArrayReference\-Konstruktor](../cppcx/arrayreference-arrayreference-constructor.md)|Initialisiert eine neue Instanz der `ArrayReference`\-Klasse.|  
+|----------|-----------------|  
+|[Arrayreference:: Arrayreference](#ctor)|Initialisiert eine neue Instanz der `ArrayReference`-Klasse.|  
   
-### Öffentliche Operatoren  
+### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
-|----------|------------------|  
-|[ArrayReference::operator\(\)\-Operator](../cppcx/arrayreference-operator-call-operator.md)|Konvertiert diesen `ArrayReference` in ein `Platform::Array<T>^*`\-Element.|  
-|[ArrayReference::operator\=\-Operator](../cppcx/arrayreference-operator-assign-operator.md)|Weist dieser Instanz den Inhalt von einem anderen `ArrayReference` zu.|  
+|----------|-----------------|  
+|[ArrayReference::operator()-Operator](#operator-call)|Konvertiert diesen `ArrayReference` in ein `Platform::Array<T>^*`-Element.|  
+|[ArrayReference::operator=-Operator](#operator-assign)|Weist dieser Instanz den Inhalt von einem anderen `ArrayReference` zu.|  
   
-## Ausnahmen  
+## <a name="exceptions"></a>Ausnahmen  
   
-## Hinweise  
- Mit `ArrayReference` zum Auffüllen eines Arrays im C\-Format, vermeiden Sie den zusätzlichen Kopiervorgang, der dadurch aufgerufen würde, zunächst in eine `Platform::Array`\-Variable zu kopieren, und dann in einem zweiten Schritt in das Array im C\-Format. Bei Verwendung von `ArrayReference`, entsteht nur ein Kopiervorgang. Ein Codebeispiel finden Sie unter [Array und WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).  
+### <a name="remarks"></a>Hinweise  
+ Mit `ArrayReference` zum Auffüllen eines Arrays im C-Format, vermeiden Sie den zusätzlichen Kopiervorgang, der dadurch aufgerufen würde, zunächst in eine `Platform::Array` -Variable zu kopieren, und dann in einem zweiten Schritt in das Array im C-Format. Bei Verwendung von `ArrayReference`, entsteht nur ein Kopiervorgang. Ein Codebeispiel finden Sie unter [Array und WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).  
   
-## Anforderungen  
- **Unterstützter Client \(Min.\):** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  
+### <a name="requirements"></a>Anforderungen  
+ **Unterstützter Client:** Windows 8  
   
- **Unterstützter Server \(Min.\):** [!INCLUDE[winserver8](../cppcx/includes/winserver8-md.md)]  
+ **Unterstützter Server:** Windows Server 2012  
   
  **Namespace:** Platform  
   
  **Header:** vccorlib.h  
   
-## Überschrift für Unterabschnitt  
+## <a name="ctor"></a>Arrayreference:: Arrayreference-Konstruktor
+Initialisiert eine neue Instanz der dem [arrayreference](../cppcx/platform-arrayreference-class.md) Klasse.  
   
-## Siehe auch  
+### <a name="syntax"></a>Syntax  
+  
+```cpp  
+ArrayReference(TArg* ataArg, unsigned int sizeArg, bool needsInitArg = false);  
+ArrayReference(ArrayReference&& otherArg)  
+  
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `dataArg`  
+ Ein Zeiger auf die Arraydaten.  
+  
+ `sizeArg`  
+ Die Anzahl von Elementen im Quellarray.  
+  
+ `otherArg`  
+ Ein `ArrayReference`-Objekt, dessen Daten zum Initialisieren der neuen Instanz verschoben werden.  
+  
+### <a name="remarks"></a>Hinweise  
+  
+
+
+## <a name="operator-assign"></a>Arrayreference:: Operator =-Operator
+Weist das angegebene Objekt dem aktuellen [arrayreference](../cppcx/platform-arrayreference-class.md) -Objekt unter Verwendung der Verschiebesemantik.  
+  
+### <a name="syntax"></a>Syntax  
+  
+```cpp  
+  
+ArrayReference& operator=(ArrayReference&& otherArg);  
+  
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `otherArg`  
+ Das zum aktuellen `ArrayReference`-Objekt verschobene Objekt.  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Verweis auf ein Objekt des Typs `ArrayReference`.  
+  
+### <a name="remarks"></a>Hinweise  
+ `Platform::ArrayReference` ist eine Standard-C++-Klassenvorlage, keine Verweisklasse.  
+  
+
+
+## <a name="operator-call"></a>Arrayreference::Operator()-Operator
+Konvertiert das aktuelle [arrayreference](../cppcx/platform-arrayreference-class.md) -Objekt an eine [Platform:: Array](../cppcx/platform-array-class.md) Klasse.  
+  
+### <a name="syntax"></a>Syntax  
+  
+```cpp  
+  
+Array<TArg>^ operator ();  
+  
+```  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Handle für das Objekt des Typs `Array<TArg>^`  
+  
+### <a name="remarks"></a>Hinweise  
+ [Platform:: arrayreference](../cppcx/platform-arrayreference-class.md) und [Platform:: Array](../cppcx/platform-array-class.md) sind Standard-c++-Klassenvorlagen, keine Verweisklassen Klassen.  
+  
+
+
+  
+  
+## <a name="see-also"></a>Siehe auch  
  [Plattformnamespace](../cppcx/platform-namespace-c-cx.md)

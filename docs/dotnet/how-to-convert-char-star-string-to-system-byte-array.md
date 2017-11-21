@@ -1,33 +1,33 @@
 ---
-title: "Gewusst wie: Umwandeln von char * String nach System::Byte Array"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Arrays [C++], Zeichen"
-  - "Zeichenarrays, Konvertieren in System::Bytearrays"
-  - "Beispiele [C++], Arrays"
-  - "Beispiele [C++], Zeichenfolgen"
+title: 'Vorgehensweise: Umwandeln von Char * String nach System:: Byte Array | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- examples [C++], strings
+- arrays [C++], character
+- character arrays, converting to System::Byte arrays
+- examples [C++], arrays
 ms.assetid: de9bc4eb-773c-4796-a496-9b90ca986503
-caps.latest.revision: 12
-caps.handback.revision: "12"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4d0750884c9d7d5bfb1b9566b26cdce5c8c1962c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Gewusst wie: Umwandeln von char * String nach System::Byte Array
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die effizienteste Umwandlung einer `char *`\-Zeichenfolge in ein <xref:System.Byte>\-Array verwendet die <xref:System.Runtime.InteropServices.Marshal>\-Klasse.  
+# <a name="how-to-convert-char--string-to-systembyte-array"></a>Gewusst wie: Umwandeln von char * String nach System::Byte Array
+Die effizienteste Umwandlung einer `char *`-Zeichenfolge in ein <xref:System.Byte>-Array verwendet die <xref:System.Runtime.InteropServices.Marshal>-Klasse.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // convert_native_string_to_Byte_array.cpp  
@@ -59,5 +59,5 @@ int main() {
 Native String  
 ```  
   
-## Siehe auch  
- [Verwenden von C\+\+\-Interop \(implizites PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Siehe auch  
+ [Verwenden von C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

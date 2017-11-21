@@ -1,56 +1,56 @@
 ---
-title: "Gewusst wie: Einbetten eines Manifests in eine C/C++-Anwendung"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Einbetten von Manifesten"
-  - "Makefiles, Aktualisieren zum Einbetten von Manifesten"
-  - "Manifeste [C++]"
+title: 'Vorgehensweise: Einbetten eines Manifests in einer C/C++-Anwendung | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- manifests [C++]
+- embedding manifests
+- makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-caps.latest.revision: 16
-caps.handback.revision: "16"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3bc7646dab51b9a1fdd73b23d1f58c7b474c363e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Gewusst wie: Einbetten eines Manifests in eine C/C++-Anwendung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Es wird empfohlen, bei C\/C\+\+\-Anwendungen \(oder Bibliotheken\) das Manifest in die endgültige Binärdatei einzubetten, weil dadurch in den meisten Szenarien ein ordnungsgemäßes Laufzeitverhalten sichergestellt wird.  [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] versucht standardmäßig, beim Erstellen eines Projekts aus Quelldateien das Manifest einzubetten. Weitere Informationen finden Sie unter [Manifestgenerierung in Visual Studio](../build/manifest-generation-in-visual-studio.md).  Wenn eine Anwendung jedoch mit nmake erstellt wird, sind einige Änderungen am vorhandenen Makefile erforderlich.  Dieser Abschnitt veranschaulicht, wie vorhandene Makefiles geändert werden müssen, um das Manifest automatisch in die endgültige Binärdatei einzubetten.  
+# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Gewusst wie: Einbetten eines Manifests in eine C/C++-Anwendung
+Es wird empfohlen, dass eine C/C++-Anwendung (oder eine Bibliothek) ist das Manifest in die endgültige Binärdatei eingebettet werden, da so gewährleistet ist richtig Laufzeitverhalten in den meisten Szenarien. Standardmäßig [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] versucht, die das Manifest einbetten, wenn sie ein Projekt aus Quelldateien erstellt; finden Sie unter [Manifesten in Visual Studio](../build/manifest-generation-in-visual-studio.md) für Weitere Informationen. Wenn eine Anwendung mithilfe von Nmake erstellt wird, sind jedoch einige Änderungen an vorhandenen Makefile erforderlich. Dieser Abschnitt veranschaulicht das Ändern von vorhandenen Makefiles um automatisch das Manifest in die endgültige Binärdatei eingebettet.  
   
-## Zwei Ansätze  
- Es gibt zwei Möglichkeiten, das Manifest in eine Anwendung oder Bibliothek einzubetten.  
+## <a name="two-approaches"></a>Zwei Ansätze  
+ Es gibt zwei Möglichkeiten, die das Manifest in einer Anwendung oder eine Bibliothek einbetten.  
   
--   Wenn Sie keinen inkrementellen Build durchführen, können Sie das Manifest direkt einbetten, indem Sie eine Befehlszeile wie die folgende als Postbuildschritt verwenden:  
+-   Wenn Sie einen inkrementellen Build nicht ausführen, können Sie direkt das Manifest mit einer ähnlich der folgenden Befehlszeile als Postbuildschritt einbetten:  
   
-     **mt.exe –manifest MyApp.exe.manifest \-outputresource:MyApp.exe;1**  
+     **MT.exe-manifest MyApp.exe.manifest-outputresource:MyApp.exe;1**  
   
      oder  
   
-     **mt.exe –manifest MyLibrary.dll.manifest \-outputresource:MyLibrary.dll;2**  
+     **MT.exe-manifest MyLibrary.dll.manifest-outputresource:MyLibrary.dll;2**  
   
-     \(1 für eine EXE\-Datei, 2 für eine DLL\-Datei\)  
+     (1 für eine EXE-Datei für eine DLL 2).  
   
--   Wenn Sie einen inkrementellen Build durchführen, wird bei einer direkten Bearbeitung der Ressource, wie hier gezeigt, der inkrementelle Buildvorgang deaktiviert und eine vollständige Neuerstellung durchgeführt. Aus diesem Grund sollte ein anderer Ansatz gewählt werden:  
+-   Wenn Sie einen inkrementellen Build durchführen, wird die Ressource direkt zu bearbeiten, wie hier gezeigt inkrementellen Buildvorgangs deaktivieren und dazu führen, dass eine vollständige Neuerstellung; aus diesem Grund sollte ein anderer Ansatz gewählt werden:  
   
     -   Verknüpfen Sie die Binärdatei, um die Datei MyApp.exe.manifest zu generieren.  
   
-    -   Konvertieren Sie das Manifest in eine Ressourcendatei.  
+    -   Konvertieren Sie das Manifest in einer Ressourcendatei gespeichert.  
   
-    -   Stellen Sie die Verknüpfung \(inkrementell\) wieder her, um die Manifestressource in die Binärdatei einzubetten.  
+    -   Verknüpfen Sie erneut (inkrementell) die Manifestressource in die Binärdatei eingebettet.  
   
- Die folgenden Beispiele zeigen, wie Makefiles geändert werden, um beide Methoden einzubinden.  
+ Die folgenden Beispiele zeigen, wie Makefiles enthält beide Verfahren geändert werden.  
   
-## Makefiles \(vorher\)  
- Betrachten Sie das Skript nmake für MyApp.exe, eine einfache, aus einer Datei erstellte Anwendung:  
+## <a name="makefiles-before"></a>Makefiles (vorher)  
+ Betrachten Sie das Skript Nmake für MyApp.exe, eine einfache Anwendung erstellt, die aus einer Datei ein:  
   
 ```  
 # build MyApp.exe  
@@ -70,9 +70,9 @@ clean :
     del MyApp.obj MyApp.exe  
 ```  
   
- Wenn dieses Skript mit Visual C\+\+ unverändert ausgeführt wird, wird "MyApp.exe" erfolgreich erstellt.  Es erstellt außerdem die externe Manifestdatei MyApp.exe.manifest, die vom Betriebssystem zur Laufzeit zum Laden abhängiger Assemblys verwendet wird.  
+ Wenn dieses Skript mit Visual C++ unverändert ausgeführt wird, erstellt es MyApp.exe erfolgreich. Außerdem erstellt der externe Manifestdatei MyApp.exe.manifest, für die Verwendung durch das Betriebssystem auf abhängige Assemblys zur Laufzeit laden.  
   
- Das nmake\-Skript für MyLibrary.dll sieht sehr ähnlich aus:  
+ Nmake-Skript für MyLibrary.dll sieht sehr ähnlich:  
   
 ```  
 # build MyLibrary.dll  
@@ -95,8 +95,8 @@ clean :
     del MyLibrary.obj MyLibrary.dll  
 ```  
   
-## Makefiles \(nachher\)  
- Für einen Buildvorgang mit eingebetteten Manifesten müssen Sie vier kleine Änderungen an den ursprünglichen Makefiles vornehmen.  Für die MyApp.exe\-Makefile:  
+## <a name="makefiles-after"></a>Makefiles (nachher)  
+ Zum Erstellen über eingebettet, Manifeste, die Sie haben vier kleine Änderungen an den ursprünglichen Makefiles vornehmen. Für die MyApp.exe-Makefile:  
   
 ```  
 # build MyApp.exe  
@@ -126,7 +126,7 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)  
 ```  
   
- Für die MyLibrary.dll\-Makefile:  
+ Für die MyLibrary.dll-Makefile:  
   
 ```  
 # build MyLibrary.dll  
@@ -159,9 +159,9 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)  
 ```  
   
- Die Makefile enthält nun zwei Dateien, die die eigentliche Arbeit übernehmen: makefile.inc und makefile.targ.inc.  
+ Enthält nun zwei Dateien, die die eigentliche Arbeit, makefile.inc makefile.targ.inc und.  
   
- Erstellen Sie makefile.inc, und fügen Sie den folgenden Code ein:  
+ Erstellen Sie makefile.inc, und kopieren Sie das folgende hinein:  
   
 ```  
 # makefile.inc -- Include this file into existing makefile at the very top.  
@@ -232,7 +232,7 @@ _VC_MANIFEST_CLEAN=
 ####################################################  
 ```  
   
- Erstellen Sie nun makefile.targ.inc, und fügen Sie den folgenden Code ein:  
+ Jetzt erstellen Sie makefile.targ.inc, und kopieren Sie das folgende hinein:  
   
 ```  
 # makefile.targ.inc - include this at the very bottom of the existing makefile  
@@ -259,5 +259,5 @@ $(_VC_MANIFEST_BASENAME).auto.manifest :
 # end of makefile.targ.inc  
 ```  
   
-## Siehe auch  
- [Manifestgenerierung für C\/C\+\+\-Programme](../build/understanding-manifest-generation-for-c-cpp-programs.md)
+## <a name="see-also"></a>Siehe auch  
+ [Manifestgenerierung für C/C++-Programme](../build/understanding-manifest-generation-for-c-cpp-programs.md)

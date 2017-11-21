@@ -1,47 +1,47 @@
 ---
-title: "CDBPropSet::operator ="
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "CDBPropSet.operator="
-  - "ATL::CDBPropSet::operator="
-  - "ATL.CDBPropSet.operator="
-  - "CDBPropSet::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "=-Operator, mit OLE DB-Vorlagen"
-  - "Operator =, Eigenschaftensätze"
-  - "Operator=, Eigenschaftensätze"
+title: 'CDBPropSet:: Operator = | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDBPropSet.operator=
+- ATL::CDBPropSet::operator=
+- ATL.CDBPropSet.operator=
+- CDBPropSet::operator=
+dev_langs: C++
+helpviewer_keywords:
+- operator =, property sets
+- = operator, with OLE DB templates
+- operator=, property sets
 ms.assetid: 1feb8c48-6ab4-4417-9982-226b1eac681b
-caps.latest.revision: 8
-caps.handback.revision: "8"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cff0ec56d5b832e7f3f373d7e408257d9fe45328
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# CDBPropSet::operator =
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Weist einem anderen Eigenschaft den Inhalt eines Eigenschaft auf.  
+# <a name="cdbpropsetoperator-"></a>CDBPropSet::operator =
+Weist den Inhalt einer Eigenschaft zu einer anderen Eigenschaft Gruppe festgelegt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
-      CDBPropSet& operator =(   
-   CDBPropSet& propset    
+      CDBPropSet& operator =(   
+   CDBPropSet& propset    
 ) throw( );  
 ```  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  
   
-## Siehe auch  
- [CDBPropSet\-Klasse](../../data/oledb/cdbpropset-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [CDBPropSet-Klasse](../../data/oledb/cdbpropset-class.md)

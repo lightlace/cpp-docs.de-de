@@ -1,41 +1,39 @@
 ---
-title: "map::size (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::size"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size-Member [STL/CLR]"
+title: 'Map:: Size (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::size
+dev_langs: C++
+helpviewer_keywords: size member [STL/CLR]
 ms.assetid: e28e5ab6-9d3f-4aab-8bb4-c90520776239
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8829d8a59de8fd6586ba52a943d51959a5f3f030
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# map::size (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ermittelt die Anzahl der Elemente.  
+# <a name="mapsize-stlclr"></a>map::size (STL/CLR)
+Ermittelt die Anzahl von Elementen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 size_type size();  
 ```  
   
-## Hinweise  
- Die Memberfunktion gesteuerten gibt die Länge der Sequenz zurück.  Sie verwenden sie, um die Anzahl der Elemente in der Sequenz gesteuerten derzeit zu bestimmen.  Wenn alle Elemente, die Sie sich interessieren, geht, ob die Reihenfolge Größe ungleich 0 \(null\) aufweist, finden Sie unter [map::empty](../dotnet/map-empty-stl-clr.md)`()`.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt die Länge der gesteuerten Sequenz zurück. Sie können erkennen, die Anzahl der Elemente, die derzeit in der kontrollierten Sequenz. Wenn Sie von Interesse ist, ob die Sequenz ungleich Größe finden Sie unter hat, [Map:: Empty (STL/CLR)](../dotnet/map-empty-stl-clr.md)`()`.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_map_size.cpp   
@@ -68,14 +66,17 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[bc 3\]**  
-**size\(\) \= 0 nach dem Löschen**  
-**size\(\) \= 2, wenn 2 hinzugefügt wurden**   
-## Anforderungen  
- **Header:** \<cliext\/Zuordnung\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+size() = 0 after clearing  
+size() = 2 after adding 2  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Map >  
   
-## Siehe auch  
- [map](../dotnet/map-stl-clr.md)   
- [map::empty](../dotnet/map-empty-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Karte (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [map::empty (STL/CLR)](../dotnet/map-empty-stl-clr.md)

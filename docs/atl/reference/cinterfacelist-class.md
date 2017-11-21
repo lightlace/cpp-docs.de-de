@@ -1,49 +1,31 @@
 ---
-title: Klasse CInterfaceList | Microsoft-Dokumentation
+title: CInterfaceList Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CInterfaceList
 - ATLCOLL/ATL::CInterfaceList
 - ATLCOLL/ATL::CInterfaceList::CInterfaceList
-dev_langs:
-- C++
-helpviewer_keywords:
-- CInterfaceList class
+dev_langs: C++
+helpviewer_keywords: CInterfaceList class
 ms.assetid: 2077764d-25e5-4b3d-96c8-08a287bbcd25
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 50d86163080c5a0d0a7bb9ed6d77a40ac73722e7
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 86e92f86896ac7c5a06b73a68e2d6889d10ea87b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cinterfacelist-class"></a>CInterfaceList-Klasse
-Diese Klasse enthält Methoden, die hilfreich beim Erstellen einer Liste von COM-Schnittstellenzeigern.  
+Diese Klasse bietet Methoden, die hilfreich beim Erstellen einer Liste von COM-Schnittstellenzeigern.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,10 +38,10 @@ class CInterfaceList
   
 #### <a name="parameters"></a>Parameter  
  `I`  
- Eine COM-Schnittstelle, die den Typ des Zeigers gespeichert werden.  
+ Eine COM-Schnittstelle, die Angabe des Typs der Zeiger gespeichert werden soll.  
   
  `piid`  
- Ein Zeiger auf die ID der `I`.  
+ Ein Zeiger auf die IID der `I`.  
   
 ## <a name="members"></a>Mitglieder  
   
@@ -94,11 +76,10 @@ CInterfaceList(UINT nBlockSize = 10) throw();
  Die Blockgröße hat den Standardwert 10.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Blockgröße ist ein Maß für die Menge des Arbeitsspeichers, wenn ein neues Element erforderlich ist. Größere Blöcke reduziert Aufrufe an Arbeitsspeicher, aber mehr Ressourcen verwenden.  
+ Die Blockgröße ist ein Maß für die Speichermenge belegt werden, wenn ein neues Element erforderlich ist. Größere Blöcke reduzieren Sie Aufrufe von Reservierungsroutinen Arbeitsspeicher jedoch mehr Ressourcen verwenden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CAtlList-Klasse](../../atl/reference/catllist-class.md)   
  [CComQIPtr-Klasse](../../atl/reference/ccomqiptr-class.md)   
  [CComQIPtrElementTraits-Klasse](../../atl/reference/ccomqiptrelementtraits-class.md)   
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)
-
+ [Klassenübersicht](../../atl/atl-class-overview.md)

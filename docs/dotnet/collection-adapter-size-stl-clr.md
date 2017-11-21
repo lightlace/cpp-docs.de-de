@@ -1,41 +1,39 @@
 ---
-title: "collection_adapter::size (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::collection_adapter::size"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size-Member [STL/CLR]"
+title: collection_adapter::Size (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::collection_adapter::size
+dev_langs: C++
+helpviewer_keywords: size member [STL/CLR]
 ms.assetid: 71866719-9e29-4572-bfb9-60321f2937c5
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4b74565b2c002730b25e7464395b259dfc4f01a8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# collection_adapter::size (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ermittelt die Anzahl der Elemente.  
+# <a name="collectionadaptersize-stlclr"></a>collection_adapter::size (STL/CLR)
+Ermittelt die Anzahl von Elementen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 size_type size();  
 ```  
   
-## Hinweise  
- Die Memberfunktion gesteuerten gibt die Länge der Sequenz zurück.  Sie wird nicht in der Spezialisierung für `IEnumerable` bzw. `IEnumerable<Value>` definiert.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt die Länge der gesteuerten Sequenz zurück. Es ist nicht definiert, in der eine Spezialisierung für `IEnumerable` oder `IEnumerable<Value>`.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_collection_adapter_size.cpp   
@@ -60,12 +58,15 @@ int main()
   
 ```  
   
-  **x x x x x x**  
-**size\(\) \= 6**   
-## Anforderungen  
- **Header:** \<cliext\/Adapter\>  
+```Output  
+ x x x x x x  
+size() = 6  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext-Adapter >  
   
-## Siehe auch  
- [collection\_adapter](../dotnet/collection-adapter-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)

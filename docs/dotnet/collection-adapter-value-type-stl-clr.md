@@ -1,41 +1,39 @@
 ---
-title: "collection_adapter::value_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::collection_adapter::value_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "value_type-Member [STL/CLR]"
+title: collection_adapter::value_type (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::collection_adapter::value_type
+dev_langs: C++
+helpviewer_keywords: value_type member [STL/CLR]
 ms.assetid: 4a77ec36-6113-4ec3-86a2-ea24d96605c1
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8a66c99d4e37021898a90ac7b553d298a40f55e9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# collection_adapter::value_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="collectionadaptervaluetype-stlclr"></a>collection_adapter::value_type (STL/CLR)
 Der Typ eines Elements.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef Value value_type;  
 ```  
   
-## Hinweise  
- Der Typ ist ein Synonym für den Vorlagenparameter `Value`, falls vorhanden in der Spezialisierung; Andernfalls befindet es ein Synonym für `System::Object^`.  
+## <a name="remarks"></a>Hinweise  
+ Der Typ ist ein Synonym für den Vorlagenparameter `Value`, falls vorhanden, in der Spezialisierung; andernfalls ist ein Synonym für `System::Object^`.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_collection_adapter_value_type.cpp   
@@ -67,12 +65,15 @@ int main()
   
 ```  
   
-  **ein b c**   
-## Anforderungen  
- **Header:** \<cliext\/Adapter\>  
+```Output  
+a b c  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext-Adapter >  
   
-## Siehe auch  
- [collection\_adapter](../dotnet/collection-adapter-stl-clr.md)   
- [collection\_adapter::reference](../dotnet/collection-adapter-reference-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)   
+ [collection_adapter::reference (STL/CLR)](../dotnet/collection-adapter-reference-stl-clr.md)

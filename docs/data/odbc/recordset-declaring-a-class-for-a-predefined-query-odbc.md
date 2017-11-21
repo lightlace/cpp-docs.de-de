@@ -1,56 +1,56 @@
 ---
-title: "Recordset: Deklarieren einer Klasse f&#252;r eine vordefinierte Abfrage (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ODBC-Recordsets, Abfragen"
-  - "Vordefinierte Abfragen und Recordsets"
-  - "Recordsets, Vordefinierte Abfragen"
-  - "Recordsets, Gespeicherte Prozeduren"
-  - "Gespeicherte Prozeduren, Und Recordsets"
+title: "Recordset: Deklarieren einer Klasse für eine vordefinierte Abfrage (ODBC) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC recordsets, queries
+- predefined queries and recordsets
+- stored procedures, and recordsets
+- recordsets, predefined queries
+- recordsets, stored procedures
 ms.assetid: d27c4df9-dad2-4484-ba72-92ab0c8ff928
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1d5fdb93880ec29343d38acba7d7d42caf155214
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Recordset: Deklarieren einer Klasse f&#252;r eine vordefinierte Abfrage (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Dieses Thema bezieht sich auf die MFC\-ODBC\-Klassen.  
+# <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>Recordset: Deklarieren einer Klasse für eine vordefinierte Abfrage (ODBC)
+Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.  
   
- In diesem Thema wird erläutert, wie Sie eine Recordset\-Klasse für eine vordefinierte Abfrage erstellen. Vordefinierte Abfragen werden manchmal, wie auch in Microsoft SQL Server, als "gespeicherte Prozedur" bezeichnet.  
+ In diesem Thema wird erläutert, wie eine Recordsetklasse für eine vordefinierte Abfrage (mitunter als eine gespeicherte Prozedur, wie in Microsoft SQL Server) erstellt wird.  
   
 > [!NOTE]
->  Dieses Thema bezieht sich auf von `CRecordset` abgeleitete Objekte, in denen das gesammelte Abrufen von Zeilen nicht implementiert wurde.  Falls das gesammelte Abrufen von Zeilen implementiert ist, ist der Prozess sehr ähnlich.  Eine Erläuterung der Unterschiede zwischen Recordsets, die das gesammelte Abrufen von Zeilen implementieren, und solchen, bei denen dies nicht der Fall ist, finden Sie unter [Recordset: Abrufen von Datensätzen in einer Sammeloperation \(ODBC\)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  Dieses Thema bezieht sich auf von `CRecordset` abgeleitete Objekte, in denen das gesammelte Abrufen von Zeilen nicht implementiert wurde. Wenn gesammelte implementiert wird, ist der Prozess sehr ähnlich. Die Unterschiede zwischen Recordsets, die gesammelte implementieren, und solche, die nicht der Fall, erfahren Sie unter [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- In manchen Datenbank\-Management\-Systemen \(DBMS\) können Sie eine vordefinierte Abfrage erstellen und diese vom Programm aus wie eine Funktion aufrufen.  Die Abfrage verfügt über einen Namen, kann mit Parametern versehen werden und Datensätze zurückgeben.  In diesem Thema wird beschrieben, wie Sie eine vordefinierte Abfrage aufrufen, die Datensätze zurückgibt und möglicherweise mit Parametern ausgeführt werden kann.  
+ Einige Datenbank-Managementsystemen (DBMS) können Sie eine vordefinierte Abfrage erstellen und aus Ihren Programmen wie eine Funktion aufgerufen wird. Die Abfrage hat einen Namen, möglicherweise Parameter annehmen und möglicherweise Datensätze zurück. In diesem Thema wird beschrieben, wie eine vordefinierte Abfrage aufrufen, die Datensätze zurück (und möglicherweise mit Parametern) ausgeführt werden kann.  
   
- Die Datenbankklassen bieten keine Unterstützung für das Aktualisieren vordefinierter Abfragen.  Der Unterschied zwischen einer vordefinierten Momentaufnahme\-Abfrage und einer vordefinierten Dynaset\-Abfrage liegt nicht in der Aktualisierbarkeit, sondern darin, ob von anderen Benutzern oder anderen Recordsets innerhalb des Programms vorgenommene Änderungen im Recordset angezeigt werden.  
+ Die Datenbankklassen unterstützen keine vordefinierte Abfragen aktualisieren. Der Unterschied zwischen einer vordefinierten Abfrage der Momentaufnahme und eine vordefinierte Dynaset-Abfrage ist nicht aktualisierbar, aber gibt an, ob von anderen Benutzern (oder andere Recordsets in Ihrem Programm) vorgenommene Änderungen im Recordset angezeigt werden.  
   
 > [!TIP]
->  Sie benötigen kein Recordset, um eine vordefinierte Abfrage aufzurufen, die keine Datensätze zurückgibt.  Bereiten Sie die SQL\-Anweisung wie im folgenden Abschnitt beschrieben vor, aber führen Sie sie dadurch aus, dass Sie die `CDatabase`\-Memberfunktion [ExecuteSQL](../Topic/CDatabase::ExecuteSQL.md) aufrufen.  
+>  Sie ist nicht erforderlich, dass ein Recordset eine vordefinierte Abfrage aufrufen, die keinen Datensätze zurückgibt. Bereiten Sie die SQL-Anweisung wie nachfolgend beschrieben vor, aber führen Sie es durch Aufrufen der `CDatabase` Memberfunktion [ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql).  
   
- Sie können eine einzelne Recordset\-Klasse erstellen, um den Aufruf einer vordefinierten Abfrage zu verwalten, einen Teil der Arbeit müssen Sie jedoch selbst durchführen.  Die Assistenten bieten keine Unterstützung zur Erstellung einer speziell für diesen Zweck geeigneten Klasse.  
+ Sie können eine einzelne Recordset-Klasse zum Verwalten der Aufruf einer vordefinierten Abfrage erstellen, aber Sie müssen Teil der Arbeit selbst. Erstellen einer Klasse speziell für diesen Zweck unterstützt die Assistenten nicht.  
   
-#### So erstellen Sie eine Klasse für den Aufruf einer vordefinierten Abfrage \(gespeicherten Prozedur\)  
+#### <a name="to-create-a-class-for-calling-a-predefined-query-stored-procedure"></a>So erstellen eine Klasse für eine vordefinierte Abfrage aufrufen gespeicherte (Prozedur)  
   
-1.  Verwenden Sie den [MFC\-ODBC\-Consumer\-Assistenten](../../mfc/reference/adding-an-mfc-odbc-consumer.md) unter **Klasse hinzufügen**, um eine Recordset\-Klasse für die Tabelle zu erstellen, aus der die meisten durch die Abfrage zurückgegebenen Spalten stammen.  Somit wurde bereits ein Großteil der Arbeit durchgeführt.  
+1.  Verwenden der [MFC-ODBC-Consumer-Assistent](../../mfc/reference/adding-an-mfc-odbc-consumer.md) aus **Klasse hinzufügen** eine Recordsetklasse für die Tabelle erstellen, die die meisten Spalten, die von der Abfrage zurückgegebenen beiträgt. Dies gibt Ihnen einen Vorsprung.  
   
-2.  Fügen Sie Felddatenmember manuell für die Spalten aller Tabellen hinzu, die von der Abfrage zurückgegeben werden, die der Assistent jedoch nicht erstellt hat.  
+2.  Fügen Sie manuell Felddatenmember für alle Spalten aller Tabellen, die die Abfrage zurückgibt, aber, dass der Assistent nicht für Sie erstellt haben.  
   
-     Falls die Abfrage z. B. aus zwei zusätzlichen Tabellen jeweils drei Spalten zurückgibt, fügen Sie sechs Felddatenmember der entsprechenden Datentypen in die Klasse ein.  
+     Z. B. wenn die Abfrage drei Spalten aus zwei zusätzliche Tabellen zurückgibt, fügen Sie sechs Felddatenmember (der entsprechenden Datentypen hinzu) der Klasse.  
   
-3.  Fügen Sie manuell [RFX](../../data/odbc/record-field-exchange-rfx.md)\-Funktionsaufrufe in der [DoFieldExchange](../Topic/CRecordset::DoFieldExchange.md)\-Memberfunktion der Klasse hinzu, und zwar je einen für jeden Datentyp der hinzugefügten Felddatenmember.  
+3.  Manuell hinzufügen [RFX](../../data/odbc/record-field-exchange-rfx.md) -Funktionsaufrufe in der [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) Memberfunktion der Klasse, für den Datentyp der einzelnen hinzugefügt felddatenelement.  
   
     ```  
     Immediately before these RFX calls, call <MSHelp:link keywords="_mfc_CFieldExchange.3a3a.SetFieldType" TABINDEX="0">SetFieldType</MSHelp:link>, as shown here:   
@@ -58,39 +58,39 @@ Dieses Thema bezieht sich auf die MFC\-ODBC\-Klassen.
     ```  
   
     > [!NOTE]
-    >  Sie müssen den Datentyp und die Reihenfolge der Spalten kennen, die in dem Resultset zurückgegeben werden.  Die Reihenfolge der RFX\-Funktionsaufrufe in `DoFieldExchange` muss der Reihenfolge der Spalten im Resultset entsprechen.  
+    >  Sie müssen die Datentypen und die Reihenfolge der Spalten im Resultset zurückgegebenen festgelegt kennen. Die Reihenfolge der RFX-Aufrufe `DoFieldExchange` muss die Reihenfolge der Spalten im Resultset entsprechen.  
   
-4.  Fügen Sie von Hand Initialisierungen für die neuen Felddatenmember in den Konstruktor der Recordset\-Klasse ein.  
+4.  Fügen Sie manuell Initialisierungen für den neuen Felddatenmembern im Konstruktor Recordset-Klasse hinzu.  
   
-     Außerdem müssen Sie den Initialisierungswert des [m\_nFields](../Topic/CRecordset::m_nFields.md)\-Datenmembers erhöhen.  Der Assistent schreibt die Initialisierung, er zählt aber nur die Felddatenmember, die er selbst eingefügt hat.  Beispiel:  
+     Außerdem müssen Sie den Initialisierungswert erhöhen die [M_nFields](../../mfc/reference/crecordset-class.md#m_nfields) -Datenmember. Schreibt der Assistent die Initialisierung, enthält jedoch nur die Felddatenmembern, die sie hinzugefügt wird. Zum Beispiel:  
   
     ```  
     m_nFields += 6;  
     ```  
   
-     Manche Datentypen dürfen Sie hier nicht initialisieren. Dies sind z. B. `CLongBinary` oder Byte\-Arrays.  
+     Einige Datentypen sollte nicht initialisiert werden, z. B. `CLongBinary` oder Bytearrays.  
   
-5.  Falls die Abfrage Parameter unterstützt, fügen Sie für jeden Parameter einen Parameterdatenmember hinzu, rufen eine RFX\-Funktion auf und initialisieren ihn.  
+5.  Wenn die Abfrage Parameter akzeptiert, fügen Sie einen Parameterdatenmember für jeden Parameter, RFX-Funktion für jede und eine Initialisierung für jede hinzu.  
   
-6.  Erhöhen Sie `m_nParams` für jeden hinzugefügten Parameter, wie Sie dies im Schritt 4 für `m_nFields` durchgeführt haben.  Weitere Informationen hierzu finden Sie unter [Recordset: Parametrisieren eines Recordsets \(ODBC\)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).  
+6.  Erhöhen Sie `m_nParams` für jeden Parameter, wie bei der hinzugefügten `m_nFields` für Felder in Schritt 4 dieses Verfahrens hinzugefügt. Weitere Informationen finden Sie unter [Recordset: Parametrisieren eines Recordsets (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).  
   
-7.  Erstellen Sie von Hand eine SQL\-Anweisungszeichenfolge mit dem folgenden Format:  
+7.  Schreiben Sie manuell eine SQL-Anweisungszeichenfolge mit der folgenden Form:  
   
     ```  
     {CALL proc-name [(? [, ?]...)]}  
     ```  
   
-     Hierbei handelt es sich bei **CALL** um ein ODBC\-Schlüsselwort, **proc\-name** ist der Name der Abfrage, die in der Datenquelle verzeichnet ist, und die "?"\-Elemente sind Platzhalter für Parameterwerte, die Sie dem Recordset zur Laufzeit bereitstellen.  Im folgenden Beispiel wird ein Platzhalter für einen Parameter vorbereitet:  
+     auf dem **Aufrufen** ist ein ODBC-Schlüsselwort, **Proc-Name** ist der Name der Abfrage, da es in der Datenquelle bekannt ist und die "?" sind Platzhalter für Parameterwerte, die Sie angeben, das Recordset zur Laufzeit (sofern vorhanden) . Im folgende Beispiel wird einen Platzhalter für einen Parameter vorbereitet:  
   
     ```  
     CString mySQL = "{CALL Delinquent_Accts (?)}";  
     ```  
   
-8.  Im Code zum Öffnen des Recordsets stellen Sie die Werte der Parameterdatenmember des Recordsets ein und rufen dann die **Open**\-Memberfunktion auf, der Sie die SQL\-Zeichenfolge für den **lpszSQL**\-Parameter übergeben.  Alternativ können Sie auch die Zeichenfolge ersetzen, die von der `GetDefaultSQL`\-Memberfunktion der Klasse zurückgegeben wird.  
+8.  In den Code, der das Recordset geöffnet wird, legen Sie die Werte des Parameters für das Recordset-Datenmember und rufen Sie anschließend die **öffnen** Memberfunktion ist, übergeben eine SQL-Zeichenfolge für die **LpszSQL** Parameter. Oder Ersetzen Sie die Zeichenfolge, die zurückgegeben werden, indem Sie stattdessen die `GetDefaultSQL` Memberfunktion in Ihrer Klasse.  
   
- Die folgenden Beispiele zeigen den Aufruf einer vordefinierten Abfrage mit dem Namen `Delinquent_Accts`, die einen Parameter mit der Nummer des Vertriebsbereichs unterstützt.  Diese Abfrage gibt drei Spalten zurück: `Acct_No`, `L_Name` und `Phone`.  Alle Spalten stammen aus der Customers\-Tabelle.  
+ Die folgenden Beispiele zeigen das Verfahren zum Aufrufen einer vordefinierten Abfrage mit dem Namen `Delinquent_Accts`, dem nimmt einen Parameter für eine Reihe Verkaufsbereich. Diese Abfrage gibt drei Spalten zurück: `Acct_No`, `L_Name`, `Phone`. Alle Spalten werden aus der Customers-Tabelle.  
   
- Das folgende Recordset deklariert Felddatenmember für die Spalten, die von der Abfrage zurückgegeben werden, sowie einen Parameter für die Nummer des Vertriebsbereichs, die zur Laufzeit eingegeben wird.  
+ Das folgende Recordset gibt Felddatenmember für die Spalten, die der Abfrage zurückgegeben und einen Parameter für das Sales zur Laufzeit angeforderte Anzahl District.  
   
 ```  
 class CDelinquents : public CRecordset  
@@ -104,9 +104,9 @@ class CDelinquents : public CRecordset
 };  
 ```  
   
- Diese Klassendeklaration wird bis auf den Datenmember `m_lDistParam` so dargestellt, wie sie durch den Assistenten erstellt wurde.  Andere Member werden nicht hier angezeigt.  
+ Diese Klassendeklaration wird wie der Assistent, mit Ausnahme von schreibt die `m_lDistParam` manuell hinzugefügte Element. Andere Member werden hier nicht angezeigt.  
   
- Das nächste Beispiel zeigt, wie die Datenmember im `CDelinquents`\-Konstruktor initialisiert werden.  
+ Das nächste Beispiel zeigt, wie die Datenelemente in der `CDelinquents` Konstruktor.  
   
 ```  
 CDelinquents::CDelinquents(CDatabase* pdb)  
@@ -123,9 +123,9 @@ CDelinquents::CDelinquents(CDatabase* pdb)
 }  
 ```  
   
- Beachten Sie die Initialisierungen für [nFields](../Topic/CRecordset::m_nFields.md) und [m\_nParams](../Topic/CRecordset::m_nParams.md).  Der Assistent initialisiert `m_nFields`; Sie initialisieren `m_nParams`.  
+ Beachten Sie die Initialisierungen für [M_nFields](../../mfc/reference/crecordset-class.md#m_nfields) und [M_nParams](../../mfc/reference/crecordset-class.md#m_nparams). Der Assistent initialisiert `m_nFields`; Sie initialisieren `m_nParams`.  
   
- Das nächste Beispiel zeigt die RFX\-Funktionen in `CDelinquents::DoFieldExchange`:  
+ Das nächste Beispiel zeigt die RFX-Funktionen in `CDelinquents::DoFieldExchange`:  
   
 ```  
 void CDelinquents::DoFieldExchange(CFieldExchange* pFX)  
@@ -139,9 +139,9 @@ void CDelinquents::DoFieldExchange(CFieldExchange* pFX)
 }  
 ```  
   
- Neben den RFX\-Aufrufen für die drei zurückgegebenen Spalten wird in diesem Code der zur Laufzeit bereitgestellte Parameter gebunden.  Der Parameter wird mit der `Dist_No`\-Spalte \(Nummer des Vertriebsbereichs\) verknüpft.  
+ Dieser Code verwaltet neben der RFX-Aufrufe für die drei zurückgegebenen Spalten vornimmt, Binden des Parameters, den Sie zur Laufzeit übergeben. Der Parameter wird sortiert, um die `Dist_No` (Nummer)-Spalte.  
   
- Das nächste Beispiel zeigt, wie Sie die SQL\-Zeichenfolge einstellen und damit das Recordset öffnen.  
+ Das nächste Beispiel zeigt, wie Sie die SQL-Zeichenfolge einrichten und Gewusst wie: Verwenden Sie zum Öffnen des Recordsets.  
   
 ```  
 // Construct a CDelinquents recordset object  
@@ -154,13 +154,13 @@ if( rsDel.Open( CRecordset::snapshot, strSQL ) )
     // Use the recordset ...  
 ```  
   
- Dieser Code konstruiert eine Momentaufnahme, übergibt dieser einen vom Benutzer eingegebenen Parameterwert und ruft die vordefinierte Abfrage auf.  Wenn die Abfrage ausgeführt wird, gibt sie Datensätze des angegebenen Vertriebsbereichs zurück.  Jeder Datensatz enthält Spalten mit der Kontonummer, dem Nachnamen des Kunden und seiner Telefonnummer.  
+ Dieser Code erstellt eine Momentaufnahme, übergibt es einen Parameter, die zuvor vom Benutzer erhaltenes und ruft die vordefinierte Abfrage. Wenn die Abfrage ausgeführt wird, zurück es Datensätze für den angegebenen Verkaufsbereich. Jeder Datensatz enthält Spalten für die Kontonummer, Nachnamen des Kunden und Telefonnummer des Kunden.  
   
 > [!TIP]
->  Manchmal müssen Sie den Rückgabewert \(Ausgabeparameter\) einer gespeicherten Prozedur verarbeiten.  Weitere Informationen und ein Beispiel hierzu finden Sie unter [CFieldExchange::SetFieldType](../Topic/CFieldExchange::SetFieldType.md).  
+>  Sie möchten einen Rückgabewert (Ausgabeparameter) von einer gespeicherten Prozedur zu behandeln. Weitere Informationen und ein Beispiel finden Sie unter [CFieldExchange::](../../mfc/reference/cfieldexchange-class.md#setfieldtype).  
   
-## Siehe auch  
- [Recordset \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [Recordset: Erneutes Abfragen eines Recordsets \(ODBC\)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)   
- [Recordset: Deklarieren einer Klasse für eine Tabelle \(ODBC\)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)   
- [Recordset: Ausführen einer Verknüpfung \(ODBC\)](../../data/odbc/recordset-performing-a-join-odbc.md)
+## <a name="see-also"></a>Siehe auch  
+ [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [Recordset: Erneutes Abfragen eines Recordsets (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)   
+ [Recordset: Deklarieren einer Klasse für eine Tabelle (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)   
+ [Recordset: Ausführen eines Join (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

@@ -1,62 +1,61 @@
 ---
-title: "CDataSource::OpenFromInitializationString | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDataSource.OpenFromInitializationString"
-  - "OpenFromInitializationString"
-  - "CDataSource::OpenFromInitializationString"
-  - "ATL::CDataSource::OpenFromInitializationString"
-  - "ATL.CDataSource.OpenFromInitializationString"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OpenFromInitializationString-Methode"
+title: 'CDataSource:: OpenFromInitializationString | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDataSource.OpenFromInitializationString
+- OpenFromInitializationString
+- CDataSource::OpenFromInitializationString
+- ATL::CDataSource::OpenFromInitializationString
+- ATL.CDataSource.OpenFromInitializationString
+dev_langs: C++
+helpviewer_keywords: OpenFromInitializationString method
 ms.assetid: 5ef1f1fd-92a9-4e1c-ad80-d3601b094b8c
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: aa25389a5924dc235791d11ee7d37eb1febe4259
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# CDataSource::OpenFromInitializationString
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Öffnet eine Datenquelle, die durch die vom Benutzer bereitgestellte Initialisierungszeichenfolge angegeben wird.  
+# <a name="cdatasourceopenfrominitializationstring"></a>CDataSource::OpenFromInitializationString
+Öffnet eine Datenquelle, die vom Benutzer bereitgestellte Initialisierungszeichenfolge angegeben.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
-      HRESULT OpenFromInitializationString(   
-   LPCOLESTR szInitializationString,   
-   bool fPromptForInfo = false    
+      HRESULT OpenFromInitializationString(   
+   LPCOLESTR szInitializationString,   
+   bool fPromptForInfo = false    
 ) throw( );  
 ```  
   
-#### Parameter  
- *SzInitializationString*  
- \[in\] die Initialisierungszeichenfolge.  
+#### <a name="parameters"></a>Parameter  
+ *szInitializationString*  
+ [in] Die Initialisierungszeichenfolge.  
   
  *fPromptForInfo*  
- \[in\] wenn dieses Argument auf **true** festgelegt ist, legt dann `OpenFromInitializationString` die Eigenschaft **DBPROP\_INIT\_PROMPT** auf **DBPROMPT\_COMPLETEREQUIRED** festgelegt, die angibt, dass der Benutzer aufgefordert wird, wenn weitere Informationen benötigt werden.  Dies ist für Situationen, in denen die Initialisierungszeichenfolge eine Datenbank angibt, die ein Kennwort erfordert, jedoch die Zeichenfolge enthält nicht das Kennwort.  Der Benutzer wird einem Kennwort \(oder anderen\) fehlenden Informationen beim Versuch, eine Verbindung zur Datenbank herzustellen aufgefordert.  
+ [in] Wenn dieses Argument, um festgelegt wird **"true"**, klicken Sie dann `OpenFromInitializationString` wird festgelegt, die **DBPROP_INIT_PROMPT** Eigenschaft, um **DBPROMPT_COMPLETEREQUIRED**, der angibt, dass der Benutzer sein dazu aufgefordert werden, nur, wenn Sie weitere Informationen erforderlich ist. Dies eignet sich für Situationen, in dem die Initialisierungszeichenfolge eine Datenbank an, die ein Kennwort erforderlich ist, aber die Zeichenfolge enthält nicht das Kennwort. Der Benutzer wird aufgefordert, ein Kennwort (oder eine beliebige andere Informationen zu fehlenden) beim Versuch, mit der Datenbank herstellen.  
   
- Der Standardwert ist **false**, der angibt, dass der Benutzer nicht aufgefordert wird \(von **DBPROP\_INIT\_PROMPT** von **DBPROMPT\_NOPROMPT**\).  
+ Der Standardwert ist **"false"**, der angibt, dass der Benutzer niemals aufgefordert werden (legt **DBPROP_INIT_PROMPT** auf **DBPROMPT_NOPROMPT**).  
   
-## Rückgabewert  
- Standard\- `HRESULT`.  
+## <a name="return-value"></a>Rückgabewert  
+ Ein Standard `HRESULT`-Objekt.  
   
-## Hinweise  
- Diese Methode startet ein Datenquellenobjekt mithilfe der in oledb32.dll Dienstkomponenten; Diese DLL enthält die Implementierung von Dienst\-Komponentenfunktionen wie Ressourcen\-Pooling, automatischer Transaktions\-Eintragung, u. a.  
+## <a name="remarks"></a>Hinweise  
+ Diese Methode öffnet ein Datenquellenobjekt mit den Dienstkomponenten im oledb32.dll; Diese DLL enthält die Implementierung von Dienstkomponentenfunktionen wie z. B. Ressourcenpooling, automatische Transaktionseintragung usw.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  
   
-## Siehe auch  
- [CDataSource\-Klasse](../../data/oledb/cdatasource-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [CDataSource-Klasse](../../data/oledb/cdatasource-class.md)

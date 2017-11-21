@@ -1,64 +1,65 @@
 ---
-title: "Identifying the Elements of the DHTML Control Project | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DHTML controls, ATL-Unterstützung"
-  - "HTML-Steuerelemente, ATL-Unterstützung"
+title: Identifizieren die Elemente eines DHTML-Steuerelementprojekts | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- HTML controls, ATL support
+- DHTML controls, ATL support
 ms.assetid: b627547a-3768-4346-9900-4b7a21fb8e27
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0dfa6a3a2e399ff108bdd97b3dfb9a16b627aefe
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Identifying the Elements of the DHTML Control Project
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Der häufigste DHTML\-Steuerungscode ist genau wie den, der für jedes ATL\-Steuerelement erstellt wird.  Ein grundlegendes Verständnis des generischen Codes, der Arbeit nach [ATL\-Lernprogramm](../atl/active-template-library-atl-tutorial.md) und Abschnitten [Erstellen eines ATL\-Projekts](../atl/reference/creating-an-atl-project.md) und [Grundlagen von ATL\-COM\-Objekten](../atl/fundamentals-of-atl-com-objects.md) gelesen.  
+# <a name="identifying-the-elements-of-the-dhtml-control-project"></a>Identifizieren die Elemente eines DHTML-Steuerelementprojekts
+Die meisten DHTML-Steuerungscode ist genau für ATL-Steuerelement erstellt. Für einen grundlegenden Überblick des generischen Codes zu arbeiten, durch die [ATL-Lernprogramm](../atl/active-template-library-atl-tutorial.md), und Lesen Sie die Abschnitte [Erstellen eines ATL-Projekts](../atl/reference/creating-an-atl-project.md) und [Grundlagen von ATL-COM-Objekte](../atl/fundamentals-of-atl-com-objects.md).  
   
- DHTML\-Steuerelemente ist für jeden ATL\-Steuerelement, außer vergleichbar:  
+ DHTML-Steuerelements ähnelt jedes ATL-Steuerelement, mit Ausnahme von:  
   
--   Zusätzlich zu den regulären Schnittstellen implementiert ein Steuerelement, implementiert sie eine zusätzliche Schnittstelle, die verwendet wird, um zwischen dem C\+\+\-Code und der HTML\-Benutzeroberfläche \(Benutzeroberfläche\) zu kommunizieren.  Die Aufrufe HTML Benutzeroberfläche in C\+\+\-Code mithilfe dieser Schnittstelle.  
+-   Zusätzlich zu regulären Schnittstellen, die ein Steuerelement implementiert, implementiert er eine zusätzliche Schnittstelle, die für die Kommunikation zwischen der C++-Code und die HTML-Benutzeroberfläche (UI) verwendet wird. Die HTML-UI Aufrufe von C++-Code, die Verwendung dieser Schnittstelle ab.  
   
--   Sie erstellt eine HTML\-Ressource für das Steuerelement Benutzeroberfläche.  
+-   Erstellt eine HTML-Ressource für die UI-Steuerelement.  
   
--   Es ermöglicht den Zugriff auf den DHTML\-Objektmodell durch die Membervariable `m_spBrowser`, die ein intelligenter Zeiger des Typs [IWebBrowser2](https://msdn.microsoft.com/en-us/library/aa752127.aspx) ist.  Verwenden Sie diesen Zeiger, um auf einen Teil des DHTML\-Objektmodells zuzugreifen.  
+-   Es ermöglicht den Zugriff auf das DHTML-Objektmodell über die Membervariable `m_spBrowser`, dies ist ein intelligenter Zeiger vom Typ [IWebBrowser2](https://msdn.microsoft.com/library/aa752127.aspx). Mit diesem Zeiger auf einen beliebigen Teil der DHTML-Objektmodell zugreifen können.  
   
- Die folgende Grafik zeigt die Beziehung zwischen der DLL, dem DHTML\-Steuerelement, dem Webbrowser und der HTML\-Ressource.  
+ Die folgende Abbildung veranschaulicht die Beziehung zwischen der DLL, DHTML-Steuerelemente, Webbrowser und die HTML-Ressource.  
   
- ![Elemente eines DHTML&#45;Steuerelementprojekts](../atl/media/vc52en1.png "vc52EN1")  
+ ![Elemente eines DHTML-Steuerelementprojekts](../atl/media/vc52en1.gif "vc52en1")  
   
 > [!NOTE]
->  Die Namen auf dieser Grafik sind Platzhalter.  Die Namen der HTML\-Ressource und Schnittstellen, die auf dem Steuerelement verfügbar gemacht werden, basieren auf den Namen, die Sie sie im ATL\-Steuerelement\-Assistenten zuweisen.  
+>  Die Namen dieser Grafik sind Platzhalter. Die Namen von HTML-Ressource und die Schnittstellen verfügbar gemacht werden, auf das Steuerelement basieren auf den Namen, die Sie sie im ATL-Steuerelement-Assistenten zuweisen.  
   
- In dieser Grafik sind die Elemente:  
+ In dieser Abbildung sind die Elemente:  
   
--   **My DLL** die DLL erstellt mit dem ATL\-Projekt\-Assistenten.  
+-   **Meine DLL** die DLL, die mit dem ATL-Projekt-Assistenten erstellt.  
   
--   **DHTML Control** \(`m_spBrowser`\) das DHTML\-Steuerelement, erstellt mithilfe des ATL\-Objekt\-Assistenten.  Dieses Steuerelement greift auf das Webbrowserobjekt und auf seine Methoden über die Schnittstelle des Webbrowserobjekts, **IWebBrowser2** zu.  Das Steuerelement selbst macht die folgenden zwei Schnittstellen, zusätzlich zu den anderen erforderlichen Standardschnittstellen für ein Steuerelement, verfügbar.  
+-   **DHTML-Steuerelemente** (`m_spBrowser`) der DHTML-Steuerelement mit der ATL-Objektassistenten erstellt. Dieses Steuerelement greift Webbrowserobjekts und seine Methoden über die Webbrowserobjekts-Schnittstelle auf **IWebBrowser2**. Das Steuerelement selbst macht die folgenden beiden Schnittstellen, zusätzlich zu anderen Standardschnittstellen, die für ein Steuerelement erforderlich.  
   
-    -   **IDHCTL1** die Schnittstelle verfügbar gemacht vom Steuerelement nur für die Verwendung durch den Container.  
+    -   **IDHCTL1** die Schnittstelle, die vom Steuerelement für die Verwendung nur durch den Container verfügbar gemacht.  
   
-    -   **IDHCTLUI1** die Dispatchschnittstelle für die Kommunikation zwischen dem C\+\+\-Code und der HTML\-Benutzeroberfläche.  Der Webbrowser verwendet die Dispatchschnittstelle des Steuerelements, um das Steuerelement anzuzeigen.  Sie können die verschiedenen Methoden dieser Dispatchschnittstelle von der Benutzeroberfläche des Steuerelements aufrufen, indem Sie `window.external` aufrufen, gefolgt vom Methodennamen auf dieser Dispatchschnittstelle, die Sie aufrufen möchten.  Sie könnten auf `window.external` von einem SKRIPTtag innerhalb des HTML zugreifen, die die Benutzeroberfläche für dieses Steuerelement bildet.  Weitere Informationen über das Aufrufen von externen Methoden in der Ressourcendatei, finden Sie unter [Aufrufen von C\+\+\-Code aus DHTML](../atl/calling-cpp-code-from-dhtml.md).  
+    -   **IDHCTLUI1** Dispatch-Schnittstelle für die Kommunikation zwischen der C++-Code und die HTML-Benutzeroberfläche. Der Webbrowser verwendet Dispatch-Schnittstelle des Steuerelements, um das Steuerelement anzuzeigen. Sie können verschiedene Methoden dieser Schnittstelle Verteilung über das Steuerelement-Benutzeroberfläche aufrufen, durch den Aufruf `window.external`, gefolgt von den Methodennamen für diese Dispatchschnittstelle, die Sie aufrufen möchten. Sie möchten den Zugriff auf `window.external` aus einem Skripttag in der HTML-Code, der die Benutzeroberfläche für das genannte Steuerelement bildet. Weitere Informationen zu externen Methodenaufrufe in der Ressourcendatei, finden Sie unter [Aufrufen von C++-Code aus DHTML](../atl/calling-cpp-code-from-dhtml.md).  
   
--   **IDR\_CTL1** das Ressourcen\-ID der HTML\-Ressource.  Der Dateiname ist in diesem Fall DHCTL1UI.htm.  Das DHTML\-Steuerelement verwendet eine HTML\-Ressource, die Standardhtml \- tags enthält und externer Fensterdispatch Befehle, dass Sie mit den Text\-Editor bearbeiten können.  
+-   **IDR_CTL1** die Ressourcen-ID der HTML-Ressource. Der Dateiname ist in diesem Fall DHCTL1UI.htm. DHTML-Steuerelemente verwendet, eine HTML-Ressource, die standard-HTML-Tags und externen Fenster Dispatch-Befehle, die Sie bearbeiten können, indem den Text-Editor enthält.  
   
--   **Web Browser** der Webbrowser zeigt die Benutzeroberfläche des Steuerelements, auf Grundlage des HTML in der HTML\-Ressource an.  Ein Zeiger auf die **IWebBrowser2**\-Schnittstelle des Webbrowsers ist verfügbar im DHTML\-Steuerelement, Zugriff auf das DHTML\-Objektmodell zuzulassen.  
+-   **Webbrowser** der Webbrowser zeigt das Steuerelement-Benutzeroberfläche, basierend auf den HTML-Code in der HTML-Ressource an. Ein Zeiger auf die Web-Browsers **IWebBrowser2** Schnittstelle ist im DHTML-Steuerelement, um Zugriff auf das DHTML-Objektmodell verfügbar.  
   
- Der ATL\-Steuerelement\-Assistent generiert ein Steuerelement mit den Code in der HTML\-Ressource und in der CPP\-Datei.  Sie können das Steuerelement kompilieren und ausführen, wie vom Assistenten generiert und dann das Steuerelement entweder im Webbrowser oder im Testcontainer für ActiveX\-Steuerelemente an.  Das Bild unten zeigt das Steuerelement mit ATL DHTML mit drei Schaltflächen, die im Testcontainer angezeigt werden:  
+ ATL-Steuerelement-Assistent generiert ein Steuerelement mit Standardcode in der HTML-Ressource und die CPP-Datei. Kompilieren können und führen Sie das Steuerelement aus, wie vom Assistenten generiert und anschließend das Steuerelement in der Webbrowser oder der Testcontainer für ActiveX-Steuerelement anzeigen. Die folgende Abbildung zeigt die ATL-DHTML-Steuerelement mit drei Schaltflächen im Testcontainer angezeigt:  
   
- ![ATL&#45;DHTML&#45;Steuerelement](../atl/media/vc52en2.png "vc52EN2")  
+ ![ATL-DHTML-Steuerelement](../atl/media/vc52en2.gif "vc52en2")  
   
- Siehe [Erstellen eines Steuerelements ATL DHTML](../atl/creating-an-atl-dhtml-control.md), um beginnen, ein DHTML\-Steuerelement.  Siehe [Tests\-Eigenschaften und Ereignisse mit Testcontainer](../mfc/testing-properties-and-events-with-test-container.md) zu Informationen dazu, wie Sie auf Testcontainer zugreift.  
+ Finden Sie unter [Erstellen eines ATL-DHTML-Steuerelements](../atl/creating-an-atl-dhtml-control.md) für den Einstieg in das Erstellen eines DHTML-Steuerelements. Finden Sie unter [Testen von Eigenschaften und Ereignisse mit Test Container](../mfc/testing-properties-and-events-with-test-container.md) Informationen zum Testcontainer zugreifen.  
   
-## Siehe auch  
- [Unterstützung für DHTML\-Steuerelemente](../atl/atl-support-for-dhtml-controls.md)
+## <a name="see-also"></a>Siehe auch  
+ [Unterstützung für DHTML-Steuerelemente](../atl/atl-support-for-dhtml-controls.md)
+

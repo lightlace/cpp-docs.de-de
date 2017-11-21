@@ -1,34 +1,35 @@
 ---
-title: "Inserting a Composite Control | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL-Steuerelement-Assistent"
-  - "Zusammengesetzte Steuerelemente"
-  - "Zusammengesetzte Steuerelemente, inserting with ATL Object Wizard"
+title: "Einfügen eines zusammengesetzten Steuerelements | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- composite controls, inserting with ATL Object Wizard
+- composite controls
+- ATL Control Wizard
 ms.assetid: f10b1927-9fc6-40a7-ac29-efdac70584fe
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f58c671860f1e02f28f4b5a406d290df2479e2d3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Inserting a Composite Control
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Das Dialogfeld **Klasse hinzufügen** ermöglicht es Ihnen, ein ATL\-Objekt in ein Projekt einfügen.  Greifen Sie auf dieses Dialogfeld zu, indem Sie im Projektmappen\-Explorer auf den Projektnamen Explorer mit der rechten Maustaste auf zeigen, zu **Hinzufügen**, und dann auf **Klasse hinzufügen** klicken.  
+# <a name="inserting-a-composite-control"></a>Einfügen eines zusammengesetzten Steuerelements
+Die **Klasse hinzufügen** Dialogfeld können Sie ein ATL-Objekt in ein Projekt einfügen. Auf dieses Dialogfeld zugreifen, indem Sie mit der rechten Maustaste im Projektmappen-Explorer auf des Projektnamen **hinzufügen**, und klicken Sie dann auf **Klasse hinzufügen**.  
   
- Wählen Sie im Dialogfeld **Klasse hinzufügen** die Option **ATL\-Steuerelement** aus.  Damit wird [ATL\-Steuerelement\-Assistent](../atl/reference/atl-control-wizard.md).  Um ein zusammengesetztes Steuerelement zu erstellen, wählen Sie die Registerkarte **Optionen** aus, und klicken Sie auf das Kontrollkästchen **Zusammengesetztes Steuerelement**.  
+ In der **Klasse hinzufügen** Dialogfeld Wählen Sie **ATL-Steuerelement**. Dies startet den [ATL-Steuerelement-Assistent](../atl/reference/atl-control-wizard.md). Wählen Sie zum Erstellen eines zusammengesetzten Steuerelements die **Optionen** Registerkarte, und klicken Sie auf die **zusammengesetztes Steuerelement** Kontrollkästchen.  
   
- Eine standardmäßige HTML\-Seite wird zum Anzeigen des Steuerelements erstellt.  
+ Für das Steuerelement anzeigen, wird eine Standard-HTML-Seite erstellt werden.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Grundlagen von zusammengesetzten Steuerelementen](../atl/atl-composite-control-fundamentals.md)
+

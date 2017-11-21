@@ -1,32 +1,30 @@
 ---
-title: "not_equal_to (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::not_equal_to"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "not_equal_to-Funktion [STL/CLR]"
+title: Not_Equal_To (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::not_equal_to
+dev_langs: C++
+helpviewer_keywords: not_equal_to function [STL/CLR]
 ms.assetid: 1b66e0ca-eace-4672-8da9-ed16f8608bca
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6def975ac9de8f069394c822e756e56c227e2f89
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# not_equal_to (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die Vorlagenklasse beschreibt ein Funktionselement, die, wenn sie aufgerufen werden, Rückgaben ausrichten, wenn das erste Argument nicht gleich das zweite ist.  Sie verwenden sie angeben einem Funktionsobjekt hinsichtlich den Argumenttyp.  
+# <a name="notequalto-stlclr"></a>not_equal_to (STL/CLR)
+Die Vorlagenklasse beschreibt ein Funktionselement ist, dass beim Aufrufen, gibt true zurück, nur, wenn das erste Argument nicht gleich dem zweiten ist. Sie verwenden ein Funktionsobjekt im Hinblick auf seine Argumenttyp angeben.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<typename Arg>  
@@ -49,34 +47,34 @@ public:
     };  
 ```  
   
-#### Parameter  
- Arg  
+#### <a name="parameters"></a>Parameter  
+ arg  
  Der Typ der Argumente.  
   
-## Memberfunktionen  
+## <a name="member-functions"></a>Memberfunktionen  
   
-|Typdefinition|**Beschreibung**|  
-|-------------------|----------------------|  
-|delegate\_type|Der Typ des generischen Delegaten.|  
-|first\_argument\_type|Der Typ des ersten Arguments des Feature\-Elements.|  
-|result\_type|Der Typ des Funktionselementergebnisses.|  
-|second\_argument\_type|Der Typ des Funktionselementzweiten Argumente.|  
+|Typdefinition|Beschreibung|  
+|---------------------|-----------------|  
+|delegate_type|Der Typ des generischen Delegaten.|  
+|first_argument_type|Der Typ des ersten Arguments Funktionselement.|  
+|RESULT_TYPE|Der Typ des Ergebnisses Funktionselement.|  
+|second_argument_type|Der Typ des zweiten Arguments Funktionselement.|  
   
-|Member|**Beschreibung**|  
-|------------|----------------------|  
-|not\_equal\_to|Erstellt das Funktionselement.|  
+|Member|Beschreibung|  
+|------------|-----------------|  
+|not_equal_to|Erstellt das Funktionselement.|  
   
-|Operator|**Beschreibung**|  
-|--------------|----------------------|  
-|operator\(\)|Berechnet die gewünschte Funktion.|  
-|Operator delegate\_type^|Wandelt das Funktionselement zu einem Delegaten um.|  
+|Operator|Beschreibung|  
+|--------------|-----------------|  
+|Operator()|Berechnet die gewünschte Funktion.|  
+|Operator Delegate_type ^|Wandelt das Funktionselement an einen Delegaten an.|  
   
-## Hinweise  
- Die Vorlagenklasse beschreibt ein ZweiArgumentfunktionselement.  Sie definiert den Memberoperator, `operator()`, wenn das Objekt als Funktion aufgerufen wird, sie true zurückgibt, wenn das erste Argument nicht gleich das zweite ist.  
+## <a name="remarks"></a>Hinweise  
+ Die Vorlagenklasse beschreibt ein Funktionselement ist zwei Argumenten. Die Memberoperator definiert `operator()` , wenn das Objekt als eine Funktion aufgerufen wird, wird "true" nur, wenn das erste Argument nicht gleich dem zweiten ist.  
   
- Sie können das Objekt auch übergeben, da ein Funktionsargument, dessen Typ `delegate_type^` ist und es entsprechend konvertiert wird.  
+ Sie können auch das Objekt übergeben, als ein Funktionsargument, dessen Typ ist `delegate_type^` und werden entsprechend konvertiert werden.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_not_equal_to.cpp   
@@ -116,13 +114,16 @@ int main()
   
 ```  
   
-  **4 3**  
- **4 4**  
- **0 1**   
-## Anforderungen  
- **Header:** \<cliext\/funktionsfähig\>  
+```Output  
+4 3  
+4 4  
+0 1  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/funktionale >  
   
-## Siehe auch  
- [equal\_to](../dotnet/equal-to-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [equal_to (STL/CLR)](../dotnet/equal-to-stl-clr.md)

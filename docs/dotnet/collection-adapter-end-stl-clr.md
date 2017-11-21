@@ -1,41 +1,39 @@
 ---
-title: "collection_adapter::end (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::collection_adapter::end"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "end-Member [STL/CLR]"
+title: collection_adapter::End (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::collection_adapter::end
+dev_langs: C++
+helpviewer_keywords: end member [STL/CLR]
 ms.assetid: f953a734-2f17-4b68-9ca4-34f980d08887
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c08a9c08ed4fc1ae6501a5c935e769995644eebd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# collection_adapter::end (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="collectionadapterend-stlclr"></a>collection_adapter::end (STL/CLR)
 Legt das Ende der kontrollierten Sequenz fest.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 iterator end();  
 ```  
   
-## Hinweise  
- Die Memberfunktion wird ein Eingabeiterator zurück, der nur über das Ende der Sequenz gesteuerten hinaus zeigt.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt einem input-Iterator, der direkt hinter das Ende der kontrollierten Sequenz verweist.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_collection_adapter_end.cpp   
@@ -63,12 +61,15 @@ int main()
   
 ```  
   
-  **ein b c**   
-## Anforderungen  
- **Header:** \<cliext\/Adapter\>  
+```Output  
+a b c  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext-Adapter >  
   
-## Siehe auch  
- [collection\_adapter](../dotnet/collection-adapter-stl-clr.md)   
- [collection\_adapter::begin](../dotnet/collection-adapter-begin-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)   
+ [collection_adapter::begin (STL/CLR)](../dotnet/collection-adapter-begin-stl-clr.md)

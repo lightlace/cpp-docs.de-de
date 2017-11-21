@@ -7,14 +7,14 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
-translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: 3d32c24173e803e95fb57938f4a3ab62d43b65e0
-ms.lasthandoff: 04/12/2017
-
+ms.openlocfilehash: 9cdb12373d93c17258fb615f667d7321e06f6728
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="atl-http-utility-functions"></a>ATL-HTTP-Hilfsfunktionen
 
@@ -53,7 +53,7 @@ inline BOOL AtlCanonicalizeUrl(
  Vom Aufrufer reservierte Puffer zum Empfangen der kanonisierten URL.  
   
  `pdwMaxLength`  
- Zeiger auf eine Variable, die die Länge in Zeichen von enthält `szCanonicalized`. Wenn die Funktion erfolgreich ausgeführt wird, erhält die Variable die Anzahl der Zeichen, die in den Puffer nicht einschließlich des abschließenden Null-Zeichens geschrieben. Wenn die Funktion fehlschlägt, empfängt die Variable die erforderliche Länge in Byte des Puffers, einschließlich Platz für das abschließende Nullzeichen.  
+ Zeiger auf eine Variable, die die Länge in Zeichen von enthält `szCanonicalized`. Wenn die Funktion erfolgreich ausgeführt wird, erhält die Variable die Anzahl der Zeichen, die in den Puffer, einschließlich des abschließenden Null-Zeichens geschrieben. Wenn die Funktion fehlschlägt, empfängt die Variable die erforderliche Länge in Byte des Puffers, einschließlich Platz für das abschließende Nullzeichen.  
   
  `dwFlags`  
  ATL_URL-Flags, die Steuerung des Verhaltens dieser Funktion. 
@@ -98,7 +98,7 @@ inline BOOL AtlCombineUrl(
  Vom Aufrufer reservierte Puffer zum Empfangen der kanonisierten URL.  
   
  `pdwMaxLength`  
- Zeiger auf eine Variable, die die Länge in Zeichen von enthält `szBuffer`. Wenn die Funktion erfolgreich ausgeführt wird, erhält die Variable die Anzahl der Zeichen, die in den Puffer nicht einschließlich des abschließenden Null-Zeichens geschrieben. Wenn die Funktion fehlschlägt, empfängt die Variable die erforderliche Länge in Byte des Puffers, einschließlich Platz für das abschließende Nullzeichen.  
+ Zeiger auf eine Variable, die die Länge in Zeichen von enthält `szBuffer`. Wenn die Funktion erfolgreich ausgeführt wird, erhält die Variable die Anzahl der Zeichen, die in den Puffer, einschließlich des abschließenden Null-Zeichens geschrieben. Wenn die Funktion fehlschlägt, empfängt die Variable die erforderliche Länge in Byte des Puffers, einschließlich Platz für das abschließende Nullzeichen.  
   
  `dwFlags`  
  Flags, die Steuerung des Verhaltens dieser Funktion. Finden Sie unter [AtlCanonicalizeUrl](#atlcanonicalizeurl).  
@@ -136,7 +136,7 @@ inline BOOL AtlEscapeUrl(
  Vom Aufrufer reservierte Puffer, der der konvertierte URL geschrieben wird.  
   
  `pdwStrLen`  
- Zeiger auf ein DWORD-Variable. Wenn die Funktion erfolgreich ausgeführt wird, `pdwStrLen` empfängt die Anzahl der Zeichen, die in den Puffer, nicht einschließlich des abschließenden Null-Zeichens geschrieben. Wenn die Funktion fehlschlägt, empfängt die Variable die erforderliche Länge in Byte des Puffers, einschließlich Platz für das abschließende Nullzeichen. Bei Verwendung der Breitzeichen-Version dieser Methode `pdwStrLen` empfängt die Anzahl von Zeichen erforderlich sind, nicht die Anzahl von Bytes.  
+ Zeiger auf ein DWORD-Variable. Wenn die Funktion erfolgreich ausgeführt wird, `pdwStrLen` empfängt die Anzahl der Zeichen, die in den Puffer, einschließlich des abschließenden Null-Zeichens geschrieben. Wenn die Funktion fehlschlägt, empfängt die Variable die erforderliche Länge in Byte des Puffers, einschließlich Platz für das abschließende Nullzeichen. Bei Verwendung der Breitzeichen-Version dieser Methode `pdwStrLen` empfängt die Anzahl von Zeichen erforderlich sind, nicht die Anzahl von Bytes.  
   
  `dwMaxLength`  
  Die Größe des Puffers `lpszStringOut`.  
@@ -203,7 +203,7 @@ inline BOOL AtlUnescapeUrl(
  Vom Aufrufer reservierte Puffer, der der konvertierte URL geschrieben wird.  
   
  `pdwStrLen`  
- Zeiger auf ein DWORD-Variable. Wenn die Funktion erfolgreich ausgeführt wird, erhält die Variable die Anzahl der Zeichen, die in den Puffer nicht einschließlich des abschließenden Null-Zeichens geschrieben. Wenn die Funktion fehlschlägt, empfängt die Variable die erforderliche Länge in Byte des Puffers, einschließlich Platz für das abschließende Nullzeichen.  
+ Zeiger auf ein DWORD-Variable. Wenn die Funktion erfolgreich ausgeführt wird, erhält die Variable die Anzahl der Zeichen, die in den Puffer, einschließlich des abschließenden Null-Zeichens geschrieben. Wenn die Funktion fehlschlägt, empfängt die Variable die erforderliche Länge in Byte des Puffers, einschließlich Platz für das abschließende Nullzeichen.  
   
  `dwMaxLength`  
  Die Größe des Puffers `lpszStringOut`.  
@@ -259,5 +259,4 @@ inline void SystemTimeToHttpDate(
 ## <a name="see-also"></a>Siehe auch  
  [Konzepte](../../atl/active-template-library-atl-concepts.md)   
  [ATL-COM-Desktop-Komponenten](../../atl/atl-com-desktop-components.md)   
-
 

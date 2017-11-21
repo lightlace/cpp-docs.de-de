@@ -1,49 +1,64 @@
 ---
-title: Globaler Bezeichner Sicherheitsfunktionen | Microsoft-Dokumentation
+title: Globaler Bezeichner Sicherheitsfunktionen | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
+f1_keywords:
+- atlsecurity/ATL::Sids::AccountOps
+- atlsecurity/ATL::Sids::Admins
+- atlsecurity/ATL::Sids::AnonymousLogon
+- atlsecurity/ATL::Sids::AuthenticatedUser
+- atlsecurity/ATL::Sids::BackupOps
+- atlsecurity/ATL::Sids::Batch
+- atlsecurity/ATL::Sids::CreatorGroup
+- atlsecurity/ATL::Sids::CreatorGroupServer
+- atlsecurity/ATL::Sids::CreatorOwner
+- atlsecurity/ATL::Sids::CreatorOwnerServer
+- atlsecurity/ATL::Sids::Dialup
+- atlsecurity/ATL::Sids::Guests
+- atlsecurity/ATL::Sids::Interactive
+- atlsecurity/ATL::Sids::Local
+- atlsecurity/ATL::Sids::Network
+- atlsecurity/ATL::Sids::NetworkService
+- atlsecurity/ATL::Sids::Null
+- atlsecurity/ATL::Sids::PowerUsers
+- atlsecurity/ATL::Sids::PrintOps
+- atlsecurity/ATL::Sids::Proxy
+- atlsecurity/ATL::Sids::RasServers
+- atlsecurity/ATL::Sids::Replicator
+- atlsecurity/ATL::Sids::RestrictedCode
+- atlsecurity/ATL::Sids::Self
+- atlsecurity/ATL::Sids::ServerLogon
+- atlsecurity/ATL::Sids::Service
+- atlsecurity/ATL::Sids::System
+- atlsecurity/ATL::Sids::SystemOps
+- atlsecurity/ATL::Sids::TerminalServer
+- atlsecurity/ATL::Sids::Users
+- atlsecurity/ATL::Sids::World
+dev_langs: C++
 helpviewer_keywords:
 - security IDs [C++]
 - SIDs [C++], returning SID objects
 ms.assetid: 85404dcb-c59b-4535-ab3d-66cfa37e87de
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 9e51fe30b0519514df34f1a77b1e731f51047520
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 0a8c0b901bf5be8bc89e9e77a0fa65d86bb29add
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="security-identifier-global-functions"></a>Globaler Bezeichner Sicherheitsfunktionen
 Diese Funktionen geben allgemeine bekannte SID Objekte zurück.  
   
 > [!IMPORTANT]
->  In der folgenden Tabelle aufgeführten Funktionen können nicht verwendet werden, in Anwendungen, die in Ausführen der [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  In der folgenden Tabelle aufgeführten Funktionen können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.  
   
 |||  
 |-|-|  
@@ -181,9 +196,9 @@ CSid NetworkService() throw(...);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden Sie "NetworkService", um Benutzer NT AUTHORITY\NetworkService ein Sicherheitsobjekt CPerfMon lesen können. NetworkService der ATLServer-Code, die DLL unter dem NetworkService-Konto anmelden kann, ein SecurityAttribute hinzugefügt [!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)] und mehr.  
+ Verwenden Sie NetworkService, um die Benutzer NT AUTHORITY\NetworkService ein Sicherheitsobjekt CPerfMon lesen kann. NetworkService ATLServer-Code der ermöglicht die DLL-Datei unter dem NetworkService-Konto anmelden, auf eine SecurityAttribute hinzugefügt [!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)] und größer Betriebssystem.  
   
- Bei der Erstellung von benutzerdefinierten Protokoll Leistungsindikatoren mit ATLServer CPerfMon-Klasse in der Perfmon-MMC können die Leistungsindikatoren nicht angezeigt, wenn die Protokolldatei anzeigen, obwohl sie in der Ansicht Echtzeit ordnungsgemäß angezeigt werden. Benutzerdefinierte Leistungsindikatoren CPerfMon nicht die erforderlichen Berechtigungen für den Dienst "Performance-Protokolle und Warnungen" (smlogsvc.exe) ausgeführt haben, auf [!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)] (oder höher) Betriebssysteme. Dieser Dienst wird unter dem Konto "NT-Autorität\Netzwerkdienst" ausgeführt.  
+ Wenn benutzerdefiniertes Protokoll Leistungsindikatoren mit ATLServer CPerfMon-Klasse in der Perfmon-MMC erstellt werden, können die Leistungsindikatoren nicht angezeigt, wenn die Protokolldatei anzeigen, auch wenn sie in der Ansicht Echtzeit ordnungsgemäß angezeigt werden. Benutzerdefinierte Leistungsindikatoren CPerfMon nicht die erforderlichen Berechtigungen für die Ausführung unter der Dienst "Leistung Protokolle und Warnungen" (smlogsvc.exe) verfügen, auf [!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)] (oder höher) Betriebssystemen. Dieser Dienst führt unter dem Konto "NT AUTHORITY\NetworkService".  
   
 ##  <a name="null"></a>SIDs::NULL  
  Gibt die SECURITY_NULL_RID-SID zurück.  
@@ -283,4 +298,3 @@ CSid World() throw(...);
   
 ## <a name="see-also"></a>Siehe auch  
  [Funktionen](../../atl/reference/atl-functions.md)
-

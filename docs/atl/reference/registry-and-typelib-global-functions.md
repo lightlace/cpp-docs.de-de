@@ -4,45 +4,40 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- RegistryDataExchange function, global functions
+f1_keywords:
+- atlbase/ATL::AtlGetPerUserRegistration
+- afxpriv/ATL::AfxRegCreateKey
+- afxpriv/ATL::AfxRegDeleteKey
+- atlbase/ATL::AtlRegisterTypeLib
+- afxpriv/ATL::AfxRegOpenKey
+- afxpriv/ATL::AfxRegOpenKeyEx
+- afxdisp/ATL::AfxUnregisterPreviewHandler
+- atlbase/ATL::AtlSetPerUserRegistration
+- atlbase/ATL::AtlUnRegisterTypeLib
+- atlbase/ATL::AtlLoadTypeLib
+- atlbase/ATL::AtlUpdateRegistryFromResourceD
+- atlbase/ATL::RegistryDataExchange
+dev_langs: C++
+helpviewer_keywords: RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 9f05db468d5d7fffce149d7a92ba29615c3ae7c1
-ms.contentlocale: de-de
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 6f9dd09983a7b8cb781e26a6a3ed049d82d03632
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="registry-and-typelib-global-functions"></a>Registrierung und TypeLib globale Funktionen
 Diese Funktionen bieten Unterstützung für das Laden und Registrieren einer Typbibliothek.  
   
 > [!IMPORTANT]
->  In den folgenden Tabellen aufgeführten Funktionen können nicht verwendet werden, in Anwendungen, die im Ausführen der [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  In den folgenden Tabellen aufgeführten Funktionen können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.  
   
 |||  
 |-|-|  
@@ -395,9 +390,7 @@ HRESULT RegistryDataExchange(
  **Header:** atlbase.h
 
 ## <a name="see-also"></a>Siehe auch  
- [Funktionen](atl-functions.md)
- [Registrierungsdaten Exchange-Makros](registry-data-exchange-macros.md)
-
+ [Funktionen](atl-functions.md) [Registrierungsdaten Exchange-Makros](registry-data-exchange-macros.md)
 
 
 

@@ -1,53 +1,52 @@
 ---
-title: "CDBPropIDSet::SetGUID | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDBPropIDSet.SetGUID"
-  - "ATL::CDBPropIDSet::SetGUID"
-  - "SetGUID"
-  - "ATL.CDBPropIDSet.SetGUID"
-  - "CDBPropIDSet::SetGUID"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetGUID-Methode"
+title: 'Cdbpropidset:: SetGuid | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDBPropIDSet.SetGUID
+- ATL::CDBPropIDSet::SetGUID
+- SetGUID
+- ATL.CDBPropIDSet.SetGUID
+- CDBPropIDSet::SetGUID
+dev_langs: C++
+helpviewer_keywords: SetGUID method
 ms.assetid: 8dd0f3bf-1490-4d53-9063-322b8d821bbe
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0d91cc0374474a38bd2caba66ab98003852195f9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# CDBPropIDSet::SetGUID
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Legt das GUID\-Feld in der **DBPROPIDSET**\-Struktur fest.  
+# <a name="cdbpropidsetsetguid"></a>CDBPropIDSet::SetGUID
+Legt die GUID-Feld der **DBPROPIDSET** Struktur.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
-      void SetGUID(   
-   const GUID& guid    
+      void SetGUID(   
+   const GUID& guid    
 ) throw( );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `guid`  
- \[in\] Eine GUID verwendet, um das **guidPropertySet** \- Feld der Struktur [DBPROPIDSET](https://msdn.microsoft.com/en-us/library/ms717981.aspx) festzulegen.  
+ [in] Eine GUID zum Festlegen der **GuidPropertySet** Feld der [DBPROPIDSET](https://msdn.microsoft.com/en-us/library/ms717981.aspx) Struktur.  
   
-## Hinweise  
- Dieses Feld kann von [Konstruktor](../../data/oledb/cdbpropidset-cdbpropidset.md) auch festgelegt werden.  Rufen Sie diese Funktion auf, wenn der Standardkonstruktor für diese Klasse verwenden.  
+## <a name="remarks"></a>Hinweise  
+ Dieses Feld kann festgelegt werden, indem Sie die [Konstruktor](../../data/oledb/cdbpropidset-cdbpropidset.md) ebenfalls. Rufen Sie diese Funktion, wenn Sie den Standardkonstruktor für diese Klasse verwenden.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  
   
-## Siehe auch  
- [CDBPropIDSet\-Klasse](../../data/oledb/cdbpropidset-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [CDBPropIDSet-Klasse](../../data/oledb/cdbpropidset-class.md)

@@ -1,41 +1,39 @@
 ---
-title: "map::rbegin (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::rbegin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rbegin-Member [STL/CLR]"
+title: 'Map:: rbegin (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::rbegin
+dev_langs: C++
+helpviewer_keywords: rbegin member [STL/CLR]
 ms.assetid: bd7165a3-561f-48d4-9791-7aaafc2cf3a5
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 229d4e85c4545446e394ae3aad7ef27383a2caf1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# map::rbegin (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="maprbegin-stlclr"></a>map::rbegin (STL/CLR)
 Legt den Anfang der umgekehrten kontrollierten Sequenz fest.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 reverse_iterator rbegin();  
 ```  
   
-## Hinweise  
- Die Memberfunktion gibt einem umgekehrten Iterator, der das letzte Element der gesteuerten Reihenfolge festgelegt wird, oder direkt über dem Anfang eine leere Sequenz hinaus zurück.  Demzufolge wird der `beginning` der umgekehrten Sequenz bestimmt.  Sie können damit einen Iterator abrufen, der den `current` Anfang der kontrollierten Sequenz in umgekehrter Reihenfolge bestimmt; der Zustand kann sich jedoch ändern, sobald sich die Länge der kontrollierten Sequenz ändert.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt einen umgekehrten Iterator, der das letzte Element der kontrollierten Sequenz oder nur vor dem Anfang einer leeren Sequenz zurück. Daher kennzeichnet es die `beginning` der umgekehrten Sequenz. Es mit der einen Iterator abrufen, bestimmt die `current` Anfang der kontrollierten Sequenz in umgekehrter Reihenfolge kann ändern, wenn die Länge der gesteuerten Sequenz geändert wird.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_map_rbegin.cpp   
@@ -67,16 +65,19 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[bc 3\]**  
-**\*rbegin\(\) \= \[c 3\]**  
-**\*\+\+rbegin\(\) \= \[b 2\]**   
-## Anforderungen  
- **Header:** \<cliext\/Zuordnung\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+*rbegin() = [c 3]  
+*++rbegin() = [b 2]  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Map >  
   
-## Siehe auch  
- [map](../dotnet/map-stl-clr.md)   
- [map::begin](../dotnet/map-begin-stl-clr.md)   
- [map::end](../dotnet/map-end-stl-clr.md)   
- [map::rend](../dotnet/map-rend-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Karte (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [Map:: begin (STL/CLR)](../dotnet/map-begin-stl-clr.md)   
+ [Map:: End (STL/CLR)](../dotnet/map-end-stl-clr.md)   
+ [map::rend (STL/CLR)](../dotnet/map-rend-stl-clr.md)

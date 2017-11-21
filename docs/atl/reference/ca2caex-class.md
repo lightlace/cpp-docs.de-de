@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,35 +12,18 @@ f1_keywords:
 - ATLCONV/ATL::CA2CAEX
 - ATLCONV/ATL::CA2CAEX::CA2CAEX
 - ATLCONV/ATL::CA2CAEX::m_psz
-dev_langs:
-- C++
-helpviewer_keywords:
-- CA2CAEX class
+dev_langs: C++
+helpviewer_keywords: CA2CAEX class
 ms.assetid: 388e7c1d-a144-474c-a182-b15f69a74bd8
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 9185bc18981898d699aa3f3eeb490c76bf5138fb
-ms.contentlocale: de-de
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 0ae0db059d092feb1a24a3c7c635817250f2813b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ca2caex-class"></a>CA2CAEX-Klasse
 Diese Klasse wird verwendet, von Makros zur zeichenfolgenkonvertierung `CA2CTEX` und `CT2CAEX`, und die Typedef **CA2CA**.  
@@ -156,4 +138,3 @@ operator LPCSTR() const throw();
  [CW2CWEX-Klasse](../../atl/reference/cw2cwex-class.md)   
  [CW2WEX-Klasse](../../atl/reference/cw2wex-class.md)   
  [Klassenübersicht](../../atl/atl-class-overview.md)
-

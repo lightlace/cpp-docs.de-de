@@ -1,41 +1,39 @@
 ---
-title: "deque::clear (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::clear"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "clear-Member [STL/CLR]"
+title: 'deque:: Clear (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::clear
+dev_langs: C++
+helpviewer_keywords: clear member [STL/CLR]
 ms.assetid: 1d9a3d11-b3fa-43a7-a508-7a05cbcd91bf
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d5bb9f4c00976ce60901148509d9390b85412ab7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# deque::clear (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dequeclear-stlclr"></a>deque::clear (STL/CLR)
 Entfernt alle Elemente.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void clear();  
 ```  
   
-## Hinweise  
- Die Memberfunktion wird effektiv [deque::erase](../dotnet/deque-erase-stl-clr.md)`(` [deque::begin](../dotnet/deque-begin-stl-clr.md)`(),` [deque::end](../dotnet/deque-end-stl-clr.md)`())` auf.  Sie verwenden sie, um sicherzustellen, dass die gesteuerte Sequenz leer ist.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion ruft tatsächlich [deque:: Erase (STL/CLR)](../dotnet/deque-erase-stl-clr.md) `(` [deque:: begin (STL/CLR)](../dotnet/deque-begin-stl-clr.md) `(),` [deque:: End (STL/CLR)](../dotnet/deque-end-stl-clr.md) `())`. Sie verwenden es, um sicherzustellen, dass die kontrollierte Sequenz leer ist.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_deque_clear.cpp   
@@ -72,15 +70,18 @@ int main()
   
 ```  
   
-  **ein b c**  
-**size\(\) \= 0**  
- **ein b**  
-**size\(\) \= 0**   
-## Anforderungen  
- **Header:** \<cliext\/Doppelschlange\>  
+```Output  
+ a b c  
+size() = 0  
+ a b  
+size() = 0  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/doppelschlange >  
   
-## Siehe auch  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::erase](../dotnet/deque-erase-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque::erase (STL/CLR)](../dotnet/deque-erase-stl-clr.md)

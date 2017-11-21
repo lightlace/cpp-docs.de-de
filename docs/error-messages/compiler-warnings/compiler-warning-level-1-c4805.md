@@ -4,47 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4805
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4805
+f1_keywords: C4805
+dev_langs: C++
+helpviewer_keywords: C4805
 ms.assetid: 99c7b7e2-272e-4ab5-8580-17c42e62e2ef
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: bbe709ec83a19f6e1f2ac58059be564f9bee60a2
-ms.contentlocale: de-de
-ms.lasthandoff: 04/12/2017
-
+ms.openlocfilehash: 9a466d56a85d3f41696cc1315deab0e49c0eda30
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4805"></a>Compilerwarnung (Stufe 1) C4805
 "Operation": unsichere Kombination von Typ "Typ" mit Typ "Typ" in einer Operation  
   
- Diese Warnung wird generiert, für Vergleichsvorgänge zwischen [Bool](../../cpp/bool-cpp.md) und [Int](../../c-language/integer-types.md). Im folgenden Beispiel wird C4805 generiert:  
+ Diese Warnung wird für Vergleichsvorgänge zwischen [bool](../../cpp/bool-cpp.md) und [int](../../c-language/integer-types.md)generiert. Im folgenden Beispiel wird C4805 generiert:  
   
 ```  
 // C4805.cpp  

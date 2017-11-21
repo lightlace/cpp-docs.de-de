@@ -1,35 +1,34 @@
 ---
-title: "ptr::ptr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr::ptr"
-  - "ptr.ptr"
-  - "msclr.com.ptr.ptr"
-  - "msclr::com::ptr::ptr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ptr::ptr"
+title: PTR::PTR | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr::ptr
+- ptr.ptr
+- msclr.com.ptr.ptr
+- msclr::com::ptr::ptr
+dev_langs: C++
+helpviewer_keywords: ptr::ptr
 ms.assetid: 4f5883b4-7c0a-46c6-aa9f-4e49eed463eb
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 99016a9006bb13be70fe38fd222ad25a08792b20
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# ptr::ptr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Erstellt `com::ptr`, um ein COM\-Objekt zu umschließen.  
+# <a name="ptrptr"></a>ptr::ptr
+Erstellt eine `com::ptr` um ein COM-Objekt zu umschließen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 ptr();  
@@ -38,19 +37,19 @@ ptr(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `P`  
- Ein COM\-Schnittstellenzeiger.  
+ Ein COM-Schnittstellenzeiger.  
   
-## Hinweise  
- Der NO\-Argumentkonstruktor weist `nullptr` dem Handle des zugrunde liegenden Objekts zu.  Nachfolgende Aufrufe von `com::ptr` überprüfen das interne Objekt und schlagen automatisch fehl, wenn ein Objekt tatsächlich erstellt oder angefügt ist.  
+## <a name="remarks"></a>Hinweise  
+ Der Konstruktor ohne Argument weist `nullptr` an das zugrunde liegende Objekthandle. Nachfolgende Aufrufe der `com::ptr` wird das interne Objekt überprüfen und ohne Meldung fehl, bis ein Objekt tatsächlich erstellt oder angefügt wird.  
   
- Der EinArgumentkonstruktor hinzugefügt, einen Verweis auf das COM\-Objekt gibt jedoch nicht den Verweis des Aufrufers frei, sodass der Aufrufer mit `Release` auf das COM\-Objekt aufrufen, um Steuerelement tatsächlich aufzugeben.  Wenn `com::ptr` der Destruktor aufgerufen wird, wird er automatisch seine Verweise auf das COM\-Objekt freigegeben.  
+ Der Konstruktor nur einem Argument Fügt einen Verweis auf das COM-Objekt aber des Aufrufers Verweis wird nicht freigegeben werden, damit der Aufrufer aufrufen muss `Release` für COM-Objekt, um tatsächlich Steuerelement zu gewähren. Wenn die `com::ptr`der Destruktor aufgerufen wird es automatisch freigibt, der Verweise auf COM-Objekts.  
   
- `NULL` für diesen Konstruktor übergeben entspricht, die NO\-Argumentversion Aufruf.  
+ Übergeben von `NULL` an diesen Konstruktor entspricht dem Aufrufen der Version keine Argumente.  
   
-## Beispiel  
- Dieses Beispiel implementiert eine CLR\-Klasse, die `com::ptr` verwendet, um sein `IXMLDOMDocument`\-Objekt des privaten Members zu umschließen.  Es demonstriert die Verwendung beider Versionen des Konstruktors.  
+## <a name="example"></a>Beispiel  
+ In diesem Beispiel implementiert eine CLR-Klasse, verwendet eine `com::ptr` umschließen die privaten Member `IXMLDOMDocument` Objekt. Es veranschaulicht die Verwendung beider Versionen des Konstruktors.  
   
 ```  
 // comptr_ptr.cpp  
@@ -111,12 +110,12 @@ int main() {
 }  
 ```  
   
-## Anforderungen  
- **Headerdatei** \<msclr\\com\\ptr.h\>  
+## <a name="requirements"></a>Anforderungen  
+ **Headerdatei** \<msclr\com\ptr.h >  
   
  **Namespace** msclr::com  
   
-## Siehe auch  
- [ptr\-Member](../dotnet/ptr-members.md)   
- [ptr::CreateInstance](../dotnet/ptr-createinstance.md)   
+## <a name="see-also"></a>Siehe auch  
+ [PTR-Member](../dotnet/ptr-members.md)   
+ [PTR::CreateInstance](../dotnet/ptr-createinstance.md)   
  [ptr::~ptr](../dotnet/ptr-tilde-ptr.md)

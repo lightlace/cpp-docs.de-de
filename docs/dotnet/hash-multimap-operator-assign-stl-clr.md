@@ -1,45 +1,43 @@
 ---
-title: "hash_multimap::operator= (STL/CLR)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Operator= Member [STL/CLR]"
+title: hash_multimap::Operator = (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::operator=
+dev_langs: C++
+helpviewer_keywords: operator= member [STL/CLR]
 ms.assetid: f4c1a961-e8af-44f3-b61c-83d4dda3b403
-caps.latest.revision: 8
-caps.handback.revision: "6"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4a35ad615893ced83ba9efe89f157abd3f489d4d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multimap::operator= (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ersetzt die gesteuerte Sequenz.  
+# <a name="hashmultimapoperator-stlclr"></a>hash_multimap::operator= (STL/CLR)
+Ersetzt die kontrollierte Sequenz.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 hash_multimap<Key, Mapped>% operator=(hash_multimap<Key, Mapped>% right);  
 ```  
   
-#### Parameter  
- right  
- Container zu kopieren.  
+#### <a name="parameters"></a>Parameter  
+ Rechts  
+ Der zu kopierende Container.  
   
-## Hinweise  
- Der Member, den Operator `right` zum Objekt kopiert, dann, `*this` zurückgibt.  Sie verwenden sie, um die gesteuerte Sequenz durch eine Kopie der gesteuerten Sequenz in `right` zu ersetzen.  
+## <a name="remarks"></a>Hinweise  
+ Die Member-Operator Kopien `right` klicken Sie dann auf das Objekt gibt `*this`. Sie können ihn verwenden, um die kontrollierte Sequenz durch eine Kopie der kontrollierten Sequenz in `right` zu ersetzen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_hash_multimap_operator_as.cpp   
@@ -71,12 +69,15 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[bc 3\]**  
- **\[1\] \[2\] \[bc 3\]**   
-## Anforderungen  
- **Header:** \<cliext\/hash\_map\>  
+```Output  
+[a 1] [b 2] [c 3]  
+[a 1] [b 2] [c 3]  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext Hash_map/>  
   
-## Siehe auch  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)

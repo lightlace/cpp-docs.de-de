@@ -1,11 +1,10 @@
 ---
-title: CAtlBaseModule Klasse | Microsoft-Dokumentation
+title: CAtlBaseModule Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,35 +18,18 @@ f1_keywords:
 - ATLCORE/ATL::CAtlBaseModule::RemoveResourceInstance
 - ATLCORE/ATL::CAtlBaseModule::SetResourceInstance
 - ATLCORE/ATL::CAtlBaseModule::m_bInitFailed
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAtlBaseModule class
+dev_langs: C++
+helpviewer_keywords: CAtlBaseModule class
 ms.assetid: 55ade80c-9b0c-4c51-933e-2158436c1096
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 4897f6cf7e12a18401720ad663c90491bb0e599d
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 3249240ef90224dc1a297a848f1eba55d915fdac
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="catlbasemodule-class"></a>CAtlBaseModule-Klasse
 Diese Klasse wird in jedem ATL-Projekt instanziiert.  
@@ -70,12 +52,12 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CAtlBaseModule::AddResourceInstance](#addresourceinstance)|Fügt eine Ressourceninstanz in die Liste der gespeicherten behandelt.|  
+|[CAtlBaseModule::AddResourceInstance](#addresourceinstance)|Fügt eine Ressourceninstanz in die Liste der gespeicherten Handles an.|  
 |[CAtlBaseModule::GetHInstanceAt](#gethinstanceat)|Gibt ein Handle auf eine Instanz der angegebenen Ressource zurück.|  
-|[CAtlBaseModule::GetModuleInstance](#getmoduleinstance)|Gibt die Modulinstanz aus einem `CAtlBaseModule` Objekt.|  
+|[CAtlBaseModule::GetModuleInstance](#getmoduleinstance)|Gibt die Modulinstanz anhand einer `CAtlBaseModule` Objekt.|  
 |[CAtlBaseModule::GetResourceInstance](#getresourceinstance)|Gibt die Ressourceninstanz aus einer `CAtlBaseModule` Objekt.|  
-|[CAtlBaseModule::RemoveResourceInstance](#removeresourceinstance)|Entfernt eine Ressourceninstanz aus der Liste der gespeicherten behandelt.|  
-|[CAtlBaseModule::SetResourceInstance](#setresourceinstance)|Legt die Resource-Instanz, der ein `CAtlBaseModule` Objekt.|  
+|[CAtlBaseModule::RemoveResourceInstance](#removeresourceinstance)|Entfernt eine Ressourceninstanz aus der Liste der gespeicherten Handles an.|  
+|[CAtlBaseModule::SetResourceInstance](#setresourceinstance)|Legt die Ressourceninstanz des ein `CAtlBaseModule` Objekt.|  
   
 ### <a name="public-data-members"></a>Öffentliche Datenmember  
   
@@ -84,7 +66,7 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
 |[CAtlBaseModule::m_bInitFailed](#m_binitfailed)|Eine Variable, die angibt, ob die Modul-Initialisierung fehlgeschlagen ist.|  
   
 ## <a name="remarks"></a>Hinweise  
- Eine Instanz von `CAtlBaseModule` benannte _AtlBaseModule ist in jedem ATL-Projekt, das ein Handle für die Modulinstanz, ein Handle für das Modul mit Ressourcen (die standardmäßig ein und dieselbe sind) und ein Array von Handles für Module, die primäre Ressourcen enthält. `CAtlBaseModule`kann von mehreren Threads sicher zugegriffen werden.  
+ Eine Instanz von `CAtlBaseModule` benannte _AtlBaseModule in jedem ATL-Projekt, mit der ein Handle für die Modulinstanz, ein Handle für das Modul, das Ressourcen (die standardmäßig identisch sind) enthält, und ein Array von Handles für Module, die primären vorhanden ist Ressourcen. `CAtlBaseModule`kann von mehreren Threads sicher zugegriffen werden.  
   
  Diese Klasse ersetzt die veraltete [CComModule](../../atl/reference/ccommodule-class.md) Klasse zur Verwendung in früheren Versionen von ATL  
   
@@ -97,7 +79,7 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
  **Header:** atlcore.h  
   
 ##  <a name="addresourceinstance"></a>CAtlBaseModule::AddResourceInstance  
- Fügt eine Ressourceninstanz in die Liste der gespeicherten behandelt.  
+ Fügt eine Ressourceninstanz in die Liste der gespeicherten Handles an.  
   
 ```
 bool AddResourceInstance(HINSTANCE hInst) throw();
@@ -105,10 +87,10 @@ bool AddResourceInstance(HINSTANCE hInst) throw();
   
 ### <a name="parameters"></a>Parameter  
  `hInst`  
- Die Ressourceninstanz hinzufügen.  
+ Die Ressourceninstanz, die hinzugefügt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt True zurück, wenn die Ressource wurde erfolgreich hinzugefügt, False andernfalls.  
+ Gibt "true" zurück, wenn die Ressource wurde erfolgreich hinzugefügt, "false" andernfalls.  
   
 ##  <a name="catlbasemodule"></a>CAtlBaseModule::CAtlBaseModule  
  Der Konstruktor.  
@@ -132,27 +114,27 @@ HINSTANCE GetHInstanceAt(int i) throw();
  Die Anzahl der Ressourceninstanz.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt das Handle für die Ressourceninstanz oder NULL zurück, wenn keine entsprechenden Instanz der Ressource vorhanden ist.  
+ Gibt das Handle auf die Ressourceninstanz oder NULL zurück, wenn keine entsprechenden Ressourceninstanz vorhanden ist.  
   
 ##  <a name="getmoduleinstance"></a>CAtlBaseModule::GetModuleInstance  
- Gibt die Modulinstanz aus einem `CAtlBaseModule` Objekt.  
+ Gibt die Modulinstanz anhand einer `CAtlBaseModule` Objekt.  
   
 ```
 HINSTANCE GetModuleInstance() throw();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Modulinstanz zurück.  
+ Gibt die Modulinstanz zurück.  
   
 ##  <a name="getresourceinstance"></a>CAtlBaseModule::GetResourceInstance  
- Gibt die Ressourceninstanz.  
+ Gibt die Ressourceninstanz zurück.  
   
 ```
 HINSTANCE GetResourceInstance() throw();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt die Ressourceninstanz.  
+ Gibt die Ressourceninstanz zurück.  
   
 ##  <a name="m_binitfailed"></a>CAtlBaseModule::m_bInitFailed  
  Eine Variable, die angibt, ob die Modul-Initialisierung fehlgeschlagen ist.  
@@ -162,10 +144,10 @@ static bool m_bInitFailed;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- True, wenn das Modul initialisiert, False, wenn es konnte nicht initialisiert werden.  
+ "True", wenn das Modul initialisiert, "false", wenn es konnte nicht initialisiert werden.  
   
 ##  <a name="removeresourceinstance"></a>CAtlBaseModule::RemoveResourceInstance  
- Entfernt eine Ressourceninstanz aus der Liste der gespeicherten behandelt.  
+ Entfernt eine Ressourceninstanz aus der Liste der gespeicherten Handles an.  
   
 ```
 bool RemoveResourceInstance(HINSTANCE hInst) throw();
@@ -176,10 +158,10 @@ bool RemoveResourceInstance(HINSTANCE hInst) throw();
  Die zu entfernende Ressourceninstanz.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt true zurück, wenn die Ressource wurde erfolgreich entfernt, andernfalls false wurde.  
+ Gibt "true" zurück, wenn die Ressource wurde erfolgreich entfernt, andernfalls false wurde.  
   
 ##  <a name="setresourceinstance"></a>CAtlBaseModule::SetResourceInstance  
- Legt die Resource-Instanz, der ein `CAtlBaseModule` Objekt.  
+ Legt die Ressourceninstanz des ein `CAtlBaseModule` Objekt.  
   
 ```
 HINSTANCE SetResourceInstance(HINSTANCE hInst) throw();
@@ -190,9 +172,8 @@ HINSTANCE SetResourceInstance(HINSTANCE hInst) throw();
  Die neue Ressourceninstanz.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt den aktualisierten Ressource-Instanz zurück.  
+ Gibt die aktualisierte Ressource-Instanz zurück.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)   
+ [Klassenübersicht](../../atl/atl-class-overview.md)   
  [Modulklassen](../../atl/atl-module-classes.md)
-

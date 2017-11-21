@@ -1,41 +1,39 @@
 ---
-title: "deque::pop_back (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::pop_back"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pop_back-Member [STL/CLR]"
+title: 'deque:: pop_back (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::pop_back
+dev_langs: C++
+helpviewer_keywords: pop_back member [STL/CLR]
 ms.assetid: 528d2c89-104c-45f7-8f05-41fe217ee37c
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7c77183cba08ec1b01659192b130edcf28d2b1c3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# deque::pop_back (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dequepopback-stlclr"></a>deque::pop_back (STL/CLR)
 Entfernt das letzte Element.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void pop_back();  
 ```  
   
-## Hinweise  
- Die Memberfunktion entfernt das letzte Element der gesteuerten Sequenz, die nicht leer sein muss.  Sie verwenden sie, um die Doppelschlange durch ein Element an zurück zu verkürzen.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion entfernt das letzte Element der gesteuerten Sequenz, die nicht leer sein darf. Sie verwenden es, um durch ein Element auf der Rückseite die doppelschlange zu verkürzen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_deque_pop_back.cpp   
@@ -64,15 +62,18 @@ int main()
   
 ```  
   
-  **ein b c**  
- **ein b**   
-## Anforderungen  
- **Header:** \<cliext\/Doppelschlange\>  
+```Output  
+a b c  
+a b  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/doppelschlange >  
   
-## Siehe auch  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::pop\_front](../dotnet/deque-pop-front-stl-clr.md)   
- [deque::push\_back](../dotnet/deque-push-back-stl-clr.md)   
- [deque::push\_front](../dotnet/deque-push-front-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque:: pop_front (STL/CLR)](../dotnet/deque-pop-front-stl-clr.md)   
+ [deque:: push_back (STL/CLR)](../dotnet/deque-push-back-stl-clr.md)   
+ [deque::push_front (STL/CLR)](../dotnet/deque-push-front-stl-clr.md)

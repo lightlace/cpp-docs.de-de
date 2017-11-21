@@ -1,41 +1,39 @@
 ---
-title: "vector::front (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::front"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "front-Member [STL/CLR]"
+title: 'Vector:: Front (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::front
+dev_langs: C++
+helpviewer_keywords: front member [STL/CLR]
 ms.assetid: 37a36157-8220-4d5b-85b5-c6a63211a322
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e9b82e3088585000dc97755eff9dd760134b579a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# vector::front (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vectorfront-stlclr"></a>vector::front (STL/CLR)
 Greift auf das erste Element zu.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 reference front();  
 ```  
   
-## Hinweise  
- Die Memberfunktion gibt einen Verweis auf das erste Element der Sequenz zurück gesteuerten, die nicht leer sein muss.  Sie verwenden sie, um zu lesen, oder, das erste Element zu schreiben, wenn Sie es wissen, vorhanden ist.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt einen Verweis auf das erste Element der gesteuerten Sequenz, die nicht leer sein darf. Sie verwenden ihn zum Lesen oder schreiben das erste Element, wenn Sie wissen, dass es vorhanden ist.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_vector_front.cpp   
@@ -67,16 +65,19 @@ int main()
   
 ```  
   
-  **ein b c**  
-**front\(\) \= "**  
- **x b c**   
-## Anforderungen  
- **Header:** \<cliext\/Vektor\>  
+```Output  
+ a b c  
+front() = a  
+ x b c  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Vektor >  
   
-## Siehe auch  
- [Vektor](../dotnet/vector-stl-clr.md)   
- [vector::back](../dotnet/vector-back-stl-clr.md)   
- [vector::back\_item](../dotnet/vector-back-item-stl-clr.md)   
- [vector::front\_item](../dotnet/vector-front-item-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Vektor (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [Vector:: Back (STL/CLR)](../dotnet/vector-back-stl-clr.md)   
+ [Vector:: back_item (STL/CLR)](../dotnet/vector-back-item-stl-clr.md)   
+ [vector::front_item (STL/CLR)](../dotnet/vector-front-item-stl-clr.md)

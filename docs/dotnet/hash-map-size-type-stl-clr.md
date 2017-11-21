@@ -1,41 +1,39 @@
 ---
-title: "hash_map::size_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::size_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size_type-Member [STL/CLR]"
+title: 'hash_map:: size_type (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::size_type
+dev_langs: C++
+helpviewer_keywords: size_type member [STL/CLR]
 ms.assetid: 062901e1-b52b-41e4-81be-b6646879e22a
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8659a30ef17811c84984c2e61866e3a879ad3a6f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# hash_map::size_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Der Typ eines Abstands mit Vorzeichen zwischen zwei Element.  
+# <a name="hashmapsizetype-stlclr"></a>hash_map::size_type (STL/CLR)
+Der Typ eines Abstands mit Vorzeichen zwischen zwei Elementen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef int size_type;  
 ```  
   
-## Hinweise  
- Der Typ beschreibt eine nicht negative Elementanzahl.  
+## <a name="remarks"></a>Hinweise  
+ Der Typ beschreibt ein nicht negativer Elementanzahl.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_hash_map_size_type.cpp   
@@ -65,13 +63,16 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[bc 3\]**  
-**end\(\)\-begin\(\) \= 3**   
-## Anforderungen  
- **Header:** \<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+end()-begin() = 3  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext Hash_map/>  
   
-## Siehe auch  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::empty](../dotnet/hash-map-empty-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [hash_map-Element (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::empty (STL/CLR)](../dotnet/hash-map-empty-stl-clr.md)

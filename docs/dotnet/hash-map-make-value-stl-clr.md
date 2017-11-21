@@ -1,48 +1,46 @@
 ---
-title: "hash_map::make_value (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::make_value"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "make_value-Member [STL/CLR]"
+title: hash_map::make_value (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::make_value
+dev_langs: C++
+helpviewer_keywords: make_value member [STL/CLR]
 ms.assetid: 1fcdcacc-5edf-46b7-9481-9a4aef32b025
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 89dc5ee04dc0edfd55e23c64b7a2fb6879bd5cc0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# hash_map::make_value (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmapmakevalue-stlclr"></a>hash_map::make_value (STL/CLR)
 Erstellt ein Wertobjekt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 static value_type make_value(key_type key, mapped_type mapped);  
 ```  
   
-#### Parameter  
- Schlüssel  
- So verwenden Schlüsselwert.  
+#### <a name="parameters"></a>Parameter  
+ Key  
+ Schlüsselwert verwenden.  
   
- zugeordnet  
- Zugeordneter Wert zu suchen.  
+ Zugeordnet  
+ Zugeordnet zu suchende Wert.  
   
-## Hinweise  
- Die Memberfunktion `value_type` gibt ein Objekt zurück, dessen Schlüssel `key` und dessen zugehörige Wert `mapped` ist.  Sie verwenden sie, um ein Objekt zu erstellen, das zur Verwendung mit verschiedenen anderen Memberfunktionen geeignet ist.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt eine `value_type` Objekts, dessen Schlüssel `key` und dessen zugeordnete Wert ist `mapped`. Sie verwenden es, um ein Objekt, das für die Verwendung mit anderen Memberfunktionen geeignet zu verfassen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_hash_map_make_value.cpp   
@@ -66,14 +64,17 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[bc 3\]**   
-## Anforderungen  
- **Header:** \<cliext\/hash\_map\>  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext Hash_map/>  
   
-## Siehe auch  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::key\_type](../dotnet/hash-map-key-type-stl-clr.md)   
- [hash\_map::mapped\_type](../dotnet/hash-map-mapped-type-stl-clr.md)   
- [hash\_map::value\_type](../dotnet/hash-map-value-type-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [hash_map-Element (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map:: KEY_TYPE (STL/CLR)](../dotnet/hash-map-key-type-stl-clr.md)   
+ [hash_map:: mapped_type (STL/CLR)](../dotnet/hash-map-mapped-type-stl-clr.md)   
+ [hash_map::value_type (STL/CLR)](../dotnet/hash-map-value-type-stl-clr.md)

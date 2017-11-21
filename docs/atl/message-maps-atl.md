@@ -1,41 +1,42 @@
 ---
-title: "Message Maps (ATL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, Meldungshandler"
-  - "message maps, ATL"
+title: Meldungszuordnungen (ATL) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- message maps, ATL
+- ATL, message handlers
 ms.assetid: 9e100400-65c7-4a85-8857-4e6cb6dd7340
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 650dcd31e07ef1995f09b0521991d79726b22774
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Message Maps (ATL)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="message-maps-atl"></a>Meldungszuordnungen (ATL)
+Eine meldungszuordnung ordnet eine bestimmte Meldung, einen Befehl oder Benachrichtigung eine Handlerfunktion. Mithilfe des ATL- [Nachricht Zuordnungsmakros](../atl/reference/message-map-macros-atl.md), Sie können eine meldungszuordnung für ein Fenster angeben. Die Fensterprozeduren in `CWindowImpl`, `CDialogImpl`, und `CContainedWindowT` ein Fenster seine meldungszuordnung, Nachrichten weiterleiten.  
+  
+ Die [Handler Nachrichtenfunktionen](../atl/message-handler-functions.md) akzeptiert ein zusätzliches Argument vom Typ `BOOL&`. Dieses Argument gibt an, ob eine Nachricht verarbeitet wurde, und ist, dass festgelegt ist `TRUE` standardmäßig. Eine Handlerfunktion kann dann legen Sie das Argument zu `FALSE` um anzugeben, dass sie eine Nachricht nicht verarbeitet wurde. In diesem Fall weiterhin ATL für die Handlerfunktion einen weiter in der meldungszuordnung gesucht werden soll. Durch Festlegen dieses Argument auf `FALSE`, führen Sie zuerst eine Aktion als Antwort auf eine Nachricht und lassen Sie die standardverarbeitung oder einen anderen Handler-Funktion zum Verarbeiten der Nachricht abgeschlossen werden können.  
+  
+## <a name="chained-message-maps"></a>Verkettete Meldungszuordnungen  
+ ATL ermöglicht Ihnen auch, meldungszuordnungen Kette, die leitet die Meldungsbehandlung zu einer meldungszuordnung, die in einer anderen Klasse definiert. Beispielsweise können Sie allgemeine Meldungsbehandlung in einer separaten Klasse uniform Verhalten für alle Fenster, die für diese Klasse Verkettung bereitstellen implementieren. Sie können auf eine Basisklasse oder einem Datenmember einer Klasse verkettet.  
+  
+ ATL unterstützt auch dynamische verketten, womit Sie zu verketten, um ein anderes Objekt meldungszuordnung zur Laufzeit. Um dynamische verketten zu implementieren, leiten Sie eine Klasse von [CDynamicChain](../atl/reference/cdynamicchain-class.md). Anschließend deklariert der [CHAIN_MSG_MAP_DYNAMIC](reference/message-map-macros-atl.md#chain_msg_map_dynamic) Makro in Ihrer nachrichtenzuordnung. `CHAIN_MSG_MAP_DYNAMIC`erfordert eine eindeutige Zahl, die das Objekt und die meldungszuordnung, die Sie verketten werden, identifiziert. Sie müssen diesen eindeutigen Wert durch einen Aufruf von definieren `CDynamicChain::SetChainEntry`.  
+  
+ Sie können auf jede Klasse, die eine meldungszuordnung deklariert verketten, vorausgesetzt die Klasse abgeleitet [CMessageMap](../atl/reference/cmessagemap-class.md). `CMessageMap`ermöglicht es einem Objekt, dessen meldungszuordnungen zu anderen Objekten verfügbar zu machen. Beachten Sie, dass `CWindowImpl` bereits leitet sich von `CMessageMap`.  
+  
+## <a name="alternate-message-maps"></a>Alternative Meldungszuordnungen  
+ Schließlich unterstützt ATL alternativen meldungszuordnungen deklariert, mit der [ALT_MSG_MAP](reference/message-map-macros-atl.md#alt_msg_map) Makro. Jede alternative meldungszuordnung wird durch eine eindeutige Nummer, die Sie übergeben identifiziert `ALT_MSG_MAP`. Unter Verwendung alternativer Meldung zugeordnet ist, können Sie die Nachrichten von mehreren Fenstern in eine Zuordnung behandeln. Beachten Sie, dass standardmäßig `CWindowImpl` alternativen meldungszuordnungen nicht verwendet. Um diese Unterstützung hinzuzufügen, überschreiben die `WindowProc` Methode in Ihrer `CWindowImpl`-abgeleitete Klasse, und rufen `ProcessWindowMessage` mit der Nachrichten-ID zuordnen.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Implementieren eines Fensters](../atl/implementing-a-window.md)
 
-Eine Meldungszuordnung ordnet eine Handlerfunktion mit einer bestimmten Meldung, einen Befehl oder einer Benachrichtigung zu.  Mit [Meldungszuordnungsmakros](../atl/reference/message-map-macros-atl.md) ATL verwenden, können Sie eine Meldungszuordnung für ein Fenster angeben.  Die Fensterprozeduren in `CWindowImpl`, in `CDialogImpl` und in `CContainedWindowT` verweisen die Meldungen eines Fensters auf seine Meldungszuordnung.  
-  
- [Meldungshandlerfunktionen](../atl/message-handler-functions.md) akzeptieren ein zusätzliches Argument vom Typ `BOOL&`.  Dieses Argument gibt an, ob eine Nachricht verarbeitet wurde, und wird zu `TRUE` standardmäßig festgelegt.  Eine Handlerfunktion kann das Argument auf `FALSE` dann festlegen, um anzugeben, dass eine Nachricht nicht bearbeitet hat.  In diesem Fall wird ATL fort, um nach einer Handlerfunktion weiter in der Meldungszuordnung zu suchen.  Mithilfe dieses Argument zu `FALSE` festlegen, können Sie Aktionen als Reaktion auf eine Nachricht zuerst ausführen und eine Standardverarbeitung oder eine andere Handlerfunktion zum Ende dann ermöglichen die Meldung behandelt.  
-  
-## Verkettete Meldungszuordnungen  
- ATL können Sie in auch den Kettenmeldungszuordnungen, das die Meldungsbehandlung auf eine Meldungszuordnung verweist, die in einer anderen Klasse definiert ist.  Beispielsweise können Sie Standardnachrichtbehandlung in einer separaten Klasse implementieren, um einheitliches Verhalten für alle Fenster bereitzustellen verkettend zu dieser Klasse.  Sie können auf eine Basisklasse oder einen Datenmember der Klasse verketten.  
-  
- ATL unterstützt auch dynamische Verketten, die Sie der Kette zur Meldungszuordnung eines anderen Objekts zur Laufzeit ermöglicht.  Um dynamische Verketten zu implementieren, müssen Sie die Klasse von [CDynamicChain](../atl/reference/cdynamicchain-class.md) berechnen.  Deklarieren Sie dann das [CHAIN\_MSG\_MAP\_DYNAMIC](../Topic/CHAIN_MSG_MAP_DYNAMIC.md)\-Makro in der Meldungszuordnung.  `CHAIN_MSG_MAP_DYNAMIC` erfordert eine eindeutige Zahl, die das Objekt und die Meldungszuordnung identifiziert, mit denen Sie verketten.  Sie müssen diesen eindeutigen Wert durch einen Aufruf `CDynamicChain::SetChainEntry` definieren.  
-  
- Sie können eine beliebige Klasse verketten, die eine Meldungszuordnung deklariert, vorausgesetzt die Klasse von [CMessageMap](../atl/reference/cmessagemap-class.md) abgeleitet.  `CMessageMap` können Objekte, um seine Meldungszuordnungen anderen Objekten verfügbar zu machen.  Beachten Sie, dass `CWindowImpl` bereits von `CMessageMap` abgeleitet.  
-  
-## Alternative Meldungszuordnungen  
- Schließlich ATL\-Unterstützungs\-alternativeMeldungszuordnungen deklariert, mit dem [ALT\_MSG\_MAP](../Topic/ALT_MSG_MAP.md)\-Makro.  Jede alternative Meldungszuordnung wird durch eine eindeutige Zahl identifiziert, die Sie zu `ALT_MSG_MAP` übergeben.  Verwenden von alternativen Meldungszuordnungen können Sie die Meldungen aus mehreren Fenstern in einer Zuordnung bearbeiten.  Beachten Sie das standardmäßig, `CWindowImpl` verwendet keine alternative Meldungszuordnungen.  Um diese Unterstützung hinzuzufügen, überschreiben Sie die `WindowProc`\-Methode im `CWindowImpl` von abgeleitete Klasse und rufen Sie `ProcessWindowMessage` mit dem Meldungszuordnungsbezeichner auf.  
-  
-## Siehe auch  
- [Implementing a Window](../atl/implementing-a-window.md)

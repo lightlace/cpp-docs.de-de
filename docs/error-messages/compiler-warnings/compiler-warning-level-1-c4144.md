@@ -1,32 +1,30 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4144 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4144"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4144"
+title: Compilerwarnung (Stufe 1) C4144 generiert | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4144
+dev_langs: C++
+helpviewer_keywords: C4144
 ms.assetid: a37b445d-dbc6-43b4-8d95-ffd0e4225464
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d34c260d04549bf6ab40863e262c79b53a2480ec
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Compilerwarnung (Stufe 1) C4144
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-1-c4144"></a>Compilerwarnung (Stufe 1) C4144 generiert
 'Ausdruck': Relationaler Ausdruck als Schalterausdruck  
   
- Der angegebene relationale Ausdruck wurde als steuernder Ausdruck einer [switch](../../cpp/switch-statement-cpp.md)\-Anweisung verwendet.  Die verknüpften **case**\-Anweisungen erhalten boolesche Werte.  Im folgenden Beispiel wird C4144 generiert:  
+ Der angegebene relationale Ausdruck wurde als steuernder Ausdruck verwendet eine [wechseln](../../cpp/switch-statement-cpp.md) Anweisung. Die zugehörigen Case-Anweisungen werden boolesche Werte angeboten. Im folgende Beispiel wird C4144 generiert:  
   
 ```  
 // C4144.cpp  

@@ -1,45 +1,43 @@
 ---
-title: "stack::assign (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::assign"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "assign-Member [STL/CLR]"
+title: Stack::Assign (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::assign
+dev_langs: C++
+helpviewer_keywords: assign member [STL/CLR]
 ms.assetid: 18cc35ad-23cf-4a5a-adae-d967dc5d6980
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 11214550141cc32c589ef090c48775390bc26627
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# stack::assign (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="stackassign-stlclr"></a>stack::assign (STL/CLR)
 Ersetzt alle Elemente.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void assign(stack<Value, Container>% right);  
 ```  
   
-#### Parameter  
- right  
- Einzufügen Containeradapter.  
+#### <a name="parameters"></a>Parameter  
+ Rechts  
+ Containeradapter eingefügt.  
   
-## Hinweise  
- Die Memberfunktion `right` weist `.get_container()` am zugrunde liegenden Container zu.  Sie verwenden sie, um den gesamten Inhalt des Stapels zu ändern.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion weist `right.get_container()` auf den zugrunde liegenden Container. Sie können damit ändern Sie den gesamten Inhalt des Stapels.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_stack_assign.cpp   
@@ -70,13 +68,16 @@ int main()
   
 ```  
   
-  **ein b c**  
- **ein b c**   
-## Anforderungen  
- **Header:** \<cliext\/Stapel\>  
+```Output  
+a b c  
+a b c  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Stack >  
   
-## Siehe auch  
- [Stapel](../dotnet/stack-stl-clr.md)   
- [stack::operator\=](../dotnet/stack-operator-assign-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Stack (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [stack::operator= (STL/CLR)](../dotnet/stack-operator-assign-stl-clr.md)

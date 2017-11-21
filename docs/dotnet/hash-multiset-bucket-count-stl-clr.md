@@ -1,41 +1,39 @@
 ---
-title: "hash_multiset::bucket_count (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::bucket_count"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bucket_count-Member [STL/CLR]"
+title: hash_multiset::bucket_count (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::bucket_count
+dev_langs: C++
+helpviewer_keywords: bucket_count member [STL/CLR]
 ms.assetid: 18abcdab-ee50-4bb8-88f8-d3cbea9d0fd9
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 94a4bf460f00d9ea011cb3cbb0c86e2840f5f561
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multiset::bucket_count (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Zählt die Anzahl Buckets.  
+# <a name="hashmultisetbucketcount-stlclr"></a>hash_multiset::bucket_count (STL/CLR)
+Zählt die Anzahl der Buckets an.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 int bucket_count();  
 ```  
   
-## Hinweise  
- Die Memberfunktionen gibt die aktuelle Anzahl aus Buckets zurück.  Sie verwenden sie, um die Größe der Hashtabelle zu bestimmen.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktionen gibt die aktuelle Anzahl von Buckets zurück. Sie können damit um die Größe der Hashtabelle zu bestimmen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_hash_multiset_bucket_count.cpp   
@@ -81,22 +79,27 @@ int main()
   
 ```  
   
-  **ein b c**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0,1875**  
-**max\_load\_factor\(\) \= 4**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0,1875**  
-**max\_load\_factor\(\) \= 0,25**  
-**bucket\_count\(\) \= 128**  
-**load\_factor\(\) \= 0,0234375**  
-**max\_load\_factor\(\) \= 0,25**   
-## Anforderungen  
- **Header:** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 4  
   
- **Namespace:** cliext  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 0.25  
   
-## Siehe auch  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::load\_factor](../dotnet/hash-multiset-load-factor-stl-clr.md)   
- [hash\_multiset::max\_load\_factor](../dotnet/hash-multiset-max-load-factor-stl-clr.md)
+bucket_count() = 128  
+load_factor() = 0.0234375  
+max_load_factor() = 0.25  
+```  
+  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext Hash_set/>  
+  
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [hash_multiset-Element (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset::load_factor (STL/CLR)](../dotnet/hash-multiset-load-factor-stl-clr.md)   
+ [hash_multiset::max_load_factor (STL/CLR)](../dotnet/hash-multiset-max-load-factor-stl-clr.md)

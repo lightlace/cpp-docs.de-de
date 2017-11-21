@@ -1,37 +1,36 @@
 ---
-title: "Einlesen von Zeichenfolgen in den OLE&#160;DB-Anbieter | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB-Anbieter, Einlesen von Zeichenfolgen in"
+title: Einlesen von Zeichenfolgen in den OLE DB-Anbieter | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: OLE DB providers, reading strings into
 ms.assetid: 517f322c-f37e-4eed-bf5e-dd9a412c2f98
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4c4c88f29cd0ad7989c079a17f66f1f48e4874a6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Einlesen von Zeichenfolgen in den OLE&#160;DB-Anbieter
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die `RMyProviderRowset::Execute`\-Funktion öffnet eine Datei und liest Zeichenfolgen ein.  Der Consumer übergibt den Dateinamen durch Aufruf von [ICommandText::SetCommandText](https://msdn.microsoft.com/en-us/library/ms709757.aspx) an den Anbieter.  Der Anbieter empfängt den Dateinamen und speichert ihn in der Membervariable `m_szCommandText`.  `Execute` liest den Dateinamen aus `m_szCommandText`.  Falls der Dateiname ungültig oder die Datei nicht verfügbar ist, gibt `Execute` einen Fehler zurück.  Andernfalls wird die Datei geöffnet und `fgets` aufgerufen, um die Zeichenfolgen abzurufen.  Für jedes gelesene Zeichenfolgenset wird von `Execute` eine Instanz des Benutzerdatensatzes \(`CAgentMan`\) erstellt und in ein Array eingefügt.  
+# <a name="reading-strings-into-the-ole-db-provider"></a>Einlesen von Zeichenfolgen in den OLE DB-Anbieter
+Die `RMyProviderRowset::Execute` -Funktion öffnet eine Datei und liest Zeichenfolgen. Der Consumer übergibt den Dateinamen an dem Anbieter durch Aufrufen von [ICommandText:: SetCommandText](https://msdn.microsoft.com/en-us/library/ms709757.aspx). Der Anbieter empfängt den Dateinamen und speichert ihn in die Membervariable `m_szCommandText`. `Execute`liest den Dateinamen aus `m_szCommandText`. Wenn der Dateiname ungültig ist oder die Datei nicht verfügbar ist, `Execute` gibt einen Fehler zurück. Andernfalls die Datei und ruft Eröffnung `fgets` Zeichenfolgen abgerufen. Für jede von Zeichenfolgen er liest, legen Sie `Execute` erstellt eine Instanz des Benutzerdatensatzes (`CAgentMan`) und platziert es in ein Array.  
   
- Falls die Datei nicht geöffnet werden kann, muss `Execute` **DB\_E\_NOTABLE** zurückgeben.  Wenn stattdessen **E\_FAIL** zurückgegeben wird, funktioniert der Anbieter nicht mit zahlreichen Consumern und besteht die OLE DB\-[Konformitätstests](../../data/oledb/testing-your-provider.md) nicht.  
+ Wenn die Datei kann nicht geöffnet werden, `Execute` muss zurückgeben **DB_E_NOTABLE**. Wenn zurückgegeben **E_FAIL** stattdessen der Anbieter funktioniert nicht mit zahlreichen Consumern und OLE DB wird nicht erfolgreich [Konformitätstests](../../data/oledb/testing-your-provider.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### **Beschreibung**  
- Die bearbeitete `Execute`\-Funktion sieht wie folgt aus:  
+### <a name="description"></a>Beschreibung  
+ Die bearbeitete `Execute` Funktion sieht wie folgt aus:  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 /////////////////////////////////////////////////////////////////////////  
@@ -105,5 +104,5 @@ public:
 }  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Implementieren des einfachen schreibgeschützten Anbieters](../../data/oledb/implementing-the-simple-read-only-provider.md)

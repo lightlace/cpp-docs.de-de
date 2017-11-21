@@ -1,42 +1,40 @@
 ---
-title: "hash_set::hasher (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::hasher"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "hasher-Member [STL/CLR]"
+title: hash_set::Hasher (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::hasher
+dev_langs: C++
+helpviewer_keywords: hasher member [STL/CLR]
 ms.assetid: 0fafd645-0bdf-4d4c-8630-c536fbc4bd2c
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4d45803a1c91f1de3bd8c95ce575a5bf199c98b1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::hasher (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Der Hashverfahrensdelegat für einen Schlüssel.  
+# <a name="hashsethasher-stlclr"></a>hash_set::hasher (STL/CLR)
+Der Hashalgorithmus Delegat für einen Schlüssel.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 Microsoft::VisualC::StlClr::UnaryDelegate<GKey, int>  
     hasher;  
 ```  
   
-## Hinweise  
- Der Typ beschreibt einen Delegaten, die einen Schlüsselwert in eine ganze Zahl konvertiert.  
+## <a name="remarks"></a>Hinweise  
+ Der Typ beschreibt ein Delegat, der einen Schlüssel-Wert in eine ganze Zahl konvertiert.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_hash_set_hasher.cpp   
@@ -56,13 +54,16 @@ int main()
   
 ```  
   
-  **Hash \(L'a\) \= 1616896120**  
-**Hash \(L'b\) \= 570892832**   
-## Anforderungen  
- **Header:** \<cliext\/hash\_set\>  
+```Output  
+hash(L'a') = 1616896120  
+hash(L'b') = 570892832  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext Hash_set/>  
   
-## Siehe auch  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::hash\_delegate](../dotnet/hash-set-hash-delegate-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set::hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md)

@@ -1,32 +1,30 @@
 ---
-title: "set::set (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::set"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "set-Member [STL/CLR]"
+title: 'Set:: Set (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::set
+dev_langs: C++
+helpviewer_keywords: set member [STL/CLR]
 ms.assetid: 0cce8501-92ed-431c-b711-14e0b7be7375
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 231cc5874ff442d8a7ef8041ab32b656856c9cdc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# set::set (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Erstellt ein container\-Objekt.  
+# <a name="setset-stlclr"></a>set::set (STL/CLR)
+Erstellt ein container-Objekt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 set();  
@@ -43,79 +41,71 @@ set(System::Collections::Generic::IEnumerable<GValue>^ right,
     key_compare^ pred);  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  first  
- Anfang Einfügen des Bereichs.  
+ Anfang des Bereichs, der eingefügt.  
   
  last  
- Ende Einfügen des Bereichs.  
+ Das Ende des Bereichs einfügen.  
   
  pred  
- Reihenfolgenprädikat für die gesteuerte Sequenz.  
+ Sortierung Prädikat für die gesteuerte Sequenz.  
   
- right  
- Objekt oder Bereich Einfüge\-.  
+ Rechts  
+ Einzufügendes Objekt bzw. einzufügender Bereich.  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Der Konstruktor:  
   
  `set();`  
   
- initialisiert die gesteuerte Sequenz ohne Elemente, mit dem Standardreihenfolgenprädikat `key_compare()`.  Sie verwenden sie, um eine leere gesteuerten ursprünglichen Sequenz, mit dem Standardreihenfolgenprädikat anzugeben.  
+ Initialisiert die gesteuerte Sequenz keine Elemente mit der standardmäßigen Reihenfolge Prädikat `key_compare()`. Sie können damit eine leere gesteuerte Sequenz, mit der standardmäßigen Reihenfolge Prädikat angeben.  
   
  Der Konstruktor:  
   
  `explicit set(key_compare^ pred);`  
   
- initialisiert die gesteuerte Sequenz ohne Elemente, mit dem Reihenfolgenprädikat `pred`.  Sie verwenden sie, um eine leere gesteuerten ursprünglichen Sequenz, mit dem angegebenen Reihenfolgenprädikat anzugeben.  
+ Initialisiert die gesteuerte Sequenz keine Elemente, mit dem Prädikat Reihenfolge `pred`. Sie können damit eine leere gesteuerte Sequenz, mit der angegebenen Reihenfolge Prädikat angeben.  
   
  Der Konstruktor:  
   
  `set(set<Key>% right);`  
   
- initialisiert die gesteuerte Sequenz mit der Sequenz `[``right``.`[set::begin](../dotnet/set-begin-stl-clr.md)`(),` `right``.`[set::end](../dotnet/set-end-stl-clr.md)`())`, mit dem Standardreihenfolgenprädikat.  Sie verwenden sie, um einer gesteuerten ursprünglichen Sequenz, die eine Kopie der Sequenz, die erfolgen durch das angegebene Objekt `right` gesteuert wird, mit dem Standardreihenfolgenprädikat anzugeben.  
+ Initialisiert die gesteuerte Sequenz durch die Sequenz [`right.begin()`, `right.end()`), mit der standardmäßigen Reihenfolge Prädikat. Sie können damit eine gesteuerte Sequenz angeben, die eine Kopie der Sequenz, die durch das satzobjekt gesteuert wird `right`, mit der standardmäßigen Reihenfolge Prädikat.  
   
  Der Konstruktor:  
   
  `set(set<Key>^ right);`  
   
- initialisiert die gesteuerte Sequenz mit der Sequenz `[``right``->`[set::begin](../dotnet/set-begin-stl-clr.md)`(),` `right``->`[set::end](../dotnet/set-end-stl-clr.md)`())`, mit dem Standardreihenfolgenprädikat.  Sie verwenden sie, um einer gesteuerten ursprünglichen Sequenz, die eine Kopie der Sequenz, die erfolgen durch das angegebene Objekt `right` gesteuert wird, mit dem Standardreihenfolgenprädikat anzugeben.  
+ Initialisiert die gesteuerte Sequenz durch die Sequenz [`right->begin()`, `right->end()`), mit der standardmäßigen Reihenfolge Prädikat. Sie können damit eine gesteuerte Sequenz angeben, die eine Kopie der Sequenz, die durch das satzobjekt gesteuert wird `right`, mit der standardmäßigen Reihenfolge Prädikat.  
   
  Der Konstruktor:  
   
- `template<typename InIter>`  
+ `template<typename InIter> set(InIter first, InIter last);`  
   
- `set(InIter first, InIter last);`  
-  
- initialisiert die gesteuerte Sequenz mit der Sequenz `[``first``,` `last``)`, mit dem Standardreihenfolgenprädikat.  Sie verwenden sie, um die gesteuerte Sequenz eine Kopie einer anderen Sequenz, mit dem Standardreihenfolgenprädikat zu erstellen.  
+ Initialisiert die gesteuerte Sequenz durch die Sequenz [`first`, `last`), mit der standardmäßigen Reihenfolge Prädikat. Sie können damit der kontrollierten Sequenz eine Kopie einer anderen Sequenz mit der standardmäßigen Reihenfolge Prädikat erstellen.  
   
  Der Konstruktor:  
   
- `template<typename InIter>`  
+ `template<typename InIter> set(InIter first, InIter last, key_compare^ pred);`  
   
- `set(InIter first, InIter last,`  
-  
- `key_compare^ pred);`  
-  
- initialisiert die gesteuerte Sequenz mit der Sequenz `[``first``,` `last``)`, mit dem Reihenfolgenprädikat `pred`.  Sie verwenden sie, um die gesteuerte Sequenz eine Kopie einer anderen Sequenz, mit dem angegebenen Reihenfolgenprädikat zu erstellen.  
+ Initialisiert die gesteuerte Sequenz durch die Sequenz [`first`, `last`), mit dem Prädikat Reihenfolge `pred`. Sie können damit der gesteuerten Sequenz eine Kopie einer anderen Sequenz, mit dem angegebenen Reihenfolge Prädikat erstellen.  
   
  Der Konstruktor:  
   
  `set(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- initialisiert die gesteuerte Sequenz mit der Folge, die der Enumerator `right`, mit dem Standardreihenfolgenprädikat festgelegt wird.  Sie verwenden sie, um die gesteuerte Sequenz eine Kopie einer anderen Sequenz erstellen, die von ein Enumerator, mit dem Standardreihenfolgenprädikat beschrieben wird.  
+ Initialisiert die gesteuerte Sequenz durch die Sequenz, die vom Enumerator festgelegte `right`, mit der standardmäßigen Reihenfolge Prädikat. Sie mit ihrer Hilfe der gesteuerten Sequenz eine Kopie einer anderen Sequenz, die durch ein Enumerator, mit der standardmäßigen Reihenfolge Prädikat beschrieben.  
   
  Der Konstruktor:  
   
- `set(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ `set(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- `key_compare^ pred);`  
+ Initialisiert die gesteuerte Sequenz durch die Sequenz, die vom Enumerator festgelegte `right`, mit dem Prädikat Reihenfolge `pred`. Sie mit ihrer Hilfe der gesteuerten Sequenz eine Kopie einer anderen Sequenz, die durch ein Enumerator, mit dem angegebenen Reihenfolge Prädikat beschrieben.  
   
- initialisiert die gesteuerte Sequenz mit der Folge, die der Enumerator `right`, mit dem Reihenfolgenprädikat `pred` festgelegt wird.  Sie verwenden sie, um die gesteuerte Sequenz eine Kopie einer anderen Sequenz erstellen, die von ein Enumerator, mit dem angegebenen Reihenfolgenprädikat beschrieben wird.  
+## <a name="example"></a>Beispiel  
   
-## Beispiel  
-  
-```  
+```cpp  
 // cliext_set_construct.cpp   
 // compile with: /clr   
 #include <cliext/set>   
@@ -187,22 +177,25 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **ein b c**  
-**size\(\) \= 0**  
- **c a b**  
- **ein b c**  
- **c a b**  
- **ein b c**  
- **c a b**  
- **c a b**  
- **ein b c**   
-## Anforderungen  
- **Header:** \<cliext\/Satz\>  
+```Output  
+size() = 0  
+ a b c  
+size() = 0  
+ c b a  
+ a b c  
+ c b a  
+ a b c  
+ c b a  
+ c b a  
+ a b c  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Set >  
   
-## Siehe auch  
- [set](../dotnet/set-stl-clr.md)   
- [set::generic\_container](../dotnet/set-generic-container-stl-clr.md)   
- [set::operator\=](../dotnet/set-operator-assign-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Legen Sie (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [Set::generic_container (STL/CLR)](../dotnet/set-generic-container-stl-clr.md)   
+ [set::operator= (STL/CLR)](../dotnet/set-operator-assign-stl-clr.md)

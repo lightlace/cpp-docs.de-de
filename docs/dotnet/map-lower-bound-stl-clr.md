@@ -1,45 +1,43 @@
 ---
-title: "map::lower_bound (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::lower_bound"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lower_bound-Member [STL/CLR]"
+title: 'Map:: lower_bound (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::lower_bound
+dev_langs: C++
+helpviewer_keywords: lower_bound member [STL/CLR]
 ms.assetid: 959651a0-f949-4cc1-859b-248b6930f16c
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5cd5c26d2e2dfc206c04f26e219df7dd91609e29
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# map::lower_bound (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Sucht Anfang des Bereichs, der einen angegebenen Schlüssel entspricht.  
+# <a name="maplowerbound-stlclr"></a>map::lower_bound (STL/CLR)
+Sucht den Anfang des Bereichs, die einem angegebenen Schlüssel entspricht.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 iterator lower_bound(key_type key);  
 ```  
   
-#### Parameter  
- Schlüssel  
- Für zu suchen Schlüsselwert.  
+#### <a name="parameters"></a>Parameter  
+ Key  
+ Der zu suchende Schlüsselwert.  
   
-## Hinweise  
- Die Memberfunktion bestimmt das erste Element in der Sequenz `X` gesteuerten, die entsprechenden Reihenfolge zu `key`.  Wenn kein solches Element vorhanden ist, gibt das [map::end](../dotnet/map-end-stl-clr.md)`()` zurück; Andernfalls gibt es ein Iterator zurück, der `X` festlegt.  Sie verwenden ihn, um den Beginn einer Sequenz der Elemente in der Sequenz gesteuerten einfach zu finden, das einen angegebenen Schlüssel übereinstimmen.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion bestimmt das erste Element `X` in der kontrollierten Sequenz, die Sortierung `key`. Wenn kein solches Element vorhanden ist, gibt es [Map:: End (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`; andernfalls wird einen Iterator, `X`. Sie können damit derzeit suchen den Anfang einer Sequenz von Elementen in der kontrollierten Sequenz, die einen angegebenen Schlüssel entsprechen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_map_lower_bound.cpp   
@@ -73,18 +71,21 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[bc 3\]**  
-**lower\_bound\(L'x'\)\=\=end\(\) \= True**  
-**\*lower\_bound \(L'a\) \= \[1\]**  
-**\*lower\_bound \(L'b\) \= \[b 2\]**   
-## Anforderungen  
- **Header:** \<cliext\/Zuordnung\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+lower_bound(L'x')==end() = True  
+*lower_bound(L'a') = [a 1]  
+*lower_bound(L'b') = [b 2]  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Map >  
   
-## Siehe auch  
- [map](../dotnet/map-stl-clr.md)   
- [map::count](../dotnet/map-count-stl-clr.md)   
- [map::equal\_range](../dotnet/map-equal-range-stl-clr.md)   
- [map::find](../dotnet/map-find-stl-clr.md)   
- [map::upper\_bound](../dotnet/map-upper-bound-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Karte (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [Map:: Count (STL/CLR)](../dotnet/map-count-stl-clr.md)   
+ [Map:: equal_range (STL/CLR)](../dotnet/map-equal-range-stl-clr.md)   
+ [Map:: Find (STL/CLR)](../dotnet/map-find-stl-clr.md)   
+ [map::upper_bound (STL/CLR)](../dotnet/map-upper-bound-stl-clr.md)

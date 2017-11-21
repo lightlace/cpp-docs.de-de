@@ -1,55 +1,54 @@
 ---
-title: "CDataConnection::CDataConnection | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDataConnection.CDataConnection"
-  - "ATL.CDataConnection.CDataConnection"
-  - "CDataConnection::CDataConnection"
-  - "ATL::CDataConnection::CDataConnection"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDataConnection-Klasse, Konstruktor"
+title: 'CDataConnection:: CDataConnection | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDataConnection.CDataConnection
+- ATL.CDataConnection.CDataConnection
+- CDataConnection::CDataConnection
+- ATL::CDataConnection::CDataConnection
+dev_langs: C++
+helpviewer_keywords: CDataConnection class, constructor
 ms.assetid: ac25c9a0-44d3-4083-b13f-76c07772e12d
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e92019f3f49257e297bddb2f717cf416da62a3bc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# CDataConnection::CDataConnection
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Instanziiert und initialisiert ein `CDataConnection`\-Objekt.  
+# <a name="cdataconnectioncdataconnection"></a>CDataConnection::CDataConnection
+Instanziiert und initialisiert ein `CDataConnection` Objekt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
-      CDataConnection();   
+      CDataConnection();   
 CDataConnection(  
    const CDataConnection &ds  
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `ds`  
- \[in\] Einen Verweis auf eine Verbindung der vorhandenen Daten.  
+ [in] Ein Verweis auf eine vorhandene Datenverbindung.  
   
-## Hinweise  
- Die erste Überschreibung erstellt ein neues `CDataConnection`\-Objekt mit Standardeinstellungen.  
+## <a name="remarks"></a>Hinweise  
+ Die erste Außerkraftsetzung erstellt ein neues `CDataConnection` Objekt mit den Standardeinstellungen.  
   
- Die zweiten Überschreiben erstellt ein neues `CDataConnection`\-Objekt mit den Einstellungen, die z Datenverbindungsobjekt entsprechen, das Sie angeben.  
+ Die zweite Außerkraftsetzung erstellt ein neues `CDataConnection` Objekt mit Einstellungen entspricht dem Datenverbindungsobjekt, die Sie angeben.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  
   
-## Siehe auch  
- [CDataConnection\-Klasse](../../data/oledb/cdataconnection-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [CDataConnection-Klasse](../../data/oledb/cdataconnection-class.md)

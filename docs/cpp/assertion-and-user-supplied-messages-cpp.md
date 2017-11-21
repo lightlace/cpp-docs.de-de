@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - user-supplied messages [C++], run time
 - user-supplied messages [C++], preprocessor time
 - '#error%2C assert%2C static_assert [C++]'
 - user-supplied messages [C++], compile time
 ms.assetid: ebf7d885-61c8-4233-b0ae-1c9a38e0f385
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: def12cc22267d2cc25be790b7e6e6eebd4c46479
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 8f6b6b39220f49339faccb4ea6608a0df5fdf6ba
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="assertion-and-user-supplied-messages-c"></a>Assertion und benutzerdefinierte Meldungen (C++)
 Die C++-Sprache unterstützt drei Fehlerbehandlungsmechanismen, mit denen Sie Ihre Anwendung debuggen: die [#error-Direktive](../preprocessor/hash-error-directive-c-cpp.md), [Static_assert](../cpp/static-assert.md) -Schlüsselwort, und die [assert-Makro, _assert, _ Wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) Makro. Alle drei Mechanismen geben Fehlermeldungen aus, zwei testen auch Softwareassertionen. Eine Softwareassertion gibt eine Bedingung an, die an einer bestimmten Stelle im Programm "true" sein muss. Wenn bei einer Assertion zur Kompilierzeit ein Fehler auftritt, gibt der Compiler eine Diagnosemeldung und einen Kompilierungsfehler aus. Wenn bei einer Assertion zur Laufzeit ein Fehler auftritt, gibt das Betriebssystem eine Diagnosemeldung aus und schließt Ihre Anwendung.  

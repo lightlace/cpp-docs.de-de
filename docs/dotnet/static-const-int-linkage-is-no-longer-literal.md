@@ -1,32 +1,32 @@
 ---
-title: "Die Bindung von static&#160;const&#160;int-Membern ist nicht mehr literal | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Konstanten, Deklarieren"
-  - "Integralkonstanten-Ausdrücke"
-  - "Literalattribut [C++]"
+title: "Static Const Int-Verknüpfung ist nicht mehr Literal | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- literal attribute [C++]
+- constants, declaring
+- integral constant expressions
 ms.assetid: d2a5e3d2-ffb0-4b61-8114-bec5993a1195
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d2d4e955df4982ba2077098adc7bd47506b42239
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Die Bindung von static&#160;const&#160;int-Membern ist nicht mehr literal
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die Deklaration eines konstanten Members einer Klasse hat sich in [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] gegenüber Managed Extensions for C\+\+ geändert.  
+# <a name="static-const-int-linkage-is-no-longer-literal"></a>Die Bindung von static const int-Membern ist nicht mehr literal
+Die Deklaration eines Konstanten Members einer Klasse wurde von Managed Extensions für C++ in Visual C++ geändert.  
   
- Zwar werden ganzzahlige `static const`\-Member weiterhin unterstützt, jedoch hat sich ihr Bindungsattribut geändert.  Ihr früheres Bindungsattribut ist jetzt Teil eines literalen, ganzzahligen Members.  Betrachten Sie z. B. die folgende Managed Extensions\-Klasse:  
+ Obwohl `static const` ganzzahligen Elemente werden weiterhin unterstützt, deren Verknüpfung-Attribut hat sich geändert. Die vorherige Verknüpfung-Attribut wird jetzt in einem Zeichenfolgenliteral ganzzahligen Member übertragen. Betrachten Sie beispielsweise die folgende Klasse von Managed Extensions:  
   
 ```  
 public __gc class Constants {  
@@ -35,37 +35,37 @@ public:
 };  
 ```  
   
- Damit werden die folgenden zugrunde liegenden CIL\-Attribute für das Feld generiert \(beachten Sie das literale Attribut\):  
+ Die folgenden zugrunde liegenden CIL-Attribute für das Feld (Beachten Sie das literale Attribut) generiert:  
   
 ```  
 .field public static literal int32   
 modopt([Microsoft.VisualC]Microsoft.VisualC.IsConstModifier) STANDARD_CLIENT_PRX = int32(0x00000004)  
 ```  
   
- Dagegen wird folgende Klasse unter der neuen Syntax immer noch kompiliert:  
+ Während dies immer noch in der neuen Syntax kompiliert:  
   
 ```  
 public ref class Constants {  
 public:  
-   static const int LOG_DEBUG = 4;  
+   static const int LOG_DEBUG = 4;  
 };  
 ```  
   
- Das literale Attribut wird nicht mehr ausgegeben und deshalb von der CLR\-Laufzeit auch nicht als Konstante behandelt:  
+ Es gibt nicht mehr das literale Attribut, und daher nicht angezeigt wird als Konstante durch die CLR-Laufzeit:  
   
 ```  
 .field public static int32 modopt([Microsoft.VisualC]Microsoft.VisualC.IsConstModifier) STANDARD_CLIENT_PRX = int32(0x00000004)  
 ```  
   
- Um das gleiche, sprachenübergreifende literale Attribut zu erhalten, müssen Sie die Deklaration in den neu unterstützten `literal`\-Datenmember ändern:  
+ Um das gleiche literal zwischen Language-Attribut verfügen, sollte die Deklaration geändert werden, die neu unterstützten `literal` Datenmember wie folgt,  
   
 ```  
 public ref class Constants {  
 public:  
-   literal int LOG_DEBUG = 4;  
+   literal int LOG_DEBUG = 4;  
 };  
 ```  
   
-## Siehe auch  
- [Memberdeklarationen innerhalb einer Klasse oder Schnittstelle \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
- [literal](../windows/literal-cpp-component-extensions.md)
+## <a name="see-also"></a>Siehe auch  
+ [Memberdeklarationen innerhalb einer Klasse oder Schnittstelle (C + c++ / CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
+ [Zeichenfolgenliterale](../windows/literal-cpp-component-extensions.md)

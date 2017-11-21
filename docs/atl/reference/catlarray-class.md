@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,7 +13,6 @@ f1_keywords:
 - ATLCOLL/ATL::Add
 - ATLCOLL/ATL::Append
 - ATLCOLL/ATL::AssertValid
-- ATLCOLL/ATL::CAtlArray
 - ATLCOLL/ATL::Copy
 - ATLCOLL/ATL::FreeExtra
 - ATLCOLL/ATL::GetAt
@@ -30,35 +28,18 @@ f1_keywords:
 - ATLCOLL/ATL::SetCount
 - ATLCOLL/ATL::INARGTYPE
 - ATLCOLL/ATL::OUTARGTYPE
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAtlArray class
+dev_langs: C++
+helpviewer_keywords: CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: c81ee3121ffbb9d89374afd4e09a3a6044c4b70b
-ms.contentlocale: de-de
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: b9f00bf8b1daac38a20b92e70a57570ad0681155
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="catlarray-class"></a>CAtlArray-Klasse
 Diese Klasse implementiert ein Arrayobjekt.  
@@ -106,7 +87,7 @@ class CAtlArray
   
 |||  
 |-|-|  
-|[[]-Operator](#operator_at)|Rufen Sie diesen Operator, um einen Verweis auf ein Element im Array zurückzugeben.|  
+|[Operator &#91; &#93;](#operator_at)|Rufen Sie diesen Operator, um einen Verweis auf ein Element im Array zurückzugeben.|  
 
   
 ### <a name="typedefs"></a>TypeDefs  
@@ -147,7 +128,7 @@ size_t Add();
  Das neue Element wird bis zum Ende des Arrays hinzugefügt. Wenn kein Element angegeben wird, ein leeres Element hinzugefügt wird; das Array wird, also Größe erhöht, als wäre eine echte Element hinzugefügt wurde. Wenn der Vorgang fehlschlägt, ["atlthrow"](debugging-and-error-reporting-global-functions.md#atlthrow) mit dem Argument E_OUTOFMEMORY aufgerufen wird.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities Nr. 1](../../atl/codesnippet/cpp/catlarray-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#1](../../atl/codesnippet/cpp/catlarray-class_1.cpp)]  
   
 ##  <a name="append"></a>CAtlArray::Append  
  Rufen Sie diese Methode, um den Inhalt eines Arrays an das Ende einer anderen hinzufügen.  
@@ -171,7 +152,7 @@ size_t Append(const CAtlArray<E, ETraits>& aSrc);
  Debug-Builds werden ein ATLASSERT ausgelöst, wenn die `CAtlArray` Argument ist ein gültiges Array oder, wenn `aSrc` bezieht sich auf das gleiche Objekt. Ungültige Argumente für die möglicherweise in Releasebuilds zu unvorhersehbarem Verhalten führen.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities #2](../../atl/codesnippet/cpp/catlarray-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#2](../../atl/codesnippet/cpp/catlarray-class_2.cpp)]  
   
 ##  <a name="assertvalid"></a>CAtlArray::AssertValid  
  Rufen Sie diese Methode, um sicherzustellen, dass das Arrayobjekt gültig ist.  
@@ -184,7 +165,7 @@ void AssertValid() const;
  Wenn das Arrayobjekt nicht gültig ist, ist `ATLASSERT` löst eine Assertion. Diese Methode ist nur verfügbar, wenn _DEBUG definiert ist.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities Nr. 3](../../atl/codesnippet/cpp/catlarray-class_3.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#3](../../atl/codesnippet/cpp/catlarray-class_3.cpp)]  
   
 ##  <a name="catlarray"></a>CAtlArray::CAtlArray  
  Der Konstruktor.  
@@ -197,7 +178,7 @@ CAtlArray() throw();
  Initialisiert das Arrayobjekt.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities #4](../../atl/codesnippet/cpp/catlarray-class_4.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#4](../../atl/codesnippet/cpp/catlarray-class_4.cpp)]  
   
 ##  <a name="dtor"></a>CAtlArray:: ~ CAtlArray  
  Der Destruktor.  
@@ -231,7 +212,7 @@ void Copy(const CAtlArray<E, ETraits>& aSrc);
 > `CAtlArray::Copy`unterstützt Arrays mit erstellten Elemente besteht nicht die [CAutoPtr](../../atl/reference/cautoptr-class.md) Klasse.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities Nr. 5](../../atl/codesnippet/cpp/catlarray-class_5.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#5](../../atl/codesnippet/cpp/catlarray-class_5.cpp)]  
   
 ##  <a name="freeextra"></a>CAtlArray::FreeExtra  
  Rufen Sie diese Methode, um eine beliebige leere Elemente aus dem Array entfernt.  
@@ -264,7 +245,7 @@ E& GetAt(size_t iElement) throw();
  Debug-Builds werden ein ATLASSERT ausgelöst, wenn `iElement` überschreitet die Anzahl der Elemente im Array. In Releasebuilds möglicherweise ein ungültiges Argument zu unvorhersehbarem Verhalten führen.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities 6](../../atl/codesnippet/cpp/catlarray-class_6.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#6](../../atl/codesnippet/cpp/catlarray-class_6.cpp)]  
   
 ##  <a name="getcount"></a>CAtlArray::GetCount  
  Rufen Sie diese Methode, um die Anzahl der Elemente im Array gespeicherten zurück.  
@@ -294,7 +275,7 @@ const E* GetData() const throw();
  Gibt einen Zeiger auf die Speicheradresse, speichern das erste Element im Array an. Wenn keine Elemente verfügbar sind, wird NULL zurückgegeben.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities #7](../../atl/codesnippet/cpp/catlarray-class_7.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#7](../../atl/codesnippet/cpp/catlarray-class_7.cpp)]  
   
 ##  <a name="inargtype"></a>CAtlArray::INARGTYPE  
  Der Datentyp zum Hinzufügen von Elementen auf das Array verwendet werden soll.  
@@ -326,7 +307,7 @@ void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 > `CAtlArray::InsertArrayAt`unterstützt Arrays mit erstellten Elemente besteht nicht die [CAutoPtr](../../atl/reference/cautoptr-class.md) Klasse.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities #8](../../atl/codesnippet/cpp/catlarray-class_8.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#8](../../atl/codesnippet/cpp/catlarray-class_8.cpp)]  
   
 ##  <a name="insertat"></a>CAtlArray::InsertAt  
  Rufen Sie diese Methode zum Einfügen eines neuen Elements (oder mehrere Kopien eines Elements), in das Arrayobjekt.  
@@ -351,7 +332,7 @@ void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
  Debug-Builds werden ein ATLASSERT ausgelöst, wenn die `CAtlArray` Objekt ist ungültig, die Anzahl der Elemente hinzugefügt werden, ist 0 (null) oder die kombinierte Anzahl von Elementen ist zu groß für das Array enthält. In Verkaufsversionen möglicherweise ungültige Parameter übergeben zu unvorhersehbaren Ergebnissen führen.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities 9](../../atl/codesnippet/cpp/catlarray-class_9.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#9](../../atl/codesnippet/cpp/catlarray-class_9.cpp)]  
   
 ##  <a name="isempty"></a>CAtlArray::IsEmpty  
  Rufen Sie diese Methode zu testen, ob das Array leer ist.  
@@ -367,7 +348,7 @@ bool IsEmpty() const throw();
  Das Array gilt als leer, wenn es keine Elemente enthält. Auch wenn das Array leer Elemente enthält, ist es daher nicht leer.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities #10](../../atl/codesnippet/cpp/catlarray-class_10.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#10](../../atl/codesnippet/cpp/catlarray-class_10.cpp)]  
   
 ##  <a name="operator_at"></a>CAtlArray::operator]  
  Rufen Sie diesen Operator, um einen Verweis auf ein Element im Array zurückzugeben.  
@@ -431,7 +412,7 @@ void RemoveAt(size_t iElement, size_t nCount = 1);
  Debug-Builds werden ein ATLASSERT ausgelöst, wenn die `CAtlArray` -Objekt ist ungültig, oder wenn die kombinierte Summe `iElement` und `nCount` überschreitet die Gesamtanzahl der Elemente im Array. In Verkaufsversionen möglicherweise ungültige Parameter zu unvorhersehbaren Ergebnissen führen.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities Nr. 11](../../atl/codesnippet/cpp/catlarray-class_11.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#11](../../atl/codesnippet/cpp/catlarray-class_11.cpp)]  
   
 ##  <a name="setat"></a>CAtlArray::SetAt  
  Rufen Sie diese Methode, um den Wert eines Elements in der Array-Objekt festlegen.  
@@ -496,7 +477,7 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
  Ersetzt den Wert des Elements vom Index verweist. Wenn `iElement` ist größer als die aktuelle Größe des Arrays, das Array wird automatisch erhöht mithilfe eines Aufrufs [CAtlArray::SetCount](#setcount). Debug-Builds werden ein ATLASSERT ausgelöst, wenn die `CAtlArray` -Objekt ist ungültig. In Verkaufsversionen möglicherweise ungültige Parameter zu unvorhersehbaren Ergebnissen führen.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities #12](../../atl/codesnippet/cpp/catlarray-class_12.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#12](../../atl/codesnippet/cpp/catlarray-class_12.cpp)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [MMXSwarm-Beispiel](../../visual-cpp-samples.md)   
@@ -505,4 +486,3 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
  [Laufschriften-Beispiel](../../visual-cpp-samples.md)   
  [CArray-Klasse](../../mfc/reference/carray-class.md)   
  [Klassenübersicht](../../atl/atl-class-overview.md)
-

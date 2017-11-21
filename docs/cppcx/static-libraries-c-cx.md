@@ -1,42 +1,46 @@
 ---
-title: "Statische Bibliotheken (C++/CX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/03/2017"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Statische Bibliotheken (C + c++ / CX) | Microsoft Docs
+ms.custom: 
+ms.date: 02/03/2017
+ms.prod: windows-client-threshold
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7faf53c8-fa21-42cc-8246-d32533ef9dfa
-caps.latest.revision: 10
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 5f86d24c693cfcd5eecf8b37f0e4567c9c7af3a0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Statische Bibliotheken (C++/CX)
-Eine statische Bibliothek, die in einer [!INCLUDE[win8_appname_long](../cppcx/includes/win8-appname-long-md.md)]\-App verwendet wird, kann C\+\+\-Code im ISO\-Standard inklusive STL\-Typen und außerdem Aufrufe für Win32\-APIs enthalten, die nicht nicht von der Plattform der [!INCLUDE[win8_appname_long](../cppcx/includes/win8-appname-long-md.md)]\-App ausgeschlossen sind. Eine statische Bibliothek nutzt [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]\-Komponenten und erstellt möglicherweise [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]\-Komponenten mit bestimmten Einschränkungen.  
+# <a name="static-libraries-ccx"></a>Statische Bibliotheken (C++/CX)
+Eine statische Bibliothek, die in einer universellen Windows-Plattform-app verwendet wird, kann ISO-Standard C++-Code, einschließlich der STL-Typen und außerdem Aufrufe für Win32-APIs, die nicht von der universellen Windows-Plattform-app-Plattform ausgeschlossen sind enthalten. Eine statische Bibliothek nutzt Windows-Runtime-Komponenten und kann Windows-Runtime-Komponenten mit bestimmten Einschränkungen erstellen.  
   
-## Erstellen von statischen Bibliotheken  
+## <a name="creating-static-libraries"></a>Erstellen von statischen Bibliotheken  
   
-#### So erstellen Sie eine statische Bibliothek zur Verwendung in einer [!INCLUDE[win8_appname_long](../cppcx/includes/win8-appname-long-md.md)]\-App  
+#### <a name="to-create-a-static-library-for-use-in-a-universal-windows-platform-app"></a>So erstellen Sie eine statische Bibliothek zur Verwendung in einer universellen Windows-Plattform-app  
   
-1.  Wählen Sie in der Menüleiste **Datei** \> **Neu** \> **Projekt** \> **Leere statische Bibliothek** für [!INCLUDE[win8_appname_long](../cppcx/includes/win8-appname-long-md.md)]\-Apps aus.  
+1.  Wählen Sie in der Menüleiste **Datei** > **neu** > **Projekt** > **leere statische Bibliothek** für universelle Windows Plattform-apps.  
   
-2.  Öffnen Sie im **Projektmappen\-Explorer** das Kontextmenü für das Projekt, und wählen Sie **Eigenschaften** aus. Legen Sie im Dialogfeld **Eigenschaften** auf der Seite **Konfigurationseigenschaften** \> **Allgemein** die [!INCLUDE[win8_appname_long](../cppcx/includes/win8-appname-long-md.md)]\-App\-Unterstützung auf **Ja** fest.  
+2.  Öffnen Sie im **Projektmappen-Explorer**das Kontextmenü für das Projekt, und wählen Sie **Eigenschaften**aus. In der **Eigenschaften** Dialogfeld auf die **Konfigurationseigenschaften** > **allgemeine** Seite, legen Sie universelle Windows-Plattform-app-Unterstützung auf  **Ja**.  
   
-3.  Legen Sie auf der Seite **Konfigurationseigenschaften** \> **C\/C\+\+** die Option **Nutzung der**[!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]**\-Erweiterung** auf **Ja \(\/ZW\)** fest.  
+3.  Auf der **Konfigurationseigenschaften** > **C/C++-** Seite **verbrauchen** Windows-Runtime **Erweiterung** auf **Ja (/ Zw)**.  
   
- Wenn Sie beim Kompilieren einer neuen statischen Bibliothek einen Aufruf an eine Win32\-API ausführen, die für [!INCLUDE[win8_appname_long](../cppcx/includes/win8-appname-long-md.md)]\-Apps ausgeschlossen ist, löst der Compiler Fehler C3861 aus \(„Bezeichner wurde nicht gefunden“\). Informationen zur Suche nach einer alternativen Methode, die [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] unterstützt, finden Sie unter [Alternatives to Windows APIs in Windows Store apps](http://msdn.microsoft.com/de-de/75568012-61e0-41cc-a4df-c698f54f21ec).  
+ Wenn Sie eine neue statische Bibliothek kompiliert, wenn Sie einen Aufruf an eine Win32-API ausführen, die für die universelle Windows-Plattform-apps ausgeschlossen ist, löst der Compiler Fehler C3861 aus, die "Bezeichner wurde nicht gefunden." Um nach einer alternativen Methode zu suchen, die für die Windows-Runtime unterstützt wird, finden Sie unter [Alternativen zu Windows-APIs in Windows Store-apps](http://msdn.microsoft.com/en-us/75568012-61e0-41cc-a4df-c698f54f21ec).  
   
- Wenn Sie einer [!INCLUDE[win8_appname_long](../cppcx/includes/win8-appname-long-md.md)]\-App\-Projektmappe ein statisches C\+\+\-Bibliotheksprojekt hinzufügen, müssen Sie möglicherweise die Eigenschafteneinstellungen des Bibliotheksprojekts aktualisieren, damit die support\-Eigenschaft für [!INCLUDE[win8_appname_long](../cppcx/includes/win8-appname-long-md.md)] auf **Ja** festgelegt ist. Ohne diese Einstellung wird der Code aufgebaut und verknüpft, jedoch tritt ein Fehler auf, wenn Sie versuchen, die App für [!INCLUDE[win8_appstore_long](../cppcx/includes/win8-appstore-long-md.md)] zu überprüfen. Die statische Bibliothek sollte mit den gleichen Compilereinstellungen wie das Projekt kompiliert werden, in dem sie verwendet werden.  
+ Wenn Sie eine universelle Windows-Plattform-app-Projektmappe ein statisches C++-Bibliotheksprojekt hinzufügen, müssen Sie möglicherweise eigenschafteneinstellungen des Bibliotheksprojekts aktualisieren, sodass die universelle Windows-Plattform-Support-Eigenschaft, um festgelegt ist **Ja**. Ohne diese Einstellung wird der Code aufgebaut und verknüpft, jedoch tritt ein Fehler auf, wenn Sie versuchen, die App für [!INCLUDE[win8_appstore_long](../cppcx/includes/win8-appstore-long-md.md)]zu überprüfen. Die statische Bibliothek sollte mit den gleichen Compilereinstellungen wie das Projekt kompiliert werden, in dem sie verwendet werden.  
   
- Wenn Sie eine statische Bibliothek nutzen, die öffentliche `ref`\-Klassen, öffentliche Schnittstellenklassen oder öffentliche Wertklassen erstellt, gibt der Linker folgende Warnung aus:  
+ Wenn Sie eine statische Bibliothek nutzen, die öffentliche `ref` -Klassen, öffentliche Schnittstellenklassen oder öffentliche Wertklassen erstellt, gibt der Linker folgende Warnung aus:  
   
-> **warning LNK4264:** Mit \/ZW kompilierte Objektdatei wird in einer statischen Bibliothek archiviert. Beachten Sie, dass beim Erstellen von [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]\-Typen das Verknüpfen mit einer statischen Bibliothek, die [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]\-Metadaten enthält, nicht empfohlen wird.  
+> **Warnung LNK4264:** archivieren, die in einer statischen Bibliothek archiviert mit/zw kompilierte Objektdatei Beachten Sie, dass beim Erstellen von Windows-Runtime-Typen nicht empfohlen wird, mit einer statischen Bibliothek verknüpft werden, die Windows-Runtime-Metadaten enthält.  
   
- Sie können die Warnung nur gefahrlos ignorieren, wenn die statische Bibliothek keine [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]\-Komponenten erzeugt, die außerhalb der Bibliothek selbst genutzt werden. Wenn die Bibliothek keine Komponenten verwendet, die sie definiert, kann der Linker die Implementierung optimieren, obwohl die öffentlichen Metadaten die Typinformationen enthalten. Das bedeutet, dass öffentliche Komponenten in einer statischen Bibliothek kompiliert, aber nicht zur Laufzeit aktiviert werden. Aus diesem Grund muss jede [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]\-Komponente, die für die Nutzung durch andere Komponenten oder Apps vorgesehen ist, in einer DLL \(Dynamic Link Library\) implementiert werden.  
+ Sie können die Warnung sicher ignorieren, nur, wenn die statische Bibliothek nicht-Windows-Runtime-Komponenten erzeugt, die außerhalb der Bibliothek selbst genutzt werden. Wenn die Bibliothek keine Komponenten verwendet, die sie definiert, kann der Linker die Implementierung optimieren, obwohl die öffentlichen Metadaten die Typinformationen enthalten. Das bedeutet, dass öffentliche Komponenten in einer statischen Bibliothek kompiliert, aber nicht zur Laufzeit aktiviert werden. Aus diesem Grund muss jede Windows-Runtime-Komponente, die für die Nutzung vorgesehen ist, von anderen Komponenten oder apps in einer Dynamic Link Library (DLL) implementiert werden.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Threading und Marshalling](../cppcx/threading-and-marshaling-c-cx.md)

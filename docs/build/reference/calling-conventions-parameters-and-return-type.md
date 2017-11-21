@@ -1,29 +1,29 @@
 ---
-title: "Aufrufkonventionen, Parameter und R&#252;ckgabetyp | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Aufrufkonventionen, Hilfsfunktionen"
-  - "Hilfsfunktionen, Aufrufkonventionen"
-  - "Hilfsfunktionen, Rückgabetypen"
+title: "Aufrufkonventionen, Parameter und Rückgabetyp | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- calling conventions, helper functions
+- helper functions, calling conventions
+- helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: bdaf30655808d5a43f6866039cc93a3833896921
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Aufrufkonventionen, Parameter und R&#252;ckgabetyp
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="calling-conventions-parameters-and-return-type"></a>Aufrufkonventionen, Parameter und Rückgabetyp
 Die Hilfsroutine hat den folgenden Prototyp:  
   
 ```  
@@ -36,17 +36,17 @@ FARPROC WINAPI __delayLoadHelper2(
  Dabei gilt:  
   
  `pidd`  
- Ein `const`\-Zeiger zu `ImgDelayDescr` \(siehe delayimp.h\), der die Offsets verschiedener importrelevanter Daten, einen Zeitstempel für das Binden von Informationen und einen Satz von Attributen enthält, die weitere Informationen zum Inhalt des Deskriptors bereitstellen.  Derzeit gibt es nur ein Attribut, `dlattrRva`, das angibt, dass die Adressen im Deskriptor relative virtuelle Adressen sind \(im Gegensatz zu virtuellen Adressen\).  
+ Ein `const`-Zeiger zu `ImgDelayDescr` (siehe delayimp.h), der die Offsets verschiedener importrelevanter Daten, einen Zeitstempel für das Binden von Informationen und einen Satz von Attributen enthält, die weitere Informationen zum Inhalt des Deskriptors bereitstellen. Derzeit gibt es nur ein Attribut, `dlattrRva`, das angibt, dass die Adressen im Deskriptor relative virtuelle Adressen sind (im Gegensatz zu virtuellen Adressen).  
   
- Informationen zur Definition der `PCImgDelayDescr`\-Struktur finden Sie unter [Struktur\- und Konstantendefinitionen](../../build/reference/structure-and-constant-definitions.md).  
+ Für die Definition der `PCImgDelayDescr` -Struktur, finden Sie unter [Struktur- und Konstantendefinitionen](../../build/reference/structure-and-constant-definitions.md).  
   
  `ppfnIATEntry`  
- Ein Zeiger zum Slot in der mit Verzögerung geladenen Importadresstabelle \(IAT\), die mit der Adresse der importierten Funktion aktualisiert werden soll.  Die Hilfsroutine muss denselben Wert speichern, den sie an diesen Speicherort zurückgibt.  
+ Ein Zeiger zum Slot in der mit Verzögerung geladenen Importadresstabelle (IAT), die mit der Adresse der importierten Funktion aktualisiert werden soll. Die Hilfsroutine muss denselben Wert speichern, den sie an diesen Speicherort zurückgibt.  
   
-## Erwartete Rückgabewerte  
+## <a name="expected-return-values"></a>Erwartete Rückgabewerte  
  Wenn die Funktion erfolgreich ist, gibt sie die Adresse der importierten Funktion zurück.  
   
- Wenn die Funktion fehlschlägt, wird eine Ausnahme ausgelöst und 0 zurückgegeben.  Es können drei Ausnahmetypen ausgelöst werden:  
+ Wenn die Funktion fehlschlägt, wird eine Ausnahme ausgelöst und 0 zurückgegeben. Es können drei Ausnahmetypen ausgelöst werden:  
   
 -   Ein ungültiger Parameter, was passiert, wenn die Attribute in `pidd` nicht korrekt angegeben werden.  
   
@@ -56,12 +56,12 @@ FARPROC WINAPI __delayLoadHelper2(
   
  Es liegt in Ihrer Verantwortung, diese Ausnahmen zu handhaben.  
   
-## Hinweise  
- Die Aufrufkonvention für die Hilfsfunktion ist `__stdcall`.  Der Typ des Rückgabewerts ist nicht relevant, deshalb wird FARPROC verwendet.  Diese Funktion hat eine C\-Bindung.  
+## <a name="remarks"></a>Hinweise  
+ Die Aufrufkonvention für die Hilfsfunktion ist `__stdcall`. Der Typ des Rückgabewerts ist nicht relevant, deshalb wird FARPROC verwendet. Diese Funktion hat eine C-Bindung.  
   
- Der Rückgabewert für die Hilfsfunktion für das verzögerte Laden muss im übergegebenen Funktionszeigerspeicherort gespeichert werden, es sei denn, Sie möchten, dass Ihre Hilfsfunktion als Benachrichtigungshook verwendet wird.  In diesem Fall ist Ihr Code dafür verantwortlich, den entsprechenden Funktionszeiger zum Zurückgeben zu finden.  Der vom Linker generierte Thunkcode übernimmt dann diesen Rückgabewert als reales Ziel für den Importvorgang und springt direkt dorthin.  
+ Der Rückgabewert für die Hilfsfunktion für das verzögerte Laden muss im übergegebenen Funktionszeigerspeicherort gespeichert werden, es sei denn, Sie möchten, dass Ihre Hilfsfunktion als Benachrichtigungshook verwendet wird. In diesem Fall ist Ihr Code dafür verantwortlich, den entsprechenden Funktionszeiger zum Zurückgeben zu finden. Der vom Linker generierte Thunkcode übernimmt dann diesen Rückgabewert als reales Ziel für den Importvorgang und springt direkt dorthin.  
   
-## Beispiel  
+## <a name="sample"></a>Beispiel  
  Das folgende Beispiel zeigt, wie Sie eine einfache Hookfunktion implementieren.  
   
 ```  
@@ -141,5 +141,5 @@ PfnDliHook __pfnDliNotifyHook2 = delayHook;
 */  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Die Hilfsfunktion](../../build/reference/understanding-the-helper-function.md)

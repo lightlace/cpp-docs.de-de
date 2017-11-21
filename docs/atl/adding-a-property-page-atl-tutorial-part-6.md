@@ -1,154 +1,155 @@
 ---
-title: "Hinzuf&#252;gen einer Eigenschaftenseite (ATL-Lernprogramm, Teil 6) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
+title: "Hinzufügen einer Eigenschaftenseite (ATL-Lernprogramm, Teil 6) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
 ms.assetid: df80d255-e7ea-49d9-b940-3f012e90cf9b
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 90023486dd8e34195b2dd9f8a788f3f76235d407
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Hinzuf&#252;gen einer Eigenschaftenseite (ATL-Lernprogramm, Teil 6)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Eigenschaftenseiten werden als separate COM\-Objekte implementiert, die nach Bedarf können freigegeben werden können.  In diesem Schritt führen Sie die folgenden Aufgaben, eine Eigenschaftenseite zum \- Steuerelement hinzuzufügen:  
+# <a name="adding-a-property-page-atl-tutorial-part-6"></a>Hinzufügen einer Eigenschaftenseite (ATL-Lernprogramm, Teil 6)
+Eigenschaftenseiten werden als separate COM-Objekte implementiert, die wodurch die ihnen ermöglichen, auf gemeinsam genutzt werden, falls erforderlich. Führen Sie in diesem Schritt zum Hinzufügen einer Eigenschaftenseite für das Steuerelement die folgenden Aufgaben:  
   
--   Erstellen der Eigenschaftenseiten\-Ressource  
+-   Erstellen die Eigenschaftenseitenressource  
   
--   Code hinzufügen, um die Eigenschaftenseite zu erstellen und zu verwalten  
+-   Hinzufügen von Code zum Erstellen und verwalten die Eigenschaftsseite "  
   
--   Hinzufügen der Eigenschaftenseite an das Steuerelement  
+-   Hinzufügen der Eigenschaftenseite für das Steuerelement  
   
-## Erstellen der Eigenschaftenseiten\-Ressource  
- Um eine Eigenschaftenseite dem Steuerelement hinzuzufügen, verwenden Sie den ATL\-Assistentenzum Hinzufügen von Klassen.  
+## <a name="creating-the-property-page-resource"></a>Erstellen die Eigenschaftenseitenressource  
+ Um das Steuerelement eine Eigenschaftenseite hinzuzufügen, verwenden Sie ATL-Assistenten zum Hinzufügen-Klasse.  
   
-#### So fügen Sie eine Eigenschaftenseite hinzufügen  
+#### <a name="to-add-a-property-page"></a>Hinzufügen einer Eigenschaftenseite  
   
-1.  Klicken Sie im Projektmappen\-Explorer mit der rechten Maustaste auf, Polygon.  
+1.  Im Projektmappen-Explorer mit der rechten Maustaste Polygon.  
   
-2.  Klicken Sie im Kontextmenü auf **Hinzufügen** und dann auf **Klasse hinzufügen**.  
+2.  Klicken Sie im Kontextmenü auf **hinzufügen**, und klicken Sie dann auf **Klasse hinzufügen**.  
   
-3.  Ziehen Sie aus der Liste der Vorlagen, von Auswahl\- **ATL\-Eigenschaftenseite** und von auf **Hinzufügen**.  
+3.  Wählen Sie in der Liste der Vorlagen, **ATL-Eigenschaftenseite** , und klicken Sie auf **hinzufügen**.  
   
-4.  Wenn der ATL\-Eigenschaftenseiten\-Assistent angezeigt wird, geben Sie `PolyProp` als der **Kurz** Name ein.  
+4.  Wenn Sie die ATL-Eigenschaftenseiten-Assistent angezeigt wird, geben Sie `PolyProp` als die **kurze** Name.  
   
-5.  Klicken Sie auf **Zeichenfolgen**, um die Seite zu öffnen **Zeichenfolgen** und **&Polygon** als **Titel** einzugeben.  
+5.  Klicken Sie auf **Zeichenfolgen** So öffnen die **Zeichenfolgen** Seite, und geben Sie **& Polygon** als die **Titel**.  
   
-     **Titel** der Eigenschaftenseite ist die Zeichenfolge, die auf der Registerkarte für diese Seite angezeigt wird.  **Dokumentzeichenfolge** ist eine Beschreibung, die ein Eigenschaftenrahmen verwendet, um in eine Statuszeile oder QuickInfos einzufügen.  Beachten Sie, dass der Standardeigenschaftenrahmen derzeit nicht diese Zeichenfolge verwendet, sodass Sie sie mit dem Standardinhalt lassen.  Sie generieren nicht **Hilfedatei** zum Zeitpunkt, und löschen Sie den Eintrag in diesem Textfeld.  
+     Die **Titel** der Eigenschaft Seite ist die Zeichenfolge, die auf der Registerkarte für diese Seite wird angezeigt. Die **Doc Zeichenfolge** finden Sie eine Beschreibung, die ein Frame Eigenschaft verwendet wird, in einen Status oder eine QuickInfo aufgenommen werden sollen. Beachten Sie, dass der Standardeigenschaft Frame dieser Zeichenfolge übereinstimmt, derzeit nicht verwendet, damit Sie es mit den Standardinhalt lassen können. Generieren Sie keine **Hilfedatei** im Moment so löschen Sie den Eintrag im Textfeld.  
   
-6.  Klicken Sie auf **Fertig stellen** und das Eigenschaftenseitenobjekt wird erstellt.  
+6.  Klicken Sie auf **Fertig stellen**, und die Eigenschaft Page-Objekt erstellt werden.  
   
  Die folgenden drei Dateien werden erstellt:  
   
-|Datei|Description|  
-|-----------|-----------------|  
-|PolyProp.h|Enthält die `CPolyProp` C\+\+\-Klasse, die die Eigenschaftenseite implementiert.|  
-|PolyProp.cpp|Enthält die PolyProp.h\-Datei ein.|  
-|PolyProp.rgs|Das Registrierungsskript, das das Eigenschaftenseitenobjekt registriert.|  
+|Datei|Beschreibung|  
+|----------|-----------------|  
+|PolyProp.h|Die C++-Klasse enthält `CPolyProp`, implementiert die Eigenschaftsseite ".|  
+|PolyProp.cpp|Enthält die PolyProp.h-Datei an.|  
+|PolyProp.rgs|Die Registrierungsskript, das die Eigenschaft Page-Objekt registriert.|  
   
- Die folgenden Codeänderungen übernommen werden:  
+ Die folgenden codeänderungen sind auch vorgenommen:  
   
--   Die neue Eigenschaftenseite wird zur Objekteintragszuordnung in Polygon.cpp hinzugefügt.  
+-   Die neue Eigenschaftsseite wird der Eintrag objektzuordnung in Polygon.cpp hinzugefügt.  
   
--   Die `PolyProp`\-Klasse wird zur Polygon.idl\-Datei hinzugefügt.  
+-   Die `PolyProp` Klasse in der Datei Polygon.idl hinzugefügt.  
   
--   Die neue Registrierungsskriptdatei PolyProp.rgs wird zur Projektressource hinzugefügt.  
+-   Die neue Registrierungsskriptdatei PolyProp.rgs wird auf die Projektressource hinzugefügt.  
   
--   Eine Dialogfeldvorlage wird zur Projektressource für die Eigenschaftenseite hinzugefügt.  
+-   Die Projektressource für die Eigenschaftenseite wird eine Dialogfeldvorlage hinzugefügt.  
   
--   Die Eigenschaftzeichenfolgen, dass Sie angegeben haben, werden dem Ressourcenzeichenfolgentabelle hinzugefügt.  
+-   Die Eigenschaftenzeichenfolgen, die Sie angegeben werden die Ressourcen-Zeichenfolgentabelle hinzugefügt.  
   
- Fügen Sie jetzt die Felder hinzu, die Sie auf der Eigenschaftenseite angezeigt werden sollen.  
+ Fügen Sie nun die Felder, die auf der Eigenschaftenseite angezeigt werden sollen.  
   
-#### Weitere Felder der Eigenschaftenseite hinzufügen  
+#### <a name="to-add-fields-to-the-property-page"></a>Um Felder hinzuzufügen, um die Eigenschaftsseite "  
   
-1.  Klicken Sie im Projektmappen\-Explorer, doppelklicken Sie auf die Polygon.rc\-Ressourcendatei.  Hierdurch wird Ressourcenansicht.  
+1.  Doppelklicken Sie im Projektmappen-Explorer auf die Ressourcendatei Polygon.rc. Dadurch wird die Ressourcenansicht geöffnet.  
   
-2.  Erweitern Sie in der Ressourcenansicht den Dialogknoten und doppelklicken Sie auf IDD\_POLYPROP.  Beachten Sie, dass das Dialogfeld, das angezeigt wird, mit Ausnahme einer Bezeichnung leer ist, die Ihnen erläutert, um die Steuerelemente hier einzufügen.  
+2.  Klicken Sie in der Ressourcenansicht erweitern Sie den Dialogfeld-Knoten, und doppelklicken Sie auf IDD_POLYPROP. Beachten Sie, dass das Dialogfeld leer mit Ausnahme einer Bezeichnung, die Sie So fügen Sie hier Ihre Steuerelemente informiert.  
   
-3.  Wählen Sie diese Bezeichnung aus und ändern Sie sie, um `Seiten:` lesen, indem Sie den **Beschriftung** Text **Eigenschaften** im Fenster ändern.  
+3.  Wählen Sie diese Bezeichnung, und ändern sie die Zeichenfolge `Sides:` durch Ändern der **Beschriftung** Text in der **Eigenschaften** Fenster.  
   
-4.  Ändern Sie das Bezeichnungsfeld xxxx 1, sodass die Größe des Texts anpasst.  
+4.  Ändern Sie die Größe des Bezeichnungsfelds, damit sie die Größe des Texts passen.  
   
-5.  Ziehen Sie ein Bearbeitungssteuerelement aus der Toolbox auf der rechten Seite der Bezeichnung.  
+5.  Ziehen Sie ein Bearbeitungssteuerelement aus der Toolbox in die rechts neben der Beschriftung.  
   
-6.  Ändern Sie abschließend **ID** des Bearbeitungssteuerelements annehmen `IDC_SIDES` mithilfe des Eigenschaftenfensters.  
+6.  Abschließend ändern Sie die **ID** des Bearbeitungssteuerelements zum `IDC_SIDES` mithilfe des Eigenschaftenfensters.  
   
- Dies schließt die Erstellung der Eigenschaftenseitenressource ab.  
+ Dies schließt die Eigenschaftenseitenressource erstellen.  
   
-## Code hinzufügen, um die Eigenschaftenseite zu erstellen und zu verwalten  
- Nachdem Sie die Eigenschaftenseitenressource erstellt haben, müssen Sie den Implementierungscode schreiben.  
+## <a name="adding-code-to-create-and-manage-the-property-page"></a>Hinzufügen von Code zum Erstellen und verwalten die Eigenschaftsseite "  
+ Nun, dass Sie die Eigenschaftenseitenressource erstellt haben, müssen Sie den Implementierungscode schreiben.  
   
- Zunächst können Sie die `CPolyProp`\-Klasse, um die Anzahl vonseiten im Objekt festzulegen, wenn die Schaltfläche **Übernehmen** gedrückt wird.  
+ Aktivieren Sie zunächst die `CPolyProp` Klasse, um die Anzahl der Seiten in das Objekt bei der **übernehmen** gedrückt wird.  
   
-#### Um das zugewiesen ändern arbeiten Sie die Anzahl vonseiten festzulegen  
+#### <a name="to-modify-the-apply-function-to-set-the-number-of-sides"></a>So ändern Sie die Funktion anwenden, um die Anzahl der Seiten festzulegen  
   
-1.  Ersetzen Sie die `Apply`\-Funktion in PolyProp.h durch folgenden Code:  
+1.  Ersetzen Sie die `Apply` in PolyProp.h-Funktion mit den folgenden Code:  
   
-     [!CODE [NVC_ATL_Windowing#58](../CodeSnippet/VS_Snippets_Cpp/NVC_ATL_Windowing#58)]  
+     [!code-cpp[NVC_ATL_Windowing#58](../atl/codesnippet/cpp/adding-a-property-page-atl-tutorial-part-6_1.h)]  
   
- Eine Eigenschaftenseite kann mehr als einen Client, der gleichzeitig zu deren, sodass, die angefügt werden `Apply`\-Funktionsschleifen haben herum und ruft `put_Sides` auf jedem Client mit dem Wert auf, der vom Eingabefeld abgerufen wird.  Sie verwenden die [CComQIPtr](../atl/reference/ccomqiptr-class.md)\-Klasse, die `QueryInterface` auf jedem Objekt ausführt, um die `IPolyCtl`\-Schnittstelle aus der **IUnknown**\-Schnittstelle zu erhalten \(gespeichert `m_ppUnk` im Array\).  
+ Eine Eigenschaftenseite kann mehr als einen Client zu einem Zeitpunkt angefügt haben also die `Apply` Funktion führt eine Schleife ein und ruft `put_Sides` auf jedem Client mit dem Wert, der vom im Bearbeitungsfeld abgerufen. Verwenden Sie die [CComQIPtr](../atl/reference/ccomqiptr-class.md) -Klasse, die führt der `QueryInterface` für jedes Objekt zum Abrufen der `IPolyCtl` -Schnittstelle aus der **IUnknown** Schnittstelle (in gespeicherten der `m_ppUnk` Array).  
   
- Mit dem Code Überprüfungen jetzt, ob das Festlegen der Eigenschaft `Sides` tatsächlich funktioniert.  Wenn es fehl, wird der Code ein Meldungsfeld an, das Fehlerdetails aus der **IErrorInfo**\-Schnittstelle anzeigt.  In der Regel wird ein Container eines Objekts die **ISupportErrorInfo**\-Schnittstelle und ruft `InterfaceSupportsErrorInfo` zuerst auf, bestimmen, ob das Objekt Einstellungsfehlerinformationen unterstützt.  Sie können diese Aufgabe überspringen.  
+ Der Code überprüft nun, dass durch Festlegen der `Sides` -Eigenschaft funktioniert hat. Falls dies fehlschlägt, wird der Code zeigt ein Meldungsfeld mit Fehlerdetails aus der **IErrorInfo** Schnittstelle. In der Regel fragt ein Container ein Objekt für die **ISupportErrorInfo** -Schnittstelle und ruft `InterfaceSupportsErrorInfo` ersten, um festzustellen, ob das Objekt den Fehler Einstellungsinformationen unterstützt. Sie können diese Aufgabe überspringen.  
   
- [CComPtr](../atl/reference/ccomptr-class.md) hilft Ihnen, indem automatisch die Verweiszählung behandelt, sodass es nicht erforderlich, um `Release` für die Schnittstelle aufzurufen.  `CComBSTR` können Sie mit `BSTR` Verarbeitung, deshalb müssen Sie den abschließenden `SysFreeString` Aufruf nicht ausführen.  Außerdem verwenden Sie eine der verschiedenen Zeichenkonvertierungsklassen, sodass Sie `BSTR` ggf. konvertieren \(daher ist das `USES_CONVERSION`\-Makro am Anfang der Funktion\).  
+ [CComPtr](../atl/reference/ccomptr-class.md) hilft Ihnen durch die automatisch Behandlung der verweiszählung, daher Sie nicht aufrufen müssen `Release` auf der Schnittstelle. `CComBSTR`hilft Ihnen mit `BSTR` verarbeiten, müssen Sie nicht zum Ausführen der endgültige `SysFreeString` aufrufen. Außerdem verwenden Sie eine der die verschiedenen Klassen für die zeichenfolgenkonvertierung, damit konvertiert werden kann die `BSTR` bei Bedarf (deswegen der `USES_CONVERSION` -Makro ist zu Beginn der Funktion).  
   
- Sie müssen auch das geänderte Flag der Eigenschaftenseite festlegen, um anzugeben, dass die Schaltfläche **Übernehmen** aktiviert werden soll.  Dies tritt auf, wenn der Benutzer den Wert im Eingabefeld **Seiten** ändert.  
+ Sie müssen auch die Eigenschaftenseite modifizierte Flag gibt an, dass Festlegen der **übernehmen** Schaltfläche aktiviert werden soll. Dies tritt auf, wenn der Benutzer den Wert in ändert die **Seiten** Eingabefeld.  
   
-#### Um die übernehmensschaltfläche behandeln  
+#### <a name="to-handle-the-apply-button"></a>Behandeln Sie die Schaltfläche "anwenden"  
   
-1.  Klicken Sie in der Klassenansicht auf CPolyProp mit der rechten Maustaste auf und klicken Sie auf **Eigenschaften** im Kontextmenü.  
+1.  Klicken Sie in der Klassenansicht mit der rechten Maustaste CPolyProp, und klicken Sie auf **Eigenschaften** im Kontextmenü.  
   
-2.  Klicken Sie im Eigenschaftenfenster auf das Symbol **Ereignisse**.  
+2.  Klicken Sie im Eigenschaftenfenster auf die **Ereignisse** Symbol.  
   
-3.  Erweitern Sie die Liste `IDC_SIDES` Knotens im Ereignishandler.  
+3.  Erweitern Sie die `IDC_SIDES` Knoten in der Ereignisliste.  
   
-4.  Wählen Sie `EN_CHANGE` aus, und klicken Sie im Dropdownmenü rechts auf **\<Hinzufügen\> OnEnChangeSides**.  Die `OnEnChangeSides`\-Handlerdeklaration wird zu Polyprop.h und der Handlerimplementierung zu Polyprop.cpp hinzugefügt.  
+4.  Wählen Sie `EN_CHANGE`, und klicken Sie auf das Dropdownmenü rechts auf  **\<hinzufügen > OnEnChangeSides**. Die `OnEnChangeSides` Handlerdeklaration wird Polyprop.h und die Handlerimplementierung PolyProp.cpp hinzugefügt werden.  
   
  Als Nächstes ändern Sie den Handler.  
   
-#### Um die OnEnChangeSides\-Methode ändern  
+#### <a name="to-modify-the-onenchangesides-method"></a>So ändern Sie die OnEnChangeSides-Methode  
   
-1.  Fügen Sie folgenden Code in Polyprop.cpp der `OnEnChangeSides`\-Methode hinzu \(Code aus der der Assistent dort abgelegt\):  
+1.  Fügen Sie den folgenden Code in Polyprop.cpp auf die `OnEnChangeSides` Methode (jeglicher Code, der vom Assistenten gelöscht):  
   
-     [!CODE [NVC_ATL_Windowing#59](../CodeSnippet/VS_Snippets_Cpp/NVC_ATL_Windowing#59)]  
+     [!code-cpp[NVC_ATL_Windowing#59](../atl/codesnippet/cpp/adding-a-property-page-atl-tutorial-part-6_2.cpp)]  
   
- `OnEnChangeSides` wird aufgerufen, wenn eine **WM\_COMMAND** Meldung mit der **EN\_CHANGE** Benachrichtigung für das Steuerelement `IDC_SIDES` gesendet wird.  `OnEnChangeSides` ruft dann `SetDirty` auf und übergibt `TRUE`, um die Eigenschaftenseite anzugeben ist jetzt geändert und die Schaltfläche **Übernehmen** sollte aktiviert werden.  
+ `OnEnChangeSides`wird aufgerufen, wenn eine **WM_COMMAND** Nachricht wird gesendet, mit der **EN_CHANGE** Benachrichtigung für den `IDC_SIDES` Steuerelement. `OnEnChangeSides`Ruft dann `SetDirty` und übergibt `TRUE` an, dass die Eigenschaft nun Seite fehlerhaft ist und die **übernehmen** Schaltfläche aktiviert werden soll.  
   
-## Hinzufügen der Eigenschaftenseite an das Steuerelement  
- Der ATL\-Assistentzum Hinzufügen von Klassen und der ATL\-Eigenschaftenseiten\-Assistent fügen die Eigenschaftenseite nicht dem Steuerelement automatisch hinzu, dass es mehrere Steuerelemente im Projekt geben kann.  Sie müssen einen Eintrag der Eigenschaftenzuordnung des Steuerelements hinzufügen.  
+## <a name="adding-the-property-page-to-the-control"></a>Hinzufügen der Eigenschaftenseite für das Steuerelement  
+ ATL-Assistent zum Hinzufügen-Klasse und die ATL-Eigenschaftenseiten-Assistent fügen die Eigenschaftsseite "an das Steuerelement für Sie automatisch und Sie keine da es möglicherweise mehrere Steuerelemente, die in Ihrem Projekt. Sie müssen einen Eintrag zur Eigenschaft-steuerelementzuordnung hinzufügen.  
   
-#### Um die Eigenschaftenseite hinzufügen  
+#### <a name="to-add-the-property-page"></a>So fügen Sie die Eigenschaftenseite hinzu  
   
-1.  Öffnen Sie PolyCtl.h und fügen Sie diese Zeile der Eigenschaftenzuordnung hinzu:  
+1.  Öffnen Sie PolyCtl.h hinzu, und fügen Sie diese Zeile auf die eigenschaftszuordnung:  
   
-     [!CODE [NVC_ATL_Windowing#60](../CodeSnippet/VS_Snippets_Cpp/NVC_ATL_Windowing#60)]  
+     [!code-cpp[NVC_ATL_Windowing#60](../atl/codesnippet/cpp/adding-a-property-page-atl-tutorial-part-6_3.h)]  
   
- Die Eigenschaftenzuordnung des Steuerelements sieht nun wie folgt aus:  
+ Das Steuerelement eigenschaftenzuordnung sieht nun wie folgt:  
   
- [!CODE [NVC_ATL_Windowing#61](../CodeSnippet/VS_Snippets_Cpp/NVC_ATL_Windowing#61)]  
+ [!code-cpp[NVC_ATL_Windowing#61](../atl/codesnippet/cpp/adding-a-property-page-atl-tutorial-part-6_4.h)]  
   
- Sie können ein Makro mit `PROP_PAGE` CLSID der Eigenschaftenseite hinzugefügt wurden, aber, wenn Sie das `PROP_ENTRY`\-Makro wie gezeigt verwenden, wird der `Sides`\-Eigenschaftswert auch gespeichert, wenn das Steuerelement gespeichert wird.  
+ Sie konnte hinzugefügt haben, eine `PROP_PAGE` Makro mit der CLSID der Eigenschaftenseite, wenn Sie jedoch die `PROP_ENTRY` Makro wie gezeigt, die `Sides` Eigenschaftswert wird auch gespeichert, wenn das Steuerelement gespeichert wird.  
   
- Die drei Parameter an das Makro sind die Eigenschaftenbeschreibung, den DISPID der Eigenschaft und die CLSID der Eigenschaftenseite, die die Eigenschaft dafür verfügt.  Dies ist nützlich, wenn beispielsweise laden Sie das Steuerelement in Visual Basic und die Anzahl vonseiten zur Entwurfszeit fest.  Da die Anzahl der Seiten gespeichert wird, wenn Sie das Visual Basic\-Projekt erneut laden, wird die Anzahl vonseiten wiederhergestellt.  
+ Die drei Parameter für das Makro gibt die Beschreibung der Eigenschaft, die die DISPID der Eigenschaft und die CLSID der Eigenschaftenseite, die die Eigenschaft enthält. Dies ist hilfreich, wenn Sie z. B. laden das Steuerelement in Visual Basic und die Anzahl der Seiten zur Entwurfszeit festgelegt. Da die Anzahl der Seiten gespeichert wird, wenn Sie das Visual Basic-Projekt erneut laden, wird die Anzahl der Seiten wiederhergestellt werden.  
   
-## Erstellen und Testen des Steuerelements  
- Jetzt erstellen Sie dieses Steuerelement und fügen Sie sie in Testcontainer für ActiveX\-Steuerelemente ein.  im Testcontainer auf dem Menü **Bearbeiten**, auf **PolyCtl\-Klassenobjekt**.  Die Eigenschaftenseite wird; Klicken Sie auf die Registerkarte **Polygon**.  
+## <a name="building-and-testing-the-control"></a>Erstellen und Testen des Steuerelements  
+ Nun erstellen Sie das entsprechende Steuerelement und Testcontainer für ActiveX-Steuerelement einfügen. Im Test-Container auf die **bearbeiten** Menü klicken Sie auf **PolyCtl-Klassenobjekt**. Die Eigenschaftenseite angezeigt wird; Klicken Sie auf die **Polygon** Registerkarte.  
   
- Die Schaltfläche **Übernehmen** wird zunächst deaktiviert.  Starten Sie die Eingabe eines Werts im Feld **Seiten** und die Schaltfläche **Übernehmen** ist aktiviert.  Nachdem Sie beendet haben, den Wert anzugeben, klicken Sie auf die Schaltfläche **Übernehmen**.  Die Kontrollanzeigeänderungen und die Schaltfläche **Übernehmen** wird erneut deaktiviert.  Versuch, der einen ungültigen Wert eingibt.  Es wird ein Meldungsfeld, die Fehlerbeschreibung zu enthalten dass Sie die von der `put_Sides`\-Funktion.  
+ Die **übernehmen** Schaltfläche anfänglich deaktiviert ist. Geben Sie einen Wert in der **Seiten** Feld und die **übernehmen** Schaltfläche aktiviert wird. Nachdem Sie die Eingabe des Werts abgeschlossen haben, klicken Sie auf die **übernehmen** Schaltfläche. Die Anzeige Steuerelement geändert wird, und die **übernehmen** Schaltfläche erneut deaktiviert ist. Versuchen Sie einen ungültigen Wert einzugeben. Sehen Sie ein Meldungsfeld, enthält die fehlerbeschreibung, die Sie festlegen, aus der `put_Sides` Funktion.  
   
- Als Nächstes fügen Sie das Steuerelement auf eine Webseite.  
+ Sie werden als nächstes Steuerelement auf einer Webseite einfügen.  
   
- [Zurück zu Schritt 5](../atl/adding-an-event-atl-tutorial-part-5.md) &#124; [Klicken Sie zu Schritt 7](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)  
+ [Zurück zu Schritt 5](../atl/adding-an-event-atl-tutorial-part-5.md) &#124; [Mit Schritt 7 fort](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Lernprogramm](../atl/active-template-library-atl-tutorial.md)
+

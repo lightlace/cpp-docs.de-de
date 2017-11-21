@@ -1,30 +1,30 @@
 ---
-title: "Using a Template Library | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "template libraries"
+title: Mit einem Template Library (ATL) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: template libraries
 ms.assetid: 5e80ec6e-a61c-41ce-b34b-9a6252c46265
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8a074b48335f0c359ff240e58b78c85d28021caa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Using a Template Library
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Eine Vorlage ist etwas wie ein Makro.  Wie ein Makro, führt das Aufrufen einer Vorlage sie erweitert \(mit dem entsprechenden Parameterersetzung\) um zu codieren Sie geschrieben haben.  Es wird eine Vorlage weiter als dieses, die Erstellung neuer Klassen basierend auf Typen zu ermöglichen, die Sie als Parameter übergeben.  Diese typsicheren Methoden des neuen Klassenwerkzeuges der Ausführung des Vorgangs ausgedrückt im Vorlagencode.  
+# <a name="using-a-template-library"></a>Verwenden einer Vorlagenbibliothek
+Eine Vorlage ähnelt einem Makro. Wie bei einem Makro, bewirkt, dass eine Vorlage aufrufen (mit entsprechenden Vorlagenparameter) erweitern in dem von Ihnen geschriebenen Code. Geht jedoch eine Vorlage für weitere ermöglichen die Erstellung neuer Klassen, die basierend auf Typen, die Sie als Parameter übergeben. Diese neue Klassen implementieren als typsicherer Methoden zum Ausführen des Vorgangs im Vorlagencode ausgedrückt.  
   
- Vorlagenbibliotheken wie ATL unterscheiden sich von herkömmlichen C\+\+\-Klassenbibliotheken darin, dass sie in der Regel nur als Quellcode \(oder als Quellcode mit wenigen, Laufzeit unterstützende\), angegeben werden und nicht in der Natur grundsätzlich oder unbedingt hierarchisch sind.  Anstatt, die Ableitung von einer Klasse, um die Funktionalität abzurufen, sollen, instanziieren Sie eine Klasse aus einer Vorlage.  
+ Vorlagenbibliotheken wie ATL herkömmliche C++-Klassenbibliotheken unterscheiden sich insofern, dass sie in der Regel nur als Quellcode (oder als Quellcode mit ein wenig, zur Laufzeit unterstützen) bereitgestellt werden und sind nicht grundsätzlich oder unbedingt hierarchisch. Anstatt das Ableiten einer Klasse, die Funktionalität zu erhalten, die Sie wünschen, instanziieren Sie eine Klasse aus einer Vorlage.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Einführung in ATL](../atl/introduction-to-atl.md)
+

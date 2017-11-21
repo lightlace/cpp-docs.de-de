@@ -1,37 +1,37 @@
 ---
-title: "CAtlServiceModuleT::Start Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CServiceModule.Start"
-  - "CServiceModule::Start"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Start-Methode"
+title: 'CServiceModule:: Start-Funktion | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CServiceModule.Start
+- CServiceModule::Start
+dev_langs: C++
+helpviewer_keywords: Start method
 ms.assetid: b5193a23-41bc-42d2-8d55-3eb43dc62238
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c3eb7009e8092184effad5e1874297c8c04b213e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# CAtlServiceModuleT::Start Function
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Wenn der Dienst durchgeführt wird, ruft **\_tWinMain CAtlServiceModuleT::WinMain** auf, der wiederum `CAtlServiceModuleT::Start` aufruft.  
+# <a name="catlservicemoduletstart-function"></a>CServiceModule:: Start-Funktion
+Wenn der Dienst ausgeführt wird, **_tWinMain** Aufrufe **CAtlServiceModuleT::WinMain**, die wiederum ruft `CAtlServiceModuleT::Start`.  
   
- `CAtlServiceModuleT::Start` installieren ein Array **SERVICE\_TABLE\_ENTRY**\-Strukturen, die jeden Dienst zu seiner Startfunktion zuordnen.  Dieses Array wird dann zur Win32\-API, [StartServiceCtrlDispatcher](http://msdn.microsoft.com/library/windows/desktop/ms686324) übergeben.  Theoretisch kann eine EXE\-Datei mehrere behandeln und das Array kann über mehrere **SERVICE\_TABLE\_ENTRY**\-Strukturen verfügen.  Derzeit jedoch ATL\-generierte Dienst nur ein Dienst pro EXE.  Deshalb hat das Array einen einzelnen Eintrag, der den Dienstnamen und **\_ServiceMain** als Startfunktion enthält.  **\_ServiceMain** ist eine statische Memberfunktion der `CAtlServiceModuleT`, die die nicht statische Memberfunktion aufruft, `ServiceMain`.  
+ `CAtlServiceModuleT::Start`ein Array von richtet **SERVICE_TABLE_ENTRY** Strukturen, die jeden Dienst seiner Startfunktion zuordnen. Dieses Array wird dann an die Win32-API-Funktion übergeben [StartServiceCtrlDispatcher](http://msdn.microsoft.com/library/windows/desktop/ms686324). Theoretisch könnte eine EXE-Datei mehrere Dienste behandeln und das Array möglicherweise mehrere **SERVICE_TABLE_ENTRY** Strukturen. Allerdings unterstützt ein ATL-generierter Dienst derzeit nur ein Dienst pro exe-Datei. Das Array verfügt daher über einen einzelnen Eintrag, der den Dienstnamen enthält und **_ServiceMain** wie die Autostart-Funktion. **_ServiceMain** ist eine statische Memberfunktion von `CAtlServiceModuleT` , die nicht statische Memberfunktion aufruft `ServiceMain`.  
   
 > [!NOTE]
->  Überschneidungen mit **StartServiceCtrlDispatcher**, an den Dienststeuerungs\-Manager \(SCM\) herzustellen wahrscheinlich bedeutet, dass das Programm nicht als Dienst ausgeführt wird.  In diesem Fall ruft das Programm `CAtlServiceModuleT::Run` direkt auf, damit das Programm als lokalen Server ausgeführt werden kann.  Weitere Informationen zum Ausführen des Programms als lokalen Server, finden Sie unter [Tipps zum Debuggen](../atl/debugging-tips.md).  
+>  Fehler des **StartServiceCtrlDispatcher** für die Verbindung zum dienststeuerungs-Manager (SCM) wahrscheinlich bedeutet, dass das Programm nicht als Dienst ausgeführt wird. In diesem Fall die Anwendung ruft `CAtlServiceModuleT::Run` direkt, damit das Programm als lokaler Server ausführen kann. Weitere Informationen zum Ausführen des Programms als lokaler Server finden Sie unter [Debuggen Tipps](../atl/debugging-tips.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Dienste](../atl/atl-services.md)   
- [CAtlServiceModuleT::Start](../Topic/CAtlServiceModuleT::Start.md)
+ [CServiceModule:: Start](../atl/reference/catlservicemodulet-class.md#start)
+

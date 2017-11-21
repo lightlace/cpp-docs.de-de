@@ -1,32 +1,30 @@
 ---
-title: "unique (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::unique"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unique-Funktion [STL/CLR]"
+title: eindeutige (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::unique
+dev_langs: C++
+helpviewer_keywords: unique function [STL/CLR]
 ms.assetid: 833cc314-b452-4659-bbb4-575c2bb63855
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6336a5579be9172caf6addd89e8b3b1b022151db
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# unique (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Entfernt doppelte Elemente nebeneinander, die in einem angegebenen Gültigkeitsbereich.  
+# <a name="unique-stlclr"></a>unique (STL/CLR)
+Entfernt doppelte Elemente, die in einem angegebenen Bereich nebeneinander angeordnet sind.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class _FwdIt> inline  
@@ -35,13 +33,13 @@ template<class _FwdIt, class _Pr> inline
     _FwdIt unique(_FwdIt _First, _FwdIt _Last, _Pr _Pred);  
 ```  
   
-## Hinweise  
- Diese Funktion verhält sich genauso wie die STL\-Funktion `unique`.  Weitere Informationen finden Sie unter [Eindeutig](../Topic/unique%20\(%3Calgorithm%3E\).md).  
+## <a name="remarks"></a>Hinweise  
+ Diese Funktion verhält sich wie die C++-Standardbibliothek Funktion `unique`. Weitere Informationen finden Sie unter [eindeutige](../standard-library/algorithm-functions.md#unique).  
   
-## Anforderungen  
- **Header:** \<cliext\/Algorithmus\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext-Algorithmus >  
   
- **Namespace:** cliext  
+ **Namespace:** Cliext  
   
-## Siehe auch  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Siehe auch  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

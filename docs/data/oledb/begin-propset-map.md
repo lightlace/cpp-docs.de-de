@@ -1,32 +1,30 @@
 ---
-title: "BEGIN_PROPSET_MAP | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BEGIN_PROPSET_MAP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BEGIN_PROPSET_MAP-Makro"
+title: BEGIN_PROPSET_MAP | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BEGIN_PROPSET_MAP
+dev_langs: C++
+helpviewer_keywords: BEGIN_PROPSET_MAP macro
 ms.assetid: c3a30618-6025-4d49-8688-a171294d2e93
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d92723ec126f23d479189ccb4629f70256949ab6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# BEGIN_PROPSET_MAP
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Markiert den Beginn der Eigenschaftensetzuordnungseinträge.  
+# <a name="beginpropsetmap"></a>BEGIN_PROPSET_MAP
+Markiert der Anfang der Eigenschaft festlegen Zuordnungseinträge.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -36,26 +34,26 @@ Class
   
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  *Klasse*  
- \[in\] die Klasse, in der dieser Eigenschaft angegeben wird.  Ein Eigenschaft kann im folgenden OLE DB\-Objekten angegeben werden:  
+ [in] Die Klasse, in denen diese Eigenschaft festgelegt, wird angegeben. Als Eigenschaftensatz kann in die folgenden OLE DB-Objekte angegeben werden:  
   
--   [\<caps:sentence id\="tgt4" sentenceid\="75bbb794f21139fcd243c18fff6050d2" class\="tgtSentence"\>Datenquellenobjekte\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/ms721278.aspx)  
+-   [Datenquellenobjekte](https://msdn.microsoft.com/en-us/library/ms721278.aspx)  
   
--   [\<caps:sentence id\="tgt5" sentenceid\="e423b0fba10fc83bd76e01e3eee2fd69" class\="tgtSentence"\>Sitzungsobjekte\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/ms711572.aspx)  
+-   [Session-Objekte](https://msdn.microsoft.com/en-us/library/ms711572.aspx)  
   
--   [\<caps:sentence id\="tgt6" sentenceid\="5f6bc08c46cee6f21bfcdd08aff6e8aa" class\="tgtSentence"\>Befehle\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/ms724608.aspx)  
+-   [Befehle](https://msdn.microsoft.com/en-us/library/ms724608.aspx)  
   
-## Beispiel  
- Hier ist eine Beispieleigenschaftensetzuordnung:  
+## <a name="example"></a>Beispiel  
+ Hier ist eine Beispiel-eigenschaftenzuordnungen festlegen:  
   
- [!CODE [NVC_OLEDB_Provider#3](../CodeSnippet/VS_Snippets_Cpp/NVC_OLEDB_Provider#3)]  
+ [!code-cpp[NVC_OLEDB_Provider#3](../../data/oledb/codesnippet/cpp/begin-propset-map_1.h)]  
   
-## Anforderungen  
- **Header:** atldb.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** „atldb.h“  
   
-## Siehe auch  
- [Makros für OLE DB\-Anbietervorlagen](../../data/oledb/macros-for-ole-db-provider-templates.md)   
- [OLE DB\-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektur von OLE DB\-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)   
- [Erstellen eines OLE DB\-Anbieters](../../data/oledb/creating-an-ole-db-provider.md)
+## <a name="see-also"></a>Siehe auch  
+ [Makros für OLE DB-Anbietervorlagen](../../data/oledb/macros-for-ole-db-provider-templates.md)   
+ [OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)   
+ [Erstellen eines OLE DB-Anbieters](../../data/oledb/creating-an-ole-db-provider.md)

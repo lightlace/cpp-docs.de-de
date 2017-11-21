@@ -1,64 +1,57 @@
 ---
-title: "ATL-Codierungsreferenz | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Codierung"
-  - "Codierung, Funktionen"
+title: ATL-Codierungsreferenz | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- encoding
+- encoding, functions
 ms.assetid: 82d4fdf3-3c4a-4fe2-b297-8ffb4714406f
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cd0f4b448de3fcaabe33822c0d8b1ee834260609
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# ATL-Codierungsreferenz
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Codierung in einem Bereich von allgemeinen Webstandards wie uuencode, Hexadezimal\- und UTF8\-Codierung wird vom Code unterstützt, der in atlenc.h gefunden wird.  
+# <a name="atl-encoding-reference"></a>ATL-Codierungsreferenz
+In einem Bereich von allgemeinen Internetstandards wie Uuencode Hexadezimal, und die UTF8-Codierung wird vom Code, der in atlenc.h unterstützt.  
   
-### Funktionen  
+### <a name="functions"></a>Funktionen  
   
 |||  
 |-|-|  
-|[AtlGetHexValue](../Topic/AtlGetHexValue.md)|Rufen Sie diese Funktion auf, um den numerischen Wert einer Hexadezimalziffer abzurufen.|  
-|[AtlHexDecode](../Topic/AtlHexDecode.md)|Decodiert eine Zeichenfolge von Daten, die als hexadezimaler Text wie von eines vorherigen Aufruf [AtlHexEncode](../Topic/AtlHexEncode.md) codiert wurde.|  
-|[AtlHexDecodeGetRequiredLength](../Topic/AtlHexDecodeGetRequiredLength.md)|Rufen Sie diese Funktion auf, um die Größe in Bytes eines Puffers abzurufen, der die Daten enthalten kann, die von einer Hexadezimal\-codierten Zeichenfolge der angegebenen Länge decodiert wurden.|  
-|[AtlHexEncode](../Topic/AtlHexEncode.md)|Rufen Sie diese Funktion, um einige Daten als Zeichenfolge des hexadezimalen Text zu codieren.|  
-|[AtlHexEncodeGetRequiredLength](../Topic/AtlHexEncodeGetRequiredLength.md)|Rufen Sie diese Funktion auf, um die Größe in Zeichen eines Puffers abzurufen, der eine Zeichenfolge enthalten kann, die von Daten des angegebenen Größe codiert wurde.|  
-|[AtlUnicodeToUTF8](../Topic/AtlUnicodeToUTF8.md)|Rufen Sie diese Funktion auf, um eine Unicode\-Zeichenfolge in UTF\-8\-Codierung zu konvertieren.|  
-|[BEncode](../Topic/BEncode.md)|Rufen Sie diese Funktion, um einige Daten mithilfe der "B " Codierung zu konvertieren.|  
-|[BEncodeGetRequiredLength](../Topic/BEncodeGetRequiredLength.md)|Rufen Sie diese Funktion auf, um die Größe in Zeichen eines Puffers abzurufen, der eine Zeichenfolge enthalten kann, die von Daten des angegebenen Größe codiert wurde.|  
-|[EscapeXML](../Topic/EscapeXML.md)|Rufen Sie diese Funktion, um Zeichen zu konvertieren, die für die Verwendung in XML zu ihren Entsprechungen sicheren unsicher sind.|  
-|[GetExtendedChars](../Topic/GetExtendedChars.md)|Rufen Sie diese Funktion, um die Anzahl von Sonderzeichen in einer Zeichenfolge abzurufen.|  
-|[IsExtendedChar](../Topic/IsExtendedChar.md)|Rufen Sie diese Funktion, um festzustellen, ob ein angegebenes Zeichen ein Sonderzeichen ist \(weniger als 32, größer als 126 und keine Registerkarte, ein Zeilenvorschub oder ein Wagenrücklauf\)|  
-|[QEncode](../Topic/QEncode.md)|Rufen Sie diese Funktion, um einige Daten mithilfe der "Q\-" Codierung zu konvertieren.|  
-|[QEncodeGetRequiredLength](../Topic/QEncodeGetRequiredLength.md)|Rufen Sie diese Funktion auf, um die Größe in Zeichen eines Puffers abzurufen, der eine Zeichenfolge enthalten kann, die von Daten des angegebenen Größe codiert wurde.|  
-|[QPDecode](../Topic/QPDecode.md)|Decodiert eine Zeichenfolge von Daten, die im zitieren\-druckbaren Format wie von einem früheren Aufruf [QPEncode](../Topic/QPEncode.md) codiert wurde.|  
-|[QPDecodeGetRequiredLength](../Topic/QPDecodeGetRequiredLength.md)|Rufen Sie diese Funktion auf, um die Größe in Bytes eines Puffers abzurufen, der die Daten enthalten kann, die von zitieren\-druckbar\-codierter Zeichenfolge der angegebenen Länge decodiert wurden.|  
-|[QPEncode](../Topic/QPEncode.md)|Rufen Sie diese Funktion, um einige Daten im zitieren\-druckbaren Format zu codieren.|  
-|[QPEncodeGetRequiredLength](../Topic/QPEncodeGetRequiredLength.md)|Rufen Sie diese Funktion auf, um die Größe in Zeichen eines Puffers abzurufen, der eine Zeichenfolge enthalten kann, die von Daten des angegebenen Größe codiert wurde.|  
-|[Uudecode](../Topic/UUDecode.md)|Decodiert eine Zeichenfolge von Daten, die wie von eines vorherigen Aufruf [Uuencode](../Topic/UUEncode.md) uuencoded.|  
-|[UUDecodeGetRequiredLength](../Topic/UUDecodeGetRequiredLength.md)|Rufen Sie diese Funktion auf, um die Größe in Bytes eines Puffers abzurufen, der die Daten enthalten kann, die von einer uuencoded Zeichenfolge der angegebenen Länge decodiert wurden.|  
-|[Uuencode](../Topic/UUEncode.md)|Rufen Sie diese Funktion zu uuencode einige Daten auf.|  
-|[UUEncodeGetRequiredLength](../Topic/UUEncodeGetRequiredLength.md)|Rufen Sie diese Funktion auf, um die Größe in Zeichen eines Puffers abzurufen, der eine Zeichenfolge enthalten kann, die von Daten des angegebenen Größe codiert wurde.|  
+|[AtlGetHexValue](reference/atl-text-encoding-functions.md#atlgethexvalue)|Mit dieser Funktion wird der numerische Wert einer Hexadezimalziffer abgerufen.|  
+|[AtlHexDecode](reference/atl-text-encoding-functions.md#atlhexdecode)|Decodiert eine Zeichenfolge, die als hexadezimaler Text z. B. durch einen vorherigen Aufruf codiert wurde [AtlHexEncode](reference/atl-text-encoding-functions.md#atlhexencode).|  
+|[AtlHexDecodeGetRequiredLength](reference/atl-text-encoding-functions.md#atlhexdecodegetrequiredlength)|Mit dieser Funktion können Sie die Größe eines Puffers in Bytes abrufen, der die Daten enthalten kann, die aus einer hexadezimal codierten Zeichenfolge der angegebenen Länge decodiert wurden.|  
+|[AtlHexEncode](reference/atl-text-encoding-functions.md#atlhexencode)|Mit dieser Funktion werden einige Daten als Zeichenfolge mit hexadezimalem Text codiert.|  
+|[AtlHexEncodeGetRequiredLength](reference/atl-text-encoding-functions.md#atlhexencodegetrequiredlength)|Mit dieser Funktion können Sie die Größe eines Puffers in Zeichen abrufen, der eine Zeichenfolge enthalten kann, die aus Daten der angegebenen Größe codiert wurde.|  
+|[AtlUnicodeToUTF8](reference/atl-text-encoding-functions.md#atlunicodetoutf8)|Mit dieser Funktion können Sie eine Unicode-Zeichenfolge in UTF-8 konvertieren.|  
+|[BEncode](reference/atl-text-encoding-functions.md#bencode)|Mit dieser Funktion werden einige Daten mit "B"-Codierung konvertiert.|  
+|[BEncodeGetRequiredLength](reference/atl-text-encoding-functions.md#bencodegetrequiredlength)|Mit dieser Funktion können Sie die Größe eines Puffers in Zeichen abrufen, der eine Zeichenfolge enthalten kann, die aus Daten der angegebenen Größe codiert wurde.|  
+|[EscapeXML](reference/atl-text-encoding-functions.md#escapexml)|Mit dieser Funktion werden für die Verwendung in XML unsichere Zeichen in sichere Zeichen konvertiert.|  
+|[GetExtendedChars](reference/atl-text-encoding-functions.md#getextendedchars)|Mit dieser Funktion können Sie die Anzahl von Sonderzeichen in einer Zeichenfolge abrufen.|  
+|[IsExtendedChar](reference/atl-text-encoding-functions.md#isextendedchar)|Mit dieser Funktion können Sie herausfinden, ob ein angegebenes Zeichen ein Sonderzeichen ist (kleiner als 32, größer als 126 und kein Tabstopp-, Zeilenvorschub- oder Wagenrücklaufzeichen)|  
+|[QEncode](reference/atl-text-encoding-functions.md#qencode)|Mit dieser Funktion werden einige Daten mit "Q"-Codierung konvertiert.|  
+|[QEncodeGetRequiredLength](reference/atl-text-encoding-functions.md#qencodegetrequiredlength)|Mit dieser Funktion können Sie die Größe eines Puffers in Zeichen abrufen, der eine Zeichenfolge enthalten kann, die aus Daten der angegebenen Größe codiert wurde.|  
+|[QPDecode](reference/atl-text-encoding-functions.md#qpdecode)|Decodiert eine Zeichenfolge, die im quoted-printable-Format wie z. B. durch einen vorherigen Aufruf codiert wurde [QPEncode](reference/atl-text-encoding-functions.md#qpencode).|  
+|[QPDecodeGetRequiredLength](reference/atl-text-encoding-functions.md#qpdecodegetrequiredlength)|Mit dieser Funktion können Sie die Größe eines Puffers in Bytes abrufen, der die Daten enthalten kann, die aus einer Zeichenfolge der angegebenen Länge in einem druckbaren Format mit Anführungszeichen decodiert wurden.|  
+|[QPEncode](reference/atl-text-encoding-functions.md#qpencode)|Mit dieser Funktion können Sie Daten in ein druckbares Format mit Anführungszeichen codieren.|  
+|[QPEncodeGetRequiredLength](reference/atl-text-encoding-functions.md#qpencodegetrequiredlength)|Mit dieser Funktion können Sie die Größe eines Puffers in Zeichen abrufen, der eine Zeichenfolge enthalten kann, die aus Daten der angegebenen Größe codiert wurde.|  
+|[UUDecode](reference/atl-text-encoding-functions.md#uudecode)|Decodiert eine Zeichenfolge, die Uuencoded z. B. durch einen vorherigen Aufruf wurde [UUEncode](reference/atl-text-encoding-functions.md#uuencode).|  
+|[UUDecodeGetRequiredLength](reference/atl-text-encoding-functions.md#uudecodegetrequiredlength)|Mit dieser Funktion können Sie die Größe eines Puffers in Bytes abrufen, der die Daten enthalten kann, die aus einer UUEncoded-Zeichenfolge der angegebenen Länge decodiert wurden.|  
+|[UUEncode](reference/atl-text-encoding-functions.md#uuencode)|Mit dieser Funktion können Sie Daten in UUEncoded-Daten codieren.|  
+|[UUEncodeGetRequiredLength](reference/atl-text-encoding-functions.md#uuencodegetrequiredlength)|Mit dieser Funktion können Sie die Größe eines Puffers in Zeichen abrufen, der eine Zeichenfolge enthalten kann, die aus Daten der angegebenen Größe codiert wurde.|  
   
-### Makros  
-  
-|||  
-|-|-|  
-|[ATL\_ESC\-Flags](../Topic/ATL_ESC%20Flags.md)|Diese Flags werden verwendet, um das Verhalten von [EscapeXML](../Topic/EscapeXML.md) zu steuern.|  
-|[ATLSMTP\_QPENCODE\-Flags](../Topic/ATLSMTP_QPENCODE%20Flags.md)|Diese Flags beschreiben, wie zitieren\-druckbare Codierung durch [QPEncode](../Topic/QPEncode.md) ausgeführt werden soll.|  
-|[ATLSMTP\_UUENCODE\-Flags](../Topic/ATLSMTP_UUENCODE%20Flags.md)|Diese Flags beschreiben, wie das Uuencoding durch [Uuencode](../Topic/UUEncode.md) ausgeführt werden soll.|  
-  
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Konzepte](../atl/active-template-library-atl-concepts.md)   
- [ATL COM Desktop Components](../atl/atl-com-desktop-components.md)
+ [ATL-COM-Desktop-Komponenten](../atl/atl-com-desktop-components.md)
+

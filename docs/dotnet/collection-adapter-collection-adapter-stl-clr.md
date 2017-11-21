@@ -1,33 +1,32 @@
 ---
-title: "collection_adapter::collection_adapter (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::collection_adapter"
-  - "cliext::collection_adapter::collection_adapter"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "collection_adapter-Member [STL/CLR]"
+title: collection_adapter::collection_adapter (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- cliext::collection_adapter
+- cliext::collection_adapter::collection_adapter
+dev_langs: C++
+helpviewer_keywords: collection_adapter member [STL/CLR]
 ms.assetid: 7e2bb75b-d735-4135-9523-719683e06fe9
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6b7f913ffb323bcfdb61d9d181f71297ec119e1a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# collection_adapter::collection_adapter (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="collectionadaptercollectionadapter-stlclr"></a>collection_adapter::collection_adapter (STL/CLR)
 Erstellt ein Adapterobjekt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 collection_adapter();  
@@ -36,39 +35,39 @@ collection_adapter(collection_adapter<Coll>^ right);
 collection_adapter(Coll^ collection);  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  Auflistung  
- BCL\-Handle einzubindende.  
+ BCL-Handle zu umschließen.  
   
- right  
- Objekt für die Kopie.  
+ Rechts  
+ Zu kopierende Objekt.  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Der Konstruktor:  
   
  `collection_adapter();`  
   
- initialisiert das gespeicherte Handle mit `nullptr`.  
+ Initialisiert den gespeicherten Handle mit `nullptr`.  
   
  Der Konstruktor:  
   
  `collection_adapter(collection_adapter<Coll>% right);`  
   
- initialisiert das gespeicherte Handle mit `right``.`[collection\_adapter::base](../dotnet/collection-adapter-base-stl-clr.md)`()`.  
+ Initialisiert den gespeicherten Handle mit `right.` [collection_adapter::base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`.  
   
  Der Konstruktor:  
   
  `collection_adapter(collection_adapter<Coll>^ right);`  
   
- initialisiert das gespeicherte Handle mit `right``->`[collection\_adapter::base](../dotnet/collection-adapter-base-stl-clr.md)`()`.  
+ Initialisiert den gespeicherten Handle mit `right->` [collection_adapter::base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`.  
   
  Der Konstruktor:  
   
  `collection_adapter(Coll^ collection);`  
   
- initialisiert das gespeicherte Handle mit `collection`.  
+ Initialisiert den gespeicherten Handle mit mit `collection`.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_collection_adapter_construct.cpp   
@@ -109,15 +108,18 @@ int main()
   
 ```  
   
-  **base\(\) NULL \= True**  
- **x x x x x x**  
- **x x x x x x**  
- **x x x x x x**   
-## Anforderungen  
- **Header:** \<cliext\/Adapter\>  
+```Output  
+base() null = True  
+ x x x x x x  
+ x x x x x x  
+ x x x x x x  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext-Adapter >  
   
-## Siehe auch  
- [collection\_adapter](../dotnet/collection-adapter-stl-clr.md)   
- [collection\_adapter::operator\=](../dotnet/collection-adapter-operator-assign-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)   
+ [collection_adapter::operator= (STL/CLR)](../dotnet/collection-adapter-operator-assign-stl-clr.md)

@@ -1,34 +1,33 @@
 ---
-title: "CCommand::CreateCommand | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CCommand.CreateCommand"
-  - "CreateCommand"
-  - "CCommand::CreateCommand"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CreateCommand-Methode"
+title: 'CCommand:: CreateCommand | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CCommand.CreateCommand
+- CreateCommand
+- CCommand::CreateCommand
+dev_langs: C++
+helpviewer_keywords: CreateCommand method
 ms.assetid: 3652a313-07a1-40ec-82d6-fc7182f2a6f6
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2b5ed543cb58316a617590d4304a72459d606429
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# CCommand::CreateCommand
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="ccommandcreatecommand"></a>CCommand::CreateCommand
 Erstellt einen neuen Befehl.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -37,18 +36,18 @@ Erstellt einen neuen Befehl.
 ) throw ( );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `session`  
- \[in\] mit dem neuen Befehl zugeordnet Objekt A, `CSession`.  
+ [in] Ein `CSession` Objekt an den neuen Befehl zugeordnet werden soll.  
   
-## Rückgabewert  
- Standard\- `HRESULT`.  
+## <a name="return-value"></a>Rückgabewert  
+ Ein Standard `HRESULT`-Objekt.  
   
-## Hinweise  
- Diese Methode erstellt einen Befehl mithilfe des angegebenen Session\-Objekts.  
+## <a name="remarks"></a>Hinweise  
+ Diese Methode erstellt einen Befehl mit dem angegebenen Sitzungsobjekt.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  
   
-## Siehe auch  
- [CCommand\-Klasse](../../data/oledb/ccommand-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [CCommand-Klasse](../../data/oledb/ccommand-class.md)

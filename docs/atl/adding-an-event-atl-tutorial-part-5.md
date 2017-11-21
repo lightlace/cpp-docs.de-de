@@ -1,136 +1,137 @@
 ---
-title: "Hinzuf&#252;gen eines Ereignisses (ATL-Lernprogramm, Teil 5) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
+title: "Hinzufügen eines Ereignisses (ATL-Lernprogramm, Teil 5) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
 ms.assetid: 2de12022-3148-4ce3-8606-8a9d4274f0e9
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8cef973849a9af88cd952be69ce9d33e7a516d7a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Hinzuf&#252;gen eines Ereignisses (ATL-Lernprogramm, Teil 5)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In diesem Schritt fügen Sie `ClickIn` und ein Ereignis hinzu `ClickOut` ATL\-Steuerelement hinzu.  Sie lösen das `ClickIn`\-Ereignis aus, wenn der Benutzer in das Polygon und des Datei `ClickOut` klickt, wenn der Benutzer außerhalb klickt.  Die Aufgaben, ein Ereignis hinzuzufügen, sind wie folgt:  
+# <a name="adding-an-event-atl-tutorial-part-5"></a>Hinzufügen eines Ereignisses (ATL-Lernprogramm, Teil 5)
+In diesem Schritt fügen Sie eine `ClickIn` und ein `ClickOut` Ereignis, um das ATL-Steuerelement. Sie immer dann ausgelöst, die `ClickIn` -Ereignis, wenn der Benutzer innerhalb des Polygons und Feuer klickt `ClickOut` außerhalb der Benutzer klickt. Die Aufgaben, auf ein Ereignis hinzufügen werden wie folgt:  
   
--   Hinzufügen der `ClickIn` und `ClickOut`\-Methoden  
+-   Hinzufügen der `ClickIn` und `ClickOut` Methoden  
   
--   Generieren der Typbibliothek  
+-   Beim Generieren der Typbibliothek  
   
--   Implementieren der Verbindungspunkt\-Schnittstellen  
+-   Implementieren der Verbindungspunkt-Schnittstellen  
   
-## Hinzufügen der Methoden ClickIn und ClickOut  
- Als Sie das ATL\-Steuerelement in Schritt 2 erstellt haben, haben Sie das Kontrollkästchen **Verbindungspunkte**.  Dies hat die `_IPolyCtlEvents`\-Schnittstelle in der Polygon.idl\-Datei.  Beachten Sie die Schnittstellennameanfänge mit einem Unterstrich.  Dies ist eine Konvention, anzugeben, dass die Schnittstelle eine interne Schnittstelle ist.  Daher können Programme, die es Ihnen ermöglichen, COM\-Objekte zu durchsuchen, auswählen, um die Schnittstelle nicht für den Benutzer anzuzeigen.  Beachten Sie auch das, das **Verbindungspunkte** auswählt, hat die folgende Zeile in der Polygon.idl\-Datei, um anzugeben, dass `_IPolyCtlEvents` die standardmäßige Quellschnittstelle ist:  
+## <a name="adding-the-clickin-and-clickout-methods"></a>Hinzufügen der Methoden ClickIn und ClickOut  
+ Wenn Sie das ATL-Steuerelement in Schritt 2 erstellt haben, ausgewählt der **Verbindungspunkte** Kontrollkästchen. Dies erstellt die `_IPolyCtlEvents` Schnittstelle in der Datei Polygon.idl. Beachten Sie, dass der Schnittstellenname mit einem Unterstrich beginnt. Dies ist eine Konvention, um anzugeben, dass die eine interne Schnittstelle handelt. Daher können die Programme, die Ihnen ermöglichen, COM-Objekte zu durchsuchen auswählen, nicht auf die Schnittstelle für den Benutzer anzuzeigen. Beachten Sie auch diese Auswahl **Verbindungspunkte** die folgende Zeile hinzugefügt, in der Datei Polygon.idl, um anzugeben, dass `_IPolyCtlEvents` ist der Standard-Quellschnittstelle:  
   
  `[default, source] dispinterface _IPolyCtlEvents;`  
   
- Das Quellattribut gibt an, dass das Steuerelement die Quelle der Benachrichtigungen ist, daher wird diese Schnittstelle im Container auf.  
+ Source-Attribut gibt an, dass das Steuerelement ist die Quelle der Benachrichtigungen, damit er diese Schnittstelle für den Container aufgerufen wird.  
   
- Fügen Sie nun `ClickIn` hinzu und `ClickOut`\-Methoden zu `_IPolyCtlEvents` schließen an.  
+ Fügen Sie jetzt die `ClickIn` und `ClickOut` Methoden, um die `_IPolyCtlEvents` Schnittstelle.  
   
-#### Um die Methoden ClickIn und ClickOut hinzufügen  
+#### <a name="to-add-the-clickin-and-clickout-methods"></a>So fügen Sie die Methoden ClickIn und ClickOut hinzu  
   
-1.  Erweitern Sie in der Klassenansicht Polygon und PolygonLib, um \_IPolyCtlEvents anzuzeigen.  
+1.  Erweitern Sie in der Klassenansicht Polygon und PolygonLib, um _IPolyCtlEvents anzuzeigen.  
   
-2.  Klicken Sie auf \_IPolyCtlEvents mit der rechten Maustaste.  Klicken Sie im Kontextmenü auf **Hinzufügen** und dann auf **Methode hinzufügen**.  
+2.  Mit der rechten Maustaste _IPolyCtlEvents. Klicken Sie im Kontextmenü auf **hinzufügen**, und klicken Sie dann auf **Methode hinzufügen**.  
   
-3.  Wählen Sie **Rückgabetyp** von `void` aus.  
+3.  Wählen Sie eine **Rückgabetyp** von `void`.  
   
-4.  Gibt `ClickIn`**Methodenname** im Feld.  
+4.  Geben Sie `ClickIn` in der **Methodennamen** Feld.  
   
-5.  Die **Parameterattributein** wählen Sie das Feld aus.  
+5.  Klicken Sie unter **Parameterattribute**, wählen die **in** Feld.  
   
-6.  Wählen Sie **Parametertyp** von `LONG` aus.  
+6.  Wählen Sie eine **Parametertyp** von `LONG`.  
   
-7.  Geben Sie `x` als **Parametername** ein, und klicken Sie auf **Hinzufügen**.  
+7.  Typ `x` als die **Parametername**, und klicken Sie auf **hinzufügen**.  
   
-8.  Wiederholen Sie die Schritte 5 bis 7, dieses Mal für **Parametername** von y.  
+8.  Wiederholen Sie die Schritte 5 bis 7, dieses Mal für eine **Parametername** von `y`.  
   
 9. Klicken Sie auf **Weiter**.  
   
-10. Typ `- Methode ClickIn` als **helpstring**.  
+10. Typ `method ClickIn` als die **Helpstring**.  
   
 11. Klicken Sie auf **Fertig stellen**.  
   
-12. Wiederholen Sie die Schritte oben, um eine `ClickOut`\-Methode mit denselben Parametern `LONG``x` und `y`, dieselbe **Parameterattribute** zu definieren und der gleiche `void` Rückgabetyp.  
+12. Wiederholen Sie die obengenannten Schritte, um zu definieren eine `ClickOut` Methode mit dem gleichen `LONG` Parameter `x` und `y`, die gleiche **Parameterattribute** und demselben `void` Rückgabetyp.  
   
- Überprüfen Sie die Polygon.idl\-Datei, um anzuzeigen, dass der Code zur `_IPolyCtlEvents` Dispatchschnittstelle hinzugefügt wurde.  
+ Überprüfen Sie die Datei Polygon.idl, um festzustellen, ob der Code hinzugefügt wurde die `_IPolyCtlEvents` Disp-Schnittstelle.  
   
- Die `_IPolyCtlEvents` Dispatchschnittstelle in der Polygon.idl\-Datei sollte nun wie folgt aussehen:  
+ Die `_IPolyCtlEvents` Disp-Schnittstelle in der Datei Polygon.idl sollte jetzt wie folgt aussehen:  
   
- [!CODE [NVC_ATL_Windowing#56](../CodeSnippet/VS_Snippets_Cpp/NVC_ATL_Windowing#56)]  
+ [!code-cpp[NVC_ATL_Windowing#56](../atl/codesnippet/cpp/adding-an-event-atl-tutorial-part-5_1.idl)]  
   
- Die `ClickIn` und `ClickOut`\-Methoden nehmen die x\- und y\-Koordinaten für per Punkts als Parameter.  
+ Die `ClickIn` und `ClickOut` Methoden verwenden die x- und y-Koordinaten des Punkts geklickt wurde, als Parameter.  
   
-## Generieren der Typbibliothek  
- Generieren Sie die Typbibliothek an diesem Punkt, da der Verbindungspunkt\-Assistent sie verwendet, um auf die Informationen abrufen, die sie eine Verbindungspunkt\-Schnittstelle und eine Verbindungspunktcontainerschnittstelle für das Steuerelement erstellen.  
+## <a name="generating-the-type-library"></a>Beim Generieren der Typbibliothek  
+ Generieren Sie die Typbibliothek an diesem Punkt, weil der zeigen Datenverbindungs-Assistenten verwendet werden soll erhalten die Informationen, die es muss sich um einen Verbindungspunkt-Schnittstelle und einen Verbindungspunkt Container-Schnittstelle für das Steuerelement zu erstellen.  
   
-#### Um die Typbibliothek generieren  
+#### <a name="to-generate-the-type-library"></a>Um die Typbibliothek zu generieren.  
   
 1.  Erstellen Sie das Projekt neu.  
   
-     \- oder \-  
+     - oder -   
   
-2.  Klicken Sie auf den Polygon.idl\-Datei in Projektmappen\-Explorer mit der rechten Maustaste auf und klicken Sie auf **Kompilieren** im Kontextmenü.  
+2.  Mit der rechten Maustaste im Projektmappen-Explorer der Polygon.idl-Datei, und klicken Sie auf **Kompilieren** im Kontextmenü.  
   
- Damit wird die Polygon.tlb\-Datei, die die Typbibliothek ist.  Die Polygon.tlb\-Datei ist nicht im Projektmappen\-Explorer angezeigt, da es eine Binärdatei ist und nicht direkt angezeigt oder bearbeitet werden kann.  
+ Dadurch wird die Datei Polygon.tlb erstellt die Typbibliothek also. Die Datei Polygon.tlb ist nicht im Projektmappen-Explorer sichtbar, da es eine Binärdatei ist und kann nicht angezeigt oder bearbeitet werden direkt.  
   
-## Implementieren der Verbindungspunkt\-Schnittstellen  
- Implementieren Sie eine Verbindungspunkt\-Schnittstelle und eine Verbindungspunktcontainerschnittstelle für das Steuerelement.  In COM werden Ereignisse durch den Mechanismus von Verbindungspunkten implementiert.  Um Ereignisse von einem COM\-Objekt zu empfangen, richtet ein Container eine Advise\-Verbindung dem Verbindungspunkt ein den das COM\-Objekt implementiert.  Da ein COM\-Objekt mehrere Verbindungspunkte haben kann, implementiert das COM\-Objekt auch eine Verbindungspunktcontainerschnittstelle.  Durch diese Schnittstelle kann der Container bestimmen, welche Verbindungspunkte unterstützt werden.  
+## <a name="implementing-the-connection-point-interfaces"></a>Implementieren der Verbindungspunkt-Schnittstellen  
+ Implementieren Sie einen Verbindungspunkt-Schnittstelle und einen Verbindungspunkt Container-Schnittstelle für das Steuerelement. In COM werden Ereignisse über den Mechanismus der Verbindungspunkte implementiert. Zum Empfangen von Ereignissen von einem COM-Objekt, stellt ein Container zum Verbindungspunkt, den das COM-Objekt implementiert eine Advise-Verbindung her. Da ein COM-Objekt mehrere Verbindungspunkte aufweisen darf, implementiert das COM-Objekt auch eine Verbindungspunkt Container-Schnittstelle. Über diese Schnittstelle kann der Container bestimmen, welche Verbindungspunkte unterstützt werden.  
   
- Die Schnittstelle, die einen Verbindungspunkt implementiert, wird `IConnectionPoint` und die Schnittstelle, die einen Verbindungspunktcontainer implementiert, wird aufgerufen `IConnectionPointContainer` aufgerufen.  
+ Die Schnittstelle, die einen Verbindungspunkt implementiert heißt `IConnectionPoint`, und die Schnittstelle, die einen Verbindung Punkt Container implementiert heißt `IConnectionPointContainer`.  
   
- Um die `IConnectionPoint` zu implementieren, verwenden Sie den Assistenten zum Implementieren von Verbindungspunkten.  Dieser Assistent generiert die `IConnectionPoint`\-Schnittstelle, indem er die Typbibliothek liest und eine Funktion für jedes Ereignis implementiert, das ausgelöst werden kann.  
+ Helfen Sie beim Implementieren `IConnectionPoint`, verwenden Sie den Assistenten zum Implementieren von Verbindungspunkten. Dieser Assistent generiert die `IConnectionPoint` Schnittstelle durch die Typbibliothek lesen und implementiert eine Funktion für jedes Ereignis, das ausgelöst werden kann.  
   
-#### Um den Assistenten zum Implementieren von Verbindungspunkten verwenden  
+#### <a name="to-use-the-implement-connection-point-wizard"></a>Assistent zum Implementieren von Verbindung verwenden  
   
-1.  Klicken Sie in der Klassenansicht auf die Implementierungsklasse `CPolyCtl` des Steuerelements mit der rechten Maustaste.  
+1.  In der Klassenansicht Maustaste Implementierungsklasse des Steuerelements `CPolyCtl`.  
   
-2.  Klicken Sie im Kontextmenü **Hinzufügen** klicken Sie auf und dann auf **Verbindungspunkt hinzufügen**.  
+2.  Klicken Sie im Kontextmenü auf **hinzufügen**, und klicken Sie dann auf **Verbindungspunkt hinzufügen**.  
   
-3.  Ausgewähltes `_IPolyCtlEvents` aus der Liste **Quellschnittstellen** und doppelklicken darauf, um sie der Spalte **Verbindungspunkte implementieren** hinzuzufügen.  Klicken Sie auf **Fertig stellen**.  Eine Proxyklasse für den Verbindungspunkt wird in diesem Fall `CProxy_IPolyCtlEvents` generiert.  
+3.  Wählen Sie `_IPolyCtlEvents` aus der **Schnittstellen** aus, und doppelklicken Sie auf die sie zum Hinzufügen der **Implementieren von Verbindungspunkten** Spalte. Klicken Sie auf **Fertig stellen**. Eine Proxyklasse für den Verbindungspunkt generiert werden, in diesem Fall `CProxy_IPolyCtlEvents`.  
   
- Wenn Sie den generierten \_IPolyCtlEvents\_CP.h\-Datei im Projektmappen\-Explorer anschauen, sehen Sie, dass sie eine Klasse hat, die `CProxy_IPolyCtlEvents` aufgerufen wird, die von `IConnectionPointImpl` abgeleitet.  \_IPolyCtlEvents\_CP.h definiert auch die zwei Methoden `Fire_ClickIn` und `Fire_ClickOut`, die die zwei koordinieren Parameter annehmen.  Sie rufen diese Methoden auf, wenn Sie ein Ereignis von dem Steuerelement auslösen möchten.  
+ Wenn Sie im Projektmappen-Explorer auf die Datei _IPolyCtlEvents_CP.h betrachten, sehen Sie, dass sie eine Klasse mit dem Namen hat `CProxy_IPolyCtlEvents` abgeleitet, die `IConnectionPointImpl`. _IPolyCtlEvents_CP.h definiert auch die beiden Methoden `Fire_ClickIn` und `Fire_ClickOut`, was die beiden-Koordinate Parameter in Anspruch nehmen. Sie können diese Methoden aufrufen, wenn ein Ereignis über das Steuerelement ausgelöst werden sollen.  
   
- Der Assistent auch hinzugefügtes `CProxy_PolyEvents` und `IConnectionPointContainerImpl` zur Mehrfachvererbungsliste des Steuerelements.  Der Assistent auch verfügbar gemacht `IConnectionPointContainer` für Sie durch Hinzufügen von entsprechenden Einträgen zur COM\-Zuordnung.  
+ Der Assistent ebenfalls hinzugefügt `CProxy_PolyEvents` und `IConnectionPointContainerImpl` auf mehrere Vererbungsliste des Steuerelements. Der Assistent ebenfalls verfügbar gemacht, `IConnectionPointContainer` für Sie von der COM-Zuordnung entsprechende Einträge hinzugefügt.  
   
- Sie werden den Code implementiert, um Ereignisse zu unterstützen beendet.  Als Nächstes fügen Sie Code hinzu, um die Ereignisse am entsprechenden Zeitpunkt auszulösen.  Beachten Sie, `ClickIn` werden ein oder `ClickOut`\-Ereignis auslösen, wenn der Benutzer auf die linke Maustaste im Steuerelement klickt.  Um herauszufinden wenn der Benutzer auf die Schaltfläche klickt, fügen Sie einen Handler für die `WM_LBUTTONDOWN` Meldung hinzu.  
+ Sie sind fertig, implementieren den Code, um Ereignisse zu unterstützen. Nun fügen Sie Code zum Auslösen der Ereignisse zum geeigneten Zeitpunkt. Denken Sie daran, Sie sind im Begriff für das Auslösen einer `ClickIn` oder `ClickOut` Ereignis aus, wenn der Benutzer die linke Maustaste in das Steuerelement klickt. Um herauszufinden, wenn der Benutzer die Schaltfläche klickt, fügen Sie einen Handler für das `WM_LBUTTONDOWN` Nachricht.  
   
-#### So fügen Sie einen Handler für die WM\_LBUTTONDOWN\-Meldung hinzufügen  
+#### <a name="to-add-a-handler-for-the-wmlbuttondown-message"></a>So fügen Sie einen Handler für die Nachricht WM_LBUTTONDOWN hinzu  
   
-1.  Klicken Sie in der Klassenansicht auf die CPolyCtl\-Klasse mit der rechten Maustaste auf und klicken Sie auf **Eigenschaften** im Kontextmenü.  
+1.  Klicken Sie in der Klassenansicht mit der rechten Maustaste der CPolyCtl-Klasse, und klicken Sie auf **Eigenschaften** im Kontextmenü.  
   
-2.  Im Fenster **Eigenschaften** klicken Sie auf das Symbol **Meldungen** und dann auf `WM_LBUTTONDOWN` aus der Liste links.  
+2.  In der **Eigenschaften** Fenster, klicken Sie auf die **Nachrichten** Symbol, und klicken Sie dann auf `WM_LBUTTONDOWN` aus der Liste auf der linken Seite.  
   
-3.  Klicken Sie in der Dropdownliste, die angezeigt wird, auf **\<Hinzufügen\> OnLButtonDown**.  Die `OnLButtonDown`\-Handlerdeklaration wird zu PolyCtl.h hinzugefügt, und die Handlerimplementierung wird zu PolyCtl.cpp hinzugefügt.  
+3.  Klicken Sie in der Dropdownliste auf  **\<hinzufügen > OnLButtonDown**. Die `OnLButtonDown` PolyCtl.h Handlerdeklaration hinzugefügt, und die Handlerimplementierung PolyCtl.cpp hinzugefügt.  
   
- Als Nächstes ändern Sie den Handler.  
+ Als Nächstes ändern Sie den Ereignishandler an.  
   
-#### Um die OnLButtonDown\-Methode ändern  
+#### <a name="to-modify-the-onlbuttondown-method"></a>So ändern Sie die OnLButtonDown-Methode  
   
-1.  Ändern Sie den Code, der die `OnLButtonDown`\-Methode in PolyCtl.cpp enthält \(Code Löschen platziert vom Assistenten\) für sie wie folgt aussieht:  
+1.  Ändern Sie den Code der umfasst die `OnLButtonDown` Methode in PolyCtl.cpp (Code platziert, die vom Assistenten gelöscht), damit er wie folgt aussieht:  
   
-     [!CODE [NVC_ATL_Windowing#57](../CodeSnippet/VS_Snippets_Cpp/NVC_ATL_Windowing#57)]  
+     [!code-cpp[NVC_ATL_Windowing#57](../atl/codesnippet/cpp/adding-an-event-atl-tutorial-part-5_2.cpp)]  
   
- Dieser Code verwendet die Punkte aus, die in der `OnDraw`\-Funktion berechnet werden, um einen Bereich zu erstellen, der die Mausklicks des Benutzers mit dem Aufruf von `PtInRegion` erkennt.  
+ Dies ermöglicht die Verwendung der Punkte berechnet, in Code die `OnDraw` Funktion, um einen Bereich zu erstellen, das erkennt Mausklicks des Benutzers mit dem Aufruf von `PtInRegion`.  
   
- Der `uMsg`\-Parameter ist die ID der Windows\-Meldung, die behandelt wird.  Dies ermöglicht Ihnen, eine Funktion zu verwenden, die einen Bereich von Meldungen behandelt.  `wParam` und die `lParam`\-Parameter sind die Standardwerte für die Meldung, die behandelt wird.  Der bHandled Parameter ermöglicht es Ihnen, um anzugeben, ob die Funktion die Meldung oder unveränderte.  Standardmäßig ist der Wert auf `TRUE` festgelegt, um anzugeben, dass die Funktion die bearbeitete Meldung, aber Sie sie zu `FALSE` festlegen können.  Dadurch wird ATL, das Suchen nach einer anderen Meldungshandlerfunktion fortsetzen, um die Meldung an zu senden.  
+ Die `uMsg` Parameter ist die ID des Windows-Meldung, die verarbeitet wird. Dadurch können Sie eine bestimmte Funktion vorhanden sein, die einen Bereich von Nachrichten verarbeitet. Die `wParam` und `lParam` Parameter sind die Standardwerte für die Nachricht verarbeitet wird. Der Parameter bHandled können Sie angeben, ob die Funktion die Nachricht oder nicht verarbeitet. Der Wert wird standardmäßig auf festgelegt `TRUE` , um anzugeben, dass die Funktion die Nachricht behandelt, aber Sie sie, um festlegen können `FALSE`. Dies bewirkt, dass ATL zum Suchen nach einer anderen Meldungshandlerfunktion zum Senden der Nachricht zu fortfahren.  
   
-## Erstellen und Testen des Steuerelements  
- Testen Sie nun die Ereignisse aus.  Erstellen Sie das Steuerelement und stellen Sie den Testcontainer für ActiveX\-Steuerelemente erneut an.  Dieses Mal, zeigen das Ereignisprotokollfenster an.  Um Ereignisse in das Ausgabefenster weiterzuleiten, klicken Sie auf **Protokollierung** vom Menü **Optionen** und wählen Sie **In Ausgabefenster protokollieren** aus.  Fügen Sie das Steuerelement und versuchen ein, die im Fenster klicken.  Beachten Sie, dass `ClickIn` ausgelöst wird, wenn Sie innerhalb des ausgefüllten Polygon klicken, und `ClickOut` wird ausgelöst, wenn Sie außerhalb davon klicken.  
+## <a name="building-and-testing-the-control"></a>Erstellen und Testen des Steuerelements  
+ Jetzt können Sie Ihre Ereignisse. Erstellen Sie das Steuerelement, und starten Sie den Testcontainer für ActiveX-Steuerelemente erneut. Zeigen Sie diesmal, das Ereignisprotokoll-Fenster. Um Ereignisse an das Fenster "Ausgabe" weiterzuleiten, klicken Sie auf **Protokollierung** aus der **Optionen** Menü **Protokoll, um das Fenster "Ausgabe"**. Fügen Sie das Steuerelement, und klicken Sie im Fenster auf. Beachten Sie, dass `ClickIn` wird ausgelöst, wenn Sie innerhalb des ausgefüllten Polygons klicken und `ClickOut` wird ausgelöst, wenn Sie außerhalb davon klicken.  
   
- Als Nächstes fügen Sie eine Eigenschaftenseite hinzu.  
+ Als Nächstes fügen Sie eine Eigenschaftenseite.  
   
- [Zurück zu Schritt 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md) &#124; [Klicken Sie zu Schritt 6](../atl/adding-a-property-page-atl-tutorial-part-6.md)  
+ [Zurück zu Schritt 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md) &#124; [Mit Schritt 6 fort](../atl/adding-a-property-page-atl-tutorial-part-6.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Lernprogramm](../atl/active-template-library-atl-tutorial.md)
+

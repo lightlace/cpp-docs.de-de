@@ -1,32 +1,30 @@
 ---
-title: "hash_map::generic_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::generic_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_iterator-Member [STL/CLR]"
+title: hash_map::generic_iterator (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::generic_iterator
+dev_langs: C++
+helpviewer_keywords: generic_iterator member [STL/CLR]
 ms.assetid: 2899eeae-5339-45bb-9d0f-42ce031f1b39
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1dc137753d13b76a48dbd0689042f39c9edb6428
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# hash_map::generic_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Der Typ eines Iterators zur Verwendung mit der generischen Schnittstelle für den Container.  
+# <a name="hashmapgenericiterator-stlclr"></a>hash_map::generic_iterator (STL/CLR)
+Der Typ eines Iterators für die Verwendung mit der generischen Schnittstelle für den Container.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef Microsoft::VisualC::StlClr::Generic::  
@@ -34,10 +32,10 @@ typedef Microsoft::VisualC::StlClr::Generic::
     generic_iterator;  
 ```  
   
-## Hinweise  
- Der Typ beschreibt einen generischen Iterator, der mit der generischen Schnittstelle für diese Vorlagencontainerklasse verwendet werden kann.  
+## <a name="remarks"></a>Hinweise  
+ Der Typ beschreibt einen generischen Iterator, der für diese Vorlage Container-Klasse mit der generischen Schnittstelle verwendet werden kann.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_hash_map_generic_iterator.cpp   
@@ -73,14 +71,17 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[bc 3\]**  
- **\[1\] \[2\] \[bc 3\]**  
- **\[1\]**   
-## Anforderungen  
- **Header:** \<cliext\/hash\_map\>  
+```Output  
+[a 1] [b 2] [c 3]  
+[a 1] [b 2] [c 3]  
+[a 1]  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext Hash_map/>  
   
-## Siehe auch  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::generic\_container](../dotnet/hash-map-generic-container-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [hash_map-Element (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::generic_container (STL/CLR)](../dotnet/hash-map-generic-container-stl-clr.md)

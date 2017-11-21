@@ -1,32 +1,30 @@
 ---
-title: "range_adapter (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::range_adapter"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "range_adapter-Klasse [STL/CLR]"
+title: Range_adapter (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::range_adapter
+dev_langs: C++
+helpviewer_keywords: range_adapter class [STL/CLR]
 ms.assetid: 3fbe2a65-1216-46a0-a182-422816b80cfb
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5455c1912b3108291f530ee9488a4e0078ba39a2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# range_adapter (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Eine Klasse, die ein Paar Iteratoren umschließt, die verwendet werden, um einige Basisklassenbibliothek \(BCL\) zu implementieren, wird angezeigt.  Sie verwenden das range\_adapter, um einen CLR\-Bereich STL\/bearbeiten, als ob eine BCL\-Auflistung war.  
+# <a name="rangeadapter-stlclr"></a>range_adapter (STL/CLR)
+Eine Vorlagenklasse, die ein Paar von Iteratoren umschließt, mit denen mehrere Basisklassenbibliothek (Base Class Library, BCL)-Schnittstellen implementieren. Sie verwenden die Range_adapter einen STL/CLR-Bereich bearbeiten, als handele es sich um eine BCL-Auflistung.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<typename Iter>  
@@ -39,37 +37,37 @@ template<typename Iter>
     { ..... };  
 ```  
   
-#### Parameter  
- ITER  
- Der Typ zugeordnete den umschlossenen Iteratoren.  
+#### <a name="parameters"></a>Parameter  
+ iter  
+ Der Typ, der die umschlossenen Iteratoren zugeordnet wird.  
   
-## Member  
+## <a name="members"></a>Mitglieder  
   
-|Memberfunktion|**Beschreibung**|  
-|--------------------|----------------------|  
-|[range\_adapter::range\_adapter](../dotnet/range-adapter-range-adapter-stl-clr.md)|Erstellt ein Adapterobjekt.|  
+|Memberfunktion|Beschreibung|  
+|---------------------|-----------------|  
+|[range_adapter::range_adapter (STL/CLR)](../dotnet/range-adapter-range-adapter-stl-clr.md)|Erstellt ein Adapterobjekt.|  
   
-|Operator|**Beschreibung**|  
-|--------------|----------------------|  
-|[range\_adapter::operator\=](../dotnet/range-adapter-operator-assign-stl-clr.md)|Ersetzt die gespeicherten Iteratorpaare.|  
+|Operator|Beschreibung|  
+|--------------|-----------------|  
+|[range_adapter::operator= (STL/CLR)](../dotnet/range-adapter-operator-assign-stl-clr.md)|Ersetzt den gespeicherten Iterator-Paar.|  
   
-## Schnittstellen  
+## <a name="interfaces"></a>Schnittstellen  
   
-|Schnittstelle|**Beschreibung**|  
-|-------------------|----------------------|  
-|<xref:System.Collections.IEnumerable>|Durchlaufen von Elementen in der Auflistung durch.|  
-|<xref:System.Collections.ICollection>|Verwendet eine Elementgruppe bei.|  
-|<xref:System.Collections.Generic.IEnumerable`1>|Läuft von typisierten Elemente in der Auflistung. durch.|  
-|<xref:System.Collections.Generic.ICollection`1>|Verwendet eine Gruppe typisierten Elemente bei.|  
+|Schnittstelle|Beschreibung|  
+|---------------|-----------------|  
+|<xref:System.Collections.IEnumerable>|Durchlaufen Elemente in der Auflistung ein.|  
+|<xref:System.Collections.ICollection>|Verwaltet eine Gruppe von Elementen an.|  
+|<xref:System.Collections.Generic.IEnumerable%601>|Durchläuft typisierter Elemente in der Auflistung...|  
+|<xref:System.Collections.Generic.ICollection%601>|Verwaltet eine Gruppe von typisierten Elementen an.|  
   
-## Hinweise  
- Das range\_adapter speichert ein Paar Iteratoren, die wiederum eine Sequenz von Elementen begrenzen.  Das Objekt implementiert vier BCL\-Schnittstellen, die durch die Elemente durchlaufen haben, in der Reihenfolge.  Sie verwenden diese Vorlagenklasse, dass STL\/CLR\-Bereiche ähnlich wie BCL\-Container zu bearbeiten.  
+## <a name="remarks"></a>Hinweise  
+ Die Range_adapter speichert ein Paar von Iteratoren, die wiederum eine Sequenz von Elementen zu begrenzen. Das Objekt implementiert vier BCL-Schnittstellen, mit die die Elemente in Reihenfolge durchlaufen können. STL/CLR-Bereiche, ähnlich wie BCL Container bearbeiten, verwenden Sie diese Vorlagenklasse.  
   
-## Anforderungen  
- **Header:** \<cliext\/Adapter\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext-Adapter >  
   
- **Namespace:** cliext  
+ **Namespace:** Cliext  
   
-## Siehe auch  
- [collection\_adapter](../dotnet/collection-adapter-stl-clr.md)   
- [make\_collection](../dotnet/make-collection-stl-clr.md)
+## <a name="see-also"></a>Siehe auch  
+ [Collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)   
+ [make_collection (STL/CLR)](../dotnet/make-collection-stl-clr.md)

@@ -1,32 +1,30 @@
 ---
-title: "multimap::generic_container (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::generic_container"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_container-Member [STL/CLR]"
+title: multimap::generic_container (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::generic_container
+dev_langs: C++
+helpviewer_keywords: generic_container member [STL/CLR]
 ms.assetid: fc7ef7a4-80b4-472f-8911-6b9950b81d6c
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 561fd0faad299ec4fd80073e678eaee65392eab2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# multimap::generic_container (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multimapgenericcontainer-stlclr"></a>multimap::generic_container (STL/CLR)
 Der Typ der generischen Schnittstelle für den Container.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef Microsoft::VisualC::StlClr::  
@@ -34,10 +32,10 @@ typedef Microsoft::VisualC::StlClr::
     generic_container;  
 ```  
   
-## Hinweise  
- Der Typ beschreibt die generische Schnittstelle für diese Vorlagencontainerklasse.  
+## <a name="remarks"></a>Hinweise  
+ Der Typ beschreibt die generische Schnittstelle für diese Vorlage Container-Klasse.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_multimap_generic_container.cpp   
@@ -79,15 +77,18 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[bc 3\]**  
- **\[1\] \[2\] \[bc 3\]**  
- **\[1\] \[b 2\] \[3\] \[cd 4\]**  
- **\[1\] \[2\] \[b c 3\] \[d\] \[4e 5\]**   
-## Anforderungen  
- **Header:** \<cliext\/Zuordnung\>  
+```Output  
+[a 1] [b 2] [c 3]  
+[a 1] [b 2] [c 3]  
+[a 1] [b 2] [c 3] [d 4]  
+[a 1] [b 2] [c 3] [d 4] [e 5]  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Map >  
   
-## Siehe auch  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::generic\_iterator](../dotnet/multimap-generic-iterator-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap::generic_iterator (STL/CLR)](../dotnet/multimap-generic-iterator-stl-clr.md)

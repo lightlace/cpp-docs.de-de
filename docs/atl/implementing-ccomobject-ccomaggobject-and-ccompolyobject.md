@@ -1,49 +1,50 @@
 ---
-title: "Implementing CComObject, CComAggObject, and CComPolyObject | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CComPolyObject"
-  - "CComAggObject"
-  - "CComObject"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CComAggObject class"
-  - "CComObject class, Implementieren"
-  - "CComPolyObject class, Implementieren"
-  - "CreateInstance-Methode"
+title: Implementieren von CComObject, CComAggObject und CComPolyObject | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CComPolyObject
+- CComAggObject
+- CComObject
+dev_langs: C++
+helpviewer_keywords:
+- CComPolyObject class, implementing
+- CreateInstance method
+- CComAggObject class
+- CComObject class, implementing
 ms.assetid: 5aabe938-104d-492e-9c41-9f7fb1c62098
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bb74d68bb8974f820ac09a0c56930d835a3fe7f3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Implementing CComObject, CComAggObject, and CComPolyObject
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die Vorlagenklassen [CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md) und [CComPolyObject](../atl/reference/ccompolyobject-class.md) sind immer die meisten abgeleitete Klassen in der Vererbungskette.  Es ist ihre Zuständigkeiten, alle Methoden in **IUnknown** zu behandeln: `QueryInterface`, `AddRef` und **Release**.  Außerdem stellen `CComAggObject` und `CComPolyObject` \(wenn Sie für zusammengesetzte Objekte verwendet werden\), die spezielle Verweiszählung und die `QueryInterface` Semantik, die für das innere Unbekannte erforderlich sind.  
+# <a name="implementing-ccomobject-ccomaggobject-and-ccompolyobject"></a>Implementieren von CComObject, CComAggObject und CComPolyObject
+Die Vorlagenklassen [CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md), und [CComPolyObject](../atl/reference/ccompolyobject-class.md) sind immer die am stärksten abgeleiteten Klassen in der Vererbungskette. Es liegt in ihrer Verantwortung zur Behandlung aller Methoden in **IUnknown**: `QueryInterface`, `AddRef`, und **Version**. Darüber hinaus `CComAggObject` und `CComPolyObject` (Wenn für aggregierte Objekte verwendet wird) bereitstellen, die spezielle verweiszählung und `QueryInterface` Semantik für die innere unbekannte erforderlich sind.  
   
- Ob `CComObject`, `CComAggObject` oder `CComPolyObject` verwendet wird, hängt davon ab, ob Sie eine \(oder keine\) der folgenden Makros deklarieren:  
+ Ob `CComObject`, `CComAggObject`, oder `CComPolyObject` wird verwendet, richtet sich nach, ob Sie eine (oder keine) der folgenden Makros deklarieren:  
   
-|Makro|Effect|  
+|Makro|Effekt|  
 |-----------|------------|  
-|`DECLARE_NOT_AGGREGATABLE`|Wird immer `CComObject`.|  
-|`DECLARE_AGGREGATABLE`|Wird `CComAggObject`, wenn das Objekt und `CComObject` aggregiert wird, wenn nicht ist.  `CComCoClass` enthält dieses Makro so, wenn keine der **DECLARE\_\*\_AGGREGATABLE**\-Makros in der Klasse deklariert werden, dies ist die Standardeinstellung.|  
-|`DECLARE_ONLY_AGGREGATABLE`|Wird immer `CComAggObject`.  Gibt einen Fehler zurück, wenn das Objekt nicht aggregiert wird.|  
-|`DECLARE_POLY_AGGREGATABLE`|ATL erstellt eine Instanz von **CComPolyObject\<CYourClass\>**, wenn **IClassFactory::CreateInstance** aufgerufen wird.  Bei der Erstellung wird der Wert des äußeren Unbekannten überprüft.  Wenn es **NULL** ist, wird **IUnknown** für ein aggregiertes Objekt nicht implementiert.  Wenn das äußere Unbekannte nicht **NULL** ist, wird **IUnknown** für ein zusammengesetztes Objekt implementiert.|  
+|`DECLARE_NOT_AGGREGATABLE`|Verwendet immer `CComObject`.|  
+|`DECLARE_AGGREGATABLE`|Verwendet `CComAggObject` , wenn das Objekt aggregiert wird und `CComObject` wird jedoch nicht. `CComCoClass`Dieses Makro enthält, wenn keines der **DECLARE_\*_AGGREGATABLE** Makros werden dies ist der Standardwert wird in der Klasse deklariert.|  
+|`DECLARE_ONLY_AGGREGATABLE`|Verwendet immer `CComAggObject`. Gibt einen Fehler zurück, wenn das Objekt nicht aggregiert werden.|  
+|`DECLARE_POLY_AGGREGATABLE`|ATL erstellt eine Instanz des **CComPolyObject\<CYourClass >** Wenn **IClassFactory:: CreateInstance** aufgerufen wird. Während der Erstellung wird der Wert, der die äußere unbekannte überprüft. Ist er **NULL**, **IUnknown** für eine aggregierte Objekt implementiert wird. Wenn die äußere unbekannte nicht **NULL**, **IUnknown** für ein zusammengesetztes Objekt implementiert wird.|  
   
- Der Vorteil der Verwendung von `CComAggObject` und von `CComObject` ist, dass die Implementierung von **IUnknown** für die Art des Objekts optimiert ist, das erstellt wird.  Beispielsweise muss für ein aggregiertes Objekt nicht nur einen Verweiszähler, während ein zusammengesetztes Objekt einen Verweiszähler für das innere unbekannte und einen Zeiger auf den äußeren Unbekannten erfordert.  
+ Der Vorteil der Verwendung `CComAggObject` und `CComObject` ist, die die Implementierung der **IUnknown** ist optimiert für die Art des zu erstellenden Objekts. Ein aggregierte Objekt benötigt z. B. nur einen Verweiszähler während ein zusammengesetzten Objekts einen Verweiszähler für den inneren unbekannt und ein Zeiger auf die äußere unbekannte benötigt.  
   
- Der Vorteil der Verwendung von `CComPolyObject` ist, dass Sie vermeiden, `CComAggObject` und `CComObject` im Modul verfügen, um die aggregierten und nicht aggregierten Fälle zu behandeln.  Einzelne `CComPolyObject`\-Objekthandles beide Fälle.  Dies bedeutet, dass nur eine Kopie des vtable und eine Kopie der Funktionen im Modul vorhanden sind.  Wenn das vtable groß ist, kann dies die Modulgröße erheblich beeinträchtigt.  Wenn das vtable ist, mit `CComPolyObject` eine einige größere Modulgröße führen klein, da sie nicht für ein aggregiertes oder nicht aggregiertes Objekt optimiert wird, wie können `CComAggObject` und `CComObject`.  
+ Der Vorteil der Verwendung `CComPolyObject` ist, dass Sie vermeiden, dass beide `CComAggObject` und `CComObject` innerhalb des Moduls, die zusammengefasste und aggregierte Fälle zu behandeln. Ein einzelnes `CComPolyObject` Objekt verarbeitet die beiden Fällen. Dies bedeutet, dass nur eine Kopie der Vtable und eine Kopie der Funktionen, die innerhalb des Moduls vorhanden sind. Wenn Ihre Vtable groß ist, kann dies die Modulgröße erheblich verringern. Jedoch verwenden, wenn die Vtable klein ist, `CComPolyObject` kann dazu führen, etwas Modul größer, da sie nicht für ein Objekt aggregierten oder aggregierte optimiert ist wie `CComAggObject` und `CComObject`.  
   
-## Siehe auch  
- [Fundamentals of ATL COM Objects](../atl/fundamentals-of-atl-com-objects.md)   
- [Aggregation and Class Factory Macros](../atl/reference/aggregation-and-class-factory-macros.md)
+## <a name="see-also"></a>Siehe auch  
+ [Grundlagen von ATL-COM-Objekten](../atl/fundamentals-of-atl-com-objects.md)   
+ [Aggregation und Klassenfactory-Makros](../atl/reference/aggregation-and-class-factory-macros.md)
+

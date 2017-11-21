@@ -1,41 +1,39 @@
 ---
-title: "vector::iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "iterator-Member [STL/CLR]"
+title: 'Vector:: Iterator (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::iterator
+dev_langs: C++
+helpviewer_keywords: iterator member [STL/CLR]
 ms.assetid: a99932ac-c29e-4851-9331-9367f4dd9440
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0f3a63e6ce5e2aa86fd869081f60735a9ddda0b6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# vector::iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vectoriterator-stlclr"></a>vector::iterator (STL/CLR)
 Der Typ eines Iterators für die gesteuerte Sequenz.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef T1 iterator;  
 ```  
   
-## Hinweise  
- Der Typ beschreibt ein Objekt des angegebenen Typs nicht `T1`, das als wahlfreier Iterator mit Zugriff für die gesteuerte Sequenz dienen kann.  
+## <a name="remarks"></a>Hinweise  
+ Der Typ beschreibt ein Objekt vom angegebenen Typ `T1` , die als ein random-Access-Iterator für die gesteuerte Sequenz fungieren kann.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_vector_iterator.cpp   
@@ -66,13 +64,16 @@ int main()
   
 ```  
   
-  **ein b c**  
- **x b c**   
-## Anforderungen  
- **Header:** \<cliext\/Vektor\>  
+```Output  
+a b c  
+x b c  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Vektor >  
   
-## Siehe auch  
- [Vektor](../dotnet/vector-stl-clr.md)   
- [vector::const\_iterator](../dotnet/vector-const-iterator-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Vektor (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector::const_iterator (STL/CLR)](../dotnet/vector-const-iterator-stl-clr.md)

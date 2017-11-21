@@ -1,32 +1,30 @@
 ---
-title: "set::erase (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::erase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "erase-Member [STL/CLR]"
+title: 'Set:: Erase (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::erase
+dev_langs: C++
+helpviewer_keywords: erase member [STL/CLR]
 ms.assetid: 0596514b-d4cd-4d2d-8223-3bee6980261c
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0589adef3064fd6ea233fa05dd09f091a3cc2221
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# set::erase (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="seterase-stlclr"></a>set::erase (STL/CLR)
 Entfernt Elemente an den angegebenen Positionen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 iterator erase(iterator where);  
@@ -34,29 +32,29 @@ iterator erase(iterator first, iterator last);
 size_type erase(key_type key)  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  first  
- Anfang zu löschen des Bereichs.  
+ Anfang des Bereichs, der gelöscht.  
   
- Schlüssel  
- So löschen Schlüsselwert.  
+ Key  
+ Der Schlüsselwert, zu löschen.  
   
  last  
- Ende zu löschen des Bereichs.  
+ Das Ende des Bereichs zu löschen.  
   
- deinen  
- So löschen Element.  
+ wo  
+ Element löschen.  
   
-## Hinweise  
- Die erste Memberfunktion gesteuerten entfernt das Element der Sequenz, die von `where` dargestellte und gibt ein Iterator, der das erste Element zurück festgelegt wird, das über dem entfernten Element hinaus bleibt, oder [set::end](../dotnet/set-end-stl-clr.md)`()`, wenn kein solches Element vorhanden ist.  Sie verwenden sie, um ein einzelnes Element zu entfernen.  
+## <a name="remarks"></a>Hinweise  
+ Die erste Memberfunktion entfernt das Element der kontrollierten Sequenz verweist `where`, und gibt einen Iterator, der das erste Element, das über das Element entfernt wurde, oder [Set:: End (STL/CLR)](../dotnet/set-end-stl-clr.md) `()` Wenn kein solches Element vorhanden ist. Es können Sie verwenden, um ein einzelnes Element zu entfernen.  
   
- Die zweite Memberfunktion entfernt die Elemente der gesteuerten Sequenz im Bereich `[``first``,` `last``)` und gibt ein Iterator, der das erste Element festgelegt, das über allen Elementen entfernt hinaus bleibt, oder `end()` zurück, wenn kein solches Element vorhanden ist.  Sie verwenden sie, dass Nullen oder zu entfernen zusammenhängendere Elemente.  
+ Die zweite Memberfunktion entfernt die Elemente der gesteuerten Sequenz im Bereich [`first`, `last`), und gibt einen Iterator, der das erste Element, das über alle Elemente entfernt wurden, oder `end()` Wenn kein solches Element vorhanden ist... Sie verwenden es, NULL oder mehr aufeinander folgende Elemente entfernt.  
   
- Die dritte Memberfunktion entfernt jedes Element der Sequenz, deren Schlüssel gesteuerten entsprechenden Reihenfolge zu `key`, und gibt die Anzahl die Anzahl der entfernten Elemente zurück.  Sie verwenden sie, um alle Elemente zu entfernen und zu erfassen, die einen angegebenen Schlüssel übereinstimmen.  
+ Die dritte Memberfunktion entfernt jedes Element der gesteuerten Sequenz, deren Schlüssel hat die entsprechende Reihenfolge, zu `key`, und gibt die Anzahl der entfernten Elemente zurück. Sie verwenden es, zu entfernen und alle Elemente, die einen angegebenen Schlüssel entsprechen gezählt.  
   
- Jede Elementlöschung akzeptiert die Uhrzeit, die dem Logarithmus der Anzahl der Elemente in der Sequenz gesteuerten proportional ist.  
+ Jedes Element Löschung dauert einige Zeit, die proportional zum Logarithmus der Anzahl der Elemente in der kontrollierten Sequenz.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_set_erase.cpp   
@@ -97,16 +95,19 @@ int main()
   
 ```  
   
-  **ein b c**  
-**erase\(begin\(\)\) \= b**  
- **c b d e**  
-**erase\(begin\(\), end\(\)\-1\) \= e**  
-**size\(\) \= 1**   
-## Anforderungen  
- **Header:** \<cliext\/Satz\>  
+```Output  
+ a b c  
+erase(begin()) = b  
+ b c d e  
+erase(begin(), end()-1) = e  
+size() = 1  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Set >  
   
-## Siehe auch  
- [set](../dotnet/set-stl-clr.md)   
- [set::clear](../dotnet/set-clear-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Legen Sie (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [set::clear (STL/CLR)](../dotnet/set-clear-stl-clr.md)
