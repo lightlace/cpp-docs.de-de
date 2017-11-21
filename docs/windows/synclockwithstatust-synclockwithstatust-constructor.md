@@ -1,32 +1,30 @@
 ---
-title: "SyncLockWithStatusT::SyncLockWithStatusT-Konstruktor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::SyncLockWithStatusT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SyncLockWithStatusT, Konstruktor"
+title: 'Synclockwithstatust:: Synclockwithstatust-Konstruktor | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::SyncLockWithStatusT
+dev_langs: C++
+helpviewer_keywords: SyncLockWithStatusT, constructor
 ms.assetid: 5d2fb820-ae1b-495f-8084-ebb4fecc3104
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 00602992585e496a41a4ecea6d85ed798adac640
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# SyncLockWithStatusT::SyncLockWithStatusT-Konstruktor
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Unterstützt die WRL\-Infrastruktur und nicht beabsichtigt, direkt im Code verwendet werden.  
+# <a name="synclockwithstatustsynclockwithstatust-constructor"></a>SyncLockWithStatusT::SyncLockWithStatusT-Konstruktor
+Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 SyncLockWithStatusT(  
@@ -39,26 +37,26 @@ explicit SyncLockWithStatusT(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `other`  
- Ein rvalu\-Verweis zu einem anderen SyncLockWithStatusT\-Objekt.  
+ Ein Rvalue-Verweis auf ein anderes SyncLockWithStatusT-Objekt.  
   
  `sync`  
- Ein Verweis auf ein anderes SyncLockWithStatusT\-Objekt.  
+ Ein Verweis auf ein anderes SyncLockWithStatusT-Objekt.  
   
  `status`  
- Der Wert des [status\_](../windows/synclockwithstatust-status-data-member.md) Datenmembers des `other`\-Parameters oder des `sync`\-Parameters.  
+ Der Wert des der [Status_](../windows/synclockwithstatust-status-data-member.md) Datenmember der `other` Parameter oder die `sync` Parameter.  
   
-## Hinweise  
- Initialisiert eine neue Instanz der SyncLockWithStatusT\-Klasse.  
+## <a name="remarks"></a>Hinweise  
+ Initialisiert eine neue Instanz der SyncLockWithStatusT-Klasse.  
   
- Der erste Konstruktor initialisiert das aktuelle SyncLockWithStatusT\-Objekt von einem anderen SyncLockWithStatusT, der durch Parameter `other` angegeben wird und legt dann das andere SyncLockWithStatusT\-Objekt ungültig.  Der zweite Konstruktor ist `protected` und initialisiert das aktuelle SyncLockWithStatusT\-Objekt zu einem ungültigen Zustand.  
+ Der erste Konstruktor initialisiert das aktuelle SyncLockWithStatusT-Objekt aus einem anderen Parameter gemäß SyncLockWithStatusT `other`, und klicken Sie dann die anderen SyncLockWithStatusT-Objekt ungültig. Der zweite Konstruktor ist `protected`, und die aktuelle SyncLockWithStatusT-Objekt, das einen ungültigen Status initialisiert.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  
   
- **Namespace:**  Microsoft::WRL::Wrappers::Details  
+ **Namespace:** Microsoft::WRL::Wrappers::Details  
   
-## Siehe auch  
- [SyncLockWithStatusT\-Klasse](../windows/synclockwithstatust-class.md)   
- [SyncLockWithStatusT::GetStatus\-Methode](../windows/synclockwithstatust-getstatus-method.md)
+## <a name="see-also"></a>Siehe auch  
+ [SyncLockWithStatusT-Klasse](../windows/synclockwithstatust-class.md)   
+ [SyncLockWithStatusT::GetStatus-Methode](../windows/synclockwithstatust-getstatus-method.md)

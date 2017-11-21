@@ -1,108 +1,93 @@
 ---
-title: "Arrays (C++ Component Extensions)"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - "cli::array"
-  - "details::array"
-  - "lang::array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "array keyword [C++]"
-  - "declaring arrays, about declaring arrays"
-  - "arrays [C++], multidimensional"
-  - "multidimensional arrays"
-  - "arrays [C++]"
+title: "Arrays (Komponentenerweiterungen für C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- cli::array
+- details::array
+- lang::array
+dev_langs: C++
+helpviewer_keywords:
+- array keyword [C++]
+- declaring arrays, about declaring arrays
+- arrays [C++], multidimensional
+- multidimensional arrays
+- arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
-caps.latest.revision: 34
-caps.handback.revision: "34"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "34"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a2f0f4100344fbb2990e9feeb2b455642852c320
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Arrays (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-`Platform::Array<T>` geben [!INCLUDE[cppwrt_short](../build/reference/includes/cppwrt_short_md.md)], oder das `array`\-Schlüsselwort in [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)], deklariert ein Array eines angegebenen Typs und des Anfangswerts.  
+# <a name="arrays-c-component-extensions"></a>Arrays (Komponentenerweiterungen für C++)
+Die `Platform::Array<T>` Typ in C + c++ / CX, oder die `array` Schlüsselwort in C + c++ / CLI, deklariert ein Array eines angegebenen Typs und der Anfangswert.  
   
-## Alle Plattformen  
- Das Array muss deklariert werden, indem den Modifizierer des Handle\-zuObjekts \(^\) nach der spitze Klammer \(\>\) in der Deklaration verwendet.  
+## <a name="all-platforms"></a>Alle Plattformen  
+ Das Array muss deklariert werden, mit dem Handle-to-Object (^)-Modifizierer hinter die schließende spitze Klammer (>) in der Deklaration.  
+ Die Anzahl der Elemente des Arrays ist nicht Teil des Typs. Eine Arrayvariable kann auf unterschiedliche Größen haben Arrays verweisen.  
   
- Die Anzahl der Elemente des Arrays ist nicht Teil des Typs.  Eine Arrayvariable kann unterschiedliche Größen Arrays verweisen.  
+ Im Gegensatz zu Standard-c++ Indizierung kein Synonym für Zeigerarithmetik und ist nicht kommutativ.  
   
- Im Gegensatz Standard\-C\+\+ ist Tiefstellung kein Synonym für Zeigerarithmetik und nicht auswechselbar.  
+ Weitere Informationen zu Arrays finden Sie unter:  
   
- Weitere Informationen zu Arrays, finden Sie unter:  
+-   [Vorgehensweise: Verwenden von Arrays in C++/CLI](../dotnet/how-to-use-arrays-in-cpp-cli.md)  
+    
+-   [Variable Argumentlisten (...) (C++/CLI)](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md)  
   
--   [Array\-Kovarianz](../misc/array-covariance.md)  
+## <a name="windows-runtime"></a>Windows-Runtime  
+ Arrays sind Mitglied der `Platform` Namespace. Arrays können nur eindimensional sein.  
   
--   [Gewusst wie: Verwenden von Arrays in C\+\+\/CLI](../dotnet/how-to-use-arrays-in-cpp-cli.md)  
+### <a name="syntax"></a>Syntax  
   
--   [Gewusst wie: Erstellen von mehrdimensionalen Arrays](../misc/how-to-create-multidimension-arrays.md)  
-  
--   [Gewusst wie: Erstellen von Arrays aus verwalteten Arrays \(verzweigte Arrays\)](../misc/how-to-create-arrays-of-managed-arrays-jagged-arrays.md)  
-  
--   [Gewusst wie: Erstellen von Typedefs in verwalteten Arrays](../misc/how-to-make-typedefs-for-managed-arrays.md)  
-  
--   [Gewusst wie: Verwenden von verwalteten Arrays als Vorlagentypparameter](../misc/how-to-use-managed-arrays-as-template-type-parameters.md)  
-  
--   [Variable Argument Lists \(...\) \(C\+\+\/CLI\)](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md)  
-  
--   [Gewusst wie: Sortieren von Arrays](../misc/how-to-sort-arrays.md)  
-  
--   [Gewusst wie: Sortieren von Arrays anhand benutzerdefinierter Kriterien](../misc/how-to-sort-arrays-using-custom-criteria.md)  
-  
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- Arrays sind Member des `Platform`\-Namespace.  Arrays können nur eindimensional sein.  
-  
- **Syntax**  
-  
- Das erste Beispiel der Syntax wird das `ref new` Aggregatsschlüsselwort, um ein Array zu verknüpfen.  Das zweite Beispiel deklariert ein lokales Array.  
+ Im ersten Beispiel der Syntax wird der `ref new` -aggregatschlüsselwort ein Array zu reservieren. Im zweite Beispiel wird ein lokales Array deklariert.  
   
 ```  
+[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = 
+    ref new[Platform::]Array<initialization-type> [{initialization-list [,...]}]  
   
-        [qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = ref new [Platform::]Array< initialization-type > [{initialization-list [,...]}]  
-  
-[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = {initialization-list [,...]}  
-  
+[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = 
+    {initialization-list [,...]}  
 ```  
   
- \[*qualifiers* optional\]  
- Eine oder mehrere dieser Speicherklassenspezifizierer: [änderbar](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statisch](../misc/static-cpp.md).  
+ *Qualifizierer* [optional]  
+ Mindestens eines dieser Speicherklassenspezifizierer: [änderbare](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), ["extern"](../cpp/using-extern-to-specify-linkage.md), [statische](../cpp/static-members-cpp.md).  
   
  `array-type`  
- Der Typ der Arrayvariablen.  Gültige Typen [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] sind Klassen und grundlegende Typen, Verweisklassen und Strukturen, Wertklassen und Strukturen und systemeigene Zeiger \(`type``*`\).  
+ Der Typ der Arrayvariablen. Gültige Typen sind Windows-Runtime-Klassen und grundlegenden Typen, Verweisklassen und Strukturen, Wertklassen und Strukturen und systemeigenen Zeigern (`type*`).  
   
- `rank` \[optional\]  
- Die Anzahl der Dimensionen des Arrays.  Muss 1 \(null\) sein.  
+ `rank`[optional]  
+ Die Anzahl der Dimensionen des Arrays. 1 muss sein.  
   
  `identifier`  
  Der Name der Arrayvariablen.  
   
  `initialization-type`  
- Der Typ der Werte, die das Array initialisieren.  Normalerweise sind `array-type` und `initialization-type` der gleiche Typ.  Allerdings können die Typen unterscheiden, wenn eine Konvertierung von `initialization-type` in `array-type`\- für Beispiel gibt, wenn `initialization-type` von `array-type` abgeleitet ist.  
+ Der Typ der Werte, die das Array initialisiert werden. In der Regel `array-type` und `initialization-type` denselben Typ aufweisen. Die Typen kann jedoch anders, wenn es eine Konvertierung von erfolgt `initialization-type` auf `array-type`– z. B. wenn `initialization-type` stammt aus `array-type`.  
   
- `initialization-list` \[optional\]  
- Eine durch Trennzeichen getrennte Liste von Werten in geschweiften Klammern, die die Elemente des Arrays initialisieren.  Wenn `rank-size-list``(3)` festgelegt wäre, die ein eindimensionales Array mit 3 Elementen deklarieren, kann `initialization list``{1,2,3}` sein.  
+ `initialization-list`[optional]  
+ Eine durch Trennzeichen getrennte Liste von Werten in der geschweiften Klammern, die die Elemente des Arrays zu initialisieren. Z. B. wenn `rank-size-list` wurden `(3)`, dem deklariert eines eindimensionalen Arrays von 3 Elemente `initialization list` möglicherweise `{1,2,3}`.  
   
- **Hinweise**  
+### <a name="remarks"></a>Hinweise  
   
- Sie können zur Kompilierzeit erkennen, ob ein Typ mit Verweiszählung verwendet ein Array mit `__is_ref_array(``type``)` ist.  Weitere Informationen finden Sie unter [Compiler Support for Type Traits](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
+ Sie können zur Kompilierzeit erkennen, ob ein Typ ein Array mit verweiszählung mit ist `__is_ref_array(type)`. Weitere Informationen finden Sie unter [Compilerunterstützung für Typmerkmale](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
-### Voraussetzungen  
- Compileroption: **\/ZW**  
+### <a name="requirements"></a>Anforderungen  
+ Compileroption: **/ZW**  
   
-### Beispiele  
- Im folgenden Beispiel wird ein eindimensionales Array, das 100 Elemente verfügt.  
+### <a name="examples"></a>Beispiele  
+ Das folgende Beispiel erstellt ein eindimensionales Array, das 100 Elemente verfügt.  
   
-```  
+```cpp  
 // cwr_array.cpp  
 // compile with: /ZW  
 using namespace Platform;  
@@ -114,63 +99,64 @@ int main() {
 }  
 ```  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- **Syntax**  
+## <a name="common-language-runtime"></a>Common Language Runtime 
   
- Das erste Beispiel der Syntax wird das `gcnew`\-Schlüsselwort, um ein Array zu verknüpfen.  Das zweite Beispiel deklariert ein lokales Array.  
+### <a name="syntax"></a>Syntax  
   
-```  
-  
-        [qualifiers] [cli::]array<[qualifiers] array-type [,rank] >^ identifier = gcnew [cli::]array< initialization-type [,rank] >(rank-size-list[,...]) [{initialization-list [,...]}]  
-  
-[qualifiers] [cli::]array<[qualifiers] array-type [,rank] >^ identifier = {initialization-list [,...]}  
+ Im ersten Beispiel der Syntax wird der `gcnew` Schlüsselwort, um ein Array zu reservieren. Im zweite Beispiel wird ein lokales Array deklariert.  
   
 ```  
+[qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier = 
+    gcnew [cli::]array<initialization-type[,rank]>(rank-size-list[,...]) [{initialization-list [,...]}]  
   
- \[*qualifiers* optional\]  
- Eine oder mehrere dieser Speicherklassenspezifizierer: [änderbar](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statisch](../misc/static-cpp.md).  
+[qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier = 
+    {initialization-list [,...]}  
+```  
+  
+ *Qualifizierer* [optional]  
+ Mindestens eines dieser Speicherklassenspezifizierer: [änderbare](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), ["extern"](../cpp/using-extern-to-specify-linkage.md), [statische](../cpp/static-members-cpp.md).  
   
  `array-type`  
- Der Typ der Arrayvariablen.  Gültige Typen sind [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] und Grundlagentypen Verweisklassen, Klassen und Strukturen, Wertklassen und Strukturen, systemeigene Zeiger \(`type``*`\) und systemeigenen HÜLSE \(Plain Old Data\) Typen.  
+ Der Typ der Arrayvariablen. Gültige Typen sind Windows-Runtime-Klassen und grundlegenden Typen, Verweisklassen und Strukturen, Klassen und Strukturen, systemeigene Zeiger (`type*`), und systemeigene POD (plain alte Daten)-Typen.  
   
- `rank` \[optional\]  
- Die Anzahl der Dimensionen des Arrays.  Der Standardwert ist 1; das Maximum ist 32.  Jede Dimension des Arrays ist selbst ein Array.  
+ `rank`[optional]  
+ Die Anzahl der Dimensionen des Arrays. Der Standardwert ist 1. Der Höchstwert beträgt 32. Jede Dimension des Arrays ist selbst ein Array.  
   
  `identifier`  
  Der Name der Arrayvariablen.  
   
  `initialization-type`  
- Der Typ der Werte, die das Array initialisieren.  Normalerweise sind `array-type` und `initialization-type` der gleiche Typ.  Allerdings können die Typen unterscheiden, wenn eine Konvertierung von `initialization-type` in `array-type`\- für Beispiel gibt, wenn `initialization-type` von `array-type` abgeleitet ist.  
+ Der Typ der Werte, die das Array initialisiert werden. In der Regel `array-type` und `initialization-type` denselben Typ aufweisen. Die Typen kann jedoch anders, wenn es eine Konvertierung von erfolgt `initialization-type` auf `array-type`– z. B. wenn `initialization-type` stammt aus `array-type`.  
   
  `rank-size-list`  
- Eine durch Trennzeichen getrennte Liste der Größe jeder Dimension im Array.  Wenn der Parameter `initialization-list` angegeben wird, kann der Compiler die Größe der Dimension ableiten und `rank-size-list` kann ausgelassen werden.  Weitere Informationen finden Sie unter [Gewusst wie: Erstellen von mehrdimensionalen Arrays](../misc/how-to-create-multidimension-arrays.md).  
+ Eine durch Trennzeichen getrennte Liste der Größe der einzelnen Dimensionen im Array. Auch wenn die `initialization-list` Parameter angegeben wird, kann der Compiler die Größe der einzelnen Dimensionen folgern und `rank-size-list` kann ausgelassen werden. 
   
- `initialization-list` \[optional\]  
- Eine durch Trennzeichen getrennte Liste von Werten in geschweiften Klammern, die die Elemente des Arrays initialisieren.  Oder eine durch Trennzeichen getrennte Liste mit verschachtelten *initialization\-list*\-Elemente, die die Elemente in einem mehrdimensionalen Feld initialisieren.  
+ `initialization-list`[optional]  
+ Eine durch Trennzeichen getrennte Liste von Werten in der geschweiften Klammern, die die Elemente des Arrays zu initialisieren. Eine durch Trennzeichen getrennte Liste der geschachtelte oder *Initialisierungsliste* Elemente, die die Elemente in ein mehrdimensionales Array zu initialisieren.  
   
- Wenn `rank-size-list``(3)` festgelegt wäre, die ein eindimensionales Array mit 3 Elementen deklarieren, kann `initialization list``{1,2,3}` sein.  Wenn `rank-size-list``(3,2,4)` festgelegt wäre, die ein dreidimensionales Array mit 3 Elementen in der ersten Dimension deklariert, können 2 Elemente in zweites und 4 Elemente im dritten, `initialization-list``{{1,2,3},{0,0},{-5,10,-21,99}}` sein.\)  
+ Z. B. wenn `rank-size-list` wurden `(3)`, dem deklariert eines eindimensionalen Arrays von 3 Elemente `initialization list` möglicherweise `{1,2,3}`. IF `rank-size-list` wurden `(3,2,4)`, die deklariert wird, eines dreidimensionalen Arrays vom 3 Elemente in der ersten Dimension, 2 in der zweiten und 4 Elemente in der dritten `initialization-list` möglicherweise `{{1,2,3},{0,0},{-5,10,-21,99}}`.)  
   
- **Hinweise**  
+### <a name="remarks"></a>Hinweise  
   
- `array` ist im Namespace [Platform, default, and cli Namespaces](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md).  
+ `array`befindet sich in der [Plattform, Default- und Cli-Namespaces](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) Namespace.  
   
- Wie Standard\-C\+\+ sind die Indizes eines Arrays nullbasiert, und ein Array ist indiziert, indem es verwendet eckige Klammern \(\[\]\).  Im Gegensatz Standard\-C\+\+ werden die Indizes eines mehrdimensionalen Feldes in einer Liste von Indizes für jede Dimension anstelle eines Satzes Operatoren angegeben der eckigen Klammer \(\[\]\) für jede Dimension.  Beispielsweise *identifier*\[*index1*, *index2*\] und nicht *identifier*\[*index1*\] \[ *index2*\].  
+ Wie Standard-c++ die Indizes eines Arrays sind nullbasiert, und ein Array mit eckigen Klammern ([]) indiziert wird. Im Gegensatz zum standardmäßigen C++ werden die Indizes der ein mehrdimensionales Array in einer Liste von Indizes für jede Dimension statt mit einem Satz von eckigen Klammern ([])-Operatoren für jede Dimension angegeben. Beispielsweise *Bezeichner*[*index1*, *index2*] anstelle von *Bezeichner*[*index1*] [ *index2*].  
   
- Alle verwalteten Arrays erben von `System::Array`.  Jede Methode oder Eigenschaft von `System::Array` können direkt der Arrayvariablen angewendet werden.  
+ Alle verwalteten Arrays Vererben `System::Array`. Eine beliebige Methode oder Eigenschaft `System::Array` können direkt auf die Arrayvariable angewendet werden.  
   
- Wenn Sie einem Array zuordnen, dessen Elementtyp Zeiger\-zu einer verwalteten Klasse ist, sind die Elemente 0 initialisiert.  
+ Wenn Sie ein Array, dessen Elementtyp zuweisen ist Zeiger-auf eine verwaltete Klasse, die Elemente sind 0 initialisiert.  
   
- Wenn Sie einem Array zuordnen, dessen Elementtyp ein Werttyp ist `V`, ist der Standardkonstruktor für `V` auf jedes Arrayelement angewendet.  Weitere Informationen finden Sie unter [.NET Framework\-Entsprechungen der systemeigenen Typen in C\+\+](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md).  
+ Wenn Sie ein Array, dessen Elementtyp zuweisen ist ein Werttyp `V`, der Standardkonstruktor für `V` auf jedes Element angewendet wird. Weitere Informationen finden Sie unter [.NET Framework-Entsprechungen in systemeigenen C++-Typen (C + c++ / CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md).  
   
- Zur Kompilierzeit können Sie erkennen, ob ein Typ ein Common Language Runtime \(CLR\)\- Array mit `__is_ref_array(``type``)` ist.  Weitere Informationen finden Sie unter [Compiler Support for Type Traits](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
+ Zum Zeitpunkt der Kompilierung können Sie erkennen, ob ein Typ ein common Language Runtime (CLR)-Array mit ist `__is_ref_array(type)`. Weitere Informationen finden Sie unter [Compilerunterstützung für Typmerkmale](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
-### Voraussetzungen  
- Compileroption: **\/clr**  
+### <a name="requirements"></a>Anforderungen  
+ Compileroption: **/clr**  
   
-### Beispiele  
- Im folgenden Beispiel wird ein eindimensionales Array, das Elemente, 100 hat und ein dreidimensionales Array, das Elemente 3 in der ersten Dimension verfügt, 5 Elemente in zweites und 6 Elemente im dritten.  
+### <a name="examples"></a>Beispiele  
+ Das folgende Beispiel erstellt ein eindimensionales Array, das 100 Elemente verfügt, und ein dreidimensionales Array, das 3 Elemente in der ersten Dimension, 5 Elementen in der zweiten und 6 Elemente im dritten verfügt.  
   
-```  
+```cpp  
 // clr_array.cpp  
 // compile with: /clr  
 ref class MyClass {};  
@@ -185,5 +171,5 @@ int main() {
 }  
 ```  
   
-## Siehe auch  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>Siehe auch  
+ [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)

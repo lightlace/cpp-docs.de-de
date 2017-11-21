@@ -1,37 +1,36 @@
 ---
-title: "Dialogfeld &quot;Neue benutzerdefinierte Ressource&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.newcustomresource"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Ressourcen [C++], hinzufügen"
-  - "Benutzerdefinierter Ressourcentyp (Dialogfeld)"
+title: Dialogfeld "neue benutzerdefinierte Ressource" | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.newcustomresource
+dev_langs: C++
+helpviewer_keywords:
+- resources [C++], adding
+- Custom Resource Type dialog box
 ms.assetid: 8216e29d-27ca-4aed-8036-d55fa4468ea2
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1929cb1c9f24b8008449b3da18af29f89456d5a8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Dialogfeld &quot;Neue benutzerdefinierte Ressource&quot;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In diesem Dialogfeld haben Sie die Möglichkeit, eine neue benutzerdefinierte Ressource zu erstellen.  
+# <a name="new-custom-resource-dialog-box"></a>Dialogfeld "Neue benutzerdefinierte Ressource"
+Können Sie eine neue benutzerdefinierte Ressource erstellen.  
   
  **Ressourcentyp**  
- Stellt ein Textfeld bereit, in dem Sie den Namen eines benutzerdefinierten Ressourcentyps eingeben können.  Visual C\+\+ schreibt den Namen automatisch groß, wenn Sie das Dialogfeld **Neue benutzerdefinierte Ressource** schließen.  
+ Stellt ein Textfeld für den Namen eines benutzerdefinierten Ressourcentyps eingeben. Visual C++ Schreibt den Namen automatisch groß, beim Beenden der **neue benutzerdefinierte Ressource** (Dialogfeld).  
   
-## Hinweise  
- Geben Sie keinen von [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] reservierten Ressourcennamen und keine reservierte [!INCLUDE[TLA2#tla_id](../windows/includes/tla2sharptla_id_md.md)] an.  Die reservierten Namen sind DESIGNINFO, HWB und TEXTINCLUDE, und die reservierte [!INCLUDE[TLA2#tla_id](../windows/includes/tla2sharptla_id_md.md)] lautet 255.  
+## <a name="remarks"></a>Hinweise  
+ Geben Sie keine Ressourcennamen und -ID, die von reservierten [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]. Die reservierten Namen sind DESIGNINFO, HWB und TEXTINCLUDE und der reservierten ID ist 255.  
   
-## Siehe auch  
- [Dialogfeld "Ressource hinzufügen"](../windows/add-resource-dialog-box.md)
+## <a name="see-also"></a>Siehe auch  
+ [Dialogfeld „Ressource hinzufügen“](../windows/add-resource-dialog-box.md)

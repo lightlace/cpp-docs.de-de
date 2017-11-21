@@ -1,67 +1,66 @@
 ---
-title: "Type Forwarding (C++/CLI)"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "type forwarding, Visual C++"
+title: Typweiterleitung (C + c++ / CLI) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: type forwarding, Visual C++
 ms.assetid: ae730b69-0c27-41cc-84e1-3132783866ea
-caps.latest.revision: 12
-caps.handback.revision: "12"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9d2cde10bdfd530429911cbe7f1d85c455488a14
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Type Forwarding (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Durch Typweiterleitung können Sie, um einen Typ von einer Assembly \(Assembly A\) zu verschieben in einer anderen Assembly \(Assembly B\), so, dass, es nicht notwendig ist, Clients neu zu kompilieren, die Assembly A nutzen.  
+# <a name="type-forwarding-ccli"></a>Typweiterleitung (C++/CLI)
+*Typweiterleitung* können Sie einen Typ aus einer Assembly (Assembly A) in einer anderen Assembly (Assembly B) verschieben, so, dass es nicht erforderlich ist, Clients neu kompiliert, die Assembly a zu verarbeiten  
   
-## Alle Plattformen  
- Diese Funktion wird nicht in allen Laufzeiten unterstützt.  
+## <a name="all-platforms"></a>Alle Plattformen  
+ Diese Funktion wird in alle Laufzeiten nicht unterstützt.  
   
-## Windows\-Runtime  
- Diese Funktion wird in [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] nicht unterstützt.  
+## <a name="windows-runtime"></a>Windows-Runtime  
+ Diese Funktion ist in Windows-Runtime nicht unterstützt.  
   
-### Voraussetzungen  
- Compileroption: **\/ZW**  
+### <a name="requirements"></a>Anforderungen  
+ Compileroption: **/ZW**  
   
-## Common Language Runtime  
- Im folgenden Codebeispiel wird veranschaulicht, wie Typweiterleitung verwendet.  
+## <a name="common-language-runtime"></a>Common Language Runtime  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Weiterleiten von Typen zu verwenden.  
   
-### Syntax  
+### <a name="syntax"></a>Syntax  
   
 ```  
 #using "new.dll"  
 [assembly:TypeForwardedTo(type::typeid)];  
 ```  
   
-### Parameter  
+### <a name="parameters"></a>Parameter  
  `new`  
- Die Assembly, in die Sie die Typdefinition verschieben.  
+ Die Assembly, in der Sie die Typdefinition verschieben.  
   
  `type`  
- In dessen Definition des Typs, die Sie in eine andere Assembly verschieben.  
+ Der Typ, dessen Definition, die Sie in einer anderen Assembly verschieben.  
   
-### Hinweise  
- Nachdem wird im einer Komponente \(Assembly\) und Clientanwendungen, Sie können keine Typweiterleitung verwenden, um einen Typ aus der Komponente \(Assembly\) in eine andere Assembly verschieben, werden die aktualisierten Bestandteil \(und zusätzliche Assemblys erforderlich\) verwendet, und die Salts funktionieren immer noch, ohne neu kompiliert.  
+### <a name="remarks"></a>Hinweise  
+ Nachdem eine Komponente (Assembly) ausgeliefert wird, und wird von Clientanwendungen verwendet wird, können Sie Typ, Weiterleitung an einen Typ aus der Komponente (Assembly) in einer anderen Assembly zu verschieben, werden die aktualisierten Komponente (und alle zusätzlichen erforderlichen Assemblys) ausgeliefert und dem Client Anwendungen funktionieren weiterhin ohne erneut kompiliert wird.  
   
- Typ, der nur Arbeiten für die Komponenten auf die vorhandene Anwendungen weiterleitet.  Wenn Sie eine Anwendung neu erstellen, müssen die entsprechenden Assemblyverweise für Typen geben, die in der Anwendung verwendet werden.  
+ Typweiterleitung funktioniert nur für Komponenten, die von einer vorhandenen Anwendung verwiesen wird. Wenn Sie eine Anwendung neu erstellen, müssen die entsprechenden Assemblyverweise für alle Typen, die in der Anwendung verwendet werden.  
   
- Wenn ein Typ weitergeleitet wird \(A Typ\) einer Assembly, müssen Sie das `TypeForwardedTo`\-Attribut für diesen Typ sowie einen Verweis hinzufügen.  Die Assembly, die Sie verweisen, muss Folgendes enthalten:  
+ Wenn Sie einen Typ (A) aus einer Assembly weitergeleitet werden, müssen Sie Hinzufügen der `TypeForwardedTo` Attribut für diesen Typ als auch einen Assemblyverweis. Die Assembly, die Sie verweisen, muss eine der folgenden enthalten:  
   
--   Die Definition für Typ. A.  
+-   Die Definition für den Typ a  
   
--   Ein `TypeForwardedTo`\-Attribut für Typ A sowie ein Assemblyverweis.  
+-   Ein `TypeForwardedTo` Attribut für Geben Sie einen als auch einen Assemblyverweis.  
   
- Beispiele von Typen, die weitergeleitetes enthalten sein können:  
+ Beispiele für Typen, die weitergeleitet werden können:  
   
 -   Verweisklassen  
   
@@ -69,34 +68,34 @@ Durch Typweiterleitung können Sie, um einen Typ von einer Assembly \(Assembly A
   
 -   Enumerationen  
   
--   interfaces  
+-   Schnittstellen  
   
- Sie können die folgenden Typen weiterleiten:  
+ Sie können die folgenden Typen nicht weiterleiten:  
   
 -   Generische Typen  
   
 -   Systemeigene Typen  
   
--   Geschachtelte Typen \(Wenn Sie einen geschachtelten Typ übergeben möchten, sollten Sie den einschließenden Typ übergeben\)  
+-   Geschachtelte Typen (Wenn Sie einen geschachtelten Typ weiterleiten möchten, Sie sollten weiterleiten den einschließenden Typ)  
   
- Sie können einen Typ an einer Assembly weitergeleitet, die in jeder Sprache auf die Common Language Runtime sondern erstellt wird.  
+ Sie können einen Typ an einer Assembly in einer beliebigen Sprache für die common Language Runtime erstellt weiterleiten.  
   
- Wenn eine Quellcodedatei, die verwendet wird, um Assembly A.dll erstellen, eine Typdefinition \(`ref class MyClass`\) enthält, und Sie wollte diese Typdefinition in Assembly, B.dll Sie verschieben wurde:  
+ Wenn eine Quellcodedatei, die zum Erstellen der Assembly A.dll eine Typdefinition enthält (`ref class MyClass`), und Sie diesen Typ verschieben möchten Definition auf Assembly B.dll, Sie würden:  
   
-1.  Verschieben Sie die `MyClass`\-Typdefinition in eine Quellcodedatei, die verwendet wird, um B.dll zu erstellen.  
+1.  Verschieben der `MyClass` Geben Sie die Definition einer Quellcodedatei, die zum Erstellen von B.dll verwendet.  
   
-2.  Erstellen Sie B.dll Assembly  
+2.  Erstellen Sie die Assembly B.dll  
   
-3.  Löschen Sie die Typdefinition `MyClass` aus Quellcode, der verwendet wird, um A.dll zu erstellen, und ersetzen Sie sie durch Folgendes:  
+3.  Löschen der `MyClass` Typdefinition im Quellcode verwendet, um A.dll erstellen, und Ersetzen Sie es durch Folgendes:  
   
     ```  
     #using "B.dll"  
     [assembly:TypeForwardedTo(MyClass::typeid)];  
     ```  
   
-4.  Erstellen Sie Assembly A.dll.  
+4.  Erstellen Sie die Assembly A.dll.  
   
-5.  Verwenden Sie A.dll Clientanwendungen, ohne neu zu kompilieren.  
+5.  Verwenden Sie A.dll ohne erneute Kompilierung Clientanwendungen.  
   
-### Voraussetzungen  
- Compileroption: **\/clr**
+### <a name="requirements"></a>Anforderungen  
+ Compileroption: **/clr**

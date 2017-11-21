@@ -1,45 +1,45 @@
 ---
-title: "Ausf&#252;hren einer C++&#160;/clr-Anwendung unter einer fr&#252;heren Laufzeitversion"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "app.config-Dateien, Angegebene Version der Common Language Runtime"
-  - "Anwendungsbereitstellung [C++], Angegebene Version der Common Language Runtime"
-  - "Anwendungen [C++], Angegebene Version der Common Language Runtime"
-  - "Abwärtskompatibilität [C++], Angegebene Version der Common Language Runtime"
-  - "Common Language Runtime [C++], Angegebene Version"
-  - "Kompatibilität [C++], Angegebene Version der Common Language Runtime"
-  - "Bereitstellen von Anwendungen [C++], Angegebene Version der Common Language Runtime"
-  - "Versionen [C++]"
+title: "Ausführen einer C++ - Clr-Anwendung auf einer früheren Laufzeitversion | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- applications [C++], runtime version specified
+- versions [C++]
+- app.config files, runtime version specified
+- compatibility [C++], runtime version specified
+- backward compatibility [C++], runtime version specified
+- application deployment [C++], runtime version specified
+- common language runtime [C++], version specified
+- deploying applications [C++], runtime version specified
 ms.assetid: 940171b7-6937-4b14-8e87-c199e23f4f2e
-caps.latest.revision: 17
-caps.handback.revision: "17"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b8e0a9860c3c6d4fef87a76aad037f70c1ea787f
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2017
 ---
-# Ausf&#252;hren einer C++&#160;/clr-Anwendung unter einer fr&#252;heren Laufzeitversion
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Wenn nicht anders angegeben wird eine Visual C\+\+ .NET\-Framework\-Anwendung, auf die Version der CLR \(Common Language Runtime\) ausgeführt wird, erstellt der Compiler verwendet, um die Anwendung zu erstellen.  Es ist jedoch für eine EXE\-Anwendung möglich, die für eine Version der Laufzeit erstellt wird, um auf jede andere Version ausgeführt, die die erforderliche Funktionalität bereitstellt.  
+# <a name="running-a-c-clr-application-on-a-previous-runtime-version"></a>Ausführen einer C++ /clr-Anwendung unter einer früheren Laufzeitversion
+Sofern nicht anders angegeben, ist eine C++ .NET Framework-Anwendung erstellt, um auf die Version der common Language Runtime (CLR) ausgeführt werden, die der Compiler verwendet, um die Anwendung zu erstellen. Es ist jedoch möglich, dass eine .exe-Anwendung, die erstellt wird, für eine Version der Laufzeit auf anderen Versionen ausgeführt wird, die die erforderliche Funktionalität bereitstellt.  
   
- Um dies zu erreichen, erstellen Sie eine app.config\-Datei bereit die Laufzeitversionsinformationen im `supportedRuntime`\-Tag enthält.  
+ Um dies zu erreichen, geben Sie eine app.config-Datei, die Laufzeitversionsinformationen in enthält die `supportedRuntime` Tag.  
   
- Zur Laufzeit muss die Datei app.config den Namen des Formulars *filename.ext*.config haben, an *filename.ext* der Name der ausführbaren Datei ist, die die Anwendung startet, und sie muss sich im gleichen Verzeichnis wie die ausführbare Datei befinden.  Wenn die Anwendung TestApp.exe lautet, würde die muss die app.config\-Datei.  
+ Zur Laufzeit muss die Datei "App.config" einen Namen im Format aufweisen *FileName*config, wobei *FileName* ist der Name der ausführbaren Datei, die die Anwendung gestartet und es muss sich im gleichen Verzeichnis wie die ausführbare Datei. Wenn Ihre Anwendung TestApp.exe benannt wird, würde die Datei "App.config" z. B. TestApp.exe.config benannt werden.  
   
- Wenn Sie mehr als eine Laufzeitversion angeben, und die Anwendung auf einem Computer ausgeführt wird, der mehr als eine installierte Laufzeitversion hat, verwendet die Anwendung die erste Version, die in der Konfigurationsdatei angegeben und installiert ist.  
+ Wenn Sie mehr als eine Laufzeitversion angeben und die Anwendung auf einem Computer mit mehr als einer installierten Laufzeitversion ausgeführt wird, verwendet die Anwendung die erste Version, die in der Datei "App.config" angegeben ist und installiert wird.  
   
- Weitere Informationen finden Sie unter [How to: Configure an App to Target a .NET Framework Version](assetId:///5247b307-89ca-417b-8dd0-e8f9bd2f4717).  
+ Weitere Informationen finden Sie unter [Vorgehensweise: Konfigurieren Sie eine Anwendung, um eine .NET Framework-Version als Ziel](http://msdn.microsoft.com/en-us/5247b307-89ca-417b-8dd0-e8f9bd2f4717).  
   
- Um auf Version 1.0 oder Version 1.1 der CLR ausgeführt werden können, muss eine Anwendung die vom Visual C\+\+\-Compiler erstellt wird kompiliert werden mit [\/clr:initialAppDomain](../build/reference/clr-common-language-runtime-compilation.md) verwendet.  
+ Für die Ausführung auf Version 1.0 oder Version 1.1 der CLR, eine Anwendung, die von der Visual C++ erstellt wird muss mithilfe von Compiler kompiliert werden [/clr:initialAppDomain](../build/reference/clr-common-language-runtime-compilation.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Bereitstellen von Desktopanwendungen](../ide/deploying-native-desktop-applications-visual-cpp.md)

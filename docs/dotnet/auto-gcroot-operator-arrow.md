@@ -1,44 +1,43 @@
 ---
-title: "auto_gcroot::operator-&gt;"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_gcroot.operator->"
-  - "msclr::auto_gcroot::operator->"
-  - "auto_gcroot::operator->"
-  - "msclr.auto_gcroot.operator->"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator->"
+title: auto_gcroot::Operator -&gt; | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_gcroot.operator->
+- msclr::auto_gcroot::operator->
+- auto_gcroot::operator->
+- msclr.auto_gcroot.operator->
+dev_langs: C++
+helpviewer_keywords: operator->
 ms.assetid: 2c77bc53-5f77-4544-9485-c950cd8e0bb1
-caps.latest.revision: 13
-caps.handback.revision: "11"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ab60b6cdb0d1718784a9ad3c3c47f3d60909af5c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# auto_gcroot::operator-&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="autogcrootoperator-gt"></a>auto_gcroot::Operator-&gt;
 Der Memberzugriffsoperator.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 _element_type operator->() const;  
 ```  
   
-## Rückgabewert  
- Das Objekt, das von `auto_gcroot` umschlossen wird.  
+## <a name="return-value"></a>Rückgabewert  
+ Das Objekt, das vom umschlossen wird `auto_gcroot`.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // msl_auto_gcroot_op_arrow.cpp  
@@ -70,13 +69,16 @@ int main() {
 }  
 ```  
   
-  **Hello zuerst von A\!**  
-**Uhr \>\_I \= 5**   
-## Anforderungen  
- **Headerdatei** \<msclr\\auto\_gcroot.h\>  
+```Output  
+Hello from first A!  
+a->m_i = 5  
+```  
   
- **Namespace** msclr  
+## <a name="requirements"></a>Anforderungen  
+ **Headerdatei** \<msclr\auto_gcroot.h >  
   
-## Siehe auch  
- [auto\_gcroot Members](../dotnet/auto-gcroot-members.md)   
- [auto\_gcroot::get](../dotnet/auto-gcroot-get.md)
+ **Namespace** Msclr  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Auto_gcroot-Elemente](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot::get](../dotnet/auto-gcroot-get.md)

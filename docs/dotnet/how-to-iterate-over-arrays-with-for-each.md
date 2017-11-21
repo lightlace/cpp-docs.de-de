@@ -1,31 +1,30 @@
 ---
-title: "Gewusst wie: Durchlaufen von Arrays mit der for-each-Klausel | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Arrays [C++], Interagieren mit for-each"
+title: "Vorgehensweise: Durchlaufen von Arrays mit für die einzelnen | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: arrays [C++], iterating with for each
 ms.assetid: ddc88ce2-69e1-44fc-af84-5b6f62fcb9e3
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 559f2257a12d87eb03e9dbc7aa1493d0ec016b48
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Gewusst wie: Durchlaufen von Arrays mit der for-each-Klausel
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Dieses Thema zeigt, wie das [for each, in](../dotnet/for-each-in.md)\-Schlüsselwort an unterschiedlichen Typen von Arrays verwendet.  
+# <a name="how-to-iterate-over-arrays-with-for-each"></a>Gewusst wie: Durchlaufen von Arrays mit der for-each-Klausel
+In diesem Thema zeigt, wie die [für jedes in](../dotnet/for-each-in.md) -Schlüsselwort in verschiedener Typen von Arrays.  
   
-## Beispiel  
- Dieses Beispiel zeigt, wie `for each` auf Arrays Verweistypen verwendet.  Beachten Sie dass ggf. Dimension eines mehrdimensionalen Arrays ist null, die `for each` Schleife nur dem Array.  
+## <a name="example"></a>Beispiel  
+ Dieses Beispiel zeigt, wie `for each` für das Array von Verweistypen.  Beachten Sie, dass, wenn eine bestimmte Dimension des ein zweidimensionales Array mit mehreren 0 (null) ist, wird die `for each` Schleife nicht über das Array durchläuft.  
   
 ```  
 // for_each_arrays.cpp  
@@ -66,14 +65,18 @@ int main() {
 }  
 ```  
   
-  **0 \= in MyClass**  
-**1 \= in MyClass**  
-**0 \= in MyClass2**  
-**1 \= in MyClass2**  
-**2 \= in MyClass2**  
-**3 \= in MyClass2**   
-## Beispiel  
- Dieses Beispiel stellt für jedes dar, das über <xref:System.Collections.ArrayList> durchläuft, das <xref:System.Collections.IEnumerable> implementiert.  
+```Output  
+0 = in MyClass  
+1 = in MyClass  
+  
+0 = in MyClass2  
+1 = in MyClass2  
+2 = in MyClass2  
+3 = in MyClass2  
+```  
+  
+## <a name="example"></a>Beispiel  
+ Dieses Beispiel zeigt für jede Iteration über eine <xref:System.Collections.ArrayList>, implementiert <xref:System.Collections.IEnumerable>.  
   
 ```  
 // for_each_arrays_2.cpp  
@@ -95,9 +98,12 @@ int main() {
 }  
 ```  
   
-  **60**   
-## Beispiel  
- Dieses Beispiel zeigt, wie über einem Array von Arrays.  
+```Output  
+60  
+```  
+  
+## <a name="example"></a>Beispiel  
+ In diesem Beispiel wird das Durchlaufen eines Arrays mit Arrays veranschaulicht.  
   
 ```  
 // for_each_arrays_3.cpp  
@@ -129,13 +135,17 @@ int main() {
 }  
 ```  
   
-  **IntArray \[0\] \= 10**  
-**IntArray \[0\] \= 10**  
-**IntArray \[1\] \= 11**  
-**IntArray \[1\] \= 11**  
-**10**  
-**10**  
-**11**  
-**11**   
-## Siehe auch  
- [for each, in](../dotnet/for-each-in.md)
+```Output  
+IntArray[0] = 10  
+IntArray[0] = 10  
+IntArray[1] = 11  
+IntArray[1] = 11  
+  
+10  
+10  
+11  
+11  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [for each in](../dotnet/for-each-in.md)

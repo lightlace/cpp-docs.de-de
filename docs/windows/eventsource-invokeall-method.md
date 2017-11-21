@@ -1,30 +1,28 @@
 ---
-title: "EventSource::InvokeAll-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::EventSource::InvokeAll"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "InvokeAll-Methode"
+title: 'EventSource:: InvokeAll-Methode | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::EventSource::InvokeAll
+dev_langs: C++
+helpviewer_keywords: InvokeAll method
 ms.assetid: 1506618f-0421-4428-a4d0-4ea2b10a3bf6
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 279d40bf8da171547e27313c4f1a9a3578d93be2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# EventSource::InvokeAll-Methode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ruft jede Ereignishandler mit dem aktuellen [EventSource](../windows/eventsource-class.md) -Objekt mit den angegebenen Argumenttypen und -Argumente.  
+# <a name="eventsourceinvokeall-method"></a>EventSource::InvokeAll-Methode
+Ruft jede zugeordnete aktuellen Ereignishandler [EventSource](../windows/eventsource-class.md) -Objekt mit den angegebenen Argumenttypen und -Argumente.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -184,7 +182,7 @@ void InvokeAll(
   
 #### <a name="parameters"></a>Parameter  
  `T0`  
- Der Typ der nullten Ereignis-Handler-Argument.  
+ Der Typ der Ereignisarguments Handler nullte.  
   
  `T1`  
  Der Typ des ersten Arguments der Ereignis-Handler.  
@@ -196,25 +194,25 @@ void InvokeAll(
  Der Typ des dritten Arguments der Ereignis-Handler.  
   
  `T4`  
- Der Typ des vierten Ereignis-Handler-Argument.  
+ Der Typ der vierten Handler Ereignisarguments.  
   
  `T5`  
- Der Typ des fünften Ereignis-Handler-Argument.  
+ Der Typ der fünften Handler Ereignisarguments.  
   
  `T6`  
- Der Typ des sechsten Ereignis-Handler-Argument.  
+ Der Typ der sechsten Handler Ereignisarguments.  
   
  `T7`  
- Der Typ des siebten Ereignis-Handler-Argument.  
+ Der Typ der siebten Handler Ereignisarguments.  
   
  `T8`  
- Der Typ des achte Ereignis-Handler-Argument.  
+ Der Typ der Ereignisarguments Handler achte.  
   
  `T9`  
- Der Typ des neunten Ereignis-Handler-Argument.  
+ Der Typ des neunten Handler Ereignisarguments.  
   
  `arg0`  
- Die nullte-Ereignis-Handler-Argument.  
+ Das Argument der nullte Ereignis-Handler.  
   
  `arg1`  
  Das erste Argument der Ereignis-Handler.  
@@ -238,7 +236,7 @@ void InvokeAll(
  Das siebte Ereignis-Handler-Argument.  
   
  `arg8`  
- Der achte-Ereignis-Handler-Argument.  
+ Das achte-Ereignis-Handler-Argument.  
   
  `arg9`  
  Das neunte Ereignis-Handler-Argument.  

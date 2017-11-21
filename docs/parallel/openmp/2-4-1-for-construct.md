@@ -1,142 +1,141 @@
 ---
-title: "2.4.1 for Construct"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.4.1 for-Konstrukt | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 27d2cbce-786b-4819-91d3-d55b2cc57a5e
-caps.latest.revision: 8
-caps.handback.revision: "8"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 92f3af3fa84043d9e8755136ab66e345e455ff1b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# 2.4.1 for Construct
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die **nach**\-Direktive identifizieren ein wiederholendes Arbeitsteilungs konstrukt, das angibt, dass die Iterationen der Schleife zugeordneten parallel ausgeführt werden.  Die Iterationen der Schleife **nach** werden über Threads verteilt, die bereits vorhanden sind, die das Team im parallelen Konstrukt ausgeführt wird, an das sie gebunden wird.  Die Syntax des **nach** Konstrukts lautet wie folgt:  
+# <a name="241-for-construct"></a>2.4.1 for-Konstrukt
+Die **für** Richtlinie identifiziert eine iterative Arbeit sharing-Konstrukt, das gibt an, dass die zugeordneten Schleifeniterationen parallel ausgeführt werden. Der Iteration die **für** Schleife über Threads, die bereits in das Team das parallele Konstrukt, bindet, ausführen verteilt sind. Die Syntax der **für** Konstrukt ist wie folgt:  
   
 ```  
-#pragma omp for [clause[[,] clause] ... ] new-line  
-   for-loop  
+#pragma omp for [clause[[,] clause] ... ] new-linefor-loop  
 ```  
   
- Die Klausel ist eine der folgenden Aktionen aus:  
+ Die-Klausel ist eine der folgenden:  
   
- **\(privat**Variable*Liste***\)**  
+ **Private (** *Variablenliste* **)**  
   
- **\(firstprivate**Variable*Liste***\)**  
+ **Firstprivate (** *Variablenliste* **)**  
   
- **\(lastprivate**Variable*Liste***\)**  
+ **Lastprivate (** *Variablenliste* **)**  
   
- *Operator*  **\(Verringerung**:\-*Variable Liste***\)**  
+ **Verringerung (** *Operator* **:** *Variablenliste***)**  
   
- **geordnet**  
+ **sortiert**  
   
- **\(Zeitplan** *Weise* *chunk\_size*\[,\],**\)**  
+ **Zeitplan (** *Art*[, *Chunk_size*]**)**  
   
  **nowait**  
   
- Die Einschränkungen des Direktivenprozessors Stelle in der Struktur entsprechenden **nachnach** Schleife.  Insbesondere muss die entsprechende **nach** Schleife kanonische Form aufweisen:  
+ Die **für** Richtlinie schränkt ein, auf die Struktur des entsprechenden **für** Schleife. Insbesondere die entsprechende **für** Schleife benötigen kanonische Form:  
   
- **\(für** *INIT\-expr* **;** *var logisch\-OP*;*b* *Zunahme\-expr***\)**  
+ **für (** *Init-Expr* **;** *Var logischen Op b*; *Incr-Expr***)**  
   
- *INIT\-expr*  
- Eine der folgenden Anwendungen:  
+ *Init-Ausdruck*  
+ Eine der folgenden:  
   
- *var* \= *lbs*  
+ *Var* = *lb*  
   
- *TYPE var* \= *lbs**Zahl*  
+ *Integer-Datentyp Var* = *lb*  
   
- *Zunahme\-expr*  
- Eine der folgenden Anwendungen:  
+ *Incr-Ausdruck*  
+ Eine der folgenden:  
   
- \+\+var  
+ ++*var*  
   
- *var* \+\+  
+ *"var"* ++  
   
- \-\- *Variable*  
+ -- *var*  
   
- *Variable* \-\-  
+ *"var"* --  
   
- *Zunahme* *var* \+\=  
+ *Var* += *Incr*  
   
- \- \=*Variable* selbst *reservieren Sie eine größere*  
+ *Var* -= *Incr*  
   
- *erhöht*\+ *var* \=*Variable*  
+ *Var* = *Var* + *Incr*  
   
- *var* \= *erhöht* \+ *var*  
+ *Var* = *Incr* + *Var*  
   
- *var* \= *Variable* \- *incr*  
+ *Var* = *Var* - *Incr*  
   
- *Variable*  
- Eine ganzzahlige Variable mit Vorzeichen.  Wenn diese Variablen freigegeben wird, andernfalls wird sie implizit privat für die Dauer **nach**gemacht.  Diese Variable darf nicht im Text der **nach**\-Anweisung geändert werden.  Sofern die Variable ein angegebenes **lastprivate**ist sein Wert, nachdem die Schleife unbestimmt ist.  
+ *var*  
+ Eine ganze Zahl mit Vorzeichen-Variable. Wenn diese Variable andernfalls freigegeben werden würden, es wird implizit gemacht private für die Dauer der **für**.   Diese Variable darf nicht geändert werden, im Hauptteil der **für** Anweisung. Wenn die Variable angegeben wird **Lastprivate**, dessen Wert nach die Schleife unbestimmt ist.  
   
- *logisch\-OP*  
- Eine der folgenden Anwendungen:  
+ *logische op*  
+ Eine der folgenden:  
   
- \<  
+ <  
   
- \<\=  
+ \<=  
   
- \>  
+ >  
   
- \>\=  
+ \>=  
   
- *lbs*, *b*und  
- Ausdrücke der ganzen Zahl von Schleifen invarianten Elements.  Es gibt keine Synchronisierung während der Auswertung dieser Begriffe.  Wie alle ausgewerteten unbestimmten Ergebnissen Nebeneffekt erzeugnisses.  
+ *lb*, *b*, und *Incr*  
+ Invarianten Ganzzahl-Ausdrücke eine Schleife. Es gibt keine Synchronisierung während der Auswertung dieser Ausdrücke. Folglich zu ausgewerteten Nebeneffekten unbestimmte Ergebnissen führen.  
   
- Beachten Sie, dass die kanonische Form die Anzahl der auf den Eintrag kann berechnet werden soll, iterationen Schleifen der Schleife.  Diese Berechnung wird mit Werten im Typ von *var*bei ganzzahligen Erweiterungen ausgeführt.  Insbesondere wenn der Wert von *b* \- *lbs* \+ *erhöht* kann nicht in diesen Typ dargestellt werden, das Ergebnis ist unbestimmt.  Darüber hinaus *logisch\-OP,* wenn \< ist *,* oder \<\= dann *Zunahme\-expr* *Variable* muss sich dazu führen, dass bei jeder Iteration der Schleife erhöht werden soll.  Wenn *logisch\-OP* \> ist *,* oder \>\= dann *Zunahme\-expr* dazu führen, dass *Variable* muss für jede Iteration der Schleife zu verringern.  
+ Beachten Sie, dass die kanonische Form der Anzahl der Schleifeniterationen beim Einstieg in die Schleife berechnet werden soll. Diese Berechnung erfolgt mit den Werten in den Typ des *Var*, nach dem ganzzahlige Erweiterungen. In bestimmten, wenn der Wert der *b* - *lb* + *Incr* nicht dargestellt werden kann, dass Typ, das Ergebnis unbestimmt ist. Weitere, If *logische Op* ist < oder \<dann = *Incr-Expr* muss dazu führen, dass *Var* bei jeder Iteration der Schleife zu erhöhen.   Wenn *logische Op* ist > oder > = dann *Incr-Expr* muss dazu führen, dass *Var* bei jeder Iteration der Schleife zu verringern.  
   
- Die **Zeitplan**\-Klausel gibt an, wie Iterationen der Schleife **nach** unter Threads des Teams eingeteilt werden.  Die ordnungsgemäße Ausführung eines Programms darf nicht aus welchem Thread angewiesen, eine bestimmte Iteration ausführt.  Der Wert von *chunk\_size*, wenn er angegeben wird, muss ein ganzzahliger Ausdruck der Schleifen invarianten Elements mit einem positiven Wert sein.  Es gibt keine Synchronisierung während der Auswertung des Ausdrucks.  Daher stellen alle ausgewerteten Nebeneffekte unbestimmte Ergebnisse.  Die *Art der* Zeitplan kann einer der folgenden Werte sein:  
+ Die **Zeitplan** -Klausel gibt wie Iterationen der **für** Schleife auf Threads für das Team verteilt werden. Die korrekte Ausführung eines Programms muss hängen nicht Bestimmung des Threads mit eine bestimmte Iteration ausgeführt wird. Der Wert der *Chunk_size*, sofern angegeben, muss eine invariante Ganzzahlausdruck Schleife mit einem positiven Wert. Es gibt keine Synchronisierung beim Auswerten dieses Ausdrucks. Folglich zu ausgewerteten Nebeneffekten unbestimmte Ergebnissen führen. Der Zeitplan *Art* kann eines der folgenden sein:  
   
- TABELLE 2\-1 Werte *arten*\-Klausel **Zeitplan**  
+ Tabelle 2: 1 **Zeitplan** Klausel *Art* Werte  
   
 |||  
 |-|-|  
-|static|Wenn **Zeitplan \(statisch.** *chunk\_size,*wird**\)** Iterationen werden, unterteilt in Ausschnitte eine Größe angegeben, die durch angegeben ist, *chunk\_size*.  Die Ausschnitte sind statisch an Threads im Team in einer Roundrobinen Weise in der Reihenfolge der Thread Zahl zugewiesen.  Wenn kein *chunk\_size,* wird die Iteration leer ist in Blöcke aufgeteilt, die Größe ungefähr gleich sind, wenn ein Ausschnitt zu jedem Thread zugewiesen ist angegeben.|  
-|dynamic|Wenn **dynamisch \(Zeitplan** *chunk\_size,*wird**\)** , die unterteilt werden Ausschnitte in eine Reihe von Iterationen jedes enthaltenden *chunk\_size* Iterationen angegeben.  Jeder Ausschnitt ist einem Thread zugewiesen, der eine Zuweisung wartet.  Der Thread führt den Ausschnitt der Iterationen aus und wartet dann auf seine folgende Zuweisung, bis keine Ausschnitte zugewiesen sein bleiben.  Beachten Sie, dass der letzte Block zugewiesen werden soll, kann eine kleinere Anzahl der Iterationen hat.  Wenn kein *chunk\_size,* wird es standardmäßig auf 1 festgelegt.|  
-|Einführungs|Wenn **Zeitplan \(Einführungs.** *chunk\_size,*wird**\)** , die Iterationen zugewiesen wurden an Threads mit Ausschnitten in den Größen abnimmt.  Wenn ein Thread den zugewiesenen Ausschnitt von Iterationen beendet, wird er dynamisch einen anderen Ausschnitt zugewiesen, wenn keine bleiben.  Für ein *chunk\_size* 1, ist die Größe jedes Ausschnitts etwa die Anzahl der nicht zugewiesenen Iterationen durch die Anzahl der Threads.  Diese Größe verkleinern sich etwa exponential bis 1.  Für ein *chunk\_size* *k* mit dem Wert *, der* größer als 1 verringert sich die Größe exponential Info zu *k*, mit der Ausnahme, dass der letzte Block ist möglicherweise kleiner als *k\-Iterationen* .  Wenn kein *chunk\_size,* wird es standardmäßig auf 1 festgelegt.|  
-|Runtime|Wenn **Zeitplan \(Common Language Runtime\)** angegeben wird, wird die Entscheidung bezüglich Planung bis zur Laufzeit verzögert.  Die *Art der* Zeitplan und die Größe der Blöcke können zur Laufzeit ausgewählt werden, indem Sie die Umgebungsvariable **OMP\_SCHEDULE**festlegt.  Diese Umgebungsvariable nicht festgelegt ist, wird der resultierende Zeitplan Implementierung\-definiert.  Wenn **Zeitplan \(Common Language Runtime\)** angegeben wird, *chunk\_size* darf nicht angegeben werden.|  
+|static|Wenn **Zeitplan (statisch,** *Chunk_size***)** angegeben ist, sind Iterationen in Segmenten mit einer Größe von angegebenen unterteilt *Chunk_size*. Die Blöcke werden Threads im Team eine Roundrobin in der Reihenfolge die Thread-Anzahl statisch zugewiesen. Wenn kein *Chunk_size* angegeben ist, wird der Speicherplatz für die Iteration ist unterteilt in Blöcke unterteilt, die ungefähr im Größe mit einem beschädigten für jeden Thread zugewiesen sind.|  
+|dynamic|Wenn **Zeitplan (dynamische,** *Chunk_size***)** angegeben ist, wird die Iterationen sind in einer Reihe von Segmenten, die jeweils unterteilt *Chunk_size* Iterationen. Jeder Block wird ein Thread zugewiesen, die für eine Zuordnung darauf warten. Der Thread Segments von Iterationen ausführt, und klicken Sie dann für die nächste Zuweisung wartet, bis keine Blöcke weiterhin zugewiesen werden. Beachten Sie, dass das letzte Segment zugewiesen werden soll, eine kleinere Anzahl von Iterationen aufweisen kann. Wenn kein *Chunk_size* angegeben ist, wird standardmäßig auf 1.|  
+|Einführung|Wenn **Zeitplan (geführt,** *Chunk_size***)** angegeben ist, werden Threads in Segmenten mit abnehmenden Größen Iterationen zugewiesen sind. Wenn ein Thread seine zugewiesenen Dateiblock Iterationen abgeschlossen ist, wird er einen anderen Block dynamisch zugewiesen, bis keine mehr übrig sind. Für eine *Chunk_size* 1, wird die Größe jedes Segments ungefähr der Anzahl der nicht zugewiesene Iterationen dividiert durch die Anzahl der Threads. Diese Größen werden ungefähr auf 1 exponentiell verringern. Für eine *Chunk_size* mit dem Wert *k* größer als 1 ist, die Größen verringern ungefähr exponentiell zu *k*, außer dass das letzte Segment weniger möglicherweise  *k* Iterationen. Wenn kein *Chunk_size* angegeben ist, wird standardmäßig auf 1.|  
+|Laufzeit|Wenn **schedule(runtime)** angegeben wird, die Entscheidung zur Planung bis zur Laufzeit verzögert wird. Der Zeitplan *Art* und Größe der Segmente zur Laufzeit ausgewählt werden kann, durch Festlegen der Umgebungsvariablen **OMP_SCHEDULE**. Wenn diese Umgebungsvariable nicht festgelegt ist, wird der resultierende Zeitplan Implementierung definiert. Wenn **schedule(runtime)** angegeben wird, *Chunk_size* muss nicht angegeben werden.|  
   
- In Ermangelung einer explizit definierten **Zeitplan**\-Klausel wird der Standardwert **Zeitplan** Implementierung\-definiert.  
+ In Ermangelung einer explizit definierte **Zeitplan** -Klausel, werden die Standardeinstellungen **Zeitplan** ist implementierungsdefiniert.  
   
- Ein OpenMP\-kompatibles Programm sollte nicht auf einem bestimmten Zeitplan für eine ordnungsgemäße Ausführung basieren.  Ein Programm sollte nicht nach einem Zeitplan erstellen *die Art, die* sich genau an das angegebene oben genannte Beschreibung entspricht, da es möglich ist, Schwankungen Implementierungen der gleichen Zeitplan über verschiedene *Art der* Compiler haben.  Die Beschreibungen können verwendet werden, um den Zeitplan auszuwählen, der für eine bestimmte Situation geeignet ist.  
+ Ein OpenMP-kompatibles Programm nach einem bestimmten Zeitplan für die korrekte Ausführung, nicht empfehlenswert. Ein Programm, nach einem Zeitplan nicht empfehlenswert *Art* entsprechen, das genau mit der Beschreibung oben, da es möglich ist, die Variationen in den Implementierungen der von dem gleichen Zeitplan aufweisen *Art* über zwischen den verschiedenen Compilern. Die Beschreibungen können verwendet werden, um den Zeitplan auszuwählen, der für eine bestimmte Situation geeignet ist.  
   
- Die **geordnet**\-Klausel muss als **geordnet**\-Direktive Datenbindung an den **nach** Konstrukt vorhanden sein.  
+ Die **sortiert** Klausel muss vorhanden sein, wenn **sortiert** Direktiven Binden an die **für** erstellen.  
   
- Es gibt eine implizite Grenze am Ende eines **nach** Konstrukts, es sei denn, eine **nowait**\-Klausel angegeben wird.  
+ Besteht eine implizite Barriere am Ende einer **für** erstellen, es sei denn, eine **Nowait** -Klausel angegeben ist.  
   
- Einschränkungen für **nach**\-Direktive lauten wie folgt:  
+ Einschränkungen für die **für** Richtlinie lauten wie folgt:  
   
--   Die **nach** Schleife muss ein strukturierter Block sein, und darf nicht durch eine break\-Anweisung ihre Ausführung beendet werden.  
+-   Die **für** Schleife muss einem strukturierten Block und darüber hinaus die Ausführung muss nicht abgeschlossen werden durch eine **Break** Anweisung.  
   
--   Die Werte der **nach** der Ausdrücke steuer \- Schleife, die mit **nach**\-Direktive zugeordnet ist, müssen die Verfahren für alle Threads im Team sein.  
+-   Die Werte der Schleife Steuern von Ausdrücken die **für** Schleife zugeordnet eine **für** Richtlinie muss für alle Threads im Team identisch sein.  
   
--   Die **nach** Schleifeniterationsvariable muss einen ganzzahligen Typ mit Vorzeichen.  
+-   Die **für** Schleifeniterationsvariable muss ein Ganzzahltyp mit Vorzeichen aufweisen.  
   
--   Nur eine einzige **Zeitplan**\-Klausel kann auf **nach**\-Direktive angezeigt werden.  
+-   Nur ein einzelner **Zeitplan** -Klausel kann angezeigt werden, auf eine **für** Richtlinie.  
   
--   Nur eine einzige **geordnet**\-Klausel kann auf **nach**\-Direktive angezeigt werden.  
+-   Nur ein einzelner **sortiert** -Klausel kann angezeigt werden, auf eine **für** Richtlinie.  
   
--   Nur eine einzige **nowait**\-Klausel kann auf **nach**\-Direktive angezeigt werden.  
+-   Nur ein einzelner **Nowait** -Klausel kann angezeigt werden, auf eine **für** Richtlinie.  
   
--   Sie ist nicht angegeben, wieoft, oder wenn alle Nebeneffekte in der *chunk\_size*, *lbs\-*, *b\-*oder *Zunahme\-Ausdrücke* auftreten.  
+-   Es ist nicht angegeben, If oder wie oft eine Seite innerhalb Auswirkungen nach sich ziehen die *Chunk_size*, *lb*, *b*, oder *Incr* Ausdrücke auftreten.  
   
--   Der Wert des Ausdrucks *chunk\_size* muss derselbe für alle Threads in Team sein.  
+-   Der Wert, der die *Chunk_size* Ausdruck muss für alle Threads in der Team identisch sein.  
   
-## Querverweise:  
+## <a name="cross-references"></a>Referenzen:  
   
--   **private**, **firstprivate**, **lastprivate**und **Verringerung**\-Klauseln finden [2.7.2 Abschnitt](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) auf Seite 25.  
+-   **private**, **Firstprivate**, **Lastprivate**, und **Verringerung** -Klausel finden Sie unter [Abschnitt 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) auf Seite "25".  
   
--   **OMP\_SCHEDULE** Umgebungsvariablen finden [Abschnitt 4.1](../../parallel/openmp/4-1-omp-schedule.md) auf Seite 48.  
+-   **OMP_SCHEDULE** Umgebung-Variable verwenden, finden Sie unter [Abschnitt 4.1](../../parallel/openmp/4-1-omp-schedule.md) auf Seite 48.  
   
--   **geordnet** Konstrukt finden [2.6.6 Abschnitt](../../parallel/openmp/2-6-6-ordered-construct.md) auf Seite 22.  
+-   **sortiert** erstellen, finden Sie unter [Abschnitt 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) auf der Seite "22".  
   
--   [Anhang D](../../parallel/openmp/d-using-the-schedule-clause.md)Seite 93, gibt weitere Informationen über die Verwendung der Zeitplan clause.
+-   [Anhang D](../../parallel/openmp/d-using-the-schedule-clause.md), Seite 93, erhalten Sie weitere Informationen zur Verwendung der Schedule-Klausel.

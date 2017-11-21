@@ -1,52 +1,57 @@
 ---
-title: "Verteilen der MFC-Bibliothek | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC, Verteilen"
-  - "Verteilen der MFC-Bibliothek"
+title: Verteilen der MFC-Bibliothek | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- MFC, redistributing
+- redistributing MFC library
 ms.assetid: 72714ce1-385e-4c1c-afa5-96b03e873866
-caps.latest.revision: 32
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 29
+caps.latest.revision: "32"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 5bde60a4e0c8ec9c0f9091edd40397a371e0e66e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Verteilen der MFC-Bibliothek
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Wenn Sie die Anwendung dynamisch mit der MFC\-Bibliothek verknüpfen, müssen Sie die Datei "Msvcr100.dll" verteilen, da alle MFC\-DLLs die freigegebene Version der C\-Laufzeitbibliothek \(CRT\-Bibliothek\) verwenden.  Sie müssen auch "Mfc100u.dll" oder "Mfc100.dll" verteilen.  
+# <a name="redistributing-the-mfc-library"></a>Verteilen der MFC-Bibliothek
+Wenn Sie Ihre Anwendung mit der MFC-Bibliothek dynamisch verknüpfen, müssen Sie die entsprechende MFC-DLL verteilen. Wenn die MFC-app mit der Version von MFC, die geliefert wird mit Visual Studio 2015 erstellt wird, müssen Sie z. B. verteilen mfc140.dll oder mfc140u.dll, je nachdem, ob Ihre app für schmale Zeichen oder Unicode-Unterstützung kompiliert wird.  
   
- Wenn Sie die Anwendung statisch mit MFC verknüpfen, \(das heißt, wenn Sie im Dialogfeld **Eigenschaften** auf der Registerkarte **Allgemein** die Option **MFC in einer statischen Bibliothek verwenden** angeben\), müssen Sie die Datei "Mfc100u.dll" oder "Mfc100.dll" nicht neu verteilen.  Obwohl die statische Verknüpfung möglicherweise bei Tests und internen Bereitstellungen von Anwendungen funktioniert, sollte dieses Verfahren nicht zur Neuverteilung von MFC verwendet werden.  Weitere Informationen zu den empfohlenen Vorgehensweisen zum Bereitstellen von Visual C\+\+\-Bibliotheken finden Sie unter [Auswählen einer Bereitstellungsmethode](../ide/choosing-a-deployment-method.md).  
+> [!NOTE]
+>  Die mfc140.dll Dateien wurden aus dem Verzeichnis verteilbaren Dateien in Visual Studio 2015 RTM ausgelassen. Sie können die Versionen von Visual Studio 2015 in den Verzeichnissen "Windows\System32" und Windows\syswow64 installiert werden, stattdessen verwenden.  
   
- Wenn die Anwendung die MFC\-Klassen verwendet, die das WebBrowser\-Steuerelement implementieren \(z. B. [CHtmlView\-Klasse](../mfc/reference/chtmlview-class.md) oder [CHtmlEditView Class](../mfc/reference/chtmleditview-class.md)\), sollte auch die aktuellste Version von Microsoft Internet Explorer installiert werden, damit auf dem Zielcomputer die aktuellen allgemeinen Steuerungsdateien vorhanden sind. \(Dazu wird mindestens Internet Explorer 4.0 benötigt.\) Informationen zur Installation von Internet Explorer\-Komponenten finden Sie im Artikel 185375 zur Erstellung einer einzelnen EXE\-Installation von Internet Explorer auf der Microsoft Support\-Website.  
+ Da alle MFC-DLLs die freigegebene Version der C-Laufzeitbibliothek (CRT) verwenden, müssen Sie möglicherweise auch die CRT zu verteilen. Die Version von MFC, die geliefert wird mit Visual Studio 2015 verwendet die universal CRT-Bibliothek, die als Teil von Windows 10 verteilt wird. Führen Sie eine MFC-Anwendung mit Visual Studio 2015 auf frühere Versionen von Windows erstellt haben, müssen Sie der Universal CRT verteilen. Informationen zum Verteilen von universal CRT als eine Komponente des Betriebssystems oder mithilfe einer lokalen Bereitstellung finden Sie unter [Einführung in die Universal CRT](http://go.microsoft.com/fwlink/?LinkId=617977). Informationen zum Herunterladen der ausdrückt CRT für die zentrale Bereitstellung unter Windows unterstützten Versionen finden Sie unter [Windows 10 universelle C-Laufzeit](http://go.microsoft.com/fwlink/p/?LinkId=619489). Ucrtbase.dll für die lokale Bereitstellung verteilbare architekturspezifischer-Versionen befinden sich im Windows SDK. Standardmäßig installiert Visual Studio diese in C:\Program Files (x86) \Windows Kits\10\Redist\ucrt\DLLs\ in ein Unterverzeichnis architekturspezifischer.  
   
- Wenn in der Anwendung die MFC\-Datenbankklassen \(z. B. [CRecordset Class](../mfc/reference/crecordset-class.md) und [CRecordView Class](../mfc/reference/crecordview-class.md)\) verwendet werden, müssen Sie ODBC und alle in der Anwendung verwendeten ODBC\-Treiber weiterverteilen.  Weitere Informationen finden Sie unter [Neuverteilen von Datenbankunterstützungsdateien](../ide/redistributing-database-support-files.md).  
+ Wenn Ihre app mit einer früheren Version der MFC-Bibliothek erstellt wird, müssen Sie die entsprechenden CRT-DLL aus dem Verzeichnis verteilbaren Dateien verteilen. Wenn die MFC-Anwendung mit dem Visual Studio 2013 (vc120)-Toolset erstellt wird, müssen Sie z. B. die msvcr120.dll verteilen. Außerdem müssen Sie die Mfc-Bibliothek übereinstimmende neu verteilen`<version>`u.dll oder Mfc`<version>`DLL.  
   
- Wenn die MFC\-Anwendung Windows Forms\-Steuerelemente verwendet, müssen Sie mfcmifc80.dll mit der Anwendung verteilen.  Diese DLL ist eine mit einem starken Namen signierte .NET\-Assembly, die mit einer Anwendung in deren lokalem Ordner oder durch Bereitstellung im globalen Assemblycache \(GAC\) mit dem [Gacutil.exe \(Global Assembly Cache Tool\)](../Topic/Gacutil.exe%20\(Global%20Assembly%20Cache%20Tool\).md) verteilt werden kann.  
+ Wenn Sie Ihre Anwendung mit MFC statisch verknüpfen (d. h., wenn Sie angeben, **MFC in einer statischen Bibliothek verwenden** auf die **allgemeine** Registerkarte der **Eigenschaftenseiten** Dialogfeld), Sie verfügen nicht über Um ein MFC-DLL weiterverteilen. Obwohl die statische Verknüpfung möglicherweise bei Tests und internen Bereitstellungen von Anwendungen funktioniert, sollte dieses Verfahren nicht zur Neuverteilung von MFC verwendet werden. Weitere Informationen zu den empfohlenen Vorgehensweisen für die Bereitstellung von Visual C++-Bibliotheken, finden Sie unter [Auswählen einer Bereitstellungsmethode](../ide/choosing-a-deployment-method.md).  
   
- Wenn Sie eine MFC\-DLL weiterverteilen, achten Sie darauf, nicht die Debugversion, sondern die Verkaufsversion weiterzuverteilen.  Debugversionen der DLLs können nicht weiterverteilt werden.  Die Namen von Debugversionen der MFC\-DLLs enden auf "d" enden, z. B. "Mfc100d.dll"  
+ Wenn Ihre Anwendung die MFC-Klassen verwendet, die das WebBrowser-Steuerelement zu implementieren (z. B. [CHtmlView-Klasse](../mfc/reference/chtmlview-class.md) oder [CHtmlEditView Klasse](../mfc/reference/chtmleditview-class.md)), es wird empfohlen, dass Sie auch die aktuelle Version von installieren. Microsoft Internet Explorer so, dass der Zielcomputer aktuelle allgemeine Benutzersteuerelement-Dateien hat. (Dazu wird mindestens Internet Explorer 4.0 benötigt.) Informationen zur Installation von Internet Explorer-Komponenten finden Sie im Artikel 185375 zur Erstellung einer einzelnen EXE-Installation von Internet Explorer auf der Microsoft Support-Website.  
   
- Wenn Sie in irgendeiner Weise MFC\-Quellen ändern und anschließend die MFC\-DLL neu erstellen, müssen Sie die geänderte MFC\-DLL umbenennen, um einen Konflikt mit der in Visual Studio enthaltenen MFC\-DLL zu vermeiden.  Es wird empfohlen, die MFC\-DLL nicht neu zu erstellen oder umzubenennen.  Weitere Informationen finden Sie unter MFC Technischer Hinweis 33.  
+ Wenn Ihre Anwendung die MFC-Datenbankklassen verwendet (z. B. [CRecordset Klasse](../mfc/reference/crecordset-class.md) und [CRecordView-Klasse](../mfc/reference/crecordview-class.md)), müssen Sie ODBC und keine ODBC-Treiber von der Anwendung verwendeten verteilen. Weitere Informationen finden Sie unter [Neuverteilen von Datenbankunterstützungsdateien](../ide/redistributing-database-support-files.md).  
   
- Sie können MFC entweder mit VCRedist\_*architecture*.exe, Mergemodulen, die zusammen mit Visual Studio installiert werden, oder durch Bereitstellung der MFC\-DLL im gleichen Ordner wie die Anwendung weiterverteilen.  Weitere Informationen zur Weiterverteilung von MFC finden Sie unter [Verteilen von Visual C\+\+\-Dateien](../ide/redistributing-visual-cpp-files.md).  
+ Wenn die MFC-Anwendung Windows Forms-Steuerelemente verwendet, müssen Sie mfcmifc80.dll mit der Anwendung verteilen. Diese DLL ist eine starken Namen signiert, die mit einer Anwendung in den lokalen Ordner der Anwendung oder durch die Bereitstellung auf den globalen Assemblycache (GAC) mithilfe von verteilt werden, können die [Gacutil.exe (Global Assembly Cache-Tool)](/dotnet/framework/tools/gacutil-exe-gac-tool).  
   
-## Installation lokalisierter MFC\-Komponenten  
- Wenn Sie die Anwendung durch Installieren einer MFC\-Lokalisierungs\-DLL lokalisieren möchten, müssen Sie die verteilbaren Mergedateien \(MSM\-Datei\) verwenden.  Wenn Sie zum Beispiel die Anwendung auf einem x86\-Computer lokalisieren möchten, müssen Sie "Microsoft\_VC100\_MFCLOC\_x86.msm" im Installationspaket für einen x86\-Computer zusammenführen.  
+ Wenn Sie eine MFC-DLL weiterverteilen, achten Sie darauf, nicht die Debugversion, sondern die Verkaufsversion weiterzuverteilen. Debugversionen der DLLs können nicht weiterverteilt werden. Die Namen der Debugversionen der MFC-DLLs enden mit "d", z. B. Mfc140d.dll.  
   
- Die weiterverteilbaren MSM\-Dateien enthalten die DLLs, die für die Lokalisierung verwendet werden.  Es gibt eine DLL für jede unterstützte Sprache.  Beim Installationsvorgang werden diese DLLs im Ordner "%WINDIR%\\system32\\" auf dem Zielcomputer installiert.  
+ Sie können MFC verteilen, indem Sie mit beiden VCRedist_*Architektur*.exe, Mergemodule, die mit Visual Studio oder durch Bereitstellen der MFC-DLL in denselben Ordner wie die Anwendung installiert sind. Weitere Informationen zur neuverteilung von MFC finden Sie unter [Neuverteilen von Visual C++-Dateien](../ide/redistributing-visual-cpp-files.md).  
   
- Weitere Informationen zur Lokalisierung von MFC\-Anwendungen finden Sie unter [TN057: Lokalisierung von MFC\-Komponenten](../mfc/tn057-localization-of-mfc-components.md) sowie im [Artikel 208983 zum Verwenden von MFC LOC\-DLLs](http://go.microsoft.com/fwlink/?LinkId=198025) auf der Microsoft Support\-Website.  
+## <a name="installation-of-localized-mfc-components"></a>Installation lokalisierter MFC-Komponenten  
+ Wenn Sie die Anwendung durch Installieren einer MFC-Lokalisierungs-DLL lokalisieren möchten, müssen Sie die verteilbaren Mergedateien (MSM-Datei) verwenden. Angenommen, wenn Sie die Anwendung auf x X86 zu lokalisieren möchten Computer, müssen Sie Microsoft_VC zusammenführen`<version>`_MFCLOC_x86.msm in das Installationspaket für x X86 Computer.  
   
- Sie können MFC\-Lokalisierungs\-DLLs verteilen, indem Sie die MFC\-DLL im lokalen Anwendungsordner bereitstellen.  Weitere Informationen zur Weiterverteilung von Visual C\+\+\-Bibliotheken finden Sie unter [Verteilen von Visual C\+\+\-Dateien](../ide/redistributing-visual-cpp-files.md).  
+ Die weiterverteilbaren MSM-Dateien enthalten die DLLs, die für die Lokalisierung verwendet werden. Es gibt eine DLL für jede unterstützte Sprache. Beim Installationsvorgang werden diese DLLs im Ordner "%WINDIR%\system32\" auf dem Zielcomputer installiert.  
   
-## Siehe auch  
- [Verteilen von Visual C\+\+\-Dateien](../ide/redistributing-visual-cpp-files.md)
+ Weitere Informationen zum Lokalisieren von MFC-Anwendungen finden Sie unter [TN057: Lokalisierung von MFC-Komponenten](../mfc/tn057-localization-of-mfc-components.md), sowie [Artikel 208983: Verwenden von MFC LOC DLLs wie](http://go.microsoft.com/fwlink/?LinkId=198025) auf der Microsoft-Support-Website.  
+  
+ Sie können MFC-Lokalisierungs-DLLs verteilen, indem Sie die MFC-DLL im lokalen Anwendungsordner bereitstellen. Weitere Informationen über das Verteilen von Visual C++-Bibliotheken finden Sie unter [Neuverteilen von Visual C++-Dateien](../ide/redistributing-visual-cpp-files.md).  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Verteilen von Visual C++-Dateien](../ide/redistributing-visual-cpp-files.md)

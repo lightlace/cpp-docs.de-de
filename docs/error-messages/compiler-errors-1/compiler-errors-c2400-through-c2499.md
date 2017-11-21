@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -34,19 +33,17 @@ helpviewer_keywords:
 - C2478
 - C2481
 - C2497
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: f1f05572-af0b-497b-bde4-4c81ec01af3b
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 6586dfb0e0c3d63d87d6790f0cbe1bb8a832133e
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: c6d0fde64db90c53e5a745551e378000f898fe7e
-ms.contentlocale: de-de
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="compiler-errors-c2400-through-c2499"></a>Compilerfehler C2400 bis C2499
 In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen Unterabschnitt der Visual C++-Compilerfehler enthalten. Sie können hier auf die Informationen zugreifen oder im Fenster **Ausgabe** in Visual Studio eine Fehlernummer auswählen und dann die F1-TASTE drücken.  
@@ -148,7 +145,7 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C2491](compiler-error-c2491.md)|"*Bezeichner*': Definition von Dllimport *Funktion* nicht zulässig|  
 |[Compilerfehler C2492](compiler-error-c2492.md)|"*Variable*": Daten mit Speicherdauer Thread können keine Dll-Schnittstelle|  
 |[Compilerfehler C2493](compiler-error-c2493.md)|Unzulässige Form von __based|  
-|[Compilerfehler C2494](compiler-error-c2494.md)|"*Schlüsselwort*" kann nicht innerhalb eines Filterausdrucks aufgerufen werden oder \_ \_schließlich/finally-block|  
+|[Compilerfehler C2494](compiler-error-c2494.md)|"*Schlüsselwort*" kann nicht innerhalb eines Filterausdrucks aufgerufen werden oder &#95; &#95; schließlich/finally-block|  
 |[Compilerfehler C2495](compiler-error-c2495.md)|"*Bezeichner*": "__declspec(noexcept)" kann nur auf Funktionsdeklarationen oder-Definitionen angewendet werden|  
 |[Compilerfehler C2496](compiler-error-c2496.md)|"*Bezeichner*': 'Selectany' kann nur für Datenelemente mit externer Bindung angewendet werden|  
 |Compilerfehler Fehler C2497|"*Bezeichner*': 'Implementation_key' kann nur auf Funktionsdeklarationen angewendet werden|  

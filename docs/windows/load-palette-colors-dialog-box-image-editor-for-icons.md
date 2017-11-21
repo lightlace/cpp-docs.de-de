@@ -1,45 +1,44 @@
 ---
-title: "Palettenfarben laden (Dialogfeld) (Bildbearbeitung f&#252;r Symbole) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.loadcolorpalette"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Farbpaletten"
-  - "Palettenfarben laden (Dialogfeld)"
+title: "Palette laden Farben (Dialogfeld) (Bildbearbeitung für Symbole) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.loadcolorpalette
+dev_langs: C++
+helpviewer_keywords:
+- color palettes
+- Load Palette Colors dialog box
 ms.assetid: a1b17203-3e02-4498-91de-4ed089156df1
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 32a0f3056d19edb2499c9cfa7a9d319e90355e78
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Palettenfarben laden (Dialogfeld) (Bildbearbeitung f&#252;r Symbole)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Verwenden Sie dieses Dialogfeld, um spezielle Farbpaletten für das Projekt zu laden.  Weitere Informationen finden Sie unter [Speichern und Laden von verschiedenen Farbpaletten](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  
+# <a name="load-palette-colors-dialog-box-image-editor-for-icons"></a>Palettenfarben laden (Dialogfeld) (Bildbearbeitung für Symbole)
+Verwenden Sie dieses Dialogfeld, um spezielle Farbpaletten zur Verwendung in Ihrem Projekt zu laden. Weitere Informationen finden Sie unter [speichern und Laden von verschiedenen Farbpaletten](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  
   
  **Suchen in**  
- Legt den Speicherort fest, an dem Sie eine Datei oder einen Ordner suchen möchten.  Klicken Sie auf den Pfeil, um einen anderen Speicherort auszuwählen, oder klicken Sie auf das Ordnersymbol auf der Symbolleiste, um zu einer höheren Ordnerebene zu wechseln.  
+ Gibt den Speicherort einer Datei oder eines Ordners gefunden werden soll. Klicken Sie auf den Pfeil, um einen anderen Speicherort auszuwählen, oder klicken Sie auf das Symbol "Ordner" auf der Symbolleiste, um Ebenen zu verschieben.  
   
  **Dateiname**  
- In diesem Feld können Sie den Namen der Datei eingeben, die Sie öffnen möchten.  Um eine zuvor geöffnete Datei schnell zu finden, klicken Sie in der Dropdownliste, falls vorhanden, auf den Dateinamen.  
+ Dient zur Eingabe der Name der Datei, die Sie öffnen möchten. Um schnell eine Datei zu suchen, die Sie zuvor geöffnet haben, klicken Sie auf den Dateinamen in der Dropdown-Liste, falls verfügbar.  
   
- Bei der Suche nach einer Datei können Sie Sternchen \(\*\) als Platzhalter verwenden.  Beispielsweise können Sie **\*.\*** eingeben, um eine Liste aller Dateien anzuzeigen.  Sie können auch den vollständigen Pfad zu einer Datei eingeben. Beispiel: **C:\\Eigene Dateien\\MeineFarbpalette.pal** oder **\\\\Netzwerkserver\\MeinOrdner\\MeineFarbpalette.pal**.  
+ Wenn Sie nach einer Datei suchen, können Sie Sternchen (*) als Platzhalter verwenden. Sie können z. B. eingeben \*.\* um eine Liste aller Dateien anzuzeigen. Sie können auch den vollständigen Pfad einer Datei, z. B. C:\My Documents\MyColorPalette.pal eingeben oder \\\NetworkServer\MyFolder\MyColorPalette.pal.  
   
  **Dateityp**  
- Listet die anzuzeigenden Dateitypen auf.  **Palette \(\*.pal\)** ist der Standarddateityp für Farbpaletten.  
+ Listet die Typen von Dateien angezeigt. Palette (* PAL) ist der Standardtyp für die Datei für Farbpaletten.  
   
-## Anforderungen  
- None  
+## <a name="requirements"></a>Anforderungen  
+ Keine  
   
-## Siehe auch  
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>Siehe auch  
+ [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)

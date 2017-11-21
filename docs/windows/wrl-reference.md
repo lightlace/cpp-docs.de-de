@@ -1,43 +1,43 @@
 ---
-title: "WRL-Referenz | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
+title: WRL-Referenz | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
 ms.assetid: 5779dae8-8634-4c77-aa8b-9a348692a2bb
-caps.latest.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6ae60f200b9c90c30879370329220d039d7eb03c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# WRL-Referenz
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Dieser Abschnitt enthält Referenzinformationen für [!INCLUDE[cppwrl](../windows/includes/cppwrl_md.md)] \([!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]\).  
+# <a name="wrl-reference"></a>WRL-Referenz
+Dieser Abschnitt enthält Referenzinformationen für Windows Runtime C++ Template Library (WRL).  
   
 > [!NOTE]
->  [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] definiert Funktionen, die die Infrastruktur [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] unterstützt und nicht vorgesehen, direkt im Code verwendet werden.  Solche Funktionen werden in dieser Dokumentation sind.  
+>  Der Windows Runtime C++ Template Library definiert die Funktionalität, die unterstützt der C++-Vorlagenbibliothek für Windows-Runtime-Infrastruktur und sollte nicht direkt aus Ihrem Code verwendet werden. Diese Funktion wird in dieser Dokumentation aufgeführt.  
   
-## In diesem Abschnitt  
- [Microsoft::WRL\-Namespace](../windows/microsoft-wrl-namespace.md)  
- Definiert die einfachen Typen, die [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] bilden.  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)  
+ Definiert die grundlegenden Typen, aus denen die Windows Runtime C++ Template Library besteht.  
   
- [Microsoft::WRL::Wrappers\-Namespace](../windows/microsoft-wrl-wrappers-namespace.md)  
- Definiert Wrappertypen Resource Acquisition Is Initialization \(RAII\), die die Verwaltung der Lebensdauer von Objekten, von Zeichenfolgen von Handles und vereinfachen.  
+ [Microsoft::WRL::Wrappers-Namespace](../windows/microsoft-wrl-wrappers-namespace.md)  
+ Definiert die Wrappertypen von Resource Acquisition ist Initialisierung (RAII)-, die die Verwaltung der Lebensdauer von Objekten, Zeichenfolgen und Handles zu vereinfachen.  
   
- [Microsoft::WRL::Wrappers::HandleTraits\-Namespace](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)  
- Beschreibt von allgemeinen Eigenschaften Handle\-basierten Ressourcentypen ab.  
+ [Microsoft::WRL::Wrappers::HandleTraits-Namespace](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)  
+ Beschreibt die Merkmale von allgemeinen Handle basierende Ressourcentypen zur Verfügung.  
   
- [Windows::Foundation\-Namespace](../windows/windows-foundation-namespace.md)  
- Ermöglicht grundlegende [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]\-Funktionalität, z Objekt und Factoryerstellung.  
+ [Windows::Foundation-Namespace](../windows/windows-foundation-namespace.md)  
+ Aktiviert grundlegende Windows-Runtime-Funktionen, wie das Objekt und Factory erstellen.  
   
-## Verwandte Abschnitte  
- [Windows Runtime C\+\+ Template Library \(WRL\)](../windows/windows-runtime-cpp-template-library-wrl.md)  
- Listet [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)], Eine COM\-basierte Vorlagenbibliothek ein, die eine Methode auf niedriger Ebene, stellt [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] Komponenten zu erstellen und zu verwenden.
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ [Windows Runtime C++-Vorlagenbibliothek (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)  
+ Führt ein Windows Runtime C++ Template Library, eine COM-basierten Vorlagenbibliothek, die eine Low-Level Methode zum Erstellen und Verwenden von Windows-Runtime-Komponenten bereitstellt.

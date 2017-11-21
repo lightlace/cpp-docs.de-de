@@ -1,48 +1,49 @@
 ---
-title: "Toolbar Button Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size, toolbar buttons"
-  - "toolbar buttons (in Toolbar editor), setting properties"
-  - "Toolbar editor, toolbar button properties"
-  - "status bars, active toolbar button text"
-  - "command IDs, toolbar buttons"
-  - "width, toolbar buttons"
+title: "Eigenschaften von Symbolleisten-Schaltfläche | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- size, toolbar buttons
+- toolbar buttons (in Toolbar editor), setting properties
+- Toolbar editor, toolbar button properties
+- status bars, active toolbar button text
+- command IDs, toolbar buttons
+- width, toolbar buttons
 ms.assetid: b2705814-7c5d-4f24-8f77-07559b0cdda2
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 98c78922ee3987bf459f01a62253e9835ad3e377
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Toolbar Button Properties
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Im Folgenden sehen Sie die Eigenschaften einer Symbolleisten\-Schaltfläche:  
+# <a name="toolbar-button-properties"></a>Eigenschaften von Symbolleisten-Schaltflächen
+Die Eigenschaften einer Symbolleisten-Schaltfläche sind:  
   
-|Property|Beschreibung|  
-|--------------|------------------|  
-|**ID**|Definiert die ID der Schaltfläche.  Die Dropdownliste enthält geläufige **ID**\-Namen.|  
-|**Breite**|Legt die Breite der Schaltfläche fest.  16 Pixel werden empfohlen.|  
-|**Höhe**|Legt die Höhe der Schaltfläche fest.  Beachten Sie, dass die Höhe aller Schaltflächen auf der Symbolleiste geändert wird, sobald Sie die Höhe einer Schaltfläche ändern.  15 Pixel werden empfohlen.|  
-|**Eingabeaufforderung**|Definiert die Meldung, die in der Statusleiste angezeigt wird.  Indem Sie \\n und einen Namen hinzufügen, erhält die jeweilige Symbolleisten\-Schaltfläche eine QuickInfo.  Weitere Informationen finden Sie unter [Erstellen einer QuickInfo für eine Symbolleisten\-Schaltfläche](../mfc/creating-a-tool-tip-for-a-toolbar-button.md).|  
+|Eigenschaft|Beschreibung|  
+|--------------|-----------------|  
+|**ID**|Definiert die ID der Schaltfläche. Die Dropdown-Liste enthält allgemeine **ID** Namen.|  
+|**Breite**|Legt die Breite der Schaltfläche fest. 16 Pixel wird empfohlen.|  
+|**Höhe**|Legt die Höhe der Schaltfläche fest. Beachten Sie, dass die Höhe einer Schaltfläche ändert sich die Höhe aller Schaltflächen auf der Symbolleiste. 15 Pixel wird empfohlen.|  
+|**Eingabeaufforderung**|Definiert die Nachricht in der Statusleiste angezeigt. Hinzufügen von \n und einen Namen hinzugefügt, Symbolleisten-Schaltfläche eine QuickInfo. Weitere Informationen finden Sie unter [erstellen eine QuickInfo](../windows/creating-a-tool-tip-for-a-toolbar-button.md).|  
   
- Die Einstellungen für **Breite** und **Höhe** wirken sich auf alle Schaltflächen aus.  Eine zum Erstellen einer Symbolleiste verwendete Bitmap hat eine Mindestbreite von 2048 Pixeln.  Wenn Sie die Schaltflächenbreite auf 512 Pixel festlegen, ist maximal Platz für vier Schaltflächen. Legen Sie die Breite mit 513 Pixeln fest, finden lediglich drei Schaltflächen Platz.  
+ **Breite** und **Höhe** gelten für alle Schaltflächen. Eine Bitmap, die zum Erstellen einer Symbolleiste verwendet wird, hat eine maximale Breite von 2048. Also wenn Sie die Schaltflächenbreite auf 512 festlegen, können Sie nur vier Schaltflächen haben, und wenn Sie die Breite auf 513 festlegen, können Sie nur drei Schaltflächen haben.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](https://msdn.microsoft.com/library/f45fce5x.aspx) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](https://msdn.microsoft.com/library/xbx3z216.aspx). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  MFC oder ATL  
   
-## Siehe auch  
- [Changing the Properties of a Toolbar Button](../mfc/changing-the-properties-of-a-toolbar-button.md)   
- [Toolbar Editor](../mfc/toolbar-editor.md)
+## <a name="see-also"></a>Siehe auch  
+ [Ändern der Eigenschaften einer Symbolleisten-Schaltfläche](../windows/changing-the-properties-of-a-toolbar-button.md)   
+ [Symbolleisten-Editor](../windows/toolbar-editor.md)
+

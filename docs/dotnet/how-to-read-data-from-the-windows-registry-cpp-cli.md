@@ -1,33 +1,33 @@
 ---
-title: "Gewusst wie: Lesen von Daten aus der Windows-Registrierung (C++/CLI)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Registrierung, Lesen"
-  - "Visual C++, Lesen aus Windows-Registrierung"
+title: 'Vorgehensweise: Lesen von Daten aus der Windows-Registrierung (C + c++ / CLI) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Visual C++, reading from Windows Registry
+- registry, reading
 ms.assetid: aebf52c0-acc7-40e2-adbc-d34e0a1e467e
-caps.latest.revision: 11
-caps.handback.revision: "11"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 25ab4b9cdba5a9a71d1258960e4da89d2d5e657d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Gewusst wie: Lesen von Daten aus der Windows-Registrierung (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Im folgenden Codebeispiel wird der <xref:Microsoft.Win32.Registry.CurrentUser>\-Schlüssel verwendet, um Daten aus der Windows\-Registrierung zu lesen.  Zunächst werden die Unterschlüssel mit der <xref:Microsoft.Win32.RegistryKey.GetSubKeyNames*>\-Methode aufgelistet, und anschließend wird der Identities\-Unterschlüssel mithilfe der <xref:Microsoft.Win32.RegistryKey.OpenSubKey*>\-Methode geöffnet.  Jeder Unterschlüssel wird wie ein Stammschlüssel durch die <xref:Microsoft.Win32.RegistryKey>\-Klasse dargestellt.  Schließlich werden mit dem neuen <xref:Microsoft.Win32.RegistryKey>\-Objekt die Schlüssel\/Wert\-Paare aufgelistet.  
+# <a name="how-to-read-data-from-the-windows-registry-ccli"></a>Gewusst wie: Lesen von Daten aus der Windows-Registrierung (C++/CLI)
+Im folgenden Codebeispiel wird der <xref:Microsoft.Win32.Registry.CurrentUser>-Schlüssel verwendet, um Daten aus der Windows-Registrierung zu lesen. Zunächst werden die Unterschlüssel mit aufgelistet der <xref:Microsoft.Win32.RegistryKey.GetSubKeyNames%2A> -Methode, und klicken Sie dann der Identities-Unterschlüssel mit geöffnet ist die <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> Methode. Jeder Unterschlüssel wird wie ein Stammschlüssel durch die <xref:Microsoft.Win32.RegistryKey>-Klasse dargestellt. Schließlich werden mit dem neuen <xref:Microsoft.Win32.RegistryKey>-Objekt die Schlüssel/Wert-Paare aufgelistet.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // registry_read.cpp  
@@ -66,14 +66,14 @@ int main( )
 }  
 ```  
   
-## Hinweise  
- Die <xref:Microsoft.Win32.Registry>\-Klasse ist lediglich ein Container für statische Instanzen von <xref:Microsoft.Win32.RegistryKey>.  Jede Instanz stellt einen Stammregistrierungsknoten dar.  Die Instanzen sind <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine> und <xref:Microsoft.Win32.Registry.Users>.  
+## <a name="remarks"></a>Hinweise  
+ Die <xref:Microsoft.Win32.Registry>-Klasse ist lediglich ein Container für statische Instanzen von <xref:Microsoft.Win32.RegistryKey>. Jede Instanz stellt einen Stammregistrierungsknoten dar. Die Instanzen sind <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine> und <xref:Microsoft.Win32.Registry.Users>.  
   
- Die Objekte innerhalb der <xref:Microsoft.Win32.Registry>\-Klasse sind nicht nur statisch, sondern auch schreibgeschützt.  Darüber hinaus sind Instanzen der <xref:Microsoft.Win32.RegistryKey>\-Klasse, die für den Zugriff auf den Inhalt der Registrierungsobjekte erstellt wurden, ebenfalls schreibgeschützt.  Unter [Gewusst wie: Schreiben von Daten in die Windows\-Registrierung](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md) finden Sie ein Beispiel, in dem dargestellt wird, wie dieses Verhalten überschrieben werden kann.  
+ Die Objekte innerhalb der <xref:Microsoft.Win32.Registry>-Klasse sind nicht nur statisch, sondern auch schreibgeschützt. Darüber hinaus sind Instanzen der <xref:Microsoft.Win32.RegistryKey>-Klasse, die für den Zugriff auf den Inhalt der Registrierungsobjekte erstellt wurden, ebenfalls schreibgeschützt. Ein Beispiel zum Überschreiben dieses Verhaltens finden Sie unter [wie: Schreiben von Daten in der Windows-Registrierung (C + c++ / CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md).  
   
- In der <xref:Microsoft.Win32.Registry>\-Klasse stehen zwei weitere Objekte zur Verfügung: <xref:Microsoft.Win32.Registry.DynData> und <xref:Microsoft.Win32.Registry.PerformanceData>.  Bei beiden Objekten handelt es sich um Instanzen der <xref:Microsoft.Win32.RegistryKey>\-Klasse.  Das <xref:Microsoft.Win32.Registry.DynData>\-Objekt enthält dynamische Registrierungsinformationen, die nur unter Windows 98 und Windows Me unterstützt werden.  Das <xref:Microsoft.Win32.Registry.PerformanceData>\-Objekt dient dem Zugriff auf Informationen zu Leistungsindikatoren für Anwendungen, die das Leistungsüberwachungssystem von Windows verwenden.  Der <xref:Microsoft.Win32.Registry.PerformanceData>\-Knoten stellt Informationen dar, die eigentlich nicht in der Registrierung gespeichert sind und aus diesem Grund nicht mit Regedit.exe angezeigt werden können.  
+ In der <xref:Microsoft.Win32.Registry>-Klasse stehen zwei weitere Objekte zur Verfügung: <xref:Microsoft.Win32.Registry.DynData> und <xref:Microsoft.Win32.Registry.PerformanceData>. Bei beiden Objekten handelt es sich um Instanzen der <xref:Microsoft.Win32.RegistryKey>-Klasse. Die <xref:Microsoft.Win32.Registry.DynData> -Objekt enthält dynamische Registrierungsinformationen, die nur unter Windows 98 und WindowsMe unterstützt werden Das <xref:Microsoft.Win32.Registry.PerformanceData>-Objekt dient dem Zugriff auf Informationen zu Leistungsindikatoren für Anwendungen, die das Leistungsüberwachungssystem von Windows verwenden. Die <xref:Microsoft.Win32.Registry.PerformanceData> Knoten enthält Informationen, die eigentlich nicht in der Registrierung gespeichert und daher nicht mit Regedit.exe angezeigt werden können.  
   
-## Siehe auch  
- [Gewusst wie: Schreiben von Daten in die Windows\-Registrierung](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md)   
- [Windows\-Vorgänge](../dotnet/windows-operations-cpp-cli.md)   
- [.NET\-Programmierung mit C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [Vorgehensweise: Schreiben von Daten in der Windows-Registrierung (C + c++ / CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md)   
+ [Windows-Vorgänge (C + c++ / CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [.NET-Programmierung mit C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

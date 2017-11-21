@@ -1,60 +1,59 @@
 ---
-title: "__sidt | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__sidt"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "sidt-Anweisung"
-  - "__sidt (systemintern)"
+title: __sidt | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __sidt
+dev_langs: C++
+helpviewer_keywords:
+- sidt instruction
+- __sidt intrinsic
 ms.assetid: 01e83d14-6e63-4dea-8f64-5a0339d69641
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c952c23af6e1695ca9032e0687334c4ebb881a1f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# __sidt
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft\-spezifisch**  
+# <a name="sidt"></a>__sidt
+**Microsoft-spezifisch**  
   
- Speichert den Wert des deskriptor\-Tabellen Unterbrechungen \(registers IDTR\) an der angegebenen Speicheradresse.  
+ Speichert den Wert des Interrupt Deskriptor Tabelle Registers (IDTR) in der angegebenen Speicheradresse.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void __sidt(  
      void *Destination);  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
   
 |Parameter|Beschreibung|  
+|---------------|-----------------|  
+|[in] `Destination`|Ein Zeiger auf die Speicheradresse, wo die IDTR gespeichert werden.|  
+  
+## <a name="requirements"></a>Anforderungen  
+  
+|Systemintern|Architektur|  
 |---------------|------------------|  
-|\[in\] `Destination`|Ein Zeiger auf die Speicheradresse, an der das IDTR gespeichert wird.|  
-  
-## Anforderungen  
-  
-|Intrinsisch|Architektur|  
-|-----------------|-----------------|  
 |`__sidt`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Headerdatei** \<intrin.h\>  
+ **Headerdatei** \<intrin.h >  
   
-## Hinweise  
- Die `__sidt`\-Funktion ähnelt dem `SIDT` Computeranweisung.  Weitere Informationen Suche nach dem Dokument, das Handbuch „des Intel\-Architektur\-Softwareentwicklers, Volume 2: Anweisungs\-festgelegter Verweis“ auf der Website [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) .  
+## <a name="remarks"></a>Hinweise  
+ Die `__sidt` -Funktion ist gleichbedeutend mit der `SIDT` computeranweisung. Weitere Informationen zu suchen, für das Dokument "Intel Architecture-Softwareentwickler manuell, Volume 2: Instruction Set-Reference" auf der [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) Standort.  
   
-## BEENDEN Sie Microsoft\-Besonderen  
+**Ende Microsoft-spezifisch**  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)   
- [\_\_lidt](../intrinsics/lidt.md)
+ [__lidt](../intrinsics/lidt.md)

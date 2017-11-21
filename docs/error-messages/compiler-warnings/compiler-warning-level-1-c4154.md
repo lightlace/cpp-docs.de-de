@@ -1,34 +1,32 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4154 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4154"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4154"
+title: Compilerwarnung (Stufe 1) C4154 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4154
+dev_langs: C++
+helpviewer_keywords: C4154
 ms.assetid: 4511afeb-e893-4cc6-83b6-4c7a0477f76b
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 71a76d17b7ce52a46f3d8b0ce7c075b10b69fef9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Compilerwarnung (Stufe 1) C4154
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-1-c4154"></a>Compilerwarnung (Stufe 1) C4154
 Löschen eines Arrayausdrucks; Konvertierung in Zeiger  
   
- Sie können `delete` nicht für Arrays verwenden. Aus diesem Grund wird das Array vom Compiler in einen Zeiger konvertiert.  
+ Sie können keine `delete` auf ein Array, sodass der Compiler konvertiert das Array in einen Zeiger.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // C4154.cpp  

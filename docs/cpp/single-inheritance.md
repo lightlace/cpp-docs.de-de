@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - single inheritance
 - base classes [C++], indirect
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - derived classes [C++], single base class
 - inheritance, single
 ms.assetid: 1cb946ed-8b1b-4cf1-bde0-d9cecbfdc622
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: b716d383d001b8e0812eaba76322aa3c7b66b8f4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: c896b9ae68aad6e537655f03585f2261203099e5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="single-inheritance"></a>Einfache Vererbung
 In der einfachen Vererbung, eine häufige Art der Vererbung, haben Klassen nur eine Basisklasse. Betrachten Sie die Beziehung, wie in der folgenden Abbildung veranschaulicht.  
@@ -166,4 +163,3 @@ int main() {
 > [!NOTE]
 >  Die Basisklasse zu zwingen, eine Funktion wie `PrintNameOf` zu implementieren, führt häufig nicht zum optimalen Entwurf. [Virtuelle Funktionen](../cpp/virtual-functions.md) bieten andere Entwurfsalternativen.  
   
-

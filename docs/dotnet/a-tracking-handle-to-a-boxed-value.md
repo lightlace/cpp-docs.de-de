@@ -1,48 +1,47 @@
 ---
-title: "Ein Trackinghandle f&#252;r einen geschachtelten Wert | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Geschachtelte Werttypen, Trackinghandle für"
+title: "Ein Trackinghandle für einen geschachtelten Wert | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: boxed value types, tracking handle to
 ms.assetid: 16c92048-5b74-47d5-8eca-dfea3d38879a
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a986dcea2eec183ae09eb9af275082922257ef76
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Ein Trackinghandle f&#252;r einen geschachtelten Wert
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die Verwendung eines Trackinghandles zum Verweisen auf einen Werttyp hat sich in [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] gegenüber Managed Extensions for C\+\+ geändert.  
+# <a name="a-tracking-handle-to-a-boxed-value"></a>Ein Trackinghandle für einen geschachtelten Wert
+Die Verwendung von ein Trackinghandle für einen Werttyp-Verweis hat gegenüber Managed Extensions für C++ in Visual C++ geändert.  
   
- Boxing ist eine Besonderheit des vereinheitlichten Typsystems von CLR.  Werttypen enthalten ihren Zustand direkt, während Referenztypen ein implizites Paar darstellen: Die benannte Entität ist ein Handle zu einem unbenannten Objekt, das auf dem verwalteten Heap zugeordnet wird.  Eine Initialisierung oder Zuweisung eines Werttyps zu einem `Object` zum Beispiel erfordert, dass der Werttyp innerhalb des CLR\-Heaps platziert wird \(der Werttyp wird bildlich gesprochen verpackt, daher die Bezeichnung Boxing\). Dabei wird zuerst der zugeordnete Speicher belegt, dann der Zustand des Werttyps kopiert und anschließend die Adresse dieses anonymen Wert\/Referenz\-Hybrids zurückgegeben.  Wenn daher in C\# der folgende Code geschrieben wird:  
+ Beim Boxing handelt es sich um eine Besonderheit des Typsystems unified CLR. Werttypen enthalten ihren Zustand direkt, während Referenztypen ein implizites Paar sind: die benannte Entität ist ein Handle für ein unbenanntes Objekt im verwalteten Heap belegt. Eine Initialisierung oder Zuweisung eines Werts, geben eine `Object`, z. B. erfordert, dass der Werttyp innerhalb der CLR-Heap - Dies ist, in dem das Abbild des boxing es entsteht - platziert werden zunächst nach der zugeordneten Speicher belegen, und dann durch Kopieren der Werttyp Zustand , und klicken Sie dann die Adresse dieser anonyme Wert/Verweis hybride zurückgeben. Deshalb, wenn eine in c# schreibt  
   
 ```  
 object o = 1024; // C# implicit boxing  
 ```  
   
- laufen wesentlich mehr Vorgänge ab, als aufgrund der Einfachheit des Codes zu vermuten gewesen wäre.  Der Aufbau der Programmiersprache C\# verbirgt nicht nur die Komplexität der Vorgänge, die unter der Oberfläche ablaufen, sondern auch die Abstraktion des Boxings.  In Managed Extensions for C\+\+ dagegen wird davon ausgegangen, dass die höhere Effizienz bei der Programmierung nur auf Kosten anderer Programmieraspekte erreicht werden kann. Deshalb werden hier explizite Anweisungen vom Benutzer erwartet.  
+ Es ist ein hervorragendes Weitere erfolgen, als durch die Einfachheit des Codes offensichtlich hergestellt wird. Der Entwurf der C#-verbirgt die Komplexität nicht nur aus Vorgängen hinter den Kulissen durchgeführt werden, sondern auch die Abstraktion von boxing selbst. In Managed Extensions for C++, andererseits, Bedenken Sie, dass dies bewirken, dass auf "false" Sinne der Effizienz des Benutzers Fläche ablegt, durch das explizite Anweisung anfordern:  
   
 ```  
 Object *o = __box( 1024 ); // Managed Extensions explicit boxing  
 ```  
   
- Boxing ist in [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] implizit:  
+ Boxing ist implizit in Visual C++:  
   
 ```  
 Object ^o = 1024; // new syntax implicit boxing  
 ```  
   
- Das `__box`\-Schlüsselwort dient in Managed Extensions einem zweiten, wichtigeren Dienst, der in Sprachen wie C\# und [!INCLUDE[vbprvb](../dotnet/includes/vbprvb_md.md)] entwurfsbedingt fehlt: Er bietet sowohl ein Vokabular als auch einen Trackinghandle zur direkten Bearbeitung von geschachtelten Instanzen im verwalteten Heap.  Betrachten Sie z. B. das folgende kleine Programm:  
+ Die `__box` -Schlüsselwort dient in Managed Extensions eine, die nicht vorhanden ist einen wichtigen Dienst Entwurfs von Sprachen wie c# und Visual Basic: bietet ein Vokabular und die Überwachung für eine geschachtelte Instanz auf dem verwalteten Heap direkt bearbeiten behandeln. Betrachten Sie beispielsweise das folgende kleine Programm:  
   
 ```  
 int main() {  
@@ -59,13 +58,13 @@ int main() {
 }  
 ```  
   
- Der zugrunde liegende Code für die drei Aufrufe von `WriteLine` zeigt den unterschiedlichen Aufwand, der durch den Zugriff auf den Wert eines geschachtelten Werttyps entsteht \(besonderer Dank gilt hier Yves Dolce, der diese Unterschiede deutlich gemacht hat\). Die angegebenen Zeilen zeigen den Zusatzaufwand, den jeder Aufruf mit sich bringt.  
+ Die zugrunde liegende Code für die drei Aufrufe der `WriteLine` anzeigen, die verschiedene Kosten für den Zugriff auf den Wert des einem geschachtelten Wert Geben Sie (Dank Yves hier Dolce, hat diese Unterschiede), in denen die angegebenen Zeilen den Mehrbedarf in Verbindung mit jedem zeigen, Aufruf.  
   
 ```  
 // Console::WriteLine( S"result :: {0}", result.ToString() ) ;  
 ldstr      "result :: {0}"  
 ldloca.s   result  // ToString overhead  
-call       instance string  [mscorlib]System.Double::ToString()  // ToString overhead  
+call       instance string  [mscorlib]System.Double::ToString()  // ToString overhead  
 call       void [mscorlib]System.Console::WriteLine(string, object)  
   
 // Console::WriteLine( S"result :: {0}", __box(result) ) ;  
@@ -80,9 +79,9 @@ ldloc.0
 call     void [mscorlib]System.Console::WriteLine(string, object)  
 ```  
   
- Die direkte Übergabe des geschachtelten Werttyps an `Console::WriteLine` macht sowohl das Boxing als auch den Aufruf von `ToString()` überflüssig. \(Natürlich ist ein vorheriges Boxing erforderlich, um `br` zu initialisieren, wir gewinnen also nichts, solange `br` nicht wirklich eingesetzt wird.\)  
+ Übergeben direkt an den geschachtelten Werttyp `Console::WriteLine` eliminiert sowohl das Boxing aufzurufenden `ToString()`. (Natürlich, besteht der frühere Boxing initialisieren `br`, sodass wir alles erhalten nicht, es sei denn, die wir uns tatsächlich konzentrieren `br` arbeiten.  
   
- In der neuen Syntax wurde die Unterstützung für geschachtelte Werttypen wesentlich eleganter gelöst und in das Typsystem integriert, ohne dabei die Leistungsfähigkeit zu verringern.  Das folgende Beispiel zeigt die Übersetzung des obigen kleinen Programms:  
+ In der neuen Syntax ist die Unterstützung für geschachtelte Werttypen erheblich mehr elegante und in das Typsystem integriert und deren Möglichkeiten beibehalten. Hier ist z. B. die Übersetzung des früheren small-Programms:  
   
 ```  
 int main()  
@@ -98,6 +97,6 @@ int main()
 }  
 ```  
   
-## Siehe auch  
- [Werttypen und ihr Verhalten \(C\+\+\/CLI\)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)   
- [Gewusst wie: Explizites Anfordern von Boxing](../dotnet/how-to-explicitly-request-boxing.md)
+## <a name="see-also"></a>Siehe auch  
+ [Werttypen und ihr Verhalten (C + c++ / CLI)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)   
+ [Vorgehensweise: Explizites Anfordern von Boxing](../dotnet/how-to-explicitly-request-boxing.md)

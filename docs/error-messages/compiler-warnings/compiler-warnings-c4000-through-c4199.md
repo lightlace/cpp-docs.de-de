@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -95,33 +94,17 @@ f1_keywords:
 - C4195
 - C4196
 - C4199
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 426f495a-43af-4906-ad2b-6e5822c09965
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 9e7f0c939f5260991d18b69fc8965e1073bff406
-ms.lasthandoff: 04/24/2017
-
+ms.openlocfilehash: c498483b5c0a45156ce42c6cebed715f53b51cb8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warnings-c4000-through-c4199"></a>Compilerfehler Warnungen C4000 über C4199
 In die Artikeln in diesem Teil der Dokumentation enthalten Informationen über eine Teilmenge von Visual C++-Compiler-Warnungen. Sie können die hier aufgeführten Informationen zugreifen oder im die **Ausgabe** Fenster in Visual Studio können Sie eine Warnnummer auswählen und wählen Sie dann die F1-Taste.  
@@ -136,14 +119,14 @@ In die Artikeln in diesem Teil der Dokumentation enthalten Informationen über e
 |Warnung|Meldung|  
 |-------------|-------------|  
 |Compilerwarnung C4000|UNBEKANNTE WARNUNG<br /><br /> Wählen Sie den technischen Supportbefehl Visual C++<br /><br /> Menü "Hilfe", oder öffnen Sie die Hilfedatei für Weitere Informationen|  
-|[Compilerwarnung (Ebene 4) C4001](../../error-messages/compiler-warnings/compiler-warning-level-4-c4001.md)|Dem Standard nicht entsprechende Erweiterung "einzeiliger Kommentar " wurde verwendet|  
+|[Compilerwarnung (Ebene 4) C4001](../../error-messages/compiler-warnings/compiler-warning-level-4-c4001.md)|nicht dem Standard entsprechende Erweiterung "einzeiliger Kommentar" wurde verwendet.|  
 |Compilerwarnung (Stufe 1) C4002|Zu viele übergebene Parameter für das Makro "Bezeichner"|  
 |[Compilerwarnung (Ebene 1) C4003](../../error-messages/compiler-warnings/compiler-warning-level-1-c4003.md)|Nicht genügend tatsächliche Parameter für das Makro 'identifier'|  
 |[Compilerwarnung (Ebene 1) C4005](../../error-messages/compiler-warnings/compiler-warning-level-1-c4005.md)|'Bezeichner': Neudefinition von Makros|  
-|Compilerwarnung (Stufe 1) C4006|##undef erwartet einen Bezeichner|  
+|Compilerwarnung (Stufe 1) C4006|#undef erwartet einen Bezeichner|  
 |[Compilerwarnung (Ebene 2) C4007](../../error-messages/compiler-warnings/compiler-warning-level-2-c4007.md)|'Funktion': 'Attribut' muss|  
 |Compilerwarnung (Stufe 3) C4008|'Funktion': 'Attribut'-Attribut wird ignoriert|  
-|[Compilerwarnung (Ebene 1) C4010](../../error-messages/compiler-warnings/compiler-warning-level-1-c4010.md)|Einzeiliger Kommentar enthält Zeilenfortsetzungszeichen|  
+|[Compilerwarnung (Ebene 1) C4010](../../error-messages/compiler-warnings/compiler-warning-level-1-c4010.md)|einzeiliger Kommentar enthält Zeilenfortsetzungszeichen|  
 |[Compilerwarnung (Ebene 3) C4013](../../error-messages/compiler-warnings/compiler-warning-level-3-c4013.md)|'Funktion' nicht definiert. Annahme, dass "extern" Int zurückgeben|  
 |[Compilerwarnung (Ebene 1) C4015](../../error-messages/compiler-warnings/compiler-warning-level-1-c4015.md)|'Bezeichner': Typ der Bitfeld muss ganzzahlig sein|  
 |[Compilerwarnung (Ebene 3) C4018](../../error-messages/compiler-warnings/compiler-warning-level-3-c4018.md)|'Ausdruck': Konflikt zwischen signed/unsigned|  
@@ -156,38 +139,38 @@ In die Artikeln in diesem Teil der Dokumentation enthalten Informationen über e
 |Compilerwarnung (Stufe 1) C4026|Funktion mit Liste formaler Parameter deklariert|  
 |Compilerwarnung (Stufe 1) C4027|Funktion ohne Liste formaler Parameter deklariert|  
 |[Compilerwarnung (Stufe 1) C4028 generiert](../../error-messages/compiler-warnings/compiler-warning-level-1-c4028.md)8|formale Parameter "Parameter_number" Deklaration unterscheiden|  
-|[Compilerwarnung (Ebene 1) C4029](../../error-messages/compiler-warnings/compiler-warning-level-1-c4029.md)|Deklarierte Liste formaler Parameter weicht von der Definition ab|  
+|[Compilerwarnung (Ebene 1) C4029](../../error-messages/compiler-warnings/compiler-warning-level-1-c4029.md)|deklarierte Liste formaler Parameter weicht von der definition|  
 |Compilerwarnung (Stufe 1) C4030|Die erste Liste formaler Parameter ist länger als die zweite Liste|  
-|[Compilerwarnung (Ebene 1) C4031](../../error-messages/compiler-warnings/compiler-warning-level-1-c4031.md)|Die zweite Liste formaler Parameter ist länger als die erste Liste|  
+|[Compilerwarnung (Ebene 1) C4031](../../error-messages/compiler-warnings/compiler-warning-level-1-c4031.md)|zweite Liste formaler Parameter ist länger als die erste Liste|  
 |[Compilerwarnung (Ebene 4) C4032](../../error-messages/compiler-warnings/compiler-warning-level-4-c4032.md)|formaler Parameter "Parameter_number" verfügt über verschiedene Typ heraufgestuft|  
 |Compilerwarnung (Stufe 1) C4033|"Funktion" muss einen Wert zurückgeben|  
-|[Compilerwarnung (Ebene 1) C4034](../../error-messages/compiler-warnings/compiler-warning-level-1-c4034.md)|sizeof gibt 0 zurück|  
+|[Compilerwarnung (Ebene 1) C4034](../../error-messages/compiler-warnings/compiler-warning-level-1-c4034.md)|"sizeof" gibt 0 zurück.|  
 |Compilerwarnung (Stufe 3) C4035|'Funktion': keinen Wert zurückgibt|  
 |Compilerwarnung (Stufe 1) C4036|Unbenannter Typ 'Typ' als übergebener Parameter|  
 |Compilerwarnung (Stufe 1) C4038|"Modifizierer": Unzulässiger Klassenmodifizierer|  
-|Compilerwarnung (Stufe 1) C4041|Compilerlimit: Browserausgabe wird abgebrochen|  
+|Compilerwarnung (Stufe 1) C4041|Compilerlimit: Browserausgabe|  
 |[Compilerwarnung (Ebene 1) C4042](../../error-messages/compiler-warnings/compiler-warning-level-1-c4042.md)|'Bezeichner': Ungültige Speicherklasse hat|  
 |Compilerwarnung (Stufe 1) C4045|"Array": Arraygrenze überschritten|  
 |[Compilerwarnung (Ebene 1) C4047](../../error-messages/compiler-warnings/compiler-warning-level-1-c4047.md)|"Operator": "Bezeichner1" unterscheidet sich in Ebenen der Dereferenzierung von "Bezeichner2"|  
 |[Compilerwarnung (Ebene 1) C4048](../../error-messages/compiler-warnings/compiler-warning-level-1-c4048.md)|verschiedene Arrayfeldindizes: "Bezeichner1" und "Bezeichner2"|  
-|[Compilerwarnung (Ebene 1) C4049](../../error-messages/compiler-warnings/compiler-warning-level-1-c4049.md)|Compilerlimit: Ausgabe der Zeilennummer wird abgebrochen|  
+|[Compilerwarnung (Ebene 1) C4049](../../error-messages/compiler-warnings/compiler-warning-level-1-c4049.md)|Compilerlimit: Ausgabe der Zeilennummer beenden|  
 |Compilerwarnung (Stufe 1) C4051|Typkonvertierung; möglicher Datenverlust|  
 |Compilerwarnung (Stufe 4) C4052|Unterschiedliche Funktionsdeklarationen; eine enthält variable Argumente|  
 |Compilerwarnung (Stufe 4) C4053|Ein void-Operand für "?:"|  
-|[Compilerwarnung (Ebene 2) C4056](../../error-messages/compiler-warnings/compiler-warning-level-2-c4056.md)|Überlauf bei Gleitkommakonstanten-Arithmetik|  
+|[Compilerwarnung (Ebene 2) C4056](../../error-messages/compiler-warnings/compiler-warning-level-2-c4056.md)|Überlauf in Gleitkommazahlen-Konstante|  
 |Compilerwarnung (Stufe 4) C4057|"Operator": "Bezeichner1" unterscheidet Dereferenzierung in leicht unterschiedliche Basistypen von 'Bezeichner2'|  
-|Warnung C4060|switch-Anweisung enthält weder "case"- noch "default"-Bezeichnungen|  
+|Warnung C4060|Switch-Anweisung enthält keine 'Case' oder 'Default'-Beschriftungen|  
 |[Compilerwarnung (Ebene 4) C4061](../../error-messages/compiler-warnings/compiler-warning-level-4-c4061.md)|Enumerator 'Identifier' in Switch Enumeration 'Enumeration' wird nicht explizit von einer Case-Bezeichnung behandelt.|  
 |[Compilerwarnung (Ebene 4) C4062](../../error-messages/compiler-warnings/compiler-warning-level-4-c4062.md)|Enumerator 'identifier' in switch (enum) 'enumeration' wird nicht verarbeitet|  
 |Compilerfehler Warnung C4063|Case 'Bezeichner' ist kein gültiger Wert für den Schalter der Enumeration 'Enumeration'|  
 |Warnung C4064|Switch unvollständige Enumeration 'Enumeration'|  
-|Warnung C4065|switch-Anweisung enthält "default", aber keine case-Bezeichnungen|  
+|Warnung C4065|Switch-Anweisung enthält 'Default', aber keine 'Case'-Beschriftungen|  
 |Compilerwarnung (Stufe 3) C4066|Mit Ausnahme des ersten Zeichens werden die Zeichen in einer "breiten" Zeichenkonstante ignoriert|  
-|[Compilerwarnung (Ebene 1) C4067](../../error-messages/compiler-warnings/compiler-warning-level-1-c4067.md)|Unerwartete Token nach Präprozessordirektive - Zeilenvorschub erwartet.|  
+|[Compilerwarnung (Ebene 1) C4067](../../error-messages/compiler-warnings/compiler-warning-level-1-c4067.md)|Unerwartetes Token nach Präprozessordirektive - Zeilenvorschub erwartet|  
 |Compilerwarnung (Stufe 1) C4068|Unbekanntes Pragma|  
-|Compilerwarnung C4069|Der Typ long double besitzt dieselbe Genauigkeit wie double|  
-|[Compilerwarnung (Ebene 3) C4073](../../error-messages/compiler-warnings/compiler-warning-level-3-c4073.md)|Initialisierungen stehen im Initialisierungsbereich einer Bibliothek|  
-|[Compilerwarnung (Ebene 1) C4074](../../error-messages/compiler-warnings/compiler-warning-level-1-c4074.md)|Initialisierungen stehen im für den Compiler reservierten Initialisierungsbereich|  
+|Compilerwarnung C4069|long Double ist die gleiche Genauigkeit wie double|  
+|[Compilerwarnung (Ebene 3) C4073](../../error-messages/compiler-warnings/compiler-warning-level-3-c4073.md)|Fügen Sie in der Bibliothek Initialisierungsbereich Initialisierer|  
+|[Compilerwarnung (Ebene 1) C4074](../../error-messages/compiler-warnings/compiler-warning-level-1-c4074.md)|Initialisierer gelagerte Compiler reserviert Initialisierungsbereich|  
 |Compilerwarnung (Stufe 1) C4075|Initialisierungen stehen in nicht erkanntem Initialisierungsbereich|  
 |Compilerwarnung (Stufe 1) C4076|"Type_modifier": kann nicht mit Typ "Typname" verwendet werden|  
 |Compilerwarnung (Stufe 1) C4077|Unbekannte check_stack-Option|  
@@ -202,7 +185,7 @@ In die Artikeln in diesem Teil der Dokumentation enthalten Informationen über e
 |[Compilerwarnung (Ebene 1) C4089](../../error-messages/compiler-warnings/compiler-warning-level-1-c4089.md)|'Funktion': unterschiedliche Typen in übergebener Parameter "Parameter_number", "Parameter_number" einen formalen Parameter|  
 |[Compilerwarnung (Ebene 1) C4090](../../error-messages/compiler-warnings/compiler-warning-level-1-c4090.md)|'Operation': unterschiedliche 'Modifizierer'-Qualifizierer|  
 |[Compilerwarnung (Ebene 1) C4091](../../error-messages/compiler-warnings/compiler-warning-level-1-c4091.md)|Schlüsselwort ":"Typ"Links ignoriert werden, wenn keine Variable deklariert wurde|  
-|[Compilerwarnung (Ebene 4) C4092](../../error-messages/compiler-warnings/compiler-warning-level-4-c4092.md)|sizeof gibt "unsigned long" zurück|  
+|[Compilerwarnung (Ebene 4) C4092](../../error-messages/compiler-warnings/compiler-warning-level-4-c4092.md)|"sizeof" gibt "unsigned long"|  
 |[Compilerwarnung (Ebene 2) C4094](../../error-messages/compiler-warnings/compiler-warning-level-2-c4094.md)|Unbenanntes 'token' deklariert keine Symbole|  
 |[Compilerwarnung (Ebene 1) C4096](../../error-messages/compiler-warnings/compiler-warning-level-1-c4096.md)|'Bezeichner': Schnittstelle ist nicht mit einem COM-Schnittstelle wird nicht an IDL ausgegeben werden|  
 |Compilerwarnung (Stufe 1) C4097|Erwarteter pragma-Parameter sollte "restore" oder "off" sein|  
@@ -213,7 +196,7 @@ In die Artikeln in diesem Teil der Dokumentation enthalten Informationen über e
 |Compilerwarnung (Stufe 3) C4102|'Bezeichnung': Unreferenzierte Marke|  
 |[Compilerwarnung (Ebene 1) C4103](../../error-messages/compiler-warnings/compiler-warning-level-1-c4103.md)|'Dateiname': Ausrichtung, die geändert, nachdem die Header, einschließlich möglicherweise aufgrund fehlender #pragma pack(pop)|  
 |Compilerwarnung (Stufe 1) C4109|Unerwarteter Bezeichner "identifier"|  
-|Compilerwarnung (Stufe 1) C4112|#Zeile muss eine ganze Zahl zwischen 1 und "Line_count"|  
+|Compilerwarnung (Stufe 1) C4112|#line erfordert eine Ganzzahl zwischen 1 und "Line_count"|  
 |[Compilerwarnung (Ebene 1) C4113](../../error-messages/compiler-warnings/compiler-warning-level-1-c4113.md)|"Bezeichner1" unterscheidet sich in Parameterlisten von "Bezeichner2"|  
 |[Compilerwarnung (Ebene 1) C4114](../../error-messages/compiler-warnings/compiler-warning-level-1-c4114.md)|Der gleiche Typqualifizierer wurde mehrmals verwendet|  
 |Compilerwarnung (Stufe 1 und Stufe 4) C4115|'Typ': benannte Typdefinition in Klammern|  
@@ -223,8 +206,8 @@ In die Artikeln in diesem Teil der Dokumentation enthalten Informationen über e
 |Compilerwarnung (Stufe 1) C4120|Konflikt zwischen normalem und segmentbasiertem Zeiger|  
 |[Compilerwarnung (Ebene 4) C4121](../../error-messages/compiler-warnings/compiler-warning-level-4-c4121.md)|'Symbol': Ausrichtung eines Elements wurde pragma|  
 |Compilerwarnung (Stufe 1) C4122|"Function": alloc_text ist nur für Funktionen mit C-Bindung anwendbar|  
-|Compilerwarnung (Stufe 1) C4123|Unterschiedliche Basisausdrücke angegeben|  
-|[Compilerwarnung (Ebene 1) C4124](../../error-messages/compiler-warnings/compiler-warning-level-1-c4124.md)|__fastcall mit Stapelüberprüfung ist ineffizient|  
+|Compilerwarnung (Stufe 1) C4123|unterschiedliche Basisausdrücke angegeben|  
+|[Compilerwarnung (Ebene 1) C4124](../../error-messages/compiler-warnings/compiler-warning-level-1-c4124.md)|__fastcall mit stapelüberprüfung ist ineffizient|  
 |Compilerwarnung (Stufe 4) C4125|Dezimale Ziffer beendet oktale Escapesequenz|  
 |[Compilerwarnung (Ebene 4) C4127](../../error-messages/compiler-warnings/compiler-warning-level-4-c4127.md)|Bedingter Ausdruck ist konstant|  
 |[Compilerwarnung (Ebene 1) C4129](../../error-messages/compiler-warnings/compiler-warning-level-1-c4129.md)|"Character": Unbekannte Escape-Zeichensequenz|  
@@ -235,51 +218,51 @@ In die Artikeln in diesem Teil der Dokumentation enthalten Informationen über e
 |Compilerwarnung C4137|'Funktion': kein Rückgabewert von Gleitkomma-Funktion|  
 |Compilerwarnung (Stufe 1) C4138|"*/" wurde außerhalb des Kommentars gefunden|  
 |Compilerwarnung (Stufe 1) C4141|"Modifizierer": mehrmals verwendet|  
-|[Compilerwarnung (Ebene 1) C4142](../../error-messages/compiler-warnings/compiler-warning-level-1-c4142.md)|Neudefinition eines Typs ohne Auswirkungen|  
+|[Compilerwarnung (Ebene 1) C4142](../../error-messages/compiler-warnings/compiler-warning-level-1-c4142.md)|keine Auswirkungen Neudefinition des Typs|  
 |Compilerwarnung (Stufe 1) C4143|Pragma "same_seg" wird nicht unterstützt; reservieren Sie Segmente mit __based|  
 |[Compilerwarnung (Ebene 1) C4144](../../error-messages/compiler-warnings/compiler-warning-level-1-c4144.md)|'Ausdruck': Relationaler Ausdruck als Schalterausdruck|  
 |Compilerwarnung (Stufe 1) C4145|"Ausdruck1": Relationaler Ausdruck als Schalterausdruck; mögliche Verwechslung mit "Ausdruck2"|  
-|[Compilerwarnung (Ebene 2) C4146](../../error-messages/compiler-warnings/compiler-warning-level-2-c4146.md)|Einem vorzeichenlosen Typ wurde ein unärer Minus-Operator zugewiesen. Das Ergebnis ist weiterhin vorzeichenlos.|  
+|[Compilerwarnung (Ebene 2) C4146](../../error-messages/compiler-warnings/compiler-warning-level-2-c4146.md)|Typ ohne Vorzeichen, wurde ein unäres minus-Operator angewendet.|  
 |[Compilerwarnung (Ebene 2) C4150](../../error-messages/compiler-warnings/compiler-warning-level-2-c4150.md)|Löschen eines Zeigers auf unvollständigen Typ 'Typ'; keinen Destruktor wird aufgerufen|  
-|Compilerwarnung (Stufe 4) C4152|Nicht dem Standard entsprechende Erweiterung, Konvertierung von Funktions-/Datenzeiger im Ausdruck|  
+|Compilerwarnung (Stufe 4) C4152|nicht dem Standard entsprechende Erweiterung Funktion/datenzeigerkonvertierung im Ausdruck|  
 |Compilerwarnung (Stufe 1) C4153|Funktions-/Datenzeigerkonvertierung im Ausdruck|  
 |[Compilerwarnung (Ebene 1) C4154](../../error-messages/compiler-warnings/compiler-warning-level-1-c4154.md)|Löschen eines Arrayausdrucks; Konvertierung in Zeiger|  
 |Compilerwarnung (Stufe 1) C4155|Löschen eines Arrayausdrucks ohne Verwendung der Arrayform von "delete"|  
-|[Compilerwarnung (Ebene 2) C4156](../../error-messages/compiler-warnings/compiler-warning-level-2-c4156.md)|Löschen eines Arrayausdrucks ohne Verwendung der Arrayform von "delete". Arrayform wird automatisch verwendet.|  
-|[Compilerwarnung (Ebene 1) C4157](../../error-messages/compiler-warnings/compiler-warning-level-1-c4157.md)|Pragma wurde vom C-Compiler ignoriert|  
+|[Compilerwarnung (Ebene 2) C4156](../../error-messages/compiler-warnings/compiler-warning-level-2-c4156.md)|Löschen eines Arrayausdrucks ohne Verwendung der Arrayform von "Delete". Arrayform ersetzt|  
+|[Compilerwarnung (Ebene 1) C4157](../../error-messages/compiler-warnings/compiler-warning-level-1-c4157.md)|Pragma wurde vom C-Compiler ignoriert.|  
 |Compilerwarnung (Stufe 1) C4158|Annahme von #pragma Pointers_to_members (Full_generality, "Inheritance_type")|  
-|[Compilerwarnung (Ebene 3) C4159](../../error-messages/compiler-warnings/compiler-warning-level-3-c4159.md)|#Pragma "pragma'(pop,...): wurde per pop ausgelesen zuvor per push abgelegten Bezeichner"Identifier"|  
-|Compilerwarnung (Stufe 1) C4160|#Pragma "pragma'(pop,...): zuvor per push abgelegten Bezeichner"Identifier"wurde nicht gefunden|  
-|Compilerwarnung (Stufe 3) C4161|#Pragma "pragma'(pop...): mehr POP-als Push-Vorgänge|  
+|[Compilerwarnung (Ebene 3) C4159](../../error-messages/compiler-warnings/compiler-warning-level-3-c4159.md)|#pragma "pragma'(pop,...): wurde per pop ausgelesen zuvor per push abgelegten Bezeichner"Identifier"|  
+|Compilerwarnung (Stufe 1) C4160|#pragma "pragma'(pop,...): zuvor per push abgelegten Bezeichner"Identifier"wurde nicht gefunden|  
+|Compilerwarnung (Stufe 3) C4161|#pragma "pragma'(pop...): mehr POP-als Push-Vorgänge|  
 |[Compilerwarnung (Ebene 1) C4162](../../error-messages/compiler-warnings/compiler-warning-level-1-c4162.md)|'Bezeichner': keine Funktion mit C-Bindung gefunden|  
 |Compilerwarnung (Stufe 1) C4163|'Bezeichner': nicht als systeminterne Funktion verfügbar|  
 |Compilerwarnung (Stufe 1) C4164|"Function": systeminterne Funktion nicht deklariert|  
-|Compilerwarnung (Stufe 1) C4165|"HRESULT" wird zu "bool" konvertiert. Möchten Sie diese Änderung wirklich vornehmen?|  
+|Compilerwarnung (Stufe 1) C4165|'HRESULT' wird "Bool" konvertiert sind Sie sicher, dass dies gewünscht ist?|  
 |Compilerwarnung (Stufe 1) C4166|Unzulässige Aufrufkonvention für Konstruktor/Destruktor|  
 |Compilerwarnung (Stufe 1) C4167|'Funktion': nur als systeminterne Funktion verfügbar|  
 |Compilerwarnung (Stufe 1) C4168|Compilerlimit: nicht genügend Debuggertypen, löschen Sie Programmdatenbank 'Datenbank' und neu erstellen|  
-|[Compilerwarnung (Ebene 1) C4172](../../error-messages/compiler-warnings/compiler-warning-level-1-c4172.md)|Adresse einer lokalen Variablen oder eines temporären Werts wird zurückgegeben|  
+|[Compilerwarnung (Ebene 1) C4172](../../error-messages/compiler-warnings/compiler-warning-level-1-c4172.md)|Adresse einer lokalen Variable oder temporäre zurückgeben|  
 |Compilerwarnung (Stufe 1) C4174|'Name': nicht als #pragma-Komponente verfügbar|  
-|Compilerwarnung (Stufe 1) C4175|#Pragma Component(browser, on): Browserinformationen muss zunächst in der Befehlszeile angegeben werden|  
+|Compilerwarnung (Stufe 1) C4175|#pragma Component(browser, on): Browserinformationen muss zunächst in der Befehlszeile angegeben werden|  
 |Compilerwarnung (Stufe 1) C4176|"Subcomponent": Unbekannte Unterkomponente bei #pragma Component Browser|  
-|Compilerwarnung (Stufe 1) C4177|#Pragma "Pragma" sollte nur im globalen Gültigkeitsbereich oder Namespacebereich verwendet werden|  
+|Compilerwarnung (Stufe 1) C4177|#pragma "Pragma" sollte nur im globalen Gültigkeitsbereich oder Namespacebereich verwendet werden|  
 |Compilerwarnung (Stufe 1) C4178|Die case-Konstante 'Konstante' ist zu groß für den Typ des switch-Ausdrucks.|  
 |Compilerwarnung (Stufe 4) C4179|"/ / *': als analysiert '/' und ' /\*': Verwechslung mit Standardkommentaren ' / /" Kommentare|  
 |Compilerwarnung (Stufe 1) C4180|Auf Funktionstyp angewendeter Qualifizierer ist ohne Bedeutung; wird ignoriert|  
-|Compilerwarnung C4181|Qualifizierer wird auf Referenztyp angewendet; wird ignoriert|  
-|Compilerwarnung (Stufe 1) C4182|#umfassen Schachtelungsebene ist "Nest_count" tief; Endlosschleife möglich|  
+|Compilerwarnung C4181|Qualifizierer angewendet, um den Typ verweisen; ignoriert|  
+|Compilerwarnung (Stufe 1) C4182|#include Schachtelungsebene ist "Nest_count" tief; Endlosschleife möglich|  
 |[Compilerwarnung (Ebene 1) C4183](../../error-messages/compiler-warnings/compiler-warning-level-1-c4183.md)|'Bezeichner': Rückgabetyp fehlt; Angenommen, dass eine Memberfunktion, die Rückgabe von "Int" sein|  
 |Compilerwarnung (Stufe 1) C4185|Das unbekannte #import-Attribut "Attribut" wird ignoriert|  
-|Compilerwarnung (Stufe 1) C4186|#Importattribut 'Attribut' erfordert 'Argument_count'-Argumente. ignoriert|  
-|Compilerwarnung (Stufe 1) C4187|#Import Attribute 'Attribut1' und 'Attribut2' sind inkompatibel. beide ignoriert|  
+|Compilerwarnung (Stufe 1) C4186|#import-Attribut 'Attribut' erfordert 'Argument_count'-Argumente. ignoriert|  
+|Compilerwarnung (Stufe 1) C4187|#import-Attribute 'Attribut1' und 'Attribut2' sind inkompatibel. Beide werden ignoriert.|  
 |Compilerwarnung (Stufe 1) C4188|Konstanter Ausdruck ist keine Ganzzahl|  
 |Compilerwarnung (Stufe 4) C4189|"Bezeichner": lokale Variable ist initialisiert, aber nicht auf die verwiesen wird|  
 |[Compilerwarnung (Ebene 1) C4190](../../error-messages/compiler-warnings/compiler-warning-level-1-c4190.md)|"Bezeichner1" C-Bindung angegeben wurde, gibt aber UDT "Bezeichner2" die mit C nicht kompatibel ist|  
 |Compilerwarnung (Stufe 3) C4191|' Operator/Operation': unsichere Konvertierung von 'Type_of_expression' zu "Type_required" \nCalling diese Funktion über den Ergebniszeiger kann dazu führen, dass das Programm fehlschlägt|  
 |[Compilerwarnung (Ebene 3) C4192](../../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md)|automatisch beim Importieren einer Typbibliothek "Library" ausgeschlossen "Bezeichner"|  
-|Compilerwarnung (Stufe 3) C4193|#Pragma-warning"(POP): keine übereinstimmende""#pragma warning""|  
-|Compilerwarnung (Stufe 1) C4194|#Pragma-Start_map_region kann nicht geschachtelt werden. ignoriert|  
-|Compilerwarnung (Stufe 1) C4195|#Pragma stop_map_region wurde ohne entsprechende #pragma Start_map_region verwendet; ignoriert|  
-|Compilerwarnung (Stufe 1) C4196|"%$L" oder "%$L" erwartet; "%$L" gefunden|  
+|Compilerwarnung (Stufe 3) C4193|#pragma warning"(POP): keine übereinstimmende""#pragma warning""|  
+|Compilerwarnung (Stufe 1) C4194|#pragma Start_map_region kann nicht geschachtelt werden. ignoriert|  
+|Compilerwarnung (Stufe 1) C4195|#pragma stop_map_region wurde ohne entsprechende #pragma Start_map_region verwendet; ignoriert|  
+|Compilerwarnung (Stufe 1) C4196|erwartet wurde "%$L" oder "%$L;" "%$L" gefunden|  
 |[Compilerwarnung (Ebene 3) C4197](../../error-messages/compiler-warnings/compiler-warning-level-3-c4197.md)|'Typ': der obersten Ebene Volatile in Typumwandlung wird ignoriert.|  
 |Compilerwarnung (Stufe 1, Ebene 2, Ebene 3 und Ebene 4) C4199|%s|

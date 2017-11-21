@@ -1,36 +1,36 @@
 ---
-title: "__invlpg | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__invlpg"
-  - "__invlpg_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "invlpg-Anweisung"
-  - "__invlpg intrinsic"
+title: __invlpg | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __invlpg
+- __invlpg_cpp
+dev_langs: C++
+helpviewer_keywords:
+- invlpg instruction
+- __invlpg intrinsic
 ms.assetid: 3fb3633f-d9b7-4ec0-9e7f-a7f2fa8ed794
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 735db37631fd0ddbc0918edb95230600275c6b4d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# __invlpg
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft\-spezifisch**  
+# <a name="invlpg"></a>__invlpg
+**Microsoft-spezifisch**  
   
- Generiert die Anweisung x86s `invlpg` , die den Adressenumsetzpuffer \(TLB\) für die Seite ungültig macht, die dem Speicher belegt wird, die von der `Address`angezeigt wird.  
+ Generiert die X86 `invlpg` -Anweisung, die für die Seite zugeordnete Speicher verweist, zu den Übersetzung Lookaside-Puffer (TLB) erklärt `Address`.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void __invlpg(  
@@ -38,24 +38,24 @@ void __invlpg(
 );  
 ```  
   
-#### Parameter  
- \[in\]    `Address`  
- Eine 64\-Bit\-Adresse.  
+#### <a name="parameters"></a>Parameter  
+ [in]`Address`  
+ Eine 64-Bit-Adresse.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Intrinsisch|Architektur|  
-|-----------------|-----------------|  
+|Systemintern|Architektur|  
+|---------------|------------------|  
 |`__invlpg`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Headerdatei** \<intrin.h\>  
+ **Headerdatei** \<intrin.h >  
   
-## Hinweise  
- Systeminterne `__invlpg` gibt eine privilegierte Anweisung aus und ist im Kernelmodus mit einem Berechtigungsebene \(0\) KOMPLETT nur verfügbar.  
+## <a name="remarks"></a>Hinweise  
+ Die systeminterne Funktion `__invlpg` eine privilegierte Anweisung ausgibt, und ist nur verfügbar im Kernel-Modus mit einer Berechtigungsstufe (Systemsteuerungsoption) 0.  
   
- Diese Routine ist als systeminterne Funktion nur verfügbar.  
+ Diese Routine ist nur als systeminterne Funktion verfügbar.  
   
-## Microsoft ENDES bestimmten  
+**Ende Microsoft-spezifisch**  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

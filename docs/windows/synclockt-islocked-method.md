@@ -1,47 +1,45 @@
 ---
-title: "SyncLockT::IsLocked-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockT::IsLocked"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IsLocked-Methode"
+title: 'Synclockt:: IsLocked-Methode | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockT::IsLocked
+dev_langs: C++
+helpviewer_keywords: IsLocked method
 ms.assetid: a81fea43-f99a-4708-812a-7fd6af500d3d
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6db98e844d864e8b3ac719ec797527ed3ded56f8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# SyncLockT::IsLocked-Methode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Unterstützt die WRL\-Infrastruktur und nicht beabsichtigt, direkt im Code verwendet werden.  
+# <a name="synclocktislocked-method"></a>SyncLockT::IsLocked-Methode
+Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 bool IsLocked() const;  
 ```  
   
-## Rückgabewert  
- **true**, wenn das SyncLockT\-Objekt gesperrt wird; andernfalls **false**.  
+## <a name="return-value"></a>Rückgabewert  
+ **"true"** ist das SyncLockT-Objekt gesperrt ist, andernfalls **"false"**.  
   
-## Hinweise  
- Gibt an, ob das aktuelle SyncLockT\-Objekt eine Ressource besitzt; das bedeutet, dass das SyncLockT\-Objekt *gesperrt*.  
+## <a name="remarks"></a>Hinweise  
+ Gibt an, ob das aktuelle SyncLockT-Objekt eine Ressource besitzt. SyncLockT-Objekt ist *gesperrt*.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  
   
- **Namespace:**  Microsoft::WRL::Wrappers::Details  
+ **Namespace:** Microsoft::WRL::Wrappers::Details  
   
-## Siehe auch  
- [SyncLockT\-Klasse](../windows/synclockt-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [SyncLockT-Klasse](../windows/synclockt-class.md)

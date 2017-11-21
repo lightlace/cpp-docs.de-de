@@ -1,63 +1,62 @@
 ---
-title: "__segmentlimit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__segmentlimit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__segmentlimit intrinsic"
-  - "lsl-Anweisung"
+title: __segmentlimit | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __segmentlimit
+dev_langs: C++
+helpviewer_keywords:
+- __segmentlimit intrinsic
+- lsl instruction
 ms.assetid: d0bc3630-90cb-4185-8667-686fd41e23d4
-caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
+caps.latest.revision: "21"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 4b23b988069064e938db9f9f87921df901effd1f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# __segmentlimit
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft\-spezifisch**  
+# <a name="segmentlimit"></a>__segmentlimit
+**Microsoft-spezifisch**  
   
- Generiert die Anweisung `lsl` \(Last\-Segment\-Grenze\).  
+ Generiert die `lsl` (Auslastungsgrenze Segment)-Anweisung.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-unsigned long __segmentlimit(   
-   unsigned long a   
+unsigned long __segmentlimit(   
+   unsigned long a   
 );  
 ```  
   
-#### Parameter  
- \[in\] `a`  
- Eine Konstante, die den Segmentselektor angibt.  
+#### <a name="parameters"></a>Parameter  
+ [in] `a`  
+ Eine Konstante, die Auswahl des Segments angibt.  
   
-## Rückgabewert  
- Die Segment des Segments beschränkt selektors angegeben durch `a,`, sofern der Auswahl gültig und auf der aktuellen Berechtigungsstufe sichtbar ist.  
+## <a name="return-value"></a>Rückgabewert  
+ Das Segment Limit des Segments auswahlzeigers gemäß `a`, vorausgesetzt, dass die Auswahl auf der aktuellen Berechtigungsebene gültig und sichtbar ist.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Intrinsisch|Architektur|  
-|-----------------|-----------------|  
+|Systemintern|Architektur|  
+|---------------|------------------|  
 |`__segmentlimit`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Headerdatei** \<intrin.h\>  
+ **Headerdatei** \<intrin.h >  
   
-## Hinweise  
- Wenn die gebundene Segment nicht abgerufen werden kann, schlägt die Anweisung fehl.  Bei Fehler löscht diese Anweisung das ZF\-Flag und der Rückgabewert ist nicht definiert.  
+## <a name="remarks"></a>Hinweise  
+ Wenn das Segment Limit kann nicht abgerufen werden, schlägt diese Anweisung fehl. Diese Anweisung löscht die ZF-Flag und der Rückgabewert nicht definiert ist, bei einem Fehler.  
   
- Diese Routine ist als systeminterne Funktion nur verfügbar.  
+ Diese Routine ist nur als systeminterne Funktion verfügbar.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 #include <stdio.h>  
@@ -104,10 +103,14 @@ int main(void)
 }  
 ```  
   
-  **Vorher: Segments beschränkt \=0xbaadbabe eflags \=0x0**  
-**Nach: Segments beschränkt \=0x256 eflags.zf \= festgelegt \=0xffffffff eflags**  
-**Erfolgreich\!  SL wurde geändert**    
-## Microsoft ENDES bestimmten  
+```Output  
+Before: segment limit =0xbaadbabe eflags =0x0  
+After: segment limit =0xffffffff eflags =0x256 eflags.zf = set  
+Success!  
+sl was changed  
+```  
   
-## Siehe auch  
+**Ende Microsoft-spezifisch**  
+  
+## <a name="see-also"></a>Siehe auch  
  [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

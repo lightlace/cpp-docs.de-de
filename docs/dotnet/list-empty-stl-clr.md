@@ -1,41 +1,39 @@
 ---
-title: "list::empty (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::empty"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "empty-Member [STL/CLR]"
+title: 'List:: Empty (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::empty
+dev_langs: C++
+helpviewer_keywords: empty member [STL/CLR]
 ms.assetid: f45edf8a-927d-41ff-9c09-cb0fba4f08b8
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 388a7ffd665652626dc48d4278a57e38c34e91b0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# list::empty (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Testet, dass keine Elemente vorhanden sind.  
+# <a name="listempty-stlclr"></a>list::empty (STL/CLR)
+Testet, ob keine Elemente vorhanden sind.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 bool empty();  
 ```  
   
-## Hinweise  
- Die Memberfunktionsrückgaben true für eine leere gesteuerte Sequenz.  Sie besteht darin [list::size](../dotnet/list-size-stl-clr.md)`() == 0`.  Sie verwenden sie, um zu testen, ob die Liste leer ist.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt „true“ für eine leere gesteuerte Sequenz zurück. Dies ist äquivalent zum [List:: Size (STL/CLR)](../dotnet/list-size-stl-clr.md)`() == 0`. Sie verwenden sie zum Überprüfen, ob die Liste leer ist.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_list_empty.cpp   
@@ -65,16 +63,19 @@ int main()
   
 ```  
   
-  **ein b c**  
-**size\(\) \= 3**  
-**empty\(\) \= False**  
-**size\(\) \= 0**  
-**empty\(\) \= True**   
-## Anforderungen  
- **Header:** \<cliext\/Liste\>  
+```Output  
+ a b c  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/List >  
   
-## Siehe auch  
- [list](../dotnet/list-stl-clr.md)   
- [list::size](../dotnet/list-size-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Liste (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list::size (STL/CLR)](../dotnet/list-size-stl-clr.md)

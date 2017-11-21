@@ -1,49 +1,31 @@
 ---
-title: Index-Klasse | Microsoft-Dokumentation
+title: Index-Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - AMP/index
 - AMP/Concurrency::index::index
 - AMP/Concurrency::index::rank
-dev_langs:
-- C++
-helpviewer_keywords:
-- index structure
+dev_langs: C++
+helpviewer_keywords: index structure
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 52c19da3cb8de10c3963ca3b795cac1babb3dc7a
-ms.contentlocale: de-de
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 8a1c4213ee94c063a7dff2a5b2c5e156b0ee91a7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="index-class"></a>index-Klasse
-Definiert ein *N*-dimensionalen Index Pographics-Cpp-amp.md.  
+Definiert eine *N*-dimensionalen Index Pographics-Cpp-amp.md.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -89,7 +71,7 @@ class index;
  `index`  
   
 ## <a name="remarks"></a>Hinweise  
- Die `index` -Struktur stellt einen koordinatenvektor von *N* Ganzzahlen, die eine eindeutige Position in einer *N*-dimensionalen Raum. Die Werte im Vektor sind vom wichtigsten zum am wenigsten wichtigen Wert sortiert. Sie können die Werte der Komponenten mit abrufen [Operator =](#operator_eq).  
+ Die `index` Struktur stellt einen-Koordinate Vektor eines *N* ganze Zahlen, der angibt, in eine eindeutige Position ein *N*-dimensionalen Raum. Die Werte im Vektor sind vom wichtigsten zum am wenigsten wichtigen Wert sortiert. Sie können die Werte der Komponenten mit abrufen [Operator =](#operator_eq).  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** amp.h  
@@ -98,7 +80,7 @@ class index;
 
 
 ## <a name="index_ctor"></a>Index-Konstruktor
-Initialisiert eine neue Instanz der indexklasse.
+Initialisiert eine neue Instanz der indexklasse an.
 
 ```  
 index() restrict(amp,cpu);
@@ -140,10 +122,10 @@ Die Länge der zweitwichtigsten Dimension.
 _I2  
 Die Länge der unwichtigsten Dimension.  
 _Other  
-Ein Indexobjekt, auf dem das neue Indexobjekt basiert.  
+Ein Indexobjekt, das auf dem das neue Indexobjekt basiert.  
 
 ## <a name="operator--"></a>Operator--
-Dekrementiert jedes Element von Index-Objekt.  
+Dekrementiert jedes Element des Index-Objekts.  
 ```  
 index<_Rank>& operator--() restrict(amp,cpu);  
 
@@ -155,7 +137,7 @@ index operator--(
 Für den Präfixoperator das Indexobjekt (* dies). Für den suffixoperator ein neues Indexobjekt.
 
 ## <a name="operator_mod_eq"></a>Operator(MOD) =   
-Berechnet den Modulo (Rest) jedes Elements in der Index-Objekt, wenn dieses Element mit der angegebenen Zahl dividiert wird.
+Berechnet den Modul (Rest) jedes Elements im Index-Objekt, wenn dieses Element mit der angegebenen Zahl dividiert wird.
 
 ```  
 index<_Rank>& operator%=(
@@ -163,11 +145,11 @@ index<_Rank>& operator%=(
 ) restrict(cpu, amp);
 ```  
 ### <a name="parameters"></a>Parameter
-_Rhs die Zahl, dividiert durch den Rest berechnen.
-Der Rückgabewert der Index-Objekt.
+_Rhs die Zahl, dividiert durch den Modulo finden.
+Der Rückgabewert die Index-Objekt.
 
 ## <a name="operator_star_eq"></a>Operator * =   
-Multipliziert jedes Element in der Index-Objekt mit der angegebenen Zahl.
+Multipliziert jedes Element in das Indexobjekt, um die angegebene Anzahl an.
 ```
 index<_Rank>& operator*=(
    int _Rhs
@@ -178,7 +160,7 @@ index<_Rank>& operator*=(
 _Rhs die zu multiplizierende Zahl.
 
 ## <a name="operator_div_eq"></a>Operator / = 
-Dividiert jedes Element in der Index-Objekt mit der angegebenen Zahl.
+Dividiert jedes Element in die Index-Objekt mit der angegebenen Zahl.
 
 ```
 index<_Rank>& operator/=(
@@ -218,7 +200,7 @@ std::cout << idx[2] << "\n";
 ```
 
 ## <a name="operator_add_add"></a>Operator ++   
-Inkrementiert jedes Element von Index-Objekt.
+Inkrementiert jedes Element des Index-Objekts.
 ```  
 index<_Rank>& operator++() restrict(amp,cpu);
 
@@ -241,13 +223,13 @@ index<_Rank>& operator+=(
 ) restrict(amp,cpu);
 ``` 
 ### <a name="parameters"></a>Parameter
-_Rhs die hinzuzufügende Zahl.
+_Rhs die zu addierende Zahl.
 
 ### <a name="return-value"></a>Rückgabewert
 Die Indexobjekt.
 
 ## <a name="operator_eq"></a> operator=   
-Kopiert den Inhalt des angegebenen Index-Objekts in dieses Objekt.
+Kopiert den Inhalt des Objekts angegebenen Index in dieses Objekt.
 ```  
 index<_Rank>& operator=(
    const index<_Rank>& _Other
@@ -260,7 +242,7 @@ _Other die Indexobjekt, das kopiert.
 Ein Verweis auf dieses Indexobjekt.
 
 ## <a name="operator_-_eq"></a>Operator =
-Subtrahiert die angegebene Anzahl von jedem Element des Index-Objekts.
+Subtrahiert die angegebene Anzahl von jedem Element des Index-Objekt.
 ```  
 index<_Rank>& operator-=(
    const index<_Rank>& _Rhs
@@ -283,4 +265,3 @@ static const int rank = _Rank;
 ``` 
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)
-

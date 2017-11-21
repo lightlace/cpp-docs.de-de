@@ -1,32 +1,30 @@
 ---
-title: "DOSSEG | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DOSSEG"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DOSSEG directive"
+title: DOSSEG | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: DOSSEG
+dev_langs: C++
+helpviewer_keywords: DOSSEG directive
 ms.assetid: 4312826a-1547-4d48-bfd7-cfaf6d037609
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: cd867f6faf13a5e70c0289eacbcf71211acb185f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# DOSSEG
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Identisch mit [.DOSSEG](../../assembler/masm/dot-dosseg.md)in das bevorzugte Format ist.  
+# <a name="dosseg"></a>DOSSEG
+Identisch mit [. DOSSEG](../../assembler/masm/dot-dosseg.md), dies ist die bevorzugte Art.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -34,5 +32,5 @@ DOSSEG
   
 ```  
   
-## Siehe auch  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)

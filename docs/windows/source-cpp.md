@@ -1,32 +1,30 @@
 ---
-title: "source (C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.source"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "source attribute"
+title: Quelle (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.source
+dev_langs: C++
+helpviewer_keywords: source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
-caps.latest.revision: 9
-caps.handback.revision: "9"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e807ee5a29a7794880f91e99eec057293ec01b66
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# source (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Auf einer Klasse gibt die Schnittstellen des COM\-Objekts Quelle für Verbindungspunkte an.  Auf einer Eigenschaft oder einer Methode gibt an, dass der Member ein Objekt oder einen VARIANT zurück, das eine Ereignisquelle ist.  
+# <a name="source-c"></a>source (C++)
+Für eine Klasse gibt Schnittstellen für Verbindungspunkte der COM-Objekt. Auf eine Eigenschaft oder Methode gibt Sie an, dass das Element zurückgibt, ein Objekt oder eine Variante, die Quelle von Ereignissen ist.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -35,16 +33,16 @@ Auf einer Klasse gibt die Schnittstellen des COM\-Objekts Quelle für Verbindung
 ) ]  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `interfaces`  
- Eine oder mehrere Schnittstellen, mit denen Sie angeben, wann Sie das Attribut Quelle auf eine Klasse anwenden.  Dieser Parameter wird nicht verwendet, wenn Quelle auf eine Eigenschaft oder eine Methode angewendet wird.  
+ Eine oder mehrere Schnittstellen, die Sie angeben, wenn Sie die Quelle anwenden Attribut auf eine Klasse. Dieser Parameter wird nicht verwendet werden, wenn die Quelle auf eine Eigenschaft oder Methode angewendet wird.  
   
-## Hinweise  
- Das Attribut **Quelle** C\+\+ verfügt über die gleichen Funktionen wie das [Quelle](http://msdn.microsoft.com/library/windows/desktop/aa367166) MIDL\-Attribut.  
+## <a name="remarks"></a>Hinweise  
+ Die **Quelle** C++-Attribut hat die gleiche Funktionalität wie die [Quelle](http://msdn.microsoft.com/library/windows/desktop/aa367166) MIDL-Attribut.  
   
- Sie können das [Standardwert](../windows/default-cpp.md)\-Attribut verwenden, um die standardmäßige Quellschnittstelle für ein Objekt anzugeben.  
+ Sie können der [Standard](../windows/default-cpp.md) Attribut, um die Standard-Quellschnittstelle für ein Objekt anzugeben.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cpp_attr_ref_source.cpp  
@@ -78,22 +76,21 @@ class NN : public b
 };  
 ```  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
-|**Betrifft**|**Klasse**, `struct`, `interface`|  
+|**Betrifft**|**Klasse**, `struct`,`interface`|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|**coclass** \(wenn die Klasse oder Struktur angewendet werden\)|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|**Co-Klasse** (wenn es sich um eine Klasse oder Struktur angewendet wird)|  
+|**Ungültige Attribute**|Keine|  
   
- Weitere Informationen über das kontexte finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
+## <a name="see-also"></a>Siehe auch  
+ [IDL-Attribute](../windows/idl-attributes.md)   
+ [Klassenattribute](../windows/class-attributes.md)   
+ [Methodenattribut](../windows/method-attributes.md)   
  [coclass](../windows/coclass.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

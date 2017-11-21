@@ -1,96 +1,96 @@
 ---
-title: "Angeben von benutzerdefinierten Buildtools | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCustomBuildTool.CustomBuildToolBeforeTargets"
-  - "VC.Project.VCCustomBuildTool.Outputs"
-  - "VC.Project.VCCustomBuildTool.Command"
-  - "VC.Project.VCCustomBuildTool.CommandLine"
-  - "VC.Project.VCCustomBuildTool.AdditionalDependencies"
-  - "VC.Project.VCCustomBuildTool.Message"
-  - "VC.Project.VCCustomBuildTool.CustomBuildToolAfterTargets"
-  - "VC.Project.VCCustomBuildTool.Description"
-  - "VC.Project.VCCustomBuildTool.AdditionalInputs"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Buildtools (C++), Angeben"
-  - "Builds (C++), Benutzerdefinierte Buildtools"
-  - "Benutzerdefinierte Buildtools (C++), Angeben"
+title: Geben Sie benutzerdefinierte Tools erstellen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCustomBuildTool.CustomBuildToolBeforeTargets
+- VC.Project.VCCustomBuildTool.Outputs
+- VC.Project.VCCustomBuildTool.Command
+- VC.Project.VCCustomBuildTool.CommandLine
+- VC.Project.VCCustomBuildTool.AdditionalDependencies
+- VC.Project.VCCustomBuildTool.Message
+- VC.Project.VCCustomBuildTool.CustomBuildToolAfterTargets
+- VC.Project.VCCustomBuildTool.Description
+- VC.Project.VCCustomBuildTool.AdditionalInputs
+dev_langs: C++
+helpviewer_keywords:
+- build tools (C++), specifying
+- custom build tools (C++), specifying
+- builds (C++), custom build tools
 ms.assetid: e5161946-8002-418d-991e-219e6a8586f5
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c65664e6c09028f1f15ded917a59ad013868f841
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Angeben von benutzerdefinierten Buildtools
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Mit einem *benutzerdefinierten Buildtool* werden dem Buildsystem die Informationen übermittelt, die es benötigt, um Ausgabedateien aus einer Eingabedatei zu erstellen.  Ein benutzerdefiniertes Buildtool gibt einen auszuführenden Befehl, eine Liste mit Eingabe\- und eine Liste mit Ausgabedateien, die durch den Befehl generiert werden, sowie eine optionale Beschreibung des Tools an.  
+# <a name="specifying-custom-build-tools"></a>Angeben von benutzerdefinierten Buildtools
+Ein *benutzerdefiniertes Buildtool* bietet das Buildsystem benötigt werden, um bestimmte Eingabedateien zu erstellen. Ein benutzerdefiniertes Buildtool gibt keinen auszuführenden Befehl, eine Liste der Eingabedateien, eine Liste von Ausgabedateien, die vom Befehl generiert werden und eine optionale Beschreibung des Tools.  
   
- Allgemeine Informationen zu benutzerdefinierten Buildtools und \-schritten finden Sie unter [Grundlagen benutzerdefinierter Buildschritte und Buildereignisse](../ide/understanding-custom-build-steps-and-build-events.md).  
+ Allgemeine Informationen zu benutzerdefinierten Buildtools und benutzerdefinierte Buildschritte, finden Sie unter [benutzerdefinierte Buildschritte und Buildereignisse](../ide/understanding-custom-build-steps-and-build-events.md).  
   
-### So geben Sie ein benutzerdefiniertes Tool an  
+### <a name="to-specify-a-custom-build-tool"></a>Um ein benutzerdefiniertes Buildtool anzugeben.  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Weitere Informationen finden Sie unter [Festlegen von Visual C\+\+\-Projekteigenschaften](../ide/working-with-project-properties.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../ide/working-with-project-properties.md).  
   
-2.  Klicken Sie auf **Konfigurationseigenschaften**, um das Feld **Konfiguration** zu aktivieren.  Wählen Sie im Feld **Konfiguration** die Konfiguration aus, für die Sie ein benutzerdefiniertes Buildtool festlegen möchten.  
+2.  Klicken Sie auf **Konfigurationseigenschaften** So aktivieren Sie die **Konfiguration** Feld. In der **Konfiguration** Feld, wählen Sie die Konfiguration für die Sie ein benutzerdefiniertes Buildtool angeben möchten.  
   
-3.  Wählen Sie im **Projektmappen\-Explorer** die Eingabedatei für das benutzerdefinierte Buildtool aus.  
+3.  In **Projektmappen-Explorer**, wählen Sie die Eingabedatei für das benutzerdefinierte Buildtool.  
   
-     Wenn der Ordner **Benutzerdefiniertes Buildtool** nicht angezeigt wird, wird die Erweiterung der ausgewählten Datei einem Standardtool zugeordnet.  Das standardmäßige Tool für C\- und CPP\-Dateien ist der Compiler.  Klicken Sie zum Überschreiben einer Standardtooleinstellung unter dem Knoten **Konfigurationseigenschaften** im Ordner **Allgemein** in der Eigenschaft **Artikeltyp** auf **Benutzerdefiniertes Buildtool**.  Wenn Sie auf **Übernehmen** klicken, wird der Knoten **Benutzerdefiniertes Buildtool** angezeigt.  
+     Wenn die **benutzerdefiniertes Buildtool** Ordner nicht angezeigt wird, die Erweiterung von Ihnen ausgewählte Datei ist ein Standardtool zugeordnet. Beispielsweise ist das Standardtool für c- und CPP-Dateien vom Compiler. Tool-Standardeinstellung, überschreiben die **Konfigurationseigenschaften** Knoten in der **allgemeine** Ordner in der **Work Item Type** -Eigenschaft, klicken Sie auf **für benutzerdefinierten Buildschritt Tool**. Klicken Sie auf **übernehmen** und **benutzerdefiniertes Buildtool** Knoten wird angezeigt.  
   
-4.  Geben Sie unter dem Knoten **Benutzerdefiniertes Buildtool** im Ordner **Allgemein** die Eigenschaften an, die dem benutzerdefinierten Buildtool zugeordnet sind:  
+4.  In der **benutzerdefiniertes Buildtool** Knoten in der **allgemeine** Ordner Geben Sie die Eigenschaften für das benutzerdefinierte Tool zu erstellen:  
   
-    -   Geben Sie unter **Zusätzliche Abhängigkeiten** zusätzlich zu der Datei, für die das benutzerdefinierte Buildtool definiert wurde, weitere Dateien an \(die dem benutzerdefinierten Buildtool zugeordnete Datei wird implizit als Eingabe für das Tool angesehen\).  Zusätzliche Eingabedateien sind für ein benutzerdefiniertes Buildtool nicht unbedingt erforderlich.  Wenn Sie über mehrere zusätzliche Eingaben verfügen, trennen Sie diese durch ein Semikolon.  
+    -   In **zusätzliche Abhängigkeiten**, geben Sie ggf. zusätzlichen Dateien außerhalb der Datei für die das benutzerdefinierte Buildtool definiert wurde (die Datei, die das benutzerdefinierte Buildtool zugeordnet ist implizit als Eingabe für das Tool betrachtet). Zusätzliche Eingabedateien ist keine Voraussetzung für ein benutzerdefiniertes Buildtool. Wenn Sie mehr als eine zusätzliche Eingabe verfügen, durch Semikolons getrennt werden.  
   
-         Wenn das Datum einer Datei unter **Zusätzliche Abhängigkeiten** nach dem Datum der Eingabedatei liegt, wird das benutzerdefinierte Buildtool ausgeführt.  Wenn alle Dateien unter **Zusätzliche Abhängigkeiten** älter als die Eingabedatei sind und die Eingabedatei älter als die Eigenschaftendatei **Ausgaben** ist, wird das benutzerdefinierte Buildtool nicht ausgeführt.  
+         Wenn ein **zusätzliche Abhängigkeiten** Datei Datum liegt nach der Eingabedatei, und klicken Sie dann das benutzerdefinierte Buildtool ausgeführt wird. Wenn alle von der **zusätzliche Abhängigkeiten** Dateien sind älter als die Eingabedatei und die Eingabedatei ist älter als die **Ausgaben** Eigenschaftendatei, und klicken Sie dann auf das benutzerdefinierte Buildtool wird nicht ausgeführt.  
   
-         Angenommen, Sie verfügen über ein benutzerdefiniertes Buildtool, das "MyInput.x" als Eingabe verwendet und "MyInput.cpp" generiert, und die Datei "MyInput.x" enthält die Headerdatei "MyHeader.h".  Sie können "MyHeader.h" gegenüber "MyInput.x" als Eingabeabhängigkeit festlegen. In diesem Fall wird die Datei "MyInput.cpp" vom Buildsystem erstellt, wenn sie im Vergleich zu "MyInput.x" oder "MyHeader.h" älter ist.  
+         Nehmen wir beispielsweise an, dass Sie ein benutzerdefiniertes Buildtool verfügen, das MyInput.x als Eingabe und MyInput.cpp generiert und diese MeineEingabe.x enthält eine Headerdatei MeinHeader.h. Sie können MyHeader.h angeben, als Eingabe Abhängigkeit zu MeineEingabe.x, und das Buildsystem erstellen MyInput.cpp aus, wenn es in Bezug auf MeineEingabe.x MyHeader.h veraltet ist.  
   
-         Durch Eingabeabhängigkeiten wird außerdem sichergestellt, dass benutzerdefinierte Buildtools in der gewünschten Reihenfolge ausgeführt werden.  Angenommen, bei der Datei "MyHeader.h" im vorangehenden Beispiel handelt es sich tatsächlich um die Ausgabe eines benutzerdefinierten Buildtools.  Da "MyHeader.h" eine Abhängigkeit von "MyInput.x" ist, erstellt das Buildsystem zuerst die Datei "Myheader.h", bevor es das benutzerdefinierte Buildtool für "MyInput.x" ausführt.  
+         Eingabe Abhängigkeiten können auch Stellen Sie sicher, dass Ihre benutzerdefinierten Buildtools in der Reihenfolge ausgeführt, die Sie um benötigt. Nehmen Sie im vorherigen Beispiel MyHeader.h sich tatsächlich um die Ausgabe ein benutzerdefiniertes Buildtool an. Da MyHeader.h eine Abhängigkeit von MyInput.x ist, erstellt das Buildsystem zuerst MyHeader.h vor dem Ausführen des benutzerdefinierten Build-Tools für MeineEingabe.x.  
   
-    -   Geben Sie in der Befehlszeile einen Befehl so an, als ob Sie ihn an der Eingabeaufforderung eingeben würden.  Geben Sie einen gültigen Befehl oder eine Batchdatei und alle erforderlichen Eingabe\- oder Ausgabedateien an.  Geben Sie den Batchbefehl **call** vor dem Namen einer Batchdatei an, um sicherzustellen, dass alle nachfolgenden Befehle ausgeführt werden.  
+    -   In **Befehlszeile**, geben Sie einen Befehl aus, als ob Sie sie an der Eingabeaufforderung angegeben wurden. Geben Sie einen gültigen Befehl oder eine Batchdatei, und alle erforderlichen Eingabe- oder Ausgabedateien. Geben Sie die **Aufrufen** batch-Befehl vor dem Namen einer Batchdatei aus, um zu gewährleisten, dass alle nachfolgenden Befehle ausgeführt werden.  
   
-         Mehrere Eingabe\- und Ausgabedateien können symbolisch mit MSBuild\-Makros angegeben werden.  [!INCLUDE[crabout](../build/reference/includes/crabout_md.md)] zur Angabe des Speicherorts der Dateien oder der Namen der Dateisätze finden Sie unter [Makros für Buildbefehle und \-eigenschaften](../ide/common-macros-for-build-commands-and-properties.md).  
+         Mehrere Eingabe- und Dateien können symbolisch mit MSBuild-Makros angegeben werden. [!INCLUDE[crabout](../build/reference/includes/crabout_md.md)]Angabe des Speicherorts von Dateien oder die Namen von Sätzen von Dateien, finden Sie unter [allgemeine Makros für Buildbefehle und-Eigenschaften](../ide/common-macros-for-build-commands-and-properties.md).  
   
-         Da das Zeichen "%" von MSBuild reserviert wird, wenn eine Umgebungsvariable angegeben wird, ersetzen Sie jedes **%**\-Escapezeichen durch die hexadezimale Escapesequenz **%25**.  Ersetzen Sie z. B. **%WINDIR%** durch **%25WINDIR%25**:  MSBuild ersetzt jede **%25**\-Sequenz durch das Zeichen **%**, bevor auf die Umgebungsvariable zugegriffen wird.  
+         Da das Zeichen "%" von MSBuild reserviert ist, wenn Sie angeben, eine Umgebungsvariable ersetzen Sie jeden  **%**  escape-Zeichen mit der **% 25** hexadezimale Escapesequenz. Ersetzen Sie z. B. **"% windir%"** mit **25WINDIR % 25**. MSBuild ersetzt jede **% 25** Sequenz mit dem  **%**  Zeichen, bevor er die Umgebungsvariable zugreift.  
   
-    -   Geben Sie in **Beschreibung** eine beschreibende Meldung zu diesem benutzerdefinierten Buildtool ein.  Die Meldung wird im Ausgabefenster angezeigt, wenn dieses Tool vom Buildsystem verarbeitet wird.  
+    -   In **Beschreibung**, geben Sie eine beschreibende Meldung zu diesem benutzerdefinierten Build-Tool. Die Meldung wird ausgegeben, um die **Ausgabe** Fenster, wenn das Buildsystem dieses Tool verarbeitet.  
   
-    -   Geben Sie unter **Ausgaben** den Namen der Ausgabedatei an.  Dieser Eintrag ist erforderlich, da ein benutzerdefiniertes Buildtool ohne einen Wert für diese Eigenschaft nicht ausgeführt werden kann.  Wenn ein benutzerdefiniertes Buildtool über mehrere Ausgaben verfügt, werden die Dateinamen durch ein Semikolon getrennt.  
+    -   In **Ausgaben**, geben Sie den Namen der Ausgabedatei. Dieser ist Eintrag erforderlich; ohne einen Wert für diese Eigenschaft ist wird das benutzerdefinierte Buildtool nicht ausgeführt. Verfügt ein benutzerdefiniertes Buildtool mehr als einer Ausgabe, trennen Sie Namen durch ein Semikolon.  
   
-         Der Name der Ausgabedatei sollte der Eingabe für die Eigenschaft **Befehlszeile** entsprechen.  Das Projektbuildsystem sucht nach der Datei und überprüft ihr Datum.  Wenn die Ausgabedatei neuer als die Eingabedatei ist, bzw. wenn sie nicht gefunden wird, wird das benutzerdefinierte Buildtool ausgeführt.  Wenn alle Dateien unter **Zusätzliche Abhängigkeiten** älter als die Eingabedatei sind und die Eingabedatei älter als die in der **Outputs**\-Eigenschaft angegebene Datei ist, wird das benutzerdefinierte Buildtool nicht ausgeführt.  
+         Der Name der Ausgabedatei identisch sein soll, wie sie in angegeben ist die **Befehlszeile** Eigenschaft. Das Build-Projektsystem wird nach der Datei gesucht und überprüfen Sie das Datum. Wenn die Ausgabedatei neuer als die Eingabedatei ist oder wenn die Ausgabedatei nicht gefunden wird, wird das benutzerdefinierte Buildtool ausgeführt. Wenn alle von der **zusätzliche Abhängigkeiten** Dateien sind älter als die Eingabedatei und die Eingabedatei ist älter als die angegebene Datei der **Ausgaben** -Eigenschaft, die benutzerdefiniertes Buildtool wird nicht ausgeführt.  
   
- Wenn das Buildsystem eine durch das benutzerdefinierte Buildtool generierte Ausgabedatei verarbeiten soll, müssen Sie diese dem Projekt manuell hinzufügen.  Die Datei wird während des Buildvorgangs durch das benutzerdefinierte Buildtool aktualisiert.  
+ Wenn das Buildsystem, Vorgänge für eine Ausgabedatei, die durch das benutzerdefinierte Buildtool generiert werden sollen, müssen Sie manuell zum Projekt hinzufügen. Das benutzerdefinierte Buildtool wird die Datei während der Builderstellung aktualisieren.  
   
-## Beispiel  
- Stellen Sie sich vor, Sie möchten eine Datei mit dem Namen "parser.l" in Ihr Projekt aufnehmen.  Diese Datei soll von einer lexikalischen Analyse verarbeitet werden, um eine C\-Datei mit demselben Basisnamen \(parser.c\) zu erstellen.  
+## <a name="example"></a>Beispiel  
+ Angenommen Sie, Sie in Ihrem Projekt eine Datei mit dem Namen parser.l einschließen möchten. Soll eine Lexikalische Analyse verarbeitet werden, um eine c-Datei zu erstellen, die den gleichen Basisnamen (parser.c) aufweist.  
   
- Zuerst fügen Sie dem Projekt parser.l und parser.c hinzu.  Wenn die Dateien noch nicht vorhanden sind, fügen Sie einfach einen Verweis auf die Dateien hinzu.  Sie erstellen ein benutzerdefiniertes Buildtool für "parser.l" und geben Folgendes für die **Commands**\-Eigenschaft ein:  
+ Fügen Sie zunächst parser.l und parser.c zum Projekt aus. Wenn die Dateien noch nicht vorhanden sind, fügen Sie einfach einen Verweis auf die Dateien hinzu. Sie erstellen ein benutzerdefiniertes Buildtool für parser.l, und geben Sie Folgendes in die **Befehle** Eigenschaft:  
   
 ```  
 lexer %(FullPath) .\%(Filename).c  
 ```  
   
- Durch diesen Befehl wird die lexikalische Analyse für parser.l ausgeführt und parser.c in das Projektverzeichnis ausgegeben.  
+ Mit diesem Befehl wird die lexikalischen parser.l ausgeführt und Parser.c in das Projektverzeichnis.  
   
- Geben Sie für die Eigenschaft **Ausgaben** Folgendes ein:  
+ In der **Ausgaben** -Eigenschaft, geben Sie Folgendes ein:  
   
 ```  
 .\%(Filename).c  
 ```  
   
- Wenn Sie das Projekt erstellen, vergleicht das Buildsystem die Timestamps von "parser.l" und "parser.c".  Wenn "parser.l" aktueller ist, oder wenn "parser.c" nicht vorhanden ist, wird die Eigenschaft **Befehlszeile** vom Buildsystem ausgeführt, um "parser.c" zu aktualisieren.  Da "parser.c" ebenfalls dem Projekt hinzugefügt wurde, kompiliert das Buildsystem anschließend "parser.c".  
+ Wenn Sie das Projekt erstellen, vergleicht das Buildsystem die Timestamps von parser.l und parser.c an. Wenn parser.l aktuell ist, oder wenn parser.c nicht vorhanden ist, das Buildsystem den Wert des führt der **Befehlszeile** Eigenschaft um parser.c auf dem neuesten Stand zu bringen. Da parser.c ebenfalls dem Projekt hinzugefügt wurde, kompiliert das Buildsystem dann parser.c.  
   
-## Siehe auch  
- [Makros für Buildbefehle und \-eigenschaften](../ide/common-macros-for-build-commands-and-properties.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Allgemeine Makros für Buildbefehle und-Eigenschaften](../ide/common-macros-for-build-commands-and-properties.md)   
  [Problembehandlung für Buildanpassungen](../ide/troubleshooting-build-customizations.md)

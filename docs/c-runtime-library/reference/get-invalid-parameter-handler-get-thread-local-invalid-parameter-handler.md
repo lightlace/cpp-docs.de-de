@@ -1,67 +1,67 @@
 ---
-title: "_get_invalid_parameter_handler _get_thread_local_invalid_parameter_handler | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_get_invalid_parameter_handler"
-  - "_get_thread_local_invalid_parameter_handler"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_get_invalid_parameter_handler"
-  - "stdlib/_get_invalid_parameter_handler"
-  - "_get_thread_local_invalid_parameter_handler"
-  - "stdlib/_get_thread_local_invalid_parameter_handler"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_get_thread_local_invalid_parameter_handler-Funktion"
-  - "_get_invalid_parameter_handler-Funktion"
+title: _get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _get_invalid_parameter_handler
+- _get_thread_local_invalid_parameter_handler
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _get_invalid_parameter_handler
+- stdlib/_get_invalid_parameter_handler
+- _get_thread_local_invalid_parameter_handler
+- stdlib/_get_thread_local_invalid_parameter_handler
+dev_langs: C++
+helpviewer_keywords:
+- _get_thread_local_invalid_parameter_handler function
+- _get_invalid_parameter_handler function
 ms.assetid: a176da0e-38ca-4d99-92bb-b0e2b8072f53
-caps.latest.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: aef6cfa2c015abf64cdfd217e2128dd77bd925a7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# _get_invalid_parameter_handler _get_thread_local_invalid_parameter_handler
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ruft die Funktion, die aufgerufen wird, wenn die CRT ein ungültiges Argument entdeckt.  
+# <a name="getinvalidparameterhandler-getthreadlocalinvalidparameterhandler"></a>_get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler
+Ruft die Funktion auf, die aufzurufen ist, wenn CRT ein ungültiges Argument erkennt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 _invalid_parameter_handler _get_invalid_parameter_handler(void);  
 _invalid_parameter_handler _get_thread_local_invalid_parameter_handler(void);  
 ```  
   
-## Rückgabewert  
- Ein Zeiger auf die derzeit festgelegten Handlerfunktion Ungültiger Parameter oder ein null\-Zeiger, wenn keine festgelegt wurde.  
+## <a name="return-value"></a>Rückgabewert  
+ Ein Zeiger auf die derzeit festgelegte Funktion für ungültige Parameterhandler oder ein NULL-Zeiger, wenn keine festgelegt wurde.  
   
-## Hinweise  
- Die `_get_invalid_parameter_handler` Funktion ruft die derzeit festgelegten Handler für globale ungültige Parameter. Gibt einen null\-Zeiger, wenn kein Handler globale Ungültiger Parameter festgelegt wurde. Auf ähnliche Weise die `_get_thread_local_invalid_parameter_handler` Ruft aktuelle Handler für ungültige Thread\-Local\-Parameter für den Thread, der für aufgerufen wird, oder ein null\-Zeiger, wenn kein Handler festgelegt wurde. Informationen zum Festlegen von globalen und lokalen Thread\-Ungültiger Parameter Handler finden Sie unter [\_set\_invalid\_parameter\_handler \_set\_thread\_local\_invalid\_parameter\_handler](../../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).  
+## <a name="remarks"></a>Hinweise  
+ Die `_get_invalid_parameter_handler`-Funktion ruft den derzeit festgelegten globalen ungültigen Parameterhandler auf. Sie gibt einen NULL-Zeiger zurück, wenn kein globaler Handler für ungültige Parameter festgelegt wurde. Auf ähnliche Weise ruft `_get_thread_local_invalid_parameter_handler` den aktuellen ungültigen lokalen Parameterhandler des Threads auf, für den er aufgerufen wird, oder ein NULL-Zeiger, wenn kein Handler festgelegt wurde. Informationen zum Festlegen von globalen und Thread-lokalen ungültigen Parameterhandlern finden Sie unter [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](../../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).  
   
- Der zurückgegebene ungültige Parameter Handler Funktionszeiger hat den folgenden Typ:  
+ Der zurückgegebene Funktionszeiger des ungültigen Parameterhandlers hat den folgenden Typ:  
   
-```c  
+```C  
 typedef void (__cdecl* _invalid_parameter_handler)(  
     wchar_t const*,  
     wchar_t const*,  
@@ -71,16 +71,16 @@ typedef void (__cdecl* _invalid_parameter_handler)(
     );  
 ```  
   
- Details zu den Handler für ungültige Parameter, finden Sie unter den Prototyp in [\_set\_invalid\_parameter\_handler \_set\_thread\_local\_invalid\_parameter\_handler](../../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).  
+ Mehr Informationen über ungültige Parameterhandler finden sie unter dem Prototyp in [set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](../../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_get_invalid_parameter_handler`, `_get_thread_local_invalid_parameter_handler`|C: \< stdlib.h \><br /><br /> C\+\+: \< Cstdlib \> oder \< stdlib.h \>|  
+|-------------|---------------------|  
+|`_get_invalid_parameter_handler`, `_get_thread_local_invalid_parameter_handler`|C: \<stdlib.h><br /><br /> C++: \<cstdlib> oder \<stdlib.h>|  
   
- Die `_get_invalid_parameter_handler` und `_get_thread_local_invalid_parameter_handler` Funktionen sind Microsoft\-spezifisch. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
+ Die Funktionen `_get_invalid_parameter_handler` und `_get_thread_local_invalid_parameter_handler` sind Microsoft-spezifisch. Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Siehe auch  
- [\_set\_invalid\_parameter\_handler \_set\_thread\_local\_invalid\_parameter\_handler](../../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)   
- [CRT\-Funktionsversionen mit erweiterter Sicherheit](../../c-runtime-library/security-enhanced-versions-of-crt-functions.md)
+## <a name="see-also"></a>Siehe auch  
+ [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](../../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)   
+ [CRT-Funktionsversionen mit erweiterter Sicherheit](../../c-runtime-library/security-enhanced-versions-of-crt-functions.md)

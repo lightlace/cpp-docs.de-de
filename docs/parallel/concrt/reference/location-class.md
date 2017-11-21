@@ -1,11 +1,10 @@
 ---
-title: Location-Klasse | Microsoft-Dokumentation
+title: Location-Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,35 +13,18 @@ f1_keywords:
 - CONCRT/concurrency::location::location
 - CONCRT/concurrency::location::current
 - CONCRT/concurrency::location::from_numa_node
-dev_langs:
-- C++
-helpviewer_keywords:
-- location class
+dev_langs: C++
+helpviewer_keywords: location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: a0b64804ebfea3ad2c172c509aeffd485f4fe30a
-ms.contentlocale: de-de
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: aafe0500568cd9d4c9419345560272e18008df83
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="location-class"></a>location-Klasse
 Die Abstraktion eines physischen Speicherorts auf der Hardware.  
@@ -66,16 +48,16 @@ class location;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[aktuelle](#current)|Gibt ein `location` Objekt, das die spezifische Stelle den aufrufenden Thread ausgeführt wird, darstellt.|  
-|[from_numa_node](#from_numa_node)|Gibt ein `location` Objekt, das einen bestimmten NUMA-Knoten darstellt.|  
+|[aktuelle](#current)|Gibt eine `location` Objekt, das die spezifischste Stelle den aufrufende Thread ausgeführt wird, darstellt.|  
+|[from_numa_node](#from_numa_node)|Gibt eine `location` Objekt, das einen bestimmten NUMA-Knoten darstellt.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[operator!=](#operator_neq)|Bestimmt, ob zwei `location` Objekte unterschiedliche Position darstellt.|  
-|[operator=](#operator_eq)|Weist den Inhalt eines anderen `location` -Objekts diesem Objekt zu.|  
-|[operator==](#operator_eq_eq)|Bestimmt, ob zwei `location` Objekte am gleichen Speicherort darstellen.|  
+|[operator!=](#operator_neq)|Bestimmt, ob zwei `location` Objekte darstellen anderen Speicherort.|  
+|[operator=](#operator_eq)|Weist den Inhalt eines anderen `location` -Objekts in dieses Objekt.|  
+|[operator==](#operator_eq_eq)|Bestimmt, ob zwei `location` Objekte darstellen, den gleichen Speicherort.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `location`  
@@ -95,18 +77,18 @@ class location;
   
 ##  <a name="current"></a>aktuelle 
 
- Gibt ein `location` Objekt, das die spezifische Stelle den aufrufenden Thread ausgeführt wird, darstellt.  
+ Gibt eine `location` Objekt, das die spezifischste Stelle den aufrufende Thread ausgeführt wird, darstellt.  
   
 ```
 static location __cdecl current();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Einen Speicherort, der spezifischen Ort darstellt, wird der aufrufende Thread ausgeführt.  
+ Einen Speicherort, der die spezifischste Stelle darstellt, an der aufrufende Thread ausgeführt wird.  
   
 ##  <a name="from_numa_node"></a>from_numa_node 
 
- Gibt ein `location` Objekt, das einen bestimmten NUMA-Knoten darstellt.  
+ Gibt eine `location` Objekt, das einen bestimmten NUMA-Knoten darstellt.  
   
 ```
 static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
@@ -117,7 +99,7 @@ static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
  Die NUMA-Knotennummer um einen Speicherort für zu erstellen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Eine Position, die vom angegebenen NUMA-Knoten darstellt der `_NumaNodeNumber` Parameter.  
+ Eine Position, die gemäß den NUMA-Knoten darstellt. die `_NumaNodeNumber` Parameter.  
   
 ##  <a name="ctor"></a>Speicherort 
 
@@ -144,11 +126,11 @@ location(
  `_PBinding`  
   
 ### <a name="remarks"></a>Hinweise  
- Ein Standardspeicherort für erstellt stellt das System als Ganzes dar.  
+ Ein standardmäßig erstelltes Speicherort stellt das System als Ganzes dar.  
   
 ##  <a name="operator_neq"></a>Operator! = 
 
- Bestimmt, ob zwei `location` Objekte unterschiedliche Position darstellt.  
+ Bestimmt, ob zwei `location` Objekte darstellen anderen Speicherort.  
   
 ```
 bool operator!= (const location& _Rhs) const;
@@ -158,11 +140,11 @@ bool operator!= (const location& _Rhs) const;
  `_Rhs`  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true`Wenn die beiden Speicherorten unterschiedlich sind, `false` andernfalls.  
+ `true`Wenn es sich bei die beiden Speicherorten unterscheiden, `false` andernfalls.  
   
 ##  <a name="operator_eq"></a>Operator = 
 
- Weist den Inhalt eines anderen `location` -Objekts diesem Objekt zu.  
+ Weist den Inhalt eines anderen `location` -Objekts in dieses Objekt.  
   
 ```
 location& operator= (const location& _Rhs);
@@ -176,7 +158,7 @@ location& operator= (const location& _Rhs);
   
 ##  <a name="operator_eq_eq"></a>Operator == 
 
- Bestimmt, ob zwei `location` Objekte am gleichen Speicherort darstellen.  
+ Bestimmt, ob zwei `location` Objekte darstellen, den gleichen Speicherort.  
   
 ```
 bool operator== (const location& _Rhs) const;
@@ -190,4 +172,3 @@ bool operator== (const location& _Rhs) const;
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)
-

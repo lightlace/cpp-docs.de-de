@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -40,203 +39,188 @@ f1_keywords:
 - C4387
 - C4388
 - C4396
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 081391a955383913f08dce2d35a2f1c46d4649e9
-ms.lasthandoff: 04/24/2017
-
+ms.openlocfilehash: d5bb235544989ebdd1aa6ebebb7d96ba0cd7391d
+ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="compiler-warnings-c4200-through-c4399"></a>Compilerwarnungs C4200 Through C4399
-In die Artikeln in diesem Teil der Dokumentation enthalten Informationen über eine Teilmenge von Visual C++-Compiler-Warnungen. Sie können die hier aufgeführten Informationen zugreifen oder im die **Ausgabe** Fenster in Visual Studio können Sie eine Warnnummer auswählen und wählen Sie dann die F1-Taste.  
-  
+
+In die Artikeln in diesem Teil der Dokumentation enthalten Informationen über eine Teilmenge von Visual C++-Compiler-Warnungen. Sie können die hier aufgeführten Informationen zugreifen oder im die **Ausgabe** Fenster in Visual Studio können Sie eine Warnnummer auswählen und wählen Sie dann die F1-Taste.
+
 > [!NOTE]
->  Nicht jeder [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] Fehler oder eine Warnung in MSDN dokumentiert ist. In vielen Fällen enthält die diagnosemeldung alle Informationen, die verfügbar ist. Wenn Sie der Meinung sind, dass eine Fehlermeldung einer zusätzlichen Erklärung bedarf, informieren Sie uns bitte. Verwenden Sie die Feedback-Formular auf dieser Seite, oder wechseln Sie auf der Menüleiste in Visual Studio und wählen Sie **Hilfe**, **Melden eines Fehlers**, oder Sie können einen Bericht Vorschlag oder Fehler senden, auf [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
-  
- Sie möglicherweise zusätzliche Unterstützung für Fehler und Warnungen für den öffentlichen Foren von MSDN. Die [Visual C++-Sprache](http://go.microsoft.com/fwlink/?LinkId=158195) Forum eignet sich für Fragen und Diskussionen zu den [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] -Sprachsyntax und -Compiler. Die [Visual C++ Allgemein](http://go.microsoft.com/fwlink/?LinkId=158194) Forum eignet sich für Fragen zum [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] , die in anderen Foren nicht diskutiert werden. Sie können auch Hilfe zu Fehlern und Warnungen finden, auf [Stack Overflow](http://stackoverflow.com/).  
-  
-## <a name="in-this-section"></a>In diesem Abschnitt  
-  
-|Warnung|Meldung|  
-|-------------|-------------|  
-|[Compilerwarnung (Ebenen 2 und 4) C4200](../../error-messages/compiler-warnings/compiler-warning-levels-2-and-4-c4200.md)|Nicht dem Standard entsprechende Erweiterung: Null-Array in Struktur/Union|  
-|[Compilerwarnung (Ebene 4) C4201](../../error-messages/compiler-warnings/compiler-warning-level-4-c4201.md)|Nicht dem Standard entsprechende Erweiterung: Struktur/Union ohne Namen|  
-|[Compilerwarnung (Ebene 4) C4202](../../error-messages/compiler-warnings/compiler-warning-level-4-c4202.md)|Nicht dem Standard entsprechende Erweiterung: "...": Prototypparameter in der Namensliste ist unzulässig|  
-|Compilerwarnung C4203 generiert|Nicht dem Standard entsprechende Erweiterung: Union mit statischem Datenelement|  
-|[Compilerwarnung (Ebene 4) C4204](../../error-messages/compiler-warnings/compiler-warning-level-4-c4204.md)|Nicht dem Standard entsprechende Erweiterung: Initialisierung für zusammengesetzten Typ ist keine Konstante|  
-|[Compilerwarnung (Ebene 4) C4205](../../error-messages/compiler-warnings/compiler-warning-level-4-c4205.md)|Nicht dem Standard entsprechende Erweiterung: Deklaration einer statischen Funktion in einer Funktion|  
-|[Compilerwarnung (Ebene 4) C4206](../../error-messages/compiler-warnings/compiler-warning-level-4-c4206.md)|Nicht dem Standard entsprechende Erweiterung: Übersetzungseinheit ist leer|  
-|[Compilerwarnung (Ebene 4) C4207](../../error-messages/compiler-warnings/compiler-warning-level-4-c4207.md)|Nicht dem Standard entsprechende Erweiterung: erweiterte Form der Initialisierung|  
-|[Compilerwarnung (Ebene 4) C4208](../../error-messages/compiler-warnings/compiler-warning-level-4-c4208.md)|nicht dem Standard entsprechende Erweiterung: Delete [Ausdruck] - Ausdruck ausgewertet, aber ignoriert|  
-|[Compilerwarnung (Ebene 4) C4210](../../error-messages/compiler-warnings/compiler-warning-level-4-c4210.md)|Nicht dem Standard entsprechende Erweiterung: Funktion gehört zum Gültigkeitsbereich der Datei|  
-|[Compilerwarnung (Ebene 4) C4211](../../error-messages/compiler-warnings/compiler-warning-level-4-c4211.md)|Nicht dem Standard entsprechende Erweiterung: Neudefinition von extern als statisch|  
-|[Compilerwarnung (Ebene 4) C4212](../../error-messages/compiler-warnings/compiler-warning-level-4-c4212.md)|Nicht dem Standard entsprechende Erweiterung: Funktionsdeklaration verwendet Ellipse (...)|  
-|[Compilerwarnung (Ebene 4) C4213](../../error-messages/compiler-warnings/compiler-warning-level-4-c4213.md)|Nicht dem Standard entsprechende Erweiterung: Typumwandlung eines L-Wertes|  
-|[Compilerwarnung (Ebene 4) C4214](../../error-messages/compiler-warnings/compiler-warning-level-4-c4214.md)|Nicht dem Standard entsprechende Erweiterung: Basistyp für Bitfeld ist nicht int|  
-|[Compilerwarnung (Ebene 1) C4215](../../error-messages/compiler-warnings/compiler-warning-level-1-c4215.md)|Nicht dem Standard entsprechende Erweiterung: long float|  
-|[Compilerwarnung (Ebene 1) C4216](../../error-messages/compiler-warnings/compiler-warning-level-1-c4216.md)|Nicht dem Standard entsprechende Erweiterung: float long|  
-|[Compilerwarnung (Ebene 1) C4218](../../error-messages/compiler-warnings/compiler-warning-level-1-c4218.md)|Nicht dem Standard entsprechende Erweiterung: Mindestens Angabe einer Speicherklasse oder eines Typs erforderlich|  
-|[Compilerwarnung (Ebene 4) C4220](../../error-messages/compiler-warnings/compiler-warning-level-4-c4220.md)|Parameterliste mit Liste variabler Parameter verglichen|  
-|[Compilerwarnung (Ebene 4) C4221](../../error-messages/compiler-warnings/compiler-warning-level-4-c4221.md)|nicht dem Standard entsprechende Erweiterung: 'Bezeichner': kann nicht initialisiert werden, mit der Adresse der automatischen Variablen "Variable"|  
-|[Compilerwarnung (Ebenen 1 und 4) C4223](../../error-messages/compiler-warnings/compiler-warning-levels-1-and-4-c4223.md)|Nicht dem Standard entsprechende Erweiterung: Array, das keine L-Werte enthält, wird in Zeiger konvertiert|  
-|[Compilerwarnung (Ebene 1) C4224](../../error-messages/compiler-warnings/compiler-warning-level-1-c4224.md)|nicht dem Standard entsprechende Erweiterung: formaler Parameter 'Bezeichner' wurde zuvor als Typ definiert|  
-|[Compilerwarnung (Ebene 1) C4226](../../error-messages/compiler-warnings/compiler-warning-level-1-c4226.md)|nicht dem Standard entsprechende Erweiterung: 'Schlüsselwort' ist ein veraltetes Schlüsselwort|  
-|[Compilerwarnung (Ebene 1) C4227](../../error-messages/compiler-warnings/compiler-warning-level-1-c4227.md)|Anachronismus verwendet: Qualifizierer auf Verweise werden ignoriert|  
-|[Compilerwarnung (Ebene 1) C4228](../../error-messages/compiler-warnings/compiler-warning-level-1-c4228.md)|Nicht dem Standard entsprechende Erweiterung: Qualifizierer nach einem Komma in der Deklaratorliste werden ignoriert|  
-|[Compilerwarnung (Ebene 1) C4229](../../error-messages/compiler-warnings/compiler-warning-level-1-c4229.md)|Anachronismus verwendet: Modifizierer der Daten werden ignoriert|  
-|[Compilerwarnung (Ebene 1) C4230](../../error-messages/compiler-warnings/compiler-warning-level-1-c4230.md)|Anachronismus verwendet: Modifizierer/Qualifizierer kombiniert, Qualifizierer wird ignoriert|  
-|[Compilerwarnung (Ebene 4) C4232](../../error-messages/compiler-warnings/compiler-warning-level-4-c4232.md)|nicht dem Standard entsprechende Erweiterung: 'Bezeichner': Adresse von Dllimport 'Dllimport' ist nicht statisch, Identität nicht garantiert.|  
-|[Compilerwarnung (Ebene 4) C4233](../../error-messages/compiler-warnings/compiler-warning-level-4-c4233.md)|nicht dem Standard entsprechende Erweiterung: ' Schlüsselwort ' wird nur in C++ nicht C unterstützt.|  
-|[Compilerwarnung (Ebene 4) C4234](../../error-messages/compiler-warnings/compiler-warning-level-4-c4234.md)|nicht dem Standard entsprechende Erweiterung: ' Schlüsselwort ' für die zukünftige Verwendung reserviert|  
-|[Compilerwarnung (Ebene 4) C4235](../../error-messages/compiler-warnings/compiler-warning-level-4-c4235.md)|nicht dem Standard entsprechende Erweiterung: ' Schlüsselwort ' für diese Architektur nicht unterstützt.|  
-|[Compilerwarnung (Ebene 1) C4237](../../error-messages/compiler-warnings/compiler-warning-level-1-c4237.md)|' Schlüsselwort ' wird noch nicht unterstützt, aber für die zukünftige Verwendung reserviert|  
-|[Compilerwarnung (Ebene 4) C4238](../../error-messages/compiler-warnings/compiler-warning-level-4-c4238.md)|Nicht dem Standard entsprechende Erweiterung: R-Wert einer Klasse als L-Wert verwendet|  
-|[Compilerwarnung (Ebene 4) C4239](../../error-messages/compiler-warnings/compiler-warning-level-4-c4239.md)|nicht dem Standard entsprechende Erweiterung: 'token': Konvertierung von "Typ1" in "Typ2"|  
-|[Compilerwarnung (Ebene 3) C4240](../../error-messages/compiler-warnings/compiler-warning-level-3-c4240.md)|nicht dem Standard entsprechende Erweiterung: Zugriff auf "Klassenname" jetzt als "acess_specifier1" zuvor wurde definiert, um "access_specifier2" sein.|  
-|[Compilerwarnung (Ebene 4) C4242](../../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md)|'Beispieldatentabelle': Konvertierung von "Typ1" in "Typ1", möglicher Datenverlust|  
-|[Compilerwarnung (Ebene 3) C4243](../../error-messages/compiler-warnings/compiler-warning-level-3-c4243.md)|"Conversion_type" Konvertierung von "Typ1" in "Typ1" vorhanden ist, aber nicht zugegriffen werden kann|  
-|[Compilerwarnung (Ebene 2) C4244](../../error-messages/compiler-warnings/compiler-warning-level-2-c4244.md)|'Conversion_type': Konvertierung von 'Typ1' in 'type2', möglicher Datenverlust|  
-|[Compilerwarnung (Ebenen 3 und 4) C4244](../../error-messages/compiler-warnings/compiler-warning-levels-3-and-4-c4244.md)|'Conversion_type': Konvertierung von 'Typ1' in 'type2', möglicher Datenverlust|  
-|[Compilerwarnung (Ebene 4) C4245](../../error-messages/compiler-warnings/compiler-warning-level-4-c4245.md)|'Conversion_type': Konvertierung von "Typ1" in "Typ2" signed/unsigned-Konflikt|  
-|[Compilerwarnung (Ebene 2) C4250](../../error-messages/compiler-warnings/compiler-warning-level-2-c4250.md)|'Klassenname': 'base_classname::member' über Dominanz erbt|  
-|[Compilerwarnung (Ebene 1) C4251](../../error-messages/compiler-warnings/compiler-warning-level-1-c4251.md)|'Bezeichner': "object_type1'"Bezeichner1"Dll-Schnittstelle, die von Clients von"Object_type' 'identfier2' verwendet werden muss|  
-|[Compilerwarnung (Ebene 4) C4254](../../error-messages/compiler-warnings/compiler-warning-level-4-c4254.md)|'Operator': Konvertierung von 'Type1:field_bits' in 'Type2:field_bits', möglicher Datenverlust|  
-|[Compilerwarnung (Ebene 4) C4255](../../error-messages/compiler-warnings/compiler-warning-level-4-c4255.md)|'function': Kein Funktionsprototyp angegeben: '()' wird in '(void)' konvertiert|  
-|[Compilerwarnung (Ebene 4) C4256](../../error-messages/compiler-warnings/compiler-warning-level-4-c4256.md)|'Funktion': Konstruktor für die Klasse mit virtuellen Basen besitzt "..."; Aufrufe möglicherweise nicht kompatibel mit früheren Versionen von Visual C++|  
-|[Compilerwarnung (Ebene 1) C4258](../../error-messages/compiler-warnings/compiler-warning-level-1-c4258.md)|'Variable': Definition von der for-Schleife ignoriert. die Definition des einschließenden Bereichs verwendet wird|  
-|[Compilerwarnung (Ebene 4) C4263](../../error-messages/compiler-warnings/compiler-warning-level-4-c4263.md)|'Funktion': Memberfunktion überschreibt keine virtuelle Memberfunktion einer Basisklasse|  
-|[Compilerwarnung (Ebene 1) C4264](../../error-messages/compiler-warnings/compiler-warning-level-1-c4264.md)|'Virtual_function': keine Überschreibung für virtuelle Memberfunktion der Basis 'Klassenname'; die Funktion wird ausgeblendet|  
-|[Compilerwarnung (Ebene 3) C4265](../../error-messages/compiler-warnings/compiler-warning-level-3-c4265.md)|'Klassenname': Klasse verfügt über virtuelle Funktionen, Destruktor ist jedoch nicht Virtual\n Instanzen dieser Klasse können nicht ordnungsgemäß zerstört|  
-|[Compilerwarnung (Ebene 4) C4266](../../error-messages/compiler-warnings/compiler-warning-level-4-c4266.md)|'Virtual_function': keine Überschreibung für virtuelle Memberfunktion der Basis 'Klassenname'; die Funktion wird ausgeblendet|  
-|[Compilerwarnung (Ebene 3) C4267](../../error-messages/compiler-warnings/compiler-warning-level-3-c4267.md)|'Variable': Konvertierung von 'Size_t' nach 'type', möglichen Datenverlust|  
-|[Compilerwarnung (Ebene 4) C4268](../../error-messages/compiler-warnings/compiler-warning-level-4-c4268.md)|'Bezeichner': 'const' statischen/globalen Daten vom Compiler generierten Standardkonstruktor initialisiert füllt das Objekt mit Nullen|  
-|[Compilerwarnung (Ebene 1) C4269](../../error-messages/compiler-warnings/compiler-warning-level-1-c4269.md)|'Bezeichner': 'const' Automatische Daten, die mit dem vom Compiler generierten Standardkonstruktor initialisiert führt zu unzuverlässige Ergebnissen|  
-|[Compilerwarnung (Ebene 1) C4272](../../error-messages/compiler-warnings/compiler-warning-level-1-c4272.md)|'Funktion': RuntimeCompatibility von "__declspec(dllimport)" "; systemeigene Aufrufkonvention muss angegeben werden, beim Importieren einer Funktion.|  
-|[Compilerwarnung (Ebene 1) C4273](../../error-messages/compiler-warnings/compiler-warning-level-1-c4273.md)|'Funktion': inkonsistente Dll-Bindung|  
-|Compilerwarnung (Stufe 1) C4274|#Ident ignoriert; finden Sie in der Dokumentation für #pragma-Kommentar (Exestr, 'String')|  
-|[Compilerwarnung (Ebene 2) C4275](../../error-messages/compiler-warnings/compiler-warning-level-2-c4275.md)|Dll-Schnittstelle "und" "Bezeichner1" als Basis für die Dll-Schnittstelle 'LocalizedText""Bezeichner2"verwendet wurde|  
-|[Compilerwarnung (Ebene 1) C4276](../../error-messages/compiler-warnings/compiler-warning-level-1-c4276.md)|'Funktion': kein Prototyp bereitgestellt wird. davon ausgegangen, dass keine Parameter|  
-|Compilerwarnung (Stufe 1) C4277|importierten Element "classname::member" als Datenmember und Funktionselement vorhanden ist Das Datenelement wird ignoriert|  
-|[Compilerwarnung (Ebene 3) C4278](../../error-messages/compiler-warnings/compiler-warning-level-3-c4278.md)|'Bezeichner': Bezeichner in der Typbibliothek "Library" ist bereits ein Makro; Verwenden Sie den Qualifizierer "Umbenennen"|  
-|Compilerwarnung (Stufe 3 und Ebene 4) C4279|'Bezeichner': Bezeichner in der Typbibliothek "Library" ist ein Schlüsselwort. Verwenden Sie den Qualifizierer "Umbenennen"|  
-|[Compilerwarnung (Ebene 3) C4280](../../error-messages/compiler-warnings/compiler-warning-level-3-c4280.md)|"Operator ->" wurde durch den Typ 'Typ'|  
-|[Compilerwarnung (Ebene 3) C4281](../../error-messages/compiler-warnings/compiler-warning-level-3-c4281.md)|Rekursion "Operator ->" durch den Typ "Typ1" aufgetreten|  
-|[Compilerwarnung (Ebene 3) C4282](../../error-messages/compiler-warnings/compiler-warning-level-3-c4282.md)|Klicken Sie dann durch den Typ 'Typ2'|  
-|[Compilerwarnung (Ebene 3) C4283](../../error-messages/compiler-warnings/compiler-warning-level-3-c4283.md)|und durch den Typ "TypeN"|  
-|[Compilerwarnung (Ebene 2) C4285](../../error-messages/compiler-warnings/compiler-warning-level-2-c4285.md)|Rückgabetyp wird für "Identifier:: Operator ->" rekursiv, wenn mit Infix-Notation verwendet.|  
-|[Compilerwarnung (Ebene 1) C4286](../../error-messages/compiler-warnings/compiler-warning-level-1-c4286.md)|"Derived_type": wurde aufgefangen durch Basisklasse ('Base_type') in Zeile "Zeilennummer"|  
-|[Compilerwarnung (Ebene 3) C4287](../../error-messages/compiler-warnings/compiler-warning-level-3-c4287.md)|'Operator': Konflikt zwischen vorzeichenloser und negativer Konstante|  
-|[Compilerwarnung (Ebene 1) C4288](../../error-messages/compiler-warnings/compiler-warning-level-1-c4288.md)|nicht dem Standard entsprechende Erweiterung: 'Variable': Loop-Steuerelementvariable, die in der for-Schleife deklariert wird, außerhalb des for-Schleife; Es steht in Konflikt mit der Deklaration im äußeren Gültigkeitsbereich|  
-|[Compilerwarnung (Ebene 4) C4289](../../error-messages/compiler-warnings/compiler-warning-level-4-c4289.md)|nicht dem Standard entsprechende Erweiterung: 'Variable': Loop-Steuerelementvariable, die in der for-Schleife deklariert wird, außerhalb des for-Schleife|  
-|[Compilerwarnung (Ebene 3) C4290](../../error-messages/compiler-warnings/compiler-warning-level-3-c4290.md)|C++-Ausnahmespezifikation ignoriert, es sei denn, es wird angezeigt, dass eine Funktion nicht __declspec(nothrow) ist|  
-|[Compilerwarnung (Ebene 1) C4291](../../error-messages/compiler-warnings/compiler-warning-level-1-c4291.md)|'Declaration': keine übereinstimmenden Delete-Operator gefunden; Speicher wird nicht freigegeben werden, wenn die Initialisierung eine Ausnahme auslöst.|  
-|[Compilerwarnung (Ebene 1) C4293](../../error-messages/compiler-warnings/compiler-warning-level-1-c4293.md)|"Shift_operator": Verschiebung negativ oder zu groß, ein nicht definiertes Verhalten|  
-|[Compilerwarnung (Ebene 4) C4295](../../error-messages/compiler-warnings/compiler-warning-level-4-c4295.md)|'Array': Array ist zu klein, um ein abschließendes Nullzeichen enthalten.|  
-|[Compilerwarnung (Ebene 4) C4296](../../error-messages/compiler-warnings/compiler-warning-level-4-c4296.md)|'Operator': Ausdruck ist immer "Boolean_value"|  
-|[Compilerwarnung (Ebene 1) C4297](../../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)|'Funktion': Funktion nicht zu einer Ausnahme jedoch davon ausgegangen, dass|  
-|Compilerwarnung (Stufe 4) C4298|'Bezeichner': Bezeichner in der Typbibliothek "Library" ist bereits ein Makro; in "__identifier" Umbenennen|  
-|Compilerwarnung (Stufe 4) C4299|'Bezeichner': Bezeichner in der Typbibliothek "Library" ist ein Schlüsselwort. in "__identifier" Umbenennen|  
-|Compilerwarnung C4301|"derived_class::function": Überschreiben der virtuellen Funktion nur unterscheidet sich von "Base_class:function" Const/Volatile-Qualifizierer|  
-|[Compilerwarnung (Ebene 2) C4302](../../error-messages/compiler-warnings/compiler-warning-level-2-c4302.md)|'conversion': Verkürzung von 'type1' in 'type2'|  
-|Compilerwarnung C4303|C-Style_cast "von"Typ1"in"Typ2"ist veraltet, verwenden Sie Static_cast, __try_cast oder Dynamic_cast|  
-|[Compilerwarnung (Ebene 1) C4305](../../error-messages/compiler-warnings/compiler-warning-level-1-c4305.md)|'conversion': Verkürzung von 'type1' in 'type2'|  
-|[Compilerwarnung (Ebene 3) C4306](../../error-messages/compiler-warnings/compiler-warning-level-3-c4306.md)|'Konvertierung': Konvertierung von "Typ1" in "Typ2" größerem|  
-|[Compilerwarnung (Ebene 2) C4307](../../error-messages/compiler-warnings/compiler-warning-level-2-c4307.md)|'Operator': Überlauf einer ganzzahligen Konstanten|  
-|[Compilerwarnung (Ebene 2) C4308](../../error-messages/compiler-warnings/compiler-warning-level-2-c4308.md)|Negative Ganzzahlkonstante in vorzeichenlosen Typ konvertiert|  
-|[Compilerwarnung (Ebene 2) C4309](../../error-messages/compiler-warnings/compiler-warning-level-2-c4309.md)|'Konvertierung': konstanter Wert wird abgeschnitten|  
-|[Compilerwarnung (Ebene 3) C4310](../../error-messages/compiler-warnings/compiler-warning-level-3-c4310.md)|Typumwandlung verkürzt konstante Werte|  
-|[Compilerwarnung (Ebene 1) C4311](../../error-messages/compiler-warnings/compiler-warning-level-1-c4311.md)|'Variable': zeigerverkürzung von 'Typ1' in 'Typ2'|  
-|[Compilerwarnung (Ebene 1) C4312](../../error-messages/compiler-warnings/compiler-warning-level-1-c4312.md)|'Operation': Konvertierung von "Typ1" in "Typ2" größerem|  
-|[Compilerwarnung (Ebene 1) C4313](../../error-messages/compiler-warnings/compiler-warning-level-1-c4313.md)|'Funktion': 'Format_specifier' in der Formatzeichenfolge steht in Konflikt mit dem Argument "Argument_number" vom Typ "Type"|  
-|Compilerwarnung C4314|Pragma-Parameter von "32" oder "64" erwartet|  
-|Compilerwarnung (Stufe 4) C4315|'Klassenname': this-Zeiger für Member 'Member' darf nicht "Ausrichtung" ausgerichtet sein, wie vom Konstruktor erwartet|  
-|Compilerwarnung (Stufe 3) C4316|'Bezeichner': Objekt auf dem Heap reserviert möglicherweise nicht ausgerichteten "Ausrichtung"|  
-|Compilerwarnung (Stufe 1) C4317|"Printf_family": nicht genügend Argumente für Formatzeichenfolge|  
-|Compilerwarnung C4318|Übergabe der Konstante Null als Länge an memset|  
-|[Compilerwarnung (Ebene 1) C4319](../../error-messages/compiler-warnings/compiler-warning-level-1-c4319.md)|'Operator': 0 (null) Erweitern von "Typ1" in "Typ2" größerem|  
-|Compilerwarnung (Stufe 1) C4321|IID wird automatisch für Schnittstelle "%$S" generiert.|  
-|Compilerwarnung (Stufe 1) C4322|CLSID wird automatisch für Klasse "%$S" generiert.|  
-|Compilerwarnung (Stufe 1) C4323|Erneute Verwendung der registrierten CLSID für Klasse "%$S"|  
-|[Compilerwarnung (Ebene 4) C4324](../../error-messages/compiler-warnings/compiler-warning-level-4-c4324.md)|"Structname": Struktur wurde aufgrund von aufgefüllt.|  
-|[Compilerwarnung (Ebene 1) C4325](../../error-messages/compiler-warnings/compiler-warning-level-1-c4325.md)|Attribute für Standardabschnitt "Abschnitt" ignoriert|  
-|[Compilerwarnung (Ebene 1) C4326](../../error-messages/compiler-warnings/compiler-warning-level-1-c4326.md)|Rückgabetyp "Funktion" sollte "Typ1" anstelle von "Typ2" sein.|  
-|Compilerwarnung C4327|'Zuordnung': Dereferenzierungsausrichtung von LHS ("alignment1") ist größer als RHS ("alignment2")|  
-|Compilerwarnung C4328|'Funktion': Dereferenzierungsausrichtung der formalen Parameter Parameter_number (Parameter_alignment) ist größer als die tatsächliche Argument Ausrichtung (Argument_alignment)|  
-|[Compilerwarnung (Ebene 1) C4329](../../error-messages/compiler-warnings/compiler-warning-level-1-c4329.md)|__declspec(align()) wird für enum ignoriert|  
-|Compilerwarnung (Stufe 1) C4330|Das Attribut "%s" für Abschnitt "%s" wird ignoriert.|  
-|[Compilerwarnung (Ebene 1) C4333](../../error-messages/compiler-warnings/compiler-warning-level-1-c4333.md)|"Shift_operator": von zu viel, Verlust von Daten nach rechts verschieben|  
-|[Compilerwarnung (Ebene 3) C4334](../../error-messages/compiler-warnings/compiler-warning-level-3-c4334.md)|"Shift_operator": Ergebnis der 32-Bit-Verschiebung implizit zu 64 Bit konvertiert (war ein 64-Bit-Verschiebung vorgesehen?)|  
-|[Compilerwarnung C4335](../../error-messages/compiler-warnings/compiler-warning-c4335.md)|Mac-Dateiformat ermittelt. Konvertieren Sie die Quelldatei in DOS- oder UNIX-Format.|  
-|[Compilerwarnung (Ebene 4) C4336](../../error-messages/compiler-warnings/compiler-warning-level-4-c4336.md)|Importtyp Querverweis Bibliothek "Bibliothek1" vor dem Import "Bibliothek2"|  
-|[Compilerwarnung (Ebene 4) C4337](../../error-messages/compiler-warnings/compiler-warning-level-4-c4337.md)|übergreifenden Typbibliothek "Bibliothek1" in "Bibliothek2" wird automatisch importiert|  
-|Compilerwarnung (Stufe 4) C4338|#Pragma-%s Standardabschnitt "%s" wird verwendet.|  
-|[Compilerwarnung (Ebene 4) C4339](../../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md)|'Typ': Verwenden eines undefinierten Typs im erkannt "WinRT &#124; CLR "- Metadaten verwenden dieses Typs führt möglicherweise zu einer Laufzeitausnahme|  
-|[Compilerwarnung (Ebene 1) C4340](../../error-messages/compiler-warnings/compiler-warning-level-1-c4340.md)|"Value": Wert umschlossen von positiv negativer Wert|  
-|[Compilerwarnung (Ebene 1) C4342](../../error-messages/compiler-warnings/compiler-warning-level-1-c4342.md)|Verhaltensänderung: 'Funktion' wird aufgerufen, in früheren Versionen wurde jedoch ein Memberoperator aufgerufen.|  
-|Compilerwarnung (Stufe 4) C4343|#Pragma-optimize("g",Off)"überschreibt Option/Og|  
-|[Compilerwarnung (Ebene 1) C4344](../../error-messages/compiler-warnings/compiler-warning-level-1-c4344.md)|Verändertes Programmverhalten: Verwenden der expliziten Vorlagenergebnisse, Argumente im Aufruf von 'Funktion'|  
-|[Compilerwarnung (Ebene 1) C4346](../../error-messages/compiler-warnings/compiler-warning-level-1-c4346.md)|'Name': abhängiger Name ist kein Typ|  
-|[Compilerwarnung (Ebene 1) C4348](../../error-messages/compiler-warnings/compiler-warning-level-1-c4348.md)|'Typ': Neudefinition des Standardparameters: Parameter "Parameter_number"|  
-|[Compilerwarnung (Ebene 1) C4350](../../error-messages/compiler-warnings/compiler-warning-level-1-c4350.md)|Verhaltensänderung: 'Member1' wird anstelle von 'Member2' aufgerufen|  
-|Compilerwarnung (Stufe 1) C4352|"%$I": Die systeminterne Funktion ist bereits definiert.|  
-|[Compilerwarnung (Ebene 1) C4353](../../error-messages/compiler-warnings/compiler-warning-level-1-c4353.md)|nicht dem Standard entsprechende Erweiterung: Konstante 0 als Funktionsausdruck.  Verwenden Sie stattdessen die systeminterne '__noop'-Funktion|  
-|[Compilerwarnung C4355](../../error-messages/compiler-warnings/compiler-warning-c4355.md)compilerwarnung (Stufe 1 und Stufe 4) C4355 generiert|"this": wird in Initialisierungslisten für Basisklasse verwendet|  
-|[Compilerwarnung (Ebene 2) C4356](../../error-messages/compiler-warnings/compiler-warning-level-2-c4356.md)|'Member': statische Datenmember kann nicht über eine abgeleitete Klasse initialisiert werden|  
-|[Compilerwarnung (Ebene 3) C4357](../../error-messages/compiler-warnings/compiler-warning-level-3-c4357.md)|ParamArray-Argument in der Argumentliste der formalen für den Delegaten gefunden, dass 'Delegat' ignoriert, wenn 'Function' generieren|  
-|[Compilerwarnung (Ebene 1) C4358](../../error-messages/compiler-warnings/compiler-warning-level-1-c4358.md)|'Operator': Rückgabetyp von kombinierten Delegaten ist nicht "void" Der zurückgegebene Wert ist nicht definiert|  
-|[Compilerwarnung (Ebene 3) C4359](../../error-messages/compiler-warnings/compiler-warning-level-3-c4359.md)|'Typ': Ausrichtung-Bezeichner ist kleiner als die tatsächliche Ausrichtung ("Ausrichtung") und werden ignoriert.|  
-|Compilerwarnung (Stufe 2) C4362|"%$S": Eine Ausrichtung von mehr als 8 Bytes wird von CLR nicht unterstützt.|  
-|[Compilerwarnung (Ebene 1) C4364](../../error-messages/compiler-warnings/compiler-warning-level-1-c4364.md)|#Verwenden für die Assembly "Assembly", die zuvor am gesehen "location'('line_number') ohne As_friend-Attribut; As_friend nicht angewendet.|  
-|[Compilerwarnung (Ebene 4) C4365](../../error-messages/compiler-warnings/compiler-warning-level-4-c4365.md)|'Ausdruck': Konvertierung von "Typ1" in "Typ2" signed/unsigned-Konflikt|  
-|[Compilerwarnung (Ebene 4) C4366](../../error-messages/compiler-warnings/compiler-warning-level-4-c4366.md)|Das Ergebnis des Operators "Operator" unärer möglicherweise nicht ausgerichteten sein.|  
-|Compilerwarnung (Stufe 3) C4367|Die Konvertierung von ""%$T"" in ""%$T"" kann zu einer Ausnahme bei der Datentypausrichtung führen.|  
-|[Compilerwarnung C4368](../../error-messages/compiler-warnings/compiler-warning-c4368.md)|'Member' kann nicht als Member des verwalteten 'Typs' definiert werden: Gemischte Typen werden nicht unterstützt|  
-|[Compilerwarnung (Ebene 1) C4369](../../error-messages/compiler-warnings/compiler-warning-level-1-c4369.md)|'Enumerator': der Enumeratorwert "Value" kann nicht als 'Type' dargestellt werden, Wert ist 'New_value'|  
-|Compilerwarnung C4370|'Klassenname': Layout der Klasse wurde von einer früheren Version des Compilers aufgrund bessere Verpackung geändert|  
-|Compilerwarnung (Stufe 3) C4371|'Klassenname': Layout der Klasse möglicherweise von einer früheren Version des Compilers aufgrund bessere Verpackung des Members 'Member' wurde geändert|  
-|Compilerwarnung (Stufe 3) C4373|"derived_class::function": virtuelle Funktion überschreibt "base_class::function", frühere Versionen des Compilers nicht überschrieben, wenn der Parameter nur durch Const/Volatile-Qualifizierer beinhalteten|  
-|[Compilerwarnung (Ebene 1) C4374](../../error-messages/compiler-warnings/compiler-warning-level-1-c4374.md)|"Funktion1": Schnittstellenmethode wird nicht von nicht virtuellen Methode "Funktion2" implementiert|  
-|[Compilerwarnung (Ebene 1) C4375](../../error-messages/compiler-warnings/compiler-warning-level-1-c4375.md)|nicht öffentlichen Methode "Methode2" wird nicht mit "Methode2" überschrieben.|  
-|[Compilerwarnung (Ebene 1) C4376](../../error-messages/compiler-warnings/compiler-warning-level-1-c4376.md)|Zugriffsspezifizierer 'old_specifier:' wird nicht mehr unterstützt: Verwenden Sie stattdessen 'new_specifier:'|  
-|[Compilerwarnung (Ebene 1) C4377](../../error-messages/compiler-warnings/compiler-warning-level-1-c4377.md)|Systemeigene Typen sind standardmäßig "private"; "-d1PrivateNativeTypes" ist veraltet.|  
-|[Compilerwarnung (Ebene 1) C4378](../../error-messages/compiler-warnings/compiler-warning-level-1-c4378.md)|Zum Ausführen von Initialisierungen sind Funktionszeiger erforderlich; verwenden Sie ggf. System::ModuleHandle::ResolveMethodHandle.|  
-|[Compilerwarnung (Ebene 1) C4379](../../error-messages/compiler-warnings/compiler-warning-level-1-c4379.md)|"Version_number" von der common Language Runtime-Version wird von diesem Compiler nicht unterstützt. Mit dieser Version kann zu unerwarteten Ergebnissen führen|  
-|Compilerwarnung (Stufe 1) C4380|"%$S": Ein Standardkonstruktor darf nicht veraltet sein.|  
-|[Compilerwarnung (Ebene 1) C4381](../../error-messages/compiler-warnings/compiler-warning-level-1-c4381.md)|"Funktion1": Schnittstellenmethode wird nicht von nicht öffentlichen Methode "Funktion2" implementiert|  
-|[Compilerwarnung (Ebene 1) C4382](../../error-messages/compiler-warnings/compiler-warning-level-1-c4382.md)|Auslösen von 'Typ': ein Typ mit __clrcall-Destruktor oder Kopierkonstruktor nur in "/ CLR" abgefangen werden kann: pure-Modul|  
-|[Compilerwarnung (Ebene 1) C4383](../../error-messages/compiler-warnings/compiler-warning-level-1-c4383.md)|'Instanzendereferenzierungsoperator': die Bedeutung der Dereferenzieren eines Handles kann sich ändern, wenn ein Operator User-defined 'Instanzendereferenzierungsoperator' vorhanden ist. Schreiben Sie den Operator als eine statische Funktion der Operand explizit sein.|  
-|[Compilerwarnung (Ebene 1) C4384](../../error-messages/compiler-warnings/compiler-warning-level-1-c4384.md)|#Pragma "Make_public" sollte nur im globalen Gültigkeitsbereich verwendet werden|  
-|Compilerwarnung (Stufe 3) C4387|"%s": wurde berücksichtigt|  
-|Compilerwarnung (Stufe 4) C4388|"%$L": Konflikt zwischen "signed" und "unsigned"|  
-|[Compilerwarnung (Ebene 4) C4389](../../error-messages/compiler-warnings/compiler-warning-level-4-c4389.md)|'Operator': Konflikt zwischen signed/unsigned|  
-|[Compilerwarnung (Ebene 3) C4390](../../error-messages/compiler-warnings/compiler-warning-level-3-c4390.md)|";": Leere kontrollierte Anweisung aufgetreten; ist dies beabsichtigt?|  
-|[Compilerwarnung (Ebene 1) C4391](../../error-messages/compiler-warnings/compiler-warning-level-1-c4391.md)|'Function_signature': Falscher Rückgabetyp für die systeminterne Funktion erwartet 'type'|  
-|[Compilerwarnung (Ebene 1) C4392](../../error-messages/compiler-warnings/compiler-warning-level-1-c4392.md)|'Function_signature': falsche Anzahl von Argumenten für die systeminterne Funktion "," erwarteten "Argument_count'-Argumente|  
-|[Compilerwarnung (Ebene 1) C4393](../../error-messages/compiler-warnings/compiler-warning-level-1-c4393.md)|'Variable': const hat keine Auswirkung auf Datenmember 'literal'; ignoriert|  
-|[Compilerwarnung C4394](../../error-messages/compiler-warnings/compiler-warning-c4394.md)|'Funktion': anwendungsdomänenspezifisches Symbol sollte nicht mit __declspec('dllexport') markiert werden|  
-|[Compilerwarnung (Ebene 1) C4395](../../error-messages/compiler-warnings/compiler-warning-level-1-c4395.md)|'Funktion': Memberfunktion wird auf eine Kopie des Datenmembers Initonly 'Member' aufgerufen werden|  
-|Compilerwarnung (Stufe 2) C4396|"%$S": Der Inlinespezifizierer kann nicht verwendet werden, wenn eine Friend-Deklaration auf die Spezialisierung einer Funktionsvorlage verweist.|  
-|[Compilerwarnung (Ebene 1) C4397](../../error-messages/compiler-warnings/compiler-warning-level-1-c4397.md)|DefaultCharSetAttribute wird ignoriert.|  
-|[Compilerwarnung (Ebene 3) C4398](../../error-messages/compiler-warnings/compiler-warning-level-3-c4398.md)|'Variable': prozessspezifisch globales Objekt möglicherweise nicht ordnungsgemäß mit mehreren Anwendungsdomänen; Erwägen Sie __declspec(appdomain)|  
+>  Nicht jeder [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] Fehler oder eine Warnung in MSDN dokumentiert ist. In vielen Fällen enthält die diagnosemeldung alle Informationen, die verfügbar ist. Wenn Sie der Meinung sind, dass eine Fehlermeldung einer zusätzlichen Erklärung bedarf, informieren Sie uns bitte. Verwenden Sie die Feedback-Formular auf dieser Seite, oder wechseln Sie auf der Menüleiste in Visual Studio und wählen Sie **Hilfe**, **Melden eines Fehlers**, oder Sie können einen Bericht Vorschlag oder Fehler senden, auf [Microsoft Connect](http://connect.microsoft.com/VisualStudio).
+
+Sie möglicherweise zusätzliche Unterstützung für Fehler und Warnungen für den öffentlichen Foren von MSDN. Die [Visual C++-Sprache](http://go.microsoft.com/fwlink/?LinkId=158195) Forum eignet sich für Fragen und Diskussionen zu den [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] -Sprachsyntax und -Compiler. Die [Visual C++ Allgemein](http://go.microsoft.com/fwlink/?LinkId=158194) Forum eignet sich für Fragen zum [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] , die in anderen Foren nicht diskutiert werden. Sie können auch Hilfe zu Fehlern und Warnungen finden, auf [Stack Overflow](http://stackoverflow.com/).
+
+## <a name="in-this-section"></a>In diesem Abschnitt
+
+|Warnung|Meldung|
+|-------------|-------------|
+|[Compilerwarnung (Ebenen 2 und 4) C4200](../../error-messages/compiler-warnings/compiler-warning-levels-2-and-4-c4200.md)|nicht dem Standard entsprechende Erweiterung: Null-Array in Struktur/Union|
+|[Compilerwarnung (Ebene 4) C4201](../../error-messages/compiler-warnings/compiler-warning-level-4-c4201.md)|nicht dem Standard entsprechende Erweiterung: namenlosen Struktur/Union|
+|[Compilerwarnung (Ebene 4) C4202](../../error-messages/compiler-warnings/compiler-warning-level-4-c4202.md)|nicht dem Standard entsprechende Erweiterung: "...": Prototypparameter in der Liste ist ungültig|
+|Compilerwarnung C4203 generiert|nicht dem Standard entsprechende Erweiterung: union mit statischen Membervariablen|
+|[Compilerwarnung (Ebene 4) C4204](../../error-messages/compiler-warnings/compiler-warning-level-4-c4204.md)|nicht dem Standard entsprechende Erweiterung: aggregierter Initialisierer für nicht-Konstante|
+|[Compilerwarnung (Ebene 4) C4205](../../error-messages/compiler-warnings/compiler-warning-level-4-c4205.md)|nicht dem Standard entsprechende Erweiterung: statische Funktionsdeklaration im Gültigkeitsbereich der Funktion|
+|[Compilerwarnung (Ebene 4) C4206](../../error-messages/compiler-warnings/compiler-warning-level-4-c4206.md)|nicht dem Standard entsprechende Erweiterung: Übersetzungseinheit ist leer|
+|[Compilerwarnung (Ebene 4) C4207](../../error-messages/compiler-warnings/compiler-warning-level-4-c4207.md)|nicht dem Standard entsprechende Erweiterung: Erweiterte Form der Initialisierung|
+|[Compilerwarnung (Ebene 4) C4208](../../error-messages/compiler-warnings/compiler-warning-level-4-c4208.md)|nicht dem Standard entsprechende Erweiterung: Delete [Ausdruck] - Ausdruck ausgewertet, aber ignoriert|
+|[Compilerwarnung (Ebene 4) C4210](../../error-messages/compiler-warnings/compiler-warning-level-4-c4210.md)|nicht dem Standard entsprechende Erweiterung: Funktion im Gültigkeitsbereich der Datei|
+|[Compilerwarnung (Ebene 4) C4211](../../error-messages/compiler-warnings/compiler-warning-level-4-c4211.md)|nicht dem Standard entsprechende Erweiterung: Neudefinition von Extern als statisch|
+|[Compilerwarnung (Ebene 4) C4212](../../error-messages/compiler-warnings/compiler-warning-level-4-c4212.md)|nicht dem Standard entsprechende Erweiterung: Funktionsdeklaration verwendet Auslassungszeichen|
+|[Compilerwarnung (Ebene 4) C4213](../../error-messages/compiler-warnings/compiler-warning-level-4-c4213.md)|nicht dem Standard entsprechende Erweiterung: l-Wert umgewandelt|
+|[Compilerwarnung (Ebene 4) C4214](../../error-messages/compiler-warnings/compiler-warning-level-4-c4214.md)|nicht dem Standard entsprechende Erweiterung: Bitfeld Int|
+|[Compilerwarnung (Ebene 1) C4215](../../error-messages/compiler-warnings/compiler-warning-level-1-c4215.md)|nicht dem Standard entsprechende Erweiterung: long float|
+|[Compilerwarnung (Ebene 1) C4216](../../error-messages/compiler-warnings/compiler-warning-level-1-c4216.md)|nicht dem Standard entsprechende Erweiterung: long float|
+|[Compilerwarnung (Ebene 1) C4218](../../error-messages/compiler-warnings/compiler-warning-level-1-c4218.md)|nicht dem Standard entsprechende Erweiterung: müssen mindestens eine Speicherklasse oder einen Typ angeben|
+|[Compilerwarnung (Ebene 4) C4220](../../error-messages/compiler-warnings/compiler-warning-level-4-c4220.md)|Varargs entspricht der verbleibende Parameter|
+|[Compilerwarnung (Ebene 4) C4221](../../error-messages/compiler-warnings/compiler-warning-level-4-c4221.md)|nicht dem Standard entsprechende Erweiterung: 'Bezeichner': kann nicht initialisiert werden, mit der Adresse der automatischen Variablen "Variable"|
+|[Compilerwarnung (Ebenen 1 und 4) C4223](../../error-messages/compiler-warnings/compiler-warning-levels-1-and-4-c4223.md)|nicht dem Standard entsprechende Erweiterung: l-Array in Zeiger konvertiert.|
+|[Compilerwarnung (Ebene 1) C4224](../../error-messages/compiler-warnings/compiler-warning-level-1-c4224.md)|nicht dem Standard entsprechende Erweiterung: formaler Parameter 'Bezeichner' wurde zuvor als Typ definiert|
+|[Compilerwarnung (Stufe 1, Fehler) C4226](../../error-messages/compiler-warnings/compiler-warning-level-1-c4226.md)|nicht dem Standard entsprechende Erweiterung: 'Schlüsselwort' ist ein veraltetes Schlüsselwort|
+|[Compilerwarnung (Ebene 1) C4227](../../error-messages/compiler-warnings/compiler-warning-level-1-c4227.md)|Anachronismus verwendet: Qualifizierer auf Verweise werden ignoriert.|
+|[Compilerwarnung (Ebene 1) C4228](../../error-messages/compiler-warnings/compiler-warning-level-1-c4228.md)|nicht dem Standard entsprechende Erweiterung: Qualifizierer nach dem Komma in Deklaratorliste werden ignoriert.|
+|[Compilerwarnung (Ebene 1) C4229](../../error-messages/compiler-warnings/compiler-warning-level-1-c4229.md)|Anachronismus verwendet: Modifizierer für die Daten werden ignoriert.|
+|[Compilerwarnung (Ebene 1) C4230](../../error-messages/compiler-warnings/compiler-warning-level-1-c4230.md)|Anachronismus verwendet: Modifizierer/Qualifizierer-kombiniert; Qualifizierer wird ignoriert|
+|[Compilerwarnung (Ebene 4) C4232](../../error-messages/compiler-warnings/compiler-warning-level-4-c4232.md)|nicht dem Standard entsprechende Erweiterung: 'Bezeichner': Adresse von Dllimport 'Dllimport' ist nicht statisch, Identität nicht garantiert.|
+|[Compilerwarnung (Stufe 4, Fehler) C4233](../../error-messages/compiler-warnings/compiler-warning-level-4-c4233.md)|nicht dem Standard entsprechende Erweiterung: ' Schlüsselwort ' wird nur in C++ nicht C unterstützt.|
+|[Compilerwarnung (Stufe 4, Fehler) C4234](../../error-messages/compiler-warnings/compiler-warning-level-4-c4234.md)|nicht dem Standard entsprechende Erweiterung: ' Schlüsselwort ' für die zukünftige Verwendung reserviert|
+|[Compilerwarnung (Stufe 4, Fehler) C4235](../../error-messages/compiler-warnings/compiler-warning-level-4-c4235.md)|nicht dem Standard entsprechende Erweiterung: ' Schlüsselwort ' für diese Architektur nicht unterstützt.|
+|[Compilerwarnung (Ebene 1) C4237](../../error-messages/compiler-warnings/compiler-warning-level-1-c4237.md)|' Schlüsselwort ' wird noch nicht unterstützt, aber für die zukünftige Verwendung reserviert|
+|[Compilerwarnung (Ebene 4) C4238](../../error-messages/compiler-warnings/compiler-warning-level-4-c4238.md)|nicht dem Standard entsprechende Erweiterung: Klasse Rvalue als Lvalue verwendet|
+|[Compilerwarnung (Ebene 4) C4239](../../error-messages/compiler-warnings/compiler-warning-level-4-c4239.md)|nicht dem Standard entsprechende Erweiterung: 'token': Konvertierung von "Typ1" in "Typ2"|
+|[Compilerwarnung (Ebene 3) C4240](../../error-messages/compiler-warnings/compiler-warning-level-3-c4240.md)|nicht dem Standard entsprechende Erweiterung: Zugriff auf "Klassenname" jetzt als "acess_specifier1" zuvor wurde definiert, um "access_specifier2" sein.|
+|[Compilerwarnung (Ebene 4) C4242](../../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md)|'Beispieldatentabelle': Konvertierung von "Typ1" in "Typ1", möglicher Datenverlust|
+|[Compilerwarnung (Ebene 3) C4243](../../error-messages/compiler-warnings/compiler-warning-level-3-c4243.md)|"Conversion_type" Konvertierung von "Typ1" in "Typ1" vorhanden ist, aber nicht zugegriffen werden kann|
+|[Compilerwarnung (Ebene 2) C4244](../../error-messages/compiler-warnings/compiler-warning-level-2-c4244.md)|'Conversion_type': Konvertierung von 'Typ1' in 'type2', möglicher Datenverlust|
+|[Compilerwarnung (Ebenen 3 und 4) C4244](../../error-messages/compiler-warnings/compiler-warning-levels-3-and-4-c4244.md)|'Conversion_type': Konvertierung von 'Typ1' in 'type2', möglicher Datenverlust|
+|[Compilerwarnung (Ebene 4) C4245](../../error-messages/compiler-warnings/compiler-warning-level-4-c4245.md)|'Conversion_type': Konvertierung von "Typ1" in "Typ2" signed/unsigned-Konflikt|
+|[Compilerwarnung (Ebene 2) C4250](../../error-messages/compiler-warnings/compiler-warning-level-2-c4250.md)|'Klassenname': 'base_classname::member' über Dominanz erbt|
+|[Compilerwarnung (Ebene 1) C4251](../../error-messages/compiler-warnings/compiler-warning-level-1-c4251.md)|'Bezeichner': "object_type1'"Bezeichner1"Dll-Schnittstelle, die von Clients von"Object_type' 'identfier2' verwendet werden muss|
+|[Compilerwarnung (Ebene 4) C4254](../../error-messages/compiler-warnings/compiler-warning-level-4-c4254.md)|'Operator': Konvertierung von 'Type1:field_bits' in 'Type2:field_bits', möglicher Datenverlust|
+|[Compilerwarnung (Ebene 4) C4255](../../error-messages/compiler-warnings/compiler-warning-level-4-c4255.md)|'function': Kein Funktionsprototyp angegeben: '()' wird in '(void)' konvertiert|
+|[Compilerwarnung (Ebene 4) C4256](../../error-messages/compiler-warnings/compiler-warning-level-4-c4256.md)|'Funktion': Konstruktor für die Klasse mit virtuellen Basen besitzt "..."; Aufrufe möglicherweise nicht kompatibel mit früheren Versionen von Visual C++|
+|[Compilerwarnung (Ebene 1) C4258](../../error-messages/compiler-warnings/compiler-warning-level-1-c4258.md)|'Variable': Definition von der for-Schleife ignoriert. die Definition des einschließenden Bereichs verwendet wird|
+|[Compilerwarnung (Ebene 4) C4263](../../error-messages/compiler-warnings/compiler-warning-level-4-c4263.md)|'Funktion': Memberfunktion überschreibt keine virtuelle Memberfunktion einer Basisklasse|
+|[Compilerwarnung (Ebene 1) C4264](../../error-messages/compiler-warnings/compiler-warning-level-1-c4264.md)|'Virtual_function': keine Überschreibung für virtuelle Memberfunktion der Basis 'Klassenname'; die Funktion wird ausgeblendet|
+|[Compilerwarnung (Ebene 3) C4265](../../error-messages/compiler-warnings/compiler-warning-level-3-c4265.md)|'Klassenname': Klasse verfügt über virtuelle Funktionen, Destruktor ist jedoch nicht Virtual\n Instanzen dieser Klasse können nicht ordnungsgemäß zerstört|
+|[Compilerwarnung (Ebene 4) C4266](../../error-messages/compiler-warnings/compiler-warning-level-4-c4266.md)|'Virtual_function': keine Überschreibung für virtuelle Memberfunktion der Basis 'Klassenname'; die Funktion wird ausgeblendet|
+|[Compilerwarnung (Ebene 3) C4267](../../error-messages/compiler-warnings/compiler-warning-level-3-c4267.md)|'Variable': Konvertierung von 'Size_t' nach 'type', möglichen Datenverlust|
+|[Compilerwarnung (Ebene 4) C4268](../../error-messages/compiler-warnings/compiler-warning-level-4-c4268.md)|'Bezeichner': 'const' statischen/globalen Daten vom Compiler generierten Standardkonstruktor initialisiert füllt das Objekt mit Nullen|
+|[Compilerwarnung (Ebene 1) C4269](../../error-messages/compiler-warnings/compiler-warning-level-1-c4269.md)|'Bezeichner': 'const' Automatische Daten, die mit dem vom Compiler generierten Standardkonstruktor initialisiert führt zu unzuverlässige Ergebnissen|
+|[Compilerwarnung (Ebene 1) C4272](../../error-messages/compiler-warnings/compiler-warning-level-1-c4272.md)|'Funktion': RuntimeCompatibility von "__declspec(dllimport)" "; systemeigene Aufrufkonvention muss angegeben werden, beim Importieren einer Funktion.|
+|[Compilerwarnung (Ebene 1) C4273](../../error-messages/compiler-warnings/compiler-warning-level-1-c4273.md)|'Funktion': inkonsistente Dll-Bindung|
+|Compilerwarnung (Stufe 1) C4274|#ident ignoriert. finden Sie in der Dokumentation für #pragma-Kommentar (Exestr, 'String')|
+|[Compilerwarnung (Ebene 2) C4275](../../error-messages/compiler-warnings/compiler-warning-level-2-c4275.md)|Dll-Schnittstelle "und" "Bezeichner1" als Basis für die Dll-Schnittstelle 'LocalizedText""Bezeichner2"verwendet wurde|
+|[Compilerwarnung (Ebene 1) C4276](../../error-messages/compiler-warnings/compiler-warning-level-1-c4276.md)|'Funktion': kein Prototyp bereitgestellt wird. davon ausgegangen, dass keine Parameter|
+|Compilerwarnung (Stufe 1) C4277|importierten Element "classname::member" als Datenmember und Funktionselement vorhanden ist Das Datenelement wird ignoriert|
+|[Compilerwarnung (Ebene 3) C4278](../../error-messages/compiler-warnings/compiler-warning-level-3-c4278.md)|'Bezeichner': Bezeichner in der Typbibliothek "Library" ist bereits ein Makro; Verwenden Sie den Qualifizierer "Umbenennen"|
+|Compilerwarnung (Stufe 3 und Ebene 4) C4279|'Bezeichner': Bezeichner in der Typbibliothek "Library" ist ein Schlüsselwort. Verwenden Sie den Qualifizierer "Umbenennen"|
+|[Compilerwarnung (Ebene 3) C4280](../../error-messages/compiler-warnings/compiler-warning-level-3-c4280.md)|"Operator ->" wurde durch den Typ 'Typ'|
+|[Compilerwarnung (Ebene 3) C4281](../../error-messages/compiler-warnings/compiler-warning-level-3-c4281.md)|Rekursion "Operator ->" durch den Typ "Typ1" aufgetreten|
+|[Compilerwarnung (Ebene 3) C4282](../../error-messages/compiler-warnings/compiler-warning-level-3-c4282.md)|Klicken Sie dann durch den Typ 'Typ2'|
+|[Compilerwarnung (Ebene 3) C4283](../../error-messages/compiler-warnings/compiler-warning-level-3-c4283.md)|und durch den Typ "TypeN"|
+|[Compilerwarnung (Ebene 2) C4285](../../error-messages/compiler-warnings/compiler-warning-level-2-c4285.md)|Rückgabetyp wird für "Identifier:: Operator ->" rekursiv, wenn mit Infix-Notation verwendet.|
+|[Compilerwarnung (Ebene 1) C4286](../../error-messages/compiler-warnings/compiler-warning-level-1-c4286.md)|"Derived_type": wurde aufgefangen durch Basisklasse ('Base_type') in Zeile "Zeilennummer"|
+|[Compilerwarnung (Ebene 3) C4287](../../error-messages/compiler-warnings/compiler-warning-level-3-c4287.md)|'Operator': Konflikt zwischen vorzeichenloser und negativer Konstante|
+|[Compilerwarnung (Ebene 1) C4288](../../error-messages/compiler-warnings/compiler-warning-level-1-c4288.md)|nicht dem Standard entsprechende Erweiterung: 'Variable': Loop-Steuerelementvariable, die in der for-Schleife deklariert wird, außerhalb des for-Schleife; Es steht in Konflikt mit der Deklaration im äußeren Gültigkeitsbereich|
+|[Compilerwarnung (Ebene 4) C4289](../../error-messages/compiler-warnings/compiler-warning-level-4-c4289.md)|nicht dem Standard entsprechende Erweiterung: 'Variable': Loop-Steuerelementvariable, die in der for-Schleife deklariert wird, außerhalb des for-Schleife|
+|[Compilerwarnung (Ebene 3) C4290](../../error-messages/compiler-warnings/compiler-warning-level-3-c4290.md)|C++-Ausnahmespezifikation ignoriert zum Angeben einer funktionsrückgabewerts ist nicht __declspec (nothrow)|
+|[Compilerwarnung (Ebene 1) C4291](../../error-messages/compiler-warnings/compiler-warning-level-1-c4291.md)|'Declaration': keine übereinstimmenden Delete-Operator gefunden; Speicher wird nicht freigegeben werden, wenn die Initialisierung eine Ausnahme auslöst.|
+|[Compilerwarnung (Ebene 1) C4293](../../error-messages/compiler-warnings/compiler-warning-level-1-c4293.md)|"Shift_operator": Verschiebung negativ oder zu groß, ein nicht definiertes Verhalten|
+|[Compilerwarnung (Ebene 4) C4295](../../error-messages/compiler-warnings/compiler-warning-level-4-c4295.md)|'Array': Array ist zu klein, um ein abschließendes Nullzeichen enthalten.|
+|[Compilerwarnung (Ebene 4) C4296](../../error-messages/compiler-warnings/compiler-warning-level-4-c4296.md)|'Operator': Ausdruck ist immer "Boolean_value"|
+|[Compilerwarnung (Ebene 1) C4297](../../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)|'Funktion': Funktion nicht zu einer Ausnahme jedoch davon ausgegangen, dass|
+|Compilerwarnung (Stufe 4) C4298|'Bezeichner': Bezeichner in der Typbibliothek "Library" ist bereits ein Makro; in "__identifier" Umbenennen|
+|Compilerwarnung (Stufe 4) C4299|'Bezeichner': Bezeichner in der Typbibliothek "Library" ist ein Schlüsselwort. in "__identifier" Umbenennen|
+|Compilerwarnung C4301|"derived_class::function": Überschreiben der virtuellen Funktion nur unterscheidet sich von "Base_class:function" Const/Volatile-Qualifizierer|
+|[Compilerwarnung (Ebene 2) C4302](../../error-messages/compiler-warnings/compiler-warning-level-2-c4302.md)|'conversion': Verkürzung von 'type1' in 'type2'|
+|Compilerwarnung C4303|C-Style_cast "von"Typ1"in"Typ2"ist veraltet, verwenden Sie Static_cast, __try_cast oder Dynamic_cast|
+|[Compilerwarnung (Ebene 1) C4305](../../error-messages/compiler-warnings/compiler-warning-level-1-c4305.md)|'conversion': Verkürzung von 'type1' in 'type2'|
+|[Compilerwarnung (Ebene 3) C4306](../../error-messages/compiler-warnings/compiler-warning-level-3-c4306.md)|'Konvertierung': Konvertierung von "Typ1" in "Typ2" größerem|
+|[Compilerwarnung (Ebene 2) C4307](../../error-messages/compiler-warnings/compiler-warning-level-2-c4307.md)|'Operator': Überlauf einer ganzzahligen Konstanten|
+|[Compilerwarnung (Ebene 2) C4308](../../error-messages/compiler-warnings/compiler-warning-level-2-c4308.md)|negative integrale Konstante vorzeichenlosen Typ konvertiert|
+|[Compilerwarnung (Ebene 2) C4309](../../error-messages/compiler-warnings/compiler-warning-level-2-c4309.md)|'Konvertierung': konstanter Wert wird abgeschnitten|
+|[Compilerwarnung (Ebene 3) C4310](../../error-messages/compiler-warnings/compiler-warning-level-3-c4310.md)|Umwandlung schneidet Konstantenwert ab.|
+|[Compilerwarnung (Ebene 1) C4311](../../error-messages/compiler-warnings/compiler-warning-level-1-c4311.md)|'Variable': zeigerverkürzung von 'Typ1' in 'Typ2'|
+|[Compilerwarnung (Ebene 1) C4312](../../error-messages/compiler-warnings/compiler-warning-level-1-c4312.md)|'Operation': Konvertierung von "Typ1" in "Typ2" größerem|
+|[Compilerwarnung (Ebene 1) C4313](../../error-messages/compiler-warnings/compiler-warning-level-1-c4313.md)|'Funktion': 'Format_specifier' in der Formatzeichenfolge steht in Konflikt mit dem Argument "Argument_number" vom Typ "Type"|
+|Compilerwarnung C4314|Pragma-Parameter erwartet '32' oder '64' sein.|
+|Compilerwarnung (Stufe 4) C4315|'Klassenname': this-Zeiger für Member 'Member' darf nicht "Ausrichtung" ausgerichtet sein, wie vom Konstruktor erwartet|
+|Compilerwarnung (Stufe 3) C4316|'Bezeichner': Objekt auf dem Heap reserviert möglicherweise nicht ausgerichteten "Ausrichtung"|
+|Compilerwarnung (Stufe 1) C4317|"Printf_family": nicht genügend Argumente für Formatzeichenfolge|
+|Compilerwarnung C4318|übergeben Konstante 0 (null) als Länge an memset|
+|[Compilerwarnung (Ebene 1) C4319](../../error-messages/compiler-warnings/compiler-warning-level-1-c4319.md)|'Operator': 0 (null) Erweitern von "Typ1" in "Typ2" größerem|
+|Compilerwarnung (Stufe 1) C4321|generiert automatisch eine IID für die Schnittstelle "%$S"|
+|Compilerwarnung (Stufe 1) C4322|automatische Generierung von CLSID für Klasse "%$S"|
+|Compilerwarnung (Stufe 1) C4323|erneute Verwendung der registrierten CLSID für Klasse "%$S"|
+|[Compilerwarnung (Ebene 4) C4324](../../error-messages/compiler-warnings/compiler-warning-level-4-c4324.md)|"Structname": Struktur wurde aufgrund von aufgefüllt.|
+|[Compilerwarnung (Ebene 1) C4325](../../error-messages/compiler-warnings/compiler-warning-level-1-c4325.md)|Attribute für Standardabschnitt "Abschnitt" ignoriert|
+|[Compilerwarnung (Ebene 1) C4326](../../error-messages/compiler-warnings/compiler-warning-level-1-c4326.md)|Rückgabetyp "Funktion" sollte "Typ1" anstelle von "Typ2" sein.|
+|Compilerwarnung C4327|'Zuordnung': Dereferenzierungsausrichtung von LHS ("alignment1") ist größer als RHS ("alignment2")|
+|Compilerwarnung C4328|'Funktion': Dereferenzierungsausrichtung der formalen Parameter Parameter_number (Parameter_alignment) ist größer als die tatsächliche Argument Ausrichtung (Argument_alignment)|
+|[Compilerwarnung (Ebene 1) C4329](../../error-messages/compiler-warnings/compiler-warning-level-1-c4329.md)|__declspec(align()) wird für Enum ignoriert.|
+|Compilerwarnung (Stufe 1) C4330|Attribut "%s" für den Abschnitt "%s" wird ignoriert|
+|[Compilerwarnung (Ebene 1) C4333](../../error-messages/compiler-warnings/compiler-warning-level-1-c4333.md)|"Shift_operator": von zu viel, Verlust von Daten nach rechts verschieben|
+|[Compilerwarnung (Ebene 3) C4334](../../error-messages/compiler-warnings/compiler-warning-level-3-c4334.md)|"Shift_operator": Ergebnis der 32-Bit-Verschiebung implizit zu 64 Bit konvertiert (war ein 64-Bit-Verschiebung vorgesehen?)|
+|[Compilerwarnung C4335](../../error-messages/compiler-warnings/compiler-warning-c4335.md)|Mac-Dateiformat erkannt: Konvertieren Sie die Quelldatei in DOS oder UNIX-Format|
+|[Compilerwarnung (Ebene 4) C4336](../../error-messages/compiler-warnings/compiler-warning-level-4-c4336.md)|Importtyp Querverweis Bibliothek "Bibliothek1" vor dem Import "Bibliothek2"|
+|[Compilerwarnung (Ebene 4) C4337](../../error-messages/compiler-warnings/compiler-warning-level-4-c4337.md)|übergreifenden Typbibliothek "Bibliothek1" in "Bibliothek2" wird automatisch importiert|
+|Compilerwarnung (Stufe 4) C4338|%s: #pragma Standardabschnitt "%s" wird verwendet.|
+|[Compilerwarnung (Ebene 4) C4339](../../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md)|'Typ': Verwenden eines undefinierten Typs im erkannt "WinRT &#124; CLR "- Metadaten verwenden dieses Typs führt möglicherweise zu einer Laufzeitausnahme|
+|[Compilerwarnung (Ebene 1) C4340](../../error-messages/compiler-warnings/compiler-warning-level-1-c4340.md)|"Value": Wert umschlossen von positiv negativer Wert|
+|[Compilerwarnung (Ebene 1) C4342](../../error-messages/compiler-warnings/compiler-warning-level-1-c4342.md)|Verhaltensänderung: 'Funktion' wird aufgerufen, in früheren Versionen wurde jedoch ein Memberoperator aufgerufen.|
+|Compilerwarnung (Stufe 4) C4343|„#pragma optimize("g",off)“ überschreibt Option „/Og“.|
+|[Compilerwarnung (Ebene 1) C4344](../../error-messages/compiler-warnings/compiler-warning-level-1-c4344.md)|Verändertes Programmverhalten: Verwenden der expliziten Vorlagenergebnisse, Argumente im Aufruf von 'Funktion'|
+|[Compilerwarnung (Ebene 1) C4346](../../error-messages/compiler-warnings/compiler-warning-level-1-c4346.md)|'Name': abhängiger Name ist kein Typ|
+|[Compilerwarnung (Ebene 1) C4348](../../error-messages/compiler-warnings/compiler-warning-level-1-c4348.md)|'Typ': Neudefinition des Standardparameters: Parameter "Parameter_number"|
+|[Compilerwarnung (Ebene 1) C4350](../../error-messages/compiler-warnings/compiler-warning-level-1-c4350.md)|Verhaltensänderung: 'Member1' wird anstelle von 'Member2' aufgerufen|
+|Compilerwarnung (Stufe 1) C4352|"% $I": systeminterne Funktion, die bereits definiert.|
+|[Compilerwarnung (Ebene 1) C4353](../../error-messages/compiler-warnings/compiler-warning-level-1-c4353.md)|nicht dem Standard entsprechende Erweiterung: Konstante 0 als Funktionsausdruck.  Verwenden Sie stattdessen die systeminterne '__noop'-Funktion|
+|[Compilerwarnung C4355](../../error-messages/compiler-warnings/compiler-warning-c4355.md)compilerwarnung (Stufe 1 und Stufe 4) C4355 generiert|"this": in die Basis für den Memberinitialisierer verwendet|
+|[Compilerwarnung (Ebene 2) C4356](../../error-messages/compiler-warnings/compiler-warning-level-2-c4356.md)|'Member': statische Datenmember kann nicht über eine abgeleitete Klasse initialisiert werden|
+|[Compilerwarnung (Ebene 3) C4357](../../error-messages/compiler-warnings/compiler-warning-level-3-c4357.md)|ParamArray-Argument in der Argumentliste der formalen für den Delegaten gefunden, dass 'Delegat' ignoriert, wenn 'Function' generieren|
+|[Compilerwarnung (Ebene 1) C4358](../../error-messages/compiler-warnings/compiler-warning-level-1-c4358.md)|'Operator': Rückgabetyp von kombinierten Delegaten ist nicht "void" Der zurückgegebene Wert ist nicht definiert|
+|[Compilerwarnung (Ebene 3) C4359](../../error-messages/compiler-warnings/compiler-warning-level-3-c4359.md)|'Typ': Ausrichtung-Bezeichner ist kleiner als die tatsächliche Ausrichtung ("Ausrichtung") und werden ignoriert.|
+|Compilerwarnung (Stufe 2) C4362|"%$S": Ausrichtung, die größer als 8 Bytes wird von der CLR nicht unterstützt|
+|[Compilerwarnung (Ebene 1) C4364](../../error-messages/compiler-warnings/compiler-warning-level-1-c4364.md)|#using für die Assembly "Assembly", die zuvor am gesehen "location'('line_number') ohne As_friend-Attribut; As_friend nicht angewendet.|
+|[Compilerwarnung (Ebene 4) C4365](../../error-messages/compiler-warnings/compiler-warning-level-4-c4365.md)|'Ausdruck': Konvertierung von "Typ1" in "Typ2" signed/unsigned-Konflikt|
+|[Compilerwarnung (Ebene 4) C4366](../../error-messages/compiler-warnings/compiler-warning-level-4-c4366.md)|Das Ergebnis des Operators "Operator" unärer möglicherweise nicht ausgerichteten sein.|
+|Compilerwarnung (Stufe 3) C4367|Konvertierung von "%$T" in "%$T" kann so Ausnahmefehler verursachen.|
+|[Compilerwarnung C4368 (Fehler)](../../error-messages/compiler-warnings/compiler-warning-c4368.md)|'Member' kann nicht als Member des verwalteten 'Typs' definiert werden: Gemischte Typen werden nicht unterstützt|
+|[Compilerwarnung (Ebene 1) C4369](../../error-messages/compiler-warnings/compiler-warning-level-1-c4369.md)|'Enumerator': der Enumeratorwert "Value" kann nicht als 'Type' dargestellt werden, Wert ist 'New_value'|
+|Compilerwarnung C4370|'Klassenname': Layout der Klasse wurde von einer früheren Version des Compilers aufgrund bessere Verpackung geändert|
+|Compilerwarnung (Stufe 3) C4371|'Klassenname': Layout der Klasse möglicherweise von einer früheren Version des Compilers aufgrund bessere Verpackung des Members 'Member' wurde geändert|
+|Compilerwarnung (Stufe 3) C4373|"derived_class::function": virtuelle Funktion überschreibt "base_class::function", frühere Versionen des Compilers nicht überschrieben, wenn der Parameter nur durch Const/Volatile-Qualifizierer beinhalteten|
+|[Compilerwarnung (Ebene 1) C4374](../../error-messages/compiler-warnings/compiler-warning-level-1-c4374.md)|"Funktion1": Schnittstellenmethode wird nicht von nicht virtuellen Methode "Funktion2" implementiert|
+|[Compilerwarnung (Ebene 1) C4375](../../error-messages/compiler-warnings/compiler-warning-level-1-c4375.md)|nicht öffentlichen Methode "Methode2" wird nicht mit "Methode2" überschrieben.|
+|[Compilerwarnung (Ebene 1) C4376](../../error-messages/compiler-warnings/compiler-warning-level-1-c4376.md)|Zugriffsspezifizierer 'old_specifier:' wird nicht mehr unterstützt: Verwenden Sie stattdessen 'new_specifier:'|
+|[Compilerwarnung (Ebene 1) C4377](../../error-messages/compiler-warnings/compiler-warning-level-1-c4377.md)|systemeigene Typen sind standardmäßig privat. -d1PrivateNativeTypes ist veraltet.|
+|[Compilerwarnung (Ebene 1) C4378](../../error-messages/compiler-warnings/compiler-warning-level-1-c4378.md)|Sie benötigen Funktionszeiger zum Ausführen der Initialisierer; ResolveMethodHandle|
+|[Compilerwarnung (Ebene 1) C4379](../../error-messages/compiler-warnings/compiler-warning-level-1-c4379.md)|"Version_number" von der common Language Runtime-Version wird von diesem Compiler nicht unterstützt. Mit dieser Version kann zu unerwarteten Ergebnissen führen|
+|Compilerwarnung (Stufe 1, Fehler) C4380|"%$S": ein Standardkonstruktor kann nicht als veraltet markiert werden|
+|[Compilerwarnung (Ebene 1) C4381](../../error-messages/compiler-warnings/compiler-warning-level-1-c4381.md)|"Funktion1": Schnittstellenmethode wird nicht von nicht öffentlichen Methode "Funktion2" implementiert|
+|[Compilerwarnung (Ebene 1) C4382](../../error-messages/compiler-warnings/compiler-warning-level-1-c4382.md)|Auslösen von 'Typ': ein Typ mit __clrcall-Destruktor oder Kopierkonstruktor nur in "/ CLR" abgefangen werden kann: pure-Modul|
+|[Compilerwarnung (Ebene 1) C4383](../../error-messages/compiler-warnings/compiler-warning-level-1-c4383.md)|'Instanzendereferenzierungsoperator': die Bedeutung der Dereferenzieren eines Handles kann sich ändern, wenn ein Operator User-defined 'Instanzendereferenzierungsoperator' vorhanden ist. Schreiben Sie den Operator als eine statische Funktion der Operand explizit sein.|
+|[Compilerwarnung (Ebene 1) C4384](../../error-messages/compiler-warnings/compiler-warning-level-1-c4384.md)|#pragma 'Make_public' sollte nur im globalen Gültigkeitsbereich verwendet werden|
+|Compilerwarnung (Stufe 3) C4387|"%s": wurde als|
+|Compilerwarnung (Stufe 4) C4388|"%$L": Konflikt mit/ohne Vorzeichen|
+|[Compilerwarnung (Ebene 4) C4389](../../error-messages/compiler-warnings/compiler-warning-level-4-c4389.md)|'Operator': Konflikt zwischen signed/unsigned|
+|[Compilerwarnung (Ebene 3) C4390](../../error-messages/compiler-warnings/compiler-warning-level-3-c4390.md)|";": leere kontrollierte Anweisung gefunden. handelt es sich um den Zweck?|
+|[Compilerwarnung (Ebene 1) C4391](../../error-messages/compiler-warnings/compiler-warning-level-1-c4391.md)|'Function_signature': Falscher Rückgabetyp für die systeminterne Funktion erwartet 'type'|
+|[Compilerwarnung (Ebene 1) C4392](../../error-messages/compiler-warnings/compiler-warning-level-1-c4392.md)|'Function_signature': falsche Anzahl von Argumenten für die systeminterne Funktion "," erwarteten "Argument_count'-Argumente|
+|[Compilerwarnung (Ebene 1) C4393](../../error-messages/compiler-warnings/compiler-warning-level-1-c4393.md)|'Variable': const hat keine Auswirkung auf Datenmember 'literal'; ignoriert|
+|[Compilerwarnung C4394](../../error-messages/compiler-warnings/compiler-warning-c4394.md)|'Funktion': anwendungsdomänenspezifisches Symbol sollte nicht mit __declspec('dllexport') markiert werden|
+|[Compilerwarnung (Ebene 1) C4395](../../error-messages/compiler-warnings/compiler-warning-level-1-c4395.md)|'Funktion': Memberfunktion wird auf eine Kopie des Datenmembers Initonly 'Member' aufgerufen werden|
+|Compilerwarnung (Stufe 2) C4396|"%$S": Der Inlinespezifizierer kann nicht verwendet werden, wenn eine Friend-Deklaration auf die Spezialisierung einer Funktionsvorlage verweist|
+|[Compilerwarnung (Ebene 1) C4397](../../error-messages/compiler-warnings/compiler-warning-level-1-c4397.md)|DefaultCharSetAttribute wird ignoriert.|
+|[Compilerwarnung (Ebene 3) C4398](../../error-messages/compiler-warnings/compiler-warning-level-3-c4398.md)|'Variable': prozessspezifisch globales Objekt möglicherweise nicht ordnungsgemäß mit mehreren Anwendungsdomänen; Erwägen Sie __declspec(appdomain)|
 |[Compilerwarnung (Ebene 1) C4399](../../error-messages/compiler-warnings/compiler-warning-level-1-c4399.md)|'Symbol': Symbol pro Prozess sollten nicht gekennzeichnet werden, mit __declspec('dllimport') beim Kompilieren mit/clr: pure|

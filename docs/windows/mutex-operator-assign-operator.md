@@ -1,30 +1,28 @@
 ---
-title: "Mutex::operator=-Operator"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::Mutex::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Operator=-Operator"
+title: 'Mutex:: Operator = | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::Mutex::operator=
+dev_langs: C++
+helpviewer_keywords: operator= operator
 ms.assetid: 9b0ee206-a930-4fea-8dc0-1f79839e9d13
-caps.latest.revision: 5
-caps.handback.revision: "5"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7b7a9e35bb356d0f3ebfd870105c0b8217d7f658
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Mutex::operator=-Operator
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Weist (bewegt) angegebenen Mutex-Objekt mit dem aktuellen Mutex-Objekt.  
+# <a name="mutexoperator-operator"></a>Mutex::operator=-Operator
+Weist (wechselt) der angegebene Mutex-Objekt in der aktuellen Mutex-Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,7 +40,7 @@ Mutex& operator=(
  Ein Verweis auf das aktuelle Mutex-Objekt.  
   
 ## <a name="remarks"></a>Hinweise  
- Weitere Informationen finden Sie unter den **Verschieben Semantik** Abschnitt [Rvalue-Verweisdeklarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
+ Weitere Informationen finden Sie unter der **verschieben Semantik** Abschnitt [Rvalue-Verweisdeklarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  

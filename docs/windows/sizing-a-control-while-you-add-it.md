@@ -1,51 +1,52 @@
 ---
-title: "Sizing a Control While You Add It | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dialog box controls, size"
-  - "controls [C++], sizing"
+title: "Ändern der Steuerelementgröße beim Hinzufügen | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- dialog box controls, size
+- controls [C++], sizing
 ms.assetid: 06b1dd2b-0ba1-4e1f-adc3-cb73679f765e
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 34ec523254b50f712395297fdb6d06b07142969e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Sizing a Control While You Add It
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### So ändern Sie die Größe eines Steuerelements beim Hinzufügen  
+# <a name="sizing-a-control-while-you-add-it"></a>Ändern der Steuerelementgröße beim Hinzufügen
+### <a name="to-size-a-control-while-you-add-it"></a>Die Größe eines Steuerelements, während Sie ihn hinzufügen  
   
-1.  Wählen Sie ein Steuerelement im [Fenster "Toolbox"](../Topic/Toolbox.md) aus.  
+1.  Wählen Sie ein Steuerelement in der [Fenster "Toolbox"](/visualstudio/ide/reference/toolbox).  
   
-2.  Positionieren Sie den Cursor \(der die Form eines Fadenkreuzes annimmt\) an der Stelle, an der sich die obere linke Ecke des neuen Steuerelements im Dialogfeld befinden soll.  
+2.  Platzieren Sie den Cursor (die Form eines Fadenkreuzes angezeigt wird), der oberen linken Ecke des neuen Steuerelements im Dialogfeld werden soll.  
   
-3.  Klicken Sie, und halten Sie die Maustaste gedrückt, um die obere linke Ecke des Steuerelements im Dialogfeld zu verankern. Ziehen Sie den Cursor anschließend nach rechts unten, bis das Steuerelement die gewünschte Größe aufweist.  
+3.  Halten Sie die Maustaste gedrückt, Verankern von der linken oberen Ecke des Steuerelements im Dialogfeld klicken und ziehen Sie den Cursor nach rechts und nach unten, bis der gewünschten Größe hat.  
   
     > [!NOTE]
-    >  Zum Verankern des gezeichneten Steuerelements kann eine der vier Ecken ausgewählt werden.  In diesem Verfahren wurde z. B. die obere linke Ecke verwendet.  
+    >  Sie können eine der vier Ecken des Steuerelements verankern, die Sie zeichnen. Diese Prozedur verwendet die linken oberen Ecke als Beispiel.  
   
-4.  Lassen Sie die Maustaste los.  Das Steuerelement wird in der festgelegten Größe im Dialogfeld angelegt.  
+4.  Lassen Sie die Maustaste los. Das Steuerelement angelegt des Dialogfelds in der angegebenen Größe aus.  
   
     > [!TIP]
-    >  Sie können die Größe des Steuerelements nach dem Ablegen im Dialogfeld ändern, indem Sie die Ziehpunkte an den Steuerelementrändern verschieben.  Weitere Informationen finden Sie unter [Festlegen der Größe von individuellen Steuerelementen](../mfc/sizing-individual-controls.md).  
+    >  Sie können die Größe des Steuerelements nach dem Ablegen des Dialogfelds "" durch den Ziehpunkt auf dem Rand des Steuerelements verschieben. Weitere Informationen finden Sie unter [Sizing einzelne Steuerelemente](../windows/sizing-individual-controls.md).  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](https://msdn.microsoft.com/library/f45fce5x.aspx) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](https://msdn.microsoft.com/library/xbx3z216.aspx). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
  Anforderungen  
   
  Win32  
   
-## Siehe auch  
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
- [Adding Event Handlers for Dialog Box Controls](../mfc/adding-event-handlers-for-dialog-box-controls.md)   
- [Dialogfeld\-Steuerelemente und Variablentypen](../ide/dialog-box-controls-and-variable-types.md)
+## <a name="see-also"></a>Siehe auch  
+ [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)   
+ [Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente](../windows/adding-event-handlers-for-dialog-box-controls.md)   
+ [Dialogfeld-Steuerelemente und Variablentypen](../ide/dialog-box-controls-and-variable-types.md)
+

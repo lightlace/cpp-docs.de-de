@@ -1,29 +1,39 @@
 ---
-title: "C-Laufzeitfehler R6032 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "R6032"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "R6032"
+title: C-Laufzeitfehler R6032 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: R6032
+dev_langs: C++
+helpviewer_keywords: R6032
 ms.assetid: 52092a63-cc51-444a-bfc3-fad965a3558e
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: afe6ba23315dfd00114e3d2b956a19cadf6342c3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# C-Laufzeitfehler R6032
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="c-runtime-error-r6032"></a>C-Laufzeitfehler R6032
 Nicht genügend Speicherplatz für Gebietsschemainformationen  
   
- Die Laufzeit verwaltet Gebietsschemainformationen auf jedem Thread, um Aufrufe von Funktionen verarbeiten zu können, die auf dem Gebietsschema basieren.  Wenn die Speicherplatzbelegung für diese Informationen fehlschlägt, kann die Laufzeit nicht fortfahren, da zu viele ihrer Basisfunktionen davon abhängen.
+> [!NOTE]
+>  Wenn Sie diese Fehlermeldung beim Ausführen einer app auftritt, wurde die app beendet, da es ein Problem des internen Speichers hat. Es gibt mehrere mögliche Ursachen für diesen Fehler, aber es ist häufig verursacht durch eine extrem wenig Arbeitsspeicher verfügbar oder durch einen Fehler im Programm.  
+>   
+>  Sie können versuchen, diesen Fehler zu beheben, indem Sie folgende Schritte ausführen:  
+>   
+>  -   Schließen Sie andere ausgeführte Programme, oder Neustart des Computers, um Arbeitsspeicher freizugeben.  
+> -   Verwenden der **Apps und Funktionen** oder **Programme und Funktionen** auf der Seite der **Systemsteuerung** reparieren oder neu installieren die Anwendung.  
+> -   Überprüfen Sie **Windows Update** in der **Systemsteuerung** für Softwareupdates.  
+> -   Überprüfen Sie nach einer aktualisierten Version der app. Wenn das Problem weiterhin besteht, wenden Sie sich an den Hersteller der app.  
+  
+ **Informationen für Programmierer**  
+  
+ Die Common Language Runtime verwaltet Informationen über das Gebietsschema in jedem Thread aus, sodass Aufrufe gebietsschemabezogene Funktionen verarbeitet werden können. Die Zuordnung des Arbeitsspeichers für diese Informationen fehlschlägt, ist der Laufzeit kann nicht fortgesetzt werden, da zu viele der grundlegenden Funktionen von ihm abhängig sind.

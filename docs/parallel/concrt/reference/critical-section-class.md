@@ -1,11 +1,10 @@
 ---
-title: Critical_section-Klasse | Microsoft-Dokumentation
+title: Critical_section-Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,35 +17,18 @@ f1_keywords:
 - CONCRT/concurrency::critical_section::try_lock
 - CONCRT/concurrency::critical_section::try_lock_for
 - CONCRT/concurrency::critical_section::unlock
-dev_langs:
-- C++
-helpviewer_keywords:
-- critical_section class
+dev_langs: C++
+helpviewer_keywords: critical_section class
 ms.assetid: fa3c89d6-be5d-4d1b-bddb-8232814e6cf6
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 58821589a4b7596b80179a77dfd6a5772531f053
-ms.contentlocale: de-de
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: a5f7b9d6eeda8192fe05a73d25c04527bea2ee80
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="criticalsection-class"></a>critical_section-Klasse
 Ein nicht wieder eintretender Mutex, der explizit die Concurrency Runtime beachtet.  
@@ -69,24 +51,24 @@ class critical_section;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[critical_section:: scoped_lock-Klasse](#critical_section__scoped_lock_class)|Ein safe RAII-Wrapper für ein `critical_section` Objekt.|  
+|[critical_section:: scoped_lock-Klasse](#critical_section__scoped_lock_class)|Eine Ausnahme sichere RAII-Wrapper für ein `critical_section` Objekt.|  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[critical_section](#ctor)|Erstellt einen neuen kritischen Abschnitt.|  
-|[~ Critical_section-Destruktor](#dtor)|Zerstört einen kritischen Abschnitt.|  
+|[~ Critical_section-Destruktor](#dtor)|Zerstört ein kritischen Abschnitts.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[lock](#lock)|Ruft diesen kritischen Abschnitt ab.|  
-|[native_handle](#native_handle)|Gibt ein plattformspezifischen systemeigenen Handle, zurück, sofern vorhanden.|  
-|[try_lock](#try_lock)|Versucht, die Sperre ohne Blockierung zu erhalten.|  
+|[lock](#lock)|Ruft dieser kritischen Abschnitt ab.|  
+|[native_handle](#native_handle)|Sofern vorhanden, wird ein bestimmte systemeigene Plattform-Handle zurück.|  
+|[try_lock](#try_lock)|Versucht, die Sperre abzurufen, ohne zu blockieren.|  
 |[try_lock_for](#try_lock_for)|Versucht, die Sperre abzurufen, ohne Blockierung für eine bestimmte Anzahl von Millisekunden.|  
-|[unlock](#unlock)|Hebt die Sperre des kritischen Abschnitts.|  
+|[unlock](#unlock)|Entsperrt den kritischen Abschnitt.|  
   
 ## <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [Strukturen für Synchronisierungsdaten](../../../parallel/concrt/synchronization-data-structures.md).  
@@ -109,31 +91,31 @@ critical_section();
   
 ##  <a name="dtor"></a>~ Critical_section 
 
- Zerstört einen kritischen Abschnitt.  
+ Zerstört ein kritischen Abschnitts.  
   
 ```
 ~critical_section();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Es wird davon ausgegangen, dass die Sperre nicht mehr verwendet wird, wenn der Destruktor ausgeführt wird. Der kritische Abschnitt zerstört die Sperre aufrechterhalten weiterhin Ergebnisse in einem nicht definierten Verhalten.  
+ Es wird erwartet, dass die Sperre nicht mehr verwendet wird, wenn der Destruktor ausgeführt wird. Der kritische Abschnitt, mit der Sperre zerstört aufrechterhalten noch Ergebnisse in einem nicht definierten Verhalten.  
   
-##  <a name="lock"></a>Sperren 
+##  <a name="lock"></a>Sperre 
 
- Ruft diesen kritischen Abschnitt ab.  
+ Ruft dieser kritischen Abschnitt ab.  
   
 ```
 void lock();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Es ist oft sicherer nutzen die [Scoped_lock](#critical_section__scoped_lock_class) -Konstrukt zum Abrufen und freigeben ein `critical_section` -Objekt ausnahmesicher.  
+ Häufig ist es sicherer, nutzen die [Scoped_lock](#critical_section__scoped_lock_class) -Konstrukts Semantiken abrufen und Freigeben einer `critical_section` Objekt in eine Ausnahme sichere Möglichkeit.  
   
- Wenn die Sperre bereits vom aufrufenden Kontext, aufrechterhalten wird ein [Improper_lock](improper-lock-class.md) Ausnahme ausgelöst.  
+ Wenn die Sperre bereits vom aufrufenden Kontext aufrechterhalten wird ein [Improper_lock](improper-lock-class.md) Ausnahme wird ausgelöst.  
   
 ##  <a name="native_handle"></a>native_handle 
 
- Gibt ein plattformspezifischen systemeigenen Handle, zurück, sofern vorhanden.  
+ Sofern vorhanden, wird ein bestimmte systemeigene Plattform-Handle zurück.  
   
 ```
 native_handle_type native_handle();
@@ -143,10 +125,10 @@ native_handle_type native_handle();
  Ein Verweis auf den kritischen Abschnitt.  
   
 ### <a name="remarks"></a>Hinweise  
- Ein `critical_section` Objekt ist nicht plattformspezifischen systemeigenen Handle für das Windows-Betriebssystem zugeordnet. Die Methode gibt einfach einen Verweis auf das Objekt selbst zurück.  
+ Ein `critical_section` Objekt ist nicht Plattform systemeigene Handle für das Windows-Betriebssystem zugeordnet. Die Methode gibt einfach einen Verweis auf das Objekt selbst.  
   
 ##  <a name="critical_section__scoped_lock_class"></a>critical_section:: scoped_lock-Klasse  
- Ein safe RAII-Wrapper für ein `critical_section` Objekt.  
+ Eine Ausnahme sichere RAII-Wrapper für ein `critical_section` Objekt.  
   
 ```
 class scoped_lock;
@@ -154,7 +136,7 @@ class scoped_lock;
   
 ##  <a name="critical_section__scoped_lock_ctor"></a>scoped_lock::scoped_lock 
 
- Erstellt eine `scoped_lock` Objekt, und ruft die `critical_section` Objekt übergeben, der `_Critical_section` Parameter. Wenn der kritische Abschnitt von einem anderen Thread gehalten wird, blockiert dieser Aufruf.  
+ Erstellt eine `scoped_lock` Objekt, und ruft die `critical_section` Objekt übergeben, der `_Critical_section` Parameter. Wenn der kritische Abschnitt von einem anderen Thread gehalten wird, wird dieser Aufruf blockiert.  
   
 ```
 explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
@@ -162,7 +144,7 @@ explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
   
 ### <a name="parameters"></a>Parameter  
  `_Critical_section`  
- Der zu sperrende kritische Abschnitt.  
+ Der kritische Abschnitt sperren.  
   
 ##  <a name="critical_section__scoped_lock_dtor"></a>Scoped_lock:: ~ Scoped_lock 
 
@@ -174,14 +156,14 @@ explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
   
 ##  <a name="try_lock"></a>try_lock 
 
- Versucht, die Sperre ohne Blockierung zu erhalten.  
+ Versucht, die Sperre abzurufen, ohne zu blockieren.  
   
 ```
 bool try_lock();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wenn die Sperre abgerufen wurde, der Wert `true`ist, andernfalls der Wert `false`.  
+ Wenn die Sperre eingerichtet wurde, den Wert `true`ist, andernfalls der Wert `false`.  
   
 ##  <a name="try_lock_for"></a>try_lock_for 
 
@@ -193,14 +175,14 @@ bool try_lock_for(unsigned int _Timeout);
   
 ### <a name="parameters"></a>Parameter  
  `_Timeout`  
- Die Anzahl der Millisekunden, bevor ein Timeout gewartet wird.  
+ Die Anzahl der Millisekunden wartet, bevor ein Timeout auftritt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wenn die Sperre abgerufen wurde, der Wert `true`ist, andernfalls der Wert `false`.  
+ Wenn die Sperre eingerichtet wurde, den Wert `true`ist, andernfalls der Wert `false`.  
   
 ##  <a name="unlock"></a>Entsperren 
 
- Hebt die Sperre des kritischen Abschnitts.  
+ Entsperrt den kritischen Abschnitt.  
   
 ```
 void unlock();
@@ -209,4 +191,3 @@ void unlock();
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)   
  [reader_writer_lock-Klasse](reader-writer-lock-class.md)
-

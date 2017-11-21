@@ -1,37 +1,37 @@
 ---
-title: "Zugreifen auf ODBC und SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "API-Aufrufe [C++], Aufrufen von DAO oder ODBC (direkt)"
-  - "ODBC [C++], API-Funktionen"
-  - "ODBC-API-Funktionen [C++]"
-  - "ODBC-API-Funktionen [C++], Aufrufen aus MFC"
-  - "SQL [C++], Aufrufen von ODBC-API-Funktionen"
-  - "Windows-API [C++], Aufrufen aus MFC"
+title: Zugreifen auf ODBC und SQL | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- API calls [C++], calling DAO or ODBC directly
+- Windows API [C++], calling from MFC
+- ODBC API functions [C++]
+- ODBC API functions [C++], calling from MFC
+- SQL [C++], calling ODBC API functions
+- ODBC [C++], API functions
 ms.assetid: 5613d7dc-00b7-4646-99ae-1116c05c52b4
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 666c0d0b3d358360426a7cf1184917b524a7030a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Zugreifen auf ODBC und SQL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-MFC schließt viele Windows\-API\-Aufrufe ein, Sie können aber dennoch jede Windows\-API\-Funktion direkt aufrufen.  Die Datenbankklassen ermöglichen dieselbe Flexibilität in Bezug auf die ODBC\-API.  Die Datenbankklassen verbergen größtenteils die komplexeren ODBC\-Komponenten. Sie können ODBC\-API\-Funktionen jedoch überall im Programm direkt aufrufen.  
+# <a name="access-to-odbc-and-sql"></a>Zugreifen auf ODBC und SQL
+Die Microsoft Foundation Class-Bibliothek kapselt viele Windows-API-Aufrufe und weiterhin Windows-API-Funktion nicht direkt aufrufen können. Die Datenbankklassen bieten Ihnen dieselbe Flexibilität im Hinblick auf die ODBC-API. Während die Sie von den Großteil der Komplexität der ODBC-Datenbankklassen, können Sie ODBC-API-Funktionen aufrufen, von überall in Ihrem Programm.  
   
- Auf ähnliche Weise "bewahren" die Datenbankklassen Sie weitgehend vor der Verwendung von [SQL](../../data/odbc/sql.md), Sie können SQL aber trotzdem direkt verwenden.  Sie können Recordset\-Objekte anpassen, indem Sie ihnen beim Öffnen eine selbstdefinierte SQL\-Anweisung übergeben \(oder indem Sie Teile der Standardanweisung ändern\).  Sie können direkte SQL\-Aufrufe auch mit der [ExecuteSQL](../Topic/CDatabase::ExecuteSQL.md)\-Memberfunktion der [CDatabase](../../mfc/reference/cdatabase-class.md)\-Klasse durchführen.  
+ Auf ähnliche Weise die Datenbankklassen Sie weitgehend mit [SQL](../../data/odbc/sql.md), aber Sie können SQL direkt verwenden, wenn Sie möchten. Sie können Recordset-Objekte anpassen, indem Sie eine benutzerdefinierte SQL­Anweisung (oder Einstellung Teile der Default-Anweisung) übergeben beim Öffnen des Recordsets. Sie können auch direkt mit der SQL-Aufrufe, die [ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql) Memberfunktion der Klasse [CDatabase](../../mfc/reference/cdatabase-class.md).  
   
- Weitere Informationen hierzu finden Sie unter [ODBC: Direktes Aufrufen von ODBC\-API\-Funktionen](../../data/odbc/odbc-calling-odbc-api-functions-directly.md) und [SQL: Durchführen direkter SQL\-Aufrufe \(ODBC\)](../../data/odbc/sql-making-direct-sql-calls-odbc.md).  
+ Weitere Informationen finden Sie unter [ODBC: Direktes Aufrufen von ODBC-API-Funktionen](../../data/odbc/odbc-calling-odbc-api-functions-directly.md) und [SQL: durchführen direkter SQL-Aufrufe (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [ODBC und MFC](../../data/odbc/odbc-and-mfc.md)

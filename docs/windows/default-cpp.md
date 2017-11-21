@@ -1,61 +1,58 @@
 ---
-title: "default (C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.default"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Standardattribut"
-  - "Attribute [C#], default-Attribut"
-  - "Standardwerte, default-Attribut"
+title: Standard (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.default
+dev_langs: C++
+helpviewer_keywords:
+- default attribute
+- attributes [C#], default attribute
+- defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-caps.latest.revision: 11
-caps.handback.revision: "11"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 352fca07ecb9528bb11ff1cb5cc1f701bfa01e1c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# default (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gibt an, dass die benutzerdefinierte Schnittstelle oder Disp\-Schnittstelle innerhalb einer Co\-Klasse die Standard\-Programmierschnittstelle darstellt.  
+# <a name="default-c"></a>default (C++)
+Gibt an, dass die benutzerdefinierte Schnittstelle oder Disp-Schnittstelle innerhalb einer Co-Klasse die Standard-Programmierschnittstelle darstellt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
-[ default(  
-interface1  
-,  
+      [ default(  
+   interface1,  
    interface2  
 ) ]  
-  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  *interface1*  
- Die Standardschnittstelle, die für Skriptumgebungen verfügbar gemacht wird, die ein Objekt auf Grundlage der Klasse erstellen, die mit dem **default**\-Attribut definiert ist.  
+ Die Standardschnittstelle, die für Skriptumgebungen verfügbar gemacht wird, die ein Objekt auf Grundlage der Klasse erstellen, die mit dem **default** -Attribut definiert ist.  
   
- Wenn keine Standardschnittstelle angegeben wird, wird das erste Vorkommen einer Nicht\-Quellschnittstelle als Standard verwendet.  
+ Wenn keine Standardschnittstelle angegeben wird, wird das erste Vorkommen einer Nicht-Quellschnittstelle als Standard verwendet.  
   
- *interface2*\(optional\)  
- Die Standard\-Quellschnittstelle. Sie müssen diese Schnittstelle auch beim [source](../windows/source-cpp.md)\-Attribut angeben.  
+ *interface2*(optional)  
+ Die Standard-Quellschnittstelle. Sie müssen diese Schnittstelle auch beim [source](../windows/source-cpp.md) -Attribut angeben.  
   
- Wenn keine Standard\-Quellschnittstelle angegeben ist, wird die erste Quellschnittstelle als Standard verwendet.  
+ Wenn keine Standard-Quellschnittstelle angegeben ist, wird die erste Quellschnittstelle als Standard verwendet.  
   
-## Hinweise  
- Das C\+\+\-Attribut **default** hat die gleiche Funktion wie das MIDL\-Attribut [default](http://msdn.microsoft.com/library/windows/desktop/aa366787). Das **default**\-Attribut wird auch mit dem [case](../windows/case-cpp.md)\-Attribut verwendet.  
+## <a name="remarks"></a>Hinweise  
+ Das C++-Attribut **default** hat die gleiche Funktion wie das MIDL-Attribut [default](http://msdn.microsoft.com/library/windows/desktop/aa366787) . Das **default** -Attribut wird auch mit dem [case](../windows/case-cpp.md) -Attribut verwendet.  
   
-## Beispiel  
- Der folgende Code zeigt, wie **default** bei der Definition einer Co\-Klasse verwendet wird, um **ICustomDispatch** als Standard\-Programmierschnittstelle anzugeben:  
+## <a name="example"></a>Beispiel  
+ Der folgende Code zeigt, wie **default** bei der Definition einer Co-Klasse verwendet wird, um **ICustomDispatch** als Standard-Programmierschnittstelle anzugeben:  
   
 ```  
 // cpp_attr_ref_default.cpp  
@@ -106,23 +103,22 @@ int main() {
 }  
 ```  
   
- Das [source](../windows/source-cpp.md)\-Attribut weist außerdem ein Beispiel zum Verwenden von **default** auf.  
+ Das [source](../windows/source-cpp.md) -Attribut weist außerdem ein Beispiel zum Verwenden von **default**auf.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attributkontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
 |**Betrifft**|**class**, `struct`, Datenelement|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|**coclass** \(bei Anwendung auf **class** oder `struct`\)|  
+|**Erforderliche Attribute**|**coclass** (bei Anwendung auf **class** oder `struct`)|  
 |**Ungültige Attribute**|Keine|  
   
  Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
+## <a name="see-also"></a>Siehe auch  
+ [IDL-Attribute](../windows/idl-attributes.md)   
+ [Klassenattribute](../windows/class-attributes.md)   
  [coclass](../windows/coclass.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

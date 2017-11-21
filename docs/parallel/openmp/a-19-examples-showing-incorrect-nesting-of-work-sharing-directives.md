@@ -1,28 +1,28 @@
 ---
-title: "A.19   Examples Showing Incorrect Nesting of Work-sharing Directives"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: A.19 Beispiele, falsche Schachtelung von Direktiven Arbeit Freigabe | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 906e900d-9259-44d6-a095-c1ba9135d269
-caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1cc5ed3a3a5ddd4117a3332703613a8d525853a8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# A.19   Examples Showing Incorrect Nesting of Work-sharing Directives
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die Beispiele in diesem Abschnitt veranschaulichen die Schachtelungs Directive.  Weitere Informationen zu richtungweisende Schachtelung finden Sie unter [Abschnitt 2.9](../../parallel/openmp/2-9-directive-nesting.md) auf Seite 33.  
+# <a name="a19---examples-showing-incorrect-nesting-of-work-sharing-directives"></a>A.19   Beispiele für falsche Verschachtelung von Arbeitsteilungsdirektiven
+In den Beispielen in diesem Abschnitt wird die Richtlinie schachteln Regeln. Weitere Informationen über die Richtlinie Schachtelung, finden Sie unter [Abschnitt 2.9](../../parallel/openmp/2-9-directive-nesting.md) auf Seite "33".  
   
- Im folgenden Beispiel ist inkompatibel, da die inneren und äußeren `for`\-Direktive geschachtelt und demselben `parallel` die Direktive verbindlich sind für sind:  
+ Im folgende Beispiel wird nicht kompatible da inneren und äußeren `for` -Direktiven geschachtelt sind, und Binden an die gleiche `parallel` Richtlinie:  
   
 ```  
 void wrong1(int n)  
@@ -40,7 +40,7 @@ void wrong1(int n)
 }  
 ```  
   
- Die folgende dynamisch geschachtelte Version des obigen Beispiel ist auch nicht kompatibel:  
+ Die folgende dynamisch geschachtelte Version des obigen Beispiels ist ebenfalls nicht kompatibel:  
   
 ```  
 void wrong2(int n)  
@@ -63,7 +63,7 @@ void work1(int i, int n)
 }  
 ```  
   
- Im folgenden Beispiel ist inkompatibel, da die `for` und `single`\-Direktive geschachtelt sind, und binden sie an denselben parallelen Bereich:  
+ Im folgende Beispiel wird nicht kompatible da die `for` und `single` -Direktiven geschachtelt werden und sie an der gleichen Region für die parallele binden:  
   
 ```  
 void wrong3(int n)  
@@ -80,7 +80,7 @@ void wrong3(int n)
 }  
 ```  
   
- Im folgenden Beispiel ist inkompatibel, da `barrier`\-Direktive in `for` Deadlock führen kann:  
+ Das folgende Beispiel ist nicht kompatibel da eine `barrier` -Anweisung innerhalb einer `for` Deadlock führen können:  
   
 ```  
 void wrong4(int n)  
@@ -98,7 +98,7 @@ void wrong4(int n)
 }  
 ```  
   
- Im folgenden Beispiel ist inkompatibel, da aufgrund eines Deadlocks `barrier` Fakten führt, dass nur ein Thread in den kritischen Abschnitt gleichzeitig eingegeben werden kann:  
+ Im folgende Beispiel nicht konform ist. da die `barrier` Deadlock führt darauf zurückzuführen, dass jeweils nur ein Thread den kritischen Abschnitt eingeben kann:  
   
 ```  
 void wrong5()  
@@ -115,7 +115,7 @@ void wrong5()
 }  
 ```  
   
- Im folgenden Beispiel ist inkompatibel, da aufgrund eines Deadlocks `barrier` Fakten, das nur ein Thread den `single`\-Abschnitt beschrieben:  
+ Im folgende Beispiel wird nicht kompatible da die `barrier` Deadlock führt darauf zurückzuführen, dass nur ein Thread ausgeführt wird die `single` Abschnitt:  
   
 ```  
 void wrong6()  

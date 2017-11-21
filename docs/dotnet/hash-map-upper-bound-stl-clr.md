@@ -1,45 +1,43 @@
 ---
-title: "hash_map::upper_bound (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::upper_bound"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "upper_bound-Member [STL/CLR]"
+title: 'hash_map:: upper_bound (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::upper_bound
+dev_langs: C++
+helpviewer_keywords: upper_bound member [STL/CLR]
 ms.assetid: f83e88b4-e15e-49d5-90e4-cf7360c27c30
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5aa02417eba0d31a56697f21baa04411ef161d4e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# hash_map::upper_bound (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Suchenende des Bereichs, der einen angegebenen Schlüssel entspricht.  
+# <a name="hashmapupperbound-stlclr"></a>hash_map::upper_bound (STL/CLR)
+Sucht nach Ende des Bereichs, die einem angegebenen Schlüssel entspricht.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 iterator upper_bound(key_type key);  
 ```  
   
-#### Parameter  
- Schlüssel  
- Für zu suchen Schlüsselwert.  
+#### <a name="parameters"></a>Parameter  
+ Key  
+ Der zu suchende Schlüsselwert.  
   
-## Hinweise  
- Die Memberfunktion bestimmt das letzte Element in der Sequenz `X` gesteuerten, die denselben Bucket wie `key` wendet und entsprechenden Reihenfolge zu `key`.  Wenn kein solches Element vorhanden ist oder wenn `X` das letzte Element der gesteuerten Sequenz ist, gibt sie `()` zurück; [hash\_map::end](../dotnet/hash-map-end-stl-clr.md) Andernfalls gibt sie ein Iterator zurück, der das erste Element darüber hinaus `X` festlegt.  Sie verwenden sie, um das Ende einer Sequenz der Elemente in der Sequenz gesteuerten einfach zu finden, das einen angegebenen Schlüssel übereinstimmen.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion bestimmt das letzte Element `X` in der kontrollierten Sequenz, die mit dem gleichen Bucket als hashes `key` und Sortierung `key`. Wenn kein solches Element vorhanden ist, oder wenn `X` ist das letzte Element in der kontrollierten Sequenz gibt [hash_map:: End (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)`()`; andernfalls wird einen Iterator, der das erste Element nach zurückgegeben`X`. Sie können damit derzeit suchen das Ende einer Sequenz von Elementen in der kontrollierten Sequenz, die einen angegebenen Schlüssel entsprechen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_hash_map_upper_bound.cpp   
@@ -73,18 +71,21 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[bc 3\]**  
-**upper\_bound\(L'x'\)\=\=end\(\) \= True**  
-**\*upper\_bound \(L'a\) \= \[b 2\]**  
-**\*upper\_bound \(L'b\) \= \[c 3\]**   
-## Anforderungen  
- **Header:** \<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+upper_bound(L'x')==end() = True  
+*upper_bound(L'a') = [b 2]  
+*upper_bound(L'b') = [c 3]  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext Hash_map/>  
   
-## Siehe auch  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::count](../dotnet/hash-map-count-stl-clr.md)   
- [hash\_map::equal\_range](../dotnet/hash-map-equal-range-stl-clr.md)   
- [hash\_map::find](../dotnet/hash-map-find-stl-clr.md)   
- [hash\_map::lower\_bound](../dotnet/hash-map-lower-bound-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [hash_map-Element (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map:: Count (STL/CLR)](../dotnet/hash-map-count-stl-clr.md)   
+ [hash_map:: equal_range (STL/CLR)](../dotnet/hash-map-equal-range-stl-clr.md)   
+ [hash_map:: Find (STL/CLR)](../dotnet/hash-map-find-stl-clr.md)   
+ [hash_map::lower_bound (STL/CLR)](../dotnet/hash-map-lower-bound-stl-clr.md)

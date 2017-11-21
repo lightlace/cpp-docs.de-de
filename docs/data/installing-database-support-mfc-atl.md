@@ -1,43 +1,32 @@
 ---
-title: "Installieren der Datenbankunterst&#252;tzung (MFC/ATL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL [C++], Datenbankunterstützung"
-  - "Datenzugriff [C++], Installieren der Datenbankunterstützung"
-  - "Datenbanken [C++], Installieren der Datenbankunterstützung"
-  - "Installieren der Datenbankunterstützung"
+title: "Installieren der Datenbankunterstützung (MFC-ATL) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- data access [C++], installing database support
+- installing database support
+- ATL [C++], database support
+- databases [C++], installing database support
 ms.assetid: 3820ba96-4fb8-4405-83dd-bb3bc5998667
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 59aee5a55fd14faf6aaf9602aa8ea8f3933646cc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Installieren der Datenbankunterst&#252;tzung (MFC/ATL)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Beim Ausführen von Setup für Visual C\+\+ .NET werden die folgenden Datenbankkomponenten automatisch installiert:  
+# <a name="installing-database-support-mfcatl"></a>Installieren der Datenbankunterstützung (MFC/ATL)
+Visual C++ umfasst keine Produkte. Beschreibung  
   
--   Alle notwendigen ATL\-OLE DB\-Komponenten.  Weitere Informationen finden Sie unter [Installieren der ATL\-Datenbankunterstützung](../data/installing-atl-database-support.md).  
-  
--   Eine Reihe von ODBC\-Treibern mit dem ODBC\-Treiber\-Manager und dem ODBC\-Administratorprogramm.  Weitere Informationen finden Sie unter „Installierte ODBC\-Treiber“ und „Installierte ODBC SDK\-Komponenten“ in [Installieren der MFC\-Datenbankunterstützung](../data/installing-mfc-database-support.md).  
-  
--   Notwendige Komponenten aus dem DAO Software Development Kit \(SDK\).  Dazu gehören auch Hilfedateien, die in dieser Dokumentation nicht enthalten sind.  Wenn Sie mit DAO arbeiten, müssen Sie jedoch eine Version von Jet installieren, die mit Ihrem Betriebssystem kompatibel ist.  Weitere Informationen finden Sie unter „Installierte DAO SDK\-Komponenten“ in [Installieren der MFC\-Datenbankunterstützung](../data/installing-mfc-database-support.md).  
-  
- Als Teil der Basisinstallation installiert Setup auch Microsoft Data Access Components \(MDAC\), die zur Unterstützung der Datenzugriffsprogrammierung in Visual C\+\+ .NET erforderlich sind.  
-  
- Visual C\+\+ .NET installiert das MDAC 2.7 SDK.  Suchen Sie auf der Microsoft Universal Data Access\-Website unter [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=121548](http://go.microsoft.com/fwlink/?LinkId=121548) nach Updates und Neuigkeiten zum MDAC SDK.  
-  
- Wenn Sie Anwendungen für den Datenzugriff weitergeben, sollten Sie auch das MDAC 2.7\-Weitergabeprogramm haben.  Das MDAC 2.7 SDK wurde zur Verwendung mit dem MDAC 2.7\-Weitergabeprogramm \(Mdac\_typ.exe\) entwickelt, das im Verzeichnis MDAC auf der Visual Studio .NET\-CD\-ROM für erforderliche Komponenten verfügbar ist.  Sie können Mdac\_typ.exe auch über den oben genannten Link für das MDAC 2.7 SDK herunterladen.  Weitere Informationen über die Weitergabe von Komponenten finden Sie unter [Weiterverteilen von Steuerelementen](../data/ado-rdo/redistributing-controls.md).  
-  
-## Siehe auch  
- [Datenzugriff](../Topic/Data%20Access%20in%20Visual%20C++.md)
+ 
+## <a name="see-also"></a>Siehe auch  
+ [Datenzugriff](data-access-in-cpp.md)

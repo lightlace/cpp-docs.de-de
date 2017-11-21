@@ -1,42 +1,42 @@
 ---
-title: "Anbieterunterst&#252;tzung f&#252;r Lesezeichen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Lesezeichen, OLE DB"
-  - "IRowsetLocate-Klasse"
-  - "IRowsetLocate-Klasse, Anbieterunterstützung für Lesezeichen"
-  - "OLE DB-Anbietervorlagen, Lesezeichen"
-  - "OLE DB-Anbieter, Lesezeichenunterstützung"
+title: "Anbieterunterstützung für Lesezeichen | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- IRowsetLocate class, provider support for bookmarks
+- OLE DB provider templates, bookmarks
+- bookmarks, OLE DB
+- IRowsetLocate class
+- OLE DB providers, bookmark support
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 445aa5a2a609c3cf2da83e9ff876195a05a33d6f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Anbieterunterst&#252;tzung f&#252;r Lesezeichen
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Durch das Beispiel in diesem Thema wird der `CMyProviderRowset`\-Klasse die `IRowsetLocate`\-Schnittstelle hinzugefügt.  In den meisten Fällen beginnen Sie, indem Sie einem bestehenden COM\-Objekt eine Schnittstelle hinzufügen.  Anschließend können Sie das Objekt testen, indem Sie weitere Aufrufe aus den Consumervorlagen hinzufügen.  In diesem Beispiel werden folgende Vorgänge veranschaulicht:  
+# <a name="provider-support-for-bookmarks"></a>Anbieterunterstützung für Lesezeichen
+Im Beispiel in diesem Thema wird die `IRowsetLocate` Schnittstelle für die `CMyProviderRowset` Klasse. In fast allen Fällen starten Sie durch Hinzufügen einer Schnittstelle zu einem vorhandenen COM-Objekt. Anschließend können Sie sie testen, indem mehr Aufrufe über die Consumervorlagen hinzufügen. Im Beispiel wird veranschaulicht, wie Sie:  
   
--   Hinzufügen einer Schnittstelle zu einem Anbieter  
+-   Hinzufügen einer Schnittstelle zu einem Anbieter.  
   
--   Dynamisches Festlegen der an den Consumer zurückzugebenden Spalten  
+-   Dynamisch bestimmen Sie die Spalten an den Consumer zurückgegeben.  
   
--   Hinzufügen der Lesezeichenunterstützung  
+-   Lesezeichenunterstützung für hinzufügen.  
   
- Die `IRowsetLocate`\-Schnittstelle erbt von der `IRowset`\-Schnittstelle.  Damit die `IRowsetLocate`\-Schnittstelle hinzugefügt werden kann, muss `CMyProviderRowset` von [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md) erben.  
+ Die `IRowsetLocate`-Schnittstelle erbt von der `IRowset`-Schnittstelle. Hinzufügen der `IRowsetLocate` Schnittstelle, erben `CMyProviderRowset` aus [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md).  
   
- Das Hinzufügen der `IRowsetLocate`\-Schnittstelle unterscheidet sich geringfügig vom Hinzufügen der meisten anderen Schnittstellen.  Die OLE DB\-Anbietervorlagen verfügen über einen Vorlagenparameter zur Behandlung der abgeleiteten Schnittstelle, um die VTABLEs auszurichten.  Im folgenden Code ist die neue Vererbungsliste dargestellt:  
+ Hinzufügen der `IRowsetLocate` Schnittstelle unterscheidet sich etwas von den meisten Schnittstellen. Stellen Sie die v-Tabellen-Zeile nach oben, den OLE DB-haben Anbietervorlagen einen Vorlagenparameter, die abgeleitete Schnittstelle zu behandeln. Der folgende Code zeigt die neue Vererbungsliste:  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -49,9 +49,9 @@ class CMyProviderRowset : public CRowsetImpl< CMyProviderRowset,
           IRowsetLocateImpl<CMyProviderRowset, IRowsetLocate> >  
 ```  
   
- Der vierte, fünfte und sechste Parameter werden alle hinzugefügt.  In diesem Beispiel werden die Standardwerte für den vierten und fünften Parameter verwendet, für den sechsten Parameter wird jedoch `IRowsetLocateImpl` angegeben.  `IRowsetLocateImpl` ist eine OLE\-DB\-Vorlagenklasse, die zwei Vorlagenparameter benötigt: diese verknüpfen die `IRowsetLocate`\-Schnittstelle mit der `CMyProviderRowset`\-Klasse.  Beim Hinzufügen der meisten Schnittstellen können Sie diesen Schritt überspringen und direkt zum nächsten übergehen,  da lediglich die Schnittstellen `IRowsetLocate` und `IRowsetScroll` auf diese Weise behandelt werden müssen.  
+ Die vierten, fünften und sechsten Parameter, die alle hinzugefügt werden. In diesem Beispiel verwendet die Standardeinstellungen für die vierte und fünfte Parameter jedoch angeben `IRowsetLocateImpl` als sechsten Parameters. `IRowsetLocateImpl`ist eine OLE DB-Vorlagenklasse, die zwei Vorlagenparameter akzeptiert: Diese verknüpfen die `IRowsetLocate` Schnittstelle für die `CMyProviderRowset` Klasse. Um die meisten Schnittstellen hinzuzufügen, können Sie diesen Schritt überspringen und mit dem nächsten zu verschieben. Nur die `IRowsetLocate` und `IRowsetScroll` Schnittstellen, die auf diese Weise behandelt werden müssen.  
   
- Anschließend muss `CMyProviderRowset` angewiesen werden, `QueryInterface` für die `IRowsetLocate`\-Schnittstelle aufzurufen.  Fügen Sie der Zuordnung die Zeile `COM_INTERFACE_ENTRY(IRowsetLocate)` hinzu.  Die Schnittstellenzuordnung für `CMyProviderRowset` sollte wie im folgenden Code aussehen:  
+ Dann müssen Sie die `CMyProviderRowset` Aufrufen `QueryInterface` für die `IRowsetLocate` Schnittstelle. Fügen Sie die Zeile `COM_INTERFACE_ENTRY(IRowsetLocate)` zur Zuordnung. Die schnittstellenzuordnung für `CMyProviderRowset` sollte angezeigt werden, wie im folgenden Code gezeigt:  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -65,11 +65,11 @@ BEGIN_COM_MAP(CMyProviderRowset)
 END_COM_MAP()  
 ```  
   
- Darüber hinaus muss die Zuordnung mit der `CRowsetImpl`\-Klasse verknüpft werden.  Fügen Sie das `-Makro ein, um die CRowsetImpl`\-Zuordnung zu verknüpfen.  Erstellen Sie auch eine Typdefinition mit dem Namen `RowsetBaseClass`, die die Vererbungsinformationen enthält.  Diese Typdefinition ist willkürlich zusammengestellt und kann ignoriert werden.  
+ Außerdem müssen Sie die Zuordnung in verknüpft die `CRowsetImpl` Klasse. Hinzufügen-Makro zum Verknüpfen der `CRowsetImpl` Zuordnung. Erstellen Sie auch eine Typdefinition namens `RowsetBaseClass` , die Vererbungsinformationen besteht. Diese Typedef ist ein beliebiger und kann ignoriert werden.  
   
- Zuletzt muss der **IColumnsInfo::GetColumnsInfo**\-Aufruf verarbeitet werden.  Normalerweise würden Sie zu diesem Zweck die `PROVIDER_COLUMN_ENTRY`\-Makros verwenden.  Beachten Sie jedoch den Fall, dass ein Consumer möglicherweise Lesezeichen verwenden möchte.  Sie müssen dann in der Lage sein, die vom Anbieter zurückgegebenen Spalten abhängig davon zu ändern, ob der Consumer ein Lesezeichen anfordert.  
+ Behandeln Sie schließlich die **IColumnsInfo:: GetColumnsInfo** aufrufen. Normalerweise würden Sie dazu die-Makros verwenden. Allerdings kann ein Consumer Lesezeichen verwenden möchten. Sie müssen die Spalten ändern können, die die Anbieter zurück, je nachdem, ob der Consumer ein Lesezeichen anfordert sein.  
   
- Um den **IColumnsInfo::GetColumnsInfo**\-Aufruf zu verarbeiten, löschen Sie die **PROVIDER\_COLUMN**\-Zuordnung in der `CTextData`\-Klasse.  Durch das **PROVIDER\_COLUMN\_MAP**\-Makro wird die `GetColumnInfo`\-Funktion definiert.  Sie müssen eine eigene `GetColumnInfo`\-Funktion definieren.  Die Funktionsdeklaration sollte folgendermaßen lauten:  
+ Behandeln der **IColumnsInfo:: GetColumnsInfo** aufrufen, löschen Sie die **PROVIDER_COLUMN** ordnen die `CTextData` Klasse. Das Makro-Makro definiert eine Funktion `GetColumnInfo`. Sie definieren müssen eigene `GetColumnInfo` Funktion. Die Funktionsdeklaration sollte wie folgt aussehen:  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -87,7 +87,7 @@ class CTextData
 };  
 ```  
   
- Implementieren Sie anschließend wie folgt die `GetColumnInfo`\-Funktion in der Datei MyProviderRS.cpp:  
+ Implementieren Sie anschließend die `GetColumnInfo` -Funktion in der Datei MyProviderRS.cpp wie folgt:  
   
 ```  
 ////////////////////////////////////////////////////////////////////  
@@ -158,11 +158,11 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
 }  
 ```  
   
- Zunächst wird durch `GetColumnInfo` überprüft, ob eine Eigenschaft mit dem Namen **DBPROP\_IRowsetLocate** festgelegt wurde.  OLE DB bietet Eigenschaften für alle optionalen Schnittstellen außerhalb des Rowsetobjekts.  Wenn der Consumer eine dieser optionalen Schnittstellen verwenden möchte, setzt er eine Eigenschaft auf **true**.  Daraufhin kann der Anbieter diese Eigenschaft überprüfen und spezielle Aktionen ausführen, die zu ihrer Behandlung erforderlich sind.  
+ `GetColumnInfo`prüft zunächst, um festzustellen, ob eine Eigenschaft mit dem Namen **DBPROP_IRowsetLocate** festgelegt ist. OLE DB verfügt über Eigenschaften für jede der optionalen Schnittstellen außerhalb der Rowset-Objekte. Wenn der Consumer eine dieser optionalen Schnittstellen verwenden möchte, legt eine Eigenschaft auf "true" fest. Der Anbieter kann dann überprüfen Sie diese Eigenschaft und besondere Maßnahmen darauf basieren.  
   
- In der Implementierung rufen Sie diese Eigenschaft ab, indem Sie den Zeiger auf das Befehlsobjekt verwenden.  Der `pThis`\-Zeiger stellt die Rowset\- oder Befehlsklasse dar.  Da hier Vorlagen verwendet werden, muss dieser als `void`\-Zeiger übergeben werden, da der Code andernfalls nicht kompiliert wird.  
+ In der Implementierung rufen Sie diese Eigenschaft mithilfe des Zeigers auf das Befehlsobjekt aus. Die `pThis` -Zeiger stellt die Rowset- oder -Klasse. Da hier Vorlagen verwendet werden, müssen Sie diesen als übergeben einer `void` Zeiger oder den Code nicht kompiliert.  
   
- Legen Sie ein statisches Array zur Aufnahme der Spalteninformationen fest.  Falls die Lesezeichenspalte nicht vom Consumer benötigt wird, bleibt ein Eintrag im Array unbenutzt.  Sie können dieses Array dynamisch reservieren, müssten jedoch sicherstellen, dass es ordnungsgemäß zerstört wird.  In diesem Beispiel werden die Makros **ADD\_COLUMN\_ENTRY** und **ADD\_COLUMN\_ENTRY\_EX** definiert und ausgeführt, um die Informationen in das Array einzufügen.  Sie können die Makros, wie im folgenden Code dargestellt, in die Datei **MyProviderRS.H** einfügen:  
+ Geben Sie einen statischen Array, um die Informationen in der Spalte enthalten. Wenn der Consumer die Lesezeichenspalte nicht möchten, wird ein Eintrag im Array verschwendet. Sie können dieses Array dynamisch reservieren, jedoch müssen Sie sicherstellen, dass sie ordnungsgemäß zerstört werden. In diesem Beispiel definiert und die Makros ADD_COLUMN_ENTRY und ADD_COLUMN_ENTRY_EX verwendet, um die Informationen in das Array eingefügt werden. Sie können die Makros in der Datei MyProviderRS.H wie im folgenden Code gezeigt hinzufügen:  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -193,7 +193,7 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
    _rgColumns[ulCols].columnid.uName.pwszName = (LPOLESTR)name;  
 ```  
   
- Um den Code im Consumer zu testen, müssen Sie einige Änderungen am `OnRun`\-Handler vornehmen.  Die erste Änderung an der Funktion besteht darin, dass Sie Code hinzufügen, durch den dem Eigenschaftenset eine Eigenschaft hinzugefügt wird.  Durch den Code wird die **DBPROP\_IRowsetLocate**\-Eigenschaft auf **true** gesetzt, wodurch der Anbieter darüber informiert wird, dass die Lesezeichenspalte verwendet werden soll.  Der `OnRun`\-Handlercode sollte wie folgt aussehen:  
+ Um den Code in der Consumer zu testen, müssen Sie einige Änderungen an der `OnRun` Handler. Die erste Änderung an die Funktion ist, fügen Sie Code zum Hinzufügen einer Eigenschaft zum Eigenschaftensatz hinzu. Der Code legt die **DBPROP_IRowsetLocate** Eigenschaft auf "true", wodurch der Anbieter darüber informiert wird, die Lesezeichenspalte wirklich. Die `OnRun` Handlercode sollte wie folgt aussehen:  
   
 ```  
 //////////////////////////////////////////////////////////////////////  
@@ -244,9 +244,9 @@ void CTestProvDlg::OnRun()
 }  
 ```  
   
- Die `while`\-Schleife enthält Code zum Aufrufen der `Compare`\-Methode in der `IRowsetLocate`\-Schnittstelle.  Der vorhandene Code sollte immer akzeptiert werden, da exakt dieselben Lesezeichen verglichen werden.  Außerdem sollte ein Lesezeichen in einer temporären Variablen gespeichert werden, sodass Sie sie nach Beendigung der `while`\-Schleife verwenden können, um die `MoveToBookmark`\-Funktion in den Consumervorlagen aufzurufen.  Die `MoveToBookmark`\-Funktion ruft die `GetRowsAt`\-Methode in `IRowsetLocate` auf.  
+ Die While-Schleife enthält Code zum Aufrufen der `Compare` Methode in der `IRowsetLocate` Schnittstelle. Der Code, den Sie sollten immer übergeben werden, da Sie die genaue dieselben Lesezeichen verglichen werden. Darüber hinaus ein Lesezeichen in einer temporären Variablen gespeichert werden, damit Sie ihn nach Beendigung der While verwenden können Schleife abgeschlossen ist, rufen Sie die `MoveToBookmark` -Funktion in die Consumervorlagen. Die `MoveToBookmark` Funktionsaufrufe, die `GetRowsAt` Methode in `IRowsetLocate`.  
   
- Zusätzlich muss der Benutzerdatensatz im Consumer aktualisiert werden.  Fügen Sie der Klasse und **COLUMN\_MAP** einen Eintrag zur Verarbeitung eines Lesezeichens hinzu:  
+ Sie müssen auch die Benutzerdatensatz im Consumer zu aktualisieren. Fügen Sie einen Eintrag in der Klasse zum Behandeln von Lesezeichen und einen Eintrag in der **COLUMN_MAP**:  
   
 ```  
 ///////////////////////////////////////////////////////////////////////  
@@ -271,7 +271,7 @@ END_ACCESSOR_MAP()
 };  
 ```  
   
- Wenn der Code aktualisiert wurde, sollte es möglich sein, den Anbieter mit der `IRowsetLocate`\-Schnittstelle zu erstellen und auszuführen.  
+ Wenn Sie den Code aktualisiert haben, Sie sollten Lage zu erstellen, und führen den Anbieter mit der `IRowsetLocate` Schnittstelle.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Erweiterte Anbietertechniken](../../data/oledb/advanced-provider-techniques.md)

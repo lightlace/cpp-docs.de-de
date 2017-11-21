@@ -1,34 +1,33 @@
 ---
-title: "CAccessorBase::ReleaseAccessors | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CAccessorBase::ReleaseAccessors"
-  - "CAccessorBase.ReleaseAccessors"
-  - "ReleaseAccessors"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ReleaseAccessors-Methode"
+title: 'CAccessorBase:: Releaseaccessors | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CAccessorBase::ReleaseAccessors
+- CAccessorBase.ReleaseAccessors
+- ReleaseAccessors
+dev_langs: C++
+helpviewer_keywords: ReleaseAccessors method
 ms.assetid: f08bc88e-0552-4a9c-9c65-b4061094649a
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 313231e2c53a1e5afc409dd85b430d5029914b1d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# CAccessorBase::ReleaseAccessors
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Befreit die Accessoren, die von der Klasse erstellt werden.  
+# <a name="caccessorbasereleaseaccessors"></a>CAccessorBase::ReleaseAccessors
+Gibt die Accessoren erstellt, die von der Klasse frei.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -37,18 +36,18 @@ Befreit die Accessoren, die von der Klasse erstellt werden.
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  *pUnk*  
- \[in\] Ein Zeiger auf eine **IUnknown**\-Schnittstelle für das COM\-Objekt, für das die Accessoren erstellt wurden.  
+ [in] Ein Zeiger auf ein **IUnknown** Schnittstelle für das COM-Objekt, das für die Accessoren erstellt wurden.  
   
-## Rückgabewert  
- Standard\- `HRESULT`.  
+## <a name="return-value"></a>Rückgabewert  
+ Ein Standard `HRESULT`-Objekt.  
   
-## Hinweise  
- Wird von [CAccessorRowset::Close](../../data/oledb/caccessorrowset-close.md).  
+## <a name="remarks"></a>Hinweise  
+ Aufgerufen von [CAccessorRowset:: Close](../../data/oledb/caccessorrowset-close.md).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  
   
-## Siehe auch  
- [CAccessorBase\-Klasse](../../data/oledb/caccessorbase-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [CAccessorBase-Klasse](../../data/oledb/caccessorbase-class.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - wspawnv
 - _spawnv
 - _wspawnv
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - wspawnv function
 - processes, creating
@@ -39,30 +37,15 @@ helpviewer_keywords:
 - _wspawnv function
 - spawnv function
 ms.assetid: 72360ef4-dfa9-44c1-88c1-b3ecb660aa7d
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 7e379ff312e481d74412a6337de352adb113dd6e
-ms.contentlocale: de-de
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 1d59bf71810deed8852e21249b3362e33bbde6bf
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="spawnv-wspawnv"></a>_spawnv, _wspawnv
 Erstellt einen neuen Prozess und führt ihn aus.  
@@ -102,7 +85,7 @@ intptr_t _wspawnv(
  Argumentliste umfasst mehr als 1024 Byte.  
   
  `EINVAL`  
- `mode` -Argument ist ungültig.  
+ `mode`-Argument ist ungültig.  
   
  `ENOENT`  
  Datei oder Pfad nicht gefunden.  
@@ -130,7 +113,7 @@ intptr_t _wspawnv(
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Beispiel  
- Siehe das Beispiel in [_spawn-, _wspawn-Funktionen](../../c-runtime-library/spawn-wspawn-functions.md).  
+ Siehe das Beispiel in [_spawn, _wspawn Functions](../../c-runtime-library/spawn-wspawn-functions.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Prozess- und Umgebungssteuerung](../../c-runtime-library/process-and-environment-control.md)   

@@ -1,34 +1,33 @@
 ---
-title: "Ausdrucksauswertungsfehler CXX0030 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0030"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0030"
-  - "CXX0030"
+title: Ausdrucksauswertungsfehler CXX0030 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0030
+dev_langs: C++
+helpviewer_keywords:
+- CAN0030
+- CXX0030
 ms.assetid: ada8b48c-09c8-49bf-ae23-313ed663c4fe
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ffa1dd85419943ede6a13d61cb82924c32b5e80a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Ausdrucksauswertungsfehler CXX0030
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="expression-evaluator-error-cxx0030"></a>Ausdrucksauswertungsfehler CXX0030
 Ausdruck kann nicht ausgewertet werden  
   
- Es konnte kein Wert für den angegebenen Ausdruck von der Ausdrucksauswertung des Debuggers abgerufen werden.  Möglicherweise wird vom Ausdruck auf Speicher verwiesen, der außerhalb des Speicherbereichs des Programms liegt, z. B. bei der Dereferenzierung eines NULL\-Zeigers.  Unter Windows ist der Zugriff auf Speicher außerhalb des Adressbereichs des Programms nicht zulässig.  
+ Ausdrucksauswertung des Debuggers konnte einen Wert für den Ausdruck nicht abgerufen werden, wenn geschrieben. Eine wahrscheinliche Ursache ist, dass der Ausdruck in den Speicher verweist, die außerhalb des Programms Adressraum (dereferenzierender null-Zeiger ist ein Beispiel). Windows lässt nicht den Zugriff auf Speicher, der außerhalb des Programms Adressraum ist.  
   
- Ein Ausdruck kann neu geschrieben und dabei die Auswertungsreihenfolge mit der Verwendung von Klammern gesteuert werden.  
+ Möglicherweise möchten die Verwendung von Klammern zur Steuerung der Reihenfolge der Auswertung Ausdruck neu schreiben.  
   
  Dieser Fehler ist mit CAN0030 identisch.

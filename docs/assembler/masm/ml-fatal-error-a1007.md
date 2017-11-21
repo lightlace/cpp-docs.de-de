@@ -1,44 +1,42 @@
 ---
-title: "ML Fatal Error A1007 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "A1007"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "A1007"
+title: ML-Schwerwiegender Fehler A1007 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: A1007
+dev_langs: C++
+helpviewer_keywords: A1007
 ms.assetid: bcf9c826-beb3-4e93-91fe-1ffd34995fbf
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: bb4b55ce7a16620cd501fa8e687339f1bc48e3b3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# ML Fatal Error A1007
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**Schachtelungsebene zu tief**  
+# <a name="ml-fatal-error-a1007"></a>Schwerwiegender ML-Fehler A1007
+**Die Schachtelungsebene ist zu tief geschachtelt**  
   
- Der Assembler hat seine Schachtelungs beschränkt.  Die Grenze beträgt 20 Ebenen, wenn bekannt. Andernfalls  
+ Der Assembler hat Schachtelungsebenen überschritten. Es sind maximal 20 Ebenen anders andernfalls.  
   
- Eines der folgenden Elemente zu tief geschachtelt wurde:  
+ Eine der folgenden wurde zu tief geschachtelt werden:  
   
--   Direktiven auf hoher Ebene wie [.IF](../../assembler/masm/dot-if.md), [.REPEAT](../../assembler/masm/dot-repeat.md)oder [.WHILE](../../assembler/masm/dot-while.md).  
+-   Eine allgemeine Richtlinie z. B. [. IF](../../assembler/masm/dot-if.md), [. Wiederholen Sie die](../../assembler/masm/dot-repeat.md), oder [. WÄHREND](../../assembler/masm/dot-while.md).  
   
--   Eine Strukturdefinition.  
+-   Die Strukturdefinition einer.  
   
--   BedingtASSEMBLY\-Direktive.  
+-   Ein bedingter-Assemblydirektive.  
   
--   Eine Prozedurdefinition.  
+-   Die Definition einer Prozedur.  
   
--   [PUSHCONTEXT](../../assembler/masm/pushcontext.md)\-Direktive \(die Kapazität ist 10\).  
+-   Ein [PUSHCONTEXT](../../assembler/masm/pushcontext.md) Richtlinie (der Grenzwert ist 10).  
   
 -   Eine Definition des Segments.  
   
@@ -46,5 +44,5 @@ caps.handback.revision: 6
   
 -   Ein Makro.  
   
-## Siehe auch  
- [ML Error Messages](../../assembler/masm/ml-error-messages.md)
+## <a name="see-also"></a>Siehe auch  
+ [ML-Fehlermeldungen](../../assembler/masm/ml-error-messages.md)

@@ -1,31 +1,31 @@
 ---
-title: "Gewusst wie: Auflisten von Dateien in einem Verzeichnis (C++/CLI)"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Verzeichnisse [C++], Auflisten von Dateien"
-  - "Dateien [C++], Auflisten von Dateien"
+title: 'Vorgehensweise: Auflisten von Dateien in einem Verzeichnis (C + c++ / CLI) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- files [C++], listing files
+- directories [C++], listing files
 ms.assetid: ebfc2666-229f-4b94-a9a1-e8f1b5d946d6
-caps.latest.revision: 12
-caps.handback.revision: "12"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 365f54435c92ff464a0906cd719bd33ce28d61b9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Gewusst wie: Auflisten von Dateien in einem Verzeichnis (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Im folgenden Codebeispiel wird veranschaulicht, wie eine Liste von Dateien in einem Verzeichnis abgerufen wird.  Zusätzlich werden die Unterverzeichnisse aufgelistet.  Im folgenden Beispiel werden die <xref:System.IO.Directory.GetFiles*> <xref:System.IO.Directory.GetFiles*>\-Methode und <xref:System.IO.Directory.GetDirectories*>\-Methode verwendet, um den Inhalt des Verzeichnisses C:\\Windows anzuzeigen.  
+# <a name="how-to-enumerate-files-in-a-directory-ccli"></a>Gewusst wie: Auflisten von Dateien in einem Verzeichnis (C++/CLI)
+Im folgenden Codebeispiel wird veranschaulicht, wie eine Liste von Dateien in einem Verzeichnis abgerufen wird. Zusätzlich werden die Unterverzeichnisse aufgelistet. Im folgenden Beispiel werden die <xref:System.IO.Directory.GetFiles%2A><xref:System.IO.Directory.GetFiles%2A>-Methode und <xref:System.IO.Directory.GetDirectories%2A>-Methode verwendet, um den Inhalt des Verzeichnisses C:\Windows anzuzeigen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // enum_files.cpp  
@@ -50,6 +50,6 @@ int main()
 }  
 ```  
   
-## Siehe auch  
- [Datei\- und Stream\-E\/A](../Topic/File%20and%20Stream%20I-O.md)   
- [.NET\-Programmierung mit C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [Datei- und Datenstrom-E/A](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
+ [.NET-Programmierung mit C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

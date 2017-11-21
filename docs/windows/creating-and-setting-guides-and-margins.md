@@ -1,67 +1,68 @@
 ---
-title: "Creating and Setting Guides and Margins | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "guides, clearing"
-  - "guides"
-  - "Dialog editor, guides and margins"
-  - "dialog box controls, placement"
-  - "controls [C++], guides and margins"
-  - "guides, creating"
-  - "guides, moving"
-  - "margins, moving"
+title: "Erstellen und festlegen, führt und Ränder | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- guides, clearing
+- guides
+- Dialog editor, guides and margins
+- dialog box controls, placement
+- controls [C++], guides and margins
+- guides, creating
+- guides, moving
+- margins, moving
 ms.assetid: fafa4545-8f00-436f-b590-300e76601156
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7632474f60254c5c5dc2c270976e1d6a970fdb35
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Creating and Setting Guides and Margins
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ob Sie Steuerelemente verschieben, hinzufügen oder im aktuellen Layout neu anordnen, mithilfe von Führungslinien lassen sie sich präzise innerhalb eines Dialogfelds ausrichten.  Führungslinien innerhalb des Dialogfelds werden im Editor als blaue gepunktete Linien und auf den Linealen \(am oberen und linken Rand des Dialog\-Editors\) durch entsprechende Pfeile angezeigt.  
+# <a name="creating-and-setting-guides-and-margins"></a>Erstellen und Festlegen von Führungslinien und Rändern
+Ob Sie Steuerelemente verschieben, Hinzufügen von Steuerelementen oder das aktuelle Layout neu anordnen, Anleitungen helfen ausrichten Sie Steuerelemente in einem Dialogfeld genau. Führungslinien, die über das Dialogfeld angezeigt, die im Editor, und entsprechende Pfeile in der Lineale (oben und entlang der linken Seite des Dialog-Editor) als blaue gepunktete Linien angezeigt werden.  
   
- Wenn Sie ein Dialogfeld erstellen, können Sie unter Randtypen wählen.  Ränder sind modifizierte Führungslinien, die als blaue gepunktete Linien angezeigt werden.  
+ Wenn Sie ein Dialogfeld erstellen, werden die vier Ränder bereitgestellt. Ränder werden geänderte Anleitungen, die als blaue gepunktete Linien angezeigt werden.  
   
-### So erstellen Sie eine Führungslinie  
+### <a name="to-create-a-guide"></a>So erstellen eine Anleitung  
   
-1.  Klicken Sie einmal auf eine beliebige Stelle auf dem Lineal, um eine Führungslinie zu erstellen.  \(Durch einfaches Klicken wird eine neue Führungslinie erstellt; durch Doppelklicken öffnen Sie das [Dialogfeld "Führungslinieneinstellungen"](../mfc/guide-settings-dialog-box.md), in dem Sie die Führungslinieneinstellungen festlegen können.\)  
+1.  Dem Lineal klicken Sie einmal, um eine Anleitung zu erstellen. (Nur einem Klick erstellt ein neues Handbuch; Doppelklicken startet die [Handbuch Einstellungen (Dialogfeld)](../windows/guide-settings-dialog-box.md) in dem Handbuch Einstellungen angeben können.)  
   
-### So legen Sie eine Führungslinie fest  
+### <a name="to-set-a-guide"></a>Eine Anleitung festlegen  
   
-1.  Klicken Sie im Dialogfeld auf die Führungslinie, und ziehen Sie sie an eine neue Position.  \(Sie können auch auf dem Lineal auf den Pfeil klicken, um die zugehörige Führungslinie zu ziehen.\)  
+1.  Klicken Sie im Dialogfeld klicken Sie auf das Handbuch, und ziehen Sie es an eine neue Position. (Sie können auch die Pfeil auf dem Lineal, ziehen die zugehörige Führungslinie klicken.)  
   
-     Die Koordinaten der Führungslinie werden in der Statusleiste unten im Fenster und auf dem Lineal angezeigt.  Setzen Sie den Mauszeiger auf den Pfeil auf dem Lineal, um die genaue Position der Führungslinie anzuzeigen.  
+     Die Koordinaten des Handbuchs werden in der Statusleiste am unteren Rand des Fensters und auf dem Lineal angezeigt. Bewegen Sie den Zeiger auf den Pfeil auf dem Lineal, um die genaue Position des Handbuchs anzuzeigen.  
   
-### So löschen Sie eine Führungslinie  
+### <a name="to-delete-a-guide"></a>So löschen Sie eine Führungslinie  
   
-1.  Ziehen Sie die Führungslinie aus dem Dialogfeld heraus.  
+1.  Ziehen Sie das Handbuch außerhalb des Dialogfelds "" ein.  
   
- \- oder \-  
+ \- oder –  
   
--   Ziehen Sie den entsprechenden Pfeil vom Lineal weg.  
+-   Ziehen Sie den entsprechenden Pfeil vom Lineal.  
   
-#### So verschieben Sie Ränder  
+#### <a name="to-move-margins"></a>So verschieben Sie Seitenränder  
   
-1.  Ziehen Sie den Rand an die neue Position.  
+1.  Ziehen Sie den Rand auf die neue Position.  
   
-     Um einen Rand zu entfernen, verschieben Sie diesen zur Nullposition.  Um den Rand wieder anzuzeigen, setzen Sie den Mauszeiger auf die Nullposition des Randes und verschieben den Rand an die gewünschte Position.  
+     Um einen Rand zu machen, verschieben Sie den Rand an eine Position 0 (null). Schalten Sie den Rand wieder, platzieren Sie den Mauszeiger über des Rands Nullposition, und verschieben Sie den Rand in Position.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](https://msdn.microsoft.com/library/f45fce5x.aspx) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](https://msdn.microsoft.com/library/xbx3z216.aspx). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
-### Anforderungen  
+### <a name="requirements"></a>Anforderungen  
  Win32  
   
-## Siehe auch  
- [Dialog Editor States \(Guides and Grids\)](../mfc/dialog-editor-states-guides-and-grids.md)   
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)
+## <a name="see-also"></a>Siehe auch  
+ [Dialog-Editor-Status (Führungslinien und Raster)](../windows/dialog-editor-states-guides-and-grids.md)   
+ [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)
+

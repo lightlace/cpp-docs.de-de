@@ -1,45 +1,43 @@
 ---
-title: "multiset::find (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::find"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "find-Member [STL/CLR]"
+title: 'multiset:: Find (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::find
+dev_langs: C++
+helpviewer_keywords: find member [STL/CLR]
 ms.assetid: 162c9002-fb34-44f9-8e42-6bacecd0ebbc
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cc04dba0a9638047ea199cefdbcd3851d45c432e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# multiset::find (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Sucht ein Element, der einem angegebenen Schlüssel entspricht.  
+# <a name="multisetfind-stlclr"></a>multiset::find (STL/CLR)
+Sucht ein Element, das einem angegebenen Schlüssel entspricht.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 iterator find(key_type key);  
 ```  
   
-#### Parameter  
- Schlüssel  
- Für zu suchen Schlüsselwert.  
+#### <a name="parameters"></a>Parameter  
+ Key  
+ Der zu suchende Schlüsselwert.  
   
-## Hinweise  
- Wenn mindestens ein Element in der Sequenz gesteuerten entsprechende Reihenfolge mit `key` festgelegt ist, gibt die Memberfunktion ein Iterator zurück, der eines dieser Elemente festgelegt; andernfalls gibt sie [multiset::end](../dotnet/multiset-end-stl-clr.md)`()` zurück.  Sie verwenden sie, um ein Element in der Sequenz gesteuerten derzeit zu suchen, die einen angegebenen Schlüssel entspricht.  
+## <a name="remarks"></a>Hinweise  
+ Verfügt über mindestens ein Element in der kontrollierten Sequenz entsprechende Sortierung mit `key`, die Memberfunktion gibt einen Iterator Festlegen eines dieser Elemente zurück, andernfalls es [multiset:: End (STL/CLR)](../dotnet/multiset-end-stl-clr.md) `()`. Damit können sie ein Element aktuell in der kontrollierten Sequenz gesucht werden soll, die einem angegebenen Schlüssel entspricht.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_multiset_find.cpp   
@@ -70,20 +68,23 @@ int main()
   
 ```  
   
-  **ein b c**  
-**suchen Sie A \= False**  
-**suchen Sie b \= b**  
-**suchen Sie C \= False**   
-## **Beschreibung**  
- Beachten Sie, dass `find` nicht unbedingt, das von einigen Element es findet.  
+```Output  
+ a b c  
+find A = False  
+find b = b  
+find C = False  
+```  
   
-## Anforderungen  
- **Header:** \<cliext\/Satz\>  
+## <a name="description"></a>Beschreibung  
+ Beachten Sie, dass `find` garantiert nicht die mehrere gefundenen Elements.  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Set >  
   
-## Siehe auch  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::equal\_range](../dotnet/multiset-equal-range-stl-clr.md)   
- [multiset::lower\_bound](../dotnet/multiset-lower-bound-stl-clr.md)   
- [multiset::upper\_bound](../dotnet/multiset-upper-bound-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset:: equal_range (STL/CLR)](../dotnet/multiset-equal-range-stl-clr.md)   
+ [multiset:: lower_bound (STL/CLR)](../dotnet/multiset-lower-bound-stl-clr.md)   
+ [multiset::upper_bound (STL/CLR)](../dotnet/multiset-upper-bound-stl-clr.md)

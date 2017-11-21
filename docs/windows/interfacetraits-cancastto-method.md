@@ -1,32 +1,30 @@
 ---
-title: "InterfaceTraits::CanCastTo-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::InterfaceTraits::CanCastTo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CanCastTo-Methode"
+title: 'Interfacetraits:: Cancastto-Methode | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::InterfaceTraits::CanCastTo
+dev_langs: C++
+helpviewer_keywords: CanCastTo method
 ms.assetid: 275847cb-69ea-42bf-910f-05ba6ef8b48d
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 107c89c7643e137b20492f9ae932a736cc0ba603
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# InterfaceTraits::CanCastTo-Methode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Unterstützt die WRL\-Infrastruktur und nicht beabsichtigt, direkt im Code verwendet werden.  
+# <a name="interfacetraitscancastto-method"></a>InterfaceTraits::CanCastTo-Methode
+Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -39,29 +37,29 @@ static __forceinline bool CanCastTo(
   
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `ptr`  
- Der Name eines Zeigers in einen Typ.  
+ Der Name eines Zeigers auf einen Typ.  
   
  `riid`  
- Die die Schnittstellen\-ID von `Base`.  
+ Der Schnittstellen-ID des `Base`.  
   
  `ppv`  
- Wenn dieser Vorgang erfolgreich ist, wird `ppv` auf der Schnittstelle, die von `Base` angegeben wird.  Andernfalls wird `ppv` auf `nullptr` festgelegt.  
+ Wenn dieser Vorgang erfolgreich ist, ist `ppv` verweist auf die angegebene Schnittstelle `Base`. Andernfalls `ppv` festgelegt ist, um `nullptr`.  
   
-## Rückgabewert  
- `true`, wenn der Vorgang erfolgreich ist und `ptr` wurde ein Zeiger zu `Base` umgewandelt; andernfalls `false`.  
+## <a name="return-value"></a>Rückgabewert  
+ `true`Wenn dieser Vorgang erfolgreich ist und `ptr` umgewandelt wird, in einen Zeiger auf `Base`ist, andernfalls `false` .  
   
-## Hinweise  
- Gibt an, ob der angegebene Zeiger auf Zeiger zu `Base` umgewandelt werden kann.  
+## <a name="remarks"></a>Hinweise  
+ Gibt an, ob der angegebene Zeiger umgewandelt werden kann, in einen Zeiger auf `Base`.  
   
- Weitere Informationen zu `Base`, finden Sie den öffentlichen typedef\-Abschnitt in [InterfaceTraits\-Struktur](../windows/interfacetraits-structure.md).  
+ Weitere Informationen zu `Base`, finden Sie im Abschnitt Öffentliche Typedefs [InterfaceTraits-Struktur](../windows/interfacetraits-structure.md).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** implements.h  
   
- **Namespace:**  Microsoft::WRL::Details  
+ **Namespace:** Microsoft::WRL::Details  
   
-## Siehe auch  
- [InterfaceTraits\-Struktur](../windows/interfacetraits-structure.md)   
- [Microsoft::WRL::Details\-Namespace](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Siehe auch  
+ [InterfaceTraits-Struktur](../windows/interfacetraits-structure.md)   
+ [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

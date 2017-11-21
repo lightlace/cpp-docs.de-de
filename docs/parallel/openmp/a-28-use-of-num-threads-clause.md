@@ -1,26 +1,26 @@
 ---
-title: "A.28   Use of num_threads Clause"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: A.28 Verwendung von Num_threads-Klausel | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 26238da1-902c-49b4-9559-0fbc9eaf7f36
-caps.latest.revision: 8
-caps.handback.revision: "8"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: be3da02ea7938b96da16a763111139c4f69335ec
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# A.28   Use of num_threads Clause
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Im folgenden Beispiel wird die `num_threads` Clause \([Abschnitt 2.3](../../parallel/openmp/2-3-parallel-construct.md) auf Seite 8\).  Der parallele Bereich wird mit einem Maximum von 10 Threads ausgeführt.  
+# <a name="a28---use-of-numthreads-clause"></a>A.28   Verwenden der num_threads-Klausel
+Das folgende Beispiel veranschaulicht die `num_threads` -Klausel ([Abschnitt 2.3](../../parallel/openmp/2-3-parallel-construct.md) auf Seite "8"). Der parallelen Bereichs ist mit einem Maximum von 10 Threads ausgeführt.  
   
 ```  
 #include <omp.h>  

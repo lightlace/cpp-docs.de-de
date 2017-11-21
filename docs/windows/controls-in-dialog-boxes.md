@@ -1,65 +1,66 @@
 ---
-title: "Controls in Dialog Boxes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controls [C++], dialog boxes"
-  - "dialog box controls, about dialog box controls"
-  - "dialog box controls"
+title: Steuerelemente in Dialogfeldern | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- controls [C++], dialog boxes
+- dialog box controls, about dialog box controls
+- dialog box controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 314bd0fb81c3ff33f268cea4f3f9f2786cbe3c68
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Controls in Dialog Boxes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Steuerelemente können einem Dialogfeld im [Fenster "Toolbox"](../Topic/Toolbox.md) über die [Registerkarte "Dialog\-Editor"](../mfc/dialog-editor-tab-toolbox.md) hinzugefügt werden. Dabei wählen Sie das gewünschte Steuerelement aus und ziehen es in das Dialogfeld.  In der Standardeinstellung wird das Fenster **Toolbox** automatisch im Hintergrund angezeigt.  Bei geöffnetem Dialog\-Editor ist die Toolbox an einer Registerkarte am linken Rand der Projektmappe erkennbar.  Sie können das Fenster **Toolbox** jedoch an seiner Position fixieren, indem Sie in der oberen rechten Fensterecke auf die Schaltfläche **Automatisch im Hintergrund** klicken.  Weitere Informationen dazu, wie Sie das Verhalten dieses Fensters steuern, finden Sie unter [Fensterverwaltung](../Topic/Customizing%20window%20layouts%20in%20Visual%20Studio.md).  
+# <a name="controls-in-dialog-boxes"></a>Steuerelemente in Dialogfeldern
+Sie können Steuerelemente hinzufügen, um ein Dialogfeld mithilfe der [Registerkarte "Dialog-Editor"](../windows/dialog-editor-tab-toolbox.md) in der [Fenster "Toolbox"](/visualstudio/ide/reference/toolbox), können Sie wählen das Steuerelement, Sie möchten, und ziehen sie das Dialogfeld. Standardmäßig wird das Fenster "Toolbox" auf automatisch im Hintergrund festgelegt. Es wird auf den linken Rand der Projektmappe als Registerkarte angezeigt, wenn der Dialog-Editor geöffnet ist. Sie können jedoch das Fenster "Toolbox" an Position anheften, indem Sie auf die **automatisch im Hintergrund** Schaltfläche in der oberen rechten Ecke des Fensters. Weitere Informationen zum Steuern des Verhaltens von diesem Fenster finden Sie unter [Fensterverwaltung](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
   
- Die Drag & Drop\-Methode bietet die schnellste Möglichkeit, einem Dialogfeld Steuerelemente hinzuzufügen, vorhandene Steuerelemente neu zu positionieren oder Steuerelemente von einem Dialogfeld in ein anderes zu verschieben.  Die Position des Steuerelements wird durch eine gepunktete Linie angedeutet, bis es im Dialogfeld abgelegt wird.  Wenn Sie einem Dialogfeld mit Drag & Drop ein Steuerelement hinzufügen, erhält das Steuerelement eine für seinen Typ angemessene Standardhöhe.  
+ Die schnellste Möglichkeit zum Hinzufügen von Steuerelementen zu einem Dialogfeld, vorhandene Steuerelemente neu positionieren oder Steuerelemente von einem Dialogfeld in eine andere verschieben ist die Verwendung die Drag-and-Drop-Methode. Die Position des Steuerelements wird eine gepunktete Linie umrandet, bis sie in das Dialogfeld gelöscht wird. Wenn Sie ein Dialogfeld mit der Drag-and-Drop-Methode ein Steuerelement hinzufügen, erhält das Steuerelement eine Standardhöhe entsprechenden auf diesen Typ des Steuerelements.  
   
- Wenn Sie einem Dialogfeld ein Steuerelement hinzufügen oder dieses neu positionieren, kann die endgültige Position entweder durch Führungslinien oder Ränder bzw. dadurch bestimmt werden, ob Sie das Layoutraster aktiviert haben.  
+ Beim Hinzufügen eines Steuerelements zu einem Dialogfeld oder Positionieren sie möglicherweise die endgültige Position von Führungslinien oder Ränder bestimmt werden oder ob Sie das Layoutraster aktiviert haben.  
   
- Nachdem Sie dem Dialogfeld ein Steuerelement hinzugefügt haben, können Sie Eigenschaften, wie die Beschriftung, im [Eigenschaftenfenster](../Topic/Properties%20Window.md) ändern.  Sie können auch mehrere Steuerelemente markieren und deren Eigenschaften gleichzeitig ändern.  
+ Nachdem Sie das Dialogfeld ein Steuerelement hinzugefügt haben, können Sie Eigenschaften wie z. B. die Beschriftung, im Ändern der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window). Sie können mehrere Steuerelemente auswählen und alle auf einmal, deren Eigenschaften zu ändern.  
   
--   [Hinzufügen, Bearbeiten oder Löschen von Steuerelementen](../mfc/adding-editing-or-deleting-controls.md)  
+-   [Hinzufügen, Bearbeiten oder Löschen von Steuerelementen](adding-editing-or-deleting-controls.md)  
   
--   [Markieren von Steuerelementen](../mfc/selecting-controls.md)  
+-   [Auswählen von Steuerelementen](../windows/selecting-controls.md)  
   
--   [Festlegen der Größe von individuellen Steuerelementen](../mfc/sizing-individual-controls.md)  
+-   [Festlegen der Größe von individuellen Steuerelementen](../windows/sizing-individual-controls.md)  
   
--   [Festlegen der gleichen Breite, Höhe oder Größe für Steuerelemente](../mfc/making-controls-the-same-width-height-or-size.md)  
+-   [Festlegen der gleichen Breite, Höhe oder Größe für Steuerelemente](../windows/making-controls-the-same-width-height-or-size.md)  
   
--   [Festlegen der Größe des Kombinationsfelds und seiner Dropdownliste](../mfc/setting-the-size-of-the-combo-box-and-its-drop-down-list.md)  
+-   [Festlegen der Größe des Kombinationsfelds und seiner Dropdownliste](setting-the-size-of-the-combo-box-and-its-drop-down-list.md)  
   
--   [Hinzufügen von Werten zu einem Kombinationsfeld\-Steuerelement](../mfc/adding-values-to-a-combo-box-control.md)  
+-   [Hinzufügen von Werten zu einem Kombinationsfeld-Steuerelement](../windows/adding-values-to-a-combo-box-control.md)  
   
--   [Festlegen der Breite einer horizontalen Schiebeleiste](../mfc/setting-the-width-of-a-horizontal-scroll-bar.md)  
+-   [Festlegen der Breite einer horizontalen Bildlaufleiste](../windows/setting-the-width-of-a-horizontal-scroll-bar.md)  
   
--   [Anordnung von Steuerelementen in Dialogfeldern](../mfc/arrangement-of-controls-on-dialog-boxes.md)  
+-   [Die Anordnung von Steuerelementen in Dialogfeldern](../windows/arrangement-of-controls-on-dialog-boxes.md)  
   
--   [Benutzerdefinierte Steuerelemente im Dialog\-Editor](../mfc/custom-controls-in-the-dialog-editor.md)  
+-   [Benutzerdefinierte Steuerelemente im Dialog-Editor](custom-controls-in-the-dialog-editor.md)  
   
--   [Definieren von Zugriffstasten](../mfc/defining-mnemonics-access-keys.md)  
+-   [Definieren von Tastenkombinationen](../windows/defining-mnemonics-access-keys.md)  
   
--   [Festlegen der Position und Größe eines Dialogfelds](../mfc/specifying-the-location-and-size-of-a-dialog-box.md)  
+-   [Festlegen der Position und Größe eines Dialogfelds](../windows/specifying-the-location-and-size-of-a-dialog-box.md)  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](https://msdn.microsoft.com/library/f45fce5x.aspx) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](https://msdn.microsoft.com/library/xbx3z216.aspx). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  Win32  
   
-## Siehe auch  
- [Adding Event Handlers for Dialog Box Controls](../mfc/adding-event-handlers-for-dialog-box-controls.md)   
- [Dialogfeld\-Steuerelemente und Variablentypen](../ide/dialog-box-controls-and-variable-types.md)   
- [Dialog Editor](../mfc/dialog-editor.md)
+## <a name="see-also"></a>Siehe auch  
+ [Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente](../windows/adding-event-handlers-for-dialog-box-controls.md)   
+ [Dialogfeld-Steuerelemente und Variablentypen](../ide/dialog-box-controls-and-variable-types.md)   
+ [Dialog-Editor](../windows/dialog-editor.md)
+

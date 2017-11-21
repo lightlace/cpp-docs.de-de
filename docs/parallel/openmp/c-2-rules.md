@@ -1,32 +1,32 @@
 ---
-title: "C.2 Regeln"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: C. 2 Regeln | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 4d52fef7-3eb7-4480-a335-8ed48681092b
-caps.latest.revision: 4
-caps.handback.revision: "4"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0f0b9c7a74c74f014c9ce8e3873635786fe1e560
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# C.2 Regeln
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die Notation wird im Abschnitt 6.1 des C-standard beschrieben. In diesem Anhang Grammatik zeigt die Erweiterungen für die Ausgangssprache Grammatik für die OpenMP-C- und C++-Direktiven.  
+# <a name="c2-rules"></a>C.2 Regeln
+Die Notation wird im Abschnitt 6.1 der C-standard beschrieben. Dieser Anhang Grammatik zeigt die Erweiterungen der Basissprache-Grammatik für die OpenMP-C- und C++-Direktiven.  
   
- **/\* in C++ (ISO/IEC 14882:1998) \*/**  
+ **/\*in C++ (ISO/IEC 14882:1998)\*/**  
   
  *Anweisung Seq*:  
   
- *Anweisung*  
+ *statement*  
   
  *OpenMP-Direktive*  
   
@@ -34,31 +34,31 @@ Die Notation wird im Abschnitt 6.1 des C-standard beschrieben. In diesem Anhang 
   
  *Anweisung Seq-Direktive (OpenMP)*  
   
- **/\* in C90 (ISO/IEC 9899:1990) \*/**  
+ **/\*in C90 (ISO/IEC 9899:1990)\*/**  
   
- *Statement-List,*:  
+ *statement-list*:  
   
- *Anweisung*  
+ *statement*  
   
  *OpenMP-Direktive*  
   
- *Statement-List-Anweisung*  
+ *statement-list-Anweisung*  
   
- *Statement-List, Openmp-Direktive*  
+ *Anweisung-List-Anweisung (OpenMP)*  
   
- **/\* in C99 (ISO/IEC 9899:1999) \*/**  
+ **/\*in C99 (ISO/IEC 9899: 1999)\*/**  
   
  *Block-Element*:  
   
- *Deklaration*  
+ *declaration*  
   
- *Anweisung*  
+ *statement*  
   
  *OpenMP-Direktive*  
   
  *Anweisung*:  
   
- **/\* Standard-Anweisungen \*/**  
+ **/\*Standard-Anweisungen\*/**  
   
  *OpenMP-Konstrukt*  
   
@@ -90,17 +90,17 @@ Die Notation wird im Abschnitt 6.1 des C-standard beschrieben. In diesem Anhang 
   
  *Flush-Direktive*  
   
- *strukturierte Block*:  
+ *strukturierten Block*:  
   
- *Anweisung*  
+ *statement*  
   
  *Parallel-Konstrukt*:  
   
- *Parallel-Direktive strukturiert-block*  
+ *Parallel-Direktive strukturierten block*  
   
  *Parallel-Direktive*:  
   
- **# Pragma Omp-parallel**  *Parallel-Klausel*Optseq *neue-Zeile*  
+ **# Pragma Omp parallel***Parallel-Klausel*Optseq *neue-Zeile*   
   
  *Parallel-Klausel*:  
   
@@ -116,7 +116,7 @@ Die Notation wird im Abschnitt 6.1 des C-standard beschrieben. In diesem Anhang 
   
  *für Konstrukt*:  
   
- *für die Richtlinie Iteration-Anweisung*  
+ *für die Richtlinie-iterationsanweisung*  
   
  *für die Richtlinie*:  
   
@@ -128,21 +128,21 @@ Die Notation wird im Abschnitt 6.1 des C-standard beschrieben. In diesem Anhang 
   
  *Data-Klausel*  
   
- **NOWAIT**  
+ **nowait**  
   
- *eindeutige-für-Klausel*:  
+ *eindeutige für Klausel*:  
   
  **sortiert**  
   
- **Zeitplan (** *Zeitplan Art* **)**  
+ **Zeitplan (** *Plantyp* **)**  
   
- **Zeitplan (** *Zeitplan Art* **,** *Ausdruck* **)**  
+ **Zeitplan (** *Plantyp* **,** *Ausdruck* **)**  
   
- *Zeitplan-Art*:  
+ *Plantyp*:  
   
- **statische**  
+ **static**  
   
- **Dynamische**  
+ **dynamic**  
   
  **Einführung**  
   
@@ -150,9 +150,9 @@ Die Notation wird im Abschnitt 6.1 des C-standard beschrieben. In diesem Anhang 
   
  *Abschnitte-Konstrukt*:  
   
- *Sections-Direktive Abschnitt-Bereich*  
+ *Abschnitte-Direktive Abschnitt-Bereich*  
   
- *Sections-Direktive*:  
+ *Abschnitte-Direktive*:  
   
  **# Pragma Omp Abschnitte** *Abschnitte-Klausel*Optseq *neue-Zeile*  
   
@@ -160,25 +160,25 @@ Die Notation wird im Abschnitt 6.1 des C-standard beschrieben. In diesem Anhang 
   
  *Data-Klausel*  
   
- **NOWAIT**  
+ **nowait**  
   
  *Abschnitt Bereich*:  
   
- *{Abschnitt Sequenz}*  
+ *{Abschnitt sequenzielles}*  
   
  *Abschnitt Sequenz*:  
   
- *Abschnitt-Direktive*opt *strukturiert-Block*  
+ *abschnittsdirektive*opt *strukturierten Block*  
   
- *Abschnitt Sequenz Abschnitt Richtlinie strukturiert-block*  
+ *strukturierte abschnittsdirektive Abschnitt Sequenz-block*  
   
- *Abschnitt-Direktive*:  
+ *abschnittsdirektive*:  
   
  **# Pragma Omp Abschnitt** *neue-Zeile*  
   
  *Single-Konstrukt*:  
   
- *Single-Direktive strukturiert-block*  
+ *Single-Direktive strukturierten block*  
   
  *Single-Direktive*:  
   
@@ -188,15 +188,15 @@ Die Notation wird im Abschnitt 6.1 des C-standard beschrieben. In diesem Anhang 
   
  *Data-Klausel*  
   
- **NOWAIT**  
+ **nowait**  
   
  *Parallel-für-Konstrukt*:  
   
- *Parallel-für-Directive Iteration-Anweisung*  
+ *Parallel-für-Direktive-iterationsanweisung*  
   
- *Parallele für Richtlinie*:  
+ *Parallel-für-Direktive*:  
   
- **# Pragma Omp-parallel für** *Parallel-for-Klausel*Optseq *neue-Zeile*  
+ **# Pragma Omp parallel für** *Parallel-for-Klausel*Optseq *neue-Zeile*  
   
  *Parallel-for-Klausel*:  
   
@@ -208,11 +208,11 @@ Die Notation wird im Abschnitt 6.1 des C-standard beschrieben. In diesem Anhang 
   
  *Parallel-Abschnitten-Konstrukt*:  
   
- *Parallel-Abschnitten-Richtlinie im Abschnitt-Bereich*  
+ *Parallel-Abschnitten-Direktive Abschnitt-Bereich*  
   
  *Parallel-Abschnitten-Direktive*:  
   
- **# Pragma Omp parallelen Abschnitten** *Parallel-Abschnitten-Klausel*Optseq *neue-Zeile*  
+ **# Pragma Omp parallel Abschnitte** *Parallel-Abschnitten-Klausel*Optseq *neue-Zeile*  
   
  *Parallel-Abschnitten-Klausel*:  
   
@@ -222,7 +222,7 @@ Die Notation wird im Abschnitt 6.1 des C-standard beschrieben. In diesem Anhang 
   
  *Master-Konstrukt*:  
   
- *Master-Direktive strukturiert-block*  
+ *Master-Direktive strukturierten block*  
   
  *Master-Direktive*:  
   
@@ -230,7 +230,7 @@ Die Notation wird im Abschnitt 6.1 des C-standard beschrieben. In diesem Anhang 
   
  *Critical-Konstrukt*:  
   
- *Critical-Direktive strukturiert-block*  
+ *Critical-Direktive strukturierten block*  
   
  *Critical-Direktive*:  
   
@@ -246,7 +246,7 @@ Die Notation wird im Abschnitt 6.1 des C-standard beschrieben. In diesem Anhang 
   
  *Atomic-Konstrukt*:  
   
- *Atomic-Direktive Ausdrucks*  
+ *Ausdrucksanweisung Atomic-Direktive*  
   
  *Atomic-Direktive*:  
   
@@ -254,15 +254,15 @@ Die Notation wird im Abschnitt 6.1 des C-standard beschrieben. In diesem Anhang 
   
  *Flush-Direktive*:  
   
- **# Pragma Omp leeren** *Flush Vars*opt *neue-Zeile*  
+ **# Pragma Omp flush** *leeren var*opt *neue-Zeile*  
   
  *Flush-var*:  
   
- *(Variable-Liste)*  
+ *(Variablenliste)*  
   
  *geordnete Konstrukt*:  
   
- *geordnete Richtlinie strukturiert-block*  
+ *sortiert-Direktive strukturierten block*  
   
  *geordnete Richtlinie*:  
   
@@ -270,47 +270,47 @@ Die Notation wird im Abschnitt 6.1 des C-standard beschrieben. In diesem Anhang 
   
  *Deklaration*:  
   
- **/\* Standard-Deklarationen \*/**  
+ **/\*Standard-Deklarationen\*/**  
   
  *Threadprivate-Direktive*  
   
  *Threadprivate-Direktive*:  
   
- **# Pragma Omp Threadprivate (** *Variablenliste*  **)** *neue-Zeile*  
+ **# Pragma Omp Threadprivate (** *Variablenliste***)** *neue-Zeile*   
   
  *Data-Klausel*:  
   
  **Private (** *Variablenliste* **)**  
   
- **Copyprivate (**  *Variablenliste*  **)**  
+ **Copyprivate (***Variablenliste***)**   
   
- **Firstprivate (**  *Variablenliste*  **)**  
+ **Firstprivate (***Variablenliste***)**   
   
- **Lastprivate (** *Variablenliste*  **)**  
+ **Lastprivate (** *Variablenliste***)**   
   
- **Shared (** *Variablenliste* **)**  
+ **Freigegebene (** *Variablenliste* **)**  
   
  **Standard (freigegeben)**  
   
- **Standardwert (keine)**  
+ **Standard (keine)**  
   
- **Reduzierung (**  *Reduction-Operator*  **:**  *Variablenliste*  **)**  
+ **Verringerung (***Reduction-Operator***:***Variablenliste***)**   
   
- **Copyin (**  *Variablenliste*  **)**  
+ **Copyin (***Variablenliste***)**   
   
  *Reduction-Operator*:  
   
- *Einer der*: **+ \* -& ^ & #124; & & & #124; & #124;**  
+ *Einer der*:  **+  \* -& ^ &#124; & & &#124; &#124;**  
   
- **/\* in C \*/**  
+ **/\*in C\*/**  
   
  *Variablenliste*:  
   
- *Bezeichner*  
+ *identifier*  
   
  *Variablenliste* **,** *Bezeichner*  
   
- **/\* in C++ \*/**  
+ **/\*in C++\*/**  
   
  *Variablenliste*:  
   

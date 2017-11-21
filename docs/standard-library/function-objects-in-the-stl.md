@@ -4,43 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - functors
 - C++ Standard Library, functors
 - C++ Standard Library, function objects
 - function objects
 ms.assetid: 85f8a735-2c7b-4f10-9c4d-95c666ec4192
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 7050def4c0350e4bdbba3baf348fe5b971e0b20a
-ms.contentlocale: de-de
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 90b37372123031026017e23c683a5a65555577ca
+ms.sourcegitcommit: b3ffb717e2af6ca8072b56bf4aa96b3afff73414
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/30/2017
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>Funktionsobjekte in der C++-Standardbibliothek
 Ein *Funktionsobjekt*oder *Funktionselement*ist ein beliebiger Typ, der „operator()“ implementiert. Dieser Operator wird als *Aufrufoperator* oder manchmal als *Anwendungsoperator*bezeichnet. Die C++-Standardbibliothek verwendet Funktionsobjekte hauptsächlich als Sortierungskriterien für Container und in Algorithmen.  
@@ -50,15 +32,17 @@ Ein *Funktionsobjekt*oder *Funktionselement*ist ein beliebiger Typ, der „opera
 ## <a name="creating-a-function-object"></a>Erstellen eines Funktionsobjekts  
  Um ein Funktionsobjekt zu erstellen, erstellen Sie einen Typ, und implementieren Sie „operator()“, z. B.:  
   
-class-Funktionselement  
-   {  
-   public:  
-   int operator()(int a, int b)  
-   {  
-   return a <b;  
-   }  
-   };  
-  
+```
+class Functor  
+{  
+public:  
+    int operator()(int a, int b)  
+    {  
+        return a < b;  
+    }  
+};  
+```
+
  Die letzte Zeile der `main` -Funktion zeigt, wie Sie das Funktionsobjekt aufrufen. Dieser Aufruf ähnelt einem Aufruf einer Funktion. Tatsächlich wird aber „operator()“ des Typs „Funktionselement“ aufgerufen. Diese Ähnlichkeit zwischen dem Aufruf eines Funktionsobjekts und einer Funktion hat zum Begriff „Funktionsobjekt“ geführt.  
   
 ## <a name="function-objects-and-containers"></a>Funktionsobjekte und Container  
@@ -88,5 +72,4 @@ ForwardIterator remove_if(
   
 ## <a name="see-also"></a>Siehe auch  
  [C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)
-
 

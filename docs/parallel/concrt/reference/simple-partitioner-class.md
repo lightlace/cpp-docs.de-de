@@ -1,46 +1,28 @@
 ---
-title: Simple_partitioner-Klasse | Microsoft-Dokumentation
+title: Simple_partitioner-Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - simple_partitioner
 - PPL/concurrency::simple_partitioner
 - PPL/concurrency::simple_partitioner::simple_partitioner
-dev_langs:
-- C++
-helpviewer_keywords:
-- simple_partitioner class
+dev_langs: C++
+helpviewer_keywords: simple_partitioner class
 ms.assetid: d7e997af-54d1-43f5-abe0-def72df6edb3
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 08d378c841fd9181fe9a2cf918bde9fe3ebbdc32
-ms.contentlocale: de-de
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: a9e4526f86423d1b374bf08a6837e47afb884960
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="simplepartitioner-class"></a>simple_partitioner-Klasse
 Die `simple_partitioner`-Klasse stellt eine statische Partitionierung des Bereichs dar, der von `parallel_for` durchlaufen wird. Mit dem Partitionierer wird der Bereich in Blöcke unterteilt, sodass jeder Block mindestens die von der Segmentgröße angegebene Anzahl von Iterationen enthält.  
@@ -89,4 +71,3 @@ explicit simple_partitioner(_Size_type _Chunk_size);
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)
-

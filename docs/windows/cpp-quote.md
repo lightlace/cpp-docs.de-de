@@ -1,32 +1,30 @@
 ---
-title: "cpp_quote | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.cpp_quote"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cpp_quote attribute"
+title: Cpp_quote | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.cpp_quote
+dev_langs: C++
+helpviewer_keywords: cpp_quote attribute
 ms.assetid: f75327ff-42bd-498b-9177-7ffa25427e1f
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cc91c884bb58ce21e4419a8082f15792a0fc2246
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# cpp_quote
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gibt die angegebene Zeichenfolge in Anführungszeichen, ohne dass die generierten IDL\-Datei ab.  
+# <a name="cppquote"></a>cpp_quote
+Gibt die angegebene Zeichenfolge, ohne die Anführungszeichen in der generierten IDL-Datei aus.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -35,34 +33,33 @@ Gibt die angegebene Zeichenfolge in Anführungszeichen, ohne dass die generierte
 ) ];  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  *statement*  
- Wechselstrom\-Anweisung.  
+ Eine C#-Anweisung.  
   
-## Hinweise  
- Das Attribut **cpp\_quote** C\+\+ ist nützlich, wenn Präprozessordirektiven in eine IDL\-Datei einfügen möchten.  
+## <a name="remarks"></a>Hinweise  
+ Die **Cpp_quote** C++-Attribut ist nützlich, wenn Sie eine Präprozessordirektive in einer IDL-Datei aufnehmen möchten.  
   
- Sie können auch **cpp\_quote** verwenden und eine H\-Datei als Teil der MIDL\-Kompilierung generieren.  Wenn Sie beispielsweise Headerdatei Ein C\+\+\-Compiler verfügen, die Attribute IDL C\+\+ verwendet, aber diese Datei für jede Aufgabe nicht verwenden können, können Sie sie kompilieren, um eine MIDL\-generierte H\-Datei erstellen, die Sie berücksichtigen sollten in Erwägung ziehen.  
+ Sie können auch **Cpp_quote** und .h-Datei als Teil der Kompilierung MIDL generiert werden soll. Beispielsweise, wenn Sie eine C++-Headerdatei enthalten, die verwendet der C++-IDL-Attribute, aber verwenden Sie diese Datei kann nicht für eine Aufgabe, können Sie kompilieren es dann zum Erstellen einer MIDL-generierten h-Datei, die Sie verwenden sollten.  
   
- Das **cpp\_quote**\-Attribut verfügt über die gleichen Funktionen wie das [cpp\_quote](http://msdn.microsoft.com/library/windows/desktop/aa366765) MIDL\-Attribut.  
+ Die **Cpp_quote** Attribut hat die gleiche Funktionalität wie die [Cpp_quote](http://msdn.microsoft.com/library/windows/desktop/aa366765) MIDL-Attribut.  
   
-## Beispiel  
- Weitere Informationen finden Sie im Beispiel für die Verwendung [dual](../windows/dual.md) finden Sie ein Beispiel, wie **cpp\_quote**verwendet.  
+## <a name="example"></a>Beispiel  
+ Siehe das Beispiel für [duale](../windows/dual.md) verwenden Sie ein Beispiel für die Verwendung **Cpp_quote**.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
 |**Betrifft**|Überall|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Keine|  
+|**Ungültige Attribute**|Keine|  
   
- Weitere Informationen über das kontexte finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Stand\-Alone Attributes](../windows/stand-alone-attributes.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [IDL-Attribute](../windows/idl-attributes.md)   
+ [Eigenständige Attribute](../windows/stand-alone-attributes.md)   

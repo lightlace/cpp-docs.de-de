@@ -1,52 +1,52 @@
 ---
-title: "Gewusst wie: Diagnose und Behebung von Kompatibilit&#228;tsproblemen bei Assemblys (C++/CLI)"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Kompatibilität, Von Assemblys"
-  - "Ausnahmen, Ermitteln von abweichendem Verhalten"
-  - "Versionskontrolle"
-  - "Versionskontrolle, Ermitteln von Konflikten"
+title: "Vorgehensweise: Diagnose und Behebung von Kompatibilitätsproblemen bei Assemblys (C + c++ / CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- versioning, diagnosing conflicts
+- versioning
+- exceptions, diagnosing odd behavior
+- compatibility, between assemblies
 ms.assetid: 297c71e3-04a8-4d24-a5dc-b04a2c5cc6fb
-caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9968981e8fd06a5c94383e1dee40c9b44169b4ee
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Gewusst wie: Diagnose und Behebung von Kompatibilit&#228;tsproblemen bei Assemblys (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In diesem Thema werden die Folgen erläutert, die auftreten können, wenn die Version einer Assembly, auf die während der Kompilierung verwiesen wird, nicht mit der Version kompatibel ist, auf die während der Laufzeit verwiesen wird. Es wird außerdem erläutert, wie dieses Problem vermieden werden kann.  
+# <a name="how-to-diagnose-and-fix-assembly-compatibility-problems-ccli"></a>Gewusst wie: Diagnose und Behebung von Kompatibilitätsproblemen bei Assemblys (C++/CLI)
+In diesem Thema wird erläutert, was passieren kann, wenn die Version einer Assembly verwiesen wird, zum Zeitpunkt der Kompilierung nicht mit der Version der Assembly verwiesen wird, zur Laufzeit übereinstimmt und wie Sie das Problem zu vermeiden.  
   
- Beim Kompilieren einer Assembly kann unter Umständen mit der `#using`\-Syntax auf andere Assemblys verwiesen werden.  Während der Kompilierung greift der Compiler auf diese Assemblys zu.  Die Informationen aus diesen Assemblys werden verwendet, um Optimierungsentscheidungen zu treffen.  
+ Wenn eine Assembly kompiliert wird, können andere Assemblys verwiesen werden, mit der `#using` Syntax. Diese Assemblys werden bei der Kompilierung durch den Compiler zugegriffen. Informationen über diese Assemblys wird verwendet, um Optimierung Entscheidungen zu treffen.  
   
- Wenn jedoch die Assembly, auf die verwiesen wird, verändert und neu kompiliert wurde, aber die davon abhängige, verweisende Assembly nicht neu kompiliert wird, dann kann es sein, dass die Assemblys nicht mehr kompatibel sind.  Optimierungsentscheidungen, die vorher gültig waren, sind aufgrund der neuen Assemblyversion möglicherweise nicht mehr richtig.  Diese Inkompatibilitäten können verschiedene Laufzeitfehler zur Folge haben.  In solchen Fällen werden keine spezifischen Ausnahmen erzeugt.  Wie der Fehler zur Laufzeit gemeldet wird, hängt von der Art der Codeänderung ab, die das Problem verursacht hat.  
+ Wenn jedoch die referenzierte Assembly geändert und neu kompiliert wird, und kompilieren Sie nicht die verweisende Assembly, die davon abhängigen ist neu, die Assemblys möglicherweise nicht kompatibel sein. Optimierung Entscheidungen, die bei gültig waren möglicherweise zuerst nicht in Bezug auf die neue Version der Assembly richtig sind. Aufgrund dieser Inkompatibilitäten können verschiedene Laufzeitfehler auftreten. Es gibt keine spezifischen Ausnahmen, die in einem solchen Fall erzeugt werden. Die Möglichkeit, die der Fehler zur Laufzeit gemeldet wird, hängt von den Charakter der Änderung des Codes, die das Problem verursacht hat.  
   
- Solange die gesamte Anwendung für die freigegebene Version des Produkts neu erstellt wird, sollten diese Fehler im endgültigen Produktionscode kein Problem darstellen.  Assemblys, die für die Öffentlichkeit freigegeben werden, sollten mit einer offiziellen Versionsnummer gekennzeichnet werden, um derartige Probleme zu vermeiden.  Weitere Informationen finden Sie unter [Assemblyversionen](../Topic/Assembly%20Versioning.md).  
+ Diese Fehler sollte ein Problem in der endgültigen Produktionscode nicht, solange die gesamte Anwendung für die freigegebene Version Ihres Produkts neu erstellt wird. Assemblys, die öffentlich freigegeben werden sollte mit einer Anzahl offiziellen Version gekennzeichnet werden, um sicherzustellen, dass diese Probleme vermieden werden. Weitere Informationen dazu finden Sie unter [Assemblyversionen](/dotnet/framework/app-domains/assembly-versioning).  
   
-### Diagnose und Behebung eines Inkompatibilitätsfehlers  
+### <a name="diagnosing-and-fixing-an-incompatibility-error"></a>Diagnostizieren und Beheben eines Inkompatibilitätsfehlers  
   
-1.  Wenn Laufzeitausnahmen oder andere Fehlerbedingungen in Code auftreten, der einen Verweis auf eine andere Assembly enthält, und keine andere Ursache festgestellt werden kann, liegt möglicherweise eine veraltete Assembly vor.  
+1.  Wenn Sie auftreten Laufzeitausnahmen oder andere fehlerbedingungen, die im Code auftreten, die auf eine andere Assembly verweist, und keine anderen identifizierten Ursache haben, können Sie mit einer Assembly nicht mehr aktuell arbeiten.  
   
-2.  Isolieren und reproduzieren Sie zuerst die Ausnahme oder Fehlerbedingung.  Ein Problem, das aufgrund einer durch überholte Daten verursachten Ausnahme auftritt, sollte reproduzierbar sein.  
+2.  Zunächst isolieren, und die Ausnahme oder andere Fehler zu reproduzieren. Ein Problem, das aufgrund einer veralteten Ausnahme auftritt, sollten reproduziert werden.  
   
-3.  Überprüfen Sie die Timestamps aller Assemblys, auf die in der Anwendung verwiesen wird.  
+3.  Überprüfen Sie die Timestamps aller Assemblys, auf die in Ihrer Anwendung verwiesen wird.  
   
-4.  Wenn einer der Timestamps der Assemblys, auf die verwiesen wird, neuer als der Timestamp der letzten Kompilierung der Anwendung ist, dann ist die Anwendung veraltet.  Kompilieren Sie in diesem Fall die Anwendung mit der neuesten Version der Assembly, und nehmen Sie alle erforderlichen Änderungen am Code vor.  
+4.  Wenn die Zeitstempel von alle referenzierten Assemblys höher als der Zeitstempel der letzten Kompilierung der Anwendung sind, ist Ihre Anwendung nicht mehr aktuell. In diesem Fall wird kompilieren Sie die Anwendung mit der aktuellen Assembly neu, und stellen Sie alle codeänderungen, die erforderlich sind.  
   
-5.  Führen Sie die Anwendung erneut aus, und versuchen Sie, das Problem zu reproduzieren. Vergewissern Sie sich, dass die Ausnahme nicht mehr auftritt.  
+5.  Führen Sie die Anwendung erneut aus, führen Sie die Schritte, die das Problem zu reproduzieren, und stellen Sie sicher, dass die Ausnahme nicht auftritt.  
   
-## Beispiel  
- Das folgende Programm veranschaulicht das Problem, indem der Zugriff auf eine Methode reduziert und anschließend versucht wird, auf diese Methode in einer anderen Assembly zuzugreifen, ohne eine Neukompilierung durchzuführen.  Versuchen Sie, zuerst `changeaccess.cpp` zu kompilieren.  Dies ist die Assembly, auf die verwiesen wird und die sich ändert.  Kompilieren Sie anschließend `referencing.cpp`.  Die Kompilierung wird erfolgreich durchgeführt.  Reduzieren Sie jetzt den Zugriff der aufgerufenen Methode.  Kompilieren Sie erneut `changeaccess.cpp` mit dem Flag `/DCHANGE_ACCESS`.  Dadurch wird die Methode geschützt – und nicht privat – und kann somit länger legal aufgerufen werden.  Führen Sie die Anwendung erneut aus, ohne `referencing.exe` neu zu kompilieren.  Daraufhin wird die Ausnahme <xref:System.MethodAccessException> ausgelöst werden.  
+## <a name="example"></a>Beispiel  
+ Das folgende Programm veranschaulicht das Problem, indem der Zugriff auf eine Methode reduziert und Aufrufen dieser Methode in einer anderen Assembly ohne erneutes kompilieren möchten. Kompilieren Sie `changeaccess.cpp` erste. Dies ist die referenzierte Assembly, wodurch geändert werden. Kompilieren Sie dann `referencing.cpp`. Die Kompilierung erfolgreich ausgeführt wird. Reduzieren Sie jetzt den Zugriff auf die aufgerufene Methode. RECOMPILE `changeaccess.cpp` mit dem Flag `/DCHANGE_ACCESS`. Dadurch wird die Methode geschützten, anstatt privat ist, damit diese mehr gesetzlich aufgerufen werden können. Ohne erneute Kompilierung `referencing.exe`, führen Sie die Anwendung erneut aus. Eine Ausnahme <xref:System.MethodAccessException> führt.  
   
 ```  
 // changeaccess.cpp  
@@ -99,6 +99,6 @@ int main() {
   
 ```  
   
-## Siehe auch  
- [\#using\-Direktive](../preprocessor/hash-using-directive-cpp.md)   
- [Verwaltete Typen](../dotnet/managed-types-cpp-cli.md)
+## <a name="see-also"></a>Siehe auch  
+ [#using-Direktive](../preprocessor/hash-using-directive-cpp.md)   
+ [Verwaltete Typen (C++/CLI)](../dotnet/managed-types-cpp-cli.md)

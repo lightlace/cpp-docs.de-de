@@ -1,62 +1,62 @@
 ---
-title: "Setting the Size of the Combo Box and Its Drop-Down List | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.dialog.combo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "combo boxes, sizing"
-  - "controls [C++], sizing"
+title: "Festlegen der Größe des Kombinationsfelds und seiner Dropdownliste | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.dialog.combo
+dev_langs: C++
+helpviewer_keywords:
+- combo boxes, sizing
+- controls [C++], sizing
 ms.assetid: 51fb53cf-9ddf-4a20-962e-8553938e55ee
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9edef494f88bc5a5b4e8efdab94b70d233fcd59f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Setting the Size of the Combo Box and Its Drop-Down List
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die Größe eines Kombinationsfelds kann geändert werden, wenn Sie es dem Dialogfeld hinzufügen.  Zusätzlich kann die Größe des Dropdown\-Listenfelds festgelegt werden.  
+# <a name="setting-the-size-of-the-combo-box-and-its-drop-down-list"></a>Festlegen der Größe des Kombinationsfelds und seiner Dropdownliste
+Sie können ein Kombinationsfeld Größe, wenn Sie ihn zum Dialogfeld hinzufügen. Sie können auch die Größe des im Dropdown-Listenfeld angeben.  
   
-### So legen Sie die Größe eines Kombinationsfelds fest  
+### <a name="to-size-a-combo-box"></a>Ein Kombinationsfeld Größe anpassen  
   
-1.  Markieren Sie das Kombinationsfeld\-Steuerelement im Dialogfeld.  
+1.  Wählen Sie das Kombinationsfeld Steuerelement in einem Dialogfeld an.  
   
-     Zu Beginn sind lediglich der rechte und linke Ziehpunkt aktiviert.  
+     Zu Beginn sind nur den rechten und linken Ziehpunkt aktiv.  
   
-2.  Legen Sie die Breite des Kombinationsfelds mithilfe der Ziehpunkte fest.  
+2.  Verwenden Sie den Ziehpunkt, um die Breite des Kombinationsfelds festzulegen.  
   
- Sie können auch die vertikale Größe des zum Kombinationsfeld gehörigen Dropdownbereichs festlegen.  
+ Sie können auch die vertikale Größe des der Dropdownteil des Kombinationsfelds festlegen.  
   
-#### So legen Sie die Größe der Dropdownliste eines Kombinationsfelds fest  
+#### <a name="to-set-the-size-of-the-combo-box-drop-down-list"></a>Die Größe des Kombinationsfelds Dropdown-Listenfeld festlegen  
   
-1.  Klicken Sie auf den Dropdownpfeil rechts neben dem Kombinationsfeld.  
+1.  Klicken Sie auf die Schaltfläche Dropdown-Pfeil rechts neben dem Kombinationsfeld.  
   
-     ![Pfeil in einem Kombinationsfeld in einem MFC&#45;Projekt](../mfc/media/vccomboboxarrow.png "vcComboBoxArrow")  
+     ![Pfeil in einem Kombinationsfeld in einem MFC-Projekt](../mfc/media/vccomboboxarrow.gif "VcComboBoxArrow")  
   
-     Die Kontur des Steuerelements ändert sich, um die Größe des Kombinationsfelds mit dem erweiterten Dropdown\-Listenbereich widerzuspiegeln.  
+     Die Gliederung des Steuerelements ändert die Größe des Kombinationsfelds mit der Dropdownliste-Bereich erweitert angezeigt werden soll.  
   
-2.  Verwenden Sie den unteren Ziehpunkt, um die ursprüngliche Größe des Dropdown\-Listenbereichs zu ändern.  
+2.  Verwenden Sie den unteren Ziehpunkt, um die Anfangsgröße des Bereichs Dropdown-Liste zu ändern.  
   
-     ![Größenänderung des Kombinationsfelds in einem MFC&#45;Projekt](../mfc/media/vccomboboxsizing.png "vcComboBoxSizing")  
+     ![Kombinationsfeld &#45; Box-Sizing in einem MFC-Projekt](../mfc/media/vccomboboxsizing.gif "VcComboBoxSizing")  
   
-3.  Klicken Sie erneut auf den Dropdownpfeil, um den Dropdown\-Listenbereich des Kombinationsfelds zu schließen.  
+3.  Klicken Sie auf den Dropdown Pfeil erneut aus, um den Teil der Dropdown-Liste des Kombinationsfelds zu schließen.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](https://msdn.microsoft.com/library/f45fce5x.aspx) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](https://msdn.microsoft.com/library/xbx3z216.aspx). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
-### Anforderungen  
+### <a name="requirements"></a>Anforderungen  
  Win32  
   
-## Siehe auch  
- [Adding Values to a Combo Box Control](../mfc/adding-values-to-a-combo-box-control.md)   
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Hinzufügen von Werten zu einem Kombinationsfeld-Steuerelement](../windows/adding-values-to-a-combo-box-control.md)   
+ [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)   
  [Steuerelemente](../mfc/controls-mfc.md)
+

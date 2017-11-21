@@ -1,32 +1,30 @@
 ---
-title: "uuid (C++ Attributes)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.uuid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "uuid attribute"
+title: UUID (C++-Attribute) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.uuid
+dev_langs: C++
+helpviewer_keywords: uuid attribute
 ms.assetid: 90562a94-5e28-451b-a4b0-cadda7f66efe
-caps.latest.revision: 11
-caps.handback.revision: "11"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b2a4c4ce8023901eb901555519c38c2fa07500dc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# uuid (C++ Attributes)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gibt die eindeutige ID für eine Klasse oder eine Schnittstelle an.  
+# <a name="uuid-c-attributes"></a>uuid (C++-Attribute)
+Gibt die eindeutige ID für eine Klasse oder Schnittstelle an.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -35,39 +33,38 @@ Gibt die eindeutige ID für eine Klasse oder eine Schnittstelle an.
 ) ]  
 ```  
   
-#### Parameter  
- *uuid*  
- Ein eindeutiger Bezeichner, 128\-Bit.  
+#### <a name="parameters"></a>Parameter  
+ *UUID*  
+ Ein 128-Bit, eindeutigen Bezeichner.  
   
-## Hinweise  
- Wenn die Definition einer Klasse oder Schnittstelle das Attribut nicht `uuid` C\+\+ angibt, dann stellt der Visual C\+\+\-Compiler ein.  Wenn Sie `uuid`angeben, müssen Sie die Anführungszeichen einschließen.  
+## <a name="remarks"></a>Hinweise  
+ Wenn die Definition der eine Schnittstelle oder Klasse keine der `uuid` C++-Attribut, und klicken Sie dann auf Visual C++-Compilers bieten eine. Geben Sie bei einem `uuid`, Sie müssen die Anführungszeichen einschließen.  
   
- Wenn Sie nicht `uuid`angeben, generiert der Compiler das gleiche GUID für Klassen oder Schnittstellen mit demselben Namen in verschiedenen Attribut projekten auf einem Computer.  
+ Wenn Sie keinen angeben `uuid`, generiert der Compiler dieselbe GUID für Schnittstellen oder Klassen mit dem gleichen Namen in verschiedenen Attribut Projekte auf einem Computer.  
   
- Sie können Uuidgen.exe oder Guidgen.exe verwenden, um zu generieren, eindeutige ID besitzen.  \(Irgendeinen dieser Tools, und klicken Sie **Start** klicken Sie im Menü **Ausführen** ausführen.  Geben Sie dann den Namen des erforderlichen Tools ein.\)  
+ Uuidgen.exe oder Guidgen.exe können um Ihren eigenen eindeutigen IDs zu generieren. (Wenn eines dieser Tools ausführen möchten, klicken Sie auf **starten** , und klicken Sie auf **ausführen** auf das Menü. Geben Sie dann den Namen des Tools erforderlich.)  
   
- Wenn in einem Projekt verwendet wird, die nicht außerdem ATL verwendet, das `uuid`\-Attribut ist dasselbe wie anzugeben, den [uuid](../cpp/uuid-cpp.md) declspec\-Modifizierer angibt.  Um `uuid` einer Klasse abzurufen, können Sie mithilfe [\_\_uuidof](../cpp/uuidof-operator.md)  
+ Wenn in einem Projekt verwendet, die nicht gleichzeitig ATL verwenden, geben an, die `uuid` Attribut entspricht der Angabe der [Uuid](../cpp/uuid-cpp.md) __declspec-Modifizierer. Zum Abrufen der `uuid` einer Klasse können Sie [__uuidof](../cpp/uuidof-operator.md)  
   
-## Beispiel  
- Weitere Informationen finden Sie im [bindbar](../windows/bindable.md) Beispiel für eine Beispiel verwenden aus `uuid`.  
+## <a name="example"></a>Beispiel  
+ Finden Sie unter der [bindbare](../windows/bindable.md) Beispiel für ein Beispiel für die Verwendung von `uuid`.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
-|**Betrifft**|**Klasse**, `struct`, `interface`, **Union**, `enum`|  
+|**Betrifft**|**Klasse**, `struct`, `interface`, **Union**,`enum`|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Keine|  
+|**Ungültige Attribute**|Keine|  
   
- Weitere Informationen über das kontexte finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [uuid](http://msdn.microsoft.com/library/windows/desktop/aa367302)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [IDL-Attribute](../windows/idl-attributes.md)   
+ [Schnittstellenattribut](../windows/interface-attributes.md)   
+ [Klassenattribute](../windows/class-attributes.md)   
+ [TypeDef, Enum, Union- und Struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [UUID](http://msdn.microsoft.com/library/windows/desktop/aa367302)   

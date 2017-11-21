@@ -1,46 +1,47 @@
 ---
-title: "Window Panes (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.bitmap"
-  - "vc.editors.icon"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "graphics editor [C++]"
-  - "Image editor [C++], panes"
+title: "Fensterbereiche (Bildbearbeitung für Symbole) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.editors.bitmap
+- vc.editors.icon
+dev_langs: C++
+helpviewer_keywords:
+- graphics editor [C++]
+- Image editor [C++], panes
 ms.assetid: d66ea5b3-e2e2-4fc4-aa99-f50022cc690e
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ce9716e810f48c237eabb0ea11b222e3590d795b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Window Panes (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="window-panes-image-editor-for-icons"></a>Fensterbereiche (Bildbearbeitung für Symbole)
+Die Grafik-Editor-Fenster zeigt ein Bild in der Regel in zwei Bereiche, die durch eine Trennleiste getrennt. Eine Sicht ist die tatsächliche Größe und der andere wird vergrößert (der Standard-Vergrößerungsfaktor ist 6). Die Ansichten auf diese beiden Bereiche werden automatisch aktualisiert: von Ihnen in einem Bereich vorgenommenen Änderungen werden sofort in den anderen angezeigt. Die beiden Bereiche erleichtern Ihnen, auf eine vergrößerte Ansicht des Bilds, zu arbeiten, in dem Sie können einzelne Pixel unterscheiden und, zur gleichen Zeit, beobachten Sie die Auswirkungen Ihrer Arbeit für die Sicht tatsächliche Größe des Bilds.  
+  
+ Im linken Bereich wird verwendet, wie viel Speicherplatz wie (bis zur Hälfte des Fensters Bild) erforderlich, um die Vergrößerung der 1:1 (Standard) des Bilds anzuzeigen. Der rechte Bereich zeigt das vergrößerte Bild (6:1-Vergrößerung in der Standardeinstellung). Sie können [Ändern der Vergrößerung](../windows/changing-the-magnification-factor-image-editor-for-icons.md) in jedem Bereich mit der **vergrößern** tool die [Grafik-Editor-Symbolleiste](../windows/toolbar-image-editor-for-icons.md) oder mithilfe der Zugriffstasten.  
+  
+ Sie können den kleineren Bereich des Grafik-Editor-Fensters vergrößern und verwenden die beiden Bereiche an unterschiedliche geografischen Regionen ein großes Bild anzeigen. Klicken Sie in den Bereich, um ihn auszuwählen.  
+  
+ Sie können die relativen Größen der Bereiche ändern, indem Sie den Mauszeiger auf die Leiste für geteilte und die Leiste für geteilte in links oder rechts verschieben. Leiste für geteilte kann ganz auf beiden Seiten verschieben, wenn Sie nur einen Bereich bearbeiten möchten.  
+  
+ Wenn der Bereich des Grafik-Editor mit einem Faktor von 4 oder höher vergrößert wird, können Sie [Pixelraster anzeigen](../windows/displaying-or-hiding-the-pixel-grid-image-editor-for-icons.md) , die die einzelnen Pixel in der Abbildung begrenzt.  
+  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](https://msdn.microsoft.com/library/f45fce5x.aspx) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](https://msdn.microsoft.com/library/xbx3z216.aspx). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](https://msdn.microsoft.com/library/h6270d0z.aspx).  
+  
+## <a name="requirements"></a>Anforderungen  
+ Keine  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)
 
-Das Fenster des Grafik\-Editors zeigt ein Bild normalerweise in zwei Bereichen an, die durch eine Trennleiste getrennt sind.  Eine Ansicht zeigt die Originalgröße an und die andere eine vergrößerte Darstellung \(der Standardvergrößerungsfaktor ist 6\).  Die Ansichten in diesen beiden Fensterbereichen werden automatisch aktualisiert: Änderungen in einem Fensterbereich werden sofort auch im anderen Fensterbereich angezeigt.  Diese beiden Fensterbereiche ermöglichen Ihnen einerseits das Bearbeiten des Bildes in einer vergrößerten Ansicht, in der einzelne Pixel erkennbar sind, und andererseits die Darstellung des Bildes in Originalgröße, sodass Sie Änderungen direkt beurteilen können.  
-  
- Im linken Bereich wird so viel Platz wie nötig belegt \(bis zur Hälfte des Fensters **Bild**\), um eine 1:1\-Vergrößerung \(Standard\) des Bildes anzuzeigen.  Im rechten Bereich wird das gezoomte Bild angezeigt \(mit einer standardmäßigen Vergrößerung von 6:1\).  Sie können die [Vergrößerung](../mfc/changing-the-magnification-factor-image-editor-for-icons.md) in den einzelnen Fensterbereichen ändern, indem Sie entweder das Tool **Vergrößern** auf der [Symbolleiste des Grafik\-Editors](../mfc/toolbar-image-editor-for-icons.md) oder die Zugriffstasten verwenden.  
-  
- So können Sie z. B. den kleineren Bereich des Grafik\-Editor\-Fensters vergrößern und in den beiden Bereichen verschiedene Teile eines großen Bildes anzeigen.  Klicken Sie auf den Bereich, um ihn auszuwählen.  
-  
- Sie können die relative Größe der Bereiche ändern, indem Sie den Mauszeiger auf dem Fensterteiler positionieren und diesen nach rechts oder links verschieben.  Wenn Sie nur in einem Bereich arbeiten möchten, kann der Fensterteiler ganz nach rechts oder links verschoben werden.  
-  
- Wenn der Bereich des Grafik\-Editor\-Fensters mindestens mit dem Faktor 4 vergrößert wurde, können Sie ein [Pixelraster anzeigen](../mfc/displaying-or-hiding-the-pixel-grid-image-editor-for-icons.md), das die einzelnen Pixel im Bild trennt.  
-  
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
-  
-## Anforderungen  
- None  
-  
-## Siehe auch  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)

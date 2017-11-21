@@ -1,11 +1,10 @@
 ---
-title: uint_4-Klasse | Microsoft-Dokumentation
+title: uint_4-Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -274,33 +273,17 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_4::set_xywz
 - amp_short_vectors/Concurrency::graphics::uint_4::rba
 - amp_short_vectors/Concurrency::graphics::uint_4::set_yzx
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 1cda9e2c-5970-4ced-ae54-d7ff3c6746f4
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: c0cd118a5ce9f5ebec30e5d1ca7a8437d14f55ab
-ms.contentlocale: de-de
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 95c05dc7eedb687bb91ccf7292fcff01aa349fbe
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="uint4-class"></a>uint_4-Klasse
 Stellt einen kurzen Vektor von vier ganzen Zahlen ohne Vorzeichen dar.  
@@ -471,14 +454,14 @@ class uint_4;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|uint_4-||  
+|uint_4::-||  
 |uint_4::--||  
 |uint_4:: * =||  
 |uint_4:: Operator / =||  
-|uint_4:: Operator++||  
+|uint_4:: Operator++-||  
 |uint_4:: Operator +=||  
 |uint_4:: =||  
-|uint_4:: =||  
+|uint_4:: Operator-=||  
   
 ### <a name="public-constants"></a>Öffentliche Konstanten  
   
@@ -667,16 +650,16 @@ explicit inline uint_4(
   
 #### <a name="parameters"></a>Parameter  
  `_V0`  
- Der Wert 0-Element zu initialisieren.  
+ Der Wert 0-Element initialisiert werden.  
   
  `_V1`  
  Der Wert 1 Element initialisiert werden.  
   
  `_V2`  
- Der Wert 2-Element zu initialisieren.  
+ Der Wert 2-Element initialisiert werden.  
   
  `_V3`  
- Der Wert 3-Element zu initialisieren.  
+ Der Wert 3-Element initialisiert werden.  
   
  `_V`  
  Der Wert für die Initialisierung.  
@@ -694,4 +677,3 @@ static const int size = 4;
 
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)
-

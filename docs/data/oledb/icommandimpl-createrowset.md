@@ -1,34 +1,33 @@
 ---
-title: "ICommandImpl::CreateRowset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ICommandImpl::CreateRowset"
-  - "ICommandImpl.CreateRowset"
-  - "CreateRowset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CreateRowset-Methode"
+title: 'ICommandImpl:: CreateRowset | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ICommandImpl::CreateRowset
+- ICommandImpl.CreateRowset
+- CreateRowset
+dev_langs: C++
+helpviewer_keywords: CreateRowset method
 ms.assetid: a0890009-205e-4970-879f-01ed9d6a93f1
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 510f222972b8d9306f7b248799679f0dd499288a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# ICommandImpl::CreateRowset
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Wird von [Ausführen](../../data/oledb/icommandimpl-execute.md), um ein einzelnes Rowset zu erstellen.  
+# <a name="icommandimplcreaterowset"></a>ICommandImpl::CreateRowset
+Wird aufgerufen, indem [Execute](../../data/oledb/icommandimpl-execute.md) um ein einzelnes Rowset zu erstellen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -45,38 +44,38 @@ HRESULT CreateRowset(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `RowsetClass`  
- Ein Vorlagenklassenmember, der die Rowsetklasse des Benutzers darstellt.  generiert gewöhnlich durch den Assistenten.  
+ Ein Klassenmember für die Vorlage, des Benutzers Rowsetklasse darstellt. In der Regel vom Assistenten generiert.  
   
  `pUnkOuter`  
- \[in\] Ein Zeiger auf die **IUnknown** steuernden Schnittstelle, wenn das Rowset als Teil eines Aggregats erstellt wird; Andernfalls befindet es ungültig.  
+ [in] Ein Zeiger auf das Steuern der **IUnknown** Schnittstelle, wenn das Rowset als Teil eines Aggregats erstellt wird; andernfalls ist null.  
   
  `riid`  
- \[in\] entspricht `riid` in `ICommand::Execute`.  
+ [in] Entspricht `riid` in `ICommand::Execute`.  
   
  `pParams`  
- \[in\/out\] entspricht `pParams` in `ICommand::Execute`.  
+ [in/Out] Entspricht `pParams` in `ICommand::Execute`.  
   
  `pcRowsAffected`  
- Entspricht in `pcRowsAffected` in `ICommand::Execute`.  
+ Entspricht `pcRowsAffected` in `ICommand::Execute`.  
   
  `ppRowset`  
- \[in\/out\] entspricht `ppRowset` in `ICommand::Execute`.  
+ [in/Out] Entspricht `ppRowset` in `ICommand::Execute`.  
   
  `pRowsetObj`  
- \[out\] Ein Zeiger auf ein Rowsetobjekt.  In der Regel wird dieser Parameter nicht verwendet, aber er kann verwendet werden, wenn mehr Arbeiten auf das Rowset ausführen müssen, bevor sie an ein COM\-Objekt übergeben.  Die Lebensdauer von `pRowsetObj` wird von `ppRowset` gebunden.  
+ [out] Ein Zeiger auf ein Rowsetobjekt. Dieser Parameter wird in der Regel nicht verwendet, jedoch kann verwendet werden, wenn Sie mehr Arbeit für das Rowset durchführen müssen, vor der Übergabe an ein COM-Objekt. Die Lebensdauer des `pRowsetObj` gebunden ist, indem Sie `ppRowset`.  
   
-## Rückgabewert  
- Ein Standard\- `HRESULT`\-Wert.  Siehe `ICommand::Execute` für eine Liste von typischen Werten.  
+## <a name="return-value"></a>Rückgabewert  
+ Ein Standard `HRESULT` -Wert. Finden Sie unter `ICommand::Execute` eine Liste mit typischen Werten.  
   
-## Hinweise  
- Um mehr als ein Rowset zu erstellen, oder eigene Bedingungen zum Erstellen verschiedener Rowsets bereitzustellen, platzieren Sie unterschiedliche Aufrufe zu `CreateRowset` aus **Ausführen**.  
+## <a name="remarks"></a>Hinweise  
+ Um mehr als ein Rowset zu erstellen oder eine eigene zum Erstellen von anderen Rowsets vorsehen, platzieren Sie unterschiedliche Aufrufe `CreateRowset` innerhalb **Execute**.  
   
- Siehe [ICommand::Execute](https://msdn.microsoft.com/en-us/library/ms718095.aspx) in *der OLE DB\-Programmierreferenz.*  
+ Finden Sie unter [ICommand:: Execute](https://msdn.microsoft.com/en-us/library/ms718095.aspx) in die *OLE DB Programmer's Reference.*  
   
-## Anforderungen  
- **Header:** atldb.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** „atldb.h“  
   
-## Siehe auch  
- [ICommandImpl\-Klasse](../../data/oledb/icommandimpl-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [ICommandImpl-Klasse](../../data/oledb/icommandimpl-class.md)

@@ -1,37 +1,35 @@
 ---
-title: "DQ | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DQ"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DQ directive"
+title: DQ | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: DQ
+dev_langs: C++
+helpviewer_keywords: DQ directive
 ms.assetid: 15de9c41-db90-4bca-affc-426eeb38ebc0
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a5fea30e39094bf344bd87c823dfcf4b8b3b91e4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# DQ
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ordnet zu und initialisiert optional 8 Bytes Speicherplatz für jedes `initializer`.  Kann als Typspezifizierer auch dazu verwendet werden, eine beliebige Stelle, das ein Typ gültig ist.  `DQ` ist ein Synonym für [QWORD](../../assembler/masm/qword.md).  
+# <a name="dq"></a>DQ
+Zum Belegen und optional initialisiert 8 Bytes des Speichers für die einzelnen `initializer`. Kann auch verwendet werden, als Typspezifizierer an einer beliebigen Stelle ist ein Typ zulässig. `DQ`ist ein Synonym für [QWORD](../../assembler/masm/qword.md).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 [[name]] DQ initializer [[, initializer]]...  
 ```  
   
-## Siehe auch  
- [Directives Reference](../../assembler/masm/directives-reference.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Direktiven – Referenz](../../assembler/masm/directives-reference.md)   
  [QWORD](../../assembler/masm/qword.md)

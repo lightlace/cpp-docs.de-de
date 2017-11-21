@@ -1,32 +1,30 @@
 ---
-title: "PROVIDER_COLUMN_ENTRY_GN | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PROVIDER_COLUMN_ENTRY_GN"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PROVIDER_COLUMN_ENTRY_GN-Makro"
+title: PROVIDER_COLUMN_ENTRY_GN | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PROVIDER_COLUMN_ENTRY_GN
+dev_langs: C++
+helpviewer_keywords: PROVIDER_COLUMN_ENTRY_GN macro
 ms.assetid: be77ba85-634c-4e28-832f-d2fa40413254
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 96c3258da000bfe9da63981b27f2bb22a9dc5a6f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# PROVIDER_COLUMN_ENTRY_GN
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Stellt eine bestimmte Spalte dar, die vom Anbieter unterstützt wird.  
+# <a name="providercolumnentrygn"></a>PROVIDER_COLUMN_ENTRY_GN
+Stellt eine bestimmte Spalte, die vom Anbieter unterstützt werden.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -35,39 +33,39 @@ name
 , ordinal, flags, colSize, dbtype, precision, scale, guid )  
 ```  
   
-#### Parameter  
- *Name*  
- \[in\] der Spaltenname.  
+#### <a name="parameters"></a>Parameter  
+ *name*  
+ [in] Der Spaltenname.  
   
  `ordinal`  
- \[in\] Spaltennummer.  Sofern, dass die Spalte eine Lesezeichenspalte ist, darf die Spaltennummer nicht 0 sein.  
+ [in] Die Nummer der Spalte. Wenn die Spalte eine Lesezeichenspalte ist, muss die Nummer der Spalte nicht 0 sein.  
   
  `flags`  
- \[in\] gibt an, wie Daten zurückgegeben werden.  Siehe `dwFlags` die Beschreibung in [DBBINDING\-Strukturen](https://msdn.microsoft.com/en-us/library/ms716845.aspx).  
+ [in] Gibt an, wie Daten zurückgegeben werden. Finden Sie unter der `dwFlags` Beschreibung im [DBBINDING-Strukturen](https://msdn.microsoft.com/en-us/library/ms716845.aspx).  
   
  *colSize*  
- \[in\] Die Spaltengröße.  
+ [in] Die Größe der Spalte.  
   
  `dbtype`  
- \[in\] gibt den Datentyp des Werts an.  Siehe **wType** die Beschreibung in [DBBINDING\-Strukturen](https://msdn.microsoft.com/en-us/library/ms716845.aspx).  
+ [in] Gibt den Datentyp des Werts an. Finden Sie unter der **wType** Beschreibung im [DBBINDING-Strukturen](https://msdn.microsoft.com/en-us/library/ms716845.aspx).  
   
  *precision*  
- \[in\] gibt von Genauigkeit an, die verwendet werden, wenn Daten, Abrufen, wenn *dbType*`DBTYPE_NUMERIC` oder **DBTYPE\_DECIMAL** aufweist.  Siehe **bPrecision** die Beschreibung in [DBBINDING\-Strukturen](https://msdn.microsoft.com/en-us/library/ms716845.aspx).  
+ [in] Gibt an, die Genauigkeit zu verwendende für das Abrufen von Daten, wenn *DbType* ist `DBTYPE_NUMERIC` oder **DBTYPE_DECIMAL**. Finden Sie unter der **bPrecision** Beschreibung im [DBBINDING-Strukturen](https://msdn.microsoft.com/en-us/library/ms716845.aspx).  
   
  `scale`  
- \[in\] gibt der Skalierung an, die verwendet werden, wenn Daten, Abrufen, wenn dbType `DBTYPE_NUMERIC` oder **DBTYPE\_DECIMAL** aufweist.  Siehe **bScale** die Beschreibung in [DBBINDING\-Strukturen](https://msdn.microsoft.com/en-us/library/ms716845.aspx).  
+ [in] Gibt an, die zu verwendende beim Abrufen von Daten, wenn DbType ist Skala `DBTYPE_NUMERIC` oder **DBTYPE_DECIMAL**. Finden Sie unter der **bScale** Beschreibung im [DBBINDING-Strukturen](https://msdn.microsoft.com/en-us/library/ms716845.aspx).  
   
  `guid`  
- Eine Schemarowset GUID.  Siehe [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) in *der OLE DB\-Programmierreferenz* für eine Liste der Schemarowsets und zugehörigen GUIDs.  
+ Ein Schemarowset-GUID. Finden Sie unter [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) in der *OLE DB Programmer's Reference* eine Liste der Schemarowsets und ihren GUIDs.  
   
-## Hinweise  
- Ermöglicht Ihnen, die Größe der Spalte, den Datentyp, Genauigkeit, der Umfang und der Schemarowset GUID anzugeben.  
+## <a name="remarks"></a>Hinweise  
+ Ermöglicht Ihnen das Festlegen der Größe, Datentyp, Genauigkeit, Dezimalstellen und Schemarowset-GUID der Spaltenwerts.  
   
-## Anforderungen  
- **Header:** atldb.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** „atldb.h“  
   
-## Siehe auch  
- [Makros für OLE DB\-Anbietervorlagen](../../data/oledb/macros-for-ole-db-provider-templates.md)   
- [OLE DB\-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektur von OLE DB\-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)   
- [Erstellen eines OLE DB\-Anbieters](../../data/oledb/creating-an-ole-db-provider.md)
+## <a name="see-also"></a>Siehe auch  
+ [Makros für OLE DB-Anbietervorlagen](../../data/oledb/macros-for-ole-db-provider-templates.md)   
+ [OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)   
+ [Erstellen eines OLE DB-Anbieters](../../data/oledb/creating-an-ole-db-provider.md)

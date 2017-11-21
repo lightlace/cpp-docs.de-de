@@ -1,47 +1,45 @@
 ---
-title: "MakeAllocator::~MakeAllocator-Destruktor"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::MakeAllocator::~MakeAllocator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "~MakeAllocator, Destruktor"
+title: 'MakeAllocator:: ~ MakeAllocator-Destruktor | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::MakeAllocator::~MakeAllocator
+dev_langs: C++
+helpviewer_keywords: ~MakeAllocator, destructor
 ms.assetid: f1299c5f-cc6b-4d4e-85d4-aee1be0e2b0a
-caps.latest.revision: 5
-caps.handback.revision: "5"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 70d89466cd71fb9884b67f9545f1fe6a7c1f5061
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# MakeAllocator::~MakeAllocator-Destruktor
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Unterstützt die WRL\-Infrastruktur und nicht beabsichtigt, direkt im Code verwendet werden.  
+# <a name="makeallocatormakeallocator-destructor"></a>MakeAllocator::~MakeAllocator-Destruktor
+Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 ~MakeAllocator();  
 ```  
   
-## Hinweise  
- Deinitialisiert die aktuelle Instanz der MakeAllocator\-Klasse.  
+## <a name="remarks"></a>Hinweise  
+ Hebt die Initialisierung der aktuellen Instanz der MakeAllocator-Klasse.  
   
- Dieser Destruktor löscht auch den zugrunde liegenden reservierten Speicher.  
+ Dieser Destruktor werden bei Bedarf auch den zugrunde liegenden belegten Speicher gelöscht.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** implements.h  
   
- **Namespace:**  Microsoft::WRL::Details  
+ **Namespace:** Microsoft::WRL::Details  
   
-## Siehe auch  
- [MakeAllocator\-Klasse](../windows/makeallocator-class.md)   
- [Microsoft::WRL::Details\-Namespace](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Siehe auch  
+ [MakeAllocator-Klasse](../windows/makeallocator-class.md)   
+ [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- tile_static_CPP
-dev_langs:
-- C++
-helpviewer_keywords:
-- tile_static keyword
+f1_keywords: tile_static_CPP
+dev_langs: C++
+helpviewer_keywords: tile_static keyword
 ms.assetid: d78384d4-65d9-45cf-b3df-7e904f489d06
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 499aa37bb082636dd2947fa6f64a5ecc3cdd5e10
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 1259fb7731e188bdb5a02a7a573b5eddd6a47df5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="tilestatic-keyword"></a>tile_static-Schlüsselwort
 Das Schlüsselwort `tile_static` wird verwendet, um eine Variable zu deklarieren, auf die von allen Threads in einer Kachel mit Threads zugegriffen werden kann. Die Lebensdauer der Variable beginnt, wenn die Ausführung den Punkt der Deklaration erreicht, und sie endet dann, wenn die Kernelfunktion zurückgegeben wird. Weitere Informationen zur Verwendung von Kacheln finden Sie unter [mithilfe von Kacheln](../parallel/amp/using-tiles.md).  

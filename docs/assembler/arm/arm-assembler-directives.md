@@ -1,108 +1,104 @@
 ---
-title: "ARM Assembler Directives | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: ARM-Assemblydirektiven | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 9cfa8896-ec10-4e77-855a-3135c40d7d2a
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1fee551d667b40b3fc36b3ca1f91e093148083a5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# ARM Assembler Directives
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Der Microsoft\-ARM\-Assembler verwendet zum größten Teil der ARM\-Assemblysprache, die in Kapitel 7 der dokumentiert ist die [ARM Assembler Tools Guide](http://go.microsoft.com/fwlink/?LinkId=246102).  Unterscheiden sich jedoch die Microsoft\-Implementierungen einiger Richtlinien Assembly ARM Assembly\-Direktiven.  Dieser Artikel erläutert die Unterschiede.  
+# <a name="arm-assembler-directives"></a>ARM-Assemblyanweisungen
+Meistens, verwendet der Microsoft-ARM-Assembler die ARM-Assemblysprache, die in Kapitel 7 dokumentiert ist die [ARM Assembler Tools Guide](http://go.microsoft.com/fwlink/?LinkId=246102). Allerdings unterscheiden sich die Microsoft-Implementierungen von einigen Assemblydirektiven aus ARM-Assemblydirektiven ein. In diesem Artikel werden die Unterschiede erläutert.  
   
-## Microsoft\-Implementierungen von ARM Assembly\-Direktiven  
+## <a name="microsoft-implementations-of-arm-assembly-directives"></a>Microsoft-Implementierungen von ARM-Assemblydirektiven  
  BEREICH  
- Der Microsoft\-ARM\-Assembler unterstützt diesen Bereich Attribute: AUSZURICHTEN, CODE, CODEALIGN, Daten, NOINIT, READONLY, READWRITE DAUMEN, ARM.  
+ Der Microsoft-ARM-Assembler unterstützt diese strukturbereichattribute: AUSZURICHTEN, CODE CODEALIGN Daten NOINIT READONLY Lese-/SCHREIBMODUS ZIEHPUNKT, ARM.  
   
- Alle außer DAUMEN und ARM arbeiten wie dokumentiert die [ARM Assembler Tools Guide](http://go.microsoft.com/fwlink/?LinkId=246102).  
+ Alle außer DAUMEN und ARM funktioniert wie beschrieben in der [ARM Assembler Tools Guide](http://go.microsoft.com/fwlink/?LinkId=246102).  
   
- In der Microsoft\-ARM\-Assembler zufolge DAUMEN ein Codeabschnitt Thumb\-Code enthält, und ist die Standardeinstellung für Codeabschnitte.  ARM gibt an, dass der Abschnitt ARM\-Code enthält.  
+ Der Microsoft-ARM-Assembler gibt ZIEHPUNKT an, dass ein Codeabschnitt Thumb-Code enthält, und die Standardeinstellung für Codeabschnitten ist.  ARM gibt an, dass der Abschnitt ARM-Code enthält.  
   
  ATTR  
  Wird nicht unterstützt.  
   
  CODE16  
- Nicht unterstützt, da sie Pre\-UAL Thumb\-Syntax, impliziert die Microsoft\-ARM\-Assembler nicht zulässt.  Verwenden Sie stattdessen die THUMB\-Richtlinie, zusammen mit UAL Syntax.  
+ Nicht unterstützt, da impliziert Pre-UAL Thumb-Syntax, die der Microsoft-ARM-Assembler nicht zulässt.  Verwenden Sie stattdessen, die THUMB-Direktive, zusammen mit der Syntax für die Benutzerzugriffsprotokollierung.  
   
- GEMEINSAME  
- Spezifikation der eine Ausrichtung für die gemeinsame Region wird nicht unterstützt.  
+ ALLGEMEINE  
+ Spezifikation eine Ausrichtung für die allgemeine Region wird nicht unterstützt.  
   
  DCDO  
  Wird nicht unterstützt.  
   
- DN, QN, SN  
- Angabe eines Typs oder einer Spur auf die Register\-Alias wird nicht unterstützt.  
+ DN QN, "SN".  
+ Die Spezifikation eines Typs oder einer Klasse auf die Register-Alias wird nicht unterstützt.  
   
  EINTRAG  
  Wird nicht unterstützt.  
   
- KANAL  
- Spezifikation eines Typs für das definierten Symbol wird nicht unterstützt.  
+ EQU  
+ Die Spezifikation eines Typs für die definiertes Symbol wird nicht unterstützt.  
   
- Export\- und GLOBAL  
+ EXPORT und GLOBAL  
  ```  
-  
 EXPORTsym {[type]}  
-  
 ```  
   
- `sym`ist das Symbol exportiert werden.  `[type]`, wenn angegeben, kann eine `[DATA]` an, dass das Symbol auf Daten zeigt oder `[FUNC]` an, dass das Symbol in Code verweist.  
+ `sym`ist das Symbol exportiert werden soll.  `[type]`, wenn angegeben, kann es sich um `[DATA]` um anzugeben, dass das Symbol auf Daten verweist oder `[FUNC]` , um anzugeben, dass das Symbol auf Code verweist.  
   
- GLOBAL ist ein Synonym für den EXPORT.  
+ Globale ist ein Synonym für den EXPORT aus.  
   
  EXPORTAS  
  Wird nicht unterstützt.  
   
- RAHMEN  
+ FRAME  
  Wird nicht unterstützt.  
   
  Funktion und PROC  
- Zwar Assembly\-Syntax die Angabe eines benutzerdefinierten unterstützt Aufrufkonvention für Prozeduren durch Auflisten der Register, die Anrufer speichern und die aufgerufene speichern, Microsoft\-ARM\-Assembler akzeptiert die Syntax ignoriert jedoch die Register\-Listen.  Die Debug\-Informationen, die vom Assembler erstellt wird, unterstützt nur die Standardaufrufkonvention.  
+ Obwohl die Assembly-Syntax die Angabe einer benutzerdefinierten unterstützt Aufrufkonvention für Prozeduren durch Auflisten der Register, die Aufrufer-speichern und die aufgerufene Automatisches Speichern, werden der Microsoft-ARM-Assembler akzeptiert der Syntax, ignoriert jedoch die Register-Listen.  Die Debuginformationen, die durch den Assembler erstellt wird, unterstützt nur die Standardaufrufkonvention.  
   
- IMPORT und EXTERN  
+ Importieren und "extern"  
  ```  
-  
 IMPORT sym{, WEAK alias{, TYPE t}}  
-  
 ```  
   
- `sym`ist der Name des Symbols importiert werden.  
+ `sym`ist der Name des Symbols importiert werden sollen.  
   
- Wenn SCHWACH `alias` angegeben wird, bedeutet dies, dass `sym` ist eine schwache externe.  Wenn keine Definition dafür zur Verknüpfungszeit gefunden, wird stattdessen binden Sie alle Verweise darauf an `alias`.  
+ Wenn der SCHWACHE `alias` angegeben wird, bedeutet dies, dass `sym` eine schwache extern ist. Wenn keine Definition für ihn zum Zeitpunkt der Verknüpfung gefunden wird, und klicken Sie dann alle Verweise darauf binden stattdessen an `alias`.  
   
- Wenn TYPE  `t` angegeben ist, dann `t` gibt an, wie der Linker auflösen versuchen sollten `sym`.  Diese Werte für `t` sind möglich:   
-1 – Führen Sie keine Bibliothek gesucht`sym`   
-2 – Für die Bibliothek suchen`sym`   
-3 —`sym` ist ein Alias für `alias` \(Standard\)  
+ Wenn Typ `t` angegeben ist, klicken Sie dann `t` gibt an, wie der Linker versucht werden soll, zum Auflösen `sym`.  Diese Werte für `t` sind möglich:   
+1 – Führen Sie eine Bibliothek nach nicht`sym`  
+2 – Ausführen einer Suche Bibliothek für`sym`  
+3 –`sym` ist ein Alias für `alias` (Standard)  
   
- EXTERN ist ein Synonym für den IMPORT, außer dass `sym` wird nur dann, wenn die Verweise darauf in der aktuellen Assembly importiert.  
+ "Extern" ist ein Synonym für den IMPORT, außer dass `sym` wird nur aus, wenn Verweise darauf in der aktuellen Assembly importiert.  
   
- MAKRO  
- Die Verwendung einer Variable für den Bedingungscode eines Makros wird nicht unterstützt.  Standardwerte für Makro Parameter werden nicht unterstützt.  
+ MACRO  
+ Die Verwendung einer Variablen zum Speichern des Bedingung Codes eines Makros wird nicht unterstützt. Standardwerte für Makro werden nicht unterstützt.  
   
  NOFP  
  Wird nicht unterstützt.  
   
- OPT, TTL, SUBT  
- Nicht unterstützt, da der Microsoft\-ARM\-Assembler keine Angebote erzeugt werden.  
+ ABONNIEREN, GÜLTIGKEITSDAUER (TTL), SUBT  
+ Nicht unterstützt, da der Microsoft-ARM-Assembler Angebote nicht erstellt.  
   
  PRESERVE8  
  Wird nicht unterstützt.  
   
- RELOC  
- `RELOC n`können nur eine Anweisung oder eine Daten\-Definition\-Direktive folgen.  Es gibt keine "anonyme Symbol", die verschoben werden kann.  
+ UMSETZUNG  
+ `RELOC n`kann nur eine Anweisung oder ein Daten-Definition-Direktive folgen. Es gibt keine "Anonym"Symbol", die verschoben werden kann.  
   
  ERFORDERN  
  Wird nicht unterstützt.  
@@ -111,8 +107,8 @@ IMPORT sym{, WEAK alias{, TYPE t}}
  Wird nicht unterstützt.  
   
  THUMBX  
- Nicht unterstützt, da der Microsoft\-ARM\-Assembler keine Thumb\-2EE\-Befehlssatz unterstützt.  
+ Nicht unterstützt, da der Microsoft-ARM-Assembler nicht den Thumb-2ee nicht-Anweisungssatz unterstützt.  
   
-## Siehe auch  
- [ARM Assembler Command\-Line Reference](../../assembler/arm/arm-assembler-command-line-reference.md)   
- [ARM Assembler Diagnostic Messages](../../assembler/arm/arm-assembler-diagnostic-messages.md)
+## <a name="see-also"></a>Siehe auch  
+ [Befehlszeilenreferenz des ARM-Assembler](../../assembler/arm/arm-assembler-command-line-reference.md)   
+ [Diagnosemeldungen des ARM-Assemblers](../../assembler/arm/arm-assembler-diagnostic-messages.md)

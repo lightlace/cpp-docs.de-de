@@ -1,63 +1,62 @@
 ---
-title: "_mm_cvttss_si64x | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mm_cvttss_si64x"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mm_cvttss_si64x intrinsic"
-  - "cvttss2si-Anweisung"
+title: _mm_cvttss_si64x | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _mm_cvttss_si64x
+dev_langs: C++
+helpviewer_keywords:
+- _mm_cvttss_si64x intrinsic
+- cvttss2si instruction
 ms.assetid: f9a3fd07-5bd8-4758-8744-6315c082cf87
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: fa5dee3ee67678f561a80042c1dc0aab2403a555
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# _mm_cvttss_si64x
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft\-spezifisch**  
+# <a name="mmcvttsssi64x"></a>_mm_cvttss_si64x
+**Microsoft-spezifisch**  
   
- Gibt die x64 erweiterte Version des mit einfacher Genauigkeit konvertiert werden soll Abschneiden\-Gleitkommawert mit der Anweisung an`cvttss2si`\(64\-Bit\-Ganzzahl\) ab.  
+ Gibt die X64 erweiterte Version des konvertieren mit Abschneiden mit einfacher Genauigkeit Floating-Nummer in 64-Bit-Ganzzahl (`cvttss2si`) Anweisung.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-__int64 _mm_cvttss_si64x(   
-   __m128 value   
+__int64 _mm_cvttss_si64x(   
+   __m128 value   
 );  
 ```  
   
-#### Parameter  
- \[in\] `value`  
- Eine `__m128` Struktur mit Gleitkommazahlen mit einfacher Genauigkeit enthält.  
+#### <a name="parameters"></a>Parameter  
+ [in] `value`  
+ Eine `__m128` Struktur, die Werte für Gleitkommazahlen mit einfacher Genauigkeit enthält.  
   
-## Rückgabewert  
- Das Ergebnis der Konvertierung des ersten Gleitkommazahl in eine 64\-Bit\-Ganzzahl.  
+## <a name="return-value"></a>Rückgabewert  
+ Das Ergebnis der Konvertierung des ersten Gleitkommawerts in eine 64-Bit-Ganzzahl.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Intrinsisch|Architektur|  
-|-----------------|-----------------|  
+|Systemintern|Architektur|  
+|---------------|------------------|  
 |`_mm_cvttss_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Headerdatei** \<intrin.h\>  
+ **Headerdatei** \<intrin.h >  
   
-## Hinweise  
- Das systeminterne unterscheidet sich von `_mm_cvtss_si64x` nur dadurch, dass ungenaue Konvertierungen in Richtung Null abgeschnitten werden.  Da die `__m128` Struktur ein XMM\-Register darstellt, richtet die generierte Anweisung Daten aus einem XMM\-Register im Systemspeicher.  
+## <a name="remarks"></a>Hinweise  
+ Die systeminterne Funktion unterscheidet sich von `_mm_cvtss_si64x` nur darin, dass ungenaue Konvertierungen in Richtung 0 abgeschnitten werden. Da die `__m128` -Struktur stellt ein XMM-Register dar, die Anweisung generiert verschiebt Daten aus einer XMM-Register in den Systemarbeitsspeicher.  
   
- Diese Routine ist als systeminterne Funktion nur verfügbar.  
+ Diese Routine ist nur als systeminterne Funktion verfügbar.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // _mm_cvttss_si64x.cpp  
@@ -87,9 +86,12 @@ int main()
 }  
 ```  
   
-  **101**   
-## Microsoft ENDES bestimmten  
+```Output  
+101  
+```  
   
-## Siehe auch  
- [\_\_m128](../cpp/m128.md)   
+**Ende Microsoft-spezifisch**  
+  
+## <a name="see-also"></a>Siehe auch  
+ [__m128](../cpp/m128.md)   
  [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

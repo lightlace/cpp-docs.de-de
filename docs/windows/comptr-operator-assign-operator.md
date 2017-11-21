@@ -1,32 +1,30 @@
 ---
-title: "ComPtr::operator=-Operator"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::ComPtr::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Operator=-Operator"
+title: 'Comptr:: Operator = | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::ComPtr::operator=
+dev_langs: C++
+helpviewer_keywords: operator= operator
 ms.assetid: 1a0c2752-f7d8-4819-9443-07b88b69ef02
-caps.latest.revision: 3
-caps.handback.revision: "3"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 238c58e8fda169d86dc4be625ed16efa81c21fef
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# ComPtr::operator=-Operator
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Weist dem aktuellen ComPtr einen Wert zu.  
+# <a name="comptroperator-operator"></a>ComPtr::operator=-Operator
+Weist dem aktuellen ComPtr-Objekt einen Wert zu.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 WRL_NOTHROW ComPtr& operator=(  
@@ -61,35 +59,35 @@ WRL_NOTHROW ComPtr& operator=(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `U`  
  Eine Klasse.  
   
  `other`  
- Ein Zeiger, ein Verweis oder ein rvalu\-Verweis zu einem Typ oder einem anderen ComPtr.  
+ Ein Zeiger, Verweis oder Rvalue-Verweis auf einen Typ oder eine andere comptr-Objekt.  
   
-## Rückgabewert  
- Ein Verweis auf den aktuellen ComPtr.  
+## <a name="return-value"></a>Rückgabewert  
+ Ein Verweis auf das aktuelle comptr-Objekt.  
   
-## Hinweise  
- Die erste Version dieses Operators Aufgaben im aktuellen ComPtr einen leeren Wert zu.  
+## <a name="remarks"></a>Hinweise  
+ Die erste Version dieses Operators weist einen leeren Wert zu dem aktuellen comptr-Objekt.  
   
- In der zweiten Version wenn der zuweisende Schnittstellenzeiger nicht der gleiche wie der aktuelle ComPtr\-Schnittstellenzeiger ist, dem aktuellen ComPtr wird der zweite Schnittstellenzeiger zugewiesen.  
+ In der zweiten Version wird das Zuweisen von Schnittstellenzeiger nicht identisch mit den aktuellen ComPtr-Schnittstellenzeiger ist die zweite Schnittstellenzeiger auf dem aktuellen comptr-Objekt zugewiesen.  
   
- In der dritten Version dem aktuellen ComPtr wird der zuweisende Schnittstellenzeiger zugewiesen.  
+ In der dritten Version ist das Zuweisen von Schnittstellenzeiger auf das aktuelle comptr-Objekt zugewiesen.  
   
- In der vierten Version wenn von Schnittstellenzeigern des zuweisenden Werts nicht dem aktuellen ComPtr\-Schnittstellenzeiger ist, dem aktuellen ComPtr wird der zweite Schnittstellenzeiger zugewiesen.  
+ In der vierten Version wird der Schnittstellenzeiger auf das Zuweisen von Werts nicht mit den aktuellen ComPtr-Schnittstellenzeiger ist die zweite Schnittstellenzeiger auf das aktuelle comptr-Objekt zugewiesen.  
   
- Die fünfte Version ist ein Kopienoperator; dem aktuellen ComPtr ein Verweis auf ein ComPtr wird zugewiesen.  
+ Die fünfte Version ist eine Kopie-Operator. Ein Verweis auf ein comptr-Objekt wird auf dem aktuellen comptr-Objekt zugewiesen.  
   
- Die 6. Version ist ein Kopienoperator, von Verschiebesemantik verwendet; ein rvalu\-Verweis zu einem Typ ComPtr wenn eine der statischen Umwandlung und dann zugewiesen dem aktuellen ComPtr.  
+ Der sechste Version ist ein Kopie-Operator, der verwendet die move-Semantik; Ein Rvalue-Verweis auf ein comptr-Objekt, wenn jeder Typ statisch ist, umgewandelt, und klicken Sie dann auf dem aktuellen comptr-Objekt zugewiesen werden soll.  
   
- Die 7. Version ist ein Kopienoperator, von Verschiebesemantik verwendet; ein rvalu\-Verweis zu einem ComPtr vom Typ `U` wird statische Umwandlung dann zugewiesen und dem aktuellen ComPtr.  
+ Die siebte Version ist ein Kopie-Operator, der verwendet die move-Semantik; Ein Rvalue-Verweis auf ein comptr-Objekt des Typs `U` ist statisch dann umgewandelt und dem aktuellen comptr-Objekt zugewiesen.  
   
-## Anforderungen  
- **Header:**  client.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** client.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [ComPtr\-Klasse](../windows/comptr-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [ComPtr-Klasse](../windows/comptr-class.md)

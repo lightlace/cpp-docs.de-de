@@ -1,57 +1,58 @@
 ---
-title: "Lgamma, Lgammaf, lgammal | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "lgamma"
-  - "lgammaf"
-  - "lgammal"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "lgamma"
-  - "lgammaf"
-  - "lgammal"
-  - "math/lgamma"
-  - "math/lgammaf"
-  - "math/lgammal"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lgamma-Funktion"
-  - "Lgammal-Funktion"
-  - "lgammaf-Funktion"
+title: lgamma, lgammaf, lgammal | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- lgamma
+- lgammaf
+- lgammal
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- lgamma
+- lgammaf
+- lgammal
+- math/lgamma
+- math/lgammaf
+- math/lgammal
+dev_langs: C++
+helpviewer_keywords:
+- lgamma function
+- lgammal function
+- lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: afc048d131bd75a9645c045b3bceae90344c07eb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Lgamma, Lgammaf, lgammal
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Bestimmt den natürlichen Logarithmus der Absolute Wert der Gammafunktion des angegebenen Werts.  
+# <a name="lgamma-lgammaf-lgammal"></a>lgamma, lgammaf, lgammal
+Bestimmt den natürlichen Logarithmus des absoluten Werts der Gammafunktion des angegebenen Werts.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 double lgamma(  
@@ -76,37 +77,37 @@ long double lgammal(
   
 ```  
   
-#### Parameter  
- \[in\] `x`  
- Der Wert berechnet.  
+#### <a name="parameters"></a>Parameter  
+ [in] `x`  
+ Der zu berechnende Wert.  
   
-## Rückgabewert  
- Im Erfolgsfall Zurückgeben der natürliche Logarithmus des absoluten Werts der Gammafunktion von `x.`  
+## <a name="return-value"></a>Rückgabewert  
+ Bei Erfolg wird der natürliche Logarithmus des absoluten Werts der Gammafunktion von `x.` zurückgegeben  
   
 |Problem|Zurück|  
-|-------------|------------|  
-|`x` \= NaN|NaN|  
-|`x` \= ±0|PLUS UNENDLICH|  
-|`x`\= negative ganze Zahl|PLUS UNENDLICH|  
-|±INFINITY|PLUS UNENDLICH|  
-|pol\-Fehler|\+ HUGE\_VAL \+ HUGE\_VALF, oder \+ HUGE\_VALL|  
-|Überlauffehler\-Bereich|±HUGE\_VAL, ±HUGE\_VALF oder ±HUGE\_VALL|  
+|-----------|------------|  
+|`x` = NaN|NaN|  
+|`x` = ±0|+INFINITY|  
+|`x`= negative ganze Zahl|+INFINITY|  
+|±INFINITY|+INFINITY|  
+|pole-Fehler|+HUGE_VAL, +HUGE_VALF, oder +HUGE_VALL|  
+|Überlaufbereichsfehler|±HUGE_VAL, ±HUGE_VALF, oder ±HUGE_VALL|  
   
- Fehler werden gemeldet, gemäß den Angaben in [\_matherr](../../c-runtime-library/reference/matherr.md).  
+ Fehler werden wie in [_matherr](../../c-runtime-library/reference/matherr.md) angegeben gemeldet.  
   
-## Hinweise  
- Da C\+\+ das Überladen zulässt, können Sie Überladungen von Aufrufen `lgamma` verwenden und Zurückgeben von float\- und long double\-Typen. In einem C\-Programm verwendet `lgamma` immer double und gibt auch double zurück.  
+## <a name="remarks"></a>Hinweise  
+ Da C++ Überladungen zulässt, können Sie Überladungen von `lgamma` aufrufen, die float- und long double-Typen annehmen und zurückgeben. In einem C-Programm verwendet `lgamma` immer double und gibt auch double zurück.  
   
- Wenn x eine rationale Zahl ist, gibt diese Funktion den Logarithmus der Fakultät \(`x`\-1\).  
+ Wenn x eine rationale Zahl ist, gibt diese Funktion den Logarithmus der Fakultät von (`x`-1) zurück.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Funktion|C\-Header|C\+\+\-Header|  
-|--------------|---------------|-------------------|  
-|`lgamma`, `lgammaf`,  `lgammal`|\<math.h\>|\<cmath\>|  
+|Funktion|C-Header|C++-Header|  
+|--------------|--------------|------------------|  
+|`lgamma`,                `lgammaf`,  `lgammal`|\<math.h>|\<cmath>|  
   
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
+ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Alphabetische Funktionsreferenz](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [Tgamma, Tgammaf, tgammal](../../c-runtime-library/reference/tgamma-tgammaf-tgammal.md)
+ [tgamma, tgammaf, tgammal](../../c-runtime-library/reference/tgamma-tgammaf-tgammal.md)

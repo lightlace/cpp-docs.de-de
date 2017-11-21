@@ -4,40 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - C++ Standard Library, template class containers
 - containers, C++ Standard Library
 ms.assetid: 8e915ca1-19ba-4f0d-93c8-e2c3bfd638eb
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
-ms.openlocfilehash: dc71a6958a352ebf1c46406114c32d77b7fb8887
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 86e856a47baa9df0da78e4db926ef64cd47284f0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="c-standard-library-containers"></a>C++-Standardbibliothekscontainer
 Die Standardbibliothek stellt unterschiedliche typsichere Container zum Speichern verknüpfter Objekte bereit. Container sind Klassenvorlagen; Beim Deklarieren einer Containervariablen wird der Typ der Elemente angegeben, die der Container enthalten soll. Container können mit Initialisiererlisten erstellt werden. Sie verfügen über Memberfunktionen zum Hinzufügen und Entfernen von Elementen und Ausführen anderer Vorgänge.  
@@ -182,15 +165,14 @@ int main()
 >  Sie können auch [bereichsbasierte For-Schleifen](../cpp/range-based-for-statement-cpp.md) verwenden, um C++-Standardbibliotheksauflistungen zu durchlaufen.  
   
 ## <a name="comparing-containers"></a>Vergleichen von Containern  
- Alle Container überladen den Operator „==“ zum Vergleichen von zwei Containern desselben Typs, die den gleichen Elementtyp aufweisen. Mit „==“ können Sie einen Vektor \<string> mit einem anderen Vektor \<string> vergleichen; einen Vektor \<string> mit einer Liste \<string> oder einen Vektor \<string> mit einem Vektor \<char*> können Sie mit „==“ jedoch nicht vergleichen.  Sie können in C++98/03 [std::equal](http://msdn.microsoft.com/Library/56533afd-b696-40a0-8fa9-d366539e49ae) oder [std::mismatch](http://msdn.microsoft.com/Library/a9fe78f3-9a86-44dc-9400-0c2ed1083323) zum Vergleichen unterschiedlicher Containertypen und/oder Elementtypen verwenden. Sie können in C++11 auch [std::is_permutation](http://msdn.microsoft.com/Library/3384e786-e210-4648-b2bc-3896b5e14f1f) verwenden. In all diesen Fällen gehen die Funktionen jedoch davon aus, dass die Container die gleiche Länge aufweisen. Wenn der zweite Bereich kürzer als der erste ist, kommt es zu nicht definiertem Verhalten. Wenn der zweite Bereich länger ist, sind die Ergebnisse möglicherweise trotzdem falsch, da der Vergleich nie über das Ende des ersten Bereichs hinaus fortgesetzt wird.  
+ Alle Container überladen den Operator „==“ zum Vergleichen von zwei Containern desselben Typs, die den gleichen Elementtyp aufweisen. Mit „==“ können Sie einen Vektor \<string> mit einem anderen Vektor \<string> vergleichen; einen Vektor \<string> mit einer Liste \<string> oder einen Vektor \<string> mit einem Vektor \<char*> können Sie mit „==“ jedoch nicht vergleichen.  Sie können in C++98/03 [std::equal](algorithm-functions.md#equal) oder [std::mismatch](algorithm-functions.md#mismatch) zum Vergleichen unterschiedlicher Containertypen und/oder Elementtypen verwenden. Sie können in C++11 auch [std::is_permutation](algorithm-functions.md#is_permutation) verwenden. In all diesen Fällen gehen die Funktionen jedoch davon aus, dass die Container die gleiche Länge aufweisen. Wenn der zweite Bereich kürzer als der erste ist, kommt es zu nicht definiertem Verhalten. Wenn der zweite Bereich länger ist, sind die Ergebnisse möglicherweise trotzdem falsch, da der Vergleich nie über das Ende des ersten Bereichs hinaus fortgesetzt wird.  
   
 ### <a name="comparing-dissimilar-containers-c14"></a>Vergleichen unterschiedlicher Container (C++14)  
- Mit den [std::equal](http://msdn.microsoft.com/Library/56533afd-b696-40a0-8fa9-d366539e49ae), [std::mismatch](http://msdn.microsoft.com/Library/a9fe78f3-9a86-44dc-9400-0c2ed1083323)- oder [std::is_permutation](http://msdn.microsoft.com/Library/3384e786-e210-4648-b2bc-3896b5e14f1f)-Funktionsüberladungen, die zwei vollständige Bereiche umfassen, können Sie in C++14 und höher unterschiedliche Container und/oder Elementtypen vergleichen. Mit diesen Überladungen können Sie Container mit unterschiedlicher Länge vergleichen. Diese Überladungen sind weniger für Benutzerfehler anfällig und sind beim Vergleichen von Containern mit unterschiedlicher Länge so optimiert, dass sie in konstanter Zeit FALSE zurückgeben. Aus diesem Grund wird empfohlen, diese Überladungen zu verwenden, es sei denn (1) Sie haben einen klaren Grund dazu, dies nicht zu tun, oder (2) Sie verwenden einen [std:: list](../standard-library/list-class.md)-Container, der nicht von den Optimierungen mit zwei Bereichen profitiert.  
+ Mit den **std::equal**, **std::mismatch**- oder **std::is_permutation**-Funktionsüberladungen, die zwei vollständige Bereiche umfassen, können Sie in C++14 und höher unterschiedliche Container und/oder Elementtypen vergleichen. Mit diesen Überladungen können Sie Container mit unterschiedlicher Länge vergleichen. Diese Überladungen sind weniger für Benutzerfehler anfällig und sind beim Vergleichen von Containern mit unterschiedlicher Länge so optimiert, dass sie in konstanter Zeit FALSE zurückgeben. Aus diesem Grund wird empfohlen, diese Überladungen zu verwenden, es sei denn (1) Sie haben einen klaren Grund dazu, dies nicht zu tun, oder (2) Sie verwenden einen [std:: list](../standard-library/list-class.md)-Container, der nicht von den Optimierungen mit zwei Bereichen profitiert.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Container](../cpp/containers-modern-cpp.md)   
  [C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)   
  [\<Sample Container>](../standard-library/sample-container.md)   
  [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

@@ -1,45 +1,43 @@
 ---
-title: "hash_set::swap (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::swap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "swap-Member [STL/CLR]"
+title: 'hash_set:: Swap (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::swap
+dev_langs: C++
+helpviewer_keywords: swap member [STL/CLR]
 ms.assetid: 6476e48f-4744-486d-b028-cf0a048acd4d
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 958702e46ad3303242187e5884de5a08d699c765
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::swap (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashsetswap-stlclr"></a>hash_set::swap (STL/CLR)
 Vertauscht den Inhalt von zwei Containern.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void swap(hash_set<Key>% right);  
 ```  
   
-#### Parameter  
- right  
- Container, mit denen Inhalt getauscht werden soll.  
+#### <a name="parameters"></a>Parameter  
+ Rechts  
+ Container für den Tausch von Inhalten.  
   
-## Hinweise  
- Die Memberfunktion tauscht die gesteuerten Sequenzen zwischen `this` und `right` aus.  Sie geschieht bei der konstanten Zeit und es löst keine Ausnahmen aus.  Sie verwenden sie als schnelle Möglichkeit, der Inhalt zweier Containern auszutauschen.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion tauscht die kontrollierten Sequenzen zwischen `this` und `right`aus. Dies erfolgt in konstanter Zeit, und es löst keine Ausnahmen. Sie verwenden es als eine schnelle Möglichkeit zum Austauschen von den Inhalt von zwei Containern.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_hash_set_swap.cpp   
@@ -82,15 +80,18 @@ int main()
   
 ```  
   
-  **ein b c**  
- **d E\-F**  
- **d E\-F**  
- **ein b c**   
-## Anforderungen  
- **Header:** \<cliext\/hash\_set\>  
+```Output  
+a b c  
+d e f  
+d e f  
+a b c  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext Hash_set/>  
   
-## Siehe auch  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::operator\=](../dotnet/hash-set-operator-assign-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set::operator= (STL/CLR)](../dotnet/hash-set-operator-assign-stl-clr.md)

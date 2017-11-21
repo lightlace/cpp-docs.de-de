@@ -1,40 +1,40 @@
 ---
-title: "Gewusst wie: Marshallen von BSTR-Zeichenfolgen f&#252;r ADO.NET (C++/CLI)"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ADO.NET [C++], Marshalling von BSTR-Zeichenfolgen"
-  - "BSTRs, Zeichenfolgen"
-  - "Zeichenfolgen [C++], Marshalling von BSTR-Zeichenfolgen"
+title: "Wie: Marshallen von BSTR-Zeichenfolgen für ADO.NET (C + c++ / CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- BSTRs, strings
+- ADO.NET [C++], marshaling BSTR strings
+- strings [C++], marshaling BSTR strings
 ms.assetid: 5daf4d9e-6ae8-4604-908f-855e37c8d636
-caps.latest.revision: 11
-caps.handback.revision: "9"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9423dcc177db68319ea6d8e1771fe4b18a86c5c0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Gewusst wie: Marshallen von BSTR-Zeichenfolgen f&#252;r ADO.NET (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Veranschaulicht das Hinzufügen einer COM\-Zeichenfolge \(`BSTR`\) zu einer Datenbank und das Marshallen einer <xref:System.String?displayProperty=fullName>\-Zeichenfolge aus einer Datenbank in eine `BSTR`\-Zeichenfolge.  
+# <a name="how-to-marshal-bstr-strings-for-adonet-ccli"></a>Gewusst wie: Marshallen von BSTR-Zeichenfolgen für ADO.NET (C++/CLI)
+Veranschaulicht das Hinzufügen einer COM-Zeichenfolge (`BSTR`) mit einer Datenbank und das Marshallen einer <xref:System.String?displayProperty=fullName> aus einer Datenbank in eine `BSTR`.  
   
-## Beispiel  
- In diesem Beispiel wird die Klasse DatabaseClass erstellt, die mit einem ADO.NET\-<xref:System.Data.DataTable>\-Objekt interagiert.  Beachten Sie, dass diese Klasse eine systemeigene C\+\+\-`class` ist \(im Vergleich zu einer `ref class` oder einer `value class`\).  Dies ist notwendig, weil wir diese Klasse von systemeigenem Code aus verwenden möchten und verwaltete Typen in systemeigenem Code nicht verwendet werden können.  Diese Klasse wird mit der CLR als Ziel kompiliert. Dies wird durch die der Klassendeklaration vorangestellte `#pragma managed`\-Direktive angezeigt.  Weitere Informationen über diese Direktive finden Sie unter [managed, unmanaged](../preprocessor/managed-unmanaged.md).  
+## <a name="example"></a>Beispiel  
+ In diesem Beispiel wird die Klasse DatabaseClass wird erstellt für die Interaktion mit einem ADO.NET <xref:System.Data.DataTable> Objekt. Beachten Sie, dass diese Klasse eine systemeigene C++ `class` (verglichen mit einer `ref class` oder `value class`). Dies ist erforderlich, da diese Klasse von systemeigenem Code verwendet werden soll, und verwaltete Typen in systemeigenem Code nicht verwendet werden können. Diese Klasse wird kompiliert werden, um die CLR als Ziel ist die `#pragma managed` Richtlinie vor der Klassendeklaration. Weitere Informationen zu dieser Richtlinie, finden Sie unter [verwaltete, unverwaltete](../preprocessor/managed-unmanaged.md).  
   
- Beachten Sie den privaten Member der DatabaseClass\-Klasse: `gcroot<DataTable ^> table`.  Da systemeigene Typen keine verwalteten Typen enthalten können, ist das `gcroot`\-Schlüsselwort erforderlich.  Weitere Information zu `gcroot` finden Sie unter [Gewusst wie: Deklarieren von Handles in systemeigenen Typen](../dotnet/how-to-declare-handles-in-native-types.md).  
+ Beachten Sie den privaten Member der Klasse DatabaseClass: `gcroot<DataTable ^> table`. Da systemeigene Typen verwaltete Typen enthalten, können die `gcroot` Schlüsselwort ist erforderlich. Weitere Informationen zu `gcroot`, finden Sie unter [wie: Deklarieren Sie in systemeigenen Typen behandelt](../dotnet/how-to-declare-handles-in-native-types.md).  
   
- Bei dem übrigen Code in diesem Beispiel handelt es sich um systemeigenen C\+\+\-Code, was durch die `#pragma unmanaged`\-Direktive vor `main` angezeigt wird.  In diesem Beispiel erstellen wir eine neue Instanz von DatabaseClass und rufen ihre Methoden auf, um eine Tabelle zu erstellen und einige Zeilen darin zu füllen.  Beachten Sie, dass COM\-Zeichenfolgen als Werte für die Datenbankspalte StringCol übergeben werden.  Innerhalb der DatabaseClass werden diese Zeichenfolgen mit der Marshalling\-Funktionalität des <xref:System.Runtime.InteropServices?displayProperty=fullName>\-Namespaces in verwaltete Zeichenfolgen gemarshallt.  Dabei wird die Methode <xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR*> zum Marshallen einer `BSTR` in eine <xref:System.String> und die Methode <xref:System.Runtime.InteropServices.Marshal.StringToBSTR*> zum Marshallen einer <xref:System.String> in eine `BSTR` verwendet.  
+ Der Rest des Codes in diesem Beispiel wird systemeigenem C++-Code aus, wie durch angezeigt wird der `#pragma unmanaged` -Direktive vor `main`. In diesem Beispiel werden wir erstellen eine neue Instanz der DatabaseClass und Aufrufen ihrer Methoden zum Erstellen einer Tabelle und einige Zeilen in der Tabelle zu füllen. Beachten Sie, dass die COM-Zeichenfolgen als Werte für die Datenbankspalte StringCol übergeben werden. Innerhalb der DatabaseClass werden diese Zeichenfolgen mit der Marshalling-Funktionalität in verwaltete Zeichenfolgen gemarshallt der <xref:System.Runtime.InteropServices?displayProperty=fullName> Namespace. Insbesondere die Methode <xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A> wird verwendet, um das Marshallen eine `BSTR` auf eine <xref:System.String>, und die Methode <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> wird verwendet, um das Marshallen eine <xref:System.String> auf eine `BSTR`.  
   
 > [!NOTE]
->  Der durch <xref:System.Runtime.InteropServices.Marshal.StringToBSTR*> belegte Arbeitsspeicher muss durch Aufrufen von <xref:System.Runtime.InteropServices.Marshal.FreeBSTR*> oder `SysFreeString` freigegeben werden.  
+>  Der vom zugeordneten Speicher <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> muss aufgehoben werden, durch den Aufruf eines <xref:System.Runtime.InteropServices.Marshal.FreeBSTR%2A> oder `SysFreeString`.  
   
 ```  
 // adonet_marshal_string_bstr.cpp  
@@ -142,22 +142,25 @@ int main()
 }  
 ```  
   
-  **StringCol: Hierbei handelt es sich um Zeichenfolge 1.**  
-**StringCol: Hierbei handelt es sich um Zeichenfolge 2.**   
-## Kompilieren des Codes  
+```Output  
+StringCol: This is string 1.  
+StringCol: This is string 2.  
+```  
   
--   Um den Code über die Kommandozeile zu kompilieren, speichern Sie das Codebeispiel in einer Datei mit dem Namen adonet\_marshal\_string\_native.cpp, und geben Sie die folgende Anweisung ein:  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
+  
+-   Um den Code über die Befehlszeile kompilieren, speichern Sie das Codebeispiel in einer Datei namens adonet_marshal_string_native.cpp, und geben Sie die folgende Anweisung aus:  
   
     ```  
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_string_native.cpp  
     ```  
   
-## .NET Framework-Sicherheit  
- Informationen zu Sicherheitsaspekten bezüglich ADO.NET finden Sie unter [Sichern von ADO.NET\-Anwendungen](../Topic/Securing%20ADO.NET%20Applications.md).  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Informationen zu Sicherheitsaspekten bezüglich ADO.NET finden Sie unter [Sichern von ADO.NET-Anwendungen](/dotnet/framework/data/adonet/securing-ado-net-applications).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.Runtime.InteropServices>   
- [Datenzugriff](../dotnet/data-access-using-adonet-cpp-cli.md)   
- [ADO.NET](../Topic/ADO.NET.md)   
- [Interoperability](assetId:///afcc2e7d-3f32-48d2-8141-1c42acf29084)   
- [Interoperabilität von systemeigenem Code und .NET](../dotnet/native-and-dotnet-interoperability.md)
+ [Datenzugriff mit ADO.NET (C + c++ / CLI)](../dotnet/data-access-using-adonet-cpp-cli.md)   
+ [ADO.NET](/dotnet/framework/data/adonet/index)   
+ [Interoperabilität](http://msdn.microsoft.com/en-us/afcc2e7d-3f32-48d2-8141-1c42acf29084)   
+ [Interoperabilität von nativem Code und .NET](../dotnet/native-and-dotnet-interoperability.md)

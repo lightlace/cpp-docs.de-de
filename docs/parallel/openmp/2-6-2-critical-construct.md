@@ -1,32 +1,31 @@
 ---
-title: "2.6.2 critical Construct"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.6.2 critical-Konstrukt | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: c46ecd00-b4a2-4a5e-ba92-288c329e773a
-caps.latest.revision: 6
-caps.handback.revision: "6"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 13e9b4a8611732c7dddb81be1ca6123b725f7169
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# 2.6.2 critical Construct
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die **Kritisch**\-Direktive identifizieren ein Konstrukt, das die Ausführung des entsprechenden strukturierten Blocks zu einem einzigen Thread gleichzeitig einschränkt.  Die Syntax der **Kritisch**\-Direktive sieht wie folgt aus:  
+# <a name="262-critical-construct"></a>2.6.2 critical-Konstrukt
+Die **kritische** Richtlinie identifiziert ein Konstrukt, die Ausführung des zugehörigen strukturierten Block auf einem einzelnen Thread zu einem Zeitpunkt beschränkt. Die Syntax der **kritische** Richtlinie lautet wie folgt:  
   
 ```  
-#pragma omp critical [(name)]  new-line  
-   structured-block  
+#pragma omp critical [(name)]  new-linestructured-block  
 ```  
   
- Ein optionaler *Name* kann verwendet werden, um den kritischen Abschnitt zu identifizieren.  Die Bezeichner, die verwendet werden, um einen kritischen Abschnitt zu identifizieren, verfügen über externe Bindung und befinden sich in einem Namespace, der getrennt von den Namespaces ist, die von den Bezeichnungen von Tagen, Member und den gewöhnlichen Bezeichnern verwendet werden.  
+ Ein optionales *Namen* kann verwendet werden, um die kritischen Bereichs zu identifizieren. Bezeichner, die zur Identifizierung einer kritischen Bereichs haben externe Verknüpfung und in einem Namespace von Namespaces, die von Bezeichnungen, Tags, Mitglieder und normale Bezeichner verwendet werden.  
   
- Ein Thread wartet am Anfang eines kritischen Abschnitts, wenn kein anderer Thread einen kritischen Abschnitt \(eine beliebige Stelle im Programm\) mit dem gleichen Namen ausgeführt wird.  Alle unbenannte **Kritisch**\-Direktive auf denselben nicht angegeben Namen zugeordnet.
+ Ein Thread wartet am Anfang eines kritischen Bereichs, bis keine anderen Thread einen kritischen Bereich (eine beliebige Stelle im Programm), mit dem gleichen Namen ausgeführt wird. Alle unbenannten **kritische** Direktiven in den nicht angegebenen Namen zugeordnet.

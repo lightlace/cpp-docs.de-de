@@ -1,41 +1,39 @@
 ---
-title: "hash_set::empty (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::empty"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "empty-Member [STL/CLR]"
+title: 'hash_set:: Empty (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::empty
+dev_langs: C++
+helpviewer_keywords: empty member [STL/CLR]
 ms.assetid: 7843eb9a-067b-4339-8637-5401b637c6d0
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a63e1cb481ec0edab83bf214c6766fce02ee90b9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::empty (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Testet, dass keine Elemente vorhanden sind.  
+# <a name="hashsetempty-stlclr"></a>hash_set::empty (STL/CLR)
+Testet, ob keine Elemente vorhanden sind.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 bool empty();  
 ```  
   
-## Hinweise  
- Die Memberfunktionsrückgaben true für eine leere gesteuerte Sequenz.  Er besteht darin [hash\_set::size](../dotnet/hash-set-size-stl-clr.md)`() == 0`.  Sie verwenden sie, um zu testen, ob das hash\_set leer ist.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt „true“ für eine leere gesteuerte Sequenz zurück. Dies ist äquivalent zum [hash_set:: Size (STL/CLR)](../dotnet/hash-set-size-stl-clr.md)`() == 0`. Sie verwenden sie zum Überprüfen, ob das hash_set-Objekt leer ist.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_hash_set_empty.cpp   
@@ -66,16 +64,19 @@ int main()
   
 ```  
   
-  **ein b c**  
-**size\(\) \= 3**  
-**empty\(\) \= False**  
-**size\(\) \= 0**  
-**empty\(\) \= True**   
-## Anforderungen  
- **Header:** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext Hash_set/>  
   
-## Siehe auch  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::size](../dotnet/hash-set-size-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set::size (STL/CLR)](../dotnet/hash-set-size-stl-clr.md)

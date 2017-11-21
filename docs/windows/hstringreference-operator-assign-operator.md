@@ -1,46 +1,45 @@
 ---
-title: "HStringReference::Operator=-Operator"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HStringReference::operator="
-dev_langs: 
-  - "C++"
+title: 'Hstringreference:: Operator = | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HStringReference::operator=
+dev_langs: C++
 ms.assetid: ea100ed3-e566-4c9e-b6a8-f296088dea9c
-caps.latest.revision: 2
-caps.handback.revision: "2"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2b6a9938308f0cbd8339c24d1876c09ae49df349
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# HStringReference::Operator=-Operator
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Verschiebt den Wert eines anderen HStringReference\-Objekts zum aktuellen HStringReference\-Objekt.  
+# <a name="hstringreferenceoperator-operator"></a>HStringReference::Operator=-Operator
+Verschiebt den Wert eines anderen HStringReference-Objekts zum aktuellen HStringReference-Objekt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HStringReference& operator=(HStringReference&& other) throw()  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `other`  
- Ein vorhandenes HStringReference\-Objekt.  
+ Ein vorhandenes HStringReference-Objekt.  
   
-## Hinweise  
- Der Wert des Objekts vorhandenen `other` wird dem aktuellen HStringReference\-Objekt kopiert, und `other` wird das Objekt zerstört.  
+## <a name="remarks"></a>Hinweise  
+ Der Wert des vorhandenen `other` Objekt wird zum aktuellen HStringReference-Objekt kopiert und dann die `other` -Objekt zerstört wird.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## Siehe auch  
- [HStringReference\-Klasse](../windows/hstringreference-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [HStringReference-Klasse](../windows/hstringreference-class.md)

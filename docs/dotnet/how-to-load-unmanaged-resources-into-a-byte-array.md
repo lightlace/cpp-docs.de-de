@@ -1,33 +1,33 @@
 ---
-title: "Gewusst wie: Laden von nicht verwalteten Ressourcen in ein Byte-Array | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Systemeigene Ressourcen"
-  - "Systemeigene Ressourcen, Laden in Bytearray"
-  - "Nicht verwaltete Ressourcen, Laden in Bytearray"
+title: 'Vorgehensweise: Laden von nicht verwalteten Ressourcen in ein Bytearray | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- native resources, loading into Byte array
+- unmanaged resources, loading into Byte array
+- native resources
 ms.assetid: cdada6cd-6d42-437a-a90f-44a0b18d6a93
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 95c6e0655bcb5868a3c8eefa7a990ceea5dc6371
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Gewusst wie: Laden von nicht verwalteten Ressourcen in ein Byte-Array
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Unter diesem Thema werden mehrere Möglichkeiten erläutert, nicht verwaltete Ressourcen in einen <xref:System.Byte>\-Array zu laden.  
+# <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>Gewusst wie: Laden von nicht verwalteten Ressourcen in ein Byte-Array
+In diesem Artikel werden verschiedene Möglichkeiten zum Laden von nicht verwalteten Ressourcen in einem <xref:System.Byte> Array.  
   
-## Beispiel  
- Wenn Sie die Größe der nicht verwalteten Ressource kennen, können Sie einen CLR\-Array vorreservieren und anschließend die Ressource mithilfe eines Zeigers auf den Array\-Block des CLR\-Arrays in den Array laden.  
+## <a name="example"></a>Beispiel  
+ Wenn Sie die Größe des nicht verwalteten Ressource kennen, können vorab ein CLR-Array und Laden Sie die Ressource in das Array, das mithilfe eines Zeigers auf den Array-Block des CLR-Arrays.  
   
 ```  
 // load_unmanaged_resources_into_Byte_array.cpp  
@@ -57,9 +57,12 @@ int main() {
 }  
 ```  
   
-  **0123456789**   
-## Beispiel  
- Anhand dieses Beispiels wird gezeigt, wie Daten aus einem nicht verwalteten Speicherblock in einen verwalteten Array kopiert werden.  
+```Output  
+0123456789  
+```  
+  
+## <a name="example"></a>Beispiel  
+ In diesem Beispiel wird gezeigt, wie Daten aus einem nicht verwalteten Speicherblock in ein verwaltetes Array kopiert werden.  
   
 ```  
 // load_unmanaged_resources_into_Byte_array_2.cpp  
@@ -78,5 +81,5 @@ int main() {
 }  
 ```  
   
-## Siehe auch  
- [Verwenden von C\+\+\-Interop \(implizites PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Siehe auch  
+ [Verwenden von C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

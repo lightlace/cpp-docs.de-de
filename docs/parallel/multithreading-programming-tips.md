@@ -1,68 +1,68 @@
 ---
-title: "Multithreading: Tipps f&#252;r die Programmierung | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Zugriffssteuerung [C++], Multithreading"
-  - "Kommunikation [C++], Zwischen Threads"
-  - "Kritische Abschnitte [C++]"
-  - "Handlezuordnungen [C++]"
-  - "Multithreading [C++], Programmiertipps"
-  - "MFC-fremde Threads [C++]"
-  - "Objekte [C++], Mehrere Threads und"
-  - "[C++]-Programmierung, Multithread"
-  - "Synchronisierung [C++], Multithreading"
-  - "Threading [C++], Bewährte Methoden"
-  - "Threading [MFC], Programmiertipps"
-  - "Problembehandlung [C++], Multithreading"
-  - "Windows-Handlezuordnungen [C++]"
+title: 'Multithreading: Programmiertipps | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- multithreading [C++], programming tips
+- handle maps [C++]
+- access control [C++], multithreading
+- objects [C++], multiple threads and
+- non-MFC threads [C++]
+- threading [MFC], programming tips
+- critical sections [C++]
+- synchronization [C++], multithreading
+- programming [C++], multithreaded
+- communications [C++], between threads
+- threading [C++], best practices
+- troubleshooting [C++], multithreading
+- Windows handle maps [C++]
 ms.assetid: ad14cc70-c91c-4c24-942f-13a75e58bf8a
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 180039627049dee0be8ebcaf211dabc2e42086c7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Multithreading: Tipps f&#252;r die Programmierung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In Multithreadanwendungen müssen Sie beim Zugriff auf Daten größere Vorsicht walten lassen als in Singlethreadanwendungen.  Da in Multithreadanwendungen mehrere unabhängige Ausführungspfade gleichzeitig verwendet werden, müssen die Algorithmen, die Daten oder beide darüber informiert sein, dass Daten möglicherweise von mehreren Threads gleichzeitig verwendet werden.  In diesem Thema werden die Methoden beschrieben, mit denen potenzielle Probleme bei der Programmierung von Multithreadanwendungen mit Microsoft Foundation Class Library \(MFC\) vermieden werden können.  
+# <a name="multithreading-programming-tips"></a>Multithreading: Tipps für die Programmierung
+In Multithreadanwendungen müssen Sie beim Zugriff auf Daten größere Vorsicht walten lassen als in Singlethreadanwendungen. Da in Multithreadanwendungen mehrere unabhängige Ausführungspfade gleichzeitig verwendet werden, müssen die Algorithmen, die Daten oder beide darüber informiert sein, dass Daten möglicherweise von mehreren Threads gleichzeitig verwendet werden. In diesem Thema werden die Methoden beschrieben, mit denen potenzielle Probleme bei der Programmierung von Multithreadanwendungen mit Microsoft Foundation Class Library (MFC) vermieden werden können.  
   
 -   [Zugriff auf Objekte durch mehrere Threads](#_core_accessing_objects_from_multiple_threads)  
   
--   [Zugriff auf MFC\-Objekte durch MFC\-fremde Threads](#_core_accessing_mfc_objects_from_non.2d.mfc_threads)  
+-   [Zugriff auf MFC-Objekte durch MFC-fremde Threads](#_core_accessing_mfc_objects_from_non.2d.mfc_threads)  
   
--   [Windows\-Handlezuordnungen](#_core_windows_handle_maps)  
+-   [Windows-Handlezuordnungen](#_core_windows_handle_maps)  
   
 -   [Kommunikation zwischen Threads](#_core_communicating_between_threads)  
   
-##  <a name="_core_accessing_objects_from_multiple_threads"></a> Zugriff auf Objekte durch mehrere Threads  
- Aus Gründen der Leistung und des Umfangs sind MFC\-Objekte auf Objektebene nicht threadsicher, auf Klassenebene hingegen schon.  Dies bedeutet, dass zwei separate Threads zwei unterschiedliche `CString`\-Objekte bearbeiten können, dasselbe `CString`\-Objekt jedoch nicht von zwei Threads bearbeitet werden kann.  Wenn es unumgänglich ist, dass mehrere Threads dasselbe Objekt bearbeiten, nutzen Sie die entsprechenden Win32\-Synchronisierungsmechanismen \(z. B. kritische Abschnitte\), um Zugriffe dieser Art sicher zu gestalten.  Weitere Informationen über kritische Abschnitte und andere verwandte Objekte finden Sie im [!INCLUDE[winsdkshort](../atl/reference/includes/winsdkshort_md.md)] unter [Synchronization](http://msdn.microsoft.com/library/windows/desktop/ms686353).  
+##  <a name="_core_accessing_objects_from_multiple_threads"></a>Zugriff auf Objekte durch mehrere Threads  
+ Aus Gründen der Leistung und des Umfangs sind MFC-Objekte auf Objektebene nicht threadsicher, auf Klassenebene hingegen schon. Dies bedeutet, dass zwei separate Threads zwei unterschiedliche `CString`-Objekte bearbeiten können, dasselbe `CString`-Objekt jedoch nicht von zwei Threads bearbeitet werden kann. Wenn es unumgänglich ist, dass mehrere Threads dasselbe Objekt bearbeiten, nutzen Sie die entsprechenden Win32-Synchronisierungsmechanismen (z. B. kritische Abschnitte), um Zugriffe dieser Art sicher zu gestalten. Weitere Informationen über kritische Abschnitte und andere verwandte Objekte finden Sie unter [Synchronisierung](http://msdn.microsoft.com/library/windows/desktop/ms686353) in der [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
   
  In der Klassenbibliothek werden kritische Abschnitte intern zum Schutz globaler Datenstrukturen verwendet. Diese Datenstrukturen werden z. B. von der Debugspeicherbelegung verwendet.  
   
-##  <a name="_core_accessing_mfc_objects_from_non.2d.mfc_threads"></a> Zugriff auf MFC\-Objekte durch MFC\-fremde Threads  
- Wenn Sie mit einer Multithreadanwendung arbeiten, in der ein Thread nicht mithilfe eines [CWinThread](../mfc/reference/cwinthread-class.md)\-Objekts erstellt wird, ist der Zugriff auf andere MFC\-Objekte von diesem Thread aus nicht möglich.  Wenn Sie also von einem sekundären Thread aus auf ein beliebiges MFC\-Objekt zugreifen möchten, müssen Sie zur Erstellung dieses Threads eine der Methoden verwenden, die im Thema [Multithreading: Erstellen von Benutzeroberflächenthreads](../parallel/multithreading-creating-user-interface-threads.md) bzw. [Multithreading: Erstellen von Arbeitsthreads](../parallel/multithreading-creating-worker-threads.md) beschrieben werden.  Nur mithilfe dieser Methoden kann die Klassenbibliothek die internen Variablen initialisieren, die zur Behandlung von Multithreadanwendungen erforderlich sind.  
+##  <a name="_core_accessing_mfc_objects_from_non.2d.mfc_threads"></a>Zugriff auf MFC-Objekte durch MFC-fremde Threads  
+ Wenn Sie eine Multithreadanwendung arbeiten, die nicht mit einen Thread erstellt eine [CWinThread](../mfc/reference/cwinthread-class.md) -Objekt, Sie können nicht auf andere MFC-Objekte zugreifen, von diesem Thread aus. Heißt, wenn Sie ein beliebiges MFC-Objekt von einem sekundären Thread zugreifen möchten, Sie müssen zur Erstellung dieses Threads mit einer der Methoden, die in beschriebenen [Multithreading: Erstellen von Benutzeroberflächenthreads](../parallel/multithreading-creating-user-interface-threads.md) oder [Multithreading: Erstellen von Arbeitsthreads](../parallel/multithreading-creating-worker-threads.md). Nur mithilfe dieser Methoden kann die Klassenbibliothek die internen Variablen initialisieren, die zur Behandlung von Multithreadanwendungen erforderlich sind.  
   
-##  <a name="_core_windows_handle_maps"></a> Windows\-Handlezuordnungen  
- Grundsätzlich kann ein Thread nur auf die von ihm erstellten MFC\-Objekte zugreifen.  Der Grund hierfür ist, dass temporäre und permanente Windows\-Handlezuordnungen im lokalen Threadspeicher verwaltet werden. Auf diese Weise soll der gleichzeitige Zugriff von mehreren Threads aus verhindert werden.  Ein Arbeitsthread kann z. B. keine Berechnung durchführen und anschließend die `UpdateAllViews`\-Memberfunktion eines Dokuments aufrufen, um die Fenster zu ändern, die Ansichten der neuen Daten enthalten.  Dies hat keinerlei Auswirkung, da sich die Zuordnung von `CWnd`\-Objekten zu `HWND`s lediglich auf den primären Thread bezieht.  Dies bedeutet, dass ein bestimmter Thread möglicherweise eine Zuordnung eines Windows\-Handles zu einem C\+\+\-Objekt aufweist, ein anderer Thread dasselbe Handle jedoch unter Umständen einem anderen C\+\+\-Objekt zuordnet.  Änderungen, die in einem Thread vorgenommen wurden, werden in einem anderen Thread nicht widergespiegelt.  
+##  <a name="_core_windows_handle_maps"></a>Windows-Handlezuordnungen  
+ Grundsätzlich kann ein Thread nur auf die von ihm erstellten MFC-Objekte zugreifen. Der Grund hierfür ist, dass temporäre und permanente Windows-Handlezuordnungen im lokalen Threadspeicher verwaltet werden. Auf diese Weise soll der gleichzeitige Zugriff von mehreren Threads aus verhindert werden. Ein Arbeitsthread kann z. B. keine Berechnung durchführen und anschließend die `UpdateAllViews`-Memberfunktion eines Dokuments aufrufen, um die Fenster zu ändern, die Ansichten der neuen Daten enthalten. Dies hat keinerlei Auswirkung, da sich die Zuordnung von `CWnd`-Objekten zu `HWND`s lediglich auf den primären Thread bezieht. Dies bedeutet, dass ein bestimmter Thread möglicherweise eine Zuordnung eines Windows-Handles zu einem C++-Objekt aufweist, ein anderer Thread dasselbe Handle jedoch unter Umständen einem anderen C++-Objekt zuordnet. Änderungen, die in einem Thread vorgenommen wurden, werden in einem anderen Thread nicht widergespiegelt.  
   
- Es gibt verschiedene Methoden zur Umgehung dieses Problems:  Die erste Methode ist die Übergabe eines individuellen Handles \(z. B. `HWND`\) an den Arbeitsthread, anstelle von C\+\+\-Objekten.  Der Arbeitsthread fügt anschließend diese Objekte seiner temporären Zuordnung hinzu, indem er die entsprechende `FromHandle`\-Memberfunktion aufruft.  Sie haben auch die Möglichkeit, das Objekt der permanenten Zuordnung des Threads durch Aufruf von **Attach** hinzuzufügen; dies sollten Sie jedoch nur tun, wenn Sie mit absoluter Sicherheit wissen, dass das Objekt länger als der Thread vorhanden sein wird.  
+ Es gibt verschiedene Methoden zur Umgehung dieses Problems: Die erste Methode ist die Übergabe eines individuellen Handles (z. B. `HWND`) an den Arbeitsthread, anstelle von C++-Objekten. Der Arbeitsthread fügt anschließend diese Objekte seiner temporären Zuordnung hinzu, indem er die entsprechende `FromHandle`-Memberfunktion aufruft. Sie können auch das Objekt permanenten Zuordnung des Threads hinzufügen, durch den Aufruf **Anfügen**, dies sollte jedoch vorgenommen werden nur dann, wenn Sie garantiert, dass das Objekt länger als der Thread vorhanden ist.  
   
- Sie können auch neue benutzerdefinierte Meldungen erstellen, die den unterschiedlichen Aufgaben entsprechen, die von den Arbeitsthreads durchgeführt werden, und diese Meldungen mit **::PostMessage** im Hauptfenster der Anwendung bereitstellen.  Diese Kommunikationsmethode ist mit dem Informationsaustausch zwischen zwei Anwendungen vergleichbar; der Unterschied besteht darin, dass beide Threads im selben Adressbereich ausgeführt werden.  
+ Eine andere Methode ist, erstellen Sie neue benutzerdefinierte Meldungen, die die verschiedenen Aufgaben, den Arbeitsthreads durchgeführt werden, und diese Nachrichten senden, um im Hauptfenster der Anwendung, entsprechen, die mit **:: PostMessage**. Diese Kommunikationsmethode ist mit dem Informationsaustausch zwischen zwei Anwendungen vergleichbar; der Unterschied besteht darin, dass beide Threads im selben Adressbereich ausgeführt werden.  
   
- Weitere Informationen über Handlezuordnungen finden Sie unter [Technischer Hinweis 3](../mfc/tn003-mapping-of-windows-handles-to-objects.md).  Weitere Informationen über den lokalen Threadspeicher finden Sie im [!INCLUDE[winsdkshort](../atl/reference/includes/winsdkshort_md.md)] unter [Thread Local Storage](http://msdn.microsoft.com/library/windows/desktop/ms686749) und [Using Thread Local Storage](http://msdn.microsoft.com/library/windows/desktop/ms686991).  
+ Weitere Informationen über Handlezuordnungen finden Sie unter [technischer Hinweis 3](../mfc/tn003-mapping-of-windows-handles-to-objects.md). Weitere Informationen zu lokalen Threadspeicher, finden Sie unter [lokaler Threadspeicher](http://msdn.microsoft.com/library/windows/desktop/ms686749) und [Using Thread Local Storage](http://msdn.microsoft.com/library/windows/desktop/ms686991) in der [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
   
-##  <a name="_core_communicating_between_threads"></a> Kommunikation zwischen Threads  
- MFC enthält eine Anzahl von Klassen, die es Threads ermöglichen, den Zugriff auf Objekte zu synchronisieren und so die Threadsicherheit aufrechtzuerhalten.  Die Verwendung dieser Klassen wird in den Themen [Multithreading: Verwendungsweise der Synchronisierungsklassen](../parallel/multithreading-how-to-use-the-synchronization-classes.md) und [Multithreading: Verwendungsmöglichkeiten der Synchronisierungsklassen](../parallel/multithreading-when-to-use-the-synchronization-classes.md) erläutert.  Weitere Informationen über diese Objekte finden Sie im [!INCLUDE[winsdkshort](../atl/reference/includes/winsdkshort_md.md)] unter [Synchronization](http://msdn.microsoft.com/library/windows/desktop/ms686353).  
+##  <a name="_core_communicating_between_threads"></a>Kommunikation zwischen Threads  
+ MFC enthält eine Anzahl von Klassen, die es Threads ermöglichen, den Zugriff auf Objekte zu synchronisieren und so die Threadsicherheit aufrechtzuerhalten. Verwendung dieser Klassen wird in der beschriebenen [Multithreading: wie der Synchronisierungsklassen](../parallel/multithreading-how-to-use-the-synchronization-classes.md) und [Multithreading: Wenn der Synchronisierungsklassen](../parallel/multithreading-when-to-use-the-synchronization-classes.md). Weitere Informationen zu diesen Objekten finden Sie unter [Synchronisierung](http://msdn.microsoft.com/library/windows/desktop/ms686353) in der [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
   
-## Siehe auch  
- [Multithreading mit C\+\+ und MFC](../parallel/multithreading-with-cpp-and-mfc.md)
+## <a name="see-also"></a>Siehe auch  
+ [Multithreading mit C++ und MFC](../parallel/multithreading-with-cpp-and-mfc.md)

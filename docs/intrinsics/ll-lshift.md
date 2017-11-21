@@ -1,36 +1,36 @@
 ---
-title: "__ll_lshift | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__ll_lshift_cpp"
-  - "__ll_lshift"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ll_lshift intrinsic"
-  - "__ll_lshift intrinsic"
+title: __ll_lshift | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __ll_lshift_cpp
+- __ll_lshift
+dev_langs: C++
+helpviewer_keywords:
+- ll_lshift intrinsic
+- __ll_lshift intrinsic
 ms.assetid: fe98f733-426d-44b3-8f24-5d0d6d44bd94
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0d827b375cd382ff4f298f2933fc8a3109d2f846
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# __ll_lshift
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft\-spezifisch**  
+# <a name="lllshift"></a>__ll_lshift
+**Microsoft-spezifisch**  
   
- Verschiebt den angegebenen 64\-Bit\-Wert nach links um die angegebene Anzahl von Bits.  
+ Verschiebt die angegebenen 64-Bit-Wert durch die angegebene Anzahl von Bits nach links.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 unsigned __int64 __ll_lshift(  
@@ -39,30 +39,30 @@ unsigned __int64 __ll_lshift(
 );  
 ```  
   
-#### Parameter  
- \[in\] `Mask`  
- Der 64\-Bit\-Ganzzahlwert, um links verschoben werden soll.  
+#### <a name="parameters"></a>Parameter  
+ [in] `Mask`  
+ Der 64-Bit-Ganzzahl-Wert, nach links verschoben werden soll.  
   
- \[in\] `nBit`  
- Die Anzahl der Bits verschoben werden soll.  
+ [in] `nBit`  
+ Die Anzahl der zu verschiebenden Bits.  
   
-## Rückgabewert  
- Die Maske erfolgt durch `nBit` Bits verschoben.  
+## <a name="return-value"></a>Rückgabewert  
+ Die Maske verschoben nach links `nBit` Bits.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Intrinsisch|Architektur|  
-|-----------------|-----------------|  
+|Systemintern|Architektur|  
+|---------------|------------------|  
 |`__ll_lshift`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Headerdatei** \<intrin.h\>  
+ **Headerdatei** \<intrin.h >  
   
-## Hinweise  
- Wenn Sie das Programm mithilfe der Architektur mit 64 Bits kompilieren und `nBit` größer als 63 ist, ist die Anzahl der Bits verschoben werden soll `nBit` sich Modulo 64.  Wenn Sie das Programm mithilfe der Architektur mit 32 Bits kompilieren und `nBit` größer als 31 ist, ist die Anzahl der Bits verschoben werden soll `nBit` sich Modulo 32.  
+## <a name="remarks"></a>Hinweise  
+ Wenn Sie das Programm die Verwendung der 64-Bit-Architektur kompiliert und `nBit` ist größer als 63, ist die Anzahl der zu verschiebenden Bits `nBit` modulo 64. Wenn Sie das Programm die Verwendung der 32-Bit-Architektur kompiliert und `nBit` ist größer als 31, ist die Anzahl der zu verschiebenden Bits `nBit` modulo 32.  
   
- `ll` im Titel gibt an, dass dies ein Vorgang für `long long` \(`__int64`\) ist.  
+ Die `ll` im Namen gibt an, dass dies eine Operation auf `long long` (`__int64`).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // ll_lshift.cpp  
@@ -83,17 +83,17 @@ int main()
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Ausgabe  
   
 ```  
 10000  
 ```  
   
- **Hinweis** Es gibt keine Version ohne Vorzeichen der Linksschiebeoperation.  Dies liegt daran, dass `__ll_lshift` bereits einen Eingabeparameter ohne Vorzeichen verwendet.  Im Gegensatz zum Verschiebung nach rechts gibt es keine Zeichen abhängigkeit für die Verschiebung nach links, da das niedrigstwertige Byte im Ergebnis immer auf Null unabhängig davon, welche Zeichen des verschobenen Werts gestellt wird.  
+ **Hinweis** keine nicht signierten Version des Vorgangs nach links verschieben vorhanden ist. Grund hierfür ist, `__ll_lshift` bereits ohne Vorzeichen Eingabeparameter verwendet. Im Gegensatz zu den nach rechts verschieben gibt es keine Abhängigkeit Anmeldung für die Verschiebung nach links, da das niederwertigste Bit im Ergebnis immer unabhängig vom Vorzeichen des Werts verschoben, auf NULL festgelegt ist.  
   
-### Microsoft ENDES bestimmten  
+**Ende Microsoft-spezifisch**  
   
-## Siehe auch  
- [\_\_ll\_rshift](../intrinsics/ll-rshift.md)   
- [\_\_ull\_rshift](../intrinsics/ull-rshift.md)   
+## <a name="see-also"></a>Siehe auch  
+ [__ll_rshift](../intrinsics/ll-rshift.md)   
+ [__ull_rshift](../intrinsics/ull-rshift.md)   
  [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

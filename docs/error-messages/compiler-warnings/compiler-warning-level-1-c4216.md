@@ -1,32 +1,30 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4216 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4216"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4216"
+title: Compilerwarnung (Stufe 1) C4216 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4216
+dev_langs: C++
+helpviewer_keywords: C4216
 ms.assetid: 211079dc-59d0-42a7-801c-2ddab21d7232
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 02f43c2dda11b765becf0b9244a0887a99df9b33
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Compilerwarnung (Stufe 1) C4216
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Nicht dem Standard entsprechende Erweiterung: float long  
+# <a name="compiler-warning-level-1-c4216"></a>Compilerwarnung (Stufe 1) C4216
+nicht dem Standard entsprechende Erweiterung: long float  
   
- Die Microsoft\-Standarderweiterungen \(**\/Ze**\) behandeln **float long** als **double**,  was bei Einhaltung der ANSI\-Kompatibilität \([\/Za](../../build/reference/za-ze-disable-language-extensions.md)\) nicht der Fall ist.  Zur Einhaltung der Kompatibilität sollten Sie **double** verwenden.  Im folgenden Beispiel wird C4216 generiert:  
+ Die Standard-Microsoft-Erweiterungen (/ Ze) behandeln **lange float** als **doppelte**. ANSI-Kompatibilität (["/ Za"](../../build/reference/za-ze-disable-language-extensions.md)) nicht. Verwendung **doppelte** um Kompatibilität zu gewährleisten. Im folgenden Beispiel wird C4216 generiert:  
   
 ```  
 // C4216.cpp  

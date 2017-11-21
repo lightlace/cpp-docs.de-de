@@ -1,45 +1,44 @@
 ---
-title: "auto_gcroot::operator auto_gcroot | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_gcroot.operator auto_gcroot"
-  - "auto_gcroot::operator auto_gcroot"
-  - "msclr.auto_gcroot.operator auto_gcroot"
-  - "msclr::auto_gcroot::operator auto_gcroot"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_gcroot-Operator"
+title: auto_gcroot::Operator Auto_gcroot | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_gcroot.operator auto_gcroot
+- auto_gcroot::operator auto_gcroot
+- msclr.auto_gcroot.operator auto_gcroot
+- msclr::auto_gcroot::operator auto_gcroot
+dev_langs: C++
+helpviewer_keywords: auto_gcroot operator
 ms.assetid: 43e3f27a-9f68-444f-9149-a9282a9b935a
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 339df92e4b5085dfcfbc1eea1025612106dad6e5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# auto_gcroot::operator auto_gcroot
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Typumwandlungsoperator zwischen `auto_gcroot` und kompatible Typen.  
+# <a name="autogcrootoperator-autogcroot"></a>auto_gcroot::operator auto_gcroot
+Typumwandlung Operator zwischen `auto_gcroot` und kompatible Typen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<typename _other_type>  
 operator auto_gcroot<_other_type>();  
 ```  
   
-## Rückgabewert  
- Aktuelle `auto_gcroot` umgewandelt zu `auto_gcroot<_other_type>`.  
+## <a name="return-value"></a>Rückgabewert  
+ Die aktuelle `auto_gcroot` umgewandelt `auto_gcroot<_other_type>`.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // msl_auto_gcroot_op_auto_gcroot.cpp  
@@ -76,12 +75,15 @@ int main() {
 }  
 ```  
   
-  **Hello erst der B\!**  
-**Hello zuerst von A\!**   
-## Anforderungen  
- **Headerdatei** \<msclr\\auto\_gcroot.h\>  
+```Output  
+Hello from first B!  
+Hello from first A!  
+```  
   
- **Namespace** msclr  
+## <a name="requirements"></a>Anforderungen  
+ **Headerdatei** \<msclr\auto_gcroot.h >  
   
-## Siehe auch  
- [auto\_gcroot Members](../dotnet/auto-gcroot-members.md)
+ **Namespace** Msclr  
+  
+## <a name="see-also"></a>Siehe auch  
+ [auto_gcroot-Members](../dotnet/auto-gcroot-members.md)

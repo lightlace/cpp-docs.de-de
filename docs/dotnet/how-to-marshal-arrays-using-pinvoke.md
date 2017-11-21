@@ -1,42 +1,42 @@
 ---
-title: "Gewusst wie: Marshallen von Arrays mit PInvoke | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Datenmarshalling [C++], Arrays"
-  - "Interop [C++], Arrays"
-  - "Marshaling [C++], Arrays"
-  - "Plattformaufruf [C++], Arrays"
+title: 'Wie: Marshallen von Arrays mit PInvoke | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- marshaling [C++], arrays
+- platform invoke [C++], arrays
+- interop [C++], arrays
+- data marshaling [C++], arrays
 ms.assetid: a1237797-a2da-4df4-984a-6333ed3af406
-caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bf034bb191174d78ca8a614559e9f1e4976d88bf
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Gewusst wie: Marshallen von Arrays mit PInvoke
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In diesem Thema wird beschrieben, wie systemeigene Funktionen, die Zeichenfolgen in C\-Format akzeptieren, über den CLR\-Zeichenfolgentyp <xref:System.String> aufgerufen werden können, indem die .NET Framework\-Unterstützung für Plattformaufrufe verwendet wird.  Visual C\+\+\-Programmierern wird empfohlen, stattdessen \(sofern möglich\) die C\+\+\-Interop\-Funktionen zu verwenden, da P\/Invoke eine sehr eingeschränkte Berichterstattung von Kompilierungsfehlern bietet, nicht typsicher ist und eine aufwändige Implementierung erfordern kann.  Wenn die nicht verwaltete API als DLL gepackt und der Quellcode nicht verfügbar ist, stellt P\/Invoke die einzige Option dar \(andernfalls siehe [Verwenden von C\+\+\-Interop \(implizites PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)\).  
+# <a name="how-to-marshal-arrays-using-pinvoke"></a>Gewusst wie: Marshallen von Arrays mit PInvoke
+In diesem Thema wird erläutert, wie systemeigene Funktionen, die Zeichenfolgen im C-Stil können aufgerufen werden, mithilfe der CLR-Zeichenfolgentyp akzeptieren <xref:System.String> mithilfe der Plattformaufruf von .NET Framework-Unterstützung. Visual C++-Programmierern werden empfohlen, stattdessen die C++-Interop-Funktionen (wenn möglich), da P/Invoke bietet nur wenig Kompilierzeitfehler reporting, ist nicht typsicher, und kann einfacher zu implementieren. Wenn die nicht verwaltete API wird als DLL verpackt, und der Quellcode nicht verfügbar ist, ist P/Invoke die einzige Option (andernfalls finden Sie unter [mithilfe von C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)).  
   
-## Beispiel  
- Da systemeigene und verwaltete Arrays im Speicher unterschiedlich angeordnet sind, erfordert die erfolgreiche Übergabe zwischen verwalteten und nicht verwalteten Funktionen eine Konvertierung oder Marshalling.  In diesem Thema wird dargestellt, wie ein Array aus einfachen \(blitfähigen\) Elementen aus verwaltetem Code an systemeigene Funktionen übergeben werden kann.  
+## <a name="example"></a>Beispiel  
+ Systemeigenen und verwalteten Arrays im Arbeitsspeicher anders angeordnet sind, Quellformat, sodass sie erfolgreich die Apartmentgrenze verwalteten und unverwalteten übergeben Konvertierung oder Marshalling. In diesem Thema wird veranschaulicht, wie ein Array von einfachen (blitfähigen) Elementen an systemeigener Funktionen aus verwaltetem Code übergeben werden kann.  
   
- Wie beim Datenmarshalling von verwalteten zu nicht verwalteten Daten allgemein, wird das <xref:System.Runtime.InteropServices.DllImportAttribute>\-Attribut verwendet, um einen verwalteten Einstiegspunkt für jede verwendete systemeigene Funktion zu erstellen.  Für den Fall, dass Funktionen Arrays als Argumente verwenden, muss das <xref:System.Runtime.InteropServices.MarshalAsAttribute>\-Attribut auch verwendet werden, um dem Compiler anzugeben, wie die Daten gemarshallt werden.  Im folgenden Beispiel wird die <xref:System.Runtime.InteropServices.UnmanagedType>\-Enumeration verwendet, um anzugeben, dass das verwaltete Array als ein Array in C\-Format gemarshallt wird.  
+ Als "true" von verwaltetem/Daten-Marshalling im Allgemeinen ist die <xref:System.Runtime.InteropServices.DllImportAttribute> Attribut wird verwendet, um einen verwalteten Einstiegspunkt für jede systemeigene Funktion erstellen, die verwendet werden. Im Fall von Funktionen, die Arrays als Argumente akzeptieren die <xref:System.Runtime.InteropServices.MarshalAsAttribute> Attribut muss ebenfalls verwendet werden, um für den Compiler anzugeben, wie die Daten gemarshallt werden. Im folgenden Beispiel die <xref:System.Runtime.InteropServices.UnmanagedType> Enumeration wird verwendet, um anzugeben, dass die verwalteten Arrays als ein Array im C-Format gemarshallt werden.  
   
- Der folgende Code besteht aus einem nicht verwalteten und einem verwalteten Modul.  Das nicht verwaltete Modul ist eine DLL, die eine Funktion definiert, die ein Array von ganzen Zahlen akzeptiert.  Beim zweiten Modul handelt es sich um eine verwaltete Befehlszeilenanwendung, die diese Funktion importiert, sie jedoch als ein verwaltetes Array definiert. Dabei wird das <xref:System.Runtime.InteropServices.MarshalAsAttribute>\-Attribut verwendet, um anzugeben, dass das Array beim Aufruf in ein systemeigenes Array konvertiert werden soll.  
+ Der folgende Code besteht aus einem nicht verwalteten und ein verwaltetes Modul. Nicht verwaltete Modul ist eine DLL, die eine Funktion definiert, die ein Array von ganzen Zahlen akzeptiert. Das zweite Modul ist eine verwaltete-befehlszeilenanwendung, die diese Funktion herstellen, aber wird im Hinblick auf ein verwaltetes Array definiert und verwendet die <xref:System.Runtime.InteropServices.MarshalAsAttribute> Attribut, um anzugeben, dass das Array in ein systemeigenes Array beim Aufruf konvertiert werden soll.  
   
- Das verwaltete Modul wird mit \/clr kompiliert, es kann jedoch auch \/clr:pure verwendet werden.  
+ Verwaltete Modul mit "/ CLR", aber "/ CLR" kompiliert wird: reine funktioniert ebenfalls. Die Compileroptionen **/clr:pure** und **/clr:safe** sind in Visual Studio 2015 veraltet.  
   
-```  
+```cpp  
 // TraditionalDll4.cpp  
 // compile with: /LD /EHsc  
 #include <iostream>  
@@ -59,7 +59,7 @@ void TakesAnArray(int len, int a[]) {
 }  
 ```  
   
-```  
+```cpp  
 // MarshalBlitArray.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -84,7 +84,7 @@ int main() {
 }  
 ```  
   
- Beachten Sie, dass mithilfe der herkömmlichen \#include\-Direktive kein Teil der DLL für den verwalteten Code verfügbar gemacht wird.  Tatsächlich wird auf die DLL nur bei der Ausführung zugegriffen, sodass Probleme mit Funktionen, die mit <xref:System.Runtime.InteropServices.DllImportAttribute> importiert wurden, zur Kompilierungszeit nicht erkannt werden.  
+ Beachten Sie, dass kein Teil der DLL, auf den verwalteten Code mithilfe der herkömmlichen bereitgestellt wird #include-Direktive. In der Tat, da die DLL zur Laufzeit nur erfolgt, Probleme bei Funktionen mit importiert <xref:System.Runtime.InteropServices.DllImportAttribute> zum Zeitpunkt der Kompilierung nicht erkannt werden.  
   
-## Siehe auch  
- [Verwenden von explizitem PInvoke in C\+\+ \(DllImport\-Attribut\)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+## <a name="see-also"></a>Siehe auch  
+ [Verwenden von explizitem PInvoke in C++ (DllImport-Attribut)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

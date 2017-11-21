@@ -1,28 +1,28 @@
 ---
-title: "2.7.2.8 copyprivate"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.7.2.8 Copyprivate | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: c382348c-c785-45b2-8ee6-a66b76b97f3e
-caps.latest.revision: 5
-caps.handback.revision: "5"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3dee6fb7423ba9245c1b52a8aa7b90a14d52cc9e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# 2.7.2.8 copyprivate
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die copyprivat\-Klausel stellt einen Mechanismus bereit, um eine private Variable zu verwenden, um einen Wert aus einköpfigem eines Teams zu den anderen Membern zu übertragen.  Dies ist eine Alternative zur Verwendung einer freigegebenen Variablen für den Wert, wenn eine solche freigegebene Variablen bereitstellen kann schwierig sein \(z. B. in einer Rekursion, die eine andere Variable auf jeder Ebene erforderlich.\)  Die copyprivat\-Klausel auf den **Einfach**\-Direktive kann nur angegeben werden.  
+# <a name="2728-copyprivate"></a>2.7.2.8 copyprivate
+Die **Copyprivate** -Klausel bietet einen Mechanismus, um eine private Variable zu verwenden, um einen Wert von einem Mitglied eines Teams mit den anderen Mitgliedern zu übertragen. Es ist eine Alternative zur Verwendung einer freigegebenen Variable für den Wert, wenn eine solche freigegebene Variable bereitstellen (z. B. in eine Rekursion, erfordern eine andere Variable auf jeder Ebene) schwierig wäre. Die **Copyprivate** Klausel kann nur verwendet werden, auf die **einzelne** Richtlinie.  
   
- Die Syntax der copyprivat\-Klausel lautet wie folgt:  
+ Die Syntax der **Copyprivate** -Klausel ist wie folgt:  
   
 ```  
   
@@ -32,12 +32,12 @@ variable-list
   
 ```  
   
- Die Auswirkungen der copyprivat\-Klausel auf die Variablen in der Liste Variablen tritt nach der Ausführung des strukturierten Blocks, der mit dem **Einfach** Konstrukt zugeordnet ist und bevor der Threads im Team die Barriere am Ende des Konstrukts verlassen haben.  Dann in allen anderen Threads im Team für die einzelnen Variablen in der *Liste Variablen*, dass definierte Variable wird als sei es durch \(Zuweisung\) mit dem Wert der entsprechenden Variablen im Thread, der den strukturierten Block des Konstrukts ermittelt werden.  
+ Die Auswirkung der **Copyprivate** -Klausel für die Variablen in der Variablenliste tritt ein, nach der Ausführung von einem strukturierten Block zugeordnet der **einzelne** erstellen, und vor allen Threads in der Team die Grenze am Ende des Konstrukts verlassen haben. Klicken Sie auf alle anderen Threads in der Team für jede Variable in der *Variablenliste*, dieser Variablen wird (wie durch Zuweisung) definiert, mit dem Wert des entsprechenden Variable in dem Thread, der das Konstrukt ausgeführt des strukturiert. Block.  
   
- Einschränkungen zur copyprivat\-Klausel lauten wie folgt:  
+ Einschränkungen für die **Copyprivate** Klausel lauten wie folgt:  
   
--   Eine Variable, die in der copyprivat\-Klausel angegeben ist, darf nicht in einer **private** oder **firstprivate**\-Klausel für dieselben **Einfach**\-Direktive angezeigt werden.  
+-   Eine Variable, die im angegebenen der **Copyprivate** Klausel muss nicht angezeigt werden, einer **private** oder **Firstprivate** -Klausel für die gleiche **einzelne**Richtlinie.  
   
--   Wenn **Einfach**\-Direktive mit einer copyprivat\-Klausel im dynamischen Wertebereich eines parallelen Bereichs aufgetreten sind, müssen alle Variablen, die in der copyprivat\-Klausel angegeben wurden, im einschließenden Kontext privat sein.  
+-   Wenn eine **einzelne** -Direktive zusammen mit einer **Copyprivate** Klausel in der dynamischen Wertebereich eines parallelen Bereichs festgestellt wird, alle Variablen, die in angegebenen der **Copyprivate** -Klausel sein muss im umschließenden Kontext privat.  
   
--   Eine Variable, die in der copyprivat\-Klausel angegeben wird, muss über einen zugreifbaren eindeutigen Kopierzuweisungsoperator sein.
+-   Eine Variable, die im angegebenen der **Copyprivate** -Klausel muss ein zugänglich eindeutig Kopierzuweisungsoperator aufweisen.

@@ -1,32 +1,30 @@
 ---
-title: "PROVIDER_COLUMN_ENTRY_FIXED | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PROVIDER_COLUMN_ENTRY_FIXED"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PROVIDER_COLUMN_ENTRY_FIXED-Makro"
+title: PROVIDER_COLUMN_ENTRY_FIXED | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PROVIDER_COLUMN_ENTRY_FIXED
+dev_langs: C++
+helpviewer_keywords: PROVIDER_COLUMN_ENTRY_FIXED macro
 ms.assetid: 71f9c9aa-56a0-488b-96ba-5c72da9c71d0
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e404e18a072650d89f3987d8e8f0e286240d022a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# PROVIDER_COLUMN_ENTRY_FIXED
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Stellt eine bestimmte Spalte dar, die vom Anbieter unterstützt wird.  
+# <a name="providercolumnentryfixed"></a>PROVIDER_COLUMN_ENTRY_FIXED
+Stellt eine bestimmte Spalte, die vom Anbieter unterstützt werden.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -35,30 +33,30 @@ name
 , ordinal, dbtype, member )  
 ```  
   
-#### Parameter  
- *Name*  
- \[in\] der Spaltenname.  
+#### <a name="parameters"></a>Parameter  
+ *name*  
+ [in] Der Spaltenname.  
   
  `ordinal`  
- \[in\] Spaltennummer.  Sofern, dass die Spalte eine Lesezeichenspalte ist, darf die Spaltennummer nicht 0 sein.  
+ [in] Die Nummer der Spalte. Wenn die Spalte eine Lesezeichenspalte ist, muss die Nummer der Spalte nicht 0 sein.  
   
  `dbtype`  
- \[in\] der Datentyp in [DBTYPE](https://msdn.microsoft.com/en-us/library/ms711251.aspx).  
+ [in] Der Datentyp im [DBTYPE](https://msdn.microsoft.com/en-us/library/ms711251.aspx).  
   
  `member`  
- \[in\] Die Membervariable in `dataClass`, die die Daten speichert.  
+ [in] Die Membervariable in `dataClass` die Daten speichert.  
   
-## Hinweise  
- Ermöglicht es Ihnen, dem Spaltendatentyp anzugeben.  
+## <a name="remarks"></a>Hinweise  
+ Ermöglicht Ihnen das Festlegen der Datentyp der Spalte.  
   
-## Beispiel  
- Siehe [BEGIN\_PROVIDER\_COLUMN\_MAP](../../data/oledb/begin-provider-column-map.md).  
+## <a name="example"></a>Beispiel  
+ Finden Sie unter [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).  
   
-## Anforderungen  
- **Header:** atldb.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** „atldb.h“  
   
-## Siehe auch  
- [Makros für OLE DB\-Anbietervorlagen](../../data/oledb/macros-for-ole-db-provider-templates.md)   
- [OLE DB\-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektur von OLE DB\-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)   
- [Erstellen eines OLE DB\-Anbieters](../../data/oledb/creating-an-ole-db-provider.md)
+## <a name="see-also"></a>Siehe auch  
+ [Makros für OLE DB-Anbietervorlagen](../../data/oledb/macros-for-ole-db-provider-templates.md)   
+ [OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)   
+ [Erstellen eines OLE DB-Anbieters](../../data/oledb/creating-an-ole-db-provider.md)

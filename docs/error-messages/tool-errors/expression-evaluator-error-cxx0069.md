@@ -1,29 +1,27 @@
 ---
-title: "Ausdrucksauswertungsfehler CXX0069 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0069"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CXX0069"
+title: Ausdrucksauswertungsfehler CXX0069 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0069
+dev_langs: C++
+helpviewer_keywords: CXX0069
 ms.assetid: cf334b23-1e17-4d37-acc5-18597ee84164
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1fffb675a61359913434d80fb4ab1ce11a4d6dcc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Ausdrucksauswertungsfehler CXX0069
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="expression-evaluator-error-cxx0069"></a>Ausdrucksauswertungsfehler CXX0069
 Variable erfordert Stapelrahmen  
   
- Die Variable kann nicht von der Ausdrucksauswertung ausgewertet werden, da sie nicht im Stapelrahmen auftritt.  Möglicherweise wurde die Variable als Teil einer Inlinefunktion deklariert.
+ Die ausdrucksauswertung kann nicht die Variable ausgewertet werden, da es nicht in einem Stapelrahmen auftritt. Dies kann durch Variablen, die als Teil einer Inlinefunktion verursacht werden.

@@ -1,48 +1,46 @@
 ---
-title: "ComPtrRef::operator*-Operator"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::Details::ComPtrRef::operator*"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Operator*-Operator"
+title: 'Comptrref:: * Operator | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::Details::ComPtrRef::operator*
+dev_langs: C++
+helpviewer_keywords: operator* operator
 ms.assetid: 0287ca7a-4ce1-47f7-bab6-714fca3e04bb
-caps.latest.revision: 5
-caps.handback.revision: "5"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 543f0099a3c6b60d8e6ec289ff560b1ffc4169e2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# ComPtrRef::operator*-Operator
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Unterstützt die WRL\-Infrastruktur und nicht beabsichtigt, direkt im Code verwendet werden.  
+# <a name="comptrrefoperator-operator"></a>ComPtrRef::operator*-Operator
+Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 InterfaceType* operator *();  
 ```  
   
-## Rückgabewert  
- Zeiger zur Schnittstelle dargestellt durch das aktuelle ComPtrRef\-Objekt.  
+## <a name="return-value"></a>Rückgabewert  
+ Zeiger auf die Schnittstelle, die vom aktuellen ComPtrRef-Objekt dargestellt wird.  
   
-## Hinweise  
- Ruft den Mauszeiger zur Schnittstelle ab, die durch das aktuelle ComPtrRef\-Objekt dargestellt wird.  
+## <a name="remarks"></a>Hinweise  
+ Ruft ab, die Zeiger auf die Schnittstelle, die vom aktuellen ComPtrRef-Objekt dargestellt wird.  
   
-## Anforderungen  
- **Header:**  client.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** client.h  
   
- **Namespace:**  Microsoft::WRL::Details  
+ **Namespace:** Microsoft::WRL::Details  
   
-## Siehe auch  
- [ComPtrRef\-Klasse](../windows/comptrref-class.md)   
- [Microsoft::WRL::Details\-Namespace](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Siehe auch  
+ [ComPtrRef-Klasse](../windows/comptrref-class.md)   
+ [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

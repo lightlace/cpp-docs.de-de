@@ -1,70 +1,67 @@
 ---
-title: "Friend-Assemblys (C++)"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Friend-Assemblys, Visual C++"
+title: Friend-Assemblys (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
-caps.latest.revision: 27
-caps.handback.revision: "27"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "27"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 42ccf247d88efc6e0e9378ee52a4749ddc3c2b6f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Friend-Assemblys (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Bei entsprechenden Laufzeiten macht die *Friend\-Assembly\-Sprachfunktion*\-Typen, die im Gültigkeitsbereich des Namespaces gefunden oder im globalen Bereich in einer Assemblykomponente sind, die mit mindestens erforderlichen Clientassemblys oder zu .netmodules zugänglich ist.  
+# <a name="friend-assemblies-c"></a>Friend-Assemblys (C++)
+Für Laufzeiten auf anwendbar die *Friend-Assemblys* Sprachfunktion können Sie Typen, die auf Namespace-Gültigkeitsbereich oder im globalen Gültigkeitsbereich in einer Assemblykomponente Clientassemblys oder netmodule zugreifen können.  
   
-## Alle Laufzeiten  
+## <a name="all-runtimes"></a>Alle Laufzeiten  
  **Hinweise**  
   
- \(Diese Sprachfunktion ist nicht in allen Laufzeiten. unterstützt\)  
+ (Diese Sprachfunktion wird in alle Laufzeiten nicht unterstützt.)  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+## <a name="windows-runtime"></a>Windows-Runtime  
  **Hinweise**  
   
- \(Diese Sprachfunktion wird in [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] nicht unterstützt.\)  
+ (Diese Sprachfunktion wird in der Windows-Runtime nicht unterstützt.)  
   
-### Voraussetzungen  
- Compileroption: **\/ZW**  
+### <a name="requirements"></a>Anforderungen  
+ Compileroption: **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
+## <a name="common-language-runtime"></a>Common Language Runtime 
  **Hinweise**  
   
-#### Um Typen am Namespacebereich oder im globalen Bereich in einer Assemblykomponente zugänglich machen zu einer Clientassembly oder \-.netmodule  
+#### <a name="to-make-types-at-namespace-scope-or-global-scope-in-an-assembly-component-accessible-to-a-client-assembly-or-netmodule"></a>Typen im Namespace oder im globalen Gültigkeitsbereich in einer Assemblykomponente vornehmen können eine Client-Assembly oder netmodule zugreifen  
   
-1.  In der Komponente geben Sie einem Assemblyattribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>, und übergeben Sie den Namen der \-.netmodules Clientassemblys oder, der Zugriffstypen am Namespacebereich oder im globalen Bereich in der Komponente ist.  Sie können mehreren Clientassemblys oder .netmodules angeben, indem Sie zusätzliche Attribute angeben.  
+1.  Geben Sie in der Komponente ein Assemblyattribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>, und übergeben Sie den Namen des Client-Assembly oder NETMODULE-Datei, die Typen im Namespace oder im globalen Gültigkeitsbereich in der Komponente zugegriffen wird.  Sie können mehrere Clientassemblys oder NETMODULE-Dateien angeben, indem Sie zusätzliche Attribute angeben.  
   
-2.  In der Clientassembly oder wenn Sie die \-.netmodule Komponentenassembly verweisen, indem Sie `#using` verwenden, übergeben Sie das `as_friend`\-Attribut.  Wenn Sie das Attribut `as_friend` für eine Assembly angeben, die nicht `InternalsVisibleToAttribute` angibt, wird eine Laufzeitausnahme ausgelöst, wenn Sie versuchen, auf einen Typ im Gültigkeitsbereich des Namespaces gefunden oder im globalen Bereich in der Komponente zugreifen.  
+2.  In der Clientassembly oder eine NETMODULE-Datei, wenn Sie mithilfe der Komponentenassembly verweisen `#using`, übergeben die `as_friend` Attribut.  Bei Angabe der `as_friend` Attribut für eine Assembly, der nicht `InternalsVisibleToAttribute`, eine Laufzeitausnahme wird ausgelöst, wenn Sie versuchen, Zugriff auf einen Typ auf den Namespace oder im globalen Gültigkeitsbereich in der Komponente.  
   
- Ein Buildfehler tritt auf, wenn die Assembly, die das Attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> enthält keinen starken Namen, aber den Client hat, die, Assembly, die das `as_friend`\-Attribut verwendet, führt.  
+ Ein Buildfehler führt, wenn die Assembly, die enthält die <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> Attribut verfügt nicht über einen starken Namen, aber die Clientassembly, die verwendet die `as_friend` Attribut führt.  
   
- Obwohl Typen am Namespacebereich und im globalen Bereich zu einer Clientassembly oder \-.netmodule werden können, ist Memberbarrierefreiheit noch wirksam.  Beispielsweise können Sie ein privates Member zugreifen.  
+ Obwohl die Typen im Namespace-Gültigkeitsbereich und globalen Gültigkeitsbereich zu einem Client-Assembly oder NETMODULE bekannt sein können, ist Memberzugriff weiterhin wirksam.  Sie können keine z. B. einen privaten Member zugreifen.  
   
- Sämtlicher Zugriff auf Typen in einer Assembly muss explizit gewährt werden.  Beispielsweise, die Typen in Assembly C keinen Zugriff für alle verfügt, Assembly A ein, wenn C\-Referenz\-Assembly Assembly B und Assembly B Zugriff für alle verfügt, Assembly A.  
+ Zugriff auf alle Typen in einer Assembly muss explizit erteilt werden.  Beispielsweise ist Assembly C keinen Zugriff auf alle Typen in der Assembly A Wenn Assembly C verweist auf Assembly B und Assembly B Zugriff auf alle Typen in Assembly a hat  
   
- Informationen darüber, wie der Zugriffsart von Typen aus einer Assembly, finden Sie unter [Typsichtbarkeit](../misc/type-visibility.md).  
+ Informationen zum Signieren – d. h., wie Sie einen starken Namen zu geben – eine Assembly, die mithilfe von Visual C++-Compilers finden Sie unter [Assemblys mit starken Namen (Signieren von Assemblys) (C + c++ / CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).  
   
- Informationen darüber, wie zu, SIGN\-dass ist, wie einen starken Namen \- Ein zur Assembly, die erstellt wurde, indem Sie den Visual C\+\+\-Compiler verwendet, finden Sie unter [Assemblys mit starken Namen \(Assemblysignierung\)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).  
+ Als Alternative zum Verwenden des Features der Friend-Assemblys können <xref:System.Security.Permissions.StrongNameIdentityPermission> Zugriff auf die einzelnen Typen eingeschränkt.  
   
- Wie eine Alternative zur Verwendung der Funktion Friend\-Assemblys, Sie <xref:System.Security.Permissions.StrongNameIdentityPermission> verwenden kann, um Zugriff auf einzelne Typen einzuschränken.  
+### <a name="requirements"></a>Anforderungen  
+ Compileroption: **/clr**  
   
-### Voraussetzungen  
- Compileroption: **\/clr**  
+### <a name="examples"></a>Beispiele  
+ Das folgende Codebeispiel definiert eine Komponente, die eine Clientassembly gibt an, die auf die Typen in der Komponente möglich ist.  
   
-### Beispiele  
- Im folgenden Codebeispiel wird eine Komponente, die eine Clientassembly angibt, die Zugriff auf die Typen in der Komponente verfügt.  
-  
-```  
+```cpp  
 // friend_assemblies.cpp  
 // compile by using: /clr /LD  
 using namespace System::Runtime::CompilerServices;  
@@ -80,9 +77,9 @@ public:
 };  
 ```  
   
- Das folgende Beispiel greift auf ein privates in die Komponente an.  
+ Das nächste Codebeispiel greift auf einen privaten Typ in der Komponente.  
   
-```  
+```cpp  
 // friend_assemblies_2.cpp  
 // compile by using: /clr  
 #using "friend_assemblies.dll" as_friend  
@@ -93,15 +90,15 @@ int main() {
 }  
 ```  
   
- **Ausgabe**  
-  
- `Class1::Test_Public`  
-  
- Im folgenden Codebeispiel wird eine Komponente, aber gibt keine Clientassembly an, die Zugriff auf die Typen in der Komponente verfügt.  
-  
- Beachten Sie, dass die Komponente verknüpft ist, indem Sie **\/opt:noref** verwenden.  Dadurch wird sichergestellt, dass private Typen in den Metadaten der Komponente ausgegeben werden, die nicht erforderlich ist, wenn das `InternalsVisibleTo`\-Attribut vorhanden ist.  Weitere Informationen finden Sie unter [\/OPT \(Optimierungen\)](../build/reference/opt-optimizations.md).  
-  
+```Output  
+Class1::Test_Public  
 ```  
+  
+ Im nächste Codebeispiel wird eine Komponente definiert jedoch keine Clientassembly, die Zugriff auf die Typen in der Komponente haben.  
+  
+ Beachten Sie, dass die Komponente mit verknüpft ist **/ opt: Noref**. Dadurch wird sichergestellt, dass private Typen in den Metadaten der Komponente, ausgegeben werden, nicht ist erforderlich, wenn die `InternalsVisibleTo` -Attribut vorhanden ist. Weitere Informationen finden Sie unter [/OPT (Optimierungen)](../build/reference/opt-optimizations.md).  
+  
+```cpp  
 // friend_assemblies_3.cpp  
 // compile by using: /clr /LD /link /opt:noref  
 using namespace System;  
@@ -114,9 +111,9 @@ public:
 };  
 ```  
   
- Im folgenden Codebeispiel wird ein Client definiert, dem die versucht, auf ein privates zuzugreifen in eine Komponente, die nicht auf den privaten Typen gibt.  Aufgrund des Verhaltens der Laufzeit, wenn die Ausnahme abfangen möchten, müssen Sie versuchen, auf ein privates zuzugreifen in einer Hilfsfunktion.  
+ Das folgende Codebeispiel definiert einen Client, der versucht, einen privaten Typ in einer Komponente auf, die nicht auf die privaten Typen Zugriff. Aufgrund der Verhalten der Laufzeit Wenn Sie die Ausnahme abfangen möchten müssen Sie versuchen, einen privaten Typ in eine Hilfsfunktion zugreifen.  
   
-```  
+```cpp  
 // friend_assemblies_4.cpp  
 // compile by using: /clr  
 #using "friend_assemblies_3.dll" as_friend  
@@ -137,13 +134,13 @@ int main() {
 }  
 ```  
   
- **Ausgabe**  
+```Output  
+caught an exception  
+```
   
- `caught an exception`  
+ Das nächste Codebeispiel zeigt, wie zum Erstellen einer starken Namen-Komponente, die eine Clientassembly gibt an, die Zugriff auf die Typen in der Komponente haben.  
   
- Das folgende Codebeispiel zeigt, wie eine Komponente mit starkem Namen erstellt, die eine Clientassembly angibt, die Zugriff auf die Typen in der Komponente verfügt.  
-  
-```  
+```cpp  
 // friend_assemblies_5.cpp  
 // compile by using: /clr /LD /link /keyfile:friend_assemblies.snk  
 using namespace System::Runtime::CompilerServices;  
@@ -160,21 +157,21 @@ public:
 };  
 ```  
   
- Beachten Sie, dass die Komponente deren öffentlichen Schlüssel angeben muss.  Es wird empfohlen, dass Sie die folgenden Befehle sequenziell an einer Eingabeaufforderung ausführen, ein Schlüsselpaar zu erstellen und den öffentlichen Schlüssel abrufen:  
+ Beachten Sie, dass die Komponente seinen öffentlichen Schlüssel angeben muss. Es wird empfohlen, Sie werden die folgenden Befehle nacheinander ausgeführt, an der Eingabeaufforderung zum Erstellen eines Schlüsselpaars und den öffentlichen Schlüssel abrufen:  
   
- **sn \-d friend\_assemblies.snk**  
+ **"sn" -d friend_assemblies.snk**  
   
- **sn \-k friend\_assemblies.snk**  
+ **sn – k friend_assemblies.snk**  
   
- **sn \-i friend\_assemblies.snk friend\_assemblies.snk**  
+ **"sn" -i friend_assemblies.snk friend_assemblies.snk**  
   
- **sn \-pc friend\_assemblies.snk key.publickey**  
+ **"sn" -pc friend_assemblies.snk key.publickey**  
   
- **sn \-tp key.publickey**  
+ **"sn" - Tp key.publickey**  
   
- Das folgende Beispiel greift auf ein privates in die Komponente mit starkem Namen zu.  
+ Das nächste Codebeispiel greift auf einen privaten Typ in der Komponente starken Namen zu.  
   
-```  
+```cpp  
 // friend_assemblies_6.cpp  
 // compile by using: /clr /link /keyfile:friend_assemblies.snk  
 #using "friend_assemblies_5.dll" as_friend  
@@ -185,9 +182,9 @@ int main() {
 }  
 ```  
   
- **Ausgabe**  
+```Output  
+Class1::Test_Public  
+```  
   
- `Class1::Test_Public`  
-  
-## Siehe auch  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>Siehe auch  
+ [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)

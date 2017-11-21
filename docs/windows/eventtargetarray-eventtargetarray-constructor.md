@@ -1,32 +1,30 @@
 ---
-title: "EventTargetArray::EventTargetArray-Konstruktor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::Details::EventTargetArray::EventTargetArray"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "EventTargetArray, Konstruktor"
+title: 'Eventtargetarray:: Eventtargetarray-Konstruktor | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::Details::EventTargetArray::EventTargetArray
+dev_langs: C++
+helpviewer_keywords: EventTargetArray, constructor
 ms.assetid: 6c6d3737-3cd3-4515-a8f6-d27901bb8ed2
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6dbe316310e04172c659460c08137edd2a401df6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# EventTargetArray::EventTargetArray-Konstruktor
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Unterstützt die WRL\-Infrastruktur und nicht beabsichtigt, direkt im Code verwendet werden.  
+# <a name="eventtargetarrayeventtargetarray-constructor"></a>EventTargetArray::EventTargetArray-Konstruktor
+Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 EventTargetArray(  
@@ -35,32 +33,32 @@ EventTargetArray(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `hr`  
- Nach Vorgängen dieses Konstruktors gibt Parameter `hr` an, ob Zuordnung des Arrays erfolgreich war oder fehlgeschlagen ist.  Die folgende Tabelle zeigt die möglichen Werte für `hr` auf.  
+ Nachdem diese Vorgänge Konstruktor Parameter `hr` gibt an, ob die Zuordnung des Arrays erfolgreich war oder nicht. Die folgende Tabelle enthält die möglichen Werte für `hr`.  
   
- S\_OK  
- Der Vorgang erfolgreich.  
+ S_OK  
+ Der Vorgang wurde erfolgreich ausgeführt.  
   
- E\_OUTOFMEMORY  
+ E_OUTOFMEMORY  
  Arbeitsspeicher konnte nicht für das Array zugeordnet werden.  
   
- S\_FALSE  
- Parameter `items` ist kleiner oder gleich null.  
+ S_FALSE  
+ Parameter `items` ist kleiner oder gleich 0 (null).  
   
  `items`  
- Die Anzahl der zuzuordnenden den Arrayelementen.  
+ Die Anzahl von Arrayelementen zu reservieren.  
   
-## Hinweise  
- Initialisiert eine neue Instanz der EventTargetArray\-Klasse.  
+## <a name="remarks"></a>Hinweise  
+ Initialisiert eine neue Instanz der EventTargetArray-Klasse.  
   
- EventTargetArray wird verwendet, um ein Array Ereignishandler in einem EventSource\-Objekt zu halten.  
+ EventTargetArray wird verwendet, um ein Array von Ereignishandlern in einem EventSource-Objekt beizubehalten.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** event.h  
   
- **Namespace:**  Microsoft::WRL::Details  
+ **Namespace:** Microsoft::WRL::Details  
   
-## Siehe auch  
- [EventTargetArray\-Klasse](../windows/eventtargetarray-class.md)   
- [Microsoft::WRL::Details\-Namespace](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Siehe auch  
+ [EventTargetArray-Klasse](../windows/eventtargetarray-class.md)   
+ [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

@@ -1,46 +1,46 @@
 ---
-title: "Erstellen einer Konsolenanwendung | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Win32-Anwendungen, Konsole"
-  - "Win32, Konsolenanwendungen"
-  - "Konsolenanwendungen, Win32"
+title: Erstellen einer Konsolenanwendung | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- Win32 applications, console
+- Win32, console applications
+- console applications, Win32
 ms.assetid: aedfb6b3-ca1f-4e8e-8439-1b680810ee47
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4ff872fd95af540100ed71682c98a19936e87d7d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Erstellen einer Konsolenanwendung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Am einfachsten erstellen Sie eine Win32\-Konsolenanwendung mit dem Win32\-Anwendungs\-Assistenten.  
+# <a name="creating-a-console-application"></a>Erstellen einer Konsolenanwendung
+Am einfachsten erstellen Sie eine Win32-Konsolenanwendung mit dem Win32-Anwendungs-Assistenten.  
   
-### So erstellen Sie eine Win32\-Konsolenanwendung  
+### <a name="to-create-a-win32-console-application"></a>So erstellen Sie eine Win32-Konsolenanwendung  
   
-1.  Folgen Sie den Anweisungen im Hilfethema [Erstellen eines Projekts mit einem Visual C\+\+\-Anwendungs\-Assistenten](../ide/creating-desktop-projects-by-using-application-wizards.md).  
+1.  Befolgen Sie die Anweisungen im Hilfethema [Erstellen eines Projekts mit einem Visual C++-Anwendungs-Assistenten](../ide/creating-desktop-projects-by-using-application-wizards.md).  
   
-2.  Wählen Sie im Dialogfeld **Neues Projekt** im Bereich Vorlagen die Option **Win32\-Konsolenprojekt** aus, um den Assistenten zu öffnen.  
+2.  In der **neues Projekt** wählen Sie im Dialogfeld **Win32-Konsolenprojekt** im Bereich Vorlagen aus, um den Assistenten zu öffnen.  
   
-3.  Definieren Sie die [Anwendungseinstellungen](../windows/application-settings-win-32-project-wizard.md) mit dem [Win32\-Anwendungs\-Assistenten](../windows/win32-application-wizard.md).  
+3.  Definieren der [Anwendungseinstellungen](../windows/application-settings-win-32-project-wizard.md) mithilfe der [Win32-Anwendungsassistenten](../windows/win32-application-wizard.md).  
   
     > [!NOTE]
     >  Überspringen Sie diesen Schritt, um die Standardeinstellungen des Assistenten beizubehalten.  
   
-4.  Klicken Sie auf **Fertig stellen**, um den Assistenten zu schließen. Das neue Projekt wird im **Projektmappen\-Explorer** geöffnet.  
+4.  Klicken Sie auf **Fertig stellen** zum Schließen des Assistenten, und Ihr neu erstelltes Projekt wird geöffnet, **Projektmappen-Explorer**.  
   
-## Siehe auch  
- [Konsolenprojekte](../Topic/Debugging%20Preparation:%20Console%20Projects.md)   
- [Hinzufügen neuer Funktionen mit Code\-Assistenten](../ide/adding-functionality-with-code-wizards-cpp.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Konsolenprojekte](/visualstudio/debugger/debugging-preparation-console-projects)   
+ [Hinzufügen neuer Funktionen mit Code-Assistenten](../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Eigenschaftenseiten](../ide/property-pages-visual-cpp.md)   
- [Deploying Applications](assetId:///4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [Bereitstellen von Anwendungen](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)

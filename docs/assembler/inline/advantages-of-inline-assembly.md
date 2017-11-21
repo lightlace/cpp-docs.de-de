@@ -1,45 +1,45 @@
 ---
-title: "Vorteile der Inlineassembly | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Assembler [C++], Vorteile"
-  - "Inlineassembly [C++], Informationen über die Inlineassembly"
-  - "Inlineassembly [C++], Verwenden"
+title: Vorteile von Inlineassemblys | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- assembler [C++], advantages
+- inline assembly [C++], about inline assembly
+- inline assembly [C++], using
 ms.assetid: 94364d97-faa7-4bdf-8473-570956986c51
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 5a70ab92e76101c193db62fbe9119bb851d46738
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Vorteile der Inlineassembly
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Microsoft\-spezifisch  
- Da der Inlineassembler nicht Schritte der separaten Assemblys und des Links erfordert, ist es einfacher als ein separater Assembler.  Inlineassemblycode kann jede C\-Variable oder Funktionsnamen verwenden, der im Gültigkeitsbereich befindet, daher ist es einfach, mit dem C\-Code des Programms zu integrieren.  Da der Assemblycode mit C\# oder inline C\+\+\-Anweisungen kombiniert werden kann, kann er Aufgaben ausführen, die lästig oder in C oder C\+\+ nicht möglich sind.  
+# <a name="advantages-of-inline-assembly"></a>Vorteile von Inlineassemblys
+## <a name="microsoft-specific"></a>Microsoft-spezifisch  
+ Da der Inlineassembler keine separaten Assembly- und Verknüpfungsschritte erfordert, ist er einfacher als ein getrennter Assembler. Der Inlineassemblycode kann alle C-Variablen und -Funktionsnamen verwenden, die sich im Gültigkeitsbereich befinden. Daher ist es einfach, ihn in den C-Programmcode zu integrieren. Da der Assemblycode Inline mit C- oder C++-Anweisungen kombiniert werden, kann, können sie Aufgaben ausführen, die in C oder C++ mühsam oder unmöglich sind.  
   
- Wird vom Inlineassembly:  
+ Die Verwendungsmöglichkeiten von Inlineassemblys aufgeführt:  
   
--   Schreiben von Funktionen in Assemblersprache.  
+-   Schreiben von Funktionen in der Assemblysprache.  
   
--   Geschwindigkeit\-wichtige Codeabschnitte Stelle\-optimieren.  
+-   Optimieren der Stelle Geschwindigkeit kritische Abschnitte des Codes.  
   
--   Festlegen des direkten Hardware zugriffs für Gerätetreiber.  
+-   Machen direkten Hardwarezugriff für Gerätetreiber.  
   
--   Schreibeneinleitung und Epilogcode für „nackte“ Aufrufe.  
+-   Schreiben von Prolog- und Epilogcode Code für "naked" aufrufen.  
   
- Inlineassembly ist ein Tool für spezielle Zwecke.  Wenn Sie an den Anschluss eine Anwendung auf verschiedenen Computern planen, möchten Sie wahrscheinlich MACHINE spezifischen Code in einem separaten Modul ablegen.  Da der Inlineassembler nicht die ganze von der Microsoft Macro Assemblers \(MASM\) und Direktiven Daten unterstützt, stellen Sie möglicherweise es einfacher, MASM für solche Module verwendet werden soll.  
+ Inlineassembly ist ein spezielles Tool. Wenn Sie beabsichtigen, eine Anwendung auf verschiedenen Computern zu portieren, möchten Sie wahrscheinlich in einem separaten Modul computerspezifische Code platzieren. Da der Inlineassembler aller Microsoft Macro Assembler (MASM) unterstützt keine Direktiven-Makro und Daten, Sie könnten praktischerweise mehr MASM für solche Module zu verwenden.  
   
- **Microsoft ENDES bestimmten**  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Inlineassembler](../../assembler/inline/inline-assembler.md)

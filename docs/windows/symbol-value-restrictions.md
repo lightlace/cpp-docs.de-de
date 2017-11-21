@@ -1,31 +1,30 @@
 ---
-title: "Symbol Value Restrictions | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.symbol.restrictions.value"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "symbols, value restrictions"
-  - "restrictions, symbol values"
+title: Symbolwerten | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.symbol.restrictions.value
+dev_langs: C++
+helpviewer_keywords:
+- symbols, value restrictions
+- restrictions, symbol values
 ms.assetid: 32467ec3-690b-4cd0-a4d0-7d189a3296cb
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9c3edccbf88ea6aeb975b9861ebd80817362c245
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Symbol Value Restrictions
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Bei einem Symbolwert kann es sich um eine beliebige Ganzzahl handeln, die in normaler Form für „\#define preprocessor“\-Direktiven ausgedrückt wird.  Hier sind einige Beispiele für Symbolwerte:  
+# <a name="symbol-value-restrictions"></a>Beschränkungen bei Symbolwerten
+Bei einem Symbolwert kann es sich um eine beliebige Ganzzahl handeln, die in normaler Form für „#define preprocessor“-Anweisungen ausgedrückt wird. Hier sind einige Beispiele für Symbolwerte:  
   
 ```  
 18  
@@ -34,21 +33,21 @@ Bei einem Symbolwert kann es sich um eine beliebige Ganzzahl handeln, die in nor
 -3456  
 ```  
   
- Bei Symbolwerten für Ressourcen \(Zugriffstaste, Bitmaps, Cursor, Dialogfelder, Symbole, Menüs, Zeichenfolgentabellen und Versionsinformationen\) muss es sich um Dezimalzahlen im Bereich von 0 bis 32.767 handeln \(darf nicht hexadezimal sein\).  Symbolwerte für Ressourcenbestandteile wie Dialogfeldsteuerelemente oder einzelne Zeichenfolgen in der Zeichenfolgentabelle können von 0 bis 65.534 oder von \-32.768 bis 32.767 reichen.  
+ Bei Symbolwerten für Ressourcen (Zugriffstaste, Bitmaps, Cursor, Dialogfelder, Symbole, Menüs, Zeichenfolgentabellen und Versionsinformationen) muss es sich um Dezimalzahlen im Bereich von 0 bis 32.767 handeln (darf nicht hexadezimal sein). Symbolwerte für Ressourcenbestandteile wie Dialogfeldsteuerelemente oder einzelne Zeichenfolgen in der Zeichenfolgentabelle können von 0 bis 65.534 oder von -32.768 bis 32.767 reichen.  
   
- Bei Ressourcensymbolen handelt es sich um 16\-Bit\-Zahlen.  Sie können sie signiert oder nicht signiert eingeben. Sie werden jedoch intern als nicht signierte Ganzzahlen verwendet.  Negative Zahlen werden demnach in ihre entsprechenden positiven Werte umgewandelt.  
+ Bei Ressourcensymbolen handelt es sich um 16-Bit-Zahlen. Sie können sie signiert oder nicht signiert eingeben. Sie werden jedoch intern als nicht signierte Ganzzahlen verwendet. Negative Zahlen werden demnach in ihre entsprechenden positiven Werte umgewandelt.  
   
  Im Folgenden finden Sie einige Beschränkungen für Symbolwerte:  
   
--   Die Visual Studio\-Entwicklungsumgebung und MFC verwenden einige Zahlenbereiche für besondere Zwecke.  Alle Zahlen mit dem wichtigsten Bitset \(\-32.768 bis \-1 oder 32.768 bis 65.534 in Abhängigkeit des Zeichens\) sind für MFC reserviert.  
+-   Die Visual Studio-Entwicklungsumgebung und MFC verwenden einige Zahlenbereiche für besondere Zwecke. Alle Zahlen mit dem wichtigsten Bitset (-32.768 bis -1 oder 32.768 bis 65.534 in Abhängigkeit des Zeichens) sind für MFC reserviert.  
   
--   Es ist nicht möglich, einen Symbolwert mithilfe von anderen Symbolzeichenfolgen zu definieren.  Beispielsweise wird die folgende Symboldefinition nicht unterstützt:  
+-   Es ist nicht möglich, einen Symbolwert mithilfe von anderen Symbolzeichenfolgen zu definieren. Beispielsweise wird die folgende Symboldefinition nicht unterstützt:  
   
     ```  
     #define IDC_MYEDIT  IDC_OTHEREDIT  //not supported  
     ```  
   
--   Sie können Präprozessormakros mit Argumenten nicht als Wertdefinitionen verwenden.  Zum Beispiel:  
+-   Sie können Präprozessormakros mit Argumenten nicht als Wertdefinitionen verwenden. Zum Beispiel:  
   
     ```  
     #define   IDD_ABOUT  ID(7) //not supported  
@@ -56,16 +55,16 @@ Bei einem Symbolwert kann es sich um eine beliebige Ganzzahl handeln, die in nor
   
      Ist kein gültiger Ausdruck, unabhängig davon, was `ID` zum Zeitpunkt der Kompilierung auswertet.  
   
--   Ihre Anwendung verfügt möglicherweise über eine vorhandene Datei, die mit Ausdrücken definierte Symbole enthält.  Weitere Informationen über das Einbeziehen der Symbole als schreibgeschützte Symbole finden Sie unter [Verwenden gemeinsam genutzter \(schreibgeschützter\) oder berechneter Symbole](../windows/including-shared-read-only-or-calculated-symbols.md).  
+-   Ihre Anwendung verfügt möglicherweise über eine vorhandene Datei, die mit Ausdrücken definierte Symbole enthält. Weitere Informationen zum Einschließen der Symbole als schreibgeschützte Symbole finden Sie unter [gemeinsam genutzter (schreibgeschützter) oder berechneter Symbole](../windows/including-shared-read-only-or-calculated-symbols.md).  
   
- Weitere Informationen über Zahlenbereiche finden Sie unter [TN023: MFC\-Standardressourcen](../mfc/tn023-standard-mfc-resources.md).  
+ Weitere Informationen über Zahlenbereiche finden Sie unter [TN023: MFC-Standardressourcen](../mfc/tn023-standard-mfc-resources.md).  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  Win32  
   
-## Siehe auch  
- [Changing a Symbol's Numeric Value](../windows/changing-a-symbol-s-numeric-value.md)   
- [Symbol Name Restrictions](../windows/symbol-name-restrictions.md)   
- [Predefined Symbol IDs](../windows/predefined-symbol-ids.md)
+## <a name="see-also"></a>Siehe auch  
+ [Ändern des numerischen Werts eines Symbols](../windows/changing-a-symbol-s-numeric-value.md)   
+ [Beschränkungen bei Symbolnamen](../windows/symbol-name-restrictions.md)   
+ [Vordefinierte Symbol-IDs](../windows/predefined-symbol-ids.md)

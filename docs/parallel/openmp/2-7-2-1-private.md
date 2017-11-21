@@ -1,41 +1,41 @@
 ---
-title: "2.7.2.1 private"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.7.2.1 private | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 079b4b84-f2b3-4050-a0ac-289493c36b3d
-caps.latest.revision: 6
-caps.handback.revision: "6"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d2aeb8f7c04798c23b23c27f7880802004b31b9d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# 2.7.2.1 private
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die `private`\-Klausel deklariert die Variablen in der Liste Variablen zu jedem Thread in einem Team privat sein.  Die Syntax der `private`\-Klausel lautet wie folgt:  
+# <a name="2721-private"></a>2.7.2.1 private
+Die `private` -Klausel deklariert die Variablen in der Variablenliste für jeden Thread in einem Team privat sein. Die Syntax der `private` -Klausel ist wie folgt:  
   
 ```  
 private(variable-list)  
 ```  
   
- Das Verhalten einer Variablen, die in einer `private`\-Klausel angegeben ist, lautet wie folgt.  Ein neues Objekt mit automatischer Speicherung dauer wird für das Konstrukt zugeordnet.  Die Größe und die Ausrichtung des neuen Objekts wird durch den Typ der Variablen bestimmt.  Diese Zuordnung tritt einmal für jeden Thread im Team behoben, und ein Standardkonstruktor für ein Klassenobjekt bei Bedarf aufgerufen. andernfalls ist der Anfangswert unbestimmt.  Das ursprüngliche Objekt, das durch die Variable verwiesen wird, können einen unbestimmten Wert nach Eintrag in das Konstrukt, Darf nicht innerhalb des Wertebereichs dynamischen Ändern des Konstrukts und weist einen unbestimmten Wert nach Beendigung des Konstrukts.  
+ Das Verhalten einer Variablen, die im angegebenen eine `private` -Klausel ist wie folgt. Für das Konstrukt wird ein neues Objekt mit automatischer Speicherdauer zugeordnet. Die Größe und Ausrichtung des neuen Objekts werden durch den Datentyp der Variablen bestimmt. Die Reservierung erfolgt einmal für jeden Thread im Team, und ein Standardkonstruktor wird aufgerufen, für ein Klassenobjekt ggf.; Andernfalls ist der Anfangswert unbestimmt.  Das ursprüngliche Objekt, das durch die Variable verwiesen hat einen unbestimmten Wert beim Einstieg in das Konstrukt, darf nicht geändert werden, in dem dynamischen Wertebereich das Konstrukt und hat einen unbestimmten Wert beim Beenden des Konstrukts.  
   
- Im lexikalischen Wertebereich des Direktivenprozessors Konstrukts, wird die Variable mit dem neuen privaten Objekt, das von dem Thread zugeordnet ist.  
+ Im lexikalischen Block des Konstrukts-Direktive verweist auf die Variable der neuen privaten Objekt vom Thread zugeordnet.  
   
- Die Einschränkungen zur `private`\-Klausel lauten wie folgt:  
+ Die Einschränkungen fest, die `private` Klausel lauten wie folgt:  
   
--   Eine Variable mit einem Klassentyp, der in einer `private`\-Klausel angegeben wird, muss über einen zugreifbaren, eindeutigen Standardkonstruktor verfügen.  
+-   Eine Variable mit einem Klassentyp sein, die im angegebenen eine `private` -Klausel muss einen Standardkonstruktor erreichbare, eindeutige aufweisen.  
   
--   Eine Variable, die in einer `private`\-Klausel angegeben ist, darf **const**\- qualifizierten Typ nicht zulässig, es sei denn, sie einen Klassentyp mit einem `mutable`\-Member.  
+-   Eine Variable, die im angegebenen eine `private` Klausel dürfen keine **const**-Typ qualifiziert, es sei denn, es eine Klasse, und geben Sie einen `mutable` Member.  
   
--   Eine Variable, die in einer `private`\-Klausel angegeben ist, darf einen unvollständigen Typ oder einen Verweistyp enthalten.  
+-   Eine Variable, die im angegebenen eine `private` -Klausel muss nicht zulässig, einen unvollständigen Typ oder einen Referenztyp darstellt.  
   
--   Variablen, die in der `reduction`\-Klausel **Ähnlichkeit**\-Direktive angezeigt werden, können nicht in einer `private`\-Klausel auf Arbeitsteilungs direktiven angegeben werden, die zum parallelen Konstrukt bindet.
+-   Variablen in der `reduction` -Klausel einer **parallele** Richtlinie kann nicht angegeben werden, eine `private` -Klausel für eine arbeitsteilungsanweisung, die an das parallele Konstrukt gebunden.

@@ -1,38 +1,38 @@
 ---
-title: "ODBC-Treiberanforderungen f&#252;r Dynasets | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Treiber, Für Dynasets"
-  - "Treiber, ODBC"
-  - "Dynasets"
-  - "ODBC-Treiber, Dynasets"
-  - "ODBC-Recordsets, Dynasets"
-  - "Recordsets, Dynasets"
+title: "ODBC-Treiberanforderungen für Dynasets | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC recordsets, dynasets
+- drivers, for dynasets
+- drivers, ODBC
+- recordsets, dynasets
+- dynasets
+- ODBC drivers, dynasets
 ms.assetid: 585cc67b-4d92-404b-9903-d769cd17badc
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 387520b478be07cd1829f9665663173cfa15efcc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# ODBC-Treiberanforderungen f&#252;r Dynasets
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-In den MFC\-ODBC\-Datenbankklassen sind Dynasets Recordsets mit dynamischen Eigenschaften, die auf bestimmte Weise mit den Datenquellen synchronisiert bleiben.  MFC\-Dynasets \(jedoch keine reinen Vorwärts\-Recordsets\) setzen einen Level 2\-API\-konformen ODBC\-Treiber voraus.  Falls der Treiber für die [Datenquelle](../../data/odbc/data-source-odbc.md) dem Level 1\-API\-Satz entspricht, können Sie zwar aktualisierbare, schreibgeschützte Momentaufnahmen und Vorwärts\-Recordsets verwenden, jedoch keine Dynasets.  Ein Level 1\-Treiber kann allerdings Dynasets unterstützen, falls er erweiterte Abrufe und keysetgesteuerte Cursor unterstützt.  
+# <a name="odbc-driver-requirements-for-dynasets"></a>ODBC-Treiberanforderungen für Dynasets
+In den MFC-ODBC-Datenbankklassen sind Dynasets Recordsets mit dynamischen Eigenschaften. Sie sind, mit der Datenquelle auf bestimmte Weise synchronisiert bleiben. MFC-Dynasets (jedoch nicht Forward-only-Recordsets) erfordern einen ODBC-Treiber mit Level 2-API-Konformität. Wenn der Treiber für Ihre [Datenquelle](../../data/odbc/data-source-odbc.md) entspricht der Ebene-1-API festgelegt werden, noch können Sie aktualisierbar und schreibgeschützt sind und Momentaufnahmen und Forward-only-Recordsets, jedoch keine Dynasets. Level 1-Treiber kann allerdings Dynasets unterstützen, wenn es sich um erweiterte Fetch und keysetgesteuerte Cursor unterstützt.  
   
- In der ODBC\-Terminologie werden Dynasets und Momentaufnahmen als Cursor bezeichnet.  Ein Cursor ist ein Tool, um die Position innerhalb eines Recordsets zu verwalten.  Weitere Informationen über Treiberanforderungen für Dynasets finden Sie unter [Dynaset](../../data/odbc/dynaset.md).  Weitere Informationen über Cursor finden Sie im [Open Database Connectivity \(ODBC\)](https://msdn.microsoft.com/en-us/library/ms710252.aspx)\-SDK in der MSDN\-Dokumentation.  
+ In der ODBC-Terminologie werden Dynasets und Momentaufnahmen als Cursor bezeichnet. Ein Cursor ist ein Mechanismus zum Nachverfolgen der seine Position in einem Recordset. Weitere Informationen zu treiberanforderungen für Dynasets, finden Sie unter [Dynaset](../../data/odbc/dynaset.md). Weitere Informationen zu Cursorn finden Sie unter der [Open Database Connectivity (ODBC)](https://msdn.microsoft.com/en-us/library/ms710252.aspx) SDK in der MSDN-Dokumentation.  
   
 > [!NOTE]
->  Für aktualisierbare Recordsets muss der ODBC\-Treiber entweder positionierbare Aktualisierungsanweisungen oder die **::SQLSetPos**\-ODBC\-API\-Funktion unterstützen.  Werden beide unterstützt, verwendet MFC aus Effizienzgründen **::SQLSetPos**.  Für Momentaufnahmen können Sie alternativ auch die Cursorbibliothek einsetzen, die die erforderliche Unterstützung für aktualisierbare Momentaufnahmen bietet \(statische Cursor und positionierbare Aktualisierungsanweisungen\).  
+>  Der ODBC-Treiber muss für aktualisierbare Recordsets entweder positionierte Update-Anweisungen unterstützen oder die **:: SQLSetPos** ODBC API-Funktion. Wenn beide unterstützt, verwendet MFC **:: SQLSetPos** Gründen der Effizienz. Sie können auch für Momentaufnahmen können die Cursorbibliothek Sie die erforderliche Unterstützung für aktualisierbare Momentaufnahmen (statische Cursor und positionierte Update-Anweisungen) bietet.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Grundlagen zu ODBC](../../data/odbc/odbc-basics.md)

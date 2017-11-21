@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,36 +14,20 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::filesystem_error
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 4cb454ca6ea92ede5c4cf83c1072e22e60577811
-ms.contentlocale: de-de
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: 14d81a2039005e3ab301a865d9834de048a74ac5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
-Verwenden Sie den Header \<filesystem>, um auf Klassen und Funktion zuzugreifen, die Informationen über Pfade, Dateien und Verzeichnisse ändern und abrufen.  
+Verwenden Sie den Header &lt;filesystem>, um auf Klassen und Funktion zuzugreifen, die Informationen über Pfade, Dateien und Verzeichnisse ändern und abrufen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,7 +38,7 @@ using namespace std::experimental::filesystem::v1;
 ```  
   
 > [!IMPORTANT]
->  Zum Zeitpunkt der Veröffentlichung von Visual Studio 2017 war der Header \<experimental/filesystem> noch kein C++-Standard. Visual C++ 2017 implementiert den endgültigen Entwurfsstandard aus [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).  
+>  Ab der Version von Visual Studio 2017 die \<Filesystem >-Header wurde noch keinem C++-Standard. Visual C++ 2017 implementiert den endgültigen Entwurfsstandard aus [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).  
   
  Dieser Header unterstützt Dateisysteme für eine von zwei umfangreichen Klassen von Hostbetriebssystemen: Microsoft Windows und POSIX.  
   
@@ -73,15 +56,15 @@ using namespace std::experimental::filesystem::v1;
   
 -   Ein Objekt eines Klassenpfads speichert den Pfadnamen im systemeigenen Format, unterstützt aber einfache Konvertierung zwischen dieser gespeicherten Form und mehreren externen Formen:  
   
-    -   Eine nullterminierte Sequenz von char-Zeichen, die entsprechend der Vorgabe des Betriebssystems codiert sind  
+-   Eine nullterminierte Sequenz von char-Zeichen, die entsprechend der Vorgabe des Betriebssystems codiert sind  
   
-    -   Eine nullterminierte Sequenz von char-Zeichen, die als UTF-8 codiert sind  
+-   Eine nullterminierte Sequenz von char-Zeichen, die als UTF-8 codiert sind  
   
-    -   Eine nullterminierte Sequenz von wchar_t-Zeichen, die entsprechend der Vorgabe des Betriebssystems codiert sind  
+-   Eine nullterminierte Sequenz von wchar_t-Zeichen, die entsprechend der Vorgabe des Betriebssystems codiert sind  
   
-    -   Eine nullterminierte Sequenz von char16_t-Zeichen, die als UTF-16 codiert sind  
+-   Eine nullterminierte Sequenz von char16_t-Zeichen, die als UTF-16 codiert sind  
   
-    -   Eine nullterminierte Sequenz von char32_t-Zeichen, die als UTF-32 codiert sind  
+-   Eine nullterminierte Sequenz von char32_t-Zeichen, die als UTF-32 codiert sind  
   
  Gegenseitige Konvertierungen zwischen diesen Darstellungen werden nach Bedarf dadurch vermittelt, dass mindestens ein `codecvt`-Facet verwendet wird. Wenn ein bestimmtes Gebietsschemaobjekt nicht festgelegt ist, werden dieser Facets aus dem globalen Gebietsschema abgerufen.  
   
@@ -142,14 +125,13 @@ using namespace std::experimental::filesystem::v1;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Eine mit [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) verwendete Enumeration, mit der das Verhalten bestimmt wird, wenn eine Datei vorhanden ist.|  
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Eine mit [copy_file](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) verwendete Enumeration, mit der das Verhalten bestimmt wird, wenn eine Datei vorhanden ist.|  
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Eine Enumeration, die Optionen für Verzeichnisiteratoren angibt.|  
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Eine Enumeration für Dateitypen.|  
 |[Perms](../standard-library/filesystem-enumerations.md#perms)|Ein Bitmaskentyp, mit dem Berechtigungen und Optionen zu Berechtigungen übermittelt werden.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)
-
 
 
 

@@ -1,79 +1,82 @@
 ---
-title: "Funktionen zum &#220;bergeben von Meldungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Funktionen zum Übergeben von Meldungen"
+title: "Funktionen zum Übergeben von Nachrichten | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: message passing functions
 ms.assetid: 42477c9e-a8a6-4dc4-a98e-93c6dc8c4dd0
-caps.latest.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
+caps.latest.revision: "23"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4139068c8871fe69f43168fe925011a48411a74b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Funktionen zum &#220;bergeben von Meldungen
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die Asynchronous Agents Library stellt mehrere Funktionen bereit, mit denen Sie Meldungen zwischen Komponenten übergeben können.  
+# <a name="message-passing-functions"></a>Funktionen zum Übergeben von Meldungen
+Die Asynchronous Agents Library stellt mehrere Funktionen, mit denen Sie Nachrichten zwischen Komponenten übergeben.  
   
- Diese Meldungsübergabefunktionen werden mit den verschiedenen Meldungsblocktypen verwendet.  Weitere Informationen zu den Meldungsblocktypen, die von der Concurrency Runtime definiert werden, finden Sie unter [Asynchrone Nachrichtenblöcke](../../parallel/concrt/asynchronous-message-blocks.md).  
+ Diese Meldungsübergabefunktionen werden mit den verschiedenen Nachrichtenblocktypen verwendet. Weitere Informationen zu den Nachrichtenblocktypen, die von der Concurrency Runtime definiert sind, finden Sie unter [asynchrone Meldungsblöcke](../../parallel/concrt/asynchronous-message-blocks.md).  
   
 ##  <a name="top"></a> Abschnitte  
  In diesem Thema werden die folgenden Meldungsübergabefunktionen beschrieben:  
   
--   [send und asend](#send)  
+-   [Sende- und asend](#send)  
   
--   [receive und try\_receive](#receive)  
+-   [empfangen und Try_receive](#receive)  
   
 -   [Beispiele](#examples)  
   
-##  <a name="send"></a> send und asend  
- Die [concurrency::send](../Topic/send%20Function.md)\-Funktion sendet eine Meldung synchron an das angegebene Ziel und die [concurrency::asend](../Topic/asend%20Function.md)\-Funktion sendet eine Meldung asynchron an das angegebene Ziel.  Die Funktionen `asend` und die Funktion `send` warten, bis das Ziel angibt, dass es eine schließlich Meldung akzeptiert oder ablehnt wird.  
+##  <a name="send"></a>Sende- und asend  
+
+ Die [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) Funktion sendet eine Nachricht synchron an das angegebene Ziel und die [Concurrency:: asend](reference/concurrency-namespace-functions.md#asend) -Funktion sendet eine Nachricht asynchron an das angegebene Ziel. Sowohl die `send` und `asend` Funktionen warten, bis das Ziel angibt, wird es schließlich akzeptieren oder ablehnen.  
   
- Die `send`\-Funktion wartet, bis das Ziel die Meldung akzeptiert oder ablehnt, bevor eine Rückgabe erfolgt.  Die `send`\-Funktion gibt `true` zurück, wenn die Meldung zugestellt wurde, andernfalls gibt sie `false` zurück.  Da die `send`\-Funktion synchron funktioniert, wartet die `send`\-Funktion, bis das Ziel die Meldung empfängt, bevor eine Rückgabe erfolgt.  
+ Die `send` Funktion wartet, bis das Ziel akzeptiert oder die Nachricht ablehnt vor dem zurückgeben. Die `send` -Funktion gibt `true` , wenn die Nachricht übermittelt wurde und `false` andernfalls. Da die `send` -Funktion synchron, funktioniert die `send` Funktion wartet, bis das Ziel zum Empfangen der Nachricht vor dem zurückgeben.  
   
- Die `asend`\-Funktion wartet hingegen nicht, bis das Ziel die Meldung akzeptiert oder abgelehnt hat, bevor eine Rückgabe erfolgt.  Die `asend`\-Funktion gibt stattdessen `true` zurück, wenn das Ziel die Meldung schließlich akzeptiert.  Andernfalls gibt `asend` `false` zurück, um anzugeben, dass das Ziel die Meldung entweder abgelehnt hat oder die Entscheidung, ob die Meldung angenommen wird, aufgeschoben hat.  
+ Im Gegensatz dazu die `asend` Funktion wartet nicht auf das Ziel annehmen oder Ablehnen der Nachrichteninhalts vor dem zurückgeben. Stattdessen die `asend` -Funktion gibt `true` , wenn das Ziel die Nachricht annimmt und schließlich. Andernfalls `asend` gibt `false` um anzugeben, dass das Ziel die Nachricht abgelehnt oder die Entscheidung, ob die Nachricht verschoben.  
   
- \[[Nach oben](#top)\]  
+ [[Nach oben](#top)]  
   
-##  <a name="receive"></a> receive und try\_receive  
- Die Funktionen [concurrency::receive](../Topic/receive%20Function.md) und [concurrency::try\_receive](../Topic/try_receive%20Function.md) lesen Daten aus einer angegebenen Quelle.  Die `receive`\-Funktion wartet, bis die Daten verfügbar sind, wohingegen die `try_receive`\-Funktion sofort eine Rückgabe liefert.  
+##  <a name="receive"></a>empfangen und Try_receive  
+
+ Die [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) und [Concurrency:: try_receive](reference/concurrency-namespace-functions.md#try_receive) Funktionen Lesen von Daten aus einer bestimmten Quelle stammt. Die `receive` Funktion wartet, bis Daten verfügbar sind, während die `try_receive` Funktion wird sofort zurückgegeben.  
   
- Verwenden Sie die `receive`\-Funktion, wenn Sie die Daten benötigen, um fortfahren zu können.  Verwenden Sie die `try_receive`\-Funktion, wenn Sie den aktuellen Kontext nicht blockieren dürfen oder die Daten nicht benötigen, um fortfahren zu können.  
+ Verwenden der `receive` -Funktion, wenn Sie die Daten weiterhin benötigen. Verwenden der `try_receive` funktioniert, wenn müssen Sie den aktuellen Kontext nicht blockieren, oder Sie nicht haben die Daten um den Vorgang fortzusetzen.  
   
- \[[Nach oben](#top)\]  
+ [[Nach oben](#top)]  
   
 ##  <a name="examples"></a> Beispiele  
- Beispiele für die Verwendung der Funktionen `send`, `asend` und `receive` finden Sie in den folgenden Themen:  
+ Für Beispiele, in denen die `send` und `asend`, und `receive` -Funktionen finden Sie unter den folgenden Themen:  
   
 -   [Asynchrone Nachrichtenblöcke](../../parallel/concrt/asynchronous-message-blocks.md)  
   
--   [Gewusst wie: Implementieren verschiedener Producer\-Consumer\-Muster](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)  
+-   [Vorgehensweise: Implementieren verschiedener Producer-Consumer-Muster](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)  
   
--   [Gewusst wie: Bereitstellen von Arbeitsfunktionen für die call\- und transformer\-Klassen](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)  
+-   [Vorgehensweise: Bereitstellen von Arbeitsfunktionen für die call- und transformer-Klassen](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)  
   
--   [Gewusst wie: Verwenden von transformer in einer Datenpipeline](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)  
+-   [Vorgehensweise: Verwenden von transformer in einer Datenpipeline](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)  
   
--   [Gewusst wie: Auswählen von abgeschlossenen Aufgaben](../../parallel/concrt/how-to-select-among-completed-tasks.md)  
+-   [Vorgehensweise: Auswählen von abgeschlossenen Aufgaben](../../parallel/concrt/how-to-select-among-completed-tasks.md)  
   
--   [Gewusst wie: Senden einer Nachricht in regelmäßigen Intervallen](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)  
+-   [Vorgehensweise: Senden einer Nachricht in regelmäßigen Intervallen](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)  
   
--   [Gewusst wie: Verwenden eines Nachrichtenblockfilters](../../parallel/concrt/how-to-use-a-message-block-filter.md)  
+-   [Vorgehensweise: Verwenden eines Nachrichtenblockfilters](../../parallel/concrt/how-to-use-a-message-block-filter.md)  
   
- \[[Nach oben](#top)\]  
+ [[Nach oben](#top)]  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)   
  [Asynchrone Nachrichtenblöcke](../../parallel/concrt/asynchronous-message-blocks.md)   
- [send\-Funktion](../Topic/send%20Function.md)   
- [asend\-Funktion](../Topic/asend%20Function.md)   
- [receive\-Funktion](../Topic/receive%20Function.md)   
- [try\_receive\-Funktion](../Topic/try_receive%20Function.md)
+ [Send-Funktion](reference/concurrency-namespace-functions.md#send)   
+ [Asend-Funktion](reference/concurrency-namespace-functions.md#asend)   
+ [Receive-Funktion](reference/concurrency-namespace-functions.md#receive)   
+ [Try_receive-Funktion](reference/concurrency-namespace-functions.md#try_receive)
+
+

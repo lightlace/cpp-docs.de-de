@@ -1,34 +1,33 @@
 ---
-title: "IRowsetLocateImpl-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetLocateImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Lesezeichen, OLE DB"
-  - "IRowsetLocateImpl-Klasse"
-  - "Anbieter, Lesezeichen"
+title: IRowsetLocateImpl-Klasse | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IRowsetLocateImpl
+dev_langs: C++
+helpviewer_keywords:
+- providers, bookmarks
+- IRowsetLocateImpl class
+- bookmarks, OLE DB
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ff76d78cd3f624e3bdb0d21af550a340a2aa498e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetLocateImpl-Klasse
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Implementiert die OLE DB\- [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx)\-Schnittstelle, die beliebige Zeilen aus einem Rowset abgerufen werden.  
+# <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl-Klasse
+Implementiert die OLE DB- [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) -Schnittstelle, die beliebige Zeilen aus einem Rowset abruft.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <  
@@ -48,60 +47,60 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 >  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `T`  
- Eine Klasse wird von `IRowsetLocateImpl` abgeleitet.  
+ Eine abgeleitete Klasse `IRowsetLocateImpl`.  
   
  `RowsetInterface`  
- Eine Klasse wird von `IRowsetImpl` abgeleitet.  
+ Eine abgeleitete Klasse `IRowsetImpl`.  
   
  `RowClass`  
- Die Speichereinheit für **HROW**.  
+ Die Einheit für die Speicherung der **HROW**.  
   
  `MapClass`  
- Die Speichereinheit für alle Zeilenhandles hielt vom Anbieter an.  
+ Für alle Zeilenhandles, die vom Anbieter Storage-Einheit.  
   
  `BookmarkKeyType`  
- Der Typ des Lesezeichens, wie LONG oder eine Zeichenfolge.  Gewöhnliche Lesezeichen müssen eine Länge von zwei Bytes mindestens haben. \(Einzelbytelänge wird für die OLE DB\- [Standardlesezeichen](https://msdn.microsoft.com/en-us/library/ms712954.aspx)**DBBMK\_FIRST**, **DBBMK\_LAST** und **DBBMK\_INVALID**.\) reserviert  
+ Der Typ des Lesezeichens, z. B. einen Long-Wert oder eine Zeichenfolge. Gewöhnliche Lesezeichen müssen eine Länge von mindestens zwei Bytes haben. (Single-Byte-Länge ist für den OLE DB-reserviert [standard Lesezeichen](https://msdn.microsoft.com/en-us/library/ms712954.aspx)**DBBMK_FIRST**, **DBBMK_LAST**, und **DBBMK_INVALID**.)  
   
  `BookmarkType`  
- Der Zuordnungsmechanismus für Wartungslesezeichen\-zudatenbeziehungen.  
+ Die Zuordnungsmechanismus zum Verwalten von Lesezeichen datenbeziehungen.  
   
  `BookmarkMapClass`  
- Die Speichereinheit für alle Zeilenhandles hielt vom Lesezeichen an.  
+ Für alle Zeilenhandles, die vom Lesezeichen Storage-Einheit.  
   
-## Member  
+## <a name="members"></a>Mitglieder  
   
-### Schnittstellenmethoden  
+### <a name="interface-methods"></a>Schnittstellenmethoden  
   
 |||  
 |-|-|  
 |[Compare](../../data/oledb/irowsetlocateimpl-compare.md)|Vergleicht zwei Lesezeichen.|  
-|[GetRowsAt](../../data/oledb/irowsetlocateimpl-getrowsat.md)|Ruft das Zeilen Starten mit der Zeile, die durch einen UTC\-Offset von einem Lesezeichen angegeben wird.|  
-|[GetRowsByBookmark](../../data/oledb/irowsetlocateimpl-getrowsbybookmark.md)|Ruft die Zeilen, die die angegebenen Lesezeichen übereinstimmen.|  
-|[Hash](../../data/oledb/irowsetlocateimpl-hash.md)|Gibt Hashwerten für die angegebenen Lesezeichen zurück.|  
+|[GetRowsAt](../../data/oledb/irowsetlocateimpl-getrowsat.md)|Ruft Zeilen ab der Zeile, in einem Lesezeichen als Offset angegeben ab.|  
+|[GetRowsByBookmark](../../data/oledb/irowsetlocateimpl-getrowsbybookmark.md)|Ruft die Zeilen, die die angegebenen Lesezeichen entsprechen ab.|  
+|[Hash](../../data/oledb/irowsetlocateimpl-hash.md)|Gibt Hashing Werte für die angegebene Lesezeichen ausführen.|  
   
-### Datenmember  
+### <a name="data-members"></a>Datenmember  
   
 |||  
 |-|-|  
-|[m\_rgBookmarks](../../data/oledb/irowsetlocateimpl-m-rgbookmarks.md)|Ein Array Lesezeichen.|  
+|[m_rgBookmarks](../../data/oledb/irowsetlocateimpl-m-rgbookmarks.md)|Ein Array von Lesezeichen.|  
   
-## Hinweise  
- `IRowsetLocateImpl` ist die OLE DB\-Vorlagen\-Implementierung der [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx)\-Schnittstelle.  `IRowsetLocate` wird verwendet, um beliebige Zeilen aus einem Rowset abgerufen.  Ein Rowset, das diese Schnittstelle nicht implementiert, ist ein `sequential` Rowset.  Wenn `IRowsetLocate` für ein Rowset vorhanden ist, lautet Spalte 0 das Lesezeichen für die Linien; diese Spalte werden, erhält einen Lesezeichenwert, der verwendet werden kann, um zur gleichen Zeile neu anzuordnen.  
+## <a name="remarks"></a>Hinweise  
+ `IRowsetLocateImpl`ist die OLE DB-Vorlagen-Implementierung von der [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) Schnittstelle. `IRowsetLocate`wird verwendet, um beliebige Zeilen aus einem Rowset abzurufen. Ein Rowset, das diese Schnittstelle nicht implementiert ist eine `sequential` Rowset. Wenn `IRowsetLocate` vorhanden ist für ein Rowset Spalte 0 ist das Lesezeichen für die Zeilen, lesen diese Spalte erhält einen Lesezeichenwert, der verwendet werden kann, um auf die gleiche Zeile neu zu positionieren.  
   
- `IRowsetLocateImpl` wird verwendet, um Unterstützung in den Anbieter zu implementieren.  Lesezeichen sind die Platzhalter \(Indizes für ein Rowset\) das den Consumer aktivieren, um in eine Zeile schnell zurückzukehren und ermöglichen Hochgeschwindigkeitszugriff an Daten.  Der Anbieter ermittelt, welche Lesezeichen eine Zeile eindeutig identifizieren können.  Mit `IRowsetLocateImpl` können Sie Methoden Lesezeichen vergleichen, Zeilen nach Offset abrufen, Zeilen durch Lesezeichen abrufen, und Hashwerten für Lesezeichen zurückgeben.  
+ `IRowsetLocateImpl`wird verwendet, um lesezeichenunterstützung in Anbietern zu implementieren. Lesezeichen sind Platzhalter (Indizes für ein Rowset), mit die den Consumer einer Zeile zurückkehren können Hochgeschwindigkeits-Zugriffe auf Daten. Der Anbieter bestimmt, welche Lesezeichen eindeutig können eine Zeile zu identifizieren. Mithilfe von `IRowsetLocateImpl` Methoden, Sie können Lesezeichen vergleichen, Fetch Zeilen durch Werte für offset, Fetch Zeilen von Lesezeichen und Hashwerte für Lesezeichen zurückzugeben.  
   
- Um in OLE DB\-Lesezeichen einem Rowset zu unterstützen, führen Sie das Rowset erben von dieser Klasse.  
+ Stellen Sie zur Unterstützung von OLE DB-Lesezeichen in einem Rowset, das Rowset, das von dieser Klasse erben.  
   
- Informationen zum Implementieren der Unterstützung, finden Sie unter [Anbieterunterstützung für Lesezeichen](../../data/oledb/provider-support-for-bookmarks.md) und [Lesezeichen](https://msdn.microsoft.com/en-us/library/ms709728.aspx) in *Visual C\+\+ Programmer's Guide* in *OLE DB Programmer's Reference* in `Platform``SDK`.  
+ Weitere Informationen zum Implementieren von Lesezeichen unterstützt, finden Sie unter [Anbieter unterstützt Lesezeichen](../../data/oledb/provider-support-for-bookmarks.md) in der *Visual C++ Handbuch für Programmierer* und [Lesezeichen](https://msdn.microsoft.com/en-us/library/ms709728.aspx) in der *OLE DB Programmer's Reference* im Platform SDK.  
   
-## Anforderungen  
- **Header**: atldb.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header**: "Atldb.h"  
   
-## Siehe auch  
- [OLE DB\-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektur von OLE DB\-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)   
+## <a name="see-also"></a>Siehe auch  
+ [OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)   
  [IRowsetLocate:IRowset](https://msdn.microsoft.com/en-us/library/ms721190.aspx)   
  [Anbieterunterstützung für Lesezeichen](../../data/oledb/provider-support-for-bookmarks.md)   
- [Bookmarks](https://msdn.microsoft.com/en-us/library/ms709728.aspx)
+ [BTextmarken](https://msdn.microsoft.com/en-us/library/ms709728.aspx)

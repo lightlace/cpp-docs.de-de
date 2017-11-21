@@ -1,30 +1,30 @@
 ---
-title: "4.2 OMP_NUM_THREADS"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 4.2 OMP_NUM_THREADS | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 49dd55dd-25d5-4a5a-a998-cc7f47b2dae2
-caps.latest.revision: 6
-caps.handback.revision: "6"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7e02f29aeda7d555b7ac2678b030d2ff3475b639
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# 4.2 OMP_NUM_THREADS
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die **OMP\_NUM\_THREADS** Umgebungsvariable wird die standardmäßige Anzahl von Threads fest, die während der Ausführung zu verwenden, es sei denn, diese Zahl explizit geändert werden, indem Sie die **omp\_set\_num\_threads** routine Bibliothek oder durch eine explizite **num\_threads**\-Klausel auf **Ähnlichkeit**\-Direktive aufrufen.  
+# <a name="42-ompnumthreads"></a>4.2 OMP_NUM_THREADS
+Die **OMP_NUM_THREADS** -Umgebungsvariablen angegeben wird die Standardanzahl von Threads zur Verwendung während der Ausführung, sofern diese Anzahl durch den Aufruf nicht explizit geändert wird die **Omp_set_num_threads** Bibliotheksroutine oder ein expliziter **Num_threads** -Klausel für eine **parallele** Richtlinie.  
   
- Der Wert der **OMP\_NUM\_THREADS** Umgebungsvariable muss eine positive ganze Zahl sein.  Der Effekt ist auf ab, ob dynamische Anpassung der Anzahl von Threads aktiviert ist.  Für einen umfassenden Satz von Regeln zur Interaktion zwischen der **OMP\_NUM\_THREADS** Umgebungsvariablen und die dynamische Anpassung von Threads finden Sie im Abschnitt 2.3 auf Seite 8.  
+ Der Wert, der die **OMP_NUM_THREADS** -Umgebungsvariable muss eine positive ganze Zahl sein. Seine Auswirkungen hängt davon ab, ob die dynamische Anpassung der Anzahl der Threads aktiviert ist. Für einen umfassenden Satz von Regeln über die Interaktion zwischen der **OMP_NUM_THREADS** Umgebung Variable und dynamische Anpassung der Threads, siehe Abschnitt 2.3 auf Seite "8".  
   
- Wenn kein Wert für die **OMP\_NUM\_THREADS** Umgebungsvariable angegeben ist oder wenn der angegebene Wert keine positive ganze Zahl ist, oder wenn der Wert größer als die maximale Anzahl von Threads ist das System unterstützen kann, wird die Anzahl der zu verwendenden Threads Implementierung\-definiert.  
+ Wenn kein Wert, für angegeben wird die **OMP_NUM_THREADS** Umgebungsvariable, oder wenn der angegebene Wert eine positive ganze Zahl ist oder wenn der Wert größer als die maximale Anzahl von Threads ist das System kann unterstützt werden, die Anzahl von Threads zur Verwendung ist die Implementierung definiert.  
   
  Beispiel:  
   
@@ -32,10 +32,10 @@ Die **OMP\_NUM\_THREADS** Umgebungsvariable wird die standardmäßige Anzahl von
 setenv OMP_NUM_THREADS 16  
 ```  
   
-## Querverweise:  
+## <a name="cross-references"></a>Referenzen:  
   
--   **num\_threads**\-Klausel finden [Abschnitt 2.3](../../parallel/openmp/2-3-parallel-construct.md) auf Seite 8.  
+-   **Num_threads** -Klausel finden Sie unter [Abschnitt 2.3](../../parallel/openmp/2-3-parallel-construct.md) auf Seite "8".  
   
--   **omp\_set\_num\_threads**\-Funktion finden [3.1.1 Abschnitt](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md) auf Seite 36.  
+-   **Omp_set_num_threads** funktionieren, finden Sie unter [Abschnitt 3.1.1](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md) auf Seite 36.  
   
--   **omp\_set\_dynamic**\-Funktion finden [3.1.7 Abschnitt](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) auf Seite 39.
+-   **Omp_set_dynamic** funktionieren, finden Sie unter [Abschnitt 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) auf Seite 39.

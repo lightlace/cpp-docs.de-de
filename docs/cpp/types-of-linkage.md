@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - no linkage
 - linkage [C++], none
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - internal linkage, types of linkage
 - external linkage, linkage types
 ms.assetid: 41326c7f-4602-4bad-a648-697604858ba0
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: b4d5aca80e7b074c86a1446fabb9852f3b9fe3a9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 154c6a1694055a65eed262055997ba88aa07b18c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="types-of-linkage"></a>Verknüpfungstypen
 Das Teilen von Namen von Objekten und Funktionen zwischen Übersetzungseinheiten wird als Verknüpfung bezeichnet. Diese Namen können Folgendes aufweisen:  

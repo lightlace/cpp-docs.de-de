@@ -1,36 +1,36 @@
 ---
-title: "IRowsetChangeImpl-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::IRowsetChangeImpl"
-  - "IRowsetChangeImpl"
-  - "ATL.IRowsetChangeImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IRowsetChangeImpl-Klasse"
-  - "Anbieter, Aktualisierbar"
-  - "Aktualisierbare Anbieter, Direktes Update"
+title: IRowsetChangeImpl-Klasse | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::IRowsetChangeImpl
+- IRowsetChangeImpl
+- ATL.IRowsetChangeImpl
+dev_langs: C++
+helpviewer_keywords:
+- providers, updatable
+- updatable providers, immediate update
+- IRowsetChangeImpl class
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4dc31fc66f28f6fd9a8d9e9bc7122bf2aa7b2b73
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetChangeImpl-Klasse
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die OLE DB\-Vorlagen\-Implementierung der [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx)\-Schnittstelle in der OLE DB\-Spezifikation.  
+# <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl-Klasse
+Die OLE DB-Vorlagen-Implementierung von der [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) Schnittstelle in der OLE DB-Spezifikation.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <  
@@ -43,57 +43,57 @@ template <
 class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `T`  
- Eine Klasse wird von `IRowsetChangeImpl` abgeleitet.  
+ Eine abgeleitete Klasse `IRowsetChangeImpl`.  
   
  `Storage`  
- Der Benutzerdatensatz.  
+ Der Benutzerdatensatz enthält.  
   
  `BaseInterface`  
- Die Basisklasse für die Schnittstelle, wie `IRowsetChange`.  
+ Die Basisklasse für die Schnittstelle, wie z. B. `IRowsetChange`.  
   
  `RowClass`  
- Die Speichereinheit für das Zeilenhandle.  
+ Die speichereinheit für das Zeilenhandle.  
   
  `MapClass`  
- Die Speichereinheit für alle Zeilenhandles hielt vom Anbieter an.  
+ Für alle Zeilenhandles, die vom Anbieter Storage-Einheit.  
   
-## Member  
+## <a name="members"></a>Mitglieder  
   
-### Schnittstellenmethoden \(mit IRowsetChange\)  
+### <a name="interface-methods-used-with-irowsetchange"></a>Schnittstellenmethoden (mit IRowsetChange verwendet)  
   
 |||  
 |-|-|  
-|[DeleteRows](../../data/oledb/irowsetchangeimpl-deleterows.md)|Zeilen löschen aus dem Rowset.|  
-|[InsertRow](../../data/oledb/irowsetchangeimpl-insertrow.md)|Fügt eine Zeile in das Rowset ein.|  
+|[DeleteRows](../../data/oledb/irowsetchangeimpl-deleterows.md)|Löscht Zeilen aus dem Rowset.|  
+|[InsertRow](../../data/oledb/irowsetchangeimpl-insertrow.md)|Fügt eine Zeile in das Rowset an.|  
 |[SetData](../../data/oledb/irowsetchangeimpl-setdata.md)|Legt Datenwerte in einer oder mehreren Spalten fest.|  
   
-### Implementierungsverfahren Rückruf\(\)  
+### <a name="implementation-method-callback"></a>Die Implementierungsmethode (Callback)  
   
 |||  
 |-|-|  
-|[FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md)|Overidden durch den Anbieter auf, um Daten in den Speicher zu übernehmen.|  
+|[FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md)|Außer Kraft gesetzt, vom Anbieter, um Daten an seinen Speicher zu übertragen.|  
   
-## Hinweise  
- Diese Schnittstelle ist für unmittelbare und Schreibvorgänge in einem Datenspeicher zuständig. "Unmittelbar" bedeutet, dass, wenn der Endbenutzer \(die Person, die Consumern verwendet\) Änderungen vornimmt, diese Änderungen sofort am Datenspeicher übertragen werden \(und kann nicht rückgängig gemacht werden\).  
+## <a name="remarks"></a>Hinweise  
+ Diese Schnittstelle ist verantwortlich für sofortige Schreibvorgänge in einem Datenspeicher. "Sofortige" bedeutet, dass wenn der Endbenutzer (der Person, die mit der Consumer) Änderungen vornimmt, diese Änderungen sofort an den Daten übertragen werden speichern (und können nicht rückgängig gemacht werden).  
   
- `IRowsetChangeImpl` implementiert die OLE DB\- `IRowsetChange`\-Schnittstelle, die das Aktualisieren von Werten von Spalten in vorhandenen Zeilen, das Löschen von Zeilen und Einfügen von neuen Zeilen aktiviert.  
+ `IRowsetChangeImpl`implementiert die OLE DB- `IRowsetChange` -Schnittstelle, die Aktualisieren der Werte der Spalten in vorhandenen Zeilen löschen von Zeilen, und neue Zeilen einfügen kann.  
   
- Die OLE DB\-Vorlagen\-Implementierung unterstützt alle Basismethoden \(`SetData`, `InsertRow` und `DeleteRows`\).  
+ Die Implementierung der OLE DB-Vorlagen unterstützt alle Basismethoden (`SetData`, `InsertRow`, und `DeleteRows`).  
   
 > [!IMPORTANT]
->  VOR Sie versuchen, es wird dringend empfohlen, die der folgenden Dokumentation, den Anbieter zu implementieren lesen:  
+>  Es wird dringend empfohlen, dass Sie die folgende Dokumentation, bevor Sie versuchen, einen Anbieter implementieren lesen:  
   
--   [Erstellen für einen aktualisierbaren Anbieter](../../data/oledb/creating-an-updatable-provider.md)  
+-   [Erstellen eines aktualisierbaren Anbieters](../../data/oledb/creating-an-updatable-provider.md)  
   
--   Kapitel 6 *OLE DB Programmer's Reference*  
+-   Kapitel 6 der *OLE DB-Programmierreferenz*  
   
--   Siehe auch, wie die `RUpdateRowset`\-Klasse im UpdatePV\-Beispiel verwendet wird  
+-   Siehe auch wie die `RUpdateRowset` Klasse wird verwendet, in dem UpdatePV-Beispiel  
   
-## Anforderungen  
- **Header:**  atldb.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** „atldb.h“  
   
-## Siehe auch  
- [OLE DB\-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektur von OLE DB\-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)
+## <a name="see-also"></a>Siehe auch  
+ [OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)

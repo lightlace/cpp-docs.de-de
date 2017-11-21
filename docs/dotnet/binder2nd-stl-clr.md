@@ -1,32 +1,30 @@
 ---
-title: "binder2nd (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::binder2nd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "binder2nd-Funktion [STL/CLR]"
+title: binder2nd (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::binder2nd
+dev_langs: C++
+helpviewer_keywords: binder2nd function [STL/CLR]
 ms.assetid: f4be8722-1778-4cb9-9ec7-ad1443f6899f
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 237bf8bee11234939d93c5af0aa0114f9379cd3c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# binder2nd (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die Vorlagenklasse beschreibt ein EinArgumentfunktionselement, die, wenn sie aufgerufen wird, dem gespeicherten ZweiArgumentfunktionselement zurückgibt, das dem angegebenen ersten Argument und den gespeicherten zweiten Argument aufgerufen wird.  Sie verwenden sie angeben einem Funktionsobjekt hinsichtlich sein gespeichertes Funktionselement.  
+# <a name="binder2nd-stlclr"></a>binder2nd (STL/CLR)
+Die Vorlagenklasse beschreibt ein Funktionselement ist nur einem Argument, die beim Aufruf gibt die gespeicherte zwei Argumenten Funktionselement mit dem angegebenen ersten Argument und gespeicherte zweites Argument aufgerufen. Sie verwenden, geben Sie ein Funktionsobjekt im Hinblick auf seine gespeicherte Funktionselement.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<typename Fun>  
@@ -49,35 +47,35 @@ public:
     };  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  Fun  
- Der Typ des gespeicherten Feature\-Elements.  
+ Der Typ des gespeicherten Funktionselement.  
   
-## Memberfunktionen  
+## <a name="member-functions"></a>Memberfunktionen  
   
-|Typdefinition|**Beschreibung**|  
-|-------------------|----------------------|  
-|delegate\_type|Der Typ des generischen Delegaten.|  
-|first\_argument\_type|Der Typ des ersten Arguments des Feature\-Elements.|  
-|result\_type|Der Typ des Funktionselementergebnisses.|  
-|second\_argument\_type|Der Typ des Funktionselementzweiten Argumente.|  
-|stored\_function\_type|Der Typ des Feature\-Elements.|  
+|Typdefinition|Beschreibung|  
+|---------------------|-----------------|  
+|delegate_type|Der Typ des generischen Delegaten.|  
+|first_argument_type|Der Typ des ersten Arguments Funktionselement.|  
+|RESULT_TYPE|Der Typ des Ergebnisses Funktionselement.|  
+|second_argument_type|Der Typ des zweiten Arguments Funktionselement.|  
+|stored_function_type|Der Typ, der das Funktionselement.|  
   
-|Member|**Beschreibung**|  
-|------------|----------------------|  
+|Member|Beschreibung|  
+|------------|-----------------|  
 |binder2nd|Erstellt das Funktionselement.|  
   
-|Operator|**Beschreibung**|  
-|--------------|----------------------|  
-|operator\(\)|Berechnet die gewünschte Funktion.|  
-|Operator delegate\_type^\(\)|Wandelt das Funktionselement zu einem Delegaten um.|  
+|Operator|Beschreibung|  
+|--------------|-----------------|  
+|Operator()|Berechnet die gewünschte Funktion.|  
+|Operator delegate_type^()|Wandelt das Funktionselement an einen Delegaten an.|  
   
-## Hinweise  
- Die Vorlagenklasse beschreibt ein EinArgumentfunktionselement, das ein ZweiArgumentfunktionselement und ein zweites Argument speichert.  Sie definiert den Memberoperator, `operator()`, wenn das Objekt als Funktion aufgerufen wird, das Ergebnis des Funktionsaufrufs des gespeicherten Feature\-Elements mit dem angegebenen ersten Argument und dem gespeicherten zweiten Argument zurückgibt.  
+## <a name="remarks"></a>Hinweise  
+ Die Vorlagenklasse beschreibt ein Funktionselement ist nur einem Argument, das ein Funktionselement ist zwei Argumente und ein zweites Argument gespeichert. Die Memberoperator definiert `operator()` , wenn das Objekt als eine Funktion aufgerufen wird, gibt das Ergebnis des Aufrufs der gespeicherten Funktionselement mit dem angegebenen ersten Argument und gespeicherte zweites Argument zurück.  
   
- Sie können das Objekt auch übergeben, da ein Funktionsargument, dessen Typ `delegate_type^` ist und es entsprechend konvertiert wird.  
+ Sie können auch das Objekt übergeben, als ein Funktionsargument, dessen Typ ist `delegate_type^` und werden entsprechend konvertiert werden.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_binder2nd.cpp   
@@ -120,13 +118,16 @@ int main()
   
 ```  
   
-  **4 3**  
- **0 \-1**  
- **0 \-1**   
-## Anforderungen  
- **Header:** \<cliext\/funktionsfähig\>  
+```Output  
+4 3  
+0 -1  
+0 -1  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/funktionale >  
   
-## Siehe auch  
- [bind2nd](../dotnet/bind2nd-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [bind2nd (STL/CLR)](../dotnet/bind2nd-stl-clr.md)

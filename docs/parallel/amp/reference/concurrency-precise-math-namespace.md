@@ -1,11 +1,10 @@
 ---
-title: 'Concurrency:: precise_math-Namespace | Microsoft-Dokumentation'
+title: 'Concurrency:: precise_math-Namespace | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -139,37 +138,20 @@ f1_keywords:
 - AMP_MATH/Concurrency::tgammaf
 - AMP_MATH/Concurrency::trunc
 - AMP_MATH/Concurrency::truncf
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: ba653308-dc28-4384-b2fd-6cd718a72f91
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: bc8487cf007eaf1373389b6cc6d3f4bdac09b698
-ms.contentlocale: de-de
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 5250ab17fa6da4ed54d5bda84e32b409ca53869d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="concurrencyprecisemath-namespace"></a>Concurrency::precise_math-Namespace
-Funktionen im `precise_math`-Namespace sind C99-kompatibel. Sowohl einfache Genauigkeit, und doppelte Genauigkeit Versionen jeder Funktion enthalten sind. Beispielsweise `acos` ist die Version mit doppelter Genauigkeit und `acosf` ist die Version mit einfacher Genauigkeit. Diese Funktionen, einschließlich der Funktionen mit einfacher Genauigkeit erfordern erweiterte Unterstützung mit doppelter Genauigkeit auf der Zugriffstaste. Sie können die [Accelerator:: supports_double_precision](accelerator-class.md#supports_double_precision) bestimmt, ob Sie diese Funktionen auf eine bestimmte Zugriffstaste ausführen können. 
+Funktionen im `precise_math`-Namespace sind C99-kompatibel. Sowohl einfache Genauigkeit und doppelte Genauigkeit Versionen jeder Funktion enthalten sind. Beispielsweise `acos` ist die Version mit doppelter Genauigkeit und `acosf` ist die Version mit einfacher Genauigkeit. Diese Funktionen, einschließlich der Funktionen mit einfacher Genauigkeit erfordern erweiterte Unterstützung mit doppelter Genauigkeit auf der Zugriffstaste. Sie können die [Accelerator:: supports_double_precision](accelerator-class.md#supports_double_precision) zu bestimmen, ob Sie diese Funktionen auf eine bestimmte Zugriffstaste ausführen können. 
 
   
 ## <a name="syntax"></a>Syntax  
@@ -180,7 +162,7 @@ namespace precise_math;
   
 #### <a name="parameters"></a>Parameter  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="functions"></a>Funktionen  
   
@@ -204,25 +186,25 @@ namespace precise_math;
 |[cbrtf](concurrency-precise-math-namespace-functions.md#cbrtf)|Berechnet die Kubikwurzel real des Arguments|  
 |[ceil](concurrency-precise-math-namespace-functions.md#ceil)|Überladen. Berechnet den Höchstwert des Arguments|  
 |[ceilf](concurrency-precise-math-namespace-functions.md#ceilf)|Berechnet den Höchstwert des Arguments|  
-|[copysign](concurrency-precise-math-namespace-functions.md#copysign)|Überladen. Produziert einen Wert mit der Größe von _X und das Zeichen _y|  
-|[copysignf](concurrency-precise-math-namespace-functions.md#copysignf)|Produziert einen Wert mit der Größe von _X und das Zeichen _y|  
+|[copysign](concurrency-precise-math-namespace-functions.md#copysign)|Überladen. Produziert einen Wert mit der Größe von _x ab und das Zeichen von _Y|  
+|[copysignf](concurrency-precise-math-namespace-functions.md#copysignf)|Produziert einen Wert mit der Größe von _x ab und das Zeichen von _Y|  
 |[cos](concurrency-precise-math-namespace-functions.md#cos)|Überladen. Berechnet den Kosinus des Arguments|  
 |[cosf](concurrency-precise-math-namespace-functions.md#cosf)|Berechnet den Kosinus des Arguments|  
 |[cosh](concurrency-precise-math-namespace-functions.md#cosh)|Überladen. Berechnet den Hyperbelkosinuswert des Arguments|  
 |[coshf](concurrency-precise-math-namespace-functions.md#coshf)|Berechnet den Hyperbelkosinuswert des Arguments|  
-|[cospi](concurrency-precise-math-namespace-functions.md#cospi)|Überladen. Berechnet den Kosinuswert von Pi * _X|  
-|[cospif](concurrency-precise-math-namespace-functions.md#cospif)|Berechnet den Kosinuswert von Pi * _X|  
-|[erf](concurrency-precise-math-namespace-functions.md#erf)|Überladen. Berechnet die Fehlerfunktion von _X|  
-|[erfc](concurrency-precise-math-namespace-functions.md#erfc)|Überladen. Berechnet die komplementäre Fehlerfunktion von _X|  
-|[erfcf](concurrency-precise-math-namespace-functions.md#erfcf)|Berechnet die komplementäre Fehlerfunktion von _X|  
-|[erfcinv](concurrency-precise-math-namespace-functions.md#erfcinv)|Überladen. Berechnet die inverse komplementäre Fehlerfunktion von _X|  
-|[erfcinvf](concurrency-precise-math-namespace-functions.md#erfcinvf)|Berechnet die inverse komplementäre Fehlerfunktion von _X|  
-|[erff](concurrency-precise-math-namespace-functions.md#erff)|Berechnet die Fehlerfunktion von _X|  
-|[erfinv](concurrency-precise-math-namespace-functions.md#erfinv)|Überladen. Berechnet die inverse Error-Funktion von _X|  
-|[erfinvf](concurrency-precise-math-namespace-functions.md#erfinvf)|Berechnet die inverse Error-Funktion von _X|  
+|[cospi](concurrency-precise-math-namespace-functions.md#cospi)|Überladen. Berechnet den Kosinus-Wert von Pi * _X|  
+|[cospif](concurrency-precise-math-namespace-functions.md#cospif)|Berechnet den Kosinus-Wert von Pi * _X|  
+|[erf](concurrency-precise-math-namespace-functions.md#erf)|Überladen. Berechnet die Fehlerfunktion von _x ab|  
+|[erfc](concurrency-precise-math-namespace-functions.md#erfc)|Überladen. Berechnet die komplementäre Fehlerfunktion von _x ab|  
+|[erfcf](concurrency-precise-math-namespace-functions.md#erfcf)|Berechnet die komplementäre Fehlerfunktion von _x ab|  
+|[erfcinv](concurrency-precise-math-namespace-functions.md#erfcinv)|Überladen. Berechnet die inverse komplementäre Fehlerfunktion von _x ab|  
+|[erfcinvf](concurrency-precise-math-namespace-functions.md#erfcinvf)|Berechnet die inverse komplementäre Fehlerfunktion von _x ab|  
+|[erff](concurrency-precise-math-namespace-functions.md#erff)|Berechnet die Fehlerfunktion von _x ab|  
+|[erfinv](concurrency-precise-math-namespace-functions.md#erfinv)|Überladen. Berechnet die inverse Fehlerfunktion von _x ab|  
+|[erfinvf](concurrency-precise-math-namespace-functions.md#erfinvf)|Berechnet die inverse Fehlerfunktion von _x ab|  
 |[exp](concurrency-precise-math-namespace-functions.md#exp)|Überladen. Berechnet die Basis-E, die vom Argument exponential ist|  
-|[exp10](concurrency-precise-math-namespace-functions.md#exp10)|Überladen. Berechnet die Basis&10; vom Argument exponential|  
-|[exp10f](concurrency-precise-math-namespace-functions.md#exp10f)|Berechnet die Basis&10; vom Argument exponential|  
+|[exp10](concurrency-precise-math-namespace-functions.md#exp10)|Überladen. Berechnet die Basis-10-vom Argument Exponential ist|  
+|[exp10f](concurrency-precise-math-namespace-functions.md#exp10f)|Berechnet die Basis-10-vom Argument Exponential ist|  
 |[exp2](concurrency-precise-math-namespace-functions.md#exp2)|Überladen. Berechnet die Basis-2, die vom Argument exponential ist|  
 |[exp2f](concurrency-precise-math-namespace-functions.md#exp2f)|Berechnet die Basis-2, die vom Argument exponential ist|  
 |[expf](concurrency-precise-math-namespace-functions.md#expf)|Berechnet die Basis-E, die vom Argument exponential ist|  
@@ -234,21 +216,21 @@ namespace precise_math;
 |[fdimf](concurrency-precise-math-namespace-functions.md#fdimf)|Bestimmt den positiven Unterschied zwischen den Argumenten|  
 |[floor](concurrency-precise-math-namespace-functions.md#floor)|Überladen. Berechnet den Tiefstwert des Arguments|  
 |[floorf](concurrency-precise-math-namespace-functions.md#floorf)|Berechnet den Tiefstwert des Arguments|  
-|[fma](concurrency-precise-math-namespace-functions.md#fma)|Überladen. Berechnen (_X * _Y) + _Z, als ternärer Vorgang gerundet|  
-|[fmaf](concurrency-precise-math-namespace-functions.md#fmaf)|Berechnen (_X * _Y) + _Z, als ternärer Vorgang gerundet|  
+|[fma](concurrency-precise-math-namespace-functions.md#fma)|Überladen. Berechnen (_X * _Y) + _Z, als eine ternäre Operation gerundet|  
+|[fmaf](concurrency-precise-math-namespace-functions.md#fmaf)|Berechnen (_X * _Y) + _Z, als eine ternäre Operation gerundet|  
 |[fmax](concurrency-precise-math-namespace-functions.md#fmax)|Überladen. Festlegung des höchsten numerischen Werts der Argumente|  
 |[fmaxf](concurrency-precise-math-namespace-functions.md#fmaxf)|Festlegung des höchsten numerischen Werts der Argumente|  
 |[fmin](concurrency-precise-math-namespace-functions.md#fmin)|Überladen. Festlegung des niedrigsten numerischen Werts der Argumente|  
 |[fminf](concurrency-precise-math-namespace-functions.md#fminf)|Festlegung des niedrigsten numerischen Werts der Argumente|  
 |[Fmod-Funktion (C++-AMP)](concurrency-precise-math-namespace-functions.md#fmod)|Überladen. Berechnet den Gleitkommarest von _X/_Y|  
 |[fmodf](concurrency-precise-math-namespace-functions.md#fmodf)|Berechnet den Gleitkommarest von _X/_Y|  
-|[fpclassify](concurrency-precise-math-namespace-functions.md#fpclassify)|Überladen. Den Argumentwert klassifiziert, wie NaN, unendlich, Normal, subnormal,&0; (null)|  
+|[fpclassify](concurrency-precise-math-namespace-functions.md#fpclassify)|Überladen. Den Argumentwert klassifiziert, wie "NaN", unendlich, Normal, subnormal, NULL|  
 |[frexp](concurrency-precise-math-namespace-functions.md#frexp)|Überladen. Ruft die Mantisse und den Exponenten von _X ab|  
 |[frexpf](concurrency-precise-math-namespace-functions.md#frexpf)|Ruft die Mantisse und den Exponenten von _X ab|  
 |[hypot](concurrency-precise-math-namespace-functions.md#hypot)|Überladen. Berechnet die Quadratwurzel der Summe der Quadrate von _X und _Y|  
 |[hypotf](concurrency-precise-math-namespace-functions.md#hypotf)|Berechnet die Quadratwurzel der Summe der Quadrate von _X und _Y|  
-|[ilogb](concurrency-precise-math-namespace-functions.md#ilogb)|Überladen. Extrahieren Sie den Exponenten von _X als Wert mit Vorzeichen int|  
-|[ilogbf](concurrency-precise-math-namespace-functions.md#ilogbf)|Extrahieren Sie den Exponenten von _X als Wert mit Vorzeichen int|  
+|[ilogb](concurrency-precise-math-namespace-functions.md#ilogb)|Überladen. Extrahieren Sie den Exponenten von _x ab als eine signierte Int-Wert|  
+|[ilogbf](concurrency-precise-math-namespace-functions.md#ilogbf)|Extrahieren Sie den Exponenten von _x ab als eine signierte Int-Wert|  
 |[isFinite](concurrency-precise-math-namespace-functions.md#isfinite)|Überladen. Bestimmt, ob das Argument einen über begrenzten Wert verfügt|  
 |[isinf](concurrency-precise-math-namespace-functions.md#isinf)|Überladen. Bestimmt, ob das Argument unendlich ist|  
 |[isnan](concurrency-precise-math-namespace-functions.md#isnan)|Überladen. Bestimmt, ob das Argument ein NaN|  
@@ -264,29 +246,29 @@ namespace precise_math;
 |[log1pf](concurrency-precise-math-namespace-functions.md#log1pf)|Berechnet den Basis-e-Logarithmus des 1 plus das argument|  
 |[log2](concurrency-precise-math-namespace-functions.md#log2)|Überladen. Berechnet den Basis-2-Logarithmus des Arguments|  
 |[log2f](concurrency-precise-math-namespace-functions.md#log2f)|Berechnet den Basis-2-Logarithmus des Arguments|  
-|[logb](concurrency-precise-math-namespace-functions.md#logb)|Überladen. Extrahiert den Exponenten von _x ab, als eine Ganzzahl mit Vorzeichen im Gleitkommaformat|  
-|[logbf](concurrency-precise-math-namespace-functions.md#logbf)|Extrahiert den Exponenten von _x ab, als eine Ganzzahl mit Vorzeichen im Gleitkommaformat|  
+|[logb](concurrency-precise-math-namespace-functions.md#logb)|Überladen. Extrahiert den Exponenten von _x ab, als eine Ganzzahl im Gleitkommaformat mit Vorzeichen|  
+|[logbf](concurrency-precise-math-namespace-functions.md#logbf)|Extrahiert den Exponenten von _x ab, als eine Ganzzahl im Gleitkommaformat mit Vorzeichen|  
 |[logf](concurrency-precise-math-namespace-functions.md#logf)|Berechnet den Basis-E-Logarithmus des Arguments|  
 |[modf](concurrency-precise-math-namespace-functions.md#modf)|Überladen. Teilt _X in Nachkommastellen und ganze Zahlen auf.|  
 |[modff](concurrency-precise-math-namespace-functions.md#modff)|Teilt _X in Nachkommastellen und ganze Zahlen auf.|  
 |[nan](concurrency-precise-math-namespace-functions.md#nan)|Gibt ein stilles NaN zurück|  
 |[nanf](concurrency-precise-math-namespace-functions.md#nanf)|Gibt ein stilles NaN zurück|  
-|[nearbyint](concurrency-precise-math-namespace-functions.md#nearbyint)|Überladen. Rundet das Argument in einen ganzzahligen Wert im Gleitkommaformat mit dem aktuellen Rundung.|  
-|[nearbyintf](concurrency-precise-math-namespace-functions.md#nearbyintf)|Rundet das Argument in einen ganzzahligen Wert im Gleitkommaformat mit dem aktuellen Rundung.|  
+|[nearbyint](concurrency-precise-math-namespace-functions.md#nearbyint)|Überladen. Rundet das Argument in einen ganzzahligen Wert im Gleitkommaformat mit der aktuellen rundungsrichtung an.|  
+|[nearbyintf](concurrency-precise-math-namespace-functions.md#nearbyintf)|Rundet das Argument in einen ganzzahligen Wert im Gleitkommaformat mit der aktuellen rundungsrichtung an.|  
 |[nextafter](concurrency-precise-math-namespace-functions.md#nextafter)|Überladen. Bestimmen Sie den nächsten darstellbaren Wert, im Typ der Funktion, nach _X in Richtung _Y|  
 |[nextafterf](concurrency-precise-math-namespace-functions.md#nextafterf)|Bestimmen Sie den nächsten darstellbaren Wert, im Typ der Funktion, nach _X in Richtung _Y|  
-|[Phi](concurrency-precise-math-namespace-functions.md#phi)|Überladen. Gibt die kumulative Verteilungsfunktion des Arguments zurück|  
-|[phif](concurrency-precise-math-namespace-functions.md#phif)|Gibt die kumulative Verteilungsfunktion des Arguments zurück|  
+|[Phi](concurrency-precise-math-namespace-functions.md#phi)|Überladen. Die kumulative Verteilungsfunktion des Arguments zurück|  
+|[phif](concurrency-precise-math-namespace-functions.md#phif)|Die kumulative Verteilungsfunktion des Arguments zurück|  
 |[pow](concurrency-precise-math-namespace-functions.md#pow)|Überladen. Berechnet _X potenziert mit _Y|  
 |[powf](concurrency-precise-math-namespace-functions.md#powf)|Berechnet _X potenziert mit _Y|  
 |[probit](concurrency-precise-math-namespace-functions.md#probit)|Überladen. Gibt die inverse kumulative Verteilungsfunktion des Arguments zurück|  
 |[probitf](concurrency-precise-math-namespace-functions.md#probitf)|Gibt die inverse kumulative Verteilungsfunktion des Arguments zurück|  
-|[rcbrt](concurrency-precise-math-namespace-functions.md#rcbrt)|Überladen. Gibt den Kehrwert der die Kubikwurzel des Arguments zurück|  
-|[rcbrtf](concurrency-precise-math-namespace-functions.md#rcbrtf)|Gibt den Kehrwert der die Kubikwurzel des Arguments zurück|  
+|[rcbrt](concurrency-precise-math-namespace-functions.md#rcbrt)|Überladen. Gibt den Kehrwert der Kubikwurzel des Arguments zurück|  
+|[rcbrtf](concurrency-precise-math-namespace-functions.md#rcbrtf)|Gibt den Kehrwert der Kubikwurzel des Arguments zurück|  
 |[remainder](concurrency-precise-math-namespace-functions.md#remainder)|Überladen. Berechnet den Rest: _X REM _Y|  
 |[remainderf](concurrency-precise-math-namespace-functions.md#remainderf)|Berechnet den Rest: _X REM _Y|  
-|[remquo](concurrency-precise-math-namespace-functions.md#remquo)|Überladen. Berechnet den gleichen Rest als _X REM _Y. Auch die unteren 23 Bits von den ganzzahligen Quotienten _X/_Y berechnet, und gibt dieser Wert die gleichen Vorzeichen wie _X/_Y. Dieser Wert mit Vorzeichen in die ganze Zahl, die auf den _Quo gespeichert.|  
-|[remquof](concurrency-precise-math-namespace-functions.md#remquof)|Berechnet den gleichen Rest als _X REM _Y. Auch die unteren 23 Bits von den ganzzahligen Quotienten _X/_Y berechnet, und gibt dieser Wert die gleichen Vorzeichen wie _X/_Y. Dieser Wert mit Vorzeichen in die ganze Zahl, die auf den _Quo gespeichert.|  
+|[remquo](concurrency-precise-math-namespace-functions.md#remquo)|Überladen. Berechnet den gleichen Rest als _X REM _Y. Auch der unteren 23 Bits eines der ganzzahligen Quotienten _X/_Y berechnet, und gibt diesen Wert die gleichen Vorzeichen wie _X/_Y. Dieser Wert mit Vorzeichen in die Ganzzahl verweist _Quo gespeichert.|  
+|[remquof](concurrency-precise-math-namespace-functions.md#remquof)|Berechnet den gleichen Rest als _X REM _Y. Auch der unteren 23 Bits eines der ganzzahligen Quotienten _X/_Y berechnet, und gibt diesen Wert die gleichen Vorzeichen wie _X/_Y. Dieser Wert mit Vorzeichen in die Ganzzahl verweist _Quo gespeichert.|  
 |[round](concurrency-precise-math-namespace-functions.md#round)|Überladen. Rundet _X auf die nächste ganze Zahl|  
 |[roundf](concurrency-precise-math-namespace-functions.md#roundf)|Rundet _X auf die nächste ganze Zahl|  
 |[rsqrt](concurrency-precise-math-namespace-functions.md#rsqrt)|Überladen. Gibt den Kehrwert der Quadratwurzel des Arguments zurück|  
@@ -295,16 +277,16 @@ namespace precise_math;
 |[scalbf](concurrency-precise-math-namespace-functions.md#scalbf)|Multipliziert _X von FLT_RADIX auf die Power-_Y|  
 |[scalbn](concurrency-precise-math-namespace-functions.md#scalbn)|Überladen. Multipliziert _X von FLT_RADIX auf die Power-_Y|  
 |[scalbnf](concurrency-precise-math-namespace-functions.md#scalbnf)|Multipliziert _X von FLT_RADIX auf die Power-_Y|  
-|[signbit](concurrency-precise-math-namespace-functions.md#signbit)|Überladen. Bestimmt, ob die Vorzeichen von _X negativ ist.|  
-|[signbitf](concurrency-precise-math-namespace-functions.md#signbitf)|Bestimmt, ob die Vorzeichen von _X negativ ist.|  
+|[signbit](concurrency-precise-math-namespace-functions.md#signbit)|Überladen. Bestimmt, ob die Vorzeichen des _X negativ ist.|  
+|[signbitf](concurrency-precise-math-namespace-functions.md#signbitf)|Bestimmt, ob die Vorzeichen des _X negativ ist.|  
 |[sin](concurrency-precise-math-namespace-functions.md#sin)|Überladen. Berechnet den Sinuswert des Arguments|  
 |[sincos](concurrency-precise-math-namespace-functions.md#sincos)|Überladen. Berechnet Sinus- und Kosinuswert von _X|  
 |[sincosf](concurrency-precise-math-namespace-functions.md#sincosf)|Berechnet Sinus- und Kosinuswert von _X|  
 |[sinf](concurrency-precise-math-namespace-functions.md#sinf)|Berechnet den Sinuswert des Arguments|  
 |[sinh](concurrency-precise-math-namespace-functions.md#sinh)|Überladen. Berechnet den Hyperbelsinuswert des Arguments|  
 |[sinhf](concurrency-precise-math-namespace-functions.md#sinhf)|Berechnet den Hyperbelsinuswert des Arguments|  
-|[sinpi](concurrency-precise-math-namespace-functions.md#sinpi)|Überladen. Berechnet den Sinuswert von Pi * _X|  
-|[sinpif](concurrency-precise-math-namespace-functions.md#sinpif)|Berechnet den Sinuswert von Pi * _X|  
+|[sinpi](concurrency-precise-math-namespace-functions.md#sinpi)|Überladen. Berechnet den Sinus von Pi * _X|  
+|[sinpif](concurrency-precise-math-namespace-functions.md#sinpif)|Berechnet den Sinus von Pi * _X|  
 |[sqrt](concurrency-precise-math-namespace-functions.md#sqrt)|Überladen. Berechnet den Squre Stamm des Arguments|  
 |[sqrtf](concurrency-precise-math-namespace-functions.md#sqrtf)|Berechnet den Squre Stamm des Arguments|  
 |[tan](concurrency-precise-math-namespace-functions.md#tan)|Überladen. Berechnet den Tangenswert des Arguments|  
@@ -313,8 +295,8 @@ namespace precise_math;
 |[tanhf](concurrency-precise-math-namespace-functions.md#tanhf)|Berechnet den Hyperbeltangenswert des Arguments|  
 |[tanpi](concurrency-precise-math-namespace-functions.md#tanpi)|Überladen. Berechnet den Tangenswert von Pi * _X|  
 |[tanpif](concurrency-precise-math-namespace-functions.md#tanpif)|Berechnet den Tangenswert von Pi * _X|  
-|[tgamma](concurrency-precise-math-namespace-functions.md#tgamma)|Überladen. Berechnet die Gammafunktion von _X|  
-|[tgammaf](concurrency-precise-math-namespace-functions.md#tgammaf)|Berechnet die Gammafunktion von _X|  
+|[tgamma](concurrency-precise-math-namespace-functions.md#tgamma)|Überladen. Berechnet die Gammafunktion von _x ab|  
+|[tgammaf](concurrency-precise-math-namespace-functions.md#tgammaf)|Berechnet die Gammafunktion von _x ab|  
 |[trunc](concurrency-precise-math-namespace-functions.md#trunc)|Überladen. Schneidet das Argument der ganzzahligen Komponente ab|  
 |[truncf](concurrency-precise-math-namespace-functions.md#truncf)|Schneidet das Argument der ganzzahligen Komponente ab|  
   
@@ -325,4 +307,3 @@ namespace precise_math;
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)
-

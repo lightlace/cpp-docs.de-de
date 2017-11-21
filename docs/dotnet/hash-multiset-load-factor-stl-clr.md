@@ -1,41 +1,39 @@
 ---
-title: "hash_multiset::load_factor (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::load_factor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "load_factor-Member [STL/CLR]"
+title: hash_multiset::load_factor (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::load_factor
+dev_langs: C++
+helpviewer_keywords: load_factor member [STL/CLR]
 ms.assetid: 67125c97-1018-4d0f-858f-b4c09e7f0b09
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a441a586ac5eb0410265853ece2624ce306e1d65
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multiset::load_factor (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Zählt die durchschnittliche Anzahl Elemente pro Bucket.  
+# <a name="hashmultisetloadfactor-stlclr"></a>hash_multiset::load_factor (STL/CLR)
+Zählt die durchschnittliche Anzahl von Elementen pro Bucket.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 float load_factor();  
 ```  
   
-## Hinweise  
- Die Memberfunktion wird `(float)`[hash\_multiset::size](../dotnet/hash-multiset-size-stl-clr.md)`() /` [hash\_multiset::bucket\_count](../dotnet/hash-multiset-bucket-count-stl-clr.md)`()` zurück.  Sie verwenden sie, um die durchschnittliche Bucketgröße zu bestimmen.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt `(float)` [hash_multiset:: Size (STL/CLR)](../dotnet/hash-multiset-size-stl-clr.md) `() /` [hash_multiset::bucket_count (STL/CLR)](../dotnet/hash-multiset-bucket-count-stl-clr.md)`()`. Sie verwenden sie zur Ermittlung der durchschnittlichen Bucketgröße.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_hash_multiset_load_factor.cpp   
@@ -81,22 +79,27 @@ int main()
   
 ```  
   
-  **ein b c**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0,1875**  
-**max\_load\_factor\(\) \= 4**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0,1875**  
-**max\_load\_factor\(\) \= 0,25**  
-**bucket\_count\(\) \= 128**  
-**load\_factor\(\) \= 0,0234375**  
-**max\_load\_factor\(\) \= 0,25**   
-## Anforderungen  
- **Header:** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 4  
   
- **Namespace:** cliext  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 0.25  
   
-## Siehe auch  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::bucket\_count](../dotnet/hash-multiset-bucket-count-stl-clr.md)   
- [hash\_multiset::max\_load\_factor](../dotnet/hash-multiset-max-load-factor-stl-clr.md)
+bucket_count() = 128  
+load_factor() = 0.0234375  
+max_load_factor() = 0.25  
+```  
+  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext Hash_set/>  
+  
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [hash_multiset-Element (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset::bucket_count (STL/CLR)](../dotnet/hash-multiset-bucket-count-stl-clr.md)   
+ [hash_multiset::max_load_factor (STL/CLR)](../dotnet/hash-multiset-max-load-factor-stl-clr.md)

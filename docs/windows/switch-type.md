@@ -1,32 +1,30 @@
 ---
-title: "switch_type | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.switch_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "switch_type attribute"
+title: Switch_type | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.switch_type
+dev_langs: C++
+helpviewer_keywords: switch_type attribute
 ms.assetid: e24544dc-b3bc-48ae-b249-f967db49271e
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 99ec139c1ff10456639249c94451877a18cbbf51
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# switch_type
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gibt den Typ der Variablen, die als diskriminierende Union verwendet wird.  
+# <a name="switchtype"></a>switch_type
+Identifiziert den Typ der Variablen als die union Discriminant verwendet.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -36,14 +34,14 @@ type
   
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `type`  
- Der Schaltertyp, kann eine ganze Zahl, ein Zeichen ein boolescher Wert oder ein Enumerationstyp sein.  
+ Der Switchtyp kann eine ganze Zahl, Zeichen, Boolean oder eines Enumerationswerts Typ sein.  
   
-## Hinweise  
- Das Attribut **switch\_type** C\+\+ verfügt über die gleichen Funktionen wie das [switch\_type](http://msdn.microsoft.com/library/windows/desktop/aa367276) MIDL\-Attribut.  
+## <a name="remarks"></a>Hinweise  
+ Die **Switch_type** C++-Attribut hat die gleiche Funktionalität wie die [Switch_type](http://msdn.microsoft.com/library/windows/desktop/aa367276) MIDL-Attribut.  
   
- C\+\+\-Attribute unterstützen keine [gekapselte Unions](http://msdn.microsoft.com/library/windows/desktop/aa366811).  [Nonencapsulated\-Unionen](http://msdn.microsoft.com/library/windows/desktop/aa367119) werden nur in der folgenden Form unterstützt:  
+ C++-Attribute unterstützen keine [gekapselt Unions](http://msdn.microsoft.com/library/windows/desktop/aa366811). [Nonencapsulated Unions](http://msdn.microsoft.com/library/windows/desktop/aa367119) werden nur in der folgenden Form unterstützt:  
   
 ```  
 // cpp_attr_ref_switch_type.cpp  
@@ -62,24 +60,23 @@ struct SizedValue2 {
 };  
 ```  
   
-## Beispiel  
- Weitere Informationen finden Sie im [Fall](../windows/case-cpp.md) Beispiel für eine Beispiel verwenden aus **switch\_type**.  
+## <a name="example"></a>Beispiel  
+ Finden Sie unter der [Fall](../windows/case-cpp.md) Beispiel für ein Beispiel für die Verwendung von **Switch_type**.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
 |**Betrifft**|`typedef`|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Keine|  
+|**Ungültige Attribute**|Keine|  
   
- Weitere Informationen über das kontexte finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
+## <a name="see-also"></a>Siehe auch  
+ [IDL-Attribute](../windows/idl-attributes.md)   
+ [TypeDef, Enum, Union- und Struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)   
  [export](../windows/export.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

@@ -1,31 +1,31 @@
 ---
-title: "Gewusst wie: Abrufen von Text aus der Zwischenablage (C++/CLI)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Zwischenablage, Abrufen von Text"
-  - "Text, Abrufen aus Zwischenablage"
+title: 'Vorgehensweise: Abrufen von Text aus der Zwischenablage (C + c++ / CLI) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- text, retrieving from Clipboard
+- Clipboard, retrieving text
 ms.assetid: 99e77ba0-8573-4030-92d8-de8aa7623ee4
-caps.latest.revision: 11
-caps.handback.revision: "11"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6517b367e8c3d59538a4e36839ccc7f93d8b1817
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Gewusst wie: Abrufen von Text aus der Zwischenablage (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Im folgenden Codebeispiel wird die <xref:System.Windows.Forms.Clipboard.GetDataObject*>\-Memberfunktion verwendet, um einen Zeiger auf die <xref:System.Windows.Forms.IDataObject>\-Schnittstelle zurückzugeben.  Diese Schnittstelle kann abgefragt werden, um das Format der Daten zu ermitteln, und es können die Daten abgerufen werden.  
+# <a name="how-to-retrieve-text-from-the-clipboard-ccli"></a>Gewusst wie: Abrufen von Text aus der Zwischenablage (C++/CLI)
+Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> Memberfunktion zurückzugebenden einen Zeiger auf die <xref:System.Windows.Forms.IDataObject> Schnittstelle. Diese Schnittstelle kann dann für das Format der Daten abgefragt und verwendet, um die eigentlichen Daten abzurufen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // read_clipboard.cpp  
@@ -61,6 +61,6 @@ using namespace System::Windows::Forms;
 }  
 ```  
   
-## Siehe auch  
- [Windows\-Vorgänge](../dotnet/windows-operations-cpp-cli.md)   
- [.NET\-Programmierung mit C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [Windows-Vorgänge (C + c++ / CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [.NET-Programmierung mit C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

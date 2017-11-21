@@ -1,65 +1,64 @@
 ---
-title: "CRowset::GetDataHere | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CRowset<TAccessor>::GetDataHere"
-  - "CRowset<TAccessor>.GetDataHere"
-  - "CRowset.GetDataHere"
-  - "GetDataHere"
-  - "CRowset::GetDataHere"
-  - "ATL::CRowset::GetDataHere"
-  - "ATL::CRowset<TAccessor>::GetDataHere"
-  - "ATL.CRowset<TAccessor>.GetDataHere"
-  - "ATL.CRowset.GetDataHere"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetDataHere-Methode"
+title: 'CRowset:: GetDataHere | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CRowset<TAccessor>::GetDataHere
+- CRowset<TAccessor>.GetDataHere
+- CRowset.GetDataHere
+- GetDataHere
+- CRowset::GetDataHere
+- ATL::CRowset::GetDataHere
+- ATL::CRowset<TAccessor>::GetDataHere
+- ATL.CRowset<TAccessor>.GetDataHere
+- ATL.CRowset.GetDataHere
+dev_langs: C++
+helpviewer_keywords: GetDataHere method
 ms.assetid: 2fe2a987-1c4c-4299-876e-0591caf63af4
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fb5c6cfb07a430de48cb706980c1d8c6eb1b8a61
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# CRowset::GetDataHere
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ruft Daten aus der aktuellen Zeile ab und platziert ihn in den angegebenen Puffer.  
+# <a name="crowsetgetdatahere"></a>CRowset::GetDataHere
+Ruft Daten aus der aktuellen Zeile ab, und platziert es in den angegebenen Puffer.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
-      HRESULT GetDataHere(   
-   int nAccessor,   
-   void* pBuffer    
+      HRESULT GetDataHere(   
+   int nAccessor,   
+   void* pBuffer    
 ) throw( );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `nAccessor`  
- \[in\] Die Indexnummer des für das Zugreifen Accessor zu verwenden, auf die Daten.  
+ [in] Die Indexnummer des Accessors für den Zugriff auf die Daten verwenden.  
   
  `pBuffer`  
- \[out\] in den a\-Puffer, um die Daten für den aktuellen Datensatz zu platzieren.  
+ [out] Ein Puffer, in dem die Daten für den aktuellen Datensatz platziert werden soll.  
   
-## Rückgabewert  
- Standard\- `HRESULT`.  
+## <a name="return-value"></a>Rückgabewert  
+ Ein Standard `HRESULT`-Objekt.  
   
-## Hinweise  
- Ein Beispiel, wie diese Funktion verwendet werden, finden Sie unter [MultiRead\-Beispiel](../../top/visual-cpp-samples.md).  
+## <a name="remarks"></a>Hinweise  
+ Ein Beispiel zur Verwendung dieser Funktion finden Sie unter der [MultiRead-Beispiel](../../visual-cpp-samples.md).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  
   
-## Siehe auch  
- [CRowset\-Klasse](../../data/oledb/crowset-class.md)   
+## <a name="see-also"></a>Siehe auch  
+ [CRowset-Klasse](../../data/oledb/crowset-class.md)   
  [CRowset::GetData](../../data/oledb/crowset-getdata.md)

@@ -1,36 +1,36 @@
 ---
-title: "_InterlockedCompareExchange128 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_InterlockedCompareExchange128_cpp"
-  - "_InterlockedCompareExchange128"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cmpxchg16b-Anweisung"
-  - "_InterlockedCompareExchange128 intrinsic"
+title: _InterlockedCompareExchange128 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _InterlockedCompareExchange128_cpp
+- _InterlockedCompareExchange128
+dev_langs: C++
+helpviewer_keywords:
+- cmpxchg16b instruction
+- _InterlockedCompareExchange128 intrinsic
 ms.assetid: f05918fc-716a-4f6d-b746-1456d6b96c56
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 62810da5c0f90006fd6024f973d12eb0bc4d29e0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# _InterlockedCompareExchange128
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft\-spezifisch**  
+# <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
+**Microsoft-spezifisch**  
   
- Führt ein ineinandergegriffenes 128\-Bit vergleichen und austauschen.  
+ Führt einen ineinandergreifenden Vergleich 128-Bit- und Exchange.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 unsigned char _InterlockedCompareExchange128(  
@@ -41,46 +41,46 @@ unsigned char _InterlockedCompareExchange128(
 );  
 ```  
   
-#### Parameter  
- \[in, out\]  `Destination`  
- Zeiger auf das Ziel, das ein Array von zwei 64\-Bit\-Ganzzahlen ist, die ein 128\-Bit\-Feld angesehen werden.  Die Daten müssen das Ziel 16\-Byte ausgerichtet werden, um eine allgemeine Schutzverletzung zu vermeiden.  
+#### <a name="parameters"></a>Parameter  
+ [in, out] `Destination`  
+ Zeiger auf das Ziel, das ein Array von zwei 64-Bit-Ganzzahlen ist gewissermaßen mit einem 128-Bit-Feld. Die Zieldaten muss 16-Byte-ausgerichtet werden, um eine allgemeine schutzverletzung zu vermeiden.  
   
- \[in\] `ExchangeHigh`  
- Eine 64\-Bit\-Ganzzahl, die mit dem hohen Teil des Ziels ausgetauscht werden.  
+ [in] `ExchangeHigh`  
+ Eine 64-Bit-Ganzzahl, die mit den oberen Teil des Ziels ausgetauscht werden kann.  
   
- \[in\] `ExchangeLow`  
- Eine 64\-Bit\-Ganzzahl, die mit dem Basis\- Teil des Ziels ausgetauscht werden.  
+ [in] `ExchangeLow`  
+ Eine 64-Bit-Ganzzahl, die mit des unteren Teils des Zieles ausgetauscht werden kann.  
   
- \[in, out\]  `ComparandResult`  
- Zeiger auf ein Array von zwei zu vergleichenden 64\-Bit\-Ganzzahlen mit dem Ziel betrachtet \(als 128\-Bit\-Feld\).  Das Ergebnis ist dies mit dem ursprünglichen Wert des Ziels überschrieben.  
+ [in, out] `ComparandResult`  
+ Zeiger auf ein Array von zwei 64-Bit-Ganzzahlen (gewissermaßen mit einem 128-Bit-Feld), mit dem Ziel verglichen werden soll.  Bei der Ausgabe ist dieser Wert mit dem ursprünglichen Wert des Ziels überschrieben.  
   
-## Rückgabewert  
- 1, wenn der 128\-Bit Comparand den ursprünglichen Wert des Ziels entspricht.  `ExchangeHigh``ExchangeLow` und überschreiben die 128\-Bit\-Ziel.  
+## <a name="return-value"></a>Rückgabewert  
+ 1, wenn die 128-Bit-comparand-Parameter den ursprünglichen Wert des Ziels entspricht. `ExchangeHigh`und `ExchangeLow` die 128-Bit-Ziel zu überschreiben.  
   
- 0, wenn der Comparand nicht zum ursprünglichen Wert des Ziels entspricht.  Der Wert des Ziels bleibt unverändert, und der Wert des Comparand wird mit dem Wert des Ziels überschrieben.  
+ 0, wenn das zu vergleichende Objekt nicht den ursprünglichen Wert des Ziels übereinstimmt. Der Wert des Ziels ist unverändert, und der Wert der comparand-Parameter wird überschrieben, mit dem Wert des Ziels.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Intrinsisch|Architektur|  
-|-----------------|-----------------|  
+|Systemintern|Architektur|  
+|---------------|------------------|  
 |`_InterlockedCompareExchange128`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Headerdatei** \<intrin.h\>  
+ **Headerdatei** \<intrin.h >  
   
-## Hinweise  
- Das systeminterne generiert die`cmpxchg16b`\-Anweisung \(mit dem Präfix\) `lock` ein gesperrtes 128\-Bit auszuführen vergleichen und austauschen.  Frühere Versionen von AMD\-64\-Bit\-Hardware diese Anweisung nicht unterstützt.  Um für Hardwareunterstützung für die `cmpxchg16b`Anweisung zu überprüfen, `__cpuid` direkt mit `InfoType=0x00000001 (standard function 1)`aufrufen.  Bit 13 von `CPUInfo[2]`\(ECX\) beträgt 1, wenn die Anweisung unterstützt wird.  
+## <a name="remarks"></a>Hinweise  
+ Diese systeminterne Funktion generiert die `cmpxchg16b` Anweisung (mit der `lock` Präfix) um eine 128-Bit-gesperrten compare_exchange -Operation auszuführen. Diese Anweisung unterstützt frühe Versionen von AMD 64-Bit-Hardware nicht. Prüfen der Hardware-Unterstützung für die `cmpxchg16b` -Anweisung, rufen die `__cpuid` systeminternen Funktionen mit `InfoType=0x00000001 (standard function 1)`. Bit 13 des `CPUInfo[2]` (ECX) ist 1, wenn die Anweisung unterstützt wird.  
   
 > [!NOTE]
->  Der Wert von `ComparandResult` wird immer außer Kraft.  Nach der `lock`\-Anweisung sofort systeminterne dieses kopiert den Anfangswert von `Destination` zu `ComparandResult`.  Aus diesem Grund sollten `ComparandResult` und `Destination` zeigen, um Speicheradressen zu trennen, um ein unerwartetes Verhalten zu vermeiden.  
+>  Der Wert des `ComparandResult` wird immer überschrieben. Nach der `lock` -Anweisung dieser systeminternen Funktion sofort kopiert den anfänglichen Wert des `Destination` auf `ComparandResult`. Aus diesem Grund `ComparandResult` und `Destination` sollte zeigen Sie auf unterschiedliche Speicherorte, unerwartetes Verhalten zu vermeiden.  
   
- Obwohl Sie `_InterlockedCompareExchange128` für die Threadsynchronisierung verwenden können, ist es nicht erforderlich, um über 128 Bits zu synchronisieren, wenn Sie können stattdessen Synchronisierung kleinere Funktionen \(wie die anderen `_InterlockedCompareExchange` systeminternen Funktionen\).  Verwenden Sie `_InterlockedCompareExchange128` , wenn Sie atomaren Zugriff auf einem 128\-Bit\-Wert im Arbeitsspeicher soll.  
+ Sie können zwar `_InterlockedCompareExchange128` für die Low-Level-Threadsynchronisierung, Sie müssen nicht mehr als 128 Bits zu synchronisieren, wenn Sie kleinere Synchronisierungsfunktionen verwenden können (z. B. anderen `_InterlockedCompareExchange` systeminternen Funktionen) stattdessen. Verwendung `_InterlockedCompareExchange128` gegebenenfalls atomaren Zugriff auf einen 128-Bit-Wert im Arbeitsspeicher.  
   
- Wenn Sie diesen Code ausführen, der Hardware, das auf die ist, die nicht direkt `cmpxchg16b`\-Anweisung unterstützt, die Ergebnisse sind unvorhersehbar.  
+ Wenn Sie Code, verwendet dieser systeminternen Funktion auf Hardware ausgeführt, die nicht unterstützt wird die `cmpxchg16b` -Anweisung, die die Ergebnisse sind unvorhersehbar.  
   
- Diese Routine ist nur als systeminterne Funktion zur Verfügung.  
+ Diese Routine ist nur als systeminterne Funktion verfügbar.  
   
-## Beispiel  
- In diesem Beispiel wird `_InterlockedCompareExchange128` , um das hohe WORD eines Arrays von zwei 64\-Bit\-Ganzzahlen durch die Summe der hohen und niedrigen Wörter zu ersetzen und das niedrige WORD zu erhöhen.  Der Zugriff auf den BigInt.Int\-Array atomar, ist aber dieses Beispiel verwendet einen einzelnen Thread und ignoriert der Einfachheit halber sperren.  
+## <a name="example"></a>Beispiel  
+ Dieses Beispiel verwendet `_InterlockedCompareExchange128` hohe Word eines Arrays von zwei 64-Bit-Ganzzahlen mit der Summe der hohen und niedrigen Wörter ersetzen und das niedrige Word zu erhöhen. Der Zugriff auf das Array BigInt.Int ist atomarisch, aber in diesem Beispiel verwendet einen einzelnen Thread und ignoriert das Sperren aus Gründen der Einfachheit.  
   
 ```  
 // cmpxchg16b.c  
@@ -124,11 +124,14 @@ int main(void)
 }  
 ```  
   
-  **BigInt.Int \[1\] \= 34, BigInt.Int \[0\] \= 12**   
-## Microsoft ENDES bestimmten  
- Copyright 2007 bis Advanced Micro Devices, Inc.  Alle Rechte vorbehalten.  Reproduziert mit zulässigen Advanced Micro Devices, Inc.  
+```Output  
+BigInt.Int[1] = 34, BigInt.Int[0] = 12  
+```  
   
-## Siehe auch  
+**Ende Microsoft-spezifisch**  
+ Copyright 2007 erweiterte Micro-Geräte, Inc. Alle Rechte vorbehalten. Reproduziert mit Genehmigung Advanced Micro-Geräte, Inc.  
+  
+## <a name="see-also"></a>Siehe auch  
  [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)   
- [\_InterlockedCompareExchange Intrinsic Functions](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)   
- [Konflikt mit dem x86\-Compiler](../build/conflicts-with-the-x86-compiler.md)
+ [Systeminterne Funktionen "_InterlockedCompareExchange"](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)   
+ [Konflikt mit dem x86-Compiler](../build/conflicts-with-the-x86-compiler.md)

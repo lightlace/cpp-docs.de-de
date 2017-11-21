@@ -1,57 +1,55 @@
 ---
-title: "Finding a String | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.string"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "strings [C++], searching"
-  - "strings [C++]"
+title: Suchen von Zeichenfolgen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.string
+dev_langs: C++
+helpviewer_keywords:
+- strings [C++], searching
+- strings [C++]
 ms.assetid: c2497173-f356-4f77-97d6-f0ac41782510
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7ff71ed7662e2a1713cbf6c3053fa044e78a3b1e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Finding a String
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Sie können eine oder mehrere Zeichenfolgen in der Zeichenfolgentabelle suchen und den Befehl **Suche in Dateien** \(Menü **Bearbeiten**\) mit [regulären Ausdrücken](../Topic/Using%20Regular%20Expressions%20in%20Visual%20Studio.md) verwenden, um alle Vorkommnisse von Zeichenfolgen zu finden, die die Kriterien des Mustervergleichs erfüllen.  
+# <a name="finding-a-string"></a>Suchen von Zeichenfolgen
+Sie können eine oder mehrere Zeichenfolgen in der Zeichenfolgentabelle suchen und [reguläre Ausdrücke](/visualstudio/ide/using-regular-expressions-in-visual-studio) mit der **in Dateien suchen** Befehl (**bearbeiten** im Menü), suchen Sie alle Instanzen von Zeichenfolgen die einem Muster entsprechen.  
   
-### So suchen Sie eine Zeichenfolge in der Zeichenfolgentabelle  
+### <a name="to-find-a-string-in-the-string-table"></a>Um eine Zeichenfolge in der Zeichenfolgentabelle zu suchen  
   
-1.  Öffnen Sie die Zeichenfolgentabelle, indem Sie in der [Ressourcenansicht](../windows/resource-view-window.md) auf das zugehörige Symbol doppelklicken.  
+1.  Öffnen Sie durch Doppelklicken auf das Symbol in der Zeichenfolgentabelle [Ressourcenansicht](../windows/resource-view-window.md).  
   
     > [!NOTE]
-    >  Wenn das Projekt noch keine RC\-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).  
+    >  Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Wählen Sie im Menü **Bearbeiten** die Option **Suchen und Ersetzen** und anschließend **Suchen**.  
+2.  Auf der **bearbeiten** Menü klicken Sie auf **suchen und Ersetzen**, wählen Sie dann **suchen**.  
   
-3.  Wählen Sie aus der Dropdownliste im Feld **Suchen nach** einen früheren Suchbegriff aus, oder geben Sie den Beschriftungstext oder Ressourcenbezeichner der gesuchten Zeichenfolge ein.  
+3.  In der **Suchen nach** Feld, wählen Sie einen früheren Suchbegriff aus der Dropdown-Liste aus, oder geben Sie die Beschriftung Text bzw. Ressourcenidentifizierer Bezeichner der Zeichenfolge, die Sie suchen möchten.  
   
-4.  Wählen Sie beliebige Suchoptionen aus.  
+4.  Aktivieren Sie keines der **suchen** Optionen.  
   
 5.  Klicken Sie auf **Weitersuchen**.  
   
     > [!TIP]
-    >  Um beim Durchsuchen von Dateien reguläre Ausdrücke zu verwenden, wählen Sie den Befehl **Suche in Dateien** aus.  Geben Sie einen regulären Ausdruck für den Mustervergleich ein, oder klicken Sie rechts neben dem Feld **Suchen nach** auf die Schaltfläche, um eine Liste regulärer Suchausdrücke aufzurufen.  Wenn Sie einen Ausdruck aus dieser Liste auswählen, wird dieser als Suchtext im Feld **Suchen nach** angezeigt.  Wenn Sie reguläre Ausdrücke verwenden, vergewissern Sie sich, dass das Kontrollkästchen **Mit: Reguläre Ausdrücke** aktiviert ist.  
+    >  Um reguläre Ausdrücke werden beim Durchsuchen von Dateien verwenden, verwenden die **in Dateien suchen** Befehl. Geben Sie einen regulären Ausdruck einem Muster entsprechen, oder klicken Sie auf die Schaltfläche rechts neben der **Suchen nach** Feld, um eine Liste von regulären Suchausdrücken anzuzeigen. Wenn Sie einen Ausdruck aus dieser Liste auswählen, wird dieser als Suchtext im die **Suchen nach** Feld. Wenn Sie reguläre Ausdrücke verwenden, müssen Sie die **verwenden: reguläre Ausdrücke** Kontrollkästchen aktiviert ist.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten \(die die Common Language Runtime zum Ziel haben\) finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten (diejenigen, die die common Language Runtime), finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
  **Anforderungen**  
   
  Win32  
   
-## Siehe auch  
- [String Editor](../mfc/string-editor.md)   
- [Zeichenfolgen](_win32_Strings)   
- [Informationen zu Zeichenfolgen](_win32_About_Strings_cpp)
+## <a name="see-also"></a>Siehe auch  
+ [Zeichenfolgen-Editor](../windows/string-editor.md)   
+

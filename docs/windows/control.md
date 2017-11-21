@@ -1,32 +1,30 @@
 ---
-title: "control | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.control"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Control attribute"
+title: Steuerelement | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.control
+dev_langs: C++
+helpviewer_keywords: Control attribute
 ms.assetid: 3d046bb2-4afe-4cb8-a762-233b296e1975
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 72326b5ce7aedfd03f93688e7890fdfab9b827f0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# control
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gibt an, dass der benutzerdefinierte Typ ein Steuerelement befindet.  
+# <a name="control"></a>Steuerelement
+Gibt an, dass der benutzerdefinierte Datentyp eines Steuerelements.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -34,10 +32,10 @@ Gibt an, dass der benutzerdefinierte Typ ein Steuerelement befindet.
   
 ```  
   
-## Hinweise  
- Das bedeutet, **Steuerelement**\-Attribut [Co\-Klasse](../windows/coclass.md)\-Attribut.  Das Attribut **Steuerelement** C\+\+ verfügt über die gleichen Funktionen wie das [Steuerelement](http://msdn.microsoft.com/library/windows/desktop/aa366764) MIDL\-Attribut.  
+## <a name="remarks"></a>Hinweise  
+ Die **Steuerelement** -Attributs impliziert die [Coclass](../windows/coclass.md) Attribut. Die **Steuerelement** C++-Attribut hat die gleiche Funktionalität wie die [Steuerelement](http://msdn.microsoft.com/library/windows/desktop/aa366764) MIDL-Attribut.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cpp_attr_ref_control.cpp  
@@ -54,21 +52,20 @@ __interface ICustom {
 class CTest : public ICustom {};  
 ```  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
 |**Betrifft**|**Klasse**, `struct`|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Keine|  
+|**Ungültige Attribute**|Keine|  
   
- Weitere Informationen über das kontexte finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [IDL-Attribute](../windows/idl-attributes.md)   
+ [Klassenattribute](../windows/class-attributes.md)   
+ [typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)   

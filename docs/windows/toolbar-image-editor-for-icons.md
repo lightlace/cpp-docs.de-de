@@ -1,58 +1,59 @@
 ---
-title: "Toolbar (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.bitmap"
-  - "vc.editors.icon"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Graphics toolbar"
-  - "Image editor [C++], toolbar"
-  - "Image editor [C++], Option selector"
-  - "Properties window"
-  - "Option selector, Image editor"
+title: "Symbolleiste (Bildbearbeitung für Symbole) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.editors.bitmap
+- vc.editors.icon
+dev_langs: C++
+helpviewer_keywords:
+- Graphics toolbar
+- Image editor [C++], toolbar
+- Image editor [C++], Option selector
+- Properties window
+- Option selector, Image editor
 ms.assetid: a0af4209-6273-4106-a7c1-0edecc9b5755
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c4ed86aeda3fdd0aab702d8c1a7fdba6f1ec1080
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Toolbar (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die Symbolleiste des Grafik\-Editors enthält Tools für das Zeichnen, Malen und die Texteingabe sowie für das Löschen und Bearbeiten von Ansichten.  Darüber hinaus enthält sie eine Optionsauswahl, über die zu einem Tool gehörige Optionen ausgewählt werden können.  Sie können beispielsweise unter verschiedenen Pinselstärken, Vergrößerungsfaktoren und Linienarten wählen.  
+# <a name="toolbar-image-editor-for-icons"></a>Symbolleiste (Bildbearbeitung für Symbole)
+Die **Bildbearbeitung** Symbolleiste enthält Tools zum Zeichnen, zeichnen Text eingeben, löschen und Bearbeiten von Ansichten. Es enthält auch eine Optionsauswahl, mit der Sie Optionen für die Verwendung der einzelnen Tools auswählen können. Sie können z. B. aus verschiedenen Pinsel Breiten, Vergrößerungsfaktoren und Stile.  
   
 > [!NOTE]
->  Alle auf der Symbolleiste des **Grafik\-Editors** verfügbaren Tools können auch über das Menü **Bild** \(unter dem Befehl **Extras**\) aufgerufen werden.  
+>  Alle Tools zur Verfügung, auf der **Grafik-Editor** Symbolleiste stehen auch über die **Image** Menü (unter der **Tools** Befehl).  
   
- ![Symbolleiste der Bildbearbeitung](../mfc/media/vcimageeditortoolbar.png "vcImageEditorToolbar")  
-Symbolleiste des Grafik\-Editors  
+ ![Grafik-Editor-Symbolleiste](../mfc/media/vcimageeditortoolbar.gif "VcImageEditorToolbar")  
+Symbolleiste des Grafik-Editors  
   
- Um die **Symbolleiste des Grafik\-Editors** und die **Optionsauswahl** zu verwenden, klicken Sie auf das gewünschte Tool bzw. die gewünschte Option.  
+ Verwenden der **Bildbearbeitung** Symbolleiste und **Option** Auswahl, klicken Sie auf das Tool oder option wirklich.  
   
 > [!TIP]
->  Eine QuickInfo wird angezeigt, wenn Sie mit der Maus auf eine Schaltfläche auf der Symbolleiste zeigen.  Mithilfe dieser Tipps können Sie die Funktionen der einzelnen Schaltflächen leichter identifizieren.  
+>  QuickInfos angezeigt werden, wenn Sie den Cursor auf einer Symbolleisten-Schaltfläche zeigen. Diese Tipps helfen Ihnen, die Funktion der einzelnen Schaltflächen zu identifizieren.  
   
- In der **Optionsauswahl** können Sie Linienstärke, Pinselstrich usw. festlegen.  Je nachdem, welches Tool ausgewählt wurde, ändert sich das Symbol auf der Schaltfläche der **Optionsauswahl**.  
+ Mit der **Option** Selektor können Sie die Breite des, Pinselstrich usw. anzugeben. Das Symbol auf der **Option** Selektor Schaltfläche ändert sich je nachdem welches Tool Sie ausgewählt haben.  
   
- ![Zeichnungsformauswahl auf der Symbolleiste der Bildbearbeitung](../mfc/media/vcimageeditortoolbaroptionselector.png "vcImageEditorToolbarOptionSelector")  
-Optionsauswahl auf der Symbolleiste des Grafik\-Editors  
+ ![Zeichnung &#45; Form Auswahl auf der Symbolleiste des Grafik-Editor](../mfc/media/vcimageeditortoolbaroptionselector.gif "VcImageEditorToolbarOptionSelector")  
+Optionsauswahl auf der Symbolleiste des Grafik-Editor  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](https://msdn.microsoft.com/library/f45fce5x.aspx) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](https://msdn.microsoft.com/library/xbx3z216.aspx). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
-## Anforderungen  
- None  
+## <a name="requirements"></a>Anforderungen  
+ Keine  
   
-## Siehe auch  
- [Displaying or Hiding the Toolbar](../mfc/displaying-or-hiding-the-toolbar-image-editor-for-icons.md)   
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>Siehe auch  
+ [Ein- oder Ausblenden der Symbolleiste](displaying-or-hiding-the-toolbar-image-editor-for-icons.md)   
+ [Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)
+

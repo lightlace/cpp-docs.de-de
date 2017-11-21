@@ -1,44 +1,25 @@
 ---
-title: Concurrency-Namespace (C++-AMP) | Microsoft-Dokumentation
+title: Concurrency-Namespace (C++-AMP) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- AMP/Concurrency
-dev_langs:
-- C++
-helpviewer_keywords:
-- Concurrency namespace
+f1_keywords: AMP/Concurrency
+dev_langs: C++
+helpviewer_keywords: Concurrency namespace
 ms.assetid: b5aab265-3bac-42c5-8ead-f92ce05ef267
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 38c3154244b163202bcb8e271f96b393231247ca
-ms.contentlocale: de-de
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: c67ed88a395b6d688fdc753ed45f08fd5b41925c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="concurrency-namespace-c-amp"></a>Concurrency-Namespace (C++ AMP)
 Stellt Klassen und Funktionen bereit, die die Ausführung von C++-Code auf datenparalleler Hardware beschleunigen. Weitere Informationen finden Sie unter [Übersicht über C++ AMP](../cpp-amp-overview.md)  
@@ -68,7 +49,7 @@ namespace Concurrency;
 |[accelerator_view-Klasse](accelerator-view-class.md)|Stellt die Abstraktion eines virtuellen Geräts für einen datenparallelen C++ AMP-Beschleuniger dar.|  
 |[accelerator_view_removed-Klasse](accelerator-view-removed-class.md)|Die Ausnahme, die ausgelöst wird, wenn ein zugrunde liegender DirectX-Aufruf aufgrund des Windows-TDR-Mechanismus (Timeout Detection and Recovery) fehlschlägt.|  
 |[array-Klasse](array-class.md)|Ein Datenaggregat auf einem `accelerator_view`-Objekt in der Rasterdomäne. Es ist eine Auflistung von Variablen, eine für jedes Element in einer "grid"-Domäne. Jede Variable enthält einen Wert, der einem C++-Typ entspricht.|  
-|[array_view-Klasse](array-view-class.md)|Stellt eine Ansicht der Daten in ein Array\<T, N >.|  
+|[array_view-Klasse](array-view-class.md)|Stellt einen Einblick in die Daten in einem Array\<T, N >.|  
 |[completion_future-Klasse](completion-future-class.md)|Stellt ein "future"-Objekt dar, das einem asynchronen C++ AMP-Vorgang entspricht.|  
 |[extent-Klasse](extent-class.md)|Stellt einen Vektor von n ganzzahligen Werten dar, die die Grenzen eines n-dimensionalen Raums mit dem Ursprung 0 angeben. Die Werte im Koordinatenvektor sind vom wichtigsten zum am wenigsten wichtigen Wert sortiert. Im kartesischen 3-dimensionalen Raum stellt der "extent"-Vektor (7,5,3) beispielsweise einen Raum dar, in dem die z-Koordinate im Bereich von 0 bis 7, die y-Koordinate im Bereich von 0 bis 5 und die x-Koordinate im Bereich von 0 bis 3 liegt.|  
 |[index-Klasse](index-class.md)|Definiert einen n-dimensionalen Indexpunkt.|  
@@ -118,9 +99,9 @@ namespace Concurrency;
 |[atomic_fetch_sub](concurrency-namespace-functions-amp.md#atomic_fetch_sub)|Überladen. Legt den Wert, der am angegebenen Speicherort abgelegt ist, als atomischen Vorgang auf die Differenz dieses Werts und auf einen angegebenen Wert fest.|  
 |[atomic_fetch_xor](concurrency-namespace-functions-amp.md#atomic_fetch_xor)|Überladen. Legt den Wert, der am angegebenen Speicherort abgelegt ist, als atomischen Vorgang auf das bitweise `xor` dieses Werts und auf einen angegebenen Wert fest.|  
 |[copy](concurrency-namespace-functions-amp.md#copy)|Kopiert ein C++ AMP-Objekt. Alle Anforderungen der synchronen Datenübertragung werden erfüllt. Es können keine Daten kopiert werden, wenn auf einer Zugriffstaste Code ausgeführt wird. Das allgemeine Format dieser Funktion ist `copy(src, dest)`.|  
-|[copy_async](concurrency-namespace-functions-amp.md#copy_async)|Kopiert ein C++ AMP-Objekt und gibt [Completion_future](completion-future-class.md) , die auf gewartet werden kann. Es können keine Daten kopiert werden, wenn auf einer Zugriffstaste Code ausgeführt wird. Das allgemeine Format dieser Funktion ist `copy(src, dest)`.|  
+|[copy_async](concurrency-namespace-functions-amp.md#copy_async)|Kopiert ein C++ AMP-Objekt und gibt [Completion_future](completion-future-class.md) , können auf das gewartet werden. Es können keine Daten kopiert werden, wenn auf einer Zugriffstaste Code ausgeführt wird. Das allgemeine Format dieser Funktion ist `copy(src, dest)`.|  
 |[direct3d_abort](concurrency-namespace-functions-amp.md#direct3d_abort)|Bricht die Ausführung einer Funktion mit der Einschränkungsklausel `restrict(amp)` ab.|  
-|[direct3d_errorf](concurrency-namespace-functions-amp.md#direct3d_errorf)|Gibt eine formatierte Zeichenfolge im Visual Studio **Ausgabe** Fenster und löst eine [Runtime_exception](runtime-exception-class.md) -Ausnahme mit derselben Formatierungszeichenfolge.|  
+|[direct3d_errorf](concurrency-namespace-functions-amp.md#direct3d_errorf)|Gibt eine formatierte Zeichenfolge im Visual Studio **Ausgabe** Fenster und löst eine [Runtime_exception](runtime-exception-class.md) Ausnahme, die die gleiche Formatierung hat eine Zeichenfolge.|  
 |[direct3d_printf](concurrency-namespace-functions-amp.md#direct3d_printf)|Gibt eine formatierte Zeichenfolge im Visual Studio **Ausgabe** Fenster. Sie wird von einer Funktion mit der Einschränkungsklausel `restrict(amp)` aufgerufen.|  
 |[global_memory_fence](concurrency-namespace-functions-amp.md#global_memory_fence)|Blockiert die Ausführung aller Threads in einer Kachel, bis alle globalen Speicherzugriffe abgeschlossen sind.|  
 |[Parallel_for_each-Funktion (C++-AMP)](concurrency-namespace-functions-amp.md#parallel_for_each)|Führt eine Funktion übergreifend über die "compute"-Domäne aus.|  
@@ -138,7 +119,6 @@ namespace Concurrency;
   
 ## <a name="see-also"></a>Siehe auch  
  [Referenz (C++ AMP)](reference-cpp-amp.md)
-
 
 
 

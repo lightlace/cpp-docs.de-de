@@ -1,57 +1,58 @@
 ---
-title: "Nearbyint, Nearbyintf, nearbyintl1 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "nearbyint"
-  - "nearbyintf"
-  - "nerabyintl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "nearbyint"
-  - "nearbyintf"
-  - "nearbyintl"
-  - "math/nearbyint"
-  - "math/narbyintf"
-  - "math/narbyintl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "nearbyint-Funktion"
-  - "nearbyintf-Funktion"
-  - "Nearbyintl-Funktion"
+title: nearbyint, nearbyintf, nearbyintl1 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- nearbyint
+- nearbyintf
+- nerabyintl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- nearbyint
+- nearbyintf
+- nearbyintl
+- math/nearbyint
+- math/narbyintf
+- math/narbyintl
+dev_langs: C++
+helpviewer_keywords:
+- nearbyint function
+- nearbyintf function
+- nearbyintl function
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 205381e315cf703a9fded4b24812a32c4aef4a9a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Nearbyint, Nearbyintf, nearbyintl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Rundet den angegebenen Gleitkommawert in eine ganze Zahl und gibt den Wert in einem Gleitkomma\-Format.  
+# <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint, nearbyintf, nearbyintl
+Rundet den angegebenen Gleitkommawert auf eine ganze Zahl und gibt diesen Wert in einem Gleitkommaformat zurück.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 double nearbyint(  
@@ -76,33 +77,33 @@ long double nearbyintl(
   
 ```  
   
-#### Parameter  
- \[in\] `x`  
+#### <a name="parameters"></a>Parameter  
+ [in] `x`  
  Der zu rundende Wert.  
   
-## Rückgabewert  
- Bei erfolgreicher Ausführung gibt `x`, gerundet auf die nächste ganze Zahl, mit der aktuellen Rundung Format wie Fegetround definiert. Andernfalls kann die Funktion einen der folgenden Werte zurück:  
+## <a name="return-value"></a>Rückgabewert  
+ Gibt `x` bei erfolgreicher Ausführung auf die nächste ganze Zahl gerundet zurück. Die Funktion verwendet dafür das von „fegetround“ definierte aktuelle Rundungsformat. Andernfalls gibt die Funktion möglicherweise einen der folgenden Werte zurück:  
   
 |Problem|Zurück|  
-|-------------|------------|  
-|`x` ±INFINITY \=|±Infinity, unverändert|  
-|`x` \= ±0|±0, unverändert|  
-|`x` \= NaN|NaN|  
+|-----------|------------|  
+|`x` = ±INFINITY|±INFINITY, unverändert|  
+|`x` = ±0|±0, unverändert|  
+|`x` = NaN|NaN|  
   
- Fehler werden nicht gemeldet, über [\_matherr](../../c-runtime-library/reference/matherr.md)insbesondere meldet diese Funktion nicht FE\_INEXACT Ausnahmen.  
+ Fehler werden nicht über [_matherr](../../c-runtime-library/reference/matherr.md) gemeldet. Diese Funktion meldet vor allem keine FE_INEXACT-Ausnahmen.  
   
-## Hinweise  
- Der Hauptunterschied zwischen dieser Funktion und `rint` besteht darin, dass diese Funktion keine der ungenau Gleitkomma\-Ausnahme ausgelöst wird.  
+## <a name="remarks"></a>Hinweise  
+ Der Hauptunterschied zwischen dieser Funktion und `rint` besteht darin, dass diese Funktion keine ungenaue Gleitkommaausnahme auslöst.  
   
- Da die maximale Gleitkommawerte genaue Ganzzahlen sind, wird diese Funktion selbst nie überlaufen; Stattdessen kann die Ausgabe den Rückgabewert überlaufen, abhängig von der, den Version der Funktion, die Sie verwenden.  
+ Da die maximalen Gleitkommawerte genaue ganze Zahlen sind, überläuft diese Funktion nie von selbst. Stattdessen ist es möglich, dass der Rückgabewert je nach Version der verwendeten Funktion von der Ausgabe überlaufen wird.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Funktion|C\-Header|C\+\+\-Header|  
-|--------------|---------------|-------------------|  
-|`nearbyint`, `nearbyintf`,  `nearbyintl`|\<math.h\>|\<cmath\>|  
+|Funktion|C-Header|C++-Header|  
+|--------------|--------------|------------------|  
+|`nearbyint`,                `nearbyintf`,  `nearbyintl`|\<math.h>|\<cmath>|  
   
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
+ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Alphabetische Funktionsreferenz](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)

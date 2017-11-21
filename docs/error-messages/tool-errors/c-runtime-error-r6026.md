@@ -1,29 +1,41 @@
 ---
-title: "C-Laufzeitfehler R6026 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "R6026"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "R6026"
+title: C-Laufzeitfehler R6026 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: R6026
+dev_langs: C++
+helpviewer_keywords: R6026
 ms.assetid: 7ea751f8-fc20-46ab-99ef-84c95ca0b6b4
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 4a7d39d0ec4dd71b835c39c4a600154be7f206da
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# C-Laufzeitfehler R6026
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Nicht genügend Speicher für die stdio\-Initialisierung.  
+# <a name="c-runtime-error-r6026"></a>C-Laufzeitfehler R6026
+nicht genügend Speicherplatz für die Stdio-Initialisierung  
   
- Dieser Fehler tritt auf, wenn nicht genügend freier Arbeitsspeicher für die Initialisierung der Standard\-E\/A\-Unterstützung zur Verfügung steht.
+> [!NOTE]
+>  Wenn Sie diese Fehlermeldung beim Ausführen einer app auftritt, wurde die app beendet, da es ein Problem des internen Speichers hat. Es gibt mehrere mögliche Ursachen für diesen Fehler, aber es wird normalerweise verursacht durch eine extrem wenig Arbeitsspeicher verfügbar. Er kann auch durch einen Bug in der app, eine Beschädigung der Visual C++-Bibliotheken, die verwendet oder von einem Treiber verursacht werden.  
+>   
+>  Sie können versuchen, diesen Fehler zu beheben, indem Sie folgende Schritte ausführen:  
+>   
+>  -   Schließen Sie andere ausgeführte Programme, oder Neustart des Computers, um Arbeitsspeicher freizugeben.  
+> -   Verwenden der **Apps und Funktionen** oder **Programme und Funktionen** auf der Seite der **Systemsteuerung** reparieren oder neu installieren die Anwendung.  
+> -   Verwenden, wenn die Anwendung vor einer kürzlich durchgeführten Installationen von einer anderen app oder Treiber funktioniert, wurde die **Apps und Funktionen** oder **Programme und Funktionen** auf der Seite der **Systemsteuerung** So entfernen Sie die neue Anwendung oder Treiber, und versuchen Sie es erneut mit Ihrer app.  
+> -   Verwenden der **Apps und Funktionen** oder **Programme und Funktionen** auf der Seite der **Systemsteuerung** reparieren oder neu installieren alle Kopien des verteilbaren Microsoft Visual C++.  
+> -   Überprüfen Sie **Windows Update** in der **Systemsteuerung** für Softwareupdates.  
+> -   Überprüfen Sie nach einer aktualisierten Version der app. Wenn das Problem weiterhin besteht, wenden Sie sich an den Hersteller der app.  
+  
+ **Informationen für Programmierer**  
+  
+ Dieser Fehler tritt auf, wenn nicht genügend Arbeitsspeicher verfügbar, um die standard-e/a--Unterstützung in der C-Laufzeit zu initialisieren. Dieser Fehler tritt gewöhnlich beim Starten der app. Stellen Sie sicher, dass Ihre app und die Treiber und Dlls, die es lädt den Heap beim Start nicht beschädigt.

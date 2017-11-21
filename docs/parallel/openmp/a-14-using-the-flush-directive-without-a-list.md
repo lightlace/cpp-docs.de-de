@@ -1,30 +1,30 @@
 ---
-title: "A.14   Using the flush Directive without a List"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Mithilfe der flush-Direktive ohne eine Liste a14 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 9e63141a-d0c6-43a5-ac16-b0bd7c89b871
-caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bb948476b52cdf76e0a114bed5c95f46bb6ba86e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# A.14   Using the flush Directive without a List
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Das folgende Beispiel \(für [2.6.5 Abschnitt](../../parallel/openmp/2-6-5-flush-directive.md) auf Seite 20\) unterscheidet die freigegebenen Objekte, die von `flush`\-Direktive ohne Liste der freigegebenen Objekte betroffen sind, die nicht betroffen sind:  
+# <a name="a14---using-the-flush-directive-without-a-list"></a>A.13   Verwenden der flush-Direktive ohne eine Liste
+Im folgenden Beispiel (für [Abschnitt 2.6.5](../../parallel/openmp/2-6-5-flush-directive.md) auf der Seite "20") unterscheidet die gemeinsam genutzten Objekte betroffen eine `flush` -Direktive mit keine Liste der freigegebenen Objekte, die nicht betroffen sind:  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // omp_flush_without_list.c  

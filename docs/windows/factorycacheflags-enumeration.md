@@ -1,28 +1,27 @@
 ---
-title: "FactoryCacheFlags-Enumeration | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::FactoryCacheFlags"
-dev_langs: 
-  - "C++"
+title: FactoryCacheFlags-Enumeration | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::FactoryCacheFlags
+dev_langs: C++
 ms.assetid: 6f54258f-0144-4264-9608-414e5905f6fb
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bb4efeb716255ae67a01fca7cf04a54816e227d9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# FactoryCacheFlags-Enumeration
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Bestimmt, ob die Factoryobjekte zwischengespeichert werden.  
+# <a name="factorycacheflags-enumeration"></a>FactoryCacheFlags-Enumeration
+Bestimmt, ob die Factory-Objekte zwischengespeichert werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -31,13 +30,13 @@ enum FactoryCacheFlags;
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Standardmäßig wird die Factory Cachingrichtlinie als angegeben der [ModuleType](../windows/moduletype-enumeration.md) Vorlagenparameter bei der Erstellung ein [Modul](../windows/module-class.md) Objekt. Um diese Richtlinie zu überschreiben, geben Sie einen `FactoryCacheFlags` Wert, wenn Sie eine Factoryobjekt erstellen.  
+ Standardmäßig die Factory Cachingrichtlinie angegeben ist, als die [ModuleType](../windows/moduletype-enumeration.md) Vorlagenparameter bei der Erstellung einer [Modul](../windows/module-class.md) Objekt. Um diese Richtlinie zu überschreiben, geben Sie einen `FactoryCacheFlags` Wert, wenn Sie ein Factoryobjekt erstellen.  
   
 |||  
 |-|-|  
 |`FactoryCacheDefault`|Die Cachingrichtlinie für die `Module` Objekt verwendet wird.|  
-|`FactoryCacheEnabled`|Aktiviert das Factory zwischenspeichern, unabhängig von der `ModuleType` Vorlagenparameter, der verwendet wird, erstellen ein `Module` Objekt.|  
-|`FactoryCacheDisabled`|Deaktiviert die Factory Zwischenspeichern unabhängig von der `ModuleType` Vorlagenparameter, der verwendet wird, erstellen ein `Module` Objekt.|  
+|`FactoryCacheEnabled`|Ermöglicht das Factory zwischenspeichern, unabhängig von der `ModuleType` Vorlagenparameter, der zum Erstellen einer `Module` Objekt.|  
+|`FactoryCacheDisabled`|Deaktiviert das Zwischenspeichern der Factory unabhängig von der `ModuleType` Vorlagenparameter, der zum Erstellen einer `Module` Objekt.|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** implements.h  
@@ -45,4 +44,4 @@ enum FactoryCacheFlags;
  **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Siehe auch  
- [Microsoft:: wrl-Namespace](../windows/microsoft-wrl-namespace.md)
+ [Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)

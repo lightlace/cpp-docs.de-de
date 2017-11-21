@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - classes [C++], scope
 - scope [C++]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 3502a16c0cbbccdfd5d73aafe776d907c9845c1f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: dcf85a2feff9aa16434f626804edefa4dbe4610e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="scope-visual-c"></a>Bereich (Visual C++)
 C++-Namen können nur in bestimmten Bereichen eines Programms verwendet werden. Dieser Bereich wird als Gültigkeitsbereich des Namens bezeichnet. Der Gültigkeitsbereich bestimmt die Lebensdauer eines Namens, der kein statisches Objekt angibt. Der Gültigkeitsbereich bestimmt außerdem die Sichtbarkeit eines Namens, wenn Klassenkonstruktoren und -destruktoren aufgerufen werden, und wenn lokale Gültigkeitsbereichsvariablen initialisiert werden. (Weitere Informationen finden Sie unter [Konstruktoren](../cpp/constructors-cpp.md) und [Destruktoren](../cpp/destructors-cpp.md).) Es gibt fünf Arten von Gültigkeitsbereichen:  
@@ -49,7 +46,7 @@ C++-Namen können nur in bestimmten Bereichen eines Programms verwendet werden. 
   
      In C++ ist der Dateigültigkeitsbereich auch als Namespacegültigkeitsbereich bekannt.  
   
--   **Klassengültigkeitsbereich** Namen von Klassenmembern haben einen Klassengültigkeitsbereich. Klassenmemberfunktionen können nur mithilfe der memberauswahloperatoren zugegriffen werden (**.** oder ** -> **) oder Pointer-to-Member-Operatoren (**.\* ** oder ** -> \* **) auf ein Objekt oder Zeiger auf ein Objekt dieser Klasse; nicht statische Klassenmemberdaten lokal für das Objekt dieser Klasse betrachtet werden. Betrachten Sie die folgende Klassendeklaration:  
+-   **Klassengültigkeitsbereich** Namen von Klassenmembern haben einen Klassengültigkeitsbereich. Klassenmemberfunktionen können nur mithilfe der memberauswahloperatoren zugegriffen werden (**.** oder  **->** ) oder Pointer-to-Member-Operatoren (**.\***  oder  **-> \*** ) auf ein Objekt oder Zeiger auf ein Objekt dieser Klasse; nicht statische Klassenmemberdaten lokal für das Objekt dieser Klasse betrachtet werden. Betrachten Sie die folgende Klassendeklaration:  
   
     ```  
     class Point  

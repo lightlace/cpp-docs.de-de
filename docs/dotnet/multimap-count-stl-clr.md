@@ -1,45 +1,43 @@
 ---
-title: "multimap::count (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::count"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "count-Member [STL/CLR]"
+title: 'multimap:: Count (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::count
+dev_langs: C++
+helpviewer_keywords: count member [STL/CLR]
 ms.assetid: f8e3700c-b968-4ab0-86f1-d4ae7d9e0093
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0e9e614f698b8ee36b595339d0bbf0f01974dcbd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# multimap::count (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Sucht die Anzahl von Elementen, die einen angegebenen Schlüssel übereinstimmen.  
+# <a name="multimapcount-stlclr"></a>multimap::count (STL/CLR)
+Sucht die Anzahl von Elementen, die einem angegebenen Schlüssel entsprechen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 size_type count(key_type key);  
 ```  
   
-#### Parameter  
- Schlüssel  
- Für zu suchen Schlüsselwert.  
+#### <a name="parameters"></a>Parameter  
+ Key  
+ Der zu suchende Schlüsselwert.  
   
-## Hinweise  
- Die Memberfunktion wird die Anzahl der Elemente in der Sequenz zurück gesteuerten, die entsprechende Reihenfolge mit `key` haben.  Damit können Sie die Anzahl der Elemente in der kontrollierten Sequenz ermitteln, die derzeit einem angegebenen Schlüssel entsprechen.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt die Anzahl der Elemente in der kontrollierten Sequenz, die über entsprechende Sortierung mit `key`. Es können Sie verwenden, um die Anzahl der Elemente, die derzeit in der gesteuerten Sequenz zu ermitteln, die einen angegebenen Schlüssel entsprechen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_multimap_count.cpp   
@@ -67,15 +65,18 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[bc 3\]**  
-**Anzahl \(L'A\) \= 0**  
-**Anzahl \(L'b\) \= 1**  
-**Anzahl \(L'C\) \= 0**   
-## Anforderungen  
- **Header:** \<cliext\/Zuordnung\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+count(L'A') = 0  
+count(L'b') = 1  
+count(L'C') = 0  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Map >  
   
-## Siehe auch  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::equal\_range](../dotnet/multimap-equal-range-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap::equal_range (STL/CLR)](../dotnet/multimap-equal-range-stl-clr.md)

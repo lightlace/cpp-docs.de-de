@@ -1,45 +1,43 @@
 ---
-title: "map::operator(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::operator[]"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operatormember [] [STL/CLR]"
+title: Map::Operator(STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::operator[]
+dev_langs: C++
+helpviewer_keywords: operatormember [] [STL/CLR]
 ms.assetid: 50e494c5-62d4-4469-8da3-7432ee4dff97
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9851c754186ebc5e30cd0757cf9f1723625bdd92
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# map::operator(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ordnet eine Schlüssel mit dem zugeordneten zugeordneten Wert zu.  
+# <a name="mapoperatorstlclr"></a>map::operator(STL/CLR)
+Ein Schlüssel auf den zugehörigen zugeordneten Wert zugeordnet wird.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 mapped_type operator[](key_type key);  
 ```  
   
-#### Parameter  
- Schlüssel  
- Für zu suchen Schlüsselwert.  
+#### <a name="parameters"></a>Parameter  
+ Key  
+ Der zu suchende Schlüsselwert.  
   
-## Hinweise  
- Die Memberfunktionen ermittelt, ein Element mit entsprechender Reihenfolge in `key` zu suchen.  Sofern die Methode fündig wird, gibt sie den zugeordneten zugeordneten Wert zurück; Andernfalls wird sie `value_type(``key``, mapped_type())` und gibt das zugeordnete \(Standard\) zugeordneten Wert zurück.  Sie verwenden sie, um einen zugeordneten Wert gesucht werden, dessen zugeordnete Schlüssel, oder sicherzustellen angegeben ist, dass ein Eintrag für die Schlüssel vorhanden ist, wenn kein solcher Block gefunden wird.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktionen, die Aufgaben nach einem Element mit der entsprechenden Reihenfolge zu suchen `key`. Wenn ein solches gefunden wird, wird der zugeordnete zugeordneten Wert zurückgegeben; andernfalls fügt `value_type(key, mapped_type())` und gibt das zugeordnete (Standard) zugeordneten Wert. Sie verwenden es, um einen zugeordneten Wert erhält seinen zugehörige Schlüssel suchen oder um sicherzustellen, dass ein Eintrag für den Schlüssel vorhanden ist, wenn keiner gefunden wird.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_map_operator_sub.cpp   
@@ -80,17 +78,20 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[bc 3\]**  
-**A \[c1\] \= 0**  
-**\[c1 b\] \= 2**  
- **A \[0\] \[1\] \[2\] \[bc 3\]**  
- **A \[10\] \[1\] \[2\] \[bc 13\]**   
-## Anforderungen  
- **Header:** \<cliext\/Zuordnung\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+c1[A] = 0  
+c1[b] = 2  
+ [A 0] [a 1] [b 2] [c 3]  
+ [A 10] [a 1] [b 2] [c 13]  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Map >  
   
-## Siehe auch  
- [map](../dotnet/map-stl-clr.md)   
- [map::find](../dotnet/map-find-stl-clr.md)   
- [map::insert](../dotnet/map-insert-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Karte (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [Map:: Find (STL/CLR)](../dotnet/map-find-stl-clr.md)   
+ [map::insert (STL/CLR)](../dotnet/map-insert-stl-clr.md)

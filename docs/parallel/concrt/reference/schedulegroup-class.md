@@ -1,11 +1,10 @@
 ---
-title: ScheduleGroup-Klasse | Microsoft-Dokumentation
+title: ScheduleGroup-Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,35 +14,18 @@ f1_keywords:
 - CONCRT/concurrency::ScheduleGroup::Reference
 - CONCRT/concurrency::ScheduleGroup::Release
 - CONCRT/concurrency::ScheduleGroup::ScheduleTask
-dev_langs:
-- C++
-helpviewer_keywords:
-- ScheduleGroup class
+dev_langs: C++
+helpviewer_keywords: ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: dc7a78fd135d56e1243c43672172e433652e34e2
-ms.contentlocale: de-de
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: ac169e7cc01682b8ecd0dc4fb5dd387f3be38504
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup-Klasse
 Stellt die Abstraktion für eine Planungsgruppe dar. In Planungsgruppen werden Sätze verwandter Arbeitsaufgaben organisiert, die von einer gemeinsamen Planung profitieren. Die kann entweder zeitlich durch das Ausführen einer anderen Aufgabe in der gleichen Gruppe vor dem Wechsel in eine andere Gruppe, oder räumlich durch das Ausführen mehrerer Elemente innerhalb der gleichen Gruppe auf dem gleichen NUMA-Knoten oder physischem Socket geschehen.  
@@ -54,7 +36,7 @@ Stellt die Abstraktion für eine Planungsgruppe dar. In Planungsgruppen werden S
 class ScheduleGroup;
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="protected-constructors"></a>Geschützte Konstruktoren  
   
@@ -92,7 +74,7 @@ virtual unsigned int Id() const = 0;
   
 ##  <a name="operator_delete"></a>Delete-Operator 
 
- Ein `ScheduleGroup` -Objekt wird intern von der Laufzeit zerstört, wenn alle externen Verweise darauf freigegeben werden. Es kann nicht explizit gelöscht werden.  
+ Ein `ScheduleGroup` Objekt wird intern von der Laufzeit zerstört, sobald alle externen Verweise darauf freigegeben werden. Es kann nicht explizit gelöscht werden.  
   
 ```
 void operator delete(
@@ -121,7 +103,7 @@ virtual unsigned int Reference() = 0;
  Der neu inkrementierte Verweiszähler.  
   
 ### <a name="remarks"></a>Hinweise  
- Dies wird normalerweise verwendet, um die Lebensdauer der Planungsgruppe für die Erstellung zu verwalten. Wenn der Verweiszähler einer Planungsgruppe auf&0; (null) fällt, wird die Planungsgruppe von der Laufzeit gelöscht. Eine Planungsgruppe erstellt haben, verwenden entweder die [CurrentScheduler:: CreateScheduleGroup](currentscheduler-class.md#createschedulegroup) -Methode oder die [Scheduler:: CreateScheduleGroup](scheduler-class.md#createschedulegroup) Methode beginnt mit einer Verweisanzahl von&1;.  
+ Dies wird normalerweise zum Verwalten der Lebensdauer von der Planungsgruppe Zusammenstellung verwendet. Wenn der Verweiszähler für eine Planungsgruppe auf 0 (null) fällt, wird die Planungsgruppe von der Laufzeit gelöscht. Eine Planungsgruppe erstellt haben, verwenden entweder die [CurrentScheduler:: CreateScheduleGroup](currentscheduler-class.md#createschedulegroup) -Methode oder die [Scheduler:: CreateScheduleGroup](scheduler-class.md#createschedulegroup) Methode beginnt mit einer Verweisanzahl von einer.  
   
 ##  <a name="release"></a>Version 
 
@@ -135,9 +117,9 @@ virtual unsigned int Release() = 0;
  Der neu dekrementierte Verweiszähler.  
   
 ### <a name="remarks"></a>Hinweise  
- Dies wird normalerweise verwendet, um die Lebensdauer der Planungsgruppe für die Erstellung zu verwalten. Wenn der Verweiszähler einer Planungsgruppe auf&0; (null) fällt, wird die Planungsgruppe von der Laufzeit gelöscht. Nachdem Sie aufgerufen haben die `Release` Methode die bestimmte Anzahl von Malen So entfernen Sie die Erstellung zu verweisen, Anzahl und zusätzliche Verweise mit platziert die `Reference` -Methode die Schedule-Gruppe nicht ausgenutzt werden kann. Dies führt zu nicht definiertem Verhalten.  
+ Dies wird normalerweise zum Verwalten der Lebensdauer von der Planungsgruppe Zusammenstellung verwendet. Wenn der Verweiszähler für eine Planungsgruppe auf 0 (null) fällt, wird die Planungsgruppe von der Laufzeit gelöscht. Nachdem Sie aufgerufen haben die `Release` Methode verweisen kann die angegebene Anzahl von Wiederholungen des Versuchs entfernen Sie die Erstellung, Anzahl und zusätzliche Verweise platziert, über die `Reference` -Methode, die Schedule-Gruppe nicht ausgenutzt werden kann. Auf diese Weise führt zu nicht definiertem Verhalten.  
   
- Eine Planungsgruppe ist einer bestimmten Planerinstanz zugeordnet. Sie müssen sicherstellen, dass alle Verweise auf die Planungsgruppe freigegeben werden, bevor alle Verweise auf den Planer freigegeben werden, da in der Planer zerstört führen können. Andernfalls kann dies in einem nicht definierten Verhalten.  
+ Eine Planungsgruppe ist einer bestimmten Planerinstanz zugeordnet. Sie müssen sicherstellen, dass alle Verweise auf die Planungsgruppe freigegeben werden, bevor alle Verweise auf den Planer freigegeben werden, da in der Planer zerstört wird führen können. Auf diese Weise andernfalls führt zu nicht definiertem Verhalten.  
   
 ##  <a name="dtor"></a>~ ScheduleGroup 
 
@@ -157,20 +139,19 @@ virtual void ScheduleTask(
   
 ### <a name="parameters"></a>Parameter  
  `_Proc`  
- Ein Zeiger auf die Funktion, die ausgeführt werden, um den Text der Aufgabe leicht durchführen.  
+ Ein Zeiger auf die Funktion, die ausgeführt werden, um den Text der Lightweight-Aufgabe auszuführen.  
   
  `_Data`  
  Ein void-Zeiger auf die Daten, die in den Text der Aufgabe als Parameter übergeben werden.  
   
 ### <a name="remarks"></a>Hinweise  
- Aufrufen der `ScheduleTask` -Methode implizit eine Verweisanzahl für die Planungsgruppe, die von der Laufzeit, zu einem geeigneten Zeitpunkt entfernt wird, nachdem die Aufgabe ausgeführt.  
+ Aufrufen der `ScheduleTask` -Methode versetzt implizit einen Verweiszähler für die Planungsgruppe aus, die von der Laufzeit, zu einem geeigneten Zeitpunkt entfernt wird, nachdem der Task ausgeführt wird.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)   
  [CurrentScheduler-Klasse](currentscheduler-class.md)   
  [Scheduler-Klasse](scheduler-class.md)   
  [Taskplaner](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-
 
 
 

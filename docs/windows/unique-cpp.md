@@ -1,32 +1,30 @@
 ---
-title: "unique (C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.unique"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unique attribute"
+title: eindeutige (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.unique
+dev_langs: C++
+helpviewer_keywords: unique attribute
 ms.assetid: abd7ed14-5ae7-44a8-8333-0058e9c92b2f
-caps.latest.revision: 9
-caps.handback.revision: "9"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 611879bf73fa7d61276d065a9009d356243f1954
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# unique (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gibt einen eindeutigen Zeiger an.  
+# <a name="unique-c"></a>unique (C++)
+Gibt einen eindeutigen Zeiger.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -34,27 +32,26 @@ Gibt einen eindeutigen Zeiger an.
   
 ```  
   
-## Hinweise  
- Das Attribut **eindeutig** C\+\+ verfügt über die gleichen Funktionen wie das [eindeutig](http://msdn.microsoft.com/library/windows/desktop/aa367294) MIDL\-Attribut.  
+## <a name="remarks"></a>Hinweise  
+ Die **eindeutige** C++-Attribut hat die gleiche Funktionalität wie die [eindeutige](http://msdn.microsoft.com/library/windows/desktop/aa367294) MIDL-Attribut.  
   
-## Beispiel  
- Weitere Informationen finden Sie im [ref](../windows/ref-cpp.md) Beispiel für eine Beispiel verwenden aus **eindeutig**.  
+## <a name="example"></a>Beispiel  
+ Finden Sie unter der [Ref](../windows/ref-cpp.md) Beispiel für ein Beispiel für die Verwendung von **eindeutige**.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
-|**Betrifft**|`typedef`, `struct`, Schnittstellen, **Union**Parameter, Schnittstellenmethode|  
+|**Betrifft**|`typedef`, `struct`, **Union**, Parameter interface, Schnittstelle Methode|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Keine|  
+|**Ungültige Attribute**|Keine|  
   
- Weitere Informationen über das kontexte finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [IDL-Attribute](../windows/idl-attributes.md)   
+ [TypeDef, Enum, Union- und Struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Parameterattribute](../windows/parameter-attributes.md)   

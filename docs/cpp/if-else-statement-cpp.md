@@ -4,30 +4,27 @@ ms.custom:
 ms.date: 07/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - else_cpp
 - if_cpp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - if keyword [C++]
 - else keyword [C++]
 - if keyword [C++], if-else
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 7f6d2a553e34b5f15e53fa142241af83d8e91255
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 32fbc99ab51736b5950ce7982457dd0f2f1bc1b1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="if-else-statement-c"></a>if-else-Anweisung (C++)
 Steuert den bedingten Branch. Anweisungen in der *If-Block* werden nur ausgeführt, wenn die *If-Ausdruck* ergibt einen Wert ungleich 0 (oder `true`). Wenn der Wert der *Ausdruck* ungleich NULL ist *statement1* und allen anderen Anweisungen im Block ausgeführt werden und der else-Block, falls vorhanden, wird übersprungen. Wenn der Wert der *Ausdruck* 0 (null), wird der If-Block wird übersprungen, und der else-Block, falls vorhanden, wird ausgeführt. Ausdrücke, die ausgewertet ungleich NULL sind.

@@ -1,32 +1,30 @@
 ---
-title: "SRWLockExclusiveTraits::Unlock-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits::Unlock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Unlock-Methode"
+title: 'Srwlockexclusivetraits:: Unlock-Methode | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits::Unlock
+dev_langs: C++
+helpviewer_keywords: Unlock method
 ms.assetid: 7fd6b0fb-8b88-4a43-aa74-0d7fe47a0da6
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1ac40ea65dad74d42a3ee729bfb1cd1711879a06
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# SRWLockExclusiveTraits::Unlock-Methode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gibt Alleinherrschaft des angegebenen SRWLock\-Objekts frei.  
+# <a name="srwlockexclusivetraitsunlock-method"></a>SRWLockExclusiveTraits::Unlock-Methode
+Gibt die exklusive Kontrolle über das angegebene SRWLock-Objekt frei.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 inline static void Unlock(  
@@ -34,14 +32,14 @@ inline static void Unlock(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `srwlock`  
- Handle für ein SRWLock\-Objekt.  
+ Handle für ein SRWLock-Objekt.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  
   
- **Namespace:**  Microsoft::WRL::Wrappers::HandleTraits  
+ **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
   
-## Siehe auch  
- [SRWLockExclusiveTraits\-Struktur](../windows/srwlockexclusivetraits-structure.md)
+## <a name="see-also"></a>Siehe auch  
+ [SRWLockExclusiveTraits-Struktur](../windows/srwlockexclusivetraits-structure.md)

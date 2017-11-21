@@ -1,31 +1,31 @@
 ---
-title: "Verwaltete Typen und die main-Funktion (C++/CLI)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "main-Funktion, In verwalteten Anwendungen"
-  - "Verwalteter Code, main()-Funktion"
+title: Verwaltete Typen und die main-Funktion (C + c++ / CLI) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- main function, in managed applications
+- managed code, main() function
 ms.assetid: 9d0e9620-58c4-4dac-a0e1-ffeb95f80fa5
-caps.latest.revision: 12
-caps.handback.revision: "12"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b1a6d8b330108c5fba953567493551894036a7a5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Verwaltete Typen und die main-Funktion (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Beim Entwickeln von Anwendungen mit **\/clr** darf es sich bei den Argumenten der **main\(\)**\-Funktion nicht um Argumente eines verwalteten Typs handeln.  
+# <a name="managed-types-and-the-main-function-ccli"></a>Verwaltete Typen und die main-Funktion (C++/CLI)
+Beim Schreiben einer Anwendung mit **"/ CLR"**, die Argumente der **main()** Funktion kann nicht von einem verwalteten Typ.  
   
- Beispiel für eine richtige Signatur:  
+ Ein Beispiel für eine ordnungsgemäße Signatur ist:  
   
 ```  
 // managed_types_and_main.cpp  
@@ -33,5 +33,5 @@ Beim Entwickeln von Anwendungen mit **\/clr** darf es sich bei den Argumenten de
 int main(int, char*[], char*[]) {}  
 ```  
   
-## Siehe auch  
- [Verwaltete Typen](../dotnet/managed-types-cpp-cli.md)
+## <a name="see-also"></a>Siehe auch  
+ [Verwaltete Typen (C++/CLI)](../dotnet/managed-types-cpp-cli.md)

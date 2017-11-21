@@ -1,33 +1,33 @@
 ---
-title: "2.4 Work-sharing Constructs"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.4 Arbeitsteilungskonstrukte | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 25bb4ded-8466-4daa-a863-766b5a99b995
-caps.latest.revision: 4
-caps.handback.revision: "4"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5353bc51f6a701201520f700057ef76ce7778191
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# 2.4 Work-sharing Constructs
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ein Arbeitsteilungs konstrukt verteilt die Ausführung der zugeordneten Anweisung bei den Mitgliedern des Teams, die es feststellen.  Die Arbeitsteilungs Direktiven keine neuen Threads gestartet, und es gibt keine implizite Grenze ein Eintrag zu einem Arbeitsteilungs konstrukt.  
+# <a name="24-work-sharing-constructs"></a>2.4 Arbeitsteilungskonstrukte
+Ein Konstrukt Freigeben von Arbeit verteilt die Ausführung der zugeordneten Anweisung zwischen den Mitgliedern des Teams, die sie auftreten. Die Arbeit sharing-Direktiven neue Threads nicht starten, und es keine implizite Barriere beim Einstieg in eine Arbeit sharing-Konstrukt ist.  
   
- Die Sequenz der den aufgetretenen Arbeitsteilungs konstrukten und muss mit **Barriere**\-Direktive für jeden Thread in einem Team sein.  
+ Erstellt die Abfolge der Freigabe von Arbeit und **Barriere** Direktiven aufgetreten müssen für jeden Thread in einem Team identisch sein.  
   
- OpenMP definiert die folgenden Arbeitsteilungs Programmierkonstrukte, und diese werden in den folgenden Abschnitten beschrieben:  
+ OpenMP definiert die folgenden Arbeitsteilungskonstrukte, und diese werden in den folgenden Abschnitten beschrieben:  
   
--   **nach**\-Direktive  
+-   **für** Richtlinie  
   
--   **Abschnitte**\-Direktive  
+-   **Abschnitte** Richtlinie  
   
--   **Einfach**\-Direktive
+-   **einzelne** Richtlinie

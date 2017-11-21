@@ -1,32 +1,30 @@
 ---
-title: "MixIn-Struktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::MixIn"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MixIn-Struktur"
+title: MixIn-Struktur | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::MixIn
+dev_langs: C++
+helpviewer_keywords: MixIn structure
 ms.assetid: 47e2df9b-3a2e-4ae8-8ba3-b1fd3aa73566
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e1df2de0a8c645b957a5c3e93f8c4ebbb3b2fb94
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# MixIn-Struktur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Stellt sicher, dass einer Laufzeitklasse von [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]\-Schnittstellen, wenn überhaupt und dann von den klassischen COM\-Schnittstellen abgeleitet.  
+# <a name="mixin-structure"></a>MixIn-Struktur
+Stellt sicher, dass eine Runtime-Klasse aus Windows-Runtime-Schnittstellen (sofern vorhanden) und dann aus klassischen COM-Schnittstellen abgeleitet wird.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<  
@@ -38,26 +36,26 @@ template<
 struct MixIn;  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `Derived`  
- Ein Typ ist von [Implementiert](../windows/implements-structure.md) der Struktur.  
+ Ein abgeleiteter Typ aus der [implementiert](../windows/implements-structure.md) Struktur.  
   
  `MixInType`  
  Ein Basistyp.  
   
  `hasImplements`  
- `true`, wenn `MixInType` aus der aktuellen Implementierung der Basistyp abgeleitet wird; andernfalls `false`.  
+ `true`Wenn `MixInType` ist abgeleitet von der aktuellen Implementierung den Basistyp; `false` andernfalls.  
   
-## Hinweise  
- Wenn eine Klasse von [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] als auch von Klasse COM\-Schnittstellen abgeleitet ist, muss die Klassendeklarationsliste alle [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]\-Schnittstellen und anschließend eine klassischen COM\-Schnittstellen zuerst aufzeigen.  MixIn gewährleistet, dass Schnittstellen in der richtigen Reihenfolge angegeben werden.  
+## <a name="remarks"></a>Hinweise  
+ Wenn eine Klasse von Windows-Runtime und COM-Klassenschnittstellen abgeleitet ist, die Deklaration Klassenliste muss zuerst aufgeführt werden keine Windows-Runtime-Schnittstellen, und klicken Sie dann alle klassischen COM-Schnittstellen. "Mixin" wird sichergestellt, dass die Schnittstellen in der richtigen Reihenfolge angegeben werden.  
   
-## Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `MixIn`  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** implements.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [Microsoft::WRL\-Namespace](../windows/microsoft-wrl-namespace.md)
+## <a name="see-also"></a>Siehe auch  
+ [Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)

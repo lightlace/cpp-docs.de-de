@@ -1,58 +1,57 @@
 ---
-title: "/Qfast_transcendentals (Erzwingen von schnellen Transzendenten) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/Qfast_transcendentals"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Qfast_transcendentals"
-  - "Erzwingen von schnellen Transzendenten"
+title: -Qfast_transcendentals (Erzwingen von schnellen transzendenten) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /Qfast_transcendentals
+dev_langs: C++
+helpviewer_keywords:
+- /Qfast_transcendentals
+- Force Fast Transcendentals
 ms.assetid: 4de24bd1-38e6-49d4-9a05-04c9937d24ac
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6f5242621074f956c258957297bb1b220e086e70
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# /Qfast_transcendentals (Erzwingen von schnellen Transzendenten)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Generiert Inlinecode für transzendente Funktionen.  
+# <a name="qfasttranscendentals-force-fast-transcendentals"></a>/Qfast_transcendentals (Erzwingen von schnellen Transzendenten)
+Generiert Inlinecode für Transzendente Funktionen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /Qfast_transcendentals  
 ```  
   
-## Hinweise  
- Diese Compileroption erzwingt die Konvertierung von transzendenten Funktionen in Inlinecode, um die Ausführungsgeschwindigkeit zu erhöhen.  Diese Option hat nur Auswirkungen, wenn sie zusammen mit **\/fp:except** oder **\/fp:precise** verwendet wird.  Die Generierung von Inlinecode für transzendente Funktionen ist unter **\/fp:fast** bereits das Standardverhalten.  
+## <a name="remarks"></a>Hinweise  
+ Diese Compileroption erzwingt Transzendente Funktionen in Inlinecode zur Verbesserung der ausführungsgeschwindigkeit konvertiert werden. Diese Option wirkt sich nur, wenn zugeordnet **/fp: außer** oder **/fp: präzise**. Generieren von Inlinecode für Transzendente Funktionen ist bereits das Standardverhalten unter **/fp: fast**.  
   
- Diese Option ist mit **\/fp:strict** nicht kompatibel.  Weitere Informationen über Gleitkomma\-Compileroptionen finden Sie unter [\/fp \(Festlegen des Gleitkommaverhaltens\)](../../build/reference/fp-specify-floating-point-behavior.md).  
+ Diese Option ist nicht kompatibel mit **/fp: strict**. Finden Sie unter [/fp (Festlegen von Floating-Verhalten)](../../build/reference/fp-specify-floating-point-behavior.md) für Weitere Informationen zu Gleitkomma-Compileroptionen.  
   
-### So legen Sie diese Compileroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Gewusst wie: Öffnen von Projekteigenschaftenseiten](../../misc/how-to-open-project-property-pages.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Klicken Sie auf den Ordner **C\/C\+\+**.  
+2.  Klicken Sie auf den Ordner **C/C++** .  
   
-3.  Klicken Sie auf die Eigenschaftenseite **Befehlszeile**.  
+3.  Klicken Sie auf die Eigenschaftenseite **Befehlszeile** .  
   
 4.  Geben Sie die Compileroption im Feld **Zusätzliche Optionen** ein.  
   
-### So legen Sie diese Compileroption programmgesteuert fest  
+### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
   
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions*>.  
+-   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Siehe auch  
- [\/Q\-Optionen \(Operationen auf niedriger Ebene\)](../../build/reference/q-options-low-level-operations.md)   
+## <a name="see-also"></a>Siehe auch  
+ [/ Q-Optionen (Operationen auf niedriger Ebene)](../../build/reference/q-options-low-level-operations.md)   
  [Compileroptionen](../../build/reference/compiler-options.md)   
  [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

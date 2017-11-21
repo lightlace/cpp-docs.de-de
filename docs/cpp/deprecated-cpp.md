@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 03/28/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- deprecated_cpp
-dev_langs:
-- C++
+f1_keywords: deprecated_cpp
+dev_langs: C++
 helpviewer_keywords:
 - __declspec keyword [C++], deprecated
 - deprecated __declspec keyword
 ms.assetid: beef1129-9434-4cb3-8392-f1eb29e04805
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 9ac25648e2d19da82f6c213992699c237e05c01e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: d3ec06d469f6fc71b23c9bdc6a67e5ed741d9f5f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="deprecated-c"></a>deprecated (C++)
 In diesem Thema geht es um die Microsoft-spezifische Declspec Deklaration veraltet. Informationen zu den C ++ 14 `[[deprecated]]` -Attribut, und eine Anleitung für dieses Attribut im Vergleich zu den Microsoft-spezifische Declspec oder Pragma verwenden finden Sie unter [Standard C++-Attribute](attributes2.md).

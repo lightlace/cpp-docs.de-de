@@ -1,29 +1,39 @@
 ---
-title: "C-Laufzeitfehler R6033 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "R6033"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "R6033"
+title: C-Laufzeitfehler R6033 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: R6033
+dev_langs: C++
+helpviewer_keywords: R6033
 ms.assetid: f9cffdc9-81bd-4a64-a698-02762cbd82c9
-caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3ae5eddbce2e590e53e51b132ebbbd9589b385eb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# C-Laufzeitfehler R6033
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Es wurde versucht, während der Initialisierung von prozessorspezifischem Maschinencode MSIL\-Code aus dieser Assembly zu verwenden.Dies weist auf einen Fehler in der Anwendung hin.Höchstwahrscheinlich ist er auf den Aufruf einer MSIL\-kompilierten \(\/clr\) Funktion durch einen Konstruktor im prozessorspezifischen Maschinencode oder aus DllMain zurückzuführen.  
+# <a name="c-runtime-error-r6033"></a>C-Laufzeitfehler R6033
+Versucht, MSIL-Code aus dieser Assembly während der Initialisierung von systemeigenem Code zu verwenden. Hiermit wird einen Fehler in der Anwendung. Es ist sehr wahrscheinlich das Ergebnis des Aufrufs einer MSIL-kompilierten (/ Clr)-Funktion aus einem systemeigenen Konstruktor oder aus DllMain.  
   
- Diese Diagnose zeigt an, dass MSIL\-Anweisungen während der Ladeprogrammsperre ausgeführt wurden.  Weitere Informationen finden Sie unter [Initialisierung gemischter Assemblys](../../dotnet/initialization-of-mixed-assemblies.md).
+> [!NOTE]
+>  Wenn Sie diese Fehlermeldung beim Ausführen einer app auftritt, wurde die app heruntergefahren, da es sich um ein internes Problem enthält. Dieser Fehler kann verursacht werden, von einem Fehler in der app oder durch einen Bug in einer Add-in oder eine Erweiterung, die verwendet werden.  
+>   
+>  Sie können versuchen, diesen Fehler zu beheben, indem Sie folgende Schritte ausführen:  
+>   
+>  -   Verwenden der **Apps und Funktionen** oder **Programme und Funktionen** auf der Seite der **Systemsteuerung** reparieren oder neu installieren die Anwendung.  
+> -   Verwenden der **Apps und Funktionen** oder **Programme und Funktionen** auf der Seite der **Systemsteuerung** entfernen, reparieren oder neu installieren, alle Erweiterungen oder -add-ins.  
+> -   Überprüfen Sie **Windows Update** in der **Systemsteuerung** für Softwareupdates.  
+> -   Überprüfen Sie nach einer aktualisierten Version der app. Wenn das Problem weiterhin besteht, wenden Sie sich an den Hersteller der app.  
+  
+ **Informationen für Programmierer**  
+  
+ Diese Diagnose gibt an, dass MSIL-Anweisungen während der Loadersperre ausgeführt wurden. Dies kann auftreten, wenn Sie systemeigener C++-Code mithilfe des Flags "/ CLR" kompiliert haben. Verwenden Sie nur das Flag "/ CLR" auf Module mit verwaltetem Code an. Weitere Informationen finden Sie unter [Initialisierung gemischter Assemblys](../../dotnet/initialization-of-mixed-assemblies.md).

@@ -1,39 +1,39 @@
 ---
-title: "How to: Declare Value Types with the interior_ptr Keyword (C++/CLI)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ptr keyword"
-  - "value types, declaring"
+title: "Vorgehensweise: Deklarieren von Werttypen mit dem Interior_ptr-Schlüsselwort (C + c++ / CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- _ptr keyword
+- value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-caps.latest.revision: 13
-caps.handback.revision: "13"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: df675ca7168157c5ffa9529ab630b2100abda11a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# How to: Declare Value Types with the interior_ptr Keyword (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-`interior_ptr` kann mit einem Werttyp verwendet werden.  
+# <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>Gewusst wie: Deklarieren von Werttypen mit dem interior_ptr-Schlüsselwort (C++/CLI)
+Ein `interior_ptr` mit einem Werttyp verwendet werden können.  
   
 > [!IMPORTANT]
->  Diese Sprachfunktion wird durch die **\/clr**\-Compileroption, jedoch nicht durch die **\/ZW**\-Compileroption unterstützt.  
+>  Diese Sprachfunktion wird unterstützt, indem Sie die **"/ CLR"** (Compileroption), jedoch nicht von der **/Zw** -Compileroption.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### **Beschreibung**  
- Im Folgenden [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)] \- Beispiel zeigt, wie `interior_ptr` mit einem Werttyp verwendet.  
+### <a name="description"></a>Beschreibung  
+ Die folgenden C + c++ / CLI-Beispiel zeigt, wie ein `interior_ptr` mit einem Werttyp.  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // interior_ptr_value_types.cpp  
@@ -63,7 +63,7 @@ int main() {
 }  
 ```  
   
-### Ausgabe  
+### <a name="output"></a>Ausgabe  
   
 ```  
 1  
@@ -74,14 +74,14 @@ int main() {
 3  
 ```  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### **Beschreibung**  
- In einen Werttyp ergibt der `this` Zeiger zu einem interior\_ptr aus.  
+### <a name="description"></a>Beschreibung  
+ In einen Werttyp der `this` Zeiger Interior_ptr ergibt.  
   
- Im Text einer nicht statischen Memberfunktion eines Werttyps `V` wird, `this` ein Ausdruck vom Typ `interior_ptr<V>`, dessen Wert die Adresse des Objekts ist, für das die Funktion aufgerufen wird.  
+ Im Text einer nicht statischen Memberfunktion eines Werttyps `V`, `this` ist ein Ausdruck vom Typ `interior_ptr<V>` , dessen Wert ist die Adresse des Objekts, für das die Funktion aufgerufen wird.  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // interior_ptr_value_types_this.cpp  
@@ -95,14 +95,14 @@ value struct V {
 };  
 ```  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### **Beschreibung**  
- Das folgende Beispiel zeigt, wie dem Adressoperator mit statischen Member verwendet.  
+### <a name="description"></a>Beschreibung  
+ Im folgende Beispiel wird gezeigt, wie mit statischen Members der Address-of-Operator verwendet wird.  
   
- Die Adresse eines statischen Visual C\+\+\-Typmembers ergibt einen systemeigenen Zeiger.  Die Adresse eines statischen Werttypmembers ist ein verwalteter Zeiger, da Werttypmember auf dem Laufzeitheap belegten Speicherplatz wird und vom Garbage Collector verschoben werden kann.  
+ Die Adresse eines statischen Members der Visual C++-Typ ergibt einen systemeigenen Zeiger.  Die Adresse eines Typmembers statischen Wert ist ein verwalteter Zeiger, da Typmember Wert auf dem Laufzeitheap belegten wird und von der Garbage Collection verschoben werden kann.  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // interior_ptr_value_static.cpp  
@@ -128,7 +128,7 @@ int main() {
 }  
 ```  
   
-### Ausgabe  
+### <a name="output"></a>Ausgabe  
   
 ```  
 22  
@@ -136,5 +136,5 @@ int main() {
 hello  
 ```  
   
-## Siehe auch  
- [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md)
+## <a name="see-also"></a>Siehe auch  
+ [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)

@@ -1,38 +1,37 @@
 ---
-title: "2.5.1 parallel for Construct"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.5.1 parallel for-Konstrukt | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: a233e7ed-2462-4f7a-9a5d-556ab9f363d8
-caps.latest.revision: 8
-caps.handback.revision: "8"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0c1384799df3f84ffc20724ad3f2bb4890109698
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# 2.5.1 parallel for Construct
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die **für Ähnlichkeit**\-Direktive ist eine Kurzform für einen **Ähnlichkeit** Bereich, der nur einzelne **nach**\-Direktive enthält.  Die Syntax der **für Ähnlichkeit**\-Direktive sieht wie folgt aus:  
+# <a name="251-parallel-for-construct"></a>2.5.1 parallel for-Konstrukt
+Die **für parallele** Richtlinie ist eine Kurzform für eine **parallele** Bereich, nur einen einzigen enthält **für** Richtlinie. Die Syntax der **für parallele** Richtlinie lautet wie folgt:  
   
 ```  
-#pragma omp parallel for [clause[[,] clause] ...] new-line  
-   for-loop  
+#pragma omp parallel for [clause[[,] clause] ...] new-linefor-loop  
 ```  
   
- Mit dieser Direktive können alle Klauseln der **Ähnlichkeit**\-Direktive und der **nach**\-Direktive, mit Ausnahme der `nowait`\-Klausel mit identischen Bedeutung und Einschränkungen.  Die Semantik ist mit **Ähnlichkeit**\-Direktive explizit angeben identisch, die sofort aus **nach**\-Direktive folgen.  
+ Diese Direktive ermöglicht die Klauseln der der **parallele** Richtlinie und die **für** Richtlinie, mit Ausnahme der `nowait` -Klausel, identische Bedeutung und Einschränkungen. Die Semantik ist identisch mit der Angabe von explizit eine **parallele** Richtlinie unmittelbar gefolgt von einer **für** Richtlinie.  
   
-## Querverweise:  
+## <a name="cross-references"></a>Referenzen:  
   
--   **Ähnlichkeit**\-Direktive finden [Abschnitt 2.3](../../parallel/openmp/2-3-parallel-construct.md) auf Seite 8.  
+-   **Parallele** -Direktive finden Sie unter [Abschnitt 2.3](../../parallel/openmp/2-3-parallel-construct.md) auf Seite "8".  
   
--   **nach**\-Direktive finden [2.4.1 Abschnitt](../../parallel/openmp/2-4-1-for-construct.md) auf Seite 11.  
+-   **für** -Direktive finden Sie unter [Abschnitt 2.4.1](../../parallel/openmp/2-4-1-for-construct.md) auf Seite "11".  
   
--   Attribut für Daten klauseln finden [2.7.2 Data\-Sharing Attribute Clauses](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) auf Seite 25.
+-   Daten-Attribut-Klauseln finden Sie unter [2.7.2 Datenfreigabe Attribut Klauseln](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) auf Seite "25".

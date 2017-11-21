@@ -1,44 +1,48 @@
 ---
-title: "Windows-Desktopanwendungen (C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "vcplatformsdk"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Windows-Anwendungen [C++]"
-  - "Anwendungen [C++], Windows"
-  - "Visual C++, Windows-Anwendungen"
-  - "Windows-Anwendungen [C++], Informationen zum Erstellen von Windows-Anwendungen"
+title: Windows-Desktopanwendungen (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vcplatformsdk
+dev_langs: C++
+helpviewer_keywords:
+- Windows applications [C++]
+- applications [C++], Windows
+- Visual C++, Windows applications
+- Windows applications [C++], about creating Windows applications
 ms.assetid: be15855a-fa3f-41e9-89cd-41b9484ebfdb
-caps.latest.revision: 15
-caps.handback.revision: "10"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c826d3999ac1f044bcc0ffc25e58f86ec7b7e881
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Windows-Desktopanwendungen (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="windows-desktop-applications-c"></a>Windows-Desktopanwendungen (C++)
+In diesem Abschnitt wird erläutert, wie zum Erstellen von C++-desktopanwendungen, die in einem Fenster ausgeführt wird.  
+> [!TIP]  
+> Für Windows 10 können Sie den Desktop-App-Konverter verwenden, um Ihre vorhandenen desktop-Anwendung für die Bereitstellung über den Windows Store verpacken. Weitere Informationen finden Sie im Blogbeitrag [Using Visual C++ Runtime in Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) und unter [Überführen Ihrer Desktop-App auf die universelle Windows-Plattform (UWP) mit Desktop Bridge](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root).
+  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
+ In diesen Themen wird davon ausgegangen, dass Sie die Grundlagen der Programmiersprache C++ beherrschen.  
+  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+  
+-   [Win32-Anwendungs-Assistent](../windows/win32-application-wizard.md)  
+  
+-   [Exemplarische Vorgehensweise: Erstellen von Windows-Desktopanwendungen (C++)](../windows/walkthrough-creating-windows-desktop-applications-cpp.md)  
+  
+-   [Erstellen einer leeren Windows-Desktopanwendung](../windows/creating-an-empty-windows-desktop-application.md)  
+  
+-   [Arbeiten mit Ressourcendateien](../windows/working-with-resource-files.md)  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Visual C++ in Visual Studio](../visual-cpp-in-visual-studio.md)
 
-Nachdem Sie nun die Visual Studio\-IDE und Befehlszeilenanwendungen kennen gelernt haben, erfahren Sie, wie Sie Windows\-Anwendungen erstellen.  Mit Visual C\+\+ können Sie Windows\-Anwendungen unter Einsatz vieler verschiedener Technologien erstellen, z. B. [Windows\-API](https://msdn.microsoft.com/en-us/library/cc433218.aspx) \(auch bekannt als Win32\-API\) und .NET Framework.  
-  
- In diesem Abschnitt erstellen Sie zwei einfache Windows\-Anwendungen mit der Windows\-API und mit .NET Framework.  Außerdem erstellen Sie mit .NET Framework ein Windows Forms\-Steuerelement und schließlich mit DirectX ein einfaches Spiel.  
-  
-## Vorbereitungsmaßnahmen  
- In diesen Themen wird davon ausgegangen, dass Sie die Grundlagen der Programmiersprache C\+\+ beherrschen.  
-  
-## In diesem Abschnitt  
-  
--   [Exemplarische Vorgehensweise: Erstellen von Windows\-Desktopanwendungen \(C\+\+\)](../windows/walkthrough-creating-windows-desktop-applications-cpp.md)  
-  
--   [Ressourcen zum Erstellen eines Spiels mit DirectX \(C\+\+\)](../windows/resources-for-creating-a-game-using-directx.md)  
-  
-## Siehe auch  
- [Visual C\+\+ Guided Tour](assetId:///499cb66f-7df1-45d6-8b6b-33d94fd1f17c)

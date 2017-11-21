@@ -1,32 +1,30 @@
 ---
-title: ".FPO"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - ".FPO"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".FPO directive"
+title: . FPO | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .FPO
+dev_langs: C++
+helpviewer_keywords: .FPO directive
 ms.assetid: 35f4cd61-32f9-4262-b657-73f04f775d09
-caps.latest.revision: 6
-caps.handback.revision: "6"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: fc26358e1da11ada6b23364576bfedb379bc4030
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# .FPO
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die .FPO\-Direktive steuern die Ausgabe von Datensätzen Debuggen auf dem .debug$F\-Segment oder \- Abschnitt.  
+# <a name="fpo"></a>.FPO
+Die. FPO-Richtlinie steuert die Emissionen der Debug-Datensätze zum .debug$ F Segment oder Abschnitt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -46,24 +44,24 @@ cbFrame
   
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `cdwLocals`  
- Zahl, lokale Variablen ein Wert des Bits 32 ohne Vorzeichen.  
+ Die Anzahl der lokalen Variablen, eine vorzeichenlose 32-Bit-Wert.  
   
  `cdwParams`  
- Größe der Parameter in den DWORDEN, ein Wert des Bits 16 ohne Vorzeichen.  
+ Die Größe der Parameter im DWORDS eine vorzeichenlose 16-Bit-Wert.  
   
  *cbProlog*  
- Die Anzahl der Bytes im Code einleitungs Funktion, der Wert des Bits 8 ohne Vorzeichen.  
+ Anzahl der Bytes in der funktionsprologcodes einen nicht signierten 8-Bit-Wert.  
   
  `cbRegs`  
- Zahlenregister gespeichert.  
+ Die Anzahl der Register gespeichert.  
   
  `fUseBP`  
- Gibt an, ob das EBP\-Register zugeordnet wurde.  0 oder 1.  
+ Gibt an, ob das EBP-Register zugeordnet wurde. 0 oder 1.  
   
  *cbFrame*  
- Gibt den Typ des Rahmens an.  Weitere Informationen finden Sie unter [FPO\_DATA](http://msdn.microsoft.com/library/windows/desktop/ms679352).  
+ Gibt den Rahmentyp an.  Finden Sie unter [FPO_DATA](http://msdn.microsoft.com/library/windows/desktop/ms679352) für Weitere Informationen.  
   
-## Siehe auch  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)

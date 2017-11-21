@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - operators (C++), hierarchy
 - operator precedence
@@ -21,103 +19,103 @@ helpviewer_keywords:
 - evaluation order
 - hierarchy, operator
 ms.assetid: 95c1f0ba-dad8-4034-b039-f79a904f112f
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 6c45b0d3ff2aaee6763b73949727dcde5ee744bc
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 7a286be3d29e22cc3bae3d34241f08735f5f7b0b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="c-built-in-operators-precedence-and-associativity"></a>Integrierte C++-Operatoren, Rangfolge und Assoziativität
-Die Sprache C++ umfasst alle C-Operatoren und fügt mehrere neue Operatoren hinzu. Operatoren legen eine Bewertung fest, die an einem oder mehreren Operanden auszuführen ist.  
-  
- Die Operatorrangfolge legt die Reihenfolge von Vorgängen in Ausdrücken fest, die mehr als einen Operator enthalten. Die Assoziativität von Operatoren gibt an, ob in einem Ausdruck, der mehrere Operatoren mit der selben Rangfolge enthält, ein Operand mit dem auf der linken oder dem auf der rechten Seite gruppiert wird. Die folgende Tabelle zeigt die Rangfolge und Assoziativität von C++-Operatoren (in absteigender Rangfolge). Operatoren mit derselben Rangfolgenzahl haben die gleiche Rangfolge, es sei denn, es wird eine andere Beziehung explizit durch Klammern erzwungen.  
-  
-### <a name="c-operator-precedence-and-associativity"></a>C++-Operatorrangfolge und Assoziativität  
-  
-|Operatorbeschreibung|Operator|  
-|--------------------------|--------------|  
-|`Group 1 precedence, no associativity`|  
-|[Bereichsauflösung](../cpp/scope-resolution-operator.md)|`::`|  
-|`Group 2 precedence, left to right associativity`|  
-|[Memberauswahl (Objekt oder Zeiger)](../cpp/member-access-operators-dot-and.md)|`. or ->`|  
-|[Arrayfeldindex](../cpp/subscript-operator.md)|`[ ]`|  
-|[Funktionsaufruf](../cpp/function-call-operator-parens.md)|`( )`|  
-|[Postfix-Inkrement](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|`++`|  
-|[Postfixdekrement](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|`--`|  
-|[Typname](../cpp/typeid-operator.md)|`typeid( )`|  
-|[Konstantentypkonvertierung](../cpp/const-cast-operator.md)|`const_cast`|  
-|[Dynamische typkonvertierung](../cpp/dynamic-cast-operator.md)|`dynamic_cast`|  
-|[Neu interpretierte typkonvertierung](../cpp/reinterpret-cast-operator.md)|`reinterpret_cast`|  
-|[Statische typkonvertierung](../cpp/static-cast-operator.md)|`static_cast`|  
-|`Group 3 precedence, right to left associativity`|  
-|[Größe des Objekts oder Typs](../cpp/sizeof-operator.md)|`sizeof`|  
-|[Präfixinkrement](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)|`++`|  
-|[Präfixdekrement](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)|`--`|  
-|[Einerkomplement](../cpp/one-s-complement-operator-tilde.md)|`~`|  
-|[Logisches not](../cpp/logical-negation-operator-exclpt.md)|`!`|  
-|[Unäre negation](../cpp/unary-plus-and-negation-operators-plus-and.md)|`-`|  
-|[Unäres plus](../cpp/unary-plus-and-negation-operators-plus-and.md)|`+`|  
-|[Adresse des](../cpp/lvalue-reference-declarator-amp.md)|`&`|  
-|[Dereferenzierung](../cpp/indirection-operator-star.md)|`*`|  
-|[Objekt erstellen](../cpp/new-operator-cpp.md)|`new`|  
-|[Objekt zerstören](../cpp/delete-operator-cpp.md)|`delete`|  
-|[Typumwandlung](../cpp/cast-operator-parens.md)|`Cast: ()`|  
-|`Group 4 precedence, left to right associativity`|  
-|[Pointer-to-Member (Objekte oder Zeiger)](../cpp/pointer-to-member-operators-dot-star-and-star.md)|`.* or ->*`|  
-|`Group 5 precedence, left to right associativity`|  
-|[Multiplikation](../cpp/multiplicative-operators-and-the-modulus-operator.md)|`*`|  
-|[Division](../cpp/multiplicative-operators-and-the-modulus-operator.md)|`/`|  
-|[Modulo](../cpp/multiplicative-operators-and-the-modulus-operator.md)|`%`|  
-|`Group 6 precedence, left to right associativity`|  
-|[Hinzufügen](../cpp/additive-operators-plus-and.md)|`+`|  
-|[Subtraktion](../cpp/additive-operators-plus-and.md)|`-`|  
-|`Group 7 precedence, left to right associativity`|  
-|[Nach links verschieben](../cpp/left-shift-and-right-shift-operators-input-and-output.md)|`<<`|  
-|[Nach rechts verschieben](../cpp/left-shift-and-right-shift-operators-input-and-output.md)|`>>`|  
-|`Group 8 precedence, left to right associativity`|  
-|[Kleiner als](../cpp/relational-operators-equal-and-equal.md)|`<`|  
-|[Größer als](../cpp/relational-operators-equal-and-equal.md)|`>`|  
-|[Kleiner als oder gleich](../cpp/relational-operators-equal-and-equal.md)|`<=`|  
-|[Größer als oder gleich](../cpp/relational-operators-equal-and-equal.md)|`>=`|  
-|`Group 9 precedence, left to right associativity`|  
-|[Gleichheit](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|`==`|  
-|[Ungleichheitsoperator](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|`!=`|  
-|`Group 10 precedence left to right associativity`|  
-|[Bitweises AND](../cpp/bitwise-and-operator-amp.md)|`&`|  
-|`Group 11 precedence, left to right associativity`|  
-|[Bitweises exklusives OR](../cpp/bitwise-exclusive-or-operator-hat.md)|`^`|  
-|`Group 12 precedence, left to right associativity`|  
-|[Bitweises inklusives OR](../cpp/bitwise-inclusive-or-operator-pipe.md)|`&#124;`|  
-|`Group 13 precedence, left to right associativity`|  
-|[Logisches AND](../cpp/logical-and-operator-amp-amp.md)|`&&`|  
-|`Group 14 precedence, left to right associativity`|  
-|[Logisches OR](../cpp/logical-or-operator-pipe-pipe.md)|`&#124;&#124;`|  
-|`Group 15 precedence, right to left associativity`|  
-|[Bedingte](../cpp/conditional-operator-q.md)|`? :`|  
-|`Group 16 precedence, right to left associativity`|  
-|[Zuweisung](../cpp/assignment-operators.md)|`=`|  
-|[Multiplikationszuweisung](../cpp/assignment-operators.md)|`*=`|  
-|[Divisionszuweisung](../cpp/assignment-operators.md)|`/=`|  
-|[Modulozuweisung](../cpp/assignment-operators.md)|`%=`|  
-|[Additionszuweisung](../cpp/assignment-operators.md)|`+=`|  
-|[Subtraktionszuweisung](../cpp/assignment-operators.md)|`-=`|  
-|[Linksschiebezuweisung](../cpp/assignment-operators.md)|`<<=`|  
-|[Rechtsschiebezuweisung](../cpp/assignment-operators.md)|`>>=`|  
-|[Bitweise AND-Zuweisung](../cpp/assignment-operators.md)|`&=`|  
-|[Bitweise inklusive OR-Zuweisung](../cpp/assignment-operators.md)|`&#124;=`|  
-|[Bitweise exklusive OR-Zuweisung](../cpp/assignment-operators.md)|`^=`|  
-|`Group 17 precedence, right to left associativity`|  
-|[Ausdruck auslösen](../cpp/try-throw-and-catch-statements-cpp.md)|`throw`|  
-|`Group 18 precedence, left to right associativity`|  
-|[Durch Trennzeichen](../cpp/comma-operator.md)|`,`|  
-  
-## <a name="see-also"></a>Siehe auch  
-[Operatorüberladung](operator-overloading.md)
 
+Die Sprache C++ umfasst alle C-Operatoren und fügt mehrere neue Operatoren hinzu. Operatoren legen eine Bewertung fest, die an einem oder mehreren Operanden auszuführen ist.
+
+Operator *Rangfolge* gibt die Reihenfolge der Vorgänge in Ausdrücken, die mehr als einen Operator enthalten. Operator *Assoziativität* gibt an, ob in einem Ausdruck, der mehrere Operatoren mit der selben Rangfolge enthält, ein Operand mit dem auf der linken Seite oder auf der rechten Seite gruppiert wird. Die folgende Tabelle zeigt die Rangfolge und Assoziativität von C++-Operatoren (in absteigender Rangfolge). Operatoren mit derselben Rangfolgenzahl haben die gleiche Rangfolge, es sei denn, es wird eine andere Beziehung explizit durch Klammern erzwungen.
+
+### <a name="c-operator-precedence-and-associativity"></a>C++-Operatorrangfolge und Assoziativität
+
+|Operatorbeschreibung|Operator|
+|--------------------------|--------------|
+|**Gruppe 1 Vorrang vor und keine Assoziativität**|
+|[Bereichsauflösung](../cpp/scope-resolution-operator.md)|[::](../cpp/scope-resolution-operator.md)|
+|**Gruppe 2-Priorität, von links nach rechts Assoziativität**|
+|[Memberauswahl (Objekt oder Zeiger)](../cpp/member-access-operators-dot-and.md)|[. oder ->](../cpp/member-access-operators-dot-and.md)|
+|[Arrayfeldindex](../cpp/subscript-operator.md)|[&#91;&#93;](../cpp/subscript-operator.md)|
+|[Funktionsaufruf](../cpp/function-call-operator-parens.md)|[()](../cpp/function-call-operator-parens.md)|
+|[Postfix-Inkrement](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|[++](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|
+|[Postfixdekrement](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|[--](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|
+|[Typname](../cpp/typeid-operator.md)|[typeid](../cpp/typeid-operator.md)|
+|[Konstantentypkonvertierung](../cpp/const-cast-operator.md)|[const_cast-Operator](../cpp/const-cast-operator.md)|
+|[Dynamische typkonvertierung](../cpp/dynamic-cast-operator.md)|[dynamic_cast](../cpp/dynamic-cast-operator.md)|
+|[Neu interpretierte typkonvertierung](../cpp/reinterpret-cast-operator.md)|[reinterpret_cast-Operator](../cpp/reinterpret-cast-operator.md)|
+|[Statische typkonvertierung](../cpp/static-cast-operator.md)|[static_cast](../cpp/static-cast-operator.md)|
+|**Gruppe 3 Rangfolge von rechts nach links Assoziativität**|
+|[Größe des Objekts oder Typs](../cpp/sizeof-operator.md)|[sizeof](../cpp/sizeof-operator.md)|
+|[Präfixinkrement](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)|[++](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)|
+|[Präfixdekrement](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)|[--](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)|
+|[Einerkomplement](../cpp/one-s-complement-operator-tilde.md)|[~](../cpp/one-s-complement-operator-tilde.md)|
+|[Logisches not](../cpp/logical-negation-operator-exclpt.md)|[!](../cpp/logical-negation-operator-exclpt.md)|
+|[Unäre negation](../cpp/unary-plus-and-negation-operators-plus-and.md)|[-](../cpp/unary-plus-and-negation-operators-plus-and.md)|
+|[Unäres plus](../cpp/unary-plus-and-negation-operators-plus-and.md)|[+](../cpp/unary-plus-and-negation-operators-plus-and.md)|
+|[Adresse des](../cpp/address-of-operator-amp.md)|[&amp;](../cpp/address-of-operator-amp.md)|
+|[Dereferenzierung](../cpp/indirection-operator-star.md)|[&#42;](../cpp/indirection-operator-star.md)|
+|[Objekt erstellen](../cpp/new-operator-cpp.md)|[new](../cpp/new-operator-cpp.md)|
+|[Objekt zerstören](../cpp/delete-operator-cpp.md)|[Löschen](../cpp/delete-operator-cpp.md)|
+|[Typumwandlung](../cpp/cast-operator-parens.md)|[()](../cpp/cast-operator-parens.md)|
+|**Gruppe 4 Rangfolge von links nach rechts Assoziativität**|
+|[Pointer-to-Member (Objekte oder Zeiger)](../cpp/pointer-to-member-operators-dot-star-and-star.md)|[. &#42; oder -> &#42;](../cpp/pointer-to-member-operators-dot-star-and-star.md)|
+|**Gruppe 5 Rangfolge von links nach rechts Assoziativität**|
+|[Multiplikation](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[&#42;](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
+|[Division](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[/](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
+|[Modulo](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[%](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
+|**Gruppe 6 Rangfolge von links nach rechts Assoziativität**|
+|[Hinzufügen](../cpp/additive-operators-plus-and.md)|[+](../cpp/additive-operators-plus-and.md)|
+|[Subtraktion](../cpp/additive-operators-plus-and.md)|[-](../cpp/additive-operators-plus-and.md)|
+|**Gruppe 7 Rangfolge von links nach rechts Assoziativität**|
+|[Nach links verschieben](../cpp/left-shift-and-right-shift-operators-input-and-output.md)|[<<](../cpp/left-shift-and-right-shift-operators-input-and-output.md)|
+|[Nach rechts verschieben](../cpp/left-shift-and-right-shift-operators-input-and-output.md)|[>>](../cpp/left-shift-and-right-shift-operators-input-and-output.md)|
+|**Gruppieren von links nach rechts Assoziativität 8 Rangfolge**|
+|[Kleiner als](../cpp/relational-operators-equal-and-equal.md)|[<](../cpp/relational-operators-equal-and-equal.md)|
+|[Größer als](../cpp/relational-operators-equal-and-equal.md)|[>](../cpp/relational-operators-equal-and-equal.md)|
+|[Kleiner als oder gleich](../cpp/relational-operators-equal-and-equal.md)|[<=](../cpp/relational-operators-equal-and-equal.md)|
+|[Größer als oder gleich](../cpp/relational-operators-equal-and-equal.md)|[>=](../cpp/relational-operators-equal-and-equal.md)|
+|**Gruppe 9 Rangfolge von links nach rechts Assoziativität**|
+|[Gleichheit](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|[==](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|
+|[Ungleichheitsoperator](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|[!=](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|
+|**Gruppe 10 Rangfolge von links nach rechts Assoziativität**|
+|[Bitweises AND](../cpp/bitwise-and-operator-amp.md)|[&amp;](../cpp/bitwise-and-operator-amp.md)|
+|**Gruppieren von links nach rechts Assoziativität 11 Rangfolge**|
+|[Bitweises exklusives OR](../cpp/bitwise-exclusive-or-operator-hat.md)|[^](../cpp/bitwise-exclusive-or-operator-hat.md)|
+|**Gruppieren von 12 Rangfolge, die von links nach rechts Assoziativität**|
+|[Bitweises inklusives OR](../cpp/bitwise-inclusive-or-operator-pipe.md)|[&#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)|
+|**Gruppe 13 Rangfolge von links nach rechts Assoziativität**|
+|[Logisches AND](../cpp/logical-and-operator-amp-amp.md)|[&amp;&amp;](../cpp/logical-and-operator-amp-amp.md)|
+|**Gruppieren von links nach rechts Assoziativität 14 Rangfolge**|
+|[Logisches OR](../cpp/logical-or-operator-pipe-pipe.md)|[&#124;&#124;](../cpp/logical-or-operator-pipe-pipe.md)|
+|**Gruppieren von 15 Rangfolge von rechts nach links Assoziativität**|
+|[Bedingte](../cpp/conditional-operator-q.md)|[? :](../cpp/conditional-operator-q.md)|
+|**Gruppieren von 16 Rangfolge von rechts nach links Assoziativität**|
+|[Zuweisung](../cpp/assignment-operators.md)|[=](../cpp/assignment-operators.md)|
+|[Multiplikationszuweisung](../cpp/assignment-operators.md)|[&#42;=](../cpp/assignment-operators.md)|
+|[Divisionszuweisung](../cpp/assignment-operators.md)|[/=](../cpp/assignment-operators.md)|
+|[Modulozuweisung](../cpp/assignment-operators.md)|[%=](../cpp/assignment-operators.md)|
+|[Additionszuweisung](../cpp/assignment-operators.md)|[+=](../cpp/assignment-operators.md)|
+|[Subtraktionszuweisung](../cpp/assignment-operators.md)|[-=](../cpp/assignment-operators.md)|
+|[Linksschiebezuweisung](../cpp/assignment-operators.md)|[<<=](../cpp/assignment-operators.md)|
+|[Rechtsschiebezuweisung](../cpp/assignment-operators.md)|[>>=](../cpp/assignment-operators.md)|
+|[Bitweise AND-Zuweisung](../cpp/assignment-operators.md)|[&amp;=](../cpp/assignment-operators.md)|
+|[Bitweise inklusive OR-Zuweisung](../cpp/assignment-operators.md)|[&#124;=](../cpp/assignment-operators.md)|
+|[Bitweise exklusive OR-Zuweisung](../cpp/assignment-operators.md)|[^=](../cpp/assignment-operators.md)|
+|**Gruppe 17 Rangfolge von rechts nach links Assoziativität**|
+|[Ausdruck auslösen](../cpp/try-throw-and-catch-statements-cpp.md)|[throw](../cpp/try-throw-and-catch-statements-cpp.md)|
+|**Gruppieren von links nach rechts Assoziativität 18 Rangfolge**|
+|[Durch Trennzeichen](../cpp/comma-operator.md)|[,](../cpp/comma-operator.md)|
+
+## <a name="see-also"></a>Siehe auch
+
+[Operatorüberladung](operator-overloading.md)
 
 

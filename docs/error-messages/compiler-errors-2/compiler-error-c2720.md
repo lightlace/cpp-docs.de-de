@@ -1,40 +1,40 @@
 ---
-title: "Compilerfehler C2720 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2720"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2720"
+title: Compilerfehler Fehler C2720 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C2720
+dev_langs: C++
+helpviewer_keywords: C2720
 ms.assetid: 9ee3aab7-711b-4f5a-b2f1-cb62b130f1ce
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 10c273d2c39d81397584ce674187057131542e89
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Compilerfehler C2720
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-„Bezeichner“: Speicherklassenspezifizierer „Spezifizierer“ ist für Member unzulässig.  
+# <a name="compiler-error-c2720"></a>Compiler-Fehler C2720 generiert  
   
- Die Speicherklasse kann für Klassenmember außerhalb der Variablendeklaration verwendet werden.  Entfernen Sie den nicht benötigten [Speicherklassenspezifizierer](assetId:///10b3d22d-cb40-450b-994b-08cf9a211b6c) aus der Definition des Members außerhalb der Klassendeklaration, um diesen Fehler zu beheben.  
+> "*Bezeichner*": "*Spezifizierer*" Speicherklassenspezifizierer für Member unzulässig  
   
- Im folgenden Beispiel wird C2720 generiert und gezeigt, wie Sie diesen Fehler beheben:  
+Die Speicherklasse kann für Klassenmember außerhalb der Variablendeklaration verwendet werden. Um diesen Fehler zu beheben, entfernen Sie den nicht benötigten [Speicherklasse](../../cpp/storage-classes-cpp.md) Spezifizierer aus der Definition des Members außerhalb der Klassendeklaration.  
   
-```  
+## <a name="example"></a>Beispiel  
+  
+Im folgenden Beispiel wird C2720 generiert und gezeigt, wie Sie diesen Fehler beheben:  
+  
+```cpp  
 // C2720.cpp  
 struct S {  
    static int i;  
 };  
 static S::i;   // C2720 - remove the unneeded 'static' to fix it  
-  
 ```

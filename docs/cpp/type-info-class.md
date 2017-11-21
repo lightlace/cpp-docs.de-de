@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- type_info
-dev_langs:
-- C++
+f1_keywords: type_info
+dev_langs: C++
 helpviewer_keywords:
 - class type_info
 - type_info class
 ms.assetid: 894ddda2-7de4-4da3-9404-d2c74e356c16
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: b87dec1f3d3a04d984c3bbd96344ebcb0a163f19
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 61e26b60916712e10c1c0fa5b255aa7bf2bc1fd9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="typeinfo-class"></a>type_info-Klasse
 Die **Type_info** Klasse beschreibt die Typinformationen, die innerhalb des Programms vom Compiler generiert. Objekte dieser Klasse speichern effektiv einen Zeiger auf einen Namen für den Typ. Die **Type_info** Klasse speichert auch einen codierten Wert für das Vergleichen von zwei Typen für Gleichheit oder Sortierreihenfolge. Die Codierungsregeln und die Sortierreihenfolge für Typen sind nicht spezifiziert und können je nach Programm unterschiedlich sein.  
@@ -53,12 +49,11 @@ public:
   
  Es gibt keine Verbindung zwischen der Sortierreihenfolge von Typen und Vererbungsbeziehungen. Verwenden der **type_info:: before** Member-Funktion, um die Sortierreihenfolge von Typen zu ermitteln. Es gibt keine Garantie, **type_info:: before** wird die gleiche erzielt in verschiedenen Programmen oder sogar bei unterschiedlichen Ausführungen desselben Programms. Auf diese Weise **type_info:: before** ähnelt der Adresse des **(&)** Operator.  
   
- Die **type_info:: Name** Memberfunktion gibt eine **const Char\* ** auf eine Null-terminierte Zeichenfolge, die den lesbaren Namen des Typs darstellt. Der Speicher, auf den gezeigt wird, wird zwischengespeichert und sollte nie direkt freigegeben werden.  
+ Die **type_info:: Name** Memberfunktion gibt eine **const Char\***  auf eine Null-terminierte Zeichenfolge, die den lesbaren Namen des Typs darstellt. Der Speicher, auf den gezeigt wird, wird zwischengespeichert und sollte nie direkt freigegeben werden.  
   
- Die **type_info:: raw_name** Memberfunktion gibt eine **const Char\* ** auf eine Null-terminierte Zeichenfolge, die den ergänzten Namen des Objekttyps darstellt. Der Name wird tatsächlich in seiner ergänzten Form gespeichert, um Platz zu sparen. Daher ist diese Funktion schneller als **type_info:: Name** , da sie nicht die namensergänzung benötigt. Die zurückgegebene Zeichenfolge den **type_info:: raw_name** Funktion eignet sich für Vergleichsvorgänge, aber ist nicht lesbar. Wenn Sie eine lesbare Zeichenfolge benötigen, verwenden Sie die **type_info:: Name** stattdessen-Funktion.  
+ Die **type_info:: raw_name** Memberfunktion gibt eine **const Char\***  auf eine Null-terminierte Zeichenfolge, die den ergänzten Namen des Objekttyps darstellt. Der Name wird tatsächlich in seiner ergänzten Form gespeichert, um Platz zu sparen. Daher ist diese Funktion schneller als **type_info:: Name** , da sie nicht die namensergänzung benötigt. Die zurückgegebene Zeichenfolge den **type_info:: raw_name** Funktion eignet sich für Vergleichsvorgänge, aber ist nicht lesbar. Wenn Sie eine lesbare Zeichenfolge benötigen, verwenden Sie die **type_info:: Name** stattdessen-Funktion.  
   
  Typinformationen für polymorphe Klassen nur, wenn generiert die [/GR (Laufzeit-Typinformationen aktivieren)](../build/reference/gr-enable-run-time-type-information.md) -Compileroption angegeben ist.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Laufzeit-Typinformationen](../cpp/run-time-type-information.md)
-

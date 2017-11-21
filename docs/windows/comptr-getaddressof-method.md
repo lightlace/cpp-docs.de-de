@@ -1,45 +1,43 @@
 ---
-title: "ComPtr::GetAddressOf-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::ComPtr::GetAddressOf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetAddressOf-Methode"
+title: 'Comptr:: Getaddressof-Methode | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::ComPtr::GetAddressOf
+dev_langs: C++
+helpviewer_keywords: GetAddressOf method
 ms.assetid: 972a41d0-c2ef-4ae3-b2cd-77cc45156ac9
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4a14a6366d1f8e6c5917835e750b5fddc45310d3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# ComPtr::GetAddressOf-Methode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ruft die Adresse des [ptr\_](../windows/comptr-ptr-data-member.md) Datenmembers ab, der einen Zeiger zur Schnittstelle enthält, die durch dieses ComPtr dargestellt wird.  
+# <a name="comptrgetaddressof-method"></a>ComPtr::GetAddressOf-Methode
+Ruft die Adresse des [ptr_](../windows/comptr-ptr-data-member.md) -Datenmembers ab, der einen Zeiger auf die Schnittstelle enthält, der dieses ComPtr-Objekt entspricht.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 T* const* GetAddressOf() const;  
 T** GetAddressOf();  
 ```  
   
-## Rückgabewert  
+## <a name="return-value"></a>Rückgabewert  
  Die Adresse einer Variablen.  
   
-## Anforderungen  
- **Header:**  client.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** client.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [ComPtr\-Klasse](../windows/comptr-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [ComPtr-Klasse](../windows/comptr-class.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 04/21/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -72,19 +71,17 @@ helpviewer_keywords:
 - C3188
 - C3191
 - C3193
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 7bc40c2f-6a8d-488a-b665-f39375afee77
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 7060d03845cf81aeaedc5eff48db3aec59716112
-ms.contentlocale: de-de
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-errors-c3100-through-c3199"></a>Compilerfehler Fehler C3100 über C3199 generiert
 In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen Unterabschnitt der Visual C++-Compilerfehler enthalten. Sie können hier auf die Informationen zugreifen oder im Fenster **Ausgabe** in Visual Studio eine Fehlernummer auswählen und dann die F1-TASTE drücken.  
@@ -196,4 +193,3 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C3197](compiler-error-c3197.md)|"*Schlüsselwort*": kann nur in Definitionen verwendet werden|  
 |[Compilerfehler C3198](compiler-error-c3198.md)|Ungültige Verwendung eines Gleitkommapragmas: Fenv_access-Pragma unterstützt nur im präzise-Modus|  
 |[Compilerfehler C3199](compiler-error-c3199.md)|Ungültige Verwendung eines Gleitkommapragmas: Ausnahmen werden in nicht-präzisen Modus nicht unterstützt.|  
-

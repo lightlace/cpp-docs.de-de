@@ -1,35 +1,35 @@
 ---
-title: "C.1 Notation"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: C. 1-Notation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: a23b2631-8096-4bf3-ac23-ba4f4bd7a52a
-caps.latest.revision: 4
-caps.handback.revision: "4"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 20ad99729f526cd9cb5f1e4e6c239272341462e7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# C.1 Notation
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die Grammatik regeln bestehen aus dem Titel für ein Nichtterminal, gefolgt von einem Doppelpunkt gefolgt von den Ersatz alternativen in separaten Zeilen.  
+# <a name="c1-notation"></a>C.1 Notation
+Die Grammatikregeln für bestehen aus den Namen für eine nicht-Terminal, gefolgt von einem Doppelpunkt, gefolgt von Ersatz alternativen in separaten Zeilen.  
   
- Der syntaktische \- Ausdruckopt gibt an, dass der Ausdruck innerhalb des Ersatzes optional ist.  
+ Die syntaktischen Ausdruck Termopt gibt an, dass der Begriff in die Ersetzung optional ist.  
   
- Der syntaktische Ausdrucks *Ausdruckoptseq*ist mit *Ausdruck\-folgendemopt*mit den folgenden zusätzlichen Regeln:  
+ Die syntaktischen Ausdruck *Begriff*Optseq entspricht *Begriff-Seq*opt in die folgenden zusätzlichen Regeln:  
   
- *Ausdruck\-folgend* :  
+ *Begriff-Seq* :  
   
- *Ausdruck*  
+ *Begriff*  
   
- *Ausdruck\-folgender Ausdruck*  
+ *Begriff-Seq-Begriff*  
   
- *Ausdruck*,*Ausdruck\-folgend*
+ *Begriff-Seq* , *Begriff*

@@ -1,52 +1,53 @@
 ---
-title: "Editing Control Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controls [C++], undoing changes"
-  - "controls [C++], editing properties"
-  - "dialog box controls, editing properties"
+title: Bearbeiten von Steuerelementeigenschaften | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- controls [C++], undoing changes
+- controls [C++], editing properties
+- dialog box controls, editing properties
 ms.assetid: 9bdae21d-6dec-4344-a197-2ca4fc46d040
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d69f7f22b2bf3e51e2afa2ed53b04aeefe6a59e5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Editing Control Properties
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### So bearbeiten Sie die Eigenschaften eines oder mehrerer Steuerelemente  
+# <a name="editing-control-properties"></a>Bearbeiten von Steuerelementeigenschaften
+### <a name="to-edit-the-properties-of-a-control-or-controls"></a>So bearbeiten Sie die Eigenschaften eines Steuerelements oder Steuerelemente  
   
-1.  Wählen Sie im Dialogfeld das Steuerelement aus, das Sie ändern möchten.  
+1.  Wählen Sie das Steuerelement, das Sie ändern möchten, klicken Sie im Dialogfeld.  
   
     > [!NOTE]
-    >  Wenn mehrere Steuerelemente ausgewählt werden, können nur die gemeinsamen Eigenschaften der ausgewählten Steuerelemente bearbeitet werden.  
+    >  Wenn Sie mehrere Steuerelemente auswählen, können nur die Eigenschaften der ausgewählten Steuerelementen gemeinsam bearbeitet werden.  
   
-2.  Ändern Sie die Steuerelementeigenschaften im [Eigenschaftenfenster](../Topic/Properties%20Window.md).  
+2.  In der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window), ändern Sie die Eigenschaften des Steuerelements.  
   
     > [!NOTE]
-    >  Wenn Sie für die **Bitmap**\-Eigenschaft eines Schaltflächen\-, Optionsfeld\- oder Kontrollkästchen\-Steuerelements den Wert **True** festlegen, wird das Format BS\_BITMAP für das Steuerelement implementiert.  Weitere Informationen finden Sie unter [Button Styles](../mfc/reference/button-styles.md) \(nur auf Englisch verfügbar\).  Ein Beispiel für das Verknüpfen einer Bitmap mit einem Steuerelement finden Sie unter [CButton::SetBitmap](../Topic/CButton::SetBitmap.md).  Im Dialogressourcen\-Editor werden keine Bitmaps auf den Steuerelementen angezeigt.  
+    >  Beim Festlegen der **Bitmap** -Eigenschaft für eine Schaltfläche, Optionsfeld oder gleich Kontrollkästchensteuerelement **"true"**, den Stil BS_BITMAP für das Steuerelement implementiert wird. Weitere Informationen finden Sie unter [Schaltflächenstile](../mfc/reference/styles-used-by-mfc.md#button-styles). Ein Beispiel für eine Bitmap mit einem Steuerelement zuordnen, finden Sie unter [CButton:: SetBitmap](../mfc/reference/cbutton-class.md#setbitmap). Bitmaps werden nicht auf das Steuerelement angezeigt, während Sie im Dialogfeld Ressourcen-Editor sind.  
   
-### So machen Sie Änderungen an Steuerelementeigenschaften rückgängig  
+### <a name="to-undo-changes-to-the-properties-of-a-control"></a>Zum Rückgängigmachen von Änderungen an den Eigenschaften eines Steuerelements  
   
-1.  Stellen Sie sicher, dass das Steuerelement im Dialog\-Editor den Fokus besitzt.  
+1.  Stellen Sie sicher, dass das Steuerelement in Dialog-Editor den Fokus besitzt.  
   
-2.  Klicken Sie im Menü **Bearbeiten** auf **Rückgängig** \(befindet sich der Fokus nicht auf dem Steuerelement, ist der Befehl **Rückgängig** nicht verfügbar\).  
+2.  Wählen Sie **rückgängig zu machen** aus der **bearbeiten** im Menü (wenn der Fokus nicht auf das Steuerelement ist die **rückgängig zu machen** Befehl ist nicht verfügbar).  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
  Anforderungen  
   
  Win32  
   
-## Siehe auch  
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)
+## <a name="see-also"></a>Siehe auch  
+ [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)
+

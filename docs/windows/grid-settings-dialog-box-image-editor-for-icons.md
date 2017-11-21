@@ -1,47 +1,47 @@
 ---
-title: "Rastereinstellungen (Dialogfeld) (Bildbearbeitung f&#252;r Symbole) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.dialog.GridSettings"
-  - "vc.editors.gridsettings"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Rastereinstellungen (Dialogfeld)"
+title: "Dialogfeld \"Einstellungen Raster\" (Bildbearbeitung für Symbole) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.editors.dialog.GridSettings
+- vc.editors.gridsettings
+dev_langs: C++
+helpviewer_keywords: Grid Settings dialog box
 ms.assetid: 59ce033a-ff10-48cd-b414-f9cb74da6789
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: eada827f54bc04a22b5aa0b9fb61b3a786c0b25c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Rastereinstellungen (Dialogfeld) (Bildbearbeitung f&#252;r Symbole)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In diesem Dialogfeld können Sie die Rastereinstellungen für das Bild festlegen und das bearbeitete Bild mit Rasterlinien versehen.  Die Linien sind Hilfsmittel zur Bearbeitung des Bildes; sie werden nicht als Teil des Bildes gespeichert.  
+# <a name="grid-settings-dialog-box-image-editor-for-icons"></a>Rastereinstellungen (Dialogfeld) (Bildbearbeitung für Symbole)
+Können Sie die rastereinstellungen für das Bild angeben und Gitternetzlinien auf das bearbeitete Bild angezeigt. Die Zeilen eignen sich für das Bild zu bearbeiten, aber nicht als Teil des Abbilds selbst gespeichert sind.  
   
  **Pixelraster**  
- Falls aktiviert, wird um jedes Pixel im Grafik\-Editor ein Raster angezeigt.  Das Raster ist erst ab vierfacher Vergrößerung sichtbar.  
+ Wenn dieses Kontrollkästchen aktiviert, zeigt ein Raster aus, um die einzelnen Pixel in der Grafik-Editor. Das Raster wird nur bei 4 × und höherer Auflösung angezeigt.  
   
- **Grobraster**  
- Falls aktiviert, wird um Pixelblöcke im Grafik\-Editor ein Raster angezeigt. Die Größe des Rasters ist durch die Rasterweite definiert.  
+ **Kachel-Raster**  
+ Bei Auswahl dieser Option zeigt ein Raster aus, um Blöcke von Pixeln in der Grafik-Editor, durch das Raster Abstandswerte angegeben.  
   
  **Breite**  
- Gibt die Breite der einzelnen Grobrasterblöcke an.  Diese Option ist hilfreich beim Zeichnen von Bitmaps, die mehrere, in gleichmäßigen Abständen angeordnete Bilder enthalten.  
+ Gibt die Breite jeder Kachel-Blocks. Dies ist hilfreich beim Zeichnen von Bitmaps, enthält mehrere Images, die in regelmäßigen Abständen angeordnet sind.  
   
  **Höhe**  
- Gibt die Höhe der einzelnen Grobrasterblöcke an.  Diese Option ist hilfreich beim Zeichnen von Bitmaps, die mehrere, in gleichmäßigen Abständen angeordnete Bilder enthalten.  
+ Gibt die Höhe jeder Kachel-Blocks. Dies ist hilfreich beim Zeichnen von Bitmaps, enthält mehrere Images, die in regelmäßigen Abständen angeordnet sind.  
   
-## Anforderungen  
- None  
+## <a name="requirements"></a>Anforderungen  
+ Keine  
   
-## Siehe auch  
- [Resizing an Image](../mfc/resizing-an-image-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>Siehe auch  
+ [Ändern der Bildgröße](../windows/resizing-an-image-image-editor-for-icons.md)   
+ [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)
+

@@ -1,40 +1,39 @@
 ---
-title: "Including Shared (Read-Only) or Calculated Symbols | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.symbol.shared.calculated"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "symbols, read-only"
-  - "symbols, shared"
-  - "symbols, calculated"
-  - "read-only symbols"
-  - "symbol directives"
-  - "calculated symbols"
-  - "shared symbols"
+title: "Einschließlich gemeinsam genutzter (schreibgeschützter) oder berechneter Symbole | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.symbol.shared.calculated
+dev_langs: C++
+helpviewer_keywords:
+- symbols, read-only
+- symbols, shared
+- symbols, calculated
+- read-only symbols
+- symbol directives
+- calculated symbols
+- shared symbols
 ms.assetid: 32b77faf-a066-4371-a072-9a5b84c0766d
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fefc31c6ac9eb1f66c2fb6481bd7bb63171a8a8f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Including Shared (Read-Only) or Calculated Symbols
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Wenn die Entwicklungsumgebung erstmals eine durch eine andere Anwendung erstellte Ressourcendatei liest, markiert sie alle einbezogenen Headerdateien als schreibgeschützt.  Anschließend können Sie das Dialogfeld [Ressourcenincludes](../windows/resource-includes-dialog-box.md) verwenden, um zusätzliche schreibgeschützte Symbolheaderdateien hinzuzufügen.  
+# <a name="including-shared-read-only-or-calculated-symbols"></a>Einfügen gemeinsam genutzter (schreibgeschützter) oder berechneter Symbole
+Wenn die Entwicklungsumgebung erstmals eine durch eine andere Anwendung erstellte Ressourcendatei liest, markiert sie alle einbezogenen Headerdateien als schreibgeschützt. Anschließend können Sie die [Ressourcenincludes (Dialogfeld)](../windows/resource-includes-dialog-box.md) um zusätzliche schreibgeschützte Symbolheaderdateien hinzuzufügen.  
   
  Ein Grund, weshalb Sie möglicherweise schreibgeschützte Symboldefinitionen verwenden möchten, ist der Plan, Symboldateien unter verschiedenen Projekten freizugeben.  
   
- Sie können zudem einbezogene Symboldateien verwenden, wenn Sie über vorhandene Ressourcen mit Symboldefinitionen verfügen, die anstelle von einfachen Ganzzahlen Ausdrücke zum Definieren des Symbolwerts verwenden.  Zum Beispiel:  
+ Sie können zudem einbezogene Symboldateien verwenden, wenn Sie über vorhandene Ressourcen mit Symboldefinitionen verfügen, die anstelle von einfachen Ganzzahlen Ausdrücke zum Definieren des Symbolwerts verwenden. Zum Beispiel:  
   
 ```  
 #define   IDC_CONTROL1 2100  
@@ -52,21 +51,21 @@ Wenn die Entwicklungsumgebung erstmals eine durch eine andere Anwendung erstellt
 > [!NOTE]
 >  Wenn eine Zeichenfolge oder ein numerischer Ausdruck erwartet wird, wird der Ausdruck nicht ausgewertet.  
   
-### So beziehen Sie freigegebene \(schreibgeschützte\) Symbole in Ihrer Ressourcendatei ein  
+### <a name="to-include-shared-read-only-symbols-in-your-resource-file"></a>So beziehen Sie freigegebene (schreibgeschützte) Symbole in Ihrer Ressourcendatei ein  
   
-1.  Klicken Sie mit der rechten Maustaste in der [Ressourcenansicht](../windows/resource-view-window.md) auf die RC\-Datei, und wählen Sie [Ressourcenincludes](../windows/resource-includes-dialog-box.md) aus dem Kontextmenü.  
-  
-    > [!NOTE]
-    >  Wenn das Projekt noch keine RC\-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).  
-  
-2.  Verwenden Sie im Feld **Direktiven für schreibgeschützte Symbole** die Compilerdirektive **\#include**, um die Datei anzugeben, in der die schreibgeschützten Symbole beibehalten werden sollen.  
-  
-     Rufen Sie nicht die Datei „Resource.h“ auf. Hierbei handelt es sich nämlich für gewöhnlich um den Dateinamen, der durch die Hauptsymbol\-Headerdatei verwendet wird.  
+1.  In [Ressourcenansicht](../windows/resource-view-window.md)mit der rechten Maustaste auf die RC-Datei, und wählen Sie [Ressourcenincludes](../windows/resource-includes-dialog-box.md) aus dem Kontextmenü.  
   
     > [!NOTE]
-    >  **Wichtig**: Was Sie im Feld „Direktiven für schreibgeschützte Symbole“ eingeben, wird genau so in der Ressourcendatei einbezogen, wie Sie es eingeben.  Stellen Sie sicher, dass die Eingabe weder Schreib\- noch Syntaxfehler aufweist.  
+    >  Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).  
   
-     Verwenden Sie das Feld **Direktiven für schreibgeschützte Symbole**, um nur Dateien mit Symboldefinitionen einzubeziehen.  Beziehen Sie keine Ressourcendefinitionen ein. Ansonsten werden doppelte Ressourcendefinitionen erstellt, wenn die Datei gespeichert wird.  
+2.  In der **Direktiven für schreibgeschützte Symbole** verwenden die **#include** Compiler-Direktive, um die Datei anzugeben, in dem Sie die schreibgeschützten Symbole beibehalten werden soll.  
+  
+     Rufen Sie nicht die Datei „Resource.h“ auf. Hierbei handelt es sich nämlich für gewöhnlich um den Dateinamen, der durch die Hauptsymbol-Headerdatei verwendet wird.  
+  
+    > [!NOTE]
+    >  **Wichtige** die Eingabe im Feld Direktiven für schreibgeschützte Symbole in der Ressourcendatei enthalten ist, genau wie Sie es eingeben. Stellen Sie sicher, dass die Eingabe weder Schreib- noch Syntaxfehler aufweist.  
+  
+     Verwenden der **Direktiven für schreibgeschützte Symbole** Feld zum Einfügen von Dateien mit Symboldefinitionen nur. Beziehen Sie keine Ressourcendefinitionen ein. Ansonsten werden doppelte Ressourcendefinitionen erstellt, wenn die Datei gespeichert wird.  
   
 3.  Platzieren Sie die Symbole in der von Ihnen angegebenen Datei.  
   
@@ -74,14 +73,14 @@ Wenn die Entwicklungsumgebung erstmals eine durch eine andere Anwendung erstellt
   
 4.  Klicken Sie auf **OK**.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+
   
  Anforderungen  
   
  Win32  
   
-## Siehe auch  
- [Symbol Name Restrictions](../windows/symbol-name-restrictions.md)   
- [Symbol Value Restrictions](../windows/symbol-value-restrictions.md)   
- [Predefined Symbol IDs](../windows/predefined-symbol-ids.md)   
- [Symbols: Resource Identifiers](../mfc/symbols-resource-identifiers.md)
+## <a name="see-also"></a>Siehe auch  
+ [Beschränkungen bei Symbolnamen](../windows/symbol-name-restrictions.md)   
+ [Beschränkungen für Symbolwerte](../windows/symbol-value-restrictions.md)   
+ [Vordefinierte Symbol-IDs](../windows/predefined-symbol-ids.md)   
+ [Symbole: Ressourcenbezeichner](../windows/symbols-resource-identifiers.md)

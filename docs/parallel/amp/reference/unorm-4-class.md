@@ -1,11 +1,10 @@
 ---
-title: unorm_4-Klasse | Microsoft-Dokumentation
+title: unorm_4-Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -274,33 +273,17 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_4::wyx
 - amp_short_vectors/Concurrency::graphics::unorm_4::rb
 - amp_short_vectors/Concurrency::graphics::unorm_4::get_wzyx
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: dd216a9d-95f7-4978-8e78-6cb9c781a7e9
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 20e8a0ca1291b36ee8b2b3b3aa836eae67fe33fd
-ms.contentlocale: de-de
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: fb24f92747a91b81b53c18bc07949f06ff21a14f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="unorm4-class"></a>unorm_4-Klasse
 Stellt einen kurzen Vektor aus vier normalen Zahlen ohne Vorzeichen dar.  
@@ -470,11 +453,11 @@ class unorm_4;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|unorm_4-||  
+|unorm_4::-||  
 |unorm_4::--||  
 |unorm_4:: * =||  
 |unorm_4:: Operator / =||  
-|unorm_4:: Operator++||  
+|unorm_4:: Operator++-||  
 |unorm_4:: Operator +=||  
 |unorm_4:: =||  
 |unorm_4:: Operator-=||  
@@ -693,16 +676,16 @@ explicit inline unorm_4(
   
 ### <a name="parameters"></a>Parameter  
  `_V0`  
- Der Wert 0-Element zu initialisieren.  
+ Der Wert 0-Element initialisiert werden.  
   
  `_V1`  
  Der Wert 1 Element initialisiert werden.  
   
  `_V2`  
- Der Wert 2-Element zu initialisieren.  
+ Der Wert 2-Element initialisiert werden.  
   
  `_V3`  
- Der Wert 3-Element zu initialisieren.  
+ Der Wert 3-Element initialisiert werden.  
   
  `_V`  
  Der Wert für die Initialisierung.  
@@ -718,4 +701,3 @@ static const int size = 4;
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)
-

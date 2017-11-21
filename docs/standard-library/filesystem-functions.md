@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -49,75 +48,58 @@ f1_keywords:
 - FILESYSTEM/std::experimental::filesystem::system_complete
 - FILESYSTEM/std::experimental::filesystem::temp_directory_path
 - FILESYSTEM/std::experimental::filesystem::u8path
-- filesystem/std::absolute
-- filesystem/std::begin
-- filesystem/std::canonical
-- filesystem/std::copy
-- filesystem/std::copy_file
-- filesystem/std::copy_symlink
-- filesystem/std::create_directories
-- filesystem/std::create_directory
-- filesystem/std::create_directory_symlink
-- filesystem/std::create_hard_link
-- filesystem/std::create_symlink
-- filesystem/std::current_path
-- filesystem/std::end
-- filesystem/std::equivalent
-- filesystem/std::exists
-- filesystem/std::file_size
-- filesystem/std::hard_link_count
-- filesystem/std::hash_value
-- filesystem/std::is_block_file
-- filesystem/std::is_character_file
-- filesystem/std::is_directory
-- filesystem/std::is_empty
-- filesystem/std::is_fifo
-- filesystem/std::is_other
-- filesystem/std::is_regular_file
-- filesystem/std::is_socket
-- filesystem/std::is_symlink
-- filesystem/std::last_write_time
-- filesystem/std::permissions
-- filesystem/std::read_symlink
-- filesystem/std::remove
-- filesystem/std::remove_all
-- filesystem/std::rename
-- filesystem/std::resize_file
-- filesystem/std::space
-- filesystem/std::status
-- filesystem/std::status_known
-- filesystem/std::swap
-- filesystem/std::symlink_status
-- filesystem/std::system_complete
-- filesystem/std::temp_directory_path
-- filesystem/std::u8path
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: be3cb821-4728-4d47-ab78-858fa8aa5045
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 31a7a65ed759ec552e11f2eccc5d425c2b2b765d
-ms.openlocfilehash: 253af6748b2d46ee1421604ed6f16fd97bf5a459
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+helpviewer_keywords:
+- std::experimental::filesystem::absolute
+- std::experimental::filesystem::canonical
+- std::experimental::filesystem::copy
+- std::experimental::filesystem::copy_file
+- std::experimental::filesystem::copy_symlink
+- std::experimental::filesystem::create_directories
+- std::experimental::filesystem::create_directory
+- std::experimental::filesystem::create_directory_symlink
+- std::experimental::filesystem::create_hard_link
+- std::experimental::filesystem::create_symlink
+- std::experimental::filesystem::current_path
+- std::experimental::filesystem::equivalent
+- std::experimental::filesystem::exists
+- std::experimental::filesystem::file_size
+- std::experimental::filesystem::hard_link_count
+- std::experimental::filesystem::hash_value
+- std::experimental::filesystem::is_block_file
+- std::experimental::filesystem::is_character_file
+- std::experimental::filesystem::is_directory
+- std::experimental::filesystem::is_empty
+- std::experimental::filesystem::is_fifo
+- std::experimental::filesystem::is_other
+- std::experimental::filesystem::is_regular_file
+- std::experimental::filesystem::is_socket
+- std::experimental::filesystem::is_symlink
+- std::experimental::filesystem::last_write_time
+- std::experimental::filesystem::permissions
+- std::experimental::filesystem::read_symlink
+- std::experimental::filesystem::remove
+- std::experimental::filesystem::remove_all
+- std::experimental::filesystem::rename
+- std::experimental::filesystem::resize_file
+- std::experimental::filesystem::space
+- std::experimental::filesystem::status
+- std::experimental::filesystem::status_known
+- std::experimental::filesystem::swap
+- std::experimental::filesystem::symlink_status
+- std::experimental::filesystem::system_complete
+- std::experimental::filesystem::temp_directory_path
+- std::experimental::filesystem::u8path
+ms.openlocfilehash: b6e6523b197be2b55847f23447a6d832f55e880d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltfilesystemgt-functions"></a>&lt;filesystem&gt;-Funktionen
 Diese freien Funktionen im [\<filesystem>](../standard-library/filesystem.md)-Header führen Änderungs- und Abfragevorgänge für Pfade, Dateien, symbolische Verknüpfungen, Verzeichnisse und Volumes durch. Weitere Informationen und Codebeispiele finden Sie unter [Dateisystemnavigation](../standard-library/file-system-navigation.md).  
@@ -125,7 +107,7 @@ Diese freien Funktionen im [\<filesystem>](../standard-library/filesystem.md)-He
 |-|-|-|  
 |[absolute](#absolute)|[begin](#begin)|[canonical](#canonical)|
 |[copy](#copy)|[copy_file](#copy_file)|[copy_symlink](#copy_symlink)|
-|[create_directories](#create_directories)|[create_directory](#create_directory)|[create_directory_symlink](#create_directory_symlink)|
+|[create_directories-Funktion](#create_directories)|[create_directory](#create_directory)|[create_directory_symlink](#create_directory_symlink)|
 |[create_hard_link](#create_hard_link)|[create_symlink](#create_symlink)|[current_path](#current_path)|
 |[end](#end)|[equivalent](#equivalent)|[exists](#exists)|
 |[file_size](#file_size)|[hard_link_count](#hard_link_count)|[hash_value](#hash_value)|
@@ -134,7 +116,7 @@ Diese freien Funktionen im [\<filesystem>](../standard-library/filesystem.md)-He
 |[is_regular_file](#is_regular_file)|[is_socket](#is_socket)|[is_symlink](#is_symlink)|
 |[last_write_time](#last_write_time)|[permissions](#permissions)|[read_symlink](#read_symlink)|
 |[remove](#remove)|[remove_all](#remove_all)|[rename](#rename)|
-|[resize_file](#resize_file)|[space](#space)|[status](#status)|
+|[resize_file](#resize_file)|[space](#space)|[Status](#status)|
 |[status_known](#status_known)|[swap](#swap)|[symlink_status](#symlink_status)|
 |[system_complete](#system_complete)|[temp_directory_path](#temp_directory_path)|[u8path](#u8path)|  
 
@@ -173,13 +155,13 @@ path canonical(const path& pval, error_code& ec);
 path canonical(const path& pval, const path& base, error_code& ec);
 ```  
   
- Die Funktionen bilden einen absoluten Pfadnamen „pabs = absolute(pval, base) (oder pabs = absolute(pval)“ für die Überladung ohne Basisparameter), und reduzieren ihn dann in der folgenden Schrittfolge auf eine kanonische Form:  
+ Die Funktionen bilden einen absoluten Pfadnamen „pabs = absolute(pval, base) (oder pabs = absolute(pval) für die Überladung ohne Basisparameter), und reduzieren ihn dann in der folgenden Schrittfolge auf eine kanonische Form:  
   
 1.  Jede Komponente X, für die „is_symlink(X)“ „true“ ergibt, wird durch „read_symlink(X)“ ersetzt.  
   
-2.  Jede Pfadkomponente „.“ („Punkt“ ist das von vorherigen Pfadkomponenten eingerichtete aktuelle Verzeichnis) wird entfernt.  
+2.  Jede Pfadkomponente „.“ („Punkt“ ist das durch die vorherigen Pfadkomponenten angegebene Verzeichnis) wird entfernt.  
   
-3.  Jedes Paar von Pfadkomponenten „X/..“ („Punkt-Punkt“ ist das von vorherigen Pfadkomponenten eingerichtete übergeordnete Verzeichnis) wird entfernt.  
+3.  Jedes Paar von Pfadkomponenten „X/..“ („Punkt-Punkt“ ist das durch die vorherigen Pfadkomponenten angegebene übergeordnete Verzeichnis) wird entfernt.  
   
  Die Funktion gibt dann „pabs“ zurück.  
   
@@ -605,7 +587,7 @@ path temp_directory_path(error_code& ec);
   
  Die Funktionen geben einen Pfadnamen für ein Verzeichnis zurück, das für die Aufnahme temporärer Dateien geeignet ist.  
   
-## <a name="u8path"></a> u8path  
+## <a name="u8path"></a>  u8path  
   
 ```  
 template <class Source>  
@@ -616,6 +598,5 @@ path u8path(InIt first, InIt last);
 ```  
   
  Die erste Funktion verhält sich wie „path(source)“ und die zweite Funktion verhält sich wie „path(first, last)“ mit der Ausnahme, dass die angegebene Quelle in beiden Fällen als Sequenz von „char“-Elementen übernommen wird, die unabhängig vom Dateisystem als UTF-8 codiert ist.
-
 
 

@@ -1,54 +1,54 @@
 ---
-title: "&lt;see&gt; (Visual C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "<see>"
-  - "see"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<see> C++-XML-Tag"
-  - "see (C++-XML-Tag)"
+title: '&lt;finden Sie unter&gt; (Visual C++) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <see>
+- see
+dev_langs: C++
+helpviewer_keywords:
+- <see> C++ XML tag
+- see C++ XML tag
 ms.assetid: 20ef66f4-b278-45cf-8613-63919edf5720
-caps.latest.revision: 15
-caps.handback.revision: "15"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 25dc28c993289942d0eafd2f20fb5c849f1658c4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# &lt;see&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Mit dem \<see\>\-Tag kann ein Link im Text angegeben werden.  Verwendung [\<seealso\>](../ide/seealso-visual-cpp.md), Text anzugeben, die Sie in einem Abschnitt Siehe auch angezeigt werden sollen.  
+# <a name="ltseegt-visual-c"></a>&lt;finden Sie unter&gt; (Visual C++)
+Mit dem \<see>-Tag kann ein Link im Text angegeben werden. Verwendung [ \<Seealso >](../ide/seealso-visual-cpp.md) um Text anzugeben, die in einem Abschnitt Siehe auch angezeigt werden sollen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <see cref="member"/>  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `member`  
- Ein Verweis auf einen Member oder ein Feld, der bzw. das von der aktuellen Kompilierungsumgebung aufgerufen werden kann.  Fügen Sie den Namen in einfache oder doppelte Anführungszeichen eingeschlossen werden.  
+ Ein Verweis auf einen Member oder ein Feld, das von der aktuellen Kompilierungsumgebung aufgerufen werden kann.  Setzen Sie den Namen in einfache oder doppelte Anführungszeichen.  
   
- Die Compilerprüfungen, ob das angegebene Codeelement `member` dem Elementnamen in der Ausgabe XML vorhanden und auflöst.  Der Compiler gibt eine Warnung aus, wenn nicht `member` sucht.  
+ Der Compiler überprüft, dass das angegebene Codeelement vorhanden ist, und löst `member` an den Elementnamen in der XML-Ausgabe.  Der Compiler gibt eine Warnung aus, wenn er `member` nicht findet.  
   
-## Hinweise  
- Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit ["\/doc"](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.  
+## <a name="remarks"></a>Hinweise  
+ Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.  
   
- Siehe [\<summary\>](../ide/summary-visual-cpp.md) als ein Beispiel für die Verwendung von \<see\>.  
+ Finden Sie unter [ \<summary >](../ide/summary-visual-cpp.md) ein Beispiel der Verwendung von \<finden Sie unter >.  
   
- Der Visual C\+\+\-Compiler versucht, cref Verweise in einer Durchlauf durch die Dokumentationskommentare aufzulösen.  Wenn, die C\+\+\-Suchenregeln verwenden, ein Symbol vom Compiler nicht gefunden wird, wird der Verweis markiert, wie nicht aufgelöst.  Weitere Informationen finden Sie unter [\<seealso\>](../ide/seealso-visual-cpp.md).  
+ Der Visual C++-Compiler versucht, cref-Verweise in einem einzigen Durchlauf durch die Dokumentationskommentare aufzulösen.  Bei Verwendung der C++-Suchregeln wird deshalb, wenn ein Symbol vom Compiler nicht gefunden wird, der Verweis als nicht aufgelöst markiert. Finden Sie unter [ \<Seealso >](../ide/seealso-visual-cpp.md) Weitere Informationen.  
   
-## Beispiel  
- Das folgende Beispiel veranschaulicht, wie Sie cref Bezug auf einen generischen Typ ausführen können, so, dass, der Compiler den Verweis auflöst.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt, wie Sie Cref-Verweis für einen generischen Typ erstellen können, sodass der Compiler den Verweis aufgelöst wird.  
   
 ```  
 // xml_see_cref_example.cpp  
@@ -75,5 +75,5 @@ generic<class T>
 ref class C {};  
 ```  
   
-## Siehe auch  
- [XML\-Dokumentation](../ide/xml-documentation-visual-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [XML-Dokumentation](../ide/xml-documentation-visual-cpp.md)

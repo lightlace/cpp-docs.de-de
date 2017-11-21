@@ -1,35 +1,33 @@
 ---
-title: "Linkertoolfehler LNK1309 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1309"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1309"
+title: Linkertoolfehler Lnk1309 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1309
+dev_langs: C++
+helpviewer_keywords: LNK1309
 ms.assetid: 10146071-883f-4849-97d1-c7468f90efbb
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: febaeeeabdf045ee7d223b7514d63202ded1e99c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Linkertoolfehler LNK1309
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Typ1\-Modul gefunden. Ungültig mit Schalter \/CLRIMAGETYPE:Typ2  
+# <a name="linker-tools-error-lnk1309"></a>Linkertoolfehler LNK1309
+Typ1-Modul gefunden. mit der Option/CLRIMAGETYPE: Typ2 ungültig  
   
- Ein CLR\-Bildtyp wurde mit **\/CLRIMAGETYPE** angefordert, der Linker konnte jedoch kein Abbild dieses Typs erstellen, da ein oder mehrere Module nicht mit diesem Typ kompatibel waren.  
+ Ein CLR-imagetyps wurde angefordert, mit **/CLRIMAGETYPE** , aber der Linker konnte ein Image dieses Typs erzeugen, da eine oder mehrere Module nicht mit diesem Typ kompatibel sind.  
   
- LNK1309 wird z. B. ausgegeben, wenn Sie **\/CLRIMAGETYPE:safe** angeben und dann ein Modul übergeben, das mit **\/clr:pure** erstellt wurde.  
+ LNK1309 wird beispielsweise ausgegeben, wenn Sie angeben, **/CLRIMAGETYPE:safe** und übergeben Sie ein Modul mit erstellten **/CLR: pure**.  
   
- Wenn Sie versuchen, unter Verwendung von ptrustu\[d\].lib eine teilweise vertrauenswürdige reine CLR\-Anwendung zu erstellen, wird ebenfalls LNK1309 angezeigt.  Weitere Informationen über das Erstellen einer teilweise vertrauenswürdigen Anwendung finden Sie unter [Gewusst wie: Erstellen einer teilweise vertrauenswürdigen Anwendung durch Entfernen der Abhängigkeit der CRT\-Bibliotheks\-DLL](../../dotnet/create-a-partially-trusted-application.md).  
+ Sie sehen auch LNK1309, wenn Sie versuchen, eine teilweise vertrauenswürdige Ptrustu [d] .lib mit reine CLR-Anwendung zu erstellen. Informationen zum Erstellen einer teilweise vertrauenswürdigen Anwendung finden Sie unter [Vorgehensweise: Erstellen einer teilweise vertrauenswürdigen Anwendung durch Entfernen der Abhängigkeit auf der CRT-Bibliothek-DLL](../../dotnet/create-a-partially-trusted-application.md).  
   
- Weitere Informationen finden Sie unter [\/clr \(Common Language Runtime\-Kompilierung\)](../../build/reference/clr-common-language-runtime-compilation.md) und [\/CLRIMAGETYPE \(Angeben des CLR\-Bildtyps\)](../../build/reference/clrimagetype-specify-type-of-clr-image.md).
+ Weitere Informationen finden Sie unter [/CLR (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md) und [/CLRIMAGETYPE (Angeben der CLR Image-)](../../build/reference/clrimagetype-specify-type-of-clr-image.md).

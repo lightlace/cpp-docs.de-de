@@ -1,65 +1,67 @@
 ---
-title: "SimpleClassFactory::CreateInstance-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::SimpleClassFactory::CreateInstance"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CreateInstance-Methode"
+title: 'Simpleclassfactory:: CreateInstance-Methode | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::SimpleClassFactory::CreateInstance
+dev_langs: C++
+helpviewer_keywords: CreateInstance method
 ms.assetid: 17b7947a-2608-49d9-b730-fef76501c9bc
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: aaffaf02c7db9c311f3f06e18e0194089d79e430
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2017
 ---
-# SimpleClassFactory::CreateInstance-Methode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="simpleclassfactorycreateinstance-method"></a>SimpleClassFactory::CreateInstance-Methode
 
-Erstellt eine Instanz die angegebene Schnittstelle.  
-  
-## Syntax  
-  
-```  
-  
-STDMETHOD(  
-   CreateInstance  
-)  
-   (_Inout_opt_ IUnknown* pUnkOuter,   
-   REFIID riid,   
-   _Deref_out_ void** ppvObject);  
-```  
-  
-#### Parameter  
- `pUnkOuter`  
- Muss `nullptr`; andernfalls ist der Rückgabewert CLASS\_E\_NOAGGREGATION.  
-  
- SimpleClassFactory unterstützt keine Aggregation.  Wenn Aggregation unterstützt wurden und das Objekt, das erstellt wurde, Teil eines Aggregats wäre, würde `pUnkOuter` ein Zeiger zur steuernden IUnknown\-Schnittstelle des Aggregats sein.  
-  
- `riid`  
- Schnittstellen\-ID des Objekts zu erstellen.  
-  
- `ppvObject`  
- Wenn dieser Vorgang abgeschlossen hat, wurden Zeiger auf eine Instanz des Objekts durch den Parameter `riid` an.  
-  
-## Rückgabewert  
- S\_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler angibt.  
-  
-## Hinweise  
- Wenn \_\_WRL\_STRICT definiert wird, wird ein Assertionsfehler, ausgegeben, wenn die Basisklasse, die im Klassenvorlagenparameter angegeben ist, nicht von [RuntimeClass](../windows/runtimeclass-class.md) abgeleitet wird, oder wird nicht mit dem ClassicCom Enumerationswert oder WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) konfiguriert.  
-  
-## Anforderungen  
- **Header:** module.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## Siehe auch  
- [SimpleClassFactory\-Klasse](../windows/simpleclassfactory-class.md)
+Erstellt eine Instanz der angegebenen Schnittstelle.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+STDMETHOD( CreateInstance )(
+   _Inout_opt_ IUnknown* pUnkOuter,
+   REFIID riid,
+   _Deref_out_ void** ppvObject
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*pUnkOuter*  
+Muss `nullptr`ist, andernfalls wird CLASS_E_NOAGGREGATION zurückgegeben.
+
+SimpleClassFactory unterstützt keine Aggregation. Wenn die Aggregation unterstützt wurden, und das Objekt erstellt wurde, Teil einer Aggregatfunktion gehört, `pUnkOuter` wäre ein Zeiger auf die controlling IUnknown-Schnittstelle des Aggregats.
+
+*riid*  
+Schnittstellen-ID des Objekts zu erstellen.
+
+*ppvObject*  
+Wenn dieser Vorgang abgeschlossen wird, Zeiger auf eine Instanz des Objekts gemäß der `riid` Parameter.
+
+## <a name="return-value"></a>Rückgabewert
+
+S_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler angibt.
+
+## <a name="remarks"></a>Hinweise
+
+Wenn &#95; &#95; WRL_STRICT &#95; &#95; wird definiert, ein Assert-Fehler wird ausgegeben, wenn in der Klasse Template-Parameter angegebene Basisklasse abgeleitet ist nicht [RuntimeClass](../windows/runtimeclass-class.md), oder ist nicht konfiguriert, mit dem ClassicCom oder WinRtClassicComMix [RuntimeClassType ](../windows/runtimeclasstype-enumeration.md) -Enumerationswert.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[SimpleClassFactory-Klasse](../windows/simpleclassfactory-class.md)

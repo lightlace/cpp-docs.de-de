@@ -1,26 +1,26 @@
 ---
-title: "A.24   Example of the private Clause"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Beispiel für die private-Klausel A.24 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: f90a5b49-81ff-4746-ae03-37bbd33f6c08
-caps.latest.revision: 9
-caps.handback.revision: "9"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6f0690f06ac51288605ae4bdd7f12b977f77cf58
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# A.24   Example of the private Clause
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die `private` Clause \([2.7.2.1 Abschnitt](../../parallel/openmp/2-7-2-1-private.md) auf Seite 25\) eines parallelen Bereichs ist nur wirksam ist für den lexikalischen Wertebereich des Bereichs, für den keine dynamischen Wertebereich des Bereichs.  Daher im folgende Beispiel verwendet einen beliebigen *a*\-Variable aus der `for` innerhalb der Schleife in der Routine *f* verweist eine private Kopie von *A*, während eine Verwendung in Routine *g* das globale *A*verweist *.*  
+# <a name="a24---example-of-the-private-clause"></a>A.24   Beispiel für die private-Klausel
+Die `private` -Klausel ([Abschnitt 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md) auf der Seite "25") eines parallelen Bereichs ist nur gültig für den lexikalischen Wertebereich des Bereichs, nicht für den dynamischen Wertebereich des Bereichs.  Aus diesem Grund im Beispiel, das folgt, jede Verwendung der Variablen *eine* innerhalb der `for` Schleife in der Routine *f* bezieht sich auf eine private Kopie *eine*, dagegen eine Verwendung in Routine *g* verweist auf die globale *eine*.  
   
 ```  
 int a;  

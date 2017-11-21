@@ -1,47 +1,47 @@
 ---
-title: "2.7.2 Data-Sharing Attribute Clauses"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.7.2 Datenfreigabe-Attributklauseln | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 47347d3c-18bd-441f-99cf-7737564c417f
-caps.latest.revision: 6
-caps.handback.revision: "6"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7e3fbc78792034c60c94972ca6b4ed63dfac01b2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# 2.7.2 Data-Sharing Attribute Clauses
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Mehrere Direktiven akzeptieren Klauseln, die einem Benutzer ermöglichen, die Freigabe von Attributen von Variablen für die Dauer des Bereichs zu steuern.  Freigeben klauseln Attribut gelten nur für Variablen im lexikalischen Wertebereich der Direktiven an, auf denen die Klausel wird.  Nicht alle nachfolgenden Klauseln sind auf allen Direktive ermöglicht.  Die Liste der Klauseln, die für bestimmte \- Direktive gültig sind, werden mit der Direktive beschrieben.  
+# <a name="272-data-sharing-attribute-clauses"></a>2.7.2 Datenfreigabe-Attributklauseln
+Mehrere Anweisungen akzeptieren Klauseln, die einem Benutzer ermöglichen, die Freigabe Attribute von Variablen für die Dauer des Bereichs zu steuern. Freigeben von Attribut-Klauseln gelten nur für Variablen im lexikalischen Block der Richtlinie auf dem die-Klausel wird angezeigt. Nicht alle der folgenden Klauseln sind für alle Anweisungen zulässig. Die Liste der Klauseln, die für eine bestimmte Richtlinie gültig sind, werden mit der Direktive beschrieben.  
   
- Wenn eine Variable sichtbar ist, wenn eine Ähnlichkeit oder Arbeitsteilungs konstrukt unterbrochen wird und die Variable nicht in einer Freigabe oder clause Attribut **threadprivate**\-Direktive angegeben ist, wird die Variable freigegeben.  Die statischen Variablen, die innerhalb des dynamischen Wertebereichs eines parallelen Bereichs deklariert wurden, werden freigegeben.  Heap belegter Speicher \(z. B. mithilfe **malloc \(\)** in C oder C\+\+ oder des Operators **neu** C\+\+\) wurde aufgehoben.  \(Der Zeiger auf diesen Speicher kann jedoch privat oder freigegeben sein.\) Variablen mit dauer die automatische Speicherung dynamischer, die innerhalb des Wertebereichs eines parallelen Bereichs deklarierter sind privat.  
+ Wenn eine Variable ist sichtbar, wenn eine parallele oder Arbeit-Freigabe-Konstrukt festgestellt wird, und die Variable in einer Freigabe Attribut-Klausel nicht angegeben ist oder **Threadprivate** Richtlinie, klicken Sie dann die Variable ist freigegeben. Statische Variablen, die in der dynamischen Wertebereich eines parallelen Bereichs deklariert werden, gemeinsam genutzt. Heap reservierter Speicher (z. B. **malloc()** in C oder C++ oder **neue** -Operator in C++) freigegeben wird. (Der Zeiger auf diesen Speicher jedoch entweder private oder freigegebene möglich.) Variablen mit automatischer Speicherdauer innerhalb der dynamischen Wertebereich eines parallelen Bereichs deklariert sind privat.  
   
- Die meisten Klauseln akzeptieren ein *Variable Liste*\-Argument, das eine durch Trennzeichen getrennte Liste von Variablen ist, die sichtbar sind.  Wenn eine Variable, die in eine Datenfreigabe Attribut für clause verwiesen wird, einen Typ aufweist, der aus einer Vorlage abgeleitet ist und keine weiteren Verweise auf den vorhanden ist, der im Programm variabel ist, ist das Verhalten nicht definiert.  
+ Die meisten Klauseln akzeptieren ein *Variablenliste* Argument, das eine durch Trennzeichen getrennte Liste der Variablen ist, die sichtbar sind. Wenn eine Variable in verwiesen Datenfreigabeklausel im Attribut weist einen Typ, der aus einer Vorlage abgeleitet und es sind keine weiteren Verweise auf Variablen im Programm, das Verhalten nicht definiert ist.  
   
- Alle Variablen, die innerhalb der Klauseln angegeben werden, müssen sichtbar sein.  Klauseln nach Bedarf wiederholt werden, aber keine Variable wurde in mehr als einer Klausel angegeben, außer dass eine Variable kann in **firstprivate** und in einer **lastprivate**\-Klausel angegeben werden.  
+ Alle Variablen, die innerhalb der Direktivenklauseln angezeigt werden, müssen sichtbar sein. Klauseln nach Bedarf wiederholt werden, aber keine Variable kann in mehr als eine Klausel angegeben werden, außer dass eine Variable in beiden angegeben werden, kann eine **Firstprivate** und ein **Lastprivate** Klausel.  
   
- In den folgenden Abschnitten werden die Datenfreigabe Attribut für klauseln:  
+ Die folgenden Abschnitte beschreiben die Attribut-Klauseln mit Datenfreigabe:  
   
--   **private**, [2.7.2.1 Abschnitt](../../parallel/openmp/2-7-2-1-private.md) auf Seite 25.  
+-   **private**, [Abschnitt 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md) auf der Seite "25".  
   
--   **firstprivate**, [2.7.2.2 Abschnitt](../../parallel/openmp/2-7-2-2-firstprivate.md) auf Seite 26.  
+-   **Firstprivate**, [Abschnitt 2.7.2.2](../../parallel/openmp/2-7-2-2-firstprivate.md) auf Seite 26.  
   
--   **lastprivate**, [2.7.2.3 Abschnitt](../../parallel/openmp/2-7-2-3-lastprivate.md) auf Seite 27.  
+-   **Lastprivate**, [Abschnitt 2.7.2.3](../../parallel/openmp/2-7-2-3-lastprivate.md) Seite 27.  
   
--   **Shared**, [2.7.2.4 Abschnitt](../../parallel/openmp/2-7-2-4-shared.md) auf Seite 27.  
+-   **freigegebene**, [Abschnitt 2.7.2.4](../../parallel/openmp/2-7-2-4-shared.md) Seite 27.  
   
--   **Standardwert**, [2.7.2.5 Abschnitt](../../parallel/openmp/2-7-2-5-default.md) auf Seite 28.  
+-   **standardmäßige**, [Abschnitt 2.7.2.5](../../parallel/openmp/2-7-2-5-default.md) auf Seite 28.  
   
--   **Verringerung**, [2.7.2.6 Abschnitt](../../parallel/openmp/2-7-2-6-reduction.md) auf Seite 28.  
+-   **Reduzierung der**, [Abschnitt 2.7.2.6](../../parallel/openmp/2-7-2-6-reduction.md) auf Seite 28.  
   
--   **copyin**, [2.7.2.7 Abschnitt](../../parallel/openmp/2-7-2-7-copyin.md) auf Seite 31.  
+-   **Copyin**, [Abschnitt 2.7.2.7](../../parallel/openmp/2-7-2-7-copyin.md) auf der Seite "31".  
   
--   **copyprivate**, [2.7.2.8 Abschnitt](../../parallel/openmp/2-7-2-8-copyprivate.md) auf Seite 32.
+-   **Copyprivate**, [Abschnitt 2.7.2.8](../../parallel/openmp/2-7-2-8-copyprivate.md) auf der Seite "32".

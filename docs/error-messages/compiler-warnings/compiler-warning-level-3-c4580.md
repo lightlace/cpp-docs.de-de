@@ -1,44 +1,25 @@
 ---
-title: Compiler (Stufe 3) C4580 | Microsoft-Dokumentation
+title: Compilerwarnung (Stufe 3) C4580 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4580
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4580
+f1_keywords: C4580
+dev_langs: C++
+helpviewer_keywords: C4580
 ms.assetid: fef6e8e0-0d6a-44fa-b22a-2fe7ba2ef379
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: b551b1a7e0ae03a7de5108a1d114155786972847
-ms.openlocfilehash: c8cebbda1d3472a2efda43f816e7a13f2f460408
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: a8dae06450227f6739f12d7c55684b171d103377
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-3-c4580"></a>Compilerwarnung (Stufe 3) C4580
 [attribute] ist veraltet; geben Sie stattdessen System::Attribute oder Platform::Metadata als Basisklasse an.  

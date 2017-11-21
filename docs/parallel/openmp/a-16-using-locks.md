@@ -1,30 +1,30 @@
 ---
-title: "A.16   Using Locks"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Verwendung von Sperren A.16 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 873bf32b-6cfe-4ce1-b994-bef80b50f399
-caps.latest.revision: 8
-caps.handback.revision: "8"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 870895dae8aa6fe4b3720b9319359672fcb576af
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# A.16   Using Locks
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Im folgenden Beispiel \(für [Abschnitt 3.2](../../parallel/openmp/3-2-lock-functions.md) auf Seite 41\) beachten Sie, dass das Argument in den Typ`omp_lock_t`Funktionen Sperren sollte und dass keine Notwendigkeit vorliegt, sie zu leeren.  Die Sperren Funktionen führen dazu, dass die Threads im Leerlauf befinden, während sie auf den ersten Eintrag kritischen Abschnitt, aber andere Aufgaben zu erledigen beim Warten auf Eingabe an den zweiten.  Die `omp_set_lock`\-Funktion blockiert, aber die `omp_test_lock`\-Funktion ist dies nicht der Fall. Dadurch kann die Arbeit im Schritt \(\) ausgeführt werden sollen.  
+# <a name="a16---using-locks"></a>A. 16   Verwenden von Sperren
+Im folgenden Beispiel (für [Abschnitt 3.2](../../parallel/openmp/3-2-lock-functions.md) auf Seite 41) Beachten Sie, dass das Argument für die Lock-Funktionen Typ aufweisen soll `omp_lock_t`, und dass keine Notwendigkeit zum geleert besteht.  Die Lock-Funktionen dazu führen, dass die Threads im Leerlauf befindlich beim Eintritt in den ersten kritischen Abschnitt warten, jedoch andere Aufgaben während des Wartens auf dem zweiten Eintrag.  Die `omp_set_lock` Funktion blockiert, aber die `omp_test_lock` Funktion nicht der Fall, können die Arbeit in skip() durchgeführt werden.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // omp_using_locks.c  

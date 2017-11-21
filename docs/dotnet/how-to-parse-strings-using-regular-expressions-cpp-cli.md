@@ -1,33 +1,33 @@
 ---
-title: "Gewusst wie: Analysieren von Zeichenfolgen mithilfe von regul&#228;ren Ausdr&#252;cken (C++/CLI)"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Beispiele [C++], Zeichenfolgen"
-  - "Analysieren von Zeichenfolgen [C++]"
-  - "Reguläre Ausdrücke [C++], Analysieren von Zeichenfolgen"
-  - "Zeichenfolgen [C++], Analysieren"
+title: "Vorgehensweise: Analysieren von Zeichenfolgen mithilfe von regulären Ausdrücken (C + c++ / CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- parsing strings [C++]
+- examples [C++], strings
+- regular expressions [C++], parsing strings
+- strings [C++], parsing
 ms.assetid: 5b0c7ca3-9bba-4389-a45c-6d373cff91b0
-caps.latest.revision: 9
-caps.handback.revision: "9"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fed9fd05ed9916e4d285c64a398b48b82d99f884
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Gewusst wie: Analysieren von Zeichenfolgen mithilfe von regul&#228;ren Ausdr&#252;cken (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Im folgenden Codebeispiel wird die einfache Zeichenfolgenanalyse mithilfe der <xref:System.Text.RegularExpressions.Regex>\-Klasse im <xref:System.Text.RegularExpressions?displayProperty=fullName>\-Namespace veranschaulicht.  Eine Zeichenfolge mit mehreren Arten von Wortdelineatoren wird erstellt.  Die Zeichenfolge wird dann mit der <xref:System.Text.RegularExpressions.Regex>\-Klasse in Verbindung mit der <xref:System.Text.RegularExpressions.Match>\-Klasse analysiert.  Anschließend werden alle Wörter des Satzes getrennt angezeigt.  
+# <a name="how-to-parse-strings-using-regular-expressions-ccli"></a>Gewusst wie: Analysieren von Zeichenfolgen mithilfe von regulären Ausdrücken (C++/CLI)
+Im folgenden Codebeispiel wird die einfache Zeichenfolgenanalyse mithilfe der <xref:System.Text.RegularExpressions.Regex>-Klasse im <xref:System.Text.RegularExpressions?displayProperty=fullName>-Namespace veranschaulicht. Eine Zeichenfolge mit mehreren Arten von Wortdelineatoren wird erstellt. Die Zeichenfolge wird dann mit der <xref:System.Text.RegularExpressions.Regex>-Klasse in Verbindung mit der <xref:System.Text.RegularExpressions.Match>-Klasse analysiert. Anschließend werden alle Wörter des Satzes getrennt angezeigt.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // regex_parse.cpp  
@@ -61,6 +61,6 @@ int main( )
 }  
 ```  
   
-## Siehe auch  
- [Reguläre Ausdrücke von .NET Framework](../Topic/.NET%20Framework%20Regular%20Expressions.md)   
- [.NET\-Programmierung mit C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [Reguläre Ausdrücke von .NET Framework](/dotnet/standard/base-types/regular-expressions)   
+ [.NET-Programmierung mit C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

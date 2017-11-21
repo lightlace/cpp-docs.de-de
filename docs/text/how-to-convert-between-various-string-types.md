@@ -1,39 +1,39 @@
 ---
-title: "Gewusst wie: Konvertieren zwischen verschiedenen Zeichenfolgentypen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Konvertieren von Zeichenfolgentypen"
-  - "Zeichenfolgenkonvertierung [C++]"
-  - "Zeichenfolgen [C++], Konvertieren"
+title: 'Vorgehensweise: Konvertieren zwischen verschiedenen Zeichenfolgentypen | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- converting string types
+- string conversion [C++]
+- strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-caps.latest.revision: 13
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: d48e8e41d48b7a663f9dff37adc79f87f9a0c3d3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Gewusst wie: Konvertieren zwischen verschiedenen Zeichenfolgentypen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Dieses Thema veranschaulicht, wie verschiedene Visual C\+\+\-Zeichenfolgentypen in andere Zeichenfolgen konvertiert werden.  Folgende Zeichenfolgentypen werden behandelt: `char *`, `wchar_t*`, [\_bstr\_t](../cpp/bstr-t-class.md), [CComBSTR](../atl/reference/ccombstr-class.md), [CString](../atl-mfc-shared/using-cstring.md), [basic\_string](../standard-library/basic-string-class.md) und <xref:System.String?displayProperty=fullName>.  In allen Fällen wird beim Konvertieren in den neuen Typ eine Kopie der Zeichenfolge erstellt.  Alle Änderungen, die an der neuen Zeichenfolge vorgenommen werden, wirken sich nicht auf die Originalzeichenfolge aus und umgekehrt.  
+# <a name="how-to-convert-between-various-string-types"></a>Gewusst wie: Konvertieren zwischen verschiedenen Zeichenfolgentypen
+Dieses Thema veranschaulicht, wie verschiedene Visual C++-Zeichenfolgentypen in andere Zeichenfolgen konvertiert werden. Zeichenfolgen, die behandelt werden die folgenden Anweisungstypen `char *`, `wchar_t*`, [_bstr_t](../cpp/bstr-t-class.md), [CComBSTR](../atl/reference/ccombstr-class.md), [CString](../atl-mfc-shared/using-cstring.md), [Basic_string](../standard-library/basic-string-class.md), und <xref:System.String?displayProperty=fullName>. In allen Fällen wird beim Konvertieren in den neuen Typ eine Kopie der Zeichenfolge erstellt. Alle Änderungen, die an der neuen Zeichenfolge vorgenommen werden, wirken sich nicht auf die Originalzeichenfolge aus und umgekehrt.  
   
-## Konvertieren aus char \*  
+## <a name="converting-from-char-"></a>Konvertieren aus char *  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### **Beschreibung**  
- In diesem Beispiel wird veranschaulicht, wie ein `char *` in die anderen oben aufgeführten Zeichenfolgentypen konvertiert wird.  Eine `char *`\-Zeichenfolge \(auch bekannt als C\-Formatzeichenfolge\) gibt das Ende der Zeichenfolge mithilfe eines NULL\-Zeichens an.  C\-Formatzeichenfolgen erfordern normalerweise ein Byte pro Zeichen, können aber auch zwei Bytes verwenden.  In den folgenden Beispielen werden `char *`\-Zeichenfolgen aufgrund der sich aus der Konvertierung der Unicode\-Zeichenfolgen ergebenden Zeichenfolgendaten ggf. als Multibyte\-Zeichenfolgen bezeichnet.  Einzelbyte\- und Multibyte\-Zeichenfunktionen \(`MBCS`\) können `char *`\-Zeichenfolgen verarbeiten.  
+### <a name="description"></a>Beschreibung  
+ In diesem Beispiel wird veranschaulicht, wie ein `char *` in die anderen oben aufgeführten Zeichenfolgentypen konvertiert wird. Eine `char *`-Zeichenfolge (auch bekannt als C-Formatzeichenfolge) gibt das Ende der Zeichenfolge mithilfe eines NULL-Zeichens an. C-Formatzeichenfolgen erfordern normalerweise ein Byte pro Zeichen, können aber auch zwei Bytes verwenden. In den folgenden Beispielen werden `char *`-Zeichenfolgen aufgrund der sich aus der Konvertierung der Unicode-Zeichenfolgen ergebenden Zeichenfolgendaten ggf. als Multibyte-Zeichenfolgen bezeichnet. Einzelbyte- und Multibyte-Zeichenfunktionen (`MBCS`) können `char *`-Zeichenfolgen verarbeiten.  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // convert_from_char.cpp  
@@ -115,7 +115,7 @@ int main()
 }  
 ```  
   
-### Ausgabe  
+### <a name="output"></a>Ausgabe  
   
 ```  
 Hello, World! (char *)  
@@ -128,14 +128,14 @@ Hello, World! (basic_string)
 Hello, World! (System::String)  
 ```  
   
-## Konvertieren aus wchar\_t \*  
+## <a name="converting-from-wchart-"></a>Konvertieren aus wchar_t *  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### **Beschreibung**  
- In diesem Beispiel wird veranschaulicht, wie ein `wchar_t *` in die anderen oben aufgeführten Zeichenfolgentypen konvertiert wird.  Mehrere Zeichenfolgentypen, einschließlich `wchar_t *`, implementieren Breitzeichenformate.  Sie können einen einzelnen Funktionsaufruf wie `mbstowcs_s` oder einen Konstruktoraufruf für eine Klasse wie `CStringA` verwenden, um eine Zeichenfolge vom Multibyte\- in das Breitzeichenformat zu konvertieren bzw. umgekehrt.  
+### <a name="description"></a>Beschreibung  
+ In diesem Beispiel wird veranschaulicht, wie ein `wchar_t *` in die anderen oben aufgeführten Zeichenfolgentypen konvertiert wird. Mehrere Zeichenfolgentypen, einschließlich `wchar_t *`, implementieren Breitzeichenformate. Sie können einen einzelnen Funktionsaufruf wie `mbstowcs_s` oder einen Konstruktoraufruf für eine Klasse wie `CStringA` verwenden, um eine Zeichenfolge vom Multibyte- in das Breitzeichenformat zu konvertieren bzw. umgekehrt.  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // convert_from_wchar_t.cpp  
@@ -240,7 +240,7 @@ int main()
 }  
 ```  
   
-### Ausgabe  
+### <a name="output"></a>Ausgabe  
   
 ```  
 Hello, World! (wchar_t *)  
@@ -253,14 +253,14 @@ Hello, World! (basic_string)
 Hello, World! (System::String)  
 ```  
   
-## Konvertieren aus \_bstr\_t  
+## <a name="converting-from-bstrt"></a>Konvertieren aus _bstr_t  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### **Beschreibung**  
- In diesem Beispiel wird veranschaulicht, wie ein `_bstr_t` in die anderen oben aufgeführten Zeichenfolgentypen konvertiert wird.  Das `_bstr_t`\-Objekt ist eine Möglichkeit, Breitzeichen\-`BSTR`\-Zeichenfolgen zu kapseln.  Eine BSTR\-Zeichenfolge verfügt über einen Längenwert und verwendet kein NULL\-Zeichen, um die Zeichenfolge zu beenden. Der Zeichenfolgentyp, in den Sie konvertieren, erfordert allerdings möglicherweise ein abschließendes NULL\-Zeichen.  
+### <a name="description"></a>Beschreibung  
+ In diesem Beispiel wird veranschaulicht, wie ein `_bstr_t` in die anderen oben aufgeführten Zeichenfolgentypen konvertiert wird. Das `_bstr_t`-Objekt ist eine Möglichkeit, Breitzeichen-`BSTR`-Zeichenfolgen zu kapseln. Eine BSTR-Zeichenfolge verfügt über einen Längenwert und verwendet kein NULL-Zeichen, um die Zeichenfolge zu beenden. Der Zeichenfolgentyp, in den Sie konvertieren, erfordert allerdings möglicherweise ein abschließendes NULL-Zeichen.  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // convert_from_bstr_t.cpp  
@@ -341,7 +341,7 @@ int main()
 }  
 ```  
   
-### Ausgabe  
+### <a name="output"></a>Ausgabe  
   
 ```  
 Hello, World! (_bstr_t)  
@@ -354,14 +354,14 @@ Hello, World! (basic_string)
 Hello, World! (System::String)  
 ```  
   
-## Konvertieren aus CComBSTR  
+## <a name="converting-from-ccombstr"></a>Konvertieren aus CComBSTR  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### **Beschreibung**  
- In diesem Beispiel wird veranschaulicht, wie ein `CComBSTR`\-Element in die anderen oben aufgeführten Zeichenfolgentypen konvertiert wird.  Wie \_bstr\_t bietet auch ein `CComBSTR`\-Objekt die Möglichkeit, Breitzeichen\-BSTR\-Zeichenfolgen zu kapseln.  Eine BSTR\-Zeichenfolge verfügt über einen Längenwert und verwendet kein NULL\-Zeichen, um die Zeichenfolge zu beenden. Der Zeichenfolgentyp, in den Sie konvertieren, erfordert allerdings möglicherweise ein abschließendes NULL\-Zeichen.  
+### <a name="description"></a>Beschreibung  
+ In diesem Beispiel wird veranschaulicht, wie ein `CComBSTR` in die anderen oben aufgeführten Zeichenfolgentypen konvertiert wird. Wie _bstr_t bietet auch ein `CComBSTR`-Objekt die Möglichkeit, Breitzeichen-BSTR-Zeichenfolgen zu kapseln. Eine BSTR-Zeichenfolge verfügt über einen Längenwert und verwendet kein NULL-Zeichen, um die Zeichenfolge zu beenden. Der Zeichenfolgentyp, in den Sie konvertieren, erfordert allerdings möglicherweise ein abschließendes NULL-Zeichen.  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // convert_from_ccombstr.cpp  
@@ -452,7 +452,7 @@ int main()
 }  
 ```  
   
-### Ausgabe  
+### <a name="output"></a>Ausgabe  
   
 ```  
 Hello, World! (CComBSTR)  
@@ -465,16 +465,16 @@ Hello, World! (basic_string)
 Hello, World! (System::String)  
 ```  
   
-## Konvertieren aus CString  
+## <a name="converting-from-cstring"></a>Konvertieren aus CString  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### **Beschreibung**  
- In diesem Beispiel wird veranschaulicht, wie ein `CString`\-Element in die anderen oben aufgeführten Zeichenfolgentypen konvertiert wird.  `CString` basiert auf dem TCHAR\-Datentyp, der davon abhängt, ob das `_UNICODE`\-Symbol definiert ist.  Ist `_UNICODE` nicht definiert, wird `TCHAR` für char definiert und `CString` enthält eine Mehrbytezeichenzeichenfolge. Wenn `_UNICODE` definiert ist, wird `TCHAR` für `wchar_t` definiert, und `CString` enthält eine Zeichenfolge mit Breitzeichen.  
+### <a name="description"></a>Beschreibung  
+ In diesem Beispiel wird veranschaulicht, wie ein `CString` in die anderen oben aufgeführten Zeichenfolgentypen konvertiert wird. `CString` basiert auf dem TCHAR-Datentyp, der davon abhängt, ob das `_UNICODE`-Symbol definiert ist. Ist `_UNICODE` nicht definiert, wird `TCHAR` für char definiert und `CString` enthält eine Mehrbytezeichenzeichenfolge. Wenn `_UNICODE` definiert ist, wird `TCHAR` für `wchar_t` definiert, und `CString` enthält eine Zeichenfolge mit Breitzeichen.  
   
- `CStringA` ist die Multibyte\-Zeichenfolgenversion von `CString`, `CStringW` ist die Version mit ausschließlich Zeichenfolgen mit Breitzeichen.  Weder`CStringA` noch `CStringW` bestimmt mithilfe von `_UNICODE`, wie kompiliert werden soll.  `CStringA` und `CStringW` werden in diesem Beispiel verwendet, um kleinere Unterschiede in der Puffergrößenzuordnung und Ausgabebehandlung aufzuklären.  
+ `CStringA` ist die Multibyte-Zeichenfolgenversion von `CString`, `CStringW` ist die Version mit ausschließlich Zeichenfolgen mit Breitzeichen. Weder`CStringA` noch `CStringW` bestimmt mithilfe von `_UNICODE`, wie kompiliert werden soll. `CStringA` und `CStringW` werden in diesem Beispiel verwendet, um kleinere Unterschiede in der Puffergrößenzuordnung und Ausgabebehandlung aufzuklären.  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // convert_from_cstring.cpp  
@@ -597,7 +597,7 @@ delete systemstring;
 }  
 ```  
   
-### Ausgabe  
+### <a name="output"></a>Ausgabe  
   
 ```  
 Hello, World! (CStringA)  
@@ -614,14 +614,14 @@ Hello, World! (basic_string)
 Hello, World! (System::String)  
 ```  
   
-## Konvertieren aus basic\_string  
+## <a name="converting-from-basicstring"></a>Konvertieren aus basic_string  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### **Beschreibung**  
+### <a name="description"></a>Beschreibung  
  In diesem Beispiel wird veranschaulicht, wie ein `basic_string` in die anderen oben aufgeführten Zeichenfolgentypen konvertiert wird.  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // convert_from_basic_string.cpp  
@@ -698,7 +698,7 @@ int main()
 }  
 ```  
   
-### Ausgabe  
+### <a name="output"></a>Ausgabe  
   
 ```  
 Hello, World! (basic_string)  
@@ -711,14 +711,14 @@ Hello, World! (CStringW)
 Hello, World! (System::String)  
 ```  
   
-## Konvertieren aus System::String  
+## <a name="converting-from-systemstring"></a>Konvertieren aus System::String  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### **Beschreibung**  
- In diesem Beispiel wird veranschaulicht, wie von einem Breitzeichen \(Unicode\) <xref:String?displayProperty=fullName> in die anderen oben aufgeführten Zeichenfolgentypen konvertiert wird.  
+### <a name="description"></a>Beschreibung  
+ In diesem Beispiel wird veranschaulicht, wie von einem Breitzeichen (Unicode) konvertiert [System:: String](assetId:///System::String?qualifyHint=True&autoUpgrade=True) in die anderen oben aufgeführten Zeichenfolgentypen.  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // convert_from_system_string.cpp  
@@ -806,7 +806,7 @@ int main()
 }  
 ```  
   
-### Ausgabe  
+### <a name="output"></a>Ausgabe  
   
 ```  
 Hello, World! (System::String)  
@@ -819,16 +819,15 @@ Hello, World! (CStringW)
 Hello, World! (basic_string)  
 ```  
   
-## Siehe auch  
- [Visual C\+\+ Guided Tour](assetId:///499cb66f-7df1-45d6-8b6b-33d94fd1f17c)   
- [ATL and MFC String Conversion Macros](../Topic/ATL%20and%20MFC%20String%20Conversion%20Macros.md)   
- [CString Operations Relating to C\-Style Strings](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)   
- [Gewusst wie: Konvertieren einer Standardzeichenfolge nach System::String](../dotnet/how-to-convert-standard-string-to-system-string.md)   
- [Gewusst wie: Konvertieren von System::String zu Standardzeichenfolge](../dotnet/how-to-convert-system-string-to-standard-string.md)   
- [Gewusst wie: Umwandeln von System::String nach wchar\_t\* oder char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)   
+## <a name="see-also"></a>Siehe auch  
+ [ATL und MFC-Makros zur Zeichenfolgenkonvertierung](../atl/reference/string-conversion-macros.md)   
+ [CString-Vorgänge im Zusammenhang mit Zeichenfolgen im C-Stil](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)   
+ [Vorgehensweise: Konvertieren einer Standardzeichenfolge nach System:: String](../dotnet/how-to-convert-standard-string-to-system-string.md)   
+ [Vorgehensweise: Konvertieren von System:: String in Standardzeichenfolge](../dotnet/how-to-convert-system-string-to-standard-string.md)   
+ [Vorgehensweise: Konvertieren von System:: String nach Wchar_t * oder Char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)   
  [Programmieren mit CComBSTR](../atl/programming-with-ccombstr-atl.md)   
- [mbstowcs\_s, \_mbstowcs\_s\_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)   
- [wcstombs\_s, \_wcstombs\_s\_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)   
- [strcpy\_s, wcscpy\_s, \_mbscpy\_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)   
- [strcat\_s, wcscat\_s, \_mbscat\_s](../c-runtime-library/reference/strcat-s-wcscat-s-mbscat-s.md)   
- [pin\_ptr \(C\+\+\/CLI\)](../windows/pin-ptr-cpp-cli.md)
+ [mbstowcs_s, _mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)   
+ [Wcstombs_s _wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)   
+ [strcpy_s, wcscpy_s, _mbscpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)   
+ [strcat_s, wcscat_s, _mbscat_s](../c-runtime-library/reference/strcat-s-wcscat-s-mbscat-s.md)   
+ [pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)

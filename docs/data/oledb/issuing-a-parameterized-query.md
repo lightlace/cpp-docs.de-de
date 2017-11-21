@@ -1,28 +1,27 @@
 ---
-title: "Ausgeben einer parametrisierten Abfrage | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Parameterabfragen, Ausführen mit der CCommand-Klasse"
+title: Ausgeben einer parametrisierten Abfrage | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: parameter queries, running using CCommand class
 ms.assetid: aedb0fce-52a4-4c97-a5c9-b2114be6c3b0
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8386358a2dea8949d069384029ea110e8463a45d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Ausgeben einer parametrisierten Abfrage
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Das folgende Beispiel führt eine einfache parametrisierte Abfrage aus, die Datensätze mit einem Feld für das Alter \(mit einem Wert über 30\) aus einer Microsoft Access\-Datenbank abruft.  Zur Unterstützung der Parameter muss der Datensatz über eine zusätzliche Zuordnung verfügen.  Der folgende Code in einem ATL\-Projekt verwendet die `CCommand`\-Klasse anstelle der im vorherigen Beispiel [Durchlaufen eines einfachen Rowsets](../../data/oledb/traversing-a-simple-rowset.md) verwendeten `CTable`\-Klasse.  
+# <a name="issuing-a-parameterized-query"></a>Ausgeben einer parametrisierten Abfrage
+Im folgende Beispiel stellt eine einfache parametrisierte Abfrage, die Datensätze mit einer Altersfeld (, das größer als 30 ist) aus einer Tabelle in einer Microsoft Access-Datenbank abruft. Um den Parameter zu unterstützen, muss der Benutzerdatensatz eine weitere Zuordnung haben. Der folgende Code in einem ATL-Projekt verwendet die `CCommand` -Klasse statt der `CTable` im vorherigen Beispiel verwendete Klasse [Durchlaufen eines einfachen Rowsets](../../data/oledb/traversing-a-simple-rowset.md).  
   
 ```  
 #include <atldbcli.h>  
@@ -50,7 +49,7 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- Der Benutzerdatensatz `CArtists` sieht wie folgt aus:  
+ Der Benutzerdatensatz `CArtists`, wie folgt aussieht:  
   
 ```  
 class CArtists  
@@ -76,5 +75,5 @@ END_PARAM_MAP()
 };  
 ```  
   
-## Siehe auch  
- [Arbeiten mit OLE DB\-Consumervorlagen](../../data/oledb/working-with-ole-db-consumer-templates.md)
+## <a name="see-also"></a>Siehe auch  
+ [Arbeiten mit OLE DB-Consumervorlagen](../../data/oledb/working-with-ole-db-consumer-templates.md)

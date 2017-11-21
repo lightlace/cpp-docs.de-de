@@ -1,47 +1,54 @@
 ---
-title: "Gewusst wie: Kombinieren von Gruppen mithilfe von combinable | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "combinable-Klasse, Beispiel"
-  - "Kombinieren von Sätzen mit Combinable [Concurrency Runtime]"
+title: 'Vorgehensweise: Kombinieren von combinable | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- combinable class, example
+- combining sets with combinable [Concurrency Runtime]
 ms.assetid: 66ffe8e3-6bbb-4e9f-b790-b612922a68a7
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5210a30efe7f171d55e26b30352eeb6eb99b89c9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Gewusst wie: Kombinieren von Gruppen mithilfe von combinable
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="how-to-use-combinable-to-combine-sets"></a>Gewusst wie: Kombinieren von Gruppen mithilfe von combinable
+In diesem Thema zeigt, wie die [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) Klasse, um den Satz von Primzahlen zu berechnen.  
+  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird die Primzahlengruppe zweimal berechnet. Jede Berechnung speichert das Ergebnis in einen [Bitset](../../standard-library/bitset-class.md) Objekt. Im Beispiel wird die Primzahlengruppe zunächst seriell und anschließend parallel berechnet. Das Beispiel gibt außerdem die Zeit, die zum Ausführen beider Berechnungen benötigt wird, in der Konsole aus.  
+  
+ Dieses Beispiel verwendet die [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) Algorithmus und eine `combinable` Objekt, das Thread-lokalen Threadgruppen. Es verwendet dann die [combine_each](reference/combinable-class.md#combine_each) Methode, um die Thread-lokalen Threadgruppen der abschließende Satz kombinieren.  
 
-In diesem Thema wird die Verwendung der [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md)\-Klasse zum Berechnen der Primzahlengruppe beschrieben.  
   
-## Beispiel  
- Im folgenden Beispiel wird die Primzahlengruppe zweimal berechnet.  Bei jeder Berechnung wird das Ergebnis in einem [std::bitset](../../standard-library/bitset-class.md)\-Objekt gespeichert.  Im Beispiel wird die Primzahlengruppe zunächst seriell und anschließend parallel berechnet.  Das Beispiel gibt außerdem die Zeit, die zum Ausführen beider Berechnungen benötigt wird, in der Konsole aus.  
-  
- In diesem Beispiel werden zum Berechnen von lokalen Threadgruppen der [concurrency::parallel\_for](../Topic/parallel_for%20Function.md)\-Algorithmus und ein `combinable`\-Objekt verwendet.  Anschließend werden die lokalen Threadgruppen mithilfe der [concurrency::combine\_each](../Topic/combinable::combine_each%20Method.md)\-Methode zu einer endgültigen Gruppe gruppiert.  
-  
- [!CODE [concrt-parallel-combine-primes#1](../CodeSnippet/VS_Snippets_ConcRT/concrt-parallel-combine-primes#1)]  
+ [!code-cpp[concrt-parallel-combine-primes#1](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-combine-sets_1.cpp)]  
   
  Die folgende Beispielausgabe entspricht einem Ergebnis auf einem Computer mit vier Prozessoren.  
   
-  **serielle Uhrzeit: 312 ms**  
-**parallele Uhrzeit: 78 ms**   
-## Kompilieren des Codes  
- Kopieren Sie den Beispielcode, und fügen Sie ihn in ein Visual Studio\-Projekt ein. Alternativ dazu können Sie ihn auch in eine Datei mit dem Namen `parallel-combine-primes.cpp` einfügen und dann folgenden Befehl in einem Visual Studio\-Eingabeaufforderungsfenster ausführen.  
+```Output  
+serial time: 312 ms  
+ 
+parallel time: 78 ms  
+```  
   
- **cl.exe \/EHsc parallel\-combine\-primes.cpp**  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
+ Kopieren Sie den Beispielcode und fügen Sie ihn in ein Visual Studio-Projekt, oder fügen Sie ihn in eine Datei mit dem Namen `parallel-combine-primes.cpp` und dann den folgenden Befehl in eine Visual Studio-Eingabeaufforderungsfenster ausführen.  
   
-## Siehe auch  
+ **/ EHsc / CL.exe Parallel-Combine-primes.cpp**  
+  
+## <a name="see-also"></a>Siehe auch  
  [Parallele Container und Objekte](../../parallel/concrt/parallel-containers-and-objects.md)   
- [combinable\-Klasse](../../parallel/concrt/reference/combinable-class.md)   
- [combinable::combine\_each\-Methode](../Topic/combinable::combine_each%20Method.md)
+ [combinable-Klasse](../../parallel/concrt/reference/combinable-class.md)   
+ [combinable:: combine_each-Methode](reference/combinable-class.md#combine_each)
+
+

@@ -1,70 +1,60 @@
 ---
-title: "2.7.2.6 reduction"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.7.2.6 Reduzierung der | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: e7630a15-2978-4dbe-a29b-3a46371a0151
-caps.latest.revision: 6
-caps.handback.revision: "6"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cbcb5cc6c4b01f3cbf996431435f42a7b034d002
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# 2.7.2.6 reduction
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="2726-reduction"></a>2.7.2.6 reduction
 
-Diese Klausel führt eine Verringerung auf den skalaren Variablen *in der Liste Variablen*angezeigt werden, werden mit dem Operator " op aus.  Die Syntax der `reduction`\-Klausel lautet wie folgt:  
+Diese Klausel führt eine Reduzierung der skalaren Variablen in *Variablenliste*, mit dem Operator *Op*. Die Syntax der `reduction` -Klausel ist wie folgt:
+
+> Verringerung (*Op*: *Variablenliste*)
+
+Eine Verkleinerung ist in der Regel für eine Anweisung mit einem der folgenden Formate angegeben werden:
+
+> *X* = *x* *Op* *Expr*  
+> *X* *Binop* = *Expr*  
+> *X* = *Expr* *Op* *x* (mit Ausnahme von Subtraktion)  
+> *x*++  
+> ++*x*  
+> *x*--  
+> --*x*  
+
+Dabei gilt:
+
+*x*  
+Einer der Reduction-Variablen, die im angegebenen der `list`.
+
+*Variable-Liste*  
+Eine durch Trennzeichen getrennte Liste von skalaren Reduction-Variablen.
+
+*expr*  
+Ein Ausdruck mit skalaren Typ, der nicht verweist *x*.
+
+*op*  
+Keines überladenen Operators, aber eine der +, &#42; -, &amp;, ^, &#124; &amp; &amp;, oder &#124; &#124;.
+
+*binop*  
+Keines überladenen Operators, aber eine der +, &#42; -, &amp;, ^, oder &#124;.
+
+Im folgenden ist ein Beispiel für die `reduction` Klausel:  
   
-```  
-  
-reduction(  
-op  
-:  
-variable-list  
-)  
-  
-```  
-  
- Eine Verringerung wird i. d. R. für eine Anweisung mit einem der folgenden Formate angegeben:  
-  
-```  
-  
-        x     =  x     op     expr  
-x     binop=  expr  
-x     =  expr     op     x            (except for subtraction)  
-x++  
-++x  
-x--  
---x  
-```  
-  
- Dabei gilt:  
-  
- *x*  
- Eine der Variablen Reduzierungs in `list`.  
-  
- *VariableListe*  
- Eine durch Trennzeichen getrennte Liste von skalaren Variablen Reduzierungs.  
-  
- *expr*  
- Ein Ausdruck mit skalarem Typ, der nicht *X*verweist *.*  
-  
- `op`  
- Es wurde kein überladener Operator \+, der jedoch ein, \-, &\*, ^, &#124;oder &&&#124;&#124;.  
-  
- `binop`  
- Es wurde kein überladener Operator \+, der jedoch ein, \-, &\*, oder ^ &#124;.  
-  
- Im Folgenden finden Sie ein Beispiel für die `reduction`\-Klausel:  
-  
-```  
+```cpp  
 #pragma omp parallel for reduction(+: a, y) reduction(||: am)  
 for (i=0; i<n; i++) {  
    a += b[i];  
@@ -73,49 +63,49 @@ for (i=0; i<n; i++) {
 }  
 ```  
   
- Wie im Beispiel gezeigt, wird möglicherweise ein Operator innerhalb eines Funktionsaufrufs ausgeblendet.  Der Benutzer sollte sorgfältig darauf achten, den der Operator in den `reduction`\-Klausel Reduzierungs Übereinstimmungen mit den Vorgang angegeben hat.  
-  
- Obwohl der rechte Operand aus &#124;&#124; Operator hat keine Nebeneffekte in diesem Beispiel, werden sie nicht zulässig, jedoch sollten sorgfältig verwendet werden.  In diesem Kontext ein Nebeneffekt tritt möglicherweise nicht garantiert, dass der während der sequenziellen Ausführung der Schleife ausgeführt, während der parallelen Ausführung.  Dieser Unterschied kann auftreten, da die Ausführungsreihenfolge der Iterationen unbestimmt ist.  
-  
- Der Operator wird, um den Anfangswert aller privaten Variablen zu bestimmen, die vom Compiler für die Verringerung und den abschließenden operator zu bestimmen, verwendet werden.  Das Angeben des Operators explizit zugelassen Reduzierungs der Anweisung außerhalb des lexikalischen Wertebereichs des Konstrukts sein.  Eine beliebige Anzahl `reduction`\-Klauseln wird in der Direktive angegeben, aber eine Variable tritt möglicherweise in höchstens einer `reduction`\-Klausel für diese Direktive.  
-  
- Eine private Kopie einer Variablen *in der Liste Variablen* , eine für jeden Thread erstellt, als ob die `private`\-Klausel verwendet worden wäre.  Der private Kopie wird entsprechend dem Operator initialisiert \(siehe folgende Tabelle\).  
-  
- Am Ende des Bereichs, für den die `reduction`\-Klausel angegeben wurde, wird das ursprüngliche Objekt aktualisiert, um das Ergebnis der Kombination des ursprünglichen Werts mit dem endgültigen Werts aus jeder der private Kopien unter Verwendung des angegebenen Operators angibt.  Die Reduzierungs Operatoren sind alle Subtraktion\) \(außer vereinigend, und der Compiler weist möglicherweise auf die Berechnung des endgültigen Werts neu zu.  \(Mit partiellen Ergebnisse einer Subtraktions reduzierung werden hinzugefügt, um den endgültigen Wert zu bilden.\)  
-  
- Der Wert des ursprünglichen Objekts wird endlos wiederholt, wenn der erste Thread die enthaltende \- Klausel erreicht hat und daher bleibt, bis Reduzierungs die Berechnung abgeschlossen ist.  Normalerweise ist die Berechnung am Ende des Konstrukts abgeschlossen. Wenn jedoch die `reduction`\-Klausel in einem Konstrukt verwendet wird, auf dem auch `nowait` angewendet wird, bleibt der Wert des ursprünglichen Objekts endlos wiederholt, bis eine Barrieren Datensynchronisierung durchgeführt wurde, um sicherzustellen, dass alle Threads die `reduction`\-Klausel durchgeführt haben.  
-  
- In der folgenden Tabelle sind die Operatoren, die gültig sind und ihre kanonischen Initialisierungswerte auf.  Der tatsächliche Initialisierungswert ist mit dem Datentyp der Reduzierungs variable konsistent.  
-  
-|Operator|Initialisierung|  
-|--------------|---------------------|  
-|\+|0|  
-|\*|1|  
-|\-|0|  
-|&|~0|  
-|&#124;|0|  
-|^|0|  
-|&&|1|  
-|&#124;&#124;|0|  
-  
- Die Einschränkungen zur `reduction`\-Klausel lauten wie folgt:  
-  
--   Der Typ der Variablen in der `reduction`\-Klausel muss für den Operator Reduzierungs gültig, außer dass Zeigertypen und Verweistypen sind nicht zulässig.  
-  
--   Eine Variable, die in der `reduction`\-Klausel angegeben wird, darf nicht qualifiziertes \- **const**sein.  
-  
--   Variablen, die innerhalb eines parallelen Bereichs privat sind oder die in der `reduction`\-Klausel **Ähnlichkeit**\-Direktive angezeigt werden, können nicht in einer `reduction`\-Klausel auf Arbeitsteilungs direktiven angegeben werden, die zum parallelen Konstrukt bindet.  
-  
-    ```  
-    #pragma omp parallel private(y)  
-    { /* ERROR - private variable y cannot be specified  
-                 in a reduction clause */  
-       #pragma omp for reduction(+: y)  
-       for (i=0; i<n; i++)  
-          y += b[i];  
-    }  
-  
-    /* ERROR - variable x cannot be specified in both  
-               a shared and a reduction clause */  
-    #pragma omp parallel for shared(x) reduction(+: x)  
-    ```
+Wie im Beispiel gezeigt wird, kann ein Operator in einem Funktionsaufruf ausgeblendet. Der Benutzer sollte Achten Sie darauf, dass der Operator, in angegeben der `reduction` Klausel entspricht den Reduction-Vorgang.
+
+Obwohl der Rechte Operand des der &#124; &#124; Operator hat keine Nebenwirkungen in diesem Beispiel, sie sind zulässig, jedoch mit Vorsicht verwendet werden soll. In diesem Kontext kann ein Nebeneffekt, der mit Sicherheit nicht auftreten, während die sequenzielle Ausführung der Schleife, während der parallelen Ausführung auftreten. Dieser Unterschied kann auftreten, da die Reihenfolge der Ausführung der Iterationen unbestimmt ist.
+
+Der Operator wird den Anfangswert aller privaten Variablen, die vom Compiler verwendet werden, für die Verkürzung der Dauer zu ermitteln und bestimmen den Finalisierung-Operator verwendet. Explizites Angeben von den Operator ermöglicht die Reduzierung der Anweisung außerhalb der lexikalische Ausmaß des Konstrukts. Eine beliebige Anzahl von `reduction` Klauseln können für die Direktive angegeben werden, aber eine Variable kann in höchstens eine angezeigt werden `reduction` -Klausel für diese Richtlinie.
+
+Eine private Kopie jeder Variablen in *Variablenliste* erstellt wird – einer für jeden Thread, als ob die `private` hatte-Klausel verwendet wurde. Die private Kopie wird gemäß dem Operator initialisiert (siehe die folgende Tabelle).
+
+Am Ende des Bereichs für die die `reduction` -Klausel angegeben wurde, das ursprüngliche Objekt wird aktualisiert, und das Ergebnis einer Kombination aus den ursprünglichen Wert mit den endgültigen Wert der einzelnen privaten Kopien mithilfe des angegebenen Operators wieder. Die Reduzierungsoperatoren alle assoziativ (mit Ausnahme von Subtraktion) sind, und der Compiler kann kostenlos erneut zugeordnet werden, die Berechnung des endgültigen Wert. (Die Teilergebnisse einer Subtraktion Verringerung werden hinzugefügt, um den endgültigen Wert zu bilden.)
+
+Der Wert des ursprünglichen Objekts wird unbestimmt, wenn der erste Thread die enthaltende-Klausel erreicht und bleibt, bis die Reduzierung der Berechnung abgeschlossen ist.  Normalerweise ist die Berechnung abgeschlossen am Ende des Konstrukts, jedoch, wenn die `reduction` -Klausel wird verwendet, auf ein Konstrukt, `nowait` wird auch angewendet, der Wert des ursprünglichen Objekts bleibt unbestimmt bis eine Barriere Synchronisierung ausgeführt wurde, um sicherzustellen, dass alle Threads den abgeschlossensind`reduction`Klausel.
+
+Die folgende Tabelle enthält die Operatoren, die gültig sind und ihre kanonischen Initialisierungswerte. Der Wert für die eigentliche Initialisierung wird mit dem Datentyp der Reduction-Variable konsistent sein.
+
+|Operator|Initialisierung|
+|--------------|--------------------|
+|+|0|
+|&#42;|1|
+|-|0|
+|&amp;|~0|
+|&#124;|0|
+|^|0|
+|&amp;&amp;|1|
+|&#124;&#124;|0|
+
+Die Einschränkungen fest, die `reduction` Klausel lauten wie folgt:
+
+- Der Typ der Variablen in der `reduction` Klausel muss für die Reduction-Operator gültig sein, außer dass Zeigertypen und Verweistypen nicht zulässig sind.
+
+- Eine Variable, die im angegebenen der `reduction` Klausel darf nicht sein **const**-qualifizierten.
+
+- Variablen, die innerhalb eines parallelen Bereichs privaten sind bzw. die angezeigt werden, in, der `reduction` -Klausel der eine **parallele** Richtlinie kann nicht angegeben werden, eine `reduction` -Klausel für eine arbeitsteilungsanweisung, die an das parallele Konstrukt gebunden.
+
+   ```cpp
+   #pragma omp parallel private(y)
+   { /* ERROR - private variable y cannot be specified
+                in a reduction clause */
+      #pragma omp for reduction(+: y)
+      for (i=0; i<n; i++)
+         y += b[i];
+   }
+   
+   /* ERROR - variable x cannot be specified in both
+              a shared and a reduction clause */
+   #pragma omp parallel for shared(x) reduction(+: x)
+   ```

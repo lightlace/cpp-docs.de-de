@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 04/21/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -104,32 +103,17 @@ helpviewer_keywords:
 - C3486
 - C3494
 - C3497
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: a5651dfb-c402-4e01-b3ae-28f371e51d6a
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 79b672c07429526ccbf7f5d5f9553956bf1f01e0
-ms.lasthandoff: 04/24/2017
-
+ms.openlocfilehash: 40bf082b95fd39af44605927189d0977c065a3b5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-errors-c3400-through-c3499"></a>Compilerfehler Fehler C3400 über C3499
 In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen Unterabschnitt der Visual C++-Compilerfehler enthalten. Sie können hier auf die Informationen zugreifen oder im Fenster **Ausgabe** in Visual Studio eine Fehlernummer auswählen und dann die F1-TASTE drücken.  
@@ -144,13 +128,13 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C3400](compiler-error-c3400.md)|Einschränkung zirkuläre Abhängigkeit mit "*einschränkung1*'und'*einschränkung2*"|  
 |Compilerfehler Fehler C3401|"*Spezifizierer*": Ungültiger Assembler-Zugriffsspezifizierer - nur 'private' ist für die Klassenvorlagen zulässig|  
 |Compilerfehler Fehler C3402|"*Funktion*": Überladung außer im aktuellen Bereich kann nicht aufgelöst werden.|  
-|Compilerfehler Fehler C3403|"thread_local" kann bei "/clr:pure" oder "/clr:safe" nicht verwendet werden.|  
+|Compilerfehler Fehler C3403|Thread_local kann nicht verwendet werden, mit/clr: pure oder/clr: safe|  
 |Compilerfehler Fehler C3404|"*erstellen*": Unerwarteter Syntaxfehler|  
 |Compilerfehler Fehler C3405|"*Funktion*": Überladung ohne vollständigen Deskriptor kann nicht aufgelöst werden.|  
 |Compilerfehler Fehler C3406|"*Schlüsselwort*": kann nicht in Typbezeichnern nicht verwendet werden|  
 |Compilerfehler Fehler C3407|"*Typ*" kann nicht in diesem Kontext nicht verwendet werden|  
 |[Compilerfehler C3408](compiler-error-c3408.md)|"*Attribut*': Attribut ist für Vorlagendefinitionen nicht zulässig.|  
-|[Compilerfehler C3409](compiler-error-c3409.md)|Ein leerer Attributblock ist nicht zulässig|  
+|[Compilerfehler C3409](compiler-error-c3409.md)|ein leerer Attributblock ist nicht zulässig.|  
 |Compilerfehler Fehler C3410|"*Bezeichner*": der Typ, der die explizite Instanziierung "*Typ*"entspricht nicht dem Typ der Variable Vorlage"*Typ*"|  
 |Compilerfehler Fehler C3411|"*Typ*" ist als die Größe eines Arrays ungültig, da es sich nicht um einen Integer-Datentyp ist|  
 |[Compilerfehler C3412](compiler-error-c3412.md)|"*Spezialisierung*': Vorlage im aktuellen Bereich kann nicht spezialisiert|  
@@ -171,14 +155,14 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |Compilerfehler Fehler C3427|"*Kontext*": "*Schlüsselwort*" kann nicht verwendet werden, mit Layout_version (*Anzahl*)|  
 |Compilerfehler Fehler C3428|"*Kontext*": "*Schlüsselwort*" kann nur auf Klassendeklarationen oder-Definitionen angewendet werden|  
 |Compilerfehler Fehler C3429|"*Kontext*": "*Schlüsselwort*" kann nicht angewendet werden, auf eine Union|  
-|Compilerfehler Fehler C3430|Eine bereichsbezogene Enumeration muss über einen Namen verfügen.|  
+|Compilerfehler Fehler C3430|eine Bereichsbezogene Enumeration muss einen Namen aufweisen.|  
 |Compilerfehler Fehler C3431|"*Bezeichner*": *Typ1* kann nicht erneut deklariert werden, als *Typ2*|  
 |Compilerfehler Fehler C3432|"*Bezeichner*': eine Vorwärtsdeklaration einer Enumeration ohne bereichseinschränkung benötigen einen zugrunde liegenden Typ|  
 |Compilerfehler Fehler C3433|"*Bezeichner*": alle Deklarationen einer Enumeration müssen den gleichen zugrunde liegenden Typ haben, wurde '*Typ1*"jetzt"*Typ2*"|  
 |Compilerfehler Fehler C3434|"*Kontext*": Enumeratorwert "*Anzahl*"kann nicht als dargestellt werden"*Typ*', Wert ist'*Anzahl*"|  
 |Compilerfehler Fehler C3435|Zeichensatz "*Namen*" wird nicht unterstützt|  
-|Compilerfehler Fehler C3436|#Pragma-Setlocale wird nicht unterstützt, wenn /source-charset, /execution-charset oder /utf-8 angegeben wurde|  
-|Compilerfehler Fehler C3437|#Pragma-Execution_character_set wird nicht unterstützt, wenn /source-charset, /execution-charset oder /utf-8 angegeben wurde|  
+|Compilerfehler Fehler C3436|#pragma Setlocale wird nicht unterstützt, wenn /source-charset, /execution-charset oder /utf-8 angegeben wurde|  
+|Compilerfehler Fehler C3437|#pragma Execution_character_set wird nicht unterstützt, wenn /source-charset, /execution-charset oder /utf-8 angegeben wurde|  
 |Compilerfehler Fehler C3438|"*Kontext*": "*Wert*" kann nicht angewendet werden, um eine verwaltete/WinRT-Klasse|  
 |Compilerfehler Fehler C3439|Layout_version (*Anzahl*): Ungültige Versionsnummer|  
 |Compilerfehler Fehler C3440|"*Deklaration*": Layout_version (*Anzahl*) mit einer früheren Deklaration nicht kompatibel.|  
@@ -187,7 +171,7 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |Compilerfehler Fehler C3443|Der Standard-Memberinitialisierer für "*Klasse*' ist rekursiv|  
 |Compilerfehler Fehler C3444|Leere Aggregatklasse*Klasse*' muss mit '{}' initialisiert werden|  
 |Compilerfehler Fehler C3445|Copy-Liste-Initialisierung von "*Typ*' können keine expliziten Konstruktor|  
-|Compilerfehler Fehler C3446|"*Klasse*': eine Standard-Memberinitialisierer ist nicht zulässig, für einen Member einer Wertklasse|  
+|[Compilerfehler C3446](compiler-error-c3446.md)|"*Klasse*': eine Standard-Memberinitialisierer ist nicht zulässig, für einen Member einer Wertklasse|  
 |Compilerfehler Fehler C3447|Veraltet.|  
 |Compilerfehler Fehler C3448|Veraltet.|  
 |Compilerfehler Fehler C3449|Veraltet.|  
@@ -218,14 +202,14 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |Compilerfehler Fehler C3474|Ausgabedatei konnte nicht geöffnet werden "*Filename*"|  
 |Compilerfehler Fehler C3475|Syntaxfehler in der Eingabedatei "*Filename*"|  
 |Compilerfehler Fehler C3476|Datei konnte nicht geöffnet "*Filename*" für die Eingabe|  
-|Compilerfehler Fehler C3477|Ein Lambda kann nicht in einem nicht ausgewerteten Kontext angezeigt werden.|  
+|Compilerfehler Fehler C3477|ein Lambda-Ausdruck kann nicht in einem nicht ausgewertete Kontext angezeigt werden.|  
 |Compilerfehler Fehler C3478|"*Bezeichner*": ein Array kann nicht über das Kopieren von erfasst werden|  
-|Compilerfehler Fehler C3479|SAL-Anmerkungen in Lambdas werden nicht unterstützt.|  
+|Compilerfehler Fehler C3479|SAL-Anmerkungen für Lambda-Ausdrücke werden nicht unterstützt.|  
 |[Compilerfehler C3480](compiler-error-c3480.md)|"*Variable*': eine lambdaerfassungsvariable muss aus einem einschließenden Funktionsbereich|  
 |[Compilerfehler C3481](compiler-error-c3481.md)|"*Bezeichner*": lambdaerfassungsvariable wurde nicht gefunden.|  
 |[Compilerfehler C3482](compiler-error-c3482.md)|"this" kann nur als Lambdaerfassung innerhalb einer nicht statischen Memberfunktion verwendet werden.|  
 |[Compilerfehler C3483](compiler-error-c3483.md)|"*Bezeichner*" ist bereits Teil der Erfassungsliste des Lambda-|  
-|[Compilerfehler C3484](compiler-error-c3484.md)|Syntaxfehler: "->" wird vor dem Rückgabetyp erwartet.|  
+|[Compilerfehler C3484](compiler-error-c3484.md)|Syntaxfehler: erwartet "->" vor dem Rückgabetyp|  
 |[Compilerfehler C3485](compiler-error-c3485.md)|Eine Lambdadefinition kann keine CV-Qualifizierer aufweisen.|  
 |Compilerfehler C3486|Veraltet.|  
 |[Compilerfehler C3487](compiler-error-c3487.md)|"*Typ*": alle Rückgabeausdrücke müssen in denselben Typ: zuvor war es '*Typ*"|  
@@ -235,11 +219,10 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C3491](compiler-error-c3491.md)|"*Bezeichner*': eine über das Kopieren von Erfassung in einem nicht änderbaren Lambda nicht geändert werden|  
 |[Compilerfehler C3492](compiler-error-c3492.md)|"*Bezeichner*': Sie können einen Member einer anonymen Union können nicht erfassen|  
 |[Compilerfehler C3493](compiler-error-c3493.md)|"*Bezeichner*" kann nicht implizit erfasst werden, da kein standarderfassungsmodus angegeben wurde|  
-|Compilerfehler Fehler C3494|'this' kann nicht explizit erfasst werden, da ein umschließender Erfassungsmodus dies nicht zulässt|  
+|Compilerfehler Fehler C3494|"this" kann nicht explizit erfasst werden, da eine einschließende Aufzeichnungsmodus dies nicht zulässt|  
 |[Compilerfehler C3495](compiler-error-c3495.md)|"*Bezeichner*': Bezeichner in der Sammlung muss einer Variablen mit automatischer Speicherdauer im Bereich durch Erreichen des Lambda-Ausdrucks deklariert werden|  
 |[Compilerfehler C3496](compiler-error-c3496.md)|"this" wird immer nach Wert erfasst: "&" wird ignoriert.|  
-|Compilerfehler Fehler C3497|Es kann keine Instanz eines Lambdas erstellt werden.|  
+|Compilerfehler Fehler C3497|eine Instanz eines Lambda-Ausdrucks kann nicht erstellt werden.|  
 |[Compilerfehler C3498](compiler-error-c3498.md)|"*Bezeichner*': Sie können keine Variable mit verwalteten/WinRT-Typs erfassen|  
 |[Compilerfehler C3499](compiler-error-c3499.md)|Ein Lambda, für das ein Void-Rückgabetyp angegeben wurde, kann keinen Wert zurückgeben.|  
-
 

@@ -1,72 +1,71 @@
 ---
-title: "Makros f&#252;r OLE DB-Anbietervorlagen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.templates.ole"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Makros, OLE DB-Anbietervorlagen"
-  - "OLE DB-Anbietervorlagenmakros"
-  - "OLE DB-Anbietervorlagen, Makros"
-  - "Anbietervorlagenmakros (OLE DB)"
+title: "Makros für OLE DB-Anbietervorlagen | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.templates.ole
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB provider templates, macros
+- macros, OLE DB Provider Templates
+- Provider Template macros (OLE DB)
+- OLE DB Provider Template macros
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 11a5ae3d0ba5c3da517a380adf795e579d0dce51
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Makros f&#252;r OLE DB-Anbietervorlagen
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die OLE DB\-Vorlagen\-Anbietermakros bieten Funktionen in den folgenden Kategorien an:  
+# <a name="macros-for-ole-db-provider-templates"></a>Makros für OLE DB-Anbietervorlagen
+Die Makros für OLE DB-Vorlagen Anbieter bieten Funktionen in den folgenden Kategorien:  
   
-### Eigenschaftensetzuordnungs\-Makros  
+### <a name="property-set-map-macros"></a>Eigenschaftensatz Ereigniszuordnungs-Makros  
   
 |||  
 |-|-|  
-|[BEGIN\_PROPERTY\_SET](../../data/oledb/begin-property-set.md)|Markiert den Beginn eines Eigenschaftensatzes.|  
-|[BEGIN\_PROPERTY\_SET\_EX](../../data/oledb/begin-property-set-ex.md)|Markiert den Beginn eines Eigenschaftensatzes.|  
-|[BEGIN\_PROPSET\_MAP](../../data/oledb/begin-propset-map.md)|Markiert den Beginn eines Eigenschaftensatzes, der außerhalb des Projektumfangs des Anbieters ausgeblendet oder definiert werden kann.|  
-|[CHAIN\_PROPERTY\_SET](../../data/oledb/chain-property-set.md)|Verkettet Eigenschaftengruppen zusammen.|  
-|[END\_PROPERTY\_SET](../../data/oledb/end-property-set.md)|Markiert das Ende eines Eigenschaftensatzes.|  
-|[END\_PROPSET\_MAP](../../data/oledb/end-propset-map.md)|Markiert das Ende einer Eigenschaftensetzuordnung.|  
-|[PROPERTY\_INFORMATION\_ENTRY](../../data/oledb/property-info-entry.md)|Legt eine bestimmte Eigenschaft in einem Eigenschaft auf einen Standardwert fest.|  
-|[PROPERTY\_INFORMATION\_ENTRY\_EX](../../data/oledb/property-info-entry-ex.md)|Legt eine bestimmte Eigenschaft in einem Eigenschaft auf einen Wert fest, der von Ihnen angegeben wird.  Ermöglicht es Ihnen auch, um Flags und Optionen festzulegen.|  
-|[PROPERTY\_INFORMATION\_ENTRY\_VALUE](../../data/oledb/property-info-entry-value.md)|Legt eine bestimmte Eigenschaft in einem Eigenschaft auf einen Wert fest, der von Ihnen angegeben wird.|  
+|[BEGIN_PROPERTY_SET](../../data/oledb/begin-property-set.md)|Markiert den Beginn einer Eigenschaftensatz.|  
+|[BEGIN_PROPERTY_SET_EX](../../data/oledb/begin-property-set-ex.md)|Markiert den Beginn einer Eigenschaftensatz.|  
+|[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)|Markiert, die der Anfang einer Eigenschaft, die festlegen, können ausgeblendet oder außerhalb des Bereichs des Anbieters definiert werden.|  
+|[CHAIN_PROPERTY_SET](../../data/oledb/chain-property-set.md)|Ketten-Eigenschaftengruppen zusammen.|  
+|[END_PROPERTY_SET](../../data/oledb/end-property-set.md)|Markiert das Ende eines Satzes Eigenschaft.|  
+|[END_PROPSET_MAP](../../data/oledb/end-propset-map.md)|Markiert das Ende einer Zuordnung der Eigenschaft festlegen.|  
+|[PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md)|Legt eine bestimmte Eigenschaft in einer Eigenschaft auf einen Standardwert festgelegt.|  
+|[PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md)|Legt eine bestimmte Eigenschaft in einer Eigenschaft, die auf einen von Ihnen angegebenen Wert festgelegt. Außerdem können Sie Optionen und Flags festgelegt.|  
+|[PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md)|Legt eine bestimmte Eigenschaft in einer Eigenschaft, die auf einen von Ihnen angegebenen Wert festgelegt.|  
   
-### Spalten\-Zuordnungs\-Makros  
-  
-|||  
-|-|-|  
-|[BEGIN\_PROVIDER\_COLUMN\_MAP](../../data/oledb/begin-provider-column-map.md)|Markiert den Beginn der Anbieterspalten\-Zuordnungseinträge.|  
-|[END\_PROVIDER\_COLUMN\_MAP](../../data/oledb/end-provider-column-map.md)|Markiert das Ende der Anbieterspalten\-Zuordnungseinträge.|  
-|[PROVIDER\_COLUMN\_ENTRY](../../data/oledb/provider-column-entry.md)|Stellt eine bestimmte Spalte dar, die vom Anbieter unterstützt wird.|  
-|[PROVIDER\_COLUMN\_ENTRY\_GN](../../data/oledb/provider-column-entry-gn.md)|Stellt eine bestimmte Spalte dar, die vom Anbieter unterstützt wird.  Sie können die Größe der Spalte, den Datentyp, Genauigkeit, der Umfang und der Schemarowset GUID angeben.|  
-|[PROVIDER\_COLUMN\_ENTRY\_FIXED](../../data/oledb/provider-column-entry-fixed.md)|Stellt eine bestimmte Spalte dar, die vom Anbieter unterstützt wird.  Sie können dem Spaltendatentyp angeben.|  
-|[PROVIDER\_COLUMN\_ENTRY\_LENGTH](../../data/oledb/provider-column-entry-length.md)|Stellt eine bestimmte Spalte dar, die vom Anbieter unterstützt wird.  Sie können die Spalte angeben.|  
-|[PROVIDER\_COLUMN\_ENTRY\_STR](../../data/oledb/provider-column-entry-str.md)|Stellt eine bestimmte Spalte dar, die vom Anbieter unterstützt wird.  Dabei wird vorausgesetzt, dass der Spaltentyp eine Zeichenfolge ist.|  
-|[PROVIDER\_COLUMN\_ENTRY\_TYPE\_LENGTH](../../data/oledb/provider-column-entry-type-length.md)|Stellt eine bestimmte Spalte dar, die vom Anbieter unterstützt wird.  Wie PROVIDER\_COLUMN\_ENTRY\_LENGTH aber ermöglicht Ihnen auch, um die dem Datentyp sowie der Größe Spalte anzugeben.|  
-|[PROVIDER\_COLUMN\_ENTRY\_WSTR](../../data/oledb/provider-column-entry-wstr.md)|Stellt eine bestimmte Spalte dar, die vom Anbieter unterstützt wird.  Dabei wird vorausgesetzt, dass der Spaltentyp eine Unicode\-Zeichenfolge ist.|  
-  
-### Schemarowset\-Makros  
+### <a name="column-map-macros"></a>Spalte Ereigniszuordnungs-Makros  
   
 |||  
 |-|-|  
-|[BEGIN\_SCHEMA\_MAP](../../data/oledb/begin-schema-map.md)|Markiert den Beginn einer Schemazuordnung.|  
-|[SCHEMA\_ENTRY](../../data/oledb/schema-entry.md)|Ordnet eine GUID mit einer Klasse zu.|  
-|[END\_SCHEMA\_MAP](../../data/oledb/end-schema-map.md)|Markiert das Ende einer Schemazuordnung.|  
+|[BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)|Markiert den Beginn der Anbieter Spalte-Zuordnungseinträge.|  
+|[END_PROVIDER_COLUMN_MAP](../../data/oledb/end-provider-column-map.md)|Markiert das Ende der Anbieter Spalte-Zuordnungseinträge.|  
+|[PROVIDER_COLUMN_ENTRY](../../data/oledb/provider-column-entry.md)|Stellt eine bestimmte Spalte, die vom Anbieter unterstützt werden.|  
+|[PROVIDER_COLUMN_ENTRY_GN](../../data/oledb/provider-column-entry-gn.md)|Stellt eine bestimmte Spalte, die vom Anbieter unterstützt werden. Sie können der Spaltenwerts Größe, Datentyp, Genauigkeit, Dezimalstellen und Schemarowset-GUID angeben.|  
+|[PROVIDER_COLUMN_ENTRY_FIXED](../../data/oledb/provider-column-entry-fixed.md)|Stellt eine bestimmte Spalte, die vom Anbieter unterstützt werden. Sie können den Datentyp der Spalte angeben.|  
+|[PROVIDER_COLUMN_ENTRY_LENGTH](../../data/oledb/provider-column-entry-length.md)|Stellt eine bestimmte Spalte, die vom Anbieter unterstützt werden. Sie können die Größe der Spalte angeben.|  
+|[PROVIDER_COLUMN_ENTRY_STR](../../data/oledb/provider-column-entry-str.md)|Stellt eine bestimmte Spalte, die vom Anbieter unterstützt werden. Es wird davon ausgegangen, dass der Spaltentyp eine Zeichenfolge ist.|  
+|[PROVIDER_COLUMN_ENTRY_TYPE_LENGTH](../../data/oledb/provider-column-entry-type-length.md)|Stellt eine bestimmte Spalte, die vom Anbieter unterstützt werden. Wie Sie PROVIDER_COLUMN_ENTRY_LENGTH, doch auch ermöglicht Ihnen das Festlegen der Datentyp der Spalte sowie der Größe.|  
+|[PROVIDER_COLUMN_ENTRY_WSTR](../../data/oledb/provider-column-entry-wstr.md)|Stellt eine bestimmte Spalte, die vom Anbieter unterstützt werden. Es wird davon ausgegangen, dass der Spaltentyp eine Unicode-Zeichenfolge ist.|  
   
-## Siehe auch  
- [OLE DB\-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektur von OLE DB\-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)   
- [Erstellen eines OLE DB\-Anbieters](../../data/oledb/creating-an-ole-db-provider.md)   
- [Referenz der OLE DB\-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-reference.md)
+### <a name="schema-rowset-macros"></a>Schema-Rowset-Makros  
+  
+|||  
+|-|-|  
+|[BEGIN_SCHEMA_MAP](../../data/oledb/begin-schema-map.md)|Markiert den Beginn einer Schema-Zuordnung.|  
+|[SCHEMA_ENTRY](../../data/oledb/schema-entry.md)|Ordnet eine GUID mit einer Klasse.|  
+|[END_SCHEMA_MAP](../../data/oledb/end-schema-map.md)|Markiert das Ende einer Zuordnung Schema.|  
+  
+## <a name="see-also"></a>Siehe auch  
+ [OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)   
+ [Erstellen eines OLE DB-Anbieters](../../data/oledb/creating-an-ole-db-provider.md)   
+ [Referenz der OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-reference.md)

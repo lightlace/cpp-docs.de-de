@@ -1,32 +1,30 @@
 ---
-title: "Implements::CanCastTo-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Implements::CanCastTo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CanCastTo-Methode"
+title: 'Implements:: cancastto-Methode | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Implements::CanCastTo
+dev_langs: C++
+helpviewer_keywords: CanCastTo method
 ms.assetid: a8e85c7d-4dcd-446d-bebc-a97da46ce44a
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 83d217cb749c350da45bcae2159e6b46d03f68cc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Implements::CanCastTo-Methode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="implementscancastto-method"></a>Implements::CanCastTo-Methode
 Ruft einen Zeiger auf die angegebene Schnittstelle.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 __forceinline HRESULT CanCastTo(  
@@ -35,23 +33,23 @@ __forceinline HRESULT CanCastTo(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `riid`  
- Ein Verweis auf eine Schnittstelle ID  
+ Ein Verweis auf eine Schnittstellen-ID.  
   
  `ppv`  
- Wenn erfolgreich, ein Zeiger zur Schnittstelle angegeben durch `riid`.  
+ Wenn erfolgreich, ein Zeiger auf die Schnittstelle von angegeben `riid`.  
   
-## Rückgabewert  
- S\_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler angibt, z E\_NOINTERFACE.  
+## <a name="return-value"></a>Rückgabewert  
+ S_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler, z. B. E_NOINTERFACE angibt.  
   
-## Hinweise  
- Dies ist eine interne Hilfsfunktion, die einen QueryInterface\-Vorgang ausführt.  
+## <a name="remarks"></a>Hinweise  
+ Dies ist eine interne Hilfsmethode-Funktion, die einen QueryInterface-Vorgang ausführt.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** implements.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [Implements\-Struktur](../windows/implements-structure.md)
+## <a name="see-also"></a>Siehe auch  
+ [Implements-Struktur](../windows/implements-structure.md)

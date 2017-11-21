@@ -1,36 +1,36 @@
 ---
-title: "__inbytestring | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__inbytestring"
-  - "__inbytestring_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rep insb-Anweisung"
-  - "__inbytestring intrinsic"
+title: __inbytestring | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __inbytestring
+- __inbytestring_cpp
+dev_langs: C++
+helpviewer_keywords:
+- rep insb instruction
+- __inbytestring intrinsic
 ms.assetid: fe549556-e7a3-4af3-8ebf-8a7dc3cb233b
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 20fd91e16cf2f0fa0f5637e5ca6fac15336cbd11
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# __inbytestring
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft\-spezifisch**  
+# <a name="inbytestring"></a>__inbytestring
+**Microsoft-spezifisch**  
   
- Liest Daten aus dem angegebenen Port mit der `rep insb`\-Anweisung.  
+ Liest Daten aus den angegebenen Port mit der `rep insb` Anweisung.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void __inbytestring(  
@@ -40,28 +40,28 @@ void __inbytestring(
 );  
 ```  
   
-#### Parameter  
- \[in\] `Port`  
- Der zum Lesen von Port.  
+#### <a name="parameters"></a>Parameter  
+ [in] `Port`  
+ Der Port, aus dem gelesen werden soll.  
   
- \[out\] `Buffer`  
- Die Daten, die vom Port gelesenen, wird hier geschrieben.  
+ [out] `Buffer`  
+ Die aus den Port gelesenen Daten werden hier geschrieben.  
   
- \[in\] `Count`  
- Die Anzahl von Datenbytes an den Lesevorgang.  
+ [in] `Count`  
+ Die Anzahl der Bytes, der zu lesenden Daten.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Intrinsisch|Architektur|  
-|-----------------|-----------------|  
+|Systemintern|Architektur|  
+|---------------|------------------|  
 |`__inbytestring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Headerdatei** \<intrin.h\>  
+ **Headerdatei** \<intrin.h >  
   
-## Hinweise  
- Diese Routine ist als systeminterne Funktion nur verfügbar.  
+## <a name="remarks"></a>Hinweise  
+ Diese Routine ist nur als systeminterne Funktion verfügbar.  
   
-## BEENDEN Sie Microsoft\-Besonderen  
+**Ende Microsoft-spezifisch**  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

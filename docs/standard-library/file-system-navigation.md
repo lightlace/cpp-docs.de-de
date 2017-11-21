@@ -4,38 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: f7cc5f5e-a541-4e00-87c7-a3769ef6096d
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 1a3e7e0cc81bae89b0560c1aebb989e4d140e059
-ms.contentlocale: de-de
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: 7ed9a10434f0128de871a426f7e6be46212d4098
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="file-system-navigation"></a>Dateisystemnavigation
 Der Header \<filesystem> implementiert die technische Dateisystemspezifikation für C++ ISO/IEC TS 18822:2015 (endgültige Fassung: [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)) und enthält Typen und Funktionen, mit denen Sie plattformunabhängigen Code für die Navigation im Dateisystem schreiben können. Da er plattformübergreifend ist, enthält er APIs, die für Windows-Systeme nicht relevant sind. Dies bedeutet beispielsweise, dass `is_fifo(const path&)` unter Windows immer `false` zurückgibt.   
@@ -231,4 +213,3 @@ Press Enter to exit
 Der \<filesystem>-Header stellt den [directory_iterator](../standard-library/directory-iterator-class.md)-Typ zum Durchlaufen der einzelnen Verzeichnisse und die [recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md)-Klasse zum rekursiven Durchlaufen eines Verzeichnisses und seiner Unterverzeichnisse bereit. Wenn Sie einen Iterator erstellt haben, indem Sie ihm ein `path` -Objekt übergeben haben, verweist der Iterator auf den ersten „directory_entry“ im Pfad. Erstellen Sie den End-Iterator, indem Sie den Standardkonstruktor aufrufen.  
   
 Beim Durchlaufen eines Verzeichnisses können verschiedene Arten von Elementen auftreten, u. a. Verzeichnisse, Dateien, symbolische Verknüpfungen und Socketdateien. `directory_iterator` gibt die Elemente als [directory_entry](../standard-library/directory-entry-class.md)-Objekte zurück.  
-

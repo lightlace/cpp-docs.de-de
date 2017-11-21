@@ -1,39 +1,39 @@
 ---
-title: "2.9 Directive Nesting"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.9 Schachtelung von | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 6565a43c-fd2d-4366-8322-8d75e1b06600
-caps.latest.revision: 4
-caps.handback.revision: "4"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f1af9f515861863af5906c99d78aa66d08aa09b6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# 2.9 Directive Nesting
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Dynamische Schachtelung von Direktiven gehorchen muss die folgenden Regeln:  
+# <a name="29-directive-nesting"></a>2.9 Schachtelung von Anweisungen
+Dynamische Schachtelung von Direktiven muss die folgenden Regeln einhalten:  
   
--   **Ähnlichkeit**\-Direktive dynamisch in ein anderes Team ein neues logisches **Ähnlichkeit** legen fest, das nur vom aktuellen Thread zusammensetzt, es sei denn, geschachtelter Parallelität aktiviert ist.  
+-   Ein **parallele** Richtlinie dynamisch in einem anderen **parallele** logisch richtet ein neues Team, die nur den aktuellen Thread besteht, es sei denn, die Parallelität geschachtelt ist aktiviert.  
   
--   **nach**, **Abschnitte**und **Einfach**\-Direktive, die auf demselben **Ähnlichkeit** binden, werden nicht zulässig, ineinander geschachtelt werden soll.  
+-   **für**, **Abschnitte**, und **einzelne** Direktiven, die auf den gleichen binden **parallele** dürfen nicht ineinander geschachtelt werden.  
   
--   **Kritisch**\-Direktive mit demselben Namen sind nicht zulässig, ineinander geschachtelt werden soll.  Beachten Sie, dass diese Einschränkung ist nicht ausreichend, Deadlock zu verhindern.  
+-   **kritische** Direktiven mit demselben Namen dürfen nicht ineinander geschachtelt werden. Beachten Sie, dass diese Einschränkung ist nicht ausreichend, Deadlock zu verhindern.  
   
--   **nach**, **Abschnitte**und **Einfach**\-Direktiven sind nicht im dynamischen Wertebereich von **Kritisch**, **geordnet**und **Master** Bereichen wenn die Direktive an demselben **Ähnlichkeit** wie die Bereiche zulässig.  
+-   **für**, **Abschnitte**, und **einzelne** Direktiven sind nicht zulässig, in dem dynamischen Wertebereich **kritische**, **sortiert**, und **master** Regionen aus, wenn die Anweisungen auf den gleichen binden **parallele** als Regionen.  
   
--   **Barriere**\-Direktiven sind nicht im dynamischen Wertebereich von **nach**, **geordnet**, **Abschnitte**, **Einfach**, **Master**und **Kritisch** Bereichen wenn die Direktive verbindlich **Ähnlichkeit** gleichen sein wie die Bereiche zulässig.  
+-   **Barriere** Direktiven sind nicht zulässig, in dem dynamischen Wertebereich **für**, **sortiert**, **Abschnitte**, **einzelne**, **master**, und **kritische** Regionen aus, wenn die Anweisungen auf den gleichen binden **parallele** als Regionen.  
   
--   **Master**\-Direktiven sind nicht im dynamischen Wertebereich von **nach**, **Abschnitte**und **Einfach**\-Direktive wenn das **Master**\-Direktive verbindlich **Ähnlichkeit** gleichen sein wie die Arbeitsteilungs Direktiven zulässig.  
+-   **Master** Direktiven sind nicht zulässig, in dem dynamischen Wertebereich **für**, **Abschnitte**, und **einzelne** Direktiven Wenn die **Master** Direktiven binden, auf das gleiche **parallele** als die Arbeit sharing-Direktiven.  
   
--   **geordnet**\-Direktiven sind nicht im dynamischen Wertebereich von **Kritisch** Bereichen wenn die Direktive verbindlich **Ähnlichkeit** gleichen sein wie die Bereiche zulässig.  
+-   **sortiert** Direktiven sind nicht zulässig, in dem dynamischen Wertebereich **kritische** Regionen aus, wenn die Anweisungen auf den gleichen binden **parallele** als Regionen.  
   
--   Alle Direktiven, die zulässig ist, wenn sie dynamisch in einem parallelen Bereichs ausgeführt werden, sind ebenfalls nicht zulässig, wenn sie außerhalb eines parallelen Bereichs ausgeführt werden.  Wenn sie dynamisch außerhalb eines vom Benutzer angegebenen parallelen Bereichs ausgeführt werden, werden die Direktive von einem Team ausgeführt, das nur aus dem Masterthread besteht.
+-   Jede Richtlinie, die berechtigt ist, wenn dynamisch innerhalb eines parallelen Bereichs ausgeführt ist auch zulässig, wenn außerhalb eines parallelen Bereichs ausgeführt. Wenn außerhalb eines parallelen Bereichs von benutzerdefinierten dynamisch ausgeführt wird, wird die Richtlinie von einem Team besteht nur die master-Thread ausgeführt.

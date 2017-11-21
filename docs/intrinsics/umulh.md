@@ -1,61 +1,62 @@
 ---
-title: "__umulh | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__umulh"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Systeminterne Funktion „__umulh“"
+title: __umulh | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __umulh
+dev_langs: C++
+helpviewer_keywords: __umulh intrinsic
 ms.assetid: d241b53a-e6f7-4af1-9f6e-84e149158f03
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c9241696709cf7f12a8d20315bf6f72fdf4bb1b6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# __umulh
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft\-spezifisch**  
+# <a name="umulh"></a>__umulh
+**Microsoft-spezifisch**  
   
- Gibt die oberen 64 Bits des Produkts von zwei 64\-Bit\-Ganzzahlen ohne Vorzeichen zurück.  
+ Gibt die oberen 64 Bits des Produkts von zwei 64-Bit-Ganzzahlen ohne Vorzeichen zurück.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-unsigned __int64 __umulh(     unsigned __int64 a,     unsigned __int64 b  );  
+unsigned __int64 __umulh(   
+   unsigned __int64 a,   
+   unsigned __int64 b   
+);  
 ```  
   
-#### Parameter  
- \[in\] `a`  
+#### <a name="parameters"></a>Parameter  
+ [in] `a`  
  Die erste zu multiplizierende Zahl.  
   
- \[in\] `b`  
+ [in] `b`  
  Die zweite zu multiplizierende Zahl.  
   
-## Rückgabewert  
- Die oberen 64 Bits de 128\-Bit\-Ergebnisses der Multiplikation.  
+## <a name="return-value"></a>Rückgabewert  
+ Die oberen 64 Bits de 128-Bit-Ergebnisses der Multiplikation.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
-|------------------|-----------------|  
+|---------------|------------------|  
 |`__umulh`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Headerdatei** \<intrin.h\>  
+ **Headerdatei** \<intrin.h >  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Diese Routinen sind nur als systeminterne Funktionen verfügbar.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // umulh.cpp  
@@ -77,8 +78,11 @@ int main()
 }  
 ```  
   
-  **0x10 \* 0xfedcba9876543210 \= 0xfedcba98765432100**    
-## Ende Microsoft\-spezifisch  
+```Output  
+0x10 * 0xfedcba9876543210 = 0xfedcba98765432100   
+```  
   
-## Siehe auch  
+**Ende Microsoft-spezifisch**  
+  
+## <a name="see-also"></a>Siehe auch  
  [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

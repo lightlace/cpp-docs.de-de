@@ -1,39 +1,38 @@
 ---
-title: "Pragma-Direktiven und das __Pragma-Schl&#252;sselwort | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "#pragma"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "#pragma-Direktiven, C/C++"
-  - "__pragma-Schlüsselwort"
-  - "pragma-Direktiven (#pragma)"
-  - "pragma-Direktiven, C/C++"
-  - "Pragmas"
-  - "Pragmas, C/C++"
-  - "Präprozessor"
-  - "Präprozessor, Pragmas"
+title: "Pragma-Direktiven und das __Pragma-Schlüsselwort | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: '#pragma'
+dev_langs: C++
+helpviewer_keywords:
+- '#pragma directives, C/C++'
+- __pragma keyword
+- pragma directives, C/C++
+- pragmas, C/C++
+- preprocessor
+- pragmas
+- preprocessor, pragmas
+- pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
-caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 93bb3b8f1b765b70128537b096142a9d7ac3ae8d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Pragma-Direktiven und das __Pragma-Schl&#252;sselwort
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Pragma\-Direktiven geben computer\- oder betriebssystemspezifische Compilerfunktionen an.  Das `__pragma`\-Schlüsselwort, das für den Microsoft\-Compiler spezifisch ist, ermöglicht das Codieren von Pragma\-Direktiven innerhalb von Makrodefinitionen.  
+# <a name="pragma-directives-and-the-pragma-keyword"></a>Pragma-Anweisungen und das __Pragma-Schlüsselwort
+Pragma-Direktiven geben computer- oder betriebssystemspezifische Compilerfunktionen an. Das `__pragma`-Schlüsselwort, das für den Microsoft-Compiler spezifisch ist, ermöglicht das Codieren von Pragma-Direktiven innerhalb von Makrodefinitionen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -41,39 +40,39 @@ Pragma\-Direktiven geben computer\- oder betriebssystemspezifische Compilerfunkt
 __pragma(token-string)  
 ```  
   
-## Hinweise  
- Jede Implementierung von C und C\+\+ unterstützt mehrere Funktionen, die auf dem Hostcomputer oder Betriebssystem einzigartig sind.  Einige Programme beispielsweise müssen die Speicherbereiche genau kontrollieren, in denen Daten abgelegt werden, oder die Art und Weise steuern, wie bestimmte Funktionen Parameter empfangen.  Die `#pragma`\-Direktive bietet Compilern die Möglichkeit, computer\- und betriebssystemspezifische Funktionen bereitzustellen und dabei die Gesamtkompatibilität mit anderen C\- und C\+\+\-Programmiersprachen beizubehalten.  
+## <a name="remarks"></a>Hinweise  
+ Jede Implementierung von C und C++ unterstützt mehrere Funktionen, die auf dem Hostcomputer oder Betriebssystem einzigartig sind. Einige Programme beispielsweise müssen die Speicherbereiche genau kontrollieren, in denen Daten abgelegt werden, oder die Art und Weise steuern, wie bestimmte Funktionen Parameter empfangen. Die `#pragma`-Direktive bietet Compilern die Möglichkeit, computer- und betriebssystemspezifische Funktionen bereitzustellen und dabei die Gesamtkompatibilität mit anderen C- und C++-Programmiersprachen beizubehalten.  
   
- Pragmas sind definitionsgemäß computer\- oder betriebssystemspezifisch, und sie sind normalerweise für jeden Compiler unterschiedlich.  Pragmas können in bedingten Anweisungen verwendet werden, um neue Präprozessorfunktionen oder von der Implementierung abhängige Informationen für den Compiler bereitzustellen.  
+ Pragmas sind definitionsgemäß computer- oder betriebssystemspezifisch, und sie sind normalerweise für jeden Compiler unterschiedlich. Pragmas können in bedingten Anweisungen verwendet werden, um neue Präprozessorfunktionen oder von der Implementierung abhängige Informationen für den Compiler bereitzustellen.  
   
- `token-string` ist eine Reihe von Zeichen, die einem bestimmten Compiler Anweisungen und Argumente gibt, falls vorhanden.  Das Nummernzeichen \(**\#**\) muss das erste Zeichen, das keine Leerstelle ist, in der Zeile sein, die das Pragma enthält. Leerzeichen können das Nummernzeichen und das Wort "Pragma" voneinander trennen.  Nach `#pragma` schreiben Sie beliebigen Text, den das Konvertierungsprogramm als Vorverarbeitungstoken analysieren kann.  Das Argument für `#pragma` unterliegt der Makroerweiterung.  
+ `token-string` ist eine Reihe von Zeichen, die einem bestimmten Compiler Anweisungen und Argumente gibt, falls vorhanden. Das Nummernzeichen (**#**) muss das erste nicht-Leerzeichen in der Zeile, die das Pragma enthält; Leerzeichen können das Nummernzeichen und das Wort "Pragma" trennen. Nach `#pragma` schreiben Sie beliebigen Text, den das Konvertierungsprogramm als Vorverarbeitungstoken analysieren kann. Das Argument für `#pragma` unterliegt der Makroerweiterung.  
   
  Wenn der Compiler ein Pragma findet, das er nicht erkennt, gibt er eine Warnung aus und setzt die Kompilierung fort.  
   
- Die Microsoft C\- und C\+\+\-Compiler erkennen die folgenden Pragmas:  
+ Die Microsoft C- und C++-Compiler erkennen die folgenden Pragmas:  
   
 ||||  
 |-|-|-|  
-|[alloc\_text](../preprocessor/alloc-text.md)|[auto\_inline](../preprocessor/auto-inline.md)|[bss\_seg](../preprocessor/bss-seg.md)|  
-|[check\_stack](../preprocessor/check-stack.md)|[code\_seg](../preprocessor/code-seg.md)|[comment](../preprocessor/comment-c-cpp.md)|  
-|[component](../preprocessor/component.md)|[conform](../preprocessor/conform.md) <sup>1</sup>|[const\_seg](../preprocessor/const-seg.md)|  
-|[data\_seg](../preprocessor/data-seg.md)|[deprecated](../preprocessor/deprecated-c-cpp.md)|[detect\_mismatch](../preprocessor/detect-mismatch.md)|  
-|[fenv\_access](../preprocessor/fenv-access.md)|[float\_control](../preprocessor/float-control.md)|[fp\_contract](../preprocessor/fp-contract.md)|  
-|[function](../preprocessor/function-c-cpp.md)|[hdrstop](../preprocessor/hdrstop.md)|[include\_alias](../preprocessor/include-alias.md)|  
-|[init\_seg](../preprocessor/init-seg.md) <sup>1</sup>|[inline\_depth](../preprocessor/inline-depth.md)|[inline\_recursion](../preprocessor/inline-recursion.md)|  
-|[intrinsic](../preprocessor/intrinsic.md)|[loop](../preprocessor/loop.md) <sup>1</sup>|[make\_public](../preprocessor/make-public.md)|  
-|[managed](../preprocessor/managed-unmanaged.md)|[message](../preprocessor/message.md)||  
+|[alloc_text](../preprocessor/alloc-text.md)|[auto_inline](../preprocessor/auto-inline.md)|[bss_seg](../preprocessor/bss-seg.md)|  
+|[check_stack](../preprocessor/check-stack.md)|[code_seg](../preprocessor/code-seg.md)|[comment](../preprocessor/comment-c-cpp.md)|  
+|[component](../preprocessor/component.md)|[entsprechen](../preprocessor/conform.md) <sup>1</sup>|[const_seg](../preprocessor/const-seg.md)|  
+|[data_seg](../preprocessor/data-seg.md)|[als veraltet markiert](../preprocessor/deprecated-c-cpp.md)|[detect_mismatch](../preprocessor/detect-mismatch.md)|  
+|[fenv_access](../preprocessor/fenv-access.md)|[float_control](../preprocessor/float-control.md)|[fp_contract](../preprocessor/fp-contract.md)|  
+|[function](../preprocessor/function-c-cpp.md)|[hdrstop](../preprocessor/hdrstop.md)|[include_alias](../preprocessor/include-alias.md)|  
+|[Init_seg](../preprocessor/init-seg.md) <sup>1</sup>|[inline_depth](../preprocessor/inline-depth.md)|[inline_recursion](../preprocessor/inline-recursion.md)|  
+|[intrinsic](../preprocessor/intrinsic.md)|[Schleife](../preprocessor/loop.md) <sup>1</sup>|[make_public](../preprocessor/make-public.md)|  
+|[verwaltet](../preprocessor/managed-unmanaged.md)|[message](../preprocessor/message.md)||  
 |[omp](../preprocessor/omp.md)|[once](../preprocessor/once.md)||  
-|[optimize](../preprocessor/optimize.md)|[pack](../preprocessor/pack.md)|[pointers\_to\_members](../preprocessor/pointers-to-members.md) <sup>1</sup>|  
-|[pop\_macro](../preprocessor/pop-macro.md)|[push\_macro](../preprocessor/push-macro.md)|[region, endregion](../preprocessor/region-endregion.md)|  
-|[runtime\_checks](../preprocessor/runtime-checks.md)|[section](../preprocessor/section.md)|[setlocale](../preprocessor/setlocale.md)|  
-|[strict\_gs\_check](../preprocessor/strict-gs-check.md)|[unmanaged](../preprocessor/managed-unmanaged.md)|[vtordisp](../preprocessor/vtordisp.md) <sup>1</sup>|  
+|[optimize](../preprocessor/optimize.md)|[pack](../preprocessor/pack.md)|[Pointers_to_members](../preprocessor/pointers-to-members.md) <sup>1</sup>|  
+|[pop_macro](../preprocessor/pop-macro.md)|[push_macro](../preprocessor/push-macro.md)|[region, endregion](../preprocessor/region-endregion.md)|  
+|[runtime_checks](../preprocessor/runtime-checks.md)|[section](../preprocessor/section.md)|[setlocale](../preprocessor/setlocale.md)|  
+|[strict_gs_check](../preprocessor/strict-gs-check.md)|[nicht verwalteter](../preprocessor/managed-unmanaged.md)|[Vtordisp](../preprocessor/vtordisp.md) <sup>1</sup>|  
 |[warning](../preprocessor/warning.md)|||  
   
- 1.  Wird nur vom C\+\+\-Compiler unterstützt.  
+ 1. Wird nur vom C++-Compiler unterstützt.  
   
-## Pragmas und Compileroptionen  
- Einige Pragmas stellen die gleichen Funktionen wie Compileroptionen bereit.  Wenn im Quellcode ein Pragma gefunden wird, überschreibt dieses das Verhalten, das mit der Compileroption angegeben wird.  Wenn Sie beispielsweise [\/Zp8](../build/reference/zp-struct-member-alignment.md) angegeben haben, können Sie diese Compilereinstellung für bestimmte Codeabschnitte mit [pack](../preprocessor/pack.md) überschreiben:  
+## <a name="pragmas-and-compiler-options"></a>Pragmas und Compileroptionen  
+ Einige Pragmas stellen die gleichen Funktionen wie Compileroptionen bereit. Wenn im Quellcode ein Pragma gefunden wird, überschreibt dieses das Verhalten, das mit der Compileroption angegeben wird. Angenommen, Sie angegeben ["/ zp8"](../build/reference/zp-struct-member-alignment.md), können Sie diese compilereinstellung für bestimmte Codeabschnitte mit überschreiben [Pack](../preprocessor/pack.md):  
   
 ```  
 cl /Zp8 ...  
@@ -86,12 +85,12 @@ cl /Zp8 ...
 </file>  
 ```  
   
-## Das \_\_pragma\(\)\-Schlüsselwort  
- **Microsoft\-spezifisch**  
+## <a name="the-pragma-keyword"></a>Das __pragma()-Schlüsselwort  
+ **Microsoft-spezifisch**  
   
- Der Compiler unterstützt auch das `__pragma`\-Schlüsselwort, das die gleichen Funktionen wie die `#pragma`\-Direktive aufweist, aber in einer Makrodefinition inline verwendet werden kann.  Die `#pragma`\-Direktive kann nicht in einer Makrodefinition verwendet werden, da der Compiler das Nummernzeichen \('\#'\) in der Direktive als [Zeichenfolgenoperator \(\#\)](../preprocessor/stringizing-operator-hash.md) interpretiert.  
+ Der Compiler unterstützt auch das `__pragma`-Schlüsselwort, das die gleichen Funktionen wie die `#pragma`-Direktive aufweist, aber in einer Makrodefinition inline verwendet werden kann. Die `#pragma` Richtlinie kann nicht in einer Makrodefinition verwendet werden, da der Compiler das Nummernzeichen (#) in der Direktive versehen, werden interpretiert die [Zeichenfolgenoperator (#)](../preprocessor/stringizing-operator-hash.md).  
   
- Der folgende Beispielcode veranschaulicht die Verwendung des `__pragma`\-Schlüsselworts in einem Makro.  Dieser Code wurde dem mfcdual.h\-Header im ACDUAL\-Beispiel in den Beispielen für die COM\-Unterstützung des Compilers entnommen:  
+ Der folgende Beispielcode veranschaulicht die Verwendung des `__pragma`-Schlüsselworts in einem Makro. Dieser Code wurde dem mfcdual.h-Header im ACDUAL-Beispiel in den Beispielen für die COM-Unterstützung des Compilers entnommen:  
   
 ```  
 #define CATCH_ALL_DUAL \  
@@ -111,9 +110,9 @@ END_CATCH_ALL \
 return _hr; \  
 ```  
   
- **Ende Microsoft\-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
- [C\/C\+\+\-Präprozessorreferenz](../preprocessor/c-cpp-preprocessor-reference.md)   
- [C\-Pragmas](../c-language/c-pragmas.md)   
- [C\+\+\-Schlüsselwörter](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [C/C++-Präprozessorreferenz](../preprocessor/c-cpp-preprocessor-reference.md)   
+ [C-Pragmas](../c-language/c-pragmas.md)   
+ [Schlüsselwörter](../cpp/keywords-cpp.md)

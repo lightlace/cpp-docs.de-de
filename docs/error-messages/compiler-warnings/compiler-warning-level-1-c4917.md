@@ -1,54 +1,35 @@
 ---
-title: Compiler-Warnung (Stufe 1) C4917 generiert | Microsoft-Dokumentation
+title: Compilerwarnung (Stufe 1) C4917 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4917
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4917
+f1_keywords: C4917
+dev_langs: C++
+helpviewer_keywords: C4917
 ms.assetid: c05e2610-4a5d-4f4b-a99b-c15fd7f1d5f1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ac033535632e94a365aa8dafd849f2ab28a3af7
-ms.openlocfilehash: 43dce460fb336b09ce39d3e4c0e52b43a175ea36
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: a3b5d930b0c8a79542526adcd174a9ed6a0a8db4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4917"></a>Compilerwarnung (Stufe 1) C4917
-'Deklarator': eine GUID kann nur eine Klasse, Schnittstelle oder Namespace zugeordnet werden  
+'Deklarator': eine GUID kann nur eine Klasse, Schnittstelle oder ein Namespace zugeordnet werden  
   
-Eine benutzerdefinierte Struktur als [Klasse](../../cpp/class-cpp.md), [Schnittstelle](../../cpp/interface.md), oder [Namespace](../../cpp/namespaces-cpp.md) kann nicht über eine GUID verfügen.  
+Eine benutzerdefinierte Struktur außer [Klasse](../../cpp/class-cpp.md), [Schnittstelle](../../cpp/interface.md), oder [Namespace](../../cpp/namespaces-cpp.md) keine GUID.  
   
-Diese Warnung ist standardmäßig deaktiviert. Finden Sie unter [Compiler Warnungen, die Are Off standardmäßig](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Weitere Informationen.  
+Diese Warnung ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .  
   
 ## <a name="example"></a>Beispiel  
-Im folgenden Codebeispiel wird C4917 generiert:  
+Im folgenden Codebeispiel wird die C4917 generiert:  
   
 ```cpp  
 // C4917.cpp  

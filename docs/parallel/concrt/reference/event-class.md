@@ -1,11 +1,10 @@
 ---
-title: Event-Klasse | Microsoft-Dokumentation
+title: Event-Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,35 +15,18 @@ f1_keywords:
 - CONCRT/concurrency::event::wait
 - CONCRT/concurrency::event::wait_for_multiple
 - CONCRT/concurrency::event::timeout_infinite
-dev_langs:
-- C++
-helpviewer_keywords:
-- event class
+dev_langs: C++
+helpviewer_keywords: event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: f858bfad08ca8d62c42556c54b505908b7122569
-ms.contentlocale: de-de
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 53a49eeeaa6c9fb83b5dc2b96001a2b2097fbe5e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="event-class"></a>event-Klasse
 Ein Ereignis für manuelles Zurücksetzen, das explizit die Concurrency Runtime beachtet.  
@@ -191,4 +173,3 @@ static size_t __cdecl wait_for_multiple(
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)
-

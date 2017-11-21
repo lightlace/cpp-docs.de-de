@@ -1,34 +1,30 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4346 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4346"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4346"
+title: Compilerwarnung (Stufe 1) C4346 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4346
+dev_langs: C++
+helpviewer_keywords: C4346
 ms.assetid: 68ee562d-cca9-4a2a-9a1b-14ad1a1e7396
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 17e4644901d127bf11637bc24ea155072f83e03c
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/31/2017
 ---
-# Compilerwarnung (Stufe 1) C4346
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'Name': Abhängiger Name ist kein Typ  
+# <a name="compiler-warning-level-1-c4346"></a>Compilerwarnung (Stufe 1) C4346
+'Name': abhängiger Name ist kein Typ  
   
- Wenn ein abhängiger Name als Typ behandelt werden soll, ist das [typename](../../cpp/typename.md)\-Schlüsselwort erforderlich.  Diese wichtige Änderung im Visual C\+\+ .NET 2003\-Compiler wurde vorgenommen, um Konformität mit dem ISO C\+\+\-Standard zu gewährleisten.  
-  
- Bei Code, der in allen Versionen von Visual C\+\+ die gleiche Funktionsweise hat, fügen Sie der Deklaration `typename` hinzu.  
+ Die [Typename](../../cpp/typename.md) -Schlüsselwort ist erforderlich, wenn ein abhängiger Name als Typ behandelt werden. Fügen Sie für Code, der in allen Versionen von Visual C++ gleichermaßen funktioniert, `typename` der Deklaration.  
   
  Im folgenden Beispiel wird C4346 generiert:  
   
@@ -43,7 +39,7 @@ struct C {
 };  
 ```  
   
- Der folgende Code enthält weitere Beispiele, in denen das **typename**\-Schlüsselwort erforderlich ist:  
+ In den folgenden Beispielen wird gezeigt, andere Beispiele, in denen die **Typename** -Schlüsselwort ist erforderlich:  
   
 ```  
 // C4346b.cpp  
@@ -64,7 +60,7 @@ struct M : public L<typename T::Type, T::Value>
 };  
 ```  
   
- Und dieses:  
+ und dieses:  
   
 ```  
 // C4346c.cpp  

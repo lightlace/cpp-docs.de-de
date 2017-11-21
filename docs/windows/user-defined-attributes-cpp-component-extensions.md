@@ -1,66 +1,66 @@
 ---
-title: "User-Defined Attributes  (C++ Component Extensions)"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "metadata, extending"
-  - "custom attributes, extending metadata"
+title: "Benutzerdefinierte Attribute (Komponentenerweiterungen für C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- metadata, extending
+- custom attributes, extending metadata
 ms.assetid: 98b29048-a3ea-4698-8441-f149cdaec9fb
-caps.latest.revision: 27
-caps.handback.revision: "25"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "27"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b7c96ff7be36ac90560d36c3c0989379eea24777
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# User-Defined Attributes  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Benutzerdefinierte Attribute ermöglichen Sie, um die Metadaten einer Schnittstelle, der Klasse oder der Struktur, Methode, des Parameters oder Enumeration zu erweitern.  
+# <a name="user-defined-attributes--c-component-extensions"></a>Benutzerdefinierte Attribute (Komponentenerweiterungen für C++)
+Benutzerdefinierte Attribute können Sie die Metadaten von einer Schnittstelle, Klasse oder Struktur, -Methode, Parameter oder Enumeration zu erweitern.  
   
-## Alle Laufzeiten  
- Alle Laufzeiten unterstützen benutzerdefinierte Attribute.  
+## <a name="all-runtimes"></a>Alle Laufzeiten  
+ Alle Laufzeiten unterstützt benutzerdefinierte Attribute.  
   
-## Windows\-Runtime  
- C\+\+\/CX\-Attribute unterstützen nur Eigenschaften, sondern nicht schreiben Konstruktoren oder Methoden zu.  
+## <a name="windows-runtime"></a>Windows-Runtime  
+ C + c++ / CX-Attribut nur Eigenschaften unterstützt, aber nicht-Attribut Konstruktoren oder Methoden.  
   
-### Hinweise  
+### <a name="remarks"></a>Hinweise  
   
-### Voraussetzungen  
- Compileroption: **\/ZW**  
+### <a name="requirements"></a>Anforderungen  
+ Compileroption: **/ZW**  
   
-## Common Language Runtime  
- Benutzerdefinierte Attribute können die Metadaten eines verwalteten Element erweitern.  Weitere Informationen finden Sie unter [Attribute](../Topic/Extending%20Metadata%20Using%20Attributes.md).  
+## <a name="common-language-runtime"></a>Common Language Runtime  
+ Benutzerdefinierte Attribute können Sie die Metadaten eines verwalteten Elements zu erweitern. Weitere Informationen finden Sie unter [Attribute](/dotnet/standard/attributes/index).  
   
-### Hinweise  
- Die Informationen und die Syntax, die in diesem Thema dargestellt wird, ist implizit, um die Informationen abzulösen, die in [attribute](../windows/attribute.md) dargestellt werden.  
+### <a name="remarks"></a>Hinweise  
+ Der Informationen und die Syntax, die in diesem Thema vorgestellt wird zum Ablösen der Informationen in voneinander [Attribut](../windows/attribute.md).  
   
- Sie können ein benutzerdefiniertes Attribut definieren, indem Sie einen Typ definieren und <xref:System.Attribute> eine Basisklasse für den Typ ausführen und optional <xref:System.AttributeUsageAttribute> das Attribut anwenden.  
+ Sie können ein benutzerdefiniertes Attribut definieren, indem Sie einen Typ definieren und vornehmen <xref:System.Attribute> eine Basisklasse für den Typ und optional Anwenden der <xref:System.AttributeUsageAttribute> Attribut.  
   
- Beispielsweise in Microsoft Transaction Server \(MTS\) 1,0, Verhalten in Bezug auf Transaktionen, Synchronisierung, Lastenausgleich, z. B wurde von der benutzerdefinierten GUIDs angegeben, die in die Typbibliothek eingefügt wurden, indem das benutzerdefinierte Attribut ODL verwendet.  Daher kann ein Client eines MTS\-Servers die Eigenschaften durch Lesen der Typbibliothek bestimmen.  In .NET Framework ist die Entsprechung der Typbibliothek und Metadaten, die Entsprechung der benutzerdefinierten Attribute ODL ist benutzerdefinierte Attribute.  Auch der Typbibliothek zu lesen ist die Verwendung der Reflektion auf Typen analog.  
+ Z. B. in Microsoft Transaction Server (MTS) 1.0, Verhalten in Bezug auf Transaktionen, Synchronisierung, Lastenausgleich und So weiter durch benutzerdefinierte GUIDs, die in der Typbibliothek eingefügt werden, mit dem benutzerdefinierten ODL-Attribut angegeben wurde. Daher konnte ein Client eine MTS-Servers Merkmalen ermittelt werden durch Lesen der Typbibliothek. In .NET Framework die Analog der Typbibliothek ist Metadaten und der analogen des benutzerdefinierten ODL-Attribut ist, benutzerdefinierte Attribute. Außerdem ist das Lesen der Typbibliothek analog zur Verwendung von Reflektion auf die Typen.  
   
  Weitere Informationen finden Sie unter  
   
--   [Attribute Targets](../windows/attribute-targets-cpp-component-extensions.md)  
+-   [Attributziele](../windows/attribute-targets-cpp-component-extensions.md)  
   
--   [Attribute Parameter Types](../windows/attribute-parameter-types-cpp-component-extensions.md)  
+-   [Attributparametertypen](../windows/attribute-parameter-types-cpp-component-extensions.md)  
   
- Informationen zum Signieren von Assemblys in Visual C\+\+, finden Sie unter [Assemblys mit starken Namen \(Assemblysignierung\)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).  
+ Informationen zum Signieren von Assemblys in Visual C++ finden Sie unter [Assemblys mit starken Namen (Assembly signieren) (C + c++ / CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).  
   
-### Voraussetzungen  
- Compileroption: **\/clr**  
+### <a name="requirements"></a>Anforderungen  
+ Compileroption: **/clr**  
   
-### Beispiele  
+### <a name="examples"></a>Beispiele  
  **Beispiel**  
   
- Das folgende Beispiel zeigt, wie ein benutzerdefiniertes Attribut definiert.  
+ Im folgende Beispiel wird gezeigt, wie ein benutzerdefiniertes Attribut definiert.  
   
 ```cpp  
 // user_defined_attributes.cpp  
@@ -79,7 +79,7 @@ ref class MyClass {};
   
  **Beispiel**  
   
- Im folgenden Beispiel werden einige wichtige Funktionen von benutzerdefinierten Attributen.  Beispielsweise zeigt dieses Beispiel eine allgemeine Verwendung benutzerdefinierter Attribute an: einen Server instanziieren, der zu den Clients sich vollständig beschrieben werden kann.  
+ Das folgende Beispiel veranschaulicht einige wichtigen Funktionen von benutzerdefinierten Attributen. Dieses Beispiel zeigt z. B. eine allgemeine Verwendung der benutzerdefinierten Attribute: Instanziieren eines Servers, die selbst an Clients vollständig beschreiben kann.  
   
 ```cpp  
 // extending_metadata_b.cpp  
@@ -156,18 +156,27 @@ int main() {
   
  **Ausgabe**  
   
-  **Dienst\-Priorität \= 0**  
- **Dienst\-Zugriff \= schreiben**  
- **Dienst\-Priorität \= 3**  
- **Dienst\-Zugriff \= schreiben**  
- **Dienst\-Priorität \= 1**  
- **Dienst\-Zugriff \= gelesen** **Beispiel**  
+```Output  
+Service Priority = 0  
   
- Der Object^\-Typ ersetzt den Variant\-Datentyps.  Das folgende Beispiel definiert ein benutzerdefiniertes Attribut, das ein Array aus Object^ als Parameter akzeptiert.  
+Service Access = Write  
   
- Attributargumente müssen Kompilierzeitkonstanten sein; in den meisten Fällen sollten sie konstante Literale sein.  
+Service Priority = 3  
   
- Siehe [typeid](../windows/typeid-cpp-component-extensions.md) zu Informationen darüber, wie Sie einen Wert von System::Type von einem benutzerdefinierten Attributblock zurückgibt.  
+Service Access = Write  
+  
+Service Priority = 1  
+  
+Service Access = Read  
+```  
+  
+ **Beispiel**  
+  
+ Das Objekt ^ Typ ersetzt den variant-Datentyp. Das folgende Beispiel definiert ein benutzerdefiniertes Attribut, das ein Array von Objekt verwendet ^ als Parameter.  
+  
+ Attributargumente müssen kompilierungszeitskonstanten werden; in den meisten Fällen sollten sie Konstanten Literale sein.  
+  
+ Finden Sie unter [Typeid](../windows/typeid-cpp-component-extensions.md) Informationen zum System:: Type Wert aus einem benutzerdefinierten Attributblock zurückzugeben.  
   
 ```cpp  
 // extending_metadata_e.cpp  
@@ -187,7 +196,7 @@ public ref class SomeClass {};
   
  **Beispiel**  
   
- Die Laufzeit erfordert, dass der öffentliche Teil der benutzerdefinierten Attributklasse serialisierbar sein muss.  Wenn die Verwendung benutzerdefinierter Attribute erstellt, werden benannte Argumente des benutzerdefinierten Attributs auf Konstanten zur Kompilierungszeit beschränkt.  \(Denken Sie an es als Sequenz von Bits, die auf das Klassenlayout in den Metadaten. angefügt werden\)  
+ Die Common Language Runtime erfordert, dass der öffentliche Teil der benutzerdefinierten Attributklasse serialisierbar sein muss.  Beim Erstellen von benutzerdefinierter Attributen sind benannte Argumente für das benutzerdefinierte Attribut auf den kompilierungszeitskonstanten beschränkt.  (Sozusagen Sie eine Sequenz von Bits, die das Klassenlayout in den Metadaten hinzugefügt.)  
   
 ```cpp  
 // extending_metadata_f.cpp  
@@ -206,5 +215,5 @@ ref struct A : Attribute {
 ref struct B {};  
 ```  
   
-## Siehe auch  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>Siehe auch  
+ [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)

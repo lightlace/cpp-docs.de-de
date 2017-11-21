@@ -1,34 +1,34 @@
 ---
-title: "Aufrufen von C++-Funktionen in der Inlineassembly | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__asm-Schlüsselwort [C++], Aufrufende Funktionen"
-  - "Funktionsaufrufe, C++-Funktionen"
-  - "Funktionsaufrufe, In der Inlineassembly"
-  - "Funktionen [C++], Aufrufen in der Inlineassembly"
-  - "Inlineassembly, Aufrufende Funktionen"
-  - "Visual C++, Funktionen"
+title: Aufrufen von C-Funktionen in der Inlineassembly | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- function calls, C functions
+- function calls, in inline assembly
+- functions [C], calling in inline assembly
+- Visual C, functions
+- inline assembly, calling functions
+- __asm keyword [C++], calling functions
 ms.assetid: f8a8d568-d175-4e23-9b24-36ef60a4cab3
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3cd162026792bf8458c3725011b583d1eeb00772
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Aufrufen von C-Funktionen in der Inlineassembly
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Microsoft\-spezifisch  
- Ein `__asm`\-Block kann C\-Funktionen, einschließlich C\-Bibliotheks routinen aufrufen.  Im folgenden Beispiel wird die `printf` routine Bibliothek an:  
+# <a name="calling-c-functions-in-inline-assembly"></a>Aufrufen von C-Funktionen in der Inlineassembly
+## <a name="microsoft-specific"></a>Microsoft-spezifisch  
+ Ein `__asm` Block C-Funktionen, einschließlich der C-Bibliotheksroutinen aufrufen kann. Im folgenden Beispiel wird die `printf` Bibliotheksroutine:  
   
 ```  
 // InlineAssembler_Calling_C_Functions_in_Inline_Assembly.cpp  
@@ -58,15 +58,15 @@ int main( void )
 }  
 ```  
   
- Da Funktionsargumente auf dem Stapel übergeben werden, drücken Sie einfach die erforderlichen Argumente einen Zeichenfolgenzeiger mit dem vorhergehenden Beispiel, bevor die Funktion aufgerufen wird.  Die Argumente werden in umgekehrter Reihenfolge abgelegt werden, sodass sie den Stapel in der gewünschten Reihenfolge ab.  Um die C\-Anweisung emulieren  
+ Da Funktionsargumente auf dem Stapel übergeben sind, drücken Sie einfach die erforderlichen Argumente – Zeigern, die im vorherigen Beispiel Zeichenfolge: vor dem Aufrufen der Funktion. Die Argumente werden in umgekehrter Reihenfolge abgelegt, damit sie vom Stapel in der gewünschten Reihenfolge eintreffen. Zum Emulieren der C-Anweisung  
   
 ```  
 printf( format, hello, world );  
 ```  
   
- Das Beispiel legt Zeiger auf `world``hello`, und `format`, in dieser Reihenfolge und ruft dann `printf`an.  
+ Im Beispiel wird der Zeiger auf `world`, `hello`, und `format`in dieser Reihenfolge und Aufrufe `printf`.  
   
- **Microsoft ENDES bestimmten**  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Inlineassembler](../../assembler/inline/inline-assembler.md)

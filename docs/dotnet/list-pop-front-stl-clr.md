@@ -1,41 +1,39 @@
 ---
-title: "list::pop_front (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::pop_front"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pop_front-Member [STL/CLR]"
+title: 'List:: pop_front (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::pop_front
+dev_langs: C++
+helpviewer_keywords: pop_front member [STL/CLR]
 ms.assetid: 6a0bad42-6796-41d9-a3e9-1488b3882574
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: aa9df1ea52b525d00aa77478f6fcbe1f3e29b29c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# list::pop_front (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listpopfront-stlclr"></a>list::pop_front (STL/CLR)
 Entfernt das erste Element.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void pop_front();  
 ```  
   
-## Hinweise  
- Die Memberfunktion wird das erste Element der gesteuerten Sequenz, die nicht leer sein muss.  Sie verwenden sie, um die Liste durch ein Element am Vordergrund zu verkürzen.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion entfernt das erste Element der gesteuerten Sequenz, die nicht leer sein darf. Sie verwenden es, um ein Element am Anfang die Liste zu verkürzen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_list_pop_front.cpp   
@@ -64,15 +62,18 @@ int main()
   
 ```  
   
-  **ein b c**  
- **b c**   
-## Anforderungen  
- **Header:** \<cliext\/Liste\>  
+```Output  
+a b c  
+b c  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/List >  
   
-## Siehe auch  
- [list](../dotnet/list-stl-clr.md)   
- [list::pop\_back](../dotnet/list-pop-back-stl-clr.md)   
- [list::push\_back](../dotnet/list-push-back-stl-clr.md)   
- [list::push\_front](../dotnet/list-push-front-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Liste (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List:: pop_back (STL/CLR)](../dotnet/list-pop-back-stl-clr.md)   
+ [List:: push_back (STL/CLR)](../dotnet/list-push-back-stl-clr.md)   
+ [list::push_front (STL/CLR)](../dotnet/list-push-front-stl-clr.md)

@@ -1,11 +1,10 @@
 ---
-title: IVirtualProcessorRoot-Struktur | Microsoft-Dokumentation
+title: IVirtualProcessorRoot-Struktur | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,35 +14,18 @@ f1_keywords:
 - CONCRTRM/concurrency::IVirtualProcessorRoot::IVirtualProcessorRoot::Deactivate
 - CONCRTRM/concurrency::IVirtualProcessorRoot::IVirtualProcessorRoot::EnsureAllTasksVisible
 - CONCRTRM/concurrency::IVirtualProcessorRoot::IVirtualProcessorRoot::GetId
-dev_langs:
-- C++
-helpviewer_keywords:
-- IVirtualProcessorRoot structure
+dev_langs: C++
+helpviewer_keywords: IVirtualProcessorRoot structure
 ms.assetid: 5ef371b8-9e4f-4fef-bb0d-49099693dd2b
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 2635f1c18dd61127360b8398ad1b0da03f1666d7
-ms.contentlocale: de-de
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 8f7a7dbff547a0a2f3fba04c10ad9107af2a26ca
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ivirtualprocessorroot-structure"></a>IVirtualProcessorRoot-Struktur
 Eine Abstraktion für einen Hardwarethread, auf dem ein Threadproxy ausgeführt werden kann.  
@@ -61,14 +43,14 @@ struct IVirtualProcessorRoot : public IExecutionResource;
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[IVirtualProcessorRoot:: Activate](#activate)|Bewirkt, dass die Ausführung Context-Schnittstelle zugeordneten Threadproxy `pContext` starten auf diesem virtuellen Prozessorstamm ausgeführt.|  
-|[IVirtualProcessorRoot:: Deactivate](#deactivate)|Bewirkt, dass den Threadproxy auf diesem virtuellen Prozessorstamm so beenden Sie den Ausführungskontext verteilen. Der Threadproxy wird fortgesetzt, bei einem Aufruf von Ausführen der `Activate` Methode.|  
-|[IVirtualProcessorRoot:: EnsureAllTasksVisible](#ensurealltasksvisible)|Bewirkt, dass Daten in der Speicherhierarchie der einzelnen Prozessoren für alle Prozessoren auf dem System sichtbar werden. Dadurch wird sichergestellt, dass ein vollständige Arbeitsspeicher-Fence auf allen Prozessoren ausgeführt wurde, bevor die Methode zurückgegeben.|  
+|[IVirtualProcessorRoot:: Deactivate](#deactivate)|Bewirkt, dass den Threadproxy, der derzeit ausgeführten auf diesem virtuellen Prozessorstamm zu beenden, verteilen den Ausführungskontext. Der Threadproxy wird fortgesetzt, die bei einem Aufruf von Ausführen der `Activate` Methode.|  
+|[IVirtualProcessorRoot:: EnsureAllTasksVisible](#ensurealltasksvisible)|Bewirkt, dass Daten in der gesamten Speicherhierarchie der einzelnen Prozessoren für alle Prozessoren im System sichtbar werden. Dadurch wird sichergestellt, dass eine vollständige Arbeitsspeicher-Fence auf allen Prozessoren ausgeführt wurde, bevor die Methode zurückgegeben.|  
 |[IVirtualProcessorRoot:: GetID](#getid)|Gibt einen eindeutigen Bezeichner für den virtuellen Prozessorstamm zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
- Jeder virtuelle Prozessorstamm hat eine zugeordnete Ausführungsressource. Die `IVirtualProcessorRoot` Schnittstelle erbt von der [IExecutionResource](iexecutionresource-structure.md) Schnittstelle. Mehrere virtuelle Prozessorstämme können den gleichen zugrunde liegenden Hardwarethread entsprechen.  
+ Jeder virtuelle Prozessorstamm hat eine zugeordnete Ausführungsressource. Die `IVirtualProcessorRoot` Schnittstelle erbt von der [IExecutionResource](iexecutionresource-structure.md) Schnittstelle. Mehrere Stämme für virtuelle Prozessoren können der gleichen Hardwarethread des zugrunde liegenden entsprechen.  
   
- Der Ressourcen-Manager gewährt Stämme virtueller Prozessoren Zeitplanungsmodulen in Reaktion auf Anfragen nach Ressourcen. Ein Planer können einen virtuellen Prozessorstamm Aufgaben durchführen, indem er mit einem Ausführungskontext aktivieren.  
+ Der Ressourcen-Manager gewährt Stämme virtueller Prozessoren für Planer, die als Antwort auf Anforderungen von Ressourcen. Ein Planer können einen virtuellen Prozessorstamm Arbeiten ausführen, indem Sie es mit einem Ausführungskontext aktivieren.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [IExecutionResource](iexecutionresource-structure.md)  
@@ -89,25 +71,25 @@ virtual void Activate(_Inout_ IExecutionContext* pContext) = 0;
   
 ### <a name="parameters"></a>Parameter  
  `pContext`  
- Eine Schnittstelle zum Ausführungskontext, der auf diesem virtuellen Prozessorstamm weitergeleitet wird.  
+ Eine Schnittstelle zum Ausführungskontext, der auf diesem virtuellen Prozessorstamm verteilt wird.  
   
 ### <a name="remarks"></a>Hinweise  
  Der Ressourcen-Manager wird einen Threadproxy bereit, wenn keine Ausführung Context-Schnittstelle zugeordnet ist`pContext`  
   
- Die `Activate` Methode kann verwendet werden, um zu beginnen, Arbeit auf einem neuen virtuellen Prozessorstamm vom Ressourcen-Manager zurückgegeben, oder um den Threadproxy auf einem virtuellen Prozessorstamm fortzusetzen, der deaktiviert wurde oder zu deaktivieren. Finden Sie unter [IVirtualProcessorRoot:: Deactivate](#deactivate) für Weitere Informationen zur Deaktivierung. Wenn Sie einen deaktivierter virtueller Prozessorstamm, der Parameter fortsetzen werden `pContext` muss identisch mit den Parameter für den virtuellen Prozessorstamm zu deaktivieren.  
+ Die `Activate` Methode kann verwendet werden, um die Ausführung der Arbeit auf einem neuen virtuellen Prozessorstamm zurückgegeben, der Ressourcen-Manager gestartet oder den Threadproxy auf einem virtuellen Prozessorstamm fortsetzen, die deaktiviert wurde oder zu deaktivieren. Finden Sie unter [IVirtualProcessorRoot:: Deactivate](#deactivate) für Weitere Informationen zur Deaktivierung. Wenn Sie einen deaktivierten virtuellen Prozessorstamm, der Parameter fortsetzen sind `pContext` muss als Parameter verwendet, um die virtuellen Prozessorstamm deaktivieren identisch sein.  
   
- Sobald ein virtueller Prozessorstamm zum ersten Mal, nachfolgende Paare Aufrufe aktiviert wurde `Deactivate` und `Activate` kann zwischen. Dies bedeutet, dass es für den Ressourcen-Manager einen Aufruf von zulässigen `Activate` vor dem Empfang der `Deactivate` Aufruf er vorgesehen war.  
+ Sobald ein virtueller Prozessorstamm zum ersten Mal, nachfolgende Paare von Aufrufen an aktiviert wurde `Deactivate` und `Activate` möglicherweise Rennen miteinander. Dies bedeutet, dass es akzeptabel für den Ressourcen-Manager zum Empfangen von eines Aufrufs von `Activate` vor dem Empfang der `Deactivate` Aufruf er vorgesehen war.  
   
- Wenn Sie einen virtuellen Prozessorstamm aktivieren, signalisieren, dass es sich bei diesem virtuellen Prozessorstamm derzeit mit der Arbeit beschäftigt ist, an den Ressourcen-Manager. Wenn der Planer keine Arbeit auf diesem Stamm ausgeführt findet, wird voraussichtlich Aufrufen der `Deactivate` -Methode informiert den Ressourcen-Manager, dass der virtuelle Prozessorstamm im Leerlauf befindet. Der Ressourcen-Manager verwendet diese Daten zum Lastenausgleich des Systems.  
+ Wenn Sie einen virtuellen Prozessorstamm aktivieren, signalisieren, dass diese virtuellen Prozessorstamm Arbeit momentan ausgelastet ist, zum Ressourcen-Manager. Der Planer alle auf diesem Stamm auszuführende Arbeit gefunden, es wird erwartet zum Aufrufen der `Deactivate` Methode der Ressourcen-Manager zu informieren, dass der virtuelle Prozessorstamm im Leerlauf befindet. Der Ressourcen-Manager verwendet diese Daten für den Lastenausgleich des Systems an.  
   
  `invalid_argument`wird ausgelöst, wenn das Argument `pContext` hat den Wert `NULL`.  
   
- `invalid_operation`wird ausgelöst, wenn das Argument `pContext` nicht den Ausführungskontext darstellt, die von diesem virtuellen Prozessorstamm zuletzt weitergeleitet wurde.  
+ `invalid_operation`wird ausgelöst, wenn das Argument `pContext` stellt den Ausführungskontext, der von diesem virtuellen Prozessorstamm zuletzt weitergeleitet wurde keine dar.  
   
- Aktivieren von einem virtuellen Prozessorstamm wird die Abonnementebene des zugrunde liegenden Hardwarethreads um eins erhöht. Weitere Informationen zu Abonnementebenen finden Sie unter [IExecutionResource:: CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).  
+ Die Aktivierung von einem virtuellen Prozessorstamm Abonnementebene des zugrunde liegenden Hardwarethreads wird um eins erhöht. Weitere Informationen zu Abonnementebenen finden Sie unter [IExecutionResource:: CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).  
   
 ##  <a name="deactivate"></a>IVirtualProcessorRoot:: Deactivate-Methode  
- Bewirkt, dass den Threadproxy auf diesem virtuellen Prozessorstamm so beenden Sie den Ausführungskontext verteilen. Der Threadproxy wird fortgesetzt, bei einem Aufruf von Ausführen der `Activate` Methode.  
+ Bewirkt, dass den Threadproxy, der derzeit ausgeführten auf diesem virtuellen Prozessorstamm zu beenden, verteilen den Ausführungskontext. Der Threadproxy wird fortgesetzt, die bei einem Aufruf von Ausführen der `Activate` Methode.  
   
 ```
 virtual bool Deactivate(_Inout_ IExecutionContext* pContext) = 0;
@@ -118,23 +100,23 @@ virtual bool Deactivate(_Inout_ IExecutionContext* pContext) = 0;
  Der Kontext, der gerade von diesem Stamm weitergeleitet wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein boolescher Wert. Der Wert `true` gibt an, dass der Threadproxy zurückgegeben der `Deactivate` -Methode als Reaktion auf einen Aufruf der `Activate` Methode. Der Wert `false` gibt an, dass der Threadproxy von der Methode als Reaktion auf ein Benachrichtigungsereignis im Ressourcen-Manager zurückgegeben. Auf einem im Benutzermodus planbare (UMS) Threadplaner bedeutet dies, dass Elemente in der Vervollständigungsliste des Planers wurden und der Planer erforderlich ist, um sie zu behandeln.  
+ Ein boolescher Wert. Der Wert `true` gibt an, dass der Threadproxy von zurückgegeben der `Deactivate` Methode als Reaktion auf einen Aufruf der `Activate` Methode. Der Wert `false` gibt an, dass der Threadproxy von der Methode als Reaktion auf ein Benachrichtigungsereignis im Ressourcen-Manager zurückgegeben. Auf einem im Benutzermodus planbare (UMS) Threadplaner bedeutet dies, dass Elemente in der Vervollständigungsliste für den Planer wurden und der Planer erforderlich ist, zu deren Behandlung.  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden Sie diese Methode auf um einen virtuellen Prozessorstamm ausgeführt, wenn Sie keine Arbeit im Planer findet vorübergehend zu beenden. Ein Aufruf der `Deactivate` Methode muss stammen aus der `Dispatch` Methode des Ausführungskontexts, die der virtuelle Prozessorstamm zuletzt aktiviert wurde. Das heißt, der Threadproxy Aufrufen der `Deactivate` -Methode muss derjenige sein, der gerade auf dem virtuellen Prozessorstamm ausgeführt wird. Aufrufen der Methode auf einem virtuellen Prozessorstamm, dem Sie nicht auf ausführen könnte zu nicht definiertem Verhalten führen.  
+ Verwenden Sie diese Methode, einen virtuellen Prozessorstamm ausgeführt, wenn Sie keine Arbeit im Planer findet vorübergehend zu beenden. Ein Aufruf der `Deactivate` Methode muss innerhalb von stammen die `Dispatch` Methode des Ausführungskontexts, die der virtuelle Prozessorstamm zuletzt aktiviert wurde. In anderen Worten: der Threadproxy Aufrufen der `Deactivate` Methode muss das Projekt, das gerade auf dem virtuellen Prozessorstamm ausgeführt wird. Aufrufen der Methode auf einem virtuellen Prozessorstamm, während, dem Sie auf nicht ausgeführt werden, könnte zu nicht definiertem Verhalten führen.  
   
- Ein deaktivierter virtueller Prozessorstamm kann mit einem Aufruf von reaktiviert die `Activate` Methode mit demselben Argument, das an übergeben wurde die `Deactivate` Methode. Der Planer ist dafür verantwortlich sicherzustellen, dass Aufrufe der `Activate` und `Deactivate` Methoden kombiniert werden, aber sie sind nicht in einer bestimmten Reihenfolge empfangen werden müssen. Der Ressourcen-Manager kann einen Aufruf behandeln die `Activate` -Methode auf, bevor er einen Aufruf empfängt die `Deactivate` Methode, die er vorgesehen war.  
+ Ein deaktivierter virtueller Prozessorstamm kann mit einem Aufruf von reaktiviert werden die `Activate` Methode mit dem gleichen Argument, die zum Übergeben der `Deactivate` Methode. Der Planer ist dafür verantwortlich sicherzustellen, dass Aufrufe der `Activate` und `Deactivate` Methoden kombiniert werden, aber sie sind nicht erforderlich, um in einer bestimmten Reihenfolge empfangen werden. Der Ressourcen-Manager kann einen Aufruf verarbeiten die `Activate` -Methode auf, bevor er einen Aufruf empfängt die `Deactivate` Methode, die er vorgesehen war.  
   
- Wenn ein virtueller Prozessorstamm aktiviert und der Rückgabewert der `Deactivate` Methode ist der Wert `false`, der Planer die UMS-Vervollständigungsliste über Abfragen sollte die `IUMSCompletionList::GetUnblockNotifications` -Methode diesen Informationen agieren, und anschließend rufen Sie dann die `Deactivate` -Methode erneut. Dies sollte wiederholt werden, bis zu der Zeit der `Deactivate` -Methode gibt den Wert `true`.  
+ Wenn ein virtueller Prozessorstamm aktiviert und der Rückgabewert der `Deactivate` Methode ist der Wert `false`, der Planer die UMS-Vervollständigungsliste über Abfragen sollte die `IUMSCompletionList::GetUnblockNotifications` Methode, wirken sich auf diese Informationen, und rufen Sie anschließend die anschließend`Deactivate`-Methode erneut. Dies sollte wiederholt werden, solange die `Deactivate` -Methode gibt den Wert `true`.  
   
  `invalid_argument`wird ausgelöst, wenn das Argument `pContext` hat den Wert `NULL`.  
   
- `invalid_operation`wird ausgelöst, wenn der virtuelle Prozessorstamm noch nie aktiviert wurde, oder das Argument `pContext` nicht den Ausführungskontext darstellt, die von diesem virtuellen Prozessorstamm zuletzt weitergeleitet wurde.  
+ `invalid_operation`wird ausgelöst, wenn der virtuelle Prozessorstamm noch nie aktiviert wurde, oder das Argument `pContext` stellt den Ausführungskontext, der von diesem virtuellen Prozessorstamm zuletzt weitergeleitet wurde keine dar.  
   
- Das Deaktivieren von einem virtuellen Prozessorstamm wird die Abonnementebene des zugrunde liegenden Hardwarethreads um eins verringert. Weitere Informationen zu Abonnementebenen finden Sie unter [IExecutionResource:: CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).  
+ Das Deaktivieren von einem virtuellen Prozessorstamm wird das Abonnement Maß an den Hardwarethread des zugrunde liegenden um eins verringert. Weitere Informationen zu Abonnementebenen finden Sie unter [IExecutionResource:: CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).  
   
 ##  <a name="ensurealltasksvisible"></a>IVirtualProcessorRoot:: EnsureAllTasksVisible-Methode  
- Bewirkt, dass Daten in der Speicherhierarchie der einzelnen Prozessoren für alle Prozessoren auf dem System sichtbar werden. Dadurch wird sichergestellt, dass ein vollständige Arbeitsspeicher-Fence auf allen Prozessoren ausgeführt wurde, bevor die Methode zurückgegeben.  
+ Bewirkt, dass Daten in der gesamten Speicherhierarchie der einzelnen Prozessoren für alle Prozessoren im System sichtbar werden. Dadurch wird sichergestellt, dass eine vollständige Arbeitsspeicher-Fence auf allen Prozessoren ausgeführt wurde, bevor die Methode zurückgegeben.  
   
 ```
 virtual void EnsureAllTasksVisible(_Inout_ IExecutionContext* pContext) = 0;
@@ -142,16 +124,16 @@ virtual void EnsureAllTasksVisible(_Inout_ IExecutionContext* pContext) = 0;
   
 ### <a name="parameters"></a>Parameter  
  `pContext`  
- Der Kontext, der gerade von diesem virtuellen Prozessorstamm weitergeleitet wird.  
+ Der Kontext, der derzeit von diesem virtuellen Prozessorstamm weitergeleitet wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Möglicherweise finden Sie diese Methode nützlich bei der Deaktivierung von einem virtuellen Prozessorstamm mit der Hinzufügung neuer Arbeit zum Planer synchronisieren möchten. Aus Gründen der Leistung können Sie entscheiden, dem Planer Arbeitsaufgaben hinzuzufügen, ohne eine Arbeitsspeicherbarriere, d. h., Arbeitsaufgaben hinzugefügt, die von einem Thread auf einem Prozessor ausgeführt wurden, nicht sofort auf allen anderen Prozessoren sichtbar sind. Mit dieser Methode in Verbindung mit der `Deactivate` Methode können Sie sicherstellen, dass der Planer deaktivieren Sie alle seinen virtuellen Prozessor wird Stämme, während die Arbeitsaufgaben in den Planer Auflistungen vorhanden sind.  
+ Sie können hilfreich sein diese Methode bei der Deaktivierung von einem virtuellen Prozessorstamm durch das Hinzufügen neuer Anwendungen in der Planer synchronisiert werden soll. Aus Gründen der Leistung können Sie entscheiden, zu dem Planer Arbeitsaufgaben hinzuzufügen, ohne eine Arbeitsspeicherbarriere, d. h., Arbeitselemente, die durch einen Thread für die Ausführung auf einem Prozessor hinzugefügt nicht sofort für alle anderen Prozessoren sichtbar sind. Mit dieser Methode in Verbindung mit der `Deactivate` Stämme Methode können Sie sicherstellen, dass der Planer seinen virtuellen Prozessor nicht aktiviert ist, auch von Arbeitselementen im des Planers Sammlungen vorhanden sind.  
   
- Ein Aufruf der `EnsureAllTasksVisibleThe` Methode muss stammen aus der `Dispatch` Methode des Ausführungskontexts, die der virtuelle Prozessorstamm zuletzt aktiviert wurde. Das heißt, der Threadproxy Aufrufen der `EnsureAllTasksVisible` -Methode muss derjenige sein, der gerade auf dem virtuellen Prozessorstamm ausgeführt wird. Aufrufen der Methode auf einem virtuellen Prozessorstamm, dem Sie nicht auf ausführen könnte zu nicht definiertem Verhalten führen.  
+ Ein Aufruf der `EnsureAllTasksVisibleThe` Methode muss innerhalb von stammen die `Dispatch` Methode des Ausführungskontexts, die der virtuelle Prozessorstamm zuletzt aktiviert wurde. In anderen Worten: der Threadproxy Aufrufen der `EnsureAllTasksVisible` Methode muss das Projekt, das gerade auf dem virtuellen Prozessorstamm ausgeführt wird. Aufrufen der Methode auf einem virtuellen Prozessorstamm, während, dem Sie auf nicht ausgeführt werden, könnte zu nicht definiertem Verhalten führen.  
   
  `invalid_argument`wird ausgelöst, wenn das Argument `pContext` hat den Wert `NULL`.  
   
- `invalid_operation`wird ausgelöst, wenn der virtuelle Prozessorstamm noch nie aktiviert wurde, oder das Argument `pContext` nicht den Ausführungskontext darstellt, die von diesem virtuellen Prozessorstamm zuletzt weitergeleitet wurde.  
+ `invalid_operation`wird ausgelöst, wenn der virtuelle Prozessorstamm noch nie aktiviert wurde, oder das Argument `pContext` stellt den Ausführungskontext, der von diesem virtuellen Prozessorstamm zuletzt weitergeleitet wurde keine dar.  
   
 ##  <a name="getid"></a>IVirtualProcessorRoot:: GetID-Methode  
  Gibt einen eindeutigen Bezeichner für den virtuellen Prozessorstamm zurück.  
@@ -165,4 +147,3 @@ virtual unsigned int GetId() const = 0;
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)
-

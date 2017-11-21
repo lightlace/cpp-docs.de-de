@@ -1,50 +1,50 @@
 ---
-title: "Grundlegende Konzepte zur Verwendung verwalteter Ausnahmen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__finally-Schlüsselwort, Verwaltete Ausnahmen"
-  - "catch-Blöcke"
-  - "Ausnahmen, Verwaltet"
-  - "Auslösen von Ausnahmen, Verwaltete Ausnahmen"
-  - "try-catch-Ausnahmebehandlung"
-  - "try-catch-Ausnahmebehandlung, Verwaltete Anwendungen"
-  - "Visual C++, Behandeln von verwalteten Ausnahmen"
+title: Grundlegende Konzepte zur Verwendung verwalteter Ausnahmen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- try-catch exception handling, managed applications
+- __finally keyword, managed exceptions
+- exceptions, managed
+- try-catch exception handling
+- catch blocks
+- throwing exceptions, managed exceptions
+- Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
-caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 530bf529faa3fc5c08ea850f8ae390e12d49ac14
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Grundlegende Konzepte zur Verwendung verwalteter Ausnahmen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Dieses Thema erläutert Ausnahmebehandlung in verwalteten Anwendungen.  Das bedeutet, eine Anwendung, die mit der **\/clr**\-Compileroption kompiliert wird.  
+# <a name="basic-concepts-in-using-managed-exceptions"></a>Grundlegende Konzepte zur Verwendung verwalteter Ausnahmen
+Dieses Thema erläutert die Ausnahmebehandlung in verwalteten Anwendungen. D. h. eine Anwendung, die die Kompilierung mit der **"/ CLR"** -Compileroption.  
   
-## In diesem Thema  
+## <a name="in-this-topic"></a>In diesem Thema  
   
--   [Auslösen von Ausnahmen unter \/clr](#vcconbasicconceptsinusingmanagedexceptionsanchor1)  
+-   [Auslösen von Ausnahmen unter/CLR](#vcconbasicconceptsinusingmanagedexceptionsanchor1)  
   
--   [Try\/catch\-Blöcke für CLR\-Erweiterungen](#vcconbasicconceptsinusingmanagedexceptionsanchor2)  
+-   [Try/Catch-Blöcke für CLR-Erweiterungen](#vcconbasicconceptsinusingmanagedexceptionsanchor2)  
   
-## Hinweise  
- Wenn Sie mit der **\/clr** \- Option kompilieren, können Sie CLR\-Ausnahmen sowie standardmäßige [C\+\+\-Ausnahmebehandlung](../cpp/cpp-exception-handling.md) und [strukturierte Ausnahmebehandlung](../cpp/structured-exception-handling-c-cpp.md) \(SEH\) behandeln.  Eine CLR\-Ausnahme ist jede Ausnahme, die durch einen verwalteten Typ ausgelöst wird.  Die [System::Exception](https://msdn.microsoft.com/en-us/library/system.exception.aspx)\-Klasse stellt viele nützliche Methoden zum Verarbeiten von CLR\-Ausnahmen bereit und wird als Basisklasse für benutzerdefinierte Ausnahmeklassen empfohlen.  
+## <a name="remarks"></a>Hinweise  
+ Beim Kompilieren mit der **"/ CLR"** -Option können Sie CLR-Ausnahmen als auch für Standard behandeln [C++-Ausnahmebehandlung](../cpp/cpp-exception-handling.md) und [strukturierte Ausnahmebehandlung](../cpp/structured-exception-handling-c-cpp.md) (SEH). Eine CLR-Ausnahme ist, jede Ausnahme, die von einem verwalteten Typ ausgelöst. Die [System:: Exception](https://msdn.microsoft.com/en-us/library/system.exception.aspx) Klasse bietet viele nützliche Methoden für die Verarbeitung von CLR-Ausnahmen und wird als eine Basisklasse für benutzerdefinierte Ausnahmeklassen empfohlen.  
   
- Die Ausnahmetypen, die von einer Schnittstelle abgeleitet werden, wird unter **\/clr** nicht unterstützt.  Für die Common Language Runtime ermöglicht Sie nicht, Ausnahmen für Stapelüberläufe abzufangen; eine Stapelüberlaufausnahme beendet den Prozess.  
+ Abfangen von Ausnahmetypen, die von einer Schnittstelle abgeleitet wird unter unterstützt **"/ CLR"**. Darüber hinaus lässt die common Language Runtime nicht zu Sie zum Abfangen von Ausnahmen für Stapelüberläufe; Stapelüberlauf-Ausnahmen wird der Prozess beendet.  
   
- Weitere Informationen zu Unterschieden bei der Ausnahmebehandlung in verwalteten und nicht verwalteten Anwendungen, finden Sie unter [Unterschiede im Ausnahmebehandlungs\-Verhaltens unter Managed Extensions for C\+\+](../dotnet/differences-in-exception-handling-behavior-under-clr.md).  
+ Weitere Informationen über die Unterschiede in der Behandlung von Ausnahmen in verwalteten und nicht verwalteten Anwendungen finden Sie unter [Unterschiede in der Ausnahme behandeln von Verhalten unter Managed Extensions for C++](../dotnet/differences-in-exception-handling-behavior-under-clr.md).  
   
-##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a> Auslösen von Ausnahmen unter \/clr  
- Der C\+\+\-Wurfsausdruck wird erweitert, um ein Handle auf einen CLR\-Typ auszulösen.  Im folgenden Beispiel wird einem benutzerdefinierten Ausnahmetyp und anschließend eine Instanz dieses Typs aus:  
+##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a>Auslösen von Ausnahmen unter/CLR  
+ Der C++-Throw-Ausdruck wird erweitert, um ein Handle auf einem CLR-Typ zu lösen. Im folgenden Beispiel wird einen benutzerdefinierter Ausnahmetyp erstellt und löst dann eine Instanz dieses Typs:  
   
 ```  
 // clr_exception_handling.cpp  
@@ -60,7 +60,7 @@ void GlobalFunction() {
 }  
 ```  
   
- Ein Werttyp muss geschachtelt werden, bevor ausgelöst wird:  
+ Ein Werttyp muss geschachtelt werden, vor dem ausgelöst wird:  
   
 ```  
 // clr_exception_handling_2.cpp  
@@ -75,8 +75,8 @@ void GlobalFunction() {
 }  
 ```  
   
-##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a> Try\/catch\-Blöcke für CLR\-Erweiterungen  
- Gleiche **try**\/**catch**\-Blockstruktur können zum Abfangen von CLR und systemeigener Ausnahmen verwendet werden:  
+##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a>Try/Catch-Blöcke für CLR-Erweiterungen  
+ Die gleiche **versuchen**/**catch** Blockstruktur für abgefangen, CLR- und systemeigenen Ausnahmen verwendet werden kann:  
   
 ```  
 // clr_exception_handling_3.cpp  
@@ -123,7 +123,7 @@ int main() {
 }  
 ```  
   
-### Ausgabe  
+### <a name="output"></a>Ausgabe  
   
 ```  
 In 'catch(CMyClass& catchC)'  
@@ -132,23 +132,23 @@ In 'catch(MyStruct^ catchException)'
 11  
 ```  
   
-### Reihenfolge der für C\+\+\-Objekte Entladung  
- Entladen tritt für alle C\+\+\-Objekte mit Destruktoren auf, die möglicherweise im Laufzeitkellerspeicher zwischen der auslösenden Funktion und der Behandlungsfunktion sind.  Da auf CLR\-Typen dem Heap zugeordnet sind, gilt beim Entladen nicht auf sie zu.  
+### <a name="order-of-unwinding-for-c-objects"></a>Reihenfolge der Entladung für C++-Objekte  
+ Entladung tritt für alle C++-Objekte mit Destruktoren führen, die möglicherweise auf dem Stapel zur Laufzeit zwischen der auslösenden und die Behandlungsfunktion. Da CLR-Typen auf dem Heap reserviert werden, gilt was die Entladung nicht für sie.  
   
- Die Reihenfolge der Ereignisse für eine Ausnahme ist, wie folgt:  
+ Die Reihenfolge der Ereignisse für eine ausgelöste Ausnahme lautet wie folgt:  
   
-1.  Die Laufzeit ausgeführt wird den Stapel durch, die nach der entsprechenden catch\-Klausel oder im Fall SEH sucht, außer für Filter SEH, um die Ausnahme abzufangen.  Catch\-Klauseln werden zuerst in der lexikalischen Reihenfolge und dann dynamisch die Abwärtsumwandlung Aufrufliste gefunden.  
+1.  Die Common Language Runtime führt den Stapel suchen, für die entsprechenden Catch-Klausel oder im Fall von SEH, eine mit Ausnahme der Filter für SEH, um die Ausnahme abzufangen. Catch-Klauseln werden zuerst in der lexikalischen Reihenfolge durchsucht, und dann dynamisch nach unten der Aufrufliste.  
   
-2.  Sobald der richtige Handler, der Stapel entladen wird zu diesem Punkt gefunden.  Für jeden Funktionsaufruf auf dem Stapel, werden ihre lokalen Objekte zerstört und \_\_finally werden Blöcke ausgeführt, der nach außen geschachtelt.  
+2.  Nachdem die richtige Handler gefunden wird, ist der Stapel entladen, bis zu diesem Zeitpunkt. Für jeden Funktionsaufruf im Stapel, werden seine lokale Objekte zerstört und __finally Blöcke ausgeführt werden, von den meisten nach außen geschachtelt.  
   
-3.  Sobald wird der Stapel entladen, die catch\-Klausel wird ausgeführt.  
+3.  Nachdem der Stapel entladen wird, wird die Catch-Klausel ausgeführt.  
   
-### Verwaltete nicht verwalteter Typen  
- Wenn ein nicht verwalteter Objekttyp ausgelöst wird, wird er mit einer Ausnahme vom Typ [System::Runtime.InteropServices::SEHException](https://msdn.microsoft.com/en-us/library/system.runtime.interopservices.sehexception.aspx) umschlossen.  Beim Suchen für die entsprechende **catch**\-Klausel, gibt es zwei Möglichkeiten.  
+### <a name="catching-unmanaged-types"></a>Nicht verwaltete Typen abfangen  
+ Wenn ein Typ nicht verwaltete Objekt ausgelöst wird, wird Sie mit einer Ausnahme vom Typ umschlossen [System::Runtime.InteropServices::SEHException](https://msdn.microsoft.com/en-us/library/system.runtime.interopservices.sehexception.aspx). Bei der Suche nach der entsprechenden **catch** -Klausel, es gibt zwei Möglichkeiten.  
   
--   Wenn ein systemeigenes C\+\+\-Typ erreicht wird, wird die Ausnahme an den auftretenden wurde Typ ausgepackt und verglichen.  Dieser Vergleich können einen systemeigenen normal aufgefangen werden C\+\+\-Typ.  
+-   Wenn ein systemeigener C++-Typ festgestellt wird, wird die Ausnahme entpackt und im Vergleich zu den Typ gefunden. Dieser Vergleich kann einen systemeigenen C++-Typ, der auf die übliche Weise abgefangen werden.  
   
--   Wenn **catch** eine Klausel des Typs **SEHException** oder eine ihrer Basisklassen zuerst untersucht wird, fängt die Klausel die Ausnahme ab.  Daher sollten Sie alle catch\-Klauseln platzieren, die systemeigenen C\+\+\-Typen zuerst abfangen, bevor alle catch\-Klauseln von CLR.  
+-   Jedoch, wenn eine **catch** Klausel vom Typ **SEHException** oder eine der zugehörigen Basisklassen wird zuerst überprüft, die-Klausel wird die Ausnahme abzufangen. Aus diesem Grund sollten Sie alle Catch-Klauseln platzieren, die systemeigene C++-Typen abfangen, vor einem-Klauseln der CLR-Typen catch.  
   
  Hinweis  
   
@@ -162,13 +162,13 @@ catch(Object^)
 catch(...)  
 ```  
   
- fangen beide einen ausgelösten Typ einschließlich SEH Ausnahmen ab.  
+ sowohl werden alle ausgelösten Typ einschließlich SEH-Ausnahmen abfangen.  
   
- Wenn ein nicht verwalteter Typ von catch \(Object^\) abgefangen wird, zerstört nicht das ausgelöste Objekt.  
+ Wenn Sie ein nicht verwalteter Typ durch catch(Object^) abgefangen wird, werden nicht die ausgelöste Objekt zerstört.  
   
- Wenn wir nicht verwaltete Ausnahmen, empfohlen ausgelöst oder abgefangen werden, dass Sie die Compileroption [\/EHsc](../build/reference/eh-exception-handling-model.md) anstelle von **\/EHs** oder **\/EHa** verwenden.  
+ Wenn das Auslösen und Abfangen von Ausnahmen nicht verwaltet, wir empfehlen die Verwendung der [/EHsc /](../build/reference/eh-exception-handling-model.md) -Compileroption anstelle von **/EHs** oder **/EHa**.  
   
-## Siehe auch  
- [Exception Handling](../windows/exception-handling-cpp-component-extensions.md)   
- [safe\_cast](../windows/safe-cast-cpp-component-extensions.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Ausnahmebehandlung](../windows/exception-handling-cpp-component-extensions.md)   
+ ["safe_cast"](../windows/safe-cast-cpp-component-extensions.md)   
  [Ausnahmebehandlung](../cpp/exception-handling-in-visual-cpp.md)

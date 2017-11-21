@@ -1,33 +1,32 @@
 ---
-title: "Gewusst wie: Verwenden von Nachverfolgungsverweisen in C++/CLI"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CLR-Typen, Übergeben als Verweis"
+title: 'Vorgehensweise: Verwenden von Nachverfolgungsverweisen in C + c++ / CLI | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: CLR types, passing by reference
 ms.assetid: d91e471c-34ff-4786-9e0d-c6db0494b946
-caps.latest.revision: 11
-caps.handback.revision: "9"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f7e03106c9a4e49e727e278538ca984b740ad446
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Gewusst wie: Verwenden von Nachverfolgungsverweisen in C++/CLI
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In diesem Artikel wird veranschaulicht, wie einen Nachverfolgungsverweis \(%\) in [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)] zu Übergaben\-CommonLanguage Runtime \(CLR\)\- Typen als Verweis verwendet.  
+# <a name="how-to-use-tracking-references-in-ccli"></a>Gewusst wie: Verwenden von Nachverfolgungsverweisen in C++/CLI
+Dieser Artikel zeigt, wie einen Nachverfolgungsverweis (%) in C + c++ / CLI in common Language Runtime (CLR)-Typen als Verweis übergeben.  
   
-## So CLR\-Typen als Verweis übergeben  
- Das folgende Beispiel veranschaulicht, wie einen Nachverfolgungsverweis verwendet, um CLR\-Typen als Verweis zu übergeben.  
+## <a name="to-pass-clr-types-by-reference"></a>CLR-Typen als Verweis übergeben  
+ Das folgende Beispiel zeigt, wie einen Nachverfolgungsverweis zu verwenden, um CLR-Typen als Verweis übergeben wird.  
   
-```  
+```cpp  
 // tracking_reference_handles.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -74,11 +73,13 @@ int main() {
 }  
 ```  
   
- **Ausgabe**  
-  
-  **Postleitzahl \=\= 20100** Im folgenden Beispiel wird das an, das die Adresse von Trackingverweises gibt eines [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md) nimmt und zeigt, wie und auf Daten durch einen Nachverfolgungsverweis ändert an.  
-  
+```Output  
+zip == 20100  
 ```  
+  
+ Das nächste Beispiel veranschaulicht diese Übernahme der Adresse ein Nachverfolgungsverweis gibt eine [Interior_ptr (C + c++ / CLI)](../windows/interior-ptr-cpp-cli.md), und ändern und den Datenzugriff über ein Nachverfolgungsverweis erläutert.  
+  
+```cpp  
 // tracking_reference_data.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -123,14 +124,15 @@ int main() {
 }  
 ```  
   
- **Ausgabe**  
-  
-  **ctor: R \(int\)**  
-**ctor: N \(int i\)**   
-## Nachverfolgungsverweise und innere Zeiger  
- Im folgenden Codebeispiel wird gezeigt, dass Sie zwischen Trackingverweisen und inneren Zeiger konvertieren können.  
-  
+```Output  
+ctor: R(int)  
+ctor: N(int i)  
 ```  
+  
+## <a name="tracking-references-and-interior-pointers"></a>Nachverfolgungsverweisen und inneren Zeigern  
+ Im folgenden Codebeispiel wird veranschaulicht, dass Sie zwischen Nachverfolgungsverweisen und inneren Zeigern konvertieren können.  
+  
+```cpp  
 // tracking_reference_interior_ptr.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -176,20 +178,30 @@ int main() {
 }  
 ```  
   
- **Ausgabe**  
-  
-  **ctor: R \(int\)**  
-**ctor: N \(int i\)**   
-## Nachverfolgungsverweise und Werttypen  
- In diesem Beispiel wird durch einfaches Boxing einen Nachverfolgungsverweis auf einen Werttyp an:  
-  
-```  
-// tracking_reference_valuetypes_1.cpp// compile with: /clrusing namespace System;int main() {   int i = 10;   int % j = i;   Object ^ o = j;   // j is implicitly boxed and assigned to o}  
+```Output  
+ctor: R(int)  
+ctor: N(int i)  
 ```  
   
- Das folgende Beispiel zeigt, dass Sie und Eingeborenverweise Nachverfolgungsverweise auf Werttypen verfügen können.  
+## <a name="tracking-references-and-value-types"></a>Nachverfolgungsverweisen und Werttypen  
+ Dieses Beispiel zeigt einfache Boxing durch ein Nachverfolgungsverweis auf einen Werttyp an:  
   
+```cpp  
+// tracking_reference_valuetypes_1.cpp
+// compile with: /clr
+
+using namespace System;
+
+int main() {
+   int i = 10;   
+   int % j = i;   
+   Object ^ o = j;   // j is implicitly boxed and assigned to o
+}  
 ```  
+  
+ Das nächste Beispiel zeigt, dass Sie Nachverfolgungsverweisen und systemeigene Verweise auf Typen mit Werten haben können.  
+  
+```cpp  
 // tracking_reference_valuetypes_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -206,13 +218,15 @@ int main() {
 }  
 ```  
   
- **Ausgabe**  
-  
-  **13**  
-**13**  
-**13** Das folgende Beispiel zeigt, dass Sie Nachverfolgungsverweise zusammen mit Werttypen und Eingeborentypen verwenden können.  
-  
+```Output  
+13  
+13  
+13  
 ```  
+  
+ Das folgende Beispiel zeigt die Verwendung von Nachverfolgungsverweisen zusammen mit Werttypen und systemeigene Typen.  
+  
+```cpp  
 // tracking_reference_valuetypes_3.cpp  
 // compile with: /clr  
 value struct G {  
@@ -238,14 +252,16 @@ int main() {
 }  
 ```  
   
- **Ausgabe**  
-  
-  **4**  
-**4**  
-**5**  
-**5** Dieses Beispiel veranschaulicht, dass Sie einen Nachverfolgungsverweis auf einen Werttyp auf dem Heap der Garbage Collection erstellen können:  
-  
+```Output  
+4  
+4  
+5  
+5  
 ```  
+  
+ Dieses Beispiel zeigt, dass einen Nachverfolgungsverweis auf einen Werttyp auf dem Heap der Garbage collection gebunden werden können:  
+  
+```cpp  
 // tracking_reference_valuetypes_4.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -274,16 +290,17 @@ int main() {
 }  
 ```  
   
- **Ausgabe**  
-  
-  **Vorlage V: 2, packten Nachverfolgungsverweis V ein: 1**  
-**Nachverfolgungsverweis packte V ein: 3**  
-**Geschachtelte neue Kopie V: 1**  
-**Vorlage V: 4, Verweis auf Handle ursprünglich geschachtelten V: 1**   
-## Vorlage funktioniert dieses nehmen ab, Verweisparameter Wert oder  
- Indem Sie einen Nachverfolgungsverweis in der Signatur eine Vorlagenfunktion verwenden, stellen Sie sicher, dass die Funktion mit einem Parameter, dessen Typ, handelt, CLR\-Wert oder CLR\-Verweis aufgerufen werden kann.  
-  
+```Output  
+Original V: 2, Tracking reference to boxed V: 1  
+Tracking reference to boxed V: 3  
+Boxed new copy V: 1  
+Original V: 4, Reference to handle of originally boxed V: 1  
 ```  
+  
+## <a name="template-functions-that-take-native-value-or-reference-parameters"></a>Vorlagenfunktionen, die systemeigene akzeptieren, Wert oder Verweisparameter  
+ Mit ein Nachverfolgungsverweis in der Signatur eine Vorlagenfunktion, stellen Sie sicher, dass die Funktion kann, durch ein Parameter aufgerufen werden, dessen Typ native ist, CLR-Wert oder Verweis CLR.  
+  
+```cpp  
 // tracking_reference_template.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -304,7 +321,7 @@ public:
    }  
 };  
   
-// Class Defintions  
+// Class Definitions  
 ref struct R {  
    int i;  
 };  
@@ -322,10 +339,11 @@ int main() {
 }  
 ```  
   
- **Ausgabe**  
+```Output  
+T %  
+T %  
+T &  
+```  
   
-  **% T**  
-**% T**  
-**T &**   
-## Siehe auch  
- [Tracking Reference Operator](../windows/tracking-reference-operator-cpp-component-extensions.md)
+## <a name="see-also"></a>Siehe auch  
+ [Nachverfolgungsverweisoperator](../windows/tracking-reference-operator-cpp-component-extensions.md)

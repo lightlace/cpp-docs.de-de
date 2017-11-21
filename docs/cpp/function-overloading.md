@@ -4,32 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - function overloading [C++], about function overloading
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 9076fdd48e466d68d5dcecec2c339a98f39a8bb1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 2486357766d2dbd9f5d4250e2d0fb38e02ba51bc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="function-overloading"></a>Funktionsüberladung
 C++ lässt die Angabe mehrerer Funktionen mit dem gleichen Namen im gleichen Gültigkeitsbereich zu. Diese werden als überladene Funktionen bezeichnet und ausführlich unter "Überladen" beschrieben. Überladene Funktionen ermöglichen Programmierern das Bereitstellen anderer Semantiken für eine Funktion in Abhängigkeit von den Typen und der Anzahl von Argumenten.  
   
- Z. B. eine **Drucken** Funktion, die eine Zeichenfolge akzeptiert (oder **Char \* **) Argument führt sehr unterschiedliche Aufgaben als eine, die ein Argument des Typs **doppelte** . Das Überladen ermöglicht eine einheitliche Benennung und verhindert, dass Programmierer Namen wie `print_sz` oder `print_d` erfinden müssen. Die folgende Tabelle zeigt, welche Teile einer Funktionsdeklaration von C++ verwendet werden, um zwischen Gruppen von Funktionen mit dem gleichen Namen und dem gleichen Gültigkeitsbereich zu differenzieren.  
+ Z. B. eine **Drucken** Funktion, die eine Zeichenfolge akzeptiert (oder **Char \*** ) Argument führt sehr unterschiedliche Aufgaben als eine, die ein Argument des Typs **doppelte** . Das Überladen ermöglicht eine einheitliche Benennung und verhindert, dass Programmierer Namen wie `print_sz` oder `print_d` erfinden müssen. Die folgende Tabelle zeigt, welche Teile einer Funktionsdeklaration von C++ verwendet werden, um zwischen Gruppen von Funktionen mit dem gleichen Namen und dem gleichen Gültigkeitsbereich zu differenzieren.  
   
 ### <a name="overloading-considerations"></a>Überlegungen zur Überladung  
   
@@ -183,7 +180,7 @@ F1 = Add( 3, 6 );
   
  Beachten Sie, dass die Schnittmenge zwischen diesen beiden Sätzen leer ist. Aus diesem Grund generiert der Compiler eine Fehlermeldung.  
   
- Für die argumentübereinstimmung wird eine Funktion mit * n * Standardargumente so behandelt, als * n *+ 1 unterschiedliche Funktionen, jeweils mit einer anderen Anzahl von Argumenten.  
+ Für die argumentübereinstimmung wird eine Funktion mit  *n*  Standardargumente so behandelt, als  *n* + 1 unterschiedliche Funktionen, jeweils mit einer anderen Anzahl von Argumenten.  
   
  Die Ellipse (...) dient als Platzhalter; sie stimmt mit jedem tatsächlichen Argument überein. Dies kann zu vielen mehrdeutigen Gruppen führen, wenn Sie die überladene Funktion nicht mit größter Sorgfalt entwerfen.  
   
@@ -259,7 +256,7 @@ volatile Over&
 |*Typname*|*Typname***&**|  
 |*Typname***&**|*Typname*|  
 |*Typname* **]**|*Typname\**|  
-|*Typname* **(** *Argumentliste* **)**|**(** * \*Typname* **) (** *Argumentliste* **)**|  
+|*Typname* **(** *Argumentliste* **)**|**(**  *\*Typname* **) (** *Argumentliste* **)**|  
 |*Typname*|**const** *Typname*|  
 |*Typname*|`volatile`*Typname*|  
 |*Typname\**|**const** *Typname\**|  
@@ -269,19 +266,19 @@ volatile Over&
   
 1.  Genaue Übereinstimmung. Ein genaue Übereinstimmung zwischen den Typen, mit denen die Funktion aufgerufen wird und den Typen, die im Funktionsprototyp deklariert werden, ist immer die beste Übereinstimmung. Sequenzen von trivialen Konvertierungen werden als exakte Übereinstimmungen klassifiziert. Allerdings sind Sequenzen, die keine dieser Konvertierungen ausführen, besser als Sequenzen, die konvertieren:  
   
-    -   Von Zeiger in Zeiger auf **const** (`type` ** \* ** auf **const** `type` ** \* ** ).  
+    -   Von Zeiger in Zeiger auf **const** (`type`  **\***  auf **const** `type`  **\***  ).  
   
-    -   Von Zeiger in Zeiger auf `volatile` (`type` ** \* ** auf `volatile` `type` ** \* **).  
+    -   Von Zeiger in Zeiger auf `volatile` (`type`  **\***  auf `volatile` `type`  **\*** ).  
   
-    -   Von Verweis in Verweis auf **const** (`type` ** & ** auf **const** `type` ** & **).  
+    -   Von Verweis in Verweis auf **const** (`type`  **&**  auf **const** `type`  **&** ).  
   
-    -   Von Verweis in Verweis auf `volatile` (`type` ** & ** auf `volatile` `type` ** & **).  
+    -   Von Verweis in Verweis auf `volatile` (`type`  **&**  auf `volatile` `type`  **&** ).  
   
 2.  Übereinstimmung mithilfe von Erweiterungen. Jede beliebige Sequenz nicht als genaue Übereinstimmung, die nur ganzzahlige Erweiterungen, Konvertierungen von enthält klassifiziert **"float"** auf **doppelte**, und triviale Konvertierungen wird als Übereinstimmung mithilfe von Erweiterungen klassifiziert. Obwohl eine Übereinstimmung mit Erweiterungen besser ist als eine Übereinstimmung, die Standardkonvertierungen verwendet, ist sie nicht so gut wie eine genaue Übereinstimmung.  
   
 3.  Übereinstimmung mithilfe von Standardkonvertierungen. Jede beliebige Sequenz, die nicht als genaue Übereinstimmung klassifiziert wird, oder eine Übereinstimmung mithilfe von Erweiterungen, die nur Standardkonvertierungen und triviale Konvertierungen enthält, wird als Übereinstimmung mithilfe von Standardkonvertierungen klassifiziert. In dieser Kategorie gelten die folgenden Regeln:  
   
-    -   Konvertierung von einem Zeiger auf eine abgeleitete Klasse, um einen Zeiger auf eine direkte oder indirekte Basisklasse ist für die Konvertierung zu vorzuziehen **"void" \* ** oder **const "void" \* **.  
+    -   Konvertierung von einem Zeiger auf eine abgeleitete Klasse, um einen Zeiger auf eine direkte oder indirekte Basisklasse ist für die Konvertierung zu vorzuziehen **"void" \***  oder **const "void" \*** .  
   
     -   Die Konvertierung von einem Zeiger auf eine abgeleitete Klasse in einen Zeiger auf eine Basisklasse erzeugt eine bessere Übereinstimmung, je näher die Basisklasse der direkten Basisklasse ist. Angenommen, die Klassenhierarchie folgt der in der folgenden Abbildung dargestellten Klassenhierarchie.  
   
@@ -426,7 +423,7 @@ obj.name
     void Print( PSTR szToPrint );  
     ```  
   
-     Die vorhergehenden zwei Funktionen verfügen über identische Argumentlisten. `PSTR`ist ein Synonym für den Typ **Char \* **. Im Memberbereich generiert dieser Code einen Fehler.  
+     Die vorhergehenden zwei Funktionen verfügen über identische Argumentlisten. `PSTR`ist ein Synonym für den Typ **Char \*** . Im Memberbereich generiert dieser Code einen Fehler.  
   
 -   Aufgelistete Typen sind verschiedene Typen und können verwendet werden, um zwischen überladenen Funktionen zu unterscheiden.  
   

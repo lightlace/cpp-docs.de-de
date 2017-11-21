@@ -1,32 +1,30 @@
 ---
-title: "Kontextbezogene Schl&#252;sselw&#246;rter (Komponentenerweiterungen f&#252;r C++)"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - "internal_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Kontextbezogene Schlüsselwörter"
+title: "Kontextbezogene Schlüsselwörter (Komponentenerweiterungen für C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: internal_CPP
+dev_langs: C++
+helpviewer_keywords: context-sensitive keywords
 ms.assetid: e33da089-f434-44e9-8cce-4668d05a8939
-caps.latest.revision: 19
-caps.handback.revision: "17"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "19"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 68ff63d5b596d575f26ec0f56a3ac7a568c8471e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Kontextbezogene Schl&#252;sselw&#246;rter (Komponentenerweiterungen f&#252;r C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-*Kontextbezogene Schlüsselwörter* sind Sprachelemente, die nur in bestimmten Kontexten erkannt werden.  Außerhalb des jeweiligen Kontexts kann ein kontextbezogenes Schlüsselwort ein benutzerdefiniertes Symbol sein.  
+# <a name="context-sensitive-keywords--c-component-extensions"></a>Kontextbezogene Schlüsselwörter (Komponentenerweiterungen für C++)
+*Kontextbezogene Schlüsselwörter* sind Sprachelemente, die nur in bestimmten Kontexten erkannt werden. Außerhalb des jeweiligen Kontexts kann ein kontextbezogenes Schlüsselwort ein benutzerdefiniertes Symbol sein.  
   
-## Alle Laufzeiten  
+## <a name="all-runtimes"></a>Alle Laufzeiten  
  **Hinweise**  
   
  Die folgende Liste enthält die kontextbezogenen Schlüsselwörter:  
@@ -35,17 +33,17 @@ manager: "ghogen"
   
 -   [delegate](../windows/delegate-cpp-component-extensions.md)  
   
--   [Ereignis](../windows/event-cpp-component-extensions.md)  
+-   [event](../windows/event-cpp-component-extensions.md)  
   
 -   [finally](../dotnet/finally.md)  
   
--   [for each, in](../dotnet/for-each-in.md)  
+-   [for each in](../dotnet/for-each-in.md)  
   
 -   [initonly](../dotnet/initonly-cpp-cli.md)  
   
--   `internal` \(siehe [Membersichtbarkeit](../misc/member-visibility.md)\)  
+-   `internal`   
   
--   [literal](../windows/literal-cpp-component-extensions.md)  
+-   [Zeichenfolgenliterale](../windows/literal-cpp-component-extensions.md)  
   
 -   [override](../windows/override-cpp-component-extensions.md)  
   
@@ -53,27 +51,27 @@ manager: "ghogen"
   
 -   [sealed](../windows/sealed-cpp-component-extensions.md)  
   
--   `where` \(Teil von [Generics](../windows/generics-cpp-component-extensions.md)\)  
+-   `where`(Teil [Generika](../windows/generics-cpp-component-extensions.md))  
   
- Um die Lesbarkeit zu erhöhen, sollten Sie die Verwendung von kontextbezogenen Schlüsselwörtern als benutzerdefinierte Symbole einschränken.  
+ Zur besseren Lesbarkeit empfiehlt es sich um die Verwendung von kontextbezogenen Schlüsselwörtern als benutzerdefinierte Symbole einschränken.  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+## <a name="windows-runtime"></a>Windows-Runtime  
  **Hinweise**  
   
- \(Es gibt keine plattformspezifischen Hinweise für diese Funktion.\)  
+ (Es gibt keine plattformspezifischen Hinweise für diese Funktion.)  
   
-### Voraussetzungen  
- Compileroption: **\/ZW**  
+### <a name="requirements"></a>Anforderungen  
+ Compileroption: **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
+## <a name="common-language-runtime"></a>Common Language Runtime 
  **Hinweise**  
   
- \(Es gibt keine plattformspezifischen Hinweise für diese Funktion.\)  
+ (Es gibt keine plattformspezifischen Hinweise für diese Funktion.)  
   
-### Voraussetzungen  
- Compileroption: **\/clr**  
+### <a name="requirements"></a>Anforderungen  
+ Compileroption: **/clr**  
   
-### Beispiele  
+### <a name="examples"></a>Beispiele  
  **Beispiel**  
   
  Im folgenden Codebeispiel wird dargestellt, wie das kontextbezogene Schlüsselwort `property` im entsprechenden Kontext verwendet werden kann, um eine Eigenschaft und eine Variable zu definieren.  
@@ -101,6 +99,9 @@ int main() {
   
  **Ausgabe**  
   
-  **100**   
-## Siehe auch  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+```Output  
+100  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)

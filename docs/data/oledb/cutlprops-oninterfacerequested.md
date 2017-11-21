@@ -1,32 +1,30 @@
 ---
-title: "CUtlProps::OnInterfaceRequested | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CUtlProps"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OnInterfaceRequested-Methode"
+title: 'CUtlProps:: Oninterfacerequested | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: CUtlProps
+dev_langs: C++
+helpviewer_keywords: OnInterfaceRequested method
 ms.assetid: a5e1a879-cff3-4e01-b902-2249a152984f
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 860870628d8558ad252657c06d90f195fd707eb8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# CUtlProps::OnInterfaceRequested
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Handleersuchen um eine optionale Schnittstelle, wenn ein Consumer aufruft, eine Methode auf einer der Objekterstellung verbindet.  
+# <a name="cutlpropsoninterfacerequested"></a>CUtlProps::OnInterfaceRequested
+Verarbeitet Anforderungen für eine optionale Schnittstelle, wenn ein Consumer eine Methode eines Objekts erstellen Schnittstellen aufruft.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -35,16 +33,16 @@ Handleersuchen um eine optionale Schnittstelle, wenn ein Consumer aufruft, eine 
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `riid`  
- \[in\] die IID für die angeforderte Schnittstelle.  Ausführliche Informationen finden Sie in der Beschreibung des Parameters `riid` von `ICommand::Execute` in der *OLE* DB\-Programmierreferenz im *MDAC SDK*\(\).  
+ [in] Die IID für die angeforderte Schnittstelle. Weitere Informationen finden Sie unter der Beschreibung der der `riid` Parameter `ICommand::Execute` in der *OLE DB Programmer's Reference* (in der *MDAC SDK*).  
   
-## Hinweise  
- **OnInterfaceRequested**  behandelt Consumerersuchen um eine optionale Schnittstelle, wenn ein Consumer eine Methode auf einer der Objekterstellungsschnittstellen aufruft \(wie **IDBCreateSession**, **IDBCreateCommand**, `IOpenRowset` oder `ICommand`\).  Er legt die entsprechende OLE DB\-Eigenschaft für die angeforderte Schnittstelle fest.  Wenn der Consumer **IID\_IRowsetLocate** anfordert, legt **OnInterfaceRequested** die Schnittstelle **DBPROP\_IRowsetLocate** fest.  Hiermit behält so den richtigen Zustand während der Rowseterstellung bei.  
+## <a name="remarks"></a>Hinweise  
+ **OnInterfaceRequested** Consumeranforderungen für eine optionale Schnittstelle behandelt, wenn ein Consumer eine Methode eines Objekts erstellen Schnittstellen aufruft (z. B. **IDBCreateSession**, **IDBCreateCommand**, `IOpenRowset`, oder `ICommand`). Die entsprechende OLE DB-Eigenschaft für die angeforderte Schnittstelle festgelegt. Angenommen, fordert der Consumer **IID_IRowsetLocate**, **OnInterfaceRequested** legt die **DBPROP_IRowsetLocate** Schnittstelle. Auf diese Weise verwaltet den richtigen Status während der rowseterstellung.  
   
- Diese Methode wird aufgerufen, wenn der Consumer **IOpenRowset::OpenRowset** oder `ICommand::Execute` aufrufen.  
+ Diese Methode wird aufgerufen, wenn der Consumer ruft **IOpenRowset:: OPENROWSET** oder `ICommand::Execute`.  
   
- Wenn ein Consumer ein Objekt wird und um eine optionale Schnittstelle anfordert, sollte der Anbieter die Eigenschaft festlegen, die dieser Schnittstelle auf `VARIANT_TRUE` zugeordnet ist.  Um das eigenschaftenspezifische Verarbeitung zu ermöglichen, wird **OnInterfaceRequested**  aufgerufen bevor die **Ausführen** \-Methode des Anbieters aufgerufen wird.  Standardmäßig behandelt **OnInterfaceRequested**  die folgenden Schnittstellen:  
+ Wenn ein Consumer ein Objekt öffnet, und eine optionale Schnittstelle fordert, sollte der Anbieter die Eigenschaft, die die Schnittstelle zugeordnet festlegen `VARIANT_TRUE`. Die Eigenschaftenspezifisch-Verarbeitung ermöglicht **OnInterfaceRequested** wird aufgerufen, bevor des Anbieters **Execute** -Methode aufgerufen wird. Standardmäßig **OnInterfaceRequested** behandelt die folgenden Schnittstellen:  
   
 -   `IRowsetLocate`  
   
@@ -56,10 +54,10 @@ Handleersuchen um eine optionale Schnittstelle, wenn ein Consumer aufruft, eine 
   
 -   `IRowsetScroll`  
   
- Wenn Sie weitere Schnittstellen behandeln, überschreiben Sie diese Funktion in der Datenquelle, der Sitzung, in Befehl, oder in Funktionen Rowsetklasse, zu verarbeiten.  Die Überschreibung, sollte das normale festgelegte durchlaufen\/ruft Eigenschaftenschnittstellen ab, dass das Festlegen von Eigenschaften sicherzustellen, auch sämtliche verketteten Eigenschaften festlegen \(siehe [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)\).  
+ Wenn Sie andere Schnittstellen behandeln möchten, überschreiben Sie diese Funktion in die Datenklasse Quelle, Session, Befehls- oder Rowset Prozess Funktionen. Die Außerkraftsetzung sollte die normalen Set/Get Eigenschaften Schnittstellen, um sicherzustellen, dass die Eigenschaften auch alle verketteten Eigenschaften festlegen, durchlaufen (finden Sie unter [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)).  
   
-## Anforderungen  
- **Header:** atldb.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** „atldb.h“  
   
-## Siehe auch  
- [CUtlProps\-Klasse](../../data/oledb/cutlprops-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [CUtlProps-Klasse](../../data/oledb/cutlprops-class.md)

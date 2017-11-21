@@ -1,31 +1,31 @@
 ---
-title: "&#196;ndern der Vererbung von &quot;RMyProviderRowset&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Vererbung [C++]"
-  - "RMyProviderRowset"
+title: "Ändern der Vererbung von \"RMyProviderRowset\" | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- RMyProviderRowset
+- inheritance [C++]
 ms.assetid: 33089c90-98a4-43e7-8e67-d4bb137e267e
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e8ecfe35d61762b8beaa217eaacc4202a588debb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# &#196;ndern der Vererbung von &quot;RMyProviderRowset&quot;
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Um dem einfachen schreibgeschützten Anbieter die `IRowsetLocate`\-Schnittstelle hinzuzufügen, ändern Sie die Vererbung von **RMyProviderRowset**.  In der ursprünglichen Einstellung erbt **RMyProviderRowset** von `CRowsetImpl`.  Sie müssen diese Einstellung ändern, um die Vererbung von **CRowsetBaseImpl** zu ermöglichen.  
+# <a name="modifying-the-inheritance-of-rmyproviderrowset"></a>Ändern der Vererbung von "RMyProviderRowset"
+Hinzufügen der `IRowsetLocate` Schnittstelle mit dem einfachen schreibgeschützten Anbieters-Beispiel, ändern Sie die Vererbung von **"RMyProviderRowset"**. Zu Beginn **"RMyProviderRowset"** erbt von `CRowsetImpl`. Müssen Sie es zu vererben ändern **CRowsetBaseImpl**.  
   
- Sie erstellen dazu in **MyProviderRS.h** die neue `CMyRowsetImpl`\-Klasse:  
+ Zu diesem Zweck erstellen Sie eine neue Klasse `CMyRowsetImpl`, in MyProviderRS.h:  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -39,7 +39,7 @@ class CMyRowsetImpl:
 };  
 ```  
   
- Anschließend ändern Sie die COM\-Schnittstellenzuordnung in **MyProviderRS.h** wie folgt:  
+ Bearbeiten Sie nun die COM-schnittstellenzuordnung in MyProviderRS.h wie folgt sein:  
   
 ```  
 BEGIN_COM_MAP(CMyRowsetImpl)  
@@ -48,17 +48,17 @@ BEGIN_COM_MAP(CMyRowsetImpl)
 END_COM_MAP()  
 ```  
   
- Auf diese Weise wird eine COM\-Schnittstellenzuordnung erstellt, mit deren Hilfe `CMyRowsetImpl` angewiesen wird, **QueryInterface** sowohl für die `IRowset`\-Schnittstelle als auch für die `IRowsetLocate`\-Schnittstelle aufzurufen.  Um die anderen Rowsetklassen vollständig zu implementieren, wird die `CMyRowsetImpl`\-Klasse durch die Zuordnung wieder mit der in den OLE DB\-Vorlagen definierten **CRowsetBaseImpl**\-Klasse verknüpft. Die Zuordnung verwendet das `-Makro, das Informationen für die OLE DB-Vorlagen enthält, durch die als Reaktion auf einen QueryInterface`\-Aufruf die COM\-Zuordnung in **CRowsetBaseImpl** durchsucht wird.  
+ Dies erstellt eine COM-Schnittstelle, die mitteilt, `CMyRowsetImpl` Aufrufen **QueryInterface** für beide die `IRowset` und `IRowsetLocate` Schnittstellen. Klassen zum Abrufen aller die Implementierung für andere Rowset die zuordnungslinks der `CMyRowsetImpl` Klasse zurück, an die **CRowsetBaseImpl** Klasse durch den OLE DB-Vorlagen definiert; die-Makro, wodurch angewiesen wird verwendet OLE DB-Vorlagen, überprüfen Sie die COM-Zuordnung in **CRowsetBaseImpl** als Antwort auf eine `QueryInterface` aufrufen.  
   
- Zuletzt verknüpfen Sie `RAgentRowset` mit `CMyRowsetBaseImpl`, indem Sie `RAgentRowset`, wie im Folgenden dargestellt, ändern, sodass von `CMyRowsetImpl` geerbt wird:  
+ Verknüpfen Sie schließlich `RAgentRowset` auf `CMyRowsetBaseImpl` durch Ändern von `RAgentRowset` zu vererben `CMyRowsetImpl`wie folgt:  
   
 ```  
 class RAgentRowset : public CMyRowsetImpl<RAgentRowset, CAgentMan, CMyProviderCommand>  
 ```  
   
- Nun kann `RAgentRowset` die `IRowsetLocate`\-Schnittstelle verwenden und gleichzeitig die Vorteile der übrigen Implementierung für die Rowsetklasse nutzen.  
+ `RAgentRowset`Nun können Sie die `IRowsetLocate` Schnittstelle profitieren von der Rest der Implementierung für die Rowsetklasse.  
   
- Nachdem dieser Schritt abgeschlossen ist, können Sie [dynamisch festlegen, welche Spalten an den Consumer zurückgegeben werden](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).  
+ Nachdem dies geschehen ist, können Sie [dynamisch bestimmen an den Consumer zurückgegebene Spalten](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Erweitern des einfachen schreibgeschützten Anbieters](../../data/oledb/enhancing-the-simple-read-only-provider.md)

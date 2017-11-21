@@ -1,63 +1,62 @@
 ---
-title: "__writemsr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__writemsr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Write Model Specific Register-Anweisung"
-  - "wrmsr-Anweisung"
-  - "__writemsr intrinsic"
+title: __writemsr | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __writemsr
+dev_langs: C++
+helpviewer_keywords:
+- Write Model Specific Register instruction
+- wrmsr instruction
+- __writemsr intrinsic
 ms.assetid: 938b1553-51a8-4822-a818-6bed79b0fde5
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f82905dd2ef788962929203b3371f0b1fde316ef
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# __writemsr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft\-spezifisch**  
+# <a name="writemsr"></a>__writemsr
+**Microsoft-spezifisch**  
   
- Generiert das Modell der Schreibvorgang bestimmte Anweisung des Registers \(`wrmsr`\).  
+ Generiert das Schreiben in Model Specific Register (`wrmsr`) Anweisung.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-void __writemsr(   
-   unsigned long Register,   
-   unsigned __int64 Value   
+void __writemsr(   
+   unsigned long Register,   
+   unsigned __int64 Value   
 );  
 ```  
   
-#### Parameter  
- \[in\] `Register`  
- Das Modell spezielle Register.  
+#### <a name="parameters"></a>Parameter  
+ [in] `Register`  
+ Das Modell bestimmte Register.  
   
- \[in\] `Value`  
+ [in] `Value`  
  Der zu schreibende Wert.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Intrinsisch|Architektur|  
-|-----------------|-----------------|  
+|Systemintern|Architektur|  
+|---------------|------------------|  
 |`__writemsr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Headerdatei** \<intrin.h\>  
+ **Headerdatei** \<intrin.h >  
   
-## Hinweise  
- Diese Funktion kann nur im Kernelmodus verwendet werden, und diese Routine ist als systeminterne Funktion nur verfügbar.  
+## <a name="remarks"></a>Hinweise  
+ Diese Funktion kann nur im Kernel-Modus verwendet werden, und diese Routine ist nur als systeminterne Funktion verfügbar.  
   
-## Microsoft ENDES bestimmten  
+**Ende Microsoft-spezifisch**  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

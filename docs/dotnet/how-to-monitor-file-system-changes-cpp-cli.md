@@ -1,34 +1,34 @@
 ---
-title: "Gewusst wie: &#220;berpr&#252;fen von Dateisystem&#228;nderungen (C++/CLI)"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Ereignisse [C++], Überwachen"
-  - "Beispiele [C++], Überwachen von Dateisystemänderungen"
-  - "Dateisystemereignisse [C++]"
-  - "FileSystemWatcher-Klasse, Beispiele"
-  - "Überwachen von Dateisystemereignissen"
+title: "Vorgehensweise: Überwachen von Dateisystemänderungen (C + c++ / CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- monitoring file system events
+- FileSystemWatcher class, examples
+- examples [C++], monitoring file system changes
+- events [C++], monitoring
+- file system events [C++]
 ms.assetid: 207a3069-e63d-417e-8b56-00ab44f29c52
-caps.latest.revision: 12
-caps.handback.revision: "12"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7b0b75ea559cac35ef764818d3a99162a72cfc62
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Gewusst wie: &#220;berpr&#252;fen von Dateisystem&#228;nderungen (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Im folgenden Codebeispiel wird <xref:System.IO.FileSystemWatcher> verwendet, um eine Registrierung für Ereignisse zu erreichen, die beim Erstellen, Ändern, Löschen oder Umbenennen von Dateien ausgelöst werden.  Statt ein Verzeichnis periodisch auf Dateiänderungen zu überprüfen, können Sie mithilfe der <xref:System.IO.FileSystemWatcher>\-Klasse Ereignisse bei jeder erkannten Änderung auslösen lassen.  
+# <a name="how-to-monitor-file-system-changes-ccli"></a>Gewusst wie: Überprüfen von Dateisystemänderungen (C++/CLI)
+Im folgenden Codebeispiel wird mit <xref:System.IO.FileSystemWatcher> zum Registrieren für Ereignisse, die erstellt, geändert wurden, gelöschte oder umbenannte Dateien entsprechen. Statt in regelmäßigen Abständen Abfragen ein Verzeichnis für Änderungen an Dateien, können Sie die <xref:System.IO.FileSystemWatcher> Klasse, um Ereignisse auszulösen, wenn eine Änderung erkannt wird.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // monitor_fs.cpp  
@@ -90,7 +90,7 @@ int main()
 }  
 ```  
   
-## Siehe auch  
- [System.IO\-Namespace](https://msdn.microsoft.com/en-us/library/system.io.aspx)   
- [Datei\- und Stream\-E\/A](../Topic/File%20and%20Stream%20I-O.md)   
- [.NET\-Programmierung mit C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [System.IO-namespace](https://msdn.microsoft.com/en-us/library/system.io.aspx)   
+ [Datei- und Datenstrom-E/A](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
+ [.NET-Programmierung mit C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

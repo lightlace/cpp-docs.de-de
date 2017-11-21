@@ -1,32 +1,30 @@
 ---
-title: "defaultvtable | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.defaultvtable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "defaultvtable attribute"
+title: Defaultvtable | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.defaultvtable
+dev_langs: C++
+helpviewer_keywords: defaultvtable attribute
 ms.assetid: 5b3ed483-f69e-44dd-80fc-952028eb9d73
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0753887cef2b169758351be9fafc0ec532bacb05
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# defaultvtable
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Definiert eine Schnittstelle als die standardmäßige vtable Schnittstelle für ein COM\-Objekt.  
+# <a name="defaultvtable"></a>defaultvtable
+Definiert eine Schnittstelle als die Vtable Standardschnittstelle für ein COM-Objekt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -35,15 +33,15 @@ Definiert eine Schnittstelle als die standardmäßige vtable Schnittstelle für 
 ) ]  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `interface`  
- Die festgelegte Schnittstelle, dass Sie die Standardeinstellung verfügen möchten, der für das COM\-Objekt vtable ist.  
+ Die angegebene Schnittstelle, die Vtable Standard für das COM-Objekt sein sollen.  
   
-## Hinweise  
- Das Attribut **defaultvtable** C\+\+ verfügt über die gleichen Funktionen wie das [defaultvtable](http://msdn.microsoft.com/library/windows/desktop/aa366795) MIDL\-Attribut.  
+## <a name="remarks"></a>Hinweise  
+ Die **Defaultvtable** C++-Attribut hat die gleiche Funktionalität wie die [Defaultvtable](http://msdn.microsoft.com/library/windows/desktop/aa366795) MIDL-Attribut.  
   
-## Beispiel  
- Im folgenden Code werden Attribute auf eine Klasse an, die **defaultvtable** verwenden, um eine Standardschnittstelle angegeben werden:  
+## <a name="example"></a>Beispiel  
+ Der folgende Code zeigt die Attribute für eine Klasse, mit denen **Defaultvtable** eine Standardschnittstelle an:  
   
 ```  
 // cpp_attr_ref_defaultvtable.cpp  
@@ -71,20 +69,19 @@ uuid("00000000-0000-0000-0000-000000000004")]
 class CMyC3 : public IMyI3 {};  
 ```  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
 |**Betrifft**|**Klasse**, `struct`|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|**Co\-Klasse**|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|**coclass**|  
+|**Ungültige Attribute**|Keine|  
   
- Weitere Informationen finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [IDL-Attribute](../windows/idl-attributes.md)   
+ [Klassenattribute](../windows/class-attributes.md)   

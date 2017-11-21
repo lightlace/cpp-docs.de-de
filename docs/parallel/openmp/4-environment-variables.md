@@ -1,44 +1,44 @@
 ---
-title: "4. Environment Variables"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 4. Umgebungsvariablen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 4ec7ed81-e9ca-46a1-84f8-8f9ce4587346
-caps.latest.revision: 4
-caps.handback.revision: "4"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5fcd308f21d66535a983e70506fe91afb5c7042f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# 4. Environment Variables
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Dieses Kapitel werden die Umgebungsvariablen OpenMPs C und C\+\+ oder die entsprechenden API \(plattformspezifische Mechanismen\) dieses Steuerelement die parallele Ausführung des Codes:  Die Namen von Umgebungsvariablen muss ein Großbuchstabe sein.  Die Werte, die ihnen zugewiesen wurden, wird die Groß\-\/Kleinschreibung nicht beachtet und haben möglicherweise führende und nachfolgende Leerzeichen.  Änderungen an den Werten nach dem Programm hat begonnen werden ignoriert.  
+# <a name="4-environment-variables"></a>4. Umgebungsvariablen
+In diesem Kapitel wird beschrieben, die Umgebungsvariablen OpenMP-C- und C++-API (oder die entsprechende plattformspezifische Mechanismen), die die Ausführung des parallelen Code steuern.  Die Namen der Umgebungsvariablen müssen in Großbuchstaben angegeben werden. Die Werte, die ihnen zugewiesen werden Groß-/Kleinschreibung und möglicherweise führende und nachfolgende Leerzeichen.  Änderungen der Werte aus, nachdem das Programm gestartet wurde, werden ignoriert.  
   
- Die Umgebungsvariablen stehen zur Verfügung:  
+ Die Umgebungsvariablen sind wie folgt aus:  
   
--   **OMP\_SCHEDULE** legt die Ablaufzeit zeitplan Segmentgröße und den Typ fest.  
+-   **OMP_SCHEDULE** legt die Laufzeit-Zeitplan Typ und Segment Größe fest.  
   
--   **OMP\_NUM\_THREADS** legt die Anzahl von Threads fest, die während der Ausführung verwendet werden soll.  
+-   **OMP_NUM_THREADS** legt die Anzahl der Threads an, die während der Ausführung verwenden.  
   
--   **OMP\_DYNAMIC** aktiviert oder deaktiviert dynamische Anpassung der Anzahl von Threads.  
+-   **OMP_DYNAMIC** aktiviert oder deaktiviert die dynamische Anpassung der Anzahl von Threads.  
   
--   **OMP\_NESTED** aktiviert oder deaktiviert geschachtelten Parallelität.  
+-   **OMP_NESTED** aktiviert oder deaktiviert die geschachtelten Parallelität.  
   
- Die Beispiele in diesem Kapitel werden nur, wie diese Variablen können in der Umgebung Shells Unixs C \(csh\) festgelegt werden.  In Korn\-Shell und IN DOS\-Umgebung sind die Aktionen ähnlich wie folgt:  
+ In den Beispielen in diesem Kapitel wird nur veranschaulichen, wie diese Variablen in Unix C-Shell (Csh)-Umgebungen festgelegt werden können. In Korn ähneln sich Shell und DOS-Umgebungen die Aktionen, wie folgt:  
   
- csh:  
- setenv „OMP\_SCHEDULE dynamisch“  
+ Csh:  
+ Setenv OMP_SCHEDULE "dynamisch"  
   
- KSH:  
- OMP\_SCHEDULE\= dynamisch“ Exportieren "  
+ Ksh:  
+ Exportieren Sie OMP_SCHEDULE = "dynamic"  
   
  DOS:  
- legen Sie fest OMP\_SCHEDULE\=“ dynamisches "
+ Legen Sie OMP_SCHEDULE = "dynamic"

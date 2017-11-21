@@ -1,32 +1,30 @@
 ---
-title: "HandleT::HandleT-Konstruktor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleT::HandleT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "HandleT, Konstruktor"
+title: 'Handlet:: Handlet-Konstruktor | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleT::HandleT
+dev_langs: C++
+helpviewer_keywords: HandleT, constructor
 ms.assetid: 4def6891-7e53-46f1-a197-a80e10744dd5
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8cca827bb8ba7fa43619a6e61e2c16ffba5e4563
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# HandleT::HandleT-Konstruktor
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Initialisiert eine neue Instanz der HandleT\-Klasse.  
+# <a name="handlethandlet-constructor"></a>HandleT::HandleT-Konstruktor
+Initialisiert eine neue Instanz der HandleT-Klasse.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 explicit HandleT(  
@@ -39,17 +37,17 @@ HandleT(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `h`  
- Ein Handler.  
+ Ein Handle.  
   
-## Hinweise  
- Der erste Konstruktor initialisiert ein HandleT\-Objekt, kein gültiges Handle zu einem Objekt.  Der zweite Konstruktor erstellt ein neues HandleT\-Objekt vom Parameter `h`.  
+## <a name="remarks"></a>Hinweise  
+ Der erste Konstruktor initialisiert ein HandleT-Objekt, das nicht zu einem Objekt ein gültiges Handle ist. Der zweite Konstruktor erstellt ein neues HandleT-Objekt aus Parameter `h`.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## Siehe auch  
- [HandleT\-Klasse](../windows/handlet-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [HandleT-Klasse](../windows/handlet-class.md)

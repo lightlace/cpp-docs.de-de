@@ -1,78 +1,76 @@
 ---
-title: "SRWLock-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::SRWLock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SRWLock-Klasse"
+title: SRWLock-Klasse | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::SRWLock
+dev_langs: C++
+helpviewer_keywords: SRWLock class
 ms.assetid: 4fa250e3-5f29-4b06-ac24-61b6c04ade93
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b6721620490a00da0b9c8fa039be0379f4d7dd1b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# SRWLock-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Stellt einen Slim Reader\/Writer\-Sperre dar.  
+# <a name="srwlock-class"></a>SRWLock-Klasse
+Stellt eine slim Reader/Writer-Sperre.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class SRWLock;  
 ```  
   
-## Hinweise  
- Ein einfacher Reader\/Writer\-Sperre wird verwendet, um Zugriff über Threads auf ein Objekt oder Ressource zu synchronisieren.  Weitere Informationen finden Sie unter [Synchronisierungs\-Funktionen](assetId:///9b6359c2-0113-49b6-83d0-316ad95aba1b) in der MSDN Library.  
+## <a name="remarks"></a>Hinweise  
+ Eine slim Reader/Writer-Sperre wird zum Synchronisieren des Zugriffs auf ein Objekt oder eine Ressource threadübergreifend verwendet. Weitere Informationen finden Sie unter [Synchronisierungsfunktionen](http://msdn.microsoft.com/en-us/9b6359c2-0113-49b6-83d0-316ad95aba1b).  
   
-## Member  
+## <a name="members"></a>Member  
   
-### Öffentliche Typedefs  
+### <a name="public-typedefs"></a>Öffentliche Typedefs  
   
 |||  
 |-|-|  
-|**SyncLockExclusive**|Synonym für ein SRWLock\-Objekt, im exklusiven Modus abgerufen wird.|  
-|**SyncLockShared**|Synonym für ein SRWLock\-Objekt, das im gemeinsamen Modus abgerufen wird.|  
+|**SyncLockExclusive**|Synonym für ein SRWLock-Objekt, das im exklusiven Modus abgerufen wird.|  
+|**SyncLockShared**|Synonym für ein SRWLock-Objekt, das im freigegebenen Modus abgerufen wird.|  
   
-### Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[SRWLock::SRWLock\-Konstruktor](../windows/srwlock-srwlock-constructor.md)|Initialisiert eine neue Instanz der SRWLock\-Klasse.|  
-|[SRWLock::~SRWLock\-Destruktor](../windows/srwlock-tilde-srwlock-destructor.md)|Deinitialisiert eine Instanz der SRWLock\-Klasse.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[SRWLock::SRWLock-Konstruktor](../windows/srwlock-srwlock-constructor.md)|Initialisiert eine neue Instanz der SRWLock-Klasse.|  
+|[SRWLock::~SRWLock-Destruktor](../windows/srwlock-tilde-srwlock-destructor.md)|Hebt die Initialisierung einer Instanz der SRWLock-Klasse.|  
   
-### Öffentliche Methoden  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[SRWLock::LockExclusive\-Methode](../windows/srwlock-lockexclusive-method.md)|Ruft ein SRWLock\-Objekt im exklusiven Modus ab.|  
-|[SRWLock::LockShared\-Methode](../windows/srwlock-lockshared-method.md)|Ruft ein SRWLock\-Objekt im gemeinsamen Modus ab.|  
-|[SRWLock::TryLockExclusive\-Methode](../windows/srwlock-trylockexclusive-method.md)|Versuche, ein SRWLock\-Objekt im exklusiven Modus für den aktuellen oder das angegebene SRWLock\-Objekt abzurufen.|  
-|[SRWLock::TryLockShared\-Methode](../windows/srwlock-trylockshared-method.md)|Versuche, ein SRWLock\-Objekt im gemeinsamen Modus für den aktuellen oder das angegebene SRWLock\-Objekt abzurufen.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[SRWLock::LockExclusive-Methode](../windows/srwlock-lockexclusive-method.md)|Ruft ein Objekt SRWLock, im exklusiven Modus ab.|  
+|[SRWLock::LockShared-Methode](../windows/srwlock-lockshared-method.md)|Ruft ein Objekt SRWLock im freigegebenen Modus ab.|  
+|[SRWLock::TryLockExclusive-Methode](../windows/srwlock-trylockexclusive-method.md)|Versucht, ein SRWLock-Objekt im exklusiven Modus für das aktuelle oder angegebene SRWLock-Objekt zu erhalten.|  
+|[SRWLock::TryLockShared-Methode](../windows/srwlock-trylockshared-method.md)|Versucht, ein SRWLock-Objekt im freigegebenen Modus für das aktuelle oder angegebene SRWLock-Objekt zu erhalten.|  
   
-### Geschützter Datenmember  
+### <a name="protected-data-member"></a>Geschützte Datenmember  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[SRWLock::SRWLock\_ Data\-Member](../windows/srwlock-srwlock-data-member.md)|Enthält die zugrunde liegende Sperrenvariable für das aktuelle SRWLock\-Objekt.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[SRWLock::SRWLock_ Data-Member](../windows/srwlock-srwlock-data-member.md)|Enthält die zugrunde liegenden Sperren der Variable für das aktuelle SRWLock-Objekt.|  
   
-## Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `SRWLock`  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## Siehe auch  
- [Microsoft::WRL::Wrappers\-Namespace](../windows/microsoft-wrl-wrappers-namespace.md)
+## <a name="see-also"></a>Siehe auch  
+ [Microsoft::WRL::Wrappers-Namespace](../windows/microsoft-wrl-wrappers-namespace.md)

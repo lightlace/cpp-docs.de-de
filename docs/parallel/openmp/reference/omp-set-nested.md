@@ -1,32 +1,30 @@
 ---
-title: "omp_set_nested | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_set_nested"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_set_nested OpenMP function"
+title: Omp_set_nested | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_set_nested
+dev_langs: C++
+helpviewer_keywords: omp_set_nested OpenMP function
 ms.assetid: fa1cb08c-7b8b-42c9-8654-2c33dcffb5b6
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3b0d04a0eb9813a3829b0f435972c7922bf77d07
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# omp_set_nested
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Ermöglicht geschachtelten Parallelität.  
+# <a name="ompsetnested"></a>omp_set_nested
+Ermöglicht das geschachtelte Parallelität.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void omp_set_nested(  
@@ -34,24 +32,24 @@ void omp_set_nested(
 );  
 ```  
   
-## Hinweise  
- Hierbei ist:  
+## <a name="remarks"></a>Hinweise  
+ wobei  
   
  `val`  
- Wenn ungleich 0 \(null\), geschachtelten Parallelität aktiviert.  Wenn Null, geschachtelten Parallelität deaktiviert.  
+ Wert ungleich NULL ist, können geschachtelte Parallelität. Wenn 0 (null), deaktiviert geschachtelte Parallelität.  
   
-## Hinweise  
- OMP\-geschachtelter Parallelität kann aktiviert werden `omp_set_nested`oder über die Befehle [OMP\_NESTED](../../../parallel/openmp/reference/omp-nested.md) Umgebungsvariable festgelegt wird.  
+## <a name="remarks"></a>Hinweise  
+ Geschachtelte OMP Parallelität mit aktiviert werden kann `omp_set_nested`, oder durch Festlegen der [OMP_NESTED](../../../parallel/openmp/reference/omp-nested.md) -Umgebungsvariablen angegeben.  
   
- Die Einstellung für `omp_set_nested` überschreibt die Einstellung der `OMP_NESTED` Umgebungsvariablen.  
+ Die Einstellung für `omp_set_nested` überschreibt die Einstellung von der `OMP_NESTED` -Umgebungsvariablen angegeben.  
   
- Wenn sie aktiviert ist, kann die Umgebungsvariable ein andernfalls operationelles Programm unterbrechen, weil die Anzahl von Threads erhöht wird, wenn sie sich exponential parallele Bereiche schachtelt.  Zum Beispiel erfordert eine Funktion, die 6mal mit der Anzahl der OMP\-Threads rekursiert, der auf 4 festgelegt werden, mit 4 \(4,096, 6\) Threads im Allgemeinen die Leistung der Anwendung beeinträchtigt, wenn die Anzahl der Threads die Anzahl der Prozessoren überschreitet.  Eine Ausnahme könnte E\/A\-gebundene Anwendungen handeln.  
+ Wenn aktiviert, kann die Umgebungsvariable ein andernfalls operational Programm unterbrechen, da die Anzahl der Threads sich exponentiell beim Schachteln von paralleler Regions erhöht.  Z. B. eine Funktion, dass rekursiv 6 Mal klicken Sie mit der Anzahl von OMP-Threads auf 4 festgelegt erfordert 4.096 (4, um die Leistungsfähigkeit von 6) im Allgemeinen threads, die Leistung Ihrer Anwendung beeinträchtigt wird, überschreitet die Anzahl der Threads die Anzahl der Prozessoren. Einzige Ausnahme hierbei wäre, dass e/a Anwendungen gebunden.  
   
- Verwenden Sie [omp\_get\_nested](../../../parallel/openmp/reference/omp-get-nested.md) , um die aktuelle Einstellung von `omp_set_nested`anzuzeigen.  
+ Verwendung [Omp_get_nested](../../../parallel/openmp/reference/omp-get-nested.md) die aktuelle Einstellung der anzuzeigenden `omp_set_nested`.  
   
- Weitere Informationen finden Sie unter [3.1.9 omp\_set\_nested Function](../../../parallel/openmp/3-1-9-omp-set-nested-function.md).  
+ Weitere Informationen finden Sie unter [3.1.9 Omp_set_nested-Funktion](../../../parallel/openmp/3-1-9-omp-set-nested-function.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // omp_set_nested.cpp  
@@ -72,7 +70,10 @@ int main( )
 }  
 ```  
   
-  **1**  
-**1**   
-## Siehe auch  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+```Output  
+1  
+1  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Funktionen](../../../parallel/openmp/reference/openmp-functions.md)

@@ -1,49 +1,47 @@
 ---
-title: "copyprivate | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "copyprivate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "copyprivate OpenMP clause"
+title: Copyprivate | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: copyprivate
+dev_langs: C++
+helpviewer_keywords: copyprivate OpenMP clause
 ms.assetid: 02c0209d-abe8-4797-8365-a82b53c3f15d
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 45b9e6ab273f80c2f19516933e6cac5bf9f1a739
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# copyprivate
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Gibt an, dass eine oder mehrere Variablen mit allen Threads freigegeben werden sollen.  
+# <a name="copyprivate"></a>copyprivate
+Gibt an, dass eine oder mehrere Variablen auf allen Threads freigegeben werden soll.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 copyprivate(var)  
 ```  
   
-## Hinweise  
- Hierbei ist:  
+## <a name="remarks"></a>Hinweise  
+ wobei  
   
  `var`  
- Eine oder mehrere Variablen freizugeben.  Wenn mehrere Variablen angegeben wird, trennen Sie die Variablennamen durch Kommas.  
+ Eine oder mehrere Variablen freigeben. Wenn mehr als eine Variable angegeben wird, trennen Sie Namen durch ein Komma.  
   
-## Hinweise  
- `copyprivate` gilt für [single](../../../parallel/openmp/reference/single.md) die Direktive.  
+## <a name="remarks"></a>Hinweise  
+ `copyprivate`gilt für die [einzelne](../../../parallel/openmp/reference/single.md) Richtlinie.  
   
- Weitere Informationen finden Sie unter [2.7.2.8 copyprivate](../../../parallel/openmp/2-7-2-8-copyprivate.md).  
+ Weitere Informationen finden Sie unter [2.7.2.8 Copyprivate](../../../parallel/openmp/2-7-2-8-copyprivate.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // omp_copyprivate.cpp  
@@ -92,19 +90,22 @@ int main() {
 }  
 ```  
   
-  **CopyPrivate Aufruf von einem einzigen Thread**  
-**Wert \= 1.001000, Thread \= 0**  
-**Wert \= 1.002000, Thread \= 0**  
-**Wert \= 1.003000, Thread \= 0**  
-**Wert \= 1.004000, Thread \= 0**  
-**CopyPrivate Aufruf von einem parallelen Bereich**  
-**Wert \= 1.005000, Thread \= 0**  
-**Wert \= 1.005000, Thread \= 1**  
-**Wert \= 1.006000, Thread \= 0**  
-**Wert \= 1.006000, Thread \= 1**  
-**Wert \= 1.007000, Thread \= 0**  
-**Wert \= 1.007000, Thread \= 1**  
-**Wert \= 1.008000, Thread \= 0**  
-**Wert \= 1.008000, Thread \= 1**   
-## Siehe auch  
- [Clauses](../../../parallel/openmp/reference/openmp-clauses.md)
+```Output  
+call CopyPrivate from a single thread  
+Value = 1.001000, thread = 0  
+Value = 1.002000, thread = 0  
+Value = 1.003000, thread = 0  
+Value = 1.004000, thread = 0  
+call CopyPrivate from a parallel region  
+Value = 1.005000, thread = 0  
+Value = 1.005000, thread = 1  
+Value = 1.006000, thread = 0  
+Value = 1.006000, thread = 1  
+Value = 1.007000, thread = 0  
+Value = 1.007000, thread = 1  
+Value = 1.008000, thread = 0  
+Value = 1.008000, thread = 1  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Klauseln](../../../parallel/openmp/reference/openmp-clauses.md)

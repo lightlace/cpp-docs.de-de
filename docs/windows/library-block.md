@@ -1,32 +1,30 @@
 ---
-title: "library_block | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.library_block"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "library_block attribute"
+title: Library_block | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.library_block
+dev_langs: C++
+helpviewer_keywords: library_block attribute
 ms.assetid: ae7a7ebe-5e1a-4eda-a058-11bbd058ece8
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4e0255002a8235f4e8a36d4b43df520d6e26865b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# library_block
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Platziert ein Konstrukt innerhalb des IDL\-Library\-Blocks.  
+# <a name="libraryblock"></a>library_block
+Fügt ein Konstrukt in der IDL-Bibliothek-Block vor.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -34,11 +32,11 @@ Platziert ein Konstrukt innerhalb des IDL\-Library\-Blocks.
   
 ```  
   
-## Hinweise  
- Wenn Sie ein Konstrukt innerhalb des Library\-Blocks platzieren, stellen Sie sicher, dass er in der Typbibliothek übergeben wird, unabhängig davon, ob sie verwiesen wird.  Standardmäßig werden nur Konstrukte, die von [Co\-Klasse](../windows/coclass.md), [Dispatchschnittstelle](../windows/dispinterface.md)und [idl\_module](../windows/idl-module.md)\-Attribute geändert werden, Library\-Block platziert.  
+## <a name="remarks"></a>Hinweise  
+ Wenn Sie ein Konstrukt in den bibliotheksblock platzieren, stellen Sie sicher, dass er Sie übergeben wird, in der Typbibliothek, unabhängig davon, ob die Funktion verwiesen wird. Standardmäßig nur Konstrukte geändert, indem die [Coclass](../windows/coclass.md), [Dispinterface](../windows/dispinterface.md), und [Idl_module](../windows/idl-module.md) Attribute werden in den bibliotheksblock platziert.  
   
-## Beispiel  
- Im folgenden Code wird eine benutzerdefinierte Oberfläche innerhalb des Library\-Blocks platziert.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Code wird eine benutzerdefinierte Schnittstelle innerhalb des Blocks Bibliothek platziert.  
   
 ```  
 // cpp_attr_ref_library_block.cpp  
@@ -51,20 +49,19 @@ __interface IMyInterface {
 };  
 ```  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
 |**Betrifft**|Überall|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Keine|  
+|**Ungültige Attribute**|Keine|  
   
- Weitere Informationen finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [Compiler Attributes](../windows/compiler-attributes.md)   
- [Stand\-Alone Attributes](../windows/stand-alone-attributes.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [Compilerattribute](../windows/compiler-attributes.md)   
+ [Eigenständige Attribute](../windows/stand-alone-attributes.md)   

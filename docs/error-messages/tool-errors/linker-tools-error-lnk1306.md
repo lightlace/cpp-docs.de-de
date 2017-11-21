@@ -1,53 +1,53 @@
 ---
-title: "Linkertoolfehler LNK1306 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1306"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1306"
+title: Linkertoolfehler Lnk1306 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1306
+dev_langs: C++
+helpviewer_keywords: LNK1306
 ms.assetid: fad1df6a-0bd9-412f-b0d1-7c9bc749c584
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d020d7ca037c737dfb03c32ff2d773730c118311
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Linkertoolfehler LNK1306
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Der DLL\-Einstiegspunkt Funktion kann nicht verwaltet sein; als systemeigen kompilieren  
+# <a name="linker-tools-error-lnk1306"></a>Linkertoolfehler LNK1306  
   
- DllMain kann nicht zu MSIL kompiliert werden. DllMain muss zu systemeigenen Code kompiliert werden.  
+> DLL-Einstiegspunktfunktion kann nicht verwaltet werden; Kompilieren in systemeigenen  
   
- So beheben Sie diesen Fehler:  
+`DllMain`kann nicht in MSIL kompiliert werden; Sie müssen in den einheitlichen kompiliert werden.  
   
--   Kompilieren Sie die Datei, die den Einstiegspunkt ohne **\/clr** enthält.  
+Um dieses Problem zu beheben.  
   
--   Setzen Sie den Einstiegspunkt in einen `#pragma unmanaged`\-Abschnitt.  
+-   Kompilieren Sie die Datei, die den Einstiegspunkt ohne enthält **"/ CLR"**.  
   
--   Weitere Informationen finden Sie unter  
+-   Fügen Sie den Einstiegspunkt in eine `#pragma unmanaged` Abschnitt.  
   
--   [\/clr \(Common Language Runtime\-Kompilierung\)](../../build/reference/clr-common-language-runtime-compilation.md)  
+Weitere Informationen finden Sie unter:  
+  
+-   [/ CLR (common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md)  
   
 -   [managed, unmanaged](../../preprocessor/managed-unmanaged.md)  
   
 -   [Initialisierung gemischter Assemblys](../../dotnet/initialization-of-mixed-assemblies.md)  
   
--   [Verhalten der Laufzeitbibliothek](../../build/run-time-library-behavior.md)  
+-   [DLLs and Visual C++ run-time library behavior (Verhalten der Laufzeitbibliothek für DLLs und Visual C++)](../../build/run-time-library-behavior.md)  
   
-## Beispiel  
- Im folgenden Beispiel wird LNK1306 generiert.  
+## <a name="example"></a>Beispiel  
   
-```  
+Im folgenden Beispiel wird LNK1306 generiert.  
+  
+```cpp  
 // LNK1306.cpp  
 // compile with: /clr /link /dll /entry:NewDllMain  
 // LNK1306 error expected  
@@ -55,4 +55,17 @@ Der DLL\-Einstiegspunkt Funktion kann nicht verwaltet sein; als systemeigen komp
 int __stdcall NewDllMain( HINSTANCE h, ULONG ulReason, PVOID pvReserved ) {  
    return 1;  
 }  
-```
+```  
+  
+Um dieses Problem zu beheben, verwenden Sie nicht die Option "/ CLR", kompilieren Sie diese Datei, oder verwenden Sie eine `#pragma` Direktive, um die Definition der Eintrag Punkt in einem nicht verwalteten Abschnitt zusätzlich belasten, da in diesem Beispiel gezeigt:  
+  
+```cpp  
+// LNK1306fix.cpp  
+// compile with: /clr /link /dll /entry:NewDllMain  
+#include <windows.h>  
+#pragma managed(push, off)  
+int __stdcall NewDllMain( HINSTANCE h, ULONG ulReason, PVOID pvReserved ) {  
+   return 1;  
+}  
+#pragma managed(pop)  
+```  

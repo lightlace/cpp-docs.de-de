@@ -1,32 +1,30 @@
 ---
-title: "length_is | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.length_is"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "length_is attribute"
+title: Length_is | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.length_is
+dev_langs: C++
+helpviewer_keywords: length_is attribute
 ms.assetid: 1d99b883-84bb-4b1e-b098-eb780fc94f40
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6051502e81593bdb13f32d7904f912cc6f294cef
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# length_is
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gibt die Anzahl der zu sendenden auf Arrayelemente.  
+# <a name="lengthis"></a>length_is
+Gibt die Anzahl von Arrayelementen übermittelt werden sollen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -35,35 +33,34 @@ Gibt die Anzahl der zu sendenden auf Arrayelemente.
 ) ]  
 ```  
   
-#### Parameter  
- *expression*  
- Eine oder mehrere C\-Sprache Ausdrücke.  Leere Argument slots sind zulässig.  
+#### <a name="parameters"></a>Parameter  
+ *Ausdruck*  
+ Eine oder mehrere Programmiersprache C-Ausdrücke. Leere Argument Slots sind zulässig.  
   
-## Hinweise  
- Das Attribut **length\_is** C\+\+ verfügt über die gleichen Funktionen wie das [length\_is](http://msdn.microsoft.com/library/windows/desktop/aa367068) MIDL\-Attribut.  
+## <a name="remarks"></a>Hinweise  
+ Die **Length_is** C++-Attribut hat die gleiche Funktionalität wie die [Length_is](http://msdn.microsoft.com/library/windows/desktop/aa367068) MIDL-Attribut.  
   
-## Beispiel  
- Weitere Informationen finden Sie unter [first\_is](../windows/first-is.md) als ein Beispiel dafür, wie Sie einen Abschnitt eines Arrays angibt.  
+## <a name="example"></a>Beispiel  
+ Finden Sie unter [First_is](../windows/first-is.md) für ein Beispiel für einen Abschnitt eines Arrays angeben.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
-|**Betrifft**|Feld in `struct`**Union**, Schnittstellen oder Parameter, Schnittstellenmethode|  
+|**Betrifft**|Im Feld `struct` oder **Union**, Parameter interface, Schnittstelle Methode|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Keine|  
+|**Ungültige Attribute**|Keine|  
   
- Weitere Informationen finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [first\_is](../windows/first-is.md)   
- [max\_is](../windows/max-is.md)   
- [last\_is](../windows/last-is.md)   
- [size\_is](../windows/size-is.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [IDL-Attribute](../windows/idl-attributes.md)   
+ [TypeDef, Enum, Union- und Struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Parameterattribute](../windows/parameter-attributes.md)   
+ [first_is](../windows/first-is.md)   
+ [max_is](../windows/max-is.md)   
+ [last_is](../windows/last-is.md)   
+ [size_is](../windows/size-is.md)   

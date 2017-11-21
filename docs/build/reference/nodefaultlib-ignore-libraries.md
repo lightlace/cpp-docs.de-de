@@ -1,73 +1,73 @@
 ---
-title: "/NODEFAULTLIB (Bibliotheken ignorieren) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.IgnoreAllDefaultLibraries"
-  - "VC.Project.VCLinkerTool.IgnoreDefaultLibraryNames"
-  - "/nodefaultlib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/NODEFAULTLIB (Linkeroption)"
-  - "Standardbibliotheken, Entfernen"
-  - "Bibliotheken ignorieren (Linkeroption)"
-  - "Bibliotheken, Ignorieren"
-  - "NODEFAULTLIB (Linkeroption)"
-  - "-NODEFAULTLIB (Linkeroption)"
+title: -NODEFAULTLIB (Bibliotheken ignorieren) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.OVERWRITEAllDefaultLibraries
+- VC.Project.VCLinkerTool.OVERWRITEDefaultLibraryNames
+- /nodefaultlib
+dev_langs: C++
+helpviewer_keywords:
+- default libraries, removing
+- -NODEFAULTLIB linker option
+- libraries, ignore
+- NODEFAULTLIB linker option
+- /NODEFAULTLIB linker option
+- ignore libraries linker option
 ms.assetid: 7270b673-6711-468e-97a7-c2925ac2be6e
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1172bc3dbed6353e31e34a0f406d2ea688ce78c2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# /NODEFAULTLIB (Bibliotheken ignorieren)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="nodefaultlib-ignore-libraries"></a>/NODEFAULTLIB (Bibliotheken ignorieren)
 ```  
 /NODEFAULTLIB[:library]   
 ```  
   
-## Hinweise  
- Hierbei ist:  
+## <a name="remarks"></a>Hinweise  
+ Dabei gilt:  
   
- *library*  
- eine Bibliothek, die vom Linker beim Auflösen externer Verweise ignoriert werden soll.  
+ *Bibliothek*  
+ Eine Bibliothek, die den Linker an, beim Auflösen externer Verweise ignoriert werden sollen.  
   
-## Hinweise  
- Die \/NODEFAULTLIB\-Option weist den Linker an, mindestens eine Standardbibliothek aus der Liste der Bibliotheken, die durchsucht werden, zu entfernen, wenn externe Verweise aufgelöst werden.  
+## <a name="remarks"></a>Hinweise  
+ Die/NODEFAULTLIB-Option weist den Linker an, eine oder mehrere Standardbibliotheken aus der Liste der Bibliotheken zu entfernen, die beim Auflösen externer Verweise durchsucht.  
   
- Verwenden Sie [\/Zl \(Kein Standardbibliotheksname\)](../../build/reference/zl-omit-default-library-name.md), um eine OBJ\-Datei zu erstellen, die keine Verweise auf Standardbibliotheken enthält.  
+ Verwenden Sie zum Erstellen einer OBJ-Datei, die keine Verweise auf Standardbibliotheken enthält [Zl (weglassen Standardbibliotheksnamen)](../../build/reference/zl-omit-default-library-name.md).  
   
- Standardmäßig entfernt **\/NODEFAULTLIB** alle Standardbibliotheken aus der Liste der Bibliotheken, die beim Auflösen externer Verweise durchsucht werden.  Der optionale Parameter *library* ermöglicht es, eine oder mehrere angegebene Bibliotheken aus der Liste der Bibliotheken zu entfernen, die beim Auflösen externer Verweise durchsucht werden.  Geben Sie für jede auszuschließende Bibliothek eine **\/NODEFAULTLIB**\-Option an.  
+ Standardmäßig entfernt/NODEFAULTLIB alle Standardbibliotheken aus der Liste der Bibliotheken, die beim Auflösen externer Verweise durchsucht. Das optionale *Bibliothek* Parameter können Sie eine oder mehrere angegebene Bibliotheken aus der Liste der Bibliotheken entfernen beim Auflösen externer Verweise durchsucht. Geben Sie eine/NODEFAULTLIB-Option für jede Bibliothek, die Sie ausschließen möchten.  
   
- Der Linker löst Verweise auf externe Definitionen auf, indem zuerst die in der Befehlszeile angegebenen Bibliotheken durchsucht werden, dann die mit der Option **\/DEFAULTLIB** festgelegten Standardbibliotheken und danach die in den OBJ\-Dateien genannten Standardbibliotheken.  
+ Der Linker löst Verweise auf externe Definitionen durch suchen zuerst in Bibliotheken, die Sie explizit angeben, und klicken Sie dann im Standardmodus Bibliotheken, die mit der Option-Option angegebene und Standardbibliotheken, die in der OBJ-Dateien.  
   
- Mit **\/NODEFAULTLIB**:*library* wird [\/DEFAULTLIB:](../../build/reference/defaultlib-specify-default-library.md)*library* überschrieben, wenn in beiden Optionen dieselbe *library* verwendet wird.  
+ / NODEFAULTLIB:*Bibliothek* überschreibt [Option:](../../build/reference/defaultlib-specify-default-library.md)*Bibliothek* bei dem *Bibliothek* Name wird in beiden angegeben.  
   
- Wenn beim Erstellen des Programms ohne C\-Laufzeitbibliothek beispielsweise **\/NODEFAULTLIB** verwendet wird, müssen Sie gegebenenfalls auch [\/ENTRY](../../build/reference/entry-entry-point-symbol.md) angeben, um den Einstiegspunkt \(die Funktion\) im Programm festzulegen.  Weitere Informationen finden Sie unter [CRT\-Bibliotheksfunktionen](../../c-runtime-library/crt-library-features.md).  
+ Bei Verwendung von/NODEFAULTLIB z. B. das Programm ohne die C-Laufzeitbibliothek, erstellen Sie möglicherweise auch [/Entry](../../build/reference/entry-entry-point-symbol.md) Einstiegspunkt (Funktion) im Programm angeben. Weitere Informationen finden Sie unter [CRT Library Features (CRT-Bibliotheksfunktionen)](../../c-runtime-library/crt-library-features.md).  
   
-### So legen Sie diese Linkeroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Festlegen von Visual C\+\+\-Projekteigenschaften](../../ide/working-with-project-properties.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Klicken Sie auf den Ordner **Linker**.  
+2.  Klicken Sie auf die **Linker** Ordner.  
   
-3.  Klicken Sie auf die Eigenschaftenseite **Eingabe**.  
+3.  Klicken Sie auf die **Eingabe**Eigenschaftenseite.  
   
-4.  Wählen Sie die Eigenschaft **Standardbibliotheken ignorieren** aus, oder geben Sie in der Eigenschaft **Bibliothek ignorieren** eine Liste von Bibliotheken an, die ignoriert werden sollen.  Auf der Eigenschaftenseite **Befehlszeile** werden die Auswirkungen der in diesen Eigenschaften vorgenommenen Änderungen angezeigt.  
+4.  Wählen Sie die **alle Standardbibliotheken ignorieren** Eigenschaft, oder geben Sie eine Liste der Bibliotheken, die ignoriert werden sollen die **Bibliothek ignorieren** Eigenschaft. Die **Befehlszeile** Eigenschaftenseite wird die Auswirkung der Änderungen, die Sie, um diese Eigenschaften vornehmen anzuzeigen.  
   
-### So legen Sie diese Linkeroption programmgesteuert fest  
+### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
   
--   Weitere Informationen finden Sie unter <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreDefaultLibraryNames*> und <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreAllDefaultLibraries*>.  
+-   Weitere Informationen finden Sie unter <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreDefaultLibraryNames%2A> und <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreAllDefaultLibraries%2A>.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
  [Linkeroptionen](../../build/reference/linker-options.md)

@@ -1,33 +1,33 @@
 ---
-title: "2.8 Directive Binding"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.8 Direktivenbindung | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 7bdac45e-ab55-42f0-bd47-a2e3d5bbab3e
-caps.latest.revision: 4
-caps.handback.revision: "4"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a70dbc0306005473d427015e81d8b93e895da9fa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# 2.8 Directive Binding
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Dynamische Bindung von Direktiven gehorchen muss die folgenden Regeln:  
+# <a name="28-directive-binding"></a>2.8 Direktivenbindung
+Dynamisches Binden von Direktiven muss die folgenden Regeln einhalten:  
   
--   Bindung **nach**, der **Abschnitte**, **Einfach**, **Master**und **Barriere**\-Direktive auf **Ähnlichkeit**einschließenden dynamisch, falls vorhanden, unabhängig vom Wert einer **If** FROM\-Klausel, die sich auf diese Direktive vorhanden ist.  Wenn kein paralleler Bereich gerade ausgeführt wird, werden die Direktive von einem Team ausgeführt, das nur aus dem Masterthread besteht.  
+-   Die **für**, **Abschnitte**, **einzelne**, **master**, und **Barriere** Direktiven Binden an die dynamisch Einschließen von **parallele**, sofern, unabhängig vom Wert eines beliebigen vorhanden **Wenn** -Klausel, die auf diese Richtlinie vorhanden sein kann. Wenn keine parallelen Bereichs derzeit ausgeführt wird, werden die Richtlinien von einem Team besteht nur die master-Thread ausgeführt.  
   
--   Die **geordnet**\-Direktive ist verbindlich **nach**einschließenden dynamisch zu.  
+-   Die **sortiert** -Direktive bindet an die dynamisch einschließende **für**.  
   
--   Die **atomar**\-Direktive erzwingen exklusiven Zugriff in Bezug auf **atomar**\-Direktive in allen Threads und nicht nur das aktuelle Team.  
+-   Die **atomic** Richtlinie erzwingt exklusiven Zugriff in Bezug auf **atomic** Direktiven in allen Threads, nicht nur das aktuelle Teamprojekt.  
   
--   Die **Kritisch**\-Direktive erzwingen exklusiven Zugriff in Bezug auf **Kritisch**\-Direktive in allen Threads und nicht nur das aktuelle Team.  
+-   Die **kritische** Richtlinie erzwingt exklusiven Zugriff in Bezug auf **kritische** Direktiven in allen Threads, nicht nur das aktuelle Teamprojekt.  
   
--   \- Direktive kann nicht auf allen \- Direktive außerhalb nächsten **Ähnlichkeit**verbindlich einschließenden dynamisch sein.
+-   Eine Richtlinie kann nie dynamisch an keiner anderen Direktive außerhalb der nächsten binden einschließenden **parallele**.

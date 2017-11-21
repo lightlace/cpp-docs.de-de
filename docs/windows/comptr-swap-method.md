@@ -1,32 +1,30 @@
 ---
-title: "ComPtr::Swap-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::ComPtr::Swap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "swap-Methode"
+title: 'Comptr:: Swap-Methode | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::ComPtr::Swap
+dev_langs: C++
+helpviewer_keywords: Swap method
 ms.assetid: 74275f00-b24e-4b4c-b8b6-ac2aa2dd7ae9
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a8ff215bf3461fcbcadd20b0680829af81630aa4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# ComPtr::Swap-Methode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Vertauscht die Schnittstelle aus, die durch das aktuelle ComPtr mit der Schnittstelle verwaltet wird, die durch das angegebene ComPtr verwaltet wird.  
+# <a name="comptrswap-method"></a>ComPtr::Swap-Methode
+Tauscht die Schnittstelle, die von dem aktuellen ComPtr-Objekt verwaltet wird, gegen der Schnittstelle, die vom angegebenen ComPtr-Objekt verwaltet wird.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void Swap(  
@@ -38,14 +36,14 @@ void Swap(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `r`  
- Ein ComPtr.  
+ Comptr-Objekt.  
   
-## Anforderungen  
- **Header:**  client.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** client.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [ComPtr\-Klasse](../windows/comptr-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [ComPtr-Klasse](../windows/comptr-class.md)

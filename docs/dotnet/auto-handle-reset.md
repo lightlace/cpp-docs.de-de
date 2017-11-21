@@ -1,35 +1,34 @@
 ---
-title: "auto_handle::reset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_handle.reset"
-  - "msclr::auto_handle::reset"
-  - "auto_handle::reset"
-  - "msclr.auto_handle.reset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_handle::reset"
+title: auto_handle::Reset | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_handle.reset
+- msclr::auto_handle::reset
+- auto_handle::reset
+- msclr.auto_handle.reset
+dev_langs: C++
+helpviewer_keywords: auto_handle::reset
 ms.assetid: 32dc3a83-80fd-45c9-8f79-8c4096c30f57
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d40f2ad3192c89856c7cf5c485eb040f525cfd27
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# auto_handle::reset
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Zerstören Sie das aktuelle besessene Objekt und nehmen Sie optional ein neues Objekt in Besitz.  
+# <a name="autohandlereset"></a>auto_handle::reset
+Die aktuelle im Besitz befindliches Objekt zu zerstören, und optional ein neues Objekt zurückzufordern.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void reset(  
@@ -38,11 +37,11 @@ void reset(
 void reset();  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `_new_ptr`  
- \(Optional\) Das neue Objekt.  
+ (Optional) Das neue Objekt.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // msl_auto_handle_reset.cpp  
@@ -82,18 +81,21 @@ int main()
 }  
 ```  
   
-  **ClassA\-Konstruktor: erstens**  
-**Hello zuerst von A\!**  
-**ClassA\-Konstruktor: zweitens**  
-**ClassA\-Destruktor: erstens**  
-**Hello von zweitem A\!**  
-**ClassA\-Destruktor: zweitens**  
-**dein**   
-## Anforderungen  
- **Headerdatei** \<msclr\\auto\_handle.h\>  
+```Output  
+ClassA constructor: first  
+Hello from first A!  
+ClassA constructor: second  
+ClassA destructor: first  
+Hello from second A!  
+ClassA destructor: second  
+done  
+```  
   
- **Namespace** msclr  
+## <a name="requirements"></a>Anforderungen  
+ **Headerdatei** \<msclr\auto_handle.h >  
   
-## Siehe auch  
- [auto\_handle\-Member](../dotnet/auto-handle-members.md)   
- [auto\_handle::release](../dotnet/auto-handle-release.md)
+ **Namespace** Msclr  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Auto_handle-Member](../dotnet/auto-handle-members.md)   
+ [auto_handle::release](../dotnet/auto-handle-release.md)

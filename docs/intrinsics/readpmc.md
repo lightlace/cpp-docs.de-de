@@ -1,62 +1,61 @@
 ---
-title: "__readpmc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__readpmc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Read Performance Monitoring Counters-Anweisung"
-  - "__readpmc intrinsic"
-  - "rdpmc-Anweisung"
+title: __readpmc | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __readpmc
+dev_langs: C++
+helpviewer_keywords:
+- Read Performance Monitoring Counters instruction
+- __readpmc intrinsic
+- rdpmc instruction
 ms.assetid: 14ed45a6-28b6-4635-8437-a597c04b43d4
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 323ad8624db725a779110c89f1e8972f74da5060
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# __readpmc
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft\-spezifisch**  
+# <a name="readpmc"></a>__readpmc
+**Microsoft-spezifisch**  
   
- Generiert die `rdpmc`\-Anweisung, die den Indikator Leistungsüberwachungs gelesen, der von `counter`angegeben wird.  
+ Generiert die `rdpmc` -Anweisung, die den vom angegebenen Leistungsindikator liest `counter`.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-unsigned __int64 __readpmc(   
-   unsigned long counter   
+unsigned __int64 __readpmc(   
+   unsigned long counter   
 );  
 ```  
   
-#### Parameter  
- \[in\] `counter`  
- Die Leistung Zähler gelesen werden soll.  
+#### <a name="parameters"></a>Parameter  
+ [in] `counter`  
+ Der Leistungsindikator, zu lesen.  
   
-## Rückgabewert  
+## <a name="return-value"></a>Rückgabewert  
  Der Wert des angegebenen Leistungsindikators.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Intrinsisch|Architektur|  
-|-----------------|-----------------|  
+|Systemintern|Architektur|  
+|---------------|------------------|  
 |`__readpmc`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Headerdatei** \<intrin.h\>  
+ **Headerdatei** \<intrin.h >  
   
-## Hinweise  
- Das systeminterne ist nur im Kernelmodus verfügbar, und die Routine als systeminterne Funktion ist nur verfügbar.  
+## <a name="remarks"></a>Hinweise  
+ Diese systeminterne Funktion nur im Kernelmodus verfügbar ist, und die Routine ist nur als systeminterne Funktion verfügbar.  
   
-## Microsoft ENDES bestimmten  
+**Ende Microsoft-spezifisch**  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

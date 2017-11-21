@@ -1,56 +1,55 @@
 ---
-title: "Creating a Device Image (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.icon"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cursors [C++], creating"
-  - "icons [C++], creating"
-  - "display devices"
-  - "display devices, creating image"
-  - "images [C++], creating for display devices"
-  - "icons [C++], inserting"
+title: "Erstellen eines Gerätebilds (Bildbearbeitung für Symbole) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.icon
+dev_langs: C++
+helpviewer_keywords:
+- cursors [C++], creating
+- icons [C++], creating
+- display devices
+- display devices, creating image
+- images [C++], creating for display devices
+- icons [C++], inserting
 ms.assetid: 5a536928-32df-4ace-beb1-1521ce3b871f
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8a4f71b2877eaaa7af125918c7fe2b71bb031d39
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Creating a Device Image (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Wenn Sie eine neue Symbol\- oder Cursorressource erstellen, legt der Grafik\-Editor zunächst ein Bild in einem spezifischen Stil an \(32 × 32, 16 Farben für Symbole und 32 × 32, Monochrom für Cursor\).  Anschließend können Sie dem anfänglichen Symbol oder Cursor Bilder in unterschiedlichen Größen und Stilen hinzufügen und die jeweiligen zusätzlichen Bilder nach Bedarf für die verschiedenen Anzeigegeräte bearbeiten.  Sie können ein Bild auch bearbeiten, indem Sie einen Ausschneide\- und Einfügevorgang von einem vorhandenen Bildtyp oder von einer Bitmap ausführen, die in einem Grafikprogramm erstellt wurde.  Weitere Informationen über die in Windows verwendeten Symbolgrößen finden Sie unter [Icons](_win32_Icons_cpp) in der Windows SDK\-Dokumentation.  
+# <a name="creating-a-device-image-image-editor-for-icons"></a>Erstellen eines Gerätebilds (Bildbearbeitung für Symbole)
+Wenn Sie eine neue Symbols oder Cursors mit Ressource, das Bild-Editor erstellen erstellt zunächst ein Bild in einem bestimmten Format (32 x 32, 16 Farben für Symbole und 32 x 32, Monochrom für Cursor). Sie können Bilder in verschiedenen Größen und Formate auf das erste Symbol oder Cursor hinzufügen und jede zusätzliche Bild nach Bedarf für die verschiedenen Anzeigegeräte bearbeiten. Sie können ein Bild auch durch Ausschneiden und Einfügen aus einem vorhandenen Image-Typ oder von einer Bitmap in einem Graphics-Programm erstellt bearbeiten.  
   
- Wenn Sie die Symbol\- oder Cursorressource im [Grafik\-Editor](../mfc/image-editor-for-icons.md) öffnen, wird standardmäßig das Bild geöffnet, das dem aktuellen Anzeigegerät am ehesten entspricht.  
+ Beim Öffnen der Symbols oder Cursors mit Ressourcen in der [bildbearbeitung](../windows/image-editor-for-icons.md), das Bild, das das aktuellen Anzeigegerät am ehesten entspricht, wird standardmäßig geöffnet.  
   
-### So erstellen Sie ein neues Symbol oder einen neuen Cursor  
+### <a name="to-create-a-new-icon-or-cursor"></a>So erstellen ein neues Symbol oder cursor  
   
-1.  Klicken Sie in der [Ressourcenansicht](../windows/resource-view-window.md) mit der rechten Maustaste auf die RC\-Datei, und wählen Sie dann **Ressource einfügen** aus dem Kontextmenü.  \(Enthält die RC\-Datei bereits eine Bildressource, z. B. einen Cursor, klicken Sie einfach mit der rechten Maustaste auf den Ordner **Cursor** und wählen im Kontextmenü **Cursor einfügen** aus.\)  
+1.  In [Ressourcenansicht](../windows/resource-view-window.md), mit der rechten Maustaste der RC-Datei, und wählen Sie dann **Ressource einfügen** aus dem Kontextmenü. (Falls Sie eine Bildressource in der RC-Datei, z. B. einen Cursor, noch können Sie einfach auf Rechtsklicken der **Cursor** Ordner, und wählen **Cursor einfügen** aus dem Kontextmenü.)  
   
     > [!NOTE]
-    >  Wenn das Projekt noch keine RC\-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).  
+    >  Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Wählen Sie im [Dialogfeld "Ressource einfügen"](../windows/add-resource-dialog-box.md) **Symbol** oder **Cursor**, und klicken Sie auf **Neu**.  Für Symbole erstellen Sie hiermit eine Symbolressource mit 32 × 32 Pixel und 16 Farben.  Für Cursor wird ein monochromes Bild \(2 Farben\) mit 32 × 32 Pixel erstellt.  
+2.  In der [Dialogfeld "Ressource einfügen"](../windows/add-resource-dialog-box.md)Option **Symbol** oder **Cursor** , und klicken Sie auf **neu**. Für Symbole wird hierdurch eine Symbolressource mit 32 x 32 Pixel und 16 Farben erstellt. Bei Cursorn 32 x 32 Pixel, wird die Bildtypen (2-Farbe) erstellt.  
   
-     Wenn im Dialogfeld **Ressource einfügen** neben dem Bildressourcentyp ein Pluszeichen \(**\+**\) angezeigt wird, bedeutet dies, dass Symbolleistenvorlagen verfügbar sind.  Klicken Sie auf das Pluszeichen, um die Vorlagenliste zu erweitern, markieren Sie eine Vorlage, und klicken Sie auf **Neu**.  
+     Wenn ein Pluszeichen (**+**) wird neben der Image-Ressourcentyp im angezeigt, die **Ressource einfügen** (Dialogfeld), es bedeutet, dass die Symbolleistenvorlagen verfügbar sind. Klicken Sie auf das Pluszeichen (+) erweitern die Liste der Vorlagen, wählen Sie eine Vorlage, und klicken Sie auf **neu**.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](https://msdn.microsoft.com/library/f45fce5x.aspx) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](https://msdn.microsoft.com/library/xbx3z216.aspx). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
  **Anforderungen**  
   
- None  
+ Keine  
   
-## Siehe auch  
- [Icons and Cursors: Image Resources for Display Devices](../mfc/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Icons and Cursors: Image Resources for Display Devices](../mfc/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
+## <a name="see-also"></a>Siehe auch  
+ [Symbole und Cursor: Bildressourcen für Anzeigegeräte](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
+ [Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Symbole und Cursor: Bildressourcen für Anzeigegeräte](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)

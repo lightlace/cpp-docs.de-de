@@ -1,67 +1,74 @@
 ---
-title: "_bittestandset, _bittestandset64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_bittestandset_cpp"
-  - "_bittestandset64_cpp"
-  - "_bittestandset64"
-  - "_bittestandset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_bittestandset intrinsic"
-  - "_bittestandset64 intrinsic"
-  - "bts instruction"
+title: _bittestandset _bittestandset64 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _bittestandset_cpp
+- _bittestandset64_cpp
+- _bittestandset64
+- _bittestandset
+dev_langs: C++
+helpviewer_keywords:
+- bts instruction
+- _bittestandset intrinsic
+- _bittestandset64 intrinsic
 ms.assetid: 6d6c8670-fea0-4c1c-9aad-2bb842715203
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: bfbfecc50a8f6b9f11f67e609e4fe05f4696e005
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# _bittestandset, _bittestandset64
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft\-spezifisch**  
+# <a name="bittestandset-bittestandset64"></a>_bittestandset, _bittestandset64
+**Microsoft-spezifisch**  
   
  Erzeugen Sie eine Anweisung, die Bit `b` der Adresse `a` untersucht, den aktuellen Wert zurückgibt und das Bit auf 1 setzt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-unsigned char _bittestandset(    long *a,    long b ); unsigned char _bittestandset64(    __int64 *a,    __int64 b );  
+unsigned char _bittestandset(  
+   long *a,  
+   long b  
+);  
+unsigned char _bittestandset64(  
+   __int64 *a,  
+   __int64 b  
+);  
 ```  
   
-#### Parameter  
- \[in, out\] `a`  
+#### <a name="parameters"></a>Parameter  
+ [in, out] `a`  
  Ein Zeiger auf den zu untersuchenden Speicher.  
   
- \[in\] `b`  
+ [in] `b`  
  Die zu testende Bitposition.  
   
-## Rückgabewert  
+## <a name="return-value"></a>Rückgabewert  
  Das Bit an der angegebenen Position.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
-|------------------|-----------------|  
+|---------------|------------------|  
 |`_bittestandset`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`_bittestandset64`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Headerdatei** \<intrin.h\>  
+ **Headerdatei** \<intrin.h >  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Diese Routine ist nur als systeminterne Funktion verfügbar.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // bittestandset.cpp  
@@ -137,13 +144,16 @@ int main()
 }  
 ```  
   
-  **Flags: 0x2**  
-**Flags: 0x6**  
-**Flags: 0xe**  
-**Flags: 0x6**  
-**Flags: 0x4**  
-**Flags: 0x0**   
-## Ende Microsoft\-spezifisch  
+```Output  
+Flags: 0x2  
+Flags: 0x6  
+Flags: 0xe  
+Flags: 0x6  
+Flags: 0x4  
+Flags: 0x0  
+```  
   
-## Siehe auch  
+**Ende Microsoft-spezifisch**  
+  
+## <a name="see-also"></a>Siehe auch  
  [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

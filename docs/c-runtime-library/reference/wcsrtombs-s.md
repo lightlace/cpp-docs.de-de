@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- wcsrtombs_s
+apiname: wcsrtombs_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,39 +21,22 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- wcsrtombs_s
-dev_langs:
-- C++
+f1_keywords: wcsrtombs_s
+dev_langs: C++
 helpviewer_keywords:
 - string conversion, wide characters
 - wcsrtombs_s function
 - wide characters, strings
 ms.assetid: 9dccb766-113c-44bb-9b04-07a634dddec8
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 4c32ff2061e8ce52ae193c7679b40e69515d3ab0
-ms.contentlocale: de-de
-ms.lasthandoff: 03/29/2017
-
+ms.openlocfilehash: f8045010875713588fb20a8f05a230717a21a9a9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="wcsrtombss"></a>wcsrtombs_s
 Konvertieren von Breitzeichen in die Multibyte-Zeichenfolgendarstellung. Eine Version von [wcsrtombs](../../c-runtime-library/reference/wcsrtombs.md) mit Sicherheitserweiterungen, wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
@@ -124,9 +105,9 @@ errno_t wcsrtombs_s(
   
  Wenn `count` der spezielle Wert [_TRUNCATE](../../c-runtime-library/truncate.md) ist, konvertiert `wcsrtombs_s` einen so großen Teil der Zeichenfolge wie in den Zielpuffer passt, während weiterhin Platz für ein NULL-Abschlusszeichen bleibt.  
   
- Wenn `wcsrtombs_s` die Quellzeichenfolge erfolgreich konvertiert, wird die Größe der konvertierten Zeichenfolge in Bytes und das NULL-Abschlusszeichen in `*``pReturnValue` geschrieben, vorausgesetzt, `pReturnValue` ist ungleich `NULL`. Dieser Fehler tritt auch dann auf, wenn das `mbstr`-Argument `NULL` ist und es eine Methode zur Bestimmung der erforderlichen Puffergröße bietet. Bitte beachten Sie, dass `count` ignoriert wird, wenn `mbstr` gleich `NULL` ist.  
+ Wenn `wcsrtombs_s` die Quellzeichenfolge erfolgreich konvertiert, wird die Größe der konvertierten Zeichenfolge in Bytes und das NULL-Abschlusszeichen in `*pReturnValue` geschrieben, vorausgesetzt, `pReturnValue` ist ungleich `NULL`. Dieser Fehler tritt auch dann auf, wenn das `mbstr`-Argument `NULL` ist und es eine Methode zur Bestimmung der erforderlichen Puffergröße bietet. Bitte beachten Sie, dass `count` ignoriert wird, wenn `mbstr` gleich `NULL` ist.  
   
- Wenn `wcsrtombs_s` ein Breitzeichen erkennt, das nicht in ein Multibytezeichen konvertiert werden kann, wird -1 in `*``pReturnValue` geschrieben, der Zielpuffer auf eine leere Zeichenfolge festgelegt, `errno` auf `EILSEQ` festgelegt und `EILSEQ` zurückgegeben.  
+ Wenn `wcsrtombs_s` ein Breitzeichen erkennt, das nicht in ein Multibytezeichen konvertiert werden kann, wird -1 in `*pReturnValue` geschrieben, der Zielpuffer auf eine leere Zeichenfolge festgelegt, `errno` auf `EILSEQ` festgelegt und `EILSEQ` zurückgegeben.  
   
  Wenn die Sequenzen, auf die von `wcstr` und `mbstr` verwiesen wird, überlappen, ist das Verhalten von `wcsrtombs_s` nicht definiert. `wcsrtombs_s` wird von der LC_TYPE-Kategorie des aktuellen Gebietsschemas beeinflusst.  
   

@@ -1,42 +1,42 @@
 ---
-title: "Erfolgreiche Durchf&#252;hrung der OLE&#160;DB-Konformit&#228;tstests | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Konformitätstests"
-  - "Konformitätstests [OLE DB]"
-  - "OLE DB-Anbieter, Testen"
-  - "Testen von Anbietern"
-  - "Testen, OLE DB-Anbieter"
+title: "Übergeben von OLE DB-Konformitätstests | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- testing, OLE DB providers
+- testing providers
+- conformance testing
+- conformance testing [OLE DB]
+- OLE DB providers, testing
 ms.assetid: d1a4f147-2edd-476c-b452-0e6a0ac09891
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8ef7e32f56fdff81c7a66a1dfcc6c613201e2f49
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Erfolgreiche Durchf&#252;hrung der OLE&#160;DB-Konformit&#228;tstests
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Das Microsoft Data Access\-SDK umfasst eine Reihe von OLE DB\-Konformitätstests, mit deren Hilfe die Konsistenz von Anbietern gesteigert werden kann.  Die Tests prüfen alle Funktionsaspekte Ihres Anbieters und geben Ihnen die Sicherheit, dass der Anbieter erwartungsgemäß funktioniert.  Sie finden die OLE DB\-Konformitätstests im Microsoft Data Access SDK.  In diesem Abschnitt werden die Schritte zum erfolgreichen Durchführen der Konformitätstests beschrieben.  Informationen zum Ausführen der OLE DB\-Konformitätstests finden Sie im SDK.  
+# <a name="passing-ole-db-conformance-tests"></a>Erfolgreiche Durchführung der OLE DB-Konformitätstests
+Damit Anbieter mehr Konsistenz erzielt, bietet das Data Access SDK eine Reihe von OLE DB-Konformitätstests. Die Tests überprüfen Sie alle Aspekte des Anbieters ein, und geben Ihnen die Sicherheit, die der Anbieter erwartungsgemäß funktioniert. Sie können den OLE DB-Konformitätstests finden, auf das Microsoft Data Access SDK. Dieser Abschnitt konzentriert sich auf Dinge, die Sie ausführen sollten, um die Konformitätstests besteht. Informationen zum Ausführen der OLE DB-Konformitätstests finden Sie im SDK.  
   
-## Ausführen der Konformitätstests  
- Die OLE DB\-Anbietervorlagen in Visual C\+\+ 6.0 wurden durch eine Reihe von Verknüpfungsfunktionen erweitert, die die Überprüfung von Werten und Eigenschaften ermöglichen.  Ein Großteil dieser Funktionen wurde als Reaktion auf die Konformitätstests implementiert.  
+## <a name="running-the-conformance-tests"></a>Ausführen der Konformitätstests  
+ In Visual C++ 6.0 hinzugefügt der OLE DB-Anbietervorlagen diverse Verbinden von Funktionen, die Eigenschaften und Werte überprüfen können. Die meisten dieser Funktionen, die als Antwort auf die Konformitätstests hinzugefügt wurden.  
   
 > [!NOTE]
->  Damit der Anbieter die OLE DB\-Konformitätstests besteht, müssen mehrere Validierungsfunktionen hinzugefügt werden.  
+>  Sie müssen mehrere Validierungsfunktionen für Ihren Anbieter für OLE DB-Konformitätstests besteht hinzufügen.  
   
- Für diesen Anbieter sind zwei Validierungsroutinen erforderlich.  Die erste Routine, `CRowsetImpl::ValidateCommandID`, ist Bestandteil der Rowsetklasse.  Sie wird beim Erstellen des Rowsets durch die Anbietervorlagen aufgerufen.  Im Beispiel wird diese Routine verwendet, um Consumern mitzuteilen, dass keine Indizes unterstützt werden.  Im ersten Schritt wird `CRowsetImpl::ValidateCommandID` aufgerufen \(beachten Sie, dass der Anbieter die **\_RowsetBaseClass**\-Typdefinition verwendet, die der Schnittstellenzuordnung für `CMyProviderRowset` unter [Anbieterunterstützung für Lesezeichen](../../data/oledb/provider-support-for-bookmarks.md) hinzugefügt wurde. Folglich muss diese lange Zeile mit Vorlagenargumenten nicht manuell eingegeben werden\).  Als Nächstes muss **DB\_E\_NOINDEX** zurückgegeben werden, sofern der Indexparameter ungleich **NULL** ist \(dies würde darauf hinweisen, dass der Consumer einen Index verwenden möchte\).  Weitere Informationen zu Befehls\-IDs finden Sie in der OLE DB\-Spezifikation unter **IOpenRowset::OpenRowset**.  
+ Diese Anbieter sind zwei Validierungsroutinen erforderlich. Die erste Routine `CRowsetImpl::ValidateCommandID`, ist Teil der Rowsetklasse. Er wird während der Erstellung des Rowsets von den Anbietervorlagen aufgerufen. Das Beispiel verwendet diese Routine, um Consumern mitzuteilen, dass sie die Indizes nicht unterstützt. Der erste Aufruf `CRowsetImpl::ValidateCommandID` (Beachten Sie, die der Anbieter verwendet die **_RowsetBaseClass** Typedef, die in die schnittstellenzuordnung für hinzugefügt `CMyProviderRowset` in [Anbieterunterstützung für Lesezeichen](../../data/oledb/provider-support-for-bookmarks.md), sodass Sie nicht auf Geben Sie diese lange Zeile Vorlagenargumente). Als Nächstes zurückgeben **DB_E_NOINDEX** Indexparameter ist nicht **NULL** (das heißt, möchte, dass der Consumer einen Index verwenden). Weitere Informationen über die Befehls-IDs finden Sie in der OLE DB-Spezifikation, und suchen Sie nach **IOpenRowset:: OPENROWSET**.  
   
- Der folgende Code stellt die **ValidateCommandID**\-Validierungsroutine dar:  
+ Der folgende Code ist die **ValidateCommandID** Validierungsroutine:  
   
 ```  
 /////////////////////////////////////////////////////////////////////  
@@ -56,30 +56,30 @@ HRESULT ValidateCommandID(DBID* pTableID, DBID* pIndexID)
 }  
 ```  
   
- Die Anbietervorlagen rufen die `OnPropertyChanged`\-Methode auf, sobald eine Eigenschaft in der **DBPROPSET\_ROWSET**\-Gruppe geändert wird.  Um Eigenschaften für andere Gruppen zu behandeln, fügen Sie diese dem geeigneten Objekt hinzu \(d. h., dass **DBPROPSET\_SESSION**\-Überprüfungen in der `CMyProviderSession`\-Klasse stattfinden\).  
+ Die Anbietervorlagen rufen die `OnPropertyChanged` -Methode auf, wenn jemand auf eine Eigenschaft ändert die **DBPROPSET_ROWSET** Gruppe. Wenn Sie Eigenschaften für die anderen Gruppen behandeln möchten, fügen Sie sie in das entsprechende Objekt (d. h. **DBPROPSET_SESSION** Überprüfungen wechseln Sie der `CMyProviderSession` Klasse).  
   
- Zuerst wird durch den Code überprüft, ob die Eigenschaft mit einer anderen verknüpft ist.  Wenn die Eigenschaft verkettet ist, wird die **DBPROP\_BOOKMARKS**\-Eigenschaft auf True gesetzt.  In Anhang C der OLE DB\-Spezifikation finden Sie Informationen zu Eigenschaften.  Dort erfahren Sie auch, ob eine Eigenschaft mit einer weiteren Eigenschaft verkettet ist.  
+ Der Code überprüft zuerst, ob die Eigenschaft auf einen anderen verknüpft ist. Wenn die Eigenschaft verkettet ist, wird die **DBPROP_BOOKMARKS** Eigenschaft auf "true". Anhang C der OLE DB-Spezifikation enthält Informationen zu Eigenschaften. Diese Informationen darüber hinaus erfahren Sie, ob die Eigenschaft an einen anderen Konstruktor verkettet ist.  
   
- Bei Bedarf können Sie dem Code auch die `IsValidValue`\-Routine hinzufügen.  `IsValidValue` wird von den Vorlagen beim Versuch, eine Eigenschaft festzulegen, aufgerufen.  Wenn beim Festlegen eines Eigenschaftswerts zusätzliche Verarbeitungsschritte erforderlich wären, würden Sie diese Methode überschreiben.  Sie können eine dieser Methoden für jedes Eigenschaftenset verwenden.  
+ Sie können auch hinzufügen möchten die `IsValidValue` routinemäßige für Ihren Code. Der Aufruf Vorlagen `IsValidValue` beim Versuch, eine Eigenschaft festzulegen. Sie würden diese Methode überschreiben, wenn Sie zusätzliche Verarbeitung erforderlich, beim Festlegen eines Eigenschaftswerts ist. Sie können eine der folgenden Methoden für jeden Eigenschaftensatz verwenden.  
   
-## Threadingprobleme  
- Der im ATL\-OLE DB\-Anbieter\-Assistent enthaltene OLE DB\-Anbieter\-Assistent generiert standardmäßig Code für Anbieter, die in einem Apartmentmodell ausgeführt werden.  Wenn Sie versuchen, diesen Code in den Konformitätstests zu verwenden, schlägt die Ausführung zunächst fehl.  Dies liegt daran, dass das für die OLE DB\-Konformitätstests verwendete Tool **Ltm.exe** standardmäßig für das Freethreadingmodell ausgelegt ist.  Der vom OLE DB\-Anbieter\-Assistenten generierte Code verwendet standardmäßig das Apartmentmodell, um höhere Leistung und Benutzerfreundlichkeit zu gewährleisten.  
+## <a name="threading-issues"></a>Threadingprobleme  
+ Standardmäßig generiert der OLE DB-Anbieterassistent im ATL-OLE DB-Anbieter-Assistenten Code für den Anbieter in einem Apartmentmodell ausgeführt. Wenn Sie versuchen, diesen Code in den Konformitätstests auszuführen, erhalten Sie zunächst Fehlern. Dies ist da Ltm.exe, das Tool verwendet, um den OLE DB-Konformitätstests frei ist standardmäßig eine Singlethreadsitzung handelt. Der OLE DB-Anbieter-Assistenten Code standardmäßig Apartmentmodell für Leistung und benutzerfreundlichkeit.  
   
- Um dieses Problem zu beheben, passen Sie entweder LTM oder den Anbieter an.  
+ Um dieses Problem zu beheben, können Sie LTM ändern oder den Anbieter ändern.  
   
-#### So ändern Sie LTM für die Ausführung im Apartmentthreadmodus  
+#### <a name="to-change-ltm-to-run-in-apartment-threaded-mode"></a>Zum Ändern der LTM im Apartment ausgeführt Singlethread-Modus  
   
-1.  Klicken Sie im Hauptmenü von LTM zunächst auf **Tools** und dann auf **Options**.  
+1.  Klicken Sie im Hauptmenü LTM auf **Tools**, und klicken Sie dann auf **Optionen**.  
   
-2.  Ändern Sie das Threadingmodell auf der Registerkarte **General** von **Free Threaded** in **Apartment Threaded**.  
+2.  Auf der **allgemeine** ändern das Threadingmodell aus **freien Thread** auf **Apartment Threaded**.  
   
- So ändern Sie den Anbieter für die Ausführung im Freethreadingmodus  
+ So ändern Sie Ihren Anbieter im Singlethread Modus "free" ausführen:  
   
--   Suchen Sie im Anbieterprojekt, d. h. in der Datenquelle, der Sitzung und allen Rowsetheadern, nach allen Vorkommen von `CComSingleThreadModel`, und ersetzen Sie diese durch `CComMultiThreadModel`.  
+-   Suchen Sie in Ihrem Anbieterprojekt für alle Instanzen von `CComSingleThreadModel` und ersetzen es durch `CComMultiThreadModel`, die in Ihrer Data Source, Session und Rowset Headern sein sollte.  
   
--   Ändern Sie das Threadingmodell in der RGS\-Datei von **Apartment** in **Beides**.  
+-   Ändern Sie in der RGS-Datei des Threadingmodells aus **Apartment** auf **beide**.  
   
--   Befolgen Sie die nötigen Regeln für die Freethreadprogrammierung \(d. h., sperren Sie Schreiboperationen\).  
+-   Führen Sie richtige Programmierung Regeln kostenlos Singlethread-Programmierung (d. h. Sperren bei Schreibvorgängen).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Erweiterte Anbietertechniken](../../data/oledb/advanced-provider-techniques.md)

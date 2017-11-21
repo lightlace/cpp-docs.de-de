@@ -1,48 +1,46 @@
 ---
-title: "Compilerwarnung (Stufe 4) C4571 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4571"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4571"
+title: Compilerwarnung (Stufe 4) C4571 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4571
+dev_langs: C++
+helpviewer_keywords: C4571
 ms.assetid: 07aa17bd-b15c-4266-824c-57cc445e8edd
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 293a3ffa2ddb14292b33ed222f18ca6f8dc6faec
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
-# Compilerwarnung (Stufe 4) C4571
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Information: Die catch\(...\)\-Semantik wurde gegenüber Visual C\+\+ 7.1 geändert; strukturierte Ausnahmen \(SEH\) werden nicht mehr abgefangen  
+# <a name="compiler-warning-level-4-c4571"></a>Compilerwarnung (Stufe 4) C4571
+Information: catch(...)-Semantik seit Visual C++ 7.1 geändert; strukturierte Ausnahmen (SEH) werden nicht mehr abgefangen.  
   
- C4571 wird bei Kompilierung mit **\/EHs** für jeden catch\(...\)\-Block generiert.  
+ C4571 wird für jeden catch(...) beim Kompilieren mit **/EHs**.  
   
- Beim Kompilieren mit **\/EHs** wird eine strukturierte Ausnahme \(z. B. Division durch 0 \(Null\), Nullzeiger\) nicht von einem catch\(...\)\-Block aufgefangen; catch\(...\)\-Blöcke fangen nur explizit ausgelöste C\+\+\-Ausnahmen auf.  Weitere Informationen finden Sie unter [Ausnahmebehandlung](../../cpp/exception-handling-in-visual-cpp.md).  
+ Beim Kompilieren mit **/EHs**, ein wird kein catch(...) eine strukturierte Ausnahme (aufgrund einer Division durch Null, null-Zeiger, z. B.), einem catch(...) Block wird nur Catch explizit ausgelöst, C++-Ausnahmen.  Weitere Informationen finden Sie unter [Ausnahmebehandlung (Task Parallel Library)](../../cpp/exception-handling-in-visual-cpp.md).  
   
- Diese Warnung ist standardmäßig deaktiviert.  Aktivieren Sie diese Warnung, um sicherzustellen, dass beim Kompilieren mit **\/EHs** die catch\(...\)\-Blöcke nicht zum Auffangen strukturierter Ausnahmen verwendet werden.  Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
+ Diese Warnung ist standardmäßig deaktiviert.  Aktivieren Sie diese Warnung auf, um sicherzustellen, dass bei der Kompilierung **/EHs** Ihre Catch (...)-Blöcken beabsichtigen nicht, um strukturierte Ausnahmen abzufangen.  Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .  
   
- Zum Beheben des Fehlers C4571 bestehen folgende Möglichkeiten:  
+ Sie können in einem der folgenden Arten C4571 behoben haben,  
   
--   Kompilieren Sie mit **\/EHa**, wenn catch\(...\)\-Blöcke weiterhin strukturierte Ausnahmen auffangen sollen.  
+-   Kompilieren Sie mit **/EHa** Falls Sie weiterhin Ihre catch(...)-Blöcke zum Abfangen von strukturierter Ausnahmen benötigen.  
   
--   Aktivieren Sie C4571 nicht, wenn die catch\(...\)\-Blöcke keine strukturierten Ausnahmen auffangen sollen, Sie jedoch catch\(...\)\-Blöcke verwenden möchten.  Sie können strukturierte Ausnahmen auch weiterhin abfangen, indem Sie die Schlüsselwörter für strukturierte Ausnahmebehandlung verwenden \(**\_\_try**, **\_\_except** und **\_\_finally**\).  Beachten Sie jedoch, dass kompilierte **\/EHs**\-Destruktoren nur bei Auslösung von C\+\+\-Ausnahmen aufgerufen werden, nicht bei SEH\-Ausnahmen.  
+-   Aktivieren Sie C4571 nicht, wenn Sie nicht möchten, dass Ihre catch(...)-Blöcke zum strukturierte Ausnahmen abfangen, jedoch weiterhin catch(...) Blöcke verwenden möchten.  Sie können auch weiterhin abfangen strukturierte Ausnahmen, die mit den Schlüsselwörtern für die strukturierte Ausnahmebehandlung (**__try**, **__except**, und **__finally**).  Beachten Sie jedoch, dass kompiliert **/EHs** Destruktoren werden nur aufgerufen werden, wenn eine C++-Ausnahme ausgelöst wird, nicht verwendet werden, wenn eine SEH-Ausnahme tritt auf,.  
   
--   Ersetzen Sie catch\(...\)\-Blöcke durch catch\-Blöcke für bestimmte C\+\+\-Ausnahmen, und fügen Sie der C\+\+\-Ausnahmebehandlung optional eine strukturierte Ausnahmebehandlung hinzu \(**\_\_try**, **\_\_except** und **\_\_finally**\).  Weitere Informationen finden Sie unter [Strukturierte Ausnahmebehandlung](../../cpp/structured-exception-handling-c-cpp.md).  
+-   Catch-Blöcke für C++-Ausnahmen, die bestimmte catch(...) Block ersetzt, und optional hinzufügen, um die C++-Ausnahmebehandlung die strukturierten Ausnahmebehandlung (**__try**, **__except**, und **_ __identifier**).  Finden Sie unter [strukturierte Ausnahmebehandlung (C/C++)](../../cpp/structured-exception-handling-c-cpp.md) für Weitere Informationen.  
   
- Weitere Informationen finden Sie unter [\/EH \(Ausnahmebehandlungsmodell\)](../../build/reference/eh-exception-handling-model.md).  
+ Finden Sie unter [/EH (Ausnahmebehandlungsmodell)](../../build/reference/eh-exception-handling-model.md) für Weitere Informationen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird C4571 generiert.  
   
 ```  
