@@ -1,46 +1,43 @@
 ---
-title: Konfigurieren eines Linux-Projekts | Microsoft-Dokumentation
+title: Konfigurieren eines C++ Linux-Projekts in Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 11/16/2016
+ms.date: 11/15/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-linux
+ms.technology: cpp-linux
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-author: BrianPeek
-ms.author: brpeek
+author: corob-msft
+ms.author: corob
 manager: ghogen
+ms.openlocfilehash: e727f4588c425e3a6c94d7ceb09ebc8d494e24cf
+ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
 ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: 9a3239120ccdbc533c5063c50a523ad84774f81c
-ms.contentlocale: de-de
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/15/2017
 ---
-
 # <a name="configure-a-linux-project"></a>Konfigurieren eines Linux-Projekts
+Dieses Thema beschreibt das Konfigurieren eines Visual Studio Linux-Projekts. Informationen zu CMake Linux-Projekten finden Sie unter [Konfigurieren eines Linux CMake-Projekts](cmake-linux-project.md).
 
 ## <a name="general-settings"></a>Allgemeine Einstellungen
-Für ein Linux-Projekt mit Visual Studio lassen sich eine Vielzahl von Optionen konfigurieren.  Zum Anzeigen dieser Optionen wählen Sie das Menü **Projekt > Eigenschaften** aus oder klicken mit der rechten Maustaste auf das Projekt im **Projektmappen-Explorer** und wählen **Eigenschaften** aus dem Kontextmenü:
+Für ein Linux-Projekt mit Visual Studio lassen sich eine Vielzahl von Optionen konfigurieren.  Zum Anzeigen dieser Optionen wählen Sie das Menü **Projekt > Eigenschaften** aus oder klicken mit der rechten Maustaste auf das Projekt im **Projektmappen-Explorer** und wählen dann **Eigenschaften** aus dem Kontextmenü aus: Die **allgemeinen** Einstellungen werden angezeigt.
 
 ![Allgemeine Konfiguration](media/settings_general.png)
 
 Standardmäßig wird eine ausführbare Datei (.out) mit dem Tool erstellt.  Zum Erstellen einer statischen oder dynamischen Bibliothek oder um eine vorhandene Makefile zu nutzen, verwenden Sie die Auswahl **Konfigurationstyp**.
 
 ## <a name="remote-settings"></a>Remoteeinstellungen
-Wählen Sie zum Ändern der Einstellungen für den Linux-Remotecomputer das Element **Remoteeinstellungen** aus:
+Um die Einstellungen für den Linux-Remotecomputer zu ändern, konfigurieren Sie die Remoteoptionen, die in den Einstellungen unter **Allgemein** angezeigt werden:
 
-![Remoteeinstellungen](media/settings_remote.png)
+* Verwenden Sie zum Ändern des Linux-Zielcomputers den Eintrag **Remotebuildcomputer**.  Dadurch können Sie eine der zuvor erstellten Verbindungen auswählen.  Weitere Informationen dazu, wie Sie einen neuen Eintrag erstellen, finden Sie im Abschnitt [Connecting to Your Remote Linux Computer (Verbindung mit Ihren Linux-Remotecomputer](connect-to-your-remote-linux-computer.md).
 
-* Verwenden Sie zum Ändern des Ziel-Linux-Computer den Eintrag **Zielcomputer**.  Dadurch können Sie eine der zuvor erstellten Verbindungen auswählen.  Weitere Informationen dazu, wie Sie einen neuen Eintrag erstellen, finden Sie im Abschnitt [Connecting to Your Remote Linux Computer (Verbindung mit Ihren Linux-Remotecomputer](connect-to-your-remote-linux-computer.md).
+* Das **Remotebuild-Stammverzeichnis** bestimmt das Stammverzeichnis, in dem das Projekt auf dem Linux-Remotecomputer erstellt wird.  Standardmäßig handelt es sich dabei um **~/projects**, sofern nicht anders angegeben.
 
-* Das **Remotestammverzeichnis** bestimmt das Stammverzeichnis, in dem das Projekt auf dem Linux-Remotecomputer erstellt wird.  Standardmäßig handelt es sich dabei um **~/projects**, sofern nicht anders angegeben.
+* Das **Remotebuild-Projektverzeichnis** ist das Verzeichnis, in dem dieses spezifische Projekt auf dem Linux-Remotecomputer erstellt wird.  Standardmäßig handelt es sich dabei um das Verzeichnis **$(RemoteRootDir)/$(ProjektName)**. Es wird zu einem Verzeichnis erweitert, das den Namen des aktuellen Projekts unter dem oben angegebenen Stammverzeichnis trägt.
 
-* Das **Remoteprojektverzeichnis** befindet sich dort, wo das angegebene Projekt auf dem Linux-Remotecomputer erstellt wird.  Standardmäßig handelt es sich dabei um das Verzeichnis **$(RemoteRootDir)/$(ProjektName)**. Es wird zu einem Verzeichnis erweitert, das den Namen des aktuellen Projekts unter dem oben angegebenen Stammverzeichnis trägt.
-
-* Nutzen Sie abschließend zum Ändern der standardmäßigen C- und C++-Compiler bzw. der Linker und Archivierungsprogramme, die zur Erstellung des Projekts verwendet wurden, die entsprechenden Einträge im Abschnitt **Toolsstandardwerte**.  Diese können beispielsweise für die Verwendung einer bestimmten GCC-Version oder sogar des Clang-Compilers festgelegt werden.
+> [!NOTE]
+> Verwenden Sie zum Ändern der C- und C++-Standardcompiler bzw. der Linker und Archivierungsprogramme, die zur Erstellung des Projekts verwendet werden, die entsprechenden Einträge im Abschnitt **C/C++ > Allgemein** sowie im Abschnitt **Linker > Allgemein**.  Diese können beispielsweise für die Verwendung einer bestimmten GCC-Version oder sogar des Clang-Compilers festgelegt werden.
 
 ## <a name="vc-directories"></a>VC++-Verzeichnisse
 Standardmäßig enthält Visual Studio keine Includedateien auf Systemebene des Linux-Computers.  So sind in Visual Studio beispielsweise keine Element aus dem Verzeichnis **/Usr/include** vorhanden.  Für vollständige [IntelliSense](/visualstudio/ide/using-intellisense)-Unterstützung müssen Sie diese Dateien an einen Speicherort auf dem Entwicklungscomputer kopieren und Visual Studio auf diesen Speicherort verweisen.  Eine Möglichkeit besteht darin, die Dateien über SCP (Secure Copy) zu kopieren.  Unter Windows 10 können Sie [Bash unter Windows ](https://msdn.microsoft.com/commandline/wsl/about) verwenden, um SCP ausführen.  Unter früheren Versionen von Windows können Sie beispielsweise [PSCP (PuTTY Secure Copy)](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) nutzen.
@@ -67,9 +64,13 @@ Die Quelldateien werden bei der Erstellung auf Ihrem Entwicklungs-PC auf den Lin
   `C:\Projects\ConsoleApplication1\MyFile.cpp:=~/projects/ConsoleApplication1/ADifferentName.cpp;C:\Projects\ConsoleApplication1\MyFile2.cpp:=~/projects/ConsoleApplication1/ADifferentName2.cpp;`
 
 ## <a name="build-events"></a>Buildereignisse
-Da die gesamte Kompilierung auf einem Remotecomputer erfolgt, wurden dem Abschnitt über Build Events in den Projekteigenschaften mehrere zusätzliche Buildereignisse hinzugefügt.  Dazu gehören **Remote-Präbuildereignis**, **Remote-Prälinkereignis** und **Remove Post-Build Event** (Postbuildereignis entfernen). Sie finden auf dem Remotecomputer vor oder nach den einzelnen Schritte im Prozess statt.
+Da die gesamte Kompilierung auf einem Remotecomputer erfolgt, wurden dem Abschnitt über Build Events in den Projekteigenschaften mehrere zusätzliche Buildereignisse hinzugefügt.  Dazu gehören das **Remote-Präbuildereignis**, das **Remote-Prälinkereignis** und das **Remote-Postbuildereignis**. Diese Ereignisse finden auf dem Remotecomputer vor oder nach den einzelnen Schritten im Prozess statt.
 
 ![Buildereignisse](media/settings_buildevents.png)
 
 ## <a name="see-also"></a>Siehe auch
-[Working with Project Properties (Arbeiten mit Projekteigenschaften)](../ide/working-with-project-properties.md)
+[Arbeiten mit Projekteigenschaften](../ide/working-with-project-properties.md)  
+[Allgemeine C++-Eigenschaften (Linux C++)](../linux/prop-pages/general-linux.md)  
+[VC++-Verzeichnisse (Linux C++)](../linux/prop-pages/directories-linux.md)  
+[Kopieren von Quellprojekteigenschaften (Linux C++)](../linux/prop-pages/copy-sources-project.md)  
+[Buildereigniseigenschaften (Linux C++)](../linux/prop-pages/build-events-linux.md)

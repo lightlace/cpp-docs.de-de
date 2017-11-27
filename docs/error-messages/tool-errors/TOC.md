@@ -186,6 +186,7 @@
 ## [Linkertoolwarnung LNK4010](linker-tools-warning-lnk4010.md)
 ## [Linkertoolwarnung LNK4014](linker-tools-warning-lnk4014.md)
 ## [Linkertoolwarnung LNK4022](linker-tools-warning-lnk4022.md)
+## [Linkertoolwarnung LNK4037](linker-tools-warning-lnk4037.md)
 ## [Linkertoolwarnung LNK4039](linker-tools-warning-lnk4039.md)
 ## [Linkertoolwarnung LNK4044](linker-tools-warning-lnk4044.md)
 ## [Linkertoolwarnung LNK4049](linker-tools-warning-lnk4049.md)

@@ -281,7 +281,7 @@
 ## [Exemplarische Vorgehensweise: Erstellen und Verwenden einer statischen Bibliothek (C++)](walkthrough-creating-and-using-a-static-library-cpp.md)
 ## [Gewusst wie: Verwenden des Windows 10-SDKs in einer Windows-Desktopanwendung](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)
 # [Universelle Windows-Apps (C++)](universal-windows-apps-cpp.md)
-## [Windows Runtime C++ Template Library (WRL)](windows-runtime-cpp-template-library-wrl.md)
+## [C++-Vorlagenbibliothek für Windows-Runtime (WRL)](windows-runtime-cpp-template-library-wrl.md)
 ### [Vorgehensweise: Aktivieren und Verwenden einer Windows-Runtime-Komponente mit WRL](how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)
 ### [Vorgehensweise: Abschließen asynchroner Vorgänge mit WRL](how-to-complete-asynchronous-operations-using-wrl.md)
 ### [Vorgehensweise: Behandeln von Ereignissen mit WRL](how-to-handle-events-using-wrl.md)

@@ -4,16 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-ide
+ms.technology: cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - visual c++
 - visual c
 - vc
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - unmanaged code, C++
 - development environment, Visual C++
@@ -21,7 +19,7 @@ helpviewer_keywords:
 - Visual C++
 - Visual C++, reference
 ms.assetid: e8dcc44c-a3e2-4ffe-887c-fd15b18dc458
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -35,17 +33,11 @@ translation.priority.ht:
 - ru-ru
 - zh-cn
 - zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: da3c2e6ce7247d3e8c9a401bc0a133cb8d46a970
-ms.openlocfilehash: 81a7d724a4a3b2e5aa7de47461d20cc3385896eb
-ms.contentlocale: de-de
-ms.lasthandoff: 03/15/2017
-
+ms.openlocfilehash: bd4ac59b539b972a50a192e116e536598c03ed63
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ in Visual Studio
 Mit der Programmiersprache und den Entwicklungstools von Visual Studio 2017 können Sie native universelle Windows-Apps, native Desktop- und Serveranwendungen, plattformübergreifende Bibliotheken, die unter Android, iOS und Windows ausgeführt werden können, und verwaltete Apps für .NET Framework entwickeln.  
@@ -64,8 +56,7 @@ Mit der Programmiersprache und den Entwicklungstools von Visual Studio 2017 kön
  [Neuerungen bei Visual C++](what-s-new-for-visual-cpp-in-visual-studio.md)  
  Neue Funktionen in Visual C++.  
 
- [Verbesserungen bei der Übereinstimmung mit C++-Standards in Visual C++ 2017](cpp-conformance-improvements-2017.md) 
- Erfahren Sie mehr über die Verbesserungen bei der Übereinstimmung mit C++-Standards in Visual C++ 2017. 
+ [Verbesserungen bei der Übereinstimmung mit C++-Standards in Visual C++ 2017](cpp-conformance-improvements-2017.md) Erfahren Sie mehr über die Verbesserungen bei der Übereinstimmung mit C++-Standards in Visual C++ 2017. 
 
  [Visual C++-Sprachkonformität](visual-cpp-language-conformance.md)  
  Eine Liste der Konformitätsstatus nach Feature in Visual C++.
@@ -129,9 +120,9 @@ Mit der Programmiersprache und den Entwicklungstools von Visual Studio 2017 kön
  Weitere Informationen zum Erstellen von Projekten, Arbeiten mit Quellcodedateien, Verknüpfen mit Bibliotheken, Kompilieren, Debuggen, Erstellen von Profilen, Bereitstellen und mehr finden Sie unter [IDE und Entwicklungstools](ide/ide-and-tools-for-visual-cpp-development.md).  
   
 ## <a name="c-language-reference"></a>C++-Programmiersprachenreferenz  
- Weitere Informationen zur C++-Sprache finden Sie unter [C++-Sprachreferenz](cpp/cpp-language-reference.md).  
+ Weitere Informationen zur C++-Sprache finden Sie unter [C++ Language Reference](cpp/cpp-language-reference.md).  
   
- Weitere Informationen zum C++-Präprozessor finden Sie unter [C/C++-Präprozessorreferenz](preprocessor/c-cpp-preprocessor-reference.md).  
+ Weitere Informationen zum C++-Präprozessor finden Sie unter [C/C++ Preprocessor Reference](preprocessor/c-cpp-preprocessor-reference.md).  
   
 ## <a name="c-libraries-in-visual-studio"></a>C++-Bibliotheken in Visual Studio  
  Die folgenden Abschnitte enthalten Informationen über die verschiedenen C++-Bibliotheken.  
@@ -160,7 +151,7 @@ Mit der Programmiersprache und den Entwicklungstools von Visual Studio 2017 kön
  [.NET-Programmierung mit C++/CLI (Visual C++)](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)  
  Programmierung für die Common Language Runtime (CLR).  
   
- Siehe auch die Dokumentation zu [STL/CLR](dotnet/stl-clr-library-reference.md) und [C++-Unterstützungsbibliothek](dotnet/cpp-support-library.md).  
+ Siehe auch die Dokumentation für [STL/CLR](dotnet/stl-clr-library-reference.md) und [C++ Support Library](dotnet/cpp-support-library.md).  
   
 ## <a name="other-c-libraries"></a>Weitere Visual C++-Bibliotheken  
  Dieser Abschnitt enthält Links zu Bibliotheken, die nicht in Visual Studio enthalten sind jedoch heruntergeladen und mit Visual C++ verwendet werden können.  
@@ -178,11 +169,10 @@ Mit der Programmiersprache und den Entwicklungstools von Visual Studio 2017 kön
  [Standard C++](http://isocpp.org/)  
  Lernen Sie C++ kennen, verschaffen Sie sich einen Überblick über das moderne C++, und greifen Sie auf Links für Bücher, Artikel, Gespräche und Ereignisse zu.  
   
- [Erlernen von Visual C++](http://msdn.microsoft.com/vstudio/hh386302.aspx)  
+ [Visual C++ kennen lernen](http://msdn.microsoft.com/vstudio/hh386302.aspx)  
  Beginnen Sie mit dem Erlernen von C++.  
   
 ## <a name="see-also"></a>Siehe auch  
  [C-Sprachreferenz](c-language/c-language-reference.md)   
  [C-Laufzeitbibliotheksreferenz](c-runtime-library/c-run-time-library-reference.md)   
  [Intrinsische Compilerfunktionen und Assemblysprache](intrinsics/compiler-intrinsics-and-assembly-language.md)
-
