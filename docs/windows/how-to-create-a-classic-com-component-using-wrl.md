@@ -13,11 +13,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e33eaebd49343c5c03b097eaf75d4745c7aaeac1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 04b84a5deedc5ef112507f4e0f8ccb29af418c28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-a-classic-com-component-using-wrl"></a>Gewusst wie: Erstellen einer klassischen COM-Komponente mit WRL
 Sie können Windows Runtime C++ Template Library (WRL) verwenden, um grundlegende klassische COM-Komponenten für die Verwendung in desktop-apps erstellen außerdem Verwendung für [!INCLUDE[win8_appstore_long](../build/reference/includes/win8_appstore_long_md.md)] apps. Für die Erstellung von COM-Komponenten möglicherweise die Windows Runtime C++ Template Library weniger Code als das ATL. Weitere Informationen über die Teilmenge von COM, die die Windows Runtime C++ Template Library unterstützt, finden Sie unter [Windows Runtime C++ Template Library (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).  
@@ -96,4 +99,4 @@ Sie können Windows Runtime C++ Template Library (WRL) verwenden, um grundlegend
  [!code-cpp[wrl-classic-com-component#7](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_7.cpp)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Windows Runtime C++-Vorlagenbibliothek (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)
+ [C++-Vorlagenbibliothek für Windows-Runtime (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

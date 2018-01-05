@@ -12,11 +12,12 @@ caps.latest.revision: "22"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 20b2cf3ac565bfd6bbda39825e55e4171781c737
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 66a08038825b2ca76a8d18e5103b5569feb51cb2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strings-ccx"></a>Zeichenfolgen (C++/CX)
 Text in Windows-Runtime wird dargestellt, in C + c++ / CX, indem Sie die [Platform:: String-Klasse](../cppcx/platform-string-class.md). Verwenden der `Platform::String Class` Wenn Sie Zeichenfolgen hin und her an Methoden in Windows-Runtime-Klassen übergeben oder bei der Interaktion mit anderen Windows-Runtime-Komponenten über die Grenze der anwendungsbinärschnittstelle (ABI) hinaus. Die `Platform::String Class` stellt Methoden für einige allgemeine Zeichenfolgenoperationen bereit, aber sie ist nicht als umfassende Zeichenfolgenklasse gedacht. Verwenden Sie in Ihrem C++-Modul Standard-C++-Zeichenfolgentypen wie [wstring](../standard-library/basic-string-class.md) für sämtliche wesentliche Textverarbeitung und konvertieren Sie dann das Endergebnis zu [Platform::String](../cppcx/platform-string-class.md) , bevor Sie es zu oder von einer öffentlichen Schnittstelle übergeben. Das Konvertieren zwischen `wstring` oder `wchar_t*` und `Platform::String`ist einfach und effizient.  
