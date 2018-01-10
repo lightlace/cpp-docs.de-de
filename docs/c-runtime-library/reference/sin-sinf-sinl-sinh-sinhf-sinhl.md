@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -36,8 +35,7 @@ f1_keywords:
 - sin
 - sinhf
 - _sinhl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - sinh function
 - _sinl function
@@ -51,30 +49,16 @@ helpviewer_keywords:
 - sinhl function
 - hyperbolic functions
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 8f33398820df9df9de21e7d24cc35f76f131bd43
-ms.contentlocale: de-de
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: de4f4914589c5803733bdcd279b3d0a3fa00e360
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sin-sinf-sinl-sinh-sinhf-sinhl"></a>sin, sinf, sinl, sinh, sinhf, sinhl
 Berechnet Sinusse und hyperbolische Sinusse.  
@@ -124,7 +108,7 @@ long double sinhl(
   
 |Eingabe|SEH-Ausnahme|Matherr-Ausnahme|  
 |-----------|-------------------|-----------------------|  
-|± QNAN,IND|Keine|_DOMAIN|  
+|± QNAN,IND|Keiner|_DOMAIN|  
 |± ∞ (sin, sinf, sinl)|INVALID|_DOMAIN|  
 |&#124;x&#124; ≥ 7.104760e+002 (sinh, sinhf, sinhl)|OVERFLOW+INEXACT|OVERFLOW|  
   
@@ -135,7 +119,7 @@ long double sinhl(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`sin`, `sinf`, `sinl`, `sinh`, `sinhf`, `sinhl`|\<math.h>|  
   
@@ -177,7 +161,7 @@ cosh( 1.570796 ) = 2.509178
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Gleitkomma-Unterstützung](../../c-runtime-library/floating-point-support.md)   
+ [Floating-Point Support (Gleitkommaunterstützung)](../../c-runtime-library/floating-point-support.md)   
  [acos, acosf, acosl](../../c-runtime-library/reference/acos-acosf-acosl.md)   
  [asin, asinf, asinl](../../c-runtime-library/reference/asin-asinf-asinl.md)   
  [atan, atanf, atanl, atan2, atan2f, atan2l](../../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)   

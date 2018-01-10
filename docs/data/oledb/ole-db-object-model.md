@@ -16,11 +16,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b91198d4280a271c775b7be79ecab3da7271fb57
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 533142115a4811c0f03f585b995b83383a33d831
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-object-model"></a>OLE DB-Objektmodell
 Der OLE DB-Objektmodell besteht aus den folgenden Objekten oder Komponenten. Die ersten vier Objekte oder aufgelisteten Komponenten (Datenquellen, Sitzungen, Befehle und Rowsets) ermöglichen Ihnen, eine Verbindung mit einer Datenquelle herstellen und Sie ansehen. Der Rest, beginnend mit den Accessoren beziehen sich auf das Arbeiten mit den Daten, wenn er angezeigt wird.  

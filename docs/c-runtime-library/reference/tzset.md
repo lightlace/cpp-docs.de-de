@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _tzset
+apiname: _tzset
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,39 +21,23 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- _tzset
-dev_langs:
-- C++
+f1_keywords: _tzset
+dev_langs: C++
 helpviewer_keywords:
 - _tzset function
 - time environment variables
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 669b7d41234c21c3fb4e9a1a28f6b8d1a33c036b
-ms.contentlocale: de-de
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f103da7ca67721f6c654c593746b9427954c6930
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tzset"></a>_tzset
 Legt die Umgebungsvariablen für die Zeit fest.  
@@ -72,7 +54,7 @@ void _tzset( void );
 ## <a name="remarks"></a>Hinweise  
  Die `_tzset` -Funktion verwendet die aktuelle Einstellung der Umgebungsvariablen `TZ` , um Werte zu drei globalen Variablen zuzuweisen: `_daylight`, `_timezone`und `_tzname`. Diese Variablen werden von den Funktionen [_ftime](../../c-runtime-library/reference/ftime-ftime32-ftime64.md) und [localtime](../../c-runtime-library/reference/localtime-localtime32-localtime64.md) verwendet, um Korrekturen von der koordinierten Weltzeit (UTC) zur Ortszeit zu unterstützen, und von der Funktion `time` , um die UTC aus der Systemzeit zu ermitteln. Verwenden Sie zum Festlegen der `TZ` -Umgebungsvariable die folgende Syntax:  
   
- `set` `TZ`=`tzn`[+ &#124; -]`hh`[`:``mm`[`:``ss`] ][`dzn`]  
+ `set` `TZ`=`tzn`[+ &#124; -]`hh`[`:mm`[`:ss`] ][`dzn`]  
   
  `tzn`  
  Dreibuchstabiger Zeitzonenname, z. B. PST. Sie müssen die richtige Verschiebung (Offset) von der Ortszeit zur UTC angeben.  
@@ -109,13 +91,13 @@ set TZ=GST-1GDT
 |`_daylight`|Wert ungleich 0 (null), wenn eine Sommerzeitzone in der `TZ` -Einstellung angegeben ist; andernfalls 0.|1|  
 |`_timezone`|Unterschied in Sekunden zwischen Ortszeit und UTC.|28800 (28800 Sekunden sind gleich 8 Stunden)|  
 |`_tzname`[0]|Zeichenfolgenwert des Zeitzonennamens der `TZ` -Umgebungsvariablen; leer, wenn `TZ` nicht festgelegt wurde.|PST|  
-|`_tzname`[1]|Zeichenfolgenwert der Sommerzeitzone; leer, wenn die Sommerzeitzone bei der `TZ` -Umgebungsvariablen weggelassen wurde.|PDT|  
+|`_tzname`[1]|Zeichenfolgenwert der Sommerzeitzone; leer, wenn die Sommerzeitzone bei der `TZ`-Umgebungsvariablen weggelassen wurde.|PDT|  
   
  Die in der vorangehenden Tabelle aufgeführten Standardwerte für `_daylight` und das `_tzname` -Array entsprechen "PST8PDT." Wenn die DST-Zone in der `TZ` -Umgebungsvariablen weggelassen wird, ist der Wert von `_daylight` 0 und die Funktionen `_ftime`, `gmtime`und `localtime` geben für ihre jeweiligen DST-Flags 0 zurück.  
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_tzset`|\<time.h>|  
   
@@ -157,7 +139,7 @@ _tzname[0] = Pacific Standard Time
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Uhrzeitverwaltung](../../c-runtime-library/time-management.md)   
+ [Time Management (Uhrzeitverwaltung)](../../c-runtime-library/time-management.md)   
  [asctime, _wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
  [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
  [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   

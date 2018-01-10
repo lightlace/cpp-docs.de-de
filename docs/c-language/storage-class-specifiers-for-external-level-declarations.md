@@ -27,11 +27,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 729d46f1e228127b712e1533c7eab5976f690663
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3764eb29cc46ec7b6159456131dde1024b187f61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storage-class-specifiers-for-external-level-declarations"></a>Speicherklassenspezifizierer für Deklarationen der externen Ebene
 Externe Variablen sind Variablen im Dateigültigkeitsbereich. Sie sind außerhalb einer Funktion definiert und sind potenziell für viele Funktionen verfügbar. Funktionen können nur auf der externen Ebene definiert werden und deshalb nicht geschachtelt werden. Standardmäßig sind alle Verweise auf externe Variablen und Funktionen desselben Namens Verweise auf dasselbe Objekt. Das bedeutet, dass sie "externe Bindung" besitzen. (Sie können das **static**-Schlüsselwort verwenden, um dies zu überschreiben. Weitere Informationen über **static** finden Sie weiter unten in diesem Abschnitt.)  

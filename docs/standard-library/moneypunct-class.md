@@ -57,11 +57,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2c475dc3a992ef31c90f3be184428d8c9aa79fe1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 569aa946ac324c833e651e6b9b74b8cc402a4d04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="moneypunct-class"></a>moneypunct-Klasse
 Die Vorlagenklasse beschreibt ein Objekt, das als Gebietsschemafacet dienen kann, um die Sequenzen vom Typ `CharType` zu beschreiben, die verwendet werden, um ein monetäres Eingabefeld oder ein monetäres Ausgabefeld darzustellen. Wenn der Vorlagenparameter `Intl` `true` ist, werden internationale Konventionen beachtet.  
@@ -91,7 +92,7 @@ class moneypunct;
 |-|-|  
 |[moneypunct](#moneypunct)|Konstruktor von Objekten des Typs `moneypunct`.|  
   
-### <a name="typedefs"></a>TypeDefs  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
@@ -134,7 +135,7 @@ typedef CharType char_type;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Typ ist ein Synonym für den Vorlagenparameter **CharType**.  
+ Der Typ stellt ein Synonym für den Vorlagenparameter **CharType** dar.  
   
 ##  <a name="curr_symbol"></a> moneypunct::curr_symbol  
  Gibt eine gebietsschemaspezifische Sequenz von Elementen zurück, die als Währungssymbol verwendet werden soll.  
@@ -498,7 +499,7 @@ explicit moneypunct(size_t _Refs = 0);
   
 -   \>1: Diese Werte sind nicht definiert.  
   
- Direkte Beispiele sind nicht möglich, da der Destruktor geschützt ist.  
+ Direkte Beispiele hierfür sind nicht möglich, da der Destruktor geschützt ist.  
   
  Der Konstruktor initialisiert sein Basisobjekt mit [locale::facet](../standard-library/locale-class.md#facet_class)(_ *Refs*).  
   
@@ -780,5 +781,5 @@ English_Canada.1252 domestic thousands separator: ,
   
 ## <a name="see-also"></a>Siehe auch  
  [\<locale>](../standard-library/locale.md)   
- [Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

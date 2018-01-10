@@ -1,36 +1,37 @@
 ---
-title: ".EXP-Dateien als Eingabe f&#252;r den Linker"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".exp-Dateien [C++]"
-  - "EXP-Dateien"
-  - "Exportieren von Daten, Exportdateien (.exp)"
-  - "Exportieren von Funktionen"
-  - "Exportieren von Funktionen, Informationen über exportierte Funktionen"
-  - "Funktionen [C++], Exportieren"
-  - "Importbibliotheken, Linkerdateien"
-  - "Verknüpfen [C++], Exporte"
+title: . EXP-Dateien als Linkereingabe | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- exporting functions
+- import libraries, linker files
+- linking [C++], exports
+- exporting functions, information about exported functions
+- exporting data, export (.exp) files
+- functions [C++], exporting
+- .exp files [C++]
+- EXP files
 ms.assetid: 399f5636-0a4d-462e-b500-5f5b9ae5ad22
-caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5cd6351623b230e3be1e432bd6ee0fb760da5abd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# .EXP-Dateien als Eingabe f&#252;r den Linker
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Exportdateien \(EXP\-Dateien\) enthalten Informationen über exportierte Funktionen und Datenelemente.  Beim Erstellen einer Importbibliothek erstellt **LIB** auch eine Exportdatei.  Sie verwenden diesen Dateityp, wenn Sie ein Programm verknüpfen, das in ein anderes Programm entweder direkt oder indirekt in ein anderes Programm exportiert sowie aus einem solchen importiert.  Wenn Sie mit einer EXP\-Datei verknüpfen, erstellt **LINK** keine Importbibliothek, da angenommen wird, dass **LIB** bereits eine erstellt hat.  Weitere Informationen über EXP\-Dateien und Importbibliotheken finden Sie unter [Arbeiten mit Importbibliotheken und Exportdateien](../../build/reference/working-with-import-libraries-and-export-files.md).  
+# <a name="exp-files-as-linker-input"></a>.EXP-Dateien als Eingabe für den Linker
+Exportdateien (.exp) enthalten Informationen über exportierte Funktionen und Daten enthaltenen Elemente. Beim Erstellen eine Importbibliothek LIB erstellt wird auch eine .exp-Datei erstellt. Wenn Sie ein Programm, die verknüpfen sowohl in exportiert und aus einem anderen Programm importiert wird, entweder direkt oder indirekt, verwenden Sie die Exportdatei an. Wenn Sie eine .exp-Datei verknüpfen, wird LINK keine Importbibliothek erzeugt, da davon ausgegangen wird, dass LIB noch nicht erstellt. Ausführliche Informationen zu .exp-Dateien und Importbibliotheken finden Sie unter [arbeiten mit Importbibliotheken und Exportdateien](../../build/reference/working-with-import-libraries-and-export-files.md).  
   
-## Siehe auch  
- [LINK\-Eingabedateien](../../build/reference/link-input-files.md)   
+## <a name="see-also"></a>Siehe auch  
+ [LINK-Eingabedateien](../../build/reference/link-input-files.md)   
  [Linkeroptionen](../../build/reference/linker-options.md)

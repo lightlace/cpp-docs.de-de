@@ -1,34 +1,36 @@
 ---
-title: "lock_when-Enumeration | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::lock_when"
-  - "msclr.lock_when"
-  - "lock_when"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lock_when-Enumeration"
+title: Lock_when-Enumeration | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::lock_when
+- msclr.lock_when
+- lock_when
+dev_langs: C++
+helpviewer_keywords: lock_when enum
 ms.assetid: 6b87bbe9-63cd-450d-a02e-bb91ffd0dcea
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: cf57b2ec972eee7ad207b72ba5851f575b8ef692
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# lock_when-Enumeration
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gibt verzögerte Sperre.  
+# <a name="lockwhen-enum"></a>lock_when-Enumeration
+Gibt die verzögerte sperren.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 enum lock_when {  
@@ -36,11 +38,11 @@ enum lock_when {
 };  
 ```  
   
-## Hinweise  
- Wenn zu [lock::lock](../dotnet/lock-lock.md) übergeben wird, gibt `lock_later` an, dass die Sperre jetzt nicht ausgeführt werden soll.  
+## <a name="remarks"></a>Hinweise  
+ Bei der Übergabe an [lock::lock](../dotnet/lock-lock.md), `lock_later` gibt an, dass die Sperre nicht jetzt ausgeführt werden.  
   
-## Beispiel  
- In diesem Beispiel wird eine einzelne Instanz einer Klasse über mehrere Threads.  Die Klasse verwendet eine Sperre auf sich, um sicherzustellen, dass auf auf die internen Daten für jeden Thread konsistent sind.  Der Hauptthread verwendet eine Sperre auf der gleichen Instanz der Klasse, die in regelmäßigen Abständen zu überprüfen, dass Arbeitsthreads ggf. anzuzeigen noch vorhanden, und wartet, bis alle Arbeitsthreads beendet haben ihre Aufgaben abgeschlossen.  
+## <a name="example"></a>Beispiel  
+ Dieses Beispiel verwendet eine einzelne Instanz einer Klasse über mehrere Threads hinweg.  Die Klasse verwendet eine Sperre auf sich selbst, um sicherzustellen, dass der Zugriff auf die internen Daten für jeden Thread konsistent sind.  Thread der hauptanwendung verwendet eine Sperre für dieselbe Instanz der Klasse in regelmäßigen Abständen überprüfen, um festzustellen, ob alle Arbeitsthreads noch vorhanden sind, und wartet, bis alle Arbeitsthreads aktiviert beenden ihre Aufgaben abgeschlossen haben.  
   
 ```  
 // msl_lock_lock_when.cpp  
@@ -114,21 +116,24 @@ int main() {
 }  
 ```  
   
-  **Im Thread 3, Zähler \= 0**  
-**Im Thread 3, Zähler \= 10**  
-**Im Thread 5, Zähler \= 0**  
-**Im Thread 5, Zähler \= 10**  
-**Im Thread 7, Zähler \= 0**  
-**Im Thread 7, Zähler \= 10**  
-**Im Thread 4, Zähler \= 0**  
-**Im Thread 4, Zähler \= 10**  
-**Im Thread 6, Zähler \= 0**  
-**Im Thread 6, Zähler \= 10**  
-**Alle Threads abgeschlossen.**   
-## Anforderungen  
- **Headerdatei** \<msclr\\lock.h\>  
+```Output  
+In thread 3, Counter = 0  
+In thread 3, Counter = 10  
+In thread 5, Counter = 0  
+In thread 5, Counter = 10  
+In thread 7, Counter = 0  
+In thread 7, Counter = 10  
+In thread 4, Counter = 0  
+In thread 4, Counter = 10  
+In thread 6, Counter = 0  
+In thread 6, Counter = 10  
+All threads completed.  
+```  
   
- **Namespace** msclr  
+## <a name="requirements"></a>Anforderungen  
+ **Headerdatei** \<msclr\lock.h >  
   
-## Siehe auch  
+ **Namespace** Msclr  
+  
+## <a name="see-also"></a>Siehe auch  
  [lock](../dotnet/lock.md)

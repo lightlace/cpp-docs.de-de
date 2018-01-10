@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- align_cpp
-dev_langs:
-- C++
+f1_keywords: align_cpp
+dev_langs: C++
 helpviewer_keywords:
 - align __declspec keyword
 - __declspec keyword [C++], align
 ms.assetid: 9cb63f58-658b-4425-ac47-af8eabfc5878
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: a805d53a043a4b502cae4490ae01e2ff47a7cdb1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3bc721131e5cb47bf17d7e683f3a6df249f4dd38
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="align-c"></a>align (C++)
 In Visual Studio 2015 und höher, verwenden Sie die C ++ 11-Standard `alignas` Bezeichner für die Ausrichtung des Steuerelements. Weitere Informationen finden Sie unter [Ausrichtung](../cpp/alignment-cpp-declarations.md).  
@@ -253,4 +250,3 @@ struct S {
  [__declspec](../cpp/declspec.md)   
  [Übersicht über die ARM-ABI-Konventionen](../build/overview-of-arm-abi-conventions.md)   
  [Übersicht über x64-Aufrufkonventionen](../build/overview-of-x64-calling-conventions.md)
-

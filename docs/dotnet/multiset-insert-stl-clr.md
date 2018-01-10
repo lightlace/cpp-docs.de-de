@@ -1,32 +1,33 @@
 ---
-title: "multiset::insert (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::insert"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "insert-Member [STL/CLR]"
+title: 'multiset:: Insert (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::insert
+dev_langs: C++
+helpviewer_keywords: insert member [STL/CLR]
 ms.assetid: 7a3b1cc8-ec60-4ed0-ace5-46cb5872e6e7
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6d66f1136a9e9939b0297f1b909c21981e4718d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# multiset::insert (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multisetinsert-stlclr"></a>multiset::insert (STL/CLR)
 Fügt Elemente hinzu.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 iterator insert(value_type val);  
@@ -36,36 +37,36 @@ template<typename InIter>
 void insert(System::Collections::Generic::IEnumerable<value_type>^ right);  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  first  
- Anfang Einfügen des Bereichs.  
+ Anfang des Bereichs, der eingefügt.  
   
  last  
- Ende Einfügen des Bereichs.  
+ Das Ende des Bereichs einfügen.  
   
- right  
- Einzufügen Enumeration.  
+ Rechts  
+ Die Enumeration eingefügt.  
   
- val  
- Einzufügen Schlüsselwert.  
+ Val  
+ Schlüssel-Wert einfügen.  
   
- deinen  
- Wo von im Container \(Mallory nur Hinweis\).  
+ wo  
+ Die Position, im Container (nur Hinweis) einfügen.  
   
-## Hinweise  
- Jede der Memberfunktionen fügen eine Sequenz ein, die für die übrigen Operanden angegeben wird.  
+## <a name="remarks"></a>Hinweise  
+ Jede der Memberfunktionen Fügt eine Sequenz, die von den verbleibenden Operanden angegeben.  
   
- Die erste Memberfunktion wird ein Element mit dem Wert `val` und gibt ein Iterator zurück, der das Element neu eingefügte festlegt.  Sie verwenden ihn, um ein einzelnes Element einzufügen.  
+ Die erste Memberfunktion Fügt ein Element mit dem Wert `val`, und gibt einen Iterator, der das neu eingefügte Element festlegt. Es können Sie verwenden, um ein einzelnes Element einzufügen.  
   
- Die zweite Memberfunktion wird ein Element mit dem Wert `val`, wobei `where` als Hinweis \(Leistung verbessern\) und gibt ein Iterator ein, der das Element neu eingefügte festlegt.  Sie verwenden sie, um ein einzelnes Element einzufügen, das möglicherweise neben einem Element könnte, das, Sie kennen.  
+ Die zweite Memberfunktion Fügt ein Element mit dem Wert `val`mit `where` als Hinweis (zur Verbesserung der Leistung), und gibt einen Iterator, der das neu eingefügte Element festlegt. Damit können sie ein einzelnes Element einfügen, das neben einem Element möglicherweise, die Sie kennen.  
   
- Die dritte Memberfunktion wird die Sequenz `[``first``,` `last``)`.  Sie verwenden sie, dass Nullen oder mehr Elemente einfügen kopiert aus einer anderen Sequenz.  
+ Die dritte Memberfunktion fügt die Sequenz [`first`, `last`). Sie verwenden ihn zum Einfügen von NULL oder mehr Elementen aus einer anderen Sequenz kopiert.  
   
- Die vierte Memberfunktion wird die Sequenz ein, die durch `right` festgelegt ist.  Sie verwenden sie, um eine Sequenz einzufügen, die Angriffen einen Enumerator beschrieben wird.  
+ Die vierte Memberfunktion fügt die Sequenz, die vom angegebenen der `right`. Sie verwenden es, fügen Sie eine Sequenz, die durch einen Enumerator beschrieben.  
   
- Jede Einfügen wird die Zeit, die z Logarithmus der Anzahl der Elemente in der Sequenz gesteuerten proportional ist.  Einfüge\- kann in der amortisierten konstanten Zeitpunkt auftreten einen Hinweis jedoch zugewiesen, der ein Element neben der Einfügemarke festlegt.  
+ Jede elementeinfügung dauert einige Zeit, die proportional zum Logarithmus der Anzahl der Elemente in der kontrollierten Sequenz. Kann in amortisierter konstanter Zeit, jedoch die Einfügung erhält einen Hinweis, der ein Element, das neben der Einfügemarke festlegt.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_multiset_insert.cpp   
@@ -123,18 +124,21 @@ int main()
   
 ```  
   
-  **ein b c**  
-**Einfüge\- \(L'x\) \= x**  
-**Einfüge\- \(L'b b\) \=**  
- **ein b b c x**  
-**insert\(begin\(\), L'y\) \= y**  
- **ein b b c x\-y**  
- **ein b b c x**  
- **ein b b c x\-y**   
-## Anforderungen  
- **Header:** \<cliext\/Satz\>  
+```Output  
+ a b c  
+insert(L'x') = x  
+insert(L'b') = b  
+ a b b c x  
+insert(begin(), L'y') = y  
+ a b b c x y  
+ a b b c x  
+ a b b c x y  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Set >  
   
-## Siehe auch  
- [multiset](../dotnet/multiset-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)

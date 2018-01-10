@@ -1,41 +1,44 @@
 ---
-title: "OLE&#160;DB-Ressourcenpooling und -Dienste | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB-Anbieter, Ressourcenpooling"
-  - "OLE DB-Dienste [OLE DB]"
-  - "OLE DB-Dienste [OLE DB], Anbieteranforderungen"
-  - "OLE DB, Ressourcenpooling"
-  - "Ressourcenpooling [OLE DB], Anbieteranforderungen"
-  - "Serviceanbieter [OLE DB]"
+title: OLE DB Ressourcenpooling und-Dienste | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- resource pooling [OLE DB], provider requirements
+- OLE DB, resource pooling
+- service providers [OLE DB]
+- OLE DB services [OLE DB], provider requirements
+- OLE DB services [OLE DB]
+- OLE DB providers, resource pooling
 ms.assetid: 360c36e2-25ae-4caf-8ee7-d4a6b6898f68
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5d3d9ddba2039c1b4445bdb8d4ee77e9a68d9796
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# OLE&#160;DB-Ressourcenpooling und -Dienste
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Damit der Anbieter einwandfrei mit OLE DB\-Pooling oder anderen OLE DB\-Diensten funktioniert, muss er das Aggregieren sämtlicher Objekte unterstützen.  Diese Anforderung gilt für OLE DB\-Anbieter, Version 1.5, oder höher.  Dieser Faktor ist für die optimale Nutzung der Dienste unerlässlich.  Anbieter, die keine Aggregierung unterstützen, können weder in einem Pool zusammengefasst werden noch zusätzliche Dienste nutzen.  
+# <a name="ole-db-resource-pooling-and-services"></a>OLE DB-Ressourcenpooling und -Dienste
+Um mit OLE DB-pooling oder anderen OLE DB-Diensten arbeiten, muss Ihr Anbieter Aggregation aller Objekte unterstützen. Dies ist eine Voraussetzung für alle OLE DB-1.5 oder höher Anbieter. Es ist wichtig für die Nutzung der Dienste. Anbieter, die Aggregation nicht unterstützen, können nicht in Pools zusammengefasst werden, und keine zusätzliche Dienste bereitgestellt werden.  
   
- Zum Pooling müssen Anbieter das Freethreadmodell unterstützen.  Das Threadmodell des Anbieters wird vom Ressourcenpool anhand der **DBPROP\_THREADMODEL**\-Eigenschaft ermittelt.  
+ Zum Pool hinzugefügt werden soll, müssen der Anbieter das freien Thread-Modell unterstützen. Ressourcenpool bestimmt der Anbieter Threadmodell gemäß der **DBPROP_THREADMODEL** Eigenschaft.  
   
- Wenn der Anbieter über einen globalen Verbindungszustand verfügt, der sich während des Initialisierungszustands der Datenquelle ändern kann, sollte er die neue **DBPROP\_RESETDATASOURCE**\-Eigenschaft unterstützen.  Diese Eigenschaft wird vor der Wiederverwendung einer Verbindung aufgerufen und bietet dem Anbieter die Möglichkeit, seinen Zustand vor der erneuten Verwendung zu bereinigen.  Falls ein verbindungsabhängiger Zustand vom Anbieter nicht bereinigt werden kann, kann **DBPROPSTATUS\_NOTSETTABLE** für die Eigenschaft zurückgegeben werden, sodass die Verbindung nicht erneut verwendet wird.  
+ Wenn der Anbieter einen globalen Verbindungszustand, die sich ändern kann verfügt, während sich die Datenquelle im initialisierten Zustand befindet, sollte die neue unterstützen **DBPROP_RESETDATASOURCE** Eigenschaft. Diese Eigenschaft wird aufgerufen, bevor eine Verbindung wird wiederverwendet, und dem Anbieter die Möglichkeit gibt, um den Zustand vor der nächsten Verwendung zu bereinigen. Wenn ein Zustand, der der Verbindung zugeordnete der Anbieter nicht bereinigt werden kann, kann er zurück **DBPROPSTATUS_NOTSETTABLE** für die Eigenschaft und die Verbindung nicht wiederverwendet werden.  
   
- Anbieter, die mit einer Remotedatenbank verbunden werden und wahlweise feststellen können, ob diese Verbindung unterbrochen wird oder nicht, sollten die **DBPROP\_CONNECTIONSTATUS**\-Eigenschaft unterstützen.  Diese Eigenschaft ermöglicht es den OLE DB\-Diensten, inaktive Leitungen zu ermitteln und sicherzustellen, dass sie nicht an den Pool zurückgegeben werden.  
+ Anbieter, die eine Verbindung mit einer Remotedatenbank herstellen und können erkennen, ob die Verbindung möglicherweise verlorengegangenen unterstützen sollte die **DBPROP_CONNECTIONSTATUS** Eigenschaft. Diese Eigenschaft bietet der OLE DB-Dienste die Möglichkeit, inaktive Verbindungen zu erkennen, und stellen Sie sicher, dass sie nicht an den Pool zurückgegeben werden.  
   
- Die automatische Eintragung von Transaktionen funktioniert letztendlich nur dann, wenn sie auf derselben Ebene wie das Pooling implementiert wird.  Anbieter, die selbst die automatische Eintragung von Transaktionen unterstützen, sollten die Deaktivierung dieser Eintragung ermöglichen, indem sie die **DBPROP\_INIT\_OLEDBSERVICES**\-Eigenschaft zur Verfügung stellen, und die Eintragung deaktivieren, wenn **DBPROPVAL\_OS\_TXNENLISTMENT** deaktiviert wird.  
+ Schließlich werden automatische Eintragung von Transaktionen ist grundsätzlich nicht möglich, es sei denn, es auf der gleichen Ebene implementiert wird, das pooling. Anbieter, die automatische Eintragung von Transaktionen selbst unterstützen sollte unterstützen deaktivieren diese Eintragung, verfügbar machen, die **DBPROP_INIT_OLEDBSERVICES** -Eigenschaft und die Eintragung deaktivieren, wenn die **DBPROPVAL_OS_ TXNENLISTMENT** ist standardmäßig deaktiviert.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Erweiterte Anbietertechniken](../../data/oledb/advanced-provider-techniques.md)

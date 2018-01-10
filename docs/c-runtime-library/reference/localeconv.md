@@ -31,11 +31,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: aa001a4c8dde1337eb576ae3a2c78108e4cb3199
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2cbd897b353f8a915fb4a29d61d0954b9b5a7f53
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="localeconv"></a>localeconv
 Ruft detaillierte Informationen über Gebietsschemaeinstellungen ab.  
@@ -150,7 +151,7 @@ Die Werte für `p_sign_posn` und `n_sign_posn` gemäß den folgenden Regeln inte
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`localeconv`|\<locale.h>|  
   
@@ -160,7 +161,7 @@ Die Werte für `p_sign_posn` und `n_sign_posn` gemäß den folgenden Regeln inte
  Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Locale](../../c-runtime-library/locale.md)   
+ [Gebietsschema](../../c-runtime-library/locale.md)   
  [setlocale](../../preprocessor/setlocale.md)   
  [strcoll-Funktionen](../../c-runtime-library/strcoll-functions.md)   
  [strftime, wcsftime, _strftime_l, _wcsftime_l](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)   

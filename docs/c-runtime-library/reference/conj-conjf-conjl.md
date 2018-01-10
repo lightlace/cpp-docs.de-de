@@ -1,57 +1,59 @@
 ---
-title: "Conj, Conjf, conjl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "conj"
-  - "conjf"
-  - "conjl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "conj"
-  - "conjf"
-  - "conjl"
-  - "complex/conj"
-  - "complex/conjf"
-  - "complex/conjl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "conj-Funktion"
-  - "Conjf-Funktion"
-  - "Conjl-Funktion"
+title: conj, conjf, conjl | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- conj
+- conjf
+- conjl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- conj
+- conjf
+- conjl
+- complex/conj
+- complex/conjf
+- complex/conjl
+dev_langs: C++
+helpviewer_keywords:
+- conj function
+- conjf function
+- conjl function
 ms.assetid: 792fccfa-19c6-4890-99f9-a3b89effccd6
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3ce33f536a97f5f78ae573a757402cc316e85f5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Conj, Conjf, conjl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ruft die komplexen konjugierte Zahl einer komplexen Zahl ab.  
+# <a name="conj-conjf-conjl"></a>conj, conjf, conjl
+Gibt die konjugiert komplexe Zahl einer komplexen Zahl zurück.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 _Dcomplex conj(   
@@ -71,29 +73,29 @@ _Lcomplex conjl(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `z`  
  Eine komplexe Zahl.  
   
-## Rückgabewert  
- Die konjugiert `z`.  Das Ergebnis hat den gleichen reellen und imaginären Teil als `z`, jedoch mit umgekehrtem Vorzeichen.  
+## <a name="return-value"></a>Rückgabewert  
+ Die konjugierte komplexe Zahl von `z`.  Das Ergebnis hat den gleichen Real- und Imaginärteil wie `z`, jedoch mit umgekehrtem Vorzeichen.  
   
-## Hinweise  
- Da C\+\+ das Überladen zulässt, können Sie Überladungen von `conj` aufrufen, die `_Fcomplex`\- und `_Lcomplex`\-Werte verwenden und zurückgeben. In einem C\-Programm `conj` immer Double und gibt ein `_Dcomplex` Wert.  
+## <a name="remarks"></a>Hinweise  
+ Da C++ das Überladen zulässt, können Sie Überladungen von `conj` aufrufen, die `_Fcomplex`- und `_Lcomplex`-Werte verwenden und zurückgeben. In einem C-Programm nimmt `conj` immer einen `_Dcomplex` -Wert an, und gibt auch einen solchen zurück.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Routine|C\-Header|C\+\+\-Header|  
-|-------------|---------------|-------------------|  
-|`conj`, `conjf`, `conjl`|\<complex.h\>|\< Ccomplex \>|  
+|-Routine zurückgegebener Wert|C-Header|C++-Header|  
+|-------------|--------------|------------------|  
+|`conj`,               `conjf`, `conjl`|\<complex.h>|\<ccomplex>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Siehe auch  
- [Alphabetische Funktionsreferenz](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [Norm, Normf, norml](../../c-runtime-library/reference/norm-normf-norml1.md)   
- [Creal, Crealf, creall](../../c-runtime-library/reference/creal-crealf-creall.md)   
- [Cproj, Cprojf, cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)   
- [Cimag, Cimagf, cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)   
- [Carg, Cargf, cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)   
- [CAB\-Dateien, Cabsf, cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)
+## <a name="see-also"></a>Siehe auch  
+ [Alphabetical Function Reference (Alphabetische Funktionsreferenz)](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [norm, normf, norml](../../c-runtime-library/reference/norm-normf-norml1.md)   
+ [creal, crealf, creall](../../c-runtime-library/reference/creal-crealf-creall.md)   
+ [cproj, cprojf, cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)   
+ [cimag, cimagf, cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)   
+ [carg, cargf, cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)   
+ [cabs, cabsf, cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)

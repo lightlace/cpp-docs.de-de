@@ -35,11 +35,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 834cd18283874bc975d896f319bb6f8ebf962792
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8194acf1a8a0708d2584745a7a49449ca7f554c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memmoves-wmemmoves"></a>memmove_s, wmemmove_s
 Verschiebt einen Puffer in einen anderen. Dabei handelt es sich um Versionen von [memmove, wmemmove](../../c-runtime-library/reference/memmove-wmemmove.md) mit den unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschriebenen Erweiterungen.  
@@ -82,9 +83,9 @@ errno_t wmemmove_s(
   
 |`dest`|`numberOfElements`|`src`|Rückgabewert|Inhalt von `dest`|  
 |------------|------------------------|-----------|------------------|------------------------|  
-|`NULL`|any|alle|`EINVAL`|nicht geändert|  
-|any|alle|`NULL`|`EINVAL`|nicht geändert|  
-|any|< `count`|alle|`ERANGE`|nicht geändert|  
+|`NULL`|any|any|`EINVAL`|nicht geändert|  
+|any|any|`NULL`|`EINVAL`|nicht geändert|  
+|any|< `count`|any|`ERANGE`|nicht geändert|  
   
 ## <a name="remarks"></a>Hinweise  
  Kopien `count` Bytes von Zeichen aus `src` auf `dest`. Wenn einige Bereiche des Quell- und des Zielbereichs überlappen, stellt `memmove_s` sicher, dass die ursprünglichen Quellbytes im überlappenden Bereich kopiert werden, bevor es sie überschreibt.  
@@ -93,7 +94,7 @@ errno_t wmemmove_s(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`memmove_s`|\<string.h>|  
 |`wmemmove_s`|\<wchar.h>|  

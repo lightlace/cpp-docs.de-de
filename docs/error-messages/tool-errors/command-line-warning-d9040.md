@@ -1,33 +1,32 @@
 ---
-title: "Befehlszeilenwarnung D9040 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "D9040"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "D9040"
+title: Befehlszeilenwarnung D9040 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: D9040
+dev_langs: C++
+helpviewer_keywords: D9040
 ms.assetid: 415e7f04-c1bd-4ac1-924a-03efa4645140
-caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e32f4cc17bfd091b4475d3dbdde280d5c410f5d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Befehlszeilenwarnung D9040
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-\/analyze\-Option wird ignoriert; Codeanalysewarnungen sind in dieser Version des Compilers nicht verfügbar.  
+# <a name="command-line-warning-d9040"></a>Befehlszeilenwarnung D9040
+/analyze-Option wird ignoriert; Codeanalysewarnungen sind in dieser Version des Compilers nicht verfügbar.  
   
- Die **\/analyze** Befehlszeilenoption ist nicht in allen Editionen von Visual Studio verfügbar.  Um diese Warnung zu vermeiden, müssen Sie entweder eine unterstützte Version von Visual Studio verwenden oder die Befehlszeilenoption entfernen.  
+ Die **/ analyze** Befehlszeilenoption ist nicht verfügbar in allen Editionen von Visual Studio. Um diese Warnung zu vermeiden, müssen Sie entweder eine unterstützte Version von Visual Studio verwenden oder die Befehlszeilenoption entfernen.  
   
-## Siehe auch  
- [Befehlszeilenfehler D8000 bis D9000](../../error-messages/tool-errors/command-line-errors-d8000-through-d9999.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Befehlszeilenfehler D8000 bis D9999](../../error-messages/tool-errors/command-line-errors-d8000-through-d9999.md)   
  [Compileroptionen](../../build/reference/compiler-options.md)

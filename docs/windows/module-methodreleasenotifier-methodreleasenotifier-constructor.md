@@ -1,32 +1,33 @@
 ---
-title: "Module::MethodReleaseNotifier::MethodReleaseNotifier-Konstruktor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::MethodReleaseNotifier::MethodReleaseNotifier"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MethodReleaseNotifier, Konstruktor"
+title: Module::MethodReleaseNotifier::MethodReleaseNotifier Konstruktor | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::MethodReleaseNotifier::MethodReleaseNotifier
+dev_langs: C++
+helpviewer_keywords: MethodReleaseNotifier, constructor
 ms.assetid: 762e2ca4-0a92-49de-9ff5-d3efa0f067c0
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 045dd8dd0dbee58c0feea33bc7ce4f6cea30e591
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Module::MethodReleaseNotifier::MethodReleaseNotifier-Konstruktor
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Initialisiert eine neue Instanz der Module::MethodReleaseNotifier\-Klasse.  
+# <a name="modulemethodreleasenotifiermethodreleasenotifier-constructor"></a>Module::MethodReleaseNotifier::MethodReleaseNotifier-Konstruktor
+Initialisiert eine neue Instanz der methodreleasenotifier-Klasse.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -38,20 +39,20 @@ MethodReleaseNotifier(
             method_(method);  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `object`  
  Ein Objekt, dessen Memberfunktion ein Ereignishandler ist.  
   
  `method`  
- Die Memberfunktion des `object`\-Parameters, der der Ereignishandler ist.  
+ Die Memberfunktion des Parameters `object` also den Ereignishandler.  
   
  `release`  
- Geben Sie `true` an, um die zugrunde liegenden [Module::ReleaseNotifier::Release\(\)](../windows/module-releasenotifier-release.md)\-Methode zu aktivieren; andernfalls geben Sie `false` an.  
+ Geben Sie `true` So aktivieren Sie das zugrunde liegende Aufrufen [Modul:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) Methode; andernfalls geben `false`.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** module.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [Module::MethodReleaseNotifier\-Klasse](../windows/module-methodreleasenotifier-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [Module::MethodReleaseNotifier-Klasse](../windows/module-methodreleasenotifier-class.md)

@@ -1,49 +1,49 @@
 ---
-title: "fegetenv1 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fetegenv"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fegetenv"
-  - "fenv/fegetenv"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Fetegenv-Funktion"
+title: fegetenv1 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname: fetegenv
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fegetenv
+- fenv/fegetenv
+dev_langs: C++
+helpviewer_keywords: fetegenv function
 ms.assetid: 68962421-6978-4b27-8e4c-ad1577830cf6
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3da1a5837a2c2e3a2cd1c7987363b251bc67b567
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# fegetenv
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Speichert die aktuelle Gleitkomma\-Umgebung in das angegebene Objekt.  
+# <a name="fegetenv"></a>fegetenv
+Speichert die aktuelle Gleitkommaumgebung in das angegebene Objekt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 int fegetenv(  
@@ -52,26 +52,26 @@ int fegetenv(
   
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `penv`  
- Zeiger auf ein `fenv_t` Objekt, das die aktuellen Umgebungswerte der Gleitkomma\-enthalten.  
+ Zeiger auf ein `fenv_t`-Objekt, das die Werte der aktuellen Gleitkommaumgebung enthalten soll.  
   
-## Rückgabewert  
- Gibt 0, wenn die Gleitkomma\-Umgebung erfolgreich gespeichert wurde `penv`. Andernfalls wird einen Wert ungleich NULL zurückgegeben.  
+## <a name="return-value"></a>Rückgabewert  
+ Gibt 0 zurück, wenn die Gleitkommaumgebung erfolgreich in `penv` gespeichert wurde. Andernfalls wird ein Wert ungleich null zurückgegeben.  
   
-## Hinweise  
- Die `fegetenv` Funktion speichert die aktuelle Gleitkomma\-Umgebung in das Objekt, das auf `penv`. Die floating Point\-Umgebung ist ein Satz von Status\-Flags und Steuerelement\-Modi, die gleitkommaberechnungen beeinflussen. Dies schließt das Rundungsverhalten Richtung und den Status\-Flags für Gleitkommaausnahmen. Wenn `penv` verweist nicht auf eine gültige `fenv_t` \-Objekt nachfolgendes Verhalten ist nicht definiert.  
+## <a name="remarks"></a>Hinweise  
+ Die Funktion `fegetenv` speichert die aktuelle Gleitkommaumgebung im Objekt, auf das `penv` verweist. Die Gleitkommaumgebung ist ein Satz von Statusflags und Steuermodi, die Gleitkommaberechnungen beeinflussen. Darunter fallen auch das Rundungsverhalten und die Statusflags für Gleitkommaausnahmen.  Wenn `penv` nicht auf ein gültiges `fenv_t`-Objekt verweist, ist das daraus resultierende Verhalten nicht definiert.  
   
- Um diese Funktion verwenden zu können, müssen Sie wieder deaktivieren Gleitkomma Optimierungen, die Zugriff mithilfe von verhindern könnten die `#pragma fenv_access(on)` Richtlinie vor dem Aufruf. Weitere Informationen finden Sie unter [fenv\_access](../../preprocessor/fenv-access.md).  
+ Um diese Funktion zu verwenden, müssen Sie vor dem Aufruf Gleitkommaoptimierungen deaktivieren, die den Zugriff mithilfe der `#pragma fenv_access(on)`-Direktive verhindern könnten. Weitere Informationen finden Sie unter [fenv_access](../../preprocessor/fenv-access.md).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Funktion|C\-Header|C\+\+\-Header|  
-|--------------|---------------|-------------------|  
-|`fegetenv`|\<fenv.h\>|\<cfenv\>|  
+|Funktion|C-Header|C++-Header|  
+|--------------|--------------|------------------|  
+|`fegetenv`|\<fenv.h>|\<cfenv>|  
   
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
+ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Siehe auch  
- [Alphabetische Funktionsreferenz](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Alphabetical Function Reference (Alphabetische Funktionsreferenz)](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [fesetenv](../../c-runtime-library/reference/fesetenv1.md)

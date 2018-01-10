@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d238acf9bfe55052a1d6dc316f5425774737f9f2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4c43761189d9241e77faa67ad106f346fb8f92ae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="character-classification"></a>Zeichenklassifizierung
 Jede dieser Routinen testet zum Erfüllen einer Bedingung ein angegebenes Einzelbytezeichen, ein Breitzeichen oder ein Multibytezeichen. (Der ASCII-Zeichensatz zwischen 0 und 127 ist definitionsgemäß eine Teilmenge jedes Multibyte-Zeichensatzes.) Beispielsweise enthält die japanische Katakana sowohl ASCII-als auch Nicht-ASCII-Zeichen.)  
@@ -37,7 +38,7 @@ if ((c >= 'A') && (c <= 'Z')) || ((c >= 'a') && (c <= 'z'))
   
 ### <a name="character-classification-routines"></a>Routinen der Zeichenklassifizierung  
   
-|Routine|Zeichentestbedingung|  
+|-Routine zurückgegebener Wert|Zeichentestbedingung|  
 |-------------|------------------------------|  
 |[isalnum, iswalnum, _isalnum_l, _iswalnum_l](../c-runtime-library/reference/isalnum-iswalnum-isalnum-l-iswalnum-l.md), [_ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l](../c-runtime-library/reference/ismbcalnum-functions.md)|Alphanumerisches Zeichen|  
 |[_ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l](../c-runtime-library/reference/ismbcalnum-functions.md)|Alphanumerisches Zeichen|  

@@ -22,11 +22,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 97c54a8a07614440e343979f5c2529a3df1b7164
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 17fae0cbb16208d5c7e7346f354f3501e4803d96
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ieee-floating-point-representation"></a>IEEE-Gleitkommadarstellung
 Microsoft Visual C++ ist konsistent mit den numerischen IEEE-Standards. Es gibt drei interne Varianten von reelle Zahlen ein. Echte\*4 und real\*8 in Visual C++ verwendet werden. Echte\*4 wird mit dem Wort deklariert **"float"**. Echte\*8 wird mit dem Wort deklariert **doppelte**. In der Windows-32-Bit-Programmierung die `long double` Datentyp zugeordnet **doppelte**. Es gibt allerdings Assemblysprache-Unterstützung für Berechnungen mit echten * 10-Datentyp.  

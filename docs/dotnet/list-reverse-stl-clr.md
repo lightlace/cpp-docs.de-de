@@ -1,41 +1,42 @@
 ---
-title: "list::reverse (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::reverse"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reverse-Member [STL/CLR]"
+title: 'List:: Reverse (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::reverse
+dev_langs: C++
+helpviewer_keywords: reverse member [STL/CLR]
 ms.assetid: de3bce1e-01fe-461d-a785-5cf4fcea988f
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: aedc8861815d7a6fbd91af984656940a928b3a84
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# list::reverse (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Kehrt die gesteuerte Sequenz um.  
+# <a name="listreverse-stlclr"></a>list::reverse (STL/CLR)
+Kehrt die gesteuerte Sequenz.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void reverse();  
 ```  
   
-## Hinweise  
- Die Memberfunktion wird die Reihenfolge der Elemente in der Sequenz gesteuerten um.  Sie verwenden sie, um eine Liste von Elementen an.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion kehrt die Reihenfolge aller Elemente in der kontrollierten Sequenz. Damit können sie eine Liste mit Elementen entsprechen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_list_reverse.cpp   
@@ -64,13 +65,16 @@ int main()
   
 ```  
   
-  **ein b c**  
- **c a b**   
-## Anforderungen  
- **Header:** \<cliext\/Liste\>  
+```Output  
+a b c  
+c b a  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/List >  
   
-## Siehe auch  
- [list](../dotnet/list-stl-clr.md)   
- [list::sort](../dotnet/list-sort-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Liste (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list::sort (STL/CLR)](../dotnet/list-sort-stl-clr.md)

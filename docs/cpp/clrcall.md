@@ -15,16 +15,17 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d216e196f4b23deb7916bd4d9255c32d782ababb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d11211e90f0517c11213d7bdd2815c2f937fc79a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clrcall"></a>__clrcall
 **Microsoft-spezifisch**  
   
- Gibt an, dass eine Funktion nur aus verwaltetem Code aufgerufen werden kann.  Verwenden Sie `__clrcall` für alle virtuellen Funktionen, die nur aus verwaltetem Code aufgerufen werden. Allerdings kann diese Aufrufkonvention nicht für Funktionen verwendet werden, die vom systemeigenen Code aufgerufen werden.  
+ Gibt an, dass eine Funktion nur aus verwaltetem Code aufgerufen werden kann.  Verwenden Sie `__clrcall` für alle virtuellen Funktionen, die nur aus verwaltetem Code aufgerufen werden. Allerdings kann diese Aufrufkonvention nicht für Funktionen verwendet werden, die vom nativem Code aufgerufen werden.  
   
  Verwenden Sie `__clrcall`, um die Leistung zu verbessern, wenn aus einer verwalteten Funktion eine virtuelle verwaltete Funktion oder aber aus einer verwalteten Funktion ein verwalteter Funktionszeiger aufgerufen wird.  
   

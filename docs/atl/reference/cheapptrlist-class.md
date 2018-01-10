@@ -1,52 +1,35 @@
 ---
-title: Klasse CHeapPtrList | Microsoft-Dokumentation
+title: CHeapPtrList Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CHeapPtrList
 - ATLCOLL/ATL::CHeapPtrList
 - ATLCOLL/ATL::CHeapPtrList::CHeapPtrList
-dev_langs:
-- C++
-helpviewer_keywords:
-- CHeapPtrList class
+dev_langs: C++
+helpviewer_keywords: CHeapPtrList class
 ms.assetid: cc70e585-362a-4007-81db-c705eb181226
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 9acf18d0e0a72f27a335cefca81341c95d530ae5
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: bda8c44142425e93792648cbbf07f5dd5e0bdb47
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cheapptrlist-class"></a>CHeapPtrList-Klasse
-Diese Klasse enthält Methoden, die hilfreich beim Erstellen einer Liste von.  
+Diese Klasse bietet Methoden, die hilfreich beim Erstellen einer Liste von Zeigern Heap.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member werden nicht in Anwendungen verwendet, die in der Windows-Runtime ausgeführt.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -59,12 +42,12 @@ class CHeapPtrList
   
 #### <a name="parameters"></a>Parameter  
  `E`  
- Der Objekttyp in der Auflistungsklasse gespeichert werden.  
+ Der Objekttyp in die Auflistungsklasse gespeichert werden.  
   
  `Allocator`  
- Die Speicher-Allocation-Klasse verwenden. Der Standardwert ist [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).  
+ Die Arbeitsspeicher-Allocation-Klasse, verwendet. Die Standardeinstellung ist [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -73,7 +56,7 @@ class CHeapPtrList
 |[CHeapPtrList::CHeapPtrList](#cheapptrlist)|Der Konstruktor.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Klasse stellt einen Konstruktor bereit und leitet Sie Methoden von [CAtlList](../../atl/reference/catllist-class.md) und [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md) zur Unterstützung der Erstellung eines Klassenobjekts Auflistung Heap Zeiger gespeichert.  
+ Diese Klasse stellt einen Konstruktor bereit, und leitet Sie Methoden aus [CAtlList](../../atl/reference/catllist-class.md) und [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md) für die Erstellung eines Klassenobjekts Collection Heap Zeiger Speichern verwendet.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CAtlList](../../atl/reference/catllist-class.md)  
@@ -95,11 +78,10 @@ CHeapPtrList(UINT nBlockSize = 10) throw();
  Die Blockgröße.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Blockgröße ist ein Maß für die Menge des Arbeitsspeichers, wenn ein neues Element erforderlich ist. Größere Blöcke reduziert Aufrufe an Arbeitsspeicher, aber mehr Ressourcen verwenden.  
+ Die Blockgröße ist ein Maß für die Speichermenge belegt werden, wenn ein neues Element erforderlich ist. Größere Blöcke reduzieren Sie Aufrufe von Reservierungsroutinen Arbeitsspeicher jedoch mehr Ressourcen verwenden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CAtlList-Klasse](../../atl/reference/catllist-class.md)   
  [CHeapPtr-Klasse](../../atl/reference/cheapptr-class.md)   
  [CHeapPtrElementTraits-Klasse](../../atl/reference/cheapptrelementtraits-class.md)   
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)
-
+ [Klassenübersicht](../../atl/atl-class-overview.md)

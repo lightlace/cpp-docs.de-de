@@ -24,11 +24,12 @@ caps.latest.revision: "72"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d6c6882732064b002f0c2d4eef03a0fee2f62287
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6a867203585a66bd07eb9f95e289557e82e0553a
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Common Language Runtime-Kompilierung)
 Ermöglicht Anwendungen und Komponenten, Funktionen aus der Common Language Runtime (CLR) zu verwenden.  
@@ -75,7 +76,7 @@ Ermöglicht Anwendungen und Komponenten, Funktionen aus der Common Language Runt
  Vor Visual C++ 2005 war bei Verwendung von **/clr:noAssembly** die Angabe von **/LD**erforderlich. **/LD** ist jetzt bei der Angabe von **/clr:noAssembly**impliziert.  
   
  **/clr:initialAppDomain**  
- Ermöglicht, dass eine [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] -Anwendung mit Version 1 von CLR ausgeführt wird. Bei Verwendung von **initialAppDomain**treten möglicherweise einige Probleme auf, die unter [Fehler: AppDomainUnloaded-Ausnahme bei Verwendung verwalteter Erweiterungen für Visual C++-Komponenten](http://go.microsoft.com/fwlink/?LinkID=169465) auf der Microsoft Support-Website beschrieben werden.  
+ Ermöglicht, dass eine [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] -Anwendung mit Version 1 von CLR ausgeführt wird. Bei Verwendung von **InitialAppDomain**, und klicken Sie dann einige Probleme auftreten, die in beschriebenen [Fehler: AppDomainUnloaded-Ausnahme bei Verwendung verwalteter Erweiterungen für Visual C++-Komponenten](http://go.microsoft.com/fwlink/p/?linkid=169465) auf Microsoft Support-Website.  
   
  Eine Anwendung, die mit **initialAppDomain** kompiliert wurde, sollte nicht mit einer Anwendung verwendet werden, die ASP.NET verwendet, da Version 1 von CLR die Unterstützung hierfür fehlt.  
   

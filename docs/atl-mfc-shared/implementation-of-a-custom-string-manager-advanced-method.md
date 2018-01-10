@@ -1,42 +1,43 @@
 ---
-title: "Implementation of a Custom String Manager (Advanced Method) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IAtlStringMgr class, Verwenden"
+title: Implementierung eines benutzerdefinierten Zeichenfolge-Managers (Methode erweitert) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: IAtlStringMgr class, using
 ms.assetid: 64ab7da9-47c1-4c4a-9cd7-4cc37e7f3f57
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7e76edc65e5f30fee90f346d5434ecbee320a37a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Implementation of a Custom String Manager (Advanced Method)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="implementation-of-a-custom-string-manager-advanced-method"></a>Implementierung eines benutzerdefinierten Zeichenfolge-Managers (Erweiterte Methode)
+In speziellen Fällen empfiehlt es sich möglicherweise so implementieren Sie einen benutzerdefinierte Zeichenfolge-Manager, der mehr als nur ändert die Heaps belegen von Speicher verwendet wird. In diesem Fall müssen Sie manuell implementieren die [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) Schnittstelle als benutzerdefinierte Zeichenfolge-Manager.  
+  
+ Zu diesem Zweck, es ist wichtig, zunächst verstehen, wie [CStringT](../atl-mfc-shared/reference/cstringt-class.md) verwendet diese Schnittstelle zum Verwalten von Zeichenfolgendaten. Jede Instanz des `CStringT` verfügt über einen Zeiger auf eine [CStringData](../atl-mfc-shared/reference/cstringdata-class.md) Struktur. Diese Struktur variabler Länge enthält wichtige Informationen über die Zeichenfolge (z. B. Länge), sowie die tatsächliche Zeichendaten für die Zeichenfolge an. Jede benutzerdefinierte Zeichenfolge ist verantwortlich für das zuordnen und Freigeben von diesen Strukturen auf Anforderung des `CStringT`.  
+  
+ Die `CStringData` Struktur umfasst vier Felder:  
+  
+-   [pStringMgr](../atl-mfc-shared/reference/cstringdata-class.md#pstringmgr) dieses Feld zeigt die `IAtlStringMgr` Schnittstelle zum Verwalten von Zeichenfolgendaten verwendet. Wenn `CStringT` muss zuordnen oder Freigeben des Zeichenfolgenpuffers aufgerufen wird, werden die neu zuordnen oder freien Methoden dieser Schnittstelle, übergeben die `CStringData` Struktur als Parameter. Beim Zuordnen einer `CStringData` Struktur in der Zeichenfolge-Managers müssen Sie dieses Feld, zeigen Sie auf Ihre benutzerdefinierte Zeichenfolge-Manager festlegen.  
+  
+-   [nDataLength](../atl-mfc-shared/reference/cstringdata-class.md#ndatalength) dieses Feld enthält die aktuelle logische Länge der Zeichenfolge im Puffer, ohne das abschließende Nullzeichen gespeichert. `CStringT`Dieses Feld wird aktualisiert, wenn die Länge der Zeichenfolge geändert wird. Beim Zuordnen einer `CStringData` -Struktur, die Zeichenfolgen-Manager muss dieses Feld auf 0 festgelegt. Bei der neuzuweisung eine `CStringData` -Struktur, Ihr benutzerdefinierter Zeichenfolgen-Manager muss lassen Sie dieses Feld nicht geändert.  
+  
+-   [nAllocLength](../atl-mfc-shared/reference/cstringdata-class.md#nalloclength) dieses Feld enthält die maximale Anzahl von Zeichen enthalten (ohne das abschließende Null-Zeichen), die in diesem Zeichenfolgenpuffer gespeichert werden können, ohne. Wenn `CStringT` erhöhen Sie die logische Länge der Zeichenfolge ist, muss dieses Feld, um sicherzustellen, dass genügend Speicherplatz vorhanden ist, im Puffer prüft zunächst. Wenn die Überprüfung fehlschlägt, `CStringT` Aufrufe in Ihrem benutzerdefinierten Zeichenfolgen-Manager weisen den Puffer. Beim Zuordnen von oder erneut zugewiesen werden, eine `CStringData` -Struktur, Sie müssen festlegen, Feld um mindestens die Anzahl der Zeichen, die im angeforderten der **nChars** Parameter [IAtlStringMgr::Allocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#allocate) oder [IAtlStringMgr::Reallocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#reallocate). Wenn Sie mehr Platz im Puffer als angeforderten vorhanden ist, können Sie diesen Wert entsprechend der tatsächlichen Menge des verfügbaren Speicherplatzes festlegen. Dadurch können `CStringT` vergrößert die Zeichenfolge, die gesamte zugewiesener Speicherplatz, bevor er wieder in der Zeichenfolge-Manager weisen den Puffer aufgerufen hat.  
+  
+-   [nRefs](../atl-mfc-shared/reference/cstringdata-class.md#nrefs) dieses Feld enthält die aktuelle Verweisanzahl des Zeichenfolgenpuffers. Wenn der Wert eine, und klicken Sie dann eine einzelne Instanz `CStringT` wird mithilfe des Puffers. Darüber hinaus kann die Instanz zu lesen und ändern Sie den Inhalt des Puffers. Wenn der Wert größer als 1 ist mehrere Instanzen von `CStringT` Puffer verwenden können. Da der Zeichenpuffer freigegeben werden, `CStringT` Instanzen können nur den Inhalt des Puffers lesen. Zum Ändern des Inhalts `CStringT` erstellt zunächst eine Kopie des Puffers. Wenn der Wert negativ ist, wird nur eine Instanz des `CStringT` wird mithilfe des Puffers. In diesem Fall gilt der Puffer gesperrt. Wenn eine `CStringT` Instanz wird unter Verwendung eines gesperrten Puffers keine weiteren Instanzen `CStringT` Puffer freigeben kann. Diese Instanzen erstellen Sie eine Kopie des Puffers stattdessen vor Manipulation der Inhalte. Darüber hinaus die `CStringT` -Instanz unter Verwendung des gesperrten Puffers versucht nicht, den Puffer eines anderen freigeben `CStringT` Instanz zugewiesen. In diesem Fall die `CStringT` Instanz kopiert die andere Zeichenfolge in den Puffer gesperrt.  
+  
+     Beim Zuordnen einer `CStringData` Struktur, müssen Sie dieses Feld, um den Typ der Freigabe widerspiegelt, die für den Puffer darf festlegen. Legen Sie für die meisten Implementierungen dieser Wert auf eine. Dadurch wird das übliche Freigabe Kopie-bei-Schreibvorgang-Verhalten. Wenn der Zeichenfolgen-Manager die gemeinsame Nutzung des Zeichenfolgenpuffers unterstützt, legen Sie dieses Feld, in einem gesperrten Zustand. Dies zwingt `CStringT` auf die Verwendung dieses Puffers für die Instanz von `CStringT` , die zugeordnet.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Speicherverwaltung mit CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
 
-In besonderen Fällen sollten Sie einen benutzerdefinierten Zeichenfolgenmanager implementieren, der mehr als nur Änderung bewirkt, die Heap verwendet wird, um Speicher reserviert.  In diesem Fall müssen Sie die [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md)\-Schnittstelle als der benutzerdefinierte Zeichenfolgenmanager manuell implementieren.  
-  
- Um dies zu erreichen, ist es wichtig zu zuerst versteht wie [CStringT](../atl-mfc-shared/reference/cstringt-class.md) verwendet die herstellen um die Zeichenfolgendaten zu verwalten.  Jede Instanz von `CStringT` verfügt über einen Zeiger auf eine Struktur [CStringData](../atl-mfc-shared/reference/cstringdata-class.md).  Diese Struktur mit variabler Länge enthält wichtige Informationen über die Zeichenfolge \(wie Länge\) sowie die tatsächlichen Textdaten für die Zeichenfolge.  Jeder benutzerdefinierte Zeichenfolgenmanager ist zum Belegen und Freigeben dieser Strukturen auf Anforderung von `CStringT` zuständig.  
-  
- Die `CStringData`\-Struktur enthält vier Felder:  
-  
--   [pStringMgr](../Topic/CStringData::pStringMgr.md) dieses Feld zeigt auf die `IAtlStringMgr`\-Schnittstelle, die verwendet wird, um die Zeichenfolgendaten zu verwalten.  Wenn `CStringT` Anforderungen, den Zeichenfolgenpuffer neu belegen oder freizugeben es die Neuzuteilung aufruft oder die Methoden dieser Schnittstelle freigibt und übergibt die `CStringData`\-Struktur als Parameter.  Wenn Sie eine `CStringData`\-Struktur im Zeichenfolgenmanager zuordnen, muss dieses Feld festlegen, damit sie auf dem benutzerdefinierten Zeichenfolgenmanager zeigen.  
-  
--   [nDataLength](../Topic/CStringData::nDataLength.md) dieses Feld enthält die aktuelle logische Länge der Zeichenfolge, die im Puffer ausschließlich des abschließenden NULL\-Zeichens gespeichert wird.  `CStringT` aktualisiert dieses Feld, wenn die Länge der Zeichenfolge geändert.  Wenn eine `CStringData`\-Struktur zugeordnet ist, muss das Zeichenfolgenmanager dieses Feld auf Null.  Wenn eine `CStringData`\-Struktur zuordnet, muss der benutzerdefinierte Zeichenfolgenmanager dieses Feld unverändert beibehalten.  
-  
--   [nAllocLength](../Topic/CStringData::nAllocLength.md) dieses Feld enthält die maximale Anzahl von Zeichen \(ohne des abschließenden NULL\-Zeichens\) die in diesem Zeichenfolgenpuffer gespeichert werden können, ohne sie neu belegen.  Sobald `CStringT` Anforderungen, die logische Länge der Zeichenfolge zu erhöhen, es zuerst dieses Feld überprüft, um sicherzustellen, dass genügend Speicherplatz im Puffer.  Wenn die Überprüfung fehlschlägt, `CStringT` Aufrufe in den benutzerdefinierten Zeichenfolgenmanager, um des Puffers neu belegen.  Wenn das Zuordnen oder die Neuzuteilung einer `CStringData`\-Struktur, Sie dieses Feld die Anzahl von Zeichen mindestens festlegen müssen, die im **nChars**\-Parameter zu [IAtlStringMgr::Allocate](../Topic/IAtlStringMgr::Allocate.md) oder zu [IAtlStringMgr::Reallocate](../Topic/IAtlStringMgr::Reallocate.md) angefordert werden.  Wenn es mehr Platz im Puffer als angefordert wird, können Sie diesen Wert festlegen, um den tatsächlichen verfügbaren Platz zu entsprechen.  Dadurch können `CStringT`, um die Zeichenfolge zu erweitern, um den gesamten zugeordneten Platz auszufüllen, bevor sie zurück in den Zeichenfolgenmanager aufrufen muss, um den Puffer neu belegen.  
-  
--   [nRefs](../Topic/CStringData::nRefs.md) dieses Feld enthält den Verweiszähler des aktuellen Zeichenfolgenpuffers.  Ist der Wert von ist, dann verwendet eine einzelne Instanz von `CStringT` den Puffer.  Außerdem wird die Instanz zu gelesen zulässt und den Inhalt des Puffers ändert.  Wenn der Wert größer als einer ist, können mehrere Instanzen von `CStringT` den Puffer verwenden.  Da der Zeichenpuffer freigegeben wird, können `CStringT`\-Instanzen den Inhalt des Puffers nur lesen.  Um den Inhalt zu ändern, erstellt `CStringT` zuerst eine Kopie aus dem Puffer.  Wenn der Wert negativ ist, nur eine Instanz von `CStringT` den Puffer verwendet.  In diesem Fall gilt der Puffer als gesperrt.  Wenn eine `CStringT`\-Instanz einen gesperrten keinen Puffer verwendet, können andere Instanzen von `CStringT` den Puffer frei.  Stattdessen erstellen diese Instanzen eine Kopie des Puffers, bevor sie den Inhalt bearbeiten.  Außerdem versucht die `CStringT`\-Instanz mithilfe des gesperrten Puffers nicht, den Puffer einer anderen Instanz `CStringT` freizugeben, die an sie zugewiesen wird.  In diesem Fall kopiert die `CStringT`\-Instanz die andere Zeichenfolge in den gesperrten Puffer.  
-  
-     Wenn Sie eine `CStringData`\-Struktur zuordnen, muss dieses Feld festlegen, um den Typ der Freigabe widerzuspiegeln, der für den Puffer zulässig ist.  Für die meisten Implementierungen legen Sie diesen Wert auf einen fest.  Dadurch können übliche Kopie\-aufWRITE, das Verhalten freigibt.  Wenn das Zeichenfolgenmanager nicht das Freigeben des Zeichenfolgenpuffers unterstützt, legen Sie dieses Feld in ein gesperrtes Zustand.  Dadurch wird `CStringT`, um diesen Puffer für die Instanz von `CStringT` nur zu verwenden, die ihn zugeordnet sind.  
-  
-## Siehe auch  
- [Memory Management with CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)

@@ -18,18 +18,19 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 72772912097cf868538a496d3350d4708af5dc83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f6a0c3fe1a85028f4b4220f8e2f111afa1012121
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stream-io"></a>Stream-E/A
 Diese Funktionen verarbeiten die Daten in verschiedenen Größen und Formate, angefangen bei einzelnen Zeichen bis hin zu großen Datenstrukturen. Darüber hinaus verwenden sie Pufferung, wodurch die Leistung verbessert werden kann. Die Standardgröße eines Streamingpuffers beträgt 4 KB. Diese Routinen wirken sich nur auf Puffer aus, die von den Routinen der Laufzeitbibliothek erstellt wurden. Sie haben keine Auswirkungen auf die vom Betriebssystem erstellten Puffer.  
   
 ### <a name="stream-io-routines"></a>Stream-E/A-Routinen  
   
-|Routine|Verwendung|  
+|-Routine zurückgegebener Wert|Mit|  
 |-------------|---------|  
 |[clearerr](../c-runtime-library/reference/clearerr.md), [clearerr_s](../c-runtime-library/reference/clearerr-s.md)|Fehlerindikator für Stream löschen|  
 |[fclose](../c-runtime-library/reference/fclose-fcloseall.md)|Stream schließen|  
@@ -60,9 +61,9 @@ Diese Funktionen verarbeiten die Daten in verschiedenen Größen und Formate, an
 |[getc, getwc](../c-runtime-library/reference/getc-getwc.md)|Zeichen aus Stream lesen (Makroversionen von `fgetc` und `fgetwc`)|  
 |[getchar, getwchar](../c-runtime-library/reference/getc-getwc.md)|Zeichen aus `stdin` lesen (Makroversionen von `fgetchar` und `fgetwchar`)|  
 |[_getmaxstdio](../c-runtime-library/reference/getmaxstdio.md)|Gibt die Anzahl der Dateien an, die auf der E/A-Ebene des Streams gleichzeitig geöffnet sein können.|  
-|[gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|Zeile aus `stdin` lesen|  
+|[gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|Zeile aus `stdin`lesen|  
 |[_getw](../c-runtime-library/reference/getw.md)|Binäres `int` aus Stream lesen|  
-|[printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md),[printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|Formatierte Daten in `stdout` schreiben|  
+|[printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md),[printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|Formatierte Daten in `stdout`schreiben|  
 |[putc, putwc](../c-runtime-library/reference/putc-putwc.md)|Zeichen in einen Stream schreiben (Makroversionen von `fputc` und `fputwc`)|  
 |[putchar, putwchar](../c-runtime-library/reference/putc-putwc.md)|Zeichen in `stdout` schreiben (Makroversionen von `fputchar` und `fputwchar`)|  
 |[puts, _putws](../c-runtime-library/reference/puts-putws.md)|Zeile in Stream schreiben|  
@@ -83,7 +84,7 @@ Diese Funktionen verarbeiten die Daten in verschiedenen Größen und Formate, an
 |[ungetc, ungetwc](../c-runtime-library/reference/ungetc-ungetwc.md)|Zeichen zurück in den Stream verschieben|  
 |[_vcprintf, _vcwprintf](../c-runtime-library/reference/vcprintf-vcprintf-l-vcwprintf-vcwprintf-l.md), [_vcprintf_s, _vcprintf_s_l, _vcwprintf_s, _vcwprintf_s_l](../c-runtime-library/reference/vcprintf-s-vcprintf-s-l-vcwprintf-s-vcwprintf-s-l.md)|Formatierte Daten in die Konsole schreiben|  
 |[vfprintf, vfwprintf](../c-runtime-library/reference/vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md), [vfprintf_s, _vfprintf_s_l, vfwprintf_s, _vfwprintf_s_l](../c-runtime-library/reference/vfprintf-s-vfprintf-s-l-vfwprintf-s-vfwprintf-s-l.md)|Formatierte Daten in Stream schreiben|  
-|[vprintf, vwprintf](../c-runtime-library/reference/vprintf-vprintf-l-vwprintf-vwprintf-l.md), [vprintf_s, _vprintf_s_l, vwprintf_s, _vwprintf_s_l](../c-runtime-library/reference/vprintf-s-vprintf-s-l-vwprintf-s-vwprintf-s-l.md)|Formatierte Daten in `stdout` schreiben|  
+|[vprintf, vwprintf](../c-runtime-library/reference/vprintf-vprintf-l-vwprintf-vwprintf-l.md), [vprintf_s, _vprintf_s_l, vwprintf_s, _vwprintf_s_l](../c-runtime-library/reference/vprintf-s-vprintf-s-l-vwprintf-s-vwprintf-s-l.md)|Formatierte Daten in `stdout`schreiben|  
 |[_vsnprintf, _vsnwprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md), [vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l](../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)|Formatierte Daten der angegebenen Länge in Puffer schreiben|  
 |[vsprintf, vswprintf](../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md), [vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l](../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)|Formatierte Daten in Puffer schreiben|  
   

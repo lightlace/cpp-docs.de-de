@@ -1,36 +1,38 @@
 ---
-title: "IRowsetUpdateImpl::SetData | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SetData"
-  - "IRowsetUpdateImpl::SetData"
-  - "IRowsetUpdateImpl.SetData"
-  - "ATL::IRowsetUpdateImpl::SetData"
-  - "ATL.IRowsetUpdateImpl.SetData"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetData-Methode"
+title: 'IRowsetUpdateImpl:: SetData | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SetData
+- IRowsetUpdateImpl::SetData
+- IRowsetUpdateImpl.SetData
+- ATL::IRowsetUpdateImpl::SetData
+- ATL.IRowsetUpdateImpl.SetData
+dev_langs: C++
+helpviewer_keywords: SetData method
 ms.assetid: 7288a8d1-a7cf-4957-b832-0f3b18fd0da4
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4cc3eba57e79c40ab3f011581b08cf910ffde86e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# IRowsetUpdateImpl::SetData
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="irowsetupdateimplsetdata"></a>IRowsetUpdateImpl::SetData
 Legt Datenwerte in einer oder mehreren Spalten fest.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -41,14 +43,14 @@ Legt Datenwerte in einer oder mehreren Spalten fest.
 );  
 ```  
   
-#### Parameter  
- Siehe [IRowsetChange::SetData](https://msdn.microsoft.com/en-us/library/ms721232.aspx) in der *OLE* DB\-Programmierreferenz.  
+#### <a name="parameters"></a>Parameter  
+ Finden Sie unter [IRowsetChange:: SetData](https://msdn.microsoft.com/en-us/library/ms721232.aspx) in der *OLE DB Programmer's Reference*.  
   
-## Hinweise  
- Diese Methode überschreibt die [IRowsetChangeImpl::SetData](../../data/oledb/irowsetchangeimpl-setdata.md)\-Methode aber das Einschließungszwischenspeichern von ursprünglichen Daten, um entweder das direkte oder träge Verarbeitung des Vorgangs zu ermöglichen.  
+## <a name="remarks"></a>Hinweise  
+ Diese Methode überschreibt die [IRowsetChangeImpl:: SetData](../../data/oledb/irowsetchangeimpl-setdata.md) Methode jedoch enthält Zwischenspeichern der ursprünglichen Daten um entweder sofort oder verzögerte Verarbeitung des Vorgangs zu ermöglichen.  
   
-## Anforderungen  
- **Header:** atldb.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** „atldb.h“  
   
-## Siehe auch  
- [IRowsetUpdateImpl\-Klasse](../../data/oledb/irowsetupdateimpl-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [IRowsetUpdateImpl-Klasse](../../data/oledb/irowsetupdateimpl-class.md)

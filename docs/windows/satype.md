@@ -1,32 +1,33 @@
 ---
-title: "satype | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.satype"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "satype attribute"
+title: Satype | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.satype
+dev_langs: C++
+helpviewer_keywords: satype attribute
 ms.assetid: 1716590b-6bcb-4aba-b1bc-82f7335f02c3
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9d4e083cfd0ee1a72992d3c400c4790f5cd50396
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# satype
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gibt den Datentyp der **SAFEARRAY** Struktur an.  
+# <a name="satype"></a>satype
+Gibt den Datentyp, der die **SAFEARRAY** Struktur.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -35,28 +36,28 @@ Gibt den Datentyp der **SAFEARRAY** Struktur an.
 ) ]  
 ```  
   
-#### Parameter  
- *data\_type*  
- Der Datentyp für die **SAFEARRAY** Datenstruktur, die als Parameter für eine Schnittstellenmethode übergeben wird.  
+#### <a name="parameters"></a>Parameter  
+ *data_type*  
+ Der Datentyp für die **SAFEARRAY** Datenstruktur, die als Parameter an eine Schnittstellenmethode übergeben wird.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
-|**Betrifft**|Schnittstellen für, Schnittstellenmethode|  
+|**Betrifft**|Parameter, für die Schnittstellen-Methode|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Keiner|  
+|**Ungültige Attribute**|Keiner|  
   
-## Hinweise  
- Das Attribut **satype** C\+\+ gibt den Datentyp **SAFEARRAY**an.  
+## <a name="remarks"></a>Hinweise  
+ Die **Satype** C++-Attribut gibt den Datentyp, der die **SAFEARRAY**.  
   
 > [!NOTE]
->  Eine Dereferenzierungsebene wird vom **SAFEARRAY** Zeiger in der generierten IDL\-Datei abgelegt, wie er in der CPP\-Datei deklariert ist.  
+>  Eine Dereferenzierungsebene aus gelöscht wird die **SAFEARRAY** Zeiger in der generierten IDL-Datei aus, wie sie in der CPP-Datei deklariert ist.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cpp_attr_ref_satype.cpp  
@@ -69,9 +70,8 @@ __interface A {
 };  
 ```  
   
-## Siehe auch  
- [Compiler Attributes](../windows/compiler-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [id](../windows/id.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [Compilerattribute](../windows/compiler-attributes.md)   
+ [Parameterattribute](../windows/parameter-attributes.md)   
+ [Methodenattribut](../windows/method-attributes.md)   
+ [ID](../windows/id.md)   

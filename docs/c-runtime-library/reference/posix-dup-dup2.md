@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -26,22 +25,21 @@ apitype: DLLExport
 f1_keywords:
 - dup
 - dup2
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - dup function
 - dup2 function
 ms.assetid: c7572170-47ff-4e0d-b9c3-10f0ab0ba40a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ec79418425202c2383933d4e718a0f5c14695847
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 96e6c49f00c2b9a217d4a9cacc0ab5ba3a393698
-ms.contentlocale: de-de
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dup-dup2"></a>dup, dup2
 Diese POSIX-Funktionen sind veraltet. Verwenden Sie stattdessen die ISO C++-konforme Funktion [_dup, _dup2](../../c-runtime-library/reference/dup-dup2.md).

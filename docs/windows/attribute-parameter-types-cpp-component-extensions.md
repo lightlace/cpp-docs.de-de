@@ -1,28 +1,30 @@
 ---
-title: "Attribute Parameter Types  (C++ Component Extensions)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "custom attributes, parameter types"
+title: "Parametertypen (Komponentenerweiterungen für C++)-Attribut | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: custom attributes, parameter types
 ms.assetid: d9f127a3-7f08-456f-acc6-256805632712
-caps.latest.revision: 5
-caps.handback.revision: "5"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 95e7ec4d1a4a6b473419c23b3565fcce9d5afed6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Attribute Parameter Types  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die Werte, die an die Attribute übergeben werden, müssen für den Compiler zur Kompilierungszeit bekannt.  Attributparameter können aus den folgenden Typen aufweisen:  
+# <a name="attribute-parameter-types--c-component-extensions"></a>Attributparametertypen (Komponentenerweiterungen für C++)
+Der Compiler müssen Attributen übergebenen Werte zum Zeitpunkt der Kompilierung bekannt sein.  Attributparameter können die folgenden Typen entsprechen:  
   
 -   `bool`  
   
@@ -48,9 +50,9 @@ Die Werte, die an die Attribute übergeben werden, müssen für den Compiler zur
   
 -   `enum`  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // attribute_parameter_types.cpp  
@@ -73,12 +75,12 @@ ref struct MyStruct {
 };  
 ```  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### **Beschreibung**  
- Wenn diese Attribute angeben, müssen alle unbenannte \(positional\) Argumente beliebigen benannten Argumenten stehen.  
+### <a name="description"></a>Beschreibung  
+ Wenn Sie Attribute angeben, müssen alle unbenannten (mit Feldern fester Breite) Argumente keine benannten Argumente voranstellen.  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // extending_metadata_c.cpp  
@@ -106,12 +108,12 @@ ref class ClassC {};   // Positional argument
 ref class ClassD {};   // Positional and named  
 ```  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### **Beschreibung**  
+### <a name="description"></a>Beschreibung  
  Attributparameter können eindimensionale Arrays der vorherigen Typen sein.  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // extending_metadata_d.cpp  
@@ -128,5 +130,5 @@ public ref struct ABC : public Attribute {
 ref struct AStruct{};  
 ```  
   
-## Siehe auch  
- [User\-Defined Attributes](../windows/user-defined-attributes-cpp-component-extensions.md)
+## <a name="see-also"></a>Siehe auch  
+ [Benutzerdefinierte Attribute](../windows/user-defined-attributes-cpp-component-extensions.md)

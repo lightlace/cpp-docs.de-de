@@ -1,32 +1,31 @@
 ---
-title: "Compilerwarnung (Stufe 4) C4516 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4516"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4516"
+title: Compilerwarnung (Stufe 4) C4516 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4516
+dev_langs: C++
+helpviewer_keywords: C4516
 ms.assetid: 6677bb1f-d26e-4ab9-8644-6b5a2a8f4ff8
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 137fe601e911b309d28281ecee7e67a88e1bb0a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 4) C4516
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'class::symbol': Zugriffsdeklarationen sind veraltet; using\-Deklarationen von Membern stellen eine bessere Alternative dar  
+# <a name="compiler-warning-level-4-c4516"></a>Compilerwarnung (Stufe 4) C4516
+"Zugriffsdeklarationen": Access-Deklarationen sind veraltet. using-Deklarationen bieten eine bessere alternative  
   
- Die ANSI C\+\+\-Kommission hat Zugriffsdeklarationen \(d. h., das Ändern der Zugriffsebene für einen in einer abgeleiteten Klasse enthaltenen Member, ohne das Schlüsselwort [using](../../cpp/using-declaration.md) zu verwenden\) zur überholten Praktik erklärt.  Zugriffsdeklarationen werden von zukünftigen C\+\+\-Versionen möglicherweise nicht mehr unterstützt.  
+ Die ANSI C++ Committee wurde Zugriffsdeklarationen deklariert (Ändern der Zugriffsebene eines Members in einer abgeleiteten Klasse ohne die [mit](../../cpp/using-declaration.md) Schlüsselwort) veraltet sein. Access-Deklarationen möglicherweise in künftigen Versionen von C++ nicht unterstützt.  
   
  Im folgenden Beispiel wird C4516 generiert:  
   

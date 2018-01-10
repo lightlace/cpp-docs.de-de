@@ -1,71 +1,73 @@
 ---
-title: "CBulkRowset-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CBulkRowset"
-  - "ATL.CBulkRowset"
-  - "ATL::CBulkRowset<TAccessor>"
-  - "CBulkRowset"
-  - "ATL.CBulkRowset<TAccessor>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CBulkRowset-Klasse"
+title: CBulkRowset-Klasse | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CBulkRowset
+- ATL.CBulkRowset
+- ATL::CBulkRowset<TAccessor>
+- CBulkRowset
+- ATL.CBulkRowset<TAccessor>
+dev_langs: C++
+helpviewer_keywords: CBulkRowset class
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 26ed8c0a3f58ae046ad3e4766b7e009023759be0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CBulkRowset-Klasse
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Abrufe und bearbeitet Zeilen, um mit Daten in einer Sammeloperation zu arbeiten, indem sie mehrere Zeilenhandles mit einem einzelnen Aufruf abrufen.  
+# <a name="cbulkrowset-class"></a>CBulkRowset-Klasse
+Abruft, und Bearbeiten von Zeilen, die auf Daten in einer Massenoperation zu arbeiten, indem mehrere Zeilenhandles mit einem einzigen Aufruf abgerufen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class TAccessor>  
 class CBulkRowset : public CRowset<TAccessor>  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `TAccessor`  
- Eine Accessorklasse.  
+ Ein Accessorklasse.  
   
-## Member  
+## <a name="members"></a>Member  
   
-### Methoden  
+### <a name="methods"></a>Methoden  
   
 |||  
 |-|-|  
-|[AddRefRows](../../data/oledb/cbulkrowset-addrefrows.md)|Inkrementiert den Verweiszähler.|  
+|[AddRefRows](../../data/oledb/cbulkrowset-addrefrows.md)|Inkrementiert den Verweiszähler dieser Planergruppe.|  
 |[CBulkRowset](../../data/oledb/cbulkrowset-cbulkrowset.md)|Konstruktor.|  
-|[MoveFirst](../../data/oledb/cbulkrowset-movefirst.md)|Ruft die erste Datenzeile ab und übergibt ggf. einen neuen Massenabruf aus.|  
-|[MoveLast](../../data/oledb/cbulkrowset-movelast.md)|Wechselt in die letzte Zeile.|  
-|[MoveNext](../../data/oledb/cbulkrowset-movenext.md)|Ruft die nächste Zeile der Daten ab.|  
+|[MoveFirst](../../data/oledb/cbulkrowset-movefirst.md)|Ruft die erste Zeile der Daten, einen neuen Bulk-Abruf bei Bedarf ausführen.|  
+|[MoveLast](../../data/oledb/cbulkrowset-movelast.md)|Wechselt zur letzten Zeile.|  
+|[MoveNext](../../data/oledb/cbulkrowset-movenext.md)|Ruft die nächste Datenzeile ab.|  
 |[MovePrev](../../data/oledb/cbulkrowset-moveprev.md)|Wechselt zur vorherigen Zeile.|  
-|[MoveToBookmark](../../data/oledb/cbulkrowset-movetobookmark.md)|Ruft die Zeile ab, die von ein Lesezeichen gekennzeichnet oder die Zeile an einem angegebenen Offset von diesem Lesezeichen.|  
-|[MoveToRatio](../../data/oledb/cbulkrowset-movetoratio.md)|Ruft den Start\- Zeilen aus einer Bruchposition im Rowset.|  
-|[ReleaseRows](../../data/oledb/cbulkrowset-releaserows.md)|Stellt die aktuelle Zeile \(**m\_nCurrentRow**\) auf Null und Versionen alle Zeilen.|  
-|[SetRows](../../data/oledb/cbulkrowset-setrows.md)|Legt die Anzahl der durch fest einen Aufruf abgefragt werden Zeilenhandles.|  
+|[MoveToBookmark](../../data/oledb/cbulkrowset-movetobookmark.md)|Ruft die von einer Textmarke markierte Zeile oder die Zeile an einem angegebenen Offset aus diesem Lesezeichen ab.|  
+|[MoveToRatio](../../data/oledb/cbulkrowset-movetoratio.md)|Ruft Zeilen ab der ein Bruchteilen Position im Rowset ab.|  
+|[ReleaseRows](../../data/oledb/cbulkrowset-releaserows.md)|Legt die aktuelle Zeile (**M_nCurrentRow**) auf 0 (null) und Versionen, die alle Zeilen.|  
+|[SetRows](../../data/oledb/cbulkrowset-setrows.md)|Legt die Anzahl von Zeilenhandles durch einen Aufruf abgerufen werden sollen.|  
   
-## Beispiel  
- Im folgenden Beispiel wird die Verwendung der `CBulkRowset`\-Klasse.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel veranschaulicht die Verwendung von der `CBulkRowset` Klasse.  
   
- [!CODE [NVC_OLEDB_Consumer#1](../CodeSnippet/VS_Snippets_Cpp/NVC_OLEDB_Consumer#1)]  
+ [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]  
   
-## Anforderungen  
- **Header:**  atldbcli.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** atldbcli.h  
   
-## Siehe auch  
- [OLE DB\-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenz der OLE DB\-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)

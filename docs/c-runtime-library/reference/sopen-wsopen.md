@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - wsopen
 - _sopen
 - _tsopen
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - sopen function
 - sharing files
@@ -41,30 +39,16 @@ helpviewer_keywords:
 - files [C++], sharing
 - _wsopen function
 ms.assetid: a9d4cccf-06e9-414d-96fa-453fca88cc1f
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: aac10cebd0f967944403837283e9008b0b1047fc
-ms.contentlocale: de-de
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: bce1d0aac8b6b4d835b956a9ac05eece4e2e6428
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sopen-wsopen"></a>_sopen, _wsopen
 Öffnet eine Datei zur Freigabe. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [_sopen_s, _wsopen_s](../../c-runtime-library/reference/sopen-s-wsopen-s.md).  
@@ -108,7 +92,7 @@ int _wsopen(
  Der angegebene Pfad ist ein Verzeichnis, oder die Datei ist schreibgeschützt, aber es wurde versucht, sie zum Schreiben zu öffnen.  
   
  `EEXIST`  
-Die Flags  `_O_CREAT` und `_O_EXCL` wurden angegeben, `filename` existiert jedoch bereits.  
+ Die Flags `_O_CREAT` und `_O_EXCL` wurden angegeben, `filename` existiert jedoch bereits.  
   
  `EINVAL`  
  Ungültiges `oflag`- oder `shflag`-Argument.  
@@ -224,7 +208,7 @@ Die Flags  `_O_CREAT` und `_O_EXCL` wurden angegeben, `filename` existiert jedoc
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|Optionaler Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionaler Header|  
 |-------------|---------------------|---------------------|  
 |`_sopen`|\<io.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>, \<share.h>|  
 |`_wsopen`|\<io.h> oder \<wchar.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>, \<share.h>|  
@@ -236,7 +220,7 @@ Die Flags  `_O_CREAT` und `_O_EXCL` wurden angegeben, `filename` existiert jedoc
   
 ## <a name="see-also"></a>Siehe auch  
  [E/A auf niedriger Ebene](../../c-runtime-library/low-level-i-o.md)   
- [_close](../../c-runtime-library/reference/close.md)   
+ [_schließen](../../c-runtime-library/reference/close.md)   
  [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
  [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
  [_fsopen, _wfsopen](../../c-runtime-library/reference/fsopen-wfsopen.md)   

@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ae31985e380236baef0aec94e7bf5bd186cda7cf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7c0ed58d114cb181245ff1452f0249f29edaf0b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unrepresented-character-constants"></a>Nicht vertretene Zeichenkonstanten
 **ANSI 3.1.3.4** Der Wert einer ganzzahligen Zeichenkonstante mit einem Zeichen oder einer Escapesequenz, das bzw. die nicht im grundlegenden Ausführungszeichensatz oder im erweiterten Zeichensatz für eine Breitzeichenkonstante dargestellt wird  

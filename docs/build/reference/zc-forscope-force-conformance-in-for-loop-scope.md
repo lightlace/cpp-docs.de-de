@@ -1,48 +1,49 @@
 ---
-title: "/Zc:forScope (&#220;bereinstimmung in for-Schleifenbereich erzwingen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.ForceConformanceInForLoopScope"
-  - "VC.Project.VCCLWCECompilerTool.ForceConformanceInForLoopScope"
-  - "/zc:forScope"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Zc (Compileroptionen) [C++]"
-  - "Übereinstimmung (Compileroptionen)"
-  - "Zc (Compileroptionen) [C++]"
-  - "-Zc (Compileroptionen) [C++]"
+title: "-Zc: ForScope (Übereinstimmung in for-Schleifenbereich erzwingen) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.ForceConformanceInForLoopScope
+- VC.Project.VCCLWCECompilerTool.ForceConformanceInForLoopScope
+- /zc:forScope
+dev_langs: C++
+helpviewer_keywords:
+- /Zc compiler options [C++]
+- -Zc compiler options [C++]
+- Conformance compiler options
+- Zc compiler options [C++]
 ms.assetid: 3031f02d-3b14-4ad0-869e-22b0110c3aed
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 243966ae5e8c7d0792f40206adc9d0ae3b2fb673
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# /Zc:forScope (&#220;bereinstimmung in for-Schleifenbereich erzwingen)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Verwendet zum Implementieren von Standard\-C\+\+\-Verhalten für [for](../../cpp/for-statement-cpp.md)\-Schleifen mit Microsoft\-Erweiterungen\([\/Ze](../../build/reference/za-ze-disable-language-extensions.md)\).  Standardmäßig ist **\/Zc:forScope** aktiviert.  
+# <a name="zcforscope-force-conformance-in-for-loop-scope"></a>/Zc:forScope (Übereinstimmung in for-Schleifenbereich erzwingen)
+Verwendet zum Implementieren von Standard-C++-Verhalten für [for](../../cpp/for-statement-cpp.md) -Schleifen mit Microsoft-Erweiterungen([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).  Standardmäßig ist**/Zc:forScope** aktiviert.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /Zc:forScope[-]  
 ```  
   
-## Hinweise  
- Die Option **\/Zc:forScope\-** ist veraltet und wird in einer der nächsten Versionen entfernt. Eine Verwendung von **\/Zc:forScope\-** generiert die Veraltungswarnung D9035.  
+## <a name="remarks"></a>Hinweise  
+ Die Option **/Zc:forScope-** ist veraltet und wird in einer der nächsten Versionen entfernt. Eine Verwendung von **/Zc:forScope-** generiert die Veraltungswarnung D9035.  
   
- Standardverhalten bedeutet, den Initialisierer einer **for**\-Schleife nach der **for**\-Schleife den Gültigkeitsbereich verlassen zu lassen. Unter **\/Zc:forScope\-** und [\/Ze](../../build/reference/za-ze-disable-language-extensions.md) bleibt der Initialisierer der **for**\-Schleife im Gültigkeitsbereich, bis der lokale Gültigkeitsbereich endet.  
+ Standardverhalten bedeutet, den Initialisierer einer **for** -Schleife nach der **for** -Schleife den Gültigkeitsbereich verlassen zu lassen. Unter **/Zc:forScope-** und [/Ze](../../build/reference/za-ze-disable-language-extensions.md)bleibt der Initialisierer der **for** -Schleife im Gültigkeitsbereich, bis der lokale Gültigkeitsbereich endet.  
   
- Der folgende Code wird unter **\/Ze**, aber nicht unter **\/Za** kompiliert:  
+ Der folgende Code wird unter **/Ze** , aber nicht unter **/Za**kompiliert:  
   
 ```cpp  
 // zc_forScope.cpp  
@@ -59,26 +60,26 @@ int main() {
 }  
 ```  
   
- Wenn Sie **\/Zc:forScope\-** verwenden, wird die Warnmeldung C4288 \(standardmäßig deaktiviert\) generiert, wenn sich eine Variable aufgrund einer Deklaration, die in einem früheren Gültigkeitsbereich erfolgt ist, im Gültigkeitsbereich befindet. Um dies zu veranschaulichen, entfernen Sie die Zeichen `//` im Beispiel, um `int i` zu deklarieren.  
+ Wenn Sie **/Zc:forScope-**verwenden, wird die Warnmeldung C4288 (standardmäßig deaktiviert) generiert, wenn sich eine Variable aufgrund einer Deklaration, die in einem früheren Gültigkeitsbereich erfolgt ist, im Gültigkeitsbereich befindet. Um dies zu veranschaulichen, entfernen Sie die Zeichen `//` im Beispiel, um `int i`zu deklarieren.  
   
- Sie können das Laufzeitverhalten von **\/Zc:forScope** ändern, indem Sie das [conform](../../preprocessor/conform.md)\-Pragma verwenden.  
+ Sie können das Laufzeitverhalten von **/Zc:forScope** ändern, indem Sie das [conform](../../preprocessor/conform.md) -Pragma verwenden.  
   
- Wenn Sie **\/Zc:forScope\-** in einem Projekt verwenden, für das es eine vorhandene PCH\-Datei gibt, wird eine Warnung generiert, wird **\/Zc:forScope\-** ignoriert, und wird die Kompilierung mit der vorhandenen PCH\-Dateien fortgesetzt. Wenn Sie möchten, dass eine neue PCH\-Datei generiert wird, verwenden Sie [\/Yc \(Datei der vorkompilierten Header erstellen\)](../../build/reference/yc-create-precompiled-header-file.md).  
+ Wenn Sie **/Zc:forScope-** in einem Projekt verwenden, für das es eine vorhandene PCH-Datei gibt, wird eine Warnung generiert, wird **/Zc:forScope-** ignoriert, und wird die Kompilierung mit der vorhandenen PCH-Dateien fortgesetzt. Wenn Sie eine neue PCH-Datei erstellen möchten, verwenden Sie [/Yc (Datei der vorkompilierten Header erstellen)](../../build/reference/yc-create-precompiled-header-file.md).  
   
- Weitere Informationen über Konformitätsprobleme in Visual C\+\+ finden Sie unter [Nicht dem Standard entsprechendes Verhalten](../../cpp/nonstandard-behavior.md).  
+ Weitere Informationen über Konformitätsprobleme in Visual C++ finden Sie unter [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).  
   
-### So legen Sie diese Compileroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Öffnen Sie im Navigationsbereich die Eigenschaftenseite **Konfigurationseigenschaften**, **C\/C\+\+**, **Sprache**.  
+2.  Öffnen Sie im Navigationsbereich die Eigenschaftenseite **Konfigurationseigenschaften**, **C/C++**, **Sprache** .  
   
-3.  Ändern Sie die Eigenschaft **Übereinstimmung in einem For\-Schleifenbereich erzwingen**.  
+3.  Ändern Sie die Eigenschaft **Übereinstimmung in einem For-Schleifenbereich erzwingen** .  
   
-### So legen Sie diese Compileroption programmgesteuert fest  
+### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
   
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ForceConformanceInForLoopScope*>.  
+-   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ForceConformanceInForLoopScope%2A>.  
   
-## Siehe auch  
- [\/Zc \(Übereinstimmung\)](../../build/reference/zc-conformance.md)   
- [\/Za, \/Ze \(Spracherweiterungen deaktivieren\)](../../build/reference/za-ze-disable-language-extensions.md)
+## <a name="see-also"></a>Siehe auch  
+ [/ Zc (Übereinstimmung)](../../build/reference/zc-conformance.md)   
+ [/ Za, / Ze (Spracherweiterungen deaktivieren)](../../build/reference/za-ze-disable-language-extensions.md)

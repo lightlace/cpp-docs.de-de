@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -20,36 +19,21 @@ f1_keywords:
 - ATLWIN/ATL::OnFinalMessage
 - ATLWIN/ATL::DialogProc
 - ATLWIN/ATL::StartDialogProc
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 76a95ed5c32b2125112b64ef4368e4a82f0acec0
-ms.contentlocale: de-de
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ab4bb1e04bd21900cdf8d8122af51547e79aea22
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl-Klasse
 Diese Klasse stellt Methoden zum Erstellen eines Dialogfelds mit oder ohne Modus.  
@@ -74,7 +58,7 @@ template <class T,
  *TBase*  
  Die Basisklasse der neuen Klasse. Die Standardbasisklasse ist [CWindow](../../atl/reference/cwindow-class.md).  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="methods"></a>Methoden  
   
@@ -110,7 +94,7 @@ template <class T,
 > [!NOTE]
 >  Muss Ihre Klasse definiert ein **LEISTE** Member, der angibt, das Dialogfeld Vorlage Ressourcen-ID. ATL-Projekt-Assistent fügt z. B. automatisch die folgende Zeile auf die Klasse:  
   
- [!code-cpp[NVC_ATL_Windowing #41](../../atl/codesnippet/cpp/cdialogimpl-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#41](../../atl/codesnippet/cpp/cdialogimpl-class_1.h)]  
   
  auf dem `MyDlg` ist die **Kurzname** in des Assistenten eingegebenen **Namen** Seite.  
   
@@ -119,7 +103,7 @@ template <class T,
 |Erstellen von Steuerelementen|[ATL-Lernprogramm](../../atl/active-template-library-atl-tutorial.md)|  
 |Mithilfe der Dialogfelder in ATL|[ATL-Fensterklassen](../../atl/atl-window-classes.md)|  
 |ATL-Projekt-Assistent|[Erstellen eines ATL-Projekts](../../atl/reference/creating-an-atl-project.md)|  
-|Dialogfelder|[Dialogfelder](http://msdn.microsoft.com/library/windows/desktop/ms632588) und nachfolgenden Themen in der[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]|  
+|Dialogfelder|[Dialogfelder](http://msdn.microsoft.com/library/windows/desktop/ms632588) und nachfolgenden Themen im Windows SDK|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h vorhanden  
@@ -142,7 +126,7 @@ HWND Create(
  `hWndParent`  
  [in] Das Handle an das Besitzerfenster.  
   
- **RECT /**`rect`  
+ **RECT &**`rect`  
  [in] Ein [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die Größe und Position im Dialogfelds angibt.  
   
  `dwInitParam`  

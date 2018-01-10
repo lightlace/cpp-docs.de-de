@@ -1,32 +1,33 @@
 ---
-title: "RuntimeClass::QueryInterface-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::RuntimeClass::QueryInterface"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "QueryInterface-Methode"
+title: 'Runtimeclass:: QueryInterface-Methode | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::RuntimeClass::QueryInterface
+dev_langs: C++
+helpviewer_keywords: QueryInterface method
 ms.assetid: 8f01f4a1-3fa2-4a8e-88c6-03629236cb9f
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f1a103ed6b8c71a285f01cec11d900ee36c21b65
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# RuntimeClass::QueryInterface-Methode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ruft einen Zeiger der angegebenen ID Schnittstelle ab  
+# <a name="runtimeclassqueryinterface-method"></a>RuntimeClass::QueryInterface-Methode
+Ruft einen Zeiger auf die angegebene Schnittstellen-ID.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -37,20 +38,20 @@ STDMETHOD(
    _Deref_out_ void **ppvObject);  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `riid`  
- Eine Schnittstelle ID  
+ Eine Schnittstellen-ID.  
   
  `ppvObject`  
- Wenn dieses opereation Abschluss, bestand ein Zeiger zur Schnittstelle durch den Parameter `riid` an.  
+ Wenn diese Opereation abgeschlossen wird, einen Zeiger auf die angegebene Schnittstelle die `riid` Parameter.  
   
-## Rückgabewert  
- S\_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler angibt.  
+## <a name="return-value"></a>Rückgabewert  
+ S_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler angibt.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** implements.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [RuntimeClass\-Klasse](../windows/runtimeclass-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [RuntimeClass-Klasse](../windows/runtimeclass-class.md)

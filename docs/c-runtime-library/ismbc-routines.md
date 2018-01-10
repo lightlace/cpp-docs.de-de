@@ -26,11 +26,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8b512bad001ed86ad0720002cd49c54b21b6e555
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cbe2879f031f261871676f9e11f0b6f2a0908a95
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbc-routines"></a>_ismbc-Routinen
 Jede **_ismbc**-Routine prüft ein angegebenes Multibytezeichen `c` auf eine bestimmte Bedingung.  
@@ -46,7 +47,7 @@ Jede **_ismbc**-Routine prüft ein angegebenes Multibytezeichen `c` auf eine bes
   
  Der Ausgabewert ist von der `LC_CTYPE`-Kategorieeinstellung des Gebietsschemas betroffen; weitere Informationen finden Sie unter [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter.  
   
-|Routine|Testbedingung|Beispiel für Codepage 932|  
+|-Routine zurückgegebener Wert|Testbedingung|Beispiel für Codepage 932|  
 |-------------|--------------------|---------------------------|  
 |[_ismbcalnum, _ismbcalnum_l](../c-runtime-library/reference/ismbcalnum-functions.md)|Alphanumerisches Zeichen|Gibt nur dann einen Wert ungleich Null zurück, wenn `c` eine Einzelbytedarstellung eines englischen ASCII-Buchstabens ist: siehe Beispiele für `_ismbcdigit` und `_ismbcalpha`.|  
 |[_ismbcalpha, _ismbcalpha\_](../c-runtime-library/reference/ismbcalnum-functions.md)|Alphabetisch|Gibt nur dann einen Wert ungleich 0 (null) zurück, wenn `c` eine Einzelbytedarstellung eines englischen ASCII-Buchstabens ist: weitere Informationen finden Sie in den Beispielen für `_ismbcupper` und `_ismbclower`; oder ein Katakana-Buchstabe: 0xA6<=`c`<=0xDF.|  
@@ -65,7 +66,7 @@ Jede **_ismbc**-Routine prüft ein angegebenes Multibytezeichen `c` auf eine bes
   
  Die folgenden Routinen gelten speziell für Codepage 932.  
   
-|Routine|Testbedingung (nur Codepage 932)|  
+|-Routine zurückgegebener Wert|Testbedingung (nur Codepage 932)|  
 |-------------|-------------------------------------------|  
 |[_ismbchira, _ismbchira_l](../c-runtime-library/reference/ismbchira-ismbchira-l-ismbckata-ismbckata-l.md)|Doppelbyte Hiragana: 0x829F<=`c`<=0x82F1.|  
 |[_ismbckata, _ismbckata_l](../c-runtime-library/reference/ismbchira-ismbchira-l-ismbckata-ismbckata-l.md)|Doppelbyte Katakana: 0x8340<=`c`<=0x8396.|  

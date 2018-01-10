@@ -21,18 +21,19 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b60b1544e277ef4fece8368b6913cf686960dcaa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cee24f0e5142af37681bd293a3be3600ddbd1cc4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="process-and-environment-control"></a>Prozess- und Umgebungssteuerung
 Verwenden Sie die Prozesssteuerungsroutinen, um Prozesse aus einem Programm heraus zu starten, zu beenden und zu verwalten. Verwenden Sie die Umgebungssteuerungsroutinen, um Informationen zur Betriebssystemumgebung abzurufen und zu ändern.  
   
 ### <a name="process-and-environment-control-functions"></a>Funktionen der Prozess- und Umgebungssteuerung  
   
-|Routine|Verwendung|  
+|-Routine zurückgegebener Wert|Mit|  
 |-------------|---------|  
 |[abort](../c-runtime-library/reference/abort.md)|Bricht einen Prozess an, ohne Puffer zu leeren oder von `atexit` und `_onexit` registrierte Funktionen aufzurufen.|  
 |[assert](../c-runtime-library/reference/assert-macro-assert-wassert.md)|Prüft auf Logikfehler.|  

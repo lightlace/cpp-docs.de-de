@@ -1,39 +1,40 @@
 ---
-title: "operator NE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "NE"
-  - "operator NE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "NE operator"
-  - "operator NE"
+title: Operator NE | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- NE
+- operator NE
+dev_langs: C++
+helpviewer_keywords:
+- NE operator
+- operator NE
 ms.assetid: 0364a3aa-e2f1-499d-8cc7-1fbec318715c
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 68dce50b023d5bf0b1261cef323b6c158d4f432d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# operator NE
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Gibt true \(– 1\), wenn keine *expression1* *expression2*ist, zurück oder gibt false zurück \(0\) Wenn dies der Fall ist.  
+# <a name="operator-ne"></a>Operator NE
+Gibt "true" (-1) zurück, wenn *expression1* stimmt nicht mit *expression2*, oder gibt "false" (0) zurück, wenn dies der Fall ist.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
 expression1 NE expression2  
 ```  
   
-## Siehe auch  
- [Operators Reference](../../assembler/masm/operators-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Operatoren – Referenz](../../assembler/masm/operators-reference.md)

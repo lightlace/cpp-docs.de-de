@@ -1,32 +1,33 @@
 ---
-title: "threading (C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.threading"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "threading attribute"
+title: Threading (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.threading
+dev_langs: C++
+helpviewer_keywords: threading attribute
 ms.assetid: 9b558cd6-fbf0-4602-aed5-31c068550ce3
-caps.latest.revision: 10
-caps.handback.revision: "10"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e44fec96391fff6700ecf4a453d7455bd75e9df7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# threading (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gibt das Threadingmodell für ein COM\-Objekt an.  
+# <a name="threading-c"></a>threading (C++)
+Gibt das Threadingmodell für ein COM-Objekt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -35,49 +36,48 @@ Gibt das Threadingmodell für ein COM\-Objekt an.
 ) ]  
 ```  
   
-#### Parameter  
- ***Modell*** \(optional\)  
- Eines der folgenden Threadingmodelle:  
+#### <a name="parameters"></a>Parameter  
+ ***Modell*** (optional)  
+ Einer der folgenden Threadingmodelle:  
   
--   **Apartment** \(Apartmentthreading\)  
+-   **Apartment** (Apartmentthreading für Anwendungen)  
   
--   **neutral** \(.NET Framework\-Komponenten ohne Benutzeroberfläche\)  
+-   **neutrale** (.NET Framework-Komponenten ohne Benutzeroberfläche)  
   
--   **Einfach** \(einfaches Threading\)  
+-   **einzelne** (einfache threading)  
   
--   **frei** \(Freethreading\)  
+-   **Kostenlose** (threading freizugeben)  
   
--   **beides** \(Apartment und Freethreading\)  
+-   **beide** (Apartment und Freethreadings)  
   
  Der Standardwert ist **Apartment**.  
   
-## Hinweise  
- Das Attribut **Threading** C\+\+ nicht angezeigt, in der generierten IDL\-Datei wird jedoch in der Implementierung des COM\-Objekts verwendet werden.  
+## <a name="remarks"></a>Hinweise  
+ Die **threading** C++-Attribut nicht in der generierten IDL-Datei angezeigt, aber in der Implementierung des COM-Objekts verwendet werden.  
   
- In den ATL\-Projekten wenn das [Co\-Klasse](../windows/coclass.md)\-Attribut vorhanden ist, wird das Threadingmodell, das vom *Modell* angegeben wurde, als der Vorlagenparameter zur [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md)\-Klasse übergeben, durch das coclass\-Attribut eingefügt.  
+ Im ATL-Projekte Wenn die [Co-Klasse](../windows/coclass.md) Attribut vorhanden ist, wird das Threadingmodell gemäß *Modell* wird als der Vorlagenparameter übergeben der [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) Klasse , eingefügt, indem die **Coclass** Attribut.  
   
- Der Wächter den Zugriff auf [event\_source](../windows/event-source.md)auch **Threading**\-Attributs.  
+ Die **threading** Attribut schützt auch Zugriff auf eine [Event_source](../windows/event-source.md).  
   
-## Beispiel  
- Weitere Informationen finden Sie im [lizenziert](../windows/licensed.md) Beispiel für eine Beispiel verwenden aus **Threading**.  
+## <a name="example"></a>Beispiel  
+ Finden Sie unter der [lizenziert](../windows/licensed.md) Beispiel für ein Beispiel für die Verwendung von **threading**.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
 |**Betrifft**|**Klasse**, `struct`|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|**Co\-Klasse**|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|**coclass**|  
+|**Ungültige Attribute**|Keiner|  
   
- Weitere Informationen über das kontexte finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [COM Attributes](../windows/com-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Multithreadingunterstützung für älteren Code \(Visual C\+\+\)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
- [Neutral Apartments](http://msdn.microsoft.com/library/windows/desktop/ms681813)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [COM-Attribute](../windows/com-attributes.md)   
+ [TypeDef, Enum, Union- und Struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Klassenattribute](../windows/class-attributes.md)   
+ [Multithreadingunterstützung für älteren Code (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
+ [Neutrale Apartments](http://msdn.microsoft.com/library/windows/desktop/ms681813)   

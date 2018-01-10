@@ -1,88 +1,89 @@
 ---
-title: "/Zp (Ausrichten des Strukturmembers) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/zp"
-  - "VC.Project.VCCLCompilerTool.StructMemberAlignment"
-  - "VC.Project.VCCLWCECompilerTool.StructMemberAlignment"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Zp (Compileroption) [C++]"
-  - "Ausrichten des Strukturmembers (Compileroption)"
-  - "Zp (Compileroption)"
-  - "-Zp (Compileroption) [C++]"
+title: -Zp (Strukturmembers) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /zp
+- VC.Project.VCCLCompilerTool.StructMemberAlignment
+- VC.Project.VCCLWCECompilerTool.StructMemberAlignment
+dev_langs: C++
+helpviewer_keywords:
+- Struct Member Alignment compiler option
+- Zp compiler option
+- /Zp compiler option [C++]
+- -Zp compiler option [C++]
 ms.assetid: 5242f656-ed9b-48a3-bc73-cfcf3ed2520f
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4d387e0ab020e96afb3e2975b5c8686b668cbc10
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# /Zp (Ausrichten des Strukturmembers)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Mit dieser Option wird gesteuert, wie die Member einer Struktur im Speicher ausgerichtet werden. Außerdem wird damit festgelegt, dass alle Strukturen in einem Modul auf gleiche Weise ausgerichtet werden.  
+# <a name="zp-struct-member-alignment"></a>/Zp (Ausrichten des Strukturmembers)
+Steuert, wie die Member einer Struktur in den Speicher gepackt werden, und gibt an, die dieselbe Anordnung für alle Strukturen in einem Modul.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /Zp[1|2|4|8|16]  
 ```  
   
-## Hinweise  
- Wenn Sie diese Option angeben, wird jeder Strukturmember nach dem ersten entweder in der Größe des Membertyps oder innerhalb der Grenzen von `n` Bytes \(wobei `n` den Wert 1, 2, 4, 8 oder 16 haben kann\) gespeichert, je nachdem, was kleiner ist.  
+## <a name="remarks"></a>Hinweise  
+ Wenn Sie diese Option angeben, wird jeder Strukturmember nach dem ersten entweder die Größe des Membertyps gespeichert oder `n`-Byte-Grenzen (wobei `n` ist 1, 2, 4, 8 oder 16), welcher Wert kleiner ist.  
   
- Die verfügbaren Werte sind in der folgenden Tabelle beschrieben.  
+ Die verfügbaren Werte werden in der folgenden Tabelle beschrieben.  
   
  1  
- Komprimiert Strukturen auf 1\-Byte\-Begrenzungen.  Dieselbe Bedeutung wie **\/Zp**.  
+ Packs Strukturen auf 1-Byte-Grenzen. Identisch mit **/Zp**.  
   
  2  
- Komprimiert Strukturen auf 2\-Byte\-Begrenzungen.  
+ Packs Strukturen auf 2-Byte-Grenzen.  
   
  4  
- Komprimiert Strukturen auf 4\-Byte\-Begrenzungen.  
+ Packs Strukturen an 4-Byte-Grenzen.  
   
  8  
- Komprimiert Strukturen auf 8\-Byte\-Begrenzungen \(Standard\).  
+ Packs Strukturen an 8-Byte-Grenzen (Standard).  
   
  16  
- Komprimiert Strukturen auf 16\-Byte\-Begrenzungen.  
+ Packs Strukturen an 16-Byte-Grenzen.  
   
- Sie sollten diese Option nur dann verwenden, wenn Sie besondere Anforderungen an die Ausrichtung haben.  
+ Sie sollten diese Option nicht verwenden, es sei denn, Sie über bestimmte ausrichtungsanforderungen verfügen.  
   
- Sie können das Ausrichten von Strukturen auch mit [pack](../../preprocessor/pack.md) steuern.  Weitere Informationen zur Ausrichtung finden Sie unter:  
+ Sie können auch [Pack](../../preprocessor/pack.md) Ausrichten von Strukturen. Weitere Informationen zur Ausrichtung finden Sie unter:  
   
 -   [align](../../cpp/align-cpp.md)  
   
--   [\_\_alignof\-Operator](../../cpp/alignof-operator.md)  
+-   [__alignof-Operator](../../cpp/alignof-operator.md)  
   
--   [\_\_unaligned](../../cpp/unaligned.md)  
+-   [__unaligned](../../cpp/unaligned.md)  
   
--   [Beispiele für die Strukturausrichtung](../../build/examples-of-structure-alignment.md) \(x64\-spezifisch\)  
+-   [Beispiele für die Strukturausrichtung](../../build/examples-of-structure-alignment.md) (X64 bestimmte)  
   
-### So legen Sie diese Compileroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Gewusst wie: Öffnen von Projekteigenschaftenseiten](../../misc/how-to-open-project-property-pages.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Klicken Sie auf den Ordner **C\/C\+\+**.  
+2.  Klicken Sie auf den Ordner **C/C++** .  
   
-3.  Klicken Sie auf die Eigenschaftenseite **Codegenerierung**.  
+3.  Klicken Sie auf die **Codegenerierung** Eigenschaftenseite.  
   
-4.  Ändern Sie die Eigenschaft **Ausrichten des Strukturmitglieds**.  
+4.  Ändern der **Ausrichten des Strukturmembers** Eigenschaft.  
   
-### So legen Sie diese Compileroption programmgesteuert fest  
+### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
   
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StructMemberAlignment*>.  
+-   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StructMemberAlignment%2A>.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Compileroptionen](../../build/reference/compiler-options.md)   
  [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

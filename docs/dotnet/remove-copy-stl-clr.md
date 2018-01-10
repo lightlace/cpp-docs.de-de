@@ -1,32 +1,33 @@
 ---
-title: "remove_copy (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::remove_copy"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "remove_copy-Funktion [STL/CLR]"
+title: Remove_copy (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::remove_copy
+dev_langs: C++
+helpviewer_keywords: remove_copy function [STL/CLR]
 ms.assetid: 602fd8e3-26f7-491f-bf2c-cddf269f9807
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9d4b7a400e089ec8fb4be21e39f31b5562c5df24
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# remove_copy (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Kopiert Elemente aus einem Quellbereich einem Zielbereich, dass Elemente eines angegebenen Werts werden kopiert, nicht, ohne die Reihenfolge der restlichen Elemente zu beeinträchtigen und Ende eines neuen Zielbereichs zurückzugeben.  
+# <a name="removecopy-stlclr"></a>remove_copy (STL/CLR)
+Kopiert Elemente aus einem Quellbereich in einen Zielbereich, ohne dass Elemente eines angegebenen Werts kopiert werden und ohne die Reihenfolge der restlichen Elemente zu beeinträchtigen und das Ende eines neuen Zielbereichs zurückzugeben.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class _InIt, class _OutIt, class _Ty> inline  
@@ -34,13 +35,13 @@ template<class _InIt, class _OutIt, class _Ty> inline
         _OutIt _Dest, const _Ty% _Val);  
 ```  
   
-## Hinweise  
- Diese Funktion verhält sich genauso wie die STL\-Funktion `remove_copy`.  Weitere Informationen finden Sie unter [remove\_copy](../Topic/remove_copy.md).  
+## <a name="remarks"></a>Hinweise  
+ Diese Funktion verhält sich wie die C++-Standardbibliothek Funktion `remove_copy`. Weitere Informationen finden Sie unter [Remove_copy](../standard-library/algorithm-functions.md#remove_copy).  
   
-## Anforderungen  
- **Header:** \<cliext\/Algorithmus\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext-Algorithmus >  
   
- **Namespace:** cliext  
+ **Namespace:** Cliext  
   
-## Siehe auch  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Siehe auch  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

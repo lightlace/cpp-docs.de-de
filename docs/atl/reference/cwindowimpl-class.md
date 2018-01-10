@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,42 +20,27 @@ f1_keywords:
 - ATLWIN/ATL::GetWndClassInfo
 - ATLWIN/ATL::WindowProc
 - ATLWIN/ATL::m_pfnSuperWindowProc
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CWindowImpl class
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: e9145c3c91eb9507f6383e8971325e5eaab53c3c
-ms.contentlocale: de-de
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3aa14c3ae6c083cbf440d8b5b94fcb3754bd6fff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwindowimpl-class"></a>CWindowImpl-Klasse
 Stellt Methoden für das Erstellen eines Fensters oder von Unterklassen eines Fensters bereit  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können in Anwendungen, die in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)] ausgeführt werden, nicht verwendet werden.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -75,7 +59,7 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
  `TWinTraits`  
  Ein [Merkmalklasse](../../atl/understanding-window-traits.md) , Formatvorlagen für das Fenster definiert. Die Standardeinstellung ist `CControlWinTraits`.  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
@@ -112,7 +96,7 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
   
  `CWindowImpl::Create`erstellt ein Fenster, die Grundlage der fensterklasseninformationen, die von verwalteten [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md). `CWindowImpl`enthält die [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) -Makro, das bedeutet, dass `CWndClassInfo` eine neue Fensterklasse registriert. Wenn Sie eine vorhandene Fensterklasse überordnen Informationen möchten, leiten Sie eine Klasse von `CWindowImpl` und enthalten die [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) Makro. In diesem Fall wird mit `CWndClassInfo` eine Fensterklasse registriert, die auf einer vorhandenen Klasse basiert, aber `CWindowImpl::WindowProc` verwendet. Zum Beispiel:  
   
- [!code-cpp[NVC_ATL_Windowing #43](../../atl/codesnippet/cpp/cwindowimpl-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwindowimpl-class_1.h)]  
   
 > [!NOTE]
 >  Da `CWndClassInfo` nur die Informationen für eine Fensterklasse verwaltet, basiert jedes Fenster, das durch eine Instanz von `CWindowImpl` erstellt wird, auf der gleichen Fensterklasse.  
@@ -173,10 +157,10 @@ HWND Create(
  [in] Gibt den Namen des Fensters. Der Standardwert ist **NULL**.  
   
  `dwStyle`  
- [in] Der Stil des Fensters. Dieser Wert wird in dem Format, das von der Klasse "traits" bereitgestellt wird, für das Fenster kombiniert. Der Standardwert gibt die Merkmale Klasse volle Kontrolle über das Format. Eine Liste der möglichen Werte finden Sie unter [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [in] Der Stil des Fensters. Dieser Wert wird in dem Format, das von der Klasse "traits" bereitgestellt wird, für das Fenster kombiniert. Der Standardwert gibt die Merkmale Klasse volle Kontrolle über das Format. Eine Liste der möglichen Werte finden Sie unter [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) im Windows SDK.  
   
  `dwExStyle`  
- [in] Der erweiterte Fensterstil. Dieser Wert wird in dem Format, das von der Klasse "traits" bereitgestellt wird, für das Fenster kombiniert. Der Standardwert gibt die Merkmale Klasse volle Kontrolle über das Format. Eine Liste der möglichen Werte finden Sie unter [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [in] Der erweiterte Fensterstil. Dieser Wert wird in dem Format, das von der Klasse "traits" bereitgestellt wird, für das Fenster kombiniert. Der Standardwert gibt die Merkmale Klasse volle Kontrolle über das Format. Eine Liste der möglichen Werte finden Sie unter [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
   
  `MenuOrID`  
  [in] Für ein untergeordnetes Fenster, das Fenster-Bezeichner. Für ein Fenster der obersten Ebene ein Menü-Handle für das Fenster. Der Standardwert ist **0 HE**.  
@@ -371,4 +355,3 @@ static LRESULT CALLBACK WindowProc(
  [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
  [CComControl-Klasse](../../atl/reference/ccomcontrol-class.md)   
  [Klassenübersicht](../../atl/atl-class-overview.md)
-

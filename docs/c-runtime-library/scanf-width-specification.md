@@ -23,11 +23,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d95e5dc4b137e050c65bc95b6b872ae1f5391baa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ee2fa7f80f47e2d3379bc4e68aec4496e8f4f01a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scanf-width-specification"></a>scanf-Breitenangabe
 Diese Informationen gelten für die Interpretation von Formatzeichenfolgen in der `scanf`-Funktionsreihe, einschließlich der sicheren Versionen wie `scanf_s`. Diese Funktionen nehmen in der Regel an, dass der Eingabestream in eine Folge von Token unterteilt ist. Token werden durch Leerzeichen (Leerzeichen, Tabstoppzeichen oder Zeilenumbruch) oder im Fall von numerischen Typen durch das natürliche Ende dieser getrennt, das durch das erste nicht in numerischen Text konvertierbare Zeichen angegeben ist. Mit den Breitenangaben können Sie jedoch festlegen, dass die Analyse der Eingabe vor dem natürlichen Ende eines Tokens beendet wird.  
@@ -59,7 +60,7 @@ scanf_s("%20s", str, 21);
 |**double**|**l**|**e**, **E**, **f**, **g** oder **G**|  
 |**long double** (identisch mit double)|**L**|**e**, **E**, **f**, **g** oder **G**|  
 |**langes int**|**l**|**d**, **i**, **o**, **x** oder **X**|  
-|**langes unsingniertes int**|**l**|**u**|  
+|**langes unsingniertes int**|**l**|**n**|  
 |**langes long**|**ll**|**d**, **i**, **o**, **x** oder **X**|  
 |`short int`|**h**|**d**, **i**, **o**, **x** oder **X**|  
 |**kurzes unsigniertes int**|**h**|**u**|  

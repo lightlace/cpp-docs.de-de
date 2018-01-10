@@ -1,49 +1,53 @@
 ---
-title: "Arranging Push Buttons Along the Right or Bottom of a Dialog Box | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controls [C++], positioning"
-  - "Arrange Buttons command"
-  - "buttons, arranging push buttons in dialog boxes"
-  - "push buttons"
+title: "Ausrichten von Schaltflächen am rechten oder unteren Rand eines Dialogfelds | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- controls [C++], positioning
+- Arrange Buttons command
+- buttons, arranging push buttons in dialog boxes
+- push buttons
 ms.assetid: 2e855cbf-90f8-4ff0-9511-508cf78e2cd5
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a8bec8f1f8772693b82523d01d0e14db12665be0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Arranging Push Buttons Along the Right or Bottom of a Dialog Box
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### So ordnen Sie Schaltflächen am rechten oder unteren Rand des Dialogfelds an  
+# <a name="arranging-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>Ausrichten von Schaltflächen am rechten oder unteren Rand eines Dialogfelds
+### <a name="to-arrange-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>Anordnen von Schaltflächen am rechten oder unteren Rand eines Dialogfelds  
   
-1.  Markieren Sie eine oder mehrere Schaltflächen.  
+1.  Wählen Sie eine oder mehrere Schaltflächen an.  
   
-2.  Klicken Sie im Menü **Format** auf **Schaltflächen anordnen**, und wählen Sie dann eine der folgenden Anordnungen aus:  
+2.  Aus der **Format** Menü wählen **Anordnen von Schaltflächen**, und wählen Sie dann eine der folgenden Aktionen:  
   
-    -   **Rechts**: Richtet die Schaltflächen entlang dem rechten Rand des Dialogfelds aus.  
+    -   **Rechts**: Richtet die Schaltflächen am rechten Rand des Dialogfelds.  
   
-    -   **Unten**: Richtet die Schaltflächen entlang dem unteren Rand des Dialogfelds aus.  
+    -   **Unteren**: Richtet die Schaltflächen am unteren Rand des Dialogfelds.  
   
-         Wenn Sie ein anderes Steuerelement als eine Schaltfläche markieren, hat dies keine Auswirkungen auf seine Position.  
+         Wenn Sie ein Steuerelement als eine Schaltfläche auswählen, wird dessen Position nicht beeinflusst.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
   
  **Anforderungen**  
   
  Win32  
   
-## Siehe auch  
- [Arrangement of Controls on Dialog Boxes](../mfc/arrangement-of-controls-on-dialog-boxes.md)   
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Anordnung von Steuerelementen in Dialogfeldern](../windows/arrangement-of-controls-on-dialog-boxes.md)   
+ [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)   
  [Steuerelemente](../mfc/controls-mfc.md)
+

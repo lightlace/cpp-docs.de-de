@@ -1,46 +1,47 @@
 ---
-title: "SyncLockT::~SyncLockT-Destruktor"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockT::~SyncLockT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "~SyncLockT, Destruktor"
+title: 'SyncLockT:: ~ SyncLockT-Destruktor | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockT::~SyncLockT
+dev_langs: C++
+helpviewer_keywords: ~SyncLockT, destructor
 ms.assetid: 9e14870d-017d-45fe-a3dc-cd86b6fa1c3a
-caps.latest.revision: 4
-caps.handback.revision: "4"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5e5fa42339ea5490ff9c97938cfe55d6256bc123
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# SyncLockT::~SyncLockT-Destruktor
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Unterstützt die WRL\-Infrastruktur und nicht beabsichtigt, direkt im Code verwendet werden.  
+# <a name="synclocktsynclockt-destructor"></a>SyncLockT::~SyncLockT-Destruktor
+Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 ~SyncLockT();  
 ```  
   
-## Hinweise  
- Deinitialisiert eine Instanz der SyncLockT\-Klasse.  
+## <a name="remarks"></a>Hinweise  
+ Hebt die Initialisierung einer Instanz der SyncLockT-Klasse.  
   
- Dieser Destruktor gerät auch die aktuelle SyncLockT\-Instanz frei.  
+ Dieser Destruktor entsperrt auch die aktuellen SyncLockT-Instanz.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  
   
- **Namespace:**  Microsoft::WRL::Wrappers::Details  
+ **Namespace:** Microsoft::WRL::Wrappers::Details  
   
-## Siehe auch  
- [SyncLockT\-Klasse](../windows/synclockt-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [SyncLockT-Klasse](../windows/synclockt-class.md)

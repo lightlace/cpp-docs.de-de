@@ -1,49 +1,50 @@
 ---
-title: "MFC-fremde DLLs: &#220;bersicht | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLLs [C++], Nicht-MFC"
-  - "Nicht-MFC-DLLs [C++]"
+title: "MFC-fremde DLLs: Übersicht | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- non-MFC DLLs [C++]
+- DLLs [C++], non-MFC
 ms.assetid: 1ed5d1ee-e20c-47d7-801d-87ea26a73842
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3ce755f88e8a9efaaacd456206d599dd5db75443
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# MFC-fremde DLLs: &#220;bersicht
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Eine MFC\-fremde DLL ist eine DLL, die MFC nicht intern verwendet und deren exportierte Funktionen entweder von einer ausführbaren MFC\- oder von einer ausführbaren MFC\-fremden Datei aufgerufen werden können.  Die Funktionen werden in der Regel aus einer MFC\-fremden DLL über die Standard\-C\-Schnittstelle exportiert.  
+# <a name="non-mfc-dlls-overview"></a>MFC-fremde DLLs: Übersicht
+Eine MFC - fremde DLL ist eine DLL, die nicht MFC intern verwendet und in der DLL exportierten Funktionen von MFC oder MFC-fremde ausführbare Dateien aufgerufen werden können. Funktionen sind in der Regel aus einer MFC - fremde DLL über die standard-C-Schnittstelle exportiert.  
   
- Weitere Informationen über MFC\-fremde DLLs finden Sie unter [Dynamic Link Libraries](http://msdn.microsoft.com/library/windows/desktop/ms682589) im [!INCLUDE[winsdkshort](../atl/reference/includes/winsdkshort_md.md)].  
+ Weitere Informationen über MFC-DLLs finden Sie unter [Dynamic Link Libraries](http://msdn.microsoft.com/library/windows/desktop/ms682589) in der [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
   
-## Was möchten Sie tun?  
+## <a name="what-do-you-want-to-do"></a>Wie möchten Sie vorgehen?  
   
--   [Eine Win32\-DLL erstellen](../Topic/How%20to:%20Create%20a%20Windows%20Desktop%20Application.md)  
+-   [Exemplarische Vorgehensweise: Erstellen und Verwenden einer Dynamic Link Library](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)  
   
--   [Aus einer DLL exportieren](../build/exporting-from-a-dll.md)  
+-   [Exportieren aus einer DLL](../build/exporting-from-a-dll.md)  
   
--   [Eine ausführbare Datei mit einer DLL verknüpfen](../build/linking-an-executable-to-a-dll.md)  
+-   [Link an executable to a DLL (Eine ausführbare Datei mit einer DLL verknüpfen)](../build/linking-an-executable-to-a-dll.md)  
   
--   [Initialisieren einer DLL](../build/initializing-a-dll.md)  
+-   [Initialisieren einer DLL](../build/run-time-library-behavior.md#initializing-a-dll)  
   
-## Worüber möchten Sie mehr erfahren?  
+## <a name="what-do-you-want-to-know-more-about"></a>Worüber möchten Sie mehr erfahren?  
   
--   [Reguläre, statisch mit MFC verknüpfte DLLs](../build/regular-dlls-statically-linked-to-mfc.md)  
+-   [Reguläre, statisch mit MFC verknüpfte MFC-DLLs](../build/regular-dlls-statically-linked-to-mfc.md)  
   
--   [Reguläre, dynamisch mit MFC verknüpfte DLLs](../build/regular-dlls-dynamically-linked-to-mfc.md)  
+-   [Reguläre, dynamisch mit MFC verknüpfte MFC-DLLs](../build/regular-dlls-dynamically-linked-to-mfc.md)  
   
--   [Erweiterungs\-DLLs: Übersicht](../build/extension-dlls-overview.md)  
+-   [MFC extension DLLs: Overview (MFC-Erweiterungs-DLLs: Übersicht)](../build/extension-dlls-overview.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Arten von DLLs](../build/kinds-of-dlls.md)

@@ -1,59 +1,60 @@
 ---
-title: "SRWLockSharedTraits-Struktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SRWLockSharedTraits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SRWLockSharedTraits-Struktur"
+title: SRWLockSharedTraits-Struktur | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SRWLockSharedTraits
+dev_langs: C++
+helpviewer_keywords: SRWLockSharedTraits structure
 ms.assetid: 709cb51e-d70c-40b6-bdb4-d8eacf3af495
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: cadf94f1d336de7bac13572a045e7ac8487013cf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# SRWLockSharedTraits-Struktur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Beschreibt allgemeine Eigenschaften der SRWLock\-Klasse im Modus der gemeinsamen Sperre.  
+# <a name="srwlocksharedtraits-structure"></a>SRWLockSharedTraits-Struktur
+Beschreibt allgemeine Merkmale der SRWLock-Klasse in freigegebene Sperren an.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct SRWLockSharedTraits;  
 ```  
   
-## Member  
+## <a name="members"></a>Member  
   
-### Öffentliche Typedefs  
+### <a name="public-typedefs"></a>Öffentliche Typedefs  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|`Type`|Synonym für [SRWLOCK](../windows/srwlock-class.md) einen Zeiger auf die Klasse.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|`Type`|Synonym für einen Zeiger auf die [SRWLOCK](../windows/srwlock-class.md) Klasse.|  
   
-### Öffentliche Methoden  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[SRWLockSharedTraits::GetInvalidValue\-Methode](../windows/srwlocksharedtraits-getinvalidvalue-method.md)|Ruft ein SRWLockSharedTraits\-Objekt ab, die immer ungültig ist.|  
-|[SRWLockSharedTraits::Unlock\-Methode](../windows/srwlocksharedtraits-unlock-method.md)|Gibt Alleinherrschaft des angegebenen SRWLock\-Objekts frei.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[SRWLockSharedTraits::GetInvalidValue-Methode](../windows/srwlocksharedtraits-getinvalidvalue-method.md)|Ruft ein SRWLockSharedTraits-Objekt, das immer ungültig ist.|  
+|[SRWLockSharedTraits::Unlock-Methode](../windows/srwlocksharedtraits-unlock-method.md)|Gibt die exklusive Kontrolle über das angegebene SRWLock-Objekt frei.|  
   
-## Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `SRWLockSharedTraits`  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  
   
- **Namespace:**  Microsoft::WRL::Wrappers::HandleTraits  
+ **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
   
-## Siehe auch  
- [Microsoft::WRL::Wrappers::HandleTraits\-Namespace](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+## <a name="see-also"></a>Siehe auch  
+ [Microsoft::WRL::Wrappers::HandleTraits-Namespace](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

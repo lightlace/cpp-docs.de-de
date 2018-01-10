@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7a6004236c02868787235441d92466b24c9a3d79
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 59838fa1797fc87561b081d40143693dea385668
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Gewusst wie: Verbinden von Code, der Ausnahmen zulässt, mit Code ohne Ausnahmen
 In diesem Artikel wird beschrieben, wie die konsistente Ausnahmebehandlung in einem C++-Modul implementiert wird und wie diese Ausnahmen zu und von Fehlercodes an den Ausnahmegrenzen übertragen werden.  
@@ -197,7 +198,7 @@ BOOL DiffFiles2(const string& file1, const string& file2)
   
 ```  
   
- Bei Konvertierungen von Ausnahmen in Fehlercodes besteht ein mögliches Problem darin, dass Fehlercodes häufig nicht die umfangreichen Informationen enthalten, die eine Ausnahme speichern kann. Um dieses Problem zu beheben, können Sie einen `catch`-Block für jeden einzelnen Ausnahmetyp bereitstellen, der ausgelöst werden kann, und durch Protokollierung die Details der Ausnahme erfassen, bevor sie in einen Fehlercode konvertiert wird. Durch diesen Ansatz können viele Codewiederholungen erstellt werden, wenn mehrere Funktionen denselben Satz von `catch`-Blöcken verwenden. Eine gute Möglichkeit zur Vermeidung von Codewiederholungen besteht in der Umgestaltung dieser Blöcke in eine private Hilfsfunktion, die die Blöcke `try` und `catch` implementiert und ein Funktionsobjekt akzeptiert, das im `try`-Block aufgerufen wird. Übergeben Sie den Code in jeder öffentlichen Funktion als Lambda-Ausdruck an die Hilfsfunktion.  
+ Bei Konvertierungen von Ausnahmen in Fehlercodes besteht ein mögliches Problem darin, dass Fehlercodes häufig nicht die umfangreichen Informationen enthalten, die eine Ausnahme speichern kann. Um dieses Problem zu beheben, können Sie einen `catch`-Block für jeden einzelnen Ausnahmetyp bereitstellen, der ausgelöst werden kann, und durch Protokollierung die Details der Ausnahme erfassen, bevor sie in einen Fehlercode konvertiert wird. Durch diesen Ansatz können viele Codewiederholungen erstellt werden, wenn mehrere Funktionen denselben Satz von `catch`-Blöcken verwenden. Eine gute Möglichkeit zur Vermeidung von Codewiederholungen besteht in der Umgestaltung dieser Blöcke in eine private Hilfsfunktion, die die Blöcke `try` und `catch` implementiert und ein Funktionsobjekt akzeptiert, das im `try`-Block aufgerufen wird. Übergeben Sie den Code in jeder öffentlichen Funktion als Lambdaausdruck an die Hilfsfunktion.  
   
 ```cpp  
 template<typename Func>   
@@ -220,7 +221,7 @@ bool Win32ExceptionBoundary(Func&& f)
   
 ```  
   
- Das folgende Beispiel zeigt, wie der Lambda-Ausdruck geschrieben wird, der das Funktionselement definiert. Wenn ein Funktionselement „inline“ mithilfe eines Lambdaausdrucks definiert wird, ist es oft besser lesbar, als wenn es als benanntes Funktionsobjekt geschrieben worden wäre.  
+ Das folgende Beispiel zeigt, wie der Lambdaausdruck geschrieben wird, der das Funktionselement definiert. Wenn ein Funktionselement „inline“ mithilfe eines Lambdaausdrucks definiert wird, ist es oft besser lesbar, als wenn es als benanntes Funktionsobjekt geschrieben worden wäre.  
   
 ```cpp  
 bool DiffFiles3(const string& file1, const string& file2)   

@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d32c9e792971b20da99377ad36f3872f5824dcc7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c54b6e9716e7f0aee9a0b211148b76804d9520bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sbcs-and-mbcs-data-types"></a>SBCS- und MBCS-Datentypen
 Jede Microsoft `MBCS`-Laufzeitbibliotheksroutine, die nur ein Multibytezeichen oder ein Byte eines Multibytezeichens verarbeitet, erwartet ein `unsigned int`-Argument (wobei 0x00 <= Zeichenwert <= 0xFFFF und 0x00 <= Bytewert <= 0xFF ). Ein `MBCS`-Routine, die Multibyte-Bytes oder -zeichen in einem Zeichenfolgenkontext verarbeitet, erwartet eine Multibyte-Zeichenfolge, um als `unsigned char`-Zeiger dargestellt zu werden.  

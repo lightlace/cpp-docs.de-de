@@ -1,44 +1,46 @@
 ---
-title: "Introduction to COM and ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "index-page "
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, COM"
-  - "COM-Objekte, ATL"
-  - "COM, und ATL"
+title: "Einführung in COM und ATL | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: 'index-page '
+dev_langs: C++
+helpviewer_keywords:
+- COM, and ATL
+- ATL, COM
+- COM objects, ATL
 ms.assetid: 35d6ae9c-abbb-42f0-9344-33f3c19ac3ce
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b1fe02283fc1f0723d86d9d18991c3af444f54db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Introduction to COM and ATL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Dieser Abschnitt enthält eine kurze Einführung in COM und zu ATL bereit.  
+# <a name="introduction-to-com-and-atl"></a>Einführung in COM und ATL
+Dieser Abschnitt enthält eine kurze Einführung in COM und ATL  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
  [Einführung in COM](../atl/introduction-to-com.md)  
- Bietet eine Übersicht über die grundlegenden Konzepte \(Component Object Model\), einschließlich Schnittstellen, **IUnknown**, Komponenten, `QueryInterface`, Marshalling und Aggregation bereit.  
+ Bietet eine Übersicht über das Component Object Model (COM) grundlegende Konzepte, einschließlich der Schnittstellen, **IUnknown**, verweiszählung, `QueryInterface`, Marshalling und Aggregation.  
   
  [Einführung in ATL](../atl/introduction-to-atl.md)  
- Für kurz erläutert wie die ATL \(Active Template Library\) entworfen wurde, Vorlagenbibliotheken und ATL\-Versionsnummern.  Enthält Empfehlungen zum Auswählen von ATL und MFC.  
+ Erläutert, kurz, Active Template Library (ATL) für Vorlagenbibliotheken und ATL-Versionsnummern entwickelt wurde. Enthält Empfehlungen für die Wahl zwischen ATL- und MFC.  
   
-## Verwandte Abschnitte  
+## <a name="related-sections"></a>Verwandte Abschnitte  
  [Das Component Object Model](http://msdn.microsoft.com/library/windows/desktop/ms694363)  
- Das [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] Material auf COM.  
+ Die [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] Material für COM.  
   
  [ATL](../atl/active-template-library-atl-concepts.md)  
- Enthält Links zu konzeptionellen Themen darüber, wie mit Active Template Library Programmierung.  
+ Enthält Links zu konzeptionellen Themen über die Programmierung mit der Active Template Library.  
   
- [ATL\-Klassenübersicht](../atl/atl-class-overview.md)  
- Stellt Referenzinformationen bereit und Links zum ATL\-OLE klassifiziert.
+ [ATL-Klassenübersicht](../atl/atl-class-overview.md)  
+ Bietet Referenzinformationen und Links zu den ATL-Klassen.
+

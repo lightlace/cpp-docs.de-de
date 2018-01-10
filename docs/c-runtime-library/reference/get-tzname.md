@@ -34,11 +34,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a1b5f7db562dc0173cda49212425b237a44c0610
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3f70e928c3877bf5d660231cbe2646f6cf72575e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gettzname"></a>_get_tzname
 Ruft die Darstellung der Zeichenfolge vom Namen der Zeitzone oder den Name der Standard-Sommerzeitzone (DST) ab.  
@@ -78,8 +79,8 @@ errno_t _get_tzname(
 |--------------------|--------------------|-------------------|-------------|------------------|--------------------------------|  
 |Größe des ZZ-Namens|`NULL`|0|0 oder 1|0|nicht geändert|  
 |Größe des ZZ-Namens|any|> 0|0 oder 1|0|ZZ-Name|  
-|nicht geändert|`NULL`|> 0|alle|`EINVAL`|nicht geändert|  
-|nicht geändert|any|Null|alle|`EINVAL`|nicht geändert|  
+|nicht geändert|`NULL`|> 0|any|`EINVAL`|nicht geändert|  
+|nicht geändert|any|Null|any|`EINVAL`|nicht geändert|  
 |nicht geändert|any|> 0|> 1|`EINVAL`|nicht geändert|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -97,14 +98,14 @@ errno_t _get_tzname(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_get_tzname`|\<time.h>|  
   
  Weitere Informationen finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Uhrzeitverwaltung](../../c-runtime-library/time-management.md)   
+ [Time Management (Uhrzeitverwaltung)](../../c-runtime-library/time-management.md)   
  [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)   
  [_get_daylight](../../c-runtime-library/reference/get-daylight.md)   
  [_get_dstbias](../../c-runtime-library/reference/get-dstbias.md)   

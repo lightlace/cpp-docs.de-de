@@ -1,32 +1,33 @@
 ---
-title: "FtmBase::MarshalInterface-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ftm/Microsoft::WRL::FtmBase::MarshalInterface"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MarshalInterface-Methode"
+title: 'Ftmbase:: MarshalInterface-Methode | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: ftm/Microsoft::WRL::FtmBase::MarshalInterface
+dev_langs: C++
+helpviewer_keywords: MarshalInterface method
 ms.assetid: fc8421b4-06e4-4925-b908-c285fe4790d2
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9df1e5d7559b434c1af0f1feff3b73b8141a8865
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# FtmBase::MarshalInterface-Methode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Schreibt in einen Stream die Daten, die erforderlich sind, um ein in einem Proxyobjekt Clientprozess zu initialisieren.  
+# <a name="ftmbasemarshalinterface-method"></a>FtmBase::MarshalInterface-Methode
+Schreibt in einen Stream der Daten, die erforderlich sind, um eine Proxy-Objekt in einem Clientprozess zu initialisieren.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 STDMETHODIMP MarshalInterface(  
@@ -39,46 +40,46 @@ STDMETHODIMP MarshalInterface(
 ) override;  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `pStm`  
- Zeiger zum während des Marshallens Stream, verwendet werden.  
+ Zeiger auf den Stream während des Marshallens verwendet werden.  
   
  `riid`  
- Verweis auf den Bezeichner der gemarshallt werden Schnittstelle.  Diese Schnittstelle muss von der IUnknown\-Schnittstelle abgeleitet werden.  
+ Verweis auf den Bezeichner der Schnittstelle, die gemarshallt werden. Diese Schnittstelle muss von der IUnknown-Schnittstelle abgeleitet werden.  
   
  `pv`  
- Zeiger zum gemarshallt werden Schnittstellenzeiger; kann NULL sein, wenn der Aufrufer einen Zeiger nicht zur gewünschten Schnittstelle ist.  
+ Zeiger auf den Schnittstellenzeiger auf das zu marshallende; NULL kann sein, wenn der Aufrufer nicht über einen Zeiger auf die gewünschte Schnittstelle besitzt.  
   
  `dwDestContext`  
- Zielkontext, bei dem die angegebene Schnittstelle das Marshalling rückgängig gemacht werden soll.  
+ Zielkontext, in dem die angegebene Schnittstelle werden rückgängig gemacht werden.  
   
- Geben Sie ein oder mehrere MSHCTX\-Enumerationswerten an.  
+ Geben Sie eine oder mehrere MSHCTX-Enumerationswerte.  
   
- Unmarshalling kann in einem anderen Apartment des aktuellen Prozesses \(MSHCTX\_INPROC\) oder in einem anderen Prozess auf dem gleichen Computer wie der aktuelle Prozess \(MSHCTX\_LOCAL\) auftreten.  
+ Methodeninformationen kann in einem anderen Apartment des aktuellen Prozesses (MSHCTX_INPROC) oder in einem anderen Prozess auf dem gleichen Computer wie der aktuelle Prozess (MSHCTX_LOCAL) auftreten.  
   
  `pvDestContext`  
- Für die zukünftige Verwendung reserviert. Muss 0 \(null\) sein.  
+ Für die zukünftige Verwendung reserviert. Muss 0 (null) sein.  
   
  `mshlflags`  
- Gibt an, ob die Daten soll wieder im Clientprozess gesendet werden \- der typische Fall \- oder gemarshallt wird, das auf einen globalen Tabelle geschrieben wird, der von mehreren Clients abgerufen werden kann.  
+ Gibt an, ob die Daten, die gemarshallt werden zurück an den Clientprozess übertragen werden – der Normalfall – handschriftlichen auf eine globale Tabelle, in dem von mehreren Clients abgerufen werden können.  
   
-## Rückgabewert  
- S\_OK  
- Der von Schnittstellenzeigern wurde erfolgreich gemarshallt.  
+## <a name="return-value"></a>Rückgabewert  
+ S_OK  
+ Der Schnittstellenzeiger wurde erfolgreich gemarshallt.  
   
- E\_NOINTERFACE  
+ E_NOINTERFACE  
  Die angegebene Schnittstelle wird nicht unterstützt.  
   
- STG\_E\_MEDIUMFULL  
- Der Stream ist voll.  
+ STG_E_MEDIUMFULL  
+ Der Datenstrom ist voll.  
   
- E\_FAIL  
- Fehler beim Vorgang.  
+ E_FAIL  
+ Fehler bei diesem Vorgang.  
   
-## Anforderungen  
- **Header:**  ftm.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** ftm.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [FtmBase\-Klasse](../windows/ftmbase-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [FtmBase-Klasse](../windows/ftmbase-class.md)

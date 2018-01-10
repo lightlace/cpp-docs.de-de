@@ -16,11 +16,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 80b82e1fb69200f45716b2ad62a44160862f7d08
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1da48eb2439b94f326380b9991ea63d548131628
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-properties-in-your-provider"></a>Festlegen von Eigenschaften im Anbieter
 Suchen Sie die Eigenschaftsgruppe und die Eigenschafts-ID für die gewünschte Eigenschaft. Weitere Informationen finden Sie unter [OLE DB-Eigenschaften](https://msdn.microsoft.com/en-us/library/ms722734.aspx) in der *OLE DB Programmer's Reference*.  
@@ -39,7 +42,7 @@ Suchen Sie die Eigenschaftsgruppe und die Eigenschafts-ID für die gewünschte E
     DBPROPFLAGS_ROWSET | DBPROPFLAGS_READ | DBPROPFLAGS_WRITE  
     ```  
   
--   Der Basiswert der Eigenschaft. Dies ist möglicherweise **VARIANT_FALSE** geben einen booleschen Wert ab, oder 0 (null) für einen ganzzahligen Typ, z. B.. Die Eigenschaft weist diesen Wert an, es sei denn, er geändert wird.  
+-   Der Basiswert der Eigenschaft. Dies ist möglicherweise **VARIANT_FALSE** geben einen booleschen Wert ab, oder 0 (null) für einen ganzzahligen Typ, z. B. Die Eigenschaft weist diesen Wert an, es sei denn, er geändert wird.  
   
     > [!NOTE]
     >  Einige Eigenschaften sind verbunden oder mit anderen Eigenschaften, z. B. Lesezeichen oder Aktualisieren von verkettet. Wenn ein Consumer eine Eigenschaft auf True festgelegt, kann auch eine andere Eigenschaft festgelegt werden. Der OLE DB-Anbietervorlagen unterstützt diese mithilfe der Methode [CUtlProps:: OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md).  

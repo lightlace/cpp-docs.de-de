@@ -17,18 +17,19 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c216c009d84771fdf34426b6121a89eb4b3f73e4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 97db036822687936f3f8e4084c065c8ec64ca23e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="argument-access"></a>Argumentzugriff
 Die Makros `va_arg`, `va_end` und `va_start` bieten Zugriff auf Funktionsargumente, wenn die Anzahl der Argumente eine Variable ist. Diese Makros sind in STDARG.H für die Kompatibilität mit ANSI-C und in VARARGS.H für die Kompatibilität mit UNIX System V definiert.  
   
 ### <a name="argument-access-macros"></a>Makros für den Argumentzugriff  
   
-|Makro|Verwendung|  
+|Makro|Mit|  
 |-----------|-------------------------------|  
 |[va_arg](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)|Argument aus der Liste abrufen|  
 |[va_end](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)|Zeiger zurücksetzen|  

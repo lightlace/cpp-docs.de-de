@@ -20,11 +20,14 @@ caps.latest.revision: "37"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 33fa0d6e40be1a037632460e15fc453a8ba2853e
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f38450831ad85a09d3a43173f8febc7841f02c09
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-migrate-to-clr"></a>Gewusst wie: Migrieren zu /clr
 Dieses Thema behandelt Probleme, die beim Kompilieren von systemeigenem Code mit auftreten **"/ CLR"** (siehe [/CLR (Common Language Runtime-Kompilierung)](../build/reference/clr-common-language-runtime-compilation.md) für Weitere Informationen). **"/ CLR"** Visual C++-Module aufgerufen und gleichzeitig die Kompatibilität mit nicht verwalteten Modulen beibehalten von .NET-Assemblys aus aufgerufen werden können. Finden Sie unter [gemischte (systemeigene und verwaltete) Assemblys](../dotnet/mixed-native-and-managed-assemblies.md) und [einheitlichen als auch .NET Interoperabilität](../dotnet/native-and-dotnet-interoperability.md) Weitere Informationen zu den Vorteilen der Kompilierung mit **"/ CLR"**.  
@@ -106,7 +109,7 @@ COMObj2->Method(args);  // C++ equivalent
 ### <a name="precompiled-headers"></a>Vorkompilierte Header  
  Vorkompilierte Header werden unter unterstützt **"/ CLR"**. Jedoch wenn Sie nur einige der CPP-Dateien mit Kompilieren **"/ CLR"** (Kompilieren und den Rest als nativen Code) einige Änderungen werden, da vorkompilierte Header mit generiert **"/ CLR"** sind nicht kompatibel mit den ohne generiert **"/ CLR"**. Diese Inkompatibilität basiert auf der Tatsache, dass **"/ CLR"** Metadaten generiert und benötigt. Kompilierte Module **"/ CLR"** können daher keine vorkompilierten Header, die keine Metadaten enthalten und nicht **"/ CLR"** Module keine vorkompilierten Headerdateien, die Metadaten enthalten, verwenden.  
   
- Die einfachste Möglichkeit, ein Projekt zu kompilieren, in dem einige Module werden kompiliert **"/ CLR"** vorkompilierte Header vollständig zu deaktivieren. (Öffnen Sie im Dialogfeld der Eigenschaftenseiten des Projekts den Knoten C/C++, und wählen Sie „Vorkompilierte Header“ aus. Ändern Sie dann die Eigenschaft "Erstellen/Verwenden" vorkompilierter Header in "Vorkompilierte Header nicht verwenden".)  
+ Die einfachste Möglichkeit, ein Projekt zu kompilieren, in dem einige Module werden kompiliert **"/ CLR"** vorkompilierte Header vollständig zu deaktivieren. (Öffnen Sie im Dialogfeld der Eigenschaftenseiten des Projekts den Knoten C/C++, und wählen Sie „Vorkompilierte Header“ aus. Ändern Sie dann die Eigenschaft „Erstellen/Verwenden“ vorkompilierter Header in „Vorkompilierte Header nicht verwenden“.)  
   
  Allerdings beschleunigen vorkompilierte Header insbesondere in großen Projekten die Kompilierung, insofern ist eine Deaktivierung dieser Funktion nicht wünschenswert. In diesem Fall ist es am besten, konfigurieren Sie die **"/ CLR"** und nicht **"/ CLR"** -Dateien für die Verwendung separater vorkompilierter Header. Dies kann in einem Schritt Auswahl mehrerer Module zu kompilierenden **"/ CLR"** Projektmappen-Explorer mit der rechten Maustaste auf die Gruppe und Eigenschaften auswählen. Ändern Sie dann die beiden Eigenschaften „PCH durch Datei erstellen/verwenden“ und „Vorkompilierte Headerdatei“ auf einen anderen Headerdateinamen bzw. eine andere PCH-Datei.  
   

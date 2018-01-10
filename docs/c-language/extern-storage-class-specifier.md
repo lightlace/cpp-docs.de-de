@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0f11789f985c67b59b076bed7ec849a864688743
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 448a659afaf7a0251d500da3d9878d30550b9180
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="extern-storage-class-specifier"></a>Speicherklassenspezifizierer "extern"
 Eine Variable, die mit dem `extern`-Speicherklassenspezifizierer deklariert wird, ist ein Verweis auf eine Variable mit demselben Namen, der auf der externen Ebene in einer der Quelldateien des Programms definiert ist. Die interne `extern`-Deklaration wird verwendet, um die Definition der Variablen auf externer Ebene innerhalb des Blocks sichtbar zu machen. Sofern nicht auf der externen Ebene anders deklariert, ist eine Variable, die mit dem `extern`-Schlüsselwort deklariert ist, nur in dem Block sichtbar, in dem sie deklariert ist.  

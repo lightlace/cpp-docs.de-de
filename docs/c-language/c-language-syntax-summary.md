@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c791feb2abb9deda0fcd0c18602682b81e4dcf28
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 992c3164a8adb95125d9e4be4f88f930270b08ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-language-syntax-summary"></a>Zusammenfassung der C-Sprachsyntax
 In diesem Abschnitt finden Sie eine vollständige Beschreibung der C-Programmiersprache und der Microsoft-spezifischen C-Sprachfunktionen. Sie können die Syntaxschreibweise in diesem Abschnitt verwenden, um die genaue Syntax für alle Sprachkomponenten zu bestimmen. Die Erklärung für die Syntax finden Sie im jeweiligen Abschnitt dieses Handbuchs, in dem das Thema behandelt wird.  

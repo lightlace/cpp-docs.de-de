@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 976b3c21e24a8e1e6c99664b31d32f85985d7f55
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 903e4890bfad23310f0663fde52af4065e78486e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="example-program"></a>Beispielprogramm
 Das folgende C-Quellprogramm besteht aus zwei Quelldateien. Es vermittelt eine Übersicht über einige der verschiedenen Deklarationen und Definitionen, die in einem C-Programm möglich sind. In späteren Abschnitten dieses Buchs wird beschrieben, wie diese Deklarationen, Definitionen und Initialisierungen geschrieben und C-Schlüsselwörter wie **static** und `extern` verwendet werden. Die `printf`-Funktion wird in der C-Headerdatei STDIO.H deklariert.  

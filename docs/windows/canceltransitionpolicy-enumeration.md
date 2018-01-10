@@ -1,52 +1,54 @@
 ---
-title: "CancelTransitionPolicy-Enumeration | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::CancelTransitionPolicy::TransitionFromCanceled"
-  - "module/Microsoft::WRL::CancelTransitionPolicy::RemainCanceled"
-  - "module/Microsoft::WRL::CancelTransitionPolicy"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CancelTransitionPolicy-Enumeration"
+title: CancelTransitionPolicy-Enumeration | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- module/Microsoft::WRL::CancelTransitionPolicy::TransitionFromCanceled
+- module/Microsoft::WRL::CancelTransitionPolicy::RemainCanceled
+- module/Microsoft::WRL::CancelTransitionPolicy
+dev_langs: C++
+helpviewer_keywords: CancelTransitionPolicy Enumeration
 ms.assetid: 5de49f7d-e5e3-43e9-bbca-666caf226cef
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 14c3016d767e38e032a745a5957fa93d51f2dae8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CancelTransitionPolicy-Enumeration
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gibt an, wie der Versuch eines asynchronen Vorgangs dem Übergang zu einem Terminalzustand der abgeschlossenen oder Fehler in Bezug auf einen Client\-angeforderten abgebrochenen Zustand verhalten soll.  
+# <a name="canceltransitionpolicy-enumeration"></a>CancelTransitionPolicy-Enumeration
+Gibt an, wie ein asynchroner Vorgang, den Übergang zu einem abgeschlossenen Zustand des Versuchs abgeschlossen oder Verhalten sich Fehler in Bezug auf eine Clientanforderung Zustand "abgebrochen".  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 enum CancelTransitionPolicy;  
 ```  
   
-## Member  
+## <a name="members"></a>Member  
   
-### Werte  
+### <a name="values"></a>Werte  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|`RemainCanceled`|Wenn der asynchrone Vorgang gerade in einem Client\-angeforderten abgebrochenen Zustand ist, bedeutet dies, dass im abgebrochenen Zustand im Gegensatz zu Übergang für einen abgeschlossenen oder Terminal dem Fehlerzustand bleibt.|  
-|`TransitionFromCanceled`|Wenn der asynchrone Vorgang gerade in einem Client\-angeforderten abgebrochenen Zustand ist, wird dieser Zustand dass an, Übergang von dem abgebrochener Status zum Terminalzustand der abgeschlossenen oder Fehler auf, wie durch den Aufruf bestimmt, der dieses Flag verwendet.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|`RemainCanceled`|Wenn der asynchrone Vorgang derzeit in einer Clientanforderung Zustand "abgebrochen" ist, bedeutet dies, dass es sich im Zustand "abgebrochen" im Gegensatz zu den Übergang zu einer Terminal abgeschlossen oder den Status "Fehler" verbleibt.|  
+|`TransitionFromCanceled`|Wenn der asynchrone Vorgang derzeit in einer Clientanforderung Zustand "abgebrochen" ist, gibt dies an, dass Zustand übergehen sollten von dem Zustand, den abschließenden Zustand "abgebrochen" abgeschlossen oder Fehler, wie durch den Aufruf bestimmt, die dieses Flag nutzt.|  
   
-## Anforderungen  
- **Header:**  async.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** async.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [Microsoft::WRL\-Namespace](../windows/microsoft-wrl-namespace.md)
+## <a name="see-also"></a>Siehe auch  
+ [Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)

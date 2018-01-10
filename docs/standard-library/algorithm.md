@@ -18,11 +18,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 65cb348e19031965d70175d73ed8df94692f9db6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3cd9ac613dd788b116e648e2b1fd612aa07abcab
+ms.sourcegitcommit: 669f45f11b98b71b8a0e6808c0fe0cdf17484089
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
 Definiert C++-Standardbibliothek-Containervorlagenfunktionen, die Algorithmen ausführen.  
@@ -44,7 +45,7 @@ Definiert C++-Standardbibliothek-Containervorlagenfunktionen, die Algorithmen au
   
 -   Das _copy-Suffix gibt an, dass der Algorithmus nicht nur die Werte der Elemente bearbeitet, sondern die geänderten Werte auch in einen Zielbereich kopiert. Der `reverse`-Algorithmus kehrt die Reihenfolge der Elemente innerhalb eines Bereichs um, und der `reverse_copy`-Algorithmus kopiert das Ergebnis außerdem in einen Zielbereich.  
   
- C++-Standardbibliotheksalgorithmen werden häufig in Gruppen klassifiziert, die Informationen über ihren Zweck oder ihre Anforderungen angeben. Diese schließen Änderungsalgorithmen ein, die den Wert der Elemente ändern. Im Gegensatz dazu stehen Nichtänderungsalgorithmen, die den Wert nicht ändern. Mit Mutationsalgorithmen wird zwar die Reihenfolge von Elementen geändert, jedoch nicht die Werte ihrer Elemente. Mit Entfernungsalgorithmen können Elemente aus einem Bereich oder aus einer Kopie eines Bereichs entfernt werden. Sortieralgorithmen ordnen die Elemente in einem Bereich auf verschiedene Weise neu und Algorithmen für sortierte Bereiche werden nur für Algorithmen ausgeführt, deren Elemente auf bestimmte Weise sortiert wurden.  
+ C++-Standardbibliotheksalgorithmen werden häufig in Gruppen klassifiziert, die Informationen über ihren Zweck oder ihre Anforderungen angeben. Diese schließen Änderungsalgorithmen ein, die den Wert der Elemente ändern. Im Gegensatz dazu stehen Nichtänderungsalgorithmen, die den Wert nicht ändern. Mit Mutationsalgorithmen wird zwar die Reihenfolge von Elementen geändert, jedoch nicht die Werte ihrer Elemente. Mit Entfernungsalgorithmen können Elemente aus einem Bereich oder aus einer Kopie eines Bereichs entfernt werden. Sortieralgorithmen die Reihenfolge der Elemente in einem Bereich auf verschiedene Weise und Algorithmen für sortierte Bereiche wirken sich nur auf Bereiche, deren Elemente auf eine bestimmte Weise sortiert wurden.  
   
  Die numerischen C++-Standardbibliotheksalgorithmen, die für die numerische Verarbeitung bereitgestellt werden, verfügen über eine eigene Headerdatei [\<numeric>](../standard-library/numeric.md), und Funktionsobjekte und Adapter werden im Header [\<functional>](../standard-library/functional.md) in Funktionsobjekten definiert, die als Prädikate bezeichnete boolesche Werte zurückgeben. Das binäre Standardprädikat ist der Vergleichs-`operator<`. Im Allgemeinen müssen die zu sortierenden Elemente etwas weniger als vergleichbar sein, sodass für zwei Elemente bestimmt werden kann, dass sie gleichwertig sind (in dem Sinne, dass keins geringer als das andere ist) oder dass eins geringer als das andere ist. Dies führt zu einer Sortierung zwischen den nicht gleichwertigen Elementen.  
   

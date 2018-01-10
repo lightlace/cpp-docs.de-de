@@ -1,61 +1,60 @@
 ---
-title: "NotifyHandler | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "NotifyHandler"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "NotifyHandler function"
+title: NotifyHandler | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: NotifyHandler
+dev_langs: C++
+helpviewer_keywords: NotifyHandler function
 ms.assetid: 5ff953ec-de35-42bc-8b3c-d384d636c139
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 11f078e6e47aa6c392de79d9811df8738ce09ed9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# NotifyHandler
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Der Name der Funktion identifiziert durch den dritten Parameter des `NOTIFY_HANDLER`\-Makros in der Meldungszuordnung.  
+# <a name="notifyhandler"></a>NotifyHandler
+Der Name der Funktion identifiziert durch den dritten Parameter von der `NOTIFY_HANDLER` Makro in Ihrer nachrichtenzuordnung.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      LRESULT   
-      NotifyHandler  
-      (  
-   int idCtrl,  
-   LPNMHDR pnmh,  
-   BOOL& bHandled   
-);  
+ 
+    LRESULT 
+    NotifyHandler 
+ (
+    int idCtrl,  
+    LPNMHDR pnmh,  
+    BOOL& bHandled);
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `idCtrl`  
- Der Bezeichner des Steuerelements, das die Meldung sendet.  
+ Der Bezeichner des Steuerelements, das Senden der Nachricht.  
   
  *pnmh*  
- Adresse einer [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514)\-Struktur, die den Benachrichtigungscode und die zusätzliche Informationen enthält.  Für einige Benachrichtigungsmeldungen zeigt dieser Parameter auf einer größeren Struktur, die die **NMHDR**\-Struktur als erster Member verfügt.  
+ Adresse der ein [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) -Struktur, die die Benachrichtigungscode sowie relevante Informationen enthält. Für einige Benachrichtigungen, zeigt dieser Parameter auf einen größeren-Struktur, die **NMHDR** Struktur als des ersten Elements.  
   
  `bHandled`  
- Die Meldungszuordnung legt `bHandled` zu **TRUE** fest, bevor *NotifyHandler* aufgerufen wird.  Wenn *NotifyHandler* nicht vollständig die Meldung verarbeitet, sollte es `bHandled` zu **FALSE** festlegen, um die weiter Verarbeitungsaufwand Meldungsanforderungen anzugeben.  
+ Die Nachricht Zuordnung Mengen `bHandled` auf **"true"** vor *NotifyHandler* aufgerufen wird. Wenn *NotifyHandler* behandelt die Nachricht nicht vollständig sollte `bHandled` auf **"false"** an, dass die Nachricht noch weitere Verarbeitung erforderlich.  
   
-## Rückgabewert  
- Das Ergebnis des Meldungsverarbeitens.  0 Wenn erfolgreich.  
+## <a name="return-value"></a>Rückgabewert  
+ Das Ergebnis der Nachrichtenverarbeitung. 0, wenn erfolgreich.  
   
-## Hinweise  
- Ein Beispiel für die Verwendung dieses Meldungshandlers in einer Meldungszuordnung, finden Sie unter [NOTIFY\_HANDLER](../Topic/NOTIFY_HANDLER.md).  
+## <a name="remarks"></a>Hinweise  
+ Ein Beispiel zur Verwendung dieser Nachrichtenhandler in einer meldungszuordnung, finden Sie unter [NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)).  
   
-## Siehe auch  
- [Implementing a Window](../atl/implementing-a-window.md)   
- [Message Maps](../atl/message-maps-atl.md)   
- [WM\_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)
+## <a name="see-also"></a>Siehe auch  
+ [Implementieren eines Fensters](../atl/implementing-a-window.md)   
+ [Meldungszuordnungen](../atl/message-maps-atl.md)   
+ [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)
+

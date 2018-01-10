@@ -1,50 +1,54 @@
 ---
-title: "Specifying the Dominant Control | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dominant controls"
-  - "Dialog editor, dominant control"
-  - "controls [C++], dominant"
+title: Festlegen des bestimmenden Steuerelements | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- dominant controls
+- Dialog editor, dominant control
+- controls [C++], dominant
 ms.assetid: 42b523a7-192a-417b-9512-d4af795e002f
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f4902e3849f72ed2d6799e07f7cd9e8412d891a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Specifying the Dominant Control
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Das zuerst ausgewählte Steuerelement ist das bestimmende Steuerelement.  
+# <a name="specifying-the-dominant-control"></a>Festlegen des bestimmenden Steuerelements
+Das ausgewählte Steuerelement wird zuerst des bestimmenden Steuerelements.  
   
-### So legen Sie das bestimmende Steuerelement fest  
+### <a name="to-specify-the-dominant-control"></a>Zum Angeben des bestimmenden Steuerelements  
   
-1.  Halten Sie die STRG\-TASTE gedrückt, und klicken Sie *zuerst* auf das Steuerelement, das für die Größe oder Position der anderen Steuerelemente maßgebend sein soll.  
+1.  Halten Sie die **STRG** Taste, und klicken Sie auf das Steuerelement, das Sie verwenden, um die Größe oder Position von anderen Steuerelementen beeinflussen möchten *erste*.  
   
-     **Hinweis** Die Ziehpunkte des bestimmenden Steuerelements werden gefüllt dargestellt, während die Ziehpunkte der untergeordneten Steuerelemente leer sind.  Alle weiteren Größenänderungen oder Ausrichtungen basieren dann auf dem bestimmenden Steuerelement.  
+     **Hinweis** die Ziehpunkte des bestimmenden Steuerelements werden durchgezogene, während die Ziehpunkte der untergeordneten Steuerelemente leer sind. Alle weiteren Ändern der Größe oder Ausrichtung basiert auf des bestimmenden Steuerelements.  
   
-### So ändern Sie das bestimmende Steuerelement  
+### <a name="to-change-the-dominant-control"></a>Ändern des bestimmenden Steuerelements  
   
-1.  Heben Sie die aktuelle Markierung auf, indem Sie auf eine Stelle außerhalb der aktuell markierten Steuerelemente klicken.  
+1.  Löschen Sie die aktuelle Auswahl, indem Sie auf außerhalb der aktuell ausgewählten Steuerelemente.  
   
-2.  Wiederholen Sie die vorherigen Schritte, und wählen Sie ein anderes Steuerelement zuerst aus.  
+2.  Wiederholen Sie die vorherigen Schritte, und wählen ein anderes Steuerelement zuerst aus.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
   
  **Anforderungen**  
   
  Win32  
   
-## Siehe auch  
- [Selecting Multiple Controls](../mfc/selecting-multiple-controls.md)   
- [Selecting Controls](../mfc/selecting-controls.md)   
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)
+## <a name="see-also"></a>Siehe auch  
+ [Markieren mehrerer Steuerelemente](../windows/selecting-multiple-controls.md)   
+ [Auswählen von Steuerelementen](../windows/selecting-controls.md)   
+ [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)
+

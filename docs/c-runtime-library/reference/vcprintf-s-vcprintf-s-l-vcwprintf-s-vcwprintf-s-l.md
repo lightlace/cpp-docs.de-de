@@ -54,11 +54,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 14b8d90fb017d55362f320f8504ca4d4bbb94d67
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e47d35c4f827351f76099c748f483a82f0e04d36
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vcprintfs-vcprintfsl-vcwprintfs-vcwprintfsl"></a>_vcprintf_s, _vcprintf_s_l, _vcwprintf_s, _vcwprintf_s_l
 Schreibt eine formatierte Ausgabe in die Konsole, indem ein Zeiger auf eine Liste von Argumenten verwendet wird. Diese Versionen von [_vcprintf, _vcprintf_l, _vcwprintf, _vcwprintf_l](../../c-runtime-library/reference/vcprintf-vcprintf-l-vcwprintf-vcwprintf-l.md) enthalten Sicherheitserweiterungen, wie unter [Security Features in the CRT (Sicherheitserweiterungen in der CRT)](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
@@ -123,7 +124,7 @@ int _vcwprintf_s_l(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|Optionale Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionale Header|  
 |-------------|---------------------|----------------------|  
 |`_vcprintf_s`, `_vcprintf_s_l`|\<conio.h> and \<stdarg.h>|\<varargs.h>*|  
 |`_vcwprintf_s`, `_vcwprintf_s_l`|\<conio.h> oder \<wchar.h> und \<stdarg.h>|\<varargs.h>*|  
@@ -164,7 +165,7 @@ int main()
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Stream I/O (Stream-E/A)](../../c-runtime-library/stream-i-o.md)   
+ [Stream-E/A](../../c-runtime-library/stream-i-o.md)   
  [vprintf Functions (vprintf-Funktionen)](../../c-runtime-library/vprintf-functions.md)   
  [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
  [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   

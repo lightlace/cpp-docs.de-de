@@ -1,39 +1,39 @@
 ---
-title: "/SUMMARY | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/summary"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/SUMMARY (dumpbin-Option)"
-  - "SUMMARY (dumpbin-Option)"
-  - "-SUMMARY (dumpbin-Option)"
+title: -SUMMARY | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /summary
+dev_langs: C++
+helpviewer_keywords:
+- -SUMMARY dumpbin option
+- /SUMMARY dumpbin option
+- SUMMARY dumpbin option
 ms.assetid: f33f244c-1f23-4e94-bd85-b26c97a19e6a
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7f31ac04ef372e38f4d7c6d86631dd833deaafa4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# /SUMMARY
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="summary"></a>/SUMMARY
 ```  
 /SUMMARY  
 ```  
   
-## Hinweise  
- Durch diese Option werden Mindestinformationen über Abschnitte angezeigt, inklusive der Gesamtgröße.  Wenn keine andere Option festgelegt wurde, ist dies die Standardeinstellung.  
+## <a name="remarks"></a>Hinweise  
+ Diese Option zeigt minimale Informationen über Bereiche, einschließlich der Gesamtgröße. Diese Option ist die Standardeinstellung, wenn nichts anderes angegeben ist.  
   
- Für Dateien, die mit der [\/GL](../../build/reference/gl-whole-program-optimization.md)\-Compileroption erstellt wurden, kann nur die DUMPBIN\-Option [\/HEADERS](../../build/reference/headers.md) verwendet werden.  
+ Nur die [/Headers](../../build/reference/headers.md) DUMPBIN-Option ist verfügbar für die Verwendung in den Dateien erstellt wird, mit der [/GL](../../build/reference/gl-whole-program-optimization.md) -Compileroption.  
   
-## Siehe auch  
- [DUMPBIN\-Optionen](../../build/reference/dumpbin-options.md)
+## <a name="see-also"></a>Siehe auch  
+ [DUMPBIN-Optionen](../../build/reference/dumpbin-options.md)

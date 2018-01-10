@@ -1,32 +1,33 @@
 ---
-title: "synchronize | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.synchronize"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "synchronize attribute"
+title: Synchronisieren | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.synchronize
+dev_langs: C++
+helpviewer_keywords: synchronize attribute
 ms.assetid: 15fc8544-955d-4765-b3d5-0f619c8b3f40
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6d326a4069334a223db7824e5fa3bcaefbc97697
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# synchronize
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Synchronisiert Zugriff auf die Zielmethode.  
+# <a name="synchronize"></a>synchronize
+Synchronisiert den Zugriff auf die Zielmethode.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -34,15 +35,15 @@ Synchronisiert Zugriff auf die Zielmethode.
   
 ```  
   
-## Hinweise  
- Das Attribut **synchronisieren Sie** C\+\+ implementiert die Unterstützung für das Synchronisieren der Zielmethode eines Objekts.  Die Synchronisierung kann mehrere Objekte, um eine allgemeine Ressource \(z. B. eine Methode einer Klasse\), indem sie den Zugriff steuert die Zielmethode zu verwenden.  
+## <a name="remarks"></a>Hinweise  
+ Die **synchronisieren** C++-Attribut implementiert die Unterstützung für die Zielmethode eines Objekts zu synchronisieren. Synchronisierung ermöglicht mehrere Objekte, die eine gemeinsame Ressource (z. B. eine Methode einer Klasse) verwendet, durch steuern den Zugriff der Zielmethode.  
   
- Der Code, der von diesem Attribut eingefügt wird, ruft die entsprechende Methode \( `Lock` bestimmt durch das Threadingmodell\) am Anfang der Zielmethode.  Wenn die Methode beendet wird, wird `Unlock` automatisch aufgerufen.  Weitere Informationen zu diesen Funktionen finden Sie unter [CComAutoThreadModule::Sperre](../Topic/CComAutoThreadModule::Lock.md)  
+ Der Code wird eingefügt, die von diesem Attribut Ruft die geeignete `Lock` Methode (bestimmt durch das Threadingmodell) am Anfang der Zielmethode. Wenn die Methode beendet wird, `Unlock` wird automatisch aufgerufen. Weitere Informationen zu diesen Funktionen finden Sie unter [CComAutoThreadModule::Lock](../atl/reference/ccomautothreadmodule-class.md#lock)  
   
- Dieses Attribut erfordert, dass [Co\-Klasse](../windows/coclass.md), [ProgID](../windows/progid.md)oder [vi\_progid](../windows/vi-progid.md)\-Attribut \(oder ein anderes Attribut, das ein solcher Test vorhanden\), bedeutet auch auf das gleiche Element übernommen werden.  Wenn ein einzelnes Attribut wird, die anderen zwei automatisch angewendet werden.  Wenn z. B. **progid** angewendet wird, werden **vi\_progid** und **coclass** ebenfalls angewendet.  
+ Dieses Attribut erfordert, dass die Attribute [coclass](../windows/coclass.md), [progid](../windows/progid.md), oder [vi_progid](../windows/vi-progid.md) (oder ein anderes Attribut, das eines der genannten impliziert) auch auf demselben Element angewendet werden. Wenn ein einzelnes Attribut verwendet wird, werden die anderen beiden automatisch angewendet. Wenn z.B. **progid** angewendet wird, werden **vi_progid** und **coclass** ebenso angewendet.  
   
-## Beispiel  
- Der folgende Code stellt die Synchronisierung für die `UpdateBalance`\-Methode des `CMyClass`\-Objekts bereit.  
+## <a name="example"></a>Beispiel  
+ Der folgende Code stellt die Synchronisierung für die `UpdateBalance` Methode der `CMyClass` Objekt.  
   
 ```  
 // cpp_attr_ref_synchronize.cpp  
@@ -69,19 +70,18 @@ class CMyClass {
 };  
 ```  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
-|**Betrifft**|Klassenmethode, Methode|  
+|**Betrifft**|, Klassenmethode.|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|Ein oder mehrere der folgenden Schritte aus: **coclass**, **progid**oder **vi\_progid**.|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Ein Attribut oder mehrere Attribute der folgenden: **coclass**, **progid**, oder **vi_progid**.|  
+|**Ungültige Attribute**|Keiner|  
   
- Weitere Informationen über das kontexte finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [COM Attributes](../windows/com-attributes.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [COM-Attribute](../windows/com-attributes.md)   

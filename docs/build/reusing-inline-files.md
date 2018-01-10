@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cbad7ad7a4aee928158155a7a38c8d14a2b33a63
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f839babe036aff81174b954e1aef7abce8923386
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reusing-inline-files"></a>Wiederverwenden von Inlinedateien
 Angeben eine Inlinedatei zum Wiederverwenden <<*Filename* die Datei definiert und zuerst verwendet wird, wiederverwenden *Filename* ohne << weiter unten in der gleichen oder einem anderen Befehl. Der Befehl zum Erstellen der Inlinedatei muss vor allen anderen Befehlen ausgeführt, die die Datei zu verwenden.  

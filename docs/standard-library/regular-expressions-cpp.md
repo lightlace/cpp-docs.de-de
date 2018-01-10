@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9c32cc76c27b89bd3820e24bc7f38da0d12e0add
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 81eb92a93b60259abdb90020bb6e89cb0664eea5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="regular-expressions-c"></a>Reguläre Ausdrücke (C++)
 Die C++-Standardbibliothek unterstützt mehrere Grammatiken für reguläre Ausdrücke. Dieses Thema erläutert die Grammatik Variationen verfügbar bei Verwendung von regulären Ausdrücken.  
@@ -34,7 +35,7 @@ Der Grammatik für reguläre Ausdrücke verwenden wird von angegeben, durch die 
 -   `extended`: Der POSIX erweiterte reguläre Ausdrücke oder ERE.
 -   `awk`: Diese Methode ist `extended`, verfügt aber über zusätzliche Escapezeichen für nicht druckbaren Zeichen.
 -   `grep`: Diese Methode ist `basic`, ermöglicht aber auch neue-Zeile Zeichen ("\n"), um alternierungen zu trennen.
--   `egrep`: Diese Methode ist `extended`, ermöglicht aber auch neue Zeilenumbruchzeichen Alternatios zu trennen.
+-   `egrep`: Diese Methode ist `extended`, aber sie können außerdem neue Zeilenumbruchzeichen, um alternierungen zu trennen.
 
 Wenn keine Grammatik angegeben wird, standardmäßig `ECMAScript` wird angenommen. Nur eine Grammatik kann angegeben werden.  
   
@@ -378,7 +379,7 @@ Neben der Grammatik können mehrere Flags verwendet werden:
   
  In `basic` und `grep` haben die folgenden Zeichen eine besondere Bedeutung:  
   
--   .   [   \  
+-   sein.   [   \  
   
  In `basic` und `grep` verfügen die folgenden Zeichen außerdem über eine besondere Bedeutung, wenn sie in einem bestimmten Kontext verwendet werden:  
   
@@ -390,7 +391,7 @@ Neben der Grammatik können mehrere Flags verwendet werden:
   
  In `extended`, `egrep` und `awk` haben die folgenden Zeichen eine besondere Bedeutung:  
   
--   .   [   \   (   *   +   ?   {   &#124;  
+-   sein.   [   \   (   *   +   ?   {   &#124;  
   
  In `extended`, `egrep` und `awk` verfügen die folgenden Zeichen außerdem über eine besondere Bedeutung, wenn sie in einem bestimmten Kontext verwendet werden:  
   

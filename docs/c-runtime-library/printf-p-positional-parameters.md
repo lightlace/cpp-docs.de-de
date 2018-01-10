@@ -24,11 +24,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 83b3630addfe94c438be21ca2470ade01193a997
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 10d48a899b2d2e6ad644c385c2b2116353c20f8e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="printfp-positional-parameters"></a>printf_p-Positionsparameter
 Positionsparameter bieten die Möglichkeit, mithilfe einer Zahl anzugeben, welche Argumente in einem Feld in einer Formatzeichenfolge ersetzt werden sollen. Die folgenden `printf`-Positionsparameterfunktionen sind verfügbar:  
@@ -72,7 +73,7 @@ Dies ergibt folgende Ausgabe:
 10 November  
 ```  
   
-Im Gegensatz zu herkömmlichen Formatzeichenfolgen können Positionsparameter in einer Formatzeichenfolge mehrmals verwendet werden. Beispiel:  
+Im Gegensatz zu herkömmlichen Formatzeichenfolgen können Positionsparameter in einer Formatzeichenfolge mehrmals verwendet werden. Ein auf ein Objekt angewendeter  
   
 ```C  
 _printf_p("%1$d times %1$d is %2$d", 10, 100);  
@@ -87,7 +88,7 @@ Dies ergibt folgende Ausgabe:
 Alle Argumente müssen mindestens einmal in der Formatzeichenfolge verwendet werden. Die maximale Anzahl von Positionsparametern, die in einer Formatzeichenfolge zulässig sind, ist durch `_ARGMAX` angegeben.  
   
 ### <a name="width-and-precision"></a>Breite und Genauigkeit  
-Sie können `*n$` verwenden, um einen Positionsparameter als Breiten- oder Genauigkeitsbezeichner anzugeben, wobei `n` die Position des Breiten- oder Genauigkeitsbezeichners in der Parameterliste ist. Die Position des Breiten- oder Genauigkeitswerts muss unmittelbar nach dem \*-Symbol folgen. Beispiel:  
+Sie können `*n$` verwenden, um einen Positionsparameter als Breiten- oder Genauigkeitsbezeichner anzugeben, wobei `n` die Position des Breiten- oder Genauigkeitsbezeichners in der Parameterliste ist. Die Position des Breiten- oder Genauigkeitswerts muss unmittelbar nach dem \*-Symbol folgen. Ein auf ein Objekt angewendeter  
   
 ```C  
 _printf_p("%1$*2$s","Hello", 10);  

@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 15d37f6adb5d6a5588d9b727ff8ba5adb56dda67
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 32a3bdd1e227b894ca5a32ddfaa8c46a478a19f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cl-invokes-the-linker"></a>CL: Starten des Linkers
 CL Ruft den Linker automatisch nach dem Kompilieren, es sei denn, die/c-Option verwendet wird. CL wird an den Linker übergeben, die Namen der OBJ-Dateien, die während des Kompilierens erstellt und die Namen aller anderen Dateien, die in der Befehlszeile angegeben. Der Linker verwendet die in der Umgebungsvariablen LINK aufgeführten Optionen. / Link-Option können Sie die Optionen des Linkers in der CL-Befehlszeile angeben. Optionen, die die Option/Link folgen, überschreiben die in der Umgebungsvariablen LINK. Die Optionen in der folgenden Tabelle unterdrücken Sie verknüpfen.  

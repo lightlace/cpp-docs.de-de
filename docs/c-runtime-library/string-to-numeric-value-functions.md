@@ -27,11 +27,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 11fca1402fbf1d740b06e2eac9632496792f7da0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 68586bac573018bceb7dc982625ff6a859d18871
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="string-to-numeric-value-functions"></a>Funktionen zur Konvertierung von Zeichenfolgen in numerische Werte
 -   [strtod, _strtod_l, wcstod, _wcstod_l](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)  
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>Hinweise  
  Jede Funktion in der **strtod**-Familie konvertiert eine mit NULL endende Zeichenfolge in einen numerischen Wert. In der folgenden Tabelle sind die verfügbaren Funktionen aufgeführt.  
   
-|Funktion|Beschreibung|  
+|Funktion|description|  
 |--------------|-----------------|  
 |`strtod`|Konvertiert eine Zeichenfolge in einen Gleitkommawert mit doppelter Genauigkeit|  
 |`strtol`|Konvertiert eine Zeichenfolge in eine lange ganze Zahl|  
@@ -98,7 +99,7 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenkonvertierung](../c-runtime-library/data-conversion.md)   
- [Locale](../c-runtime-library/locale.md)   
+ [Gebietsschema](../c-runtime-library/locale.md)   
  [Interpretation von Multibyte-Zeichensequenzen](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [Gleitkommaunterstützung](../c-runtime-library/floating-point-support.md)   
+ [Floating-Point Support (Gleitkommaunterstützung)](../c-runtime-library/floating-point-support.md)   
  [atof, _atof_l, _wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)

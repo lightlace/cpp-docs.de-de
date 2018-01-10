@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d65dc3b8d7dd62994eb0a8b546e290d1b6e47b9a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 85f0c9b06ae85128209f06d95375e09043b3f9c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="language-strings"></a>Language Strings
 Die Funktionen `setlocale` und `_create_locale` können die von der Windows NLS-API unterstützten Sprachen auf Betriebssystemen verwenden, die nicht die Unicode-Codepage verwenden. Eine Liste der unterstützten Sprachen nach Betriebssystemversion finden Sie in der [National Language Support (NLS) API Reference](https://www.microsoft.com/resources/msdn/goglobal/default.mspx) (API-Referenz zur Unterstützung der Landessprache [National Language Support, NLS]). Die Sprachenzeichenfolge kann ein beliebiger Wert aus den Spalten für die **Sprache** und die **Abkürzung der Sprachnamen** der Liste der unterstützten Sprachen sein. Weitere Informationen zur Sprachunterstützung nach Betriebssystemversion finden Sie unter [Appendix A: Product Behavior](http://msdn.microsoft.com/goglobal/bb896001.aspx) in „[MS-LCID]: Windows Language Code Identifier (LCID) Reference“ (Anhang A: Produktverhalten in „[MS-LCID]: Windows-Sprachcodebezeichner – Referenz“).   
@@ -65,7 +66,7 @@ Die Implementierung der C-Laufzeitbibliothek unterstützt ebenfalls diese Sprach
 |german-swiss|de-CH|  
 |irish-english|en-IE|  
 |italian-swiss|it-CH|  
-|norwegian|nein|  
+|norwegian|Nein|  
 |norwegian-bokmal|nb-NO|  
 |norwegian-nynorsk|nn-NO|  
 |portuguese-brazilian|pt-BR|  

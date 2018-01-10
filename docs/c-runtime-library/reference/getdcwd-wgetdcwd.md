@@ -44,11 +44,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7541bf3135dfcc3734a43fe64277e5b8ea141e9e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e314db740322fc3d5e7df5aeb6bd7de747e77695
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="getdcwd-wgetdcwd"></a>_getdcwd, _wgetdcwd
 Ruft den vollständigen Pfad des aktuellen Arbeitsverzeichnisses auf dem angegebenen Laufwerk ab.  
@@ -94,7 +95,7 @@ wchar_t *_wgetdcwd(
   
  `_wgetdcwd` ist eine Breitzeichenversion von `_getdcwd`, und der `buffer` -Parameter und der Rückgabewert sind Zeichenfolgen mit Breitzeichen. Andernfalls verhalten sich `_wgetdcwd` und `_getdcwd` identisch.  
   
- Diese Funktion ist threadsicher, obwohl sie von der Funktion **GetFullPathName**abhängig ist, die selbst nicht threadsicher ist. Es kann jedoch zu einer Verletzung der Threadsicherheit kommen, wenn die Multithreadanwendung sowohl diese Funktion als auch **GetFullPathName**aufruft. Weitere Informationen finden Sie in der [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=150542) . Suchen Sie dort nach **GetFullPathName**.  
+ Diese Funktion ist threadsicher, obwohl sie von der Funktion **GetFullPathName**abhängig ist, die selbst nicht threadsicher ist. Es kann jedoch zu einer Verletzung der Threadsicherheit kommen, wenn die Multithreadanwendung sowohl diese Funktion als auch **GetFullPathName**aufruft. Weitere Informationen finden Sie in der [MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542) . Suchen Sie dort nach **GetFullPathName**.  
   
  Die Version dieser Funktion, die über das `_nolock` -Suffix verfügt, ist mit dieser Funktion identisch, allerdings ist sie nicht threadsicher und nicht vor Störungen durch andere Threads geschützt. Weitere Informationen finden Sie unter [_getdcwd_nolock, _wgetdcwd_nolock](../../c-runtime-library/reference/getdcwd-nolock-wgetdcwd-nolock.md).  
   
@@ -108,7 +109,7 @@ wchar_t *_wgetdcwd(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_getdcwd`|\<direct.h>|  
 |`_wgetdcwd`|\<direct.h> oder \<wchar.h>|  
@@ -119,7 +120,7 @@ wchar_t *_wgetdcwd(
  Siehe das Beispiel in [_getdrive](../../c-runtime-library/reference/getdrive.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verzeichnissteuerung](../../c-runtime-library/directory-control.md)   
+ [Directory Control (Verzeichnissteuerung)](../../c-runtime-library/directory-control.md)   
  [_chdir, _wchdir](../../c-runtime-library/reference/chdir-wchdir.md)   
  [_getcwd, _wgetcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)   
  [_getdrive](../../c-runtime-library/reference/getdrive.md)   

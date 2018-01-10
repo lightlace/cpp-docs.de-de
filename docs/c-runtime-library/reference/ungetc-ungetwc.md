@@ -39,11 +39,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ba352160afb6dc4a429721cd7af61204f5ef79e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d266ea3d4be06994efcd7ceb8a155f8530b30ed5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ungetc-ungetwc"></a>ungetc, ungetwc
 Schiebt ein Zeichen zurück auf den Stream.  
@@ -69,9 +70,9 @@ wint_t ungetwc(
  Zeiger zur `FILE` -Struktur.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Wenn erfolgreich, jede dieser Funktionen der Zeichenargument zurückgibt `c`. Wenn `c` nicht zurückgeschoben werden kann oder wenn kein Zeichen gelesen wurde, bleibt der Eingabestream unverändert und `ungetc` gibt `EOF` zurück. `ungetwc` gibt `WEOF` zurück. Wenn `stream` `NULL` ist, wird der ungültige Parameterhandler wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben aufgerufen. Wenn die weitere Ausführung zugelassen wird, wird `EOF` oder `WEOF` zurückgegeben und `errno` auf `EINVAL` festgelegt.  
+ Wenn erfolgreich, jede dieser Funktionen der Zeichenargument zurückgibt `c`. Wenn `c` nicht zurückgeschoben werden kann oder wenn kein Zeichen gelesen wurde, bleibt der Eingabestream unverändert und `ungetc` gibt `EOF` zurück. `ungetwc` gibt `WEOF` zurück. Wenn `stream` `NULL` ist, wird der ungültige Parameterhandler aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird `EOF` oder `WEOF` zurückgegeben und `errno` auf `EINVAL` festgelegt.  
   
- Weitere Informationen über diese und andere Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Weitere Informationen über diese und andere Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr (_doserrno, errno, _sys_errlist und _sys_nerr)](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Hinweise  
  Die `ungetc`-Funktion schiebt das Zeichen `c` wieder auf `stream` und löscht den Dateiendeindikator. Der Stream muss zum Lesen geöffnet sein. Eine nachfolgende Lesevorgang auf `stream` beginnt mit `c`. Ein Versuch, `EOF` mit `ungetc` auf den Stream zu schieben, wird ignoriert.  
@@ -92,7 +93,7 @@ wint_t ungetwc(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`ungetc`|\<stdio.h>|  
 |`ungetwc`|\<stdio.h> oder \<wchar.h>|  

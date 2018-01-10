@@ -23,11 +23,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3be1384c12ece809bd8fc275625efd4acef5a407
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a55cbad7606eb5ce204e3363b1d292c787b59740
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-bitwise-operators"></a>C-Operatoren zur Bitmanipulation
 Die bitweisen Operatoren führen bitweise AND (**&**)-, bitweise exklusive OR (**^**)- und bitweise inklusive OR(**&#124;**)-Operationen durch.  
@@ -53,7 +54,7 @@ Die bitweisen Operatoren führen bitweise AND (**&**)-, bitweise exklusive OR (*
   
  Die bitweisen C-Operatoren sind im Folgenden beschrieben:  
   
-|Operator|Beschreibung|  
+|Operator|description|  
 |--------------|-----------------|  
 |**&**|Der bitweise AND-Operator vergleicht jedes Bit seines ersten Operanden mit dem entsprechenden Bit seines zweiten Operanden. Wenn beide Bits 1 sind, wird das entsprechende Ergebnisbit auf 1 festgelegt. Andernfalls wird das entsprechende Ergebnisbit auf 0 (null) festgelegt.|  
 |**^**|Der bitweise exklusive OR-Operator vergleicht jedes Bit seines ersten Operanden mit dem entsprechenden Bit seines zweiten Operanden. Wenn ein Bit 0 (null) und das andere Bit 1 ist, wird das entsprechende Ergebnisbit auf 1 festgelegt. Andernfalls wird das entsprechende Ergebnisbit auf 0 (null) festgelegt.|  

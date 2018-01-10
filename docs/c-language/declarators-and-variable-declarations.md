@@ -17,16 +17,17 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 08165d5e6308697ec75a6d03751b26fb626dbb15
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2d9b7ce4895d51c50185c5262664dc478af62cfa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="declarators-and-variable-declarations"></a>Deklaratoren und Variablendeklarationen
 Im folgenden Abschnitt wird die Form und Bedeutung von Deklarationen für die Variablentypen in dieser Liste beschrieben. Insbesondere wird in den übrigen Abschnitten erklärt, wie Sie Folgendes deklarieren:  
   
-|Variablentyp|Beschreibung|  
+|Variablentyp|description|  
 |----------------------|-----------------|  
 |[Einfache Variablen](../c-language/simple-variable-declarations.md)|Einzelwertvariablen vom Typ "Ganzzahl" oder "Gleitkomma"|  
 |[Arrays](../c-language/array-declarations.md)|Variablen, die aus einer Auflistung von Elementen mit demselben Typ bestehen|  

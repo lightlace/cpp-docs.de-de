@@ -32,11 +32,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f825304439e3e1c27f5dc1e41a1ae4c311450625
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e96e572070471d59e91c8f10a382c2770dcc6385
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="log2-log2f-log2l"></a>log2, log2f, log2l
 Bestimmt den binären Logarithmus (Basis 2) des angegebenen Werts.  
@@ -73,19 +74,19 @@ long double log2l(
 ## <a name="return-value"></a>Rückgabewert  
  Bei Erfolg wird log2 `x` zurückgegeben.  
   
- Andernfalls wird einer der folgenden Werte zurückgeben:  
+ Andernfalls wird möglicherweise einer der folgenden Werte zurückgeben:  
   
 |Problem|Zurück|  
 |-----------|------------|  
 |`x` < 0|NaN|  
 |`x` = ±0|-UNENDLICH|  
 |`x` = 1|+0|  
-|+UNENDLICH|+UNENDLICH|  
+|+UNENDLICH|+INFINITY|  
 |NaN|NaN|  
 |Domänenfehler|NaN|  
 |pole-Fehler|-HUGE_VAL, -HUGE_VALF, oder -HUGE_VALL|  
   
- Fehler werden gemäß den Angaben in [_matherr](../../c-runtime-library/reference/matherr.md) gemeldet.  
+ Fehler werden gemäß der Angaben in [_matherr](../../c-runtime-library/reference/matherr.md) gemeldet.  
   
 ## <a name="remarks"></a>Hinweise  
  Ist „x“ eine ganze Zahl, gibt diese Funktion im Wesentlichen den nullbasierten Index des höchstwertigen 1-Bits von `x` zurück.  
@@ -99,6 +100,6 @@ long double log2l(
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Alphabetische Funktionsreferenz](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [Alphabetical Function Reference (Alphabetische Funktionsreferenz)](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [exp2, exp2f, exp2l](../../c-runtime-library/reference/exp2-exp2f-exp2l.md)   
  [log, logf, log10, log10f](../../c-runtime-library/reference/log-logf-log10-log10f.md)

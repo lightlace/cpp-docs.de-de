@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5b1581fe5a952d1ea8e78f29e606af5ac148f3b7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6860198b9acce372b710e819a17f534e793f1ead
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-relational-and-equality-operators"></a>C-Operatoren (relational) und C-Gleichheitsoperatoren
 Die binären Gleichheits- und relationalen Operatoren vergleichen ihren ersten Operanden mit ihrem zweiten Operanden, um die Gültigkeit der angegebenen Beziehung zu testen. Das Ergebnis eines relationalen Ausdrucks beträgt 1, wenn die getestete Beziehung "true" ist, und er beträgt 0, wenn sie "false" ist. Das Ergebnis hat den Typ `int`.  

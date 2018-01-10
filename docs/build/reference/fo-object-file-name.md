@@ -1,68 +1,69 @@
 ---
-title: "/Fo (Name der Objektdatei) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/Fo"
-  - "VC.Project.VCCLCompilerTool.ObjectFile"
-  - "VC.Project.VCCLWCECompilerTool.ObjectFile"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Fo (Compileroption) [C++]"
-  - "Fo (Compileroption) [C++]"
-  - "-Fo (Compileroption) [C++]"
-  - "Objektdateien, Benennen"
+title: -Fo (Name der Objektdatei) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /Fo
+- VC.Project.VCCLCompilerTool.ObjectFile
+- VC.Project.VCCLWCECompilerTool.ObjectFile
+dev_langs: C++
+helpviewer_keywords:
+- Fo compiler option [C++]
+- object files, naming
+- /Fo compiler option [C++]
+- -Fo compiler option [C++]
 ms.assetid: 0e6d593e-4e7f-4990-9e6e-92e1dcbcf6e6
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: be821daae88e7cc2149debb49889b79bc1a59699
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# /Fo (Name der Objektdatei)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Gibt einen Namen oder ein Verzeichnis für die Objektdatei \(OBJ\-Datei\) an, der bzw. das anstelle des Standardwerts verwendet wird.  
+# <a name="fo-object-file-name"></a>/Fo (Name der Objektdatei)
+Gibt einen Namen für die Objektdatei (OBJ) oder das Verzeichnis an, der anstelle des Standardwerts verwendet werden soll.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /Fopathname  
 ```  
   
-## Hinweise  
- Ohne die Option verwendet die Objektdatei den Basisnamen der Quelldatei und die Erweiterung **.obj**.  Name und Erweiterung können frei gewählt werden, aber es wird empfohlen, die Erweiterung **.obj** zu verwenden.  
+## <a name="remarks"></a>Hinweise  
+ Wenn Sie diese Option nicht verwenden, wird die Objektdatei der Basisname der Quelldatei und die Erweiterung .obj verwendet. Können Sie Name und Erweiterung werden sollen, aber die empfohlene Konvention ist die Verwendung. Objekt  
   
-### So legen Sie diese Compileroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Gewusst wie: Öffnen von Projekteigenschaftenseiten](../../misc/how-to-open-project-property-pages.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Klicken Sie auf den Ordner **C\/C\+\+**.  
+2.  Klicken Sie auf den Ordner **C/C++** .  
   
-3.  Klicken Sie auf die Eigenschaftenseite **Ausgabedateien**.  
+3.  Klicken  Sie auf die Eigenschaftenseite **Ausgabedateien** .  
   
-4.  Ändern Sie die Eigenschaft **Objektdateiname**.  In der Entwicklungsumgebung muss die Objektdatei die Erweiterung .obj haben.  
+4.  Ändern der **Name der Objektdatei** Eigenschaft.  In der Entwicklungsumgebung vornehmen, muss die Objektdatei haben die Erweiterung. Objekt  
   
-### So legen Sie diese Compileroption programmgesteuert fest  
+### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
   
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ObjectFile*>.  
+-   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ObjectFile%2A>.  
   
-## Beispiel  
- Mit der folgenden Befehlszeile wird eine Objektdatei mit dem Namen **THIS.obj** in dem vorhandenen Verzeichnis **\\OBJECT** auf Laufwerk **B** erstellt.  
+## <a name="example"></a>Beispiel  
+ Die folgende Befehlszeile erstellt eine Objektdatei namens THIS.obj in ein vorhandenes Verzeichnis \OBJECT auf Laufwerk B.  
   
 ```  
 CL /FoB:\OBJECT\ THIS.C  
 ```  
   
-## Siehe auch  
- [\/F\-Optionen \(Ausgabedateioptionen\)](../../build/reference/output-file-f-options.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Ausgabedatei (/ F) Optionen](../../build/reference/output-file-f-options.md)   
  [Compileroptionen](../../build/reference/compiler-options.md)   
  [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)   
  [Festlegen des Pfadnamens](../../build/reference/specifying-the-pathname.md)

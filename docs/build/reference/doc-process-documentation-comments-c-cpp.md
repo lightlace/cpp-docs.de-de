@@ -1,71 +1,70 @@
 ---
-title: "/doc (Verarbeiten von Dokumentationskommentaren) (C/C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles"
-  - "/doc"
-  - "VC.Project.VCCLCompilerTool.XMLDocumentationFileName"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/doc (Compileroption) [C++]"
-  - "Kommentare, C++-Code"
-  - "-doc (Compileroption) [C++]"
-  - "XML-Dokumentation, Kommentare in Quelldateien"
+title: -Doc (Verarbeiten von Dokumentationskommentaren) (C/C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles
+- /doc
+- VC.Project.VCCLCompilerTool.XMLDocumentationFileName
+dev_langs: C++
+helpviewer_keywords:
+- /doc compiler option [C++]
+- comments, C++ code
+- XML documentation, comments in source files
+- -doc compiler option [C++]
 ms.assetid: b54f7e2c-f28f-4f46-9ed6-0db09be2cc63
-caps.latest.revision: 17
-caps.handback.revision: "17"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8737c0e33d33fe062d9a07f18d9005e58463f5b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# /doc (Verarbeiten von Dokumentationskommentaren) (C/C++)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Durch diese Option werden vom Compiler Dokumentationskommentare in Quellcodedateien verarbeitet, und für jede Quellcodedatei mit Dokumentationskommentaren wird eine XDC\-Datei erstellt.  
+# <a name="doc-process-documentation-comments-cc"></a>/doc (Verarbeiten von Dokumentationskommentaren) (C/C++)
+Bewirkt, dass der Compiler Dokumentationskommentare in Quellcodedateien und eine XDC-Datei für jede Quelldatei zu erstellen, die Dokumentationskommentare verfügt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /doc[name]  
 ```  
   
-## Argumente  
+## <a name="arguments"></a>Argumente  
  `name`  
- Der Name der XDC\-Datei, die vom Compiler erstellt wird.  Nur gültig, wenn bei der Kompilierung eine CPP\-Datei übergeben wird.  
+ Der Name der XDC-Datei, die der Compiler erstellt. Nur gültig, wenn in der Kompilierung eine CPP-Datei übergeben wird.  
   
-## Hinweise  
- Die XDC\-Dateien werden mit xdcmake.exe in eine XML\-Datei umgewandelt.  Weitere Informationen finden Sie unter [XDCMake\-Verweis](../../ide/xdcmake-reference.md).  
+## <a name="remarks"></a>Hinweise  
+ Der XDC-Dateien werden in eine XML-Datei mit xdcmake.exe verarbeitet. Weitere Informationen finden Sie unter [XDCMake-Verweis](../../ide/xdcmake-reference.md).  
   
- Sie können den Quellcodedateien Dokumentationskommentare hinzufügen.  Weitere Informationen finden Sie unter [Empfohlene Tags für Dokumentationskommentare](../../ide/recommended-tags-for-documentation-comments-visual-cpp.md).  
+ Sie können den Quellcodedateien Dokumentationskommentare hinzufügen. Weitere Informationen finden Sie unter [empfohlene Tags für Dokumentationskommentare](../../ide/recommended-tags-for-documentation-comments-visual-cpp.md).  
   
- **\/doc** ist nicht mit **\/clr:oldSyntax** kompatibel.  Weitere Informationen finden Sie unter [\/clr \(Common Language Runtime\-Kompilierung\)](../../build/reference/clr-common-language-runtime-compilation.md).  
+ Um die generierte XML-Datei mit IntelliSense verwenden, stellen Sie den Dateinamen der XML-Datei, die die Assembly, die Sie verwenden möchten, zu unterstützen, und fügen Sie die XML-Datei im gleichen Verzeichnis wie die Assembly übereinstimmt. Wenn die Assembly in Visual Studio-Projekt verwiesen wird, wird auch die XML-Datei gefunden. Weitere Informationen finden Sie unter [Verwenden von IntelliSense](/visualstudio/ide/using-intellisense) und [XML-Codekommentaren](/visualstudio/ide/supplying-xml-code-comments).  
   
- Um die erzeugte XML\-Datei in IntelliSense zu verwenden, weisen Sie der XML\-Datei denselben Namen zu wie der Assembly, die unterstützt werden soll, und legen die XML\-Datei in dem Verzeichnis ab, in dem sich auch die Assembly befindet.  Wenn im Visual Studio\-Projekt auf die Assembly verwiesen wird, wird die entsprechende XML\-Datei ebenfalls gefunden.  Weitere Informationen finden Sie unter [Verwenden von IntelliSense](../Topic/Using%20IntelliSense.md) und [Anzeigen von XML\-Codekommentaren](../Topic/Supplying%20XML%20Code%20Comments.md).  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-### So legen Sie diese Compileroption in der Visual Studio\-Entwicklungsumgebung fest  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Gewusst wie: Öffnen von Projekteigenschaftenseiten](../../misc/how-to-open-project-property-pages.md).  
+2.  Erweitern Sie die **Konfigurationseigenschaften** Knoten.  
   
-2.  Erweitern Sie den Knoten **Konfigurationseigenschaften**.  
+3.  Erweitern Sie die **C/C++-** Knoten.  
   
-3.  Erweitern Sie den Knoten **C\/C\+\+**.  
+4.  Wählen Sie die **Ausgabedateien** Eigenschaftenseite.  
   
-4.  Wählen Sie die Eigenschaftenseite für die **Ausgabedateien** aus.  
+5.  Ändern der **Generieren von XML-Dokumentationsdateien** Eigenschaft.  
   
-5.  Ändern Sie die Eigenschaft **XML\-Dokumentationsdateien generieren**.  
+### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
   
-### So legen Sie diese Linkeroption programmgesteuert fest  
+1.  Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.GenerateXMLDocumentationFiles%2A>.  
   
-1.  Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.GenerateXMLDocumentationFiles*>.  
-  
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Compileroptionen](../../build/reference/compiler-options.md)   
  [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
