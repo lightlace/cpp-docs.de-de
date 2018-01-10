@@ -1,93 +1,94 @@
 ---
-title: "Regul&#228;re, statisch mit MFC verkn&#252;pfte DLLs | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLLs [C++], Reguläre"
-  - "Reguläre DLLs [C++]"
-  - "Reguläre DLLs [C++], Statisch gebunden mit MFC"
-  - "Statisch gebunden mit DLLs [C++]"
-  - "USRDLLs"
-  - "USRDLLs, Statisch gebunden mit MFC"
+title: "Statisch mit MFC verknüpfte reguläre MFC-DLLs | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- regular MFC DLLs [C++]
+- DLLs [C++], regular
+- USRDLLs
+- USRDLLs, statically linked to MFC
+- statically linked DLLs [C++]
+- regular MFC DLLs [C++], statically linked to MFC
 ms.assetid: 2eed531c-726a-4b8a-b936-f721dc00a7fa
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0fd5eee67b48fd4895cc73adfb72d34f0bd24d2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Regul&#228;re, statisch mit MFC verkn&#252;pfte DLLs
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Eine reguläre DLL, die statisch mit MFC verknüpft ist, ist eine DLL, die MFC intern verwendet. Die exportierten Funktionen in der DLL können sowohl von ausführbaren MFC\- als auch von ausführbaren MFC\-fremden Dateien aufgerufen werden.  Wie der Name bereits vermuten lässt, wird dieser DLL\-Typ mithilfe der Static Link Library\-Version von MFC erstellt.  Die Funktionen werden in der Regel aus einer regulären DLL über die Standard\-C\-Schnittstelle exportiert.  Ein Beispiel dafür, wie eine reguläre DLL geschrieben, erstellt und verwendet wird, finden Sie unter [DLLScreenCap](assetId:///2171291d-3a50-403b-90a1-d93c2acb4f4a).  
+# <a name="regular-mfc-dlls-statically-linked-to-mfc"></a>Statisch mit MFC verknüpfte reguläre MFC-DLLs
+Eine reguläre MFC-DLL statisch mit MFC verknüpft wird, eine DLL, die MFC intern verwendet und von ausführbaren MFC oder MFC-Dateien können in der DLL exportierten Funktionen aufgerufen werden. Wie der Name beschrieben wird, wird diese Art von DLL erstellt mithilfe der static Link Library-Version von MFC. Funktionen sind in der Regel über reguläre MFC-DLL über die standard-C-Schnittstelle exportiert. Ein Beispiel zu schreiben, erstellen und eine reguläre MFC-DLL verwenden, finden Sie im Beispiel [DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap).  
   
- Beachten Sie, dass der Begriff "USRDLL" in der Visual C\+\+\-Dokumentation nicht mehr verwendet wird.  Eine reguläre DLL, die statisch mit MFC verknüpft ist, hat dieselben Merkmale wie die frühere USRDLL.  
+ Beachten Sie, die den Begriff USRDLL nicht mehr in der Dokumentation zu Visual C++ verwendet wird. Eine reguläre MFC-DLL, die statisch mit MFC verknüpft wird, hat dieselben Merkmale wie die frühere USRDLL.  
   
- Eine statisch mit MFC verknüpfte reguläre DLL hat die folgenden Merkmale:  
+ Eine reguläre, statisch mit MFC verknüpfte MFC DLL hat die folgenden Funktionen:  
   
--   Die ausführbare Clientdatei kann in jeder Sprache geschrieben werden, die die Verwendung von DLLs unterstützt \(C, C\+\+, Pascal, Visual Basic usw.\); sie muss keine MFC\-Anwendung sein.  
+-   Die ausführbare Clientdatei kann in einer beliebigen Sprache geschrieben werden, die unterstützt die Verwendung von DLLs (C, C++, Pascal, Visual Basic, usw.); Es muss sich nicht in einer MFC-Anwendung sein.  
   
--   Die DLL kann mit denselben MFC\-Static Link Libraries verknüpft werden, die auch von Anwendungen verwendet werden.  Eine separate Version von Static Link Libraries für DLLs ist nicht mehr verfügbar.  
+-   Die DLL kann die gleichen MFC static Link Libraries, die von Clientanwendungen genutzt verknüpfen. Es ist nicht mehr eine separate Version der static Link Libraries für DLLs.  
   
--   Vor Version 4.0 von MFC hatten USRDLLs dieselbe Art von Funktionalität wie reguläre, statisch mit MFC verknüpfte DLLs.  Seit Version 4.0 von Visual C\+\+ ist der Ausdruck USRDLL überholt.  
+-   Vor Version 4.0 von MFC bereitgestellten USRDLLs dieselbe Art von Funktionalität wie reguläre, statisch mit MFC verknüpfte MFC-DLLs. Ab Visual C++ ist als Version 4.0 des Begriffs USRDLL veraltet.  
   
- Für eine statisch mit MFC verknüpfte reguläre DLL bestehen folgende Anforderungen:  
+ Eine reguläre, statisch mit MFC verknüpfte MFC DLL hat die folgenden Anforderungen:  
   
--   Dieser DLL\-Typ muss eine von `CWinApp` abgeleitete Klasse instanziieren.  
+-   Diese Art von DLL muss instanziieren eine Klasse abgeleitet `CWinApp`.  
   
--   Die DLL verwendet die von MFC bereitgestellte `DllMain`\-Funktion.  Legen Sie den gesamten DLL\-spezifischen Initialisierungscode, wie bei einer normalen MFC\-Anwendung, in der Memberfunktion `InitInstance` sowie den Terminierungscode in `ExitInstance` ab.  
+-   Diese Art von DLL verwendet die `DllMain` von MFC bereitgestellt. Platzieren Sie alle DLL-spezifische Initialisierungscode in der `InitInstance` Elementcode-Funktion und Beendigung in `ExitInstance` wie bei einer normalen MFC-Anwendung.  
   
--   Auch wenn der Ausdruck USRDLL veraltet ist, müssen Sie in der Compilerbefehlszeile "**\_USRDLL**" definieren.  Dadurch wird festgelegt, welche Deklarationen aus den MFC\-Headerdateien übernommen werden.  
+-   Obwohl der Begriff USRDLL veraltet ist, müssen Sie dennoch definieren "**_USRDLL**" auf der Befehlszeile des Compilers. Diese Definition wird bestimmt, welche Deklarationen aus den MFC-Headerdateien per Pull abgerufen wird.  
   
- Reguläre DLLs müssen über eine von `CWinApp` abgeleitete Klasse sowie über ein einzelnes Objekt dieser Anwendungsklasse verfügen, wie dies auch bei einer MFC\-Anwendung der Fall ist.  Das `CWinApp`\-Objekt der DLL hat jedoch keine Haupt\-Meldungsverteilschleife wie das **CWinApp**\-Objekt einer Anwendung.  
+ Reguläre MFC-DLLs benötigen eine `CWinApp`-Klasse und ein einzelnes Objekt dieser Anwendungsklasse abgeleitet, wie eine MFC-Anwendung. Allerdings die `CWinApp` Objekt der DLL keine Haupt-Meldungsverteilschleife, wie die `CWinApp` Objekt einer Anwendung.  
   
- Beachten Sie, dass der `CWinApp::Run`\-Mechanismus nicht auf eine DLL angewendet werden kann, da die Haupt\-Meldungsverteilschleife im Besitz der Anwendung ist.  Wenn die DLL keine modalen Dialogfelder öffnet oder ein eigenes Hauptrahmenfenster hat, muss die Haupt\-Meldungsverteilschleife der Anwendung eine von der DLL exportierte Routine aufrufen, die wiederum die `CWinApp::PreTranslateMessage`\-Memberfunktion des DLL\-Anwendungsobjekts aufruft.  
+ Beachten Sie, dass die `CWinApp::Run` Mechanismus selbst gilt nicht für eine DLL, da die Anwendung die Haupt-Meldungsverteilschleife besitzt. Wenn die DLL nicht modale Dialogfelder öffnet oder ein Hauptrahmenfenster eigene, muss die Haupt-Meldungsverteilschleife der Anwendung eine Routine, die von der DLL, die wiederum ruft exportierten Aufrufen der `CWinApp::PreTranslateMessage` Memberfunktion von der DLL-Application-Objekt.  
   
- Ein Beispiel für diese Funktion finden Sie unter dem Beispiel "DLLScreenCap".  
+ Ein Beispiel dieser Funktion finden Sie im DLLScreenCap-Beispiel.  
   
- Symbole werden in der Regel aus einer regulären DLL über die Standard\-C\-Schnittstelle exportiert.  Die Deklaration einer aus einer regulären DLL exportierten Funktion würde etwa so aussehen:  
+ Symbole werden in der Regel über reguläre MFC-DLL über die standard-C-Schnittstelle exportiert. Die Deklaration einer aus einer regulären MFC-DLL exportierten Funktion würde etwa wie folgt aussehen:  
   
 ```  
 extern "C" __declspec(dllexport) MyExportedFunction( );  
 ```  
   
- Alle Speicherbelegungen innerhalb einer regulären DLL sollten in der DLL verbleiben. Folgende Elemente sollten weder an die aufrufende ausführbare Datei übergeben noch von dieser empfangen werden:  
+ Alle speicherbelegungen innerhalb einer regulären MFC DLL sollte innerhalb der DLL bleiben. die DLL sollten nicht an übergeben oder Empfangen von der aufrufenden ausführbaren Datei die folgenden:  
   
--   Zeiger auf MFC\-Objekte  
+-   Zeiger auf MFC-Objekte  
   
--   Zeiger auf von MFC belegten Speicher  
+-   Zeiger auf von MFC belegten Arbeitsspeicher  
   
- Falls eine der oben genannten Aktionen oder eine Übergabe der von MFC abgeleiteten Objekte zwischen der aufrufenden ausführbaren Datei und der DLL erforderlich ist, müssen Sie eine Erweiterungs\-DLL erstellen.  
+ Wenn Sie eine der oben genannten Kriterien oder MFC abgeleitete Objekte zwischen der aufrufenden ausführbaren Datei und DLL übergeben müssen, müssen Sie eine MFC-Erweiterungs-DLL erstellen.  
   
- Zeiger auf Speicherbereiche, die von den C\-Laufzeitbibliotheken belegt wurden, lassen sich nur dann bedenkenlos zwischen einer Anwendung und einer DLL austauschen, wenn Sie von den Daten eine Kopie anlegen.  Sie dürfen diese Zeiger nicht löschen, neu dimensionieren oder verwenden, ohne eine Kopie des Speichers angefertigt zu haben.  
+ Sie können ruhig Zeiger in den Arbeitsspeicher, die zugewiesen wurden durch Übergeben der C-Laufzeitbibliotheken zwischen einer Anwendung und eine DLL-Datei nur dann, wenn eine Kopie der Daten erstellt. Sie müssen nicht löschen oder ändern diese Zeiger oder verwenden, ohne dass eine Kopie des Arbeitsspeichers.  
   
- Eine statisch mit MFC verknüpfte DLL kann nicht zusätzlich mit den gemeinsam genutzten MFC\-DLLs dynamisch verknüpft werden.  Eine statisch mit MFC verknüpfte DLL wird, wie jede andere DLL, dynamisch an eine Anwendung gebunden. Dieser DLL\-Typ wird nach demselben Verfahren wie alle anderen DLLs mit Anwendungen verknüpft.  
+ Eine, die statisch mit MFC verknüpften DLL kann nicht mit der gemeinsam genutzten MFC-DLLs auch dynamisch verknüpfen. Eine DLL, die statisch mit MFC verknüpften ist dynamisch zu einer Anwendung genau wie jede andere DLL gebunden. Anwendungen, die mit es genau wie jede andere DLL verknüpft wird.  
   
- Die standardmäßigen MFC\-Static Link Libraries werden gemäß den unter [Namenskonventionen für MFC\-DLLs](../build/naming-conventions-for-mfc-dlls.md) beschriebenen Konventionen benannt.  Ab MFC, Version 3.0, müssen Sie die Version der MFC\-Bibliothek, die eingebunden werden soll, nicht mehr manuell für den Linker angeben.  Die korrekte Version der MFC\-Bibliothek, die auf der Grundlage von Präprozessordefinitionen, wie **\_DEBUG** oder **\_UNICODE**, eingebunden werden soll, wird automatisch durch die MFC\-Headerdateien ermittelt.  Die MFC\-Headerdateien fügen **\/DEFAULTLIB**\-Direktiven hinzu, wodurch der Linker angewiesen wird, eine spezifische Version der MFC\-Bibliothek einzubinden.  
+ Die standardmäßigen MFC-static Link Libraries heißen gemäß der Konvention, die in beschriebenen [Namenskonventionen für MFC-DLLs](../build/naming-conventions-for-mfc-dlls.md). Mit MFC, Version 3.0 und höher ist es jedoch nicht mehr erforderlich, manuell an den Linker geben die Version der MFC-Bibliothek, die eingebunden werden soll. Stattdessen automatisch die MFC-Headerdateien bestimmt die richtige Version der MFC-Bibliothek zur Verknüpfung von basierend auf Präprozessor definiert, wie z. B.  **\_DEBUGGEN** oder **_UNICODE**. Die MFC-Headerdateien hinzufügen Option Direktiven den Linker angewiesen wird, um in einer bestimmten Version der MFC-Bibliothek zu verknüpfen.  
   
-## Was möchten Sie tun?  
+## <a name="what-do-you-want-to-do"></a>Wie möchten Sie vorgehen?  
   
--   [Reguläre DLLs initialisieren](../build/initializing-regular-dlls.md)  
+-   [Reguläre MFC-DLLs initialisieren](../build/run-time-library-behavior.md#initializing-regular-dlls)  
   
-## Worüber möchten Sie mehr erfahren?  
+## <a name="what-do-you-want-to-know-more-about"></a>Worüber möchten Sie mehr erfahren?  
   
 -   [Verwenden von MFC als Teil einer DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)  
   
--   [Verwenden von Datenbank\-, OLE\- und Sockets\-Erweiterungs\-DLLs in regulären DLLs](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)  
+-   [Using Database, OLE, and Sockets MFC extension DLLs in regular MFC DLLs (Verwenden von Datenbank-, OLE- und Sockets-MFC-Erweiterungs-DLLs in regulären MFC-DLLs)](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)  
   
--   [MFC\-DLL\-Assistent](../mfc/reference/mfc-dll-wizard.md)  
+-   [Erstellen einer MFC-DLL](../mfc/reference/mfc-dll-wizard.md)  
   
--   [Reguläre, dynamisch mit MFC verknüpfte DLLs](../build/regular-dlls-dynamically-linked-to-mfc.md)  
+-   [Regular MFC DLLs Dynamically Linked to MFC (Reguläre, dynamisch mit MFC verknüpfte MFC-DLLs)](../build/regular-dlls-dynamically-linked-to-mfc.md)  
   
--   [Erweiterungs\-DLLs](../build/extension-dlls-overview.md)  
+-   [MFC extension DLLs (MFC-Erweiterungs-DLLs)](../build/extension-dlls-overview.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Arten von DLLs](../build/kinds-of-dlls.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: acae66ff8de61854d1fbaf38955ab275a01cffda
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 326f54db7f9edc30e924750143fdcdb78c02357b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nmake-reference"></a>NMAKE-Referenz
 Bei Microsoft Program Maintenance Utility (NMAKE.EXE) handelt es sich um ein in [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] enthaltenes Befehlszeilentools, das Projekte auf Grundlage von in einer Beschreibungsdatei enthaltenen Befehlen erstellt.  

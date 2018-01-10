@@ -43,11 +43,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ec77e462b357708153f26b5289f35c2ee7b7a104
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cd4178718380502e91bb7f019164f2398c93323c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 Multipliziert zwei Werte, addiert einen dritten und rundet das Ergebnis, ohne Genauigkeit aufgrund von vorherigen Rundungen einzubüßen.  
@@ -105,13 +106,13 @@ long double fmal(
 |Problem|Zurück|  
 |-----------|------------|  
 |`x` = INFINITY, `y` = 0 oder<br /><br /> `x` = 0, `y` = INFINITY|NaN|  
-|`x` oder `y` = exact ± INFINITY, `z` = INFINITY mit dem entgegengesetzten Vorzeichen|NaN|  
+|`x`oder `y` = genaue ± UNENDLICH, `z` = UNENDLICH mit umgekehrtem Vorzeichen|NaN|  
 |`x` oder `y` = NaN|NaN|  
 |nicht (`x` = 0, `y`= indefinite) und `z` = NaN<br /><br /> nicht (`x`=indefinite, `y`=0) und `z` = NaN|NaN|  
 |Überlaufbereichsfehler|±HUGE_VAL, ±HUGE_VALF oder ±HUGE_VALL|  
 |Unterlaufbereichsfehler|Richtige Wert nach dem Runden|  
   
- Fehler werden wie in [_matherr](../../c-runtime-library/reference/matherr.md) angegeben gemeldet.  
+ Fehler werden gemäß der Angaben in [_matherr](../../c-runtime-library/reference/matherr.md) gemeldet.  
   
 ## <a name="remarks"></a>Hinweise  
  Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen `fma` verwenden und zurückgeben **"float"** und **long double** Typen. In einem C-Programm `fma` immer Double und gibt eine **doppelte**.  
@@ -127,6 +128,6 @@ long double fmal(
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Alphabetische Funktionsreferenz](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [Alphabetical Function Reference (Alphabetische Funktionsreferenz)](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [remainder, remainderf, remainderl](../../c-runtime-library/reference/remainder-remainderf-remainderl.md)   
  [remquo, remquof, remquol](../../c-runtime-library/reference/remquo-remquof-remquol.md)

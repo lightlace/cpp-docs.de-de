@@ -1,1 +1,1 @@
-Windows Runtime C\+\+ Template Library
+Windows Runtime C++ Template Library

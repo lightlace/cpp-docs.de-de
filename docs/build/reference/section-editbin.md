@@ -1,72 +1,72 @@
 ---
-title: "/SECTION (EDITBIN) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/section"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/SECTION (editbin-Option)"
-  - "Ausrichtungszeichen in Abschnitten"
-  - "SECTION (editbin-Option)"
-  - "-SECTION (editbin-Option)"
+title: -SECTION (EDITBIN) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /section
+dev_langs: C++
+helpviewer_keywords:
+- -SECTION editbin option
+- SECTION editbin option
+- alignment characters in sections
+- /SECTION editbin option
 ms.assetid: 4680ab4e-c984-4251-8241-93440cad7615
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 91ffb9bd0645cab51e4140697c41e5b715380fe8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# /SECTION (EDITBIN)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="section-editbin"></a>/SECTION (EDITBIN)
 ```  
 /SECTION:name[=newname][,attributes][alignment]  
 ```  
   
-## Hinweise  
- Durch diese Option werden die Attribute eines Abschnitts geändert, wobei die Attribute überschrieben werden, die während der Kompilierung oder der Verknüpfung der Objektdatei für den Abschnitt festgelegt wurden.  
+## <a name="remarks"></a>Hinweise  
+ Diese Option ändert die Attribute eines Abschnitts, überschreiben die Attribute, die bei die Objektdatei für den Abschnitt kompiliert bzw. verknüpft wurde festgelegt wurden.  
   
- Nach dem Doppelpunkt \( **:** \) wird der Name des Abschnitts angegeben.  Um den Abschnittsnamen zu ändern, geben Sie hinter dem Namen \(*name*\) ein Gleichheitszeichen \(\=\) und einen neuen Namen \(*newname*\) für den Abschnitt ein.  
+ Nach dem Doppelpunkt ( **:** ), geben Sie die *Namen* des Abschnitts. Um den Namen des Abschnitts zu ändern, führen Sie *Namen* mit einem Gleichheitszeichen (=) und ein *Newname* für den Abschnitt.  
   
- Um für den Abschnitt `attributes` festzulegen oder zu ändern, geben Sie ein Komma \(**,**\), gefolgt von einem oder mehreren Attributzeichen ein.  Um ein Attribut zu negieren, setzen Sie vor das Zeichen ein Ausrufezeichen \(\!\).  Die nachfolgenden Zeichen stellen Speicherattribute dar:  
+ Festlegen oder ändern im Abschnitts `attributes`, geben Sie ein Komma (**,**) gefolgt von einem oder mehreren Attributzeichen. Stellen Sie das Zeichen mit einem Ausrufezeichen (!) voran, um ein Attribut zu negieren. Die folgenden Zeichen werden Arbeitsspeicher-Attribute angeben:  
   
-|Attribute|Einstellung|  
-|---------------|-----------------|  
+|Attribut|Einstellung|  
+|---------------|-------------|  
 |c|Code|  
-|d|discardable|  
+|T|Entfernbar|  
 |e|executable|  
-|i|initialized data|  
-|k|cached virtual memory|  
-|m|link remove|  
-|o|link info|  
-|p|paged virtual memory|  
-|r|read|  
-|s|shared|  
-|u|uninitialized data|  
-|w|write|  
+|i|initialisierte Daten|  
+|c|zwischengespeicherte virtuellen Arbeitsspeicher|  
+|m|Link zu entfernen|  
+|o|Link-Informationen|  
+|d|ausgelagerter virtueller Arbeitsspeicher|  
+|b|Lesen|  
+|s|Freigegeben|  
+|n|nicht initialisierte Daten|  
+|m|Schreiben|  
   
- Um *alignment* zu steuern, geben Sie das Zeichen **A**, gefolgt von einem Zeichen ein, mit dem Sie wie folgt die Größe der Ausrichtung in Bytes festlegen:  
+ Um zu steuern *Ausrichtung*, geben Sie das Zeichen **ein** gefolgt von einem der folgenden Zeichen enthalten, um die Größe der Ausrichtung in Bytes, der wie folgt festlegen:  
   
-|Zeichen|Ausrichtungsgröße in Bytes|  
-|-------------|--------------------------------|  
+|Zeichen|Ausrichtungsgröße in bytes|  
+|---------------|-----------------------------|  
 |1|1|  
 |2|2|  
 |4|4|  
 |8|8|  
-|p|16|  
+|d|16|  
 |t|32|  
 |s|64|  
-|x|keine Ausrichtung|  
+|w|keine Ausrichtung|  
   
- Geben Sie die Zeichen für `attributes` und *alignment* als eine Zeichenfolge ohne Leerraum an.  Bei diesen Zeichen wird keine Groß\-\/Kleinschreibung berücksichtigt.  
+ Geben Sie die `attributes` und *Ausrichtung* Zeichen als Zeichenfolge, wobei keine Leerzeichen. Die Zeichen sind nicht in der Groß-/Kleinschreibung beachtet.  
   
-## Siehe auch  
- [EDITBIN\-Optionen](../../build/reference/editbin-options.md)
+## <a name="see-also"></a>Siehe auch  
+ [EDITBIN-Optionen](../../build/reference/editbin-options.md)

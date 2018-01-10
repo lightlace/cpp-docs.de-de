@@ -1,67 +1,68 @@
 ---
-title: "Verwenden von C oder C++ in __asm-Bl&#246;cken"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__asm-Schlüsselwort [C++], C/C++-Elemente in"
-  - "Kommentare, In __asm-Blöcken"
-  - "Konstanten, In __asm-Blöcken"
-  - "Inlineassembly, Mischen von Anweisungen mit C/C++-Anweisungen"
-  - "Makros, __asm-Blöcke"
-  - "Präprozessordirektiven"
-  - "Präprozessordirektiven, Verwendet in __asm-Blöcken"
-  - "Präprozessor, Direktiven"
-  - "Symbole, In __asm-Blöcken"
-  - "Typnamen, Verwendet in __asm-Blöcken"
-  - "typedef-Namen, Verwendet in __asm-Blöcken"
+title: "Verwenden von C oder C++ in __asm-Blöcken | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- inline assembly, mixing instructions with C/C++ statements
+- symbols, in __asm blocks
+- macros, __asm blocks
+- preprocessor directives, used in __asm blocks
+- type names, used in __asm blocks
+- preprocessor directives
+- preprocessor, directives
+- constants, in __asm blocks
+- comments, in __asm blocks
+- typedef names, used in __asm blocks
+- __asm keyword [C++], C/C++ elements in
 ms.assetid: ae8b2b52-6b75-42e3-ac0c-ad02d922ed97
-caps.latest.revision: 8
-caps.handback.revision: "8"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3ab706f682372cb0a76f0d3283157d4da9105ed6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Verwenden von C oder C++ in __asm-Bl&#246;cken
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Microsoft\-spezifisch  
- Da inline Assemblyanweisungen mit C\# oder C\+\+\-Anweisungen kombiniert werden können, können sie C\- oder C\+\+\-Variablen über den Namen verweisen und viele andere Elemente dieser Sprachen verwenden.  
+# <a name="using-c-or-c-in-asm-blocks"></a>Verwenden von C oder C++ in __asm-Blöcken
+## <a name="microsoft-specific"></a>Microsoft-spezifisch  
+ Da Inlineassemblyanweisungen mit C- oder C++-Anweisungen kombiniert werden können, können sie finden Sie anhand des Namens in C oder C++-Variablen und viele andere Elemente von diesen Sprachen verwenden.  
   
- Ein `__asm`\-Block kann die folgenden Sprachelemente verwenden:  
+ Ein `__asm` Block kann die folgenden Sprachelemente verwenden:  
   
--   Symbole und Bezeichnungen, einschließlich Funktionsnamen und Variablen  
+-   Symbole, z. B. Bezeichnungen und Variablen- und Funktionsnamen verwendet  
   
--   Konstanten, einschließlich symbolische Konstanten und `enum`\-Member  
+-   Konstanten, einschließlich symbolische Konstanten und `enum` Elemente  
   
--   Präprozessordirektiven Makros und  
+-   Makros und Präprozessordirektiven  
   
--   Kommentare \( **\/\* \*\/** und **\/\/** \)  
+-   Kommentare (beide  **/ \* \* /**  und  **//**  )  
   
--   Typnamen \(wo ein MASM\-Typ zulässig wäre\)  
+-   Geben Sie Namen (ablegen, wo ein MASM-Typ zulässig wäre)  
   
--   `typedef` Namen in der Regel mit Operatoren wie **PTR** und TYPE oder Struktur oder Gewerkschaftsmitglieder angeben  
+-   `typedef`Namen, z. B. in der Regel mit Operatoren verwendet **PTR** und **Typ** oder die Angabe der Struktur oder Union-Member  
   
- Innerhalb eines `__asm`\-Blocks können Sie ganzzahlige Konstanten mit C\-Schreibweise oder Assembler \(Seite schreibweise 0x100 und 100h sind, z\).  Dadurch können Sie \(mit `#define`\) in C eine Konstante zu definieren und sie in C oder C\+\+ und Teile des Programms Assembly zu verwenden.  Sie können Konstanten in oktalem auch angeben, indem Sie ihnen mit 0 stehen.  0777 gibt z. B. eine oktale Konstante an.  
+ Innerhalb einer `__asm` blockieren, können Sie ganzzahlige Konstanten mit C-Schreibweise oder Assembler Basis Notation angeben (0 x 100 und 100 h gleichwertig sind; z. B.). Dadurch können Sie definieren (mit `#define`) eine Konstante in C# und verwenden Sie es in C- oder C++ und Assembly Teile des Programms. Sie können auch Konstanten in angeben oktale durch eine 0 voranstellen. 0777 gibt z. B. eine oktale Konstante.  
   
-## Worüber möchten Sie mehr erfahren?  
+## <a name="what-do-you-want-to-know-more-about"></a>Worüber möchten Sie mehr erfahren?  
   
--   [Verwenden von Operatoren in Blöcken \_\_asm](../../assembler/inline/using-operators-in-asm-blocks.md)  
+-   [Verwenden von Operatoren in __asm-Blöcken](../../assembler/inline/using-operators-in-asm-blocks.md)  
   
--   [Verwenden von C\- oder C\+\+\-Symbols in \_\_asm Blöcke](../../assembler/inline/using-c-or-cpp-symbols-in-asm-blocks.md)  
+-   [Verwenden von C- oder C++ Symbols_in __asm-Blöcken](../../assembler/inline/using-c-or-cpp-symbols-in-asm-blocks.md)  
   
--   [C oder C\+\+\-Bezugspunkte \_\_asm in Blöcken zugreifen.](../../assembler/inline/accessing-c-or-cpp-data-in-asm-blocks.md)  
+-   [Zugreifen auf C- oder C++-Daten in __asm-Blöcken](../../assembler/inline/accessing-c-or-cpp-data-in-asm-blocks.md)  
   
--   [Schreiben\-Funktionen mit Inlineassembly](../../assembler/inline/writing-functions-with-inline-assembly.md)  
+-   [Schreiben von Funktionen mit der Inlineassembly](../../assembler/inline/writing-functions-with-inline-assembly.md)  
   
- **Microsoft ENDES bestimmten**  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Inlineassembler](../../assembler/inline/inline-assembler.md)

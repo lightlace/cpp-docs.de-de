@@ -1,1 +1,1 @@
-Komponentenerweiterungen für Visual C\+\+
+Komponentenerweiterungen für Visual C++

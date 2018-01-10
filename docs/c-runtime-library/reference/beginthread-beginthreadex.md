@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - _beginthread
 - beginthreadex
 - _beginthreadex
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _beginthread function
 - threading [C++], creating threads
@@ -38,30 +36,16 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 3c556e6460f1a39bab23f2612cbf820e284d7605
-ms.contentlocale: de-de
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 71d47e67d56da59093db99b5da28daa6f1c18db2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 Erstellt einen Thread.  
@@ -147,7 +131,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
  `_endthread` schließt das Threadhandle automatisch, `_endthreadex` hingegen nicht. Wenn Sie also `_beginthread` und `_endthread`verwenden, schließen Sie das Threadhandle nicht explizit mit dem Aufruf der [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) -Win32-API. Dieses Verhalten unterscheidet sich von dem der [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659.aspx) -Win32-API.  
   
 > [!NOTE]
->  Rufen Sie für eine mit "Libcmt.lib" verknüpfte ausführbare Datei die `ExitThread` -Win32-API nicht auf, damit Sie das Laufzeitsystem nicht an der Freigabe von zugeordneten Ressourcen hindern. `_endthread` und `_endthreadex` geben zugeordnete Threadressourcen frei und rufen dann `ExitThread`auf.  
+>  Rufen Sie für eine mit "Libcmt.lib" verknüpfte ausführbare Datei die `ExitThread` -Win32-API nicht auf, damit Sie das Laufzeitsystem nicht an der Freigabe von zugeordneten Ressourcen hindern. `_endthread` und `_endthreadex` geben zugeordnete Threadressourcen frei und rufen dann `ExitThread` auf.  
   
  Die Speicherbelegung des Stapels wird vom Betriebssystem behandelt, wenn entweder `_beginthread` oder `_beginthreadex` aufgerufen wird. Sie müssen die Adresse des Threadstapels an keine dieser Funktionen übergeben. Außerdem kann das `stack_size` -Argument "0" sein. In diesem Fall wird vom Betriebssystem der gleiche Wert wie vom Stapel verwendet, der für den Hauptthread angegeben wird.  
   
@@ -159,7 +143,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_beginthread`|\<process.h>|  
 |`_beginthreadex`|\<process.h>|  
@@ -167,7 +151,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
 ## <a name="libraries"></a>Bibliotheken  
- Nur Multithread-Versionen von [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md) .  
+ Nur Multithread-Versionen von [Laufzeitbibliotheken in C](../../c-runtime-library/crt-library-features.md).  
   
  Zum Verwenden von `_beginthread` oder `_beginthreadex`muss die Anwendung mit einer Multithreadanwendung der C-Laufzeitbibliotheken verknüpft werden.  
   
@@ -340,7 +324,7 @@ Counter should be 1000000; it is-> 1000000
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Prozess- und Umgebungssteuerung](../../c-runtime-library/process-and-environment-control.md)   
+ [Process and Environment Control (Prozess- und Umgebungssteuerung)](../../c-runtime-library/process-and-environment-control.md)   
  [_endthread, _endthreadex](../../c-runtime-library/reference/endthread-endthreadex.md)   
  [abort](../../c-runtime-library/reference/abort.md)   
  [exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)   

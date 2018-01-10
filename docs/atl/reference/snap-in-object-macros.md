@@ -1,54 +1,47 @@
 ---
-title: Snap-in-Makros | Microsoft-Dokumentation
+title: -Snap-In-Makros | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
+f1_keywords:
+- atlsnap/ATL::BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP
+- atlsnap/ATL::BEGIN_SNAPINTOOLBARID_MAP
+- atlsnap/ATL::END_EXTENSION_SNAPIN_NODEINFO_MAP
+- atlsnap/ATL::END_SNAPINTOOLBARID_MAP
+- atlsnap/ATL::EXTENSION_SNAPIN_DATACLASS
+- atlsnap/ATL::EXTENSION_SNAPIN_NODEINFO_ENTRY
+- atlsnap/ATL::SNAPINMENUID
+- atlsnap/ATL::SNAPINTOOLBARID_ENTRY
+dev_langs: C++
 ms.assetid: 4e9850c0-e395-4929-86c9-584a81828053
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 13823feb06e7fecb2e81a01f3c88e3664de01d30
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 111fb83ed0eaae936dfa38d7047b2a0c2fb2443b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="snap-in-object-macros"></a>Snap-in-Makros
+# <a name="snap-in-object-macros"></a>Makros Snap-In-Objekt
 Diese Makros bieten Unterstützung für Snap-in-Erweiterungen.  
   
 |||  
 |-|-|  
-|[BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map)|Markiert den Beginn der Snap-In-Erweiterung Daten Klasse Zuordnung für ein Objekt-Snap-In.|  
-|[BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map)|Markiert den Beginn der Symbolleiste Zuordnung für ein Objekt-Snap-In.|  
-|[END_EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map)|Markiert das Ende der Snap-In-Erweiterung Daten Klasse Zuordnung für ein Objekt-Snap-In.|  
-|[END_SNAPINTOOLBARID_MAP](#end_snapintoolbarid_map)|Markiert das Ende der Zuordnung Symbolleiste für ein Objekt-Snap-In.|  
+|[BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map)|Markiert den Beginn der Snap-In-Erweiterung Daten Klasse Zuordnung für ein Snap-In-Objekt.|  
+|[BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map)|Markiert den Beginn der Symbolleiste Zuordnung für ein Snap-In-Objekt.|  
+|[END_EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map)|Markiert das Ende der Snap-In-Erweiterung Daten Klasse Zuordnung für ein Snap-In-Objekt.|  
+|[END_SNAPINTOOLBARID_MAP](#end_snapintoolbarid_map)|Markiert das Ende der Zuordnung Symbolleiste für ein Snap-In-Objekt.|  
 |[EXTENSION_SNAPIN_DATACLASS](#extension_snapin_dataclass)|Erstellt einen Datenmember für die Datenklasse der Snap-In-Erweiterung.|  
 |[EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry)|Gibt eine Datenklasse Snap-In-Erweiterung in der Snap-In-Erweiterung Daten Klasse Zuordnung des Objekts-Snap-In.|  
-|[SNAPINMENUID](#snapinmenuid)|Deklariert die ID des Kontextmenüs der Snap-In-Objekt verwendet.|  
-|[SNAPINTOOLBARID_ENTRY](#snapintoolbarid_entry)|Gibt eine Symbolleiste in der Symbolleiste Zuordnung der Snap-In-Objekt.|  
+|[SNAPINMENUID](#snapinmenuid)|Deklariert die ID des Kontextmenüs, die von dem Objekt-Snap-In verwendet.|  
+|[SNAPINTOOLBARID_ENTRY](#snapintoolbarid_entry)|Gibt eine Symbolleiste in der Symbolleiste Zuordnung des Objekts-Snap-In.|  
 
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlsnap.h 
@@ -61,17 +54,17 @@ BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP(classname)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *Klassenname*  
- [in] Der Name der Datenklasse Snap-In-Erweiterung.  
+ *classname*  
+ [in] Der Name der Datenklasse fest Snap-In-Erweiterung.  
   
 ### <a name="remarks"></a>Hinweise  
- Starten Sie die Zuordnung der Snap-In-Erweiterung mit der `BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP` -Makro, fügen Sie Einträge für jede Ihrer Datentypen Snap-In-Erweiterung mit der [EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry) -Makro, und führen Sie die Karte mit der [END_EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map) Makro.  
+ Starten Sie die Zuordnung der Snap-In-Erweiterung mit der `BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP` -Makro, fügen Sie Einträge für die einzelnen Datentypen Snap-In-Erweiterung mit der [EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry) -Makro, und führen Sie die Zuordnung mit der [END_ EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map) Makro.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Windowing&#105;](../../atl/codesnippet/cpp/snap-in-object-macros_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#105](../../atl/codesnippet/cpp/snap-in-object-macros_1.h)]  
   
 ##  <a name="begin_snapintoolbarid_map"></a>BEGIN_SNAPINTOOLBARID_MAP  
- Deklariert den Beginn der Symbolleiste-ID-Zuordnung für das Snap-In-Objekt.  
+ Deklariert den Anfang der Symbolleiste-ID-Zuordnung für das Snap-In-Objekt.  
   
 ```
 BEGIN_SNAPINTOOLBARID_MAP(_class)
@@ -79,20 +72,20 @@ BEGIN_SNAPINTOOLBARID_MAP(_class)
   
 ### <a name="parameters"></a>Parameter  
  `_class`  
- [in] Gibt die Objektklasse-Snap-In.  
+ [in] Gibt die Objektklasse-Snap-In an.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Windowing&#106;](../../atl/codesnippet/cpp/snap-in-object-macros_2.h)]  
+ [!code-cpp[NVC_ATL_Windowing#106](../../atl/codesnippet/cpp/snap-in-object-macros_2.h)]  
   
 ##  <a name="end_extension_snapin_nodeinfo_map"></a>END_EXTENSION_SNAPIN_NODEINFO_MAP  
- Markiert das Ende der Zuordnung Snap-In-Erweiterung Daten-Klasse.  
+ Markiert das Ende der Zuordnung Snap-In-Erweiterung Data-Klasse.  
   
 ```
 END_EXTENSION_SNAPIN_NODEINFO_MAP()
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Starten Sie die Zuordnung der Snap-In-Erweiterung mit der [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map) -Makro, fügen Sie Einträge für jede Ihrer Erweiterung Snap-in-Datentypen mit der [EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry) -Makro, und führen Sie die Karte mit der `END_EXTENSION_SNAPIN_NODEINFO_MAP` Makro.  
+ Starten Sie die Zuordnung der Snap-In-Erweiterung mit der [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map) -Makro, fügen Sie Einträge für jede Ihrer Erweiterungstypen-Snap-in-Daten mit den [EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry) -Makro und führen Sie die Zuordnung mit der `END_EXTENSION_SNAPIN_NODEINFO_MAP` Makro.  
   
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map).  
@@ -106,13 +99,13 @@ END_SNAPINTOOLBARID_MAP( _class )
   
 ### <a name="parameters"></a>Parameter  
  `_class`  
- [in] Gibt die Objektklasse-Snap-In.  
+ [in] Gibt die Objektklasse-Snap-In an.  
   
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map).  
   
 ##  <a name="extension_snapin_dataclass"></a>EXTENSION_SNAPIN_DATACLASS  
- Fügt einen Datenmember auf die Klasse des Snap-In-Erweiterung für eine **ISnapInItemImpl**-abgeleiteten Klasse.  
+ Die Datenklasse Snap-In-Erweiterung für einen Datenmember hinzugefügt ein **ISnapInItemImpl**-Klasse.  
   
 ```
 EXTENSION_SNAPIN_DATACLASS(dataClass )
@@ -123,13 +116,13 @@ EXTENSION_SNAPIN_DATACLASS(dataClass )
  [in] Die Datenklasse der Snap-In-Erweiterung.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Klasse sollte auch in einer Snap-In-Erweiterung Daten Klasse Zuordnung eingegeben werden. Starten Sie die Snap-In-Erweiterung Klasse Zuordnung mit der [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map) -Makro, fügen Sie Einträge für jede Ihrer Datentypen Snap-In-Erweiterung mit der [EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry) -Makro, und führen Sie die Karte mit der [END_EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map) Makro.  
+ Diese Klasse sollte auch in einer Snap-In-Erweiterung Klasse datenzuordnung eingegeben werden. Starten Sie die Snap-In-Erweiterung Daten Klasse Zuordnung mit der [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map) -Makro, fügen Sie Einträge für die einzelnen Datentypen Snap-In-Erweiterung mit der [EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry)-Makro, und führen Sie die Zuordnung mit der [END_EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map) Makro.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Windowing&#105;](../../atl/codesnippet/cpp/snap-in-object-macros_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#105](../../atl/codesnippet/cpp/snap-in-object-macros_1.h)]  
   
 ##  <a name="extension_snapin_nodeinfo_entry"></a>EXTENSION_SNAPIN_NODEINFO_ENTRY  
- Der Snap-In-Erweiterung Klasse Zuordnung hinzugefügt eine Datenklasse Snap-In-Erweiterung.  
+ Der Snap-In-Erweiterung Daten Klasse Zuordnung hinzugefügt eine Datenklasse Snap-In-Erweiterung.  
   
 ```
 EXTENSION_SNAPIN_NODEINFO_ENTRY( dataClass )
@@ -140,7 +133,7 @@ EXTENSION_SNAPIN_NODEINFO_ENTRY( dataClass )
  [in] Die Datenklasse der Snap-In-Erweiterung.  
   
 ### <a name="remarks"></a>Hinweise  
- Starten Sie die Snap-In-Erweiterung Klasse Zuordnung mit der [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map) -Makro, fügen Sie Einträge für jede Ihrer Datentypen Snap-In-Erweiterung mit der `EXTENSION_SNAPIN_NODEINFO_ENTRY` -Makro, und führen Sie die Karte mit der [END_EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map) Makro.  
+ Starten Sie die Snap-In-Erweiterung Daten Klasse Zuordnung mit der [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map) -Makro, fügen Sie Einträge für die einzelnen Datentypen Snap-In-Erweiterung mit der `EXTENSION_SNAPIN_NODEINFO_ENTRY` -Makro, und führen Sie die Zuordnung mit der [END_EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map) Makro.  
   
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map).  
@@ -157,7 +150,7 @@ SNAPINMENUID( id )
  [in] Identifiziert das Kontextmenü des Objekts-Snap-In.  
   
 ##  <a name="snapintoolbarid_entry"></a>SNAPINTOOLBARID_ENTRY  
- Verwenden Sie dieses Makro eine Symbolleisten-ID in der Snap-In-Objekt Symbolleiste ID Zuordnung eingeben.  
+ Verwenden Sie dieses Makro, um eine Symbolleiste-ID eingeben, in der Snap-In-Objekt Symbolleiste-ID-Zuordnung.  
   
 ```
 SNAPINTOOLBARID_ENTRY( id )
@@ -168,11 +161,10 @@ SNAPINTOOLBARID_ENTRY( id )
  [in] Identifiziert das Symbolleisten-Steuerelement.  
   
 ### <a name="remarks"></a>Hinweise  
- Die [BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map) Makro kennzeichnet den Anfang der Symbolleisten-ID-Karte, die [END_SNAPINTOOLBARID_MAP](#end_snapintoolbarid_map) Makro markiert das Ende.  
+ Die [BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map) Makro kennzeichnet den Anfang der Symbolleisten-ID-Zuordnung; das [END_SNAPINTOOLBARID_MAP](#end_snapintoolbarid_map) Makro markiert das Ende.  
   
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Makros](../../atl/reference/atl-macros.md)
-

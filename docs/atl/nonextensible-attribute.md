@@ -1,33 +1,34 @@
 ---
-title: "nonextensible Attribute | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "nonextensible"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "duale Schnittstellen, nonextensible attribute"
-  - "nonextensible attribute"
+title: nonextensible-Attribut | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: nonextensible
+dev_langs: C++
+helpviewer_keywords:
+- nonextensible attribute
+- dual interfaces, nonextensible attribute
 ms.assetid: 02a4a18b-ffd3-4d53-8fd1-feb1c05ad5ac
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: af16748bb3b2048ce854ccc7a03b2400039184a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# nonextensible Attribute
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="nonextensible-attribute"></a>nonextensible-Attribut
+Wenn eine duale Schnittstelle zur Laufzeit nicht erweitert wird (d. h. Sie wird nicht bereitstellen, Methoden oder Eigenschaften über **IDispatch:: Invoke** , die nicht über die Vtable verfügbar sind), sollten Sie übernehmen die **nonextensible** -Attribut auf die Schnittstellendefinition. Dieses Attribut stellt die Informationen zu Clientsprachen (z. B. Visual Basic), die zum Aktivieren der codeüberprüfung der vollständige zum Zeitpunkt der Kompilierung verwendet werden kann. Wenn dieses Attribut nicht angegeben wird, können Fehler im Clientcode bleiben bis zur Laufzeit ausgeblendet.  
+  
+ Weitere Informationen zu den **nonextensible** Attribut und ein Beispiel finden Sie unter [nonextensible](../windows/nonextensible.md).  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Duale Schnittstellen und ATL](../atl/dual-interfaces-and-atl.md)
 
-Wenn eine duale Schnittstelle zur Laufzeit nicht erweitert wird \(das heißt, stellen Methoden oder Eigenschaften nicht über **IDispatch::Invoke** bereit, die nicht über das vtable verfügbar sind\), sollten Sie das **nonextensible**\-Attribut auf die Schnittstellendefinition anwenden.  Dieses Attribut stellt Informationen zu den Clientsprachen bereit \(wie Visual Basic\), um die Überprüfung des vollständigen Code zur Kompilierzeit erforderlich.  Wenn dieses Attribut nicht angegeben wird, bleiben möglicherweise Fehler im Clientcode bis zur Laufzeit ausgeblendet.  
-  
- Weitere Informationen zum **nonextensible**\-Attribut und ein Beispiel, finden Sie unter [nicht erweiterbar](../windows/nonextensible.md).  
-  
-## Siehe auch  
- [Dual Interfaces and ATL](../atl/dual-interfaces-and-atl.md)

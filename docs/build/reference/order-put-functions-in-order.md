@@ -1,82 +1,88 @@
 ---
-title: "/ORDER (Reihenfolge von Funktionen festlegen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.FunctionOrder"
-  - "/order"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/ORDER (Linkeroption)"
-  - "LINK-Tool [C++], Programmoptimierung"
-  - "LINK-Tool [C++], Auslagerungsdatei optimieren"
-  - "ORDER (Linkeroption)"
-  - "-ORDER (Linkeroption)"
-  - "Paging, Optimieren"
+title: -Reihenfolge (Reihenfolge von Funktionen) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.FunctionOrder
+- /order
+dev_langs: C++
+helpviewer_keywords:
+- ORDER linker option
+- -ORDER linker option
+- LINK tool [C++], program optimizing
+- /ORDER linker option
+- LINK tool [C++], swap tuning
+- paging, optimizing
 ms.assetid: ecf5eb3e-e404-4e86-9a91-4e5ec157261a
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2264296d288f9105a59c0ac5099c1dedef55ee2f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# /ORDER (Reihenfolge von Funktionen festlegen)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="order-put-functions-in-order"></a>/ORDER (Reihenfolge von Funktionen festlegen)
 
-```  
-/ORDER:@filename  
-```  
-  
-## Parameter  
- *filename*  
- eine Textdatei, die die Reihenfolge beim Verknüpfen der COMDAT\-Funktionen festlegt.  
-  
-## Hinweise  
- Die \/ORDER\-Option weist LINK an, das Programm durch Platzieren bestimmter COMDATs im Image in einer vorbestimmten Reihenfolge zu optimieren.  LINK positioniert die Funktionen in der angegebenen Reihenfolge innerhalb jedes Abschnitts im Image.  
-  
- Geben Sie die Reihenfolge in *filename* an. Dies ist eine Textdatei \(Antwortdatei\), in der die COMDATs in der von Ihnen gewünschten Reihenfolge zum Verknüpfen aufgeführt sind.  Jede Zeile in *filename* enthält den Namen einer COMDAT.  Ein Objekt enthält COMDATs, wenn es mit der Option **\/Gy** kompiliert worden ist.  Bei Funktionsnamen muss die Groß\-\/Kleinschreibung beachtet werden.  
-  
- **LINK** verwendet die ergänzten Formen von Bezeichnern.  Vom Compiler wird den Bezeichnern beim Erstellen der OBJ\-Datei eine Ergänzung hinzugefügt.  Verwenden Sie das Tool [DUMPBIN](../../build/reference/dumpbin-reference.md), um die ergänzte Form eines Bezeichners zu ermitteln, wenn Sie diese dem Linker angeben müssen.  Weitere Informationen über ergänzte Namen finden Sie unter [Ergänzte Namen](../../build/reference/decorated-names.md).  
-  
- Wenn mehr als eine **\/ORDER**\-Spezifikation verwendet wird, tritt die zuletzt angegebene in Kraft.  
-  
- Die Angabe einer Reihenfolge ermöglicht es Ihnen, das Verhalten Ihres Programms durch Feineinstellung der Auslagerung von Speicherseiten zu optimieren, indem eine Funktion mit der von ihr aufgerufenen Funktion zusammen angeordnet wird.  Sie können auch häufig aufgerufene Funktionen zusammen gruppieren.  Durch dieses Vorgehen wird die Wahrscheinlichkeit erhöht, dass eine aufgerufene Funktion sich bereits im Hauptspeicher befindet, wenn sie benötigt wird, und nicht erst vom Datenträger gelesen werden muss.  
-  
- Der Linker stellt jedem ergänzten Namen in *filename* einen Unterstrich \(\_\) voran, sofern der Name nicht mit einem Fragezeichen \(?\) oder einem @\-Zeichen beginnt.  Wenn eine Objektdatei z. B. die Zeichenkette `extern "C" int func(int)` und `int main(void)` enthält, werden diese ergänzten Namen mit **DUMPBIN**[\/SYMBOLS](../../build/reference/symbols.md) aufgelistet:  
-  
-```  
-009 00000000 SECT3  notype ()    External     | _func  
-00A 00000008 SECT3  notype ()    External     | _main  
-```  
-  
- Der in der Anordnungsdatei angegebene Name sollte jedoch `func` und `main` enthalten.  
-  
- Die Option **\/ORDER** deaktiviert das inkrementelle Verknüpfen.  
-  
+Geben Sie die Verknüpfungsreihenfolge für separat Paketfunktionen (COMDAT).
+
+## <a name="syntax"></a>Syntax
+
+>/ ORDER: @*Dateiname*
+
+### <a name="parameters"></a>Parameter
+
+*filename*  
+Eine Textdatei, die die Verknüpfungsreihenfolge COMDAT-Funktionen angibt.
+
+## <a name="remarks"></a>Hinweise
+
+Die **/ORDER** (Compileroption) können Sie zur Optimierung des Programms einheitlicheres Paginierungsverhalten durch Gruppieren von einer Funktion zusammen mit den Funktionen aufruft. Sie können auch häufig aufgerufene Funktionen gruppieren. Diese Verfahren, bezeichnet als *Auslagerungsdatei optimieren* oder *Paging Optimierung*, erhöht sich die Wahrscheinlichkeit, die eine aufgerufene Funktion im Arbeitsspeicher ist, wenn es erforderlich ist und nicht vom Datenträger ausgelagert werden müssen.
+
+Beim Kompilieren von Quellcode in einer Objektdatei, Sie können den Compiler anweisen, jede Funktion in einem eigenen Abschnitt namens zu versetzen einer *COMDAT*, mithilfe der [/Gy (Funktionslevel-linking aktivieren)](../../build/reference/gy-enable-function-level-linking.md) Compiler -Option. Die **/ORDER** (Linkeroption) weist den Linker an COMDATs in das ausführbare Image in der Reihenfolge platzieren Sie angeben.
+
+Um die COMDAT-Reihenfolge anzugeben, erstellen eine *Antwortdatei*, eine Textdatei, die jede COMDAT auflistet, anhand des Namens, eines pro Zeile, in der Reihenfolge, die Sie vom Linker platziert werden sollen. Übergeben Sie den Namen der Datei als die *Filename* Parameter von der **/ORDER** Option. Bei C++-Funktionen ist der Name einer COMDAT den ergänzten Namen der Funktion. Verwenden Sie den nicht ergänzten Namen für die C-Funktionen `main`, und Sie für C++-Funktionen als deklariert `extern "C"`. Funktionsnamen und ergänzten Namen werden Groß-/Kleinschreibung beachtet. Weitere Informationen über ergänzte Namen finden Sie unter [ergänzte Namen](../../build/reference/decorated-names.md). 
+
+Um Ihre COMDATs die ergänzten Namen zu ermitteln, verwenden die [DUMPBIN](../../build/reference/dumpbin-reference.md) des Tools [/SYMBOLS](../../build/reference/symbols.md) Option in der Objektdatei. Der Linker automatisch einen Unterstrich voran (\_) Funktion Namen in der Antwort Datei, es sei denn, beginnt der Name der durch ein Fragezeichen (?) oder at-Zeichen (@). Wenn eine Quelldatei enthält example.cpp, z. B. Funktionen `int cpp_func(int)`, `extern "C" int c_func(int)` und `int main(void)`, den Befehl `DUMPBIN /SYMBOLS example.obj` diese ergänzten Namen aufgeführt:
+
+```Output
+...
+088 00000000 SECT1A notype ()    External     | ?cpp_func@@YAHH@Z (int __cdecl cpp_func(int))
+089 00000000 SECT22 notype ()    External     | _c_func
+08A 00000000 SECT24 notype ()    External     | _main
+...
+```
+
+In diesem Fall geben Sie die Namen als `?cpp_func@@YAHH@Z`, `c_func`, und `main` in der Antwortdatei.
+
+Wenn mehr als ein **/ORDER** Option wird angezeigt, in den Optionen des Linkers, das letzte Lesezeichen, angegeben in Kraft.
+
+Die **/ORDER** -Option wird inkrementelles Verknüpfen deaktiviert. Möglicherweise linkerwarnung [LNK4075](../../error-messages/tool-errors/linker-tools-warning-lnk4075.md) Wenn Sie diese Option angeben, wenn inkrementelle Verknüpfung aktiviert ist, oder wenn Sie angegeben haben die [/Zi (inkrementelle PDB)](../../build/reference/z7-zi-zi-debug-information-format.md) -Compileroption. Um diese Warnung zu unterdrücken, verwenden Sie die [Standardlink](../../build/reference/incremental-link-incrementally.md) Linkeroption, um inkrementelle Verknüpfung deaktivieren, und verwenden Sie die [/Zi (PDB generieren)](../../build/reference/z7-zi-zi-debug-information-format.md) Compileroption, um eine PDB-Datei ohne inkrementelle Verknüpfungen zu generieren.
+
 > [!NOTE]
->  LINK kann statische Funktionen nicht anordnen, da es sich bei statischen Funktionsnamen nicht um öffentliche Symbolnamen handelt.  Bei Eingabe von **\/ORDER** wird für jedes Symbol, das entweder statisch ist oder nicht gefunden werden kann, in die Anordnungsdatei die Linkerwarnung LNK4037 ausgegeben.  
-  
-### So legen Sie diese Linkeroption in der Visual Studio\-Entwicklungsumgebung fest  
-  
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Festlegen von Visual C\+\+\-Projekteigenschaften](../../ide/working-with-project-properties.md).  
-  
-2.  Klicken Sie auf den Ordner **Linker**.  
-  
-3.  Klicken Sie auf die Eigenschaftenseite **Optimierung**.  
-  
-4.  Ändern Sie die Eigenschaft **Funktionsanordnung**.  
-  
-### So legen Sie diese Linkeroption programmgesteuert fest  
-  
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.FunctionOrder*>.  
-  
-## Siehe auch  
- [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
- [Linkeroptionen](../../build/reference/linker-options.md)
+> LINK kann nicht statische Funktionen sortieren, da statische Funktionsnamen nicht öffentliche Symbolnamen sind. Wenn **/ORDER** angegeben wird, zu unterdrückenden linkerwarnungen [LNK4037](../../error-messages/tool-errors/linker-tools-warning-lnk4037.md) generiert für jedes Symbol in der Reihenfolge Antwortdatei, die entweder statisch oder nicht gefunden wird.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
+
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).  
+
+1. Klicken Sie unter **Konfigurationseigenschaften**öffnen **Linker** und wählen Sie dann die **Optimierung** Eigenschaftenseite.
+
+1. Ändern der **Reihenfolge Funktion** Eigenschaft, um den Namen der Antwortdatei aufzunehmen.
+
+### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest
+
+- Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.FunctionOrder%2A>.
+
+## <a name="see-also"></a>Siehe auch
+
+[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)  
+[Linkeroptionen](../../build/reference/linker-options.md)

@@ -1,37 +1,36 @@
 ---
-title: "PURGE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PURGE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PURGE directive"
+title: "LÖSCHEN | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PURGE
+dev_langs: C++
+helpviewer_keywords: PURGE directive
 ms.assetid: 1e7ec2bf-f123-4ff9-97de-28b512ade2f9
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 29ce9f8ca826b273b9a91959a733f073af48d3d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# PURGE
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Löscht die angegebenen Makros aus dem Speicher.  
+# <a name="purge"></a>PURGE
+Löscht die angegebene Makros aus dem Arbeitsspeicher.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
 PURGE macroname [[, macroname]]...  
 ```  
   
-## Siehe auch  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)

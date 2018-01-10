@@ -1,32 +1,33 @@
 ---
-title: "hash_multimap::insert (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::insert"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "insert-Member [STL/CLR]"
+title: 'hash_multimap:: Insert (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::insert
+dev_langs: C++
+helpviewer_keywords: insert member [STL/CLR]
 ms.assetid: 51cd98b0-c959-4a44-b914-582c00681bd7
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6b0535c43ebc3e1a969f19c5d2779b54c90aa397
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multimap::insert (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmultimapinsert-stlclr"></a>hash_multimap::insert (STL/CLR)
 Fügt Elemente hinzu.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 iterator insert(value_type val);  
@@ -36,36 +37,36 @@ template<typename InIter>
 void insert(System::Collections::Generic::IEnumerable<value_type>^ right);  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  first  
- Anfang Einfügen des Bereichs.  
+ Anfang des Bereichs, der eingefügt.  
   
  last  
- Ende Einfügen des Bereichs.  
+ Das Ende des Bereichs einfügen.  
   
- right  
- Einzufügen Enumeration.  
+ Rechts  
+ Die Enumeration eingefügt.  
   
- val  
- Einzufügen Schlüsselwert.  
+ Val  
+ Schlüssel-Wert einfügen.  
   
- deinen  
- Wo von im Container \(Mallory nur Hinweis\).  
+ wo  
+ Die Position, im Container (nur Hinweis) einfügen.  
   
-## Hinweise  
- Jede der Memberfunktionen fügen eine Sequenz ein, die für die übrigen Operanden angegeben wird.  
+## <a name="remarks"></a>Hinweise  
+ Jede der Memberfunktionen Fügt eine Sequenz, die von den verbleibenden Operanden angegeben.  
   
- Die erste Memberfunktion wird ein Element mit dem Wert `val` und gibt ein Iterator zurück, der das Element neu eingefügte festlegt.  Sie verwenden ihn, um ein einzelnes Element einzufügen.  
+ Die erste Memberfunktion Fügt ein Element mit dem Wert `val`, und gibt einen Iterator, der das neu eingefügte Element festlegt. Es können Sie verwenden, um ein einzelnes Element einzufügen.  
   
- Die zweite Memberfunktion wird ein Element mit dem Wert `val`, wobei `where` als Hinweis \(Leistung verbessern\) und gibt ein Iterator ein, der das Element neu eingefügte festlegt.  Sie verwenden sie, um ein einzelnes Element einzufügen, das möglicherweise neben einem Element könnte, das, Sie kennen.  
+ Die zweite Memberfunktion Fügt ein Element mit dem Wert `val`mit `where` als Hinweis (zur Verbesserung der Leistung), und gibt einen Iterator, der das neu eingefügte Element festlegt. Damit können sie ein einzelnes Element einfügen, das neben einem Element möglicherweise, die Sie kennen.  
   
- Die dritte Memberfunktion wird die Sequenz `[``first``,` `last``)`.  Sie verwenden sie, dass Nullen oder mehr Elemente einfügen kopiert aus einer anderen Sequenz.  
+ Die dritte Memberfunktion fügt die Sequenz [`first`, `last`). Sie verwenden ihn zum Einfügen von NULL oder mehr Elementen aus einer anderen Sequenz kopiert.  
   
- Die vierte Memberfunktion wird die Sequenz ein, die durch `right` festgelegt ist.  Sie verwenden sie, um eine Sequenz einzufügen, die Angriffen einen Enumerator beschrieben wird.  
+ Die vierte Memberfunktion fügt die Sequenz, die vom angegebenen der `right`. Sie verwenden es, fügen Sie eine Sequenz, die durch einen Enumerator beschrieben.  
   
- Jede Einfügen wird die Zeit, die z Logarithmus der Anzahl der Elemente in der Sequenz gesteuerten proportional ist.  Einfüge\- kann in der amortisierten konstanten Zeitpunkt auftreten einen Hinweis jedoch zugewiesen, der ein Element neben der Einfügemarke festlegt.  
+ Jede elementeinfügung dauert einige Zeit, die proportional zum Logarithmus der Anzahl der Elemente in der kontrollierten Sequenz. Kann in amortisierter konstanter Zeit, jedoch die Einfügung erhält einen Hinweis, der ein Element, das neben der Einfügemarke festlegt.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_hash_multimap_insert.cpp   
@@ -128,18 +129,21 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[bc 3\]**  
-**Einfüge\- \(\[L'x 24\) \= \[\]x 24\]**  
-**Einfüge\- \(\[L'b 2\) \= \[\]b 2\]**  
- **\[1\] \[2\] \[b b 2\] \[3\] \[cx 24\]**  
-**insert\(begin\(\), \[L'y 25\) \= \[\]y 25\]**  
- **\[1\] \[2\] \[b b c 2\] \[3\] \[24\] \[xy 25\]**  
- **\[1\] \[2\] \[b b 2\] \[3\] \[cx 24\]**  
- **\[1\] \[2\] \[b b c 2\] \[3\] \[24\] \[xy 25\]**   
-## Anforderungen  
- **Header:** \<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+insert([L'x' 24]) = [x 24]  
+insert([L'b' 2]) = [b 2]  
+ [a 1] [b 2] [b 2] [c 3] [x 24]  
+insert(begin(), [L'y' 25]) = [y 25]  
+ [a 1] [b 2] [b 2] [c 3] [x 24] [y 25]  
+ [a 1] [b 2] [b 2] [c 3] [x 24]  
+ [a 1] [b 2] [b 2] [c 3] [x 24] [y 25]  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext Hash_map/>  
   
-## Siehe auch  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)

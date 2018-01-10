@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bfbb97f66065efd0a9ef06de0ff427e893610955
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cbefa4a8036802599dd97f31d57f18204fd6104f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-simple-object-wizard"></a>ATL-Assistent für einfache Objekte
 Dieser Assistent fügt dem Projekt ein minimales COM-Objekt. Mithilfe dieser Seite des Assistenten geben Sie die Namen, die die C++-Klasse und die Dateien für das Objekt und seine COM-Funktionalität zu identifizieren.  
@@ -74,7 +75,7 @@ Dieser Assistent fügt dem Projekt ein minimales COM-Objekt. Mithilfe dieser Sei
 > [!NOTE]
 >  Wenn Sie das Projekt, das Verwenden von Attributen erstellen oder auf dieser Seite des Assistenten angeben, dass das Objekt Attribute verwendet, können Sie diese Option nicht ändern, da ATL nicht enthält die `coclass` Attribut.  
   
- **Typ**  
+ **Type**  
  Legt die Beschreibung des Objekts, die in der Registrierung angezeigt wird  
   
  **Interface**  

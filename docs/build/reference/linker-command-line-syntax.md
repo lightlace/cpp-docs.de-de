@@ -1,46 +1,47 @@
 ---
-title: "Syntax f&#252;r die Linkerbefehlszeile | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LINK-Tool [C++], Befehlszeilensyntax"
-  - "Linker [C++], Syntax"
-  - "Linkerbefehlszeile [C++]"
+title: "Syntax für die Linkerbefehlszeile | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- linker [C++], syntax
+- linker command line [C++]
+- LINK tool [C++], command-line syntax
 ms.assetid: e2a31e17-77bd-4e74-9305-75b105b26539
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3ce42aa031b91d5a4ec21ed14ac7cb47643e1325
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Syntax f&#252;r die Linkerbefehlszeile
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Um LINK.EXE auszuführen, verwenden Sie die folgende Befehlssyntax:  
+# <a name="linker-command-line-syntax"></a>Syntax für die Linkerbefehlszeile
+LINK zum Ausführen. EXE-Datei, verwenden Sie die folgende Befehlssyntax:  
   
 ```  
 LINK arguments  
 ```  
   
- Die `arguments` bestehen aus Optionen und Dateinamen und können in beliebiger Reihenfolge angegeben werden.  Optionen werden zuerst verarbeitet, dann Dateien.  Argumente können mit einem oder mehreren Leerzeichen oder Tabulatorzeichen voneinander getrennt werden.  
+ Die `arguments` Optionen und Dateinamen enthalten und können in beliebiger Reihenfolge angegeben werden. Optionen werden zuerst verarbeitet werden, und klicken Sie dann auf Dateien. Verwenden Sie eine oder mehrere Leerzeichen bzw. Tabstopps, um Argumente zu trennen.  
   
 > [!NOTE]
->  Sie können dieses Tool nur von der [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]\-Eingabeaufforderung aus starten.  Sie können es nicht von einer Systemeingabeaufforderung oder vom Datei\-Explorer aus starten.  
+>  Sie können dieses Tool nur von der [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]-Eingabeaufforderung aus starten. Sie können es nicht von einer Systemeingabeaufforderung oder vom Datei-Explorer aus starten.  
   
- In der Befehlszeile besteht eine Option aus einem Optionsbezeichner – Halbgeviertstrich \(–\) oder Schrägstrich \(\/\) – und dem Namen der Option.  Optionsnamen können nicht abgekürzt werden.  Einige Optionen verfügen über Argumente, die nach einem Doppelpunkt \(:\) angegeben werden.  Innerhalb einer Optionsangabe sind keine Leerzeichen oder Tabulatorzeichen erlaubt, ausgenommen eine Zeichenfolge in Anführungszeichen in der Option \/COMMENT.  Geben Sie numerische Argumente dezimal oder in C\-Notation an.  Bei Optionsnamen und ihren aus Schlüsselwörtern oder Dateinamen bestehenden Argumenten wird die Groß\-\/Kleinschreibung nicht beachtet. Bei Bezeichnern, die als Argumente verwendet werden, wird die Groß\-\/Kleinschreibung jedoch beachtet.  
+ In der Befehlszeile eine Option besteht aus einem Optionsbezeichner, entweder einem Bindestrich (-) oder einem Schrägstrich (/), gefolgt vom Namen der Option. Optionsnamen können nicht abgekürzt werden. Einige Optionen haben ein Argument an, nach einem Doppelpunkt (:)) angegeben. Keine Leerzeichen oder Tabstopps sind innerhalb einer Optionsangabe außer innerhalb einer Zeichenfolge in Anführungszeichen in der Option/Comment zulässig. Geben Sie numerische Argumente Dezimal oder C-Notation an. Bei Optionsnamen und ihren aus Schlüsselwörtern oder Dateiname Argumenten sind nicht Groß-/Kleinschreibung beachtet, aber Bezeichner als Argumente Groß-/Kleinschreibung beachtet.  
   
- Um eine Datei an den Linker zu übergeben, geben Sie den Dateinamen in der Befehlszeile nach dem **LINK**\-Befehl an.  Sie können einen absoluten oder relativen Pfad mit dem Dateinamen angeben, und Sie können Platzhalter im Dateinamen verwenden.  Wenn Sie den Punkt \(.\) und die Erweiterung des Dateinamens weglassen, nimmt der Linker .obj als Typ für die gesuchte Datei an.  **LINK** versucht nicht, aus der Dateinamenserweiterung auf den Inhalt einer Datei zu schließen; vielmehr wird der Dateityp durch Untersuchen der Datei selbst bestimmt, und die Datei dann entsprechend verarbeitet.  
+ Um eine Datei an dem Linker übergeben, geben Sie den Dateinamen in der Befehlszeile nach dem LINK-Befehl. Sie können einen absoluten oder relativen Pfad angeben, mit dem Dateinamen, und können Sie Platzhalter im Dateinamen verwenden. Wenn Sie den Punkt (.) und die Erweiterung weglassen, wird links obj zum Auffinden der Datei angenommen. LINK verwendet Filename Erweiterungen oder die mangelndes keine um Annahmen zum Inhalt der Dateien zu machen; Bestimmt den Typ der Datei durch Untersuchen und verarbeitet ihn entsprechend.  
   
- Bei erfolgreicher Durchführung gibt link.exe den Wert 0 \(null\) zurück \(keine Fehler\).  Andernfalls gibt der Linker die Fehlernummer zurück, durch die die Verknüpfung gestoppt wurde.  Wenn der LNK1104 Linker generiert, gibt der Linker 1104 zurück. Entsprechend ist die niedrigste geltende Fehlernummer, die auf einen Fehler vom Linker zurückgegeben wird, 1000. Ein Rückgabewert 128 stellt ein Konfigurationsproblem entweder mit dem Betriebssystem oder einer Konfigurationsdatei dar; das Ladeprogramm hat weder link.exe oder c2.dll.  
+ Link.exe gibt 0 für Erfolg (keine Fehler) zurück.  Andernfalls wird der Linker die Fehlernummer, die den Link beendet zurückgegeben.  Wenn der Linker LNK1104 generiert, gibt der Linker beispielsweise 1104 zurück.  Entsprechend ist die niedrigste Fehlernummer, die bei einem Fehler vom Linker zurückgegeben 1000.  Ein Rückgabewert von 128 stellt ein Konfigurationsproblem mit dem Betriebssystem oder einer .config-Datei dar. das Ladeprogramm wurde nicht link.exe oder c2.dll geladen werden.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
  [Linkeroptionen](../../build/reference/linker-options.md)

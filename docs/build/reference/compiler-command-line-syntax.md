@@ -1,51 +1,52 @@
 ---
-title: "Syntax f&#252;r die Compilerbefehlszeile | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cl.exe-Compiler, Befehlszeilensyntax"
-  - "Syntax, CL-Compilerbefehlszeile"
+title: "Syntax für die Compilerbefehlszeile | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- syntax, CL compiler command line
+- cl.exe compiler, command-line syntax
 ms.assetid: acba2c1c-0803-4a3a-af25-63e849b930a2
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7fb89aca1990d44d7ef62ea76788b38e8ffa1d6d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Syntax f&#252;r die Compilerbefehlszeile
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die CL\-Befehlszeile verwendet folgende Syntax:  
+# <a name="compiler-command-line-syntax"></a>Syntax für die Compilerbefehlszeile
+CL-Befehlszeile wird die folgende Syntax verwendet:  
   
 ```  
 CL [option...] file... [option | file]... [lib...] [@command-file] [/link link-opt...]  
 ```  
   
- Die folgende Tabelle beschreibt die Eingabe für den CL\-Befehl.  
+ Die folgende Tabelle beschreibt die Eingabe in der CL-Befehl.  
   
-|Eintrag|Bedeutung|  
-|-------------|---------------|  
-|*\-Option*|Eine oder mehrere [CL\-Optionen](../../build/reference/compiler-options.md).  Beachten Sie, dass alle Optionen auf alle angegebenen Quelldateien angewendet werden.  Optionen werden entweder durch einen Schrägstrich \(\/\) oder einen Halbgeviertstrich \(–\) eingeleitet.  Wenn eine Option ein Argument erhält, dann wird in der Beschreibung der Option dokumentiert, ob ein Leerzeichen zwischen Option und Argumenten erlaubt ist.  Bei Optionsnamen muss \(mit Ausnahme der **\/HELP**\-Option\) die Groß\-\/Kleinschreibung beachtet werden.  Weitere Informationen finden Sie im Abschnitt [Reihenfolge von CL\-Optionen](../../build/reference/order-of-cl-options.md).|  
-|`file`|Der Name einer oder mehrerer Quelldateien, OBJ\-Dateien oder Bibliotheken.  CL kompiliert die Quelldateien und übergibt die Namen der OBJ\-Dateien und Bibliotheken an den Linker.  Weitere Informationen finden Sie unter [Syntax für Dateinamen bei CL](../../build/reference/cl-filename-syntax.md).|  
-|*lib*|Ein oder mehrere Bibliotheksnamen.  CL übergibt die Namen an den Linker.|  
-|*command\-file*|Eine Datei, die mehrere Optionen und Dateinamen enthält.  Weitere Informationen finden Sie unter [CL\-Befehlsdateien](../../build/reference/cl-command-files.md).|  
-|*link\-opt*|Eine oder mehrere [Linkeroptionen](../../build/reference/linker-options.md).  CL übergibt diese Optionen an den Linker.|  
+|Eingabe|Bedeutung|  
+|-----------|-------------|  
+|*Option*|Eine oder mehrere [CL-Optionen](../../build/reference/compiler-options.md). Beachten Sie, dass alle Optionen für alle angegebenen Quelldateien gelten. Optionen werden von einem Schrägstrich (/) oder einen Bindestrich (-) angegeben. Wenn eine Option Argument die Option Beschreibung Dokumente annimmt, ob ein Leerzeichen zwischen der Option und die Argumente zulässig ist. Optionsnamen (außer der/Help-Option) sind Groß-/Kleinschreibung beachtet. Finden Sie unter [Reihenfolge von CL-Optionen](../../build/reference/order-of-cl-options.md) für Weitere Informationen.|  
+|`file`|Der Name der ein oder mehrere Quelldateien, OBJ-Dateien oder Bibliotheken. Kompiliert Quelldateien "CL" und die Namen der OBJ-Dateien und Bibliotheken an dem Linker übergeben. Finden Sie unter [Syntax für Dateinamen bei CL](../../build/reference/cl-filename-syntax.md) für Weitere Informationen.|  
+|*LIB*|Eine oder mehrere Bibliotheksnamen. CL übergibt diese Namen an den Linker.|  
+|*Befehlsdatei*|Eine Datei, die mehrere Optionen und Dateinamen enthält. Finden Sie unter [CL-Befehlsdateien](../../build/reference/cl-command-files.md) für Weitere Informationen.|  
+|*Link-opt*|Eine oder mehrere [Optionen des Linkers](../../build/reference/linker-options.md). CL übergibt diese Optionen an den Linker.|  
   
- Sie können eine beliebige Anzahl von Optionen, Datei\- und Bibliotheksnamen angeben, solange die Anzahl der Zeichen in der Befehlszeile nicht 1024 überschreitet \(eine Grenze, die das Betriebssystem vorgibt\).  
+ Sie können eine beliebige Anzahl von Optionen, Dateinamen und Bibliotheksnamen angeben, solange die Anzahl der Zeichen in der Befehlszeile 1024, das Limit vorgegeben vom Betriebssystem nicht überschreitet.  
   
- Informationen über den Rückgabewert von cl.exe finden Sie unter [Rückgabewert von cl.exe](../../build/reference/return-value-of-cl-exe.md).  
+ Informationen über den Rückgabewert von cl.exe finden Sie unter [Rückgabewert von cl.exe](../../build/reference/return-value-of-cl-exe.md) .  
   
 > [!NOTE]
->  Es gibt keine Garantie dafür, dass diese Grenze von 1024 Zeichen für die Eingabe in der Befehlszeile in zukünftigen Versionen von Windows unverändert bleibt.  
+>  Grenze von 1024 Zeichen für die Eingabe in der Befehlszeile ist nicht unbedingt in zukünftigen Versionen von Windows identisch sein.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)   
  [Compileroptionen](../../build/reference/compiler-options.md)

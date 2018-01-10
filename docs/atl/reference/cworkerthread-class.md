@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,35 +18,19 @@ f1_keywords:
 - ATLUTIL/ATL::CWorkerThread::Initialize
 - ATLUTIL/ATL::CWorkerThread::RemoveHandle
 - ATLUTIL/ATL::CWorkerThread::Shutdown
-dev_langs:
-- C++
-helpviewer_keywords:
-- CWorkerThread class
+dev_langs: C++
+helpviewer_keywords: CWorkerThread class
 ms.assetid: be79a832-1345-4a36-a13e-a406cc65286f
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 25d102e7e47898ee2f93326756b3d50e8bb3bbff
-ms.contentlocale: de-de
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: be7a000e48cb044a67f7eee120206f46ecaef2ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread-Klasse
 Diese Klasse wird ein Arbeitsthread erstellt oder verwendet eine vorhandene, wartet auf eine oder mehrere Kernel-Objekt-Handles und führt eine angegebene Client-Funktion aus, wenn Sie einen der Ziehpunkte signalisiert wird.  
@@ -66,11 +49,11 @@ class CWorkerThread
  `ThreadTraits`  
  Die Klasse, die die Thread-Erstellung-Funktion, wie z. B. Bereitstellung [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) oder [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md).  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="protected-structures"></a>Geschützte Strukturen  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |`WorkerClientEntry`||  
   
@@ -232,7 +215,7 @@ HRESULT Initialize(CWorkerThread<ThreadTraits>* pThread) throw();
   
  Haben Sie zwei oder mehr `CWorkerThread` Objekte im gleichen Arbeitsthread verwenden, initialisieren Sie eine von ihnen ohne übergeben, die keine Argumente übergeben dann einen Zeiger auf das Objekt an den `Initialize` von den anderen Methoden. Initialisiert unter Verwendung des Zeigers Objekte sollten heruntergefahren werden, vor dem Objekt verwendet, um sie zu initialisieren.  
   
- Finden Sie unter [CWorkerThread::Shutdown](#shutdown) Informationen wie Änderungen von dieser Methode das Verhalten bei der Initialisierung mithilfe eines Zeigers auf ein vorhandenes Objekt.  
+ Finden Sie unter [CWorkerThread::Shutdown](#shutdown) Informationen wie diese Methode verhaltensänderungen bei der Initialisierung mithilfe eines Zeigers auf ein vorhandenes Objekt.  
   
 ##  <a name="removehandle"></a>CWorkerThread::RemoveHandle  
  Rufen Sie diese Methode, um ein Handle aus der Liste der Lage, Objekte zu entfernen.  
@@ -275,4 +258,3 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
  [Klassen](../../atl/reference/atl-classes.md)   
  [Multithreading: Erstellen von Arbeitsthreads](../../parallel/multithreading-creating-worker-threads.md)   
  [IWorkerThreadClient-Schnittstelle](../../atl/reference/iworkerthreadclient-interface.md)
-

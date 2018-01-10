@@ -1,35 +1,36 @@
 ---
-title: "Explizites Entladen einer verz&#246;gert geladenen DLL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/DELAY:UNLOAD (Linkeroption)"
-  - "__FUnloadDelayLoadedDLL2"
-  - "DELAY:UNLOAD (Linkeroption)"
-  - "Verzögertes Laden von DLLs, Entladen"
+title: "Explizites Entladen einer verzögert geladenen DLL | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- /DELAY:UNLOAD linker option
+- DELAY:UNLOAD linker option
+- __FUnloadDelayLoadedDLL2
+- delayed loading of DLLs, unloading
 ms.assetid: 1c4c5172-fd06-45d3-9e4f-f12343176b3c
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b26a1a17952693be9db6a80649aad2c40227d53e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Explizites Entladen einer verz&#246;gert geladenen DLL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Mit der Linkeroption [\/delay](../../build/reference/delay-delay-load-import-settings.md):unload können Sie eine verzögert geladene DLL entladen.  Standardmäßig verbleiben die verzögert geladenen Importe in der Importadressentabelle \(IAT\), wenn die DLL \(mit **\/delay:unload** und \_\_FUnloadDelayLoadedDLL2\) durch den Code entladen wird.  Wenn jedoch **\/delay:unload** in der Linkerbefehlszeile verwendet wird, wird das explizite Entladen der DLL von der Hilfsfunktion unterstützt. Hierbei wird die IAT in ihren ursprünglichen Zustand zurückgesetzt, und die nun ungültigen Zeiger werden überschrieben.  Bei der IAT handelt es sich um ein Feld in [ImgDelayDescr](../../build/reference/calling-conventions-parameters-and-return-type.md), das die Adresse einer Kopie der ursprünglichen IAT enthält \(falls vorhanden\).  
+# <a name="explicitly-unloading-a-delay-loaded-dll"></a>Explizites Entladen einer verzögert geladenen DLL
+Die [/delay](../../build/reference/delay-delay-load-import-settings.md): Unload (Linkeroption) können Sie eine DLL entladen, die verzögert geladen wurde. Wenn Ihr Code die DLL entladen wird standardmäßig (mithilfe von/delay: Unload und **__FUnloadDelayLoadedDLL2**), die verzögert geladene Importe in die Importadresstabelle (IAT) bleiben. Allerdings bei Verwendung von/delay: unload in der Linker-Befehlszeile wird die Hilfsfunktion unterstützen das explizite Entladen der DLL, die IAT in ihr ursprüngliches Format zurückgesetzt; der Zeiger für das jetzt ungültig werden überschrieben. Die IAT ist ein Feld in der [ImgDelayDescr](../../build/reference/calling-conventions-parameters-and-return-type.md) , enthält die Adresse einer Kopie der ursprünglichen IAT (falls vorhanden).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // link with /link /DELAYLOAD:MyDLL.dll /DELAY:UNLOAD  
@@ -56,14 +57,14 @@ int main()
 }  
 ```  
   
-### Kommentare  
+### <a name="comments"></a>Kommentare  
  Wichtige Hinweise zum Entladen einer verzögert geladenen DLL:  
   
--   Die Implementierung der **\_\_FUnloadDelayLoadedDLL2**\-Funktion finden Sie in der Datei **\\VC7\\INCLUDE\\DELAYHLP.CPP**.  
+-   Sie finden die Implementierung der **__FUnloadDelayLoadedDLL2** Funktion in der Datei \VC7\INCLUDE\DELAYHLP. CPP.  
   
--   Der Namensparameter der **\_\_FUnloadDelayLoadedDLL2**\-Funktion muss \(einschließlich der Groß\-\/Kleinschreibung\) exakt mit dem Inhalt der Importbibliothek, also der Zeichenfolge in der Importtabelle des Abbilds, übereinstimmen.  Die Inhalte von Importbibliotheken können mit [DUMPBIN \/DEPENDENTS](../../build/reference/dependents.md) angezeigt werden.  Wenn eine Zeichenfolgenübereinstimmung ohne Beachtung von Groß\-\/Kleinschreibung erwünscht ist, können Sie **\_\_FUnloadDelayLoadedDLL2** aktualisieren, um eine der CRT\-Zeichenfolgenfunktionen oder einen Windows\-API\-Aufruf zu verwenden.  
+-   Die Name-Parameter von der **__FUnloadDelayLoadedDLL2** Funktion muss genau (einschließlich der Fall) wie die Importbibliothek enthält (die Zeichenfolge auch in der Tabelle importieren, in der Abbildung ist). Sie können den Inhalt des mit der Importbibliothek anzeigen [DUMPBIN/DEPENDENTS](../../build/reference/dependents.md). Wenn eine Übereinstimmung der Groß-/Kleinschreibung Zeichenfolge gewünscht ist, können Sie aktualisieren **__FUnloadDelayLoadedDLL2** die CRT-Zeichenfolgenfunktionen oder ein Aufruf der Windows-API verwenden.  
   
- Weitere Informationen finden Sie unter [Entladen einer verzögert geladenen DLL](../../build/reference/unloading-a-delay-loaded-dll.md).  
+ Finden Sie unter [Entladen einer verzögert geladenen DLL](../../build/reference/unloading-a-delay-loaded-dll.md) für Weitere Informationen.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Linkerunterstützung für verzögertes Laden von DLLs](../../build/reference/linker-support-for-delay-loaded-dlls.md)

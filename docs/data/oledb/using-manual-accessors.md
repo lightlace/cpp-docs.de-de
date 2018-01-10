@@ -1,58 +1,61 @@
 ---
-title: "Verwenden von manuellen Accessoren | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Accessoren [C++], Manuelle"
-  - "Befehlsbehandlung, OLE DB-Vorlagen"
-  - "Manuelle Accessoren"
+title: Verwenden von manuellen Accessoren | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- command handling, OLE DB Templates
+- manual accessors
+- accessors [C++], manual
 ms.assetid: 29f00a89-0240-482b-8413-4120b9644672
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: dd628baa51ec790686f185c49ff33e7c6984150f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Verwenden von manuellen Accessoren
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Bei der Behandlung eines unbekannten Befehls sollten vier Schritte ausgeführt werden:  
+# <a name="using-manual-accessors"></a>Verwenden von manuellen Zugriffsmethoden
+Es gibt vier Dinge bei der Behandlung eines unbekannten Befehls aus:  
   
--   Bestimmen der Parameter  
+-   Bestimmen Sie die Parameter  
   
--   Ausführen des Befehls  
+-   Führen Sie den Befehl  
   
 -   Bestimmen der Ausgabespalten  
   
--   Überprüfen, ob mehrere Rowsets zurückgegeben werden  
+-   Feststellen Sie, ob mehrere Rowsets zurückgegeben werden  
   
- Wenn Sie hierfür die OLE DB\-Consumervorlagen verwenden möchten, verwenden Sie die `CManualAccessor`\-Klasse, und führen Sie die folgenden Schritte aus:  
+ Verwenden Sie hierzu mit der OLE DB-Consumervorlagen der `CManualAccessor` Klasse, und gehen Sie folgendermaßen vor:  
   
-1.  Öffnen Sie ein `CCommand`\-Objekt mit `CManualAccessor` als Vorlagenparameter.  
+1.  Öffnen einer `CCommand` -Objekt mit `CManualAccessor` als Vorlagenparameter.  
   
     ```  
     CCommand<CManualAccessor, CRowset, CMultipleResults> rs;  
     ```  
   
-2.  Fragen Sie die Sitzung nach der **IDBSchemaRowset**\-Schnittstelle ab, und verwenden Sie das Rowset für die Prozeduren\-Parameter.  Wenn die **IDBSchemaRowset**\-Schnittstelle nicht verfügbar ist, starten Sie eine Abfrage nach der `ICommandWithParameters`\-Schnittstelle.  Rufen Sie für Informationen `GetParameterInfo` auf.  Wenn keine der Schnittstellen verfügbar ist, können Sie davon ausgehen, dass keine Parameter vorhanden sind.  
+2.  Fragen Sie die Sitzung für die **IDBSchemaRowset** Schnittstelle, und verwenden Sie das Verfahren Parameter-Rowset. Wenn die **IDBSchemaRowset** Schnittstelle ist nicht verfügbar ist, Abfragen für die `ICommandWithParameters` Schnittstelle. Rufen Sie `GetParameterInfo` Informationen. Wenn keine der Schnittstellen verfügbar ist, können Sie davon ausgehen, dass keine Parameter vorhanden sind.  
   
-3.  Rufen Sie für jeden Parameter `AddParameterEntry` auf, um die Parameter hinzuzufügen und sie festzulegen.  
+3.  Rufen Sie für jeden Parameter `AddParameterEntry` fügen Sie die Parameter und setzen Sie sie.  
   
-4.  Öffnen Sie das Rowset, legen Sie den Bindungsparameter jedoch auf **false** fest.  
+4.  Öffnen Sie das Rowset, aber so festgelegt, den Bind-Parameter **"false"**.  
   
-5.  Rufen Sie `GetColumnInfo` auf, um die Ausgabespalten abzurufen.  Verwenden Sie `AddBindEntry`, um die Ausgabespalten zum Binden hinzuzufügen.  
+5.  Rufen Sie `GetColumnInfo` Ausgabespalten abgerufen. Verwendung `AddBindEntry` so die Bindung die Ausgabespalte hinzu.  
   
-6.  Rufen Sie `GetNextResult` auf um zu bestimmen, ob weitere Rowsets verfügbar sind.  Wiederholen Sie die Schritte 2 bis 5.  
+6.  Rufen Sie `GetNextResult` zu bestimmen, ob weitere Rowsets verfügbar sind. Wiederholen Sie die Schritte 2 bis 5.  
   
- Ein Beispiel für einen manuellen Accessor finden Sie unter **CDBListView::CallProcedure** im Beispiel [DBVIEWER](assetId:///07620f99-c347-4d09-9ebc-2459e8049832).  
+ Ein Beispiel für einen manuellen Accessor finden Sie unter **CDBListView:: CallProcedure** in der [DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832) Beispiel.  
   
-## Siehe auch  
- [Verwenden von Accessoren](../../data/oledb/using-accessors.md)
+## <a name="see-also"></a>Siehe auch  
+ [Verwenden von Zugriffsmethoden](../../data/oledb/using-accessors.md)

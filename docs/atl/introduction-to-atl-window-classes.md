@@ -1,50 +1,51 @@
 ---
-title: "Introduction to ATL Window Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "window classes"
+title: "Einführung in ATL-Fensterklassen | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: window classes
 ms.assetid: 503efc2c-a269-495d-97cf-3fb300d52f3d
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 636fe8aa87b6880f5cda77fb46fc481d99d78a81
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Introduction to ATL Window Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die folgenden ATL\-Klassen wurden entwickelt, um Fenster zu implementieren und zu bearbeiten:  
+# <a name="introduction-to-atl-window-classes"></a>Einführung in ATL-Fensterklassen
+Die folgenden ATL-Klassen dienen Windows zu implementieren:  
   
--   [CWindow](../atl/reference/cwindow-class.md) ermöglicht es Ihnen, ein Fensterhandle zum `CWindow`\-Objekt anzufügen.  Rufen Sie dann `CWindow`\-Methoden auf, um das Fenster zu bearbeiten.  
+-   [CWindow](../atl/reference/cwindow-class.md) bietet die Möglichkeit, ein Fensterhandle zum Anfügen der `CWindow` Objekt. Rufen Sie dann `CWindow` Methoden zum Ändern des Fensters.  
   
--   [CWindowImpl](../atl/reference/cwindowimpl-class.md) ermöglicht es Ihnen, ein neues Fenster und Meldungen verarbeiten mit einer Meldungszuordnung zu implementieren.  Sie können ein Fenster auf Grundlage einer neue Windows\-Klasse, übergeordnete Klasse erstellen eine vorhandene Klasse, oder ordnen Sie ein vorhandenes Fenster unter.  
+-   [CWindowImpl](../atl/reference/cwindowimpl-class.md) können Sie ein neues Fenster zu implementieren und Verarbeiten von Nachrichten mit einer meldungszuordnung. Sie erstellen ein Fenster basierend auf einer neuen Windows-Klasse, übergeordnete Klasse einer vorhandenen Klasse oder Unterklasse ein vorhandenes Fenster.  
   
--   [CDialogImpl](../atl/reference/cdialogimpl-class.md) ermöglicht es Ihnen, modalen oder eines nicht modalen Dialogfelds und des Prozesses Meldungen mit einer Meldungszuordnung zu implementieren.  
+-   [CDialogImpl](../atl/reference/cdialogimpl-class.md) ermöglicht es Ihnen, eine modale oder ein nicht modales Dialogfeld Feld und Verarbeiten von Nachrichten mit einer meldungszuordnung zu implementieren.  
   
--   [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md) ist eine vordefinierte Klasse, die ein Fenster implementiert wird, die Meldungszuordnung in einer anderen Klasse enthalten ist.  Verwenden `CContainedWindowT` ermöglicht es Ihnen, um die Meldung zu zentralisieren, die in einer Klasse verarbeitet.  
+-   [CContainedWindow](../atl/reference/ccontainedwindowt-class.md) eine vorgefertigte-Klasse, die ein Fenster, dessen meldungszuordnung enthalten ist, in einer anderen Klasse implementiert, ist. Mithilfe von `CContainedWindowT` ermöglicht es Ihnen, die Verarbeitung von Nachrichten in einer Klasse zu zentralisieren.  
   
--   [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) ermöglicht es Ihnen, um ein Dialogfeld zu implementieren \(modal oder nicht modale\) dieses Hosts ActiveX\-Steuerelemente.  
+-   [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) können Sie ein Dialogfeld (gebunden oder ungebunden) implementieren, die ActiveX-Steuerelemente hostet.  
   
--   [CSimpleDialog](../atl/reference/csimpledialog-class.md) ermöglicht es Ihnen, ein modales Dialogfeld mit grundlegenden Funktionalität zu implementieren.  
+-   [CSimpleDialog](../atl/reference/csimpledialog-class.md) können Sie ein modales Dialogfeld mit der grundlegenden Funktionalität zu implementieren.  
   
--   [CAxWindow](../atl/reference/caxwindow-class.md) ermöglicht es Ihnen, ein Fenster implementieren, das ein ActiveX\-Steuerelement hostet.  
+-   [CAxWindow](../atl/reference/caxwindow-class.md) können Sie ein Fenster zu implementieren, die ein ActiveX-Steuerelement hostet.  
   
--   [CAxWindow2T](../atl/reference/caxwindow2t-class.md) ermöglicht es Ihnen, ein Fenster implementieren, das ein lizenziertes ActiveX\-Steuerelement hostet.  
+-   [CAxWindow2T](../atl/reference/caxwindow2t-class.md) können Sie ein Fenster zu implementieren, die ein lizenziertes ActiveX-Steuerelement hostet.  
   
- Zusätzlich zu den bestimmten Fensterklassen ATL stellt mehrere Klassen, die entwickelt wurden, um die Implementierung von einem ATL\-Fensterobjekt zu vereinfachen.  Dies sind:  
+ Zusätzlich zu den spezifischen Fensterklassen stellt ATL mehrere Klassen, die entwickelt, um die Implementierung eines ATL-Fenster-Objekts zu vereinfachen. Dies sind:  
   
--   [CWndClassInfo](../atl/reference/cwndclassinfo-class.md) verwaltet die Informationen einer neuen Fensterklasse.  
+-   [CWndClassInfo](../atl/reference/cwndclassinfo-class.md) verwaltet die Informationen in eine neue Windows-Klasse.  
   
--   [CWinTraits](../atl/reference/cwintraits-class.md) und [CWinTraitsOR](../atl/reference/cwintraitsor-class.md) bieten eine einfache Methode der Normung der Merkmale eines ATL\-Fensterobjekts.  
+-   [CWinTraits](../atl/reference/cwintraits-class.md) und [CWinTraitsOR](../atl/reference/cwintraitsor-class.md) bieten eine einfache Möglichkeit standardisieren die Merkmale eines ATL-Fenster-Objekts.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Fensterklassen](../atl/atl-window-classes.md)
+

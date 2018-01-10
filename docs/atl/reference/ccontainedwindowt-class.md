@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -24,37 +23,22 @@ f1_keywords:
 - ATLWIN/ATL::CContainedWindowT::m_lpszClassName
 - ATLWIN/ATL::CContainedWindowT::m_pfnSuperWindowProc
 - ATLWIN/ATL::CContainedWindowT::m_pObject
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CContainedWindow class
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: ab2b20591ded82dd17a38f5258dfe593f7e88fc8
-ms.contentlocale: de-de
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4cf792fed2f7a5cac45826649224a565228f9d73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindow-Klasse
 Diese Klasse implementiert ein Fenster innerhalb eines anderen Objekts enthalten.  
@@ -79,7 +63,7 @@ class CContainedWindowT : public TBase
 > [!NOTE]
 > [CContainedWindow](ccontainedwindowt-class.md) ist eine Spezialisierung der `CContainedWindowT`. Wenn Sie die Basisklasse oder die Merkmale ändern möchten, verwenden Sie `CContainedWindowT` direkt.  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -121,18 +105,18 @@ class CContainedWindowT : public TBase
   
  Bei Verwendung der **Hinzufügen des Steuerelements basierend auf** option im ATL-Projekt-Assistenten vom Assistenten werden automatisch hinzugefügt. eine `CContainedWindowT` Datenmember der Klasse, die das Steuerelement implementieren. Das folgende Beispiel zeigt, wie das eigenständige Fenster deklariert wird:  
   
- [!code-cpp[NVC_ATL_Windowing #38](../../atl/codesnippet/cpp/ccontainedwindowt-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#38](../../atl/codesnippet/cpp/ccontainedwindowt-class_1.h)]  
   
- [!code-cpp[NVC_ATL_Windowing #39](../../atl/codesnippet/cpp/ccontainedwindowt-class_2.h)]  
+ [!code-cpp[NVC_ATL_Windowing#39](../../atl/codesnippet/cpp/ccontainedwindowt-class_2.h)]  
   
- [!code-cpp[NVC_ATL_Windowing #-40](../../atl/codesnippet/cpp/ccontainedwindowt-class_3.h)]  
+ [!code-cpp[NVC_ATL_Windowing#40](../../atl/codesnippet/cpp/ccontainedwindowt-class_3.h)]  
   
 |Weitere Informationen finden Sie unter|Siehe|  
 |--------------------------------|---------|  
 |Erstellen von Steuerelementen|[ATL-Lernprogramm](../../atl/active-template-library-atl-tutorial.md)|  
 |Verwenden von Fenstern in ATL|[ATL-Fensterklassen](../../atl/atl-window-classes.md)|  
 |ATL-Projekt-Assistent|[Erstellen eines ATL-Projekts](../../atl/reference/creating-an-atl-project.md)|  
-|Windows|[Windows](http://msdn.microsoft.com/library/windows/desktop/ms632595) und nachfolgenden Themen in der[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]|  
+|Windows|[Windows](http://msdn.microsoft.com/library/windows/desktop/ms632595) und nachfolgenden Themen im Windows SDK|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `TBase`  
@@ -168,7 +152,7 @@ CContainedWindowT(
  [in] Identifiziert die meldungszuordnung, die die eigenständigen Windows-Meldungen verarbeitet. Der Standardwert 0 (null) gibt an, die deklariert mit Standard-meldungszuordnung [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map). Verwenden Sie einen alternativen meldungszuordnung deklariert, mit [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), übergeben Sie `msgMapID`.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn Sie ein neues Fenster über erstellen möchten [erstellen](#create), müssen Sie den Namen der eine vorhandene Fensterklasse überordnen für übergeben der `lpszClassName` Parameter. Ein Beispiel finden Sie die [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) (Übersicht).  
+ Wenn Sie, beim Erstellen eines neuen Fensters über möchten [erstellen](#create), müssen Sie den Namen der eine vorhandene Fensterklasse überordnen für übergeben der `lpszClassName` Parameter. Ein Beispiel finden Sie die [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) (Übersicht).  
   
  Es gibt drei Konstruktoren:  
   
@@ -178,7 +162,7 @@ CContainedWindowT(
   
 -   Der Konstruktor ohne Argumente wird verwendet, wenn Sie später die Argumente angeben möchten. Sie müssen die Fenster-Klassennamen, die Nachricht Map-Objekt und die Nachricht Zuordnungs-ID angeben, wenn Sie später Aufrufen **erstellen**.  
   
- Wenn Sie ein vorhandenes Fenster Unterklasse durch [SubclassWindow](#subclasswindow), die `lpszClassName` Wert wird nicht verwendet werden; Sie können daher übergeben **NULL** für diesen Parameter.  
+ Wenn Sie ein vorhandenes Fenster Unterklasse über [SubclassWindow](#subclasswindow), die `lpszClassName` Wert wird nicht verwendet werden; Sie können daher übergeben **NULL** für diesen Parameter.  
   
 ##  <a name="create"></a>CContainedWindow:: Create auf  
  Aufrufe [RegisterWndSuperclass](#registerwndsuperclass) eine Fensterklasse registriert, die auf einer vorhandenen Klasse basiert, verwendet jedoch [CContainedWindowT::WindowProc](#windowproc).  
@@ -237,10 +221,10 @@ HWND Create(
  [in] Gibt den Namen des Fensters. Der Standardwert ist **NULL**.  
   
  `dwStyle`  
- [in] Der Stil des Fensters. Der Standardwert ist **WS_CHILD | WS_VISIBLE**. Eine Liste der möglichen Werte finden Sie unter [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [in] Der Stil des Fensters. Der Standardwert ist **WS_CHILD &#124; WS_VISIBLE**. Eine Liste der möglichen Werte finden Sie unter [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) im Windows SDK.  
   
  `dwExStyle`  
- [in] Der erweiterte Fensterstil. Der Standardwert ist 0, d. h. keine erweiterten Stil. Eine Liste der möglichen Werte finden Sie unter [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [in] Der erweiterte Fensterstil. Der Standardwert ist 0, d. h. keine erweiterten Stil. Eine Liste der möglichen Werte finden Sie unter [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
   
  `MenuOrID`  
  [in] Für ein untergeordnetes Fenster, das Fenster-Bezeichner. Für ein Fenster der obersten Ebene ein Menü-Handle für das Fenster. Der Standardwert ist **0 HE**.  
@@ -333,7 +317,7 @@ WNDPROC m_pfnSuperWindowProc;
 ### <a name="remarks"></a>Hinweise  
  Wenn die enthaltenen Fenster Komponente ist, d. h. sie basiert auf eine Fensterklasse, die eine vorhandene Klasse ändert `m_pfnSuperWindowProc` verweist auf die vorhandenen des Fensterprozedur der Fensterklasse.  
   
- Die [DefWindowProc](#defwindowproc) Methode sendet die Nachrichteninformationen an die Fensterprozedur in gespeichert `m_pfnSuperWindowProc`.  
+ Die [DefWindowProc](#defwindowproc) Methode sendet die Nachrichteninformationen an die Fensterprozedur in gespeicherten `m_pfnSuperWindowProc`.  
   
 ##  <a name="m_pobject"></a>CContainedWindowT::m_pObject  
  Verweist auf das Objekt mit dem `CContainedWindowT` Objekt.  
@@ -450,4 +434,3 @@ static LRESULT CALLBACK WindowProc(
  [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
  [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
  [Klassenübersicht](../../atl/atl-class-overview.md)
-

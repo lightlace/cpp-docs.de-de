@@ -1,46 +1,47 @@
 ---
-title: "/Zc:strictStrings (Zeichenfolgenliteral-Typkonvertierung deaktivieren) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/Zc:strictStrings"
-  - "strictStrings"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Zc (Compileroptionen) [C++]"
-  - "/Zc:strictStrings"
-  - "strictStrings"
-  - "Zc (Compileroptionen) [C++]"
-  - "-Zc (Compileroptionen) [C++]"
+title: '-Zc: StrictStrings (Zeichenfolgenliteral-typkonvertierung deaktivieren) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /Zc:strictStrings
+- strictStrings
+dev_langs: C++
+helpviewer_keywords:
+- /Zc:strictStrings
+- -Zc compiler options (C++)
+- strictStrings
+- /Zc compiler options (C++)
+- Zc compiler options (C++)
 ms.assetid: b7eb3f3b-82c1-48a2-8e63-66bad7397b46
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f316c5fc9209f968219d770a15e6576880b69954
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# /Zc:strictStrings (Zeichenfolgenliteral-Typkonvertierung deaktivieren)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Wenn dies angegeben wird, benötigt der Compiler eine strenge `const`\-Qualifikationsübereinstimmung für Zeiger, die mithilfe von Zeichenfolgenliteralen initialisiert werden.  
+# <a name="zcstrictstrings-disable-string-literal-type-conversion"></a>/Zc:strictStrings (Zeichenfolgenliteral-Typkonvertierung deaktivieren)
+Wenn dies angegeben wird, benötigt der Compiler eine strenge `const`-Qualifikationsübereinstimmung für Zeiger, die mithilfe von Zeichenfolgenliteralen initialisiert werden.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /Zc:strictStrings[-]  
 ```  
   
-## Hinweise  
- Wenn **\/Zc:strictStrings** angegeben wird, erzwingt der Compiler die standardmäßigen C\+\+ `const`\-Qualifikationen für Zeichenfolgenliterale, als Typ "Array von `const` `char`" oder "Array von `const` `wchar_t`", abhängig von der Deklaration.  Zeichenfolgenliterale sind unveränderlich. Der Versuch, den Inhalt von einem von ihnen zu ändern, führt zu einem Zugriffsverletzungsfehler in der Laufzeit.  Sie müssen einen Zeichenfolgenzeiger als `const` deklarieren, um ihn mithilfe eines Zeichenfolgenliterals zu initialisieren, oder sie müssen eine explizite `const_cast` verwenden, um einen Zeiger zu initialisieren, der nicht `const` ist.  Standardmäßig oder wenn **\/Zc:strictStrings\-** angegeben wird, werden vom Compiler nicht die Standard\-Qualifikationen von C\+\+ `const` für Zeichenfolgenzeiger erzwungen, die mithilfe von Zeichenfolgenliteralen initialisiert werden.  
+## <a name="remarks"></a>Hinweise  
+ Wenn **/Zc: strictstrings** angegeben ist, erzwingt der Compiler die standardmäßigen C++ `const` -Qualifikationen für Zeichenfolgenliterale als Typ "Array von `const char`" oder "Array von `const wchar_t`", je nachdem, in der Deklaration. Zeichenfolgenliterale sind unveränderlich. Der Versuch, den Inhalt von einem von ihnen zu ändern, führt zu einem Zugriffsverletzungsfehler in der Laufzeit. Sie müssen einen Zeichenfolgenzeiger als `const` deklarieren, um ihn mithilfe eines Zeichenfolgenliterals zu initialisieren, oder sie müssen eine explizite `const_cast` verwenden, um einen Zeiger zu initialisieren, der nicht `const` ist. Standardmäßig oder wenn **/Zc:strictStrings-** angegeben ist, wird der Compiler erzwingt keine der standardmäßigen C++ `const` Qualifikationen für Zeichenfolgenzeiger mithilfe von Zeichenfolgenliteralen initialisiert werden.  
   
- Verwenden Sie die Option **\/Zc:strictStrings**, um die Kompilierung von fehlerhaftem Code zu verhindern.  Dieses Beispiel zeigt, wie ein einfacher Deklarationsfehler zu einem Absturz während der Laufzeit führt:  
+ Verwenden der **/Zc: strictstrings** Option aus, um zu verhindern, dass bei der Kompilierung von fehlerhaftem Code. Dieses Beispiel zeigt, wie ein einfacher Deklarationsfehler zu einem Absturz während der Laufzeit führt:  
   
 ```cpp  
 // strictStrings_off.cpp  
@@ -51,7 +52,7 @@ int main() {
 }  
 ```  
   
- Wenn **\/Zc:strictStrings** aktiviert ist, meldet der gleiche Code für einen Fehler in der Deklaration von `str`.  
+ Wenn **/Zc: strictstrings** ist aktiviert, meldet der gleiche Code einen Fehler in der Deklaration des `str`.  
   
 ```cpp  
 // strictStrings_on.cpp  
@@ -63,22 +64,22 @@ int main() {
 }  
 ```  
   
- Wenn Sie `auto` verwenden, um einen Zeichenfolgenzeiger zu deklarieren, erstellt der Compiler die richtige `const` Zeigertypdeklaration für Sie.  Ein Versuch, den Inhalt eines `const`\-Zeigers zu ändern, wird vom Compiler als Fehler gemeldet.  
+ Wenn Sie `auto` verwenden, um einen Zeichenfolgenzeiger zu deklarieren, erstellt der Compiler die richtige `const` Zeigertypdeklaration für Sie. Ein Versuch, den Inhalt eines `const`-Zeigers zu ändern, wird vom Compiler als Fehler gemeldet.  
   
 > [!NOTE]
->  Die C\+\+\-Standardbibliothek in [!INCLUDE[cpp_dev12_long](../../build/reference/includes/cpp_dev12_long_md.md)] unterstützt nicht die **\/Zc:strictStrings**\-Compileroption in Debugversionen.  Wenn Sie mehrere Fehler [C2665](../../error-messages/compiler-errors-2/compiler-error-c2665.md) in der Buildausgabe finden, kann dies die Ursache sein.  
+>  Der C++-Standardbibliothek in [!INCLUDE[cpp_dev12_long](../../build/reference/includes/cpp_dev12_long_md.md)] unterstützt nicht die **/Zc: strictstrings** -Compileroption in Debugversionen erstellt. Wenn Sie mehrere finden Sie unter [C2665](../../error-messages/compiler-errors-2/compiler-error-c2665.md) Fehler in Ihrem Build ausgeben, kann dies die Ursache sein.  
   
- Weitere Informationen über Konformitätsprobleme in Visual C\+\+ finden Sie unter [Nicht dem Standard entsprechendes Verhalten](../../cpp/nonstandard-behavior.md).  
+ Weitere Informationen über Konformitätsprobleme in Visual C++ finden Sie unter [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).  
   
-### So legen Sie diese Compileroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Wählen Sie den Ordner **C\/C\+\+** aus.  
+2.  Wählen Sie die **C/C++-** Ordner.  
   
-3.  Wählen Sie die Eigenschaftenseite **Befehlszeile** aus.  
+3.  Wählen Sie die **Befehlszeile** Eigenschaftenseite.  
   
-4.  Ändern Sie die Eigenschaft **Zusätzliche Optionen**, damit sie `/Zc:strictStrings` einschließt, und wählen Sie dann **OK** aus.  
+4.  Ändern der **Zusatzoptionen** Eigenschaft einschließen `/Zc:strictStrings` und wählen Sie dann **OK**.  
   
-## Siehe auch  
- [\/Zc \(Übereinstimmung\)](../../build/reference/zc-conformance.md)
+## <a name="see-also"></a>Siehe auch  
+ [/ Zc (Übereinstimmung)](../../build/reference/zc-conformance.md)

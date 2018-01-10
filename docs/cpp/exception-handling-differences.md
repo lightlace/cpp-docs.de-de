@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - structured exception handling [C++], vs. C++ exception handling
 - structured exception handling [C++], vs. unstructured
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - C++ exception handling [C++], vs. structured exception handling
 - wrapper classes [C++], C exception
 ms.assetid: f21d1944-4810-468e-b02a-9f77da4138c9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 191b59d21f56ee810a981082806a6775bc6ea40d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 63fff00222aa083bcb392e0d71411bfcf5c0f418
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-handling-differences"></a>Unterschiede bei der Ausnahmebehandlung
 Der Hauptunterschied zwischen einer strukturierten Ausnahmebehandlung und einer C++-Ausnahmebehandlung besteht darin, dass das C++-Ausnahmebehandlungsmodell Typen behandelt, während das Modell der C-strukturierten Ausnahmebehandlung mit Ausnahmen eines Typen arbeitet, insbesondere `unsigned int`. Das bedeutet, dass C-Ausnahmen über einen Ganzzahlwert ohne Vorzeichen identifiziert werden und C++-Ausnahmen über den Datentyp. Wenn in C eine Ausnahme ausgelöst wird, führt jeder mögliche Handler einen Filter aus, der den C-Ausnahmekontext validiert und bestimmt, ob die Ausnahme akzeptiert, an einen anderen Handler übergeben oder ignoriert wird. Wenn eine Ausnahme in C++ ausgelöst wird, kann sie einem beliebigen Typ angehören.  
@@ -71,7 +69,7 @@ Caught a C exception.
 ```  
   
 ##  <a name="_core_c_exception_wrapper_class"></a>C-Ausnahme-Wrapperklasse  
- In einem einfachen Beispiel wie oben, die C-Ausnahme abgefangen werden kann, nur durch ein Auslassungszeichen (**... **) **catch** Handler. Es werden keine Informationen über den Typ oder die Art der Ausnahme an den Handler übermittelt. Diese Methode funktioniert zwar, in einigen Fällen müssen Sie jedoch u. U. eine Transformation zwischen den beiden Ausnahmebehandlungsmodellen definieren, damit jede C-Ausnahme einer bestimmten Klasse zugeordnet wird. Dazu können Sie eine Wrapperklasse für eine C-Ausnahme definieren, die verwendet oder abgeleitet werden kann, um einer C-Ausnahme einen speziellen Klassentyp zuzuordnen. Auf diese Weise kann jede C-Ausnahme vom C++ behandelt werden **catch** Handler mehr separat als in vorherigen Beispiel.  
+ In einem einfachen Beispiel wie oben, die C-Ausnahme abgefangen werden kann, nur durch ein Auslassungszeichen (**...** ) **catch** Handler. Es werden keine Informationen über den Typ oder die Art der Ausnahme an den Handler übermittelt. Diese Methode funktioniert zwar, in einigen Fällen müssen Sie jedoch u. U. eine Transformation zwischen den beiden Ausnahmebehandlungsmodellen definieren, damit jede C-Ausnahme einer bestimmten Klasse zugeordnet wird. Dazu können Sie eine Wrapperklasse für eine C-Ausnahme definieren, die verwendet oder abgeleitet werden kann, um einer C-Ausnahme einen speziellen Klassentyp zuzuordnen. Auf diese Weise kann jede C-Ausnahme vom C++ behandelt werden **catch** Handler mehr separat als in vorherigen Beispiel.  
   
  Die Wrapperklasse enthält eventuell eine Schnittstelle, die aus mehreren Memberfunktionen besteht, die den Wert der Ausnahme bestimmen und auf die erweiterten Ausnahmekontextinformationen zugreifen, die vom C-Ausnahmemodell bereitgestellt werden. Sie können auch einen Standardkonstruktor und einen Konstruktor definieren, der ein `unsigned int`-Argument akzeptiert (um die zugrunde liegende C-Ausnahme-Darstellung bereitzustellen), und einen Konstruktor für bitweise Kopien. Es folgt eine mögliche Implementierung einer C-Ausnahme-Wrapperklasse:  
   

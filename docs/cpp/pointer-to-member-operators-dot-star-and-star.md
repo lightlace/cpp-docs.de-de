@@ -22,11 +22,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a77c69b2268ea1d97cc92122ab587b1c70be0e42
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6db7b7190a1374564071775ce2ea6c0777bdf567
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pointer-to-member-operators--and--gt"></a>Pointer-to-Member-Operatoren:. * "und" -&gt;*
 ## <a name="syntax"></a>Syntax  
@@ -135,7 +136,7 @@ int main() {
 }  
 ```  
   
- Das Ergebnis der. * oder ->\* Pointer-to-Member-Operatoren ist ein Objekt oder eine Funktion des Typs in der Deklaration eines Zeigers auf den Member angegeben. Im vorherigen Beispiel ist das Ergebnis des Ausdrucks `ADerived.*pmfnFunc1()` ein Zeiger auf eine Funktion, die "void" zurückgibt. Dieses Ergebnis ist ein l-Wert, wenn der zweite Operand ein l-Wert ist.  
+ Das Ergebnis der. * oder ->\* Pointer-to-Member-Operatoren ist ein Objekt oder eine Funktion des Typs in der Deklaration eines Zeigers auf den Member angegeben. Im vorherigen Beispiel ist das Ergebnis des Ausdrucks `ADerived.*pmfnFunc1()` ein Zeiger auf eine Funktion, die "void" zurückgibt. Dieses Ergebnis ist ein L-Wert, wenn der zweite Operand ein L-Wert ist.  
   
 > [!NOTE]
 >  Wenn das Ergebnis eines der Zeiger-auf-Member-Operatoren eine Funktion ist, kann das Ergebnis nur als Operand für den Funktionsaufrufoperator verwendet werden.  

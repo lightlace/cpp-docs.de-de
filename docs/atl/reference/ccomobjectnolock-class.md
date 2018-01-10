@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,21 +14,19 @@ f1_keywords:
 - ATLCOM/ATL::CComObjectNoLock::AddRef
 - ATLCOM/ATL::CComObjectNoLock::QueryInterface
 - ATLCOM/ATL::CComObjectNoLock::Release
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComObjectNoLock class
+dev_langs: C++
+helpviewer_keywords: CComObjectNoLock class
 ms.assetid: 288c6506-7da8-4127-8d58-7f4bd779539a
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4a85a238d17fe279359a73d3c740406c15b92c34
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 5f37deebe0524ef0198e87a989b79d7a7ef49ede
-ms.contentlocale: de-de
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomobjectnolock-class"></a>CComObjectNoLock-Klasse
 Diese Klasse implementiert **IUnknown** eines zusammengesetzten Objekts, aber wird nicht die Sperrenanzahl Modul im Konstruktor Inkrement.  
@@ -136,4 +133,3 @@ STDMETHOD_(ULONG, Release)();
   
 ## <a name="see-also"></a>Siehe auch  
  [Klassenübersicht](../../atl/atl-class-overview.md)
-

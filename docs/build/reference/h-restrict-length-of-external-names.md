@@ -1,67 +1,67 @@
 ---
-title: "/H (L&#228;nge externer Namen beschr&#228;nken) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/h"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/H (Compileroption) [C++]"
-  - "Externe Namen"
-  - "H (Compileroption) [C++]"
-  - "-H (Compileroption) [C++]"
-  - "Länge des öffentlichen Namens"
+title: "-H (Länge externer Namen beschränken) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /h
+dev_langs: C++
+helpviewer_keywords:
+- public name length
+- /H compiler option [C++]
+- H compiler option [C++]
+- external names
+- -H compiler option [C++]
 ms.assetid: de701dd3-ed04-4c88-8195-960d2520ec2e
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4d5e862eb8e45d1f2558592c0bb54c1adb9305f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# /H (L&#228;nge externer Namen beschr&#228;nken)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Beschränkt die Länge externer Namen.  
+# <a name="h-restrict-length-of-external-names"></a>/H (Länge externer Namen beschränken)
+Veraltet. Beschränkt die Länge externer Namen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /Hnumber  
 ```  
   
-## Argumente  
+## <a name="arguments"></a>Argumente  
  `number`  
- die maximal zulässige Länge von externen Namen in einem Programm.  
+ Gibt die maximale Länge externer Namen in einem Programm zulässig.  
   
-## Hinweise  
- Standardmäßig ist die Länge externer \(öffentlicher\) Namen auf 2.047 Zeichen beschränkt.  Dies gilt für C\- und C\+\+\-Programme.  Mit **\/H** kann die maximal zulässige Länge von Bezeichnern nur herabgesetzt, nicht erhöht werden.  Ein Leerzeichen zwischen **\/H** und `number` ist optional.  
+## <a name="remarks"></a>Hinweise  
+ Standardmäßig ist die Länge externer (öffentlicher) Namen 2.047 Zeichen. Dies gilt für C- und C++-Programme. Mit **/h** nur verringern Sie die maximale zulässige Länge von Bezeichnern, nicht erhöht werden kann. Ein Leerzeichen zwischen **/h** und `number` ist optional.  
   
- Enthält ein Programm Namen mit mehr Zeichen als in *number* angegeben, werden die zusätzlichen Zeichen nicht beachtet.  Wenn Sie ein Programm ohne **\/H** kompilieren und ein Bezeichner mehr als 2.047 Zeichen enthält, gibt der Compiler den Fehler [Schwerwiegender Fehler C1064](../../error-messages/compiler-errors-1/fatal-error-c1064.md) aus.  
+ Wenn ein Programm Namen mit mehr als enthält `number`, die zusätzlichen Zeichen werden ignoriert. Wenn Sie ein Programm ohne Kompilieren **/h** und ein Bezeichner maximal 2.047 Zeichen enthält, generiert der Compiler [Schwerwiegender Fehler C1064](../../error-messages/compiler-errors-1/fatal-error-c1064.md).  
   
- Die beschränkte Länge schließt alle vom Compiler erstellten führenden Unterstriche \(\_\) oder @\-Zeichen ein.  Diese Zeichen gehören zum Bezeichner und nehmen einen wichtigen Platz ein.  
+ Die zulässige Länge enthält alle vom Compiler erstellten führenden Unterstrich (_) oder at-Zeichen (@). Diese Zeichen sind Teil des Bezeichners und nehmen einen erheblichen Speicherort.  
   
--   Der Compiler ergänzt Namen, die mit den Aufrufkonventionen `__cdecl` \(Standard\) und `__stdcall` geändert worden sind, mit einem führenden Unterstrich \(\_\) und Namen, die mit der Aufrufkonvention `__fastcall` geändert worden sind, mit einem führenden @\-Zeichen.  
+-   Der Compiler Fügt einen führenden Unterstrich (_), Namen, die geändert, indem die `__cdecl` (Standard) und `__stdcall` aufrufen, und ein führendes Aufrufkonventionen at-Zeichen (@) Namen geändert, indem die `__fastcall` Aufrufkonvention.  
   
--   Der Compiler hängt Informationen über die Argumentgröße an Namen an, die mit den Aufrufkonventionen \_\_fastcall und \_\_stdcall geändert worden sind, und ergänzt C\+\+\-Namen um Typinformationen.  
+-   Der Compiler Fügt Informationen über die Argumentgröße an Namen geändert, indem die `__fastcall` und `__stdcall` Aufrufkonventionen und C++-Namen Typinformationen hinzugefügt.  
   
- **\/H** ist in folgenden Fällen sinnvoll:  
+ Sie können möglicherweise **/h** nützlich:  
   
--   Beim Erstellen von Programmen in mehreren Sprachen oder portablen Programmen;  
+-   Wenn Sie gemischten Sprachen oder tragbaren Programme erstellen.  
   
--   beim Einsatz von Tools, die die Länge von externen Bezeichnern beschränken;  
+-   Wenn Sie Tools verwenden, die Grenzwerte für die Länge der externen Bezeichnern vorgeben.  
   
--   wenn Sie den Platz begrenzen möchten, die Symbole in einem Debugbuild einnehmen.  
+-   Wenn Sie den Umfang des Speicherplatzes zu beschränken, die Symbole in einem Debugbuild verwenden möchten.  
   
- Im folgenden Beispiel sehen Sie, wie durch die Verwendung von **\/H** Fehler entstehen können, wenn die Bezeichnerlängen zu sehr beschränkt werden:  
+ Das folgende Beispiel zeigt Verwendung **/h** können tatsächlich Fehler verursachen, wenn zu viele Bezeichnerlängen begrenzt sind:  
   
-```  
+```cpp  
 // compiler_option_H.cpp  
 // compile with: /H5  
 // processor: x86  
@@ -75,26 +75,26 @@ void func1(void) {}
 void func2(void) {}  
 ```  
   
- Vorsicht beim Angeben der **\/H**\-Option ist auch aufgrund vordefinierter Compilerbezeichner geboten.  Ist die maximale Bezeichnerlänge zu gering, werden bestimmte vordefinierte Bezeichner nicht aufgelöst, ebenso wie bestimmte Funktionsaufrufe an Bibliotheken.  Wenn beispielsweise die `printf`\-Funktion verwendet wird und beim Kompilieren die Option **\/H5** festgelegt wird, wird das Symbol **\_prin** als Verweis auf `printf` erstellt. Diese kann in der Bibliothek jedoch nicht gefunden werden.  
+ Auch Achten Sie bei Verwendung der **/h** Option aufgrund von vordefinierten Compilerbezeichner. Wenn die maximale Bezeichnerlänge zu klein ist, werden bestimmte vordefinierte Bezeichner Funktionsaufrufe nicht aufgelöste sowie bestimmte Bibliothek. Z. B. wenn die `printf` -Funktion wird verwendet, und die Option **/H5** angegeben ist, zum Zeitpunkt der Kompilierung auf das Symbol **_prin als** erstellt werden, um verweisen `printf`, und dies nicht gefunden werden in der Bibliothek.  
   
- **\/H** ist nicht mit [\/GL \(Optimierung des ganzen Programms\)](../../build/reference/gl-whole-program-optimization.md) kompatibel.  
+ Verwenden von **/h** ist inkompatibel mit [/GL (Optimierung des ganzen Programms)](../../build/reference/gl-whole-program-optimization.md).  
   
- **\/H** ist veraltet. Die maximale Länge wurde erhöht, und **\/H** wird nicht mehr benötigt.  Weitere Informationen finden Sie unter [Deprecated Compiler Options in Visual C\+\+ 2005](assetId:///aa59fce3-50b8-4f66-9aeb-ce09a7a84cce).  
+ Die **/h** Option ist seit Visual Studio 2005 veraltet; die maximale Länge wurde erhöht und **/h** wird nicht mehr benötigt. Eine Liste der veralteten Compileroptionen, finden Sie unter **veraltete und entfernte Compileroptionen** in [Compileroptionen nach Kategorien sortiert](../../build/reference/compiler-options-listed-by-category.md).  
   
-### So legen Sie diese Compileroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Gewusst wie: Öffnen von Projekteigenschaftenseiten](../../misc/how-to-open-project-property-pages.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Klicken Sie auf den Ordner **C\/C\+\+**.  
+2.  Klicken Sie auf den Ordner **C/C++** .  
   
-3.  Klicken Sie auf die Eigenschaftenseite **Befehlszeile**.  
+3.  Klicken Sie auf die Eigenschaftenseite **Befehlszeile** .  
   
 4.  Geben Sie die Compileroption im Feld **Zusätzliche Optionen** ein.  
   
-### So legen Sie diese Compileroption programmgesteuert fest  
+### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
   
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions*>.  
+-   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Compileroptionen](../../build/reference/compiler-options.md)   
  [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

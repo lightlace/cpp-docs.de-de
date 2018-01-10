@@ -1,70 +1,71 @@
 ---
-title: "Memory Management Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Speicher, Verwalten"
+title: Speicher-Management-Klassen (ATL) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: memory, managing
 ms.assetid: be564a5e-577e-40a7-bfe3-25ad21e57270
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 00bf63625f11efb300fe0d614933a50bbb5a9318
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Memory Management Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="memory-management-classes"></a>Speicher-Management-Klassen
+Diese Klassen bieten Unterstützung für Heap Zeiger, intelligente Zeiger und andere Reservierungsroutinen Arbeitsspeicher.  
+  
+-   [CAutoPtr](../atl/reference/cautoptr-class.md) diese Klasse stellt einen intelligenten Zeiger-Objekt.  
+  
+-   [CAutoPtrArray](../atl/reference/cautoptrarray-class.md) diese Klasse stellt Methoden bereit, wenn ein Array von intelligenten Zeigern zu erstellen.  
+  
+-   [CAutoPtrList](../atl/reference/cautoptrlist-class.md) diese Klasse enthält Methoden, die hilfreich beim Erstellen einer Liste von intelligenten Zeigern.  
+  
+-   [CAutoVectorPtr](../atl/reference/cautovectorptr-class.md) diese Klasse stellt ein intelligenter Zeiger-Objekt, das mit der neue Vektor und Delete-Operatoren dar.  
+  
+-   [CComAllocator](../atl/reference/ccomallocator-class.md) diese Klasse stellt Methoden zum Verwalten des Arbeitsspeichers, die mithilfe von COM-Arbeitsspeicher Routinen bereit.  
+  
+-   [CComGITPtr](../atl/reference/ccomgitptr-class.md) diese Klasse stellt Methoden für den Umgang mit Schnittstellenzeiger und der globalen Schnittstellentabelle (GIT).  
+  
+-   [CComHeap](../atl/reference/ccomheap-class.md) von dieser Klasse implementierten [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) mit COM-Speicherverwaltungsfunktionen.  
+  
+-   [CComHeapPtr](../atl/reference/ccomheapptr-class.md) einen intelligenten Zeiger-Klasse zum Verwalten von Heaps Zeiger.  
+  
+-   [CComPtr](../atl/reference/ccomptr-class.md) einen intelligenten Zeiger-Klasse zum Verwalten von COM-Schnittstellenzeiger auf.  
+  
+-   [CComPtrBase](../atl/reference/ccomptrbase-class.md) diese Klasse bietet eine Grundlage für intelligente zeigerklassen mit COM-basierten Speicher Routinen.  
+  
+-   [CComQIPtr](../atl/reference/ccomqiptr-class.md) einen intelligenten Zeiger-Klasse zum Verwalten von COM-Schnittstellenzeiger auf.  
+  
+-   [CCRTAllocator](../atl/reference/ccrtallocator-class.md) diese Klasse stellt Methoden zum Verwalten des Arbeitsspeichers, die mit der CRT-Speicher-Routinen bereit.  
+  
+-   [CCRTHeap](../atl/reference/ccrtheap-class.md) von dieser Klasse implementierten [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) CRT-Heapfunktionen verwenden.  
+  
+-   [CGlobalHeap](../atl/reference/cglobalheap-class.md) von dieser Klasse implementierten [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) mit globalen Heapfunktionen Win32.  
+  
+-   [CHandle](../atl/reference/chandle-class.md) diese Klasse stellt Methoden zum Erstellen und verwenden ein Handleobjekt.  
+  
+-   [CHeapPtr](../atl/reference/cheapptr-class.md) einen intelligenten Zeiger-Klasse zum Verwalten von Heaps Zeiger.  
+  
+-   [CHeapPtrBase](../atl/reference/cheapptrbase-class.md) dieser Klasse bildet die Grundlage für verschiedene für zeigerklassen Heap intelligente.  
+  
+-   [CHeapPtrList](../atl/reference/cheapptrlist-class.md) diese Klasse stellt Methoden bereit, bei der eine Liste von Zeigern Heap erstellen.  
+  
+-   [Clocalheap –](../atl/reference/clocalheap-class.md) von dieser Klasse implementierten [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) mithilfe der lokalen Heap Win32-Funktionen.  
+  
+-   [CWin32Heap](../atl/reference/cwin32heap-class.md) von dieser Klasse implementierten [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) mithilfe von Win32-Heapreservierungsfunktionen.  
+  
+-   [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) diese Klasse stellt die Schnittstelle dar, in einen Speichermanager.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Klassenübersicht](../atl/atl-class-overview.md)
 
-Diese Klassen bieten Unterstützung für Heapzeiger, intelligenten Zeiger und andere Speicherbelegungsroutinen.  
-  
--   [CAutoPtr](../atl/reference/cautoptr-class.md) diese Klasse stellt ein Objekt des intelligenten Zeigermechanismus dar.  
-  
--   [CAutoPtrArray](../atl/reference/cautoptrarray-class.md) diese Klasse stellt die Methoden, wenn es ein Array intelligenten Zeiger nützlich sind, erstellt.  
-  
--   [CAutoPtrList](../atl/reference/cautoptrlist-class.md) diese Klasse stellt die Methoden, die bei einer Liste von intelligenten Zeiger nützlich sind, erstellt.  
-  
--   [CAutoVectorPtr](../atl/reference/cautovectorptr-class.md) diese Klasse stellt ein Objekt des intelligenten Zeigermechanismus mithilfe des neuen Vektor\- und der delet\-Operatoren dar.  
-  
--   [CComAllocator](../atl/reference/ccomallocator-class.md) diese Klasse stellt Methoden zum Verwalten des Arbeitsspeichers mithilfe der COM\-Arbeitsspeicherroutinen bereit.  
-  
--   [CComGITPtr](../atl/reference/ccomgitptr-class.md) diese Klasse stellt Methoden zur Handhabung von Schnittstellenzeigern und die globale Schnittstellentabelle bereit \(GIT\).  
-  
--   [CComHeap](../atl/reference/ccomheap-class.md) diese Klasse implementiert [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) mithilfe der COM\-Speicherbelegungsfunktionen.  
-  
--   Klasse intelligenten Zeigermechanismus [CComHeapPtr](../atl/reference/ccomheapptr-class.md) A zum Verwalten von Heapzeigern.  
-  
--   Klasse intelligenten Zeigermechanismus [CComPtr](../atl/reference/ccomptr-class.md) A zum Verwalten von COM\-Schnittstellenzeigern.  
-  
--   [CComPtrBase](../atl/reference/ccomptrbase-class.md) diese Klasse bietet eine Grundlage für Klassen des intelligenten Zeigermechanismus mithilfe der Routinen COM\-basierten des Arbeitsspeichers.  
-  
--   Klasse intelligenten Zeigermechanismus [CComQIPtr](../atl/reference/ccomqiptr-class.md) A zum Verwalten von COM\-Schnittstellenzeigern.  
-  
--   [CCRTAllocator](../atl/reference/ccrtallocator-class.md) diese Klasse stellt Methoden zum Verwalten des Arbeitsspeichers mithilfe der CRT\-Arbeitsspeicherroutinen bereit.  
-  
--   [CCRTHeap](../atl/reference/ccrtheap-class.md) diese Klasse implementiert [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) mithilfe der CRT\-Heapfunktionen.  
-  
--   [CGlobalHeap](../atl/reference/cglobalheap-class.md) diese Klasse implementiert [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) mithilfe der globalen Heapfunktionen Win32.  
-  
--   [CHandle](../atl/reference/chandle-class.md) diese Klasse stellt Methoden zum Erstellen und Verwenden eines Handleobjekts bereit.  
-  
--   Klasse intelligenten Zeigermechanismus [CHeapPtr](../atl/reference/cheapptr-class.md) A zum Verwalten von Heapzeigern.  
-  
--   [CHeapPtrBase](../atl/reference/cheapptrbase-class.md) diese Klasse bildet die Grundlage für einige intelligente Heapzeigerklassen.  
-  
--   [CHeapPtrList](../atl/reference/cheapptrlist-class.md) diese Klasse stellt die Methoden, die bei einer Liste von Heapzeigern nützlich sind, erstellt.  
-  
--   [CLocalHeap](../atl/reference/clocalheap-class.md) diese Klasse implementiert [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) mithilfe der lokalen Heapfunktionen Win32.  
-  
--   [CWin32Heap](../atl/reference/cwin32heap-class.md) diese Klasse implementiert [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) mithilfe der Win32\-Heapbelegungsfunktionen.  
-  
--   [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) diese Klasse stellt die Schnittstelle für einen Speicher\-Manager dar.  
-  
-## Siehe auch  
- [Class Overview](../atl/atl-class-overview.md)

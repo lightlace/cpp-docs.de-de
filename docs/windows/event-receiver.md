@@ -1,38 +1,40 @@
 ---
-title: "event_receiver | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.event_receiver"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "event_receiver attribute"
-  - "event receivers"
-  - "events [C++], event receivers (sinks)"
-  - "event handling [C++], attributes"
-  - "event handling [C++], creating receiver"
-  - "event sinks, creating"
-  - "event sinks"
+title: Event_receiver | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.event_receiver
+dev_langs: C++
+helpviewer_keywords:
+- event_receiver attribute
+- event receivers
+- events [C++], event receivers (sinks)
+- event handling [C++], attributes
+- event handling [C++], creating receiver
+- event sinks, creating
+- event sinks
 ms.assetid: bf8fe770-3ea2-4128-b46b-166222ee4097
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 50ea26172e2f5112e760aa02d9247d07afbead2b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# event_receiver
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Stellt einen Ereignisempfänger \(Senke\).  
+# <a name="eventreceiver"></a>event_receiver
+Erstellt einen Ereignisempfänger (Senke).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -42,13 +44,13 @@ Stellt einen Ereignisempfänger \(Senke\).
 ) ]  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `type`  
- Eine Enumeration mit einem der folgenden Werte:  
+ Eine Enumeration von einem der folgenden Werte:  
   
--   `native` für nicht verwaltete C\/C\+\+\-Code \(Standard für systemeigene Klassen\).  
+-   `native`für nicht verwalteten C/C++-Code (Standard für systemeigene Klassen).  
   
--   `com` für COM\-Code.  Dieser Wert setzt voraus, dass Sie die folgenden Headerdateien umfassen:  
+-   `com` für COM-Code. Dieser Wert erfordert, dass Sie folgende Headerdateien einschließen:  
   
     ```  
     #define _ATL_ATTRIBUTES  
@@ -56,41 +58,40 @@ Stellt einen Ereignisempfänger \(Senke\).
     #include <atlcom.h>  
     ```  
   
- **layout\_dependent**  
- Geben Sie nur bei `type`\= *layout\_dependent***COM**an.  ist ein boolescher Wert*layout\_dependent* :  
+ **layout_dependent**  
+ Geben Sie *Layout_dependent* nur, wenn `type` = **com**. *Layout_dependent* ist ein boolescher Wert:  
   
--   **true** bedeutet, dass die Signatur des Empfängers der Delegat im Ereignisprotokoll die genau übereinstimmen müssen, auf die sie gehakte Quelle in den Ereignisdaten.  Das Ereignis empfänger\-Handler Namen müssen die Namen übereinstimmen, die in der relevanten Quellschnittstelle des Ereignisses angegeben werden.  Sie müssen **coclass** verwenden, wenn *layout\_dependent,* sind **true**.  Es ist etwas effizienter, **true**anzugeben.  
+-   **"true"** bedeutet, dass die Signatur des Delegaten, den Fall, dass Empfänger genau übereinstimmen muss mit denen sie der Quelle verknüpft sind. Der Empfänger Ereignishandlernamen müssen in der Quellschnittstelle des entsprechenden Ereignisses festgelegten Namen übereinstimmen. Verwenden Sie **Coclass** Wenn *Layout_dependent* ist **"true"**. Es ist etwas effizienter an **"true"**.  
   
--   **false** \(Standard\) gibt an, dass die Aufrufkonvention und Speicherklasse \(virtual statisch und andere\) die Ereignismethode und die Handler nicht übereinstimmen müssen. Name der Handler dennoch ausführen, die Ereignisquellen schnittstellenmethoden Namen übereinstimmt.  
+-   **"false"** (Standard) bedeutet, dass der aufrufende Klasse der Aufrufkonvention und die Speicherklasse (virtuell, statisch, und andere) müssen nicht die Ereignismethode und den Ereignishandler; entsprechen noch müssen die Handlernamen die Ereignisnamen Quelle Schnittstelle Methode übereinstimmen.  
   
-## Hinweise  
- Das Attribut **event\_receiver** C\+\+ gibt an, dass die Klasse oder die Struktur, auf die es angewendet wird, ein Ereignisempfänger sind, mithilfe des einheitlichen Ereignismodells von Visual C\+\+.  
+## <a name="remarks"></a>Hinweise  
+ Die **Event_receiver** C++-Attribut gibt an, dass die Klasse oder Struktur, die auf das es angewendet wird einen Ereignisempfänger mithilfe der Visual C++ einheitliche Ereignismodell wird.  
   
- **event\_receiver** wird mit dem [event\_source](../windows/event-source.md)\-Attribut und der [\_\_hook](../cpp/hook.md) und [\_\_unhook](../cpp/unhook.md) Schlüsselwörtern verwendet.  Verwendung **event\_source** , Ereignisquellen zu erstellen.  Verwenden Sie `__hook` innerhalb der Methoden eines Ereignisempfängers, um \(„Ereignisempfänger“\) Hook Methoden Ereignisse einer Ereignisquelle zuzuordnen.  Verwendung `__unhook` , sie zu trennen.  
+ **Event_receiver** wird verwendet, mit der [Event_source](../windows/event-source.md) Attribut und der [__hook](../cpp/hook.md) und [__unhook](../cpp/unhook.md) Schlüsselwörter. Verwendung **Event_source** Ereignisquellen zu erstellen. Verwendung `__hook` innerhalb des Ereignisempfängers-Methoden ("Hook") Ereignismethoden Empfänger auf die Ereignisse einer Ereignisquelle zuordnen. Verwendung `__unhook` um sie zu trennen.  
   
- *layout\_dependent* wird nur für COM\-Ereignisempfänger \(`type`\=**COM**\) angegeben.  Der Standardwert für *layout\_dependent* ist **false**.  
+ *Layout_dependent* wird nur angegeben, für COM-Ereignisempfänger (`type`=**com**). Die Standardeinstellung für *Layout_dependent* ist **"false"**.  
   
 > [!NOTE]
 >  Eine von einer Vorlage gebildete Klasse oder Struktur kann keine Ereignisse enthalten.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
 |**Betrifft**|**Klasse**, `struct`|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|**coclass** wenn layout\_dependent\=**true**|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|**Co-Klasse** Wenn *Layout_dependent*=**"true"**|  
+|**Ungültige Attribute**|Keiner|  
   
- Weitere Informationen finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [Compiler Attributes](../windows/compiler-attributes.md)   
- [event\_source](../windows/event-source.md)   
- [\_\_event](../cpp/event.md)   
- [\_\_hook](../cpp/hook.md)   
- [\_\_unhook](../cpp/unhook.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [Compilerattribute](../windows/compiler-attributes.md)   
+ [event_source](../windows/event-source.md)   
+ [__event](../cpp/event.md)   
+ [__hook](../cpp/hook.md)   
+ [__unhook](../cpp/unhook.md)   
+ [Klassenattribute](../windows/class-attributes.md)   

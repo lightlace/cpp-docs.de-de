@@ -1,45 +1,46 @@
 ---
-title: "Verwenden von C- oder C++-Symbolen in __asm-Bl&#246;cken"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__asm-Schlüsselwort [C++], C/C++-Elemente in"
-  - "__asm-Schlüsselwort [C++], Syntax"
-  - "Symbole, In __asm-Blöcken"
-  - "Visual C, Symbole in __asm-Blöcken"
-  - "Visual C++, In __asm-Blöcken"
+title: "Verwenden von C- oder C++-Symbolen in __asm-Blöcken | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- __asm keyword [C++], syntax
+- symbols, in __asm blocks
+- Visual C, symbols in __asm blocks
+- __asm keyword [C++], C/C++ elements in
+- Visual C++, in __asm blocks
 ms.assetid: 0758ffdc-dfe9-41c8-a5e1-fd395bcac328
-caps.latest.revision: 8
-caps.handback.revision: "8"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b6a39b747c8c576d148bafff19a664a95fcb43e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Verwenden von C- oder C++-Symbolen in __asm-Bl&#246;cken
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Microsoft\-spezifisch  
- Ein `__asm`\-Block kann jedes C\- oder C\+\+\-Symbol im Bereich verweisen, für den der Block erscheint.  \(C\# und C\+\+\-Symbole sind Variablennamen, Funktionsnamen und Bezeichnungen. d. h. keine symbolischen Namen der Konstanten oder `enum`\-Member sind.  Sie können C\+\+\-Memberfunktionen nicht aufrufen.\)  
+# <a name="using-c-or-c-symbols-in-asm-blocks"></a>Verwenden von C- oder C++-Symbolen in __asm-Blöcken
+## <a name="microsoft-specific"></a>Microsoft-spezifisch  
+ Ein `__asm` Block kann finden Sie in einem C- oder C++-Symbol im Bereich, in dem der Block wird angezeigt. (C und C++ Symbole sind, Variablennamen, Funktionsnamen, und Bezeichnungen; die Namen, die keine symbolische Konstanten sind oder `enum` Elemente. Sie können keine C++ Memberfunktionen aufrufen.)  
   
- Einige Einschränkungen gelten für die Verwendung von C\- und C\+\+\-Symbolen to:  
+ Die Verwendung von C und C++-Symbolen gelten einige Einschränkungen:  
   
--   Jede Assemblersprachen Anweisung kann nur ein C\- oder C\+\+\-Symbol enthalten.  Mehrere Symbole können in der gleichen Assemblyanweisung nur mit **LENGTH**, TYPE\- und **SIZE** Ausdrücke angezeigt werden.  
+-   Jede assemblysprachanweisung darf nur eine C- oder C++-Symbol. Mehrere Symbole angezeigt werden können, in der gleichen Assemblyanweisung nur mit **Länge**, **Typ**, und **Größe** Ausdrücke.  
   
--   Die Funktionen, die in einem `__asm`\-Block verwiesen werden, müssen einen Prototyp \(\) entwickelt wurden zuvor im Programm deklariert werden.  Andernfalls kann der Compiler nicht über mehrere Funktionsnamen und die Bezeichnungen im Block `__asm` unterscheiden.  
+-   Funktionen, die auf die verwiesen wird einer `__asm` Block muss zuvor in der Anwendung (Prototypen) deklariert werden. Andernfalls der Compiler kann nicht unterschieden Funktionsnamen und Bezeichnungen in der `__asm` Block.  
   
--   Ein `__asm`\-Block kann keine C\# oder C\+\+\-Symbole mit derselben Schreibweise wie MASM\-reservierte Wörter verwenden \(unabhängig von Groß\- und Kleinschreibung\).  MASM\-reservierte Wörter zählen z. B. **PUSH** Befehlsnamen und Registerbezeichnungen wie SI.  
+-   Ein `__asm` Block kann keine Symbole C- oder C++ verwenden, mit der gleichen Schreibweise wie MASM reservierte Wörter (unabhängig von der Schreibweise). MASM-reservierte Wörter enthalten Anweisungsnamen, z. B. **PUSH** und Namen, z. B. SI zu registrieren.  
   
--   Struktur\- und Unions Tage sind nicht in `__asm` Blöcke erkannt.  
+-   Struktur- und Union-Tags werden nicht erkannt. `__asm` blockiert.  
   
- **Microsoft ENDES bestimmten**  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
- [Verwenden von C oder C\+\+ in \_\_asm\-Blöcken](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)
+## <a name="see-also"></a>Siehe auch  
+ [Verwenden von C oder C++ in __asm-Blöcken](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)

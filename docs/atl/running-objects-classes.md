@@ -1,36 +1,37 @@
 ---
-title: "Running Objects Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.atl.objects.running"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "object classes, Ausführen"
-  - "Objekte [C++], running objects classes"
+title: "Ausführung Objekte Klassen (ATL) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.atl.objects.running
+dev_langs: C++
+helpviewer_keywords:
+- object classes, running
+- objects [C++], running objects classes
 ms.assetid: b4d63c41-81fd-4000-96c5-ea0a011f4308
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3cea13d73fca1fcc8576c55881bbf9a6af7108a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Running Objects Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="running-objects-classes"></a>Ausgeführte Objects-Ereignisklassen
+Die folgende Klasse bietet Unterstützung für die Ausführung von Objekten:  
+  
+-   [IRunnableObjectImpl](../atl/reference/irunnableobjectimpl-class.md) bestimmt, wenn ein Objekt ausgeführt wird, erzwingt er ausgeführt wird, oder es in den Ausführungsstatus sperrt.  
+  
+## <a name="related-articles"></a>Verwandte Artikel  
+ [ATL-Lernprogramm](../atl/active-template-library-atl-tutorial.md)  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Klassenübersicht](../atl/atl-class-overview.md)
 
-Die folgende Klasse bietet Unterstützung für ausgeführte Objekte:  
-  
--   [IRunnableObjectImpl](../atl/reference/irunnableobjectimpl-class.md) bestimmt, wenn ein Objekt ausgeführt wird, erzwingt, um es ausgeführt werden oder sperrt es in den Zustand "Aktiv".  
-  
-## Verwandte Elemente  
- [ATL\-Lernprogramm](../atl/active-template-library-atl-tutorial.md)  
-  
-## Siehe auch  
- [Class Overview](../atl/atl-class-overview.md)

@@ -16,11 +16,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 21ebfee07e9faa35046ccfd1cb88894b45dab7c9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1b8aa8ef5b1425d4aa41b1811dca5ec5d56acd1c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stlclr-containers"></a>STL/CLR-Container
 Die STL/CLR-Bibliothek hat die gleichen Container, die in der C++-Standardbibliothek gefunden werden, aber er innerhalb der verwalteten Umgebung von .NET Framework ausgeführt wird. Wenn Sie bereits mit der C++-Standardbibliothek vertraut sind, ist die STL/CLR die beste Möglichkeit, um anzugeben, dass die Kenntnisse zu verwenden, die Sie bereits beim Aktualisieren von Code auf die common Language Runtime (CLR) entwickelt haben.  

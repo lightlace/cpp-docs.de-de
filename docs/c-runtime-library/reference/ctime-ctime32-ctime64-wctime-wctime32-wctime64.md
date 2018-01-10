@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -37,8 +36,7 @@ f1_keywords:
 - _tctime64
 - _ctime64
 - ctime
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - tctime64 function
 - _ctime32 function
@@ -59,30 +57,16 @@ helpviewer_keywords:
 - wctime function
 - time, converting
 ms.assetid: 2423de37-a35c-4f0a-a378-3116bc120a9d
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: f3d756cec6d9482cfabcbc2a336cbf5d6381a97a
-ms.contentlocale: de-de
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 97c6f5f4c827ca315eb1de36ee8d4f19d94214bd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctime-ctime32-ctime64-wctime-wctime32-wctime64"></a>ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64
 Konvertieren Sie einen Zeitwert in eine Zeichenfolge, und passen Sie sie an die Zeitzoneneinstellungen an. Sicherere Versionen dieser Funktionen sind verfügbar. Sie finden sie unter [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](../../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md).  
@@ -136,7 +120,7 @@ Wed Jan 02 02:03:55 1980\n\0
   
  Die konvertierte Zeichenfolge wird auch gemäß den lokalen Zeitzoneneinstellungen angepasst. Informationen zur Konfiguration der lokalen Zeit finden Sie unter den `time`, [_ftime](../../c-runtime-library/reference/ftime-ftime32-ftime64.md) und [localtime](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)-Funktionen. Einzelheiten zur Definition der Zeitzonenumgebung und der globalen Variablen finden Sie unter der [_tzset](../../c-runtime-library/reference/tzset.md)-Funktion.  
   
- Ein Aufruf von `ctime` ändert die einzelnen statisch zugewiesenen Puffer, die von der `gmtime`- und der `localtime`-Funktion verwendet werden. Jeder Aufruf dieser Routinen zerstört das Ergebnis des vorherigen Aufrufs. `ctime` teilt einen statischen Puffer mit der `asctime`-Funktion. Daher zerstört ein Aufruf von `ctime` die Ergebnisse jedes vorherigen Aufrufs von `asctime`, `localtime` oder `gmtime`.  
+ Ein Aufruf von `ctime` ändert die einzelnen statisch zugewiesenen Puffer, die von der `gmtime`- und der `localtime`-Funktion verwendet werden. Bei jedem Aufruf dieser Routinen wird das Ergebnis des vorherigen Aufrufs zerstört. `ctime` teilt einen statischen Puffer mit der `asctime`-Funktion. Daher zerstört ein Aufruf von `ctime` die Ergebnisse jedes vorherigen Aufrufs von `asctime`, `localtime` oder `gmtime`.  
   
  `_wctime` und `_wctime64` sind die Breitzeichenversion von `ctime` und `_ctime64` und geben einen Zeiger auf die Breitzeichen-Zeichenfolge zurück. Andernfalls verhalten sich `_ctime64`, `_wctime` und `_wctime64` identisch zu `ctime`.  
   
@@ -152,7 +136,7 @@ Wed Jan 02 02:03:55 1980\n\0
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`ctime`|\<time.h>|  
 |`_ctime32`|\<time.h>|  
@@ -191,7 +175,7 @@ The time is Wed Feb 13 16:04:43 2002
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Uhrzeitverwaltung](../../c-runtime-library/time-management.md)   
+ [Time Management (Uhrzeitverwaltung)](../../c-runtime-library/time-management.md)   
  [asctime, _wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
  [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](../../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)   
  [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   

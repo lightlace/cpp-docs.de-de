@@ -1,30 +1,33 @@
 ---
-title: "Eigenschaftenzuordnungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Zuordnungen, Eigenschaft"
-  - "OLE DB-Anbieter, Eigenschaften"
-  - "Eigenschaftenzuordnungen"
+title: Eigenschaftenzuordnungen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB providers, properties
+- maps, property
+- property maps
 ms.assetid: 44abde56-90ad-4612-854e-d2fa5426fa80
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 05bd576e6e55c94306a8dd648c57a4d606bed696
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Eigenschaftenzuordnungen
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Neben Sitzungs\-, Rowset\- und optionalen Befehlsobjekten unterstützt jeder Anbieter eine oder mehrere Eigenschaften.  Diese Eigenschaften werden in Eigenschaftenzuordnungen definiert, die in den vom OLE DB\-Anbieter\-Assistenten erstellten Headerdateien enthalten sind.  Jede Headerdatei enthält eine Zuordnung für die Eigenschaften in der OLE DB\-Eigenschaftengruppe, die für eines oder mehrere in dieser Datei festgelegten Objekte definiert wurde.  In der Headerdatei mit dem Datenquellenobjekt befindet sich zusätzlich die Eigenschaftenzuordnung für die [DataSource\-Eigenschaften](https://msdn.microsoft.com/en-us/library/ms724188\(v=vs.140\).aspx).  **Session.h** enthält die Eigenschaftenzuordnung für die [Session\-Eigenschaften](https://msdn.microsoft.com/en-us/library/ms714221.aspx).  Rowset\- und Befehlsobjekte befinden sich in derselben Headerdatei, *projectname*RS.h.  Diese Eigenschaften gehören zur Gruppe der [Rowset\-Eigenschaften](https://msdn.microsoft.com/en-us/library/ms711252.aspx).  
+# <a name="property-maps"></a>Eigenschaftenzuordnungen
+Jeder Anbieter unterstützt zusätzlich zum die Sitzung, Rowset und optionale Command-Objekt eine oder mehrere Eigenschaften. Diese Eigenschaften werden in der eigenschaftenzuordnungen, die in den Headerdateien, die vom OLE DB-Anbieter-Assistenten erstellten definiert. Jeder Header-Datei enthält eine Zuordnung für die Eigenschaften in der OLE DB-Eigenschaftengruppe, die für das Objekt oder die in dieser Datei definierten Objekte definiert. Die Header-Datei, die das Datenquellenobjekt enthält auch Übersicht darüber enthält, die Eigenschaft für die [DataSource-Eigenschaften](https://msdn.microsoft.com/en-us/library/ms724188\(v=vs.140\).aspx). Session.h enthält die eigenschaftenzuordnung für die [Sitzungseigenschaften](https://msdn.microsoft.com/en-us/library/ms714221.aspx). Die Rowset- und Befehlsobjekte befinden sich in einer einzelnen Headerdatei aufgerufen *Projektname*RS.h. Diese Eigenschaften sind Mitglieder einer der [Rowseteigenschaften](https://msdn.microsoft.com/en-us/library/ms711252.aspx) Gruppe.  
   
-## Siehe auch  
- [Architektur von OLE DB\-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)
+## <a name="see-also"></a>Siehe auch  
+ [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)

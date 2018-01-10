@@ -1,32 +1,33 @@
 ---
-title: "no_injected_text | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.no_injected_text"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "no_injected_text attribute"
+title: No_injected_text | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.no_injected_text
+dev_langs: C++
+helpviewer_keywords: no_injected_text attribute
 ms.assetid: 5256f808-e41e-4f4a-9ea5-e447919f5696
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8c74d3134b5381be4ec330742726b26fea6155da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# no_injected_text
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Verhindert, dass der Compiler Code aufgrund der Attributverwendung einfügt.  
+# <a name="noinjectedtext"></a>no_injected_text
+Verhindert, dass den Compiler Code aufgrund der Verwendung des Attributs injiziert.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -35,26 +36,25 @@ Verhindert, dass der Compiler Code aufgrund der Attributverwendung einfügt.
 ) ];  
 ```  
   
-#### Parameter  
- `boolean`\(optional\)  
- **true** , wenn Sie keinen eingefügten Code sollen, **false** eingefügt werden soll, um den Code zu ermöglichen.  **true** ist die Standardeinstellung.  
+#### <a name="parameters"></a>Parameter  
+ `boolean`(optional)  
+ **"true"** ggf. keinen Code eingeschleust, **"false"** damit Code eingefügt werden kann. **"true"** ist die Standardeinstellung.  
   
-## Hinweise  
- Die häufigste Verwendung des Attributs **no\_injected\_text** C\+\+ wurde durch die [\/Fx](../build/reference/fx-merge-injected-code.md)\-Compileroption, die das **no\_injected\_text**\-Attribut in die MRG\-Datei einfügt.  
+## <a name="remarks"></a>Hinweise  
+ Die häufigste Verwendung von der **No_injected_text** C++-Attribut wird durch die [/FX](../build/reference/fx-merge-injected-code.md) -Compileroption fügt die **No_injected_text** Attribut in der MRG-Datei.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
 |**Betrifft**|Überall|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Keiner|  
+|**Ungültige Attribute**|Keiner|  
   
- Weitere Informationen über das kontexte finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [Compiler Attributes](../windows/compiler-attributes.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [Compilerattribute](../windows/compiler-attributes.md)   

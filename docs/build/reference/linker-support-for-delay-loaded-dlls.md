@@ -1,44 +1,44 @@
 ---
-title: "Linkerunterst&#252;tzung f&#252;r verz&#246;gertes Laden von DLLs | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Verzögertes Laden von DLLs, Linkerunterstützung"
+title: "Linkerunterstützung für verzögertes Laden von DLLs | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: delayed loading of DLLs, linker support
 ms.assetid: b2d7e449-2809-42b1-9c90-2c0ca5e31a14
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 83e75df963889730e4514c38d0551af241a788fa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Linkerunterst&#252;tzung f&#252;r verz&#246;gertes Laden von DLLs
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Verzögertes Laden von DLLs wird nun vom Linker von Visual C\+\+ unterstützt.  Daher müssen Sie nicht mehr die [!INCLUDE[winsdkshort](../../atl/reference/includes/winsdkshort_md.md)]\-Funktionen **LoadLibrary** und **GetProcAddress** verwenden, um das verzögerte Laden von DLLs zu implementieren.  
+# <a name="linker-support-for-delay-loaded-dlls"></a>Linkerunterstützung für verzögertes Laden von DLLs
+Der Visual C++-Linker unterstützt jetzt das verzögerte Laden von DLLs. Dies entlastet Sie das Windows SDK-Funktionen verwenden, müssen **LoadLibrary** und **GetProcAddress** implementieren verzögertes Laden von DLLs.  
   
- Vor Visual C\+\+ 6.0 konnte eine DLL zur Laufzeit ausschließlich durch Verwenden von **LoadLibrary** und **GetProcAddress** geladen werden. Die DLL wurde dann vom Betriebssystem geladen, wenn die ausführbare Datei oder die DLL, von der sie verwendet wurde, geladen wurde.  
+ Vor Visual C++ 6.0 war die einzige Möglichkeit zum Laden einer DLL zur Laufzeit mit **LoadLibrary** und **GetProcAddress**; das Betriebssystem lädt die DLL Wenn die ausführbare Datei oder DLL mit dem es geladen wurde.  
   
- Beginnend mit Visual C\+\+ 6.0 werden vom Linker beim statischen Verknüpfen mit einer DLL Optionen bereitgestellt, um das Laden der DLL zu verzögern, bis das Programm eine Funktion in dieser DLL aufruft.  
+ Beginnen mit dem Visual C++ 6.0 beim statisch mit einer DLL verknüpfen, enthält der Linker Optionen verzögert das Laden der DLL, bis die Anwendung in dieser DLL eine Funktion aufruft.  
   
- Eine DLL kann von einer Anwendung verzögert geladen werden, indem die Linkeroption [\/DELAYLOAD \(Importe verzögert laden\)](../../build/reference/delayload-delay-load-import.md) mit einer Hilfsfunktion verwendet wird, deren Standardimplementierung von Visual C\+\+ bereitgestellt wird.  Die DLL wird von der Hilfsfunktion zur Laufzeit geladen, indem **LoadLibrary** und **GetProcAddress** aufgerufen werden.  
+ Eine Anwendung kann verzögert werden. Laden Sie eine DLL mit der [/DELAYLOAD (Laden von Import Verzögerung)](../../build/reference/delayload-delay-load-import.md) (Linkeroption) mit einer Hilfsfunktion (standardmäßige Implementierung von Visual C++ bereitgestellten). Die Hilfsfunktion lädt die DLL zur Laufzeit durch Aufrufen von **LoadLibrary** und **GetProcAddress** für Sie.  
   
- Verzögertes Laden einer DLL sollte unter folgenden Umständen in Betracht gezogen werden:  
+ Verzögertes Laden einer DLL, wenn sollten Sie Folgendes berücksichtigen:  
   
--   Das Programm ruft möglicherweise keine Funktion in der DLL auf.  
+-   Das Programm kann nicht auf eine Funktion in der DLL aufrufen.  
   
--   Eine Funktion in der DLL wird möglicherweise erst spät im Programmablauf aufgerufen.  
+-   Eine Funktion in der DLL kann nicht bis spät im Ausführung des Programms aufgerufen wird.  
   
- Verzögertes Laden einer DLL kann angegeben werden, wenn entweder ein EXE\-Projekt oder ein DLL\-Projekt erstellt wird.  Von einem DLL\-Projekt, das das Laden einer oder mehrerer DLL verzögert, sollte selbst kein verzögert geladener Einstiegspunkt in **DLLmain** aufgerufen werden.  
+ Das verzögerte Laden einer DLL kann angegeben werden, während der Erstellung entweder ein. EXE-Datei oder. DLL-Projekt. EIN. DLL-Projekt, das das Laden von DLLs für eine oder mehrere verzögert sollten nicht selbst einen verzögert geladene Einstiegspunkt in Dllmain aufrufen.  
   
- In den folgenden Themen wird verzögertes Laden von DLLs beschrieben:  
+ Die folgenden Themen beschreiben das verzögerte Laden von DLLs:  
   
 -   [Festlegen von DLLs für verzögertes Laden](../../build/reference/specifying-dlls-to-delay-load.md)  
   
@@ -46,7 +46,7 @@ Verzögertes Laden von DLLs wird nun vom Linker von Visual C\+\+ unterstützt. 
   
 -   [Laden aller Importe für eine verzögert geladene DLL](../../build/reference/loading-all-imports-for-a-delay-loaded-dll.md)  
   
--   [Bindung von Importen](../../build/reference/binding-imports.md)  
+-   [Binden von Importen](../../build/reference/binding-imports.md)  
   
 -   [Fehlerbehandlung und Benachrichtigung](../../build/reference/error-handling-and-notification.md)  
   
@@ -54,10 +54,10 @@ Verzögertes Laden von DLLs wird nun vom Linker von Visual C\+\+ unterstützt. 
   
 -   [Beschränkungen für das verzögerte Laden von DLLs](../../build/reference/constraints-of-delay-loading-dlls.md)  
   
--   [Die Hilfsfunktion](assetId:///6279c12c-d908-4967-b0b3-cabfc3e91d3d)  
+-   [Die Hilfsfunktion](understanding-the-helper-function.md)  
   
 -   [Entwickeln eigener Hilfsfunktionen](../../build/reference/developing-your-own-helper-function.md)  
   
-## Siehe auch  
- [DLLs in Visual C\+\+](../../build/dlls-in-visual-cpp.md)   
- [Verknüpfung](../../build/reference/linking.md)
+## <a name="see-also"></a>Siehe auch  
+ [DLLs in Visual C++](../../build/dlls-in-visual-cpp.md)   
+ [Verknüpfen](../../build/reference/linking.md)

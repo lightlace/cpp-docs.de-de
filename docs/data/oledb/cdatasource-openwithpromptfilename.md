@@ -1,65 +1,67 @@
 ---
-title: "CDataSource::OpenWithPromptFileName | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDataSource.OpenWithPromptFileName"
-  - "OpenWithPromptFileName"
-  - "ATL::CDataSource::OpenWithPromptFileName"
-  - "ATL.CDataSource.OpenWithPromptFileName"
-  - "CDataSource::OpenWithPromptFileName"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OpenWithPromptFileName-Methode"
+title: 'CDataSource:: Openwithpromptfilename | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDataSource.OpenWithPromptFileName
+- OpenWithPromptFileName
+- ATL::CDataSource::OpenWithPromptFileName
+- ATL.CDataSource.OpenWithPromptFileName
+- CDataSource::OpenWithPromptFileName
+dev_langs: C++
+helpviewer_keywords: OpenWithPromptFileName method
 ms.assetid: 89460504-1aaf-4412-aa7b-fa5a4b39ada3
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 272fd65eb0fda3a087853ca3a5793618d356fc7e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CDataSource::OpenWithPromptFileName
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cdatasourceopenwithpromptfilename"></a>CDataSource::OpenWithPromptFileName
 Mit dieser Methode wird dem Benutzer ein Dialogfeld angezeigt und anschließend eine Datenquelle mithilfe der vom Benutzer angegebenen Datei geöffnet.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
-        HRESULT OpenWithPromptFileName(   
-   HWND hWnd = GetActiveWindow(   
-   ),   
-   DBPROMPTOPTIONS dwPromptOptions = DBPROMPTOPTIONS_NONE,   
-   LPCOLESTR szInitialDirectory = NULL    
+      HRESULT OpenWithPromptFileName(   
+   HWND hWnd = GetActiveWindow(   
+   ),   
+   DBPROMPTOPTIONS dwPromptOptions = DBPROMPTOPTIONS_NONE,   
+   LPCOLESTR szInitialDirectory = NULL    
 ) throw( );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `hWnd`  
- \[in\] Handle für das Fenster, das als das übergeordnete Element des Dialogfelds festgelegt werden soll.  
+ [in] Handle für das Fenster, das als das übergeordnete Element des Dialogfelds festgelegt werden soll.  
   
  `dwPromptOptions`  
- \[in\] Bestimmt den Stil des anzuzeigenden Locatordialogfelds.  Mögliche Werte sind in Msdasc.h aufgeführt.  
+ [in] Bestimmt den Stil des anzuzeigenden Locatordialogfelds. Mögliche Werte sind in Msdasc.h aufgeführt.  
   
  *szInitialDirectory*  
- \[in\] Das im Locatordialogfeld anzuzeigende Ausgangsverzeichnis.  
+ [in] Das im Locatordialogfeld anzuzeigende Ausgangsverzeichnis.  
   
-## Rückgabewert  
- Ein Standard `HRESULT`\-Objekt.  
+## <a name="return-value"></a>Rückgabewert  
+ Ein Standard `HRESULT`-Objekt.  
   
-## Hinweise  
- Diese Methode öffnet ein Datenquellenobjekt mit den Dienstkomponenten im oledb32.dll; Diese DLL enthält die Implementierung von Dienstkomponentenfeatures wie z. B. Ressourcenpooling, automatische Transaktionseintragung usw.  Weitere Informationen finden Sie unter „OLE DB\-Dienste“ in der OLE DB\-Programmierreferenz unter [http:\/\/msdn.microsoft.com\/library\/default.asp?url\=\/library\/oledb\/htm\/oledbole\_db\_services.asp?frame\=true](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
+## <a name="remarks"></a>Hinweise  
+ Diese Methode öffnet ein Datenquellenobjekt mit den Dienstkomponenten im oledb32.dll; Diese DLL enthält die Implementierung von Dienstkomponentenfunktionen wie z. B. Ressourcenpooling, automatische Transaktionseintragung usw. Weitere Informationen finden Sie unter "OLE DB-Dienste" in der OLE DB Programmer's Reference am [http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  
   
-## Siehe auch  
- [CDataSource\-Klasse](../../data/oledb/cdatasource-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [CDataSource-Klasse](../../data/oledb/cdatasource-class.md)

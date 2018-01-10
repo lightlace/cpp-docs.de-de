@@ -1,44 +1,45 @@
 ---
-title: "ComPtr::InternalAddRef-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::ComPtr::InternalAddRef"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "InternalAddRef-Methode"
+title: 'Comptr:: Internaladdref-Methode | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::ComPtr::InternalAddRef
+dev_langs: C++
+helpviewer_keywords: InternalAddRef method
 ms.assetid: f8e860ef-c56e-42a6-a712-77aaab1464ab
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 52e6b3f0ba32aa967cef6ec632db7ed14eb4c4c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# ComPtr::InternalAddRef-Methode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Inkrementiert den Verweiszähler der Schnittstelle, die diesem ComPtr zugeordnet ist.  
+# <a name="comptrinternaladdref-method"></a>ComPtr::InternalAddRef-Methode
+Inkrementiert den Verweiszähler der Schnittstelle, die diesem ComPtr-Objekt zugeordnet ist.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void InternalAddRef() const;  
 ```  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Diese Methode ist geschützt.  
   
-## Anforderungen  
- **Header:**  client.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** client.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [ComPtr\-Klasse](../windows/comptr-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [ComPtr-Klasse](../windows/comptr-class.md)

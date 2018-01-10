@@ -1,56 +1,57 @@
 ---
-title: "Importieren und Exportieren | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__declspec(dllimport)-Schlüsselwort [C++]"
-  - "DLLs [C++], Exportieren aus"
-  - "DLLs [C++], Importieren"
-  - "Exportieren von DLLs [C++]"
-  - "Importieren von DLLs [C++]"
+title: Importieren und Exportieren von | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- DLLs [C++], importing
+- exporting DLLs [C++]
+- importing DLLs [C++]
+- DLLs [C++], exporting from
+- __declspec(dllimport) keyword [C++]
 ms.assetid: 7c44c2aa-2117-4cec-9615-a65bfd3f8f7b
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6c0727002e264f3b0cfe39b763c29fd70725b982
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Importieren und Exportieren
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Es gibt zwei Methoden zum Importieren von öffentlichen Symbolen in eine Anwendung bzw. zum Exportieren von Funktionen aus einer DLL:  
+# <a name="importing-and-exporting"></a>Importieren und Exportieren
+Sie können Öffentliche Symbole in eine Anwendung importieren oder Exportieren von Funktionen aus einer DLL mithilfe von zwei Methoden:  
   
--   Verwenden einer Moduldefinitionsdatei \(.def\) beim Erstellen der DLL  
+-   Verwenden Sie eine Moduldefinitionsdatei (.def) beim Erstellen der DLL  
   
--   Verwenden der Schlüsselwörter **\_\_declspec\(dllimport\)** oder **\_\_declspec\(dllexport\)** in einer Funktionsdefinition der Hauptanwendung  
+-   Verwenden Sie die Schlüsselwörter **von "__declspec(dllimport)" "** oder **__declspec(dllexport)** in einer Funktionsdefinition in die Hauptassembly der Anwendung  
   
-## Verwenden einer DEF\-Datei  
- Eine Moduldefinitionsdatei \(.def\) ist eine Textdatei mit einer oder mehreren Modulanweisungen, die verschiedene Attribute einer DLL beschreiben.  Wenn Sie zum Exportieren von DLL\-Funktionen nicht **\_\_declspec\(dllimport\)** oder **\_\_declspec\(dllexport\)** verwenden, ist eine DEF\-Datei für die DLL erforderlich.  
+## <a name="using-a-def-file"></a>Mithilfe einer DEF-Datei  
+ Eine Moduldefinitionsdatei (.def) ist eine Textdatei mit einer oder mehreren Modulanweisungen, die verschiedene Attribute einer DLL beschreiben. Wenn Sie nicht verwenden **von "__declspec(dllimport)" "** oder **__declspec(dllexport)** zum Exportieren DLLs-Funktionen benötigt die DLL eine DEF-Datei.  
   
- DEF\-Dateien ermöglichen das [Importieren in eine Anwendung](../build/importing-using-def-files.md) bzw. das [Exportieren aus einer DLL](../build/exporting-from-a-dll-using-def-files.md).  
+ DEF-Dateien können [importieren in eine Anwendung](../build/importing-using-def-files.md) oder [exportieren aus einer DLL](../build/exporting-from-a-dll-using-def-files.md).  
   
-## Verwenden von "\_\_declspec"  
- In Visual C\+\+ ersetzen **\_\_declspec\(dllimport\)** und **\_\_declspec\(dllexport\)** das **\_\_export**\-Schlüsselwort, das zuvor in den 16\-Bit\-Versionen von Visual C\+\+ verwendet wurde.  
+## <a name="using-declspec"></a>__Declspec verwenden  
+ Visual C++ verwendet **von "__declspec(dllimport)" "** und **__declspec(dllexport)** zum Ersetzen der **__export** Schlüsselwort, die zuvor in 16-Bit-Versionen von Visual C++ verwendet.  
   
- **\_\_declspec\(dllimport\)** muss nicht unbedingt eingesetzt werden, um einen einwandfreien Code zu kompilieren, es bietet jedoch die Möglichkeit, die Codegenerierung durch den Compiler zu optimieren.  Der Compiler kann besseren Code generieren, da er feststellen kann, ob eine Funktion in einer DLL vorhanden ist oder nicht. Beim vom Compiler generierten Code kann daher eine Ebene von Dereferenzierungen übersprungen werden, die normalerweise in einem Funktionsaufruf über die Grenze einer DLL hinaus vorhanden wäre.  Um die in einer DLL verwendeten Variablen zu importieren, muss allerdings **\_\_declspec\(dllimport\)** verwendet werden.  
+ Sie müssen nicht mit **von "__declspec(dllimport)" "** für Ihren Code ordnungsgemäß kompiliert, aber auf diese Weise kann der Compiler besseren Code zu generieren. Der Compiler kann besseren Code zu generieren, da bestimmt werden kann, ob eine Funktion in einer DLL, vorhanden ist oder nicht dem kann der Compiler Code zu erzeugen, die eine Dereferenzierungsebene überspringt, die normalerweise in einem Funktionsaufruf vorhanden wäre, die eine DLL-Grenze überschritten. Sie müssen allerdings verwenden **von "__declspec(dllimport)" "** Variablen verwendet, die in einer DLL zu importieren.  
   
- Mit dem geeigneten EXPORTS\-Abschnitt in der DEF\-Datei ist **\_\_declspec\(dllexport\)** nicht erforderlich.  **\_\_declspec\(dllexport\)** wurde als einfache Möglichkeit zum Exportieren von Funktionen aus einer EXE\- oder DLL\-Datei ohne Verwendung einer DEF\-Datei hinzugefügt.  
+ Mit dem richtigen DEF-Datei EXPORTS-Abschnitt **__declspec(dllexport)** ist nicht erforderlich. **__declspec(dllexport)** wurde hinzugefügt, um eine einfache Möglichkeit zum Exportieren von Funktionen aus einer .exe oder .dll-Datei ohne Verwendung einer DEF-Datei bereitzustellen.  
   
- Das Win32\-Format für übertragbare, ausführbare Dateien wurde entworfen, um die Anzahl der für die Korrektur von Importen verarbeiteten Seiten zu minimieren.  Zu diesem Zweck werden alle Importadressen für Programme an einem Ort zusammengefasst, der als Importadressentabelle bezeichnet wird.  Dadurch muss das Ladeprogramm lediglich eine oder zwei Seiten ändern, wenn es auf diese Importe zugreift.  
+ Die Portable Win32-Anwendung ist so konzipiert, dass die Anzahl der Seiten zu minimieren, die abgefragt werden müssen, um Importe zu beheben. Zu diesem Zweck werden die Importadressen für ein Programm an einem Ort die importieren Local Address Table aufgerufen. Dadurch wird das Ladeprogramm höchstens zwei Seiten zu ändern, wenn diese Importe zugreift.  
   
-## Was möchten Sie tun?  
+## <a name="what-do-you-want-to-do"></a>Wie möchten Sie vorgehen?  
   
--   [In eine Anwendung importieren](../build/importing-into-an-application-using-declspec-dllimport.md)  
+-   [Importieren in eine Anwendung](../build/importing-into-an-application-using-declspec-dllimport.md)  
   
--   [Aus einer DLL exportieren](../build/exporting-from-a-dll.md)  
+-   [Exportieren aus einer DLL](../build/exporting-from-a-dll.md)  
   
-## Siehe auch  
- [DLLs in Visual C\+\+](../build/dlls-in-visual-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [DLLs in Visual C++](../build/dlls-in-visual-cpp.md)

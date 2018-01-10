@@ -26,11 +26,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3a8fb59d03bed295d28a88d9659205bd173a5355
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0bb02425c906a9d468d53691469dd7e418afcad3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ipersiststorageimpl-class"></a>IPersistStorageImpl-Klasse
 Diese Klasse implementiert die [IPersistStorage](http://msdn.microsoft.com/library/windows/desktop/ms679731) Schnittstelle.  
@@ -49,7 +50,7 @@ class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
  `T`  
  Die Klasse abgeleitet `IPersistStorageImpl`.  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   

@@ -1,57 +1,59 @@
 ---
-title: "CAB-Dateien, Cabsf, cabsl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "cabs"
-  - "cabsf"
-  - "cabsl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "cabs"
-  - "cabsf"
-  - "cabsl"
-  - "complex/cabs"
-  - "complex/cabsf"
-  - "complex/cabsl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cabs-Funktion"
-  - "Cabsf-Funktion"
-  - "cabsl-Funktion"
+title: cabs, cabsf, cabsl | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- cabs
+- cabsf
+- cabsl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- cabs
+- cabsf
+- cabsl
+- complex/cabs
+- complex/cabsf
+- complex/cabsl
+dev_langs: C++
+helpviewer_keywords:
+- cabs function
+- cabsf function
+- cabsl function
 ms.assetid: 6b8eb453-cc8f-4972-bebf-351cbdfdfc15
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 130a629aa6eefb84430843f665afae2033498d69
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CAB-Dateien, Cabsf, cabsl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cabs-cabsf-cabsl"></a>cabs, cabsf, cabsl
 Ruft den absoluten Wert einer komplexen Zahl ab.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 double cabs(   
@@ -71,29 +73,29 @@ long double cabsl(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `z`  
  Eine komplexe Zahl.  
   
-## Rückgabewert  
+## <a name="return-value"></a>Rückgabewert  
  Der Absolutbetrag von `z`.  
   
-## Hinweise  
- Da C\+\+ das Überladen zulässt, können Sie Überladungen von Aufrufen `cabs` nehmen `_Fcomplex` oder `_Lcomplex` Werte und Rückgabetypen `float` oder `long double` Werte. In einem C\-Programm `cabs` immer einen `_Dcomplex` Wert und gibt einen `double` Wert.  
+## <a name="remarks"></a>Hinweise  
+ Da C++ das Überladen zulässt, können Sie Überladungen von `cabs` aufrufen, die `_Fcomplex`- oder `_Lcomplex`-Werte annehmen und `float`- oder `long double`-Werte zurückgeben. In einem C-Programm nimmt `cabs` immer einen `_Dcomplex`-Wert an und gibt einen `double`-Wert zurück.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Routine|C\-Header|C\+\+\-Header|  
-|-------------|---------------|-------------------|  
-|`cabs`, `cabsf`, `cabsl`|\<complex.h\>|\< Ccomplex \>|  
+|-Routine zurückgegebener Wert|C-Header|C++-Header|  
+|-------------|--------------|------------------|  
+|`cabs`,               `cabsf`, `cabsl`|\<complex.h>|\<ccomplex>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Siehe auch  
- [Alphabetische Funktionsreferenz](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [Norm, Normf, norml](../../c-runtime-library/reference/norm-normf-norml1.md)   
- [Creal, Crealf, creall](../../c-runtime-library/reference/creal-crealf-creall.md)   
- [Cproj, Cprojf, cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)   
- [Conj, Conjf, conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)   
- [Cimag, Cimagf, cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)   
- [Carg, Cargf, cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)
+## <a name="see-also"></a>Siehe auch  
+ [Alphabetical Function Reference (Alphabetische Funktionsreferenz)](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [norm, normf, norml](../../c-runtime-library/reference/norm-normf-norml1.md)   
+ [creal, crealf, creall](../../c-runtime-library/reference/creal-crealf-creall.md)   
+ [cproj, cprojf, cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)   
+ [conj, conjf, conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)   
+ [cimag, cimagf, cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)   
+ [carg, cargf, cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 74ed32c0322d23cd3da1d439dcc8d8eadb246c13
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 571b7f4f52e3f6838822db39ba0bbf5148d57d1e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>Ändern das ATL-DHTML-Steuerelement
 ATL-Steuerelement-Assistent bietet Startcode zu erstellen und führen Sie das Steuerelement, und damit Sie sehen können, wie die Methoden in den Projektdateien geschrieben sind und wie die DHTML in C++-Code des Steuerelements mithilfe der Dispatchmethoden aufruft. Sie können alle Dispatch-Methode der Schnittstelle hinzufügen. Anschließend können Sie die Methoden in der HTML-Ressource aufrufen.  

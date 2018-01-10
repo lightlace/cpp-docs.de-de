@@ -1,36 +1,39 @@
 ---
-title: "CDataConnection::operator CSession&amp;"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "CSession&"
-  - "CDataConnection::operatorCSession&"
-  - "CDataConnection.operatorCSession&"
-  - "operatorCSession&"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSession&-Operator"
-  - "Operator-CSession&"
+title: 'CDataConnection:: Operator CSession&amp; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CSession&
+- CDataConnection::operatorCSession&
+- CDataConnection.operatorCSession&
+- operatorCSession&
+dev_langs: C++
+helpviewer_keywords:
+- operator CSession&
+- CSession& operator
 ms.assetid: fba1e498-e482-4dda-8e0f-2542163bf627
-caps.latest.revision: 9
-caps.handback.revision: "9"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 35e28b96c3daddcdf8a9ea4bdf06f9b1410463f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CDataConnection::operator CSession&amp;
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Gibt einen Verweis auf das enthaltende `CSession`\-Objekt zurück.  
+# <a name="cdataconnectionoperator-csessionamp"></a>CDataConnection:: Operator CSession&amp;
+Gibt einen Verweis auf die enthaltene `CSession` Objekt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -38,19 +41,19 @@ operator const CSession&();
   
 ```  
   
-## Hinweise  
- Dieser Operator gibt einen Verweis auf das enthaltende `CSession`\-Objekt zurück und ermöglicht es Ihnen, ein `CDataConnection`\-Objekt zu übergeben, in dem ein `CSession` Verweis erwartet wird.  
+## <a name="remarks"></a>Hinweise  
+ Dieser Operator gibt einen Verweis auf die enthaltene `CSession` -Objekt, sodass Sie übergeben ein `CDataConnection` Objekt, in dem eine `CSession` Verweis wird erwartet.  
   
-## Beispiel  
- Wenn Sie eine Funktion haben \(wie `func` \) unten dass `CSession` einen Verweis erfordert, können Sie **CSession &** verwenden, um ein `CDataConnection`\-Objekt stattdessen zu übergeben.  
+## <a name="example"></a>Beispiel  
+ Haben eine Funktion (z. B. `func` unten), akzeptiert eine `CSession` Verweis können Sie **CSession &** übergeben eine `CDataConnection` stattdessen Objekt.  
   
- [!CODE [NVC_OLEDB_Consumer#5](../CodeSnippet/VS_Snippets_Cpp/NVC_OLEDB_Consumer#5)]  
+ [!code-cpp[NVC_OLEDB_Consumer#5](../../data/oledb/codesnippet/cpp/cdataconnection-operator-csession-amp_1.cpp)]  
   
- [!CODE [NVC_OLEDB_Consumer#6](../CodeSnippet/VS_Snippets_Cpp/NVC_OLEDB_Consumer#6)]  
+ [!code-cpp[NVC_OLEDB_Consumer#6](../../data/oledb/codesnippet/cpp/cdataconnection-operator-csession-amp_2.cpp)]  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  
   
-## Siehe auch  
- [CDataConnection\-Klasse](../../data/oledb/cdataconnection-class.md)   
- [CDataConnection::operator CSession\*](../../data/oledb/cdataconnection-operator-csession-star.md)
+## <a name="see-also"></a>Siehe auch  
+ [CDataConnection-Klasse](../../data/oledb/cdataconnection-class.md)   
+ [CDataConnection::operator CSession*](../../data/oledb/cdataconnection-operator-csession-star.md)

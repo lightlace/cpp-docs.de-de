@@ -1,56 +1,58 @@
 ---
-title: "Implementing a Dialog Box | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, Dialogfelder"
-  - "CAxDialogImpl class, implementing dialog boxes in ATL"
-  - "CSimpleDialog class, implementing dialog boxes in ATL"
-  - "Dialogfelder, ATL"
+title: Implementieren eines Dialogfelds | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- CSimpleDialog class, implementing dialog boxes in ATL
+- dialog boxes, ATL
+- CAxDialogImpl class, implementing dialog boxes in ATL
+- ATL, dialog boxes
 ms.assetid: 478525f2-aa6a-435a-b162-68fc8aa98a8e
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9b3ff0e58623a241160da21266d085753be1c457
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Implementing a Dialog Box
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Es gibt zwei Möglichkeiten, ein Dialogfeld dem ATL\-Projekt hinzuzufügen: verwenden Sie den ATL\-Dialogfeld\-Assistenten oder fügen Sie ihn manuell hinzu.  
+# <a name="implementing-a-dialog-box"></a>Implementieren eines Dialogfelds
+Es gibt zwei Möglichkeiten, um ein Dialogfeld dem ATL-Projekt hinzuzufügen: mithilfe des ATL-Dialogfeld-Assistenten oder manuell hinzufügen.  
   
-## Hinzufügen eines Dialogfelds mit dem ATL\-Dialogfeld\-Assistenten  
- In [Fügen Sie Klassendialogfeld hinzu](../ide/add-class-dialog-box.md) wählen Sie das ATL\-Dialogfeld\-Objekt aus, um ein Dialogfeld dem ATL\-Projekt hinzuzufügen.  Fügen Sie den ATL\-Dialogfeld\-Assistenten bzw. aus und klicken Sie auf **Fertig stellen**.  Der Assistent fügt eine Klasse hinzu, die von [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) dem Projekt abgeleitet wird.  Öffnen Sie die Ressourcenansicht aus dem Menü **Ansicht**, suchen Sie das Dialogfeld und doppelklicken Sie darauf, um es im Ressourcen\-Editor zu öffnen.  
+## <a name="adding-a-dialog-box-with-the-atl-dialog-wizard"></a>Hinzufügen eines Dialogfelds mit der ATL-Dialogfeld-Assistent  
+ In der [Klasse hinzufügen (Dialogfeld)](../ide/add-class-dialog-box.md), wählen Sie das Objekt ATL-Dialogfeld, um ein Dialogfeld zum ATL-Projekt hinzufügen. Füllen Sie die ATL-Dialogfeld-Assistent nach Bedarf, und klicken Sie auf **Fertig stellen**. Fügt eine Klasse abgeleitet wurde. der Assistent [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) zu Ihrem Projekt. Öffnen Sie die Ressourcenansicht aus der **Ansicht** , suchen Sie das Dialogfeld, und doppelklicken Sie darauf, um sie in den Ressourcen-Editor zu öffnen.  
   
 > [!NOTE]
->  Wenn das Dialogfeld von `CAxDialogImpl` abgeleitet ist, kann es ActiveX\- und Windows\-Steuerelemente hosten.  Wenn Sie nicht den Aufwand der ActiveX\-Steuerelement\-Unterstützung in der Dialogfeldklasse soll, verwenden Sie [CSimpleDialog](../atl/reference/csimpledialog-class.md) oder [CDialogImpl](../atl/reference/cdialogimpl-class.md) stattdessen.  
+>  Wenn das Dialogfeld von abgeleitet ist `CAxDialogImpl`, kann es sowohl ActiveX-hosten und Windows-Steuerelemente. Wenn Sie in Ihre Dialogfeldklasse nicht den Mehraufwand für ActiveX-Steuerelemente unterstützen möchten, verwenden Sie [CSimpleDialog](../atl/reference/csimpledialog-class.md) oder [CDialogImpl](../atl/reference/cdialogimpl-class.md) stattdessen.  
   
- Meldung und Ereignishandler können in der Dialogfeldklasse in der Klassenansicht hinzugefügt werden.  Weitere Informationen finden Sie unter [Hinzufügen eines ATL\-Meldungshandlers](../atl/adding-an-atl-message-handler.md).  
+ Nachricht und Ereignishandler können Ihre Dialogfeldklasse von Klassenansicht hinzugefügt werden. Weitere Informationen finden Sie unter [hinzufügen eine ATL-Meldungshandlers](../atl/adding-an-atl-message-handler.md).  
   
-## Ein Dialogfeld manuell hinzufügen  
- Ein Dialogfeld zu implementieren ist zum Implementieren eines Fensters ähnlich.  Sie leiten eine Klasse entweder von [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md), von [CDialogImpl](../atl/reference/cdialogimpl-class.md) oder von [CSimpleDialog](../atl/reference/csimpledialog-class.md) und deklarieren [Meldungszuordnung](../atl/message-maps-atl.md) zu den Handlemeldungen.  Sie müssen jedoch Dialogfeldvorlagenressourcen\-ID in der abgeleiteten Klasse auch angeben.  Die Klasse muss einen Datenmember verfügen, der `IDD` aufgerufen wird, damit dieser Wert aufzunehmen.  
+## <a name="adding-a-dialog-box-manually"></a>Manuelles Hinzufügen von einem Dialogfeld  
+ Implementieren eines Dialogfelds ähnelt der ein Fensters zu implementieren. Leiten Sie eine Klasse entweder [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md), [CDialogImpl](../atl/reference/cdialogimpl-class.md), oder [CSimpleDialog](../atl/reference/csimpledialog-class.md) , und deklarieren Sie eine [meldungszuordnung](../atl/message-maps-atl.md) Nachrichten zu verarbeiten. Allerdings müssen Sie eine Dialogfeld Vorlage Ressourcen-ID in die abgeleitete Klasse angeben. Die Klasse benötigen einen Datenmember namens `IDD` , diesen Wert enthalten soll.  
   
 > [!NOTE]
->  Wenn Sie ein Dialogfeld mithilfe des ATL\-Dialogfeld\-Assistenten erstellen, fügt der Assistent automatisch den `IDD`\-Member als `enum`\-Typ hinzu.  
+>  Wenn Sie ein Dialogfeld mit dem ATL-Dialogfeld-Assistenten erstellen, fügt der Assistent automatisch die `IDD` Element als ein `enum` Typ.  
   
- `CDialogImpl` ermöglicht es Ihnen, ein modales oder ein nicht modales Dialogfeld implementieren, das Windows\-Steuerelemente hostet.  `CAxDialogImpl` ermöglicht es Ihnen, ein modales oder ein nicht modales Dialogfeld implementieren, das ActiveX\- und Windows\-Steuerelemente hostet.  
+ `CDialogImpl`bietet die Möglichkeit zum Implementieren eines modalen oder ein nicht modales Dialogfeld an, das Windows-Steuerelemente hostet. `CAxDialogImpl`bietet die Möglichkeit zum Implementieren eines modalen oder ein nicht modales Dialogfeld an, das ActiveX- und Windows-Steuerelemente hostet.  
   
- Um ein modales Dialogfeld zu erstellen, erstellen Sie eine Instanz aus dem `CDialogImpl` von abgeleitete \(oder `CAxDialogImpl`\- Klasse abgeleitet\) und dann die [DoModal](../Topic/CDialogImpl::DoModal.md)\-Methode auf.  Um ein modales Dialogfeld zu schließen, rufen Sie die Methode von einem [EndDialog](../Topic/CDialogImpl::EndDialog.md) Meldungshandler auf.  Um ein nicht modales Dialogfeld zu erstellen, rufen Sie die Methode anstelle [Erstellen Sie](../Topic/CDialogImpl::Create.md)`DoModal` auf.  Um ein nicht modales Dialogfeld zu zerstören, rufen Sie [DestroyWindow](../Topic/CDialogImpl::DestroyWindow.md) auf.  
+ Um ein modales Dialogfeld erstellen möchten, erstellen Sie eine Instanz von Ihr `CDialogImpl`-abgeleitet (oder `CAxDialogImpl`-abgeleitet) Klasse, und rufen Sie anschließend die [DoModal](../atl/reference/cdialogimpl-class.md#domodal) Methode. Um ein modales Dialogfeld zu schließen, rufen Sie die ["EndDialog"](../atl/reference/cdialogimpl-class.md#enddialog) Methode von einem Message-Handler. Um ein nicht modales Dialogfeld erstellen möchten, rufen die [erstellen](../atl/reference/cdialogimpl-class.md#create) Methode anstelle von `DoModal`. Aufrufen, um ein nicht modales Dialogfeld zu zerstören, [DestroyWindow](../atl/reference/cdialogimpl-class.md#destroywindow).  
   
- Das Verringern von Ereignissen wird automatisch in [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) durchgeführt.  Implementieren Sie die Meldungshandler des Dialogfelds, wie Sie die Handler in `CWindowImpl` von abgeleitete Klasse wurden.  Wenn eine der meldungsspezifischen Rückgabewert gibt, geben Sie ihn als `LRESULT` zurück.  Die zurückgegebenen `LRESULT`\-Werte werden von ATL für eine ordnungsgemäße Behandlung durch den Windows\-Dialogfeldmanager zugeordnet.  Details finden Sie den Quellcode für [CDialogImplBaseT::DialogProc](../Topic/CDialogImpl::DialogProc.md) in atlwin.h.  
+ Auffangen von Ereignissen erfolgt automatisch [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md). Implementieren Sie Meldungshandler des Dialogfelds, wie die Ereignishandler in einem `CWindowImpl`-abgeleitete Klasse. Ist ein Rückgabewert Message-spezifische, zurückzugeben als ein `LRESULT`. Das zurückgegebene `LRESULT` Werte von ATL für die ordnungsgemäße Behandlung durch den Windows-Dialogfeld-Manager zugeordnet sind. Einzelheiten finden Sie in den Quellcode für [CDialogImplBaseT:: DialogProc](../atl/reference/cdialogimpl-class.md#dialogproc) in atlwin.h aufgetreten.  
   
-## Beispiel  
- Die folgende Klasse implementiert ein Dialogfeld:  
+## <a name="example"></a>Beispiel  
+ Die folgende Klasse implementiert einen (Dialogfeld):  
   
- [!CODE [NVC_ATL_Windowing#66](../CodeSnippet/VS_Snippets_Cpp/NVC_ATL_Windowing#66)]  
+ [!code-cpp[NVC_ATL_Windowing#66](../atl/codesnippet/cpp/implementing-a-dialog-box_1.h)]  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Fensterklassen](../atl/atl-window-classes.md)
+

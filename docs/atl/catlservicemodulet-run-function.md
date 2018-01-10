@@ -1,42 +1,43 @@
 ---
-title: "CAtlServiceModuleT::Run Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CServiceModule::Run"
-  - "CServiceModule.Run"
-  - "CSecurityDescriptor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL-Dienste, Sicherheit"
+title: 'CServiceModule:: Run-Funktion | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CServiceModule::Run
+- CServiceModule.Run
+- CSecurityDescriptor
+dev_langs: C++
+helpviewer_keywords: ATL services, security
 ms.assetid: 42c010f0-e60e-459c-a63b-a53a24cda93b
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7ff3efe9298b7a2c11e7f83ef58640b2947519b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CAtlServiceModuleT::Run Function
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Run** enthält Aufrufe `PreMessageLoop`, zu `RunMessageLoop` und zu `PostMessageLoop`.  Nachdem er aufgerufen wurde speichert `PreMessageLoop` zuerst ID der Thread des Diensts  Der Dienst verwendet diese ID, um zu schließen, indem er eine **WM\_QUIT** Meldung mithilfe der Win32\-API, [PostThreadMessage](http://msdn.microsoft.com/library/windows/desktop/ms644946) sendet.  
+# <a name="catlservicemoduletrun-function"></a>CServiceModule:: Run-Funktion
+**Führen Sie** enthält Aufrufe `PreMessageLoop`, `RunMessageLoop`, und `PostMessageLoop`. Nach dem aufgerufenen, `PreMessageLoop` zuerst speichert der Dienst-Thread-ID. Der Dienst wird diese ID verwenden, selbst per schließen eine **WM_QUIT** Nachricht mit der Win32-API-Funktion [PostThreadMessage](http://msdn.microsoft.com/library/windows/desktop/ms644946).  
   
- `PreMessageLoop` ruft dann `InitializeSecurity` auf.  Standardmäßig ruft `InitializeSecurity`[CoInitializeSecurity](http://msdn.microsoft.com/library/windows/desktop/ms693736) mit der Sicherheitsbeschreibung auf, die festgelegt wird, um in NULL, was bedeutet, dass jeder Benutzer Zugriff auf das Objekt verfügt.  
+ `PreMessageLoop`Ruft dann `InitializeSecurity`. Standardmäßig `InitializeSecurity` Aufrufe [CoInitializeSecurity](http://msdn.microsoft.com/library/windows/desktop/ms693736) mit der Sicherheitsbeschreibung, die auf NULL festgelegt, was bedeutet, dass jeder Benutzer Zugriff auf das Objekt hat.  
   
- Wenn Sie den Dienst seine eigene Sicherheit nicht angeben möchten, rufen `PreMessageLoop` Überschreibung und nicht `InitializeSecurity` auf, und COM bestimmt dann die Sicherheitseinstellungen aus der Registrierung.  Eine einfache Möglichkeit, Registrierungseinstellungen konfiguriert ist mit dem [DCOMCNFG](../atl/dcomcnfg.md) Hilfsprogramm, das weiter unten in diesem Abschnitt erläutert wird.  
+ Wenn Sie nicht, dass den Dienst seiner eigenen Sicherheitsberechtigungen angeben möchten, überschreiben `PreMessageLoop` und rufen Sie nicht `InitializeSecurity`, und COM ermitteln Sie dann die Sicherheitseinstellungen aus der Registrierung wird. Eine einfache Möglichkeit zum Konfigurieren der registrierungseinstellungen ist mit der [DCOMCNFG](../atl/dcomcnfg.md) Hilfsprogramm weiter unten in diesem Abschnitt erläutert.  
   
- Sobald Sicherheit angegeben wird, wird das Objekt mit COM registriert, damit neue Clients an das Programm herstellen können.  Schließlich wird das Programm dem Dienststeuerungs\-Manager \(SCM\) ausgeführt wird und dass das Programm eine Nachrichtenschleife eingibt.  Das Programm wird ausgeführt, bis es eine fehlgeschlagene Meldung nach Dienstherunterfahren sendet.  
+ Sobald Sicherheit angegeben wird, wird das Objekt bei COM registriert, damit neue Clients an das Programm eine Verbindung herstellen können. Schließlich weist das Programm dem Dienstkontroll-Manager (SCM), dass er ausgeführt wird und eine Nachrichtenschleife eingetragen. Die Anwendung weiter ausgeführt, bis es beim Herunterfahren des Diensts beenden-Meldung zurückgesendet.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Dienste](../atl/atl-services.md)   
- [CSecurityDesc Class](../atl/reference/csecuritydesc-class.md)   
- [CSid Class](../atl/reference/csid-class.md)   
- [CDacl Class](../atl/reference/cdacl-class.md)   
- [CAtlServiceModuleT::Run](../Topic/CAtlServiceModuleT::Run.md)
+ [CSecurityDesc-Klasse](../atl/reference/csecuritydesc-class.md)   
+ [CSid-Klasse](../atl/reference/csid-class.md)   
+ [CDacl-Klasse](../atl/reference/cdacl-class.md)   
+ [CServiceModule:: Run](../atl/reference/catlservicemodulet-class.md#run)
+

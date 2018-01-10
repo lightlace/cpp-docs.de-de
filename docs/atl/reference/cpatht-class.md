@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -53,35 +52,19 @@ f1_keywords:
 - ATLPATH/ATL::CPathT::StripToRoot
 - ATLPATH/ATL::CPathT::UnquoteSpaces
 - ATLPATH/ATL::CPathT::m_strPath
-dev_langs:
-- C++
-helpviewer_keywords:
-- CPathT class
+dev_langs: C++
+helpviewer_keywords: CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 98b00e3f888d5f6bfb33f6ee24c4af2860bb470f
-ms.contentlocale: de-de
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 781f2f6a3fba0e7ca4698809f196e623cfbb6bb8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cpatht-class"></a>CPathT-Klasse
 Diese Klasse stellt einen Pfad an.  
@@ -98,9 +81,9 @@ class CPathT
   
 #### <a name="parameters"></a>Parameter  
  `StringType`  
- ATL/MFC Zeichenfolgenklasse für den Pfad zu verwenden (siehe [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)).  
+ ATL/MFC-Zeichenfolgenklasse für den Pfad zu verwenden (siehe [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)).  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-typedefs"></a>Öffentliche Typedefs  
   
@@ -162,9 +145,9 @@ class CPathT
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Const StringType CPathT::operator /](#operator_const_stringtype_amp)|Mithilfe dieses Operators können das Objekt, z. B. eine Zeichenfolge behandelt werden.|  
+|[Const StringType CPathT::operator &](#operator_const_stringtype_amp)|Mithilfe dieses Operators können das Objekt, z. B. eine Zeichenfolge behandelt werden.|  
 |[CPathT::operator CPathT::PCXSTR](#operator_cpatht__pcxstr)|Mithilfe dieses Operators können das Objekt, z. B. eine Zeichenfolge behandelt werden.|  
-|[CPathT::operator StringType /](#operator_stringtype)|Mithilfe dieses Operators können das Objekt, z. B. eine Zeichenfolge behandelt werden.|  
+|[CPathT::operator StringType &](#operator_stringtype)|Mithilfe dieses Operators können das Objekt, z. B. eine Zeichenfolge behandelt werden.|  
 |[CPathT::operator +=](#operator_add_eq)|Dieser Operator Fügt eine Zeichenfolge in den Pfad an.|  
   
 ### <a name="public-data-members"></a>Öffentliche Datenmember  

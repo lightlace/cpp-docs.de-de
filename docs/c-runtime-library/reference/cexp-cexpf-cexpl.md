@@ -43,11 +43,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6fb1a26b4e461e0d542794425008ec81191000b8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0f7138d3853faad1268148ef7517291a849525df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cexp-cexpf-cexpl"></a>cexp, cexpf, cexpl
 Berechnet die Exponentialzahl zur Basis e einer komplexen Zahl.  
@@ -80,18 +81,18 @@ _Lcomplex cexpl(
  Der Wert von `e` , potenziert mit `z`.  
   
 ## <a name="remarks"></a>Hinweise  
- Da C++ das Überladen zulässt, können Sie Überladungen von `cexp` aufrufen, die `_Fcomplex`- und `_Lcomplex`-Werte verwenden und zurückgeben. In einem C-Programm nimmt `cexp` immer einen `_Dcomplex` -Wert an, und gibt auch einen solchen zurück.  
+ Da C++ das Überladen zulässt, können Sie Überladungen von `cexp` aufrufen, die `_Fcomplex` - und `_Lcomplex` -Werte verwenden und zurückgeben. In einem C-Programm nimmt `cexp` immer einen `_Dcomplex` -Wert an, und gibt auch einen solchen zurück.  
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|C-Header|C++-Header|  
+|-Routine zurückgegebener Wert|C-Header|C++-Header|  
 |-------------|--------------|------------------|  
 |`cexp`,               `cexpf`, `cexpl`|\<complex.h>|\<complex.h>|  
   
  Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [CRT-Funktionsreferenz (alphabetisch)](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [Alphabetical Function Reference (Alphabetische Funktionsreferenz)](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [cpow, cpowf, cpowl](../../c-runtime-library/reference/cpow-cpowf-cpowl.md)   
  [clog10, clog10f, clog10l](../../c-runtime-library/reference/clog10-clog10f-clog10l.md)   
  [clog, clogf, clogl](../../c-runtime-library/reference/clog-clogf-clogl.md)

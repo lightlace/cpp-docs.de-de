@@ -1,40 +1,39 @@
 ---
-title: "FWORD | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "FWORD"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "FWORD directive"
+title: FWORD | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: FWORD
+dev_langs: C++
+helpviewer_keywords: FWORD directive
 ms.assetid: 8fd33d12-d49d-4e2a-80ac-0f55792e99be
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7c88005c8afef8ab66edf989c61214d20b02b2cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# FWORD
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ordnet zu und initialisiert optional 6 Bytes Speicherplatz für jedes `initializer`.  
+# <a name="fword"></a>FWORD
+Zum Belegen und optional initialisiert 6 Bytes des Speichers für die einzelnen `initializer`.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 [[name]] FWORD initializer [[, initializer]]...  
 ```  
   
-## Hinweise  
- Kann als Typspezifizierer auch dazu verwendet werden, eine beliebige Stelle, das ein Typ gültig ist.  
+## <a name="remarks"></a>Hinweise  
+ Kann auch verwendet werden, als Typspezifizierer an einer beliebigen Stelle ist ein Typ zulässig.  
   
-## Siehe auch  
- [Directives Reference](../../assembler/masm/directives-reference.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Direktiven – Referenz](../../assembler/masm/directives-reference.md)   
  [DF](../../assembler/masm/df.md)

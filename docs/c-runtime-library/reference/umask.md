@@ -35,11 +35,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d8651fd1aa1400b366c6db369eff7bfde8751507
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 48adac5a394e782e60d03cc5aadfa094627331b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="umask"></a>_umask
 Legt die Standard-Dateiberechtigungsmaske fest. Es ist eine sicherere Version dieser Funktion verfügbar. Informationen dazu finden Sie unter [_umask_s](../../c-runtime-library/reference/umask-s.md).  
@@ -65,7 +66,7 @@ int _umask(
  Der ganzzahlige Ausdruck `pmode` enthält eine oder beide der folgenden Manifestkonstanten, die in SYS\Stat.h definiert sind:  
   
  `_S_IWRITE`  
- Schreiben erlaubt.  
+ Schreiben zugelassen.  
   
  `_S_IREAD`  
  Lesen erlaubt.  
@@ -79,14 +80,14 @@ int _umask(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_umask`|\<io.h>, \<sys/stat.h>, \<sys/types.h>|  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
 ## <a name="libraries"></a>Bibliotheken  
- Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
+ Alle Versionen [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
   
 ## <a name="example"></a>Beispiel  
   
@@ -119,7 +120,7 @@ Oldmask = 0x0000
   
 ## <a name="see-also"></a>Siehe auch  
  [File Handling (Dateibehandlung)](../../c-runtime-library/file-handling.md)   
- [Low-Level I/O (E/A auf niedriger Ebene)](../../c-runtime-library/low-level-i-o.md)   
+ [E/A auf niedriger Ebene](../../c-runtime-library/low-level-i-o.md)   
  [_chmod, _wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
  [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
  [_mkdir, _wmkdir](../../c-runtime-library/reference/mkdir-wmkdir.md)   

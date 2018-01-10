@@ -52,11 +52,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a40472922e61cbcc6c5788d575305613ae300e1e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0414cd211cb9b833f24d2aac9ad9a82758c4efcf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="toupper-toupper-towupper-toupperl-towupperl"></a>toupper, _toupper, towupper, _toupper_l, _towupper_l
 Zeichen in Großbuchstaben konvertieren.  
@@ -118,7 +119,7 @@ int _towupper_l(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`toupper`|\<ctype.h>|  
 |`_toupper`|\<ctype.h>|  
@@ -132,5 +133,5 @@ int _towupper_l(
 ## <a name="see-also"></a>Siehe auch  
  [is- und isw-Routinen](../../c-runtime-library/is-isw-routines.md)   
  [to-Funktionen](../../c-runtime-library/to-functions.md)   
- [Locale](../../c-runtime-library/locale.md)   
+ [Gebietsschema](../../c-runtime-library/locale.md)   
  [Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)

@@ -1,62 +1,62 @@
 ---
-title: "Symbols Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MASM (Microsoft Macro Assembler), symbols reference"
+title: Symbole Verweis | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: MASM (Microsoft Macro Assembler), symbols reference
 ms.assetid: 96ed59cc-dafa-4299-bb2e-9c7c3f496491
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 23276e8af752968e9404245b6c27068eeab5be2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Symbols Reference
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**Datums\-und Uhrzeitinformationen**  
+# <a name="symbols-reference"></a>Symbole – Verweis
+**Datums- und Uhrzeitangaben**  
   
 |||  
 |-|-|  
 |[@Date](../../assembler/masm/at-date.md)|[@Time](../../assembler/masm/at-time.md)|  
   
-### Umweltinformation  
+### <a name="environment-information"></a>Informationen zur ausführungsumgebung  
   
 |||  
 |-|-|  
 |[@Cpu](../../assembler/masm/at-cpu.md)|[@Environ](../../assembler/masm/at-environ.md)|  
 |[@Interface](../../assembler/masm/at-interface.md)|[@Version](../../assembler/masm/at-version.md)|  
   
-### Dateiinformationen  
+### <a name="file-information"></a>Dateiinformationen  
   
 |||  
 |-|-|  
 |[@FileCur](../../assembler/masm/at-filecur.md)|[@FileName](../../assembler/masm/at-filename.md)|  
 |[@Line](../../assembler/masm/at-line.md)||  
   
-### Makrofunktionen  
+### <a name="macro-functions"></a>Makrofunktionen  
   
 |||  
 |-|-|  
 |[@CatStr](../../assembler/masm/at-catstr.md)|[@InStr](../../assembler/masm/at-instr.md)|  
 |[@SizeStr](../../assembler/masm/at-sizestr.md)|[@SubStr](../../assembler/masm/at-substr.md)|  
   
-### Allgemeines  
+### <a name="miscellaneous"></a>Verschiedenes  
   
 ||||  
 |-|-|-|  
 |[$](../../assembler/masm/dollar.md)|[?](../../assembler/masm/q.md)|[@@:](../../assembler/masm/at-at.md)|  
 |[@B](../../assembler/masm/at-b.md)|[@F](../../assembler/masm/at-f.md)||  
   
-### Segment\-Informationen  
+### <a name="segment-information"></a>Segmentinformationen  
   
 ||||  
 |-|-|-|  
@@ -65,5 +65,5 @@ caps.handback.revision: 6
 |[@fardata?](../../assembler/masm/at-fardata-q.md)|[@Model](../../assembler/masm/at-model.md)|[@stack](../../assembler/masm/at-stack.md)|  
 |[@WordSize](../../assembler/masm/at-wordsize.md)|||  
   
-## Siehe auch  
- [Microsoft Macro Assembler Reference](../../assembler/masm/microsoft-macro-assembler-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Referenz zum Microsoft-Makroassembler](../../assembler/masm/microsoft-macro-assembler-reference.md)

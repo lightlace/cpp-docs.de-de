@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -27,8 +26,7 @@ apitype: DLLExport
 f1_keywords:
 - _dup2
 - _dup
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _dup2 function
 - dup function
@@ -37,30 +35,16 @@ helpviewer_keywords:
 - dup2 function
 - _dup function
 ms.assetid: 4d07e92c-0d76-4832-a770-dfec0e7a0cfa
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: a85a26fbe7ab8417ea9ecd3c43745789117ac856
-ms.contentlocale: de-de
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0c3f4ce550bd0d0d25d73284c87c33b6fa71647a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dup-dup2"></a>_dup, _dup2
 Erstellt einen zweiten Dateideskriptor für eine geöffnete Datei (`_dup`) oder weist einen Dateideskriptor neu zu (`_dup2`).  
@@ -100,7 +84,7 @@ int cstderr = _dup( _fileno( stderr ));
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_dup`|\<io.h>|  
 |`_dup2`|\<io.h>|  
@@ -171,6 +155,6 @@ This goes to file 'data'
   
 ## <a name="see-also"></a>Siehe auch  
  [E/A auf niedriger Ebene](../../c-runtime-library/low-level-i-o.md)   
- [_close](../../c-runtime-library/reference/close.md)   
+ [_schließen](../../c-runtime-library/reference/close.md)   
  [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
  [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)

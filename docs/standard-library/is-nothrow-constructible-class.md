@@ -9,23 +9,20 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- type_traits/std::is_nothrow_constructible
-dev_langs:
-- C++
-helpviewer_keywords:
-- is_nothrow_constructible
+f1_keywords: type_traits/std::is_nothrow_constructible
+dev_langs: C++
+helpviewer_keywords: is_nothrow_constructible
 ms.assetid: 8be3f927-283e-4d67-95a5-8bf5dc4e7a3d
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 02698c90714ae530e827d9bfbe6cdc7ce1fd0abf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 2ff20de3656cde44d79936c6bf1374134eb95068
-ms.contentlocale: de-de
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isnothrowconstructible-class"></a>Is_nothrow_constructible-Klasse
 Testet, ob ein Typ konstruierbar ist, und nicht ausgelöst wird, wenn angegebene Argumenttypen verwendet werden.  
@@ -54,7 +51,6 @@ struct is_nothrow_constructible;
   
 ## <a name="see-also"></a>Siehe auch  
  [<type_traits>](../standard-library/type-traits.md)
-
 
 
 

@@ -1,53 +1,61 @@
 ---
-title: "Operator Windows::UI::Xaml::Interop::TypeName | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+title: Operator Windows::UI::Xaml::Interop::TypeName | Microsoft Docs
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
 ms.assetid: a65a105e-7e3a-452f-932f-2cdaf00fbba5
-caps.latest.revision: 5
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0acc4540b76a6436aeacd19fd99b02997f291705
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Operator Windows::UI::Xaml::Interop::TypeName
+# <a name="operator-windowsuixamlinteroptypename"></a>Operator Windows::UI::Xaml::Interop::TypeName
 Ermöglicht die Konvertierung von `Platform::Type` in [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 Operator TypeName(Platform::Type^ type)  
 ```  
   
-## Rückgabewert  
- Gibt ein [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) zurück, wenn ein `Platform::Type^` angegeben wurde.  
+### <a name="return-value"></a>Rückgabewert  
+ Gibt ein [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) zurück, wenn ein `Platform::Type^`angegeben wurde.  
   
-## Hinweise  
- `TypeName` ist die sprachenneutrale Windows Runtime\-Struktur für die Darstellung von Typinformationen.[Platform::Type](../cppcx/platform-type-class.md) ist C\+\+\-spezifisch und kann nicht über die Anwendungsbinärdateischnittstelle \(ABI\) übergeben werden. Hier eine Verwendung von `TypeName` in der [Navigate](http://msdn.microsoft.com/library/windows/apps/hh702394.aspx)\-Funktion:  
+### <a name="remarks"></a>Hinweise  
+ `TypeName` ist die sprachenneutrale Windows Runtime-Struktur für die Darstellung von Typinformationen. [Platform::Type](../cppcx/platform-type-class.md) ist C++-spezifisch und kann nicht über die Anwendungsbinärdateischnittstelle (ABI) übergeben werden. Hier eine Verwendung von `TypeName`in der [Navigate](http://msdn.microsoft.com/library/windows/apps/hh702394.aspx) -Funktion:  
   
 ```  
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);  
 ```  
   
-## Beispiel  
+### <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt die Umwandlung zwischen `TypeName` und `Type`.  
   
 ```  
   
-// Convert from Type to TypeName Windows::UI::Xaml::Interop::TypeName tn = TypeName(MainPage::typeid); // Convert back from TypeName to Type Type^ tx2 = (Type^)(tn);  
+// Convert from Type to TypeName  
+Windows::UI::Xaml::Interop::TypeName tn = TypeName(MainPage::typeid);  
+  
+// Convert back from TypeName to Type  
+Type^ tx2 = (Type^)(tn);  
   
 ```  
   
-## .NET Framework-Entsprechung  
- `TypeName` eines .NET Framework\-Programm\-Projekts als [System.Type](assetId:///System.Type?qualifyHint=False&amp;autoUpgrade=True).  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ .NET Framework-Programm-Projekts `TypeName` als [System.Type](assetId:///System.Type?qualifyHint=False&autoUpgrade=True).  
   
-## Anforderungen  
+### <a name="requirements"></a>Anforderungen  
   
-## Siehe auch  
- [operator Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-subtractwindows-ui-xaml-interop-typename.md)   
- [Platform::Type\-Klasse](../cppcx/platform-type-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [Operator Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-subtractwindows-ui-xaml-interop-typename.md)   
+ [Platform::Type-Klasse](../cppcx/platform-type-class.md)

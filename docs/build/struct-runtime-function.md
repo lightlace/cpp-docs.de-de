@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 476ce4ad532f1e02b8863e2276fe0300c5895270
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c05dcd516af5c078b4e4e664bae16f65370ca117
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="struct-runtimefunction"></a>struct RUNTIME_FUNCTION
 Tabellenbasierte Ausnahmebehandlung erfordert einen Eintrag für alle Funktionen, die Stapelspeicher reservieren, oder rufen Sie eine andere Funktion (z. B. Nonleaf Funktionen). Funktionstabelleneinträge aufweisen Format:  

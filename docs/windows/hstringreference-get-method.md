@@ -1,42 +1,44 @@
 ---
-title: "HStringReference::Get-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HStringReference::Get"
-dev_langs: 
-  - "C++"
+title: 'Hstringreference:: Get-Methode | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HStringReference::Get
+dev_langs: C++
 ms.assetid: ee5f4d6e-5628-4fcf-af2d-d63d70c1ec13
-caps.latest.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6a72b36700cac8f174211c847a6c91fe449ae82b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# HStringReference::Get-Methode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ruft den Wert des zugrunde liegenden HSTRING\-Handles ab.  
+# <a name="hstringreferenceget-method"></a>HStringReference::Get-Methode
+Ruft den Wert des zugrunde liegenden HSTRING-Handles ab.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 HSTRING Get() const throw()  
 ```  
   
-## Rückgabewert  
- Der Wert des zugrunde liegenden HSTRING\-Handles.  
+## <a name="return-value"></a>Rückgabewert  
+ Der Wert des zugrunde liegenden HSTRING-Handles.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## Siehe auch  
- [HStringReference\-Klasse](../windows/hstringreference-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [HStringReference-Klasse](../windows/hstringreference-class.md)

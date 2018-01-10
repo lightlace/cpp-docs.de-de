@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _umask_s
+apiname: _umask_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,8 +24,7 @@ apitype: DLLExport
 f1_keywords:
 - unmask_s
 - _umask_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - masks, file-permission-setting
 - _umask_s function
@@ -36,30 +33,16 @@ helpviewer_keywords:
 - umask_s function
 - files [C++], permission settings for
 ms.assetid: 70898f61-bf2b-4d8d-8291-0ccaa6d33145
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 5c8efcdf5d3f44a6cd3bbcc39f2a98e3659c95ab
-ms.contentlocale: de-de
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 71279b111e50c40bb974d9a5da68b575aecc1ebc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="umasks"></a>_umask_s
 Legt die Standard-Dateiberechtigungsmaske fest. Dies ist eine Version von [_umask](../../c-runtime-library/reference/umask.md) mit Sicherheitserweiterungen wie in den [Sicherheitsfunktionen in CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
@@ -87,8 +70,8 @@ errno_t _umask_s(
   
 |`mode`|`pOldMode`|**Rückgabewert**|**Inhalt** `oldMode`|  
 |------------|----------------|----------------------|--------------------------------|  
-|alle|`NULL`|`EINVAL`|nicht geändert|  
-|ungültiger Modus|alle|`EINVAL`|nicht geändert|  
+|any|`NULL`|`EINVAL`|nicht geändert|  
+|ungültiger Modus|any|`EINVAL`|nicht geändert|  
   
  Wenn eine der obengenannten Bedingungen auftritt, wird der Handler für ungültige Parameter aufgerufen wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt `_umask_s` `EINVAL` zurück und setzt `errno` auf `EINVAL`.  
   
@@ -98,7 +81,7 @@ errno_t _umask_s(
  Der ganzzahlige Ausdruck `pmode` enthält eine oder beide der folgenden Manifestkonstanten, die in SYS\Stat.h definiert sind:  
   
  `_S_IWRITE`  
- Schreiben erlaubt.  
+ Schreiben zugelassen.  
   
  `_S_IREAD`  
  Lesen erlaubt.  
@@ -112,7 +95,7 @@ errno_t _umask_s(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_umask_s`|\<io.h> und \<sys/stat.h> und \<sys/types.h>|  
   
@@ -154,7 +137,7 @@ Oldmask = 0x0000
   
 ## <a name="see-also"></a>Siehe auch  
  [File Handling (Dateibehandlung)](../../c-runtime-library/file-handling.md)   
- [Low-Level I/O (E/A auf niedriger Ebene)](../../c-runtime-library/low-level-i-o.md)   
+ [E/A auf niedriger Ebene](../../c-runtime-library/low-level-i-o.md)   
  [_chmod, _wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
  [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
  [_mkdir, _wmkdir](../../c-runtime-library/reference/mkdir-wmkdir.md)   

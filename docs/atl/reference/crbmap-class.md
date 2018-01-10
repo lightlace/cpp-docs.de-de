@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 127f8b0448d141917193d41d11d5ed95576ff482
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3cfa4d6fff6b46341f01b4d5ce18d9ec418738bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crbmap-class"></a>CRBMultiMap-Klasse
 Diese Klasse stellt eine Zuordnungsstruktur mithilfe einer Binärstruktur Rot Schwarz.  
@@ -53,7 +54,7 @@ class CRBMap : public CRBTree<K, V, KTraits, VTraits>
  `VTraits`  
  Der Code zum Kopieren oder verschieben Wertelemente verwendet.  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -135,7 +136,7 @@ CPair* Lookup(KINARGTYPE key) throw();
  `key`  
  Gibt den Schlüssel, der identifiziert das Element gesucht werden soll.  
   
- *value*  
+ *Wert*  
  Variablen, empfängt der gebundene Wert.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -180,7 +181,7 @@ POSITION SetAt(
  `key`  
  Der Schlüsselwert, der zum Hinzufügen der `CRBMap` Objekt.  
   
- *value*  
+ *Wert*  
  Der Wert, der zum Hinzufügen der `CRBMap` Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  

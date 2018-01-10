@@ -45,11 +45,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6cfc812351da16f175e6e7d652d57a11d3a62c79
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 067f683b5322b11a4ca33f015d64850c8113ce18
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crect-class"></a>CRect-Klasse
 Ähnelt der Windows [RECT](../../mfc/reference/rect-structure1.md) Struktur.  
@@ -60,7 +61,7 @@ ms.lasthandoff: 10/24/2017
 class CRect : public tagRECT  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -368,7 +369,7 @@ void DeflateRect(int l, int t, int r, int b) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *x*  
+ *w*  
  Gibt die Anzahl der Einheiten, um die deflate links und rechts vom `CRect`.  
   
  *y*  
@@ -487,7 +488,7 @@ void InflateRect(int l, int t, int r,  int b) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *x*  
+ *w*  
  Gibt die Anzahl der Einheiten, um Links vergrößert werden soll und rechten Seite des Anwendungsfensters `CRect`.  
   
  *y*  
@@ -636,7 +637,7 @@ void MoveToX(int x) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *x*  
+ *w*  
  Die absolute X-Koordinate für die linke obere Ecke des Rechtecks.  
   
 ### <a name="example"></a>Beispiel  
@@ -661,7 +662,7 @@ void MoveToXY(POINT point) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *x*  
+ *w*  
  Die absolute X-Koordinate für die linke obere Ecke des Rechtecks.  
   
  *y*  
@@ -743,7 +744,7 @@ void OffsetRect(SIZE size) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *x*  
+ *w*  
  Gibt die Menge, die zum Verschieben von links oder rechts. Sie müssen nach links verschieben negativ sein.  
   
  *y*  

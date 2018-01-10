@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0b838ac036f6315209b2a4330c120e9c2b7486d6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5a9167153c2b827e1bc2597e830e9b3c82ee31b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-control-wizard"></a>ATL-Steuerelement-Assistent
 Fügt eine ATL-Projekt (oder einem MFC-Projekt mit ATL-Unterstützung) ein ATL-Steuerelement. Diesem Assistenten können eine der drei Arten von Steuerelementen einfügen:  
@@ -84,7 +85,7 @@ Fügt eine ATL-Projekt (oder einem MFC-Projekt mit ATL-Unterstützung) ein ATL-S
  **Interface**  
  Legt den Namen der Schnittstelle für das Objekt fest. Standardmäßig wird ein Schnittstellenname mit "I" vorangestellt.  
   
- **Typ**  
+ **Type**  
  Legt die Beschreibung des Objekts, die in der Registrierung angezeigt wird  
   
  **ProgID**  

@@ -1,37 +1,40 @@
 ---
-title: "Gewusst wie: Marshallen von Strukturen mit C++-Interop"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C++ Interop, Strukturen"
-  - "Datenmarshalling [C++], Strukturen"
-  - "Interop [C++], Strukturen"
-  - "Marshaling [C++], Strukturen"
-  - "Strukturen [C++], Marshalling"
+title: 'Wie: Marshallen von Strukturen mit C++-Interop | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- C++ Interop, structures
+- structures [C++], marshaling
+- data marshaling [C++], structures
+- interop [C++], structures
+- marshaling [C++], structures
 ms.assetid: c2080200-f983-4d6e-a557-cd870f060a54
-caps.latest.revision: 15
-caps.handback.revision: "15"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 85c0b4301b0fb55acdc74344d1ca3fc1b6b393d8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Gewusst wie: Marshallen von Strukturen mit C++-Interop
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Dieses Thema veranschaulicht einen Aspekt der Visual C\+\+\-Interoperabilität.  Weitere Informationen finden Sie unter [Verwenden von C\+\+\-Interop \(implizites PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
+# <a name="how-to-marshal-structures-using-c-interop"></a>Gewusst wie: Marshallen von Strukturen mit C++-Interop
+Dieses Thema veranschaulicht einen Aspekt der Visual C++-Interoperabilität. Weitere Informationen finden Sie unter [mithilfe von C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
   
- In den folgenden Codebeispielen werden die [managed, unmanaged](../preprocessor/managed-unmanaged.md)\-\#pragma\-Direktiven verwendet, um verwaltete und nicht verwaltete Funktionen in derselben Datei zu implementieren. Diese Funktionen arbeiten jedoch auf dieselbe Weise zusammen, wenn sie in separaten Dateien definiert werden.  Dateien, die ausschließlich nicht verwaltete Funktionen enthalten, müssen nicht mit [\/clr \(Common Language Runtime\-Kompilierung\)](../build/reference/clr-common-language-runtime-compilation.md) kompiliert werden.  
+ Im folgenden Codebeispiel Beispiele verwenden die [verwaltete, unverwaltete](../preprocessor/managed-unmanaged.md) #pragma-Direktiven zum Implementieren verwalteten und nicht verwaltete Funktionen in derselben Datei, aber diese Funktionen auf dieselbe Weise zusammenarbeiten, wenn in separaten Dateien definiert. Dateien, die ausschließlich nicht verwaltete Funktionen müssen nicht kompiliert werden [/CLR (Common Language Runtime-Kompilierung)](../build/reference/clr-common-language-runtime-compilation.md).  
   
-## Beispiel  
- Im folgenden Beispiel wird dargestellt, wie eine Struktur sowohl als Verweis als auch als Wert von einer verwalteten Funktion an eine nicht verwaltete Funktion übergeben wird.  Da die Struktur in diesem Beispiel lediglich einfache, systeminterne Datentypen enthält \(siehe [Blittable and Non\-Blittable Types](../Topic/Blittable%20and%20Non-Blittable%20Types.md)\), ist kein besonderes Marshalling erforderlich.  Informationen zum Marshallen nicht blitfähiger Strukturen, die beispielsweise Zeiger enthalten, finden Sie unter [Gewusst wie: Marshallen von eingebetteten Zeigern mit C\+\+\-Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird veranschaulicht, eine Struktur von einer verwalteten an eine nicht verwaltete Funktion übergeben, sowohl als Wert und als Verweis. Da die Struktur in diesem Beispiel wird nur die einfache, systeminterne Datentypen enthält (finden Sie unter [blitfähige und nicht blitfähige Typen](http://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)), keine besondere Marshalling erforderlich ist. Marshallen von blitfähige Strukturen, z. B. solche, die Zeiger enthalten finden Sie unter [wie: Marshallen eingebetteter Zeiger mithilfe von C++-Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
   
 ```  
 // PassStruct1.cpp  
@@ -87,8 +90,8 @@ int main() {
 }  
 ```  
   
-## Beispiel  
- Im folgenden Beispiel wird dargestellt, wie eine Struktur sowohl als Verweis als auch als Wert von einer nicht verwalteten Funktion an eine verwaltete Funktion übergeben wird,   Da die Struktur in diesem Beispiel lediglich einfache, systeminterne Datentypen enthält \(siehe [Blittable and Non\-Blittable Types](../Topic/Blittable%20and%20Non-Blittable%20Types.md)\), ist kein besonderes Marshalling erforderlich.  Informationen zum Marshallen nicht blitfähiger Strukturen, die beispielsweise Zeiger enthalten, finden Sie unter [Gewusst wie: Marshallen von eingebetteten Zeigern mit C\+\+\-Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird veranschaulicht, eine Struktur aus einem nicht verwalteten an eine verwaltete Funktion übergeben wird sowohl als Wert und als Verweis. Da die Struktur in diesem Beispiel wird nur die einfache, systeminterne Datentypen enthält (siehe [blitfähige und nicht blitfähige Typen](http://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)), kein besonderes marshalling erforderlich ist. Marshallen von blitfähige Strukturen, z. B. solche, die Zeiger enthalten finden Sie unter [wie: Marshallen eingebetteter Zeiger mithilfe von C++-Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
   
 ```  
 // PassStruct2.cpp  
@@ -153,5 +156,5 @@ int main() {
 }  
 ```  
   
-## Siehe auch  
- [Verwenden von C\+\+\-Interop \(implizites PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Siehe auch  
+ [Verwenden von C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d169c83878b19b7d5c011948705a5438b97787c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a5c207a806b9f0fa194afb4deced9d791c25e587
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="model"></a>@Model
 1 für **sehr klein** zu modellieren, 2 für **kleine** zu modellieren, 3 für **COMPACT** -Modell und 4 für **Mittel** zu modellieren, 5 für **groß**-Modell und 6 für **sehr groß** Modell und 7 für **Flatfile** Modell (numerische entsprechen).  

@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d851e2c6fb4892bd65cf26ea747a6b99a8006cee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8619c050ecc356e1445991b625da00c04f462848
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomheapptr-class"></a>CComHeapPtr-Klasse
 Ein intelligenter Zeiger-Klasse zum Verwalten von Heaps Zeiger.  
@@ -38,7 +39,7 @@ class CComHeapPtr : public CHeapPtr<T, CComAllocator>
  `T`  
  Der Objekttyp, auf dem Heap gespeichert werden.  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   

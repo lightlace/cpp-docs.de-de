@@ -1,48 +1,46 @@
 ---
-title: "/WINMDKEYFILE (winmd-Schl&#252;sseldatei angeben) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.WINMDKeyFile"
-dev_langs: 
-  - "C++"
+title: "-WINMDKEYFILE (Winmd Schlüsseldatei angeben) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VC.Project.VCLinkerTool.WINMDKeyFile
+dev_langs: C++
 ms.assetid: 65d88fdc-fff9-49ea-8cfc-b2f408741734
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bc6fa7ff554a15e2d9f13ebfa21e577581ddbad0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# /WINMDKEYFILE (winmd-Schl&#252;sseldatei angeben)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Gibt einen Schlüssel oder ein Schlüsselpaar an, mit dem eine Windows Runtime\-Metadaten\-Datei \(.winmd\) signiert werden soll.  
+# <a name="winmdkeyfile-specify-winmd-key-file"></a>/WINMDKEYFILE (winmd-Schlüsseldatei angeben)
+Gibt einen Schlüssel oder ein Schlüsselpaar zum Signieren einer Windows Runtime-Metadatendatei (.winmd).  
   
 ```  
-  
 /WINMDKEYFILE:filename  
-  
 ```  
   
-## Hinweise  
- Ähnelt der Linkeroption [\/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md), die einer WINMD\-Datei angewendet wird.  
+## <a name="remarks"></a>Hinweise  
+ Ähnelt der [/keyfile](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) Linkeroption, die in einer winmd-Datei angewendet wird.  
   
-### So legen Sie diese Linkeroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Wählen Sie den Ordner **Linker** aus.  
+2.  Wählen Sie die **Linker** Ordner.  
   
-3.  Wählen Sie die Eigenschaftenseite **Windows\-Metadaten** aus.  
+3.  Wählen Sie die **Windows-Metadaten** Eigenschaftenseite.  
   
-4.  Geben Sie im Feld **Windows\-Metadaten\-Schlüsseldatei** den Speicherort ein.  
+4.  In der **Windows-Metadatendatei Schlüssel** Geben Sie den Dateispeicherort.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
  [Linkeroptionen](../../build/reference/linker-options.md)

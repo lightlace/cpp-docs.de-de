@@ -1,107 +1,107 @@
 ---
-title: "Einschr&#228;nkungen f&#252;r &quot;/clr&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/clr-Compileroption [C++], Beschränkungen"
+title: "-Clr-Einschränkungen | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-caps.latest.revision: 27
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: aa0bdc6a5a62b517c252a35d8f1193b34d6e0d32
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Einschr&#228;nkungen f&#252;r &quot;/clr&quot;
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Beachten Sie die folgenden Einschränkungen der Verwendung von **\/clr**:  
+# <a name="clr-restrictions"></a>Einschränkungen für "/clr"
+Beachten Sie die folgenden Einschränkungen für die Verwendung von **"/ CLR"**:  
   
--   In einem strukturierte Ausnahmehandler liegen beim Kompilieren mit **\/clr** Einschränkungen für die Verwendung von `_alloca` vor.  Weitere Informationen finden Sie unter [\_alloca](../../c-runtime-library/reference/alloca.md).  
+-   In einem strukturierten Ausnahmehandler stehen die folgenden Einschränkungen bei der Verwendung `_alloca` beim Kompilieren mit **"/ CLR"**. Weitere Informationen finden Sie unter [_alloca](../../c-runtime-library/reference/alloca.md).  
   
--   Die Verwendung von Laufzeitüberprüfungen mit **\/clr** ist nicht zulässig.  Weitere Informationen finden Sie unter [Laufzeitfehlerüberprüfungen](../Topic/How%20to:%20Use%20Native%20Run-Time%20Checks.md).  
+-   Die Verwendung von Fehlern der fehlerprüfung zur Laufzeit ist nicht gültig, wenn **"/ CLR"**. Weitere Informationen finden Sie unter [Gewusst wie: Verwenden von systemeigenen Laufzeitprüfungen](/visualstudio/debugger/how-to-use-native-run-time-checks).  
   
--   Wenn **\/clr** zum Kompilieren eines Programms verwendet wird, dass ausschließlich Standard\-C\+\+\-Syntax verwendet, gelten folgende Richtlinien für die Verwendung der Inlineassembly:  
+-   Wenn **"/ CLR"** wird verwendet, um ein Programm zu kompilieren, nur C++-Standardsyntax verwendet, die folgenden Richtlinien gelten für die Verwendung von Inlineassemblys:  
   
-    -   Bei Inlineassemblycode, der von einem bekannten systemeigenen Stapellayout ausgeht und der dazu Konventionen außerhalb der aktuellen Funktion oder andere Informationen über den Computer auf niedriger Ebene abruft, können Fehler auftreten, wenn das Layout für eine verwaltete Funktion auf den Stapelrahmen angewendet wird.  Funktionen, die Inlineassemblycode enthalten, werden als unverwaltete Funktionen generiert, so als wären sie in einem separaten Modul abgelegt, das ohne **\/clr** kompiliert wurde.  
+    -   Inline-Assemblycode, die Kenntnisse in den systemeigenen Stapellayout annimmt, Aufrufkonventionen außerhalb der aktuellen Funktion oder eines anderen Basisinformationen über den Computer wenn möglicherweise ein Fehler, die Wissensdatenbank auf den Stapelrahmen für eine verwaltete Funktion angewendet wird. Funktionen, die mit Inline-Assemblycode werden als nicht verwaltete Funktionen generiert, als ob sie in einem separaten Modul gespeichert wurden, die ohne kompiliert wurde **"/ CLR"**.  
   
-    -   Inlineassemblycode wird in Funktionen, die kopierkonstruierte Funktionsparameter übergeben, nicht unterstützt.  
+    -   Inline-Assemblycode in Funktionen, die Kopie erstellt Funktionsparameter übergeben wird nicht unterstützt.  
   
--   Die [vprintf\-Funktionen](../../c-runtime-library/vprintf-functions.md) können nicht aus einem Programm aufgerufen werden, das mit **\/clr** kompiliert wurde.  
+-   Die [Vprintf-Funktionen](../../c-runtime-library/vprintf-functions.md) kann nicht aufgerufen werden, aus einem Programm kompiliert mit **"/ CLR"**.  
   
--   Der [\_\_declspec](../../cpp/declspec.md)\-Modifizierer mit [naked](../../cpp/naked-cpp.md)\-Attribut wird unter \/clr ignoriert.  
+-   Die [naked](../../cpp/naked-cpp.md) [__declspec](../../cpp/declspec.md) Modifizierer wird unter/CLR ignoriert.  
   
--   Die **translator**\-Funktion, die durch [\_set\_se\_translator](../../c-runtime-library/reference/set-se-translator.md) eingestellt wird, wirkt sich nur auf abgefangene Elemente im nicht verwalteten Code aus.  Weitere Informationen finden Sie unter [Exception Handling](../../windows/exception-handling-cpp-component-extensions.md).  
+-   Die Translator-Funktion festlegen, indem [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md) wirkt sich nur fängt in nicht verwaltetem Code. Finden Sie unter [Exception Handling](../../windows/exception-handling-cpp-component-extensions.md) für Weitere Informationen.  
   
--   Der Vergleich von Funktionszeigern ist unter **\/clr** nicht zulässig.  
+-   Beim Vergleich von Funktionszeigern darf nicht unter **"/ CLR"**.  
   
--   Der Gebrauch von Funktionen ohne vollständige Prototypen ist unter **\/clr** nicht zulässig.  
+-   Die Verwendung von Funktionen ohne vollständige Prototypen darf nicht unter **"/ CLR"**.  
   
--   Die folgenden Compileroptionen werden mit **\/clr** nicht unterstützt:  
+-   Die folgenden Compileroptionen werden nicht unterstützt, mit **"/ CLR"**:  
   
-    -   **\/EHsc** und **\/EHs** \(**\/clr** impliziert **\/EHa**, siehe [\/EH \(Ausnahmebehandlungsmodell\)](../../build/reference/eh-exception-handling-model.md)\)  
+    -   **/ EHsc** und **/EHs** (**"/ CLR"** impliziert **/EHa** (siehe [/EH (Ausnahmebehandlungsmodell)](../../build/reference/eh-exception-handling-model.md))  
   
-    -   **\/fp:strict** und **\/fp:except** \(siehe [\/fp \(Festlegen des Gleitkommaverhaltens\)](../../build/reference/fp-specify-floating-point-behavior.md)\)  
+    -   **/ fp: strict** und **/fp: außer** (siehe [/fp (Festlegen von Floating-Verhalten)](../../build/reference/fp-specify-floating-point-behavior.md))  
   
-    -   [\/Zd](../../build/reference/z7-zi-zi-debug-information-format.md)  
+    -   ["/ Zd"](../../build/reference/z7-zi-zi-debug-information-format.md)  
   
-    -   [\/Gm](../../build/reference/gm-enable-minimal-rebuild.md)  
+    -   [/Gm](../../build/reference/gm-enable-minimal-rebuild.md)  
   
-    -   [\/MT](../../build/reference/md-mt-ld-use-run-time-library.md)  
+    -   [/MT](../../build/reference/md-mt-ld-use-run-time-library.md)  
   
-    -   [\/RTC](../../build/reference/rtc-run-time-error-checks.md)  
+    -   [/RTC](../../build/reference/rtc-run-time-error-checks.md)  
   
-    -   **\/ZI**  
+    -   **/ ZI**  
   
--   Die Kombination aus der `_STATIC_CPPLIB`\-Präprozessordefinition \(`/D_STATIC_CPPLIB`\) und der Compileroption **\/clr** oder **\/clr:pure** wird nicht unterstützt.  Der Grund dafür ist, dass die Definition die Anwendung zu einer Verknüpfung mit der statischen Multithread\-Standard\-C\+\+\-Bibliothek veranlassen würde, was nicht unterstützt wird.  Weitere Informationen finden Sie im Thema [\/MD, \/MT, \/LD \(Laufzeitbibliothek verwenden\)](../../build/reference/md-mt-ld-use-run-time-library.md).  
+-   Die Kombination aus der `_STATIC_CPPLIB` Präprozessordefinition (`/D_STATIC_CPPLIB`) und die **"/ CLR"** oder **/CLR: reine** (Compileroption) wird nicht unterstützt. Dies rührt daher, dass die Definition würde die Anwendung zur Verknüpfung mit der Statische multithreaded C++-Standardbibliothek, die nicht unterstützt wird. Weitere Informationen finden Sie unter der [/MD, / MT, / ld (Laufzeitbibliothek verwenden)](../../build/reference/md-mt-ld-use-run-time-library.md) Thema.  
   
--   [\/J](../../build/reference/j-default-char-type-is-unsigned.md) wird mit **\/clr:safe** oder **\/clr:pure** nicht unterstützt.  
+-   ["/ J"](../../build/reference/j-default-char-type-is-unsigned.md) wird nicht unterstützt, mit **/CLR: safe** oder **/CLR: pure**. Die Compileroptionen **/clr:pure** und **/clr:safe** sind in Visual Studio 2015 veraltet.  
   
--   Die ATL\- und MFC\-Bibliotheken werden von der Kompilierung im pure\-Modus \(**\/clr:pure**\) nicht unterstützt.  Sie können **\/clr:pure** mit der Standard\-C\+\+\-Bibliothek und CRT verwenden, wenn Sie auch mit **\/MD** oder **\/MDd** kompilieren.  
+-   ATL und MFC-Bibliotheken werden von der Kompilierung im pure-Modus nicht unterstützt (**/CLR: pure**). Sie können **/CLR: pure** mit der C++-Standardbibliothek und die CRT auch beim Kompilieren mit **/MD** oder **/MDd**.  
   
--   Die Verwendung von **\/Zi** mit **\/clr** wirkt sich auf die Leistung aus.  Weitere Informationen finden Sie unter [\/Zi](../../build/reference/z7-zi-zi-debug-information-format.md).  
+-   Bei Verwendung **/Zi** mit **"/ CLR"**, stehen Sie Auswirkungen auf die Leistung. Weitere Informationen finden Sie unter [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md).  
   
--   Das Übergeben eines Breitzeichens an eine .NET Framework\-Ausgaberoutine ohne gleichzeitige Festlegung von [\/Zc:wchar\_t](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) oder ohne Umwandlung des Zeichens in `__wchar_t` führt zur Darstellung der Ausgabe als `unsigned short int`.  Beispiel:  
+-   Übergeben ein Breitzeichen an einen .NET Framework Routine ohne Ausgabe [/Zc: wchar_t](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) oder ohne Umwandlung des Zeichens in `__wchar_t` führt dazu, dass die Ausgabe als ein `unsigned short int`. Zum Beispiel:  
   
     ```  
     Console::WriteLine(L' ')              // Will output 32.  
     Console::WriteLine((__wchar_t)L' ')   // Will output a space.  
     ```  
   
--   [\/GS](../../build/reference/gs-buffer-security-check.md) wird beim Kompilieren mit **\/clr** ignoriert, wenn keine Funktion unter `#pragma` [unmanaged](../../preprocessor/managed-unmanaged.md) ist oder die Funktion in systemeigenen Code kompiliert werden muss. In diesem Fall gibt der Compiler die Warnung C4793 aus, die standardmäßig deaktiviert ist.  
+-   [/ GS](../../build/reference/gs-buffer-security-check.md) wird ignoriert, wenn die Kompilierung mit **"/ CLR"**, es sei denn, eine Funktion unterliegt `#pragma` [nicht verwalteten](../../preprocessor/managed-unmanaged.md) oder wenn die Funktion in systemeigenen kompiliert werden muss, in diesem Fall wird der Compiler Generieren Sie die Warnung C4793, die standardmäßig deaktiviert ist.  
   
--   Informationen über die Anforderungen in Bezug auf Funktionssignaturen einer verwalteten Anwendung finden Sie unter [\/ENTRY](../../build/reference/entry-entry-point-symbol.md).  
+-   Finden Sie unter [/Entry](../../build/reference/entry-entry-point-symbol.md) Funktion Signatur Anforderungen von einer verwalteten Anwendung.  
   
--   Mit **\/openmp** und **\/clr** kompilierte Anwendungen können nur in einem einzelnen appdomain\-Prozess ausgeführt werden.  Weitere Informationen finden Sie unter [\/openmp \(Aktivieren der OpenMP 2.0\-Unterstützung\)](../../build/reference/openmp-enable-openmp-2-0-support.md).  
+-   Anwendungen mit kompiliert **/OpenMP** und **"/ CLR"** kann nur in einem einzelnen Appdomain-Prozess ausgeführt werden.  Finden Sie unter [/OpenMP (Aktivieren der OpenMP 2.0-Unterstützung)](../../build/reference/openmp-enable-openmp-2-0-support.md) für Weitere Informationen.  
   
--   Funktionen, die eine variable Anzahl von Argumenten \(varargs\) aufnehmen, werden als systemeigene Funktionen generiert.  Alle verwalteten Datentypen in der variablen Argumentposition werden in systemeigene Typen gemarshallt.  Beachten Sie, dass <xref:System.String?displayProperty=fullName>\-Typen in Einzelbyte\-Zeichenfolgen gemarshallt werden, obwohl es sich dabei tatsächlich um breite Zeichenfolgen handelt.  Wenn ein printf\-Spezifizierer also %S \(wchar\_t\*\) lautet, wird er stattdessen in eine %s\-Zeichenfolge gemarshallt.  
+-   Funktionen, die eine Variable Anzahl von Argumenten (Varargs) akzeptieren, werden als systemeigene Funktionen generiert. Alle verwalteten Datentypen in der Variablen Argumentposition werden in systemeigenen Typen gemarshallt werden. Beachten Sie, dass <xref:System.String?displayProperty=fullName> Typen sind tatsächlich Breitzeichen-Zeichenfolgen, aber diese Einzelbyte-Zeichenfolgen gemarshallt werden. Daher ist ein Printf-Spezifizierer %S (Wchar_t *), wird er in eine Zeichenfolge %s stattdessen gemarshallt.  
   
--   Wenn Sie das Makro va\_arg verwenden, erhalten Sie beim Kompilieren mit **\/clr:pure** möglicherweise unerwartete Ergebnisse.  Weitere Informationen finden Sie unter [va\_arg, va\_copy, va\_end, va\_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md).  
+-   Wenn das Makro Va_arg verwenden, erhalten Sie möglicherweise unerwartete Ergebnisse beim Kompilieren mit **/CLR: pure**.  Weitere Informationen finden Sie unter [Va_arg, Va_copy, Va_end, Va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md).  
   
--   Wenn die Anwendung ein Argument vom Typ [va\_list](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) an eine Funktion übergibt, die deklariert wird, um eine [variable Anzahl von Argumenten](../../misc/variable-argument-lists.md) zu akzeptieren, und die Anwendung mit **\/clr:pure** kompiliert wird, löst die CLR <xref:System.NotSupportedException> aus.  Wenn stattdessen **\/clr**  verwendet wird, werden die entsprechenden Funktionen in systemeigenen Code kompiliert und ordnungsgemäß ausgeführt.  Bei Verwendung von **\/clr:safe** wird eine Fehlerdiagnose ausgegeben.  
+-   Wenn Ihre Anwendung ein Argument des Typs übergibt [Va_list](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) an eine Funktion deklariert werden, um eine Variable Anzahl von Argumenten akzeptieren, und die Anwendung kompiliert wird, mit **/CLR: pure**, löst die CLR <xref:System.NotSupportedException>. Wenn **"/ CLR"** wird verwendet, stattdessen die entsprechenden Funktionen werden in systemeigenen Code kompiliert und ordnungsgemäß ausgeführt. Wenn **/CLR: safe** wird verwendet, wird eine Fehlerdiagnose ausgegeben.  
   
--   Aus verwaltetem Code sollten keine Funktionen aufgerufen werden, die den Stapel durchlaufen, um Parameterinformationen \(Funktionsargumente\) abzurufen. Die P\/Invoke\-Ebene bewirkt, dass Informationen sich weiter unten im Stapel befinden.  Kompilieren Sie z. B. proxy\/stub nicht mit **\/clr**.  
+-   Rufen Sie nicht, aus verwaltetem Code, der alle Funktionen, die den Stapel, um die Parameterinformationen (Funktionsargumente) abzurufen, führt die P/Invoke-Ebene bewirkt, dass Informationen weiter unten im Stapel werden.  Kompilieren Sie z. B. nicht Proxy/Stub mit **"/ CLR"**.  
   
--   Funktionen werden nach Möglichkeit zu verwaltetem Code kompiliert, doch nicht alle C\+\+\-Konstrukte können in verwalteten Code übersetzt werden.  Dies wird auf Funktionsbasis ermittelt.  Wenn ein Teil der Funktion nicht in verwalteten Code konvertiert werden kann, wird die gesamte Funktion stattdessen in systemeigenen Code konvertiert.  In den folgenden Fällen wird das Generieren von verwaltetem Code im Compiler verhindert.  
+-   Funktionen für verwalteten Code nach Möglichkeit werden kompiliert, aber nicht alle C++-Konstrukte können in verwalteten Code übersetzt werden.  Diese Feststellung erfolgt auf Basis von Funktion. Wenn Sie einen beliebigen Teil einer Funktion in verwaltetem Code konvertiert werden kann, wird die gesamte Funktion stattdessen in systemeigenen Code konvertiert werden. Die folgenden Fällen können Sie verhindern, dass den Compiler Generieren von verwaltetem Code.  
   
-    -   Vom Compiler generierte Thunks oder Hilfsfunktionen.  Systemeigene Thunks werden für jeden Funktionsaufruf durch einen Funktionszeiger generiert, einschließlich virtueller Funktionsaufrufe.  
+    -   Vom Compiler generierte Thunks oder Hilfsfunktionen. Systemeigene Thunks werden für jeden Funktionsaufruf durch einen Funktionszeiger, einschließlich virtuelle Funktionsaufrufe generiert.  
   
-    -   Funktionen, die `setjmp` oder `longjmp` aufrufen.  
+    -   Dieser Aufruf funktioniert `setjmp` oder `longjmp`.  
   
-    -   Funktionen, die bestimmte systeminterne Routinen verwenden, um Computerressourcen direkt zu bearbeiten.  Beispielsweise führt die Verwendung von `__enable` und `__disable`, `_ReturnAddress` und `_AddressOfReturnAddress` oder systeminternen Multimediafunktionen zur Erzeugung von systeminternem Code.  
+    -   Funktionen, mit denen bestimmte systeminternen Routinen um Computerressourcen direkt zu bearbeiten. Beispielsweise die Verwendung von `__enable` und `__disable`, `_ReturnAddress` und `_AddressOfReturnAddress`, oder multimedia systeminterne Funktionen werden alle Ergebnis in systemeigenem Code.  
   
-    -   Funktionen, die der `#pragma unmanaged`\-Direktive folgen. \(Beachten Sie, dass umgekehrt `#pragma managed` ebenfalls unterstützt wird.\)  
+    -   Funktionen, führen Sie die `#pragma unmanaged` Richtlinie. (Beachten Sie, dass das Gegenteil `#pragma managed`, wird ebenfalls unterstützt.)  
   
-    -   Funktionen, die Verweise auf ausgerichtete Typen, d. h. mit `__declspec(align(...))` deklarierte Typen, enthalten.  
+    -   Eine Funktion, die Verweise auf enthält ausgerichtet Typen, d. h. Typen deklariert mit `__declspec(align(...))`.  
   
--   Die [COM\-Unterstützung des Compilers](../../cpp/compiler-com-support.md)\-Klassen können nicht mit **\/clr:pure** oder **\/clr:safe** verwendet werden.  
+-   Können keine der [Compiler-COM-Unterstützung](../../cpp/compiler-com-support.md) Klassen mit **/CLR: pure** oder **/CLR: safe**.  
   
-## Siehe auch  
- [\/clr \(Common Language Runtime\-Kompilierung\)](../../build/reference/clr-common-language-runtime-compilation.md)
+## <a name="see-also"></a>Siehe auch  
+ [/ CLR (common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md)

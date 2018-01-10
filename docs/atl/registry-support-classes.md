@@ -1,38 +1,39 @@
 ---
-title: "Registry Support Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.atl.registry"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, Registrierung"
-  - "registry support classes"
-  - "registry support classes, ATL"
+title: "Registrierung von Unterstützungsklassen (ATL) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.atl.registry
+dev_langs: C++
+helpviewer_keywords:
+- registry support classes, ATL
+- ATL, registry
+- registry support classes
 ms.assetid: 4203c346-77a9-42bf-8683-a3c3351cc490
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f11a5361f25d08010735ee612b9296f888ed8933
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Registry Support Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="registry-support-classes"></a>Unterstützungsklassen für Registrierung
+Die folgende Klasse bietet Unterstützung der Registrierung:  
+  
+-   [CRegKey](../atl/reference/cregkey-class.md) enthält Methoden zum Bearbeiten von Werten in der systemregistrierung.  
+  
+## <a name="related-articles"></a>Verwandte Artikel  
+ [Die ATL-Registrierungskomponente (Registrar)](../atl/atl-registry-component-registrar.md)  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Klassenübersicht](../atl/atl-class-overview.md)   
+ [Registrierungsmakros](../atl/reference/registry-macros.md)
 
-Die folgende Klasse bietet Registrierungsunterstützung:  
-  
--   [CRegKey](../atl/reference/cregkey-class.md) enthält Methoden zum Bearbeiten von Werten in der Systemregistrierung.  
-  
-## Verwandte Elemente  
- [Die ATL\-Registrierungs\-Komponente \(Registrierungsstelle\)](../atl/atl-registry-component-registrar.md)  
-  
-## Siehe auch  
- [Class Overview](../atl/atl-class-overview.md)   
- [Registry Macros](../atl/reference/registry-macros.md)

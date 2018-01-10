@@ -1,44 +1,46 @@
 ---
-title: "Formatting Time: Automation Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Automation classes, formatting time"
-  - "formatting [C++], Uhrzeit"
-  - "time [C++], formatting"
+title: 'Formatierung Zeit: Automatisierungsklassen | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- Automation classes, formatting time
+- time [C++], formatting
+- formatting [C++], time
 ms.assetid: 155c5bef-b555-4bed-9545-29afc49715f1
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2000f3ec059c98150fbb82c71f0d810bdae53d06
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Formatting Time: Automation Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-#### So fügen Sie eine Zeit formatieren  
+# <a name="formatting-time-automation-classes"></a>Formatierung Zeit: Automatisierungsklassen
+#### <a name="to-format-a-time"></a>So formatieren Sie einen Zeitraum  
   
-1.  Verwenden Sie die **Format**\-Memberfunktion entweder von [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) oder von [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md), um eine Zeichenfolge zu erstellen, die die Zeit darstellt oder der Laufzeit.  
+1.  Verwenden der **Format** Memberfunktion entweder [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) oder [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) So erstellen eine Zeichenfolge, die bzw. der verstrichene Zeit darstellt.  
   
-     [!CODE [NVC_ATLMFC_Utilities#179](../CodeSnippet/VS_Snippets_Cpp/NVC_ATLMFC_Utilities#179)]  
+     [!code-cpp[NVC_ATLMFC_Utilities#179](../atl-mfc-shared/codesnippet/cpp/formatting-time-automation-classes_1.cpp)]  
   
- Weitere Informationen finden Sie unter [COleVariant](../mfc/reference/colevariant-class.md)\-Klasse.  
+ Weitere Informationen finden Sie in der Klasse [COleVariant](../mfc/reference/colevariant-class.md).  
   
-### Worüber möchten Sie mehr erfahren?  
+### <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren  
   
--   [Allgemeine Datums\- und Zeitprogrammierung in MFC](../atl-mfc-shared/date-and-time.md)  
+-   [Allgemeine Datums- und zeitprogrammierung in MFC](../atl-mfc-shared/date-and-time.md)  
   
--   [Allgemeine Klassen für Datums\- und Zeitprogrammierung](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
+-   [Allgemeine Klassen für die Datums- und zeitprogrammierung](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
   
 -   [Arbeiten mit SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)  
   
-## Siehe auch  
- [Date and Time: Automation Support](../atl-mfc-shared/date-and-time-automation-support.md)
+## <a name="see-also"></a>Siehe auch  
+ [Datum und Uhrzeit: Automatisierungsunterstützung](../atl-mfc-shared/date-and-time-automation-support.md)
+

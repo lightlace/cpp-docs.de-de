@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 201d4a6493b71a78f2a438ac43c003a8b7d36ce7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eb9541bfc4a94253ac26e118e22c3abb2663a893
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="safebuffers"></a>safebuffers
 **Microsoft-spezifisch**  
@@ -35,7 +36,7 @@ __declspec( safebuffers )
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die **/GS** -Compileroption bewirkt, dass den Compiler Pufferüberläufe testet, indem sicherheitsüberprüfungen im Stapel eingefügt. Die Typen von Datenstrukturen, die besonders geeignet für sicherheitsüberprüfungen werden in beschriebenen [/GS (Puffer-Sicherheitsüberprüfung)](../build/reference/gs-buffer-security-check.md). Weitere Informationen zu Pufferüberlauf-Erkennung, finden Sie unter [Compiler Security überprüft In Depth](http://go.microsoft.com/fwlink/?linkid=7260) auf der MSDN-Website.  
+ Die **/GS** -Compileroption bewirkt, dass den Compiler Pufferüberläufe testet, indem sicherheitsüberprüfungen im Stapel eingefügt. Die Typen von Datenstrukturen, die besonders geeignet für sicherheitsüberprüfungen werden in beschriebenen [/GS (Puffer-Sicherheitsüberprüfung)](../build/reference/gs-buffer-security-check.md). Weitere Informationen zu Pufferüberlauf-Erkennung, finden Sie unter [Compiler Security überprüft In Depth](http://go.microsoft.com/fwlink/p/?linkid=7260) auf der MSDN-Website.  
   
  Ein fachmännischer manueller Codereview oder eine externe Analyse kann bestimmen, dass eine Funktion vor einem Pufferüberlauf sicher ist. In diesem Fall können Sie sicherheitsüberprüfungen für eine Funktion unterdrücken, durch Anwenden der `__declspec(safebuffers)` Schlüsselwort, um die Funktionsdeklaration.  
   

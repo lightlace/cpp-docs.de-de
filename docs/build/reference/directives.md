@@ -1,39 +1,39 @@
 ---
-title: "/DIRECTIVES | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/directives"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/DIRECTIVES (dumpbin-Option)"
-  - "DIRECTIVES (dumpbin-Option)"
-  - "-DIRECTIVES (dumpbin-Option)"
+title: -DIRECTIVES | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /directives
+dev_langs: C++
+helpviewer_keywords:
+- /DIRECTIVES dumpbin option
+- DIRECTIVES dumpbin option
+- -DIRECTIVES dumpbin option
 ms.assetid: cb85d679-6d20-4244-ba0b-6f495228e970
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 150e384ea51bbb316b88a179174f1f7c8e5d72b4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# /DIRECTIVES
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="directives"></a>/DIRECTIVES
 ```  
 /DIRECTIVES  
 ```  
   
-## Hinweise  
- Durch diese Option wird der compilergenerierte .drective\-Abschnitt eines Abbildes gesichert.  
+## <a name="remarks"></a>Hinweise  
+ Diese Option gibt die vom Compiler generierte .drective-Abschnitt eines Bilds.  
   
- Für Dateien, die mit der [\/GL](../../build/reference/gl-whole-program-optimization.md)\-Compileroption erstellt wurden, kann nur die DUMPBIN\-Option [\/HEADERS](../../build/reference/headers.md) verwendet werden.  
+ Nur die [/Headers](../../build/reference/headers.md) DUMPBIN-Option ist verfügbar für die Verwendung in den Dateien erstellt wird, mit der [/GL](../../build/reference/gl-whole-program-optimization.md) -Compileroption.  
   
-## Siehe auch  
- [DUMPBIN\-Optionen](../../build/reference/dumpbin-options.md)
+## <a name="see-also"></a>Siehe auch  
+ [DUMPBIN-Optionen](../../build/reference/dumpbin-options.md)

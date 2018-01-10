@@ -1,7 +1,7 @@
 ---
-title: -ALIGN (Abschnittsausrichtung) | Microsoft Docs
+title: / ALIGN (Abschnittsausrichtung) | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 12/29/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-tools
@@ -18,51 +18,50 @@ helpviewer_keywords:
 - -ALIGN linker option
 - section alignment
 - sections
-ms.assetid: f2f8ac24-e90e-4bea-8205-f2960a3b1740
-caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e620719d5a69c333a45664fba5967a740224d4d5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4ca4572e84c7ad32be2d03a312f7bb7d8a3f3f29
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="align-section-alignment"></a>/ALIGN (Abschnittsausrichtung)
-```  
-/ALIGN[:number]  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Dabei gilt:  
-  
- `number`  
- Der Ausrichtungswert.  
-  
-## <a name="remarks"></a>Hinweise  
- Die/align-Option gibt die Ausrichtung eines Abschnitts innerhalb des linearen Adressraums des Programms. Die `number` Argument in Bytes und muss eine Potenz von zwei sein. Der Standardwert ist 4 KB (4096). Der Linker gibt eine Warnung aus, wenn die Ausrichtung einer ungültigen Abbild erzeugt.  
-  
- Wenn Sie eine Anwendung z. B. ein Gerätetreiber schreiben, müssen Sie nicht die Ausrichtung zu ändern.  
-  
- Es ist möglich, ändern Sie die Ausrichtung eines bestimmten Bereichs mit dem Ausrichtungsparameter, um die [/SECTION](../../build/reference/section-specify-section-attributes.md) Option.  
-  
- Der Ausrichtungswert, die Sie angeben, darf nicht kleiner als die größte abschnittsausrichtung sein.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
-  
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).  
-  
-2.  Klicken Sie auf die **Linker** Ordner.  
-  
-3.  Klicken Sie auf die Eigenschaftenseite **Befehlszeile** .  
-  
-4.  Geben Sie die Option in der **Zusatzoptionen** Feld.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
-  
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
- [Linkeroptionen](../../build/reference/linker-options.md)
+
+## <a name="syntax"></a>Syntax
+
+> **/ ALIGN**[**:**_Anzahl_]
+
+### <a name="arguments"></a>Argumente
+
+*Anzahl*  
+Der Ausrichtungswert in Bytes.
+
+## <a name="remarks"></a>Hinweise
+
+Die **/AUSRICHTEN** Option gibt die Ausrichtung eines Abschnitts innerhalb des linearen Adressraums des Programms an. Die *Anzahl* Argument in Bytes und muss eine Potenz von zwei sein. Der Standardwert ist 4 KB (4096). Der Linker gibt eine Warnung aus, wenn die Ausrichtung einer ungültigen Abbild erzeugt.
+
+Wenn Sie eine Anwendung z. B. ein Gerätetreiber schreiben, müssen Sie nicht die Ausrichtung zu ändern.
+
+Es ist möglich, ändern Sie die Ausrichtung eines bestimmten Bereichs mit dem Ausrichtungsparameter, um die [/SECTION](../../build/reference/section-specify-section-attributes.md) Option.
+
+Der Ausrichtungswert, die Sie angeben, darf nicht kleiner als die größte abschnittsausrichtung sein.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
+
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).
+
+1. Wählen Sie die **Konfigurationseigenschaften** > **Linker** > **Befehlszeile** Eigenschaftenseite.
+
+1. Geben Sie die Option in der **Zusatzoptionen** Feld. Wählen Sie **OK** oder **übernehmen** um die Änderung zu übernehmen.
+
+### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest
+
+- Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Siehe auch
+
+[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)  
+[Linkeroptionen](../../build/reference/linker-options.md)  

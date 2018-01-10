@@ -1,11 +1,10 @@
 ---
-title: Klasse CComDynamicUnkArray | Microsoft-Dokumentation
+title: CComDynamicUnkArray Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,36 +20,21 @@ f1_keywords:
 - ATLCOM/ATL::CComDynamicUnkArray::GetSize
 - ATLCOM/ATL::CComDynamicUnkArray::GetUnknown
 - ATLCOM/ATL::CComDynamicUnkArray::Remove
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - connection points [C++], managing
 - CComDynamicUnkArray class
 ms.assetid: 202470d7-9a1b-498f-b96d-659d681acd65
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 69fc2c9dbb86f88c85461e765182fd88050521e9
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5863c224ed47c70ce485bde3cd693c29afbfbc04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomdynamicunkarray-class"></a>CComDynamicUnkArray-Klasse
 Diese Klasse speichert ein Array von **IUnknown** Zeiger.  
@@ -61,13 +45,13 @@ Diese Klasse speichert ein Array von **IUnknown** Zeiger.
 class CComDynamicUnkArray
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CComDynamicUnkArray::CComDynamicUnkArray](#ccomdynamicunkarray)|Konstruktor. Die Auflistungswerte initialisiert **NULL** und die Größe der Auflistung&0; (null).|  
+|[CComDynamicUnkArray::CComDynamicUnkArray](#ccomdynamicunkarray)|Konstruktor. Die Auflistungswerte initialisiert **NULL** und die Größe der Auflistung auf 0 (null).|  
 |[CComDynamicUnkArray:: ~ CComDynamicUnkArray](#dtor)|Der Destruktor.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
@@ -76,26 +60,26 @@ class CComDynamicUnkArray
 |----------|-----------------|  
 |[CComDynamicUnkArray::Add](#add)|Rufen Sie diese Methode zum Hinzufügen einer `IUnknown` Zeiger auf das Array.|  
 |[CComDynamicUnkArray::begin](#begin)|Gibt einen Zeiger auf das erste `IUnknown` Zeiger in der Auflistung.|  
-|[CComDynamicUnkArray::clear](#clear)|Leert das Array.|  
+|[CComDynamicUnkArray::clear](#clear)|Leert das Array an.|  
 |[CComDynamicUnkArray::end](#end)|Gibt einen Zeiger auf eine Position hinter dem letzten **IUnknown** Zeiger in der Auflistung.|  
 |[CComDynamicUnkArray::GetAt](#getat)|Ruft das Element am angegebenen Index ab.|  
-|[CComDynamicUnkArray::GetCookie](#getcookie)|Rufen Sie diese Methode, um die zugeordnete Cookie Abrufen einer bestimmten **IUnknown** Zeiger.|  
+|[CComDynamicUnkArray::GetCookie](#getcookie)|Rufen Sie diese Methode zum Abrufen der zugeordneten Cookies einer bestimmten **IUnknown** Zeiger.|  
 |[CComDynamicUnkArray::GetSize](#getsize)|Gibt die Länge eines Arrays zurück.|  
-|[CComDynamicUnkArray::GetUnknown](#getunknown)|Rufen Sie diese Methode zum Abrufen der **IUnknown** Zeiger, die mit einem bestimmten Cookie verknüpft ist.|  
+|[CComDynamicUnkArray::GetUnknown](#getunknown)|Rufen Sie diese Methode zum Abrufen der **IUnknown** Zeiger mit einem bestimmten Cookie verknüpft sind.|  
 |[CComDynamicUnkArray::Remove](#remove)|Rufen Sie diese Methode zum Entfernen einer **IUnknown** Zeiger aus dem Array.|  
   
 ## <a name="remarks"></a>Hinweise  
- **CComDynamicUnkArray** enthält ein dynamisch zugeordnetes Array aus **IUnknown** Zeigern, jede zeigen Sie eine Schnittstelle für eine Verbindung. **CComDynamicUnkArray** können verwendet werden, als Parameter an die [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) Vorlagenklasse.  
+ **CComDynamicUnkArray** enthält ein dynamisch zugeordnetes Arrays von **IUnknown** Zeigern, zeigen Sie jeweils eine Schnittstelle für eine Verbindung. **CComDynamicUnkArray** können verwendet werden, als Parameter an die [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) Vorlagenklasse.  
   
- Die **CComDynamicUnkArray** Methoden [beginnen](#begin) und [End](#end) kann zum Durchlaufen aller Verbindungspunkte (z. B., wenn ein Ereignis ausgelöst wird) verwendet werden.  
+ Die **CComDynamicUnkArray** Methoden [beginnen](#begin) und [End](#end) können verwendet werden, um die Schleife durchlaufen alle Verbindungspunkte (z. B., wenn ein Ereignis ausgelöst wird).  
   
  Finden Sie unter [Hinzufügen von Verbindungspunkten zu einem Objekt](../../atl/adding-connection-points-to-an-object.md) zeigen Sie ausführliche Informationen zum Automatisieren der Erstellung der Verbindung Proxys.  
   
 > [!NOTE]
-> **Hinweis** der Klasse **CComDynamicUnkArray** werden die **Klasse hinzufügen** Assistenten beim Erstellen eines Steuerelements die Verbindungspunkte verfügt. Wenn Sie die Anzahl der Verbindungspunkte manuell angeben möchten, ändern Sie den Verweis aus **CComDynamicUnkArray** auf `CComUnkArray<` *n* `>`, wobei *n* ist die Anzahl der Verbindungspunkte erforderlich.  
+> **Hinweis** Klasse **CComDynamicUnkArray** dient der **Klasse hinzufügen** Assistenten beim Erstellen eines Steuerelements Verbindungspunkte besitzt. Wenn Sie die Anzahl von Verbindungspunkten manuell angeben möchten, ändern Sie den Verweis aus **CComDynamicUnkArray** auf `CComUnkArray<`  *n*  `>`, wobei  *n*  ist die Anzahl der Verbindungspunkte erforderlich.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** Standardschnittstellen  
+ **Header:** atlcom.h  
   
 ##  <a name="add"></a>CComDynamicUnkArray::Add  
  Rufen Sie diese Methode zum Hinzufügen einer **IUnknown** Zeiger auf das Array.  
@@ -109,10 +93,10 @@ DWORD Add(IUnknown* pUnk);
  Die **IUnknown** Zeiger auf das Array hinzufügen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt das Cookie für den neu hinzugefügten Zeiger zurück.  
+ Gibt das Cookie, das den neu hinzugefügten Zeiger zugeordnet.  
   
 ##  <a name="begin"></a>CComDynamicUnkArray::begin  
- Gibt einen Zeiger auf den Anfang der Auflistung der **IUnknown** Schnittstellenzeiger.  
+ Gibt einen Zeiger auf den Anfang der Auflistung der **IUnknown** Schnittstellenzeigern.  
   
 ```
 IUnknown**
@@ -120,15 +104,15 @@ IUnknown**
 ```     
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf eine **IUnknown** -Schnittstellenzeiger.  
+ Ein Zeiger auf ein **IUnknown** Schnittstellenzeiger auf.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Auflistung enthält Verweise auf Schnittstellen, die lokal gespeichert, als **IUnknown**. Wandeln Sie jede **IUnknown** Schnittstelle für den Typ der echten, und rufen Sie dann über ihn. Sie müssen nicht zuerst die Schnittstelle Abfragen.  
+ Die Auflistung enthält Zeiger auf die Schnittstellen, die lokal gespeichert werden, als **IUnknown**. Jede Umwandlung **IUnknown** Schnittstelle zu den tatsächlichen Schnittstellentyp, und rufen Sie anschließend über ihn. Sie müssen nicht zuerst für die Schnittstelle abzufragen.  
   
  Vor der Verwendung der **IUnknown** -Schnittstelle, sollten Sie überprüfen, dass es nicht **NULL**.  
   
 ##  <a name="clear"></a>CComDynamicUnkArray::clear  
- Leert das Array.  
+ Leert das Array an.  
   
 ```
 void clear();
@@ -142,7 +126,7 @@ CComDynamicUnkArray();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Legt die Größe der Auflistung auf&0; (null) fest und initialisiert die Werte, die **NULL**. Der Destruktor gibt die Auflistung ggf. frei.  
+ Legt die Größe der Auflistung auf 0 (null) fest und initialisiert die Werte, die **NULL**. Der Destruktor gibt die Auflistung bei Bedarf frei.  
   
 ##  <a name="dtor"></a>CComDynamicUnkArray:: ~ CComDynamicUnkArray  
  Der Destruktor.  
@@ -152,7 +136,7 @@ CComDynamicUnkArray();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Durch den Klassenkonstruktor reservierten Ressourcen frei.  
+ Gibt die vom Konstruktor Klasse reservierten Ressourcen frei.  
   
 ##  <a name="end"></a>CComDynamicUnkArray::end  
  Gibt einen Zeiger auf eine Position hinter dem letzten **IUnknown** Zeiger in der Auflistung.  
@@ -163,7 +147,7 @@ IUnknown**
 ```     
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf eine **IUnknown** -Schnittstellenzeiger.  
+ Ein Zeiger auf ein **IUnknown** Schnittstellenzeiger auf.  
   
 ##  <a name="getat"></a>CComDynamicUnkArray::GetAt  
  Ruft das Element am angegebenen Index ab.  
@@ -177,10 +161,10 @@ IUnknown* GetAt(int nIndex);
  Der Index des abzurufenden Elements.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf eine [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) Schnittstelle.  
+ Ein Zeiger auf ein [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) Schnittstelle.  
   
 ##  <a name="getcookie"></a>CComDynamicUnkArray::GetCookie  
- Rufen Sie diese Methode, um die zugeordnete Cookie Abrufen einer bestimmten **IUnknown** Zeiger.  
+ Rufen Sie diese Methode zum Abrufen der zugeordneten Cookies einer bestimmten **IUnknown** Zeiger.  
   
 ```
 DWORD WINAPI GetCookie(IUnknown** ppFind);
@@ -191,10 +175,10 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
  Die **IUnknown** Zeiger für das des zugehörigen Cookies erforderlich ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt das Cookie für die **IUnknown** Zeiger ist, oder&0; (null), wenn kein übereinstimmender **IUnknown** Zeiger gefunden wird.  
+ Gibt das Cookie zugeordnet der **IUnknown** Zeiger ist, oder 0 (null), wenn kein übereinstimmender **IUnknown** Zeiger befindet.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn mehr als eine des gleichen Instanz **IUnknown** -Zeiger ist, gibt diese Funktion das Cookie für das erste Element zurück.  
+ Wenn mehr als eine des gleichen Instanz **IUnknown** -Zeiger ist, gibt diese Funktion das Cookie auf das erste Verzeichnis zurück.  
   
 ##  <a name="getsize"></a>CComDynamicUnkArray::GetSize  
  Gibt die Länge eines Arrays zurück.  
@@ -207,7 +191,7 @@ int GetSize() const;
  Die Länge des Arrays.  
   
 ##  <a name="getunknown"></a>CComDynamicUnkArray::GetUnknown  
- Rufen Sie diese Methode zum Abrufen der **IUnknown** Zeiger, die mit einem bestimmten Cookie verknüpft ist.  
+ Rufen Sie diese Methode zum Abrufen der **IUnknown** Zeiger mit einem bestimmten Cookie verknüpft sind.  
   
 ```
 IUnknown* WINAPI GetUnknown(DWORD dwCookie);
@@ -218,7 +202,7 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
  Das Cookie für die zugeordneten **IUnknown** Zeiger erforderlich ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt die **IUnknown** Zeiger oder NULL, wenn keine übereinstimmende Cookie gefunden wird.  
+ Gibt die **IUnknown** Zeiger oder NULL, wenn keine übereinstimmenden Cookie gefunden wird.  
   
 ##  <a name="remove"></a>CComDynamicUnkArray::Remove  
  Rufen Sie diese Methode zum Entfernen einer **IUnknown** Zeiger aus dem Array.  
@@ -232,9 +216,8 @@ BOOL Remove(DWORD dwCookie);
  Das Cookie verweisen auf die **IUnknown** Zeiger aus dem Array entfernt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt TRUE zurück, wenn der Mauszeiger entfernt wird. andernfalls FALSE.  
+ Gibt TRUE zurück, wenn der Zeiger entfernt wird. andernfalls "false".  
   
 ## <a name="see-also"></a>Siehe auch  
  [CComUnkArray-Klasse](../../atl/reference/ccomunkarray-class.md)   
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)
-
+ [Klassenübersicht](../../atl/atl-class-overview.md)

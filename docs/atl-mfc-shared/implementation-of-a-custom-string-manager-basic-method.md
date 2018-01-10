@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e31d9f86b9ff6d2de8ef0bfa9fb039324c1556db
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b80af4fc8b463b6987f586c426bd465520f75ba6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementation-of-a-custom-string-manager-basic-method"></a>Implementierung eines benutzerdefinierten Zeichenfolge-Managers (grundlegende Methode)
 Die einfachste Möglichkeit, die Speicherbelegungsschema anpassen für Zeichenfolgendaten ist die Verwendung der ATL bereitgestellten **CAtlStringMgr** Klasse, aber geben Sie Ihren eigenen Arbeitsspeicher Reservierungsroutinen. Der Konstruktor für **CAtlStringMgr** einen einzelnen Parameter akzeptiert: einen Zeiger auf ein `IAtlMemMgr` Objekt. `IAtlMemMgr`ist eine abstrakte Basisklasse, die eine generische Schnittstelle zu einem Heap bereitstellt. Mithilfe der `IAtlMemMgr` -Schnittstelle, die **CAtlStringMgr** zuordnet, zuordnet, und gibt den Arbeitsspeicher frei zum Speichern von Zeichenfolgendaten verwendet. Sie können entweder implementieren die `IAtlMemMgr` -Schnittstelle selbst, oder verwenden Sie eines der fünf ATL bereitgestellten Speicher-Manager-Klassen. Die bereitgestellte ATL-Speicher-Manager umschließen einfach vorhandene Arbeitsspeicher Allocation-Funktionen:  

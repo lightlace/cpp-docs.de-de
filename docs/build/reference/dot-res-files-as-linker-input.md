@@ -1,32 +1,33 @@
 ---
-title: ".RES-Dateien als Linkereingabe"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".res-Dateien als Linkereingabe"
-  - "Verknüpfen [C++], Ressourcendateien"
-  - "RES-Dateien als Linkereingabe"
-  - "Ressourcendateien, Verknüpfen"
+title: . RES-Dateien als Linkereingabe | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- RES files as linker input
+- .res files as linker input
+- linking [C++], resource files
+- resource files, linking
 ms.assetid: 9c37ab00-97df-4d9a-91cd-6bf132970683
-caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3ac4dedc419c28b4e68d7dcc1772f176738580b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# .RES-Dateien als Linkereingabe
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Sie können beim Verknüpfen eines Programms eine RES\-Datei angeben.  Eine Datei dieses Typs wird vom Ressourcencompiler \(RC\) erstellt.  **LINK** konvertiert RES\-Dateien automatisch in das COFF\-Format.  **CVTRES.exe** muss im selben Verzeichnis wie **LINK.exe** oder in einem in der PATH\-Umgebungsvariablen angegebenen Verzeichnis vorliegen.  
+# <a name="res-files-as-linker-input"></a>.RES-Dateien als Linkereingabe
+Sie können eine RES-Datei angeben, wenn ein Programm verknüpfen. RES-Datei wird vom Ressourcencompiler (RC) erstellt. LINK konvertiert RES-Dateien automatisch in COFF-Format. Das CVTRES.exe-Tool muss im gleichen Verzeichnis wie LINK.exe oder in einem Verzeichnis, in der PATH-Umgebungsvariable angegeben werden.  
   
-## Siehe auch  
- [LINK\-Eingabedateien](../../build/reference/link-input-files.md)   
+## <a name="see-also"></a>Siehe auch  
+ [LINK-Eingabedateien](../../build/reference/link-input-files.md)   
  [Linkeroptionen](../../build/reference/linker-options.md)

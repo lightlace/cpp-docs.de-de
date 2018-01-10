@@ -1,51 +1,55 @@
 ---
-title: "Editing Properties for an ActiveX Control | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controls [C++], editing properties"
-  - "ActiveX controls [C++], properties"
+title: "Bearbeiten von Eigenschaften für ein ActiveX-Steuerelement | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- controls [C++], editing properties
+- ActiveX controls [C++], properties
 ms.assetid: e5880c62-36c7-4701-bc99-97a82974c22a
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: dbdf7cd626cca0d333b3979fa30cd8770c940701
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Editing Properties for an ActiveX Control
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-ActiveX\-Steuerelemente von unabhängigen Anbietern verfügen u. U. über eigene Eigenschaften und Merkmale.  Eigenschaften von ActiveX\-Steuerelementen werden im Eigenschaftenfenster angezeigt.  Darüber hinaus werden im Dialogfeld **Eigenschaftenseiten** sämtliche vom Programmierer des jeweiligen ActiveX\-Steuerelements erstellten Eigenschaftenseiten angezeigt \(um die Eigenschaftenseite eines bestimmten ActiveX\-Steuerelements aufzurufen, klicken Sie im [Eigenschaftenfenster](../Topic/Properties%20Window.md) auf die Schaltfläche **Eigenschaftenseiten**\).  
+# <a name="editing-properties-for-an-activex-control"></a>Bearbeiten von Eigenschaften für ein ActiveX-Steuerelement
+ActiveX-Steuerelemente von unabhängigen Anbietern stammen möglicherweise über eigene Eigenschaften und Merkmale ausgestattet. Eigenschaften für ActiveX-Steuerelemente werden im Eigenschaftenfenster angezeigt. Darüber hinaus werden alle Eigenschaftenseiten erstellt, indem die Autoren des ActiveX-Steuerelement angezeigt, der **Eigenschaftenseiten** (Dialogfeld) (um die Eigenschaftenseite für ein bestimmtes ActiveX-Steuerelement anzuzeigen, klicken Sie auf die Schaltfläche in der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window)).  
   
- Abhängig von den Eigenschaftenseiten, die mit dem ActiveX\-Steuerelement mitgeliefert werden, werden auf der Eigenschaftenseite eines ActiveX\-Steuerelements verschiedene Registerkarten angezeigt.  
+ Auf der Eigenschaftenseite für ein ActiveX-Steuerelement, abhängig von der Eigenschaftenblätter, die im Rahmen des ActiveX-Steuerelements stammen, werden verschiedene Registerkarten angezeigt.  
   
 > [!NOTE]
->  Die folgenden Schritte veranschaulichen das Bearbeiten von ActiveX\-Steuerelementen mithilfe der Eigenschaftenseite.  Sie können auch im neuen Eigenschaftenfenster nach ActiveX\-Eigenschaften suchen und diese bearbeiten.  
+>  Das folgende Verfahren gilt für die Verwendung der Eigenschaftenseite zum Bearbeiten von ActiveX-Steuerelemente. Sie können auch durchsuchen und Bearbeiten von ActiveX-Eigenschaften im Fenster Eigenschaften neue.  
   
-### So bearbeiten Sie die Eigenschaften eines ActiveX\-Steuerelements  
+### <a name="to-edit-properties-for-an-activex-control"></a>So bearbeiten Sie Eigenschaften für ein ActiveX-Steuerelement  
   
-1.  Wählen Sie das **ActiveX**\-Steuerelement aus.  
+1.  Wählen Sie die **ActiveX** Steuerelement.  
   
-2.  Klicken Sie im Menü **Ansicht** auf **Eigenschaftenseite**, und überprüfen Sie die Eigenschaften.  
+2.  Auf der **Ansicht** Menü klicken Sie auf **Eigenschaftenseite** und ihre Eigenschaften anzuzeigen.  
   
-3.  Nehmen Sie die gewünschten Änderungen auf der Eigenschaftenseite vor.  
+3.  Nehmen Sie Änderungen an, nach Bedarf auf der Eigenschaftenseite.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
   
  Anforderungen  
   
  Win32  
   
-## Siehe auch  
- [Viewing and Adding ActiveX Controls to a Dialog Box](../mfc/viewing-and-adding-activex-controls-to-a-dialog-box.md)   
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
- [MFC\-ActiveX\-Steuerelemente](../mfc/mfc-activex-controls.md)   
- [ActiveX\-Steuerelementcontainer](../mfc/activex-control-containers.md)
+## <a name="see-also"></a>Siehe auch  
+ [Anzeigen und Hinzufügen von ActiveX-Steuerelemente in einem Dialogfeld](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md)   
+ [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)   
+ [MFC-ActiveX-Steuerelemente](../mfc/mfc-activex-controls.md)   
+ [ActiveX-Steuerelementcontainer](../mfc/activex-control-containers.md)
+

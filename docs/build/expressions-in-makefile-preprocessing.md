@@ -1,37 +1,38 @@
 ---
-title: "Ausdr&#252;cke f&#252;r den Pr&#228;prozessorlauf eines Makefiles | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Ausdrücke [C++], Makefile-Vorverarbeitung"
-  - "Makefiles, Vorverarbeiten"
-  - "Vorverarbeiten von Makefiles"
+title: "Ausdrücke in Präprozessorlauf eines Makefiles | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- preprocessing makefiles
+- expressions [C++], makefile preprocessing
+- makefiles, preprocessing
 ms.assetid: 37f0f413-97e0-452c-a83f-3c9002c44c92
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7bea4f0c4fea2c2d04681674734bc989424c7951
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Ausdr&#252;cke f&#252;r den Pr&#228;prozessorlauf eines Makefiles
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-`constantexpression` besteht bei \!IF\-Direktiven und \!ELSE IF\-Direktiven aus Ganzzahlkonstanten \(in dezimaler Notation oder in der Notation der Programmiersprache C\), Zeichenfolgenkonstanten oder Befehlen.  Ausdrücke können mit Klammern gruppiert werden.  Von Ausdrücken werden 32\-Bit\-Ganzzahlen mit Vorzeichen entsprechend der C\-Konvention verwendet. Die Zahlen werden in der 32\-Bit\-Zweierkomplementdarstellung im Bereich von –2147483648 bis 2147483647 ausgedrückt.  
+# <a name="expressions-in-makefile-preprocessing"></a>Ausdrücke für den Präprozessorlauf eines Makefiles
+Die **! IF** oder **! ElseIf** `constantexpression` Ganzzahlkonstanten (in Dezimal oder C-Schreibweise), Zeichenfolgenkonstanten oder Befehle besteht. Verwenden Sie Klammern, um Ausdrücke zu. Ausdrücke verwenden C-Stil Ganzzahlen mit Vorzeichen arithmetische; Zahlen werden in 32-Bit zweierkomplementdarstellung im Bereich von – 2147483648 bis 2147483647.  
   
- Operatoren, die für Konstantenwerte, Exitcodes von Befehlen, Zeichenfolgen, Makros sowie Pfade des Dateisystems angewendet werden, können in Ausdrücke eingesetzt werden.  
+ Ausdrücke können Operatoren, die fungieren auf Konstante Werte, Exitcodes von Befehlen, Zeichenfolgen, Makros und Dateisystempfade zu können.  
   
-## Worüber möchten Sie mehr erfahren?  
- [Operatoren für den Präprozessorlauf eines Makefiles](../build/makefile-preprocessing-operators.md)  
+## <a name="what-do-you-want-to-know-more-about"></a>Worüber möchten Sie mehr erfahren?  
+ [Makefile-vorverarbeitungsoperatoren](../build/makefile-preprocessing-operators.md)  
   
  [Ausführen eines Programms im Präprozessorlauf](../build/executing-a-program-in-preprocessing.md)  
   
-## Siehe auch  
- [Präprozessorlauf eines Makefiles](../build/makefile-preprocessing.md)
+## <a name="see-also"></a>Siehe auch  
+ [Vorverarbeitung eines Makefiles](../build/makefile-preprocessing.md)

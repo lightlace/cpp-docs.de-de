@@ -32,11 +32,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 32192a01032a710d5b64f90b6680b99393d3caa9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4ba4dc873fbb0e77f3b2f939c9d62533849dab76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtmemdifference"></a>_CrtMemDifference
 Vergleicht zwei Speicherzustände und gibt die vorhandenen Unterschiede zurück (nur Debugversion).  
@@ -73,11 +74,11 @@ int _CrtMemDifference(
   
  Standardmäßig sind interne C-Laufzeitblöcke (`_CRT_BLOCK`) nicht in den Speicherzustandsvorgängen enthalten. Die [_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md) -Funktion kann das `_CRTDBG_CHECK_CRT_DF` -Bit von `_crtDbgFlag` aktiviert werden, um diese Blöcke in die Erkennung von Speicherverlusten und andere Speicherzustandsvorgänge einzuschließen. Freigegebene Speicherblöcke (`_FREE_BLOCK`) führen nicht dazu, dass `_CrtMemDifference` TRUE zurückgibt.  
   
- Weitere Informationen über Heapzustandsfunktionen und die `_CrtMemState` -Struktur finden Sie unter [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details)aufgerufen wird. Informationen darüber, wie Speicherblöcke in der Debugversion des Basisheaps zugeordnet, initialisiert und verwaltet werden, finden Sie unter [Details zum CRT-Debugheap](/visualstudio/debugger/crt-debug-heap-details).  
+ Weitere Informationen über Heapzustandsfunktionen und die `_CrtMemState` -Struktur finden Sie unter [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details)aufgerufen wird. Informationen darüber, wie Speicherblöcke in der Debugversion des Basisheaps zugeordnet, initialisiert und verwaltet werden, finden Sie unter [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).  
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|Optionaler Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionaler Header|  
 |-------------|---------------------|---------------------|  
 |`_CrtMemDifference`|\<crtdbg.h>|\<errno.h>|  
   

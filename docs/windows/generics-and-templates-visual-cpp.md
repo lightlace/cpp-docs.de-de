@@ -1,65 +1,68 @@
 ---
-title: "Generics and Templates (Visual C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generics [C++], vs. templates"
-  - "templates, C++"
+title: Generika und Vorlagen (Visual C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- generics [C++], vs. templates
+- templates, C++
 ms.assetid: 63adec79-b1dc-4a1a-a21d-b8a72a8fce31
-caps.latest.revision: 19
-caps.handback.revision: "19"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "19"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 307cc39e64a6fd91f3f5f96da634e47d3e9a9030
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Generics and Templates (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Generika und Vorlagen sind beide Sprachfunktionen, die Unterstützung für parametrisierte Typen unterstützen.  Allerdings sind sie voneinander unterschiedlich Verwendung.  Dieses Thema enthält eine Übersicht über die zahlreichen Unterschiede.  
+# <a name="generics-and-templates-visual-c"></a>Generika und Vorlagen (Visual C++)
+Generika und Vorlagen sind beide Sprachfunktionen, die parametrisierte Typen unterstützen. Allerdings unterscheiden sich und andere verwendet haben. Dieses Thema enthält eine Übersicht über die viele Unterschiede.  
   
- Weitere Informationen finden Sie unter [Windows Runtime and Managed Templates](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md) und [Übersicht über Vorlagen](../Topic/Templates%20Overview.md).  
+ Weitere Informationen finden Sie unter [Windows-Runtime und verwaltete Vorlagen](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md).  
   
-## Vergleichen von Vorlagen und von Generika  
- Wesentliche Unterschiede zwischen Generika und C\+\+\-Vorlagen:  
+## <a name="comparing-templates-and-generics"></a>Vergleichen von Vorlagen und Generika  
+ Wichtige Unterschiede zwischen Generika und C++-Vorlagen:  
   
--   Generika sind generisch, bis die für Typen zur Laufzeit ersetzt sind.  Vorlagen werden zur Kompilierzeit spezialisiert, daher sind sie noch nicht parametrisierte Typen zur Laufzeit  
+-   Generika sind generisch, bis die Typen, die für sie zur Laufzeit ersetzt werden. Vorlagen werden zum Zeitpunkt der Kompilierung spezialisiert, sodass sie nicht immer noch parametrisierte Typen zur Laufzeit werden  
   
--   Die Common Language Runtime unterstützt speziell Generika in MSIL.  Da die Laufzeit bei Generika auskennt, können bestimmte Typen für generische Typen ersetzt werden, wenn eine Assembly verweist, die ein generischer Typ enthält.  Vorlagen lösen demgegenüber sich in normaler Typ zur Kompilierzeit auf und die resultierenden Typen nicht in anderen Assemblys spezialisiert werden.  
+-   Die common Language Runtime unterstützt speziell Generika in MSIL. Daran, dass die Common Language Runtime Informationen über Generika bekannt, können bestimmte Typen für generische Typen ersetzt werden, wenn Sie eine Assembly mit einem generischen Typ verweisen. Vorlagen, die im Gegensatz dazu in normale Typen zur Kompilierzeit aufgelöst werden und die resultierenden Typen können nicht in anderen Assemblys spezialisiert sein.  
   
--   Das Generika, das in zwei unterschiedlichen Assemblys mit gleichem Typargumenten spezialisiert ist, ist der gleiche Typ.  Die Vorlagen, die in zwei verschiedenen Assemblys mit gleichem Typargumenten spezialisiert werden, werden von der Laufzeit als unterschiedliche Typen betrachtet.  
+-   Generika spezialisiert in zwei verschiedenen Assemblys mit dem gleichen Typ sind Argumente vom gleichen Typ. Vorlagen spezialisiert in zwei verschiedenen Assemblys mit dem gleichen Typ, der von der Laufzeit als Argumente betrachtet werden, um unterschiedliche Typen aufweisen.  
   
--   Generika als einzelner wird von ausführbarem Code generiert, der für alle Verweistypargumente verwendet wird \(dies gilt für Werttypen nicht, die eine eindeutige Implementierung pro Werttyp haben\).  Der JIT\-Compiler kennt in Generika aus und ist, den Code für den Verweis oder die Werttypen optimieren, das als Typargumente verwendet werden.  Generierung Vorlagen separaten Laufzeitcode für eine Spezialisierung.  
+-   Generika werden als ein einzelnes Stück von ausführbarem Code generiert, die für alle Verweis Typargumente verwendet wird (Dies gilt nicht für Werttypen, die eine eindeutige Implementierung pro Werttyp haben). Der JIT-Compiler Generika kennt und den Code für die Verweis- oder Werttyp Typen zu optimieren, die als Typargumente verwendet werden kann. Vorlagen werden separate Laufzeit-Code für jede Spezialisierung generieren.  
   
--   Generika können nicht den Nichttyp\-Vorlagenparameter, wie `template <int i> C {}`.  Vorlagen ermöglichen es.  
+-   Generika lassen keine Nichttyp-Vorlagenparameter, z. B. `template <int i> C {}`. Vorlagen lassen.  
   
--   Generika lässt keine explizite Spezialisierung \(das heißt, eine benutzerdefinierte Implementierung von einer Vorlage für einen bestimmten Typ\).  Vorlagen ausführen.  
+-   Generika sind explizite Spezialisierung (d. h. eine benutzerdefinierte Implementierung einer Vorlage für einen bestimmten Typ) nicht zulässig. Führen Sie die Vorlagen.  
   
--   Generika können nicht teilweise Spezialisierung \(eine benutzerdefinierte Implementierung für eine Teilmenge der Typargumente\).  Vorlagen ausführen.  
+-   Generika sind teilweise Spezialisierung (eine benutzerdefinierte Implementierung für eine Teilmenge der Typargumente) nicht zulässig. Führen Sie die Vorlagen.  
   
--   Generika können nicht den als Basisklasse für den generischen Typ verwendet werden, Typparameter.  Vorlagen ausführen.  
+-   Den Typparameter für den generischen Typ als Basisklasse verwendet werden zulassen Generika nicht. Führen Sie die Vorlagen.  
   
--   Vorlagenstützvorlagevorlagenparameter \(z.  `template<template<class T> class X> class MyClass`\), aber Generika jedoch nicht.  
+-   Vorlagen unterstützen Vorlage Parameter (z. B. `template<template<class T> class X> class MyClass`), aber Generika nicht der Fall.  
   
-## Kombination von Vorlagen und von Generika  
+## <a name="combining-templates-and-generics"></a>Kombinieren von Vorlagen und Generika  
   
--   Der wesentliche Unterschied von Generika sich auf das Erstellen von Anwendungen, Vorlagen und Generika kombinieren.  Angenommen, Sie haben eine Vorlagenklasse, dass Sie ein generischer Wrapper für erstellen möchten, um diese Vorlage anderen Sprachen als generisches verfügbar zu machen.  Sie können das generische einen Typparameter nicht verwenden können, der anschließend an obwohl der Vorlage, da die Vorlage den Typparameter verfügen muss zur Kompilierzeit, aber das generische lösen keine den Typparameter bis zur Laufzeit auf.  Das Schachteln einer Vorlage innerhalb eines generischen funktioniert auch nicht, da es keine Möglichkeit gibt, die Vorlagen für beliebige generische Typen zur Kompilierungszeit zu erweitern, die zur Laufzeit instanziiert werden können.  
+-   Der grundlegende Unterschied in Generika wirkt sich zum Erstellen von Anwendungen, die Vorlagen und Generika kombinieren. Angenommen Sie, Sie verfügen über eine Vorlagenklasse, der Sie erstellen einen generischen Wrapper für die Vorlage für andere Sprachen als generische verfügbar machen möchten. Keine generischen akzeptieren einen Typparameter, den dann an die Vorlage übergeben werden soll, da die Vorlage zum Zeitpunkt der Kompilierung den Typparameter verfügen muss, aber die generische wird nicht den Typparameter bis zur Laufzeit aufgelöst werden. Schachteln von einer Vorlage in eine generische funktioniert entweder nicht, da es gibt keine Möglichkeit, um die Vorlagen zum Zeitpunkt der Kompilierung für beliebige generische Typen zu erweitern, die zur Laufzeit instanziiert werden kann.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### **Beschreibung**  
- Das folgende Beispiel zeigt ein einfaches Beispiel für Anwendungsvorlagen und \-Generika gemeinsam an.  In diesem Beispiel führt die Vorlagenklasse den Parameter durch den generischen Typ.  Umgekehrt ist nicht möglich.  
+### <a name="description"></a>Beschreibung  
+ Das folgende Beispiel zeigt ein einfaches Beispiel für die gemeinsame Verwendung von Vorlagen und Generika. In diesem Beispiel übergibt die Vorlagenklasse Parameter durch für dem generischen Typ an. Umgekehrt ist nicht möglich.  
   
- Diese Ausdrucksweise wurde kann verwendet werden, wenn Sie an einer vorhandenen generischen API mit Vorlagencode erstellen möchten, der in eine Visual C\+\+\-Assembly lokal ist, oder, wenn Sie eine zusätzliche Ebene Parametrisierung einem generischen Typ hinzufügen müssen, bestimmte Funktionen von Vorlagen nutzen unterstützt nicht von Generika.  
+ Diese Technik kann verwendet werden, wenn Sie auf eine vorhandene generische API mit den Vorlagencode zu erstellen, die lokal auf einer Visual C++-Assembly ist, oder wenn Sie eine zusätzliche Ebene für die Parametrisierung für einen generischen Typ, um bestimmte Funktionen der Vorlagen nicht Supporte nutzen hinzufügen müssen d von Generika.  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // templates_and_generics.cpp  
@@ -94,11 +97,11 @@ int main() {
 }  
 ```  
   
-### Ausgabe  
+### <a name="output"></a>Ausgabe  
   
 ```  
 F  
 ```  
   
-## Siehe auch  
- [Generics](../windows/generics-cpp-component-extensions.md)
+## <a name="see-also"></a>Siehe auch  
+ [Generika](../windows/generics-cpp-component-extensions.md)

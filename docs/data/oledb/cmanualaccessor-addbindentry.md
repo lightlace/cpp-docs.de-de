@@ -1,36 +1,38 @@
 ---
-title: "CManualAccessor::AddBindEntry | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CManualAccessor::AddBindEntry"
-  - "ATL.CManualAccessor.AddBindEntry"
-  - "CManualAccessor::AddBindEntry"
-  - "AddBindEntry"
-  - "CManualAccessor.AddBindEntry"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AddBindEntry-Methode"
+title: 'CManualAccessor:: AddBindEntry | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CManualAccessor::AddBindEntry
+- ATL.CManualAccessor.AddBindEntry
+- CManualAccessor::AddBindEntry
+- AddBindEntry
+- CManualAccessor.AddBindEntry
+dev_langs: C++
+helpviewer_keywords: AddBindEntry method
 ms.assetid: 8556dda9-dda1-4f67-96bc-6031e6c6a271
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 14a2fbae8ee29728d145b3ff8d20a02b4000b5a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CManualAccessor::AddBindEntry
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Fügt einem Bindungseintrag den Ausgabespalten hinzu.  
+# <a name="cmanualaccessoraddbindentry"></a>CManualAccessor::AddBindEntry
+Fügt einen Eintrag für die Bindung den Ausgabespalten.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -44,33 +46,33 @@ Fügt einem Bindungseintrag den Ausgabespalten hinzu.
 ) throw ( );  
 ```  
   
-#### Parameter  
- Siehe [DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) in der *OLE* DB\-Programmierreferenz.  
+#### <a name="parameters"></a>Parameter  
+ Finden Sie unter [DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) in der *OLE DB Programmer's Reference*.  
   
  `nOrdinal`  
- \[in\] Spaltennummer.  
+ [in] Nummer der Spalte.  
   
  `wType`  
- \[in\] Datentyp.  
+ [in] -Datentyp.  
   
  `nColumnSize`  
- \[in\] Spaltengröße in Bytes.  
+ [in] Die Größe der Spalte in Bytes.  
   
  `pData`  
- \[in\] Ein Zeiger auf die Daten anderer Spalten gespeichert im Puffer.  
+ [in] Ein Zeiger auf die Daten der Spalte im Puffer gespeichert.  
   
  `pLength`  
- \[in\] Ein Zeiger auf die Feldlänge, nach Bedarf.  
+ [in] Ein Zeiger auf die Feldlänge, falls erforderlich.  
   
  `pStatus`  
- \[in\] Ein Zeiger auf den Spaltenstatus gebunden werden Variablen, nach Bedarf.  
+ [in] Ein Zeiger auf die Variable an den Status der Spalte gebunden werden, falls erforderlich.  
   
-## Hinweise  
- Um diese Funktion verwenden, müssen Sie zuerst [CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md).  Sie können mehr als Einträge die Anzahl nicht hinzufügen angegeben in `CreateAccessor`.  
+## <a name="remarks"></a>Hinweise  
+ Um diese Funktion verwenden zu können, müssen Sie zuerst Aufrufen [CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md). Fügen Sie können nicht mehrere Einträge als die Anzahl der Spalten im angegebenen `CreateAccessor`.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  
   
-## Siehe auch  
- [CManualAccessor\-Klasse](../../data/oledb/cmanualaccessor-class.md)   
- [DBViewer\-Beispiel](../../top/visual-cpp-samples.md)
+## <a name="see-also"></a>Siehe auch  
+ [CManualAccessor-Klasse](../../data/oledb/cmanualaccessor-class.md)   
+ [DBViewer-Beispiel](../../visual-cpp-samples.md)

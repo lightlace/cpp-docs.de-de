@@ -33,11 +33,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 834441e90cb6656f308673e8475b1cc2e38fd3a4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 333473d0b0b7e50e2b0faebef02835dcaf577440
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="qsorts"></a>qsort_s
 Führt eine schnelle Sortierung aus. Dies ist eine Version von [qsort](../../c-runtime-library/reference/qsort.md) mit Sicherheitserweiterungen wie in den [Sicherheitsfunktionen in CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
@@ -93,16 +94,16 @@ compare( context, (void *) & elem1, (void *) & elem2 );
   
 |Key|Basis|compare|num|Breite|errno|  
 |---------|----------|-------------|---------|-----------|-----------|  
-|`NULL`|alle|alle|alle|alle|`EINVAL`|  
-|alle|`NULL`|alle|!= 0|alle|`EINVAL`|  
-|alle|alle|alle|any|<= 0|`EINVAL`|  
-|alle|alle|`NULL`|alle|alle|`EINVAL`|  
+|`NULL`|any|any|any|any|`EINVAL`|  
+|any|`NULL`|any|!= 0|any|`EINVAL`|  
+|any|any|any|any|<= 0|`EINVAL`|  
+|any|any|`NULL`|any|any|`EINVAL`|  
   
  `qsort_s` verhält sich identisch wie `qsort`, verfügt jedoch über die `context`-Parameter und legt `errno` fest. Durch Übergeben eines `context`-Parameters können Vergleichsfunktionen einen Objektzeiger verwenden, um auf Objektfunktionalitäten oder andere Informationen zuzugreifen, die nicht über einen Elementzeiger verfügbar sind. Das Hinzufügen der `context` -Parameters macht `qsort_s` sicherer, weil `context` können verwendet werden, um mithilfe von statischen Variablen um Informationen zu gemeinsamen verfügbar zu machen, eingeführt Reentranz-Fehler zu vermeiden der `compare` Funktion.  
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`qsort_s`|\<stdlib.h> und \<search.h>|  
   

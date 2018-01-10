@@ -1,26 +1,27 @@
 ---
-title: "ML Nonfatal Errors A2000-A2049 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: ML schwerwiegende Fehler A2000-A2049 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 1ab0e263-7138-4fa5-9702-91237e1d6df2
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e4488be3c335ae4239f0dc531239e9dd46079917
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# ML Nonfatal Errors A2000-A2049
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Weitere Informationen zu nichtfatale Fehler MLs finden Sie unter [ML\-Fehler\-Meldungen](../../assembler/masm/ml-error-messages.md).  
+# <a name="ml-nonfatal-errors-a2000-a2049"></a>Nicht schwerwiegende ML-Fehler A2000-A2049
+Weitere Informationen zu schwerwiegende ML-Fehler, finden Sie unter [ML-Fehlermeldungen](../../assembler/masm/ml-error-messages.md).  
   
-## Siehe auch  
- [ML Nonfatal Errors](../../assembler/masm/ml-nonfatal-errors.md)
+## <a name="see-also"></a>Siehe auch  
+ [Nicht schwerwiegende ML-Fehler](../../assembler/masm/ml-nonfatal-errors.md)

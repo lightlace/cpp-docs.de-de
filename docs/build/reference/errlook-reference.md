@@ -1,45 +1,46 @@
 ---
-title: "ERRLOOK-Referenz | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ErrLook-Tool"
-  - "Fehlersuchtool"
+title: ERRLOOK-Referenz | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ErrLook tool
+- Error lookup tool
 ms.assetid: 6040ffc1-2355-4a45-8998-84cbcba4ca91
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b35e0fa4c11c0cf2b42990f8265281acaa70ed18
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# ERRLOOK-Referenz
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Mit dem ERRLOOK\-Hilfsprogramm, das im Menü "Extras" zur **Fehlersuche** enthalten ist, kann eine System\- oder Modulfehlermeldung auf der Grundlage des eingegebenen Werts abgerufen werden.  ERRLOOK ruft den Fehlermeldungstext automatisch ab, wenn Sie einen hexadezimalen oder dezimalen Wert mittels Drag & Drop aus dem Visual Studio\-Debugger in das Bearbeitungssteuerelement **Wert** einfügen.  Werte können auch aufgenommen werden, indem Sie sie manuell in das Bearbeitungssteuerelement **Wert** eingeben oder sie aus der Zwischenablage einfügen und auf **Suchen** klicken.  
+# <a name="errlook-reference"></a>ERRLOOK-Referenz
+ERRLOOK-Dienstprogramm im Menü "Extras" als **Fehlersuche**, ruft eine System- oder Modulfehlermeldung auf des Werts eingegeben haben Grundlage. ERRLOOK Ruft den Fehlermeldungstext automatisch ab, wenn Sie Drag & einen hexadezimalen oder dezimalen Wert aus dem Visual Studio-Debugger in Drop der **Wert** edit-Steuerelement. Sie können auch einen Wert eingeben entweder durch Eingabe in die **Wert** edit-Steuerelement oder durch Einfügen aus der Zwischenablage und auf **Nachschlagen**.  
   
- Die Zugriffstasten für Kopieren \(STRG\+C\), Ausschneiden \(STRG\+X\) und Einfügen \(STRG\+V\) unterstützen sowohl das Bearbeitungssteuerelement **Wert** als auch das Bearbeitungssteuerelement **Fehlermeldung**. In beiden Fällen muss Text zuerst markiert werden.  
+ Die Zugriffstasten für kopieren (STRG + C), Ausschneiden (STRG + X) und einfügen (STRG + V) unterstützen sowohl die **Wert** und **Fehlermeldung** Steuerelemente bearbeiten, wenn Sie Text zuerst markiert.  
   
-## In diesem Abschnitt  
- [Bearbeitungssteuerelement für Werte](../../build/reference/value-edit-control.md)  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [Edit-Steuerelement für Werte](../../build/reference/value-edit-control.md)  
  Beschreibt das in ERRLOOK enthaltene Bearbeitungssteuerelement für Werte.  
   
- [Bearbeitungssteuerelement für Fehlermeldungen](../../build/reference/error-message-edit-control.md)  
+ [Edit-Steuerelement für Fehlermeldungen](../../build/reference/error-message-edit-control.md)  
  Beschreibt das in ERRLOOK enthaltene Bearbeitungssteuerelement für Fehlermeldungen.  
   
- [Schaltfläche "Module"](../../build/reference/modules-button.md)  
+ [Schaltfläche „Module“](../../build/reference/modules-button.md)  
  Beschreibt die in ERRLOOK enthaltene Schaltfläche "Module".  
   
- [Schaltfläche "Suchen"](../../build/reference/look-up-button.md)  
+ [Schaltfläche „Suchen“](../../build/reference/look-up-button.md)  
  Beschreibt die in ERRLOOK enthaltene Schaltfläche "Suchen".  
   
-## Verwandte Abschnitte  
- [C\/C\+\+\-Buildtools](../../build/reference/c-cpp-build-tools.md)  
- Enthält Links zu Themen über die mit Visual C\+\+ gelieferten C\/C\+\+\-Buildtools.
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ [C/C++-Buildtools](../../build/reference/c-cpp-build-tools.md)  
+ Enthält Links zu Themen über die mit Visual C++ gelieferten C/C++-Buildtools.

@@ -1,34 +1,36 @@
 ---
-title: "CUtlProps::GetPropValue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CUtlProps::GetPropValue"
-  - "CUtlProps.GetPropValue"
-  - "GetPropValue"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetPropValue-Methode"
+title: 'CUtlProps:: GetPropValue | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CUtlProps::GetPropValue
+- CUtlProps.GetPropValue
+- GetPropValue
+dev_langs: C++
+helpviewer_keywords: GetPropValue method
 ms.assetid: 9a3fbadb-7814-48f7-96a4-b960fc4ecf2e
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f6af9c8d909039927a7b4ad1f4840adac4353c97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CUtlProps::GetPropValue
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ruft eine Eigenschaft aus einem Eigenschaft ab.  
+# <a name="cutlpropsgetpropvalue"></a>CUtlProps::GetPropValue
+Ruft eine Eigenschaft aus einer Eigenschaft ab.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -39,21 +41,21 @@ Ruft eine Eigenschaft aus einem Eigenschaft ab.
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `pguidPropSet`  
- \[in\] die GUID für das PropSet.  
+ [in] Die GUID für den Eigenschaftensatz.  
   
  `dwPropId`  
- \[in\] der Eigenschaftenindex.  
+ [in] Der Property-Index.  
   
  `pvValue`  
- \[out\] Ein Zeiger auf eine Variante, die den neuen Eigenschaftswert enthält.  
+ [out] Ein Zeiger auf einen Variant-Wert, der den neue Eigenschaftswert enthält.  
   
-## Rückgabewert  
- `Failure` auf Fehler und `S_OK`, wenn der Vorgang erfolgreich ist.  
+## <a name="return-value"></a>Rückgabewert  
+ `Failure`Bei einem Fehler und `S_OK` bei Erfolg.  
   
-## Anforderungen  
- **Header:** atldb.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** „atldb.h“  
   
-## Siehe auch  
- [CUtlProps\-Klasse](../../data/oledb/cutlprops-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [CUtlProps-Klasse](../../data/oledb/cutlprops-class.md)

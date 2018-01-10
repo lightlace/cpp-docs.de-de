@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5db9ede8dc87fcb6b32eb825efed3e028872b6ff
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 053e670b5a6d932c50e2f967ee38cf9191710ff4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-cimagelist"></a>Verwenden von CImageList
 Eine Bildliste dargestellte Klasse [CImageList](../mfc/reference/cimagelist-class.md), ist eine Sammlung von Bildern mit derselben Größe, von denen jede nach ihrem Index bezeichnet werden kann. Bilderliste für das werden verwendet, um große Mengen von Symbolen oder Bitmaps effizient zu verwalten. Bildlisten sind selbst nicht, da es keine Windows; sind, Steuerelemente Sie werden allerdings verwendet verschiedene Typen von Steuerelementen, einschließlich der List-Steuerelemente ([CListCtrl](../mfc/reference/clistctrl-class.md)), Struktursteuerelemente ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)), und Registerkarten-Steuerelementen ([CTabCtrl](../mfc/reference/ctabctrl-class.md)).  

@@ -1,34 +1,35 @@
 ---
-title: "ATL Copy Policy Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_Copy class"
-  - "_CopyInterface class"
-  - "Klassen [C++], copy policy"
-  - "copy policy classes [C++]"
-  - "Daten [C++], ATL"
+title: ATL-Kopierrichtlinienklassen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- data [C++], ATL
+- classes [C++], copy policy
+- copy policy classes [C++]
+- _Copy class
+- _CopyInterface class
 ms.assetid: 06704b68-d318-4c5d-a65b-71457fe9d00d
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 54ac3c9d53c3b6d2b295643001fd15b1e4c6c46d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# ATL Copy Policy Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Kopierrichtlinienklassen sind [Hilfsklassen](../atl/utility-classes.md), das verwendet wird, um Daten zu initialisieren, zu kopieren und zu löschen.  Kopierrichtlinienklassen ermöglichen es Ihnen, Kopiensemantik für jeden Typ Daten definieren, und Konvertierungen zwischen unterschiedlichen Datentypen Daten.  
+# <a name="atl-copy-policy-classes"></a>ATL-kopieren-Policy-Klassen
+Kopie Richtlinienkopierklassen sind [hilfsprogrammklassen](../atl/utility-classes.md) zum Initialisieren verwendet, kopieren und Löschen von Daten. Kopierrichtlinienklassen können Sie die Semantik zum Kopieren für jeden Datentyp definieren und Konvertierungen zwischen verschiedenen Datentypen zu definieren.  
   
- ATL verwendet Kopierrichtlinienklassen in den Implementierungen der folgenden Vorlagen:  
+ ATL-verwendet, kopieren, Richtlinie die Klassen in ihre Implementierung der folgenden Vorlagen:  
   
 -   [CComEnumImpl](../atl/reference/ccomenumimpl-class.md)  
   
@@ -36,10 +37,10 @@ Kopierrichtlinienklassen sind [Hilfsklassen](../atl/utility-classes.md), das ver
   
 -   [ICollectionOnSTLImpl](../atl/reference/icollectiononstlimpl-class.md)  
   
- Indem sie Informationen kapselten, die erforderlich sind, um Daten in einer Kopierrichtlinienklasse zu kopieren oder zu konvertieren, die als Vorlagenargument übergeben werden kann, muss die ATL\-Entwickler für extreme Wiederverwendbarkeit dieser Klassen bereitgestellt.  Wenn Sie beispielsweise eine Auflistung mithilfe eines beliebigen Datentyps implementieren müssen, ist alle, die Sie angeben müssen, die entsprechende Kopierrichtlinienklassen; Sie müssen den Code nie berühren, der die Auflistung implementiert.  
+ Durch das Kapseln der benötigten Informationen zum Kopieren oder konvertieren Sie Daten in einer Kopie-Policy-Klasse, die als Vorlagenargument übergeben werden kann, haben die ATL-Entwickler für extreme wiederverwendbarkeit dieser Klassen bereitgestellt. Wenn Sie eine Auflistung, die über einen beliebigen Datentyp implementieren müssen, alles, was Sie bereitstellen müssen ist beispielsweise die Kopierrichtlinie des entsprechenden; Sie müssen nie berühren Sie den Code, der die Auflistung implementiert.  
   
-## Definition  
- Definitionsgemäß ist eine Klasse, die die folgenden statischen Funktionen bereitstellt, eine Kopierrichtlinienklasse:  
+## <a name="definition"></a>Definition  
+ Definitionsgemäß ist eine Klasse, die die folgenden statischen Funktionen einer Kopierrichtlinienklasse:  
   
  `static void init(` `DestinationType` `* p);`  
   
@@ -47,41 +48,42 @@ Kopierrichtlinienklassen sind [Hilfsklassen](../atl/utility-classes.md), das ver
   
  `static void destroy(` `DestinationType` `* p);`  
   
- Sie können die Typen `DestinationType` und *SourceType* durch beliebige Datentypen für jede Kopierrichtlinienklassen ersetzen.  
+ Sie können die Typen ersetzen `DestinationType` und *SourceType* mit beliebigen Datentypen für jede Kopierrichtlinie.  
   
 > [!NOTE]
->  Obwohl Sie Kopierrichtlinienklassen für alle beliebigen Datentypen definieren können, sollte Verwendung von Klassen in ATL\-Code die Typen einschränken, die sinnvoll sind.  Wenn beispielsweise eine Kopierrichtlinienklasse mit Auflistungs\- oder Enumeratorimplementierungen ATL, `DestinationType` muss ein Typ sein verwendet, der als Parameter in einer COM\-Schnittstellen\-Methode verwendet werden kann.  
+>  Zwar Kopierrichtlinienklassen für beliebige Datentypen definieren, sollten mithilfe der Klassen in ATL-Code die Typen beschränken, die sinnvoll sind. Z. B. wenn mithilfe einer Kopierrichtlinie für die die Klasse mit ATLs-Auflistung oder Enumerator Implementierungen `DestinationType` muss ein Typ, der als Parameter in einer COM-Schnittstellen-Methode verwendet werden kann.  
   
- Verwenden Sie **init**, um Daten, **copy**, um Daten zu kopieren und **destroy** zu initialisieren, um die Daten auszutauschen.  Die genaue Bedeutung der Initialisierung, Kopieren und Zerstörung sind die Domäne der Kopierrichtlinienklasse und werden abhängig von den verwendeten Datentypen variieren.  
+ Verwendung **Init** Daten initialisieren **kopieren** zum Kopieren von Daten, und **zerstören** Daten freigeben. Die genaue Bedeutung von Initialisierung, kopieren und Zerstörung der Domäne der kopieren-Richtlinienklasse und variiert abhängig von den beteiligten Datentypen.  
   
- Es gibt zwei Anforderungen bei der Verwendung und Implementierung von einer Kopierrichtlinienklasse:  
+ Es gibt zwei Anforderungen für die Verwendung und Implementierung von einer Kopierrichtlinienklasse:  
   
--   Der erste Parameter zu **copy** muss einen Zeiger auf die Daten nur erhalten, die Sie zuvor mit dem **init** initialisiert haben.  
+-   Der erste Parameter für **Kopie** muss einen Zeiger auf Daten, die Sie zuvor initialisiert haben, verwenden nur empfangen **Init**.  
   
--   **destroy** muss einen Zeiger auf die Daten nur ganz ausschließen, die Sie zuvor mit dem **init** oder über **copy** kopiert initialisiert haben.  
+-   **Zerstören** muss einen Zeiger auf Daten, die Sie zuvor initialisiert haben, verwenden immer nur empfangen **Init** oder kopierte über **Kopie**.  
   
-## Standardimplementierungen  
- ATL stellt zwei Kopierrichtlinienklassen in Form von den **\_Copy** und **\_CopyInterface** Vorlagenklassen bereit:  
+## <a name="standard-implementations"></a>Standard-Implementierungen  
+ ATL stellt zwei Klassen der kopieren-Richtlinie in Form von den **"_Copy"** und **_CopyInterface** Vorlagenklassen:  
   
--   Die Klasse ermöglicht **\_Copy** homogenes nur kopieren \(keine Konvertierung zwischen Datentypen\) wie sie nur einen einzelnen Vorlagenparameter bietet, um `DestinationType` und *SourceType* anzugeben.  Die generische Implementierung dieser Vorlage enthält keine Initialisierung oder Zerstörungscode und `memcpy` verwendet, um die Daten zu kopieren.  ATL stellt auch Spezialisierungen von **\_Copy** für **VARIANT**, `LPOLESTR`, **OLEVERB** und **CONNECTDATA** Datentypen.  
+-   Die **"_Copy"** Klasse ermöglicht homogene nur kopieren (nicht-Konvertierung zwischen Datentypen), da es nur einen einzelnen Template-Parameter, um beide geben bietet `DestinationType` und *SourceType*. Die generische Implementierung dieser Vorlage enthält keinen Initialisierungs- oder Zerstörung Code und verwendet `memcpy` zum Kopieren der Daten. ATL stellt auch spezialisierungen **"_Copy"** für **VARIANT**, `LPOLESTR`, **OLEVERB**, und **CONNECTDATA** Datentypen.  
   
--   Die **\_CopyInterface**\-Klasse stellt eine Implementierung für das Kopieren von Schnittstellenzeigern nach Standard\-COM\-Regeln bereit.  Auch einmal können diese Klasse homogenes nur kopieren, sodass sie verwendet einfache Zuweisung und einen Aufruf `AddRef`, um die Kopie auszuführen.  
+-   Die **_CopyInterface** -Klasse stellt eine Implementierung zum Kopieren von Schnittstellenzeigern standard-COM-Regeln folgen. Noch einmal mit dieser Klasse können nur homogene kopieren, daher einfache Zuweisung und einem Aufruf von `AddRef` für den Kopiervorgang.  
   
-## Benutzerdefinierte Implementierungen  
- In der Regel müssen Sie eigene Kopierrichtlinienklassen für das Kopieren heterogene definieren \(das heißt, Konvertierung zwischen Datentypen\).  Für einige Beispiele von benutzerdefinierten Kopierrichtlinienklassen, berücksichtigen Sie die Dateien VCUE\_Copy.h und VCUE\_CopyString.h im [ATLCollections](../top/visual-cpp-samples.md) Beispiel.  Diese Dateien enthalten zwei Vorlagenkopierrichtlinienklassen, `GenericCopy` und `MapCopy`, sowie einige Spezialisierungen von `GenericCopy` für unterschiedliche Datentypen.  
+## <a name="custom-implementations"></a>Benutzerdefinierte Implementierungen  
+ In der Regel müssen Sie eine eigene Kopierrichtlinienklassen für heterogene kopieren (d. h. die Konvertierung zwischen Datentypen) definieren. Betrachten Sie einige Beispiele für benutzerdefinierte Richtlinienkopierklassen, die Dateien VCUE_Copy.h und VCUE_CopyString.h in der [ATLCollections](../visual-cpp-samples.md) Beispiel. Diese Dateien enthalten zwei Kopie Richtlinie Vorlagenklassen, `GenericCopy` und `MapCopy`, sowie eine Anzahl von spezialisierungen `GenericCopy` für verschiedene Datentypen.  
   
-### GenericCopy  
- `GenericCopy` ermöglicht, das *SourceType* und `DestinationType` als Vorlagenargumente anzugeben.  Hier ist das häufigste Form der `GenericCopy`\-Klasse von VCUE\_Copy.h:  
+### <a name="genericcopy"></a>GenericCopy  
+ `GenericCopy`ermöglicht Ihnen das Festlegen der *SourceType* und `DestinationType` als Vorlagenargumente. Hier ist die allgemeinste Form der `GenericCopy` Klasse von VCUE_Copy.h:  
   
- [!CODE [NVC_ATL_COM#30](../CodeSnippet/VS_Snippets_Cpp/NVC_ATL_COM#30)]  
+ [!code-cpp[NVC_ATL_COM#30](../atl/codesnippet/cpp/atl-copy-policy-classes_1.h)]  
   
- VCUE\_Copy.h enthält außerdem die folgenden Spezialisierungen dieser Klasse: `GenericCopy<BSTR>`, `GenericCopy<VARIANT, BSTR>`, `GenericCopy<BSTR, VARIANT>`.  VCUE\_CopyString.h enthält Spezialisierungen für das Kopieren von **std::string**s: `GenericCopy<std::string>`, `GenericCopy<VARIANT, std::string>` und `GenericCopy<BSTR, std::string>`.  Sie können `GenericCopy` erhöhen, indem Sie weitere Spezialisierungen von eigenen bereitgestellt haben.  
+ VCUE_Copy.h enthält außerdem die folgenden spezialisierungen dieser Klasse: `GenericCopy<BSTR>`, `GenericCopy<VARIANT, BSTR>`, `GenericCopy<BSTR, VARIANT>`. VCUE_CopyString.h enthält spezialisierungen für das Kopieren von **Std:: String**s: `GenericCopy<std::string>`, `GenericCopy<VARIANT, std::string>`, und `GenericCopy<BSTR, std::string>`. Sie verbessern können `GenericCopy` durch die Bereitstellung Weitere spezialisierungen Ihrer Wahl.  
   
-### MapCopy  
- `MapCopy` wird davon ausgegangen, dass die Daten, die kopiert werden, in einer STL\-Format Zuordnung gespeichert werden, und ermöglicht es Ihnen, den Typ der Zuordnung anzugeben, in dem die Daten und der Zieltyp gespeichert werden.  Die Implementierung der Klasse verwendet nur die Typdefinitionen, die von der *MapType\-Klasse*, um den Typ der Quelldaten zu bestimmen angegeben werden und die entsprechende `GenericCopy`\-Klasse aufzurufen.  Keine Spezialisierungen dieser Klasse erforderlich.  
+### <a name="mapcopy"></a>MapCopy  
+ `MapCopy`wird davon ausgegangen, dass die kopierten Daten in eine Zuordnung im C++-Standard-Bibliothek-Format gespeichert werden, so können Sie den Typ der Karte angeben, in dem die Daten gespeichert, und geben Sie das Ziel. Die Implementierung der Klasse verwendet nur bereitgestellt werden, indem Sie die *MapType* Klasse, um den Typ der Quelldaten zu bestimmen und den entsprechenden Aufrufen `GenericCopy` Klasse. Es werden keine spezialisierungen dieser Klasse benötigt.  
   
- [!CODE [NVC_ATL_COM#31](../CodeSnippet/VS_Snippets_Cpp/NVC_ATL_COM#31)]  
+ [!code-cpp[NVC_ATL_COM#31](../atl/codesnippet/cpp/atl-copy-policy-classes_2.h)]  
   
-## Siehe auch  
- [Implementing an STL\-Based Collection](../atl/implementing-an-stl-based-collection.md)   
- [ATLCollections\-Beispiel](../top/visual-cpp-samples.md)
+## <a name="see-also"></a>Siehe auch  
+ [Implementieren einer C++-Standard-Library-basierte-Auflistung](../atl/implementing-an-stl-based-collection.md)   
+ [-Beispiel](../visual-cpp-samples.md)
+

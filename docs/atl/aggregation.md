@@ -1,34 +1,36 @@
 ---
-title: "Aggregation | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aggregate objects [C++]"
-  - "aggregation [C++]"
+title: Aggregation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- aggregation [C++]
+- aggregate objects [C++]
 ms.assetid: 7125bb8e-b269-4b50-9bba-295b467a54cc
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8dbb0332bc7e55464e5b8af9d0b57e236f23dc86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Aggregation
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Es gibt Situationen, in denen die Implementierung eines Objekts die Dienste verwenden möchte, die von anderen bereitgestellt wurden, vordefiniertes Objekt.  Darüber hinaus möchte es, dass dieses zweite Objekt als natürlicher Teil des ersten angezeigt wird.  COM erreicht beide Ziele durch Kapselung und Aggregation.  
+# <a name="aggregation"></a>Aggregation
+Es gibt Situationen, wenn Implementierer eines Objekts einem anderen Objekt vorgefertigten angebotenen Dienste zu nutzen möchten. Darüber hinaus möchte er dieses zweite Objekt als eine natürliche Teil des ersten angezeigt werden. COM erreicht beide Ziele durch Kapselung und Aggregation.  
   
- Aggregation bedeutet, dass das enthaltende \(äußere\) Objekt das enthaltende Objekt \(innere\) als Teil des Erstellungsprozesses erstellt und Schnittstellen des inneren Objekts vom äußeren verfügbar gemacht werden.  Ein Objekt können sich, um aggregierbar sind oder nicht.  Wenn es ist, muss bestimmte Regeln beachtet, damit Aggregation ordnungsgemäß funktioniert.  
+ Aggregation bedeutet, dass der enthaltenden Objekts (äußeren) die darin enthaltenen Objekte (innere) im Rahmen der Erstellung erstellt und die Schnittstellen des inneren Objekts werden von der äußeren verfügbar gemacht. Ein Objekt kann sich selbst oder nicht aggregierbar sein. Wenn dies der Fall, müssen sie bestimmte Regeln für die Aggregation ordnungsgemäß funktioniert entsprechen.  
   
- Hauptsächlich müssen alle **IUnknown**\-Methodenaufrufe auf dem enthaltenden Objekt zum enthaltenden Objekt delegieren.  
+ In erster Linie für alle **IUnknown** -Methodenaufrufe der darin enthaltenen Objekte auf das enthaltende Objekt delegieren müssen.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Einführung in COM](../atl/introduction-to-com.md)   
- [Reusing Objects](http://msdn.microsoft.com/library/windows/desktop/ms678443)
+ [Wiederverwenden von Objekten](http://msdn.microsoft.com/library/windows/desktop/ms678443)
+

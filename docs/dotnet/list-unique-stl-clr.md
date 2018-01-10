@@ -1,32 +1,33 @@
 ---
-title: "list::unique (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::unique"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unique-Member [STL/CLR]"
+title: 'List:: Unique (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::unique
+dev_langs: C++
+helpviewer_keywords: unique member [STL/CLR]
 ms.assetid: c3a29e4e-0ec1-4472-b050-7a9511037132
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 056f15dc0e7808a7f0ada7267a60e13d4c75d83b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# list::unique (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listunique-stlclr"></a>list::unique (STL/CLR)
 Entfernt benachbarte Elemente, die einen angegebenen Test bestehen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void unique();  
@@ -34,16 +35,16 @@ template<typename Pred2>
     void unique(Pred2 pred);  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  pred  
- Vergleich für Elementpaaren.  
+ Der Vergleich für Element-Paaren.  
   
-## Hinweise  
- Die erste Memberfunktion entfernt der gesteuerten Sequenz \(Löschen\) jedes Element, das gleich sein Im vorangehenden Element vergleicht \- wenn Element `X`\-Element `Y` und `X == Y` stehen, entfernt die Memberfunktion `Y`.  Sie verwenden sie, um alle bis auf eine Kopie einer Untersequenz der benachbarten Elemente zu entfernen, die gleich vergleichen.  Beachten Sie, dass, wenn die gesteuerte Sequenz, sortiert wird, wie mit dem [list::sort](../dotnet/list-sort-stl-clr.md)`()`, die Memberfunktion aufruft, nur Elemente mit eindeutigen Werte können. \(Daher der Name\).  
+## <a name="remarks"></a>Hinweise  
+ Die erste Memberfunktion entfernt wird, aus der kontrollierten Sequenz (löscht) jedes Element, das verglichen mit dem vorherigen Element--gleich, wenn Element `X` vorausgeht Element `Y` und `X == Y`, die Memberfunktion entfernt `Y`. Sie können damit alle bis auf eine Kopie jeder Untersequenz der benachbarten Elemente entfernen, Vergleich auf Gleichheit. Beachten Sie, dass bei die kontrollierte Sequenz sortiert wurde, z. B. wie durch den Aufruf [List:: Sort (STL/CLR)](../dotnet/list-sort-stl-clr.md)`()`, die Memberfunktion lässt nur Elemente mit eindeutigen Werten. (Sie beenden – englisch: to terminate – die Abfrage, daher der Name.)  
   
- Die zweite Memberfunktion verhält sich genauso wie das erste, allerdings entfernt jedes Element `Y`, das dem `X` ein Element erfolgreich ist, für das `pred``(X, Y)`.  Sie verwenden sie, um alle bis auf eine Kopie einer Untersequenz der benachbarten Elemente zu entfernen, die einer Prädikatfunktion entsprechen oder Delegat, die Sie angeben.  Beachten Sie, dass, wenn die gesteuerte Sequenz, sortiert wird z, indem `sort(``pred``)`, die Memberfunktion aufruft, können nur Elemente, die keine ihnen entsprechenden Reihenfolge mit einer beliebigen anderen Elementen aufweisen.  
+ Die zweite Memberfunktion verhält sich wie die erste, mit dem Unterschied, dass jedes Element entfernt `Y` nach einem Element `X` für die `pred(X, Y)`. Sie können damit alle bis auf eine Kopie jeder Untersequenz der benachbarten Elemente entfernen, die erfüllt eine Prädikatfunktion oder Delegaten, die Sie angeben. Beachten Sie, dass bei die kontrollierte Sequenz sortiert wurde, z. B. wie durch den Aufruf `sort(pred)`, die Member-Funktion bewirkt, dass nur Elemente, die keine entsprechende Sortierung mit anderen Elemente.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_list_unique.cpp   
@@ -81,16 +82,19 @@ int main()
   
 ```  
   
-  **ein b c**  
- **ein b c**  
- **ein "**   
-## Anforderungen  
- **Header:** \<cliext\/Liste\>  
+```Output  
+a a b c  
+a b c  
+a a  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/List >  
   
-## Siehe auch  
- [list](../dotnet/list-stl-clr.md)   
- [list::remove](../dotnet/list-remove-stl-clr.md)   
- [list::remove\_if](../dotnet/list-remove-if-stl-clr.md)   
- [list::sort](../dotnet/list-sort-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Liste (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List:: Remove (STL/CLR)](../dotnet/list-remove-stl-clr.md)   
+ [List:: remove_if (STL/CLR)](../dotnet/list-remove-if-stl-clr.md)   
+ [list::sort (STL/CLR)](../dotnet/list-sort-stl-clr.md)

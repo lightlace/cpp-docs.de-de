@@ -1,32 +1,31 @@
 ---
-title: "PROC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PROC"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PROC directive"
+title: PROC | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PROC
+dev_langs: C++
+helpviewer_keywords: PROC directive
 ms.assetid: ee5bb6b6-fa15-4d73-b0cf-e650178539a9
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b4b8b5259e3a7e42e7eb08cb4832496a6f3c35c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# PROC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Starten und Beenden eines Prozedurblocks Markierungen, der *Bezeichnung*aufgerufen wird.  Die Anweisungen im Block können mit der Aufrufanweisung oder den [AUFRUF](../../assembler/masm/invoke.md)\-Direktive aufgerufen werden.  
+# <a name="proc"></a>PROC
+Kennzeichnet, Start- und Ende einer Prozedurblocks aufgerufen *Bezeichnung*. Die Anweisungen im Block können aufgerufen werden, mit der **Aufrufen** Anweisung oder [INVOKE](../../assembler/masm/invoke.md) Richtlinie.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -37,14 +36,14 @@ statements
 label ENDP  
 ```  
   
-## Hinweise  
- \[FRAME \[:*Ehandler ADDRESS*\]\] ist mit ml64.exe nur gültig und veranlasst MASM, einen Funktionstabelleneintrag in .pdata und Informationen in .xdata für Entladungs Verhalten der strukturierten Ausnahmebehandlung eine Funktion zu entladen.  
+## <a name="remarks"></a>Hinweise  
+ [FRAME [:*Ehandler Adresse*]] ist nur gültig, wenn ml64.exe und bewirkt, dass MASM, generieren eine Tabelle Funktionsstart im .pdata und Entladen von Informationen im .xdata für eine Funktion der strukturierten Ausnahmebehandlung entladen Verhalten.  
   
- Wenn das **FRAME**\-Attribut verwendet wird, muss es aus [.ENDPROLOG](../../assembler/masm/dot-endprolog.md)\-Direktive folgen.  
+ Wenn die **FRAME** Attribut verwendet wird, es muss darauf folgen einer [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) Richtlinie.  
   
- Weitere Informationen finden Sie unter [MASM for x64 \(ml64.exe\)](../../assembler/masm/masm-for-x64-ml64-exe.md) Weitere Informationen über die Verwendung von ml64.exe.  
+ Finden Sie unter [MASM für X64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) für Weitere Informationen finden Sie unter ml64.exe.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 ; ml64 ex1.asm /link /entry:Example1 /SUBSYSTEM:CONSOLE  
@@ -66,7 +65,7 @@ _text ENDS
 END  
 ```  
   
- Der obige Code gibt die folgende Funktionstabelle und entlädt Informationen:  
+ Der obige Code wird ausgeben die folgenden Tabelle für die Funktionen und Informationen zu entladen:  
   
 ```  
 FileHeader->Machine 34404  
@@ -89,5 +88,5 @@ Dumping Unwind Information for file ex2.exe
       Code offset: 0x01, PUSH_NONVOL, register=rbp  
 ```  
   
-## Siehe auch  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)

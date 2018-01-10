@@ -1,46 +1,46 @@
 ---
-title: "C/C++-Buildtools"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "c.build"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Builds [C++], C/C++-Tools"
-  - "Tools [C++], Build"
+title: C/C++-Buildtools | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: c.build
+dev_langs: C++
+helpviewer_keywords:
+- builds [C++], C/C++ tools
+- tools [C++], build
 ms.assetid: 48d9daf4-6bbf-473a-8ce2-bf2923b69f80
-caps.latest.revision: 6
-caps.handback.revision: "6"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b21ebd2adf20eb0812e9a0fb5b900e657f8eddc7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# C/C++-Buildtools
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Visual C\+\+ bietet die folgenden Befehlszeilentools, um Buildausgaben anzuzeigen und zu bearbeiten:  
+# <a name="cc-build-tools"></a>C-/C++-Buildtools
+Visual C++ bietet die folgenden Befehlszeilentools zum Anzeigen oder Bearbeiten von Buildausgabe:  
   
--   [BSCMAKE.EXE](../../build/reference/bscmake-reference.md) erstellt eine Browseinformationsdatei \(.bsc\) mit Informationen über die Symbole \(Klassen, Funktionen, Daten, Makros und Typen\) des Programms.  Diese Informationen werden in Browserfenstern innerhalb der Entwicklungsumgebung angezeigt. \(Eine BSC\-Datei kann auch in der Entwicklungsumgebung erstellt werden.\)  
+-   [BSCMAKE. EXE-Datei](../../build/reference/bscmake-reference.md) erstellt eine Browseinformationsdatei (.bsc), die Informationen über die Symbole (Klassen, Funktionen, Daten, Makros und Typen) in Ihrem Programm enthält. Sie können diese Informationen anzeigen, Durchsuchen von Windows in der Entwicklungsumgebung. (Eine BSC-Datei kann auch in der Entwicklungsumgebung erstellt werden.)  
   
--   [LIB.EXE](../../build/reference/lib-reference.md) erstellt und verwaltet eine Bibliothek mit COFF \(Common Object File Format\)\-Objektdateien.  Es kann zum Erstellen von Exportdateien und Importbibliotheken verwendet werden, um Verweise auf exportierte Definitionen anzulegen.  
+-   [LIB. EXE-Datei](../../build/reference/lib-reference.md) dient zum Erstellen und verwalten eine Bibliothek mit Objektdateien Common Object File Format (COFF). Sie können auch zum Erstellen von Exportdateien und Importbibliotheken Verweise auf exportierte Definitionen verwendet werden.  
   
--   [EDITBIN.EXE](../../build/reference/editbin-reference.md) wird zum Ändern von COFF\-Binärdateien verwendet.  
+-   [EDITBIN. EXE-Datei](../../build/reference/editbin-reference.md) wird verwendet, um binäre COFF-Dateien zu ändern.  
   
--   [DUMPBIN.EXE](../../build/reference/dumpbin-reference.md) zeigt Informationen \(z. B. eine Symboltabelle\) zu COFF\-Binärdateien an.  
+-   [DUMPBIN. EXE-Datei](../../build/reference/dumpbin-reference.md) Informationen COFF-Binärdateien (z. B. eine Symboltabelle) angezeigt.  
   
--   [NMAKE](../../build/nmake-reference.md) liest Makefiles ein und führt sie aus.  
+-   [NMAKE](../../build/nmake-reference.md) liest und Makefiles ausführt.  
   
--   [ERRLOOK](../../build/reference/value-edit-control.md), das Dienstprogramm für die Fehlersuche, ruft eine Systemfehler\- oder Modulfehlermeldung anhand des eingegebenen Werts ab.  
+-   [ERRLOOK](../../build/reference/value-edit-control.md), das Dienstprogramm Fehlersuche Systemfehlermeldung oder Modulfehlermeldung auf Grundlage des eingegebenen Werts abgerufen werden.  
   
-## Siehe auch  
- [Referenz zur C\/C\+\+\-Erstellung](../../build/reference/c-cpp-building-reference.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Referenz zur C/C++-Erstellung](../../build/reference/c-cpp-building-reference.md)   
  [Ergänzte Namen](../../build/reference/decorated-names.md)   
  [Compileroptionen](../../build/reference/compiler-options.md)   
  [Linkeroptionen](../../build/reference/linker-options.md)

@@ -1,34 +1,33 @@
 ---
-title: "Compilerwarnung (Stufe 3) C4534 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "c4534"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4534"
+title: Compilerwarnung (Stufe 3) C4534 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: c4534
+dev_langs: C++
+helpviewer_keywords: C4534
 ms.assetid: ec2adf3b-d7a1-4005-bb0c-5d219df78dc8
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6d9ea2cc6fb15edf61610e96a728e985b78be468
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 3) C4534
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'Konstruktor' ist kein Standardkonstruktor für Klasse 'Klasse' aufgrund des Standardarguments  
+# <a name="compiler-warning-level-3-c4534"></a>Compilerwarnung (Stufe 3) C4534
+'Konstruktor' werden nicht auf einen Standardkonstruktor für die Klasse 'Klasse' aufgrund der Standardargument  
   
- Eine nicht verwaltete Klasse kann einen Konstruktor mit Parametern aufweisen, die über Standardwerte verfügen. Dieser Konstruktor wird dann vom Compiler als Standardkonstruktor verwendet.  Eine mit dem Schlüsselwort `value` gekennzeichnete Klasse verwendet keinen Konstruktor als Standardkonstruktor, dessen Parameter über Standardwerte verfügen.  
+ Eine nicht verwaltete Klasse kann einen Konstruktor mit Parametern, die Standardwerte besitzen und der Compiler wird dies als den Standardkonstruktor verwenden. Eine Klasse gekennzeichnet wird, mit dem `value` Schlüsselwort wird nicht verwenden Sie einen Konstruktor mit standardmäßigen Werten für die Parameter als einen Standardkonstruktor.  
   
- Weitere Informationen finden Sie unter [Classes and Structs](../../windows/classes-and-structs-cpp-component-extensions.md).  
+ Weitere Informationen finden Sie unter [Klassen und Strukturen](../../windows/classes-and-structs-cpp-component-extensions.md).  
   
  Im folgenden Beispiel wird C4534 generiert:  
   

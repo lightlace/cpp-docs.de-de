@@ -42,11 +42,12 @@ caps.latest.revision: "30"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5d508c70ca1a4c44e2b51dfd85b6f85700c111a9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a66bafa2fa032b069a0e34cf6831ac2e6f6ed13d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strcats-wcscats-mbscats"></a>strcat_s, wcscat_s, _mbscat_s
 Fügt eine Zeichenfolge an. Diese Versionen von [strcat, wcscat, _mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md) enthalten Sicherheitsverbesserungen, wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben wird.  
@@ -106,9 +107,9 @@ errno_t _mbscat_s(
   
 |`strDestination`|`numberOfElements`|`strSource`|Rückgabewert|Inhalt von `strDestination`|  
 |----------------------|------------------------|-----------------|------------------|----------------------------------|  
-|`NULL` oder nicht abgeschlossen|any|alle|`EINVAL`|nicht geändert|  
-|any|alle|`NULL`|`EINVAL`|`strDestination`[0] auf 0 festgelegt|  
-|alle|0 oder zu klein|alle|`ERANGE`|`strDestination`[0] auf 0 festgelegt|  
+|`NULL` oder nicht abgeschlossen|any|any|`EINVAL`|nicht geändert|  
+|any|any|`NULL`|`EINVAL`|`strDestination`[0] auf 0 festgelegt|  
+|any|0 oder zu klein|any|`ERANGE`|`strDestination`[0] auf 0 festgelegt|  
   
 ## <a name="remarks"></a>Hinweise  
  Die `strcat_s`-Funktion fügt `strSource` an `strDestination` an und beendet die Ergebniszeichenfolge mit einem Nullzeichen. Das erste Zeichen von `strSource` überschreibt das abschließende Nullzeichen von `strDestination`. Wenn sich Quell- und Zielzeichenfolgen überlappen, ist das Verhalten von `strcat_s` undefiniert.  
@@ -126,7 +127,7 @@ strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
   
  Wenn `strDestination` ein NULL-Zeiger ist oder nicht mit NULL endet, oder wenn `strSource` ein `NULL`-Zeiger ist, oder wenn die Zielzeichenfolge zu klein ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen `EINVAL` zurück und stellen `errno` auf `EINVAL` ein.  
   
- In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads (Sichere Vorlagenüberladungen)](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
  Die Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFD" auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
@@ -138,7 +139,7 @@ strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`strcat_s`|\<string.h>|  
 |`wcscat_s`|\<string.h> oder \<wchar.h>|  

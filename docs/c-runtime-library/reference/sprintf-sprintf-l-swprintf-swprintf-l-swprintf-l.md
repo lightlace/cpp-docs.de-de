@@ -56,11 +56,12 @@ caps.latest.revision: "36"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8e535097a5a46a952c19224f575a49107869dea3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f4b8b840e73665aa9c176daccf5c1bc712f4f2ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sprintf-sprintfl-swprintf-swprintfl-swprintfl"></a>sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l
 Schreiben Sie formatierte Daten in eine Zeichenfolge. Sicherere Versionen einiger dieser Funktionen sind verfügbar; siehe [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md). Die sicheren Versionen von `swprintf` und `_swprintf_l` akzeptieren keinen `count`-Parameter.  
@@ -143,7 +144,7 @@ int _sprintf_l(
 > [!IMPORTANT]
 >  Bei der Verwendung von `sprintf` gibt es keine Möglichkeit, die Anzahl der geschriebenen Zeichen einzuschränken. Demnach ist Code mit `sprintf` für Pufferüberläufe anfällig. Erwägen Sie die Verwendung der verwandten Funktion [_snprintf](../../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md), die eine maximale Anzahl von Zeichen angibt, die in `buffer` geschrieben werden können, oder verwenden Sie [_scprintf](../../c-runtime-library/reference/scprintf-scprintf-l-scwprintf-scwprintf-l.md), um die Größe des erforderlichen Puffers zu bestimmen. Stellen Sie zudem sicher, dass `format` keine benutzerdefinierte Zeichenfolge ist.  
   
- `swprintf` ist eine Breitzeichen-Version von `sprintf`. Die Zeigerargumente zu `swprintf` sind Breitzeichen-Zeichenfolgen. Die Erkennung von Codierungsfehlern in `swprintf` unterscheidet sich möglicherweise von der in `sprintf`. `swprintf` und `fwprintf` verhalten sich identisch, außer dass die Ausgabe von `swprintf` in eine Zeichenfolge anstatt an ein Ziel des `FILE`-Typs schreibt, und dass `swprintf` den `count`-Parameter zur Angabe der maximale Anzahl zu schreibender Zeichen erfordert. Die Versionen dieser Funktionen mit dem `_l`-Suffix sind beinahe identisch, verwenden jedoch den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Threadgebietsschemas.  
+ `swprintf` ist eine Breitzeichen-Version von `sprintf`. Die Zeigerargumente zu `swprintf` sind Breitzeichen-Zeichenfolgen. Die Erkennung von Codierungsfehlern in `swprintf` unterscheidet sich möglicherweise von der in `sprintf`. `swprintf` und `fwprintf` verhalten sich identisch, außer dass die Ausgabe von `swprintf` in eine Zeichenfolge anstatt an ein Ziel des `FILE`-Typs schreibt, und dass `swprintf` den `count`-Parameter zur Angabe der maximale Anzahl zu schreibender Zeichen erfordert. Die Versionen dieser Funktionen mit dem `_l` -Suffix sind beinahe identisch, verwenden jedoch den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Threadgebietsschemas.  
   
  `swprintf` ist zum ISO-C-Standard konform. Dieser erfordert den zweiten Parameter `count` des `size_t`-Typs. Um das alte, nicht dem Standard entsprechende, Verhalten zu erzwingen, definieren Sie `_CRT_NON_CONFORMING_SWPRINTFS`. In einer zukünftigen Version wird das alte Verhalten möglicherweise entfernt. Daher sollte Code so geändert werden, dass das neue konforme Verhalten verwendet wird.  
   
@@ -158,7 +159,7 @@ int _sprintf_l(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`sprintf`, `_sprintf_l`|\<stdio.h>|  
 |`swprintf`, `_swprintf_l`|\<stdio.h> oder \<wchar.h>|  

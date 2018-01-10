@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _configthreadlocale
+apiname: _configthreadlocale
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,8 +24,7 @@ apitype: DLLExport
 f1_keywords:
 - _configthreadlocale
 - configthreadlocale
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - configthreadlocale function
 - locales, per-thread
@@ -35,30 +32,16 @@ helpviewer_keywords:
 - per-thread locale
 - thread locale
 ms.assetid: 10e4050e-b587-4f30-80bc-6c76b35fc770
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 1fca01932efb2f80d4aebf94db8900cee5d79805
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: aacd7b82525ca1b74c3d7a7ab7f8e09497e491ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configthreadlocale"></a>_configthreadlocale
 Konfiguriert Optionen für threadspezifische Gebietsschemas.  
@@ -76,7 +59,7 @@ int _configthreadlocale(
  Die festzulegende Option. Eine der in der folgenden Tabelle aufgelisteten Optionen.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Der vorherige Status des threadspezifischen Gebietsschemas (`_DISABLE_PER_THREAD_LOCALE` oder `_ENABLE_PER_THREAD_LOCALE`) oder "–&1;", wenn ein Fehler auftritt.  
+ Der vorherige Status des threadspezifischen Gebietsschemas (`_DISABLE_PER_THREAD_LOCALE` oder `_ENABLE_PER_THREAD_LOCALE`) oder "– 1", wenn ein Fehler auftritt.  
   
 ## <a name="remarks"></a>Hinweise  
  Mit der `_configurethreadlocale`-Funktion wird die Verwendung von threadspezifischen Gebietsschemas gesteuert. Verwenden Sie eine dieser Optionen, um den Status des threadspezifischen Gebietsschemas anzugeben oder zu bestimmen:  
@@ -90,7 +73,7 @@ int _configthreadlocale(
  `0`  
  Ruft die aktuelle Einstellung für diesen speziellen Thread ab.  
   
- Diese Funktionen beeinflussen das Verhalten der `setlocale`, `_tsetlocale`, und `_wsetlocale`. Wenn threadspezifische Gebietsschema deaktiviert ist, alle nachfolgenden Aufruf ist `setlocale` oder `_wsetlocale` ändert das Gebietsschema aller Threads, die das globale Gebietsschema verwendet. Wenn das threadspezifische Gebietsschema aktiviert ist, wirken sich `setlocale` oder `_wsetlocale` nur auf das Gebietsschema des aktuellen Threads aus.  
+ Diese Funktionen beeinflussen das Verhalten des `setlocale`, `_tsetlocale`, `_wsetlocale`, und `_setmbcp`. Wenn threadspezifisches Gebietsschema ist deaktiviert, die jeder nachfolgende Aufruf von `setlocale` oder `_wsetlocale` ändert das Gebietsschema aller Threads, die das globale Gebietsschema verwenden. Wenn das threadspezifische Gebietsschema aktiviert ist, wirken sich `setlocale` oder `_wsetlocale` nur auf das Gebietsschema des aktuellen Threads aus.  
   
  Bei Verwendung von `_configurethreadlocale` zur Aktivierung eines threadspezifischen Gebietsschemas wird empfohlen, `setlocale` oder `_wsetlocale` aufrufen, um unmittelbar danach das bevorzugte Gebietsschema in diesem Thread festzulegen.  
   
@@ -98,7 +81,7 @@ int _configthreadlocale(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_configthreadlocale`|\<locale.h>|  
   
@@ -216,4 +199,3 @@ The time in German locale is: 'Mittwoch, 12. Mai 2004'
  [_beginthread, _beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md)   
  [Gebietsschema](../../c-runtime-library/locale.md)   
  [Multithreading und Gebietsschemas](../../parallel/multithreading-and-locales.md)  
-

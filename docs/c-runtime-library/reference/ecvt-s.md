@@ -35,11 +35,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d835b45d9f06b9b8ff59916e36b124f8b1ec848d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: af4b49b0fd0e4de74a3f454a544c07f08c89b81d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ecvts"></a>_ecvt_s
 Konvertiert eine `double`-Zahl in eine Zeichenfolge. Dies ist eine sicherere Version von [_ecvt](../../c-runtime-library/reference/ecvt.md), wie unter [Security Features in the CRT (Sicherheitsfunktionen in der CRT)](../../c-runtime-library/security-features-in-the-crt.md) beschrieben wird.  
@@ -91,12 +92,12 @@ errno_t _ecvt_s(
   
 ### <a name="error-conditions"></a>Fehlerbedingungen  
   
-|`_Buffer`|`_SizeInBytes`|_Value|_Count|_Dec|_Sign|Rückgabewert|Wert in `buffer`|  
+|`_Buffer`|`_SizeInBytes`|_Value|_Count|_Dec|_Sign|Rückgabewert|Wert in `buffer`.|  
 |---------------|--------------------|-------------|-------------|-----------|------------|------------------|-----------------------|  
-|`NULL`|alle|alle|alle|alle|alle|`EINVAL`|Nicht geändert.|  
-|Nicht `NULL` (zeigt gültigen Speicher an)|<=0|any|alle|alle|alle|`EINVAL`|Nicht geändert.|  
-|any|alle|alle|alle|`NULL`|alle|`EINVAL`|Nicht geändert.|  
-|any|alle|alle|alle|alle|`NULL`|`EINVAL`|Nicht geändert.|  
+|`NULL`|any|any|any|any|any|`EINVAL`|Nicht geändert.|  
+|Nicht `NULL` (zeigt auf gültigen Speicher)|<=0|any|any|any|any|`EINVAL`|Nicht geändert.|  
+|any|any|any|any|`NULL`|any|`EINVAL`|Nicht geändert.|  
+|any|any|any|any|any|`NULL`|`EINVAL`|Nicht geändert.|  
   
  **Sicherheitsprobleme**  
   
@@ -111,7 +112,7 @@ errno_t _ecvt_s(
   
  `_ecvt_s` und `_fcvt_s` unterscheiden sich hinsichtlich der Interpretation des Parameters `_Count`. Von `_ecvt_s` wird `_Count` als die Gesamtanzahl der Ziffern in der Ausgabezeichenfolge interpretiert, während `_Count` von `_fcvt_s` als die Anzahl der Ziffern nach der Dezimalstelle interpretiert wird.  
   
- Die Verwendung dieser Funktion in C++ wird durch eine Überladung (als Vorlagen vorhanden) vereinfacht. Eine Überladung kann automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).  
+ Die Verwendung dieser Funktion in C++ wird durch eine Vorlagenüberladung vereinfacht. Eine Überladung kann automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
  Die Debugversion dieser Funktion füllt zunächst den Puffer mit „0xFD“ auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
@@ -158,7 +159,7 @@ Converted value: 12000
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   
- [Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)   
+ [Floating-Point Support (Gleitkommaunterstützung)](../../c-runtime-library/floating-point-support.md)   
  [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
  [_ecvt](../../c-runtime-library/reference/ecvt.md)   
  [_fcvt_s](../../c-runtime-library/reference/fcvt-s.md)   

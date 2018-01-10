@@ -1,11 +1,10 @@
 ---
-title: Klasse CHeapPtr | Microsoft-Dokumentation
+title: CHeapPtr Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,41 +13,25 @@ f1_keywords:
 - ATLCORE/ATL::CHeapPtr::CHeapPtr
 - ATLCORE/ATL::CHeapPtr::Allocate
 - ATLCORE/ATL::CHeapPtr::Reallocate
-dev_langs:
-- C++
-helpviewer_keywords:
-- CHeapPtr class
+dev_langs: C++
+helpviewer_keywords: CHeapPtr class
 ms.assetid: e5c5bfd4-9bf1-4164-8a83-8155fe253454
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 41334cd7497c9e21d1cf047d7ab304864f663758
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 47fe8c0d7475c67228fd7335b1aa167ced237202
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cheapptr-class"></a>CHeapPtr-Klasse
-Ein intelligenter Zeiger-Klasse für die Verwaltung von Heap Zeiger.  
+Ein intelligenter Zeiger-Klasse zum Verwalten von Heaps Zeiger.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member werden nicht in Anwendungen verwendet, die in der Windows-Runtime ausgeführt.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -62,9 +45,9 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
  Der Objekttyp, auf dem Heap gespeichert werden.  
   
  `Allocator`  
- Die Speicher-Allocation-Klasse verwenden.  
+ Die Arbeitsspeicher-Allocation-Klasse, verwendet.  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -76,8 +59,8 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CHeapPtr::Allocate](#allocate)|Rufen Sie diese Methode zum Belegen des Arbeitsspeichers auf dem Heap, Objekte zu speichern.|  
-|[CHeapPtr::Reallocate](#reallocate)|Rufen Sie diese Methode, um den Arbeitsspeicher auf dem Heap neu zuordnen.|  
+|[CHeapPtr::Allocate](#allocate)|Rufen Sie diese Methode, um auf dem Heap zum Speichern von Objekten belegt werden.|  
+|[CHeapPtr::Reallocate](#reallocate)|Rufen Sie diese Methode, um den Arbeitsspeicher auf dem Heap neu zuzuordnen.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
@@ -86,7 +69,7 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
 |[CHeapPtr::operator =](#operator_eq)|Der Zuweisungsoperator.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CHeapPtr`stammt von [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) und verwendet Sie standardmäßig die CRT-Routinen (in [CCRTAllocator](../../atl/reference/ccrtallocator-class.md)) zum Zuordnen und Freigeben von Arbeitsspeicher. Die Klasse [CHeapPtrList](../../atl/reference/cheapptrlist-class.md) kann verwendet werden, um eine Liste von zu erstellen. Siehe auch [CComHeapPtr](../../atl/reference/ccomheapptr-class.md), die COM-Arbeitsspeicher Reservierungsroutinen verwendet.  
+ `CHeapPtr`stammt aus [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) und verwendet Sie standardmäßig die CRT-Routinen (in [CCRTAllocator](../../atl/reference/ccrtallocator-class.md)) zu reservieren und Freigeben von Arbeitsspeicher. Die Klasse [CHeapPtrList](../../atl/reference/cheapptrlist-class.md) kann verwendet werden, um eine Liste von Zeigern Heap erstellen. Siehe auch [CComHeapPtr](../../atl/reference/ccomheapptr-class.md), die Arbeitsspeicher-Reservierungsroutinen COM verwendet.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)  
@@ -97,7 +80,7 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
  **Header:** atlcore.h  
   
 ##  <a name="allocate"></a>CHeapPtr::Allocate  
- Rufen Sie diese Methode zum Belegen des Arbeitsspeichers auf dem Heap, Objekte zu speichern.  
+ Rufen Sie diese Methode, um auf dem Heap zum Speichern von Objekten belegt werden.  
   
 ```
 bool Allocate(size_t nElements = 1) throw();
@@ -105,16 +88,16 @@ bool Allocate(size_t nElements = 1) throw();
   
 ### <a name="parameters"></a>Parameter  
  `nElements`  
- Die Anzahl der Elemente verwendet, um die Menge des zu belegenden Speichers zu berechnen. Der Standardwert ist 1.  
+ Die Anzahl von Elementen verwendet, um die Menge an Arbeitsspeicher zum Zuordnen zu berechnen. Der Standardwert ist 1.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt True zurück, wenn der Arbeitsspeicher wurde erfolgreich zugewiesen, bei einem Fehler False.  
+ Gibt "true" zurück, wenn der Speicher wurde erfolgreich zugeordnet und "false" bei einem Fehler.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Zuweisung Routinen werden verwendet, um genügend Arbeitsspeicher auf dem Heap speichern reservieren *nElement* Objekte eines Typs, der im Konstruktor definiert.  
+ Die Allocator-Routinen dienen zum Reservieren ausreichend Arbeitsspeicher auf dem Heap zum Speichern von *nElement* Objekte eines Typs, die im Konstruktor definiert.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities&#77;](../../atl/codesnippet/cpp/cheapptr-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#77](../../atl/codesnippet/cpp/cheapptr-class_1.cpp)]  
   
 ##  <a name="cheapptr"></a>CHeapPtr::CHeapPtr  
  Der Konstruktor.  
@@ -130,10 +113,10 @@ CHeapPtr(CHeapPtr<T, Allocator>& p) throw();
  Einem vorhandenen Heapzeiger oder `CHeapPtr`.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Heapzeiger kann optional mit einem vorhandenen Zeiger, erstellt werden oder ein `CHeapPtr` Objekt. Wenn dies der Fall ist, die neue `CHeapPtr` Objekt übernimmt die Verantwortung für die Verwaltung der neue Zeiger und Ressourcen.  
+ Der Heapzeiger kann optional mit einem vorhandenen Zeiger erstellt werden oder ein `CHeapPtr` Objekt. Wenn dies der Fall ist, die neue `CHeapPtr` Objekt übernimmt die Verantwortung für die Verwaltung der neue Zeiger und der Ressourcen.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities&#78;](../../atl/codesnippet/cpp/cheapptr-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#78](../../atl/codesnippet/cpp/cheapptr-class_2.cpp)]  
   
 ##  <a name="operator_eq"></a>CHeapPtr::operator =  
  Zuweisungsoperator.  
@@ -151,10 +134,10 @@ CHeapPtr<T, Allocator>& operator=(
  Gibt einen Verweis auf die aktualisierte `CHeapPtr`.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities&#80;](../../atl/codesnippet/cpp/cheapptr-class_3.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#80](../../atl/codesnippet/cpp/cheapptr-class_3.cpp)]  
   
 ##  <a name="reallocate"></a>CHeapPtr::Reallocate  
- Rufen Sie diese Methode, um den Arbeitsspeicher auf dem Heap neu zuordnen.  
+ Rufen Sie diese Methode, um den Arbeitsspeicher auf dem Heap neu zuzuordnen.  
   
 ```
 bool Reallocate(size_t nElements) throw();
@@ -162,16 +145,15 @@ bool Reallocate(size_t nElements) throw();
   
 ### <a name="parameters"></a>Parameter  
  `nElements`  
- Die neue Anzahl der Elemente, die die Menge des zu belegenden Speichers berechnet.  
+ Die neue Anzahl von Elementen verwendet, um die Menge an Arbeitsspeicher zum Zuordnen zu berechnen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt True zurück, wenn der Arbeitsspeicher wurde erfolgreich zugewiesen, bei einem Fehler False.  
+ Gibt "true" zurück, wenn der Speicher wurde erfolgreich zugeordnet und "false" bei einem Fehler.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities&#79;](../../atl/codesnippet/cpp/cheapptr-class_4.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#79](../../atl/codesnippet/cpp/cheapptr-class_4.cpp)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [CHeapPtrBase-Klasse](../../atl/reference/cheapptrbase-class.md)   
  [CCRTAllocator-Klasse](../../atl/reference/ccrtallocator-class.md)   
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)
-
+ [Klassenübersicht](../../atl/atl-class-overview.md)

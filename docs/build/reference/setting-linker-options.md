@@ -1,46 +1,47 @@
 ---
-title: "Festlegen von Linkeroptionen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Dateien [C++], LINK"
-  - "Eingabedateien [C++]"
-  - "Eingabedateien [C++], Linker"
-  - "Linker [C++], Schalter"
-  - "Linker [C++], Möglichkeiten zum Festlegen von Optionen"
-  - "Objekt-/Bibliotheksmodule"
+title: Festlegen von Linkeroptionen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- files [C++], LINK
+- input files [C++], linker
+- linker [C++], ways to set options
+- linker [C++], switches
+- input files [C++]
+- object/library modules
 ms.assetid: e08fb487-0f2e-4f24-87db-232dbc8bd2e2
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8ba42921f1e192c90e302b437b9a7d1b4e5eb34e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Festlegen von Linkeroptionen
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Linkeroptionen können innerhalb oder außerhalb der Entwicklungsumgebung festgelegt werden.  In den Themen zu den einzelnen Linkeroptionen wird erläutert, wie die jeweilige Option in der Entwicklungsumgebung eingestellt werden kann.  Eine vollständige Liste finden Sie unter [Linkeroptionen](../../build/reference/linker-options.md).  
+# <a name="setting-linker-options"></a>Festlegen von Linkeroptionen
+Optionen des Linkers können innerhalb oder außerhalb der Entwicklungsumgebung festgelegt werden. Dieser Artikel für jedes (Linkeroption) behandelt, wie sie in der Entwicklungsumgebung eingestellt werden kann. Finden Sie unter [Optionen des Linkers](../../build/reference/linker-options.md) für eine vollständige Liste.  
   
- Wenn Sie **LINK** außerhalb der Entwicklungsumgebung aufrufen, gibt es mehrere Möglichkeiten der Eingabe:  
+ Wenn Sie den LINK außerhalb der Entwicklungsumgebung ausführen, können Sie die Eingabe in einer der folgenden Arten angeben:  
   
--   [In der Befehlszeile](../../build/reference/linker-command-line-syntax.md)  
+-   Auf der [über die Befehlszeile](../../build/reference/linker-command-line-syntax.md)  
   
--   Verwenden von [Befehlsdateien](../../build/reference/link-command-files.md)  
+-   Mithilfe von [Befehlsdateien](../../build/reference/link-command-files.md)  
   
 -   In [Umgebungsvariablen](../../build/reference/link-environment-variables.md)  
   
- **LINK** verarbeitet zuerst die in der **LINK**\-Umgebungsvariablen angegebenen Optionen, danach die Optionen in der Befehlszeile und in Befehlsdateien in der angegebenen Reihenfolge.  Wenn eine Option mit unterschiedlichen Argumenten wiederholt wird, erhält das zuletzt verarbeitete den Vorrang.  
+ LINK-Optionen, erste Prozesse angegeben, in der Umgebungsvariablen LINK gefolgt von Optionen in der Reihenfolge, die sie in der Befehlszeile angegeben werden und in Befehlsdateien. Wenn eine Option mit anderen Argumenten wiederholt wird, hat das letzte Lesezeichen verarbeitet Vorrang vor.  
   
- Optionen werden auf den gesamten Buildvorgang angewendet; es ist nicht möglich, Optionen nur auf bestimmte Eingabedateien anzuwenden.  
+ Optionen gelten für den gesamten Build; keine Optionen können auf bestimmte Eingabedateien angewendet werden.  
   
-## Siehe auch  
- [Referenz zur C\/C\+\+\-Erstellung](../../build/reference/c-cpp-building-reference.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Referenz zur C/C++-Erstellung](../../build/reference/c-cpp-building-reference.md)   
  [Linkeroptionen](../../build/reference/linker-options.md)

@@ -1,59 +1,60 @@
 ---
-title: "/BASE (Basisadresse) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/base"
-  - "VC.Project.VCLinkerTool.BaseAddress"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/BASE (Linkeroption)"
-  - "@-Symbol für Basisadresse"
-  - "At-Zeichen für Basisadresse"
-  - "Basisadressen [C++]"
-  - "BASE (Linkeroption)"
-  - "-BASE (Linkeroption)"
-  - "DLLs [C++], Verknüpfen"
-  - "Umgebungsvariablen [C++], LIB"
-  - "Ausführbare Dateien [C++], Basisadresse"
-  - "Schlüsseladressengröße"
-  - "LIB-Umgebungsvariable"
-  - "Programme [C++], Basisadresse"
-  - "Programme [C++], Verhindern von Umsetzungen"
-  - "Semikolon [C++], Spezifizierer"
+title: -BASE (Basisadresse) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /base
+- VC.Project.VCLinkerTool.BaseAddress
+dev_langs: C++
+helpviewer_keywords:
+- base addresses [C++]
+- programs [C++], preventing relocation
+- semicolon [C++], specifier
+- -BASE linker option
+- key address size
+- environment variables [C++], LIB
+- programs [C++], base address
+- LIB environment variable
+- BASE linker option
+- DLLs [C++], linking
+- /BASE linker option
+- '@ symbol for base address'
+- executable files [C++], base address
+- at sign symbol for base address
 ms.assetid: 00b9f6fe-0bd2-4772-a69c-7365eb199069
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9ddf399757d881484817be676ca3077b4fc21709
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# /BASE (Basisadresse)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="base-base-address"></a>/BASE (Basisadresse)
 ```  
 /BASE:{address[,size] | @filename,key}  
 ```  
   
- Die Option **\/BASE** legt eine Basisadresse für das Programm fest und überschreibt dabei die Standardadresse für eine EXE\-Datei \(0x400000\) oder eine DLL\-Datei \(0x10000000\).  Das Betriebssystem versucht zunächst, ein Programm an seine angegebene oder vorbelegte Basisadresse zu laden.  Wenn dort nicht ausreichend Speicherplatz vorhanden ist, wird das Programm vom System verschoben.  Verwenden Sie die Option [\/FIXED](../../build/reference/fixed-fixed-base-address.md), um eine Verschiebung zu verhindern.  
+ Die/BASE-Option legt eine Basisadresse für das Programm mit den Standardspeicherort für eine .exe oder DLL-Datei zu überschreiben. Die Standard-Basisadresse für eine .exe-Datei ist 0 x 400000 für 32-Bit-Images oder 0x140000000 für 64-Bit-Images. Für eine DLL ist die Basisadresse der Standardeinstellung 0 x 10000000 für 32-Bit-Images oder 0x180000000 für 64-Bit-Images. Unter Betriebssystemen, die keine Adresse Space Layout Randomization (ASLR) unterstützen, oder wenn die /DYNAMICBASE:NO-Option festgelegt wurde versucht das Betriebssystem zuerst, ein Programm zur angegebenen oder den Standard-Basisadresse zu laden. Wenn ausreichend Speicherplatz vorhanden nicht verfügbar ist, verschiebt das System das Programm an. Verwenden, um zu verhindern, dass die Verschiebung der [/festen](../../build/reference/fixed-fixed-base-address.md) Option.  
   
- Der Linker gibt einen Fehler aus, wenn *address* kein Vielfaches von 64 K ist.  Sie können optional eine Größe für das Programm angeben, sodass der Linker eine Warnung ausgibt, wenn das Programm diese Größe übersteigt.  
+ Der Linker gibt einen Fehler aus, wenn *Adresse* ist kein Vielfaches von 64 KB. Sie können optional die Größe des Programms angeben. der Linker gibt eine Warnung aus, wenn das Programm nicht in der Größe passen, die Sie angegeben haben.  
   
- In der Befehlszeile kann die Basisadresse auch noch auf andere Art festgelegt werden, indem vor dem Dateinamen \(*filename*\) das @\-Zeichen und ein Schlüssel \(key\) für die Datei angegeben wird.  Der Dateiname steht für eine Textdatei, die die Speicherplätze und Größen aller DLLs enthält, die Ihr Programm verwendet.  Der Linker sucht entweder im angegebenen Pfad oder, falls kein Pfad angegeben wurde, in den Verzeichnissen, die in der LIB\-Umgebungsvariablen angegeben sind, nach der Datei.  Jede Zeile in *filename* entspricht einer DLL und hat die folgende Syntax:  
+ Alternative Möglichkeit zum Angeben der Basisadresse wird in der Befehlszeile mithilfe einer Antwortdatei Basisadresse. Eine Basisadresse Antwortdatei ist eine Textdatei, die die Basisadressen und optionale Größen enthält alle Ihr Programm verwendeten DLLs und einem eindeutigen Text-Schlüssel für alle Basisadressen. Verwenden Sie zum Angeben einer Basisadresse mithilfe einer Antwortdatei ein at-Zeichen (@) gefolgt vom Namen der Antwortdatei, *Filename*, gefolgt von einem Komma und dann die `key` Wert für die Basisadresse für die Verwendung in der Datei. Der Linker sucht nach *Filename* in entweder dem angegebenen Pfad, oder wenn kein Pfad angegeben wird, die in der LIB-Umgebungsvariablen angegebenen Verzeichnisse. Jede Zeile in *Filename* entspricht einer DLL und hat die folgende Syntax:  
   
 ```  
   
-key address [size] ;comment  
+key address [size] ;comment  
 ```  
   
- Der Schlüssel \(`key`\) ist eine Folge alphanumerischer Zeichen ohne Berücksichtigung der Groß\-\/Kleinschreibung.  In den meisten Fällen handelt es sich hierbei um den Namen einer DLL.  Auf den Schlüssel \(`key`\) folgt in der C\-Sprache eine Basisadresse in hexadezimaler oder dezimaler Notation sowie optional eine maximale Größe \(`size`\).  Alle drei Argumente werden durch Leerzeichen oder Tabulatorzeichen voneinander getrennt.  Der Linker gibt eine Warnmeldung aus, wenn die angegebene Größe kleiner als der virtuelle Adressraum ist, den das Programm benötigt.  Ein Kommentar \(`comment`\) wird durch ein Semikolon \(;\) gekennzeichnet und kann auf derselben oder auf einer eigenen Zeile angezeigt werden.  Der Linker lässt den gesamten Text vom Semikolon bis zum Zeilenende unberücksichtigt.  Das folgende Beispiel zeigt einen Teil einer derartigen Datei:  
+ Die `key` ist eine Zeichenfolge aus alphanumerischen Zeichen und ist nicht in der Groß-/Kleinschreibung beachtet. Es ist normalerweise der Name einer DLL, aber nicht zwingend erforderlich. Die `key` gefolgt von einer Basis *Adresse* in der Programmiersprache C, hexadezimalen oder dezimalen Notation und optional eine maximale Größe `size`. Alle drei Argumente werden durch Leerzeichen oder Tabstopps getrennt. Der Linker gibt eine Warnung aus, wenn das angegebene `size` ist kleiner als der virtuelle Adressraum, der von der Anwendung erforderlich sind. Ein `comment` wird durch ein Semikolon (;) angegeben und kann auf demselben oder auf einer separaten Zeile. Der Linker ignoriert den gesamten Text vom Semikolon am Ende der Zeile. In diesem Beispiel wird eine solche Datei:  
   
 ```  
 main   0x00010000    0x08000000    ; for PROJECT.exe  
@@ -61,31 +62,31 @@ one    0x28000000    0x00100000    ; for DLLONE.DLL
 two    0x28100000    0x00300000    ; for DLLTWO.DLL  
 ```  
   
- Wenn die Datei mit diesen Zeilen den Namen **DLLS.txt** hat, dann werden im folgenden Befehlsbeispiel diese Informationen angewendet:  
+ Wenn die Datei, die folgenden Zeilen enthält DLLS.txt aufgerufen wird, gilt der folgende Beispielbefehl diese Informationen an:  
   
 ```  
 link dlltwo.obj /dll /base:@dlls.txt,two  
 ```  
   
-## Hinweise  
- Sie können das Paging von Speicherseiten reduzieren und damit die Verarbeitungsgeschwindigkeit des Programms verbessern, indem Sie Basisadressen so zuordnen, dass DLLs sich im Adressraum nicht überschneiden.  
+## <a name="remarks"></a>Hinweise  
+ Aus Sicherheitsgründen empfiehlt Microsoft Sie verwenden die ["/ DynamicBase"](../../build/reference/dynamicbase-use-address-space-layout-randomization.md) Option Basisadressen für die ausführbaren Dateien angeben, statt. Dadurch wird ein ausführbares Image, das nach dem Zufallsprinzip zur Ladezeit ein REBASE werden kann Address Space Layout Randomization (ASLR)-Funktion von Windows. Die Option "/ DynamicBase" ist standardmäßig aktiviert.  
   
- Ein anderer Weg, die Basisadresse festzulegen, besteht darin, das *BASE*\-Argument in einer [NAME](../../build/reference/name-c-cpp.md)\-Anweisung oder [LIBRARY](../../build/reference/library.md)\-Anweisung zu verwenden.  Die Optionen **\/BASE** und [\/DLL](../../build/reference/dll-build-a-dll.md) sind zusammen das Äquivalent zur **LIBRARY**\-Anweisung.  
+ Eine weitere Möglichkeit zum Festlegen der Basisadresse ist die Verwendung der *Basis* Argument in einen [Namen](../../build/reference/name-c-cpp.md) oder [Bibliothek](../../build/reference/library.md) Anweisung. Die Base und [/DLL](../../build/reference/dll-build-a-dll.md) Optionen beieinander liegen, entspricht die **Bibliothek** Anweisung.  
   
-### So legen Sie diese Linkeroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Festlegen von Visual C\+\+\-Projekteigenschaften](../../ide/working-with-project-properties.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Klicken Sie auf den Ordner **Linker**.  
+2.  Erweitern Sie die **Linker** Ordner.  
   
-3.  Klicken Sie auf die Eigenschaftenseite **Erweitert**.  
+3.  Wählen Sie die **erweitert** Eigenschaftenseite.  
   
-4.  Ändern Sie die Eigenschaft **Basisadresse**.  
+4.  Ändern der **Basisadresse** Eigenschaft.  
   
-### So legen Sie diese Linkeroption programmgesteuert fest  
+### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
   
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.BaseAddress*>.  
+-   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.BaseAddress%2A>.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
  [Linkeroptionen](../../build/reference/linker-options.md)

@@ -32,11 +32,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9d5cf5147f3225c9cd5c6f0c91d60bcaeb75b188
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8850bd13d8aa1ed0412ae93843784cb560be4a0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getw"></a>_getw
 Ruft eine Ganzzahl aus einem Stream ab.  
@@ -54,14 +55,14 @@ int _getw(
  Zeiger auf die `FILE`-Struktur.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `_getw` gibt den gelesenen Wert in Form einer ganzen Zahl zurück. Ein Rückgabewert von `EOF` gibt einen Fehler oder ein Dateiende an. Da der `EOF`-Wert jedoch auch ein legitimer Wert einer Ganzzahl ist, verwenden Sie `feof` oder `ferror`, um eine Dateiendebedingung oder eine Fehlerbedingung zu prüfen. Wenn `stream` `NULL` ist, wird der ungültige Parameterhandler, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben, aufgerufen. Wenn die weitere Ausführung zugelassen wird, wird `errno` auf `EINVAL` gesetzt, und die Funktion gibt `EOF` zurück.  
+ `_getw` gibt den gelesenen Wert in Form einer ganzen Zahl zurück. Ein Rückgabewert von `EOF` gibt einen Fehler oder ein Dateiende an. Da der `EOF`-Wert jedoch auch ein legitimer Wert einer Ganzzahl ist, verwenden Sie `feof` oder `ferror`, um eine Dateiendebedingung oder eine Fehlerbedingung zu prüfen. Wenn `stream` `NULL` ist, wird der ungültige Parameterhandler aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird `errno` auf `EINVAL` gesetzt, und die Funktion gibt `EOF` zurück.  
   
 ## <a name="remarks"></a>Hinweise  
  Die `_getw`-Funktion liest den nächsten Binärwert des Typs `int` aus der Datei, die `stream` zugeordnet ist, und erhöht den zugeordneten Dateizeiger (sofern vorhanden), um zum nächsten ungelesenen Zeichen zu zeigen. `_getw` geht nicht von allen speziellen Elementausrichtungen im Stream aus. Probleme beim Portieren können mit `_getw` auftreten, da die Größe des `int`-Typs und die Anordnung der Bytes im `int`-Typ über Systeme hinweg unterschiedlich sind.  
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_getw`|\<stdio.h>|  
   

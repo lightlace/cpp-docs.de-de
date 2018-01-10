@@ -30,11 +30,12 @@ caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b4c5a5a76a56567e0c0dd41a70b569327eda1cd4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e0a2810a8d6602efb689896cfe35cf61338eb24f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getfma3enable-setfma3enable"></a>_get_FMA3_enable _set_FMA3_enable
 Ruft ab oder legt ein Flag, das angibt, ob die Gleitkomma Transzendente Math-Bibliotheksfunktionen FMA3 Anweisungen im kompilierten Code für X64 verwenden Plattformen.  
@@ -62,7 +63,7 @@ Da FMA3 Implementierungen verschiedene Algorithmen verwendet werden, möglicherw
   
 Die `_set_FMA3_enable` und `_get_FMA3_enable` Funktionen stehen nur in der X64 CRT-Versionen.  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_set_FMA3_enable` <br /><br /> `_get_FMA3_enable`| C: \<math.h><br /><br /> C++: \<Cmath > oder \<math.h >|  
   

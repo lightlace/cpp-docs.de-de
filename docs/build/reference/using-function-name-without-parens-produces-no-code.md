@@ -1,28 +1,28 @@
 ---
-title: "Bei Verwendung eines Funktionsnamens ohne &quot;()&quot; wird kein Code generiert"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Funktionen [C++], Ohne Klammern"
+title: Verwendung eines Funktionsnamens ohne () kein Code erzeugt | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: functions [C++], without parentheses
 ms.assetid: edf4a177-a160-44aa-8436-e077b5b27809
-caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c03706be0b9853cbbdebe79b58e410f7237692ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Bei Verwendung eines Funktionsnamens ohne &quot;()&quot; wird kein Code generiert
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Wenn ein im Programm deklarierter Funktionsname ohne Klammern verwendet wird, generiert der Compiler keinen Code.  Die geschieht unabhängig davon, ob die Funktion Parameter erwartet oder nicht, da der Compiler die Funktionsadresse berechnet. Da jedoch der Aufrufoperator "\(\)" nicht vorhanden ist, wird kein Aufruf ausgeführt.  Das Ergebnis ist ähnlich dem folgenden Beispiel:  
+# <a name="using-function-name-without--produces-no-code"></a>Bei Verwendung eines Funktionsnamens ohne "()" wird kein Code generiert
+Wenn Sie den Namen einer Funktion deklariert, die in Ihrem Programm ohne Klammern verwendet wird, gibt der Compiler Code nicht zurück. Dies tritt unabhängig davon, ob die Funktion Parameter akzeptiert, da der Compiler die Funktionsadresse berechnet; Da der Funktionsaufrufoperator "()" nicht vorhanden ist, wird kein Aufruf ausgeführt. Das Ergebnis ist ähnlich der folgenden:  
   
 ```  
 // compile with /Wall to generate a warning  
@@ -30,9 +30,9 @@ int a;
 a;      // no code generated here either  
 ```  
   
- In Visual C\+\+ wird nicht einmal bei Warnstufe 4 eine diagnostische Ausgabe generiert.  Es wird keine Warnung ausgegeben und kein Code generiert.  
+ Sogar mit der Warnstufe 4 in Visual C++ generiert keinen Diagnoseausgabe aus. Es wird keine Warnung ausgegeben; Es wird kein Code erstellt.  
   
- Der Beispielcode weiter unten wird \(mit einer Warnung\) kompiliert und ohne Fehlermeldungen korrekt verknüpft. Dennoch wird beim Verweis auf `funcn( )` kein Code generiert.  Damit der Code korrekt kompiliert wird, fügen Sie den Aufrufoperator "\(\)" hinzu.  
+ Im folgenden Beispielcode kompiliert (mit einer Warnmeldung) und ohne Fehler ordnungsgemäß verknüpft jedoch erzeugt kein Code auf `funcn( )`. Damit dies ordnungsgemäß funktioniert fügen Sie den Funktionsaufruf-Operator "()" hinzu.  
   
 ```  
 #include <stdio.h>  
@@ -48,5 +48,5 @@ void funcn() {
 }  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Codeoptimierung](../../build/reference/optimizing-your-code.md)

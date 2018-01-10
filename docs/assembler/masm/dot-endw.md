@@ -1,30 +1,29 @@
 ---
-title: ".ENDW"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - ".ENDW"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".ENDW directive"
+title: . ENDW | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .ENDW
+dev_langs: C++
+helpviewer_keywords: .ENDW directive
 ms.assetid: c288fa8a-2f1b-4a13-aba2-04157e84110e
-caps.latest.revision: 6
-caps.handback.revision: "6"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3e483e14361d6a52104cd5213ff38df7398eeaf3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# .ENDW
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Syntax  
+# <a name="endw"></a>.ENDW
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -32,8 +31,8 @@ manager: "ghogen"
   
 ```  
   
-## Hinweise  
- Weitere Informationen finden Sie unter [.WHILE](../../assembler/masm/dot-while.md).  
+## <a name="remarks"></a>Hinweise  
+ Finden Sie unter [. WÄHREND](../../assembler/masm/dot-while.md).  
   
-## Siehe auch  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)

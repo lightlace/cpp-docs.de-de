@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2486357766d2dbd9f5d4250e2d0fb38e02ba51bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 785692992863e5a1cf3800f536d3f8fe3790b4a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-overloading"></a>Funktionsüberladung
 C++ lässt die Angabe mehrerer Funktionen mit dem gleichen Namen im gleichen Gültigkeitsbereich zu. Diese werden als überladene Funktionen bezeichnet und ausführlich unter "Überladen" beschrieben. Überladene Funktionen ermöglichen Programmierern das Bereitstellen anderer Semantiken für eine Funktion in Abhängigkeit von den Typen und der Anzahl von Argumenten.  
@@ -139,7 +140,7 @@ return cout.good();
   
  Der Compiler erstellt einen Satz Kandidatenfunktionen für jedes Argument. Kandidatenfunktionen sind Funktionen, in denen das tatsächliche Argument an dieser Position in den Typ des formalen Arguments konvertiert werden kann.  
   
- Ein Satz von "am besten passenden Funktionen" wird für jedes Argument erstellt, und die ausgewählte Funktion ist die Schnittmenge aller Sätze. Wenn die Schnittmenge mehr als eine Funktion enthält, ist das Überladen mehrdeutig und generiert einen Fehler. Die letztendlich ausgewählte Funktion stimmt stets besser überein als jede andere Funktion in der Gruppe für mindestens ein Argument. Wenn dies nicht der Fall ist (wenn kein klarer Gewinner vorhanden ist), generiert der Funktionsaufruf einen Fehler.  
+ Ein Satz von „am besten passenden Funktionen“ wird für jedes Argument erstellt, und die ausgewählte Funktion ist die Schnittmenge aller Sätze. Wenn die Schnittmenge mehr als eine Funktion enthält, ist das Überladen mehrdeutig und generiert einen Fehler. Die letztendlich ausgewählte Funktion stimmt stets besser überein als jede andere Funktion in der Gruppe für mindestens ein Argument. Wenn dies nicht der Fall ist (wenn kein klarer Gewinner vorhanden ist), generiert der Funktionsaufruf einen Fehler.  
   
  Berücksichtigen Sie die folgenden Deklarationen (Funktionen sind zur Identifikation der folgenden Erläuterung als `Variant 1`, `Variant 2` und `Variant 3` gekennzeichnet):  
   
@@ -174,7 +175,7 @@ F1 = Add( 3, 6 );
   
  Der vorhergehende Funktionsaufruf erstellt die folgenden Sätze:  
   
-|Satz 1: Kandidatenfunktionen, deren erstes Argument vom Typ "int" ist|Satz 2: Kandidatenfunktionen, deren zweites Argument vom Typ "int" ist|  
+|Satz 1: Kandidatenfunktionen, deren erstes Argument vom Typ „int“ ist|Satz 2: Kandidatenfunktionen, deren zweites Argument vom Typ „int“ ist|  
 |---------------------------------------------------------------------|----------------------------------------------------------------------|  
 |Variant 2 (`int` kann in `long` mithilfe einer Standardkonvertierung konvertiert werden)|Variant 1 (`int` kann in `long` mithilfe einer Standardkonvertierung konvertiert werden)|  
   

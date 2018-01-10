@@ -33,37 +33,22 @@ f1_keywords:
 - complex/cacos
 - complex/cacosf
 - complex/cacosl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - cacos function
 - cacosf function
 - cacosl function
 ms.assetid: 78118c00-0a07-49c1-8a13-4bf19ce3aea8
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: e61472ce3ae0fa35a772f5b628b468e398c25722
-ms.contentlocale: de-de
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: de09d89b81b536bd26c0e62d8ab294df3de6c67c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cacos-cacosf-cacosl"></a>cacos, cacosf, cacosl
 Ruft den Arkuskosinus einer komplexen Zahl, mit Branch Schnitte außerhalb des Intervalls [-1, + 1] auf der tatsächlichen Achse ab.  
@@ -93,21 +78,21 @@ _Lcomplex cacosl(
  Eine komplexe Zahl, die einen Winkel als Bogenmaß darstellt  
   
 ## <a name="return-value"></a>Rückgabewert  
- Der Arkussinus von `z` als Bogenmaß. Das Ergebnis ist auf der imaginären Achse nicht eingeschränkt und liegt auf der reellen Achse im Intervall [0, π]. Wenn `z` außerhalb des Intervalls [-1, +1] liegt, tritt ein Bereichsfehler auf.  
+ Der Arkussinus von `z` als Bogenmaß. Das Ergebnis ist unbounded imaginären Achse, und klicken Sie in der im Intervall [0,-π] auf der Achse real. Wenn `z` außerhalb des Intervalls [-1, +1] liegt, tritt ein Bereichsfehler auf.  
   
 ## <a name="remarks"></a>Hinweise  
  Da C++ das Überladen zulässt, können Sie Überladungen von `cacos` aufrufen, die `_Fcomplex`- und `_Lcomplex`-Werte verwenden und zurückgeben. In einem C-Programm nimmt `cacos` immer einen `_Dcomplex` -Wert an, und gibt auch einen solchen zurück.  
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|C-Header|C++-Header|  
+|-Routine zurückgegebener Wert|C-Header|C++-Header|  
 |-------------|--------------|------------------|  
 |`cacos`,               `cacosf`, `cacosl`|\<complex.h>|\<ccomplex>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
 ## <a name="see-also"></a>Siehe auch  
- [CRT-Funktionsreferenz (alphabetisch)](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [Alphabetical Function Reference (Alphabetische Funktionsreferenz)](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [catanh, catanhf, catanhl](../../c-runtime-library/reference/catanh-catanhf-catanhl.md)   
  [ctanh, ctanhf, ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   
  [catan, catanf, catanl](../../c-runtime-library/reference/catan-catanf-catanl.md)   

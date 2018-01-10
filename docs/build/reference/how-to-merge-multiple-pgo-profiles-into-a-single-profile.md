@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dcd10c25e4512683b840bd2feeee287995ab8776
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 880e9fbba7852a9a7919e73f80b73e34394cd037
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-merge-multiple-pgo-profiles-into-a-single-profile"></a>Gewusst wie: Zusammenführen mehrerer PGO-Profile in einem einzigen Profil
 Profilgesteuerte Optimierung (PGO) eignet sich hervorragend zum Erstellen von optimierte Binärdateien, die basierend auf einem Szenario, das ein Profil erstellt wird. Aber was geschieht, wenn Sie eine Anwendung haben, die mehrere wichtige, noch unterschiedliche Szenarien hat. Erstellen Sie ein einzelnes Profil, das für die profilgesteuerte Optimierung verwenden, können wie in verschiedenen Szenarien? In Visual Studio übernimmt der PGO-Manager Pgomgr.exe diese Aufgabe.  

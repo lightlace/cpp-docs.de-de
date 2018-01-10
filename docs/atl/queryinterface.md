@@ -1,37 +1,38 @@
 ---
-title: "QueryInterface | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "QueryInterface"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Schnittstellen, Verfügbarkeit"
-  - "Schnittstellen, Zeiger"
-  - "QueryInterface-Methode"
+title: QueryInterface | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: QueryInterface
+dev_langs: C++
+helpviewer_keywords:
+- interfaces, pointers
+- interfaces, availability
+- QueryInterface method
 ms.assetid: 62fce95e-aafa-4187-b50b-e6611b74c3b3
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5714eab684066e74a6d56144d915460b4312f4c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# QueryInterface
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Obwohl es Mechanismen, durch die ein Objekt die Funktionalität ausgedrückt werden, sie bereitstellt statisch gibt \(bevor instanziiert wird\), ist der einfache COM\-Mechanismus, die **IUnknown** \-Methode zu verwenden, die [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) aufgerufen wird.  
+# <a name="queryinterface"></a>QueryInterface
+Es gibt, zwar Mechanismen, die mit dem express ein Objekt kann die Funktionalität bietet statisch (vor er instanziiert wird) der grundlegende Mechanismus von COM ist die Verwendung der **IUnknown** Methode mit dem Namen [QueryInterface ](http://msdn.microsoft.com/library/windows/desktop/ms682521).  
   
- Jede Schnittstelle wird von **IUnknown** abgeleitet, enthält jede Schnittstelle eine Implementierung von `QueryInterface`.  Unabhängig von der Implementierung fragt diese Methode ein Objekt mit dem IID der Schnittstelle ab, mit der der Aufrufer einen Zeiger wünscht.  Wenn das Objekt, die die herstellen, `QueryInterface` einen Zeiger auf die Schnittstelle abgerufen werden, während `AddRef` auch aufrufen.  Andernfalls gibt es den **E\_NOINTERFACE** Fehlercode zurück.  
+ Jede Schnittstelle abgeleitet **IUnknown**, sodass jede Schnittstelle eine Implementierung von `QueryInterface`. Unabhängig von der Implementierung fragt diese Methode ein Objekt, das über die IID der Schnittstelle, die vom Aufrufer eines Zeigers. Wenn das Objekt über diese Schnittstelle unterstützt `QueryInterface` Ruft einen Zeiger auf die Schnittstelle, während des Aufrufs auch `AddRef`. Andernfalls gibt es die **E_NOINTERFACE** Fehlercode.  
   
- Beachten Sie, dass Sie [Verweiszählung](../atl/reference-counting.md) Regeln jederzeit befolgen müssen.  Wenn Sie **Release** auf einem Schnittstellenzeiger aufrufen, um den Verweiszähler auf null zu verringern, sollten Sie diesen Zeiger nicht erneut verwenden.  Gelegentlich müssen Sie sich ein schwacher Verweis auf ein Objekt \(das heißt, möchten Sie ein Zeiger auf eine der Schnittstellen abrufen, ohne den Verweiszähler erhöht wird\), aber es ist nicht zulässig, hierzu, indem Sie `QueryInterface` gefolgt von **Release** aufrufen.  Der Zeiger abgerufenen auf diese Weise ist ungültig und sollte nicht verwendet werden.  Dies wird schneller deutlich, wenn [\_ATL\_DEBUG\_INTERFACES](../Topic/_ATL_DEBUG_INTERFACES.md) definiert wird, sodass, dieses Makro ist zu definieren eine einfache Methode zum Suchen nach \- Verweiszählungsfehlern.  
+ Beachten Sie, die Sie befolgen müssen [Verweiszählung](../atl/reference-counting.md) Regeln jederzeit. Beim Aufrufen **Version** auf einen Schnittstellenzeiger dekrementiert den Verweiszähler auf 0 (null), sollten Sie keine verwenden diesen Zeiger erneut aus. Gelegentlich müssen Sie möglicherweise einen schwachen Verweis auf ein Objekt zu erhalten (d. h., möglicherweise möchten Sie einen Zeiger auf eine der Schnittstellen zu erhalten, ohne den Verweiszähler zu inkrementieren), aber es ist nicht zulässig hierfür durch Aufrufen von `QueryInterface` gefolgt von  **Version**. Der Zeiger auf solche Weise abgerufen ist ungültig und sollte nicht verwendet werden. Dadurch wird schneller deutlich Wenn [_ATL_DEBUG_INTERFACES](reference/debugging-and-error-reporting-macros.md#_atl_debug_interfaces) definiert ist, damit diese Makros definieren eine hilfreiche Möglichkeit suchen, verweiszählung Fehler ist.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Einführung in COM](../atl/introduction-to-com.md)   
- [QueryInterface: Navigating in an Object](http://msdn.microsoft.com/library/windows/desktop/ms687230)
+ [QueryInterface: Navigieren in einem Objekt](http://msdn.microsoft.com/library/windows/desktop/ms687230)
+

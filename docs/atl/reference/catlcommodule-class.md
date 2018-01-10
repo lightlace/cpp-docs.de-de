@@ -22,11 +22,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f8a0d0e240e1c830763b5b7781fb3a1e536d4672
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 83dfbb1792a569e359692ba55fb23a8ebb580c37
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlcommodule-class"></a>CAtlComModule-Klasse
 Diese Klasse implementiert eine COM-Server-Modul.  
@@ -37,7 +38,7 @@ Diese Klasse implementiert eine COM-Server-Modul.
 class CAtlComModule : public _ATL_COM_MODULE
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
