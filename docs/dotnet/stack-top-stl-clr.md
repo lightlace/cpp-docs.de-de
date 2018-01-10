@@ -1,41 +1,42 @@
 ---
-title: "stack::top (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::top"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "top-Member [STL/CLR]"
+title: 'Stack:: Top (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::top
+dev_langs: C++
+helpviewer_keywords: top member [STL/CLR]
 ms.assetid: 5d8b7b69-336e-4d01-8b91-413a17aa2533
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4888bc63c40a76578788f3b1f90c897aed179c7d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# stack::top (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="stacktop-stlclr"></a>stack::top (STL/CLR)
 Greift auf das letzte Element zu.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 reference top();  
 ```  
   
-## Hinweise  
- Die Memberfunktion gibt einen Verweis auf das letzte Element der gesteuerten Sequenz zurück, die nicht leer sein muss.  Sie verwenden sie, um auf das letzte Element zugreifen, wenn Sie wissen, dass es vorhanden ist.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt einen Verweis auf das letzte Element der gesteuerten Sequenz, die nicht leer sein darf. Sie verwenden es, auf das letzte Element zuzugreifen, wenn Sie wissen, dass es vorhanden ist.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_stack_top.cpp   
@@ -68,14 +69,17 @@ int main()
   
 ```  
   
-  **ein b c**  
-**top\(\) \= c**  
- **ein b x**   
-## Anforderungen  
- **Header:** \<cliext\/Stapel\>  
+```Output  
+ a b c  
+top() = c  
+ a b x  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Stack >  
   
-## Siehe auch  
- [Stapel](../dotnet/stack-stl-clr.md)   
- [stack::top\_item](../dotnet/stack-top-item-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Stack (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [stack::top_item (STL/CLR)](../dotnet/stack-top-item-stl-clr.md)

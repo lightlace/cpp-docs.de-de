@@ -1,40 +1,42 @@
 ---
-title: "Current Time: Automation Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Automation classes, Aktuelle Uhrzeit"
-  - "Aktuelle Uhrzeit, COleDateTime object"
-  - "Prozeduren, getting current time"
-  - "Uhrzeit, getting current"
-  - "Uhrzeit, setting current"
+title: 'Aktuelle Zeit: Automatisierungsklassen | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- time, setting current
+- current time, COleDateTime object
+- procedures, getting current time
+- Automation classes, current time
+- time, getting current
 ms.assetid: cc967f17-1189-4cf3-85f9-1969462d5f72
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d3031d6ff22daf996ef2ab6fccff61fac313773a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Current Time: Automation Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Das folgende Verfahren veranschaulicht, wie ein `COleDateTime`\-Objekt erstellt und mit der aktuellen Zeit initialisiert.  
+# <a name="current-time-automation-classes"></a>Aktuelle Zeit: Automatisierungsklassen
+Das folgende Verfahren veranschaulicht das Erstellen einer `COleDateTime` Objekt, und initialisieren Sie es mit der aktuellen Uhrzeit.  
   
-#### Um die aktuelle Uhrzeit abrufen  
+#### <a name="to-get-the-current-time"></a>Um die aktuelle Uhrzeit abzurufen.  
   
-1.  Erstellen eines `COleDateTime`\-Objekts  
+1.  Erstellen eines `COleDateTime`-Objekts  
   
 2.  Rufen Sie `GetCurrentTime` auf.  
   
-     [!CODE [NVC_ATLMFC_Utilities#177](../CodeSnippet/VS_Snippets_Cpp/NVC_ATLMFC_Utilities#177)]  
+     [!code-cpp[NVC_ATLMFC_Utilities#177](../atl-mfc-shared/codesnippet/cpp/current-time-automation-classes_1.cpp)]  
   
-## Siehe auch  
- [Date and Time: Automation Support](../atl-mfc-shared/date-and-time-automation-support.md)
+## <a name="see-also"></a>Siehe auch  
+ [Datum und Uhrzeit: Automatisierungsunterstützung](../atl-mfc-shared/date-and-time-automation-support.md)
+

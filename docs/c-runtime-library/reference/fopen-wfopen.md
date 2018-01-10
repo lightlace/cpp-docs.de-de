@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - _tfopen
 - corecrt_wstdio/_wfopen
 - stdio/fopen
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - opening files, for file I/O
 - wfopen function
@@ -41,30 +39,16 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 7d432ab9e8bdb6f386eb6fe4fbb24d218d6a2071
-ms.contentlocale: de-de
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 01558dfa6b28f10746c1487384bad44768b5877e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fopen-wfopen"></a>fopen, _wfopen
 Öffnet eine Datei. Es sind sicherere Versionen dieser Funktionen verfügbar, die eine zusätzliche Parameterüberprüfung durchführen und Fehlercodes zurückgeben. Siehe dazu [fopen_s, _wfopen_s](../../c-runtime-library/reference/fopen-s-wfopen-s.md).  
@@ -204,7 +188,7 @@ FILE *_wfopen(
 |Zeichen in der mode-Zeichenfolge|Der entsprechende `oflag` -Wert für `_open`/`_sopen`|  
 |-------------------------------|----------------------------------------------------|  
 |`a`|`_O_WRONLY &#124; _O_APPEND` (meistens `_O_WRONLY &#124; _O_CREAT &#124; _O_APPEND`)|  
-|`a+`|`_O_RDWR &#124; _O_APPEND` (meistens `_O_RDWR &#124; _O_APPEND &#124; _O_CREAT`)|  
+|`a+`|`_O_RDWR &#124; _O_APPEND` (meistens `_O_RDWR &#124; _O_APPEND &#124; _O_CREAT` )|  
 |`r`|`_O_RDONLY`|  
 |`r+`|`_O_RDWR`|  
 |`w`|`_O_WRONLY` (meistens `_O_WRONLY &#124; _O_CREAT &#124; _O_TRUNC`)|  
@@ -230,7 +214,7 @@ FILE *_wfopen(
 |`fopen`|\<stdio.h>|  
 |`_wfopen`|\<stdio.h> oder \<wchar.h>|  
   
- `_wfopen` ist eine Microsoft-Erweiterung. Weitere Informationen zur Kompatibilität finden Sie unter [Compatibility](../../c-runtime-library/compatibility.md).  
+ `_wfopen` ist eine Microsoft-Erweiterung. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
  Die `c`, `n`, `t`, `S`, `R`, `T`, `D` `mode` sind Microsoft-Erweiterungen für `fopen` und `_fdopen` und should not be used where ANSI portability is desired.  
   

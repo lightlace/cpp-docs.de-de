@@ -1,36 +1,38 @@
 ---
-title: "CDynamicParameterAccessor::GetParamString | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicParameterAccessor.GetParamString"
-  - "GetParamString"
-  - "CDynamicParameterAccessor::GetParamString"
-  - "ATL.CDynamicParameterAccessor.GetParamString"
-  - "ATL::CDynamicParameterAccessor::GetParamString"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetParamString-Methode"
+title: 'CDynamicParameterAccessor:: Getparamstring | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicParameterAccessor.GetParamString
+- GetParamString
+- CDynamicParameterAccessor::GetParamString
+- ATL.CDynamicParameterAccessor.GetParamString
+- ATL::CDynamicParameterAccessor::GetParamString
+dev_langs: C++
+helpviewer_keywords: GetParamString method
 ms.assetid: 078c2b1c-7072-47c1-a203-f47e75363f91
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ed04d3258ad5f4d5ed68a32b32923432577453ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicParameterAccessor::GetParamString
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ruft die Zeichenfolgendaten des angegebenen Parameters ab, der im Puffer gespeichert wird.  
+# <a name="cdynamicparameteraccessorgetparamstring"></a>CDynamicParameterAccessor::GetParamString
+Ruft die Zeichenfolgendaten Status des angegebenen Parameters ab, der im Puffer gespeichert ist.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -54,32 +56,32 @@ bool GetParamString(
 ) throw( );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `nParam`  
- \[in\] die einen Parameterwert \(Offset von 1\).  Parameter 0 wird für Rückgabewerte reserviert.  In einen Parameterwert ist der Index des Parameters anhand ihrer Reihenfolge im SQL\- oder Prozeduraufruf.  Ein Beispiel finden Sie unter [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md).  
+ [in] Die Parameteranzahl (Offset von 1). Parameter 0 ist für Rückgabewerte reserviert. Die Parameteranzahl ist der Index des Parameters basierend auf der Reihenfolge der SQL-oder einen Aufruf einer gespeicherten Prozedur. Finden Sie unter [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) ein Beispiel.  
   
  `strOutput`  
- \[out\] die Zeichenfolgendaten der ANSI \(**CSimpleStringA**\) oder von Unicode \(**CSimpleStringW**\) des angegebenen Parameters.  Sie sollten einen Parameter des Typs `CString` übergeben, beispielsweise:  
+ [out] Die ANSI (**CSimpleStringA**) oder Unicode (**CSimpleStringW**) Zeichenfolgendaten des angegebenen Parameters. Übergeben Sie einen Parameter vom Typ `CString`, beispielsweise:  
   
- [!CODE [NVC_OLEDB_Consumer#9](../CodeSnippet/VS_Snippets_Cpp/NVC_OLEDB_Consumer#9)]  
+ [!code-cpp[NVC_OLEDB_Consumer#9](../../data/oledb/codesnippet/cpp/cdynamicparameteraccessor-getparamstring_1.cpp)]  
   
  `pBuffer`  
- \[out\] Ein Zeiger in ANSI \(**CHAR**\) oder Zeichenfolgendaten des Unicode \(**WCHAR**\) des angegebenen Parameters.  
+ [out] Ein Zeiger auf das ANSI (**CHAR**) oder Unicode (**WCHAR**) Zeichenfolgendaten des angegebenen Parameters.  
   
  `pMaxLen`  
- \[out\] Ein Zeiger auf die Größe des Puffers gezeigt auf von `pBuffer` \(in Zeichen, einschließlich das abschließende NULL\-Zeichen\).  
+ [out] Ein Zeiger auf die Größe des Puffers verweist `pBuffer` (in Zeichen, einschließlich das abschließende NULLZEICHEN).  
   
-## Hinweise  
- **true** Gibt bei Erfolg oder **false** auf Fehler.  
+## <a name="remarks"></a>Hinweise  
+ Gibt **"true"** bei Erfolg oder **"false"** bei einem Fehler.  
   
- Wenn `pBuffer` NULL ist, legt diese Methode die erforderliche Puffergröße im Arbeitsspeicher fest, auf den durch `pMaxLen` und geben **true** zurück, ohne die Daten kopieren gezeigt wird.  
+ Wenn `pBuffer` NULL ist, wird diese Methode die erforderliche Puffergröße festgelegt, in den Speicher verweist `pMaxLen` und zurückgeben **"true"** ohne die Daten zu kopieren.  
   
- Diese Methode schlägt fehl, wenn der Puffer `pBuffer` nicht ausreicht, um die gesamte Zeichenfolge enthalten.  
+ Diese Methode schlägt fehl, wenn der Puffer `pBuffer` ist nicht groß genug für die gesamte Zeichenfolge enthalten.  
   
- Verwenden Sie `GetParamString`, Zeichenfolgenparameterdaten aus dem Puffer abrufen.  Verwenden Sie [GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md), um nonstring Parameterdaten aus dem Puffer abrufen.  
+ Verwendung `GetParamString` abzurufenden Zeichenfolge Parameterdaten aus dem Puffer. Verwendung [GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md) abzurufenden Objektressourcen Parameterdaten aus dem Puffer.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  
   
-## Siehe auch  
- [CDynamicParameterAccessor\-Klasse](../../data/oledb/cdynamicparameteraccessor-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [CDynamicParameterAccessor-Klasse](../../data/oledb/cdynamicparameteraccessor-class.md)

@@ -30,11 +30,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 557c0451f0c33e13a8fb572f77c387b43daea6f8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a66e697a3599e7bfeef0f1d5d147e19b668222ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlfile-class"></a>CAtlFile-Klasse
 Diese Klasse bietet einen funktionsarmen Wrapper um die Windows-Datei-API-Behandlung.  
@@ -48,7 +49,7 @@ Diese Klasse bietet einen funktionsarmen Wrapper um die Windows-Datei-API-Behand
 class CAtlFile : public CHandle
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -74,7 +75,7 @@ class CAtlFile : public CHandle
   
 ### <a name="protected-data-members"></a>Geschützte Datenmember  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |[CAtlFile::m_pTM](#m_ptm)|Zeiger auf `CAtlTransactionManager` Objekt|  
   

@@ -54,11 +54,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8a40beb8f814fd4a2761242f9b93c1ae4b3b7387
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 49684bcb7f1022bad7a0f3dad3a0ec5692373996
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vfprintfp-vfprintfpl-vfwprintfp-vfwprintfpl"></a>_vfprintf_p, _vfprintf_p_l, _vfwprintf_p, _vfwprintf_p_l
 Schreibt mithilfe eines Zeigers auf eine Argumentliste eine formatierte Ausgabe mit der Möglichkeit, die Reihenfolge anzugeben, in der die Argumente in der Formatzeichenfolge verwendet werden.  
@@ -109,11 +110,11 @@ int _vfwprintf_p_l(
  `_vfprintf_p` und `_vfwprintf_p` geben die Anzahl der geschriebenen Zeichen ohne das abschließende Nullzeichen zurück oder einen negativen Wert, wenn ein Ausgabefehler auftritt.  
   
 ## <a name="remarks"></a>Hinweise  
- Jede dieser Funktionen verwendet einen Zeiger auf eine Argumentliste und formatiert und schreibt anschließend die vorhandenen Daten in `stream`. Diese Funktionen unterscheiden sich von den Versionen von `_vfprint_s` und `_vfwprint_s` nur darin, dass sie Positionsparameter unterstützen. Weitere Informationen finden Sie unter [printf_p Positional Parameters (printf_p-Positionsparameter)](../../c-runtime-library/printf-p-positional-parameters.md).  
+ Jede dieser Funktionen verwendet einen Zeiger auf eine Argumentliste und formatiert und schreibt anschließend die vorhandenen Daten in `stream`. Diese Funktionen unterscheiden sich von den Versionen von `_vfprint_s` und `_vfwprint_s` nur darin, dass sie Positionsparameter unterstützen. Weitere Informationen finden Sie unter [printf-Positionsparameter](../../c-runtime-library/printf-p-positional-parameters.md).  
   
  `_vfwprintf_p` ist die Breitzeichenversion von `_vprintf_p`; die zwei Funktionen verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. `_vprintf_p` unterstützt derzeit die Ausgabe in einen UNICODE-Stream nicht.  
   
- Die Versionen dieser Funktionen mit dem `_l`-Suffix sind beinahe identisch, verwenden jedoch den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Threadgebietsschemas.  
+ Die Versionen dieser Funktionen mit dem `_l` -Suffix sind beinahe identisch, verwenden jedoch den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Threadgebietsschemas.  
   
 > [!IMPORTANT]
 >  Stellen Sie sicher, dass `format` keine benutzerdefinierte Zeichenfolge ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
@@ -129,7 +130,7 @@ int _vfwprintf_p_l(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|Optionale Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionale Header|  
 |-------------|---------------------|----------------------|  
 |`_vfprintf_p`, `_vfprintf_p_l`|\<stdio.h> und \<stdarg.h>|\<varargs.h>*|  
 |`_vfwprintf_p`, `_vfwprintf_p_l`|\<stdio.h> oder \<wchar.h> und \<stdarg.h>|\<varargs.h>*|  
@@ -139,7 +140,7 @@ int _vfwprintf_p_l(
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Stream I/O (Stream-E/A)](../../c-runtime-library/stream-i-o.md)   
+ [Stream-E/A](../../c-runtime-library/stream-i-o.md)   
  [vprintf Functions (vprintf-Funktionen)](../../c-runtime-library/vprintf-functions.md)   
  [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
  [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   

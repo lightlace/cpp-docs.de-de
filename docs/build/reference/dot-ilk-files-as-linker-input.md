@@ -1,30 +1,31 @@
 ---
-title: "ILK-Dateien als Eingabe f&#252;r den Linker"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".ilk-Dateien"
-  - "ILK-Dateien"
+title: . ILK-Dateien als Linkereingabe | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ILK files
+- .ilk files
 ms.assetid: 7324c104-9e5d-423d-b268-b59f92607bf2
-caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1b91d229e1c607be1ed35685ab7bfdffe2271e16
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# ILK-Dateien als Eingabe f&#252;r den Linker
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Beim inkrementellen Verknüpfen aktualisiert LINK die ILK\-Statusdatei, die während der ersten inkrementellen Verknüpfung erstellt wurde.  Diese Datei hat denselben Basisnamen wie die EXE\- oder DLL\-Datei und verfügt über die Erweiterung **.ilk**.  Bei nachfolgenden inkrementellen Verknüpfungsvorgängen aktualisiert **LINK** die ILK\-Datei.  Wenn sie fehlt, führt **LINK** einen vollständigen Verknüpfungsvorgang durch und erstellt eine neue ILK\-Datei.  Wenn die ILK\-Datei nicht verwendet werden kann, führt **LINK** einen nicht inkrementellen Verknüpfungsvorgang durch.  Weitere Einzelheiten über inkrementelles Verknüpfen finden Sie unter der Option [\/INCREMENTAL \(Inkrementell verknüpfen\)](../../build/reference/incremental-link-incrementally.md).  
+# <a name="ilk-files-as-linker-input"></a>ILK-Dateien als Eingabe für den Linker
+Beim inkrementellen Verknüpfen aktualisiert LINK die ILK-Status-Datei, die er während der ersten inkrementellen Link erstellt hat. Diese Datei hat den gleichen Basisnamen wie die .exe oder .dll-Datei, und es hat die Erweiterung .ilk. Während der spätere inkrementelle Links aktualisiert LINK die ILK-Datei. Wenn die ILK-Datei nicht vorhanden ist, wird LINK führt einen vollständigen Verknüpfungsvorgang durch und erstellt eine neue ILK-Datei. Wenn die ILK-Datei unbrauchbar ist, führt ein nicht inkrementelles Verknüpfen. Weitere Informationen zu inkrementellen verknüpfen, finden Sie unter der [inkrementell verknüpfen (/ INCREMENTAL)](../../build/reference/incremental-link-incrementally.md) Option.  
   
-## Siehe auch  
- [LINK\-Eingabedateien](../../build/reference/link-input-files.md)   
+## <a name="see-also"></a>Siehe auch  
+ [LINK-Eingabedateien](../../build/reference/link-input-files.md)   
  [Linkeroptionen](../../build/reference/linker-options.md)

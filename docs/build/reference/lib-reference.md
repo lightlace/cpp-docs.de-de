@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4593e3fb5cdd511bde8beb262c8a3cb9fd247fd0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4db7def12f6b5d08c774bef51e2a15ea5994f5a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lib-reference"></a>LIB-Referenz
 Die Microsoft-Bibliotheks-Manager (LIB.exe) erstellt und verwaltet eine Bibliothek mit Objektdateien Common Object File Format (COFF). LIB kann auch zum Erstellen von Exportdateien und Importbibliotheken Verweise auf exportierte Definitionen verwendet werden.  

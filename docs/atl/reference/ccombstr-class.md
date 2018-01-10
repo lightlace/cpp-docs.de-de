@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -31,37 +30,22 @@ f1_keywords:
 - ATLBASE/ATL::CComBSTR::ToUpper
 - ATLBASE/ATL::CComBSTR::WriteToStream
 - ATLBASE/ATL::CComBSTR::m_str
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - BSTRs, wrapper
 - CComBSTR class
 - CComBSTR
 ms.assetid: 8fea1879-a05e-47a5-a803-8dec60eaa534
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 4c7ab8630a4793f0363567fa00cecb8a3bc19e3b
-ms.contentlocale: de-de
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 604e3b9841ab628343a48e72612d2e50e85913f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccombstr-class"></a>CComBSTR-Klasse
 Diese Klasse ist ein Wrapper für `BSTR`s.  
@@ -72,7 +56,7 @@ Diese Klasse ist ein Wrapper für `BSTR`s.
 class CComBSTR
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -111,9 +95,9 @@ class CComBSTR
 |[CComBSTR::operator BSTR](#operator_bstr)|Wandelt eine `CComBSTR` -Objekt an eine `BSTR`.|  
 |[CComBSTR::operator!](#operator_not)|Gibt `true` oder `false`, je nachdem, ob `m_str`ist `NULL`.|  
 |[CComBSTR::operator! =](#operator_neq)|Vergleicht eine `CComBSTR` mit einer Zeichenfolge.|  
-|[CComBSTR::operator /](#operator_amp)|Gibt die Adresse des `m_str`.|  
+|[CComBSTR::operator &](#operator_amp)|Gibt die Adresse des `m_str`.|  
 |[CComBSTR::operator +=](#operator_add_eq)|Fügt eine `CComBSTR` auf das Objekt.|  
-|[CComBSTR::operator](#operator_lt)|Vergleicht eine `CComBSTR` mit einer Zeichenfolge.|  
+|[CComBSTR::operator <](#operator_lt)|Vergleicht eine `CComBSTR` mit einer Zeichenfolge.|  
 |[CComBSTR::operator =](#operator_eq)|Ein Wert zugewiesen `m_str`.|  
 |[CComBSTR::operator ==](#operator_eq_eq)|Vergleicht eine `CComBSTR` mit einer Zeichenfolge.|  
 |[CComBSTR::operator >](#operator_gt)|Vergleicht eine `CComBSTR` mit einer Zeichenfolge.|  
@@ -172,7 +156,7 @@ HRESULT Append(LPCOLESTR lpsz, int nLen) throw();
  Eine ANSI-Zeichenfolge werden in Unicode konvertiert werden, bevor Sie angefügt wird.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities #32](../../atl/codesnippet/cpp/ccombstr-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#32](../../atl/codesnippet/cpp/ccombstr-class_1.cpp)]  
   
 ##  <a name="appendbstr"></a>CComBSTR::AppendBSTR  
  Fügt das angegebene `BSTR` auf [M_str](#m_str).  
@@ -192,7 +176,7 @@ HRESULT AppendBSTR(BSTR p) throw();
  Übergeben Sie eine gewöhnliche Breitzeichen-Zeichenfolge darf nicht an diese Methode werden. Der Compiler kann nicht den Fehler abfangen und zur Laufzeit Fehler auftreten, werden.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities #33](../../atl/codesnippet/cpp/ccombstr-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#33](../../atl/codesnippet/cpp/ccombstr-class_2.cpp)]  
   
 ##  <a name="appendbytes"></a>CComBSTR::AppendBytes  
  Fügt die angegebene Anzahl von Bytes, die [M_str](#m_str) ohne Konvertierung.  
@@ -212,7 +196,7 @@ HRESULT AppendBytes(const char* lpsz, int nLen) throw();
  `S_OK`Bei Erfolg oder ein Standard, der `HRESULT` Fehlerwert.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities #34](../../atl/codesnippet/cpp/ccombstr-class_3.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#34](../../atl/codesnippet/cpp/ccombstr-class_3.cpp)]  
   
 ##  <a name="arraytobstr"></a>CComBSTR::ArrayToBSTR  
  Freigegeben vorhandene Zeichenfolgen frei, die der `CComBSTR` -Objekt, und erstellt dann eine `BSTR` vom ersten Zeichen der einzelnen Elemente im Safearray und fügt es der `CComBSTR` Objekt.  
@@ -260,7 +244,7 @@ void Attach(BSTR src) throw();
 >  Wenn diese Methode implementiert `m_str` nicht **NULL**.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities #35](../../atl/codesnippet/cpp/ccombstr-class_4.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#35](../../atl/codesnippet/cpp/ccombstr-class_4.cpp)]  
   
 ##  <a name="bstrtoarray"></a>CComBSTR::BSTRToArray  
  Erstellt eine nullbasierte eindimensionale Safearray, wobei jedes Element des Arrays ist ein Zeichen aus dem `CComBSTR` Objekt.  
@@ -290,7 +274,7 @@ unsigned int ByteLength() const throw();
  Gibt 0 zurück, wenn `m_str` ist **NULL**.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities #36](../../atl/codesnippet/cpp/ccombstr-class_5.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#36](../../atl/codesnippet/cpp/ccombstr-class_5.cpp)]  
   
 ##  <a name="ccombstr"></a>CComBSTR::CComBSTR  
  Der Konstruktor. Der Standardkonstruktor legt die [M_str](#m_str) Element **NULL**.  
@@ -333,7 +317,7 @@ CComBSTR(CComBSTR&& src) throw(); // (Visual Studio 2017)
  Der Destruktor gibt die Zeichenfolge frei, auf die von `m_str` gezeigt wird.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities #37](../../atl/codesnippet/cpp/ccombstr-class_6.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#37](../../atl/codesnippet/cpp/ccombstr-class_6.cpp)]  
   
 ##  <a name="dtor"></a>CComBSTR:: ~ CComBSTR  
  Der Destruktor.  
@@ -353,10 +337,10 @@ BSTR Copy() const throw();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Eine Kopie der [M_str](#m_str) Member. If `m_str` is **NULL**, returns **NULL**.  
+ Eine Kopie der [M_str](#m_str) Member. Wenn `m_str` ist **NULL**, gibt **NULL**.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities #38](../../atl/codesnippet/cpp/ccombstr-class_7.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#38](../../atl/codesnippet/cpp/ccombstr-class_7.cpp)]  
   
 ##  <a name="copyto"></a>CComBSTR::CopyTo  
  Zum Belegen und gibt eine Kopie des [M_str](#m_str) über den Parameter.  
@@ -381,7 +365,7 @@ HRESULT CopyTo(VARIANT* pvarDest) throw();
  Nach dem Aufrufen dieser Methode die **VARIANT** verweist `pvarDest` vom Typ `VT_BSTR`.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities #39](../../atl/codesnippet/cpp/ccombstr-class_8.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#39](../../atl/codesnippet/cpp/ccombstr-class_8.cpp)]  
   
 ##  <a name="detach"></a>CComBSTR::Detach  
  Trennt [M_str](#m_str) aus der `CComBSTR` -Objekt und stellt `m_str` auf **NULL**.  
@@ -394,7 +378,7 @@ BSTR Detach() throw();
  Die `BSTR` zugeordneten der `CComBSTR` Objekt.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities #-40](../../atl/codesnippet/cpp/ccombstr-class_9.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#40](../../atl/codesnippet/cpp/ccombstr-class_9.cpp)]  
   
 ##  <a name="empty"></a>CComBSTR::Empty  
  Gibt die [M_str](#m_str) Member.  
@@ -404,7 +388,7 @@ void Empty() throw();
 ```  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities #41](../../atl/codesnippet/cpp/ccombstr-class_10.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#41](../../atl/codesnippet/cpp/ccombstr-class_10.cpp)]  
   
 ##  <a name="length"></a>CComBSTR::Length  
  Gibt die Anzahl der Zeichen in `m_str`, ausgenommen das abschließende Nullzeichen.  
@@ -417,7 +401,7 @@ unsigned int Length() const throw();
  Die Länge der [M_str](#m_str) Member.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities #42](../../atl/codesnippet/cpp/ccombstr-class_11.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#42](../../atl/codesnippet/cpp/ccombstr-class_11.cpp)]  
   
 ##  <a name="loadstring"></a>CComBSTR::LoadString  
  Lädt eine Zeichenfolgenressource gemäß `nID` und speichert sie in dieses Objekt.  
@@ -428,7 +412,7 @@ bool LoadString(UINT nID) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- Finden Sie unter [LoadString](http://msdn.microsoft.com/library/windows/desktop/ms647486) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Finden Sie unter [LoadString](http://msdn.microsoft.com/library/windows/desktop/ms647486) im Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt **"true"** gibt zurück, wenn die Zeichenfolge erfolgreich geladen wurde; andernfalls ist, **"false"**.  
@@ -437,7 +421,7 @@ bool LoadString(UINT nID) throw();
  Die erste Funktion lädt die Ressource aus dem Modul identifiziert, die von Ihnen über die `hInst` Parameter. Die zweite Funktion lädt die Ressource aus der zugeordneten Ressourcenmodul der [CComModule](../../atl/reference/ccommodule-class.md)-abgeleitetes Objekt in diesem Projekt verwendet.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities #43](../../atl/codesnippet/cpp/ccombstr-class_12.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#43](../../atl/codesnippet/cpp/ccombstr-class_12.cpp)]  
   
 ##  <a name="m_str"></a>CComBSTR::m_str  
  Enthält die `BSTR` zugeordneten der `CComBSTR` Objekt.  
@@ -447,7 +431,7 @@ BSTR m_str;
 ```  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities #49](../../atl/codesnippet/cpp/ccombstr-class_13.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#49](../../atl/codesnippet/cpp/ccombstr-class_13.cpp)]  
   
 ##  <a name="operator_bstr"></a>CComBSTR::operator BSTR  
  Wandelt eine `CComBSTR` -Objekt an eine `BSTR`.  
@@ -476,7 +460,7 @@ bool operator!() const throw();
  Dieser Operator überprüft nur für einen NULL-Wert, nicht für eine leere Zeichenfolge.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities #35](../../atl/codesnippet/cpp/ccombstr-class_4.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#35](../../atl/codesnippet/cpp/ccombstr-class_4.cpp)]  
   
 ##  <a name="operator_neq"></a>CComBSTR::operator! =  
  Gibt das logische Gegenteil dieses [Operator ==](#operator_eq_eq).  
@@ -517,9 +501,9 @@ BSTR* operator&() throw();
  Diese Assertion ist standardmäßig nicht aktiviert. Definieren Sie `ATL_CCOMBSTR_ADDRESS_OF_ASSERT` So aktivieren Sie diese Assertion.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities #46](../../atl/codesnippet/cpp/ccombstr-class_14.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#46](../../atl/codesnippet/cpp/ccombstr-class_14.cpp)]  
   
- [!code-cpp[NVC_ATL_Utilities #47](../../atl/codesnippet/cpp/ccombstr-class_15.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#47](../../atl/codesnippet/cpp/ccombstr-class_15.cpp)]  
   
 ##  <a name="operator_add_eq"></a>CComBSTR::operator +=  
  Fügt eine Zeichenfolge, die die `CComBSTR` Objekt.  
@@ -540,7 +524,7 @@ CComBSTR& operator+= (const LPCOLESTR pszSrc);
  `CComBSTR`s im Kontext des Benutzers Standardgebietsschema Textbefehl verglichen werden. Die **LPCOLESTR** Vergleich erfolgt mit `memcmp` auf die unformatierten Daten in jeder Zeichenfolge. Die `LPCSTR` Vergleich erfolgt auf die gleiche Weise, sobald eine temporäre Unicode Kopie von `pszSrc` erstellt wurde. Der endgültige Vergleichsoperator vergleicht nur für die enthaltene Zeichenfolge **NULL**.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities #48](../../atl/codesnippet/cpp/ccombstr-class_16.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#48](../../atl/codesnippet/cpp/ccombstr-class_16.cpp)]  
   
 ##  <a name="operator_lt"></a>CComBSTR::operator&lt;  
  Vergleicht eine `CComBSTR` mit einer Zeichenfolge.  
@@ -630,7 +614,7 @@ HRESULT ReadFromStream(IStream* pStream) throw();
  **ReadToStream** erfordert den Inhalt des Streams an der aktuellen Position für die Kompatibilität mit dem Datenformat geschrieben, die durch einen Aufruf von [WriteToStream](#writetostream).  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities #44](../../atl/codesnippet/cpp/ccombstr-class_17.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#44](../../atl/codesnippet/cpp/ccombstr-class_17.cpp)]  
   
 ##  <a name="tolower"></a>CComBSTR::ToLower  
  Konvertiert die darin enthaltenen Zeichenfolge in Kleinbuchstaben.  
@@ -676,9 +660,8 @@ HRESULT WriteToStream(IStream* pStream) throw();
  Kann neu erstellt einen BSTR aus dem Inhalt der Stream unter Verwendung der [ReadFromStream](#readfromstream) Funktion.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities #45](../../atl/codesnippet/cpp/ccombstr-class_18.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#45](../../atl/codesnippet/cpp/ccombstr-class_18.cpp)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [Klassenübersicht](../../atl/atl-class-overview.md)   
  [ATL und MFC-Makros zur Zeichenfolgenkonvertierung](string-conversion-macros.md)
-

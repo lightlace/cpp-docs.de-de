@@ -1,32 +1,31 @@
 ---
-title: ".NOLIST"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - ".NOLIST"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".NOLIST directive"
+title: . NOLIST | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .NOLIST
+dev_langs: C++
+helpviewer_keywords: .NOLIST directive
 ms.assetid: 78f5cd18-7d2d-46ef-8325-11d6a501ee2d
-caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5c16db3acb86a77215059da7705e9104f9fe6f23
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# .NOLIST
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Unterdrückt Programm aufgeführt.  
+# <a name="nolist"></a>.NOLIST
+Unterdrückt die Programm-Auflistung.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -34,8 +33,8 @@ Unterdrückt Programm aufgeführt.
   
 ```  
   
-## Hinweise  
- Identisch mit [.XLIST](../../assembler/masm/dot-xlist.md).  
+## <a name="remarks"></a>Hinweise  
+ Identisch mit [. XLIST](../../assembler/masm/dot-xlist.md).  
   
-## Siehe auch  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)

@@ -1,34 +1,35 @@
 ---
-title: "&lt;list&gt; (Visual C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "list"
-  - "<list>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<list> C++-XML-Tag"
-  - "list (C++-XML-Tag)"
+title: '&lt;Liste&gt; (Visual C++) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- list
+- <list>
+dev_langs: C++
+helpviewer_keywords:
+- list C++ XML tag
+- <list> C++ XML tag
 ms.assetid: c792a10b-0451-422c-9aa0-604116e69d64
-caps.latest.revision: 8
-caps.handback.revision: "8"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e04fb5f7ff2ba22b53c0fe163455bfdb666f9b9f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# &lt;list&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Der \<listheader\>\-Block wird zur Definition der Überschriftenzeile einer Tabelle oder einer Definitionsliste verwendet.  Wenn eine Tabelle definiert wird, muss nur ein Eintrag für "term" in der Überschrift angegeben werden.  
+# <a name="ltlistgt-visual-c"></a>&lt;Liste&gt; (Visual C++)
+Der \<listheader>-Block wird verwendet, um die Überschriftenzeile einer Tabelle oder einer Definitionsliste zu definieren. Bei der Definition einer Tabelle müssen Sie nur einen Eintrag für „term“ in der Überschrift angeben.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <list type="bullet" | "number" | "table">  
@@ -43,21 +44,21 @@ Der \<listheader\>\-Block wird zur Definition der Überschriftenzeile einer Tabe
 </list>  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `term`  
- Ein zu definierender Term, der in `description` definiert wird.  
+ Ein zu definierender Begriff, der in `description` definiert wird.  
   
  `description`  
- ein Element in einer Aufzählung oder nummerierten Liste oder die Definition eines `term`s.  
+ Entweder ein Element einer Aufzählung oder nummerierten Liste oder die Definition eines `term`.  
   
-## Hinweise  
- Jedes Element der Liste wird mit einem \<item\>\-Block angegeben.  Beim Erstellen einer Definitionsliste müssen Sie sowohl `term` als auch `description` angeben.  Für eine Tabelle, eine Aufzählung oder eine nummerierte Liste muss jedoch nur ein Eintrag für `description` angegeben werden.  
+## <a name="remarks"></a>Hinweise  
+ Jedes Element der Liste wird mit einem \<item>-Block angegeben. Beim Erstellen einer Definitionsliste müssen Sie sowohl `term` als auch `description` angeben. Für eine Tabelle, eine Auflistung oder eine nummerierte Liste muss jedoch nur ein Eintrag für `description` angegeben werden.  
   
- Eine Liste oder Tabelle kann so viele \<item\>\-Blöcke enthalten, wie benötigt werden.  
+ Eine Liste oder Tabelle kann so viele \<item>-Blöcke besitzen wie nötig.  
   
- Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit ["\/doc"](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.  
+ Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // xml_list_tag.cpp  
@@ -76,5 +77,5 @@ Der \<listheader\>\-Block wird zur Definition der Überschriftenzeile einer Tabe
 class MyClass {};  
 ```  
   
-## Siehe auch  
- [XML\-Dokumentation](../ide/xml-documentation-visual-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [XML-Dokumentation](../ide/xml-documentation-visual-cpp.md)

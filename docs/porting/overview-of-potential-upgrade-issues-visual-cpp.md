@@ -11,11 +11,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 977c13eabe0f25081b1bfe6b25e615002f0e6987
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: 1f1a727920ffe5e79bd62fd877e191dc6f6f3cc3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Überblick über potenzielle Aktualisierungsprobleme (Visual C++)
 Im Laufe der Jahre wurde der Visual C++-Compiler vielen Änderungen unterzogen, neben Änderungen an der Programmiersprache C++ selbst, an der C++-Standardbibliothek, der C-Laufzeit (CRT) und an anderen Bibliotheken wie MFC und ATL. Daher können beim Aktualisieren einer Anwendung aus einer früheren Version von Visual C++ Compiler- und Linkerfehler sowie Warnungen im Code auftreten, der zuvor ordnungsgemäß kompiliert wurde. Je älter die ursprünglichen Codebasis, desto größer die Wahrscheinlichkeit derartiger Fehler. Diese Übersicht fasst die am häufigsten auftretenden Problemklassen zusammen, mit denen Sie sich wahrscheinlich konfrontiert sehen werden, und enthält Links zu ausführlicheren Informationen.  

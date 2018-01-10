@@ -43,11 +43,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 641ea3d50be4d739b19ea8e53424cc311016362b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 26d4a0e32a8b24a72447cf4227be128659316c0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="device-contexts"></a>Gerätekontexte
 Ein Gerätekontext ist eine Windows-Datenstruktur mit Informationen über die Zeichnungsattribute von einem Gerät wie einer Bildschirmanzeige oder einen Drucker. Alle zeichnen-Aufrufe erfolgen über einen gerätkontextobjekt, die Windows-APIs für das Zeichnen von Linien, Formen und Text kapselt. Gerätekontexte ermöglichen geräteunabhängige Zeichnung in Windows. Gerätekontexte können verwendet werden, auf dem Bildschirm, an den Drucker oder in eine Metadatei gezeichnet werden soll.  

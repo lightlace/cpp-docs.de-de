@@ -1,30 +1,31 @@
 ---
-title: "Platform::Details-Namespace | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::Details"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Platform::Details-Namespace"
+title: 'Platform:: Details-Namespace | Microsoft Docs'
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: VCCORLIB/Platform::Details
+dev_langs: C++
+helpviewer_keywords: Platform::Details Namespace
 ms.assetid: e13c1f93-c823-4f0f-a3ee-2429bfd184db
-caps.latest.revision: 4
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7a093998cb5e6da2e45566e2f4221c904c213f8e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Platform::Details-Namespace
+# <a name="platformdetails-namespace"></a>Platform::Details-Namespace
 Dieser Namespace ist nur für den internen Gebrauch vorgesehen und nicht zur Verwendung bei der Entwicklung bestimmt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
   
@@ -33,31 +34,31 @@ namespace Platform {
 }}  
 ```  
   
-## Mitglieder  
+### <a name="members"></a>Member  
  Obwohl dieser Namespace für die interne Verwendung vorgesehen ist, können Browser die folgenden Member dieses Namespace anzeigen.  
   
-|Name|Hinweis|  
-|----------|-------------|  
+|name|Hinweis|  
+|----------|------------|  
 |Konsole|Klasse. Zeigt die Ausgabe in Komponententests an.|  
-|\_GUID|Struktur|  
+|_GUID|Struktur|  
 |Heap|Klasse|  
 |HeapAllocationTrackingLevel|Enumeration|  
 |HeapEntryHandler|Delegate|  
-|IActivationFactory|Schnittstelle|  
-|IAgileObject|Schnittstelle|  
-|IClassFactory|Schnittstelle|  
-|IEquatable|Schnittstelle|  
+|IActivationFactory|Interface|  
+|IAgileObject|Interface|  
+|IClassFactory|Interface|  
+|IEquatable|Interface|  
 |IPrintable|Schnittstelle|  
-|IWeakReference|Schnittstelle|  
-|IWeakReferenceSource|Schnittstelle|  
+|IWeakReference|Interface|  
+|IWeakReferenceSource|Interface|  
   
-## Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `Platform`  
   
-## Anforderungen  
+### <a name="requirements"></a>Anforderungen  
  **Metadaten:** platform.winmd  
   
  **Namespace:** Platform::Details  
   
-## Siehe auch  
- [\(NOTINBUILD\) Plattformnamespace](http://msdn.microsoft.com/de-de/f3ce3eab-028c-4204-ba9f-9ab8af17c8c4)
+## <a name="see-also"></a>Siehe auch  
+ [Platform-Namespace](platform-namespace-c-cx.md)

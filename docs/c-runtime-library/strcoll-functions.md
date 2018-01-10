@@ -27,18 +27,19 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 224c30dfbc79ab91e60f7f55f4835d3f627c454c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e5f025d90d4ffac5f9dc293f621023591b5eb4f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strcoll-functions"></a>strcoll-Funktionen
 Jede der `strcoll`- und `wcscoll`-Funktionen vergleicht zwei Zeichenfolgen gemäß der Kategorieneinstellung für `LC_COLLATE` der aktuell verwendeten Gebietsschemacodepage. Jede der `_mbscoll`-Funktionen vergleicht zwei Zeichenfolgen gemäß der aktuell verwendeten Multibytecodepage. Verwenden Sie die `coll`-Funktionen für Zeichenfolgenvergleiche, wenn es in der aktuellen Codepage einen Unterschied zwischen der Reihenfolge des Zeichensatzes und der lexikografischen Zeichenreihenfolge gibt, und dieser Unterschied für den Zeichenfolgenvergleich relevant ist. Verwenden Sie die entsprechenden `cmp`-Funktionen, um nur Gleichheit der Zeichenfolgen zu prüfen.  
   
 ### <a name="strcoll-functions"></a>strcoll-Funktionen  
   
-|SBCS|Unicode|MBCS|Beschreibung|  
+|SBCS|Unicode|MBCS|description|  
 |----------|-------------|----------|-----------------|  
 |[strcoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|[wcscoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|[_mbscoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|Sortieren von zwei Zeichenfolgen|  
 |[_stricoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|[_wcsicoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|[_mbsicoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|Sortieren von zwei Zeichenfolgen (ohne Berücksichtigung von Groß-/Kleinschreibung)|  

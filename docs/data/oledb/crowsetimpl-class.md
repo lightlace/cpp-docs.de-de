@@ -18,11 +18,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2390a474e289ea41fd676759d12b92e8a22e462a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1ae1bb857353b72551e4766516c571c0091062d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crowsetimpl-class"></a>CRowsetImpl-Klasse
 Stellt eine Standardimplementierung der OLE DB-Rowset ohne mehrfache Vererbung von vielen Implementierung Schnittstellen bereit.  
@@ -57,7 +60,7 @@ class CRowsetImpl :
  `ArrayType`  
  Die Klasse, die als Speicher für das Rowset Daten fungieren sollen. Dieser Parameter ist standardmäßig `CAtlArray`, aber sie können jede Klasse, die die erforderliche Funktionen unterstützt werden.  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="methods"></a>Methoden  
   

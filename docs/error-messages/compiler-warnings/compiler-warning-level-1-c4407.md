@@ -1,36 +1,35 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4407 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4407"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4407"
+title: Compilerwarnung (Stufe 1) C4407 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4407
+dev_langs: C++
+helpviewer_keywords: C4407
 ms.assetid: 32bc2c21-363a-4bb8-b486-725faeaededc
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 736b5f99115d6e2a39ee77005c7b3248ac191453
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 1) C4407
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Umwandeln von verschiedenen Zeigern in Memberrepräsentationen. Der Compiler generiert möglicherweise den falschen Code.  
+# <a name="compiler-warning-level-1-c4407"></a>Compilerwarnung (Stufe 1) C4407
+eine Umwandlung zwischen verschiedenen Zeiger auf Member-Darstellungen, möglicherweise Compiler fehlerhaftem Code generieren  
   
- Es wurde eine falsche Typumwandlung entdeckt.  
+ Eine falsche Umwandlung wurde erkannt.  
   
- C4407 kann aufgrund einer Verbesserung der Compilerkonformität in Visual C\+\+ 2005 ausgegeben werden.  "pointer\-to\-member" muss jetzt mit einem qualifizierten Namen und dem Adressoperator \(&\).  
+ C4407 kann aufgrund einer konformitätsverbesserung für Compiler generiert werden, die in Visual C++ 2005 erstellt wurde. Pointer-to-Member erfordert jetzt ein qualifizierter Name und Address-of-Operators (&).  
   
- C4407 kann auftreten, wenn Sie einen Memberzeiger für mehrfache Vererbung in einen Memberzeiger für einfache Vererbung umwandeln.  In manchen Fällen treten hierbei keine Probleme auf, in anderen Fällen stehen jedoch mit der Darstellung des Memberzeigers für einfache Vererbung nur unzureichende Informationen zur Verfügung.  Das Problem kann u. U. behoben werden, indem Sie mit der **\/vmm**\-Option kompilieren \(weitere Informationen finden Sie unter [\/vmm, \/vms, \/vmv \(Immer allgemeiner Zweck\)](../../build/reference/vmm-vms-vmv-general-purpose-representation.md)\).  Eine weitere Möglichkeit besteht darin, die Basisklassen neu anzuordnen. Vom Compiler wird in der Konvertierung ein Datenverlust erkannt, da eine Basisklasse bezüglich der abgeleiteten Klasse über einen Offset ungleich 0 \(null\) verfügt.  
+ C4407 kann auftreten, wenn Sie eine zwischen einem mehrere Vererbung Pointer-to-Member auf eine einfache Vererbung Pointer-to-Member Umwandlung. In einigen Fällen kann dies funktioniert, aber in einigen Fällen ist dies nicht möglich, da die einfache Vererbung Pointer-to-Member-Darstellung ausreichend Informationen enthalten, nicht. Beim Kompilieren mit der **/VMM** hilfreich sein (Weitere Informationen finden Sie unter [/VMM, / VMs, vmv (immer allgemeiner Zweck)](../../build/reference/vmm-vms-vmv-general-purpose-representation.md)). Sie können auch versuchen, Ihre Basisklassen Neuanordnen; der Compiler ist einen Datenverlust bei der Konvertierung erkennen, da an einem Offset ungleich NULL aus dem abgeleiteten Basisklasse ist.  
   
  Im folgenden Beispiel wird C4407 generiert:  
   

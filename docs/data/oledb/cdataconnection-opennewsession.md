@@ -1,56 +1,58 @@
 ---
-title: "CDataConnection::OpenNewSession | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDataConnection.OpenNewSession"
-  - "ATL.CDataConnection.OpenNewSession"
-  - "ATL::CDataConnection::OpenNewSession"
-  - "OpenNewSession"
-  - "CDataConnection::OpenNewSession"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OpenNewSession-Methode"
+title: 'CDataConnection:: Opennewsession | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDataConnection.OpenNewSession
+- ATL.CDataConnection.OpenNewSession
+- ATL::CDataConnection::OpenNewSession
+- OpenNewSession
+- CDataConnection::OpenNewSession
+dev_langs: C++
+helpviewer_keywords: OpenNewSession method
 ms.assetid: 0a70e573-9498-4ca7-b524-45666dc7b0a3
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4d89fe8af9f2d06974f09439c1fc51be11df78f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CDataConnection::OpenNewSession
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Öffnet eine neue Sitzung, die die aktuelle Datenquelle des Verbindungsobjekts verwendet.  
+# <a name="cdataconnectionopennewsession"></a>CDataConnection::OpenNewSession
+Öffnet eine neue Sitzung mithilfe des aktuellen Verbindungsobjekts-Datenquelle.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
-      HRESULT OpenNewSession(   
-   CSession & session    
+      HRESULT OpenNewSession(   
+   CSession & session    
 ) throw( );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `session`  
- \[in\/out\] Einen Verweis auf den neuen Sitzungsobjekt.  
+ [in/Out] Ein Verweis auf das Objekt für die neue Sitzung.  
   
  **Hinweise**  
- Die neue Sitzung verwendet das aktuelle enthaltende Datenquellenobjekt des Verbindungsobjekts als übergeordnete und kann auf dieselben Informationen wie die Datenquelle zugreifen.  
+ Die neue Sitzung verwendet das aktuelle Verbindungsobjekt enthaltenen Datenquellenobjekt wie das übergeordnete Objekt und kann auf alle die gleichen Informationen wie die Datenquelle zugreifen.  
   
-## Rückgabewert  
- Standard\- `HRESULT`.  
+## <a name="return-value"></a>Rückgabewert  
+ Ein Standard `HRESULT`-Objekt.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  
   
-## Siehe auch  
- [CDataConnection\-Klasse](../../data/oledb/cdataconnection-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [CDataConnection-Klasse](../../data/oledb/cdataconnection-class.md)

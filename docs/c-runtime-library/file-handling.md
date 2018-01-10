@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2e35d3f9a248d280f4ba617da89eb3993414a525
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 129267c69a2cf4830587f8ebc7c445a01591235b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-handling"></a>Dateibehandlung
 Verwenden Sie diese Routinen zum Erstellen, Löschen und Bearbeiten von Dateien und zum Überprüfen der Dateizugriffsberechtigungen.  
@@ -33,7 +34,7 @@ Verwenden Sie diese Routinen zum Erstellen, Löschen und Bearbeiten von Dateien 
   
  Diese Routinen werden auf Dateien ausgeführt, die durch einen Dateideskriptor festgelegt sind.  
   
-|Routine|Mit|  
+|-Routine zurückgegebener Wert|Mit|  
 |-------------|---------|  
 |[_chsize](../c-runtime-library/reference/chsize.md),[_chsize_s](../c-runtime-library/reference/chsize-s.md)|Dateigröße ändern|  
 |[_filelength, _filelengthi64](../c-runtime-library/reference/filelength-filelengthi64.md)|Dateilänge abrufen|  
@@ -48,7 +49,7 @@ Verwenden Sie diese Routinen zum Erstellen, Löschen und Bearbeiten von Dateien 
   
  Diese Routinen werden auf Dateien ausgeführt, die durch einen Pfad oder einen Dateinamen angegeben sind.  
   
-|Routine|Mit|  
+|-Routine zurückgegebener Wert|Mit|  
 |-------------|---------|  
 |[_access, _waccess](../c-runtime-library/reference/access-waccess.md), [_access_s, _waccess_s](../c-runtime-library/reference/access-s-waccess-s.md)|Dateiberechtigungseinstellung überprüfen|  
 |[_chmod, _wchmod](../c-runtime-library/reference/chmod-wchmod.md)|Dateiberechtigungseinstellung ändern|  
@@ -66,7 +67,7 @@ Verwenden Sie diese Routinen zum Erstellen, Löschen und Bearbeiten von Dateien 
   
  Diese Routinen öffnen Dateien.  
   
-|Routine|Mit|  
+|-Routine zurückgegebener Wert|Mit|  
 |-------------|---------|  
 |[fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md), [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)|Öffnet eine Datei und gibt einen Zeiger an die geöffnete Datei zurück.|  
 |[_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)|Öffnet einen Stream mit Dateifreigabe und gibt einen Zeiger an die geöffnete Datei zurück.|  
@@ -77,7 +78,7 @@ Verwenden Sie diese Routinen zum Erstellen, Löschen und Bearbeiten von Dateien 
   
  Diese Routinen bieten eine Möglichkeit, die Darstellung der Datei zwischen einer `FILE`-Struktur, einem Dateideskriptor und einem Win32-Dateihandle zu ändern.  
   
-|Routine|Verwendung|  
+|-Routine zurückgegebener Wert|Mit|  
 |-------------|---------|  
 |[_fdopen, _wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)|Ordnet einen Stream einer Datei zu, die zuvor für E/A-Unterstützung auf niedriger Ebene geöffnet wurde, und gibt einen Zeiger an den geöffneten Stream zurück.|  
 |[_fileno](../c-runtime-library/reference/fileno.md)|Ruft den Dateideskriptor ab, der einem Stream zugeordnet ist.|  
@@ -93,6 +94,6 @@ Verwenden Sie diese Routinen zum Erstellen, Löschen und Bearbeiten von Dateien 
 -   [CreateNamedPipe](http://msdn.microsoft.com/library/windows/desktop/aa365150.aspx)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Laufzeitroutinen nach Kategorie](../c-runtime-library/run-time-routines-by-category.md)   
- [Verzeichnissteuerung](../c-runtime-library/directory-control.md)   
+ [Run-Time Routines by Category (Laufzeitroutinen nach Kategorie)](../c-runtime-library/run-time-routines-by-category.md)   
+ [Directory Control (Verzeichnissteuerung)](../c-runtime-library/directory-control.md)   
  [Systemaufrufe](../c-runtime-library/system-calls.md)

@@ -25,11 +25,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1a888f46912aaa5292e9bcf1f83bc3e6926f73d2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9820836096cb173cae54de496b6d10de8fe48a48
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vprintf-functions"></a>vprintf-Funktionen
 Jede dieser `vprintf`-Funktionen verwendet einen Zeiger auf eine Argumentliste und formatiert und schreibt dann die angegebenen Daten in ein bestimmtes Ziel. Die Funktionen unterscheiden sich von der durchgeführten Parameterüberprüfung, unabhängig davon, ob die Funktionen Breit- oder Einzelbyte-Zeichenfolgen annehmen. Auch das Ausgabeziel und die Unterstützung für die Angabe der Reihenfolge, in der Parameter in der Formatzeichenfolge verwendet werden, spielen keine Rolle.  
@@ -50,30 +51,30 @@ Jede dieser `vprintf`-Funktionen verwendet einen Zeiger auf eine Argumentliste u
   
 |Funktion|Entsprechende Funktion|Ausgabeziel|Parametervalidierung|Unterstützung für positionale Parameter|  
 |--------------|--------------------------|------------------------|--------------------------|----------------------------------|  
-|`_vcprintf`|[_cprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|Konsole|Prüfen Sie auf NULL.|nein|  
-|`_vcwprintf`|[_cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|Konsole|Prüfen Sie auf NULL.|nein|  
-|`vfprintf`|[fprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*Stream*|Prüfen Sie auf NULL.|nein|  
+|`_vcprintf`|[_cprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|Konsole|Prüfen Sie auf NULL.|Nein|  
+|`_vcwprintf`|[_cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|Konsole|Prüfen Sie auf NULL.|Nein|  
+|`vfprintf`|[fprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*Stream*|Prüfen Sie auf NULL.|Nein|  
 |**vfprintf_p**|[fprintf_p](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|*Stream*|Prüfen Sie auf NULL und ein gültiges Format.|ja|  
-|`vfprintf_s`|[fprintf_s](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*Stream*|Prüfen Sie auf NULL und ein gültiges Format.|nein|  
-|`vfwprintf`|[fwprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*Stream*|Prüfen Sie auf NULL.|nein|  
+|`vfprintf_s`|[fprintf_s](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*Stream*|Prüfen Sie auf NULL und ein gültiges Format.|Nein|  
+|`vfwprintf`|[fwprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*Stream*|Prüfen Sie auf NULL.|Nein|  
 |**vfwprintf_p**|[fwprintf_p](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|*Stream*|Prüfen Sie auf NULL und ein gültiges Format.|ja|  
-|`vfwprintf_s`|[fwprintf_s](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*Stream*|Prüfen Sie auf NULL und ein gültiges Format.|nein|  
-|`vprintf`|[printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)|`Stdout`|Prüfen Sie auf NULL.|nein|  
+|`vfwprintf_s`|[fwprintf_s](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*Stream*|Prüfen Sie auf NULL und ein gültiges Format.|Nein|  
+|`vprintf`|[printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)|`Stdout`|Prüfen Sie auf NULL.|Nein|  
 |**vprintf_p**|[printf_p](../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)|`Stdout`|Prüfen Sie auf NULL und ein gültiges Format.|ja|  
-|`vprintf_s`|[printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|`Stdout`|Prüfen Sie auf NULL und ein gültiges Format.|nein|  
+|`vprintf_s`|[printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|`Stdout`|Prüfen Sie auf NULL und ein gültiges Format.|Nein|  
 |`vwprintf`|[wprintf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)|`Stdout`|Prüfen Sie auf NULL.|nein|  
 |**vwprintf_p**|[wprintf_p](../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)|`Stdout`|Prüfen Sie auf NULL und ein gültiges Format.|ja|  
-|`vwprintf_s`|[wprintf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|`Stdout`|Prüfen Sie auf NULL und ein gültiges Format.|nein|  
-|**vsprintf**|[sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)|Der auf *buffer* zeigende Speicher|Prüfen Sie auf NULL.|nein|  
+|`vwprintf_s`|[wprintf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|`Stdout`|Prüfen Sie auf NULL und ein gültiges Format.|Nein|  
+|**vsprintf**|[sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)|Der auf *buffer* zeigende Speicher|Prüfen Sie auf NULL.|Nein|  
 |**vsprintf_p**|[sprintf_p](../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)|Der auf *buffer* zeigende Speicher|Prüfen Sie auf NULL und ein gültiges Format.|ja|  
-|`vsprintf_s`|[sprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|Der auf *buffer* zeigende Speicher|Prüfen Sie auf NULL und ein gültiges Format.|nein|  
-|`vswprintf`|[swprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)|Der auf *buffer* zeigende Speicher|Prüfen Sie auf NULL.|nein|  
+|`vsprintf_s`|[sprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|Der auf *buffer* zeigende Speicher|Prüfen Sie auf NULL und ein gültiges Format.|Nein|  
+|`vswprintf`|[swprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)|Der auf *buffer* zeigende Speicher|Prüfen Sie auf NULL.|Nein|  
 |**vswprintf_p**|[swprintf_p](../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)|Der auf *buffer* zeigende Speicher|Prüfen Sie auf NULL und ein gültiges Format.|ja|  
-|`vswprintf_s`|[swprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|Der auf *buffer* zeigende Speicher|Prüfen Sie auf NULL und ein gültiges Format.|nein|  
-|`_vscprintf`|[_vscprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|Der auf *buffer* zeigende Speicher|Prüfen Sie auf NULL.|nein|  
-|`_vscwprintf`|[_vscwprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|Der auf *buffer* zeigende Speicher|Prüfen Sie auf NULL.|nein|  
-|`_vsnprintf`|[_snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|Der auf *buffer* zeigende Speicher|Prüfen Sie auf NULL.|nein|  
-|`_vsnwprintf`|[_snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|Der auf *buffer* zeigende Speicher|Prüfen Sie auf NULL.|nein|  
+|`vswprintf_s`|[swprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|Der auf *buffer* zeigende Speicher|Prüfen Sie auf NULL und ein gültiges Format.|Nein|  
+|`_vscprintf`|[_vscprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|Der auf *buffer* zeigende Speicher|Prüfen Sie auf NULL.|Nein|  
+|`_vscwprintf`|[_vscwprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|Der auf *buffer* zeigende Speicher|Prüfen Sie auf NULL.|Nein|  
+|`_vsnprintf`|[_snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|Der auf *buffer* zeigende Speicher|Prüfen Sie auf NULL.|Nein|  
+|`_vsnwprintf`|[_snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|Der auf *buffer* zeigende Speicher|Prüfen Sie auf NULL.|Nein|  
   
  Das Argument `argptr` weist den Typ `va_list` auf, der in VARARGS.H und STDARG.H definiert ist. Die Variable `argptr` muss durch **va_start** initialisiert werden und kann möglicherweise von nachfolgenden `va_arg`-Aufrufen initialisiert werden. Anschließend zeigt `argptr` auf den Anfang einer Liste von Argumenten, die für die Ausgabe gemäß den entsprechenden Angaben im *format*-Argument konvertiert und übertragen werden. *format* hat dieselbe Form und Funktion wie das Argument *format* für [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md). Durch keiner dieser Funktionen wird `va_end` aufgerufen. Eine umfassendere Beschreibung der einzelnen `vprintf`-Funktionen finden Sie in der Beschreibung der entsprechenden Funktion, wie in der obigen Tabelle aufgeführt wird.  
   

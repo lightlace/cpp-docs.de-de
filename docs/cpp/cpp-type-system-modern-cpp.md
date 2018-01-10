@@ -13,11 +13,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 47d8fdec93c9d77e6648c5f648171a8ff349474d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3c4e86ffe91c2c0bf6a914e8f735b5faca6ae45f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-type-system-modern-c"></a>C++- Typsystem (Modern C++)
 Das Konzept der *Typ* in C++ sehr wichtig ist. Jede Variable, jedes Funktionsargument und jeder Rückgabewert muss über einen Typ verfügen, um kompiliert werden zu können. Außerdem wird jedem Ausdruck (einschließlich Literalwerten) vom Compiler implizit ein Typ angegeben, bevor der Ausdruck ausgewertet wird. Einige Beispiele für Typen `int` zum Speichern von ganzzahliger Werten `double` zum Speichern von Gleitkommawerten (auch bekannt als *skalare* Datentypen), oder der Standardbibliothek Klasse [Standardbibliotheksklasse](../standard-library/basic-string-class.md) zum Speichern von Text. Sie können auch einen eigenen Typ erstellen, indem Sie eine `class` oder ein `struct` definieren. Der Typ gibt den Speicher an, der für die Variable (oder das Ausdrucksergebnis) zugeordnet ist, die Wertarten, die in dieser Variablen gespeichert werden können, wie diese Werte (als Bitmuster) interpretiert werden, und die Vorgänge, die darauf ausgeführt werden können. In diesem Artikel ist eine informelle Übersicht der Hauptfunktionen des C++-Typsystems enthalten.  
@@ -74,10 +75,10 @@ int maxValue;                // Not recommended! maxValue contains
 |----------|----------|-------------|  
 |int|4 Bytes|Die Standardauswahl für ganzzahlige Werte.|  
 |double|8 Bytes|Die Standardauswahl für Gleitkommawerte.|  
-|bool|1 Byte|Stellt Werte dar, die entweder wahr oder falsch sein können.|  
-|char|1 Byte|Verwenden Sie sie für ASCII-Zeichen in Zeichenfolgen im älteren C-Format oder in std::string Objekten, die nie in den UNICODE konvertiert werden müssen.|  
+|bool|1 Byte|Stellt Werte dar, die entweder wahr oder falsch sein können.|  
+|char|1 Byte|Verwenden Sie sie für ASCII-Zeichen in Zeichenfolgen im älteren C-Format oder in std::string Objekten, die nie in den UNICODE konvertiert werden müssen.|  
 |wchar_t|2 Bytes|Stellt "breite" Zeichenwerte dar, die in den UNICODE-Format codiert werden (UTF-16 bei Windows, andere Betriebssysteme können abweichen). Dies ist der Zeichentyp, der in Zeichenfolgen des Typs `std::wstring` verwendet wird.|  
-|unsigned char|1 Byte|C++ verfügt über keine integrierten `byte`-Typen.  Verwenden Sie "char" ohne Vorzeichen, um einen Bytewert darzustellen.|  
+|unsigned char|1 Byte|C++ verfügt über keine integrierten `byte`-Typen.  Verwenden Sie "char" ohne Vorzeichen, um einen Bytewert darzustellen.|  
 |unsigned int|4 Bytes|Die Standardauswahl für Bitflags.|  
 |long long|8 Bytes|Stellt sehr große ganzzahlige Werte dar.|  
   

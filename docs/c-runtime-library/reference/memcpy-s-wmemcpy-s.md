@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -27,36 +26,21 @@ apitype: DLLExport
 f1_keywords:
 - wmemcpy_s
 - memcpy_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 44d9ecb713c0fa85f11c3d01b5a15707b0bfaf57
-ms.contentlocale: de-de
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5748077731b07a0deeb4e601221b0ba412be391f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memcpys-wmemcpys"></a>memcpy_s, wmemcpy_s
 Kopiert Bytes zwischen Puffern. Dabei handelt es sich um Versionen von [memcpy, wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md) mit den unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschriebenen Erweiterungen.  
@@ -98,10 +82,10 @@ errno_t wmemcpy_s(
   
 |`dest`|`destSize`|`src`|`count`|Rückgabewert|Inhalt von `dest`|  
 |------------|----------------|-----------|---|------------------|------------------------|  
-|any|alle|alle|0|0|Nicht geändert|  
-|`NULL`|alle|alle|ungleich null|`EINVAL`|Nicht geändert|  
-|alle|alle|`NULL`|ungleich null|`EINVAL`|`dest` wird auf null gesetzt|  
-|alle|< `count`|alle|ungleich null|`ERANGE`|`dest` wird auf null gesetzt|  
+|any|any|any|0|0|Nicht geändert|  
+|`NULL`|any|any|ungleich null|`EINVAL`|Nicht geändert|  
+|any|any|`NULL`|ungleich null|`EINVAL`|`dest` wird auf null gesetzt|  
+|any|< `count`|any|ungleich null|`ERANGE`|`dest` wird auf null gesetzt|  
   
 ## <a name="remarks"></a>Hinweise  
  `memcpy_s` kopiert `count` Bytes von `src` nach `dest`; `wmemcpy_s` kopiert `count` Breitzeichen (zwei Bytes). Wenn sich Quell und Ziel überlappen, ist das Verhalten von `memcpy_s` undefiniert. Verwendung `memmove_s` um überlappende Bereiche zu behandeln.  
@@ -110,7 +94,7 @@ errno_t wmemcpy_s(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`memcpy_s`|\<memory.h> oder \<string.h>|  
 |`wmemcpy_s`|\<wchar.h>|  

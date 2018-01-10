@@ -1,75 +1,76 @@
 ---
-title: "/KEYCONTAINER (Schl&#252;sselcontainer zum Signieren einer Assembly festlegen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.KeyContainer"
-  - "/keycontainer"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/KEYCONTAINER (Linkeroption)"
-  - "KEYCONTAINER (Linkeroption)"
-  - "-KEYCONTAINER (Linkeroption)"
+title: "-KEYCONTAINER (Schlüsselcontainer zum Signieren einer Assembly festlegen) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.KeyContainer
+- /keycontainer
+dev_langs: C++
+helpviewer_keywords:
+- KEYCONTAINER linker option
+- /KEYCONTAINER linker option
+- -KEYCONTAINER linker option
 ms.assetid: 94882d12-b77a-49c7-96d0-18a31aee001e
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f0e1f31e85c23b32bee1b8b968bbec65ee82beb9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# /KEYCONTAINER (Schl&#252;sselcontainer zum Signieren einer Assembly festlegen)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="keycontainer-specify-a-key-container-to-sign-an-assembly"></a>/KEYCONTAINER (Schlüsselcontainer zum Signieren einer Assembly festlegen)
 ```  
 /KEYCONTAINER:name  
 ```  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  wobei  
   
- *Name*  
- Der Container, der den Schlüssel enthält.  Schließen Sie die Zeichenfolge in doppelte Anführungszeichen \(" "\) ein, falls sie ein Leerzeichen enthält.  
+ *name*  
+ Container, der den Schlüssel enthält. Schließen Sie die Zeichenfolge in doppelte Anführungszeichen (""), wenn es sich um ein Leerzeichen enthält.  
   
-## Hinweise  
- Der Linker erstellt eine signierte Assembly, indem er einen öffentlichen Schlüssel in das Assemblymanifest einfügt und die endgültige Assembly mit dem privaten Schlüssel signiert.  Geben Sie [sn \-k](../Topic/Sn.exe%20\(Strong%20Name%20Tool\).md) `file` in der Befehlszeile ein, um eine Schlüsseldatei zu erstellen.  Mit **sn \-i** wird das Schlüsselpaar in einen Container installiert.  
+## <a name="remarks"></a>Hinweise  
+ Der Linker erstellt eine signierte Assembly, indem ein öffentlicher Schlüssel in das Assemblymanifest eingefügt und die endgültige Assembly mit dem privaten Schlüssel signiert. Um eine Schlüsseldatei zu generieren, geben Sie [sn – k](/dotnet/framework/tools/sn-exe-strong-name-tool) *Filename* in der Befehlszeile. **"sn" -i** installiert das Schlüsselpaar in einem Container.  
   
- Bei der Kompilierung mit [\/LN](../../build/reference/ln-create-msil-module.md) wird der Name der Schlüsseldatei im Modul beibehalten und in eine Assembly eingefügt. Letztere wird erstellt, wenn Sie eine Assembly, die einen expliziten Verweis auf das Modul enthält, mittels [\#using](../../preprocessor/hash-using-directive-cpp.md) kompilieren oder eine Verknüpfung mit [\/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md) herstellen.  
+ Beim Kompilieren mit [/ln](../../build/reference/ln-create-msil-module.md), der Namen der Datei mit dem Schlüssel ist im Modul gespeichert und in die Assembly, die erstellt wird, wenn eine Assembly zu, die Kompilieren über keinen expliziten Verweis auf das Modul enthält integriert [#using](../../preprocessor/hash-using-directive-cpp.md), oder wenn die Verknüpfung mit [ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md).  
   
- Die Verschlüsselungsinformationen können auch mit [\/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) an den Compiler übergeben werden.  Verwenden Sie [\/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md), wenn die Assembly teilweise signiert werden soll.  Weitere Informationen über das Signieren einer Assembly finden Sie unter [Assemblys mit starken Namen \(Assemblysignierung\)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).  
+ Sie können auch die Verschlüsselungsinformationen mit an den Compiler übergeben [/keyfile](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md). Verwendung [/delaysign /](../../build/reference/delaysign-partially-sign-an-assembly.md) , wenn Sie eine Assembly teilweise signiert werden soll. Finden Sie unter [Assemblys mit starken Namen (Assembly signieren) (C + c++ / CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) für Weitere Informationen zum Signieren einer Assemblys.  
   
- Folgende Linkeroptionen beeinflussen außerdem das Erstellen von Assemblys:  
+ Andere Optionen des Linkers, die beeinflussen Generieren der Assembly sind:  
   
--   [\/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)  
+-   [/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)  
   
--   [\/ASSEMBLYLINKRESOURCE](../../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)  
+-   [/ASSEMBLYLINKRESOURCE](../../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)  
   
--   [\/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)  
+-   [/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)  
   
--   [\/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)  
+-   [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)  
   
--   [\/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)  
+-   [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)  
   
-### So legen Sie diese Linkeroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Festlegen von Visual C\+\+\-Projekteigenschaften](../../ide/working-with-project-properties.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Klicken Sie auf den Ordner **Linker**.  
+2.  Klicken Sie auf die **Linker** Ordner.  
   
-3.  Klicken Sie auf die Eigenschaftenseite **Befehlszeile**.  
+3.  Klicken Sie auf die Eigenschaftenseite **Befehlszeile** .  
   
-4.  Geben Sie die Option im Feld **Zusätzliche Optionen** ein.  
+4.  Geben Sie die Option in der **Zusatzoptionen** Feld.  
   
-### So legen Sie diese Linkeroption programmgesteuert fest  
+### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
   
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions*>.  
+-   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
  [Linkeroptionen](../../build/reference/linker-options.md)

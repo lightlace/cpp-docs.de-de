@@ -17,11 +17,12 @@ caps.latest.revision: "46"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dfd16b0c3393b6b0a27e88a971042cf772fbd9b1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7520e2d78c924ee21c489d2e8327c4bda9b973aa
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Exemplarische Vorgehensweise: Kompilieren eines C-Programms in der Befehlszeile
 Visual C++ enthält einen C-Compiler, den Sie verwenden können, um alles von grundlegenden Konsolenprogrammen an eine vollständige Windows-desktopanwendungen und mobiler apps erstellen.  
@@ -33,7 +34,7 @@ Visual C++ enthält einen C-Compiler, den Sie verwenden können, um alles von gr
   
  Visual Studio ist eine leistungsstarke integrierte Entwicklungsumgebung, die einem voll ausgestatteten-Editor, Ressourcen-Manager, Debugger und Compilern für viele Sprachen und Plattformen unterstützt. Informationen zu diesen Funktionen und zum Herunterladen und Installieren von Visual Studio, einschließlich der kostenlosen Visual Studio Community Edition finden Sie unter [VisualStudio.com](https://www.visualstudio.com/).  
   
- Der Visual Studio-Tools erstellen installiert wird, nur den Befehlszeilencompiler, Tools und Bibliotheken, die zum Erstellen von C und C++-Programmen erforderlich. Ist es perfekt für Build Labs oder Schulungsraum ausführt und relativ schnell installiert. Um nur die Befehlszeilentools zu installieren, laden Sie [Visual Studio-Tools zum Erstellen](https://go.microsoft.com/fwlink/?linkid=840931) und führen Sie das Installationsprogramm. Weitere Informationen finden Sie unter [Visual C++-Buildtools](http://landinghub.visualstudio.com/visual-cpp-build-tools).  
+ Der Visual Studio-Tools erstellen installiert wird, nur den Befehlszeilencompiler, Tools und Bibliotheken, die zum Erstellen von C und C++-Programmen erforderlich. Ist es perfekt für Build Labs oder Schulungsraum ausführt und relativ schnell installiert. Um nur die Befehlszeilentools zu installieren, laden Sie [Visual Studio-Tools zum Erstellen](https://go.microsoft.com/fwlink/p/?linkid=840931) und führen Sie das Installationsprogramm. Weitere Informationen finden Sie unter [Visual C++-Buildtools](http://landinghub.visualstudio.com/visual-cpp-build-tools).  
   
  Bevor Sie eine C- oder C++-Programm in der Befehlszeile erstellen können, müssen Sie sicherstellen, dass die Verwaltungstools installiert sind und Sie sie über die Befehlszeile zugreifen können. Visual C++ stellt komplexe Anforderungen an die befehlszeilenumgebung zum Suchen von Tools, Header und Bibliotheken, die verwendet. **Sie können Visual C++ in einem einfachen Eingabeaufforderungsfenster verwenden**. Sie müssen eine *entwicklereingabeaufforderung* im Fenster eine reguläre Eingabeaufforderungsfenster ein, die alle erforderlichen Umgebungsvariablen, die festgelegt wurde. Visual C++ installiert Glücklicherweise Tastenkombinationen für die Developer-Eingabeaufforderungsfenster geöffnet, in dem die Umgebung für Befehlszeilenbuilds eingerichtet haben. Leider sind die Namen der Verknüpfungen mit der Developer-Eingabeaufforderung und wo sich diese befinden sich in fast jeder Version von Visual C++ und in verschiedenen Versionen von Windows. Die erste Aufgabe für die exemplarische Vorgehensweise ist, suchen die richtige Verknüpfung verwenden.  
   

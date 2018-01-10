@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -35,8 +34,7 @@ f1_keywords:
 - ismbchira_l
 - _ismbchira_l
 - _ismbchira
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _ismbckata function
 - _ismbchira function
@@ -49,30 +47,16 @@ helpviewer_keywords:
 - Hiragana
 - ismbckata function
 ms.assetid: 2db388a2-be31-489b-81c8-f6bf3f0582d3
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 64a3e897179f22c327a88c4b6a35361341685d17
-ms.contentlocale: de-de
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c696603c7012a1ee95c118a12d45c2fc9132cfcd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbchira-ismbchiral-ismbckata-ismbckatal"></a>_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l
 **Besondere Funktionen der Codepage 932**  
@@ -114,7 +98,7 @@ int _ismbckata_l(
   
  Die Versionen dieser Funktionen mit dem `_l`-Suffix sind beinahe identisch, verwenden jedoch das ihnen übergebene Gebietsschema anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängiges Verhalten. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
   
-|Routine|Testbedingung (nur Codepage 932)|  
+|-Routine zurückgegebener Wert|Testbedingung (nur Codepage 932)|  
 |-------------|-------------------------------------------|  
 |`_ismbchira`|Doppelbyte Hiragana: 0x829F<=`c`<=0x82F1.|  
 |`_ismbchira_l`|Doppelbyte Hiragana: 0x829F<=`c`<=0x82F1.|  
@@ -125,7 +109,7 @@ int _ismbckata_l(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_ismbchira`|\<mbstring.h>|  
 |`_ismbchira_l`|\<mbstring.h>|  
@@ -138,5 +122,5 @@ int _ismbckata_l(
  [Zeichenklassifizierung](../../c-runtime-library/character-classification.md)   
  [_ismbc-Routinen](../../c-runtime-library/ismbc-routines.md)   
  [is- und isw-Routinen](../../c-runtime-library/is-isw-routines.md)   
- [Locale](../../c-runtime-library/locale.md)   
+ [Gebietsschema](../../c-runtime-library/locale.md)   
  [Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)

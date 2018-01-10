@@ -1,32 +1,33 @@
 ---
-title: "binary_delegate_noreturn (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::binary_delegate_noreturn"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "binary_delegate_noreturn-Funktion [STL/CLR]"
+title: Binary_delegate_noreturn (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::binary_delegate_noreturn
+dev_langs: C++
+helpviewer_keywords: binary_delegate_noreturn function [STL/CLR]
 ms.assetid: 055c7e9d-e5c3-48fe-9327-3f6316e8a51e
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4530b4710b7e4e9ea074c11f53f210ba6bf9dfbf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# binary_delegate_noreturn (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die genereic Klasse beschreibt einen ZweiArgumentdelegaten, der `void` zurückgibt.  Sie verwenden sie angeben einem Delegaten in BNF Argument.  
+# <a name="binarydelegatenoreturn-stlclr"></a>binary_delegate_noreturn (STL/CLR)
+Die Genereic-Klasse beschreibt einen Delegaten mit zwei Argumenten, die zurückgibt `void`. Sie verwenden, geben Sie einen Delegaten im Hinblick auf das Argument.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 generic<typename Arg1,  
@@ -34,31 +35,31 @@ generic<typename Arg1,
     delegate void binary_delegate(Arg1, Arg2);  
 ```  
   
-#### Parameter  
- Arg1  
+#### <a name="parameters"></a>Parameter  
+ arg1  
  Der Typ des ersten Arguments.  
   
  Arg2  
  Der Typ des zweiten Arguments.  
   
-## Hinweise  
- Der genereic Delegat beschreibt eine ZweiArgumentfunktion, die `void` zurückgibt.  
+## <a name="remarks"></a>Hinweise  
+ Der Delegat Genereic beschreibt eine Funktion von zwei Argumenten, zurückgibt `void`.  
   
- Beachten Sie das für:  
+ Beachten Sie, dass für:  
   
  `binary_delegate_noreturn<int, int> Fun1;`  
   
  `binary_delegate_noreturn<int, int> Fun2;`  
   
- die Typen `Fun1` und `Fun2` sind Synonyme, während für:  
+ die Typen `Fun1` und `Fun2` sind Synonyme, während er sich für:  
   
  `delegate void Fun1(int, int);`  
   
  `delegate void Fun2(int, int);`  
   
- sie sind nicht der gleiche Typ.  
+ sind sie nicht den gleichen Typ.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_binary_delegate_noreturn.cpp   
@@ -85,15 +86,18 @@ int main()
   
 ```  
   
-  **Vergleichen \(a, A \= False\)**  
-**Vergleichen \(A, B \= True\)**  
-**Vergleichen \(b, A \= False\)**   
-## Anforderungen  
- **Header:** \<cliext\/funktionsfähig\>  
+```Output  
+compare(a, a) = False  
+compare(a, b) = True  
+compare(b, a) = False  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/funktionale >  
   
-## Siehe auch  
- [binary\_delegate](../dotnet/binary-delegate-stl-clr.md)   
- [unary\_delegate](../dotnet/unary-delegate-stl-clr.md)   
- [unary\_delegate\_noreturn](../dotnet/unary-delegate-noreturn-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Binary_delegate (STL/CLR)](../dotnet/binary-delegate-stl-clr.md)   
+ [Unary_delegate (STL/CLR)](../dotnet/unary-delegate-stl-clr.md)   
+ [unary_delegate_noreturn (STL/CLR)](../dotnet/unary-delegate-noreturn-stl-clr.md)

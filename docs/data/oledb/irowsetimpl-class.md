@@ -1,92 +1,93 @@
 ---
-title: "IRowsetImpl-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IRowsetImpl-Klasse"
+title: IRowsetImpl-Klasse | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IRowsetImpl
+dev_langs: C++
+helpviewer_keywords: IRowsetImpl class
 ms.assetid: 6a9189af-7556-45b1-adcb-9d62bb36704c
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 7b4d8dd6f6dced2b4847939b0d7ed560f1d59479
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# IRowsetImpl-Klasse
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Stellt eine Implementierung der `IRowset`\-Schnittstelle bereit.  
+# <a name="irowsetimpl-class"></a>IRowsetImpl-Klasse
+Stellt eine Implementierung der `IRowset`-Schnittstelle bereit.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <  
-   class T,   
+   class T,   
    class RowsetInterface,  
    class RowClass = CSimpleRow,  
    class MapClass = CAtlMap <  
       RowClass::KeyType,  
-      RowClass*   
+      RowClass*   
    >  
 >  
 class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `T`  
- Die Klasse, von `IRowsetImpl` abgeleitet.  
+ Die Klasse abgeleitet `IRowsetImpl`.  
   
  `RowsetInterface`  
- Eine Klasse wird von `IRowsetImpl` abgeleitet.  
+ Eine abgeleitete Klasse `IRowsetImpl`.  
   
  `RowClass`  
- Speichereinheit für **HROW**.  
+ Storage-Einheit für die **HROW**.  
   
  `MapClass`  
- Speichereinheit für alle Zeilenhandles angehalten vom Anbieter.  
+ Storage-Einheit für alle Zeilenhandles, die vom Anbieter.  
   
-## Member  
+## <a name="members"></a>Member  
   
-### Methoden  
+### <a name="methods"></a>Methoden  
   
 |||  
 |-|-|  
-|[AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md)|Fügt einem vorhandenen Zeilenhandle einen Verweiszähler hinzu.|  
-|[CreateRow](../../data/oledb/irowsetimpl-createrow.md)|Wird von [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md), um neuen **HROW** zuzuordnen.  Wird nicht direkt nach Benutzer.|  
-|[GetData](../../data/oledb/irowsetimpl-getdata.md)|Ruft Daten von der Zeilenkopie des Rowsets ab.|  
+|[AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md)|Fügt einen Verweiszähler für eine vorhandene Zeilenhandle an.|  
+|[CreateRow](../../data/oledb/irowsetimpl-createrow.md)|Wird aufgerufen, indem [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) Zuweisen einer neuen **HROW**. Nicht direkt vom Benutzer aufgerufen.|  
+|[GetData](../../data/oledb/irowsetimpl-getdata.md)|Ruft Daten aus dem Rowset Kopie der Zeile ab.|  
 |[GetDBStatus](../../data/oledb/irowsetimpl-getdbstatus.md)|Gibt den Status für das angegebene Feld zurück.|  
-|[GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)|Ruft Zeilen sequenziell ab und speichert die vorherige Position.|  
-|[IRowsetImpl](../../data/oledb/irowsetimpl-class.md)|Der \-Konstruktor.  Wird nicht direkt nach Benutzer.|  
-|[RefRows](../../data/oledb/irowsetimpl-refrows.md)|Wird von [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) und [ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md).  Wird nicht direkt nach Benutzer.|  
+|[GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)|Ruft Zeilen ab sequenziell, zum Speichern der vorherigen Position.|  
+|[IRowsetImpl](../../data/oledb/irowsetimpl-class.md)|Der Konstruktor. Nicht direkt vom Benutzer aufgerufen.|  
+|[RefRows](../../data/oledb/irowsetimpl-refrows.md)|Wird aufgerufen, indem [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) und [ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md). Nicht direkt vom Benutzer aufgerufen.|  
 |[ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md)|Gibt Zeilen frei.|  
-|[RestartPosition](../../data/oledb/irowsetimpl-restartposition.md)|Ordnet die folgenden Abrufposition an seine Ausgangsposition neu an; das heißt, die Position, als das Rowset zuerst erstellt wurde.|  
-|[SetDBStatus](../../data/oledb/irowsetimpl-setdbstatus.md)|Legt die Statusflags für das angegebene Feld.|  
+|[RestartPosition](../../data/oledb/irowsetimpl-restartposition.md)|Positioniert die nächste Abrufposition auf seine anfängliche Position; erstellt, d. h. seine Position, die bei der Erstinstallation des Rowsets.|  
+|[SetDBStatus](../../data/oledb/irowsetimpl-setdbstatus.md)|Legt fest, der die Statusflags für das angegebene Feld.|  
   
-### Datenmember  
+### <a name="data-members"></a>Datenmember  
   
 |||  
 |-|-|  
-|[m\_bCanFetchBack](../../data/oledb/irowsetimpl-m-bcanfetchback.md)|Gibt an, ob ein Anbieter rückwärts abrufen unterstützt.|  
-|[m\_bCanScrollBack](../../data/oledb/irowsetimpl-m-bcanscrollback.md)|Gibt an, ob ein Anbieter den Cursor rückwärts scrollen werden kann.|  
-|[m\_bReset](../../data/oledb/irowsetimpl-m-breset.md)|Gibt an, ob ein Anbieter die Cursorposition zurückgesetzt wurde.  Dies hat eine besondere Bedeutung, wenn rückwärts durch Scrollen oder rückwärts in [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) abgerufen werden.|  
-|[m\_iRowset](../../data/oledb/irowsetimpl-m-irowset.md)|Ein Index Rowset\-, den Cursor darstellt.|  
-|[m\_rgRowHandles](../../data/oledb/irowsetimpl-m-rgrowhandles.md)|Eine Liste der Zeilenhandles.|  
+|[m_bCanFetchBack](../../data/oledb/irowsetimpl-m-bcanfetchback.md)|Gibt an, ob ein Anbieter rückwärts abrufen unterstützt.|  
+|[m_bCanScrollBack](../../data/oledb/irowsetimpl-m-bcanscrollback.md)|Gibt an, ob ein Anbieter die Cursor einen Bildlauf rückwärts aufweisen kann.|  
+|[m_bReset](../../data/oledb/irowsetimpl-m-breset.md)|Gibt an, ob ein Anbieter die Cursorposition zurückgesetzt wurde. Dies hat eine besondere Bedeutung, die beim Durchführen eines Bildlaufs Abwärtskompatibilität oder Abrufen von Abwärtskompatibilität in [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md).|  
+|[m_iRowset](../../data/oledb/irowsetimpl-m-irowset.md)|Ein Index, der das Rowset, das den Cursor darstellt.|  
+|[m_rgRowHandles](../../data/oledb/irowsetimpl-m-rgrowhandles.md)|Eine Liste von Zeilenhandles.|  
   
-## Hinweise  
- [IRowset](https://msdn.microsoft.com/en-us/library/ms720986.aspx) ist die Basisklasse Rowsetschnittstelle.  
+## <a name="remarks"></a>Hinweise  
+ [IRowset](https://msdn.microsoft.com/en-us/library/ms720986.aspx) ist die grundlegende Rowset-Schnittstelle.  
   
-## Anforderungen  
- **Header:**  atldb.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** „atldb.h“  
   
-## Siehe auch  
- [OLE DB\-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektur von OLE DB\-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)
+## <a name="see-also"></a>Siehe auch  
+ [OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)

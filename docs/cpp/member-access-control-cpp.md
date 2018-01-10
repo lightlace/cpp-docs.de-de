@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 40c0f03b09a5f056ae260641c588996d3bd2043b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 88fe05ab0c0e6a1c433bf2b6007fb63c18fb5850
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="member-access-control-c"></a>Memberzugriffssteuerung (C++)
 Zugriff auf Steuerelemente ermöglichen es Ihnen, trennen Sie die [öffentlichen](../cpp/public-cpp.md) Schnittstelle einer Klasse von der [private](../cpp/private-cpp.md) Implementierungsdetails und [geschützt](../cpp/protected-cpp.md) Elemente, die nur für sind verwenden, indem Sie abgeleitete Klassen. Der Zugriffsspezifizierer gilt für alle Member, die danach deklariert werden, bis der nächste Zugriffsspezifizierer ermittelt wird.  
@@ -71,7 +72,7 @@ protected:      // Declare protected function for derived classes only.
   
 ### <a name="member-access-in-base-class"></a>Memberzugriff in Basisklasse  
   
-|private|protected|Öffentlich|  
+|private|protected|Public|  
 |-------------|---------------|------------|  
 |Unabhängig vom Ableitungszugriff kann nicht zugegriffen werden|Privat in abgeleitete Klasse, wenn Sie private Ableitung verwenden|Privat in abgeleitete Klasse, wenn Sie private Ableitung verwenden|  
 ||Geschützt in abgeleiteter Klasse, wenn Sie geschützte Ableitung verwenden|Geschützt in abgeleiteter Klasse, wenn Sie geschützte Ableitung verwenden|  

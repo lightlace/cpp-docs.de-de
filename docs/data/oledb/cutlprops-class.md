@@ -1,64 +1,65 @@
 ---
-title: "CUtlProps-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CUtlProps"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CUtlProps-Klasse"
+title: CUtlProps-Klasse | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: CUtlProps
+dev_langs: C++
+helpviewer_keywords: CUtlProps class
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 75e92f48729d0aae9f85cc7b7c5c97e4778f96a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CUtlProps-Klasse
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Implementiert Eigenschaften für eine Reihe von OLE DB\-Eigenschaftenschnittstellen \(beispielsweise, `IDBProperties`, `IDBProperties` und `IRowsetInfo`\).  
+# <a name="cutlprops-class"></a>CUtlProps-Klasse
+Eigenschaften für eine Vielzahl von OLE DB-Schnittstellen implementiert (z. B. `IDBProperties`, `IDBProperties`, und `IRowsetInfo`).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template < class T >  
 class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `T`  
- Die Klasse, die `BEGIN_PROPSET_MAP` enthält.  
+ Die Klasse enthält die `BEGIN_PROPSET_MAP`.  
   
-## Member  
+## <a name="members"></a>Member  
   
-### Methoden  
+### <a name="methods"></a>Methoden  
   
 |||  
 |-|-|  
-|[GetPropValue](../../data/oledb/cutlprops-getpropvalue.md)|Ruft eine Eigenschaft aus einem Eigenschaft ab.|  
-|[IsValidValue](../../data/oledb/cutlprops-isvalidvalue.md)|Wird verwendet, um einen Wert zu prüfen, bevor eine Eigenschaft festgelegt wird.|  
-|[OnInterfaceRequested](../../data/oledb/cutlprops-oninterfacerequested.md)|Handleersuchen um eine optionale Schnittstelle, wenn ein Consumer eine Methode auf einer Objekterstellungsschnittstelle aufruft.|  
-|[OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)|Wird aufgerufen, nachdem dem Festlegen einer Eigenschaft, um zu behandeln, verketteten Eigenschaften.|  
-|[SetPropValue](../../data/oledb/cutlprops-setpropvalue.md)|Legt eine Eigenschaft in einem Eigenschaft fest.|  
+|[GetPropValue](../../data/oledb/cutlprops-getpropvalue.md)|Ruft eine Eigenschaft aus einer Eigenschaft ab.|  
+|[IsValidValue](../../data/oledb/cutlprops-isvalidvalue.md)|Verwendet, um einen Wert vor dem Festlegen einer Eigenschaft zu überprüfen.|  
+|[OnInterfaceRequested](../../data/oledb/cutlprops-oninterfacerequested.md)|Verarbeitet Anforderungen für eine optionale Schnittstelle, wenn ein Consumer eine Methode für ein Objekt erstellen Schnittstelle aufruft.|  
+|[OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)|Wird aufgerufen, nach dem Festlegen einer Eigenschaft für die verkettete Eigenschaften zu behandeln.|  
+|[SetPropValue](../../data/oledb/cutlprops-setpropvalue.md)|Festlegen einer Eigenschaft in einem Eigenschaftensatz.|  
   
-## Hinweise  
- Der Großteil dieser Klasse ist implementierungsspezifisch.  
+## <a name="remarks"></a>Hinweise  
+ Die meisten dieser Klasse ist ein Implementierungsdetail.  
   
- `CUtlProps` enthält zwei Member für Eigenschaften intern festlegen: [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md) und [SetPropValue](../../data/oledb/cutlprops-setpropvalue.md).  
+ `CUtlProps`enthält zwei Member zum Festlegen von Eigenschaften intern: [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md) und [SetPropValue](../../data/oledb/cutlprops-setpropvalue.md).  
   
- Weitere Informationen über Makros, die in einer Eigenschaftensetzuordnung verwendet werden, finden Sie unter [BEGIN\_PROPSET\_MAP](../../data/oledb/begin-propset-map.md) und [END\_PROPSET\_MAP](../../data/oledb/end-propset-map.md).  
+ Weitere Informationen über die Makros in einer Eigenschaft Set-Zuordnung verwendet, finden Sie unter [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) und [END_PROPSET_MAP](../../data/oledb/end-propset-map.md).  
   
-## Anforderungen  
- **Header:**  atldb.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** „atldb.h“  
   
-## Siehe auch  
- [OLE DB\-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektur von OLE DB\-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)
+## <a name="see-also"></a>Siehe auch  
+ [OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)

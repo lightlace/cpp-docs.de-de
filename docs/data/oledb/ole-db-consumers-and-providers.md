@@ -1,39 +1,42 @@
 ---
-title: "OLE&#160;DB-Consumer und -Anbieter | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB-Consumer"
-  - "OLE DB-Consumer, OLE DB-Datenarchitektur"
-  - "OLE DB-Anbieter"
-  - "OLE DB-Anbieter, OLE DB-Datenarchitektur"
-  - "OLE DB, Datenmodell"
+title: OLE DB-Consumer und-Anbieter | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB providers, OLE DB data architecture
+- OLE DB providers
+- OLE DB consumers, OLE DB data architecture
+- OLE DB consumers
+- OLE DB, data model
 ms.assetid: 886cb39d-652b-4557-93f0-4b1b0754d8bc
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4f0a0ee77b13d6e5231d002cb444ac5a7847f3d6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# OLE&#160;DB-Consumer und -Anbieter
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die OLE DB\-Architektur verwendet das Modell von Consumern und Anbietern.  Ein Consumer stellt eine Anfrage nach Daten.  Ein Anbieter beantwortet diese Anfragen, indem er Daten in ein tabellarisches Format einfügt und sie an den Consumer übermittelt.  Jeder mögliche Aufruf durch den Consumer muss im Anbieter implementiert sein.  
+# <a name="ole-db-consumers-and-providers"></a>OLE DB-Consumer und -Anbieter
+Die OLE DB-Architektur verwendet das Modell der Consumer und-Anbieter. Ein Consumer fordert Daten. Ein Anbieter reagiert auf diese Anforderungen durch Anordnen von Daten in einem tabellarischen Format, und sie an den Consumer zurückgegeben wird. Jeder Aufruf, die der Consumer vornehmen können, muss im Anbieter implementiert werden.  
   
- Technisch definiert ist ein Consumer jede Art von System oder Anwendungscode \(nicht notwendigerweise eine OLE DB\-Komponente\), dessen Datenzugriff über OLE DB\-Schnittstellen erfolgt.  Die Schnittstellen sind in einem Anbieter implementiert.  Ein Anbieter ist jede Art von Softwarekomponente, die OLE DB\-Schnittstellen so implementiert, dass der Datenzugriff gekapselt und anderen Objekten \(d. h. Consumern\) verfügbar gemacht wird.  
+ Technisch definiert ist, ist ein Consumer ein System- oder Code (nicht unbedingt ein OLE DB-Komponente), die über OLE DB-Schnittstellen auf Daten zugreift. Die Schnittstellen werden in einem Anbieter implementiert. Daher ist ein Anbieter eine Softwarekomponente, die implementiert die OLE DB-Schnittstellen zum Zugriff auf Daten zu kapseln und auf andere Objekte (d. h. Verbraucher) verfügbar gemacht.  
   
- Betrachtet man die Rollenverteilung, ruft ein Consumer Methoden an OLE DB\-Schnittstellen auf. Ein OLE DB\-Anbieter implementiert die benötigten OLE DB\-Schnittstellen.  
+ Im Hinblick auf Rollen Ruft ein Consumer Methoden auf OLE DB-Schnittstellen. OLE DB-Anbieter implementiert die erforderlichen OLE DB-Schnittstellen.  
   
- OLE DB vermeidet die Begriffe Client und Server, da diese Rollen nicht immer und insbesondere in n\-stufigen Situationen nicht sinnvoll sind.  Ein Consumer könnte eine Komponente auf einer Ebene sein, die einer anderen Komponente dient. Dies eine Client\-Komponente zu nennen wäre also irreführend.  Darüber hinaus verhält sich ein Anbieter manchmal eher wie ein Datenbanktreiber als ein Server.  
+ OLE DB-vermeidet die Begriffe Client und Server, da diese Rollen nicht immer, insbesondere in einer n-Tier-Situation bedeutungsvoll sind. Da ein Consumer einer Komponente auf einer Ebene werden konnte, die eine andere Komponente dient zum Aufrufen von eines Clients wäre Komponente verwirrend. Darüber hinaus verhält sich ein Anbieter manchmal eher wie einem Datenbanktreiber als ein Server.  
   
-## Siehe auch  
- [OLE DB\-Programmierung](../../data/oledb/ole-db-programming.md)   
- [Übersicht über die OLE DB\-Programmierung](../../data/oledb/ole-db-programming-overview.md)
+## <a name="see-also"></a>Siehe auch  
+ [OLE DB-Programmierung](../../data/oledb/ole-db-programming.md)   
+ [Übersicht über die OLE DB-Programmierung](../../data/oledb/ole-db-programming-overview.md)

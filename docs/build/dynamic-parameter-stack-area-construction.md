@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cb0f515aeadc8dfc1b4d4d763087d97d238f54f8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a84ffea9ca711a8aa15d0db1af4671b157dea417
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dynamic-parameter-stack-area-construction"></a>Dynamische Parameterstapelbereichskonstruktion
 Wenn Frame-Pointer verwendet wird, ist die Option zum dynamischen Erstellen von Parameterbereich Stapel vorhanden. Dies wird zurzeit nicht durchgeführt die [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] Compiler.  

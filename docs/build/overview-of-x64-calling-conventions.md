@@ -1,41 +1,42 @@
 ---
-title: "&#220;bersicht &#252;ber x64-Aufrufkonventionen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Übersicht über die X64 Aufrufkonventionen | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: a05db5eb-0844-4d9d-8b92-b1b2434be0ea
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8ac42eb934692fb9eaecf345b75e7544e7078f07
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# &#220;bersicht &#252;ber x64-Aufrufkonventionen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Zwei wichtige Änderungen in [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] gegenüber x86 sind die 64\-Bit\-Adressierbarkeit und ein pauschaler Satz von 16 64\-Bit\-Registern zur allgemeinen Verwendung.  Aufgrund des erweiterten Registersatzes verwendet [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] nur die [\_\_fastcall](../cpp/fastcall.md)\-Aufrufkonvention und ein RISC\-basiertes Ausnahmebehandlungsmodell.  Das `__fastcall`\-Modell verwendet für die ersten vier Argumente Register und zur Übergabe der anderen Parameter den Stapelrahmen.  
+# <a name="overview-of-x64-calling-conventions"></a>Übersicht über x64-Aufrufkonventionen
+Zwei wichtige Unterschiede zwischen X86 und [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] werden die 64-Bit-Adressierung-Funktion und eine flache Reihe von 16 64-Bit-registriert wird, zur allgemeinen Verwendung. Registrieren Sie aufgrund des erweiterten Menge [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] verwendet die [__fastcall](../cpp/fastcall.md) Aufrufkonvention und ein Ausnahmebehandlungsmodell RISC-basierten. Die `__fastcall` Konvention verwendet Register für die ersten vier Argumente und den Stapelrahmen, um zusätzliche Argumente zu übergeben.  
   
- Mit der folgenden Compileroption können Sie die Anwendung für [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] optimieren:  
+ Die folgende Compileroption können Sie die Optimierung der Anwendung für [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]:  
   
--   [\/favor \(Optimieren für Besonderheiten der Architektur\)](../build/reference/favor-optimize-for-architecture-specifics.md)  
+-   [/ favor (optimieren für Besonderheiten der Architektur)](../build/reference/favor-optimize-for-architecture-specifics.md)  
   
-## Aufrufkonvention  
- Das [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]\-ABI \(Application Binary Interface\) ist eine Aufrufkonvention mir vier Registern für Schnellaufrufe mit Stapelsicherung für die Register.  Es gibt eine strenge 1:1\-Entsprechung zwischen den Argumenten in einer Funktion und den Registern für diese Argumente.  Argumente, die größer als 8 Bytes sind, bzw. deren Länge nicht 1, 2, 4 oder 8 Bytes entspricht, müssen als Verweis übergeben werden.  Es wird nicht versucht, ein einzelnes Argument auf mehrere Register zu verteilen.  Der x87\-Registerstapel wird nicht verwendet.  Er kann verwendet werden, ist aber zwischen Funktionsaufrufen als flüchtig zu betrachten.  Alle Gleitkommaoperationen werden mithilfe der 16 XMM\-Register durchgeführt.  Die Argumente werden in den Registern RCX, RDX, R8 und R9 übergeben.  Wenn die Argumente vom Format float\/double sind, werden sie in XMM0L, XMM1L, XMM2L und XMM3L übergeben.  16\-Byte\-Argumente werden als Verweis übergeben.  Die Parameterübergabe wird ausführlich unter [Parameterübergabe](../build/parameter-passing.md) beschrieben.  Zusätzlich zu diesen Registern sind RAX, R10, R11, XMM4 und XMM5 flüchtig.  Alle anderen Register sind nicht flüchtig.  Die Verwendung von Registern ist in [Registerverwendung](../build/register-usage.md) und [Gespeicherte Register von Aufrufer\/Aufgerufenem](../build/caller-callee-saved-registers.md) ausführlich dokumentiert.  
+## <a name="calling-convention"></a>Aufrufkonvention  
+ Die [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] Anwendung binären Schnittstelle (ABI) eine Aufrufkonvention für die vier Register Fast-Aufruf wird standardmäßig verwendet. Speicherplatz wird in der Aufrufliste als Schatten Speicher für den aufgerufenen diese Register speichern zugeordnet. Es ist eine strenge 1: 1-Entsprechung zwischen den Argumenten zu einem Funktionsaufruf und die für diese Argumente zu verwendenden Register. Ein der Argumente, das 8 Bytes passt nicht oder ist nicht 1, 2, 4 oder 8 Bytes festgelegt, muss als Verweis übergeben werden. Es gibt keinen Versuch, ein einzelnes Argument auf mehrere Register zu verteilen. Die X87 Registerstapel wird nicht verwendet. Von der aufgerufenen Instanz verwendet werden kann, aber muss bei Funktionsaufrufen volatile berücksichtigt werden. Alle Gleitkommazahlen Vorgänge erfolgen mithilfe der 16 XMM-Register. Ganzzahlige Argumente werden in Registern RCX, RDX, R8 oder R9 übergeben. Gleitkommaoptionen XMM0L, XMM1L XMM2L und XMM3L Argumente übergeben werden. 16-Byte-Argumente werden als Verweis übergeben. Übergeben von Parametern wird ausführlich beschrieben unter [Parameterübergabe](../build/parameter-passing.md). Zusätzlich zu diesen Registern RAX, R10, R11, XMM4 und XMM5 flüchtig gelten. Alle anderen Register sind, nicht flüchtigem. Registernutzung wird ausführlich dokumentiert [registrieren Sie Verbrauch](../build/register-usage.md) und [Aufrufer-/Aufgerufener gespeichert registriert](../build/caller-callee-saved-registers.md).  
   
- Der Aufrufer ist verantwortlich für die Reservierung von Speicherplatz für die an den Aufgerufenen zu übergebenden Parameter und muss stets genügend Speicher für die 4 Registerparameter reservieren, auch wenn der Aufgerufene weniger Parameter hat.  Dies dient einfach der Unterstützung von C\-Funktionen ohne Prototypen und vararg\-Funktionen in C\/C\+\+.  Für vararg\-Funktionen und Funktionen ohne Prototypen müssen alle float\-Werte im entsprechenden Allzweckregister dupliziert werden.  Vor dem Aufruf müssen alle Parameter, die über die ersten vier hinausgehen, auf dem Stapel oberhalb des Sicherungsspeichers für die ersten vier gespeichert werden.  Ausführliche Informationen zu vararg\-Funktionen finden Sie unter [VarArgs](../build/varargs.md).  Ausführliche Informationen zu Funktionen ohne Prototyp finden Sie unter [Funktionen ohne Prototyp](../build/unprototyped-functions.md).  
+ Der Aufrufer ist verantwortlich für das Zuweisen von Speicherplatz für Parameter an die aufgerufenen und muss immer ausreichend Speicherplatz zum Speichern von vier Registerparameter zuordnen, auch wenn der aufgerufene viele Parameter akzeptiert. Dies vereinfacht die Unterstützung für die Programmiersprache C Funktionen ohne Prototyp und Vararg-C/C++-Funktionen. Vararg oder ohne Prototyp-Funktionen, alle Gleitkommazahlen Werte müssen im entsprechenden Allzweckregister dupliziert werden. Alle Parameter über die ersten vier müssen auf dem Stapel, über den Volumeschattenkopie-Speicher für die ersten vier, vor dem Aufruf gespeichert werden. Vararg-Funktionsdetails finden Sie [Varargs](../build/varargs.md). Ohne Prototyp Funktionsinformationen finden Sie unter [Funktionen ohne Prototyp](../build/unprototyped-functions.md).  
   
-## Ausrichtung  
- Die meisten Strukturen werden gemäß ihrer natürlichen Ausrichtung ausgerichtet.  Hauptsächliche Ausnahmen sind die Stapelzeiger und der malloc\- oder alloca\-Speicher, die zur Leistungsverbesserung auf 16 Bytes ausgerichtet werden.  Eine Ausrichtung auf mehr als 16 Bytes muss manuell erfolgen. Da jedoch 16 Bytes eine verbreitete Ausrichtungsgröße für XMM\-Operationen ist, sollte dies für die meisten Fälle ausreichen.  Weitere Informationen zu Strukturlayout und Ausrichtung finden Sie unter [Typen und Speicher](../build/types-and-storage.md).  Informationen zum Stapellayout finden Sie unter [Verwendung von Stapeln](../build/stack-usage.md).  
+## <a name="alignment"></a>Ausrichtung  
+ Die meisten Strukturen werden gemäß ihrer natürlichen Ausrichtung ausgerichtet. Die wichtigsten Ausnahmen sind der Stapelzeiger und `malloc` oder `alloca` Arbeitsspeicher, die auf 16 Bytes ausgerichtet werden, um die Leistung zu unterstützen. Ausrichtung auf mehr als 16 Bytes muss manuell erfolgen, aber da 16 Bytes ist eine allgemeine Ausrichtungsgröße für XMM-Vorgänge, sollte dies für die meisten Code funktioniert. Weitere Informationen zu Struktur Layout- und ausrichtungsverwaltung finden Sie unter [Typen und Speicher](../build/types-and-storage.md). Informationen über das Stapellayout finden Sie unter [Stapelverwendung](../build/stack-usage.md).  
   
-## Entladbarkeit  
- Alle verzweigenden Funktionen \[Funktionen, die weder eine Funktion aufrufen noch selbst irgendwelchen Stapelspeicher reservieren\] müssen mit Daten gekennzeichnet werden \[diese werden als xdata oder ehdata bezeichnet, auf die pdata zeigen\], die eine Beschreibung für das Betriebssystem enthalten, wie sie ordnungsgemäß zu entladen sind, um die nicht flüchtigen Register freizugeben.  Prologe und Epiloge sind in hohem Maß beschränkt, damit sie ordnungsgemäß in xdata beschrieben werden können.  In jedem Codebereich, der nicht Teil eines Epilogs oder Prologs ist, muss der Stapelzeiger auf 16 Bytes ausgerichtet werden, außer für Endfunktionen.  Ausführliche Informationen über die richtige Struktur von Funktionsprologen und \-epilogen finden Sie unter [Prolog und Epilog](../build/prolog-and-epilog.md).  Weitere Informationen über Ausnahmebehandlung und Ausnahmebehandlung\/Entladen von pdata und xdata finden Sie unter [Ausnahmebehandlung \(x64\)](../build/exception-handling-x64.md).  
+## <a name="unwindability"></a>Unwindability  
+ Funktionen sind Funktionen, die alle nicht flüchtigen Register nicht ändern. Eine innerer-Funktion kann nicht flüchtigen RSP, z. B. ändern, indem eine Funktion aufrufen, oder weisen Sie zusätzlichen Stapelspeicher für lokale Variablen. Um nicht flüchtigen Register wiederherstellen, wenn eine Ausnahme behandelt wird, müssen nichtblatt-Funktionen mit statischen Daten kommentiert werden, die beschreibt, wie ordnungsgemäß Entladung der Funktion an eine beliebige Anweisung. Diese Daten werden als gespeichert *Pdata*, oder Prozedur Daten bezieht sich wiederum auf *Xdata*, die Daten für die Ausnahmebehandlung. Die Xdata enthält die entladen und auf zusätzliche Pdata bzw. eine Ausnahme Handlerfunktion verweisen. Prologe und Epiloge sind stark eingeschränkte, damit sie ordnungsgemäß in Xdata beschrieben werden können. Der Stapelzeiger muss auf 16 Bytes in einer beliebigen Region Code ausgerichtet werden, die nicht Teil eines Epilogs oder Prolog, außer in Funktionen. Funktionen können entladen werden, indem Sie einfach eine Rückgabe simulieren, sodass Pdata und Xdata nicht erforderlich sind. Ausführliche Informationen über die richtige Struktur der Funktion Prologe und Epiloge finden Sie unter [Prolog und Epilog](../build/prolog-and-epilog.md). Weitere Informationen zur Behandlung von Ausnahmen und die Ausnahme behandeln und Entladen von Pdata und Xdata finden Sie unter [Exception Handling (x64)](../build/exception-handling-x64.md).  
   
-## Siehe auch  
- [x64\-Softwarekonventionen](../build/x64-software-conventions.md)
+## <a name="see-also"></a>Siehe auch  
+ [x64-Softwarekonventionen](../build/x64-software-conventions.md)

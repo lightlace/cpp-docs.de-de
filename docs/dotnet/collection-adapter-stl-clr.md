@@ -15,11 +15,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 79dbc2ff2e47e7aa277a2176dbd8605c5a78c749
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4a1a03dd6ecc52cd3921428e681fe5affa11d275
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collectionadapter-stlclr"></a>collection_adapter (STL/CLR)
 Dient als Wrapper für eine .NET Auflistung für die Verwendung als STL/CLR-Container. Ein `collection_adapter` ist eine Vorlagenklasse, die ein einfaches STL/CLR-Container-Objekt beschreibt. Es dient als Wrapper für eine Schnittstelle für die Basisklassenbibliothek (Base Class Library, BCL) und gibt ein Iterator-Paar, das Sie verwenden, um die gesteuerte Sequenz zu bearbeiten.  
@@ -74,7 +77,7 @@ template<typename Key,
 |IList\<Wert >|Verwaltet eine geordnete Gruppe von typisierten Elementen an.|  
 |IDictionary\<Wert >|Verwaltet einen Satz von typisierten {Schlüssel, Wert} Paare.|  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 |Typdefinition|Beschreibung|  
 |---------------------|-----------------|  

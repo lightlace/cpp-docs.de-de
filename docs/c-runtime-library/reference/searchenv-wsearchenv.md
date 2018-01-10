@@ -45,11 +45,12 @@ caps.latest.revision: "33"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 553d51363479a220b5850af2a7ff3ad880c31878
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9996c9aad085beaef46d2a3188503eba582602d6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="searchenv-wsearchenv"></a>_searchenv, _wsearchenv
 Verwendet Umgebungspfade für die Suche nach einer Datei. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [_searchenv_s, _wsearchenv_s](../../c-runtime-library/reference/searchenv-s-wsearchenv-s.md).  
@@ -109,7 +110,7 @@ void _wsearchenv(
   
  Weitere Informationen über `errno` und andere Fehlercodes finden Sie unter [errno-Konstanten](../../c-runtime-library/errno-constants.md).  
   
- In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sicheren Entsprechungen dieser Funktionen aufgerufen werden. Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sicheren Entsprechungen dieser Funktionen aufgerufen werden. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
@@ -119,7 +120,7 @@ void _wsearchenv(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_searchenv`|\<stdlib.h>|  
 |`_wsearchenv`|\<stdlib.h> oder \<wchar.h>|  
@@ -159,7 +160,7 @@ C:\Program Files\Microsoft Visual Studio 8\VC\BIN\CL.EXE
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verzeichnissteuerung](../../c-runtime-library/directory-control.md)   
+ [Directory Control (Verzeichnissteuerung)](../../c-runtime-library/directory-control.md)   
  [getenv, _wgetenv](../../c-runtime-library/reference/getenv-wgetenv.md)   
  [_putenv, _wputenv](../../c-runtime-library/reference/putenv-wputenv.md)   
  [_searchenv_s, _wsearchenv_s](../../c-runtime-library/reference/searchenv-s-wsearchenv-s.md)

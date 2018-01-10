@@ -34,11 +34,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cedcddeefb62fc639ba674225a039cfa81a743ac
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: cedf05bd8f5af198569891b4d6d59610d5098eb6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctimespan-class"></a>CTimeSpan-Klasse
 Eine Zeitspanne, die als die Anzahl der Sekunden, in dem Zeitraum intern gespeichert werden.  
@@ -49,7 +50,7 @@ Eine Zeitspanne, die als die Anzahl der Sekunden, in dem Zeitraum intern gespeic
 class CTimeSpan
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -78,7 +79,7 @@ class CTimeSpan
 |-|-|  
 |[Operator + -](#operator_add_-)|Fügt und subtrahiert `CTimeSpan` Objekte.|  
 |[Operator += =](#operator_add_eq_-_eq)|Fügt und subtrahiert einen `CTimeSpan` -Objekts in und aus diesem `CTimeSpan`.|  
-|[Operator == < usw..](#ctimespan_comparison_operators)|Vergleicht zwei relative Time-Werten.|  
+|[Operator == < usw.](#ctimespan_comparison_operators)|Vergleicht zwei relative Time-Werten.|  
   
 ## <a name="remarks"></a>Hinweise  
  `CTimeSpan`eine Basisklasse verfügt nicht über.  
@@ -141,7 +142,7 @@ CTimeSpan(
  Ein **__time64_t** Zeitwert, der die Anzahl der Sekunden, in dem Zeitraum wurde.  
   
  `lDays`, `nHours`, `nMins`, `nSecs`  
- Tage, Stunden, Minuten und Sekunden, bzw..  
+ Tage, Stunden, Minuten und Sekunden, bzw.  
   
 ### <a name="remarks"></a>Hinweise  
  Alle diese Konstruktoren erstellen ein neues `CTimeSpan` Objekt, mit dem angegebenen relativen initialisiert wurde. Jeder Konstruktor wird im folgenden beschrieben:  

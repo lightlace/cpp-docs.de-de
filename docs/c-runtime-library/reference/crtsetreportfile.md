@@ -32,11 +32,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7769c38c939b0deb1e1c61d53fad6b500f3860dd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8487ca011355ad248bc38c2fc2d3265f0fad4995
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtsetreportfile"></a>_CrtSetReportFile
 Nachdem Sie [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) verwendet haben, um `_CRTDBG_MODE_FILE` anzugeben, können Sie das Dateihandle angeben, um den Meldungstext zu empfangen. `_CrtSetReportFile` wird auch von [_CrtDbgReport, _CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) verwendet, um das Ziel des Texts anzugeben (nur Debugversion).  
@@ -66,7 +67,7 @@ _HFILE _CrtSetReportFile(
  In der folgenden Tabelle wird eine Liste der verfügbaren Optionen für `reportFile` sowie das resultierende Verhalten von `_CrtDbgReport` gezeigt. Diese Optionen werden als Bitflags in Crtdbg.h definiert.  
   
  `file handle`  
- Ein Handle für die Datei, die das Ziel der Meldungen ist. Es wird nicht versucht, die Gültigkeit des Handles zu überprüfen. Sie müssen das Handle für die Datei öffnen und schließen. Beispiel:  
+ Ein Handle für die Datei, die das Ziel der Meldungen ist. Es wird nicht versucht, die Gültigkeit des Handles zu überprüfen. Sie müssen das Handle für die Datei öffnen und schließen. Zum Beispiel:  
   
 ```  
 HANDLE hLogFile;  
@@ -101,7 +102,7 @@ _RPT0(_CRT_ERROR,"1st message\n");
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|Optionaler Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionaler Header|  
 |-------------|---------------------|---------------------|  
 |`_CrtSetReportFile`|\<crtdbg.h>|\<errno.h>|  
   

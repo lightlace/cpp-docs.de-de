@@ -1,70 +1,71 @@
 ---
-title: "/Gy (Funktionslevel-Linking aktivieren) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.EnableFunctionLevelLinking"
-  - "/gy"
-  - "VC.Project.VCCLWCECompilerTool.EnableFunctionLevelLinking"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Gy (Compileroption) [C++]"
-  - "COMDAT-Funktion"
-  - "Aktivieren der Verknüpfung auf Funktionsebene (Compileroption) [C++]"
-  - "Gy (Compileroption) [C++]"
-  - "-Gy (Compileroption) [C++]"
-  - "Paketfunktionen"
+title: -Gy (Funktionslevel-Linking aktivieren) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.EnableFunctionLevelLinking
+- /gy
+- VC.Project.VCCLWCECompilerTool.EnableFunctionLevelLinking
+dev_langs: C++
+helpviewer_keywords:
+- enable function-level linking compiler option [C++]
+- COMDAT function
+- Gy compiler option [C++]
+- -Gy compiler option [C++]
+- /Gy compiler option [C++]
+- packaged functions
 ms.assetid: 0d3cf14c-ed7d-4ad3-b4b6-104e56f61046
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ebe272b12a503a310319526f53f312a033a0ee26
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# /Gy (Funktionslevel-Linking aktivieren)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ermöglicht dem Compiler, einzelne Funktionen in Form von kompilierten Funktionen \(COMDATs\) zu kompilieren.  
+# <a name="gy-enable-function-level-linking"></a>/Gy (Funktionslevel-Linking aktivieren)
+Ermöglicht dem Compiler, einzelne Funktionen in Form von kompilierten Funktionen (COMDATs) zu kompilieren.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /Gy[-]  
 ```  
   
-## Hinweise  
- Der Linker erfordert, dass Funktionen separat als COMDATs zusammengepackt werden, um einzelne Funktionen in einer DLL oder einer EXE\-Datei ausschließen oder anordnen zu können.  
+## <a name="remarks"></a>Hinweise  
+ Der Linker erfordert, dass Funktionen separat als COMDATs ausgeschlossen oder sortieren einzelne Funktionen in einer DLL oder .exe-Datei verpackt werden.  
   
- Mit der [\/OPT \(Optimierungen\)](../../build/reference/opt-optimizations.md)\-Linkeroption können Sie nicht referenzierte Paketfunktionen aus der EXE\-Datei ausschließen.  
+ Sie können die Linkeroption [/OPT (Optimierungen)](../../build/reference/opt-optimizations.md) Unreferenzierte gepackte Funktionen .exe-Datei ausgeschlossen werden.  
   
- Mit der [\/ORDER \(Reihenfolge von Funktionen festlegen\)](../../build/reference/order-put-functions-in-order.md)\-Linkeroption können Sie Paketfunktionen in einer angegebenen Reihenfolge in der EXE\-Datei ablegen.  
+ Sie können die Linkeroption [/Order (Put-Funktionen in der Reihenfolge)](../../build/reference/order-put-functions-in-order.md) Paketfunktionen in einer bestimmten Reihenfolge in der .exe-Datei eingeschlossen.  
   
- Inlinefunktionen werden immer zu Paketfunktionen zusammengepackt, wenn sie als Aufrufe instanziiert werden \(beispielsweise wenn Inlining deaktiviert oder eine Funktionsadresse verwendet wird\).  Außerdem werden C\+\+\-Memberfunktionen, die innerhalb der Klassendeklaration definiert sind, automatisch zusammengepackt, andere Funktionen jedoch nicht. Die Auswahl dieser Option ist erforderlich, um sie als Paketfunktionen zu kompilieren.  
+ Inlinefunktionen werden immer verpackt, wenn sie als Aufrufe instanziiert werden (Dies tritt ein, z. B. wenn inlining ist deaktiviert oder eine Funktionsadresse). Darüber hinaus werden C++-Memberfunktionen, die in der Klassendeklaration definiert automatisch gepackt; andere Funktionen sind nicht, und diese Option ist erforderlich, um sie als Paketfunktionen zu kompilieren.  
   
 > [!NOTE]
->  Die zum Bearbeiten und Fortsetzen des Vorgangs verwendete [\/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)\-Option legt automatisch die **\/Gy**\-Option fest.  
+>  Die [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) -Option zum Bearbeiten und fortfahren, setzt automatisch das **/Gy** Option.  
   
-### So legen Sie diese Compileroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Gewusst wie: Öffnen von Projekteigenschaftenseiten](../../misc/how-to-open-project-property-pages.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Klicken Sie auf den Ordner **C\/C\+\+**.  
+2.  Klicken Sie auf den Ordner **C/C++** .  
   
-3.  Klicken Sie auf die Eigenschaftenseite **Codegenerierung**.  
+3.  Klicken Sie auf die **Codegenerierung** Eigenschaftenseite.  
   
-4.  Ändern Sie die Eigenschaft **Funktionslevel\-Linking aktivieren**.  
+4.  Ändern der **Funktionslevel Linking aktivieren** Eigenschaft.  
   
-### So legen Sie diese Compileroption programmgesteuert fest  
+### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
   
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableFunctionLevelLinking*>.  
+-   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableFunctionLevelLinking%2A>.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Compileroptionen](../../build/reference/compiler-options.md)   
  [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)

@@ -1,34 +1,37 @@
 ---
-title: "Gewusst wie: Verwenden regul&#228;rer Ausdr&#252;cke f&#252;r einfache Gleichheitspr&#252;fung (C++/CLI)"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IsMatch-Methode"
-  - "Reguläre Ausdrücke [C++], Einfache Übereinstimmung"
-  - "Suchen, Genaue Übereinstimmung von untergeordneten Zeichenfolgen"
-  - "Zeichenfolgen [C++], Genaue Übereinstimmung von untergeordneten Zeichenfolgen"
-  - "Teilzeichenfolgen, Einfache Übereinstimmung"
+title: "Vorgehensweise: Verwenden regulärer Ausdrücke für einfache Gleichheitsprüfung (C + c++ / CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- substrings, simple matches
+- searching, exact substring matches
+- strings [C++], exact substring matching
+- regular expressions [C++], simple matching
+- IsMatch method
 ms.assetid: 4661f6f3-0f6d-48f2-abe4-cb4770bf9bd5
-caps.latest.revision: 10
-caps.handback.revision: "10"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 46a9301904d3293c242ca631c161b7e71304f283
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Gewusst wie: Verwenden regul&#228;rer Ausdr&#252;cke f&#252;r einfache Gleichheitspr&#252;fung (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Im folgenden Codebeispiel werden reguläre Ausdrücke verwendet, um nach genauen Übereinstimmungen in Teilzeichenfolgen zu suchen.  Die Suche wird von der statischen <xref:System.Text.RegularExpressions.Regex.IsMatch*>\-Methode ausgeführt, in die zwei Zeichenfolgen eingegeben werden.  Bei der ersten Zeichenfolge handelt es sich um die zu durchsuchende, bei der zweiten um das Muster, nach dem gesucht werden soll.  
+# <a name="how-to-use-regular-expressions-for-simple-matching-ccli"></a>Gewusst wie: Verwenden regulärer Ausdrücke für einfache Gleichheitsprüfung (C++/CLI)
+Das folgende Codebeispiel verwendet reguläre Ausdrücke nach genauen Teilzeichenfolge Übereinstimmungen gesucht werden soll. Die Suche erfolgt von der statischen <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> Methode, die zwei Zeichenfolgen als Eingabe akzeptiert. Die erste ist die Zeichenfolge, die gesucht werden soll, und die zweite ist das Muster, nach dem gesucht werden.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // regex_simple.cpp  
@@ -62,6 +65,6 @@ int main()
 }  
 ```  
   
-## Siehe auch  
- [Reguläre Ausdrücke von .NET Framework](../Topic/.NET%20Framework%20Regular%20Expressions.md)   
- [.NET\-Programmierung mit C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [Reguläre Ausdrücke von .NET Framework](/dotnet/standard/base-types/regular-expressions)   
+ [.NET-Programmierung mit C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

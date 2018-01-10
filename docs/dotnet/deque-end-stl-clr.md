@@ -1,41 +1,42 @@
 ---
-title: "deque::end (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::end"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "end-Member [STL/CLR]"
+title: 'deque:: End (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::end
+dev_langs: C++
+helpviewer_keywords: end member [STL/CLR]
 ms.assetid: 3de3e816-3334-4b39-97ad-6f8771e9b4e9
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f8f46f5b1b9bd73dadb57e723fa6ff0fc6c2984a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# deque::end (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dequeend-stlclr"></a>deque::end (STL/CLR)
 Legt das Ende der kontrollierten Sequenz fest.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 iterator end();  
 ```  
   
-## Hinweise  
- Die Memberfunktion gibt ein Iterator mit wahlfreier Zugriff zurück, der nur über das Ende der Sequenz gesteuerten hinaus zeigt.  Sie können damit einen Iterator abrufen, der das `current` Ende der kontrollierten Sequenz bestimmt; der Zustand kann sich jedoch ändern, sobald sich die Länge der kontrollierten Sequenz ändert.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt einem Iterator mit zufälligem Zugriff, der direkt hinter das Ende der kontrollierten Sequenz verweist. Es mit der einen Iterator abrufen, bestimmt die `current` Ende der kontrollierten Sequenz, aber dessen Status kann ändern, wenn die Länge der gesteuerten Sequenz geändert wird.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_deque_end.cpp   
@@ -71,17 +72,20 @@ int main()
   
 ```  
   
-  **ein b c**  
-**\*\- \-\-end\(\) \= b**  
-**\*\-\-end\(\) \= c**  
- **ein x\-y**   
-## Anforderungen  
- **Header:** \<cliext\/Doppelschlange\>  
+```Output  
+ a b c  
+*-- --end() = b  
+*--end() = c  
+ a x y  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/doppelschlange >  
   
-## Siehe auch  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::back](../dotnet/deque-back-stl-clr.md)   
- [deque::back\_item](../dotnet/deque-back-item-stl-clr.md)   
- [deque::begin](../dotnet/deque-begin-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque:: Back (STL/CLR)](../dotnet/deque-back-stl-clr.md)   
+ [deque:: back_item (STL/CLR)](../dotnet/deque-back-item-stl-clr.md)   
+ [deque::begin (STL/CLR)](../dotnet/deque-begin-stl-clr.md)

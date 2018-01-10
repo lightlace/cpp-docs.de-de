@@ -1,34 +1,33 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4218 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4218"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4218"
+title: Compilerwarnung (Stufe 1) C4218 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4218
+dev_langs: C++
+helpviewer_keywords: C4218
 ms.assetid: d6c3cd90-4518-49e9-ae86-4ba9e2761d98
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 156a43f57f52f50f6542f3502658d5e0e16f1bd9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 1) C4218
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Nicht dem Standard entsprechende Erweiterung: Mindestens Angabe einer Speicherklasse oder eines Typs erforderlich  
+# <a name="compiler-warning-level-1-c4218"></a>Compilerwarnung (Stufe 1) C4218
+nicht dem Standard entsprechende Erweiterung: müssen mindestens eine Speicherklasse oder einen Typ angeben  
   
- Bei Verwendung der Microsoft\-Standarderweiterungen \(**\/Ze**\) können Sie eine Variable ohne Angabe eines Typs oder einer Speicherklasse deklarieren.  Der Standardtyp lautet `int`.  
+ Mit den Standard-Microsoft-Erweiterungen (/ Ze) können Sie eine Variable deklarieren, ohne dass eine Klasse vom Typ oder Speicher. Der Standardtyp ist `int`.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // C4218.c  
@@ -40,4 +39,4 @@ int main()
 }  
 ```  
   
- Derartige Deklarationen sind bei Einhaltung der ANSI\-Kompatibilität \([\/Za](../../build/reference/za-ze-disable-language-extensions.md)\) ungültig.
+ Derartige Deklarationen sind ungültige ANSI-Kompatibilität (["/ Za"](../../build/reference/za-ze-disable-language-extensions.md)).

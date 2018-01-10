@@ -1,58 +1,57 @@
 ---
-title: "EDITBIN-Optionen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "editbin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "EDITBIN (Programm), Optionen"
+title: EDITBIN-Optionen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: editbin
+dev_langs: C++
+helpviewer_keywords: EDITBIN program, options
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2658b2ca23ef34b63e0788791f3fb528107e1efd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# EDITBIN-Optionen
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Sie können EDITBIN verwenden, um Objektdateien, ausführbare Dateien und Dynamic Link Libraries \(DLLs\) zu ändern.  Optionen die Änderungen aufgeführt, die EDITBIN vornimmt.  
+# <a name="editbin-options"></a>EDITBIN-Optionen
+EDITBIN können um Objektdateien, ausführbaren Dateien und Dynamic Link Libraries (DLLs) zu ändern. Optionen zum Angeben der Änderungen, die EDITBIN vornimmt.  
   
- Eine Option besteht aus einem Optionsbezeichner, entweder einem Bindestrich \(–\) oder einem Schrägstrich \(\/\), sowie dem darauf folgenden Optionsnamen.  Optionsnamen können nicht abgekürzt werden.  Einige Optionen haben Argumente, die nach einem Doppelpunkt angegeben sind \(: \).  Innerhalb einer Optionsangabe sind keine Leerzeichen oder Tabstopps zulässig.  Verwenden Sie eines oder mehrere Leerzeichen bzw. Tabstopps, um Optionsangaben in der Befehlszeile voneinander zu trennen.  Bei Optionsnamen und ihren Schlüsselwortargumente oder Dateinamen bestehenden Argumenten wird keine Groß\-\/Kleinschreibung berücksichtigt.  Beispielsweise \- Bindung und \/BIND haben die gleiche Bedeutung.  
+ Eine Option besteht aus einem Optionsbezeichner, entweder einem Bindestrich (-) oder einem Schrägstrich (/), gefolgt vom Namen der Option. Optionsnamen können nicht abgekürzt werden. Einige Optionen haben Argumente, die nach einem Doppelpunkt (:)) angegeben werden. Innerhalb einer Optionsangabe sind keine Leerzeichen oder Tabstopps zulässig. Verwenden Sie eines oder mehrere Leerzeichen bzw. Tabstopps, um Optionsangaben in der Befehlszeile voneinander zu trennen. Optionsnamen und ihren Schlüsselwort Argumente oder die Datei bestehenden Argumenten wird die Groß-/Kleinschreibung nicht berücksichtigt. Z. B. - Bindung und/BIND dieselbe Bedeutung.  
   
- EDITBIN hat die folgenden Optionen:  
+ EDITBIN enthält die folgenden Optionen:  
   
 |Option|Zweck|  
-|------------|-----------|  
-|[\/ALLOWBIND](../../build/reference/allowbind.md)|Gibt an, ob eine DLL gebunden werden kann.|  
-|[\/ALLOWISOLATION](../../build/reference/allowisolation.md)|Gibt Manifest Suchverhalten der DLL oder der ausführbaren Datei an.|  
-|[\/APPCONTAINER](../../build/reference/appcontainer.md)|Gibt ob die App muss innerhalb Appcontainer – z. B. eine [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]\-App ausgeführt werden.|  
-|[\/BIND](../../build/reference/bind.md)|Legt die Adressen für die Einstiegspunkte in den angegebenen Objekten zur Geschwindigkeitsladezeit fest.|  
-|[\/DYNAMICBASE](../../build/reference/dynamicbase.md)|Gibt an, ob die DLL oder ausführbare das Image bei Ladezeit zufällig zurückgesetzt werden können, indem sie Adressbereichslayoutzufallszuteilung \(ASLR\) verwenden.|  
-|[\/ERRORREPORT](../../build/reference/errorreport-editbin-exe.md)|Gibt internen Fehlern Microsoft.|  
-|[\/HEAP](../../build/reference/heap.md)|Legt die Größe des Heaps des ausführbaren Images in Bytes fest.|  
-|[\/HIGHENTROPYVA](../../build/reference/highentropyva.md)|Gibt an, ob die DLL oder ausführbare das Image hohe Adressbereichs\-Layoutzufallszuteilung \(ASLR\) die Entropie \(64\-Bit\) unterstützt.|  
-|[\/INTEGRITYCHECK](../../build/reference/integritycheck.md)|Gibt an, ob die digitale Signatur zur Ladezeit überprüft.|  
-|[\/LARGEADDRESSAWARE](../../build/reference/largeaddressaware.md)|Gibt an, ob das Objekt Adressen unterstützt, die größer als zwei Gigabyte sind.|  
-|[\/NOLOGO](../../build/reference/nologo-editbin.md)|Unterdrückt das EDITBIN\-Startbanner.|  
-|[\/NXCOMPAT](../../build/reference/nxcompat.md)|Gibt an, ob das ausführbare Image mit Windows\-Datenausführungsverhinderung kompatibel ist.|  
-|[\/REBASE](../../build/reference/rebase.md)|Legt Basisadressen die für die angegebenen Objekte fest.|  
-|[\/RELEASE](../../build/reference/release.md)|Legt die Prüfsumme im Header fest.|  
-|[\/SECTION](../../build/reference/section-editbin.md)|Überschreibt die Attribute eines Abschnitts.|  
-|[\/STACK](../../build/reference/stack.md)|Legt die Größe des Stapels des ausführbaren Images in Bytes fest.|  
-|[\/SUBSYSTEM](../../build/reference/subsystem.md)|Gibt der Ausführungsumgebung an.|  
-|[\/SWAPRUN](../../build/reference/swaprun.md)|Gibt an, dass, das ausführbare Image zur Seitendatei kopiert werden muss, und anschließend von dort ausgeführt.|  
-|[\/TSAWARE](../../build/reference/tsaware.md)|Gibt an, dass die App entworfen wird, um in einer Umgebung ausgeführt mit mehreren Benutzern.|  
-|[\/VERSION](../../build/reference/version.md)|Legt die Versionsnummer im Header fest.|  
+|------------|-------------|  
+|[/ ALLOWBIND](../../build/reference/allowbind.md)|Gibt an, ob eine DLL gebunden werden kann.|  
+|[/ ALLOWISOLATION](../../build/reference/allowisolation.md)|Gibt an, DLL oder ausführbare Datei Manifestsuche Verhalten.|  
+|[/ APPCONTAINER](../../build/reference/appcontainer.md)|Gibt an, ob die app in einer AppContainer ausgeführt werden muss, z. B. eine [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] app.|  
+|[/ BIND](../../build/reference/bind.md)|Legt die Adressen für die Einstiegspunkte in die angegebenen Objekte zur Ladezeit Geschwindigkeit fest.|  
+|[/ DYNAMICBASE](../../build/reference/dynamicbase.md)|Gibt an, ob die DLL oder ausführbaren Images nach dem Zufallsprinzip zur Ladezeit ein REBASE werden kann Adresse Space Layout Randomization (ASLR).|  
+|[/ ERRORREPORT](../../build/reference/errorreport-editbin-exe.md)|Interner Fehler an Microsoft gemeldet.|  
+|[/ HEAP](../../build/reference/heap.md)|Legt die Größe des ausführbaren Images Heap in Bytes fest.|  
+|[/ HIGHENTROPYVA](../../build/reference/highentropyva.md)|Gibt an, ob die DLL oder ausführbaren Images mit hoher Entropie (64-Bit) Adresse Space Layout Randomization (ASLR) unterstützt.|  
+|[/ INTEGRITYCHECK](../../build/reference/integritycheck.md)|Gibt an, ob die digitale Signatur zur Ladezeit überprüft werden soll.|  
+|[/ LARGEADDRESSAWARE](../../build/reference/largeaddressaware.md)|Gibt an, ob das Objekt Adressen unterstützt, die größer als 2 GB sind.|  
+|[/ NOLOGO](../../build/reference/nologo-editbin.md)|Unterdrückt den Startbanner EDITBIN an.|  
+|[/ NXCOMPAT](../../build/reference/nxcompat.md)|Gibt an, ob das ausführbare Image mit Datenausführungsverhinderung kompatibel ist.|  
+|[/ REBASE](../../build/reference/rebase.md)|Legt die Basisadressen für die angegebenen Objekte.|  
+|[/ RELEASE](../../build/reference/release.md)|Legt die Prüfsumme im Header fest.|  
+|[/ SECTION](../../build/reference/section-editbin.md)|Überschreibt die Attribute eines Abschnitts.|  
+|[/ STACK](../../build/reference/stack.md)|Legt das ausführbare Image Stapelgröße in Bytes fest.|  
+|[/ SUBSYSTEM](../../build/reference/subsystem.md)|Gibt die ausführungsumgebung bereitstellt.|  
+|[/ SWAPRUN](../../build/reference/swaprun.md)|Gibt an, dass das ausführbare Image muss in die Auslagerungsdatei kopiert, und führen Sie von dort aus.|  
+|[/ TSAWARE](../../build/reference/tsaware.md)|Gibt an, dass die app in einer Umgebung mit mehreren Benutzern ausgeführt werden sollen.|  
+|[/ VERSION](../../build/reference/version.md)|Legt die Versionsnummer im Header fest.|  
   
-## Siehe auch  
- [C\/C\+\+\-Buildtools](../../build/reference/c-cpp-build-tools.md)   
- [EDITBIN\-Referenz](../../build/reference/editbin-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [C/C++-Buildtools](../../build/reference/c-cpp-build-tools.md)   
+ [EDITBIN-Referenz](../../build/reference/editbin-reference.md)

@@ -19,16 +19,19 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ab4bfa2a39b89dbfaced859bc241e5c002c620bb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 41ed76120029ac8ae82f6be6c6634f08b3912bc6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rowset-object-interfaces"></a>Rowsetobjekt-Schnittstellen
 Die folgende Tabelle zeigt die obligatorischen und optionalen Schnittstellen, die für ein Rowsetobjekt durch OLE DB definiert.  
   
-|Schnittstelle|Erforderlich?|Vom OLE DB-Vorlagen implementiert?|  
+|Interface|Erforderlich?|Vom OLE DB-Vorlagen implementiert?|  
 |---------------|---------------|--------------------------------------|  
 |[IAccessor](https://msdn.microsoft.com/en-us/library/ms719672.aspx)|Erforderlich|Ja|  
 |[IColumnsInfo](https://msdn.microsoft.com/en-us/library/ms724541.aspx)|Erforderlich|Ja|  

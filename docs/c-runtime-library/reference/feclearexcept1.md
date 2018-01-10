@@ -1,49 +1,49 @@
 ---
-title: "feclearexcept1 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "feclearexcept"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "feclearexcept"
-  - "fenv/feclearexcept"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Feclearexcept-Funktion"
+title: feclearexcept1 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname: feclearexcept
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- feclearexcept
+- fenv/feclearexcept
+dev_langs: C++
+helpviewer_keywords: feclearexcept function
 ms.assetid: ef419da3-c248-4432-b53c-8e7a475d9533
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 327c2b70a1c5afd26953f830217d0a9c05e4d4e6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# feclearexcept
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Versucht, die durch das Argument angegebenen Gleitkommaausnahme Flags zu deaktivieren.  
+# <a name="feclearexcept"></a>feclearexcept
+Versucht, die Gleitkommaausnahme-Flags zu löschen, die durch das Argument angegeben wurden.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 int feclearexcept(  
@@ -51,35 +51,35 @@ int feclearexcept(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `excepts`  
- Die Ausnahme Statusflags zu deaktivieren.  
+ Die zu löschenden Gleitkommaausnahme-Flags.  
   
-## Rückgabewert  
- Gibt 0, wenn `excepts` null ist, oder wenn alle angegebenen Ausnahmen wurden erfolgreich gelöscht wurden. Andernfalls wird einen Wert ungleich NULL zurückgegeben.  
+## <a name="return-value"></a>Rückgabewert  
+ Gibt null zurück, wenn `excepts` null ist, oder wenn alle angegebenen Ausnahmen erfolgreich gelöscht wurden. Andernfalls wird ein Wert ungleich null zurückgegeben.  
   
-## Hinweise  
- Die `feclearexcept` Funktion versucht wurde, deaktivieren Sie die Gleitkommaoperationen zeigen Ausnahme Status\-Flags, die durch angegebene `excepts`. Die Funktion unterstützt diese Ausnahmemakros in fenv.h definiert:  
+## <a name="remarks"></a>Hinweise  
+ Die Funktion `feclearexcept` versucht, die von `excepts` angegebenen Gleitkommaausnahme-Flags zu löschen. Die Funktion unterstützt diese in fenv.h> definierten Ausnahmemakros:  
   
-|Ausnahme\-Makro|Beschreibung|  
-|---------------------|------------------|  
-|FE\_DIVBYZERO|Eine Singularität oder pol Fehler in einer zuvor Gleitkommaoperation; ein Unendlichkeitswert erstellt wurde.|  
-|FE\_INEXACT|Die Funktion wurde erzwungen, das gespeicherte Ergebnis einer zuvor Gleitkommaoperation gerundet.|  
-|FE\_INVALID|Domänenfehler in einer zuvor Gleitkommaoperation.|  
-|FE\_OVERFLOW|Ein Fehler aufgetreten. eine frühere Gleitkommaoperation Ergebnis war zu groß dargestellt werden soll.|  
-|FE\_UNDERFLOW|Eine frühere Gleitkommaoperation Ergebnis war zu klein für die bei voller Genauigkeit dargestellt werden; ein Denormal\-Wert wurde erstellt.|  
-|FE\_ALLEXCEPT|Der bitweise OR aller unterstützt Gleitkommaausnahmen.|  
+|Ausnahmemakro|Beschreibung|  
+|---------------------|-----------------|  
+|FE_DIVBYZERO|Eine Singularität oder ein Polstellenfehler aus einer früheren Gleitkommaoperation; ein Unendlichkeitswert wurde erstellt.|  
+|FE_INEXACT|Die Funktion wurde gezwungen, das gespeicherte Ergebnis einer früheren Gleitkommaoperation zu runden.|  
+|FE_INVALID|Ein Domänenfehler ist in einer früheren Gleitkommaoperation aufgetreten.|  
+|FE_OVERFLOW|Ein Bereichsfehler ist aufgetreten; das Ergebnis einer früheren Gleitkommaoperation war zu groß, um dargestellt zu werden.|  
+|FE_UNDERFLOW|Das Ergebnis einer früheren Gleitkommaoperation war zu klein, um ganz genau dargestellt zu werden; ein nicht normaler Wert wurde erstellt.|  
+|FE_ALLEXCEPT|Bitweises OR oder alle unterstützten Gleitkommaausnahmen.|  
   
- Die `excepts` Argument 0 \(null\) oder die bitweise OR von mindestens einem der unterstützten Ausnahmemakros sein. Das Ergebnis jeder andere Argumentwert ist nicht definiert.  
+ Das Argument `excepts` kann entweder Null oder das bitweise OR von mindestens einem der unterstützten Ausnahmemakros sein. Das Ergebnis von jedem anderen Argumentwert ist nicht definiert.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Funktion|C\-Header|C\+\+\-Header|  
-|--------------|---------------|-------------------|  
-|`feclearexcept`|\<fenv.h\>|\<cfenv\>|  
+|Funktion|C-Header|C++-Header|  
+|--------------|--------------|------------------|  
+|`feclearexcept`|\<fenv.h>|\<cfenv>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Siehe auch  
- [Alphabetische Funktionsreferenz](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Alphabetical Function Reference (Alphabetische Funktionsreferenz)](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [fetestexcept](../../c-runtime-library/reference/fetestexcept1.md)

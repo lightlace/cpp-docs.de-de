@@ -35,11 +35,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d894433ea7ad4c0525c044e64aa1e9c6f66459e3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c01c76deb32962236673e7aa16c76fedc13cdc45
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setmode"></a>_setmode
 Legt den Dateiübersetzungsmodus fest.  
@@ -77,7 +78,7 @@ int _setmode (
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|Optionale Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionale Header|  
 |-------------|---------------------|----------------------|  
 |`_setmode`|\<io.h>|\<fcntl.h>|  
   
@@ -132,7 +133,7 @@ int main(void) {
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Dateibehandlung](../../c-runtime-library/file-handling.md)   
+ [File Handling (Dateibehandlung)](../../c-runtime-library/file-handling.md)   
  [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
  [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
  [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   

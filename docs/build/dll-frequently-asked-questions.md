@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ddacf677dab37bc85492dff1ec13dde23132da15
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 39c3a36f697527c7e133409f49656e4415f86a7f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dll-frequently-asked-questions"></a>FAQ (Häufig gestellte Fragen) zu DLLs  
   
@@ -39,7 +40,7 @@ Folgendes sind einige häufig gestellte für Fragen (FAQ) zu DLLs.
 
 ## <a name="mfc_multithreaded_1"></a>Kann eine MFC-DLL mehrere Threads erstellen?  
   
-Außer während der Initialisierung einer MFC-DLL problemlos mehrere Threads erstellen kann als die Win32-Thread verwendet lokaler Speicher (TLS) wie Funktionen **TlsAlloc** lokalen Threadspeicher zugewiesen werden. Jedoch, wenn eine MFC-DLL verwendet **__declspec(thread)** um threadlokalen Speicher zu reservieren, die Clientanwendung muss werden implizit mit der DLL verknüpft. Wenn die Clientanwendung explizit mit der DLL, die den Aufruf von verknüpft **LoadLibrary** wird die DLL nicht erfolgreich geladen. Weitere Informationen zum Erstellen von mehreren Threads in MFC-DLLs finden Sie unter im Knowledge Base-Artikel "PRB: Aufrufen LoadLibrary() zum Laden einer DLL, verfügt über statische TLS" (Q118816).  
+Außer während der Initialisierung einer MFC-DLL problemlos mehrere Threads erstellen kann als die Win32-Thread verwendet lokaler Speicher (TLS) wie Funktionen **TlsAlloc** lokalen Threadspeicher zugewiesen werden. Jedoch, wenn eine MFC-DLL verwendet **__declspec(thread)** um threadlokalen Speicher zu reservieren, die Clientanwendung muss werden implizit mit der DLL verknüpft. Wenn die Clientanwendung explizit mit der DLL, die den Aufruf von verknüpft **LoadLibrary** wird die DLL nicht erfolgreich geladen. Weitere Informationen zum Erstellen von mehreren Threads in MFC-DLLs finden Sie unter im Knowledge Base-Artikel "PRB: Aufrufen LoadLibrary() zum Laden einer DLL, verfügt über statische TLS" (Q118816). Weitere Informationen zu lokalen Variablen in DLLs finden Sie unter [Thread](../cpp/thread.md).
   
  Eine MFC-DLL, die während des Starts einen neuen MFC-Thread erstellt wird nicht mehr reagiert, wenn es von einer Anwendung geladen wird. Dies schließt, wenn ein Thread, durch den Aufruf erstellt wird `AfxBeginThread` oder `CWinThread::CreateThread` in:  
   

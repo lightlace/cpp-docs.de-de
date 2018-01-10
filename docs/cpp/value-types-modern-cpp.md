@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f9e91bf5bd5c35388646178335ed2ab42c3d1304
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5d84888236b81fe862c6a22793e926ebf7df55c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="value-types-modern-c"></a>Werttypen (Modern C++)
 C++-Klassen sind standardmäßig Werttypen. Dieses Thema enthält einführenden Überblick Werttypen und Probleme im Zusammenhang mit Verwendungsbeispielen.  
@@ -117,7 +118,7 @@ public:
   
  Einige *kein Werttyp* Typen sind nur verschoben, z. B. Wenn Sie eine Ressource, die nur den Besitz übertragen klonen können nicht. Beispiel: `unique_ptr`  
   
-## <a name="section"></a>Abschnitt  
+## <a name="section"></a>Bereich  
  Inhalt  
   
 ## <a name="see-also"></a>Siehe auch  

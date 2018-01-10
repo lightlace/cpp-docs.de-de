@@ -28,11 +28,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0f326ec0ed43463d0d2ca15103c77bb914a11592
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ad7e454af3ff8923d60315cd74d48daf9bd665a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbb-routines"></a>_ismbb-Routinen
 Testet den angegebenen ganzzahligen Wert `c` unter Verwendung des aktuellen Gebietsschemas oder einer angegebenen LC_CTYPE-Konvertierungszustandskategorie auf eine bestimmte Bedingung.  
@@ -53,7 +54,7 @@ Testet den angegebenen ganzzahligen Wert `c` unter Verwendung des aktuellen Gebi
   
  Die Routinen in der `_ismbb` -Gruppe testen die angegebene ganze Zahl `c` wie folgt.  
   
-|Routine|Byte-Testbedingung|  
+|-Routine zurückgegebener Wert|Byte-Testbedingung|  
 |-------------|-------------------------|  
 |[_ismbbalnum](../c-runtime-library/reference/ismbbalnum-ismbbalnum-l.md)|`isalnum` &#124;&#124; `_ismbbkalnum`.|  
 |[_ismbbalpha](reference/ismbbalpha-ismbbalpha-l.md)|`isalpha` &#124;&#124; `_ismbbkalnum`.|  
@@ -70,7 +71,7 @@ Testet den angegebenen ganzzahligen Wert `c` unter Verwendung des aktuellen Gebi
   
  Die folgende Tabelle zeigt die ORed-Werte an, aus denen sich die Testbedingungen für die Routinen zusammensetzen. Die Manifestkonstanten `_BLANK`, `_DIGIT`, `_LOWER`, `_PUNCT`und `_UPPER` werden in Ctype.h definiert.  
   
-|Routine|_BLANK|_DIGIT|LOWER|_PUNCT|UPPER|Non-<br /><br /> ASCII<br /><br /> Text|Non-<br /><br /> ASCII<br /><br /> punct|  
+|-Routine zurückgegebener Wert|_BLANK|_DIGIT|LOWER|_PUNCT|UPPER|Non-<br /><br /> ASCII<br /><br /> Text|Non-<br /><br /> ASCII<br /><br /> punct|  
 |-------------|-------------|-------------|-----------|-------------|-----------|------------------------------|-------------------------------|  
 |`_ismbbalnum`|—|w|w|—|w|w|—|  
 |`_ismbbalpha`|—|—|w|—|w|w|—|  

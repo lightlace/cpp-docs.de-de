@@ -1,31 +1,34 @@
 ---
-title: "Gewusst wie: Abrufen der Windows-Version (C++/CLI)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Windows [C++], Abrufen der Version mit Visual C++"
-  - "Windows [C++], Version"
+title: 'Vorgehensweise: Abrufen der Windows-Version (C + c++ / CLI) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Windows [C++], version
+- Windows [C++], retrieving version using Visual C++
 ms.assetid: 7e6f567b-d378-49bb-aa59-2240f69a022d
-caps.latest.revision: 9
-caps.handback.revision: "9"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b29d77b7bcc56baa9866c2855065052b1d2607c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Gewusst wie: Abrufen der Windows-Version (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Im folgenden Codebeispiel wird dargestellt, wie Informationen zur Plattform und Version des aktuellen Betriebssystems abgerufen werden.  Diese Informationen werden in der <xref:System.Environment.OSVersion*?displayProperty=fullName>\-Eigenschaft gespeichert und bestehen aus einer Auflistung, in der grundlegende Informationen zur Windows\-Version enthalten sind, und einem <xref:System.Environment.Version*>\-Objekt, das den genauen Build des Betriebssystems enthält.  
+# <a name="how-to-retrieve-the-windows-version-ccli"></a>Gewusst wie: Abrufen der Windows-Version (C++/CLI)
+Im folgenden Codebeispiel wird veranschaulicht, wie zum Abrufen der Plattform und-Version Informationen des aktuellen Betriebssystems. Diese Informationen werden gespeichert, der <xref:System.Environment.OSVersion%2A?displayProperty=fullName> Eigenschaft besteht aus einer Enumeration, die die Version von Windows in allgemeinen Begriffen beschrieben und ein <xref:System.Environment.Version%2A> -Objekt, das den genauen Build des Betriebssystems enthält.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // os_ver.cpp  
@@ -63,6 +66,6 @@ int main()
 }  
 ```  
   
-## Siehe auch  
- [Windows\-Vorgänge](../dotnet/windows-operations-cpp-cli.md)   
- [.NET\-Programmierung mit C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [Windows-Vorgänge (C + c++ / CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [.NET-Programmierung mit C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

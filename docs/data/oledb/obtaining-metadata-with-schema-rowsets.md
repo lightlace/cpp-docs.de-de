@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a2a57fd92183c60e245ecdd1ba237da74c9e575b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 0035606b02a1281b09287f19ffe087c9e6b36f7f
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>Abrufen von Metadaten mit Schemarowsets
 Möglicherweise müssen Sie Informationen über Anbieter, Rowsets, Tabellen, Spalten oder andere Datenbankinformationen beziehen, ohne dafür das Rowset zu öffnen. Daten mit Angaben über die Datenbankstruktur werden als Metadaten bezeichnet und können mithilfe einer Anzahl verschiedener Methoden abgerufen werden. Die Verwendung von Schemarowsets ist eine dieser Methoden.  
@@ -59,7 +62,7 @@ CRestrictions<CAccessor<CColumnsInfo>
   
  Die [CRestrictions](../../data/oledb/crestrictions-class.md) -Klasse stellt Unterstützung für die Einschränkung. Rufen Sie nach der Erstellung einer Instanz des Schemarowsets [CRestrictions:: Open](../../data/oledb/crestrictions-open.md). Diese Methode gibt auf der Grundlage der von Ihnen angegebenen Einschränkungen ein Resultset zurück.  
   
- Zum Angeben von Einschränkungen finden Sie unter [Anhang B: Schemarowsets](http://go.microsoft.com/fwlink/?linkid=64681) , und suchen Sie das Rowset, das Sie verwenden. Beispielsweise **CColumns** entspricht der [COLUMNS-Rowset](http://go.microsoft.com/fwlink/?linkid=64682); in diesem Thema werden die einchränkungsspalten im COLUMNS-Rowset aufgelistet: TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Sie müssen diese Reihenfolge beim Angeben der Einschränkungen einhalten.  
+ Zum Angeben von Einschränkungen finden Sie unter [Anhang B: Schemarowsets](http://go.microsoft.com/fwlink/p/?linkid=64681) , und suchen Sie das Rowset, das Sie verwenden. Beispielsweise **CColumns** entspricht der [COLUMNS-Rowset](http://go.microsoft.com/fwlink/p/?linkid=64682); in diesem Thema werden die einchränkungsspalten im COLUMNS-Rowset aufgelistet: TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Sie müssen diese Reihenfolge beim Angeben der Einschränkungen einhalten.  
   
  Also z. B. Wenn Sie anhand des Tabellennamens beschränken möchten, beachten Sie, dass TABLE_NAME die dritte Einschränkungsspalte ist, und rufen Sie anschließend **öffnen**, den gewünschten Tabellennamen als dritten Einschränkungsparameter angeben, wie im folgenden Beispiel gezeigt.  
   
@@ -89,7 +92,7 @@ CRestrictions<CAccessor<CColumnsInfo>
   
  Für den Verweis des Schemarowsets TypeDef-Klassen, die in den OLE DB-Vorlagen bereitgestellt (siehe [Schemarowset-Klassen und TypeDef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)).  
   
- Weitere Informationen zu OLE DB-Schemarowsets, einschließlich der einchränkungsspalten, finden Sie unter [Anhang B: Schemarowsets](http://go.microsoft.com/fwlink/?linkid=64681) in der OLE DB Programmer's Reference.  
+ Weitere Informationen zu OLE DB-Schemarowsets, einschließlich der einchränkungsspalten, finden Sie unter [Anhang B: Schemarowsets](http://go.microsoft.com/fwlink/p/?linkid=64681) in der OLE DB Programmer's Reference.  
   
  Komplexere Beispiele zur Verwendung von Schemarowset-Klassen finden Sie unter der [CatDB](http://msdn.microsoft.com/en-us/003d516b-2bf6-444e-8be5-4ebaa0b66046) und [DBViewer](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832) Beispiele.  
   

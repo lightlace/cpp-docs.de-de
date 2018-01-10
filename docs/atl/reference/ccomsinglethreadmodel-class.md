@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,23 +15,21 @@ f1_keywords:
 - ATLBASE/ATL::CComSingleThreadModel::ThreadModelNoCS
 - ATLBASE/ATL::CComSingleThreadModel::Decrement
 - ATLBASE/ATL::CComSingleThreadModel::Increment
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - single-threaded applications
 - CComSingleThreadModel class
 - single-threaded applications, ATL
 ms.assetid: e5dc30c7-405a-4ba4-8ae9-51937243fce8
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 65af9492f3721fd642def72a3049552cdff75ce6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: e7fe0d3ea0b8fc5b42546f12c17d890250752260
-ms.contentlocale: de-de
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomsinglethreadmodel-class"></a>CComSingleThreadModel-Klasse
 Diese Klasse stellt Methoden zum Inkrementieren und Dekrementieren den Wert einer Variablen.  
@@ -43,7 +40,7 @@ Diese Klasse stellt Methoden zum Inkrementieren und Dekrementieren den Wert eine
 class CComSingleThreadModel
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-typedefs"></a>Öffentliche Typedefs  
   
@@ -66,7 +63,7 @@ class CComSingleThreadModel
  Verwenden Sie in der Regel `CComSingleThreadModel` über eine von zwei `typedef` benennt, entweder [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) oder [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel). Die Klasse verwiesen, die von jedem `typedef` hängt von der Threadingmodell verwendet, wie in der folgenden Tabelle dargestellt:  
 
   
-|typedef|Einzelne Threadingmodell|Apartment Threadingmodell|Kostenlose Threadingmodell|  
+|Typedef|Einzelne Threadingmodell|Apartment Threadingmodell|Kostenlose Threadingmodell|  
 |-------------|----------------------------|-------------------------------|--------------------------|  
 |`CComObjectThreadModel`|S|S|M|  
 |`CComGlobalsThreadModel`|S|M|M|  
@@ -173,4 +170,3 @@ typedef CComSingleThreadModel ThreadModelNoCS;
   
 ## <a name="see-also"></a>Siehe auch  
  [Klassenübersicht](../../atl/atl-class-overview.md)
-

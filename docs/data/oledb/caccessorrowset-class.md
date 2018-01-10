@@ -1,70 +1,72 @@
 ---
-title: "CAccessorRowset-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CAccessorRowset"
-  - "ATL.CAccessorRowset"
-  - "ATL::CAccessorRowset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAccessorRowset-Klasse"
+title: CAccessorRowset-Klasse | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CAccessorRowset
+- ATL.CAccessorRowset
+- ATL::CAccessorRowset
+dev_langs: C++
+helpviewer_keywords: CAccessorRowset class
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 9750393a96a504b20ce861624ba94f8336fd9d4f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CAccessorRowset-Klasse
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Kapselt ein Rowset und seine zugeordneten Accessoren in einer einzelnen Klasse.  
+# <a name="caccessorrowset-class"></a>CAccessorRowset-Klasse
+Kapselt ein Rowset und ihre zugeordneten Accessoren in einer einzelnen Klasse.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <   
-   class TAccessor = CNoAccessor,    
-   template <typename T> class TRowset = CRowset    
+   class TAccessor = CNoAccessor,    
+   template <typename T> class TRowset = CRowset    
 >  
 class CAccessorRowset :   
-   public TAccessor,    
+   public TAccessor,    
    public TRowset<TAccessor>  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `TAccessor`  
- Eine Accessorklasse.  
+ Ein Accessorklasse.  
   
  `TRowset`  
  Eine Rowsetklasse.  
   
-## Member  
+## <a name="members"></a>Member  
   
-### Methoden  
+### <a name="methods"></a>Methoden  
   
 |||  
 |-|-|  
-|[Binden](../../data/oledb/caccessorrowset-bind.md)|Stellt die Bindungen erstellt \(verwendet, wenn **bBind** als false in [CCommand::Open](../../data/oledb/ccommand-open.md) angegeben\).|  
+|[Binden](../../data/oledb/caccessorrowset-bind.md)|Erstellt von Bindungen (wird verwendet, wenn **bBind** wird angegeben als "false" in [CCommand:: Open](../../data/oledb/ccommand-open.md)).|  
 |[CAccessorRowset](../../data/oledb/caccessorrowset-caccessorrowset.md)|Konstruktor.|  
 |[Schließen](../../data/oledb/caccessorrowset-close.md)|Schließt das Rowset und alle Accessoren.|  
-|[FreeRecordMemory](../../data/oledb/caccessorrowset-freerecordmemory.md)|Gibt alle Spalten im aktuellen Datensatz frei, die freigegeben werden müssen.|  
-|[GetColumnInfo](../../data/oledb/caccessorrowset-getcolumninfo.md)|Implementiert [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx).|  
+|[FreeRecordMemory](../../data/oledb/caccessorrowset-freerecordmemory.md)|Gibt alle Spalten im aktuellen Datensatz, der freigegeben werden müssen.|  
+|[GetColumnInfo](../../data/oledb/caccessorrowset-getcolumninfo.md)|Implementiert [IColumnsInfo:: GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx).|  
   
-## Hinweise  
- `TAccessor`\-Klasse verwaltet den Accessor.  *TRowset*\-Klasse verwaltet das Rowset.  
+## <a name="remarks"></a>Hinweise  
+ Klasse `TAccessor` verwaltet die Zugriffsmethode. Klasse *TRowset* verwaltet das Rowset.  
   
-## Anforderungen  
- **Header:**  atldbcli.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** atldbcli.h  
   
-## Siehe auch  
- [OLE DB\-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenz der OLE DB\-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0ae0db059d092feb1a24a3c7c635817250f2813b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f579716cff70d0c9f20ea0fa0133dcb4d86c8db3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ca2caex-class"></a>CA2CAEX-Klasse
 Diese Klasse wird verwendet, von Makros zur zeichenfolgenkonvertierung `CA2CTEX` und `CT2CAEX`, und die Typedef **CA2CA**.  
@@ -42,7 +43,7 @@ class CA2CAEX
  `t_nBufferLength`  
  Die Größe des Puffers, der bei der Übersetzung verwendet werden soll. Die Standardlänge beträgt 128 Bytes.  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   

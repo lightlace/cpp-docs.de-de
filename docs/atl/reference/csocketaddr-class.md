@@ -23,11 +23,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5ed1224fd00d5decb8dc99910563b47e4ba60350
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cadd771e6c3a9e7addb6893b4427183cfff293c9
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="csocketaddr-class"></a>CSocketAddr-Klasse
 Diese Klasse stellt Methoden zum Konvertieren von Hostnamen in Hostadressen, IPv4 und IPV6-Formate unterstützen.  
@@ -38,7 +39,7 @@ Diese Klasse stellt Methoden zum Konvertieren von Hostnamen in Hostadressen, IPv
 class CSocketAddr
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -207,7 +208,7 @@ addrinfo* const GetAddrInfoList() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Zeiger auf eine verknüpfte Liste von einem oder mehreren `addrinfo` Strukturen, die Antwortinformationen über den Host. Weitere Informationen zu den `addrinfo` -Struktur, finden Sie im Artikel "Addrinfo" in der [MSDN Library](http://go.microsoft.com/fwlink/linkid=556)  
+ Zeiger auf eine verknüpfte Liste von einem oder mehreren `addrinfo` Strukturen, die Antwortinformationen über den Host. Weitere Informationen finden Sie unter [Addrinfo Struktur](https://msdn.microsoft.com/library/windows/desktop/ms737530).
   
 ## <a name="see-also"></a>Siehe auch  
  [Klassenübersicht](../../atl/atl-class-overview.md)

@@ -1,40 +1,41 @@
 ---
-title: "Zugreifen auf C- oder C++-Daten in __asm-Bl&#246;cken"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__asm-Schlüsselwort [C++], Datenmember"
-  - "Datenzugriff [C++], In __asm-Blöcken"
-  - "Datenmember [C++], In __asm-Blöcken"
-  - "Strukturtypen in __asm-Blöcken"
+title: "Zugreifen auf C- oder C++-Daten in __asm-Blöcken | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- data members [C++], in __asm blocks
+- data access [C++], in __asm blocks
+- __asm keyword [C++], data members
+- structure types in __asm blocks
 ms.assetid: e99f5a28-0381-4090-8ece-6af8f2436a49
-caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f981944958f55c4a66828dba2b2fdad5f1718d07
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Zugreifen auf C- oder C++-Daten in __asm-Bl&#246;cken
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Microsoft\-spezifisch  
- Eine große Hilfe der Inline\- Assemblys ist die Fähigkeit, C\# oder C\+\+\-Variablen anhand ihres Namens zugreifen.  Ein `__asm`\-Block kann alle Symbole, einschließlich Variablennamen verweisen, die im Bereich enthalten sind, in dem der Block erscheint.  Wenn z. B. C `var`\-Variable im Gültigkeitsbereich befindet, durch die Anweisung  
+# <a name="accessing-c-or-c-data-in-asm-blocks"></a>Zugreifen auf C- oder C++-Daten in __asm-Blöcken
+## <a name="microsoft-specific"></a>Microsoft-spezifisch  
+ Zur Vereinfachung von Inlineassemblys hervorragende ist die Möglichkeit zum Verweisen auf C- oder C++-Variablen anhand des Namens. Ein `__asm` Block ersehen Symbole, einschließlich der Variablennamen, die im Bereich befinden, in dem der Block wird angezeigt. Für die Instanz, wenn die C-Variablen `var` im Gültigkeitsbereich befindet, die Anweisung  
   
 ```  
 __asm mov eax, var  
 ```  
   
- speichert den Wert von `var` in EAX.  
+ Speichert den Wert des `var` in EAX.  
   
- Wenn eine Klassen\-, Struktur\- oder Unionmember über einen eindeutigen Namen verfügt, kann ein `__asm`\-Block diesen Member nur mit dem Namen verweisen, ohne dass die Variable oder den Namen angeben `typedef` vor dem Operator des Punkts \(.\)**.** Wenn jedoch der Membername nicht eindeutig ist, müssen Sie eine Variable oder einen `typedef` Namen direkt vor den Punktoperator platzieren.  Um beispielsweise die Freigabe von Strukturtypen in der folgenden Beispiel `same_name` als dem Membernamen.:  
+ Wenn eine Klasse, Struktur oder union-Member einen eindeutigen Namen verfügt über eine `__asm` Block kann nur die Elementnamen, ohne die Variable mit verweisen oder `typedef` Namen vor dem Punkt (**.**) Operator. Wenn der Membernamen nicht eindeutig ist, aber Sie müssen platzieren eine Variablen oder `typedef` Name unmittelbar vor dem Period-Operator. Z. B. die Strukturtypen im folgenden Beispiel nutzen gemeinsam `same_name` als ihre Elementname:.  
   
  Wenn Sie Variablen mit den Typen deklarieren  
   
@@ -43,7 +44,7 @@ struct first_type hal;
 struct second_type oat;  
 ```  
   
- Alle Verweise auf den Member `same_name` müssen den Variablennamen verwenden, da `same_name` nicht eindeutig ist.  Wenn der Member `weasel` über einen eindeutigen Namen verfügt, können Sie ihn nur mithilfe seines Namens der Member zugreifen:  
+ alle Verweise auf das Element `same_name` der Variablenname muss verwendet werden, da `same_name` ist nicht eindeutig. Das Element, aber `weasel` verfügt über einen eindeutigen Namen, damit Sie es nur unter Verwendung seiner Member verwenden können:  
   
 ```  
 // InlineAssembler_Accessing_C_asm_Blocks.cpp  
@@ -76,11 +77,11 @@ int main()
 }  
 ```  
   
- Wenn Sie den Variablennamen ist nicht nur eine Art bequemlichkeit.  Die gleichen Assemblyanweisungen werden generiert, ob der Variablenname vorhanden ist.  
+ Beachten Sie, dass das Weglassen der Variablenname lediglich Codierung zur Vereinfachung. Die gleiche Assemblyanweisungen generiert werden, und zwar unabhängig davon, ob der Variablenname vorhanden ist.  
   
- Sie können Member auf Daten in C\+\+ ohne Berücksichtigung Zugriffsbeschränkungen.  Sie können jedoch keine Memberfunktionen aufrufen.  
+ Sie können unabhängig von der zugriffsbeschränkungen-Datenmember in C++ zugreifen. Allerdings können keine Sie Memberfunktionen aufrufen.  
   
- **Microsoft ENDES bestimmten**  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
- [Verwenden von C oder C\+\+ in \_\_asm\-Blöcken](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)
+## <a name="see-also"></a>Siehe auch  
+ [Verwenden von C oder C++ in __asm-Blöcken](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)

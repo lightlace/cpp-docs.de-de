@@ -1,36 +1,35 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4545 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4545"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4545"
+title: Compilerwarnung (Stufe 1) C4545 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4545
+dev_langs: C++
+helpviewer_keywords: C4545
 ms.assetid: 43f8f34f-ed46-4661-95c0-c588c577ff73
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fe396267981bd534c373a101bd3e28827a343c37
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 1) C4545
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-1-c4545"></a>Compilerwarnung (Stufe 1) C4545
 Ausdruck vor dem Komma wird als Funktion ausgewertet, der eine Argumentliste fehlt  
   
- Der Compiler hat einen falsch formatierten Kommaausdruck ermittelt.  
+ Der Compiler hat ein falsch formatiertes Kommaausdruck erkannt.  
   
- Diese Warnung ist standardmäßig deaktiviert.  Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
+ Diese Warnung ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
   
- Im folgenden Beispiel wird C4545 generiert:  
+ Im folgende Beispiel wird C4545 generiert:  
   
 ```  
 // C4545.cpp  

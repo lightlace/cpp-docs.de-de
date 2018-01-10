@@ -1,41 +1,43 @@
 ---
-title: "Transaktion: Ausf&#252;hren einer Transaktion in einem Recordset (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Transaktionen, Aktualisieren von Recordsets"
+title: "Transaktion: Ausführen einer Transaktion in einem Recordset (ODBC) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: transactions, updating recordsets
 ms.assetid: cf1d6b48-7fb8-4903-84f7-a1822054534d
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: bd412549c86c3ca8ddc004016183b64248bdf292
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Transaktion: Ausf&#252;hren einer Transaktion in einem Recordset (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-In diesem Thema wird erläutert, wie Sie eine Transaktion in einem Recordset ausführen.  
+# <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>Transaktion: Ausführen einer Transaktion in einem Recordset (ODBC)
+In diesem Thema wird erläutert, wie eine Transaktion in einem Recordset ausführen wird.  
   
 > [!NOTE]
->  Es wird nur eine einzige Transaktionsebene unterstützt. Sie können Transaktionen nicht schachteln.  
+>  Nur eine Ebene von Transaktionen wird unterstützt. Transaktionen können nicht geschachtelt werden.  
   
-#### So führen Sie eine Transaktion in einem Recordset aus  
+#### <a name="to-perform-a-transaction-in-a-recordset"></a>Zum Ausführen einer Transaktions in einem recordset  
   
-1.  Rufen Sie die **BeginTrans**\-Memberfunktion des `CDatabase`\-Objekts auf.  
+1.  Rufen Sie die `CDatabase` des Objekts **BeginTrans** Memberfunktion.  
   
-2.  Falls Sie das gesammelte Abrufen von Zeilen nicht implementiert haben, rufen Sie so oft wie erforderlich die Memberfunktionen **AddNew\/Update**, **Edit\/Update** und **Delete** eines oder mehrerer Recordset\-Objekte derselben Datenbank auf.  Weitere Informationen finden Sie unter [Recordset: Hinzufügen, Aktualisieren und Löschen von Datensätzen \(ODBC\)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md).  Falls Sie das gesammelte Abrufen von Zeilen implementiert haben, müssen Sie eigene Funktionen zur Aktualisierung der Datenquelle erstellen.  
+2.  Wenn Sie das gesammelte Abrufen von Zeilen nicht implementiert haben, rufen Sie die **AddNew/Update**, **bearbeiten/aktualisieren**, und **löschen** Memberfunktionen der ein oder mehrere Recordset-Objekte des gleichen die Datenbank so oft wie erforderlich. Weitere Informationen finden Sie unter [Recordset: hinzufügen, aktualisieren und Löschen von Datensätzen (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md). Wenn Sie gesammelte implementiert haben, müssen Sie Ihre eigenen Funktionen zum Aktualisieren der Datenquelle schreiben.  
   
-3.  Rufen Sie abschließend die **CommitTrans**\-Memberfunktion des CDatabase\-Objekts auf.  Wenn bei einer Aktualisierung ein Fehler auftritt oder die Änderungen abgebrochen werden sollen, rufen Sie die zugehörige **Rollback**\-Memberfunktion auf.  
+3.  Rufen Sie zum Schluss die `CDatabase` des Objekts **CommitTrans** Memberfunktion. Wenn in einem der Updates ein Fehler auftritt, oder Sie die Änderungen verwerfen möchten, rufen Sie die **Rollback** Memberfunktion.  
   
- Im folgenden Beispiel wird mithilfe von zwei Recordsets die Einschreibung eines Studenten in die Registrierdatenbank der Schule gelöscht. So wird der Student aus allen Kursen gelöscht, in denen er eingetragen war.  Da die **Delete**\-Aufrufe in beiden Recordsets erfolgreich durchgeführt werden müssen, wird eine Transaktion benötigt.  Das Beispiel setzt das Vorhandensein von `m_dbStudentReg` voraus, einer Membervariablen vom Typ `CDatabase`, die bereits mit der Datenquelle verbunden ist, sowie der Recordset\-Klassen `CEnrollmentSet` und `CStudentSet`.  Die `strStudentID`\-Variable enthält einen Wert, der vom Benutzer eingegeben wurde.  
+ Das folgende Beispiel verwendet zwei Recordsets So löschen Sie eine Student Registrierung aus einer Datenbank "School" Registrierung, entfernen die Studenten aus allen Klassen, die in denen die Studenten registriert ist. Da die **löschen** Aufrufe in beiden Recordsets müssen erfolgreich sein, eine Transaktion erforderlich ist. Im Beispiel wird vorausgesetzt, das Vorhandensein des `m_dbStudentReg`, eine Membervariable des Typs `CDatabase` bereits eine Verbindung zu der Datenquelle und der Recordset-Klassen `CEnrollmentSet` und `CStudentSet`. Die `strStudentID` Variable enthält einen Wert, der vom Benutzer abgerufen.  
   
 ```  
 BOOL CEnrollDoc::RemoveStudent( CString strStudentID )  
@@ -88,10 +90,10 @@ BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
 ```  
   
 > [!NOTE]
->  Das erneute Aufrufen von **BeginTrans** ohne **CommitTrans** oder **Rollback** aufzurufen stellt einen Fehler dar.  
+>  Aufrufen von **BeginTrans** erneut ohne Aufruf **CommitTrans** oder **Rollback** ist ein Fehler.  
   
-## Siehe auch  
- [Transaktion \(ODBC\)](../../data/odbc/transaction-odbc.md)   
- [Transaktion: Auswirkungen von Transaktionen auf Aktualisierungen \(ODBC\)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)   
- [CDatabase Class](../../mfc/reference/cdatabase-class.md)   
- [CRecordset Class](../../mfc/reference/crecordset-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [Transaktion (ODBC)](../../data/odbc/transaction-odbc.md)   
+ [Transaktion: Auswirkungen von Transaktionen Aktualisierungen (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)   
+ [CDatabase-Klasse](../../mfc/reference/cdatabase-class.md)   
+ [CRecordset-Klasse](../../mfc/reference/crecordset-class.md)

@@ -1,34 +1,35 @@
 ---
-title: "Makros von Umgebungsvariablen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Umgebungsvariablen, Makros in NMAKE"
-  - "Makros, Umgebungsvariable"
-  - "NMAKE (Programm), Umgebungvariablenmakros"
+title: Makros von Umgebungsvariablen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- NMAKE program, environment variable macros
+- environment variables, macros in NMAKE
+- macros, environment-variable
 ms.assetid: f8e96635-0906-47b0-9f56-12a6fdf5e347
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 69fae15b7a12d990d2fb2c8e457bfdc0407f7702
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Makros von Umgebungsvariablen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-NMAKE erbt Makrodefinitionen für Umgebungsvariablen, die vor dem Beginn einer Sitzung vorhanden sind.  Wenn eine Umgebungsvariable in der Betriebssystemumgebung festgelegt wurde, ist diese als NMAKE\-Makro verfügbar.  Die geerbten Namen werden in Großbuchstaben konvertiert.  Die Vererbung erfolgt vor dem Präprozessorlauf.  Mit der \/E\-Option werden Makros durch Umgebungsvariablenmakros mit dem gleichen Namen im Makefile überschrieben.  
+# <a name="environment-variable-macros"></a>Makros von Umgebungsvariablen
+NMAKE erbt Makrodefinitionen für Umgebungsvariablen, die vor dem Start der Sitzung vorhanden sind. Wenn eine Variable in der Umgebung des Betriebssystems festgelegt wurde, ist es als eines NMAKE-Makros zur Verfügung. Die geerbten Namen werden in Großbuchstaben konvertiert. Vererbung erfolgt vor dem Präprozessorlauf. Verwenden Sie die Option/e, Makros von Umgebungsvariablen Makros mit demselben Namen im Makefile überschreiben geerbte verursachen.  
   
- Umgebungsvariablenmakros können in der Sitzung neu definiert werden, wodurch die entsprechende Umgebungsvariable geändert wird.  Umgebungsvariablen können auch über den **SET**\-Befehl geändert werden.  Umgebungsvariablen, die in einer Sitzung mit dem **SET**\-Befehl geändert wurden, ändern jedoch nicht das entsprechende Makro.  
+ Makros von Umgebungsvariablen in der Sitzung neu definiert werden, und die entsprechenden Umgebungsvariablen geändert. Sie können auch Umgebungsvariablen mit dem Befehl SET ändern. Mit dem SET-Befehl so ändern eine Umgebungsvariable in einer Sitzung wird das entsprechende Makro, nicht jedoch geändert.  
   
- Beispiel:  
+ Zum Beispiel:  
   
 ```  
 PATH=$(PATH);\nonesuch  
@@ -37,9 +38,9 @@ all:
     echo %PATH%  
 ```  
   
- In diesem Beispiel ändert die `PATH`\-Änderung die entsprechende Umgebungsvariable `PATH`. Es wird `\nonesuch` an den Pfad angefügt.  
+ In diesem Beispiel ändern `PATH` ändert die entsprechenden Umgebungsvariablen `PATH`; er fügt `\nonesuch` zu Ihrem Pfad.  
   
- Wenn eine Umgebungsvariable als Zeichenfolge, die in einem Makefile syntaktisch falsch ist, definiert ist, wird kein Makro erstellt und keine Warnung generiert.  Enthält der Wert einer Variablen ein Dollarzeichen \(`$`\), wird diese von NMAKE als Beginn eines Makroaufrufs interpretiert.  Das Verwenden des Makros kann unerwartetes Verhalten verursachen.  
+ Wenn eine Umgebungsvariable als Zeichenfolge, die in einem Makefile syntaktisch falsch wäre definiert ist, wird kein Makro erstellt und keine Warnung generiert wird. Wenn der Wert einer Variablen ein Dollarzeichen ($) enthält, wird es von NMAKE als Anfang eines Makroaufrufs interpretiert. Verwenden Sie das Makro kann zu unerwartetem Verhalten führen.  
   
-## Siehe auch  
- [Besondere NMAKE\-Makros](../build/special-nmake-macros.md)
+## <a name="see-also"></a>Siehe auch  
+ [Besondere NMAKE-Makros](../build/special-nmake-macros.md)

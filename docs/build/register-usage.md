@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7394088f4bd3cec21dde9ea82c0573c56d87366a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 705a8fef3043498c041ea7e5490a7b22c1db8e5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="register-usage"></a>Registerverwendung
 Die [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]-Architektur ermöglicht den Einsatz von 16 allgemeinen Registern (im Folgenden als Ganzzahl-Register bezeichnet) sowie von 16 XMM/YMM-Registern für die Gleitkommanutzung. Volatile Register sind Scratch-Register, von denen der Aufrufer voraussetzt, dass sie während eines Aufrufs zerstört werden. Nicht volatile Register müssen ihre Werte über einen Funktionsaufruf hinweg bewahren und, sofern sie verwendet werden, vom Aufgerufenen gespeichert werden.  

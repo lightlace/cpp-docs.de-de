@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f7b85af65da564f7231d606933ff1ebbb90d5af0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f44da30387421123ab6998cfbb2855a743aace39
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="routine-mappings"></a>Routinezuordnungen
 Die Zuordnungen der generische Textroutinen werden in TCHAR.H. definiert. `_tccpy` und `_tclen` werden zu Funktionen im MBCS-Modell zugeordnet. Aus Gründen der Vollständigkeit werden sie zu Makros oder Funktionen in den SBCS- und Unicode-Modellen zugeordnet. Weitere Informationen über generische Textroutinen finden Sie im entsprechenden Hilfethema über `SBCS`-, `_MBCS`- oder `_UNICODE`-verwandte Routinen.  

@@ -1,42 +1,43 @@
 ---
-title: "Ausnahmen (C/C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "ERROR_MOD_NOT_FOUND"
-  - "vcppException"
-  - "ERROR_SEVERITY_ERROR"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C++-Ausnahmebehandlung, Verzögertes Laden von DLLs"
-  - "Verzögertes Laden von DLLs, Ausnahmen"
-  - "ERROR_MOD_NOT_FOUND-Ausnahme"
-  - "ERROR_SEVERITY_ERROR-Ausnahme"
-  - "vcppException"
+title: Ausnahmen (C/C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ERROR_MOD_NOT_FOUND
+- vcppException
+- ERROR_SEVERITY_ERROR
+dev_langs: C++
+helpviewer_keywords:
+- vcppException
+- C++ exception handling, delayed loading of DLLs
+- delayed loading of DLLs, exceptions
+- ERROR_SEVERITY_ERROR exception
+- ERROR_MOD_NOT_FOUND exception
 ms.assetid: c03be05d-1c39-4f35-84cf-00c9af3bae9a
-caps.latest.revision: 8
-caps.handback.revision: "8"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 635e2b1406e9919425a396b6f49fe8eb6efd81eb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Ausnahmen (C/C++)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Es gibt zwei Ausnahmecodes, die beim Auftreten von Fehlern ausgelöst werden können:  
+# <a name="exceptions-cc"></a>Ausnahmen (C/C++)
+Zwei Ausnahmecodes können ausgelöst werden, wenn Fehler auftreten:  
   
--   ein Ausnahmecode für einen **LoadLibrary**\-Fehler.  
+-   Für eine **LoadLibrary** Fehler  
   
--   ein Ausnahmecode für einen **GetProcAddress**\-Fehler.  
+-   Für eine **GetProcAddress** Fehler  
   
- Die Ausnahmeinformationen sehen wie folgt aus:  
+ Hier sind die Ausnahmeinformationen:  
   
 ```  
 //  
@@ -46,11 +47,11 @@ Es gibt zwei Ausnahmecodes, die beim Auftreten von Fehlern ausgelöst werden kö
 #define VcppException(sev,err)  ((sev) | (FACILITY_VISUALCPP<<16) | err)  
 ```  
   
- Bei den ausgelösten Ausnahmecodes handelt es sich um die Standardwerte **VcppException\(ERROR\_SEVERITY\_ERROR, ERROR\_MOD\_NOT\_FOUND\)** und **VcppException\(ERROR\_SEVERITY\_ERROR, ERROR\_PROC\_NOT\_FOUND\)**.  Von der Ausnahme wird ein Zeiger auf eine **DelayLoadInfo**\-Struktur im LPDWORD\-Wert übergeben. Dieser Wert kann von **GetExceptionInformation** im Feld ExceptionInformation\[0\] der [EXCEPTION\_RECORD](http://msdn.microsoft.com/library/windows/desktop/aa363082)\-Struktur abgerufen werden.  
+ Ausnahmecodes, die ausgelöst werden, die Standardwerte VcppException (ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) und VcppException (ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND)-Werte. Die Ausnahme übergibt einen Zeiger auf eine **DelayLoadInfo** Struktur in der LPDWORD-Wert, der abgerufen werden kann **GetExceptionInformation** in der [EXCEPTION_RECORD](http://msdn.microsoft.com/library/windows/desktop/aa363082) -Struktur, ExceptionInformation [0]-Feld.  
   
- Wenn die falschen Bits im **grAttrs**\-Feld festgelegt sind, wird zusätzlich die `ERROR_INVALID_PARAMETER`\-Ausnahme ausgelöst.  Diese Ausnahme ist in jedem Fall schwerwiegend.  
+ Darüber hinaus die falschen Bits im GrAttrs-Feld festgelegt sind, wird die Ausnahme zusätzlich ausgelöst. Diese Ausnahme ausgelöst wird, zum Verteilungsvorgang, schwerwiegender.  
   
- Weitere Informationen finden Sie unter [Struktur\- und Konstantendefinitionen](../../build/reference/structure-and-constant-definitions.md).  
+ Finden Sie unter [Struktur- und Konstantendefinitionen](../../build/reference/structure-and-constant-definitions.md) für Weitere Informationen.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Fehlerbehandlung und Benachrichtigung](../../build/reference/error-handling-and-notification.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 32c3fc0c59f94ca35d80ebfd4f16330517399e72
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7d7300247c32c5f18190c6a5a1b6469e4c8173be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray-Klasse
 Stellt ein eindimensionales Array dar, das als Eingabeparameter verwendet wird, wenn der Aufrufer ein Array für die zu füllende Methode übergibt.  
@@ -38,12 +39,12 @@ Stellt ein eindimensionales Array dar, das als Eingabeparameter verwendet wird, 
 private ref class WriteOnlyArray<T, 1>  
 ```  
   
-### <a name="members"></a>Mitglieder  
+### <a name="members"></a>Member  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
  Diese Methoden verfügen über interne Zugreifbarkeit, das heißt, sie sind nur innerhalb der C++-App oder -Komponente zugänglich.  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 
 |[Writeonlyarray:: Begin](#begin)| Ein Iterator, der auf das erste Element des Arrays zeigt. |  

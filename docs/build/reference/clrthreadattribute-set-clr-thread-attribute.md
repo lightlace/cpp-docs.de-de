@@ -1,75 +1,75 @@
 ---
-title: "/CLRTHREADATTRIBUTE (Festlegen des CLR-Threadattributs) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.CLRThreadAttribute"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/CLRTHREADATTRIBUTE (Linkeroption)"
-  - "-CLRTHREADATTRIBUTE (Linkeroption)"
+title: -CLRTHREADATTRIBUTE (Set CLR-Threadattributs) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VC.Project.VCLinkerTool.CLRThreadAttribute
+dev_langs: C++
+helpviewer_keywords:
+- /CLRTHREADATTRIBUTE linker option
+- -CLRTHREADATTRIBUTE linker option
 ms.assetid: 4907e9ef-5031-446c-aecf-0a0b32fae1e8
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f1aae2dadc2fa7a8c9dc67780bb88b4da60d256e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# /CLRTHREADATTRIBUTE (Festlegen des CLR-Threadattributs)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Gibt das Threadattribut für den Einstiegspunkt des CLR\-Programms explizit an.  
+# <a name="clrthreadattribute-set-clr-thread-attribute"></a>/CLRTHREADATTRIBUTE (Festlegen des CLR-Threadattributs)
+Geben Sie explizit das Threadingattribut für den Einstiegspunkt des CLR-Programms.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /CLRTHREADATTRIBUTE:{STA|MTA|NONE}  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  MTA  
- Wendet das MTAThreadAttribute\-Attribut auf den Einstiegspunkt des Programms an.  
+ Das MTAThreadAttribute-Attribut für den Einstiegspunkt des Programms angewendet.  
   
- NONE  
- Entspricht einer nicht vorhandenen Angabe von \/CLRTHREADATTRIBUTE.  Common Language Runtime \(CLR\) legt das Standardthreadingattribut fest.  
+ KEINE  
+ Identisch mit/CLRTHREADATTRIBUTE nicht angeben.  Ermöglicht das Festlegen des standardmäßigen Threadingattribut Common Language Runtime (CLR).  
   
  STA  
- Wendet das STAThreadAttribute\-Attribut auf den Einstiegspunkt des Programms an.  
+ Das STAThreadAttribute-Attribut für den Einstiegspunkt des Programms angewendet.  
   
-## Hinweise  
- Das Festlegen des Threadattributs ist nur bei Erstellen einer EXE\-Datei gültig, da es den Einstiegspunkt des Hauptthreads betrifft.  
+## <a name="remarks"></a>Hinweise  
+ Festlegen der Thread-Attribut gilt nur beim Erstellen einer .exe wie sie den Einstiegspunkt des Hauptthreads wirkt sich auf.  
   
- Wenn Sie den Standardeinstiegspunkt \(z. B. main oder wmain\) verwenden, geben Sie das Threadingmodell entweder durch Verwenden von \/CLRTHREADATTRIBUTE oder durch Platzieren des Threadingattributs \(STAThreadAttribute oder MTAThreadAttribute\) in der Standardeinstiegsfunktion an.  
+ Bei Verwendung der Standardeinstiegspunkt ("Main" oder "z. B." wmain "") Geben Sie dem Threadingmodell entweder mithilfe von/CLRTHREADATTRIBUTE oder durch Platzieren der threading Attribut (STAThreadAttribute oder MTAThreadAttribute) für die Standard-Eintrag-Funktion.  
   
- Wenn Sie einen nicht standardmäßigen Einstiegspunkt verwenden, geben Sie das Threadingmodell entweder durch Verwenden von \/CLRTHREADATTRIBUTE oder durch Platzieren des Threadingattributs in der nicht standardmäßigen Einstiegsfunktion an. Geben Sie anschließend den nicht standardmäßigen Einstiegspunkt mit [\/ENTRY](../../build/reference/entry-entry-point-symbol.md) an.  
+ Wenn Sie einen nicht standardmäßigen Einstiegspunkt verwenden, geben Sie das Threadingmodell entweder mithilfe von/CLRTHREADATTRIBUTE oder durch das Platzieren des für die Funktion nicht standardmäßiger Eintrag Attribut, und geben Sie den nicht standardmäßigen Einstiegspunkt mit [/Entry](../../build/reference/entry-entry-point-symbol.md) .  
   
- Wenn das im Quellcode angegebene Threadingmodell nicht mit dem durch \/CLRTHREADATTRIBUTE angegebenen Threadingmodell übereinstimmt, wird \/CLRTHREADATTRIBUTE vom Linker ignoriert und das im Quellcode angegebene Threadingmodell angewendet.  
+ Wenn im Quellcode angegebene Threadingmodell nicht mit/CLRTHREADATTRIBUTE angegebenen Threadingmodell übereinstimmt, wird der Linker/CLRTHREADATTRIBUTE ignorieren und Anwenden des Threadingmodells im Quellcode angegeben.  
   
- Sie müssen z. B. Singlethreading verwenden, wenn Ihr CLR\-Programm ein COM\-Objekt hostet, das Singlethreading verwendet.  Wenn das CLR\-Programm Multithreading verwendet, kann kein COM\-Objekt gehostet werden, das Singlethreading verwendet.  
+ Es wird mit Single-threading, z. B. erforderlich sein, wenn CLR-Programms ein COM-Objekt gehostet wird, einzelne threading genutzt.  Wenn die CLR verwendet Multithreading programmieren, kann nicht es ein COM-Objekts hosten, das einzelnen threading verwendet.  
   
-### So legen Sie diese Linkeroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Gewusst wie: Öffnen von Projekteigenschaftenseiten](../../misc/how-to-open-project-property-pages.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Erweitern Sie den Knoten **Konfigurationseigenschaften**.  
+2.  Erweitern Sie die **Konfigurationseigenschaften** Knoten.  
   
-3.  Erweitern Sie den Knoten **Linker**.  
+3.  Erweitern Sie die **Linker** Knoten.  
   
-4.  Wählen Sie die Eigenschaftenseite **Erweitert** aus.  
+4.  Wählen Sie die **erweitert** Eigenschaftenseite.  
   
-5.  Ändern Sie die **CLR\-Threadattribut**\-Eigenschaft.  
+5.  Ändern der **CLR-Thread-Attribut** Eigenschaft.  
   
-### So legen Sie diese Linkeroption programmgesteuert fest  
+### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
   
-1.  Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.CLRThreadAttribute*>.  
+1.  Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.CLRThreadAttribute%2A>.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
  [Linkeroptionen](../../build/reference/linker-options.md)

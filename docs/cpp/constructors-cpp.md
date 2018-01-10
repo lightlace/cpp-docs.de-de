@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 77007b3d3805bb2fa159680c88d8e41825336da2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 57854ec15d3104d80e8dbba68ebc33937222172f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constructors-c"></a>Konstruktoren (C++)
 Ein Konstruktor ist eine Art einer Memberfunktion, die eine Instanz ihrer Klasse initialisiert. Ein Konstruktor hat den gleichen Namen wie die Klasse und weist keinen Rückgabewert auf. Ein Konstruktor kann über eine beliebige Anzahl von Parametern verfügen, und eine Klasse weist möglicherweise eine beliebige Anzahl an überladenen Konstruktoren auf. Konstruktoren können jede Erreichbarkeit aufweisen: öffentlich, geschützt oder privat. Wenn Sie keine Konstruktoren definieren, generiert der Compiler einen Standardkonstruktor, der keine Parameter verwendet. Sie können dieses Verhalten überschreiben, indem Sie einen Standardkonstruktor als gelöscht deklarieren.  

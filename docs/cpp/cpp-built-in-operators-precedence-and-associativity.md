@@ -23,11 +23,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7a286be3d29e22cc3bae3d34241f08735f5f7b0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 95cbb68740fe43fa8a76624abb57284cb68e7805
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-built-in-operators-precedence-and-associativity"></a>Integrierte C++-Operatoren, Rangfolge und Assoziativität
 
@@ -58,12 +59,12 @@ Operator *Rangfolge* gibt die Reihenfolge der Vorgänge in Ausdrücken, die mehr
 |[Präfixdekrement](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)|[--](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)|
 |[Einerkomplement](../cpp/one-s-complement-operator-tilde.md)|[~](../cpp/one-s-complement-operator-tilde.md)|
 |[Logisches not](../cpp/logical-negation-operator-exclpt.md)|[!](../cpp/logical-negation-operator-exclpt.md)|
-|[Unäre negation](../cpp/unary-plus-and-negation-operators-plus-and.md)|[-](../cpp/unary-plus-and-negation-operators-plus-and.md)|
+|[Unäre Negation](../cpp/unary-plus-and-negation-operators-plus-and.md)|[-](../cpp/unary-plus-and-negation-operators-plus-and.md)|
 |[Unäres plus](../cpp/unary-plus-and-negation-operators-plus-and.md)|[+](../cpp/unary-plus-and-negation-operators-plus-and.md)|
 |[Adresse des](../cpp/address-of-operator-amp.md)|[&amp;](../cpp/address-of-operator-amp.md)|
 |[Dereferenzierung](../cpp/indirection-operator-star.md)|[&#42;](../cpp/indirection-operator-star.md)|
 |[Objekt erstellen](../cpp/new-operator-cpp.md)|[new](../cpp/new-operator-cpp.md)|
-|[Objekt zerstören](../cpp/delete-operator-cpp.md)|[Löschen](../cpp/delete-operator-cpp.md)|
+|[Objekt zerstören](../cpp/delete-operator-cpp.md)|[delete](../cpp/delete-operator-cpp.md)|
 |[Typumwandlung](../cpp/cast-operator-parens.md)|[()](../cpp/cast-operator-parens.md)|
 |**Gruppe 4 Rangfolge von links nach rechts Assoziativität**|
 |[Pointer-to-Member (Objekte oder Zeiger)](../cpp/pointer-to-member-operators-dot-star-and-star.md)|[. &#42; oder -> &#42;](../cpp/pointer-to-member-operators-dot-star-and-star.md)|
@@ -72,7 +73,7 @@ Operator *Rangfolge* gibt die Reihenfolge der Vorgänge in Ausdrücken, die mehr
 |[Division](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[/](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
 |[Modulo](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[%](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
 |**Gruppe 6 Rangfolge von links nach rechts Assoziativität**|
-|[Hinzufügen](../cpp/additive-operators-plus-and.md)|[+](../cpp/additive-operators-plus-and.md)|
+|[Addition](../cpp/additive-operators-plus-and.md)|[+](../cpp/additive-operators-plus-and.md)|
 |[Subtraktion](../cpp/additive-operators-plus-and.md)|[-](../cpp/additive-operators-plus-and.md)|
 |**Gruppe 7 Rangfolge von links nach rechts Assoziativität**|
 |[Nach links verschieben](../cpp/left-shift-and-right-shift-operators-input-and-output.md)|[<<](../cpp/left-shift-and-right-shift-operators-input-and-output.md)|
@@ -80,11 +81,11 @@ Operator *Rangfolge* gibt die Reihenfolge der Vorgänge in Ausdrücken, die mehr
 |**Gruppieren von links nach rechts Assoziativität 8 Rangfolge**|
 |[Kleiner als](../cpp/relational-operators-equal-and-equal.md)|[<](../cpp/relational-operators-equal-and-equal.md)|
 |[Größer als](../cpp/relational-operators-equal-and-equal.md)|[>](../cpp/relational-operators-equal-and-equal.md)|
-|[Kleiner als oder gleich](../cpp/relational-operators-equal-and-equal.md)|[<=](../cpp/relational-operators-equal-and-equal.md)|
-|[Größer als oder gleich](../cpp/relational-operators-equal-and-equal.md)|[>=](../cpp/relational-operators-equal-and-equal.md)|
+|[Kleiner gleich](../cpp/relational-operators-equal-and-equal.md)|[<=](../cpp/relational-operators-equal-and-equal.md)|
+|[Größer gleich](../cpp/relational-operators-equal-and-equal.md)|[>=](../cpp/relational-operators-equal-and-equal.md)|
 |**Gruppe 9 Rangfolge von links nach rechts Assoziativität**|
 |[Gleichheit](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|[==](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|
-|[Ungleichheitsoperator](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|[!=](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|
+|[Ungleichheit](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|[!=](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|
 |**Gruppe 10 Rangfolge von links nach rechts Assoziativität**|
 |[Bitweises AND](../cpp/bitwise-and-operator-amp.md)|[&amp;](../cpp/bitwise-and-operator-amp.md)|
 |**Gruppieren von links nach rechts Assoziativität 11 Rangfolge**|
@@ -112,7 +113,7 @@ Operator *Rangfolge* gibt die Reihenfolge der Vorgänge in Ausdrücken, die mehr
 |**Gruppe 17 Rangfolge von rechts nach links Assoziativität**|
 |[Ausdruck auslösen](../cpp/try-throw-and-catch-statements-cpp.md)|[throw](../cpp/try-throw-and-catch-statements-cpp.md)|
 |**Gruppieren von links nach rechts Assoziativität 18 Rangfolge**|
-|[Durch Trennzeichen](../cpp/comma-operator.md)|[,](../cpp/comma-operator.md)|
+|[Komma](../cpp/comma-operator.md)|[,](../cpp/comma-operator.md)|
 
 ## <a name="see-also"></a>Siehe auch
 

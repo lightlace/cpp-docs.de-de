@@ -1,63 +1,63 @@
 ---
-title: "_mm_cvtss_si64x | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mm_cvtss_si64x"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cvtss2si intrinsic"
-  - "_mm_cvtss_si64x intrinsic"
+title: _mm_cvtss_si64x | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _mm_cvtss_si64x
+dev_langs: C++
+helpviewer_keywords:
+- cvtss2si intrinsic
+- _mm_cvtss_si64x intrinsic
 ms.assetid: c279aff2-ee29-4271-8829-3ec691bf7718
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0f55ecac0a9f6318b5d60a372003e548ce41c713
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# _mm_cvtss_si64x
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft\-spezifisch**  
+# <a name="mmcvtsssi64x"></a>_mm_cvtss_si64x
+**Microsoft-spezifisch**  
   
- Generiert die [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] erweiterte Version der Bekehrt\-skalaren einfache Genauigkeits\-Gleitkommazahl der Anweisung der 64\-Bit\-Ganzzahl \(`cvtss2si`\).  
+ Generiert die [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] erweiterte Version der konvertieren Skalar einzelne Genauigkeit Gleitkommazahl in 64-Bit-Ganzzahl (`cvtss2si`) Anweisung.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-__int64 _mm_cvtss_si64x(   
-   __m128 value   
+__int64 _mm_cvtss_si64x(   
+   __m128 value   
 );  
 ```  
   
-#### Parameter  
- \[in\] `value`  
- Eine `__m128` Struktur mit Gleitkommazahlen enthält.  
+#### <a name="parameters"></a>Parameter  
+ [in] `value`  
+ Eine `__m128` -Struktur,-Gleitkommawerte enthält.  
   
-## Rückgabewert  
- Eine 64\-Bit\-Ganzzahl, das Ergebnis der Konvertierung des ersten Gleitkommazahl in eine ganze Zahl.  
+## <a name="return-value"></a>Rückgabewert  
+ Eine 64-Bit-Ganzzahl, das Ergebnis der Konvertierung des ersten Gleitkommawerts in eine ganze Zahl.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Intrinsisch|Architektur|  
-|-----------------|-----------------|  
+|Systemintern|Architektur|  
+|---------------|------------------|  
 |`_mm_cvtss_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Headerdatei** \<intrin.h\>  
+ **Headerdatei** \<intrin.h >  
   
-## Hinweise  
- Das erste Element des Werts wird Struktur in eine ganze Zahl konvertiert und zurückgegeben.  Die abgerundeten Steuerbite in MXCSR werden verwendet, um das Rundungsverhalten zu bestimmen.  Der standardmäßige gerundete Modus befindet und sich um zur gerade Zahl gerundet, wenn der dezimale Teil 0.5 ist.  Da die `__m128` Struktur ein XMM\-Register darstellt, nimmt diese systeminterne einen Wert aus dem XMM\-Register und schreibt ihn auf den Systemspeicher.  
+## <a name="remarks"></a>Hinweise  
+ Das erste Element des Werts Struktur wird in eine ganze Zahl konvertiert und zurückgegeben. Die Rundung Steuerungsbits im MXCSR werden verwendet, um das Rundungsverhalten zu bestimmen. Die Standardeinstellung ist rund um am nächsten liegt, auf die gerade Zahl gerundet wird, wenn der Dezimalwert 0,5 beträgt. Da die `__m128` Struktur stellt eine XMM-Register diese systeminterne Funktion nimmt einen Wert aus dem XMM-Register und schreibt sie in den Systemarbeitsspeicher.  
   
- Diese Routine ist als systeminterne Funktion nur verfügbar.  
+ Diese Routine ist nur als systeminterne Funktion verfügbar.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // _mm_cvtss_si64x.cpp  
@@ -87,9 +87,12 @@ int main()
 }  
 ```  
   
-  **101**   
-## Microsoft ENDES bestimmten  
+```Output  
+101  
+```  
   
-## Siehe auch  
- [\_\_m128d](../cpp/m128d.md)   
+**Ende Microsoft-spezifisch**  
+  
+## <a name="see-also"></a>Siehe auch  
+ [__m128d](../cpp/m128d.md)   
  [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

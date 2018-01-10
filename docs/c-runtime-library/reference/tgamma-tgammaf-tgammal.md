@@ -43,11 +43,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 24c4cc90ed77a57ad053f5608ad5eaf2d1ed62f6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fefaaaf6dd6e660c4cda53d28194d6052d1d8bf4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma, tgammaf, tgammal
 Bestimmt die Gammafunktion des angegebenen Werts.  
@@ -88,7 +89,7 @@ long double tgammal(
   
 |Problem|Zurück|  
 |-----------|------------|  
-|x = ±0|±INFINITY|  
+|X = ±0|±INFINITY|  
 |x = negative ganze Zahl|NaN|  
 |x = -INFINITY|NaN|  
 |x = +INFINITY|+INFINITY|  
@@ -98,7 +99,7 @@ long double tgammal(
 |Überlaufbereichsfehler|±HUGE_VAL, ±HUGE_VALF oder ±HUGE_VALL|  
 |Unterlaufbereichsfehler|Richtiger Wert nach dem Runden|  
   
- Fehler werden gemäß den Angaben in [_matherr](../../c-runtime-library/reference/matherr.md) gemeldet.  
+ Fehler werden gemäß der Angaben in [_matherr](../../c-runtime-library/reference/matherr.md) gemeldet.  
   
 ## <a name="remarks"></a>Hinweise  
  Da C++ Überladungen zulässt, können Sie Überladungen von tgamma aufrufen, die float- und long double-Typen annehmen und zurückgeben. In einem C-Programm verwendet tgamma immer double und gibt auch double zurück.  
@@ -114,5 +115,5 @@ long double tgammal(
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Alphabetische Funktionsreferenz](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [Alphabetical Function Reference (Alphabetische Funktionsreferenz)](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [lgamma, lgammaf, lgammal](../../c-runtime-library/reference/lgamma-lgammaf-lgammal.md)

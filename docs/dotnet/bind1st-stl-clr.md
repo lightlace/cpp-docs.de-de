@@ -1,32 +1,33 @@
 ---
-title: "bind1st (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::bind1st"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bind1st-Funktion [STL/CLR]"
+title: bind1st (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::bind1st
+dev_langs: C++
+helpviewer_keywords: bind1st function [STL/CLR]
 ms.assetid: 03a04cef-60fb-4667-b22a-22a387adb028
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b17a2bdcfee80b027423c24a7a430095eed6297d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# bind1st (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Generiert `binder1st` für ein Argument und ein Funktionselement.  
+# <a name="bind1st-stlclr"></a>bind1st (STL/CLR)
+Generiert eine `binder1st` für ein Argument und ein Funktionselement ist.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<typename Fun,  
@@ -35,24 +36,24 @@ template<typename Fun,
         Arg left);  
 ```  
   
-## Vorlagenparameter  
- Arg  
+## <a name="template-parameters"></a>Vorlagenparameter  
+ arg  
  Der Typ des Arguments.  
   
  Fun  
- Der Typ des Feature\-Elements.  
+ Der Typ, der das Funktionselement.  
   
-## Funktionsparameter  
+## <a name="function-parameters"></a>Funktionsparameter  
  Funktionselement  
- Das Funktionselement einzubindende.  
+ Das Funktionselement umschließen.  
   
- left  
- Das erste Argument einzubindende.  
+ links  
+ Das erste Argument zu umschließen.  
   
-## Hinweise  
- Die Vorlagenfunktion [binder1st](../dotnet/binder1st-stl-clr.md) gibt `<Fun>(functor, left)` zurück.  Sie verwenden sie als bequeme Möglichkeit, ein ZweiArgumentfunktionselement und sein erstes Argument in einem EinArgumentfunktionselement einzubinden, das Aufrufe mit einem zweiten Argument.  
+## <a name="remarks"></a>Hinweise  
+ Die Vorlagenfunktion gibt [binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md)`<Fun>(functor, left)`. Sie verwenden es als eine einfache Möglichkeit, ein Funktionselement ist zwei Argumente und das erste Argument in ein Funktionselement ist nur einem Argument zu umschließen, den sie mit einem zweiten Argument aufruft.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_bind1st.cpp   
@@ -95,13 +96,16 @@ int main()
   
 ```  
   
-  **4 3**  
- **\-1 0**  
- **\-1 0**   
-## Anforderungen  
- **Header:** \<cliext\/funktionsfähig\>  
+```Output  
+4 3  
+-1 0  
+-1 0  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/funktionale >  
   
-## Siehe auch  
- [binder1st](../dotnet/binder1st-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md)

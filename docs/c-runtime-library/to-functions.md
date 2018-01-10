@@ -30,11 +30,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a77c4b80dc83f64b61fdd3b98f7971b5ef6e5e27
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ef97b5e5ab2c21b375814cf117d6155b4a502795
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="to-functions"></a>to-Funktionen
 Jede der **to**-Funktionen und ggf. das zugehörige Makro konvertiert ein einzelnes Zeichen in ein anderes Zeichen.  
@@ -47,15 +48,15 @@ Jede der **to**-Funktionen und ggf. das zugehörige Makro konvertiert ein einzel
 ## <a name="remarks"></a>Hinweise  
  Es gibt folgende **to**-Funktionen und Makrokonvertierungen:  
   
-|Routine|Makro|Beschreibung|  
+|-Routine zurückgegebener Wert|Makro|description|  
 |-------------|-----------|-----------------|  
 |`__toascii`|`__toascii`|Konvertiert `c` in ASCII-Zeichen|  
 |`tolower`|`tolower`|Konvertiert `c` gegebenenfalls in Kleinbuchstaben|  
 |`_tolower`|`_tolower`|Konvertiert `c` in Kleinbuchstaben|  
-|`towlower`|Keine|Konvertiert `c` in entsprechende Breitzeichen-Kleinbuchstaben|  
+|`towlower`|Keiner|Konvertiert `c` in entsprechende Breitzeichen-Kleinbuchstaben|  
 |`toupper`|`toupper`|Konvertiert `c` gegebenenfalls in Großbuchstaben|  
 |`_toupper`|`_toupper`|Konvertiert `c` in Großbuchstaben|  
-|`towupper`|Keine|Konvertiert c in entsprechende Breitzeichen-Kleinbuchstaben|  
+|`towupper`|Keiner|Konvertiert c in entsprechende Breitzeichen-Kleinbuchstaben|  
   
  Um die Funktionsversionen der **to**-Routinen zu nutzen, die auch als Makros definiert sind, entfernen Sie entweder die Makrodefinitionen mit `#undef`-Direktiven, oder schließen Sie nicht CTYPE.H ein. Wenn Sie die Compileroption /Za wählen, verwendet der Compiler die Funktionsversion von `toupper` oder `tolower`. Deklarationen der Funktionen `toupper` und `tolower` sind in STDLIB.H enthalten.  
   
@@ -121,5 +122,5 @@ sOME OF these LETTERS ARE cAPITALS.
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenkonvertierung](../c-runtime-library/data-conversion.md)   
- [Locale](../c-runtime-library/locale.md)   
+ [Gebietsschema](../c-runtime-library/locale.md)   
  [is, isw Routines (is- und isw-Routinen)](../c-runtime-library/is-isw-routines.md)

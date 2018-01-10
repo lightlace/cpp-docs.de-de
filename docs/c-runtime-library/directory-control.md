@@ -17,18 +17,19 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 74d0bd9011c77d67383e36b15817a71f853a409b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e4674029fe5bdfc4323f580fcc0567b2ceeb1929
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="directory-control"></a>Verzeichnissteuerung
 Diese Routinen greifen auf die Verzeichnisstruktur zu, ändern sie und rufen Informationen dazu ab.  
   
 ### <a name="directory-control-routines"></a>Routinen für die Verzeichnissteuerung  
   
-|Routine|Verwendung|  
+|-Routine zurückgegebener Wert|Mit|  
 |-------------|---------|  
 |[_chdir, _wchdir](../c-runtime-library/reference/chdir-wchdir.md)|Ändert das aktuelle Arbeitsverzeichnis.|  
 |[_chdrive](../c-runtime-library/reference/chdrive.md)|Ändert das aktuelle Laufwerk.|  
@@ -43,5 +44,5 @@ Diese Routinen greifen auf die Verzeichnisstruktur zu, ändern sie und rufen Inf
   
 ## <a name="see-also"></a>Siehe auch  
  [Laufzeitroutinen nach Kategorie](../c-runtime-library/run-time-routines-by-category.md)   
- [Dateibehandlung](../c-runtime-library/file-handling.md)   
+ [File Handling (Dateibehandlung)](../c-runtime-library/file-handling.md)   
  [Systemaufrufe](../c-runtime-library/system-calls.md)

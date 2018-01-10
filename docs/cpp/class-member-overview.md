@@ -4,28 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - members [C++], types of class members
 - members [C++]
 - class members [C++], types of
 - class members
 ms.assetid: 8802cfa9-705d-4f37-acde-245d6838010c
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 0a5a62edf0e71b4fecf25cf10731af7d7c515da7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 2d9a8d274f162e64dc20c5f257d09c84e9871d0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="class-member-overview"></a>Übersicht über Klassenmember
 Eine Klasse oder Struktur besteht aus Membern. Die von einer Klasse ausgeführte Arbeit erfolgt über die Memberfunktionen. Den Zustand, den sie verwaltet, wird in Datenmembern gespeichert. Initialisierung der Member erfolgt durch Konstruktoren und Bereinigungsvorgänge wie Freigeben von Arbeitsspeicher und Freigeben von Ressourcen erfolgt durch Destruktoren. In C++11 und höher können Datenmember (und sollten in der Regel) beim Deklarieren initialisiert werden.  
@@ -113,11 +111,11 @@ int TestRun::_instances{ 0 };
   
 2.  Kopierkonstruktor  
   
-3.  **(C ++ 11) ** Bewegungskonstruktor  
+3.  **(C ++ 11)**  Bewegungskonstruktor  
   
 4.  Kopierzuweisungsoperator  
   
-5.  **(C ++ 11) ** Bewegungszuweisungsoperator  
+5.  **(C ++ 11)**  Bewegungszuweisungsoperator  
   
 6.  Destruktor  
   
@@ -179,4 +177,3 @@ int CanInit2::j = i;
   
 ## <a name="see-also"></a>Siehe auch  
  [Klassen und Strukturen](../cpp/classes-and-structs-cpp.md)
-

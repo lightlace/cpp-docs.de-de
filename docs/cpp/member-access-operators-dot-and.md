@@ -4,15 +4,13 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - .
 - ->
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - member access, expressions
 - operators [C++], member access
@@ -23,16 +21,16 @@ helpviewer_keywords:
 - . operator
 - member access
 ms.assetid: f8fc3df9-d728-40c5-b384-276927f5f1b3
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 7c4e69727c474cb89f931832da2dbde6e20c16b9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4dc08bce80d27493a8a13ac24bce7011282d7cd3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="member-access-operators--and--gt"></a>Operatoren für den Memberzugriff:. "und" -&gt;
 ## <a name="syntax"></a>Syntax  
@@ -43,13 +41,13 @@ postfix-expression -> name
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die Operatoren für den Memberzugriff **.** und ** -> ** werden verwendet, um auf Member von Strukturen, Unions und Klassen verweisen. Memberzugriffsausdrücke haben den Wert und Typ des ausgewählten Members.  
+ Die Operatoren für den Memberzugriff **.** und  **->**  werden verwendet, um auf Member von Strukturen, Unions und Klassen verweisen. Memberzugriffsausdrücke haben den Wert und Typ des ausgewählten Members.  
   
  Es gibt zwei Arten von Memberzugriffsausdrücken:  
   
 1.  In der ersten Form stellt *postfixausdruck* stellt einen Wert von der Struktur, Klasse oder union-Typ und *Namen* Namen eines Members der angegebenen Struktur, Union oder Klasse. Der Wert des Vorgangs ist der *Namen* und ist ein l-Wert, wenn *postfixausdruck* ist ein l-Wert.  
   
-2.  In der zweiten Form *postfixausdruck* stellt einen Zeiger auf eine Struktur, Union oder Klasse, und *Namen* Namen eines Members der angegebenen Struktur, Union oder Klasse. Der Wert ist der *Namen* und ist ein l-Wert. Die ** -> ** Operator dereferenziert den Zeiger. Daher sind die Begriffe *e* ** -> ** `member` und **(\****e***)**.`member` (, in denen *e* stellt einen Zeiger) identische Ergebnisse ergeben (Ausnahme: Wenn die Operatoren ** -> ** oder ** \* ** überladen werden).  
+2.  In der zweiten Form *postfixausdruck* stellt einen Zeiger auf eine Struktur, Union oder Klasse, und *Namen* Namen eines Members der angegebenen Struktur, Union oder Klasse. Der Wert ist der *Namen* und ist ein l-Wert. Die  **->**  Operator dereferenziert den Zeiger. Daher sind die Begriffe *e*  **->**  `member` und **(\****e***)**.`member` (, in denen *e* stellt einen Zeiger) identische Ergebnisse ergeben (Ausnahme: Wenn die Operatoren  **->**  oder  **\***  überladen werden).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel werden beide Formen des Memberzugriffsoperators dargestellt.  

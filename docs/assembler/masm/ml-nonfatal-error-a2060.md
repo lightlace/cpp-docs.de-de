@@ -1,32 +1,31 @@
 ---
-title: "ML Nonfatal Error A2060 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "A2060"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "A2060"
+title: ML nicht schwerwiegende Fehler A2060 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: A2060
+dev_langs: C++
+helpviewer_keywords: A2060
 ms.assetid: 435d5b32-9b4f-4f4e-8142-af0ce7676e89
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5a4727f923cbbc9e9f5daa52cba500af1d245a83
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# ML Nonfatal Error A2060
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**erzwungener Fehler: Zeichenfolgen ungleich**  
+# <a name="ml-nonfatal-error-a2060"></a>Nicht schwerwiegender ML-Fehler A2060
+**Fehler erzwungen: Zeichenfolgen nicht identisch.**  
   
- Bedingt [.ERRDIF](../../assembler/masm/dot-errdif.md)\-Direktive oder ERROR **.ERRDIFI** verwendet wurde, um diesen Fehler zu generieren.  
+ Die bedingte Error-Direktive [. ERRDIF](../../assembler/masm/dot-errdif.md) oder **. ERRDIFI** wurde verwendet, um diesen Fehler zu generieren.  
   
-## Siehe auch  
- [ML Error Messages](../../assembler/masm/ml-error-messages.md)
+## <a name="see-also"></a>Siehe auch  
+ [ML-Fehlermeldungen](../../assembler/masm/ml-error-messages.md)

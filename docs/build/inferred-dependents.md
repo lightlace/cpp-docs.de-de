@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: eaf75c067b2e96e5ae4a893b56376bfc1b9bd1e7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 410e52dd9ee9605f6e29b81491bda0f4883e1cf9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="inferred-dependents"></a>Hergeleitete abhängige Dateien
 Eine hergeleitete abhängige eine Rückschlussregel abgeleitet wird und vor expliziten abhängigen Dateien ausgewertet wird. Wenn eine hergeleitete abhängige in Bezug auf ihr Ziel veraltet ist, wird von NMAKE Befehlsblock für die Abhängigkeit aufgerufen. Wenn eine hergeleitete abhängige nicht vorhanden ist oder in Bezug auf seine eigenen abhängigen Elemente veraltet ist, wird von NMAKE zuerst hergeleitete abhängige aktualisiert. Weitere Informationen über hergeleitete abhängige Dateien finden Sie unter [Rückschlussregeln](../build/inference-rules.md).  

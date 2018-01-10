@@ -1,39 +1,40 @@
 ---
-title: "operator MASK | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "operator MASK"
-  - "MASK"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MASK operator"
-  - "operator MASK"
+title: Operator MASK | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- operator MASK
+- MASK
+dev_langs: C++
+helpviewer_keywords:
+- MASK operator
+- operator MASK
 ms.assetid: bf997f99-17c8-4230-ab69-7a9774a75d93
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 24bfd233c0a92ae954a3f5095e680b6e702705b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# operator MASK
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Gibt eine Bitmaske zurück, in der die Bits *im recordfieldname* oder *im Datensatz* festgelegt werden und alle anderen Bits gelöscht werden.  
+# <a name="operator-mask"></a>Operator MASK
+Gibt eine Bitmaske in der die Bits im *Recordfieldname* oder *Datensatz* festgelegt sind und alle anderen Bits deaktiviert sind.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
 MASK {recordfieldname | record}  
 ```  
   
-## Siehe auch  
- [Operators Reference](../../assembler/masm/operators-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Operatoren – Referenz](../../assembler/masm/operators-reference.md)

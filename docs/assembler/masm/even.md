@@ -1,32 +1,31 @@
 ---
-title: "EVEN | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "EVEN"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "EVEN directive"
+title: SOGAR | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: EVEN
+dev_langs: C++
+helpviewer_keywords: EVEN directive
 ms.assetid: 68938ba4-8cb9-44d4-914e-9f9fee6bcbf4
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6523813fd57761ee7fbe4de2b5d354e662e7e603
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# EVEN
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Richtet die folgenden Variablen oder die Anweisung sogar auf einem Byte pro Zeichen aus.  
+# <a name="even"></a>EVEN
+Richtet das nächste Variable oder Anweisung auf eine gerade Byte.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -34,5 +33,5 @@ EVEN
   
 ```  
   
-## Siehe auch  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)

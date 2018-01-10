@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -24,35 +23,19 @@ f1_keywords:
 - ATLUTIL/ATL::CThreadPool::SetSize
 - ATLUTIL/ATL::CThreadPool::SetTimeout
 - ATLUTIL/ATL::CThreadPool::Shutdown
-dev_langs:
-- C++
-helpviewer_keywords:
-- CThreadPool class
+dev_langs: C++
+helpviewer_keywords: CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: b3c944958ba73240131fba33db95dbc20ec9bec8
-ms.contentlocale: de-de
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6739e179843864c952a5e864de1389b466d7ca7c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cthreadpool-class"></a>CThreadPool-Klasse
 Diese Klasse stellt einen Pool von Arbeitsthreads, die eine Warteschlange von Arbeitsaufgaben zu verarbeiten.  
@@ -71,7 +54,7 @@ class CThreadPool : public IThreadPoolConfig
  `ThreadTraits`  
  Die Klasse der Funktion verwendet, um die Threads im Pool zu erstellen.  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -100,7 +83,7 @@ class CThreadPool : public IThreadPoolConfig
 ## <a name="remarks"></a>Hinweise  
  Threads im Pool erstellt und zerstört, wenn der Pool initialisiert, Größe oder Herunterfahren. Eine Instanz der Klasse *Worker* auf dem Stapel der einzelnen Worker-Threads im Pool erstellt werden. Jede Instanz bestehen für die Lebensdauer des Threads.  
   
- Direkt nach dem Erstellen eines Threads *Worker*:: `Initialize` wird aufgerufen, für das Objekt, das diesem Thread zugeordnet. Unmittelbar vor der Zerstörung eines Threads *Worker*:: `Terminate` aufgerufen wird. Beide Methoden akzeptieren müssen eine **"void"\*** Argument. Der Wert dieses Arguments wird an den Threadpool durch Übergeben der `pvWorkerParam` Parameter [CThreadPool::Initialize](#initialize).  
+ Direkt nach dem Erstellen eines Threads *Worker*:: `Initialize` wird aufgerufen, für das Objekt, das diesem Thread zugeordnet. Unmittelbar vor der Zerstörung eines Threads *Worker*:: `Terminate` aufgerufen wird. Beide Methoden akzeptieren müssen eine **"void"\***  Argument. Der Wert dieses Arguments wird an den Threadpool durch Übergeben der `pvWorkerParam` Parameter [CThreadPool::Initialize](#initialize).  
   
  Wenn Arbeitsaufgaben in die Warteschlange und Worker-Threads verfügbar sind für die Arbeit, ein Arbeitsthread Ruft ein Element aus der Warteschlange und rufen die **Execute** Methode der *Worker* Objekt für diesen Thread. Drei Elemente werden dann an die Methode übergeben: das Element aus der Warteschlange, die gleiche `pvWorkerParam` übergeben *Worker*:: `Initialize` und *Worker*:: `Terminate`, und ein Zeiger auf die [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) Struktur, die für die e/a-Port beendigungswarteschlange verwendet.  
   
@@ -331,4 +314,3 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
  [IThreadPoolConfig-Schnittstelle](../../atl/reference/ithreadpoolconfig-interface.md)   
  [DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   
  [Klassen](../../atl/reference/atl-classes.md)
-

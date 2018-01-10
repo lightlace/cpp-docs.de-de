@@ -1,34 +1,34 @@
 ---
-title: "_emit Pseudoinstruction | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_emit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_emit Pseudoinstruction"
-  - "Bytedefinition (Inlineassembly)"
+title: _emit Pseudoinstruction | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _emit
+dev_langs: C++
+helpviewer_keywords:
+- byte defining (inline assembly)
+- _emit pseudoinstruction
 ms.assetid: 004c48f3-364c-4e82-9a51-e326f9cc7b2b
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c506c689b94a7f6f7fa51c4c456e20454b28df02
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# _emit Pseudoinstruction
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Microsoft\-spezifisch  
- Der **\_emit** Pseudoinstruction definiert ein Byte an der aktuellen Position im aktuellen Textsegment.  Der **\_emit** Pseudoinstruction ähnelt den [DB](../../assembler/masm/db.md)\-Direktive von MASM.  
+# <a name="emit-pseudoinstruction"></a>_emit Pseudoinstruction
+## <a name="microsoft-specific"></a>Microsoft-spezifisch  
+ Die **_emit** Pseudoinstruction ein Byte an der aktuellen Position in der aktuellen Textsegment definiert. Die **_emit** Pseudoinstruction ähnelt der [DB](../../assembler/masm/db.md) -Direktive der MASM.  
   
- Das folgende Fragment platziert die Bytes 0x4A, 0x43 und 0x4B in den Code:  
+ Das folgende Fragment platziert die Bytes 0x4A 0x43 und 0x4B in den Code ein:  
   
 ```  
 #define randasm __asm _emit 0x4A __asm _emit 0x43 __asm _emit 0x4B  
@@ -41,9 +41,9 @@ __asm {
 ```  
   
 > [!CAUTION]
->  Wenn `_emit`\-Anweisungen, die Register und ändern, kompilieren Sie die Anwendung mit Optimierungen generiert, kann der Compiler nicht feststellen, welche Register beeinflusst werden.  Wenn `_emit` eine Anweisung generiert, die das **rax** Register ändert, weiß der Compiler nicht, dass **rax** geändert hat.  Der Compiler hat sich dann eine falsche Annahme über den Wert in diesem Register, nachdem der Inlineassemblercode ausführt.  Daher weist die Anwendung möglicherweise unvorhersehbares Verhalten auf, wenn sie ausgeführt wird.  
+>  Wenn `_emit` werden Anweisungen erzeugt, die Register, ändern und kompilieren Sie die Anwendung mit aktivierten Optimierungen, das der Compiler nicht ermitteln, welche Register betroffen sind. Z. B. wenn `_emit` generiert eine Anweisung, die ändert die **Rax** registrieren, der Compiler ist nicht bekannt, die **Rax** hat sich geändert. Der Compiler kann dann, eine falsche Annahme über den Wert in diesem registrieren, nachdem die Inlineassemblercode ausgeführt wird. Daher kann die Anwendung unvorhersehbares Verhalten aufweisen, bei der Ausführung.  
   
- **END Microsoft\-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
- [Verwenden von Assemblysprache in \_\_asm\-Blöcken](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+## <a name="see-also"></a>Siehe auch  
+ [Verwenden der Assemblysprache in __asm-Blöcken](../../assembler/inline/using-assembly-language-in-asm-blocks.md)

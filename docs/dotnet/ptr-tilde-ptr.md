@@ -1,46 +1,48 @@
 ---
-title: "ptr::~ptr"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr.com.ptr.~ptr"
-  - "ptr.~ptr"
-  - "msclr::com.ptr::~ptr"
-  - "~ptr"
-  - "ptr::~ptr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ptr::~ptr"
+title: 'PTR:: ~ Ptr | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr.com.ptr.~ptr
+- ptr.~ptr
+- msclr::com.ptr::~ptr
+- ~ptr
+- ptr::~ptr
+dev_langs: C++
+helpviewer_keywords: ptr::~ptr
 ms.assetid: 5f644aa5-fe66-4992-a5f8-13ec1292c949
-caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c8eb71e9975f06bfae5fe20c3ccae6d296a47f80
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# ptr::~ptr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Zerstört `com::ptr`.  
+# <a name="ptrptr"></a>ptr::~ptr
+Destructs eine `com::ptr`.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 ~ptr();  
 ```  
   
-## Hinweise  
- Auf Zerstörung gibt `com::ptr` alle Verweise frei, die es zum COM\-Objekt besitzt.  Das Annehmen, dass kein anderer gibt, Verweise hielt zum COM\-Objekt an, wird gelöscht und das COM\-Objekt sein Speicher zugewiesen frei.  
+## <a name="remarks"></a>Hinweise  
+ Der Zerstörung der `com::ptr` gibt alle Verweise, die er, auf die COM-Objekt besitzt frei. Angenommen, es keine weiteren Verweise auf die COM-Objekt sind, das COM-Objekt gelöscht werden, und der Arbeitsspeicher freigegeben.  
   
-## Beispiel  
- Dieses Beispiel implementiert eine CLR\-Klasse, die `com::ptr` verwendet, um sein `IXMLDOMDocument`\-Objekt des privaten Members zu umschließen.  In der `main`\-Funktion werden die beiden Destruktoren der `XmlDocument`\-Objekte bezeichnet, wenn sie den Bereich des Blocks `try`, mit dem Ergebnis des zugrunde liegenden `com::ptr` Destruktors verlassen, der aufgerufen wird und alle zugehörigen Verweise auf das COM\-Objekt freigegeben.  
+## <a name="example"></a>Beispiel  
+ In diesem Beispiel implementiert eine CLR-Klasse, verwendet eine `com::ptr` umschließen die privaten Member `IXMLDOMDocument` Objekt.  In der `main` -Funktion, die zwei `XmlDocument` Objekte Destruktoren aufgerufen werden, wenn sie außerhalb des Bereichs der Verlassen der `try` Block, in der zugrunde liegenden resultierende `com::ptr` Destruktor aufgerufen wird, freigeben aller im Besitz befindlichen Verweise auf COM -Objekt.  
   
 ```  
 // comptr_dtor.cpp  
@@ -101,12 +103,12 @@ int main() {
 }  
 ```  
   
-## Anforderungen  
- **Headerdatei** \<msclr\\com\\ptr.h\>  
+## <a name="requirements"></a>Anforderungen  
+ **Headerdatei** \<msclr\com\ptr.h >  
   
  **Namespace** msclr::com  
   
-## Siehe auch  
- [ptr\-Member](../dotnet/ptr-members.md)   
- [ptr::ptr](../dotnet/ptr-ptr.md)   
+## <a name="see-also"></a>Siehe auch  
+ [PTR-Member](../dotnet/ptr-members.md)   
+ [PTR::PTR](../dotnet/ptr-ptr.md)   
  [ptr::CreateInstance](../dotnet/ptr-createinstance.md)

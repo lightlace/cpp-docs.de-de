@@ -1,4 +1,4 @@
-# <a name="classes-shared-by-mfc-and-atlclasses-shared-by-mfc-and-atlmd"></a>[Klassen, die von MFC und ATL freigegeben](classes-shared-by-mfc-and-atl.md)
+# <a name="classes-shared-by-mfc-and-atlclasses-shared-by-mfc-and-atlmd"></a>[Von MFC und ATL freigegebenen Klassen](classes-shared-by-mfc-and-atl.md)
 ## <a name="cfiletime-classcfiletime-classmd"></a>[CFileTime-Klasse](cfiletime-class.md)
 ## <a name="cfiletimespan-classcfiletimespan-classmd"></a>[CFileTimeSpan-Klasse](cfiletimespan-class.md)
 ## <a name="cfixedstringt-classcfixedstringt-classmd"></a>[CFixedStringT-Klasse](cfixedstringt-class.md)

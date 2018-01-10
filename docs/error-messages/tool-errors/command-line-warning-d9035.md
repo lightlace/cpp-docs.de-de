@@ -1,34 +1,33 @@
 ---
-title: "Befehlszeilenwarnung D9035 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "D9035"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "D9035"
+title: Befehlszeilenwarnung D9035 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: D9035
+dev_langs: C++
+helpviewer_keywords: D9035
 ms.assetid: 6254f933-e37a-45ba-b860-1a870d1bc8e8
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: dd2c5bc238c9858e204d0a96729aa722dac18a9a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Befehlszeilenwarnung D9035
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die Option 'option' ist veraltet und wird in einer der nächsten Versionen entfernt.  
+# <a name="command-line-warning-d9035"></a>Befehlszeilenwarnung D9035
+Option "Option" ist veraltet und wird in einer zukünftigen Version entfernt.  
   
- Sie haben eine Compileroption angegeben, die in einer der nächsten Versionen des Visual C\+\+\-Compilers entfernt wird.  Dieser Warnung geht [D9036](../../error-messages/tool-errors/command-line-warning-d9036.md) ausgeführt, sofern ein Ersatz für *option* empfohlen wird.  
+ Sie haben angegeben eine Compileroption, die in einer zukünftigen Version von Visual C++-Compilers entfernt wird. Diese Warnung folgt Warnung [D9036](../../error-messages/tool-errors/command-line-warning-d9036.md) ist ein Ersatz für *Option*.  
   
- Die angegebene Option ist derzeit noch zulässig, aber Sie sollten jetzt die Buildkonfiguration aktualisieren.  Andernfalls kann es bei späteren Upgrades des Compilers zu Buildfehlern beim Erstellen des Projekts kommen.  
+ Die angegebene Option weiterhin funktioniert, aber Sie sollten jetzt die Buildkonfiguration aktualisieren. Daher ist das Projekt wahrscheinlicher ist, um anzugeben, dass bei einem upgrade von der Compiler zu erstellen.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Befehlszeilenwarnung D9036](../../error-messages/tool-errors/command-line-warning-d9036.md)

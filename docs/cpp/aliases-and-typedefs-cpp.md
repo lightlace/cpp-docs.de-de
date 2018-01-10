@@ -14,11 +14,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a1d408e0e6fe021caf7f3722a55528020d94bb83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8946c87c18e1781f95df7a91e8cc4fa0eba02158
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="aliases-and-typedefs-c"></a>Aliase und Typedefs (C++)
 Sie können eine *Aliasdeklaration* , deklarieren einen Namen, die als ein Synonym für einen zuvor deklarierten Typ verwendet. (Dieser Mechanismus wird auch informell als bezeichnet eine *Typalias*). Sie können diesen Mechanismus auch verwenden, zum Erstellen einer *aliasvorlage*, die für benutzerdefinierte Zuweisungen besonders nützlich sein können.  
@@ -147,7 +148,7 @@ int main ()
 1701 1764 1664  
 ```  
   
-## <a name="typedefs"></a>TypeDefs  
+## <a name="typedefs"></a>Typedefs  
  Ein `typedef` -Deklaration erstellt einen Namen, der innerhalb des Bereichs liegen, ein Synonym für den Typ wird der *Typdeklaration* Teil der Deklaration.  
   
  Sie können typedef-Deklarationen verwenden, um kürzere oder aussagekräftigere Namen für Typen zu erstellen, die bereits von der Programmiersprache definiert sind, oder für Typen, die deklariert wurden. Mithilfe von typedef-Namen können Sie die Implementierungsdetails kapseln, die sich möglicherweise ändern.  
@@ -315,7 +316,7 @@ typedef union REGS      // OK: name REGS redeclared
 } REGS;  
 ```  
   
-### <a name="typedefs-in-c-vs-c"></a>Typedefs in C++ vs. A  
+### <a name="typedefs-in-c-vs-c"></a>Typedefs in C++ vs. C  
  Die Verwendung des `typedef`-Spezifizierers mit Klassentypen wird größtenteils aufgrund der ANSI C-Praxis des Deklarierens unbenannter Strukturen in `typedef`-Deklarationen unterstützt. Zum Beispiel verwenden viele C-Programmierer Folgendes:  
   
 ```cpp  

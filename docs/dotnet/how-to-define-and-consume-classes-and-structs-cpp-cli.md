@@ -1,31 +1,34 @@
 ---
-title: "Gewusst wie: definieren und Verarbeiten von Klassen und Strukturen (C++-CLI)"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Strukturen [C++]"
-  - "Klassen [C++], Instanziieren"
+title: 'Vorgehensweise: definieren und Verarbeiten von Klassen und Strukturen (C + c++ / CLI) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- structs [C++]
+- classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-caps.latest.revision: 15
-caps.handback.revision: "15"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a0a276854c9f2e27439c2c16e9299d4eaa9243d4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Gewusst wie: Definieren und Verarbeiten von Klassen und Strukturen (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In diesem Artikel wird erläutert, wie benutzerdefinierte Referenz- und Werttypen in [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)] definiert und verwendet werden.  
+# <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Gewusst wie: Definieren und Verarbeiten von Klassen und Strukturen (C++/CLI)
+In diesem Artikel wird gezeigt, wie zum Definieren und Verarbeiten von benutzerdefinierten Verweistypen und Werttypen in C + c++ / CLI.  
   
-##  <a name="a-namebkmkcontentsa-contents"></a><a name="BKMK_Contents"></a> Inhalt  
+##  <a name="BKMK_Contents"></a> Inhalt  
  [Objektinstanziierung](#BKMK_Object_instantiation)  
   
  [Implizit abstrakte Klassen](#BKMK_Implicitly_abstract_classes)  
@@ -46,7 +49,7 @@ In diesem Artikel wird erläutert, wie benutzerdefinierte Referenz- und Werttype
   
  [Destruktoren und Finalizer](#BKMK_Destructors_and_finalizers)  
   
-##  <a name="a-namebkmkobjectinstantiationa-object-instantiation"></a><a name="BKMK_Object_instantiation"></a> Objektinstanziierung  
+##  <a name="BKMK_Object_instantiation"></a>Objektinstanziierung  
  Referenztypen (ref) und Werttypen können nur auf dem verwalteten Heap instanziiert werden, jedoch nicht auf dem Stapel oder auf dem nativen Heap.  
   
 ```  
@@ -100,7 +103,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namebkmkimplicitlyabstractclassesa-implicitly-abstract-classes"></a><a name="BKMK_Implicitly_abstract_classes"></a> Implizit abstrakte Klassen  
+##  <a name="BKMK_Implicitly_abstract_classes"></a>Implizit abstrakte Klassen  
  Ein *implizit abstrakte Klasse* kann nicht instanziiert werden. Eine Klasse ist implizit abstrakt, wenn der Basistyp der Klasse eine Schnittstelle ist und die Klasse nicht alle Memberfunktionen der Schnittstelle implementiert.  
   
  Wenn Objekte nicht aus einer Klasse erstellt werden können, die von einer Schnittstelle abgeleitet sind, könnte dies daran liegen, dass die Klasse implizit abstrakt ist. Weitere Informationen zu abstrakten Klassen finden Sie unter [abstrakte](../windows/abstract-cpp-component-extensions.md).  
@@ -127,14 +130,14 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namebkmktypevisibilitya-type-visibility"></a><a name="BKMK_Type_visibility"></a> Typsichtbarkeit  
+##  <a name="BKMK_Type_visibility"></a>Typsichtbarkeit  
  Sie können die Sichtbarkeit von CLR-Typen (Common Language Runtime) so steuern, dass bei Verweis auf eine Assembly die Typen in der Assembly sichtbar oder außerhalb der Assembly nicht sichtbar sein können.  
   
- `public` Gibt an, dass ein Typ für jede Quelldatei sichtbar ist, enthält eine `#using` -Direktive für die Assembly, die den Typ enthält.  `private` Gibt an, dass ein Typ nicht für Quelldateien sichtbar ist, enthalten eine `#using` -Direktive für die Assembly, die den Typ enthält. Allerdings sind private Typen in der gleichen Assembly sichtbar. Standardmäßig ist die Sichtbarkeit für eine Klasse auf `private` eingestellt.  
+ `public`Gibt an, dass ein Typ für jede Quelldatei sichtbar ist, enthält eine `#using` Richtlinie für die Assembly, die den Typ enthält.  `private`Gibt an, dass ein Typ nicht für Quelldateien sichtbar ist, enthalten eine `#using` Richtlinie für die Assembly, die den Typ enthält. Allerdings sind private Typen in der gleichen Assembly sichtbar. Standardmäßig ist die Sichtbarkeit für eine Klasse auf `private` eingestellt.  
   
- Vor Visual C++ 2005 unterstützten systemeigene Typen außerhalb der Assembly standardmäßig öffentliche Zugriffe. Aktivieren Sie [Compilerwarnung (Stufe 1) C4692 generiert](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) damit Sie erkennen, wo private systemeigene Typen falsch verwendet werden. Verwenden der [Make_public](../preprocessor/make-public.md) -Pragma, um öffentlichen Zugriff auf einen systemeigenen Typ in einer Quellcodedatei zu gewähren, die Sie ändern können.  
+ Vor Visual C++ 2005 unterstützten systemeigene Typen außerhalb der Assembly standardmäßig öffentliche Zugriffe. Aktivieren Sie [Compilerwarnung (Stufe 1) C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) können Sie sehen, in dem private systemeigene Typen nicht ordnungsgemäß verwendet werden. Verwenden der [Make_public](../preprocessor/make-public.md) Pragma zu öffentlichen Zugriff auf einen systemeigenen Typ in einer Quellcodedatei, die Sie nicht ändern können.  
   
- Weitere Informationen finden Sie unter [#using](../preprocessor/hash-using-directive-cpp.md).  
+ Weitere Informationen finden Sie unter [#using-Direktive](../preprocessor/hash-using-directive-cpp.md).  
   
  Das folgende Beispiel zeigt, wie Typen deklariert und ihr Zugriff angegeben werden können und wie dann in der Assembly auf diese Typen zugegriffen werden kann. Wenn auf eine Assembly, die private Typen enthält, mithilfe von `#using` verwiesen wird, sind nur öffentliche Typen in der Assembly sichtbar.  
   
@@ -223,19 +226,19 @@ int main() {
 in Public_Class  
 ```  
   
-##  <a name="a-namebkmkmembervisibilitya-member-visibility"></a><a name="BKMK_Member_visibility"></a> Membersichtbarkeit  
+##  <a name="BKMK_Member_visibility"></a>Membersichtbarkeit  
  Sie können den Zugriff auf einen Member einer öffentlichen Klasse aus derselben Assembly unterschiedlich gestalten als den Zugriff darauf von außerhalb der Assembly. Verwenden Sie hierzu Paare der `public`-, `protected`- und `private`-Zugriffsspezifizierer.  
   
  In dieser Tabelle werden die Auswirkungen der unterschiedlichen Zugriffsspezifizierer zusammengefasst:  
   
 |Bezeichner|Effekt|  
 |---------------|------------|  
-|public|Auf den Member kann innerhalb und außerhalb der Assembly leicht zugegriffen werden.  Finden Sie unter [öffentlichen](../cpp/public-cpp.md) Weitere Informationen.|  
-|private|Auf den Member kann weder innerhalb noch außerhalb der Assembly zugegriffen werden.  Finden Sie unter [private](../cpp/private-cpp.md) Weitere Informationen.|  
-|protected|Auf den Member kann innerhalb und außerhalb der Assembly zugegriffen werden. Dies gilt jedoch nur für abgeleitete Typen.  Finden Sie unter [geschützt](../cpp/protected-cpp.md) Weitere Informationen.|  
-|internal|Member ist öffentlich innerhalb der Assembly und privat außerhalb der Assembly.  `internal` ist ein kontextbezogenes Schlüsselwort.  Weitere Informationen finden Sie unter [Kontextbezogene Schlüsselwörter](../windows/context-sensitive-keywords-cpp-component-extensions.md).|  
-|Öffentliche geschützten - oder - Zeichen geschützten öffentlichen|Der Member ist öffentlich innerhalb der Assembly und geschützt außerhalb der Assembly.|  
-|Private geschützte - oder - Zeichen geschützten privaten|Der Member ist geschützt innerhalb der Assembly und privat außerhalb der Assembly.|  
+|public|Auf den Member kann innerhalb und außerhalb der Assembly leicht zugegriffen werden.  Finden Sie unter [öffentlichen](../cpp/public-cpp.md) für Weitere Informationen.|  
+|private|Auf den Member kann weder innerhalb noch außerhalb der Assembly zugegriffen werden.  Finden Sie unter [private](../cpp/private-cpp.md) für Weitere Informationen.|  
+|protected|Auf den Member kann innerhalb und außerhalb der Assembly zugegriffen werden. Dies gilt jedoch nur für abgeleitete Typen.  Finden Sie unter [geschützt](../cpp/protected-cpp.md) für Weitere Informationen.|  
+|internal|Der Member ist öffentlich innerhalb der Assembly und privat außerhalb der Assembly.  `internal` ist ein kontextbezogenes Schlüsselwort.  Weitere Informationen finden Sie unter [Kontextbezogene Schlüsselwörter](../windows/context-sensitive-keywords-cpp-component-extensions.md).|  
+|Öffentliche geschützten- +/-geschützten öffentlichen|Der Member ist öffentlich innerhalb der Assembly und geschützt außerhalb der Assembly.|  
+|Private geschützte- +/-geschützten privaten|Der Member ist geschützt innerhalb der Assembly und privat außerhalb der Assembly.|  
   
  Das folgende Beispiel zeigt einen öffentlichen Typ, der Member enthält, die mit verschiedenen Barrierefreiheiten deklariert wurden, und veranschaulicht dann den Zugriff auf diese Member aus der Assembly heraus.  
   
@@ -413,7 +416,7 @@ exiting function of derived class
 =======================  
 ```  
   
-##  <a name="a-namebkmkpublicandprivatenativeclassesa-public-and-private-native-classes"></a><a name="BKMK_Public_and_private_native_classes"></a> Öffentliche und private systemeigene Klassen  
+##  <a name="BKMK_Public_and_private_native_classes"></a>Öffentliche und private systemeigene Klassen  
  Ein systemeigener Typ kann von einem verwalteten Typ referenziert werden.  Beispielsweise kann eine Funktion in einem verwalteten Typ einen Parameter aufnehmen, dessen Typ eine systemeigene Struktur ist.  Wenn der verwaltete Typ und die verwaltete Funktion in einer Assembly öffentlich sind, muss der systemeigene Typ ebenfalls öffentlich sein.  
   
 ```  
@@ -454,7 +457,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namebkmkstaticconstructorsa-static-constructors"></a><a name="BKMK_Static_constructors"></a> Statische Konstruktoren  
+##  <a name="BKMK_Static_constructors"></a> Statische Konstruktoren  
  Ein CLR-Typ, z. B. eine Klasse oder Struktur, kann einen statischen Konstruktor enthalten, der zum Initialisieren von statischen Datenmembern verwendet werden kann.  Ein statischer Konstruktor wird höchstens einmal aufgerufen. Der Aufruf erfolgt, bevor auf einen statischen Member des Typs zum ersten Mal zugegriffen wird.  
   
  Ein Instanzkonstruktor wird immer nach einen statischen Konstruktor ausgeführt.  
@@ -463,7 +466,7 @@ int main() {
   
  Definieren Sie einen statischen Konstruktor als private Memberfunktion, da er nur von der CLR-Funktion aufgerufen werden soll.  
   
- Weitere Informationen zu statischen Konstruktoren finden Sie unter [Gewusst wie: Definieren eines statischen Schnittstellenkonstruktors (C++ / CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md) .  
+ Weitere Informationen zu statischen Konstruktoren finden Sie unter [wie: Definieren eines statischen Schnittstellenkonstruktors (C + c++ / CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md) .  
   
 ```  
   
@@ -500,18 +503,16 @@ in static constructor
 11  
 ```  
   
-##  <a name="a-namebkmksemanticsofthethispointera-semantics-of-the-this-pointer"></a><a name="BKMK_Semantics_of_the_this_pointer"></a> Semantik dieses Zeigers  
+##  <a name="BKMK_Semantics_of_the_this_pointer"></a>Semantik dieses Zeigers  
  Wenn Sie Visual C++ zum Definieren von Typen verwenden, ist der `this`-Zeiger in einem Referenztyp vom Typ "Handle". Der `this`-Zeiger in einen Werttyp ist vom Typ "innerer Zeiger".  
   
  Diese unterschiedliche Semantik des `this`-Zeigers kann beim Aufrufen eines Standardindexers ein unerwartetes Verhalten verursachen. Im folgenden Beispiel wird die korrekte Methode zum Zugriff auf einen Standardindexer in einem Referenz- und in einem Werttyp veranschaulicht.  
   
  Weitere Informationen finden Sie unter  
   
--   [Handle für Objekt-Operator (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)  
+-   [Handle für Objekt (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)  
   
--   [Interior_ptr (C++ / CLI)](../windows/interior-ptr-cpp-cli.md)  
-  
--   [Gewusst wie: indizierte Eigenschaften](../misc/how-to-use-indexed-properties.md)  
+-   [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)  
   
 ```  
   
@@ -557,12 +558,12 @@ int main() {
 10.89  
 ```  
   
-##  <a name="a-namebkmkhidebysignaturefunctionsa-hide-by-signature-functions"></a><a name="BKMK_Hide_by_signature_functions"></a> Ausblenden nach Signatur verdeckte Funktionen  
- In Standard-C++ wird eine Funktion in einer Basisklasse durch eine Funktion ausgeblendet, die den gleichen Namen in einer abgeleiteten Klasse hat, auch wenn die abgeleitete Klassenfunktion nicht dieselbe Anzahl bzw. Art von Parametern aufweist. Dies wird als bezeichnet *nach Namen verdeckte* Semantik. In einem Referenztyp kann eine Funktion in einer Basisklasse nur durch eine Funktion in einer abgeleiteten Klasse ausgeblendet werden, wenn sowohl der Name als auch die Parameterliste identisch sind. Dies wird als bezeichnet *Ausblenden nach Signatur verdeckte* Semantik.  
+##  <a name="BKMK_Hide_by_signature_functions"></a>Ausblenden nach Signatur verdeckte Funktionen  
+ In Standard-C++ wird eine Funktion in einer Basisklasse durch eine Funktion ausgeblendet, die den gleichen Namen in einer abgeleiteten Klasse hat, auch wenn die abgeleitete Klassenfunktion nicht dieselbe Anzahl bzw. Art von Parametern aufweist. Dies wird als bezeichnet *nach Namen verdeckte* Semantik. In einem Referenztyp kann eine Funktion in einer Basisklasse nur durch eine Funktion in einer abgeleiteten Klasse ausgeblendet werden, wenn sowohl der Name als auch die Parameterliste identisch sind. Dies bezeichnet man *Ausblenden nach Signatur verdeckte* Semantik.  
   
- Eine Klasse gilt als nach Signatur verdeckte Klasse, wenn alle zugehörigen Funktionen in den Metadaten als `hidebysig` gekennzeichnet sind. Standardmäßig werden alle Klassen, die unter erstellt werden **/CLR** haben `hidebysig` Funktionen. Allerdings eine Klasse, die mit kompiliert wird **/clr: oldSyntax** keinen `hidebysig` Funktionen; stattdessen sind sie nach Namen verdeckte Funktionen. Wenn eine Klasse über `hidebysig`-Funktionen verfügt, blendet der Compiler keine Funktionen in den direkten Basisklassen nach Namen aus. Wenn der Compiler jedoch eine nach Namen verdeckte Klasse in einer Vererbungskette erkennt, wird dieses nach Namen verdeckte Verhalten fortgesetzt.  
+ Eine Klasse gilt als nach Signatur verdeckte Klasse, wenn alle zugehörigen Funktionen in den Metadaten als `hidebysig` gekennzeichnet sind. Standardmäßig werden alle Klassen, die unter erstellt werden **"/ CLR"** haben `hidebysig` Funktionen. Wenn eine Klasse über `hidebysig`-Funktionen verfügt, blendet der Compiler keine Funktionen in den direkten Basisklassen nach Namen aus. Wenn der Compiler jedoch eine nach Namen verdeckte Klasse in einer Vererbungskette erkennt, wird dieses nach Namen verdeckte Verhalten fortgesetzt.  
   
- Wenn eine Funktion unter der nach Signatur verdeckten Semantik für ein Objekt aufgerufen wird, identifiziert der Compiler die am meisten abgeleitete Klasse, die eine Funktion enthält, die den Funktionsaufruf erfüllen kann. Wenn es nur eine Funktion in der Klasse gibt, die den Aufruf erfüllen kann, ruft der Compiler diese Funktion auf. Wenn es mehr als eine Funktion in der Klasse gibt, die den Aufruf erfüllen kann, verwendet der Compiler die Überladungsauflösungsregeln zum Ermitteln, welche Funktion aufgerufen werden soll. Weitere Informationen zu den Überladungsregeln finden Sie unter [Funktionsüberladung](../cpp/function-overloading.md).  
+ Wenn eine Funktion unter der nach Signatur verdeckten Semantik für ein Objekt aufgerufen wird, identifiziert der Compiler die am meisten abgeleitete Klasse, die eine Funktion enthält, die den Funktionsaufruf erfüllen kann. Wenn es nur eine Funktion in der Klasse gibt, die den Aufruf erfüllen kann, ruft der Compiler diese Funktion auf. Wenn es mehr als eine Funktion in der Klasse gibt, die den Aufruf erfüllen kann, verwendet der Compiler die Überladungsauflösungsregeln zum Ermitteln, welche Funktion aufgerufen werden soll. Weitere Informationen zu Überladung Regeln finden Sie unter [Funktionsüberladung](../cpp/function-overloading.md).  
   
  Für einen angegebenen Funktionsaufruf kann eine Funktion in einer Basisklasse eine Signatur haben, mit der sie etwas besser übereinstimmt als eine Funktion in einer abgeleiteten Klasse. Wenn die Funktion jedoch explizit für ein Objekt der abgeleiteten Klasse aufgerufen wurde, wird die Funktion in der abgeleiteten Klasse aufgerufen.  
   
@@ -667,54 +668,12 @@ Derived::Test4
 97  
 ```  
   
- Das folgende Beispiel definiert eine Komponente, die mit kompiliert wird **/clr: oldSyntax**. Klassen, die mithilfe von Managed Extensions für C++ definiert werden, haben nach Namen verdeckte Memberfunktionen.  
-  
-```  
-  
-// compile with: /clr:oldSyntax /LD  
-using namespace System;  
-public __gc struct Base0 {  
-   void Test() {   
-      Console::WriteLine("in Base0::Test");  
-   }  
-};  
-  
-public __gc struct Base1 : public Base0 {  
-   void Test(int i) {   
-      Console::WriteLine("in Base1::Test");  
-   }  
-};  
-```  
-  
- Im folgenden Beispiel wird die im vorherigen Beispiel erstellte Komponente verwendet. Beachten Sie, dass wie Ausblenden nach Signatur verdeckte Funktion wird nicht angewendet, auf die Basisklassen von Typen, die mit kompiliert werden **/clr: oldSyntax**.  
-  
-```  
-  
-// compile with: /clr:oldSyntax /LD  
-// compile with: /clr  
-using namespace System;  
-#using "hide_by_signature_4.dll"  
-  
-ref struct Derived : public Base1 {  
-   void Test(int i, int j) {   
-      Console::WriteLine("Derived::Test");  
-   }  
-};  
-  
-int main() {  
-   Derived ^ t = gcnew Derived;  
-   t->Test(8, 8);   // OK  
-   t->Test(8);   // OK  
-   t->Test();   // C2661  
-}  
-```  
-  
-##  <a name="a-namebkmkcopyconstructorsa-copy-constructors"></a><a name="BKMK_Copy_constructors"></a> Kopierkonstruktoren  
+##  <a name="BKMK_Copy_constructors"></a>Kopierkonstruktoren  
  Der C++-Standard besagt, dass ein Kopierkonstruktor aufgerufen wird, wenn ein Objekt so verschoben wird, dass ein Objekt an derselben Adresse erstellt und zerstört wird.  
   
- Jedoch wenn **/CLR** wird zum Kompilieren und eine Funktion, die kompiliert wird, um eine systemeigene Funktion, bei der eine MSIL-Aufrufe – oder mehrere – übergeben wird, als Wert und, in denen die systemeigene Klasse verfügt über einen Kopierkonstruktor und/oder einen Destruktor, wird kein Kopierkonstruktor aufgerufen, und das Objekt wird an einer anderen Adresse als der Erstellung zerstört. Dies kann Probleme verursachen, wenn die Klasse einen Zeiger zu sich selbst hat oder wenn der Code Objekte nach Adresse erfasst.  
+ Jedoch wenn **"/ CLR"** wird verwendet, um die Kompilierung und eine Funktion, die kompiliert wird, um MSIL-Aufrufe, die eine systemeigene Funktion, bei der eine – oder mehrere – übergebener Wert und hat die native Klasse einen Kopierkonstruktor und/oder der Destruktor, der keine Kopie Konstruktor wird aufgerufen, und das Objekt wird an eine andere Adresse als der Erstellung zerstört. Dies kann Probleme verursachen, wenn die Klasse einen Zeiger zu sich selbst hat oder wenn der Code Objekte nach Adresse erfasst.  
   
- Weitere Informationen finden Sie unter [/clr (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md).  
+ Weitere Informationen finden Sie unter [/clr (Common Language Runtime-Kompilierung)](../build/reference/clr-common-language-runtime-compilation.md).  
   
  Das folgende Beispiel veranschaulicht, was passiert, wenn ein Kopierkonstruktor nicht generiert wird.  
   
@@ -774,8 +733,8 @@ S object 1 being destroyed, this=0018F37C
 S object 0 being destroyed, this=0018F378  
 ```  
   
-##  <a name="a-namebkmkdestructorsandfinalizersa-destructors-and-finalizers"></a><a name="BKMK_Destructors_and_finalizers"></a> Destruktoren und Finalizer  
- Destruktoren in einem Referenztyp führen eine deterministische Bereinigung von Ressourcen aus. Finalizer bereinigen nicht verwaltete Ressourcen und können deterministisch vom Destruktor oder nicht deterministisch vom Garbage Collector aufgerufen werden. Informationen zu Destruktoren in Standard-c++ finden Sie unter [Destruktoren](../cpp/destructors-cpp.md).  
+##  <a name="BKMK_Destructors_and_finalizers"></a>Destruktoren und Finalizer  
+ Destruktoren in einem Referenztyp führen eine deterministische Bereinigung von Ressourcen aus. Finalizer bereinigen nicht verwaltete Ressourcen und können deterministisch vom Destruktor oder nicht deterministisch vom Garbage Collector aufgerufen werden. Informationen über Destruktoren in standardmäßigem C++ finden Sie unter [Destruktoren](../cpp/destructors-cpp.md).  
   
 ```  
 class classname {  
@@ -788,9 +747,9 @@ class classname {
   
  Der CLR-Garbage Collector löscht nicht verwendete verwaltete Objekte und gibt ihren Speicher frei, wenn sie nicht mehr benötigt werden. Allerdings verwendet ein Typ möglicherweise Ressourcen, die der Garbage Collector nicht freigeben kann. Diese Ressourcen werden als nicht verwaltete Ressourcen bezeichnet (z. B. systemeigene Dateihandles). Es wird empfohlen, dass Sie alle nicht verwalteten Ressourcen im Finalizer freigeben. Da verwaltete Ressourcen nicht deterministisch vom Garbage Collector freigegeben werden, ist es nicht sicher, in einem Finalizer auf verwaltete Ressourcen zu verweisen, da der Garbage Collector diese verwaltete Ressource möglicherweise bereits bereinigt hat.  
   
- Ein Visual C++-Finalizer ist nicht identisch mit der <xref:System.Object.Finalize*> Methode. (CLR-Dokumentation werden Finalizer und die <xref:System.Object.Finalize*> -Methode synonym verwendet). Die <xref:System.Object.Finalize*> Methode wird aufgerufen, durch den Garbage Collector, der jeden Finalizer in einer klassenvererbungskette aufruft. Im Gegensatz zu Visual C++-Destruktoren führt ein Aufruf des abgeleiteten Klassenfinalizer nicht dazu, dass der Compiler den Finalizer in allen Basisklassen aufruft.  
+ Ein Visual C++-Finalizer ist nicht mit der <xref:System.Object.Finalize%2A>-Methode identisch. (In der CLR-Dokumentation werden Finalizer und die <xref:System.Object.Finalize%2A>-Methode synonym verwendet). Die <xref:System.Object.Finalize%2A>-Methode wird vom Garbage Collector aufgerufen, der jeden Finalizer in einer Klassenvererbungskette aufruft. Im Gegensatz zu Visual C++-Destruktoren führt ein Aufruf des abgeleiteten Klassenfinalizer nicht dazu, dass der Compiler den Finalizer in allen Basisklassen aufruft.  
   
- Da Visual C++-Compiler die deterministische Freigabe von Ressourcen unterstützt, versuchen Sie nicht, implementieren die <xref:System.IDisposable.Dispose*> oder <xref:System.Object.Finalize*> Methoden. Wenn Sie mit diesen Methoden vertraut sind, hier ist jedoch ein Visual C++-Finalizer und ein Destruktor, der den Finalizer aufruft, Zuordnung der <xref:System.IDisposable.Dispose*> Muster:  
+ Da der Visual C++-Compiler die deterministische Freigabe von Ressourcen unterstützt, implementieren Sie nicht die <xref:System.IDisposable.Dispose%2A>- oder <xref:System.Object.Finalize%2A>-Methode. Wenn Sie jedoch mit diesen Methoden vertraut sind, finden Sie hier ein Beispiel, wie ein Visual C++-Finalizer und ein Destruktor, der den Finalizer aufruft, zum <xref:System.IDisposable.Dispose%2A>-Muster zugeordnet werden:  
   
 ```  
 // Visual C++ code  
@@ -840,25 +799,25 @@ ref struct A {
   
  Das Vorhandensein eines Destruktors bedeutet nicht, dass ein Finalizer vorhanden ist. Allerdings bedeutet das Vorhandensein eines Finalizers, dass Sie einen Destruktor definieren und den Finalizer von diesem Destruktor aufrufen müssen. Dies berücksichtigt die deterministische Freigabe von nicht verwalteten Ressourcen.  
   
- Aufrufen des Destruktors unterdrückt – mit <xref:System.GC.SuppressFinalize*>– Abschluss des Objekts. Wenn der Destruktor nicht aufgerufen wird, wird der Finalizer des Typs schließlich vom Garbage Collector aufgerufen.  
+ Durch Aufrufen des Destruktors wird der Abschluss des Objekts mithilfe von <xref:System.GC.SuppressFinalize%2A> unterdrückt. Wenn der Destruktor nicht aufgerufen wird, wird der Finalizer des Typs schließlich vom Garbage Collector aufgerufen.  
   
  Die deterministische Bereinigung der Objektressourcen durch Aufrufen des Destruktors kann zur Leistungssteigerung beitragen im Gegensatz zum nicht deterministischen Abschluss des Objekts durch die CLR.  
   
- Code, der in Visual C++ geschrieben und kompiliert mit **/CLR** Destruktor des Typs ausgeführt wird, wenn:  
+ Code, der in Visual C++ geschrieben und mithilfe von kompiliert hat **"/ CLR"** Destruktor des Typs ausgeführt wird, wenn:  
   
--   Ein Objekt, das mithilfe von Stapelsemantik erstellt wird, liegt außerhalb des gültigen Bereichs. Weitere Informationen finden Sie unter [C++-Stack-Semantik für Referenztypen](../dotnet/cpp-stack-semantics-for-reference-types.md).  
+-   Ein Objekt, das mithilfe von Stapelsemantik erstellt wird, liegt außerhalb des gültigen Bereichs. Weitere Informationen finden Sie unter [C++-Stapelsemantik für Referenztypen](../dotnet/cpp-stack-semantics-for-reference-types.md).  
   
 -   Während der Erstellung des Objekts wird eine Ausnahme ausgelöst.  
   
 -   Das Objekt ist ein Member in einem Objekt, dessen Destruktor ausgeführt wird.  
   
--   Rufen Sie die [Löschen](../cpp/delete-operator-cpp.md) Operator auf ein Handle ([Handle für Objekt-Operator (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)).  
+-   Rufen Sie die [löschen](../cpp/delete-operator-cpp.md) Operator auf ein Handle ([Handle für Objekt (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)).  
   
 -   Sie rufen den Destruktor explizit auf.  
   
  Wenn der Typ von einem Client verwendet wird, der in einer anderen Sprache geschrieben wurde, wird der Destruktor wie folgt aufgerufen:  
   
--   Bei einem Aufruf von <xref:System.IDisposable.Dispose*>.  
+-   Bei einem Aufruf von <xref:System.IDisposable.Dispose%2A>.  
   
 -   Bei einem Aufruf von `Dispose(void)` für den Typ.  
   
@@ -884,11 +843,11 @@ int main() {
 }  
 ```  
   
- Wenn der Typ einen Destruktor enthält, generiert der Compiler eine `Dispose` Methode, die implementiert <xref:System.IDisposable>. Wenn ein Typ, der in Visual C++ geschrieben wurde, einen Destruktor enthält, der von einer anderen Sprache verwendet wird, führt der Aufruf von `IDisposable::Dispose` für diesen Typ dazu, dass der Destruktor des Typs aufgerufen wird. Wenn der Typ in einem Visual C++-Client genutzt wird, können Sie `Dispose` nicht direkt aufrufen. Rufen Sie stattdessen den Destruktor mithilfe des `delete`-Operators auf.  
+ Wenn der Typ einen Destruktor enthält, generiert der Compiler eine `Dispose`-Methode, die <xref:System.IDisposable> implementiert. Wenn ein Typ, der in Visual C++ geschrieben wurde, einen Destruktor enthält, der von einer anderen Sprache verwendet wird, führt der Aufruf von `IDisposable::Dispose` für diesen Typ dazu, dass der Destruktor des Typs aufgerufen wird. Wenn der Typ in einem Visual C++-Client genutzt wird, können Sie `Dispose` nicht direkt aufrufen. Rufen Sie stattdessen den Destruktor mithilfe des `delete`-Operators auf.  
   
- Wenn der Typ einen Finalizer enthält, generiert der Compiler eine `Finalize(void)` -Methode, überschreibt <xref:System.Object.Finalize*>.  
+ Wenn der Typ einen Finalizer enthält, generiert der Compiler eine `Finalize(void)`-Methode, die <xref:System.Object.Finalize%2A> überschreibt.  
   
- Wenn ein Typ entweder einen Finalizer oder einen Destruktor enthält, generiert der Compiler entsprechend dem Entwurfsmuster eine `Dispose(bool)`-Methode. (Weitere Informationen finden Sie unter [Dispose-Muster](../Topic/Dispose%20Pattern.md)). Sie können `Dispose(bool)` in Visual C++ nicht explizit erstellen oder aufrufen.  
+ Wenn ein Typ entweder einen Finalizer oder einen Destruktor enthält, generiert der Compiler entsprechend dem Entwurfsmuster eine `Dispose(bool)`-Methode. (Informationen finden Sie unter [Dispose-Muster](/dotnet/standard/design-guidelines/dispose-pattern)). Sie können `Dispose(bool)` in Visual C++ nicht explizit erstellen oder aufrufen.  
   
  Wenn ein Typ über eine Basisklasse verfügt, die dem Entwurfsmuster entspricht, werden die Destruktoren für alle Basisklassen aufgerufen, wenn der Destruktor für die abgeleitete Klasse aufgerufen wird. (Wenn der Typ in Visual C++ geschrieben wurde, stellt der Compiler sicher, dass die Typen dieses Muster implementieren.) Dies bedeutet, dass der Destruktor einer Referenzklasse mit seinen Basisklassen und Membern verknüpft wird, wie im C++-Standard festgelegt ist. Zuerst wird der Destruktor der Klasse ausgeführt und dann werden die Destruktoren für die Member in der umgekehrten Reihenfolge ausgeführt, in der sie erstellt wurden. Als Letztes werden die Destruktoren für die Basisklassen in der umgekehrten Reihenfolge ausgeführt, in der sie erstellt wurden.  
   
@@ -898,9 +857,9 @@ int main() {
   
  Nachdem der Finalizer eines Objekts ausgeführt wird, werden die Finalizer in den Basisklassen, beginnend mit dem am wenigsten abgeleiteten Typ, ebenfalls aufgerufen. Finalizer für Datenmember werden nicht automatisch durch den Finalizer einer Klasse verkettet.  
   
- Wenn ein Finalizer einen systemeigenen Zeiger in einem verwalteten Typ löscht, müssen Sie sicherstellen, dass Verweise auf oder durch den systemeigenen Zeiger nicht vorzeitig erfasst werden; Rufen Sie den Destruktor auf dem verwalteten Typ anstelle von <xref:System.GC.KeepAlive*>.  
+ Wenn ein Finalizer einen systemeigenen Zeiger in einem verwalteten Typ löscht, müssen Sie sicherstellen, dass Verweise auf oder durch den systemeigenen Zeiger nicht vorzeitig erfasst werden. Rufen Sie den Destruktor auf dem verwalteten Typ auf, anstatt <xref:System.GC.KeepAlive%2A> zu verwenden.  
   
- Zur Kompilierzeit können Sie erkennen, ob ein Typ einen Finalizer oder einen Destruktor enthält. Weitere Informationen finden Sie unter [Compiler Support for Type Traits](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
+ Zur Kompilierzeit können Sie erkennen, ob ein Typ einen Finalizer oder einen Destruktor enthält. Weitere Informationen finden Sie unter [Compilerunterstützung für Typmerkmale](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
  Im folgenden Beispiel werden zwei Typen verdeutlicht: ein Typ, der nicht verwaltete Ressourcen hat, und ein Typ mit verwalteten Ressourcen, die deterministisch freigegeben werden.  
   

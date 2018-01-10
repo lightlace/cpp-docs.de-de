@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 0c217824496f0cf4e69c8fba89fd614a8049a8c0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 353649f63a8e5522329459b1c9f740450818a3af
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformtypecode-enumeration"></a>Platform::TypeCode-Enumeration
 Gibt eine numerische Kategorie an, die einen integrierten Typ darstellt.  
@@ -44,7 +45,7 @@ enum class TypeCode {};
 |Int32|Ein default::int32-Typ.|  
 |Int64|Ein default::int64-Typ.|  
 |Int8|Ein default::int8-Typ.|  
-|Objekt|Ein Platform::Object-Typ.|  
+|Object|Ein Platform::Object-Typ.|  
 |Single|Ein default::float32-Typ.|  
 |Zeichenfolge|Ein Platform::String-Typ.|  
 |UInt16|Ein default::uint16-Typ.|  

@@ -1,62 +1,63 @@
 ---
-title: "/LIBPATH (Libpath-Pfad hinzuf&#252;gen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/libpath"
-  - "VC.Project.VCLinkerTool.AdditionalLibraryDirectories"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/LIBPATH (Linkeroption)"
-  - "Libpath-Pfad hinzufügen (Linkeroption)"
-  - "Überschreibung des Bibliothekspfads der Umgebung"
-  - "LIBPATH (Linkeroption)"
-  - "-LIBPATH (Linkeroption)"
-  - "Bibliothekspfad (Linkeroption)"
+title: -LIBPATH (Libpath-Pfad) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /libpath
+- VC.Project.VCLinkerTool.AdditionalLibraryDirectories
+dev_langs: C++
+helpviewer_keywords:
+- LIBPATH linker option
+- /LIBPATH linker option
+- Additional Libpath linker option
+- environment library path override
+- -LIBPATH linker option
+- library path linker option
 ms.assetid: 7240af0b-9a3d-4d53-8169-2a92cd6958ba
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 452158c2767ec4f0bf30a88df17b7c01496e24e7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# /LIBPATH (Libpath-Pfad hinzuf&#252;gen)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="libpath-additional-libpath"></a>/LIBPATH (Libpath-Pfad hinzufügen)
 ```  
 /LIBPATH:dir  
 ```  
   
-## Hinweise  
- Hierbei ist:  
+## <a name="remarks"></a>Hinweise  
+ Dabei gilt:  
   
  `dir`  
- ein Pfad, den der Linker durchsucht, bevor er den in der Umgebungsvariablen **LIB** angegebenen Pfad durchsucht.  
+ Gibt einen Pfad an, dass der Linker durchsucht wird, bevor er den in der Umgebungsvariablen LIB angegebenen Pfad durchsucht.  
   
-## Hinweise  
- Mit der Option **\/LIBPATH** wird der Bibliothekspfad aus der Umgebungsvariablen überschrieben.  Der Linker durchsucht zuerst den in dieser Option angegebenen Pfad und danach den in der Umgebungsvariablen **LIB** angegebenen Pfad.  Sie können für jede eingegebene **\/LIBPATH**\-Option nur ein Verzeichnis angeben.  Wenn Sie mehrere Verzeichnisse angeben möchten, müssen Sie mehrere **\/LIBPATH**\-Optionen eingeben.  Der Linker durchsucht dann die angegebenen Verzeichnisse in der gegebenen Reihenfolge.  
+## <a name="remarks"></a>Hinweise  
+ Verwenden Sie die/LIBPATH-Option, um den Bibliothekspfad der Umgebung zu überschreiben. Der Linker wird durchsucht zuerst im Pfad angegeben wird, indem Sie diese Option aus, und suchen Sie im Pfad, in der LIB-Umgebungsvariablen angegeben. Sie können nur ein Verzeichnis für jede einzelne/LIBPATH-Option angeben, die Sie eingeben. Wenn Sie mehrere Verzeichnisse angeben möchten, müssen Sie mehrere/LIBPATH-Optionen angeben. Der Linker sucht die angegebenen Verzeichnisse klicken Sie dann in der Reihenfolge.  
   
-### So legen Sie diese Linkeroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Festlegen von Visual C\+\+\-Projekteigenschaften](../../ide/working-with-project-properties.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Klicken Sie auf den Ordner **Linker**.  
+2.  Klicken Sie auf die **Linker** Ordner.  
   
-3.  Klicken Sie auf die Eigenschaftenseite **Allgemein**.  
+3.  Klicken Sie auf die **allgemeine** Eigenschaftenseite.  
   
-4.  Bearbeiten Sie die Eigenschaft **Zusätzliche Bibliotheksverzeichnisse**.  
+4.  Ändern der **Zusätzliche Bibliotheksverzeichnisse** Eigenschaft.  
   
-### So legen Sie diese Linkeroption programmgesteuert fest  
+### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
   
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalLibraryDirectories*>.  
+-   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalLibraryDirectories%2A>.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
  [Linkeroptionen](../../build/reference/linker-options.md)

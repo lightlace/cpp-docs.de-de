@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b97509fbbfdf0bb169af1dae61e07fa6f4ba31d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0308b4d3531c52b229771629e245af0b772ec5d9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-logical-operators"></a>C-Operatoren (logisch)
 Die logischen Operatoren führen logische AND (**&&**)- und logische OR ( `||` )-Operationen aus.  
@@ -47,7 +48,7 @@ Die logischen Operatoren führen logische AND (**&&**)- und logische OR ( `||` )
   
  Die logischen C-Operatoren sind im Folgenden beschrieben:  
   
-|Operator|Beschreibung|  
+|Operator|description|  
 |--------------|-----------------|  
 |**&&**|Der logische AND-Operator gibt den Wert 1 an, wenn beide Operanden Werte ungleich 0 aufweisen. Wenn einer der beiden Operanden gleich 0 (null) ist, ist das Ergebnis 0 (null). Wenn der erste Operand einer logischen AND-Operation gleich 0 ist, wird der zweite Operand nicht ausgewertet.|  
 |`&#124;&#124;`|Der logische OR-Operator führt eine inklusive OR-Operation für seinen Operanden aus. Das Ergebnis ist 0 (null), wenn beide Operanden den Wert 0 (null) aufweisen. Wenn einer der beiden Operanden einen Wert ungleich 0 (null) aufweist, ist das Ergebnis 1. Wenn der erste Operand einer logischen OR-Operation einen Wert ungleich 0 (null) aufweist, wird der zweite Operand nicht ausgewertet.|  

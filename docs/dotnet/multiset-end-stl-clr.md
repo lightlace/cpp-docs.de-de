@@ -1,41 +1,42 @@
 ---
-title: "multiset::end (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::end"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "end-Member [STL/CLR]"
+title: 'multiset:: End (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::end
+dev_langs: C++
+helpviewer_keywords: end member [STL/CLR]
 ms.assetid: 225f8b74-f9b9-47ea-9603-43ac7c9a9734
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1c1ef21d52990a639ed8000674aa12d64dbbbf76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# multiset::end (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multisetend-stlclr"></a>multiset::end (STL/CLR)
 Legt das Ende der kontrollierten Sequenz fest.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 iterator end();  
 ```  
   
-## Hinweise  
- Die Memberfunktion wird ein bidirektionaler Iterator zurück, der nur über das Ende der Sequenz gesteuerten hinaus zeigt.  Sie verwenden sie, um ein Iterator abzurufen, der das Ende der Sequenz gesteuerten festgelegt; sein Status nicht nicht ändert, wenn die Länge der Sequenz gesteuerten ändert.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt einem bidirektionalen Iterator, der direkt hinter das Ende der kontrollierten Sequenz verweist. Sie können damit einen Iterator abrufen, der das Ende der kontrollierten Sequenz bestimmt; der Status ist nicht nicht geändert werden, wenn die Länge der gesteuerten Sequenz geändert wird.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_multiset_end.cpp   
@@ -65,14 +66,17 @@ int main()
   
 ```  
   
-  **ein b c**  
-**\*\- \-\-end\(\) \= b**  
-**\*\-\-end\(\) \= c**   
-## Anforderungen  
- **Header:** \<cliext\/Satz\>  
+```Output  
+ a b c  
+*-- --end() = b  
+*--end() = c  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Set >  
   
-## Siehe auch  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::begin](../dotnet/multiset-begin-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset::begin (STL/CLR)](../dotnet/multiset-begin-stl-clr.md)

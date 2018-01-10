@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fb525964025ce3ffce497087ec42b72aff0a4b9d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9e2269be27dd039357c11d38a2be83b5fc9d6504
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cc-building-reference"></a>Referenz zur C/C++-Erstellung
 Visual C++ bietet zwei Methoden zum Erstellen eines C/C++-Programms. Die einfachste (und häufigste) besteht darin, [in der Visual C++-Entwicklungsumgebung erstellen](../../ide/building-cpp-projects-in-visual-studio.md). Eine andere Möglichkeit besteht darin [erstellen, die von einer Eingabeaufforderung mithilfe von Befehlszeilentools](../../build/building-on-the-command-line.md). In beiden Fällen können Sie mithilfe des Visual C++-Quellcode-Editors oder einer Drittanbieter-Editor Ihrer Wahl Quelldateien erstellen.  

@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f0ac465ec20d0893add63d8b5791b9445b17f8fb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aa6285504a194d909dec7a446437ca9f584272a9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-declarations"></a>Übersicht über Deklarationen
 Eine "Deklaration" gibt die Interpretation und die Attribute eines Satzes von Bezeichnern an. Eine Deklaration, die auch bewirkt, dass Speicher für Objekte oder Funktionen reserviert wird, die vom Bezeichner benannt werden, wird "Definition" genannt. C-Deklarationen für Variablen, Funktionen und Typen haben diese Syntax:  
@@ -55,7 +56,7 @@ Eine "Deklaration" gibt die Interpretation und die Attribute eines Satzes von Be
   
  Deklarationen können mindestens eines der optionalen Attribute enthalten, die in *attribute-seq* aufgelistet sind. *seq* ist eine Abkürzung für Sequenz. Diese Microsoft-spezifischen Attribute führen eine Vielzahl von Funktionen aus, die in diesem Buch im Detail besprochen werden.  
   
- In der allgemeinen Form einer Variablendeklaration gibt *type-specifier* den Datentyp der Variablen an. *type-specifier* kann ein zusammengesetztes Element sein, wie in der Typänderung mit **const** oder `volatile`. Der `declarator` gibt den Namen der Variablen an, der möglicherweise so geändert ist, dass ein Array oder ein Zeigertyp deklariert wird. Beispiel:  
+ In der allgemeinen Form einer Variablendeklaration gibt *type-specifier* den Datentyp der Variablen an. *type-specifier* kann ein zusammengesetztes Element sein, wie in der Typänderung mit **const** oder `volatile`. Der `declarator` gibt den Namen der Variablen an, der möglicherweise so geändert ist, dass ein Array oder ein Zeigertyp deklariert wird. Ein auf ein Objekt angewendeter  
   
 ```  
 int const *fp;  

@@ -1,50 +1,52 @@
 ---
-title: "Parameterarray und Ellipse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Funktionsüberladung, Argumentübereinstimmung"
+title: Parameterarray und Ellipse | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: function overloading, argument matching
 ms.assetid: 492e3f6c-1c4c-4e0c-a358-72f2d39c30be
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f6d256fd48d8c9f206619e6baa9a50a0278d30c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Parameterarray und Ellipse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die Rangfolge des Parameterarrays zum Auflösen von Aufrufen überladener Funktionen hat sich in [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] gegenüber Managed Extensions for C\+\+ geändert.  
+# <a name="param-array-and-ellipsis"></a>Parameterarray und Ellipse
+Rangfolge des Parameterarrays zum Auflösen von Aufrufen überladener Funktionen wurde von Managed Extensions für C++ in Visual C++ geändert.  
   
- Sowohl in Managed Extensions als auch in der neuen Syntax gibt es keine explizite Unterstützung des Parameterarrays, das von C\# und [!INCLUDE[vbprvb](../dotnet/includes/vbprvb_md.md)] unterstützt wird.  Stattdessen wird wie folgt ein gewöhnliches Array mit einem Attribut gekennzeichnet:  
+ In Managed Extensions und der neuen Syntax ist es keine explizite Unterstützung für das Parameterarray, das C#- und Visual Basic unterstützen. Stattdessen kennzeichnet eine ein normales Array mit einem Attribut wie folgt:  
   
 ```  
 void Trace1( String* format, [ParamArray]Object* args[] );  
 void Trace2( String* format, Object* args[] );  
 ```  
   
- Während diese beiden Varianten gleich aussehen, kennzeichnet das `ParamArray`\-Attribut dieses Array für C\# oder andere CLR\-Programmiersprachen als ein Array, das bei jedem Aufruf eine unterschiedliche Anzahl von Elementen aufnehmen kann.  Das unterschiedliche Verhalten von Programmen mit Managed Extensions und der neuen Syntax besteht in der Auflösung einer Reihe von Funktionen, in der eine Instanz eine Ellipse deklariert und eine zweite Instanz ein `ParamArray`\-Attribut deklariert, wie das folgende von Artur Laksberg zur Verfügung gestellte Beispiel zeigt.  
+ Während beide gleich, suchen Sie die `ParamArray` Attribut kennzeichnet dieses für C#- oder andere CLR-Programmiersprachen als ein Array, eine Variable Anzahl von Elementen mit jedem Aufruf aufnehmen. Die Änderung im Verhalten von Programmen mit Managed Extensions und der neuen Syntax wird in die Auflösung einer überladenen Funktion legen Sie in der eine Instanz eine Ellipse deklariert und eine zweite deklariert eine `ParamArray` -Attribut, wie im folgenden Beispiel bereitgestellt von Artur Laksberg.  
   
 ```  
 int fx(...); // 1  
 int fx( [ParamArray] Int32[] ); // 2  
 ```  
   
- In Managed Extensions hat die Ellipse Vorrang vor dem Attribut. Dies ist angemessen, da das Attribut keinen formalen Aspekt der Programmiersprache darstellt.  In der neuen Syntax wird das Parameterarray jetzt jedoch direkt in der Programmiersprache unterstützt und hat Vorrang vor der Ellipse, da es eine striktere Typbindung hat.  In Managed Extensions wird also der Aufruf  
+ In Managed Extensions wurde mit der Auslassungspunkten Vorrang vor mit dem Attribut angegeben, die sinnvoll ist, da das Attribut nicht über eine formale Aspekt der Sprache ist. Allerdings in der neuen Syntax Parameterarrays ist jetzt direkt in der Sprache unterstützt, und wird Vorrang vor über die Schaltfläche angegeben werden, da es mehr stark typisiert ist. Folglich in Managed Extensions wird der Aufruf  
   
 ```  
 fx( 1, 2 );  
 ```  
   
- nach `fx(…)` aufgelöst, während er in der neuen Syntax zur `ParamArray`\-Instanz aufgelöst wird.  In dem unwahrscheinlichen Fall, dass das Verhalten des Programms eher vom Aufruf der Ellipseninstanz als vom Aufruf der `ParamArray`\-Instanz abhängt, müssen Sie entweder die Signatur oder den Aufruf ändern.  
+ Löst in `fx(...)` klicken Sie in der neuen Syntax wird löst die `ParamArray` Instanz. Fall, der das Verhalten des Programms über die auf den Aufruf der Instanz mit den Auslassungspunkten abhängig ist die `ParamArray`, müssen Sie die Signatur oder der Aufruf zu ändern.  
   
-## Siehe auch  
- [Allgemeine Sprachänderung](../dotnet/general-language-changes-cpp-cli.md)
+## <a name="see-also"></a>Siehe auch  
+ [Allgemeine Sprachänderungen (C++/CLI)](../dotnet/general-language-changes-cpp-cli.md)

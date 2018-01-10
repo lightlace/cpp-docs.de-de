@@ -1,41 +1,42 @@
 ---
-title: "Hergeleitete abh&#228;ngige Dateien und Regeln | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Abhängige Dateien, Hergeleitet"
-  - "Hergeleitete abhängige Elemente in NMAKE"
-  - "Hergeleitete Regeln in NMAKE"
-  - "Regeln, Hergeleitet"
+title: "Hergeleitete abhängige Dateien und Regeln | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- rules, inferred
+- inferred dependents in NMAKE
+- inferred rules in NMAKE
+- dependents, inferred
 ms.assetid: 9381e74a-53d9-445c-836d-0ff7ef6112d9
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fe7c49607f466d8fd1d333883414b24d7837432b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Hergeleitete abh&#228;ngige Dateien und Regeln
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-NMAKE geht von einer hergeleiteten abhängigen Datei als einem Ziel aus, wenn eine anwendbare Rückschlussregel vorhanden ist.  Eine Regel ist anwendbar, wenn:  
+# <a name="inferred-dependents-and-rules"></a>Hergeleitete abhängige Dateien und Regeln
+NMAKE übernimmt eine hergeleitete abhängige für ein Ziel aus, wenn eine anwendbare Rückschlussregel vorhanden ist. Eine Regel gilt, wenn:  
   
--   *toext* mit der Erweiterung des Ziels übereinstimmt.  
+-   *Toext* mit der Erweiterung des Ziels übereinstimmt.  
   
--   *fromext* mit der Erweiterung einer Datei übereinstimmt, die den Basisnamen des Ziels aufweist und im aktuellen oder angegebenen Verzeichnis vorhanden ist.  
+-   *Fromext* Übereinstimmungen, die die Erweiterung der Datei mit der das Ziel-Basisnamen und dem, in der aktuellen oder angegebenen Verzeichnis vorhanden ist.  
   
--   *fromext* ist in [.SUFFIXES](../build/dot-directives.md) aufgelistet; keine andere mit *fromext* übereinstimmende Regel besitzt eine höhere **.SUFFIXES**\-Priorität.  
+-   *Fromext* befindet sich im [. SUFFIXE](../build/dot-directives.md); keine anderen *Fromext* in eine entsprechende Regel besitzt eine höhere **. SUFFIXE** Priorität.  
   
--   Keine andere explizite abhängige Datei besitzt eine höhere **.SUFFIXES**\-Priorität.  
+-   Keine explizite abhängige Datei besitzt eine höhere **. SUFFIXE** Priorität.  
   
- Hergeleitete abhängige Dateien können unerwartete Nebeneffekte verursachen.  Wenn der Beschreibungsblock des Ziels Befehle enthält, werden diese Befehle von NMAKE anstelle der Befehle in der Regel ausgeführt.  
+ Hergeleitete abhängige Dateien können dazu führen, dass unerwartete Nebeneffekte. Wenn der Zielblock Beschreibung Befehle enthält, führt NMAKE dieser Befehle anstelle der Befehle in der Regel.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Rückschlussregeln](../build/inference-rules.md)

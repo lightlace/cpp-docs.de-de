@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c20707f2fc36790fc1b90e9a9df295bcd25f7af3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5361012fd388f49d8eb956ec1a4fa1bdd53a2dcc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="commands-in-a-makefile"></a>Befehle in einem Makefile
 Eine Beschreibung Block oder mithilfe eines Rückschlusses Regel gibt einen Block von Befehlen, die ausgeführt werden, wenn die Abhängigkeit nicht mehr aktuell ist. NMAKE jeder Befehl vor der Ausführung angezeigt, es sei denn, / s, **. AUTOMATISCHE**, **! CMDSWITCHES**, oder @ verwendet wird. NMAKE sucht nach einer übereinstimmenden Rückschlussregel auf, wenn ein Beschreibungsblock von einem Befehlsblock nicht befolgt werden.  

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _aligned_free_dbg
+apiname: _aligned_free_dbg
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,22 +23,21 @@ apitype: DLLExport
 f1_keywords:
 - _aligned_free_dbg
 - aligned_free_dbg
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _aligned_free_dbg function
 - aligned_free_dbg function
 ms.assetid: eb0cb3c8-0992-4db8-bac3-65f1b8311ca6
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9ea0dd62e2b76bef5e55fb152eecfc4c12d01fdf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: 724acaed1c99aa2507c33010e97f3f993e1b6de6
-ms.contentlocale: de-de
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alignedfreedbg"></a>_aligned_free_dbg
 Gibt einen Speicherblock frei, der mit [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) oder [_aligned_offset_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md) belegt ist (nur in der Debugversion).  
@@ -58,7 +55,7 @@ void _aligned_free_dbg(
  Ein Zeiger auf den Speicherblock, der an die Funktion `_aligned_malloc` oder `_aligned_offset_malloc` zurückgegeben wurde.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Funktion `_aligned_free_dbg`ist eine Debugversion der [_aligned_free](../../c-runtime-library/reference/aligned-free.md)-Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, wird jeder Aufruf von `_aligned_free_dbg` zu einem Aufruf von `_aligned_free` reduziert. Beide `_aligned_free` und `_aligned_free_dbg` frei einen Speicherblock im Basisheap, jedoch `_aligned_free_dbg` hat eine Debugfunktion: die Möglichkeit zu freigegebenen Blöcke in der verknüpften Heapliste um Speichermangel zu simulieren.  
+ Die Funktion `_aligned_free_dbg`ist eine Debugversion der [_aligned_free](../../c-runtime-library/reference/aligned-free.md)-Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, wird jeder `_aligned_free_dbg`-Aufruf zu einem `_aligned_free`-Aufruf reduziert. Beide `_aligned_free` und `_aligned_free_dbg` frei einen Speicherblock im Basisheap, jedoch `_aligned_free_dbg` hat eine Debugfunktion: die Möglichkeit zu freigegebenen Blöcke in der verknüpften Heapliste um Speichermangel zu simulieren.  
   
  `_aligned_free_dbg` führt eine Gültigkeitsüberprüfung für alle angegebenen Dateien und Blockspeicherorte aus, bevor eine Freigabe erfolgt. Die Anwendung stellt diese Informationen wahrscheinlich nicht bereit. Wenn ein Speicherblock freigegeben wird, überprüft der Debugheapmanager automatisch die Pufferintegrität auf beiden Seiten des Benutzerteils und erstellt einen Fehlerbericht, falls über den Puffer hinaus geschrieben wurde. Wenn das Bitfeld `_CRTDBG_DELAY_FREE_MEM_DF` des [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)-Flags festgelegt ist, wird der freigegebene Block mit dem Wert „0xDD“ gefüllt. Außerdem wird dem Block der `_FREE_BLOCK`-Blocktyp zugewiesen und in der verknüpften Liste des Heaps im Speicherblock beibehalten.  
   
@@ -68,7 +65,7 @@ void _aligned_free_dbg(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_aligned_free_dbg`|\<crtdbg.h>|  
   

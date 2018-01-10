@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9007cceacb150b13796e395799f2037704976802
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d4fdaeb0e67832f4f9e0c657e48fe74a88b86292
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fmode"></a>_fmode
 Die Variable `_fmode` legt den standardmäßigen Dateiübersetzungsmodus für die Text- oder Binärübersetzung fest. Diese globale Variable ist für die sichereren funktionalen Versionen [_get_fmode](../c-runtime-library/reference/get-fmode.md) und [_set_fmode](../c-runtime-library/reference/set-fmode.md) veraltet, die anstelle der globalen Variable verwendet werden sollten. Dies ist in Stdlib.h folgendermaßen deklariert.  
@@ -47,6 +48,6 @@ extern int _fmode;
 -   Ändern Sie den Wert `_fmode` direkt, indem Sie ihn in Ihrem Programm festlegen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Globale Variablen](../c-runtime-library/global-variables.md)   
+ [Global Variables (Globale Variablen)](../c-runtime-library/global-variables.md)   
  [_get_fmode](../c-runtime-library/reference/get-fmode.md)   
  [_set_fmode](../c-runtime-library/reference/set-fmode.md)

@@ -1,42 +1,43 @@
 ---
-title: "Warum Gleitkommazahlen an Genauigkeit verlieren k&#246;nnen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DBL_EPSILON-Konstante"
-  - "Gleitkommazahlen, Präzision"
-  - "FLT_EPSILON-Konstante"
+title: "Warum Gleitkommazahlen an Genauigkeit verlieren können | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- DBL_EPSILON constant
+- FLT_EPSILON constant
+- floating-point numbers, precision
 ms.assetid: 1acb1add-ac06-4134-a2fd-aff13d8c4c15
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 371aad5dc573a13ca834d8d6d9667a43bb40324e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Warum Gleitkommazahlen an Genauigkeit verlieren k&#246;nnen
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Dezimale Gleitkommawerte können im Allgemeinen binär nicht exakt dargestellt werden.  Das ist ein Nebeneffekt der Darstellungsweise von Gleitkommazahlen durch die CPU.  Aus diesem Grund könnte ein gewisser Genauigkeitsverlust auftreten, und manche Gleitkommaoperationen können unerwartete Ergebnisse hervorbringen.  
+# <a name="why-floating-point-numbers-may-lose-precision"></a>Warum Gleitkommazahlen an Genauigkeit verlieren können
+Dezimale Gleitkommawerte müssen die genaue binäre Darstellung in der Regel nicht. Dies ist ein Nebeneffekt der wie die CPU Gleitkommadaten darstellt. Aus diesem Grund kann Genauigkeitsverlust auftreten, und einige Gleitkommaoperationen können zu unerwarteten Ergebnissen führen.  
   
- Dieses Verhalten kann auf die folgenden Umstände zurückgeführt werden:  
+ Dieses Verhalten ist das Ergebnis eines der folgenden:  
   
--   Die Binärdarstellung der Dezimalzahl ist möglicherweise nicht genau.  
+-   Die binäre Darstellung der Dezimalzahl möglicherweise nicht genau.  
   
--   Es gibt einen Typenkonflikt zwischen den verwendeten Zahlen \(z. B., wenn **float** und **double** gemischt werden\).  
+-   Es liegt ein Typenkonflikt zwischen den verwendeten Zahlen (z. B. mischen "float" und Double).  
   
- Um das Verhalten zu korrigieren, stellen die meisten Programmierer entweder sicher, dass der Wert größer oder kleiner als benötigt ist, oder sie verwenden eine BCD \(Binary Coded Decimal\)\-Bibliothek, durch die Genauigkeit gewährleistet wird.  
+ Um das Problem zu beheben, können Sie die meisten Programmierer entweder sicher, dass der Wert größer ist oder kleiner als erforderlich ist, oder sie erhalten und verwenden eine Binary Coded Decimal (BCD)-Bibliothek, die die Genauigkeit beibehält.  
   
- Die binäre Darstellung von Gleitkommawerten beeinflusst die Genauigkeit und Exaktheit von Gleitkommaberechnungen.  Microsoft Visual C\+\+ verwendet das [IEEE\-Gleitkommaformat](../../build/reference/ieee-floating-point-representation.md).  
+ Binäre Darstellung von Gleitkommawerten wirkt sich auf die Genauigkeit und die Genauigkeit von gleitkommaberechnungen. Microsoft Visual C++ verwendet [IEEE-Gleitkomma-Format](../../build/reference/ieee-floating-point-representation.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // Floating-point_number_precision.c  
@@ -63,9 +64,12 @@ int main() {
 }  
 ```  
   
-  **Sie sind nicht gleich\!  Der Wert für c ist 2,4679999352 oder 2,468000**    
-## Kommentare  
- Für EPSILON können Sie die FLT\_EPSILON\-Konstante verwenden, die für float mit 1.192092896e\-07F definiert ist, oder die DBL\_EPSILON\-Konstante, die für double mit 2.2204460492503131e\-016 definiert ist.  Sie müssen float.h für diese Konstanten einschließen.  Die Konstanten werden als die kleinste positive Zahl x definiert, bei der x\+1,0 nicht gleich 1,0 ist.  Da dies eine sehr kleine Zahl ist, ist es ratsam, eine benutzerdefinierte Toleranz für Berechnungen mit sehr großen Zahlen anzuwenden.  
+```Output  
+They are not equal! The value of c is  2.4679999352 or 2.468000  
+```  
   
-## Siehe auch  
+## <a name="comments"></a>Kommentare  
+ Für EPSILON können Sie die FLT_EPSILON, der für "float" als 1.192092896e definiert ist – 07F, oder die DBL_EPSILON-Konstante, die für Double als 2.2204460492503131e definiert wird-016. Sie müssen float.h für diese Konstanten enthalten. Diese Konstanten sind definiert als die kleinste positive Zahl x, z. B. X + 1,0 ist nicht gleich 1.0. Da dies eine sehr kleine Zahl ist, sollten Sie benutzerdefinierte Toleranz für Berechnungen im Zusammenhang mit sehr großen Zahlen verwenden.  
+  
+## <a name="see-also"></a>Siehe auch  
  [Codeoptimierung](../../build/reference/optimizing-your-code.md)

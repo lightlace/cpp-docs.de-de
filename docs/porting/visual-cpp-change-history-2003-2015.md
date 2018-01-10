@@ -14,11 +14,12 @@ caps.latest.revision: "124"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 89b02c277faa3da102909ce88f33aea0c653ea50
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a2207b086b608fd601517c938572248147669ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Änderungsverlauf von Visual C++ von 2003 bis 2015
 In diesem Artikel werden alle bedeutenden Änderungen von Visual Studio 2015 zurück bis Visual Studio 2003 beschrieben. Die in diesem Artikel verwendeten Begriffe „neues Verhalten“ und „jetzt“ beziehen sich auf Visual Studio 2015 und höher. Die Begriffe „altes Verhalten“ und „davor“ beziehen sich auf Visual Studio 2013 und frühere Versionen. 
@@ -36,7 +37,7 @@ Wenn Sie auf eine neue Version des Visual C++-Compilers aktualisieren, treten un
  Darüber hinaus können fortlaufende Verbesserungen der Übereinstimmung des Compilers mit Standards mitunter ändern, wie der Compiler den vorhandenen Quellcode versteht. In diesem Fall treten während Ihres Builds ggf. neue oder andere Fehler oder sogar Verhaltensunterschiede im Code auf, für den zuvor Builds erstellt wurden und die Ausführung ordnungsgemäß schien. Wenngleich dies keine bedeutenden Änderungen wie diejenigen sind, die in diesem Dokument behandelt werden, sind u.U. Quellcodeänderungen erforderlich, um diese Probleme zu beheben.  
   
   
-1.  [C-Laufzeitbibliothek (CRT): Bedeutende Änderungen](#BK_CRT)  
+1.  [Wichtige Änderungen der C-Laufzeitbibliothek (CRT)](#BK_CRT)  
   
 2.  [Standard C++ und C++-Standardbibliothek: Bedeutende Änderungen](#BK_STL)  
   
@@ -2879,7 +2880,7 @@ C c;
   
     ```  
   
-     Um Stellen im Code zu suchen, die in einer früheren Version optimiert worden wären, verwenden Sie einen Compiler dieser Version zusammen mit der /W3-Compileroption, und aktivieren Sie die Warnung 4370. Beispiel:  
+     Um Stellen im Code zu suchen, die in einer früheren Version optimiert worden wären, verwenden Sie einen Compiler dieser Version zusammen mit der /W3-Compileroption, und aktivieren Sie die Warnung 4370. Zum Beispiel:  
   
     ```cpp  
     #pragma warning(default:4370)  

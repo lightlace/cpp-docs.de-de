@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8d33382e520a13c5cd131cdc03f21fb4708cb9eb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 09c436d55ad7087d407ba580be0b63286b056898
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-precompiled-header-files"></a>Erstellen vorkompilierter Headerdateien
   
@@ -153,13 +154,13 @@ Bei Verwendung einer vorkompilierten Headerdatei, die mit "/ Yc" oder "/ Yu" ers
   
 Diese Tabelle enthält Optionen für den Compiler, die eine Inkonsistenz Warnung auslösen könnte bei Verwendung einer vorkompilierten Headerdatei an:  
   
-|Option|Name|Regel|  
+|Option|name|Regel|  
 |------------|----------|----------|  
 |/D|Definieren von Konstanten und Makros|Zwischen der Kompilierung, die den vorkompilierten Header erstellt und der aktuellen Kompilierung identisch sein muss. Der Status der definierten Konstanten wird nicht überprüft, aber zu unvorhersehbaren Ergebnissen führt können auftreten, wenn die Dateien von den Werten der geänderten Konstanten abhängen.|  
 |/ E oder/EP|Kopieren der Präprozessorausgabe in die Standardausgabe|Vorkompilierte Header funktionieren nicht mit der Option/e oder/EP.|  
 |/ FR oder/fr|Microsoft Source Browserinformationen generieren|Für die Optionen "/ fr und/fr" mit der Option "/ Yu" gültig ist muss auch faktisch gewesen, wenn der vorkompilierte Header erstellt wurde. Nachfolgende Kompilierungen, die Verwendung des vorkompilierten Headers generieren auch Browserinformationen Quelle. Browserinformationen befindet sich in einer einzelnen SBR-Datei und anderen Dateien auf die gleiche Weise wie Codeansichtsinformationen verwiesen wird. Sie können die Platzierung der Quelle Browserinformationen nicht überschreiben.|  
 |/ GA/GD, / ge/GW oder/GW|Windows-Protokolloptionen|Zwischen der Kompilierung, die den vorkompilierten Header erstellt und der aktuellen Kompilierung identisch sein muss. Wenn diese Optionen voneinander abweichen, führt eine Warnmeldung angezeigt.|  
-|/Zi|Vollständige Debuginformationen generieren|Wenn diese Option aktiviert ist, wenn der vorkompilierte Header erstellt wird, können nachfolgende Kompilierungen, die die Vorkompilierung verwenden, Debuginformationen zu verwenden. Kompilierungen, die Vorkompilierung und die/ZI-Option verwenden, wenn/Zi nicht aktiviert ist, wenn der vorkompilierte Header erstellt wird, eine Warnung ausgelöst. Die Debuginformationen in der aktuellen Objektdatei platziert wird, und lokale Symbole im vorkompilierten Header definiert sind nicht verfügbar, die im Debugger.|  
+|/ZI|Vollständige Debuginformationen generieren|Wenn diese Option aktiviert ist, wenn der vorkompilierte Header erstellt wird, können nachfolgende Kompilierungen, die die Vorkompilierung verwenden, Debuginformationen zu verwenden. Kompilierungen, die Vorkompilierung und die/ZI-Option verwenden, wenn/Zi nicht aktiviert ist, wenn der vorkompilierte Header erstellt wird, eine Warnung ausgelöst. Die Debuginformationen in der aktuellen Objektdatei platziert wird, und lokale Symbole im vorkompilierten Header definiert sind nicht verfügbar, die im Debugger.|  
   
 > [!NOTE]
 >  Die vorkompilierte Header-Funktion ist nur in C und C++-Quelldateien vorgesehen.  

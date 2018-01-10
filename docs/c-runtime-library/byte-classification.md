@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 129e549b4151d913cf0ad026faff967d30f87e44
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c8465a467ddfe799c64ee89ff30bd3c1f969aa07
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="byte-classification"></a>Byteklassifizierung
 Jede dieser Routinen testet, ob ein angegebenes Byte eines Multibytezeichens eine Bedingung erfüllt. Wenn nicht anders angegeben, ist der Ausgabewert von der Kategorieeinstellung `LC_CTYPE` des Gebietsschemas betroffen; weitere Informationen finden Sie unter [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das `_l`-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem `_l`-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter.  
@@ -34,7 +35,7 @@ Jede dieser Routinen testet, ob ein angegebenes Byte eines Multibytezeichens ein
   
 ### <a name="multibyte-character-byte-classification-routines"></a>Byteklassifizierungsroutinen für Multibytezeichen  
   
-|Routine|Bytetestbedingung|  
+|-Routine zurückgegebener Wert|Bytetestbedingung|  
 |-------------|-------------------------|  
 |[isleadbyte, _isleadbyte_l](../c-runtime-library/reference/isleadbyte-isleadbyte-l.md)|Führendes Byte; Testergebnis hängt von der Kategorieeinstellung `LC_CTYPE` des aktuellen Gebietsschemas ab|  
 |[_ismbbalnum, _ismbbalnum_l](../c-runtime-library/reference/ismbbalnum-ismbbalnum-l.md)|`isalnum &#124;&#124; _ismbbkalnum`|  

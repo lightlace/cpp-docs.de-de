@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 850156c2db7e57a357b1fa68337753ebd37db30d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d434d687eca53deb4cad41615fcfd676836dda5e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platform-namespace-ccx"></a>Plattformnamespace (C++/CX)
 Enthält integrierte Typen, die mit Windows Runtime kompatibel sind.  
@@ -83,7 +84,7 @@ using namespace Platform;
   
  Der Namespace "Platform" definiert die folgenden Schnittstellen.  
   
-|Schnittstelle|Beschreibung|  
+|Interface|Beschreibung|  
 |---------------|-----------------|  
 |[Platform::IBox-Schnittstelle](../cppcx/platform-ibox-interface.md)|Wird zum Übergeben von Werttypen verwendet, deren Parameter als Platform::Object^ typisiert werden.|  
 |[Platform::IBoxArray-Schnittstelle](../cppcx/platform-iboxarray-interface.md)|Die Schnittstelle, die verwendet wird, um Funktionen, deren Parameter als Platform::Array typisiert werden, Werttypen-Arrays zu übergeben.|  
@@ -93,7 +94,7 @@ using namespace Platform;
   
  Der Namespace "Platform" hat die folgenden Enumerationen.  
   
-|Schnittstelle|Beschreibung|  
+|Interface|Beschreibung|  
 |---------------|-----------------|  
 |[Platform::CallbackContext-Enumeration](../cppcx/platform-callbackcontext-enumeration.md)|Eine Enumeration, die als Parameter des Delegatkonstruktors verwendet wird. Sie bestimmt, ob der Rückruf zum Ausgangsthread oder zum Aufruferthread gemarshallt werden soll.|  
 |[Platform::TypeCode-Enumeration](../cppcx/platform-typecode-enumeration.md)|Gibt eine numerische Kategorie an, die einen integrierten Typ darstellt.|  

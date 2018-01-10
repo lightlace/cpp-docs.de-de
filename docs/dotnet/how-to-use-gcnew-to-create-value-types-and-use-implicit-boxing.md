@@ -1,32 +1,35 @@
 ---
-title: "Gewusst wie: Verwenden von gcnew zum Erstellen von Werttypen und f&#252;r implizites Boxing | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Boxing, Implizite"
-  - "gcnew-Schlüsselwort [C++], Erstellen von Werttypen"
-  - "Werttypen, Erstellen"
+title: 'Vorgehensweise: Verwenden von Gcnew zum Erstellen von Werttypen und Verwenden von implizitem Boxing | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- gcnew keyword [C++], creating value types
+- boxing, implicit
+- value types, creating
 ms.assetid: ceb48841-d6bd-47be-a167-57f44c961603
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 759e6e25bcbbdba8928ce80ac92caf65ba81e58a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Gewusst wie: Verwenden von gcnew zum Erstellen von Werttypen und f&#252;r implizites Boxing
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Mit [gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) auf einen Werttyp erstellt einen geschachtelten Werttyp, auf das verwaltete dann abgelegt werden kann, aus der Garbage Collection.  
+# <a name="how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing"></a>Gewusst wie: Verwenden von gcnew zum Erstellen von Werttypen und für implizites Boxing
+Mit [Gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) Typ erstellt auf einen Wert einen geschachtelter Werttyp, der dann für den verwalteten Heap mit Garbage collection platziert werden kann.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // vcmcppv2_explicit_boxing4.cpp  
@@ -53,5 +56,5 @@ int main() {
 }  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Boxing](../windows/boxing-cpp-component-extensions.md)

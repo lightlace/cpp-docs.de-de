@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -32,36 +31,19 @@ f1_keywords:
 - ATLSAFE/ATL::CComSafeArray::Resize
 - ATLSAFE/ATL::CComSafeArray::SetAt
 - ATLSAFE/ATL::CComSafeArray::m_psa
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComSafeArray class
+dev_langs: C++
+helpviewer_keywords: CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 6e1337bee7dc6ca6f64f59657379f7d8ae40f5f8
-ms.contentlocale: de-de
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7bed846015090ef9c4da841adff4968c91d8719d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray-Klasse
 Diese Klasse ist ein Wrapper für die **SAFEARRAY** -Struktur.  
@@ -77,7 +59,7 @@ class CComSafeArray
  `T`  
  Der Typ der im Array gespeicherten Daten.  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -93,9 +75,9 @@ class CComSafeArray
 |[CComSafeArray::Add](#add)|Fügt dem **eine oder mehrere Elemente oder eine** SAFEARRAY `CComSafeArray`-Struktur hinzu.|  
 |[CComSafeArray::Attach](#attach)|Hängt einem **-Objekt eine** SAFEARRAY `CComSafeArray` -Struktur an.|  
 |[CComSafeArray::CopyFrom](#copyfrom)|Kopiert den Inhalt einer **SAFEARRAY** -Struktur in das `CComSafeArray` -Objekt.|  
-|[CComSafeArray::CopyTo](#copyto)|Erstellt eine Kopie des `CComSafeArray`-Objekts.|  
-|[CComSafeArray:: Create](#create)|Erstellt ein `CComSafeArray`-Objekt.|  
-|[CComSafeArray:: Destroy](#destroy)|Zerstört ein `CComSafeArray`-Objekt.|  
+|[CComSafeArray::CopyTo](#copyto)|Erstellt eine Kopie des `CComSafeArray` -Objekts.|  
+|[CComSafeArray::Create](#create)|Erstellt ein `CComSafeArray`-Objekt.|  
+|[CComSafeArray::Destroy](#destroy)|Zerstört ein `CComSafeArray`-Objekt.|  
 |[CComSafeArray::Detach](#detach)|Trennt ein **SAFEARRAY** von einem `CComSafeArray` -Objekt.|  
 |[CComSafeArray::GetAt](#getat)|Ruft ein einzelnes Element aus einem eindimensionalen Array ab.|  
 |[CComSafeArray::GetCount](#getcount)|Gibt die Anzahl der Elemente des Arrays zurück.|  
@@ -126,13 +108,13 @@ class CComSafeArray
 |[CComSafeArray::m_psa](#m_psa)|Dieses Datenelement enthält die Adresse der **SAFEARRAY** -Struktur.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CComSafeArray`Stellt einen Wrapper für die [SAFEARRAY-Datentyp](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e) -Klasse, wodurch es problemlos erstellen und Verwalten von ein- und mehrdimensionale Arrays von nahezu jedem der VARIANT-unterstützten Typen.  
+ `CComSafeArray` stellt einen Wrapper für die [SAFEARRAY Data Type](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e) -Klasse bereit, wodurch sich ein- und mehrdimensionale Arrays von nahezu jedem der VARIANT-unterstützten Typen problemlos erstellen und verwalten lassen.  
   
  `CComSafeArray` vereinfacht die Übergabe von Arrays zwischen Prozessen und bietet darüber hinaus zusätzliche Sicherheit durch Überprüfen der Arrayindexwerte anhand der oberen und unteren Grenzen.  
   
  Die untere Grenze eines `CComSafeArray` kann bei einem beliebigen benutzerdefinierten Wert beginnen, Arrays, auf die über C++ zugegriffen wird, sollte jedoch eine Untergrenze von 0 verwenden. Andere Sprachen wie Visual Basic können andere Begrenzungswerte (z. B. -10 bis 10) verwenden.  
   
- Verwendung [CComSafeArray:: Create](#create) zum Erstellen einer `CComSafeArray` -Objekt, und [CComSafeArray:: Destroy](#destroy) zu löschen.  
+ Verwenden Sie [CComSafeArray::Create](#create) , um ein `CComSafeArray` -Objekt zu erstellen, und [CComSafeArray::Destroy](#destroy) , um es zu löschen.  
   
  Ein `CComSafeArray` kann die folgende Teilmenge von VARIANT-Datentypen enthalten:  
   
@@ -158,7 +140,7 @@ class CComSafeArray
  **Header:** atlsafe.h  
   
 ## <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities #75](../../atl/codesnippet/cpp/ccomsafearray-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#75](../../atl/codesnippet/cpp/ccomsafearray-class_1.cpp)]  
   
 ##  <a name="add"></a>CComSafeArray::Add  
  Fügt dem **eine oder mehrere Elemente oder eine** SAFEARRAY `CComSafeArray`-Struktur hinzu.  
@@ -276,7 +258,7 @@ HRESULT CopyFrom(LPSAFEARRAY* ppArray);
  Diese Methode kopiert den Inhalt einer **SAFEARRAY** in die aktuelle `CComSafeArray` Objekt. Ersetzt den vorhandenen Inhalt des Arrays.  
   
 ##  <a name="copyto"></a>CComSafeArray::CopyTo  
- Erstellt eine Kopie des `CComSafeArray`-Objekts.  
+ Erstellt eine Kopie des `CComSafeArray` -Objekts.  
   
 ```
 HRESULT CopyTo(LPSAFEARRAY* ppArray);
@@ -292,8 +274,8 @@ HRESULT CopyTo(LPSAFEARRAY* ppArray);
 ### <a name="remarks"></a>Hinweise  
  Diese Methode kopiert den Inhalt einer `CComSafeArray` -Objekt in ein **SAFEARRAY** Struktur.  
   
-##  <a name="create"></a>CComSafeArray:: Create  
- Erstellt eine `CComSafeArray`.  
+##  <a name="create"></a>  CComSafeArray::Create  
+ Erstellt ein `CComSafeArray`-Struktur hinzu.  
   
 ```
 HRESULT Create(const SAFEARRAYBOUND* pBound, UINT uDims = 1);
@@ -319,7 +301,7 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
 ### <a name="remarks"></a>Hinweise  
  Ein `CComSafeArray` Objekt kann erstellt werden, aus einer vorhandenen **SAFEARRAYBOUND** Struktur und die Anzahl der Dimensionen oder durch die Anzahl der Elemente im Array als auch die untere Grenze angeben. Wenn das Array ist Visual C++ zugreifen können, sollte die Untergrenze 0 sein. Andere Sprachen können andere Werte für die untere Grenze (z. B. Visual Basic unterstützt Arrays mit Elementen mit einem Bereich, z. B.-10 bis 10).  
   
-##  <a name="destroy"></a>CComSafeArray:: Destroy  
+##  <a name="destroy"></a>  CComSafeArray::Destroy  
  Zerstört ein `CComSafeArray`-Objekt.  
   
 ```
@@ -606,8 +588,7 @@ HRESULT SetAt(LONG lIndex, const T& t, BOOL bCopy = TRUE);
  Die `bCopy` Flag berücksichtigt wird bei der Elemente des Typs `BSTR` oder **VARIANT** ein Array hinzugefügt werden. Der Standardwert von **"true"** wird sichergestellt, dass eine neue Kopie der Daten erfolgt, wenn das Element des Arrays hinzugefügt wird.  
   
 ## <a name="see-also"></a>Siehe auch  
- [SAFEARRAY-Datentyp](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e)   
+ [SAFEARRAY Data Type](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e)   
  [CComSafeArray:: Create](#create)   
  [CComSafeArray:: Destroy](#destroy)   
  [Klassenübersicht](../../atl/atl-class-overview.md)
-

@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fc380109f228077e9ee2a928202bf7514a7c2ebd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1ba264612923e101c63b5ec3503bbfbce426d8bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="execution-character-set"></a>Ausführungszeichensatz
 Dieser Inhalt bezieht sich häufig auf den "Ausführungszeichensatz". Die Ausführungszeichengruppe ist nicht notwendigerweise identisch mit der Quellzeichengruppe, die für das Schreiben in C-Programmen verwendet wird. Die Ausführungszeichengruppe umfasst alle Zeichen in der Quellzeichengruppe sowie das Null-Zeichen, das Zeilenvorschubzeichen, die horizontale Registerkarte, die vertikale Registerkarte, den Wagenrücklauf und die Escapesequenz. Die Quell- und Ausführungszeichensätze gleich eventuell nicht denen in anderen Implementierungen.  

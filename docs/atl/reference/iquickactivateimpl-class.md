@@ -24,11 +24,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c11185314c06e0e576d1832cef62899dd2151538
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7c6f5bc1798bc8ec40fb6f6d9d22f48c06b19745
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iquickactivateimpl-class"></a>IQuickActivateImpl-Klasse
 Diese Klasse verbindet Initialisierung Container des Steuerelements in einem einzigen Aufruf.  
@@ -47,7 +48,7 @@ class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
  `T`  
  Die Klasse abgeleitet `IQuickActivateImpl`.  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   

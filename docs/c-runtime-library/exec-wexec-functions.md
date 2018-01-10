@@ -64,11 +64,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1f571a6d0a84ca6d2990ed4910ef52ea0d54e2d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a2b01ce48463f3aad723bee38ee9f3ef1b499c3f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exec-wexec-functions"></a>_exec- und _wexec-Funktionen
 Jede Funktion in dieser Familie lädt einen neuen Prozess und führt ihn aus:  
@@ -82,7 +83,7 @@ Jede Funktion in dieser Familie lädt einen neuen Prozess und führt ihn aus:
   
  Der Buchstabe am Ende des Funktionsnamens bestimmt die Variante.  
   
-|_exec-Funktionssuffix|Beschreibung|  
+|_exec-Funktionssuffix|description|  
 |----------------------------|-----------------|  
 |`e`|`envp`: Array von Zeigern zu Umgebungseinstellungen, wird an den neuen Prozess übergeben.|  
 |`l`|Befehlszeilenargumente werden einzeln an die `_exec`-Funktion übergeben. Wird normalerweise verwendet, wenn die Anzahl der Parameter im neuen Prozess im Voraus bekannt ist.|  
@@ -242,7 +243,7 @@ int main( int ac, char* av[] )
  **Header:** process.h  
   
 ## <a name="see-also"></a>Siehe auch  
- [Prozess- und Umgebungssteuerung](../c-runtime-library/process-and-environment-control.md)   
+ [Process and Environment Control (Prozess- und Umgebungssteuerung)](../c-runtime-library/process-and-environment-control.md)   
  [abort](../c-runtime-library/reference/abort.md)   
  [atexit](../c-runtime-library/reference/atexit.md)   
  [exit, _Exit, _exit](../c-runtime-library/reference/exit-exit-exit.md)   

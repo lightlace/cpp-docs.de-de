@@ -42,11 +42,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 25577b776c5a3caf0c47c3cf56a88b7de58392bb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 92dd4ea8251a0131fa9b7224aa5ea0aa021584fa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lrotl-lrotr"></a>_lrotl, _lrotr
 Rotiert Bits nach links (`_lrotl`) oder rechts (`_lrotr`).  
@@ -66,7 +67,7 @@ unsigned long _lrotr(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *value*  
+ *Wert*  
  Der zu rotierende Wert.  
   
  `shift`  
@@ -80,7 +81,7 @@ unsigned long _lrotr(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_lrotl`|\<stdlib.h>|  
 |`_lrotr`|\<stdlib.h>|  
@@ -88,7 +89,7 @@ unsigned long _lrotr(
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
 ## <a name="libraries"></a>Bibliotheken  
- Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
+ Alle Versionen [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
   
 ## <a name="example"></a>Beispiel  
   
@@ -117,5 +118,5 @@ int main( void )
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)   
+ [Floating-Point Support (Gleitkommaunterstützung)](../../c-runtime-library/floating-point-support.md)   
  [_rotl, _rotl64, _rotr, _rotr64](../../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)

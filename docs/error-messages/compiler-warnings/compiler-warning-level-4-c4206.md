@@ -1,31 +1,30 @@
 ---
-title: "Compilerwarnung (Stufe 4) C4206 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4206"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4206"
+title: Compilerwarnung (Stufe 4) C4206 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4206
+dev_langs: C++
+helpviewer_keywords: C4206
 ms.assetid: 3df97812-3ed7-4003-9769-057acf97ce3c
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e65532dd5d56dc831acd952bfbb2890935ebe390
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 4) C4206
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**Nicht dem Standard entsprechende Erweiterung: Übersetzungseinheit ist leer**  
+# <a name="compiler-warning-level-4-c4206"></a>Compilerwarnung (Stufe 4) C4206
+**nicht dem Standard entsprechende Erweiterung: Übersetzungseinheit ist leer**  
   
- Nach dem Durchlauf des Präprozessors war die Datei leer.  
+ Die Datei wurde nach der vorverarbeitung leer.  
   
- Durch diese Erweiterung kann verhindert werden, dass der Code auf andere Compiler portierbar ist.  Sie generiert gemäß der ANSI\-Kompatibilität einen Fehler \([\/Za](../../build/reference/za-ze-disable-language-extensions.md)\) und kann nur auf C\-Quellcode angewendet werden.
+ Diese Erweiterung kann verhindern, dass den Code wird auf andere Compiler übertragbar. Erzeugt einen Fehler unter ANSI-Kompatibilität (["/ Za"](../../build/reference/za-ze-disable-language-extensions.md)) und gilt nur für C#-Quellcode.

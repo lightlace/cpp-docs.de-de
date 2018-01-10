@@ -1,41 +1,44 @@
 ---
-title: "Gewusst wie: Marshallen eingebetteter Zeiger mit PInvoke | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Datenmarshalling [C++], Eingebettete Zeiger"
-  - "Eingebettete Zeiger [C++]"
-  - "Interop [C++], Eingebettete Zeiger"
-  - "Marshaling [C++], Eingebettete Zeiger"
-  - "Plattformaufruf [C++], Eingebettete Zeiger"
+title: 'Wie: Marshallen eingebetteter Zeiger mit PInvoke | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- embedded pointers [C++]
+- interop [C++], embedded pointers
+- platform invoke [C++], embedded pointers
+- marshaling [C++], embedded pointers
+- data marshaling [C++], embedded pointers
 ms.assetid: f12c1b9a-4f82-45f8-83c8-3fc9321dbb98
-caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c8ae331bb6bb6b35fc4353ad08240fd3d23136a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Gewusst wie: Marshallen eingebetteter Zeiger mit PInvoke
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Funktionen, die in nicht verwalteten DLLs implementiert sind, können von verwaltetem Code über Plattformaufrufe \(P\/Invoke\) aufgerufen werden.  Wenn der Quellcode für die DLL nicht verfügbar ist, ist P\/Invoke die einzige Option für die Interoperation.  Im Gegensatz zu anderen .NET\-Sprachen stellt Visual C\+\+ jedoch eine Alternative zu P\/Invoke bereit.  Weitere Informationen finden Sie unter [Verwenden von C\+\+\-Interop \(implizites PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md) und [Gewusst wie: Marshallen von eingebetteten Zeigern mit C\+\+\-Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
+# <a name="how-to-marshal-embedded-pointers-using-pinvoke"></a>Gewusst wie: Marshallen eingebetteter Zeiger mit PInvoke
+Funktionen, die in nicht verwaltete DLLs implementiert werden, können in verwaltetem Code mithilfe des Plattformaufrufs (P/Invoke) aufgerufen werden. Wenn der Quellcode für die DLL nicht verfügbar ist, ist P/Invoke die einzige Option für die Interoperation. Im Gegensatz zu anderen bietet Visual C++ jedoch eine Alternative zum P/Invoke. Weitere Informationen finden Sie unter [mithilfe von C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md) und [wie: Marshallen eingebetteter Zeiger mithilfe von C++-Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
   
-## Beispiel  
- Das Übergeben von Strukturen an systemeigenen Code setzt voraus, dass eine im Datenlayout der systemeigenen Struktur äquivalente verwaltete Struktur erstellt wird.  Strukturen, die Zeiger enthalten, erfordern dabei eine besondere Behandlung.  Für jeden eingebetteten Zeiger der systemeigenen Struktur sollte die verwaltete Version der Struktur eine Instanz des <xref:System.IntPtr>\-Typs enthalten.  Außerdem muss der Speicher für diese Instanzen mit den Methoden <xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem*>, <xref:System.Runtime.InteropServices.Marshal.StructureToPtr*> und <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem*> explizit belegt, initialisiert und freigegeben werden.  
+## <a name="example"></a>Beispiel  
+ Übergeben von Strukturen zu nativem Code erfordert, dass eine verwaltete Struktur, die im Hinblick auf Datenlayout der systemeigenen Struktur entspricht erstellt wird. Strukturen, die Zeiger enthalten sind jedoch besondere Behandlung erfordern. Für jede eingebettete Zeiger in die systemeigene Struktur ist, sollte die verwaltete Version der Struktur eine Instanz von enthalten die <xref:System.IntPtr> Typ. Darüber hinaus Arbeitsspeicher für diese Instanzen explizit zugewiesen werden müssen, initialisiert usw., freigegeben mit der <xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A>, <xref:System.Runtime.InteropServices.Marshal.StructureToPtr%2A>, und <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> Methoden.  
   
- Der folgende Code besteht aus einem nicht verwalteten und einem verwalteten Modul.  Das nicht verwaltete Modul ist eine DLL, die eine Funktion definiert und eine Struktur mit dem Namen ListString akzeptiert, die einen Zeiger und eine Funktion mit dem Namen TakesListStruct enthält.  Das verwaltete Modul ist eine Befehlszeilenanwendung, die die TakesListStruct\-Funktion importiert und eine Struktur mit dem Namen MListStruct definiert, die der systemeigenen ListStruct\-Struktur entspricht, mit der Ausnahme, dass der double\* durch eine <xref:System.IntPtr>\-Instanz dargestellt wird.  Vor dem Aufrufen von TakesListStruct belegt die Hauptfunktion den Speicher, auf den dieses Feld verweist, und initialisiert diesen.  
+ Der folgende Code besteht aus einem nicht verwalteten und ein verwaltetes Modul. Nicht verwaltete Modul ist eine DLL, die eine Funktion, die eine Struktur, die Namen, die einen Zeiger enthält ListString akzeptiert, und eine Funktion namens TakesListStruct definiert. Verwaltete Modul ist eine befehlszeilenanwendung, die die Funktion TakesListStruct importiert und definiert eine Struktur mit dem Namen MListStruct, die der systemeigene ListStruct entspricht, außer dass mit Double * dargestellt wird ein <xref:System.IntPtr> Instanz. Vor dem Aufrufen von TakesListStruct, die Hauptfunktion reserviert und initialisiert den Speicher, den dieses Feld verweist.  
   
- Das verwaltete Modul wird mit \/clr kompiliert, es kann jedoch auch \/clr:pure verwendet werden.  
+ Verwaltete Modul mit "/ CLR", aber "/ CLR" kompiliert wird: reine funktioniert ebenfalls. Die Compileroptionen **/clr:pure** und **/clr:safe** sind in Visual Studio 2015 veraltet.  
   
-```  
+```cpp  
 // TraditionalDll6.cpp  
 // compile with: /EHsc /LD  
 #include <stdio.h>  
@@ -65,7 +68,7 @@ void TakesListStruct(ListStruct list) {
 }  
 ```  
   
-```  
+```cpp  
 // EmbeddedPointerMarshalling.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -107,7 +110,7 @@ int main() {
 }  
 ```  
   
- Beachten Sie, dass mithilfe der herkömmlichen \#include\-Direktive kein Teil der DLL für den verwalteten Code verfügbar gemacht wird.  Tatsächlich wird auf die DLL nur bei der Ausführung zugegriffen, sodass Probleme mit Funktionen, die mit <xref:System.Runtime.InteropServices.DllImportAttribute> importiert wurden, zur Kompilierungszeit nicht erkannt werden.  
+ Beachten Sie, dass kein Teil der DLL bereitgestellt wird, auf den verwalteten Code, der mithilfe der herkömmlichen #include-Direktive. Tatsächlich wird die DLL zur Laufzeit nur zugegriffen, damit Probleme mit Funktionen mit importiert <xref:System.Runtime.InteropServices.DllImportAttribute> zum Zeitpunkt der Kompilierung nicht erkannt werden.  
   
-## Siehe auch  
- [Verwenden von explizitem PInvoke in C\+\+ \(DllImport\-Attribut\)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+## <a name="see-also"></a>Siehe auch  
+ [Verwenden von explizitem PInvoke in C++ (DllImport-Attribut)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

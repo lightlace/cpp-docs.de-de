@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7288b343563056f6e1daa4f0cb61b43fb263792f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6445f07c8adff13a65bde46cc9e1cefd789b97ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="porting-guide-mfc-scribble"></a>Leitfaden zum Portieren: MFC Scribble
 Dieses Thema ist das erste von mehreren Themen, in denen der Aktualisierungsvorgang für Visual C++-Projekte vorgestellt wird, die in älteren Versionen von Visual Studio erstellt wurden, auf Visual Studio 2017. Diese Themen stellen den Aktualisierungsvorgang durch Beispiele vor, beginnend mit einem sehr einfachen Projekt, um danach mit etwas komplexeren fortzufahren. In diesem Abschnitt arbeiten wir uns durch den Aktualisierungsvorgang für ein bestimmtes Projekt, MFC Scribble. Es eignet sich als grundlegende Einführung in den Aktualisierungsvorgang für C++-Projekte.  
@@ -55,7 +56,7 @@ Platform 'Itanium' is missing from this project. All the configurations and thei
   
  In diesem Fall waren alle Probleme Warnungen, und Visual Studio hat die entsprechenden Änderungen in der Projektdatei vorgenommen. Der große Unterschied hinsichtlich des Projekts liegt darin, dass das Buildtool von vcbuild in msbuild geändert wurde. Diese Änderung wurde in Visual Studio 2010 eingeführt. Weitere Änderungen umfassen u. a. eine Neuanordnung der Elementreihenfolge in der Projektdatei selbst. Keines der Probleme bedurfte für dieses einfache Projekt weiterer Aufmerksamkeit.  
   
-### <a name="step-2-getting-it-to-build"></a>Schritt 2. Erstellen des Projekts  
+### <a name="step-2-getting-it-to-build"></a>Schritt 2 Erstellen des Projekts  
  Vor der Erstellung überprüfen wir das Plattformtoolset, damit wir wissen, welche Compilerversion das Projektsystem verwendet. Sehen Sie sich im Dialogfeld „Projekteigenschaften“ unter **Konfigurationseigenschaften** in der Kategorie **Allgemein** die Eigenschaft **Plattformtoolset** an. Sie enthält die Version von Visual Studio und die Versionsnummer des Plattformtools, in diesem Fall v141 für die Visual Studio 2017-Version der Tools. Wenn Sie ein Projekt konvertieren, das ursprünglich mit Visual C++ 2010, 2012, 2013 oder 2015 kompiliert wurde, wird das Toolset nicht automatisch auf das Visual Studio 2017-Toolset aktualisiert.   
   
   Für den Wechsel zu Unicode öffnen Sie die Projekteigenschaften unter **Konfigurationseigenschaften**, wählen den Abschnitt **Allgemein** aus und suchen die Eigenschaft **Zeichensatz**. Ändern Sie sie von **Multibyte-Zeichensatz verwenden** in **Unicode-Zeichensatz** verwenden. Als Auswirkung dieser Änderung sind jetzt die Makros _UNICODE und UNICODE definiert, _MBCS aber nicht, was Sie im Eigenschaftendialogfeld unter der Kategorie **C/C++** der Eigenschaft **Befehlszeile** überprüfen können.  

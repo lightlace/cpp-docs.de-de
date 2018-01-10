@@ -1,78 +1,79 @@
 ---
-title: "/ENTRY (Symbol f&#252;r Einstiegspunkt) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/entry"
-  - "VC.Project.VCLinkerTool.EntryPointSymbol"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/ENTRY (Linkeroption)"
-  - "ENTRY (Linkeroption)"
-  - "-ENTRY (Linkeroption)"
-  - "Startadresse"
+title: "-ENTRY (Symbol für Einstiegspunkt) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /entry
+- VC.Project.VCLinkerTool.EntryPointSymbol
+dev_langs: C++
+helpviewer_keywords:
+- starting address
+- -ENTRY linker option
+- /ENTRY linker option
+- ENTRY linker option
 ms.assetid: 26c62ba2-4f52-4882-a7bd-7046a0abf445
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5ebaf9a8723f06b6fab8577abf283f6eec69aa25
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# /ENTRY (Symbol f&#252;r Einstiegspunkt)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="entry-entry-point-symbol"></a>/ENTRY (Symbol für Einstiegspunkt)
 ```  
 /ENTRY:function  
 ```  
   
-## Hinweise  
- Hierbei ist:  
+## <a name="remarks"></a>Hinweise  
+ Dabei gilt:  
   
- *Funktion*  
- eine Funktion, die eine benutzerdefinierte Startadresse für eine EXE\-Datei oder eine DLL festlegt.  
+ *function*  
+ Eine Funktion, die angibt, eine benutzerdefinierte ab Adresse für eine .exe-Datei oder DLL.  
   
-## Hinweise  
- Die \/ENTRY\-Option gibt eine Einstiegspunktfunktion als Startadresse für eine EXE\-Datei oder DLL an.  
+## <a name="remarks"></a>Hinweise  
+ Die Option/Entry gibt eine Einstiegspunktfunktion als die Startadresse für eine .exe-Datei oder DLL an.  
   
- Die Funktion muss mit der Aufrufkonvention `__stdcall` definiert worden sein.  Die Parameter und der Rückgabewert hängen davon ab, ob das Programm eine Konsolenanwendung, eine Windows\-Anwendung oder eine DLL\-Datei ist.  Es wird empfohlen, dass Sie es dem Linker überlassen, den Einstiegspunkt festzulegen, damit die C\-Laufzeitbibliothek fehlerfrei initialisiert wird und C\+\+\-Konstruktoren für statische Objekte ausgeführt werden.  
+ Die Funktion definiert werden, damit Sie verwenden die `__stdcall` Aufrufkonvention. Die Parameter und Rückgabewert richten sich nach, wenn das Programm eine Konsolenanwendung, eine Windows-Anwendung oder eine DLL ist. Es wird empfohlen, dass den Linker den Einstiegspunkt so festlegen, dass die C-Laufzeitbibliothek korrekt initialisiert ist und C++-Konstruktoren für statische Objekte ausgeführt werden können.  
   
- Standardmäßig ist die Startadresse ein Funktionsname aus der C\-Laufzeitbibliothek.  Der Linker wählt sie, wie in der folgenden Tabelle angegeben, entsprechend den Programmattributen aus.  
+ Standardmäßig ist die Startadresse einen Funktionsnamen aus der C-Laufzeitbibliothek. Der Linker wählt er gemäß der Attribute des Programms, wie in der folgenden Tabelle gezeigt.  
   
-|Funktionsname|Standardeinstellung für|  
-|-------------------|-----------------------------|  
-|**mainCRTStartup** \(oder **wmainCRTStartup**\)|Eine Anwendung, die **\/SUBSYSTEM:CONSOLE** verwendet; ruft **main** \(oder **wmain**\) auf|  
-|**WinMainCRTStartup** \(oder **wWinMainCRTStartup**\)|Eine Anwendung, die **\/SUBSYSTEM:WINDOWS** verwendet; ruft `WinMain` \(oder **wWinMain**\) auf, was mit `__stdcall` definiert wird|  
-|**\_DllMainCRTStartup**|Eine DLL; ruft `DllMain` auf, was mit `__stdcall` definiert wird, falls vorhanden|  
+|Funktionsname|Standard für|  
+|-------------------|-----------------|  
+|**MainCRTStartup** (oder **WmainCRTStartup**)|Eine Anwendung, die/Subsystem: Console verwendet; Aufrufe `main` (oder `wmain`)|  
+|**WinMainCRTStartup** (oder **wWinMainCRTStartup**)|Eine Anwendung, die/Subsystem verwendet:**WINDOWS**; Aufrufe `WinMain` (oder `wWinMain`), die muss definiert werden, verwenden`__stdcall`|  
+|**_DllMainCRTStartup**|EINE DLL; IGNORIERT Aufrufe `DllMain` , wenn er vorhanden ist, muss die Verwendung definiert`__stdcall`|  
   
- Wenn die Option [\/DLL](../../build/reference/dll-build-a-dll.md) oder [\/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) nicht angegeben wird, wählt der Linker ein Subsystem und einen Einstiegspunkt aus, je nachdem, ob **main** oder `WinMain` definiert ist.  
+ Wenn die [/DLL](../../build/reference/dll-build-a-dll.md) oder [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) Option nicht angegeben wird, wählt des Linkers ein Subsystem und Eintrag je nachdem, ob `main` oder `WinMain` definiert ist.  
   
- Die Funktionen **main**, `WinMain` und `DllMain` sind die drei Formen des benutzerdefinierten Einstiegspunkts.  
+ Die Funktionen `main`, `WinMain`, und `DllMain` sind die drei Formen des benutzerdefinierten Einstiegspunkts.  
   
- Beim Erstellen eines verwalteten Bildes muss die mit \/ENTRY angegebene Funktion über die Signatur \(LPVOID *var1*, DWORD *var2*, LPVOID *var3*\) verfügen.  
+ Wenn Sie einem verwalteten Image zu erstellen, benötigen die Funktion angegeben, um/Entry eine Signatur der (LPVOID *var1*, DWORD *var2*, LPVOID *var3*).  
   
- Informationen darüber, wie Sie einen eigenen DllMain\-Einstiegspunkt definieren, finden Sie unter [Verhalten der Laufzeitbibliothek](../../build/run-time-library-behavior.md).  
+ Informationen zum Definieren Sie eigene `DllMain` Einstiegspunkt, finden Sie unter [DLLs und Visual C++-Laufzeitbibliothek Verhalten](../../build/run-time-library-behavior.md) .  
   
-### So legen Sie diese Linkeroption in der Visual Studio\-Entwicklungsumgebung fest  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  Ausführliche Informationen finden Sie unter [Festlegen von Visual C\+\+\-Projekteigenschaften](../../ide/working-with-project-properties.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).  
   
-2.  Klicken Sie auf den Ordner **Linker**.  
+2.  Klicken Sie auf die **Linker** Ordner.  
   
-3.  Klicken Sie auf die Eigenschaftenseite **Erweitert**.  
+3.  Klicken Sie auf die **erweitert** Eigenschaftenseite.  
   
-4.  Ändern Sie die Eigenschaft **Einstiegspunkt**.  
+4.  Ändern der **Einstiegspunkt** Eigenschaft.  
   
-### So legen Sie diese Linkeroption programmgesteuert fest  
+### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
   
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EntryPointSymbol*>.  
+-   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EntryPointSymbol%2A>.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
  [Linkeroptionen](../../build/reference/linker-options.md)

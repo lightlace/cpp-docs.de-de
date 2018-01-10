@@ -25,11 +25,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7aad1856f28a1d76b53b983e63f36cf5fd4a7cfe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 96f8c24736309ef1030664ee0fd466537d739496
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccommultithreadmodel-class"></a>CComMultiThreadModel-Klasse
 `CComMultiThreadModel`Stellt Thread-sichere Methoden zum Inkrementieren und Dekrementieren-den Wert einer Variablen bereit.  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/24/2017
 class CComMultiThreadModel
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-typedefs"></a>Öffentliche Typedefs  
   
@@ -60,7 +61,7 @@ class CComMultiThreadModel
 ## <a name="remarks"></a>Hinweise  
  Verwenden Sie in der Regel `CComMultiThreadModel` über eine von zwei `typedef` benennt, entweder [CComObjectThreadModel] (Atl-typedefs.md #ccomobjectthreadmodel oder [CComGlobalsThreadModel] (Atl-typedefs.md #ccomglobalsthreadmodel. Die Klasse verwiesen, die von jedem `typedef` hängt von der Threadingmodell verwendet, wie in der folgenden Tabelle dargestellt:  
   
-|typedef|Single-threading|Apartmentthreading|Freies threading|  
+|Typedef|Single-threading|Apartmentthreading|Freies threading|  
 |-------------|----------------------|-------------------------|--------------------|  
 |`CComObjectThreadModel`|S|S|M|  
 |`CComGlobalsThreadModel`|S|M|M|  

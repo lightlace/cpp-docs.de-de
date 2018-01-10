@@ -1,41 +1,44 @@
 ---
-title: "Transaktionsobjekt-Schnittstellen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Schnittstellen, Liste"
-  - "Schnittstellen, OLE DB"
-  - "OLE DB-Anbietervorlagen, Objektschnittstelle"
-  - "OLE DB-Anbieter, Transaktionsunterstützung"
-  - "OLE DB, Schnittstellen"
-  - "Transaktionsobjekt-Schnittstellen"
+title: Transaktionsobjekt-Schnittstellen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- interfaces, OLE DB
+- transaction object interfaces
+- OLE DB, interfaces
+- OLE DB providers, transaction support
+- OLE DB provider templates, object interfaces
+- interfaces, list of
 ms.assetid: d2ce99ce-6f7a-4ff9-bc6e-acda3633d5c8
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: bcb0c6abf7eac09f3cb3ea260a3a5bbe76410847
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Transaktionsobjekt-Schnittstellen
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Das Transaktionsobjekt definiert eine atomare Arbeitseinheit für eine Datenquelle und bestimmt, in welcher Beziehung diese Arbeitseinheiten zueinander stehen.  Dieses Objekt wird von den OLE DB\-Anbietervorlagen nicht direkt unterstützt \(d. h., Sie müssen ein eigenes Objekt erstellen\).  
+# <a name="transaction-object-interfaces"></a>Transaktionsobjekt-Schnittstellen
+Das Transaktionsobjekt, das eine unteilbare Arbeitseinheit für eine Datenquelle definiert und bestimmt, wie diese Arbeitseinheiten miteinander in Beziehung stehen. Dieses Objekt wird von der OLE DB-Anbietervorlagen nicht direkt unterstützt (d. h. Sie müssen ein eigenes Objekt erstellen).  
   
- In der folgenden Tabelle sind die erforderlichen und optionalen Schnittstellen aufgeführt, die in OLE DB für Transaktionsobjekte definiert sind.  
+ Die folgende Tabelle zeigt die obligatorischen und optionalen Schnittstellen, die durch OLE DB für ein Transaktionsobjekt definiert.  
   
-|Schnittstelle|Erforderlich?|Durch OLE DB\-Vorlagen implementiert?|  
-|-------------------|-------------------|-------------------------------------------|  
-|[\<caps:sentence id\="tgt7" sentenceid\="63e99e63156fc90f114fa402662387ef" class\="tgtSentence"\>IConnectionPointContainer\<\/caps:sentence\>](http://msdn.microsoft.com/library/windows/desktop/ms683857)|Erforderlich|nein|  
-|[\<caps:sentence id\="tgt10" sentenceid\="f5097e646bb93cceb560c38e13953a89" class\="tgtSentence"\>ITransaction\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/ms723053.aspx)|Erforderlich|nein|  
-|[\<caps:sentence id\="tgt13" sentenceid\="130702210bcc45e1afd88b1f2aae1a0b" class\="tgtSentence"\>ISupportErrorInfo\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/ms715816.aspx)|Optional|nein|  
+|Interface|Erforderlich?|Vom OLE DB-Vorlagen implementiert?|  
+|---------------|---------------|--------------------------------------|  
+|[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)|Erforderlich|Nein|  
+|[ITransaction](https://msdn.microsoft.com/en-us/library/ms723053.aspx)|Erforderlich|Nein|  
+|[ISupportErrorInfo](https://msdn.microsoft.com/en-us/library/ms715816.aspx)|Optional|Nein|  
   
-## Siehe auch  
- [Architektur von OLE DB\-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)
+## <a name="see-also"></a>Siehe auch  
+ [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)

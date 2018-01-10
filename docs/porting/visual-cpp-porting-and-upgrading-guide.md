@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 274154eb0688bc974a34b511d0aa39d08bb27b61
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ba7e3f139aa9956cd9d2587522dc2d0ac1f2ff7b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++-Handbuch: Portieren und Aktualisieren
 Dieses Thema enthält eine Anleitung zum Aktualisieren von Visual C++-Code. Dazu gehört dafür zu sorgen, dass der Code in einer neueren Version der Tools fehlerfrei kompiliert und ausgeführt wird, und dass die Vorteile neuer Sprach- und Visual Studio-Features genutzt werden. Dieses Thema enthält außerdem Informationen zum Migrieren von Legacy-Apps zu moderneren Plattformen.  
@@ -78,7 +79,7 @@ Dieses Thema enthält eine Anleitung zum Aktualisieren von Visual C++-Code. Dazu
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Titel|Beschreibung|  
+|Titel|description|  
 |-----------|-----------------|  
 |[Aktualisieren von Projekten von früheren Versionen von Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Erläutert, wie in früheren Versionen von Visual C++ erstellte Projekte verwendet werden.|  
 |[Neuerungen bei Visual C++ in Visual Studio 2017 RC](../what-s-new-for-visual-cpp-in-visual-studio.md)|Änderungen an IDE und Tools zwischen Visual Studio 2015 und Visual Studio 2017|  

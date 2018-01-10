@@ -1,40 +1,42 @@
 ---
-title: "Gewusst wie: Deklarieren von &#220;berschreibungsbezeichnern in nativen Kompilierungen (C++/CLI)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Überschreibungsbezeichner in nativer Kompilierung, Überschreiben"
+title: "Vorgehensweise: Deklarieren von Überschreibungsbezeichnern (C + c++ / CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: override specifiers in native compilation, overriding
 ms.assetid: d0551836-9ac7-41eb-a6e9-a4b3ef60767d
-caps.latest.revision: 13
-caps.handback.revision: "13"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0f50e500cf25a18e86e107e22d58e6446d03379d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Gewusst wie: Deklarieren von &#220;berschreibungsbezeichnern in nativen Kompilierungen (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-[versiegelt](../windows/sealed-cpp-component-extensions.md), [Zusammenfassung](../windows/abstract-cpp-component-extensions.md) und [überschreiben](../windows/override-cpp-component-extensions.md) sind in den Kompilierungen verfügbar, der nicht **\/ZW** oder [\/clr](../build/reference/clr-common-language-runtime-compilation.md) verwenden.  
+# <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Gewusst wie: Deklarieren von Überschreibungsbezeichnern in nativen Kompilierungen (C++/CLI)
+[versiegelte](../windows/sealed-cpp-component-extensions.md), [abstrakte](../windows/abstract-cpp-component-extensions.md), und [überschreiben](../windows/override-cpp-component-extensions.md) stehen zur Verfügung, in denen keine Kompilierungen **/Zw** oder ["/ CLR"](../build/reference/clr-common-language-runtime-compilation.md).  
   
 > [!NOTE]
->  Die Standardsprache ISO C\+\+11 hat den Bezeichner [überschreiben](../cpp/override-specifier.md) und den [Abschließen](../cpp/final-specifier.md) Bezeichner, und beide werden in Visual Studio für die Verwendung `final` anstelle von `sealed` im Code unterstützt, der verwendet wird, kompiliert werden, z systemeigen systemeigen.  
+>  Die ISO C ++ 11 Standard Language besteht aus der [außer Kraft setzen](../cpp/override-specifier.md) Bezeichner und die [endgültigen](../cpp/final-specifier.md) Bezeichner, und beide werden in Visual Studio verwenden unterstützt `final` anstelle von `sealed` in Code, der richtigen ist als nur nativ kompiliert werden.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### **Beschreibung**  
- Das folgende Beispiel zeigt, dass `sealed` in systemeigenen Kompilierungen gültig ist.  
+### <a name="description"></a>Beschreibung  
+ Das folgende Beispiel zeigt, dass `sealed` in nativen Kompilierungen gültig ist.  
   
-### Code  
+### <a name="code"></a>Code  
   
-```  
+```cpp  
 // sealed_native_keyword.cpp  
 #include <stdio.h>  
 __interface I1 {  
@@ -55,14 +57,14 @@ public:
 };  
 ```  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### **Beschreibung**  
- Das folgende Beispiel zeigt, dass `override` in systemeigenen Kompilierungen gültig ist.  
+### <a name="description"></a>Beschreibung  
+ Das nächste Beispiel zeigt, dass `override` in nativen Kompilierungen gültig ist.  
   
-### Code  
+### <a name="code"></a>Code  
   
-```  
+```cpp  
 // override_native_keyword.cpp  
 #include <stdio.h>  
 __interface I1 {  
@@ -76,14 +78,14 @@ public:
 };  
 ```  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### **Beschreibung**  
- Dieses Beispiel zeigt, dass `abstract` in systemeigenen Kompilierungen gültig ist.  
+### <a name="description"></a>Beschreibung  
+ Dieses Beispiel zeigt, dass `abstract` in nativen Kompilierungen gültig ist.  
   
-### Code  
+### <a name="code"></a>Code  
   
-```  
+```cpp  
 // abstract_native_keyword.cpp  
 class X abstract {};  
   
@@ -92,5 +94,5 @@ int main() {
 }  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Überschreibungsspezifizierer](../windows/override-specifiers-cpp-component-extensions.md)

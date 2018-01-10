@@ -1,46 +1,65 @@
 ---
-title: "Platform::ValueType-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/03/2017"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::ValueType"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Platform::ValueType-Klasse"
+title: 'Platform:: ValueType-Klasse | Microsoft Docs'
+ms.custom: 
+ms.date: 02/03/2017
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: VCCORLIB/Platform::ValueType::ToString
+dev_langs: C++
+helpviewer_keywords: Platform::ValueType Class
 ms.assetid: 79aa8754-b140-4974-a5b1-be046938a10a
-caps.latest.revision: 5
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "5"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4dba418e74affb2531e3ebbd43d95c35601e9a26
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Platform::ValueType-Klasse
+# <a name="platformvaluetype-class"></a>Platform::ValueType-Klasse
 Die Basisklasse für Instanzen von Werttypen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 public ref class ValueType : Object  
 ```  
   
-## Hinweise  
- Die ValueType\-Klasse wird zum Erstellen von Werttypen verwendet. „ValueType“ ist von „Object“ abgeleitet, die über Basismember verfügt. Der Compiler trennt jedoch diese Basismember von den Werttypen, die aus der ValueType\-Klasse abgeleitet sind. Der Compiler fügt die Basismember wieder an, wenn ein Werttyp mittels Boxing konvertiert wird.  
+## <a name="public-methods"></a>Öffentliche Methoden  
   
-## Anforderungen  
- **Unterstützter Client \(Mindestversion\):** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  
+|||  
+|-|-|  
+|[ValueType::ToString](#tostring)|Gibt eine Zeichenfolgendarstellung des Objekts zurück. Geerbt von [Platform:: Object](../cppcx/platform-object-class.md).|  
   
- **Unterstützter Server \(Mindestversion\):** [!INCLUDE[winserver8](../cppcx/includes/winserver8-md.md)]  
+### <a name="remarks"></a>Hinweise  
+ Die ValueType-Klasse wird zum Erstellen von Werttypen verwendet. „ValueType“ ist von „Object“ abgeleitet, die über Basismember verfügt. Der Compiler trennt jedoch diese Basismember von den Werttypen, die aus der ValueType-Klasse abgeleitet sind. Der Compiler fügt die Basismember wieder an, wenn ein Werttyp mittels Boxing konvertiert wird.  
+  
+### <a name="requirements"></a>Anforderungen  
+ **Unterstützter Client:** Windows 8  
+  
+ **Unterstützter Server:** Windows Server 2012  
   
  **Namespace:** Platform  
   
  **Metadaten:** platform.winmd  
+
+## <a name="tostring"></a>ValueType::ToString-Methode
+Gibt eine Zeichenfolgendarstellung des Objekts zurück.  
   
-## Siehe auch  
+### <a name="syntax"></a>Syntax  
+  
+```cpp  
+Platform::String ToString();  
+```  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Platform:: String-Wert, der den Wert darstellt.  
+    
+## <a name="see-also"></a>Siehe auch  
  [Plattformnamespace](../cppcx/platform-namespace-c-cx.md)

@@ -18,11 +18,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dad00eecc05b8b3020dcf024b297b4b090317ee4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c7f6d9eac97fa1907a0901c725645f29dcdd5d9e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 Die Vorlagenklasse beschreibt ein Objekt, das eine Elementsequenz variabler Länge steuert, die Last in FIFO-Zugriff hat. Sie verwenden die Containeradapter `stack` als Pushdown Stapel einen zugrunde liegenden Container zu verwalten.  
@@ -48,7 +51,7 @@ template<typename Value,
  Container  
  Der Typ des zugrunde liegenden Containers.  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 |Typdefinition|Beschreibung|  
 |---------------------|-----------------|  
@@ -89,7 +92,7 @@ template<typename Value,
   
 ## <a name="interfaces"></a>Schnittstellen  
   
-|Schnittstelle|Beschreibung|  
+|Interface|Beschreibung|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|Duplizieren Sie ein Objekt.|  
 |IStack\<Container, den Wert >|Behalten Sie die generische Containeradapter.|  

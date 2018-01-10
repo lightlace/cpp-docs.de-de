@@ -1,59 +1,61 @@
 ---
-title: "CSession-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CSession"
-  - "ATL::CSession"
-  - "ATL.CSession"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSession-Klasse"
+title: CSession-Klasse | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CSession
+- ATL::CSession
+- ATL.CSession
+dev_langs: C++
+helpviewer_keywords: CSession class
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d8b6bb75d12b4ab96c3a44c74f4487eb8a70efc6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CSession-Klasse
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Stellt eine einzelne Datenbankzugriffssitzung dar.  
+# <a name="csession-class"></a>CSession-Klasse
+Stellt eine einzelne Datenbank-Access-Sitzung dar.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CSession  
 ```  
   
-## Member  
+## <a name="members"></a>Member  
   
-### Methoden  
+### <a name="methods"></a>Methoden  
   
 |||  
 |-|-|  
-|[Abort](../../data/oledb/csession-abort.md)|Bricht die Transaktion ab \(beendet sie\).|  
+|[Abbrechen](../../data/oledb/csession-abort.md)|Abgebrochen (beendet) der Transaktion.|  
 |[Schließen](../../data/oledb/csession-close.md)|Schließt die Sitzung.|  
-|[Commit ausführen](../../data/oledb/csession-commit.md)|Führt ein Commit der Transaktion aus.|  
-|[GetTransactionInfo](../../data/oledb/csession-gettransactioninfo.md)|Gibt Informationen bezüglich eine Transaktion zurückgesetzt.|  
+|[Commit](../../data/oledb/csession-commit.md)|Führt einen Commit die Transaktion.|  
+|[GetTransactionInfo](../../data/oledb/csession-gettransactioninfo.md)|Gibt Informationen zu einer Transaktion zurück.|  
 |[Öffnen](../../data/oledb/csession-open.md)|Öffnet eine neue Sitzung für das Datenquellenobjekt.|  
 |[StartTransaction](../../data/oledb/csession-starttransaction.md)|Startet eine neue Transaktion für diese Sitzung.|  
   
-## Hinweise  
- Eine oder mehrere Sitzungen können mit jeder Anbieter\-Verbindung \(Datenquelle\) zugeordnet werden, die durch [Ableiten](../../data/oledb/cdatasource-class.md) ein Objekt dargestellt wird.  Um eine neue `CSession` für `CDataSource` zu erstellen, rufen Sie [CSession::Open](../../data/oledb/csession-open.md) auf.  Um eine Datenbanktransaktion zu beginnen, stellt `CSession` die `StartTransaction`\-Methode.  Sobald eine Transaktion gestartet wird, können Sie mit der **Commit**\-Methode weitergeben, oder brechen Sie diese mithilfe der **Abbrechen**\-Methode ab.  
+## <a name="remarks"></a>Hinweise  
+ Eine oder mehrere Sitzungen zugeordnet werden jeder anbieterverbindung (Datenquelle) der dargestellt wird, indem Sie eine [CDataSource](../../data/oledb/cdatasource-class.md) Objekt. Zum Erstellen eines neuen `CSession` für eine `CDataSource`, rufen Sie [CSession:: Open](../../data/oledb/csession-open.md). Zum Starten einer Datenbanktransaktion `CSession` bietet die `StartTransaction` Methode. Sobald eine Transaktion gestartet wird, können Sie Sie mithilfe von commit der **Commit** -Methode, oder brechen Sie den Befehl mit der **Abort** Methode.  
   
-## Anforderungen  
- **Header:**  atldbcli.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** atldbcli.h  
   
-## Siehe auch  
- [CatDB](../../top/visual-cpp-samples.md)   
- [OLE DB\-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenz der OLE DB\-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [CatDB](../../visual-cpp-samples.md)   
+ [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -1,11 +1,10 @@
 ---
-title: IAtlMemMgr Klasse | Microsoft-Dokumentation
+title: IAtlMemMgr Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,40 +14,25 @@ f1_keywords:
 - ATLMEM/ATL::Free
 - ATLMEM/ATL::GetSize
 - ATLMEM/ATL::Reallocate
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - IAtlMemMgr class
 - memory, managing
 - memory, memory manager
 ms.assetid: 18b2c569-25fe-4464-bdb6-3b1abef7154a
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 8e63d6dd9197aa3b81f893c58a1c8e41dfe2cc1b
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a9c9380bddb9b406d9a3e6233a87870ab81df5c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iatlmemmgr-class"></a>IAtlMemMgr-Klasse
-Diese Klasse stellt eine Schnittstelle zu einem Speichermanager.  
+Diese Klasse stellt die Schnittstelle in einen Speichermanager.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,25 +40,25 @@ Diese Klasse stellt eine Schnittstelle zu einem Speichermanager.
 __interface __declspec(uuid("654F7EF5-CFDF-4df9-A450-6C6A13C622C0")) IAtlMemMgr
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="methods"></a>Methoden  
   
 |||  
 |-|-|  
 |[Zuordnen](#allocate)|Rufen Sie diese Methode auf, um einen Speicherblock zu belegen.|  
-|[Kostenlose](#free)|Rufen Sie diese Methode, um einen Speicherblock frei.|  
+|[Frei](#free)|Rufen Sie diese Methode, um einen Speicherblock frei.|  
 |[GetSize](#getsize)|Rufen Sie diese Methode zum Abrufen der Größe eines belegten Speicherblocks.|  
-|[Neu zuordnen](#reallocate)|Rufen Sie diese Methode, um einen Speicherblock neu zuordnen.|  
+|[Wenn ein Speicher neu](#reallocate)|Rufen Sie diese Methode, um einen Speicherblock neu zuzuordnen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Schnittstelle wird implementiert, indem [CComHeap](../../atl/reference/ccomheap-class.md), [CCRTHeap](../../atl/reference/ccrtheap-class.md), [CLocalHeap](../../atl/reference/clocalheap-class.md), [CGlobalHeap](../../atl/reference/cglobalheap-class.md), oder [CWin32Heap](../../atl/reference/cwin32heap-class.md).  
+ Diese Schnittstelle wird implementiert, indem [CComHeap](../../atl/reference/ccomheap-class.md), [CCRTHeap](../../atl/reference/ccrtheap-class.md), [clocalheap –](../../atl/reference/clocalheap-class.md), [CGlobalHeap](../../atl/reference/cglobalheap-class.md), oder [CWin32Heap](../../atl/reference/cwin32heap-class.md).  
   
 > [!NOTE]
->  Lokale und globale Heapfunktionen ist langsamer als die anderen Speicherverwaltungsfunktionen und bieten nicht so viele Features. Neue Anwendungen sollten daher verwenden die [heap Funktionen](http://msdn.microsoft.com/library/windows/desktop/aa366711). Diese stehen in der [CWin32Heap](../../atl/reference/cwin32heap-class.md) Klasse.  
+>  Lokale und globale Heapfunktionen sind langsamer als die anderen Speicherverwaltungsfunktionen und bieten keine so viele Funktionen. Neue Anwendungen sollten daher verwenden die [heap Funktionen](http://msdn.microsoft.com/library/windows/desktop/aa366711). Diese Seiten sind verfügbar, in der [CWin32Heap](../../atl/reference/cwin32heap-class.md) Klasse.  
   
 ## <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_Utilities&#94;](../../atl/codesnippet/cpp/iatlmemmgr-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#94](../../atl/codesnippet/cpp/iatlmemmgr-class_1.cpp)]  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlmem.h  
@@ -94,10 +78,10 @@ void* Allocate(size_t nBytes) throw();
  Gibt einen Zeiger auf den Anfang des neu belegten Speicherblocks zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie [IAtlMemMgr::Free](#free) oder [IAtlMemMgr::Reallocate](#reallocate) , die von dieser Methode belegten Arbeitsspeicher freizugeben.  
+ Rufen Sie [IAtlMemMgr::Free](#free) oder [IAtlMemMgr::Reallocate](#reallocate) um den von dieser Methode belegten Arbeitsspeicher freizugeben.  
   
 ### <a name="example"></a>Beispiel  
- Ein Beispiel finden Sie unter der [IAtlMemMgr Übersicht](../../atl/reference/iatlmemmgr-class.md).  
+ Ein Beispiel finden Sie die [IAtlMemMgr Übersicht](../../atl/reference/iatlmemmgr-class.md).  
   
 ##  <a name="free"></a>IAtlMemMgr::Free  
  Rufen Sie diese Methode, um einen Speicherblock frei.  
@@ -111,10 +95,10 @@ void Free(void* p) throw();
  Ein Zeiger auf den Arbeitsspeicher, der zuvor von diesem Speicher-Manager zugeordnet wurde.  
   
 ### <a name="remarks"></a>Hinweise  
- Mit dieser Methode können Sie Speicher abgerufen, indem [IAtlMemMgr::Allocate](#allocate) oder [IAtlMemMgr::Reallocate](#reallocate).  
+ Mit dieser Methode können Sie Speicher erhalten, indem [IAtlMemMgr::Allocate](#allocate) oder [IAtlMemMgr::Reallocate](#reallocate).  
   
 ### <a name="example"></a>Beispiel  
- Ein Beispiel finden Sie unter der [IAtlMemMgr Übersicht](../../atl/reference/iatlmemmgr-class.md).  
+ Ein Beispiel finden Sie die [IAtlMemMgr Übersicht](../../atl/reference/iatlmemmgr-class.md).  
   
 ##  <a name="getsize"></a>IAtlMemMgr::GetSize  
  Rufen Sie diese Methode zum Abrufen der Größe eines belegten Speicherblocks.  
@@ -131,7 +115,7 @@ size_t GetSize(void* p) throw();
  Gibt die Größe des Speicherblocks in Bytes zurück.  
   
 ### <a name="example"></a>Beispiel  
- Ein Beispiel finden Sie unter der [IAtlMemMgr Übersicht](../../atl/reference/iatlmemmgr-class.md).  
+ Ein Beispiel finden Sie die [IAtlMemMgr Übersicht](../../atl/reference/iatlmemmgr-class.md).  
   
 ##  <a name="reallocate"></a>IAtlMemMgr::Reallocate  
  Rufen Sie diese Methode auf, um den von diesem Speicher-Manager zugeordneten Arbeitsspeicher neu zuzuordnen.  
@@ -151,15 +135,15 @@ void* Reallocate(void* p, size_t nBytes) throw();
  Gibt einen Zeiger auf den Anfang des neu belegten Speicherblocks zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie [IAtlMemMgr::Free](#free) oder [IAtlMemMgr::Reallocate](#reallocate) , die von dieser Methode belegten Arbeitsspeicher freizugeben.  
+ Rufen Sie [IAtlMemMgr::Free](#free) oder [IAtlMemMgr::Reallocate](#reallocate) um den von dieser Methode belegten Arbeitsspeicher freizugeben.  
   
- Diese Methode wird vom Konzept her den vorhandenen Speicher frei und weist einen neuen Speicherblock. In der Praxis kann der vorhandene Speicher erweitert oder andernfalls wiederverwendet werden.  
+ Grundsätzlich wird diese Methode gibt die vorhandenen Arbeitsspeicher frei, und weist einen neuen Speicherblock. In Wirklichkeit kann der vorhandene Speicher erweitert oder andernfalls wiederverwendet werden.  
   
 ### <a name="example"></a>Beispiel  
- Ein Beispiel finden Sie unter der [IAtlMemMgr Übersicht](../../atl/reference/iatlmemmgr-class.md).  
+ Ein Beispiel finden Sie die [IAtlMemMgr Übersicht](../../atl/reference/iatlmemmgr-class.md).  
   
 ##  <a name="get_allowcontextmenu"></a>IAxWinAmbientDispatch::get_AllowContextMenu  
- Die **AllowContextMenu** -Eigenschaft gibt an, ob das gehostete Steuerelement sein eigenes Kontextmenü anzuzeigen.  
+ Die **AllowContextMenu** Eigenschaft gibt an, ob das gehostete Steuerelement zugelassen wird, um sein eigenes Kontextmenü anzuzeigen.  
   
 ```
 STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
@@ -173,10 +157,10 @@ STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Objekt-Implementierung von ATL-Host verwendet `VARIANT_TRUE` als der Standardwert dieser Eigenschaft.  
+ Die ATL-hostimplementierung von Objekt verwendet `VARIANT_TRUE` als der Standardwert dieser Eigenschaft.  
   
 ##  <a name="get_allowshowui"></a>IAxWinAmbientDispatch::get_AllowShowUI  
- Die **AllowShowUI** -Eigenschaft gibt an, ob das gehostete Steuerelement zulässig ist, um eine eigene Benutzeroberfläche anzuzeigen.  
+ Die **AllowShowUI** Eigenschaft gibt an, ob das gehostete Steuerelement zugelassen wird, um eine eigene Benutzeroberfläche anzuzeigen.  
   
 ```
 STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
@@ -190,10 +174,10 @@ STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Objekt-Implementierung von ATL-Host verwendet **VARIANT_FALSE** als der Standardwert dieser Eigenschaft.  
+ Verwendet die ATL-hostimplementierung Objekt **VARIANT_FALSE** als der Standardwert dieser Eigenschaft.  
   
 ##  <a name="get_allowwindowlessactivation"></a>IAxWinAmbientDispatch::get_AllowWindowlessActivation  
- Die **AllowWindowlessActivation** -Eigenschaft gibt an, ob der Container fensterlosen Aktivierung zulässig sind.  
+ Die **AllowWindowlessActivation** Eigenschaft gibt an, ob der Container fensterlosen Aktivierung zulässig sind.  
   
 ```
 STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
@@ -207,10 +191,10 @@ STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Objekt-Implementierung von ATL-Host verwendet `VARIANT_TRUE` als der Standardwert dieser Eigenschaft.  
+ Die ATL-hostimplementierung von Objekt verwendet `VARIANT_TRUE` als der Standardwert dieser Eigenschaft.  
   
 ##  <a name="get_backcolor"></a>IAxWinAmbientDispatch::get_BackColor  
- Die `BackColor` -Eigenschaft gibt die ambient-Hintergrundfarbe des Containers an.  
+ Die `BackColor` Eigenschaft gibt die Ambiente-Hintergrundfarbe des Containers an.  
   
 ```
 STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
@@ -224,10 +208,10 @@ STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Objekt-Implementierung von ATL-Host verwendet **COLOR_BTNFACE** oder **COLOR_WINDOW** als der Standardwert dieser Eigenschaft (je nachdem, ob das übergeordnete Element des Hostfensters ein Dialogfeld oder nicht).  
+ Verwendet die ATL-hostimplementierung Objekt **COLOR_BTNFACE** oder **COLOR_WINDOW** als der Standardwert dieser Eigenschaft (je nachdem, ob das übergeordnete Element des Hostfenster ein Dialogfeld oder nicht).  
   
 ##  <a name="get_displayasdefault"></a>IAxWinAmbientDispatch::get_DisplayAsDefault  
- **DisplayAsDefault** ist eine Ambiente-Eigenschaft, die ermöglicht es einem Steuerelement, um festzustellen, ob es sich um das Standardsteuerelement ist.  
+ **DisplayAsDefault** ist eine ambient-Eigenschaft, die ermöglicht es einem Steuerelement, um herauszufinden, ob es sich um das Standardsteuerelement ist.  
   
 ```
 STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
@@ -241,10 +225,10 @@ STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Objekt-Implementierung von ATL-Host verwendet **VARIANT_FALSE** als der Standardwert dieser Eigenschaft.  
+ Verwendet die ATL-hostimplementierung Objekt **VARIANT_FALSE** als der Standardwert dieser Eigenschaft.  
   
 ##  <a name="get_dochostdoubleclickflags"></a>IAxWinAmbientDispatch::get_DocHostDoubleClickFlags  
- Die **DocHostDoubleClickFlags** -Eigenschaft gibt die Operation, die als Antwort auf ein Doppelklick stattfinden soll.  
+ Die **DocHostDoubleClickFlags** Eigenschaft gibt den Vorgang, die als Antwort auf einen Doppelklick erfolgen soll.  
   
 ```
 STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
@@ -258,10 +242,10 @@ STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Objekt-Implementierung von ATL-Host verwendet **DOCHOSTUIDBLCLK_DEFAULT** als der Standardwert dieser Eigenschaft.  
+ Verwendet die ATL-hostimplementierung Objekt **DOCHOSTUIDBLCLK_DEFAULT** als der Standardwert dieser Eigenschaft.  
   
 ##  <a name="get_dochostflags"></a>IAxWinAmbientDispatch::get_DocHostFlags  
- Die **DocHostFlags** -Eigenschaft gibt die Benutzerberechtigungen für die Schnittstelle des Hostobjekts an.  
+ Die **DocHostFlags** Eigenschaft gibt an, die Benutzeroptionen für die Schnittstelle des Hostobjekts.  
   
 ```
 STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
@@ -275,10 +259,10 @@ STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Objekt-Implementierung von ATL-Host verwendet **DOCHOSTUIFLAG_NO3DBORDER** als der Standardwert dieser Eigenschaft.  
+ Verwendet die ATL-hostimplementierung Objekt **DOCHOSTUIFLAG_NO3DBORDER** als der Standardwert dieser Eigenschaft.  
   
 ##  <a name="get_font"></a>IAxWinAmbientDispatch::get_Font  
- Die **Schriftart** -Eigenschaft gibt die ambient-Schriftart des Containers an.  
+ Die **Schriftart** Eigenschaft gibt an, die ambient-Schriftart des Containers.  
   
 ```
 STDMETHOD(get_Font)(IFontDisp** pFont);
@@ -286,16 +270,16 @@ STDMETHOD(get_Font)(IFontDisp** pFont);
   
 ### <a name="parameters"></a>Parameter  
  `pFont`  
- [out] Die Adresse einer **IFontDisp** Schnittstellenzeiger verwendet, um den aktuellen Wert dieser Eigenschaft zu empfangen.  
+ [out] Die Adresse des ein **IFontDisp** Schnittstellenzeiger, der zum Empfangen des aktuellen Werts dieser Eigenschaft verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- ATL Server-Objekt-Implementierung verwendet die Standard-GUI-Schriftart oder die Systemschriftart als der Standardwert dieser Eigenschaft.  
+ Die ATL-hostimplementierung von Objekt verwendet die Standard-GUI-Schriftart oder Systemschriftart als der Standardwert dieser Eigenschaft.  
   
 ##  <a name="get_forecolor"></a>IAxWinAmbientDispatch::get_ForeColor  
- Die `ForeColor` -Eigenschaft gibt die Ambiente-Farbe des Containers.  
+ Die `ForeColor` Eigenschaft gibt die Ambiente-Farbe des Containers.  
   
 ```
 STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
@@ -309,10 +293,10 @@ STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- ATL Server-Objekt-Implementierung verwendet die Systemfarbe für Fenster Text als der Standardwert dieser Eigenschaft.  
+ Die ATL-hostimplementierung von Objekt verwendet die Systemfarbe für Fenster Text als der Standardwert dieser Eigenschaft.  
   
 ##  <a name="get_localeid"></a>IAxWinAmbientDispatch::get_LocaleID  
- Die **LocaleID** -Eigenschaft gibt die ambient-Gebietsschema-ID des Containers.  
+ Die **LocaleID** Eigenschaft gibt an, die ambient-Gebietsschema-ID des Containers.  
   
 ```
 STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
@@ -326,9 +310,9 @@ STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- ATL Server-Objekt-Implementierung verwendet Standardgebietsschema des Benutzers, als der Standardwert dieser Eigenschaft.  
+ Die ATL-hostimplementierung von Objekt verwendet Standard-Gebietsschema des Benutzers als der Standardwert dieser Eigenschaft.  
   
- Mit dieser Methode können Sie die Ambient-LocalID ermitteln, d. h. die Gebietsschema-ID des Programms das Steuerelement wird in verwendet. Wenn Sie die Gebietsschema-ID kennen, können Sie Code zum Laden von gebietsschemaspezifische Beschriftungen Text der Fehlermeldung, und so weiter aus einer Ressourcendatei oder Satelliten-DLL aufrufen.  
+ Mit dieser Methode können Sie ermitteln, die Ambient-LocalID, d. h. der LocaleID-Wert des Programms das Steuerelement wird in verwendet. Sobald Sie die Gebietsschema-ID kennen, können Sie Code zum Laden von gebietsschemaspezifische Beschriftungen Fehlermeldungstext, usw. aus einer Ressourcendatei oder Satelliten-DLL aufrufen.  
   
 ##  <a name="get_messagereflect"></a>IAxWinAmbientDispatch::get_MessageReflect  
  Die **MessageReflect** ambient-Eigenschaft gibt an, ob der Container, die Nachrichten an das gehostete Steuerelement widerspiegeln.  
@@ -345,10 +329,10 @@ STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Objekt-Implementierung von ATL-Host verwendet `VARIANT_TRUE` als der Standardwert dieser Eigenschaft.  
+ Die ATL-hostimplementierung von Objekt verwendet `VARIANT_TRUE` als der Standardwert dieser Eigenschaft.  
   
 ##  <a name="get_optionkeypath"></a>IAxWinAmbientDispatch::get_OptionKeyPath  
- Die **OptionKeyPath** -Eigenschaft gibt den Registrierungsschlüsselpfad an benutzereinstellungen.  
+ Die **OptionKeyPath** Eigenschaft gibt den Registrierungsschlüsselpfad an benutzereinstellungen an.  
   
 ```
 STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
@@ -362,7 +346,7 @@ STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
  Ein Standard `HRESULT` -Wert.  
   
 ##  <a name="get_showgrabhandles"></a>IAxWinAmbientDispatch::get_ShowGrabHandles  
- Die **ShowGrabHandles** ambient-Eigenschaft kann das Steuerelement ermitteln, ob es sich selbst mit Ziehpunkten gezeichnet werden soll.  
+ Die **ShowGrabHandles** ambient-Eigenschaft ermöglicht die Steuerung zu ermitteln, ob es sich selbst mit Ziehpunkten gezeichnet werden soll.  
   
 ```
 STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
@@ -376,10 +360,10 @@ STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die ATL-Host objektimplementierung gibt immer **VARIANT_FALSE** als Wert dieser Eigenschaft.  
+ Gibt die ATL-Objekt-hostimplementierung immer **VARIANT_FALSE** als der Wert dieser Eigenschaft.  
   
 ##  <a name="get_showhatching"></a>IAxWinAmbientDispatch::get_ShowHatching  
- Die **ShowHatching** ambient-Eigenschaft kann das Steuerelement ermitteln, ob sich die ausgebrütet gezeichnet werden soll.  
+ Die **ShowHatching** ambient-Eigenschaft ermöglicht die Steuerung zu ermitteln, ob sich die eingestellt gezeichnet werden soll.  
   
 ```
 STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
@@ -393,10 +377,10 @@ STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die ATL-Host objektimplementierung gibt immer **VARIANT_FALSE** als Wert dieser Eigenschaft.  
+ Gibt die ATL-Objekt-hostimplementierung immer **VARIANT_FALSE** als der Wert dieser Eigenschaft.  
   
 ##  <a name="get_usermode"></a>IAxWinAmbientDispatch::get_UserMode  
- Die **UserMode** Eigenschaft gibt den Benutzermodus des Containers.  
+ Die **UserMode** Eigenschaft gibt an, die ambient-Benutzermodus des Containers.  
   
 ```
 STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
@@ -410,10 +394,10 @@ STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Objekt-Implementierung von ATL-Host verwendet `VARIANT_TRUE` als der Standardwert dieser Eigenschaft.  
+ Die ATL-hostimplementierung von Objekt verwendet `VARIANT_TRUE` als der Standardwert dieser Eigenschaft.  
   
 ##  <a name="put_allowcontextmenu"></a>IAxWinAmbientDispatch::put_AllowContextMenu  
- Die **AllowContextMenu** -Eigenschaft gibt an, ob das gehostete Steuerelement sein eigenes Kontextmenü anzuzeigen.  
+ Die **AllowContextMenu** Eigenschaft gibt an, ob das gehostete Steuerelement zugelassen wird, um sein eigenes Kontextmenü anzuzeigen.  
   
 ```
 STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
@@ -427,10 +411,10 @@ STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Objekt-Implementierung von ATL-Host verwendet `VARIANT_TRUE` als der Standardwert dieser Eigenschaft.  
+ Die ATL-hostimplementierung von Objekt verwendet `VARIANT_TRUE` als der Standardwert dieser Eigenschaft.  
   
 ##  <a name="put_allowshowui"></a>IAxWinAmbientDispatch::put_AllowShowUI  
- Die **AllowShowUI** -Eigenschaft gibt an, ob das gehostete Steuerelement zulässig ist, um eine eigene Benutzeroberfläche anzuzeigen.  
+ Die **AllowShowUI** Eigenschaft gibt an, ob das gehostete Steuerelement zugelassen wird, um eine eigene Benutzeroberfläche anzuzeigen.  
   
 ```
 STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
@@ -444,10 +428,10 @@ STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Objekt-Implementierung von ATL-Host verwendet **VARIANT_FALSE** als der Standardwert dieser Eigenschaft.  
+ Verwendet die ATL-hostimplementierung Objekt **VARIANT_FALSE** als der Standardwert dieser Eigenschaft.  
   
 ##  <a name="put_allowwindowlessactivation"></a>IAxWinAmbientDispatch::put_AllowWindowlessActivation  
- Die **AllowWindowlessActivation** -Eigenschaft gibt an, ob der Container fensterlosen Aktivierung zulässig sind.  
+ Die **AllowWindowlessActivation** Eigenschaft gibt an, ob der Container fensterlosen Aktivierung zulässig sind.  
   
 ```
 STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
@@ -461,10 +445,10 @@ STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Objekt-Implementierung von ATL-Host verwendet `VARIANT_TRUE` als der Standardwert dieser Eigenschaft.  
+ Die ATL-hostimplementierung von Objekt verwendet `VARIANT_TRUE` als der Standardwert dieser Eigenschaft.  
   
 ##  <a name="put_backcolor"></a>IAxWinAmbientDispatch::put_BackColor  
- Die `BackColor` -Eigenschaft gibt die ambient-Hintergrundfarbe des Containers an.  
+ Die `BackColor` Eigenschaft gibt die Ambiente-Hintergrundfarbe des Containers an.  
   
 ```
 STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
@@ -478,10 +462,10 @@ STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Objekt-Implementierung von ATL-Host verwendet **COLOR_BTNFACE** oder **COLOR_WINDOW** als der Standardwert dieser Eigenschaft (je nachdem, ob das übergeordnete Element des Hostfensters ein Dialogfeld oder nicht).  
+ Verwendet die ATL-hostimplementierung Objekt **COLOR_BTNFACE** oder **COLOR_WINDOW** als der Standardwert dieser Eigenschaft (je nachdem, ob das übergeordnete Element des Hostfenster ein Dialogfeld oder nicht).  
   
 ##  <a name="put_displayasdefault"></a>IAxWinAmbientDispatch::put_DisplayAsDefault  
- **DisplayAsDefault** ist eine Ambiente-Eigenschaft, die ermöglicht es einem Steuerelement, um festzustellen, ob es sich um das Standardsteuerelement ist.  
+ **DisplayAsDefault** ist eine ambient-Eigenschaft, die ermöglicht es einem Steuerelement, um herauszufinden, ob es sich um das Standardsteuerelement ist.  
   
 ```
 STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
@@ -495,10 +479,10 @@ STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Objekt-Implementierung von ATL-Host verwendet **VARIANT_FALSE** als der Standardwert dieser Eigenschaft.  
+ Verwendet die ATL-hostimplementierung Objekt **VARIANT_FALSE** als der Standardwert dieser Eigenschaft.  
   
 ##  <a name="put_dochostdoubleclickflags"></a>IAxWinAmbientDispatch::put_DocHostDoubleClickFlags  
- Die **DocHostDoubleClickFlags** -Eigenschaft gibt die Operation, die als Antwort auf ein Doppelklick stattfinden soll.  
+ Die **DocHostDoubleClickFlags** Eigenschaft gibt den Vorgang, die als Antwort auf einen Doppelklick erfolgen soll.  
   
 ```
 STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
@@ -512,10 +496,10 @@ STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Objekt-Implementierung von ATL-Host verwendet **DOCHOSTUIDBLCLK_DEFAULT** als der Standardwert dieser Eigenschaft.  
+ Verwendet die ATL-hostimplementierung Objekt **DOCHOSTUIDBLCLK_DEFAULT** als der Standardwert dieser Eigenschaft.  
   
 ##  <a name="put_dochostflags"></a>IAxWinAmbientDispatch::put_DocHostFlags  
- Die **DocHostFlags** -Eigenschaft gibt die Benutzerberechtigungen für die Schnittstelle des Hostobjekts an.  
+ Die **DocHostFlags** Eigenschaft gibt an, die Benutzeroptionen für die Schnittstelle des Hostobjekts.  
   
 ```
 STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
@@ -529,10 +513,10 @@ STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Objekt-Implementierung von ATL-Host verwendet **DOCHOSTUIFLAG_NO3DBORDER** als der Standardwert dieser Eigenschaft.  
+ Verwendet die ATL-hostimplementierung Objekt **DOCHOSTUIFLAG_NO3DBORDER** als der Standardwert dieser Eigenschaft.  
   
 ##  <a name="put_font"></a>IAxWinAmbientDispatch::put_Font  
- Die **Schriftart** -Eigenschaft gibt die ambient-Schriftart des Containers an.  
+ Die **Schriftart** Eigenschaft gibt an, die ambient-Schriftart des Containers.  
   
 ```
 STDMETHOD(put_Font)(IFontDisp* pFont);
@@ -546,10 +530,10 @@ STDMETHOD(put_Font)(IFontDisp* pFont);
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- ATL Server-Objekt-Implementierung verwendet die Standard-GUI-Schriftart oder die Systemschriftart als der Standardwert dieser Eigenschaft.  
+ Die ATL-hostimplementierung von Objekt verwendet die Standard-GUI-Schriftart oder Systemschriftart als der Standardwert dieser Eigenschaft.  
   
 ##  <a name="put_forecolor"></a>IAxWinAmbientDispatch::put_ForeColor  
- Die `ForeColor` -Eigenschaft gibt die Ambiente-Farbe des Containers.  
+ Die `ForeColor` Eigenschaft gibt die Ambiente-Farbe des Containers.  
   
 ```
 STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
@@ -563,10 +547,10 @@ STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- ATL Server-Objekt-Implementierung verwendet die Systemfarbe für Fenster Text als der Standardwert dieser Eigenschaft.  
+ Die ATL-hostimplementierung von Objekt verwendet die Systemfarbe für Fenster Text als der Standardwert dieser Eigenschaft.  
   
 ##  <a name="put_localeid"></a>IAxWinAmbientDispatch::put_LocaleID  
- Die **LocaleID** -Eigenschaft gibt die ambient-Gebietsschema-ID des Containers.  
+ Die **LocaleID** Eigenschaft gibt an, die ambient-Gebietsschema-ID des Containers.  
   
 ```
 STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
@@ -580,7 +564,7 @@ STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- ATL Server-Objekt-Implementierung verwendet Standardgebietsschema des Benutzers, als der Standardwert dieser Eigenschaft.  
+ Die ATL-hostimplementierung von Objekt verwendet Standard-Gebietsschema des Benutzers als der Standardwert dieser Eigenschaft.  
   
 ##  <a name="put_messagereflect"></a>IAxWinAmbientDispatch::put_MessageReflect  
  Die **MessageReflect** ambient-Eigenschaft gibt an, ob der Container, die Nachrichten an das gehostete Steuerelement widerspiegeln.  
@@ -597,10 +581,10 @@ STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Objekt-Implementierung von ATL-Host verwendet `VARIANT_TRUE` als der Standardwert dieser Eigenschaft.  
+ Die ATL-hostimplementierung von Objekt verwendet `VARIANT_TRUE` als der Standardwert dieser Eigenschaft.  
   
 ##  <a name="put_optionkeypath"></a>IAxWinAmbientDispatch::put_OptionKeyPath  
- Die **OptionKeyPath** -Eigenschaft gibt den Registrierungsschlüsselpfad an benutzereinstellungen.  
+ Die **OptionKeyPath** Eigenschaft gibt den Registrierungsschlüsselpfad an benutzereinstellungen an.  
   
 ```
 STDMETHOD(put_OptionKeyPath)(BSTR bstrOptionKeyPath);
@@ -614,7 +598,7 @@ STDMETHOD(put_OptionKeyPath)(BSTR bstrOptionKeyPath);
  Ein Standard `HRESULT` -Wert.  
   
 ##  <a name="put_usermode"></a>IAxWinAmbientDispatch::put_UserMode  
- Die **UserMode** Eigenschaft gibt den Benutzermodus des Containers.  
+ Die **UserMode** Eigenschaft gibt an, die ambient-Benutzermodus des Containers.  
   
 ```
 STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
@@ -628,10 +612,10 @@ STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Objekt-Implementierung von ATL-Host verwendet `VARIANT_TRUE` als der Standardwert dieser Eigenschaft.  
+ Die ATL-hostimplementierung von Objekt verwendet `VARIANT_TRUE` als der Standardwert dieser Eigenschaft.  
   
 ##  <a name="setambientdispatch"></a>IAxWinAmbientDispatchEx::SetAmbientDispatch  
- Diese Methode wird aufgerufen, um die Standardschnittstelle für die ambient-Eigenschaft mit einer benutzerdefinierten Benutzeroberfläche zu ergänzen.  
+ Diese Methode wird aufgerufen, um die ambient-Eigenschaft Standardschnittstelle mit einer benutzerdefinierten Benutzeroberfläche zu ergänzen.  
   
 ```
 virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
@@ -639,16 +623,16 @@ virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
   
 ### <a name="parameters"></a>Parameter  
  *pDispatch*  
- Ein Zeiger auf die neue Schnittstelle.  
+ Zeiger auf die neue Schnittstelle.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg S_OK oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn `SetAmbientDispatch` aufgerufen wird mit einem Zeiger auf eine neue Schnittstelle, die diese neue Schnittstelle verwendet werden, zum Aufrufen von Eigenschaften oder Methoden, die vom gehosteten Steuerelement angefordert, wenn diese Eigenschaften nicht bereits verfügbar sind [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md).  
+ Wenn `SetAmbientDispatch` wird aufgerufen, durch einen Zeiger auf eine neue Schnittstelle und die neue Oberfläche wird verwendet, um alle Eigenschaften oder Methoden, die vom gehosteten Steuerelement hat aufrufen – Wenn diese Eigenschaften nicht bereits enthalten sind [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md).  
   
 ##  <a name="attachcontrol"></a>IAxWinHostWindow:: AttachControl  
- Fügt eine vorhandene (und zuvor initialisierten)-Steuerelement an das Hostobjekt, das mit dem Fenster identifizierten `hWnd`.  
+ Fügt eine vorhandene (und zuvor initialisierten)-Steuerelement an das Hostobjekt, das im Fenster "" identifizierte `hWnd`.  
   
 ```
 STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
@@ -656,10 +640,10 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
   
 ### <a name="parameters"></a>Parameter  
  *pUnkControl*  
- [in] Ein Zeiger auf die **IUnknown** Schnittstelle des Hostobjekts zugeordnet werden soll.  
+ [in] Ein Zeiger auf die **IUnknown** Schnittstelle des Steuerelements das Hostobjekt zugeordnet werden soll.  
   
  `hWnd`  
- [in] Ein Handle für das Fenster, für das Hosten von verwendet werden.  
+ [in] Ein Handle für das Fenster für das hosting verwendet werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
@@ -676,26 +660,26 @@ STDMETHOD(CreateControl)(
   
 ### <a name="parameters"></a>Parameter  
  `lpTricsData`  
- [in] Eine Zeichenfolge, die das zu erstellende Steuerelement identifiziert. Kann (müssen, einschließlich der geschweiften Klammern) CLSID, ProgID, URL oder unformatierten HTML (mit dem Präfix **MSHTML:**).  
+ [in] Eine Zeichenfolge, die das zu erstellende Steuerelement identifiziert wird. Kann eine (müssen auch die geschweiften Klammern) CLSID, ProgID, URL oder unformatierten HTML (mit dem Präfix **MSHTML:**).  
   
  `hWnd`  
- [in] Ein Handle für das Fenster, für das Hosten von verwendet werden.  
+ [in] Ein Handle für das Fenster für das hosting verwendet werden soll.  
   
  `pStream`  
- [in] Ein Schnittstellenzeiger für einen Stream, der Daten für das Steuerelement enthält. Kann **NULL**.  
+ [in] Ein Schnittstellenzeiger für einen Datenstrom, die Initialisierungsdaten für das Steuerelement enthält. Kann **NULL**.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Dieses Fenster wird durch das Hostobjekt, das diese Schnittstelle verfügbar macht, damit Nachrichten an das Steuerelement wiedergegeben werden können und andere Container Features funktionieren als Unterklasse definiert werden.  
+ Dieses Fenster wird als Unterklasse werden, indem Sie das Hostobjekt, das diese Schnittstelle verfügbar macht, sodass Nachrichten an das Steuerelement gespiegelt werden können, und andere Container-Funktionen verwendet werden können.  
   
- Das Aufrufen dieser Methode entspricht dem Aufruf [IAxWinHostWindow::CreateControlEx](#createcontrolex).  
+ Beim Aufrufen dieser Methode entspricht dem Aufruf [IAxWinHostWindow::CreateControlEx](#createcontrolex).  
   
  Um ein lizenziertes ActiveX-Steuerelement zu erstellen, finden Sie unter [IAxWinHostWindowLic::CreateControlLic](#createcontrollicex).  
   
 ##  <a name="createcontrolex"></a>IAxWinHostWindow::CreateControlEx  
- Erstellt ein ActiveX-Steuerelement, initialisiert es und hostet es im angegebenen Fenster ähnelt [IAxWinHostWindow::CreateControl](#createcontrol).  
+ Erstellt ein ActiveX-Steuerelement, initialisiert es und hostet es im angegebenen Fenster, ähnlich wie [IAxWinHostWindow::CreateControl](#createcontrol).  
   
 ```
 STDMETHOD(CreateControlEx)(
@@ -709,33 +693,33 @@ STDMETHOD(CreateControlEx)(
   
 ### <a name="parameters"></a>Parameter  
  `lpTricsData`  
- [in] Eine Zeichenfolge, die das zu erstellende Steuerelement identifiziert. Kann (müssen, einschließlich der geschweiften Klammern) CLSID, ProgID, URL oder unformatierten HTML (mit dem Präfix **MSHTML:**).  
+ [in] Eine Zeichenfolge, die das zu erstellende Steuerelement identifiziert wird. Kann eine (müssen auch die geschweiften Klammern) CLSID, ProgID, URL oder unformatierten HTML (mit dem Präfix **MSHTML:**).  
   
  `hWnd`  
- [in] Ein Handle für das Fenster, für das Hosten von verwendet werden.  
+ [in] Ein Handle für das Fenster für das hosting verwendet werden soll.  
   
  `pStream`  
- [in] Ein Schnittstellenzeiger für einen Stream, der Daten für das Steuerelement enthält. Kann **NULL**.  
+ [in] Ein Schnittstellenzeiger für einen Datenstrom, die Initialisierungsdaten für das Steuerelement enthält. Kann **NULL**.  
   
  `ppUnk`  
- [out] Die Adresse eines Zeigers, die erhalten die **IUnknown** Schnittstelle erstellt. Kann **NULL**.  
+ [out] Die Adresse eines Zeigers, die erhalten die **IUnknown** Schnittstelle des erstellten Steuerelements. Kann **NULL**.  
   
  *riidAdvise*  
- [in] Der Schnittstellenbezeichner des Ausgangsschnittstelle enthaltenen Objekts. Kann **IID_NULL**.  
+ [in] Der Schnittstellenbezeichner einer ausgehenden Schnittstelle auf die darin enthaltenen Objekte. Kann **IID_NULL**.  
   
  *punkAdvise*  
- [in] Ein Zeiger auf die **IUnknown** Schnittstelle des Senkenobjekts zum Verbindungspunkt anhand des enthaltenen Objekts verbunden sein `iidSink`.  
+ [in] Ein Zeiger auf die **IUnknown** -Schnittstelle des Senkenobjekts Verbindung mit dem Verbindungspunkt am der darin enthaltenen Objekte angegeben werden `iidSink`.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Im Gegensatz zu den `CreateControl` -Methode `CreateControlEx` darüber hinaus können Sie erhalten einen Schnittstellenzeiger auf das neu erstellte Steuerelement und eine Ereignissenke zum Empfangen von Ereignissen, die vom Steuerelement ausgelöst.  
+ Im Gegensatz zu den `CreateControl` Methode `CreateControlEx` können außerdem erhalten einen Schnittstellenzeiger auf das neu erstellte Steuerelement, und richten Sie eine Ereignissenke zum Empfangen von Ereignissen, die vom Steuerelement ausgelöst.  
   
  Um ein lizenziertes ActiveX-Steuerelement zu erstellen, finden Sie unter [IAxWinHostWindowLic::CreateControlLicEx](#createcontrollicex).  
   
 ##  <a name="querycontrol"></a>IAxWinHostWindow::QueryControl  
- Gibt den angegebenen Schnittstellenzeiger vom gehosteten Steuerelement bereitgestellt werden.  
+ Gibt den angegebenen Schnittstellenzeiger vom gehosteten Steuerelement bereitgestellte zurück.  
   
 ```
 STDMETHOD(QueryControl)(REFIID riid, void** ppvObject);
@@ -743,16 +727,16 @@ STDMETHOD(QueryControl)(REFIID riid, void** ppvObject);
   
 ### <a name="parameters"></a>Parameter  
  `riid`  
- [in] Die ID einer Schnittstelle für das Steuerelement angefordert wird.  
+ [in] Die ID einer Schnittstelle für das Steuerelement, das angefordert wird.  
   
  `ppvObject`  
- [out] Die Adresse eines Zeigers, der die angegebene Schnittstelle für das erstellte Steuerelement erhält.  
+ [out] Die Adresse eines Zeigers, die die angegebene Schnittstelle des erstellten Steuerelements empfängt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
 ##  <a name="setexternaldispatch"></a>IAxWinHostWindow::SetExternalDispatch  
- Legt die externen Disp-Schnittstelle, die enthaltenen Steuerelemente über zur Verfügung steht die [IDocHostUIHandlerDispatch::GetExternal](../../atl/reference/idochostuihandlerdispatch-interface.md) Methode.  
+ Legt die externen Disp-Schnittstelle, die darin enthaltenen Steuerelemente bis hin zur Verfügung steht die [IDocHostUIHandlerDispatch::GetExternal](../../atl/reference/idochostuihandlerdispatch-interface.md) Methode.  
   
 ```
 STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
@@ -766,7 +750,7 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
  Ein Standard `HRESULT` -Wert.  
   
 ##  <a name="setexternaluihandler"></a>IAxWinHostWindow::SetExternalUIHandler  
- Rufen Sie diese Funktion zum Festlegen der externen [IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md) Schnittstelle für die `CAxWindow` Objekt.  
+ Mit dieser Funktion wird zum Festlegen von externen [IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md) eine Schnittstelle für die `CAxWindow` Objekt.  
   
 ```
 STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
@@ -774,13 +758,13 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
   
 ### <a name="parameters"></a>Parameter  
  `pDisp`  
- [in] Ein Zeiger auf eine **IDocHostUIHandlerDispatch** Schnittstelle.  
+ [in] Ein Zeiger auf ein **IDocHostUIHandlerDispatch** Schnittstelle.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion wird von Steuerelementen (z. B. das Webbrowser-Steuerelement), die die Hostwebsite für Abfragen verwendet die `IDocHostUIHandlerDispatch` Schnittstelle.  
+ Diese Funktion wird von allen Steuerelementen (z. B. das Webbrowser-Steuerelement), die dem Host der Website für Abfragen verwendet die `IDocHostUIHandlerDispatch` Schnittstelle.  
   
 ##  <a name="createcontrollic"></a>IAxWinHostWindowLic::CreateControlLic  
  Erstellt ein lizenziertes Steuerelement, initialisiert es und hostet es im Fenster identifizierten `hWnd`.  
@@ -795,18 +779,18 @@ STDMETHOD(CreateControlLic)(
   
 ### <a name="parameters"></a>Parameter  
  `bstrLic`  
- [in] BSTR, der den Lizenzschlüssel für das Steuerelement enthält.  
+ [in] BSTR, die den Lizenzschlüssel für das Steuerelement enthält.  
   
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IAxWinHostWindow::CreateControl](#createcontrol) eine Beschreibung der verbleibenden Parameter und Rückgabewert.  
   
- Das Aufrufen dieser Methode entspricht dem Aufruf [IAxWinHostWindowLic::CreateControlLicEx](#createcontrollicex)  
+ Beim Aufrufen dieser Methode entspricht dem Aufruf [IAxWinHostWindowLic::CreateControlLicEx](#createcontrollicex)  
   
 ### <a name="example"></a>Beispiel  
- Finden Sie unter [Hosten von ActiveX-Steuerelementen mit ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) für ein Beispiel mit `IAxWinHostWindowLic::CreateControlLic`.  
+ Finden Sie unter [Hosten von ActiveX-Steuerelementen mit ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) für ein Beispiel, verwendet `IAxWinHostWindowLic::CreateControlLic`.  
   
 ##  <a name="createcontrollicex"></a>IAxWinHostWindowLic::CreateControlLicEx  
- Erstellt ein lizenziertes ActiveX-Steuerelement, initialisiert es und hostet es im angegebenen Fenster ähnelt [IAxWinHostWindow::CreateControl](#createcontrol).  
+ Erstellt ein lizenziertes ActiveX-Steuerelement, initialisiert es und hostet es im angegebenen Fenster, ähnlich wie [IAxWinHostWindow::CreateControl](#createcontrol).  
   
 ```
 STDMETHOD(CreateControlLicEx)(
@@ -821,14 +805,13 @@ STDMETHOD(CreateControlLicEx)(
   
 ### <a name="parameters"></a>Parameter  
  `bstrLic`  
- [in] BSTR, der den Lizenzschlüssel für das Steuerelement enthält.  
+ [in] BSTR, die den Lizenzschlüssel für das Steuerelement enthält.  
   
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IAxWinHostWindow::CreateControlEx](#createcontrolex) eine Beschreibung der verbleibenden Parameter und Rückgabewert.  
   
 ### <a name="example"></a>Beispiel  
- Finden Sie unter [Hosten von ActiveX-Steuerelementen mit ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) für ein Beispiel mit `IAxWinHostWindowLic::CreateControlLicEx`.  
+ Finden Sie unter [Hosten von ActiveX-Steuerelementen mit ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) für ein Beispiel, verwendet `IAxWinHostWindowLic::CreateControlLicEx`.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)
-
+ [Klassenübersicht](../../atl/atl-class-overview.md)

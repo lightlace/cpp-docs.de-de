@@ -18,11 +18,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 801f6a99a6b479ebc72f62c59fc5fcf099814996
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9f964fd511d87d2fd5ca460eb72dc5c9db8351ae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multiset-stlclr"></a>multiset (STL/CLR)
 Die Vorlagenklasse beschreibt ein Objekt, das eine Elementsequenz variabler Länge steuert, die bidirektionalen Zugriff hat. Verwenden Sie den Container `multiset` Vewaltung eine Sequenz von Elementen als (fast) mit Lastenausgleich geordneten Struktur der Knoten, jeweils ein Element speichern kann.  
@@ -49,7 +52,7 @@ template<typename Key>
  Key  
  Der Typ, der die zentrale Komponente eines Elements in der kontrollierten Sequenz.  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 |Typdefinition|Beschreibung|  
 |---------------------|-----------------|  
@@ -105,7 +108,7 @@ template<typename Key>
   
 ## <a name="interfaces"></a>Schnittstellen  
   
-|Schnittstelle|Beschreibung|  
+|Interface|Beschreibung|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|Duplizieren Sie ein Objekt.|  
 |<xref:System.Collections.IEnumerable>|Durch die Elemente der Sequenz.|  

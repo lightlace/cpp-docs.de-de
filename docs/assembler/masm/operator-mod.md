@@ -1,39 +1,40 @@
 ---
-title: "operator MOD | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Mod"
-  - "operator MOD"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Mod operator"
-  - "operator MOD"
+title: Operator MOD | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Mod
+- operator MOD
+dev_langs: C++
+helpviewer_keywords:
+- Mod operator
+- operator MOD
 ms.assetid: 8e05e8c2-3f07-44f9-8216-5436dcb97cc7
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ef866a511659174ef442113323d1c178f5b72a85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# operator MOD
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Gibt den Ganzzahlwert des Restes \(Modulo\), wenn dividierendes *expression2*nach *expression1* zurück.  
+# <a name="operator-mod"></a>Operator MOD
+Gibt den ganzzahligen Wert, der den Rest (modulo) zurück, bei einer Division *expression1* von *expression2*.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
 expression1 MOD expression2  
 ```  
   
-## Siehe auch  
- [Operators Reference](../../assembler/masm/operators-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Operatoren – Referenz](../../assembler/masm/operators-reference.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c91c3834b5a4647f7c9cd41820dc04e5597277f0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aada86ec63ccade17577f5410ced62cb4d5cf03f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="structure-declarations"></a>Strukturdeklarationen
 Eine "Strukturdeklaration" benennt einen Typ und gibt eine Sequenz von Variablenwerten an (so genannte "Member" oder "Felder" der Struktur), die unterschiedliche Typen aufweisen können. Ein optionaler Bezeichner, "Tag" genannt, gibt den Namen des Strukturtyps an und kann in nachfolgenden Verweisen für den Strukturtyp verwendet werden. Eine Variable des Strukturtyps enthält die gesamte Sequenz, die durch diesen Typ definiert ist. Strukturen in C ähneln den Typen, die als "Datensätze" in anderen Sprachen bekannt sind.  

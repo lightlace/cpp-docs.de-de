@@ -1,34 +1,37 @@
 ---
-title: "&#196;nderungen bei Konvertierungsoperatoren | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Konvertierungsoperatoren"
-  - "Konvertierungen, Explizit"
-  - "explicit-Schlüsselwort [C++]"
-  - "Operatoren [C++], Explizite Typkonvertierung"
-  - "Typkonvertierung, Explizite Konvertierungen"
+title: "Änderungen bei Konvertierungsoperatoren | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- conversion operators
+- operators [C++], explicit type conversion
+- type conversion, explicit conversions
+- conversions, explicit
+- explicit keyword [C++]
 ms.assetid: 9b83925c-71b7-4bd3-ac2e-843dd7c7f184
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8f89c49035e2e48dde8d502b1d61fa33d198f69a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# &#196;nderungen bei Konvertierungsoperatoren
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die Syntax für Konvertierungsoperatoren hat sich in [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] gegenüber Managed Extensions for C\+\+ geändert.  
+# <a name="changes-to-conversion-operators"></a>Änderungen bei Konvertierungsoperatoren
+Die Syntax für Konvertierungsoperatoren hat gegenüber Managed Extensions für C++ in Visual C++ geändert.  
   
- Ein Beispiel ist die Verwendung von `op_Implicit`, um eine Konvertierung anzugeben.  Hier sehen Sie eine der Sprachspezifikation entnommene Definition von `MyDouble`:  
+ Ein Beispiel für besteht darin zu schreiben `op_Implicit` eine Konvertierung angeben. Hier ist eine Definition der `MyDouble` der Sprachspezifikation entnommen:  
   
 ```  
 __gc struct MyDouble {  
@@ -38,9 +41,9 @@ __gc struct MyDouble {
 };  
 ```  
   
- Das bedeutet, dass der Algorithmus zur Konvertierung einer gegebenen ganzen Zahl in `MyDouble` durch den Operator `op_Implicit` bereitgestellt wird.  Darüber hinaus bedeutet es, dass die Konvertierung implizit durch den Compiler ausgeführt wird.  Ebenso stellen die beiden Operatoren `op_Explicit` die entsprechenden Algorithmen zur Konvertierung eines gegebenen `MyDouble`\-Objekts in eine ganze Zahl oder eine verwaltete `String`\-Entität bereit.  Der Compiler führt die Konvertierung jedoch nur aus, wenn sie vom Benutzer explizit angefordert wird.  
+ Das bedeutet, dass der Algorithmus zum Konvertieren von ganzen Zahl in eine ganze Zahl angegeben ein `MyDouble` wird bereitgestellt, indem Sie die `op_Implicit` Operator. Darüber hinaus wird diese Konvertierung implizit vom Compiler ausgeführt werden. Auf ähnliche Weise erhält eine `MyDouble` -Objekt, das zwei `op_Explicit` Operatoren geben Sie die jeweiligen Algorithmen zum Konvertieren dieses Objekts in eine ganze Zahl oder einen verwalteten `String` Entität. Allerdings wird der Compiler die Konvertierung nicht ausführen, es sei denn, Sie explizit vom Benutzer angefordert.  
   
- In C\# sieht dies folgendermaßen aus:  
+ In c# sieht dies wie folgt:  
   
 ```  
 class MyDouble {  
@@ -50,13 +53,13 @@ class MyDouble {
 };  
 ```  
   
- Der C\#\-Code hat deutlich mehr Ähnlichkeit mit C\+\+ als in Managed Extensions for C\+\+.  In der neuen Syntax ist das nicht der Fall.  
+ C#-Code sieht C++ mehr aus, als Managed Extensions for C++ ist. Also nicht der Fall, in der neuen Syntax.  
   
- Die ISO\-C\+\+\-Kommission führte das Schlüsselwort `explicit` ein, um unbeabsichtigte Folgen zu mindern. Eine `Array`\-Klasse, die ein einzelnes ganzzahliges Argument als Dimension erhält, konvertiert z. B. implizit jede ganze Zahl in ein `Array`\-Objekt, obwohl das sicherlich nicht dem gewünschten Ergebnis entspricht.  Eine Möglichkeit, dies zu verhindern, ist ein Designidiom eines zweiten Arguments \(als Dummy\) für einen Konstruktor.  
+ Die ISO-C++-Committee eingeführt, ein Schlüsselwort, `explicit`, gemindert werden kann unbeabsichtigte Folgen – z. B. ein `Array` Klasse, die ein einzelnes ganzzahliges Argument akzeptiert, wie eine beliebige ganze Zahl in eine Dimension implizit konvertiert ein `Array` -Objekt, das ist Sie nicht wünschen. Eine Möglichkeit, dies zu verhindern ist ein Entwurf-Idiom dummy zweites Argument an einen Konstruktor  
   
- Andererseits ist es keine gute Idee, beim Entwurf eines Klassentyps in C\+\+ ein Konvertierungspaar bereitzustellen.  Das beste Beispiel dafür ist die Standard\-Zeichenfolgenklasse.  Die implizite Konvertierung besteht in dem Einzelargumentkonstruktor, der eine Zeichenfolge im C\-Format annimmt.  Allerdings stellt er nicht den entsprechenden impliziten Konvertierungsoperator bereit, der ein Zeichenfolgenobjekt in eine Zeichenfolge mit C\-Format konvertiert, sondern verlangt vom Benutzer, dass er explizit eine benannte Funktion aufruft, in diesem Fall `c_str()`.  
+ Andererseits, sollten Sie ein Konvertierungspaar nicht bereitstellen, beim Entwerfen eines Klassentyps in C++. Das beste Beispiel für diese ist die Standardzeichenfolge-Klasse. Die implizite Konvertierung ist die Einzelargumentkonstruktor übernimmt eine Zeichenfolge im C-Format. Allerdings es bietet keine entsprechenden implizite Konvertierungsoperator -, der Konvertierung einer Zeichenfolge, die Sie Objekt in eine Zeichenfolge im C-Format, sondern stattdessen muss der Benutzer eine benannte Funktion – in diesem Fall explizit aufrufen, um `c_str()`.  
   
- Somit erscheint die Zuordnung von implizitem\/explizitem Verhalten zu einem Konvertierungsoperator \(ebenso wie die Kapselung des Konvertierungssatzes in eine einzige Deklarationsform\) als Verbesserung der ursprünglichen C\+\+\-Unterstützung von Konvertierungsoperatoren, die letztendlich zu dem `explicit`\-Schlüsselwort führte.  Die Unterstützung von Konvertierungsoperatoren durch die [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)]\-Programmiersprache ist aufgrund des Standardverhaltens des Operators, der eine implizite Anwendung des Konvertierungsalgorithmus unterstützt, etwas weniger aussagekräftig als in C\#:  
+ Eine Verbesserung gegenüber dem ursprünglichen C++-Unterstützung für Konvertierungsoperatoren, die schließlich zu den geführthat,werdendaherscheintZuordnenvonimplizitem/explizitemVerhalteneinesKonvertierungsoperators(undwiedieKapselungvonKonvertierungenineineeinzigeDeklaration)`explicit` Schlüsselwort. Die Visual C++-sprachunterstützung für Konvertierungsoperatoren sieht wie folgt aufgrund das Standardverhalten des Operators, der eine implizite Konvertierungsalgorithmus-Anwendung etwas weniger aufwändig als die von c# ist:  
   
 ```  
 ref struct MyDouble {  
@@ -67,7 +70,7 @@ public:
 };  
 ```  
   
- Eine weitere Änderung besteht darin, dass ein Einzelargumentkonstruktor behandelt wird, als ob er `explicit` deklariert wäre.  Dies bedeutet, dass eine explizite Umwandlung erforderlich ist, um seine Aufrufe auszulösen.  Beachten Sie jedoch Folgendes: Wenn ein expliziter Konvertierungsoperator definiert ist, wird dieser an Stelle des Einzelargumentkonstruktors aufgerufen.  
+ Eine andere Änderung ist, dass ein Einzelargumentkonstruktor behandelt wird, als ob er als deklariert wird `explicit`. Dies bedeutet, dass damit seine Aufrufe auszulösen, eine explizite Umwandlung erforderlich ist. Beachten Sie jedoch, dass wenn ein explizite Konvertierungsoperator definiert ist, er und nicht die Einzelargumentkonstruktor, aufgerufen wird.  
   
-## Siehe auch  
- [Memberdeklarationen innerhalb einer Klasse oder Schnittstelle \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)
+## <a name="see-also"></a>Siehe auch  
+ [Memberdeklarationen innerhalb einer Klasse oder Schnittstelle (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)

@@ -18,16 +18,17 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 74e4d0a87976017deda146274947d98a76002004
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fec44138379e3510f353f0fdd99f7a6a1905f9cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-variables"></a>Globale Variablen
 Die Microsoft C-Laufzeitbibliothek bietet die folgenden globalen Variablen oder Makros. Mehrere dieser globalen Variablen oder Makros sind veraltet und wurden durch sicherere, funktionsbereite Versionen ersetzt, die Sie anstelle der globalen Variablen verwenden sollten.  
   
-|Variable|Beschreibung|  
+|Variable|description|  
 |--------------|-----------------|  
 |[__argc, \__argv, \__wargv](../c-runtime-library/argc-argv-wargv.md)|Enthält die Befehlszeilenargumente.|  
 |[_daylight, _dstbias, _timezone, and _tzname](../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)|Veraltet. Verwenden Sie stattdessen `_get_daylight`, `_get_dstbias`, `_get_timezone` und `_get_tzname`.<br /><br /> Wird an die lokale Zeit angepasst und in einigen Datums- und Zeitfunktionen verwendet.|  

@@ -1,33 +1,36 @@
 ---
-title: "Gewusst wie: Lesen einer Textdatei (C++/CLI)"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Lesen von Textdateien"
-  - "Textdateien, Lesen"
+title: 'Vorgehensweise: Lesen einer Textdatei (C + c++ / CLI) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- reading text files
+- text files, reading
 ms.assetid: 80551c01-d769-4b6d-8db7-fd53bde21b62
-caps.latest.revision: 13
-caps.handback.revision: "13"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a1924a918d8a3255ca4a8488adc366155c1110dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Gewusst wie: Lesen einer Textdatei (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Im folgenden Codebeispiel wird veranschaulicht, wie eine Textdatei geöffnet und dann zeilenweise mithilfe der <xref:System.IO.StreamReader>\-Klasse gelesen wird, die im <xref:System.IO?displayProperty=fullName>\-Namespace definiert ist.  Mit einer Instanz dieser Klasse wird eine Textdatei geöffnet und anschließend jede Zeile mithilfe der <xref:System.IO.StreamReader.ReadLine*?displayProperty=fullName>\-Methode abgerufen.  
+# <a name="how-to-read-a-text-file-ccli"></a>Gewusst wie: Lesen einer Textdatei (C++/CLI)
+Im folgenden Codebeispiel wird veranschaulicht, wie eine Textdatei geöffnet und dann zeilenweise mithilfe der <xref:System.IO.StreamReader>-Klasse gelesen wird, die im <xref:System.IO?displayProperty=fullName>-Namespace definiert ist. Mit einer Instanz dieser Klasse wird eine Textdatei geöffnet und anschließend jede Zeile mithilfe der <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName>-Methode abgerufen.  
   
- In diesem Codebeispiel wird eine Datei mit dem Namen textfile.txt gelesen, die Text enthält.  Weitere Informationen über diese Art von Datei finden Sie unter [Gewusst wie: Schreiben einer Textdatei](../dotnet/how-to-write-a-text-file-cpp-cli.md).  
+ In diesem Codebeispiel wird eine Datei mit dem Namen textfile.txt gelesen, die Text enthält. Informationen über diese Art von Datei finden Sie unter [wie: Schreiben einer Textdatei (C + c++ / CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // text_read.cpp  
@@ -64,6 +67,6 @@ int main()
 }  
 ```  
   
-## Siehe auch  
- [Datei\- und Stream\-E\/A](../Topic/File%20and%20Stream%20I-O.md)   
- [.NET\-Programmierung mit C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [Datei- und Datenstrom-E/A](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
+ [.NET-Programmierung mit C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

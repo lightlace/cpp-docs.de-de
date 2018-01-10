@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ca98ae4f9df78b91fb3e6495c638952b6dbf2445
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 48f5ca02ef578d4dc01ce701b239d1aa279d05fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-cstringt"></a>CStringT verwenden
 Die Themen in diesem Abschnitt beschreiben die Programmierung mit der Vorlagenklasse [CStringT](../atl-mfc-shared/reference/cstringt-class.md).  

@@ -21,18 +21,19 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 44d262e27b47de0826024cb26e7f19280c6ed54e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a741008b894c5349bd198c2abfd13e11a158c4b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="console-and-port-io"></a>Konsole und Port-E/A
 Diese Routinen lesen und schreiben Daten in Ihre Konsole oder an den angegebenen Port. Die E/A-Routinen der Konsole sind nicht mit Stream-E/A oder E/A-Bibliotheksroutinen niedrigerer Ebenen kompatibel. Die Konsole oder der Port muss vor der Ausführung von E/A nicht geöffnet oder geschlossen werden, weshalb es in dieser Kategorie keine Routinen zum Öffnen oder Schließen gibt. In den Windows-Betriebssystemen wird die Ausgabe dieser Funktionen immer an die Konsole weitergeleitet und kann nicht umgeleitet werden.  
   
 ### <a name="console-and-port-io-routines"></a>Konsolen- und Port-E/A-Routinen  
   
-|Routine|Verwendung|  
+|-Routine zurückgegebener Wert|Mit|  
 |-------------|---------|  
 |[_cgets, _cgetws](../c-runtime-library/cgets-cgetws.md), [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)|Zeichenfolge aus der Konsole lesen|  
 |[_cprintf, _cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md), [_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l](../c-runtime-library/reference/cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md)|Formatierte Daten in Konsole schreiben|  

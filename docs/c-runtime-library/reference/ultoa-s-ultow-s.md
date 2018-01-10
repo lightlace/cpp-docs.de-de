@@ -42,11 +42,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7968e8f7eb3d69ec40d0fddab75ec2abee348823
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1785204bc6043973fac4eeb490b8e072e3ec4a95
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ultoas-ultows"></a>_ultoa_s, _ultow_s
 Eine lange ganze Zahl ohne Vorzeichen in eine Zeichenfolge konvertieren. Dies sind Versionen von [_ultoa, _ultow](../../c-runtime-library/reference/ultoa-ultow.md) mit Sicherheitsverbesserungen wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
@@ -101,7 +102,7 @@ errno_t _ultow_s(
   
  Wenn `str` ein `NULL`-Zeiger ist oder wenn `sizeOfstr` kleiner oder gleich null ist, wird der Handler für ungültige Parameter aufgerufen wie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen -1 zurück und legen `errno` auf `EINVAL` fest. Wenn `value` oder `str` außerhalb des Bereichs einer langen ganzen Zahl liegen, geben diese Funktionen -1 zurück und legen `errno` auf `ERANGE` fest.  
   
- In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
@@ -111,7 +112,7 @@ errno_t _ultow_s(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_ultoa_s`|\<stdlib.h>|  
 |`_ultow_s`|\<stdlib.h>|  
