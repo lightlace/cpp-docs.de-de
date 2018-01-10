@@ -1,41 +1,42 @@
 ---
-title: "vector::push_back (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::push_back"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "push_back-Member [STL/CLR]"
+title: 'Vector:: push_back (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::push_back
+dev_langs: C++
+helpviewer_keywords: push_back member [STL/CLR]
 ms.assetid: 4a4c302b-e29f-4b68-b759-2f831814d896
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3721f967290b540dd03d1cab2d12a4d47f3b3f73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# vector::push_back (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Fügt ein neues letzte Element hinzu.  
+# <a name="vectorpushback-stlclr"></a>vector::push_back (STL/CLR)
+Fügt ein neues Letztes Element hinzu.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void push_back(value_type val);  
 ```  
   
-## Hinweise  
- Die Memberfunktion wird ein Element mit dem Wert `val` am Ende der gesteuerten Sequenz.  Sie verwenden sie, um ein weiteres Element zum Vektor anfügen.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion Fügt ein Element mit dem Wert `val` am Ende der kontrollierten Sequenz. Sie verwenden es, ein anderes Element in den Vektor angefügt werden soll.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_vector_push_back.cpp   
@@ -58,12 +59,15 @@ int main()
   
 ```  
   
-  **ein b c**   
-## Anforderungen  
- **Header:** \<cliext\/Vektor\>  
+```Output  
+a b c  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Vektor >  
   
-## Siehe auch  
- [Vektor](../dotnet/vector-stl-clr.md)   
- [vector::pop\_back](../dotnet/vector-pop-back-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Vektor (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector::pop_back (STL/CLR)](../dotnet/vector-pop-back-stl-clr.md)

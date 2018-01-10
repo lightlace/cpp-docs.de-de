@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,35 +15,19 @@ f1_keywords:
 - ATLCOM/ATL::CComClassFactory2::GetLicInfo
 - ATLCOM/ATL::CComClassFactory2::LockServer
 - ATLCOM/ATL::CComClassFactory2::RequestLicKey
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComClassFactory2 class
+dev_langs: C++
+helpviewer_keywords: CComClassFactory2 class
 ms.assetid: 19b66fd6-b9ed-47a0-822c-8132184f5a3e
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 61026044fb5a4da7bebfe8f369c68af4c37ebf44
-ms.contentlocale: de-de
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b5b1626a9ce7ef729416f7e6e1a6d3c60836dbed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomclassfactory2-class"></a>CComClassFactory2-Klasse
 Diese Klasse implementiert die [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) Schnittstelle.  
@@ -64,11 +47,11 @@ class CComClassFactory2 : public IClassFactory2,
   
 - **statische BOOL VerifyLicenseKey (BSTR** `bstr` **);**  
   
-- **statische BOOL GetLicenseKey (DWORD** `dwReserved` **, BSTR\*** `pBstr` **);**  
+- **statische BOOL GetLicenseKey (DWORD** `dwReserved` **, BSTR\***  `pBstr` **);**  
   
 - **statische IsLicenseValid BOOL ();**  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
@@ -85,11 +68,11 @@ class CComClassFactory2 : public IClassFactory2,
   
  ATL-Objekte abrufen eine Klassenfactory normalerweise durch Ableiten von [CComCoClass](../../atl/reference/ccomcoclass-class.md). Diese Klasse enthält das Makro [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), die deklariert wird, [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) als der standardfactory-Klasse. Mit `CComClassFactory2`, geben Sie die [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2) Makro in die Definition der Klasse des Objekts. Zum Beispiel:  
   
- [!code-cpp[NVC_ATL_COM NR. 2](../../atl/codesnippet/cpp/ccomclassfactory2-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/ccomclassfactory2-class_1.h)]  
   
  **CMyLicense**, der Vorlagenparameter `CComClassFactory2`, muss die statischen Funktionen implementieren `VerifyLicenseKey`, `GetLicenseKey`, und `IsLicenseValid`. Im folgenden finden ein Beispiel einer einfachen Lizenz-Klasse:  
   
- [!code-cpp[NVC_ATL_COM NR. 3](../../atl/codesnippet/cpp/ccomclassfactory2-class_2.h)]  
+ [!code-cpp[NVC_ATL_COM#3](../../atl/codesnippet/cpp/ccomclassfactory2-class_2.h)]  
   
  `CComClassFactory2`leitet sich von sowohl **CComClassFactory2Base** und *Lizenz*. **CComClassFactory2Base**, leitet sich wiederum von **IClassFactory2** und **CComObjectRootEx\< CComGlobalsThreadModel >**.  
   
@@ -210,7 +193,7 @@ STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
   
 ### <a name="parameters"></a>Parameter  
  `dwReserved`  
- [in] Nicht verwendet. Muss Null sein.  
+ [in] Nicht verwendet. NULL muss sein.  
   
  `pbstrKey`  
  [out] Ein Zeiger auf den Lizenzschlüssel.  
@@ -229,4 +212,3 @@ STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
  [CComObjectRootEx-Klasse](../../atl/reference/ccomobjectrootex-class.md)   
  [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
  [Klassenübersicht](../../atl/atl-class-overview.md)
-

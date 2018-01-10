@@ -167,11 +167,12 @@ caps.latest.revision: "42"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 397572f735fc6392be875c95fd57749e0503b77b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d3d5080f86760c997c2036e766db66a5c4215f1f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx-Klasse
 Erweitert die Funktionalität der [CMDIFrameWnd](../../mfc/reference/cframewnd-class.md), eines Rahmenfensters Windows Interface (MDI, Multiple Document).  
@@ -182,7 +183,7 @@ Erweitert die Funktionalität der [CMDIFrameWnd](../../mfc/reference/cframewnd-c
 class CMDIFrameWndEx : public CMDIFrameWnd  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
@@ -209,7 +210,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx:: Enablemditabbedgroups](#enablemditabbedgroups)|Aktiviert oder deaktiviert das Feature im Registerkartenformat MDI-Gruppen.|  
 |[CMDIFrameWndEx::EnableMDITabs](#enablemditabs)|Aktiviert oder deaktiviert die Registerkarten der MDI-Funktion. Wenn aktiviert, zeigt das Rahmenfenster eine Registerkarte für jeden untergeordneten MDI-Fensters.|  
 |[CMDIFrameWndEx::EnableMDITabsLastActiveActivation](#enablemditabslastactiveactivation)|Gibt an, ob die zuletzt aktive Registerkarte aktiviert werden soll, wenn der Benutzer als aktuelle Registerkarte geschlossen wird.|  
-|[CMDIFrameWndEx::EnablePaneMenu](#enablepanemenu)|Aktiviert oder deaktiviert die automatische Erstellung und Verwaltung des Menüs Popup-Bereich, der eine Liste von Bereichen der Anwendung angezeigt.  .|  
+|[CMDIFrameWndEx::EnablePaneMenu](#enablepanemenu)|Aktiviert oder deaktiviert die automatische Erstellung und Verwaltung des Menüs Popup-Bereich, der eine Liste von Bereichen der Anwendung angezeigt.  sein.|  
 |[CMDIFrameWndEx::EnableWindowsDialog](#enablewindowsdialog)|Fügt ein Menüelement, deren Befehls-ID aufruft einer [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) (Dialogfeld).|  
 |[CMDIFrameWndEx::GetActivePopup](#getactivepopup)|Gibt einen Zeiger auf das aktuell angezeigte Popupmenü zurück.|  
 |[CMDIFrameWndEx::GetPane](#getpane)|Gibt einen Zeiger auf den Bereich, der das angegebene Steuerelement-ID verfügt.|  
@@ -268,7 +269,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
   
 ### <a name="data-members"></a>Datenmember  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |[CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild)|Bestimmt, ob das andockbare Bereiche in untergeordneten MDI-Fenster konvertiert werden können.|  
 |[CMDIFrameWndEx::m_bDisableSetRedraw](#m_bdisablesetredraw)|Aktiviert oder deaktiviert die Neuzeichnen-Optimierung für untergeordnete MDI-Fenster.|  
@@ -496,7 +497,7 @@ BOOL DockPaneLeftOf(
  Ein Zeiger auf die andockbaren Bereich.  
   
  [in] `pLeftOf`  
- Ein Zeiger auf den Bereich, der als der DockPosition dient. .  
+ Ein Zeiger auf den Bereich, der als der DockPosition dient. sein.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt `TRUE` , wenn der Vorgang erfolgreich ist. Andernfalls wird `FALSE` zurückgegeben.  

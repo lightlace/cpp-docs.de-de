@@ -12,14 +12,13 @@ f1_keywords:
 - string/std::u32string
 - string/std::wstring
 ms.assetid: fdca01e9-f2f1-4b59-abda-0093d760b3cc
-caps.latest.revision: 12
+caps.latest.revision: "12"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 683d3f5848ab86a9a80c25a09ac110b2abb2f5e2
-ms.contentlocale: de-de
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltstringgt-typedefs"></a>&lt;string&gt;-Typdefinitionen
 ||||  
@@ -28,7 +27,7 @@ ms.lasthandoff: 10/03/2017
 |[wstring](#wstring)|  
   
 ##  <a name="string"></a> string  
- Ein Typ, der eine Spezialisierung der Vorlagenklasse [basic_string](../standard-library/basic-string-class.md) mit Elementen des Typs `char` beschreibt.  
+ Ein Typ, der eine Spezialisierung der Vorlagenklasse [Basic_string](../standard-library/basic-string-class.md) mit Elementen des Typs`char` beschreibt.  
   
  Andere `basic_string` spezialisierende Typdefinitionen umfassen [wstring](../standard-library/string-typedefs.md#wstring), [u16string](../standard-library/string-typedefs.md#u16string) und [u32string](../standard-library/string-typedefs.md#u32string).  
   
@@ -72,7 +71,7 @@ typedef basic_string<char32_t, char_traits<char32_t>, allocator<char32_t>> u32st
  Eine Liste der String-Konstruktoren finden Sie unter [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).  
   
 ##  <a name="wstring"></a> wstring  
- Ein Typ, der eine Spezialisierung der Vorlagenklasse [basic_string](../standard-library/basic-string-class.md) mit Elementen des Typs `wchar_t` beschreibt.  
+ Ein Typ, der eine Spezialisierung der Vorlagenklasse [Basic_string](../standard-library/basic-string-class.md) mit Elementen des Typs`wchar_t` beschreibt.  
   
  Andere `basic_string` spezialisierende Typdefinitionen umfassen [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string) und [u32string](../standard-library/string-typedefs.md#u32string).  
   
@@ -96,7 +95,6 @@ basic_string<wchar_t> wstr(L"");
   
 ## <a name="see-also"></a>Siehe auch  
  [\<string>](../standard-library/string.md)
-
 
 
 

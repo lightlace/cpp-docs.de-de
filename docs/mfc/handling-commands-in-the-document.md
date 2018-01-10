@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9f826454a1cbad24b9fa1d6456630b91bfcbfe8c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a8d27698d573e1dee539f93ab88015285648fa77
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="handling-commands-in-the-document"></a>Behandeln von Kommentaren in einem Dokument
 Ihre Dokumentklasse kann auch bestimmte Befehle, die durch die Menüelemente, Symbolleisten-Schaltflächen und Zugriffstasten generiert gehalten werden. Standardmäßig **CDocument** behandelt speichern, und speichern unter Befehle im Menü Datei mithilfe der Serialisierung. Andere Befehle, die Daten auswirken, können auch von Memberfunktionen des Dokuments behandelt werden. In das Scribble-Programm, z. B. Klasse `CScribDoc` stellt einen Handler für den Befehl Alle löschen bearbeiten, dadurch werden alle derzeit im Dokument gespeicherten Daten gelöscht. Dokumente können meldungszuordnungen, aber im Gegensatz zu Ansichten, Dokumente können nicht standardmäßige Windows-Meldungen verarbeiten – nur **WM_COMMAND** Nachrichten oder "Befehle".  

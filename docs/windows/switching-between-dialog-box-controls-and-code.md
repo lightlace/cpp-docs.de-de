@@ -1,59 +1,63 @@
 ---
-title: "Switching Between Dialog Box Controls and Code | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "events [C++], viewing for controls"
-  - "Windows messages [C++], controls"
-  - "messages [C++], viewing for dialog boxes"
-  - "Dialog editor, accessing code"
-  - "code [C++], switching from Dialog Editor"
-  - "controls [C++], jumping to code"
-  - "Dialog editor, switching between controls and code"
+title: Umschalten zwischen Dialogfeld-Steuerelemente und Code | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- events [C++], viewing for controls
+- Windows messages [C++], controls
+- messages [C++], viewing for dialog boxes
+- Dialog editor, accessing code
+- code [C++], switching from Dialog Editor
+- controls [C++], jumping to code
+- Dialog editor, switching between controls and code
 ms.assetid: 7da73815-b853-4203-ba45-bbe570695122
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 81f8ea53cf6c4428913ce7ebfa4183c135208024
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Switching Between Dialog Box Controls and Code
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In MFC\-Anwendungen können Sie auf Dialogfeld\-Steuerelemente doppelklicken, um direkt zum Handlercode zu gelangen oder schnell und einfach Stubhandlerfunktionen zu erstellen.  
+# <a name="switching-between-dialog-box-controls-and-code"></a>Umschalten zwischen Dialogfeld-Steuerelementen und Code
+In MFC-Anwendungen Doppelklicken Sie auf Dialogfeld-Steuerelemente Codeprobleme Handler springen soll, oder schnell Stub Handlerfunktionen erstellen.  
   
- Um eine vollständige Liste der für das ausgewählte Element verfügbaren Windows\-Meldungen und \-Ereignisse zu erhalten, klicken Sie im [Eigenschaftenfenster](../Topic/Properties%20Window.md) auf die Schaltfläche **Ereignisse** oder **Meldungen**, während ein Steuerelement ausgewählt ist.  Wählen Sie eine Option aus der Liste aus, oder bearbeiten Sie die Handlerfunktionen.  
+ Mit einem Steuerelement ausgewählt ist, klicken Sie auf die **Steuerelementereignisse** Schaltfläche oder die **Nachrichten** Schaltfläche der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window) eine vollständige Liste der Windows-Nachrichten und Ereignisse anzeigen für das ausgewählte Element verfügbar. Wählen Sie aus der Liste zu erstellen oder Bearbeiten von Handlerfunktionen verknüpft.  
   
-### So wechseln Sie im Dialog\-Editor direkt zum Code  
+### <a name="to-jump-to-code-from-the-dialog-editor"></a>Springen zu Code aus dem Dialog-editor  
   
-1.  Doppelklicken Sie innerhalb des Dialogfelds auf ein Steuerelement, um zur Deklaration seiner zuletzt implementierten Meldungsbehandlungsfunktion zu springen.  \(Bei ATL\-basierten Dialogfeldklassen wechseln Sie stets zur Konstruktordefinition.\)  
+1.  Doppelklicken Sie auf ein Steuerelement in das Dialogfeld, um die Deklaration für die zuletzt implementierten Meldungsbehandlung-Funktion zu wechseln. (Für ATL-basierten Dialogfeldklassen springen Sie immer die Definition des Konstruktors.)  
   
-### So zeigen Sie Ereignisse für ein Steuerelement an  
+### <a name="to-view-events-for-a-control"></a>So zeigen Sie Ereignisse für ein Steuerelement an  
   
-1.  Klicken Sie, während ein Steuerelement ausgewählt ist, im [Eigenschaftenfenster](../Topic/Properties%20Window.md) auf die Schaltfläche **Ereignisse**.  
+1.  Mit einem Steuerelement ausgewählt ist, klicken Sie auf die **Steuerelementereignisse** Schaltfläche der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window).  
   
     > [!NOTE]
-    >  Wenn Sie auf die Schaltfläche **Steuerelementereignisse** klicken, während sich der Fokus im *Dialogfeld* befindet, wird eine Liste aller im Dialogfeld enthaltenen Steuerelemente angezeigt. Diese Liste kann erweitert werden, um Ereignisse einzelner Steuerelemente zu bearbeiten.  
+    >  Klicken auf die **Steuerelementereignisse** Schaltfläche, wenn die *Dialogfeld* verfügt über eine Liste aller Steuerelemente, den Fokus verfügbar macht, im Dialogfeld, die Sie erweitern können, um die Ereignisse für die einzelnen Steuerelemente zu bearbeiten.  
   
-     Wenn ein einzelnes Steuerelement im Dialogfeld den Fokus besitzt, können Sie mit der rechten Maustaste darauf klicken und im Kontextmenü die Option **Ereignishandler hinzufügen** auswählen.  Auf diese Weise können Sie die Klasse festlegen, der der Handler hinzugefügt wird.  Weitere Informationen finden Sie unter [Hinzufügen eines Ereignishandlers](../ide/adding-an-event-handler-visual-cpp.md).  
+     Wenn ein einzelnes Steuerelement im Dialogfeld den Fokus besitzt, können Sie Maustaste und wählen **Ereignishandler hinzufügen** aus dem Kontextmenü. Dadurch können Sie die Klasse an, die der Handler hinzugefügt wird. Weitere Informationen finden Sie unter [Hinzufügen eines Ereignishandlers](../ide/adding-an-event-handler-visual-cpp.md).  
   
-### So zeigen Sie Meldungen für ein Dialogfeld an  
+### <a name="to-view-messages-for-a-dialog-box"></a>Zum Anzeigen von Nachrichten für eine (Dialogfeld)  
   
-1.  Klicken Sie, während das Dialogfeld ausgewählt ist, im [Eigenschaftenfenster](../Topic/Properties%20Window.md) auf die Schaltfläche **Meldungen**.  
+1.  Aktivieren Sie das Dialogfeld, und klicken Sie auf die **Nachrichten** Schaltfläche der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window).  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
   
  Anforderungen  
   
  Win32  
   
-## Siehe auch  
- [Dialog Editor](../mfc/dialog-editor.md)
+## <a name="see-also"></a>Siehe auch  
+ [Dialog-Editor](../windows/dialog-editor.md)
+

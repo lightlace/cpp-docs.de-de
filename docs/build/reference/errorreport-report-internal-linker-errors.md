@@ -1,7 +1,7 @@
 ---
 title: -ERRORREPORT (internen Linkerfehlern) | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 12/28/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-tools
@@ -20,39 +20,51 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e6242457bb4da3e19700f5018b2a484bfa05630b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6ddf65ed2a17dae2d86b0dc4582f1d3158328898
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="errorreport-report-internal-linker-errors"></a>/ERRORREPORT (Weiterleiten von internen Linkerfehlern)
-```  
-/errorReport:[ none | prompt | queue | send ]  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Ermöglicht es Ihnen, Informationen über interne Compilerfehler (ICE) direkt an Microsoft zu senden.  
-  
- Die Option **/errorreport: Send** Fehlerinformationen automatisch an Microsoft, aber Erfolg zu senden versucht, hängt von registrierungseinstellungen. Weitere Informationen dazu, wie Sie die entsprechenden Werte in der Registrierung festlegen, finden Sie unter [Aktivieren der automatischen Fehlerberichterstattung in Visual Studio 2008-Befehlszeilentools](http://go.microsoft.com/fwlink/?LinkID=184695) auf der MSDN-Website.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
-  
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
-  
-2.  Klicken Sie auf die **Konfigurationseigenschaften** Ordner.  
-  
-3.  Klicken Sie auf die **Linker** Ordner.  
-  
-4.  Klicken Sie auf die **erweitert** Eigenschaftenseite.  
-  
-5.  Ändern der **-Fehlerberichterstattung**Eigenschaft.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
-  
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ErrorReporting%2A>.  
-  
-## <a name="see-also"></a>Siehe auch  
- [/ errorreport (Bericht interne Compilerfehler)](../../build/reference/errorreport-report-internal-compiler-errors.md)   
- [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
- [Linkeroptionen](../../build/reference/linker-options.md)
+
+> **/ errorreport:**[ **keine** | **Eingabeaufforderung** | **Warteschlange** | **senden** ]
+
+## <a name="arguments"></a>Argumente
+
+**none**  
+Berichte zu internen Compilerfehlern werden nicht gesammelt oder an Microsoft gesendet.
+
+**Aufforderung**  
+Sie werden aufgefordert, einen Bericht zu senden, wenn Sie einen internen Compilerfehler empfangen. **Eingabeaufforderung** ist die Standardeinstellung, wenn eine Anwendung in der Entwicklungsumgebung kompiliert wird.
+
+**Warteschlange**  
+Der Fehlerbericht wird in die Warteschlange gesetzt. Wenn Sie sich mit Administratorrechten anmelden, wird ein Fenster angezeigt, sodass Sie alle Fehler seit der letzten Ausführung melden können, wurden Sie sich angemeldet (nicht werden Sie aufgefordert, Fehlerberichte Senden von mehr als einmal alle drei Tage). **Warteschlange** ist die Standardeinstellung, wenn eine Anwendung in einer Befehlszeile kompiliert wird.
+
+**Senden**  
+Automatisch Berichte über interne Compilerfehler an Microsoft gesendet, sofern reporting durch die Einstellungen für Windows-Fehlerberichterstattung aktiviert ist.
+
+## <a name="remarks"></a>Hinweise
+
+Die **/errorreport** Option können Sie die Informationen interner Compilerfehler (ICE) direkt an Microsoft zu senden.
+
+Die Option **/errorreport: Send** automatisch Fehlerinformationen an Microsoft sendet, wenn von Windows Error Reporting Service-Einstellungen aktiviert.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
+
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).
+
+1. Öffnen der **Konfigurationseigenschaften** > **Linker** > **erweitert** Eigenschaftenseite.
+
+1. Ändern der **-Fehlerberichterstattung** Eigenschaft.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest
+
+- Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ErrorReporting%2A>.
+
+## <a name="see-also"></a>Siehe auch
+
+[/ errorreport (Bericht interne Compilerfehler)](../../build/reference/errorreport-report-internal-compiler-errors.md)  
+[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)  
+[Linkeroptionen](../../build/reference/linker-options.md)  

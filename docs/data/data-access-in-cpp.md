@@ -19,11 +19,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9bae9c7d8e50ca12767e5baed436912f04daafd9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: eaefb5f3ed8bd0c586e42527d47918dbb0dd5a57
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-access-in-visual-c"></a>Datenzugriff in Visual C++
 
@@ -46,7 +49,7 @@ Seit 2011 hat Microsoft ODBC als Standard für native Anwendungen zur Verbindung
 
 [ODBC Driver 13.1 for SQL Server - Windows freigegeben](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/08/01/announcing-the-odbc-driver-13-1-for-sql-server) der aktuelle ODBC-Treiber stellt zuverlässigen Datenzugriff auf Microsoft SQL Server 2016 Microsoft Azure SQL-Datenbank für C/C++-Anwendungen basierte. Bietet Unterstützung für einschließlich grundsätzlichen, Azure Active Directory und AlwaysOn-Verfügbarkeitsgruppen. Auch für MacOS und Linux verfügbar.     
  
-[SQL Server Native Client](https://msdn.microsoft.com/library/ms130892.aspx) SQL Server Native Client ist eine eigenständige Data Access Anwendungsprogrammierschnittstelle (API), verwendet für OLE DB und ODBC, die SQL Server 2005 über SQL Server 2014 unterstützt. Neue Anwendungen sollten den ODBC-Treiber 13.1 für SQL Server verwenden.
+[SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client-programming) SQL Server Native Client ist eine eigenständige Data Access Anwendungsprogrammierschnittstelle (API), verwendet für OLE DB und ODBC, die SQL Server 2005 über SQL Server 2014 unterstützt. Neue Anwendungen sollten den ODBC-Treiber 13.1 für SQL Server verwenden.
 
 [Microsoft Azure C- und C++ Developer Center](https://azure.microsoft.com/develop/cpp/) Azure erleichtert das Erstellen von C++-Anwendungen mit mehr Flexibilität, Skalierbarkeit und Zuverlässigkeit mithilfe von Tools, die Ihnen gefallen.    
 

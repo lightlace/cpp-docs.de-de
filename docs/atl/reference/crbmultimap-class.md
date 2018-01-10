@@ -23,11 +23,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1e359b6bcb7ba201991575ab310e0db9b3b4f06a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 79ef7fdd5799b01ec115befcd50bbe4625d48bea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crbmultimap-class"></a>CRBMultiMap-Klasse
 Diese Klasse stellt eine Zuordnungsstruktur, die ermöglicht, dass jeder Schlüssel mehr als ein Wert mit einer Binärstruktur Rot Schwarz zugeordnet werden kann.  
@@ -55,7 +56,7 @@ class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
  `VTraits`  
  Der Code zum Kopieren oder verschieben Wertelemente verwendet.  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -216,7 +217,7 @@ POSITION Insert(KINARGTYPE key, VINARGTYPE value) throw(...);
  `key`  
  Der Schlüsselwert, der zum Hinzufügen der `CRBMultiMap` Objekt.  
   
- *value*  
+ *Wert*  
  Der hinzuzufügende Wert der `CRBMultiMap` Objekt zugeordneten `key`.  
   
 ### <a name="return-value"></a>Rückgabewert  

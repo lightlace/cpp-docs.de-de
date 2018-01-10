@@ -1,49 +1,48 @@
 ---
-title: "for (OpenMP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "for"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "for OpenMP directive"
+title: "für (OpenMP) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: for
+dev_langs: C++
+helpviewer_keywords: for OpenMP directive
 ms.assetid: 8b54e034-9db2-4c1a-a2b1-72e14e930506
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 97c32bd93ca208d76fbcb418c6e851e3c50f49ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# for (OpenMP)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Bewirkt, dass die Arbeit, die in eine for\-Schleife innerhalb eines parallelen Bereichs unter Threads aufgeteilt werden sollen.  
+# <a name="for-openmp"></a>for (OpenMP)
+Bewirkt, dass die Arbeit in einer for-Schleife innerhalb eines parallelen Bereichs zwischen Threads aufgeteilt werden.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #pragma omp [parallel] for [clauses]  
    for_statement  
 ```  
   
-## Hinweise  
- Hierbei ist:  
+## <a name="remarks"></a>Hinweise  
+ wobei  
   
- `clause` \(optional\)  
- Null oder mehr Klauseln.  Weitere Informationen finden Sie im Abschnitt " Hinweise " für eine Liste von Klauseln, die von **nach**unterstützt werden.  
+ `clause` (optional)  
+ NULL oder mehr Klauseln. Finden Sie im Abschnitt "Hinweise" eine Liste von unterstützten Klauseln **für**.  
   
  `for_statement`  
- A for\-Schleife.  Nicht definiertes Verhalten tritt auf, wenn Benutzercode in for\-Schleife die Indexvariable ändert.  
+ Eine for-Schleife. Nicht definiertem Verhalten führt, wenn der Benutzer im code ist die für die Schleife die Indexvariable ändert.  
   
-## Hinweise  
- Die **nach** unterstützen die folgenden Direktiven OpenMP\-Klauseln:  
+## <a name="remarks"></a>Hinweise  
+ Die **für** Richtlinie unterstützt die folgenden OpenMP-Klauseln:  
   
 -   [firstprivate](../../../parallel/openmp/reference/firstprivate.md)  
   
@@ -51,19 +50,19 @@ Bewirkt, dass die Arbeit, die in eine for\-Schleife innerhalb eines parallelen B
   
 -   [nowait](../../../parallel/openmp/reference/nowait.md)  
   
--   [geordnet](../../../parallel/openmp/reference/ordered-openmp-directives.md)  
+-   [sortiert](../../../parallel/openmp/reference/ordered-openmp-directives.md)  
   
 -   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
--   [Verringerung](../../../parallel/openmp/reference/reduction.md)  
+-   [reduction](../../../parallel/openmp/reference/reduction.md)  
   
--   [Zeitplan](../../../parallel/openmp/reference/schedule.md)  
+-   [schedule](../../../parallel/openmp/reference/schedule.md)  
   
- Wenn **Ähnlichkeit** ebenfalls angegeben wird, kann `clause` jede Klausel sein, die von der **Ähnlichkeit** oder **nach**\-Direktive außer **nowait**akzeptiert wird.  
+ Wenn **parallele** ebenfalls angegeben wird, `clause` kann jede beliebige Klausel vom akzeptiert die **parallele** oder **für** Direktiven, mit Ausnahme von **Nowait**.  
   
- Weitere Informationen finden Sie unter [2.4.1 für Konstrukt](../../../parallel/openmp/2-4-1-for-construct.md).  
+ Weitere Informationen finden Sie unter [2.4.1 for-Konstrukt](../../../parallel/openmp/2-4-1-for-construct.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // omp_for.cpp  
@@ -122,6 +121,10 @@ int main() {
 }  
 ```  
   
-  **4 OpenMP\-Threads verwendet wurden.  Die Summe von 1 bis 10 ist 55.**    
-## Siehe auch  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+```Output  
+4 OpenMP threads were used.  
+The sum of 1 through 10 is 55  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Anweisungen](../../../parallel/openmp/reference/openmp-directives.md)

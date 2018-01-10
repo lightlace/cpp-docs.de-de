@@ -1,79 +1,82 @@
 ---
-title: "Umwandlungsnotation und Einf&#252;hrung in safe_cast&lt;&gt;"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Umwandlung von Typen"
-  - "C-stilartige Umwandlungen und /clr, Motive für neue Umwandlungsnotation"
-  - "safe_cast-Schlüsselwort [C++]"
+title: "Umwandlungsnotation und Einführung in Safe_cast&lt; &gt; | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- casting
+- C-style casts and /clr, motivation for new cast notation
+- safe_cast keyword [C++]
 ms.assetid: 4eb1d000-3b93-4394-a37b-8b8563f8dc4d
-caps.latest.revision: 9
-caps.handback.revision: "9"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 80d1a6e8b1a1691b4e76bfdc1232c95c22d01408
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Umwandlungsnotation und Einf&#252;hrung in safe_cast&lt;&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die Umwandlungsnotation hat sich in [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] gegenüber Managed Extensions for C\+\+ geändert.  
+# <a name="cast-notation-and-introduction-of-safecastltgt"></a>Umwandlungsnotation und Einführung von "safe_cast"&lt;&gt;
+Die Umwandlungsnotation hat gegenüber Managed Extensions für C++ in Visual C++ geändert.  
   
- Das Ändern einer vorhandenen Struktur ist vollkommen anders und wesentlich schwieriger als das Erstellen der ursprünglichen Struktur,  bei dem der Entwickler über eine viel größere Freiheit verfügt. Die Lösung stellt immer einen Kompromiss zwischen einer idealen Restrukturierung und den praktischen Gegebenheiten dar, die durch die vorhandenen strukturellen Abhängigkeiten festgelegt werden.  
+ Ändern einer vorhandenen Struktur umfasst eine unterschiedlich und schwieriger als das Erstellen der ursprünglichen Struktur. Es gibt weniger Freiheitsgrade, und die Lösung tendiert einen Kompromiss zwischen einem idealen Umstrukturierung und was bei Berücksichtigung der vorhandenen strukturellen Abhängigkeiten durchführbar ist.  
   
- Ein weiteres Beispiel dafür stellen Spracherweiterungen dar.  In den frühen 90er Jahren, als die objektorientierte Programmierung zu einem wichtigen Paradigma aufstieg, wurde ein typsicherer Downcastmechanismus für C\+\+ erforderlich.  Als Downcasting wird die explizite Umwandlung eines Basisklassenzeigers oder einer Basisklassenreferenz in einen Zeiger oder eine Referenz einer abgeleiteten Klasse durch den Benutzer bezeichnet.  Downcasting erfordert eine explizite Umwandlung.  Der Grund liegt darin, dass der aktuelle Typ des Basisklassenzeigers ein Aspekt der Laufzeit ist. Daher kann der Compiler den Typ nicht überprüfen.  Anders gesagt, ist für einen Downcastmechanismus genau wie für einen virtuellen Funktionsaufruf eine Form von dynamischer Auflösung erforderlich.  Dies wirft zwei Fragen auf:  
+ Erweiterung der Sprache ist ein weiteres Beispiel. Als objektorientierte Programmierung ein wichtiger Paradigma wurde, wurde die Notwendigkeit für eine Verweisklasse als typsicherer-Funktion in der C++ zurück in den frühen 1990ern drücken. Downcasting ist der Benutzer explizite Konvertierung einer Basisklasse Zeiger oder Verweis auf einen Zeiger oder Verweis von einer abgeleiteten Klasse. Downcasting ist eine explizite Umwandlung erforderlich. Der Grund hierfür ist, dass der tatsächliche Typ des Zeigers Basisklasse einen Aspekt der Laufzeit ist; aus diesem Grund kann der Compiler nicht überprüfen. Oder um, die zu formulieren, erfordert eine Verweisklasse Einrichtung, genau wie einen virtuellen Funktionsaufruf, eine Form der dynamische Auflösung. Dies löst zwei Fragen:  
   
--   Warum ist Downcasting im objektorientierten Paradigma notwendig?  Ist der virtuelle Funktionsmechanismus nicht ausreichend?  Mit anderen Worten: Warum ist es falsch, zu behaupten, dass der Bedarf an Downcasting \(oder jeder Art von Umwandlung\) durch einen Designfehler entsteht?  
+-   Warum sollte eine Umwandlung in die objektorientierte Paradigma nicht erforderlich? Ist der nicht Mechanismus der virtuellen Funktion ausreichend? D. h. behaupten kann nicht warum eine, dass eine Umwandlung (oder eine Umwandlung irgendeiner Art) müssen einen Entwurf handelt?  
   
--   Warum sollte die Unterstützung für Downcasting in C\+\+ ein Problem darstellen?  Schließlich stellt dies in objektorientierten Sprachen wie Smalltalk \(oder auch Java und C\#\) kein Problem dar.  Was ist das Besondere an C\+\+, das die Unterstützung eines Downcastmechanismus so kompliziert macht?  
+-   Warum sollten Unterstützung für eine Verweisklasse in C++ ein Problem werden? Nachdem alle, es ist kein Problem in objektorientierten Sprachen wie z. B. Smalltalk (oder später, Java und c#)? Was ist C++, die macht Ihre Unterstützung einer Verweisklasse Einrichtung schwierig?  
   
- Eine virtuelle Funktion stellt einen typabhängigen und für eine Familie von Typen üblichen Algorithmus dar. \(Dies bezieht sich nicht auf Schnittstellen, die von ISO\-C\+\+ nicht unterstützt werden, jedoch bei der CLR\-Programmierung verfügbar sind und eine interessante Designalternative darstellen.\)  Das Design dieser Familie wird üblicherweise durch eine Klassenhierarchie repräsentiert, die eine abstrakte Basisklasse mit der Definition der gemeinsamen Schnittstelle \(den virtuellen Funktionen\) sowie einen Satz konkreter, abgeleiteter Klassen enthält, die die aktuellen Typen der Familien in der Anwendungsdomäne darstellen.  
+ Eine virtuelle Funktion stellt einen allgemeine typabhängige-Algorithmus für eine Familie von Typen dar. (Es werden nicht unter Berücksichtigung der Schnittstellen, die in ISO C++ nicht unterstützt, jedoch stehen im CLR-Programmierung und die Alternative Entwurf interessante darstellen). Das Design dieser Familie ist in der Regel von einer Klassenhierarchie dargestellt in dem es eine abstrakte Basisklasse ist, deklarieren die allgemeine Schnittstelle (den virtuellen Funktionen) und einen Satz von konkrete abgeleitete Klassen, die die tatsächlichen Familie Typen in der Anwendung darstellen Domäne.  
   
- So verfügt z. B. eine `Light`\-Hierarchie in einer CGI \(Computer Generated Imagery\)\-Anwendungsdomäne über gemeinsame Attribute wie `color`, `intensity`, `position`, `on`, `off` usw.  Man kann eine Reihe von Lampen über die gemeinsame Schnittstelle steuern, ohne sich darum zu kümmern, ob eine bestimmte Lampe ein Scheinwerfer, ein Richtstrahler, eine ungerichtete Lichtquelle \(wie die Sonne\) oder vielleicht eine Scheunentorbeleuchtung ist.  In diesem Fall ist kein Downcasting auf einen bestimmten Lampentyp erforderlich, um die virtuelle Schnittstelle zu verwenden.  In einer Produktionsumgebung kommt es jedoch auf Geschwindigkeit an.  An dieser Stelle könnte man sich für Downcasting entscheiden und jede Methode explizit aufzurufen, wenn man dadurch den Virtualitätsmechanismus umgehen und die Aufrufe inline ausführen kann.  
+ Ein `Light` Hierarchie in einer generierten Bilder CGI (Computer) Anwendungsdomäne, z. B. haben dieselben Attribute wie z. B. `color`, `intensity`, `position`, `on`, `off`und so weiter. Eine kann mehrere Leuchten steuern, über die allgemeine Schnittstelle unabhängig von, ob eine bestimmte eine Spotlight, eine direktionale, eine hell nicht direktionale (Reaktionszeiten der Sonne), oder vielleicht ein Streifen Tür Licht leuchtet. Downcasting auf einen bestimmten Light-Typ, der die virtuelle Schnittstelle ist in diesem Fall nicht erforderlich. In einer produktionsumgebung unbedingt jedoch Geschwindigkeit. Eine Verweisklasse kann und jede Methode explizit aufzurufen, wenn dadurch Inlineausführung der Aufrufe ausgeführt werden kann, anstatt Sie mithilfe des Mechanismus der virtuellen.  
   
- Ein Grund für die Verwendung von Downcasting in C\+\+ besteht also darin, den Virtualitätsmechanismus zu unterdrücken, um dadurch eine relevante Leistungssteigerung zur Laufzeit zu erzielen. \(Beachten Sie, dass die Automatisierung dieser manuellen Optimierung ein aktiver Forschungsbereich ist.  Dieses Problem kann jedoch nicht gelöst werden, indem einfach die explizite Verwendung des `register`\-Schlüsselworts oder des `inline`\-Schlüsselworts ersetzt wird.\)  
+ Ein Grund für das Verweisklasse in C++ ist den virtuelle Mechanismus gegen einen erheblichen Leistungsgewinn in Leistung zur Laufzeit zu unterdrücken. (Beachten Sie, dass die Automatisierung von manuellen Optimierung einer aktiven Forschungsbereich ist. Allerdings ist es schwieriger, und Ersetzen Sie dabei die ausdrückliche Verwendung von gelöst der `register` oder `inline` Schlüsselwort.)  
   
- Ein zweiter Grund für Downcasting resultiert aus der dualen Natur der Polymorphie.  Eine Möglichkeit zur Annäherung an die Polymorphie besteht darin, diese als ein passives und ein dynamisches Paar von Formularen zu betrachten.  
+ Ein zweiter Grund für Downcasting liegt außerhalb des gültigen dualer Aufbau von Polymorphie. Eine Möglichkeit, die von Polymorphie ist in ein paar passiven und dynamische Formulare unterteilt wird.  
   
- Ein virtueller Aufruf \(und ein Downcastmechanismus\) stellt den dynamischen Anwendungsfall der Polymorphie dar: Es wird eine Aktion ausgeführt, die auf dem aktuellen Typ des Basisklassenzeigers in einer bestimmten Instanz zum gegenwärtigen Zeitpunkt der Programmausführung basiert.  
+ Ein virtueller Aufruf (und eine Verweisklasse Einrichtung) darstellt dynamische Verwendungen von Polymorphie: eine führt eine Aktion basierend auf den tatsächlichen Typ des Zeigers Basisklasse auf diese spezielle Instanz der Ausführung des Programms.  
   
- Das Zuweisen eines abgeleiteten Klassenobjekts an den zugehörigen Basisklassenzeiger ist jedoch eine passive Form der Polymorphie. Dabei wird die Polymorphie als Transportmechanismus verwendet.  Dies war beispielsweise in der CLR\-Programmierung der Haupteinsatzzweck von `Object`, bevor die generische CLR\-Programmierung möglich wurde.  Bei passiver Verwendung stellt der für Transport und Speicherung ausgewählte Basisklassenzeiger üblicherweise eine Schnittstelle bereit, die zu abstrakt ist.  So bietet z. B. `Object` über seine Schnittstelle ungefähr fünf Methoden. Wenn ein spezifischeres Verhalten gewünscht wird, ist explizites Downcasting erforderlich.  Um beispielsweise den Winkel oder den Lichtabfall eines Scheinwerfers zu ändern, müsste explizites Downcasting ausgeführt werden.  Es ist praktisch unmöglich, dass eine virtuelle Schnittstelle innerhalb einer Familie von Untertypen eine Obermenge aller möglichen Methoden der vielen untergeordneten Typen darstellt. Aus diesem Grund wird auch in einer objektorientierten Sprache immer ein Downcastmechanismus benötigt.  
+ Ein abgeleitetes Klassenobjekt seiner Basisklassenzeiger zuweisen, ist jedoch eine passive Form der Polymorphie. Es wird die Polymorphie als Transportmechanismus verwendet. Dies ist die haupteinsatzmöglichkeit `Object`, z. B. in vorab generische CLR-Programmierung. Wenn Passiv verwendet, bietet der Basisklasse Zeiger ausgewählt für Transport und Speicherung in der Regel eine Schnittstelle, die zu abstrakt ist. `Object`, z. B. bietet ungefähr fünf Methoden über die Schnittstelle; jedes spezifische Verhalten erfordert eine explizite Umwandlung. Z. B. wenn wir den Winkel des unsere Spotlight oder der Rate der fallen off anpassen möchten, würden wir umgewandelt explizit haben. Eine virtuelle Schnittstelle innerhalb einer Familie von Untertypen nicht Untertypen eine Obermenge aller möglichen Methoden der vielen untergeordneten, und daher eine Verweisklasse Funktion immer benötigt werden innerhalb einer objektorientierten Programmiersprachen.  
   
- Wenn eine objektorientierte Sprache einen sicheren Downcastmechanismus benötigt, warum hat es so lange gedauert, bis C\+\+ einen entsprechenden Mechanismus erhielt?  Das Problem besteht darin, die Information bezüglich des Typs, den der Zeiger zur Laufzeit hat, zur Verfügung zu stellen.  Im Fall einer virtuellen Funktion werden die Laufzeitinformationen vom Compiler in zwei Teilen festgelegt:  
+ Wenn eine Verweisklasse Safe ist Facility in eine objektorientierte Sprache erforderlich, und warum C++ so lange dauert einen hinzufügen? Das Problem wird wie die Informationen bezüglich der Laufzeittyp des Zeigers verfügbar zu machen. Im Fall einer virtuellen Funktion wird die Laufzeitinformationen in zwei Teilen durch den Compiler einrichten:  
   
--   Das Klassenobjekt enthält einen zusätzlichen virtuellen Tabellenzeigermember \(entweder am Anfang oder am Ende des Klassenobjekts, was auch eine interessante Frage ist\), der auf die richtige virtuelle Tabelle verweist.  So verweist ein Scheinwerferobjekt auf die virtuelle Tabelle eines Scheinwerfers, ein Richtstrahler verweist auf eine virtuelle Tabelle eines Richtstrahlers usw.  
+-   Das Klassenobjekt enthält einen zusätzliche virtuelle Tabelle Zeiger-Member (entweder am Anfang oder Ende des Klassenobjekts; die verfügt über eine interessante Verlauf in sich selbst), die die entsprechende virtuelle Tabelle behandelt. Z. B. Adressen Spotlight-Objekt, eine virtuelle Spotlight-Tabelle, ein gerichtetes Licht, direktionale hell virtuelle Tabelle usw.  
   
--   Jede virtuelle Funktion ist mit einer festen Position in der Tabelle verknüpft, und in der Tabelle ist eine Adresse gespeichert, die auf die aktuell aufzurufende Instanz verweist.  So könnte z. B. der virtuelle `Light`\-Destruktor mit Position 0 verknüpft sein, `Color` mit Position 1 usw.  Obwohl unflexibel, ist diese Strategie sehr effizient, da sie zur Kompilierzeit eingerichtet wird und nur minimalen Aufwand erzeugt.  
+-   Jede virtuelle Funktion verfügt über eine zugeordnete feste Slot in der Tabelle, und die tatsächliche Instanz zum Aufrufen durch die Adresse, die in der Tabelle gespeicherten dargestellt wird. Z. B. das virtuelle `Light` Destruktor möglicherweise Einschubfach 0 (null) zugeordnet werden `Color` mit slot 1 und so weiter. Dies ist eine effizient, wenn unflexibel Strategie, da er zum Zeitpunkt der Kompilierung festgelegt ist, und stellt einen minimalen Aufwand dar.  
   
- Das Problem besteht nun darin, wie die Typinformation für den Zeiger verfügbar gemacht werden kann, ohne dass die Größe der C\+\+\-Zeiger geändert werden muss. Dazu kann entweder eine zweite Adresse oder eine Form der Typcodierung hinzugefügt werden.  Dies wäre für diejenigen Programmierer \(und Programme\) nicht akzeptabel gewesen, die weiterhin auf das objektorientierte Programmierparadigma verzichteten, was immerhin noch die Mehrheit der Benutzergemeinde betraf.  Eine andere Möglichkeit bestand in der Einführung eines speziellen Zeigers für polymorphe Klassentypen, aber das wäre verwirrend gewesen und hätte die gemeinsame Verwendung der beiden Zeigertypen verkompliziert, insbesondere hinsichtlich der Zeigerarithmetik.  Die Verwaltung einer Laufzeittabelle, die jeden Zeiger mit seinem aktuell zugeordneten Typ verknüpft, und die dynamische Aktualisierung dieser Tabelle wäre ebenso wenig akzeptabel gewesen.  
+ Das Problem ist, wie Sie die Typinformationen für den Zeiger verfügbar gemacht werden kann, ohne die Größe der C++-Zeiger, entweder indem Sie eine zweite Adresse hinzufügen oder indem Sie direkt irgendeine der Codierung des Typs. Dies würde nicht zulässig, diese Programmierer (und Programme) sein, die nicht das Paradigma objektorientierte - verwenden weiterhin die vorherrschende Benutzercommunity war möchten. Eine weitere Möglichkeit zum Einfügen eines speziellen Zeigers für polymorphe Klassentypen wurde, aber dies verwirrend sein, und der beiden, insbesondere hinsichtlich der Zeigerarithmetik erschweren. Dies würde auch nicht zulässig, eine Tabelle zur Laufzeit zu verwalten, die ordnet jeden Zeiger mit seinem aktuell zugeordneten Typ, und es dynamisch zu aktualisieren.  
   
- Das Problem besteht also in zwei unterschiedlichen Benutzercommunitys, die verschiedene, aber nichtsdestotrotz legitime Programmieransätze verfolgen.  Die Lösung musste demnach ein Kompromiss zwischen beiden Communitys sein, wobei nicht nur jeder Ansatz umsetzbar sein sollte, sondern auch Interoperabilität zwischen beiden Ansätzen gewährleistet werden musste.  Dies bedeutete, dass die von beiden Seiten angebotenen Lösungen wahrscheinlich nicht durchsetzbar waren und die letztendlich implementierte Lösung vermutlich keine perfekte Lösung darstellen würde.  Die Lösung besteht in der Definition einer polymorphen Klasse: eine polymorphe Klasse enthält eine virtuelle Funktion.  Eine polymorphe Klasse unterstützt dynamisches, typsicheres Downcasting.  Auf diese Weise wird das Problem der Verwaltung des Zeigers als Adresse gelöst, da alle polymorphen Klassen den zusätzlichen Zeigermember enthalten, der auf die zugeordnete virtuelle Tabelle verweist.  Daher kann die zugeordnete Typinformation in einer erweiterten virtuellen Tabellenstruktur gespeichert werden.  Der Aufwand für typsicheres Downcasting entsteht \(fast\) ausschließlich für die Benutzer der Funktion.  
+ Das Problem ist ein Paar von Benutzercommunitys, die verschiedenen, aber legitime Programmieransätze. Die Lösung muss ein Kompromiss zwischen den zwei Communitys, sodass jeder nicht nur für umsetzbar als jedoch für die Fähigkeit, zusammenarbeiten sein. Dies bedeutet, dass die Lösungen, die von beiden Seiten angeboten werden wahrscheinlich unmöglich ist, und schließlich kleiner als genau Implementieren der Lösung. Die Lösung besteht in der Definition einer polymorphen Klasse: eine polymorphe Klasse ist eine virtuelle Funktion enthält. Eine polymorphe Klasse unterstützt eine dynamische, typsichere Downcasting. Dies löst das Beibehalten der-Zeiger-als Adresse-Problem, da alle polymorphe Klassen dieses zusätzlichen Zeigers-Element, um die zugeordnete virtuelle Tabelle enthalten sind. Die zugeordneten Typinformationen kann daher in einer erweiterten virtuellen Tabellenstruktur gespeichert werden. Die Kosten für die typsichere Downcasting ist für Benutzer der Funktion (fast) lokalisiert.  
   
- Die Syntax stellte das nächste Problem beim typsicheren Downcasting dar.  Da es sich um eine Umwandlung handelt, wurde im ursprünglichen Vorschlag an das ISO\-C\+\+\-Komitee die reine Umwandlungssyntax verwendet, wie im folgenden Beispiel:  
+ Das nächste Problem mit der typsichere Downcasting wurde in der Syntax. Da es sich um eine Umwandlung handelt, verwendet der ursprüngliche Vorschlag die ISO-C++-Committee Umwandlungssyntax, wie in diesem Beispiel:  
   
 ```  
 spot = ( SpotLight* ) plight;  
 ```  
   
- Der Vorschlag wurde jedoch vom Komitee abgelehnt, da der Benutzer auf diese Weise den mit der Umwandlung verbundenen Aufwand nicht beeinflussen konnte.  Wenn das dynamische, typsichere Downcasting über dieselbe Syntax wie die früher verwendete unsichere, aber statische Umwandlung verfügt, wird es lediglich zu einer Ersetzung, und der Benutzer hat keine Möglichkeit, den Aufwand zur Laufzeit zu unterdrücken, wenn dieser überflüssig und zu hoch ist.  
+ aber dies wurde durch die Committee zurückgewiesen, weil er nicht, dass den Benutzer zum Kontrollieren der Kosten der Umwandlung zuließ. Verfügt die dynamische, typsichere Downcasting die gleiche Syntax wie zuvor unsafe jedoch statische Umwandlungsnotation, und es wird eine Ersetzung, und der Benutzer hat keine Möglichkeit, die die Laufzeit-Overhead zu unterdrücken, wenn es nicht erforderlich und möglicherweise zu teuer ist.  
   
- Es gibt in C\+\+ im Allgemeinen immer einen Mechanismus, um die vom Compiler unterstützten Funktionen zu unterdrücken.  Man kann z. B. den Virtualitätsmechanismus deaktivieren, indem man entweder den Klassenbereichsoperator verwendet \(`Box::rotate(angle)`\) oder die virtuelle Methode über ein Klassenobjekt \(statt über einen Zeiger oder eine Referenz dieser Klasse\) aufruft.  Die letztere Variante wird von der Sprache nicht vorausgesetzt, sondern ist eine Frage der Implementierung, ähnlich wie bei der Konstruktionsunterdrückung eines temporären Objekts in einer Deklaration mit folgender Form:  
+ Im Allgemeinen in C++ ist es immer ein Mechanismus, mit dem Compiler unterstützten Funktionen zu unterdrücken. Beispielsweise können wir virtuelle Mechanismus deaktivieren, indem Sie entweder mit der Klasse Bereichsoperator (`Box::rotate(angle)`), oder rufen die virtuelle Methode über ein Klassenobjekt (statt einem Zeiger oder Verweis von dieser Klasse). Dieses zweite Unterdrückung ist nicht erforderlich, von der Programmiersprache jedoch ist ein Qualität der Implementierungsproblem, ähnlich wie die Unterdrückung der Konstruktion eines temporären in einer Deklaration des Formulars:  
   
 ```  
 // compilers are free to optimize away the temporary  
 X x = X::X( 10 );  
 ```  
   
- Der Vorschlag wurde also zur Überarbeitung zurückgezogen, und es wurde eine Reihe alternativer Notationen in Betracht gezogen. Schließlich wurde dem Komitee ein neuer Vorschlag mit der Form \(`?type`\) unterbreitet, der die unbestimmte, also die dynamische Natur widerspiegelte.  Damit erhielt der Benutzer die Möglichkeit, zwischen der statischen und der dynamischen Form zu wählen, aber niemand war damit wirklich zufrieden.  Deshalb ging der Vorschlag zurück ans Reißbrett.  Die dritte und schließlich erfolgreiche Notation ist der jetzige Standard `dynamic_cast<type>`, der zu einem Satz von vier neuartigen Umwandlungsnotationen verallgemeinert wurde.  
+ Damit Vorschlag wieder für weitere Überlegung verfügten, und mehrere alternative Notationen berücksichtigt wurden und die zurück an den Ausschuss geschaltet des Formulars war (`?type`), dem angegebenen unbestimmt -, also der dynamischen Natur. Dies führte zu dem Benutzer die Möglichkeit zum Umschalten zwischen den beiden Formaten - statische oder dynamische - aber niemand zu zufrieden wurde. Damit sie wieder zum Zeichnen Board war. Die dritte und erfolgreiche Notation ist jetzt standard `dynamic_cast<type>`, die auf einen Satz von vier neue Formatvorlage Umwandlungsnotationen generalisiert wurde.  
   
- In ISO\-C\+\+ liefert `dynamic_cast` den Wert `0` zurück, wenn es auf einen falschen Zeigertyp angewendet wird, und bei Anwendung auf einen Referenztyp wird eine `std::bad_cast`\-Ausnahme ausgelöst.  In Managed Extensions for C\+\+ wurde bei der Anwendung von `dynamic_cast` auf einen verwalteten Referenztyp \(aufgrund der Darstellung als Zeiger\) immer `0` zurückgegeben.  `__try_cast<type>` wurde analog zu der Variante von `dynamic_cast` eingeführt, die eine Ausnahme auslöst, mit dem Unterschied, dass eine `System::InvalidCastException` ausgelöst wird, wenn die Umwandlung fehlschlägt.  
+ In ISO-C++- `dynamic_cast` gibt `0` Wenn auf einen falschen Zeigertyp angewendet, und löst eine `std::bad_cast` Ausnahme bei Anwendung auf einen Referenztyp darstellt. In Managed Extensions for C++ Anwenden von `dynamic_cast` in eine verwaltete Verweise (aufgrund der Darstellung als Zeiger) immer zurückgegebenen Typ `0`. `__try_cast<type>`Analog eingeführt wurde, auf die Ausnahme auslösen Variante des der `dynamic_cast`, außer dass es löst `System::InvalidCastException` schlägt die Umwandlung fehl.  
   
 ```  
 public __gc class ItemVerb;  
@@ -86,7 +89,7 @@ public:
 };  
 ```  
   
- In der neuen Syntax wurde `__try_cast` zu `safe_cast` umgeformt.  Hier ist das gleiche Codefragment in der neuen Syntax:  
+ In der neuen Syntax `__try_cast` wurde als Nachrichtenfilter wurde `safe_cast`. Hier ist das gleiche Codefragment in der neuen Syntax:  
   
 ```  
 public ref class ItemVerb;  
@@ -99,7 +102,7 @@ public:
 };  
 ```  
   
- In der verwalteten Welt ist es wichtig, die Erstellung von verifizierbarem Code zu unterstützen, indem die Möglichkeiten der Programmierer eingeschränkt werden, Typumwandlungen durchzuführen, die den Code nicht mehr verifizierbar machen.  Dies ist ein wichtiger Aspekt des dynamischen Programmierparadigmas, das die neue Syntax darstellt.  Aus diesem Grund werden Instanzen von Umwandlungen im alten Stil intern zu Laufzeitumwandlungen umgeformt. Beispiel:  
+ In der verwalteten Umgebung ist es wichtig, um zu ermöglichen, indem Sie die Möglichkeit Programmierer mit sich bringen, die Umwandlung zwischen Typen in Methoden, die den Code nicht überprüfbaren verlassen einschränken überprüfbaren Code. Dies ist ein wichtiger Aspekt der dynamischen Programmierparadigma, dargestellt durch die neue Syntax. Aus diesem Grund Instanzen von Umwandlungen im alten Stil sind Nachrichtenfilter intern als zur Laufzeit Umwandlungen, also, beispielsweise:  
   
 ```  
 // internally recast into the   
@@ -107,7 +110,7 @@ public:
 ( array<ItemVerb^>^ ) verbList->ToArray( ItemVerb::typeid );   
 ```  
   
- Da die Polymorphie jedoch sowohl einen aktiven als auch einen passiven Modus bietet, ist es andererseits gelegentlich unumgänglich, Downcasting anzuwenden, um Zugang zu der nicht\-virtuellen API eines Untertyps zu erlangen.  Dies kann z. B. für die Member einer Klasse erforderlich werden, die auf alle Typen innerhalb der Hierarchie zugreifen möchten \(passive Polymorphie als Transportmechanismus\), für die jedoch die aktuelle Instanz in einem bestimmten Programmkontext bekannt ist.  In diesem Fall könnte die Überprüfung der Umwandlung zur Laufzeit als nicht akzeptabler Aufwand betrachtet werden.  Damit die neue Syntax zur Programmiersprache des verwalteten Systems werden kann, muss sie in irgendeiner Weise Downcasting zur Kompilierzeit ermöglichen, also statisches Downcasting.  Daher ist die Anwendung der `static_cast`\-Notation weiterhin als Downcasting zur Kompilierzeit gültig:  
+ Da Polymorphie einer aktiven und passiven Modus bietet, ist es hingegen, manchmal erforderlich, um eine Verweisklasse nur zum Zugriff auf die nicht virtuelle API eines Untertyps auszuführen. Dieses Problem kann auftreten, z. B. mit die Mitglieder einer Klasse, die den Adresse alle Typen innerhalb der Hierarchie (passive Polymorphie als Transportmechanismus), aber für die die aktuelle Instanz in einem bestimmten Programmkontext bekannt ist. In diesem Fall möglich müssen eine Überprüfung zur Laufzeit die Umwandlung einen unzulässigen Aufwand. Ist die neue Syntax als die Programmiersprache verwalteten Systemen verwendet werden, müssen sie Möglichkeiten zum Zulassen einer Kompilierung bereitstellen (d. h. statische) umgewandelt. Diesem Grund wird die Anwendung von der `static_cast` Notation ist eine Verweisklasse Kompilierzeit bleiben zulässig:  
   
 ```  
 // ok: cast performed at compile-time.   
@@ -115,9 +118,9 @@ public:
 static_cast< array<ItemVerb^>^>(verbList->ToArray(ItemVerb::typeid));  
 ```  
   
- Das Problem besteht darin, dass es keine Möglichkeit gibt zu garantieren, dass der Programmierer mit der Ausführung eines `static_cast` richtig liegt, und dass diese statische Umwandlung korrekt ist. Es besteht also keine Möglichkeit, die Verifizierbarkeit von verwaltetem Code zu erzwingen.  Dies stellt im dynamischen Programmierparadigma ein größeres Problem dar als bei systemeigenem Code. Es reicht jedoch nicht aus, einem Benutzer innerhalb einer Systemprogrammiersprache die Möglichkeit zum Umschalten zwischen der statischen Umwandlung und der Umwandlung zur Laufzeit zu verwehren.  
+ Das Problem besteht darin, dass es keine Möglichkeit zu gewährleisten, dass den Programmierer die `static_cast` ist richtig und Exploit; d. h. Es gibt keine Möglichkeit zum Erzwingen von verwalteten Codes zu überprüfbar zu sein. Dies geht dringenderen gemäß dem Programmierparadigma dynamische als bei systemeigenem Code, aber ist nicht ausreichend innerhalb eines Systems Programmiersprache, die Benutzer zu unterbinden, die Möglichkeit, zwischen einer statischen und zur Laufzeit umgewandelt zu wechseln.  
   
- Die neue Syntax enthält jedoch auch eine Leistungsfalle und einen Stolperstrick.  Beim systemeigenen Programmieren besteht kein Leistungsunterschied zwischen der Umwandlungsnotation im alten Stil und der neuen `static_cast`\-Notation.  In der neuen Syntax ist die Umwandlungsnotation im alten Stil jedoch wesentlich aufwändiger als die Verwendung der neuen `static_cast`\-Notation,  da der Compiler die Notation im alten Stil intern in eine Laufzeitüberprüfung umwandelt, die eine Ausnahme auslöst.  Darüber hinaus wird dadurch auch das Ausführungsprofil des Codes geändert, da die resultierende Ausnahme nicht abgefangen wird, was zur Beendigung der Anwendung führt. Dies ist durchaus sinnvoll, allerdings würde derselbe Fehler bei Verwendung der `static_cast`\-Notation keine Ausnahme auslösen.  Man könnte nun argumentieren, dass die Benutzer auf diese Weise dazu gezwungen werden, die neue Syntax zu verwenden.  Dies ist jedoch nur der Fall, wenn die Ausführung eines Programms fehlschlägt. Andernfalls würden Programme, in denen die Notation im alten Stil verwendet wird, ohne ersichtlichen Grund wesentlich langsamer ausgeführt werden. Ähnliches gilt für die folgenden Stolperstricke für C\-Programmierer:  
+ Es ist ein Trap für Leistung und Fehlers in der neuen Syntax, jedoch. In systemeigene Programmierung besteht kein Leistungsunterschied zwischen der Umwandlungsnotation im alten Stil und die neue Formatvorlage `static_cast` Notation. In der neuen Syntax der im alten Stil Umwandlungsnotation ist deutlich teurer als die Verwendung des neuen Formats jedoch `static_cast` Notation. Der Grund ist, dass der Compiler intern die Verwendung der im alten Stil Notation in eine laufzeitüberprüfung transformiert, die eine Ausnahme auslöst. Darüber hinaus wird auch geändert das Ausführungsprofil des Codes, da er bewirkt, dass eine nicht abgefangene Ausnahme, die der Anwendung – vielleicht mit Bedacht zu schalten, aber der gleiche Fehler würde nicht, wird diese Ausnahme aus, wenn die `static_cast` Notation verwendet wurden. Eine möglicherweise argumentieren, dass auf diese Weise werden Benutzer in der Verwendung der neuen-Schreibweise. Aber nur, wenn ein Fehler auftritt. Es wird hingegen bewirken, dass Programme mit der im alten Stil Notation eventuell deutlich langsamer ohne sichtbar zu verstehen und einen Grund ausgeführt der ersichtlichen ähnelt:  
   
 ```  
 // pitfall # 1:   
@@ -131,7 +134,7 @@ Matrix m( 2000, 2000 ), n( 2000, 2000 );
 if ( ! mumble ) return;  
 ```  
   
-## Siehe auch  
- [Allgemeine Sprachänderung](../dotnet/general-language-changes-cpp-cli.md)   
- [C\-Style Casts with \/clr \(C\+\+\/CLI\)](../windows/c-style-casts-with-clr-cpp-cli.md)   
- [safe\_cast](../windows/safe-cast-cpp-component-extensions.md)
+## <a name="see-also"></a>Siehe auch  
+ [Allgemeine Sprachänderungen (C + c++ / CLI)](../dotnet/general-language-changes-cpp-cli.md)   
+ [C-stilartige Umwandlungen mit/CLR (C + c++ / CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)   
+ ["safe_cast"](../windows/safe-cast-cpp-component-extensions.md)

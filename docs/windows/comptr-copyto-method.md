@@ -1,32 +1,33 @@
 ---
-title: "ComPtr::CopyTo-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::ComPtr::CopyTo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CopyTo-Methode"
+title: 'Comptr:: CopyTo-Methode | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::ComPtr::CopyTo
+dev_langs: C++
+helpviewer_keywords: CopyTo method
 ms.assetid: 8801bc49-6db4-4393-a55f-a701ae3b8718
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1f47df584fb456c721c92823a87ca525beb052d6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# ComPtr::CopyTo-Methode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Kopiert den aktuellen oder die angegebene Schnittstelle, die diesem ComPtr dem angegebenen Zeiger zugeordnet werden.  
+# <a name="comptrcopyto-method"></a>ComPtr::CopyTo-Methode
+Kopiert die aktuelle oder angegebene-Schnittstelle, die diesem comptr-Objekt an den angegebenen Zeiger zugeordnet ist.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 HRESULT CopyTo(  
@@ -46,30 +47,30 @@ HRESULT CopyTo(
 ) const;  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `U`  
  Ein Typname.  
   
  `ptr`  
- Wenn dieser Vorgang abgeschlossen ist, ein Zeiger zur angeforderten Schnittstelle.  
+ Wenn dieser Vorgang abgeschlossen wird, einen Zeiger auf die angeforderte Schnittstelle.  
   
  `riid`  
- Eine Schnittstelle ID  
+ Eine Schnittstellen-ID.  
   
-## Rückgabewert  
- S\_OK, wenn erfolgreich; andernfalls ein HRESULT, das angibt, warum der implizite QueryInterface\-Vorgang fehlgeschlagen ist.  
+## <a name="return-value"></a>Rückgabewert  
+ S_OK, wenn erfolgreich; andernfalls ein HRESULT, der angibt, warum die implizite QueryInterface-Vorgang fehlgeschlagen ist.  
   
-## Hinweise  
- Die erste Funktion gibt eine Kopie eines Zeigers die Schnittstelle aus, die diesem ComPtr zugeordnet ist.  Diese Funktion immer S\_OK zurück.  
+## <a name="remarks"></a>Hinweise  
+ Die erste Funktion gibt eine Kopie des einen Zeiger auf die Schnittstelle, die diesem comptr-Objekt zugeordnet. Diese Funktion gibt immer S_OK zurück.  
   
- Die zweite Funktion führt einen QueryInterface\-Vorgang auf der Schnittstelle aus, die diesem ComPtr für die Schnittstelle zugeordnet wird, die vom `riid`\-Parameter angegeben wurde.  
+ Die zweite Funktion führt eine QueryInterface-Operation für die Schnittstelle, die diesem comptr-Objekt für die angegebene Schnittstelle zugeordneten der `riid` Parameter.  
   
- Die dritte Funktion führt einen QueryInterface\-Vorgang auf der Schnittstelle aus, die diesem ComPtr für die zugrunde liegende Schnittstelle des Parameters `U` zugeordnet ist.  
+ Die dritte Funktion führt eine QueryInterface-Operation für die Schnittstelle, die diesem comptr-Objekt für die zugrunde liegende Schnittstelle des zugeordneten der `U` Parameter.  
   
-## Anforderungen  
- **Header:**  client.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** client.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [ComPtr\-Klasse](../windows/comptr-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [ComPtr-Klasse](../windows/comptr-class.md)

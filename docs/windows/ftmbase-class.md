@@ -1,32 +1,33 @@
 ---
-title: "FtmBase-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ftm/Microsoft::WRL::FtmBase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "FtmBase-Klasse"
+title: FtmBase-Klasse | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: ftm/Microsoft::WRL::FtmBase
+dev_langs: C++
+helpviewer_keywords: FtmBase class
 ms.assetid: 275f3b71-2975-4f92-89e7-d351e96496df
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f56321b71642f9d615c4d85fd66f878b19e44485
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# FtmBase-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Stellt ein Free\-Threaded Marshaller\-Objekt dar.  
+# <a name="ftmbase-class"></a>FtmBase-Klasse
+Stellt ein Freethread-Marshaller-Objekt dar.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -35,42 +36,42 @@ class FtmBase : public Microsoft::WRL::Implements<
    Microsoft::WRL::CloakedIid< IMarshal > >;  
 ```  
   
-## Hinweise  
- Weitere Informationen finden Sie, dass das Thema "IMarshal" im "COM\-Schnittstellen\-" Abschnitt des "COM" Thema in der MSDN Library verweisen.  
+## <a name="remarks"></a>Hinweise  
+ Weitere Informationen finden Sie im Thema "IMarshal" in der "COM-Schnittstellen" des Themas im Thema "COM-Verweis" in der MSDN Library.  
   
-## Member  
+## <a name="members"></a>Member  
   
-### Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[FtmBase::FtmBase\-Konstruktor](../windows/ftmbase-ftmbase-constructor.md)|Initialisiert eine neue Instanz der FtmBase\-Klasse.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[FtmBase::FtmBase-Konstruktor](../windows/ftmbase-ftmbase-constructor.md)|Initialisiert eine neue Instanz der FtmBase-Klasse.|  
   
-### Öffentliche Methoden  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[FtmBase::CreateGlobalInterfaceTable\-Methode](../windows/ftmbase-createglobalinterfacetable-method.md)|Stellt eine globale Schnittstellentabelle \(GIT\) erstellt.|  
-|[FtmBase::DisconnectObject\-Methode](../windows/ftmbase-disconnectobject-method.md)|Gibt erzwungen alle externen Verbindungen mit einem Objekt frei.  Der Server des Objekts ruft die Implementierung des Objekts dieser Methode vor dem Herunterfahren auf.|  
-|[FtmBase::GetMarshalSizeMax\-Methode](../windows/ftmbase-getmarshalsizemax-method.md)|Rufen Sie die Obergrenze für die Anzahl von Bytes erforderlich, um den angegebenen Schnittstellenzeiger auf dem angegebenen Objekt zu marshallen ab.|  
-|[FtmBase::GetUnmarshalClass\-Methode](../windows/ftmbase-getunmarshalclass-method.md)|Ruft CLSID ab, dem COM verwendet, um die DLL zu suchen, die den Code für den entsprechenden Proxy enthält.  COM lädt diese DLL, um eine nicht initialisierte Instanz des Proxytyps zu erstellen.|  
-|[FtmBase::MarshalInterface\-Methode](../windows/ftmbase-marshalinterface-method.md)|Schreibt in einen Stream die Daten, die erforderlich sind, um ein in einem Proxyobjekt Clientprozess zu initialisieren.|  
-|[FtmBase::ReleaseMarshalData\-Methode](../windows/ftmbase-releasemarshaldata-method.md)|Zerstört ein gemarshalltes Datenpaket.|  
-|[FtmBase:::UnmarshalInterface\-Methode](../windows/ftmbase-unmarshalinterface-method.md)|Initialisiert einen neu erstellten Proxy und einen Schnittstellenzeiger zu diesem Proxy zurück.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[FtmBase::CreateGlobalInterfaceTable-Methode](../windows/ftmbase-createglobalinterfacetable-method.md)|Erstellt eine globale Schnittstellentabelle (GIT).|  
+|[FtmBase::DisconnectObject-Methode](../windows/ftmbase-disconnectobject-method.md)|Zwangsweise frei alle externen Verbindungen zu einem Objekt. Die Objekt-Server Ruft das Objekt Implementierung dieser Methode vor dem Herunterfahren.|  
+|[FtmBase::GetMarshalSizeMax-Methode](../windows/ftmbase-getmarshalsizemax-method.md)|Rufen Sie die obere Grenze für die Anzahl der Bytes, die erforderlich sind, um den angegebenen Schnittstellenzeiger auf das angegebene Objekt zu marshallen.|  
+|[FtmBase::GetUnmarshalClass-Methode](../windows/ftmbase-getunmarshalclass-method.md)|Ruft die CLSID, die COM verwendet, um die DLL, die den Code für den entsprechenden Proxy zu suchen. COM lädt diese DLL aus, um eine nicht initialisierte Instanz des Proxys zu erstellen.|  
+|[FtmBase::MarshalInterface-Methode](../windows/ftmbase-marshalinterface-method.md)|Schreibt in einen Stream der Daten, die erforderlich sind, um eine Proxy-Objekt in einem Clientprozess zu initialisieren.|  
+|[FtmBase::ReleaseMarshalData-Methode](../windows/ftmbase-releasemarshaldata-method.md)|Zerstört ein gemarshalltes Datenpaket.|  
+|[FtmBase:::UnmarshalInterface-Methode](../windows/ftmbase-unmarshalinterface-method.md)|Initialisiert einen neu erstellten Proxy, und gibt einen Schnittstellenzeiger, der diesem Proxy zurück.|  
   
-### Öffentliche Datenmember  
+### <a name="public-data-members"></a>Öffentliche Datenmember  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[FtmBase::marshaller\_\-Datenmember](../windows/ftmbase-marshaller-data-member.md)|Hält einen Verweis auf das Free\-Threaded Marshaller an.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[FtmBase::marshaller_-Datenmember](../windows/ftmbase-marshaller-data-member.md)|Enthält einen Verweis auf die freethreaded Marshaller an.|  
   
-## Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `FtmBase`  
   
-## Anforderungen  
- **Header:**  ftm.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** ftm.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [Microsoft::WRL\-Namespace](../windows/microsoft-wrl-namespace.md)
+## <a name="see-also"></a>Siehe auch  
+ [Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)

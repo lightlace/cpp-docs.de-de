@@ -1,32 +1,33 @@
 ---
-title: "SemaphoreTraits::Unlock-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SemaphoreTraits::Unlock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Unlock-Methode"
+title: 'Semaphoretraits:: Unlock-Methode | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SemaphoreTraits::Unlock
+dev_langs: C++
+helpviewer_keywords: Unlock method
 ms.assetid: 4e0ea808-b70d-43f7-81ef-998c3b34e3a0
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 819f7d7e4e4d5b6182da6172bd91a1e799379b52
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# SemaphoreTraits::Unlock-Methode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Versionssteuerelement einer freigegebenen Ressource.  
+# <a name="semaphoretraitsunlock-method"></a>SemaphoreTraits::Unlock-Methode
+Versionen Kontrolle über eine freigegebene Ressource.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 inline static void Unlock(  
@@ -34,17 +35,17 @@ inline static void Unlock(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `h`  
- Handle für ein Semaphorobjekt.  
+ Handle für einen Semaphorobjekt.  
   
-## Hinweise  
- Wenn der entsperrensvorgang fehlschlägt, gibt Unlock\(\) einen Fehler aus, der die Fehlerursache angibt.  
+## <a name="remarks"></a>Hinweise  
+ Wenn die Unlock-Vorgang nicht erfolgreich ist, gibt Unlock() einen Fehler, der die Ursache des Fehlers angibt.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  
   
- **Namespace:**  Microsoft::WRL::Wrappers::HandleTraits  
+ **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
   
-## Siehe auch  
- [SemaphoreTraits\-Struktur](../windows/semaphoretraits-structure.md)
+## <a name="see-also"></a>Siehe auch  
+ [SemaphoreTraits-Struktur](../windows/semaphoretraits-structure.md)

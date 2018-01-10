@@ -1,36 +1,35 @@
 ---
-title: "Compilerwarnung (Stufe 2) C4250 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4250"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4250"
+title: Compilerwarnung (Stufe 2) C4250 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4250
+dev_langs: C++
+helpviewer_keywords: C4250
 ms.assetid: d47f7249-6b5a-414b-b2d4-56e5d246a782
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d92a337e3ded4b958bb9d1dbb7359d21f28d619c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 2) C4250
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'Klasse1': Erbt 'Klasse2::Member' via Dominanz  
+# <a name="compiler-warning-level-2-c4250"></a>Compilerwarnung (Stufe 2) C4250
+'Klasse1': 'Klasse2:: Member' via Dominanz erbt  
   
- Zwei oder mehr Member haben denselben Namen.  Der Member in `class2` wird geerbt, da es eine Basisklasse für die anderen Klassen ist, in denen dieser Member enthalten war.  
+ Zwei oder mehr Elemente haben den gleichen Namen. In `class2` wird geerbt, da es sich um eine Basisklasse für andere Klassen handelt, die bei diesem Member enthalten.  
   
- Um C4250 zu unterdrücken, verwenden Sie das [warning](../../preprocessor/warning.md)\-Pragma.  
+ Um C4250 zu unterdrücken, verwenden Sie die [Warnung](../../preprocessor/warning.md) Pragma.  
   
- Da eine virtuelle Basisklasse von mehreren abgeleiteten Klassen gemeinsam verwendet wird, dominiert ein Name in einer abgeleiteten Klasse einen Namen in einer Basisklasse.  Beispielsweise gibt es bei der folgenden Klassenhierarchie zwei Definitionen für func, die innerhalb einer diamond\-Anweisung geerbt werden: Die vbc::func\(\)\-Instanz durch die schwache Klasse und die dominant::func\(\)\-Instanz durch die dominante Klasse.  Ein nicht qualifizierter Aufruf von func\(\) durch ein diamond\-Klassenobjekt führt stets zum Aufruf der dominate::func\(\)\-Instanz.  Wenn durch die schwache Klasse eine Instanz von func\(\) eingeführt wird, dominiert keine der Definitionen, und der Aufruf wird als mehrdeutig gekennzeichnet.  
+ Da eine virtuelle Basisklasse für mehrere abgeleitete Klassen freigegeben ist, dominiert ein Namen in einer abgeleiteten Klasse einen Namen in einer Basisklasse. Z. B. Wenn Sie die folgenden Klassenhierarchie, werden zwei Definitionen Func innerhalb einer Diamond geerbt: die vbc::Func()-Instanz durch die schwache Klasse und die dominant::Func()-Instanz über die bestimmende-Klasse. Ein nicht qualifizierter Aufruf von func() über ein Klassenobjekt Raute ruft immer die dominate::Func()-Instanz.  Wären die schwache Klasse eine Instanz von func() einzuführen, weder Definition würde dominieren, und der Aufruf als mehrdeutig markiert.  
   
 ```  
 // C4250.cpp  
@@ -54,8 +53,8 @@ int main() {
 }  
 ```  
   
-## Beispiel  
- Im folgenden Beispiel wird C4250 generiert.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird C4250 generiert.  
   
 ```  
 // C4250_b.cpp  
@@ -86,8 +85,8 @@ int main() {
 }  
 ```  
   
-## Beispiel  
- In diesem Beispiel wird eine komplexere Situation dargestellt.  Im folgenden Beispiel wird C4250 generiert.  
+## <a name="example"></a>Beispiel  
+ Dieses Beispiel zeigt eine komplexere Situation. Im folgende Beispiel wird C4250 generiert.  
   
 ```  
 // C4250_c.cpp  

@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vc.mfc.structures
-dev_langs:
-- C++
+f1_keywords: vc.mfc.structures
+dev_langs: C++
 helpviewer_keywords:
 - structures
 - structures, MFC
 ms.assetid: 2168fcc6-e800-4814-aabf-0bca86ff790d
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: cc1f64a7e088d274e8dde2e2616edab64de7f8db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 7952b6a5cafa2abd24a7edaf6f7d27afdf068e24
-ms.contentlocale: de-de
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="structures-used-by-mfc"></a>Von MFC verwendete Strukturen
 Die folgende Tabelle enthält die Strukturen, die von verschiedenen Memberfunktionen aufgerufen werden. Weitere Informationen zur Verwendung des individuellen Struktur finden Sie in den Klassen und Member-Funktionen, die in der Liste "Siehe auch" für jede Struktur notiert haben.  
@@ -60,5 +57,4 @@ Die folgende Tabelle enthält die Strukturen, die von verschiedenen Memberfunkti
   
 ## <a name="see-also"></a>Siehe auch  
  [Strukturen, Stile, Rückrufe und Meldungszuordnungen](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
-
 

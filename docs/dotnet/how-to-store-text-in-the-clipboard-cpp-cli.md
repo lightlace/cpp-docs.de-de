@@ -1,31 +1,34 @@
 ---
-title: "Gewusst wie: Speichern von Text in der Zwischenablage (C++/CLI)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Zwischenablage, Speichern von Text"
-  - "Text, Speichern in Zwischenablage"
+title: 'Vorgehensweise: Speichern von Text in die Zwischenablage (C + c++ / CLI) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- text, storing in Clipboard
+- Clipboard, storing text
 ms.assetid: 9996023f-b700-47ad-8ad9-1ba201eaa5a6
-caps.latest.revision: 12
-caps.handback.revision: "12"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 05544d3ea65ee68fc6df8731e5de084be6d460ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Gewusst wie: Speichern von Text in der Zwischenablage (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Im folgenden Codebeispiel wird das im <xref:System.Windows.Forms>\-Namespace definierte <xref:System.Windows.Forms.Clipboard>\-Objekt verwendet, um eine Zeichenfolge zu speichern.  Dieses Objekt stellt zwei Memberfunktionen bereit: <xref:System.Windows.Forms.Clipboard.SetDataObject*> und <xref:System.Windows.Forms.Clipboard.GetDataObject*>.  Daten werden in der Zwischenablage gespeichert, indem jedes von <xref:System.Object> abgeleitete Objekt an <xref:System.Windows.Forms.Clipboard.SetDataObject*> gesendet wird.  
+# <a name="how-to-store-text-in-the-clipboard-ccli"></a>Gewusst wie: Speichern von Text in der Zwischenablage (C++/CLI)
+Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.Clipboard> Objekt definiert, der <xref:System.Windows.Forms> Namespace, eine Zeichenfolge zu speichern. Dieses Objekt stellt zwei Memberfunktionen bereit: <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> und <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>. Daten werden in der Zwischenablage gespeichert, per jedes Objekt abgeleitet <xref:System.Object> auf <xref:System.Windows.Forms.Clipboard.SetDataObject%2A>.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // store_clipboard.cpp  
@@ -52,7 +55,7 @@ using namespace System::Windows::Forms;
 }  
 ```  
   
-## Siehe auch  
- [Gewusst wie: Abrufen von Text aus der Zwischenablage](../dotnet/how-to-retrieve-text-from-the-clipboard-cpp-cli.md)   
- [Windows\-Vorgänge](../dotnet/windows-operations-cpp-cli.md)   
- [.NET\-Programmierung mit C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [Vorgehensweise: Abrufen von Text aus der Zwischenablage (C + c++ / CLI)](../dotnet/how-to-retrieve-text-from-the-clipboard-cpp-cli.md)   
+ [Windows-Vorgänge (C + c++ / CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [.NET-Programmierung mit C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

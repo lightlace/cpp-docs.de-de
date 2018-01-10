@@ -1,49 +1,50 @@
 ---
-title: "3.2 Lock Functions"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 3.2 Sperren Funktionen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 0ec855c6-55a9-49d7-bee4-5edae6e86a1b
-caps.latest.revision: 6
-caps.handback.revision: "6"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 151c809a7bd28a2e4384371f5cec3bd192eed9d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# 3.2 Lock Functions
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die Funktionen, die in diesem Abschnitt beschriebenen Sperren für die Synchronisierung verwendeten bearbeiten.  
+# <a name="32-lock-functions"></a>3.2 Lock-Funktionen
+Die Funktionen, die in diesem Abschnitt beschriebenen bearbeiten, sperren, die für die Synchronisierung verwendet wird.  
   
- Für die folgenden Funktionen muss die Sperren variable Typ **omp\_lock\_t**haben.  Diese Variable muss durch diese Funktionen nur zugegriffen werden.  Alle Sperren von Funktionen erfordern ein Argument, das einen Zeiger auf **omp\_lock\_t**\-Typ verfügt.  
+ Für die folgenden Funktionen, die Sperren der Variable muss einen Typ aufweisen **Omp_lock_t**. Diese Variable muss nur über diese Funktionen zugegriffen werden. Alle Funktionen der Sperre erfordert ein Argument, das einen Zeiger auf **Omp_lock_t** Typ.  
   
--   Die Funktion `omp_init_lock` eine einfache Zuweisung.  
+-   Die `omp_init_lock` Funktion initialisiert, eine einfache Sperre.  
   
--   Die `omp_destroy_lock`\-Funktion entfernt eine einfache Zuweisung.  
+-   Die `omp_destroy_lock` -Funktion entfernt eine einfache Sperre.  
   
--   Die `omp_set_lock`\-Funktion wartet, bis eine einfache Sperre verfügbar ist.  
+-   Die `omp_set_lock` Funktion wartet, bis eine einfache Sperre verfügbar ist.  
   
--   Die `omp_unset_lock` function gibt eine einfache Sperre.  
+-   Die `omp_unset_lock` Funktion gibt eine einfache Sperre frei.  
   
--   Die Funktion `omp_test_lock` Tests eine einfache Zuweisung.  
+-   Die `omp_test_lock` Funktion testet eine einfache Sperre.  
   
- Für die folgenden Funktionen muss die Sperren variable Typ **omp\_nest\_lock\_t**haben.  Diese Variable muss durch diese Funktionen nur zugegriffen werden.  Alle Features der schachtelbaren Sperren erfordern ein Argument, das einen Zeiger auf **omp\_nest\_lock\_t**\-Typ verfügt.  
+ Für die folgenden Funktionen, die Sperren der Variable muss einen Typ aufweisen **aufgerufen**.  Diese Variable muss nur über diese Funktionen zugegriffen werden. Alle omp_nest_lock_t-Sperre-Funktionen erfordern ein Argument, das einen Zeiger auf **aufgerufen** Typ.  
   
--   Die `omp_init_nest_lock` eine Funktion schachtelbare Sperre.  
+-   Die `omp_init_nest_lock` Funktion initialisiert omp_nest_lock_t-Sperre.  
   
--   Die `omp_destroy_nest_lock`\-Funktion entfernt eine schachtelbare Sperre.  
+-   Die `omp_destroy_nest_lock` -Funktion entfernt omp_nest_lock_t-Sperre.  
   
--   Die `omp_set_nest_lock`\-Funktion wartet, bis eine schachtelbare Sperre verfügbar ist.  
+-   Die `omp_set_nest_lock` Funktion wartet, bis eine Sperre omp_nest_lock_t verfügbar ist.  
   
--   Die `omp_unset_nest_lock` function gibt eine schachtelbare Sperre.  
+-   Die `omp_unset_nest_lock` Funktion gibt eine omp_nest_lock_t-Sperre frei.  
   
--   Die Funktion `omp_test_nest_lock` Tests eine schachtelbare Sperre.  
+-   Die `omp_test_nest_lock` Funktion testet eine omp_nest_lock_t Sperre.  
   
- Die Funktionen OpenMP\-Sperren greifen auf die Sperren auf die Variable stets, dass sie lesen und den aktuellsten Wert der Sperren variable aktualisieren.  Daher ist es nicht notwendig für ein OpenMP\-Programm explizite **leer**\-Direktive einzufügen, um sicherzustellen, dass der Wert der Sperren variable unter verschiedenen Threads konsistent ist.  \(Es gibt möglicherweise eine Anforderung, für **leer**\-Direktive die Werte von anderen Variablen\) machen konsistent.
+ Die OpenMP Lock-Funktionen zuzugreifen, die Sperren der Variable auf eine Weise, dass sie immer lesen und aktualisieren Sie den aktuellen Wert der Sperre Variablen. Es ist daher nicht erforderlich für ein OpenMP-Programm explizite einschließen **leeren** Anweisungen, um sicherzustellen, dass die Sperre Variable zwischen verschiedenen Threads konsistent ist. (Es gibt möglicherweise eine Notwendigkeit einer **leeren** Anweisungen, um die Werte der anderen Variablen konsistent zu machen.)

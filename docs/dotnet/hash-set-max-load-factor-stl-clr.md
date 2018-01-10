@@ -1,48 +1,49 @@
 ---
-title: "hash_set::max_load_factor (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::max_load_factor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "max_load_factor-Member [STL/CLR]"
+title: hash_set::max_load_factor (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::max_load_factor
+dev_langs: C++
+helpviewer_keywords: max_load_factor member [STL/CLR]
 ms.assetid: 9aef46b1-e7c2-488c-a219-77c1c0de6dc4
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6532e22b058b3ec002689790fe546ad574b4eb0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# hash_set::max_load_factor (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ruft die maximale Elemente pro Bucket fest.  
+# <a name="hashsetmaxloadfactor-stlclr"></a>hash_set::max_load_factor (STL/CLR)
+Ruft die maximale Anzahl von Elementen pro Bucket ab oder legt sie fest.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 float max_load_factor();  
 void max_load_factor(float new_factor);  
 ```  
   
-#### Parameter  
- new\_factor  
- Neuer zu speichern Höchstlastfaktor.  
+#### <a name="parameters"></a>Parameter  
+ new_factor  
+ Neue maximale Lastfaktor zu speichern.  
   
-## Hinweise  
- Die erste Memberfunktion gibt den aktuellen Höchstlastfaktor gespeicherten zurück.  Sie verwenden sie, um die maximale durchschnittliche Bucketgröße zu bestimmen.  
+## <a name="remarks"></a>Hinweise  
+ Die erste Memberfunktion gibt den aktuellen gespeicherten maximalen Lastfaktor zurück. Sie können damit um die maximale durchschnittliche Bucketgröße zu bestimmen.  
   
- Die zweite Memberfunktion ersetzt den Speicherhöchstlastfaktor durch `new_factor`.  Kein automatische Durchführen eines Rehash tritt auf eine nachfolgende Einfügen auf.  
+ Die zweite Memberfunktion ersetzt den maximalen Lastfaktor Store mit `new_factor`. Kein automatisches erneutes Hashing durchführen tritt auf, bis eine nachfolgende einfügen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_hash_set_max_load_factor.cpp   
@@ -88,23 +89,28 @@ int main()
   
 ```  
   
-  **ein b c**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0,1875**  
-**max\_load\_factor\(\) \= 4**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0,1875**  
-**max\_load\_factor\(\) \= 0,25**  
-**bucket\_count\(\) \= 128**  
-**load\_factor\(\) \= 0,0234375**  
-**max\_load\_factor\(\) \= 0,25**   
-## Anforderungen  
- **Header:** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 4  
   
- **Namespace:** cliext  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 0.25  
   
-## Siehe auch  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::bucket\_count](../dotnet/hash-set-bucket-count-stl-clr.md)   
- [hash\_set::load\_factor](../dotnet/hash-set-load-factor-stl-clr.md)   
- [hash\_set::rehash](../dotnet/hash-set-rehash-stl-clr.md)
+bucket_count() = 128  
+load_factor() = 0.0234375  
+max_load_factor() = 0.25  
+```  
+  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext Hash_set/>  
+  
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set::bucket_count (STL/CLR)](../dotnet/hash-set-bucket-count-stl-clr.md)   
+ [hash_set::load_factor (STL/CLR)](../dotnet/hash-set-load-factor-stl-clr.md)   
+ [hash_set::rehash (STL/CLR)](../dotnet/hash-set-rehash-stl-clr.md)

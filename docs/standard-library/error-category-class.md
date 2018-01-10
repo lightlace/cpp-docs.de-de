@@ -27,11 +27,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 40ca15541b9035a82869cdfed7f304eeaeeb2553
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 927711e5ad87be2a8c4683cb960cc02015de2316
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errorcategory-class"></a>error_category-Klasse
 Stellt die abstrakte, allgemeine Basis für Objekte dar, die eine Fehlercodekategorie beschreibt.  
@@ -184,7 +185,7 @@ bool operator!=(const error_category& right) const;
  **TRUE**, wenn das Objekt `error_category` nicht dem Objekt `error_category` entspricht, das an `right` übergeben wird; andernfalls **FALSE**.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Memberoperator gibt `(!*this == right)` zurück.  
+ Der Memberoperator gibt `(!*this == right)`zurück.  
   
 ##  <a name="op_lt"></a> error_category::operator&lt;  
  Testet, ob das [error_category](../standard-library/error-category-class.md)-Objekt kleiner ist als das `error_category`-Objekt, das für den Vergleich übergeben wurde.  
@@ -203,7 +204,7 @@ bool operator<(const error_category& right) const;
  **TRUE**, wenn das Objekt, das an `error_category` übergeben wird, kleiner ist als das an `error_category` übergebene Objekt; andernfalls **FALSE**.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Memberoperator gibt `this < &right` zurück.  
+ Der Memberoperator gibt `this < &right`zurück.  
   
 ##  <a name="value_type"></a> error_category::value_type  
  Ein Typ, der den gespeicherten Fehlercodewert darstellt.  

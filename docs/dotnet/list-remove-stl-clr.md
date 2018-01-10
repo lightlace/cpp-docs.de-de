@@ -1,45 +1,46 @@
 ---
-title: "list::remove (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::remove"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "remove-Member [STL/CLR]"
+title: 'List:: Remove (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::remove
+dev_langs: C++
+helpviewer_keywords: remove member [STL/CLR]
 ms.assetid: eaf598ee-e8fd-4cc0-be69-ca81a80e1d51
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 19534e3b2552c8226dee72862f8f9fdfb1709ce7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# list::remove (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listremove-stlclr"></a>list::remove (STL/CLR)
 Entfernt ein Element mit einem angegebenen Wert.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void remove(value_type val);  
 ```  
   
-#### Parameter  
- val  
- Wert des Elements zu entfernende.  
+#### <a name="parameters"></a>Parameter  
+ Val  
+ Der Wert des zu entfernenden Elements.  
   
-## Hinweise  
- Die Memberfunktion entfernt ein Element in der Sequenz gesteuerten, für die `((System::Object^)``val``)->Equals((System::Object^)x)` zutrifft \(falls vorhanden\).  Sie verwenden sie, um ein beliebiges Element mit dem angegebenen Wert zu löschen.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion entfernt ein Element in der kontrollierten Sequenz an, für die `((System::Object^)val)->Equals((System::Object^)x)` ist "true" (sofern vorhanden). Sie verwenden es, um ein beliebiges Element mit dem angegebenen Wert zu löschen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_list_remove.cpp   
@@ -74,16 +75,19 @@ int main()
   
 ```  
   
-  **ein b c**  
- **ein b c**  
- **a\-c**   
-## Anforderungen  
- **Header:** \<cliext\/Liste\>  
+```Output  
+a b c  
+a b c  
+a c  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/List >  
   
-## Siehe auch  
- [list](../dotnet/list-stl-clr.md)   
- [list::clear](../dotnet/list-clear-stl-clr.md)   
- [list::erase](../dotnet/list-erase-stl-clr.md)   
- [list::remove\_if](../dotnet/list-remove-if-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Liste (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List:: Clear (STL/CLR)](../dotnet/list-clear-stl-clr.md)   
+ [List:: Erase (STL/CLR)](../dotnet/list-erase-stl-clr.md)   
+ [list::remove_if (STL/CLR)](../dotnet/list-remove-if-stl-clr.md)

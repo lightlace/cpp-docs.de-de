@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -81,8 +80,7 @@ f1_keywords:
 - stat/_wstati64
 - stat/_wstat32i64
 - stat/_wstat64i32
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - files [C++], status information
 - _stat function
@@ -115,30 +113,16 @@ helpviewer_keywords:
 - _tstat64 function
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 1c3fc1e6ee3ca15d610d2c25ad38eedb795d0ebf
-ms.contentlocale: de-de
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ed4a232cc5d563a724adf29500e70aa28cf36432
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stat-stat32-stat64-stati64-stat32i64-stat64i32-wstat-wstat32-wstat64-wstati64-wstat32i64-wstat64i32"></a>_stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 Abrufen von Statusinformationen zu einer Datei.  
@@ -217,10 +201,10 @@ int _wstat64i32(
   
  Varianten dieser Funktionen unterstützen 32-Bit- oder 64-Bit-Zeittypen und 32-Bit- oder 64-Bit-Dateilängen. Das erste numerische Suffix (`32` oder `64`) gibt die Größe des verwendeten Zeittyps an; das zweite Suffix ist entweder `i32` oder `i64`und gibt an, ob die Dateigröße als ganze Zahl mit 32 Bit oder 64 Bit dargestellt ist.  
   
- `_stat` entspricht `_stat64i32`, und `struct``_stat` enthält einen 64-Bit-Uhrzeitwert. This is true unless `_USE_32BIT_TIME_T` is defined, in which case the old behavior is in effect; `_stat` uses a 32-bit time, and `struct``_stat` contains a 32-bit time. Gleiches gilt auch für `_stati64`.  
+ `_stat` entspricht `_stat64i32`, und `struct _stat` enthält einen 64-Bit-Uhrzeitwert. Das trifft zu, sofern nicht `_USE_32BIT_TIME_T` definiert wurde; in diesem Fall ist das alte Verhalten wirksam. `_stat` verwendet einen 32-Bit-Uhrzeitwert, und `struct _stat` enthält einen 32-Bit-Uhrzeitwert. Gleiches gilt auch für `_stati64`.  
   
 > [!NOTE]
->  `_wstat` funktioniert nicht mit symbolischen [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] -Verknüpfungen. In diesen Fällen meldet `_wstat` immer die Dateigröße „0“. `_stat` funktioniert mit symbolischen Verknüpfungen nicht ordnungsgemäß.  
+>  `_wstat` funktioniert nicht mit symbolischen [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]-Verknüpfungen. In diesen Fällen meldet `_wstat` immer die Dateigröße „0“. `_stat` funktioniert mit symbolischen Verknüpfungen nicht ordnungsgemäß.  
   
  Diese Funktion überprüft ihre Parameter. Wenn entweder `path` oder `buffer` den Wert `NULL`aufweist, wird der Handler für ungültige Parameter aufgerufen, wie unter [Parameter Validation](../../c-runtime-library/parameter-validation.md)verweist.  
   
@@ -286,7 +270,7 @@ int _wstat64i32(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|Optionale Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionale Header|  
 |-------------|---------------------|----------------------|  
 |`_stat`, `_stat32`, `_stat64`, `_stati64`, `_stat32i64`, `_stat64i32`|\<sys/types.h> gefolgt von \<sys/stat.h>|\<errno.h>|  
 |`_wstat`, `_wstat32`, `_wstat64`, `_wstati64`, `_wstat32i64`, `_wstat64i32`|\<sys/types.h> gefolgt von \<sys/stat.h> oder \<wchar.h>|\<errno.h>|  
@@ -357,7 +341,7 @@ Time modified : Thu Feb 07 14:39:36 2002
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Dateibehandlung](../../c-runtime-library/file-handling.md)   
+ [File Handling (Dateibehandlung)](../../c-runtime-library/file-handling.md)   
  [_access, _waccess](../../c-runtime-library/reference/access-waccess.md)   
  [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
  [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   

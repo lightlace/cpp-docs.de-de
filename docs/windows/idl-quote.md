@@ -1,32 +1,33 @@
 ---
-title: "idl_quote | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.idl_quote"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "idl_quote attribute"
+title: Idl_quote | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.idl_quote
+dev_langs: C++
+helpviewer_keywords: idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 288d90bf2e32024792eaf5ec44825a9ac992bd71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# idl_quote
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ermöglicht es Ihnen, IDL\-Konstrukte zu verwenden, die nicht in die aktuelle Version von Visual C\+\+ unterstützt werden und sie zur generierten IDL\-Datei übergeben wird.  
+# <a name="idlquote"></a>idl_quote
+Ermöglicht es Ihnen IDL-Konstrukte zu verwenden, die nicht in der aktuellen Version von Visual C++ unterstützt werden, und lassen sie die pass-through an der generierten IDL-Datei.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -35,15 +36,15 @@ Ermöglicht es Ihnen, IDL\-Konstrukte zu verwenden, die nicht in die aktuelle Ve
 ) ]  
 ```  
   
-#### Parameter  
- *text*  
- Der Attributname, dass Sie den Visual C\+\+\-Compiler beabsichtigen, um zur generierten IDL\-Datei von übergeben werden sollen, ohne einen Compilerfehler zurückzugeben.  
+#### <a name="parameters"></a>Parameter  
+ *Text*  
+ Der Attributname, das Visual C++-Compiler, pass-through an der generierten IDL-Datei ohne einen Compilerfehler zurückgegeben werden soll.  
   
-## Hinweise  
- Wenn das Attribut **idl\_quote** C\+\+ als eigenständiges Attribut mit einem Semikolon \(nach der eckige Klammer\) verwendet wird, wird *Text* in die zusammengeführte IDL\-Datei abgelegt.  Wenn **idl\_quote** auf ein Symbol verwendet wird, wird *Text* innerhalb eines Attributblocks für dieses Symbol platziert.  
+## <a name="remarks"></a>Hinweise  
+ Wenn die **Idl_quote** C++-Attribut dient als eigenständiges Attribut (mit einem Semikolon nach der schließenden Klammer einfügen), klicken Sie dann *Text* befindet sich in der zusammengeführten IDL-Datei ist. Wenn **Idl_quote** wird verwendet, auf ein Symbol *Text* innerhalb des Attributblocks für das Symbol befindet.  
   
-## Beispiel  
- Der folgende Code zeigt, wie Sie ein Attribut angeben konnten nicht unterstützt \(mithilfe **in**, das unterstützt wird\) und wie ein nicht definiertes .idl\-Konstrukt definiert und verwendet werden:  
+## <a name="example"></a>Beispiel  
+ Der folgende Code zeigt, wie Sie ein nicht unterstütztes Attribut angeben können (mit **in**, dies wird jedoch unterstützt) sowie zum Definieren und verwenden ein nicht definierter IDL-Konstrukt:  
   
 ```  
 // cpp_attr_ref_idl_quote.cpp  
@@ -78,22 +79,21 @@ __interface IStatic{
 };  
 ```  
   
- Dieser Code führt MYFLOT und MYDUB und die in der generierten IDL\-Datei abgelegt werden, Texterfassung.  Der *Namensparameter* zwingt den *Text* platziert werden soll *,* bevor alle *Namen* , die in der generierten IDL\-Datei verweist.  Der Parameter erzwingt die *Abhängigkeiten* vor *Text* in der generierten IDL\-Datei abgelegt werden soll listendefinitionen Abhängigkeiten.  
+ Dieser Code bewirkt, dass MYFLOT und MYDUB und die *Text* Eintrag in der generierten IDL-Datei abgelegt werden soll. Die *Namen* Parameter erzwingt *Text* vor allem abgelegt werden soll, die verweist *Namen* in der generierten IDL-Datei. Die *Abhängigkeiten* Parameter erzwingt, dass die Abhängigkeit Listendefinitionen vor platziert werden *Text* in der generierten IDL-Datei.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
 |**Betrifft**|Überall|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Keiner|  
+|**Ungültige Attribute**|Keiner|  
   
- Weitere Informationen finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Stand\-Alone Attributes](../windows/stand-alone-attributes.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [IDL-Attribute](../windows/idl-attributes.md)   
+ [Eigenständige Attribute](../windows/stand-alone-attributes.md)   

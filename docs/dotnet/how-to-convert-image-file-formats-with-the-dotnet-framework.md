@@ -1,54 +1,55 @@
 ---
-title: "Gewusst wie: Konvertieren von Bilddateiformaten mit .NET Framework"
-ms.custom: na
-ms.date: "12/08/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GDI+ [C++], Konvertieren von Bilddateiformaten"
-  - "Grafik [C++], Konvertieren von Bilddateiformaten"
+title: 'Vorgehensweise: Konvertieren von Bilddateiformaten mit .NET Framework | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- GDI+ [C++], converting image file formats
+- graphics [C++], converting image file formats
 ms.assetid: 5d5384b0-b9b7-4262-b9ad-c4cb95f75ee4
-caps.latest.revision: 13
-caps.handback.revision: "12"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: dc2b84063c509cd870b5d02fa0a209b511d8a0f3
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/03/2018
 ---
-# Gewusst wie: Konvertieren von Bilddateiformaten mit .NET Framework
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-\<?xml version="1.0" encoding="utf-8"?>
-\<developerHowToDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
-  <introduction>
-    <para>Die folgenden Codebeispiele zeigen die <codeEntityReference qualifyHint="true" autoUpgrade="true">T:System.Drawing.Image</codeEntityReference>-Klasse und die Enumeration <codeEntityReference qualifyHint="true" autoUpgrade="true">T:System.Drawing.Imaging.ImageFormat</codeEntityReference>, die zum Konvertieren und Speichern von Bilddateien verwendet wurden. Der folgende Code lädt ein Bild aus einer JPG-Datei und speichert es sowohl im Format GIF als auch im Format BMP. </para>
-    <alert class="note">
-      <para>GDI+ ist in Windows XP, Windows Server 2003 und Windows Vista enthalten und für Windows 2000 als verteilbare API erhältlich. Die neueste verteilbare Version können Sie unter <externalLink><linkText>http://go.microsoft.com/fwlink/?linkid=11232</linkText><linkUri>http://go.microsoft.com/fwlink/?linkid=11232</linkUri></externalLink> herunterladen. Weitere Informationen finden Sie unter \<legacyLink xlink:href="_gdiplus_GDI_start_cpp">GDI+</legacyLink>.</para>
-    </alert>
-  </introduction>
-  <codeExample>
-    <code>#using &lt;system.drawing.dll&gt;
-
-using namespace System;
-using namespace System::Drawing;
-using namespace System::Drawing::Imaging;
-
-int main()
-{
-   Image^ image = Image::FromFile("SampleImage.jpg");
-   image-&gt;Save("SampleImage.png", ImageFormat::Png);
-   image-&gt;Save("SampleImage.bmp", ImageFormat::Bmp);
-
-   return 0;
-}</code>
-  </codeExample>
-  <relatedTopics>
-\<link xlink:href="2c7f3b0f-a266-4f0e-b318-d6f1371e04a9">.NET-Programmierung in C++</link>
-<codeEntityReference autoUpgrade="true">N:System.Drawing</codeEntityReference>
-</relatedTopics>
-</developerHowToDocument>
+# <a name="how-to-convert-image-file-formats-with-the-net-framework"></a>Gewusst wie: Konvertieren von Bilddateiformaten mit .NET Framework
+Im folgenden Codebeispiel wird veranschaulicht, die <xref:System.Drawing.Image?displayProperty=fullName> Klasse und die <xref:System.Drawing.Imaging.ImageFormat?displayProperty=fullName> Enumeration zum Konvertieren und Speichern von Abbilddateien verwendet. Der folgende Code lädt ein Bild aus einer JPG-Datei, und klicken Sie dann im GIF- und BMP-Dateiformat gespeichert.  
+  
+> [!NOTE]
+>  GDI + ist in Windows XP, Windows Server 2003 und Windows Vista enthalten und ist als verteilbare Komponente für Windows 2000 verfügbar. Informationen zum Herunterladen des neuesten verteilbaren Pakets finden Sie unter [http://go.microsoft.com/fwlink/p/?linkid=11232](http://go.microsoft.com/fwlink/p/?linkid=11232).   
+  
+## <a name="example"></a>Beispiel  
+  
+```  
+#using <system.drawing.dll>  
+  
+using namespace System;  
+using namespace System::Drawing;  
+using namespace System::Drawing::Imaging;  
+  
+int main()  
+{  
+   Image^ image = Image::FromFile("SampleImage.jpg");  
+   image->Save("SampleImage.png", ImageFormat::Png);  
+   image->Save("SampleImage.bmp", ImageFormat::Bmp);  
+  
+   return 0;  
+}  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Drawing>   
+ [.NET-Programmierung mit C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

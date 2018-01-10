@@ -1,35 +1,37 @@
 ---
-title: "auto_gcroot::operator="
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_gcroot.operator="
-  - "msclr::auto_gcroot::operator="
-  - "msclr.auto_gcroot.operator="
-  - "auto_gcroot::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Operator="
+title: auto_gcroot::Operator = | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_gcroot.operator=
+- msclr::auto_gcroot::operator=
+- msclr.auto_gcroot.operator=
+- auto_gcroot::operator=
+dev_langs: C++
+helpviewer_keywords: operator=
 ms.assetid: 99eba5eb-5a2c-4edf-b3d5-c903f818233d
-caps.latest.revision: 13
-caps.handback.revision: "11"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b924c3596d1f381d42c711e42e93fd9ae6d037e7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# auto_gcroot::operator=
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="autogcrootoperator"></a>auto_gcroot::operator=
 Zuweisungsoperator.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 auto_gcroot<_element_type> & operator=(  
@@ -44,14 +46,14 @@ auto_gcroot<_element_type> & operator=(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `_right`  
- Das zugewiesen werden aktuellen Objekt, `auto_gcroot` oder `auto_gcroot`.  
+ Das Objekt oder `auto_gcroot` das aktuelle zuzuweisenden `auto_gcroot`.  
   
-## Rückgabewert  
- Aktuelle `auto_gcroot`, `_right` besitzend jetzt.  
+## <a name="return-value"></a>Rückgabewert  
+ Die aktuelle `auto_gcroot`, jetzt besitzenden `_right`.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // msl_auto_gcroot_operator_equals.cpp  
@@ -104,21 +106,24 @@ int main()
 }  
 ```  
   
-  **in ClassA\-Konstruktor: erstens**  
-**Hello zuerst von A\!**  
-**in ClassA\-Konstruktor: zweitens**  
-**in ClassA\-Destruktor: erstens**  
-**in ClassA\-Konstruktor: drittens**  
-**Hello von drittem B\!**  
-**in ClassA\-Destruktor: zweitens**  
-**Hello von drittem A\!**  
-**dein**  
-**in ClassA\-Destruktor: drittens**   
-## Anforderungen  
- **Headerdatei** \<msclr\\auto\_gcroot.h\>  
+```Output  
+in ClassA constructor: first  
+Hello from first A!  
+in ClassA constructor: second  
+in ClassA destructor: first  
+in ClassA constructor: third  
+Hello from third B!  
+in ClassA destructor: second  
+Hello from third A!  
+done  
+in ClassA destructor: third  
+```  
   
- **Namespace** msclr  
+## <a name="requirements"></a>Anforderungen  
+ **Headerdatei** \<msclr\auto_gcroot.h >  
   
-## Siehe auch  
- [auto\_gcroot Members](../dotnet/auto-gcroot-members.md)   
- [auto\_gcroot::attach](../dotnet/auto-gcroot-attach.md)
+ **Namespace** Msclr  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Auto_gcroot-Elemente](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot::attach](../dotnet/auto-gcroot-attach.md)

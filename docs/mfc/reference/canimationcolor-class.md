@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -23,8 +22,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationColor::m_bValue
 - AFXANIMATIONCONTROLLER/CAnimationColor::m_gValue
 - AFXANIMATIONCONTROLLER/CAnimationColor::m_rValue
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationColor [MFC], CAnimationColor
 - CAnimationColor [MFC], AddTransition
@@ -39,16 +37,16 @@ helpviewer_keywords:
 - CAnimationColor [MFC], m_gValue
 - CAnimationColor [MFC], m_rValue
 ms.assetid: 88bfabd4-efeb-4652-87e8-304253d8e48c
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: dd6ec3b6d8ee6a37fbe189ff70a2a633cfda9c8a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: d380a2ea464737e29e32c9a79622aed7f1dada15
-ms.contentlocale: de-de
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationcolor-class"></a>CAnimationColor-Klasse
 Implementiert die Funktion einer Farbe, deren Rot-, Grün- und Blauanteil animiert werden kann.  
@@ -59,7 +57,7 @@ Implementiert die Funktion einer Farbe, deren Rot-, Grün- und Blauanteil animie
 class CAnimationColor : public CAnimationBaseObject;  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -94,7 +92,7 @@ class CAnimationColor : public CAnimationBaseObject;
   
 ### <a name="protected-data-members"></a>Geschützte Datenmember  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |[CAnimationColor::m_bValue](#m_bvalue)|Die gekapselte Animationsvariable, die Blauanteil der Animationsfarbe darstellt.|  
 |[CAnimationColor::m_gValue](#m_gvalue)|Die gekapselte Animationsvariable, die Animationsfarbe Grün-Komponente darstellt.|  
@@ -304,4 +302,3 @@ void SetDefaultValue(COLORREF color);
   
 ## <a name="see-also"></a>Siehe auch  
  [Klassen](../../mfc/reference/mfc-classes.md)
-

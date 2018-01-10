@@ -1,31 +1,33 @@
 ---
-title: "Gewusst wie: Durchlaufen einer generischen Auflistung mit der for-each-Klausel | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Generische Auflistung, Iteration über"
+title: "Vorgehensweise: Durchlaufen einer generischen Auflistung mit für die einzelnen | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: generic collection, iterating over
 ms.assetid: 00288d53-3d41-44d0-be5b-b3033456ceaa
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ed9d92c4d6123d1c9c8f92814272ae5a77184102
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Gewusst wie: Durchlaufen einer generischen Auflistung mit der for-each-Klausel
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die [Generics](../windows/generics-cpp-component-extensions.md)\-Funktion von Visual C\+\+ können, um generische Auflistungen erstellen.  
+# <a name="how-to-iterate-over-a-generic-collection-with-for-each"></a>Gewusst wie: Durchlaufen einer generischen Auflistung mit der for-each-Klausel
+Die [Generika](../windows/generics-cpp-component-extensions.md) Feature von Visual C++ können Sie generische Auflistungen zu erstellen.  
   
-## Beispiel  
- Dieses Beispiel zeigt, wie `for each` mit einer einfachen generischen Werttypauflistung verwendet.  
+## <a name="example"></a>Beispiel  
+ Dieses Beispiel zeigt, wie `for each` mit eine einfache generische Typ wertauflistung.  
   
 ```  
 // for_each_generics.cpp  
@@ -92,8 +94,11 @@ int main() {
 }  
 ```  
   
-  **10**  
-**20**  
-**30**   
-## Siehe auch  
- [for each, in](../dotnet/for-each-in.md)
+```Output  
+10  
+20  
+30  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [for each in](../dotnet/for-each-in.md)

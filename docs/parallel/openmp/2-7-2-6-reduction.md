@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cbcb5cc6c4b01f3cbf996431435f42a7b034d002
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 684067eae668398e71ca4ace0cc136e3210e0dbf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="2726-reduction"></a>2.7.2.6 reduction
 
@@ -37,7 +38,7 @@ Eine Verkleinerung ist in der Regel für eine Anweisung mit einem der folgenden 
 
 Dabei gilt:
 
-*x*  
+*w*  
 Einer der Reduction-Variablen, die im angegebenen der `list`.
 
 *Variable-Liste*  
@@ -86,7 +87,7 @@ Die folgende Tabelle enthält die Operatoren, die gültig sind und ihre kanonisc
 |&#124;|0|
 |^|0|
 |&amp;&amp;|1|
-|&#124;&#124;|0|
+||||0|
 
 Die Einschränkungen fest, die `reduction` Klausel lauten wie folgt:
 

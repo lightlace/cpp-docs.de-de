@@ -1,49 +1,51 @@
 ---
-title: "IDBCreateSessionImpl::CreateSession | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDBCreateSessionImpl::CreateSession"
-  - "IDBCreateSessionImpl.CreateSession"
-  - "CreateSession"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CreateSession-Methode"
+title: 'Idbcreatesessionimpl:: CreateSession | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDBCreateSessionImpl::CreateSession
+- IDBCreateSessionImpl.CreateSession
+- CreateSession
+dev_langs: C++
+helpviewer_keywords: CreateSession method
 ms.assetid: 035e5ddb-56e6-43b1-874d-89c0e40b103b
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5a9cc97b66e9fb27ac91100b936ba537ff28018b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# IDBCreateSessionImpl::CreateSession
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Erstellt eine neue Sitzung vom Datenquellenobjekt und die angeforderte Schnittstelle der neu erstellten Sitzung zurückkehren.  
+# <a name="idbcreatesessionimplcreatesession"></a>IDBCreateSessionImpl::CreateSession
+Erstellt eine neue Sitzung aus dem Datenquellensicht-Objekt und gibt die angeforderte Schnittstelle auf die neu erstellte Sitzung zurück.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
-      STDMETHOD(CreateSession)(   
-   IUnknown * pUnkOuter,   
-   REFIID riid,   
-   IUnknown ** ppDBSession    
+      STDMETHOD(CreateSession)(   
+   IUnknown * pUnkOuter,   
+   REFIID riid,   
+   IUnknown ** ppDBSession    
 );  
 ```  
   
-#### Parameter  
- Siehe [IDBCreateSession::CreateSession](https://msdn.microsoft.com/en-us/library/ms714942.aspx) in der *OLE* DB\-Programmierreferenz.  
+#### <a name="parameters"></a>Parameter  
+ Finden Sie unter [IDBCreateSession:: CreateSession](https://msdn.microsoft.com/en-us/library/ms714942.aspx) in der *OLE DB Programmer's Reference*.  
   
-## Anforderungen  
- **Header:** atldb.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** „atldb.h“  
   
-## Siehe auch  
- [IDBCreateSessionImpl\-Klasse](../../data/oledb/idbcreatesessionimpl-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [IDBCreateSessionImpl-Klasse](../../data/oledb/idbcreatesessionimpl-class.md)

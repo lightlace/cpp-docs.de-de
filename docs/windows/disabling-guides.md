@@ -1,59 +1,63 @@
 ---
-title: "Disabling Guides | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "guides, disabling snapping"
-  - "Dialog editor, snap to guides"
-  - "snap to guides (Dialog editor)"
-  - "controls [C++], snap to guides/grid"
+title: "Deaktivieren von Führungslinien | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- guides, disabling snapping
+- Dialog editor, snap to guides
+- snap to guides (Dialog editor)
+- controls [C++], snap to guides/grid
 ms.assetid: 51efa07b-8684-474e-a0b4-191ec5d91d1a
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d4fa9ca3f1dd5b73b07f705c453c29ba150e4754
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Disabling Guides
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Durch spezielle, in Verbindung mit der Maus verwendete Tasten können Sie den Ausrichtungseffekt der Führungslinien deaktivieren.  Bei Verwendung der ALT\-TASTE werden die Ausrichtungseffekte der ausgewählten Führungslinie deaktiviert.  Wenn Sie eine Führungslinie bei gedrückter UMSCHALTTASTE verschieben, werden ausgerichtete Steuerelemente nicht mit der Führungslinie verschoben.  
+# <a name="disabling-guides"></a>Deaktivieren von Führungslinien
+Sondertasten können in Verbindung mit der Maus Sie um die ausrichtungsintervall Auswirkungen Handbüchern zu deaktivieren. Verwenden die ALT-Taste deaktiviert das ausrichtungsintervall Auswirkungen des Handbuchs ausgewählt. Verschieben eine Anleitung mit der UMSCHALTTASTE wird verhindert, dass angedockte Steuerelemente mit dem Handbuch verschieben.  
   
-### So deaktivieren Sie den Ausrichtungseffekt der Führungslinien  
+### <a name="to-disable-the-snapping-effect-of-the-guides"></a>So deaktivieren Sie das ausrichtungsintervall Effekt Handbüchern  
   
-1.  Ziehen Sie das Steuerelement, während Sie die ALT\-TASTE gedrückt halten.  
+1.  Ziehen Sie das Steuerelement halten Sie die **ALT** Schlüssel.  
   
-### So verschieben Sie Führungslinien, ohne die ausgerichteten Steuerelemente zu verschieben  
+### <a name="to-move-guides-without-moving-the-snapped-controls"></a>Handbücher zu verschieben, ohne dass die ausgerichteten Steuerelemente verschoben  
   
-1.  Ziehen Sie die Führungslinie, während Sie die UMSCHALTTASTE gedrückt halten.  
+1.  Ziehen Sie das Handbuch halten Sie die **UMSCHALT** Schlüssel.  
   
-### So deaktivieren Sie die Führungslinien  
+### <a name="to-turn-off-the-guides"></a>So deaktivieren Sie die Handbücher  
   
-1.  Wählen Sie im Menü **Format** die Option **Führungslinieneinstellungen**.  
+1.  Aus der **Format** Menü wählen **Handbuch Einstellungen**.  
   
-2.  Wählen Sie im [Dialogfeld "Führungslinieneinstellungen"](../mfc/guide-settings-dialog-box.md) unter **Layoutführungslinien** die Option **Keine**.  
+2.  In der [Handbuch Einstellungen (Dialogfeld)](../windows/guide-settings-dialog-box.md)unter **Layout Handbücher**Option **keine**.  
   
     > [!NOTE]
-    >  Sie können auch auf das Lineal doppelklicken, um auf das Dialogfeld **Führungslinieneinstellungen** zuzugreifen.  
+    >  Sie können auch den Zugriff auf die Lineal-Leiste doppelklicken dem **Handbuch Einstellungen** (Dialogfeld).  
   
- \- oder \-  
+ \- oder –  
   
--   Klicken Sie im Menü **Format** auf **Führungslinien umschalten**.  
+-   Auf der **Format** Menü klicken Sie auf **Führungslinien ein-/ausschalten**.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
   
  Anforderungen  
   
  Win32  
   
-## Siehe auch  
- [Dialog Editor States \(Guides and Grids\)](../mfc/dialog-editor-states-guides-and-grids.md)   
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)
+## <a name="see-also"></a>Siehe auch  
+ [Dialog-Editor-Status (Führungslinien und Raster)](../windows/dialog-editor-states-guides-and-grids.md)   
+ [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)
+

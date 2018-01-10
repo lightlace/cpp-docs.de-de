@@ -1,32 +1,31 @@
 ---
-title: "Linkertoolwarnung LNK4104 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4104"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4104"
+title: Linkertoolwarnung Lnk4104 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4104
+dev_langs: C++
+helpviewer_keywords: LNK4104
 ms.assetid: ca6728db-d616-419a-a570-65e8445c6079
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b26286f375f54a20e1d3db534576f692179ade24
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Linkertoolwarnung LNK4104
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Export von Symbol 'Symbol' muss als PRIVATE angegeben sein  
+# <a name="linker-tools-warning-lnk4104"></a>Linkertoolwarnung LNK4104
+Export von Symbol 'Symbol' sollten privat sein.  
   
- Als *Symbol* kommen folgende Funktionen in Frage:  
+ Die `symbol` kann eines der folgenden sein:  
   
 -   `DllCanUnloadNow`  
   
@@ -58,4 +57,4 @@ Export von Symbol 'Symbol' muss als PRIVATE angegeben sein
   
 -   `RasCustomEntryDlg`  
   
- Diese Warnung wird ausgegeben, wenn Sie eine Importbibliothek für eine DLL erstellen und eine der oben aufgeführten Funktionen exportieren, ohne sie in der Moduldefinitionsdatei als **PRIVATE** festzulegen.  Im Allgemeinen werden diese Funktionen nur für die Verwendung durch OLE exportiert.  Das Ablegen in der Importbibliothek kann zu ungewöhnlichem Verhalten führen, wenn die Funktionen unzulässigerweise von einem Programm aufgerufen werden, das mit dieser Bibliothek verknüpft ist.  Weitere Informationen über das **PRIVATE**\-Schlüsselwort finden Sie unter [EXPORTS](../../build/reference/exports.md).
+ Diese Warnung wird ausgegeben, wenn Sie eine Importbibliothek für eine DLL erstellen und Exportieren eine der oben genannten Funktionen ohne es als privat in der Moduldefinition Datei anzugeben. Im Allgemeinen werden diese Funktionen für die Verwendung nur durch OLE exportiert. Platzieren sie in der Importbibliothek kann auf ungewöhnliches Verhalten führen, wenn ein Programm nicht ordnungsgemäß mit der Bibliothek verknüpft diese aufgerufen wird. Weitere Informationen über die PRIVATE-Schlüsselwort finden Sie unter [EXPORTE](../../build/reference/exports.md).

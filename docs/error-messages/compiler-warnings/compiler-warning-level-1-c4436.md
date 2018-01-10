@@ -1,41 +1,42 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4436 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
+title: Compilerwarnung (Stufe 1) C4436 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs: C++
 ms.assetid: 2b54a1fc-c9c6-4cc9-90be-faa44fc715d5
-caps.latest.revision: 2
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1018d678b6105f2d727f7806326218c168d8f728
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 1) C4436
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Der Operator dynamic\_cast von der virtuellen Basisklasse "Klasse1" zu "Klasse2" im Konstruktor oder Destruktor kann mit teilweis\-erstelltem Objekt fehlgeschlagenen kompilieren mit \/vd2 oder definieren "Klasse2" mit \#pragma vtordisp wirksam \(2\)  
+# <a name="compiler-warning-level-1-c4436"></a>Compilerwarnung (Stufe 1) C4436
+Dynamic_cast von virtueller Basis 'class1' zu 'class2' im Konstruktor oder Destruktor konnte mit teilweise konstruiert Objekt Kompilieren mit/vd2 fehlschlagen oder "Klasse2" mit der #pragma-vtordisp(2) faktisch definieren  
   
- Der Compiler hat einen Vorgang `dynamic_cast` mit den folgenden Eigenschaften gefunden.  
+ Der Compiler hat eine `dynamic_cast` Operation mit den folgenden Merkmalen.  
   
--   Die Umwandlung wird über einen Basisklassenzeiger einem Zeiger der abgeleiteten Klasse.  
+-   Die Umwandlung ist von einem Zeiger Basisklasse in einer abgeleiteten Klasse Zeiger.  
   
--   Die abgeleitete Klasse erbt virtuell die Basisklasse.  
+-   Die abgeleitete Klasse erbt praktisch die Basisklasse.  
   
--   Die abgeleitete Klasse hat kein `vtordisp` \- Feld für die virtuelle Basisklasse.  
+-   Die abgeleitete Klasse verfügt nicht über eine `vtordisp` Feld für die virtuelle Basisklasse.  
   
--   Die Umwandlung wird in einem Konstruktor oder einem Destruktor der abgeleiteten Klasse oder in irgendeiner Klasse gefunden, die weiter von der abgeleiteten Klasse erbt.  
+-   Die Umwandlung in einen Konstruktor oder Destruktor der abgeleiteten Klasse befindet, oder was Klasse erbt von der abgeleiteten Klasse.  
   
- Die Warnung angibt `dynamic_cast` führt möglicherweise nicht ordnungsgemäß ausgewertet, auf einem teilweis\-erstellten Objekt funktioniert.  Das geschieht, wenn der abgeleitete Konstruktor\/der Destruktor auf ein Unterobjekt einige nachfolgend abgeleiteten Objekts.  Wenn die abgeleitete Klasse, die in der Warnung ", nie eine weitere abgeleitete ist, kann die Warnung ignoriert werden.  
+ Die Warnung gibt an, die `dynamic_cast` möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn sie für eine teilweise konstruiert Objekt ausgeführt wird.  Die geschieht, wenn der abgeleitete Konstruktor/Destruktor auf ein Unterobjekt vom einige weitere abgeleitete Objekt ausgeführt wird.  Wenn die abgeleitete Klasse mit dem Namen in der Warnung keine weiteren abgeleitet ist, kann die Warnung ignoriert werden.  
   
-## Beispiel  
- Das folgende Beispiel generiert C4436 und zeigt das Codegenerierungsproblem, das aus dem fehlenden `vtordisp` Feld entsteht.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird C4436 generiert und veranschaulicht, das Code-Generation-Problem, das aus den fehlenden `vtordisp` Feld.  
   
 ```cpp  
 // C4436.cpp  
@@ -77,7 +78,7 @@ int main()
 }  
 ```  
   
-## Siehe auch  
- [dynamic\_cast\-Operator](../../cpp/dynamic-cast-operator.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Dynamic_cast-Operator](../../cpp/dynamic-cast-operator.md)   
  [vtordisp](../../preprocessor/vtordisp.md)   
- [Compilerwarnung \(Stufe 4\) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)
+ [Compilerwarnung (Ebene 4) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)

@@ -1,41 +1,42 @@
 ---
-title: "Module::GenericReleaseNotifier::callback_-Datenmember | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::GenericReleaseNotifier::callback_"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "callback_-Datenmember"
+title: Datenmember Module::GenericReleaseNotifier::callback_ | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::GenericReleaseNotifier::callback_
+dev_langs: C++
+helpviewer_keywords: callback_ data member
 ms.assetid: a17c47ae-fe95-46b6-aee5-74fbfe32e031
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1368acd2e64ac612c89aed47304d01148a7f68f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Module::GenericReleaseNotifier::callback_-Datenmember
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Hält Lambda, das Funktionselement oder den Zeiger\-zuFunktionsereignishandler, der dem aktuellen Module::GenericReleaseNotifier\-Objekt zugeordnet wird.  
+# <a name="modulegenericreleasenotifiercallback-data-member"></a>Module::GenericReleaseNotifier::callback_-Datenmember
+Enthält den Lambda, Funktionselement oder Zeiger auf Funktion Ereignishandler, die dem aktuellen genericreleasenotifier-Objekt zugeordnet.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 T callback_;  
 ```  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** module.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [Module::GenericReleaseNotifier\-Klasse](../windows/module-genericreleasenotifier-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [Module::GenericReleaseNotifier-Klasse](../windows/module-genericreleasenotifier-class.md)

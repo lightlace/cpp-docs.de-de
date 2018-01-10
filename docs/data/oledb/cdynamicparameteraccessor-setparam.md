@@ -1,39 +1,41 @@
 ---
-title: "CDynamicParameterAccessor::SetParam | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CDynamicParameterAccessor::SetParam"
-  - "ATL::CDynamicParameterAccessor::SetParam<ctype>"
-  - "CDynamicParameterAccessor.SetParam"
-  - "ATL.CDynamicParameterAccessor.SetParam"
-  - "SetParam"
-  - "CDynamicParameterAccessor:SetParam"
-  - "CDynamicParameterAccessor::SetParam<ctype>"
-  - "CDynamicParameterAccessor::SetParam"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetParam-Methode"
+title: 'CDynamicParameterAccessor:: SetParam | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CDynamicParameterAccessor::SetParam
+- ATL::CDynamicParameterAccessor::SetParam<ctype>
+- CDynamicParameterAccessor.SetParam
+- ATL.CDynamicParameterAccessor.SetParam
+- SetParam
+- CDynamicParameterAccessor:SetParam
+- CDynamicParameterAccessor::SetParam<ctype>
+- CDynamicParameterAccessor::SetParam
+dev_langs: C++
+helpviewer_keywords: SetParam method
 ms.assetid: e2349220-545c-46ad-90da-9113ac52551a
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b092dad600c1698d3cbe550f16e05a8307f030fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicParameterAccessor::SetParam
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Legt den Parameterpuffer mit der angegebenen \(NichtZeichenfolgen\) Daten fest.  
+# <a name="cdynamicparameteraccessorsetparam"></a>CDynamicParameterAccessor::SetParam
+Legt die Parameterpuffer anhand der angegebenen (keine Zeichenfolgenmethoden) Daten fest.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -52,31 +54,31 @@ bool SetParam(
 ) throw( );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `ctype`  
- Ein auf Vorlagen basierenden Parameter, der der Datentyp ist.  
+ Ein aus einer Vorlage gebildete-Parameter, der den Datentyp darstellt.  
   
  `nParam`  
- \[in\] die einen Parameterwert \(Offset von 1\).  Parameter 0 wird für Rückgabewerte reserviert.  In einen Parameterwert ist der Index des Parameters anhand ihrer Reihenfolge im SQL\- oder Prozeduraufruf.  Beispiel:  
+ [in] Die Parameteranzahl (Offset von 1). Parameter 0 ist für Rückgabewerte reserviert. Die Parameteranzahl ist der Index des Parameters basierend auf der Reihenfolge der SQL-oder einen Aufruf einer gespeicherten Prozedur. Zum Beispiel:  
   
- [!CODE [NVC_OLEDB_Consumer#8](../CodeSnippet/VS_Snippets_Cpp/NVC_OLEDB_Consumer#8)]  
+ [!code-cpp[NVC_OLEDB_Consumer#8](../../data/oledb/codesnippet/cpp/cdynamicparameteraccessor-setparam_1.cpp)]  
   
  `pParamName`  
- \[in\] Der Name des Parameters.  
+ [in] Der Name des Parameters.  
   
  `pData`  
- \[in\] der Zeiger auf den Speicher, der die in den Puffer zu schreibenden Daten, enthält.  
+ [in] Der Zeiger auf den Speicher mit den Daten in den Puffer geschrieben werden sollen.  
   
  *status*  
- \[in\] Der `DBSTATUS` Spaltenstatus.  Weitere Informationen über `DBSTATUS`\-Werte, finden Sie unter [Status](https://msdn.microsoft.com/en-us/library/ms722617.aspx) in der *OLE* DB\-Programmierreferenz, oder indem Sie für `DBSTATUS` in oledb.h.  
+ [in] Die `DBSTATUS` Status in der Spalte. Informationen zu `DBSTATUS` -Werte finden Sie in [Status](https://msdn.microsoft.com/en-us/library/ms722617.aspx) in der *OLE DB Programmer's Reference*, oder suchen Sie nach `DBSTATUS` in "OleDb.h".  
   
-## Rückgabewert  
- **true** Gibt bei Erfolg oder **false** auf Fehler.  
+## <a name="return-value"></a>Rückgabewert  
+ Gibt **"true"** bei Erfolg oder **"false"** bei einem Fehler.  
   
- Verwenden Sie `SetParam`, um nonstring Parameterdaten im Puffer festzulegen.  [SetParamString](../../data/oledb/cdynamicparameteraccessor-setparamstring.md) zu den festgelegten Zeichenfolgenparameterdaten im Puffer.  
+ Verwendung `SetParam` Zeichenfolgendaten-Parameter im Puffer festgelegt. Verwendung [SetParamString](../../data/oledb/cdynamicparameteraccessor-setparamstring.md) Abfragezeichenfolge-Parameterdaten zur im Puffer festgelegt.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  
   
-## Siehe auch  
- [CDynamicParameterAccessor\-Klasse](../../data/oledb/cdynamicparameteraccessor-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [CDynamicParameterAccessor-Klasse](../../data/oledb/cdynamicparameteraccessor-class.md)

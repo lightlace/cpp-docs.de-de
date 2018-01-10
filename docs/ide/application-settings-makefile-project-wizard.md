@@ -1,47 +1,46 @@
 ---
-title: "Anwendungseinstellungen, Makefile-Projekt-Assistent | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.makefile.appset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Makefile-Projekt-Assistent, Anwendungseinstellungen"
+title: Anwendungseinstellungen, Makefile-Projekt-Assistent | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.appwiz.makefile.appset
+dev_langs: C++
+helpviewer_keywords: Makefile Project Wizard, application settings
 ms.assetid: e0cbce59-5984-4f68-8a1d-f7fb2007c9b4
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1ff4bd61f63790f7e59d2f6a1a03ea2802b9e158
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Anwendungseinstellungen, Makefile-Projekt-Assistent
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Geben Sie Informationen für das Projekt ein.  Die festgelegten Optionen werden auf der [Eigenschaftenseite](../ide/working-with-project-properties.md) des Projekts angezeigt.  Nachdem Sie das Projekt erstellt haben, können Sie die folgenden Optionen auf der **Nmake**\-Seite der projektspezifischen Eigenschaftenseite anzeigen und bearbeiten.  
+# <a name="application-settings-makefile-project-wizard"></a>Anwendungseinstellungen, Makefile-Projekt-Assistent
+Geben Sie die Informationen für das Projekt. Die Optionen, die Sie angeben, werden in des Projekts wiedergegeben [Eigenschaftenseite](../ide/working-with-project-properties.md). Nachdem Sie das Projekt erstellt haben, können Sie anzeigen und bearbeiten Sie die folgenden Optionen in der **Nmake** Seite der Eigenschaftenseite des Projekts.  
   
- **Befehlszeile erstellen**  
- Legt die Befehlszeile fest, die ausgeführt werden soll, nachdem der Benutzer im Menü **Erstellen** den Befehl **Erstellen** ausgewählt hat.  Sie wird auf der **Nmake**\-Seite der projektspezifischen Eigenschaftenseite im Feld **Befehlszeile erstellen** angezeigt.  
+ **Erstellen Sie über die Befehlszeile**  
+ Gibt die Befehlszeile ausgeführt wird, wenn der Benutzer auswählt **erstellen** aus der **erstellen** Menü. Angezeigt der **Buildbefehlszeile** Feld der **Nmake** auf der Seite der Projekteigenschaften auf der Seite.  
   
- **Output**  
- Legt den Namen der Datei fest, die die Ausgabe für die Befehlszeile enthält.  Diese Option basiert standardmäßig auf dem Projektnamen.  Sie wird auf der **Nmake**\-Seite der projektspezifischen Eigenschaftenseite im Feld **Ausgabe** angezeigt.  
+ **Ausgabe**  
+ Gibt den Namen der Datei, die die Ausgabe für die Befehlszeile enthalten soll. Diese Option wird standardmäßig auf den Projektnamen basieren. Angezeigt der **Ausgabe** Feld der **Nmake** auf der Seite der Projekteigenschaften auf der Seite.  
   
  **Bereinigte Befehle**  
- Legt die Befehlszeile fest, die ausgeführt werden soll, nachdem der Benutzer im Menü **Erstellen** den Befehl **Bereinigen** ausgewählt hat.  Sie wird auf der **Nmake**\-Seite der projektspezifischen Eigenschaftenseite im Feld **Neue Befehlszeile** angezeigt.  
+ Gibt die Befehlszeile ausgeführt wird, wenn der Benutzer auswählt **Bereinigen** aus der **erstellen** Menü. Angezeigt der **bereinigen Befehlszeile** Feld der **Nmake** auf der Seite der Projekteigenschaften auf der Seite.  
   
- **Befehlszeile erstellen**  
- Legt die Befehlszeile fest, die ausgeführt werden soll, nachdem der Benutzer im Menü **Erstellen** den Befehl **Neu erstellen** ausgewählt hat.  Sie wird auf der **Nmake**\-Seite der projektspezifischen Eigenschaftenseite im Feld **"Alles neu erstellen"\-Befehlszeile** angezeigt.  
+ **Erstellen Sie über die Befehlszeile neu.**  
+ Gibt die Befehlszeile ausgeführt wird, wenn der Benutzer auswählt **Rebuild** aus der **erstellen** Menü. Angezeigt der **neu** Feld der **Nmake** auf der Seite der Projekteigenschaften auf der Seite.  
   
-## Siehe auch  
- [Makefile\-Projekt\-Assistent](../ide/makefile-project-wizard.md)   
- [Erstellen eines Makefile\-Projekts](../ide/creating-a-makefile-project.md)   
- [Visual C\+\+\-Projekttypen](../ide/visual-cpp-project-types.md)   
- [Erstellen von Desktopprojekten mit Anwendungs\-Assistenten](../ide/creating-desktop-projects-by-using-application-wizards.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Makefile-Projekt-Assistent](../ide/makefile-project-wizard.md)   
+ [Erstellen eines Makefile-Projekts](../ide/creating-a-makefile-project.md)   
+ [Visual C++-Projekttypen](../ide/visual-cpp-project-types.md)   
+ [Erstellen von Desktopprojekten mit Anwendungs-Assistenten](../ide/creating-desktop-projects-by-using-application-wizards.md)   
  [Eigenschaftenseiten](../ide/property-pages-visual-cpp.md)   
- [Deploying Applications](assetId:///4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [Bereitstellen von Anwendungen](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)

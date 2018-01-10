@@ -61,11 +61,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5b1fb434158d263b57fb34d15d976d9bae41c4df
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 35af11c38c70513cb2225bbeb8e74c4ab61c8cc5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationbaseobject-class"></a>CAnimationBaseObject-Klasse
 Die Basisklasse für alle Animationsobjekte.  
@@ -76,7 +77,7 @@ Die Basisklasse für alle Animationsobjekte.
 class CAnimationBaseObject : public CObject;  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -113,7 +114,7 @@ class CAnimationBaseObject : public CObject;
   
 ### <a name="protected-data-members"></a>Geschützte Datenmember  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |[CAnimationBaseObject::m_bAutodestroyTransitions](#m_bautodestroytransitions)|Gibt an, ob die zugehörigen Übergänge automatisch zerstört werden soll.|  
 |[CAnimationBaseObject::m_dwUserData](#m_dwuserdata)|Speichert benutzerdefinierte Daten.|  

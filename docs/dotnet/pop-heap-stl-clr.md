@@ -1,32 +1,33 @@
 ---
-title: "pop_heap (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::pop_heap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pop_heap-Funktion [STL/CLR]"
+title: Pop_heap (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::pop_heap
+dev_langs: C++
+helpviewer_keywords: pop_heap function [STL/CLR]
 ms.assetid: d9bde0ed-2122-4d83-b4b3-f47f6fb3729a
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a125eecf32808057f12c4e081e3f73cdde12f736
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# pop_heap (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Entfernt das größte Element der Vorderseite eines Heaps dem folgenden im \- ZuLAST\-Position Bereich und bildet dann einen neuen Heap von den übrigen Elemente.  
+# <a name="popheap-stlclr"></a>pop_heap (STL/CLR)
+Entfernt das größte Element von der Vorderseite eines Heaps und fügt es in die vorletzte Position des Bereichs ein und bildet dann einen neuen Heap aus den übrigen Elementen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class _RanIt> inline  
@@ -35,13 +36,13 @@ template<class _RanIt, class _Pr> inline
     void pop_heap(_RanIt _First, _RanIt _Last, _Pr _Pred);  
 ```  
   
-## Hinweise  
- Diese Funktion verhält sich genauso wie die STL\-Funktion `pop_heap`.  Weitere Informationen finden Sie unter [pop\_heap](../Topic/pop_heap.md).  
+## <a name="remarks"></a>Hinweise  
+ Diese Funktion verhält sich wie die C++-Standardbibliothek Funktion `pop_heap`. Weitere Informationen finden Sie unter [Pop_heap](../standard-library/algorithm-functions.md#pop_heap).  
   
-## Anforderungen  
- **Header:** \<cliext\/Algorithmus\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext-Algorithmus >  
   
- **Namespace:** cliext  
+ **Namespace:** Cliext  
   
-## Siehe auch  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Siehe auch  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

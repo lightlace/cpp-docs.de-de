@@ -1,48 +1,49 @@
 ---
-title: "hash_map::max_load_factor (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::max_load_factor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "max_load_factor-Member [STL/CLR]"
+title: hash_map::max_load_factor (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::max_load_factor
+dev_langs: C++
+helpviewer_keywords: max_load_factor member [STL/CLR]
 ms.assetid: 7c0773c9-a918-4e61-ae95-e45148f1ff24
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: cbb98e7706b19b208ff35d00b460c8233694e55f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# hash_map::max_load_factor (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ruft die maximale Elemente pro Bucket fest.  
+# <a name="hashmapmaxloadfactor-stlclr"></a>hash_map::max_load_factor (STL/CLR)
+Ruft die maximale Anzahl von Elementen pro Bucket ab oder legt sie fest.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 float max_load_factor();  
 void max_load_factor(float new_factor);  
 ```  
   
-#### Parameter  
- new\_factor  
- Neuer zu speichern Höchstlastfaktor.  
+#### <a name="parameters"></a>Parameter  
+ new_factor  
+ Neue maximale Lastfaktor zu speichern.  
   
-## Hinweise  
- Die erste Memberfunktion gibt den aktuellen Höchstlastfaktor gespeicherten zurück.  Sie verwenden sie, um die maximale durchschnittliche Bucketgröße zu bestimmen.  
+## <a name="remarks"></a>Hinweise  
+ Die erste Memberfunktion gibt den aktuellen gespeicherten maximalen Lastfaktor zurück. Sie können damit um die maximale durchschnittliche Bucketgröße zu bestimmen.  
   
- Die zweite Memberfunktion ersetzt den Speicherhöchstlastfaktor durch `new_factor`.  Kein automatische Durchführen eines Rehash tritt auf eine nachfolgende Einfügen auf.  
+ Die zweite Memberfunktion ersetzt den maximalen Lastfaktor Store mit `new_factor`. Kein automatisches erneutes Hashing durchführen tritt auf, bis eine nachfolgende einfügen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_hash_map_max_load_factor.cpp   
@@ -88,23 +89,28 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[bc 3\]**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0,1875**  
-**max\_load\_factor\(\) \= 4**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0,1875**  
-**max\_load\_factor\(\) \= 0,25**  
-**bucket\_count\(\) \= 128**  
-**load\_factor\(\) \= 0,0234375**  
-**max\_load\_factor\(\) \= 0,25**   
-## Anforderungen  
- **Header:** \<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 4  
   
- **Namespace:** cliext  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 0.25  
   
-## Siehe auch  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::bucket\_count](../dotnet/hash-map-bucket-count-stl-clr.md)   
- [hash\_map::load\_factor](../dotnet/hash-map-load-factor-stl-clr.md)   
- [hash\_map::rehash](../dotnet/hash-map-rehash-stl-clr.md)
+bucket_count() = 128  
+load_factor() = 0.0234375  
+max_load_factor() = 0.25  
+```  
+  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext Hash_map/>  
+  
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [hash_map-Element (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::bucket_count (STL/CLR)](../dotnet/hash-map-bucket-count-stl-clr.md)   
+ [hash_map::load_factor (STL/CLR)](../dotnet/hash-map-load-factor-stl-clr.md)   
+ [hash_map::rehash (STL/CLR)](../dotnet/hash-map-rehash-stl-clr.md)

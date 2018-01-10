@@ -1,31 +1,33 @@
 ---
-title: "Gewusst wie: Definieren und Verarbeiten von Enumerationen in C++/CLI"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "enum-Klasse, Angeben von zugrunde liegenden Typen"
+title: 'Vorgehensweise: definieren und Verarbeiten von Enumerationen in c++ / CLI | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: enum class, specifying underlying types
 ms.assetid: df8f2b91-b9d2-4fab-9be4-b1d58b8bc570
-caps.latest.revision: 13
-caps.handback.revision: "11"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 59d3619daecfad221bd9eac31c4950bae5ace4a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Gewusst wie: Definieren und Verarbeiten von Enumerationen in C++/CLI
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In diesem Thema werden Enumerationen in C\+\+\/CLI.  
+# <a name="how-to-define-and-consume-enums-in-ccli"></a>Gewusst wie: Definieren und Verarbeiten von Enumerationen in C++/CLI
+In diesem Thema wird erläutert, Enumerationen in c++ / CLI.  
   
-## Angeben des zugrunde liegenden Typs von enum  
- Standardmäßig ist der zugrunde liegende Typ einer Enumeration `int`.  Sie können jedoch den Typ angeben, mit oder ohne Vorzeichen von `int`, `short`, `long`, `__int32` oder `__int64` sein Formulare.  Sie können `char` auch verwenden.  
+## <a name="specifying-the-underlying-type-of-an-enum"></a>Angeben des zugrunde liegende Typs einer Enumeration  
+ Standardmäßig ist der zugrunde liegende Typ einer Enumeration `int`.  Sie können jedoch angeben, der Typ mit oder ohne Vorzeichen Formen von `int`, `short`, `long`, `__int32`, oder `__int64`.  Sie können auch `char`.  
   
 ```  
 // mcppv2_enum_3.cpp  
@@ -48,12 +50,15 @@ int main() {
   
  **Ausgabe**  
   
-  **Sonne**  
-**0**  
-**1**  
-**2**   
-## Wie zwischen verwalteten und Standardenumerationen konvertiert  
- Es gibt keine Standardkonvertierung zwischen einer Enumeration und einen ganzzahligen Typ; eine Umwandlung ist erforderlich.  
+```Output  
+sun  
+0  
+1  
+2  
+```  
+  
+## <a name="how-to-convert-between-managed-and-standard-enumerations"></a>Gewusst wie: Konvertieren zwischen verwalteten und Standardenumerationen  
+ Es gibt keine standardmäßigen Konvertierung zwischen einer Enumeration und einen ganzzahligen Typ; eine Umwandlung ist erforderlich.  
   
 ```  
 // mcppv2_enum_4.cpp  
@@ -75,24 +80,27 @@ int main() {
   
  **Ausgabe**  
   
-  **a und day2 sind gleich**   
-## Operatoren und Enumerationen  
- Die folgenden Operatoren sind auf Enumerationen in C\+\+\/CLI gültig:  
+```Output  
+a and day2 are the same  
+```  
+  
+## <a name="operators-and-enums"></a>Operatoren und Enumerationen  
+ Die folgenden Operatoren sind gültig für Enumerationen in c++ / CLI:  
   
 |Operator|  
 |--------------|  
-|\=\= \!\= \< \> \<\= \>\=|  
-|\+ \-|  
+|== != \< > \<= >=|  
+|+ -|  
 |&#124; ^ & ~|  
-|\+\+ \-\-|  
+|++ --|  
 |sizeof|  
   
- Operatoren &#124; &#124; ^ & C\/C\+\+\-Anwendung \- werden nur für Enumerationen mit ganzzahligen zugrunde liegenden Typen, einschließlich bool nicht definiert.  Beide Operanden müssen vom Enumerationstyp sein.  
+ Operatoren &#124; ^ & ~ ++ –, die nur für Enumerationen mit ganzzahligem zugrunde liegende Typen, einschließlich nicht Bool definiert sind.  Beide Operanden müssen des Enumerationstyps sein.  
   
- Der Compiler führt nicht statische oder dynamische Überprüfung des Ergebnisses eines Enumerationsvorgangs; ein Vorgang kann keinen Wert im Bereich von den gültigen Enumeratoren der Enumeration.  
+ Der Compiler übernimmt keine statische oder dynamische Prüfung des Ergebnisses einer Enumeration Operation; ein Vorgang möglicherweise in einem Wert nicht in den Bereich der gültigen Enumeratoren der Enumeration.  
   
 > [!NOTE]
->  C\+\+11 stellt Enumerationsklassentypen in nicht verwaltetem Code bereit, der deutlich anders als verwaltete Enumerationsklassen in C\+\+\/CLI sind.  Insbesondere unterstützt der Klassentyp der Enumeration C\+\+11 dieselben Operatoren nicht wie der verwaltete Enumerationsklassentyp in C\+\+\/CLI, und C\+\+\/CLI\-Quellcode muss einen Barrierefreiheitsspezifizierer in verwalteten Enumerationsklassendeklarationen bereitstellen, um sie von nicht verwaltetem Klassendeklarationen der Enumeration zu unterscheiden \(C\+\+11\).  Weitere Informationen zu Klassen in C\+\+\/CLI Enumeration, C\+\+\/CX, und C\+\+11, finden Sie unter [enum class](../windows/enum-class-cpp-component-extensions.md).  
+>  C ++ 11 stellt die enumerationsklassentypen der verwalteten Klassen in C + erheblich unterscheiden, in nicht verwaltetem Code c++ / CLI. Insbesondere der C ++ 11-Enum-Klassentyp unterstützt nicht die gleichen Operatoren als verwaltete Enumeration Klassentyp in C + c++ / CLI, und c++ / CLI-Quellcode muss Geben Sie einen Zugriffsspezifizierer in verwaltete Enumeration Klassendeklarationen um Unterscheidung von nicht verwaltetem (C++- 11) Deklarationen von Enum-Klasse. Weitere Informationen zu Klassen in C + c++ / CLI C + c++ / CX und C ++ 11, finden Sie unter [Enumerationsklasse](../windows/enum-class-cpp-component-extensions.md).  
   
 ```  
 // mcppv2_enum_5.cpp  
@@ -129,8 +137,11 @@ int main() {
   
  **Ausgabe**  
   
-  **4**  
-**1**  
-**True**   
-## Siehe auch  
- [enum class](../windows/enum-class-cpp-component-extensions.md)
+```Output  
+4  
+1  
+True  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Enumerationsklasse](../windows/enum-class-cpp-component-extensions.md)

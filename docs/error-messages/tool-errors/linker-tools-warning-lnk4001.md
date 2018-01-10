@@ -1,31 +1,30 @@
 ---
-title: "Linkertoolwarnung LNK4001 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4001"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4001"
+title: Linkertoolwarnung Lnk4001 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4001
+dev_langs: C++
+helpviewer_keywords: LNK4001
 ms.assetid: 0a8b1c3a-64ce-4311-b7c0-065995059246
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2ecc78fe50fd34a0c6f583bf103d368e23f19f2e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Linkertoolwarnung LNK4001
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Keine Objektdateien angegeben; Bibliotheken werden verwendet  
+# <a name="linker-tools-warning-lnk4001"></a>Linkertoolwarnung LNK4001
+keine Objektdateien angegeben; Bibliotheken, verwendet werden  
   
- An den Linker wurden eine oder mehrere LIB\-Dateien, aber keine OBJ\-Dateien übergeben.  
+ Der Linker wurde mindestens eine LIB-Dateien, aber keine OBJ-Dateien übergeben.  
   
- Da der Linker nicht in der Lage ist, in einer LIB\-Datei auf dieselben Informationen zuzugreifen wie in einer OBJ\-Datei, weist diese Warnung darauf hin, dass Sie explizit andere Linkeroptionen angeben müssen.  Unter Umständen müssen Sie z. B. die Optionen [\/MACHINE](../../build/reference/machine-specify-target-platform.md), [\/OUT](../../build/reference/out-output-file-name.md) oder [\/ENTRY](../../build/reference/entry-entry-point-symbol.md) angeben.
+ Da der Linker nicht auf Informationen in einer LIB-Datei zugreifen, die in einer OBJ-Datei zugreifen kann, gibt diese Warnung an, dass Sie andere Optionen des Linkers explizit angeben müssen. Angenommen, Sie geben möglicherweise die [/Computer](../../build/reference/machine-specify-target-platform.md), [/OUT](../../build/reference/out-output-file-name.md), oder [/Entry](../../build/reference/entry-entry-point-symbol.md) Optionen.

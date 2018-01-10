@@ -1,83 +1,85 @@
 ---
-title: "Partial (Komponentenerweiterungen f&#252;r C++)"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - "partial_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Partiell"
-  - "C++/CX, partial"
+title: "Partial (Komponentenerweiterungen für C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: partial_CPP
+dev_langs: C++
+helpviewer_keywords:
+- partial
+- C++/CX, partial
 ms.assetid: 43adf1f5-10c5-44aa-a66f-7507e2bdabf8
-caps.latest.revision: 6
-caps.handback.revision: "6"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: dd2debe47b0c60907c1a75f4e8b96d227468a345
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Partial (Komponentenerweiterungen f&#252;r C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Mit dem Schlüsselwort `partial` können verschiedene Teile der gleichen Verweisklasse unabhängig und in verschiedenen Dateien erstellt werden.  
+# <a name="partial--c-component-extensions"></a>Partial (Komponentenerweiterungen für C++)
+Die `partial` Schlüsselwort können Sie verschiedene Teile des gleichen Verweisklasse unabhängig voneinander und in anderen Dateien erstellt werden.  
   
-## Alle Laufzeiten  
- \(Diese Sprachfunktion gilt nur für [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].\)  
+## <a name="all-runtimes"></a>Alle Laufzeiten  
+ (Diese Sprachfunktion gilt nur für Windows-Runtime).  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- Bei einer Verweisklasse, die zwei Teildefinitionen besitzt, wird das `partial`\-Schlüsselwort auf die erste Definition angewendet. Dies geschieht normalerweise durch einen automatisch generierten Code, sodass ein menschlicher Programmierer das Schlüsselwort nicht sehr häufig verwendet.  Für alle folgenden Teildefinitionen der Klasse lassen Sie den `partial`\-Modifizierer aus dem *class\-key*\-Schlüsselwort und dem Klassenbezeichner weg.  Wenn der Compiler auf eine bereits definierte Verweisklasse und einen bereits definierten Klassenbezeichner, jedoch nicht auf ein `partial`\-Schlüsselwort trifft, fasst er intern alle Teile der Verweisklassendefinition in einer Definition zusammen.  
+## <a name="windows-runtime"></a>Windows-Runtime  
+ Für eine Verweisklasse, die beiden partielle Definitionen, verfügt die `partial` -Schlüsselwort auf das erste Vorkommen der Definition angewendet wird, und dies erfolgt normalerweise durch automatisch generierte Code, damit eine interaktive Workflowdienste Codierer nicht für das Schlüsselwort sehr häufig verwendet werden. Lassen Sie alle nachfolgenden partiellen Definitionen der Klasse, die `partial` Modifizierer aus der *Klassenschlüssel* Schlüsselwort und die Klasse Bezeichner. Wenn der Compiler erkennt, eine zuvor definierte Verweisklasse und Klassenbezeichner jedoch keine `partial` -Schlüsselwort, intern kombiniert alle Teile der Definition der Ref-Klasse in eine Definition.  
   
-### Syntax  
+### <a name="syntax"></a>Syntax  
   
 ```cpp  
-  
 partial class-key identifier {  
-   /* The first part of the partial class definition. This is typically auto-generated*/  
+   /* The first part of the partial class definition. 
+      This is typically auto-generated */  
 }  
 // ...  
 class-key identifier {  
-   /* The subsequent part(s) of the class definition. The same identifier is specified, but the "partial" keyword is omitted. */  
+   /* The subsequent part(s) of the class definition. The same 
+      identifier is specified, but the "partial" keyword is omitted. */  
 }  
-  
 ```  
   
-### Parameter  
- *class\-key*  
- Ein Schlüsselwort, das eine Klasse oder Struktur deklariert, die von [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] unterstützt wird.  Dies ist entweder `ref class`, `value class`, `ref struct` oder `value struct`.  
+### <a name="parameters"></a>Parameter  
+ *Klassenschlüssel*  
+ Ein Schlüsselwort, das deklariert eine Klasse oder Struktur, die von der Windows-Runtime unterstützt wird. Entweder `ref class`, `value class`, `ref struct`, oder `value struct`.  
   
  *identifier*  
- Der Typname des definierten Typs.  
+ Der Name des definierten Typs.  
   
-### Hinweise  
- Eine partielle Klasse unterstützt Szenarien, in denen Sie einen Teil einer Klassendefinition in einer Datei ändern, und die automatische codegenerierende Software – z. B. der XAML\-Designer – ändert den Code in der gleichen Klasse in einer anderen Datei.  Wenn Sie eine partielle Klasse verwenden, können Sie verhindern, dass der automatische Code\-Generator den Code überschreibt.  In einem Visual Studio\-Projekt wird der Modifizierer `partial` automatisch auf die generierte Datei angewendet.  
+### <a name="remarks"></a>Hinweise  
+ Eine partielle Klasse unterstützt Szenarien, in dem Sie einen Teil der Definition einer Klasse in eine Datei und das automatische Generieren von Code Software ändern – z. B. die Verwendung von XAML-Designer – ändert der Code in der gleichen Klasse in einer anderen Datei. Mithilfe einer partiellen Klasse können Sie verhindern, dass die automatische Codegenerator Ihren Code überschreibt. In einem Visual Studio-Projekt wird der Modifizierer `partial` automatisch auf die generierte Datei angewendet.  
   
- Inhalt: Mit zwei Ausnahmen kann eine Definition einer partiellen Klasse alles enthalten, was die vollständige Klassendefinition enthalten kann, wenn das `partial`\-Schlüsselwort weggelassen wurde.  Sie können jedoch Klassenbarrierefreiheit \(beispielsweise `public partial class X {…};`\), oder einen `declspec` angeben.  
+ Inhalt: Mit zwei Ausnahmen eine partielle Klassendefinition kann alles enthalten, die die vollständige Klassendefinition enthalten kann, wenn die `partial` -Schlüsselwort ausgelassen wurde. Sie können keine jedoch klassenbarrierefreiheit angeben (z. B. `public partial class X { ... };`), oder ein `declspec`.  
   
- Der Zugriffsspezifizierer, die in einer partiellen Klassendefinition für *identifier* verwendet werden, beeinflussen nicht Standardzugriff in einer partiell folgenden oder vollständige Klassendefinition für *identifier*.  Inlinedefinitionen statischer Datenmember sind zulässig.  
+ Zugriff auf Spezifizierer verwendet, die in einer partiellen Klassendefinition für *Bezeichner* wirken sich nicht auf die Standard-Barrierefreiheit in einer nachfolgenden partiellen oder vollständigen Klassendefinition für *Bezeichner*. Inlinedefinitionen statischer Datenmember sind zulässig.  
   
- Deklaration: Eine Teilausführungsklassendefinition *identifier* stellt nur den Namen *identifier* vorgeschlagen, jedoch *identifier* kann nicht auf eine Weise verwendet werden, die eine Klassendefinition erfordert.  Der Name *identifier* kann nicht verwendet werden, um die Größe zu kennen von *identifier*, oder, Basis oder Member von *identifier* bis nach den Compiler zu verwenden wird die vollständige Definition von *identifier* an.  
+ Deklaration: Eine partielle Definition einer Klasse *Bezeichner* führt nur den Namen *Bezeichner*, aber *Bezeichner* kann nicht in einer Weise, die eine Klasse erfordert verwendet werden Definition. Der Name *Bezeichner* kann nicht verwendet werden, um die Größe des wissen *Bezeichner*, oder verwenden eine Basis oder ein Mitglied *Bezeichner* erst nach der Compiler die vollständige Definition der trifft *Bezeichner*.  
   
- Zahl und Reihenfolge: Es kann über null oder mehr geben partielle Klassendefinitionen Klasse für *identifier*.  Jede Definition einer partiellen Klasse von *identifier* muss der eine vollständige Definition von *identifier* lexikalisch vorausgehen \(wenn eine vollständige Definition gibt; Andernfalls kann die Klasse nicht verwendet werden, außer dass FORWARD\-deklariert wurde\) jedoch nicht, müssen Sie Vorwärtsdeklarationen von *identifier* steht.  Alle Klassenschlüssel müssen übereinstimmen.  
+ Anzahl und Reihenfolge: Es kann NULL oder mehr partielle Klassendefinitionen für *Bezeichner*. Jede partielle Klassendefinition *Bezeichner* muss lexikalisch der einen vollständigen Definition der vorausgehen *Bezeichner* (wenn es eine vollständigen Definition; andernfalls die Klasse kann nicht verwendet werden außer wie Vorwärts deklarierte) jedoch Vorwärtsdeklarationen der müssen nicht vorausgehen *Bezeichner*. Alle Klassenschlüssel müssen übereinstimmen.  
   
- Vollständige Definition: Im vollständigen Zeitpunkt der Definition der Klasse *identifier*, ist das Verhalten das Gleiche, als ob die Definition von *identifier* alle Basisklassen, Member, z. B. in der Reihenfolge deklariert hat, in der sie im partiellen Klassen gefunden und definiert wurden.  
+ Vollständige Definition: zum Zeitpunkt der vollständigen Definition der Klasse *Bezeichner*, das Verhalten entspricht dem Verhalten wie die Definition der *Bezeichner* deklarierte Cursortyp alle Basisklassen, Member usw. in der Reihenfolge, in der Sie wurden gefunden und in der partiellen Klasse definiert.  
   
- Vorlagen: Eine partielle Klasse kann keine Vorlage sein.  
+ Vorlagen: Eine partielle Klasse kann nicht auf eine Vorlage sein.  
   
- Generika: Eine partielle Klasse kann generisch sein, wenn die vollständige Definition generisch sein kann.  Jede partielle und vollständige Klasse muss jedoch dieselben generischen Parameter und formalen Parameternamen haben.  
+ Generika: Eine partielle Klasse kann generisch sein, wenn die vollständige Definition generisch sein kann. Jede Klasse teilweisen oder vollständigen muss jedoch genau die gleichen generischen Parametern, einschließlich formale Parameternamen.  
   
- Weitere Informationen dazu, wie das `partial`\-Schlüsselwort, finden Sie verwendet [Partielle Klassen \(C\+\+\/CX\)](http://go.microsoft.com/fwlink/p/?LinkId=249023).  
+ Weitere Informationen zur Verwendung der `partial` -Schlüsselwort verwenden, finden Sie unter [partielle Klassen (C + c++ / CX)](http://go.microsoft.com/fwlink/p/?LinkId=249023).  
   
-### Voraussetzungen  
- Compileroption: **\/ZW**  
+### <a name="requirements"></a>Anforderungen  
+ Compileroption: **/ZW**  
   
-## Common Language Runtime  
- \(Diese Sprachfunktion gilt nicht für die Common Language Runtime.\)  
+## <a name="common-language-runtime"></a>Common Language Runtime  
+ (Diese Sprachfunktion gilt nicht für die Common Language Runtime.)  
   
-## Siehe auch  
- [Partielle Klassen \(C\+\+\/CX\)](http://go.microsoft.com/fwlink/p/?LinkId=249023)
+## <a name="see-also"></a>Siehe auch  
+ [Partielle Klassen (C + c++ / CX)](http://go.microsoft.com/fwlink/p/?LinkId=249023)

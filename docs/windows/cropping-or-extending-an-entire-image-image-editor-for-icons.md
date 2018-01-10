@@ -1,47 +1,51 @@
 ---
-title: "Cropping or Extending an Entire Image (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "images [C++], cropping"
-  - "images [C++], extending"
-  - "Image editor [C++], cropping or extending images"
+title: "Abschneiden oder Erweitern eines ganzen Bilds (Bildbearbeitung für Symbole) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- images [C++], cropping
+- images [C++], extending
+- Image editor [C++], cropping or extending images
 ms.assetid: 21cdaff5-6636-4ad9-a2f0-ca2228321927
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5832cbfcdae29a9fbdb5d911a7e6435c14236dd4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Cropping or Extending an Entire Image (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die folgenden Prozeduren zeigen Ihnen, wie ein ganzes Bild zugeschnitten oder erweitert wird.  
+# <a name="cropping-or-extending-an-entire-image-image-editor-for-icons"></a>Abschneiden oder Erweitern eines ganzen Bilds (Bildbearbeitung für Symbole)
+Die folgenden Verfahren wird gezeigt, wie Abschneiden oder Erweitern eines ganzen Bildes.  
   
-### So schneiden Sie ein vollständiges Bild zu oder erweitern es  
+### <a name="to-crop-or-extend-an-entire-image"></a>Abschneiden oder Erweitern eines ganzen Bildes  
   
-1.  Markieren Sie das gesamte Bild.  
+1.  Wählen Sie das gesamte Bild.  
   
-     Wenn gerade ein Bildbereich markiert ist, Sie aber das gesamte Bild markieren möchten, klicken Sie auf eine beliebige Stelle des Bildes außerhalb des aktuellen Markierungsrahmens.  
+     Wenn Teil des Abbilds derzeit ausgewählt ist, und Sie das gesamte Bild auswählen möchten, klicken Sie auf eine beliebige Stelle auf dem Bild außerhalb der aktuellen Markierungsrahmen umgeben.  
   
-2.  Ziehen Sie einen Ziehpunkt, bis das Bild die gewünschte Größe hat.  
+2.  Ziehen Sie einen Ziehpunkt, bis das Bild die gewünschte Größe ist.  
   
- Wenn Sie die Bildgröße durch Verschieben eines Ziehpunktes ändern, wird das Bild vom Grafik\-Editor normalerweise zugeschnitten oder vergrößert.  Wenn Sie die UMSCHALTTASTE gedrückt halten, während Sie einen Ziehpunkt verschieben, wird das Bild vom Grafik\-Editor [verkleinert oder gestreckt](../mfc/shrinking-or-stretching-an-entire-image-image-editor-for-icons.md).  
+ In der Regel wird die Grafik-Editor abgeschnitten oder ein Bild vergrößert, wenn Sie deren Größe ändern, indem Sie einen Ziehpunkt verschieben. Wenn Sie die UMSCHALTTASTE gedrückt halten, während Sie einen Ziehpunkt der Grafik-Editor bewegen [verkleinert oder streckt](../windows/shrinking-or-stretching-an-entire-image-image-editor-for-icons.md) das Bild.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
   
  Anforderungen  
   
- None  
+ Keiner  
   
-## Siehe auch  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Resizing an Image](../mfc/resizing-an-image-image-editor-for-icons.md)
+## <a name="see-also"></a>Siehe auch  
+ [Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Ändern der Bildgröße](../windows/resizing-an-image-image-editor-for-icons.md)
+

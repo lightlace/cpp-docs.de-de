@@ -1,64 +1,63 @@
 ---
-title: "Assistent zum Hinzuf&#252;gen von Ereignissen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.event.overview"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Assistent zum Hinzufügen von Ereignissen [C++]"
+title: "Ereignis-Assistent zum Hinzufügen von | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.codewiz.event.overview
+dev_langs: C++
+helpviewer_keywords: Add Event Wizard [C++]
 ms.assetid: bdd2a7bb-13d5-44d7-abc9-e785ba4e05ce
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 62ecbe7dece323ce5e99fbe32b3b936fe3661362
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Assistent zum Hinzuf&#252;gen von Ereignissen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Mit diesem Assistenten fügen Sie einem MFC\-ActiveX\-Steuerelementprojekt ein Ereignis hinzu.  Sie können ein eigenes Ereignis festlegen, ein typisches vordefiniertes Ereignis anpassen oder aus einer Liste vordefinierter Ereignisse auswählen.  
+# <a name="add-event-wizard"></a>Assistent zum Hinzufügen von Ereignissen
+Dieser Assistent fügt ein Ereignis zu einem MFC-ActiveX-Steuerelement-Projekt. Können Sie ein eigenes Ereignis angeben, können Sie in der Regel Basisereignis anpassen oder Sie können aus einer Liste von vordefinierten Ereignissen auswählen.  
   
  **Ereignisname**  
- Gibt den Namen an, den Automatisierungsclients verwenden, um ein Ereignis aus der Klasse anzufordern.  Geben Sie einen Namen ein, oder wählen Sie einen Namen aus der Liste aus.  
+ Legt den Namen von-Clients verwendet wird, um ein Ereignis von der Klasse anzufordern. Geben Sie einen Namen ein, oder wählen Sie aus der Liste.  
   
  **Ereignistyp**  
- Gibt den hinzuzufügenden Ereignistyp an.  Diese Option ist nur verfügbar, wenn Sie ein Ereignis aus der Liste **Ereignisname** auswählen.  
+ Gibt den Typ des Ereignisses hinzugefügt. Nur verfügbar, wenn Sie wählen die **Ereignisname** Liste.  
   
 |Option|Beschreibung|  
-|------------|------------------|  
-|**Vordefiniert**|Gibt an, dass ein vordefiniertes Ereignis, z. B. das Klicken auf eine Schaltfläche, für diese Klasse implementiert wird.  Vordefinierte Ereignisse sind in der MFC \(Microsoft Foundation Class\)\-Bibliothek definiert.|  
-|**Benutzerdefiniert**|Legt fest, dass Sie eine eigene Implementierung des Ereignisses verwenden.|  
+|------------|-----------------|  
+|**Stock**|Gibt an, dass ein vordefiniertes Ereignis, z. B. eine Schaltfläche klicken, für diese Klasse implementiert werden. Vordefinierte Ereignisse werden in der Microsoft Foundation Class (MFC)-Bibliothek definiert.|  
+|**Benutzerdefiniert**|Gibt an, dass Sie Ihre eigene Implementierung des Ereignisses bereitstellen.|  
   
- **Interner Name**  
- Gibt den Namen der Memberfunktion an, die dieses Ereignis sendet.  Nur für benutzerdefinierte Ereignisse verfügbar.  Der Name basiert auf dem Feld **Ereignisname**.  Sie können den internen Namen ändern, wenn Sie einen anderen als den unter **Ereignisname** angegebenen Namen verwenden möchten.  
+ **Interner name**  
+ Legt den Namen der Memberfunktion, die das Ereignis sendet. Verfügbar nur für benutzerdefinierte Ereignisse. Der Name basiert auf **Ereignisname**. Sie können den internen Namen ändern, wenn Sie einen anderen als Namen angeben möchten **Ereignisname**.  
   
  **Parametertyp**  
- Legt den Typ des unter **Parametername** angegebenen Parameters fest.  Wählen Sie den Typ aus der Liste aus.  
+ Legt den Typ für die **Parametername**. Wählen Sie den Typ aus der Liste aus.  
   
  **Parametername**  
- Legt den Namen eines Parameters fest, der durch das Ereignis übergeben wird.  Nach der Eingabe des Namens müssen Sie auf **Hinzufügen** klicken, um den Namen in die Parameterliste aufzunehmen.  
+ Legt den Namen eines Parameters für die Weiterleitung über das Ereignis. Klicken Sie nach Eingabe des Namens, Sie müssen auf **hinzufügen** die Liste der Parameter hinzufügen.  
   
- Nachdem Sie auf **Hinzufügen** geklickt haben, wird der Parametername in der **Parameterliste** angezeigt.  
+ Nach dem Klicken auf **hinzufügen**, der Name des Parameters angezeigt wird, im **Parameterliste**.  
   
 > [!NOTE]
->  Wenn Sie einen Parameternamen angeben und dann zuerst auf **Fertig stellen** anstatt auf **Hinzufügen** klicken, wird der Parameter dem Ereignis nicht hinzugefügt.  In diesem Fall müssen Sie die Methode suchen und den Parameter manuell einfügen. **Parameterliste**  
+>  Wenn Sie einen Parameternamen angeben, und klicken Sie dann auf **Fertig stellen** klicken Sie erst **hinzufügen**, und klicken Sie dann der Parameter nicht auf das Ereignis hinzugefügt wird. Sie müssen suchen Sie die Methode, und fügen Sie den Parameter manuell. **Parameterliste**  
   
- **add**  
- Fügt den unter **Parametername** angegebenen Parameter mit dem zugehörigen Typ der **Parameterliste** hinzu.  Um einen Parameter in die Liste aufzunehmen, müssen Sie auf **Hinzufügen** klicken.  
+ **Add**  
+ Fügt die Parameter, die Sie, in angeben **Parametername**, und dessen Typ auf **Parameterliste**. Klicken Sie auf **hinzufügen** der Liste einen Parameter hinzu.  
   
  **Entfernen**  
- Entfernt den in der **Parameterliste** ausgewählten Parameter aus der Liste.  
+ Entfernt den Parameter, die Sie, in auswählen **Parameterliste** aus der Liste.  
   
  **Parameterliste**  
- Zeigt alle Parameter, die der Methode derzeit hinzugefügt sind, mit den zugehörigen Typen an.  Während Sie Parameter hinzufügen, aktualisiert der Assistent die **Parameterliste**, damit jeder Parameter mit dem zugehörigen Typ angezeigt wird.  
+ Zeigt alle Parameter und ihre Typen, die derzeit für die Methode hinzugefügt. Wenn Sie Parameter hinzufügen, wird der Assistent aktualisiert **Parameterliste** mit seinem Typ jedes Parameters angezeigt.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Hinzufügen eines Ereignisses](../ide/adding-an-event-visual-cpp.md)

@@ -1,35 +1,36 @@
 ---
-title: "DEFINE_COMMAND | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DEFINE_COMMAND"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DEFINE_COMMAND-Makro"
+title: DEFINE_COMMAND | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: DEFINE_COMMAND
+dev_langs: C++
+helpviewer_keywords: DEFINE_COMMAND macro
 ms.assetid: 9d724968-e242-413c-9a13-e7175fccf9b1
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: cd2acfee6bb0f28acc774774e446e9efd4a5637b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# DEFINE_COMMAND
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Gibt den Befehl an, der verwendet wird, um das Rowset zu erstellen, wenn die [CCommand](../../data/oledb/ccommand-class.md)\-Klasse verwendet.  Akzeptiert die nur Zeichenfolgentypen, die den angegebenen Anwendungstyp übereinstimmen \(ANSI oder Unicode\).  
+# <a name="definecommand"></a>DEFINE_COMMAND
+Gibt den Befehl an, der verwendet wird, um das Rowset zu erstellen, bei Verwendung der [CCommand](../../data/oledb/ccommand-class.md) Klasse. Akzeptiert nur Zeichenfolgen-Datentypen, die den angegebenen Anwendungstyp (ANSI oder Unicode) entsprechen.  
   
 > [!NOTE]
->  Es wird empfohlen, dass Sie [DEFINE\_COMMAND\_EX](../../data/oledb/define-command-ex.md) anstelle von `DEFINE_COMMAND` verwenden.  
+>  Es wird empfohlen, die Verwendung von [DEFINE_COMMAND_EX](../../data/oledb/define-command-ex.md) anstelle von `DEFINE_COMMAND`.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -41,23 +42,23 @@ szCommand
   
 ```  
   
-#### Parameter  
- *x*  
- \[in\] Der Name der Klasse des Benutzerdatensatzes \(Befehl\).  
+#### <a name="parameters"></a>Parameter  
+ *w*  
+ [in] Der Name der Benutzerdatensatzklasse (Befehl).  
   
  `szCommand`  
- \[in\] die Befehlszeichenfolge, die verwendet wird, um das Rowset zu erstellen, wenn der [CCommand](../../data/oledb/ccommand-class.md) bereitgestellt werden.  
+ [in] Der Befehlszeichenfolge, die verwendet wird, um das Rowset zu erstellen, bei Verwendung [CCommand](../../data/oledb/ccommand-class.md).  
   
-## Hinweise  
- Die Befehlszeichenfolge, die Sie angeben, wird als Standardwert verwendet, wenn Sie nicht der Befehlstext in [CCommand::Open](../../data/oledb/ccommand-open.md)\-Methode angeben.  
+## <a name="remarks"></a>Hinweise  
+ Die Befehlszeichenfolge, die Sie angeben, wird als Standard verwendet werden, wenn Sie keinen Befehlstext im Angeben der [CCommand:: Open](../../data/oledb/ccommand-open.md) Methode.  
   
- Dieses Makro akzeptiert ANSI\-Zeichenfolgen, wenn Sie die Anwendung als ANSI erstellen, oder Unicode\-Zeichenfolgen, wenn Sie die Anwendung als Unicode erstellen.  Es wird empfohlen, dass Sie [DEFINE\_COMMAND\_EX](../../data/oledb/define-command-ex.md) anstelle `DEFINE_COMMAND`, da das frühere Unicode\-Zeichenfolgen akzeptiert, unabhängig vom ANSI\- oder Unicode\-Anwendungstyp verwenden.  
+ Dieses Makro akzeptiert ANSI-Zeichenfolgen, wenn es sich bei Erstellen der Anwendung als ANSI oder Unicode-Zeichenfolgen, wenn Sie eine Anwendung im Unicode-Format erstellen. Es wird empfohlen, die Verwendung von [DEFINE_COMMAND_EX](../../data/oledb/define-command-ex.md) anstelle von `DEFINE_COMMAND`, da der erste Wert akzeptiert, die Unicode-Zeichenfolgen, unabhängig von den Anwendungstyp ANSI oder Unicode.  
   
-## Beispiel  
- Siehe [BOOKMARK\_ENTRY](../../data/oledb/bookmark-entry.md).  
+## <a name="example"></a>Beispiel  
+ Finden Sie unter [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  
   
-## Siehe auch  
- [Makros und globale Funktionen für OLE\-Consumervorlagen](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)
+## <a name="see-also"></a>Siehe auch  
+ [Makros und globale Funktionen für OLE-Consumervorlagen](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)

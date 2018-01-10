@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e70f2298ed916db7d9c7b2d059ef7ce69b4060c9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6e5901602368e60a3873a1dba2fc681c6ac146f5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="derived-message-maps"></a>Abgeleitete Meldungszuordnungen
 Während Nachricht behandeln, überprüfen eine Nachricht von der Klasse ist die Zuordnung nicht das Ende des Textabschnitts meldungszuordnung. Was geschieht, wenn Klasse `CMyView` (abgeleitet von `CView`) wurde kein übereinstimmenden Eintrag für eine Nachricht  

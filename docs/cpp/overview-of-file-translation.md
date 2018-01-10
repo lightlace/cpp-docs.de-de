@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - file translation [C++], about file translation
 - translation [C++]
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - programs [C++], lexical conventions of
 - preprocessing translation phase
 ms.assetid: 5036c7b7-ccff-4e2c-b052-a9ea6c71af87
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 188574c43ca3650599fae58c0da1306ab49b5007
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a088d2da30aa77f477f3f6e5064b6b98170e953b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-file-translation"></a>Übersicht über die Dateiübersetzung
 C++-Programme wie C-Programme bestehen aus mindestens einer Datei. Jede dieser Dateien wird in der folgenden konzeptionellen Reihenfolge übersetzt (die tatsächliche Reihenfolge folgt der "als ob"-Regel: Übersetzung muss so erfolgen, als wären diese Schritte befolgt worden):  
@@ -57,7 +55,7 @@ C++-Programme wie C-Programme bestehen aus mindestens einer Datei. Jede dieser D
   
 -   Ein vordefiniertes Makro **__cplusplus**, nur für C++ definiert ist. Finden Sie unter [vordefinierte Makros](../preprocessor/predefined-macros.md) in der *Präprozessorreferenz* für Weitere Informationen.  
   
--   Der C-Präprozessor erkennt die C++-Operatoren nicht: **.\* **, ** -> \* **, und `::`. Finden Sie unter [Operatoren](../cpp/cpp-built-in-operators-precedence-and-associativity.md) und [Ausdrücke](../cpp/expressions-cpp.md), Weitere Informationen zu Operatoren.  
+-   Der C-Präprozessor erkennt die C++-Operatoren nicht: **.\*** ,  **-> \*** , und `::`. Finden Sie unter [Operatoren](../cpp/cpp-built-in-operators-precedence-and-associativity.md) und [Ausdrücke](../cpp/expressions-cpp.md), Weitere Informationen zu Operatoren.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Lexikalische Konventionen](../cpp/lexical-conventions.md)

@@ -1,32 +1,33 @@
 ---
-title: "swap_ranges (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::swap_ranges"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "swap_ranges-Funktion [STL/CLR]"
+title: Swap_ranges (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::swap_ranges
+dev_langs: C++
+helpviewer_keywords: swap_ranges function [STL/CLR]
 ms.assetid: 3fb39a84-b088-48f1-8bb7-2bbe68b048a9
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c3b486446ff1f2061fa28a31bceaf5e560beec15
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# swap_ranges (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Vertauscht die Elemente eines Bereichs mit den Elementen von anderen, \- groß Bereich gleicher aus.  
+# <a name="swapranges-stlclr"></a>swap_ranges (STL/CLR)
+Vertauscht die Elemente eines Bereichs mit den Elementen eines anderen gleich großen Bereichs.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class _FwdIt1, class _FwdIt2> inline  
@@ -34,13 +35,13 @@ template<class _FwdIt1, class _FwdIt2> inline
         _FwdIt2 _First2);  
 ```  
   
-## Hinweise  
- Diese Funktion verhält sich genauso wie die STL\-Funktion `swap_ranges`.  Weitere Informationen finden Sie unter [swap\_ranges](../Topic/swap_ranges.md).  
+## <a name="remarks"></a>Hinweise  
+ Diese Funktion verhält sich wie die C++-Standardbibliothek Funktion `swap_ranges`. Weitere Informationen finden Sie unter [Swap_ranges](../standard-library/algorithm-functions.md#swap_ranges).  
   
-## Anforderungen  
- **Header:** \<cliext\/Algorithmus\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext-Algorithmus >  
   
- **Namespace:** cliext  
+ **Namespace:** Cliext  
   
-## Siehe auch  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Siehe auch  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

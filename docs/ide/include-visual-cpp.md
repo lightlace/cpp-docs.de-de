@@ -1,59 +1,60 @@
 ---
-title: "&lt;include&gt; (Visual C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "include"
-  - "<include>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<include> (C++-XML-Tag)"
-  - "include (C++-XML-Tag)"
+title: '&lt;umfassen&gt; (Visual C++) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- include
+- <include>
+dev_langs: C++
+helpviewer_keywords:
+- include C++ XML tag
+- <include> C++ XML tag
 ms.assetid: 392a3e61-0371-4617-8362-446650876ce3
-caps.latest.revision: 8
-caps.handback.revision: "8"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f9a6b07ce540d67a44e46a24fb943dac93bb95a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# &lt;include&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Mit dem \<include\>\-Tag kann auf Kommentare in anderen Dateien verwiesen werden, die die Typen und Member im Quellcode beschreiben.  Dies stellt eine Alternative zum direkten Positionieren der Dokumentationskommentare in Quellcodedateien dar.  Beispielsweise können Sie \<include\> verwenden, um Standardkommentare "des vorformulierten Satzes" einzufügen, die im Team oder Unternehmen verwendet werden.  
+# <a name="ltincludegt-visual-c"></a>&lt;umfassen&gt; (Visual C++)
+Mit dem \<include>-Tag können Sie auf Kommentare in einer anderen Datei verweisen, die die Typen und Member in Ihrem Quellcode beschreiben. Dies ist eine Alternative zum direkten Platzieren von Dokumentationskommentaren in der Quellcodedatei.  Beispielsweise können Sie \<enthalten > standard "Textbaustein" Kommentare einfügen, die in Ihrem Team oder Ihr Unternehmen verwendet werden.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <include file='filename' path='tagpath' />  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `filename`  
- der Name der Datei, die die Dokumentation enthält.  Der Dateiname kann mit einem Pfad gekennzeichnet sein.  Fügen Sie den Namen in einfache oder doppelte Anführungszeichen eingeschlossen werden.  Der Compiler gibt eine Warnung aus, wenn nicht `filename` sucht.  
+ Der Name der Datei mit der Dokumentation. Der Dateiname kann mit einem Pfad qualifiziert werden.  Setzen Sie den Namen in einfache oder doppelte Anführungszeichen.  Der Compiler gibt eine Warnung aus, wenn er `filename` nicht findet.  
   
  `tagpath`  
- Ein gültiger XPath\-Ausdruck, der die gewünschte Knotengruppe auswählt, enthielt in der Datei.  
+ Ein gültiger xpathausdruck, der den gewünschten Knotensatz in der Datei enthaltenen auswählt.  
   
  `name`  
- Der Namensbezeichner in dem Tag, das sich vor den Kommentaren befindet. `name` weist eine `id` auf.  
+ Der Namensbezeichner in dem Tag, das sich vor den Kommentaren befindet. `name` besitzt eine `id`.  
   
  `id`  
- die ID für das Tag, das sich vor den Kommentaren befindet.  Fügen Sie den Namen in einfache oder doppelte Anführungszeichen eingeschlossen werden.  
+ Die ID für das Tag, das sich vor den Kommentaren befindet.  Setzen Sie den Namen in einfache oder doppelte Anführungszeichen.  
   
-## Hinweise  
- Das \<include\>\-Tag verwendet die XPath\-Syntax von XML.  Siehe XPath\-Dokumentation, sodass Methoden mit \<include\>anpassen.  
+## <a name="remarks"></a>Hinweise  
+ Das \<include>-Tag verwendet die XPath-Syntax von XML. XPath-Dokumentation nach Möglichkeiten zum Anpassen mit \<enthalten >.  
   
- Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit ["\/doc"](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.  
+ Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.  
   
-## Beispiel  
- Hierbei handelt es sich um ein Beispiel mit mehreren Dateien.  Die erste Datei, die \<include\>verwendet, enthält die folgenden Dokumentationskommentare:  
+## <a name="example"></a>Beispiel  
+ Dies ist ein Beispiel einer Mehrfachdatei. Die erste Datei, die verwendet \<enthalten >, enthält die folgenden Dokumentationskommentare:  
   
 ```  
 // xml_include_tag.cpp  
@@ -73,7 +74,7 @@ public ref class Test2 {
 };  
 ```  
   
- Die zweite Datei, **xml\_include\_tag.doc**, enthält die folgenden Dokumentationskommentare:  
+ Die zweite Datei, xml_include_tag.doc, enthält die folgenden Dokumentationskommentare:  
   
 ```  
 <MyDocs>  
@@ -93,7 +94,7 @@ The summary for this other type.
 </MyDocs>  
 ```  
   
-## Programmausgabe  
+## <a name="program-output"></a>Programmausgabe  
   
 ```  
 <?xml version="1.0"?>  
@@ -116,5 +117,5 @@ The summary for this other type.
 </doc>  
 ```  
   
-## Siehe auch  
- [XML\-Dokumentation](../ide/xml-documentation-visual-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [XML-Dokumentation](../ide/xml-documentation-visual-cpp.md)

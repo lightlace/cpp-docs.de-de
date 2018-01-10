@@ -1,43 +1,42 @@
 ---
-title: "Projektbuildfehler PRJ0016 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0016"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0016"
+title: Projektbuildfehler PRJ0016 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0016
+dev_langs: C++
+helpviewer_keywords: PRJ0016
 ms.assetid: e9745336-883a-4c70-9c40-7753e02f0325
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 056a033ce95926ca8bbf59e6bbc7b11656fcd015
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Projektbuildfehler PRJ0016
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die Sicherheitseinstellungen des Benutzers verhindern, dass der Prozess erstellt wird.Diese Einstellungen sind zum Erstellen erforderlich.  
+# <a name="project-build-error-prj0016"></a>Projektbuildfehler PRJ0016
+Sicherheitseinstellungen für den Benutzer verhindern, dass der Prozess erstellt wird. Diese Einstellungen sind zum Erstellen von erforderlich.  
   
- Sie haben sich mit Benutzerrechten angemeldet, die nicht ausreichen, um Prozesse unter Verwendung eines Prozesses zu erstellen.  Sie müssen die Berechtigungsebenen für dieses Benutzerkonto ändern oder den Kontoadministrator verständigen.  
+ Sie sind als Benutzer angemeldet, die nicht über Berechtigungen zum Erstellen von Prozessen, die mit einem Prozess verfügt. Sie müssen die Berechtigungsebenen für dieses Benutzerkonto ändern, oder wenden Sie sich an den Administrator Ihres Kontos.  
   
- Dieser Fehler kann außerdem auftreten, wenn der folgende Registrierungsschlüssel festgelegt wurde:  
+ Dieser Fehler kann auch auftreten, wenn Sie der folgenden Registrierungsschlüssel festgelegt ist:  
   
- \\\\HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\RestrictRun  
+ \\\HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\RestrictRun  
   
- Löschen Sie zur Behebung dieses Fehlers den Schlüssel **RestrictRun**.  Falls dieser Registrierungsschlüssel benötigt wird, fügen Sie **vcspawn.exe** an die Liste der Schlüsseleinträge an.  
+ Um diesen Fehler zu beheben, löschen Sie den RestrictRun-Schlüssel. Wenn dieser Registrierungsschlüssel benötigt wird, hängen Sie **vcspawn.exe** zur Liste der Einträge im Schlüssel.  
   
- Ein weiterer Grund für diesen Fehler besteht darin, dass in den Sicherheitsrichtlinieneinstellungen unter dem Registrierungsschlüssel **HKEY\_CURRENT\_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\RestrictRu** die Datei **VCSpawn.exe** nicht als zugelassenes Windows\-Programm für dieses Benutzerkonto aufgeführt ist.  
+ Eine weitere Ursache für diesen Fehler ist, dass die Einstellung Ihrer VCSpawn.exe als zulässige Fenster Programm für dieses Benutzerkonto nicht unter dem Registrierungsschlüssel HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\RestrictRun enthalten ist.  
   
  Weitere Informationen finden Sie unter:  
   
--   Knowledge Base\-Artikel 324153, der verfügbar ist [http:\/\/support.microsoft.com\/default.aspx?scid\=kb;en\-us;324153](http://support.microsoft.com/default.aspx?scid=kb;en-us;324153).  
+-   Knowledge Base-Artikel 324153, verfügbar auf [http://support.microsoft.com/default.aspx?scid=kb;en-us;324153](http://support.microsoft.com/default.aspx?scid=kb;en-us;324153).  
   
--   [Einhalten der Systemsicherheitsrichtlinien](http://msdn.microsoft.com/library/aa372139), im Abschnitt über das Ausführen ausschließlich zugelassener Windows\-Anwendungen.
+-   [Systemeinstellungen für die Richtlinie einhalten](http://msdn.microsoft.com/library/aa372139), im Abschnitt "nur dann zulässig, führen Sie Windows-Anwendungen".

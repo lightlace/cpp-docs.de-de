@@ -1,11 +1,10 @@
 ---
-title: Scheduler_resource_allocation_error-Klasse | Microsoft-Dokumentation
+title: Scheduler_resource_allocation_error-Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,35 +12,19 @@ f1_keywords:
 - CONCRT/concurrency::scheduler_resource_allocation_error
 - CONCRT/concurrency::scheduler_resource_allocation_error::scheduler_resource_allocation_error
 - CONCRT/concurrency::scheduler_resource_allocation_error::get_error_code
-dev_langs:
-- C++
-helpviewer_keywords:
-- scheduler_resource_allocation_error class
+dev_langs: C++
+helpviewer_keywords: scheduler_resource_allocation_error class
 ms.assetid: 8b40449a-7abb-4d0a-bb85-c0e9a495ae97
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 84f32bb6192057c9d5872147cc8ef0bd2c13b349
-ms.contentlocale: de-de
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 23f7dffed1ba92d83502c27837b33e0b076e7645
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schedulerresourceallocationerror-class"></a>scheduler_resource_allocation_error-Klasse
 Diese Klasse beschreibt eine Ausnahme, die aufgrund eines Fehlers ausgelöst wird, um in der Concurrency Runtime eine wichtige Ressource abzurufen.  
@@ -52,7 +35,7 @@ Diese Klasse beschreibt eine Ausnahme, die aufgrund eines Fehlers ausgelöst wir
 class scheduler_resource_allocation_error : public std::exception;
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -67,7 +50,7 @@ class scheduler_resource_allocation_error : public std::exception;
 |[get_error_code](#get_error_code)|Gibt den Fehlercode zurück, der die Ausnahme verursacht hat.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Ausnahme wird normalerweise ausgelöst, wenn ein Aufruf des Betriebssystems von innerhalb der Concurrency Runtime fehlschlägt. Der Fehlercode, die normalerweise von einem Aufruf der Win32-Methode zurückgegeben werden würde `GetLastError` ist ein Wert vom Typ konvertiert `HRESULT` und kann abgerufen werden, mit der `get_error_code` Methode.  
+ Diese Ausnahme wird normalerweise ausgelöst, wenn ein Aufruf an das Betriebssystem aus, in der Concurrency Runtime fehlschlägt. Der Fehlercode, die normalerweise von einem Aufruf der Win32-Methode zurückgegeben werden würde `GetLastError` wird auf einen Wert vom Typ konvertiert `HRESULT` und können abgerufen werden, mithilfe der `get_error_code` Methode.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `exception`  
@@ -112,4 +95,3 @@ explicit _CRTIMP scheduler_resource_allocation_error(
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)
-

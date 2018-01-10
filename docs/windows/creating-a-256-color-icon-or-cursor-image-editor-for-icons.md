@@ -1,52 +1,56 @@
 ---
-title: "Creating a 256-Color Icon or Cursor (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "256-color palette"
-  - "cursors, color"
-  - "colors, icons"
-  - "colors, cursors"
-  - "icons, color"
+title: "Erstellen eines 256-Farben-Symbols oder Cursors (Bildbearbeitung für Symbole) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- 256-color palette
+- cursors, color
+- colors, icons
+- colors, cursors
+- icons, color
 ms.assetid: 2738089b-4fd3-4c45-96ae-6a15e4c6b780
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 11c25c808ad9d1917413a66044e052e4c49ea584
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Creating a 256-Color Icon or Cursor (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Mit dem Grafik\-Editor können Symbole und Cursor bei einer Auswahl unter 256 Farben groß \(64 × 64\) dargestellt werden.  Nach dem Erstellen der Ressource wird ein Stil für das Gerätebild ausgewählt.  
+# <a name="creating-a-256-color-icon-or-cursor-image-editor-for-icons"></a>Erstellen eines Symbols oder Cursors mit 256 Farben (Bildbearbeitung für Symbole)
+Mit der bildbearbeitung können Symbole und Cursor mit einer 256-Farben-Palette auswählbarer groß (64 × 64) mit angegebener Größe sein. Nach dem Erstellen der Ressource ist ein Gerät Image-Format aktiviert.  
   
-### So erstellen Sie ein Symbol oder einen Cursor mit 256 Farben  
+### <a name="to-create-a-256-color-icon-or-cursor"></a>Zum Erstellen eines 256-Farben-Symbol oder cursor  
   
-1.  Klicken Sie in der [Ressourcenansicht](../windows/resource-view-window.md) mit der rechten Maustaste auf die RC\-Datei, und wählen Sie dann **Ressource einfügen** aus dem Kontextmenü.  \(Enthält die RC\-Datei bereits eine Bildressource, z. B. einen Cursor, klicken Sie einfach mit der rechten Maustaste auf den Ordner **Cursor** und wählen im Kontextmenü **Cursor einfügen** aus.\)  
+1.  In [Ressourcenansicht](../windows/resource-view-window.md), mit der rechten Maustaste der RC-Datei, und wählen Sie dann **Ressource einfügen** aus dem Kontextmenü. (Falls Sie eine Bildressource in der RC-Datei, z. B. einen Cursor, noch können Sie einfach auf Rechtsklicken der **Cursor** Ordner, und wählen **Cursor einfügen** aus dem Kontextmenü.)  
   
-     **Hinweis** Wenn das Projekt noch keine RC\-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).  
+     **Hinweis** Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Wählen Sie im [Dialogfeld "Ressource einfügen"](../windows/add-resource-dialog-box.md)**Symbol** oder **Cursor**, und klicken Sie auf **Neu**.  
+2.  In der [Dialogfeld "Ressource einfügen"](../windows/add-resource-dialog-box.md)Option **Symbol** oder **Cursor** , und klicken Sie auf **neu**.  
   
-3.  Klicken Sie im Menü **Bild** auf **Neuer Bildtyp**.  
+3.  Auf der **Image** Menü klicken Sie auf **Neuer Bildtyp**.  
   
-4.  Wählen Sie den gewünschten Bildstil mit 256 Farben aus.  
+4.  Wählen Sie die gewünschte 256-Farben-Image-Format.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
   
  **Anforderungen**  
   
- None  
+ Keiner  
   
-## Siehe auch  
- [Using the 256\-Color Palette](../mfc/using-the-256-color-palette-image-editor-for-icons.md)   
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Icons and Cursors: Image Resources for Display Devices](../mfc/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
+## <a name="see-also"></a>Siehe auch  
+ [Verwenden der 256-Farben-Palette](../windows/using-the-256-color-palette-image-editor-for-icons.md)   
+ [Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Symbole und Cursor: Bildressourcen für Anzeigegeräte](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
+

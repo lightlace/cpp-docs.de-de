@@ -25,11 +25,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9f8bf50dbae25390de01180f592959a7fb76a04b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b3c6f3c15b0ea398ec621ba5f6e34a9fb6e0aae8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-background-containers-and-servers"></a>OLE-Hintergrund: Container und Server
 Eine Steuerelementcontainer-Anwendung ist eine Anwendung, die eingebettete oder verknüpfte Elemente in einem eigenen Dokumente integrieren kann. Die Dokumente, die von einem Steuerelementcontainer-Anwendung verwaltet müssen speichern und Anzeigen von Komponenten der OLE-Dokumente als auch die Daten, die von der Anwendung selbst erstellt werden. Eine Steuerelementcontainer-Anwendung muss auch Benutzern neue Elemente eingefügt oder Bearbeiten von vorhandenen Elementen von serveranwendungen, die bei Bedarf zu aktivieren. Die Benutzeroberfläche Anforderungen eine Steuerelementcontainer-Anwendung im Artikel aufgelisteten [Container: Probleme mit der Benutzeroberfläche](../mfc/containers-user-interface-issues.md).  
@@ -45,7 +46,7 @@ Eine Steuerelementcontainer-Anwendung ist eine Anwendung, die eingebettete oder 
 ## <a name="see-also"></a>Siehe auch  
  [OLE-Hintergrund](../mfc/ole-background.md)   
  [OLE-Hintergrund: MFC-Implementierung](../mfc/ole-background-mfc-implementation.md)   
- [Container](../mfc/containers.md)   
+ [Containers](../mfc/containers.md)   
  [Server](../mfc/servers.md)   
  [Container: Clientelemente](../mfc/containers-client-items.md)   
  [Server: Serverelemente](../mfc/servers-server-items.md)

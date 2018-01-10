@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9c6ae42f1eb29e5aeb33a9427dd2b6db3b2cd765
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bc112bd3cfbf1194a2898afecb513edcbc456747
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-sockets-stream-sockets"></a>Windows Sockets: Blockieren
 Dieser Artikel beschreibt Streamsockets, einer der zwei Windows Socket-Typen. (Der andere Typ ist der [Datagrammsocket](../mfc/windows-sockets-datagram-sockets.md).)  

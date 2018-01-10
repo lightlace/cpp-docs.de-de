@@ -1,46 +1,50 @@
 ---
-title: "Changing the Magnification Factor (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "images [C++], magnification in Image editor"
-  - "magnification, Image editor"
-  - "Image editor [C++], magnification"
+title: "Ändern des Vergrößerungsfaktors (Bildbearbeitung für Symbole) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- images [C++], magnification in Image editor
+- magnification, Image editor
+- Image editor [C++], magnification
 ms.assetid: d1b0c9e0-fe54-4b2a-b75e-ffa0fa7c8cd9
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8a1192219bce3fa51177f14ae1345740d0ab53a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Changing the Magnification Factor (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Standardmäßig zeigt der Grafik\-Editor die Ansicht im linken Bereich in Originalgröße und die Ansicht im rechten Bereich in 6\-facher Vergrößerung an.  Der Vergrößerungsfaktor \(der in der Statusleiste unten im Arbeitsbereich angezeigt wird\) entspricht dem Verhältnis zwischen der tatsächlichen und der angezeigten Bildgröße.  Bei einem Wertebereich von 1 bis 10 beträgt der Standardfaktor 6.  
+# <a name="changing-the-magnification-factor-image-editor-for-icons"></a>Ändern des Vergrößerungsfaktors (Bildbearbeitung für Symbole)
+Standardmäßig zeigt der Grafik-Editor die Ansicht im linken Bereich auf die tatsächliche Größe und die Ansicht im rechten Bereich mit der tatsächlichen Größe der 6-Mal. Der Vergrößerungsfaktor (in der Statusleiste am unteren Rand des Arbeitsbereichs) ist das Verhältnis zwischen der tatsächlichen Größe des Abbilds und die angezeigte Größe. Die Standardeinstellung-Stufe ist 6, und der Bereich liegt zwischen 1 und 10.  
   
-### So ändern Sie den Vergrößerungsfaktor  
+### <a name="to-change-the-magnification-factor"></a>Ändern des Vergrößerungsfaktors  
   
-1.  Wählen Sie den Bereich des **Grafik\-Editors** aus, dessen Vergrößerungsfaktor Sie ändern möchten.  
+1.  Wählen Sie die **Bildbearbeitung** Bereich, dessen Vergrößerungsfaktor ändern möchten.  
   
-2.  Klicken Sie auf der [Symbolleiste des Grafik\-Editors](../mfc/toolbar-image-editor-for-icons.md) auf den Pfeil rechts neben dem [Tool "Vergrößern"](../mfc/toolbar-image-editor-for-icons.md), und wählen Sie den Vergrößerungsfaktor aus dem Untermenü aus: **1X**, **2X**, **6X** oder **8X**.  
+2.  Auf der [Grafik-Editor-Symbolleiste](../windows/toolbar-image-editor-for-icons.md), klicken Sie auf den Pfeil rechts neben der [Tool vergrößern](../windows/toolbar-image-editor-for-icons.md) , und wählen Sie im Untermenü des Vergrößerungsfaktors: **1 X**, **2 X**, **6 X**, oder **8 X**.  
   
     > [!NOTE]
-    >  Um einen anderen Vergrößerungsfaktor als den im Tool **Vergrößern** angegebenen auszuwählen, verwenden Sie die Zugriffstasten.  
+    >  Wählen Sie einen Vergrößerungsfaktor nicht aufgelistet, die der **Magnify** -tool, verwenden Sie die Programmmenüs auf Tastenkombinationen.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
   
  Anforderungen  
   
- None  
+ Keiner  
   
-## Siehe auch  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Window Panes](../mfc/window-panes-image-editor-for-icons.md)
+## <a name="see-also"></a>Siehe auch  
+ [Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Fensterbereiche](../windows/window-panes-image-editor-for-icons.md)
+

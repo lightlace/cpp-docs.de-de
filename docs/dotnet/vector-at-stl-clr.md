@@ -1,45 +1,46 @@
 ---
-title: "vector::at (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::at"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "at-Member [STL/CLR]"
+title: 'Vector:: AT (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::at
+dev_langs: C++
+helpviewer_keywords: at member [STL/CLR]
 ms.assetid: 9af9f829-48b8-4906-ba4a-b43454acb2c7
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7f8747242f757855b58a72a4604e84200df02a6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# vector::at (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Greift auf ein Element in einer angegebenen Position zu.  
+# <a name="vectorat-stlclr"></a>vector::at (STL/CLR)
+Greift auf ein Element an einer angegebenen Position zu.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 reference at(size_type pos);  
 ```  
   
-#### Parameter  
- Position  
- Die Position des Elements, auf das zugegriffen wird.  
+#### <a name="parameters"></a>Parameter  
+ pos  
+ Position des Elements, auf das zugegriffen wird  
   
-## Hinweise  
- Die Memberfunktion wird ein Verweis auf das Element der Sequenz in Position gesteuerten `pos` zurück.  Sie verwenden sie, um ein Element zu lesen oder zu schreiben, dessen Position Sie kennen.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion gibt einen Verweis auf das Element der kontrollierten Sequenz an der Position `pos`. Verwenden sie zum Lesen oder schreiben ein Element, dessen Position Sie kennen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_vector_at.cpp   
@@ -68,13 +69,16 @@ int main()
   
 ```  
   
-  **ein b c**  
- **x c ein**   
-## Anforderungen  
- **Header:** \<cliext\/Vektor\>  
+```Output  
+a b c  
+a x c  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Vektor >  
   
-## Siehe auch  
- [Vektor](../dotnet/vector-stl-clr.md)   
- [vector::operator](../dotnet/vector-operator-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Vektor (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector::operator(STL/CLR)](../dotnet/vector-operator-stl-clr.md)

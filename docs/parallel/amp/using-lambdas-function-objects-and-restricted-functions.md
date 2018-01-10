@@ -13,14 +13,15 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6507d3b43372f3e68e81ac44f896d7a6e7984a09
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: afec84ba6e3c007e576c37b4a7afc71fe62691ea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-lambdas-function-objects-and-restricted-functions"></a>Verwenden von Lambdas, Function-Objekten und eingeschränkten Funktionen
-Der C++ AMP-Code, den Sie im Beschleuniger ausführen möchten wurde, als Argument in einem Aufruf der [Parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) Methode. Als Argument können Sie einen Lambda-Ausdruck oder ein Funktionsobjekt (Funktionselement) verwenden. Zudem kann mit dem Lambda-Ausdruck oder dem Funktionsobjekt eine eingeschränkte C++ AMP-Funktion aufgerufen werden. In diesem Thema werden Lambdas, Funktionsobjekte und eingeschränkte Funktionen anhand eines Algorithmus zum Hinzufügen von Arrays veranschaulicht. Im folgenden Beispiel ist der Algorithmus ohne C++ AMP-Code dargestellt. Es werden zwei eindimensionale Arrays derselben Länge erstellt. Die entsprechenden ganzzahligen Elemente werden hinzugefügt und in einem dritten eindimensionalen Array gespeichert. C++ AMP wird nicht verwendet.  
+Der C++ AMP-Code, den Sie im Beschleuniger ausführen möchten wurde, als Argument in einem Aufruf der [Parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) Methode. Als Argument können Sie einen Lambda-Ausdruck oder ein Funktionsobjekt (Funktionselement) verwenden. Zudem kann mit dem Lambdaausdruck oder dem Funktionsobjekt eine eingeschränkte C++ AMP-Funktion aufgerufen werden. In diesem Thema werden Lambdas, Funktionsobjekte und eingeschränkte Funktionen anhand eines Algorithmus zum Hinzufügen von Arrays veranschaulicht. Im folgenden Beispiel ist der Algorithmus ohne C++ AMP-Code dargestellt. Es werden zwei eindimensionale Arrays derselben Länge erstellt. Die entsprechenden ganzzahligen Elemente werden hinzugefügt und in einem dritten eindimensionalen Array gespeichert. C++ AMP wird nicht verwendet.  
   
 ```cpp  
 void CpuMethod() {  
@@ -132,7 +133,7 @@ void AddArraysWithFunctionObject() {
  Das Funktionsobjekt muss einen Konstruktor und eine Überladung des Funktionsaufrufoperators enthalten. Im Funktionsaufrufoperator muss ein Indizierungsparameter enthalten sein. Eine Instanz des Funktionsobjekts wird als zweites Argument zum Übergeben der [Parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) Methode. In diesem Beispiel drei [Array_view](../../parallel/amp/reference/array-view-class.md) Objekte an den Konstruktor des Funktionsobjekts übergeben werden. Die [Array_view](../../parallel/amp/reference/array-view-class.md) Objekt `sum` hat den Rang 1. Der Parameter des Funktionsaufrufoperators aus diesem Grund ist eine [Index](../../parallel/amp/reference/index-class.md) Objekt mit dem Rang 1. Zur Laufzeit wird die Funktion ausgeführt wird einmal für jedes Element in der [Array_view](../../parallel/amp/reference/array-view-class.md) Objekt. Weitere Informationen finden Sie unter [Funktionsaufruf](../../cpp/function-call-cpp.md) und [Funktionsobjekte in der C++-Standardbibliothek](../../standard-library/function-objects-in-the-stl.md).  
   
 ## <a name="c-amp-restricted-function"></a>Eingeschränkte C++ AMP-Funktion  
- Sie können den Code des Beschleunigers weiter zerlegen, indem Sie eine eingeschränkte Funktion erstellen und diese mit einem Lambda-Ausdruck oder einem Funktionsobjekt aufrufen. Im folgenden Codebeispiel wird veranschaulicht, wie eine eingeschränkte Funktion mit einem Lambdaausdruck aufgerufen wird.  
+ Sie können den Code des Beschleunigers weiter zerlegen, indem Sie eine eingeschränkte Funktion erstellen und diese mit einem Lambdaausdruck oder einem Funktionsobjekt aufrufen. Im folgenden Codebeispiel wird veranschaulicht, wie eine eingeschränkte Funktion mit einem Lambdaausdruck aufgerufen wird.  
   
 ```cpp  
 void AddElementsWithRestrictedFunction(index<1> idx, array_view<int, 1> sum, array_view<int, 1> a, array_view<int, 1> b) restrict(amp)  

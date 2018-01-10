@@ -1,46 +1,48 @@
 ---
-title: "Erstellen des Anbieters | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB-Anbieter, Erstellen"
+title: Erstellen des Anbieters | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: OLE DB providers, creating
 ms.assetid: 2506ba8f-010d-4231-aac1-387432f7b6b9
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 6e590461d359c2ab2ee750f0393f6c2f9ec7ac95
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Erstellen des Anbieters
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-#### So erstellen Sie einen OLE DB\-Anbieter mit dem ATL\-OLE DB\-Anbieter\-Assistenten  
+# <a name="creating-the-provider"></a>Erstellen des Anbieters
+#### <a name="to-create-an-ole-db-provider-with-the-atl-ole-db-provider-wizard"></a>So erstellen Sie einen OLE DB-Anbieter mit der ATL-OLE DB-Anbieter-Assistenten  
   
-1.  Klicken Sie mit der rechten Maustaste auf das Projekt.  
+1.  Mit der rechten Maustaste in des Projekts.  
   
-2.  Klicken Sie im Kontextmenü auf **Hinzufügen** und dann auf **Klasse hinzufügen**.  
+2.  Klicken Sie im Kontextmenü auf **hinzufügen**, und klicken Sie dann auf **Klasse hinzufügen**.  
   
-3.  Wählen Sie im Dialogfeld **Klasse hinzufügen** das Symbol **ATL\-OLE DB\-Anbieter** aus, und klicken Sie auf **Öffnen**.  
+3.  In der **Klasse hinzufügen** wählen Sie im Dialogfeld die **ATL-OLE DB-Anbieter** Symbol, und klicken Sie dann auf **öffnen**.  
   
-4.  Geben Sie im ATL\-OLE DB\-Anbieter\-Assistenten im Feld **Kurzer Name** einen kurzen Namen für den Anbieter ein.  In den folgenden Themen wird der kurze Name "MyProvider" verwendet, Sie können jedoch auch einen anderen Namen wählen.  Die Einträge in den anderen Namensfeldern werden automatisch an den eingegebenen Namen angepasst.  
+4.  In der ATL-OLE DB-Anbieter-Assistenten geben Sie einen kurzen Namen für den Anbieter in der **Kurzname** Feld. In den folgenden Themen der kurzen Name "MyProvider", jedoch können Sie einen anderen Namen. Die anderen Namensfeldern entsprechend den Namen, den Sie eingeben.  
   
-5.  Bearbeiten Sie ggf. die anderen Namensfelder.  Neben den Objekt\- und Dateinamen können folgende Bezeichnungen bearbeitet werden:  
+5.  Bearbeiten Sie die anderen Namensfelder, bei Bedarf. Zusätzlich zu dem Objekt und die Dateinamen können Sie die folgenden bearbeiten:  
   
-    -   `CoClass`: Der von COM zum Erstellen des Anbieters verwendete Name.  
+    -   **Co-Klasse**: der Name, die COM verwendet, um den Anbieter zu erstellen.  
   
-    -   **ProgID**: Der programmgesteuerte Bezeichner, also eine Textzeichenfolge, die anstelle einer GUID verwendet werden kann.  
+    -   **ProgID**: der programmgesteuerte Bezeichner, also eine Textzeichenfolge, die anstelle einer GUID verwendet werden kann.  
   
-    -   **Version**: Wird in Verbindung mit der Programm\-ID und der Co\-Klasse verwendet, um eine versionsabhängige programmgesteuerte ID zu generieren.  
+    -   **Version**: mit ProgID "und" Co-Klasse verwendet, um eine programmgesteuerte versionsabhängige-ID zu generieren.  
   
 6.  Klicken Sie auf **Fertig stellen**.  
   
-## Siehe auch  
- [Erstellen eines OLE DB\-Anbieters](../../data/oledb/creating-an-ole-db-provider.md)
+## <a name="see-also"></a>Siehe auch  
+ [Erstellen eines OLE DB-Anbieters](../../data/oledb/creating-an-ole-db-provider.md)

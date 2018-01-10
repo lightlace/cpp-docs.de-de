@@ -1,60 +1,61 @@
 ---
-title: "AsyncStatusInternal-Enumeration | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "async/Microsoft::WRL::Details::AsyncStatusInternal"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AsyncStatusInternal-Enumeration"
+title: AsyncStatusInternal-Enumeration | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: async/Microsoft::WRL::Details::AsyncStatusInternal
+dev_langs: C++
+helpviewer_keywords: AsyncStatusInternal enumeration
 ms.assetid: b783923f-3f1c-4487-9384-be572cbc62d7
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: bd277fecb0bc63d5ee823af98df8aa298b285964
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# AsyncStatusInternal-Enumeration
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Unterstützt die WRL\-Infrastruktur und nicht beabsichtigt, direkt im Code verwendet werden.  
+# <a name="asyncstatusinternal-enumeration"></a>AsyncStatusInternal-Enumeration
+Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 enum AsyncStatusInternal;  
 ```  
   
-## Hinweise  
- Gibt eine Zuordnung zwischen internen Enumerationen für den Zustand von asynchronen Vorgängen und Enumeration der **Windows::Foundation::AsyncStatus** an.  
+## <a name="remarks"></a>Hinweise  
+ Gibt eine Zuordnung zwischen internen Enumerationen für den Status von asynchronen Vorgängen und die **Windows::Foundation::AsyncStatus** Enumeration.  
   
-## Member  
+## <a name="members"></a>Member  
  `_Created`  
- Entspricht ::Windows::Foundation::AsyncStatus::Created  
+ Entspricht:: Windows::Foundation::AsyncStatus:: erstellt  
   
  `_Started`  
- Entspricht ::Windows::Foundation::AsyncStatus::Started  
+ Entspricht:: Windows::Foundation::AsyncStatus:: gestartet  
   
  `_Completed`  
- Entspricht ::Windows::Foundation::AsyncStatus::Completed  
+ Entspricht:: Windows::Foundation::AsyncStatus:: abgeschlossen  
   
  `_Cancelled`  
- Entspricht ::Windows::Foundation::AsyncStatus::Cancelled  
+ Entspricht:: Windows::Foundation::AsyncStatus:: abgebrochen  
   
  `_Error`  
- Entsprechung zum ::Windows::Foundation::AsyncStatus::Error  
+ Entspricht:: Windows::Foundation::AsyncStatus::Error  
   
-## Anforderungen  
- **Header:**  async.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** async.h  
   
- **Namespace:**  Microsoft::WRL::Details  
+ **Namespace:** Microsoft::WRL::Details  
   
-## Siehe auch  
- [Microsoft::WRL::Details\-Namespace](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Siehe auch  
+ [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

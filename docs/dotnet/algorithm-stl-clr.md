@@ -18,11 +18,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a1f598b0aba0f5f697fc6603728e2735f0cd50f6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7dac0e574122342c96b28a2f5ccbeb1ea5088ae9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="algorithm-stlclr"></a>algorithm (STL/CLR)
 Definiert die STL/CLR-containervorlagenfunktionen, die Algorithmen ausführen.  
@@ -78,7 +81,7 @@ Definiert die STL/CLR-containervorlagenfunktionen, die Algorithmen ausführen.
 |[remove (STL/CLR)](../dotnet/remove-stl-clr.md)|Löscht einen angegebenen Wert aus einem angegebenen Bereich, ohne die Reihenfolge der restlichen Elemente zu beeinträchtigen, und gibt das Ende eines neuen Bereichs des angegebenen Werts zurück.|  
 |[remove_copy (STL/CLR)](../dotnet/remove-copy-stl-clr.md)|Kopiert Elemente aus einem Quellbereich in einen Zielbereich, ohne dass Elemente eines angegebenen Werts nicht kopiert werden, ohne die Reihenfolge der restlichen Elemente zu beeinträchtigen.|  
 |[remove_copy_if (STL/CLR)](../dotnet/remove-copy-if-stl-clr.md)|Kopiert Elemente aus einem Quellbereich einem Zielbereich zu, mit Ausnahme derjenigen, die ein Prädikat erfüllen, ohne die Reihenfolge der restlichen Elemente zu beeinträchtigen.|  
-|[remove_if (STL/CLR)](../dotnet/remove-if-stl-clr.md)|Löscht die Elemente, die ein Prädikat aus einem angegebenen Bereich erfüllen, ohne die Reihenfolge der restlichen Elemente zu beeinträchtigen. .|  
+|[remove_if (STL/CLR)](../dotnet/remove-if-stl-clr.md)|Löscht die Elemente, die ein Prädikat aus einem angegebenen Bereich erfüllen, ohne die Reihenfolge der restlichen Elemente zu beeinträchtigen. sein.|  
 |[replace (STL/CLR)](../dotnet/replace-stl-clr.md)|Ersetzt die Elemente in einem Bereich, die einem angegebenen Wert durch einen neuen Wert übereinstimmen.|  
 |[replace_copy (STL/CLR)](../dotnet/replace-copy-stl-clr.md)|Kopiert Elemente aus einem Quellbereich einem Zielbereich, ersetzen Elemente, die einem angegebenen Wert durch einen neuen Wert übereinstimmen.|  
 |[replace_copy_if (STL/CLR)](../dotnet/replace-copy-if-stl-clr.md)|Überprüft jedes Element in einem Quellbereich und ersetzt es, sofern es ein angegebenes Prädikat erfüllt, während das Ergebnis in einen neuen Zielbereich kopiert wird.|  

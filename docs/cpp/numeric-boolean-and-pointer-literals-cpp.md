@@ -4,32 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - literals, C++
 - constants, literals
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 5c4a9a7aca2f11956e0ba47cced37a86733dcce8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 91f79a2703dee8a162b971a78eba7e13a9849b43
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>Numerisch, Boolean und Zeigerliterale (C++)
 Bei einem Literal handelt es sich um ein Programmelement, das direkt einen Wert darstellt. In diesem Artikel werden Literale der Typen Ganzzahl, Gleitkomma, Boolesch und Zeiger erläutert. Informationen über Zeichenfolgen- und Zeichenliterale finden Sie unter [Zeichenfolgen und Zeichen Literale (C++)](../cpp/string-and-character-literals-cpp.md). Sie können auch Ihre eigenen Literale auf Grundlage dieser Kategorien definieren; Weitere Informationen finden Sie unter [benutzerdefinierte Literale (C++)](../cpp/user-defined-literals-cpp.md)  
   
- . Sie können Literale in vielen Kontexten verwenden, aber am häufigsten zum Initialisieren von benannten Variablen und zum Weitergeben der Argumente an Funktionen:  
+ sein. Sie können Literale in vielen Kontexten verwenden, aber am häufigsten zum Initialisieren von benannten Variablen und zum Weitergeben der Argumente an Funktionen:  
   
 ```  
 const int answer = 42; // integer literal  
@@ -108,7 +106,7 @@ long long i = 24'847'458'121
   
  Der Exponent kann angegeben werden, mithilfe von **e** oder **E**, haben dieselben Bedeutung, gefolgt von einem optionalen Vorzeichen (+ oder -) und einer Folge von Ziffern.  Wenn ein Exponent vorhanden ist, ist das nachfolgende Dezimaltrennzeichen in ganzen Zahlen wie `18E0` nicht erforderlich.  
   
- Gleitkommaliterale gehören standardmäßig dem Typ **doppelte**. Mit den Suffixen **f** oder **l** (oder **F** oder **L** – das Suffix ist nicht in der Groß-/Kleinschreibung unterschieden), das Literal kann angegeben werden, als ** "float"** oder `long double`zugeordnet.  
+ Gleitkommaliterale gehören standardmäßig dem Typ **doppelte**. Mit den Suffixen **f** oder **l** (oder **F** oder **L** – das Suffix ist nicht in der Groß-/Kleinschreibung unterschieden), das Literal kann angegeben werden, als  **"float"** oder `long double`zugeordnet.  
   
  Obwohl `long double` und **doppelte** die gleiche Darstellung haben, sind sie nicht den gleichen Typ. Sie können beispielsweise überladene Funktionen haben:  
   

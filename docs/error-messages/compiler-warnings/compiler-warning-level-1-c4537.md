@@ -1,32 +1,31 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4537 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4537"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4537"
+title: Compilerwarnung (Stufe 1) C4537 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4537
+dev_langs: C++
+helpviewer_keywords: C4537
 ms.assetid: 9454493c-d419-475e-8f35-9c00233c9329
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8cdc3cc00b1b6ea52657f441423e61c3003652ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 1) C4537
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'Objekt': 'Operator' angewendet auf Nicht\-UDT\-Typ  
+# <a name="compiler-warning-level-1-c4537"></a>Compilerwarnung (Stufe 1) C4537
+'Object': 'Operator' angewendet werden, um nicht-UDT-Typ  
   
- Ein Verweis wurde übergeben, obwohl ein Objekt \(benutzerdefinierter Typ\) erwartet wurde.  Ein Verweis ist kein Objekt, diese Unterscheidung kann vom Inlineassemblercode jedoch nicht getroffen werden.  Der Compiler generiert Code so, als wäre das ***Objekt*** eine Instanz.  
+ Ein Verweis wurde übergeben, in dem ein Objekt (UDT) erwartet wurde. Ein Verweis ist kein Objekt, aber Inlineassemblercode ist nicht die Unterscheidung vornehmen. Der Compiler generiert Code, als wäre ***Objekt*** wurden von eine Instanz.  
   
  Im folgenden Beispiel wird C4537 generiert:  
   

@@ -37,11 +37,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8c02ce03349ba24a2550f91d34b05e361d38c0ec
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cfbaa595c16f6ac3b58d92ff45b7b0335a985a8b
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="gammadistribution-class"></a>gamma_distribution-Klasse
 Generiert eine Gammaverteilung.  
@@ -77,9 +78,9 @@ public:
 ```    
 #### <a name="parameters"></a>Parameter  
 *RealType*  
-Der Gleitkommaergebnistyp. Der Standardwert ist `double`. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).  
+Der Gleitkommaergebnistyp. Der Standardwert ist `double`. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).  
   
-*URNG* Das einheitliche Zufallszahlengenerator-Modul. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).  
+*URNG* Das einheitliche Zufallszahlengenerator-Modul. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).  
   
 ## <a name="remarks"></a>Hinweise  
 Die Vorlagenklasse beschreibt eine Verteilung, die Werte eines benutzerdefinierten Gleitkommatyps produziert. Wenn kein entsprechend der Gammaverteilung verteilter Wert ausgegeben wird, geben Sie `double` ein. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.  
@@ -101,7 +102,7 @@ Die `operator()`-Memberfunktionen geben den nächsten generierten Wert von entwe
   
 Weitere Informationen zu Verteilungsklassen und ihren Membern finden Sie unter [\<random>](../standard-library/random.md).  
   
-Ausführliche Informationen über die Gammaverteilung finden Sie im Wolfram MathWorld-Artikel [Gamma Distribution](http://go.microsoft.com/fwlink/LinkId=401111).  
+Ausführliche Informationen über die Gammaverteilung finden Sie im Wolfram MathWorld-Artikel [Gamma Distribution](http://go.microsoft.com/fwlink/p/?linkid=401111).  
   
 ## <a name="example"></a>Beispiel  
   
@@ -214,7 +215,7 @@ Die für die Erstellung der Verteilung verwendete Parameterstruktur.
   
 Mit dem ersten Konstruktor wird ein Objekt erstellt, in dessen gespeichertem `alpha`-Wert der Wert *alpha* enthalten ist und dessen gespeicherter `beta`-Wert den Wert *beta* enthält.  
   
-Mit dem zweiten Konstruktor wird ein Objekt erstellt, dessen gespeicherte Parameter von *parm* initialisiert werden. Sie können die aktuellen Parameter einer vorhandenen Verteilung abrufen und festlegen, indem Sie die Memberfunktion `param()` aufrufen.  
+Mit dem zweiten Konstruktor wird ein Objekt erstellt, dessen gespeicherte Parameter aus *parm* initialisiert werden. Sie können die aktuellen Parameter einer vorhandenen Verteilung abrufen und festlegen, indem Sie die Memberfunktion `param()` aufrufen.  
   
 ##  <a name="param_type"></a> gamma_distribution::param_type  
 Speichert die Parameter der Verteilung.  

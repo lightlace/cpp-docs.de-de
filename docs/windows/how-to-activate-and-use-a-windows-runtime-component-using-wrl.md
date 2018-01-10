@@ -1,91 +1,94 @@
 ---
-title: "Gewusst wie: Aktivieren und Verwenden einer Windows-Runtime-Komponente mit WRL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
+title: 'Vorgehensweise: Aktivieren und verwenden Sie eine Windows-Runtime-Komponente mit WRL | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9179b701506da7a714569a940543a95634439583
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Gewusst wie: Aktivieren und Verwenden einer Windows-Runtime-Komponente mit WRL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In diesem Dokument wird gezeigt, wie Sie mit [!INCLUDE[cppwrl](../windows/includes/cppwrl_md.md)] \([!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]\) die [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] initialisieren und eine [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]\-Komponente aktivieren und verwenden.  
+# <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Gewusst wie: Aktivieren und Verwenden einer Windows-Runtime-Komponente mit WRL
+Dieses Dokument wird gezeigt, wie die Windows Runtime C++ Template Library (WRL) verwenden, um die Windows-Runtime zu initialisieren und zu aktivieren und verwenden eine Windows-Runtime-Komponente.  
   
 > [!NOTE]
->  In diesem Beispiel wird eine integrierte [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]\-Komponente aktiviert.  Wie Sie eine eigene Komponente erstellen, die Sie auf ähnliche Weise aktivieren können, erfahren Sie unter [Exemplarische Vorgehensweise: Erstellen einer Basiskomponente für Windows\-Runtime](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md).  
+>  In diesem Beispiel wird eine integrierte Windows-Runtime-Komponente aktiviert. Um zu erfahren, wie Sie eine eigene Komponente erstellen, die auf ähnliche Weise aktiviert werden kann, finden Sie unter [Exemplarische Vorgehensweise: Erstellen einer grundlegenden Komponente für die Windows-Runtime](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md).  
   
- Um eine Komponente zu verwenden, müssen Sie einen Schnittstellenzeiger auf den Typ abrufen, der von der Komponente implementiert wird.  Und da die [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] auf der COM\-Technologie \(Component Object Model\) basiert, müssen Sie eine Instanz des Typs nach den COM\-Regeln verwalten.  Beispielsweise müssen Sie den *Verweiszählerwert* verwalten, der bestimmt, wann der Typ aus dem Speicher gelöscht wird.  
+ Um eine Komponente zu verwenden, müssen Sie einen Schnittstellenzeiger auf den Typ abrufen, der von der Komponente implementiert wird. Und da die zugrunde liegende Technologie der Windows-Runtime das Component Object Model (COM) ist, müssen Sie die COM-Regeln, um eine Instanz des Typs beizubehalten entsprechen. Sie müssen z. B. verwalten die *Verweiszähler* , der bestimmt, wenn der Typ aus dem Arbeitsspeicher gelöscht wird.  
   
- Um die Verwendung der [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] zu vereinfachen, stellt [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] die Vorlage für den intelligenten Zeigermechanismus, [ComPtr\<T\>](../windows/comptr-class.md), bereit, mit der die Verweiszählung automatisch ausgeführt wird.  Wenn Sie eine Variable deklarieren, geben Sie `ComPtr<`*interface\-name*`>` *identifier* an.  Um auf einen Schnittstellenmember zuzugreifen, wenden Sie den Pfeilmemberzugriffsoperator \(`->`\) auf den Bezeichner an.  
+ Um die Verwendung von Windows-Runtime zu vereinfachen, stellt Windows Runtime C++ Template Library die Vorlage intelligenten Zeiger [ComPtr\<T >](../windows/comptr-class.md), verweiszählung, die automatisch ausgeführt. Wenn Sie eine Variable deklarieren, geben Sie `ComPtr<` *Schnittstellenname* `>` *Bezeichner*. Um auf einen Schnittstellenmember zuzugreifen, wenden Sie den Pfeilmemberzugriffsoperator (`->`) auf den Bezeichner an.  
   
 > [!IMPORTANT]
 >  Wenn Sie eine Schnittstellenfunktion aufrufen, testen Sie stets den Rückgabewert `HRESULT`.  
   
-## Aktivieren und Verwenden einer Windows Runtime\-Komponente  
- In den folgenden Schritten wird anhand der `Windows::Foundation::IUriRuntimeClass`\-Schnittstelle veranschaulicht, wie Sie eine Aktivierungsfactory für eine [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]\-Komponente erstellen, eine Instanz dieser Komponente erstellen und einen Eigenschaftswert abrufen.  Sie zeigen außerdem, wie die [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] initialisiert wird.  Im Folgenden finden Sie das vollständige Beispiel.  
+## <a name="activating-and-using-a-windows-runtime-component"></a>Aktivieren und Verwenden einer Windows Runtime-Komponente  
+ Die folgenden Schritte verwenden den `Windows::Foundation::IUriRuntimeClass` Schnittstelle zu veranschaulichen, wie Sie eine aktivierungsfactory für eine Windows-Runtime-Komponente erstellen, erstellen Sie eine Instanz dieser Komponente und Abrufen eines Eigenschaftswerts. Außerdem wird gezeigt, wie die Windows-Runtime initialisiert. Im Folgenden finden Sie das vollständige Beispiel.  
   
 > [!IMPORTANT]
->  In der Regel verwenden Sie [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] in einer [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)]\-App; in diesem Beispiel wird jedoch zur Veranschaulichung eine Konsolen\-App verwendet.  Funktionen wie `wprintf_s` sind von einer [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)]\-App aus nicht verfügbar.  Weitere Informationen über die Typen und Funktionen, die Sie in einer [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)]\-App verwenden können, finden Sie unter [CRT\-Funktionen nicht mit \/ZW unterstützt](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) und im Thema zu [Win32 und COM für Windows Store\-Apps](http://msdn.microsoft.com/library/windows/apps/br205757.aspx).  
+>  Obwohl Sie die Windows Runtime C++ Template Library in einer universellen Windows-Plattform-app in der Regel verwenden, wird in diesem Beispiel eine Konsolen-app zur Veranschaulichung verwendet. Funktionen wie `wprintf_s` stehen nicht aus einer Uwp-app. Weitere Informationen zu den Typen und Funktionen, die Sie in einer universellen Windows-Plattform-app verwenden können, finden Sie unter [mit/Zw nicht unterstützte CRT-Funktionen](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) und [Win32 und COM für Windows Store-apps](http://msdn.microsoft.com/library/windows/apps/br205757.aspx).  
   
-#### So aktivieren und verwenden Sie eine Windows Runtime\-Komponente  
+#### <a name="to-activate-and-use-a-windows-runtime-component"></a>So aktivieren und verwenden Sie eine Windows Runtime-Komponente  
   
-1.  Schließen Sie \(mit `#include`\) alle erforderlichen [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]\-, [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]\- oder Standard\-C\+\+\-Bibliotheksheader ein.  
+1.  Einschließen (`#include`) alle erforderlichen Windows-Runtime, C++-Vorlagenbibliothek für Windows-Runtime oder C++-Standardbibliothek-Header.  
   
-     [!CODE [wrl-consume-component#2](../CodeSnippet/VS_Snippets_Misc/wrl-consume-component#2)]  
+     [!code-cpp[wrl-consume-component#2](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_1.cpp)]  
   
-     Es wird empfohlen, den Code mithilfe der `using namespace`\-Direktive in der CPP\-Datei verständlicher zu gestalten.  
+     Es wird empfohlen, den Code mithilfe der `using namespace`-Direktive in der CPP-Datei verständlicher zu gestalten.  
   
-2.  Initialisieren Sie den Thread, in dem die App ausgeführt wird.  Jede App muss ihren Thread und ihr Threadingmodell initialisieren.  In diesem Beispiel wird mithilfe der Klasse [Microsoft::WRL::Wrappers::RoInitializeWrapper](../windows/roinitializewrapper-class.md) die [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] initialisiert und [RO\_INIT\_MULTITHREADED](http://msdn.microsoft.com/library/windows/apps/br224661.aspx) als Threadingmodell angegeben.  Die `RoInitializeWrapper`\-Klasse ruft `Windows::Foundation::Initialize` auf, wenn sie erstellt, und `Windows::Foundation::Uninitialize`, wenn sie zerstört wird.  
+2.  Initialisieren Sie den Thread, in dem die App ausgeführt wird. Jede App muss ihren Thread und ihr Threadingmodell initialisieren. Dieses Beispiel verwendet die [Microsoft::WRL::Wrappers::RoInitializeWrapper](../windows/roinitializewrapper-class.md) -Klasse zum Initialisieren der Windows-Runtime und gibt [RO_INIT_MULTITHREADED](http://msdn.microsoft.com/library/windows/apps/br224661.aspx) als Threadingmodell. Die `RoInitializeWrapper`-Klasse ruft `Windows::Foundation::Initialize` auf, wenn sie erstellt, und `Windows::Foundation::Uninitialize`, wenn sie zerstört wird.  
   
-     [!CODE [wrl-consume-component#3](../CodeSnippet/VS_Snippets_Misc/wrl-consume-component#3)]  
+     [!code-cpp[wrl-consume-component#3](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_2.cpp)]  
   
-     In der zweiten Anweisung gibt der Operator [RoInitializeWrapper::HRESULT](../windows/roinitializewrapper-hresult-parens-operator.md)`HRESULT` vom Aufruf von `Windows::Foundation::Initialize` zurück.  
+     In der zweiten Anweisung wird die [RoInitializeWrapper::HRESULT](../windows/roinitializewrapper-hresult-parens-operator.md) Operator gibt den `HRESULT` im Aufruf von `Windows::Foundation::Initialize`.  
   
-3.  Erstellen Sie eine *Aktivierungsfactory* für die `ABI::Windows::Foundation::IUriRuntimeClassFactory`\-Schnittstelle.  
+3.  Erstellen einer *aktivierungsfactory* für die `ABI::Windows::Foundation::IUriRuntimeClassFactory` Schnittstelle.  
   
-     [!CODE [wrl-consume-component#4](../CodeSnippet/VS_Snippets_Misc/wrl-consume-component#4)]  
+     [!code-cpp[wrl-consume-component#4](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_3.cpp)]  
   
-     Die [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] identifiziert Typen anhand von voll qualifizierten Namen.  Der Parameter `RuntimeClass_Windows_Foundation_Uri` ist eine Zeichenfolge, die von [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] bereitgestellt wird und den erforderlichen Ablaufklassennamen enthält.  
+     Windows-Runtime verwendet den vollqualifizierten Namen zum Identifizieren von Typen. Die `RuntimeClass_Windows_Foundation_Uri` Parameter ist eine Zeichenfolge, die vom Windows-Runtime bereitgestellt wird und den erforderlichen ablaufklassennamen enthält.  
   
-4.  Initialisieren Sie eine [Microsoft::WRL::Wrappers::HString](../windows/hstring-class.md)\-Variable, die den URI `"http://www.microsoft.com"` darstellt.  
+4.  Initialisieren einer [Microsoft::WRL::Wrappers::HString](../windows/hstring-class.md) Variable, die den URI darstellt `"http://www.microsoft.com"`.  
   
-     [!CODE [wrl-consume-component#6](../CodeSnippet/VS_Snippets_Misc/wrl-consume-component#6)]  
+     [!code-cpp[wrl-consume-component#6](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_4.cpp)]  
   
-     In [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] belegen Sie für eine Zeichenfolge, die von der [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] verwendet wird, keinen Speicher.  Stattdessen erstellt die [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] eine Kopie der Zeichenfolge in einem Puffer, den sie verwaltet und für Vorgänge verwendet, und gibt ein Handle für den erstellten Puffer zurück.  
+     In der Windows-Runtime nicht Sie nach einer Zeichenfolge belegt werden, die Windows-Runtime verwendet werden. Stattdessen erstellt die Windows-Runtime eine Kopie der Zeichenfolge in einem Puffer, die er verwaltet und für Vorgänge verwendet, und gibt ein Handle auf den Puffer, dass sie erstellt.  
   
-5.  Erstellen Sie mit der `IUriRuntimeClassFactory::CreateUri`\-Factorymethode ein `ABI::Windows::Foundation::IUriRuntimeClass`\-Objekt.  
+5.  Erstellen Sie mit der `IUriRuntimeClassFactory::CreateUri`-Factorymethode ein `ABI::Windows::Foundation::IUriRuntimeClass`-Objekt.  
   
-     [!CODE [wrl-consume-component#7](../CodeSnippet/VS_Snippets_Misc/wrl-consume-component#7)]  
+     [!code-cpp[wrl-consume-component#7](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_5.cpp)]  
   
-6.  Rufen Sie die `IUriRuntimeClass::get_Domain`\-Methode auf, um den Wert der `Domain`\-Eigenschaft abzurufen.  
+6.  Rufen Sie die `IUriRuntimeClass::get_Domain`-Methode auf, um den Wert der `Domain`-Eigenschaft abzurufen.  
   
-     [!CODE [wrl-consume-component#8](../CodeSnippet/VS_Snippets_Misc/wrl-consume-component#8)]  
+     [!code-cpp[wrl-consume-component#8](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_6.cpp)]  
   
-7.  Drucken Sie den Domänennamen an die Konsole, und kehren Sie zurück.  Alle `ComPtr`\- und RAII\-Objekte verlassen den Bereich und werden automatisch freigegeben.  
+7.  Drucken Sie den Domänennamen an die Konsole, und kehren Sie zurück. Alle `ComPtr`- und RAII-Objekte verlassen den Bereich und werden automatisch freigegeben.  
   
-     [!CODE [wrl-consume-component#9](../CodeSnippet/VS_Snippets_Misc/wrl-consume-component#9)]  
+     [!code-cpp[wrl-consume-component#9](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_7.cpp)]  
   
-     Die [WindowsGetStringRawBuffer](http://msdn.microsoft.com/library/windows/apps/br224636.aspx)\-Funktion ruft das zugrunde liegende Unicode\-Formular der URI\-Zeichenfolge ab.  
+     Die [WindowsGetStringRawBuffer](http://msdn.microsoft.com/library/windows/apps/br224636.aspx) Funktion ruft die zugrunde liegenden Unicode-Format der URI-Zeichenfolge ab.  
   
  Im Folgenden sehen Sie das vollständige Beispiel:  
   
- [!CODE [wrl-consume-component#1](../CodeSnippet/VS_Snippets_Misc/wrl-consume-component#1)]  
+ [!code-cpp[wrl-consume-component#1](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_8.cpp)]  
   
-## Kompilieren des Codes  
- Zum Kompilieren kopieren Sie den Code, und fügen Sie ihn in ein Visual Studio\-Projekt ein, oder fügen Sie ihn in eine Datei mit dem Namen `wrl-consume-component.cpp` ein, und führen Sie dann den folgenden Befehl in einem Visual Studio\-Eingabeaufforderungsfenster aus.  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
+ Um den Code zu kompilieren, kopieren Sie ihn und fügen Sie ihn in ein Visual Studio-Projekt ein, oder fügen Sie ihn in eine Datei mit dem Namen `wrl-consume-component.cpp` und dann den folgenden Befehl in eine Visual Studio-Eingabeaufforderungsfenster ausführen.  
   
- **cl.exe wrl\-consume\-component.cpp runtimeobject.lib**  
+ **CL.exe Wrl-consume-component.cpp runtimeobject.lib**  
   
-## Siehe auch  
- [Windows Runtime C\+\+ Template Library \(WRL\)](../windows/windows-runtime-cpp-template-library-wrl.md)
+## <a name="see-also"></a>Siehe auch  
+ [C++-Vorlagenbibliothek für Windows-Runtime (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

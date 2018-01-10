@@ -27,11 +27,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6fa5bdad26039217a52c480d747d3dac1ba2db5c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 235bf7fc118f8752adefc61f5ed18ea01caec727
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicofstream-class"></a>basic_ofstream-Klasse
 Beschreibt ein Objekt, das das Einfügen von Elementen und codierten Objekten in einen Streampuffer der Klasse [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> mit Elementen des Typs `Elem` steuert, dessen Zeichenmerkmale von der Klasse `Tr` bestimmt werden.  
@@ -172,7 +173,7 @@ void close();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion ruft [rdbuf](../standard-library/basic-ifstream-class.md#rdbuf)**->**[close](../standard-library/basic-filebuf-class.md#close) auf.  
+ Die Memberfunktion ruft [Rdbuf](../standard-library/basic-ifstream-class.md#rdbuf)**->**[schließen](../standard-library/basic-filebuf-class.md#close).  
   
 ### <a name="example"></a>Beispiel  
   Sie finden ein Beispiel, in dem **close** verwendet wird, unter [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close).  
@@ -188,7 +189,7 @@ bool is_open() const;
  `true`, wenn die Datei geöffnet ist, andernfalls `false`.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt [rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open) zurück.  
+ Die Memberfunktion gibt [Rdbuf](#rdbuf)  **->**  [Is_open](../standard-library/basic-filebuf-class.md#is_open).  
   
 ### <a name="example"></a>Beispiel  
   
