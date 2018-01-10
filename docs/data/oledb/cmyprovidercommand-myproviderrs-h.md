@@ -1,32 +1,35 @@
 ---
-title: "CMyProviderCommand (MyProviderRS.H)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "cmyprovidercommand"
-  - ""myproviderrs.h""
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMyProviderCommand Klasse in MyProviderRS.H"
-  - "OLE DB-Anbieter, Assistentengenerierte Dateien"
+title: CMyProviderCommand (MyProviderRS.H) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- cmyprovidercommand
+- myproviderrs.h
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB providers, wizard-generated files
+- CMyProviderCommand class in MyProviderRS.H
 ms.assetid: b30b956e-cc91-4cf5-9fe6-f8b1ce9cc2a5
-caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 67a394ce3c3b05e3f5eea49cbd3a234a0dd89df2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CMyProviderCommand (MyProviderRS.H)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die `CMyProviderCommand`\-Klasse ist die Implementierung für das Befehlsobjekt des Anbieters.  Sie stellt die Implementierung für die Schnittstellen `IAccessor`, `ICommandText` und **ICommandProperties** bereit.  Die `IAccessor`\-Schnittstelle ist identisch mit der im Rowset enthaltenen Schnittstelle.  Das Befehlsobjekt verwendet den Accessor, um Parameterbindungen festzulegen.  Das Rowsetobjekt verwendet sie, um Bindungen für Ausgabespalten festzulegen.  Die `ICommandText`\-Schnittstelle bietet eine effiziente Möglichkeit, einen Textbefehl anzugeben.  Wenn später benutzerdefinierter Code hinzugefügt wird, wird in diesem Beispiel die `ICommandText`\-Schnittstelle verwendet. Darüber hinaus wird die `ICommand::Execute`\-Methode überschrieben.  Die **ICommandProperties**\-Schnittstelle ist für die Verwaltung sämtlicher Befehls\- und Rowset\-Objekteigenschaften zuständig.  
+# <a name="cmyprovidercommand-myproviderrsh"></a>CMyProviderCommand (MyProviderRS.H)
+Die `CMyProviderCommand` Klasse ist die Implementierung für die Anbieter-Befehlsobjekt. Sie stellt die Implementierung für die `IAccessor`, `ICommandText`, und **ICommandProperties** Schnittstellen. Die `IAccessor` Schnittstelle ist identisch mit der im Rowset. Das Befehlsobjekt verwendet die Zugriffsmethode, um Bindungen für Parameter anzugeben. Das Rowsetobjekt, das verwendet werden, um Bindungen für Ausgabespalten anzugeben. Die `ICommandText` Schnittstelle ist eine gute Möglichkeit, einen Textbefehl anzugeben. Dieses Beispiel verwendet die `ICommandText` Schnittstelle später, wenn sie benutzerdefinierten Code hinzufügt, überschreibt auch die `ICommand::Execute` Methode. Die **ICommandProperties** Schnittstelle behandelt alle Eigenschaften für die Befehls- und Rowsetobjekte-Objekte.  
   
 ```  
 // CMyProviderCommand  
@@ -41,11 +44,11 @@ class ATL_NO_VTABLE CMyProviderCommand :
    public IColumnsInfoImpl<CMyProviderCommand>  
 ```  
   
- Durch die `IAccessor`\-Schnittstelle werden alle in Befehlen und Rowsets verwendeten Bindungen verwaltet.  Der Consumer ruft **IAccessor::CreateAccessor** mit einem Array von **DBBINDING**\-Strukturen auf.  Jede **DBBINDING**\-Struktur enthält Informationen dazu, wie Spaltenbindungen \(wie Typ und Länge\) zu behandeln sind.  Der Anbieter empfängt die Strukturen und entscheidet dann, auf welche Weise die Daten übertragen werden und ob Konvertierungen notwendig sind.  Die `IAccessor`\-Schnittstelle wird im Befehlsobjekt verwendet, um alle im Befehl enthaltenen Parameter zu behandeln.  
+ Die `IAccessor` Schnittstelle verwaltet alle Bindungen, die bei der Befehle und Rowsets verwendet. Der Consumer ruft **IAccessor:: CreateAccessor** mit einem Array von **DBBINDING** Strukturen. Jede **DBBINDING** Struktur enthält die Informationen darüber, wie die spaltenbindungen (z. B. Typ und Länge) behandelt werden sollen. Der Anbieter empfängt die Strukturen und bestimmt dann, wie die Daten übertragen werden sollen, und gibt an, ob eine Konvertierung erforderlich sind. Die `IAccessor` -Schnittstelle im Befehlsobjekt verwendet, um alle Parameter im Befehl zu behandeln.  
   
- Zusätzlich stellt das Befehlsobjekt eine Implementierung von `IColumnsInfo` bereit.  OLE DB benötigt die `IColumnsInfo`\-Schnittstelle.  Diese Schnittstelle ermöglicht es dem Consumer, Parameterinformationen vom Befehl abzurufen.  Das Rowsetobjekt verwendet die `IColumnsInfo`\-Schnittstelle, um Informationen über die Ausgabespalten an den Anbieter zurückzugeben.  
+ Das Command-Objekt stellt auch eine Implementierung von `IColumnsInfo`. OLE DB benötigt die `IColumnsInfo` Schnittstelle. Die Schnittstelle ermöglicht es, Abrufen von Informationen zu den Parametern des Befehls. Das Rowsetobjekt verwendet die `IColumnsInfo` -Schnittstelle zur Rückgabe von Informationen zu den Ausgabespalten an den Anbieter.  
   
- Der Anbieter verfügt auch über eine Schnittstelle mit dem Namen `IObjectWithSite`.  Die `IObjectWithSite`\-Schnittstelle wurde in ATL 2.0 implementiert und ermöglicht es dem implementierenden Objekt, Informationen über sich selbst an sein untergeordnetes Objekt zu übergeben.  Das Befehlsobjekt verwendet die `IObjectWithSite`\-Informationen, um allen generierten Rowsetobjekten mitzuteilen, von welchem Objekt sie erstellt wurden.  
+ Der Anbieter enthält auch eine Schnittstelle mit dem Namen `IObjectWithSite`. Die `IObjectWithSite` Schnittstelle wurde in ATL 2.0 implementiert und ermöglicht es dem Implementierer Informationen über sich selbst an den untergeordneten übergeben. Das Befehlsobjekt verwendet die `IObjectWithSite` Informationen anzuweisen, alle generierten Rowset-Objekte, die sie erstellt wurden.  
   
-## Siehe auch  
- [Vom Anbieter\-Assistenten generierte Dateien](../../data/oledb/provider-wizard-generated-files.md)
+## <a name="see-also"></a>Siehe auch  
+ [Vom Anbieter-Assistenten generierte Dateien](../../data/oledb/provider-wizard-generated-files.md)

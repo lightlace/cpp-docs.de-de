@@ -1,68 +1,70 @@
 ---
-title: "CNoRowset-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CNoRowset"
-  - "ATL::CNoRowset<TAccessor>"
-  - "CNoRowset"
-  - "ATL.CNoRowset<TAccessor>"
-  - "ATL::CNoRowset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CNoRowset-Klasse"
+title: CNoRowset-Klasse | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CNoRowset
+- ATL::CNoRowset<TAccessor>
+- CNoRowset
+- ATL.CNoRowset<TAccessor>
+- ATL::CNoRowset
+dev_langs: C++
+helpviewer_keywords: CNoRowset class
 ms.assetid: 55c6c7a4-9e3a-4775-a2dd-c8b333012fa6
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 901d857b5095dd882a368b9a87e8a7d38d20bc42
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CNoRowset-Klasse
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Kann als Vorlagenargument \(`TRowset`\) für [CCommand](../../data/oledb/ccommand-class.md) oder [CTable](../../data/oledb/ctable-class.md) verwendet werden.  
+# <a name="cnorowset-class"></a>CNoRowset-Klasse
+Kann als ein Vorlagenargument verwendet werden (`TRowset`) für [CCommand](../../data/oledb/ccommand-class.md) oder [CTable](../../data/oledb/ctable-class.md).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class TAccessor = CAccessorBase>  
 class CNoRowset  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `TAccessor`  
- Eine Accessorklasse.  Die Standardeinstellung ist `CAccessorBase`.  
+ Ein Accessorklasse. Die Standardeinstellung ist `CAccessorBase`.  
   
-## Hinweise  
- Verwenden Sie `CNoRowset` als Vorlagenargument, wenn der Befehl keinen Rowset zurückgibt.  
+## <a name="remarks"></a>Hinweise  
+ Verwendung `CNoRowset` als ein Vorlagenargument, wenn der Befehl kein Rowset zurückgibt.  
   
- `CNoRowset` implementiert die folgenden Stubmethoden, die jeweils anderen Accessorklassenmethoden entsprechen:  
+ `CNoRowset`implementiert die folgenden Stubmethoden, von denen jedes anderen Methoden des Eigenschaftenaccessors Klasse entsprechen:  
   
--   **BindFinished** \- gibt an, wenn die Bindung vollständig ist \( `S_OK`\) zurückgibt.  
+-   **BindFinished** -gibt an, wann die Bindung abgeschlossen ist (gibt `S_OK`).  
   
--   **Schließen**\-Versionszeilen und die aktuelle IRowset\-Schnittstelle.  
+-   **Schließen** -frei, Zeilen und die aktuelle IRowset-Schnittstelle.  
   
--   `GetIID` \- Ruft die Schnittstellen\-ID eines Verbindungspunktes ab.  
+-   `GetIID`-Ruft die Schnittstellen-ID von einem Verbindungspunkt ab.  
   
--   **GetInterface** \- Ruft eine Schnittstelle ab.  
+-   **GetInterface** -Schnittstelle abruft.  
   
--   `GetInterfacePtr` \- Ruft einen Schnittstellenzeiger Encapsulated ab.  
+-   `GetInterfacePtr`-Ruft einen gekapselten Schnittstellenzeiger ab.  
   
--   **SetAccessor** \- Ruft ein Zeiger auf den Accessor.  
+-   **SetAccessor** -legt einen Zeiger auf den Accessor fest.  
   
--   **SetupOptionalRowsetInterfaces** \- der optionale Schnittstellen Setups für das Rowset.  
+-   **SetupOptionalRowsetInterfaces** -optionale Schnittstellen für Rowset richtet.  
   
-## Anforderungen  
- **Header:**  atldbcli.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** atldbcli.h  
   
-## Siehe auch  
- [OLE DB\-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenz der OLE DB\-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)

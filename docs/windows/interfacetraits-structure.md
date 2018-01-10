@@ -1,39 +1,39 @@
 ---
-title: "InterfaceTraits-Struktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::InterfaceTraits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "InterfaceTraits-Struktur"
+title: InterfaceTraits-Struktur | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::InterfaceTraits
+dev_langs: C++
+helpviewer_keywords: InterfaceTraits structure
 ms.assetid: ede0c284-19a7-4892-9738-ff3da4923d0a
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1c28c7c1eef2fc278a0667ec4b7c635005331467
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# InterfaceTraits-Struktur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Unterstützt die WRL\-Infrastruktur und nicht beabsichtigt, direkt im Code verwendet werden.  
+# <a name="interfacetraits-structure"></a>InterfaceTraits-Struktur
+Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<  
    typename I0  
 >  
 struct __declspec(novtable) InterfaceTraits;  
-  
 template<  
    typename CloakedType  
 >  
@@ -43,49 +43,49 @@ template<>
 struct __declspec(novtable) InterfaceTraits<Nil>;  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `I0`  
  Der Name einer Schnittstelle.  
   
  `CloakedType`  
- Für RuntimeClass, implementieren und ChainInterfaces eine Schnittstelle, die nicht in der Liste der unterstützten Schnittstellen\-IDs ist.  
+ RuntimeClass, implementiert und "chaininterfaces" unterstützt eine Schnittstelle, die nicht in der Liste der Schnittstellen-IDs.  
   
-## Hinweise  
- Implementiert allgemeine Eigenschaften einer Schnittstelle.  
+## <a name="remarks"></a>Hinweise  
+ Implementiert Allgemeine Merkmale einer Schnittstelle.  
   
- Die zweite Vorlage ist eine Spezialisierung verdeckte für Schnittstellen.  Die dritte Vorlage ist eine Spezialisierung für Nullparameter.  
+ Die zweite Vorlage ist eine Spezialisierung für verdeckter Schnittstellen. Die dritte Vorlage ist eine Spezialisierung für NULL-Parameter.  
   
-## Member  
+## <a name="members"></a>Member  
   
-### Öffentliche Typedefs  
+### <a name="public-typedefs"></a>Öffentliche Typedefs  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|`Base`|Ein Vorlagenparameter Synonym für den `I0`.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|`Base`|Ein Synonym für den `I0`-Vorlagenparameter.|  
   
-### Öffentliche Methoden  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[InterfaceTraits::CanCastTo\-Methode](../windows/interfacetraits-cancastto-method.md)|Gibt an, ob der angegebene Zeiger auf Zeiger zu `Base` umgewandelt werden kann.|  
-|[InterfaceTraits::CastToBase\-Methode](../windows/interfacetraits-casttobase-method.md)|Wandelt den angegebenen Zeiger auf Zeiger in `Base` um.|  
-|[InterfaceTraits::CastToUnknown\-Methode](../windows/interfacetraits-casttounknown-method.md)|Wandelt den angegebenen Zeiger auf einen Zeiger auf IUnknown um.|  
-|[InterfaceTraits::FillArrayWithIid\-Methode](../windows/interfacetraits-fillarraywithiid-method.md)|Weist die Schnittstellen\-ID von `Base` z Arrayelement zu, das vom Indexargument angegeben wird.|  
-|[InterfaceTraits::Verify\-Methode](../windows/interfacetraits-verify-method.md)|Überprüft, dass ordnungsgemäß Basis abgeleitet ist.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[InterfaceTraits::CanCastTo-Methode](../windows/interfacetraits-cancastto-method.md)|Gibt an, ob der angegebene Zeiger umgewandelt werden kann, in einen Zeiger auf `Base`.|  
+|[InterfaceTraits::CastToBase-Methode](../windows/interfacetraits-casttobase-method.md)|Wandelt den angegebenen Zeiger auf einen Zeiger auf `Base`.|  
+|[InterfaceTraits::CastToUnknown-Methode](../windows/interfacetraits-casttounknown-method.md)|Wandelt den angegebenen Zeiger auf ein IUnknown-Zeiger.|  
+|[InterfaceTraits::FillArrayWithIid-Methode](../windows/interfacetraits-fillarraywithiid-method.md)|Weist die Schnittstellen-ID des `Base` auf das Arrayelement, das durch die Indexargument angegeben.|  
+|[InterfaceTraits::Verify-Methode](../windows/interfacetraits-verify-method.md)|Stellt sicher, dass Base ordnungsgemäß abgeleitet ist.|  
   
-### Öffentliche Konstanten  
+### <a name="public-constants"></a>Öffentliche Konstanten  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[InterfaceTraits::IidCount\-Konstant](../windows/interfacetraits-iidcount-constant.md)|Hält die Anzahl der Schnittstellen\-IDs an, die dem aktuellen InterfaceTraits\-Objekt zugeordnet werden.|  
+|name|Beschreibung|  
+|----------|-----------------|  
+|[InterfaceTraits::IidCount-Konstant](../windows/interfacetraits-iidcount-constant.md)|Enthält die Anzahl der Schnittstelle, die das aktuelle Objekt von InterfaceTraits IDs zugeordnet.|  
   
-## Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `InterfaceTraits`  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** implements.h  
   
- **Namespace:**  Microsoft::WRL::Details  
+ **Namespace:** Microsoft::WRL::Details  
   
-## Siehe auch  
- [Microsoft::WRL::Details\-Namespace](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Siehe auch  
+ [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

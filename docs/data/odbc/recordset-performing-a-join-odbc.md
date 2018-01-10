@@ -1,50 +1,53 @@
 ---
-title: "Recordset: Ausf&#252;hren einer Verkn&#252;pfung (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Datenbindung [C++], Spalten in Recordsets"
-  - "Datenbindung [C++], Recordsetspalten"
-  - "Filter [C++], Verknüpfen der Bedingungen für Recordsets"
-  - "Verknüpfungen [C++], In Recordsets"
-  - "ODBC-Recordsets [C++], Joins"
-  - "Recordsets [C++], Binden von Daten"
-  - "Recordsets [C++], Verknüpfen von Tabellen"
+title: "Recordset: Ausführen einer Verknüpfung (ODBC) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- joins [C++], in recordsets
+- data binding [C++], recordset columns
+- recordsets [C++], binding data
+- data binding [C++], columns in recordsets
+- filters [C++], join conditions for recordsets
+- ODBC recordsets [C++], joins
+- recordsets [C++], joining tables
 ms.assetid: ca720900-a156-4780-bf01-4293633bea64
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4091cd8e60eed569782021c811f12af227e79673
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Recordset: Ausf&#252;hren einer Verkn&#252;pfung (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Dieses Thema bezieht sich auf die MFC\-ODBC\-Klassen.  
+# <a name="recordset-performing-a-join-odbc"></a>Recordset: Ausführen einer Verknüpfung (ODBC)
+Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.  
   
-## Joins  
- Mithilfe einer Joinoperation können Sie in einem einzigen Recordset\-Objekt mit Daten arbeiten, die aus mehreren verschiedenen Tabellen stammen. Joins werden in Datenzugriffsanwendungen häufig verwendet.  Das Verknüpfen von zwei oder mehr Tabellen führt zu einem Recordset, das Spalten aus jeder dieser Tabellen enthalten kann, für die Anwendung aber trotzdem wie eine einzige Tabelle aussieht.  Manchmal verwendet der Join alle Spalten sämtlicher Tabellen, häufig wählt die SQL\-**SELECT**\-Klausel in einem Join aber auch nur bestimmte Spalten jeder Tabelle aus.  Die Datenbankklassen unterstützen schreibgeschützte Joins, aber keine aktualisierbaren Joins.  
+## <a name="what-a-join-is"></a>Was ist ein Join  
+ Die Join-Operation eine häufige Aufgabe für die Datenzugriffs-können Sie die Arbeit mit Daten aus mehreren Tabellen mit einem einzigen Recordset-Objekt. Verknüpfen von zwei oder mehr Tabellen führt zu einem Recordset, die Spalten aus jeder Tabelle darf, jedoch als eine einzelne Tabelle für Ihre Anwendung angezeigt wird. In einigen Fällen verwendet der Join alle Spalten aus allen Tabellen, aber in einigen Fällen die SQL **wählen** -Klausel in einen Join verwendet nur einige Spalten aus jeder Tabelle. Die Datenbankklassen unterstützen nur-Lese Joins, aber keine aktualisierbaren Joins.  
   
- Um Datensätze auswählen zu können, die Spalten aus verknüpften Tabellen enthalten, benötigen Sie:  
+ Um die Datensätze mit Spalten aus verknüpften Tabellen auswählen, benötigen Sie die folgenden Elemente:  
   
--   eine Liste der Tabellen mit den Namen aller verknüpften Tabellen;  
+-   Eine Liste ' Tabelle ', die die Namen aller zu verknüpfenden Tabellen enthält.  
   
--   eine Spaltenliste mit den Namen aller beteiligten Spalten.  Spalten, die den gleichen Namen haben, aber aus unterschiedlichen Tabellen stammen, werden mit dem Tabellennamen gekennzeichnet;  
+-   Eine Liste der Spalte mit den Namen aller beteiligten Spalten. Spalten mit demselben Namen aber aus unterschiedlichen Tabellen werden durch den Tabellennamen qualifiziert.  
   
--   ein Filter \(SQL\-**WHERE**\-Klausel\), der die Spalten angibt, über die die Tabellen verknüpft sind.  Dieser Filter hat die Form "Table1.KeyCol \= Table2.KeyCol" und führt den eigentlichen Join aus.  
+-   Ein Filter (SQL **, in denen** Klausel), die angibt, dass der Spalten, auf denen die Tabellen verknüpft sind. Dieser Filter nimmt die Form "Table1.KeyCol = Table2.KeyCol" und den Join führt.  
   
- Sie können in derselben Weise auch mehr als zwei Tabellen verknüpfen, indem Sie mehrere Spaltenpaare angeben und diese Paare mit dem SQL\-Schlüsselwort **AND** verknüpfen.  
+ Sie können mehr als zwei Tabellen auf die gleiche Weise beitreten, indem die Spaltenpaare mehrere Paare von Spalten durch das SQL-Schlüsselwort verknüpften **AND**.  
   
-## Siehe auch  
- [Recordset \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [Recordset: Deklarieren einer Klasse für eine vordefinierte Abfrage \(ODBC\)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)   
- [Recordset: Deklarieren einer Klasse für eine Tabelle \(ODBC\)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)   
- [Recordset: Erneutes Abfragen eines Recordsets \(ODBC\)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+## <a name="see-also"></a>Siehe auch  
+ [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [Recordset: Deklarieren einer Klasse für eine vordefinierte Abfrage (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)   
+ [Recordset: Deklarieren einer Klasse für eine Tabelle (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)   
+ [Recordset: Erneutes Abfragen eines Recordsets (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)

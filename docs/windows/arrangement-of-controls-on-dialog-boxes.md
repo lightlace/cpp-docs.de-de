@@ -1,54 +1,58 @@
 ---
-title: "Arrangement of Controls on Dialog Boxes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controls [C++], positioning"
-  - "dialog box controls, placement"
-  - "Dialog editor, arranging controls"
+title: Anordnung von Steuerelementen in Dialogfeldern | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- controls [C++], positioning
+- dialog box controls, placement
+- Dialog editor, arranging controls
 ms.assetid: 832491cf-98af-42e5-a854-2cb135fd45c6
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 600a4fcf49328c4cfd2bd31e8c36b02cacd9609c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Arrangement of Controls on Dialog Boxes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Der Dialog\-Editor enthält Layouttools, mit deren Hilfe Steuerelemente automatisch ausgerichtet und vergrößert bzw. verkleinert werden.  Die meisten Tasks können über die [Symbolleiste des Dialog\-Editors](../mfc/showing-or-hiding-the-dialog-editor-toolbar.md) ausgeführt werden.  Alle Befehle auf der Symbolleiste des Dialog\-Editors sind zusätzlich im Menü **Format** verfügbar und die meisten können über [Tastenkombinationen](../mfc/accelerator-keys-for-the-dialog-editor.md) ausgeführt werden.  
+# <a name="arrangement-of-controls-on-dialog-boxes"></a>Anordnung von Steuerelementen in Dialogfeldern
+Dialog-Editor bietet Layouttools, die ausrichten und Größe von Steuerelementen automatisch an. Für die meisten Aufgaben können Sie die [Dialog-Editor-Symbolleiste](../windows/showing-or-hiding-the-dialog-editor-toolbar.md). Alle Dialog-Editor-Symbolleistenbefehle stehen auch im Format und die meisten besitzen [Tastenkombinationen](../windows/accelerator-keys-for-the-dialog-editor.md).  
   
- Viele Layoutbefehle für Dialogfelder sind nur verfügbar, wenn mehrere Steuerelemente markiert sind.  Sie können eines oder mehrere Steuerelemente markieren. Falls mehrere Steuerelemente markiert sind, wird das zuerst markierte Steuerelement standardmäßig zum "bestimmenden" Steuerelement.  Informationen über das Markieren von Steuerelementen und des bestimmenden Steuerelements finden Sie unter [Markieren von Steuerelementen](../mfc/selecting-controls.md).  
+ Viele Layoutbefehle für Dialogfelder stehen nur, wenn mehr als ein Steuerelement ausgewählt ist. Sie können eine einzelne oder mehrere Steuerelemente auswählen, und wenn mehr als ein Steuerelement ausgewählt ist, die erste ausgewählte ist standardmäßig "bestimmende" Steuerelement. Informationen zum Auswählen von Steuerelementen und des bestimmenden Steuerelements finden Sie unter [Markieren von Steuerelementen](../windows/selecting-controls.md).  
   
- Die Position, Höhe und Breite des aktuellen Steuerelements wird in der unteren rechten Ecke der Statusleiste angezeigt.  Wenn das gesamte Dialogfeld markiert ist, wird in der Statusleiste die Position des Dialogfelds im Ganzen sowie seine Höhe und Breite angezeigt.  
+ Der Speicherort, Höhe und Breite des aktuellen Steuerelements werden in der unteren rechten Ecke der Statusleiste angezeigt. Wenn das gesamte Dialogfeld ausgewählt ist, zeigt die Statusleiste die Position des Dialogfelds als Ganzes, und die Höhe und Breite.  
   
--   [Modi des Dialog\-Editors \(Führungslinien und Raster\)](../mfc/dialog-editor-states-guides-and-grids.md)  
+-   [Modi des Dialog-Editors (Führungslinien und Raster)](../windows/dialog-editor-states-guides-and-grids.md)  
   
--   [Gruppieren von Optionsfeldern in einem Dialogfeld](../mfc/grouping-radio-buttons-on-a-dialog-box.md)  
+-   [Gruppieren von Optionsfeldern in einem Dialogfeld](../windows/grouping-radio-buttons-on-a-dialog-box.md)  
   
--   [Ausrichten von Steuerelementgruppen](../mfc/aligning-groups-of-controls.md)  
+-   [Ausrichten von Steuerelementgruppen](../windows/aligning-groups-of-controls.md)  
   
--   [Ausgleichen des Abstands zwischen Steuerelementen](../mfc/evening-the-spacing-between-controls.md)  
+-   [Ausgleichen des Abstands zwischen Steuerelementen](../windows/evening-the-spacing-between-controls.md)  
   
--   [Zentrieren von Steuerelementen in einem Dialogfeld](../mfc/centering-controls-in-a-dialog-box.md)  
+-   [Zentrieren von Steuerelementen in einem Dialogfeld](../windows/centering-controls-in-a-dialog-box.md)  
   
--   [Ausrichten von Schaltflächen am rechten oder unteren Rand eines Dialogfelds](../mfc/arranging-push-buttons-along-the-right-or-bottom-of-a-dialog-box.md)  
+-   [Ausrichten von Schaltflächen am rechten oder unteren Rand eines Dialogfelds](../windows/arranging-push-buttons-along-the-right-or-bottom-of-a-dialog-box.md)  
   
--   [Ändern der Aktivierreihenfolge von Steuerelementen](../mfc/changing-the-tab-order-of-controls.md)  
+-   [Ändern der Aktivierreihenfolge von Steuerelementen](../windows/changing-the-tab-order-of-controls.md)  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  Win32  
   
-## Siehe auch  
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)   
  [Steuerelemente](../mfc/controls-mfc.md)
+

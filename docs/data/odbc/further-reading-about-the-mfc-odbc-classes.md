@@ -1,34 +1,36 @@
 ---
-title: "Weiterf&#252;hrende Themen zu MFC-ODBC-Klassen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC-ODBC-Klassen"
+title: "Weiterführende Themen zu MFC-ODBC-Klassen | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: MFC ODBC classes
 ms.assetid: 155c092b-3577-4cb8-b00e-f1adf4cb2adc
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5f43b8fa403aad5b2df6aebf07c1aaf3b0dd191b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Weiterf&#252;hrende Themen zu MFC-ODBC-Klassen
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-In den folgenden Themen finden Sie weitere Informationen zu den in diesem Thema vorgestellten Konzepten und Techniken:  
+# <a name="further-reading-about-the-mfc-odbc-classes"></a>Weiterführende Themen zu MFC-ODBC-Klassen
+Weitere in den folgenden Themen wird erläutert, die Konzepte und Techniken, die in diesem Thema vorgestellt:  
   
--   [Datenbankunterstützung, MFC\-Anwendungs\-Assistent](../../mfc/reference/database-support-mfc-application-wizard.md)  
+-   [Datenbankunterstützung, MFC-Anwendungs-Assistent](../../mfc/reference/database-support-mfc-application-wizard.md)  
   
--   [Hinzufügen eines MFC\-ODBC\-Consumers](../../mfc/reference/adding-an-mfc-odbc-consumer.md)  
+-   [Hinzufügen eines MFC-ODBC-Consumers](../../mfc/reference/adding-an-mfc-odbc-consumer.md)  
   
--   [Datenquelle \(ODBC\)](../../data/odbc/data-source-odbc.md)  
+-   [Datenquelle (ODBC)](../../data/odbc/data-source-odbc.md)  
   
 -   [Dynaset](../../data/odbc/dynaset.md)  
   
@@ -40,26 +42,26 @@ In den folgenden Themen finden Sie weitere Informationen zu den in diesem Thema 
   
 -   [ODBC](../../data/odbc/odbc-basics.md)  
   
--   [ODBC\-Administrator](../../data/odbc/odbc-administrator.md)  
+-   [ODBC-Administrator](../../data/odbc/odbc-administrator.md)  
   
--   [Datensatzfeldaustausch \(RFX\)](../../data/odbc/record-field-exchange-rfx.md)  
+-   [Datensatzfeldaustausch (RFX)](../../data/odbc/record-field-exchange-rfx.md)  
   
--   [Recordset \(ODBC\)](../../data/odbc/recordset-odbc.md)  
+-   [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)  
   
 -   [Datensatzansichten](../../data/record-views-mfc-data-access.md)  
   
--   [Serialisierung: Serialisierung für Datenbankeingabe\/\-ausgabe](../../mfc/serialization-serialization-vs-database-input-output.md)  
+-   [Serialisierung: Serialisierung im Vergleich zur Datenbank-e/a](../../mfc/serialization-serialization-vs-database-input-output.md)  
   
--   [Momentaufnahme](../../data/odbc/snapshot.md)  
+-   [Snapshot](../../data/odbc/snapshot.md)  
   
 -   [SQL](../../data/odbc/sql.md)  
   
--   [Transaktion \(ODBC\)](../../data/odbc/transaction-odbc.md)  
+-   [Transaktion (ODBC)](../../data/odbc/transaction-odbc.md)  
   
- Als Einführung ist das Thema [Recordset \(ODBC\)](../../data/odbc/recordset-odbc.md) gut geeignet.  
+ Ein guter Ausgangspunkt für Ihre lesen ist mit [Recordset (ODBC)](../../data/odbc/recordset-odbc.md).  
   
- Siehe [CDatabase](../../mfc/reference/cdatabase-class.md), [CRecordset](../../mfc/reference/crecordset-class.md), [CRecordView](../../mfc/reference/crecordview-class.md), [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) und [CDBException](../../mfc/reference/cdbexception-class.md) in der *MFC\-Referenz*.  
+ In der *MFC-Referenz*, finden Sie unter [CDatabase](../../mfc/reference/cdatabase-class.md), [CRecordset](../../mfc/reference/crecordset-class.md), [CRecordView](../../mfc/reference/crecordview-class.md), [CDBException](../../mfc/reference/cfieldexchange-class.md), und [CDBException](../../mfc/reference/cdbexception-class.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [ODBC und MFC](../../data/odbc/odbc-and-mfc.md)   
- [Datenzugriffsprogrammierung \(MFC\/ATL\)](../../data/data-access-programming-mfc-atl.md)
+ [Datenzugriffsprogrammierung (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

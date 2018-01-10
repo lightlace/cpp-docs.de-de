@@ -1,68 +1,69 @@
 ---
-title: "Exemplarische Vorgehensweise: Debuggen eines Projekts (C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Debuggen von Projekten"
-  - "Debuggen eines Projekts [C++]"
-  - "Projekte [C++], Debuggen"
+title: 'Exemplarische Vorgehensweise: Debuggen eines Projekts (C++) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- projects [C++], debugging
+- project debugging [C++]
+- debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-caps.latest.revision: 16
-caps.handback.revision: "16"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6c9789a7deafacf09ad615f416a446da4eba8150
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Exemplarische Vorgehensweise: Debuggen eines Projekts (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="walkthrough-debugging-a-project-c"></a>Exemplarische Vorgehensweise: Debuggen eines Projekts (C++)
 In dieser exemplarischen Vorgehensweise bearbeiten Sie das Programm, um das beim Testen des Projekts gefundene Problem zu beheben.  
   
-## Vorbereitungsmaßnahmen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
   
--   In dieser exemplarischen Vorgehensweise wird davon ausgegangen, dass Sie die Grundlagen der Programmiersprache C\+\+ beherrschen.  
+-   In dieser exemplarischen Vorgehensweise wird davon ausgegangen, dass Sie die Grundlagen der Programmiersprache C++ beherrschen.  
   
--   Es wird ebenfalls davon ausgegangen, dass Sie die früheren exemplarischen Vorgehensweisen dazu abgeschlossen haben, die in [Verwenden der Visual Studio\-IDE für C\+\+\-Desktopentwicklung](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md) aufgeführt sind.  
+-   Außerdem wird angenommen, dass Sie zuvor verwandten exemplarischen Vorgehensweisen abgeschlossen haben, die aufgelisteten [über die Visual Studio-IDE für C++-Desktopentwicklung](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
   
-### So korrigieren Sie ein fehlerhaftes Programm  
+### <a name="to-fix-a-program-that-has-a-bug"></a>So korrigieren Sie ein fehlerhaftes Programm  
   
-1.  Um zu sehen, was beim Zerstören eines `Cardgame`\-Objekts geschieht, zeigen Sie den Destruktor der `Cardgame`\-Klasse an.  
+1.  Um zu sehen, was beim Zerstören eines `Cardgame`-Objekts geschieht, zeigen Sie den Destruktor der `Cardgame`-Klasse an.  
   
-     Wählen Sie in der Menüleiste **Ansicht**, **Klassenansicht** aus.  
+     Wählen Sie in der Menüleiste **Ansicht**, **Klassenansicht**.  
   
-     Erweitern Sie im Fenster **Klassenansicht** die Projektstruktur **Spiel**, und wählen Sie zum Anzeigen der Member und Methoden die Klasse **Cardgame** aus.  
+     In der **Klassenansicht** Fenster, erweitern Sie die **Spiel** Projektstruktur und wählen Sie die **Cardgame** zum Anzeigen der-Klasse, Member und Methoden.  
   
-     Öffnen Sie das Kontextmenü für den **~Cardgame \(void\)**\-Destruktor und wählen Sie dann **Gehe zu Definition** aus.  
+     Öffnen Sie das Kontextmenü für die **~Cardgame(void)** Destruktor und wählen Sie dann **Gehe zu Definition**.  
   
-2.  Um den Wert von `totalParticipants` beim Beenden eines Kartenspiels zu verringern, fügen Sie zwischen der öffnenden und der schließenden Klammer des `Cardgame::~Cardgame`\-Destruktors folgenden Code hinzu:  
+2.  Um den Wert von `totalParticipants` beim Beenden eines Kartenspiels zu verringern, fügen Sie zwischen der öffnenden und der schließenden Klammer des `Cardgame::~Cardgame`-Destruktors folgenden Code hinzu:  
   
-     [!CODE [NVC_Walkthrough_Debugging_A_Project#110](../CodeSnippet/VS_Snippets_Cpp/nvc_walkthrough_debugging_a_project#110)]  
+     [!code-cpp[NVC_Walkthrough_Debugging_A_Project#110](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_1.cpp)]  
   
 3.  Die Datei "Cardgame.cpp" sieht nach der Änderung ungefähr folgendermaßen aus:  
   
-     [!CODE [NVC_Walkthrough_Debugging_A_Project#111](../CodeSnippet/VS_Snippets_Cpp/nvc_walkthrough_debugging_a_project#111)]  
+     [!code-cpp[NVC_Walkthrough_Debugging_A_Project#111](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_2.cpp)]  
   
 4.  Wählen Sie in der Menüleiste **Erstellen**, **Projektmappe erstellen**.  
   
-5.  Führen Sie es nach Abschluss des Buildvorgangs im Debugmodus aus, indem Sie auf der Menüleiste **Debuggen**, **Debugging starten** oder die F5\-TASTE auswählen.  Die Programmausführung wird beim ersten Haltepunkt unterbrochen.  
+5.  Wenn der Build abgeschlossen ist, führen Sie ihn im Debugmodus mit auswählen **Debuggen**, **Debuggen** in der Menüleiste oder durch Auswählen der F5-Taste. Die Programmausführung wird beim ersten Haltepunkt unterbrochen.  
   
-6.  Wählen Sie auf der Menüleiste **Debuggen** und dann **Prozedurschritt** aus, oder drücken Sie F10, um das Programm Schritt für Schritt durchzugehen.  
+6.  Schrittweise Durchlaufen des Programms in der Menüleiste wählen **Debuggen**, **Prozedurschritt**, oder drücken Sie F10.  
   
-     Beachten Sie, dass der Wert von `totalParticipants` nach der Ausführung jedes Cardgame\-Konstruktors zunimmt.  Wird die `PlayGames`\-Funktion zurückgegeben, sobald jede Cardgame\-Instanz den Gültigkeitsbereichs verlässt und gelöscht wird \(und der Destruktor aufgerufen wird\), nimmt `totalParticipants` ab.  Direkt vor der Ausführung der `return`\-Anweisung ist `totalParticipants` gleich 0.  
+     Beachten Sie, dass der Wert von `totalParticipants` nach der Ausführung jedes Cardgame-Konstruktors zunimmt. Wird die `PlayGames`-Funktion zurückgegeben, sobald jede Cardgame-Instanz den Gültigkeitsbereichs verlässt und gelöscht wird (und der Destruktor aufgerufen wird), nimmt `totalParticipants` ab. Direkt vor der Ausführung der `return`-Anweisung ist `totalParticipants` gleich 0.  
   
-7.  Setzen Sie das schrittweise Durchgehen des Programms fort, bis es beendet wird, oder lassen Sie es ausführen, indem Sie auf der Menüleiste **Debuggen**, **Ausführen** oder die F5\-TASTE auswählen.  
+7.  Fahren Sie fort, beim Durchlaufen des Programms, bis er beendet wird, oder lassen Sie ihn durch Auswahl ausführen **Debuggen**, **ausführen** in der Menüleiste oder durch Auswählen der F5-Taste.  
   
-## Nächste Schritte  
- **Zurück:** [Exemplarische Vorgehensweise: Testen eines Projekts \(C\+\+\)](../ide/walkthrough-testing-a-project-cpp.md) &#124; **Weiter:** [Exemplarische Vorgehensweise: Bereitstellen des Programms \(C\+\+\)](../ide/walkthrough-deploying-your-program-cpp.md)  
+## <a name="next-steps"></a>Nächste Schritte  
+ **Vorherige:** [Exemplarische Vorgehensweise: Testen eines Projekts (C++)](../ide/walkthrough-testing-a-project-cpp.md) &#124; **Weiter:**[Exemplarische Vorgehensweise: Bereitstellen des Programms (C++)](../ide/walkthrough-deploying-your-program-cpp.md)  
   
-## Siehe auch  
- [Visual C\+\+ Guided Tour](assetId:///499cb66f-7df1-45d6-8b6b-33d94fd1f17c)   
- [DELETE\_PENDING\_Building and Debugging](assetId:///9f6ba537-5ea0-46fb-b6ba-b63d657d84f1)
+## <a name="see-also"></a>Siehe auch  
+ [C++-Sprachreferenz](../cpp/cpp-language-reference.md)   
+ [Erstellen von C/C++-Programmen](../build/building-c-cpp-programs.md)

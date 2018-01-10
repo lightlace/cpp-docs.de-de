@@ -1,36 +1,38 @@
 ---
-title: "CDynamicParameterAccessor::SetParamLength | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CDynamicParameterAccessor::SetParamLength"
-  - "CDynamicParameterAccessor.SetParamLength"
-  - "ATL.CDynamicParameterAccessor.SetParamLength"
-  - "CDynamicParameterAccessor::SetParamLength"
-  - "SetParamLength"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetParamLength-Methode"
+title: 'CDynamicParameterAccessor:: Setparamlength | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CDynamicParameterAccessor::SetParamLength
+- CDynamicParameterAccessor.SetParamLength
+- ATL.CDynamicParameterAccessor.SetParamLength
+- CDynamicParameterAccessor::SetParamLength
+- SetParamLength
+dev_langs: C++
+helpviewer_keywords: SetParamLength method
 ms.assetid: d8e0bbfe-e1ae-4a8f-9567-584fbb0c8385
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 9430ac2a250c41cafce7d8efc7b190625510aa62
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicParameterAccessor::SetParamLength
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Legt die Länge des angegebenen Parameters fest, der im Puffer gespeichert wird.  
+# <a name="cdynamicparameteraccessorsetparamlength"></a>CDynamicParameterAccessor::SetParamLength
+Legt die Länge des angegebenen Parameters fest, der im Puffer gespeichert ist.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -40,18 +42,18 @@ Legt die Länge des angegebenen Parameters fest, der im Puffer gespeichert wird.
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `nParam`  
- \[in\] die einen Parameterwert \(Offset von 1\).  Parameter 0 wird für Rückgabewerte reserviert.  In einen Parameterwert ist der Index des Parameters anhand ihrer Reihenfolge im SQL\- oder Prozeduraufruf.  Ein Beispiel finden Sie unter [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md).  
+ [in] Die Parameteranzahl (Offset von 1). Parameter 0 ist für Rückgabewerte reserviert. Die Parameteranzahl ist der Index des Parameters basierend auf der Reihenfolge der SQL-oder einen Aufruf einer gespeicherten Prozedur. Finden Sie unter [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) ein Beispiel.  
   
  *length*  
- \[in\] Längen in Bytes in des angegebenen Parameters.  
+ [in] Die Länge in Bytes des angegebenen Parameters.  
   
-## Hinweise  
- **true** Gibt bei Erfolg oder **false** auf Fehler.  
+## <a name="remarks"></a>Hinweise  
+ Gibt **"true"** bei Erfolg oder **"false"** bei einem Fehler.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  
   
-## Siehe auch  
- [CDynamicParameterAccessor\-Klasse](../../data/oledb/cdynamicparameteraccessor-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [CDynamicParameterAccessor-Klasse](../../data/oledb/cdynamicparameteraccessor-class.md)

@@ -1,58 +1,60 @@
 ---
-title: "CDataSource::GetProperties | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDataSource::GetProperties"
-  - "ATL.CDataSource.GetProperties"
-  - "CDataSource.GetProperties"
-  - "ATL::CDataSource::GetProperties"
-  - "GetProperties"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetProperties-Methode"
+title: 'CDataSource:: GetProperties | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDataSource::GetProperties
+- ATL.CDataSource.GetProperties
+- CDataSource.GetProperties
+- ATL::CDataSource::GetProperties
+- GetProperties
+dev_langs: C++
+helpviewer_keywords: GetProperties method
 ms.assetid: ffaecc17-9fe7-449e-94d6-43d31ad06cfc
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 9b8460aaabf94562e686f87ff15a072702dd2ecb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CDataSource::GetProperties
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Gibt die Eigenschafteninformationen zurück, die für das verbundene Datenquellenobjekt angefordert werden.  
+# <a name="cdatasourcegetproperties"></a>CDataSource::GetProperties
+Gibt die Eigenschaftsinformationen für das Quellobjekt verbundenen Daten angefordert.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
-      HRESULT GetProperties(   
-   ULONG ulPropIDSets,   
-   const DBPROPIDSET* pPropIDSet,   
-   ULONG* pulPropertySets,   
-   DBPROPSET** ppPropsets    
+      HRESULT GetProperties(   
+   ULONG ulPropIDSets,   
+   const DBPROPIDSET* pPropIDSet,   
+   ULONG* pulPropertySets,   
+   DBPROPSET** ppPropsets    
 ) const throw( );  
 ```  
   
-#### Parameter  
- Siehe [IDBProperties::GetProperties](https://msdn.microsoft.com/en-us/library/ms714344.aspx) in *der OLE DB\-Programmierreferenz* in [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+#### <a name="parameters"></a>Parameter  
+ Finden Sie unter [IDBProperties::GetProperties](https://msdn.microsoft.com/en-us/library/ms714344.aspx) in der *OLE DB Programmer's Reference* im Windows SDK.  
   
-## Rückgabewert  
- Standard\- `HRESULT`.  
+## <a name="return-value"></a>Rückgabewert  
+ Ein Standard `HRESULT`-Objekt.  
   
-## Hinweise  
- Um eine einzelne Eigenschaft abzurufen, verwenden Sie [GetProperty](../../data/oledb/cdatasource-getproperty.md).  
+## <a name="remarks"></a>Hinweise  
+ Verwenden Sie zum Abrufen einer einzelnen Eigenschaft [GetProperty](../../data/oledb/cdatasource-getproperty.md).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  
   
-## Siehe auch  
- [CDataSource\-Klasse](../../data/oledb/cdatasource-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [CDataSource-Klasse](../../data/oledb/cdatasource-class.md)

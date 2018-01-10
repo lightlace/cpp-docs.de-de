@@ -28,11 +28,12 @@ caps.latest.revision: "7"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 744ec295f7bcb86e3228d8f3c62637ad17c53450
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2bf0a8e9c768425fc55b1c819b01d6c3cf4b88dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformstring-class"></a>Platform::String-Klasse
 Stellt eine sequenzielle Auflistung von Unicode-Zeichen dar, die zum Darstellen von Text verwendet werden. Weitere Informationen und Beispiele finden Sie unter [Zeichenfolgen](../cppcx/strings-c-cx.md).  
@@ -47,7 +48,7 @@ public ref class String sealed : Object,
     IPrintable  
 ```  
   
-## <a name="iterators"></a>Iteratoren  
+## <a name="iterators"></a>Iterators  
  Zwei Iteratorfunktionen, die nicht Member der Zeichenfolgenklasse sind, können mit der Vorlagenfunktion `std::for_each` verwendet werden, um die Zeichen in einem Zeichenfolgenobjekt aufzulisten.  
   
 |Member|Beschreibung|  
@@ -55,7 +56,7 @@ public ref class String sealed : Object,
 |`const char16* begin(String^ s)`|Gibt einen Zeiger auf den Anfang des angegebenen Zeichenfolgenobjekts zurück.|  
 |`const char16* end(String^ s)`|Gibt einen Zeiger nach dem Ende des angegebenen Zeichenfolgenobjekts zurück.|  
   
-### <a name="members"></a>Mitglieder  
+### <a name="members"></a>Member  
  Die Zeichenfolgenklasse erbt vom Objekt und den Schnittstellen IDisposable, IEquatable und IPrintable.  
   
  Die Zeichenfolgenklasse verfügt auch über die folgenden Typen von Membern.  

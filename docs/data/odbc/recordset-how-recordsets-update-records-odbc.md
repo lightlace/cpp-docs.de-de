@@ -1,81 +1,84 @@
 ---
-title: "Recordset: Datensatzaktualisierung durch Recordsets (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ODBC-Recordsets, Aktualisieren"
-  - "Datensätze, Aktualisieren"
-  - "Recordsets, Bearbeiten von Datensätzen"
-  - "Recordsets, Aktualisieren"
-  - "Aktualisieren von Recordsets"
+title: 'Recordset: Datensatzaktualisierung durch Recordsets (ODBC) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- records, updating
+- ODBC recordsets, updating
+- recordsets, editing records
+- updating recordsets
+- recordsets, updating
 ms.assetid: 5ceecc06-7a86-43b1-93db-a54fb1e717c7
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e38f2e62e9aa7b01680e9b2fd1e4a540ee552c3c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Recordset: Datensatzaktualisierung durch Recordsets (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Dieses Thema bezieht sich auf die MFC\-ODBC\-Klassen.  
+# <a name="recordset-how-recordsets-update-records-odbc"></a>Recordset: Datensatzaktualisierung durch Recordsets (ODBC)
+Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.  
   
- Neben ihrer Fähigkeit, Datensätze aus einer Datenquelle auszuwählen, können Recordsets die ausgewählten Datensätze \(optional\) aktualisieren oder löschen und neue Datensätze hinzufügen.  Drei Faktoren bestimmen, ob ein Recordset aktualisierbar ist: ob die damit verbundene Datenquelle aktualisierbar ist, welche Optionen Sie beim Erstellen des Recordset\-Objekts angeben und welche SQL\-Anweisung erstellt wird.  
+ Neben ihrer Fähigkeit zum Auswählen von Datensätzen aus einer Datenquelle können Recordsets (optional) aktualisieren oder löschen Sie die ausgewählten Datensätze oder neue Datensätze hinzufügen. Drei Faktoren ermitteln, die ein Recordset aktualisierbar: Gibt an, ob die verbundene Datenquelle aktualisierbar ist, sind die Optionen, die Sie angeben, beim Erstellen von einem Recordset-Objekt und SQL, die erstellt wird.  
   
 > [!NOTE]
->  Die SQL\-Anweisung, auf der das `CRecordset`\-Objekt beruht, kann Auswirkungen auf die Aktualisierbarkeit des Recordsets haben.  Falls die SQL\-Anweisung z. B. einen Join oder eine **GROUP BY**\-Klausel enthält, legt MFC die Aktualisierbarkeit auf **FALSE** fest.  
+>  SQL auf dem Ihre `CRecordset` Objekt basiert das Recordset aktualisierbar auswirken können. Beispielsweise, wenn Ihre SQL-Anweisung einen Join enthält oder einen **GROUP BY** -Klausel legt MFC auf die Updateability **"false"**.  
   
 > [!NOTE]
->  Dieses Thema bezieht sich auf von `CRecordset` abgeleitete Objekte, in denen das gesammelte Abrufen von Zeilen nicht implementiert wurde.  Weitere Informationen über das gesammelte Abrufen von Zeilen finden Sie unter [Recordset: Abrufen von Datensätzen in einer Sammeloperation \(ODBC\)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  Dieses Thema bezieht sich auf von `CRecordset` abgeleitete Objekte, in denen das gesammelte Abrufen von Zeilen nicht implementiert wurde. Wenn Sie gesammelte verwenden, finden Sie unter [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
  In diesem Thema wird Folgendes erläutert:  
   
--   [Aufgaben beim Aktualisieren eines Recordsets](#_core_your_role_in_recordset_updating) und die Rolle des Frameworks.  
+-   [Ihre Rolle Aktualisieren eines Recordsets](#_core_your_role_in_recordset_updating) und was das Framework für Sie erledigt.  
   
--   [Das Recordset als Bearbeitungspuffer](#_core_the_edit_buffer) und die [Unterschiede zwischen Dynasets und Momentaufnahmen](#_core_dynasets_and_snapshots).  
+-   [Das Recordset als Bearbeitungspuffer](#_core_the_edit_buffer) und [Unterschiede zwischen Dynasets und Momentaufnahmen](#_core_dynasets_and_snapshots).  
   
- Unter [Recordset: Funktionsweise von AddNew, Edit und Delete \(ODBC\)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md) werden die Aktionen dieser Funktionen aus der Perspektive des Recordsets beschrieben.  
+ [Recordset: Wie AddNew, Edit und Delete (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md) beschreibt die Aktionen dieser Funktionen aus der Sicht des Recordsets.  
   
- Unter [Recordset: Weitere Informationen zu Aktualisierungen \(ODBC\)](../../data/odbc/recordset-more-about-updates-odbc.md) wird abschließend erläutert, wie sich Transaktionen auf Aktualisierungen auswirken, wie das Schließen oder Scrollen bei einem Recordset ausgeführte Aktualisierungen beeinflusst und welche Wechselwirkungen mit Aktualisierungen anderer Benutzer auftreten können.  
+ [Recordset: Weitere Informationen zu Aktualisierungen (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md) Abschluss Recordset Update Story erläutert Auswirkungen von Transaktionen auf Aktualisierungen und Auswirkungen ein Recordsets schließen oder einen Bildlauf Updates werden ausgeführt wie Ihre Updates mit den Updates von anderen interagieren Benutzer.  
   
-##  <a name="_core_your_role_in_recordset_updating"></a> Aufgaben beim Aktualisieren eines Recordsets  
- Die folgende Tabelle zeigt, welche Aufgaben Sie beim Hinzufügen, Bearbeiten oder Löschen von Datensätzen eines Recordsets haben und welche Aufgaben das Framework durchführt.  
+##  <a name="_core_your_role_in_recordset_updating"></a>Der Rolle im Recordset aktualisieren  
+ Die folgende Tabelle zeigt die Rolle anhand einer Recordsets hinzufügen, bearbeiten oder Löschen von Datensätzen, zusammen mit, was das Framework für Sie erledigt.  
   
-### Recordsetaktualisierung: Interaktion mit dem Framework  
+### <a name="recordset-updating-you-and-the-framework"></a>Aktualisieren eines Recordsets: Sie und das Framework  
   
-|Benutzer|Framework|  
-|--------------|---------------|  
-|Stellt fest, ob die Datenquelle aktualisierbar ist \(oder erweiterbar\).|Stellt [CDatabase](../../mfc/reference/cdatabase-class.md)\-Memberfunktionen zur Verfügung, mit denen Sie feststellen können, ob die Datenquelle aktualisierbar oder erweiterbar ist.|  
-|Öffnen ein aktualisierbares Recordset eines beliebigen Typs.||  
-|Stellen fest, ob das Recordset aktualisierbar ist, indem Sie `CRecordset`\-Aktualisierungsfunktionen aufrufen, z. B. `CanUpdate` oder `CanAppend`.||  
-|Rufen Memberfunktionen des Recordsets auf, um Datensätze hinzuzufügen, zu bearbeiten oder zu löschen.|Verwaltet den Datenaustausch zwischen dem Recordset\-Objekt und der Datenquelle.|  
-|Setzen bei Bedarf Transaktionen ein, um den Aktualisierungsprozess zu steuern.|Stellt `CDatabase`\-Memberfunktionen für die Transaktionsunterstützung zur Verfügung.|  
+|Benutzer|Das Framework|  
+|---------|-------------------|  
+|Bestimmen Sie, ob die Datenquelle aktualisierbar (oder erweiterbar) ist.|Stellt [CDatabase](../../mfc/reference/cdatabase-class.md) Memberfunktionen für der Datenquelle aktualisierbar oder erweiterbar ist.|  
+|Öffnen Sie ein aktualisierbares Recordset (eines beliebigen Typs).||  
+|Bestimmen Sie, ob das Recordset aktualisierbar, durch den Aufruf ist `CRecordset` Funktionen wie z. B. aktualisieren `CanUpdate` oder `CanAppend`.||  
+|Rufen Sie Recordset Memberfunktionen zum Hinzufügen, bearbeiten und Löschen von Datensätzen.|Verwaltet den Austausch von Daten zwischen der Recordset-Objekt und der Datenquelle.|  
+|Verwenden Sie optional Transaktionen, um den Updatevorgang dahingehend zu steuern.|Stellt `CDatabase` Memberfunktionen zur Unterstützung von Transaktionen.|  
   
- Weitere Informationen über Transaktionen finden Sie unter [Transaktion \(ODBC\)](../../data/odbc/transaction-odbc.md).  
+ Weitere Informationen über Transaktionen finden Sie unter [Transaktion (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-##  <a name="_core_the_edit_buffer"></a> Der Bearbeitungspuffer  
- Die Felddatenmember eines Recordsets fungieren gemeinsam als Bearbeitungspuffer, der einen Datensatz enthält, nämlich den aktuellen Datensatz.  Bei Aktualisierungsoperationen wird dieser Puffer für die Bearbeitung des aktuellen Datensatzes verwendet.  
+##  <a name="_core_the_edit_buffer"></a>Der Bearbeitungspuffer  
+ Gesamtheit, die Felddatenmembern eines Recordset-Objekts dienen als Bearbeitungspuffer, die einen Datensatz enthält, den aktuellen Datensatz. Update-Vorgänge verwenden diesen Puffer für den aktuellen Datensatz ausgeführt werden.  
   
--   Wenn Sie einen Datensatz hinzufügen, wird im Bearbeitungspuffer ein neuer Datensatz erstellt.  Nachdem Sie den Datensatz hinzugefügt haben, wird der Datensatz wieder aktuell, der vorher der aktuelle Datensatz war.  
+-   Wenn Sie einen Datensatz hinzufügen, wird der Bearbeitungspuffer verwendet, um einen neuen Datensatz zu erstellen. Wenn Sie fertig sind, den Datensatz hinzufügen, wird der Datensatz, der zuvor war erneut aktuelle.  
   
--   Wenn Sie einen Datensatz aktualisieren \(d. h. bearbeiten\), werden im Bearbeitungspuffer die Felddatenmember des Recordsets auf neue Werte eingestellt.  Nachdem Sie die Aktualisierung beendet haben, bleibt der editierte Datensatz der aktuelle Datensatz.  
+-   Bei der Aktualisierung ist (Bearbeiten) einen Datensatz, bearbeiten-Puffer verwendet, um neue Werte der Felddatenmember der Recordset fest. Wenn Sie fertig sind, aktualisieren, wird der aktualisierte Datensatz aktuell.  
   
- Wenn Sie [AddNew](../Topic/CRecordset::AddNew.md) oder [Edit](../Topic/CRecordset::Edit.md) aufrufen, wird der aktuelle Datensatz gespeichert, damit er ggf. später wiederhergestellt werden kann.  Wenn Sie [Delete](../Topic/CRecordset::Delete.md) aufrufen, wird der aktuelle Datensatz nicht gespeichert, sondern als gelöscht markiert. Sie müssen dann zu einem anderen Datensatz wechseln.  
+ Beim Aufruf [AddNew](../../mfc/reference/crecordset-class.md#addnew) oder [bearbeiten](../../mfc/reference/crecordset-class.md#edit), der aktuelle Datensatz wird gespeichert, damit sie später nach Bedarf wiederhergestellt werden kann. Beim Aufruf [löschen](../../mfc/reference/crecordset-class.md#delete), der aktuelle Datensatz nicht gespeichert, sondern als gelöscht markiert und müssen Sie einen Bildlauf zu einem anderen Datensatz durchführen.  
   
 > [!NOTE]
->  Der Bearbeitungspuffer hat beim Löschen eines Datensatzes keine Funktion.  Wenn Sie den aktuellen Datensatz löschen, wird der Datensatz als gelöscht markiert. Das Recordset ist auf keinen Datensatz eingestellt, bis Sie zu einem anderen Datensatz wechseln.  
+>  Der Bearbeitungspuffer spielt keine Rolle Löschen eines Datensatzes. Wenn Sie den aktuellen Datensatz löschen, wird der Datensatz als gelöscht markiert, und das Recordset ist "nicht in einem Datensatz", bis Sie einen zu einem anderen Datensatz Bildlauf.  
   
-##  <a name="_core_dynasets_and_snapshots"></a> Dynasets und Momentaufnahmen  
- [Dynasets](../../data/odbc/dynaset.md) aktualisieren den Inhalt eines Datensatzes, wenn Sie zu diesem Datensatz wechseln.  [Momentaufnahmen](../../data/odbc/snapshot.md) sind eine statische Repräsentation der Datensätze. Daher wird der Inhalt eines Datensatzes nicht aktualisiert, solange Sie nicht [Requery](../Topic/CRecordset::Requery.md) aufrufen.  Um den gesamten Funktionsumfang der Dynasets nutzen zu können, müssen Sie mit einem ODBC\-Treiber arbeiten, der den entsprechenden Grad an ODBC\-API\-Unterstützung bietet.  Weitere Informationen finden Sie unter [ODBC](../../data/odbc/odbc-basics.md) und [Dynaset](../../data/odbc/dynaset.md).  
+##  <a name="_core_dynasets_and_snapshots"></a>Dynasets und Momentaufnahmen  
+ [Dynasets](../../data/odbc/dynaset.md) aktualisieren den Inhalt eines Datensatzes, wie Sie einen zu dem Datensatz Bildlauf. [Momentaufnahmen](../../data/odbc/snapshot.md) sind statische Repräsentation der Datensätze, damit der Inhalt eines Datensatzes nicht aktualisiert werden, es sei denn, Sie rufen [Requery](../../mfc/reference/crecordset-class.md#requery). Um die volle Funktionalität des Dynasets verwenden zu können, müssen Sie mit einem ODBC-Treiber arbeiten, die das richtige Maß an ODBC API-Unterstützung entspricht. Weitere Informationen finden Sie unter [ODBC](../../data/odbc/odbc-basics.md) und [Dynaset](../../data/odbc/dynaset.md).  
   
-## Siehe auch  
- [Recordset \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [Recordset: Funktionsweise von AddNew, Edit und Delete \(ODBC\)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)
+## <a name="see-also"></a>Siehe auch  
+ [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [Recordset: Funktionsweise von AddNew, Edit und Delete (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)

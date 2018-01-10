@@ -1,34 +1,36 @@
 ---
-title: "CRestrictions-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CRestrictions"
-  - "CRestrictions"
-  - "ATL.CRestrictions"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CRestrictions-Klasse"
+title: CRestrictions-Klasse | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CRestrictions
+- CRestrictions
+- ATL.CRestrictions
+dev_langs: C++
+helpviewer_keywords: CRestrictions class
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 23b01a776a624f0fa463c7071e164b70111b2e8b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CRestrictions-Klasse
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Eine generische Klasse, die ermöglicht, um Einschränkungen für Schemarowsets anzugeben.  
+# <a name="crestrictions-class"></a>CRestrictions-Klasse
+Eine generische Klasse, die Sie Einschränkungen für Schemarowsets angeben kann.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <   
@@ -42,27 +44,27 @@ class CRestrictions : public CSchemaRowset <
 >  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `T`  
- Die Klasse wird für der Accessor.  
+ Die Klasse für den Accessor.  
   
  `nRestrictions`  
- Die Anzahl der Beschränkungsspalten für das zu unterstützende Schemarowset.  
+ Die Anzahl der Einschränkungsspalten für das Schemarowset.  
   
  `pguid`  
- Ein Zeiger der GUID für das Schema.  
+ Ein Zeiger auf die GUID für das Schema.  
   
-## Member  
+## <a name="members"></a>Member  
   
-### Methoden  
+### <a name="methods"></a>Methoden  
   
 |||  
 |-|-|  
-|[Öffnen](../../data/oledb/crestrictions-open.md)|Gibt ein Resultset entsprechend den vom Benutzer bereitgestellten Einschränkungen zurück.|  
+|[Öffnen](../../data/oledb/crestrictions-open.md)|Gibt ein Resultset entsprechend die benutzerdefinierte Einschränkungen.|  
   
-## Anforderungen  
- **Header:**  atldbsch.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** "atldbsch.h" Einfügen  
   
-## Siehe auch  
- [OLE DB\-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenz der OLE DB\-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)

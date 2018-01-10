@@ -1,33 +1,34 @@
 ---
-title: "Gewusst wie: Implementieren der C#-Schl&#252;sselw&#246;rter &quot;is&quot; und &quot;as&quot; (C++/CLI)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "as (C#-Schlüsselwort) [C++]"
-  - "is (C#-Schlüsselwort) [C++]"
+title: "Vorgehensweise: Implementieren von wird auch als C#-Schlüsselwörter (C + c++ / CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- as C# keyword [C++]
+- is C# keyword [C++]
 ms.assetid: bc66c0d1-696b-480d-977c-5d9d1ad1ece6
-caps.latest.revision: 15
-caps.handback.revision: "13"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d73cc06a79dd20743044803dd9c53b9e67e72995
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Gewusst wie: Implementieren der C#-Schl&#252;sselw&#246;rter &quot;is&quot; und &quot;as&quot; (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In diesem Thema wird dargestellt, wie die Funktionalität der C\#\-Schlüsselwörter `is` und `as` in Visual C\+\+ implementiert wird.  
+# <a name="how-to-implement-is-and-as-c-keywords-ccli"></a>Gewusst wie: Implementieren der C#-Schlüsselwörter "is" und "as" (C++/CLI)
+In diesem Thema veranschaulicht das Implementieren der Funktionen des die `is` und `as` C#-Schlüsselwörtern in Visual C++.  
   
- Weitere Informationen finden Sie unter [is](../Topic/is%20\(C%23%20Reference\).md) und [as](../Topic/as%20\(C%23%20Reference\).md).  
-  
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // CS_is_as.cpp  
@@ -60,6 +61,9 @@ int main() {
 }  
 ```  
   
-  **o ist eine Zeichenfolge.**   
-## Siehe auch  
- [Interoperabilität mit anderen .NET\-Sprachen](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)
+```Output  
+o is a string  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Interoperabilität mit anderen .NET-Sprachen (C++/CLI)](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)

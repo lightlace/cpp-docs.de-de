@@ -1,44 +1,46 @@
 ---
-title: "CDynamicAccessor::GetValue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "GetValue"
-  - "CDynamicAccessor::GetValue<ctype>"
-  - "ATL.CDynamicAccessor.GetValue<ctype>"
-  - "CDynamicAccessor.GetValue"
-  - "CDynamicAccessor::GetValue"
-  - "ATL.CDynamicAccessor.GetValue"
-  - "ATL::CDynamicAccessor::GetValue"
-  - "ATL::CDynamicAccessor::GetValue<ctype>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetValue-Methode"
+title: 'CDynamicAccessor:: GetValue | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- GetValue
+- CDynamicAccessor::GetValue<ctype>
+- ATL.CDynamicAccessor.GetValue<ctype>
+- CDynamicAccessor.GetValue
+- CDynamicAccessor::GetValue
+- ATL.CDynamicAccessor.GetValue
+- ATL::CDynamicAccessor::GetValue
+- ATL::CDynamicAccessor::GetValue<ctype>
+dev_langs: C++
+helpviewer_keywords: GetValue method
 ms.assetid: 553f44af-68bc-4cb6-8774-e0940003fa90
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1599cd82347c4074863f2b649a2c67df894893e2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicAccessor::GetValue
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ruft die Daten für eine bestimmte Spalte ab.  
+# <a name="cdynamicaccessorgetvalue"></a>CDynamicAccessor::GetValue
+Ruft die Daten für eine angegebene Spalte ab.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
-      void* GetValue(   
-   DBORDINAL nColumn    
+      void* GetValue(   
+   DBORDINAL nColumn    
 ) const throw( );  
 void* GetValue(  
    const CHAR* pColumnName   
@@ -63,31 +65,31 @@ bool GetValue(
 ) const throw( );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `ctype`  
- \[in\] auf Vorlagen basierenden Parameter A, der jeden Datentyp außer Zeichenfolgentypen \(**CHAR\***, **WCHAR\***\) behandelt, die besondere Behandlung erfordern.  `GetValue` verwendet den entsprechenden Datentyp auf Grundlage, was Sie hier angeben.  
+ [in] Ein aus einer Vorlage gebildete Parameter, der einen beliebigen Datentyp aufweisen, mit Ausnahme von Zeichenfolgentypen behandelt (**CHAR\***, **WCHAR\***), die eine besondere Behandlung erfordern. `GetValue`verwendet den entsprechenden Datentyp, der basierend auf den Sie hier angeben.  
   
  `nColumn`  
- \[in\] Spaltennummer.  Spaltennummern beginnen mit 1.  Ein Wert von 0 werden die Lesezeichenspalte an, falls welche vorhanden.  
+ [in] Die Nummer der Spalte. Die spaltenzählung beginnt mit 1. Der Wert 0 verweist auf die Lesezeichenspalte, sofern vorhanden.  
   
  `pColumnName`  
- \[in\] der Spaltenname.  
+ [in] Der Spaltenname.  
   
  `pData`  
- \[out\] der Zeiger die Inhalt der angegebenen Spalte.  
+ [out] Der Zeiger auf den Inhalt der angegebenen Spalte.  
   
-## Rückgabewert  
- Wenn Sie Zeichenfolgendaten übergeben möchten, verwenden Sie die nicht auf Vorlagen basierenden Versionen von `GetValue`.  Die nicht auf Vorlagen basierenden Versionen dieser Methode geben **void\*** zurück, die auf dem Teil des Puffers zeigt, der die angegebenen Daten anderer Spalten enthält.  Gibt **NULL** zurück, wenn die Spalte nicht gefunden wird.  
+## <a name="return-value"></a>Rückgabewert  
+ Wenn Sie Zeichenfolgendaten übergeben möchten, verwenden Sie nicht auf Vorlagen basierende Versionen `GetValue`. Die nicht auf Vorlagen basierende Versionen dieser Methode zurückgeben **"void"\***, welche Punkte der Teil des Puffers, der die angegebene Spaltendaten enthält. Gibt **NULL** , wenn die Spalte nicht gefunden wird.  
   
- Für alle anderen Datentypen ist es einfacher, die auf Vorlagen basierenden Versionen von `GetValue`.  Die Vorlage gebildeten Versionen geben **true** bei Erfolg oder **false** auf Fehler zurück.  
+ Für alle anderen Datentypen ist einfacher zu verwenden, die auf Vorlagen basierenden Versionen `GetValue`. Auf Vorlagen basierende Versionen zurück **"true"** bei Erfolg oder **"false"** bei einem Fehler.  
   
-## Hinweise  
- Verwenden Sie die nicht auf Vorlagen basierenden Versionen, um Spalten zurückzugeben, die Zeichenfolgen und die auf Vorlagen basierenden Versionen für Spalten enthalten, die andere Datentypen enthalten.  
+## <a name="remarks"></a>Hinweise  
+ Verwenden Sie nicht auf Vorlagen basierende Versionen, um Spalten zurückzugeben, die Zeichenfolgen und für Spalten, die andere Datentypen enthalten die aus einer Vorlage gebildete Versionen enthalten.  
   
- Im Debugmodus wird eine Assertion ab, wenn die Größe von `pData` zur Größe der Spalte ungleich ist, auf die sie zeigt.  
+ Im Debugmodus befindet, werden Sie eine Assertion erhalten, wenn die Größe des `pData` auf die Größe der Spalte auf den er zeigt ungleich ist.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  
   
-## Siehe auch  
- [CDynamicAccessor\-Klasse](../../data/oledb/cdynamicaccessor-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [CDynamicAccessor-Klasse](../../data/oledb/cdynamicaccessor-class.md)

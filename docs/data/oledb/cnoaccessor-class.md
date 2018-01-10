@@ -1,71 +1,73 @@
 ---
-title: "CNoAccessor-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CNoAccessor"
-  - "CNoAccessor"
-  - "ATL.CNoAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CNoAccessor-Klasse"
+title: CNoAccessor-Klasse | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CNoAccessor
+- CNoAccessor
+- ATL.CNoAccessor
+dev_langs: C++
+helpviewer_keywords: CNoAccessor class
 ms.assetid: eb669ae5-0a56-49a3-9646-c4ae6239da31
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 799fe151b22748da25901139a5aefe67460b2484
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CNoAccessor-Klasse
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Kann als Vorlagenargument \(`TAccessor`\) für Vorlagenklassen, wie `CCommand` und `CTable` verwendet werden, die ein Accessorklassenargument benötigen.  
+# <a name="cnoaccessor-class"></a>CNoAccessor-Klasse
+Kann als ein Vorlagenargument verwendet werden (`TAccessor`) für Vorlagenklassen, z. B. `CCommand` und `CTable`, erfordern, dass ein Argument der Accessor-Klasse.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CNoAccessor  
 ```  
   
-## Hinweise  
- Verwenden Sie `CNoAccessor` als Vorlagenargument, wenn Sie die Klasse Parameter oder Ausgabespalten nicht unterstützen soll.  
+## <a name="remarks"></a>Hinweise  
+ Verwendung `CNoAccessor` als ein Vorlagenargument, wenn Sie nicht die Klasse zur Unterstützung von Parametern oder Spalten ausgeben möchten.  
   
- `CNoAccessor` implementiert die folgenden Stubmethoden, die jeweils anderen Accessorklassenmethoden entsprechen:  
+ `CNoAccessor`implementiert die folgenden Stubmethoden, von denen jedes anderen Methoden des Eigenschaftenaccessors Klasse entsprechen:  
   
--   \-**BindColumns** ausführen zu den Accessoren.  
+-   **BindColumns** -Spalten Accessoren gebunden.  
   
--   `BindParameters`\-Bindungen die erstellten Parameter an Spalten.  
+-   `BindParameters`-Die erstellte Parameter an Spalten gebunden.  
   
--   **Binden** stellt \- Bindungen erstellt.  
+-   **Binden Sie** -Bindungen erstellt.  
   
--   \-**Schließen** enthält den Accessor.  
+-   **Schließen** -schließt die Zugriffsmethode.  
   
--   `ReleaseAccessors`\-Versionen die Accessoren erstellt durch die Klasse.  
+-   `ReleaseAccessors`-Gibt die Accessoren erstellt, die von der Klasse frei.  
   
--   `FreeRecordMemory` \- Gibt alle Spalten im aktuellen Datensatz frei, die freigegeben werden müssen.  
+-   `FreeRecordMemory`-Gibt alle Spalten im aktuellen Datensatz, der freigegeben werden müssen.  
   
--   `GetColumnInfo` \- Ruft Spalteninformationen vom geöffneten Rowsets ab.  
+-   `GetColumnInfo`-Ruft Spalteninformationen aus dem Rowset geöffnet.  
   
--   `GetNumAccessors` \- Ruft die Anzahl der den Accessoren ab, die von der Klasse erstellt werden.  
+-   `GetNumAccessors`-Ruft die Anzahl der Accessoren erstellt, die von der Klasse ab.  
   
--   `IsAutoAccessor` \- Gibt true zurück, wenn Daten automatisch den Accessor während eines Verschiebungsvorgangs abgerufen werden.  
+-   `IsAutoAccessor`-"Wahr" zurückgegeben, wenn Daten bei einem Verschiebevorgang automatisch für den Accessor abgerufen werden.  
   
--   `GetHAccessor` \- Ruft das Accessorhandle eines angegebenen Accessor ab.  
+-   `GetHAccessor`-Ruft die Accessorhandle für einen angegebenen Accessor ab.  
   
--   `GetBuffer` \- Ruft den Zeiger auf Lesezeichenpuffer ab.  
+-   `GetBuffer`-Ruft die Zeiger auf den Puffer Lesezeichen ab.  
   
--   **NoBindOnNullRowset** \- verhindert Datenbindung für leere Rowsets.  
+-   **NoBindOnNullRowset** -verhindert die Datenbindung für leere Rowsets.  
   
-## Anforderungen  
- **Header:**  atldbcli.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** atldbcli.h  
   
-## Siehe auch  
- [OLE DB\-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenz der OLE DB\-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)

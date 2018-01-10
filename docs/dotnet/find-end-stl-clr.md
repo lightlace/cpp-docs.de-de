@@ -1,32 +1,33 @@
 ---
-title: "find_end (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::find_end"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "find_end-Funktion [STL/CLR]"
+title: Find_end (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::find_end
+dev_langs: C++
+helpviewer_keywords: find_end function [STL/CLR]
 ms.assetid: a2008414-163a-4da2-9ac6-4e3c85a02d38
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a4d1ba6ccc6544c578ad1ce8375d8d4943a6b34c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# find_end (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Sucht in einem Bereich nach der letzten Untersequenz, die einer angegebenen Sequenz identisch ist, oder auf eine Weise angegeben durch ein binäres Prädikat entsprechendes ist.  
+# <a name="findend-stlclr"></a>find_end (STL/CLR)
+Sucht in einem Bereich nach der letzten Untersequenz, die mit einer angegebenen Sequenz identisch ist oder die in durch ein binäres Prädikat angegebenen Sinne äquivalent ist.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class _FwdIt1, class _FwdIt2> inline  
@@ -37,13 +38,13 @@ template<class _FwdIt1, class _FwdIt2, class _Pr> inline
         _FwdIt2 _First2, _FwdIt2 _Last2, _Pr _Pred);  
 ```  
   
-## Hinweise  
- Diese Funktion verhält sich genauso wie die STL\-Funktion `find_end`.  Weitere Informationen finden Sie unter [find\_end](../Topic/find_end.md).  
+## <a name="remarks"></a>Hinweise  
+ Diese Funktion verhält sich wie die C++-Standardbibliothek Funktion `find_end`. Weitere Informationen finden Sie unter [Find_end](../standard-library/algorithm-functions.md#find_end).  
   
-## Anforderungen  
- **Header:** \<cliext\/Algorithmus\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext-Algorithmus >  
   
- **Namespace:** cliext  
+ **Namespace:** Cliext  
   
-## Siehe auch  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Siehe auch  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

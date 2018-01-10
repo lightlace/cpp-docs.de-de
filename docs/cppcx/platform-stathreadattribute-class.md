@@ -20,11 +20,12 @@ caps.latest.revision: "3"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 54e4b7621879252b14fa0fe71c837439da147df5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b1c2b8c38d672b6bd3ecd0fcafb54a9b6e723202
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformstathreadattribute-class"></a>Platform::STAThreadAttribute-Klasse
 Legt Singlethreaded Apartment (STA) als Threadingmodell für Anwendungen fest.  
@@ -35,7 +36,7 @@ Legt Singlethreaded Apartment (STA) als Threadingmodell für Anwendungen fest.
 public ref class STAThreadAttribute sealed : Attribute  
 ```  
   
-### <a name="members"></a>Mitglieder  
+### <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -46,7 +47,7 @@ public ref class STAThreadAttribute sealed : Attribute
 ### <a name="public-methods"></a>Öffentliche Methoden  
  Das STAThreadAttribute-Attribut erbt von [Platform:: Object-Klasse](../cppcx/platform-object-class.md). „STAThreadAttribute“ wird zudem überladen oder weist die folgenden Member auf:  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |[STAThreadAttribute::Equals](#equals)|Bestimmt, ob das angegebene Objekt mit dem aktuellen Objekt identisch ist.|  
 |[STAThreadAttribute::GetHashCode](#gethashcode)|Gibt den Hashcode für diese Instanz zurück.|  

@@ -1,56 +1,59 @@
 ---
-title: "Gewusst wie: Migrieren auf /clr:safe (C++/CLI)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/clr-Compileroption [C++], Migrieren zu /clr:safe"
-  - "Migration [C++], Überprüfbare Assemblys"
-  - "Aktualisieren von Visual C++-Anwendungen, Überprüfbare Assemblys"
-  - "Überprüfbare Assemblys [C++], Migrieren zu"
+title: 'Vorgehensweise: Migrieren zu - Clr: safe (C + c++ / CLI) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- migration [C++], verifiable assemblies
+- upgrading Visual C++ applications, verifiable assemblies
+- verifiable assemblies [C++], migrating to
+- /clr compiler option [C++], migrating to /clr:safe
 ms.assetid: 75f9aae9-1dcc-448a-aa11-2d96f972f9d2
-caps.latest.revision: 15
-caps.handback.revision: "15"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4c9d28d64b450d14ba1579597f0276cfe3a0cf39
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Gewusst wie: Migrieren auf /clr:safe (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Visual C\+\+ kann unter Verwendung von **\/clr:safe** überprüfbaren Komponenten generieren. Dadurch gibt der Compiler für jedes nicht überprüfbare Codekonstrukt einen Fehler aus.  
+# <a name="how-to-migrate-to-clrsafe-ccli"></a>Gewusst wie: Migrieren auf /clr:safe (C++/CLI)
+Visual C++ können mit überprüfbare Komponenten generieren **/CLR: safe**, die bewirkt, dass des Compilers Fehler für jedes Konstrukt nicht überprüfbaren Code generiert.  
   
-## Hinweise  
- In den folgenden Fällen werden Überprüfbarkeitsfehler ausgegeben:  
+## <a name="remarks"></a>Hinweise  
+ Die folgenden Probleme generieren Überprüfbarkeitsfehler:  
   
--   Systemeigene Typen.  Auch wenn sie nicht verwendet wird, verhindert eine Deklaration systemeigener Klassen, Strukturen, Zeiger oder Arrays die Kompilierung.  
+-   Systemeigene Typen. Auch wenn es nicht verwendet wird, wird die Deklaration von systemeigenen Klassen, Strukturen, Zeiger oder Arrays Kompilierung verhindern.  
   
 -   Globale Variablen  
   
--   Funktionsaufrufe in eine nicht verwaltete Bibliothek, einschließlich der Common Language Runtime\-Funktionsaufrufe  
+-   Funktionsaufrufe in eine nicht verwaltete Bibliothek, einschließlich der common Language Runtime-Funktionsaufrufe  
   
--   Eine überprüfbare Funktion darf keinen [static\_cast\-Operator](../cpp/static-cast-operator.md) für die Abwärtskonvertierung enthalten.  Der [static\_cast\-Operator](../cpp/static-cast-operator.md) kann zur Typkonvertierung zwischen primitiven Typen verwendet werden, für die Abwärtskonvertierung muss jedoch [safe\_cast](../windows/safe-cast-cpp-component-extensions.md) oder eine Umwandlung im C\-Format \(als [safe\_cast](../windows/safe-cast-cpp-component-extensions.md) implementiert\) verwendet werden.  
+-   Eine überprüfbare Funktion darf keine enthalten eine [Static_cast Operator](../cpp/static-cast-operator.md) für Down-Umwandlung. Die [Static_cast Operator](../cpp/static-cast-operator.md) kann verwendet werden, für die Umwandlung zwischen den primitiven Typen gehört, aber für Down-Umwandlung, ["safe_cast"](../windows/safe-cast-cpp-component-extensions.md) oder eine Umwandlung im C-Format (die als implementiert eine ["safe_cast"](../windows/safe-cast-cpp-component-extensions.md)) muss verwendet werden.  
   
--   Eine überprüfbare Funktion darf keinen [reinterpret\_cast\-Operator](../cpp/reinterpret-cast-operator.md) \(oder eine entsprechende Umwandlung im C\-Format\) enthalten.  
+-   Eine überprüfbare Funktion darf keine enthalten eine [Reinterpret_cast Operator](../cpp/reinterpret-cast-operator.md) (oder eine entsprechende Umwandlung im C-Format).  
   
--   Eine überprüfbare Funktion kann keine Arithmetik mit einem [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md) ausführen.  Es sind nur Zeigerzuweisungen und \-dereferenzierungen zulässig.  
+-   Eine überprüfbare Funktion kann keine Arithmetik mit einem [Interior_ptr (C + c++ / CLI)](../windows/interior-ptr-cpp-cli.md). Es kann nur zuweisen und es zu dereferenzieren.  
   
--   Eine überprüfbare Funktion darf lediglich Zeiger auf Referenztypen auslösen oder abfangen, daher müssen Werttypen vor dem Auslösen geschachtelt werden.  
+-   Eine überprüfbare Funktion kann nur ausgelöst oder Zeiger auf Verweistypen abfangen, damit vor dem Auslösen Werttypen geschachtelt werden müssen.  
   
--   Eine überprüfbare Funktion darf lediglich überprüfbare Funktionen aufrufen \(CRT\-Aufrufe sind daher nicht zulässig, denn sie enthalten `AtEntry`\/`AtExit`, weshalb globale Konstruktoren nicht erlaubt sind\).  
+-   Eine überprüfbare Funktion kann nur überprüfbare Funktionen aufrufen (sodass Aufrufe an die common Language Runtime nicht zulässig sind, enthalten `AtEntry` / `AtExit`, weshalb globale Konstruktoren nicht zulässig sind).  
   
--   Eine überprüfbare Klasse kann nicht <xref:System.Runtime.InteropServices.LayoutKind> verwenden.  
+-   Eine überprüfbare Klasse können keine <xref:System.Runtime.InteropServices.LayoutKind>.  
   
--   Beim Erstellen einer EXE\-Datei dürfen in einer Hauptfunktion keine Parameter deklariert werden, sodass <xref:System.Environment.GetCommandLineArgs*> zum Abrufen der Befehlszeilenargumente verwendet werden muss.  
+-   Wenn eine EXE-Datei zu erstellen, eine main-Funktion keine Parameter deklariert werden, also <xref:System.Environment.GetCommandLineArgs%2A> muss verwendet werden, um Befehlszeilenargumente abzurufen.  
   
--   Ausführen eines nicht virtuellen Aufrufs einer virtuellen Funktion.  Beispiel:  
+-   Eine nicht virtuelle Aufruf einer virtuellen Funktion. Zum Beispiel:  
   
     ```  
     // not_verifiable.cpp  
@@ -67,17 +70,17 @@ Visual C\+\+ kann unter Verwendung von **\/clr:safe** überprüfbaren Komponente
     }  
     ```  
   
- Auch die folgenden Schlüsselwörter sind aus überprüfbarem Code auszuschließen:  
+ Darüber hinaus können die folgenden Schlüsselwörter in überprüfbarem Code verwendet werden:  
   
--   Pragmas [unmanaged](../preprocessor/managed-unmanaged.md) und [pack](../preprocessor/pack.md)  
+-   [nicht verwaltete](../preprocessor/managed-unmanaged.md) und [Pack](../preprocessor/pack.md) Pragmas  
   
--   [\_\_declspec](../cpp/declspec.md)\-Modifizierer [naked](../cpp/naked-cpp.md) und [align](../cpp/align-cpp.md)  
+-   [naked](../cpp/naked-cpp.md) und [ausrichten](../cpp/align-cpp.md) [__declspec](../cpp/declspec.md) Modifizierer  
   
--   [\_\_asm](../assembler/inline/asm.md)  
+-   [__asm](../assembler/inline/asm.md)  
   
--   [\_\_based](../cpp/based-grammar.md)  
+-   [__based](../cpp/based-grammar.md)  
   
--   [\_\_try](../cpp/try-except-statement.md) und `__except`  
+-   [__try](../cpp/try-except-statement.md) und`__except`  
   
-## Siehe auch  
- [Reiner und überprüfbarer Code](../dotnet/pure-and-verifiable-code-cpp-cli.md)
+## <a name="see-also"></a>Siehe auch  
+ [Reiner und überprüfbarer Code (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)

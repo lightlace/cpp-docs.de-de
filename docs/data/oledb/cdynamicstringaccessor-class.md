@@ -1,32 +1,33 @@
 ---
-title: "CDynamicStringAccessor-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicStringAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDynamicStringAccessor-Klasse"
+title: CDynamicStringAccessor-Klasse | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: CDynamicStringAccessor
+dev_langs: C++
+helpviewer_keywords: CDynamicStringAccessor class
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d6c24e6eaac83d72f8710b039b312f40517fd7e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicStringAccessor-Klasse
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ermöglicht Ihnen, auf eine Datenquelle zuzugreifen, wenn Ihnen das Datenbankschema \(die zugrunde liegende Struktur\).  
+# <a name="cdynamicstringaccessor-class"></a>CDynamicStringAccessor-Klasse
+Können Sie eine Datenquelle zugreifen, wenn Sie keine Kenntnisse des Datenbankschemas (die zugrunde liegende Struktur) verfügen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -34,36 +35,36 @@ Ermöglicht Ihnen, auf eine Datenquelle zuzugreifen, wenn Ihnen das Datenbanksch
 class CDynamicStringAccessorT : public CDynamicAccessor  
 ```  
   
-## Member  
+## <a name="members"></a>Member  
   
-### Methoden  
+### <a name="methods"></a>Methoden  
   
 |||  
 |-|-|  
-|[GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)|Ruft die angegebenen Spaltendaten als Zeichenfolge ab.|  
-|[SetString](../../data/oledb/cdynamicstringaccessor-setstring.md)|Legt die angegebenen Spaltendaten als Zeichenfolge fest.|  
+|[GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)|Ruft die Daten der angegebenen Spalte als eine Zeichenfolge ab.|  
+|[SetString](../../data/oledb/cdynamicstringaccessor-setstring.md)|Legt die angegebene Spalte als eine Zeichenfolge fest.|  
   
-## Hinweise  
- Während [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) Daten im systemeigenen Format anfordert, fordert vom Anbieter angegeben, `CDynamicStringAccessor` Anforderungen, dass auf der Anbieterabruf, den alle Daten vom Datenspeicher als Zeichenfolgendaten abruft.  Dies ist besonders hilfreich für einfache Aufgaben, die keine Berechnungen von Werten im Datenspeicher erfordern, z. B. das Anzeigen oder Drucken des Datenspeicherinhalts.  
+## <a name="remarks"></a>Hinweise  
+ Während [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) fordert Daten im systemeigenen Format, die vom Anbieter gemeldeten `CDynamicStringAccessor` fordert an, dass der Anbieter alle Daten, die aus dem Datenspeicher als Zeichenfolgedaten zugegriffen abzurufen. Dies ist besonders für einfache Aufgaben, die keine Berechnung von Werten im Datenspeicher, z. B. anzeigen oder Drucken der Datenspeicher Inhalt erforderlich ist.  
   
- Der systemeigene Typ der Spaltendaten im Datenspeicher ist nicht wichtig; sofern der Anbieter die Datenkonvertierung unterstützen kann, stellt er die Daten im Zeichenfolgenformat.  Wenn der Anbieter nicht die Konvertierung vom systemeigenen Datentyp in einer Zeichenfolge \(unterstützt die nicht häufig ist\), wird der Aufruf das anfordernde Erfolgswert **DB\_S\_ERRORSOCCURED** zurück, und der Status für die entsprechende Spalte gibt einem Konvertierungsproblem mit **DBSTATUS\_E\_CANTCONVERTVALUE** an.  
+ Der systemeigene Typ der Spaltendaten in den Datenspeicher spielt keine Rolle. solange der Anbieter die Datenkonvertierung unterstützen kann, werden die Daten im Zeichenfolgenformat bereitgestellt werden. Wenn der Anbieter die Konvertierung von systemeigenen Datentyp in eine Zeichenfolge nicht unterstützt (die nicht üblich ist), der anfordernde Aufruf zurück, der Erfolgswert **DB_S_ERRORSOCCURED**, und der Status für die entsprechende Spalte werden sollen. ein betreffendes Konvertierung **DBSTATUS_E_CANTCONVERTVALUE**.  
   
- Verwenden Sie `CDynamicStringAccessor`\-Methoden, um Spalteninformationen zu beziehen.  Sie verwenden diese Spalteninformationen, um einen Accessor zur Laufzeit dynamisch zu erstellen.  
+ Verwendung `CDynamicStringAccessor` Methoden zum Abrufen von Spalteninformationen. Sie verwenden diese Informationen in der Spalte um einen Accessor zur Laufzeit dynamisch zu erstellen.  
   
- Die Spalteninformationen werden in einem Puffer gespeichert, der von dieser Klasse erstellt und verwaltet wird.  Rufen Sie Daten aus dem Puffer mithilfe von [GetString](../../data/oledb/cdynamicstringaccessor-getstring.md) ab, oder speichern Sie diesen dem Puffer mithilfe von [SetString](../../data/oledb/cdynamicstringaccessor-setstring.md).  
+ Die Informationen in der Spalte befindet sich in einem Puffer, die von dieser Klasse erstellt und verwaltet. Abrufen von Daten aus dem Puffer mithilfe [GetString](../../data/oledb/cdynamicstringaccessor-getstring.md), oder speichern Sie sie in den Puffer mit [SetString](../../data/oledb/cdynamicstringaccessor-setstring.md).  
   
- Erläuterungen und Beispiele der dynamischen Accessorklassen, finden Sie unter [Verwenden von dynamischen Accessoren](../../data/oledb/using-dynamic-accessors.md).  
+ Ausführliche Informationen und Beispiele für die Verwendung der dynamischen Accessors-Klassen finden Sie unter [mithilfe von dynamischen Accessoren](../../data/oledb/using-dynamic-accessors.md).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header**: atldbcli.h  
   
-## Siehe auch  
- [OLE DB\-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenz der OLE DB\-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [CAccessor\-Klasse](../../data/oledb/caccessor-class.md)   
- [CDynamicParameterAccessor\-Klasse](../../data/oledb/cdynamicparameteraccessor-class.md)   
- [CManualAccessor\-Klasse](../../data/oledb/cmanualaccessor-class.md)   
- [CDynamicAccessor\-Klasse](../../data/oledb/cdynamicaccessor-class.md)   
- [CDynamicStringAccessorA\-Klasse](../../data/oledb/cdynamicstringaccessora-class.md)   
- [CDynamicStringAccessorW\-Klasse](../../data/oledb/cdynamicstringaccessorw-class.md)   
- [CXMLAccessor\-Klasse](../../data/oledb/cxmlaccessor-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [OLE DB-Consumer-Vorlagenreferenz](../../data/oledb/ole-db-consumer-templates-reference.md)   
+ [CAccessor-Klasse](../../data/oledb/caccessor-class.md)   
+ [CDynamicParameterAccessor-Klasse](../../data/oledb/cdynamicparameteraccessor-class.md)   
+ [CManualAccessor-Klasse](../../data/oledb/cmanualaccessor-class.md)   
+ [CDynamicAccessor-Klasse](../../data/oledb/cdynamicaccessor-class.md)   
+ [CDynamicStringAccessorA-Klasse](../../data/oledb/cdynamicstringaccessora-class.md)   
+ [CDynamicStringAccessorW-Klasse](../../data/oledb/cdynamicstringaccessorw-class.md)   
+ [CXMLAccessor-Klasse](../../data/oledb/cxmlaccessor-class.md)

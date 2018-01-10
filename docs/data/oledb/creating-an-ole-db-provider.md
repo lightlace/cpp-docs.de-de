@@ -16,16 +16,19 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 07060be0c14adb4d509c23ab88914de4494e6862
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 97d5edb8e65729f8bee68043b316fa74f78fb0da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-an-ole-db-provider"></a>Erstellen eines OLE DB-Anbieters
 Die empfohlene Methode zum Erstellen eines OLE DB-Anbieters ist die Verwendung des Assistenten ein ATL COM-Projekt und einen Anbieter erstellen und ändern dann die Dateien mithilfe der OLE DB-Vorlagen. Wie Sie Ihren Anbieter anpassen, können nicht benötigte Eigenschaften auskommentieren und optionale Schnittstellen hinzufügen.  
   
- Die grundlegenden Schritte lauten wie folgt:  
+ Die grundlegenden Schritte werden im Folgenden beschrieben:  
   
 1.  Verwenden Sie die ATL-Projekt-Assistent zum Erstellen der grundlegenden Projektdateien und die ATL OLE DB-Anbieter-Assistenten aus, um den Anbieter zu erstellen (Wählen Sie **ATL-OLE DB-Anbieter** aus dem Visual C++-Ordner im **Klasse hinzufügen**).  
   

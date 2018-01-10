@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b29c6ce5b71b103068f0fe34673dcdcfe6820856
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c520d365a259c36baab8edeb9049aab9ac89925a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="redistributing-visual-c-activex-controls"></a>Neuverteilen von Visual C++ ActiveX-Steuerelementen
 Visual C++ 6.0 liefert ActiveX-Steuerelemente, die Sie in Anwendungen verwenden können, die Sie dann erneut verteilen. Diese Steuerelemente sind nicht mehr in Visual C++ enthalten. Pro die Lizenzverträge für Visual C++ 6.0 können Sie diese Steuerelemente mit Anwendungen, die in Visual C++ entwickelt verteilt.  

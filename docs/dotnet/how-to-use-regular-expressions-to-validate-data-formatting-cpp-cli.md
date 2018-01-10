@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: db15abf9aca532b8c0fb712733c4e87350b58747
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6e67b6de0b7769322d0b7f1176245c8f68634afb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-regular-expressions-to-validate-data-formatting-ccli"></a>Gewusst wie: Verwenden von regulären Ausdrücken zur Überprüfung der Datenformatierung (C++/CLI)
 Das folgende Codebeispiel veranschaulicht die Verwendung von regulären Ausdrücken, um zu überprüfen, ob die Formatierung einer Zeichenfolge. Im folgenden Codebeispiel muss die Zeichenfolge eine gültige Telefonnummer enthalten. Das folgende Codebeispiel verwendet die Zeichenfolge "\d{3}-\d{3}-\d{4}", um anzugeben, dass jedes Feld eine gültige Telefonnummer darstellt. In der Zeichenfolge "d" eine Ziffer angibt, und das Argument nach jedes "d" gibt die Anzahl der Ziffern, die vorhanden sein muss. In diesem Fall muss die Anzahl durch Bindestriche voneinander getrennt werden.  

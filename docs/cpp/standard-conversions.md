@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 954ba431378317a3f9079677f49223a336af5d9e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 324fa54362098e2b7ffae6fdf368bf590846f9c1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="standard-conversions"></a>Standardkonvertierungen
 Die Programmiersprache C++ definiert Konvertierungen zwischen ihren grundlegenden Typen. Sie definiert auch Konvertierungen für Zeiger- und Verweistypen sowie und für abgeleitete "pointer-to-member"-Typen. Diese Konvertierungen werden als Standardkonvertierungen bezeichnet. (Weitere Informationen über Typen, Standardtypen und abgeleiteten Typen finden Sie unter [Typen](http://msdn.microsoft.com/en-us/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
@@ -150,7 +151,7 @@ cout << (float)1E300 << endl;
  Wenn ein Objekt vom Gleitkommatyp in einen ganzzahligen Typ konvertiert wird, werden die Nachkommastellen abgeschnitten. Im Konvertierungsprozess erfolgt keine Rundung. Abschneiden bedeutet, dass eine Zahl wie 1,3 in 1 und-1.3 konvertiert wird auf-1 konvertiert wird.  
   
 ## <a name="arithmetic-conversions"></a>Arithmetische Konvertierungen  
- Viele binäre Operatoren (beschrieben [Ausdrücke mit Binäroperatoren](../cpp/expressions-with-binary-operators.md)) führen zu Konvertierungen von Operanden und erzielen auf die gleiche Weise Ergebnisse. Die Art und Weise der Konvertierung durch diese Operatoren wird als "übliche arithmetische Konvertierungen" bezeichnet. Arithmetische Konvertierungen von Operanden unterschiedlicher systemeigener Typen werden entsprechend der Darstellung in der folgenden Tabelle ausgeführt. Typedef-Typen verhalten sich entsprechend ihren zugrunde liegenden systemeigenen Typen.  
+ Viele binäre Operatoren (beschrieben [Ausdrücke mit Binäroperatoren](../cpp/expressions-with-binary-operators.md)) führen zu Konvertierungen von Operanden und erzielen auf die gleiche Weise Ergebnisse. Die Art und Weise der Konvertierung durch diese Operatoren wird als "übliche arithmetische Konvertierungen" bezeichnet. Arithmetische Konvertierungen von Operanden unterschiedlicher nativer Typen werden entsprechend der Darstellung in der folgenden Tabelle ausgeführt. Typedef-Typen verhalten sich entsprechend ihren zugrunde liegenden systemeigenen Typen.  
   
 ### <a name="conditions-for-type-conversion"></a>Bedingungen für die Typkonvertierung  
   
@@ -204,10 +205,10 @@ Vererbungsdiagramm für Abbildung der Basisklasse-Barrierefreiheit
   
 |Typ der Funktion|Ableitung|Konvertierung von<br /><br /> B * in A\* zulässig?|  
 |----------------------|----------------|-------------------------------------------|  
-|Externe (nicht im Klassenumfang enthaltene) Funktion|Privat|Nein|  
+|Externe (nicht im Klassenumfang enthaltene) Funktion|Private|Nein|  
 ||Protected|Nein|  
-||Öffentlich|Ja|  
-|B-Memberfunktion (im B-Bereich)|Privat|Ja|  
+||Public|Ja|  
+|B-Memberfunktion (im B-Bereich)|Private|Ja|  
 ||Protected|Ja|  
 ||Öffentlich|Ja|  
 |C-Memberfunktion (im C-Bereich)|Privat|Nein|  

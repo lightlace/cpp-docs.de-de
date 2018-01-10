@@ -1,38 +1,41 @@
 ---
-title: "Gewusst wie: Implementieren einer Plug-In-Komponentenarchitektur mit Reflektion (C++/CLI)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Plug-Ins [C++]"
-  - "Reflektion [C++}, Plug-Ins"
+title: Implementieren eine Plug-in-Architektur (C + c++ / CLI) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- plug-ins [C++]
+- reflection [C++}, plug-ins
 ms.assetid: 4f31e42b-78d1-48b9-8fdc-f28c75e8e77e
-caps.latest.revision: 13
-caps.handback.revision: "13"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 05c6c2584e39ed145a30c919ed850aac45905a85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Gewusst wie: Implementieren einer Plug-In-Komponentenarchitektur mit Reflektion (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In den folgenden Codebeispielen wird die Verwendung der Reflektion zur Implementierung einer einfachen "Plug\-In"\-Architektur dargestellt.  Zuerst ist die Anwendung aufgeführt, als zweites das Plug\-In.  Bei der Anwendung handelt es sich um ein aus mehreren Dokumenten bestehendes Formular, das über die formularbasierten Klassen der Plug\-In\-DLL ausgefüllt wird, die als Befehlszeilenargument verwendet wird.  
+# <a name="how-to-implement-a-plug-in-component-architecture-using-reflection-ccli"></a>Gewusst wie: Implementieren einer Plug-In-Komponentenarchitektur mit Reflektion (C++/CLI)
+Die folgenden Codebeispiele veranschaulichen die Verwendung von Reflektion, um eine einfache "-Plug-in" Architektur zu implementieren. Das erste Codelisting ist der Anwendung, und die zweite ist das plug-in. Die Anwendung ist ein mehrere Dokumentformular, das sich über alle formularbasierten Klassen finden in der Plug-in-DLL als Befehlszeilenargument füllt.  
   
- Die Anwendung versucht, die vorliegende Assembly mit der <xref:System.Reflection.Assembly.Load*?displayProperty=fullName>\-Methode zu laden.  Wenn dies erfolgreich ist, werden die Typen in der Assembly mit der <xref:System.Reflection.Assembly.GetTypes*?displayProperty=fullName>\-Methode aufgelistet.  Jeder Typ wird dann mit der <xref:System.Type.IsAssignableFrom*?displayProperty=fullName>\-Methode auf Kompatibilität überprüft.  In diesem Beispiel müssen die in der vorliegenden Assembly vorhandenen Klassen aus der <xref:System.Windows.Forms.Form>\-Klasse abgeleitet werden, um als Plug\-In behandelt werden zu können.  
+ Die Anwendung versucht, das Laden der bereitgestellten Assembly mithilfe der <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> Methode. Wenn erfolgreich, die Typen in der Assembly aufgelistet werden mithilfe der <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=fullName> Methode. Jeder Typ wird dann für die Verwendung von Kompatibilität überprüft die <xref:System.Type.IsAssignableFrom%2A?displayProperty=fullName> Methode. In diesem Beispiel wird die in der bereitgestellten Assembly gefundene Klassen abgeleitet werden, aus der <xref:System.Windows.Forms.Form> Klasse als ein plug-in zu qualifizieren.  
   
- Kompatible Klassen werden dann mit der <xref:System.Activator.CreateInstance*?displayProperty=fullName>\-Methode instanziiert, die <xref:System.Type> als Argument akzeptiert und einen Zeiger auf eine neue Instanz zurückgibt.  Jede neue Instanz wird anschließend an das Formular angefügt und angezeigt.  
+ Kompatible Klassen werden dann instanziiert, mit der <xref:System.Activator.CreateInstance%2A?displayProperty=fullName> -Methode, die akzeptiert eine <xref:System.Type> als Argument und gibt einen Zeiger auf eine neue Instanz. Jede neue Instanz wird dann in das Formular angefügt und angezeigt.  
   
- Beachten Sie, dass die <xref:System.Reflection.Assembly.Load*>\-Methode keine Assemblynamen akzeptiert, die die Dateierweiterung einschließen.  Alle vorhandenen Erweiterungen werden von der Hauptfunktion der Anwendung entfernt, daher funktioniert das folgende Codebeispiel in beiden Fällen.  
+ Beachten Sie, dass die <xref:System.Reflection.Assembly.Load%2A> Methode akzeptiert keine Assemblynamen, die die Dateierweiterung enthalten. Die main-Funktion in der Anwendung kürzt alle bereitgestellten Erweiterungen aus, damit im folgenden Codebeispiel wird in beiden Fällen funktioniert.  
   
-## Beispiel  
- Der folgende Code definiert die Anwendung, die Plug\-Ins akzeptiert.  Als erstes Argument muss ein Assemblyname angegeben werden.  Diese Assembly sollte mindestens einen öffentlichen, von <xref:System.Windows.Forms.Form> abgeleiteten Typ enthalten.  
+## <a name="example"></a>Beispiel  
+ Der folgende Code definiert die Anwendung, die Plug-Ins akzeptiert. Ein Assemblyname muss als erstes Argument angegeben werden. Diese Assembly sollte über mindestens einen öffentlichen enthalten <xref:System.Windows.Forms.Form> abgeleiteten Typ.  
   
 ```  
 // plugin_application.cpp  
@@ -76,8 +79,8 @@ int main() {
 }  
 ```  
   
-## Beispiel  
- Im folgenden Code werden drei von <xref:System.Windows.Forms.Form> abgeleitete Klassen definiert.  Bei der Übergabe des Namens der resultierenden Assembly an den ausführbaren Code im ersten Teil werden diese drei Klassen gefunden und instanziiert, obwohl sie der Hosting\-Anwendung zur Kompilierungszeit nicht bekannt waren.  
+## <a name="example"></a>Beispiel  
+ Der folgende Code definiert drei von abgeleitete Klassen <xref:System.Windows.Forms.Form>. Wenn der Name des der resultierende Assemblyname mit der ausführbaren Datei in der vorherigen Liste übergeben wird, wird jede dieser drei Klassen ermittelt und instanziiert, trotz der Tatsache, dass der Host-Anwendung zum Zeitpunkt der Kompilierung nicht bekannt waren.  
   
 ```  
 // plugin_assembly.cpp  
@@ -127,5 +130,5 @@ protected:
 };  
 ```  
   
-## Siehe auch  
- [Reflektion](../dotnet/reflection-cpp-cli.md)
+## <a name="see-also"></a>Siehe auch  
+ [Reflexion (C++/CLI)](../dotnet/reflection-cpp-cli.md)

@@ -1,45 +1,46 @@
 ---
-title: "Zeichenvergleich | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Zeichen [C++], Vergleichen"
-  - "Vergleichen von Zeichen"
-  - "MBCS [C++], Zeichenvergleich"
+title: Vergleich Zeichen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- comparing characters
+- MBCS [C++], character comparison
+- characters [C++], comparing
 ms.assetid: 18846e44-3e6e-40c4-9b42-3153fb15db20
-caps.latest.revision: 8
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 28c2cd3a2e868a595d73d06b5cae8e71ec8cc313
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Zeichenvergleich
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Beachten Sie folgende Tipps:  
+# <a name="character-comparison"></a>Zeichenvergleich
+Verwenden Sie die folgenden Tipps:  
   
--   Das Vergleichen eines bekannten führenden Bytes mit einem ASCII\-Zeichen funktioniert fehlerfrei:  
+-   Vergleichen von einem führenden Bytes mit einem ASCII-Zeichen ordnungsgemäß funktioniert:  
   
     ```  
     if( *sz1 == 'A' )  
     ```  
   
--   Um zwei unbekannte Zeichen miteinander zu vergleichen, ist ein in Mbstring.h definiertes Makro erforderlich:  
+-   Vergleichen von zwei unbekannte Zeichen erfordert die Verwendung eines Makros in Mbstring.h definiert:  
   
     ```  
     if( !_mbccmp( sz1, sz2) )  
     ```  
   
-     So wird sichergestellt, dass beide Bytes eines Doppelbytezeichens zur Ermittlung der Gleichheit miteinander verglichen werden.  
+     Dadurch wird sichergestellt, dass beide Bytes, der einen Doppelbyte Zeichensatz auf Gleichheit verglichen werden.  
   
-## Siehe auch  
- [Tipps für die MBCS\-Programmierung](../text/mbcs-programming-tips.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Tipps für die MBCS-Programmierung](../text/mbcs-programming-tips.md)   
  [Pufferüberlauf](../text/buffer-overflow.md)

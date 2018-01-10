@@ -1,36 +1,38 @@
 ---
-title: "CDynamicParameterAccessor::GetParamStatus | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicParameterAccessor::GetParamStatus"
-  - "CDynamicParameterAccessor.GetParamStatus"
-  - "ATL.CDynamicParameterAccessor.GetParamStatus"
-  - "ATL::CDynamicParameterAccessor::GetParamStatus"
-  - "GetParamStatus"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetParamStatus-Methode"
+title: 'CDynamicParameterAccessor:: Getparamstatus | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicParameterAccessor::GetParamStatus
+- CDynamicParameterAccessor.GetParamStatus
+- ATL.CDynamicParameterAccessor.GetParamStatus
+- ATL::CDynamicParameterAccessor::GetParamStatus
+- GetParamStatus
+dev_langs: C++
+helpviewer_keywords: GetParamStatus method
 ms.assetid: 9300225a-616c-4a7d-82d0-8c2ecd4d8185
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ecee1f92e1b8e5e185e1c193ae52161ab9032df8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicParameterAccessor::GetParamStatus
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ruft den Status des angegebenen Parameters ab, der im Puffer gespeichert wird.  
+# <a name="cdynamicparameteraccessorgetparamstatus"></a>CDynamicParameterAccessor::GetParamStatus
+Ruft den Status des angegebenen Parameters ab, der im Puffer gespeichert ist.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -38,23 +40,23 @@ Ruft den Status des angegebenen Parameters ab, der im Puffer gespeichert wird.
    DBORDINAL nParam,  
    DBSTATUS* pStatus  
 );  
-DBSTATUS* GetParamStatus(   
-   DBORDINAL nParam    
+DBSTATUS* GetParamStatus(   
+   DBORDINAL nParam    
 ) const throw( );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `nParam`  
- \[in\] die einen Parameterwert \(Offset von 1\).  Parameter 0 wird für Rückgabewerte reserviert.  In einen Parameterwert ist der Index des Parameters anhand ihrer Reihenfolge im SQL\- oder Prozeduraufruf.  Ein Beispiel finden Sie unter [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md).  
+ [in] Die Parameteranzahl (Offset von 1). Parameter 0 ist für Rückgabewerte reserviert. Die Parameteranzahl ist der Index des Parameters basierend auf der Reihenfolge der SQL-oder einen Aufruf einer gespeicherten Prozedur. Finden Sie unter [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) ein Beispiel.  
   
  `pStatus`  
- \[out\] Ein Zeiger auf die Variable `DBSTATUS`, die den Status des angegebenen Parameters enthält.  Weitere Informationen über `DBSTATUS`\-Werte, finden Sie unter [Status](https://msdn.microsoft.com/en-us/library/ms722617.aspx) in der *OLE* DB\-Programmierreferenz, oder indem Sie für `DBSTATUS` in oledb.h.  
+ [out] Ein Zeiger auf die Variable mit dem `DBSTATUS` Status des angegebenen Parameters. Informationen zu `DBSTATUS` -Werte finden Sie in [Status](https://msdn.microsoft.com/en-us/library/ms722617.aspx) in der *OLE DB Programmer's Reference*, oder suchen Sie nach `DBSTATUS` in "OleDb.h".  
   
-## Hinweise  
- Die erste Überschreibung gibt **true** bei Erfolg oder **false** auf Fehler zurück.  Die zweiten Überschreiben zeigt auf den Arbeitsspeicher, der den Status des angegebenen Parameters enthält.  
+## <a name="remarks"></a>Hinweise  
+ Die erste überschreiben gibt **"true"** bei Erfolg oder **"false"** bei einem Fehler. Die zweite Überschreiben verweist auf den Speicher mit dem Status des angegebenen Parameters.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  
   
-## Siehe auch  
- [CDynamicParameterAccessor\-Klasse](../../data/oledb/cdynamicparameteraccessor-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [CDynamicParameterAccessor-Klasse](../../data/oledb/cdynamicparameteraccessor-class.md)

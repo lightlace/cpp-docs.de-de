@@ -18,11 +18,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b7507a0c941fa651f55fdf462b9d832cfd929632
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 097889acd9a77cea5e0a81dd3bd13be712a70550
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-declare-handles-in-native-types"></a>Gewusst wie: Deklarieren von Handles in systemeigenen Typen
 Einen Handletyp in einen systemeigenen Typ nicht deklariert werden. Vcclr.h stellt die Wrappervorlage als typsicherer `gcroot` zum Verweisen auf ein CLR-Objekt aus dem Heap. Dieser Vorlage können Sie ein virtuelles Handle in einen systemeigenen Typ einbetten und es zu behandeln, als handele es sich um den zugrunde liegenden Typ. In den meisten Fällen können Sie die `gcroot` Objekt als eingebetteten Typ ohne Umwandlung. Allerdings bei [für jedes in](../dotnet/for-each-in.md), müssen Sie `static_cast` um den zugrunde liegenden verwalteten Verweis abzurufen.  

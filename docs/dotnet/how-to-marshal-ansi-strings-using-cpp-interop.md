@@ -19,11 +19,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9704f4ccc4d00fc7249042cf21f53dfd5ecad695
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7e70d62fa7a94a7278080c31f6650b31b71ff35b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-marshal-ansi-strings-using-c-interop"></a>Gewusst wie: Marshallen von ANSI-Zeichenfolgen mit C++-Interop
 In diesem Thema wird veranschaulicht, wie von ANSI-Zeichenfolgen sein können mithilfe von C++-Interop, aber .NET Framework übergeben <xref:System.String> Zeichenfolgen in Unicode-Format darstellt, damit die Konvertierung in ANSI ein zusätzlicher Schritt ist. Zusammenarbeit mit anderen Zeichenfolgen-Datentypen, finden Sie unter den folgenden Themen:  

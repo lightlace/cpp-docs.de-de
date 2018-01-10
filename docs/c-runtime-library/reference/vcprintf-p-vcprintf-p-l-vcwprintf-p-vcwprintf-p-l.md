@@ -52,11 +52,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a04c78f70f1d1338e1c5578b4cb9a641aea30c73
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0909838cb526212d52d156f9af0366bcdcb7f4f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vcprintfp-vcprintfpl-vcwprintfp-vcwprintfpl"></a>_vcprintf_p, _vcprintf_p_l, _vcwprintf_p, _vcwprintf_p_l
 Schreibt formatierte Ausgabe in die Konsole unter Verwendung eines Zeigers auf eine Liste von Argumenten und unterstützt positionelle Parameter in der Formatzeichenfolge.  
@@ -107,7 +108,7 @@ int _vcwprintf_p_l(
   
  Die Versionen dieser Funktionen mit dem `_l`-Suffix sind beinahe identisch, verwenden jedoch den Gebietsschemaparameter, der anstelle des aktuellen Gebietsschemas übergeben wurde.  
   
- Jedes `argument` (falls vorhanden) wird entsprechend der jeweiligen Formatangabe in `format` konvertiert und ausgegeben. Die Formatangabe unterstützt positionelle Parameter, damit Sie die Reihenfolge, in der die Argumente verwendet werden, in der Formatzeichenfolge angeben können. Weitere Informationen finden Sie unter [printf_p Positional Parameters (printf_p-Positionsparameter)](../../c-runtime-library/printf-p-positional-parameters.md).  
+ Jedes `argument` (falls vorhanden) wird entsprechend der jeweiligen Formatangabe in `format` konvertiert und ausgegeben. Die Formatangabe unterstützt positionelle Parameter, damit Sie die Reihenfolge, in der die Argumente verwendet werden, in der Formatzeichenfolge angeben können. Weitere Informationen finden Sie unter [printf-Positionsparameter](../../c-runtime-library/printf-p-positional-parameters.md).  
   
  Diese Funktionen übersetzen keine Zeilenvorschubzeichen in Carriage Return-Zeilenvorschub (CR-LF) Kombinationen bei der Ausgabe.   
   
@@ -125,7 +126,7 @@ int _vcwprintf_p_l(
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |`_vcprintf_p`, `_vcprintf_p_l`|\<conio.h> and \<stdarg.h>|  
 |`_vcwprintf_p`, `_vcwprintf_p_l`|\<conio.h> and \<stdarg.h>|  

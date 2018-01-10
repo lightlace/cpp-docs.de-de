@@ -14,16 +14,19 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 97d12adb89baddfbfdc25e6b758a3f659e6973d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f5362b2c3e20a34249b9410951722222b93dce0d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="net-framework-equivalents-to-c-native-types-ccli"></a>.NET Framework-Entsprechungen der systemeigenen Typen in C++ (C++/CLI)
 Die folgende Tabelle zeigt die Schlüsselwörter für integrierte Visual C++-Typen, die Aliase der vordefinierten Typen sind in der **System** Namespace.  
   
-|Visual C++-Typ|.NET Framework-Typ|  
+|Visual C++-Typ|.NET Framework-Typ|  
 |-----------------------|-------------------------|  
 |**bool**|**System.Boolean**|  
 |**Char signiert** (siehe ["/ j"](../build/reference/j-default-char-type-is-unsigned.md) für Weitere Informationen)|**System.SByte**|  

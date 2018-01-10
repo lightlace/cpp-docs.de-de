@@ -20,11 +20,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f4e36523d2fffd4f90897daf2fd22c4dba66c8fd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 3b0d46ac3164f7f609e8a8a8099d500d04d91bf1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crowset-class"></a>CRowset-Klasse
 Kapselt eine OLE DB-Rowset-Objekte sowie einige weitere im Zusammenhang-Hostingschnittstellen und bietet Methoden für Rowsetdaten bearbeiten.  
@@ -40,7 +43,7 @@ class CRowset
  `TAccessor`  
  Ein Accessorklasse. Die Standardeinstellung ist `CAccessorBase`.  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="methods"></a>Methoden  
   
