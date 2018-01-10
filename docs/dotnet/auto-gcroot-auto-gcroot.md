@@ -1,35 +1,37 @@
 ---
-title: "auto_gcroot::auto_gcroot | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::auto_gcroot::auto_gcroot"
-  - "auto_gcroot::auto_gcroot"
-  - "auto_gcroot.auto_gcroot"
-  - "msclr.auto_gcroot.auto_gcroot"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_gcroot::auto_gcroot"
+title: auto_gcroot::auto_gcroot | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::auto_gcroot::auto_gcroot
+- auto_gcroot::auto_gcroot
+- auto_gcroot.auto_gcroot
+- msclr.auto_gcroot.auto_gcroot
+dev_langs: C++
+helpviewer_keywords: auto_gcroot::auto_gcroot
 ms.assetid: 27faa42a-64ea-4d31-836f-073a55145735
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 30503886c3a4af047226af88ee16e1132e9d0896
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# auto_gcroot::auto_gcroot
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Der `auto_gcroot`\-Konstruktor.  
+# <a name="autogcrootautogcroot"></a>auto_gcroot::auto_gcroot
+Die `auto_gcroot` Konstruktor.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 auto_gcroot(  
@@ -44,17 +46,17 @@ auto_gcroot(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `_ptr`  
- Das Objekt in eigenem.  
+ Das Objekt als Besitzer.  
   
  `_right`  
- Eine vorhandene `auto_gcroot`.  
+ Ein vorhandener `auto_gcroot`.  
   
-## Hinweise  
- Wenn `auto_gcroot` von vorhandenen `auto_gcroot` erstellt, gibt vorhandene `auto_gcroot` sein Objekt frei, bevor der Besitz des Objekts zu neuen `auto_gcroot` überträgt.  
+## <a name="remarks"></a>Hinweise  
+ Beim Erstellen einer `auto_gcroot` aus einer vorhandenen `auto_gcroot`, den vorhandenen `auto_gcroot` frei sein Objekt vor dem Übertragen des Besitzes des Objekts mit dem neuen `auto_gcroot`.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // msl_auto_gcroot_auto_gcroot.cpp  
@@ -126,25 +128,28 @@ int main()
 }  
 ```  
   
-  **in RefClassA\-Konstruktor: nicht verwaltet**  
-**Hello von nicht verwaltetem A\!**  
-**in RefClassA\-Destruktor: nicht verwaltet**  
-**in RefClassA\-Konstruktor: erstens**  
-**Hello zuerst von A\!**  
-**in RefClassA\-Destruktor: erstens**  
-**in RefClassA\-Konstruktor: zweitens**  
-**Hello von zweitem B\!**  
-**Hello von zweitem A\!**  
-**Hello von zweitem A\!**  
-**in RefClassA\-Destruktor: zweitens**  
-**dein**   
-## Anforderungen  
- **Headerdatei** \<msclr\\auto\_gcroot.h\>  
+```Output  
+in RefClassA constructor: unmanaged  
+Hello from unmanaged A!  
+in RefClassA destructor: unmanaged  
+in RefClassA constructor: first  
+Hello from first A!  
+in RefClassA destructor: first  
+in RefClassA constructor: second  
+Hello from second B!  
+Hello from second A!  
+Hello from second A!  
+in RefClassA destructor: second  
+done  
+```  
   
- **Namespace** msclr  
+## <a name="requirements"></a>Anforderungen  
+ **Headerdatei** \<msclr\auto_gcroot.h >  
   
-## Siehe auch  
- [auto\_gcroot Members](../dotnet/auto-gcroot-members.md)   
- [auto\_gcroot::attach](../dotnet/auto-gcroot-attach.md)   
- [auto\_gcroot::operator\=](../dotnet/auto-gcroot-operator-assign.md)   
- [auto\_gcroot::~auto\_gcroot](../dotnet/auto-gcroot-tilde-auto-gcroot.md)
+ **Namespace** Msclr  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Auto_gcroot-Elemente](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot::Attach](../dotnet/auto-gcroot-attach.md)   
+ [auto_gcroot::Operator =](../dotnet/auto-gcroot-operator-assign.md)   
+ [auto_gcroot::~auto_gcroot](../dotnet/auto-gcroot-tilde-auto-gcroot.md)

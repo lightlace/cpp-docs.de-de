@@ -1,41 +1,44 @@
 ---
-title: "Gewusst wie: Lesen von Windows-Leistungsindikatoren (C++/CLI)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Indikatoren, Lesen von Windows-Leistungsindikatoren"
-  - "Leistung"
-  - "Leistungsindikatoren"
-  - "Leistungsindikatoren, Lesen von Windows-Leistungsindikatoren"
-  - "Leistungsüberwachung"
-  - "Leistungsüberwachung, Windows-Leistungsindikatoren"
-  - "Leistung, Indikatoren"
+title: 'Vorgehensweise: Lesen von Windows-Leistungsindikatoren (C + c++ / CLI) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- performance counters
+- performance counters, reading Windows performance counters
+- performance monitoring, Windows performance counters
+- performance, counters
+- counters, reading Windows performance counters
+- performance
+- performance monitoring
 ms.assetid: 9e1c836c-cb0f-4f37-9a93-3dca6412d6b1
-caps.latest.revision: 12
-caps.handback.revision: "12"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e3bbfcf020d1700effdc770b5a5e04892b72d8cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Gewusst wie: Lesen von Windows-Leistungsindikatoren (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Einige Anwendungen und Windows\-Subsysteme machen Leistungsdaten durch das Windows\-Leistungssystem verfügbar.  Auf diese Zähler kann mit der <xref:System.Diagnostics.PerformanceCounterCategory>\-Klasse und mit der <xref:System.Diagnostics.PerformanceCounter>\-Klasse zugegriffen werden, die sich im <xref:System.Diagnostics?displayProperty=fullName>\-Namespace befinden.  
+# <a name="how-to-read-windows-performance-counters-ccli"></a>Gewusst wie: Lesen von Windows-Leistungsindikatoren (C++/CLI)
+Einige Anwendungen und Windows-Subsysteme verfügbar machen Leistungsdaten über die Windows-Leistung-System. Diese Leistungsindikatoren mit zugegriffen werden können die <xref:System.Diagnostics.PerformanceCounterCategory> und <xref:System.Diagnostics.PerformanceCounter> Klassen, die in befinden sich die <xref:System.Diagnostics?displayProperty=fullName> Namespace.  
   
- Im folgenden Codebeispiel werden diese Klassen verwendet, um einen Zähler abzurufen und anzuzeigen, der von Windows aktualisiert wird, um die prozentuale Prozessorauslastung in Bezug auf die Zeit anzuzeigen.  
+ Das folgende Codebeispiel verwendet diese Klassen abrufen und Anzeigen eines Leistungsindikators, das aktualisiert wird, von Windows an, dass der Prozentsatz der Zeit, die der Prozessor ausgelastet ist.  
   
 > [!NOTE]
->  Dieses Beispiel erfordert Administratorrechte für die Ausführung unter Windows Vista.  
+>  Für dieses Beispiel benötigen Sie Administratorrechte, um es unter Windows Vista auszuführen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // processor_timer.cpp  
@@ -124,7 +127,7 @@ int main()
 }  
 ```  
   
-## Siehe auch  
- [Introduction to Monitoring Performance](assetId:///d40f10b9-e2b7-4ec8-a9b3-706929e5bf35)   
- [Windows\-Vorgänge](../dotnet/windows-operations-cpp-cli.md)   
- [.NET\-Programmierung mit C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [Einführung in die Überwachung der Leistung](http://msdn.microsoft.com/en-us/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35)   
+ [Windows-Vorgänge (C + c++ / CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [.NET-Programmierung mit C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

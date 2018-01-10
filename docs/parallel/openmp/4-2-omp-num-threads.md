@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7e02f29aeda7d555b7ac2678b030d2ff3475b639
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9c2b766d0e3be9b4f1d272a6e3fa205cfcb87039
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="42-ompnumthreads"></a>4.2 OMP_NUM_THREADS
 Die **OMP_NUM_THREADS** -Umgebungsvariablen angegeben wird die Standardanzahl von Threads zur Verwendung während der Ausführung, sofern diese Anzahl durch den Aufruf nicht explizit geändert wird die **Omp_set_num_threads** Bibliotheksroutine oder ein expliziter **Num_threads** -Klausel für eine **parallele** Richtlinie.  

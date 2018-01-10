@@ -1,47 +1,49 @@
 ---
-title: "lock::release | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "lock.release"
-  - "msclr::lock::release"
-  - "lock::release"
-  - "msclr.lock.release"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lock::release"
+title: Lock::Release | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- lock.release
+- msclr::lock::release
+- lock::release
+- msclr.lock.release
+dev_langs: C++
+helpviewer_keywords: lock::release
 ms.assetid: b73d48fc-cf98-4b78-b39d-813d4a12fa84
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e702ffda531d43a2ff8a0d41b10d1f053bdc6e11
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# lock::release
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gibt eine Sperre.  
+# <a name="lockrelease"></a>lock::release
+Gibt eine Sperre frei.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void release();  
 ```  
   
-## Hinweise  
- Wenn keine Sperre angehalten wird, hat `release` keine Auswirkungen.  
+## <a name="remarks"></a>Hinweise  
+ Wenn keine Sperre `release` wird keine Aktion ausgeführt.  
   
- Sie müssen diese Funktion nicht explizit aufrufen; wenn ein `lock`\-Objekt den Bereich verlässt, ihr Destruktor `release` auf.  
+ Sie müssen nicht explizit aufrufen dieser Funktion; Wenn eine `lock` Objekt verlässt den Gültigkeitsbereich, dessen Destruktor ruft `release`.  
   
-## Beispiel  
- In diesem Beispiel wird eine einzelne Instanz einer Klasse über mehrere Threads.  Die Klasse verwendet eine Sperre auf sich, um sicherzustellen, dass auf auf die internen Daten für jeden Thread konsistent sind.  Der Hauptthread verwendet eine Sperre auf der gleichen Instanz der Klasse, die in regelmäßigen Abständen zu überprüfen, dass Arbeitsthreads ggf. anzuzeigen noch vorhanden, und wartet, bis alle Arbeitsthreads beendet haben ihre Aufgaben abgeschlossen.  
+## <a name="example"></a>Beispiel  
+ Dieses Beispiel verwendet eine einzelne Instanz einer Klasse über mehrere Threads hinweg.  Die Klasse verwendet eine Sperre auf sich selbst, um sicherzustellen, dass der Zugriff auf die internen Daten für jeden Thread konsistent sind.  Thread der hauptanwendung verwendet eine Sperre für dieselbe Instanz der Klasse in regelmäßigen Abständen überprüfen, um festzustellen, ob alle Arbeitsthreads noch vorhanden sind, und wartet, bis alle Arbeitsthreads aktiviert beenden ihre Aufgaben abgeschlossen haben.  
   
 ```  
 // msl_lock_release.cpp  
@@ -115,22 +117,25 @@ int main() {
 }  
 ```  
   
-  **Im Thread 3, Zähler \= 0**  
-**Im Thread 3, Zähler \= 10**  
-**Im Thread 5, Zähler \= 0**  
-**Im Thread 5, Zähler \= 10**  
-**Im Thread 7, Zähler \= 0**  
-**Im Thread 7, Zähler \= 10**  
-**Im Thread 4, Zähler \= 0**  
-**Im Thread 4, Zähler \= 10**  
-**Im Thread 6, Zähler \= 0**  
-**Im Thread 6, Zähler \= 10**  
-**Alle Threads abgeschlossen.**   
-## Anforderungen  
- **Headerdatei** \<msclr\\lock.h\>  
+```Output  
+In thread 3, Counter = 0  
+In thread 3, Counter = 10  
+In thread 5, Counter = 0  
+In thread 5, Counter = 10  
+In thread 7, Counter = 0  
+In thread 7, Counter = 10  
+In thread 4, Counter = 0  
+In thread 4, Counter = 10  
+In thread 6, Counter = 0  
+In thread 6, Counter = 10  
+All threads completed.  
+```  
   
- **Namespace** msclr  
+## <a name="requirements"></a>Anforderungen  
+ **Headerdatei** \<msclr\lock.h >  
   
-## Siehe auch  
- [lock\-Member](../dotnet/lock-members.md)   
+ **Namespace** Msclr  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Lock-Member](../dotnet/lock-members.md)   
  [lock::~lock](../dotnet/lock-tilde-lock.md)

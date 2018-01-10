@@ -1,5 +1,3 @@
----
----
 # <a name="compiler-warning-level-1-c4055"></a>Compilerwarnung (Stufe 1) C4055  
   
 'Konvertierung': Von Datenzeiger 'Typ1' zu Funktionszeiger 'Typ2'.  

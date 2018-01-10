@@ -49,11 +49,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a190bbe75a7b0d0f26d210e299d58e8b6ba6caa7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8cdac3e2d2df31840ae90b79755b68d916033990
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dradialgradientbrush-class"></a>CD2DRadialGradientBrush-Klasse
 Ein Wrapper für ID2D1RadialGradientBrush.  
@@ -64,7 +65,7 @@ Ein Wrapper für ID2D1RadialGradientBrush.
 class CD2DRadialGradientBrush : public CD2DGradientBrush;  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -99,7 +100,7 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
   
 ### <a name="protected-data-members"></a>Geschützte Datenmember  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |[CD2DRadialGradientBrush::m_pRadialGradientBrush](#m_pradialgradientbrush)|Ein Zeiger auf eine ID2D1RadialGradientBrush.|  
 |[CD2DRadialGradientBrush::m_RadialGradientBrushProperties](#m_radialgradientbrushproperties)|Das Center, Farbverlauf Ursprung Offset und X-Radius und y-Radius des Pinsels Farbverlauf des.|  

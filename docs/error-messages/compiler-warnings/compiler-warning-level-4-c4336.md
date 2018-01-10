@@ -1,34 +1,33 @@
 ---
-title: "Compilerwarnung (Stufe 4) C4336 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4336"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4336"
+title: Compilerwarnung (Stufe 4) C4336 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4336
+dev_langs: C++
+helpviewer_keywords: C4336
 ms.assetid: 93f199dd-d6dd-42c0-82d8-c12d101a7235
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 524d5d1aab2b63854ec334f6eb94a62e9fb127c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 4) C4336
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Importieren Sie zuerst die übergreifende Typbibliothek "Typbibliothek1", bevor Sie "Typbibliothek2" importieren  
+# <a name="compiler-warning-level-4-c4336"></a>Compilerwarnung (Stufe 4) C4336
+Importtyp übergreifenden Typbibliothek "Typbibliothek1" vor dem Import "Typbibliothek2"  
   
- Auf eine Typbibliothek wurde mit der [\#import](../../preprocessor/hash-import-directive-cpp.md)\-Direktive verwiesen.  Die Typbibliothek enthielt jedoch einen Verweis auf eine andere Typbibliothek, auf die nicht mit `#import` verwiesen wurde.  Diese andere TLB\-Datei wurde vom Compiler gefunden.  
+ Eine Typbibliothek verwiesen wurde, mit der [#import](../../preprocessor/hash-import-directive-cpp.md) Richtlinie. Die Typbibliothek enthielt jedoch einen Verweis auf eine andere Typbibliothek, die nicht mit verwiesen wurde `#import`. Diese TLB-Datei wurde vom Compiler gefunden.  
   
- Angenommen, Sie verfügen über zwei auf einem Datenträger gespeicherte Typbibliotheken, die aus den folgenden beiden \(mit midl.exe kompilierten\) Dateien erstellt wurden:  
+ Zwei Typbibliotheken auf dem Datenträger erstellt aus den folgenden zwei Dateien (kompiliert mit midl.exe):  
   
 ```  
 // c4336a.idl  

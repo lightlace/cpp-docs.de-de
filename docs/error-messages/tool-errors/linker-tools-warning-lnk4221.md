@@ -1,30 +1,29 @@
 ---
-title: "Linkertoolwarnung LNK4221 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4221"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4221"
+title: Linkertoolwarnung Lnk4221 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4221
+dev_langs: C++
+helpviewer_keywords: LNK4221
 ms.assetid: 8e2eb2de-9532-4b85-908a-8c9ff5c4cccb
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a3fb348ebb05b7af40821b4f3968a920c2e9e773
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Linkertoolwarnung LNK4221
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Mit dieser Objektdatei werden keine zuvor nicht definierten öffentlichen Symbole definiert, weshalb sie von keinem Linkvorgang verwendet wird, der diese Bibliothek nutzt.  
+# <a name="linker-tools-warning-lnk4221"></a>Linkertoolwarnung LNK4221
+Diese Objektdatei werden keine zuvor nicht definierten öffentlichen Symbole, definiert, damit er von einem Linkvorgang nicht verwendet werden, die diese Bibliothek nutzt  
   
  Berücksichtigen Sie die folgenden zwei Codeausschnitte.  
   
@@ -43,10 +42,10 @@ int function()
   
 ```  
   
- Um die Dateien zu kompilieren und zwei Objektdateien zu erstellen, führen Sie **cl \/c a.cpp b.cpp** an einer Eingabeaufforderung aus.  Wenn Sie die Objektdateien verknüpfen, indem Sie **link \/lib \/out:test.lib a.obj b.obj** ausführen, empfangen Sie die LNK4221\-Warnung.  Wenn Sie die Objekte verknüpfen, indem Sie **link \/lib \/out:test.lib b.obj a.obj** ausführen, empfangen Sie keine Warnung.  
+ Führen Sie zum Kompilieren Sie die Dateien aus, und erstellen zwei Objektdateien, **cl/c a.cpp b.cpp** an einer Eingabeaufforderung. Wenn Sie durch Ausführen der Objektdateien verknüpfen **verknüpfen/out: Test.lib a.obj b.obj lib**, erhalten Sie die LNK4221-Warnung. Wenn Sie die Objekte durch Ausführen von verknüpfen **verknüpfen/out: Test.lib b.obj "a.obj" lib**, erhalten Sie eine Warnung.  
   
- Im zweiten Szenario wird keine Warnung ausgegeben, da der Linker gemäß der Last\-In First Out \(LIFO\)\-Methode ausgeführt wird.  Im ersten Szenario wird "b.obj" vor "a.obj" verarbeitet, und "a.obj" enthält keine hinzuzufügenden neuen Symbole.  Sie können die Warnung vermeiden, indem Sie den Linker anweisen, zuerst "a.obj" zu verarbeiten.  
+ Im zweiten Szenario wird keine Warnung ausgegeben, da der Linker in einer Weise Last in First Out (LIFO) verwendet wird. Im ersten Szenario b.obj wird verarbeitet, bevor Sie "a.obj" und "a.obj" enthält keine neuen Symbole hinzufügen. Durch die Anweisung an des Linkers an, "a.obj" zuerst zu verarbeiten, können Sie die Warnung vermeiden.  
   
- Häufig wird dieser Fehler dadurch verursacht, wenn die Option [\/Yc \(Datei der vorkompilierten Header erstellen\)](../../build/reference/yc-create-precompiled-header-file.md) durch zwei Quelldateien mit dem Headerdateinamen angegeben wird, der auch im Feld **Vorkompilierter Header** angegeben wurde.  Eine häufige Ursache dieses Problems hängt mit "stdafx.h" zusammen, da "stdafx.cpp" standardmäßig "stdafx.h" umfasst und keine neue Symbole hinzugefügt werden.  Wenn eine andere Quelldatei "stdafx.h" mit **\/Yc** einschließt und die zugeordnete OBJ\-Datei vor "stdafx.obj" verarbeitet wird, löst der Linker LNK4221 aus.  
+ Eine häufige Ursache dieses Fehlers ist, wenn zwei Quelldateien Geben Sie die Option [/Yc (Datei der vorkompilierten Header erstellen)](../../build/reference/yc-create-precompiled-header-file.md) gleichnamige Header-Datei angegeben, der **vorkompilierter Header** Feld. Eine häufige Ursache für dieses Problem befasst sich mit "stdafx.h", da standardmäßig "stdafx.cpp", "stdafx.h" enthält, und alle neuen Symbole werden nicht hinzugefügt. Wenn Sie einer anderen Quelldatei "stdafx.h" mit enthält **"/ Yc"** und die zugehörigen OBJ-Datei vor stdafx.obj verarbeitet wird, löst der Linker LNK4221.  
   
- Dieses Problem kann u.a dadurch behoben werden, dass für jeden vorkompilierten Header nur eine Quelldatei vorhanden ist, die diesen ihn **\/Yc** einschließt.  Für alle anderen Quelldateien müssen vorkompilierte Header verwendet werden.  Weitere Informationen über das Ändern dieser Einstellung finden Sie unter [\/Yu \(Vorkompilierte Headerdatei verwenden\)](../../build/reference/yu-use-precompiled-header-file.md).
+ Eine Möglichkeit zum Beheben dieses Problems besteht darin sicherzustellen, dass für jeden vorkompilierten Header, besteht nur eine Quelldatei, die sie mit umfasst **"/ Yc"**. Alle anderen Quelldateien müssen vorkompilierte Header verwenden. Weitere Informationen zum Ändern dieser Einstellung finden Sie unter [/Yu (vorkompilierte Headerdatei verwenden)](../../build/reference/yu-use-precompiled-header-file.md).

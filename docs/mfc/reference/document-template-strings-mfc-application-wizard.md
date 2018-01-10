@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vc.appwiz.mfc.exe.doctemp
-dev_langs:
-- C++
-helpviewer_keywords:
-- MFC Application Wizard, document template strings
+f1_keywords: vc.appwiz.mfc.exe.doctemp
+dev_langs: C++
+helpviewer_keywords: MFC Application Wizard, document template strings
 ms.assetid: 8109f662-3182-4682-977a-2503321c678a
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5d2fdabb971ab9aad06f5500b98e9d8591266c85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 96cbb565ffae20d449b2164280fa461b2acfd4fd
-ms.contentlocale: de-de
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="document-template-strings-mfc-application-wizard"></a>Zeichenfolgen für Dokumentvorlagen, MFC-Anwendungs-Assistent
 Bereitstellen Sie auf dieser Seite des Assistenten für MFC-Anwendung, oder verfeinern Sie die folgenden Optionen zum Dokumentverwaltungsfunktionen und Lokalisierung zu verbessern. Zeichenfolgen für Dokumentvorlagen stehen für Anwendungen mit **Unterstützung der Dokument-/Ansichtarchitektur-Architektur** in der [Anwendungstyp](../../mfc/reference/application-type-mfc-application-wizard.md). Sie sind nicht verfügbar für Dialogfelder. Da die meisten Zeichenfolgen für Dokumentvorlagen sichtbar sind und von den Benutzern der Anwendung verwendet werden, sind sie in lokalisiert die **Ressourcensprache** gemäß der **"Anwendung"** Seite des Assistenten.  
@@ -51,5 +47,4 @@ Bereitstellen Sie auf dieser Seite des Assistenten für MFC-Anwendung, oder verf
   
 ## <a name="see-also"></a>Siehe auch  
  [MFC-Anwendungs-Assistent](../../mfc/reference/mfc-application-wizard.md)
-
 

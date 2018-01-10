@@ -322,11 +322,12 @@ caps.latest.revision: "48"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c1cf7e830f2c003135ceda9b63b244f9858b14d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d652be633adca3d21d3cee5b54350c34e691740
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar-Klasse
 Die `CMFCToolBar` -Klasse ähnelt [CToolBar-Klasse](../../mfc/reference/ctoolbar-class.md), bietet aber zusätzliche Unterstützung für Benutzeroberflächenfunktionen. Dazu gehören flache Symbolleisten, Symbolleisten mit hervorgehobenen Bilder, große Symbole, Pagerschaltflächen, gesperrte Symbolleisten, Grundleisten-Steuerelemente, Texte unter Bildern, Hintergrundbilder und Symbolleisten im Registerkartenformat. Die `CMFCToolBar` -Klasse enthält auch integrierte Unterstützung zur Anpassung folgender Elemente und Funktionen: Symbolleisten und Menüs, Drag &amp; Drop zwischen Symbolleisten und Menüs, Schaltflächen für Kombinations- und Bearbeitungsfelder, Farbwähler und Rollup-Schaltflächen.
@@ -339,7 +340,7 @@ Die `CMFCToolBar` -Klasse ähnelt [CToolBar-Klasse](../../mfc/reference/ctoolbar
 class CMFCToolBar : public CMFCBaseToolBar  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -513,7 +514,7 @@ class CMFCToolBar : public CMFCBaseToolBar
   
 ### <a name="data-members"></a>Datenmember  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |[CMFCToolBar::m_bDontScaleImages](#m_bdontscaleimages)|Gibt an, ob Sie skalieren oder nicht Symbolleistenbilder im Modus für hohe DPI.|  
 |[CMFCToolBar::m_dblLargeImageRatio](#m_dbllargeimageratio)|Gibt das Verhältnis zwischen der Dimension (Höhe oder Breite) von Bildern und die Dimension des regulären Bilder.|  
@@ -1287,7 +1288,7 @@ UINT GetButtonStyle(int nIndex) const;
  Gibt den Index für eine Symbolleisten-Schaltfläche.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Wert, der den Stil der Symbolleisten-Schaltfläche angibt. . Finden Sie unter [Steuerelementtypen für die Symbolleiste](../../mfc/reference/toolbar-control-styles.md) eine Liste der möglichen Formate.  
+ Ein Wert, der den Stil der Symbolleisten-Schaltfläche angibt. sein. Finden Sie unter [Steuerelementtypen für die Symbolleiste](../../mfc/reference/toolbar-control-styles.md) eine Liste der möglichen Formate.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie [CMFCToolBar::SetButtonStyle](#setbuttonstyle) zum Festlegen des Stils von einer Symbolleisten-Schaltfläche  

@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 58fce283c43613cc898cd9a4a4a13659bbcb17b4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c0c8ccbc6181442d2ed95f3fbe15ca2925a36464
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-automation-classes"></a>OLE-Automatisierungsklassen
 Diese Klassen unterstützen Automatisierungsclients (Anwendungen, die Steuern von anderen Anwendungen). Automatisierungsserver (Anwendungen, die von einer anderen Anwendung gesteuert werden können) werden unterstützt, über [Dispatchzuordnungen](../mfc/reference/dispatch-maps.md).  

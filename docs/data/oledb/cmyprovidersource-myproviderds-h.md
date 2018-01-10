@@ -1,32 +1,35 @@
 ---
-title: "CMyProviderSource (MyProviderDS.H)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - ""myproviderds.h""
-  - "cmyprovidersource"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMyProviderSource Klasse in MyProviderDS.H"
-  - "OLE DB-Anbieter, Assistentengenerierte Dateien"
+title: CMyProviderSource (MyProviderDS.H) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- myproviderds.h
+- cmyprovidersource
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB providers, wizard-generated files
+- CMyProviderSource class in MyProviderDS.H
 ms.assetid: c143d48e-59c8-4f67-9141-3aab51859b92
-caps.latest.revision: 10
-caps.handback.revision: "10"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d59cdb44ca6832c255ce8d553159ad19580e6a30
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CMyProviderSource (MyProviderDS.H)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die Anbieterklassen verwenden die Mehrfachvererbung.  Der folgende Code veranschaulicht die Vererbungskette für das Datenquellenobjekt:  
+# <a name="cmyprovidersource-myproviderdsh"></a>CMyProviderSource (MyProviderDS.H)
+Die-Anbieterklassen verwenden mehrfache Vererbung. Der folgende Code zeigt die Vererbungskette für das Datenquellenobjekt:  
   
 ```  
 /////////////////////////////////////////////////////////////////////////  
@@ -41,12 +44,12 @@ class ATL_NO_VTABLE CMyProviderSource :
    public IInternalConnectionImpl<CMyProviderSource>  
 ```  
   
- Alle COM\-Komponenten werden von `CComObjectRootEx` und `CComCoClass` abgeleitet.  `CComObjectRootEx` stellt die gesamte Implementierung für die **IUnknown**\-Schnittstelle bereit.  Jedes Threadingmodell kann behandelt werden.  `CComCoClass` behandelt jede erforderliche Fehlerunterstützung.  Wenn ausführlichere Fehlerinformationen an den Client gesendet werden sollen, können Sie einige der Fehler\-APIs in `CComCoClass` verwenden.  
+ Leiten Sie die COM-Komponenten von `CComObjectRootEx` und `CComCoClass`. `CComObjectRootEx`Stellt die Implementierung für die **IUnknown** Schnittstelle. Es kann Threadingmodell behandeln. `CComCoClass`behandelt alle Fehler Unterstützung erforderlich sind. Wenn Sie ausführlichere Fehlerinformationen an den Client senden möchten, können Sie einige der Fehler-APIs in `CComCoClass`.  
   
- Zusätzlich erbt das Datenquellenobjekt von mehreren "Impl"\-Klassen.  Jede Klasse stellt die Implementierung für eine Schnittstelle bereit.  Das Datenquellenobjekt implementiert die Schnittstellen `IPersist`, `IDBProperties`, **IDBInitialize** und **IDBCreateSession**.  Zur Implementierung des Datenquellenobjekts benötigt OLE DB jede dieser Schnittstellen.  Es können bestimmte Funktionen unterstützt werden, je nachdem, ob Sie die Vererbung von einer dieser "Impl"\-Klassen zulassen oder nicht.  Wenn die **IDBDataSourceAdmin**\-Schnittstelle unterstützt werden soll, müsste die Vererbung von der **IDBDataSourceAdminImpl**\-Klasse möglich sein, damit die erforderlichen Funktionen bereitgestellt werden können.  
+ Das Datenquellenobjekt erbt auch von mehreren "Impl"-Klassen. Jede Klasse stellt die Implementierung für eine Schnittstelle bereit. Das Datenquellenobjekt implementiert die `IPersist`, `IDBProperties`, **IDBInitialize**, und **IDBCreateSession** Schnittstellen. Jede Schnittstelle vom OLE DB-erforderlich werden, um das Datenquellenobjekt zu implementieren. Sie können auswählen, zu unterstützen, oder erben oder erben nicht von einer dieser Klassen "Impl" bestimmte Funktionen nicht unterstützt. Wenn Sie unterstützen möchten die **IDBDataSourceAdmin** Schnittstelle erben von der **IDBDataSourceAdminImpl** Klasse, um die erforderliche Funktionalität zu erhalten.  
   
-## COM\-Zuordnung  
- Sobald der Client `QueryInterface` für eine Schnittstelle der Datenquelle aufruft, durchläuft er die folgende COM\-Zuordnung:  
+## <a name="com-map"></a>COM-Zuordnung  
+ Wenn der Client ruft `QueryInterface` für eine Schnittstelle für die Datenquelle, durchläuft es die folgenden COM-Zuordnung:  
   
 ```  
 BEGIN_COM_MAP(CMyProviderSource)  
@@ -58,10 +61,10 @@ BEGIN_COM_MAP(CMyProviderSource)
 END_COM_MAP()  
 ```  
   
- Die **COM\_INTERFACE\_ENTRY**\-Makros sind Bestandteil von ATL und weisen die Implementierung von `QueryInterface` in `CComObjectRootEx` an, die geeigneten Schnittstellen zurückzugeben.  
+ Die COM_INTERFACE_ENTRY-Makros sind von ATL und weisen die Implementierung von `QueryInterface` in `CComObjectRootEx` die entsprechenden Schnittstellen zurückgegeben.  
   
-## Eigenschaftenzuordnung  
- In der Eigenschaftenzuordnung sind alle vom Anbieter bezeichneten Eigenschaften aufgeführt:  
+## <a name="property-map"></a>Eigenschaftenzuordnung  
+ Die eigenschaftenzuordnung gibt die Eigenschaften, die vom Anbieter festgelegt:  
   
 ```  
 BEGIN_PROPSET_MAP(CMyProviderSource)  
@@ -131,9 +134,9 @@ BEGIN_PROPSET_MAP(CMyProviderSource)
 END_PROPSET_MAP()  
 ```  
   
- Eigenschaften in OLE DB sind gruppiert.  Das Datenquellenobjekt verfügt über zwei Eigenschaftengruppen: eine für das **DBPROPSET\_DATASOURCEINFO**\-Set und eine für das **DBPROPSET\_DBINIT**\-Set.  Das **DBPROPSET\_DATASOURCEINFO**\-Set entspricht den Eigenschaften des Anbieters und seiner Datenquelle.  Das **DBPROPSET\_DBINIT**\-Set entspricht den bei der Initialisierung verwendeten Eigenschaften.  Die OLE DB\-Anbietervorlagen verwalten diese Sets mithilfe der **PROPERTY\_SET**\-Makros.  Durch die Makros wird ein Block erstellt, der ein Eigenschaftenarray enthält.  Wann immer der Client die `IDBProperties`\-Schnittstelle aufruft, verwendet der Anbieter die Eigenschaftenzuordnung.  
+ Eigenschaften in der OLE DB gruppiert sind. Das Datenquellenobjekt verfügt über zwei Gruppen von Eigenschaften: einen für die **DBPROPSET_DATASOURCEINFO** festlegen und eine für die **DBPROPSET_DBINIT** festgelegt. Die **DBPROPSET_DATASOURCEINFO** auf die Eigenschaften des Anbieters und seiner Datenquelle entspricht. Die **DBPROPSET_DBINIT** entspricht den Eigenschaften, die bei der Initialisierung verwendet. Der OLE DB-Anbietervorlagen behandeln diese Sätze mit der PROPERTY_SET-Makros. Die Makros erstellen Sie einen Block, der ein Array von Eigenschaften enthält. Wenn der Client Ruft die `IDBProperties` -Schnittstelle, den Anbieter verwendet die eigenschaftenzuordnung.  
   
- Sie brauchen nicht jede Eigenschaft in der Spezifikation zu implementieren.  Die erforderlichen Eigenschaften müssen jedoch unterstützt werden. Weitere Informationen finden Sie in der Spezifikation zur Level 0\-Konformität.  Falls eine Eigenschaft nicht unterstützt werden soll, entfernen Sie sie aus der Zuordnung.  Soll eine Eigenschaft unterstützt werden, fügen Sie sie der Zuordnung mithilfe eines PROPERTY\_INFO\_ENTRY\-Makros hinzu.  Das Makro entspricht der im folgenden Code dargestellten **UPROPINFO**\-Struktur:  
+ Sie müssen nicht jede Eigenschaft in der Spezifikation zu implementieren. Allerdings müssen Sie die erforderlichen Eigenschaften unterstützt; finden Sie in der Spezifikation der Ebene 0-Konformität für Weitere Informationen. Wenn Sie nicht, um eine Eigenschaft zu unterstützen möchten, können Sie es aus der Zuordnung entfernen. Wenn Sie eine Eigenschaft unterstützen möchten, fügen Sie ihn in die Zuordnung, mit einem PROPERTY_INFO_ENTRY-Makro. Das Makro entspricht der **UPROPINFO** Struktur wie im folgenden Code gezeigt:  
   
 ```  
 struct UPROPINFO  
@@ -151,16 +154,16 @@ struct UPROPINFO
 };  
 ```  
   
- Jedes Element in der Struktur enthält Informationen zur Behandlung der Eigenschaft.  Es enthält eine **DBPROPID**, um die GUID und ID für die Eigenschaft zu bestimmen.  Außerdem sind Einträge zur Bestimmung des Eigenschaftentyps und \-werts vorhanden.  
+ Jedes Element in der Struktur stellt Informationen zur Behandlung der Eigenschaft dar. Er enthält eine **DBPROPID** den GUID und die ID für die Eigenschaft zu bestimmen. Es enthält auch Einträge, um den Typ und Wert der Eigenschaft zu bestimmen.  
   
- Wenn Sie den Standardwert einer Eigenschaft ändern möchten \(beachten Sie, dass der Wert einer aktualisierbaren Eigenschaft jederzeit von einem Consumer geändert werden kann\), können Sie entweder das Makro PROPERTY\_INFO\_ENTRY\_VALUE oder das Makro PROPERTY\_INFO\_ENTRY\_EX verwenden.  Diese Makros bieten die Möglichkeit, einen Wert für eine entsprechende Eigenschaft anzugeben.  Das **PROPERTY\_INFO\_ENTRY\_VALUE**\-Makro ist eine Kurznotation, mit der Sie den Wert ändern können.  Durch das **PROPERTY\_INFO\_ENTRY\_VALUE**\-Makro wird das **PROPERTY\_INFO\_ENTRY\_EX**\-Makro aufgerufen.  Mithilfe dieses Makros können Sie sämtliche Attribute in der **UPROPINFO**\-Struktur hinzufügen oder ändern.  
+ Wenn Sie den Standardwert einer Eigenschaft (Beachten Sie, dass ein Consumer den Wert einer beschreibbaren Eigenschaft jederzeit ändern kann) ändern möchten, können Sie entweder die PROPERTY_INFO_ENTRY_VALUE oder PROPERTY_INFO_ENTRY_EX-Makro verwenden. Diese Makros können Sie einen Wert für eine entsprechende Eigenschaft angeben. PROPERTY_INFO_ENTRY_VALUE-Makro ist eine Kurzschreibweise, die Ihnen ermöglicht, den Wert zu ändern. PROPERTY_INFO_ENTRY_VALUE-Makro ruft PROPERTY_INFO_ENTRY_EX-Makro. Dieses Makro können Sie zum Hinzufügen oder ändern alle Attribute in der **UPROPINFO** Struktur.  
   
- Wenn Sie ein eigenes Eigenschaftenset definieren möchten, können Sie ein Set durch eine zusätzliche BEGIN\_PROPSET\_MAP\/END\_PROPSET\_MAP\-Kombination hinzufügen.  Zunächst müssen Sie eine GUID für das Eigenschaftenset und anschließend eigene Eigenschaften definieren.  Anbieterspezifische Eigenschaften sollten einem neuen und keinem bestehenden Eigenschaftenset hinzugefügt werden.  Auf diese Weise werden Probleme mit späteren OLE DB\-Versionen vermieden.  
+ Wenn Sie eine eigene Eigenschaft definieren möchten, können Sie ein Set durch eine zusätzliche BEGIN_PROPSET_MAP/END_PROPSET_MAP-Kombination hinzufügen. Definieren eine GUID für die Eigenschaft festgelegt, und definieren Sie eine eigene Eigenschaften werden müssen. Wenn Sie die anbieterspezifischen Eigenschaften haben, fügen Sie eine neue Eigenschaft anstatt eine vorhandene festgelegt. Dadurch wird vermieden, in höheren Versionen des OLE DB-Probleme.  
   
-## Benutzerdefinierte Eigenschaftensets  
- Visual C\+\+ .NET unterstützt benutzerdefinierte Eigenschaftensets.  Folglich müssen **GetProperties** oder `GetPropertyInfo` nicht mehr überschrieben werden.  Die Vorlagen sind stattdessen in der Lage, jedes benutzerdefinierte Eigenschaftenset zu erkennen und es dem geeigneten Objekt hinzuzufügen.  
+## <a name="user-defined-property-sets"></a>Legt eine benutzerdefinierte Eigenschaft  
+ Visual C++ unterstützt benutzerdefinierte Eigenschaftensätze. Sie müssen nicht außer Kraft setzen **GetProperties** oder `GetPropertyInfo`. Stattdessen die Vorlagen alle benutzerdefinierten Eigenschaftensatz erkennen und fügen ihn in das entsprechende Objekt.  
   
- Bei einem benutzerdefinierten Eigenschaftenset, das zur Initialisierungszeit verfügbar sein muss \(d. h., bevor **IDBInitialize::Initialize** vom Consumer aufgerufen wird\), können Sie dieses Merkmal definieren, indem Sie das **UPROPSET\_USERINIT**\-Flag in Verbindung mit dem BEGIN\_PROPERTY\_SET\_EX\-Makro verwenden.  Damit dieser Vorgang erfolgreich verläuft, muss das Eigenschaftenset \(gemäß OLE DB\-Spezifikation\) im Datenquellenobjekt enthalten sein.  Beispiel:  
+ Haben eine Reihe eine benutzerdefinierte Eigenschaft, die bei der Initialisierung des verfügbar sein muss (d. h., bevor der Consumer ruft **IDBInitialize:: Initialize**), können Sie dies angeben, mit der **UPROPSET_USERINIT** Flag in Verbindung mit dem BEGIN_PROPERTY_SET_EX-Makro. Der festgelegte Eigenschaft muss in das Datenquellenobjekt dafür festlegen (wie die OLE DB-Spezifikation erfordert). Zum Beispiel:  
   
 ```  
 BEGIN_PROPERTY_SET_EX(DBPROPSET_MYPROPSET, UPROPSET_USERINIT)  
@@ -168,5 +171,5 @@ BEGIN_PROPERTY_SET_EX(DBPROPSET_MYPROPSET, UPROPSET_USERINIT)
 END_PROPERTY_SET_EX(DBPROPSET_MYPROPSET)  
 ```  
   
-## Siehe auch  
- [Vom Anbieter\-Assistenten generierte Dateien](../../data/oledb/provider-wizard-generated-files.md)
+## <a name="see-also"></a>Siehe auch  
+ [Vom Anbieter-Assistenten generierte Dateien](../../data/oledb/provider-wizard-generated-files.md)

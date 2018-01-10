@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -27,8 +26,7 @@ f1_keywords:
 - AFXRENDERTARGET/CD2DGeometrySink::SetFillMode
 - AFXRENDERTARGET/CD2DGeometrySink::SetSegmentFlags
 - AFXRENDERTARGET/CD2DGeometrySink::m_pSink
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CD2DGeometrySink [MFC], CD2DGeometrySink
 - CD2DGeometrySink [MFC], AddArc
@@ -47,16 +45,16 @@ helpviewer_keywords:
 - CD2DGeometrySink [MFC], SetSegmentFlags
 - CD2DGeometrySink [MFC], m_pSink
 ms.assetid: e5e07f41-0343-4ab1-9d6b-8c62ed33c04a
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 89286aaccd2c59efb2bac14978a2d8838af7a4e5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 0e48ad7304cb505526ab5eab0b9cd1bbba62895c
-ms.contentlocale: de-de
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dgeometrysink-class"></a>CD2DGeometrySink-Klasse
 Ein Wrapper für ID2D1GeometrySink.  
@@ -67,7 +65,7 @@ Ein Wrapper für ID2D1GeometrySink.
 class CD2DGeometrySink;  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -85,7 +83,7 @@ class CD2DGeometrySink;
 |[CD2DGeometrySink::AddBeziers](#addbeziers)|Erstellt eine Sequenz von kubische Bézier-Kurven aus, und die Geometriesenke hinzugefügt.|  
 |[CD2DGeometrySink::AddLine](#addline)|Erstellt ein Liniensegment zwischen den aktuellen Stand und den angegebenen Endpunkt und die Geometriesenke hinzugefügt.|  
 |[CD2DGeometrySink::AddLines](#addlines)|Erstellt eine Sequenz von Zeilen, die mit den angegebenen Punkten und die Geometriesenke hinzugefügt.|  
-|[CD2DGeometrySink::AddQuadraticBezier](#addquadraticbezier)|Erstellt eine quadratische Bézierkurve zwischen dem aktuellen Punkt und dem angegebenen Endpunkt.|  
+|[CD2DGeometrySink::AddQuadraticBezier](#addquadraticbezier)|Erstellt eine quadratische Bézier-Kurve zwischen den aktuellen Stand und den angegebenen Endpunkt.|  
 |[CD2DGeometrySink::AddQuadraticBeziers](#addquadraticbeziers)|Fügt eine Sequenz von quadratische Bézier Segmente als ein Array, in einem einzigen Aufruf hinzu.|  
 |[CD2DGeometrySink::BeginFigure](#beginfigure)|Startet eine neue Abbildung an der angegebenen Position.|  
 |[CD2DGeometrySink::Close](#close)|Schließt die Geometriesenke|  
@@ -103,7 +101,7 @@ class CD2DGeometrySink;
   
 ### <a name="protected-data-members"></a>Geschützte Datenmember  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |[CD2DGeometrySink::m_pSink](#m_psink)|Ein Zeiger auf eine ID2D1GeometrySink.|  
   
@@ -180,7 +178,7 @@ void AddLines(
  Ein Array von einem oder mehreren Punkten, die beschreiben, die Linien gezeichnet werden soll. Eine Zeile wird aus der Geometriesenke aktuellen Zeitpunkt (dem Endpunkt des letzten Segments gezeichnet oder durch BeginFigure angegebenen Speicherort) der erste Punkt im Array dargestellt. Wenn das Array zusätzliche Punkte enthält, wird eine Zeile aus dem ersten Punkt der zweite Punkt im Array, aus der zweiten, zeigen Sie auf der dritten Punkt usw. dargestellt. Ein Array aus einer Folge von den Endpunkten der Linien gezeichnet werden soll.  
   
 ##  <a name="addquadraticbezier"></a>CD2DGeometrySink::AddQuadraticBezier  
- Erstellt eine quadratische Bézierkurve zwischen dem aktuellen Punkt und dem angegebenen Endpunkt.  
+ Erstellt eine quadratische Bézier-Kurve zwischen den aktuellen Stand und den angegebenen Endpunkt.  
   
 ```  
 void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
@@ -312,4 +310,3 @@ void SetSegmentFlags(D2D1_PATH_SEGMENT vertexFlags);
   
 ## <a name="see-also"></a>Siehe auch  
  [Klassen](../../mfc/reference/mfc-classes.md)
-

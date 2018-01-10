@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 38ac7b0aa76a16516652bfc1736826072ad473dd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b67ed29d083284a714fece22c36e09ec7aa0b66f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2268"></a>Compilerfehler C2268
 "Funktion" ist eine vom Compiler vordefinierte Bibliothekhilfsfunktion. Bibliothekhilfsfunktionen werden mit "/GL" nicht unterstützt. Kompilieren Sie die Objektdatei "Datei" ohne "/GL".  

@@ -1,32 +1,33 @@
 ---
-title: "sort_heap (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::sort_heap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "sort_heap-Funktion [STL/CLR]"
+title: Sort_heap (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::sort_heap
+dev_langs: C++
+helpviewer_keywords: sort_heap function [STL/CLR]
 ms.assetid: a8fa6b76-90cd-413b-9c5b-f65b93d4bbed
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6fc56b6628819f2045998e3d4eebca811201500b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# sort_heap (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Konvertiert einen Heap in sortierter einen Bereich.  
+# <a name="sortheap-stlclr"></a>sort_heap (STL/CLR)
+Konvertiert einen Heap in einen sortierten Bereich.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class _RanIt> inline  
@@ -35,13 +36,13 @@ template<class _RanIt, class _Pr> inline
     void sort_heap(_RanIt _First, _RanIt _Last, _Pr _Pred);  
 ```  
   
-## Hinweise  
- Diese Funktion verhält sich genauso wie die STL\-Funktion `sort_heap`.  Weitere Informationen finden Sie unter [sort\_heap](../Topic/sort_heap.md).  
+## <a name="remarks"></a>Hinweise  
+ Diese Funktion verhält sich wie die C++-Standardbibliothek Funktion `sort_heap`. Weitere Informationen finden Sie unter [Sort_heap](../standard-library/algorithm-functions.md#sort_heap).  
   
-## Anforderungen  
- **Header:** \<cliext\/Algorithmus\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext-Algorithmus >  
   
- **Namespace:** cliext  
+ **Namespace:** Cliext  
   
-## Siehe auch  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Siehe auch  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

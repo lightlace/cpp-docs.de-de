@@ -1,36 +1,35 @@
 ---
-title: "Compilerwarnung (Stufe 3) C4267 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4267"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4267"
+title: Compilerwarnung (Stufe 3) C4267 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4267
+dev_langs: C++
+helpviewer_keywords: C4267
 ms.assetid: 2fa2f13f-fa4f-47bb-ad8f-6cb19cfc91e6
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4d1d4069bb7b9e2af52d2777c598e6dc737f7043
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 3) C4267
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'var': Konvertierung von 'size\_t' nach 'type', Datenverlust möglich  
+# <a name="compiler-warning-level-3-c4267"></a>Compilerwarnung (Stufe 3) C4267
+'var': Konvertierung von 'size_t' nach 'type', Datenverlust möglich  
   
  Der Compiler hat eine Konvertierung von `size_t` zu einem kleineren Typ ermittelt.  
   
- Verwenden Sie zum Beheben dieser Warnung `size_t` anstelle von `type`.  Verwenden Sie alternativ einen integralen Typ, der mindestens so groß wie `size_t` ist.  
+ Verwenden Sie zum Beheben dieser Warnung `size_t` anstelle von `type`. Verwenden Sie alternativ einen integralen Typ, der mindestens so groß wie `size_t` ist.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird der Fehler C4267 generiert:  
   
 ```  

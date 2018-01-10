@@ -1,39 +1,38 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4743 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4743"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4743"
+title: Compilerfehler Warnung (Stufe 1) C4743 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4743
+dev_langs: C++
+helpviewer_keywords: C4743
 ms.assetid: 2ee76ea3-77f3-4c2f-9a57-0751823c89fd
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1a7169afdf7fb4c9a03e509f0332e738a66a06f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 1) C4743
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'*type*' hat eine unterschiedliche Größe in '*file1*' und in '*file2*': *number* und *number* Bytes  
+# <a name="compiler-warning-level-1-c4743"></a>Compilerwarnung (Stufe 1) C4743
+"*Typ*'hat eine unterschiedliche Größe '*" file1 "*'und'*file2*": *Anzahl* und *Anzahl* Bytes  
   
- Eine externe Variable, die in zwei Dateien referenziert oder definiert wurde, hat in diesen Dateien verschiedene, und bestimmten Compiler, dass die Größe der Variablen in *file1* von der Größe der Variablen in *file2* unterscheidet.  
+ Eine externe Variable verwiesen wird, oder in zwei Dateien definiert verschiedene Typen in diesen Dateien hat und der Compiler bestimmt, die die Größe der Variablen im *"file1"* unterscheidet sich von der Größe der Variablen im *file2*.  
   
- Die Ausgabe dieser Warnung für C\+\+ stellt einen wichtigen Fall dar.  Der Compiler kann die Warnung C4744 für virtuelle Funtkionstabellen ausgeben, wenn die folgenden Umstände vorliegen: Es werden in zwei verschiedenen Dateien dieselben Typen mit demselben Namen deklariert und diese Deklarationen enthalten virtuelle Funktionen und sind verschieden.  Die Warnung tritt auf, da zwei virtuelle Funktionstabellen verschiedener Größe für denselben Typ vorliegen, und der Linker muss eine dieser Tabellen für die Einbindung in der ausführbaren Datei auswählen.  Es besteht die Möglichkeit, dass aus diesem Grund durch das Programm die falsche virtuelle Funktion aufgerufen wird.  
+ Wichtige Fall wird diese Warnung für C++ ausgegeben werden kann. Wenn Sie dieselben Typen mit dem gleichen Namen in zwei verschiedenen Dateien deklarieren, wenn diese Deklarationen auf virtuelle Funktionen enthält, und wenn die Deklarationen nicht identisch sind, kann der Compiler Warnung C4744 für die virtuelle Funktion, die Tabellen ausgeben. Die Warnung tritt auf, weil es zwei verschiedene Größe virtuelle Funktion, die Tabellen für den gleichen Typ gibt und Linker muss wählen Sie eine von ihnen in der ausführbaren Datei integriert.  Es ist möglich, dass dies in Ihrem Programm Aufrufen der falschen virtuellen Funktions führen kann.  
   
- Um diese Warnung zu verhindern, verwenden Sie für die Typen oder Variablen entweder dieselbe Typdefinition oder verschiedene Namen.  
+ Um diese Warnung zu beheben, verwenden Sie die gleichen Typdefinition oder verwenden Sie unterschiedliche Namen für die Typen oder Variablen.  
   
-## Beispiel  
- In diesem Beispiel wird eine einzelne Typdefinition verwendet.  
+## <a name="example"></a>Beispiel  
+ Dieses Beispiel enthält eine Definition des Typs.  
   
 ```  
 // C4743a.cpp  
@@ -51,7 +50,7 @@ void C::f3(void) {}
 C q;  
 ```  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird C4743 generiert.  
   
 ```  

@@ -1,31 +1,34 @@
 ---
-title: "Gewusst wie: Ermitteln des interaktiven Zustands (C++/CLI)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Interaktiver Benutzerzustand"
-  - "Visual C++, Interaktiver Benutzerzustand"
+title: 'Vorgehensweise: Ermitteln des interaktiven Zustands (C + c++ / CLI) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Visual C++, user interactive state
+- user interactive state
 ms.assetid: 9f52323e-38b8-4a41-9b1d-052012ad839b
-caps.latest.revision: 9
-caps.handback.revision: "9"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a2cb3ffb8e0bfd8eba04555286894b6f1e58cfd7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Gewusst wie: Ermitteln des interaktiven Zustands (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Im folgenden Codebeispiel wird veranschaulicht, wie ermittelt werden kann, ob Code in einem interaktiven Kontext ausgeführt wird.  Wenn <xref:System.Environment.UserInteractive*> false ist, wird der Code als Dienstprozess oder in einer Webanwendung ausgeführt. In diesem Fall sollten Sie nicht mit dem Benutzer interagieren.  
+# <a name="how-to-determine-the-user-interactive-state-ccli"></a>Gewusst wie: Ermitteln des interaktiven Zustands (C++/CLI)
+Im folgenden Codebeispiel wird veranschaulicht, wie zu bestimmen, ob Code in einem interaktiven Kontext ausgeführt wird. Wenn <xref:System.Environment.UserInteractive%2A> ist "false", und klicken Sie dann der Code als ein Dienstprozess ausgeführt wird oder aus in einer Web-Anwendung, in diesem Fall Sie nicht versuchen sollten, mit dem Benutzer interagieren.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // user_interactive.cpp  
@@ -42,6 +45,6 @@ int main()
 }  
 ```  
   
-## Siehe auch  
- [Windows\-Vorgänge](../dotnet/windows-operations-cpp-cli.md)   
- [.NET\-Programmierung mit C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [Windows-Vorgänge (C + c++ / CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [.NET-Programmierung mit C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

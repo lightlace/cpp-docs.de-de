@@ -1,38 +1,39 @@
 ---
-title: "Eigenschaftenseiten &quot;HLSL&quot;: &quot;Erweitert&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.FXCompilerTool.SuppressStartupBanner"
-  - "VC.Project.FXCompilerTool.TreatWarningAsError"
-dev_langs: 
-  - "C++"
+title: 'Eigenschaftenseiten "HLSL": Erweiterte | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.FXCompilerTool.SuppressStartupBanner
+- VC.Project.FXCompilerTool.TreatWarningAsError
+dev_langs: C++
 ms.assetid: a4f05aed-2c0e-4e7d-b7a4-bc2f228112c5
-caps.latest.revision: 6
-author: "BrianPeek"
-ms.author: "brpeek"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c913a5b1d5c6861fc6337f5a7343506420dd5c83
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Eigenschaftenseiten &quot;HLSL&quot;: &quot;Erweitert&quot;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Um die folgenden Eigenschaften des HLSL\-Compilers \(fxc.exe\) konfigurieren, verwenden Sie die Eigenschaftenseite **Erweitert**.  Informationen darüber, wie Sie auf die Eigenschaftenseite **Erweitert** im HLSL\-Ordner, finden Sie unter [Gewusst wie: Festlegen von Projekteigenschaften mit Eigenschaftenseiten](../misc/how-to-specify-project-properties-with-property-pages.md) zugreift.  
+# <a name="hlsl-property-pages-advanced"></a>Eigenschaftenseiten "HLSL": "Erweitert"
+Um die folgenden Eigenschaften des HLSL-Compilers (fxc.exe) zu konfigurieren, verwenden die **erweitert** Eigenschaftenseite. Informationen über den Zugriff auf die **erweitert** Eigenschaftenseite im Ordner "HLSL" finden Sie unter [arbeiten mit Projekteigenschaften](../ide/working-with-project-properties.md).  
   
-## UIElement-Liste  
+## <a name="uielement-list"></a>UIElement-Liste  
  **Startbanner unterdrücken**  
- **Ja \(\/nologo\)**, um die Anzeige des Startbanners und Informationsmeldung zu unterdrücken; andernfalls **Nein**.  Standardmäßig ist der Wert **Ja \(\/nologo\)**.  
+ **Ja (/ Nologo)** unterdrückt die Anzeige der Dienststart Startbanner und Nachricht; andernfalls **keine**. Standardmäßig ist der Wert **Ja (/ Nologo)**.  
   
  **Warnungen als Fehler behandeln**  
- **Ja \(\/WX\)**, um alle Compilerwarnungen als Fehler behandeln; andernfalls **Nein**.  
+ **Ja (/ / WX)** auf alle Compiler-Warnungen als Fehler zu behandeln, andernfalls **keine**.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Eigenschaftenseiten "HLSL"](../ide/hlsl-property-pages.md)   
- [Eigenschaftenseiten "HLSL": "Allgemein"](../ide/hlsl-property-pages-general.md)   
- [Eigenschaftenseiten "HLSL": "Ausgabedateien"](../ide/hlsl-property-pages-output-files.md)
+ [Eigenschaftenseiten "HLSL": Allgemein](../ide/hlsl-property-pages-general.md)   
+ [Eigenschaftenseiten "HLSL": Ausgabedateien](../ide/hlsl-property-pages-output-files.md)

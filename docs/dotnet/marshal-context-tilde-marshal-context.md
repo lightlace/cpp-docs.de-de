@@ -1,52 +1,54 @@
 ---
-title: "marshal_context::~marshal_context"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "reference"
-f1_keywords: 
-  - "marshal_context::~marshal_context"
-  - "msclr.interop.marshal_context.~marshal_context"
-  - "marshal_context.~marshal_context"
-  - "msclr::interop::marshal_context::~marshal_context"
-  - "~marshal_context"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "marshal_context-Klasse [C++], Operationen"
+title: 'Marshal_context:: ~ Marshal_context | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- marshal_context::~marshal_context
+- msclr.interop.marshal_context.~marshal_context
+- marshal_context.~marshal_context
+- msclr::interop::marshal_context::~marshal_context
+- ~marshal_context
+dev_langs: C++
+helpviewer_keywords: marshal_context class [C++], operations
 ms.assetid: 34c41b38-4c33-4f61-b74e-831ac46b4ab5
-caps.latest.revision: 8
-caps.handback.revision: "8"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 42af11d58804a000e630d916cd5887c5005aa955
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# marshal_context::~marshal_context
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Zerstört ein `marshal_context`\-Objekt.  
+# <a name="marshalcontextmarshalcontext"></a>marshal_context::~marshal_context
+Zerstört ein `marshal_context`-Objekt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 ~marshal_context();  
 ```  
   
-## Hinweise  
- Einige Datenkonvertierungen erfordern einen Marschallkontext.  Weitere Informationen finden Sie unter [Übersicht über das Marshaling in C\+\+](../dotnet/overview-of-marshaling-in-cpp.md), welche Übersetzungen einen Kontext benötigen und die Marshallingdatei in der Anwendung enthalten sein muss.  
+## <a name="remarks"></a>Hinweise  
+ Einige datenkonvertierungen erfordern einen Kontext gemarshallt. Finden Sie unter [Overview of Marshaling in C++](../dotnet/overview-of-marshaling-in-cpp.md) erfahren, welche Übersetzungen einen Kontext benötigen und welche Marshalling Datei hat, in der Anwendung eingeschlossen werden sollen.  
   
- Ein `marshal_context`\-Objekt löschen, werden die Daten ungültig durch diesen Kontext konvertiert werden.  Wenn Sie Daten beibehalten möchten, nachdem ein `marshal_context`\-Objekt zerstört wurde, müssen Sie die Daten in eine Variable manuell kopieren, die weiter besteht.  
+ Löschen einer `marshal_context` Objekt werden die Daten konvertiert, die von diesem Kontext ungültig. Wenn Sie Ihre Daten nach dem beibehalten möchten eine `marshal_context` -Objekt zerstört wird, müssen Sie die Daten manuell kopieren, auf eine Variable, die beibehalten wird.  
   
-## Anforderungen  
- **Headerdatei:** \<msclr\\marshal.h\>, \<msclr\\marshal\_windows.h\>, \<msclr\\marshal\_cppstd.h\> oder \<msclr\\marshal\_atl.h\>  
+## <a name="requirements"></a>Anforderungen  
+ **Headerdatei:** \<msclr\marshal.h >, \<msclr\marshal_windows.h >, \<msclr\marshal_cppstd.h >, oder \<msclr\marshal_atl.h >  
   
  **Namespace:** msclr::interop  
   
-## Siehe auch  
- [Übersicht über das Marshaling in C\+\+](../dotnet/overview-of-marshaling-in-cpp.md)   
- [marshal\_as](../dotnet/marshal-as.md)   
- [marshal\_context\-Klasse](../dotnet/marshal-context-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [Übersicht über das Marshaling in C++](../dotnet/overview-of-marshaling-in-cpp.md)   
+ [marshal_as](../dotnet/marshal-as.md)   
+ [marshal_context-Klasse](../dotnet/marshal-context-class.md)

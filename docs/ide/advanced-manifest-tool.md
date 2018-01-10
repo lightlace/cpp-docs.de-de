@@ -1,45 +1,45 @@
 ---
-title: "Erweitert, Manifesttool, Konfigurationseigenschaften, Dialogfeld „&lt;Projectname&gt; -Eigenschaftenseiten“"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCManifestTool.KeyFile"
-  - "VC.Project.VCManifestTool.UpdateFileHashes"
-  - "VC.Project.VCManifestTool.UpdateFileHashesSearchPath"
-  - "VC.Project.VCManifestTool.ValidateSignature"
-  - "VC.Project.VCManifestTool.KeyContainer"
-dev_langs: 
-  - "C++"
+title: Erweitert, Manifesttool, Konfigurationseigenschaften, &lt;Projektname&gt; Eigenschaftenseiten (Dialogfeld) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCManifestTool.KeyFile
+- VC.Project.VCManifestTool.UpdateFileHashes
+- VC.Project.VCManifestTool.UpdateFileHashesSearchPath
+- VC.Project.VCManifestTool.ValidateSignature
+- VC.Project.VCManifestTool.KeyContainer
+dev_langs: C++
 ms.assetid: 3d587366-05ea-4956-a978-313069660735
-caps.latest.revision: 13
-caps.handback.revision: "13"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c756da4ef7b89113ce26e7218011d708ff4c935c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Erweitert, Manifesttool, Konfigurationseigenschaften, Dialogfeld „&lt;Projectname&gt; -Eigenschaftenseiten“
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Verwenden Sie dieses Dialogfeld, um erweiterte Optionen für [Mt.exe](http://msdn.microsoft.com/library/aa375649) anzugeben.  
+# <a name="advanced-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Erweitert, Manifesttool, Konfigurationseigenschaften, &lt;Projektname&gt; Eigenschaftenseiten (Dialogfeld)
+Verwenden Sie dieses Dialogfeld, um erweiterte Optionen für anzugeben [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
   
- Um auf dieses Eigenschaftenseiten\-Dialogfeld zuzugreifen, öffnen Sie die Eigenschaftenseiten für das Projekt oder das Eigenschaftenblatt.  Erweitern Sie den Knoten **Manifesttool** unter **Konfigurationseigenschaften**, und wählen Sie dann **Erweitert** aus.  
+ Öffnen Sie diese Eigenschaftenseiten-Dialogfeld für den Zugriff auf die Eigenschaftenseiten für das Projekt oder das Eigenschaftenblatt. Erweitern Sie die **Manifesttool** Knoten unter **Konfigurationseigenschaften**, und wählen Sie dann **erweitert**.  
   
-## UIElement-Liste  
+## <a name="uielement-list"></a>UIElement-Liste  
  **Dateihashes aktualisieren**  
- Legt anhand der Option \/hashupdate fest, dass das Manifesttool den in `<file>`\-Elementen festgelegten Hash von Dateien berechnet und die Hash\-Attribute anschließend anhand des berechneten Werts aktualisiert.  
+ Wird die hashupdate-Option verwendet, um anzugeben, dass die Manifesttool der Hashwert der angegebenen Dateien in berechnet wird `<file>` Elementen und aktualisieren Sie dann die Hash-Attribute mit dem berechneten Wert.  
   
  **Suchpfad für Dateihashes aktualisieren**  
- Gibt den Suchpfad für Dateien an, auf die in `<file>`\-Elementen verwiesen wird.  Diese Option verwendet auch die Option \/hashupdate.  
+ Gibt den Suchpfad für Dateien, auf die verweist `<file>` Elemente. Diese Option wird auch die hashupdate-Option verwendet.  
   
-## Siehe auch  
- [\<file\> Element](../Topic/%3Cfile%3E%20Element%20\(ClickOnce%20Application\).md)   
- [ClickOnce Application Manifest](../Topic/ClickOnce%20Application%20Manifest.md)   
- [Eigenschaftenseiten des Manifesttools](../ide/manifest-tool-property-pages.md)   
- [Gewusst wie: Öffnen von Projekteigenschaftenseiten](../misc/how-to-open-project-property-pages.md)   
- [Gewusst wie: Bearbeiten von Projekteigenschaftenblättern](../misc/how-to-edit-project-property-sheets.md)
+## <a name="see-also"></a>Siehe auch  
+ [\<Datei >-Element](/visualstudio/deployment/file-element-clickonce-application)   
+ [ClickOnce-Anwendungsmanifest](/visualstudio/deployment/clickonce-application-manifest)   
+ [Manifesttool-Eigenschaftenseiten](../ide/manifest-tool-property-pages.md)   
+ [Arbeiten mit Projekteigenschaften](../ide/working-with-project-properties.md)   

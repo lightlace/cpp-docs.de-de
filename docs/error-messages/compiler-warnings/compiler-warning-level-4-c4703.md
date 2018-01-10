@@ -1,34 +1,33 @@
 ---
-title: "Compilerwarnung (Stufe 4) C4703 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4703"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4703"
+title: Compilerwarnung (Stufe 4) C4703 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4703
+dev_langs: C++
+helpviewer_keywords: C4703
 ms.assetid: 5dad454e-69e3-4931-9168-050a861c05f8
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f8c2bacdb938cacc451011cffed2b41a1092dabe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 4) C4703
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Vielleicht nicht initialisierte lokale Zeigervariable "Name" verwendet  
+# <a name="compiler-warning-level-4-c4703"></a>Compilerwarnung (Stufe 4) C4703
+Potenziell nicht initialisierten lokalen Zeigervariablen "Name" verwendet  
   
- Die lokale Zeigervariable *name* verwendet worden, ohne einen Wert zugewiesen werden.  Dies kann zu unvorhersehbaren Ergebnissen führen.  
+ Die lokalen Zeigervariablen *Namen* kann verwendet werden können, ohne einen Wert zugewiesen wird. Dies kann zu unvorhersehbaren Ergebnissen führen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Der folgende Code generiert C4701 und C4703.  
   
 ```cpp  
@@ -51,8 +50,13 @@ void main()
 }  
 ```  
   
-  **c:\\src\\test.cpp\(10\) : Warnung C4701: möglicherweise nicht initialisierte lokale Variable "p" verwendet**  
- **c:\\src\\test.cpp\(10\) : Warnung C4703: möglicherweise nicht initialisierte lokale Zeigervariable "p" verwendet** Um diese Warnung zu korrigieren, initialisieren Sie die Variable wie in diesem Beispiel dargestellt:  
+```Output  
+c:\src\test.cpp(10) : warning C4701: potentially uninitialized local variable 'p' used  
+c:\src\test.cpp(10) : warning C4703: potentially uninitialized local pointer variable 'p' used  
+  
+```  
+  
+ Um diese Warnung zu beheben, initialisieren Sie die Variable, wie im folgenden Beispiel gezeigt:  
   
 ```cpp  
 #include <malloc.h>  
@@ -74,6 +78,6 @@ void main()
 }  
 ```  
   
-## Siehe auch  
- [Compilerwarnung \(Stufe 4\) C4701](../../error-messages/compiler-warnings/compiler-warning-level-4-c4701.md)   
- [Warnungen, \/sdl und Verbessern der nicht initialisierte Variablen Erkennung](http://blogs.msdn.com/b/sdl/archive/2012/06/06/warnings-sdl-and-improving-uninitialized-variable-detection.aspx)
+## <a name="see-also"></a>Siehe auch  
+ [Compilerwarnung (Stufe 4) C4701](../../error-messages/compiler-warnings/compiler-warning-level-4-c4701.md)   
+ [Warnungen, / SDL und Verbessern der Erkennung von nicht initialisierten Variablen](http://blogs.msdn.com/b/sdl/archive/2012/06/06/warnings-sdl-and-improving-uninitialized-variable-detection.aspx)

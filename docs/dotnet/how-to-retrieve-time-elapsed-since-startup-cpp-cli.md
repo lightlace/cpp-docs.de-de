@@ -1,34 +1,37 @@
 ---
-title: "Gewusst wie: Abrufen der seit dem Start vergangenen Zeit (C++/CLI)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Indikatoren, Verstrichene Zeit"
-  - "Start"
-  - "Start, Verstrichene Zeit seit"
-  - "Tickzähler"
-  - "Uhrzeit, Verstrichen seit dem Start"
+title: 'Vorgehensweise: Abrufen der vergangenen Zeit seit dem Start (C + c++ / CLI) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- time, elapsed since startup
+- counters, elapsed time
+- startup, time elapsed since
+- tick counts
+- startup
 ms.assetid: a31fdecc-099e-4dd1-a176-f682289c5dd0
-caps.latest.revision: 9
-caps.handback.revision: "9"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2929cd6466b0e05cf2ae029eaee0cbe214d3a17c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Gewusst wie: Abrufen der seit dem Start vergangenen Zeit (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Im folgenden Codebeispiel wird dargestellt, wie die Tickrate oder die Anzahl der seit dem Start von Windows vergangenen Millisekunden ermittelt werden.  Der Wert wird im <xref:System.Environment.TickCount*?displayProperty=fullName>\-Member gespeichert und ungefähr alle 24,9 Tage auf 0 \(null\) zurückgesetzt, da es sich um einen 32\-Bit\-Wert handelt.  
+# <a name="how-to-retrieve-time-elapsed-since-startup-ccli"></a>Gewusst wie: Abrufen der seit dem Start vergangenen Zeit (C++/CLI)
+Im folgenden Codebeispiel wird veranschaulicht, wie die Anzahl der Ticks bestimmen oder Anzahl der Millisekunden, die seit Windows vergangen sind, wurde gestartet. Dieser Wert wird gespeichert, der <xref:System.Environment.TickCount%2A?displayProperty=fullName> Member und, da es sich um einen 32-Bit-Wert handelt, wird auf Null zurückgesetzt ungefähr alle 24,9 Tage.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // startup_time.cpp  
@@ -53,6 +56,6 @@ int main( )
 }  
 ```  
   
-## Siehe auch  
- [Windows\-Vorgänge](../dotnet/windows-operations-cpp-cli.md)   
- [.NET\-Programmierung mit C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [Windows-Vorgänge (C + c++ / CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [.NET-Programmierung mit C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

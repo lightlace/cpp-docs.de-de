@@ -18,11 +18,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b944be379b851410a7c45af5aa05e72dbf63037c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2c42fc8d71871a70e3a2d3ffa93a78a4e42d2f53
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multimap-stlclr"></a>multimap (STL/CLR)
 Die Vorlagenklasse beschreibt ein Objekt, das eine Elementsequenz variabler Länge steuert, die bidirektionalen Zugriff hat. Verwenden Sie den Container `multimap` Vewaltung eine Sequenz von Elementen als (fast) mit Lastenausgleich geordneten Struktur der Knoten, jeweils ein Element speichern kann. Ein Element besteht aus einem Schlüssel, für die Anordnung der Sequenz und zugeordneten Werts, der für die fuhr wechselt zusammen.  
@@ -61,7 +64,7 @@ template<typename Key,
  Zugeordnet  
  Der Typ der Komponente zusätzliche eines Elements in der kontrollierten Sequenz.  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 |Typdefinition|Beschreibung|  
 |---------------------|-----------------|  
@@ -118,7 +121,7 @@ template<typename Key,
   
 ## <a name="interfaces"></a>Schnittstellen  
   
-|Schnittstelle|Beschreibung|  
+|Interface|Beschreibung|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|Duplizieren Sie ein Objekt.|  
 |<xref:System.Collections.IEnumerable>|Durch die Elemente der Sequenz.|  

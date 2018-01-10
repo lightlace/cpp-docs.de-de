@@ -1,34 +1,33 @@
 ---
-title: "Compilerwarnung (Stufe 4) C4238 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4238"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4238"
+title: Compilerwarnung (Stufe 4) C4238 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4238
+dev_langs: C++
+helpviewer_keywords: C4238
 ms.assetid: 5d4051d3-7b0f-43ea-8c8d-d194bfdceb71
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8e8e52868d97d31243f92307e9bfd158c818c2f8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 4) C4238
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Nicht dem Standard entsprechende Erweiterung: R\-Wert einer Klasse als L\-Wert verwendet  
+# <a name="compiler-warning-level-4-c4238"></a>Compilerwarnung (Stufe 4) C4238
+nicht dem Standard entsprechende Erweiterung: Klasse Rvalue als Lvalue verwendet  
   
- Um Kompatibilität mit früheren Versionen von Visual C\+\+ zu gewährleisten, ermöglichen es die Microsoft\-Erweiterungen \(**\/Ze**\), einen Klassentyp in einem Kontext, in dem seine Adresse implizit oder explizit übernommen wird, als R\-Wert zu verwenden.  Dies kann sich jedoch in einigen Fällen, z. B. im folgenden Beispiel, als riskant erweisen.  
+ Um die Kompatibilität mit früheren Versionen von Visual C++, Microsoft-Erweiterungen (**"/ Ze"**) ermöglichen es Ihnen, einen Klassentyp zu verwenden, wie ein Rvalue-Wert in einem Kontext, implizit oder explizit auf die Adresse akzeptiert. Dies kann in einigen Fällen, wie im folgenden Beispiel gefährlich sein.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // C4238.cpp  
@@ -40,4 +39,4 @@ struct C {
 C * pC = &C();   // C4238  
 ```  
   
- Bei Einhaltung der ANSI\-Kompatibilität \([\/Za](../../build/reference/za-ze-disable-language-extensions.md)\) resultiert aus dieser Verwendungsweise ein Fehler.
+ Diese Art der Verwendung verursacht einen Fehler unter ANSI-Kompatibilität (["/ Za"](../../build/reference/za-ze-disable-language-extensions.md)).

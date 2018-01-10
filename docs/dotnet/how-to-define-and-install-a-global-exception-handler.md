@@ -1,32 +1,34 @@
 ---
-title: "Gewusst wie: Definieren und Installieren eines globalen Ausnahmehandlers | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Handler, Global"
+title: 'Vorgehensweise: definieren und installieren ein globalen Ausnahmehandlers | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: handlers, global
 ms.assetid: dd88a812-3bc7-4ce8-8283-4b674c246534
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f1d9b1125fc54ecbd75fc49b36498a99f5e86f28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Gewusst wie: Definieren und Installieren eines globalen Ausnahmehandlers
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Im folgenden Codebeispiel wird veranschaulicht, wie Ausnahmen erfasst werden können.  Das Beispielsformular enthält eine Schaltfläche, die, falls sie gedrückt wird, einen NULL\-Verweis ausführt und bewirkt eine Ausnahme ausgelöst.  Diese Funktion stellt einen typischen Codefehler dar.  Die resultierende Ausnahme wird vom Ausnahmehandler anwendungsweiten abgefangen, der von der Hauptfunktion installiert ist.  
+# <a name="how-to-define-and-install-a-global-exception-handler"></a>Gewusst wie: Definieren und Installieren eines globalen Ausnahmehandlers
+Im folgenden Codebeispiel wird veranschaulicht, wie nicht behandelte Ausnahmen erfasst werden können. Das Beispielformular eine Schaltfläche enthält, wenn gedrückt wird, führt einen null-Verweis, verursacht eine Ausnahme ausgelöst werden. Diese Funktion stellt einen typische Code Fehler dar. Die resultierende Ausnahme wird vom installiert, indem Sie die main-Funktion eine anwendungsweite Ausnahmehandler abgefangen.  
   
- Dies wird erreicht, indem einen Delegaten dem <xref:System.Windows.Forms.Application.ThreadException>\-Ereignis bindet.  In diesem Fall wird folgende Ausnahmen dann zur `App::OnUnhandled`\-Methode gesendet.  
+ Dies wird erreicht, indem das Binden eines Delegaten an die <xref:System.Windows.Forms.Application.ThreadException> Ereignis. Nachfolgende Ausnahmen werden in diesem Fall dann gesendet, um die `App::OnUnhandled` Methode.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // global_exception_handler.cpp  
@@ -80,5 +82,5 @@ int main()
 }  
 ```  
   
-## Siehe auch  
- [Exception Handling](../windows/exception-handling-cpp-component-extensions.md)
+## <a name="see-also"></a>Siehe auch  
+ [Ausnahmebehandlung](../windows/exception-handling-cpp-component-extensions.md)

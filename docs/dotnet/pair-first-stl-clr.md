@@ -1,41 +1,42 @@
 ---
-title: "pair::first (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::pair::first"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "first-Member [STL/CLR]"
+title: Pair::First (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::pair::first
+dev_langs: C++
+helpviewer_keywords: first member [STL/CLR]
 ms.assetid: 0dd2278f-adf9-46df-8ac8-7e8e1a2ef52e
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 33b6183dd78225081c77e5cad06ed707f6bf7abe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# pair::first (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Der zuerst umschlossene Wert.  
+# <a name="pairfirst-stlclr"></a>pair::first (STL/CLR)
+Der erste umschlossene Wert.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 Value1 first;  
 ```  
   
-## Hinweise  
- Das Objekt speichert den zuerst umschlossenen Wert.  
+## <a name="remarks"></a>Hinweise  
+ Das Objekt speichert den ersten Wert des umschlossenen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_pair_first.cpp   
@@ -55,14 +56,17 @@ int main()
   
 ```  
   
-  **\[x, 3\]**   
-## Anforderungen  
- **Header:** \<cliext\/Hilfsprogramm\>  
+```Output  
+[x, 3]  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext-Hilfsprogramm >  
   
-## Siehe auch  
- [pair](../dotnet/pair-stl-clr.md)   
- [pair::first\_type](../dotnet/pair-first-type-stl-clr.md)   
- [pair::second](../dotnet/pair-second-stl-clr.md)   
- [pair::second\_type](../dotnet/pair-second-type-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Paar (STL/CLR)](../dotnet/pair-stl-clr.md)   
+ [Pair::first_type (STL/CLR)](../dotnet/pair-first-type-stl-clr.md)   
+ [Pair:: Second (STL/CLR)](../dotnet/pair-second-stl-clr.md)   
+ [pair::second_type (STL/CLR)](../dotnet/pair-second-type-stl-clr.md)

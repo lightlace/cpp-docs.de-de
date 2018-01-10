@@ -1,40 +1,42 @@
 ---
-title: "for each, in | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::foreach"
-  - "for"
-  - "each"
-  - "in"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "for-each-Schlüsselwort [C++]"
+title: "für jedes in | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- cliext::foreach
+- for
+- each
+- in
+dev_langs: C++
+helpviewer_keywords: for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-caps.latest.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
+caps.latest.revision: "24"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5dab51168b656422ddcf2c317a7f7fee1faf162e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# for each, in
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Durchläuft ein Array oder eine Auflistung.  Dieses nicht standardmäßige Schlüsselwort ist sowohl in C\+\+\/CLI und nativen C\+\+\-Projekten verfügbar.  Seine Verwendung wird jedoch nicht empfohlen.  Verwenden Sie stattdessen eine standardmäßige [Bereichsbasiert für Anweisung \(C\+\+\)](../cpp/range-based-for-statement-cpp.md)\-Methode.  
+# <a name="for-each-in"></a>for each, in
+Durchläuft ein Array oder eine Auflistung. Dieses nicht standardmäßige Schlüsselwort ist sowohl in C++/CLI und nativen C++-Projekten verfügbar. Seine Verwendung wird jedoch nicht empfohlen. Betrachten Sie mithilfe eines Standarddialogfelds [bereichsbasiert für Anweisung (C++)](../cpp/range-based-for-statement-cpp.md) stattdessen.  
   
-## Alle Laufzeiten  
+## <a name="all-runtimes"></a>Alle Laufzeiten  
  **Syntax**  
   
 ```  
   
-        for each (type identifier in expression) {  
+      for each (typeidentifierinexpression) {  
    statements  
 }  
   
@@ -43,41 +45,41 @@ Durchläuft ein Array oder eine Auflistung.  Dieses nicht standardmäßige Schl�
  **Parameter**  
   
  `type`  
- Der `identifier`\-Typ.  
+ Der `identifier`-Typ.  
   
  `identifier`  
- Die Iterationsvariable, die das Auflistungselement darstellt.  Wenn `identifier` ein [Tracking Reference Operator](../windows/tracking-reference-operator-cpp-component-extensions.md) ist, können Sie das Element ändern.  
+ Die Iterationsvariable, die das Auflistungselement darstellt.  Wenn `identifier` ist ein [Verweisoperator nachverfolgen](../windows/tracking-reference-operator-cpp-component-extensions.md), können Sie das Element ändern.  
   
  `expression`  
- Ein Arrayausdruck oder eine Auflistung.  Das Auflistungselement muss zulassen, dass der Compiler es in den Typ `identifier` konvertieren kann.  
+ Ein Arrayausdruck oder eine Auflistung. Das Auflistungselement muss zulassen, dass der Compiler es in den Typ `identifier` konvertieren kann.  
   
  `statements`  
  Eine oder mehrere auszuführende Anweisungen.  
   
  **Hinweise**  
   
- Die `for each`\-Anweisung wird zum Durchlaufen einer Auflistung verwendet.  Sie können Elemente in einer Auflistung ändern, aber keine Elemente hinzufügen oder löschen.  
+ Die `for each`-Anweisung wird zum Durchlaufen einer Auflistung verwendet. Sie können Elemente in einer Auflistung ändern, aber keine Elemente hinzufügen oder löschen.  
   
- Die *statements* werden für jedes Element im Array oder in der Auflistung ausgeführt.  Nachdem die Iteration alle Elemente in der Auflistung durchlaufen hat, wird die Steuerung an die nächste Anweisung, die auf den `for each`\-Block folgt, übergeben.  
+ Die *Anweisungen* für jedes Element in den Arrays oder einer Auflistung ausgeführt werden. Nachdem die Iteration alle Elemente in der Auflistung durchlaufen hat, wird die Steuerung an die nächste Anweisung, die auf den `for each`-Block folgt, übergeben.  
   
- `for each` und `in` sind [kontextbezogene Schlüsselwörter](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+ `for each`und `in` sind [Kontextbezogene Schlüsselwörter](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
- Weitere Informationen finden Sie unter:  
+ Weitere Informationen finden Sie unter:   
   
--   [Eine STL\-Auflistung mit der for\-each\-Klausel durchlaufen](../dotnet/iterating-over-stl-collection-by-using-for-each.md)  
+-   [Eine C++-Standardbibliotheksauflistung mit der for-each-Klausel durchlaufen](../dotnet/iterating-over-stl-collection-by-using-for-each.md)  
   
--   [Gewusst wie: Durchlaufen von Arrays mit der for\-each\-Klausel](../dotnet/how-to-iterate-over-arrays-with-for-each.md)  
+-   [Vorgehensweise: Durchlaufen von Arrays mit der for-each-Klausel](../dotnet/how-to-iterate-over-arrays-with-for-each.md)  
   
--   [Gewusst wie: Durchlaufen einer generischen Auflistung mit der for\-each\-Klausel](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)  
+-   [Vorgehensweise: Durchlaufen einer generischen Auflistung mit der for-each-Klausel](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)  
   
--   [Gewusst wie: Durchlaufen einer benutzerdefinierten Auflistung mit der for\-each\-Klausel](../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)  
+-   [Vorgehensweise: Durchlaufen einer benutzerdefinierten Auflistung mit der for-each-Klausel](../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+## <a name="windows-runtime"></a>Windows-Runtime  
   
-### Anforderungen  
- Compileroption: **\/ZW**  
+### <a name="requirements"></a>Anforderungen  
+ Compileroption: **/ZW**  
   
-### Beispiel  
+### <a name="example"></a>Beispiel  
  Dieses Beispiel zeigt, wie `for each` zum Durchlaufen einer Zeichenfolge verwendet wird.  
   
 ```  
@@ -108,22 +110,26 @@ int main() {
   
  **Ausgabe**  
   
-  **abcd**  
- **Testen**   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
+```Output  
+abcd  
+  
+Testing  
+```  
+  
+## <a name="common-language-runtime"></a>Common Language Runtime 
  **Hinweise**  
   
- Die CLR\-Syntax ist mit der **Alle Laufzeiten**\-Syntax identisch, mit folgenden Ausnahmen.  
+ Die CLR-Syntax ist identisch mit der **alle Laufzeiten** Syntax, außer wie folgt.  
   
- *expression*  
- Ein verwalteter Arrayausdruck oder eine Auflistung.  Das Auflistungselement muss zulassen, dass der Compiler es vom Typ <xref:System.Object> in den Typ *identifier* konvertieren kann.  
+ *Ausdruck*  
+ Ein verwalteter Arrayausdruck oder eine Auflistung. Das Auflistungselement muss zulassen, sodass der Compiler ihn von konvertieren kann <xref:System.Object> auf die *Bezeichner* Typ.  
   
- *expression* wird zu einem Typ ausgewertet, der <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable`1> implementiert, oder zu einem Typ, der eine `GetEnumerator`\-Methode definiert, die entweder einen Typ zurückgibt, der <xref:System.Collections.IEnumerator> implementiert oder alle Methoden deklariert, die in `IEnumerator` definiert sind.  
+ *Ausdruck* ergibt ein Typ, der implementiert <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, oder ein Typ, definiert einen `GetEnumerator` Methode, die entweder einen Typ zurückgibt, implementiert <xref:System.Collections.IEnumerator> oder deklariert alle Methoden, die in definiertsind`IEnumerator`.  
   
-### Anforderungen  
- Compileroption: **\/clr**  
+### <a name="requirements"></a>Anforderungen  
+ Compileroption: **/clr**  
   
-### Beispiel  
+### <a name="example"></a>Beispiel  
  Dieses Beispiel zeigt, wie `for each` zum Durchlaufen einer Zeichenfolge verwendet wird.  
   
 ```  
@@ -153,7 +159,11 @@ int main() {
   
  **Ausgabe**  
   
-  **abcd**  
- **Testen**    
-## Siehe auch  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+```Output  
+abcd  
+  
+Testing   
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)

@@ -1,41 +1,44 @@
 ---
-title: "Anforderungen f&#252;r STL/CLR-Containerelemente | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Container, STL"
-  - "Container, STL/CLR"
-  - "C++-Standardbibliothek, Vorlangenklassencontainer"
-  - "STL/CLR, Container"
+title: "Anforderungen für STL/CLR-Containerelemente | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- C++ Standard Library, template class containers
+- STL/CLR, containers
+- containers, STL/CLR
+- containers, C++ Standard Library
 ms.assetid: 59ab240c-15bf-4701-a9f9-e7c56e5ab53f
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3317e3c9349963fc24b37b421def05c475732fd8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Anforderungen f&#252;r STL/CLR-Containerelemente
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Alle Referenztypen, die in STL\/CLR\-Container eingefügt werden, müssen mindestens die folgenden Elemente enthalten:  
+# <a name="requirements-for-stlclr-container-elements"></a>Anforderungen für STL/CLR-Containerelemente
+Alle Verweistypen, die in STL/CLR-Container eingefügt werden müssen mindestens die folgenden Elemente umfassen:  
   
--   Ein öffentlicher Kopierkonstruktor.  
+-   Öffentlichen Kopierkonstruktor.  
   
--   Ein Operator der öffentlichen Zweckbestimmung.  
+-   Eine öffentliche Zuweisungsoperator.  
   
--   Ein öffentlicher Destruktor.  
+-   Einen öffentlichen Destruktor.  
   
- Darüber hinaus müssen assoziative Container wie [Festlegen](../dotnet/set-stl-clr.md) und [Zuordnung](../dotnet/map-stl-clr.md) einen öffentlichen definierten Vergleichsoperator haben, der die `operator<` standardmäßig ist.  Einige Vorgänge in Containern benötigen auch einen öffentlichen Standardkonstruktor definiert werden und einen öffentlichen Äquivalenzoperator.  
+ Darüber hinaus assoziative Container wie z. B. [festgelegt](../dotnet/set-stl-clr.md) und [Zuordnung](../dotnet/map-stl-clr.md) benötigen einen öffentlich definierten Vergleichsoperator, also `operator<` standardmäßig. Einige Vorgänge in Containern möglicherweise auch einen öffentlichen Standardkonstruktor und einen öffentlichen Äquivalenzoperator definiert werden.  
   
- Wie Referenztypen müssen Werttypen und Handles zu den Typen verweisen, die in einem assoziativen Container eingefügt werden sollen, ein Vergleichsoperator wie `operator<` aufweisen definiert haben.  Die Anforderungen für einen öffentlichen Kopierkonstruktor, Operator der öffentlichen Zweckbestimmung und einen öffentlichen Destruktor vorhanden für Werttypen nicht oder Handles in Verweistypen.  
+ Wie Verweistypen, Werttypen und Handles zum Verweisen auf Typen, die in ein assoziativer Container eingefügt werden sollen benötigen einen Vergleichsoperator z. B. `operator<` definiert. Die Anforderungen für einen öffentlichen Kopierkonstruktor, öffentliche Zuweisungsoperator und einen öffentlichen Destruktor sind nicht für Werttypen oder Handles zum Verweisen auf Typen vorhanden.  
   
-## Siehe auch  
- [Standard Template Library](../misc/standard-template-library.md)
+## <a name="see-also"></a>Siehe auch  
+ [C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)

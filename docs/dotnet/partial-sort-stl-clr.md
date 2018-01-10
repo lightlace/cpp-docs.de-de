@@ -1,32 +1,33 @@
 ---
-title: "partial_sort (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::partial_sort"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "partial_sort-Funktion [STL/CLR]"
+title: Partial_sort (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::partial_sort
+dev_langs: C++
+helpviewer_keywords: partial_sort function [STL/CLR]
 ms.assetid: 5a73b275-aef0-4bda-8ae3-7c1196fe49c4
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 038fe6530c608d514b8fc326bfd2ac1026e1061d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# partial_sort (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ordnet eine angegebene Anzahl kleinerer Elemente in einem Bereich in eine nondescending Reihenfolge oder entsprechend einem Sortierkriterium an, das durch ein binäres Prädikat angegeben wird.  
+# <a name="partialsort-stlclr"></a>partial_sort (STL/CLR)
+Ordnet eine bestimmte Anzahl von kleineren Elementen in einem Bereich in einer aufsteigenden Reihenfolge oder gemäß eines Sortierkriteriums an, das von einem binären Prädikat angegeben wird.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class _RanIt> inline  
@@ -36,13 +37,13 @@ template<class _RanIt, class _Pr> inline
         _Pr _Pred);  
 ```  
   
-## Hinweise  
- Diese Funktion verhält sich genauso wie die STL\-Funktion `partial_sort`.  Weitere Informationen finden Sie unter [partial\_sort](../Topic/partial_sort.md).  
+## <a name="remarks"></a>Hinweise  
+ Diese Funktion verhält sich wie die C++-Standardbibliothek Funktion `partial_sort`. Weitere Informationen finden Sie unter [Partial_sort](../standard-library/algorithm-functions.md#partial_sort).  
   
-## Anforderungen  
- **Header:** \<cliext\/Algorithmus\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext-Algorithmus >  
   
- **Namespace:** cliext  
+ **Namespace:** Cliext  
   
-## Siehe auch  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Siehe auch  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

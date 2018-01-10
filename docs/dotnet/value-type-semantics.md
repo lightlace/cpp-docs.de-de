@@ -1,42 +1,45 @@
 ---
-title: "Werttypsemantik | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__pin-Schlüsselwort"
-  - "Vererbung, Werttypen"
-  - "interior_ptr-Schlüsselwort [C++]"
-  - "pin_ptr-Schlüsselwort [C++]"
-  - "Festhalten von Zeigern"
-  - "Virtuelle Funktionen, Werttypen"
+title: Wert Typsemantik | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- interior_ptr keyword [C++]
+- virtual functions, value types
+- inheritance, value types
+- pinning pointers
+- pin_ptr keyword [C++]
+- __pin keyword
 ms.assetid: 7f065589-ad25-4850-baf1-985142e35e52
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 21a7d6bcba2fca3fddd6f5e234663d6791398f5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Werttypsemantik
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die Werttypsemantik hat sich in [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] gegenüber Managed Extensions for C\+\+ geändert.  
+# <a name="value-type-semantics"></a>Werttypsemantik
+Werttypsemantik haben sich von Managed Extensions für C++ in Visual C++ geändert.  
   
- Dies ist der kanonische, einfache Werttyp, der in der Spezifikation von Managed Extensions for C\+\+ verwendet wird:  
+ So sieht die kanonische einfacher Werttyp in Managed Extensions für C++-Spezifikation verwendet:  
   
 ```  
 __value struct V { int i; };  
 __gc struct R { V vr; };  
 ```  
   
- In Managed Extensions können vier syntaktische Varianten von Werttypen vorkommen \(wobei Form 2 und 3 semantisch gleich sind\):  
+ In Managed Extensions können wir haben vier syntaktische Varianten eines Werttyps (wobei entsprechen Forms 2 und 3 semantisch):  
   
 ```  
 V v = { 0 };       // Form (1)  
@@ -45,54 +48,54 @@ V __gc *pvgc = 0;  // Form (3)
 __box V* pvbx = 0; // Form (4) must be local   
 ```  
   
-## Aufrufen geerbter virtueller Methoden  
- `Form (1)` ist das kanonische Wertobjekt. Dies ist verhältnismäßig gut zu verstehen, solange niemand versucht, eine geerbte virtuelle Methode wie `ToString()` aufzurufen.  Beispiel:  
+## <a name="invoking-inherited-virtual-methods"></a>Geerbte virtuelle Methoden aufrufen  
+ `Form (1)`ist die kanonische, und es ist ausreichend gut verstanden, außer wenn jemand versucht, auf eine geerbte virtuelle Methode aufrufen, wie z. B. `ToString()`. Zum Beispiel:  
   
 ```  
 v.ToString(); // error!  
 ```  
   
- Da diese Methode in `V` nicht überschrieben wird, muss der Compiler, um sie aufzurufen, Zugriff auf die zugeordnete virtuelle Tabelle der Basisklasse haben.  Da sich Werttypen ohne den zugeordneten Zeiger auf die virtuelle Tabelle \(vptr\) im Zustandsspeicher befinden, muss `v` geschachtelt sein.  Im Sprachdesign von Managed Extensions wird implizites Boxing nicht unterstützt, sondern muss explizit durch den Programmierer angegeben werden, wie in  
+ Um diese Methode aufzurufen, da er nicht in überschrieben wird `V`, der Compiler muss Zugriff auf die zugeordnete virtuelle Tabelle der Basisklasse haben. Da Werttypen ohne den zugeordneten Zeiger auf die virtuelle Tabelle (Vptr) im Zustandsspeicher sind, dies erfordert, dass `v` geschachtelt werden. In der Managed Extensions-Language-Entwurf implizites Boxing wird nicht unterstützt, jedoch muss explizit angegeben werden vom Programmierer, wie in  
   
 ```  
 __box( v )->ToString(); // Managed Extensions: note the arrow  
 ```  
   
- Das Hauptmotiv für dieses Design ist pädagogischer Natur: Den Programmierern soll der zugrunde liegende Mechanismus sichtbar gemacht werden. Sie sollen den Aufwand verstehen, der dadurch entsteht, dass innerhalb des Werttyps keine Instanz bereitgestellt wird.  Enthielte `V` eine Instanz von `ToString`, wäre das Boxing nicht notwendig.  
+ Die primären Durchführbarkeit dieses Design ist pädagogischer Natur: zugrunde liegende Mechanismus muss sichtbar gemacht werden, damit sie verstehen, die Kosten für eine Instanz in ihrem Werttyp nicht bereitgestellt wird. Wurden `V` enthält eine Instanz von `ToString`, das Boxing wäre nicht erforderlich.  
   
- Die lexikalische Komplexität expliziten Boxings des Objekts entfällt in der neuen Syntax, nicht jedoch der damit verbundene Aufwand:  
+ Die lexikalische Komplexität von explizit boxing des Objekts, aber nicht die zugrunde liegenden Kosten für das Boxing selbst wird in der neuen Syntax entfernt:  
   
 ```  
 v.ToString(); // new syntax  
 ```  
   
- Allerdings täuscht dies möglicherweise den Klassendesigner bezüglich des Aufwands, der dadurch entsteht, keine explizite Instanz der `ToString`\-Methode innerhalb von `V` bereitzustellen.  Implizites Boxing wird aus folgenden Gründen bevorzugt: Üblicherweise gibt es nur einen Klassendesigner, jedoch viele Benutzer, die nicht die Berechtigung besitzen, `V` zu ändern, um das möglicherweise lästige explizite Boxing zu beseitigen.  
+ jedoch wird möglicherweise der Klassen-Designer auf die Kosten müssen explizite Instanz nicht angegeben irreführend der `ToString` Methode innerhalb `V`. Der Grund für implizites Boxing ist, dass zwar gibt es in der Regel nur eine Klassen-Designer, es eine unbegrenzte Anzahl von Benutzern gibt, none, von denen müsste die Freiheit gibt, ändern Sie `V` explizite Feld möglicherweise sehr aufwändig zu vermeiden.  
   
- Als Kriterien für die Entscheidung, ob innerhalb einer Wertklasse eine überschreibende Instanz von `ToString` bereitgestellt wird, bieten sich Ort und Häufigkeit ihrer Verwendung an.  Wenn sie sehr selten aufgerufen wird, bietet ihre Definition natürlich wenig Nutzen.  Ebenso wird sie die allgemeine Leistung der Anwendung nicht spürbar verbessern, wenn sie in einem nicht\-leistungsfähigen Bereich der Anwendung aufgerufen wird.  Alternativ kann ein Trackinghandle für den geschachtelten Wert eingerichtet werden, da Aufrufe über den Handle kein Boxing erfordern.  
+ Die Kriterien, um zu bestimmen, ob eine überschreibende Instanz der bieten `ToString` Klasse sollte in einem Wert sein, die Häufigkeit und Position Verwendungen. Wenn sie sehr selten aufgerufen wird, ist natürlich wenig Vorteile in ihrer Definition. Auf ähnliche Weise, wenn sie in nicht-leistungsfähigen Bereiche der Anwendung aufgerufen wird, werden hinzufügen auch nicht messbar die allgemeine Leistung der Anwendung hinzufügen. Klicken Sie alternativ eine kann ein Trackinghandle für den geschachtelten Wert beibehalten und Aufrufe über den Handle ist kein Boxing notwendig.  
   
-## Einen Standardkonstruktor für Wertklassen gibt es nicht mehr  
- Ein weiterer Unterschied der neuen Syntax gegenüber Managed Extensions bezüglich Werttypen ist die fehlende Unterstützung eines Standardkonstruktors.  Das liegt daran, dass die CLR unter Umständen während der Ausführung eine Instanz des Werttyps erstellen kann, ohne den zugeordneten Standardkonstruktor aufzurufen.  Die Unterstützung eines Standardkonstruktors innerhalb eines Werttyps konnte unter Managed Extensions in der Praxis nicht gewährleistet werden.  Daher wurde es als besser angesehen, auf die Unterstützung insgesamt zu verzichten, als sie unbestimmt in der Anwendung zu belassen.  
+## <a name="there-is-no-longer-a-value-class-default-constructor"></a>Es ist nicht mehr eine Default-Wert Klassenkonstruktor  
+ Ein weiterer Unterschied mit einem Werttyp zwischen Managed Extensions und der neuen Syntax ist das Entfernen der Unterstützung für einen Standardkonstruktor. Dies ist da während der Ausführung in der CLR eine Instanz des Werttyps erstellen kann Gesicht, ohne den zugeordneten Standardkonstruktor aufrufen. Der Versuch in Managed Extensions, die einen trivialen Konstruktor innerhalb eines Werttyps unterstützen kann, also nicht in der Praxis garantiert werden. Angesichts dieser Abwesenheit Garantie, wurde es sind zu besser sein, die Unterstützung zu löschen, anstatt es in ihrer Anwendung nicht deterministisch sein.  
   
- Dieser Ansatz ist nicht so schlecht, wie es zunächst scheint.  Denn jedes einzelne Objekt eines Werttyps wird automatisch eliminiert \(d. h., jeder Typ wird mit seinem Standardwert initialisiert\).  Das heißt, die Member einer lokalen Instanz sind nie undefiniert.  In diesem Sinne ist das Fehlen der Möglichkeit, einen trivialen Standardkonstruktor zu definieren, überhaupt kein Verlust, vielmehr erhöht es die Effizienz bei der Ausführung durch die CLR.  
+ Dies ist nicht als fehlerhaft, wie es ursprünglich scheint. Dies ist, da jedes Objekt eines Werttyps wird automatisch eliminiert (d. h., jeder Typ wird auf den Standardwert initialisiert). Dies hat zur Folge, dass die Mitglieder einer lokalen Instanz nie nicht definiert. In diesem Sinn der Verlust der Fähigkeit, die einen trivialen Standardkonstruktor definieren ist wirklich keine Verlust überhaupt - und in der Tat ist jedoch effizienter, wenn von der CLR ausgeführt.  
   
- Problematisch kann es werden, wenn ein Benutzer von Managed Extensions einen nicht\-trivialen Standardkonstruktor definiert.  Für diesen gibt es keine Zuordnung in der neuen Syntax.  Der Code innerhalb des Konstruktors muss dann in eine benannte Initialisierungsmethode migriert werden, die anschließend durch den Benutzer explizit aufgerufen werden muss.  
+ Das Problem ist, wenn ein Benutzer von Managed Extensions einen nicht trivialen Standardkonstruktor definiert. Dies hat keine Zuordnung in die neue Syntax. Der Code im Konstruktor müssen in eine benannte Initialisierungsmethode migriert werden, die anschließend explizit vom Benutzer aufgerufen werden muss.  
   
- Im Übrigen ist die Deklaration eines Werttypobjekts in der neuen Syntax unverändert.  Andererseits sind dadurch Werttypen zum Umschließen systemeigener Typen aus den folgenden Gründen nur unzureichend geeignet:  
+ Die Deklaration eines Objekts vom Typ Wert in der neuen Syntax ist andernfalls nicht geändert. Der Nachteil dieses ist, dass Werttypen nicht aus den folgenden Gründen für die Einbindung der systemeigenen Typen sind:  
   
--   Es gibt keine Unterstützung für einen Destruktor innerhalb eines Werttyps.  Das bedeutet, dass es keine Möglichkeit gibt, am Ende der Lebensdauer eines Objekts automatisch eine Reihe von Aktionen auszulösen.  
+-   Es gibt keine Unterstützung für einen Destruktor innerhalb eines Werttyps. Es ist also keine Möglichkeit, eine Reihe von Aktionen, die ausgelöst wird, indem am Ende der Lebensdauer eines Objekts zu automatisieren.  
   
--   Eine systemeigene Klasse kann nur in einem verwalteten Typ als Zeiger enthalten sein, der dann auf dem systemeigenen Heap zugeordnet wird.  
+-   Eine systemeigene Klasse kann nur innerhalb eines verwalteten Typs als Zeiger enthalten sein, der dann auf dem systemeigenen Heap zugeordnet ist.  
   
- Eine kleine systemeigene Klasse wird besser mit einem Werttyp umschlossen als mit einem Referenztyp, um eine doppelte Reservierung auf dem Heap zu vermeiden: Für den systemeigenen Typ auf dem systemeigenen Heap und für den verwalteten Wrapper auf dem CLR\-Heap.  Durch das Umschließen einer systemeigenen Klasse mit einem Werttyp können Sie die Reservierung auf dem verwalteten Heap vermeiden, der Speicher auf dem systemeigenen Heap wird jedoch nicht automatisch freigegeben.  Referenztypen sind die einzigen verwalteten Typen, mit denen nicht\-triviale systemeigene Klassen umschlossen werden können.  
+ Wir möchten gerne umschließen eine kleine systemeigene Klasse ein Werttyp, statt ein Verweistyp eine doppelte Heapzuweisung zu vermeiden: systemeigenen Heap, die den systemeigenen Typ und dem CLR-Heap auf den verwalteten Wrapper. Umschließen einer systemeigenen Klasse innerhalb eines Werttyps ermöglicht Ihnen, zu den verwalteten Heap zu vermeiden, bietet jedoch keine Möglichkeit, die Freigabe von Speicher auf dem systemeigenen Heap zu automatisieren. Verweistypen sind die einzigen verwalteten Typen, in dem nicht triviale systemeigene Klassen zu umschließen.  
   
-## Innere Zeiger  
- Die oben genannten `Form (2)` und `Form (3)` können nahezu alles adressieren \(d. h. alles, was verwaltet oder systemeigen ist\).  Deshalb sind in Managed Extensions alle folgenden Beispiele zulässig:  
+## <a name="interior-pointers"></a>Inneren Zeigern  
+ `Form (2)`und `Form (3)` höher können beheben nahezu alles in dieser Welt oder bei der nächsten (d. h. alles, was verwaltetem oder systemeigenem). Deshalb sind z. B. Folgendes in Managed Extensions zulässig:  
   
 ```  
 __value struct V { int i; };  
 __gc struct R { V vr; };  
   
-V v = { 0 };  // Form (1)  
+V v = { 0 };  // Form (1)  
 V *pv = 0;  // Form (2)  
 V __gc *pvgc = 0;  // Form (3)  
 __box V* pvbx = 0;  // Form (4)  
@@ -107,11 +110,11 @@ pv = &r->vr;        // an interior pointer to value type within a
                     //    reference type on the managed heap  
 ```  
   
- Somit kann ein `V*` einen Speicherort innerhalb eines lokalen Blocks adressieren \(ein "hängender" Zeiger\), auf globaler Gültigkeitsebene, innerhalb des systemeigenen Heaps \(z. B., wenn das adressierte Objekt bereits gelöscht wurde\), innerhalb des CLR\-Heaps \(weshalb es verfolgt wird, falls es durch die Garbage Collection verschoben wird\) und innerhalb eines Verweisobjekts auf dem CLR\-Heap \(wo es als so genannter innerer Zeiger ebenfalls transparent verfolgt wird\).  
+ Deshalb eine `V*` können einen Speicherort innerhalb eines lokalen Blocks adressieren (und daher Verbleibend werden können), im globalen Gültigkeitsbereich, in dem systemeigenen heap (z. B., wenn das Objekt, das er adressiert bereits gelöscht wurde), in dem CLR-Heap (und daher wird nachverfolgt werden, wenn es sollten verlagert werden während der Garbagecollection), und klicken Sie im inneren eines Verweis-Objekts auf dem CLR-Heap (ein innerer Zeiger wie diese aufgerufen wird, ist ebenfalls transparent nachverfolgt).  
   
- In Managed Extensions gibt es keine Möglichkeit, die systemeigenen Aspekte eines `V*` voneinander zu trennen; d. h., es wird inklusiv behandelt, womit der Möglichkeit, ein Objekt oder ein Unterobjekt auf dem verwalteten Heap zu adressieren, Rechnung getragen wird.  
+ In Managed Extensions besteht keine Möglichkeit, die systemeigenen Aspekte auszusondern eine `V*`; d. h. es wird behandelt inklusiv behandelt die Möglichkeit, dass ein Objekt oder ein Unterobjekt auf dem verwalteten Heap zu adressieren.  
   
- In der neuen Syntax werden Werttypzeiger in zwei Typen unterteilt: `V*`, das auf nicht\-CLR\-Heap\-Speicherorte beschränkt ist, und der interne Zeiger `interior_ptr<V>`, der eine Adresse auf dem verwalteten Heap unterstützt, aber nicht erfordert.  
+ In der neuen Syntax wird der Zeiger ein Wert vom Typ in der zwei Arten berücksichtigt: `V*`, also auf nicht-CLR-Heap-Speicherorte und der inneren Zeiger beschränkt `interior_ptr<V>`, die ermöglicht jedoch eine Adresse im verwalteten Heap ist nicht erforderlich.  
   
 ```  
 // may not address within managed heap   
@@ -121,13 +124,13 @@ V *pv = 0;
 interior_ptr<V> pvgc = nullptr;   
 ```  
   
- `Form (2)` und `Form (3)` der Managed Extensions sind `interior_ptr<V>` zugeordnet.  `Form (4)` ist ein Trackinghandle.  Es adressiert das gesamte Objekt, das innerhalb des verwalteten Heaps geschachtelt worden ist.  Es wird in der neuen Syntax in ein `V^` übersetzt.  
+ `Form (2)`und `Form (3)` Zuordnen von Managed Extensions `interior_ptr<V>`. `Form (4)`ist ein Trackinghandle. Behandelt das gesamte Objekt, das auf dem verwalteten Heap mittels Boxing konvertiert wurde. Er wird in der neuen Syntax in übersetzt eine `V^`,  
   
 ```  
 V^ pvbx = nullptr; // __box V* pvbx = 0;    
 ```  
   
- Alle folgenden Deklarationen in Managed Extensions sind in der neuen Syntax inneren Zeigern zugeordnet. \(Es handelt sich um Werttypen innerhalb des `System`\-Namespaces.\)  
+ Die folgenden Deklarationen in Managed Extensions alle inneren Zeigern in der neuen Syntax zugeordnet. (sie sind Werttypen, die innerhalb der `System` Namespace.)  
   
 ```  
 Int32 *pi;   // => interior_ptr<Int32> pi;  
@@ -135,19 +138,19 @@ Boolean *pb; // => interior_ptr<Boolean> pb;
 E *pe;       // => interior_ptr<E> pe; // Enumeration  
 ```  
   
- Die integrierten Typen werden nicht als verwaltete Typen betrachtet, obwohl sie als Aliase für die Typen im `System`\-Namespace dienen.  Somit gelten die folgenden Zuordnungen sowohl in Managed Extensions als auch in der neuen Syntax:  
+ Die integrierten Typen werden nicht verwaltete Typen berücksichtigt, obwohl sie als Aliase für die Typen im dienen der `System` Namespace. So halten Sie die folgenden Zuordnungen zwischen Managed Extensions und der neuen Syntax "true":  
   
 ```  
 int * pi;     // => int* pi;  
 int __gc * pi2; // => interior_ptr<int> pi2;  
 ```  
   
- Beim Übersetzen eines `V*` in einem bestehenden Programm besteht die konservativste Strategie darin, es immer in einen `interior_ptr<V>` umzuwandeln.  Dies entspricht der Behandlung unter Managed Extensions.  In der neuen Syntax hat ein Programmierer statt des internen Zeigers die Option, einen Werttyp mit `V*` auf Adressen des nicht\-verwalteten Heaps zu beschränken.  Wenn Sie beim Übersetzen des Programms einen transitiven Schluss all seiner Verwendungen erreichen können und sicher sein können, dass sich im verwalteten Heap keine zugeordnete Adresse befindet, können Sie es als `V*` belassen.  
+ Beim Übersetzen einer `V*` in das vorhandene Programm die konservative Strategie ist immer aktivieren Sie auf eine `interior_ptr<V>`. Dies ist, wie er in Managed Extensions behandelt wurde. In der neuen Syntax der Programmierer hat einen Werttyp an nicht verwalteten Heaps Adressen einschränken, durch Angabe `V*` anstelle eines inneren Zeigers. Wenn beim Übersetzen des Programms an, Sie können alle Verwendungen einen transitiven Abschluss und achten Sie darauf, dass keine zugewiesene Adresse auf dem verwalteten Heap ist, dann seinen Arbeitsplatz verlässt als `V*` ist in Ordnung.  
   
-## Feste Zeiger  
- Der Garbage Collector kann Objekte, die sich auf dem CLR\-Heap befinden, wahlweise an andere Speicherorte innerhalb des Heaps verschieben. Dies geschieht normalerweise während einer Komprimierungsphase.  Eine solche Verschiebung ist für Trackinghandles, Nachverfolgungsverweise und innere Zeiger unproblematisch, da diese Entitäten transparent aktualisiert werden.  Problematisch wird diese Verschiebung jedoch, wenn der Benutzer die Adresse eines Objekts auf dem CLR\-Heap außerhalb der Laufzeitumgebung übergeben hat.  In diesem Fall führt die flüchtige Verschiebung des Objekts wahrscheinlich zu einem Laufzeitfehler.  Um Objekte wie diese vor einer Verschiebung zu schützen, müssen wir sie an ihrem Speicherort lokal fixieren, sofern sie außerhalb verwendet werden.  
+## <a name="pinning-pointers"></a>Festhalten von Zeigern  
+ Der Garbage Collector kann optional Objekte verschieben, die sich auf dem CLR-Heap an verschiedene Positionen innerhalb des Heaps in der Regel während einer Komprimierungsphase befinden. Diese Bewegung ist kein Problem zum Nachverfolgen von Handles, Nachverfolgungsverweisen und inneren Zeigern, die diese Entitäten transparent zu aktualisieren. Diese Bewegung ist jedoch ein Problem, wenn der Benutzer die Adresse eines Objekts auf dem CLR-Heap außerhalb der Common Language Runtime-Umgebung überschritten hat. In diesem Fall wird die flüchtige Verschiebung des Objekts wahrscheinlich eines Laufzeitfehlers verursachen. Ausgenommen Objekte wie diese verschoben werden, müssen wir diese lokal an ihrem Speicherort für das Ausmaß der äußeren Verwendungsbeispielen anheften.  
   
- In Managed Extensions wird ein *fester Zeiger* deklariert, indem eine Zeigerdeklaration mit dem `__pin`\-Schlüsselwort qualifiziert wird.  Es folgt ein leicht abgewandeltes Beispiel der Managed Extensions\-Spezifikation:  
+ In Managed Extensions wird einem *feste Zeiger* wird deklariert, indem eine Zeigerdeklaration mit der `__pin` Schlüsselwort. Hier ist ein Beispiel, die von der Spezifikation von Managed Extensions etwas geändert:  
   
 ```  
 __gc struct H { int j; };  
@@ -157,11 +160,11 @@ int main()
    H * h = new H;  
    int __pin * k = & h -> j;  
   
-   // …  
+   // ...  
 };  
 ```  
   
- Im neuen Sprachdesign werden feste Zeiger syntaktisch analog zu internen Zeigern deklariert.  
+ In der neuen Sprache Entwurf ist ein fester Zeiger mit der Syntax, die analog zu einem inneren Zeiger deklariert.  
   
 ```  
 ref struct H  
@@ -175,15 +178,15 @@ int main()
    H^ h = gcnew H;  
    pin_ptr<int> k = &h->j;  
   
-   // …  
+   // ...  
 }  
 ```  
   
- In der neuen Syntax ist ein fester Zeiger ein Sonderfall eines inneren Zeigers.  Die ursprünglichen Einschränkungen für feste Zeiger bleiben erhalten.  Sie können z. B. nicht als Parameter oder als Rückgabetyp einer Methode verwendet werden; sie können nur für ein lokales Objekt deklariert werden.  Allerdings wurden in der neuen Syntax eine Reihe zusätzlicher Einschränkungen hinzugefügt.  
+ Ein fester Zeiger in der neuen Syntax ist ein Sonderfall eines inneren Zeigers. Die ursprünglichen Einschränkungen für einen festen Zeiger bleiben. Angenommen, sie kann nicht als Parameter verwendet werden oder Rückgabetyp einer Methode; Es kann nur auf ein lokales Objekt deklariert werden. Eine Reihe von zusätzlichen Beschränkungen wurden jedoch in der neuen Syntax hinzugefügt.  
   
- Der Standardwert eines festen Zeigers ist `nullptr`, nicht `0`.  Ein `pin_ptr<>` kann nicht mit `0` initialisiert werden. Auch kann ihm dieser Wert nicht zugewiesen werden.  Alle Zuweisungen von `0` in vorhandenem Code müssen in `nullptr` geändert werden.  
+ Der Standardwert eines festen Zeigers ist `nullptr`, nicht `0`. Ein `pin_ptr<>` kann nicht initialisiert oder zugewiesen `0`. Alle Zuweisungen von `0` in vorhandenem Code müssen geändert werden, um `nullptr`.  
   
- Unter Managed Extensions durfte ein fester Zeiger ein gesamtes Objekt adressieren, wie im folgenden Beispiel der Managed Extensions\-Spezifikation:  
+ Ein fester Zeiger in Managed Extensions wurde zugelassen, um ein ganzes Objekt, wie im folgenden Beispiel stammt aus der Managed Extensions-Spezifikation zu beheben:  
   
 ```  
 __gc class G {  
@@ -197,7 +200,7 @@ void f( G * g ) {
 };  
 ```  
   
- In der neuen Syntax wird das Fixieren des ganzen, vom `new`\-Ausdruck zurückgegebenen Objekts nicht unterstützt.  Stattdessen muss die Adresse des inneren Members fixiert werden.  Beispiel:  
+ In der neuen Syntax anheften als ganze Objekt zurückgegeben, indem die `new` Ausdruck wird nicht unterstützt. Stattdessen muss die Adresse des inneren Elements angeheftet werden. Ein auf ein Objekt angewendeter  
   
 ```  
 ref class G {  
@@ -214,8 +217,8 @@ void f( G^ g ) {
 }  
 ```  
   
-## Siehe auch  
- [Werttypen und ihr Verhalten \(C\+\+\/CLI\)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)   
- [Classes and Structs](../windows/classes-and-structs-cpp-component-extensions.md)   
- [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md)   
- [pin\_ptr \(C\+\+\/CLI\)](../windows/pin-ptr-cpp-cli.md)
+## <a name="see-also"></a>Siehe auch  
+ [Werttypen und ihr Verhalten (C + c++ / CLI)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)   
+ [Klassen und Strukturen](../windows/classes-and-structs-cpp-component-extensions.md)   
+ [Interior_ptr (C + c++ / CLI)](../windows/interior-ptr-cpp-cli.md)   
+ [pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)

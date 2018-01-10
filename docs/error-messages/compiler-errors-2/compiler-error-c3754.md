@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3754
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3754
+f1_keywords: C3754
+dev_langs: C++
+helpviewer_keywords: C3754
 ms.assetid: 14b877bc-9277-40ec-af1c-196a58b45f10
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 894cb23f08439db924297edf2dcecc055aee649b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 01fe6b5568da2e55d5ade4eca22a84ea4a0041e7
-ms.contentlocale: de-de
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3754"></a>Compilerfehler C3754
 Delegatkonstruktor: Member-Funktion 'Funktion' kann nicht in einer Instanz von Typ 'Typ' aufgerufen werden  
@@ -54,4 +50,3 @@ int main() {
 //   MyDel^ q = gcnew MyDel(safe_cast<MyClass^>(p), &MyClass::f);  
 }  
 ```  
-

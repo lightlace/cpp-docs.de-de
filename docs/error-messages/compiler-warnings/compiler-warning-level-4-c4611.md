@@ -1,33 +1,32 @@
 ---
-title: "Compilerwarnung (Stufe 4) C4611 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4611"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4611"
+title: Compilerwarnung (Stufe 4) C4611 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4611
+dev_langs: C++
+helpviewer_keywords: C4611
 ms.assetid: bd90d0a6-75f9-4e97-968d-dda6773e9fd8
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3020cf7d115b735141b81e9007ac7fd027ed8674
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 4) C4611
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Interaktion zwischen 'Funktion' und C\+\+\-Objektlöschung ist nicht portabel  
+# <a name="compiler-warning-level-4-c4611"></a>Compilerwarnung (Stufe 1) C4600
+Interaktion zwischen "Function" und die Zerstörung von C++ ist nicht portabel  
   
- Funktionen, die **catch** beinhalten, unterstützen auf einigen Plattformen u. U. keine C\+\+\-Semantik für die Objektlöschung, wenn sie außerhalb des Gültigkeitsbereichs liegen.  
+ Auf manchen Plattformen, Funktionen, die enthalten **catch** unterstützen möglicherweise keine C++-Objekt-Semantik der Zerstörung außerhalb des Bereichs.  
   
- Um unerwartetes Verhalten zu vermeiden, sollten Sie **catch** möglichst nicht in Funktionen verwenden, die Konstruktoren und Destruktoren besitzen.  
+ Um unerwartetes Verhalten zu vermeiden, verwenden Sie **catch** in Funktionen, die Konstruktoren und Destruktoren besitzen.  
   
- Diese Warnung wird nur einmal ausgegeben; siehe [pragma\-Warning](../../preprocessor/warning.md).
+ Diese Warnung wird nur einmal ausgegeben; finden Sie unter [Pragma Warnung](../../preprocessor/warning.md).

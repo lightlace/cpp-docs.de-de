@@ -1,38 +1,38 @@
 ---
-title: "Ausdrucksauswertungsfehler CXX0015 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0015"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0015"
-  - "CXX0015"
+title: Ausdrucksauswertungsfehler CXX0015 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0015
+dev_langs: C++
+helpviewer_keywords:
+- CXX0015
+- CAN0015
 ms.assetid: 35efaf77-d578-48d8-bfc5-fdeb2a46a8b5
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6f671b39fcc0027fdad5308192c5cbd8b8973717
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Ausdrucksauswertungsfehler CXX0015
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ausdruck zu komplex \(Stapelüberlauf\)  
+# <a name="expression-evaluator-error-cxx0015"></a>Ausdrucksauswertungsfehler CXX0015
+Ausdruck zu komplex (Stapelüberlauf)  
   
- Der eingegebene Ausdruck war zu komplex oder zu tief geschachtelt für den verfügbaren Speicher der C\-Ausdrucksauswertung.  
+ Der eingegebene Ausdruck war zu komplex oder geschachtelte zu tief für die Menge an Speicherplatz verfügbar, um die C#-ausdrucksauswertung.  
   
- Der Überlauf ist möglicherweise aufgrund zu vieler ausstehender Berechnungen aufgetreten.  
+ Überlauf tritt gewöhnlich aufgrund von zu viele ausstehende Berechnungen.  
   
- Ordnen Sie den Ausdruck so an, dass jede Komponente des Ausdrucks dann ausgewertet werden kann, wenn sie auftritt, und nicht gewartet werden muss, bis andere Teile des Ausdrucks berechnet wurden.  
+ Ordnen Sie den Ausdruck so, dass jede Komponente des Ausdrucks ausgewertet werden kann, wie sie entdeckt wird, anstatt zu warten, bis andere Teile des Ausdrucks berechnet werden soll.  
   
- Teilen Sie den Ausdruck in mehrere Befehle auf.  
+ Teilen Sie den Ausdruck in mehrere Befehle.  
   
  Dieser Fehler ist mit CAN0015 identisch.

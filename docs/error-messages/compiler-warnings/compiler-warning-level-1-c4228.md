@@ -1,34 +1,33 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4228 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4228"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4228"
+title: Compilerwarnung (Stufe 1) C4228 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4228
+dev_langs: C++
+helpviewer_keywords: C4228
 ms.assetid: 9301d660-d601-464e-83f5-7ed844a3c6dc
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5e924a89b6da03f9ae14baabb222a7baa87dd120
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 1) C4228
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Nicht dem Standard entsprechende Erweiterung: Qualifizierer nach einem Komma in der Deklaratorliste werden ignoriert  
+# <a name="compiler-warning-level-1-c4228"></a>Compilerwarnung (Stufe 1) C4228
+nicht dem Standard entsprechende Erweiterung: Qualifizierer nach dem Komma in Deklaratorliste werden ignoriert.  
   
- Die Verwendung von Qualifizierern, wie **const** oder `volatile`, hinter einem Komma entspricht bei der Deklaration von Variablen einer Microsoft\-Erweiterung \([\/Ze](../../build/reference/za-ze-disable-language-extensions.md)\).  
+ Die Verwendung der Qualifizierer wie **const** oder `volatile` nachdem ein Komma, wenn es sich bei der Deklaration von Variablen eine Microsoft-Erweiterung ist (["/ Ze"](../../build/reference/za-ze-disable-language-extensions.md)).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // C4228.cpp  

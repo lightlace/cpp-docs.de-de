@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5455c1912b3108291f530ee9488a4e0078ba39a2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b9adb22c14fb5b59dfb4e89e69c724ca8c7462bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rangeadapter-stlclr"></a>range_adapter (STL/CLR)
 Eine Vorlagenklasse, die ein Paar von Iteratoren umschließt, mit denen mehrere Basisklassenbibliothek (Base Class Library, BCL)-Schnittstellen implementieren. Sie verwenden die Range_adapter einen STL/CLR-Bereich bearbeiten, als handele es sich um eine BCL-Auflistung.  
@@ -41,7 +44,7 @@ template<typename Iter>
  iter  
  Der Typ, der die umschlossenen Iteratoren zugeordnet wird.  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 |Memberfunktion|Beschreibung|  
 |---------------------|-----------------|  
@@ -53,7 +56,7 @@ template<typename Iter>
   
 ## <a name="interfaces"></a>Schnittstellen  
   
-|Schnittstelle|Beschreibung|  
+|Interface|Beschreibung|  
 |---------------|-----------------|  
 |<xref:System.Collections.IEnumerable>|Durchlaufen Elemente in der Auflistung ein.|  
 |<xref:System.Collections.ICollection>|Verwaltet eine Gruppe von Elementen an.|  

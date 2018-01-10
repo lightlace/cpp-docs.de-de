@@ -1,25 +1,28 @@
 ---
-title: "CVTRES-Fehler CVT1100 bis CVT4001 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "cvtres"
-dev_langs: 
-  - "C++"
+title: CVTRES-Fehler CVT1100 bis CVT4001 | Microsoft Docs
+ms.custom: 
+ms.date: 11/17/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: cvtres
+dev_langs: C++
 ms.assetid: ac94d0fb-0da3-4327-b3d9-ceaeb3fc2e4d
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c83bd98e881604c4256b24a4091a01452296457c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# CVTRES-Fehler CVT1100 bis CVT4001
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="cvtres-errors-cvt1100-through-cvt4001"></a>CVTRES-Fehler CVT1100 bis CVT4001
 
-Dieser Abschnitt ist eine Referenz zu den von den Buildtools ausgegebenen Fehlermeldungen.  Um Hilfe zu einer bestimmten Fehlermeldung zu erhalten, klicken Sie entweder im Ausgabefenster auf eine Fehlernummer, und drücken Sie F1, oder geben Sie die Fehlernummer im Index im Feld **Suchen nach** ein.
+In diesem Abschnitt wird ein Verweis auf die Fehler und Warnungen generiert, die für die CVTRES Buildtool.
+
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]

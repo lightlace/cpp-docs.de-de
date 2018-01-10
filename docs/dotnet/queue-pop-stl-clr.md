@@ -1,41 +1,42 @@
 ---
-title: "queue::pop (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::pop"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pop-Member [STL/CLR]"
+title: 'Queue:: POP (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::pop
+dev_langs: C++
+helpviewer_keywords: pop member [STL/CLR]
 ms.assetid: 38f6c03b-e8f8-4663-b3d6-18314cdc8e7d
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8521ea0a85b8a4997f38a6236981d85b82ecc884
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# queue::pop (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="queuepop-stlclr"></a>queue::pop (STL/CLR)
 Entfernt das letzte Element.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void pop();  
 ```  
   
-## Hinweise  
- Die Memberfunktion entfernt das letzte Element der gesteuerten Sequenz, die nicht leer sein muss.  Sie verwenden sie, um die Warteschlange von einem Element an zurück zu verkürzen.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion entfernt das letzte Element der gesteuerten Sequenz, die nicht leer sein darf. Sie verwenden es, um indem Sie ein Element auf der Rückseite die Warteschlange zu verkürzen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_queue_pop.cpp   
@@ -65,13 +66,16 @@ int main()
   
 ```  
   
-  **ein b c**  
- **b c**   
-## Anforderungen  
- **Header:** \<cliext\/Warteschlange\>  
+```Output  
+a b c  
+b c  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext bzw. einer neuen Warteschlange >  
   
-## Siehe auch  
- [queue](../dotnet/queue-stl-clr.md)   
- [queue::push](../dotnet/queue-push-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Warteschlange (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [queue::push (STL/CLR)](../dotnet/queue-push-stl-clr.md)

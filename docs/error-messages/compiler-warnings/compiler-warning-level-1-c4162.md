@@ -1,36 +1,35 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4162 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4162"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4162"
+title: Compilerwarnung (Stufe 1) C4162 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4162
+dev_langs: C++
+helpviewer_keywords: C4162
 ms.assetid: 21ae3c92-501d-4689-ad7d-13753cb65eff
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 980c2229b06e5c7bef85901daaa788a6a2911ee3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 1) C4162
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'Bezeichner': Keine Funktion mit C\-Bindung gefunden  
+# <a name="compiler-warning-level-1-c4162"></a>Compilerwarnung (Stufe 1) C4162
+'Bezeichner': keine Funktion mit C-Bindung gefunden  
   
- Es wurde eine Funktion mit C\-Bindung deklariert, jedoch nicht gefunden.  
+ Eine Funktion mit C-Bindung deklariert ist, aber es kann nicht gefunden werden.  
   
- Zur Behebung des Problems kompilieren Sie in eine C\-Datei \(rufen Sie den C\-Compiler auf\).  Wenn Sie den C\+\+\-Compiler aufrufen müssen, platzieren Sie vor der Funktionsdeklaration extern "C".  
+ Um diese Warnung zu beheben, kompilieren, in eine c-Datei (invoke den C-Compiler).  Wenn Sie die C++-Compiler aufrufen müssen, platzieren Sie Extern "C" vor der Deklaration.  
   
- Im folgenden Beispiel wird C4162 generiert:  
+ Im folgende Beispiel wird C4162 generiert:  
   
 ```  
 // C4162.cpp  

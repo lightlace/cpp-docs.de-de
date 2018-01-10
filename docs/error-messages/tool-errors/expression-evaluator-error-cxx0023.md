@@ -1,32 +1,32 @@
 ---
-title: "Ausdrucksauswertungsfehler CXX0023 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0023"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0023"
-  - "CXX0023"
+title: Ausdrucksauswertungsfehler CXX0023 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0023
+dev_langs: C++
+helpviewer_keywords:
+- CXX0023
+- CAN0023
 ms.assetid: 2de27692-dfb5-433f-82b3-80f118756eec
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6aa633713403d13bd9b25c28edfa11795100d37f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Ausdrucksauswertungsfehler CXX0023
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Fehlerhafte Basis  
+# <a name="expression-evaluator-error-cxx0023"></a>Ausdrucksauswertungsfehler CXX0023
+Ungültige Basis  
   
- Die angegebene Wurzel wurde von der C\-Ausdrucksauswertung nicht erkannt.  Nur dezimale, hexadezimale und oktale Wurzeln sind zulässig.  
+ Der C#-Ausdrucksauswerter erkennt nicht die Basis angegeben. Dezimale, hexadezimale und oktale Basen sind nur gültig.  
   
  Dieser Fehler ist mit CAN0023 identisch.

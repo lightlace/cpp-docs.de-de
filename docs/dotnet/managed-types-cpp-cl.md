@@ -1,49 +1,52 @@
 ---
-title: "Verwaltete Typen (C++/CL)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__gc-Typen"
-  - "Typen [C++], CLR"
+title: Verwaltete Typen (C++-CL) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- __gc types
+- types [C++], CLR
 ms.assetid: 1ddd114e-be02-4de7-a4dd-a2d72ad8ff81
-caps.latest.revision: 11
-caps.handback.revision: "11"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9e7bbd9687c3cc696b35e0284d55a18f59c898cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Verwaltete Typen (C++/CL)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die Syntax für die Deklaration verwalteter Typen und die Erstellung und Verwendung von Objekten dieser Typen hat sich in [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] gegenüber Managed Extensions for C\+\+ wesentlich geändert.  Der Sinn dieser Änderungen besteht darin, die Integration der verwalteten Typen in das ISO\-C\+\+\-Typsystem zu vereinfachen.  In den folgenden Unterabschnitten werden die Änderungen ausführlich beschrieben.  
+# <a name="managed-types-ccl"></a>Verwaltete Typen (C++/CL)
+Die Syntax für die Deklaration von verwalteten Typen und die Erstellung und Verwendung von Objekten dieser Typen wurde erheblich von Managed Extensions für C++ in Visual C++ geändert wurde. Dies erfolgte, um deren Integration in das ISO C++-Typsystem zu erzielen. Diese Änderungen werden in den folgenden Abschnitten ausführlich dargestellt.  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
  [Deklaration eines verwalteten Klassentyps](../dotnet/declaration-of-a-managed-class-type.md)  
- Erläutert, wie eine verwaltete `class`, `struct` oder `interface` deklariert wird.  
+ Erläutert, wie ein verwaltetes deklarieren `class`, `struct`, oder `interface`.  
   
- [Deklaration eines CLR\-Verweisklassenobjekts](../dotnet/declaration-of-a-clr-reference-class-object.md)  
- Erläutert, wie ein Objekt vom Typ Verweisklasse mithilfe eines Trackinghandles deklariert wird.  
+ [Deklaration eines CLR-Verweisklassenobjekts](../dotnet/declaration-of-a-clr-reference-class-object.md)  
+ Erläutert, wie ein Typ Referenzklassenobjekt verwenden ein Trackinghandle deklarieren.  
   
- [Deklaration eines CLR\-Arrays](../dotnet/declaration-of-a-clr-array.md)  
- Erklärt, wie ein Array deklariert und initialisiert wird.  
+ [Deklaration eines CLR-Arrays](../dotnet/declaration-of-a-clr-array.md)  
+ Erläutert das Deklarieren und Initialisieren eines Arrays.  
   
  [Änderungen in der Initialisierungsreihenfolge für Konstruktoren](../dotnet/changes-in-constructor-initialization-order.md)  
- Erläutert wichtige Änderungen in der Initialisierungsreihenfolge für den Klassenkonstruktor.  
+ Beschreibt wichtige Änderungen in der Initialisierungsreihenfolge für Konstruktoren Klasse an.  
   
  [Änderungen in der Destruktorsemantik](../dotnet/changes-in-destructor-semantics.md)  
- Erläutert die nicht\-deterministische Finalisierung, `Finalize` und `Dispose` im Vergleich, die Auswirkungen auf Verweisobjekte sowie die Verwendung einer expliziten `Finalize`\-Methode.  
+ Erläutert nicht deterministischen, `Finalize` im Vergleich zu `Dispose`, Auswirkungen für Verweisobjekte, und Verwenden von einer expliziten `Finalize`.  
   
- **Hinweis:** Die Erläuterung von Delegaten erfolgt erst später im Abschnitt [Delegaten und Ereignisse](../dotnet/delegates-and-events.md), um sie gemeinsam mit Ereignismembern innerhalb einer Klasse, dem Hauptthema in [Memberdeklarationen innerhalb einer Klasse oder Schnittstelle \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md), vorzustellen.  
+ **Hinweis:** die Erläuterung der Delegaten wird verzögert, bis [Delegaten und Ereignisse](../dotnet/delegates-and-events.md) um übergegeben mit Ereignis-Elemente innerhalb einer Klasse, die allgemeine Thema [Memberdeklarationen innerhalb einer Klasse oder Schnittstelle (C + C++ / CLI) ](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md).  
   
-## Siehe auch  
- [Einführung in die C\+\+\/CLI\-Migration](../dotnet/cpp-cli-migration-primer.md)   
- [Classes and Structs](../windows/classes-and-structs-cpp-component-extensions.md)   
+## <a name="see-also"></a>Siehe auch  
+ [C + c++ / CLI Migration Primer](../dotnet/cpp-cli-migration-primer.md)   
+ [Klassen und Strukturen](../windows/classes-and-structs-cpp-component-extensions.md)   
  [Arrays](../windows/arrays-cpp-component-extensions.md)

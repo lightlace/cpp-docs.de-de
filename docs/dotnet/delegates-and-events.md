@@ -1,35 +1,38 @@
 ---
-title: "Delegaten und Ereignisse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__delegate-Schlüsselwort"
-  - "__event-Schlüsselwort [C++]"
-  - "delegate-Schlüsselwort [C++]"
-  - "Delegaten [C++], Aktualisieren von Managed Extensions for C++"
-  - "event-Schlüsselwort [C++]"
-  - "Ereignisse [C++], Aktualisieren von Managed Extensions for C++"
+title: Delegaten und Ereignisse | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- __event keyword [C++]
+- delegate keyword [C++]
+- delegates [C++], upgrading from Managed Extensions for C++
+- __delegate keyword
+- events [C++], upgrading from Managed Extensions for C++
+- event keyword [C++]
 ms.assetid: 3505c626-7e5f-4492-a947-0e2248f7b84a
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e332c24d30d0439705b6be5e0748518f6537478d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Delegaten und Ereignisse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die Art und Weise, Delegaten und Ereignisse zu deklarieren, hat sich in [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] gegenüber Managed Extensions for C\+\+ geändert.  
+# <a name="delegates-and-events"></a>Delegaten und Ereignisse
+Die Möglichkeit zum Deklarieren von Delegaten und Ereignisse wurde von Managed Extensions für C++ in Visual C++ geändert.  
   
- Der doppelte Unterstrich ist nicht mehr erforderlich, wie aus dem folgenden Beispiel ersichtlich wird.  Hier ein Beispielcode in Managed Extensions:  
+ Der doppelte Unterstrich wird nicht mehr benötigt, wie im folgenden Beispiel gezeigt. Hier ein Beispielcode in Managed Extensions:  
   
 ```  
 __delegate void ClickEventHandler(int, double);  
@@ -41,7 +44,7 @@ __gc class EventSource {
 };  
 ```  
   
- Der gleiche Code sieht in der neuen Syntax folgendermaßen aus:  
+ Der gleiche Code in der neuen Syntax sieht wie folgt aus:  
   
 ```  
 delegate void ClickEventHandler( int, double );  
@@ -53,9 +56,9 @@ ref class EventSource {
 };  
 ```  
   
- Ereignisse \(und Delegaten\) sind Referenztypen. Dies ist in der neuen Syntax an dem Hut \(`^`\) klar zu erkennen.  Ereignisse unterstützen im voranstehenden Code sowohl eine explizite Deklarationssyntax als auch die normale Form.  Bei der expliziten Form gibt der Benutzer die dem Ereignis zugeordnete `add`\-Methode, `raise`\-Methode und `remove`\-Methode an. \(Nur die `add`\-Methode und die `remove`\-Methode sind erforderlich; die `raise`\-Methode ist optional.\)  
+ Ereignisse (und Delegaten) sind Referenztypen, die aufgrund der Verwendung von der Hat löschen in der neuen Syntax ist (`^`).  Ereignisse unterstützen eine explizite Deklarationssyntax und die normale Form im vorangehenden Code dargestellt. In die explizite Form der Benutzer gibt die `add`, `raise`, und `remove` Methoden, die dem Ereignis zugeordnet. (Nur die `add` und `remove` Methoden sind erforderlich; die `raise` Methode ist optional.)  
   
- Wenn Sie diese Methoden in Managed Extensions zur Verfügung stellen möchten, müssen Sie zwar keine explizite Ereignisdeklaration bereitstellen, aber trotzdem einen Namen für das nicht vorhandene Ereignis wählen.  Jede Methode wird in der Form `add_EventName`, `raise_EventName` und `remove_EventName` angegeben, wie im folgenden Beispiel aus der Spezifikation für Managed Extensions gezeigt wird:  
+ In Managed Extensions, wenn Sie diese Methoden bereitstellen, müssen Sie auch keinen explizite Ereignisdeklaration, aber Sie müssen entscheiden, einen Namen für das Ereignis, das nicht vorhanden ist. Jede Methode wird angegeben, in der Form `add_EventName`, `raise_EventName`, und `remove_EventName`, wie im folgenden Beispiel stammt aus der Spezifikation von Managed Extensions:  
   
 ```  
 // explicit implementations of add, remove, raise  
@@ -88,7 +91,7 @@ protected:
 };  
 ```  
   
- Die neue Syntax vereinfacht hingegen die Deklaration, wie die folgende Übersetzung veranschaulicht.  Ein Ereignis gibt die zwei oder drei Methoden in Klammern an, die unmittelbar hinter der Deklaration des Ereignisses und dessen zugeordnetem Delegattyp wie folgt eingefügt werden:  
+ Die neue Syntax vereinfacht die Deklaration, wie die folgende Übersetzung veranschaulicht. Ein Ereignis gibt an, die zwei oder drei Methoden in einem Paar geschweifter Klammern eingeschlossen und sofort nach der Deklaration des Ereignisses und seiner zugeordneten Delegattyp platziert werden, wie hier gezeigt:  
   
 ```  
 public delegate void f( int );  
@@ -130,7 +133,7 @@ public:
 };  
 ```  
   
-## Siehe auch  
- [Memberdeklarationen innerhalb einer Klasse oder Schnittstelle \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
- [delegate](../windows/delegate-cpp-component-extensions.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Memberdeklarationen innerhalb einer Klasse oder Schnittstelle (C + c++ / CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
+ [Delegate (Komponentenerweiterungen für C++)](../windows/delegate-cpp-component-extensions.md)   
  [event](../windows/event-cpp-component-extensions.md)

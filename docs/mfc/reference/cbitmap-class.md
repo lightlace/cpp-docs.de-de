@@ -45,11 +45,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 33e0ca4c92d22d8afaed4523a7f274b6b5d20a2b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 22922d29c09ee97a8b2a292953b4bf903ab6649e
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="cbitmap-class"></a>CBitmap-Klasse
 Kapselt eine Bitmap der Windows GDI (Graphics Device Interface) und stellt Memberfunktionen zur Bearbeitung der Bitmap bereit.  
@@ -60,7 +61,7 @@ Kapselt eine Bitmap der Windows GDI (Graphics Device Interface) und stellt Membe
 class CBitmap : public CGdiObject  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -374,7 +375,7 @@ BOOL LoadMappedBitmap(
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig `LoadMappedBitmap` werden häufig in der Schaltfläche Glyphen verwendete Farben zugeordnet.  
   
- Informationen zum Erstellen einer Bitmap zugeordneten finden Sie in der Windows-Funktion [CreateMappedBitmap](http://go.microsoft.com/fwlink/linkid=230562) und [COLORMAP](http://msdn.microsoft.com/library/windows/desktop/bb760448) Struktur im Windows SDK.  
+ Informationen zum Erstellen einer Bitmap zugeordneten finden Sie in der Windows-Funktion [CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562) und [COLORMAP](http://msdn.microsoft.com/library/windows/desktop/bb760448) Struktur im Windows SDK.  
   
 ##  <a name="loadoembitmap"></a>CBitmap::LoadOEMBitmap  
  Lädt eine vordefinierte Bitmap, die von Windows verwendet.  

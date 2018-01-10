@@ -1,43 +1,43 @@
 ---
-title: "Exemplarische Vorgehensweise: Bereitstellen einer Visual C++-Anwendung mithilfe von Visual C++ Redistributable Package"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Exemplarische Vorgehensweise, Bereitstellen einer Visual C++-Anwendung mit dem Redistributable Package"
+title: Bereitstellen einer App das Redistributable Package (C++) mit | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: walkthrough, deploying a Visual C++ application by using the redistributable package
 ms.assetid: e59becbf-b8c6-4c8e-bab3-b69cc1ed3e5e
-caps.latest.revision: 9
-caps.handback.revision: "9"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 52e3b048f896f0cfd532cb3000617756af2dca92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Exemplarische Vorgehensweise: Bereitstellen einer Visual C++-Anwendung mithilfe von Visual C++ Redistributable Package
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In diesem Artikel wird schrittweise beschrieben, wie Visual C\+\+ Redistributable Package verwendet, um eine Visual C\+\+\-Anwendung bereitgestellt.  
+# <a name="walkthrough-deploying-a-visual-c-application-by-using-the-visual-c-redistributable-package"></a>Exemplarische Vorgehensweise: Bereitstellen einer Visual C++-Anwendung mithilfe von Visual C++ Redistributable Package
+Dieser Artikel beschreibt, wie der Visual C++ Redistributable Package eine Visual C++-Anwendung bereitstellen.  
   
-## Vorbereitungsmaßnahmen  
- Sie müssen diese Komponenten haben, um diese exemplarischen Vorgehensweise sind:  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
+ Diese Komponenten zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie:  
   
 -   Ein Computer, der Visual Studio installiert ist.  
   
--   Einen zusätzlichen Computer ohne die Visual C\+\+\-Bibliotheken  
+-   Ein zusätzlicher Computer, die über keinen Visual C++-Bibliotheken.  
   
-### So führen Sie Visual C\+\+ Redistributable Package verwenden, um eine Anwendung bereitzustellen  
+### <a name="to-use-the-visual-c-redistributable-package-to-deploy-an-application"></a>Verwenden Sie das Visual C++ Redistributable Package zum Bereitstellen einer Anwendung  
   
-1.  Erstellen Sie eine MFC\-Anwendung auf, indem Sie den ersten drei Schritten in [Walkthrough: Deploying a Visual C\+\+ Application By Using a Setup Project](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md) folgen.  
+1.  Erstellen Sie eine MFC-Anwendung mithilfe der ersten drei Schritte im [Exemplarische Vorgehensweise: Bereitstellen einer Visual C++-Anwendung mithilfe eines Setup-Projekts](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md).  
   
-2.  Erstellen Sie eine Datei, und nennen Sie diese setup.bat und fügen Sie die folgenden Befehle hinzu.  Ändern Sie `MyMFCApplication` auf den Namen des Projekts.  
+2.  Erstellen Sie eine Datei, nennen Sie sie "Setup.bat", und fügen Sie die folgenden Befehle hinzu. Änderung `MyMFCApplication` auf den Namen des Projekts.  
   
-    ```  
+    ```cmd
     @echo off  
     vcredist_x86.exe  
     mkdir "C:\Program Files\MyMFCApplication"  
@@ -46,52 +46,52 @@ In diesem Artikel wird schrittweise beschrieben, wie Visual C\+\+ Redistributabl
   
 3.  Erstellen Sie eine selbstextrahierende Setupdatei:  
   
-    1.  Geben Sie an einer Eingabeaufforderung oder im Fenster, **Ausführen** Ausführung iexpress.exe.  
+    1.  An der Eingabeaufforderung oder in der **ausführen** Fenster iexpress.exe ausführen.  
   
-    2.  Ausgewähltes **Neue Direktivendatei für Selbstextrahierung erstellen** und dann die Schaltfläche **Weiter** aus.  
+    2.  Wählen Sie **neue SED-Datei erstellen** und wählen Sie dann die **Weiter** Schaltfläche.  
   
-    3.  Ausgewähltes **Dateien extrahieren und Installationsbefehl ausführen** und wählen dann **Weiter** aus.  
+    3.  Wählen Sie **Extrahieren von Dateien, und führen Sie einen Installationsbefehl** und wählen Sie dann **Weiter**.  
   
-    4.  Geben Sie im Textfeld den Namen der MFC\-Anwendung ein und klicken Sie dann **Weiter** aus.  
+    4.  Geben Sie im Textfeld den Namen der MFC-Anwendung, und wählen Sie dann **Weiter**.  
   
-    5.  Auf der Seite wählen **Eingabeaufforderung zur Bestätigung** ausgewähltes **Keine Eingabeaufforderung** und dann **Weiter** aus.  
+    5.  Auf der **bestätigungsaufforderung** Seite **keine Eingabeaufforderung** und wählen Sie dann **Weiter**.  
   
-    6.  Auf der Seite wählen **Lizenzvertrag** ausgewähltes **Keine Lizenz anzeigen** und dann **Weiter** aus.  
+    6.  Auf der **Lizenzvertrag** Seite **Lizenz nicht anzeigen** und wählen Sie dann **Weiter**.  
   
-    7.  Klicken Sie auf der Seite **Paketdateien** fügen Sie die folgenden Dateien hinzu und wählen Sie dann **Weiter** aus.  
+    7.  Auf der **Dateien verpackt** Seite, fügen Sie die folgenden Dateien hinzu, und wählen Sie dann **Weiter**.  
   
-        -   Ihre MFC\-Anwendung \(EXE\-Datei\).  
+        -   MFC-Anwendung (.exe-Datei).  
   
-        -   vcredist\_x86.exe.  Diese Datei wird in \\Programme\\Microsoft SDKs\\Windows\\v7.0A\\Bootstrapper\\Packages\\vcredist\_x86\\ isoliert.  
+        -   VCRedist_x86.exe. Diese Datei befindet sich unter \Programme\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages\vcredist_x86\\.  
   
-        -   Die Datei "setup.bat", die Sie im vorherigen Schritt erstellt haben.  
+        -   Die Datei "Setup.bat", die Sie in einem vorhergehenden Schritt erstellt haben.  
   
-    8.  Klicken Sie auf der Seite im Textfeld **Zu startendes Programm installierenProgramm installieren** Geben Sie die folgende Befehlszeile ein, und wählen Sie dann **Weiter** aus.  
+    8.  Auf der **Installationsprogramm zu startender** Seite in der **Installationsprogramm** Textfeld, geben Sie die folgende Befehlszeile, und wählen Sie dann **Weiter**.  
   
-         **cmd.exe \/c "setup.bat"**  
+         **cmd.exe/c "setup.bat"**  
   
-    9. Auf der Seite wählen **Fenster einblenden** ausgewähltes **Standard** und dann **Weiter** aus.  
+    9. Auf der **Fenster** Seite **Standard** und wählen Sie dann **Weiter**.  
   
-    10. Auf der Seite wählen **Abgeschlossene Meldung** ausgewähltes **Keine Meldung** und dann **Weiter** aus.  
+    10. Auf der **Abschlussnachricht** Seite **keine Meldung** und wählen Sie dann **Weiter**.  
   
-    11. **Paketname und Optionen** auf der Seite einen Namen für die selbstextrahierende Setupdatei ein, wählen Sie die Option **Dateien mit einem langen Dateinamen im Paket speichern** aus, und wählen Sie dann **Weiter** aus.  Das Ende des Dateinamens muss Setup.exe\-for Beispiel, MyMFCApplicationSetup.exe sein.  
+    11. Auf der **Paketnamen und Optionen** Seite, geben Sie einen Namen für die selbstextrahierende Setupdatei an, wählen die **Speichern von Dateien mit langen Dateinamen im Paket** aus, und wählen Sie dann **Weiter**. Das Ende des Dateinamens muss Setup.exe—for beispielsweise MyMFCApplicationSetup.exe sein.  
   
-    12. Auf der Seite wählen **Neustart konfigurieren** ausgewähltes **Kein Neustart** und dann **Weiter** aus.  
+    12. Auf der **Neustart konfigurieren** Seite **kein Neustart** und wählen Sie dann **Weiter**.  
   
-    13. Auf der Seite wählen **Direktive für Selbstextrahierung speichern** ausgewähltes **Datei für Selbstextrahierungsrichtlinie speichern** und dann **Weiter** aus.  
+    13. Auf der **SED speichern** Seite **speichern Self Extraction Directive (SED) Datei** und wählen Sie dann **Weiter**.  
   
-    14. Klicken Sie auf der Seite **Paket erstellen** wählen Sie **Weiter** aus.  
+    14. Auf der **Erstellung eines Pakets** Seite **Weiter**.  
   
-4.  Testen Sie die selbstextrahierende Setupdatei auf dem anderen Computer, der die Visual C\+\+\-Bibliotheken nicht vorhanden sind:  
+4.  Testen Sie selbstextrahierende Setupdatei auf dem anderen Computer, der nicht über die Visual C++-Bibliotheken verfügt:  
   
-    1.  Klicken Sie auf dem anderen Computer laden Sie eine Kopie der Setupdatei herunter, und installieren Sie sie dann, indem Sie sie und nach den Schritten ausführen, die er bereitstellt.  
+    1.  Klicken Sie auf dem anderen Computer Laden Sie eine Kopie der Datei, und installieren Sie sie durch Ausführen und die Schritte, die es bereitstellt.  
   
-    2.  Führen Sie die MFC\-Anwendung aus.  
+    2.  Führen Sie die MFC-Anwendung.  
   
-         Von der selbstextrahierenden Setupdatei wird die MFC\-Anwendung installiert, die sich in dem in Schritt 2 angegebenen Ordner befindet.  Die Anwendung wird erfolgreich ausgeführt, da das Visual C\+\+ Redistributable Package\-Installationsprogramm in der selbstextrahierenden Setupdatei enthalten ist.  
+         Die selbstextrahierende Setupdatei installiert die MFC-Anwendung, die im Ordner "" ist, die Sie in Schritt 2 angegeben. Die Anwendung wird erfolgreich ausgeführt, da Visual C++ Redistributable Package-Installationsprogramm in die selbstextrahierende Setupdatei enthalten ist.  
   
         > [!IMPORTANT]
-        >  Bestimmen, welche Version der Laufzeit installiert ist, die Installationsprogrammüberprüfungen der Registrierungsschlüssel \\HKLM\\SOFTWARE\\Microsoft\\VisualStudio\\11.0\\VC\\Runtimes\\\[Plattform\].  Wenn die derzeit installierte Version neuer als die Version ist, die das Installationsprogramm versucht, zu installieren, gibt das Installationsprogramm Erfolg, ohne die vorherige Version zu installieren zurück und ermöglicht eine Nachbuchung auf der installierten Programmseite in der Systemsteuerung.  
+        >  Um zu bestimmen, welche Version der Laufzeit installiert ist, prüft das Installationsprogramm die Registry Key \HKLM\SOFTWARE\Microsoft\VisualStudio\11.0\VC\Runtimes\\[Plattform]. Wenn die derzeit installierte Version neuer als die Version, der das Installationsprogramm versucht ist, installieren, wird das Installationsprogramm Erfolgswert zurück, ohne die ältere Version installieren, und bewirkt, dass einen weiteren Eintrag auf der Seite "installierten Programme" in der Systemsteuerung.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Bereitstellungsbeispiele](../ide/deployment-examples.md)

@@ -1,35 +1,37 @@
 ---
-title: "ptr::Attach | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::com::ptr::Attach"
-  - "ptr::Attach"
-  - "ptr.Attach"
-  - "msclr.com.ptr.Attach"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Attach-Methode"
+title: PTR::Attach | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::com::ptr::Attach
+- ptr::Attach
+- ptr.Attach
+- msclr.com.ptr.Attach
+dev_langs: C++
+helpviewer_keywords: Attach method
 ms.assetid: 81d930de-cb2a-4c30-9bd6-94d65942c47a
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d8e3a107bef12ca7f1bcd89098d35ed6a124775f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# ptr::Attach
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Fügt ein COM\-Objekt zu `com::ptr`.  
+# <a name="ptrattach"></a>ptr::Attach
+Fügt ein COM-Objekt an eine `com::ptr`.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void Attach(  
@@ -37,20 +39,20 @@ void Attach(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `_right`  
- Der COM\-Schnittstellenzeiger zum anzufügen.  
+ Die COM-Schnittstellenzeiger, der angefügt werden soll.  
   
-## Ausnahmen  
- Wenn `com::ptr` bereits einen Verweis auf ein COM\-Objekt besitzt, wird `Attach`<xref:System.InvalidOperationException> ausgelöst.  
+## <a name="exceptions"></a>Ausnahmen  
+ Wenn die `com::ptr` besitzt bereits einen Verweis auf ein COM-Objekt `Attach` löst <xref:System.InvalidOperationException>.  
   
-## Hinweise  
- Ein Aufruf von `Attach` verweist, das COM\-Objekt gibt jedoch nicht den Verweis des Aufrufers auf freigegeben.  
+## <a name="remarks"></a>Hinweise  
+ Ein Aufruf von `Attach` verweist auf das COM-Objekt jedoch nicht den Aufrufer Verweis darauf freigibt.  
   
- Das Übergeben eines `NULL` von `Attach` ergibt keine Aktion, die aufgezeichnet wird.  
+ Übergeben von `NULL` zu `Attach` führt keine Aktion ausgeführt wird.  
   
-## Beispiel  
- Dieses Beispiel implementiert eine CLR\-Klasse, die `com::ptr` verwendet, um sein `IXMLDOMDocument`\-Objekt des privaten Members zu umschließen.  Die `ReplaceDocument`\-Memberfunktionsersten ruft `Release` auf den zuvor besessenes Objekt und anschließend `Attach` auf, um ein neues Dokumentobjekt anzufügen.  
+## <a name="example"></a>Beispiel  
+ In diesem Beispiel implementiert eine CLR-Klasse, verwendet eine `com::ptr` umschließen die privaten Member `IXMLDOMDocument` Objekt. Die `ReplaceDocument` erste Memberfunktion ruft `Release` auf einem beliebigen zuvor Besitzer, Objekt und ruft dann `Attach` ein neues Dokumentobjekt angefügt.  
   
 ```  
 // comptr_attach.cpp  
@@ -124,12 +126,12 @@ int main() {
 }  
 ```  
   
-## Anforderungen  
- **Headerdatei** \<msclr\\com\\ptr.h\>  
+## <a name="requirements"></a>Anforderungen  
+ **Headerdatei** \<msclr\com\ptr.h >  
   
  **Namespace** msclr::com  
   
-## Siehe auch  
- [ptr\-Member](../dotnet/ptr-members.md)   
- [ptr::operator\=](../dotnet/ptr-operator-assign.md)   
+## <a name="see-also"></a>Siehe auch  
+ [PTR-Member](../dotnet/ptr-members.md)   
+ [PTR::Operator =](../dotnet/ptr-operator-assign.md)   
  [ptr::Release](../dotnet/ptr-release.md)

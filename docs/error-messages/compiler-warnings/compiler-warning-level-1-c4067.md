@@ -1,32 +1,31 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4067 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4067"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4067"
+title: Compilerwarnung (Stufe 1) C4067 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4067
+dev_langs: C++
+helpviewer_keywords: C4067
 ms.assetid: 1d10353e-8cd5-4b01-9184-a06189b965a4
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2b335535cbe66d3891806244ecce5d774d27d382
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 1) C4067
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Unerwartete Symbole nach Präprozessordirektive \- Zeilenvorschub erwartet  
+# <a name="compiler-warning-level-1-c4067"></a>Compilerwarnung (Stufe 1) C4067
+Unerwartetes Token nach Präprozessordirektive - Zeilenvorschub erwartet  
   
- Der Compiler hat zusätzliche Zeichen hinter einer Präprozessordirektive gefunden und ignoriert.  Diese Warnung wird nur bei Einhaltung der ANSI\-Kompatibilität \([\/Za](../../build/reference/za-ze-disable-language-extensions.md)\) ausgegeben.  
+ Der Compiler gefunden und zusätzliche Zeichen hinter einer Präprozessordirektive ignoriert. Diese Warnung wird nur ANSI-Kompatibilität (["/ Za"](../../build/reference/za-ze-disable-language-extensions.md)).  
   
 ```  
 // C4067a.cpp  
@@ -40,9 +39,9 @@ int main()
 }  
 ```  
   
-### Führen Sie zur Beseitigung dieser Warnung einen der folgenden Schritte durch:  
+### <a name="to-resolve-this-warning-try-the-following"></a>Um diese Warnung zu beheben, versuchen Sie Folgendes:  
   
-1.  Kompilieren Sie mit **\/Ze**.  
+1.  Kompilieren Sie mit **"/ Ze"**.  
   
 2.  Verwenden Sie Kommentartrennzeichen:  
   

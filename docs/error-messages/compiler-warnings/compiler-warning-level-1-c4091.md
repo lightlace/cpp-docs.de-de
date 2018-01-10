@@ -1,35 +1,34 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4091 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4091"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4091"
+title: Compilerwarnung (Stufe 1) C4091 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4091
+dev_langs: C++
+helpviewer_keywords: C4091
 ms.assetid: 3a404967-ab42-49b0-b324-fd7ba1859d78
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9be40d65b657a7ac34fb105a2b1b16c702e4922c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 1) C4091
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'Schlüsselwort': Ignoriert auf der linken Seite von 'Typ', wenn keine Variable deklariert wurde  
+# <a name="compiler-warning-level-1-c4091"></a>Compilerwarnung (Stufe 1) C4091
+'Schlüsselwort': auf der linken Seite von "Type" ignoriert werden, wenn keine Variable deklariert wurde  
   
- Der Compiler hat eine Situation erkannt, in der der Benutzer wahrscheinlich eine Variable deklarieren wollte, die der Compiler jedoch nicht deklarieren konnte.  
+ Der Compiler hat eine Situation, in denen der Benutzer wahrscheinlich gedacht, eine Variable deklariert werden, aber der Compiler konnte sich nicht um die Variable zu deklarieren.  
   
-## Beispiel  
- Ein `__declspec`\-Attribut am Anfang einer benutzerdefinierten Typdeklaration wird auf die Variable dieses Typs angewendet.  Warnung C4091 weist darauf hin, dass keine Variable deklariert wurde.  Im folgenden Beispiel wird C4091 generiert.  
+## <a name="example"></a>Beispiel  
+ Ein `__declspec` Attribut am Anfang einer benutzerdefinierten Typdeklaration gilt für die Variable dieses Typs. C4091 weist darauf hin, dass keine Variable deklariert wird. Im folgende Beispiel wird C4091 generiert.  
   
 ```  
 // C4091.cpp  
@@ -44,8 +43,8 @@ __declspec(dllimport) class X2 {} varX;
 class __declspec(dllimport) X3 {};  
 ```  
   
-## Beispiel  
- Wenn es sich bei einem Bezeichner um eine Typdefinition handelt, kann dieser nicht gleichzeitig ein Variablenname sein.  Im folgenden Beispiel wird C4091 generiert.  
+## <a name="example"></a>Beispiel  
+ Wenn ein Bezeichner eine Typdefinition ist, kann nicht es auch ein Variablenname sein. Im folgende Beispiel wird C4091 generiert.  
   
 ```  
 // C4091_b.cpp  

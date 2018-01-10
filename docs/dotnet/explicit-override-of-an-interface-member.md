@@ -1,34 +1,37 @@
 ---
-title: "Explizites &#220;berschreiben eines Schnittstellenmembers | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Explizites Überschreiben von virtuellen Funktionen"
-  - "Funktionen [C++], Überschreiben"
-  - "Schnittstellenmember, Explizite Überschreibungen"
-  - "Überschreiben von Funktionen"
-  - "Virtuelle Funktionen, Explizite Überschreibungen"
+title: "Explizites Überschreiben eines Schnittstellenmembers | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- virtual functions, explicit overrides
+- overriding functions
+- interface members, explicit overrides
+- functions [C++], overriding
+- explicit override of virtual function
 ms.assetid: 46f1f536-bf43-4311-9a17-ff2282e528a9
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 85681b2e2aeeb6dbeb6ffdf511827fb1fc1cb029
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Explizites &#220;berschreiben eines Schnittstellenmembers
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die Syntax für das Deklarieren einer expliziten Überschreibung eines Schnittstellenmembers innerhalb einer Klasse hat sich gegenüber Managed Extensions for C\+\+ in [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] geändert.  
+# <a name="explicit-override-of-an-interface-member"></a>Explizites Überschreiben eines Schnittstellenmembers
+Die Syntax zum Deklarieren eines expliziten Überschreiben eines Schnittstellenmembers innerhalb einer Klasse wurde von Managed Extensions für C++ in Visual C++ geändert.  
   
- Oft ist es von Vorteil, zwei Instanzen eines Schnittstellenmembers innerhalb einer Klasse bereitzustellen, die die Schnittstelle implementiert – eine Instanz wird verwendet, wenn Klassenobjekte über einen Schnittstellenhandler bearbeitet werden, die andere, wenn Klassenobjekte über die Klassenschnittstelle verwendet werden.  Beispiel:  
+ Häufig möchten Sie zwei Instanzen eines Schnittstellenmembers innerhalb einer Klasse zu bieten, die Schnittstelle – eine, die verwendet wird implementiert, wenn die Klassenobjekte über eine Schnittstelle Handle bearbeitet werden, und Klassenobjekte Sortierergebnissen verwendet wird, über die Klassenschnittstelle. Zum Beispiel:  
   
 ```  
 public __gc class R : public ICloneable {  
@@ -40,9 +43,9 @@ public __gc class R : public ICloneable {
 };  
 ```  
   
- In Managed Extensions geschieht dies durch Bereitstellen einer expliziten Deklaration der Schnittstellenmethode mit dem Methodennamen, der mit dem Namen der Schnittstelle qualifiziert wird.  Die klassenspezifische Instanz ist nicht qualifiziert.  Auf diese Weise muss in dem Beispiel der Rückgabewert von `Clone` nicht mehr umgewandelt werden, wenn er explizit über eine Instanz von `R` aufgerufen wird.  
+ In Managed Extensions geschieht dies durch eine explizite Deklaration der Schnittstellenmethode bereitstellen, mit dem Namen der Methode, die mit dem Namen der Schnittstelle qualifiziert. Die klassenspezifische Instanz ist nicht qualifiziert. Dadurch entfällt die Notwendigkeit, Downcasting den Rückgabewert der `Clone`, in diesem Beispiel, wenn er explizit über eine Instanz des aufgerufen `R`.  
   
- In der neuen Syntax wurde ein allgemeiner Überschreibungsmechanismus eingeführt, der die Managed Extensions\-Syntax ersetzt.  Das Beispiel würde wie folgt umgeschrieben werden:  
+ In der neuen Syntax wurde ein allgemeiner Mechanismus für die überschreibende eingeführt, der die Managed Extensions-Syntax ersetzt. Unserem Beispiel würde wie folgt umgeschrieben werden:  
   
 ```  
 public ref class R : public ICloneable {  
@@ -55,8 +58,8 @@ public:
 };  
 ```  
   
- Diese Korrektur erfordert, dass der explizit überschriebene Schnittstellenmember einen eindeutigen Namen in der Klasse erhält.  Hier wurde der komplizierte Name `InterfaceClone` bereitgestellt.  Das Verhalten bleibt gleich – über die `ICloneable`\-Schnittstelle wird der umbenannte `InterfaceClone,` aufgerufen, während über ein Objekt vom Typ `R` die zweite `Clone`\-Instanz aufgerufen wird.  
+ Diese Version erfordert, dass es sich bei der Schnittstellenmember wird explizit außer Kraft gesetzt werden erhält einen eindeutigen Namen innerhalb der Klasse. Hier haben ich bereitgestellt, der komplizierte Name `InterfaceClone`. Das Verhalten ist immer noch die gleiche - Aufruf über die `ICloneable` -Schnittstelle wird der umbenannte `InterfaceClone`, aufgerufen, während über ein Objekt des Typs `R` Ruft das zweite `Clone` Instanz.  
   
-## Siehe auch  
- [Memberdeklarationen innerhalb einer Klasse oder Schnittstelle \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
- [Explicit Overrides](../windows/explicit-overrides-cpp-component-extensions.md)
+## <a name="see-also"></a>Siehe auch  
+ [Memberdeklarationen innerhalb einer Klasse oder Schnittstelle (C + c++ / CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
+ [Explizite Überschreibungen](../windows/explicit-overrides-cpp-component-extensions.md)

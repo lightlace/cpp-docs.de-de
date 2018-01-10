@@ -1,50 +1,51 @@
 ---
-title: "not1 (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::not1"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "not1-Funktion [STL/CLR]"
+title: not1 (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::not1
+dev_langs: C++
+helpviewer_keywords: not1 function [STL/CLR]
 ms.assetid: a50cd819-10de-4d81-84da-8a34c5414a43
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c159c0667cf09d466a50487a0369a724a538676d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# not1 (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Generiert `unary_negate` für ein Funktionselement.  
+# <a name="not1-stlclr"></a>not1 (STL/CLR)
+Generiert eine `unary_negate` für ein Funktionselement ist.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<typename Fun>  
     unary_negate<Fun> not1(Fun% functor);  
 ```  
   
-## Vorlagenparameter  
+## <a name="template-parameters"></a>Vorlagenparameter  
  Fun  
- Der Typ des Feature\-Elements.  
+ Der Typ, der das Funktionselement.  
   
-## Funktionsparameter  
+## <a name="function-parameters"></a>Funktionsparameter  
  Funktionselement  
- Das Funktionselement einzubindende.  
+ Das Funktionselement umschließen.  
   
-## Hinweise  
- Die Vorlagenfunktion gibt [unary\_negate](../dotnet/unary-negate-stl-clr.md)`<``Fun``>(functor)` zurück.  Sie verwenden sie als bequeme Möglichkeit, ein EinArgumentfunktionselement in einem Funktionselement zu umschließen, der sein logischer Operator NOT erzielt.  
+## <a name="remarks"></a>Hinweise  
+ Die Vorlagenfunktion gibt [Unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md)`<Fun>(functor)`. Sie verwenden es als eine einfache Möglichkeit, ein Funktionselement ist nur einem Argument in ein Funktionselement zu umschließen, die dessen logische NOT übermittelt.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_not1.cpp   
@@ -86,13 +87,16 @@ int main()
   
 ```  
   
-  **4 0**  
- **1 0**  
- **1 0**   
-## Anforderungen  
- **Header:** \<cliext\/funktionsfähig\>  
+```Output  
+4 0  
+1 0  
+1 0  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/funktionale >  
   
-## Siehe auch  
- [unary\_negate](../dotnet/unary-negate-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md)

@@ -1,38 +1,37 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4742 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4742"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4742"
+title: Compilerfehler Warnung (Stufe 1) C4742 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4742
+dev_langs: C++
+helpviewer_keywords: C4742
 ms.assetid: e520881d-1eeb-48b1-9df0-8017ee8ba076
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: da12d4d1e5e8b6f9be6c21601e04f08d1b269cec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 1) C4742
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'var' hat eine unterschiedliche Ausrichtung in 'Datei1' und 'Datei2': Zahl und Zahl  
+# <a name="compiler-warning-level-1-c4742"></a>Compilerwarnung (Stufe 1) C4742
+"Var" verfügt über andere Ausrichtung in "Datei1" und "Datei2": Anzahl und  
   
- Eine externe Variable, die in zwei Dateien referenziert oder definiert wurde, verfügt über verschiedene Ausrichtungen in diesen Dateien.  Diese Warnung wird ausgegeben, wenn der Compiler erkennt dass `__alignof` für die Variable in *file1* von `__alignof` für die Variable in *file2* unterscheidet.  Ursache dafür kann die Verwendung nicht kompatibler Typen beim Deklarieren von Variablen in verschiedenen Dateien oder die Verwendung des nicht übereinstimmenden `#pragma pack` in verschiedenen Dateien sein.  
+ Eine externe Variable, die auf die verwiesen wird, oder in zwei Dateien definiert wurden aufweist andere Ausrichtung in diesen Dateien. Diese Warnung wird ausgegeben, wenn der Compiler feststellt, dass `__alignof` für die Variable im *"file1"* unterscheidet sich von `__alignof` für die Variable im *file2*. Dies kann verursacht werden, mithilfe von inkompatiblen Typen beim Deklarieren von Variablen in verschiedenen Dateien oder mithilfe von nicht übereinstimmenden `#pragma pack` in verschiedenen Dateien.  
   
- Zur Behebung des Problems verwenden Sie entweder die gleiche Typdefinition oder unterschiedliche Namen für die Variablen.  
+ Um diese Warnung zu beheben, verwenden Sie die gleichen Typdefinition oder verwenden Sie unterschiedliche Namen für die Variablen.  
   
- Weitere Informationen finden Sie unter [pack](../../preprocessor/pack.md) und [\_\_alignof\-Operator](../../cpp/alignof-operator.md).  
+ Weitere Informationen finden Sie unter [Pack](../../preprocessor/pack.md) und [__alignof-Operator](../../cpp/alignof-operator.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Dies ist die erste Datei, die den Typ definiert.  
   
 ```  
@@ -43,7 +42,7 @@ struct X {
 } global;  
 ```  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird C4742 generiert.  
   
 ```  

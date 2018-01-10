@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3490
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3490
+f1_keywords: C3490
+dev_langs: C++
+helpviewer_keywords: C3490
 ms.assetid: 7638559a-fd06-4527-a9c1-0c8ae68b3123
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6439b48dc752d2bed01371cae59b2d77db16f1f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 42923edc2d238e7f0b64858561f7d23d211abd80
-ms.contentlocale: de-de
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3490"></a>Compilerfehler C3490
 "var" kann nicht geändert werden, da über ein Konstantenobjekt darauf zugegriffen wird  

@@ -1,29 +1,28 @@
 ---
-title: "Ressourcencompiler: Fehler RC2164 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "RC2164"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RC2164"
+title: 'Ressourcencompiler: Fehler RC2164 | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: RC2164
+dev_langs: C++
+helpviewer_keywords: RC2164
 ms.assetid: 23d7691d-80f3-4979-a519-378e5498d2d1
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 60e26474a6aa4c90b4b5471bce2106345abd62ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Ressourcencompiler: Fehler RC2164
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="resource-compiler-error-rc2164"></a>Ressourcencompiler: Fehler RC2164
 Unerwarteter Wert in RCDATA  
   
- Bei den *raw\-data*\-Werten in der RCDATA\-Anweisung muss es sich um ganze Zahlen oder Zeichenfolgen, die jeweils durch ein Komma voneinander getrennt sind, handeln.  Stellen Sie sicher, dass kein Komma oder Anführungszeichen um eine Zeichenfolge ausgelassen wurde.
+ Die *raw-data* -Werte in der **RCDATA** -Anweisung müssen ganze Zahlen oder Zeichenfolgen und jeweils durch ein Komma voneinander getrennt sein. Stellen Sie sicher, dass Sie kein Komma oder Anführungszeichen um eine Zeichenfolge vergessen haben.

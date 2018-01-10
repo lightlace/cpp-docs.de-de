@@ -1,34 +1,33 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4835 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4835"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4835"
+title: Compilerwarnung (Stufe 1) C4835 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4835
+dev_langs: C++
+helpviewer_keywords: C4835
 ms.assetid: d2e44c62-7b0e-4a45-943d-97903e27ed9d
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 92e2d17ada58773a34d8c2d14424dd88e74a06d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 1) C4835
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'Variable': Der Initialisierer für exportierte Daten kann erst ausgeführt werden, nachdem der verwaltete Code das erste Mal in der Hostassembly ausgeführt wurde.  
+# <a name="compiler-warning-level-1-c4835"></a>Compilerwarnung (Stufe 1) C4835
+'Variable': die Initialisierung für die exportierten Daten wird nicht ausgeführt, bis verwalteter Code in der Hostassembly zuerst ausgeführt wird  
   
- Wenn von verwalteten Komponenten untereinander auf Daten zugegriffen wird, wird empfohlen, keine systemeigenen Import\- und Exportmechanismen zu verwenden.  Deklarieren Sie stattdessen die Datenmember innerhalb eines verwalteten Typs, und verweisen Sie auf die Metadaten im Client mit `#using`.  Weitere Informationen finden Sie unter [\#using\-Direktive](../../preprocessor/hash-using-directive-cpp.md).  
+ Wenn Sie Daten zwischen verwalteten Komponenten zugreifen zu können, wird empfohlen, dass Sie nicht systemeigenen C++-Import verwenden / Mechanismen Export. Deklarieren Sie stattdessen die Datenmember innerhalb eines verwalteten Typs und verweisen auf die Metadaten mit `#using` im Client. Weitere Informationen finden Sie unter [#using-Direktive](../../preprocessor/hash-using-directive-cpp.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird C4835 generiert.  
   
 ```  
@@ -41,8 +40,8 @@ __declspec(dllexport) int m = f();   // C4835
 __declspec(dllexport) int *p = &n;   // C4835  
 ```  
   
-## Beispiel  
- Im folgenden Beispiel wird die im vorherigen Beispiel erstellte Komponente verwendet und auf diese Weise verdeutlicht, dass die Werte der Variablen nicht der Erwartung entsprechen.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel nutzt die Komponente, die im vorherigen Beispiel, das anzeigt, dass der Wert der Variablen nicht wie erwartet.  
   
 ```  
 // C4835_b.cpp  
@@ -57,5 +56,7 @@ int main() {
 }  
 ```  
   
-  **0**  
-**268456008**
+```Output  
+0  
+268456008  
+```

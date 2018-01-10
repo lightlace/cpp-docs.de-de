@@ -1,34 +1,33 @@
 ---
-title: "Linkertoolfehler LNK1313 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1313"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1313"
+title: Linkertoolfehler Lnk1313 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1313
+dev_langs: C++
+helpviewer_keywords: LNK1313
 ms.assetid: 5df0b72e-bb3f-428c-8d84-6084238f9827
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a9030921178fc23c225a775359724cf5c932d95e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Linkertoolfehler LNK1313
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-IJW\/Native\-Modul gefunden; kann mit reinen Modulen nicht verknüpft werden  
+# <a name="linker-tools-error-lnk1313"></a>Linkertoolfehler LNK1313
+IJW/Native-Modul gefunden; kann mit reinen Modulen nicht verknüpft werden  
   
- Die aktuelle Version von Visual C\+\+ unterstützt das Verknüpfen von systemeigenen oder gemischten verwalteten\/systemeigenen .obj\-Dateien mit .objDateien, die mit **\/clr:pure** kompiliert wurden.  
+ Die aktuelle Version von Visual C++ unterstützt nicht das Verknüpfen von systemeigenen oder gemischten verwalteten/systemeigenen .obj-Dateien mit OBJ-Dateien kompiliert mit **/CLR: pure**.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // LNK1313.cpp  
@@ -37,7 +36,7 @@ IJW\/Native\-Modul gefunden; kann mit reinen Modulen nicht verknüpft werden
 int main() {}  
 ```  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // LNK1313_b.cpp  
@@ -46,7 +45,7 @@ int main() {}
 void test(){}  
 ```  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgende Beispiel wird LNK1313 generiert.  
   
 ```  

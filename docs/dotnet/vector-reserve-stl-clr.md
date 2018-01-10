@@ -1,45 +1,46 @@
 ---
-title: "vector::reserve (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::reserve"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reserve-Member [STL/CLR]"
+title: 'Vector:: Reserve (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::reserve
+dev_langs: C++
+helpviewer_keywords: reserve member [STL/CLR]
 ms.assetid: d1d5ede9-9628-4b55-95ec-f087a57205f2
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2c8c5ac474cc2b94baedab64854fec3ca3e0a78a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# vector::reserve (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Stellt eine minimale Zunahmekapazität für den Container sicher.  
+# <a name="vectorreserve-stlclr"></a>vector::reserve (STL/CLR)
+Es wird sichergestellt, dass eine Erweiterung der Mindestkapazität für den Container.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void reserve(size_type count);  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  count  
  Neue Mindestkapazität des Containers.  
   
-## Hinweise  
- Die Memberfunktion wird sichergestellt, dass `capacity()` künftig mindestens `count` zurückgibt.  Sie verwenden sie, um sicherzustellen, dass der Container nicht, muss für die Speicher gesteuerte Reihenfolge neu zuzuordnen, bis er sich das an angegebenen Größe entwickelt hat.  
+## <a name="remarks"></a>Hinweise  
+ Die Memberfunktion wird sichergestellt, dass `capacity()` künftig gibt mindestens `count`. Sie verwenden es, um sicherzustellen, dass der Container nicht Speicher neu zuordnen muss für die gesteuerte Sequenz bis er in die angegebene Größe geworden ist.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cliext_vector_reserve.cpp   
@@ -70,18 +71,21 @@ int main()
   
 ```  
   
-  **ein b c**  
-**capacity\(\) \= 4, darf \= True**  
-**capacity\(\) \= 9, darf \= True**   
-## **Beschreibung**  
- Beachten Sie, dass die aktuellen Inhalte möglicherweise aus Werten unterscheiden, die hier angezeigt werden, solange aller `ok` Prüfbericht true.  
+```Output  
+ a b c  
+capacity() = 4, ok = True  
+capacity() = 9, ok = True  
+```  
   
-## Anforderungen  
- **Header:** \<cliext\/Vektor\>  
+## <a name="description"></a>Beschreibung  
+ Beachten Sie, dass die tatsächliche Kapazität von der hier gezeigten Werte, so lange, bis alle abweichen `ok` Tests melden "true".  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Vektor >  
   
-## Siehe auch  
- [Vektor](../dotnet/vector-stl-clr.md)   
- [vector::capacity](../dotnet/vector-capacity-stl-clr.md)   
- [vector::resize](../dotnet/vector-resize-stl-clr.md)
+ **Namespace:** Cliext  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Vektor (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [Vector:: Capacity (STL/CLR)](../dotnet/vector-capacity-stl-clr.md)   
+ [vector::resize (STL/CLR)](../dotnet/vector-resize-stl-clr.md)
