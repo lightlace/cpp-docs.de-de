@@ -1,11 +1,10 @@
 ---
-title: Task-Klasse (Concurrency Runtime) | Microsoft-Dokumentation
+title: Aufgabenklasse (Concurrency Runtime) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,35 +17,19 @@ f1_keywords:
 - PPLTASKS/concurrency::task::scheduler
 - PPLTASKS/concurrency::task::then
 - PPLTASKS/concurrency::task::wait
-dev_langs:
-- C++
-helpviewer_keywords:
-- task class
+dev_langs: C++
+helpviewer_keywords: task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: e6c568b0b6a5f07df51980e1e440f31482f45846
-ms.contentlocale: de-de
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4ea618ca6a5784b44666c70d79bb10b2e9f6e394
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="task-class-concurrency-runtime"></a>Aufgabenklasse (Concurrency Runtime)
 Die Parallel Patterns Library (PPL) `task`-Klasse. Ein `task`-Objekt stellt Arbeit dar, die asynchron und übereinstimmend mit anderen Tasks und paralleler Arbeit , die von parallelen Algorithmen in der Concurrency Runtime erzeugt wird, ausgeführt werden kann. Es enthält bei erfolgreichem Abschluss ein Ergebnis vom Typ `_ResultType`. Tasks des Typs `task<void>` führen zu keinem Ergebnis. Eine Aufgabe kann erwartet und unabhängig von anderen Aufgaben abgebrochen werden. Er kann auch mit anderen Tasks mithilfe von Fortsetzungen erstellt werden ( `then`), und Join ( `when_all`) und Auswahl ( `when_any`) Muster.  
@@ -91,7 +74,7 @@ class task;
 |[get](#get)|Überladen. Gibt das von diesem Task erstellte Ergebnis zurück. Wenn sich der Task nicht in einem abschließenden Zustand befindet, wird mit dem `get`-Aufruf gewartet, bis der Task fertig gestellt wurde. Diese Methode gibt bei dem Aufruf eines Tasks mit einem `result_type` von `void` keinen Wert zurück.|  
 |[is_apartment_aware](#is_apartment_aware)|Bestimmt, ob der Task eine `IAsyncInfo`-Schnittstelle der Windows Runtime entpackt oder von einem solchen Task abgeleitet wurde.|  
 |[is_done](#is_done)|Bestimmt, ob die Aufgabe abgeschlossen wurde.|  
-|[Scheduler](#scheduler)|Gibt den Planer für diese Aufgabe zurück.|  
+|[Taskplaner](#scheduler)|Gibt den Planer für diese Aufgabe zurück.|  
 |[Klicken Sie dann](#then)|Überladen. Fügt dieser Aufgabe eine Fortsetzungsaufgabe hinzu.|  
 |[Warte](#wait)|Erwartet, dass diese Aufgabe einen Terminalzustand erreicht. Es ist möglich, dass das `wait`-Element den Task inline ausführt, wenn alle Taskabhängigkeiten erfüllt sind und er nicht bereits zur Ausführung durch einen Hintergrundworker aufgehoben wurde.|  
   
@@ -110,7 +93,7 @@ class task;
  `task`  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** ppltasks.h  
+ **Header:** "ppltasks.h"  
   
  **Namespace:** Parallelität  
   
@@ -128,10 +111,10 @@ void get() const;
  Das Ergebnis der Aufgabe.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn die Aufgabe abgebrochen wird, einen Aufruf von `get` löst ein [Task_canceled](task-canceled-class.md) Ausnahme. Wenn die Aufgabe eine Ausnahme während der Ausführung feststellt oder an sie eine Ausnahme aus einer vorherigen Aufgabe weitergegeben wurde, löst ein Aufruf von `get` diese Ausnahme aus.  
+ Wenn die Aufgabe abgebrochen wird, einen Aufruf von `get` löst eine [Task_canceled](task-canceled-class.md) Ausnahme. Wenn die Aufgabe eine Ausnahme während der Ausführung feststellt oder an sie eine Ausnahme aus einer vorherigen Aufgabe weitergegeben wurde, löst ein Aufruf von `get` diese Ausnahme aus.  
   
 > [!IMPORTANT]
->  In einem [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] app, rufen Sie [Concurrency::task::wait](#wait) oder `get` ( `wait` Aufrufe `get`) im Code, der auf dem STA ausgeführt wird Andernfalls löst die Laufzeit [invalid_operation](invalid-operation-class.md) , da diese Methoden den aktuellen Thread blockieren und die App reagiert. Sie können jedoch die `get`-Methode aufrufen, um das Ergebnis der vorangegangenen Aufgabe in einer aufgabenbasierten Fortsetzung zu erhalten, da das Ergebnis sofort verfügbar ist.  
+>  In einem [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] app, rufen Sie nicht [Concurrency::task::wait](#wait) oder `get` ( `wait` Aufrufe `get`) im Code, der auf dem STA ausgeführt wird. Andernfalls löst die Laufzeit [invalid_operation](invalid-operation-class.md) da diese Methoden den aktuellen Thread blockieren und dazu führen, die app dass können reagiert. Sie können jedoch die `get`-Methode aufrufen, um das Ergebnis der vorangegangenen Aufgabe in einer aufgabenbasierten Fortsetzung zu erhalten, da das Ergebnis sofort verfügbar ist.  
   
 ##  <a name="is_apartment_aware"></a>is_apartment_aware 
 
@@ -144,7 +127,7 @@ bool is_apartment_aware() const;
 ### <a name="return-value"></a>Rückgabewert  
  `true`, wenn die Aufgabe eine `IAsyncInfo`-Schnittstelle entpackt oder von einer solchen Aufgabe abgeleitet wird, andernfalls `false`.  
   
-##  <a name="is_done"></a>Task:: is_done Methode (Concurrency Runtime)  
+##  <a name="is_done"></a>Task:: is_done-Methode (Concurrency Runtime)   
  Bestimmt, ob die Aufgabe abgeschlossen wurde.  
   
 ```
@@ -327,7 +310,7 @@ __declspec(
 ### <a name="remarks"></a>Hinweise  
  Die Überladungen von `then`, die ein Lambda oder ein Funktionselement verwenden, die bzw. das eine Windows::Foundation::IAsyncInfo-Schnittstelle zurückgibt, sind nur für Windows Store-Apps verfügbar.  
   
- Weitere Informationen zur Verwendung von aufgabenfortsetzungen für asynchrone Aufgaben finden Sie unter [Aufgabenparallelität](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
+ Weitere Informationen zum Task Fortsetzungen zu verwenden, um asynchrone Aufgaben zu erstellen, finden Sie unter [Aufgabenparallelität](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
 ##  <a name="wait"></a>Warte 
 
@@ -343,8 +326,7 @@ task_status wait() const;
 ### <a name="remarks"></a>Hinweise  
   
 > [!IMPORTANT]
->  Rufen Sie in einer [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)]-App `wait` nicht in Code auf, der auf dem STA ausgeführt wird. Andernfalls löst die Laufzeit [invalid_operation](invalid-operation-class.md) da diese Methode den aktuellen Thread blockiert und die App reagiert. Sie können jedoch Aufrufen der [Concurrency](#get) Methode, um das Ergebnis der Vorgängeraufgabe in einer aufgabenbasierten Fortsetzung zu erhalten.  
+>  Rufen Sie in einer [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)]-App `wait` nicht in Code auf, der auf dem STA ausgeführt wird. Andernfalls löst die Laufzeit [invalid_operation](invalid-operation-class.md) daran, dass diese Methode den aktuellen Thread blockiert und dazu führen, die app dass können reagiert. Sie können jedoch Aufrufen der [Concurrency](#get) Methode, um das Ergebnis der Vorgängeraufgabe in einer aufgabenbasierten Fortsetzung zu erhalten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)
-

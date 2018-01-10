@@ -1,34 +1,33 @@
 ---
-title: "Compilerfehler C3540 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3540"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3540"
+title: Compilerfehler C3540 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C3540
+dev_langs: C++
+helpviewer_keywords: C3540
 ms.assetid: 3c0c959c-e3b7-40eb-b922-ccac44bd9d85
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b3befc331c4f43f4efd4e5039258e0faddae97db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerfehler C3540
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-"Typ": sizeof kann nicht für einen Typ übernommen werden, der "Auto" enthält  
+# <a name="compiler-error-c3540"></a>Compilerfehler C3540
+"Typ": "sizeof" kann nicht angewendet werden, um ein Typ, der "auto" enthält  
   
- Der [sizeof](../../cpp/sizeof-operator.md)\-Operator kann nicht auf den angegebenen Typ angewendet werden, da dieser den `auto`\-Spezifizierer enthält.  
+ Die ["sizeof"](../../cpp/sizeof-operator.md) Operator kann nicht auf den angegebenen Typ angewendet werden, da sie enthält die `auto` Spezifizierer.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird C3540 ergeben.  
   
 ```  
@@ -42,7 +41,7 @@ int main() {
 }  
 ```  
   
-## Siehe auch  
- [Auto\-Schlüsselwort](../../cpp/auto-keyword.md)   
- [\/Zc:auto \(Variablentyp ableiten\)](../../build/reference/zc-auto-deduce-variable-type.md)   
- [sizeof\-Operator](../../cpp/sizeof-operator.md)
+## <a name="see-also"></a>Siehe auch  
+ [Auto-Schlüsselwort](../../cpp/auto-keyword.md)   
+ [/ Zc: Auto (Variablentyp ableiten)](../../build/reference/zc-auto-deduce-variable-type.md)   
+ [sizeof-Operator](../../cpp/sizeof-operator.md)

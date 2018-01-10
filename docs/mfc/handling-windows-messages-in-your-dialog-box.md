@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1b23131af3d1264a042de615d26c79d3e2827897
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 819d11c8749852900e070ea3e7abf579cac7f7f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="handling-windows-messages-in-your-dialog-box"></a>Verarbeiten von Windows-Meldungen in einem Dialogfeld
 Dialogfelder sind Windows, damit sie Windows-Nachrichten verarbeiten können, wenn Sie die entsprechenden Handlerfunktionen angeben. Beim Erstellen eigener Dialogfeldklassen mit dem Klassen-Assistent fügt der Assistent eine leere Nachricht-Zuordnung für die Klasse. Verwenden Sie das Eigenschaftenfenster, ordnen Sie alle Windows-Meldungen oder Befehle, die Ihre Klasse behandelt werden soll.  

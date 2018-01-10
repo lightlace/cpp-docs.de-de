@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a36a327bcf2a1beb46119c9b6c2947d95473cbaf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 29e4d3c556a5f7b6b3aed5daa0285ea6c2c15447
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="trackers"></a>Tracker
 Die [CRectTracker](../mfc/reference/crecttracker-class.md) Klasse bietet eine Benutzeroberfläche zwischen rechteckigen Elemente in Ihrer Anwendung und Ihre Benutzer mit einer Vielzahl von Formaten anzeigen. Diese Formate umfassen durchgehende, schraffierten oder gestrichelte Rahmen. eine Schraffur, die das Element behandelt; und Ziehpunkte, die sich außerhalb oder innerhalb eines Rahmens sein können. Rahmenstile werden häufig in Verbindung mit der OLE-Elementen verwendet, d. h. Objekte abgeleitet `COleClientItem`. Rechtecke Tracker geben visuellen Hinweise auf den aktuellen Status des Elements an.  

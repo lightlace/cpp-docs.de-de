@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,33 +14,19 @@ f1_keywords:
 - chrono/std::chrono::duration::max
 - chrono/std::chrono::duration::min
 - chrono/std::chrono::duration::zero
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: f3376d8c03608fde5a2a614bf0a3058fd8692800
-ms.contentlocale: de-de
-ms.lasthandoff: 04/29/2017
-
+helpviewer_keywords: std::chrono [C++], duration
+ms.workload: cplusplus
+ms.openlocfilehash: e25b632554f56054793f60f3fe058791798894d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="duration-class"></a>duration-Klasse
 Beschreibt einen Typ, der ein *Zeitintervall* enthält, bei dem es sich um die verstrichene Zeit zwischen zwei Situationen handelt.  
@@ -60,7 +45,7 @@ class duration <duration<Rep, Period1>, Period2>;
 ## <a name="remarks"></a>Hinweise  
  Mit dem Vorlagenargument `Rep` wird der Typ beschrieben, der zum Aufnehmen der Anzahl von Zeiteinheiten im Intervall verwendet wird. Das template-Argument `Period` ist eine Instanziierung von [ratio](../standard-library/ratio.md), mit dem die Größe des von jeder Zeiteinheit dargestellten Intervalls beschrieben wird.  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-typedefs"></a>Öffentliche Typedefs  
   
@@ -81,7 +66,7 @@ class duration <duration<Rep, Period1>, Period2>;
 |----------|-----------------|  
 |[count](#count)|Gibt die Anzahl von Zeiteinheiten im Zeitintervall zurück.|  
 |[max](#max)|Statisch Gibt den maximal zulässigen Wert des Vorlagenparameters `Ref` zurück.|  
-|[min](#min)|Statisch Gibt den niedrigsten zulässigen Wert des Vorlagenparameters `Ref` zurück.|  
+|[Min.](#min)|Statisch Gibt den niedrigsten zulässigen Wert des Vorlagenparameters `Ref` zurück.|  
 |[0 (null)](#zero)|Statisch Tatsächlich wird `Rep`(0) zurückgegeben.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
@@ -312,4 +297,3 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
  [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)   
  [\<chrono>](../standard-library/chrono.md)   
  [duration_values-Struktur](../standard-library/duration-values-structure.md)
-

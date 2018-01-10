@@ -17,11 +17,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7753c840fe1b4c9850408b53fa0adf09ed1bc121
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4df9da47925919a005d3c235d35f57f54a3568aa
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="enableif-class"></a>enable_if-Klasse
 Wandelt einen Typ für die SFINAE-Überladungsauflösung bedingt in eine Instanz um. Der geschachtelte typedef-`enable_if<Condition,Type>::type` existiert und ist ein Synonym für `Type` – wenn und nur dann, wenn `Condition` gleich `true` ist.  
@@ -52,7 +53,7 @@ template <bool B, class T = void>
 using enable_if_t = typename enable_if<B,T>::type;
 ```  
   
- In C++ ist eine fehlgeschlagene Substitution von Vorlagenparametern kein eigentlicher Fehler – dies wird als *SFINAE* (Substitution Failure Is Not An Error) bezeichnet. Normalerweise wird `enable_if` verwendet, um Kandidaten aus einer Überladungsauflösung zu entfernen – also aus dem Überladungssatz auszusortieren, sodass eine Definition zugunsten einer anderen zurückgewiesen werden kann. Dies entspricht dem SFINAE-Verhalten. Weitere Informationen zu SFINAE finden Sie unter [Substitution failure is not an error](http://go.microsoft.com/fwlink/LinkId=394798) auf Wikipedia.  
+ In C++ ist eine fehlgeschlagene Substitution von Vorlagenparametern kein eigentlicher Fehler – dies wird als *SFINAE* (Substitution Failure Is Not An Error) bezeichnet. Normalerweise wird `enable_if` verwendet, um Kandidaten aus einer Überladungsauflösung zu entfernen – also aus dem Überladungssatz auszusortieren, sodass eine Definition zugunsten einer anderen zurückgewiesen werden kann. Dies entspricht dem SFINAE-Verhalten. Weitere Informationen zu SFINAE finden Sie unter [Substitution failure is not an error](http://go.microsoft.com/fwlink/p/?linkid=394798) auf Wikipedia.  
   
  Im Folgenden finden Sie vier Beispielszenarien:  
   

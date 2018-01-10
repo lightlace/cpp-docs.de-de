@@ -1,90 +1,91 @@
 ---
-title: "Erstellen von C++-Projekten in Visual&#160;Studio"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Builds [C++], Informationen über Erstellen in Visual Studio"
-  - "Projekte [C++], Erstellen"
-  - "Visual C++-Projekte, Erstellen"
+title: Erstellen von C++-Projekten in Visual Studio | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Visual C++ projects, building
+- projects [C++], building
+- builds [C++], about building in Visual Studio
 ms.assetid: 9e8bc1a2-bb17-4951-937a-c757ed88d2d1
-caps.latest.revision: 18
-caps.handback.revision: "18"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: cd4934f3075f963efe59e8d73d8c72347fd53912
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Erstellen von C++-Projekten in Visual&#160;Studio
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In der integrierten Entwicklungsumgebung \(Integrated Development Environment, IDE\) vom Visual Studio gibt es verschiedene Möglichkeiten für das Erstellen einer kompletten Lösung oder nur eines Projekts.  Sie können außerdem Buildeinstellungen ändern und benutzerdefiniere Buildschritte angeben, um Ihren Entwicklungsprozess effizienter zu gestalten.  
+# <a name="building-c-projects-in-visual-studio"></a>Erstellen von C++-Projekten in Visual Studio
+In der integrierten Entwicklungsumgebung (Integrated Development Environment, IDE) vom Visual Studio gibt es verschiedene Möglichkeiten für das Erstellen einer kompletten Lösung oder nur eines Projekts. Sie können außerdem Buildeinstellungen ändern und benutzerdefiniere Buildschritte angeben, um Ihren Entwicklungsprozess effizienter zu gestalten.  
   
- Sie können wie folgt vorgehen, um eine Lösung zu erstellen, die [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] geöffnet und im **Projektmappen\-Explorer** ausgewählt ist:  
+ Erstellen eine Projektmappe, die in Visual Studio geöffnet und im ausgewählten **Projektmappen-Explorer**, können Sie:  
   
 -   Wählen Sie in der Menüleiste **Erstellen**, **Projektmappe erstellen**.  
   
--   Oder öffnen Sie im **Projektmappen\-Explorer** das Kontextmenü für die Projektmappe, und wählen Sie dann **Projektmappe erstellen** aus.  
+-   Oder geben Sie im **Projektmappen-Explorer**, öffnen Sie das Kontextmenü für die Projektmappe, und wählen Sie dann **Projektmappe**.  
   
--   Oder drücken Sie F7.  \(Das ist das Standardtastenkürzel für die C\-\/C\+\+\-Entwicklungseinstellungen.\)  
+-   Oder drücken Sie F7. (Das ist das Standardtastenkürzel für die C-/C++-Entwicklungseinstellungen.)  
   
--   Oder geben Sie im [Befehlsfenster](../Topic/Command%20Window.md) \(wählen Sie in der Menüleiste **Ansicht**, **Andere Fenster**, **Befehlsfenster** aus\), `Build.BuildSolution` ein.  
+-   Oder klicken Sie in der [Befehlsfenster](/visualstudio/ide/reference/command-window) (Wählen Sie in der Menüleiste **Ansicht**, **Weitere Fenster**, **Befehlsfenster**), geben Sie `Build.BuildSolution`.  
   
--   Oder geben Sie in das Feld [Schnellstart](../Topic/Quick%20Launch,%20Environment,%20Options%20Dialog%20Box.md) `build build solution` ein.  
+-   Oder klicken Sie in der [Schnellstart](/visualstudio/ide/reference/quick-launch-environment-options-dialog-box) geben `build build solution`.  
   
- Sie können wie folgt vorgehen, um ein Projekt zu erstellen, das im **Projektmappen\-Explorer** ausgewählt ist:  
+ Um ein Projekt zu erstellen, die ausgewählt wurde **Projektmappen-Explorer**, können Sie:  
   
--   Wählen Sie in der Menüleiste **Erstellen**, **\<Projektname\> erstellen** aus.  
+-   Wählen Sie in der Menüleiste **erstellen**, **erstellen \<Projektname >**.  
   
--   Oder öffnen Sie im **Projektmappen\-Explorer** das Kontextmenü für das Projekt, und wählen Sie dann **Erstellen** aus.  
+-   Oder geben Sie im **Projektmappen-Explorer**, öffnen Sie das Kontextmenü für das Projekt, und wählen Sie dann **erstellen**.  
   
--   Oder geben Sie im Befehlsfenster \(wählen Sie in der Menüleiste **Ansicht**, **Andere Fenster**, **Befehlsfenster** aus\) `Build.BuildOnlyProject` ein.  
+-   Oder, im Befehlsfenster (Wählen Sie in der Menüleiste **Ansicht**, **Weitere Fenster**, **Befehlsfenster**), geben Sie `Build.BuildOnlyProject`.  
   
--   Oder geben Sie in das Schnellstartfeld `build project only build only <Projektname>` ein.  
+-   Oder geben Sie in das schnellstartfeld `build project only build only <project name>`.  
   
- Wenn Sie eine Visual C\+\+\-Anwendung in Visual Studio erstellen, können Sie viele der Buildeinstellungen im Dialogfeld für die Eigenschaftenseiten des Projekts ändern.  Informationen zum Festlegen von Projekteigenschaften finden Sie unter [Arbeiten mit Projekteigenschaften](../ide/working-with-project-properties.md).  
+ Wenn Sie eine Visual C++-Anwendung in Visual Studio erstellen, können Sie viele der Buildeinstellungen im Dialogfeld für die Eigenschaftenseiten des Projekts ändern. Informationen zum Festlegen von Projekteigenschaften, finden Sie unter [arbeiten mit Projekteigenschaften](../ide/working-with-project-properties.md).  
   
- Ein Beispiel für die Verwendung der IDE zum Erstellen, Aufbauen und Debuggen eines C\+\+\-Projekts finden Sie unter [Exemplarische Vorgehensweise: Erkunden der Visual Studio IDE mit C\+\+](../Topic/Getting%20Started%20with%20C++%20in%20Visual%20Studio.md).  Ein Beispiel für die Verwendung der IDE für das Erstellen eines C\+\+\-\/CLR\-Projekts finden Sie unter [Exemplarische Vorgehensweise: Kompilieren eines C\+\+\-Programms für die CLR in Visual Studio](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md).  Ein Beispiel für die Verwendung der IDE zum Erstellen einer Windows Runtime\-App finden Sie unter [Erstellen Ihrer ersten Windows Runtime\-App mit C\+\+](http://msdn.microsoft.com/library/windows/apps/hh974580.aspx).  
+ Ein Beispiel zur Verwendung die IDE erstellen, erstellen und Debuggen eines C++-Projekts finden Sie unter [Exemplarische Vorgehensweise: Untersuchen der Visual Studio-IDE mit C++](/visualstudio/ide/getting-started-with-cpp-in-visual-studio). Ein Beispiel zur Verwendung die IDE zum Erstellen von C + c++ / CLR-Projekts finden Sie unter [Exemplarische Vorgehensweise: Kompilieren eines C++-Programms, die die CLR in Visual Studio](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md). Ein Beispiel zur Verwendung die IDE zum Erstellen einer Windows-Runtime-app, finden Sie unter [Erstellen Ihrer ersten Windows-Runtime-app mit C++](http://msdn.microsoft.com/library/windows/apps/hh974580.aspx).  
   
  Weitere Informationen zum Erstellen, Ändern von Buildeinstellungen und Angeben von benutzerdefinierten Buildschritten finden Sie in den folgenden Artikeln.  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
  [Grundlagen benutzerdefinierter Buildschritte und Buildereignisse](../ide/understanding-custom-build-steps-and-build-events.md)  
  Beschreibt, wie Sie den Buildprozess in der integrierten Entwicklungsumgebung anpassen.  
   
- [Makros für Buildbefehle und \-eigenschaften](../ide/common-macros-for-build-commands-and-properties.md)  
+ [Gängige Makros für Buildbefehle und -eigenschaften.](../ide/common-macros-for-build-commands-and-properties.md)  
  Listet Makros auf, die Sie verwenden können, wenn Zeichenfolgen akzeptiert werden.  
   
  [Erstellen externer Projekte](../ide/building-external-projects.md)  
  Stellt das Erstellen von Projekten dar, die Funktionen außerhalb der integrierten Entwicklungsumgebung verwenden.  
   
  [Projektdateien](../ide/project-files.md)  
- Stellt die XML\-Struktur einer .vcxproj\-Datei dar.  
+ Stellt die XML-Struktur einer .vcxproj-Datei dar.  
   
-## Verwandte Abschnitte  
- [VC\+\+ Directories, Projects, Options Dialog Box](assetId:///e027448b-c811-4c3d-8531-4325ad3f6e02)  
- Stellt dar, wie Sie den Suchpfad für ausführbare Dateien ändern und Dateien, Bibliotheksdateien und Quellcodedateien während des Erstellens einschließen.  
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ [VC++-Verzeichnisse, Projekte, Optionen (Dialogfeld)](vcpp-directories-property-page.md)  
+ (Gilt nur für MSBuild-Projekte) Erläutert, wie Sie den Suchpfad für ausführbare Dateien ändern, schließen Sie Dateien, Bibliotheksdateien und Quellcodedateien während eines Builds.  
   
- [Anwendungen in Visual Studio erstellen](../Topic/Compiling%20and%20Building%20in%20Visual%20Studio.md)  
+ [Kompilieren und Erstellen](/visualstudio/ide/compiling-and-building-in-visual-studio)  
  Bietet Informationen zum Erstellen in Visual Studio.  
   
- [Erstellen von C\/C\+\+\-Programmen](../build/building-c-cpp-programs.md)  
+ [Erstellen von C/C++-Programmen](../build/building-c-cpp-programs.md)  
  Bietet Links zu Themen, in denen das Erstellen von Programmen über die Befehlszeile oder die integrierte Entwicklungsumgebung von Visual Studio beschrieben sind.  
   
- [Referenz zur C\/C\+\+\-Erstellung](../build/reference/c-cpp-building-reference.md)  
- Bietet Links zu einem Überblick für das Erstellen von Programmen C\+\+, Compiler\- und Linkeroptionen und zusätzlichen Buildtools.  
+ [Referenz zur C/C++-Erstellung](../build/reference/c-cpp-building-reference.md)  
+ Bietet Links zu einem Überblick für das Erstellen von Programmen C++, Compiler- und Linkeroptionen und zusätzlichen Buildtools.  
   
- [Aktualisieren von Projekten von früheren Versionen von Visual C\+\+](../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
- Bietet Links zu Themen, in denen Probleme beim Upgrade von Visual C\+\+ 6.0\- und späteren Projekten auf Visual C\+\+ .NET abgedeckt sind.  
+ [Aktualisieren von Projekten von früheren Versionen von Visual C++](../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
+ Enthält Links zu Themen über Probleme beim Upgrade von C++-Projekt auf neuere Versionen von das Compilertoolset.  
   
- [Porting and Upgrading Programs](assetId:///c36c44b3-5a9b-4bb4-9b7a-469aa770ed00)  
- Stellt Details zum Portieren von Anwendungen bereit und beschreibt Makefiles.  
+[Visual C++-Handbuch: Portieren und Aktualisieren](../porting/visual-cpp-porting-and-upgrading-guide.md)  
+  Ausführliche Informationen zu C++-Anwendungen zu aktualisieren, die in früheren Versionen von Visual Studio erstellt wurden, sowie die Informationen zum Migrieren von Anwendungen, die mit anderen Tools als Visual Studio erstellt wurden.  
   
-## Siehe auch  
- [Roadmap for Windows Store apps using C\+\+](assetId:///0b71e4a4-5d8a-4a20-b2ec-e40062675ec1)
+## <a name="see-also"></a>Siehe auch  
+ [Roadmap für Windows Store-apps mit C++](http://msdn.microsoft.com/en-us/0b71e4a4-5d8a-4a20-b2ec-e40062675ec1)

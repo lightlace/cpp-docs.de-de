@@ -1,39 +1,40 @@
 ---
-title: "__popcnt16, __popcnt, __popcnt64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__popcnt64"
-  - "__popcnt"
-  - "__popcnt16"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "popcnt-Anweisung"
-  - "__popcnt16"
-  - "__popcnt64"
-  - "__popcnt"
+title: __popcnt16, __popcnt, __popcnt64 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __popcnt64
+- __popcnt
+- __popcnt16
+dev_langs: C++
+helpviewer_keywords:
+- popcnt instruction
+- __popcnt16
+- __popcnt64
+- __popcnt
 ms.assetid: e525b236-adc8-42df-9b9b-8b7d8c245d3b
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 45e60a412dc24f685fd375ebc19c109b2bee0e2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# __popcnt16, __popcnt, __popcnt64
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft\-spezifisch**  
+# <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16, __popcnt, __popcnt64
+**Microsoft-spezifisch**  
   
- Ermittelt die Anzahl von Bits der Leerraum \(eins\) in einer 16 \-, 32 \- oder 64: Byte\-ganzen Zahl ohne Vorzeichen.  
+ Zählt die Anzahl von einem Bits (Auffüllung Count) in eine 16-, 32- oder 64-Byte-Ganzzahl ohne Vorzeichen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 unsigned short __popcnt16(  
@@ -47,29 +48,29 @@ unsigned __int64 __popcnt64(
 );  
 ```  
   
-#### Parameter  
- \[in\] `value`  
- Das 16 \-, 32 \- oder zum 64\-Bit\-Ganzzahl ohne Vorzeichen wir die Anzahl der Leerraum.  
+#### <a name="parameters"></a>Parameter  
+ [in] `value`  
+ Die 16, 32 oder 64-Bit-Ganzzahl ohne Vorzeichen für die Anzahl der Auffüllung werden soll.  
   
-## Rückgabewert  
- Die Anzahl der Bits im `value`\-Parameter.  
+## <a name="return-value"></a>Rückgabewert  
+ Die Anzahl von einem Bits in der `value` Parameter.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Intrinsisch|Architektur|  
-|-----------------|-----------------|  
+|Systemintern|Architektur|  
+|---------------|------------------|  
 |`__popcnt16`|Erweiterte Bitmanipulation|  
 |`__popcnt`|Erweiterte Bitmanipulation|  
-|`__popcnt64`|Erweiterte Bitmanipulation im 64\-Bit\-Modus.|  
+|`__popcnt64`|Erweiterte Bitmanipulation in 64-Bit-Modus.|  
   
- **Headerdatei** \<intrin.h\>  
+ **Headerdatei** \<intrin.h >  
   
-## Hinweise  
- Jede dieser systeminternen Funktionen generiert die`popcnt`\-Anweisung.  Die Größe des Werts, den die`popcnt`\-Anweisung zurückgibt, entspricht der Größe des Arguments.  In 32\-Bit\- Modus gibt es keine 64\-Bit\- allgemeinen Register, sodass kein 64\-Bit\- `popcnt`.  
+## <a name="remarks"></a>Hinweise  
+ Jede Diese systeminternen Funktionen generiert der `popcnt` Anweisung.  Die Größe des Werts, der `popcnt` Anweisung gibt die Größe des Arguments identisch ist.  In 32-Bit-Modus sind keine 64-Bit-Allzweckregistern, daher keine 64-Bit- `popcnt`.  
   
- Um Hardwareunterstützung für die `popcnt`Anweisung zu bestimmen, `__cpuid` direkt aufrufen und `InfoType=0x00000001` mit Prüfbit 23 von `CPUInfo[2] (ECX)`.  Das Bit beträgt 1, wenn die Anweisung unterstützt wird, andernfalls 0.  Wenn Sie diesen Code ausführen, der Hardware, das auf die ist, die nicht direkt `popcnt`\-Anweisung unterstützt, die Ergebnisse sind unvorhersehbar.  
+ Um zu bestimmen, Hardware-Unterstützung für die `popcnt` -Anweisung, rufen die `__cpuid` systeminternen Funktionen mit `InfoType=0x00000001` und überprüfen Sie Bit 23 von `CPUInfo[2] (ECX)`. Dieses Bit ist 1, wenn die Anweisung unterstützt wird und 0 andernfalls. Wenn Sie Code, verwendet dieser systeminternen Funktion auf Hardware ausgeführt, die nicht unterstützt wird die `popcnt` -Anweisung, die die Ergebnisse sind unvorhersehbar.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 #include <iostream>   
@@ -96,15 +97,18 @@ int main()
   
 ```  
   
-  **\_\_popcnt16 \(0x0\) \= 0**  
- **\_\_popcnt16 \(0xff\) \= 8**  
- **\_\_popcnt16 \(0xffff\) \= 16**  
- **\_\_popcnt \(0x0\) \= 0**  
- **\_\_popcnt \(0xff\) \= 8**  
- **\_\_oopcnt \(0xffff\) \= 16**  
- **\_\_popcnt \(0xffffffff\) \= 32**   
-## Microsoft ENDES bestimmten  
- Copyright 2007 bis Advanced Micro Devices, Inc.  Alle Rechte vorbehalten.  Reproduziert mit zulässigen Advanced Micro Devices, Inc.  
+```Output  
+__popcnt16(0x0) = 0  
+__popcnt16(0xff) = 8  
+__popcnt16(0xffff) = 16  
+__popcnt(0x0) = 0  
+__popcnt(0xff) = 8  
+__oopcnt(0xffff) = 16  
+__popcnt(0xffffffff) = 32  
+```  
   
-## Siehe auch  
+**Ende Microsoft-spezifisch**  
+ Copyright 2007 erweiterte Micro-Geräte, Inc. Alle Rechte vorbehalten. Reproduziert mit Genehmigung Advanced Micro-Geräte, Inc.  
+  
+## <a name="see-also"></a>Siehe auch  
  [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

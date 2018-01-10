@@ -1,62 +1,65 @@
 ---
-title: "Binary Editor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.binary.F1"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "editors, Binary"
-  - "resources [Visual Studio], editing"
-  - "resource editors, Binary editor"
-  - "Binary editor"
+title: "Binär-Editor | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.binary.F1
+dev_langs: C++
+helpviewer_keywords:
+- editors, Binary
+- resources [Visual Studio], editing
+- resource editors, Binary editor
+- Binary editor
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 4dade674fb32615e23904e6dbaf03d6c6ee0a371
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Binary Editor
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="binary-editor"></a>Binär-Editor
 > [!WARNING]
->  Der Binär\-Editor ist in Express\-Editionen nicht verfügbar.  
+>  Der Binär-Editor ist in Express-Editionen nicht verfügbar.  
   
- Der Binär\-Editor ermöglicht eine Bearbeitung beliebige Ressourcen auf Binärebene im hexadezimalen Format oder im ASCII\-Format. Außerdem können Sie mit dem [Suchbefehl](../Topic/Find%20Command.md) ASCII\-Zeichenfolgen oder hexadezimale Bytes suchen. Der Binär\-Editor sollte nur dann verwendet werden, wenn Sie von der Visual Studio\-Umgebung nicht unterstützte, benutzerdefinierte Ressourcen oder Ressourcentypen anzeigen oder geringfügige Änderungen daran vornehmen möchten.  
+ Der Binär-Editor ermöglicht eine Bearbeitung beliebige Ressourcen auf Binärebene im hexadezimalen Format oder im ASCII-Format. Außerdem können Sie mit dem [Suchbefehl](/visualstudio/ide/reference/find-command) ASCII-Zeichenfolgen oder hexadezimale Bytes suchen. Der Binär-Editor sollte nur dann verwendet werden, wenn Sie von der Visual Studio-Umgebung nicht unterstützte, benutzerdefinierte Ressourcen oder Ressourcentypen anzeigen oder geringfügige Änderungen daran vornehmen möchten.  
   
- Zum Öffnen von binären Editor wählen Sie im Hauptmenü zuerst **Datei &#124; Neu &#124; Datei** aus, wählen Sie die zu bearbeitende Datei aus, klicken Sie auf den Dropdownpfeil neben der Schaltfläche **Öffnen**, und wählen Sie **Öffnen mit &#124; Binärer Editor** aus.  
+ Zum Öffnen von binären Editor wählen Sie zunächst **Datei &#124; Neue &#124; Datei** über das Hauptmenü, wählen Sie die Datei, die Sie bearbeiten möchten, und dann klicken auf den Dropdownpfeil neben der **öffnen** aus, und klicken **Öffnen mit &#124; Binär-Editor**.  
   
 > [!CAUTION]
->  Das Bearbeiten von Ressourcen, wie Dialogfeldern, Bildern oder Menüs ist im Binär\-Editor äußerst riskant. Eine falsche Bearbeitung kann zu einer Beschädigung der Ressource führen, sodass sie anschließend im systemeigenen Editor nicht mehr einsetzbar ist.  
+>  Das Bearbeiten von Ressourcen, wie Dialogfeldern, Bildern oder Menüs ist im Binär-Editor äußerst riskant. Eine falsche Bearbeitung kann zu einer Beschädigung der Ressource führen, sodass sie anschließend im systemeigenen Editor nicht mehr einsetzbar ist.  
   
 > [!TIP]
->  Indem Sie im Binär\-Editor auf die rechte Maustaste klicken, können Sie in vielen Situationen ein Kontextmenü aufrufen, in dem ressourcenspezifische Befehle enthalten sind. Welche Befehle verfügbar sind, hängt von dem Element ab, auf das Sie mit dem Cursor zeigen. Wenn Sie zum Beispiel mit der Maustaste klicken, während Sie auf den Binär\-Editor zeigen, und im Binär\-Editor Hexadezimalwerte markiert sind, enthält das Kontextmenü die Befehle **Ausschneiden**, **Kopieren** und **Einfügen**.  
+>  Indem Sie im Binär-Editor auf die rechte Maustaste klicken, können Sie in vielen Situationen ein Kontextmenü aufrufen, in dem ressourcenspezifische Befehle enthalten sind. Welche Befehle verfügbar sind, hängt von dem Element ab, auf das Sie mit dem Cursor zeigen. Wenn Sie zum Beispiel mit der Maustaste klicken, während Sie auf den Binär-Editor zeigen, und im Binär-Editor Hexadezimalwerte markiert sind, enthält das Kontextmenü die Befehle **Ausschneiden**, **Kopieren**und **Einfügen** .  
   
- Mit dem Binär\-Editor können Sie die folgenden Funktionen ausführen:  
+ Mit dem Binär-Editor können Sie die folgenden Funktionen ausführen:  
   
--   [Eine Ressource für die Binärbearbeitung öffnen](../mfc/opening-a-resource-for-binary-editing.md)  
+-   [Eine Ressource für die Binärbearbeitung öffnen](../windows/opening-a-resource-for-binary-editing.md)  
   
--   [Binärdaten bearbeiten](../mfc/editing-binary-data.md)  
+-   [Binärdaten bearbeiten](../windows/editing-binary-data.md)  
   
--   [Binärdaten suchen](../mfc/finding-binary-data.md)  
+-   [Binärdaten suchen](../windows/finding-binary-data.md)  
   
--   [Eine neue benutzerdefinierte Ressource oder Datenressource erstellen](../mfc/creating-a-new-custom-or-data-resource.md)  
+-   [Eine neue benutzerdefinierte Ressource oder Datenressource erstellen](../windows/creating-a-new-custom-or-data-resource.md)  
   
-## Verwaltete Ressourcen  
- Mit dem [Bild\-Editor](../mfc/image-editor-for-icons.md) und dem Binär\-Editor ist die Bearbeitung von Ressourcendateien in verwalteten Projekten möglich. Bei den zu bearbeitenden verwalteten Ressourcen muss es sich um verknüpfte Ressourcen handeln. Das Bearbeiten eingebetteter Ressourcen wird von den Visual Studio\-Ressourcen\-Editoren nicht unterstützt.  
+## <a name="managed-resources"></a>Verwaltete Ressourcen  
+ Mit dem [Bild-Editor](../windows/image-editor-for-icons.md) und dem Binär-Editor ist die Bearbeitung von Ressourcendateien in verwalteten Projekten möglich. Bei den zu bearbeitenden verwalteten Ressourcen muss es sich um verknüpfte Ressourcen handeln. Das Bearbeiten eingebetteter Ressourcen wird von den Visual Studio-Ressourcen-Editoren nicht unterstützt.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
   
-### Anforderungen  
- Keine  
+### <a name="requirements"></a>Anforderungen  
+ Keiner  
   
-## Siehe auch  
- [Resource Editors](../mfc/resource-editors.md)
+## <a name="see-also"></a>Siehe auch  
+ [Ressourcen-Editor](../windows/resource-editors.md)
+

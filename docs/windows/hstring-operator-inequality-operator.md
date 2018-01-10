@@ -1,69 +1,64 @@
 ---
-title: "HString::Operator!=-Operator"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HString::operator!="
-dev_langs: 
-  - "C++"
+title: Hstring::! =-Operator | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HString::operator!=
+dev_langs: C++
 ms.assetid: dcdd2aca-e7d6-4bf1-b2de-03efbb430a93
-caps.latest.revision: 2
-caps.handback.revision: "2"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5aab0784b2a099a104fee696148fb9d7ec0c5ac9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# HString::Operator!=-Operator
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hstringoperator-operator"></a>HString::Operator!=-Operator
 Gibt an, ob die zwei Parameter ungleich sind.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
+inline bool operator!=( const HString& lhs,   
+                        const HString& rhs) throw()  
   
-   inline bool operator!=(  
-                  const HString& lhs,   
-                  const HString& rhs) throw()  
+inline bool operator!=( const HStringReference& lhs,   
+                        const HString& rhs) throw()  
   
-inline bool operator!=(  
-                  const HStringReference& lhs,   
-                  const HString& rhs) throw()  
+inline bool operator!=( const HString& lhs,   
+                        const HStringReference& rhs) throw()  
   
-inline bool operator!=(  
-                  const HString& lhs,   
-                  const HStringReference& rhs) throw()  
+inline bool operator!=( const HSTRING& lhs,   
+                        const HString& rhs) throw()  
   
-inline bool operator!=(  
-                  const HSTRING& lhs,   
-                  const HString& rhs) throw()  
-  
-inline bool operator!=(  
-                  const HString& lhs,   
-                  const HSTRING& rhs) throw()  
-  
+inline bool operator!=( const HString& lhs,   
+                        const HSTRING& rhs) throw()  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `lhs`  
- Der erste Parameter zu vergleichen.  `lhs` kann ein Objekt HString oder HStringReference sein oder ein HSTRING\-Handle.  
+ Der erste Parameter, verglichen werden soll. `lhs`kann ein HString oder HStringReference-Objekt oder ein HSTRING-Handle.  
   
  `rhs`  
- Der zweite Parameter zu vergleichen.`rhs` kann ein Objekt HString oder HStringReference sein oder ein HSTRING\-Handle.  
+ Der zweite Parameter, verglichen werden soll.`rhs` kann ein HString oder HStringReference-Objekt oder ein HSTRING-Handle.  
   
-## Rückgabewert  
- `true`, wenn der `lhs`\-Parameter und der `rhs`\-Parameter ungleich sind, andernfalls `false`.  
+## <a name="return-value"></a>Rückgabewert  
+ `true`Wenn die `lhs` und `rhs` Parameter sind nicht gleich sind, andernfalls `false`.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## Siehe auch  
- [HString\-Klasse](../windows/hstring-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [HString-Klasse](../windows/hstring-class.md)

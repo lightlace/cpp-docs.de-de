@@ -37,11 +37,12 @@ caps.latest.revision: "33"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ceca13bd09483c788c430d420b53c88bb97ed34d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de1e30e6ca9f404199c6db43837f35d612a02b69
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl-Klasse
 Die `CMFCEditBrowseCtrl` Klasse unterstützt das Bearbeitungssteuerelement durchsuchen, also ein Bearbeitungsfeld, das eine Schaltfläche zum Durchsuchen optional enthält. Wenn der Benutzer auf die Schaltfläche zum Durchsuchen klicken, führt das Steuerelement eine benutzerdefinierte Aktion aus oder zeigt ein Standarddialogfeld an, das einen Dateibrowser oder einen Ordnerbrowser enthält.  
@@ -52,7 +53,7 @@ Die `CMFCEditBrowseCtrl` Klasse unterstützt das Bearbeitungssteuerelement durch
 class CMFCEditBrowseCtrl : public CEdit  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -200,9 +201,9 @@ CMFCEditBrowseCtrl::BrowseMode GetMode() const;
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|`BrowseMode_Default`|`custom mode`. Eine Programmierer definierte Aktion ausgeführt wird.|  
-|`BrowseMode_File`|`file mode`. Das standard-Datei-Browser-Dialogfeld wird angezeigt.|  
-|`BrowseMode_Folder`|`folder mode`. Der Standardordner-Browser-Dialogfeld wird angezeigt.|  
+|`BrowseMode_Default`|`custom mode` Eine Programmierer definierte Aktion ausgeführt wird.|  
+|`BrowseMode_File`|`file mode` Das standard-Datei-Browser-Dialogfeld wird angezeigt.|  
+|`BrowseMode_Folder`|`folder mode` Der Standardordner-Browser-Dialogfeld wird angezeigt.|  
 |`BrowseMode_None`|Die Schaltfläche zum Durchsuchen, wird nicht angezeigt.|  
   
 ### <a name="remarks"></a>Hinweise  

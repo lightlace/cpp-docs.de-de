@@ -1,32 +1,31 @@
 ---
-title: "Compilerwarnung (Stufe 4) C4245 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4245"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4245"
+title: Compilerwarnung (Stufe 4) C4245 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4245
+dev_langs: C++
+helpviewer_keywords: C4245
 ms.assetid: 85083d53-9cc2-4d12-b58c-6dad28f15cbe
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 94308b2b19878c3c25a91bfd27658209b7635cb9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 4) C4245
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'Konvertierung': Konvertierung von 'Typ1' in 'Typ2', signed\/unsigned\-Konflikt  
+# <a name="compiler-warning-level-4-c4245"></a>Compilerwarnung (Stufe 4) C4245
+'Konvertierung': Konvertierung von "Typ1" in "Typ2" signed/unsigned-Konflikt  
   
- Sie haben versucht, eine **Konstante** mit Vorzeichen, die einen negativen Wert hat, in `unsigned` zu konvertieren.  
+ Sie haben versucht, ein mit Vorzeichen konvertiert **const** , die einen negativen Wert hat eine `unsigned`.  
   
  Im folgenden Beispiel wird C4245 generiert:  
   

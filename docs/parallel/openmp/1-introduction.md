@@ -1,27 +1,28 @@
 ---
-title: "1. Introduction"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "1. Einführung | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: c42e72bc-0e31-4b1c-b670-cd82673c0c5a
-caps.latest.revision: 6
-caps.handback.revision: "6"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f850e236ebfd056da93700df06ec830e5a573284
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# 1. Introduction
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Dieses Dokument gibt eine Auflistung von Bibliotheksfunktionen, Compileranweisung und Umgebungsvariablen an, die verwendet werden können, um Freigegebene Arbeitsspeicher Parallelität in C\# und C\+\+\-Programmen anzugeben.  Die Funktionen, die in diesem Dokument beschriebene bekannt als die zusammen *OpenMPs C\/C\+\+ Anwendungsprogrammierschnittstelle \(API\)*.  Das Ziel dieser Spezifikation ist, ein Modell für parallele Programmierung bereitzustellen, die einem Programm ermöglicht, über Freigegebene Arbeitsspeicher von verschiedenen Architekturen Anbieter portabel sind.  OpenMP C\/C\+\+ API wird vom Compiler von zahlreichen Anbietern unterstützt.  Weitere Informationen zu OpenMP, einschließlich der *OpenMP\-Fortran\-Anwendungsprogrammierschnittstelle*, können auf der folgenden Website durchsucht werden:  
+# <a name="1-introduction"></a>1. Einführung
+Dieses Dokument gibt eine Auflistung von Compiler-Direktiven, Bibliotheksfunktionen und Umgebungsvariablen, die zum Angeben von shared Memory-Parallelität in C und C++-Programmen verwendet werden können. In diesem Dokument beschriebene Funktionalität wird zusammenfassend als bezeichnet den *OpenMP C/C++-Anwendung die API (Anwendungsprogrammierschnittstelle)*. Das Ziel dieser Spezifikation ist, um ein Modell bereitzustellen, zur parallelen Programmierung, die ein Programm über das shared Memory-Architekturen von unterschiedlichen Anbietern portabel sein können. OpenMP-C-/C++-API wird von Compilern von zahlreichen Anbietern unterstützt werden. Weitere Informationen zu OpenMP, einschließlich der *OpenMP Fortran Anwendungsprogrammierschnittstelle*, finden Sie unter der folgenden Website:  
   
- [http:\/\/www.openmp.org](http://www.openmp.org)  
+ [http://www.OpenMP.org](http://www.openmp.org)  
   
- Die Direktive, die Bibliotheksfunktionen und die Umgebungsvariablen, die in diesem Dokument definiert sind, ermöglichen es Benutzern, während paralleler Programme zum Aktivieren von Portabilität zu erstellen und zu verwalten.  Die Direktive erweitern das Programmiermodell sequenzielle C und C\+\+ mehrere Konstrukte der Daten des einzelnen Programms \(SPMD\), Arbeitsteilungs und konstrukten Synchronisierung konstrukten, und sie bieten Unterstützung für die gemeinsame Nutzung und Privatisierung von Daten.  Compiler, die OpenMP C und C\+\+ APIs unterstützen, stellen eine Befehlszeilenoption an den Compiler ein, der Interpretation aller OpenMP\-Compiler Direktiven aktiviert und ermöglicht.
+ Die Direktiven, Bibliotheksfunktionen und Umgebungsvariablen, die in diesem Dokument definierte können Benutzer zum Erstellen und verwalten parallele Programme zugleich Portabilität. Die Direktiven erweitern C und C++ sequenzielle Programmierungsmodells mit einzelnen Programm mehrerer-(SPMD)-Konstrukte, Arbeitsteilungskonstrukte und Konstrukte für die Synchronisierung, und sie bieten Unterstützung für die gemeinsame Nutzung und Privatisierung Datenmenge. Compiler, die OpenMP-C- und C++-API unterstützen, werden eine Befehlszeilenoption für den Compiler enthalten, die aktiviert und ermöglicht die Darstellung aller OpenMP Compilerdirektiven.

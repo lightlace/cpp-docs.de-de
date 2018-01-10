@@ -1,65 +1,68 @@
 ---
-title: "Method Attributes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "method attributes"
-  - "attributes [C++], reference topics"
+title: Methodenattribute | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- method attributes
+- attributes [C++], reference topics
 ms.assetid: b2313352-480d-488b-8c35-6242ffd3a549
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f2413543e7638f47db13799e0549a415ee92c1c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Method Attributes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die folgenden Attribute werden auf die Methoden in einer Klasse, einer Schnittstelle oder einer Co\-Klasse zu.  
+# <a name="method-attributes"></a>Methodenattribut
+Die folgenden Attribute gelten für die Methoden in einer Klasse, Co-Klasse oder Schnittstelle.  
   
 |Attribut|Beschreibung|  
-|--------------|------------------|  
-|[bindable](../windows/bindable.md)|Gibt an, dass die Eigenschaft Datenbindungen unterstützt.|  
-|[call\_as](../windows/call-as.md)|Aktiviert eine Funktion nicht remotefähig zu einer Remotewebsite Funktion zugeordnet werden soll.|  
-|[custom](../windows/custom-cpp.md)|Ermöglicht Ihnen definierten Attribut besitzen.|  
-|[db\_column](../windows/db-column.md)|Bindet eine angegebene Spalte auf das Rowset.|  
-|[db\_command](../windows/db-command.md)|Erstellt einen OLE DB\-Befehl.|  
-|[db\_param](../windows/db-param.md)|Ordnet die angegebene Membervariable mit einer Eingabe oder einem Ausgabeparameter und schränkt die Variable ab.|  
-|[db\_source](../windows/db-source.md)|Erstellt eine Verbindung zu einer Datenquelle.|  
-|[db\_table](../windows/db-table.md)|Öffnet eine OLE DB\-Tabelle.|  
-|[defaultbind](../windows/defaultbind.md)|Gibt die einzige bindbare Eigenschaft an, die das Objekt am besten darstellt.|  
-|[defaultcollelem](../windows/defaultcollelem.md)|Wird für Visual Basic\-Code\-Optimierung.|  
-|[displaybind](../windows/displaybind.md)|Gibt eine Eigenschaft an, die dem Benutzer angezeigt werden sollte, als bindbar gesucht werden sollen.|  
-|[helpcontext](../windows/helpcontext.md)|Gibt eine Kontext\-ID an, die der Benutzer Informationen über dieses Element in der Hilfedatei können.|  
-|[helpfile](../windows/helpfile.md)|Legt den Namen der Hilfedatei für eine Typbibliothek fest.|  
-|[helpstring](../windows/helpstring.md)|Gibt eine Zeichenfolge an, durch die das zugehörige Element beschrieben wird.|  
-|[helpstringcontext](../windows/helpstringcontext.md)|Gibt die ID des Hilfethemas in einem .hlp oder CHM\-Datei an.|  
-|[helpstringdll](../windows/helpstringdll.md)|Gibt den Namen der DLL an, der verwendet wird, um Zeichenfolgen Dokumente Lokalisierung \(Discovery\) auszuführen.|  
-|[hidden](../windows/hidden.md)|Gibt an, dass das Element vorhanden ist, in einem benutzerorientierten Browser jedoch nicht angezeigt werden sollte.|  
-|[id](../windows/id.md)|Gibt ein DISPID für eine Memberfunktion an \(entweder eine Eigenschaft oder eine Methode in einer Schnittstelle bzw. Dispatchschnittstelle\).|  
-|[immediatebind](../windows/immediatebind.md)|Gibt an, dass die Datenbank sofort alle Änderungen einer Eigenschaft eines datengebundenen Objekts benachrichtigt wird.|  
-|[in](../windows/in-cpp.md)|Gibt an, dass ein Parameter aus der aufgerufenen Prozedur an die aufrufende Prozedur übergeben werden soll.|  
-|[local](../windows/local-cpp.md)|Ermöglicht es Ihnen, den MIDL\-Compiler als Header Steuerelement\-Generator verwenden, wenn Sie im Header des Schnittstellen verwendet werden.  Wenn in einer einzelnen Funktion verwendet werden, legt eine lokale Prozedur fest, für die keine Stubs generiert werden.|  
+|---------------|-----------------|  
+|[bindable](../windows/bindable.md)|Gibt an, dass die Eigenschaft die Datenbindung unterstützt.|  
+|[call_as](../windows/call-as.md)|Ermöglicht es einer nicht remotefähig-Funktion, um eine remote-Funktion zugeordnet werden.|  
+|[benutzerdefinierte](../windows/custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|  
+|[db_column](../windows/db-column.md)|Bindet eine angegebene Spalte auf das Rowset an.|  
+|[db_command](../windows/db-command.md)|Erstellt einen OLE DB-Befehl.|  
+|[db_param](../windows/db-param.md)|Ordnet die angegebene Membervariable ein Eingabe- oder Ausgabespalte-Parameter und begrenzt die Variable.|  
+|[db_source](../windows/db-source.md)|Erstellt eine Verbindung mit einer Datenquelle.|  
+|[db_table](../windows/db-table.md)|Öffnet eine OLE DB-Tabelle.|  
+|[defaultbind](../windows/defaultbind.md)|Gibt an, die einfache, bindbare Eigenschaft, die das Objekt am besten darstellt.|  
+|[defaultcollelem](../windows/defaultcollelem.md)|Zur Optimierung der Visual Basic-Code verwendet.|  
+|[displaybind](../windows/displaybind.md)|Gibt eine Eigenschaft, die für den Benutzer als bindbar angezeigt werden sollen.|  
+|[helpcontext](../windows/helpcontext.md)|Gibt eine Kontext-ID, mit dem die Benutzerinformationen zu diesem Element in der Hilfedatei.|  
+|[helpfile](../windows/helpfile.md)|Legt den Namen der Hilfedatei für eine Typbibliothek.|  
+|[helpstring](../windows/helpstring.md)|Gibt eine Zeichenfolge, die verwendet wird, um das Element zu beschreiben, auf dem es angewendet.|  
+|[helpstringcontext](../windows/helpstringcontext.md)|Gibt die ID des Hilfethemas in einer HLP oder CHM-Datei an.|  
+|[helpstringdll](../windows/helpstringdll.md)|Gibt den Namen der DLL zu verwenden, um das Dokument Zeichenfolgensuche (Lokalisierung) ausführen.|  
+|[hidden](../windows/hidden.md)|Gibt an, dass das Element vorhanden ist, aber nicht in einem Browser benutzerorientierte angezeigt werden soll.|  
+|[ID](../windows/id.md)|Gibt eine DISPID für eine Memberfunktion (eine Eigenschaft oder eine Methode in einer Schnittstelle oder Disp-Schnittstelle).|  
+|[immediatebind](../windows/immediatebind.md)|Gibt an, die Datenbank sofort aller Änderungen an eine Eigenschaft eines Objekts von datengebundenen benachrichtigt wird.|  
+|[in](../windows/in-cpp.md)|Gibt an, dass ein Parameter von der aufrufenden Prozedur an die aufgerufene Prozedur übergeben werden.|  
+|[lokale](../windows/local-cpp.md)|Können Sie die MIDL-Compiler als bei der Verwendung in der Schnittstelle Header einen Header-Generator zu verwenden. Wenn in einer einzelnen Funktion verwendet wird, kennzeichnet eine lokale Prozedur für die keine Stubs generiert werden.|  
 |[nonbrowsable](../windows/nonbrowsable.md)|Gibt an, dass ein Schnittstellenmember nicht in einem Eigenschaftenbrowser angezeigt werden soll.|  
-|[propget](../windows/propget.md)|Gibt eine Eigenschaftenaccessor für Reservierungen an.|  
-|[propput](../windows/propput.md)|Gibt eine property\-setting\-Funktion an.|  
-|[propputref](../windows/propputref.md)|Gibt eine property\-setting\-Funktion an, die einen Verweis anstelle eines Werts verwendet wird.|  
-|[PTR](../windows/ptr.md)|Legt einen Zeiger als vollständiger Zeiger fest.|  
-|[Bereich](../windows/range-cpp.md)|Gibt einen Bereich der zulässigen Werten für seine Argumente oder Felder, deren Werte zur Laufzeit festgelegt sind.|  
-|[requestedit](../windows/requestedit.md)|Gibt an, dass die Eigenschaft die Benachrichtigung **OnRequestEdit** unterstützt.|  
-|[restricted](../windows/restricted.md)|Gibt an, dass ein Member eines Moduls, Schnittstellen\- oder Dispatchschnittstelle nicht willkürlich aufgerufen werden kann.|  
-|[satype](../windows/satype.md)|Gibt den Datentyp der **SAFEARRAY** Struktur an.|  
-|[source](../windows/source-cpp.md)|Gibt die Schnittstellen des Steuerelements Quelle für Verbindungspunkte für eine Klasse an.  Auf einer Eigenschaft oder einer Methode gibt das **Quelle** Attribut an, dass der Member ein Objekt oder einen VARIANT zurück, das eine Ereignisquelle ist.|  
-|[synchronisieren Sie](../windows/synchronize.md)|Synchronisiert Zugriff auf die Zielmethode.|  
-|[vararg](../windows/vararg.md)|Gibt an, dass die Funktion eine variable Anzahl von Argumenten akzeptieren.|  
+|[propget](../windows/propget.md)|Gibt eine Eigenschaft Accessor-Funktion.|  
+|[propput](../windows/propput.md)|Gibt eine Eigenschaften festlegende Funktion an.|  
+|[propputref](../windows/propputref.md)|Gibt eine Eigenschaften festlegende Funktion, die einen Verweis anstelle eines Werts verwendet.|  
+|[ptr](../windows/ptr.md)|Kennzeichnet einen Zeiger als vollständige Zeiger.|  
+|[Bereich](../windows/range-cpp.md)|Gibt einen Bereich der zulässigen Werte für die Argumente oder Felder, deren Werte zur Laufzeit festgelegt werden.|  
+|[requestedit](../windows/requestedit.md)|Gibt an, dass die Eigenschaft unterstützt die **OnRequestEdit** Benachrichtigung.|  
+|[restricted](../windows/restricted.md)|Gibt an, dass ein Mitglied aus einem Modul, Schnittstelle oder Disp-Schnittstelle kann nicht nach dem Zufallsprinzip aufgerufen werden.|  
+|[satype](../windows/satype.md)|Gibt den Datentyp, der die **SAFEARRAY** Struktur.|  
+|[Datenquelle](../windows/source-cpp.md)|Gibt das Steuerelement-Schnittstellen für Verbindungspunkte für eine Klasse an. Auf eine Eigenschaft oder Methode die **Quelle** Attribut gibt an, dass das Element zurückgibt, ein Objekt oder eine Variante, die Quelle von Ereignissen ist.|  
+|[synchronize](../windows/synchronize.md)|Synchronisiert den Zugriff auf die Zielmethode.|  
+|[vararg](../windows/vararg.md)|Gibt an, dass die Funktion eine Variable Anzahl von Argumenten akzeptieren.|  
   
-## Siehe auch  
- [Attributes by Usage](../windows/attributes-by-usage.md)
+## <a name="see-also"></a>Siehe auch  
+ [Attribute nach Verwendung](../windows/attributes-by-usage.md)

@@ -13,11 +13,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b8df71bb6a0aa7161a76f202c7466e4300b4b0e9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 99a4df4c92fca7ff55c5bf800938554052122c9b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="attribute-requirements"></a>Attributanforderungen
 Die Anforderungen aufgeführt, die für C++-Attribute beschreiben die Projekttypen, compilereinstellungen und andere Informationen für ein Attribut arbeiten. Die Informationskategorien werden nachfolgend beschrieben.  

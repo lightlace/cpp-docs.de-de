@@ -1,48 +1,48 @@
 ---
-title: "Trennzeichen f&#252;r Visual C++-Dokumentationstags"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "XML-Dokumentation, Trennzeichen"
+title: "Trennzeichen für Visual C++-Dokumentationstags | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: XML documentation, delimiters
 ms.assetid: debfbdd9-63fa-4c58-a18e-a4d203d241d7
-caps.latest.revision: 9
-caps.handback.revision: "9"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 134605f86ef8019d34f5246fd75abbbf94d40fbc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Trennzeichen f&#252;r Visual C++-Dokumentationstags
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die Verwendung von Dokumentationstags erfordert Trennzeichen, die dem Compiler angeben, in dem ein Dokumentationskommentar beginnt und endet.  
+# <a name="delimiters-for-visual-c-documentation-tags"></a>Trennzeichen für Visual C++-Dokumentationstags
+Die Verwendung von Dokumentationstags erfordert Trennzeichen, das für den Compiler angibt, in dem kein Dokumentationskommentar beginnt und endet.  
   
- In Verbindung mit den XML\-Dokumentationstags können die folgenden Trennzeichen verwendet werden:  
+ Sie können die folgenden Arten von Trennzeichen mit den XML-Dokumentationstags verwenden:  
   
  `///`  
- Dieses Formular, das in den Dokumentationsbeispielen dargestellt wird und durch die Visual C\+\+\-Projektvorlagen verwendet.  
+ Dies ist das Formular, das im Dokumentation verwendeten Beispiele und von der Visual C++-Projektvorlagen verwendet wird.  
   
  `/** */`  
- Diese sind mehrzeilige Trennzeichen.  
+ Hierbei handelt es sich um mehrzeilige Trennzeichen.  
   
- Es gibt mehrere Stilregeln, wenn die `/** */` Trennzeichen verwendet werden:  
+ Es gibt einige Formatierungsregeln bei Verwendung der `/** */` Trennzeichen:  
   
--   Für die Zeile, die das `/**` Trennzeichen enthält, wenn der Rest der Zeile Leerzeichen ist, wird die Zeile nicht für Kommentare verarbeitet.  Wenn das erste Zeichen Leerzeichen ist, wird dieses Leerzeichen ignoriert und der Rest der Zeile verarbeitet wird.  Andernfalls wird der gesamte Zeilentext hinter dem `/**`\-Trennzeichen als Teil des Kommentars verarbeitet.  
+-   Für die Zeile, enthält die `/**` Trennzeichen, wenn der Rest der Zeile Leerzeichen, die Zeile ist nicht für Kommentare verarbeitet wird. Wenn das erste Zeichen ist als Leerzeichen, die Leerzeichen ignoriert und der Rest der Zeile verarbeitet. Andernfalls wird de gesamte Text der Zeile nach dem `/**`-Trennzeichen als Teil des Kommentars verarbeitet.  
   
--   Für die Zeile, die das `*/` Trennzeichen enthält, wenn nur Leerzeichen bis zum `*/` Trennzeichen gibt, das Zeile ignoriert wird.  Andernfalls wird der Text in der Zeile bis zum `*/`\-Trennzeichen als Teil des Kommentars verarbeitet, wobei die im folgenden Punkt beschriebenen Mustervergleichsregeln gelten.  
+-   Für die Zeile, enthält die `*/` Trennzeichen, wenn es bis zu nur aus Leerzeichen besteht die `*/` Trennzeichen, Zeile wird ignoriert. Andernfalls wird der Text in der Zeile bis zum `*/`-Trennzeichen als Teil des Kommentars verarbeitet, gemäß den Mustervergleichsregeln, die im folgenden Aufzählungszeichen beschriebenen werden.  
   
--   Für Zeilen, nachdem die, die mit dem `/**` Trennzeichen beginnt, der Compiler nach einem allgemeinen Muster zu Beginn jeder Zeile, die optionalen Leerzeichen und einem Sternchen \(`*`\) besteht sucht, gefolgt von den optionaleren Leerzeichen.  Wenn der Compiler ein Common sucht, das aus den Zeichen zu Beginn jeder Zeile festgelegt ist, ignoriert der dieses Muster für alle Zeilen nach dem `/**` Trennzeichen, bis einschließlich und möglicherweise die Zeile, die das `*/` Trennzeichen enthält.  
+-   Für die Zeilen im Anschluss an das Projekt, das mit beginnt die `/**` Trennzeichen, sucht der Compiler für ein allgemeines Muster am Anfang jeder Zeile, der optional Leerraum und ein Sternchen besteht (`*`), gefolgt von weitere optionale Leerzeichen. Wenn der Compiler einen gemeinsamen Satz von Zeichen am Anfang jeder Zeile findet, ignorieren Sie dieses Muster für alle Zeilen im Anschluss an die `/**` Trennzeichen, bis zur und ggf. einschließlich der Zeile mit der `*/` Trennzeichen.  
   
  Einige Beispiele:  
   
--   Vom folgenden Kommentar wird nur die Zeile verarbeitet, die mit `<summary>` beginnt.  Die folgenden beiden Tagformate legen die gleichen Kommentare vor:  
+-   Der einzige Teil des folgenden Kommentars, der verarbeitet wird, ist die Zeile, die mit `<summary>` beginnt. Die folgenden beiden RFID-Formate liefert die gleichen Kommentare:  
   
     ```  
     /**  
@@ -51,7 +51,7 @@ Die Verwendung von Dokumentationstags erfordert Trennzeichen, die dem Compiler a
     /** <summary>text</summary> */  
     ```  
   
--   Der Compiler wird ein Muster von "\*", um am Anfang der zweiten und dritten Zeilen zu ignorieren.  
+-   Der Compiler wendet das Muster "*", um am Anfang der zweiten und dritten Zeile zu ignorieren.  
   
     ```  
     /**  
@@ -59,7 +59,7 @@ Die Verwendung von Dokumentationstags erfordert Trennzeichen, die dem Compiler a
      *  text </summary>*/  
     ```  
   
--   Der Compiler sucht kein Muster in diesem Kommentar, da es kein Sternchen in der zweiten Zeile gibt.  Daher wird der gesamte Text auf den zweiten und dritten Zeilen, oben bis `*/`, als Teil des Kommentars verarbeitet.  
+-   Der Compiler findet kein Muster in diesem Kommentar, da kein Sternchen auf der zweiten Zeile vorhanden ist. Aus diesem Grund alle Text auf der zweiten und dritten Zeile bis zum der `*/`, verarbeitet werden als Teil des Kommentars.  
   
     ```  
     /**  
@@ -67,7 +67,7 @@ Die Verwendung von Dokumentationstags erfordert Trennzeichen, die dem Compiler a
        text </summary>*/  
     ```  
   
--   Der Compiler sucht kein Muster in diesem Kommentar aus zwei Gründen.  Zunächst ist keine Zeile, die einer konsistenten Anzahl von Leerzeichen vor dem Sternchen beginnt.  Zweitens beginnt die fünfte Zeile mit einem Tabulatorzeichen, das sich von Leerzeichen unterscheidet.  Daher wird der gesamte Text von der zweiten Zeile auf `*/` als Teil des Kommentars verarbeitet.  
+-   Der Compiler findet kein Muster in diesem Kommentar für gibt es zwei Gründe. Erstens sind keine Linie, die mit einer festen Anzahl von Leerzeichen vor dem Sternchen beginnt. Zweitens beginnt die fünfte Zeile mit einem Tab, der mit Leerzeichen nicht übereinstimmt. Aus diesem Grund alle Text aus der zweiten Zeile bis der `*/` verarbeitet werden als Teil des Kommentars.  
   
     ```  
     /**  
@@ -78,5 +78,5 @@ Die Verwendung von Dokumentationstags erfordert Trennzeichen, die dem Compiler a
     */  
     ```  
   
-## Siehe auch  
- [XML\-Dokumentation](../ide/xml-documentation-visual-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [XML-Dokumentation](../ide/xml-documentation-visual-cpp.md)

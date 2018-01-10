@@ -1,32 +1,31 @@
 ---
-title: "Compilerwarnung (Stufe 2) C4307 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4307"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4307"
+title: Compilerwarnung (Stufe 2) C4307 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4307
+dev_langs: C++
+helpviewer_keywords: C4307
 ms.assetid: 7cca11e9-be61-49e4-8b15-88b84f0cbf07
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2647133788bdaafb2f69f2edc5b8e13cfa07cc5b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 2) C4307
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-2-c4307"></a>Compilerwarnung (Stufe 2) C4307
 'Operator': Überlauf einer ganzzahligen Konstanten  
   
- Der Operator wird in einem Ausdruck verwendet, der eine Ganzzahlkonstante ergibt, durch die der zugeordnete Speicherplatz überschritten wird.  Möglicherweise müssen Sie einen größeren Typ für die Konstante verwenden.  Beispielsweise enthält ein **signed int** einen kleineren Wert als ein `unsigned int`, da **signed int** eines seiner Bits zur Darstellung des Symbols verwendet.  
+ Der Operator wird in einem Ausdruck verwendet, der eine ganzzahlige Konstante, die für dieses Volume zugewiesene Speicherplatz Überlaufs ausgibt. Sie müssen möglicherweise einen größeren Typ für die Konstante verwenden. Ein **signiert Int** enthält einen kleineren Wert als ein `unsigned int` da die **signiert Int** verwendet ein Bit, die Vorzeichen darstellen.  
   
  Im folgenden Beispiel wird C4307 generiert:  
   

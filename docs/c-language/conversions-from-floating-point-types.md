@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4974edd25d0fcdd8d990b60459517bb1148c74ae
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4a95596b2c9e7312d4581d1a4c641c2466420158
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conversions-from-floating-point-types"></a>Konvertierungen von Gleitkommatypen
 Bei einem **float**-Wert, der in einen **double**- oder `long double`-Wert konvertiert wird, oder einem **double**-Wert, der in einen `long double`-Wert konvertiert wird, wird keine Änderung des Werts vorgenommen. Ein **double**-Wert, der in einen **float**-Wert konvertiert wird, wird exakt dargestellt, sofern dies möglich ist. Genauigkeit geht möglicherweise verloren, wenn der Wert nicht exakt dargestellt werden kann. Wenn das Ergebnis außerhalb des gültigen Bereichs liegt, ist das Verhalten nicht definiert. Weitere Informationen über den Bereich von Gleitkommatypen erhalten Sie unter [Grenzwerte für Gleitkommakonstanten](../c-language/limits-on-floating-point-constants.md).  

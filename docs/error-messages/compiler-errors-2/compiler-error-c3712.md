@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3712
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3712
+f1_keywords: C3712
+dev_langs: C++
+helpviewer_keywords: C3712
 ms.assetid: 65b1fcaf-be89-4c55-9e40-25ec03457253
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 99e622b6a786a5f76a156851cfa11a59633990eb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 69f23d7192bc72f5f287a3a5b84b7840f9d25310
-ms.contentlocale: de-de
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3712"></a>Compilerfehler C3712
 'Methode': eine Ereignishandlermethode muss denselben Typ wie die Quelle 'Methode' zurückgeben  

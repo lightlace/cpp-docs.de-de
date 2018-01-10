@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 36e1c78ad0ac70af55b1e2c0be719f328044d939
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 845d46ded54cae54157b7bf7754011e384d412d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn037-multithreaded-mfc-21-applications"></a>TN037: Multithreaded MFC 2.1-Anwendungen
 In diesem technischen Hinweis beschrieben ursprünglich die Einschränkungen von Multithreadprogrammen mit MFC 2.1, stellte ursprünglich mit Visual C++ 1.0 für Windows NT. MFC 3.0 unterstützt das multithreading direkt dokumentiert ist. Finden Sie in dieser Referenz für Weitere Informationen.  

@@ -24,11 +24,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f597d0058e008f1adf1cb366f163594ef4b7472a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 248c975c51a2f44f6c9b17094d6b05082a9016a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="toolbar-tool-tips"></a>QuickInfos für die Symbolleiste
 QuickInfos sind die kleine Popupfenster, die kurze Beschreibungen der Zweck einer Symbolleisten-Schaltfläche darstellen, wenn die Maus über eine Schaltfläche für eine bestimmte Zeitspanne zu positionieren. Wenn Sie eine Anwendung mit dem Assistenten zum Erstellen, die eine Symbolleiste aufweist, wird für Sie Tipp Toolsupport bereitgestellt. Dieser Artikel beschreibt beide den Tipp Toolsupport erstellt, indem der Anwendungs-Assistent und wie Ihre Anwendung Tipp Toolsupport hinzugefügt.  

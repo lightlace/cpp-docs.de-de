@@ -1,37 +1,38 @@
 ---
-title: "_mm_extract_si64, _mm_extracti_si64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mm_extracti_si64"
-  - "_mm_extract_si64"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "extrq-Anweisung"
-  - "_mm_extracti_si64 intrinsic"
-  - "_mm_extract_si64 intrinsic"
+title: _mm_extract_si64 _mm_extracti_si64 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _mm_extracti_si64
+- _mm_extract_si64
+dev_langs: C++
+helpviewer_keywords:
+- extrq instruction
+- _mm_extracti_si64 intrinsic
+- _mm_extract_si64 intrinsic
 ms.assetid: 459fdd72-cc54-4ee5-bbd5-d2c6067a88e7
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: cc28de10a2a0d53ee87920d511ea894ad517a79a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# _mm_extract_si64, _mm_extracti_si64
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft\-spezifisch**  
+# <a name="mmextractsi64-mmextractisi64"></a>_mm_extract_si64, _mm_extracti_si64
+**Microsoft-spezifisch**  
   
- Generiert die `extrq`\-Anweisung angegebene Bits von den unteren 64 Bits des ersten Arguments zu extrahieren.  
+ Generiert die `extrq` Anweisung zum Extrahieren der angegebenen Bits aus die unteren 64 Bits des ersten Arguments.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 __m128i _mm_extract_si64(  
@@ -45,41 +46,41 @@ __m128i _mm_extracti_si64(
 );  
 ```  
   
-#### Parameter  
- \[in\] `Source`  
- Ein 128\-Bit\-Feld mit Eingabedaten in seinen unteren 64 Bits.  
+#### <a name="parameters"></a>Parameter  
+ [in] `Source`  
+ Ein 128-Bit-Feld mit Eingabedaten in die unteren 64 Bits.  
   
- \[in\]    `Descriptor`  
- Ein 128\-Bit\-Feld, das das Bitfeld beschreibt, die extrahiert werden soll.  
+ [in]`Descriptor`  
+ Ein 128-Bit-Feld, das das Bitfeld extrahieren beschreibt.  
   
- \[in\]    `Length`  
- Eine ganze Zahl, die die Länge des Felds angibt, die extrahiert werden soll.  
+ [in]`Length`  
+ Eine ganze Zahl, die angibt, die Länge des Felds zu extrahieren.  
   
- \[in\]    `Index`  
- Eine ganze Zahl, die den Index des zu extrahierenden Felds angibt  
+ [in]`Index`  
+ Eine ganze Zahl, die angibt, den Index des Felds zu extrahieren  
   
-## Rückgabewert  
- Ein 128\-Bit\-Feld mit den extrahierten Feld in den niedrigstwertigen Byte.  
+## <a name="return-value"></a>Rückgabewert  
+ Ein 128-Bit-Feld mit dem extrahierte Feld in der unwichtigsten Bits.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Intrinsisch|Architektur|  
-|-----------------|-----------------|  
+|Systemintern|Architektur|  
+|---------------|------------------|  
 |`_mm_extract_si64`|SSE4a|  
 |`_mm_extracti_si64`|SSE4a|  
   
- **Headerdatei** \<intrin.h\>  
+ **Headerdatei** \<intrin.h >  
   
-## Hinweise  
- Das systeminterne generiert die `extrq`\-Anweisung, Bits von `Source`zu extrahieren. Es gibt zwei Versionen des systeminternen: `_mm_extracti_si64` ist die direkte Version, und `_mm_extract_si64` ist das nicht\-unmittelbare.  Jede Version von `Source` extrahiert, das ein Bitfeld, durch deren Länge und den Index des niedrigstwertigen Byte definiert ist.  Die Werte werden der Index und eine Länge von 64 MOD, so sind \-1 und 127 als 63 interpretiert.  Wenn die Summe der reduzierten \(\) \(reduzierten\) des Felds Länge des Index und größer als 64 ist, sind die Ergebnisse nicht definiert.  Ein Feld für den Wert Null Länge des wird als 64 interpretiert.  Wenn der Feld längen\- und \- Bit Zeilenindex null sind, werden beide Bits 63:0 von `Source` extrahiert.  Wenn die Länge des Felds null ist, aber der Bit Index ungleich 0 \(null\) ist, sind die Ergebnisse nicht definiert.  
+## <a name="remarks"></a>Hinweise  
+ Diese systeminterne Funktion generiert die `extrq` Anweisung zum Extrahieren von Bits von `Source`. Es gibt zwei Versionen dieses systeminterne: `_mm_extracti_si64` ist die sofortige Version und `_mm_extract_si64` wird nicht sofort.  Jede Version extrahiert aus `Source` ein Bitfeld, das durch seine Länge und den Index des seine niedrigstwertigen Bit definiert. Die Werte der Länge und des Index stammen mod 64, daher-1 und 127 als 63 interpretiert werden. Wenn die Summe des Indexes (geringere) und die Feldlänge (geringere) größer als 64 ist, sind die Ergebnisse nicht definiert. Ein Wert von 0 (null), für die Feldlänge wird als 64 interpretiert. Wenn Länge und Bit Feldindex beide 0 (null), Bits 63:0 der sind `Source` extrahiert werden. Wenn die Feldlänge 0 (null ist), aber der Bit-Index nicht 0 (null ist), sind die Ergebnisse nicht definiert.  
   
- In einem Aufruf von \_mm\_extract\_si64, enthält `Descriptor` den Index im Bit 13:8 und 5:0 Bit in der Länge des Felds zu extrahierenden Daten.  
+ In einem Aufruf von _mm_extract_si64 die `Descriptor` enthält den Index in Bits 13:8 und die Länge der Daten, die im Bits-5:0 extrahiert werden soll...  
   
- Wenn Sie aufrufen, generiert `_mm_extracti_si64` mit Argumenten, die der Compiler nicht ermitteln kann, um ganzzahlige Konstanten sind der Compiler Code, um diese Werte in einem XMM\-Register \(`Descriptor`\) zu packen und `_mm_extract_si64`aufzurufen.  
+ Beim Aufrufen `_mm_extracti_si64` mit Argumenten, dass der Compiler nicht ermitteln kann, werden ganzzahlige Konstanten generiert der Compiler Code aus, um diese Werte in einer XMM-Register-Paket (`Descriptor`) und zum Aufrufen `_mm_extract_si64`.  
   
- Um Hardwareunterstützung für die `extrq`\-Anweisung zu bestimmen, `__cpuid` direkt aufrufen und `InfoType=0x80000001` mit Prüfbit 6 von `CPUInfo[2] (ECX)`.  Das Bit beträgt 1, wenn die Anweisung unterstützt wird, andernfalls 0.  Wenn Sie Code ausführen, der diese systeminterne Hardware verwendet, die nicht die `extrq`\-Anweisung unterstützt, die Ergebnisse sind unvorhersehbar.  
+ Um zu bestimmen, Hardware-Unterstützung für die `extrq` -Anweisung, rufen die `__cpuid` systeminternen Funktionen mit `InfoType=0x80000001` und überprüfen Sie Bit 6 von `CPUInfo[2] (ECX)`. Dieses Bit wird 1, wenn die Anweisung unterstützt wird und 0 andernfalls. Wenn Sie Code ausführen, die diese systeminterne Hardware verwendet wird, nicht unterstützt wird, die `extrq` -Anweisung, die die Ergebnisse sind unvorhersehbar.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // Compile this sample with: /EHsc  
@@ -108,12 +109,15 @@ main()
 }  
 ```  
   
-  **result1 \= 0x30eca86**  
-**result2 \= 0x30eca86**  
-**result3 \= 0x30eca86**   
-## Microsoft ENDES bestimmten  
- Copyright 2007 bis Advanced Micro Devices, Inc.  Alle Rechte vorbehalten.  Reproduziert mit zulässigen Advanced Micro Devices, Inc.  
+```Output  
+result1 = 0x30eca86  
+result2 = 0x30eca86  
+result3 = 0x30eca86  
+```  
   
-## Siehe auch  
- [\_mm\_insert\_si64, \_mm\_inserti\_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)   
+**Ende Microsoft-spezifisch**  
+ Copyright 2007 erweiterte Micro-Geräte, Inc. Alle Rechte vorbehalten. Reproduziert mit Genehmigung Advanced Micro-Geräte, Inc.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [_mm_insert_si64 _mm_inserti_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)   
  [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

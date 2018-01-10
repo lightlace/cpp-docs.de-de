@@ -1,80 +1,78 @@
 ---
-title: "emitidl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.emitidl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "emitidl attribute"
+title: Emitidl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.emitidl
+dev_langs: C++
+helpviewer_keywords: emitidl attribute
 ms.assetid: 85b80c56-578e-4392-ac03-8443c74ebb7d
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 55fc74eef3d2ead7312f7dca46f20c3a1ed7ba91
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# emitidl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Bestimmt, ob alle nachfolgenden IDL\-Attribute in der generierten IDL\-Datei verarbeitet und gespeichert werden.  
+# <a name="emitidl"></a>emitidl
+Gibt an, ob alle nachfolgenden IDL-Attribute, verarbeitet und in der generierten IDL-Datei abgelegt werden.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
+```
+[ emitidl(state, defaultimports=boolean) ];
 ```  
   
-      [ emitidl([boolean],  
-   defaultimports=[boolean]  
-) ] ;  
-```  
+### <a name="parameters"></a>Parameter  
+*state*  
+Einen der folgenden Werte möglich: **"true"**, **"false"**, **erzwungen**, **eingeschränkte**, **Push**, oder **pop**.  
   
-#### Parameter  
- `boolean`  
- Mögliche Werte: **true**, **false**, **erzwungen**, **restricted**, **drücken Sie**oder **pop**.  
+-   Wenn **"true"**, die IDL-Attribute, Kategorie in einer Quellcodedatei gefunden werden, werden in der generierten IDL-Datei. Dies ist die Standardeinstellung für **Emitidl**.  
   
--   Wenn **true**IDL\-Kategorien alle Attribute, die in einer Quellcodedatei gefunden werden, in der generierten IDL\-Datei abgelegt wird.  Dies ist die Standardeinstellung für **emitidl**.  
+-   Wenn **"false"**, die IDL-Attribute, Kategorie in einer Quellcodedatei festgestellt werden nicht in der generierten IDL-Datei platziert.  
   
--   Wenn **false**, IDL\-Kategorien keine Attribute, die in einer Quellcodedatei gefunden wurden, nicht in die generierten IDL\-Datei abgelegt wird.  
+-   Wenn **eingeschränkte**, können Sie die IDL-Attribute werden in der Datei ohne eine [Modul](../windows/module-cpp.md) Attribut. Der Compiler löst keine IDL-Datei.  
   
--   Wenn **restricted**IDL\-Attributen, können in der Datei ohne ein [Modul](../windows/module-cpp.md)\-Attribut aufweisen.  Der Compiler generiert keine IDL\-Datei.  
+-   Wenn **erzwungen**, überschreibt einen nachfolgenden **eingeschränkte** -Attribut, das eine Datei haben muss eine **Modul** Attribut treten IDL-Attribute in der Datei.  
   
--   Wenn **erzwungen**, überschreibt ein nachfolgendes **restricted** Attribut, das eine Datei muss ein Modulattribut, wenn IDL\-Attribute in der Datei vorhanden ist.  
+-   **Push** können Sie die aktuelle speichern **Emitidl** Einstellungen in ein internes **Emitidl** Stapel und **pop** ermöglicht Ihnen das Festlegen **Emitidl**an, der Wert am oberen Rand der internen **Emitidl** Stapel.  
   
--   **drücken Sie** können Sie die aktuellen Einstellungen **emitidl** zu einem internen **emitidl** Stapel zu speichern, und legen Sie können **pop** , was zu **emitidl** Wert an oberster Position des Stapels ist **emitidl** internen.  
+`defaultimports=`*boolesche* \(optional)  
+-   Wenn *booleschen* ist **"true"**, docobj.idl in der generierten IDL-Datei importiert wird. Auch wenn eine IDL-Datei mit dem gleichen Namen wie eine .h-, die Sie Datei `#include` in Ihrer Datenquelle Code im selben Verzeichnis wie die .h-Datei gefunden wird, dann der generierten IDL-Datei enthält eine Import-Anweisung für diese IDL-Datei.  
   
- **defaultimports** `boolean` *\=*\[\] \(optional\)  
- -   Wenn `boolean`**true**ist, wird docobj.idl in der generierten IDL\-Datei importiert.  Auch wenn eine IDL\-Datei mit demselben Namen H\-Datei als `#include` , dass Sie den Quellcode im selben Verzeichnis wie die H\-Datei gefunden wird, enthält die generierte IDL\-Datei eine Imports\-Anweisung für diese IDL\-Datei.  
+-   Wenn *booleschen* ist **"false"**, docobj.idl ist nicht in der generierten IDL-Datei importiert. Sie müssen explizit importieren .idl-Dateien mit [importieren](../windows/import.md).  
   
--   Wenn `boolean`**false**ist, wird docobj.idl nicht in die generierten IDL\-Datei importiert.  Sie müssen mit [Import](../windows/import.md)IDL\-Dateien explizit importieren.  
+## <a name="remarks"></a>Hinweise  
+Nach der **Emitidl** C++-Attribut in einer Quellcodedatei festgestellt wird, werden Attribute der IDL-Kategorie in der generierten IDL-Datei abgelegt. Es ist keine **Emitidl** IDL-Attribute in der Quelldatei für die Code-Attribut werden in der generierten IDL-Datei ausgegeben.  
   
-## Hinweise  
- Nachdem das Attribut **emitidl** C\+\+ in einer Quellcodedatei gefunden wird, werden IDL\-Kategorien von Attributen in die generierten IDL\-Datei abgelegt.  Wenn kein Attribut vorhanden ist, werden **emitidl** IDL\-Attribute in der Quellcodedatei zur generierten IDL\-Datei ausgegeben.  
+Es ist möglich, mehrere **Emitidl** Attribute in einer Quellcodedatei. Wenn `[emitidl(false)];` festgestellt wird, in einer Datei ohne eine nachfolgende `[emitidl(true)];`, und klicken Sie dann keine Attribute in der generierten IDL-Datei verarbeitet werden.  
   
- Es ist möglich, mehrere **emitidl**\-Attribute in einer Quellcodedatei.  Wenn `[emitidl(false)];` in einer Datei ohne nachfolgendes `[emitidl(true)];`aufgetreten ist, werden keine Attribute in der generierten IDL\-Datei verarbeitet.  
+Jedes Mal, die der Compiler eine neue Datei erkennt **Emitidl** implizit festgelegt wird, um **"true"**.  
   
- Jedes Mal, wenn der Compiler eine neue Datei gefunden wird, wird **emitidl** implizit in **true**festgelegt.  
+## <a name="requirements"></a>Anforderungen  
   
-## Anforderungen  
-  
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
 |**Betrifft**|Überall|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Keiner|  
+|**Ungültige Attribute**|Keiner|  
   
- Weitere Informationen finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [Compiler Attributes](../windows/compiler-attributes.md)   
- [Stand\-Alone Attributes](../windows/stand-alone-attributes.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+[Compilerattribute](../windows/compiler-attributes.md)   
+[Eigenständige Attribute](../windows/stand-alone-attributes.md)   
+[Attributbeispiele](http://msdn.microsoft.com/en-us/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

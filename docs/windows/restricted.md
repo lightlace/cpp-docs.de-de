@@ -1,32 +1,33 @@
 ---
-title: "restricted | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.restricted"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "restricted attribute"
+title: "Eingeschränkte | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.restricted
+dev_langs: C++
+helpviewer_keywords: restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 569d57da691f40857f54dcae1c383ff7758564f4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# restricted
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gibt an, dass ein Member eines Moduls, Schnittstellen\- oder Dispatchschnittstelle nicht willkürlich aufgerufen werden kann.  
+# <a name="restricted"></a>restricted
+Gibt an, dass ein Mitglied aus einem Modul, Schnittstelle oder Disp-Schnittstelle kann nicht nach dem Zufallsprinzip aufgerufen werden.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -35,15 +36,15 @@ Gibt an, dass ein Member eines Moduls, Schnittstellen\- oder Dispatchschnittstel
 ) ]  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `interfaces`  
- Eine oder mehrere Schnittstellen, die möglicherweise nicht willkürlich für ein COM\-Objekt aufgerufen werden.  Dieser Parameter ist nur gültig, wenn er auf eine Klasse angewendet wird.  
+ Eine oder mehrere Schnittstellen, die nach dem Zufallsprinzip nicht auf ein COM-Objekt aufgerufen werden können. Dieser Parameter ist nur gültig, wenn auf eine Klasse angewendet werden.  
   
-## Hinweise  
- Das Attribut **restricted** C\+\+ verfügt über die gleichen Funktionen wie das [Einschränkung](http://msdn.microsoft.com/library/windows/desktop/aa367157) MIDL\-Attribut.  
+## <a name="remarks"></a>Hinweise  
+ Die **eingeschränkte** C++-Attribut hat die gleiche Funktionalität wie die [eingeschränkte](http://msdn.microsoft.com/library/windows/desktop/aa367157) MIDL-Attribut.  
   
-## Beispiel  
- Im folgenden Code wird gezeigt, wie das **restricted**\-Attribut verwendet:  
+## <a name="example"></a>Beispiel  
+ Der folgende Code zeigt, wie Sie die **eingeschränkte** Attribut:  
   
 ```  
 // cpp_attr_ref_restricted.cpp  
@@ -68,21 +69,20 @@ class c : public a, public b
 };  
 ```  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
-|**Betrifft**|Schnittstellenmethode, `struct`, **Klasse**, `interface`|  
+|**Betrifft**|-Schnittstellenmethode, `interface`, **Klasse**,`struct`|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|**coclass** \(wenn Sie **Klasse** oder `struct`angewendet werden\)|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|**coclass** (bei Anwendung auf **class** oder `struct`)|  
+|**Ungültige Attribute**|Keiner|  
   
- Weitere Informationen über das kontexte finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [IDL-Attribute](../windows/idl-attributes.md)   
+ [Schnittstellenattribut](../windows/interface-attributes.md)   
+ [Methodenattribut](../windows/method-attributes.md)   

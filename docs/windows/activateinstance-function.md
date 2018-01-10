@@ -1,33 +1,35 @@
 ---
-title: "ActivateInstance-Funktion | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Windows::Foundation::ActivateInstance"
-  - "client/ABI::Windows::Foundation::ActivateInstance"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActivateInstance-Funktion"
+title: ActivateInstance-Funktion | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- client/Windows::Foundation::ActivateInstance
+- client/ABI::Windows::Foundation::ActivateInstance
+dev_langs: C++
+helpviewer_keywords: ActivateInstance function
 ms.assetid: 8cfd1dd9-5fda-4cc2-acf8-d40e783b3875
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 051eb51a4461d1b3f9ab180507022cdfa955f0ad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# ActivateInstance-Funktion
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Register und eine Instanz des angegebenen Typs ab, der in einer bestimmten ID Klasse definiert wird  
+# <a name="activateinstance-function"></a>ActivateInstance-Funktion
+Registriert, und ruft eine Instanz eines angegebenen Typs, der definiert, die in einer angegebenen Klasse-ID ab  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<  
@@ -39,23 +41,23 @@ inline HRESULT ActivateInstance(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `T`  
  Ein Typ zu aktivieren.  
   
  `activatableClassId`  
- Der Name der Klassenbezeichner, die Parameter `T` definiert.  
+ Der Name des Klassen-ID, das Parameter definiert `T`.  
   
  `instance`  
- Wenn dieser Vorgang abgeschlossen wird, ein Verweis auf eine Instanz von `T`.  
+ Wenn dieser Vorgang abgeschlossen wird, einen Verweis auf eine Instanz von `T`.  
   
-## Rückgabewert  
- S\_OK, wenn erfolgreich; andernfalls ein Fehler HRESULT, der die Ursache des Fehlers angibt.  
+## <a name="return-value"></a>Rückgabewert  
+ S_OK, wenn erfolgreich; andernfalls ein Fehler HRESULT, das die Ursache des Fehlers angibt.  
   
-## Anforderungen  
- **Header:**  client.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** client.h  
   
- **Namespace:**  Windows::Foundation  
+ **Namespace:** Windows:: Foundation  
   
-## Siehe auch  
- [Windows::Foundation\-Namespace](../windows/windows-foundation-namespace.md)
+## <a name="see-also"></a>Siehe auch  
+ [Windows::Foundation-Namespace](../windows/windows-foundation-namespace.md)

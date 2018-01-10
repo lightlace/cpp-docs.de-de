@@ -1,32 +1,31 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4615 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4615"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4615"
+title: Compilerwarnung (Stufe 1) C4615 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4615
+dev_langs: C++
+helpviewer_keywords: C4615
 ms.assetid: 7b107c01-0da2-4e01-8b40-93813e30b94c
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b00f06ee1db41adcf642e1e4a84c3695b19b0720
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 1) C4615
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-\#pragma\-Warnung: Unbekannter Typ der Benutzerwarnung  
+# <a name="compiler-warning-level-1-c4615"></a>Compilerwarnung (Stufe 1) C4615
+\#Pragma-Warnung: Unbekannte Warnung Benutzertyp  
   
- Mit **pragma** [warning](../../preprocessor/warning.md) wurde ein ungültiger Bezeichner für Warnungen angegeben.  Verwenden Sie einen gültigen Bezeichner, um den Fehler zu beheben.  
+ Ein ungültigen Spezifizierer für die Warnung wurde mit verwendet **Pragma** [Warnung](../../preprocessor/warning.md). Um den Fehler zu beheben, verwenden Sie einen gültigen Bezeichner ein.  
   
  Im folgenden Beispiel wird C4615 generiert:  
   

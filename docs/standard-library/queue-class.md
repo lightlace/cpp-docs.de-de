@@ -33,11 +33,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f2bfb8e0cbfb65b8cd1ad038ffe2bcc2e4bf2d9a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9161a04f9007f660df7ea7293426e9a90ada20c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="queue-class"></a>queue-Klasse
 Eine Vorlagencontainer-Adapterklasse, die die Funktionalität für einige zugrunde liegende Containertypen einschränkt, indem sie den Zugriff auf die vorderen und hinteren Elemente beschränkt. Elemente können an der Rückseite hinzugefügt oder an der Vorderseite entfernt und an beiden Enden der Warteschlange überprüft werden.  
@@ -50,7 +51,7 @@ class queue
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Typ*  
+ *Type*  
  Der in der Warteschlange zu speichernde Elementdatentyp.  
   
  `Container`  
@@ -77,7 +78,7 @@ class queue
 |-|-|  
 |[Warteschlange](#queue)|Erstellt ein `queue`-Objekt, das leer oder eine Kopie eines Basiscontainerobjekts ist.|  
   
-### <a name="typedefs"></a>TypeDefs  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  

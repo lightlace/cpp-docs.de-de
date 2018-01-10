@@ -4,42 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xfunctional/std::mem_fun1_ref_t
-- mem_fun1_ref_t
-dev_langs:
-- C++
-helpviewer_keywords:
-- mem_fun1_ref_t class
+f1_keywords: xfunctional/std::mem_fun1_ref_t
+dev_langs: C++
+helpviewer_keywords: mem_fun1_ref_t class
 ms.assetid: 7d6742f6-19ba-4523-b3c8-0e5b8f11464f
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 2a16a4ed9133f3d72562053845a99b58cfe2777c
-ms.contentlocale: de-de
-ms.lasthandoff: 04/19/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e685960f026fb6ec88e6b64adf59eda1453ca3ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memfun1reft-class"></a>mem_fun1_ref_t-Klasse
 Eine Adapterklasse, die einer **non_const**-Memberfunktion, die ein einzelnes Argument akzeptiert, ermöglicht, als binäres Funktionsobjekt aufgerufen zu werden, wenn sie mit einem Verweisargument initialisiert wird.  
@@ -61,7 +42,7 @@ class mem_fun1_ref_t : public binary_function<Type, Arg, Result> {
   
 #### <a name="parameters"></a>Parameter  
  `_Pm`  
- Ein Zeiger auf die Memberfunktion der Klasse **Type**, die in ein Funktionsobjekt konvertiert werden soll  
+ Ein Zeiger auf die Memberfunktion der Klasse **Type**, die in ein Funktionsobjekt konvertiert werden soll.  
   
  `left`  
  Das Objekt, das für die `_Pm`-Memberfunktion aufgerufen wird.  
@@ -73,7 +54,7 @@ class mem_fun1_ref_t : public binary_function<Type, Arg, Result> {
  Eine anpassungsfähige binäre Funktion.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Vorlagenklasse speichert eine Kopie von `_Pm`, die ein Zeiger auf eine Memberfunktion der Klasse **Type** in einem privaten Memberobjekt sein muss. Für seine Memberfunktion `operator()` definiert sie als Rückgabewert (**left**.\* `_Pm`)(**right**).  
+ Die Vorlagenklasse speichert eine Kopie von `_Pm`, die ein Zeiger auf eine Memberfunktion der Klasse **Type** in einem privaten Memberobjekt sein muss. Es definiert seine Memberfunktion `operator()` als Rückgabe ( **linken**.\* `_Pm`) ( **rechten**).  
   
 ## <a name="example"></a>Beispiel  
  Der Konstruktor von `mem_fun1_ref_t` wird in der Regel nicht direkt verwendet; die Hilfsfunktion `mem_fun_ref` wird verwendet, um Memberfunktionen anzupassen. Weitere Beispiele für die Verwendung von Memberfunktionsadaptern finden Sie unter [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref).  
@@ -86,7 +67,6 @@ class mem_fun1_ref_t : public binary_function<Type, Arg, Result> {
 ## <a name="see-also"></a>Siehe auch  
  [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

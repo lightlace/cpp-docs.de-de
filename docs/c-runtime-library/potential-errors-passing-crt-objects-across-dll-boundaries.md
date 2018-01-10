@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c5fa79de11c7c3a1526fc91361eecdc74f8bdcd7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0355b1c6a2731c9ca82e7ced37ad28f30a881eca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>Potenzielle Fehler bei der Übergabe von CRT-Objekten über DLL-Grenzen
 Beim Übergeben von CRT-Objekten (C Run Time, C-Laufzeit) wie z.B. Dateihandles, Gebietsschemas und Umgebungsvariablen in eine oder aus einer DLL (Funktionsaufrufe über die DLL-Grenze hinweg), kann ein unerwartetes Verhalten auftreten, wenn die DLL und die Dateien, die die DLL aufrufen, unterschiedliche Kopien der CRT-Bibliotheken verwenden.  
@@ -36,7 +37,7 @@ Beim Übergeben von CRT-Objekten (C Run Time, C-Laufzeit) wie z.B. Dateihandles,
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>Beschreibung  
+### <a name="description"></a>description  
  Dieses Beispiel übergibt ein Dateihandle über eine DLL-Grenze.  
   
  Die DLL und die EXE-Datei wurden mit /MD erstellt, sodass sie sich eine einzige Kopie der CRT teilen.  
@@ -77,7 +78,7 @@ this is a string
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>Beschreibung  
+### <a name="description"></a>description  
  Dieses Beispiel übergibt Umgebungsvariablen über eine DLL-Grenze hinweg.  
   
 ```cpp  

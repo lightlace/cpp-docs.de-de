@@ -1,34 +1,33 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4441 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4441"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4441"
+title: Compilerwarnung (Stufe 1) C4441 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4441
+dev_langs: C++
+helpviewer_keywords: C4441
 ms.assetid: 7fc540a5-e41f-47cf-aa37-b2b699c2685e
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 33337741819d908ce9445d82d905ecfc5738acda
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 1) C4441
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Aufrufkonvention von 'cc1' ignoriert; stattdessen 'cc2' verwendet  
+# <a name="compiler-warning-level-1-c4441"></a>Compilerwarnung (Stufe 1) C4441
+Aufrufkonvention von 'cc1' ignoriert. 'cc2' stattdessen verwendet  
   
- Memberfunktionen in verwalteten benutzerdefinierten Typen und globale Funktionsgenerika müssen die [\_\_clrcall](../../cpp/clrcall.md)\-Aufrufkonvention verwenden.  Der Compiler verwendete `__clrcall`.  
+ Memberfunktionen im verwalteten benutzerdefinierten Typen und Generika globale Funktion verwenden, müssen die [__clrcall](../../cpp/clrcall.md) Aufrufkonvention.  Der Compiler verwendet `__clrcall`.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird C4441 generiert.  
   
 ```  

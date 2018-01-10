@@ -97,11 +97,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 49faa73a334d2feed480499735220a1ae7f6d2c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1702065a8157596d4366af31fed3f2a80d53149c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-constants"></a>Datentypkonstanten
 Datentypkonstanten sind von der Implementierung abhängige Wertbereiche, die für integrale Datentypen zulässig sind. Die unten aufgelisteten Konstanten geben die Bereiche für die integralen Datentypen an und sind in „limits.h“ definiert.  
@@ -113,7 +114,7 @@ Datentypkonstanten sind von der Implementierung abhängige Wertbereiche, die fü
 |--------------|-----------|-------------|  
 |**SCHAR_MAX**|127|Der Höchstwert von `char` mit Vorzeichen|  
 |**SCHAR_MIN**|-128|Der Mindestwert von `char` mit Vorzeichen|  
-|**UCHAR_MAX**|255 (0xff)|Höchstwert von `unsigned char`|  
+|**UCHAR_MAX**|255 (0xff)|Der Höchstwert von `unsigned char`|  
 |**CHAR_BIT**|8|Die Anzahl der Bits in einem `char`|  
 |**USHRT_MAX**|65535 (0xffff)|Der Höchstwert von **unsigned short**|  
 |**SHRT_MAX**|32767|Der Höchstwert von **short** (mit Vorzeichen)|  
@@ -133,7 +134,7 @@ Datentypkonstanten sind von der Implementierung abhängige Wertbereiche, die fü
   
  Folgende Konstanten geben den Bereich und andere Merkmale der Datentypen **double** und **float** an, die in „float.h“ definiert sind:  
   
-|Konstante|Wert|Beschreibung|  
+|Konstante|Wert|description|  
 |--------------|-----------|-----------------|  
 |**DBL_DIG**|15|Anzahl der Dezimalstellen der Genauigkeit|  
 |**DBL_EPSILON**|2.2204460492503131e-016|Am kleinsten, derart, dass 1.0+**DBL_EPSILON** !=1.0|  

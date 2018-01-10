@@ -1,5 +1,5 @@
 ---
-title: Concurrency-Namespace-Funktionen (EVA) | Microsoft-Dokumentation
+title: Concurrency-Namespace-Funktionen (AMP) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,18 +17,18 @@ f1_keywords:
 - amp/Concurrency::direct3d_printf
 - amp/Concurrency::global_memory_fence
 - amp/Concurrency::tile_static_memory_fence
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 22ba62ab8b3b4f9d14953dbab3edd8228ea85193
-ms.openlocfilehash: a976cc06b49b10d5bb8dcecb10e114efdd89faa8
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: aeda566ebd10dbd8ee5e5cfdcb4328537b9ba0c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Concurrency-Namespace-Funktionen (AMP)
 ||||  
@@ -115,7 +115,7 @@ inline float atomic_exchange(
   
 ### <a name="parameters"></a>Parameter  
  `_Dest`  
- Zeiger auf den Ziel-Speicherort.  
+ Ein Zeiger auf den Ziel-Speicherort.  
   
  `value`  
  Der neue Wert.  
@@ -125,7 +125,7 @@ inline float atomic_exchange(
   
 
 ##  <a name="atomic_fetch_add"></a>Atomic_fetch_add-Funktion (C++-AMP)  
- Fügen Sie einen Wert automatisch auf den Wert eines Speicherbereichs.  
+ Fügen Sie einen Wert atomisch auf den Wert eines Speicherbereichs.  
   
 ```  
 inline int atomic_fetch_add(
@@ -142,13 +142,13 @@ inline unsigned int atomic_fetch_add(
   
 ### <a name="parameters"></a>Parameter  
  `_Dest`  
- Ein Zeiger auf den Speicherort.  
+ Zeiger auf die Speicheradresse.  
   
  `value`  
  Der hinzuzufügende Wert.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der ursprüngliche Wert der Speicheradresse.  
+ Der ursprüngliche Wert des Speicherbereichs.  
   
 ##  <a name="atomic_fetch_and"></a>Atomic_fetch_and-Funktion (C++-AMP)  
  Atomar führt eine bitweise AND-Operation einen Wert und den Wert eines Speicherbereichs.  
@@ -168,13 +168,13 @@ inline unsigned int atomic_fetch_and(
   
 ### <a name="parameters"></a>Parameter  
  `_Dest`  
- Ein Zeiger auf den Speicherort.  
+ Zeiger auf die Speicheradresse.  
   
  `value`  
  Der Wert in der bitweise AND-Berechnung verwendet werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der ursprüngliche Wert der Speicheradresse.  
+ Der ursprüngliche Wert des Speicherbereichs.  
   
 ##  <a name="atomic_fetch_dec"></a>atomic_fetch_dec  
  Dekrementiert den Wert atomisch, der an der angegebenen Speicheradresse gespeichert ist.  
@@ -281,13 +281,13 @@ inline unsigned int atomic_fetch_or(
   
 ### <a name="parameters"></a>Parameter  
  `_Dest`  
- Ein Zeiger auf den Speicherort.  
+ Zeiger auf die Speicheradresse.  
   
  `value`  
  Der Wert in die bitweise OR-Berechnung verwendet werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der ursprüngliche Wert der Speicheradresse.  
+ Der ursprüngliche Wert des Speicherbereichs.  
   
 ##  <a name="atomic_fetch_sub"></a>Atomic_fetch_sub-Funktion (C++-AMP)  
  Atomar subtrahiert einen Wert aus einer Speicheradresse.  
@@ -307,13 +307,13 @@ inline unsigned int atomic_fetch_sub(
   
 ### <a name="parameters"></a>Parameter  
  `_Dest`  
- Zeiger auf den Ziel-Speicherort.  
+ Ein Zeiger auf den Ziel-Speicherort.  
   
  `value`  
  Der Wert, der subtrahiert werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der ursprüngliche Wert der Speicheradresse.  
+ Der ursprüngliche Wert des Speicherbereichs.  
   
 ##  <a name="atomic_fetch_xor"></a>Atomic_fetch_xor-Funktion (C++-AMP)  
  Atomar führt eine bitweise XOR-Vorgang einen Wert und eine Speicheradresse.  
@@ -333,15 +333,15 @@ inline unsigned int atomic_fetch_xor(
   
 ### <a name="parameters"></a>Parameter  
  `_Dest`  
- Ein Zeiger auf den Speicherort.  
+ Zeiger auf die Speicheradresse.  
   
  `value`  
- Der Wert der XOR-Berechnung verwendet werden soll.  
+ Der Wert in die XOR-Berechnung verwendet werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der ursprüngliche Wert der Speicheradresse.  
+ Der ursprüngliche Wert des Speicherbereichs.  
   
-##  <a name="copy"></a> copy  
+##  <a name="copy"></a>  copy  
  Kopiert ein C++ AMP-Objekt. Alle Anforderungen der synchronen Datenübertragung werden erfüllt. Sie können keine Daten kopieren, wenn Code auf einem Beschleuniger ausgeführt wird. Das allgemeine Format dieser Funktion ist `copy(src, dest)`.  
   
 ```  
@@ -549,14 +549,14 @@ concurrency::completion_future copy_async(
  Ein `future<void>`-Objekt, auf das gewartet werden kann.  
   
 ##  <a name="direct3d_abort"></a>direct3d_abort  
- Bricht die Ausführung einer Funktion mit der Einschränkungsklausel `restrict(amp)` ab. Wenn die AMP-Laufzeit den Aufruf erkennt, löst es eine [Runtime_exception](runtime-exception-class.md) Ausnahme mit der Fehlermeldung "Referenzrasterprogramm: Shader abort-Anweisung erreicht".  
+ Bricht die Ausführung einer Funktion mit der Einschränkungsklausel `restrict(amp)` ab. Wenn die AMP-Laufzeit den Aufruf erkennt, löst eine [Runtime_exception](runtime-exception-class.md) Ausnahme mit der Fehlermeldung "Referenzrasterprogramm: Anweisung Treffer zum Abbrechen von Shader".  
   
 ```  
 void direct3d_abort() restrict(amp);
 ```  
   
 ##  <a name="direct3d_errorf"></a>direct3d_errorf  
- Gibt eine formatierte Zeichenfolge im Visual Studio-Ausgabefenster aus. Sie wird von einer Funktion mit der Einschränkungsklausel `restrict(amp)` aufgerufen. Wenn die AMP-Laufzeit den Aufruf erkennt, löst es eine [Runtime_exception](runtime-exception-class.md) -Ausnahme mit derselben Formatierungszeichenfolge.  
+ Gibt eine formatierte Zeichenfolge im Visual Studio-Ausgabefenster aus. Sie wird von einer Funktion mit der Einschränkungsklausel `restrict(amp)` aufgerufen. Wenn die AMP-Laufzeit den Aufruf erkennt, löst eine [Runtime_exception](runtime-exception-class.md) -Ausnahme mit derselben Formatierungszeichenfolge.  
   
 ```  
 void direct3d_errorf(
@@ -657,7 +657,7 @@ void parallel_for_each(
  Die Dimension des `tiled_extent`-Objekts.  
   
  `_Kernel`  
- Ein Lambda-Ausdruck oder Funktion-Objekt, das ein des Typs Argument "Index\<_Rank >" und die parallele Berechnung ausführt.  
+ Ein Lambda- oder Funktionsobjekt-Objekt, das ein des Typs Argument "Index\<_Rank >" und die parallele Berechnung ausführt.  
   
  `_Kernel_type`  
  Ein Lambda- oder Funktionselement.  
@@ -677,5 +677,4 @@ inline void tile_static_memory_fence(const tile_barrier& _Barrier) restrict(amp)
  Ein tile_barrier-Objekt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Concurrency-Namespace (C++-AMP)](concurrency-namespace-cpp-amp.md)
-
+ [Concurrency-Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)

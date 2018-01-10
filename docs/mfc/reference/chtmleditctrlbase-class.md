@@ -231,11 +231,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8cf9d7244ce587881062fcd95ce1d3f3414e2ca8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 545cf67ff790edeb2303f95365c34ca71e4dc7f6
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase-Klasse
 Stellt eine HTML-Bearbeitungskomponente dar.  
@@ -246,7 +247,7 @@ Stellt eine HTML-Bearbeitungskomponente dar.
 template <class T> class CHtmlEditCtrlBase  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
@@ -1466,7 +1467,7 @@ long QueryStatus(long cmdID) const;
   
 ### <a name="parameters"></a>Parameter  
  `cmdID`  
- Die Befehls-ID. Befehls-IDs stammen aus den `CGID_MSHTML` Befehlsgruppe. Diese Befehle werden im Mshtmcid.h definiert. Sie erhalten auch die Liste online am [MSHTML Befehlsbezeichner](http://go.microsoft.com/fwlink/linkid=149220).  
+ Die Befehls-ID. Befehls-IDs stammen aus den `CGID_MSHTML` Befehlsgruppe. Diese Befehle werden im Mshtmcid.h definiert. Sie erhalten auch die Liste online am [MSHTML Befehlsbezeichner](http://go.microsoft.com/fwlink/p/?linkid=149220).  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt eine [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237) , der angibt, des Status für `cmdID`, oder 0 bei einem Fehler.  

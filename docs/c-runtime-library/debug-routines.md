@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 25bbbfae7e12154f9e64540ce9f5e8bdb7ebef42
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 158a3b782ffedc7bd206f400c066c052062ad402
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="debug-routines"></a>Debugroutinen
 Die Debugversion der C-Laufzeitbibliothek stellt viele Diagnosedienste bereit, die das Debuggen von Programmen vereinfachen und Entwicklern Folgendes ermöglichen:  
@@ -41,7 +42,7 @@ Die Debugversion der C-Laufzeitbibliothek stellt viele Diagnosedienste bereit, d
   
 ### <a name="debug-versions-of-the-c-run-time-library-routines"></a>Debugversionen der C-Laufzeitbibliotheksroutinen  
   
-|Routine|Verwendung|  
+|-Routine zurückgegebener Wert|Verwendung|  
 |-------------|---------|  
 |[_ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)|Wertet einen Ausdruck aus und erzeugt einen Debugbericht, wenn das Ergebnis "FALSE" lautet.|  
 |[_ASSERTE](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)|Ähnlich wie `_ASSERT`, schließt jedoch den fehlgeschlagenen Ausdruck im generierten Bericht ein.|  

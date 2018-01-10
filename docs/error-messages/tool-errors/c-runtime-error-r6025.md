@@ -1,35 +1,43 @@
 ---
-title: "C-Laufzeitfehler R6025 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "R6025"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "R6025"
+title: C-Laufzeitfehler R6025 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: R6025
+dev_langs: C++
+helpviewer_keywords: R6025
 ms.assetid: afa06d98-9c36-445b-b3e7-b6409bc8e779
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: cfb7413cd6fd8dca976d668763fab678bb5c9ebf
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/03/2018
 ---
-# C-Laufzeitfehler R6025
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Rein virtueller Funktionsaufruf  
+# <a name="c-runtime-error-r6025"></a>C-Laufzeitfehler R6025
+rein virtuellen Funktionsaufruf  
   
- Es wurde kein Objekt als Instanz definiert, um den Aufruf der rein virtuellen Funktion zu behandeln.  
+> [!NOTE]
+>  Wenn Sie diese Fehlermeldung beim Ausführen einer app auftritt, wurde die app heruntergefahren, da es sich um ein internes Problem enthält. Die häufigste Ursache für diesen Fehler ist ein Fehler in der Anwendung oder eine beschädigte Installation.  
+>   
+>  Sie können versuchen, diesen Fehler zu beheben, indem Sie folgende Schritte ausführen:  
+>   
+>  -   Verwenden der **Apps und Funktionen** oder **Programme und Funktionen** auf der Seite der **Systemsteuerung** reparieren oder neu installieren die Anwendung.  
+> -   Überprüfen Sie **Windows Update** in der **Systemsteuerung** für Softwareupdates.  
+> -   Überprüfen Sie nach einer aktualisierten Version der app. Wenn das Problem weiterhin besteht, wenden Sie sich an den Hersteller der app.  
   
- Wenn dieser Fehler angezeigt wird, wenden Sie sich an den technischen Support für Ihre Anwendung.  
+ **Informationen für Programmierer**  
   
- Dieser Fehler wurde durch das Aufrufen einer virtuellen Funktion in einer abstrakten Basisklasse durch einen Zeiger verursacht, der durch eine Umwandlung in den Typ der abgeleiteten Klasse erstellt wurde, jedoch tatsächlich einen Zeiger auf die Basisklasse darstellt.  Dies kann auftreten, wenn ein **void\***\-Zeiger, der beim Erstellen der Basisklasse erstellt wurde, in einen Zeiger auf eine Klasse umgewandelt wird.  
+ Kein Objekt wurde instanziiert, um die rein virtuellen Funktionsaufruf zu behandeln.  
   
- Weitere Informationen finden Sie auf der Website [Microsoft unterstützt](http://go.microsoft.com/fwlink/?LinkId=75220).
+ Dieser Fehler wird verursacht, durch den Aufruf einer virtuellen Funktion in einer abstrakten Klasse über einen Zeiger, die durch eine Umwandlung in den Typ der abgeleiteten Klasse erstellt wird, sondern ist tatsächlich ein Zeiger auf die Basisklasse der Klasse. Dies kann auftreten, wenn die Umwandlung von einer **"void"\***  in einen Zeiger auf eine Klasse bei der **"void"\***  während der Erstellung der Basisklasse erstellt wurde.  
+  
+ Weitere Informationen finden Sie unter der [Microsoft-Support](http://go.microsoft.com/fwlink/p/?linkid=75220) Website.

@@ -23,11 +23,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a181befa29f7d97a2705e13de44175e592376c96
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eabc994dc5792a5fa896a1d87f09c0ad511d91f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicstringstream-class"></a>basic_stringstream-Klasse
 Beschreibt ein Objekt, das das Einfügen und Extrahieren von Elementen und codierten Objekten mit einem Streampuffer der Klasse [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`> steuert.  
@@ -58,11 +59,11 @@ class basic_stringstream : public basic_iostream<Elem, Tr>
 |-|-|  
 |[basic_stringstream](#basic_stringstream)|Konstruiert ein Objekt vom Typ `basic_stringstream`.|  
   
-### <a name="typedefs"></a>TypeDefs  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[allocator_type](#allocator_type)|Der Type stellt ein Synonym für den Vorlagenparameter `Alloc`dar.|  
+|[allocator_type](#allocator_type)|Der Type stellt ein Synonym für den Vorlagenparameter `Alloc` dar.|  
   
 ### <a name="member-functions"></a>Memberfunktionen  
   
@@ -77,7 +78,7 @@ class basic_stringstream : public basic_iostream<Elem, Tr>
  **Namespace:** std  
   
 ##  <a name="allocator_type"></a> basic_stringstream::allocator_type  
- Der Type stellt ein Synonym für den Vorlagenparameter `Alloc`dar.  
+ Der Type stellt ein Synonym für den Vorlagenparameter `Alloc` dar.  
   
 ```  
 typedef Alloc allocator_type;  

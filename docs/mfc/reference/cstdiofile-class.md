@@ -29,11 +29,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6f87d8ac152eff3b0bdc5e3fe472920160c63cdd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 868442a2936781ed24588f47dcb591cadcc48f0d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cstdiofile-class"></a>CStdioFile-Klasse
 Eine C-Laufzeit-streamdatei dar, der von der Funktion zur Laufzeit geöffnet [Fopen](../../c-runtime-library/reference/fopen-wfopen.md).  
@@ -44,7 +45,7 @@ Eine C-Laufzeit-streamdatei dar, der von der Funktion zur Laufzeit geöffnet [Fo
 class CStdioFile : public CFile  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -169,7 +170,7 @@ virtual BOOL Open(
  Eine Zeichenfolge, die den Pfad zu der gewünschten Datei ist. Der Pfad kann relativ oder absolut sein.  
   
  `nOpenFlags`  
- Freigabe und Zugriffsmodus. Gibt die zu ergreifende Maßnahme beim Öffnen der Datei an. Sie können Optionen kombinieren, mit dem bitweisen OR-(&#124;) Operator. Eine Access-Berechtigung und eine Freigabe Option sind erforderlich. die Modi ModeCreate und ModeNoInherit sind optional.  
+ Freigabe und Zugriffsmodus. Gibt die zu ergreifende Maßnahme beim Öffnen der Datei an. Sie können Optionen kombinieren, mit dem bitweisen OR-(& #124;) Operator. Eine Access-Berechtigung und eine Freigabe Option sind erforderlich. die Modi ModeCreate und ModeNoInherit sind optional.  
   
  `pError`  
  Ein Zeiger auf ein vorhandenes Datei-Ausnahme-Objekt, das den Status eines fehlgeschlagenen Vorgangs erhält.  

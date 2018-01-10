@@ -1,36 +1,35 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4490 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4490"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4490"
+title: Compilerwarnung (Stufe 1) C4490 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4490
+dev_langs: C++
+helpviewer_keywords: C4490
 ms.assetid: f9b03ecf-41a1-4f4d-a74c-2c1e88234ccc
-caps.latest.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 05ca17f42cee490073a5a2bab8793ac520be45c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 1) C4490
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'Überschreibung': Falsche Verwendung des Überschreibungsspezifizierers; 'Funktion' stimmt nicht mit einer Basismethode der Verweisklasse überein  
+# <a name="compiler-warning-level-1-c4490"></a>Compilerwarnung (Stufe 1) C4490
+"override": falsche Verwendung von Überschreibungsspezifizierer; 'Funktion' stimmt nicht mit eine Basis Ref-Klassenmethode überein.  
   
- Ein Überschreibungsspezifizierer wurde falsch verwendet.  Beispielsweise überschreiben Sie keine Schnittstelle, sondern Sie implementieren sie.  
+ Ein Überschreibungsspezifizierer wurde falsch verwendet. Z. B. eine Schnittstellenfunktion nicht überschreiben, Sie implementieren.  
   
  Weitere Informationen finden Sie unter [Überschreibungsspezifizierer](../../windows/override-specifiers-cpp-component-extensions.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird C4490 generiert.  
   
 ```  

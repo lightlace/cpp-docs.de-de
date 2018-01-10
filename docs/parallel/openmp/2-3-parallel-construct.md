@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eb1d43207e7276aadac32e38a43cfa4ae47b9186
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 89167547085682a81cc1d281f4f32ab55022d27c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="23-parallel-construct"></a>2.3 parallel-Konstrukt
 Die folgende Direktive definiert ein paralleles Bereichs, das einer Region des Programms ist, die durch mehrere Threads parallel ausgeführt werden soll. Dies ist das grundlegende Konstrukt, das mit der parallelen Ausführung beginnt.  
@@ -34,13 +35,13 @@ Die folgende Direktive definiert ein paralleles Bereichs, das einer Region des P
   
  **Firstprivate (** *Variablenliste* **)**  
   
- **Standard (freigegebenen &#124; none)**  
+ **Standard (freigegebenen & #124; none)**  
   
  **Freigegebene (** *Variablenliste* **)**  
   
  **Copyin (** *Variablenliste* **)**  
   
- **Verringerung (** *Operator* **:***Variablenliste* **)**   
+ **Verringerung (** *Operator* **:***Variablenliste* **)  **  
   
  **Num_threads (** *Ganzzahlausdruck* **)**  
   

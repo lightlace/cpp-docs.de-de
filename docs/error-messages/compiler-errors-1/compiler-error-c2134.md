@@ -1,35 +1,32 @@
 ---
-title: Compiler-Fehler C2134 | Microsoft-Dokumentation
+title: Compilerfehler Fehler C2134 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2134
-dev_langs:
-- C++
+f1_keywords: C2134
+dev_langs: C++
 ms.assetid: d45cb3e8-0be4-4bd6-8be9-5f8d2384363f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5d249fd24f575ef99b537b1993761bcf168ca803
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 99d68fa6ef0ab9b49a79e061d3e62156542459b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="compiler-error-c2134"></a>Compiler-Fehler C2134
-'Funktion': Aufruf führt nicht in einem konstanten Ausdruck  
+# <a name="compiler-error-c2134"></a>Compilerfehler Fehler C2134
+'Funktion': Aufruf führt nicht zu einem konstanten Ausdruck  
   
- Eine Funktion deklariert, wie "constexpr" nur andere Funktionen aufrufen kann, die als "constexpr" deklariert werden.  
+ Eine Funktion deklariert, wie Constexpr nur andere Funktionen aufrufen kann, die als Constexpr deklariert werden.  
   
- Im folgende Beispiel wird C2134 generiert:  
+ Im folgenden Beispiel wird C2134 generiert:  
   
 ```  
 // C2134.cpp  

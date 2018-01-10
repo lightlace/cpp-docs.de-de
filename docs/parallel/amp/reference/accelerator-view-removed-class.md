@@ -1,11 +1,10 @@
 ---
-title: Accelerator_view_removed-Klasse | Microsoft-Dokumentation
+title: Accelerator_view_removed-Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,36 +12,19 @@ f1_keywords:
 - AMPRT/accelerator_view_removed
 - AMPRT/Concurrency::accelerator_view_removed:accelerator_view_removed
 - AMPRT/Concurrency::accelerator_view_removed:get_view_removed_reason
-dev_langs:
-- C++
-helpviewer_keywords:
-- AMPRT/Concurrency::accelerator_view_removed:accelerator_view_removed Class
+dev_langs: C++
+helpviewer_keywords: AMPRT/Concurrency::accelerator_view_removed:accelerator_view_removed Class
 ms.assetid: 262446de-311c-454e-a5ed-e2aaced0d88a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: c45eb8192266999c8771f6788de16859fe7a12c8
-ms.contentlocale: de-de
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 68b770acd41956ec255718ee2e2db1c5ee556b9d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="acceleratorviewremoved-class"></a>accelerator_view_removed-Klasse
 Die Ausnahme, die ausgelöst wird, wenn ein zugrunde liegender DirectX-Aufruf aufgrund des Windows-TDR-Mechanismus (Timeout Detection and Recovery) fehlschlägt.  
@@ -53,7 +35,7 @@ Die Ausnahme, die ausgelöst wird, wenn ein zugrunde liegender DirectX-Aufruf au
 class accelerator_view_removed : public runtime_exception;  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -65,7 +47,7 @@ class accelerator_view_removed : public runtime_exception;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[get_view_removed_reason](#get_view_removed_reason)|Gibt einen HRESULT-Fehlercode, der angibt, der Ursache für die `accelerator_view` des Objekts entfernen.|  
+|[get_view_removed_reason](#get_view_removed_reason)|Gibt einen HRESULT-Fehlercode, der angibt, der Ursache für die `accelerator_view` Entfernung des Objekts.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `exception`  
@@ -99,14 +81,14 @@ explicit accelerator_view_removed(
  Eine Beschreibung des Fehlers.  
   
  `_View_removed_reason`  
- Ein HRESULT-Fehlercode, der angibt, der Ursache für das Entfernen der `accelerator_view` Objekt.  
+ Ein HRESULT-Fehlercode, der angibt, der Ursache der Entfernung von der `accelerator_view` Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Eine neue Instanz der Accelerator_view_removed-Klasse.  
   
 ## <a name="get_view_removed_reason_method"></a>get_view_removed_reason 
 
-Gibt einen HRESULT-Fehlercode, der angibt, der Ursache für die `accelerator_view` des Objekts entfernen.  
+Gibt einen HRESULT-Fehlercode, der angibt, der Ursache für die `accelerator_view` Entfernung des Objekts.  
   
 ### <a name="syntax"></a>Syntax  
   
@@ -117,4 +99,3 @@ HRESULT get_view_removed_reason() const throw();
  
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)
-

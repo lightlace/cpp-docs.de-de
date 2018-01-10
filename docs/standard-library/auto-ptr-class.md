@@ -25,11 +25,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c7411a11a396627fb01d1dad1d47dc957ce968a7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 960da86c5ae3efa0cb50077becfb526000f71b4d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="autoptr-class"></a>auto_ptr-Klasse
 Schließt eine Ressource in einen intelligenten Zeiger ein, der sicherstellt, dass die Ressource automatisch zerstört wird, wenn die Steuerung einen Block verlässt.  
@@ -73,7 +74,7 @@ public:
   
  Sie können ein `auto_ptr<Type>`-Objekt als Wert als ein Argument für einen Funktionsaufruf übergeben. Ein `auto_ptr`-Objekt kann kein Element eines Standardbibliothekcontainers sein. Es ist nicht möglich, eine Sequenz von `auto_ptr<Type>`-Objekten zuverlässig mit einem Container für eine C++-Standardbibliothek zu verwalten.  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="constructors"></a>Konstruktoren  
   
@@ -81,7 +82,7 @@ public:
 |-|-|  
 |[auto_ptr](#auto_ptr)|Der Konstruktor für Objekte des Typs `auto_ptr`.|  
   
-### <a name="typedefs"></a>TypeDefs  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
@@ -134,7 +135,7 @@ auto _ptr(auto _ptr<Other>& right) throw();
 ### <a name="remarks"></a>Hinweise  
  Der erste Konstruktor speichert `ptr` in **myptr**, den gespeicherten Zeiger auf das zugeordnete Objekt. Der zweite Konstruktor überträgt den Besitz des in `right` gespeicherten Zeigers durch Speichern von `right`. [release](#release) in **myptr**.  
   
- Der dritte Konstruktor verhält sich wie der zweite, außer dass er **right** speichert. `ref`. **release** in **myptr**, wo `ref` der in `right` gespeicherte Verweis ist.  
+ Der dritte Konstruktor verhält sich wie der zweite, außer dass er **right** speichert. `ref` **release** in **myptr**, wo `ref` der in `right` gespeicherte Verweis ist.  
   
  Der Vorlagenkonstruktor verhält sich wie der zweite Konstruktor, wenn ein Zeiger auf **Other** impliziert zu einem Zeiger auf **Type** konvertiert werden kann.  
   
@@ -522,6 +523,6 @@ Destructing 00311B88 Value: 6
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [unique_ptr-Klasse](../standard-library/unique-ptr-class.md)
 

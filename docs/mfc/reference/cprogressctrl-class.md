@@ -53,11 +53,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ff7011c9a12acf54fbc7de561409f5f0278d90c8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b7def2d1a6b421259a2b0d5e8229165ea0593874
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl-Klasse
 Stellt die Funktionalität des allgemeinen Windows-Statusanzeige-Steuerelements bereit.  
@@ -68,7 +69,7 @@ Stellt die Funktionalität des allgemeinen Windows-Statusanzeige-Steuerelements 
 class CProgressCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -279,7 +280,7 @@ int GetState() const;
 |-----------|-----------|  
 |`PBST_NORMAL`|In Bearbeitung|  
 |`PBST_ERROR`|Fehler|  
-|`PBST_PAUSED`|Angehalten|  
+|`PBST_PAUSED`|Paused|  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [PBM_GETSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760834) Nachricht, die im Windows SDK beschrieben wird.  

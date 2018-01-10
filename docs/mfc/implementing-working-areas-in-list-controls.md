@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f8376a65a511f2a59342aa59f86a9cd6ecd9768e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cefb8007fd9b73dda4c0e8a99e9ae9daa1bfcc34
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementing-working-areas-in-list-controls"></a>Implementieren von Arbeitsbereichen in Listensteuerelementen
 Standardmäßig ordnet ein Listenfeld-Steuerelement alle Elemente in einer Weise standard Raster an. Jedoch wird eine andere Methode unterstützt Arbeitsbereichen, der die Listeneinträge in rechteckige Gruppen nebeneinander anordnet. Für ein Bild eines Steuerelements, das Arbeitsbereiche implementiert, finden Sie unter Verwenden von Listenansicht Steuerelementen im Windows SDK.  

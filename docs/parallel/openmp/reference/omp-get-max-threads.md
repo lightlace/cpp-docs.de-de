@@ -1,41 +1,40 @@
 ---
-title: "omp_get_max_threads | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_get_max_threads"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_get_max_threads OpenMP function"
+title: Omp_get_max_threads | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_get_max_threads
+dev_langs: C++
+helpviewer_keywords: omp_get_max_threads OpenMP function
 ms.assetid: f47c3725-3e40-469f-8bc8-a1e47f264cc3
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0308d18647805b058c7c75ed268418bec50caba7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# omp_get_max_threads
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Gibt eine ganze Zahl ist, die größer oder gleich der Anzahl von Threads zurück, die verfügbar sein, wenn ein paralleler Bereich ohne [num\_threads](../../../parallel/openmp/reference/num-threads.md) an dieser Stelle im Code definiert wurden.  
+# <a name="ompgetmaxthreads"></a>omp_get_max_threads
+Gibt eine ganze Zahl, die gleich oder größer als die Anzahl der Threads, die verfügbar sind, wenn einem parallelen Bereich ohne [Num_threads](../../../parallel/openmp/reference/num-threads.md) an diesem Punkt im Code definiert wurden.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 int omp_get_max_threads( )  
 ```  
   
-## Hinweise  
- Weitere Informationen finden Sie unter [3.1.3 omp\_get\_max\_threads Function](../../../parallel/openmp/3-1-3-omp-get-max-threads-function.md).  
+## <a name="remarks"></a>Hinweise  
+ Weitere Informationen finden Sie unter [3.1.3 Omp_get_max_threads-Funktion](../../../parallel/openmp/3-1-3-omp-get-max-threads-function.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // omp_get_max_threads.cpp  
@@ -65,10 +64,13 @@ int main( )
 }  
 ```  
   
-  **8**  
-**8**  
-**8**  
-**8**  
-**8**   
-## Siehe auch  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+```Output  
+8  
+8  
+8  
+8  
+8  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Funktionen](../../../parallel/openmp/reference/openmp-functions.md)

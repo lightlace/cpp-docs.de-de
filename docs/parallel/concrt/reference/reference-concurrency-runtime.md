@@ -1,11 +1,10 @@
 ---
-title: Referenz (Concurrency Runtime) | Microsoft-Dokumentation
+title: Referenz (Concurrency Runtime) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -454,48 +453,32 @@ f1_keywords:
 - concrt/Concurrency::details::_Timer::_Stop
 - concrt/Concurrency::details::_TaskCollectionBase::_M_pParent
 - agents/Concurrency::_Network_link_iterator::operator->
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - DWORD typedef
 - HANDLE typedef
 - LPSECURITY_ATTRIBUTES typedef
 - HRESULT typedef
 ms.assetid: a057c776-7caa-4605-8f33-9815cf6f9b27
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 88de4e73c29e222009a4ca90b3b22c4701b21e70
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 33d88b6f187e80635bcc1f63077f674d6adbb74a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reference-concurrency-runtime"></a>Referenz (Concurrency Runtime)
 Dieser Abschnitt enthält Referenzinformationen für die Concurrency Runtime.
-**Hinweis** C++ Standardprogrammiersprache ist die Verwendung von Bezeichnern, die mit einem Unterstrich (_) Implementierungen wie Bibliotheken beginnen. Verwenden Sie diese Namen nicht im Code. Die Eindeutigkeit des Verhaltens von Codeelementen mit Namen dieser Art kann nicht gewährleistet werden, und für zukünftige Versionen muss mit Änderungen gerechnet werden. Aus diesen Gründen werden solche Codeelemente aus der Concurrency Runtime-Dokumentation nicht beschrieben.
+**Hinweis** C++ Standardprogrammiersprache ist die Verwendung von Bezeichnern, die mit einem Unterstrich (_) Implementierungen wie Bibliotheken zu beginnen. Verwenden Sie diese Namen nicht im Code. Die Eindeutigkeit des Verhaltens von Codeelementen mit Namen dieser Art kann nicht gewährleistet werden, und für zukünftige Versionen muss mit Änderungen gerechnet werden. Aus diesen Gründen werden solche Codeelemente in der Concurrency Runtime-Dokumentation nicht beschrieben.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
-[Concurrency-Namespace](concurrency-namespace.md) Concurrency-Namespace stellt Klassen und Funktionen, mit denen Sie Zugriff auf die Concurrency Runtime ermöglichen, ein Framework zur parallelen Programmierung für C++. Weitere Informationen finden Sie unter [Concurrency Runtime](../concurrency-runtime.md).
+[Concurrency-Namespace](concurrency-namespace.md) Concurrency-Namespace stellt Klassen und Funktionen, mit denen Sie erhalten Zugriff auf die Concurrency Runtime, ein Framework zur parallelen Programmierung für C++. Weitere Informationen finden Sie unter [Concurrency Runtime](../concurrency-runtime.md).
 
 [Std-Namespace](std-namespace.md)
 [Stdx-Namespace](stdx-namespace.md)
-
 
 

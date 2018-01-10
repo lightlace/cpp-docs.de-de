@@ -95,11 +95,12 @@ helpviewer_keywords:
 - std::experimental::filesystem::system_complete
 - std::experimental::filesystem::temp_directory_path
 - std::experimental::filesystem::u8path
-ms.openlocfilehash: b6e6523b197be2b55847f23447a6d832f55e880d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: edd850087249769fce9e96110dfa29ca37450b0f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltfilesystemgt-functions"></a>&lt;filesystem&gt;-Funktionen
 Diese freien Funktionen im [\<filesystem>](../standard-library/filesystem.md)-Header führen Änderungs- und Abfragevorgänge für Pfade, Dateien, symbolische Verknüpfungen, Verzeichnisse und Volumes durch. Weitere Informationen und Codebeispiele finden Sie unter [Dateisystemnavigation](../standard-library/file-system-navigation.md).  
@@ -315,7 +316,7 @@ void current_path(const path& pval, error_code& ec) noexcept;
   
  Die Funktionen ohne den Parameter `pval` geben den Pfadnamen für das aktuelle Verzeichnis zurück. Die übrigen Funktionen legen das aktuelle Verzeichnis auf `pval` fest.  
   
-## <a name="end"></a> end  
+## <a name="end"></a>  end  
   
 ```  
 directory_iterator& end(const directory_iterator& iter) noexcept;  
@@ -552,7 +553,7 @@ bool status_known(file_status stat) noexcept;
   
  Die Funktion gibt „stat.type\(\) \!\= file_type::none“ zurück.  
   
-## <a name="swap"></a> swap  
+## <a name="swap"></a>  swap  
   
 ```  
 void swap(path& left, path& right) noexcept;  

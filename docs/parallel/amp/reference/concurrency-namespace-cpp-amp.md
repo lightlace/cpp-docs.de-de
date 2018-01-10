@@ -15,11 +15,12 @@ caps.latest.revision: "28"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c67ed88a395b6d688fdc753ed45f08fd5b41925c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4c4dd1773e74334f342ebb7e3cd64b68e6bab2b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-namespace-c-amp"></a>Concurrency-Namespace (C++ AMP)
 Stellt Klassen und Funktionen bereit, die die Ausführung von C++-Code auf datenparalleler Hardware beschleunigen. Weitere Informationen finden Sie unter [Übersicht über C++ AMP](../cpp-amp-overview.md)  
@@ -30,7 +31,7 @@ Stellt Klassen und Funktionen bereit, die die Ausführung von C++-Code auf daten
 namespace Concurrency;  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="namespaces"></a>Namespaces  
   
@@ -64,7 +65,7 @@ namespace Concurrency;
   
 ### <a name="enumerations"></a>Enumerationen  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |[Access_type-Enumeration](concurrency-namespace-enums-amp.md#access_type)|Gibt den Datenzugriffstyp an.|  
 |[Queuing_mode-Enumeration](concurrency-namespace-enums-amp.md#queuing_mode)|Gibt die Modi für das Hinzufügen zur Warteschlange an, die auf dem Beschleuniger unterstützt werden.|  

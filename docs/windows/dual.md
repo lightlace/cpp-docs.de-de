@@ -1,32 +1,33 @@
 ---
-title: "dual | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.dual"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dual attribute"
+title: Duale | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.dual
+dev_langs: C++
+helpviewer_keywords: dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e5ea633ca0d6e9f654e5462f8cebded18d9b9f99
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# dual
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Platziert eine Schnittstelle in der IDL\-Datei als duale Schnittstelle.  
+# <a name="dual"></a>dual
+Fügt eine Schnittstelle in der IDL-Datei als eine duale Schnittstelle.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -34,11 +35,11 @@ Platziert eine Schnittstelle in der IDL\-Datei als duale Schnittstelle.
   
 ```  
   
-## Hinweise  
- Wenn das Attribut **dual** C\+\+ einer Schnittstelle vorausgeht, führt es die Schnittstelle, innerhalb des Library\-Blocks in der generierten IDL\-Datei abgelegt werden soll.  
+## <a name="remarks"></a>Hinweise  
+ Wenn die **duale** C++-Attribut vorangestellt ist, eine Schnittstelle, die er bewirkt, dass die Schnittstelle in der bibliotheksblock in der generierten IDL-Datei abgelegt werden soll.  
   
-## Beispiel  
- Der folgende Code ist ein Attributblock, der **dual** vor einer Schnittstellendefinition verwendet:  
+## <a name="example"></a>Beispiel  
+ Der folgende Code ist ein Attributblock, die verwendet **duale** vor einer Schnittstellendefinition:  
   
 ```  
 // cpp_attr_ref_dual.cpp  
@@ -72,24 +73,23 @@ __interface IStatic : IDispatch
 [cpp_quote("#include file.h")];  
 ```  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
 |**Betrifft**|`interface`|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|None|  
+|**Erforderliche Attribute**|Keiner|  
 |**Ungültige Attribute**|**dispinterface**|  
   
- Weitere Informationen finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Attributes by Usage](../windows/attributes-by-usage.md)   
- [custom](../windows/custom-cpp.md)   
- [dispinterface](../windows/dispinterface.md)   
- [object](../windows/object-cpp.md)   
- [\_\_interface](../cpp/interface.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [IDL-Attribute](../windows/idl-attributes.md)   
+ [Attribute nach Verwendung](../windows/attributes-by-usage.md)   
+ [benutzerdefinierte](../windows/custom-cpp.md)   
+ [Disp-Schnittstelle](../windows/dispinterface.md)   
+ [Objekt](../windows/object-cpp.md)   
+ [__interface](../cpp/interface.md)   

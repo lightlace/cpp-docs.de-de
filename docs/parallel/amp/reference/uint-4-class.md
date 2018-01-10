@@ -279,11 +279,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 95c05dc7eedb687bb91ccf7292fcff01aa349fbe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4de759866580cce03dae40c5fe2fe5cb9482013b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uint4-class"></a>uint_4-Klasse
 Stellt einen kurzen Vektor von vier ganzen Zahlen ohne Vorzeichen dar.  
@@ -294,7 +295,7 @@ Stellt einen kurzen Vektor von vier ganzen Zahlen ohne Vorzeichen dar.
 class uint_4;  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-typedefs"></a>Öffentliche Typedefs  
   
@@ -465,7 +466,7 @@ class uint_4;
   
 ### <a name="public-constants"></a>Öffentliche Konstanten  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |[Size-Konstante](#size)||  
 

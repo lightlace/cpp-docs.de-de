@@ -15,11 +15,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b296e63f3392c6ba9a38116a096d8fd9526103e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d78a39fb29ac983c69bf792c4d567c850e697c53
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memfunt-class"></a>mem_fun_t-Klasse
 Eine Adapterklasse, die einer **non_const**-Memberfunktion, die keine Argumente akzeptiert, ermöglicht, als unäres Funktionsobjekt aufgerufen zu werden, wenn sie mit einem Zeigerargument initialisiert wird.  
@@ -38,7 +39,7 @@ class mem_fun_t : public unary_function<Type *, Result> {
   
 #### <a name="parameters"></a>Parameter  
  `_Pm`  
- Ein Zeiger auf die Memberfunktion der Klasse **Type**, die in ein Funktionsobjekt konvertiert werden soll  
+ Ein Zeiger auf die Memberfunktion der Klasse **Type**, die in ein Funktionsobjekt konvertiert werden soll.  
   
  `_Pleft`  
  Das Objekt, das für die `_Pm`-Memberfunktion aufgerufen wird.  

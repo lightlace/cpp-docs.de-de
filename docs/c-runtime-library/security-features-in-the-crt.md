@@ -35,11 +35,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6dd54fcfc9612b5c20288b78b60d84257ab8f2f9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce5ff232a914b929153d8dc2ea6bb0951b4ff187
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="security-features-in-the-crt"></a>Sicherheitsfunktionen in der CRT
 Viele alte CRT-Funktionen liegen in neueren, sichereren Versionen vor. Wenn eine sichere Funktion vorhanden ist, wird die ältere, weniger sichere Version als veraltet markiert, und die neue Version hat das `_s`-Suffix („sicher“).  
@@ -69,7 +70,7 @@ strcpy(szBuf, "test"); // warning: deprecated
 ## <a name="additional-security-features"></a>Zusätzliche Sicherheitsfunktionen  
  Zu den wichtigsten Sicherheitsfunktionen zählen Folgende:  
   
--   `Parameter Validation`. An CRT-Funktionen übergebene Parameter werden sowohl in sicheren Funktionen als auch in vielen bereits vorhandenen Versionen der Funktionen überprüft. Diese Überprüfungen umfassen:  
+-   `Parameter Validation` An CRT-Funktionen übergebene Parameter werden sowohl in sicheren Funktionen als auch in vielen bereits vorhandenen Versionen der Funktionen überprüft. Diese Überprüfungen umfassen:  
   
     -   Überprüfung auf `NULL`-Werte, die den Funktionen übergeben werden.  
   
@@ -81,17 +82,17 @@ strcpy(szBuf, "test"); // warning: deprecated
   
 -   Auf einen Handler für ungültige Parameter kann auch der Entwickler zugreifen. Wenn ein ungültiger Parameter festgestellt wird, bietet die CRT eine Möglichkeit, diese Probleme mit der [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)-Funktion zu überprüfen, anstatt dies zu bestätigen und die Anwendung zu beenden.  
   
--   `Sized Buffers`. Die sicheren Funktionen erfordern, dass die Größe des Puffers an alle Funktionen übergeben wird, die in einen Puffer schreiben. Die sicheren Versionen überprüfen, ob der Puffer groß genug ist, bevor sie darin schreiben, um gefährliche Pufferüberlauffehler zu vermeiden, die die Ausführung bösartigen Codes zulassen könnten. Diese Funktionen geben in der Regel einen Fehlercode des Typs `errno` zurück und rufen den Handler für ungültige Parameter auf, wenn der Puffer zu klein ist. Funktionen, die wie `gets` aus Eingabepuffern lesen, haben sichere Versionen, die von Ihnen die Angabe einer maximalen Größe fordern.  
+-   `Sized Buffers` Die sicheren Funktionen erfordern, dass die Größe des Puffers an alle Funktionen übergeben wird, die in einen Puffer schreiben. Die sicheren Versionen überprüfen, ob der Puffer groß genug ist, bevor sie darin schreiben, um gefährliche Pufferüberlauffehler zu vermeiden, die die Ausführung bösartigen Codes zulassen könnten. Diese Funktionen geben in der Regel einen Fehlercode des Typs `errno` zurück und rufen den Handler für ungültige Parameter auf, wenn der Puffer zu klein ist. Funktionen, die wie `gets` aus Eingabepuffern lesen, haben sichere Versionen, die von Ihnen die Angabe einer maximalen Größe fordern.  
   
--   `Null termination`. Einige Funktionen, die potenziell nicht beendete Zeichenfolgen hinterlassen haben, haben sichere Versionen, die sicherstellen, dass Zeichenfolgen ordnungsgemäß mit NULL enden.  
+-   `Null termination` Einige Funktionen, die potenziell nicht beendete Zeichenfolgen hinterlassen haben, haben sichere Versionen, die sicherstellen, dass Zeichenfolgen ordnungsgemäß mit NULL enden.  
   
--   `Enhanced error reporting`. Die sicheren Funktionen geben Fehlercodes mit mehr Fehlerinformationen zurück, als bei den bereits vorhandenen Funktionen verfügbar waren. Die sicheren Funktionen und viele der bereits vorhandenen Funktionen legen jetzt `errno` fest und geben häufig ebenfalls einen `errno`-Codetyp zurück, um eine bessere Fehlerberichterstattung zu bieten.  
+-   `Enhanced error reporting` Die sicheren Funktionen geben Fehlercodes mit mehr Fehlerinformationen zurück, als bei den bereits vorhandenen Funktionen verfügbar waren. Die sicheren Funktionen und viele der bereits vorhandenen Funktionen legen jetzt `errno` fest und geben häufig ebenfalls einen `errno`-Codetyp zurück, um eine bessere Fehlerberichterstattung zu bieten.  
   
--   `Filesystem security`. Sichere Datei-E/A-APIs unterstützen sicheren Dateizugriff im Standardfall.  
+-   `Filesystem security` Sichere Datei-E/A-APIs unterstützen sicheren Dateizugriff im Standardfall.  
   
--   `Windows security`. Sichere Prozess-APIs setzen Sicherheitsrichtlinien durch und lassen die Angabe von ACLs zu.  
+-   `Windows security` Sichere Prozess-APIs setzen Sicherheitsrichtlinien durch und lassen die Angabe von ACLs zu.  
   
--   `Format string syntax checking`. Ungültige Zeichenfolgen werden erkannt, z.B. Verwendung falscher Typfeldzeichen in `printf`-Formatzeichenfolgen.  
+-   `Format string syntax checking` Ungültige Zeichenfolgen werden erkannt, z.B. Verwendung falscher Typfeldzeichen in `printf`-Formatzeichenfolgen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Parametervalidierung](../c-runtime-library/parameter-validation.md)   

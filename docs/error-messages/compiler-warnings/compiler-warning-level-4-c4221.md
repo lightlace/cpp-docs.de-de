@@ -1,34 +1,33 @@
 ---
-title: "Compilerwarnung (Stufe 4) C4221 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4221"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4221"
+title: Compilerwarnung (Stufe 4) C4221 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4221
+dev_langs: C++
+helpviewer_keywords: C4221
 ms.assetid: 8532bd68-54dc-4526-8597-f61dcb0a0129
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6a08b300961bd19cc0355cc556d52dd00d05632e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 4) C4221
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Nicht dem Standard entsprechende Erweiterung: 'Bezeichner': Initialisierung mit der Adresse der automatischen Variable nicht möglich  
+# <a name="compiler-warning-level-4-c4221"></a>Compilerwarnung (Stufe 4) C4221
+nicht dem Standard entsprechende Erweiterung: 'Bezeichner': kann nicht initialisiert werden, mit der Adresse der automatischen Variablen  
   
- Bei Verwendung der Microsoft\-Standarderweiterungen \(\/Ze\) können Sie einen Aggregattyp \(**array**, `struct` oder **union**\) mit der Adresse lokaler \(automatischer\) Variablen initialisieren.  
+ Initialisieren Sie mit der Standard-Microsoft-Erweiterungen (/ Ze) ist einen aggregierten Typ (**Array**, `struct`, oder **Union**) mit der Adresse einer Variablen (automatisch).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // C4221.c  
@@ -49,4 +48,4 @@ int main()
 }  
 ```  
   
- Derartige Initialisierungen sind bei Einhaltung der ANSI\-Kompatibilität \([\/Za](../../build/reference/za-ze-disable-language-extensions.md)\) ungültig.
+ Solche Initialisierungen sind ungültig, ANSI-Kompatibilität (["/ Za"](../../build/reference/za-ze-disable-language-extensions.md)).

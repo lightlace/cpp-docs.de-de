@@ -1,51 +1,53 @@
 ---
-title: "Windows::Foundation-Namespace | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/ABI::Windows::Foundation"
-  - "client/Windows::Foundation"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Foundation-Namespace"
+title: 'Windows:: Foundation-Namespace | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- client/ABI::Windows::Foundation
+- client/Windows::Foundation
+dev_langs: C++
+helpviewer_keywords: Foundation namespace
 ms.assetid: 96a6b5e0-ddee-4b21-ae4e-da5feeb945c3
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 234ed31e2cdfc86988c3c28fdb899d2e9eae41be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Windows::Foundation-Namespace
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ermöglicht grundlegende [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]\-Funktionalität, z Objekt und Factoryerstellung.  
+# <a name="windowsfoundation-namespace"></a>Windows::Foundation-Namespace
+Aktiviert grundlegende Windows-Runtime-Funktionen, wie das Objekt und Factory erstellen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 namespace Windows::Foundation;  
 ```  
   
-## Member  
+## <a name="members"></a>Member  
   
-### Funktionen  
+### <a name="functions"></a>Funktionen  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[ActivateInstance\-Funktion](../windows/activateinstance-function.md)|Register und eine Instanz des angegebenen Typs ab, der in einer bestimmten ID Klasse definiert wird|  
-|[GetActivationFactory\-Funktion](../windows/getactivationfactory-function.md)|Ruft eine Aktivierungsfactory für den Typ ab, der mit dem Vorlagenparameter angegeben wird.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[ActivateInstance-Funktion](../windows/activateinstance-function.md)|Registriert, und ruft eine Instanz eines angegebenen Typs, der definiert, die in einer angegebenen Klasse-ID ab|  
+|[GetActivationFactory-Funktion](../windows/getactivationfactory-function.md)|Ruft eine aktivierungsfactory für den durch den Vorlagenparameter angegebenen Typ ab.|  
   
-## Anforderungen  
- **Header:**  client.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** client.h  
   
- Fenster **Namespace:**  
+ **Namespace:** Windows  
   
-## Siehe auch  
- [Windows Namespace](assetId:///45b08650-69cd-4f7f-a959-b7361476865c)
+## <a name="see-also"></a>Siehe auch  
+ [Windows-Namespace](http://msdn.microsoft.com/en-us/45b08650-69cd-4f7f-a959-b7361476865c)

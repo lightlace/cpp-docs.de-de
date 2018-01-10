@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 16a2599b97d88cf4e36b15a70203fc0ca91ca2a2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bb8d2bff69e95a089827c85ade6dc4bcd67eb7ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-targets"></a>Befehlsziele
 Die Abbildung [Befehle im Framework](../mfc/user-interface-objects-and-command-ids.md) zeigt die Verbindung zwischen einer Benutzeroberfläche-Objekt, z. B. ein Menüelement, und die Ereignishandler-Funktion, die vom Framework aufgerufen, um den Befehl durchzuführen, wenn das Objekt geklickt wird.  

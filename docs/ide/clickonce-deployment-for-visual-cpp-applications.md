@@ -1,59 +1,61 @@
 ---
-title: "ClickOnce-Bereitstellung f&#252;r Visual&#160;C++-Anwendungen"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Bereitstellen von Anwendungen [C++], ClickOnce"
-  - "Anwendungsbereitstellung [C++], ClickOnce"
-  - "ClickOnce-Bereitstellung [C++], C++-Anwendungen"
+title: "ClickOnce-Bereitstellung für Visual C++-Anwendungen | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- deploying applications [C++], ClickOnce
+- application deployment [C++], ClickOnce
+- ClickOnce deployment [C++], C++ applications
 ms.assetid: 9988c546-0936-452c-932f-9c76daa42157
-caps.latest.revision: 17
-caps.handback.revision: "17"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e1a036a1520a747448c5541f367f0b43711e30b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# ClickOnce-Bereitstellung f&#252;r Visual&#160;C++-Anwendungen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] verfügt über zwei verschiedene Technologien zum Bereitstellen von Windows\-Anwendungen: ClickOnce\-Bereitstellung oder [Windows Installer](http://msdn.microsoft.com/library/cc185688)\-Bereitstellung.  
+# <a name="clickonce-deployment-for-visual-c-applications"></a>ClickOnce-Bereitstellung für Visual C++-Anwendungen
+Visual Studio bietet zwei verschiedene Technologien zum Bereitstellen von Windows-Anwendungen: ClickOnce-Bereitstellung oder [Windows Installer](http://msdn.microsoft.com/library/cc185688) Bereitstellung.  
   
-## ClickOnce\-Bereitstellung in C\+\+  
- Die [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]\-Entwicklungsumgebung bietet keine direkte Unterstützung für das Bereitstellen von [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]\-Projekten mit [!INCLUDE[ndptecclick](../ide/includes/ndptecclick_md.md)], dafür zu verwendende Tools sind jedoch verfügbar.  
+## <a name="clickonce-deployment-in-c"></a>ClickOnce-Bereitstellung in C++  
+ Der Entwicklungsumgebung von Visual C++ unterstützt Visual C++-Projekte mit ClickOnce-Bereitstellung nicht direkt, aber die Tools zur Verfügung, ihn zu verwenden.  
   
 > [!NOTE]
->  [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] unterstützt [!INCLUDE[ndptecclick](../ide/includes/ndptecclick_md.md)] in der [!INCLUDE[csprcs](../ide/includes/csprcs_md.md)]\-Entwicklungsumgebung und der [!INCLUDE[vbprvb](../dotnet/includes/vbprvb_md.md)]\-Entwicklungsumgebung.  Wenn das [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]\-Projekt von einem [!INCLUDE[csprcs](../ide/includes/csprcs_md.md)]\-Projekt abhängig ist, können Sie die Anwendung \(einschließlich ihrer Projektabhängigkeiten\) mit der [!INCLUDE[ndptecclick](../ide/includes/ndptecclick_md.md)]\-Bereitstellung der [!INCLUDE[csprcs](../ide/includes/csprcs_md.md)]\-Entwicklungsumgebung veröffentlichen.  
+>  Visual Studio unterstützt ClickOnce in Visual c# und Visual Basic-entwicklungsumgebungen. Wenn es sich bei Visual C++-Projekt eine Abhängigkeit von einem Visual C#-Projekt ist, können Sie die Anwendung (einschließlich ihrer projektabhängigkeiten) veröffentlichen über ClickOnce-Bereitstellung in der Visual C#-Entwicklungsumgebung.  
   
- Zum Veröffentlichen einer [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]\-Anwendung mit [!INCLUDE[ndptecclick](../ide/includes/ndptecclick_md.md)] müssen Sie zunächst ein [ClickOnce Application Manifest](../Topic/ClickOnce%20Application%20Manifest.md) und ein [ClickOnce Deployment Manifest](../Topic/ClickOnce%20Deployment%20Manifest.md) mit dem [Mage.exe \(Tool zum Generieren und Bearbeiten von Manifesten\)](../Topic/Mage.exe%20\(Manifest%20Generation%20and%20Editing%20Tool\).md) oder seiner GUI \(Graphical User Interface\)\-Version erstellen \(Informationen hierzu finden Sie unter [MageUI.exe \(Manifest Generation and Editing Tool, Graphical Client\)](../Topic/MageUI.exe%20\(Manifest%20Generation%20and%20Editing%20Tool,%20Graphical%20Client\).md)\).  
+ Um ein Visual C++-Anwendung mithilfe von ClickOnce bereitstellen, müssen Sie zum Erstellen einer [ClickOnce-Anwendungsmanifest](/visualstudio/deployment/clickonce-application-manifest) und ein [ClickOnce-Bereitstellungsmanifest](/visualstudio/deployment/clickonce-deployment-manifest) mithilfe der [Mage.exe (Manifest Tool zum Generieren und bearbeiten)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool) oder Version der grafischen Benutzeroberfläche (Informationen finden Sie unter [MageUI.exe (Manifest generieren und Bearbeiten von Manifesten, Grafischer Client)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)).  
+
   
- Sie verwenden zunächst Mage.exe, um das Anwendungsmanifest zu erstellen; die so erstellte Datei hat die Erweiterung .manifest.  Anschließend verwenden Sie Mage.exe, um das Bereitstellungsmanifest zu erstellen; die erstellte Datei hat die Erweiterung .application.  Danach signieren Sie die Manifeste.  
+ Sie verwenden zunächst Mage.exe, um das Anwendungsmanifest zu erstellen; die so erstellte Datei hat die Erweiterung .manifest. Anschließend verwenden Sie Mage.exe, um das Bereitstellungsmanifest zu erstellen; die erstellte Datei hat die Erweiterung .application. Danach signieren Sie die Manifeste.  
   
- Im Anwendungsmanifest muss der Zielprozessor \(**x86**, **x64** oder **ARM**\) angegeben werden.  Informationen zu diesen Optionen finden Sie unter [Bereitstellen der erforderlichen Komponenten für 64\-Bit\-Anwendungen](../Topic/Deploying%20Prerequisites%20for%2064-bit%20Applications.md).  
+ Das Anwendungsmanifest muss der Zielprozessor angeben (**X86**, **X64**, oder **ARM**). Finden Sie unter [Bereitstellung erforderlichen Komponenten für 64-Bit-Anwendungen](/visualstudio/deployment/deploying-prerequisites-for-64-bit-applications) Informationen zu diesen Optionen.  
   
- Die Namen des Anwendungs\- und des Bereitstellungsmanifests müssen sich vom Namen der C\+\+\-Anwendung unterscheiden.  Dadurch wird ein Konflikt vermieden zwischen dem durch Mage.exe erstellten Anwendungsmanifest und dem externen Manifest, welches Teil der C\+\+\-Anwendung ist.  
+ Die Namen des Anwendungs- und des Bereitstellungsmanifests müssen sich vom Namen der C++-Anwendung unterscheiden. Dadurch wird ein Konflikt vermieden zwischen dem durch Mage.exe erstellten Anwendungsmanifest und dem externen Manifest, welches Teil der C++-Anwendung ist.  
   
- Im Rahmen der Bereitstellung müssen alle [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]\-Bibliotheken installiert werden, von denen die Anwendung abhängt.  Zum Bestimmen der Abhängigkeiten einer einzelnen Anwendung können Sie depends.exe oder das Dienstprogramm DUMPBIN mit der Option \/DEPENDENTS verwenden.  Weitere Informationen über Abhängigkeiten finden Sie unter [Grundlegendes zu den Abhängigkeiten einer Visual C\+\+\-Anwendung](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md).  Möglicherweise müssen Sie VCRedist.exe ausführen; dieses Dienstprogramm installiert [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]\-Bibliotheken auf dem Zielcomputer.  
+ Die Bereitstellung müssen alle Visual C++-Bibliotheken installieren, von denen die Anwendung abhängig ist. Zum Bestimmen der Abhängigkeiten einer einzelnen Anwendung können Sie depends.exe oder das Dienstprogramm DUMPBIN mit der Option /DEPENDENTS verwenden. Weitere Informationen zu Abhängigkeiten, finden Sie unter [Grundlegendes zu den Abhängigkeiten einer Visual C++-Anwendung](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md). Möglicherweise müssen Sie VCRedist.exe ausführen; Dieses Dienstprogramm installiert Visual C++-Bibliotheken auf dem Zielcomputer installiert.  
   
- Möglicherweise müssen Sie für die Anwendung einen Bootstrapper \(Programm zum Installieren erforderlicher Komponenten\) erstellen, um die erforderlichen Komponenten bereitzustellen; Informationen zum Bootstrapper finden Sie unter [Erstellen von Bootstrapperpaketen](../Topic/Creating%20Bootstrapper%20Packages.md).  
+ Möglicherweise müssen Sie auch einen Bootstrapper (Voraussetzungen Installer) für die Anwendung zum Bereitstellen der erforderlicher Komponenten zu erstellen; Informationen zum Bootstrapper finden Sie unter [Bootstrapperpakete erstellen](/visualstudio/deployment/creating-bootstrapper-packages).  
   
- Eine ausführlichere Beschreibung der Technologie finden Sie unter [ClickOnce Security and Deployment](../Topic/ClickOnce%20Security%20and%20Deployment.md).  Ein ausführliches Beispiel zur [!INCLUDE[ndptecclick](../ide/includes/ndptecclick_md.md)]\-Bereitstellung finden Sie unter [Walkthrough: Manually Deploying a ClickOnce Application](../Topic/Walkthrough:%20Manually%20Deploying%20a%20ClickOnce%20Application.md).  
+ Eine ausführlichere Beschreibung der Technologie finden Sie unter [ClickOnce-Sicherheit und Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment). Ein ausführliches Beispiel der ClickOnce-Bereitstellung finden Sie unter [Exemplarische Vorgehensweise: Manuelles Bereitstellen einer ClickOnce-Anwendung](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application).  
   
-## Siehe auch  
- [Mage.exe \(Tool zum Generieren und Bearbeiten von Manifesten\)](../Topic/Mage.exe%20\(Manifest%20Generation%20and%20Editing%20Tool\).md)   
- [MageUI.exe \(Manifest Generation and Editing Tool, Graphical Client\)](../Topic/MageUI.exe%20\(Manifest%20Generation%20and%20Editing%20Tool,%20Graphical%20Client\).md)   
- [Makecert.exe \(Certificate Creation Tool\)](../Topic/Makecert.exe%20\(Certificate%20Creation%20Tool\).md)   
+## <a name="see-also"></a>Siehe auch  
+ [„Mage.exe“ (Tool zum Generieren und Bearbeiten von Manifesten)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)   
+ [MageUI.exe (Tool zum Generieren und Bearbeiten von Manifesten, grafischer Client)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)   
+ [Makecert.exe (Certificate Creation-Tool)](https://msdn.microsoft.com/library/windows/desktop/aa386968)   
  [Bereitstellen von Desktopanwendungen](../ide/deploying-native-desktop-applications-visual-cpp.md)   
- [Bereitstellen von Anwendungen, Diensten und Komponenten](../Topic/Deploying%20Applications,%20Services,%20and%20Components.md)   
- [Windows Installer Deployment](assetId:///121be21b-b916-43e2-8f10-8b080516d2a0)   
- [ClickOnce Security and Deployment](../Topic/ClickOnce%20Security%20and%20Deployment.md)   
- [Erstellen von Bootstrapperpaketen](../Topic/Creating%20Bootstrapper%20Packages.md)   
- [.NET\-Programmierung mit C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   
- [Interoperabilität von systemeigenem Code und .NET](../dotnet/native-and-dotnet-interoperability.md)
+ [Bereitstellen von Anwendungen, Diensten und Komponenten](/visualstudio/deployment/deploying-applications-services-and-components)   
+ [Windows Installer-Bereitstellung](http://msdn.microsoft.com/en-us/121be21b-b916-43e2-8f10-8b080516d2a0)   
+ [ClickOnce-Sicherheit und -Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment)   
+ [Erstellen von Bootstrapperpaketen](/visualstudio/deployment/creating-bootstrapper-packages)   
+ [.NET Programmieren mit C + c++ / CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   
+ [Interoperabilität von nativem Code und .NET](../dotnet/native-and-dotnet-interoperability.md)

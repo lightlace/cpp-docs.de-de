@@ -24,11 +24,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f20054dac02857187ef4507b0b4ebfd6b7c6fe0e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f89c777a25da5288709683750c907114dac1e5c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="environ-wenviron"></a>_environ, _wenviron
 Die `_environ`-Variable ist ein Zeiger auf ein Array von Zeigern auf Multibyte-Zeichenfolgen, die die Prozessumgebung darstellen. Diese globale Variable ist für die sichereren funktionalen Versionen [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md) und [_putenv_s, _wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md) veraltet, die anstelle der globalen Variablen verwendet werden sollten. `_environ` wird in Stdlib.h deklariert.  
@@ -83,7 +84,7 @@ j = _wputenv( "env_var_y=string2" );  // also results in implicit call:
  In der Multibyte-Umgebung lautet der Wert von „`env_var_z`“ folglich nach dem ersten impliziten Aufruf von `putenv` „`string1`“. Beim zweiten impliziten Aufruf von `putenv` wird dieser Wert jedoch überschrieben, wenn der Wert von „`env_var_z`“ auf „`string2`“ festgelegt ist. Die Unicodeumgebung (in `_wenviron`) und die Multibyteumgebung (in `_environ`) weicht daher nach diesen Aufrufen ab.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Globale Variablen](../c-runtime-library/global-variables.md)   
+ [Global Variables (Globale Variablen)](../c-runtime-library/global-variables.md)   
  [getenv, _wgetenv](../c-runtime-library/reference/getenv-wgetenv.md)   
  [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md)   
  [_putenv, _wputenv](../c-runtime-library/reference/putenv-wputenv.md)   

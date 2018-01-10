@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f0de5f712d6b4413c4cfd21da1d22e0f1ff22dcd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a8b9d27154608a19da1e575a46ec424f11eec2e7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaorelationfieldinfo-structure"></a>CDaoRelationFieldInfo-Struktur
 Die `CDaoRelationFieldInfo` Struktur enthält Informationen über ein Feld in einer Beziehung für Datenzugriffsobjekte (DAO) definiert.  

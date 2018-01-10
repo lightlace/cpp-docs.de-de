@@ -1,103 +1,104 @@
 ---
-title: "Generic Functions (C++/CLI)"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "functions [C++], generic"
-  - "generic methods"
-  - "generics [C++], functions"
-  - "methods [C++], generic"
-  - "generic functions"
+title: Generische Funktionen (C + c++ / CLI) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- functions [C++], generic
+- generic methods
+- generics [C++], functions
+- methods [C++], generic
+- generic functions
 ms.assetid: 8e409364-58f9-4360-b486-e7d555e0c218
-caps.latest.revision: 21
-caps.handback.revision: "19"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9ebafa409680609d6e097b803be2b539ccdc7601
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Generic Functions (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Eine generische Funktion ist eine Funktion, die mit den beiden Typparametern deklariert wird.  Wenn sie aufgerufen werden, werden die tatsächlichen Typen anstelle der Typparameter verwendet.  
+# <a name="generic-functions-ccli"></a>Generische Funktionen (C++/CLI)
+Eine generische Funktion ist eine Funktion, die mit den beiden Typparametern deklariert wird. Beim Aufruf werden die tatsächliche Typen anstelle der Type-Parameter verwendet.  
   
-## Alle Plattformen  
+## <a name="all-platforms"></a>Alle Plattformen  
  **Hinweise**  
   
- Diese Funktion gilt nicht auf allen Plattformen zu.  
+ Diese Funktion gilt nicht für alle Plattformen.  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+## <a name="windows-runtime"></a>Windows-Runtime  
  **Hinweise**  
   
- Diese Funktion wird in [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] nicht unterstützt.  
+ Diese Funktion ist in Windows-Runtime nicht unterstützt.  
   
-### Voraussetzungen  
- Compileroption: **\/ZW**  
+### <a name="requirements"></a>Anforderungen  
+ Compileroption: **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- Eine generische Funktion ist eine Funktion, die mit den beiden Typparametern deklariert wird.  Wenn sie aufgerufen werden, werden die tatsächlichen Typen anstelle der Typparameter verwendet.  
+## <a name="common-language-runtime"></a>Common Language Runtime 
+ Eine generische Funktion ist eine Funktion, die mit den beiden Typparametern deklariert wird. Beim Aufruf werden die tatsächliche Typen anstelle der Type-Parameter verwendet.  
   
  **Syntax**  
   
 ```  
 [attributes] [modifiers]  
-return-type identifier <type-parameter identifier(s)>  
+return-type identifier<type-parameter identifier(s)>  
 [type-parameter-constraints clauses]  
   
 ([formal-parameters])  
-{  
-   function-body  
-}  
+{function-body}  
 ```  
   
  **Parameter**  
   
- *attributes* \(Optional\)  
- Zusätzliche deklarative Informationen.  Weitere Informationen zu Attributen und Attributklassen, finden Sie Attribute.  
+ *Attribute* (Optional)  
+ Zusätzliche deklarative Informationen. Weitere Informationen zu Attributen und Attributklassen finden Sie unter "Attribute".  
   
- *modifiers* \(optional\)  
- Ein Modifizierer für die Funktion, z St. atic. `virtual` ist nicht zulässig, da virtuelle Methoden können nicht generisch sind.  
+ *Modifizierer* (Optional)  
+ Ein Modifizierer für die Funktion, z. B. statische.  `virtual`ist nicht zulässig, da virtuelle Methoden können nicht generisch sein.  
   
- *return\-type*  
- Der von der Methode zurückgegebene Typ.  Wenn der Rückgabetyp ungültig ist, ist kein Rückgabewert erforderlich.  
+ *Rückgabetyp*  
+ Der Typ, der von der Methode zurückgegeben wird. Wenn der Rückgabetyp "void" ist, muss keinen Wert zurückgibt.  
   
  *identifier*  
- Den Funktionsnamen.  
+ Der Funktionsname.  
   
- *type\-parameter identifier\(s\)*  
- Durch Trennzeichen getrennte Bezeichnerliste.  
+ *Typparameter Bezeichner*  
+ IDs durch Kommas getrennte Liste.  
   
- *formal\-parameters* \(Optional\)  
+ *formaler Parameter* (Optional)  
  Parameterliste.  
   
- *type\-parameter\-constraints\-clauses*  
- Dies gibt Einschränkungen auf Typen, die als Typargumente verwendet werden, und hat die Form angezeigt, die in [Constraints on Generic Type Parameters \(C\+\+\/CLI\)](../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
+ *Type-Parameter-Einschränkungen-Klauseln*  
+ Dies gibt die Einschränkungen für die Typen, die als Typargumente verwendet werden können, und nimmt die Form, die im angegebenen [Einschränkungen für generische Typparameter (C + c++ / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
   
- *function\-body*  
- Der Methodentext, die die Typparameterbezeichner verweist.  
+ *Hauptteil der Funktion*  
+ Der Text der Methode, die auf den Parameter-Typenbezeichnern verweisen kann.  
   
  **Hinweise**  
   
- Generische Funktionen sind die Funktionen, die mit einem generischen Typparameter deklariert werden.  Sie können Methoden in einer Klasse oder Struktur oder eigenständige Funktionen.  Eine einzelne generische Deklaration deklariert implizit eine Familie von Funktionen, die nur im Ersetzung eines anderen tatsächlichen Typs für den generischen Typparameter unterscheiden.  
+ Generische Funktionen sind Funktionen, die mit einem generischen Typparameter deklariert. Sie können Methoden in einer Klasse oder Struktur oder eigenständige Funktionen sein. Eine einzelne generische Deklaration deklariert implizit eine Familie von Funktionen, die nur in der Ersetzung von einer anderen tatsächlichen Typ für den generischen Typparameter zu unterscheiden.  
   
- In [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] werden Klasse oder Strukturkonstruktoren nicht mit generischen Typparameter deklariert.  
+ In Visual C++ können die Klasse oder Struktur Konstruktoren nicht mit generischen Typparameter deklariert werden.  
   
- Wenn sie aufgerufen wird, wird der generische Typparameter durch einen tatsächlichen Typ ersetzt.  Der tatsächliche Typ wird explizit in Winkelstützen mit der Syntax angegeben werden, die einem Vorlagenfunktionsaufruf ähnelt.  Wenn er ohne Typparameter aufgerufen wird, versucht der Compiler, den tatsächlichen Typ aus den Parametern abzuleiten, der im Funktionsaufruf angegeben werden.  Wenn das geplante Typargument nicht von den verwendeten Parametern abgeleitet wurde werden kann, gibt der Compiler einen Fehler.  
+ Wenn aufgerufen wird, wird der generische Typparameter durch einen tatsächlichen Typ ersetzt. Der tatsächliche Typ kann explizit in spitzen Klammern Syntax ähnelt einem Funktionsaufruf Vorlage angegeben werden. Ohne die Type-Parameter aufgerufen wird, versucht der Compiler wird den tatsächlichen Typ der Parameter im Funktionsaufruf angegeben hergeleitet werden. Das geplante Typargument nicht von den verwendeten Parametern abgeleitet werden kann, meldet der Compiler einen Fehler.  
   
-### Voraussetzungen  
- Compileroption: **\/clr**  
+### <a name="requirements"></a>Anforderungen  
+ Compileroption: **/clr**  
   
-### Beispiele  
+### <a name="examples"></a>Beispiele  
  **Beispiel**  
   
- Im folgenden Codebeispiel wird eine generische Funktion.  
+ Im folgenden Codebeispiel wird eine generische Funktion veranschaulicht.  
   
 ```  
 // generics_generic_function_1.cpp  
@@ -132,7 +133,7 @@ int main() {
   
  **Beispiel**  
   
- Generische Funktionen können auf Grundlage Signatur oder Stelligkeit überladen werden, die Anzahl der Typparameter auf eine Funktion.  Generische Funktionen können mit nicht generischen Funktionen des gleichen Namens überladen werden, solange die Funktionen in einigen Typparametern unterscheiden.  Beispielsweise können die folgenden Funktionen überladen werden:  
+ Generische Funktionen können auf der Grundlage Signatur oder Stelligkeit und die Anzahl der Typparameter in einer Funktion überladen werden. Darüber hinaus können generische Funktionen mit nicht-generische Funktionen mit dem gleichen Namen überladen werden, solange die Funktionen in einige Parameter unterscheiden. Beispielsweise können die folgenden Funktionen überladen werden:  
   
 ```  
 // generics_generic_function_2.cpp  
@@ -150,7 +151,7 @@ ref struct MyClass {
   
  **Beispiel**  
   
- Im folgenden Beispiel wird eine generische Funktion, um das erste Element in einem Array zu suchen.  Es wird ein `MyClass` deklariert, das von der `MyBaseClass`\- Basisklasse erbt.  `MyClass` enthält eine generische Funktion, `MyFunction`, die eine andere generische Funktion aufruft, `MyBaseClassFunction`, in der Basisklasse.  In **main** wird die generische Funktion, `MyFunction`, mit verschiedenen Typargumente aufgerufen.  
+ Im folgenden Beispiel wird eine generische Funktion Suche nach dem ersten Element in einem Array. Mit ihr wird deklariert `MyClass`, die von der Basisklasse erbt `MyBaseClass`. `MyClass`enthält eine generische Funktion `MyFunction`, die einer anderen generischen Funktion aufruft, `MyBaseClassFunction`, in der Basisklasse. In **main**, die generische Funktion `MyFunction`, wird mit unterschiedlichen Typargumenten aufgerufen.  
   
 ```  
 // generics_generic_function_3.cpp  
@@ -188,8 +189,11 @@ int main() {
   
  **Ausgabe**  
   
-  **Meine Funktion hat int zurück: 2003**  
- **Meine Funktion hat eine Zeichenfolge zurück: Hello generische Funktionen\!**   
-## Siehe auch  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)   
- [Generics](../windows/generics-cpp-component-extensions.md)
+```Output  
+My function returned an int: 2003  
+My function returned a string: Hello generic functions!  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)   
+ [Generika](../windows/generics-cpp-component-extensions.md)

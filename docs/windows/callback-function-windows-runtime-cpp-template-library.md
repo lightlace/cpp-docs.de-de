@@ -1,30 +1,32 @@
 ---
-title: "R&#252;ckruffunktion (C++-Vorlagenbibliothek der Windows-Runtime)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::Callback"
-dev_langs: 
-  - "C++"
+title: "Rückruffunktion (Windows Runtime C++-Vorlagenbibliothek) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::Callback
+dev_langs: C++
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
-caps.latest.revision: 4
-caps.handback.revision: "4"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2b2d83096ce4e6ff9245a9e26516d6a487155695
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# R&#252;ckruffunktion (C++-Vorlagenbibliothek der Windows-Runtime)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="callback-function-windows-runtime-c-template-library"></a>Rückruffunktion (C++-Vorlagenbibliothek der Windows-Runtime)
 Erstellt ein Objekt, dessen Memberfunktion eine Rückrufmethode ist.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<  
@@ -197,7 +199,7 @@ ComPtr<TDelegateInterface> Callback(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `TDelegateInterface`  
  Ein Vorlagenparameter, der die Schnittstelle des Delegaten angibt, der beim Eintreten eines Ereignisses aufgerufen wird.  
   
@@ -243,16 +245,16 @@ ComPtr<TDelegateInterface> Callback(
  `method`  
  Die Memberfunktion, die beim Eintreten eines Ereignisses aufgerufen wird.  
   
-## Rückgabewert  
+## <a name="return-value"></a>Rückgabewert  
  Ein Objekt, dessen Memberfunktion die angegebene Rückrufmethode ist.  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Die Basis eines Delegatobjekts muss "IUnknown" und nicht "IInspectable" lauten.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** event.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [Microsoft::WRL\-Namespace](../windows/microsoft-wrl-namespace.md)
+## <a name="see-also"></a>Siehe auch  
+ [Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)

@@ -1,54 +1,58 @@
 ---
-title: "Schriftart f&#252;r Texttool (Dialogfeld) (Bildbearbeitung f&#252;r Symbole) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Schriftart für Texttool (Dialogfeld)"
-  - "Schriftarten, Ändern auf einem Bild"
-  - "Text, auf Bildern"
+title: "Text-Tool Schriftart (Dialogfeld) (Bildbearbeitung für Symbole) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Text Tool Font dialog box
+- fonts, changing on an image
+- text, on images
 ms.assetid: c398e2e7-0263-43c1-9ab4-768a280c2407
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2f5df3215f2d3487b919c2c89215dab17d288d4a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Schriftart f&#252;r Texttool (Dialogfeld) (Bildbearbeitung f&#252;r Symbole)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gibt Schriftarteinstellungen an, wenn Sie das [Dialogfeld "Text\-Tool"](../mfc/text-tool-dialog-box-image-editor-for-icons.md) im [Grafik\-Editor](../mfc/image-editor-for-icons.md) verwenden.  
+# <a name="text-tool-font-dialog-box-image-editor-for-icons"></a>Schriftart für Texttool (Dialogfeld) (Bildbearbeitung für Symbole)
+Gibt die schriftarteinstellungen bei Verwendung der [Text-Dialogfeld "Texttool"](../windows/text-tool-dialog-box-image-editor-for-icons.md) von der [Grafik-Editor](../windows/image-editor-for-icons.md).  
   
- Verwenden Sie dieses Dialogfeld zu folgenden Zwecken:  
+ Verwenden Sie dieses Dialogfeld für:  
   
--   [Ändern der Schriftart von Text in einem Bild](../mfc/changing-the-font-of-text-on-an-image-image-editor-for-icons.md)  
+-   [Ändern der Schriftart von Text in einem Bild](../windows/changing-the-font-of-text-on-an-image-image-editor-for-icons.md)  
   
- Um auf dieses Dialogfeld zuzugreifen, klicken Sie im Dialogfeld Text\-Tool auf die Schaltfläche **Schriftart**.  
+ Um auf dieses Dialogfeld zuzugreifen, klicken Sie auf die **Schriftart** Schaltfläche im Dialogfeld Text-Tool.  
   
  **Schriftart**  
- Zeigt die verfügbaren Schriftarten an.  
+ Listet die verfügbaren Schriftarten an.  
   
  **Schriftschnitt**  
- Listet alle für die angegebene Schriftart verfügbaren Schriftschnitte auf.  
+ Listet die verfügbaren Formate für die angegebene Schriftart an.  
   
- **Größe**  
- Listet die für die angegebene Schriftart verfügbaren Punktgrößen auf.  
+ **Size**  
+ Listet die verfügbaren Schriftgrade für die angegebene Schriftart an.  
   
  **Beispiel**  
- Zeigt anhand eines Beispiels, wie Text mit den festgelegten Schriftarteinstellungen aussehen wird.  
+ Zeigt ein Beispiel über die Anzeige von Text mit den Einstellungen für die angegebene Schriftart wird.  
   
  **Skript**  
- Listet alle für die angegebene Schriftart verfügbaren Sprachskripts auf.  Wenn Sie ein anderes Sprachskript auswählen, steht der Zeichensatz dieser Sprache für die Erstellung mehrsprachiger Dokumente zur Verfügung.  
+ Listet die verfügbaren Sprachskripts für die angegebene Schriftart an. Wenn Sie ein Skript für unterschiedliche Sprachen auswählen, wird der Zeichensatz für die Sprache für das Erstellen mehrsprachiger Dokumente verfügbar wie folgt aussieht.  
   
-## Anforderungen  
- None  
+## <a name="requirements"></a>Anforderungen  
+ Keiner  
   
-## Siehe auch  
- [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)
+## <a name="see-also"></a>Siehe auch  
+ [Bearbeiten von Grafischen Ressourcen](../windows/editing-graphical-resources-image-editor-for-icons.md)
+

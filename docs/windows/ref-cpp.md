@@ -1,32 +1,33 @@
 ---
-title: "ref (C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.ref"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ref attribute"
+title: Ref (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.ref
+dev_langs: C++
+helpviewer_keywords: ref attribute
 ms.assetid: 67e82d3e-07d9-4ef8-bf2b-0a4491d12557
-caps.latest.revision: 9
-caps.handback.revision: "9"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: fc63f89b8b8ff40198efbff69c64c3553dafd12f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# ref (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Identifiziert einen Verweiszeiger.  
+# <a name="ref-c"></a>ref (C++)
+Identifiziert einen Verweiszeiger an.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -34,11 +35,11 @@ Identifiziert einen Verweiszeiger.
   
 ```  
   
-## Hinweise  
- Das Attribut `ref` C\+\+ verfügt über die gleichen Funktionen wie das [ref](http://msdn.microsoft.com/library/windows/desktop/aa367153) MIDL\-Attribut.  
+## <a name="remarks"></a>Hinweise  
+ Die `ref` C++-Attribut hat die gleiche Funktionalität wie die [Ref](http://msdn.microsoft.com/library/windows/desktop/aa367153) MIDL-Attribut.  
   
-## Beispiel  
- Im folgenden Code wird gezeigt, wie das `ref`\-Attribut verwendet:  
+## <a name="example"></a>Beispiel  
+ Der folgende Code zeigt, wie Sie die `ref` Attribut:  
   
 ```  
 // cpp_attr_ref_ref.cpp  
@@ -52,21 +53,20 @@ __interface IFireTabCtrl
 };  
 ```  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
-|**Betrifft**|Schnittstellen,`typedef`Parameter, Schnittstellenmethode|  
+|**Betrifft**|`typedef`, Schnittstellenparameter, Schnittstellen-Methode|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Keiner|  
+|**Ungültige Attribute**|Keiner|  
   
- Weitere Informationen über das kontexte finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [IDL-Attribute](../windows/idl-attributes.md)   
+ [TypeDef, Enum, Union- und Struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Parameterattribute](../windows/parameter-attributes.md)   

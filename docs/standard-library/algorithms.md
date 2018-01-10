@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - libraries [C++], C++ algorithm conventions
 - algorithms [C++], C++
@@ -17,30 +15,16 @@ helpviewer_keywords:
 - algorithm template function C++ library conventions
 - conventions [C++], C++ algorithm
 ms.assetid: dec9b373-7d5c-46cc-b7d2-21a938ecd0a6
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 5b5ffafb841fcb883dc66880933e8d123256e575
-ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6608b7499c18f1b740875c403e9cb8d55736c30d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="algorithms"></a>Algorithmen
 Algorithmen sind grundlegender Bestandteil der C++-Standardbibliothek. Algorithmen arbeiten nicht mit Containern selbst, sondern mit Iteratoren. Daher kann der gleiche Algorithmus von den meisten, wenn nicht gar allen, C++-Standardbibliothekcontainern verwendet werden. Dieser Abschnitt beschreibt die Konventionen und die Terminologie von C++-Standardbibliothekalgorithmen.  
@@ -48,13 +32,13 @@ Algorithmen sind grundlegender Bestandteil der C++-Standardbibliothek. Algorithm
 ## <a name="remarks"></a>Hinweise  
  Die Beschreibungen der Algorithmusvorlagenfunktionen verwenden einige Kurznotationsausdrücke:  
   
--   Der Ausdruck „im Bereich (*A*, *B*)“ bezeichnet eine Sequenz von&0; oder mehreren diskreten Werten beginnend mit *A* bis, jedoch nicht einschließlich, *B*. Ein Bereich ist nur gültig, wenn *B* von *A* aus erreichbar ist. Sie können *A* in einem Objekt *N* (*N* = *A*) speichern, das Objekt null oder mehrmals erhöhen (++*N*) und das Objekt nach einer endlichen Anzahl von Erhöhungsschritten (N == B*) gleich *B* entsprechen lassen.*  
+-   Der Ausdruck „im Bereich (*A*, *B*)“ bezeichnet eine Sequenz von 0 oder mehreren diskreten Werten beginnend mit *A* bis, jedoch nicht einschließlich, *B*. Ein Bereich ist nur gültig, wenn *B* von *A* aus erreichbar ist. Sie können *A* in einem Objekt *N* (*N* = *A*) speichern, das Objekt null oder mehrmals erhöhen (++*N*) und das Objekt nach einer endlichen Anzahl von Erhöhungsschritten (N == B*) gleich *B* entsprechen lassen.*  
   
 -   Der Ausdruck „jedes *N* im Bereich (*A*, *B*)“ bedeutet, dass *N* mit dem Wert *A* beginnt und null oder mehrmals erhöht wird, bis es gleich dem Wert *B* ist. Der Fall *N* == *B* ist nicht im Bereich.  
   
 -   Der Ausdruck „der niedrigste Wert von *N* im Bereich (*A*, *B*), sodass *X*“ bedeutet, dass die Bedingung *X* für jedes *N* im Bereich (*A*, *B*) bestimmt wird, bis die Bedingung *X* erfüllt ist.  
   
--   Der Ausdruck „der höchste Wert von *N* im Bereich (*A*, *B*), sodass* X*“ bedeutet, dass *X* für jedes *N* im Bereich (*A*, *B*) bestimmt wird. Die Funktion speichert in `K` eine Kopie von *N*, jedes Mal, wenn die Bedingung *X* erfüllt wird. Wenn eine solche Speicherung auftritt, ersetzt die Funktion den endgültigen Wert von *N*, der gleich *B* ist, mit dem Wert von `K`. Bei einem bidirektionalen Iterator oder einem Iterator mit wahlfreiem Zugriff kann dies jedoch auch bedeuten, dass *N* mit dem höchsten Wert des Bereichs beginnt und so lange über den Bereich erniedrigt wird, bis die Bedingung *X* erfüllt ist.  
+-   Der Ausdruck „der höchste Wert von *N* im Bereich (*A*, *B*), sodass *X*“ bedeutet, dass *X* für jedes *N* im Bereich (*A*, *B*) bestimmt wird. Die Funktion speichert in `K` eine Kopie von *N*, jedes Mal, wenn die Bedingung *X* erfüllt wird. Wenn eine solche Speicherung auftritt, ersetzt die Funktion den endgültigen Wert von *N*, der gleich *B* ist, mit dem Wert von `K`. Bei einem bidirektionalen Iterator oder einem Iterator mit wahlfreiem Zugriff kann dies jedoch auch bedeuten, dass *N* mit dem höchsten Wert des Bereichs beginnt und so lange über den Bereich erniedrigt wird, bis die Bedingung *X* erfüllt ist.  
   
 -   Ausdrücke wie *Y* - *Y*, wobei *X* und *Y* andere Iteratoren als solche mit wahlfreiem Zugriff sein können, sind im mathematischen Sinn vorgesehen. Die Funktion wertet den Operator **-** nicht notwendigerweise aus, wenn sie einen solchen Wert bestimmen muss. Gleiches gilt für Ausdrücke wie *X* + *N* und *X* - *N*, wobei *N* ein Ganzzahltyp ist.  
   
@@ -79,5 +63,4 @@ Algorithmen sind grundlegender Bestandteil der C++-Standardbibliothek. Algorithm
 ## <a name="see-also"></a>Siehe auch  
  [C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)   
  [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

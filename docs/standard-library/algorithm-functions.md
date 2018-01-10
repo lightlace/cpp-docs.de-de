@@ -210,11 +210,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: 2b70ab848071bb1196ceb57f986a6e74fe43d2de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4f19fcbd350ea13004df5298beb95f10661e1f61
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;Algorithmusfunktionen&gt;
 ||||  
@@ -231,7 +232,7 @@ ms.lasthandoff: 10/24/2017
 |[is_partitioned](#is_partitioned)|[is_permutation](#is_permutation)|[is_sorted](#is_sorted)|  
 |[is_sorted_until](#is_sorted_until)|[iter_swap](#iter_swap)|[lexicographical_compare](#lexicographical_compare)|  
 |[lower_bound](#lower_bound)|[make_heap](#make_heap)|[max](#max)|  
-|[max_element](#max_element)|[merge](#merge)|[min](#min)|  
+|[max_element](#max_element)|[merge](#merge)|[Min.](#min)|  
 |[min_element](#min_element)|[minmax](#minmax)|[minmax_element](#minmax_element)|  
 |[mismatch](#mismatch)|[move_backward](#move_backward)|[next_permutation](#next_permutation)|  
 |[none_of](#none_of)|[nth_element](#nth_element)|[partial_sort](#partial_sort)|  
@@ -529,7 +530,7 @@ int main( )
 }   
 ```  
   
-##  <a name="copy"></a> copy  
+##  <a name="copy"></a>  copy  
  Weist die Werte von Elementen aus einem Quellbereich einem Zielbereich zu, durchläuft die Quellelementsequenz und weist ihnen vorwärts neue Positionen zu.  
   
 ```  
@@ -4095,7 +4096,7 @@ template<class ForwardIterator, class BinaryPredicate>
   
  `pair<ForwardIterator,ForwardIterator>`  
   
- `(min_element(_First,Last), max_element(_First,Last))`.  
+ `(min_element(_First,Last), max_element(_First,Last))`  
   
  Die zweite Vorlagenfunktion verhält sich genauso; der einzige Unterschied ist, dass sie `operator<(X, Y)` durch `comp (X, Y)` ersetzt.  
   
@@ -5403,7 +5404,7 @@ int main( ) {
 ```  
   
 ##  <a name="random_shuffle"></a> random_shuffle  
- Die Funktion Std::random_shuffle() ist veraltet, ersetzt durch [Std:: Shuffle](../standard-library/algorithm-functions.md#shuffle). Ein Codebeispiel und Weitere Informationen finden Sie unter [ \<random >](../standard-library/random.md) und im Stackoverflow-Posting [Warum sind Std:: random_shuffle Methods veraltet in C ++ 14?](http://go.microsoft.com/fwlink/?LinkId=397954).  
+ Die Funktion Std::random_shuffle() ist veraltet, ersetzt durch [Std:: Shuffle](../standard-library/algorithm-functions.md#shuffle). Ein Codebeispiel und Weitere Informationen finden Sie unter [ \<random >](../standard-library/random.md) und im Stackoverflow-Posting [Warum sind Std:: random_shuffle Methods veraltet in C ++ 14?](http://go.microsoft.com/fwlink/p/?linkid=397954).  
   
 ##  <a name="remove"></a>  remove  
  Eliminiert einen angegebenen Wert von einem angegebenen Bereich, ohne die Reihenfolge der restlichen Elemente zu beeinträchtigen und das Ende eines neuen Bereichs zurückzugeben, der den angegebenen Wert nicht enthält.  
@@ -7773,7 +7774,7 @@ Resorted (greater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )
 Resorted (UDgreater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )  
 ```  
   
-##  <a name="swap"></a> swap  
+##  <a name="swap"></a>  swap  
  Das erste Überschreiben tauscht die Werte zweier Objekte aus. Das zweite Überschreiben tauscht die Werte zwischen zwei Arrays von Objekten aus.  
   
 ```  

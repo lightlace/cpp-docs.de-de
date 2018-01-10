@@ -1,11 +1,10 @@
 ---
-title: int_3-Klasse | Microsoft-Dokumentation
+title: int_3-Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -78,33 +77,18 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_3::get_zyx
 - amp_short_vectors/Concurrency::graphics::int_3::xz
 - amp_short_vectors/Concurrency::graphics::int_3::set_yz
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: d4af182f-30f1-455c-b16d-aa99cd314038
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: d9a9b8eed7fcf46dee258c55471e79420666e043
-ms.contentlocale: de-de
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 395d548e322ffcaed91536a781c7d5d821b6a446
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="int3-class"></a>int_3-Klasse
 Stellt einen kurzen Vektor aus drei ganzen Zahlen dar.  
@@ -115,7 +99,7 @@ Stellt einen kurzen Vektor aus drei ganzen Zahlen dar.
 class int_3;  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-typedefs"></a>Öffentliche Typedefs  
   
@@ -174,25 +158,25 @@ class int_3;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|int_3-||  
+|int_3::-||  
 |int_3::--||  
-|int_3:: % =||  
+|int_3:: Operator% =||  
 |int_3:: & =||  
 |int_3:: * =||  
 |int_3:: Operator / =||  
 |int_3:: ^ =||  
-|int_3:: | =||  
+|int_3:: &#124; =||  
 |int_3:: ~||  
-|int_3:: Operator++||  
+|int_3:: Operator++-||  
 |int_3:: Operator +=||  
-|int_3::\<=||  
+|int_3:: <\<=||  
 |int_3:: =||  
 |int_3:: Operator-=||  
 |int_3:: >> =||  
   
 ### <a name="public-constants"></a>Öffentliche Konstanten  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |[Size-Konstante](#size)||  
   
@@ -277,13 +261,13 @@ explicit inline int_3(
   
 ### <a name="parameters"></a>Parameter  
  `_V0`  
- Der Wert 0-Element zu initialisieren.  
+ Der Wert 0-Element initialisiert werden.  
   
  `_V1`  
  Der Wert 1 Element initialisiert werden.  
   
  `_V2`  
- Der Wert 2-Element zu initialisieren.  
+ Der Wert 2-Element initialisiert werden.  
   
  `_V`  
  Der Wert für die Initialisierung.  
@@ -301,4 +285,3 @@ static const int size = 3;
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)
-

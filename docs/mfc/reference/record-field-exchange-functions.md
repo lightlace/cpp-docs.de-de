@@ -56,11 +56,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a16876148aa73fada420a58aa4ba38b8a557ab93
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 94491a2df64017ea381377af8518414e80130d6a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="record-field-exchange-functions"></a>Funktionen für den Datensatzfeldaustausch
 Dieses Thema enthält die Datensatzfeldaustausch (RFX, Bulk-RFX und DFX) Funktionen verwendet, um die Übertragung von Daten zwischen einem Recordset-Objekt und dessen Datenquelle automatisiert und andere Vorgänge auf die Daten ausführen.  
@@ -144,7 +145,7 @@ void RFX_Binary(
  `szName`  
  Der Name einer Datenspalte.  
   
- *value*  
+ *Wert*  
  Der Wert in den angegebenen Datenmember gespeichert – der Wert, der übertragen werden. Für eine Übertragung von Recordset zur Datenquelle, den Wert des Typs [CByteArray](cbytearray-class.md), stammt aus den angegebenen Datenmember. Für die Übertragung von der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.  
   
  `nMaxLength`  
@@ -178,7 +179,7 @@ void RFX_Bool(
  `szName`  
  Der Name einer Datenspalte.  
   
- *value*  
+ *Wert*  
  Der Wert in den angegebenen Datenmember gespeichert – der Wert, der übertragen werden. Für eine Übertragung von Recordset zur Datenquelle, den Wert des Typs **BOOL**, stammt aus den angegebenen Datenmember. Für die Übertragung von der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.  
   
 ### <a name="example"></a>Beispiel  
@@ -206,7 +207,7 @@ void RFX_Byte(
  `szName`  
  Der Name einer Datenspalte.  
   
- *value*  
+ *Wert*  
  Der Wert in den angegebenen Datenmember gespeichert – der Wert, der übertragen werden. Für eine Übertragung von Recordset zur Datenquelle, den Wert des Typs **BYTE**, stammt aus den angegebenen Datenmember. Für die Übertragung von der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.  
   
 ### <a name="example"></a>Beispiel  
@@ -244,7 +245,7 @@ void RFX_Date(
  `szName`  
  Der Name einer Datenspalte.  
   
- *value*  
+ *Wert*  
  Der Wert in den angegebenen Datenmember gespeichert; der Wert, der übertragen werden. Die verschiedenen Versionen der Funktion führen Sie für den Wert unterschiedliche Datentypen:  
   
  Die erste Version der Funktion akzeptiert einen Verweis auf eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) Objekt. Für eine Übertragung vom Recordset-Datenquelle ist dieser Wert aus den angegebenen Datenmember verwendet. Für die Übertragung von der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.  
@@ -279,7 +280,7 @@ void RFX_Double(
  `szName`  
  Der Name einer Datenspalte.  
   
- *value*  
+ *Wert*  
  Der Wert in den angegebenen Datenmember gespeichert – der Wert, der übertragen werden. Für eine Übertragung von Recordset zur Datenquelle, den Wert des Typs **doppelte**, stammt aus den angegebenen Datenmember. Für die Übertragung von der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.  
   
 ### <a name="example"></a>Beispiel  
@@ -307,7 +308,7 @@ void RFX_Int(
  `szName`  
  Der Name einer Datenspalte.  
   
- *value*  
+ *Wert*  
  Der Wert in den angegebenen Datenmember gespeichert – der Wert, der übertragen werden. Für eine Übertragung von Recordset zur Datenquelle, den Wert des Typs `int`, stammt aus den angegebenen Datenmember. Für die Übertragung von der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.  
   
 ### <a name="example"></a>Beispiel  
@@ -336,7 +337,7 @@ value );
  `szName`  
  Der Name einer Datenspalte.  
   
- *value*  
+ *Wert*  
  Der Wert in den angegebenen Datenmember gespeichert – der Wert, der übertragen werden. Für eine Übertragung von Recordset zur Datenquelle, den Wert des Typs **lang**, stammt aus den angegebenen Datenmember. Für die Übertragung von der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.  
   
 ### <a name="example"></a>Beispiel  
@@ -364,7 +365,7 @@ void RFX_LongBinary(
  `szName`  
  Der Name einer Datenspalte.  
   
- *value*  
+ *Wert*  
  Der Wert in den angegebenen Datenmember gespeichert – der Wert, der übertragen werden. Für eine Übertragung von Recordset zur Datenquelle, den Wert des Typs `CLongBinary`, stammt aus den angegebenen Datenmember. Für die Übertragung von der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.  
   
 ### <a name="example"></a>Beispiel  
@@ -392,7 +393,7 @@ void RFX_Single(
  `szName`  
  Der Name einer Datenspalte.  
   
- *value*  
+ *Wert*  
  Der Wert in den angegebenen Datenmember gespeichert – der Wert, der übertragen werden. Für eine Übertragung von Recordset zur Datenquelle, den Wert des Typs **"float"**, stammt aus den angegebenen Datenmember. Für die Übertragung von der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.  
   
 ### <a name="example"></a>Beispiel  
@@ -424,7 +425,7 @@ void RFX_Text(
  `szName`  
  Der Name einer Datenspalte.  
   
- *value*  
+ *Wert*  
  Der Wert in den angegebenen Datenmember gespeichert – der Wert, der übertragen werden. Für eine Übertragung von Recordset zur Datenquelle, den Wert des Typs `CString`, stammt aus den angegebenen Datenmember. Für die Übertragung von der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.  
   
  `nMaxLength`  
@@ -697,7 +698,7 @@ void RFX_Int(
  `szName`  
  Der Name einer Datenspalte.  
   
- *value*  
+ *Wert*  
  Der Wert in den angegebenen Datenmember gespeichert – der Wert, der übertragen werden. Für eine Übertragung von Recordset zur Datenquelle, den Wert des Typs `int`, stammt aus den angegebenen Datenmember. Für die Übertragung von der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.  
   
 ### <a name="example"></a>Beispiel  
@@ -873,7 +874,7 @@ void AFXAPI DFX_Binary(
  `szName`  
  Der Name einer Datenspalte.  
   
- *value*  
+ *Wert*  
  Der Wert in den angegebenen Datenmember gespeichert – der Wert, der übertragen werden. Für eine Übertragung von Recordset zur Datenquelle, den Wert des Typs [CByteArray](cbytearray-class.md), stammt aus den angegebenen Datenmember. Für die Übertragung von der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.  
   
  `nPreAllocSize`  
@@ -915,7 +916,7 @@ void AFXAPI DFX_Bool(
  `szName`  
  Der Name einer Datenspalte.  
   
- *value*  
+ *Wert*  
  Der Wert in den angegebenen Datenmember gespeichert – der Wert, der übertragen werden. Für eine Übertragung von Recordset zur Datenquelle, den Wert des Typs **BOOL**, stammt aus den angegebenen Datenmember. Für die Übertragung von der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.  
   
  `dwBindOptions`  
@@ -953,7 +954,7 @@ void AFXAPI DFX_Byte(
  `szName`  
  Der Name einer Datenspalte.  
   
- *value*  
+ *Wert*  
  Der Wert in den angegebenen Datenmember gespeichert – der Wert, der übertragen werden. Für eine Übertragung von Recordset zur Datenquelle, den Wert des Typs **BYTE**, stammt aus den angegebenen Datenmember. Für die Übertragung von der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.  
   
  `dwBindOptions`  
@@ -991,7 +992,7 @@ void AFXAPI DFX_Currency(
  `szName`  
  Der Name einer Datenspalte.  
   
- *value*  
+ *Wert*  
  Der Wert in den angegebenen Datenmember gespeichert – der Wert, der übertragen werden. Dieser Wert stammt für eine Übertragung vom Recordset-Datenquelle, aus den angegebenen Datenmember des Typs [COleCurrency](colecurrency-class.md). Für die Übertragung von der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.  
   
  `dwBindOptions`  
@@ -1029,7 +1030,7 @@ void AFXAPI DFX_DateTime(
  `szName`  
  Der Name einer Datenspalte.  
   
- *value*  
+ *Wert*  
  Der Wert in den angegebenen Datenmember gespeichert – der Wert, der übertragen werden. Die Funktion akzeptiert einen Verweis auf eine [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) Objekt. Für eine Übertragung vom Recordset-Datenquelle ist dieser Wert aus den angegebenen Datenmember verwendet. Für die Übertragung von der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.  
   
  `dwBindOptions`  
@@ -1070,7 +1071,7 @@ void AFXAPI DFX_Double(
  `szName`  
  Der Name einer Datenspalte.  
   
- *value*  
+ *Wert*  
  Der Wert in den angegebenen Datenmember gespeichert – der Wert, der übertragen werden. Für eine Übertragung von Recordset zur Datenquelle, den Wert des Typs **doppelte**, stammt aus den angegebenen Datenmember. Für die Übertragung von der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.  
   
  `dwBindOptions`  
@@ -1108,7 +1109,7 @@ void AFXAPI DFX_Long(
  `szName`  
  Der Name einer Datenspalte.  
   
- *value*  
+ *Wert*  
  Der Wert in den angegebenen Datenmember gespeichert – der Wert, der übertragen werden. Für eine Übertragung von Recordset zur Datenquelle, den Wert des Typs **lang**, stammt aus den angegebenen Datenmember. Für die Übertragung von der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.  
   
  `dwBindOptions`  
@@ -1148,7 +1149,7 @@ void AFXAPI DFX_LongBinary(
  `szName`  
  Der Name einer Datenspalte.  
   
- *value*  
+ *Wert*  
  Der Wert in den angegebenen Datenmember gespeichert – der Wert, der übertragen werden. Für eine Übertragung von Recordset zur Datenquelle, den Wert des Typs [CLongBinary](clongbinary-class.md), stammt aus den angegebenen Datenmember. Für die Übertragung von der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.  
   
  *dwPreAllocSize*  
@@ -1189,7 +1190,7 @@ void AFXAPI DFX_Short(
  `szName`  
  Der Name einer Datenspalte.  
   
- *value*  
+ *Wert*  
  Der Wert in den angegebenen Datenmember gespeichert – der Wert, der übertragen werden. Für eine Übertragung von Recordset zur Datenquelle, den Wert des Typs **kurze**, stammt aus den angegebenen Datenmember. Für die Übertragung von der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.  
   
  `dwBindOptions`  
@@ -1231,7 +1232,7 @@ void AFXAPI DFX_Single(
  `szName`  
  Der Name einer Datenspalte.  
   
- *value*  
+ *Wert*  
  Der Wert in den angegebenen Datenmember gespeichert – der Wert, der übertragen werden. Für eine Übertragung von Recordset zur Datenquelle, den Wert des Typs **"float"**, stammt aus den angegebenen Datenmember. Für die Übertragung von der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.  
   
  `dwBindOptions`  
@@ -1270,7 +1271,7 @@ void AFXAPI DFX_Text(
  `szName`  
  Der Name einer Datenspalte.  
   
- *value*  
+ *Wert*  
  Der Wert in den angegebenen Datenmember gespeichert – der Wert, der übertragen werden. Für eine Übertragung von Recordset zur Datenquelle, den Wert des Typs [CString](../../atl-mfc-shared/reference/cstringt-class.md), stammt aus den angegebenen Datenmember. Für die Übertragung von der Datenquelle zum Recordset wird der Wert in den angegebenen Datenmember gespeichert.  
   
  `nPreAllocSize`  

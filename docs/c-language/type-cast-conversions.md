@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d3426d6ff06a5d07dd64889e6a5d89da543cfe68
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f402eb49e86c8d6d3ce6c332172375125f577a2b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-cast-conversions"></a>Typumwandlungskonvertierungen
 Sie können Typumwandlungen verwenden, um Typen explizit zu konvertieren.  
@@ -49,7 +50,7 @@ Sie können Typumwandlungen verwenden, um Typen explizit zu konvertieren.
 |Gleitkomma|Beliebiger arithmetischer Typ|  
 |Ein Zeiger auf ein Objekt oder (**void \***)|Ein beliebiger ganzzahliger Typ (**void \***), ein Zeiger auf ein Objekt oder ein Funktionszeiger|  
 |Funktionszeiger|Ein beliebiger ganzzahliger Typ, ein Zeiger auf ein Objekt oder einen Funktionszeiger|  
-|Eine Struktur, Union oder ein Array|Keine|  
+|Eine Struktur, Union oder ein Array|Keiner|  
 |void-Typ|Beliebiger Typ|  
   
  Jeder Bezeichner kann in den `void`-Typ umgewandelt werden. Wenn jedoch der Typ, der in einem Typumwandlungsausdruck angegeben ist, nicht `void` ist, kann der Bezeichner, der in diesen Typ umgewandelt wird, kein `void`-Ausdruck sein. Jeder Ausdruck kann in `void` umgewandelt werden, aber ein Ausdruck vom Typ `void` kann nicht in einen anderen Typ umgewandelt werden. Beispielsweise kann die Rückgabe einer Funktion mit dem Rückgabetyp `void` nicht in einen anderen Typ umgewandelt werden.  

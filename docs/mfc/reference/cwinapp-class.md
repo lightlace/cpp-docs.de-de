@@ -203,11 +203,12 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 07c01988c3bd70f6889a687111cca162b180407b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 99e773dc7c5039574901c2a13433615f8a0c0aad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwinapp-class"></a>CWinApp-Klasse
 Die Basisklasse, von der ein Windows-Anwendungsobjekt abgeleitet wird.  
@@ -218,7 +219,7 @@ Die Basisklasse, von der ein Windows-Anwendungsobjekt abgeleitet wird.
 class CWinApp : public CWinThread  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -332,7 +333,7 @@ class CWinApp : public CWinThread
   
 ### <a name="protected-data-members"></a>Geschützte Datenmember  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |[CWinApp::m_dwRestartManagerSupportFlags](#m_dwrestartmanagersupportflags)|Flags, die bestimmen, wie die Neustart-Manager verhält.|  
 |[CWinApp::m_nAutosaveInterval](#m_nautosaveinterval)|Die Zeitdauer in Millisekunden zwischen speichert.|  

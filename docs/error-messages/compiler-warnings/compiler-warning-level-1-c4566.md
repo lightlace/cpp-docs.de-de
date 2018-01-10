@@ -1,34 +1,33 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4566 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4566"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4566"
+title: Compilerwarnung (Stufe 1) C4566 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4566
+dev_langs: C++
+helpviewer_keywords: C4566
 ms.assetid: 65f40730-e86f-447c-b37b-16caadcfe311
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 22a53aae49f025c8d05beb3b491288e5c82345a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 1) C4566
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Das durch den universellen Zeichennamen 'Zeichen' dargestellte Zeichen kann in der aktuellen Codepage \(Seite\) nicht dargestellt werden  
+# <a name="compiler-warning-level-1-c4566"></a>Compilerwarnung (Stufe 1) C4566
+universelle Zeichenname 'Char' dargestellte Zeichen kann nicht in der aktuellen Codepage (Seite) dargestellt werden  
   
- Nicht alle Unicode\-Zeichen können in der aktuellen ANSI\-Codepage dargestellt werden.  
+ Nicht alle Unicode-Zeichen kann in der aktuellen ANSI-Codepage dargestellt werden.  
   
- Schmale Zeichenfolgen \(1\-Byte\-Zeichen\) werden in Multibyte\-Zeichen konvertiert, breite Zeichenfolgen \(2\-Byte\-Zeichen\) dagegen nicht.  
+ Schmale Zeichenfolgen (Einzelbyte-Zeichen) werden in Multibyte-Zeichen konvertiert, während nicht Breite Zeichenfolgen (Doppelbyte-Zeichen) sind.  
   
  Im folgenden Beispiel wird C4566 generiert:  
   

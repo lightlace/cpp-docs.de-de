@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- codecvt/std::codecvt_utf8
-dev_langs:
-- C++
-helpviewer_keywords:
-- codecvt_utf8 class
+f1_keywords: codecvt/std::codecvt_utf8
+dev_langs: C++
+helpviewer_keywords: codecvt_utf8 class
 ms.assetid: 2a87478f-e2d4-4b8d-ad9c-00add01d1bb0
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b10e5321e1e46a640734ba87ce17269eace7c291
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 873a4e1834b13ac69370223339dd395b650eb679
-ms.contentlocale: de-de
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="codecvtutf8"></a>codecvt_utf8
 Stellt ein [Gebietsschemafacet](../standard-library/locale-class.md) dar, das eine Konvertierung durchführt zwischen Breitzeichen, die als UCS-2 oder UCS-4 codiert sind, und einem Bytestream, der als UTF-8 codiert ist.
@@ -50,4 +46,3 @@ Der Bytestream kann in eine Binärdatei oder eine Textdatei geschrieben werden.
 ## <a name="requirements"></a>Anforderungen
 
 Header: <codecvt> Namespace: std
-

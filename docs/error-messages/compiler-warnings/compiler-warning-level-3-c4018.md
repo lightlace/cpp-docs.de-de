@@ -1,34 +1,33 @@
 ---
-title: "Compilerwarnung (Stufe 3) C4018 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4018"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4018"
+title: Compilerwarnung (Stufe 3) C4018 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4018
+dev_langs: C++
+helpviewer_keywords: C4018
 ms.assetid: 6e8cbb04-d914-4319-b431-cbc2fbe40eb1
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 84a8efdd90a4f93e1eda779ca0e23e339099181e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 3) C4018
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'Ausdruck': Konflikt zwischen signed und unsigned  
+# <a name="compiler-warning-level-3-c4018"></a>Compilerwarnung (Stufe 3) C4018
+'Ausdruck': Konflikt zwischen signed/unsigned  
   
- Beim Vergleich von zwei Zahlen mit bzw. ohne Vorzeichen musste der Wert mit Vorzeichen vom Compiler in einen vorzeichenlosen Wert umgewandelt werden.  
+ Vergleichen eine Zahl mit und ohne Vorzeichen erforderlich, den Compiler an, den Wert mit Vorzeichen in Elemente ohne Vorzeichen zu konvertieren.  
   
- Diese Warnung wird nicht mehr angezeigt, wenn Sie einen der zwei Typen beim Testen von Typen mit und ohne Vorzeichen umwandeln.  
+ Diese Warnung kann behoben werden, wenn Sie eine der beiden Typen, beim Testen von Typen mit und ohne Vorzeichen umwandeln.  
   
  Im folgenden Beispiel wird C4018 generiert:  
   

@@ -1,39 +1,38 @@
 ---
-title: "Linkertoolwarnung LNK4078 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4078"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4078"
+title: Linkertoolwarnung Lnk4078 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4078
+dev_langs: C++
+helpviewer_keywords: LNK4078
 ms.assetid: 5a16796d-6caf-42d9-8f65-b042843eafb8
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8109ef98237f545a2139be8f0502acd11407314b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Linkertoolwarnung LNK4078
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Es wurden mehrere 'Abschnittsname'\-Abschnitte mit unterschiedlichen Attributen gefunden.  
+# <a name="linker-tools-warning-lnk4078"></a>Linkertoolwarnung LNK4078
+mehrere 'Abschnittsname'-Abschnitte mit unterschiedlichen Attributen gefunden  
   
- LINK hat mindestens zwei Abschnitte gefunden, die einen identischen Namen, aber unterschiedliche Attribute besitzen.  
+ LINK wurde gefunden, zwei oder weitere Abschnitte, die den gleichen Namen aber unterschiedlichen Attribute.  
   
- Diese Warnung kann durch eine Importbibliothek oder Exportdatei verursacht werden, die mit einer früheren Version von LINK oder LIB erstellt wurde.  
+ Diese Warnung kann durch eine Bibliothek oder Exporte Importdatei verursacht werden, die von einer früheren Version von LINK oder LIB erstellt wurde.  
   
- Erstellen und verknüpfen Sie die Datei neu.  
+ Erstellen Sie die Datei und anschließend neu.  
   
-## Beispiel  
- LNK4078 kann außerdem durch eine wichtige Änderung verursacht werden: Der unter x86 von [init\_seg](../../preprocessor/init-seg.md) benannte Abschnitt konnte zuvor gelesen und überschrieben werden und ist nun schreibgeschützt.  
+## <a name="example"></a>Beispiel  
+ LNK4078 kann auch von einer wichtigen Änderung verursacht werden: der Abschnitt benannt, indem [Init_seg](../../preprocessor/init-seg.md) auf X86 Lese-/Schreibzugriff gelöscht wurde, ist jetzt schreibgeschützt.  
   
  Im folgenden Beispiel wird LNK4078 generiert.  
   

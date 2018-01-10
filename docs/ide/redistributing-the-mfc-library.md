@@ -16,11 +16,12 @@ caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5bde60a4e0c8ec9c0f9091edd40397a371e0e66e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9ca153ec9ca079bf13b1c1c1dcedd6e41497307f
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="redistributing-the-mfc-library"></a>Verteilen der MFC-Bibliothek
 Wenn Sie Ihre Anwendung mit der MFC-Bibliothek dynamisch verknüpfen, müssen Sie die entsprechende MFC-DLL verteilen. Wenn die MFC-app mit der Version von MFC, die geliefert wird mit Visual Studio 2015 erstellt wird, müssen Sie z. B. verteilen mfc140.dll oder mfc140u.dll, je nachdem, ob Ihre app für schmale Zeichen oder Unicode-Unterstützung kompiliert wird.  
@@ -28,7 +29,7 @@ Wenn Sie Ihre Anwendung mit der MFC-Bibliothek dynamisch verknüpfen, müssen Si
 > [!NOTE]
 >  Die mfc140.dll Dateien wurden aus dem Verzeichnis verteilbaren Dateien in Visual Studio 2015 RTM ausgelassen. Sie können die Versionen von Visual Studio 2015 in den Verzeichnissen "Windows\System32" und Windows\syswow64 installiert werden, stattdessen verwenden.  
   
- Da alle MFC-DLLs die freigegebene Version der C-Laufzeitbibliothek (CRT) verwenden, müssen Sie möglicherweise auch die CRT zu verteilen. Die Version von MFC, die geliefert wird mit Visual Studio 2015 verwendet die universal CRT-Bibliothek, die als Teil von Windows 10 verteilt wird. Führen Sie eine MFC-Anwendung mit Visual Studio 2015 auf frühere Versionen von Windows erstellt haben, müssen Sie der Universal CRT verteilen. Informationen zum Verteilen von universal CRT als eine Komponente des Betriebssystems oder mithilfe einer lokalen Bereitstellung finden Sie unter [Einführung in die Universal CRT](http://go.microsoft.com/fwlink/?LinkId=617977). Informationen zum Herunterladen der ausdrückt CRT für die zentrale Bereitstellung unter Windows unterstützten Versionen finden Sie unter [Windows 10 universelle C-Laufzeit](http://go.microsoft.com/fwlink/p/?LinkId=619489). Ucrtbase.dll für die lokale Bereitstellung verteilbare architekturspezifischer-Versionen befinden sich im Windows SDK. Standardmäßig installiert Visual Studio diese in C:\Program Files (x86) \Windows Kits\10\Redist\ucrt\DLLs\ in ein Unterverzeichnis architekturspezifischer.  
+ Da alle MFC-DLLs die freigegebene Version der C-Laufzeitbibliothek (CRT) verwenden, müssen Sie möglicherweise auch die CRT zu verteilen. Die Version von MFC, die geliefert wird mit Visual Studio 2015 verwendet die universal CRT-Bibliothek, die als Teil von Windows 10 verteilt wird. Führen Sie eine MFC-Anwendung mit Visual Studio 2015 auf frühere Versionen von Windows erstellt haben, müssen Sie der Universal CRT verteilen. Informationen zum Verteilen von universal CRT als eine Komponente des Betriebssystems oder mithilfe einer lokalen Bereitstellung finden Sie unter [Einführung in die Universal CRT](http://go.microsoft.com/fwlink/p/?linkid=617977). Informationen zum Herunterladen der ausdrückt CRT für die zentrale Bereitstellung unter Windows unterstützten Versionen finden Sie unter [Windows 10 universelle C-Laufzeit](http://go.microsoft.com/fwlink/p/?LinkId=619489). Ucrtbase.dll für die lokale Bereitstellung verteilbare architekturspezifischer-Versionen befinden sich im Windows SDK. Standardmäßig installiert Visual Studio diese in C:\Program Files (x86) \Windows Kits\10\Redist\ucrt\DLLs\ in ein Unterverzeichnis architekturspezifischer.  
   
  Wenn Ihre app mit einer früheren Version der MFC-Bibliothek erstellt wird, müssen Sie die entsprechenden CRT-DLL aus dem Verzeichnis verteilbaren Dateien verteilen. Wenn die MFC-Anwendung mit dem Visual Studio 2013 (vc120)-Toolset erstellt wird, müssen Sie z. B. die msvcr120.dll verteilen. Außerdem müssen Sie die Mfc-Bibliothek übereinstimmende neu verteilen`<version>`u.dll oder Mfc`<version>`DLL.  
   
@@ -49,7 +50,7 @@ Wenn Sie Ihre Anwendung mit der MFC-Bibliothek dynamisch verknüpfen, müssen Si
   
  Die weiterverteilbaren MSM-Dateien enthalten die DLLs, die für die Lokalisierung verwendet werden. Es gibt eine DLL für jede unterstützte Sprache. Beim Installationsvorgang werden diese DLLs im Ordner "%WINDIR%\system32\" auf dem Zielcomputer installiert.  
   
- Weitere Informationen zum Lokalisieren von MFC-Anwendungen finden Sie unter [TN057: Lokalisierung von MFC-Komponenten](../mfc/tn057-localization-of-mfc-components.md), sowie [Artikel 208983: Verwenden von MFC LOC DLLs wie](http://go.microsoft.com/fwlink/?LinkId=198025) auf der Microsoft-Support-Website.  
+ Weitere Informationen zum Lokalisieren von MFC-Anwendungen finden Sie unter [TN057: Lokalisierung von MFC-Komponenten](../mfc/tn057-localization-of-mfc-components.md), sowie [Artikel 208983: Verwenden von MFC LOC DLLs wie](http://go.microsoft.com/fwlink/p/?linkid=198025) auf der Microsoft-Support-Website.  
   
  Sie können MFC-Lokalisierungs-DLLs verteilen, indem Sie die MFC-DLL im lokalen Anwendungsordner bereitstellen. Weitere Informationen über das Verteilen von Visual C++-Bibliotheken finden Sie unter [Neuverteilen von Visual C++-Dateien](../ide/redistributing-visual-cpp-files.md).  
   

@@ -28,11 +28,12 @@ caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ed41372637e9ee68db087fbe0ad532d9e6bb4935
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 50ca3fd6d60e7fecf84c81d14c859f5b2f51e120
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crt-library-features"></a>CRT-Bibliotheksfunktionen
 In diesem Thema werden die verschiedenen LIB-Dateien erläutert, die die C-Laufzeitbibliotheken sowie ihre zugeordneten Compileroptionen und Präprozessordirektiven bilden.  
@@ -46,8 +47,8 @@ In diesem Thema werden die verschiedenen LIB-Dateien erläutert, die die C-Laufz
   
 |Bibliothek|Zugehörige DLL|Eigenschaften|Option|Präprozessordirektiven|  
 |-------------|--------------------|---------------------|------------|-----------------------------|  
-|libucrt.lib|Keine|Bindet die UCRT statisch in Ihren Code ein.|**/MT**|_MT|  
-|libucrtd.lib|Keine|Die Debugversion der UCRT für statisches Linken. Nicht neu verteilbar.|**/MTd**|_DEBUG, _MT|  
+|libucrt.lib|Keiner|Bindet die UCRT statisch in Ihren Code ein.|**/MT**|_MT|  
+|libucrtd.lib|Keiner|Die Debugversion der UCRT für statisches Linken. Nicht neu verteilbar.|**/MTd**|_DEBUG, _MT|  
 |ucrt.lib|ucrtbase.dll|DLL-Importbibliothek für die UCRT.|**/MD**|_MT, _DLL|  
 |ucrtd.lib|ucrtbased.dll|DLL-Importbibliothek für die Debugversion der UCRT. Nicht neu verteilbar.|**/MDd**|_DEBUG, _MT, _DLL|  
   
@@ -57,8 +58,8 @@ In diesem Thema werden die verschiedenen LIB-Dateien erläutert, die die C-Laufz
   
 |Bibliothek|Zugehörige DLL|Eigenschaften|Option|Präprozessordirektiven|  
 |-------------|--------------------|---------------------|------------|-----------------------------|  
-|libvcruntime.lib|Keine|Wird statisch in Ihren Code eingebunden.|**/MT**|_MT|  
-|libvcruntimed.lib|Keine|Die Debugversion für statisches Linken. Nicht neu verteilbar.|**/MTd**|_MT, _DEBUG|  
+|libvcruntime.lib|Keiner|Wird statisch in Ihren Code eingebunden.|**/MT**|_MT|  
+|libvcruntimed.lib|Keiner|Die Debugversion für statisches Linken. Nicht neu verteilbar.|**/MTd**|_MT, _DEBUG|  
 |vcruntime.lib|vcruntime\<Version>.dll|DLL-Importbibliothek für die vcruntime.|**/MD**|_MT, _DLL|  
 |vcruntimed.lib|vcruntime\<Version>d.dll|DLL-Importbibliothek für die Debug-vcruntime. Nicht neu verteilbar.|**/MDd**|_DEBUG, _MT, _DLL|  
   

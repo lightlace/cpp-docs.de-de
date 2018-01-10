@@ -1,46 +1,45 @@
 ---
-title: "single | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Single"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "single OpenMP directive"
+title: einzelne | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Single
+dev_langs: C++
+helpviewer_keywords: single OpenMP directive
 ms.assetid: 85cf94fb-cb9c-4d82-8609-adffa9f552e1
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8eabac06acc78aec46c86cf8a7dcbb2d5854c941
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# single
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Hiermit können Sie nicht angeben, dass ein Abschnitt des Codes auf einem einzigen Thread Masterthread, der ausgeführt werden soll.  
+# <a name="single"></a>Einfach
+Sie können angeben, dass ein Abschnitt des Codes in einem einzelnen Thread, der nicht unbedingt der master-Thread ausgeführt werden soll.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-#pragma omp single [clauses]   
+#pragma omp single [clauses]   
 {  
    code_block   
 }  
 ```  
   
-#### Parameter  
- `clause` \(optional\)  
- Null oder mehr Klauseln.  Weitere Informationen finden Sie im Abschnitt " Hinweise " für eine Liste von Klauseln, die von **Einfach**unterstützt werden.  
+#### <a name="parameters"></a>Parameter  
+ `clause` (optional)  
+ NULL oder mehr Klauseln. Finden Sie im Abschnitt "Hinweise" eine Liste von unterstützten Klauseln **einzelne**.  
   
-## Hinweise  
- Die **Einfach** unterstützen die folgenden Direktiven OpenMP\-Klauseln:  
+## <a name="remarks"></a>Hinweise  
+ Die **einzelne** Richtlinie unterstützt die folgenden OpenMP-Klauseln:  
   
 -   [copyprivate](../../../parallel/openmp/reference/copyprivate.md)  
   
@@ -50,11 +49,11 @@ Hiermit können Sie nicht angeben, dass ein Abschnitt des Codes auf einem einzig
   
 -   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
- Die [master](../../../parallel/openmp/reference/master.md)\-Direktive können Sie angeben, dass ein Codeabschnitt nur auf dem Masterthread ausgeführt werden soll.  
+ Die [master](../../../parallel/openmp/reference/master.md) Richtlinie können Sie angeben, dass ein Abschnitt des Codes nur für die master-Thread ausgeführt werden sollen.  
   
- Weitere Informationen finden Sie unter [2.4.3 single Construct](../../../parallel/openmp/2-4-3-single-construct.md).  
+ Weitere Informationen finden Sie unter [2.4.3 einzelne erstellen](../../../parallel/openmp/2-4-3-single-construct.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // omp_single.cpp  
@@ -79,9 +78,12 @@ int main() {
 }  
 ```  
   
-  **Lesen von Eingaben**  
-**Berechnet Suchergebnisse**  
-**Berechnet Suchergebnisse**  
-**Schreiben von Ausgabe**   
-## Siehe auch  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+```Output  
+read input  
+compute results  
+compute results  
+write output  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Anweisungen](../../../parallel/openmp/reference/openmp-directives.md)

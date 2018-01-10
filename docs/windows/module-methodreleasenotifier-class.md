@@ -1,30 +1,31 @@
 ---
-title: "Module::MethodReleaseNotifier-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::MethodReleaseNotifier"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MethodReleaseNotifier-Klasse"
+title: 'Module:: methodreleasenotifier-Klasse | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::MethodReleaseNotifier
+dev_langs: C++
+helpviewer_keywords: MethodReleaseNotifier class
 ms.assetid: 5c2902be-964b-488f-9f1c-adf504995cbc
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 113ea9179292606461a8fe67ff161f63e58161da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Module::MethodReleaseNotifier-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Wird einen Ereignishandler aufgerufen, wenn das letzte Objekt im aktuellen Modul freigegeben wird. Der Ereignishandler wird durch ein Objekt und seine Member Zeiger-zu-Methode angegeben.  
+# <a name="modulemethodreleasenotifier-class"></a>Module::MethodReleaseNotifier-Klasse
+Ruft einen Ereignishandler auf, wenn das letzte Objekt im aktuellen Modul freigegeben wird. Der Ereignishandler wird von einem Objekt und seinem Member Zeiger-zu-Methode angegeben.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,9 +38,9 @@ class MethodReleaseNotifier : public ReleaseNotifier;
   
 #### <a name="parameters"></a>Parameter  
  `T`  
- Der Typ des Objekts, dessen Memberfunktion der Ereignishandler ist.  
+ Der Typ des Objekts, dessen Memberfunktion der Ereignishandler vorhanden ist.  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -51,14 +52,14 @@ class MethodReleaseNotifier : public ReleaseNotifier;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Module:: methodreleasenotifier:: Invoke-Methode](../windows/module-methodreleasenotifier-invoke-method.md)|Ruft den Ereignishandler mit dem aktuellen methodreleasenotifier-Objekt verknüpft ist.|  
+|[Module::MethodReleaseNotifier::Invoke-Methode](../windows/module-methodreleasenotifier-invoke-method.md)|Ruft den Ereignishandler, die dem aktuellen methodreleasenotifier-Objekt zugeordnet.|  
   
 ### <a name="protected-data-members"></a>Geschützte Datenmember  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |[Module::MethodReleaseNotifier::method_-Datenmember](../windows/module-methodreleasenotifier-method-data-member.md)|Enthält einen Zeiger an den Ereignishandler für das aktuelle methodreleasenotifier-Objekt.|  
-|[Module::MethodReleaseNotifier::object_-Datenmember](../windows/module-methodreleasenotifier-object-data-member.md)|Enthält einen Zeiger auf das Objekt, dessen Memberfunktion der Ereignishandler für das aktuelle methodreleasenotifier-Objekt ist.|  
+|[Module::MethodReleaseNotifier::object_-Datenmember](../windows/module-methodreleasenotifier-object-data-member.md)|Enthält einen Zeiger auf das Objekt, dessen Memberfunktion die Ereignishandler für das aktuelle methodreleasenotifier-Objekt ist.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `ReleaseNotifier`  

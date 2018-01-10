@@ -1,48 +1,49 @@
 ---
-title: "Empfohlene Tags f&#252;r Dokumentationskommentare (Visual C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Empfohlene Tags für Dokumentationskommentare (Visual C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 6548e798-5235-4a38-9482-bdc7b88f40a9
-caps.latest.revision: 10
-caps.handback.revision: "10"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5c1b0e762ec2167a988e8e18f3dce932214716c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Empfohlene Tags f&#252;r Dokumentationskommentare (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Der Visual C\+\+\-Compiler verarbeitet Dokumentationskommentare im Code und stellt eine XDC\-Datei für jede Kompiliereinheit erstellt, und xdcmake.exe verarbeitet die .xdc\-Dateien zu einer XML\-Datei.  Die XML\-Datei zu verarbeiten, um Dokumentation zu erstellen ist ein Detail, das an der Site implementiert werden muss.  
+# <a name="recommended-tags-for-documentation-comments-visual-c"></a>Empfohlene Tags für Dokumentationskommentare (Visual C++)
+Visual C++-Compiler verarbeitet Dokumentationskommentare im Code und erstellt eine XDC-Datei für jede Kompiliereinheit und xdcmake.exe verarbeitet der XDC-Dateien in eine XML-Datei. Verarbeiten der XML-Datei zum Erstellen von Dokumentation ist ein Detail, die an Ihrem Standort implementiert werden muss.  
   
- Tags werden auf Konstrukten wie Typen und Typmember verarbeitet.  
+ Tags werden verarbeitet, auf Konstrukte wie Typen und Typmember.  
   
- Tags müssen Typen oder Member unmittelbar vor.  
+ Tags müssen Typen oder Member unmittelbar vorangestellt sein.  
   
 > [!NOTE]
->  Dokumentationskommentare können nicht in einem Namespace oder an aus Zeilendefinition aus für Eigenschaften und Ereignisse angewendet werden; Dokumentationskommentare müssen auf den InKlassendeklarationen.  
+>  Dokumentationskommentare können nicht mit einem Namespace oder auf Out abweichenden Definition für Eigenschaften und Ereignisse angewendet werden; Dokumentationskommentare müssen auf die Klassendeklarationen.  
   
- Der Compiler verarbeitet jedes Tag, das gültiges XML darstellt.  Die folgenden Tags stellen häufig verwendete Funktionen in der Benutzerdokumentation:  
+ Der Compiler verarbeitet alle Tags, die gültige XML sind. Die folgenden Tags stellen häufig verwendete Funktionalität in der Dokumentation für die Benutzer bereit:  
   
 ||||  
 |-|-|-|  
-|[\<c\>](../ide/c-visual-cpp.md)|[\<code\>](../ide/code-visual-cpp.md)|[\<example\>](../ide/example-visual-cpp.md)|  
-|[\<exception\>](../ide/exception-visual-cpp.md)1|[\<include\>](../ide/include-visual-cpp.md)1|[\<list\>](../ide/list-visual-cpp.md)|  
-|[\<para\>](../ide/para-visual-cpp.md)|[\<param\>](../ide/param-visual-cpp.md)1|[\<paramref\>](../ide/paramref-visual-cpp.md)1|  
-|[\<permission\>](../ide/permission-visual-cpp.md)1|[\<remarks\>](../ide/remarks-visual-cpp.md)|[\<returns\>](../ide/returns-visual-cpp.md)|  
-|[\<see\>](../ide/see-visual-cpp.md)1|[\<seealso\>](../ide/seealso-visual-cpp.md)1|[\<summary\>](../ide/summary-visual-cpp.md)|  
-|[\<value\>](../ide/value-visual-cpp.md)|||  
+|[\<c>](../ide/c-visual-cpp.md)|[\<code>](../ide/code-visual-cpp.md)|[\<example>](../ide/example-visual-cpp.md)|  
+|[\<Ausnahme >](../ide/exception-visual-cpp.md)1|[\<umfassen >](../ide/include-visual-cpp.md)1|[\<list>](../ide/list-visual-cpp.md)|  
+|[\<para>](../ide/para-visual-cpp.md)|[\<Param >](../ide/param-visual-cpp.md)1|[\<Paramref >](../ide/paramref-visual-cpp.md)1|  
+|[\<Berechtigung >](../ide/permission-visual-cpp.md)1|[\<remarks>](../ide/remarks-visual-cpp.md)|[\<returns>](../ide/returns-visual-cpp.md)|  
+|[\<finden Sie unter >](../ide/see-visual-cpp.md)1|[\<Seealso >](../ide/seealso-visual-cpp.md)1|[\<summary>](../ide/summary-visual-cpp.md)|  
+|[\<value>](../ide/value-visual-cpp.md)|||  
   
- 1.  Compiler überprüft Syntax.  
+ 1. Compilerfehler überprüft die Syntax.  
   
- In der aktuellen Version unterstützt der Visual C\+\+\-Compiler nicht `<paramref>`, ein Tag, das von anderen Visual Studio\-Compiler unterstützt wird.  Visual C\+\+ unterstützt `<paramref>` möglicherweise in einer zukünftigen Version.  
+ In der aktuellen Version der Visual C++-Compiler unterstützt keine `<paramref>`, ein Tag, das von anderen Visual Studio-Compiler unterstützt wird. Visual C++ unterstützt möglicherweise `<paramref>` in einer zukünftigen Version.  
   
-## Siehe auch  
- [XML\-Dokumentation](../ide/xml-documentation-visual-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [XML-Dokumentation](../ide/xml-documentation-visual-cpp.md)

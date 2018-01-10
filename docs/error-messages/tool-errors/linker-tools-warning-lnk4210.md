@@ -1,50 +1,50 @@
 ---
-title: "Linkertoolwarnung LNK4210 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4210"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4210"
+title: Linkertoolwarnung Lnk4210 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4210
+dev_langs: C++
+helpviewer_keywords: LNK4210
 ms.assetid: db48cff8-a2be-4a77-8d03-552b42c228fa
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e4e2d596527b60735b42fb4edfff6f36d0be808d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Linkertoolwarnung LNK4210
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'Abschnitt'\-Abschnitt vorhanden; es sind möglicherweise unbehandelte statische Initialisierer oder Terminatoren vorhanden  
+# <a name="linker-tools-warning-lnk4210"></a>Linkertoolwarnung LNK4210  
   
- Im Code wurden statische Initialisierungen oder Terminatoren implementiert, der CRT oder ein entsprechendes Element \(das die statischen Initialisierungen oder Terminatoren ausführen muss\) wird jedoch beim Anwendungsstart nicht ausgeführt.  Codebeispiele, die dieses Szenario verursachen, umfassen:  
+> Abschnitt *Abschnitt* vorhanden ist; es kann nicht behandelt würden statische Initialisierer oder Abschlusszeichen  
   
--   Globale Klassenvariablen mit einem Konstruktor, Destruktor oder einer virtuellen Funktionstabelle.  
+Code wurde eingeführt, statische Initialisierer oder Abschlusszeichen, aber der Startcode der VCRuntime-Bibliothek oder dessen Entsprechung (die muss zum Ausführen der statischen Initialisierer oder ein Abschlusszeichen) wird nicht ausgeführt, beim Starten der Anwendung. Hier sind einige Beispiele für Code, der statische Initialisierer oder Abschlusszeichen erfordert:  
   
--   Globale Variablen, die mit einer von der Kompilierungszeit nicht unterstützten Konstanten initialisiert werden.  
+-   Globale Class-Variable mit einem Konstruktor, Destruktor oder virtuelle Funktionstabelle.  
   
- Führen Sie zur Behebung dieses Problems einen der folgenden Schritte aus:  
+-   Globale Variable mit einem nicht-Kompilierzeitkonstante initialisiert.  
   
--   Entfernen Sie den gesamten Code mit statischen Initialisierungen.  
+Um dieses Problem zu beheben, führen Sie eine der folgenden aus:  
   
--   [\/NOENTRY](../../build/reference/noentry-no-entry-point.md) sollte nicht verwendet werden.  Nach dem Entfernen von \/NOENTRY müssen Sie möglicherweise auch msvcrt.lib, libcmt.lib oder libcmtd.lib zur Linkerbefehlszeile hinzufügen.  
+-   Entfernen Sie sämtlichen Code mit statischen Initialisierern.  
   
--   Fügen Sie der Linkerbefehlszeile msvcrt.lib, libcmt.lib oder libcmtd.lib hinzu.  
+-   Verwenden Sie keine [/NOENTRY](../../build/reference/noentry-no-entry-point.md). Nach dem Entfernen von/NOENTRY müssen Sie auch entfernen [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) der Linker-Befehlszeile.  
   
--   Entfernen Sie beim Wechsel von der \/clr:pure\-Kompilierung nach \/clr die [\/ENTRY](../../build/reference/entry-entry-point-symbol.md)\-Option aus der Linkerzeile.  Dadurch wird die CRT\-Initialisierung aktiviert, sodass beim Anwendungsstart statische Initialisierungen ausgeführt werden können.  
+-   Wenn Ihr Build/MT verwendet, fügen Sie "LIBCMT.lib" libvcruntime.lib und "libucrt.lib" in der Linker-Befehlszeile ein. Wenn Ihr Build/MTd verwendet, fügen Sie libcmtd.lib, vcruntimed.lib und libucrtd.lib.  
   
--   Wenn das Projekt mit [\/ENTRY](../../build/reference/entry-entry-point-symbol.md) erstellt wurde und an \/ENTRY eine andere Funktion als `_DllMainCRTStartup` übergeben wurde, muss die Funktion CRT\_INIT aufrufen.  Siehe [Laufzeitbibliotheks\-Verhalten](../../build/run-time-library-behavior.md) und im Knowledge Base\-Artikel Q94248, [http:\/\/support.microsoft.com\/default.aspx?scid\=kb;en\-us;94248](http://support.microsoft.com/default.aspx?scid=kb;en-us;94248) weitere Informationen.  
+-   Beim Verschieben von/CLR: pure-Kompilierung zu/CLR, entfernen Sie die [/Entry](../../build/reference/entry-entry-point-symbol.md) Option in der Linker-Befehlszeile. Dies ermöglicht CRT-Initialisierung und statische Initialisierer beim Anwendungsstart ausgeführt werden.  
   
- Die [\/GS](../../build/reference/gs-buffer-security-check.md)\-Compileroption erfordert CRT\-Startcode.  
+ Die [/GS](../../build/reference/gs-buffer-security-check.md) -Compileroption erfordert Initialisierung durch die `__security_init_cookie` Funktion. Diese Initialisierung wird bereitgestellt, in der Startcode VCRuntime-Bibliothek, die ausgeführt, in wird der Standardeinstellung `_DllMainCRTStartup`.  
   
-## Siehe auch  
+-   Wenn Ihr Projekt erstellt wurde, verwenden / Entry und/Entry anders als eine Funktion übergeben wird `_DllMainCRTStartup`, rufen Sie die Funktion muss `_CRT_INIT` CRT initialisiert werden. Dieser Aufruf allein ist nicht ausreichend, wenn die DLL/GS verwendet, statische Initialisierer erfordert oder im Kontext der MFC oder ATL-Code aufgerufen wird. Finden Sie unter [DLLs und Visual C++-Laufzeitbibliothek Verhalten](../../build/run-time-library-behavior.md) für Weitere Informationen.  
+  
+## <a name="see-also"></a>Siehe auch  
  [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)

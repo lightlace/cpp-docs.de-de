@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4d7574148dda851789bc06a91883c5f72e7d4341
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3823315518669f939bee267581fad72c8f046459
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="resource-compiler-errors-rc1000-through-rc4413"></a>Ressourcencompiler: Fehlers RC1000 through RC4413
 Dieser Abschnitt ist eine Referenz zu den von den Buildtools ausgegebenen Fehlermeldungen. Um Hilfe zu einer bestimmten Fehlermeldung zu erhalten, klicken Sie mit der Maus auf eine Fehlernummer im Ausgabefenster angezeigt, und drücken Sie F1, oder geben die Fehlernummer in der **gesucht** Feld im Index.

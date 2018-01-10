@@ -25,11 +25,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 88af917cb86826cc4615948f7a5d2e53e888bad5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 261fb23c96bee0d646f64d587d9f7afecc59d4d2
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="crtlcmapstringw"></a>__crtLCMapStringW
 Ordnet eine Zeichenfolge einer anderen zu, wobei eine angegebene Gebietsschema-abhängige Umwandlung durchgeführt wird. Mit dieser Funktion kann auch ein Sortierschlüssel für die Eingabezeichenfolge generiert werden.  
@@ -75,10 +76,10 @@ int __crtLCMapStringW(
  Null weist auf einen Fehler hin. Rufen Sie für erweiterte Fehlerinformationen die `GetLastError` -Funktion auf.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn `cchSrc` größer als 0 (null) ist und `lpSrcStr` ist eine Null-terminierte Zeichenfolge, legt `__crtLCMapStringW` `cchSrc` auf die Länge der Zeichenfolge fest. `__crtLCMapStringW` ruft dann die Breitzeichen-Version (Unicode) der `LCMapString` -Funktion mit den angegebenen Parametern auf. Weitere Informationen zu den Parametern und Rückgabewerten dieser Funktion finden Sie unter der `LCMapString` -Funktion der [MSDN Library](http://go.microsoft.com/fwlink/?linkID=150542).  
+ Wenn `cchSrc` größer als 0 (null) ist und `lpSrcStr` ist eine Null-terminierte Zeichenfolge, legt `__crtLCMapStringW` `cchSrc` auf die Länge der Zeichenfolge fest. `__crtLCMapStringW` ruft dann die Breitzeichen-Version (Unicode) der `LCMapString` -Funktion mit den angegebenen Parametern auf. Weitere Informationen zu den Parametern und Rückgabewerten dieser Funktion finden Sie unter der `LCMapString` -Funktion der [MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542).  
   
 ## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderlicher Header|  
+|-Routine zurückgegebener Wert|Erforderlicher Header|  
 |-------------|---------------------|  
 |__crtLCMapStringW|awint.h|

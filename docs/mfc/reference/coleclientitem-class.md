@@ -175,11 +175,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ce200aa3fafcd1475e711eea79cb9c4574588a97
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3732f23c2af429d0b5fc965b7f961af8400e2e42
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coleclientitem-class"></a>COleClientItem-Klasse
 Definiert die Containerschnittstelle zu OLE-Elementen.  
@@ -190,7 +191,7 @@ Definiert die Containerschnittstelle zu OLE-Elementen.
 class COleClientItem : public CDocItem  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   

@@ -15,11 +15,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7079794aed6140dd4d21a7bf5bc7576363811b5b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6256f5a900872f967c8ea4c069098bd8eeeb733d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltmapgt"></a>&lt;map&gt;
 Definiert die Containervorlagenklassen "map" und "multimap" und deren unterstützende Vorlagen.  
@@ -31,7 +32,7 @@ Definiert die Containervorlagenklassen "map" und "multimap" und deren unterstüt
   
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="operators"></a>Operatoren  
   

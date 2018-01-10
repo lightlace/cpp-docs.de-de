@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 25dc28c993289942d0eafd2f20fb5c849f1658c4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 15e1aedefe6d20c181ff208f76a61f49e15f5214
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltseegt-visual-c"></a>&lt;finden Sie unter&gt; (Visual C++)
 Mit dem \<see>-Tag kann ein Link im Text angegeben werden. Verwendung [ \<Seealso >](../ide/seealso-visual-cpp.md) um Text anzugeben, die in einem Abschnitt Siehe auch angezeigt werden sollen.  

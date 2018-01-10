@@ -1,11 +1,10 @@
 ---
-title: ITopologyExecutionResource-Struktur | Microsoft-Dokumentation
+title: ITopologyExecutionResource-Struktur | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,35 +12,19 @@ f1_keywords:
 - CONCRTRM/concurrency::ITopologyExecutionResource
 - CONCRTRM/concurrency::ITopologyExecutionResource::ITopologyExecutionResource::GetId
 - CONCRTRM/concurrency::ITopologyExecutionResource::ITopologyExecutionResource::GetNext
-dev_langs:
-- C++
-helpviewer_keywords:
-- ITopologyExecutionResource structure
+dev_langs: C++
+helpviewer_keywords: ITopologyExecutionResource structure
 ms.assetid: e36756f7-4cd9-4fa6-ba60-23fea58ef2bf
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: d9671dbf84a1104bc3b6f3a6f9d383aac167759c
-ms.contentlocale: de-de
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: caf2cc77cd31df611f71d07c5a0a49f600767f81
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="itopologyexecutionresource-structure"></a>ITopologyExecutionResource-Struktur
 Eine Schnittstelle zu einer vom Ressourcen-Manager definierten Ausführungsressource.  
@@ -52,17 +35,17 @@ Eine Schnittstelle zu einer vom Ressourcen-Manager definierten Ausführungsresso
 struct ITopologyExecutionResource;
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Itopologyexecutionresource:: GetID](#getid)|Gibt die Ressourcen-Manager eindeutige Bezeichner für diese Ausführungsressource.|  
-|[Itopologyexecutionresource:: GetNext](#getnext)|Gibt eine Schnittstelle zur nächsten Ausführungsressource Reihenfolge zurück.|  
+|[Itopologyexecutionresource:: GetID](#getid)|Gibt die Ressourcen-Manager eindeutige Bezeichner für diese Ausführungsressource zurück.|  
+|[Itopologyexecutionresource:: GetNext](#getnext)|Gibt eine Schnittstelle auf die nächste Ausführungsressource Reihenfolge zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Schnittstelle wird in der Regel verwendet, um die Topologie des Systems zu durchlaufen, als vom Ressourcen-Manager überwacht.  
+ Diese Schnittstelle ist in der Regel verwendet, um die Topologie des Systems zu durchlaufen, als vom Ressourcen-Manager überwacht.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `ITopologyExecutionResource`  
@@ -73,7 +56,7 @@ struct ITopologyExecutionResource;
  **Namespace:** Parallelität  
   
 ##  <a name="getid"></a>Itopologyexecutionresource:: GetID-Methode  
- Gibt die Ressourcen-Manager eindeutige Bezeichner für diese Ausführungsressource.  
+ Gibt die Ressourcen-Manager eindeutige Bezeichner für diese Ausführungsressource zurück.  
   
 ```
 virtual unsigned int GetId() const = 0;
@@ -83,15 +66,14 @@ virtual unsigned int GetId() const = 0;
  Der Ressourcen-Manager eindeutige Bezeichner für diese Ausführungsressource.  
   
 ##  <a name="getnext"></a>Itopologyexecutionresource:: GetNext-Methode  
- Gibt eine Schnittstelle zur nächsten Ausführungsressource Reihenfolge zurück.  
+ Gibt eine Schnittstelle auf die nächste Ausführungsressource Reihenfolge zurück.  
   
 ```
 virtual ITopologyExecutionResource *GetNext() const = 0;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Eine Schnittstelle zur nächsten Ausführungsressource Reihenfolge. Wenn die Reihenfolge des Knotens, zu dem diese Ausführungsressource gehört, keine weiteren Knoten vorhanden sind, wird diese Methode den Wert zurück `NULL`.  
+ Eine Schnittstelle auf die nächste Ausführungsressource Reihenfolge. Wenn in der Reihenfolge der Knoten, zu dem diese Ausführungsressource gehört, Enumeration keine weiteren Knoten vorhanden sind, gibt diese Methode den Wert zurück `NULL`.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)
-

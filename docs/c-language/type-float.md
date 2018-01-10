@@ -25,11 +25,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cb53ac2375a5afa9ac3c2f1d2d7b2ba9de1b7141
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c0b1362d5cb0451f5190ca63ab0344f557256190
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-float"></a>Typ "float"
 Gleitkommazahlen verwenden das IEEE(Institute of Electrical and Electronics Engineers)-Format. Werte mit einfacher Genauigkeit vom Typ "float" umfassen 4 Bytes und bestehen aus einem Vorzeichenbit, einem 8-Bit-Exponenten in Excess-127-Notation und einer 23-Bit-Mantisse. Die Mantisse ist eine Zahl zwischen 1.0 und 2.0. Da das höchstwertige Bit der Mantisse immer 1 ist, wird es nicht in der Zahl gespeichert. Diese Darstellung erlaubt einen Bereich von etwa 3,4E-38 bis 3,4E+38 für den Typ „float“.  
@@ -40,7 +41,7 @@ Gleitkommazahlen verwenden das IEEE(Institute of Electrical and Electronics Engi
   
 |Typ|Signifikante Stellen|Anzahl von Bytes|  
 |----------|------------------------|---------------------|  
-|frei verschieben|6 - 7|4|  
+|float|6 - 7|4|  
 |double|15 - 16|8|  
   
  Gleitkommavariablen werden von einer Mantisse, die den Wert der Zahl enthält, und einem Exponenten dargestellt, der die Größenordnung der Zahl enthält.  

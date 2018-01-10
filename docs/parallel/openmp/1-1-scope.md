@@ -1,23 +1,24 @@
 ---
-title: "1.1 Scope"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 1.1 Bereich | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: a8570a3c-1dd6-4c3d-b368-a10fcb3534a6
-caps.latest.revision: 4
-caps.handback.revision: "4"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 07859a95b739cf649ab6516cb2e8b605efe442dc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# 1.1 Scope
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Diese Spezifikation enthält nur USER\-verwiesene Parallelisierung, worin der Benutzer explizit die Aktionen angibt, die vom Compiler und die Laufzeit System übernommen werden soll, um das Programm parallel auszuführen.  Implementierungen OpenMPs C und C\+\+ sind nicht erforderlich, um Abhängigkeiten für Konflikte, Deadlocks, Racebedingungen oder andere Probleme zu überprüfen, die falsche Programmausführung führen.  Der Benutzer stellt sicher, dass die Anwendung mithilfe der Konstrukte OpenMPs C und C\+\+ API ordnungsgemäß ausgeführt wird.  Vom Compiler generierter automatische Parallelisierung und Direktive für den Compiler, um solche Parallelisierung zu sichern werden nicht in diesem Dokument beschriebenen.
+# <a name="11-scope"></a>1.1 Bereich
+Diese Spezifikation behandelt nur benutzergesteuerten Parallelisierung, bei dem der Benutzer die Aktionen, die durch den Compiler und Laufzeit-System ausgeführt werden, um die Anwendung parallel ausgeführt werden explizit angibt. OpenMP-C- und C++-Implementierungen sind nicht erforderlich, Suchen nach Abhängigkeiten, Konflikte, Deadlocks, Racebedingungen oder andere Probleme, die sich in der falschen programmausführung ergeben. Der Benutzer ist dafür verantwortlich, dass die Anwendung mithilfe der OpenMP-C- und C++-API-Konstrukte ordnungsgemäß ausgeführt wird. Vom Compiler generierte automatische Parallelisierung und Richtlinien für den Compiler solche Parallelisierung zu unterstützen, werden in diesem Dokument nicht behandelt.

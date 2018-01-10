@@ -1,5 +1,5 @@
 ---
-title: Concurrency::Graphics::Direct3D Namespace Funktionen | Microsoft-Dokumentation
+title: Concurrency::Graphics::Direct3D Namespace Funktionen | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,18 +10,18 @@ f1_keywords:
 - amp_graphics/Concurrency::graphics::direct3d::get_sampler
 - amp_graphics/Concurrency::graphics::direct3d::make_sampler
 - amp_graphics/Concurrency::graphics::direct3d::make_texture
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 11ee1d42-333e-4ae9-95ac-4cf68c06d13d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 63cf872bd5ade28115a0eac92304554f125c8dd5
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 97f03dbf71c0f8b97b750532279e4cc76d01fb64
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Concurrency::Graphics::Direct3D Namespace-Funktionen
 ||||  
@@ -50,7 +50,7 @@ IUnknown* get_sampler(
  Der IUnknown-Schnittstellenzeiger, der dem D3D-Samplerstatus entspricht, der den angegebenen Sampler darstellt.  
   
 ##  <a name="get_texture"></a>get_texture  
- Ruft die Direct3D-texturschnittstelle zugrunde liegenden angegebenen [Textur](texture-class.md) Objekt.  
+ Ruft die zugrunde liegende angegebenen Direct3D-texturschnittstelle [Textur](texture-class.md) Objekt.  
   
 ```  
 template<
@@ -134,7 +134,7 @@ texture<value_type, _Rank> make_texture(
  IUnknown-Schnittstellenzeiger der D3D-Textur zum Erstellen der Textur.  
   
  `_View_format`  
- Das DXGI-Format, das für Ansichten verwendet werden soll, die mit dieser Textur erstellt werden. Übergeben Sie DXGI_FORMAT_UNKNOWN (Standardeinstellung), um das Format des zugrunde liegenden Formats von _D3D_texture und dem Werttyp dieser Vorlage abzuleiten. Das bereitgestellte Format muss mit dem zugrunde liegenden Format von _D3D_texture kompatibel sein.  
+ Das DXGI-Format, das für Ansichten verwendet werden soll, die mit dieser Textur erstellt werden. Übergeben Sie DXGI_FORMAT_UNKNOWN (Standardeinstellung), um das Format aus der zugrunde liegenden Formats von _D3D_texture und die Value_type dieser Vorlage abzuleiten. Das bereitgestellte Format muss mit dem zugrunde liegenden Format von _D3D_texture kompatibel sein.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Eine Textur, die die bereitgestellte D3D-Textur verwendet.  
@@ -169,4 +169,3 @@ inline uint4 msad4(
 
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency::graphics::direct3d Namespace](concurrency-graphics-direct3d-namespace.md)
-

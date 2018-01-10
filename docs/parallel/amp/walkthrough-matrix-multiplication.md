@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8b66a95499c64970c31c7d71fe5dc43f1aa7854d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f91bed0b33ae29d7928ec7df3420eb4878b51eef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-matrix-multiplication"></a>Exemplarische Vorgehensweise: Matrixmultiplikation
 Befolgen Sie die exemplarische Vorgehensweise, um mithilfe von C++ AMP die Ausführung der Matrixmultiplikation zu beschleunigen. Es werden zwei Algorithmen vorgestellt, einer ohne und einer mit Tiling.  
@@ -39,7 +40,7 @@ Befolgen Sie die exemplarische Vorgehensweise, um mithilfe von C++ AMP die Ausf�
   
 3.  Wählen Sie **leeres Projekt**, geben Sie `MatrixMultiply` in der **Namen** ein, und wählen Sie dann die **OK** Schaltfläche.  
   
-4.  Wählen Sie die **Weiter** Schaltfläche.  
+4.  Klicken Sie auf **Weiter**.  
   
 5.  In **Projektmappen-Explorer**, öffnen Sie das Kontextmenü für **Quelldateien**, und wählen Sie dann **hinzufügen**, **neues Element**.  
   

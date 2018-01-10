@@ -1,57 +1,57 @@
 ---
-title: "IDL-Attribute, Assistent zum Hinzuf&#252;gen von Eigenschaften | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.prop.idlattributes"
-dev_langs: 
-  - "C++"
+title: "IDL-Attribute, Eigenschaft Assistent zum Hinzufügen | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.codewiz.prop.idlattributes
+dev_langs: C++
 ms.assetid: 356ed666-79d0-4bd9-a5e7-cda679cbadbd
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8ec158c117161c5a5c2ffd23cef0d5c79c312ae7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# IDL-Attribute, Assistent zum Hinzuf&#252;gen von Eigenschaften
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Verwenden Sie diese Seite des Assistenten zum Hinzufügen von Eigenschaften, um Einstellungen zur IDL \(Interface Definition Language\) für die Eigenschaft vorzunehmen.  
+# <a name="idl-attributes-add-property-wizard"></a>IDL-Attribute, Assistent zum Hinzufügen von Eigenschaften
+Verwenden Sie diese Seite des Assistenten zum Hinzufügen einer Eigenschaft, um alle Interface Definition Language (IDL)-Einstellungen für die Eigenschaft anzugeben.  
   
- **id**  
- Legt die numerische ID fest, durch die die Eigenschaft gekennzeichnet ist.  Diese Option ist für Eigenschaften von benutzerdefinierten Schnittstellen nicht verfügbar.  Weitere Informationen finden Sie in der *MIDL\- Referenz* unter [id](http://msdn.microsoft.com/library/windows/desktop/aa367040).  
+ **ID**  
+ Legt fest, die numerische ID, die die Eigenschaft identifiziert. Diese Option ist nicht für Eigenschaften von benutzerdefinierten Schnittstellen verfügbar. Finden Sie unter [Id](http://msdn.microsoft.com/library/windows/desktop/aa367040) in der *"MIDL" Referenz*.  
   
  **helpcontext**  
- Gibt eine Kontext\-ID an, über die der Benutzer Informationen zu dieser Eigenschaft in der Hilfedatei aufrufen kann.  Weitere Informationen finden Sie in der *MIDL\- Referenz* unter [helpcontext](http://msdn.microsoft.com/library/windows/desktop/aa366851).  
+ Gibt eine Kontext-ID, mit dem die Benutzerinformationen zu dieser Eigenschaft in der Hilfedatei. Finden Sie unter [Helpcontext](http://msdn.microsoft.com/library/windows/desktop/aa366851) in der *"MIDL" Referenz*.  
   
  **helpstring**  
- Gibt eine Zeichenfolge an, durch die das zugehörige Element beschrieben wird.  Sie lautet standardmäßig "property *Eigenschaftenname*". Weitere Informationen finden Sie in der *MIDL\- Referenz* unter [helpstring](http://msdn.microsoft.com/library/windows/desktop/aa366856).  
+ Gibt eine Zeichenfolge, die verwendet wird, um das Element zu beschreiben, auf dem es angewendet. Standardmäßig wird es auf festgelegt "-Eigenschaft *Eigenschaftsname*." Finden Sie unter [Helpstring](http://msdn.microsoft.com/library/windows/desktop/aa366856) in der *"MIDL" Referenz*.  
   
-## Weitere Optionen  
+## <a name="other-options"></a>Weitere Optionen  
  Nicht alle Optionen sind für alle Eigenschaftentypen verfügbar.  
   
 |Option|Beschreibung|  
-|------------|------------------|  
-|**bindable**|Gibt an, dass die Eigenschaft Datenbindungen unterstützt.  Weitere Informationen finden Sie in der *MIDL\- Referenz* unter [bindable](http://msdn.microsoft.com/library/windows/desktop/aa366738).  Bei der vordefinierten Implementierung der Eigenschaft wird diese Option standardmäßig festgelegt und kann nicht geändert werden.|  
-|**defaultbind**|Gibt an, dass diese einzelne **bindable**\-Eigenschaft das Objekt am besten darstellt.  Weitere Informationen finden Sie in der *MIDL\- Referenz* unter [defaultbind](http://msdn.microsoft.com/library/windows/desktop/aa366790).|  
-|**displaybind**|Gibt an, dass diese Eigenschaft dem Benutzer als **bindable**\-Eigenschaft angezeigt werden sollte.  Weitere Informationen finden Sie in der *MIDL\- Referenz* unter [displaybind](http://msdn.microsoft.com/library/windows/desktop/aa366804).|  
-|**immediatebind**|Gibt an, dass die Datenbank umgehend über alle Änderungen an dieser Eigenschaft eines datengebundenen Objekts benachrichtigt wird.  Weitere Informationen finden Sie in der *MIDL\- Referenz* unter [immediatebind](http://msdn.microsoft.com/library/windows/desktop/aa367045).|  
-|**defaultcollelem**|Gibt an, dass die Eigenschaft eine Accessorfunktion für ein Element der Standardauflistung ist.  Weitere Informationen finden Sie in der *MIDL\- Referenz* unter [defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792).|  
-|**nonbrowsable**|Kennzeichnet ein Schnittstellen\- oder Dispatchschnittstellen\-Element, das in einem Eigenschaftenbrowser nicht angezeigt werden sollte.  Weitere Informationen finden Sie in der *MIDL\- Referenz* unter [nonbrowsable](http://msdn.microsoft.com/library/windows/desktop/aa367117).|  
-|**requestedit**|Gibt an, dass die Eigenschaft die **OnRequestEdit**\-Benachrichtigung unterstützt. Weitere Informationen finden Sie in der *MIDL\- Referenz* unter [requestedit](http://msdn.microsoft.com/library/windows/desktop/aa367155).  Bei der vordefinierten Implementierung der Eigenschaft wird diese Option standardmäßig festgelegt und kann nicht geändert werden.|  
-|**source**|Gibt an, dass ein Element der Eigenschaft eine Ereignisquelle ist.  Weitere Informationen finden Sie in der *MIDL\- Referenz* unter [source](http://msdn.microsoft.com/library/windows/desktop/aa367166).|  
-|**hidden**|Gibt an, dass die Eigenschaft vorhanden ist, in einem benutzerorientierten Browser jedoch nicht angezeigt werden sollte.  Weitere Informationen finden Sie in der *MIDL\- Referenz* unter [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861).|  
-|**restricted**|Gibt an, dass die Eigenschaft nicht willkürlich aufgerufen werden kann.  Weitere Informationen finden Sie in der *MIDL\- Referenz* unter [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157).|  
-|`local`|Signalisiert dem MIDL\-Compiler, dass es sich nicht um eine Remoteeigenschaft handelt.  Weitere Informationen finden Sie in der *MIDL\- Referenz* unter [local](http://msdn.microsoft.com/library/windows/desktop/aa367071).|  
+|------------|-----------------|  
+|**bindable**|Gibt an, dass die Eigenschaft die Datenbindung unterstützt. Finden Sie unter [bindbare](http://msdn.microsoft.com/library/windows/desktop/aa366738) in der *"MIDL" Referenz*. Für die vordefinierten Implementierung der Eigenschaft diese Option ist standardmäßig festgelegt und kann nicht geändert werden.|  
+|**defaultbind**|Gibt an, dass dies die einfache, bindbare Eigenschaft bewährte darstellt das Objekt. Finden Sie unter [Defaultbind](http://msdn.microsoft.com/library/windows/desktop/aa366790) in der *"MIDL" Referenz*.|  
+|**displaybind**|Gibt an, dass diese Eigenschaft für den Benutzer als bindbar angezeigt werden soll. Finden Sie unter [Displaybind](http://msdn.microsoft.com/library/windows/desktop/aa366804) in der *"MIDL" Referenz*.|  
+|**immediatebind**|Gibt an, dass die Datenbank sofort alle Änderungen an dieser Eigenschaft eines Objekts von datengebundenen benachrichtigt wird. Finden Sie unter [Immediatebind](http://msdn.microsoft.com/library/windows/desktop/aa367045) in der *"MIDL" Referenz*.|  
+|**defaultcollelem**|Gibt an, dass die Eigenschaft eine Accessorfunktion für ein Element von der standardauflistung ist. Finden Sie unter [Defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792) in der *"MIDL" Referenz*.|  
+|**nonbrowsable**|Setzt einen Tag einer Schnittstelle oder Disp-Element, das nicht in einem Eigenschaftenbrowser angezeigt werden soll. Finden Sie unter [Nonbrowsable](http://msdn.microsoft.com/library/windows/desktop/aa367117) in der *"MIDL" Referenz*.|  
+|**requestedit**|Gibt an, dass die Eigenschaft unterstützt die **OnRequestEdit** Benachrichtigung finden Sie unter [Requestedit](http://msdn.microsoft.com/library/windows/desktop/aa367155) in der *"MIDL" Referenz*. Für die vordefinierten Implementierung der Eigenschaft diese Option ist standardmäßig festgelegt und kann nicht geändert werden.|  
+|**Datenquelle**|Gibt an, dass ein Element der Eigenschaft eine Quelle von Ereignissen ist. Finden Sie unter [Quelle](http://msdn.microsoft.com/library/windows/desktop/aa367166) in der *"MIDL" Referenz*.|  
+|**hidden**|Gibt an, dass die Eigenschaft vorhanden ist, aber nicht in einem Browser benutzerorientierte angezeigt werden soll. Finden Sie unter [ausgeblendete](http://msdn.microsoft.com/library/windows/desktop/aa366861) in der *"MIDL" Referenz*.|  
+|**restricted**|Gibt an, dass die Eigenschaft nach dem Zufallsprinzip aufgerufen werden kann. Finden Sie unter [eingeschränkte](http://msdn.microsoft.com/library/windows/desktop/aa367157) in der *"MIDL" Referenz*.|  
+|`local`|Gibt die MIDL-Compiler, dass die Eigenschaft nicht remote ist. Finden Sie unter [lokale](http://msdn.microsoft.com/library/windows/desktop/aa367071) in der *"MIDL" Referenz*.|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Hinzufügen einer Eigenschaft](../ide/adding-a-property-visual-cpp.md)   
- [Namen, Assistent zum Hinzufügen von Eigenschaften](../ide/names-add-property-wizard.md)   
+ [Namen, hinzufügen Eigenschaft Assistent zum](../ide/names-add-property-wizard.md)   
  [Implementieren einer Schnittstelle](../ide/implementing-an-interface-visual-cpp.md)   
  [Basiseigenschaften](../ide/stock-properties.md)
