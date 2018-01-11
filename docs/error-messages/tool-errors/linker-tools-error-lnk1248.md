@@ -1,29 +1,27 @@
 ---
-title: "Linkertoolfehler LNK1248 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1248"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1248"
-ms.assetid: bcddf9e5-d6df-474c-a207-af28d086f491
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+title: Linkertoolfehler Lnk1248 | Microsoft Docs
+ms.custom: 
+ms.date: 12/28/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1248
+dev_langs: C++
+helpviewer_keywords: LNK1248
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: cb5c1792fa86636a72d492c86170a20bdce19309
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/03/2018
 ---
-# Linkertoolfehler LNK1248
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="linker-tools-error-lnk1248"></a>Linkertoolfehler LNK1248
 
-Gesamtgröße der ausführbaren Datei \('Größe'\) überschreitet den Maximalwert \(80000000\)  
-  
- Der Linker hat festgestellt, dass die maximal zulässige Größe für ein Programmabbild von der Größe der Ausgabedatei überschritten wird.  Sie können das Programm in mehrere DLLs unterteilen.  Weitere Informationen zur ausführbaren Programmdatei \(PE\), finden Sie im Artikel ", in der PE\-Datei zu blicken: Einführung des Stils the Win32 Portable Executable File in [MSDN Library](http://go.microsoft.com/fwlink/?linkid=556) Datei".
+> bildanforderungen ("*Größe*") überschreitet die maximal zulässige Größe (80000000)
+
+Der Linker hat festgestellt, dass die Größe der Ausgabedatei die maximal zulässige Größe für ein 32-Bit-Programm-Image überschreitet. Sie möchten das Programm mit mehreren DLLs machen.

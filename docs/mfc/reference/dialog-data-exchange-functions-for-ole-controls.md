@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,22 +20,21 @@ f1_keywords:
 - AFXDISP/DDX_OCShortRO
 - AFXDISP/DDX_OCText
 - AFXDISP/DDX_OCTextRO
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - OLE controls [MFC], DDX functions
 - DDX (dialog data exchange), OLE support
 ms.assetid: 7ef1f288-ff65-40d4-aad2-5497bc00bb27
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ad97690ca948525e9a0920d087e4dfd617a11b4d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 9c0629e57c518334b84ed3110e3dab14a5d259fc
-ms.contentlocale: de-de
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>Dialogdatenaustausch-Funktionen für OLE-Steuerelemente
 Dieses Thema listet die DDX_OC-Funktionen, die zum Austausch von Daten zwischen einer Eigenschaft eines OLE-Steuerelements in einem Dialogfeld, Formularansicht oder steuerungsansichtsobjekts und einen Datenmember des (Dialogfeld), in der Formularansicht oder steuerungsansichtsobjekt.  
@@ -79,7 +77,7 @@ void AFXAPI DDX_OCBool(
  `dispid`  
  Die Verteiler-ID einer Eigenschaft des Steuerelements.  
   
- *value*  
+ *Wert*  
  Ein Verweis auf eine Membervariable des Dialogfelds, Formularansichts- oder Steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -109,7 +107,7 @@ void AFXAPI DDX_OCBoolRO(
  `dispid`  
  Die Verteiler-ID einer Eigenschaft des Steuerelements.  
   
- *value*  
+ *Wert*  
  Ein Verweis auf eine Membervariable des Dialogfelds, Formularansichts- oder Steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -139,7 +137,7 @@ void AFXAPI DDX_OCColor(
  `dispid`  
  Die Verteiler-ID einer Eigenschaft des Steuerelements.  
   
- *value*  
+ *Wert*  
  Ein Verweis auf eine Membervariable des Dialogfelds, Formularansichts- oder Steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -169,7 +167,7 @@ void AFXAPI DDX_OCColorRO(
  `dispid`  
  Die Verteiler-ID einer Eigenschaft des Steuerelements.  
   
- *value*  
+ *Wert*  
  Ein Verweis auf eine Membervariable des Dialogfelds, Formularansichts- oder Steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -205,7 +203,7 @@ void AFXAPI DDX_OCFloat(
  `dispid`  
  Die Verteiler-ID einer Eigenschaft des Steuerelements.  
   
- *value*  
+ *Wert*  
  Ein Verweis auf eine Membervariable des Dialogfelds, Formularansichts- oder Steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -241,7 +239,7 @@ void AFXAPI DDX_OCFloatRO(
  `dispid`  
  Die Verteiler-ID einer Eigenschaft des Steuerelements.  
   
- *value*  
+ *Wert*  
  Ein Verweis auf eine Membervariable des Dialogfelds, Formularansichts- oder Steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -277,7 +275,7 @@ void AFXAPI DDX_OCInt(
  `dispid`  
  Die Verteiler-ID einer Eigenschaft des Steuerelements.  
   
- *value*  
+ *Wert*  
  Ein Verweis auf eine Membervariable des Dialogfelds, Formularansichts- oder Steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -313,7 +311,7 @@ void AFXAPI DDX_OCIntRO(
  `dispid`  
  Die Verteiler-ID einer Eigenschaft des Steuerelements.  
   
- *value*  
+ *Wert*  
  Ein Verweis auf eine Membervariable des Dialogfelds, Formularansichts- oder Steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -343,7 +341,7 @@ void AFXAPI DDX_OCShort(
  `dispid`  
  Die Verteiler-ID einer Eigenschaft des Steuerelements.  
   
- *value*  
+ *Wert*  
  Ein Verweis auf eine Membervariable des Dialogfelds, Formularansichts- oder Steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -373,7 +371,7 @@ void AFXAPI DDX_OCShortRO(
  `dispid`  
  Die Verteiler-ID einer Eigenschaft des Steuerelements.  
   
- *value*  
+ *Wert*  
  Ein Verweis auf eine Membervariable des Dialogfelds, Formularansichts- oder Steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -403,7 +401,7 @@ void AFXAPI DDX_OCText(
  `dispid`  
  Die Verteiler-ID einer Eigenschaft des Steuerelements.  
   
- *value*  
+ *Wert*  
  Ein Verweis auf eine Membervariable des Dialogfelds, Formularansichts- oder Steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -433,7 +431,7 @@ void AFXAPI DDX_OCTextRO(
  `dispid`  
  Die Verteiler-ID einer Eigenschaft des Steuerelements.  
   
- *value*  
+ *Wert*  
  Ein Verweis auf eine Membervariable des Dialogfelds, Formularansichts- oder Steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -444,4 +442,3 @@ void AFXAPI DDX_OCTextRO(
     
 ## <a name="see-also"></a>Siehe auch  
  [Makros und globale Variablen](../../mfc/reference/mfc-macros-and-globals.md)
-

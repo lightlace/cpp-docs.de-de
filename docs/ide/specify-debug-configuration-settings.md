@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1781d5c5bba0d818111673594a5526354a490bd7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ec7d357d53cb93ad5ba81c02fc3ccf1931cdd1cf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specify-debug-configuration-settings-create-new-project-from-existing-code-files-wizard"></a>Einstellungen für Debugkonfiguration angeben, Assistent "Neues Projekt aus vorhandenen Codedateien erstellen"
 Verwenden Sie diese Seite des Assistenten für neue Projekt aus vorhandenen Codedateien erstellen, um Einstellungen für Debugkonfiguration Projekt anzugeben.  
@@ -40,7 +41,7 @@ Verwenden Sie diese Seite des Assistenten für neue Projekt aus vorhandenen Code
  Gibt den Pfad der Ausgabedateien für die Debugkonfiguration des neuen Projekts an. Diese Option ist bei der **externe Buildsystem** ausgewählt ist die **Projekteinstellungen angeben** Seite; andernfalls ist es nicht verfügbar.  
   
  **Präprozessordefinitionen (/ D)**  
- Definiert Präprozessorsymbole für das neue Projekt. Weitere Informationen finden Sie unter [/D (Präprozessordefinitionen)](../build/reference/d-preprocessor-definitions.md).  
+ Definiert Präprozessorsymbole für das neue Projekt. Weitere Informationen finden Sie unter [/D (Preprocessor Definitions)](../build/reference/d-preprocessor-definitions.md).  
   
  **Suchpfad einschließen (/ I)**  
  Gibt die Verzeichnispfade zum Hinzufügen zur Liste der Verzeichnisse, die der Compiler durchsucht, um Dateiverweise aufzulösen, Präprozessordirektiven im neuen Projekt übergeben. Weitere Informationen finden Sie unter [/I (Zusätzliche Includeverzeichnisse)](../build/reference/i-additional-include-directories.md).  

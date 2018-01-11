@@ -27,11 +27,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f78c167bc2692309c657b591bb22e68dde328e71
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8bb903bb38194be5b6a72f27ed683e965d7605b4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmetafiledc-class"></a>CMetaFileDC-Klasse
 Implementiert eine Windows-Metadatei, die eine Sequenz von Graphics Device Interface (GDI)-Befehlen enthält, dass Sie wiedergeben können, um ein gewünschtes Bild oder einen Text zu erstellen.  
@@ -42,7 +43,7 @@ Implementiert eine Windows-Metadatei, die eine Sequenz von Graphics Device Inter
 class CMetaFileDC : public CDC  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -191,7 +192,7 @@ BOOL CreateEnhanced(
   
  Windows verwendet, das Referenzgerät identifizierte der `pDCRef` Parameter aufzeichnen, die Auflösung und Einheiten des Geräts, auf denen ein Bild ursprünglich angezeigt wurden. Wenn die `pDCRef` Parameter ist **NULL**, das aktuellen Anzeigegerät zu Referenzzwecken verwendet.  
   
- Der linke und obere Mitglieder der `RECT` Datenstruktur verweist die `lpBounds` Parameter muss kleiner sein als die Rechte und untere Elemente bzw.. In der Abbildung sind Punkte an den Rändern des Rechtecks enthalten. Wenn `lpBounds` ist **NULL**, die Graphics Device Interface (GDI) berechnet, die Dimensionen der das kleinste Rechteck befindet, die das Bild gezeichnet wird, von der Anwendung einschließen können. Die `lpBounds` -Parameter muss bereitgestellt werden, sofern möglich.  
+ Der linke und obere Mitglieder der `RECT` Datenstruktur verweist die `lpBounds` Parameter muss kleiner sein als die Rechte und untere Elemente bzw. In der Abbildung sind Punkte an den Rändern des Rechtecks enthalten. Wenn `lpBounds` ist **NULL**, die Graphics Device Interface (GDI) berechnet, die Dimensionen der das kleinste Rechteck befindet, die das Bild gezeichnet wird, von der Anwendung einschließen können. Die `lpBounds` -Parameter muss bereitgestellt werden, sofern möglich.  
   
  Die Zeichenfolge verweist die `lpszDescription` Parameter muss zwischen den Namen der Anwendung und den Namen des Bilds ein Null-Zeichen enthalten und muss beendet, und zwei Null-Zeichen – z. B. "XYZ Grafiken Editor\0Bald Eagle\0\0," \0, in dem das Null-Zeichen darstellt Zeichen. Wenn `lpszDescription` ist **NULL**, es gibt keinen entsprechenden Eintrag im EMF-Header.  
   

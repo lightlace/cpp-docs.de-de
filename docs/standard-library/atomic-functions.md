@@ -37,7 +37,7 @@ f1_keywords:
 - atomic/std::atomic_thread_fence
 - atomic/std::kill_dependency
 ms.assetid: 5c53b4f8-6ff5-47d7-beb2-2d6ee3c6ea89
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -71,12 +71,12 @@ helpviewer_keywords:
 - std::atomic_store_explicit [C++]
 - std::atomic_thread_fence [C++]
 - std::kill_dependency [C++]
+ms.workload: cplusplus
+ms.openlocfilehash: 232333280ae44838b0afd41bf0e00255d8a78dc7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 75dff27cd050ae1a218cb8d61abaffff05d38661
-ms.contentlocale: de-de
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltatomicgt-functions"></a>&lt;atomic&gt;-Funktionen
 ||||  
@@ -643,7 +643,7 @@ inline void atomic_flag_clear(atomic_flag* Flag) noexcept;
   
 ### <a name="parameters"></a>Parameter  
  `Flag`  
- Ein Zeiger auf ein `atomic_flag`-Objekt.  
+ Ein Zeiger auf ein `atomic_flag` -Objekt.  
   
 ##  <a name="atomic_flag_clear_explicit"></a> atomic_flag_clear_explicit  
  Legt das `bool`-Flag in einem [atomic_flag](../standard-library/atomic-flag-structure.md)-Objekt innerhalb der angegebenen [memory_order](../standard-library/atomic-enums.md#memory_order_enum)-Einschränkungen auf `false` fest.  
@@ -655,7 +655,7 @@ inline void atomic_flag_clear_explicit(atomic_flag* Flag, memory_order Order) no
   
 ### <a name="parameters"></a>Parameter  
  `Flag`  
- Ein Zeiger auf ein `atomic_flag`-Objekt.  
+ Ein Zeiger auf ein `atomic_flag` -Objekt.  
   
  `Order`  
  Ein [memory_order](../standard-library/atomic-enums.md#memory_order_enum).  
@@ -685,7 +685,7 @@ inline bool atomic_flag_test_and_set_explicit(atomic_flag* Flag, memory_order Or
   
 ### <a name="parameters"></a>Parameter  
  `Flag`  
- Ein Zeiger auf ein `atomic_flag`-Objekt.  
+ Ein Zeiger auf ein `atomic_flag` -Objekt.  
   
  `Order`  
  Ein [memory_order](../standard-library/atomic-enums.md#memory_order_enum).  
@@ -886,7 +886,6 @@ Ty kill_dependency(Ty Arg) noexcept;
   
 ## <a name="see-also"></a>Siehe auch  
  [\<atomic>](../standard-library/atomic.md)
-
 
 
 

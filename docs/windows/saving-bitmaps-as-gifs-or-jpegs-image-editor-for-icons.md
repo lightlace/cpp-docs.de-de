@@ -1,63 +1,66 @@
 ---
-title: "Saving Bitmaps as GIFs or JPEGs (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.image.editing"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".gif files, saving bitmaps as"
-  - "jpg files, saving bitmaps as"
-  - "jpeg files, saving bitmaps as"
-  - ".jpg files, saving bitmaps as"
-  - "Image editor [C++], converting image formats"
-  - "gif files, saving bitmaps as"
-  - "bitmaps [C++], converting formats"
-  - ".jpeg files, saving bitmaps as"
-  - "graphics [C++], converting formats"
-  - "images [C++], converting formats"
+title: "Speichern von Bitmaps als GIFs oder JPEGs (Bildbearbeitung für Symbole) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.image.editing
+dev_langs: C++
+helpviewer_keywords:
+- .gif files, saving bitmaps as
+- jpg files, saving bitmaps as
+- jpeg files, saving bitmaps as
+- .jpg files, saving bitmaps as
+- Image editor [C++], converting image formats
+- gif files, saving bitmaps as
+- bitmaps [C++], converting formats
+- .jpeg files, saving bitmaps as
+- graphics [C++], converting formats
+- images [C++], converting formats
 ms.assetid: 115df69f-10fb-4e6f-906b-853c1e4a54af
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f3fe626357283dde8d8f283c6d0aa406ec6c1db0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Saving Bitmaps as GIFs or JPEGs (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Wenn Sie eine Bitmap erstellen, wird das Bild im Bitmapformat \(**.bmp**\) angelegt.  Sie können das Bild jedoch auch als GIF\- oder JPEG\-Datei bzw. in anderen Grafikformaten speichern.  
+# <a name="saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons"></a>Speichern von Bitmaps als GIFs oder JPEGs (Bildbearbeitung für Symbole)
+Wenn Sie eine Bitmap erstellen, wird das Bild im Bitmapformat (BMP) erstellt. Sie können jedoch das Bild als GIF- oder JPEG oder in anderen Formaten Grafiken speichern.  
   
 > [!NOTE]
->  Dieses Verfahren kann weder auf Symbole noch auf Cursor angewendet werden.  
+>  Dieser Prozess gilt nicht für Symbole und Cursor.  
   
-### So erstellen und speichern Sie eine Bitmap als GIF\- oder JPEG\-Datei  
+### <a name="to-create-and-save-a-bitmap-as-a-gif-or-jpeg"></a>Zum Erstellen und speichern eine Bitmap als GIF- oder JPEG  
   
-1.  Wählen Sie im Menü **Datei** den Befehl **Öffnen**, und klicken Sie dann auf **Datei**.  
+1.  Aus der **Datei** Menü wählen **öffnen**, klicken Sie dann auf **Datei**.  
   
-2.  Klicken Sie im **Dialogfeld "Neue Datei"** auf den Ordner **Visual C\+\+**, wählen Sie dann im Feld **Vorlagen** den Eintrag **Bitmapdatei \(.bmp\)** aus, und klicken Sie auf **Öffnen**.  
+2.  In der **Dialogfeld neue Datei**, klicken Sie auf die **Visual C++** Ordner, wählen Sie dann **Bitmapdatei (BMP)** in der **Vorlagen** Feld, und klicken Sie auf  **Open**.  
   
-     Die Bitmap wird im Grafik\-Editor geöffnet.  
+     Die Bitmap wird geöffnet, der **Image** Editor.  
   
-3.  Nehmen Sie ggf. Änderungen an der neuen Bitmap vor.  
+3.  Nehmen Sie Änderungen an der neuen Bitmap, nach Bedarf.  
   
-4.  Klicken Sie im Menü **Datei** auf **Speichern *Dateiname*.bmp unter**, während die Bitmap im **Grafik**\-Editor geöffnet ist.  
+4.  Mit der Bitmap, die noch geöffnet, in der **Image** -Editor, klicken Sie auf **speichern *Filename*BMP als** auf die **Datei** Menü.  
   
-5.  Geben Sie im Dialogfeld **Datei speichern unter** den Dateinamen sowie die Erweiterung ein, die im Feld **Dateiname** für das Dateiformat angezeigt werden soll.  Beispiel: **MeineDatei.gif**.  
+5.  In der **Datei speichern unter** Dialogfeld Geben Sie den Namen, die auf die Datei und die Erweiterung, die das Dateiformat bezeichnet, Sie in möchten, erhalten sollen die **Dateiname** Feld. Zum Beispiel: MeineDatei.gif.  
   
-     **Hinweis** Damit die Bitmap in einem anderen Dateiformat gespeichert werden kann, muss sie außerhalb des Projekts erstellt oder geöffnet werden.  Wenn Sie die Bitmap im Projekt erstellen oder öffnen, kann der Befehl **Speichern unter** nicht ausgewählt werden.  Weitere Informationen finden Sie unter [Öffnen einer Ressourcenskriptdatei außerhalb eines Projekts \(eigenständig\)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
+     **Hinweis** müssen Sie erstellen oder öffnen Sie die Bitmap außerhalb von Ihrem Projekt, um ihn als ein anderes Dateiformat zu speichern. Wenn Sie beim Erstellen oder öffnen Sie diese in Ihrem Projekt die **speichern unter** Befehl ist nicht verfügbar. Weitere Informationen finden Sie unter [Anzeigen von Ressourcen eine Ressource außerhalb eines Projekts (eigenständig)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
   
 6.  Klicken Sie auf **Speichern**.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
   
-## Siehe auch  
- [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>Siehe auch  
+ [Bearbeiten von Grafischen Ressourcen](../windows/editing-graphical-resources-image-editor-for-icons.md)   
+ [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)
+

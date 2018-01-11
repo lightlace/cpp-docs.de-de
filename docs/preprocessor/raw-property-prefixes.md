@@ -15,11 +15,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: aec8daa33e5fc734168bcb3096c4111536250c68
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 190a7ce7fbca4fea477771b5c125c96ecc187216
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rawpropertyprefixes"></a>raw_property_prefixes
 **C++-spezifisch**  
@@ -43,7 +44,7 @@ raw_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")
  Präfix für die **Propputref** Methoden.  
   
 ## <a name="remarks"></a>Hinweise  
- Standardmäßig auf niedriger Ebene **Propget**, **Propput**, und **Propputref** Methoden sind Namen mit Präfixen von Memberfunktionen verfügbar **Get_**, **Put_**, und **Putref_** bzw.. Diese Präfixe sind kompatibel mit den Namen, die in den Headerdateien verwendet werden, die von MIDL generiert werden.  
+ Standardmäßig auf niedriger Ebene **Propget**, **Propput**, und **Propputref** Methoden sind Namen mit Präfixen von Memberfunktionen verfügbar **Get_**, **Put_**, und **Putref_** bzw. Diese Präfixe sind kompatibel mit den Namen, die in den Headerdateien verwendet werden, die von MIDL generiert werden.  
   
  **Ende C++-spezifisch**  
   

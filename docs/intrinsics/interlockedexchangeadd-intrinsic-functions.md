@@ -66,11 +66,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 77d1703c1cf9cf5922ee6b3ab58cddca7bbef600
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 59fc9bb5118a7bcb75a25407799e7e3c194ecde9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interlockedexchangeadd-intrinsic-functions"></a>Intrinsische Funktionen „_InterlockedExchangeAdd“
 **Microsoft-spezifisch**  

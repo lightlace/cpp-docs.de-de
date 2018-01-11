@@ -1,51 +1,50 @@
 ---
-title: "Assistent zum Implementieren von Verbindungspunkten | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.impl.cp.overview"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Assistent zum Implementieren von Verbindungspunkten [C++]"
+title: Verbindung Assistent zum Implementieren von | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.codewiz.impl.cp.overview
+dev_langs: C++
+helpviewer_keywords: Implement Connection Point Wizard [C++]
 ms.assetid: c117f6c6-30f0-4adb-82b4-b1f34e0f0fa8
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f29b4f25d937c2f538373ff85819f7315150e712
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Assistent zum Implementieren von Verbindungspunkten
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Mit diesem Assistenten implementieren Sie einen Verbindungspunkt für ein COM\-Objekt.  Ein verbindungsfähiges Objekt \(d. h. eine Quelle\) kann für seine eigenen Schnittstellen oder für beliebige Ausgangsschnittstellen einen Verbindungspunkt zur Verfügung stellen.  Sowohl Visual C\+\+ als auch Windows bieten Typbibliotheken mit Ausgangsschnittstellen.  Jede Ausgangsschnittstelle kann von einem Client für ein Objekt \(d. h. eine Senke\) implementiert werden.  
+# <a name="implement-connection-point-wizard"></a>Assistent zum Implementieren von Verbindungspunkten
+Dieser Assistent implementiert einen Verbindungspunkt für ein COM-Objekt. Ein verbindungsfähiges Objekt (d. h. eine Quelle) kann einen Verbindungspunkt für seine eigenen Schnittstellen oder für jede Ausgangsschnittstelle verfügbar machen. Geben Sie sowohl Visual C++ als auch Windows Typbibliotheken, die Ausgangsschnittstellen haben. Jede Ausgangsschnittstelle kann von einem Client auf ein Objekt (d. h. eine Senke) implementiert werden.  
   
- Weitere Informationen finden Sie unter [ATL\-Verbindungspunkte](../atl/atl-connection-points.md).  
+ Weitere Informationen finden Sie unter [ATL-Verbindungspunkte](../atl/atl-connection-points.md).  
   
  **Verfügbare Typbibliotheken**  
- Zeigt die verfügbaren Typbibliotheken mit Schnittstellendefinitionen an, für die Sie Verbindungspunkte implementieren können.  Klicken Sie auf die Schaltfläche mit den Auslassungspunkten \(...\), um eine Datei zu suchen, die die gewünschte Typbibliothek enthält.  
+ Zeigt die verfügbaren Typbibliotheken, enthält die Schnittstellendefinitionen, die für die Verbindungspunkte implementiert werden können. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um eine Datei mit der Typbibliothek verwenden suchen.  
   
  **Speicherort**  
- Zeigt den Speicherort der Typbibliothek an, die derzeit in der Liste **Verfügbare Typbibliotheken** markiert ist.  
+ Zeigt den Speicherort der Typbibliothek, die derzeit im ausgewählten der **verfügbaren Typbibliotheken** Liste.  
   
  **Schnittstellen**  
- Zeigt die Schnittstellen an, deren Definitionen in der Typbibliothek enthalten sind, die derzeit im Feld **Verfügbare Typbibliotheken** markiert ist.  
+ Zeigt die Schnittstellen, deren Definitionen werden in der Typbibliothek, die derzeit im ausgewählten enthalten, die **verfügbaren Typbibliotheken** Feld.  
   
-|Übertragungsschaltfläche|Beschreibung|  
-|------------------------------|------------------|  
-|**\>**|Fügt der Liste **Verbindungspunkte implementieren** den Schnittstellennamen hinzu, der derzeit in der Liste **Schnittstellen** markiert ist.|  
-|**\>\>**|Fügt der Liste **Verbindungspunkte implementieren** alle Schnittstellennamen hinzu, die derzeit in der Liste **Schnittstellen** verfügbar sind.|  
-|**\<**|Entfernt den derzeit markierten Schnittstellennamen aus der Liste **Verbindungspunkte implementieren**.|  
-|**\<\<**|Entfernt alle derzeit in der Liste **Verbindungspunkte implementieren** enthaltenen Schnittstellennamen.|  
+|Übertragen Sie die Schaltfläche|Beschreibung|  
+|---------------------|-----------------|  
+|**>**|Hinzugefügt, die **Implementieren von Verbindungspunkten** Liste der derzeit im ausgewählten Schnittstellenname der **Schnittstellen** Liste.|  
+|**>>**|Hinzugefügt, die **Implementieren von Verbindungspunkten** Liste alle Schnittstellennamen in verfügbaren der **Schnittstellen** Liste.|  
+|**<**|Entfernt die derzeit im ausgewählten Schnittstelle die **Implementieren von Verbindungspunkten** Liste.|  
+|**<<**|Entfernt alle derzeit aufgeführt Schnittstellennamen, der **Implementieren von Verbindungspunkten** Liste.|  
   
- **Verbindungspunkte implementieren**  
- Zeigt die Namen der Schnittstellen an, für die Verbindungspunkte implementiert werden, nachdem Sie auf **Fertig stellen** geklickt haben.  
+ **Implementieren von Verbindungspunkten**  
+ Zeigt die Namen der Schnittstellen, die für die Sie Verbindungspunkte implementieren, wenn Sie auf **Fertig stellen**.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Implementieren eines Verbindungspunktes](../ide/implementing-a-connection-point-visual-cpp.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c438a6c3e1891a7ffa85445355d5b08a3f79f2a8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 12ae5d682515a6f266b7e41a2ff89148ea98c0b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="word-breaks-in-rich-edit-controls"></a>Wortumbrüche in RichEdit-Steuerelementen
 Ein Rich-edit-Steuerelement ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) Ruft eine Funktion mit dem Namen einer Prozedur"Break Word" Umbrüche zwischen Wörtern zu suchen und bestimmen, in denen Zeilen unterbrochen werden kann. Das Steuerelement verwendet diese Informationen, wenn Zeilenumbruch Vorgänge ausgeführt, und bei der Verarbeitung der Tastenkombination STRG + nach-links- und STRG + nach-rechts. Eine Anwendung kann senden Nachrichten an ein rich-Edit-Steuerelement, ersetzen Sie die standardmäßige Wortumbrüchen Prozedur, um Wortumbrüchen Informationen abzurufen und um zu bestimmen, was ein angegebenes Zeichen Zeile liegt.  

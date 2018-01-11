@@ -1,30 +1,30 @@
 ---
-title: "2.6.1 master Construct"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.6.1 master-Konstrukt | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: c092064b-ea57-4d4e-9c99-a004d65656fe
-caps.latest.revision: 5
-caps.handback.revision: "5"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2517e19b49f1314e7432bb265756193ea3bb8f91
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# 2.6.1 master Construct
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die **Master**\-Direktive identifizieren ein Konstrukt, das einen strukturierten Block angibt, der vom Masterthread des Teams ausgeführt wird.  Die Syntax der **Master**\-Direktive sieht wie folgt aus:  
+# <a name="261-master-construct"></a>2.6.1 master-Konstrukt
+Die **master** Richtlinie identifiziert ein Konstrukt, das einem strukturierten Block gibt an, die durch die master-Thread der vom Team ausgeführt wird. Die Syntax der **master** Richtlinie lautet wie folgt:  
   
 ```  
-#pragma omp master new-line  
-   structured-block  
+#pragma omp master new-linestructured-block  
 ```  
   
- Andere Threads im Team den nicht strukturierten zugeordneten Block übergeben.  Es gibt keine implizite Grenze entweder ein Eintrag aus dem Beenden oder Vorlagen konstrukt.
+ Andere Threads in das Team den zugeordneten strukturierten Block nicht ausgeführt. Es gibt keine implizite Barriere entweder bei eintritt, oder Beenden der master-Konstrukt.

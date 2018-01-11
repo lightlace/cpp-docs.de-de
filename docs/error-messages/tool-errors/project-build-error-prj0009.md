@@ -1,43 +1,42 @@
 ---
-title: "Projektbuildfehler PRJ0009 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0009"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0009"
+title: Projektbuildfehler prj0009 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0009
+dev_langs: C++
+helpviewer_keywords: PRJ0009
 ms.assetid: 89291778-cda4-495d-983f-ddcc06dfc98b
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0ee183c24cf330b54a335efbd0bbe2b00e18d209
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Projektbuildfehler PRJ0009
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-In das Buildprotokoll konnte nicht geschrieben werden.  
+# <a name="project-build-error-prj0009"></a>Projektbuildfehler PRJ0009
+Erstellen Sie Protokoll konnte nicht zum Schreiben geöffnet werden.  
   
- **Stellen Sie sicher, dass die Datei nicht durch einen anderen Prozess geöffnet und nicht schreibgeschützt ist.**  
+ **Stellen Sie sicher, dass die Datei nicht von einem anderen Prozess geöffnet ist und nicht schreibgeschützt.**  
   
- Nachdem Sie die Eigenschaft **Buildprotokollierung** auf **Ja** gesetzt und ein Build oder ein Rebuild erstellt haben, konnte das Buildprotokoll von Visual C\+\+ nicht im exklusiven Modus geöffnet werden.  
+ Nach dem Festlegen der **Buildprotokollierung** Eigenschaft **Ja** und Durchführen einer Erstellung oder Neuerstellung, Visual C++ konnte das Buildprotokoll im exklusiven Modus öffnen.  
   
- Überprüfen Sie die Einstellung **Buildprotokollierung**, indem Sie das Dialogfeld **Optionen** öffnen \(klicken Sie im Menü **Extras** auf den Befehl **Optionen**\) und dann im Ordner **Projekte** die Option **VC\+\+\-Build** auswählen.  Die Builddatei hat die Bezeichnung **BuildLog.htm** und wird in das Zwischenverzeichnis **$\(IntDir\)** geschrieben.  
+ Überprüfen der **Buildprotokollierung** öffnen, indem die **Optionen** (Dialogfeld) (auf der **Tools** Menü klicken Sie auf **Optionen** Befehl) und dann Auswählen von **VC++-Build** in der **Projekte** Ordner. Die Builddatei "BuildLog.htm" aufgerufen wird und die Zwischenverzeichnis $(intdir) geschrieben.  
   
- Folgende Gründe können für diesen Fehler vorliegen:  
+ Mögliche Ursachen für diesen Fehler:  
   
--   Sie führen zwei Visual C\+\+\-Prozesse parallel aus und versuchen, in beiden Prozessen eine identische Konfiguration desselben Projekts gleichzeitig zu erstellen.  
+-   Sie sind zwei Prozesse von Visual C++ und die gleiche Konfiguration des gleichen Projekts in beiden gleichzeitig erstellen möchten.  
   
--   Die Buildprotokolldatei wird in einem Prozess geöffnet, durch den die Datei gesperrt ist.  
+-   Die Buildprotokolldatei aufgenommen wird in einem Prozess geöffnet, die die Datei sperrt.  
   
--   Der Benutzer hat keine Berechtigung zum Erstellen einer Datei.  
+-   Der Benutzer nicht über die Berechtigung zum Erstellen einer Datei.  
   
--   Der aktuelle Benutzer hat keinen Schreibzugriff auf die Datei **BuildLog.htm**.
+-   Der aktuelle Benutzer besitzt nicht den Schreibzugriff auf die Datei "BuildLog.htm".

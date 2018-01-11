@@ -1,29 +1,30 @@
 ---
-title: "1.6 Organization"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 1.6 Organisation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 80c6c3a4-3b08-4b0b-a25d-7ca9b1afcaa7
-caps.latest.revision: 8
-caps.handback.revision: "8"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d4fbe9cb104d8318f603994b3b2582ed28ac85db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# 1.6 Organization
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
--   Laufzeitbibliotheksfunktionen \([Weitere Informationen finden Sie unter Chapter 3](../../parallel/openmp/3-run-time-library-functions.md)\).  
+# <a name="16-organization"></a>1.6 Organization
+-   Run-Time Library-Funktionen ([finden Sie in Kapitel 3](../../parallel/openmp/3-run-time-library-functions.md)).  
   
--   Umgebungsvariablen \([Weitere Informationen finden Sie unter Chapter 4](../../parallel/openmp/4-environment-variables.md)\).  
+-   Umgebungsvariablen ([finden Sie in Kapitel 4](../../parallel/openmp/4-environment-variables.md)).  
   
--   Implementierung\-definiertes OpenMP Verhalten in[finden Sie im Anhang E](../../parallel/openmp/e-implementation-defined-behaviors-in-openmp-c-cpp.md)\(C\/C\+\+\).  
+-   Die Implementierung definiertes Verhalten in OpenMP-C-/C++ ([finden Sie im Anhang E](../../parallel/openmp/e-implementation-defined-behaviors-in-openmp-c-cpp.md)).  
   
--   Neue Funktionen in Version 2.0 \([finden Sie im Anhang F](../../parallel/openmp/f-new-features-and-clarifications-in-version-2-0.md)\) OpenMPs C\/C\+\+.
+-   Neue Funktionen in OpenMP-C-/C++-Version 2.0 ([finden Sie in Anhang F](../../parallel/openmp/f-new-features-and-clarifications-in-version-2-0.md)).

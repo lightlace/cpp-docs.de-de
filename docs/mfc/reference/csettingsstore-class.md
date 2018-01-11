@@ -33,11 +33,12 @@ caps.latest.revision: "29"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d30a06cc420b5e9f00f0340e92295ca629ad6fee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e8ed7cc6c6671e85c21379c4804df4d2f3e3d99d
+ms.sourcegitcommit: 2aeb507a426fc7881ea59115b1d5139c0a30ba91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 Kapselt Windows-API-Funktionen und stellt eine objektorientierte Schnittstelle für den Zugriff auf die Registrierung bereit.  
@@ -48,7 +49,7 @@ Kapselt Windows-API-Funktionen und stellt eine objektorientierte Schnittstelle f
 class CSettingsStore : public CObject  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -128,7 +129,7 @@ CSettingsStore(
  Boolescher Parameter, der angibt, ob die `CSettingsStore` Objekt wird in nur-Lese-Modus erstellt.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn `bAdmin` festgelegt ist, um `false`, `m_hKey` Membervariable wird festgelegt, um `HKEY_LOCAL_MACHINE`. Wenn Sie festlegen, `bAdmin` auf `true`, `m_hKey` festgelegt ist, um `HKEY_CURRENT_USER`.  
+ Wenn `bAdmin` festgelegt ist, um `true`, `m_hKey` Membervariable wird festgelegt, um `HKEY_LOCAL_MACHINE`. Wenn Sie festlegen, `bAdmin` auf `false`, `m_hKey` festgelegt ist, um `HKEY_CURRENT_USER`.  
   
  Der Sicherheitszugriff hängt die `bReadOnly` Parameter. Wenn `bReadonly` ist `false`, den Sicherheitszugriff festgelegt, um `KEY_ALL_ACCESS`. Wenn `bReadyOnly` ist `true`, den Sicherheitszugriff festgelegt, um eine Kombination von `KEY_QUERY_VALUE, KEY_NOTIFY` und `KEY_ENUMERATE_SUB_KEYS`. Weitere Informationen über Sicherheitszugriff zusammen mit der Registrierung finden Sie unter [Registry Key Sicherheit und Zugriffsrechte](http://msdn.microsoft.com/library/windows/desktop/ms724878).  
   

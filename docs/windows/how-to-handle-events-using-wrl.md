@@ -1,97 +1,100 @@
 ---
-title: "Gewusst wie: Behandeln von Ereignissen mit WRL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
+title: 'Vorgehensweise: Behandeln von Ereignissen mit WRL | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
 ms.assetid: 1c77543f-7b0c-4a94-93bf-e3225885ed76
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a3341992ce2b10897fca165a787e568b5e0bc660
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Gewusst wie: Behandeln von Ereignissen mit WRL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In diesem Dokument wird gezeigt, wie Sie mit [!INCLUDE[cppwrl](../windows/includes/cppwrl_md.md)] \([!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]\) die Ereignisse eines [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]\-Objekts abonnieren und behandeln.  
+# <a name="how-to-handle-events-using-wrl"></a>Gewusst wie: Behandeln von Ereignissen mit WRL
+Dieses Dokument zeigt, wie die Windows Runtime C++ Template Library (WRL) zu abonnieren und Behandeln der Ereignisse von einem Windows-Runtime-Objekt.  
   
- Ein einfacheres Beispiel, in dem eine Instanz der Komponente erstellt und ein Eigenschaftswert abgerufen wird, finden Sie unter [Gewusst wie: Aktivieren und Verwenden einer Windows\-Runtime\-Komponente](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md).  
+ Eine weitere grundlegende Beispiel erstellt eine Instanz dieser Komponente, und ruft einen Eigenschaftswert ab, finden Sie unter [Vorgehensweise: Aktivieren und verwenden Sie eine Windows-Runtime-Komponente](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md).  
   
-## Abonnieren und Behandeln von Ereignissen  
- Mit den folgenden Schritten starten Sie ein `ABI::Windows::System::Threading::IDeviceWatcher`\-Objekt und überwachen den Fortschritt mit Ereignishandlern.  Die `IDeviceWatcher`\-Schnittstelle ermöglicht es Ihnen, Geräte asynchron oder im Hintergrund aufzulisten und benachrichtigt zu werden, wenn Geräte hinzugefügt, entfernt oder geändert werden.  Die [Callback](../windows/callback-function-windows-runtime-cpp-template-library.md)\-Funktion ist ein wichtiger Bestandteil dieses Beispiels, da sie die Angabe von Ereignishandlern ermöglicht, die die Ergebnisse des Hintergrundvorgangs verarbeiten.  Im Folgenden finden Sie das vollständige Beispiel.  
+## <a name="subscribing-to-and-handling-events"></a>Abonnieren und Behandeln von Ereignissen  
+ Mit den folgenden Schritten starten Sie ein `ABI::Windows::System::Threading::IDeviceWatcher`-Objekt und überwachen den Fortschritt mit Ereignishandlern. Die `IDeviceWatcher`-Schnittstelle ermöglicht es Ihnen, Geräte asynchron oder im Hintergrund aufzulisten und benachrichtigt zu werden, wenn Geräte hinzugefügt, entfernt oder geändert werden. Die [Rückruf](../windows/callback-function-windows-runtime-cpp-template-library.md) Funktion ist ein wichtiger Teil dieses Beispiels, da es bei der Angabe von Ereignishandlern, die die Ergebnisse des Hintergrundvorgangs verarbeiten können. Im Folgenden finden Sie das vollständige Beispiel.  
   
 > [!WARNING]
->  In der Regel verwenden Sie [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] in einer [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)]\-App; in diesem Beispiel wird jedoch zur Veranschaulichung eine Konsolen\-App verwendet.  Funktionen wie `wprintf_s` sind von einer [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)]\-App aus nicht verfügbar.  Weitere Informationen über die Typen und Funktionen, die Sie in einer [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)]\-App verwenden können, finden Sie unter [CRT\-Funktionen nicht mit \/ZW unterstützt](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) und im Thema zu [Win32 und COM für Windows Store\-Apps](http://msdn.microsoft.com/library/windows/apps/br205757.aspx).  
+>  Obwohl Sie die Windows Runtime C++ Template Library in einer universellen Windows-Plattform-app in der Regel verwenden, wird in diesem Beispiel eine Konsolen-app zur Veranschaulichung verwendet. Funktionen wie `wprintf_s` stehen nicht aus einer Uwp-app. Weitere Informationen zu den Typen und Funktionen, die Sie in einer universellen Windows-Plattform-app verwenden können, finden Sie unter [mit/Zw nicht unterstützte CRT-Funktionen](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) und [Win32 und COM für Windows Store-apps](http://msdn.microsoft.com/library/windows/apps/br205757.aspx).  
   
-1.  Schließen Sie \(mit `#include`\) alle erforderlichen [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]\-, [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]\- oder Standard\-C\+\+\-Bibliotheksheader ein.  
+1.  Einschließen (`#include`) alle erforderlichen Windows-Runtime, C++-Vorlagenbibliothek für Windows-Runtime oder C++-Standardbibliothek-Header.  
   
-     [!CODE [wrl-consume-event#2](../CodeSnippet/VS_Snippets_Misc/wrl-consume-event#2)]  
+     [!code-cpp[wrl-consume-event#2](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_1.cpp)]  
   
      Windows.Devices.Enumeration.h deklariert die Typen, die zur Auflistung von Geräten erforderlich sind.  
   
-     Es wird empfohlen, den Code mithilfe der `using namespace`\-Direktive in der CPP\-Datei verständlicher zu gestalten.  
+     Es wird empfohlen, den Code mithilfe der `using namespace`-Direktive in der CPP-Datei verständlicher zu gestalten.  
   
-2.  Deklarieren Sie die lokalen Variablen für die App.  In diesem Beispiel wird die Anzahl der aufgelisteten Geräte und Registrierungstoken abgelegt; dadurch kann später das Abonnement von Ereignissen gekündigt werden.  
+2.  Deklarieren Sie die lokalen Variablen für die App. In diesem Beispiel wird die Anzahl der aufgelisteten Geräte und Registrierungstoken abgelegt; dadurch kann später das Abonnement von Ereignissen gekündigt werden.  
   
-     [!CODE [wrl-consume-event#7](../CodeSnippet/VS_Snippets_Misc/wrl-consume-event#7)]  
+     [!code-cpp[wrl-consume-event#7](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_2.cpp)]  
   
-3.  Initialisieren Sie die [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].  
+3.  Windows-Runtime zu initialisieren.  
   
-     [!CODE [wrl-consume-event#3](../CodeSnippet/VS_Snippets_Misc/wrl-consume-event#3)]  
+     [!code-cpp[wrl-consume-event#3](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_3.cpp)]  
   
-4.  Erstellen Sie ein [Event](../windows/event-class-windows-runtime-cpp-template-library.md)\-Objekt, das den Abschluss des Enumerationsprozesses mit der Haupt\-App synchronisiert.  
+4.  Erstellen einer [Ereignis](../windows/event-class-windows-runtime-cpp-template-library.md) -Objekt, das den Abschluss des Enumerationsprozesses mit der Haupt-app synchronisiert.  
   
-     [!CODE [wrl-consume-event#4](../CodeSnippet/VS_Snippets_Misc/wrl-consume-event#4)]  
+     [!code-cpp[wrl-consume-event#4](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_4.cpp)]  
   
     > [!NOTE]
-    >  Dieses Ereignis dient lediglich zur Veranschaulichung im Rahmen der Konsolen\-App.  In diesem Beispiel sorgt das Ereignis dafür, dass ein asynchroner Vorgang abgeschlossen wird, bevor die App beendet wird.  In den meisten Apps warten Sie in der Regel nicht auf den Abschluss asynchroner Vorgänge.  
+    >  Dieses Ereignis dient lediglich zur Veranschaulichung im Rahmen der Konsolen-App. In diesem Beispiel sorgt das Ereignis dafür, dass ein asynchroner Vorgang abgeschlossen wird, bevor die App beendet wird. In den meisten Apps warten Sie in der Regel nicht auf den Abschluss asynchroner Vorgänge.  
   
-5.  Erstellen Sie eine Aktivierungsfactory für die `IDeviceWatcher`\-Schnittstelle.  
+5.  Erstellen Sie eine Aktivierungsfactory für die `IDeviceWatcher`-Schnittstelle.  
   
-     [!CODE [wrl-consume-event#5](../CodeSnippet/VS_Snippets_Misc/wrl-consume-event#5)]  
+     [!code-cpp[wrl-consume-event#5](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_5.cpp)]  
   
-     Die [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] identifiziert Typen anhand von voll qualifizierten Namen.  Der Parameter `RuntimeClass_Windows_Devices_Enumeration_DeviceInformation` ist eine Zeichenfolge, die von [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] bereitgestellt wird und den erforderlichen Ablaufklassennamen enthält.  
+     Windows-Runtime verwendet den vollqualifizierten Namen zum Identifizieren von Typen. Die `RuntimeClass_Windows_Devices_Enumeration_DeviceInformation` Parameter ist eine Zeichenfolge, die vom Windows-Runtime bereitgestellt wird und den erforderlichen ablaufklassennamen enthält.  
   
-6.  Erstellen Sie das `IDeviceWatcher`\-Objekt.  
+6.  Erstellen Sie das `IDeviceWatcher`-Objekt.  
   
-     [!CODE [wrl-consume-event#6](../CodeSnippet/VS_Snippets_Misc/wrl-consume-event#6)]  
+     [!code-cpp[wrl-consume-event#6](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_6.cpp)]  
   
-7.  Abonnieren Sie mit der `Callback`\-Funktion die Ereignisse `Added`, `EnumerationCompleted` und `Stopped`.  
+7.  Abonnieren Sie mit der `Callback`-Funktion die Ereignisse `Added`, `EnumerationCompleted` und `Stopped`.  
   
-     [!CODE [wrl-consume-event#8](../CodeSnippet/VS_Snippets_Misc/wrl-consume-event#8)]  
+     [!code-cpp[wrl-consume-event#8](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_7.cpp)]  
   
-     Der Ereignishandler `Added` erhöht die Anzahl der aufgelisteten Geräte.  Er beendet den Enumerationsprozess, nachdem zehn Geräte gefunden wurden.  
+     Der Ereignishandler `Added` erhöht die Anzahl der aufgelisteten Geräte. Er beendet den Enumerationsprozess, nachdem zehn Geräte gefunden wurden.  
   
      Der Ereignishandler `Stopped` entfernt die Ereignishandler und legt das Abschlussereignis fest.  
   
-     Der Ereignishandler `EnumerationCompleted` beendet den Enumerationsprozess.  Dieses Ereignis wird behandelt, falls es einmal weniger als zehn Geräte gibt.  
+     Der Ereignishandler `EnumerationCompleted` beendet den Enumerationsprozess. Dieses Ereignis wird behandelt, falls es einmal weniger als zehn Geräte gibt.  
   
     > [!TIP]
-    >  Dieses Beispiel definiert die Rückrufe mithilfe eines Lambda\-Ausdrucks.  Außerdem können Sie Funktionsobjekte \(Funktionselemente\), Funktionszeiger oder [std::function](../standard-library/function-class.md)\-Objekte verwenden.  Weitere Informationen zu Lambdaausdrücken finden Sie unter [Lambda\-Ausdrücke](../cpp/lambda-expressions-in-cpp.md).  
+    >  Dieses Beispiel definiert die Rückrufe mithilfe eines Lambdaausdrucks. Außerdem können Sie Funktionsobjekte (Funktionselemente), Funktionszeiger oder [Std:: Function](../standard-library/function-class.md) Objekte. Weitere Informationen zu Lambdaausdrücken finden Sie unter [Lambda Expressions (Lambdaausdrücke)](../cpp/lambda-expressions-in-cpp.md).  
   
 8.  Starten Sie den Enumerationsprozess.  
   
-     [!CODE [wrl-consume-event#9](../CodeSnippet/VS_Snippets_Misc/wrl-consume-event#9)]  
+     [!code-cpp[wrl-consume-event#9](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_8.cpp)]  
   
-9. Warten Sie, bis der Enumerationsprozess abgeschlossen ist, und drucken Sie dann eine Meldung aus.  Alle `ComPtr`\- und RAII\-Objekte verlassen den Bereich und werden automatisch freigegeben.  
+9. Warten Sie, bis der Enumerationsprozess abgeschlossen ist, und drucken Sie dann eine Meldung aus. Alle `ComPtr`- und RAII-Objekte verlassen den Bereich und werden automatisch freigegeben.  
   
-     [!CODE [wrl-consume-event#10](../CodeSnippet/VS_Snippets_Misc/wrl-consume-event#10)]  
+     [!code-cpp[wrl-consume-event#10](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_9.cpp)]  
   
  Im Folgenden sehen Sie das vollständige Beispiel:  
   
- [!CODE [wrl-consume-event#1](../CodeSnippet/VS_Snippets_Misc/wrl-consume-event#1)]  
+ [!code-cpp[wrl-consume-event#1](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_10.cpp)]  
   
-## Kompilieren des Codes  
- Zum Kompilieren kopieren Sie den Code, und fügen Sie ihn in ein Visual Studio\-Projekt ein, oder fügen Sie ihn in eine Datei mit dem Namen `wrl-consume-events.cpp` ein, und führen Sie dann den folgenden Befehl in einem Visual Studio\-Eingabeaufforderungsfenster aus.  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
+ Um den Code zu kompilieren, kopieren Sie ihn und fügen Sie ihn in ein Visual Studio-Projekt ein, oder fügen Sie ihn in eine Datei mit dem Namen `wrl-consume-events.cpp` und dann den folgenden Befehl in eine Visual Studio-Eingabeaufforderungsfenster ausführen.  
   
- **cl.exe wrl\-consume\-events.cpp runtimeobject.lib**  
+ **CL.exe Wrl-consume-events.cpp runtimeobject.lib**  
   
-## Siehe auch  
- [Windows Runtime C\+\+ Template Library \(WRL\)](../windows/windows-runtime-cpp-template-library-wrl.md)
+## <a name="see-also"></a>Siehe auch  
+ [C++-Vorlagenbibliothek für Windows-Runtime (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

@@ -1,36 +1,36 @@
 ---
-title: "__rdtscp | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__rdtscp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rdtscp intrinsic"
-  - "__rdtscp intrinsic"
-  - "rdtscp-Anweisung"
+title: __rdtscp | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __rdtscp
+dev_langs: C++
+helpviewer_keywords:
+- rdtscp intrinsic
+- __rdtscp intrinsic
+- rdtscp instruction
 ms.assetid: f17d9a9c-88bb-44e0-b69d-d516bc1c93ee
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 972c789e17b2b42e0df7229b94b4f10aaa5ff470
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# __rdtscp
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft\-spezifisch**  
+# <a name="rdtscp"></a>__rdtscp
+**Microsoft-spezifisch**  
   
- Generiert die `rdtscp`\-Anweisung, schreibt `TSC_AUX[31:0`\] und gibt den 64\-Bit\-Zeitstempelleistungsindikator im Speicher zurück \(`TSC)` Ergebnis.  
+ Generiert die `rdtscp` -Anweisung, schreibt `TSC_AUX[31:0`], Arbeitsspeicher und gibt die 64-Bit-Time Stamp Counter (`TSC)` Ergebnis.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 unsigned __int64 __rdtscp(  
@@ -38,32 +38,32 @@ unsigned __int64 __rdtscp(
 );  
 ```  
   
-#### Parameter  
- \[out\] `Aux`  
- Zeiger auf einen Speicherort, der den Inhalt des Registers besondere MACHINE `TSC_AUX[31:0]`enthält.  
+#### <a name="parameters"></a>Parameter  
+ [out] `Aux`  
+ Zeiger auf einen Speicherort, der den Inhalt des Registers computerspezifische enthält `TSC_AUX[31:0]`.  
   
-## Rückgabewert  
- Eine 64\-Bit\-Ganzzahl ohne Vorzeichen\-Taktanzahl.  
+## <a name="return-value"></a>Rückgabewert  
+ Eine 64-Bit-Ganzzahl ohne Vorzeichen Taktanzahl.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Intrinsisch|Architektur|  
-|-----------------|-----------------|  
-|`__rdtscp`|Familie 0Fh AMDs NPT oder höhere Versionen|  
+|Systemintern|Architektur|  
+|---------------|------------------|  
+|`__rdtscp`|AMD NPT Familie 0Fh oder höhere Versionen|  
   
- **Headerdatei** \<intrin.h\>  
+ **Headerdatei** \<intrin.h >  
   
-## Hinweise  
- Das systeminterne generiert die `rdtscp`\-Anweisung.  Um Hardwareunterstützung für diese Anweisung zu bestimmen, `__cpuid`direkt aufrufen und `InfoType=0x80000001` mit Prüfbit 27 von `CPUInfo[3] (EDX)`.  Das Bit beträgt 1, wenn die Anweisung unterstützt wird, andernfalls 0.  Wenn Sie diesen Code ausführen, der Hardware, das auf die ist, die nicht direkt `rdtscp`\-Anweisung unterstützt, die Ergebnisse sind unvorhersehbar.  
+## <a name="remarks"></a>Hinweise  
+ Diese systeminterne Funktion generiert die `rdtscp` Anweisung. Um Hardware-Unterstützung für diese Anweisung zu bestimmen, rufen die `__cpuid` systeminternen Funktionen mit `InfoType=0x80000001` und überprüfen Sie Bit 27 von `CPUInfo[3] (EDX)`. Dieses Bit ist 1, wenn die Anweisung unterstützt wird und 0 andernfalls.  Wenn Sie Code, verwendet dieser systeminternen Funktion auf Hardware ausgeführt, die nicht unterstützt wird die `rdtscp` -Anweisung, die die Ergebnisse sind unvorhersehbar.  
   
 > [!CAUTION]
->  Im Gegensatz zu `rdtsc`ist eine `rdtscp` serialisierende Anweisung. trotzdem kann der Compiler Code um systeminternes dieses verschieben.  
+>  Im Gegensatz zu `rdtsc`, `rdtscp` ist eine Serialisierung Anweisung; trotzdem kann der Compiler Code umgehen dieses verschieben systeminterne.  
   
- Die Interpretation des TSC\-Werts in dieser Generation der Hardware unterscheidet sich von dem in früheren Versionen von [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)].  Weitere Informationen finden Sie handbücher Hardware.  
+ Die Interpretation des TSC Werts in dieser Generation Hardware unterscheidet sich von dem in früheren Versionen von [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)].  Finden Sie unter Hardware-Handbücher für Weitere Informationen.  
   
- Die Bedeutung des Werts in `TSC_AUX[31:0]` hängt vom Betriebssystem ab.  
+ Die Bedeutung des Werts in `TSC_AUX[31:0]` richtet sich nach dem Betriebssystem.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 #include <intrin.h>   
@@ -78,11 +78,14 @@ int main()
 }  
 ```  
   
-  **3363423610155519 Teilstrich**  
-**TSC\_AUX war 0**   
-## BEENDEN Sie Microsoft\-Besonderen  
- Copyright 2007 bis Advanced Micro Devices, Inc.  Alle Rechte vorbehalten.  Reproduziert mit zulässigen Advanced Micro Devices, Inc.  
+```Output  
+3363423610155519 ticks  
+TSC_AUX was 0  
+```  
   
-## Siehe auch  
- [\_\_rdtsc](../intrinsics/rdtsc.md)   
+**Ende Microsoft-spezifisch**  
+ Copyright 2007 erweiterte Micro-Geräte, Inc. Alle Rechte vorbehalten. Reproduziert mit Genehmigung Advanced Micro-Geräte, Inc.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [__rdtsc](../intrinsics/rdtsc.md)   
  [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

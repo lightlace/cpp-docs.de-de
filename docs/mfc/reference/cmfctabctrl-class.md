@@ -115,11 +115,12 @@ caps.latest.revision: "33"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6675a7b9130a87be9be36c158e5716cc1afe3d55
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1aa415846d8f504ef907bf4e9a041b86062853cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 Die `CMFCTabCtrl` -Klasse bietet eine Funktionalität für ein Registerkarten-Steuerelement. Das Registerkarten-Steuerelement zeigt ein andockbares Fenster an, mit flachen oder dreidimensionalen Registerkarten am oberen oder unteren Rand. Die Registerkarten können Text und ein Bild enthalten und bei Aktivierung die Farbe ändern.  
@@ -130,7 +131,7 @@ Die `CMFCTabCtrl` -Klasse bietet eine Funktionalität für ein Registerkarten-St
 class CMFCTabCtrl : public CMFCBaseTabCtrl  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -202,7 +203,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
   
 ### <a name="data-members"></a>Datenmember  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |[CMFCTabCtrl::m_bEnableActivate](#m_benableactivate)|Verhindert, dass die aktive Ansicht Fokus, wenn eine neue Registerkarte eingefügt und aktiviert ist.|  
   
@@ -758,7 +759,7 @@ BOOL ModifyTabStyle(Style style);
 ### <a name="remarks"></a>Hinweise  
  Der Wert, der die `style` Parameter kann eine der folgenden `CMFCTabCtrl::Style` Enumerationen.  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |STYLE_3D|Zeigt dreidimensionale, rechteckige Registerkarten, auf denen abgerundete Ecken haben.|  
 |STYLE_3D_ONENOTE|Zeigt die dreidimensionalen Registerkarten, auf denen vertikale einseitige und schräge einseitige und abgerundete Ecken haben, die, an.|  
@@ -960,7 +961,7 @@ void SetResizeMode(ResizeMode resizeMode);
 ### <a name="remarks"></a>Hinweise  
  Die `resizeMode` Parameter kann eine der folgenden `ResizeMode` Enumerationswerte.  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |RESIZE_NO|Das Registerkarten-Steuerelement kann nicht geändert werden.|  
 |RESIZE_VERT|Das Registerkarten-Steuerelement kann vertikal, aber nicht horizontal geändert werden.|  

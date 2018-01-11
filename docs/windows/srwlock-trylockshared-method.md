@@ -1,32 +1,33 @@
 ---
-title: "SRWLock::TryLockShared-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::SRWLock::TryLockShared"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "TryLockShared-Methode"
+title: 'SRWLOCK:: Trylockshared-Methode | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::SRWLock::TryLockShared
+dev_langs: C++
+helpviewer_keywords: TryLockShared method
 ms.assetid: 10cc198d-39a0-4d18-aa78-706744948668
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7c36657b5c732055260dc77471e109961a66c144
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# SRWLock::TryLockShared-Methode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Versuche, ein SRWLock\-Objekt im gemeinsamen Modus für den aktuellen oder das angegebene SRWLock\-Objekt abzurufen.  
+# <a name="srwlocktrylockshared-method"></a>SRWLock::TryLockShared-Methode
+Versucht, ein SRWLock-Objekt im freigegebenen Modus für das aktuelle oder angegebene SRWLock-Objekt zu erhalten.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 WRL_NOTHROW SyncLockShared TryLockShared();  
@@ -35,17 +36,17 @@ WRL_NOTHROW static SyncLockShared TryLockShared(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `lock`  
- Zeiger zu einem SRWLock\-Objekt.  
+ Zeiger auf ein SRWLock-Objekt.  
   
-## Rückgabewert  
- Wenn erfolgreich, wird ein SRWLock\-Objekt im gemeinsamen Modus und der aufrufende Thread Besitz der Sperre.  Andernfalls SRWLock\-Objekt ein, dessen Zustand NULL ist.  
+## <a name="return-value"></a>Rückgabewert  
+ Bei Erfolg wird ein SRWLock-Objekt im Modus für gemeinsame Nutzung und der aufrufende Thread den Besitz der Sperre. Andernfalls ein SRWLock-Objekt, deren Zustand ungültig ist.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## Siehe auch  
- [SRWLock\-Klasse](../windows/srwlock-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [SRWLock-Klasse](../windows/srwlock-class.md)

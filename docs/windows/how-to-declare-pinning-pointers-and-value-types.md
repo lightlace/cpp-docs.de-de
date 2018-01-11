@@ -1,33 +1,36 @@
 ---
-title: "How to: Declare Pinning Pointers and Value Types | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "value types, declaring"
-  - "pinning pointers"
+title: 'Vorgehensweise: Deklarieren von festen Zeigern und Werttypen | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- value types, declaring
+- pinning pointers
 ms.assetid: 57c5ec8a-f85a-48c4-ba8b-a81268bcede0
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e928fc267bb9e5ec13aeb4f07718454742e60ded
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# How to: Declare Pinning Pointers and Value Types
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ein Werttyp kann implizit geschachtelt werden.  Sie können einen festen Zeiger z Werttypobjekt selbst und **pin\_ptr** verwendet für den geschachtelten Werttyp deklarieren.  
+# <a name="how-to-declare-pinning-pointers-and-value-types"></a>Gewusst wie: Deklarieren von festen Zeigern und Werttypen
+Ein Werttyp kann implizit geschachtelt werden. Sie können dann einen festen Zeiger auf das Wertobjekt für den Typ deklarieren, selbst und Verwenden einer **Pin_ptr** in den Typ des geschachtelten Werts.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // pin_ptr_value.cpp  
@@ -47,7 +50,7 @@ int main() {
 }  
 ```  
   
-### Ausgabe  
+### <a name="output"></a>Ausgabe  
   
 ```  
 8  
@@ -55,5 +58,5 @@ int main() {
 7  
 ```  
   
-## Siehe auch  
- [pin\_ptr \(C\+\+\/CLI\)](../windows/pin-ptr-cpp-cli.md)
+## <a name="see-also"></a>Siehe auch  
+ [pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)

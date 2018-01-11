@@ -95,11 +95,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5b54a2cecf6ae091680582a3997cc8ee9c1c625d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 104c965da403040308386e019d56684577318eee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmenu-class"></a>CMenu-Klasse
 Eine Kapselung von Windows- `HMENU`.  
@@ -110,7 +111,7 @@ Eine Kapselung von Windows- `HMENU`.
 class CMenu : public CObject  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -1261,7 +1262,7 @@ BOOL TrackPopupMenu(
  `nFlags`  
  Gibt Flags an Bildschirmposition und die Position des Mauszeigers. Finden Sie unter [TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002) eine Liste der verfügbaren Flags.  
   
- *x*  
+ *w*  
  Gibt die horizontale Position in Bildschirmkoordinaten des Popupmenüs an. Abhängig vom Wert der `nFlags` Parameter, klicken Sie im Menü kann sein, linksbündig, rechtsbündig oder zentriert relativ zu dieser Position.  
   
  *y*  
@@ -1298,7 +1299,7 @@ BOOL TrackPopupMenuEx(
  `fuFlags`  
  Gibt verschiedene Funktionen für das erweiterte Menü. Eine Liste aller Werte und deren Bedeutung finden Sie unter [TrackPopupMenuEx](http://msdn.microsoft.com/library/windows/desktop/ms648003).  
   
- *x*  
+ *w*  
  Gibt die horizontale Position in Bildschirmkoordinaten des Popupmenüs an.  
   
  *y*  

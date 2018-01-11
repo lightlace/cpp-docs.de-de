@@ -1,32 +1,33 @@
 ---
-title: "uidefault | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.uidefault"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "uidefault attribute"
+title: UIDefault | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.uidefault
+dev_langs: C++
+helpviewer_keywords: uidefault attribute
 ms.assetid: 200de0e0-2e34-40a2-bae4-8d485a62264d
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5da21808cf18fd866113e1a0272fdddba7473486
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# uidefault
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gibt an, dass der Member Typinformationens der Standardmember für die Anzeige in der Benutzeroberfläche ist.  
+# <a name="uidefault"></a>uidefault
+Gibt an, dass die Typmember Informationen das Standardelement für die Anzeige in der Benutzeroberfläche.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -34,11 +35,11 @@ Gibt an, dass der Member Typinformationens der Standardmember für die Anzeige i
   
 ```  
   
-## Hinweise  
- Das Attribut **uidefault** C\+\+ verfügt über die gleichen Funktionen wie das [uidefault](http://msdn.microsoft.com/library/windows/desktop/aa367292) MIDL\-Attribut.  
+## <a name="remarks"></a>Hinweise  
+ Die **Uidefault** C++-Attribut hat die gleiche Funktionalität wie die [Uidefault](http://msdn.microsoft.com/library/windows/desktop/aa367292) MIDL-Attribut.  
   
-## Beispiel  
- Der folgende Code zeigt ein Beispiel für **uidefault**an:  
+## <a name="example"></a>Beispiel  
+ Der folgende Code zeigt ein Beispiel der **Uidefault**:  
   
 ```  
 // cpp_attr_ref_uidefault.cpp  
@@ -57,20 +58,19 @@ __interface ICustom{
 };  
 ```  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
 |**Betrifft**|Schnittstellenmethode|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Keiner|  
+|**Ungültige Attribute**|Keiner|  
   
- Weitere Informationen über das kontexte finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [IDL-Attribute](../windows/idl-attributes.md)   
+ [Methodenattribut](../windows/method-attributes.md)   

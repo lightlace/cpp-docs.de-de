@@ -18,11 +18,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 65b3c5825b32a30bba5572de3333d8870086a67b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 56af79669b4240a32f7dc6ac134beae4ac402b2f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltcvtwstringgt"></a>&lt;cvt/wstring&gt;
 Der `<cvt/wstring>`-Header in früheren Versionen von Visual Studio definierte die Vorlagenklasse [wstring_convert-Klasse](../standard-library/wstring-convert-class.md) im stdext::cvt-Namespace. Der Header wird aus Gründen der Abwärtskompatibilität beibehalten. Neuer Code muss die Version der Klasse verwenden, die in [\<locale>](../standard-library/locale.md) im `std`-Namespace definiert ist.  

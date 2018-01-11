@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0f0b9c7a74c74f014c9ce8e3873635786fe1e560
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e5efa8d0e7cf4118362b7695bafcd4710b4021f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c2-rules"></a>C.2 Regeln
 Die Notation wird im Abschnitt 6.1 der C-standard beschrieben. Dieser Anhang Grammatik zeigt die Erweiterungen der Basissprache-Grammatik für die OpenMP-C- und C++-Direktiven.  

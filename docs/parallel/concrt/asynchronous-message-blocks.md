@@ -17,11 +17,12 @@ caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1e2c2641ada0f6bbcd1b19c4297ba85b3bb4d393
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 97669589af295c681fa21d6faeb31ec01be37e51
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asynchronous-message-blocks"></a>Asynchrone Nachrichtenblöcke
 
@@ -116,14 +117,14 @@ Die Agents Library stellt mehrere Nachrichtenblocktypen bereit, mit deren Hilfe 
   
 |Nachrichtenblocktyp|Weitergabetyp (Quelle, Ziel oder beides)|Nachrichtenreihenfolge (sortiert oder nicht sortiert)|Quellenanzahl|Zielanzahl|  
 |------------------------|--------------------------------------------------|-----------------------------------------------|------------------|------------------|  
-|`unbounded_buffer`|Beides|Testreihe|Unbegrenzt|Unbegrenzt|  
-|`overwrite_buffer`|Beides|Testreihe|Unbegrenzt|Unbegrenzt|  
-|`single_assignment`|Beides|Testreihe|Unbegrenzt|Unbegrenzt|  
-|`call`|Ziel|Testreihe|Unbegrenzt|Nicht zutreffend|  
-|`transformer`|Beides|Testreihe|Unbegrenzt|1|  
-|`choice`|Beides|Testreihe|10|1|  
-|`join`|Beides|Testreihe|Unbegrenzt|1|  
-|`multitype_join`|Beides|Testreihe|10|1|  
+|`unbounded_buffer`|Beides|Geordnete|Unbegrenzt|Unbegrenzt|  
+|`overwrite_buffer`|Beides|Geordnete|Unbegrenzt|Unbegrenzt|  
+|`single_assignment`|Beides|Geordnete|Unbegrenzt|Unbegrenzt|  
+|`call`|Ziel|Geordnete|Unbegrenzt|Nicht zutreffend|  
+|`transformer`|Beides|Geordnete|Unbegrenzt|1|  
+|`choice`|Beides|Geordnete|10|1|  
+|`join`|Beides|Geordnete|Unbegrenzt|1|  
+|`multitype_join`|Beides|Geordnete|10|1|  
 |`timer`|Quelle|Nicht zutreffend|Nicht zutreffend|1|  
   
  In den folgenden Abschnitten werden die Nachrichtenblocktypen ausführlicher beschrieben.  

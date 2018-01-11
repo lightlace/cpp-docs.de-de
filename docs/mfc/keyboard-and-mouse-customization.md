@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 090c74c87810f6c2e7a7641deb248aa97931d93f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1b031c4af05df7ad2b8c0850cefb116d4ac249d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="keyboard-and-mouse-customization"></a>Anpassen von Tastatur und Maus
 MFC ermöglicht dem Benutzer der Anwendung anpassen, wie es sich um Tastatur- und Mauseingaben behandelt. Der Benutzer kann Tastatureingaben anpassen, indem Sie Befehle Tastenkombinationen zuweisen zu können. Der Benutzer kann die Mauseingabe auch anpassen, indem Sie den Befehl, der ausgeführt werden soll, wenn der Benutzer innerhalb der Anwendung bestimmte Windows doppelklickt auswählen. In diesem Thema wird erläutert, wie die Eingabe für die Anwendung angepasst wird.  

@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c9e75a88eb4093387317a3cdb84be4b0b73f4201
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 51f630f5a3fe1ee5833ac2796ff2acb1841af4c1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-menu-in-an-mfc-database-application"></a>Das Dateimenü in einer MFC-Datenbankanwendung
 Wenn Sie eine MFC-datenbankanwendung erstellen und Sie keine Serialisierung verwenden, wie Sie interpretieren öffnen, schließen, speichern, und speichern sollten als Befehle, auf das Menü Datei dafür gibt es keine Richtlinien für diese Frage, hier sind einige Vorschläge:  

@@ -1,5 +1,5 @@
 ---
-title: Concurrency-Namespace Enumerationen (EVA) | Microsoft-Dokumentation
+title: Concurrency-Namespace Enumerationen (AMP) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,18 +9,18 @@ ms.topic: article
 f1_keywords:
 - amp/Concurrency::access_type
 - amp/Concurrency::queuing_mode
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 4c87457e-184f-4992-81ab-ca75e7d524ab
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: b9555023e01cb765ca943fcaaf785cdc2b4e2d0d
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8979ab026d5bf6aef9d0dd8677bf2ec47a8c6142
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-namespace-enums-amp"></a>Concurrency-Namespace Enumerationen (AMP)
 |||  
@@ -54,9 +54,8 @@ enum queuing_mode;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|`queuing_mode_immediate`|Ein queuingmodus, der angibt, dass jede Befehle, z. B. [Parallel_for_each-Funktion (C++-AMP)](concurrency-namespace-functions-amp.md#parallel_for_each), werden an das entsprechende zugriffstastengerät gesendet, sobald sie an den Aufrufer zurückgegeben.|  
-|`queuing_mode_automatic`|Ein queuingmodus, der angibt, dass Befehle in einer Befehlswarteschlange in die Warteschlange gestellt werden, das entspricht, der [Accelerator_view](accelerator-view-class.md) Objekt. Befehle an das Gerät gesendet werden beim [accelerator_view:: Flush](accelerator-view-class.md#flush) aufgerufen wird.|   
+|`queuing_mode_immediate`|Ein queuingmodus, der angibt, die von jedem Befehle, z. B. [Parallel_for_each-Funktion (C++-AMP)](concurrency-namespace-functions-amp.md#parallel_for_each), werden an das entsprechende zugriffstastengerät gesendet, sobald sie sich an den Aufrufer zurückgeben.|  
+|`queuing_mode_automatic`|Ein queuingmodus, der angibt, dass die Befehle auf einer Befehlswarteschlange Warteschlange sein, die entspricht der ["accelerator_view"](accelerator-view-class.md) Objekt. Befehle werden an das Gerät gesendet. wenn [accelerator_view:: Flush](accelerator-view-class.md#flush) aufgerufen wird.|   
   
 ## <a name="see-also"></a>Siehe auch  
- [Concurrency-Namespace (C++-AMP)](concurrency-namespace-cpp-amp.md)
-
+ [Concurrency-Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)

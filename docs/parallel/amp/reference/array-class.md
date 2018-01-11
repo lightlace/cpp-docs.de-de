@@ -1,11 +1,10 @@
 ---
-title: Array-Klasse | Microsoft-Dokumentation
+title: Array-Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,35 +25,19 @@ f1_keywords:
 - AMP/Concurrency::array::associated_accelerator_view
 - AMP/Concurrency::array::cpu_access_type
 - AMP/Concurrency::array::extent
-dev_langs:
-- C++
-helpviewer_keywords:
-- array class
+dev_langs: C++
+helpviewer_keywords: array class
 ms.assetid: 0832b6c1-40f0-421d-9104-6b1baa0c63a7
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 470918d62357a8dd463db35b4d929e7ec5c2f251
-ms.contentlocale: de-de
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5b76fcb181d955fc051ade5183b67b9d55b823ab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="array-class"></a>array-Klasse
 Stellt einen Datencontainer dar, mit dem Daten auf eine Zugriffstaste verschoben werden.  
@@ -73,7 +56,7 @@ friend class array;
  `_Rank`  
  Der Rang des Arrays.  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -87,13 +70,13 @@ friend class array;
 |----------|-----------------|  
 |[copy_to](#copy_to)|Kopiert den Inhalt des array-Objekts in ein anderes array-Objekt.|  
 |[data](#data)|Gibt einen Zeiger auf die Rohdaten des array-Objekts zurück.|  
-|[get_accelerator_view](#get_accelerator_view)|Gibt die [Accelerator_view](accelerator-view-class.md) -Objekt, das die Position darstellt, in dem das Array zugeordnet ist. Auf diese Eigenschaft kann nur auf der CPU zugegriffen werden.|  
-|[get_associated_accelerator_view](#get_associated_accelerator_view)|Ruft das zweite [Accelerator_view](accelerator-view-class.md) -Objekt, das als Parameter übergeben wird, wenn ein stagingkonstruktor aufgerufen wird, instanziiert die `array` Objekt.|  
+|[get_accelerator_view](#get_accelerator_view)|Gibt die ["accelerator_view"](accelerator-view-class.md) -Objekt, das den Speicherort darstellt, in dem das Array zugeordnet ist. Auf diese Eigenschaft kann nur auf der CPU zugegriffen werden.|  
+|[get_associated_accelerator_view](#get_associated_accelerator_view)|Ruft das zweite ["accelerator_view"](accelerator-view-class.md) -Objekt, das als Parameter übergeben wird, wenn ein stagingkonstruktor, beim Instanziieren aufgerufen wird der `array` Objekt.|  
 |[get_cpu_access_type](#get_cpu_access_type)|Gibt die [Access_type](concurrency-namespace-enums-amp.md#access_type) des Arrays. Auf diese Methode kann nur auf der CPU zugegriffen werden.|  
 |[get_extent](#get_extent)|Gibt die [Block](extent-class.md) -Objekt des Arrays.|  
 |[reinterpret_as](#reinterpret_as)|Gibt ein eindimensionales Array zurück, das alle Elemente im `array`-Objekt enthält.|  
 |[section](#section)|Gibt einen Unterabschnitt des `array`-Objekts zurück, das sich am angegebenen Ursprung befindet und optional den angegebenen Wertebereich hat.|  
-|[view_as](#view_as)|Gibt eine [Array_view](array-view-class.md) -Objekt, das aus konstruiert ist die `array` Objekt.|  
+|[view_as](#view_as)|Gibt eine [Array_view](array-view-class.md) -Objekt, das aus konstruiert wird die `array` Objekt.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
@@ -101,12 +84,12 @@ friend class array;
 |----------|-----------------|  
 |[Operator Std:: vector&lt;Value_type&gt;](#operator_vec)|Verwendet `copy(*this, vector)` implizit konvertieren das Array in eine std::[Vektor](../../../standard-library/vector-class.md) Objekt.|  
 |[Operator()](#operator_call)|Gibt den Elementwert zurück, der von den Parametern angegeben wird.|  
-|[Operator]](#operator_at)|Gibt das Element am angegebenen Index zurück.|  
+|[[]-Operator](#operator_at)|Gibt das Element am angegebenen Index zurück.|  
 |[operator=](#operator_eq)|Kopiert den Inhalt des angegebenen `array`-Objekts in dieses Objekt.|  
   
 ### <a name="public-constants"></a>Öffentliche Konstanten  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |[Rank-Konstante](#rank)|Speichert den Rang des Arrays.|  
   
@@ -114,13 +97,13 @@ friend class array;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[accelerator_view-Objekt](#accelerator_view)|Ruft die [Accelerator_view](accelerator-view-class.md) -Objekt, das die Position darstellt, in dem das Array zugeordnet ist. Auf diese Eigenschaft kann nur auf der CPU zugegriffen werden.|  
-|[associated_accelerator_view](#associated_accelerator_view)|Ruft das zweite [Accelerator_view](accelerator-view-class.md) -Objekt, das als Parameter übergeben wird, wenn ein stagingkonstruktor aufgerufen wird, instanziiert die `array` Objekt.|  
-|[cpu_access_type](#cpu_access_type)|Ruft die [Access_type](concurrency-namespace-enums-amp.md#access_type) , das darstellt, wie die CPU der Speicher des Arrays zugreifen kann.|  
+|["accelerator_view"](#accelerator_view)|Ruft die ["accelerator_view"](accelerator-view-class.md) -Objekt, das den Speicherort darstellt, in dem das Array zugeordnet ist. Auf diese Eigenschaft kann nur auf der CPU zugegriffen werden.|  
+|[associated_accelerator_view](#associated_accelerator_view)|Ruft das zweite ["accelerator_view"](accelerator-view-class.md) -Objekt, das als Parameter übergeben wird, wenn ein stagingkonstruktor, beim Instanziieren aufgerufen wird der `array` Objekt.|  
+|[cpu_access_type](#cpu_access_type)|Ruft die [Access_type](concurrency-namespace-enums-amp.md#access_type) , die darstellt, wie die CPU-Nutzung für den Speicher des Arrays zugreifen kann.|  
 |[extent](#extent)|Ruft den Wertebereich ab, der die Form des Arrays definiert.|  
   
 ## <a name="remarks"></a>Hinweise  
- Der Typ `array<T,N>` stellt ein dichtes und reguläres (nicht verzweigtes) *N*-dimensionales Array, das in einem bestimmten Ort, z. B. einer Zugriffstaste oder die CPU befindet. Der Datentyp der Elemente im Array ist `T`. Der Typ muss mit der Zielzugriffstaste kompatibel ist. Obwohl der Rang, `N`, des Arrays statisch ermittelt und Teil des Typs ist, wird der Wertebereich des Arrays durch die Laufzeit bestimmt und durch Verwendung der `extent<N>`-Klasse ausgedrückt.  
+ Der Typ `array<T,N>` steht für eine dicht und reguläre (nicht verzweigte) *N*-dimensionales Array, das in einem bestimmten Speicherort, z. B. eine Zugriffstaste oder die CPU befindet. Der Datentyp der Elemente im Array ist `T`. Der Typ muss mit der Zielzugriffstaste kompatibel ist. Obwohl der Rang, `N`, des Arrays statisch ermittelt und Teil des Typs ist, wird der Wertebereich des Arrays durch die Laufzeit bestimmt und durch Verwendung der `extent<N>`-Klasse ausgedrückt.  
   
  Ein Array kann eine beliebige Anzahl Dimensionen haben, obwohl einige Funktionen für `array`-Objekte mit dem Rang eins, zwei und drei spezialisiert ist. Wenn Sie das Dimensionsargument weglassen, ist der Standardwert 1.  
   
@@ -152,9 +135,9 @@ friend class array;
 ~array() restrict(cpu);
 ```  
   
-##  <a name="accelerator_view"></a>accelerator_view-Objekt 
+##  <a name="accelerator_view"></a>"accelerator_view" 
 
- Ruft die [Accelerator_view](accelerator-view-class.md) -Objekt, das die Position darstellt, in dem das Array zugeordnet ist. Auf diese Eigenschaft kann nur auf der CPU zugegriffen werden.  
+ Ruft die ["accelerator_view"](accelerator-view-class.md) -Objekt, das den Speicherort darstellt, in dem das Array zugeordnet ist. Auf diese Eigenschaft kann nur auf der CPU zugegriffen werden.  
   
 ```  
 __declspec(property(get= get_accelerator_view)) Concurrency::accelerator_view accelerator_view;  
@@ -425,7 +408,7 @@ array(array&& _Other) restrict(cpu);
  Ein accelerator_view-Objekt, das den bevorzugten Zielort des Arrays angibt.  
   
  `_Av`  
- Ein [Accelerator_view](accelerator-view-class.md) -Objekt, das den Speicherort des Arrays angibt.  
+ Ein ["accelerator_view"](accelerator-view-class.md) -Objekt, das den Speicherort des Arrays angibt.  
   
  `_Cpu_access_type`  
  Die gewünschte [Access_type](concurrency-namespace-enums-amp.md#access_type) für das Array auf der CPU. Dieser Parameter hat den Standardwert `access_type_auto` und überlässt die Bestimmung des CPU- `access_type`-Objekts der Laufzeit. Das tatsächliche CPU-`access_type`-Objekt für das Array kann mithilfe der `get_cpu_access_type`-Methode abgefragt werden.  
@@ -465,7 +448,7 @@ array(array&& _Other) restrict(cpu);
   
 ##  <a name="associated_accelerator_view"></a>associated_accelerator_view 
 
- Ruft das zweite [Accelerator_view](accelerator-view-class.md) -Objekt, das als Parameter übergeben wird, wenn ein stagingkonstruktor aufgerufen wird, instanziiert die `array` Objekt.  
+ Ruft das zweite ["accelerator_view"](accelerator-view-class.md) -Objekt, das als Parameter übergeben wird, wenn ein stagingkonstruktor, beim Instanziieren aufgerufen wird der `array` Objekt.  
   
 ```  
 __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelerator_view associated_accelerator_view;  
@@ -473,7 +456,7 @@ __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelera
   
 ##  <a name="copy_to"></a>copy_to 
 
- Kopiert den Inhalt der `array` zu einem anderen `array`.  
+ Kopiert den Inhalt der `array` in eine andere `array`.  
   
 ```  
 void copy_to(
@@ -485,7 +468,7 @@ void copy_to(
   
 ### <a name="parameters"></a>Parameter  
  `_Dest`  
- Die [Array_view](array-view-class.md) Objekt zu kopieren.  
+ Die [Array_view](array-view-class.md) zu zu kopierende Objekt.  
   
 ##  <a name="cpu_access_type"></a>cpu_access_type 
 
@@ -510,7 +493,7 @@ const value_type* data() const restrict(amp, cpu);
   
 ##  <a name="extent"></a>Wertebereich 
 
- Ruft die [Block](extent-class.md) -Objekt, das die Form des definiert die `array`.  
+ Ruft die [Block](extent-class.md) -Objekt, das die Form des definiert, die `array`.  
   
 ```  
 __declspec(property(get= get_extent)) Concurrency::extent<_Rank> extent;  
@@ -518,25 +501,25 @@ __declspec(property(get= get_extent)) Concurrency::extent<_Rank> extent;
   
 ##  <a name="get_accelerator_view"></a>get_accelerator_view 
 
- Gibt die [Accelerator_view](accelerator-view-class.md) -Objekt, das die Position darstellt, in dem die `array` Objekt zugeordnet ist. Auf diese Eigenschaft kann nur auf der CPU zugegriffen werden.  
+ Gibt die ["accelerator_view"](accelerator-view-class.md) -Objekt, das den Speicherort darstellt, in dem die `array` Objekt zugeordnet ist. Auf diese Eigenschaft kann nur auf der CPU zugegriffen werden.  
   
 ```  
 Concurrency::accelerator_view get_accelerator_view() const;  
 ```    
   
 ### <a name="return-value"></a>Rückgabewert  
- Die `accelerator_view` -Objekt, das die Position darstellt, in dem die `array` Objekt zugeordnet ist.  
+ Die `accelerator_view` -Objekt, das den Speicherort darstellt, in dem die `array` Objekt zugeordnet ist.  
   
 ##  <a name="get_associated_accelerator_view"></a>get_associated_accelerator_view 
 
- Ruft das zweite [Accelerator_view](accelerator-view-class.md) -Objekt, das als Parameter übergeben wird, wenn ein stagingkonstruktor aufgerufen wird, instanziiert die `array` Objekt.  
+ Ruft das zweite ["accelerator_view"](accelerator-view-class.md) -Objekt, das als Parameter übergeben wird, wenn ein stagingkonstruktor, beim Instanziieren aufgerufen wird der `array` Objekt.  
   
 ```  
 Concurrency::accelerator_view get_associated_accelerator_view() const ;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die zweite [Accelerator_view](accelerator-view-class.md) Objekt an den staging-Konstruktor übergeben.  
+ Die zweite ["accelerator_view"](accelerator-view-class.md) , den staging-Konstruktor übergeben wird.  
   
 ##  <a name="get_cpu_access_type"></a>get_cpu_access_type 
 
@@ -561,7 +544,7 @@ Concurrency::extent<_Rank> get_extent() const restrict(amp,cpu);
   
 ##  <a name="operator_vec"></a>Operator Std:: vector&lt;Value_type&gt; 
 
- Verwendet `copy(*this, vector)` das Array implizit in eine Std:: Vector-Objekt zu konvertieren.  
+ Verwendet `copy(*this, vector)` , das Array implizit in ein Std:: Vector-Objekt zu konvertieren.  
   
 ```  
 operator std::vector<value_type>() const restrict(cpu);
@@ -615,7 +598,7 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ### <a name="return-value"></a>Rückgabewert  
  Der Elementwert, der von den Parametern angegeben wird.  
   
-##  <a name="operator_at"></a>Operator] 
+##  <a name="operator_at"></a>[]-Operator 
 
  Gibt das Element am angegebenen Index zurück.  
   
@@ -672,7 +655,7 @@ static const int rank = _Rank;
 ```  
 ## <a name="reinterpret_as"></a>reinterpret_as 
 
-Interpretiert das Array durch ein eindimensionales Array_view, die optional einen anderen Werttyp als das Quellarray haben kann.
+Interpretiert das Array durch ein eindimensionales array_view-Objekt, die optional einen anderen Werttyp als das Quellarray haben kann.
 
 ### <a name="syntax"></a>Syntax
 ``` 
@@ -687,7 +670,7 @@ array_view<const _Value_type2, 1> reinterpret_as() const restrict(amp,cpu);
 `_Value_type2`Der Datentyp der zurückgegebenen Daten.
 
 ### <a name="return-value"></a>Rückgabewert
-Ein Array_view oder const Array_view-Objekt, das basierend auf das Array, mit dem Elementtyp Typen von T ElementType und der Rang von N auf 1 reduziert.
+Ein array_view-Objekt oder const Array_view-Objekt, das im Array, mit dem Elementtyp einer Neuinterpretation von T ElementType und der Rang von N auf 1 reduziert basiert.
 
 ### <a name="remarks"></a>Hinweise
 Manchmal ist es hilfreich, ein mehrdimensionales Array so anzuzeigen, als wäre es ein lineares, eindimensionales Array, möglicherweise mit einem anderen Werttyp als das Quellarray. Sie können dazu diese Methode verwenden.
@@ -808,7 +791,7 @@ array_view<const value_type,3> section(
   
 ##  <a name="view_as"></a>view_as 
 
- Interpretiert dieses Array als ein [Array_view](array-view-class.md) eines abweichenden Rang.  
+ Interpretiert dieses Array als eine [Array_view](array-view-class.md) eines abweichenden Rang.  
   
 ```  
 template <int _New_rank>  
@@ -826,7 +809,7 @@ array_view<const value_type,_New_rank> view_as(
  Der Rang des `extent`-Objekts wurde als Parameter übergeben.  
   
  `_View_extent`  
- Der Wertebereich, der verwendet wird, erstellt die [Array_view](array-view-class.md) Objekt.  
+ Das Ausmaß, mit dem Erstellen der neuen [Array_view](array-view-class.md) Objekt.  
   
  `value_type`  
  Der Datentyp der Elemente in den ursprünglichen `array` -Objekt und das zurückgegebene `array_view` Objekt.  
@@ -836,4 +819,3 @@ array_view<const value_type,_New_rank> view_as(
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)
-

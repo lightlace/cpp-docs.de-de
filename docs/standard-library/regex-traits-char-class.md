@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- regex/std::regex_traits<char>
-dev_langs:
-- C++
-helpviewer_keywords:
-- regex_traits<char> class
+f1_keywords: regex/std::regex_traits<char>
+dev_langs: C++
+helpviewer_keywords: regex_traits<char> class
 ms.assetid: ce95ebcd-3687-4ad5-bf1d-b89fdc633675
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e170ba069fc59d5eb41ed31b005bb59769d52c80
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 4a0ce2260853a5849210f57c2f35907f52e7f8c9
-ms.contentlocale: de-de
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="regextraitsltchargt-class"></a>regex_traits&lt;Char&gt;-Klasse
 Die Spezialisierung von regex_traits für char.  
@@ -54,4 +50,3 @@ class regex_traits<char>
 [regex_token_iterator-Klasse](../standard-library/regex-token-iterator-class.md)  
 [regex_traits-Klasse](../standard-library/regex-traits-class.md)  
 [\<regex>-Typdefinitionen](../standard-library/regex-typedefs.md)  
-

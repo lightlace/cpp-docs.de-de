@@ -1,47 +1,48 @@
 ---
-title: "&lt;value&gt; (Visual C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "value"
-  - "<value>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<value> C++-XML-Tag"
-  - "value (C++-XML-Tag)"
+title: '&lt;Wert&gt; (Visual C++) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- value
+- <value>
+dev_langs: C++
+helpviewer_keywords:
+- value C++ XML tag
+- <value> C++ XML tag
 ms.assetid: 0ba0a0d5-bcd7-4862-a169-83f2721ad80e
-caps.latest.revision: 8
-caps.handback.revision: "8"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3d1621a8251bddb1d4c7d1bf3f00c4ccf3ea5242
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# &lt;value&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Das \<value\>\-Tag können Sie eine Eigenschaft und Gegensatz beschreiben.  Beachten Sie, dass, wenn Sie eine Eigenschaft mit einem Code\-Assistenten in der integrierten Entwicklungsumgebung von Visual Studio hinzufügen, sie ein [\<summary\>](../ide/summary-visual-cpp.md)\-Tag für die neue Eigenschaft hinzugefügt wird.  Sie sollten dann manuell ein \<value\>\-Tag hinzufügen, um den Wert zu beschreiben, den die Eigenschaft darstellt.  
+# <a name="ltvaluegt-visual-c"></a>&lt;Wert&gt; (Visual C++)
+Die \<Wert >-Tag kann eine Eigenschaft und Methoden des Eigenschaftenaccessors beschreiben. Beachten Sie, dass beim Hinzufügen einer Eigenschaft mit einem Code-Assistenten in der integrierten Entwicklungsumgebung von Visual Studio hinzufügen wird ein [ \<Zusammenfassung >](../ide/summary-visual-cpp.md) Tag für die neue Eigenschaft. Sie sollten dann manuell ein \<value>-Tag hinzufügen, um den Wert zu beschreiben, den die Eigenschaft darstellt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <value>property-description</value>  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `property-description`  
- Eine Beschreibung für die Eigenschaft.  
+ Eine Beschreibung der Eigenschaft  
   
-## Hinweise  
- Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit ["\/doc"](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.  
+## <a name="remarks"></a>Hinweise  
+ Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // xml_value_tag.cpp  
@@ -65,5 +66,5 @@ public:
 };  
 ```  
   
-## Siehe auch  
- [XML\-Dokumentation](../ide/xml-documentation-visual-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [XML-Dokumentation](../ide/xml-documentation-visual-cpp.md)

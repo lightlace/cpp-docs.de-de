@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6457e82928a5a705377b90e2acc0989768fcd9f1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f49ce6bed9e77680017b0aa26b677fd18e3efc1a
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="arm-assembler-diagnostic-messages"></a>Diagnosemeldungen des ARM-Assemblers
 Der Microsoft-ARM-Assembler (*Armasm*) Diagnose Warnungen und Fehler ausgibt, wenn sie gefunden wird. Dieser Artikel beschreibt die Nachrichten häufig auftreten.  
@@ -33,7 +34,7 @@ filename(lineno) : [error|warning] Anum: message
   
 ### <a name="errors"></a>Fehler  
  A2193: Diese Anweisung wird zu einem unvorhersehbaren Verhalten generiert.  
- Die ARM-Architektur kann nicht garantieren, was geschieht, wenn diese Anweisung ausgeführt wird.  Weitere Informationen zu den fest definierten Formen der diese Anweisung, wenden Sie sich an den [ARM Architecture Reference Manual](http://go.microsoft.com/fwlink/?LinkId=246464).  
+ Die ARM-Architektur kann nicht garantieren, was geschieht, wenn diese Anweisung ausgeführt wird.  Weitere Informationen zu den fest definierten Formen der diese Anweisung, wenden Sie sich an den [ARM Architecture Reference Manual](http://go.microsoft.com/fwlink/p/?linkid=246464).  
   
 ```  
   
@@ -115,7 +116,7 @@ ANDS r0, r0, #4, #2            ; A4508: Use of this rotated constant is deprecat
 ```  
   
  A4509: Diese Form der bedingten Anweisung ist veraltet.  
- Diese Form der bedingten Anweisung wurde vom ARM in der Architektur ARMv8 als veraltet markiert. Es wird empfohlen, dass Sie den Code, um bedingte Verzweigungen verwenden ändern. Um festzustellen, welche bedingten Anweisungen weiterhin unterstützt werden, finden Sie in der [ARM Architecture Reference Manual](http://go.microsoft.com/fwlink/?LinkId=246464).  
+ Diese Form der bedingten Anweisung wurde vom ARM in der Architektur ARMv8 als veraltet markiert. Es wird empfohlen, dass Sie den Code, um bedingte Verzweigungen verwenden ändern. Um festzustellen, welche bedingten Anweisungen weiterhin unterstützt werden, finden Sie in der [ARM Architecture Reference Manual](http://go.microsoft.com/fwlink/p/?linkid=246464).  
   
  Diese Warnung wird nicht ausgegeben, wenn die `-oldit` Befehlszeilenoption verwendet wird.  
   

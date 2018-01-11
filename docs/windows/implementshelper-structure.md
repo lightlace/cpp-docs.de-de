@@ -1,32 +1,33 @@
 ---
-title: "ImplementsHelper-Struktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::ImplementsHelper"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ImplementsHelper-Struktur"
+title: ImplementsHelper-Struktur | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::ImplementsHelper
+dev_langs: C++
+helpviewer_keywords: ImplementsHelper structure
 ms.assetid: b857ba80-81bd-4e53-92b6-210991954243
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1a51de59278e476be1e99b60ef1b0ab8a6e3f3cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# ImplementsHelper-Struktur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Unterstützt die WRL\-Infrastruktur und nicht beabsichtigt, direkt im Code verwendet werden.  
+# <a name="implementshelper-structure"></a>ImplementsHelper-Struktur
+Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <  
@@ -37,31 +38,31 @@ template <
 friend struct Details::ImplementsHelper;  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `RuntimeClassFlagsT`  
- Ein Feld von Flags, das einen oder mehreren [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) Enumeratoren angibt.  
+ Ein Feld von Flags, die angibt, eine oder mehrere [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) Enumeratoren.  
   
  `ILst`  
- Eine Liste von Schnittstellen\-IDs.  
+ Eine Liste der Schnittstellen-IDs.  
   
  `IsDelegateToClass`  
- Geben Sie `true` an, wenn die aktuelle Instanz von Werkzeugen eine Basisklasse erste Schnittstellen\-ID in `ILst` ist; andernfalls `false`.  
+ Geben Sie `true` ist die aktuelle Instanz von implementiert eine Basisklasse, von der ersten Schnittstellen-ID in `ILst`ist, andernfalls `false`.  
   
-## Hinweise  
- Hilfen implementieren die Struktur unter [Implementiert](../windows/implements-structure.md).  
+## <a name="remarks"></a>Hinweise  
+ Implementiert die [implementiert](../windows/implements-structure.md) Struktur.  
   
- Diese Vorlage wird eine Liste der Schnittstellen durch und diese als Basisklassen und als Informationen hinzu, die erforderlich sind, QueryInterface zu aktivieren.  
+ Diese Vorlage durchläuft eine Liste von Schnittstellen und fügt sie als Basisklassen auch Informationen zum Aktivieren von QueryInterface erforderlich sind.  
   
-## Member  
+## <a name="members"></a>Member  
   
-## Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `ImplementsHelper`  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** implements.h  
   
- **Namespace:**  Microsoft::WRL::Details  
+ **Namespace:** Microsoft::WRL::Details  
   
-## Siehe auch  
- [Reference \(Windows Runtime Library\)](assetId:///00000000-0000-0000-0000-000000000000)   
- [Microsoft::WRL::Details\-Namespace](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Siehe auch  
+ [Referenz (Windows-Runtime-Bibliothek)](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)   
+ [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

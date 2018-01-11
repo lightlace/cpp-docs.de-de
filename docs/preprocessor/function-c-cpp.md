@@ -1,47 +1,47 @@
 ---
-title: "function (C/C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "function_CPP"
-  - "vc-pragma.function"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "function-Pragma"
-  - "Pragmas, Funktion"
+title: -Funktion (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- function_CPP
+- vc-pragma.function
+dev_langs: C++
+helpviewer_keywords:
+- function pragma
+- pragmas, function
 ms.assetid: cbd1bd60-fabf-4b5a-9c3d-2d9f4b871365
-caps.latest.revision: 10
-caps.handback.revision: "8"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2ff72fb22adf3b81e936e3591f2a60b2aa2e30fa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# function (C/C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="function-cc"></a>function (C/C++)
 Gibt an, dass Funktionsaufrufe generiert werden, die in der Argumentliste des Pragmas angegeben sind.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
 #pragma function( function1 [, function2, ...] )  
 ```  
   
-## Hinweise  
- Wenn Sie das **intrinsic**\-Pragma \(oder \/Oi\) verwenden, um den Compiler aufzufordern, systeminterne Funktionen zu generieren \(systeminterne Funktionen werden als Inlinecode und nicht als Funktionsaufrufe generiert\), können Sie das **function**\-Pragma verwenden, um einen Funktionsaufruf explizit zu erzwingen.  Sobald ein function\-Pragma angezeigt wird, tritt es mit der ersten Funktionsdefinition in Kraft, die eine bestimmte systeminterne Funktion enthält.  Die Wirkung dauert bis zum Ende der Quelldatei oder bis zum Auftreten eines **intrinsic**\-Pragmas, das die gleiche systeminterne Funktion angibt.  Das **function**\-Pragma kann nur außerhalb einer Funktion auf globaler Ebene verwendet werden.  
+## <a name="remarks"></a>Hinweise  
+ Bei Verwendung der **systeminterne** Pragma (oder/Oi) um den Compiler aufzufordern, systeminterne Funktionen generieren (systeminterne Funktionen werden als Inlinecode und nicht als Funktionsaufrufe generiert), können Sie die **Funktion** Pragma Um einen Funktionsaufruf explizit zu erzwingen. Sobald ein function-Pragma angezeigt wird, tritt es mit der ersten Funktionsdefinition in Kraft, die eine bestimmte intrinsische Funktion enthält. Die Wirkung dauert bis an das Ende der Quelldatei oder bis zum Auftreten einer **systeminterne** Pragmas, die die gleiche intrinsische Funktion angibt. Die **Funktion** Pragma kann nur außerhalb einer Funktion verwendet werden – auf globaler Ebene.  
   
- Listen der Funktionen mit systeminternen Formen finden Sie unter [\#pragma intrinsic](../preprocessor/intrinsic.md).  
+ Listen der Funktionen mit systeminternen Formen finden Sie unter [#pragma intrinsic](../preprocessor/intrinsic.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // pragma_directive_function.cpp  
@@ -88,7 +88,10 @@ int main() {
 }  
 ```  
   
-  **str lautet 'Now\*\*\*\*\*\*\*\*\*\*\*\*'**  
-**str lautet '\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!'**   
-## Siehe auch  
- [Pragma\-Direktiven und das \_\_Pragma\-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+```Output  
+str is 'Now************'  
+str is '!!!!!!!!!!!!!!!'  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

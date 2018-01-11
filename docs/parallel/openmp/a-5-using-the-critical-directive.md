@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1ef678b58df9d2c323cdebb61feed52ebbaf607f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7cf4170fae6792906db29c90f61f067886b00f1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a5---using-the-critical-directive"></a>A.5   Verwenden der critical-Direktive
 Das folgende Beispiel schließt mehrere `critical` Direktiven ([Abschnitt 2.6.2](../../parallel/openmp/2-6-2-critical-construct.md) auf Seite 18). Das Beispiel veranschaulicht ein Warteschlangen-Modell, in dem eine Aufgabe aus der Warteschlange entfernt und gearbeitet wird. Abarbeiten der Warteschlange Vorgang muss zum Schutz gegen mehrere Threads, die daraus entfernt wird die gleiche Aufgabe einem `critical` Abschnitt. Da die zwei Warteschlangen in diesem Beispiel unabhängig sind, werden sie durch geschützt `critical` Richtlinien mit unterschiedlichen Namen *Xaxis* und *Yaxis*.  

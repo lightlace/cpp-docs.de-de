@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fd11326e33ff783b3868215794f9803e97d41c55
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d5c2da30fd2b92ea302c40dc7dbef71499fdecdf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="import-attributes-c"></a>#import-Attribute (C++)
 Enthält Links zu Attributen, die mit der #import-Direktive verwendet werden.  
@@ -32,7 +33,7 @@ Enthält Links zu Attributen, die mit der #import-Direktive verwendet werden.
 |[auto_rename](../preprocessor/auto-rename.md)|Benennt für C++ reservierte Wörter um, indem dem Variablennamen zwei Unterstriche (__) angefügt werden, um potenzielle Namenskonflikte zu vermeiden.|  
 |[auto_search](../preprocessor/auto-search.md)|Gibt an, dass, wenn auf eine Typbibliothek mit #import verwiesen wird und diese selbst auf eine andere Typbibliothek verweist, der Compiler einen impliziten #import für die andere Typbibliothek ausführen kann.|  
 |[embedded_idl](../preprocessor/embedded-idl.md)|Gibt an, dass die Typbibliothek in die TLH-Datei geschrieben wird und der vom Attribut generierte Code beibehalten wird.|  
-|[Ausschließen](../preprocessor/exclude-hash-import.md)|Schließt Elemente aus den Headerdateien der Typbibliothek aus, die generiert werden.|  
+|[exclude](../preprocessor/exclude-hash-import.md)|Schließt Elemente aus den Headerdateien der Typbibliothek aus, die generiert werden.|  
 |[high_method_prefix](../preprocessor/high-method-prefix.md)|Gibt an, welches Präfix beim Benennen von Eigenschaften und Methoden der oberen Ebene verwendet werden soll.|  
 |[high_property_prefixes](../preprocessor/high-property-prefixes.md)|Gibt alternative Präfixe für drei Eigenschaftenmethoden an.|  
 |[implementation_only](../preprocessor/implementation-only.md)|Unterdrückt die Generierung der TLH-Headerdatei (die primäre Headerdatei).|  

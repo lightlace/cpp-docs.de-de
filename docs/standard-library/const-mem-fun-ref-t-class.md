@@ -15,11 +15,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dd90f1417f977680b99a1762834fd91dc7513152
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5897ef628a2a6fd9229d187335ae88b594799e97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constmemfunreft-class"></a>const_mem_fun_ref_t-Klasse
 Eine Adapterklasse, die einer **const**-Memberfunktion, die keine Argumente akzeptiert, ermöglicht, als unäres Funktionsobjekt aufgerufen zu werden, wenn sie mit einem Verweisargument initialisiert wird.  
@@ -38,7 +39,7 @@ class const_mem_fun_ref_t
   
 #### <a name="parameters"></a>Parameter  
  `Pm`  
- Ein Zeiger auf die Memberfunktion der Klasse **Type**, die in ein Funktionsobjekt konvertiert werden soll  
+ Ein Zeiger auf die Memberfunktion der Klasse **Type**, die in ein Funktionsobjekt konvertiert werden soll.  
   
  `left`  
  Das Objekt, das für die `Pm`-Memberfunktion aufgerufen wird.  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,9 +19,7 @@ f1_keywords:
 - random/std::discrete_distribution::param_type::probabilities
 - random/std::discrete_distribution::param_type::operator==
 - random/std::discrete_distribution::param_type::operator!=
-- random/std::discrete_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::discrete_distribution [C++]
 - std::discrete_distribution [C++], reset
@@ -33,16 +30,16 @@ helpviewer_keywords:
 - std::discrete_distribution [C++], param_type
 - std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: dbd82957b213a88792d7dba8a7e7dc17b8b28bb6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 092185d577b28b0507be554d48e4dacf0439e60c
-ms.contentlocale: de-de
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="discretedistribution-class"></a>discrete_distribution-Klasse
 Generiert eine diskrete Ganzzahlverteilung mit Intervallen von gleicher Breite und in jedem Intervall eindeutiger Wahrscheinlichkeit.  
@@ -84,7 +81,7 @@ public:
 ```   
 #### <a name="parameters"></a>Parameter  
 *IntType*  
- Der Ganzzahlergebnistyp. Der Standardwert ist `int`. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).  
+ Der Ganzzahlergebnistyp. Der Standardwert ist `int`. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).  
   
 ## <a name="remarks"></a>Hinweise  
  Die Sampling-Verteilung weist Intervalle von gleicher Breite und in jedem Intervall eindeutiger Wahrscheinlichkeit auf. Informationen zu weiteren Sampling-Verteilungen finden Sie unter [piecewise_linear_distribution Class (piecewise_linear_distribution-Klasse)](../standard-library/piecewise-linear-distribution-class.md) und [piecewise_constant_distribution Class (piecewise_constant_distribution-Klasse)](../standard-library/piecewise-constant-distribution-class.md).  
@@ -299,7 +296,6 @@ struct param_type {
   
 ## <a name="see-also"></a>Siehe auch  
  [\<random>](../standard-library/random.md)
-
 
 
 

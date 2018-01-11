@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c4846b94a03eb24e1fca8f7e802f4019e0ebaea1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 748bdd1a2ce6b94a2c935df94de68767ee36875e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="handlers-for-commands-and-control-notifications"></a>Handler für Befehle und Steuerelementbenachrichtigungen
 Es sind keine Standardhandler für Befehle oder Steuerelemente-benachrichtigungsmeldungen aus. Aus diesem Grund werden Sie nur gemäß der Konvention in Benennung der Handler für diese Art von Nachrichten gebunden. Wenn Sie den Befehl oder das Steuerelement-Benachrichtigung an einen Handler zuordnen, die Eigenschaftenfenstern schlägt einen Namen basierend auf der Befehls-ID oder Steuerelement-Benachrichtigung Code. Sie können akzeptieren den vorgeschlagenen Namen, ändern oder Ersetzen Sie ihn.  

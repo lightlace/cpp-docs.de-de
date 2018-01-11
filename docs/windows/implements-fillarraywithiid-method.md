@@ -1,32 +1,33 @@
 ---
-title: "Implements::FillArrayWithIid-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Implements::FillArrayWithIid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "FillArrayWithIid-Methode"
+title: 'Implements:: fillarraywithiid-Methode | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Implements::FillArrayWithIid
+dev_langs: C++
+helpviewer_keywords: FillArrayWithIid method
 ms.assetid: b2e62e3f-0ab9-4c70-aad7-856268544f44
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 82561056e042e95206a8fe5e04c2a246408d7923
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Implements::FillArrayWithIid-Methode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Fügt die Schnittstellen\-ID ein, die durch den aktuellen zeroth Vorlagenparameter in das angegebene Arrayelement angegeben wird.  
+# <a name="implementsfillarraywithiid-method"></a>Implements::FillArrayWithIid-Methode
+Fügt die Schnittstellen-ID, die durch den aktuellen nullte Vorlagenparameter in das angegebene Array-Element angegeben.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 __forceinline static void FillArrayWithIid(  
@@ -35,20 +36,20 @@ __forceinline static void FillArrayWithIid(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `index`  
- Ein nullbasierter Index, der den Ausgangsbedingungen Arrayelement für diesen Vorgang angibt.  Wenn dieser Vorgang abgeschlossen ist, wird `index` durch. 1 erhöht.  
+ Ein nullbasierter Index, der das Array Startelement für diesen Vorgang angibt. Wenn dieser Vorgang abgeschlossen ist, `index` um 1 erhöht.  
   
  `iids`  
- Ein Array Typ IID.  
+ Ein Array des Typs IID.  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Interne Hilfsfunktion.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** implements.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [Implements\-Struktur](../windows/implements-structure.md)
+## <a name="see-also"></a>Siehe auch  
+ [Implements-Struktur](../windows/implements-structure.md)

@@ -27,11 +27,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 180039627049dee0be8ebcaf211dabc2e42086c7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 30ecf45c8a22dfb42917affa59152aeefbc35425
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multithreading-programming-tips"></a>Multithreading: Tipps für die Programmierung
 In Multithreadanwendungen müssen Sie beim Zugriff auf Daten größere Vorsicht walten lassen als in Singlethreadanwendungen. Da in Multithreadanwendungen mehrere unabhängige Ausführungspfade gleichzeitig verwendet werden, müssen die Algorithmen, die Daten oder beide darüber informiert sein, dass Daten möglicherweise von mehreren Threads gleichzeitig verwendet werden. In diesem Thema werden die Methoden beschrieben, mit denen potenzielle Probleme bei der Programmierung von Multithreadanwendungen mit Microsoft Foundation Class Library (MFC) vermieden werden können.  
@@ -53,7 +54,7 @@ In Multithreadanwendungen müssen Sie beim Zugriff auf Daten größere Vorsicht 
  Wenn Sie eine Multithreadanwendung arbeiten, die nicht mit einen Thread erstellt eine [CWinThread](../mfc/reference/cwinthread-class.md) -Objekt, Sie können nicht auf andere MFC-Objekte zugreifen, von diesem Thread aus. Heißt, wenn Sie ein beliebiges MFC-Objekt von einem sekundären Thread zugreifen möchten, Sie müssen zur Erstellung dieses Threads mit einer der Methoden, die in beschriebenen [Multithreading: Erstellen von Benutzeroberflächenthreads](../parallel/multithreading-creating-user-interface-threads.md) oder [Multithreading: Erstellen von Arbeitsthreads](../parallel/multithreading-creating-worker-threads.md). Nur mithilfe dieser Methoden kann die Klassenbibliothek die internen Variablen initialisieren, die zur Behandlung von Multithreadanwendungen erforderlich sind.  
   
 ##  <a name="_core_windows_handle_maps"></a>Windows-Handlezuordnungen  
- Grundsätzlich kann ein Thread nur auf die von ihm erstellten MFC-Objekte zugreifen. Der Grund hierfür ist, dass temporäre und permanente Windows-Handlezuordnungen im lokalen Threadspeicher verwaltet werden. Auf diese Weise soll der gleichzeitige Zugriff von mehreren Threads aus verhindert werden. Ein Arbeitsthread kann z. B. keine Berechnung durchführen und anschließend die `UpdateAllViews`-Memberfunktion eines Dokuments aufrufen, um die Fenster zu ändern, die Ansichten der neuen Daten enthalten. Dies hat keinerlei Auswirkung, da sich die Zuordnung von `CWnd`-Objekten zu `HWND`s lediglich auf den primären Thread bezieht. Dies bedeutet, dass ein bestimmter Thread möglicherweise eine Zuordnung eines Windows-Handles zu einem C++-Objekt aufweist, ein anderer Thread dasselbe Handle jedoch unter Umständen einem anderen C++-Objekt zuordnet. Änderungen, die in einem Thread vorgenommen wurden, werden in einem anderen Thread nicht widergespiegelt.  
+ Grundsätzlich kann ein Thread nur auf die von ihm erstellten MFC-Objekte zugreifen. Der Grund hierfür ist, dass temporäre und permanente Windows-Handlezuordnungen im threadlokalen Speicher verwaltet werden. Auf diese Weise soll der gleichzeitige Zugriff von mehreren Threads aus verhindert werden. Ein Arbeitsthread kann z. B. keine Berechnung durchführen und anschließend die `UpdateAllViews`-Memberfunktion eines Dokuments aufrufen, um die Fenster zu ändern, die Ansichten der neuen Daten enthalten. Dies hat keinerlei Auswirkung, da sich die Zuordnung von `CWnd`-Objekten zu `HWND`s lediglich auf den primären Thread bezieht. Dies bedeutet, dass ein bestimmter Thread möglicherweise eine Zuordnung eines Windows-Handles zu einem C++-Objekt aufweist, ein anderer Thread dasselbe Handle jedoch unter Umständen einem anderen C++-Objekt zuordnet. Änderungen, die in einem Thread vorgenommen wurden, werden in einem anderen Thread nicht widergespiegelt.  
   
  Es gibt verschiedene Methoden zur Umgehung dieses Problems: Die erste Methode ist die Übergabe eines individuellen Handles (z. B. `HWND`) an den Arbeitsthread, anstelle von C++-Objekten. Der Arbeitsthread fügt anschließend diese Objekte seiner temporären Zuordnung hinzu, indem er die entsprechende `FromHandle`-Memberfunktion aufruft. Sie können auch das Objekt permanenten Zuordnung des Threads hinzufügen, durch den Aufruf **Anfügen**, dies sollte jedoch vorgenommen werden nur dann, wenn Sie garantiert, dass das Objekt länger als der Thread vorhanden ist.  
   

@@ -144,11 +144,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5250ab17fa6da4ed54d5bda84e32b409ca53869d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: edcce2cd9f21766065cbc43f7059c638a302abd2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencyprecisemath-namespace"></a>Concurrency::precise_math-Namespace
 Funktionen im `precise_math`-Namespace sind C99-kompatibel. Sowohl einfache Genauigkeit und doppelte Genauigkeit Versionen jeder Funktion enthalten sind. Beispielsweise `acos` ist die Version mit doppelter Genauigkeit und `acosf` ist die Version mit einfacher Genauigkeit. Diese Funktionen, einschließlich der Funktionen mit einfacher Genauigkeit erfordern erweiterte Unterstützung mit doppelter Genauigkeit auf der Zugriffstaste. Sie können die [Accelerator:: supports_double_precision](accelerator-class.md#supports_double_precision) zu bestimmen, ob Sie diese Funktionen auf eine bestimmte Zugriffstaste ausführen können. 

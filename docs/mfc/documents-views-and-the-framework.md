@@ -27,11 +27,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b6034dc13c554769ab62b37bd1ca143527b5f82e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e48872907b07b0adf18cf17cca6ec6ecabe9e2de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="documents-views-and-the-framework"></a>Dokumente, Ansichten und das Framework
 Das Herzstück des MFC-Frameworks gelten die Konzepte von Dokument und Ansicht in. Ein Dokument ist ein Datenobjekt an, mit denen der Benutzer in einer bearbeitungssitzung interagiert. Wird erstellt, indem die `New` oder **öffnen** Befehl die **Datei** Menü und wird in der Regel in einer Datei gespeichert. (Standard-MFC-Dokumente, die von Klasse abgeleitet **CDocument**, unterscheiden sich von aktive Dokumente und OLE-Verbunddokumente.) Eine Sicht ist ein Fensterobjekt, das über die Interaktion des Benutzers mit einem Dokument.  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,33 +13,19 @@ f1_keywords:
 - chrono/std::chrono::time_point::max
 - chrono/std::chrono::time_point::min
 - chrono/std::chrono::time_point::time_since_epoch
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 18be1e52-57b9-489a-8a9b-f58894f0aaad
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 1c4d02cf83401e6a6dce3fa079d43dea0fce6270
-ms.contentlocale: de-de
-ms.lasthandoff: 04/29/2017
-
+helpviewer_keywords: std::chrono [C++], time_point
+ms.workload: cplusplus
+ms.openlocfilehash: 4b8f6880968b899bcf28b60fa69edf1e4250d4d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="timepoint-class"></a>time_point-Klasse
 Mit `time_point` wird ein Typ beschrieben, der einen bestimmten Zeitpunkt darstellt. Er enthält ein Objekt des Typs [duration](../standard-library/duration-class.md), in dem die verstrichene Zeit seit dem vom Vorlagenargument `Clock` dargestellten Zeitraum gespeichert ist.  
@@ -53,7 +38,7 @@ template <class Clock,
 class time_point;  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-typedefs"></a>Öffentliche Typedefs  
   
@@ -75,7 +60,7 @@ class time_point;
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[max](#max)|Gibt die Obergrenze für `time_point::ref` an.|  
-|[min](#min)|Gibt die Untergrenze für `time_point::ref` an.|  
+|[Min.](#min)|Gibt die Untergrenze für `time_point::ref` an.|  
 |[time_since_epoch](#time_since_epoch)|Gibt den gespeicherten `duration`-Wert zurück.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
@@ -174,5 +159,4 @@ constexpr duration time_since_epoch() const;
 ## <a name="see-also"></a>Siehe auch  
  [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)   
  [\<chrono>](../standard-library/chrono.md)
-
 

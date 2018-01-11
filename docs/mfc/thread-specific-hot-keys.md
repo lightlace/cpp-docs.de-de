@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 75c3b5356277e227832ecc94a9f6b70cc15f3a71
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 89c6ae27dacf5b8637c914c92b6805b1cc405353
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="thread-specific-hot-keys"></a>Threadspezifische Abkürzungstasten
 Eine Anwendung legt eine threadspezifische Abkürzungstaste ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) mithilfe der Windows **RegisterHotKey** Funktion. Wenn der Benutzer eine threadspezifische Abkürzungstaste drückt, sendet Windows eine [WM_HOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646279) Nachricht an den Anfang der Warteschlange für einen bestimmten Thread-Nachrichten. Die **WM_HOTKEY** Nachricht enthält den virtueller Tastencode, die UMSCHALT-Status und die benutzerdefinierte-ID des jeweiligen Abkürzungstaste, die gedrückt wurde. Eine Liste der standardmäßigen virtuellen Tastencodes finden Sie unter Winuser.h. Weitere Informationen zu dieser Methode finden Sie unter [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309).  

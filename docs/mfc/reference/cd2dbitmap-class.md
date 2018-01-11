@@ -62,11 +62,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 057ad4176648155e549b8b061bfe727e7ffe1876
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 967bad02cf92b0078d789e5c0b6b55f9644bb17b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dbitmap-class"></a>CD2DBitmap-Klasse
 Ein Wrapper für ID2D1Bitmap.  
@@ -77,7 +78,7 @@ Ein Wrapper für ID2D1Bitmap.
 class CD2DBitmap : public CD2DResource;  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -124,7 +125,7 @@ class CD2DBitmap : public CD2DResource;
   
 ### <a name="protected-data-members"></a>Geschützte Datenmember  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |[CD2DBitmap::m_bAutoDestroyHBMP](#m_bautodestroyhbmp)|True, wenn M_hBmpSrc zerstört werden soll. andernfalls "false".|  
 |[CD2DBitmap::m_hBmpSrc](#m_hbmpsrc)|Das Quellhandle mithilfe einer Bitmap.|  
