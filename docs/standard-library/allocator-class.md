@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,8 +23,7 @@ f1_keywords:
 - memory/std::allocator::destroy
 - memory/std::allocator::max_size
 - memory/std::allocator::rebind
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::allocator [C++]
 - std::allocator [C++], const_pointer
@@ -43,16 +41,16 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 32e63292ffcb02fa41ea5b8d9e95f7b4cd3f776b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 50967f59b594cfba30167b67dcb2802541a5eafc
-ms.contentlocale: de-de
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocator-class"></a>allocator-Klasse
 Die Vorlagenklasse beschreibt ein Objekt, das die Speicherbelegung und -freigabe für Objektarrays des Typs **Type** verwaltet. Ein Objekt der **allocator**-Klasse ist das Standardzuweisungsobjekt, das in den Konstruktoren für verschiedene Containervorlagenklassen in der C++-Standardbibliothek angegeben ist.  
@@ -65,7 +63,7 @@ class allocator
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Typ*  
+ *Type*  
  Der Objekttyp, für den der Speicher zugewiesen bzw. dessen Zuweisung aufgehoben wird.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -89,7 +87,7 @@ class allocator
   
  **C++11 und höher:** Verwenden Sie zum Aktivieren von „move“-Vorgängen in Ihrer Zuweisung die minimale Zuweisungsschnittstelle, und implementieren Sie den Kopierkonstruktor „== and !=“, Operatoren, „allocate“ und „deallocate“. Weitere Informationen und ein Beispiel finden Sie unter [Allocators](../standard-library/allocators.md)  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="constructors"></a>Konstruktoren  
   
@@ -97,15 +95,15 @@ class allocator
 |-|-|  
 |[allocator](#allocator)|Zum Erstellen von `allocator`-Objekten verwendete Konstruktoren.|  
   
-### <a name="typedefs"></a>TypeDefs  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
 |[const_pointer](#const_pointer)|Ein Typ, der einen konstanten Zeiger auf den Typ des Objekts bereitstellt, das von der Zuweisung verwaltet wird.|  
 |[const_reference](#const_reference)|Ein Typ, der einen konstanten Verweis auf den Typ des Objekts bereitstellt, das von der Zuweisung verwaltet wird.|  
 |[difference_type](#difference_type)|Ein ganzzahliger Typ mit Vorzeichen, der die Differenz zwischen Werten von Zeigern und dem Typ des Objekts, das von der Zuweisung verwaltet wird, darstellen kann.|  
-|[pointer](#pointer)|Ein Typ, der einen Zeiger auf den Typ des Objekts bereitstellt, das von der Zuweisung verwaltet wird.|  
-|[reference](#reference)|Ein Typ, der einen Verweis auf den Typ des Objekts bereitstellt, das von der Zuweisung verwaltet wird.|  
+|[Zeiger](#pointer)|Ein Typ, der einen Zeiger auf den Typ des Objekts bereitstellt, das von der Zuweisung verwaltet wird.|  
+|[Verweis](#reference)|Ein Typ, der einen Verweis auf den Typ des Objekts bereitstellt, das von der Zuweisung verwaltet wird.|  
 |[size_type](#size_type)|Ein ganzzahliger Typ ohne Vorzeichen, der die Länge einer beliebigen Sequenz darstellen kann, die ein Objekt der Vorlagenklasse `allocator` zuordnen kann.|  
 |[value_type](#value_type)|Ein Typ, der von der Zuweisung verwaltet wird.|  
   
@@ -1051,5 +1049,4 @@ The modified vector v is:
   
 ## <a name="see-also"></a>Siehe auch  
  [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

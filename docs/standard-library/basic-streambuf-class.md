@@ -105,11 +105,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0586de707bb015e21df5c7975b98be6966cd0262
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bd79ff07ff5e70c3d2d95482c5676df72dd41612
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicstreambuf-class"></a>basic_streambuf-Klasse
 Beschreibt eine abstrakte Basisklasse für das Ableiten eines Streampuffers, die die Übertragung von Elementen an eine bestimmte und von einer bestimmten Darstellung eines Streams steuert.  
@@ -171,7 +172,7 @@ class basic_streambuf;
 |-|-|  
 |[basic_streambuf](#basic_streambuf)|Konstruiert ein Objekt vom Typ `basic_streambuf`.|  
   
-### <a name="typedefs"></a>TypeDefs  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  

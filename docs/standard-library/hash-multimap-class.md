@@ -97,11 +97,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5a91949cc8bd5a53d1a01835dd0880e92715cec9
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: 1e5c64e90b2e75a7dc0879bbc871892d90d1a02c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmultimap-class"></a>hash_multimap-Klasse
 > [!NOTE]
@@ -169,7 +170,7 @@ class hash_multimap
 |-|-|  
 |[hash_multimap](#hash_multimap)|Erstellt eine Liste einer bestimmten Größe bzw. mit Elementen eines bestimmten Werts oder mit einem bestimmten `allocator`-Element oder als vollständige bzw. teilweise Kopie eines anderen `hash_multimap`-Elements.|  
   
-### <a name="typedefs"></a>TypeDefs  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
@@ -183,7 +184,7 @@ class hash_multimap
 |[key_compare](#key_compare)|Eine Typ, der ein Funktionsobjekt bereitstellt, das zwei Sortierschlüssel vergleichen kann, um die relative Position von zwei Elementen im `hash_multimap`-Element zu bestimmen.|  
 |[key_type](#key_type)|Ein Typ, mit dem das Sortierschlüsselobjekt beschrieben wird, das jedes Element von `hash_multimap` bildet.|  
 |[mapped_type](#mapped_type)|Ein Typ, der den in einer `hash_multimap` gespeicherten Datentyp darstellt.|  
-|[pointer](#pointer)|Ein Typ, der einen Zeiger auf ein Element in einer `hash_multimap` bereitstellt.|  
+|[Zeiger](#pointer)|Ein Typ, der einen Zeiger auf ein Element in einer `hash_multimap` bereitstellt.|  
 |[reference](#reference)|Ein Typ, der einen Verweis auf ein in einer `hash_multimap` gespeichertes Element bereitstellt.|  
 |[reverse_iterator](#reverse_iterator)|Ein Typ, der einen bidirektionalen Iterator bereitstellt, mit dem ein Element in einem umgekehrten `hash_multimap`-Element gelesen oder geändert werden kann.|  
 |[size_type](#size_type)|Eine Ganzzahltyp ohne Vorzeichen, der die Anzahl von Elementen in `hash_multimap` darstellen kann.|  
@@ -583,7 +584,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
    
   
 ### <a name="example"></a>Beispiel  
-  Im Beispiel für [rend](#rend) wird verdeutlicht, wie ein `const_reverse_iterator` deklariert und verwendet wird.  
+  Im Beispiel für [rend](#rend) wird verdeutlicht, wie `const_reverse_iterator` deklariert und verwendet wird.  
   
 ##  <a name="count"></a> hash_multimap::count  
   
@@ -1714,7 +1715,7 @@ typedef Traits key_compare;
    
   
 ### <a name="example"></a>Beispiel  
-  Im Beispiel für [key_comp](#key_comp) wird verdeutlicht, wie ein `key_compare` deklariert und verwendet wird.  
+  Im Beispiel für [key_comp](#key_comp) wird verdeutlicht, wie `key_compare` deklariert und verwendet wird.  
   
 ##  <a name="key_type"></a> hash_multimap::key_type  
   
@@ -2225,7 +2226,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::reve
    
   
 ### <a name="example"></a>Beispiel  
-  Im Beispiel für [rbegin](#rbegin) wird verdeutlicht, wie ein `reverse_iterator` deklariert und verwendet wird.  
+  Im Beispiel für [rbegin](#rbegin) wird verdeutlicht, wie `reverse_iterator` deklariert und verwendet wird.  
   
 ##  <a name="size"></a> hash_multimap::size  
   
@@ -2291,7 +2292,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::si
    
   
 ### <a name="example"></a>Beispiel  
-  Im Beispiel für [size](#size) wird verdeutlicht, wie ein `size_type` deklariert und verwendet wird.  
+  Im Beispiel für [size](#size) wird verdeutlicht, wie ein `size_type` deklariert und verwendet wird  
   
 ##  <a name="swap"></a> hash_multimap::swap  
   

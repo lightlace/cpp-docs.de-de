@@ -16,11 +16,12 @@ caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 86e856a47baa9df0da78e4db926ef64cd47284f0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 23979709bcc43074d6db2f042fdde850f6894e73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-standard-library-containers"></a>C++-Standardbibliothekscontainer
 Die Standardbibliothek stellt unterschiedliche typsichere Container zum Speichern verknüpfter Objekte bereit. Container sind Klassenvorlagen; Beim Deklarieren einer Containervariablen wird der Typ der Elemente angegeben, die der Container enthalten soll. Container können mit Initialisiererlisten erstellt werden. Sie verfügen über Memberfunktionen zum Hinzufügen und Entfernen von Elementen und Ausführen anderer Vorgänge.  
@@ -171,7 +172,7 @@ int main()
  Mit den **std::equal**, **std::mismatch**- oder **std::is_permutation**-Funktionsüberladungen, die zwei vollständige Bereiche umfassen, können Sie in C++14 und höher unterschiedliche Container und/oder Elementtypen vergleichen. Mit diesen Überladungen können Sie Container mit unterschiedlicher Länge vergleichen. Diese Überladungen sind weniger für Benutzerfehler anfällig und sind beim Vergleichen von Containern mit unterschiedlicher Länge so optimiert, dass sie in konstanter Zeit FALSE zurückgeben. Aus diesem Grund wird empfohlen, diese Überladungen zu verwenden, es sei denn (1) Sie haben einen klaren Grund dazu, dies nicht zu tun, oder (2) Sie verwenden einen [std:: list](../standard-library/list-class.md)-Container, der nicht von den Optimierungen mit zwei Bereichen profitiert.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Container](../cpp/containers-modern-cpp.md)   
+ [Containers](../cpp/containers-modern-cpp.md)   
  [C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)   
  [\<Sample Container>](../standard-library/sample-container.md)   
  [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)

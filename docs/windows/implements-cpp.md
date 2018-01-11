@@ -1,68 +1,69 @@
 ---
-title: "implements (C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.implements"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "implements attribute"
+title: implementiert (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.implements
+dev_langs: C++
+helpviewer_keywords: implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-caps.latest.revision: 14
-caps.handback.revision: "14"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0dbe7d829ae31f53a3dbc35df66bee2d50f14f19
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# implements (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gibt Dispatchschnittstellen an, die erzwungen werden, um Member der IDL\-Coklasse sein.  
+# <a name="implements-c"></a>implements (C++)
+Gibt die Dispatchschnittstellen, die Mitglieder der IDL-Co-Klasse werden erzwungen werden.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
-      [ implements(   
+      [ implements(   
    interfaces={interfaces},  
    dispinterfaces={dispinterfaces}  
 )]  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  **Schnittstellen**  
- Eine durch Trennzeichen getrennte Liste der Schnittstellen, die ein Member der IDL\-Coklasse sind.  Eine Kurznotations Methode zum Angeben einer einzigen Schnittstelle ist **\(implementiert***interface\_name***\)**.  
+ Eine durch Trennzeichen getrennte Liste von Schnittstellen, die ein Mitglied der IDL-Co-Klasse. Ist eine kurzmethode zur Angabe einer einzelnen Schnittstelle **implementiert (***Interface_name***)**.  
   
- **Dispatchschnittstellen**  
- Eine durch Trennzeichen getrennte Liste der Dispatchschnittstelle, die ein Member der IDL\-Coklasse ist.  Eine Kurznotations Methode zum Angeben einer Dispatchschnittstelle befindet **implementiert \(Dispatchschnittstellen** *\= dispinterface\_name***\)**.  
+ **Disp-Schnittstellen**  
+ Eine durch Trennzeichen getrennte Liste der Disp-Schnittstelle, die ein Mitglied der IDL-Co-Klasse. Ist eine kurzmethode zur Angabe einer einzelnen Dispinterface **implementiert (Disp** *= Dispinterface_name***)**.  
   
-## Hinweise  
- Standardmäßig werden nur COM\-Schnittstellen, die Basisklassen der Co\-Klasse handelt, in der IDL\-Coklasse hinzugefügt.  **Implementierung** können Sie erzwingen, dass weitere Schnittstellen Member IDL\-Coklassen.  
+## <a name="remarks"></a>Hinweise  
+ Standardmäßig werden nur COM-Schnittstellen, die Basisklassen der Co-Klasse sind in der IDL-Co-Klasse hinzugefügt. **implementiert** können Sie andere Schnittstellen, die Mitglieder der IDL-Co-Klasse werden zu erzwingen.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
 |**Betrifft**|**Klasse**, `struct`|  
 |**Wiederholbar**|Ja|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Keiner|  
+|**Ungültige Attribute**|Keiner|  
   
- Weitere Informationen finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Beispiel  
- Das folgende Beispiel ist in drei Teilen: eine IDL\-Datei und die ihm zugeordnete H\-Datei und eine C\+\+\-Datei.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel besteht aus drei Teilen: einer IDL-Datei und die zugehörigen .h-Datei und einer C++-Datei.  
   
- Nehmen Sie die folgende IDL\-Datei an, die für den Compiler verfügbar ist.  
+ Angenommen Sie, die folgende IDL-Datei, die für den Compiler verfügbar.  
   
 ```  
 // attr_implements.idl  
@@ -111,8 +112,8 @@ library odod
 }  
 ```  
   
-## Beispiel  
- Und die folgenden H\-Datei, die auch für den Compiler verfügbar sein muss.  
+## <a name="example"></a>Beispiel  
+ Und die folgenden .h-Datei, die auch für den Compiler verfügbar sein muss.  
   
 ```  
 // attr_implements.h  
@@ -428,8 +429,8 @@ CBar;
 #endif  
 ```  
   
-## Beispiel  
- Im folgenden Programm implementiert, außen IBar1, IBar2, und ISna ist nicht in der Co\-Klasse im generierten IDL\-Datei.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Programm ohne implementiert werden IBar1 IBar2 und gegebenen nicht in der Co-Klasse in der generierten IDL-Datei sein.  
   
 ```  
 // attr_implements.cpp  
@@ -550,7 +551,6 @@ public:
 };  
 ```  
   
-## Siehe auch  
- [Compiler Attributes](../windows/compiler-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [Compilerattribute](../windows/compiler-attributes.md)   
+ [Klassenattribute](../windows/class-attributes.md)   

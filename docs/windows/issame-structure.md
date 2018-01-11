@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1bdc19519367780444da5df3e1287b32634430c1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: bae4ecb6f03b7b1cdb0fae02f211dd613e7c39d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="issame-structure"></a>IsSame-Struktur
 Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
@@ -48,11 +51,11 @@ struct IsSame<T1, T1>;
 ## <a name="remarks"></a>Hinweise  
  Überprüft, ob ein Typ angegebener ist identisch mit einem anderen angegebenen Typ.  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constants"></a>Öffentliche Konstanten  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |[IsSame::value-Konstante](../windows/issame-value-constant.md)|Gibt an, ob ein Typ mit einer anderen identisch ist.|  
   

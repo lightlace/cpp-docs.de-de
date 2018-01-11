@@ -1,56 +1,59 @@
 ---
-title: "Hinzuf&#252;gen eines Steuerelements zu einem Dialogfeld | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.dialog.dialog"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Dialogfelder, Hinzufügen von Steuerelementen"
-  - "Dialogfeldsteuerelemente, Hinzufügen zu Dialogfeldern"
-  - "Steuerelemente [C++], Hinzufügen zu Dialogfeldern"
+title: "Hinzufügen eines Steuerelements zu einem Dialogfeld | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.dialog.dialog
+dev_langs: C++
+helpviewer_keywords:
+- dialog boxes, adding controls to
+- dialog box controls, adding to dialog boxes
+- controls [C++], adding to dialog boxes
 ms.assetid: b2a26d19-093f-49ca-93da-fef00dfbb381
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 67d80bf24b2ab9a66e0d4990dca3514461f468b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Hinzuf&#252;gen eines Steuerelements zu einem Dialogfeld
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### So fügen Sie ein Steuerelement zu einem Dialogfeld hinzu  
+# <a name="adding-a-control-to-a-dialog-box"></a>Hinzufügen eines Steuerelements zu einem Dialogfeld
+### <a name="to-add-a-control-to-a-dialog-box"></a>So fügen Sie ein Steuerelement zu einem Dialogfeld hinzu  
   
-1.  Stellen Sie sicher, dass das Dialogfeld im Registerkartenformat das aktuelle Dokument im Editor\-Fenster darstellt. Wenn ein Dialogfeld nicht das aktuelle Dokument ist, wird die **Registerkarte „Dialog\-Editor“** in der **Toolbox** nicht angezeigt.  
+1.  Stellen Sie sicher, dass das Dialogfeld im Registerkartenformat das aktuelle Dokument im Editor-Fenster darstellt. Wenn ein Dialogfeld nicht das aktuelle Dokument ist, wird die **Registerkarte „Dialog-Editor“** in der **Toolbox**nicht angezeigt.  
   
-2.  Auf der [Registerkarte „Dialog\-Editor“](../mfc/dialog-editor-tab-toolbox.md) des [Fensters „Toolbox“](../Topic/Toolbox.md) wählen Sie das gewünschte Steuerelement aus und gehen dann wie folgt vor:  
+2.  Auf der [Registerkarte „Dialog-Editor“](../windows/dialog-editor-tab-toolbox.md) des [Fensters „Toolbox“](/visualstudio/ide/reference/toolbox)wählen Sie das gewünschte Steuerelement aus und gehen dann wie folgt vor:  
   
-    -   Klicken Sie im Dialogfeld auf die Position, an der das Steuerelement erstellt werden soll. Das Steuerelement wird an der Stelle angezeigt, auf die Sie geklickt haben. Weitere Informationen finden Sie unter [Hinzufügen mehrerer Steuerelemente](../mfc/adding-multiple-controls.md).  
+    -   Klicken Sie im Dialogfeld auf die Position, an der das Steuerelement erstellt werden soll. Das Steuerelement wird an der Stelle angezeigt, auf die Sie geklickt haben. Weitere Informationen finden Sie unter [Hinzufügen mehrerer Steuerelemente](../windows/adding-multiple-controls.md).  
   
-         \- oder \-  
+         \- oder –  
   
-    -   Ziehen Sie das Steuerelement per Drag & Drop aus dem Fenster „Toolbox“ an die gewünschte Position im Dialogfeld. Weitere Informationen finden Sie unter [Ändern der Steuerelementgröße beim Hinzufügen](../mfc/sizing-a-control-while-you-add-it.md).  
+    -   Ziehen Sie das Steuerelement per Drag & Drop aus dem Fenster „Toolbox“ an die gewünschte Position im Dialogfeld. Weitere Informationen finden Sie unter [Ändern der Steuerelementgröße beim Hinzufügen](../windows/sizing-a-control-while-you-add-it.md).  
   
-         \- oder \-  
+         \- oder –  
   
-    -   Doppelklicken Sie im Fenster „Toolbox“ auf das Steuerelement \(es wird im Dialogfeld angezeigt\), und verschieben Sie das Steuerelement anschließend an die gewünschte Position.  
+    -   Doppelklicken Sie im Fenster „Toolbox“ auf das Steuerelement (es wird im Dialogfeld angezeigt), und verschieben Sie das Steuerelement anschließend an die gewünschte Position.  
   
- Informationen zu den in der Toolbox verfügbaren Steuerelementtypen finden Sie unter [Registerkarte „Dialog\-Editor“, Fenster „Toolbox“](../mfc/dialog-editor-tab-toolbox.md).  
+ Informationen zu den in der Toolbox verfügbaren Steuerelementtypen finden Sie unter [Registerkarte „Dialog-Editor“, Fenster „Toolbox“](../windows/dialog-editor-tab-toolbox.md).  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
   
  Anforderungen  
   
  Win32  
   
-## Siehe auch  
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
- [Adding Event Handlers for Dialog Box Controls](../mfc/adding-event-handlers-for-dialog-box-controls.md)   
- [Dialogfeld\-Steuerelemente und Variablentypen](../ide/dialog-box-controls-and-variable-types.md)
+## <a name="see-also"></a>Siehe auch  
+ [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)   
+ [Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente](../windows/adding-event-handlers-for-dialog-box-controls.md)   
+ [Dialogfeld-Steuerelemente und Variablentypen](../ide/dialog-box-controls-and-variable-types.md)
+

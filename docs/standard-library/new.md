@@ -15,11 +15,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a19b6e4dd9e407a85097de5719e8bdf1b4522e3c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 263c6ec455c55492425617d2ffee499655a727dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltnewgt"></a>&lt;new&gt;
 Definiert einige Typen und Funktionen, die die Belegung und Freigabe von Speicher unter Programmsteuerung steuern. Hierin werden außerdem Komponenten für das Berichten von Speicherverwaltungsfehlern definiert.  
@@ -40,7 +41,7 @@ Definiert einige Typen und Funktionen, die die Belegung und Freigabe von Speiche
 |-|-|  
 |[nothrow](../standard-library/new-functions.md#nothrow)|Stellt ein Objekt bereit, das als Argument für die `nothrow`-Versionen von **new** und **delete** verwendet werden muss.|  
   
-### <a name="typedefs"></a>TypeDefs  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
@@ -70,7 +71,7 @@ Definiert einige Typen und Funktionen, die die Belegung und Freigabe von Speiche
   
 ## <a name="see-also"></a>Siehe auch  
  [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)   
- [Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

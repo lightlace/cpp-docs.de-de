@@ -1,11 +1,10 @@
 ---
-title: Message-Klasse | Microsoft-Dokumentation
+title: Message-Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,35 +15,19 @@ f1_keywords:
 - AGENTS/concurrency::message::msg_id
 - AGENTS/concurrency::message::remove_ref
 - AGENTS/concurrency::message::payload
-dev_langs:
-- C++
-helpviewer_keywords:
-- message class
+dev_langs: C++
+helpviewer_keywords: message class
 ms.assetid: 3e1f3505-6c0c-486c-8191-666d0880ec62
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: c6cc72c1fe9385eabe86194031913b7363d602ff
-ms.contentlocale: de-de
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 55d1744d67156bcfcf6f76c757fc97ab0d4fd380
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="message-class"></a>message-Klasse
 Der grundlegende Nachrichtenumschlag, der die zwischen den Meldungsblöcken übergebene Datennutzlast enthält.  
@@ -58,9 +41,9 @@ class message : public ::Concurrency::details::_Runtime_object;
   
 #### <a name="parameters"></a>Parameter  
  `T`  
- Der Datentyp der Nutzlast in der Nachricht.  
+ Der Datentyp der Nutzlast innerhalb der Nachricht.  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-typedefs"></a>Öffentliche Typedefs  
   
@@ -79,9 +62,9 @@ class message : public ::Concurrency::details::_Runtime_object;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[add_ref](#add_ref)|Fügt der Verweisanzahl für das `message` Objekt. Verwendet für Meldungsblöcke, die verweiszählung, um die Lebensdauer der Nachricht zu ermitteln.|  
+|[add_ref](#add_ref)|Fügt auf den Verweiszähler für den `message` Objekt. Verwendet für Meldungsblöcke, die verweiszählung, um die Lebensdauer der Nachricht zu ermitteln.|  
 |[msg_id](#msg_id)|Gibt die ID des dem `message` Objekt.|  
-|[remove_ref](#remove_ref)|Wird von den Verweiszähler für das `message` Objekt. Verwendet für Meldungsblöcke, die verweiszählung, um die Lebensdauer der Nachricht zu ermitteln.|  
+|[remove_ref](#remove_ref)|Subtrahiert von den Verweiszähler für den `message` Objekt. Verwendet für Meldungsblöcke, die verweiszählung, um die Lebensdauer der Nachricht zu ermitteln.|  
   
 ### <a name="public-data-members"></a>Öffentliche Datenmember  
   
@@ -102,7 +85,7 @@ class message : public ::Concurrency::details::_Runtime_object;
   
 ##  <a name="add_ref"></a>add_ref 
 
- Fügt der Verweisanzahl für das `message` Objekt. Verwendet für Meldungsblöcke, die verweiszählung, um die Lebensdauer der Nachricht zu ermitteln.  
+ Fügt auf den Verweiszähler für den `message` Objekt. Verwendet für Meldungsblöcke, die verweiszählung, um die Lebensdauer der Nachricht zu ermitteln.  
   
 ```
 long add_ref();
@@ -141,7 +124,7 @@ message(
  Ein Verweis oder Zeiger auf ein `message` Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
- Dem Konstruktor, einen Zeiger auf eine `message` -Objekt als Argument löst ein [Invalid_argument](../../../standard-library/invalid-argument-class.md) Ausnahme wenn der Parameter `_Msg` ist `NULL`.  
+ Des Konstruktors, der einen Zeiger auf eine `message` -Objekt als Argument löst ein [Invalid_argument](../../../standard-library/invalid-argument-class.md) Ausnahme wenn der Parameter `_Msg` ist `NULL`.  
   
 ##  <a name="dtor"></a>~ Nachricht 
 
@@ -172,7 +155,7 @@ T const payload;
   
 ##  <a name="remove_ref"></a>remove_ref 
 
- Wird von den Verweiszähler für das `message` Objekt. Verwendet für Meldungsblöcke, die verweiszählung, um die Lebensdauer der Nachricht zu ermitteln.  
+ Subtrahiert von den Verweiszähler für den `message` Objekt. Verwendet für Meldungsblöcke, die verweiszählung, um die Lebensdauer der Nachricht zu ermitteln.  
   
 ```
 long remove_ref();
@@ -183,4 +166,3 @@ long remove_ref();
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)
-

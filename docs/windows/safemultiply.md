@@ -1,32 +1,33 @@
 ---
-title: "SafeMultiply | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SafeMultiply"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SafeMultiply-Funktion"
+title: SafeMultiply | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: SafeMultiply
+dev_langs: C++
+helpviewer_keywords: SafeMultiply function
 ms.assetid: 81d988a5-fac7-4930-8c37-c24fa8e2c853
-caps.latest.revision: 5
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 37ea091136521fc83fc63a8fb752e0f4f72cb49f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# SafeMultiply
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Multipliziert zwei Zahlen zusammen auf eine Weise, die anhand Überlauf schützt.  
+# <a name="safemultiply"></a>SafeMultiply
+Multipliziert zwei Zahlen in einer Weise, die schützt vor Ganzzahlüberlauf zusammen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<typename T, typename U>  
@@ -37,34 +38,34 @@ inline bool SafeMultiply (
 ) throw ();  
 ```  
   
-#### Parameter  
- \[in\] `t`  
- Die erste zu multiplizierende Zahl.  Dies muss vom Typ T sein.  
+#### <a name="parameters"></a>Parameter  
+ [in] `t`  
+ Die erste zu multiplizierende Zahl. Dies muss vom Typ t sein.  
   
- \[in\] `u`  
- Die zweite zu multiplizierende Zahl.  Dies muss vom Typ U sein.  
+ [in] `u`  
+ Die zweite zu multiplizierende Zahl. Dies muss vom Typ u sein.  
   
- \[out\] `result`  
- Der Parameter, wobei `SafeMultiply` das Ergebnis gespeichert wird.  
+ [out] `result`  
+ Der Parameter, in denen `SafeMultiply` speichert das Ergebnis.  
   
-## Rückgabewert  
- `true`, wenn kein Fehler auftritt; `false`, wenn ein Fehler auftritt.  
+## <a name="return-value"></a>Rückgabewert  
+ `true`Wenn kein Fehler auftritt. `false` , wenn ein Fehler auftritt.  
   
-## Hinweise  
- Diese Methode ist ein Teil von [SafeInt\-Bibliothek](../windows/safeint-library.md) und für einen einzelnen Multiplikationsvorgang entworfen, ohne Instanz [SafeInt\-Klasse](../windows/safeint-class.md).  
+## <a name="remarks"></a>Hinweise  
+ Diese Methode ist Teil des [SafeInt-Bibliothek](../windows/safeint-library.md) und eignet sich für einen einzelnen Multiplikationsvorgang ohne Erstellen einer Instanz von der [SafeInt-Klasse](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Diese Methode sollte nur verwendet werden, wenn ein einzelner mathematischer Vorgang geschützt werden muss.  Wenn mehrere Operationen gibt, sollten Sie die `SafeInt`\-Klasse verwenden, anstatt, die einzelnen eigenständigen Funktionen aufzurufen.  
+>  Diese Methode sollte nur verwendet werden, wenn eine einzelne mathematische Operation, die geschützt werden muss. Wenn mehrere Vorgänge vorhanden sind, sollten Sie verwenden die `SafeInt` Klasse anstelle von den einzelnen eigenständigen Funktionen aufrufen.  
   
- Weitere Informationen zu von Vorlagentypen T und U, finden Sie unter [SafeInt\-Funktionen](../windows/safeint-functions.md).  
+ Weitere Informationen zu den Vorlagentypen T "und" U, finden Sie unter [SafeInt-Funktionen](../windows/safeint-functions.md).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** safeint.h  
   
  **Namespace:** Microsoft::Utilities  
   
-## Siehe auch  
- [SafeInt\-Funktionen](../windows/safeint-functions.md)   
- [SafeInt\-Bibliothek](../windows/safeint-library.md)   
- [SafeInt\-Klasse](../windows/safeint-class.md)   
+## <a name="see-also"></a>Siehe auch  
+ [SafeInt-Funktionen](../windows/safeint-functions.md)   
+ [SafeInt-Bibliothek](../windows/safeint-library.md)   
+ [SafeInt-Klasse](../windows/safeint-class.md)   
  [SafeDivide](../windows/safedivide.md)

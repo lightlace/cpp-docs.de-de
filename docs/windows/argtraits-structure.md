@@ -1,32 +1,33 @@
 ---
-title: "ArgTraits-Struktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::Details::ArgTraits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ArgTraits-Struktur"
+title: ArgTraits-Struktur | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::Details::ArgTraits
+dev_langs: C++
+helpviewer_keywords: ArgTraits structure
 ms.assetid: 58ae4115-c1bc-48c8-b01b-e60554841c30
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 64ec29d674f6213992fbb1424093931b20ed45b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# ArgTraits-Struktur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Unterstützt die WRL\-Infrastruktur und nicht beabsichtigt, direkt im Code verwendet werden.  
+# <a name="argtraits-structure"></a>ArgTraits-Struktur
+Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<  
@@ -120,72 +121,72 @@ template<
 struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9)>;  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `TMemberFunction`  
- Typnamenparameter für eine ArgTraits\-Struktur, die keine Aufrufsmethodensignatur entsprechen kann.  
+ TypeName-Parameter für eine ArgTraits-Struktur, die alle Invoke-Methodensignatur zuordnen kann.  
   
  `TDelegateInterface`  
- Eine Delegatschnittstelle.  
+ Ein Delegat-Schnittstelle.  
   
  `TArg1`  
- Der Typ des ersten Arguments der Aufrufmethode.  
+ Der Typ des ersten Arguments der Invoke-Methode.  
   
  `TArg2`  
- Der Typ des zweiten Arguments der Aufrufmethode.  
+ Der Typ des zweiten Arguments der Invoke-Methode.  
   
  `TArg3`  
- Der Typ des dritten Arguments der Aufrufmethode.  
+ Der Typ des dritten Arguments der Invoke-Methode.  
   
  `TArg4`  
- Der vierte Typ des Arguments der Aufrufmethode.  
+ Der Typ des vierten Arguments der Invoke-Methode.  
   
  `TArg5`  
- Der Typ des fünften Arguments der Aufrufmethode.  
+ Der Typ des fünften Arguments der Invoke-Methode.  
   
  `TArg6`  
- Der Typ des 6. Arguments der Aufrufmethode.  
+ Der Typ des sechsten Arguments der Invoke-Methode.  
   
  `TArg7`  
- Der Typ des 7. Arguments der Aufrufmethode.  
+ Der Typ des siebten Arguments der Invoke-Methode.  
   
  `TArg8`  
- Der Typ des Arguments beobachten der Aufrufmethode.  
+ Der Typ des das achte Argument für die Invoke-Methode.  
   
  `TArg9`  
- Der Typ des 9. Arguments der Aufrufmethode.  
+ Der Typ des neunten Arguments der Invoke-Methode.  
   
-## Hinweise  
- Die `ArgTraits`\-Struktur deklariert eine angegebene Delegatschnittstelle und anonyme Memberfunktion, die eine angegebene Anzahl Parameter verfügt.  
+## <a name="remarks"></a>Hinweise  
+ Die `ArgTraits` Struktur deklariert einen Delegaten angegebenen Schnittstelle und eine anonyme Memberfunktion, die eine angegebene Anzahl von Parametern verfügt.  
   
-## Member  
+## <a name="members"></a>Member  
   
-### Öffentliche Typedefs  
+### <a name="public-typedefs"></a>Öffentliche Typedefs  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|`Arg1Type`|Die Typdefinition für TArg1.|  
-|`Arg2Type`|Die Typdefinition für TArg2.|  
-|`Arg3Type`|Die Typdefinition für TArg3.|  
-|`Arg4Type`|Die Typdefinition für TArg4.|  
-|`Arg5Type`|Die Typdefinition für TArg5.|  
-|`Arg6Type`|Die Typdefinition für TArg6.|  
-|`Arg7Type`|Die Typdefinition für TArg7.|  
-|`Arg8Type`|Die Typdefinition für TArg8.|  
-|`Arg9Type`|Die Typdefinition für TArg9.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|`Arg1Type`|Die Typedef für TArg1.|  
+|`Arg2Type`|Die Typedef für TArg2.|  
+|`Arg3Type`|Die Typedef für TArg3.|  
+|`Arg4Type`|Die Typedef für TArg4.|  
+|`Arg5Type`|Die Typedef für TArg5.|  
+|`Arg6Type`|Die Typedef für TArg6.|  
+|`Arg7Type`|Die Typedef für TArg7.|  
+|`Arg8Type`|Die Typedef für TArg8.|  
+|`Arg9Type`|Die Typedef für TArg9.|  
   
-### Öffentliche Konstanten  
+### <a name="public-constants"></a>Öffentliche Konstanten  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[ArgTraits::args\-Konstante](../windows/argtraits-args-constant.md)|Hält die Anzahl der Parameter auf der Aufrufmethode einer Delegatschnittstelle.|  
+|name|Beschreibung|  
+|----------|-----------------|  
+|[ArgTraits::args-Konstante](../windows/argtraits-args-constant.md)|Behält die Anzahl von Parametern auf die Invoke-Methode einer Schnittstelle des Delegaten.|  
   
-## Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `ArgTraits`  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** event.h  
   
- **Namespace:**  Microsoft::WRL::Details  
+ **Namespace:** Microsoft::WRL::Details  
   
-## Siehe auch  
- [Microsoft::WRL::Details\-Namespace](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Siehe auch  
+ [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

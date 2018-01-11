@@ -17,11 +17,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 32a0f3056d19edb2499c9cfa7a9d319e90355e78
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c137277d3e7825c069d1c910b3ea2da2d1d63b74
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="load-palette-colors-dialog-box-image-editor-for-icons"></a>Palettenfarben laden (Dialogfeld) (Bildbearbeitung für Symbole)
 Verwenden Sie dieses Dialogfeld, um spezielle Farbpaletten zur Verwendung in Ihrem Projekt zu laden. Weitere Informationen finden Sie unter [speichern und Laden von verschiedenen Farbpaletten](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  
@@ -38,7 +41,7 @@ Verwenden Sie dieses Dialogfeld, um spezielle Farbpaletten zur Verwendung in Ihr
  Listet die Typen von Dateien angezeigt. Palette (* PAL) ist der Standardtyp für die Datei für Farbpaletten.  
   
 ## <a name="requirements"></a>Anforderungen  
- Keine  
+ Keiner  
   
 ## <a name="see-also"></a>Siehe auch  
  [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)

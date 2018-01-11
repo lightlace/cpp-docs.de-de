@@ -19,11 +19,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4eb2440602fefbbd2f42cbdde3f56745777e8e02
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c992ed83f5c86fdd770bda8f9970ff98a90c2722
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accelerator-keys-image-editor-for-icons"></a>Zugriffstasten (Bildbearbeitung für Symbole)
 Im folgenden sind die Zugriffstasten für den Bild-Editor-Befehle, die Schlüssel standardmäßig gebunden sind. Um Zugriffstasten zu ändern, klicken Sie auf **Optionen** auf die **Tools** Menü, und wählen Sie dann **Tastatur** unter der **Umgebung** Ordner. Weitere Informationen finden Sie unter [Identifizieren und Anpassen von Tastenkombinationen in Visual Studio](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).  
@@ -50,14 +53,14 @@ Im folgenden sind die Zugriffstasten für den Bild-Editor-Befehle, die Schlüsse
 |Image.MagnificationTool|STRG + M|Aktiviert die **Magnify** Tool, das Ihnen ermöglicht, die bestimmte Abschnitte des Bilds zu vergrößern.|  
 |Image.Magnify|STRG + UMSCHALT + M|Schaltet zwischen der aktuellen Vergrößerung und dem Vergrößerungsfaktor 1:1 um.|  
 |Image.NewImageType|EINFÜGEN|Startet die [neu \<Gerät > Dialogfeld Bildtyp](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md) mit dem Sie ein Bild für ein anderes Bild erstellen können.|  
-|Image.NextColor|STRG +]<br /><br /> - oder -<br /><br /> STRG + NACH-RECHTS|Wechselt von der zum Zeichnen verwendeten Vordergrundfarbe zur nächsten Palettenfarbe.|  
-|Image.NextRightColor|STRG + UMSCHALT +]<br /><br /> - oder -<br /><br /> UMSCHALT + STRG + NACH-RECHTS|Wechselt von der zum Zeichnen verwendeten Hintergrundfarbe zur nächsten Palettenfarbe.|  
+|Image.NextColor|STRG +]<br /><br /> - oder -<br /><br /> STRG + NACH-RECHTS|Wechselt von der zum Zeichnen verwendeten Vordergrundfarbe zur nächsten Palettenfarbe.|  
+|Image.NextRightColor|STRG + UMSCHALT +]<br /><br /> - oder -<br /><br /> UMSCHALT + STRG + NACH-RECHTS|Wechselt von der zum Zeichnen verwendeten Hintergrundfarbe zur nächsten Palettenfarbe.|  
 |Image.OutlinedEllipseTool|UMSCHALT + ALT + P|Zeichnet eine ausgefüllte Ellipse mit einem Rand.|  
 |Image.OutlinedRectangleTool|UMSCHALT + ALT + R|Zeichnet ein ausgefülltes Rechteck mit einem Rand.|  
 |Image.OutlinedRoundRectangleTool|UMSCHALT + ALT + W|Zeichnet ein ausgefülltes, abgerundetes Rechteck mit einem Rand.|  
 |Image.PencilTool|STRG + I|Zeichnet mit einem Stift von einem Pixel Breite.|  
-|Image.PreviousColor|STRG + [<br /><br /> - oder -<br /><br /> STRG + NACH-LINKS|Wechselt von der zum Zeichnen verwendeten Vordergrundfarbe zur vorherigen Palettenfarbe.|  
-|Image.PreviousRightColor|STRG + UMSCHALT + [<br /><br /> - oder -<br /><br /> UMSCHALT + STRG + NACH-LINKS|Wechselt von der zum Zeichnen verwendeten Hintergrundfarbe zur vorherigen Palettenfarbe.|  
+|Image.PreviousColor|STRG + [<br /><br /> - oder -<br /><br /> STRG + NACH-LINKS|Wechselt von der zum Zeichnen verwendeten Vordergrundfarbe zur vorherigen Palettenfarbe.|  
+|Image.PreviousRightColor|STRG + UMSCHALT + [<br /><br /> - oder -<br /><br /> UMSCHALT + STRG + NACH-LINKS|Wechselt von der zum Zeichnen verwendeten Hintergrundfarbe zur vorherigen Palettenfarbe.|  
 |Image.RectangleSelectionTool|UMSCHALT + ALT + S|Wählt einen rechteckigen Teil des Bilds zum Verschieben, kopieren oder zu bearbeiten.|  
 |Image.RectangleTool|ALT + R|Zeichnet ein Rechteck mit der ausgewählten Zeile Breite und Farbe.|  
 |Image.Rotate90Degrees|STRG + UMSCHALT + H|Dreht das Bild oder die Auswahl um 90 Grad.|  
@@ -68,13 +71,13 @@ Im folgenden sind die Zugriffstasten für den Bild-Editor-Befehle, die Schlüsse
 |Image.SmallerBrush|STRG + – (minus)|Verringert die Pinselgröße in jede Richtung um ein Pixel. Um die Pinselgröße wieder zu erhöhen, siehe "Image.LargerBrush" in dieser Tabelle.|  
 |Image.TextTool|STRG + T|Öffnet die [Texttool (Dialogfeld)](../windows/text-tool-dialog-box-image-editor-for-icons.md).|  
 |Image.UseSelectionAsBrush|STRG + U|Zeichnet unter Verwendung der aktuellen Markierung als Pinsel.|  
-|Image.ZoomIn|STRG + UMSCHALT +. (Punkt)<br /><br /> - oder -<br /><br /> STRG + NACH-OBEN|Erhöht den Vergrößerungsfaktor für die aktuelle Ansicht.|  
-|Image.ZoomOut|STRG +, (Komma)<br /><br /> - oder -<br /><br /> STRG + NACH-UNTEN-TASTE|Verringert den Vergrößerungsfaktor für die aktuelle Ansicht.|  
+|Image.ZoomIn|STRG + UMSCHALT +. (Punkt)<br /><br /> - oder -<br /><br /> STRG + NACH-OBEN|Erhöht den Vergrößerungsfaktor für die aktuelle Ansicht.|  
+|Image.ZoomOut|STRG +, (Komma)<br /><br /> - oder -<br /><br /> STRG + NACH-UNTEN-TASTE|Verringert den Vergrößerungsfaktor für die aktuelle Ansicht.|  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](https://msdn.microsoft.com/library/f45fce5x.aspx) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](https://msdn.microsoft.com/library/xbx3z216.aspx). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](https://msdn.microsoft.com/library/h6270d0z.aspx).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Anforderungen  
- Keine  
+ Keiner  
   
 ## <a name="see-also"></a>Siehe auch  
  [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)

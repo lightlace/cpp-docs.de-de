@@ -1,75 +1,77 @@
 ---
-title: "Explicit Overrides  (C++ Component Extensions)"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "overriding, override [C++]"
+title: "Explizite Überschreibungen (Komponentenerweiterungen für C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: overriding, override [C++]
 ms.assetid: 4ec3eaf5-163b-4df8-8f16-7a2ec04c3d0f
-caps.latest.revision: 21
-caps.handback.revision: "19"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 346dd73952934d514b2741c41d5a27816b7152ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Explicit Overrides  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In diesem Thema wird erläutert, wie explizit einen Member einer Basisklasse oder Schnittstelle überschreibt.  Eine benannte \(explizite Überschreibung\) sollte nur verwendet werden, um eine Methode mit einer abgeleiteten Methode zu überschreiben, die einen anderen Namen verfügt.  
+# <a name="explicit-overrides--c-component-extensions"></a>Explizite Überschreibungen (Komponentenerweiterungen für C++)
+In diesem Thema erläutert, wie einen Member einer Basisklasse oder Schnittstelle explizit zu überschreiben. Eine benannte (explizite) überschreiben, sollte nur verwendet werden, um eine Methode mit einer abgeleiteten Methode überschreiben, die einen anderen Namen aufweist.  
   
-## Alle Laufzeiten  
+## <a name="all-runtimes"></a>Alle Laufzeiten  
  **Syntax**  
   
 ```  
   
-        overriding-function-declarator = type::function [,type::function] { overriding-function-definition }  
+      overriding-function-declarator = type::function [,type::function] { overriding-function-definition }  
 overriding-function-declarator = function { overriding-function-definition }  
 ```  
   
  **Parameter**  
   
- *overriding\-function\-declarator*  
- Der Rückgabetyp, der Name und die Argumentliste der überschreibenden Funktion.  Beachten Sie, dass die überschreibende Funktion nicht den gleichen Namen wie die Funktion haben muss, die überschrieben wird.  
+ *Überschreiben von funktionsdeklarator*  
+ Der Typ, Namen und die Argumentliste Rückgabeliste der überschreibenden Funktion.  Beachten Sie, dass die überschreibende Funktion keinen haben den gleichen Namen wie die Funktion, die überschrieben wird.  
   
- *type*  
- Der Basistyp, der eine Funktion enthält, um zu überschreiben.  
+ *Typ*  
+ Der Basistyp, die eine Funktion zum Außerkraftsetzen enthält.  
   
  *function*  
- Eine durch Trennzeichen getrennte Liste mehrere Funktionsnamen zu überschreiben.  
+ Eine durch Trennzeichen getrennte Liste von mindestens einem Funktionsnamen überschreiben.  
   
- *overriding\-function\-definition*  
- Die Funktionsrumpfanweisungen, die die überschreibende Funktion definieren.  
+ *Überschreiben von Funktionsdefinition*  
+ Die Funktion Text-Anweisungen, die die überschreibende Funktion definieren.  
   
  **Hinweise**  
   
- Explizite Überschreibungen der Verwendung, um einen Alias für eine Methodensignatur zu erstellen, oder von verschiedenen Implementierungen für Methoden mit der gleichen Signatur zuordnen.  
+ Explizite verwenden Sie Außerkraftsetzungen, um einen Alias für die Signatur einer Methode zu erstellen, oder um unterschiedliche Implementierungen für Methoden Witht die gleiche Signatur bereitzustellen.  
   
- Informationen zum Ändern des Verhaltens der geerbten Typen und der geerbten Typmember, finden Sie unter [Überschreibungsspezifizierer](../windows/override-specifiers-cpp-component-extensions.md).  
+ Informationen zum Ändern des Verhaltens von geerbten Typen geerbte Typ- und Typmemberdeklarationen finden Sie unter [Überschreibungsspezifizierer](../windows/override-specifiers-cpp-component-extensions.md).  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+## <a name="windows-runtime"></a>Windows-Runtime  
   
-### Voraussetzungen  
- Compileroption: **\/ZW**  
+### <a name="requirements"></a>Anforderungen  
+ Compileroption: **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
+## <a name="common-language-runtime"></a>Common Language Runtime 
  **Hinweise**  
   
- Informationen über explizite Überschreibungen systemeigenen Code oder Code, die mit **\/clr:oldSyntax** kompiliert werden, finden Sie unter [Explizite Überschreibungen](../cpp/explicit-overrides-cpp.md).  
+ Für Informationen zu expliziten in systemeigenem Code überschreibt oder Code kompiliert mit **/CLR: oldSyntax**, finden Sie unter [explizite Überschreibungen](../cpp/explicit-overrides-cpp.md).  
   
-### Voraussetzungen  
- Compileroption: **\/clr**  
+### <a name="requirements"></a>Anforderungen  
+ Compileroption: **/clr**  
   
-### Beispiele  
+### <a name="examples"></a>Beispiele  
  **Beispiel**  
   
- Im folgenden Codebeispiel wird eine einfache, implizite Überschreibung und eine Implementierung eines Members in eine Basisschnittstelle, nicht mit expliziten Überschreibungen an.  
+ Das folgende Codebeispiel zeigt einen einfachen, implizite "Override" und Implementierung eines Elements in eine Basisschnittstelle nicht über explizite überschreibungen.  
   
 ```  
 // explicit_override_1.cpp  
@@ -93,9 +95,13 @@ int main() {
   
  **Ausgabe**  
   
-  **X::f override of I1::f** **Beispiel**  
+```Output  
+X::f override of I1::f  
+```  
   
- Im folgenden Codebeispiel wird gezeigt, wie alle Schnittstellenmember mit einer allgemeinen Signatur, mithilfe der expliziten Überschreibungssyntax implementiert.  
+ **Beispiel**  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie alle Schnittstellenmember mit einer allgemeinen Signatur, die mit expliziten Überschreibungssyntax zu implementieren.  
   
 ```  
   
@@ -125,10 +131,14 @@ int main() {
   
  **Ausgabe**  
   
-  **X::f\-Überschreibung von I1::f und von I2::f**  
- **X::f\-Überschreibung von I1::f und von I2::f** **Beispiel**  
+```Output  
+X::f override of I1::f and I2::f  
+X::f override of I1::f and I2::f  
+```  
   
- Das folgende Codebeispiel zeigt, wie eine Funktionsüberschreibung einen anderen Namen der Funktion verfügen kann, die sie implementiert.  
+ **Beispiel**  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Funktion zum Überschreiben von der Funktion einen anderen Namen verwenden kann, die implementiert wird.  
   
 ```  
 // explicit_override_3.cpp  
@@ -152,9 +162,13 @@ int main() {
   
  **Ausgabe**  
   
-  **X::g** **Beispiel**  
+```Output  
+X::g  
+```  
   
- Im folgenden Codebeispiel wird eine explizite Schnittstellenimplementierung an, die eine typsichere Auflistung implementiert.  
+ **Beispiel**  
+  
+ Das folgende Codebeispiel zeigt eine explizite schnittstellenimplementierung, die eine sichere typauflistung implementiert.  
   
 ```  
 // explicit_override_4.cpp  
@@ -179,5 +193,5 @@ public:
 };  
 ```  
   
-## Siehe auch  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>Siehe auch  
+ [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: df03116e230a9cba7721a37701e9b67ac8e8a518
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4ca10e245c4adf108799896b8dfad2e21c4f3758
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lttuplegt"></a>&lt;tuple&gt;
 Definiert eine Vorlage `tuple`, deren Instanzen Objekte verschiedener Typen enthalten.  

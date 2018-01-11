@@ -107,11 +107,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ceec96efcfde06af2ad98178dff41f8569a81d85
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 864e155bf921bb273ad0e7eb9d2e014c01760543
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="array-class-c-standard-library"></a>array-Klasse (C++-Standardvorlagenbibliothek)
 Beschreibt ein Objekt, das eine Sequenz der Länge `N` aus Elementen des Typs `Ty` steuert. Die Sequenz ist als ein Array von `Ty` gespeichert, das im `array<Ty, N>`-Objekt enthalten ist.  
@@ -131,7 +132,7 @@ class array;
 |`Ty`|Der Typ eines Elements.|  
 |`N`|Die Anzahl der Elemente.|  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 |||  
 |-|-|  
@@ -178,7 +179,7 @@ class array;
 |[array::operator[]](#op_at)|Greift auf ein Element an einer angegebenen Position zu.|  
   
 ## <a name="remarks"></a>Hinweise  
- Der Typ hat einen Standardkonstruktor `array()` und einen Standardzuweisungsoperator `operator=` und erfüllt die Anforderungen für ein `aggregate`. Daher können Objekte des Typs `array<Ty, N>` über einen Aggregatinitialisierer initialisiert werden. Beispiel:  
+ Der Typ hat einen Standardkonstruktor `array()` und einen Standardzuweisungsoperator `operator=` und erfüllt die Anforderungen für ein `aggregate`. Daher können Objekte des Typs `array<Ty, N>` über einen Aggregatinitialisierer initialisiert werden. Ein auf ein Objekt angewendeter  
   
 ```  
 array<int, 4> ai = { 1, 2, 3 };  
@@ -446,7 +447,7 @@ const_iterator cbegin() const noexcept;
 ### <a name="remarks"></a>Hinweise  
  Bei dem Rückgabewert `cbegin` können die Elemente im Bereich nicht geändert werden.  
   
- Sie können diese Memberfunktion anstelle der `begin()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. Im folgenden Beispiel ist `Container` ein beliebiger änderbarer (nicht `const`) Container, der `begin()` und `cbegin()` unterstützt.  
+ Sie können diese Memberfunktion anstelle der `begin()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. Im folgenden Beispiel ist `Container` ein beliebiger änderbarer (Nicht-`const`-)Container, der `begin()` und `cbegin()` unterstützt.  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -469,7 +470,7 @@ const_iterator cend() const noexcept;
 ### <a name="remarks"></a>Hinweise  
  `cend` wird verwendet, um zu testen, ob ein Iterator das Ende seines Bereichs übergeben hat.  
   
- Sie können diese Memberfunktion anstelle der `end()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. Im folgenden Beispiel ist `Container` ein beliebiger änderbarer (nicht `const`) Container, der `end()` und `cend()` unterstützt.  
+ Sie können diese Memberfunktion anstelle der `end()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. Im folgenden Beispiel ist `Container` ein beliebiger änderbarer (Nicht-`const`-)Container, der `end()` und `cend()` unterstützt.  
   
 ```cpp  
 auto i1 = Container.end();

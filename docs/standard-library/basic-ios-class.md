@@ -66,11 +66,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0558bd962d8f646cc599ba604dbe749f5a02138b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e7068c2b94637a859c35c662350c27f157103e37
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicios-class"></a>basic_ios-Klasse
 Die Vorlagenklasse beschreibt die Speicher- und Memberfunktionen, die sowohl Eingabestreams (der Vorlagenklasse [basic_istream](../standard-library/basic-istream-class.md)) als auch Ausgabestreams (der Vorlagenklasse [basic_ostream](../standard-library/basic-ostream-class.md)) gemeinsam sind, die von den Vorlagenparametern abhängen. (Die Klasse [ios_base](../standard-library/ios-base-class.md) beschreibt, welche Funktionen gemeinsam und nicht von Vorlagenparametern abhängig sind.) Ein Objekt der Klasse **basic_ios\<class Elem, class Traits>** steuert einen Stream mit Elementen des Typs **Elem**, dessen Zeichenmerkmale durch die **Traits**-Klasse bestimmt werden.  
@@ -109,7 +110,7 @@ class basic_ios : public ios_base
 |-|-|  
 |[basic_ios](#basic_ios)|Erstellt die `basic_ios`-Klasse.|  
   
-### <a name="typedefs"></a>TypeDefs  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  

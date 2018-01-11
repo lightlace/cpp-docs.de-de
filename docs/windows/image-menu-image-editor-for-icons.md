@@ -1,85 +1,87 @@
 ---
-title: "Bild (Men&#252;) (Bildbearbeitung f&#252;r Symbole) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.bitmap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Bild (Menü)"
+title: "Bild-Menü (Bildbearbeitung für Symbole) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.bitmap
+dev_langs: C++
+helpviewer_keywords: Image menu
 ms.assetid: ac2b4d53-1919-4fd1-a0af-d3c085c45af2
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 49da8f90703190be068fe2d35a808b2cafed6f0c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Bild (Men&#252;) (Bildbearbeitung f&#252;r Symbole)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Das Menü **Bild**, das nur dann angezeigt wird, wenn der Grafik\-Editor aktiv ist, enthält Befehle für das Bearbeiten von Bildern, das Verwalten von Farbpaletten und das Festlegen von Optionen für das Grafik\-Editor\-Fenster.  Beim Arbeiten mit Symbolen und Cursorn sind zusätzlich Befehle für die Verwendung von Gerätebildern verfügbar.  
+# <a name="image-menu-image-editor-for-icons"></a>Bild (Menü) (Bildbearbeitung für Symbole)
+Menü "Bild", die angezeigt wird, nur, wenn die Grafik-Editor aktiv ist, hat die Befehle zum Bearbeiten von Bildern, Verwalten von Farbpaletten und Festlegen der Grafik-Editor-Optionen. Außerdem stehen Befehle für die Verwendung von Gerätebildern beim Arbeiten mit Symbolen und Cursorn.  
   
  **Farben umkehren**  
- Kehrt die verwendeten Farben um.  Weitere Informationen finden Sie unter [Invertieren der Farben in einer Markierung](../windows/inverting-the-colors-in-a-selection-image-editor-for-icons.md).  
+ Kehrt die verwendeten Farben an. Weitere Informationen finden Sie unter [Invertieren der Farben in einer Markierung](../windows/inverting-the-colors-in-a-selection-image-editor-for-icons.md).  
   
- **Horizontal kippen**  
- Kippt das Bild oder die Markierung horizontal.  Weitere Informationen finden Sie unter [Kippen eines Bildes](../mfc/flipping-an-image-image-editor-for-icons.md).  
+ **Horizontal spiegeln**  
+ Kippt das Bild oder die Markierung horizontal. Weitere Informationen finden Sie unter [Kippen eines Bildes](../windows/flipping-an-image-image-editor-for-icons.md).  
   
- **Vertikal kippen**  
- Kippt das Bild oder die Auswahl vertikal.  Weitere Informationen finden Sie unter [Kippen eines Bildes](../mfc/flipping-an-image-image-editor-for-icons.md).  
+ **Vertikal spiegeln**  
+ Kippt das Bild oder die Auswahl vertikal. Weitere Informationen finden Sie unter [Kippen eines Bildes](../windows/flipping-an-image-image-editor-for-icons.md).  
   
- **90 Grad drehen**  
- Dreht das Bild oder die Auswahl um 90 Grad.  Weitere Informationen finden Sie unter [Kippen eines Bildes](../mfc/flipping-an-image-image-editor-for-icons.md).  
+ **Um 90 Grad drehen**  
+ Dreht das Bild oder die Auswahl um 90 Grad. Weitere Informationen finden Sie unter [Kippen eines Bildes](../windows/flipping-an-image-image-editor-for-icons.md).  
   
- **Fenster "Farben" anzeigen**  
- Öffnet das [Fenster "Farben"](../windows/colors-window-image-editor-for-icons.md), in dem Sie die für das Bild gewünschten Farben auswählen können.  Weitere Informationen finden Sie unter [Arbeiten mit Farben](../mfc/working-with-color-image-editor-for-icons.md).  
+ **Anzeigen des Fensters "Farben"**  
+ Öffnet die [Fenster "Farben"](../windows/colors-window-image-editor-for-icons.md), in dem Sie die Farben für das Bild auswählen können. Weitere Informationen finden Sie unter [arbeiten mit Farben](../windows/working-with-color-image-editor-for-icons.md).  
   
- **Auswahl als Pinsel verwenden**  
- Ermöglicht die Erstellung eines benutzerdefinierten Pinsels aus einem Bildbereich.  Die Markierung wird zu einem benutzerdefinierten Pinsel, durch den die in der Markierung enthaltenen Farben auf das Bild verteilt werden.  Entlang dem Ziehpfad werden Kopien der Markierung abgelegt.  Je langsamer Sie ziehen, desto mehr Kopien werden erstellt.  Weitere Informationen finden Sie unter [Erstellen von benutzerdefinierten Pinseln](../mfc/creating-a-custom-brush-image-editor-for-icons.md).  
+ **Verwenden Sie die Markierung als Pinsel**  
+ Ermöglicht Ihnen die Erstellung von benutzerdefinierten Pinseln aus einem Teil eines Bildes. Ihre Auswahl wird eine benutzerdefinierte Pinsel, der die Farben in der Auswahl auf das Bild verteilt. Kopien der Auswahl befinden sich entlang des Pfads ziehen. Sie ziehen, desto langsamer, die mehrere Kopien erfolgen. Weitere Informationen finden Sie unter [Erstellen von benutzerdefinierten Pinseln](../windows/creating-a-custom-brush-image-editor-for-icons.md).  
   
- **Auswahl kopieren und gliedern**  
- Erstellt eine Kopie der aktuellen Auswahl und versieht sie mit einer Umrisslinie.  Wenn die Hintergrundfarbe in der aktuellen Auswahl enthalten ist, wird sie bei Verwendung einer [transparenten](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md) Farbe von der Auswahl ausgeschlossen.  
+ **Auswahl kopieren und Gliedern**  
+ Erstellt eine Kopie der aktuellen Auswahl und versieht sie mit einer Umrisslinie. Wenn die Hintergrundfarbe in der aktuellen Auswahl enthalten ist, es wird ausgeschlossen haben [transparent](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md) ausgewählten.  
   
- **Farben anpassen**  
- Öffnet die [benutzerdefinierte Farbauswahl](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md), in der Sie die für das Bild gewünschten Farben anpassen können.  Weitere Informationen finden Sie unter [Anpassen oder Ändern von Farben](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  
+ **Anpassen von Farben**  
+ Öffnet die [benutzerdefinierte Farbauswahl](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md), können Sie die Farben anpassen, Sie für Ihr Image verwenden. Weitere Informationen finden Sie unter [anpassen oder Ändern von Farben](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  
   
  **Palette laden**  
- Öffnet das [Dialogfeld "Palettenfarben laden"](../windows/load-palette-colors-dialog-box-image-editor-for-icons.md), in dem Sie Palettenfarben laden können, die zuvor als PAL\-Datei gespeichert wurden.  
+ Öffnet die [Palettenfarben laden (Dialogfeld)](../windows/load-palette-colors-dialog-box-image-editor-for-icons.md), können Sie beim Laden von Palettenfarben, die zuvor in einer PAL-Datei gespeichert.  
   
  **Palette speichern**  
- Speichert die Palettenfarben in einer PAL\-Datei.  
+ Speichert die Palettenfarben PAL-Datei.  
   
- **Nicht transparent zeichnen**  
- Falls aktiviert, wird die aktuelle Markierung deckend dargestellt.  Falls deaktiviert, ist die aktuelle Markierung transparent.  Weitere Informationen finden Sie unter [Auswählen eines transparenten oder deckenden Hintergrundes](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).  
+ **Deckend zeichnen**  
+ Bei Auswahl dieser Option wird die aktuelle Auswahl nicht transparent. Wenn diese Option deaktiviert ist, wird die aktuelle Auswahl transparent. Weitere Informationen finden Sie unter [auswählen, einen transparenten oder deckenden Hintergrundes](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).  
   
- **Symbolleisten\-Editor**  
- Öffnet das [Dialogfeld "Neue Symbolleistenressource"](../mfc/new-toolbar-resource-dialog-box.md).  
+ **Symbolleisten-Editor**  
+ Öffnet die [neue Symbolleistenressource (Dialogfeld)](../windows/new-toolbar-resource-dialog-box.md).  
   
  **Rastereinstellungen**  
- Öffnet das [Dialogfeld "Rastereinstellungen"](../mfc/grid-settings-dialog-box-image-editor-for-icons.md), in dem Sie Raster für das Bild festlegen können.  
+ Öffnet die [Rastereinstellungen (Dialogfeld)](../windows/grid-settings-dialog-box-image-editor-for-icons.md) in dem Sie Raster für das Bild angeben können.  
   
  **Neuer Bildtyp**  
- Öffnet das [Dialogfeld "Neuer \<Gerät\> Bildtyp"](../mfc/new-device-image-type-dialog-box-image-editor-for-icons.md).  Eine einzelne Symbolressource kann mehrere Bilder unterschiedlicher Größe enthalten. Je nach gewünschter Darstellung können Symbole in einer dieser Größen in Fenstern angezeigt werden.  Durch einen neuen Gerätetyp wird nicht die Symbolgröße geändert, sondern innerhalb des Symbols wird ein neues Bild erstellt.  Diese Option bezieht sich ausschließlich auf Symbole und Cursor.  
+ Öffnet die [neu \<Gerät > Dialogfeld Bildtyp](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md). Eine einzelne Symbolressource kann mehrere Images mit verschiedenen Größen enthalten. Windows können die entsprechenden Symbolgröße je nachdem, wie es geht, die angezeigt werden. Ein neuen Gerätetyp ändert nicht die Größe des Symbols, sondern vielmehr erstellt ein neues Bild innerhalb des Symbols. Gilt nur für Symbole und Cursor.  
   
- **Aktuelles Symbol\/Cursorbildtyp**  
- Öffnet ein Untermenü, in dem die \(neun\) zuerst verfügbaren Cursor\- oder Symbolbilder aufgeführt sind.  Durch **Weitere...**, den letzten Befehl im Untermenü, wird das [Dialogfeld "\<Objekt\>\-Bild öffnen"](../mfc/open-device-image-dialog-box-image-editor-for-icons.md) geöffnet.  
+ **Aktuelle Symbol "/ Image Cursortyp**  
+ Öffnet ein Untermenü, in der ersten verfügbaren Cursor- oder Symbol-Images (die ersten neun) aufgelistet. Mit dem letzten Befehl im Untermenü **mehr...** , öffnet der [öffnen \<Gerät > Bild (Dialogfeld)](../windows/open-device-image-dialog-box-image-editor-for-icons.md).  
   
- **Bildtyp löschen**  
- Löscht das markierte Gerätebild.  
+ **Löschen von Image-Datentyp**  
+ Löscht das ausgewählte Gerät-Image an.  
   
- **Tools**  
- Öffnet ein Untermenü mit allen Tools, die auf der [Symbolleiste des Grafik\-Editors](../mfc/toolbar-image-editor-for-icons.md) verfügbar sind.  
+ **Extras**  
+ Öffnet ein Untermenü mit alle Tools von enthält der [Grafik-Editor-Symbolleiste](../windows/toolbar-image-editor-for-icons.md).  
   
-## Anforderungen  
- None  
+## <a name="requirements"></a>Anforderungen  
+ Keiner  
   
-## Siehe auch  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>Siehe auch  
+ [Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)
+

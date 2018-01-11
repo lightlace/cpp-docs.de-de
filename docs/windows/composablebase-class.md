@@ -1,28 +1,30 @@
 ---
-title: "ComposableBase-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::ComposableBase"
-dev_langs: 
-  - "C++"
+title: ComposableBase-Klasse | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::ComposableBase
+dev_langs: C++
 ms.assetid: 5e967ef9-15c8-483b-b0d0-2e28cc91c715
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 75dcb009ff60b5350c5ba76279e61a9509eb9b56
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# ComposableBase-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-## Syntax  
+# <a name="composablebase-class"></a>ComposableBase-Klasse
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<  
@@ -31,15 +33,15 @@ template<
 class ComposableBase;  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `FactoryInterface`  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** implements.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [Microsoft::WRL\-Namespace](../windows/microsoft-wrl-namespace.md)
+## <a name="see-also"></a>Siehe auch  
+ [Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)

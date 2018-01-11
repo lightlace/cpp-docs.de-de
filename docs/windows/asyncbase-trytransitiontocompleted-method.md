@@ -1,32 +1,33 @@
 ---
-title: "AsyncBase::TryTransitionToCompleted-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "async/Microsoft::WRL::AsyncBase::TryTransitionToCompleted"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "TryTransitionToCompleted-Methode"
+title: 'Asyncbase:: Trytransitiontocompleted-Methode | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: async/Microsoft::WRL::AsyncBase::TryTransitionToCompleted
+dev_langs: C++
+helpviewer_keywords: TryTransitionToCompleted method
 ms.assetid: 8d038e0a-47ec-4cfc-8aeb-6821282df67a
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: aeecd31e25d55222e18e1aa95f41b70ce7f5f889
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# AsyncBase::TryTransitionToCompleted-Methode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gibt an, ob der aktuelle asynchrone Operation abgeschlossen wurde.  
+# <a name="asyncbasetrytransitiontocompleted-method"></a>AsyncBase::TryTransitionToCompleted-Methode
+Gibt an, ob die aktuelle asynchrone Vorgang abgeschlossen ist.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 bool TryTransitionToCompleted(  
@@ -34,13 +35,13 @@ bool TryTransitionToCompleted(
 );  
 ```  
   
-## Rückgabewert  
- `true`, wenn die asynchrone Operation abgeschlossen wurde; andernfalls `false`.  
+## <a name="return-value"></a>Rückgabewert  
+ `true`Wenn der asynchrone Vorgang abgeschlossen wurde. andernfalls `false`.  
   
-## Anforderungen  
- **Header:**  async.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** async.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [AsyncBase\-Klasse](../windows/asyncbase-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [AsyncBase-Klasse](../windows/asyncbase-class.md)

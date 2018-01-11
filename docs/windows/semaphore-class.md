@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 10de04ebed31835d93daca9cf4caa5d96ed605b0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 60373c12220fce57672389b98455a123990f3c93
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="semaphore-class"></a>Semaphore-Klasse
 Stellt ein Synchronisierungsobjekt, das eine freigegebene Ressource steuert, die eine begrenzte Anzahl von Benutzern unterstützen können.  
@@ -31,7 +34,7 @@ Stellt ein Synchronisierungsobjekt, das eine freigegebene Ressource steuert, die
 class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-typedefs"></a>Öffentliche Typedefs  
   

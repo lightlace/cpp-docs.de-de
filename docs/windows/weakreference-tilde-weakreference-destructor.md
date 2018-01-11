@@ -1,30 +1,31 @@
 ---
-title: "WeakReference::~WeakReference-Destruktor"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::WeakReference::~WeakReference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "~WeakReference, Destruktor"
+title: 'WeakReference:: ~ WeakReference-Destruktor | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::WeakReference::~WeakReference
+dev_langs: C++
+helpviewer_keywords: ~WeakReference, destructor
 ms.assetid: 176d24a0-df14-41fa-9c17-2f6e69f932be
-caps.latest.revision: 8
-caps.handback.revision: "8"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ed5610ad9c4181c36da44fc34b06dbf846697085
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# WeakReference::~WeakReference-Destruktor
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus dem Code verwendet werden.  
+# <a name="weakreferenceweakreference-destructor"></a>WeakReference::~WeakReference-Destruktor
+Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,5 +44,4 @@ virtual ~WeakReference();
  **Namespace:** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>Siehe auch  
- [Microsoft::wrl::Details Namespace](../windows/microsoft-wrl-details-namespace.md)
- [WeakReference-Klasse](../windows/weakreference-class1.md)
+ [Microsoft::wrl::Details Namespace](../windows/microsoft-wrl-details-namespace.md) [WeakReference-Klasse](../windows/weakreference-class1.md)

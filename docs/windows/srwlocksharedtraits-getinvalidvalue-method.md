@@ -1,44 +1,45 @@
 ---
-title: "SRWLockSharedTraits::GetInvalidValue-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SRWLockSharedTraits::GetInvalidValue"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetInvalidValue-Methode"
+title: 'Srwlocksharedtraits:: Getinvalidvalue-Methode | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SRWLockSharedTraits::GetInvalidValue
+dev_langs: C++
+helpviewer_keywords: GetInvalidValue method
 ms.assetid: 18fdb51a-0b69-4357-8c29-fd0d2911364c
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0a3c1df6490f5860c3760b9ce6728fa9e441e554
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# SRWLockSharedTraits::GetInvalidValue-Methode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ruft ein SRWLockSharedTraits\-Objekt ab, die immer ungültig ist.  
+# <a name="srwlocksharedtraitsgetinvalidvalue-method"></a>SRWLockSharedTraits::GetInvalidValue-Methode
+Ruft ein SRWLockSharedTraits-Objekt, das immer ungültig ist.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 inline static Type GetInvalidValue();  
 ```  
   
-## Rückgabewert  
- Ein Handle für ein SRWLockSharedTraits\-Objekt.  
+## <a name="return-value"></a>Rückgabewert  
+ Ein Handle für ein SRWLockSharedTraits-Objekt.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  
   
- **Namespace:**  Microsoft::WRL::Wrappers::HandleTraits  
+ **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
   
-## Siehe auch  
- [SRWLockSharedTraits\-Struktur](../windows/srwlocksharedtraits-structure.md)
+## <a name="see-also"></a>Siehe auch  
+ [SRWLockSharedTraits-Struktur](../windows/srwlocksharedtraits-structure.md)

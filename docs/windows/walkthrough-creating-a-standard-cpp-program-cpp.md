@@ -1,87 +1,85 @@
 ---
-title: "Exemplarische Vorgehensweise: Erstellen eines Win32-Konsolenprogramms (C++)"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "get-started-article"
-f1_keywords: 
-  - "vcfirstapp"
-  - "vccreatefirst"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Befehlszeilenanwendung [C++], Standard"
-  - "Standardanwendungen [C++]"
+title: "Exemplarische Vorgehensweise: Erstellen eines standardmäßigen C++-Programms (C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+f1_keywords:
+- vcfirstapp
+- vccreatefirst
+dev_langs: C++
+helpviewer_keywords:
+- command-line applications [C++], standard
+- standard applications [C++]
 ms.assetid: 48217e35-d892-46b7-93e3-f6f0b7e2da35
-caps.latest.revision: 36
-caps.handback.revision: "36"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "36"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 52066be1d67bddb7173841e9df6c5013c86ac0dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Exemplarische Vorgehensweise: Erstellen eines Win32-Konsolenprogramms (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Mit Visual C\+\+ können in der integrierten Entwicklungsumgebung \(IDE\) von Visual Studio standardmäßige C\+\+\-Programme erstellt werden.  Durch Ausführen der Schritte in dieser exemplarischen Vorgehensweise können Sie ein Projekt erstellen, dem Projekt eine neue Datei hinzufügen, die Datei bearbeiten, um C\+\+\-Code hinzuzufügen und das Programm anschließend mithilfe von [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] kompilieren und ausführen.  
+# <a name="walkthrough-creating-a-standard-c-program-c"></a>Exemplarische Vorgehensweise: Erstellen eines standardmäßigen C++-Programms (C++)
+Mit Visual C++ können in der integrierten Entwicklungsumgebung (IDE) von Visual Studio standardmäßige C++-Programme erstellt werden. Durch Ausführen der Schritte in dieser exemplarischen Vorgehensweise können Sie ein Projekt erstellen, dem Projekt eine neue Datei hinzufügen, die Datei bearbeiten, um C++-Code hinzuzufügen und das Programm anschließend mithilfe von [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] kompilieren und ausführen.  
   
- Sie können ein eigenes C\+\+\-Programm eingeben oder eines der Beispielprogramme verwenden.  Das Beispielprogramm in dieser exemplarischen Vorgehensweise ist eine Konsolenanwendung.  Von der Anwendung wird der `set`\-Container in der Standardvorlagenbibliothek \(STL\) verwendet.  
+ Sie können ein eigenes C++-Programm eingeben oder eines der Beispielprogramme verwenden. Das Beispielprogramm in dieser exemplarischen Vorgehensweise ist eine Konsolenanwendung. Diese Anwendung verwendet die `set` Container in der C++-Standardbibliothek.  
   
- [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] entspricht dem 2003 C\+\+\-Standard, wobei folgende wichtige Ausnahmen zu berücksichtigen sind: zweistufige Namenssuche, Ausnahmespezifikationen und Export.  Darüber hinaus unterstützt [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] mehrere C\+\+0x\-Funktionen, z. B. Lambdas, Auto, static\_assert, rvalue\-Verweise und externe Vorlagen.  
+ Visual C++ entspricht dem 2003 C++-Standard, wobei folgende wichtigen Ausnahmen: zweistufige Namenssuche, Ausnahmespezifikationen und Export. Darüber hinaus unterstützt Visual C++ mehrere C ++ 0 X-Funktionen, z. B. Lambdas, Auto, Static_assert, Rvalue-Verweise und Extern-Vorlagen.  
   
 > [!NOTE]
->  Wenn Kompatibilität mit dem Standard erforderlich ist, verwenden Sie die **\/Za**\-Compileroption, um Microsoft\-Erweiterungen für den Standard zu deaktivieren.  Weitere Informationen finden Sie unter [\/Za, \/Ze \(Spracherweiterungen deaktivieren\)](../build/reference/za-ze-disable-language-extensions.md).  
+>  Wenn die Kompatibilität mit dem Standard erforderlich ist, verwenden Sie die **"/ Za"** Compileroption, um Microsoft-Erweiterungen für den Standard zu deaktivieren. Weitere Informationen finden Sie unter [/Za, / Ze (Spracherweiterungen deaktivieren)](../build/reference/za-ze-disable-language-extensions.md).  
   
-## Vorbereitungsmaßnahmen  
- Zur Durchführung dieser exemplarischen Vorgehensweise benötigen Sie Grundkenntnisse in C\+\+.  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
+ Zur Durchführung dieser exemplarischen Vorgehensweise benötigen Sie Grundkenntnisse in C++.  
   
-### So erstellen Sie ein neues Projekt und fügen eine Quelldatei hinzu  
+### <a name="to-create-a-project-and-add-a-source-file"></a>So erstellen Sie ein neues Projekt und fügen eine Quelldatei hinzu  
   
-1.  Erstellen Sie ein Projekt, indem Sie im Menü **Datei** auf **Neu** zeigen und anschließend auf **Projekt** klicken.  
+1.  Erstellen Sie ein Projekt, zeigen, um **neu** auf die **Datei** Menü, und klicken Sie dann auf **Projekt**.  
   
-2.  Klicken Sie im Projekttypenbereich von **Visual C\+\+** auf **Win32**, und klicken Sie dann auf **Win32\-Konsolenanwendung**.  
+2.  In der **Visual C++** projekttypenbereich, klicken Sie auf **Win32**, und klicken Sie dann auf **Win32-Konsolenanwendung**.  
   
 3.  Geben Sie einen Namen für das Projekt ein.  
   
-     Standardmäßig erhält die Lösung, in der das Projekt enthalten ist, den gleichen Namen wie das Projekt. Sie können jedoch auch einen anderen Namen eingeben.  Sie können auch einen anderen Speicherort für das Projekt eingeben.  
+     Standardmäßig erhält die Lösung, in der das Projekt enthalten ist, den gleichen Namen wie das Projekt. Sie können jedoch auch einen anderen Namen eingeben. Sie können auch einen anderen Speicherort für das Projekt eingeben.  
   
-     Klicken Sie auf **OK**, um das Projekt zu erstellen.  
+     Klicken Sie auf **OK** zum Erstellen des Projekts.  
   
-4.  Klicken Sie im **Win32\-Anwendungs\-Assistenten** auf **Weiter**, wählen Sie **Leeres Projekt** aus,und klicken Sie anschließend auf **Fertig stellen**.  
+4.  In der **Win32-Anwendungsassistenten**, klicken Sie auf **Weiter**Option **leeres Projekt**, und klicken Sie dann auf **Fertig stellen**.  
   
-5.  Klicken Sie im Menü **Ansicht** auf **Projektmappen\-Explorer**, wenn der **Projektmappen\-Explorer** nicht bereits geöffnet ist.  
+5.  Wenn **Projektmappen-Explorer** nicht angezeigt wird, auf die **Ansicht** Menü klicken Sie auf **Projektmappen-Explorer**.  
   
 6.  Fügen Sie dem Projekt folgendermaßen eine neue Quelldatei hinzu:  
   
-    1.  Klicken Sie im **Projektmappen\-Explorer** mit der rechten Maustaste auf den Ordner **Quelldateien**, zeigen Sie auf **Hinzufügen**, und wählen Sie anschließend **Neues Element** aus.  
+    1.  In **Projektmappen-Explorer**, mit der rechten Maustaste die **Quelldateien** Ordner, zeigen Sie auf **hinzufügen**, und klicken Sie dann auf **neues Element**.  
   
-    2.  Klicken Sie im Knoten **Code** auf **C\+\+\-Datei \(.cpp\)**, geben Sie einen Namen für die Datei ein, und klicken Sie anschließend auf **Hinzufügen**.  
+    2.  In der **Code** Knoten, klicken Sie auf **C++-Datei (.cpp)**, geben Sie einen Namen für die Datei, und klicken Sie dann auf **hinzufügen**.  
   
-     Die CPP\-Datei wird im Quelldateiordner im **Projektmappen\-Explorer** angezeigt, und die Datei wird im Visual Studio\-Editor geöffnet.  
+     Die CPP-Datei wird im Quelldateiordner im **Projektmappen-Explorer**, und die Datei wird in der Visual Studio-Editor geöffnet.  
   
-7.  Geben Sie in der Datei im Editor ein gültiges C\+\+\-Programm ein, von dem die C\+\+\-Standardbibliothek verwendet wird, oder kopieren Sie eines der Beispielprogramme, und fügen Sie es in die Datei ein.  
-  
-     Sie können z. B. das [set::find](../misc/set-find-stl-samples.md)\-Beispielprogramm verwenden, bei dem es sich um eines der Beispiele für standardmäßige Vorlagenbibliotheken handelt, die in der Hilfe enthalten sind.  
-  
-     Wenn Sie das Beispielprogramm verwenden, beachten Sie die `using namespace std;`\-Direktive.  Diese Direktive ermöglicht dem Programm die Verwendung von `cout` und `endl`, ohne dass voll qualifizierte Namen \(`std::cout` und `std::endl`\) erforderlich sind.  
+7.  Geben Sie in der Datei im Editor ein gültiges C++-Programm, das die C++-Standardbibliothek verwendet, oder kopieren Sie eines der Beispielprogramme, und fügen Sie ihn in der Datei.  
   
 8.  Speichern Sie die Datei.  
   
 9. Klicken Sie im Menü **Erstellen** auf **Projektmappe erstellen**.  
   
-     Im **Ausgabefenster** werden Informationen zum Kompilierungsprozess angezeigt, z. B. der Speicherort des Buildprotokolls und eine Meldung über den Buildstatus.  
+     Die **Ausgabe** Fenster werden Informationen zum Kompilierungsprozess angezeigt, z. B. den Speicherort des Buildprotokolls und eine Meldung, die den Buildstatus angezeigt.  
   
-10. Klicken Sie im Menü **Debuggen** auf **Starten ohne Debuggen**.  
+10. Auf der **Debuggen** Menü klicken Sie auf **Starten ohne Debugging**.  
   
      Wenn Sie das Beispielprogramm verwendet haben, wird ein Befehlsfenster angezeigt. Dieses gibt an, ob bestimmte ganze Zahlen im Set enthalten sind.  
   
-## Nächste Schritte  
- **Vorheriges Thema:** [Creating Command\-Line Applications \(C\+\+\)](assetId:///2505d9ed-aca4-426a-9071-078a2d707254).  **Nächstes Thema:** [Exemplarische Vorgehensweise: Kompilieren eines systemeigenen C\+\+\-Programms in der Befehlszeile](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).  
+## <a name="next-steps"></a>Nächste Schritte  
+ **Vorherige:** [Konsolenanwendungen in Visual C++](../windows/console-applications-in-visual-cpp.md). **Weiter:**[Exemplarische Vorgehensweise: Kompilieren eines systemeigenen C++-Programms in der Befehlszeile](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).  
   
-## Siehe auch  
- [Visual C\+\+ Guided Tour](assetId:///499cb66f-7df1-45d6-8b6b-33d94fd1f17c)   
- [C\+\+\-Sprachreferenz](../cpp/cpp-language-reference.md)   
- [C\+\+\-Standardbibliothek](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [C++-Sprachreferenz](../cpp/cpp-language-reference.md)   
+ [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md)

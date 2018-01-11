@@ -15,11 +15,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1cebff3122ed32a8c166324283a8e18f3b247361
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b67e1bdd9377c81965dd212836e0f224ff618788
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltstdexceptgt"></a>&lt;stdexcept&gt;
 Definiert einige Standardklassen, die zum Berichten von Ausnahmen verwendet werden. Die Klassen bilden eine Ableitungshierarchie, sind alle aus der Klasse [exception](../standard-library/exception-class.md) abgeleitet und enthalten zwei allgemeine Typen von Ausnahmen: logische Fehler und Laufzeitfehler. Die logischen Fehler sind vom Programmierer verursachte Fehler. Sie sind aus der Basisklasse "logic_error" abgeleitet und enthalten:  
@@ -56,5 +57,5 @@ Definiert einige Standardklassen, die zum Berichten von Ausnahmen verwendet werd
   
 ## <a name="see-also"></a>Siehe auch  
  [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)   
- [Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

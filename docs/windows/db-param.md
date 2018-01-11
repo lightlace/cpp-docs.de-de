@@ -1,32 +1,33 @@
 ---
-title: "db_param | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.db_param"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "db_param attribute"
+title: Db_param | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.db_param
+dev_langs: C++
+helpviewer_keywords: db_param attribute
 ms.assetid: a28315f5-4722-459e-92ef-32e83c0b205a
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b5224c406f6e10cd4ef9f0ed64fbdbd7c5cc8e62
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# db_param
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ordnet die angegebene Membervariable mit einer Eingabe oder einem Ausgabeparameter und schränkt die Variable ab.  
+# <a name="dbparam"></a>db_param
+Ordnet die angegebene Membervariable ein Eingabe- oder Ausgabespalte-Parameter und begrenzt die Variable.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -41,47 +42,47 @@ Ordnet die angegebene Membervariable mit einer Eingabe oder einem Ausgabeparamet
 ) ]  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `ordinal`  
- Die Spaltennummer \(**DBCOLUMNINFO** Ordnungszahl\) entspricht einem Feld im Rowset, um Daten zu binden.  
+ Die Nummer der Spalte (**DBCOLUMNINFO** Ordnungszahl), ein Feld in das Rowset, das zum Binden von Daten entspricht.  
   
- *paramtype* \(optional\)  
- Der festzulegende Typ für den Parameter.  Anbieter unterstützen nur Parameter E\/A\-Typen, die von der zugrunde liegenden Datenquelle unterstützt werden.  Der Typ ist eine Kombination aus einem oder mehreren **DBPARAMIOENUM**\-Werte:  
+ *ParamType-Objekt* (optional)  
+ Der Typ, für den Parameter festgelegt werden. Anbieter unterstützen nur Parameter e/a-Typen, die von der zugrunde liegenden Datenquelle unterstützt werden. Der Typ ist eine Kombination aus einem oder mehreren **DBPARAMIOENUM** Werte:  
   
--   **DBPARAMIO\_INPUT** ein Eingabeparameter.  
+-   **DBPARAMIO_INPUT** Ein Eingabeparameter.  
   
--   **DBPARAMIO\_OUTPUT** ein Ausgabeparameter.  
+-   **DBPARAMIO_OUTPUT** Ein Ausgabeparameter.  
   
--   **DBPARAMIO\_NOTPARAM** der Accessor verfügt über keine Parameter.  Einstellung **eParamIO** auf diesen Wert in Zeilen accessoren speichert den Benutzer, dass Parameter ignoriert werden.  
+-   **DBPARAMIO_NOTPARAM** Der Accessor hat keine Parameter. Festlegen von **eParamIO** auf diesen Wert in der Zeile Accessoren daran erinnert werden dem Benutzer, dass Parameter ignoriert werden.  
   
- *dbtype* \(optional\)  
- OLE DB [Typ\-Indikator](https://msdn.microsoft.com/en-us/library/ms711251.aspx) für den Eintrag Spalten.  
+ *DbType* (optional)  
+ OLE DB- ["Typindikator" als](https://msdn.microsoft.com/en-us/library/ms711251.aspx) für den Eintrag in der Spalte.  
   
- *Genauigkeit* \(optional\)  
- Die für den Eintrag Spalten zu verwendenden Genauigkeit.  Ausführliche Informationen finden Sie in der Beschreibung von **bPrecision**\-Element [DBBINDING\-Struktur](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ *Genauigkeit* (optional)  
+ Die Genauigkeit für den Eintrag in der Spalte verwendet werden soll. Weitere Informationen finden Sie unter der Beschreibung der **bPrecision** Element von der [DBBINDING-Struktur](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
   
- *Dezimalstellen* \(optional\)  
- Die für den Eintrag Spalten, Skalierung verwendet werden soll.  Ausführliche Informationen finden Sie in der Beschreibung von **bScale**\-Element [DBBINDING\-Struktur](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ *Skalierung* (optional)  
+ Die Dezimalstellen für den Eintrag in der Spalte verwendet werden soll. Weitere Informationen finden Sie unter der Beschreibung der **bScale** Element von der [DBBINDING-Struktur](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
   
- *Status* \(optional\)  
- Eine Membervariable verwendet, um den Status dieser Spalte enthält.  Der Status gibt, ob der Spaltenwert ein Datenwert oder ein anderer Wert ist, z **NULL**an.  Mögliche Werte finden Sie in der [Status](https://msdn.microsoft.com/en-us/library/ms722617.aspx)*OLE DB\-Programmierreferenz*.  
+ *Status* (optional)  
+ Eine Membervariable verwendet, um den Status dieser Spalte zu halten. Der Status gibt an, ob der Spaltenwert wie z. B. einen Datenwert oder ein anderer Wert ist **NULL**. Mögliche Werte finden Sie unter [Status](https://msdn.microsoft.com/en-us/library/ms722617.aspx) in der *OLE DB Programmer's Reference*.  
   
- *Length* \(optional\)  
- Eine Membervariable verwendet, um die Größe der Spalte in Bytes enthält.  
+ *Länge* (optional)  
+ Eine Membervariable dar, das die Größe der Spalte in Bytes enthält.  
   
-## Hinweise  
- **db\_param** definiert Parameter, die Sie in Befehlen verwendet werden. Daher können Sie es mit **db\_command**.  Beispielsweise können Sie den **db\_param** Binding parametern in SQL\-Abfragen oder gespeicherte Prozeduren verwenden.  Parameter in einer gespeicherten Prozedur werden durch Fragezeichen \(?\) bezeichnet, und Sie sollten die Datenmember in der Reihenfolge binden, in der die Parameter angegeben werden.  
+## <a name="remarks"></a>Hinweise  
+ **Db_param** Parameter definiert, dass Sie in Befehlen verwenden; aus diesem Grund verwenden Sie es mit **Db_command**. Beispielsweise können Sie **Db_param** zum Binden von Parametern in SQL-Abfragen oder gespeicherte Prozeduren. Parameter in einer gespeicherten Prozedur werden durch Fragezeichen (?) gekennzeichnet, und die Datenelemente in der Reihenfolge der Parameter gebunden werden soll.  
   
- **db\_param** schränkt Memberdaten ab, die an er\-basiert Bindung in OLE DB `ICommandWithParameters`teilnehmen können.  Er legt den Parametertyp \(Eingabe oder Ausgabe\), OLE DB\-Typ, Genauigkeit, Dezimalstellen, Status und Länge für den angegebenen Parameter fest.  Dieses Attribut wird der OLE DB\-Consumer\-Makros ein BEGIN\_PARAM\_MAP…  END\_PARAM\_MAP.  Jeder Member, den Sie mit dem **db\_param**\-Attribut kennzeichnen, nimmt einen Eintrag in der Zuordnung in Form eines COLUMN\_ENTRY.  
+ **Db_param** Memberdaten, die in der OLE DB teilnehmen können, begrenzt `ICommandWithParameters`-basierten Bindung. Der Parametertyp (Eingabe oder Ausgabe), OLE DB-Typ, Genauigkeit, Dezimalstellen, Status und Länge für den angegebenen Parameter festgelegt. Dieses Attribut fügt die OLE DB-Consumer-Makros BEGIN_PARAM_MAP... END_PARAM_MAP. Jedes Element aus, markieren Sie mit, der **Db_param** Attribut nimmt einen Eintrag in der Zuordnung in Form einer COLUMN_ENTRY.  
   
- **db\_param** wird entweder in Verbindung mit den [db\_table](../windows/db-table.md) oder [db\_command](../windows/db-command.md)\-Attributen verwendet.  
+ **Db_param** dient in Verbindung mit der [Db_table](../windows/db-table.md) oder [Db_command](../windows/db-command.md) Attribute.  
   
- Wenn der Consumer Attribut für Textanbieter dieses Attribut auf eine Klasse angewendet wird, benennt der Compiler die Klasse zum \_TheClassNameAccessor, in dem *TheClassName* der Name ist, den Sie für die Klasse haben, und der Compiler außerdem eine Klasse erstellt, die *TheClassName* aufgerufen wird *,* die vom \_TheClassNameAccessor berechnet.  In der Klassenansicht finden Sie unter beide Klassen.  
+ Wenn vom Consumer-Attribut-Anbieter dieses Attribut auf eine Klasse angewendet werden, wird der Compiler die Klasse umbenennen \_ *Klassenname*-Accessor, in dem *Klassenname* der eingegebene Name ist der Klasse und der Compiler erstellt auch eine Klasse mit dem Namen *Klassenname*, die sich daraus ableitet \_ *Klassenname*Accessor.  In dieser Klassenansicht werden beide Klassen angezeigt.  
   
-## Beispiel  
- Im folgenden Beispiel wird eine Befehlsklasse auf Grundlage der SalesbyYear\-gespeicherte Prozedur in der Datenbank Northwind.  Er weist den ersten Parameter in der gespeicherten Prozedur mit der `m_RETURN_VALUE`\-Variable definiert und diesen als Ausgabeparameter.  Sie ordnet die letzten beiden Parameter mit `m_Beginning_Date` \(Eingabe\) und `m_Ending_Date`.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel erstellt eine Command-Klasse, die basierend auf der SalesbyYear gespeicherte Prozedur in der Northwind-Datenbank. Sie ordnet den ersten Parameter in der gespeicherten Prozedur mit der `m_RETURN_VALUE` Variable, und wird als Output-Parameter definiert. Sie ordnet die letzten beiden (Eingabeparameter) mit `m_Beginning_Date` und `m_Ending_Date`.  
   
- Im folgenden Beispiel ordnet die `nOutput`\-Variable mit einem Ausgabeparameter.  
+ Im folgenden Beispiel wird die `nOutput` Variable mit einem Ausgabeparameter.  
   
 ```  
 // db_param.cpp  
@@ -117,19 +118,18 @@ struct CSalesbyYear {
 };  
 ```  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
-|**Betrifft**|**Klasse**, `struct`, Member, Möglichkeit, lokale Variablen|  
+|**Betrifft**|**Klasse**, `struct`, Member, Methode, lokal|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Keiner|  
+|**Ungültige Attribute**|Keiner|  
   
- Weitere Informationen über das kontexte finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [OLE DB Consumer Attributes](../windows/ole-db-consumer-attributes.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [OLE DB-Consumerattribute](../windows/ole-db-consumer-attributes.md)   

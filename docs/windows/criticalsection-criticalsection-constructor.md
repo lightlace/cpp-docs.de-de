@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bf4e9cd4d4fde31f1809e7d583e662188558d5b3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 532a7b2e046bbdb64db118741a939dadb049f081
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="criticalsectioncriticalsection-constructor"></a>CriticalSection::CriticalSection-Konstruktor
 Initialisiert ein Synchronisierungsobjekt, das ein Mutex-Objekt ähnelt, jedoch kann von nur die Threads eines einzelnen Prozesses verwendet werden.  
@@ -37,7 +40,7 @@ explicit CriticalSection(
  Die Anzahl der Drehfeld für die kritischen Abschnittsobjekt. Der Standardwert ist 0.  
   
 ## <a name="remarks"></a>Hinweise  
- Weitere Informationen über Crticial Abschnitte und Spincounts finden Sie unter der **InitializeCriticalSectionAndSpinCount** -Funktion in der Synchronisierungsbereich des der Windows-API-Dokumentation.  
+ Weitere Informationen über kritische Abschnitte und Spincounts finden Sie unter der **InitializeCriticalSectionAndSpinCount** -Funktion in der Synchronisierungsbereich des der Windows-API-Dokumentation.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  

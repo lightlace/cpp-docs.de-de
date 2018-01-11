@@ -1,32 +1,33 @@
 ---
-title: "ActivationFactoryCallback-Funktion | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Details::ActivationFactoryCallback"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActivationFactoryCallback-Funktion"
+title: ActivationFactoryCallback-Funktion | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Details::ActivationFactoryCallback
+dev_langs: C++
+helpviewer_keywords: ActivationFactoryCallback function
 ms.assetid: dd40c79b-1273-4f2a-8c24-ae9926fb4fd9
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e88a6f9cb89746cd0380587789fbdd68f80d5e36
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# ActivationFactoryCallback-Funktion
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Unterstützt die WRL\-Infrastruktur und nicht beabsichtigt, direkt im Code verwendet werden.  
+# <a name="activationfactorycallback-function"></a>ActivationFactoryCallback-Funktion
+Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(  
@@ -35,25 +36,25 @@ inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `activationId`  
- Handle einer Zeichenfolge, die einem Ablaufklassennamen angibt.  
+ Handle für eine Zeichenfolge, die einen Laufzeitklasse-Namen angibt.  
   
  `ppFactory`  
- Wenn dieser Vorgang abgeschlossen wurde, eine Aktivierungsfactory, die an den `activationId`\- Parameter entspricht.  
+ Wenn dieser Vorgang abgeschlossen wird, eine aktivierungsfactory, der Parameter entspricht `activationId`.  
   
-## Rückgabewert  
- S\_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler beschreibt.  Wahrscheinliche Fehler\-HRESULT sind CLASS\_E\_CLASSNOTAVAILABLE und E\_INVALIDARG.  
+## <a name="return-value"></a>Rückgabewert  
+ „S_OK“ im Erfolgsfall, andernfalls ein HRESULT, das den Fehler beschreibt. Wahrscheinliche Fehler-HRESULTs sind CLASS_E_CLASSNOTAVAILABLE und E_INVALIDARG.  
   
-## Hinweise  
- Ruft die Aktivierungsfactory für die angegebene Aktivierung ID ab  
+## <a name="remarks"></a>Hinweise  
+ Ruft die aktivierungsfactory für die angegebene Aktivierung-ID.  
   
- Die Runtime Windows ruft diese Rückruffunktion auf, um ein Objekt anfordern, das von den Ablaufklassennamen angegeben wird.  
+ Windows-Runtime ruft diese Callback-Funktion, um ein Objekt, von dem Common Language Runtime-Klassennamen angegebenen anzufordern.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** module.h  
   
- **Namespace:**  Microsoft::WRL::Details  
+ **Namespace:** Microsoft::WRL::Details  
   
-## Siehe auch  
- [Microsoft::WRL::Details\-Namespace](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Siehe auch  
+ [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

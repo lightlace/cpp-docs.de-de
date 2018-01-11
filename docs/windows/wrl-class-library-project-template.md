@@ -1,62 +1,65 @@
 ---
-title: "Projektvorlage f&#252;r WRL-Klassenbibliothek | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
+title: "Projektvorlage für WRL-Klassenbibliothek | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
 ms.assetid: 628b0852-89e5-44f8-bf58-a09762bda15c
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 13fc476f696bdd2cb17ed58c496c63747db90322
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Projektvorlage f&#252;r WRL-Klassenbibliothek
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Wenn Sie Visual Studio verwenden, um ein [!INCLUDE[cppwrl](../windows/includes/cppwrl_md.md)] \([!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]\) zu schreiben, können Sie die Aufgabe erheblich vereinfachen, indem Sie die WRL\-Klassenbibliotheksprojektvorlage herunterladen.  
+# <a name="wrl-class-library-project-template"></a>Projektvorlage für WRL-Klassenbibliothek
+Wenn Sie Visual Studio verwenden, um ein Projekt für die Windows Runtime C++ Template Library (WRL) zu schreiben, können Sie Ihre Aufgabe erheblich vereinfachen, durch die WRL-klassenbibliotheksprojektvorlage herunterladen.  
   
 > [!NOTE]
->  Wenn Sie die Projekteinstellungen für ein vorhandenes Projekt manuell aktualisieren müssen, Sie finden [DLLs \(C\+\+\/CX\)](http://msdn.microsoft.com/library/windows/apps/hh699881\(v=vs.110\).aspx).  
+>  Wenn Sie die projekteinstellungen für ein vorhandenes Projekt manuell aktualisieren müssen, finden Sie unter [DLLs (C + c++ / CX)](http://msdn.microsoft.com/library/windows/apps/hh699881\(v=vs.110\).aspx).  
   
-## Laden Sie die WRL\-Projektvorlage herunter  
- Visual Studio stellt eine Vorlage nicht für [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]\-Projekte.  Im Folgenden wird gezeigt, wie eine Projektvorlage herunterladen, die eine Grundkursbibliothek für [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] \- Apps mit [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] veranschaulicht.  
+## <a name="download-the-wrl-project-template"></a>Herunterladen der Projektvorlage für WRL  
+ Visual Studio stellt keine Vorlage für Windows Runtime C++ Template Library-Projekte bereit. Hier wird erklärt, wie eine Projektvorlage herunterladen, die eine einfache Klassenbibliothek für universelle Windows-Plattform-apps mit Windows Runtime C++ Template Library erstellt.  
   
-#### Um die WRL\-Projektvorlage herunterladen  
+#### <a name="to-download-the-wrl-project-template"></a>Die Projektvorlage für WRL herunterladen  
   
-1.  Wählen Sie auf der Menüleiste **Datei**, **Neues Projekt** aus.  
+1.  Wählen Sie in der Menüleiste **Datei**, **neues Projekt**.  
   
-2.  Im linken Bereich des Dialogfelds **Neues Projekt**, wählen Sie **Online** und wählen Sie dann **Vorlagen** aus.  
+2.  Im linken Bereich des der **neues Projekt** wählen Sie im Dialogfeld **Online**, und wählen Sie dann **Vorlagen**.  
   
-3.  Im Feld **Onlinevorlagen durchsuchen** in der rechten oberen Ecke, geben Sie `WRL-Klassenbibliothek` ein.  Wenn die Vorlage in den Suchergebnissen angezeigt wird, wählen Sie die Schaltfläche **OK** aus.  
+3.  In der **Onlinevorlagen suchen** Feld in der oberen rechten Ecke Typ `WRL Class Library`. Wenn die Vorlage in den Suchergebnissen angezeigt wird, wählen Sie die **OK** Schaltfläche.  
   
-4.  Im Dialogfeld **Herunterladen und installieren** wenn Sie den Lizenzbedingungen zustimmen, wählen Sie die Schaltfläche **Installieren** aus.  
+4.  In der **herunterladen und installieren** Begriffe (Dialogfeld), wenn Sie die Lizenzierung zustimmen, wählen Sie die **installieren** Schaltfläche.  
   
-5.  Nachdem die Vorlage installiert, erstellen Sie ein Projekt, indem Sie **Datei** auswählen, **Neues Projekt**, und wählen die Vorlage. `WRLClassLibrary` Das Projekt erstellt eine DLL.  
+5.  Nachdem die Vorlage installiert wurde, ein Projekt erstellen, indem Sie auswählen **Datei**, **neues Projekt**, und wählen Sie dann die `WRLClassLibrary` Vorlage. Das Projekt erstellt eine DLL.  
   
-## Beispiele, die die Bereitstellung verwenden  
- Lesen Sie unter [Exemplarische Vorgehensweise: Erstellen einer Basiskomponente für Windows\-Runtime](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md) finden Sie ein Beispiel, das diese Vorlage verwendet, um eine [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] Komponente zu erstellen.  
+## <a name="examples-that-use-the-project-template"></a>Beispiele, in denen die Projektvorlage  
+ Lesen [Exemplarische Vorgehensweise: Erstellen einer grundlegenden Komponente für die Windows-Runtime](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md) für ein Beispiel, das diese Vorlage zum Erstellen einer Windows-Runtime-Komponente verwendet.  
   
-## Was die Projektvorlage stellt  
- Die Projektvorlage stellt bereit:  
+## <a name="what-the-project-template-provides"></a>Was die Projektvorlage enthält  
+ Die Projektvorlage stellt Folgendes bereit:  
   
--   eine IDL\-Datei, die die MIDL\-Attribute für eine einfache Schnittstelle die Klassenimplementierung deklariert.  Im Folgenden ein Beispiel:  
+-   eine IDL-Datei, die die MIDL-Attribute für eine Basisschnittstelle seine Implementierung der Klasse deklariert. Im Folgenden ein Beispiel:  
   
-     [!CODE [wrl-project-template#1](../CodeSnippet/VS_Snippets_Misc/wrl-project-template#1)]  
+     [!code-cpp[wrl-project-template#1](../windows/codesnippet/CPP/wrl-class-library-project-template_1.idl)]  
   
--   einer CPP\-Datei, die die Klassenimplementierung definiert.  Im Folgenden ein Beispiel:  
+-   eine CPP-Datei, die die Implementierung der Klasse definiert. Im Folgenden ein Beispiel:  
   
-     [!CODE [wrl-project-template#2](../CodeSnippet/VS_Snippets_Misc/wrl-project-template#2)]  
+     [!code-cpp[wrl-project-template#2](../windows/codesnippet/CPP/wrl-class-library-project-template_2.cpp)]  
   
-     Die [RuntimeClass](../windows/runtimeclass-class.md) Basisklassenhilfen verwalten den globalen Verweis aller Objekte im Modul und deklarieren die Methoden der Schnittstellen [IUnknown](assetId:///33f1d79a-33fc-4ce5-a372-e08bda378332) und [IInspectable](assetId:///0657e51f-d4c0-46c6-927d-b01e54b6846c).  Das [InspectableClass](../windows/inspectableclass-macro.md)\-Makro implementiert `IUnknown` und `IInspectable`.  Das Makro [ActivatableClass](../windows/activatableclass-macros.md) stellt eine Klassenfactory erstellt, die Instanzen der Klasse erstellt.  
+     Die [RuntimeClass](../windows/runtimeclass-class.md) Basisklasse hilft bei der Verwaltung des globalen Verweis aller Objekte im Modul und deklariert die Methoden der [IUnknown](http://msdn.microsoft.com/en-us/33f1d79a-33fc-4ce5-a372-e08bda378332) und ["iinspectable"](http://msdn.microsoft.com/en-us/0657e51f-d4c0-46c6-927d-b01e54b6846c) Schnittstellen. Die [InspectableClass](../windows/inspectableclass-macro.md) -Makro implementiert `IUnknown` und `IInspectable`. Die [ActivatableClass](../windows/activatableclass-macros.md) Makro erstellt eine Klassenfactory, die Instanzen der Klasse erstellt.  
   
--   eine Datei mit dem Namen module.cpp, das die Bibliotheksexporte `DllMain`, `DllCanUnloadNow`, `DllGetActivationFactory` und `DllGetClassObject` definiert.  
+-   exportiert eine Datei namens module.cpp, die die Bibliothek definiert `DllMain`, `DllCanUnloadNow`, `DllGetActivationFactory`, und `DllGetClassObject`.  
   
-## Siehe auch  
- [Windows Runtime C\+\+ Template Library \(WRL\)](../windows/windows-runtime-cpp-template-library-wrl.md)
+## <a name="see-also"></a>Siehe auch  
+ [C++-Vorlagenbibliothek für Windows-Runtime (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)
