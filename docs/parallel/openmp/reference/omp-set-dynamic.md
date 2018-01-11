@@ -1,32 +1,31 @@
 ---
-title: "omp_set_dynamic | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_set_dynamic"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_set_dynamic OpenMP function"
+title: Omp_set_dynamic | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_set_dynamic
+dev_langs: C++
+helpviewer_keywords: omp_set_dynamic OpenMP function
 ms.assetid: 3845faf2-a0ca-45a5-ae70-2a7a6164f1e8
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 13cb098170e46b8459821156aeb8be369bbc1ffa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# omp_set_dynamic
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Gibt an, dass die Anzahl der Threads, die im Folgenden parallelen Bereich verfügbar sind, von der Laufzeit angepasst werden kann.  
+# <a name="ompsetdynamic"></a>omp_set_dynamic
+Gibt an, dass die Anzahl der Threads, die in nachfolgenden parallelen Bereich zur Verfügung stehen, von der Laufzeit angepasst werden kann.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void omp_set_dynamic(  
@@ -34,22 +33,22 @@ void omp_set_dynamic(
 );  
 ```  
   
-## Hinweise  
- Hierbei ist:  
+## <a name="remarks"></a>Hinweise  
+ wobei  
   
  `val`  
- Ein Wert, der angibt, ob die Anzahl der Threads, die im Folgenden parallelen Bereich verfügbar sind, von der Laufzeit angepasst werden kann.  Wenn ungleich 0 \(null\), die Common Language Runtime die Anzahl der Threads angepasst werden kann, wenn nicht null, die Laufzeit dynamisch die Anzahl der Threads an.  
+ Ein Wert, der angibt, ob die Anzahl der Threads, die in nachfolgenden parallelen Bereich verfügbar, die von der Laufzeit angepasst werden kann.  Wert ungleich NULL, die Common Language Runtime die Anzahl der Threads, wenn der Wert 0 anpassen kann, werden die Common Language Runtime die Anzahl der Threads nicht dynamisch angepasst.  
   
-## Hinweise  
- Die Anzahl von Threads überschreitet keinesfalls den Wert, der von [omp\_set\_num\_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) oder durch [OMP\_NUM\_THREADS](../../../parallel/openmp/reference/omp-num-threads.md)festgelegt ist.  
+## <a name="remarks"></a>Hinweise  
+ Die Anzahl von Threads wird von festgesetzten Wert nie übersteigen [Omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) oder [OMP_NUM_THREADS](../../../parallel/openmp/reference/omp-num-threads.md).  
   
- Verwenden Sie [omp\_get\_dynamic](../../../parallel/openmp/reference/omp-get-dynamic.md) , um die aktuelle Einstellung von `omp_set_dynamic`anzuzeigen.  
+ Verwendung [Omp_get_dynamic](../../../parallel/openmp/reference/omp-get-dynamic.md) die aktuelle Einstellung der anzuzeigenden `omp_set_dynamic`.  
   
- Die Einstellung für `omp_set_dynamic` überschreibt die Einstellung der [OMP\_DYNAMIC](../../../parallel/openmp/reference/omp-dynamic.md) Umgebungsvariablen.  
+ Die Einstellung für `omp_set_dynamic` überschreibt die Einstellung von der [OMP_DYNAMIC](../../../parallel/openmp/reference/omp-dynamic.md) -Umgebungsvariablen angegeben.  
   
- Weitere Informationen finden Sie unter [3.1.7 omp\_set\_dynamic Function](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md).  
+ Weitere Informationen finden Sie unter [3.1.7 Omp_set_dynamic-Funktion](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // omp_set_dynamic.cpp  
@@ -70,7 +69,10 @@ int main()
 }  
 ```  
   
-  **1**  
-**1**   
-## Siehe auch  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+```Output  
+1  
+1  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Funktionen](../../../parallel/openmp/reference/openmp-functions.md)

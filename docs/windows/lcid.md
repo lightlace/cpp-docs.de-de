@@ -1,32 +1,33 @@
 ---
-title: "lcid | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.lcid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LCID attribute"
+title: LCID | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.lcid
+dev_langs: C++
+helpviewer_keywords: LCID attribute
 ms.assetid: 7f248c69-ee1c-42c3-9411-39cf27c9f43d
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 36ccb085c2f6128012d446f6be15dff94c718e35
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# lcid
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ermöglicht es Ihnen, einen Gebietsschemabezeichner an eine Funktion übergeben.  
+# <a name="lcid"></a>lcid
+Sie können einen Gebietsschemabezeichner an eine Funktion übergeben.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -34,10 +35,10 @@ Ermöglicht es Ihnen, einen Gebietsschemabezeichner an eine Funktion übergeben.
   
 ```  
   
-## Hinweise  
- Das Attribut **lcid** C\+\+ implementiert die Funktionalität des [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) MIDL\-Attributs.  Wenn Sie das Gebietsschema für einen Library\-Block implementieren möchten, verwenden Sie den Parameter **lcid\=**`lcid` zum [Modul](../windows/module-cpp.md)\-Attribut.  
+## <a name="remarks"></a>Hinweise  
+ Die **Lcid** C++-Attribut implementiert die Funktionalität der [Lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) MIDL-Attribut. Verwenden, wenn Sie Gebietsschema für ein bibliotheksblock implementieren möchten, die **Lcid =** `lcid` Parameter an die [Modul](../windows/module-cpp.md) Attribut.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cpp_attr_ref_lcid.cpp  
@@ -52,20 +53,19 @@ __interface IStatic {
 };  
 ```  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
-|**Betrifft**|Schnittstellen Parametern|  
+|**Betrifft**|Schnittstellenparameter|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Keiner|  
+|**Ungültige Attribute**|Keiner|  
   
- Weitere Informationen finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [IDL-Attribute](../windows/idl-attributes.md)   
+ [Parameterattribute](../windows/parameter-attributes.md)   

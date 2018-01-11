@@ -1,44 +1,44 @@
 ---
-title: "Hinzuf&#252;gen einer generischen C++-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.classes.adding.generic"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Generische Klassen"
-  - "Generische Klassen, Hinzufügen"
-  - "Visual C++, Klassen"
+title: "Hinzufügen einer generischen C++-Klasse | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.codewiz.classes.adding.generic
+dev_langs: C++
+helpviewer_keywords:
+- Visual C++, classes
+- generic classes, adding
+- generic classes
 ms.assetid: e95a5a14-dbed-4edc-8551-344fe48613cb
-caps.latest.revision: 9
-caps.handback.revision: "9"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fe5e20d1cf5664d7d2a46ef6afd82f610ebca8ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Hinzuf&#252;gen einer generischen C++-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Sie können eine generische C\+\+\-Klasse in der **Klassenansicht** hinzufügen.  Eine generische C\+\+\-Klasse ist eine Klasse, die Sie selbst definieren oder die von einer Klasse, die Sie definieren, abgeleitet wird.  
+# <a name="adding-a-generic-c-class"></a>Hinzufügen einer generischen C++-Klasse
+Sie können einen generischen C++-Klassen hinzufügen, indem Sie mithilfe von **Klassenansicht**. Eine generische C++-Klasse ist eine Klasse, die Sie definieren, stammt aus einer Klasse, die Sie definieren.  
   
-### So fügen Sie einem Projekt eine generische C\+\+\-Klasse hinzu  
+### <a name="to-add-a-generic-c-class-to-a-project"></a>So fügen Sie eine generische C++-Klasse zu einem Projekt hinzu  
   
-1.  Klicken Sie in **Klassenansicht** mit der rechten Maustaste auf das Projekt, dem Sie die neue Klasse hinzufügen möchten, klicken Sie auf **Hinzufügen** und anschließend auf **Klasse**.  
+1.  In **Klassenansicht**, mit der rechten Maustaste des Projekts, dem Sie die neue Klasse hinzufügen, klicken Sie auf **hinzufügen**, und klicken Sie dann auf **Klasse**.  
   
-2.  Klicken Sie im Dialogfeld [Klasse hinzufügen](../ide/add-class-dialog-box.md) im Vorlagenbereich auf **C\+\+\-Klasse**.  Klicken Sie auf **Hinzufügen**, um den [generischen C\+\+\-Klassen\-Assistenten](../ide/generic-cpp-class-wizard.md) aufzurufen.  
+2.  In der [Klasse hinzufügen](../ide/add-class-dialog-box.md) (Dialogfeld), klicken Sie im Bereich "Vorlagen" klicken Sie auf **C++-Klasse**. Klicken Sie auf **hinzufügen** zum Anzeigen der [generische C++-Klassen-Assistent](../ide/generic-cpp-class-wizard.md).  
   
-3.  Geben Sie im Assistenten einen Klassennamen an, und definieren Sie dann die Einstellungen bzw. übernehmen Sie die Standardeinstellungen.  
+3.  Geben Sie im Assistenten einen Klassennamen ein, und definieren Sie Einstellungen oder übernehmen Sie die Standardwerte.  
   
-4.  Klicken Sie auf **Fertig stellen**, um den Assistenten zu schließen und die neue generische C\+\+\-Klasse im Projekt anzuzeigen.  
+4.  Um den Assistenten schließen und die neue generische C++-Klasse im Projekt anzuzeigen, klicken Sie auf **Fertig stellen**.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Hinzufügen einer Klasse](../ide/adding-a-class-visual-cpp.md)   
- [MFC\-Klasse](../mfc/reference/adding-an-mfc-class.md)   
- [ATL Simple Object](../atl/reference/adding-an-atl-simple-object.md)
+ [MFC-Klasse](../mfc/reference/adding-an-mfc-class.md)   
+ [Einfaches ATL-Objekt](../atl/reference/adding-an-atl-simple-object.md)

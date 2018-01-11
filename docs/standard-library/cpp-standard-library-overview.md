@@ -18,11 +18,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9c676f5bb8b667bdc3ef26f823737df5c4f97217
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2285c2237001aa02c77b17241e6de62804d6b700
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-standard-library-overview"></a>Übersicht über die C++-Standardbibliothek
 Alle C++-Bibliotheken werden in Standardheadern deklariert oder definiert. Diese Implementierung beinhaltet zwei zusätzliche Header, `<hash_map>` und `<hash_set>`, die für C++ Standard nicht erforderlich sind. Eine vollständige Liste der Header, die diese Implementierung unterstützt, finden Sie unter [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md).  

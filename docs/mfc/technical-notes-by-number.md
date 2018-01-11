@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c355a0ec75912ab9ef8b20cc980bc920de96b37b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 54e0da32736f00a8ba1f01e6cf3ce2d0f38c8ee9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="technical-notes-by-number"></a>Technische Hinweise – nach Nummern geordnet
 Die technische Hinweise unten sind numerisch, mit der zuletzt geschriebenen Technische Hinweis zuerst aufgeführt. Eine Auflistung nach Kategorie, finden Sie [Technische Hinweise – nach Kategorie](../mfc/technical-notes-by-category.md).  

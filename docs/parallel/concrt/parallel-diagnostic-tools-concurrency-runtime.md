@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2e85ee1a0c250cf67f2a379ccad8c11a99b96f76
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1a7c6aa769faaacd128bb51a422227230fa4a851
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>Diagnosetools für die parallele Ausführung (Concurrency Runtime)
 [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] bietet umfangreiche Unterstützung für das Debuggen und die Profilerstellung in Multithreadanwendungen.  
@@ -32,13 +33,13 @@ ms.lasthandoff: 10/24/2017
 ## <a name="event-tracing"></a>Ereignisablaufverfolgung  
  Die Concurrency Runtime verwendet [Event Tracing for Windows](http://msdn.microsoft.com/library/windows/desktop/bb968803) (ETW), um Instrumentation-Tools, z. B. Profiler zu benachrichtigen, wenn verschiedene Ereignisse auftreten. Dazu gehören ein Planer aktiviert oder deaktiviert wird, wenn ein Kontext beginnt, beendet, blockiert, Blockierung aufgehoben wird oder ergibt und bei ein paralleler Algorithmus beginnt oder endet.  
   
- Tools, z. B. die [Concurrency Visualizer](/visualstudio/profiling/concurrency-visualizer) Nutzen dieser Funktionalität; aus diesem Grund, Sie haben für gewöhnlich keine direkt mit diesen Ereignissen arbeiten. Diese Ereignisse sind jedoch hilfreich, wenn Sie einen benutzerdefinierten Profiler entwickeln oder aber wenn Sie z. B. Ereignisablaufverfolgungstools verwenden [Xperf](http://go.microsoft.com/fwlink/linkid=160628).  
+ Tools, z. B. die [Concurrency Visualizer](/visualstudio/profiling/concurrency-visualizer) Nutzen dieser Funktionalität; aus diesem Grund, Sie haben für gewöhnlich keine direkt mit diesen Ereignissen arbeiten. Diese Ereignisse sind jedoch hilfreich, wenn Sie einen benutzerdefinierten Profiler entwickeln oder aber wenn Sie z. B. Ereignisablaufverfolgungstools verwenden [Xperf](http://go.microsoft.com/fwlink/p/?linkid=160628).  
   
  Die Concurrency Runtime löst diese Ereignisse nur, wenn Ablaufverfolgung aktiviert ist. Rufen Sie die [concurrency::EnableTracing](reference/concurrency-namespace-functions.md#enabletracing) Funktion, um ereignisablaufverfolgung zu ermöglichen und die [concurrency::DisableTracing](reference/concurrency-namespace-functions.md#disabletracing) Funktion zum Deaktivieren der Ablaufverfolgung.  
   
  Die folgende Tabelle beschreibt die Ereignisse, die die Laufzeit löst aus, wenn die ereignisablaufverfolgung aktiviert ist:  
   
-|Ereignis|Beschreibung|Wert|  
+|event|Beschreibung|Wert|  
 |-----------|-----------------|-----------|  
 
 |[Concurrency::ConcRT_ProviderGuid](reference/concurrency-namespace-constants1.md#concrt_providerguid)| Der ETW-Anbieter-Bezeichner für die Concurrency Runtime. |`f7b697a3-4db5-4d3b-be71-c4d284e6592f`|  

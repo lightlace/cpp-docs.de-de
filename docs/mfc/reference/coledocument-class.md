@@ -63,11 +63,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 976f6845deb93dc8bf6a2e008de0d68fb62bfbb0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 147a3bca2f4ad91aeaa2c74ac7a356d9404943fb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coledocument-class"></a>COleDocument-Klasse
 Die Basisklasse für OLE-Dokumente, die visuelle Bearbeitung unterstützen.  
@@ -78,7 +79,7 @@ Die Basisklasse für OLE-Dokumente, die visuelle Bearbeitung unterstützen.
 class COleDocument : public CDocument  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   

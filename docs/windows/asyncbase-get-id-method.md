@@ -1,32 +1,33 @@
 ---
-title: "AsyncBase::get_Id-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "async/Microsoft::WRL::AsyncBase::get_Id"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "get_Id-Methode"
+title: 'Asyncbase:: Get_id-Methode | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: async/Microsoft::WRL::AsyncBase::get_Id
+dev_langs: C++
+helpviewer_keywords: get_Id method
 ms.assetid: 591d8366-ea76-4deb-9278-9d3bc394a42b
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3655a82c3c7fee8ed9fe3361231f94a39f65a7d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# AsyncBase::get_Id-Methode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="asyncbasegetid-method"></a>AsyncBase::get_Id-Methode
 Ruft das Handle des asynchronen Vorgangs ab.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 STDMETHOD(  
@@ -34,20 +35,20 @@ STDMETHOD(
 )(unsigned int *id) override;  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `id`  
- Der Speicherort, an dem das Handle gespeichert werden soll.  
+ Der Speicherort, an dem das Handle gespeichert werden.  
   
-## Rückgabewert  
- S\_OK, wenn erfolgreich; andernfalls E\_ILLEGAL\_METHOD\_CALL.  
+## <a name="return-value"></a>Rückgabewert  
+ S_OK, wenn erfolgreich; andernfalls E_ILLEGAL_METHOD_CALL.  
   
-## Hinweise  
- Diese Methode implementiert IAsyncInfo::get\_Id.  
+## <a name="remarks"></a>Hinweise  
+ Diese Methode implementiert IAsyncInfo::get_Id.  
   
-## Anforderungen  
- **Header:**  async.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** async.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [AsyncBase\-Klasse](../windows/asyncbase-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [AsyncBase-Klasse](../windows/asyncbase-class.md)

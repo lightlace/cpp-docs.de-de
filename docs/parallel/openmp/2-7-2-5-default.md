@@ -1,50 +1,51 @@
 ---
-title: "2.7.2.5 default"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.7.2.5 default | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: c856df07-705c-4ad3-9105-a268dd33e939
-caps.latest.revision: 5
-caps.handback.revision: "5"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1ee328be7f9f0c4876738f8179c26e700c57702c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# 2.7.2.5 default
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Die **Standardwert**\-Klausel ermöglicht es dem Benutzer, die Datenfreigabe Attribute von Variablen zu beeinflussen.  Die Syntax der **Standardwert**\-Klausel lautet wie folgt:  
+# <a name="2725-default"></a>2.7.2.5 default
+Die **Standard** -Klausel ermöglicht den Benutzer, die mit Datenfreigabe Attribute der Variablen beeinflussen. Die Syntax der **Standard** -Klausel ist wie folgt:  
   
 ```  
 default(shared | none)  
 ```  
   
- **default\(shared\)** für jede anzugeben, dass derzeit sichtbaren Variablen in einer **Shared**\-Klausel explizit aufführen, es sei denn, es **threadprivate** oder **Betrug**qualifiziertes`t`\- ist.  In Ermangelung einer expliziten **Standardwert**\-Klausel ist das Standardverhalten das ebenso aus, als ob **default\(shared\)** angegeben wurden.  
+ Angeben **default(shared)** entspricht explizit auflisten jedes aktuell sichtbare Variablen in einer **freigegebenen** -Klausel, es sei denn, es ist **Threadprivate** oder **Nachteile**`t`-qualifizierten. Bei Abwesenheit einer expliziten **Standard** -Klausel, um das Standardverhalten ist identisch If **default(shared)** angegeben wurden.  
   
- Das Angeben von **default\(none\)** erfordert, dass mindestens eines der folgenden Elemente für jeden Verweis auf eine Variable im lexikalischen Wertebereich des parallelen Konstrukt erfüllt werden muss:  
+ Angeben von **default(none)** erfordert, dass mindestens eines der folgenden für jeden Verweis auf eine Variable in dem lexikalischen Wertebereich das parallele Konstrukt "true":  
   
--   Die Variable wird explizit in einer Datenfreigabe eines Konstrukts clause Attribut enthalten, das den Verweis enthält.  
+-   Die Variable wird explizit in einem Attribut Datenfreigabeklausel eines Konstrukts aufgeführt, die den Verweis enthält.  
   
--   Die Variable wird innerhalb des parallelen Konstrukt deklariert.  
+-   Die Variable ist in das parallele Konstrukt deklariert.  
   
--   Die Variable ist **threadprivate**.  
+-   Die Variable ist **Threadprivate**.  
   
--   Die Variable wurde **const**\- qualifizierten Typ.  
+-   Die Variable wurde eine **const**-Typ qualifiziert.  
   
--   Die Variable ist die Schleifensteuerungsvariable für eine **nach** \- Schleife unmittelbar folgt **nach** oder **für Ähnlichkeit**\-Direktive und der variablen Verweis wird innerhalb der Schleife.  
+-   Die Variable ist die Loop-Steuerelementvariable für eine **für** Schleife, die unmittelbar folgt eine **für** oder **für parallele** Richtlinie und der Variablenverweis angezeigt wird, innerhalb der Schleife .  
   
- Eine Variable auf **firstprivate**angibt, führt **lastprivate**oder **Verringerung**\-Direktive eingeschlossenen Klausel einen impliziten Verweis auf die Variable im einschließenden Kontext.  Solche impliziten auch Verweise sind abhängig von den Anforderungen, die oben aufgelistet sind.  
+ Gibt eine Variable auf einen **Firstprivate**, **Lastprivate**, oder **Verringerung** -Klausel einer eingeschlossenen-Direktive führt dazu, dass es sich bei einen impliziten Verweis auf die Variable in der einschließenden Kontext. Solche impliziten verweisen unterliegen ebenfalls den oben aufgeführten Anforderungen.  
   
- Nur eine einzige **Standardwert**\-Klausel wird möglicherweise auf **Ähnlichkeit**\-Direktive angegeben.  
+ Nur ein einzelner **Standard** -Klausel angegeben werden kann, auf eine **parallele** Richtlinie.  
   
- Die standardmäßige Datenfreigabe Attribut für eine Variable überschrieben werden, indem **private**, **firstprivate**, **lastprivate**, **Verringerung**und **Shared**\-Klauseln verwendet, z. B. durch folgendes Beispiel\):  
+ Eine Variable Standard-Attribut mit Datenfreigabe werden, mithilfe überschrieben kann der **private**, **Firstprivate**, **Lastprivate**, **Verringerung**, und **freigegebenen** Klauseln, wie im folgenden Beispiel gezeigt:  
   
 ```  
 #pragma  omp  parallel  for  default(shared)  firstprivate(i)\  

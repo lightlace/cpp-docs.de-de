@@ -1,35 +1,34 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4488 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4488"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4488"
+title: Compilerwarnung (Stufe 1) C4488 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4488
+dev_langs: C++
+helpviewer_keywords: C4488
 ms.assetid: 55625e46-ddb5-4c7c-99c7-cd4aa9f879bd
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5ad82e9dc85d818aacd78aaeb287777bd91927a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 1) C4488
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'Funktion': Das 'Schlüsselwort'\-Schlüsselwort muss die 'Schnittstelle'\-Schnittstellenmethode implementieren  
+# <a name="compiler-warning-level-1-c4488"></a>Compilerwarnung (Stufe 1) C4488
+'Funktion': ' Schlüsselwort ' implementiert die Schnittstellenmethode 'Schnittstellenmethode' erfordert  
   
- Eine Klasse muss alle Member einer Schnittstelle implementieren, von der sie erbt.  Ein implementierter Member muss öffentlich zugreifbar sein und als virtuell gekennzeichnet werden.  
+ Eine Klasse muss alle Member einer Schnittstelle implementieren, von dem er direkt erbt. Ein implementierter Member muss öffentliche zugriffsmöglichkeiten aufweisen und virtuellen markiert werden muss.  
   
-## Beispiel  
- C4488 kann auftreten, wenn ein implementierter Member nicht öffentlich ist.  Im folgenden Beispiel wird C4488 generiert.  
+## <a name="example"></a>Beispiel  
+ C4488 kann auftreten, wenn ein implementierter Member nicht öffentlich ist. Im folgenden Beispiel wird C4488 generiert.  
   
 ```  
 // C4488.cpp  
@@ -48,8 +47,8 @@ public:
 };  
 ```  
   
-## Beispiel  
- C4488 kann auftreten, wenn ein implementierter Member nicht als virtuell gekennzeichnet ist.  Im folgenden Beispiel wird C4488 generiert.  
+## <a name="example"></a>Beispiel  
+ C4488 kann auftreten, wenn ein implementierter Member nicht virtuelle gekennzeichnet ist. Im folgenden Beispiel wird C4488 generiert.  
   
 ```  
 // C4488_b.cpp  

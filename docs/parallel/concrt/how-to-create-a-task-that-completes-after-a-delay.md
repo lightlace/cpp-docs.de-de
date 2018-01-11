@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a958f6436f8d875436ac891e3320710e8abd7baa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f9547bb5e586c20a22ce79d1227fa5f15b3ea305
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-a-task-that-completes-after-a-delay"></a>Gewusst wie: Erstellen einer Aufgabe, die nach einer Verzögerung abgeschlossen wird
 Dieses Beispiel zeigt, wie die [Concurrency:: Task](../../parallel/concrt/reference/task-class.md), [cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md), [cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md), [ Concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md), [Concurrency:: Timer](../../parallel/concrt/reference/timer-class.md), und [Call](../../parallel/concrt/reference/call-class.md) Klassen, die eine Aufgabe zu erstellen, die nach einer Verzögerung abgeschlossen wird. Sie können diese Methode verwenden, Schleifen zu erstellen, die gelegentlich Daten abrufen, Timeouts einführen, die Verarbeitung von Benutzereingaben für einen zuvor festgelegten Zeitraum verzögern und so weiter.  

@@ -1,34 +1,34 @@
 ---
-title: "2.6.6 ordered Construct"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.6.6 ordered-Konstrukt | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 5b3c1ba5-cfb8-4b05-865b-f446ae1c9f7c
-caps.latest.revision: 7
-caps.handback.revision: "7"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e09a9d756cd068df9345034e26a4f152d3ac19fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# 2.6.6 ordered Construct
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Der strukturierte Block, welche **geordnet**\-Direktive erfolgreich ist, werden in der Reihenfolge ausgeführt, in der Iterationen in einer sequenziellen Schleife ausgeführt würden.  Die Syntax der **geordnet**\-Direktive sieht wie folgt aus:  
+# <a name="266-ordered-construct"></a>2.6.6 ordered-Konstrukt
+Die folgenden strukturierten Block ein **sortiert** Richtlinie in der Reihenfolge, in dem Iterationen würde, in eine sequenzielle Schleife ausgeführt werden, ausgeführt wird. Die Syntax der **sortiert** Richtlinie lautet wie folgt:  
   
 ```  
-#pragma omp ordered new-line  
-   structured-block  
+#pragma omp ordered new-linestructured-block  
 ```  
   
- **geordnet**\-Direktive muss innerhalb des dynamischen **nach** eines Wertebereichs oder **für Ähnlichkeit** Konstrukts sein.  Die **nach** oder **für Ähnlichkeit**\-Direktive, in denen das **geordnet** Konstrukt bindet, müssen eine **geordnet**\-Klausel verfügen, die angegeben wird, wie in [2.4.1 Abschnitt](../../parallel/openmp/2-4-1-for-construct.md) auf Seite 11 beschrieben.  Bei der Ausführung eines **nach** oder **für Ähnlichkeit** \- Konstrukt mit einer **geordnet**\-Klausel werden **geordnet** Konstrukte ausschließlich in der Reihenfolge ausgeführt, in der sie in einer sequenziellen Ausführung der Schleife ausgeführt würden.  
+ Ein **sortiert** Richtlinie muss innerhalb der dynamischen Wertebereich einer **für** oder **für parallele** erstellen. Die **für** oder **für parallele** zu dem die Richtlinie die **sortiert** Konstrukt bindet benötigen eine **sortiert** -Klausel angegeben, wie beschrieben in [Abschnitt 2.4.1](../../parallel/openmp/2-4-1-for-construct.md) auf Seite "11". Bei der Ausführung eine **für** oder **für parallele** erstellen mit eine **sortiert** -Klausel, **sortiert** Konstrukte erfolgen streng in der die Reihenfolge, in dem sie eine sequenzielle Ausführung der Schleife ausgeführt werden würde.  
   
- Einschränkungen für **geordnet**\-Direktive lauten wie folgt:  
+ Einschränkungen für die **sortiert** Richtlinie lauten wie folgt:  
   
--   Eine Iteration einer Schleife mit einem **nach** Konstrukt darf die gleichen Rang Direktive nicht mehrmals ausführen, und sie dürfen nicht mehr als eine **geordnet**\-Direktive ausführen.
+-   Eine Iteration einer Schleife mit einer **für** Konstrukt muss nicht ausgeführt werden die gleiche geordnete-Direktive mehr als einmal und müssen Ausführung nicht mehr als eine **sortiert** Richtlinie.

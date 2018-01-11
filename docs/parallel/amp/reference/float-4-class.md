@@ -1,11 +1,10 @@
 ---
-title: float_4-Klasse | Microsoft-Dokumentation
+title: float_4-Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -274,33 +273,18 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_4::get_x
 - amp_short_vectors/Concurrency::graphics::float_4::get_z
 - amp_short_vectors/Concurrency::graphics::float_4::set_xyzw
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 10f92170-e58c-4afc-8198-fc5778d56038
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: cfaf6e784779557fcdad630a6e6b339e5ea65614
-ms.contentlocale: de-de
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 049099c5a6b2a08d1482f4074b8b316ccb14562d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="float4-class"></a>float_4-Klasse
 Stellt einen kurzen Vektor aus vier Gleitkommazahlen dar.  
@@ -311,7 +295,7 @@ Stellt einen kurzen Vektor aus vier Gleitkommazahlen dar.
 class float_4;  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-typedefs"></a>Öffentliche Typedefs  
   
@@ -473,7 +457,7 @@ class float_4;
 |float_4-||  
 |float_4--||  
 |float_4 * =||  
-|float_4 / =||  
+|float_4 Operator / =||  
 |float_4::Operator++||  
 |float_4:: Operator +=||  
 |float_4 =||  
@@ -481,7 +465,7 @@ class float_4;
   
 ### <a name="public-constants"></a>Öffentliche Konstanten  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |[Size-Konstante](#float_4__size)||  
   
@@ -626,7 +610,7 @@ class float_4;
   
  **Namespace:** Concurrency:: Graphics  
   
-##  <a name="ctor"></a>float_4-Objekt 
+##  <a name="ctor"></a>float_4 
 
  Standardkonstruktor, initialisiert alle Elemente mit 0.  
   
@@ -680,16 +664,16 @@ explicit inline float_4(
   
 ### <a name="parameters"></a>Parameter  
  `_V0`  
- Der Wert 0-Element zu initialisieren.  
+ Der Wert 0-Element initialisiert werden.  
   
  `_V1`  
  Der Wert 1 Element initialisiert werden.  
   
  `_V2`  
- Der Wert 2-Element zu initialisieren.  
+ Der Wert 2-Element initialisiert werden.  
   
  `_V3`  
- Der Wert 3-Element zu initialisieren.  
+ Der Wert 3-Element initialisiert werden.  
   
  `_V`  
  Der Wert für die Initialisierung.  
@@ -705,4 +689,3 @@ static const int size = 4;
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)
-

@@ -413,11 +413,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 11ece1ca08fc7f8b02c3f32284a986abc3e8e361
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9e8424638311cd6fdbe220bfd98bb27409ee670e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdc-class"></a>CDC-Klasse
 Definiert eine Klasse von Gerätekontextobjekten.  
@@ -428,7 +429,7 @@ Definiert eine Klasse von Gerätekontextobjekten.
 class CDC : public CObject  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -824,7 +825,7 @@ BOOL AngleArc(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *x*  
+ *w*  
  Gibt die logische X-Koordinate für den Mittelpunkt des Kreises.  
   
  *y*  
@@ -1029,7 +1030,7 @@ BOOL BitBlt(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *x*  
+ *w*  
  Gibt die logische X-Koordinate der oberen linken Ecke des Zielrechtecks an.  
   
  *y*  
@@ -1360,7 +1361,7 @@ void Draw3dRect(
  `clrBottomRight`  
  Gibt die Farbe des unteren und rechten Seite des dreidimensionalen Rechtecks an.  
   
- *x*  
+ *w*  
  Gibt die logische X-Koordinate der oberen linken Ecke des Rechtecks dreidimensionalen an.  
   
  *y*  
@@ -1576,7 +1577,7 @@ BOOL DrawIcon(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *x*  
+ *w*  
  Gibt die logische X-Koordinate der oberen linken Ecke des Symbols an.  
   
  *y*  
@@ -2107,7 +2108,7 @@ BOOL ExtFloodFill(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *x*  
+ *w*  
  Gibt die logische X-Koordinate des Punkts, an dem Füllen beginnt.  
   
  *y*  
@@ -2159,7 +2160,7 @@ BOOL ExtTextOut(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *x*  
+ *w*  
  Gibt die logische X-Koordinate der Zeichenzelle für das erste Zeichen in der angegebenen Zeichenfolge an.  
   
  *y*  
@@ -2281,7 +2282,7 @@ void FillSolidRect(
   
  `clr`Gibt die Farbe an, die zum Ausfüllen des Rechtecks verwendet werden.  
   
- *x*  
+ *w*  
  Gibt die logische X-Koordinate der oberen linken Ecke des Rechtecks an.  
   
  *y*  
@@ -2320,7 +2321,7 @@ BOOL FloodFill(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *x*  
+ *w*  
  Gibt die logische X-Koordinate des Punkts, an dem Füllen beginnt.  
   
  *y*  
@@ -3266,7 +3267,7 @@ COLORREF GetPixel(POINT point) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *x*  
+ *w*  
  Gibt die logische X-Koordinate des Punkts, der untersucht werden.  
   
  *y*  
@@ -3729,7 +3730,7 @@ virtual BOOL GrayString(
  `nCount`  
  Gibt die Anzahl von Zeichen in ausgegeben werden. Wenn dieser Parameter 0 ist, `GrayString` berechnet die Länge der Zeichenfolge (vorausgesetzt, dass `lpData` ist ein Zeiger auf die Zeichenfolge). Wenn `nCount` ist-1 und die Funktion verweist, zu `lpfnOutput` 0 zurückgibt, das Bild ist angezeigt, jedoch nicht abgeblendet.  
   
- *x*  
+ *w*  
  Gibt die logische X-Koordinate der Startposition des Rechtecks, das die Zeichenfolge enthält.  
   
  *y*  
@@ -3888,7 +3889,7 @@ BOOL LineTo(POINT point);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *x*  
+ *w*  
  Gibt die logische X-Koordinate des Endpunkts für die Zeile an.  
   
  *y*  
@@ -3991,7 +3992,7 @@ BOOL MaskBlt(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *x*  
+ *w*  
  Gibt die logische X-Koordinate der oberen linken Ecke des Zielrechtecks an.  
   
  *y*  
@@ -4072,7 +4073,7 @@ CPoint MoveTo(POINT point);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *x*  
+ *w*  
  Gibt die logische X-Koordinate der neuen Position.  
   
  *y*  
@@ -4099,7 +4100,7 @@ int OffsetClipRgn(SIZE size);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *x*  
+ *w*  
  Gibt die Anzahl der logischen Einheiten, die zum Verschieben von links oder rechts.  
   
  *y*  
@@ -4200,7 +4201,7 @@ BOOL PatBlt(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *x*  
+ *w*  
  Gibt die logische X-Koordinate der oberen linken Ecke des Rechtecks, das das Muster zu erhalten.  
   
  *y*  
@@ -4632,7 +4633,7 @@ BOOL PtVisible(POINT point) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *x*  
+ *w*  
  Gibt die logische X-Koordinate des Punkts an.  
   
  *y*  
@@ -5336,7 +5337,7 @@ CPoint SetBrushOrg(POINT point);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *x*  
+ *w*  
  Gibt die X-Koordinate (in Geräteeinheiten) des neuen Ursprungs. Dieser Wert muss im Bereich von 0-7.  
   
  *y*  
@@ -5565,7 +5566,7 @@ COLORREF SetPixel(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *x*  
+ *w*  
  Gibt die logische X-Koordinate des Punkts, der festgelegt werden.  
   
  *y*  
@@ -5601,7 +5602,7 @@ BOOL SetPixelV(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *x*  
+ *w*  
  Gibt die X-Koordinate, in logischen Einheiten des Punkts, der festgelegt werden.  
   
  *y*  
@@ -5885,7 +5886,7 @@ CPoint SetViewportOrg(POINT point);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *x*  
+ *w*  
  Gibt die X-Koordinate (in Geräteeinheiten) des Ursprungs des Viewports an. Der Wert muss innerhalb des Bereichs des Koordinatensystems Gerät sein.  
   
  *y*  
@@ -5963,7 +5964,7 @@ CPoint SetWindowOrg(POINT point);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *x*  
+ *w*  
  Gibt die logische X-Koordinate des neuen Ursprung des Fensters.  
   
  *y*  
@@ -6071,7 +6072,7 @@ BOOL StretchBlt(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *x*  
+ *w*  
  Gibt die x-Koordinate (in logischen Einheiten) der oberen linken Ecke des Zielrechtecks an.  
   
  *y*  
@@ -6141,7 +6142,7 @@ BOOL StretchBlt(
   
  Die Funktion `StretchBlt` erstellt ein Spiegelbild eines Bitmaps, wenn sich die Vorzeichen der Parameter `nSrcWidth` und `nWidth` oder `nSrcHeight` und `nHeight` unterscheiden. Wenn `nSrcWidth` und `nWidth` unterschiedliche Vorzeichen haben, erstellt die Funktion ein Spiegelbild der Bitmap entlang der x-Achse. Wenn `nSrcHeight` und `nHeight` unterschiedliche Vorzeichen haben, erstellt die Funktion ein Spiegelbild der Bitmap entlang der y-Achse.  
   
- Die Funktion `StretchBlt` streckt oder komprimiert die Quellbitmap im Speicher und kopiert dann das Ergebnis in das Ziel. Wenn ein Muster mit dem Ergebnis zusammengeführt werden soll, wird es erst zusammengeführt, wenn die gestreckte Quellbitmap in das Ziel kopiert wurde. Wenn ein Pinsel verwendet wird, ist es der ausgewählte Pinsel im Zielgerätekontext. Die Zielkoordinaten werden gemäß dem Zielgerätekontext umgewandelt. Die Quellkoordinaten werden gemäß dem Quellgerätekontext umgewandelt.  
+ Die Funktion `StretchBlt` streckt oder komprimiert die Quellbitmap im Speicher und kopiert dann das Ergebnis in das Ziel. Wenn ein Muster mit dem Ergebnis zusammengeführt werden soll, wird es erst zusammengeführt, wenn die gestreckte Quellbitmap in das Ziel kopiert wurde. Wenn ein Pinsel verwendet wird, ist es der ausgewählte Pinsel im Zielgerätekontext. Die Zielkoordinaten werden gemäß dem Zielgerätekontext transformiert. Die Quellkoordinaten werden gemäß dem Quellgerätekontext transformiert.  
   
  Wenn das Ziel, die Quelle und die Musterbitmaps nicht dasselbe Farbformat haben, konvertiert `StretchBlt` die Quelle und die Musterbitmaps so, dass sie mit den Zielbitmaps übereinstimmen. Die Vordergrund- und Hintergrundfarben des Zielgerätekontexts werden bei der Konvertierung verwendet.  
   
@@ -6199,7 +6200,7 @@ CSize TabbedTextOut(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *x*  
+ *w*  
  Gibt die logische X-Koordinate des Anfangspunkts der Zeichenfolge an.  
   
  *y*  
@@ -6251,7 +6252,7 @@ BOOL TextOut(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *x*  
+ *w*  
  Gibt die logische x-Koordinate des Anfangspunkts des Texts an.  
   
  *y*  

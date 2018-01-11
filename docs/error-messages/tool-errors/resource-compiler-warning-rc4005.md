@@ -1,33 +1,32 @@
 ---
-title: "Ressourcencompiler: Warnung RC4005 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "RC4005"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RC4005"
+title: 'Ressourcencompiler: Warnung RC4005 | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: RC4005
+dev_langs: C++
+helpviewer_keywords: RC4005
 ms.assetid: 71f03b4a-c9a9-415d-920f-bf2e58507f93
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8f27de973f0ff18493c182bdf1feb3f2812f39af
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Ressourcencompiler: Warnung RC4005
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-"Bezeichner": Makro\-Neudefinition  
+# <a name="resource-compiler-warning-rc4005"></a>Ressourcencompiler: Warnung RC4005
+'Bezeichner': Neudefinition von Makros  
   
- Der Bezeichner wird zweimal definiert.  Die zweite Makrodefinition wurde vom Compiler verwendet.  
+ Der Bezeichner wird zweimal definiert. Der Compiler verwendet die zweite Makrodefinition.  
   
- Diese Warnung kann dann auftreten, wenn ein Makro in der Befehlszeile und im Code über eine \#define\-Direktive definiert wird.  Sie kann auch durch Makros verursacht werden, die aus Includedateien importiert werden.  
+ Diese Warnung kann verursacht werden, indem Sie ein Makro definieren, in der Befehlszeile und im Code mit einem `#define` Richtlinie. Er kann auch von Makros aus Includedateien importiert verursacht werden.  
   
- Um diese Warnung zu vermeiden, entfernen Sie entweder eine der Definitionen, oder verwenden Sie eine \#undef\-Direktive vor der zweiten Definition.
+ Um die Warnung zu vermeiden, entfernen Sie eine der Definitionen oder verwenden eine `#undef` Richtlinie vor der zweiten Definition.

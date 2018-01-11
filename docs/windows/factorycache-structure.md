@@ -1,56 +1,57 @@
 ---
-title: "FactoryCache-Struktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Details::FactoryCache"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "FactoryCache-Struktur"
+title: FactoryCache-Struktur | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Details::FactoryCache
+dev_langs: C++
+helpviewer_keywords: FactoryCache structure
 ms.assetid: 624544e6-0989-47f6-a3e9-edb60e1ee6d4
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0fc48c9a3651e8c5a6609886862c2f73c5707638
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# FactoryCache-Struktur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Unterstützt die Infrastruktur von [!INCLUDE[cppwrl](../windows/includes/cppwrl_md.md)] und ist nicht für die direkte Verwendung im Code bestimmt.  
+# <a name="factorycache-structure"></a>FactoryCache-Struktur
+Unterstützt die Windows Runtime C++ Template Library-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct FactoryCache;  
 ```  
   
-## Hinweise  
- Enthält den Speicherort einer Klassenfactorys und des Werts, der ein registriertes oder WRT COM\-Klassenobjekt identifiziert.  
+## <a name="remarks"></a>Hinweise  
+ Enthält den Speicherort einer Klassenfactory und ein Wert, der einem registrierten wrt identifiziert oder COM-Klassenobjekt.  
   
-## Member  
+## <a name="members"></a>Member  
   
-### Öffentliche Datenmember  
+### <a name="public-data-members"></a>Öffentliche Datenmember  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[FactoryCache::cookie\-Datenmember](../windows/factorycache-cookie-data-member.md)|Enthält einen Wert, der registrierten [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] oder COM\-Klassenobjekt identifiziert, und zum Aufheben der Registrierung ist das Objekt später verwendet.|  
-|[FactoryCache::factory\-Datenmember](../windows/factorycache-factory-data-member.md)|Punkte auf [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] oder TO COM\-Klassenfactory.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[FactoryCache::cookie-Datenmember](../windows/factorycache-cookie-data-member.md)|Enthält einen Wert, der ein registrierten Windows-Runtime oder COM-Klassenobjekt bezeichnet und wird später verwendet werden, um stattdessen das Aufheben der Registrierung.|  
+|[FactoryCache::factory-Datenmember](../windows/factorycache-factory-data-member.md)|Verweist auf ein Windows-Runtime oder COM-Klassenfactory.|  
   
-## Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `FactoryCache`  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** module.h  
   
- **Namespace:**  Microsoft::WRL::Details  
+ **Namespace:** Microsoft::WRL::Details  
   
-## Siehe auch  
- [Microsoft::WRL::Details\-Namespace](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Siehe auch  
+ [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

@@ -1,41 +1,42 @@
 ---
-title: "WeakRef::~WeakRef-Destruktor"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::WeakRef::~WeakRef"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "~WeakRef, Destruktor"
+title: 'WeakRef:: ~ WeakRef-Destruktor | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::WeakRef::~WeakRef
+dev_langs: C++
+helpviewer_keywords: ~WeakRef, destructor
 ms.assetid: 6062a4c0-3750-4488-b3da-6e43b2b1204c
-caps.latest.revision: 4
-caps.handback.revision: "4"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 237478d64c973131a1a443babec8162b4f1fea18
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# WeakRef::~WeakRef-Destruktor
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Deinitialisiert die aktuelle Instanz der WeakRef\-Klasse.  
+# <a name="weakrefweakref-destructor"></a>WeakRef::~WeakRef-Destruktor
+Hebt die Initialisierung einer neuen Instanz der WeakRef-Klasse auf.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 ~WeakRef();  
 ```  
   
-## Anforderungen  
- **Header:**  client.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** client.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [WeakRef\-Klasse](../windows/weakref-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [WeakRef-Klasse](../windows/weakref-class.md)

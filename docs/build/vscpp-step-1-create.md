@@ -1,8 +1,8 @@
 ---
-title: 'Schritt 1: erstellen ein C++-Konsolen-app-Projekts | Microsoft Docs'
+title: Erstellen ein C++-Konsolen-app-Projekts | Microsoft Docs
 description: "Installieren Sie Visual Studio-Unterstützung für Visual C++"
 ms.custom: mvc
-ms.date: 10/17/2017
+ms.date: 12/12/2017
 ms.topic: get-started-article
 ms.technology: devlang-C++
 ms.devlang: C++
@@ -11,11 +11,12 @@ ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f75d8fc6ec744038d57bfb7576547c9be84b7551
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: e44d9c097461b118cae72b47dff2ab15757aed64
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-c-console-app-project"></a>Erstellen eines C++-Konsolen-app-Projekts
 
@@ -23,11 +24,11 @@ Die üblichen Ausgangspunkt für C++-Programmierer ist eine "Hello, World!" Anwe
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-- Haben Sie Visual Studio mit der Desktopentwicklung C++ Arbeitslast installiert und auf Ihrem Computer ausgeführt. Wenn sie noch nicht installiert ist, finden Sie unter [Schritt 0 – Installieren von C++-Unterstützung in Visual Studio](../build/vscpp-step-0-installation.md).
+- Haben Sie Visual Studio mit der Desktopentwicklung C++ Arbeitslast installiert und auf Ihrem Computer ausgeführt. Wenn sie noch nicht installiert ist, finden Sie unter [Installieren von C++-Unterstützung in Visual Studio](../build/vscpp-step-0-installation.md).
 
 ## <a name="create-your-app-project"></a>Erstellen von app-Projekts
 
-Visual Studio verwendet *Projekte* , den Code für eine app zu organisieren und *Lösungen* zum Organisieren von Projekten. Ein Projekt enthält die Optionen, Konfigurationen und Regeln, die zum Erstellen Ihrer apps und die Beziehung zwischen den Dateien des Projekts und externe Dateien verwaltet. Um Ihre app zu erstellen, zunächst erstellen ein neues Projekt und Projektmappe Sie.
+Visual Studio verwendet *Projekte*, um Code für eine App zu ordnen, und *Projektmappen*, um Ihre Projekte zu ordnen. Ein Projekt enthält die Optionen, Konfigurationen und Regeln, die zum Erstellen Ihrer apps und die Beziehung zwischen den Dateien des Projekts und externe Dateien verwaltet. Um Ihre app zu erstellen, zunächst erstellen ein neues Projekt und Projektmappe Sie.
 
 1. Öffnen Sie in Visual Studio die **Datei** Menü, und wählen Sie **neu > Projekt** So öffnen die **neues Projekt** Dialogfeld.
 
@@ -92,7 +93,7 @@ Wenn der Code im Editor wie folgt aussieht, können Sie bereit sind, fahren mit 
 ## <a name="next-steps"></a>Nächste Schritte
 
 > [!div class="nextstepaction"]
-> [Schritt 2: Erstellen und Ausführen eines C++-Projekts](vscpp-step-2-build.md)
+> [Erstellen und Ausführen eines C++-Projekts](vscpp-step-2-build.md)
 
 ## <a name="troubleshooting-guide"></a>Handbuch zur Problembehandlung
 

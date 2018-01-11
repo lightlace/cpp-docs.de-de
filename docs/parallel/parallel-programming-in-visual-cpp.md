@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a873c2f9bba754287367cff3f6707c44225ae2db
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8f353c6ece59a550d558d3326f836f012e8a4090
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parallel-programming-in-visual-c"></a>Parallele Programmierung in Visual C++
 Visual C++ bietet die folgenden Technologien, die Ihnen helfen, Multithread- und parallele Programme zu erstellen, die mehrere Kerne nutzen und die GPU für allgemeine Programmierung verwenden.  

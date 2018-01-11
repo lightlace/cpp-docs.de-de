@@ -1,23 +1,24 @@
 ---
-title: "A. Examples"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "A. Beispiele für | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: c0f6192f-a205-449b-b84c-cb30dbcc8b8f
-caps.latest.revision: 4
-caps.handback.revision: "4"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9d6b47d8b27dff31640f59b5185f0a09d5778f8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# A. Examples
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Nachfolgend finden Sie Beispiele für die Konstrukte, die in diesem Dokument definiert sind.  Beachten Sie, dass eine Anweisung, die Direktive ist nur erfolgreich, bei Bedarf Zusammengesetzte ist, und eine nicht\-Verbund Anweisung wird in Bezug auf ein Direktive, vorausgehend eingerückt.
+# <a name="a-examples"></a>A. Beispiele
+Es folgen Beispiele für die Konstrukte, die in diesem Dokument definiert. Beachten Sie, dass eine Anweisung nach einer Direktive zusammengesetzten nur bei Bedarf, und eine nicht zusammengesetzte Anweisung ist in Bezug auf eine Direktive vorhergehenden eingerückt.

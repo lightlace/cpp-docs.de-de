@@ -1,232 +1,237 @@
 ---
-title: "Exemplarische Vorgehensweise: Entfernen von Arbeit aus einem Benutzeroberfl&#228;chenthread | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Entfernen von Arbeit aus Benutzeroberflächenthreads [Concurrency Runtime]"
-  - "Benutzeroberflächenthreads, Entfernen von Arbeit aus [Concurrency Runtime]"
+title: "Exemplarische Vorgehensweise: Entfernen von Arbeit aus einem Benutzeroberflächenthread | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- user-interface threads, removing work from [Concurrency Runtime]
+- removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7c32613aa6938b873a820fbb491fa2c507605a6d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Exemplarische Vorgehensweise: Entfernen von Arbeit aus einem Benutzeroberfl&#228;chenthread
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Dieses Dokument veranschaulicht, wie Sie Verarbeitungsschritte, die in einer MFC\-Anwendung \(Microsoft Foundation Classes\) im Benutzeroberflächenthread ausgeführt werden, mithilfe der Concurrency Runtime in einen Arbeitsthread verschieben können.  Außerdem werden in diesem Dokument Möglichkeiten der Leistungsverbesserung bei aufwändigen Zeichenvorgängen beschrieben.  
+# <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Exemplarische Vorgehensweise: Entfernen von Arbeit aus einem Benutzeroberflächenthread
+Dieses Dokument veranschaulicht, wie die Concurrency Runtime zu verwenden, um die Arbeit zu verschieben, die von der Benutzeroberfläche (UI)-Thread in einer Anwendung Microsoft Foundation Classes (MFC) zu einem Arbeitsthread ausgeführt wird. Dieses Dokument wird gezeigt, wie die Leistung eines langwierigen Zeichenvorgangs zu verbessern.  
   
- Durch das Auslagern blockierender Verarbeitungsschritte, z. B. für das Zeichnen, aus dem UI\-Thread in Arbeitsthreads kann die Reaktionszeit der Anwendung verbessert werden.  Diese exemplarische Vorgehensweise verwendet eine Zeichnungsroutine, die das Mandelbrot\-Fraktal generiert, um einen aufwändigen blockierenden Vorgang zu veranschaulichen.  Die Generierung des Mandelbrot\-Fraktals ist außerdem gut für die Parallelisierung geeignet, da die Berechnung jedes Pixels von allen anderen Berechnungen unabhängig ist.  
+ Entfernen von Arbeit aus dem UI-Thread durch Auslagern der blockierenden Vorgänge, kann z. B. zeichnen, um die Anzahl der Arbeitsthreads die Reaktionsfähigkeit der Anwendung verbessern. Diese exemplarische Vorgehensweise verwendet eine zeichnen-Routine, die das Mandelbrot-Fraktal zur Veranschaulichung eines langwierigen Blockierungsvorgang generiert. Die Generierung von Mandelbrot-Fraktal ist auch ein guter Kandidat für die Parallelisierung, da die Berechnung jedes Pixels von allen anderen Berechnungen unabhängig ist.  
   
-## Vorbereitungsmaßnahmen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  Lesen Sie sich folgende Themen durch, bevor Sie mit dieser exemplarischen Vorgehensweise beginnen:  
   
 -   [Aufgabenparallelität](../../parallel/concrt/task-parallelism-concurrency-runtime.md)  
   
 -   [Asynchrone Nachrichtenblöcke](../../parallel/concrt/asynchronous-message-blocks.md)  
   
--   [Funktionen zum Übergeben von Meldungen](../../parallel/concrt/message-passing-functions.md)  
+-   [Funktionen zum Übergeben von Nachrichten](../../parallel/concrt/message-passing-functions.md)  
   
 -   [Parallele Algorithmen](../../parallel/concrt/parallel-algorithms.md)  
   
--   [Abbruch](../../parallel/concrt/cancellation-in-the-ppl.md)  
+-   [Abbruch in der PPL](cancellation-in-the-ppl.md)  
   
- Es wird empfohlen, dass Sie sich auch mit den Grundlagen der MFC\-Anwendungsentwicklung und mit [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] vertraut machen, bevor Sie mit dieser exemplarischen Vorgehensweise beginnen.  Weitere Informationen über MFC finden Sie unter [MFC\-Desktopanwendungen](../../mfc/mfc-desktop-applications.md).  Weitere Informationen zu [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] finden Sie unter [GDI\+](_gdiplus_GDI_start_cpp).  
+ Zudem wird empfohlen, dass Sie wissen, dass die Grundlagen der MFC-Anwendungsentwicklung und [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] , bevor Sie diese exemplarische Vorgehensweise starten. Weitere Informationen über MFC finden Sie unter [MFC-Desktopanwendungen](../../mfc/mfc-desktop-applications.md). Weitere Informationen zu [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)], finden Sie unter [GDI +](https://msdn.microsoft.com/en-us/library/windows/desktop/ms533798).  
   
 ##  <a name="top"></a> Abschnitte  
  Diese exemplarische Vorgehensweise enthält folgende Abschnitte:  
   
--   [Erstellen der MFC\-Anwendung](#application)  
+-   [Erstellen der Mfc_anwendung](#application)  
   
--   [Implementieren der seriellen Version der Mandelbrot\-Anwendung](#serial)  
+-   [Implementieren die serielle Version des Mandelbrot-Anwendung](#serial)  
   
--   [Entfernen von Verarbeitungsschritten aus dem Benutzeroberflächenthread](#removing-work)  
+-   [Entfernen von Arbeit aus dem Benutzeroberflächenthread](#removing-work)  
   
--   [Verbessern der Zeichenleistung](#performance)  
+-   [Zeichnen die Leistung verbessern](#performance)  
   
--   [Hinzufügen von Unterstützung für Abbrüche](#cancellation)  
+-   [Hinzufügen von Unterstützung für den Abbruch](#cancellation)  
   
-##  <a name="application"></a> Erstellen der MFC\-Anwendung  
- In diesem Abschnitt wird beschrieben, wie die grundlegende MFC\-Anwendung erstellt wird.  
+##  <a name="application"></a>Erstellen der Mfc_anwendung  
+ Dieser Abschnitt beschreibt, wie die grundlegende MFC-Anwendung zu erstellen.  
   
-### So erstellen Sie eine Visual C\+\+\-MFC\-Anwendung  
+### <a name="to-create-a-visual-c-mfc-application"></a>Erstellen eine Visual C++-MFC-Anwendung  
   
-1.  Klicken Sie im Menü **Datei** erst auf **Neu** und dann auf **Projekt**.  
+1.  Klicken Sie im Menü **Datei** auf **Neu**und dann auf **Projekt**.  
   
-2.  Wählen Sie im Dialogfeld **Neues Projekt** im Bereich **Installierte Vorlagen** den Typ **Visual C\+\+** aus, und klicken Sie dann im Bereich **Vorlagen** auf **MFC\-Anwendung**.  Geben Sie einen Namen für das Projekt ein, z. B. `Mandelbrot`, und klicken Sie dann auf **OK**, um den **MFC\-Anwendungs\-Assistenten** anzuzeigen.  
+2.  In der **neues Projekt** Dialogfeld die **installierte Vorlagen** klicken Sie im Bereich **Visual C++**, und dann auf die **Vorlagen** klicken Sie im Bereich **MFC-Anwendung**. Geben Sie einen Namen für das Projekt, z. B. `Mandelbrot`, und klicken Sie dann auf **OK** zum Anzeigen der **MFC-Anwendung-Assistent**.  
   
-3.  Wählen Sie im Bereich **Anwendungstyp** die Option **Einfaches Dokument** aus.  Stellen Sie sicher, dass das Kontrollkästchen **Unterstützung für die Dokument\-\/Ansichtarchitektur** aktiviert ist.  
+3.  In der **Anwendungstyp** klicken Sie im Bereich **einzelnes Dokument**. Sicherstellen, dass die **Unterstützung der Dokument-/Ansichtarchitektur-Architektur** Kontrollkästchen ist deaktiviert.  
   
-4.  Klicken Sie auf **Fertig stellen**, um das Projekt zu erstellen und den **MFC\-Anwendungs\-Assistenten** zu schließen.  
+4.  Klicken Sie auf **Fertig stellen** zum Erstellen des Projekts, und schließen Sie die **MFC-Anwendung-Assistent**.  
   
-     Überprüfen Sie, ob die Anwendung erfolgreich erstellt wurde, indem Sie sie erstellen und ausführen.  Klicken Sie im Menü **Erstellen** auf **Projektmappe erstellen**, um die Anwendung zu erstellen.  Wenn die Anwendung erfolgreich erstellt wird, führen Sie die Anwendung aus, indem Sie im Menü **Debug** auf **Debugging starten** klicken.  
+     Überprüfen Sie, ob die Anwendung erfolgreich erstellt wurde, indem Sie sie erstellen und ausführen. Um die Anwendung zu erstellen. die **erstellen** Menü klicken Sie auf **Projektmappe**. Wenn die Anwendung erfolgreich erstellt wird, führen Sie die Anwendung, indem Sie auf **Debuggen** auf die **Debuggen** Menü.  
   
-##  <a name="serial"></a> Implementieren der seriellen Version der Mandelbrot\-Anwendung  
- In diesem Abschnitt wird beschrieben, wie das Mandelbrot\-Fraktal gezeichnet wird.  Diese Version zeichnet das Mandelbrot\-Fraktal in ein [Bitmap](https://msdn.microsoft.com/en-us/library/ms534420.aspx)\-Objekt von [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] und kopiert anschließend den Inhalt dieser Bitmap in das Clientfenster.  
+##  <a name="serial"></a>Implementieren die serielle Version des Mandelbrot-Anwendung  
+ Dieser Abschnitt beschreibt, wie das Mandelbrot-Fraktal gezeichnet werden soll. Diese Version zeichnet das Mandelbrot-Fraktal zu einem [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] [Bitmap](https://msdn.microsoft.com/library/ms534420.aspx) Objekt, und klicken Sie dann auf die Client-Fenster kopiert den Inhalt dieser Bitmap.  
   
-#### So implementieren Sie die serielle Version der Mandelbrot\-Anwendung  
+#### <a name="to-implement-the-serial-version-of-the-mandelbrot-application"></a>Implementieren Sie die serielle Version des Mandelbrot-Anwendung  
   
-1.  Fügen Sie in der Datei stdafx.h die folgende `#include`\-Direktive hinzu:  
+1.  Fügen Sie in "stdafx.h" die folgenden `#include` Richtlinie:  
   
-     [!CODE [concrt-mandelbrot#1](../CodeSnippet/VS_Snippets_ConcRT/concrt-mandelbrot#1)]  
+     [!code-cpp[concrt-mandelbrot#1](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_1.h)]  
   
-2.  Definieren Sie in ChildView.h nach der `pragma`\-Direktive den `BitmapPtr`\-Typ.  Der `BitmapPtr`\-Typ ermöglicht es, einen Zeiger auf ein `Bitmap`\-Objekt in mehreren Komponenten gemeinsam zu verwenden.  Das `Bitmap`\-Objekt wird gelöscht, wenn keine Komponente mehr auf das Objekt verweist.  
+2.  In ChildView.h nach der `pragma` Richtlinie definieren die `BitmapPtr` Typ. Die `BitmapPtr` Typ ermöglicht es, einen Zeiger auf eine `Bitmap` Objekt von mehreren Komponenten gemeinsam genutzt werden. Die `Bitmap` Objekt wird gelöscht, wenn er von keiner Komponente nicht mehr verwiesen wird.  
   
-     [!CODE [concrt-mandelbrot#2](../CodeSnippet/VS_Snippets_ConcRT/concrt-mandelbrot#2)]  
+     [!code-cpp[concrt-mandelbrot#2](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_2.h)]  
   
-3.  Fügen Sie in ChildView.h im `protected`\-Abschnitt der `CChildView`\-Klasse folgenden Code hinzu:  
+3.  Fügen Sie den folgenden Code hinzu, in ChildView.h der `protected` Teil der `CChildView` Klasse:  
   
-     [!CODE [concrt-mandelbrot#3](../CodeSnippet/VS_Snippets_ConcRT/concrt-mandelbrot#3)]  
+     [!code-cpp[concrt-mandelbrot#3](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_3.h)]  
   
-4.  Löschen oder kommentieren Sie in ChildView.cpp folgende Zeilen aus.  
+4.  Kommentieren Sie in ChildView.cpp Sie aus, oder entfernen Sie die folgenden Zeilen.  
   
-     [!CODE [concrt-mandelbrot#4](../CodeSnippet/VS_Snippets_ConcRT/concrt-mandelbrot#4)]  
+     [!code-cpp[concrt-mandelbrot#4](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_4.cpp)]  
   
-     In Debugbuilds verhindert dieser Schritt, dass die Anwendung die `DEBUG_NEW`\-Belegungsfunktion verwendet, die mit [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] nicht kompatibel ist.  
+     In Debugbuilds verhindert diesen Schritt die Anwendung am Verwenden der `DEBUG_NEW` Zuweisung, die nicht kompatibel mit ist [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)].  
   
-5.  Fügen Sie in ChildView.cpp dem `Gdiplus`\-Namespace eine `using`\-Direktive hinzu.  
+5.  Fügen Sie in ChildView.cpp eine `using` -Direktive die `Gdiplus` Namespace.  
   
-     [!CODE [concrt-mandelbrot#5](../CodeSnippet/VS_Snippets_ConcRT/concrt-mandelbrot#5)]  
+     [!code-cpp[concrt-mandelbrot#5](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_5.cpp)]  
   
-6.  Fügen Sie dem Konstruktor und dem Destruktor der `CChildView`\-Klasse den folgenden Code zum Initialisieren und Schließen von [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] hinzu.  
+6.  Fügen Sie den folgenden Code zum Konstruktor und Destruktor, der die `CChildView` Klasse zu initialisieren und Herunterfahren [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)].  
   
-     [!CODE [concrt-mandelbrot#6](../CodeSnippet/VS_Snippets_ConcRT/concrt-mandelbrot#6)]  
+     [!code-cpp[concrt-mandelbrot#6](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_6.cpp)]  
   
-7.  Implementieren Sie die `CChildView::DrawMandelbrot`\-Methode.  Diese Methode zeichnet das Mandelbrot\-Fraktal im angegebenen `Bitmap`\-Objekt.  
+7.  Implementieren Sie die `CChildView::DrawMandelbrot`-Methode. Diese Methode zeichnet das Mandelbrot-Fraktal in den angegebenen `Bitmap` Objekt.  
   
-     [!CODE [concrt-mandelbrot#7](../CodeSnippet/VS_Snippets_ConcRT/concrt-mandelbrot#7)]  
+     [!code-cpp[concrt-mandelbrot#7](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_7.cpp)]  
   
-8.  Implementieren Sie die `CChildView::OnPaint`\-Methode.  Diese Methode ruft `CChildView::DrawMandelbrot` auf und kopiert anschließend den Inhalt des `Bitmap`\-Objekts in das Fenster.  
+8.  Implementieren Sie die `CChildView::OnPaint`-Methode. Diese Methode ruft `CChildView::DrawMandelbrot` und kopiert dann den Inhalt der `Bitmap` -Objekt, das Fenster.  
   
-     [!CODE [concrt-mandelbrot#8](../CodeSnippet/VS_Snippets_ConcRT/concrt-mandelbrot#8)]  
+     [!code-cpp[concrt-mandelbrot#8](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_8.cpp)]  
   
-9. Überprüfen Sie, ob das Aktualisieren der Anwendung erfolgreich war, indem Sie sie erstellen und ausführen.  
+9. Stellen Sie sicher, dass die Anwendung erfolgreich aktualisiert wurde, indem Sie erstellen und ausführen.  
   
- Die folgende Abbildung zeigt die Ausgabe der Mandelbrot\-Anwendung.  
+ Die folgende Abbildung zeigt die Ergebnisse der Mandelbrot-Anwendung.  
   
- ![Mandelbrot&#45;Anwendung](../../parallel/concrt/media/mandelbrot.png "Mandelbrot")  
+ ![Mandelbrot-Anwendung](../../parallel/concrt/media/mandelbrot.png "Mandelbrot")  
   
- Da die Berechnung für jedes Pixel rechenintensiv ist, kann der UI\-Thread erst dann wieder andere Meldungen verarbeiten, wenn die gesamte Berechnung abgeschlossen ist.  Dies kann die Reaktionszeit der Anwendung herabsetzen.  Sie können dieses Problem jedoch vermeiden, indem Sie die Verarbeitung aus dem UI\-Thread auslagern.  
+ Da die Berechnung von jedem Pixel rechenintensiv ist, verarbeiten nicht im UI-Thread zusätzliche Nachrichten, bis die gesamte Berechnung abgeschlossen ist. Dies könnte die Reaktionszeit der Anwendung verringern. Allerdings können Sie dieses Problem durch Entfernen von Arbeit aus dem UI-Thread entlasten.  
   
- \[[Nach oben](#top)\]  
+ [[Nach oben](#top)]  
   
-##  <a name="removing-work"></a> Auslagern der Verarbeitung aus dem UI\-Thread  
- Dieser Abschnitt beschreibt, wie die Zeichenarbeit der Mandelbrot\-Anwendung aus dem UI\-Thread ausgelagert wird.  Wenn die Zeichenarbeit aus dem UI\-Thread in einen Arbeitsthread verschoben wird, kann der UI\-Thread weiter Meldungen verarbeiten, während der Arbeitsthread im Hintergrund das Bild generiert.  
+##  <a name="removing-work"></a>Entfernen von Arbeit aus dem UI-Thread  
+ In diesem Abschnitt veranschaulicht, wie die Zeichnung Arbeit vom UI-Thread in der Mandelbrot-Anwendung zu entfernen. Zeichnen von UI-Thread in einen Arbeitsthread verschieben, kann die UI-Thread Nachrichten verarbeiten, wie der Arbeitsthread das Bild im Hintergrund generiert.  
   
- Die Concurrency Runtime bietet drei Möglichkeiten, Aufgaben auszuführen: [Aufgabengruppen](../../parallel/concrt/task-parallelism-concurrency-runtime.md), [asynchrone Agents](../../parallel/concrt/asynchronous-agents.md) und [einfache Aufgaben](../../parallel/concrt/task-scheduler-concurrency-runtime.md).  Obwohl Sie jeden dieser Mechanismen verwenden können, um die Arbeit aus dem UI\-Thread auszulagern, wird in diesem Beispiel ein [concurrency::task\_group](../Topic/task_group%20Class.md)\-Objekt, da Aufgabengruppen Abbrüche unterstützen.  Im weiteren Verlauf dieser exemplarischen Vorgehensweise werden Abbrüche verwendet, um den Arbeitsaufwand bei Größenänderungen des Clientfensters zu verringern und um die Bereinigung durchzuführen, wenn das Fenster zerstört wird.  
+ Die Concurrency Runtime bietet drei Möglichkeiten zum Ausführen von Aufgaben: [Aufgabengruppen](../../parallel/concrt/task-parallelism-concurrency-runtime.md), [asynchrone Agents](../../parallel/concrt/asynchronous-agents.md), und [einfache Aufgaben](../../parallel/concrt/task-scheduler-concurrency-runtime.md). Obwohl Sie eine der folgenden Mechanismen zum Entfernen von Arbeit von UI-Thread verwenden können, um dieses Beispiel verwendet eine [Concurrency:: task_group](reference/task-group-class.md) Objekt, da Aufgabengruppen Abbrüche unterstützen. Diese exemplarische Vorgehensweise verwendet später Abbruch der verbleibende Arbeitsaufwand zu reduzieren, die ausgeführt wird, wenn der Client Fenstergröße und Cleanup auszuführen, wenn das Fenster zerstört wird.  
   
- Das Beispiel verwendet außerdem ein [concurrency::unbounded\_buffer](../Topic/unbounded_buffer%20Class.md)\-Objekt, über das der UI\-Thread und der Arbeitsthread zu aktivieren, dass sie miteinander kommunizieren.  Nachdem der Arbeitsthread das Bild erzeugt hat, sendet er einen Zeiger auf das `Bitmap`\-Objekt an das `unbounded_buffer`\-Objekt und gibt anschließend eine paint\-Meldung an den UI\-Thread aus.  Der UI\-Thread empfängt dann das `Bitmap`\-Objekt vom `unbounded_buffer`\-Objekt und zeichnet es im Clientfenster.  
+ Dieses Beispiel verwendet außerdem eine [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) Objekt, das im UI-Thread und der Arbeitsthread seine miteinander kommunizieren können. Nachdem der Arbeitsthread auf das Bild erzeugt, sendet er einen Zeiger auf die `Bitmap` -Objekt an die `unbounded_buffer` Objekt, und klicken Sie dann sendet eine Paint-Meldung an den UI-Thread. Die UI-Thread empfängt dann von der `unbounded_buffer` Objekt die `Bitmap` -Objekt und zeichnet es auf dem Client-Fenster.  
   
-#### So lagern Sie die Zeichenarbeit aus dem UI\-Thread aus  
+#### <a name="to-remove-the-drawing-work-from-the-ui-thread"></a>So entfernen Sie die Zeichnung Arbeit vom UI-thread  
   
-1.  Fügen Sie in der Datei stdafx.h folgende `#include`\-Direktiven hinzu:  
+1.  Fügen Sie in "stdafx.h" die folgenden `#include` Direktiven:  
   
-     [!CODE [concrt-mandelbrot#101](../CodeSnippet/VS_Snippets_ConcRT/concrt-mandelbrot#101)]  
+     [!code-cpp[concrt-mandelbrot#101](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_9.h)]  
   
-2.  Fügen Sie in ChildView.h `task_group`\- und `unbounded_buffer`\-Membervariablen im `protected`\-Abschnitt der `CChildView`\-Klasse hinzu.  Das `task_group`\-Objekt enthält die Aufgaben, die das Zeichnen ausführen und das `unbounded_buffer`\-Objekt enthält das abgeschlossene Mandelbrot\-Bild.  
+2.  Fügen Sie in ChildView.h `task_group` und `unbounded_buffer` Membervariablen der `protected` Teil der `CChildView` Klasse. Die `task_group` -Objekt enthält die Aufgaben, die Zeichnung; Ausführen der `unbounded_buffer` -Objekt enthält das abgeschlossene Mandelbrot-Bild.  
   
-     [!CODE [concrt-mandelbrot#102](../CodeSnippet/VS_Snippets_ConcRT/concrt-mandelbrot#102)]  
+     [!code-cpp[concrt-mandelbrot#102](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_10.h)]  
   
-3.  Fügen Sie in ChildView.cpp dem `concurrency`\-Namespace eine `using`\-Direktive hinzu.  
+3.  Fügen Sie in ChildView.cpp eine `using` -Direktive die `concurrency` Namespace.  
   
-     [!CODE [concrt-mandelbrot#103](../CodeSnippet/VS_Snippets_ConcRT/concrt-mandelbrot#103)]  
+     [!code-cpp[concrt-mandelbrot#103](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_11.cpp)]  
   
-4.  In der `CChildView::DrawMandelbrot`\-Methode nach dem Aufruf von `Bitmap::UnlockBits`, rufen Sie die [concurrency::send](../Topic/send%20Function.md)\-Funktion auf, um das `Bitmap`\-Objekt an den UI\-Thread zu übergeben.  Geben Sie dann eine paint\-Meldung an den UI\-Thread aus, und legen Sie den Clientbereich als ungültig fest.  
+
+4.  In der `CChildView::DrawMandelbrot` Methode nach dem Aufruf von `Bitmap::UnlockBits`, rufen Sie die [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) Funktion übergeben der `Bitmap` Objekt an den UI-Thread. Anschließend senden Sie eine Paint-Meldung an den UI-Thread und den Clientbereich für ungültig erklärt.  
+
   
-     [!CODE [concrt-mandelbrot#104](../CodeSnippet/VS_Snippets_ConcRT/concrt-mandelbrot#104)]  
+     [!code-cpp[concrt-mandelbrot#104](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_12.cpp)]  
   
-5.  Aktualisieren Sie die `CChildView::OnPaint`\-Methode, um das aktualisierte `Bitmap`\-Objekt zu empfangen und das Bild im Clientfenster zu zeichnen.  
+5.  Update der `CChildView::OnPaint` Methode, um die aktualisierte empfangen `Bitmap` Objekt, und ziehen Sie das Bild zu Client-Fenster.  
   
-     [!CODE [concrt-mandelbrot#105](../CodeSnippet/VS_Snippets_ConcRT/concrt-mandelbrot#105)]  
+     [!code-cpp[concrt-mandelbrot#105](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_13.cpp)]  
   
-     Die `CChildView::OnPaint`\-Methode erstellt eine Aufgabe zum Generieren des Mandelbrot\-Bilds, wenn im Meldungspuffer noch kein Bild vorhanden ist.  Der Meldungspuffer enthält in verschiedenen Fällen kein `Bitmap`\-Objekt, z. B. während der ersten paint\-Meldung oder wenn ein anderes Fenster das Clientfenster verdeckt.  
+     Die `CChildView::OnPaint` Methode erstellt eine Aufgabe, um das Mandelbrot-Bild zu generieren, wenn noch nicht in den Nachrichtenpuffer vorhanden ist. Der Meldungspuffer enthält kein `Bitmap` Objekt in Fällen, z. B. die anfängliche Paint-Meldung, und wenn ein anderes Fenster vor der Client-Fenster verschoben wird.  
   
-6.  Überprüfen Sie, ob das Aktualisieren der Anwendung erfolgreich war, indem Sie sie erstellen und ausführen.  
+6.  Stellen Sie sicher, dass die Anwendung erfolgreich aktualisiert wurde, indem Sie erstellen und ausführen.  
   
- Die Benutzeroberfläche reagiert jetzt schneller, da die Zeichenarbeit im Hintergrund ausgeführt wird.  
+ Die Benutzeroberfläche ist nun anpassbar, da die Zeichnung Arbeit im Hintergrund ausgeführt wird.  
   
- \[[Nach oben](#top)\]  
+ [[Nach oben](#top)]  
   
-##  <a name="performance"></a> Verbessern der Zeichenleistung  
- Die Generierung des Mandelbrot\-Fraktals ist außerdem gut für die Parallelisierung geeignet, da die Berechnung jedes Pixels von allen anderen Berechnungen unabhängig ist.  Um die Zeichnungsprozedur zu parallelisieren, konvertieren Sie die äußere `for` \- Schleife in der `CChildView::DrawMandelbrot`\-Methode in einen Aufruf des [concurrency::parallel\_for](../Topic/parallel_for%20Function.md) \- Algorithmus, wie folgt.  
+##  <a name="performance"></a>Zeichnen die Leistung verbessern  
+
+ Die Generierung von Mandelbrot-Fraktal ist ein guter Kandidat für die Parallelisierung, da die Berechnung jedes Pixels unabhängig von allen anderen Berechnungen ist. Um das Zeichnen Verfahren zu parallelisieren, konvertieren Sie die äußere `for` wurde eine Schleife in der `CChildView::DrawMandelbrot` Methode zu einem Aufruf von der [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) -Algorithmus wie folgt.  
+
   
- [!CODE [concrt-mandelbrot#301](../CodeSnippet/VS_Snippets_ConcRT/concrt-mandelbrot#301)]  
+ [!code-cpp[concrt-mandelbrot#301](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_14.cpp)]  
   
- Da jedes Bitmapelement unabhängig berechnet wird, müssen Sie die Zeichenvorgänge, die auf den Bitmaparbeitsspeicher zugreifen, nicht synchronisieren.  Dadurch kann die Zeichenleistung in Abhängigkeit von der Anzahl der verfügbaren Prozessoren skalieren.  
+ Da die Berechnung der einzelnen Elemente mithilfe einer Bitmap unabhängig sind, müssen Sie nicht die Zeichenoperationen zu synchronisieren, die den Bitmapspeicher zugreifen. Dadurch können die Leistung als die Anzahl der verfügbaren Prozessoren zu skalieren.  
   
- \[[Nach oben](#top)\]  
+ [[Nach oben](#top)]  
   
-##  <a name="cancellation"></a> Hinzufügen von Unterstützung für Abbrüche  
- In diesem Abschnitt wird beschrieben, wie Änderungen der Fenstergröße behandelt und wie aktive Zeichenaufgaben abgebrochen werden können, wenn das Fenster zerstört wird.  
+##  <a name="cancellation"></a>Hinzufügen von Unterstützung für den Abbruch  
+ In diesem Abschnitt wird beschrieben, wie Fenstergröße behandelt und wie Sie alle aktiven zeichnen Aufgaben abbrechen, wenn das Fenster zerstört wird.  
   
- Das Dokument [Abbruch](../../parallel/concrt/cancellation-in-the-ppl.md) erläutert, wie Abbrüche in der Laufzeit funktionieren.  Abbrüche sind kooperativ und treten daher nicht sofort auf.  Um eine abgebrochene Aufgabe zu beenden, löst die Laufzeit eine interne Ausnahme während eines nachfolgenden Aufrufs der Laufzeit durch die Aufgabe aus.  Der vorherige Abschnitt zeigt, wie der `parallel_for`\-Algorithmus zum Verbessern der Leistung der Zeichenaufgabe verwendet werden kann.  Durch den Aufruf von `parallel_for` ist die Laufzeit in der Lage, die Aufgabe zu beenden und Abbrüche auszuführen.  
+ Das Dokument [Abbruch in der PPL](cancellation-in-the-ppl.md) wird erläutert, wie Abbrüche in der Laufzeit funktionieren. Abbruch ist kooperativ; aus diesem Grund es nicht unmittelbar. Um eine abgebrochene Aufgabe beenden, löst die Laufzeit eine interne Ausnahme bei einem nachfolgenden Aufruf von der Aufgabe in der Laufzeit. Im vorherigen Abschnitt zeigt, wie die `parallel_for` Algorithmus zum Verbessern der Leistung des Tasks "Zeichnen". Der Aufruf von `parallel_for` kann die Laufzeit den Vorgang zu beenden und Abbrüche zu arbeiten.  
   
-### Abbrechen von aktiven Aufgaben  
- Die Mandelbrot\-Anwendung erstellt `Bitmap`\-Objekte, deren Dimensionen der Größe des Clientfensters entsprechen.  Jedes Mal wenn die Größe des Clientfensters geändert wird, erstellt die Anwendung eine zusätzliche Hintergrundaufgabe, um ein Bild für die neue Fenstergröße zu generieren.  Die Anwendung benötigt diese Zwischenbilder nicht. Es wird nur das Bild für die abschließende Fenstergröße benötigt.  Um zu verhindern, dass die Anwendung diese zusätzliche Arbeit durchführt, können Sie alle aktiven Zeichenaufgaben in den Meldungshandlern für die `WM_SIZE`\- und die `WM_SIZING`\-Meldung abbrechen und die Zeichenarbeit neu planen, sobald die endgültige Größe des Fensters feststeht.  
+### <a name="cancelling-active-tasks"></a>Abbrechen von aktiven Aufgaben  
+ Mandelbrot-Anwendung erstellt `Bitmap` Objekte, deren Dimensionen, die Größe des Clientfensters entsprechen. Jedes Mal, wenn das Clientfenster angepasst wird, erstellt die Anwendung eine zusätzliche Hintergrundaufgabe, um ein Bild für die neue Fenstergröße zu generieren. Die Anwendung erfordert keine diese intermediate Images; nur das Bild erforderlich für die abschließende Fenstergröße. Um zu verhindern, dass die Anwendung aus dieser zusätzlichen Arbeiten ausführen, brechen Sie alle aktiven zeichnen Aufgaben in die Message-Handler für das `WM_SIZE` und `WM_SIZING` Nachrichten und dann neu planen Zeichnung funktionieren nach der Größe des Fensters geändert wird.  
   
- Um aktive Zeichenaufgaben abzubrechen wenn die Größe des Fensters geändert wird, ruft die Anwendung die [concurrency::task\_group::cancel](../Topic/task_group::cancel%20Method.md)\-Methode in den Handlern für die Meldungen `WM_SIZING` und `WM_SIZE` auf.  Der Handler für die `WM_SIZE` \- Meldung ruft außerdem die [concurrency::task\_group::wait](../Topic/task_group::wait%20Method.md)\-Methode auf, um für alle aktiven Aufgaben gewartet abzuschließen und plant dann die Zeichenaufgabe für die aktualisierte Fenstergröße neu.  
+ Um aktiven zeichnen Aufgaben abbrechen, wenn die Fenstergröße geändert wird, ruft die Anwendung die [task_group](reference/task-group-class.md#cancel) Methode in die Handler für das `WM_SIZING` und `WM_SIZE` Nachrichten. Der Handler für das `WM_SIZE` Nachricht auch Aufrufe der [Concurrency:: task_group::](reference/task-group-class.md#wait) Methode zu warten, bis alle aktiven Aufgaben durch, um Sie abzuschließen und anschließend plant die Zeichnung Aufgabe für die aktualisierte Fenstergröße.  
   
- Wenn das Clientfenster zerstört wird, empfiehlt es sich, alle aktiven Zeichenaufgaben abzubrechen.  Durch das Abbrechen aktiver Zeichenaufgaben wird sichergestellt, dass Arbeitsthreads keine Meldungen an den UI\-Thread ausgeben, nachdem das Clientfenster zerstört wurde.  Die Anwendung bricht alle aktiven Zeichenaufgaben im Handler für die `WM_DESTROY`\-Meldung ab.  
+ Wenn das Clientfenster zerstört wird, ist es empfiehlt sich, alle aktiven zeichnen Aufgaben abzubrechen. Alle aktiven zeichnen Aufgaben abbrechen, wird sichergestellt, dass es sich bei Arbeitsthreads keine buchen Nachrichten an den UI-Thread, nachdem der Client-Fenster zerstört wird. Bricht alle aktiven zeichnen Aufgaben im Handler für die Anwendung die `WM_DESTROY` Nachricht.  
   
-### Reagieren auf Abbrüche  
- Die `CChildView::DrawMandelbrot`\-Methode, die die Zeichenaufgabe ausführt, muss auf den Abbruch reagieren.  Da die Laufzeit Aufgaben durch eine Ausnahmebehandlung abbricht, muss die `CChildView::DrawMandelbrot`\-Methode einen ausnahmesicheren Mechanismus verwenden, um zu gewährleisten, dass alle Ressourcen ordnungsgemäß bereinigt werden.  In diesem Beispiel wird das RAII \(*Resource Acquisition Is Initialization*\)\-Muster verwendet, um zu gewährleisten, dass die Bitmapbits entsperrt werden, wenn die Aufgabe abgebrochen wird.  
+### <a name="responding-to-cancellation"></a>Auf den Abbruch reagieren  
+ Die `CChildView::DrawMandelbrot` -Methode, die die Zeichnung Aufgabe ausführt, muss auf den Abbruch reagieren. Da die Common Language Runtime zum Abbrechen der Aufgaben, Ausnahmebehandlung verwendet die `CChildView::DrawMandelbrot` Methode muss einen ausnahmesicheren Mechanismus verwenden, um sicherzustellen, dass alle Ressourcen ordnungsgemäß bereinigt werden. Dieses Beispiel verwendet die *Resource Acquisition Is Initialization* (RAII)-Muster können Sie sicherstellen, dass die Bitmapbits entsperrt werden, wenn die Aufgabe abgebrochen wird.  
   
-##### So fügen Sie die Unterstützung für Abbrüche in der Mandelbrot\-Anwendung hinzu  
+##### <a name="to-add-support-for-cancellation-in-the-mandelbrot-application"></a>Zum Hinzufügen der Unterstützung für den Abbruch in der Mandelbrot-Anwendung  
   
-1.  Fügen Sie in ChildView.h im `protected`\-Abschnitt der `CChildView`\-Klasse Deklarationen für die Meldungszuordnungsfunktionen `OnSize`, `OnSizing` und `OnDestroy` hinzu.  
+1.  In ChildView.h in der `protected` Teil der `CChildView` -Klasse verwenden, fügen Sie die Deklarationen für die `OnSize`, `OnSizing`, und `OnDestroy` Nachrichtenfunktionen Zuordnung.  
   
-     [!CODE [concrt-mandelbrot#201](../CodeSnippet/VS_Snippets_ConcRT/concrt-mandelbrot#201)]  
+     [!code-cpp[concrt-mandelbrot#201](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_15.h)]  
   
-2.  Ändern Sie in ChildView.cpp die Meldungszuordnung, sodass sie Handler für die Meldungen `WM_SIZE`, `WM_SIZING` und `WM_DESTROY` enthält.  
+2.  Ändern Sie in ChildView.cpp die meldungszuordnung, um Handler für enthalten die `WM_SIZE`, `WM_SIZING`, und `WM_DESTROY` Nachrichten.  
   
-     [!CODE [concrt-mandelbrot#202](../CodeSnippet/VS_Snippets_ConcRT/concrt-mandelbrot#202)]  
+     [!code-cpp[concrt-mandelbrot#202](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_16.cpp)]  
   
-3.  Implementieren Sie die `CChildView::OnSizing`\-Methode.  Diese Methode bricht alle vorhandenen Zeichenaufgaben ab.  
+3.  Implementieren Sie die `CChildView::OnSizing`-Methode. Diese Methode bricht alle vorhandenen zeichnen Aufgaben ab.  
   
-     [!CODE [concrt-mandelbrot#203](../CodeSnippet/VS_Snippets_ConcRT/concrt-mandelbrot#203)]  
+     [!code-cpp[concrt-mandelbrot#203](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_17.cpp)]  
   
-4.  Implementieren Sie die `CChildView::OnSize`\-Methode.  Diese Methode bricht alle vorhandenen Zeichenaufgaben ab und erstellt eine neue Zeichenaufgabe für die aktualisierte Clientfenstergröße.  
+4.  Implementieren Sie die `CChildView::OnSize`-Methode. Diese Methode bricht alle vorhandenen zeichnen Aufgaben ab und erstellt eine neue zeichnen Aufgabe für die Fenstergröße des aktualisierten Clients.  
   
-     [!CODE [concrt-mandelbrot#204](../CodeSnippet/VS_Snippets_ConcRT/concrt-mandelbrot#204)]  
+     [!code-cpp[concrt-mandelbrot#204](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_18.cpp)]  
   
-5.  Implementieren Sie die `CChildView::OnDestroy`\-Methode.  Diese Methode bricht alle vorhandenen Zeichenaufgaben ab.  
+5.  Implementieren Sie die `CChildView::OnDestroy`-Methode. Diese Methode bricht alle vorhandenen zeichnen Aufgaben ab.  
   
-     [!CODE [concrt-mandelbrot#205](../CodeSnippet/VS_Snippets_ConcRT/concrt-mandelbrot#205)]  
+     [!code-cpp[concrt-mandelbrot#205](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_19.cpp)]  
   
-6.  Definieren Sie in ChildView.cpp die `scope_guard`\-Klasse, die das RAII\-Muster implementiert.  
+6.  Definieren Sie in ChildView.cpp die `scope_guard` -Klasse, die das RAII-Muster implementiert.  
   
-     [!CODE [concrt-mandelbrot#206](../CodeSnippet/VS_Snippets_ConcRT/concrt-mandelbrot#206)]  
+     [!code-cpp[concrt-mandelbrot#206](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_20.cpp)]  
   
-7.  Fügen Sie folgenden Code in der `CChildView::DrawMandelbrot`\-Methode nach dem Aufruf von `Bitmap::LockBits` hinzu.  
+7.  Fügen Sie folgenden Code, der `CChildView::DrawMandelbrot` Methode nach dem Aufruf von `Bitmap::LockBits`:  
   
-     [!CODE [concrt-mandelbrot#207](../CodeSnippet/VS_Snippets_ConcRT/concrt-mandelbrot#207)]  
+     [!code-cpp[concrt-mandelbrot#207](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_21.cpp)]  
   
-     In diesem Code werden Abbrüche durch Erstellen eines `scope_guard`\-Objekts behandelt.  Wenn das Objekt den Gültigkeitsbereich verlässt, werden die Bitmapbits entsperrt.  
+     Dieser Code behandelt Abbruch durch das Erstellen einer `scope_guard` Objekt. Wenn das Objekt den Gültigkeitsbereich verlässt, entsperrt, die mithilfe einer Bitmapbits.  
   
-8.  Ändern Sie das Ende der `CChildView::DrawMandelbrot`\-Methode, sodass das `scope_guard`\-Objekt verworfen wird, nachdem die Bitmapbits entsperrt wurden, aber bevor Meldungen an den UI\-Thread gesendet werden.  Hierdurch wird sichergestellt, dass der UI\-Thread nicht aktualisiert wird, bevor die Bitmapbits entsperrt werden.  
+8.  Ändern Sie das Ende der `CChildView::DrawMandelbrot` Methode beim Schließen der `scope_guard` Objekt, nachdem die Bitmapbits entsperrt werden, aber vor dem Senden von Nachrichten an den UI-Thread. Dadurch wird sichergestellt, dass der UI-Thread nicht aktualisiert wird, bevor die Bitmapbits Sperre aufgehoben werden.  
   
-     [!CODE [concrt-mandelbrot#208](../CodeSnippet/VS_Snippets_ConcRT/concrt-mandelbrot#208)]  
+     [!code-cpp[concrt-mandelbrot#208](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_22.cpp)]  
   
-9. Überprüfen Sie, ob das Aktualisieren der Anwendung erfolgreich war, indem Sie sie erstellen und ausführen.  
+9. Stellen Sie sicher, dass die Anwendung erfolgreich aktualisiert wurde, indem Sie erstellen und ausführen.  
   
- Wenn Sie die Größe des Fensters ändern, wird die Zeichenarbeit nur für die abschließende Fenstergröße ausgeführt.  Außerdem werden alle aktiven Zeichenaufgaben abgebrochen, wenn das Fenster zerstört wird.  
+ Beim Ändern der Größe des Fensters erfolgt nur für die Größe des endgültigen Fensters zeichnen arbeiten. Wenn das Fenster zerstört wird, werden alle aktiven zeichnen Aufgaben auch abgebrochen.  
   
- \[[Nach oben](#top)\]  
+ [[Nach oben](#top)]  
   
-## Siehe auch  
- [Exemplarische Vorgehensweisen für die Concurrency Runtime](../../parallel/concrt/concurrency-runtime-walkthroughs.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Concurrency Runtime Exemplarische Vorgehensweisen](../../parallel/concrt/concurrency-runtime-walkthroughs.md)   
  [Aufgabenparallelität](../../parallel/concrt/task-parallelism-concurrency-runtime.md)   
  [Asynchrone Nachrichtenblöcke](../../parallel/concrt/asynchronous-message-blocks.md)   
- [Funktionen zum Übergeben von Meldungen](../../parallel/concrt/message-passing-functions.md)   
+ [Funktionen zum Übergeben von Nachrichten](../../parallel/concrt/message-passing-functions.md)   
  [Parallele Algorithmen](../../parallel/concrt/parallel-algorithms.md)   
- [Abbruch](../../parallel/concrt/cancellation-in-the-ppl.md)   
- [MFC\-Desktopanwendungen](../../mfc/mfc-desktop-applications.md)
+ [Abbruch in der PPL](cancellation-in-the-ppl.md)   
+ [MFC-Desktopanwendungen](../../mfc/mfc-desktop-applications.md)

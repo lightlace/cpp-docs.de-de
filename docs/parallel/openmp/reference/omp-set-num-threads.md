@@ -1,32 +1,31 @@
 ---
-title: "omp_set_num_threads | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_set_num_threads"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_set_num_threads OpenMP function"
+title: Omp_set_num_threads | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_set_num_threads
+dev_langs: C++
+helpviewer_keywords: omp_set_num_threads OpenMP function
 ms.assetid: dae0bf3f-cd7a-4413-89de-6149ac1f4fa7
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 49383e47c161c7cec59f3f0fb7c618f4c4924655
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# omp_set_num_threads
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Legt die Anzahl der Threads in den folgenden Bereichen paralleler fest, sofern kein Überschreiben durch eine [num\_threads](../../../parallel/openmp/reference/num-threads.md)\-Klausel.  
+# <a name="ompsetnumthreads"></a>omp_set_num_threads
+Die Anzahl der Threads in nachfolgenden parallele Regionen, legt fest, es sei denn, durch Überschreiben einer [Num_threads](../../../parallel/openmp/reference/num-threads.md) Klausel.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void omp_set_num_threads(  
@@ -34,17 +33,17 @@ void omp_set_num_threads(
 );  
 ```  
   
-## Hinweise  
- Hierbei ist:  
+## <a name="remarks"></a>Hinweise  
+ wobei  
   
  `num_threads`  
- Die Anzahl von Threads im parallelen Bereich.  
+ Die Anzahl der Threads in der parallelen Bereich.  
   
-## Hinweise  
- Weitere Informationen finden Sie unter [3.1.1 omp\_set\_num\_threads Function](../../../parallel/openmp/3-1-1-omp-set-num-threads-function.md).  
+## <a name="remarks"></a>Hinweise  
+ Weitere Informationen finden Sie unter [3.1.1 Omp_set_num_threads-Funktion](../../../parallel/openmp/3-1-1-omp-set-num-threads-function.md).  
   
-## Beispiel  
- Weitere Informationen finden Sie unter [omp\_get\_num\_threads](../../../parallel/openmp/reference/omp-get-num-threads.md) als ein Beispiel für die Verwendung von `omp_set_num_threads`.  
+## <a name="example"></a>Beispiel  
+ Finden Sie unter [Omp_get_num_threads](../../../parallel/openmp/reference/omp-get-num-threads.md) ein Beispiel der Verwendung von `omp_set_num_threads`.  
   
-## Siehe auch  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+## <a name="see-also"></a>Siehe auch  
+ [Funktionen](../../../parallel/openmp/reference/openmp-functions.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,9 +21,7 @@ f1_keywords:
 - random/std::cauchy_distribution::param_type::b
 - random/std::cauchy_distribution::param_type::operator==
 - random/std::cauchy_distribution::param_type::operator!=
-- random/std::cauchy_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::cauchy_distribution [C++]
 - std::cauchy_distribution [C++], reset
@@ -36,16 +33,16 @@ helpviewer_keywords:
 - std::cauchy_distribution [C++], param_type
 - std::cauchy_distribution [C++], param_type
 ms.assetid: 21522351-f2f1-46d9-97f0-d358c932356c
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 53ecdd04ebb24c6380e61f8bc5536d24df4dc21b
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: c989548d8edeffb537a0095fab9daf8207a830ff
-ms.contentlocale: de-de
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="cauchydistribution-class"></a>cauchy_distribution-Klasse
 Generiert eine Cauchy-Verteilung.  
@@ -83,9 +80,9 @@ public:
   
 ### <a name="parameters"></a>Parameter  
 *RealType*  
-Der Gleitkommaergebnistyp. Der Standardwert ist `double`. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).  
+Der Gleitkommaergebnistyp. Der Standardwert ist `double`. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).  
   
-*URNG* Das einheitliche Zufallszahlengenerator-Modul. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).  
+*URNG* Das einheitliche Zufallszahlengenerator-Modul. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).  
 
 ## <a name="remarks"></a>Hinweise  
 Die Vorlagenklasse beschreibt eine Verteilung, die Werte eines benutzerdefinierten Gleitkommatyps produziert. Wenn kein entsprechend der Cauchy-Verteilung verteilter Wert ausgegeben wird, geben Sie `double` ein. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.  
@@ -107,7 +104,7 @@ Die `operator()`-Memberfunktionen geben den nächsten generierten Wert von entwe
   
 Weitere Informationen zu Verteilungsklassen und ihren Membern finden Sie unter [\<random>](../standard-library/random.md).  
   
-Ausführliche Informationen über die Cauchy-Verteilung finden Sie im Wolfram MathWorld-Artikel [Cauchy Distribution (Cauchy-Verteilung)](http://go.microsoft.com/fwlink/LinkId=400523).  
+Ausführliche Informationen über die Cauchy-Verteilung finden Sie im Wolfram MathWorld-Artikel [Cauchy Distribution (Cauchy-Verteilung)](http://go.microsoft.com/fwlink/p/?linkid=400523).  
   
 ## <a name="example"></a>Beispiel  
   
@@ -272,7 +269,7 @@ Die für die Erstellung der Verteilung verwendete `param_type`-Struktur.
   
 Mit dem ersten Konstruktor wird ein Objekt erstellt, in dessen gespeichertem `a`-Wert der Wert *a* enthalten ist und dessen gespeicherter `b`-Wert den Wert *b* enthält.  
   
-Mit dem zweiten Konstruktor wird ein Objekt erstellt, dessen gespeicherte Parameter von *parm* initialisiert werden. Sie können die aktuellen Parameter einer vorhandenen Verteilung abrufen und festlegen, indem Sie die Memberfunktion `param()` aufrufen.  
+Mit dem zweiten Konstruktor wird ein Objekt erstellt, dessen gespeicherte Parameter aus *parm* initialisiert werden. Sie können die aktuellen Parameter einer vorhandenen Verteilung abrufen und festlegen, indem Sie die Memberfunktion `param()` aufrufen.  
   
 ##  <a name="param_type"></a> cauchy_distribution::param_type  
 Speichert alle Parameter der Verteilung.  
@@ -306,7 +303,6 @@ Diese Struktur kann bei der Instanziierung an den Klassenkonstruktor des Verteil
   
 ## <a name="see-also"></a>Siehe auch  
 [\<random>](../standard-library/random.md)
-
 
 
 

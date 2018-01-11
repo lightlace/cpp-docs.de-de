@@ -33,11 +33,12 @@ caps.latest.revision: "32"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 43772dff0e09b7160c1ec28a6c62d341c124892e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fac8fe59fe5dbfb101ec0881dbf17925cf048caa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcmenubutton-class"></a>CMFCMenuButton-Klasse
 Eine Schaltfläche, die ein Popupmenü anzeigt und die vom Benutzer gewählte Menüoption meldet.  
@@ -48,7 +49,7 @@ Eine Schaltfläche, die ein Popupmenü anzeigt und die vom Benutzer gewählte Me
 class CMFCMenuButton : public CMFCButton  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -65,7 +66,7 @@ class CMFCMenuButton : public CMFCButton
   
 ### <a name="data-members"></a>Datenmember  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |[CMFCMenuButton::m_bOSMenu](#m_bosmenu)|Gibt an, ob die Standard-System-Popupmenü angezeigt oder verwendet [CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).|  
 |[CMFCMenuButton::m_bRightArrow](#m_brightarrow)|Gibt an, ob das Menü das Popupmenü unterhalb oder rechts neben der Schaltfläche angezeigt wird.|  

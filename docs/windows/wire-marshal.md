@@ -1,32 +1,33 @@
 ---
-title: "wire_marshal | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.wire_marshal"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "wire_marshal attribute"
+title: Wire_marshal | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.wire_marshal
+dev_langs: C++
+helpviewer_keywords: wire_marshal attribute
 ms.assetid: 244f9d72-776d-4ebd-b60a-cee600a126b5
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a5f61e753e6b87f2dbdbd5fcfe7052ddf8e00724
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# wire_marshal
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gibt einen Datentyp an, der für die Übertragung anstelle eines anwendungsspezifischen Datentyps verwendet wird.  
+# <a name="wiremarshal"></a>wire_marshal
+Gibt einen Datentyp, der für die Übertragung anstelle eines Typs programmspezifische Daten verwendet wird.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -34,11 +35,11 @@ Gibt einen Datentyp an, der für die Übertragung anstelle eines anwendungsspezi
   
 ```  
   
-## Hinweise  
- Das Attribut **wire\_marshal** C\+\+ verfügt über die gleichen Funktionen wie das [wire\_marshal](http://msdn.microsoft.com/library/windows/desktop/aa367309) MIDL\-Attribut.  
+## <a name="remarks"></a>Hinweise  
+ Die **Wire_marshal** C++-Attribut hat die gleiche Funktionalität wie die [Wire_marshal](http://msdn.microsoft.com/library/windows/desktop/aa367309) MIDL-Attribut.  
   
-## Beispiel  
- Im folgenden Code wird die Verwendung von **wire\_marshal**an:  
+## <a name="example"></a>Beispiel  
+ Der folgende Code veranschaulicht die Verwendung der **Wire_marshal**:  
   
 ```  
 // cpp_attr_ref_wire_marshal.cpp  
@@ -56,20 +57,19 @@ Gibt einen Datentyp an, der für die Übertragung anstelle eines anwendungsspezi
 [export, wire_marshal(TWO_X_TWO_BYTE_DATA)] typedef _FOUR_BYTE_DATA FOUR_BYTE_DATA;  
 ```  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
 |**Betrifft**|`typedef`|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Keiner|  
+|**Ungültige Attribute**|Keiner|  
   
- Weitere Informationen über das kontexte finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [IDL-Attribute](../windows/idl-attributes.md)   
+ [typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)   

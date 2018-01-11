@@ -1,11 +1,10 @@
 ---
-title: uint_2-Klasse | Microsoft-Dokumentation
+title: uint_2-Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,34 +33,18 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_2::g
 - amp_short_vectors/Concurrency::graphics::uint_2::operator++
 - amp_short_vectors/Concurrency::graphics::uint_2::rg
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 9fcc9129-72b1-4da7-9012-4d3be15f1c52
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: de110d40d2885353db87813a530af33ba7d8bbd4
-ms.contentlocale: de-de
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 60d3379da90611fe51b5ebb3bc6cdc2dbf4968d9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uint2-class"></a>uint_2-Klasse
 Stellt einen kurzen Vektor von zwei ganze Zahlen ohne Vorzeichen dar.  
@@ -72,7 +55,7 @@ Stellt einen kurzen Vektor von zwei ganze Zahlen ohne Vorzeichen dar.
 class uint_2;  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-typedefs"></a>Öffentliche Typedefs  
   
@@ -108,23 +91,23 @@ class uint_2;
 |Name|Beschreibung|  
 |----------|-----------------|  
 |uint_2::--||  
-|uint_2:: % =||  
+|uint_2:: Operator% =||  
 |uint_2:: & =||  
 |uint_2:: * =||  
 |uint_2:: Operator / =||  
 |uint_2:: ^ =||  
-|uint_2:: | =||  
+|uint_2:: &#124; =||  
 |uint_2:: ~||  
-|uint_2:: Operator++||  
+|uint_2:: Operator++-||  
 |uint_2:: Operator +=||  
-|uint_2::\<=||  
+|uint_2:: <\<=||  
 |uint_2:: =||  
 |uint_2:: Operator-=||  
 |uint_2:: >> =||  
   
 ### <a name="public-constants"></a>Öffentliche Konstanten  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |[Size-Konstante](#uint_2__size)||  
   
@@ -201,7 +184,7 @@ explicit inline uint_2(
   
 ### <a name="parameters"></a>Parameter  
  `_V0`  
- Der Wert 0-Element zu initialisieren.  
+ Der Wert 0-Element initialisiert werden.  
   
  `_V1`  
  Der Wert 1 Element initialisiert werden.  
@@ -220,4 +203,3 @@ static const int size = 2;
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)
-

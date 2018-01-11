@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vc.appwiz.mfc.exe.database
-dev_langs:
-- C++
-helpviewer_keywords:
-- MFC Application Wizard, database support
+f1_keywords: vc.appwiz.mfc.exe.database
+dev_langs: C++
+helpviewer_keywords: MFC Application Wizard, database support
 ms.assetid: 9ddf4558-fd41-4ac7-8d9b-c93d9c68ab59
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7b7c9aaa6389f5e86a51348a8b5423260c4c76e3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 875df8f8205d132cf6bcafe536c221876a5e3e51
-ms.contentlocale: de-de
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="database-support-mfc-application-wizard"></a>Datenbankunterstützung, MFC-Anwendungs-Assistent
 Diese Seite enthält Optionen, mit denen Sie die Ebene der Datenbank angeben können (plus einer Datenquelle, falls erforderlich) für das Projekt zu unterstützen.  
@@ -71,7 +67,7 @@ Diese Seite enthält Optionen, mit denen Sie die Ebene der Datenbank angeben kö
  **Alle Spalten binden**  
  ODBC-nur für Clients verfügbar. Gibt an, ob alle Spalten in der ausgewählten Tabelle gebunden sind. Wenn Sie dieses Kontrollkästchen aktivieren, werden alle Spalten gebunden. Wenn Sie dieses Kontrollkästchen nicht aktivieren, werden keine Spalten gebunden, und Sie müssen diese manuell in die Recordset-Klasse binden.  
   
- **Typ**  
+ **Type**  
  ODBC-nur für Clients verfügbar. Gibt an, ob das Recordset ein Dynaset oder eine Momentaufnahme ist, wie in der folgenden Tabelle beschrieben.  
   
 |Option|Beschreibung|  
@@ -81,4 +77,3 @@ Diese Seite enthält Optionen, mit denen Sie die Ebene der Datenbank angeben kö
   
 ## <a name="see-also"></a>Siehe auch  
  [MFC-Anwendungs-Assistent](../../mfc/reference/mfc-application-wizard.md)
-

@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5e7eed7dbb4fbd7648e02857897dc4f0c541af7c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b55bf95c7abdffe8dd0a0e0071d86f06baad344e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pointerdefault"></a>pointer_default
 Gibt das Standardattribut für die Zeiger für alle Zeiger, mit Ausnahme der obersten Ebene Zeiger, die in Parameterlisten angezeigt werden.  
@@ -34,7 +37,7 @@ Gibt das Standardattribut für die Zeiger für alle Zeiger, mit Ausnahme der obe
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *value*  
+ *Wert*  
  Ein Wert, der beschreibt, den Zeigertyp: **Ptr**, `ref`, oder **eindeutige**.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -51,8 +54,8 @@ Gibt das Standardattribut für die Zeiger für alle Zeiger, mit Ausnahme der obe
 |-|-|  
 |**Betrifft**|`interface`|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|Keine|  
-|**Ungültige Attribute**|Keine|  
+|**Erforderliche Attribute**|Keiner|  
+|**Ungültige Attribute**|Keiner|  
   
  Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   

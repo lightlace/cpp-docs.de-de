@@ -1,59 +1,62 @@
 ---
-title: "Custom Controls in the Dialog Editor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Custom Control"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controls [C++], templates"
-  - "custom controls [Visual Studio], dialog boxes"
-  - "custom controls [Visual Studio]"
-  - "dialog box controls, custom (user) controls"
-  - "Dialog editor, custom controls"
+title: Benutzerdefinierte Steuerelemente im Dialog-Editor | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Custom Control
+dev_langs: C++
+helpviewer_keywords:
+- controls [C++], templates
+- custom controls [Visual Studio], dialog boxes
+- custom controls [Visual Studio]
+- dialog box controls, custom (user) controls
+- Dialog editor, custom controls
 ms.assetid: f494b314-4000-4bbe-bbd0-4b18fb71ede1
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c507f4d252100055d4ed7f24e9c407bf8edb82d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Custom Controls in the Dialog Editor
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Der Dialog\-Editor ermöglicht die Verwendung "angepasster" oder "benutzerdefinierter" Steuerelemente in einer Dialogfeldvorlage.  
+# <a name="custom-controls-in-the-dialog-editor"></a>Benutzerdefinierte Steuerelemente im Dialog-Editor
+Dialog-Editor können Sie vorhandene verwenden "custom" oder "User"-Steuerelemente in einer Dialogfeldvorlage.  
   
 > [!NOTE]
->  Benutzerdefinierte Steuerelemente dieser Art dürfen nicht mit ActiveX\-Steuerelementen verwechselt werden.  ActiveX\-Steuerelemente wurden zeitweise auch als benutzerdefinierte OLE\-Steuerelemente bezeichnet.  Außerdem sollten diese Steuerelemente auch nicht mit den ownerdrawn Steuerelementen in Windows verwechselt werden.  
+>  Benutzerdefinierte Steuerelemente in diesem Sinn dürfen nicht mit ActiveX-Steuerelementen verwechselt werden. ActiveX-Steuerelemente wurden benutzerdefinierte OLE-Steuerelemente bezeichnet. Verwechseln Sie nicht auch diese Steuerelemente mit den ownerdrawn-Steuerelementen in Windows.  
   
- Diese Funktion soll Ihnen die Verwendung von Steuerelementen ermöglichen, die nicht zum Lieferumfang von Windows gehören.  Zur Laufzeit wird das Steuerelement mit einer Fensterklasse \(nicht identisch mit einer C\+\+\-Klasse\) verknüpft.  Ein gängigeres Verfahren, dieselbe Aufgabe auszuführen, besteht in der Installation eines beliebigen Steuerelements, z. B. eines statischen Steuerelements, im Dialogfeld.  Anschließend entfernen Sie zur Laufzeit das Steuerelement in der [OnInitDialog](../Topic/CDialog::OnInitDialog.md)\-Funktion und ersetzen es durch Ihr eigenes benutzerdefiniertes Steuerelement.  
+ Diese Funktion dient als die vom Windows-Steuerelemente verwenden können. Zur Laufzeit ist eine Fensterklasse (nicht identisch mit einer C++-Klasse) zugeordnet das Steuerelement. Einem häufiger für die gleiche Aufgabe besteht darin, jedes Steuerelement, z. B. ein statisches Steuerelement in einem Dialogfeld installieren. Klicken Sie dann zur Laufzeit, in der [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) -Funktion, das entsprechende Steuerelement entfernen und durch Ihr eigenes benutzerdefiniertes Steuerelement ersetzen.  
   
- Dies ist ein altbewährtes Verfahren.  Heute wird in den meisten Fällen angeraten, ein ActiveX\-Steuerelement zu schreiben oder eine Unterklasse für ein allgemeines Windows\-Steuerelement zu erstellen.  
+ Dies ist eine alte Technik. Heute sind in den meisten Fällen empfohlen, ein ActiveX-Steuerelement oder eine Unterklasse eines allgemeinen Windows-Steuerelements zu schreiben.  
   
- Für benutzerdefinierte Steuerelemente werden folgende Tasks unterstützt:  
+ Für diese benutzerdefinierte Steuerelemente werden können nur:  
   
--   Festlegen der Position im Dialogfeld.  
+-   Festlegen des Speicherorts im Dialogfeld an.  
   
 -   Eingeben einer Beschriftung.  
   
--   Kennzeichnen des Namens der steuerelementspezifischen Windows\-Klasse \(das Steuerelement muss vom Anwendungscode unter diesem Namen registriert werden\).  
+-   Identifizieren den Namen des Windows-Klasse des Steuerelements (der Anwendungscode muss das Steuerelement mit diesem Namen registriert).  
   
--   Eingeben eines hexadezimalen 32\-Bit\-Werts, der den Steuerelementstil festlegt.  
+-   Geben Sie einen 32-Bit-Hexadezimalwert, das Format des Steuerelements festlegt.  
   
--   Festlegen des erweiterten Stiles.  
+-   Festlegen der erweiterten Stils.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  Win32  
   
-## Siehe auch  
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)   
  [Steuerelemente](../mfc/controls-mfc.md)
+

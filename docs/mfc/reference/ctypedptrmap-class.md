@@ -25,11 +25,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b35de0ea2b0f7e11dddcdf7b99f2ab01dcf7a7de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9056fc73e2718b2a21936c39e630f4d4fddf1eed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctypedptrmap-class"></a>CTypedPtrMap-Klasse
 Stellt einen typsicheren Wrapper für Objekte der Zeigerzuordnungsklassen `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`und `CMapStringToPtr`bereit.  
@@ -51,7 +52,7 @@ class CTypedPtrMap : public BASE_CLASS
  `VALUE`  
  Die Klasse des Objekts in der Zuordnung gespeichert.  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
@@ -97,7 +98,7 @@ void GetNextAssoc(
  `rPosition`  
  Gibt einen Verweis auf eine **POSITION** von einem vorherigen zurückgegebene Wert `GetNextAssoc` oder `BASE_CLASS` **:: GetStartPosition** aufrufen.  
   
- *SCHLÜSSEL*  
+ *KEY*  
  Der Vorlagenparameter, den Typ der Schlüssel der Zuordnung angibt.  
   
  `rKey`  
@@ -170,7 +171,7 @@ BOOL RemoveKey(KEY key);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *SCHLÜSSEL*  
+ *KEY*  
  Der Vorlagenparameter, den Typ der Schlüssel der Zuordnung angibt.  
   
  `key`  
@@ -190,7 +191,7 @@ void SetAt(KEY key, VALUE newValue);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *SCHLÜSSEL*  
+ *KEY*  
  Der Vorlagenparameter, den Typ der Schlüssel der Zuordnung angibt.  
   
  `key`  

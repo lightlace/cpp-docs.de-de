@@ -1,29 +1,30 @@
 ---
-title: "A.27   Use of C99 Variable Length Arrays"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "A.27 Verwendung von Arrays mit variabler Länge C99 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 8e542701-39f9-4f28-ab3a-840e8e669723
-caps.latest.revision: 8
-caps.handback.revision: "8"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4bf3136c4fb4c5c14b728acbc61f3fbf66ce08bd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# A.27   Use of C99 Variable Length Arrays
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Im folgenden Beispiel wird veranschaulicht, wie C99 Arrays variabler Länge \(VLAs\) in `firstprivate`\-Direktive \([2.7.2.2 Abschnitt](../../parallel/openmp/2-7-2-2-firstprivate.md) auf Seite 26\).  
+# <a name="a27---use-of-c99-variable-length-arrays"></a>A.27   Verwenden von C99-Arrays variabler Länge
+Im folgenden Beispiel wird veranschaulicht, wie C99 variabler Länge Arrays (VLAs) in einem `firstprivate` Richtlinie ([Abschnitt 2.7.2.2](../../parallel/openmp/2-7-2-2-firstprivate.md) auf Seite 26).  
   
 > [!NOTE]
->  Arrays mit variabler Länge werden nicht nur in Visual C\+\+ unterstützt.  
+>  Arrays mit variabler Länge werden derzeit nicht in Visual C++ unterstützt.  
   
 ```  
 void f(int m, int C[m][m])  

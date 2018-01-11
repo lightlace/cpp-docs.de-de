@@ -1,46 +1,46 @@
 ---
-title: "&lt;c&gt; (Visual C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "<c>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<c> C++ XML-Tag"
-  - "c C++-XML-Tag"
+title: '&lt;c&gt; (Visual C++) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: <c>
+dev_langs: C++
+helpviewer_keywords:
+- <c> C++ XML tag
+- c C++ XML tag
 ms.assetid: 3b23fc0f-e10d-4dd0-b197-48a46cbddd9f
-caps.latest.revision: 10
-caps.handback.revision: "10"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b8d4ea984864975196251c9f362283a0df1932cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# &lt;c&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Das \<c\>\-Tag gibt diesen Text innerhalb einer Beschreibung sollte als Code gekennzeichnet sind.  Zum Angeben mehrerer Zeilen als Code wird [\<code\>](../ide/code-visual-cpp.md) verwendet.  
+# <a name="ltcgt-visual-c"></a>&lt;c&gt; (Visual C++)
+Die \<c >-Tag gibt an, dass Text in einer Beschreibung als Code markiert werden soll. Zum Angeben mehrerer Zeilen als Code wird [\<code>](../ide/code-visual-cpp.md) verwendet.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <c>text</c>  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `text`  
  Der Text, den Sie als Code angeben möchten.  
   
-## Hinweise  
- Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit ["\/doc"](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.  
+## <a name="remarks"></a>Hinweise  
+ Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // xml_c_tag.cpp  
@@ -61,5 +61,5 @@ public:
 };  
 ```  
   
-## Siehe auch  
- [XML\-Dokumentation](../ide/xml-documentation-visual-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [XML-Dokumentation](../ide/xml-documentation-visual-cpp.md)

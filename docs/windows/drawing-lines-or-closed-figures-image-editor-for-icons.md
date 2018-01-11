@@ -1,69 +1,73 @@
 ---
-title: "Drawing Lines or Closed Figures (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "closed figures, drawing"
-  - "lines [C++], painting"
-  - "lines [C++], drawing"
-  - "Image editor [C++], drawing lines"
-  - "shapes, drawing"
+title: "Zeichnen von Linien oder geschlossenen Körpern (Bildbearbeitung für Symbole) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- closed figures, drawing
+- lines [C++], painting
+- lines [C++], drawing
+- Image editor [C++], drawing lines
+- shapes, drawing
 ms.assetid: 7edd86db-77b1-451f-8001-bbfed9c6304f
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1c2f5169c6340b756c31e1986e46b52f48b4edd5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Drawing Lines or Closed Figures (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die im Grafik\-Editor enthaltenen Tools zum Zeichnen von Linien und geschlossenen Körpern funktionieren alle nach demselben Prinzip: Sie positionieren die Einfügemarke an einer Stelle und ziehen sie an eine andere Stelle.  Bei Linien positionieren Sie die Einfügemarke auf den Endpunkten.  Bei geschlossenen Körpern positionieren Sie sie auf den gegenüberliegenden Ecken eines Rechtecks, das den Körper begrenzt.  
+# <a name="drawing-lines-or-closed-figures-image-editor-for-icons"></a>Zeichnen von Linien oder geschlossenen Körpern (Bildbearbeitung für Symbole)
+Grafik-Editor-tools für das Zeichnen von Linien und alle geschlossene Körpern funktionieren auf die gleiche Weise: die Einfügemarke an einer Stelle setzen und in eine andere ziehen. Für Zeilen werden diese Punkte die Endpunkte an. Diese Punkte sind geschlossenen Körpern gegenüberliegenden Ecken eines Rechtecks umgebende in der Abbildung.  
   
- Die Stärke von Linien hängt vom aktuell ausgewählten Pinsel und die von Umrisslinien geschlossener Körper von der aktuell ausgewählten Stärke ab.  Linien und alle umrahmten wie auch gefüllten Körper werden in der aktuellen Vordergrundfarbe gezeichnet, wenn Sie die linke Maustaste drücken. Diese Objekte werden in der aktuellen Hintergrundfarbe gezeichnet, wenn Sie die rechte Maustaste drücken.  
+ Zeilen werden in eine Breite bestimmt die aktuelle Auswahl der Pinsel gezeichnet und begrenzte Zahlen werden in eine Breite bestimmt die aktuelle Breite Auswahl gezeichnet. Zeilen und alle Zahlen, sowohl eingebunden und gefüllt ist, werden gezeichnet, wenn Sie mit die rechten Maustaste drücken in die aktuelle Vordergrundfarbe, wenn Sie die linke Maustaste drücken oder in der aktuellen Hintergrundfarbe.  
   
-### So zeichnen Sie eine Linie  
+### <a name="to-draw-a-line"></a>So zeichnen Sie eine Linie  
   
-1.  Klicken Sie auf der [Symbolleiste des Grafik\-Editors](../mfc/toolbar-image-editor-for-icons.md) \(oder unter dem Befehl **Tools** im Menü **Bild**\) auf das Tool **Linie**.  
+1.  Auf der [Grafik-Editor-Symbolleiste](../windows/toolbar-image-editor-for-icons.md) (oder aus der **Image** Menü **Tools** Befehl), klicken Sie auf die **Zeile** Tool.  
   
-2.  Wählen Sie ggf. Farben und einen Pinsel aus:  
+2.  Bei Bedarf einen Pinsel und Farben auswählen:  
   
-    -   Klicken Sie in der [Farbpalette](../windows/colors-window-image-editor-for-icons.md) mit der linken Maustaste, um eine Vordergrundfarbe auszuwählen, oder mit der rechten Maustaste, um eine Hintergrundfarbe auszuwählen.  
+    -   In der [Farben (Palette)](../windows/colors-window-image-editor-for-icons.md), klicken Sie auf die linke Maustaste gedrückt, wählen Sie eine Vordergrundfarbe oder der rechten Maustaste auf eine Hintergrundfarbe auswählen.  
   
-    -   Klicken Sie in der [Optionsauswahl](../mfc/toolbar-image-editor-for-icons.md) auf eine Form, die den gewünschten Pinsel darstellt.  
+    -   In der [Optionsauswahl](../windows/toolbar-image-editor-for-icons.md), klicken Sie auf eine Form, die den gewünschten Pinsel darstellt.  
   
-3.  Positionieren Sie den Mauszeiger auf dem Anfangspunkt der Linie.  
+3.  Platzieren Sie den Mauszeiger am Anfangspunkt der Linie.  
   
-4.  Ziehen Sie den Mauszeiger auf den Endpunkt der Linie.  
+4.  Ziehen Sie in der Zeile Endpunkt.  
   
-### So zeichnen Sie einen geschlossenen Körper  
+### <a name="to-draw-a-closed-figure"></a>Eine geschlossene Form gezeichnet werden soll.  
   
-1.  Klicken Sie auf der Symbolleiste des Grafik\-Editors \(oder unter dem Befehl **Tools** im Menü **Bild**\) auf das Tool zum Zeichnen geschlossener Körper.  
+1.  Auf der **Grafik-Editor** Symbolleiste (oder aus der **Image** Menü **Tools** Befehl), klicken Sie auf eine **Zeichnen geschlossener Körper** Tool.  
   
-     Mit den Tools zum Zeichnen geschlossener Körper erstellen Sie die Körper, die auf der jeweiligen Schaltfläche dargestellt sind.  
+     Die **Zeichnen geschlossener Körper** Tools erstellen Zahlen auf der jeweiligen Schaltfläche dargestellt.  
   
-2.  Wählen Sie ggf. Farben und eine Linienstärke aus.  
+2.  Bei Bedarf eine Linienstärke und Farben auswählen.  
   
-3.  Verschieben Sie den Mauszeiger auf eine Ecke des rechteckigen Bereichs, in dem Sie den Körper zeichnen möchten.  
+3.  Bewegen Sie den Zeiger auf eine Ecke des rechteckigen Bereichs, der in der Abbildung gezeichnet werden sollen.  
   
-4.  Ziehen Sie den Mauszeiger zur diagonal gegenüberliegenden Ecke.  
+4.  Ziehen Sie den Mauszeiger in die diagonal gegenüber Ecke aus.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
   
  Anforderungen  
   
- None  
+ Keiner  
   
-## Siehe auch  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)   
- [Working with Color](../mfc/working-with-color-image-editor-for-icons.md)
+## <a name="see-also"></a>Siehe auch  
+ [Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Bearbeiten von Grafischen Ressourcen](../windows/editing-graphical-resources-image-editor-for-icons.md)   
+ [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)   
+ [Arbeiten mit Farben](../windows/working-with-color-image-editor-for-icons.md)
+

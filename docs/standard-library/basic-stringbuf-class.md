@@ -41,11 +41,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 06d149e6a3f69096a86d84ebe3401b5dc30e748a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7b1b41f1a12f6b9e97db6ad3014b047bbc0f4b72
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicstringbuf-class"></a>basic_stringbuf-Klasse
 Beschreibt einen die Übertragung zu und aus einer Sequenz von in einem Arrayobjekt gespeicherten Elementen von Elementen des Typs `Elem` steuernden Streampuffer, dessen Zeichenmerkmale durch die Klasse `Tr` ermittelt werden.  
@@ -83,11 +84,11 @@ class basic_stringbuf : public basic_streambuf<Elem, Tr>
 |-|-|  
 |[basic_stringbuf](#basic_stringbuf)|Konstruiert ein Objekt vom Typ `basic_stringbuf`.|  
   
-### <a name="typedefs"></a>TypeDefs  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[allocator_type](#allocator_type)|Der Type stellt ein Synonym für den Vorlagenparameter `Alloc`dar.|  
+|[allocator_type](#allocator_type)|Der Type stellt ein Synonym für den Vorlagenparameter `Alloc` dar.|  
 |[char_type](#char_type)|Verknüpft einen Typnamen mit dem `Elem`-Vorlagenparameter.|  
 |[int_type](#int_type)|Stellt den Typ im Bereich von `basic_filebuf` dem Typ desselben Namens im Bereich `Tr` gleich.|  
 |[off_type](#off_type)|Stellt den Typ im Bereich von `basic_filebuf` dem Typ desselben Namens im Bereich `Tr` gleich.|  
@@ -112,7 +113,7 @@ class basic_stringbuf : public basic_streambuf<Elem, Tr>
  **Namespace:** std  
   
 ##  <a name="allocator_type"></a> basic_stringbuf::allocator_type  
- Der Type stellt ein Synonym für den Vorlagenparameter `Alloc`dar.  
+ Der Type stellt ein Synonym für den Vorlagenparameter `Alloc` dar.  
   
 ```  
 typedef Alloc allocator_type;  
@@ -246,7 +247,7 @@ virtual pos_type seekoff(
   
 -   Bei `_Way` == `ios_base::end` ist die neue Position das Ende des Streams plus `_Off`.  
   
- Wenn `_Mode & ios_base::in` ungleich null ist, ändert die Funktion die nächste Position, die im Eingabepuffer gelesen werden soll. Wenn `_Mode & ios_base::out` ungleich null ist, ändert die Funktion die nächste Position, die im Ausgabepuffer gelesen werden soll. Damit ein Stream betroffen wird, muss ein Puffer bestehen. Damit eine Positionierung erfolgreich ist, muss die resultierende Streamposition innerhalb der gesteuerten Sequenz liegen. Wenn die Funktion beide Streampositionen betrifft, muss `_Way` `ios_base::beg` oder `ios_base::end` sein. Außerdem müssen beide Streams am gleichen Element positioniert werden. Andernfalls (oder wenn keine Position betroffen ist) tritt bei der Positionierung ein Fehler ein.  
+ Wenn `_Mode & ios_base::in` ungleich null ist, ändert die Funktion die nächste Position, die im Eingabepuffer gelesen werden soll. Wenn `_Mode & ios_base::out` ungleich null ist, ändert die Funktion die nächste Position, die im Ausgabepuffer gelesen werden soll. Damit ein Stream betroffen wird, muss ein Puffer bestehen. Damit eine Positionierung erfolgreich ist, muss die resultierende Streamposition innerhalb der kontrollierten Sequenz liegen. Wenn die Funktion beide Streampositionen betrifft, muss `_Way` `ios_base::beg` oder `ios_base::end` sein. Außerdem müssen beide Streams am gleichen Element positioniert werden. Andernfalls (oder wenn keine Position betroffen ist) tritt bei der Positionierung ein Fehler ein.  
   
  Wenn die Funktion erfolgreich eine der beiden Streampositionen ändern kann, gibt sie die resultierende Streamposition zurück. Andernfalls schlägt sie fehl und gibt eine ungültige Streamposition zurück.  
   
@@ -332,7 +333,7 @@ be
 ```  
   
 ##  <a name="traits_type"></a> basic_stringbuf::traits_type  
- Verknüpft einen Typnamen mit dem Vorlagenparameter **Tr**.  
+ Verknüpft einen Typnamen mit dem **Tr**-Vorlagenparameter.  
   
 ```  
 typedef Tr traits_type;  

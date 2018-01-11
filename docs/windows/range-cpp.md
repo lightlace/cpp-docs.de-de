@@ -1,32 +1,33 @@
 ---
-title: "range (C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.range"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "range attribute"
+title: Bereich (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.range
+dev_langs: C++
+helpviewer_keywords: range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-caps.latest.revision: 10
-caps.handback.revision: "10"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b95b1bfd093a12bca5398c266d6a7c8236140105
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# range (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gibt einen Bereich der zulässigen Werten für seine Argumente oder Felder, deren Werte zur Laufzeit festgelegt sind.  
+# <a name="range-c"></a>range (C++)
+Gibt einen Bereich der zulässigen Werte für die Argumente oder Felder, deren Werte zur Laufzeit festgelegt werden.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -36,17 +37,17 @@ Gibt einen Bereich der zulässigen Werten für seine Argumente oder Felder, dere
 ) ]  
 ```  
   
-#### Parameter  
- *niedrig*  
- Der Wert des unteren Bereich.  
+#### <a name="parameters"></a>Parameter  
+ *low*  
+ Der untere Bereichswert.  
   
- *hoch*  
- Der Wert des oberen Bereich.  
+ *high*  
+ Der Wert der hohe Bereich.  
   
-## Hinweise  
- Das Attribut **Bereich** C\+\+ verfügt über die gleichen Funktionen wie das [Bereich](http://msdn.microsoft.com/library/windows/desktop/aa367151) MIDL\-Attribut.  
+## <a name="remarks"></a>Hinweise  
+ Die **Bereich** C++-Attribut hat die gleiche Funktionalität wie die [Bereich](http://msdn.microsoft.com/library/windows/desktop/aa367151) MIDL-Attribut.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cpp_attr_ref_range.cpp  
@@ -62,22 +63,21 @@ __interface ICustom {
 };  
 ```  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
-|**Betrifft**|Schnittstellenmethode Schnittstellen, Parameter|  
+|**Betrifft**|Schnittstellenmethode Schnittstellenparameter|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Keiner|  
+|**Ungültige Attribute**|Keiner|  
   
- Weitere Informationen über das kontexte finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [Data Member Attributes](../windows/data-member-attributes.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [IDL-Attribute](../windows/idl-attributes.md)   
+ [Methodenattribut](../windows/method-attributes.md)   
+ [Parameterattribute](../windows/parameter-attributes.md)   
+ [Datenmemberattribute](../windows/data-member-attributes.md)   

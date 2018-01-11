@@ -1,96 +1,103 @@
 ---
-title: "Exemplarische Vorgehensweise: Anpassen von vorhandenem Code f&#252;r die Verwendung einfacher Aufgaben | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Verwenden von einfachen Aufgaben [Concurrency Runtime]"
-  - "Einfache Aufgaben, Verwenden [Concurrency Runtime]"
+title: 'Exemplarische Vorgehensweise: Anpassen von vorhandenem Code Verwendung einfache Aufgaben | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- using lightweight tasks [Concurrency Runtime]
+- lightweight tasks, using [Concurrency Runtime]
 ms.assetid: 1edfe818-d274-46de-bdd3-e92967c9bbe0
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8a50ad04421d7b4bcdc4a2c98de8f5a57b255c75
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Exemplarische Vorgehensweise: Anpassen von vorhandenem Code f&#252;r die Verwendung einfacher Aufgaben
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-In diesem Thema wird erläutert, wie vorhandener Code, der die Windows\-API verwendet, zum Erstellen und Ausführen eines Threads für die Ausführung einer einfachen Aufgabe angepasst wird.  
+# <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>Exemplarische Vorgehensweise: Anpassen von vorhandenem Code für die Verwendung einfacher Aufgaben
+In diesem Thema wird erläutert, wie vorhandener Code, der die Windows-API verwendet, zum Erstellen und Ausführen eines Threads für die Ausführung einer einfachen Aufgabe angepasst wird.  
   
- Eine *einfache Aufgabe* ist eine Aufgabe, die Sie direkt von einem [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md)\-Objekt oder einem [concurrency::ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md)\-Objekt planen.  Einfache Aufgaben sind nützlich, wenn Sie vorhandenen Code anpassen, um die Planungsfunktionalität der Concurrency Runtime zu verwenden.  
+ Ein *einfache Aufgabe* ist eine Aufgabe, die Sie direkt aus Planen einer [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) oder [Concurrency:: ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) Objekt. Einfache Aufgaben sind nützlich, wenn Sie vorhandenen Code anpassen, um die Planungsfunktionalität der Concurrency Runtime zu verwenden.  
   
-## Vorbereitungsmaßnahmen  
- Bevor Sie mit dieser exemplarische Vorgehensweise beginnen, lesen Sie das Thema [Taskplaner](../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
+ Bevor Sie in dieser exemplarischen Vorgehensweise beginnen, lesen Sie das Thema [Taskplaner](../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### **Beschreibung**  
- Das folgende Beispiel veranschaulicht die typische Verwendung der Windows\-API zum Erstellen und Ausführen eines Threads.  In diesem Beispiel wird die [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453)\-Funktion verwendet, um die `MyThreadFunction` in einem separaten Thread aufzurufen.  
+### <a name="description"></a>Beschreibung  
+ Das folgende Beispiel veranschaulicht die typische Verwendung der Windows-API zum Erstellen und Ausführen eines Threads. Dieses Beispiel verwendet die [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) aufzurufenden Funktion der `MyThreadFunction` in einem separaten Thread.  
   
-### Code  
- [!CODE [concrt-windows-threads#1](../CodeSnippet/VS_Snippets_ConcRT/concrt-windows-threads#1)]  
+### <a name="code"></a>Code  
+ [!code-cpp[concrt-windows-threads#1](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_1.cpp)]  
   
-### Kommentare  
+### <a name="comments"></a>Kommentare  
  Folgende Ergebnisse werden zurückgegeben:  
   
-  **Parameters \= 50, 100** Die folgenden Schritte geben an, wie das Codebeispiel angepasst wird, um die Concurrency Runtime zum Durchführen der gleichen Aufgabe zu verwenden.  
+```Output  
+Parameters = 50, 100  
+```  
   
-### So passen Sie das Beispiel an, um eine einfache Aufgabe zu verwenden  
+ Die folgenden Schritte geben an, wie das Codebeispiel angepasst wird, um die Concurrency Runtime zum Durchführen der gleichen Aufgabe zu verwenden.  
   
-1.  Fügen Sie eine `#include`\-Direktive für die Headerdatei concrt.h hinzu.  
+### <a name="to-adapt-the-example-to-use-a-lightweight-task"></a>So passen Sie das Beispiel an, um eine einfache Aufgabe zu verwenden  
   
-     [!CODE [concrt-migration-lwt#2](../CodeSnippet/VS_Snippets_ConcRT/concrt-migration-lwt#2)]  
+1.  Fügen Sie eine `#include`-Direktive für die Headerdatei concrt.h hinzu.  
   
-2.  Fügen Sie für den `concurrency`\-Namespace eine `using`\-Direktive hinzu.  
+ [!code-cpp[concrt-migration-lwt#2](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_2.cpp)]  
   
-     [!CODE [concrt-migration-lwt#3](../CodeSnippet/VS_Snippets_ConcRT/concrt-migration-lwt#3)]  
+2.  Fügen Sie eine `using`-Direktive für den `concurrency`-Namespace hinzu.  
   
-3.  Ändern Sie die Deklaration von `MyThreadFunction` so, dass die `__cdecl`\-Aufrufkonvention verwendet und `void` zurückgegeben wird.  
+ [!code-cpp[concrt-migration-lwt#3](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_3.cpp)]  
   
-     [!CODE [concrt-migration-lwt#4](../CodeSnippet/VS_Snippets_ConcRT/concrt-migration-lwt#4)]  
+3.  Ändern Sie die Deklaration von `MyThreadFunction` so, dass die `__cdecl`-Aufrufkonvention verwendet und `void` zurückgegeben wird.  
   
-4.  Ändern Sie die `MyData`\-Struktur so, dass ein [concurrency::event](../../parallel/concrt/reference/event-class.md)\-Objekt eingeschlossen wird, das der Hauptanwendung den Abschluss der Aufgabe signalisiert.  
+ [!code-cpp[concrt-migration-lwt#4](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_4.cpp)]  
   
-     [!CODE [concrt-migration-lwt#5](../CodeSnippet/VS_Snippets_ConcRT/concrt-migration-lwt#5)]  
+4.  Ändern der `MyData` -Struktur so, dass eine [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) -Objekt, das der hauptanwendung signalisiert, dass die Aufgabe abgeschlossen wurde.  
   
-5.  Ersetzen Sie den Aufruf von `CreateThread` durch einen Aufruf der [concurrency::CurrentScheduler::ScheduleTask](../Topic/CurrentScheduler::ScheduleTask%20Method.md)\-Methode.  
+ [!code-cpp[concrt-migration-lwt#5](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_5.cpp)]  
   
-     [!CODE [concrt-migration-lwt#6](../CodeSnippet/VS_Snippets_ConcRT/concrt-migration-lwt#6)]  
+5.  Ersetzen Sie den Aufruf von `CreateThread` durch einen Aufruf der [Concurrency::CurrentScheduler::ScheduleTask](reference/currentscheduler-class.md#scheduletask) Methode.  
+
   
-6.  Ersetzen Sie den Aufruf von `WaitForSingleObject` durch einen Aufruf der [concurrency::event::wait](../Topic/event::wait%20Method.md)\-Methode, um auf den Abschluss der Aufgabe zu warten.  
+ [!code-cpp[concrt-migration-lwt#6](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_6.cpp)]  
   
-     [!CODE [concrt-migration-lwt#7](../CodeSnippet/VS_Snippets_ConcRT/concrt-migration-lwt#7)]  
+
+6.  Ersetzen Sie den Aufruf von `WaitForSingleObject` durch einen Aufruf der [Concurrency](reference/event-class.md#wait) Methode für den Abschluss der Aufgabe zu warten.  
+
+ [!code-cpp[concrt-migration-lwt#7](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_7.cpp)]  
   
 7.  Entfernen Sie den Aufruf von `CloseHandle`.  
   
 8.  Ändern Sie die Signatur der Definition von `MyThreadFunction` so, dass sie Schritt 3 entspricht.  
   
-     [!CODE [concrt-migration-lwt#8](../CodeSnippet/VS_Snippets_ConcRT/concrt-migration-lwt#8)]  
+ [!code-cpp[concrt-migration-lwt#8](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_8.cpp)]  
   
-9. Rufen Sie am Ende der `MyThreadFunction`\-Funktion die [concurrency::event::set](../Topic/event::set%20Method.md)\-Methode auf, um der Hauptanwendung den Abschluss der Aufgabe zu signalisieren.  
+9. Am Ende der `MyThreadFunction` funktionieren, rufen Sie die [Concurrency::event::set](reference/event-class.md#set) Methode, um die Hauptassembly der Anwendung zu signalisieren, dass der Vorgang abgeschlossen ist.  
   
-     [!CODE [concrt-migration-lwt#9](../CodeSnippet/VS_Snippets_ConcRT/concrt-migration-lwt#9)]  
+ [!code-cpp[concrt-migration-lwt#9](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_9.cpp)]  
   
-10. Entfernen Sie die `return`\-Anweisung von `MyThreadFunction`.  
+10. Entfernen Sie die `return`-Anweisung von `MyThreadFunction`.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### **Beschreibung**  
- Im folgenden vollständigen Beispiel wird eine einfache Aufgabe verwendet, um die `MyThreadFunction`\-Funktion aufzurufen.  
+### <a name="description"></a>Beschreibung  
+ Im folgenden vollständigen Beispiel wird eine einfache Aufgabe verwendet, um die `MyThreadFunction`-Funktion aufzurufen.  
   
-### Code  
- [!CODE [concrt-migration-lwt#1](../CodeSnippet/VS_Snippets_ConcRT/concrt-migration-lwt#1)]  
+### <a name="code"></a>Code  
+ [!code-cpp[concrt-migration-lwt#1](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_10.cpp)]  
   
-### Kommentare  
+### <a name="comments"></a>Kommentare  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Taskplaner](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
- [Scheduler\-Klasse](../../parallel/concrt/reference/scheduler-class.md)
+ [Scheduler-Klasse](../../parallel/concrt/reference/scheduler-class.md)

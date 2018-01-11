@@ -1,74 +1,77 @@
 ---
-title: "Adding Values to a Combo Box Control | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.dialog.combo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "combo boxes [C++], Data property"
-  - "controls [Visual Studio], testing values in combo boxes"
-  - "combo boxes [C++], adding values"
-  - "combo boxes [C++], previewing values"
-  - "controls [C++], testing values in combo boxes"
-  - "Data property"
-  - "combo boxes [C++], testing values"
+title: "Hinzufügen von Werten zu einem Kombinationsfeld-Steuerelement | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.dialog.combo
+dev_langs: C++
+helpviewer_keywords:
+- combo boxes [C++], Data property
+- controls [Visual Studio], testing values in combo boxes
+- combo boxes [C++], adding values
+- combo boxes [C++], previewing values
+- controls [C++], testing values in combo boxes
+- Data property
+- combo boxes [C++], testing values
 ms.assetid: 22a78f98-fada-48b3-90d8-7fa0d8e4de51
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9125ad60648f6f867e1214763a6af164d0239a04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Adding Values to a Combo Box Control
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Solange der Dialog\-Editor geöffnet ist, können Sie einem Kombinationsfeld\-Steuerelement Werte hinzufügen.  
+# <a name="adding-values-to-a-combo-box-control"></a>Hinzufügen von Werten zu einem Kombinationsfeld-Steuerelement
+Sie können Werte an ein Kombinationsfeld-Steuerelement hinzufügen, solange Sie den Dialog-Editor öffnen verfügen.  
   
 > [!TIP]
->  Es empfiehlt sich, dem Kombinationsfeld alle Werte hinzuzufügen, *bevor* seine Größe im Dialog\-Editor geändert wird. Andernfalls ist der Text, der im Kombinationsfeld angezeigt werden soll, möglicherweise abgeschnitten.  
+>  Es ist ratsam, die alle Werte im Kombinationsfeld hinzufügen *vor* Sie seine Größe im Dialog-Editor, oder Sie möglicherweise abgeschnitten, Text, der im Kombinationsfeld-Steuerelement angezeigt werden soll.  
   
-#### So geben Sie Werte in ein Kombinationsfeld\-Steuerelement ein  
+#### <a name="to-enter-values-into-a-combo-box-control"></a>Eingeben von Werten in einem Kombinationsfeld-Steuerelement  
   
-1.  Markieren Sie das Kombinationsfeld\-Steuerelement, indem Sie darauf klicken.  
+1.  Wählen Sie das Kombinationsfeld-Steuerelement, indem Sie darauf klicken.  
   
-2.  Führen Sie im [Eigenschaftenfenster](../Topic/Properties%20Window.md) einen Bildlauf zur Eigenschaft **Daten** durch.  
-  
-    > [!NOTE]
-    >  Wenn die Eigenschaften nach Typ sortiert angezeigt werden, finden Sie **Daten** unter **Verschiedenes**.  
-  
-3.  Klicken Sie in den Wertebereich der Eigenschaft **Daten**, und geben Sie die Datenwerte durch Semikolons getrennt ein.  
+2.  In der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window), führen Sie einen Bildlauf nach unten, um die **Daten** Eigenschaft.  
   
     > [!NOTE]
-    >  Zwischen den Werten sollten keine Leerzeichen stehen, da Leerzeichen die alphabetische Sortierung in der Dropdownliste verfälschen können.  
+    >  Wenn Sie Eigenschaften gruppiert nach Typ anzeigen **Daten** wird angezeigt, der **Verschiedenes** Eigenschaften.  
   
-4.  Nachdem alle Werte eingegeben wurden, klicken Sie auf **Eingeben**.  
+3.  Klicken Sie auf im Bereich "Wert" für die **Daten** Eigenschaft, und geben die Datenwerte, die durch Semikolons getrennt sind.  
   
- Informationen dazu, wie Sie den Dropdownbereich eines Kombinationsfelds vergrößern, finden Sie unter [Festlegen der Größe des Kombinationsfelds und seiner Dropdownliste](../mfc/setting-the-size-of-the-combo-box-and-its-drop-down-list.md).  
+    > [!NOTE]
+    >  Leerzeichen zwischen den Werten kann nicht abgelegt werden, da Leerzeichen in der Dropdown Liste verfälschen beeinträchtigen.  
+  
+4.  Klicken Sie auf **EINGABETASTE** Sie abschließend Werte hinzufügen.  
+  
+ Informationen zum Vergrößern der Dropdownteil des Kombinationsfelds, finden Sie unter [Festlegen der Größe des Kombinationsfelds und seiner Dropdownliste](setting-the-size-of-the-combo-box-and-its-drop-down-list.md).  
   
 > [!NOTE]
->  Win32\-Projekten können mit diesem Verfahren keine Werte hinzugefügt werden \(bei Win32\-Projekten ist die Eigenschaft **Daten** abgeblendet\).  Da Win32\-Projekte keine Bibliotheken aufweisen, die diese Funktionalität unterstützen, müssen die Werte einem Kombinationsfeld in einem Win32\-Projekt programmgesteuert hinzugefügt werden.  
+>  Win32-Projekte, die mit dieser Prozedur können keine Werte hinzugefügt (der **Daten** Eigenschaft ist für Win32-Projekte abgeblendet). Da Win32-Projekte keine Bibliotheken, die diese Funktion hinzuzufügen, müssen Sie Werte in ein Kombinationsfeld mit einem Win32-Projekt programmgesteuert hinzufügen.  
   
-#### So testen Sie die Darstellung von Werten in einem Kombinationsfeld  
+#### <a name="to-test-the-appearance-of-values-in-a-combo-box"></a>So testen Sie die Darstellung der Werte in einem Kombinationsfeld  
   
-1.  Klicken Sie, nachdem Sie Werte für die Eigenschaft **Daten** eingegeben haben, auf der [Symbolleiste des Dialog\-Editors](../mfc/showing-or-hiding-the-dialog-editor-toolbar.md) auf die Schaltfläche **Testen**.  
+1.  Nach dem Eingeben von Werten in der **Daten** -Eigenschaft, klicken Sie auf die **Test** Schaltfläche auf der [Dialog-Editor-Symbolleiste](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).  
   
-     Führen Sie den Bildlauf durch die gesamte Werteliste durch.  Die Werte werden genauso angezeigt, wie sie in der Eigenschaft **Daten** im Eigenschaftenfenster eingegeben wurden.  Rechtschreibung bzw. Groß\-\/Kleinschreibung werden nicht überprüft.  
+     Wiederholen Sie dann einen Bildlauf nach unten der gesamte Werteliste. Werte werden angezeigt, genau so, wie sie in typisiert sind die **Daten** Eigenschaft im Eigenschaftenfenster angezeigt. Es gibt keine Rechtschreib- oder Großschreibung zu überprüfen.  
   
-     Drücken Sie ESC, um zum Dialog\-Editor zurückzukehren.  
+     Drücken Sie ESC, um zum Dialogfeld-Editor zurückzukehren.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
   
-### Anforderungen  
+### <a name="requirements"></a>Anforderungen  
  Win32  
   
-## Siehe auch  
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)   
  [Steuerelemente](../mfc/controls-mfc.md)
+

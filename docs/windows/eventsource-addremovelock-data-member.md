@@ -1,30 +1,31 @@
 ---
-title: "EventSource::addRemoveLock_-Datenmember | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::EventSource::addRemoveLock_"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "addRemoveLock_-Datenmember"
+title: 'EventSource:: Addremovelock_-Datenmember | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::EventSource::addRemoveLock_
+dev_langs: C++
+helpviewer_keywords: addRemoveLock_ data member
 ms.assetid: e2d69256-4891-4aad-ad0b-76479c0bb076
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: df0ecba622e64154479015faeba398043993db49
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# EventSource::addRemoveLock_-Datenmember
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Synchronisiert den Zugriff auf die [Targets_](../windows/eventsource-targets-data-member.md) Array beim Hinzufügen, entfernen oder Ereignishandler aufgerufen.  
+# <a name="eventsourceaddremovelock-data-member"></a>EventSource::addRemoveLock_-Datenmember
+Synchronisiert den Zugriff auf die [Targets_](../windows/eventsource-targets-data-member.md) Array beim Hinzufügen, entfernen oder Ereignishandler aufrufen.  
   
 ## <a name="syntax"></a>Syntax  
   

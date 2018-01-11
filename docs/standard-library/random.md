@@ -15,11 +15,12 @@ caps.latest.revision: "58"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8e89416c18fce65f19ff63c73ef441ee0bdb6165
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5bef9205fd583dd66a0f3cfe791ff95a861435c0
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 Definiert Funktionen zum Generieren von Zufallszahlen und erlaubt die Erstellung gleichförmiger verteilter Zufallszahlen.  
@@ -54,7 +55,7 @@ Definiert Funktionen zum Generieren von Zufallszahlen und erlaubt die Erstellung
   
 -   Die hilfreichste Paarung für die meisten Anwendungen ist das `mt19937`-Modul mit `uniform_int_distribution`, wie später in diesem Artikel im [Codebeispiel](#code) gezeigt.  
   
- Der `<random>`-Header enthält mehrere Optionen zur Auswahl, von denen jede der veralteten C-Laufzeitfunktion `rand()` vorzuziehen ist. Informationen über die Nachteile von `rand()` und die Behebung dieser Schwachpunkte durch `<random>` erhalten Sie in [diesem Video](http://go.microsoft.com/fwlink/?LinkId=397615).  
+ Der `<random>`-Header enthält mehrere Optionen zur Auswahl, von denen jede der veralteten C-Laufzeitfunktion `rand()` vorzuziehen ist. Informationen über die Nachteile von `rand()` und die Behebung dieser Schwachpunkte durch `<random>` erhalten Sie in [diesem Video](http://go.microsoft.com/fwlink/p/?linkid=397615).  
   
 ##  <a name="code"></a> Beispiele  
  Im folgenden Codebeispiel wird veranschaulicht, wie einige Zufallszahlen (in diesem Fall fünf) mit einem Generator erstellt werden, der mit einem nicht-deterministischen Startwert generiert wurde.  
@@ -451,7 +452,7 @@ Dieser Code zeigt zwei verschiedene Randomisierungen – Randomisierungen eines 
   
  <sup>* Wenn mit einem bekannten Startwert ausgestattet.</sup>  
   
- Obwohl der ISO C++-Standard nicht erfordert, dass `random_device` kryptografisch sicher ist, wird es in Visual Studio implementiert, um kryptografische Sicherheit herzustellen. (Der Begriff „kryptografisch sicher“ drückt keine Garantie aus, sondern bezeichnet ein Mindest-Entropieniveau – und damit ein Vorhersagbarkeitsniveau –, das ein bestimmter Randomisierungsalgorithmus aufweist. Weitere Informationen finden Sie im Wikipedia-Artikel [Cryptographically secure pseudorandom number generator (Kryptographisch sicherer Zufallszahlengenerator, in englischer Sprache)](http://go.microsoft.com/fwlink/LinkId=398017).) Da der ISO C++-Standard dies nicht erfordert, können andere Plattformen `random_device` als einfachen Zufallszahlengenerator (kryptografisch nicht sicher) implementieren, der nur als Stammwertequelle für einen anderen Generator geeignet ist. Lesen Sie die Dokumentation für diese Plattformen, wenn Sie `random_device` plattformübergreifend verwenden.  
+ Obwohl der ISO C++-Standard nicht erfordert, dass `random_device` kryptografisch sicher ist, wird es in Visual Studio implementiert, um kryptografische Sicherheit herzustellen. (Der Begriff „kryptografisch sicher“ drückt keine Garantie aus, sondern bezeichnet ein Mindest-Entropieniveau – und damit ein Vorhersagbarkeitsniveau –, das ein bestimmter Randomisierungsalgorithmus aufweist. Weitere Informationen finden Sie im Wikipedia-Artikel [Cryptographically secure pseudorandom number generator (Kryptographisch sicherer Zufallszahlengenerator, in englischer Sprache)](http://go.microsoft.com/fwlink/p/?linkid=398017).) Da der ISO C++-Standard dies nicht erfordert, können andere Plattformen `random_device` als einfachen Zufallszahlengenerator (kryptografisch nicht sicher) implementieren, der nur als Stammwertequelle für einen anderen Generator geeignet ist. Lesen Sie die Dokumentation für diese Plattformen, wenn Sie `random_device` plattformübergreifend verwenden.  
   
  `random_device`-Ergebnisse sind per Definition nicht reproduzierbar, und ein Nebeneffekt ist, dass er eventuell deutlich langsamer läuft als andere URNGs. Die meisten Anwendungen, für die keine kryptografische Sicherheit erforderlich sind, verwenden `mt19937` oder ein ähnliches Modul, obwohl Sie es vielleicht mit einem Aufruf von `random_device` starten möchten, wie im [Codebeispiel](#code) gezeigt.  
   

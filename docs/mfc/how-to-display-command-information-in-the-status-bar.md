@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d5d39a019b485878bfba890f54ab5b941689ad2d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: da836f48592d97b3526c568eb9d9a830428f53a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-display-command-information-in-the-status-bar"></a>Gewusst wie: Anzeigen von Befehlsinformationen in der Statusleiste
 Beim Ausführen der Anwendung-Assistenten, um das Skelett Ihrer Anwendung zu erstellen, können Sie eine Symbolleiste und Statusleiste unterstützen. Nur eine Option im Anwendungs-Assistenten unterstützt. Bei eine Statusleiste vorhanden ist, gibt die Anwendung automatisch hilfreich Feedback, wenn der Benutzer den Zeiger über Elemente in den Menüs bewegt. Die Anwendung wird automatisch eine eingabeaufforderungs-Zeichenfolge in der Statusleiste angezeigt, wenn das Menüelement hervorgehoben ist. Beispielsweise, wenn der Benutzer den Mauszeiger über die **Ausschneiden** Befehl die **bearbeiten** im Menü die Statusleiste möglicherweise "Schneidet die Auswahl und fügt sie in der Zwischenablage" in den Bereich der Statusleiste angezeigt. Die Aufforderung hilft den Benutzer, die den Zweck des Menüelements kennen. Dies funktioniert auch, wenn der Benutzer eine Symbolleisten-Schaltfläche klickt.  

@@ -1,45 +1,44 @@
 ---
-title: "NMAKE: Schwerwiegender Fehler U1035 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "U1035"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "U1035"
+title: 'NMAKE: Schwerwiegender Fehler U1035 | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: U1035
+dev_langs: C++
+helpviewer_keywords: U1035
 ms.assetid: 68f0cc59-007e-4109-ac30-7ac4ac447e6d
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0d7730f882b40c24822cb4b8e2c6a12147cacf2d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# NMAKE: Schwerwiegender Fehler U1035
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Syntaxfehler: ":" oder "\=" Trennzeichen erwartet  
+# <a name="nmake-fatal-error-u1035"></a>NMAKE: Schwerwiegender Fehler U1035
+Syntaxfehler: erwartet ':' oder '=' Trennzeichen  
   
- Es wurde entweder ein Doppelpunkt \(**:**\) oder ein Gleichheitszeichen \(**\=**\) erwartet.  
+ Entweder einen Doppelpunkt (**:**) oder ein Gleichheitszeichen (**=**) wurde erwartet.  
   
-### Dieser Fehler kann eine der folgenden Ursachen haben:  
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Dieser Fehler kann eine der folgenden Ursachen haben:  
   
-1.  Einem Ziel folgte kein Doppelpunkt.  
+1.  Ein Ziel folgte kein Doppelpunkt.  
   
-2.  Einem Ziel mit einem Buchstaben folgte ein Doppelpunkt und kein Leerzeichen, z. B. **a:**.  Dies wurde von NMAKE als Laufwerksangabe interpretiert.  
+2.  Einem Doppelpunkt und ohne Leerzeichen (z. B. a:) folgt ein Ziel mit einem Buchstaben. NMAKE, die sie als eine Laufwerksangabe interpretiert.  
   
-3.  Auf eine Rückschlussregel folgte kein Doppelpunkt.  
+3.  Eine Rückschlussregel folgte kein Doppelpunkt.  
   
-4.  Auf eine Makrodefinition folgte kein Gleichheitszeichen.  
+4.  Eine Makrodefinition wurde nicht von einem Gleichheitszeichen gefolgt werden.  
   
-5.  Auf einen umgekehrten Schrägstrich \(**\\**\), der zum Fortsetzen eines Befehls in einer neuen Zeile verwendet wurde, folgte ein Zeichen.  
+5.  Ein Zeichen gefolgt von einem umgekehrten Schrägstrich (**\\**), um einen Befehl aus, um eine neue Zeile zu fortfahren verwendet wurde.  
   
-6.  Eine Zeichenfolge, die keiner der Syntaxregeln von NMAKE entspricht, ist aufgetreten.  
+6.  Eine Zeichenfolge angezeigt, die keine NMAKE Syntaxregel folgen.  
   
-7.  Das Makefile wurde von einem Textverarbeitungsprogramm formatiert.
+7.  Makefile wurde von einem Textverarbeitungsprogramm formatiert.

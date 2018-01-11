@@ -1,29 +1,30 @@
 ---
-title: "2.5 Combined Parallel Work-sharing Constructs"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.5 kombinierte parallele Arbeitsteilungskonstrukte | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 45936e5a-c62a-4eea-a8f4-232210c9d0c8
-caps.latest.revision: 5
-caps.handback.revision: "5"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 423524c407f829200684e55130df4472e70cbe5c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# 2.5 Combined Parallel Work-sharing Constructs
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Kombinierte parallele Arbeitsteilungs Konstrukte stehen Tastenkombinationen zum Angeben eines parallelen Bereichs, der nur ein Arbeitsteilungs konstrukt enthält.  Die Semantik dieser Direktive ist mit der von **Ähnlichkeit**\-Direktive explizit angeben identisch, die von einem einzelnen Arbeitsteilungs konstrukt folgen.  
+# <a name="25-combined-parallel-work-sharing-constructs"></a>2.5 Kombinierte parallele Arbeitsteilungskonstrukte
+Kombinierte parallele Arbeitsteilungskonstrukte sind die Tastenkombinationen für die Angabe eines parallelen Bereichs, das nur eine Arbeit sharing-Konstrukt enthält. Die Semantik dieser Direktiven sind identisch mit der explizites Angeben einer **parallele** -Direktive gefolgt von einem single-Konstrukt, der auf der Arbeit Freigabe.  
   
- In den folgenden Abschnitten werden die kombinierten parallelen Arbeitsteilungs Konstrukte:  
+ Die folgenden Abschnitte beschreiben die kombinierte parallele Arbeitsteilungskonstrukte:  
   
--   **für Ähnlichkeit** die Direktive.  
+-   die **für parallele** Richtlinie.  
   
--   **parallele Abschnitte** die Direktive.
+-   die **parallel Sections-** Richtlinie.

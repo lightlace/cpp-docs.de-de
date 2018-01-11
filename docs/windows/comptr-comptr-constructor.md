@@ -1,32 +1,33 @@
 ---
-title: "ComPtr::ComPtr-Konstruktor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::ComPtr::ComPtr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ComPtr, Konstruktor"
+title: 'Comptr:: Comptr-Konstruktor | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::ComPtr::ComPtr
+dev_langs: C++
+helpviewer_keywords: ComPtr, constructor
 ms.assetid: eaf70907-beac-458f-a503-2e5e27b0c196
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f8f6234bf2dff0dab801c982a585dc30e338bb7d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# ComPtr::ComPtr-Konstruktor
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Initialisiert eine neue Instanz der ComPtr\-Klasse.  Überladungen bereitstellen Standard, kopieren, werden verschoben und Konvertierungskonstruktoren.  
+# <a name="comptrcomptr-constructor"></a>ComPtr::ComPtr-Konstruktor
+Initialisiert eine neue Instanz der ComPtr-Klasse. Überladungen stellen Standard-, Kopier-, Verschiebe- und Konvertierungskonstruktoren bereit.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 WRL_NOTHROW ComPtr();  
@@ -63,28 +64,28 @@ WRL_NOTHROW ComPtr(
    void *>;  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `U`  
- Der Typ des `other`\-Parameters.  
+ Der Typ des `other`-Parameters.  
   
  `other`  
  Ein Objekt vom Typ `U`.  
   
-## Rückgabewert  
+## <a name="return-value"></a>Rückgabewert  
   
-## Hinweise  
- Der erste Konstruktor ist der Standardkonstruktor, der implictly ein leeres Objekt erstellt.  Der zweite Konstruktor gibt [\_\_nullptr\-Schlüsselwort](../windows/nullptr-cpp-component-extensions.md), der explizit ein leeres Objekt erstellt.  
+## <a name="remarks"></a>Hinweise  
+ Der erste Konstruktor ist der Standardkonstruktor, welche Parameterarrayelements ein leeres Objekt erstellt. Gibt an, der zweite Konstruktor [__nullptr](../windows/nullptr-cpp-component-extensions.md), denen explizit ein leeres Objekt erstellt.  
   
- Der dritte Konstruktor erstellt ein Objekt aus dem Objekt, das von einem Zeiger angegeben wird.  
+ Der dritte Konstruktor erstellt ein Objekt aus dem Objekt, das durch einen Zeiger angegeben.  
   
- Die vierten und fünften Konstruktoren sind Kopierkonstruktoren.  Im fünften Konstruktor kopiert ein Objekt, wenn es an den aktuellen Typ konvertierbar ist.  
+ Die vierten und fünften Konstruktoren sind Kopierkonstruktoren. Der fünfte Konstruktor kopiert ein Objekt aus, wenn er in den aktuellen Typ konvertiert wird.  
   
- Die 6. und 7. Konstruktoren sind Verschiebungskonstruktoren.  Der 7. Konstruktor verschiebt ein Objekt, wenn es an den aktuellen Typ konvertierbar ist.  
+ Die sechsten und siebten Konstruktoren sind bewegungskonstruktoren. Der siebte Konstruktor verschiebt ein Objekt aus, wenn er in den aktuellen Typ konvertiert wird.  
   
-## Anforderungen  
- **Header:**  client.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** client.h  
   
  **Namespace:** Microsoft::WRL  
   
-## Siehe auch  
- [ComPtr\-Klasse](../windows/comptr-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [ComPtr-Klasse](../windows/comptr-class.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 952f27b0c6717d23395453e5159e125370a76804
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9390f3849cd7511054f1248205c5d2c408cb7e71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compound-document-support-mfc-application-wizard"></a>Verbunddokumentunterstützung, MFC-Anwendungs-Assistent
 Geben Sie auf dieser Seite des Assistenten für MFC-Anwendung an, zu welchem Grad die Anwendung zusammengesetzten und active Document-Unterstützung bietet. Die Anwendung muss die Dokument-/Ansichtarchitektur zur Unterstützung von Verbunddokumente und Dokumentvorlagen unterstützen.  

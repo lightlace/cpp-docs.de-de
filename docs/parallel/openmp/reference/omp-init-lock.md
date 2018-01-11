@@ -1,32 +1,31 @@
 ---
-title: "omp_init_lock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_init_lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_init_lock OpenMP function"
+title: Omp_init_lock | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_init_lock
+dev_langs: C++
+helpviewer_keywords: omp_init_lock OpenMP function
 ms.assetid: 7a65e3e2-2e31-4645-964c-c1e82e2a4d0e
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0f89f247a726dd41eaba92e947002d7a28366edd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# omp_init_lock
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Initialisiert eine einfache Zuweisung.  
+# <a name="ompinitlock"></a>omp_init_lock
+Initialisiert eine einfache Sperre.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void omp_init_lock(  
@@ -34,14 +33,14 @@ void omp_init_lock(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `lock`  
- Eine Variable vom Typ [omp\_lock\_t](../../../parallel/openmp/reference/omp-lock-t.md).  
+ Eine Variable vom Typ [Omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md).  
   
-## Hinweise  
- Weitere Informationen finden Sie unter [3.2.1 omp\_init\_lock and omp\_init\_nest\_lock Functions](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md).  
+## <a name="remarks"></a>Hinweise  
+ Weitere Informationen finden Sie unter [3.2.1 Omp_init_lock and Omp_init_nest_lock-Funktionen](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // omp_init_lock.cpp  
@@ -71,45 +70,48 @@ int main() {
 }  
 ```  
   
-  **Bereich gesperrten \- Thread 0 starten**  
-**Thread 0 \- verschlossener Bereich des Endes**  
-**Bereich gesperrten \- Thread 0 starten**  
-**Thread 0 \- verschlossener Bereich des Endes**  
-**Bereich gesperrten \- Thread 0 starten**  
-**Thread 0 \- verschlossener Bereich des Endes**  
-**Bereich gesperrten \- Thread 0 starten**  
-**Thread 0 \- verschlossener Bereich des Endes**  
-**Bereich gesperrten \- Thread 0 starten**  
-**Thread 0 \- verschlossener Bereich des Endes**  
-**Bereich gesperrten \- Thread 1 starten**  
-**Thread 1 \- verschlossener Bereich des Endes**  
-**Bereich gesperrten \- Thread 1 starten**  
-**Thread 1 \- verschlossener Bereich des Endes**  
-**Bereich gesperrten \- Thread 1 starten**  
-**Thread 1 \- verschlossener Bereich des Endes**  
-**Bereich gesperrten \- Thread 1 starten**  
-**Thread 1 \- verschlossener Bereich des Endes**  
-**Bereich gesperrten \- Thread 1 starten**  
-**Thread 1 \- verschlossener Bereich des Endes**  
-**Bereich gesperrten \- Thread 2 starten**  
-**Thread 2 \- verschlossener Bereich des Endes**  
-**Bereich gesperrten \- Thread 2 starten**  
-**Thread 2 \- verschlossener Bereich des Endes**  
-**Bereich gesperrten \- Thread 2 starten**  
-**Thread 2 \- verschlossener Bereich des Endes**  
-**Bereich gesperrten \- Thread 2 starten**  
-**Thread 2 \- verschlossener Bereich des Endes**  
-**Bereich gesperrten \- Thread 2 starten**  
-**Thread 2 \- verschlossener Bereich des Endes**  
-**Bereich gesperrten \- Thread 3 starten**  
-**Thread 3 \- verschlossener Bereich des Endes**  
-**Bereich gesperrten \- Thread 3 starten**  
-**Thread 3 \- verschlossener Bereich des Endes**  
-**Bereich gesperrten \- Thread 3 starten**  
-**Thread 3 \- verschlossener Bereich des Endes**  
-**Bereich gesperrten \- Thread 3 starten**  
-**Thread 3 \- verschlossener Bereich des Endes**  
-**Bereich gesperrten \- Thread 3 starten**  
-**Thread 3 \- verschlossener Bereich des Endes**   
-## Siehe auch  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+```Output  
+Thread 0 - starting locked region  
+Thread 0 - ending locked region  
+Thread 0 - starting locked region  
+Thread 0 - ending locked region  
+Thread 0 - starting locked region  
+Thread 0 - ending locked region  
+Thread 0 - starting locked region  
+Thread 0 - ending locked region  
+Thread 0 - starting locked region  
+Thread 0 - ending locked region  
+Thread 1 - starting locked region  
+Thread 1 - ending locked region  
+Thread 1 - starting locked region  
+Thread 1 - ending locked region  
+Thread 1 - starting locked region  
+Thread 1 - ending locked region  
+Thread 1 - starting locked region  
+Thread 1 - ending locked region  
+Thread 1 - starting locked region  
+Thread 1 - ending locked region  
+Thread 2 - starting locked region  
+Thread 2 - ending locked region  
+Thread 2 - starting locked region  
+Thread 2 - ending locked region  
+Thread 2 - starting locked region  
+Thread 2 - ending locked region  
+Thread 2 - starting locked region  
+Thread 2 - ending locked region  
+Thread 2 - starting locked region  
+Thread 2 - ending locked region  
+Thread 3 - starting locked region  
+Thread 3 - ending locked region  
+Thread 3 - starting locked region  
+Thread 3 - ending locked region  
+Thread 3 - starting locked region  
+Thread 3 - ending locked region  
+Thread 3 - starting locked region  
+Thread 3 - ending locked region  
+Thread 3 - starting locked region  
+Thread 3 - ending locked region  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Funktionen](../../../parallel/openmp/reference/openmp-functions.md)

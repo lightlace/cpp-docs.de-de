@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a3d453746b9f9af7219f181949ba9958c27a1577
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 916a39d284666eebd3398423471991602509e9de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="other-one-argument-output-stream-manipulators"></a>Andere Ausgabestreammanipulatoren mit einem Argument
 Im folgenden Beispiel wird eine `money`-Klasse verwendet, die ein `long`-Typ ist. Der `setpic`-Manipulator fügt eine „Bild“-Formatierungszeichenfolge zur Klasse hinzu, die vom überladenen Operator zum Einfügen des Datenstroms der Klasse `money` verwendet werden kann. Die Bildzeichenfolge wird als statische Variable in der `money`-Klasse und nicht als Datenmember einer Streamklasse gespeichert, sodass Sie keine neue Ausgabestreamklasse ableiten müssen.  

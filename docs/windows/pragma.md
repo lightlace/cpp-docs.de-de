@@ -1,32 +1,33 @@
 ---
-title: "pragma | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.pragma"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pragma attribute"
+title: Pragma | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.pragma
+dev_langs: C++
+helpviewer_keywords: pragma attribute
 ms.assetid: 3f90d023-b8b5-4007-8311-008bb72cbea1
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 36016ae4af32ead520c8d9919840d267e9d46211
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# pragma
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gibt die angegebene Zeichenfolge in die generierten IDL\-Datei ohne die Verwendung von Anführungszeichen ab.  .  
+# <a name="pragma"></a>pragma
+Gibt die angegebene Zeichenfolge in der generierten IDL-Datei, ohne die Verwendung von Anführungszeichen. sein.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -35,14 +36,14 @@ Gibt die angegebene Zeichenfolge in die generierten IDL\-Datei ohne die Verwendu
 ) ];  
 ```  
   
-#### Parameter  
- *pragma\_statement*  
- Das Pragma, die in der generierten IDL\-Datei aufgenommen werden sollen.  
+#### <a name="parameters"></a>Parameter  
+ *pragma_statement*  
+ Das Pragma, das in der generierten IDL-Datei aufgenommen werden sollen.  
   
-## Hinweise  
- Das Attribut **Pragma** C\+\+ verfügt über die gleichen Funktionen wie das [Pragma](http://msdn.microsoft.com/library/windows/desktop/aa367143) MIDL\-Attribut.  
+## <a name="remarks"></a>Hinweise  
+ Die **Pragma** C++-Attribut hat die gleiche Funktionalität wie die [Pragma](http://msdn.microsoft.com/library/windows/desktop/aa367143) MIDL-Attribut.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // cpp_attr_ref_pragma.cpp  
@@ -58,21 +59,20 @@ __interface A
 };  
 ```  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
 |**Betrifft**|Überall|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Keiner|  
+|**Ungültige Attribute**|Keiner|  
   
- Weitere Informationen über das kontexte finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Stand\-Alone Attributes](../windows/stand-alone-attributes.md)   
+## <a name="see-also"></a>Siehe auch  
+ [IDL-Attribute](../windows/idl-attributes.md)   
+ [Eigenständige Attribute](../windows/stand-alone-attributes.md)   
  [pack](../preprocessor/pack.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

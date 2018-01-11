@@ -1,32 +1,33 @@
 ---
-title: "rdx | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.rdx"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rdx attribute"
+title: RDX | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.rdx
+dev_langs: C++
+helpviewer_keywords: rdx attribute
 ms.assetid: ff8e4312-c1ad-4934-bdaa-86f54409651e
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d656af60ec14309227fc73d81bd0f14638637d48
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# rdx
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="rdx"></a>rdx
 Erstellt einen Registrierungsschlüssel oder ändert einen vorhandenen Registrierungsschlüssel.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -37,36 +38,36 @@ Erstellt einen Registrierungsschlüssel oder ändert einen vorhandenen Registrie
 ) ]  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `key`  
- Der Name der erstellt werden soll oder geöffnet wurde Schlüssel.  
+ Der Name des Schlüssels erstellt oder geöffnet werden.  
   
- `valuename`\(optional\)  
- Gibt das Feld auf Wert festgelegt werden soll.  Wenn ein Wert\-Feld mit diesem Namen bereits in der Schlüssel nicht vorhanden ist, wird er hinzugefügt.  
+ `valuename`(optional)  
+ Gibt das Wertfeld "festgelegt werden. Wenn ein Wertfeld mit diesem Namen im Schlüssel nicht bereits vorhanden ist, wird er hinzugefügt.  
   
  *regtype*  
- Der Typ des Registrierungsschlüssels, der hinzugefügt wird.  Kann einen der folgenden Schritte aus: **Text**, **steht " dword**, **Binär**oder `CString`.  
+ Der Typ des Registrierungsschlüssels, der hinzugefügt wird. Kann einen der folgenden sein: **Text**, **Dword**, **binäre**, oder `CString`.  
   
-## Hinweise  
- Das Attribut **rdx** C\+\+ erstellt oder ändert einen vorhandenen Registrierungsschlüssel für eine COM\-Komponente.  Das Attribut wird ein BEGIN\_RDX\_MAP\-Makro dem Objekt hinzu, das den Ziel Member implementiert.  `RegistryDataExchange`, eine Funktion, die aufgrund des BEGIN\_RDX\_MAP\-Makros eingefügt wird, kann zur Übertragung von Daten zwischen den Datenmember und der Registrierung verwendet werden  
+## <a name="remarks"></a>Hinweise  
+ Die **Rdx** C++-Attribut erstellt oder ändert einen vorhandenen Registrierungsschlüssel für eine COM-Komponente. Das Attribut hinzugefügt das Objekt, das das Ziel-Element implementiert ein Makro BEGIN_RDX_MAP. `RegistryDataExchange`, eine Funktion, die als Ergebnis das Makro BEGIN_RDX_MAP eingefügten zum Übertragen von Daten zwischen der Registrierung und die Datenmember verwendet werden können  
   
- Dieses Attribut kann in Verbindung mit [Co\-Klasse](../windows/coclass.md), [ProgID](../windows/progid.md)oder [vi\_progid](../windows/vi-progid.md)\-Attribute oder andere Attribute verwendet werden, das ein solcher Test vorhanden ist.  
+ Dieses Attribut kann verwendet werden, zusammen mit den [Coclass](../windows/coclass.md), [progid](../windows/progid.md), oder [Vi_progid](../windows/vi-progid.md) Attribute oder andere Attribute, die eine der folgenden impliziert.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
-|**Betrifft**|**Klasse** oder `struct`\-Member|  
+|**Betrifft**|**Klasse** oder `struct` Member|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Keiner|  
+|**Ungültige Attribute**|Keiner|  
   
- Weitere Informationen über das kontexte finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Beispiel  
- Der folgende Code fügt einen Registrierungsschlüssel hinzu, der MyValue dem System aufgerufen wird, das die CMyClass\-COM\-Komponente beschreibt.  
+## <a name="example"></a>Beispiel  
+ Der folgende Code Fügt einen Registrierungsschlüssel namens MyValue an das System, beschreibt die CMyClass COM-Komponente.  
   
 ```  
 // cpp_attr_ref_rdx.cpp  
@@ -87,7 +88,6 @@ public:
 };  
 ```  
   
-## Siehe auch  
- [COM Attributes](../windows/com-attributes.md)   
- [registration\_script](../windows/registration-script.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [COM-Attribute](../windows/com-attributes.md)   
+ [registration_script](../windows/registration-script.md)   

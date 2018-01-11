@@ -1,58 +1,62 @@
 ---
-title: "Flipping an Image (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Image editor [C++], flipping and rotating images"
-  - "images [C++], flipping"
-  - "images [C++], rotating"
+title: "Kippen eines Bilds (Bildbearbeitung für Symbole) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Image editor [C++], flipping and rotating images
+- images [C++], flipping
+- images [C++], rotating
 ms.assetid: a63d251c-7343-4ad6-9442-1faa04a9a2a1
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 394b92ce5103a0aa40cf170ede96624104c868cf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Flipping an Image (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Sie können ein Bild kippen oder drehen, um  
+# <a name="flipping-an-image-image-editor-for-icons"></a>Kippen eines Bilds (Bildbearbeitung für Symbole)
+Sie können kippen oder drehen ein Bild an:  
   
--   ein Spiegelbild des Originals zu erstellen.  
+-   Erstellen Sie ein Spiegelbild des Originals.  
   
--   das Bild auf den Kopf zu stellen.  
+-   Drehen Sie das Bild um.  
   
--   das Bild jeweils in 90 Grad\-Winkeln nach rechts zu drehen.  
+-   Drehen Sie das Bild nach rechts um 90 Grad, zu einem Zeitpunkt.  
   
-### So kippen Sie das Bild horizontal \(Spiegelbild\)  
+### <a name="to-flip-the-image-horizontally-mirror-image"></a>Das Bild horizontal gekippt (Spiegelbild)  
   
-1.  Wählen Sie im Menü **Bild** den Befehl **Horizontal kippen**.  
+1.  Aus der **Image** Menü wählen **Horizontal kippen**.  
   
-### So kippen Sie das Bild vertikal \(auf den Kopf\)  
+### <a name="to-flip-the-image-vertically-turn-upside-down"></a>Das Bild vertikal gekippt (Kopf)  
   
-1.  Wählen Sie im Menü **Bild** den Befehl **Vertikal kippen**.  
+1.  Aus der **Image** Menü wählen **vertikal kippen**.  
   
-### So drehen Sie das Bild um 90 Grad  
+### <a name="to-rotate-the-image-90-degrees"></a>Um das Bild um 90 Grad drehen  
   
-1.  Wählen Sie im Menü **Bild** den Befehl **90 Grad drehen**.  
+1.  Aus der **Image** Menü wählen **um 90 Grad drehen**.  
   
     > [!NOTE]
-    >  Diese Befehle können auch mithilfe der [Zugriffstasten](../mfc/accelerator-keys-image-editor-for-icons.md) ausgeführt oder im Kontextmenü ausgewählt werden \(klicken Sie auf eine Stelle außerhalb des Bildes, während Sie sich im Grafik\-Editor befinden\).  
+    >  Sie können auch die [Zugriffstasten (Kontextmenü)](../windows/accelerator-keys-image-editor-for-icons.md) für diese Befehle oder Zugriff auf die Befehle im Kontextmenü (klicken Sie außerhalb des Bildes in der Grafik-Editor).  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Anwendungen](../Topic/Resources%20in%20Desktop%20Apps.md) im *.NET Framework\-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](assetId:///9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
   
  Anforderungen  
   
- None  
+ Keiner  
   
-## Siehe auch  
- [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>Siehe auch  
+ [Bearbeiten von Grafischen Ressourcen](../windows/editing-graphical-resources-image-editor-for-icons.md)   
+ [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)
+

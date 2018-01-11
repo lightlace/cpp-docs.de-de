@@ -1,43 +1,44 @@
 ---
-title: "fenv_access | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc-pragma.fenv_access"
-  - "fenv_access_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fenv_access-Pragma"
-  - "Pragmas, fenv_access"
+title: Fenv_access | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc-pragma.fenv_access
+- fenv_access_CPP
+dev_langs: C++
+helpviewer_keywords:
+- pragmas, fenv_access
+- fenv_access pragma
 ms.assetid: 2ccea292-0ae4-42ce-9c67-cc189299857b
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 623c9cb9af1d7df137aa7ee92071e34ad99a6331
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# fenv_access
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Deaktiviert \(AUS\) oder aktiviert \(EIN\) Optimierungen, die Flagtests und Modusänderung ändern könnten.  
+# <a name="fenvaccess"></a>fenv_access
+Deaktiviert (AUS) oder aktiviert (EIN) Optimierungen, die Flagtests und Modusänderung ändern könnten.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #pragma fenv_access [ON | OFF]  
 ```  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Standardmäßig ist `fenv_access` AUS.  
   
- Weitere Informationen zum Gleitkommaverhalten finden Sie unter [\/fp \(Festlegen des Gleitkommaverhaltens\)](../build/reference/fp-specify-floating-point-behavior.md).  
+ Weitere Informationen zu Gleitkommaverhalten, finden Sie unter [/fp (Festlegen von Floating-Verhalten)](../build/reference/fp-specify-floating-point-behavior.md).  
   
  Die Arten von Optimierungen, die `fenv_access` unterliegen, lauten:  
   
@@ -49,11 +50,11 @@ Deaktiviert \(AUS\) oder aktiviert \(EIN\) Optimierungen, die Flagtests und Modu
   
  Andere Gleitkommapragmas umfassen:  
   
--   [float\_control](../preprocessor/float-control.md)  
+-   [float_control](../preprocessor/float-control.md)  
   
--   [fp\_contract](../preprocessor/fp-contract.md)  
+-   [fp_contract](../preprocessor/fp-contract.md)  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // pragma_directive_fenv_access_x86.cpp  
@@ -79,9 +80,12 @@ int main() {
 }  
 ```  
   
-  **out\=9.999999776482582e\-003**   
-## Beispiel  
- Das folgende Beispiel steht für Compiler, die Ausgabedateien für Itanium\-Prozessoren erzeugen.  **\/fp:precise** hält die Zwischenergebnisse in der erweiterten Genauigkeit, in der die Werte, die größer als FLT\_MAX sind \(3.402823466e\+38F\), berechnet werden können und aufgrund dieser Summe ein Ergebnis von 1,0 haben, wie es sein soll, wenn es manuell berechnet wird.  **\/fp:strict** hält Zwischenergebnisse in ihrer Quellgenauigkeit \(Float\), die erste Addition ergibt also unendlich, was im gesamten Ausdruck beibehalten wird.  
+```Output  
+out=9.999999776482582e-003  
+```  
+  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel steht für Compiler, die Ausgabedateien für Itanium-Prozessoren erzeugen. **/ fp: präzise** hält die Zwischenergebnisse in der erweiterten Genauigkeit, in denen Werte größer als flt_max sind (3. 402823466e + 38F) berechnet werden können und aufgrund dieser Summe Ergebnis von 1,0 haben, wie er es, wenn es manuell berechnet sollte. **/ fp: strict** hält Zwischenergebnisse in ihrer quellgenauigkeit (Float), damit die erste Addition unendlich ist, erzeugt, die im gesamten Ausdruck beibehalten wird.  
   
 ```  
 // pragma_directive_fenv_access_IPF.cpp  
@@ -104,8 +108,11 @@ int main() {
 }  
 ```  
   
-  **1.000000**   
-## Beispiel  
+```Output  
+1.000000  
+```  
+  
+## <a name="example"></a>Beispiel  
  Beim Auskommentieren von `#pragma fenv_access (on)` aus dem vorherigen Beispiel beachten Sie, dass die Ausgabe anders ist, da der Compiler eine Kompilierzeitauswertung vornimmt, die nicht den Steuermodus verwendet.  
   
 ```  
@@ -129,6 +136,9 @@ int main() {
 }  
 ```  
   
-  **out\=1.000000000000000e\-002**   
-## Siehe auch  
- [Pragma\-Direktiven und das \_\_Pragma\-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+```Output  
+out=1.000000000000000e-002  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

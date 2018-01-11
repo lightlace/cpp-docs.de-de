@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e360e075cf8c721b9357746b2afa3a08df3c851a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 733a7cacebfcad6702d471425de7b617a241884f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="b-stubs-for-run-time-library-functions"></a>B. Stubs für Run-Time Library-Funktionen
 Dieser Abschnitt enthält die Stubs für die Laufzeit-Bibliothekscode-Funktionen, die in der OpenMP-C- und C++-API definiert. Die Stubs werden bereitgestellt, um die Portabilität auf Plattformen zu aktivieren, die nicht der OpenMP-C- und C++-API unterstützen. Auf diesen Plattformen müssen OpenMP-Programme mit einer Bibliothek, die diese Stubfunktionen enthält verknüpft werden. Die Stubfunktionen wird davon ausgegangen, dass die darin enthaltenen Direktiven der OpenMP-Programm ignoriert werden. Daher emulieren sie serielle Semantik.  

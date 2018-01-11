@@ -1,50 +1,51 @@
 ---
-title: "&lt;code&gt; (Visual C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "code"
-  - "<code>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<code> C++-XML-Tag"
-  - "code (C++-XML-Tag)"
+title: '&lt;Code&gt; (Visual C++) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- code
+- <code>
+dev_langs: C++
+helpviewer_keywords:
+- <code> C++ XML tag
+- code C++ XML tag
 ms.assetid: 687db3f8-d435-4a90-b781-8da503fa39bc
-caps.latest.revision: 8
-caps.handback.revision: "8"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 863ad36def9b32269ff4b1a0c131f46e67189a45
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# &lt;code&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Das \<code\>\-Tag gibt Ihnen die Möglichkeit, eine oder mehrere Zeilen als Code anzugeben.  
+# <a name="ltcodegt-visual-c"></a>&lt;Code&gt; (Visual C++)
+Die \<Code >-Tag bietet Ihnen eine Möglichkeit, eine oder mehrere Zeilen als Code anzugeben.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <code>content</code>  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `content`  
- der Text, der als Code gekennzeichnet werden soll.  
+ Der Text, der als Code gekennzeichnet werden soll.  
   
-## Hinweise  
- Verwendung [\<c\>](../ide/c-visual-cpp.md), einen Teil Text anzugeben sollte als Code gekennzeichnet werden.  
+## <a name="remarks"></a>Hinweise  
+ Verwendung [ \<c >](../ide/c-visual-cpp.md) an, dass ein Teil des Texts als Code gekennzeichnet werden soll.  
   
- Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit ["\/doc"](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.  
+ Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.  
   
-## Beispiel  
- Ein Beispiel zur Verwendung des \<code\>\-Tags finden Sie unter dem Thema [\<example\>](../ide/example-visual-cpp.md).  
+## <a name="example"></a>Beispiel  
+ Ein Beispiel zur Verwendung des \<code>-Tags finden Sie unter dem Thema [\<example>](../ide/example-visual-cpp.md).  
   
-## Siehe auch  
- [XML\-Dokumentation](../ide/xml-documentation-visual-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [XML-Dokumentation](../ide/xml-documentation-visual-cpp.md)

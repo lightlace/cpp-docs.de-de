@@ -1,55 +1,57 @@
 ---
-title: "Eigenschaft &quot;Taste&quot; von Zugriffstasten | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Key-Eigenschaft"
+title: "Accelerator Schlüsseleigenschaft | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: Key property
 ms.assetid: d1570cd9-b414-4cd6-96bd-47c38281eaca
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 365960717f5fe4cedf79615fd3087bc89d6b531c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Eigenschaft &quot;Taste&quot; von Zugriffstasten
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Die folgenden Einträge sind für die Eigenschaft **Taste** in der Zugriffstastentabelle zulässig:  
+# <a name="accelerator-key-property"></a>Eigenschaft "Taste" von Zugriffstasten
+Die folgenden sind rechtliche Einträge für die Eigenschaft "Taste" in der Zugriffstastentabelle:  
   
--   Eine ganze Zahl zwischen 0 und 255 im dezimalen Format.  Es wird wie folgt festgelegt, ob der Wert als ASCII\- oder als ANSI\-Wert behandelt wird:  
+-   Eine ganze Zahl zwischen 0 und 255 im Dezimalformat. Der Wert bestimmt, ob der Wert als ASCII oder ANSI, wie folgt behandelt wird:  
   
-    -   Einstellige Zahlen werden nicht als ASCII\- oder ANSI\-Werte, sondern immer als die entsprechende Taste interpretiert.  
+    -   Einstellige Zahlen werden immer als die entsprechenden Schlüssel anstatt als ASCII oder ANSI-Werte interpretiert.  
   
-    -   Sofern Nullen vorangestellt sind, werden Werte von 1 bis 26 als ^A bis ^Z interpretiert. Diese Darstellung entspricht dem ASCII\-Wert der Buchstaben des Alphabets, wenn sie mit gedrückter STRG\-TASTE gedrückt werden.  
+    -   Werte von 1 bis 26, wenn Nullen vorangestellt sind als interpretiert ^ A bis ^ Z, das den ASCII-Wert, der die Buchstaben des Alphabets, wenn Sie mit gedrückter STRG-Taste gedrückt darstellt.  
   
-    -   Werte von 27 bis 32 werden immer als dreistellige Dezimalzahlen 027 bis 032 interpretiert.  
+    -   Werte von 27 bis 32 werden immer als drei Ziffern Dezimalwerte 027 bis 032 interpretiert.  
   
-    -   Werte von 033 bis 255 werden nicht als ANSI\-Werte interpretiert, unabhängig davon, ob ihnen eine 0 vorangestellt ist oder nicht.  
+    -   Werte von 033 bis 255, 0 vorangestellt oder nicht als ANSI-Werte interpretiert werden.  
   
--   Ein einzelnes Zeichen der Tastatur.  Die Großbuchstaben A \- Z oder die Ziffern 0 \- 9 können entweder ASCII\-Werte oder virtuelle Tastenwerte sein. Alle anderen Zeichen sind ausschließlich ASCII\-Werte.  
+-   Ein einzelnes Zeichen der Tastatur. Großbuchstaben von A - Z, oder die Zahlen 0 - 9 ASCII- oder virtuellen Schlüsselwerte sein; Alle anderen Zeichen ist nur ASCII.  
   
--   Ein einzelnes Zeichen der Tastatur im Bereich von A – Z \(nur Großbuchstaben\), dem ein Zirkumflexzeichen \(^\) vorangestellt ist \(z. B. ^C\).  Auf diese Weise wird der ASCII\-Wert der Taste eingegeben, wenn diese bei gleichzeitig gedrückter STRG\-TASTE gedrückt wird.  
+-   Ein einzelnes Zeichen der Tastatur aus dem Bereich A - Z (nur Großbuchstaben), ein Caretzeichen (^) vorangestellt (z. B. ^ C). Dies gibt den ASCII-Wert des Schlüssels, wenn sie mit gedrückter STRG-Taste gedrückt wird.  
   
     > [!NOTE]
-    >  Bei der Eingabe eines ASCII\-Werts sind für die Modifizierer\-Eigenschaft weniger Optionen verfügbar.  Als einzige Steuerungstaste ist die ALT\-TASTE verfügbar.  
+    >  Wenn Sie einen ASCII-Wert eingeben, sind die Änderungsoptionen für die Eigenschaft beschränkt. Für die Verwendung der ALT-Taste wird nur STRG-Taste.  
   
--   Beliebige gültige Bezeichner für virtuelle Tasten.  Das Dropdownfeld **Taste** in der Zugriffstastentabelle enthält eine Liste von Standardbezeichnern für virtuelle Tasten.  
+-   Alle gültigen virtuellen Schlüsselbezeichner. Das Dropdownfeld Schlüssel in der Zugriffstastentabelle enthält eine Liste der standardmäßigen virtuellen Schlüsselbezeichner.  
   
     > [!TIP]
-    >  Eine andere Möglichkeit zum Definieren einer Zugriffstaste besteht darin, mit der rechten Maustaste auf einen oder mehrere Einträge in der Zugriffstastentabelle zu klicken, aus dem Kontextmenü den Befehl **Nächste Taste** auszuwählen und dann beliebige Tasten oder Tastenkombinationen auf der Tastatur zu drücken.  Der Befehl **Nächste Taste** ist auch im Menü **Bearbeiten** verfügbar.  
+    >  Eine weitere Möglichkeit zum Definieren einer Zugriffstaste wird mit der rechten Maustaste einen oder mehrere Einträge in der Zugriffstastentabelle, wählen **Nächste Taste** aus dem Kontextmenü, und drücken Sie dann die Änderungen an den Schlüssel oder -Tastenkombinationen auf der Tastatur drücken. Die **Nächste Taste** Befehl steht auch auf die **bearbeiten** Menü.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  Win32  
   
-## Siehe auch  
- [Setting Accelerator Properties](../windows/setting-accelerator-properties.md)   
- [Editing in an Accelerator Table](../windows/editing-in-an-accelerator-table.md)   
- [Accelerator Editor](../mfc/accelerator-editor.md)
+## <a name="see-also"></a>Siehe auch  
+ [Festlegen von Zugriffstasteneigenschaften](../windows/setting-accelerator-properties.md)   
+ [Bearbeiten in einer Zugriffstastentabelle](../windows/editing-in-an-accelerator-table.md)   
+ [Zugriffstasten-Editor](../windows/accelerator-editor.md)

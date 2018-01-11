@@ -1,34 +1,33 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4183 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4183"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4183"
+title: Compilerwarnung (Stufe 1) C4183 generiert | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4183
+dev_langs: C++
+helpviewer_keywords: C4183
 ms.assetid: dc48312c-4b34-44dd-80ff-eb5f11d5ca47
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ec9462132c0640dc088dc89b36dd78dbfd057864
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 1) C4183
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'Bezeichner': Rückgabetyp fehlt; Memberfunktion, die 'int' zurückgibt, wird angenommen  
+# <a name="compiler-warning-level-1-c4183"></a>Compilerwarnung (Stufe 1) C4183 generiert
+'Bezeichner': Rückgabetyp fehlt; Angenommen, dass eine Memberfunktion, die Rückgabe von "Int" sein  
   
- Die Inlinedefinition einer Memberfunktion in einer Klasse oder Struktur hat keinen Rückgabetyp.  Es wird angenommen, dass diese Memberfunktion den Standardrückgabetyp `int` hat.  
+ Die Inlinedefinition einer Memberfunktion in einer Klasse oder Struktur keinen Rückgabetyp. Diese Memberfunktion steht für ein Standardwert, der Rückgabetyp ist `int`.  
   
- Im folgenden Beispiel wird C4183 generiert:  
+ Im folgende Beispiel wird C4183 generiert:  
   
 ```  
 // C4183.cpp  

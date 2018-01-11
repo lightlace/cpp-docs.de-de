@@ -1,32 +1,33 @@
 ---
-title: "call_as | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.call_as"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "call_as attribute"
+title: Aufruf als | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.call_as
+dev_langs: C++
+helpviewer_keywords: call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3df1cd801a82533592594618742b7727051bde53
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# call_as
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Aktiviert eine Funktion zu einer Remotewebsite [Lokal](../windows/local-cpp.md)\-Funktion zugeordnet werden, damit, wenn die remote Funktion aufgerufen wird, die lokale Funktion aufgerufen wird.  
+# <a name="callas"></a>call_as
+Ermöglicht eine [lokale](../windows/local-cpp.md) Funktion, um eine remote-Funktion zugeordnet werden, wenn die remote-Funktion aufgerufen wird, die lokale Funktion aufgerufen wird.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -35,15 +36,15 @@ Aktiviert eine Funktion zu einer Remotewebsite [Lokal](../windows/local-cpp.md)\
 ) ]  
 ```  
   
-#### Parameter  
- *Funktion*  
- Die lokale Funktion, die aufgerufen werden soll, wenn eine remote Funktion aufgerufen wird.  
+#### <a name="parameters"></a>Parameter  
+ *function*  
+ Die lokale-Funktion, die Sie aufgerufen werden, wenn eine remote-Funktion aufgerufen wird.  
   
-## Hinweise  
- Das Attribut **call\_as** C\+\+ verfügt über die gleichen Funktionen wie das [call\_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) MIDL\-Attribut.  
+## <a name="remarks"></a>Hinweise  
+ Die **Aufruf als** C++-Attribut hat die gleiche Funktionalität wie die [Aufruf als](http://msdn.microsoft.com/library/windows/desktop/aa366748) MIDL-Attribut.  
   
-## Beispiel  
- Der folgende Code zeigt, wie Sie verwenden können, um eine **call\_as** nicht remotefähig**f1**\(Funktion\) für eine Funktion \(remotefähigen**Remf1**\) zuzuordnen:  
+## <a name="example"></a>Beispiel  
+ Der folgende Code zeigt, wie Sie verwenden können **Aufruf als** zuordnen eine Funktion nicht remotefähig (**f1**) an eine remotefähige-Funktion (**Remf1**):  
   
 ```  
 // cpp_attr_ref_call_as.cpp  
@@ -57,21 +58,20 @@ __interface IMInterface {
 };  
 ```  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-### Attribut\-Kontext  
+### <a name="attribute-context"></a>Attributkontext  
   
 |||  
 |-|-|  
 |**Betrifft**|Schnittstellenmethode|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|None|  
-|**Ungültige Attribute**|None|  
+|**Erforderliche Attribute**|Keiner|  
+|**Ungültige Attribute**|Keiner|  
   
- Weitere Informationen über das kontexte finden Sie unter [Attribut\-Kontexte](../windows/attribute-contexts.md).  
+ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
-## Siehe auch  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [local](../windows/local-cpp.md)   
- [Attributes Samples](assetId:///558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Siehe auch  
+ [IDL-Attribute](../windows/idl-attributes.md)   
+ [Methodenattribut](../windows/method-attributes.md)   
+ [lokale](../windows/local-cpp.md)   

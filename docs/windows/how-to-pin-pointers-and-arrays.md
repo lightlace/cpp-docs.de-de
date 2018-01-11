@@ -1,33 +1,36 @@
 ---
-title: "How to: Pin Pointers and Arrays | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pointers, pinning"
-  - "arrays [C++], pinning"
+title: 'Vorgehensweise: Anheften von Zeigern und Arrays | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- pointers, pinning
+- arrays [C++], pinning
 ms.assetid: ee783260-e676-46b8-a38e-11a06f1d57b0
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 68824b9fcdf2f4de47900d5b0c4b03db9e28d9fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# How to: Pin Pointers and Arrays
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Das Fixieren eines Unterobjekts, das in einem verwalteten Objekt definiert wurde, hat den Auswirkungen des Anheftens des gesamten Objekts.  Beispielsweise, wenn überhaupt wird Arrayelement fixiert, wird das Ganzarray ebenfalls fixiert.  Es gibt keine Erweiterungen zur Sprache zum Deklarieren eines festen Arrays.  Um ein Array für, deklarieren einen festen Zeiger zu dessen Elementtyp und zu Pin einer seiner Elemente.  
+# <a name="how-to-pin-pointers-and-arrays"></a>Gewusst wie: Anheften von Zeigern und Arrays
+Anheften eines untergeordneten Objekts in ein verwaltetes Objekt definierten wirkt sich das anheften des gesamten Objekts aus.  Wenn jedes Element eines Arrays fixiert ist, wird der gesamte Array einen auch angeheftet. Es sind keine Erweiterungen der Programmiersprache für das Deklarieren eines angehefteten Arrays. Um ein Array anzuheften, deklarieren Sie einen festen Zeiger auf ihre Elementtyp, und die Pin eines seiner Elemente.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // pin_ptr_array.cpp  
@@ -49,11 +52,11 @@ int main() {
 }  
 ```  
   
-### Ausgabe  
+### <a name="output"></a>Ausgabe  
   
 ```  
 ++  
 ```  
   
-## Siehe auch  
- [pin\_ptr \(C\+\+\/CLI\)](../windows/pin-ptr-cpp-cli.md)
+## <a name="see-also"></a>Siehe auch  
+ [pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)

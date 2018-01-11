@@ -1,32 +1,31 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4353 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4353"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4353"
+title: Compilerwarnung (Stufe 1) C4353 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4353
+dev_langs: C++
+helpviewer_keywords: C4353
 ms.assetid: 6e79f186-ed82-4c95-9923-0ad5bb9c4db1
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8dd3ec65dac6720509b9c918f272d2eb6ff2720c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Compilerwarnung (Stufe 1) C4353
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Verwendung einer Nicht\-Standarderweiterung: Konstante 0 \(null\) als Funktionsausdruck.Verwenden Sie stattdessen die systeminterne Funktion '\_\_noop'  
+# <a name="compiler-warning-level-1-c4353"></a>Compilerwarnung (Stufe 1) C4353
+nicht dem Standard entsprechende Erweiterung: Konstante 0 als Funktionsausdruck. Verwenden Sie stattdessen die systeminterne '__noop'-Funktion  
   
- Die Konstante Null \(0\) kann nicht als Funktionsausdruck verwendet werden.  Weitere Informationen finden Sie unter [\_\_noop](../../intrinsics/noop.md).  
+ Sie können nicht die Konstante Null (0) als Funktionsausdruck verwenden. Weitere Informationen finden Sie unter [__noop](../../intrinsics/noop.md).  
   
  Im folgenden Beispiel wird C4353 generiert:  
   

@@ -13,11 +13,12 @@ ms.assetid: abd1985e-3717-4338-9e80-869db5435175
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: da81f8731be97c69a73eddb96e9e56e49c59c91b
-ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.workload: cplusplus
+ms.openlocfilehash: 72106bd363987d39fb11c9ec1a6d3fd0ceb5665d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Öffnen Sie Ordner Projekte in Visual C++
 Visual Studio-2017 führt die Funktion "Ordner geöffnet" ermöglicht es Ihnen, öffnen Sie einen Ordner für Quelldateien und sofort Codieren mit Unterstützung für IntelliSense, durchsuchen, Umgestaltung, Debuggen, beginnen und so weiter. Keine sln oder vcxproj-Dateien werden geladen. bei Bedarf können Sie benutzerdefinierte Tasks angeben sowie erstellen und starten Sie die Parameter durch einfache JSON-Dateien. Unterstützt von Ordner öffnen, kann Visual C++ jetzt nicht nur lose Sammlungen von Dateien, sondern auch nahezu alle Buildsystem, darunter CMake, Ninja, QMake (für unbedingt Projekte), Gyp, SCons, Gradle, Buck, stellen und vieles mehr unterstützen. 

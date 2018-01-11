@@ -1,41 +1,40 @@
 ---
-title: "omp_in_parallel | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_in_parallel"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_in_parallel OpenMP function"
+title: Omp_in_parallel | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_in_parallel
+dev_langs: C++
+helpviewer_keywords: omp_in_parallel OpenMP function
 ms.assetid: 1f01a1b4-78c5-496a-afb7-a43ecdad83d6
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 29aff17bd8da79bcdac0b2f1f4a2544acf6dc600
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# omp_in_parallel
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Gibt Wert ungleich 0 \(null\) zurück, wenn Sie innerhalb eines parallelen Bereichs aufgerufen werden.  
+# <a name="ompinparallel"></a>omp_in_parallel
+Gibt einen Wert ungleich NULL, wenn innerhalb eines parallelen Bereichs aufgerufen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 int omp_in_parallel( );  
 ```  
   
-## Hinweise  
- Weitere Informationen finden Sie unter [3.1.6 omp\_in\_parallel Function](../../../parallel/openmp/3-1-6-omp-in-parallel-function.md).  
+## <a name="remarks"></a>Hinweise  
+ Weitere Informationen finden Sie unter [3.1.6 Omp_in_parallel-Funktion](../../../parallel/openmp/3-1-6-omp-in-parallel-function.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // omp_in_parallel.cpp  
@@ -56,7 +55,10 @@ int main( )
 }  
 ```  
   
-  **0**  
-**1**   
-## Siehe auch  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+```Output  
+0  
+1  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Funktionen](../../../parallel/openmp/reference/openmp-functions.md)

@@ -1,11 +1,10 @@
 ---
-title: Cancellation_token-Klasse | Microsoft-Dokumentation
+title: Cancellation_token-Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,35 +16,19 @@ f1_keywords:
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token::is_canceled
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token::none
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token::register_callback
-dev_langs:
-- C++
-helpviewer_keywords:
-- cancellation_token class
+dev_langs: C++
+helpviewer_keywords: cancellation_token class
 ms.assetid: 2787df2b-e9d3-440e-bfd0-841a46a9835f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: d17505a117c0affd8106afad9004e6ec86602a26
-ms.contentlocale: de-de
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a27bb4221e1a8db19f0dd7be37bb6ca3966635de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token-Klasse
 Mit der `cancellation_token`-Klasse kann bestimmt werden, ob für einen Vorgang ein Abbruch angefordert wurde. Dem angegebenen Token kann `task_group`, `structured_task_group` oder `task` zugeordnet werden, um einen impliziten Abbruch bereitzustellen. Es kann auch zum Abbruch abgerufen oder für einen Rückruf registriert werden, wenn das zugeordnete `cancellation_token_source`-Element abgebrochen wird.  
@@ -56,13 +39,13 @@ Mit der `cancellation_token`-Klasse kann bestimmt werden, ob für einen Vorgang 
 class cancellation_token;
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[cancellation_token](#ctor)||  
+|["cancellation_token"](#ctor)||  
 |[~ Cancellation_token-Destruktor](#dtor)||  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
@@ -97,7 +80,7 @@ class cancellation_token;
 ~cancellation_token();
 ```  
   
-##  <a name="ctor"></a>cancellation_token 
+##  <a name="ctor"></a>"cancellation_token" 
 
 ```
 cancellation_token(const cancellation_token& _Src);
@@ -205,8 +188,7 @@ template<typename _Function>
  Das Funktionsobjekt, das zurückgerufen wird, wenn dieses `cancellation_token` abgebrochen wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein `cancellation_token_registration`-Objekt, das in der `deregister`-Methode verwendet werden kann, um einen bereits registrierten Rückruf aufzuheben, damit er nicht ausgeführt wird. Löst die Methode eine [Invalid_operation](invalid-operation-class.md) -Ausnahme aus, wenn der Aufruf für einen `cancellation_token` -Objekt, das mit der [cancellation_token:: None](#none) Methode.  
+ Ein `cancellation_token_registration`-Objekt, das in der `deregister`-Methode verwendet werden kann, um einen bereits registrierten Rückruf aufzuheben, damit er nicht ausgeführt wird. Die Methode löst eine [Invalid_operation](invalid-operation-class.md) -Ausnahme aus, wenn der Aufruf für eine `cancellation_token` -Objekt, das mit erstellt wurde die [cancellation_token:: None](#none) Methode.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)
-

@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 964b0f506b6f982c706be97666ee9b03ffea1bc8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3095dfbbfa33f4c3110afb96c741a508611521cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dialog-box-classes"></a>Dialogfeldklassen
 Klasse `CDialog` und die abgeleiteten Klassen kapseln Dialogfeld-Funktionalität. Da ein Dialogfeld eine besondere Art von Fenster ist `CDialog` stammt aus `CWnd`. Leiten Sie Ihre Dialogfeldklassen aus `CDialog` oder verwenden Sie eines der allgemeine Dialogfeldklassen für Dialogfelder "standard", z. B. Öffnen oder Speichern einer Datei, drucken, Auswählen einer Schriftart oder die Farbe, initiiert einen Vorgang suchen und ersetzen oder Durchführen von verschiedenen OLE-bezogene DDL-Vorgänge.  

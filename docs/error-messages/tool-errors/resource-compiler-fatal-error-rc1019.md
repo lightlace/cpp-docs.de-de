@@ -1,31 +1,30 @@
 ---
-title: "Ressourcencompiler: Schwerwiegender Fehler RC1019 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "RC1019"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RC1019"
+title: 'Ressourcencompiler: Schwerwiegender Fehler RC1019 | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: RC1019
+dev_langs: C++
+helpviewer_keywords: RC1019
 ms.assetid: 432fff44-04a9-4e13-91c6-870df6f0b4e4
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 457e87d2d62b0960f89f1bd4454624a824d8ef61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Ressourcencompiler: Schwerwiegender Fehler RC1019
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Unerwartetes "\#else"  
+# <a name="resource-compiler-fatal-error-rc1019"></a>Ressourcencompiler: Schwerwiegender Fehler RC1019
+Unerwarteter ' #else '  
   
- Die `#else`\-Direktive wurde nicht innerhalb eines der Konstrukte `#if`, **\#ifdef** oder **\#ifndef** verwendet.  
+ Die `#else` Richtlinie ist nicht vorhanden, innerhalb einer `#if`, **#ifdef**, oder **#ifndef** erstellen.  
   
- Stellen Sie sicher, dass dieser Anweisung eine der Anweisungen `#if`, **\#ifdef** oder \#ifndef vorangeht.
+ Stellen Sie sicher, dass es ist ein `#if`, **#ifdef**, oder **#ifndef** Anweisung ausführt, bevor diese Anweisung wirksam.

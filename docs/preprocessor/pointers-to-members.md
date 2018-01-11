@@ -1,73 +1,74 @@
 ---
-title: "pointers_to_members | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "pointers_to_members_CPP"
-  - "vc-pragma.pointers_to_members"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Klassenmember, Zeiger auf"
-  - "Member, Zeiger auf"
-  - "pointers_to_members-Pragma"
-  - "Pragmas, pointers_to_members"
+title: Pointers_to_members | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- pointers_to_members_CPP
+- vc-pragma.pointers_to_members
+dev_langs: C++
+helpviewer_keywords:
+- class members, pointers to
+- pragmas, pointers_to_members
+- members, pointers to
+- pointers_to_members pragma
 ms.assetid: 8325428c-c90a-4aed-9e82-cb1dda23f4ca
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4e034a268a6ff3c3fc04da4e50a4477324ec1880
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# pointers_to_members
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**C\+\+\-spezifisch**  
+# <a name="pointerstomembers"></a>pointers_to_members
+**C++-spezifisch**  
   
  Gibt an, ob ein Zeiger auf einen Klassenmember vor der zugeordneten Klassendefinition deklariert werden kann und verwendet wird, um die Zeigergröße und den Code zu steuern, die zum Interpretieren des Zeigers erforderlich sind.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
 #pragma pointers_to_members( pointer-declaration, [most-general-representation] )  
 ```  
   
-## Hinweise  
- Sie können ein **pointers\_to\_members**\-Pragma als Alternative zur Verwendung der [\/vmx](../build/reference/vmb-vmg-representation-method.md)\-Compileroptionen oder der [Vererbungsschlüsselwörter](../cpp/inheritance-keywords.md) in die Quelldatei einfügen.  
+## <a name="remarks"></a>Hinweise  
+ Sie können platzieren eine **Pointers_to_members** Pragma in der Quelldatei als Alternative zur Verwendung der [/vmx](../build/reference/vmb-vmg-representation-method.md) Compileroptionen oder die [vererbungsschlüsselwörter](../cpp/inheritance-keywords.md).  
   
- Das *pointer\-declaration*\-Argument gibt an, ob Sie vor oder nach der zugeordneten Funktionsdefinition einen Zeiger auf ein Member deklariert haben.  Das *pointer\-declaration*\-Argument ist eines der folgenden zwei Symbole:  
-  
-|Argument|Kommentare|  
-|--------------|----------------|  
-|**full\_generality**|Generiert sicheren, manchmal nicht optimalen Code.  Verwenden Sie **full\_generality**, wenn ein Zeiger auf ein Member vor der zugeordneten Klassendefinition deklariert wird.  Dieses Argument verwendet immer die Zeigerdarstellung, die vom *most\-general\-representation*\-Argument angegeben wird.  Entspricht "\/vmg".|  
-|**best\_case**|Generiert sicheren, optimalen Code unter Verwendung von Best\-Case\-Darstellung für alle Zeiger auf Member.  Erfordert die Definierung der Klasse vor dem Deklarieren eines Zeigers auf einen Member der Klasse.  Der Standard ist **best\_case**.|  
-  
- Das *most\-general\-representation*\-Argument gibt die kleinste Zeigerdarstellung an, die der Compiler sicher verwenden kann, um beliebige Zeiger auf einen Member einer Klasse in einer Übersetzungseinheit zu referenzieren.  Das Argument kann eines der folgenden sein:  
+ Die *Zeigerdeklaration* Argument gibt an, ob Sie einen Zeiger auf ein Element vor oder nach der zugeordneten Funktionsdefinition deklariert haben. Die *Zeigerdeklaration* -Argument ist eines der folgenden zwei Symbole:  
   
 |Argument|Kommentare|  
-|--------------|----------------|  
-|**single\_inheritance**|Die allgemeinste Darstellung ist ein Zeiger auf eine Memberfunktion mit einfacher Vererbung.  Löst einen Fehler aus, wenn das Vererbungsmodell einer Klassendefinition, für die ein Zeiger auf ein Member deklariert wird, entweder mehrfach oder virtuell ist.|  
-|**multiple\_inheritance**|Die allgemeinste Darstellung ist ein Zeiger auf eine Memberfunktion mit Mehrfachvererbung.  Löst einen Fehler aus, wenn das Vererbungsmodell einer Klassendefinition, für die ein Zeiger auf ein Member deklariert wird, virtuell ist.|  
-|**virtual\_inheritance**|Die allgemeinste Darstellung ist ein Zeiger auf eine Memberfunktion mit virtueller Vererbung.  Löst nie einen Fehler aus.  Dies ist das Standardargument, wenn **\#pragma pointers\_to\_members\(full\_generality\)** verwendet wird.|  
+|--------------|--------------|  
+|**full_generality**|Generiert sicheren, manchmal nicht optimalen Code. Verwenden Sie **Full_generality** Wenn beliebige Zeiger auf ein Member vor der zugeordneten Klassendefinition deklariert wird. Dieses Argument verwendet immer die zeigerdarstellung, die gemäß der *Most-General-Representation* Argument. Entspricht "/vmg".|  
+|**best_case**|Generiert sicheren, optimalen Code unter Verwendung von Best-Case-Darstellung für alle Zeiger auf Member. Erfordert die Definierung der Klasse vor dem Deklarieren eines Zeigers auf einen Member der Klasse. Die Standardeinstellung ist **Best_case**.|  
+  
+ Die *Most-General-Representation* -Argument gibt die kleinste zeigerdarstellung an, die der Compiler sicher verwenden kann, um beliebige Zeiger auf einen Member einer Klasse in einer Übersetzungseinheit zu referenzieren. Das Argument kann eines der folgenden sein:  
+  
+|Argument|Kommentare|  
+|--------------|--------------|  
+|**single_inheritance**|Die allgemeinste Darstellung ist ein Zeiger auf eine Memberfunktion mit einfacher Vererbung. Löst einen Fehler aus, wenn das Vererbungsmodell einer Klassendefinition, für die ein Zeiger auf ein Member deklariert wird, entweder mehrfach oder virtuell ist.|  
+|**Multiple_Inheritance**|Die allgemeinste Darstellung ist ein Zeiger auf eine Memberfunktion mit Mehrfachvererbung. Löst einen Fehler aus, wenn das Vererbungsmodell einer Klassendefinition, für die ein Zeiger auf ein Member deklariert wird, virtuell ist.|  
+|**virtuelle Vererbung**|Die allgemeinste Darstellung ist ein Zeiger auf eine Memberfunktion mit virtueller Vererbung. Löst nie einen Fehler aus. Dies ist das Standardargument beim **#pragma pointers_to_members(full_generality)** verwendet wird.|  
   
 > [!CAUTION]
->  Verwenden Sie das `pointers_to_members`\-Pragma am besten nur in der Quellcodedatei, für die es gelten soll, und nur nach allen `#include`\-Direktiven.  Diese Vorgehensweise verringert das Risiko, dass sich das Pragma auf andere Dateien auswirkt, und dass Sie versehentlich mehrere Definitionen für dieselbe Variable oder Funktion oder denselben Klassennamen angeben.  
+>  Verwenden Sie das `pointers_to_members`-Pragma am besten nur in der Quellcodedatei, für die es gelten soll, und nur nach allen `#include`-Direktiven. Diese Vorgehensweise verringert das Risiko, dass sich das Pragma auf andere Dateien auswirkt, und dass Sie versehentlich mehrere Definitionen für dieselbe Variable oder Funktion oder denselben Klassennamen angeben.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 //   Specify single-inheritance only  
 #pragma pointers_to_members( full_generality, single_inheritance )  
 ```  
   
-## Ende C\+\+\-spezifisch  
+## <a name="end-c-specific"></a>Ende C++-spezifisch  
   
-## Siehe auch  
- [Pragma\-Direktiven und das \_\_Pragma\-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>Siehe auch  
+ [Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

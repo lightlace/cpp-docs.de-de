@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b1e28415cf6f0e5f29d50349cd38fe4b18cfe812
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7d1c6f8cf6ac62cca9be3e09d7d2a103d726cf05
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="handlenulltraits-structure"></a>HANDLENullTraits-Struktur
 Definiert die gemeinsame Merkmale eines Handles nicht initialisiert.  
@@ -30,7 +33,7 @@ Definiert die gemeinsame Merkmale eines Handles nicht initialisiert.
 struct HANDLENullTraits;  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 ### <a name="public-typedefs"></a>Öffentliche Typedefs  
   

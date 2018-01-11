@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,9 +21,7 @@ f1_keywords:
 - random/std::extreme_value_distribution::param_type::b
 - random/std::extreme_value_distribution::param_type::operator==
 - random/std::extreme_value_distribution::param_type::operator!=
-- random/std::extreme_value_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::extreme_value_distribution [C++]
 - std::extreme_value_distribution [C++], reset
@@ -36,16 +33,16 @@ helpviewer_keywords:
 - std::extreme_value_distribution [C++], param_type
 - std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b0825641039828073da4520c2f0704f50e0e6f21
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 5cf43efdbe6f7c0cd79bee18e8a696986d0b5446
-ms.contentlocale: de-de
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="extremevaluedistribution-class"></a>extreme_value_distribution-Klasse
 Generiert eine Extremwertverteilung.  
@@ -82,9 +79,9 @@ public:
 ```    
 ### <a name="parameters"></a>Parameter  
 *RealType*  
-Der Gleitkommaergebnistyp. Der Standardwert ist `double`. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).  
+Der Gleitkommaergebnistyp. Der Standardwert ist `double`. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).  
   
-*URNG* Das Zufallszahlengenerator-Modul. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).
+*URNG* Das Zufallszahlengenerator-Modul. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
   
 ## <a name="remarks"></a>Hinweise  
  Die Vorlagenklasse beschreibt eine Verteilung, die Werte eines benutzerdefinierten Gleitkommatyps produziert. Wenn kein entsprechend der Extremwertverteilung verteilter Wert ausgeben wird, geben Sie `double` ein. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.  
@@ -98,7 +95,7 @@ Der Gleitkommaergebnistyp. Der Standardwert ist `double`. Die möglichen Typen f
   
  Weitere Informationen zu Verteilungsklassen und ihren Membern finden Sie unter [\<random>](../standard-library/random.md).  
   
- Ausführliche Informationen über die Extremwertverteilung finden Sie im Wolfram MathWorld-Artikel [Extreme Value Distribution](http://go.microsoft.com/fwlink/LinkId=401110).  
+ Ausführliche Informationen über die Extremwertverteilung finden Sie im Wolfram MathWorld-Artikel [Extreme Value Distribution](http://go.microsoft.com/fwlink/p/?linkid=401110).  
   
 ## <a name="example"></a>Beispiel  
   
@@ -211,7 +208,7 @@ explicit extreme_value_distribution(const param_type& parm);
   
  Mit dem ersten Konstruktor wird ein Objekt erstellt, in dessen gespeichertem `a`-Wert der Wert *a_value* enthalten ist und dessen gespeicherter `b`-Wert den Wert *b_value* enthält.  
   
- Mit dem zweiten Konstruktor wird ein Objekt erstellt, dessen gespeicherte Parameter von *parm* initialisiert werden. Sie können die aktuellen Parameter einer vorhandenen Verteilung abrufen und festlegen, indem Sie die Memberfunktion `param()` aufrufen.  
+ Mit dem zweiten Konstruktor wird ein Objekt erstellt, dessen gespeicherte Parameter aus *parm* initialisiert werden. Sie können die aktuellen Parameter einer vorhandenen Verteilung abrufen und festlegen, indem Sie die Memberfunktion `param()` aufrufen.  
   
 ##  <a name="param_type"></a> extreme_value_distribution::param_type  
 Speichert die Parameter der Verteilung.  
@@ -245,7 +242,6 @@ struct param_type {
   
 ## <a name="see-also"></a>Siehe auch  
  [\<random>](../standard-library/random.md)
-
 
 
 

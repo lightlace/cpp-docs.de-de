@@ -1,55 +1,54 @@
 ---
-title: "Isolated COM, Manifesttool, Konfigurationseigenschaften, Dialogfeld „&lt;Projectname&gt;-Eigenschaftenseiten“"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCManifestTool.RegistrarScriptFile"
-  - "VC.Project.VCManifestTool.ComponentFileName"
-  - "VC.Project.VCManifestTool.TypeLibraryFile"
-  - "VC.Project.VCManifestTool.ReplacementsFile"
-dev_langs: 
-  - "C++"
+title: Manifesttool isolierte COM-Eigenschaften (Visual C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCManifestTool.RegistrarScriptFile
+- VC.Project.VCManifestTool.ComponentFileName
+- VC.Project.VCManifestTool.TypeLibraryFile
+- VC.Project.VCManifestTool.ReplacementsFile
+dev_langs: C++
 ms.assetid: 457582b8-cfde-49c0-92e3-3a6b9e8c08eb
-caps.latest.revision: 12
-caps.handback.revision: "12"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fe2098c4caead6ebc9ad4747354ae96f093f2c91
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 12/21/2017
 ---
-# Isolated COM, Manifesttool, Konfigurationseigenschaften, Dialogfeld „&lt;Projectname&gt;-Eigenschaftenseiten“
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Verwenden Sie dieses Dialogfeld, um **Isolated COM**\-Optionen für [Mt.exe](http://msdn.microsoft.com/library/aa375649) anzugeben.  
+# <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Isolierte COM, Manifesttool, Konfigurationseigenschaften, &lt;Projektname&gt; Eigenschaftenseiten (Dialogfeld)
+Mithilfe dieses Dialogfelds an **Isolated COM** Optionen für [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
   
- Um auf dieses Eigenschaftenseiten\-Dialogfeld zuzugreifen, öffnen Sie die Eigenschaftenseiten für das Projekt oder das Eigenschaftenblatt.  Erweitern Sie den Knoten **Manifesttool** unter **Konfigurationseigenschaften**, und wählen Sie dann **Isolated COM** aus.  
+ Öffnen Sie diese Eigenschaftenseiten-Dialogfeld für den Zugriff auf die Eigenschaftenseiten für das Projekt oder das Eigenschaftenblatt. Erweitern Sie die **Manifesttool** Knoten unter **allgemeine Eigenschaften**, und wählen Sie dann **Isolated COM**.  
   
-## Aufgabenliste  
+## <a name="task-list"></a>Aufgabenliste  
   
--   [Gewusst wie: Erstellen von isolierten Anwendungen zur Verwendung von COM\-Komponenten](../build/how-to-build-isolated-applications-to-consume-com-components.md)  
+-   [Vorgehensweise: Erstellen von isolierten Anwendungen zur Verwendung von COM-Komponenten](../build/how-to-build-isolated-applications-to-consume-com-components.md)  
   
-## UIElement-Liste  
- **Typbibliothekdatei**  
- Legt den Namen der Typbibliothekdatei \(.tlb\), die vom Manifesttool zum Generieren der Manifestdatei verwendet wird, anhand der Option \/tlb fest.  
+## <a name="uielement-list"></a>UIElement-Liste  
+ **Typbibliotheksdatei an**  
+ Verwendet die Option/tlb um den Namen der Typbibliotheksdatei (TLB-Datei) anzugeben, die zum Generieren der Manifestdatei Manifesttool verwenden.  
   
  **Registrierungsskriptdatei**  
- Legt den Namen der Registrierungsskriptdatei \(.rgs\), die vom Manifesttool zum Generieren der Manifestdatei verwendet wird, anhand der Option \/rgs fest.  
+ Verwendet die Option legt den Namen der Registrierungsskriptdatei (.rgs-Datei) an, die zum Generieren der Manifestdatei Manifesttool verwenden.  
   
- **Name der Komponentendatei**  
- Legt den Namen der Ressource, die vom Manifesttool generiert wird, anhand der Option \/dll fest.  Beim Festlegen von Werten für **Typbibliothekdatei** oder **Registrierungsskriptdatei** muss ein Wert für diese Eigenschaft eingegeben werden.  
+ **Dateiname der Komponente**  
+ Verwendet die/DLL-Option den Namen der Ressource an, die das manifest Tool generiert. Geben Sie einen Wert für diese Eigenschaft bei der Werte für entweder **Typbibliotheksdatei** oder **Registrierungsskriptdatei** angegeben werden.  
   
  **Ersetzungsdatei**  
- Legt den vollständigen Pfad zur Datei, die Werte für ersetzbare Zeichenfolgen in der RGS\-Datei enthält, anhand der Option \/replacements fest.  
+ Verwendet die Option/replacements fest, geben Sie den vollständigen Pfad zur Datei, die Werte für ersetzbare Zeichenfolgen in der RGS-Datei enthält.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Isolierte Anwendungen](http://msdn.microsoft.com/library/aa375190)   
- [Parallele Assemblys](_win32_side_by_side_assemblies)   
- [ClickOnce Application Manifest](../Topic/ClickOnce%20Application%20Manifest.md)   
- [Eigenschaftenseiten des Manifesttools](../ide/manifest-tool-property-pages.md)   
- [Gewusst wie: Öffnen von Projekteigenschaftenseiten](../misc/how-to-open-project-property-pages.md)   
- [Gewusst wie: Bearbeiten von Projekteigenschaftenblättern](../misc/how-to-edit-project-property-sheets.md)
+ [ClickOnce-Anwendungsmanifest](/visualstudio/deployment/clickonce-application-manifest)   
+ [Manifesttool-Eigenschaftenseiten](../ide/manifest-tool-property-pages.md)   
+ [Arbeiten mit Projekteigenschaften](../ide/working-with-project-properties.md)   

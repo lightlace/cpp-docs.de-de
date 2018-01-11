@@ -20,11 +20,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 14d81a2039005e3ab301a865d9834de048a74ac5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7c8e09c494ee23d227321a807c8c533d16f981a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 Verwenden Sie den Header &lt;filesystem>, um auf Klassen und Funktion zuzugreifen, die Informationen über Pfade, Dateien und Verzeichnisse ändern und abrufen.  
@@ -42,7 +43,7 @@ using namespace std::experimental::filesystem::v1;
   
  Dieser Header unterstützt Dateisysteme für eine von zwei umfangreichen Klassen von Hostbetriebssystemen: Microsoft Windows und POSIX.  
   
- Der überwiegende Teil der Funktionalität ist für beide Betriebssysteme gleich. In diesem Dokuments sind die Unterschiede aufgeführt. Beispiel:  
+ Der überwiegende Teil der Funktionalität ist für beide Betriebssysteme gleich. In diesem Dokuments sind die Unterschiede aufgeführt. Zum Beispiel:  
   
 -   Windows unterstützt mehrere Stammnamen, z.B. „c:“ oder „\\\Netzwerkname“. Ein Dateisystem besteht aus einer Gesamtheit von Strukturen, von denen jede ein eigenes Stammverzeichnis, z.B. „c:\“ oder „\\\Netzwerkname\\“, und ein eigenes aktuelles Verzeichnis hat, um einen relativen Pfadnamen (ein Pfadname, der kein absoluter Pfadnamen ist) zu komplettieren.  
   
@@ -96,22 +97,22 @@ using namespace std::experimental::filesystem::v1;
   
  Eine wichtige Funktion von Pfadobjekten ist schließlich, dass Sie diese überall dort verwenden können, wo ein Argument namens „filename“ in den Klassen erforderlich ist, die im Header \<fstream> definiert sind.  
   
- Weitere Informationen und Codebeispiele finden Sie unter [Dateisystemnavigation](../standard-library/file-system-navigation.md).  
+ Weitere Informationen und Codebeispiele finden Sie unter [Dateisystemnavigation (C++)](../standard-library/file-system-navigation.md).  
   
 ## <a name="classes"></a>Klassen  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[directory_entry-Klasse](../standard-library/directory-entry-class.md)|Beschreibt ein Objekt, das von einem `directory_iterator` oder einem `recursive_directory_iterator` zurückgegeben wird und einen Pfad enthält|  
-|[directory_iterator-Klasse](../standard-library/directory-iterator-class.md)|Beschreibt einen Eingabeiterator, der alle Dateinamen in einem Dateisystemverzeichnis durchläuft.|  
+|[directory_iterator-Klasse.](../standard-library/directory-iterator-class.md)|Beschreibt einen Eingabeiterator, der alle Dateinamen in einem Dateisystemverzeichnis durchläuft.|  
 |[filesystem_error-Klasse](../standard-library/filesystem-error-class.md)|Eine Basisklasse für Ausnahmen, die ausgelöst werden, um einen Systemüberlauf auf niedriger Ebene zu melden.|  
 |[path-Klasse](../standard-library/path-class.md)|Definiert eine Klasse, die ein für die Verwendung als Dateiname geeignetes Objekt des Vorlagentyps `String` speichert.|  
 |[recursive_directory_iterator-Klasse](../standard-library/recursive-directory-iterator-class.md)|Beschreibt einen Eingabeiterator, der alle Dateinamen in einem Dateisystemverzeichnis durchläuft. Der Iterator kann die Verzeichnisse auch absteigend anordnen.|  
-|[file_status-Klasse](../standard-library/file-status-class.md)|Bricht ein `file_type` um.|  
+|[file_status-Klasse](../standard-library/file-status-class.md)|Bricht ein `file_type`um.|  
   
 ## <a name="structs"></a>Strukturen  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |[space_info-Struktur](../standard-library/space-info-structure.md)|Enthält Informationen zu einem Volume.|  
   
@@ -123,7 +124,7 @@ using namespace std::experimental::filesystem::v1;
   
 ## <a name="enumerations"></a>Enumerationen  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Eine mit [copy_file](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) verwendete Enumeration, mit der das Verhalten bestimmt wird, wenn eine Datei vorhanden ist.|  
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Eine Enumeration, die Optionen für Verzeichnisiteratoren angibt.|  
